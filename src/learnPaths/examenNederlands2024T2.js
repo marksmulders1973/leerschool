@@ -76,11 +76,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "tekststructuur — kern" },
       ],
       uitlegPad: compact(
-        "Inleiding kan: AANLEIDING (gebeurtenis NU), PROBLEEM (iets mis), ONDERWERP (wat IS X), VOORBEELDEN (3+ concrete gevallen), ANEKDOTE (verhaaltje), DEFINITIE. Hier: beschrijving van wat Flitsmeister IS = onderwerps-introductie. = C.",
+        "Inleiding kan: AANLEIDING (gebeurtenis NU), PROBLEEM (iets mis), ONDERWERP (wat IS X), VOORBEELDEN (3+ concrete gevallen), ANEKDOTE (verhaaltje), DEFINITIE. Hier: beschrijving van wat Flitsmeister IS = onderwerps-introductie.",
         {
-          basis: "'Wat IS X' beschrijving = onderwerps-introductie. = C.",
-          simpeler: "Alinea 1-2 zeggen wie/wat Flitsmeister is. Onderwerp introduceren. = C.",
-          nogSimpeler: "Onderwerp = C.",
+          basis: "'Wat IS X' beschrijving = onderwerps-introductie.",
+          simpeler: "Alinea 1-2 zeggen wie/wat Flitsmeister is. Onderwerp introduceren.",
+          nogSimpeler: "Onderwerp",
         },
         [
           { woord: "introduceren", uitleg: "Voor het eerst voorstellen of laten zien." },
@@ -117,11 +117,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + tekstsoort — kern" },
       ],
       uitlegPad: compact(
-        "Interview = de schrijver geeft de geïnterviewde het woord — feiten + ontwikkeling. Bijna altijd informeren. Hier: van flitserlijst → multi-app = veranderingen. = B.",
+        "Interview = de schrijver geeft de geïnterviewde het woord — feiten + ontwikkeling. Bijna altijd informeren. Hier: van flitserlijst → multi-app = veranderingen.",
         {
-          basis: "Interview over hoe iets veranderde = informeren over veranderingen. = B.",
-          simpeler: "De tekst vertelt wat er met Flitsmeister GEBEURDE. = B.",
-          nogSimpeler: "Veranderingen = B.",
+          basis: "Interview over hoe iets veranderde = informeren over veranderingen.",
+          simpeler: "De tekst vertelt wat er met Flitsmeister GEBEURDE.",
+          nogSimpeler: "Veranderingen",
         },
         [
           { woord: "informeren", uitleg: "Feiten geven zonder mening op te dringen." },
@@ -158,11 +158,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "informeren over X — precisie — kern" },
       ],
       uitlegPad: compact(
-        "Bij doel-vragen: kijk welke optie ALLE alineas dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Optie C dekt zowel onderzoek als mening. = C.",
+        "Bij doel-vragen: kijk welke optie ALLE alineas dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Optie C dekt zowel onderzoek als mening.",
         {
-          basis: "Onderzoek + mening jongeren = optie C dekt allebei. = C.",
-          simpeler: "Wat zit ER ALLEMAAL in? Onderzoek + opinie. C zegt dat. = C.",
-          nogSimpeler: "Onderzoek+opinie = C.",
+          basis: "Onderzoek + mening jongeren = optie C dekt allebei.",
+          simpeler: "Wat zit ER ALLEMAAL in? Onderzoek + opinie. C zegt dat.",
+          nogSimpeler: "Onderzoek+opinie",
         },
         [
           { woord: "scope", uitleg: "De BREEDTE van wat een bewering of doel dekt." },
@@ -199,11 +199,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "advertentie-analyse — kern" },
       ],
       uitlegPad: compact(
-        "Doelgroep = wie ECHT de oproep KAN/WIL doen. Filter: kinderen kopen geen verzekering, zorgverzekeraars zijn de concurrent. Blijven over: ouders die voor kind kiezen. Plus de tekst zegt 'voor jouw kind'. = C.",
+        "Doelgroep = wie ECHT de oproep KAN/WIL doen. Filter: kinderen kopen geen verzekering, zorgverzekeraars zijn de concurrent. Blijven over: ouders die voor kind kiezen. Plus de tekst zegt 'voor jouw kind'.",
         {
-          basis: "Wie koopt voor het kind? Ouder. = C.",
-          simpeler: "Kinderen kopen niets. Verzekeraars zijn concurrent. Ouders kiezen. = C.",
-          nogSimpeler: "Ouders = C.",
+          basis: "Wie koopt voor het kind? Ouder.",
+          simpeler: "Kinderen kopen niets. Verzekeraars zijn concurrent. Ouders kiezen.",
+          nogSimpeler: "Ouders",
         },
         [
           { woord: "doelgroep", uitleg: "De mensen die de tekst probeert te bereiken en aan te zetten tot actie." },
@@ -240,11 +240,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "specificeer call-to-action — kern" },
       ],
       uitlegPad: compact(
-        "Advertentie-doel altijd activeren. WAARtoe? Zoek de exacte oproep in de tekst. Hier: 'Sluit af via Independer.nl' — niet 'sluit beugel-verzekering af' (te smal). = B.",
+        "Advertentie-doel altijd activeren. WAARtoe? Zoek de exacte oproep in de tekst. Hier: 'Sluit af via Independer.nl' — niet 'sluit beugel-verzekering af' (te smal).",
         {
-          basis: "Oproep = 'via Independer afsluiten'. = B.",
-          simpeler: "Independer is een vergelijker — wil dat je VIA HEN kiest. = B.",
-          nogSimpeler: "Via Independer = B.",
+          basis: "Oproep = 'via Independer afsluiten'.",
+          simpeler: "Independer is een vergelijker — wil dat je VIA HEN kiest.",
+          nogSimpeler: "Via Independer",
         },
         [
           { woord: "call-to-action", uitleg: "De expliciete oproep in een advertentie wat je moet doen." },
@@ -281,11 +281,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + scope — kern" },
       ],
       uitlegPad: compact(
-        "Bij voor/nadeel-mix zonder eigen mening = informeren. Bij KANT KIEZEN = overtuigen. Hier 3 generaties + genuanceerd = ontwikkeling. = B.",
+        "Bij voor/nadeel-mix zonder eigen mening = informeren. Bij KANT KIEZEN = overtuigen. Hier 3 generaties + genuanceerd = ontwikkeling.",
         {
-          basis: "3 generaties beschreven zonder mening = informeren over ontwikkeling. = B.",
-          simpeler: "Tekst kiest geen kant — beschrijft hoe vegan leer veranderde. = B.",
-          nogSimpeler: "Ontwikkeling = B.",
+          basis: "3 generaties beschreven zonder mening = informeren over ontwikkeling.",
+          simpeler: "Tekst kiest geen kant — beschrijft hoe vegan leer veranderde.",
+          nogSimpeler: "Ontwikkeling",
         },
         [
           { woord: "ontwikkeling", uitleg: "Hoe iets in de loop van de tijd veranderd of gegroeid is." },

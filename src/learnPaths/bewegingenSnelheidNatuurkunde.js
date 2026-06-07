@@ -92,8 +92,8 @@ const steps = [
           basiskennis: [{ onderwerp: "30 min = 0,5 uur", uitleg: "Half uur = 0,5 uur. Kwartier = 0,25 uur." }],
           niveaus: {
             basis: "20 × 0,5 = 10 km. A.",
-            simpeler: "Snelheid 20 km/u = 20 km in 1 uur. In een half uur (= 30 min) fietst hij de helft: 10 km. = A.",
-            nogSimpeler: "10 km = A.",
+            simpeler: "Snelheid 20 km/u = 20 km in 1 uur. In een half uur (= 30 min) fietst hij de helft: 10 km.",
+            nogSimpeler: "10 km",
           },
         },
       },

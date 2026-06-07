@@ -38,7 +38,7 @@ const steps = [
           stappen: [{ titel: "Scan = specifiek zoeken", tekst: "**Scannen** = oogspotlight zoekt **1 specifiek element**: getal, naam, jaar, datum. Je leest NIET alle woorden — alleen typografisch opvallende elementen. Voor jaartal: zoek 4-cijferige getallen (1900-2030)." }],
           woorden: [{ woord: "scannen", uitleg: "Snel doorzoeken van tekst naar specifieke informatie." }, { woord: "skim", uitleg: "Globaal lezen voor algemene indruk." }],
           theorie: "Cito-tip: bij vraag met getal/jaar in vraagstelling → altijd scan-strategie eerst.",
-          niveaus: { basis: "Scannen — A.", simpeler: "Jaartal zoeken = scannen = A.", nogSimpeler: "Scan = A." },
+          niveaus: { basis: "Scannen — A.", simpeler: "Jaartal zoeken = scannen", nogSimpeler: "Scan" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           stappen: [{ titel: "Vraag eerst = focused lezen", tekst: "Door **eerst de vragen** te lezen weet je wélke informatie te zoeken in de tekst. Skim daarna voor overzicht (1 min). Dan per vraag terug. Bespaart 30-50% tijd vs hele tekst eerst doorlezen." }],
           theorie: "Werkt vooral bij **mc-vragen** (Cito-stijl). Bij open vragen ook OK, maar dan minder evident.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Vraag: 'Why was the boy scared?' → scan voor 'scared / afraid / frightened / terrified' in tekst." }],
-          niveaus: { basis: "Vragen eerst — A.", simpeler: "Vragen lezen → tekst skimmen = A.", nogSimpeler: "Vraag eerst = A." },
+          niveaus: { basis: "Vragen eerst — A.", simpeler: "Vragen lezen → tekst skimmen", nogSimpeler: "Vraag eerst" },
         },
       },
       {
@@ -61,7 +61,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "90 / 50 ≈ 1,5 min", tekst: "**90 min ÷ 50 vragen = 1,8 min**. Trek af: 3 min tekst-overzicht-tijd + 5 min eind-check = 90-8=82 min / 50 = **1,5-1,6 min per vraag**. Gebruik als richtlijn — sommige vragen sneller, andere langzamer." }],
           theorie: "Cito-strategie-tip: stel **timer per pagina** (~10 min) zodat je weet of je achterloopt.",
-          niveaus: { basis: "1,5 min — A.", simpeler: "VMBO-Engels = 1,5 min/vraag = A.", nogSimpeler: "1,5 min = A." },
+          niveaus: { basis: "1,5 min — A.", simpeler: "VMBO-Engels = 1,5 min/vraag", nogSimpeler: "1,5 min" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
         wrongHints: [null, "Niet — scannen is sneller dan skim.", "Verschil bestaat — andere doelen.", "Niet — skim werkt voor elke tekst."],
         uitlegPad: {
           stappen: [{ titel: "Doel verschilt", tekst: "**Scan**: 1 specifiek element vinden (jaar, naam, getal). **Skim**: globaal idee wat tekst zegt. Beide zijn snel maar verschillende vragen — scan = 'wie won?' (1 antwoord); skim = 'waar gaat 't over?' (overzicht)." }],
-          niveaus: { basis: "Specifiek vs overzicht — A.", simpeler: "Scan = 1 ding, skim = overzicht = A.", nogSimpeler: "Specifiek vs algemeen = A." },
+          niveaus: { basis: "Specifiek vs overzicht — A.", simpeler: "Scan = 1 ding, skim = overzicht", nogSimpeler: "Specifiek vs algemeen" },
         },
       },
       {
@@ -82,7 +82,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tijd-budget bewaken", tekst: "Per moeilijke vraag **maximaal 2,5 min** investeren. Daarna **overslaan + door**. Aan het einde terug met **frisse blik** — vaak los je hem dan op. Anders: op het laatst gokken (~25% kans bij 4 opties)." }],
           theorie: "Cito-tip: zet een markering (sterretje) bij overgeslagen vragen op je antwoord-blad.",
-          niveaus: { basis: "Overslaan + later — A.", simpeler: "Moeilijk = skip + door = A.", nogSimpeler: "Skip = A." },
+          niveaus: { basis: "Overslaan + later — A.", simpeler: "Moeilijk = skip + door", nogSimpeler: "Skip" },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
           stappen: [{ titel: "Verwijswoord = lokale context", tekst: "Verwijswoorden ('this / that / they / it / he / she') verwijzen naar iets in **vorige 1-3 zinnen**. Lees terug. Bv. 'The boys came home. **They** were tired.' → They = the boys." }],
           woorden: [{ woord: "verwijswoord", uitleg: "Woord dat terugwijst naar eerder genoemd iets (this/that/it/they/he/she)." }],
           theorie: "Cito-CSE-favoriet: verwijs-vragen komen elk examen voor. Easy points als je strategie toepast.",
-          niveaus: { basis: "Vorige zin — A.", simpeler: "Verwijswoord = kijk vorige zin = A.", nogSimpeler: "Vorig = A." },
+          niveaus: { basis: "Vorige zin — A.", simpeler: "Verwijswoord = kijk vorige zin", nogSimpeler: "Vorig" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Contrast-signaalwoorden", tekst: "**However / But / Although / Despite / On the contrary / Nevertheless** → allemaal CONTRAST. Tekst gaat een ANDERE richting in. Vooral 'however' is CSE-favoriet om mening-shift te markeren." }],
           theorie: "Cito-tip: bij conclusie-vraag — let op zin NA 'however'. Daar staat vaak hoofd-mening van schrijver.",
-          niveaus: { basis: "However — A.", simpeler: "Contrast = however = A.", nogSimpeler: "However = A." },
+          niveaus: { basis: "However — A.", simpeler: "Contrast = however", nogSimpeler: "However" },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
           stappen: [{ titel: "Purpose = doel = intentie", tekst: "**Purpose** vraagt naar **bedoeling** van schrijver. Mogelijke antwoorden: to inform (informeren), to entertain (vermaken), to warn (waarschuwen), to persuade (overtuigen). Vergelijk OBIA in NL." }],
           woorden: [{ woord: "purpose", uitleg: "Bedoeling, doel — waarom schreef de schrijver dit?" }],
           theorie: "Strategie: kijk naar **toon** + **laatste alinea**. To inform-tekst is zakelijk, to entertain heeft humor, to warn is bezorgd, to persuade gebruikt 'I think' / 'we should'.",
-          niveaus: { basis: "Intentie-vraag — A.", simpeler: "Purpose = bedoeling = intentie-vraag = A.", nogSimpeler: "Bedoeling = A." },
+          niveaus: { basis: "Intentie-vraag — A.", simpeler: "Purpose = bedoeling = intentie-vraag", nogSimpeler: "Bedoeling" },
         },
       },
       {
@@ -137,7 +137,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Therefore = conclusie/gevolg", tekst: "**Therefore / Thus / As a result / Consequently** → signaal voor **GEVOLG / conclusie**. Eerder zin = oorzaak, na 'therefore' = gevolg/conclusie." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "'It rained all night. Therefore, the football match was cancelled.' → cause (rain) + effect (cancellation)." }],
-          niveaus: { basis: "Gevolg — A.", simpeler: "Therefore = daarom = A.", nogSimpeler: "Daarom = A." },
+          niveaus: { basis: "Gevolg — A.", simpeler: "Therefore = daarom", nogSimpeler: "Daarom" },
         },
       },
       {
@@ -148,7 +148,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Context-strategie", tekst: "Lees zin met onbekend woord. Kijk **1-2 zinnen ervoor + erna**. Wat past logisch? Soms staat **synoniem** in andere zin, of **voorbeeld** ('such as...') dat woord verheldert." }],
           theorie: "Tip: kijk naar **woord-onderdelen** — prefix (un-/re-/dis-) + root + suffix (-tion/-able/-ly). 'Unbelievable' = un + believe + able = 'niet te geloven'.",
-          niveaus: { basis: "Context — A.", simpeler: "Onbekend woord = context lezen = A.", nogSimpeler: "Context = A." },
+          niveaus: { basis: "Context — A.", simpeler: "Onbekend woord = context lezen", nogSimpeler: "Context" },
         },
       },
     ],
@@ -168,7 +168,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "un + believe + able", tekst: "**un-** (niet) + **believe** (geloven) + **-able** (kunnen) = 'niet kunnen worden geloofd' = **'niet te geloven'**. Drie woord-onderdelen + ezelsbruggetje 'un' = NIET." }],
           theorie: "Cito-CSE-pattern: 'un-X-able' = vaak 'kan niet X worden'. Unstoppable, unreachable, unbeatable.",
-          niveaus: { basis: "Niet te geloven — A.", simpeler: "Un + believe + able = A.", nogSimpeler: "Niet geloven = A." },
+          niveaus: { basis: "Niet te geloven — A.", simpeler: "Un + believe + able", nogSimpeler: "Niet geloven" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Re = again", tekst: "**Re-** = again (opnieuw). Rewrite (herschrijven), rebuild (herbouwen), reload (herladen), renew (vernieuwen)." }],
           theorie: "Cito-CSE-favoriet: re-write / re-think / re-action vragen. Snap re- = je hebt 5+ woorden in 1 keer.",
-          niveaus: { basis: "Re- — A.", simpeler: "Opnieuw = re- = A.", nogSimpeler: "Re = A." },
+          niveaus: { basis: "Re- — A.", simpeler: "Opnieuw = re-", nogSimpeler: "Re" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
           stappen: [{ titel: "False friend = valstrik", tekst: "**False friend** = Engels woord dat LIJKT op NL maar iets ANDERS betekent. Voorbeelden:\n• 'Eventually' (Engels) = 'uiteindelijk', NIET 'eventueel'\n• 'Sympathetic' (Engels) = 'meelevend', NIET 'sympathiek' (= nice)\n• 'Actually' (Engels) = 'eigenlijk', NIET 'actueel' (= current)" }],
           woorden: [{ woord: "false friend", uitleg: "Tweetalig vergelijkbaar woord met andere betekenis." }],
           theorie: "Cito-CSE-val: kies niet snel op 'klinkt-als-NL'. Test in context.",
-          niveaus: { basis: "Bedrieglijk woord — A.", simpeler: "False friend = bedrieglijk woord = A.", nogSimpeler: "Bedrieglijk = A." },
+          niveaus: { basis: "Bedrieglijk woord — A.", simpeler: "False friend = bedrieglijk woord", nogSimpeler: "Bedrieglijk" },
         },
       },
       {
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "hope + less", tekst: "**hope** (hoop) + **-less** (zonder/geen) = 'zonder hoop' / hopeloos. **-less** = altijd 'zonder X'. Homeless = zonder huis. Penniless = zonder geld. Useless = zonder nut." }],
           theorie: "Cito-CSE-truc: -less = NEGATIEF. -ful = POSITIEF. Hopeful (vol hoop) vs Hopeless (zonder hoop).",
-          niveaus: { basis: "Zonder hoop — A.", simpeler: "hope + less = zonder hoop = A.", nogSimpeler: "Geen hoop = A." },
+          niveaus: { basis: "Zonder hoop — A.", simpeler: "hope + less = zonder hoop", nogSimpeler: "Geen hoop" },
         },
       },
       {
@@ -214,7 +214,7 @@ const steps = [
           stappen: [{ titel: "Huge = enormous = big", tekst: "**Synoniemen** voor groot: huge / enormous / big / large / giant / massive / vast / tremendous. Tegenstelling: tiny / small / little / minute." }],
           woorden: [{ woord: "synoniem", uitleg: "Woord met (bijna) dezelfde betekenis." }, { woord: "antoniem", uitleg: "Woord met tegengestelde betekenis." }],
           theorie: "Cito-CSE-pattern: synoniem-vragen vragen om groep ('big-family'). Tegenstelling-vragen geven 1 antoniem.",
-          niveaus: { basis: "enormous — A.", simpeler: "huge = enormous = synoniem = A.", nogSimpeler: "Enormous = A." },
+          niveaus: { basis: "enormous — A.", simpeler: "huge = enormous = synoniem", nogSimpeler: "Enormous" },
         },
       },
     ],
@@ -235,7 +235,7 @@ const steps = [
           stappen: [{ titel: "Distractor = misleider", tekst: "**Distractor** (afleider) = fout antwoord-optie die EXPRES plausibel klinkt. Doel: testen of leerling écht goed leest. Vaak gebruikt: woorden uit tekst maar uit verkeerde context." }],
           woorden: [{ woord: "distractor", uitleg: "Misleidende antwoord-optie in een multiple-choice vraag." }],
           theorie: "Strategie: bij 4 opties zijn meestal 2 duidelijk fout (snel uit te sluiten) en 2 lijken op elkaar. Vergelijk die twee zorgvuldig.",
-          niveaus: { basis: "Misleidend fout antwoord — A.", simpeler: "Distractor = misleider = A.", nogSimpeler: "Misleider = A." },
+          niveaus: { basis: "Misleidend fout antwoord — A.", simpeler: "Distractor = misleider", nogSimpeler: "Misleider" },
         },
       },
       {
@@ -246,7 +246,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "NOT = omgekeerd zoeken", tekst: "Bij 'NOT'/'EXCEPT'-vragen MOET je het **omgekeerde** doen: zoek welke optie **NIET** in tekst staat. 3 zullen kloppen, 1 niet. **Onderstreep 'NOT'** of zet eromheen — voorkom missen." }],
           theorie: "Cito-CSE-valstrik: ~5% van vragen heeft 'NOT'. Veel leerlingen missen 't en geven juiste optie ipv onjuiste.",
-          niveaus: { basis: "NOT onderstrepen — A.", simpeler: "NOT-vraag = omgekeerd = A.", nogSimpeler: "Onderstrepen = A." },
+          niveaus: { basis: "NOT onderstrepen — A.", simpeler: "NOT-vraag = omgekeerd", nogSimpeler: "Onderstrepen" },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Extreme woorden = vaak fout", tekst: "Tekst-schrijvers gebruiken zelden absolute taal ('altijd', 'iedereen', 'nooit', 'allemaal'). Daarom zijn opties met **'always / never / all / none'** statistisch VAAK fout in CSE. Genuanceerde 'sometimes / usually / often / many' winnen vaker." }],
           theorie: "Strategie alleen voor noodgevallen (echte gok). Bij twijfel + context: nuance > absoluut.",
-          niveaus: { basis: "Sometimes — A.", simpeler: "Bij gok: nuance > absoluut = A.", nogSimpeler: "Sometimes = A." },
+          niveaus: { basis: "Sometimes — A.", simpeler: "Bij gok: nuance > absoluut", nogSimpeler: "Sometimes" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
         wrongHints: [null, "Niet — tijd benutten.", "Te langzaam — al klaar.", "Doe direct tijdens vraag."],
         uitlegPad: {
           stappen: [{ titel: "Eind-check = goud", tekst: "10 min eind-check kan **3-5 punten** schelen. **Eerst**: ingevuld de overgeslagen vragen. **Daarna**: check 2-3 onzekere antwoorden — kun je nu beter? Antwoord pas wijzigen als je redelijk zeker bent — vaak is je eerste keuze de juiste." }],
-          niveaus: { basis: "Eind-check — A.", simpeler: "Laatste 10 min = check + skip-vragen = A.", nogSimpeler: "Check = A." },
+          niveaus: { basis: "Eind-check — A.", simpeler: "Laatste 10 min = check + skip-vragen", nogSimpeler: "Check" },
         },
       },
       {
@@ -278,7 +278,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Open antwoord = NL + bewijs", tekst: "Open vragen meestal **in Nederlands** beantwoord (tenzij anders aangegeven). **Volledige zin** met **2-3 bewijspunten** uit tekst. Voorbeeld: 'De schrijver vindt sport belangrijk omdat (1) het je gezond houdt en (2) je leert samenwerken.'" }],
           theorie: "Cito-correctie: open vragen scoren punten per bewijspunt. 1 bewijs = 1 punt, 2 bewijs = 2 punten.",
-          niveaus: { basis: "NL volledige zin met bewijs — A.", simpeler: "Open vraag = NL + tekstbewijs = A.", nogSimpeler: "NL + bewijs = A." },
+          niveaus: { basis: "NL volledige zin met bewijs — A.", simpeler: "Open vraag = NL + tekstbewijs", nogSimpeler: "NL + bewijs" },
         },
       },
     ],
@@ -297,7 +297,7 @@ const steps = [
         wrongHints: [null, "Scan = specifiek, niet overzicht.", "Te langzaam.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Skim = globaal", tekst: "**Skim**: lees titel + eerste/laatste zin elke alinea + grafiek-onderschriften. Geeft 80% overzicht in 20% tijd." }],
-          niveaus: { basis: "Skim — A.", simpeler: "Overzicht = skim = A.", nogSimpeler: "Skim = A." },
+          niveaus: { basis: "Skim — A.", simpeler: "Overzicht = skim", nogSimpeler: "Skim" },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "False friend — let op!", tekst: "**Eventually** (Engels) = 'uiteindelijk / na verloop van tijd'. **NIET** 'eventueel' (NL). 'Eventueel' = perhaps / possibly. Cito-favoriete valstrik." }],
           theorie: "Memo: 'eventueel' (NL) ≠ 'eventually' (Engels). Twee aparte concepten.",
-          niveaus: { basis: "Uiteindelijk — A.", simpeler: "Eventually = uiteindelijk = A.", nogSimpeler: "Uiteindelijk = A." },
+          niveaus: { basis: "Uiteindelijk — A.", simpeler: "Eventually = uiteindelijk", nogSimpeler: "Uiteindelijk" },
         },
       },
       {
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "Tegenstelling.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Difficult = hard = tough", tekst: "Synoniemen voor moeilijk: **difficult / hard / tough / challenging / complicated / tricky**." }],
-          niveaus: { basis: "Hard — A.", simpeler: "Difficult = hard = A.", nogSimpeler: "Hard = A." },
+          niveaus: { basis: "Hard — A.", simpeler: "Difficult = hard", nogSimpeler: "Hard" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
         wrongHints: [null, "Reden = because.", "Tijd = when / before.", "Voorbeeld = for instance."],
         uitlegPad: {
           stappen: [{ titel: "However = HOE-WEL-VER = maar", tekst: "**However** = contrast-signaalwoord. Tekst gaat ANDERS richting in. Vooral belangrijk voor conclusie-vragen — zin na 'however' = vaak hoofd-standpunt." }],
-          niveaus: { basis: "Tegenstelling — A.", simpeler: "However = maar = contrast = A.", nogSimpeler: "Contrast = A." },
+          niveaus: { basis: "Tegenstelling — A.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
         wrongHints: [null, "Te ver weg — verwijswoord is lokaal.", "Niet — niet daar.", "Niet — voetnoten zeldzaam in CSE."],
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord = lokale referentie", tekst: "**'It / they / this / that'** verwijst altijd naar iets dat **kort daarvoor** is genoemd. Lees 1-2 zinnen voor regel 5 en zoek het zelfstandig naamwoord." }],
-          niveaus: { basis: "Vorige zinnen — A.", simpeler: "It verwijst kort terug = vorige zin = A.", nogSimpeler: "Vorige = A." },
+          niveaus: { basis: "Vorige zinnen — A.", simpeler: "It verwijst kort terug = vorige zin", nogSimpeler: "Vorige" },
         },
       },
     ],

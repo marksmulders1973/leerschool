@@ -40,7 +40,7 @@ const steps = [
           stappen: [{ titel: "Rond rood = verbod", tekst: "**Rond + rode rand** = altijd 'mag niet'. Voorbeeld: bord '50' rond met rode rand = max 50 km/u. Bord met fiets en streep erdoor = fietsen verboden." }],
           woorden: [{ woord: "verbod", uitleg: "Iets mag NIET." }, { woord: "gebod", uitleg: "Iets MOET." }],
           theorie: "Cito-VVN-pattern: cijfer in rondje met rode rand = snelheid. Geen rondje = ander soort bord.",
-          niveaus: { basis: "Rond + rode rand — A.", simpeler: "Verbod = rond + rood = A.", nogSimpeler: "Rond rood = A." },
+          niveaus: { basis: "Rond + rode rand — A.", simpeler: "Verbod = rond + rood", nogSimpeler: "Rond rood" },
         },
       },
       {
@@ -51,7 +51,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Driehoek = waarschuwing", tekst: "**Driehoek met rode rand** (puntige top boven of beneden) waarschuwt voor gevaar. In het bord: wat ER kan gebeuren. Bv. driehoek met fiets = fietspad-kruising, driehoek met kinderen = schoolzone." }],
           theorie: "Cito-VVN: ALTIJD oppassen bij driehoek + rood. Snelheid verminderen + oplettend rijden.",
-          niveaus: { basis: "Waarschuwing — A.", simpeler: "Driehoek + rood = pas op = A.", nogSimpeler: "Driehoek rood = A." },
+          niveaus: { basis: "Waarschuwing — A.", simpeler: "Driehoek + rood = pas op", nogSimpeler: "Driehoek rood" },
         },
       },
       {
@@ -62,7 +62,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stop = uniek bord", tekst: "**STOP-bord** = enige achthoekige verkeersbord. Internationaal — altijd hetzelfde, ook in VS, EU, Japan. **Altijd stoppen** (zelfs als geen ander verkeer) + voorrang verlenen aan iedereen op gekruiste weg." }],
           theorie: "VVN-examen-feit: bij STOP-bord moet je **echt** stilstaan (wielen niet bewegen). Anders boete.",
-          niveaus: { basis: "STOP-bord — A.", simpeler: "Achthoekig = STOP = A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "STOP-bord — A.", simpeler: "Achthoekig = STOP", nogSimpeler: "Stop" },
         },
       },
       {
@@ -73,7 +73,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Blauw = positieve actie", tekst: "**Blauw** = positief: óf je MOET iets (gebod), óf je krijgt info. Rond + blauw = MOET (bv. verplicht fietspad). Vierkant + blauw = info (bv. parkeerplaats hier)." }],
           theorie: "Onthoud: kleur-betekenissen blauw = OK/doen. Rood = STOP/niet. Geel = niet officieel, vaak werk/wegwerkzaamheden tijdelijk.",
-          niveaus: { basis: "Gebod — A.", simpeler: "Blauw rond = moet = A.", nogSimpeler: "Blauw = doen = A." },
+          niveaus: { basis: "Gebod — A.", simpeler: "Blauw rond = moet", nogSimpeler: "Blauw = doen" },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rond + blauw = verplichting", tekst: "Bord **G11** (rond, blauw, witte fiets) = **verplicht fietspad**. Hier MOET een fietser rijden. Auto's mogen er niet, voetgangers niet (tenzij ander bord aangeeft). Strakke regel — anders boete." }],
           theorie: "Verschil G11 (verplicht) vs G13 (onverplicht, alternatief): G11 = MUST, G13 = MAY.",
-          niveaus: { basis: "Verplicht fietsen — A.", simpeler: "Rond blauw met fiets = moet fietsen = A.", nogSimpeler: "Fietsen verplicht = A." },
+          niveaus: { basis: "Verplicht fietsen — A.", simpeler: "Rond blauw met fiets = moet fietsen", nogSimpeler: "Fietsen verplicht" },
         },
       },
     ],
@@ -105,7 +105,7 @@ const steps = [
           stappen: [{ titel: "Rechts heeft voorrang", tekst: "Op een **gelijkwaardige kruising** (geen bord, geen stoplicht, geen haaientanden) heeft **rechts** voorrang. Onthoud: 'rechts gaat eerst'. Internationaal de regel in NL/Europa." }],
           theorie: "Wel anders in VS! Daar hebben STOP-borden vaker voorrang, geen 'rechts-regel'. NL/EU = rechts voorrang.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Stel je bent op fiets, kruising zonder borden. Auto komt van rechts → auto heeft voorrang, jij wacht." }],
-          niveaus: { basis: "Rechts — A.", simpeler: "Zonder borden = rechts voor = A.", nogSimpeler: "Rechts = A." },
+          niveaus: { basis: "Rechts — A.", simpeler: "Zonder borden = rechts voor", nogSimpeler: "Rechts" },
         },
       },
       {
@@ -117,7 +117,7 @@ const steps = [
           stappen: [{ titel: "Haaientanden = waarschuwing", tekst: "**Haaientanden** (witte driehoekjes wijzend naar JOU op de weg) zijn de **voorganger** van bord B6 (voorrangsweg). De andere weg is voorrangsweg → jij moet wachten + voorrang verlenen." }],
           woorden: [{ woord: "haaientanden", uitleg: "Witte driehoekjes op het wegdek die voorrang aangeven." }],
           theorie: "Wegmarkering 'haaientanden' wijst altijd naar de weggebruiker die voorrang moet verlenen.",
-          niveaus: { basis: "Jij wacht — A.", simpeler: "Haaientanden = jij verleent voorrang = A.", nogSimpeler: "Jij wachten = A." },
+          niveaus: { basis: "Jij wacht — A.", simpeler: "Haaientanden = jij verleent voorrang", nogSimpeler: "Jij wachten" },
         },
       },
       {
@@ -128,7 +128,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zebra = voetganger eerst", tekst: "Op **zebrapad** (witte strepen) heeft de **voetganger altijd voorrang**. Auto + fiets STOPPEN — ook als voetganger nog niet helemaal oversteekt. Boete bij overtreding (~€280)." }],
           theorie: "Cito-VVN: leerlingen moeten dit pad-niveau testen. ~3-4 vragen over zebra/voetganger gemiddeld in examen.",
-          niveaus: { basis: "Stop — A.", simpeler: "Zebra + voetganger = stop = A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "Stop — A.", simpeler: "Zebra + voetganger = stop", nogSimpeler: "Stop" },
         },
       },
       {
@@ -139,7 +139,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Voorrangsvoertuig = altijd voorrang", tekst: "**Ambulance + politie + brandweer** met **zwaailicht + sirene** = voorrangsvoertuigen. ALTIJD voorrang. Andere weggebruikers: **opzij + stoppen**. Fietser: snel naar berm. Auto: aan rechterkant van weg, stoppen." }],
           theorie: "Zwaailicht zonder sirene = geen voorrang (alleen zichtbaarheid). Sirene + zwaailicht = wél voorrang.",
-          niveaus: { basis: "Naar kant + stoppen — A.", simpeler: "Ambulance = opzij + stoppen = A.", nogSimpeler: "Stop + opzij = A." },
+          niveaus: { basis: "Naar kant + stoppen — A.", simpeler: "Ambulance = opzij + stoppen", nogSimpeler: "Stop + opzij" },
         },
       },
       {
@@ -150,7 +150,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rood = altijd stop", tekst: "**Rood verkeerslicht** = altijd stoppen voor stopstreep, ongeacht ander verkeer. Wachten tot **groen**. Boete bij door rood: fietser €110, auto €280. Bij ongeluk: jouw schuld." }],
           theorie: "Cito-VVN: bij rood ALTIJD stop. Geen uitzonderingen voor fietsers (in tegenstelling tot sommige andere landen — in België mogen fietsers soms rechtsaf bij rood).",
-          niveaus: { basis: "Stoppen — A.", simpeler: "Rood = stop = A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "Stoppen — A.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
         },
       },
     ],
@@ -170,7 +170,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Voorlicht wit/geel", tekst: "Voor: wit of geel. Achter: rood. Onthoud: 'wit licht waar je heen kijkt; rood waar je vandaan komt'. Bij geen licht in donker: boete €60." }],
           theorie: "VVN-examen-feit: bij regen of slecht zicht ook overdag licht aan (sinds 2022 sterk aanbevolen).",
-          niveaus: { basis: "Wit/geel voor — A.", simpeler: "Voorlicht = wit of geel = A.", nogSimpeler: "Wit = A." },
+          niveaus: { basis: "Wit/geel voor — A.", simpeler: "Voorlicht = wit of geel", nogSimpeler: "Wit" },
         },
       },
       {
@@ -181,7 +181,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Linker hand = linksaf", tekst: "Bij **linksaf**: linker hand uitsteken **op tijd** (~5m voor kruising). Bij **rechtsaf**: rechter hand uitsteken. Boete als je niet aangeeft: ~€110 + risico ongeluk." }],
           theorie: "Cito-VVN: ~2 vragen per examen over hand-aangeven. Ezelsbruggetje: 'links-link' (linkerhand voor linksaf, allebei met L).",
-          niveaus: { basis: "Linker hand — A.", simpeler: "Linksaf = linker hand uit = A.", nogSimpeler: "Links = links = A." },
+          niveaus: { basis: "Linker hand — A.", simpeler: "Linksaf = linker hand uit", nogSimpeler: "Links = links" },
         },
       },
       {
@@ -192,7 +192,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen helm-plicht in NL", tekst: "Helm is **niet verplicht** voor gewone fietsen in NL (uniek in Europa — Engeland/Duitsland ook geen plicht maar wel meer cultuur). Wel **sterk aanbevolen**: helm vermindert hersenletsel bij val met ~50%. **WEL VERPLICHT**: voor speed-pedelec (45km/u) en bromfiets." }],
           theorie: "Cito-actueel: discussie over helm-plicht voor kinderen (jaarlijks gespreks-onderwerp). Vooralsnog niet ingevoerd.",
-          niveaus: { basis: "Nee, wel aanbevolen — A.", simpeler: "Helm = niet verplicht = A.", nogSimpeler: "Niet verplicht = A." },
+          niveaus: { basis: "Nee, wel aanbevolen — A.", simpeler: "Helm = niet verplicht", nogSimpeler: "Niet verplicht" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Telefoon-verbod 1 juli 2019", tekst: "**Sinds 1 juli 2019**: telefoon vasthouden tijdens fietsen verboden. **Boete €100**. Hands-free (oortje, telefoon in tas) is wel toegestaan. Doel: voorkomen ongelukken door afleiding." }],
           theorie: "Cito-actueel: 2019-wet = vaak in examens. Ezelsbruggetje: 'fiets + telefoon = 2 handen aan stuur OF helemaal geen telefoon'.",
-          niveaus: { basis: "Telefoon vasthouden — A.", simpeler: "2019 = telefoon-verbod fiets = A.", nogSimpeler: "Telefoon verboden = A." },
+          niveaus: { basis: "Telefoon vasthouden — A.", simpeler: "2019 = telefoon-verbod fiets", nogSimpeler: "Telefoon verboden" },
         },
       },
       {
@@ -214,7 +214,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "E-bike vs speed-pedelec", tekst: "Een gewone **e-bike** (electrische fiets met trapondersteuning) heeft max **25 km/u**. Boven die snelheid stopt motor — je moet zelf harder trappen. Tot 25 km/u = fiets (geen kenteken, geen helm-plicht). Boven 25 km/u = **speed-pedelec** = bromfiets-categorie (helm + kenteken + rijbewijs)." }],
           theorie: "Cito-actueel: e-bike-populariteit + speed-pedelec-ongelukken. Veel discussie.",
-          niveaus: { basis: "25 km/u — A.", simpeler: "E-bike-limiet = 25 = A.", nogSimpeler: "25 = A." },
+          niveaus: { basis: "25 km/u — A.", simpeler: "E-bike-limiet = 25", nogSimpeler: "25" },
         },
       },
     ],
@@ -236,7 +236,7 @@ const steps = [
           woorden: [{ woord: "dode hoek", uitleg: "Plek bij voertuig waar bestuurder met spiegels niet kan zien." }],
           theorie: "Vuistregel: zie ik chauffeur in z'n spiegel? Zo ja, kan hij/zij mij ook zien. Niet? → dode hoek → gevaar.",
           voorbeelden: [{ type: "feit", tekst: "Vrachtauto-chauffeur zit ~2,5m hoog. Naast cabine is ~3 meter blinde zone." }],
-          niveaus: { basis: "Chauffeur ziet je niet — A.", simpeler: "Dode hoek = onzichtbaar voor chauffeur = A.", nogSimpeler: "Onzichtbaar = A." },
+          niveaus: { basis: "Chauffeur ziet je niet — A.", simpeler: "Dode hoek = onzichtbaar voor chauffeur", nogSimpeler: "Onzichtbaar" },
         },
       },
       {
@@ -248,7 +248,7 @@ const steps = [
           stappen: [{ titel: "Haaks = 90°", tekst: "Kruis tramrails **haaks** (= recht eroverheen, in hoek van 90°). Schuin kruisen = fiets-wiel kan in rail blijven steken → val. Haaks oversteken = wielen rollen er soepel overheen." }],
           woorden: [{ woord: "haaks", uitleg: "In hoek van 90 graden, loodrecht." }],
           theorie: "Cito-VVN: in steden met tram (Amsterdam, Den Haag, Utrecht, Rotterdam) komt deze vraag vaker voor.",
-          niveaus: { basis: "Haaks — A.", simpeler: "Tramrails kruisen = recht (90°) = A.", nogSimpeler: "Recht = A." },
+          niveaus: { basis: "Haaks — A.", simpeler: "Tramrails kruisen = recht (90°)", nogSimpeler: "Recht" },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Nat = langere stoptijd", tekst: "Nat wegdek = **minder grip** voor band → kan slippen. **Remafstand wordt ~50% langer** dan droog. Strategie: **langzamer fietsen** + meer afstand houden tot voorganger. Voor groot risico-gebied (bladeren + sneeuw + ijs) ook." }],
           theorie: "Cito-VVN: examen-vraag-favoriet. Onthoud: regen = meer afstand + langzamer.",
-          niveaus: { basis: "Langere remafstand — A.", simpeler: "Regen = minder grip + meer afstand = A.", nogSimpeler: "Minder grip = A." },
+          niveaus: { basis: "Langere remafstand — A.", simpeler: "Regen = minder grip + meer afstand", nogSimpeler: "Minder grip" },
         },
       },
       {
@@ -271,7 +271,7 @@ const steps = [
           stappen: [{ titel: "'Dooring' = auto-deur-ongeluk", tekst: "**'Dooring'** = fietser botst tegen plotseling geopende auto-deur. Auto-bestuurder vergeet vaak om kant op te kijken. **Strategie**: houd ~1 meter afstand van geparkeerde auto's, ook al lijkt het verleidelijk om dichterbij te rijden." }],
           woorden: [{ woord: "dooring", uitleg: "Engelse term voor fiets-tegen-autodeur-ongeluk." }],
           theorie: "Cito-actueel: ~1.500 dooring-ongelukken in NL per jaar. 30% leidt tot ziekenhuis-opname.",
-          niveaus: { basis: "Deur kan open — A.", simpeler: "Geparkeerde auto = deur-risico = A.", nogSimpeler: "Deur = A." },
+          niveaus: { basis: "Deur kan open — A.", simpeler: "Geparkeerde auto = deur-risico", nogSimpeler: "Deur" },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verwacht het slechtste", tekst: "**Defensief rijden** = je gaat ervan uit dat anderen FOUTEN gaan maken. Niet automatisch erop vertrouwen dat de auto je ziet. Niet vertrouwen dat de voetganger op zebra wacht. **Verwacht het slechtste → wees voorbereid**." }],
           theorie: "Vooral belangrijk in stad + drukke kruisingen. Defensief = veilig. Offensief (vertrouwen op anderen) = risico.",
-          niveaus: { basis: "Verwacht fouten — A.", simpeler: "Defensief = voorzichtig + bewust = A.", nogSimpeler: "Voorzichtig = A." },
+          niveaus: { basis: "Verwacht fouten — A.", simpeler: "Defensief = voorzichtig + bewust", nogSimpeler: "Voorzichtig" },
         },
       },
     ],
@@ -301,7 +301,7 @@ const steps = [
         wrongHints: [null, "Niet — geen 'minimum'-bord in NL.", "Niet — geen STOP-bord.", "Niet — wel relevant."],
         uitlegPad: {
           stappen: [{ titel: "Rond rood + getal = max-snelheid", tekst: "Cijfer in rondje met rode rand = **maximumsnelheid**. 30 km/u-borden vooral in **woonwijken, schoolzones**. Boete bij overtreding: ~€100-300 afhankelijk van overschrijding." }],
-          niveaus: { basis: "Max 30 — A.", simpeler: "30 in rondje rood = max 30 = A.", nogSimpeler: "Max 30 = A." },
+          niveaus: { basis: "Max 30 — A.", simpeler: "30 in rondje rood = max 30", nogSimpeler: "Max 30" },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
         wrongHints: [null, "Bijna — moet eerst stoppen.", "Niet — STOP-bord vereist altijd stoppen.", "Niet — gevaarlijk."],
         uitlegPad: {
           stappen: [{ titel: "STOP = altijd eerst stilstand", tekst: "**STOP-bord**: **ALTIJD volledig stilstaan** (wielen niet bewegen) + voorrang verlenen aan iedereen + dan pas doorgaan ALS het veilig + vrij is. Boete bij niet-stoppen: ~€280." }],
-          niveaus: { basis: "Eerst stop dan voorrang dan vrij — A.", simpeler: "STOP = volledige stop + check = A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "Eerst stop dan voorrang dan vrij — A.", simpeler: "STOP = volledige stop + check", nogSimpeler: "Stop" },
         },
       },
       {
@@ -321,7 +321,7 @@ const steps = [
         wrongHints: [null, "Niet — wel onhandig maar niet verboden.", "Niet — wel aanbevolen.", "Niet — wel aanbevolen."],
         uitlegPad: {
           stappen: [{ titel: "Telefoon-verbod sinds 2019", tekst: "**Sinds 1 juli 2019**: telefoon vasthouden tijdens fietsen verboden. Hands-free via oortje/houder mag wel. **Boete €100**." }],
-          niveaus: { basis: "Telefoon vasthouden — A.", simpeler: "2019: telefoon-verbod fiets = A.", nogSimpeler: "Telefoon = A." },
+          niveaus: { basis: "Telefoon vasthouden — A.", simpeler: "2019: telefoon-verbod fiets", nogSimpeler: "Telefoon" },
         },
       },
       {
@@ -331,7 +331,7 @@ const steps = [
         wrongHints: [null, "Niet.", "Niet relevant.", "Niet — er IS regel."],
         uitlegPad: {
           stappen: [{ titel: "Rechts gaat voor", tekst: "Zonder borden, zonder stoplicht, zonder haaientanden: **rechts heeft voorrang**. Internationaal in NL/EU." }],
-          niveaus: { basis: "Rechts — A.", simpeler: "Zonder borden = rechts voor = A.", nogSimpeler: "Rechts = A." },
+          niveaus: { basis: "Rechts — A.", simpeler: "Zonder borden = rechts voor", nogSimpeler: "Rechts" },
         },
       },
       {
@@ -342,7 +342,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "NOOIT naast rechtsafslaande vrachtauto", tekst: "Bij vrachtauto die rechtsafslaat sta JE in **dode hoek**. Chauffeur ziet je NIET. Bij draaibeweging kun je onder wielen komen. **ALTIJD wachten** tot vrachtauto helemaal weg is. Jaarlijks 5-10 doden in NL door dit." }],
           theorie: "Cito-VVN-favoriet: dode-hoek-vraag komt elk examen voor.",
-          niveaus: { basis: "Wachten — A.", simpeler: "Vrachtauto rechtsaf = JIJ wachten = A.", nogSimpeler: "Wachten = A." },
+          niveaus: { basis: "Wachten — A.", simpeler: "Vrachtauto rechtsaf = JIJ wachten", nogSimpeler: "Wachten" },
         },
       },
     ],

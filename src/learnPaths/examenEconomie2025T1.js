@@ -108,7 +108,7 @@ const steps = [
           niveaus: {
             basis: "2017: export 835 < import 921 → C.",
             simpeler: "Vergelijk in elk jaar export en import. 2017 is het enige jaar waar import hoger was — daar valt Sint-Maarten in een tekort.",
-            nogSimpeler: "Alleen 2017: export < import = C.",
+            nogSimpeler: "Alleen 2017: export < import",
           },
         },
       },
@@ -166,7 +166,7 @@ const steps = [
           niveaus: {
             basis: "Reëel = gecorrigeerd voor PRIJZEN (inflatie). Antwoord C.",
             simpeler: "Stel: jij verdiende €1.000, nu €1.050 (+5%). Maar boodschappen zijn 4% duurder. Reëel: je hebt 1% méér koopkracht. We trekken 'veranderde prijzen' eraf om reëel te krijgen.",
-            nogSimpeler: "Reëel = nominaal − inflatie = veranderde prijzen = C.",
+            nogSimpeler: "Reëel = nominaal − inflatie = veranderde prijzen",
           },
         },
       },
@@ -226,7 +226,7 @@ const steps = [
           niveaus: {
             basis: "Souvenir = goed. Toerist koopt in SX = SX verkoopt = export goed door SX. Antwoord B.",
             simpeler: "Een souvenir kun je vasthouden (= goed, niet dienst). De toerist KOOPT van een SX-winkel → SX VERKOOPT aan buitenland → dat heet export. Dus: export van goederen.",
-            nogSimpeler: "Souvenir = goed + verkocht aan buitenlander = export goed = B.",
+            nogSimpeler: "Souvenir = goed + verkocht aan buitenlander = export goed",
           },
         },
       },
@@ -285,7 +285,7 @@ const steps = [
           niveaus: {
             basis: "Paspoort/ID/rijbewijs = burgerzaken = gemeente. Antwoord B.",
             simpeler: "Waar haal jij je paspoort? Niet bij de premier in Den Haag, niet bij het waterschap — bij het GEMEENTEHUIS in jouw woonplaats. Dat is gemeentelijke taak.",
-            nogSimpeler: "Paspoort = gemeente = B.",
+            nogSimpeler: "Paspoort = gemeente",
           },
         },
       },
@@ -342,7 +342,7 @@ const steps = [
           niveaus: {
             basis: "OZB = gemeente. Antwoord C.",
             simpeler: "OZB betekent letterlijk 'Onroerendezaakbelasting' — belasting op je huis. Die wordt door de GEMEENTE geheven (zij innen het, gebruiken het voor lokale voorzieningen). De andere drie zijn allemaal Rijksbelastingen.",
-            nogSimpeler: "OZB = gemeente = C.",
+            nogSimpeler: "OZB = gemeente",
           },
         },
       },
@@ -402,7 +402,7 @@ const steps = [
           niveaus: {
             basis: "Zakgeld = krijg je zonder tegenprestatie = overdrachtsinkomen. Antwoord D.",
             simpeler: "Vraag jezelf bij elke optie: 'lever ik er iets voor?' Loon = ja (werk). Rente = ja (geld op de bank). Winst = ja (ondernemerschap). Zakgeld = nee, krijg je gewoon. Dat 'gewoon krijgen' = overdrachtsinkomen.",
-            nogSimpeler: "Niets gedaan + krijg geld = overdracht = zakgeld = D.",
+            nogSimpeler: "Niets gedaan + krijg geld = overdracht = zakgeld",
           },
         },
       },
@@ -462,7 +462,7 @@ const steps = [
           niveaus: {
             basis: "Meerdere personen + allen privé aansprakelijk = VOF. Antwoord D.",
             simpeler: "De klas is GEEN BV opgericht (= geen rechtspersoon). Met meerdere mensen samen ondernemen + privé aansprakelijk → VOF.",
-            nogSimpeler: "Veel + privé = VOF = D.",
+            nogSimpeler: "Veel + privé = VOF",
           },
         },
       },
@@ -517,7 +517,7 @@ const steps = [
           niveaus: {
             basis: "Overschot in € groeit ondanks meer import-volume → exportprijs moet harder zijn gestegen dan importprijs. Antwoord B.",
             simpeler: "Stel: NL verkoopt 10 ton bloemen voor €100/kg = €1.000.000. Dit jaar 8 ton voor €200/kg = €1.600.000. Volume DAALT maar waarde STIJGT door prijs. Hetzelfde principe hier: prijs export ↑ harder dan prijs import → waarde-overschot ↑.",
-            nogSimpeler: "Volume export laag, waarde stijgt → exportprijs ↑ meer = B.",
+            nogSimpeler: "Volume export laag, waarde stijgt → exportprijs ↑ meer",
           },
         },
       },
@@ -577,7 +577,7 @@ const steps = [
           niveaus: {
             basis: "Germaine zegt: warmtepomp-besparing > spaarrente → investeren loont. Antwoord A.",
             simpeler: "Germaine vergelijkt 2 opties: 1) sparen (krijg je rente, weinig). 2) warmtepomp kopen (bespaar je energiekosten, veel). Optie 2 is beter omdat besparing > rente. Antwoord A.",
-            nogSimpeler: "Energie-besparing > rente = warmtepomp wint = A.",
+            nogSimpeler: "Energie-besparing > rente = warmtepomp wint",
           },
         },
       },

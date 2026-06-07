@@ -28,7 +28,7 @@ const steps = [
         wrongHints: [null, "Niet — bij loodrecht is θ=0 → ook θ₂=0.", "Niet — geen totale reflectie loodrecht.", "Niet — geen dispersie zonder schuine invalshoek."],
         uitlegPad: {
           stappen: [{ titel: "sin(0)=0 → geen breking", tekst: "Bij loodrechte inval: invalshoek θ₁=0°. Snellius: 1·sin(0) = n₂·sin(θ₂) → sin(θ₂)=0 → θ₂=0. Geen knik. Licht loopt door, alleen langzamer in glas." }],
-          niveaus: { basis: "Loodrecht = geen breking. A.", simpeler: "Recht in = recht door. A.", nogSimpeler: "Doorlopen = A." },
+          niveaus: { basis: "Loodrecht = geen breking. A.", simpeler: "Recht in = recht door. A.", nogSimpeler: "Doorlopen" },
         },
       },
       {
@@ -41,7 +41,7 @@ const steps = [
             { titel: "Snellius toepassen", tekst: "n₁·sin(θ₁) = n₂·sin(θ₂)\n1,0·sin(60°) = 1,33·sin(θ₂)\nsin(θ₂) = 0,866/1,33 = 0,651\nθ₂ = arcsin(0,651) ≈ **40,6°**." },
           ],
           theorie: "Naar dichter medium (water) → buigen naar normaal (kleinere hoek).",
-          niveaus: { basis: "sin(θ₂)=0,866/1,33 → 40,6°. A.", simpeler: "Vermenigvuldig + delen Snellius. A.", nogSimpeler: "~41° = A." },
+          niveaus: { basis: "sin(θ₂)=0,866/1,33 → 40,6°. A.", simpeler: "Vermenigvuldig + delen Snellius. A.", nogSimpeler: "~41°" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "v = c/n", tekst: "v = 3,0·10⁸ / 2,42 ≈ **1,24·10⁸ m/s**. Licht is in diamant ongeveer 2,4× langzamer dan in vacuüm." }],
           theorie: "Daarom is diamant zo schitterend: hoog n + perfecte slijp → veel totale reflectie binnen de steen → veel kleur en vonk.",
-          niveaus: { basis: "v=3·10⁸/2,42=1,24·10⁸. A.", simpeler: "Lichtsnelheid gedeeld door n. A.", nogSimpeler: "1,24·10⁸ = A." },
+          niveaus: { basis: "v=3·10⁸/2,42=1,24·10⁸. A.", simpeler: "Lichtsnelheid gedeeld door n. A.", nogSimpeler: "1,24·10⁸" },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is breking, niet reflectie.", "Onjuist — slechts speciaal geval.", "Niet — voor gewone spiegel niet."],
         uitlegPad: {
           stappen: [{ titel: "Hoeken t.o.v. normaal (loodrecht)", tekst: "De normaal is een denkbeeldige lijn loodrecht op het oppervlak op het invalspunt. Invalshoek wordt vanaf de normaal gemeten — NIET vanaf het oppervlak (een veelgemaakte fout!)." }],
-          niveaus: { basis: "Invalshoek = reflectiehoek. A.", simpeler: "Gelijke hoek bij weerkaatsing. A.", nogSimpeler: "Gelijk = A." },
+          niveaus: { basis: "Invalshoek = reflectiehoek. A.", simpeler: "Gelijke hoek bij weerkaatsing. A.", nogSimpeler: "Gelijk" },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Bijna gelijk maar net minder.", "Veel langzamer.", "Het traagst."],
         uitlegPad: {
           stappen: [{ titel: "v = c/n, dus n=1 geeft max v", tekst: "Vacuüm heeft per definitie n=1 → v=c=3·10⁸ m/s. Elk medium met n>1 maakt het licht langzamer." }],
-          niveaus: { basis: "Vacuüm. A.", simpeler: "Lichtsnelheid c in vacuüm. A.", nogSimpeler: "Vacuüm = A." },
+          niveaus: { basis: "Vacuüm. A.", simpeler: "Lichtsnelheid c in vacuüm. A.", nogSimpeler: "Vacuüm" },
         },
       },
     ],
@@ -104,7 +104,7 @@ const steps = [
             { titel: "θ_g berekenen + vergelijken", tekst: "sin(θ_g) = n_lucht/n_water = 1/1,33 = 0,752 → θ_g ≈ 48,8°. 50° > 48,8° → boven grens → totale interne reflectie. Niets komt uit." },
           ],
           theorie: "Daarom werken glasvezels: licht binnen wordt onder hoek >θ_g op de glas-wand aangestoten → ketst altijd terug binnen → tot km zonder verlies.",
-          niveaus: { basis: "50° > 48,8° → totale reflectie. A.", simpeler: "Boven grenshoek = alles terug, niets uit. A.", nogSimpeler: "Totale reflectie = A." },
+          niveaus: { basis: "50° > 48,8° → totale reflectie. A.", simpeler: "Boven grenshoek = alles terug, niets uit. A.", nogSimpeler: "Totale reflectie" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Lange λ → kleinste n", tekst: "In een gewoon dispersie-medium (glas, water): lange golflengten (rood) breken minder dan korte (violet). Daarom komt rood **bovenaan** uit een prisma, violet **onderaan**." }],
           theorie: "Cijfers: rood n≈1,51; violet n≈1,53 in standaard glas.",
-          niveaus: { basis: "Rood = kleinste n. A.", simpeler: "Rood buigt minst. A.", nogSimpeler: "Rood = A." },
+          niveaus: { basis: "Rood = kleinste n. A.", simpeler: "Rood buigt minst. A.", nogSimpeler: "Rood" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
             { titel: "Drie stappen per druppel", tekst: "1. Zonlicht treedt druppel binnen → breekt (dispersie: kleuren splitsen).\n2. Reflecteert intern aan achterkant druppel.\n3. Breekt opnieuw bij uittreden.\nVerschillende kleuren komen onder iets verschillende hoek uit → boogvorm met rood buitenaan, violet binnenaan." },
           ],
           basiskennis: [{ onderwerp: "Hoek 42°", uitleg: "Primaire regenboog verschijnt op 42° van het anti-zon-punt (de plek tegenover de zon, vanuit jou gezien)." }],
-          niveaus: { basis: "Breking + reflectie + breking in druppel. A.", simpeler: "Druppel splitst en buigt licht in boog. A.", nogSimpeler: "Druppels = A." },
+          niveaus: { basis: "Breking + reflectie + breking in druppel. A.", simpeler: "Druppel splitst en buigt licht in boog. A.", nogSimpeler: "Druppels" },
         },
       },
       {
@@ -148,7 +148,7 @@ const steps = [
         wrongHints: [null, "Niet — een gewone lens focust, niet doorgeleidt.", "Niet — geen metaal in glasvezel.", "Niet — vezel zelf geeft geen licht."],
         uitlegPad: {
           stappen: [{ titel: "Licht ketst, geen verlies", tekst: "Glasvezel-kern heeft hoger n dan de mantel. Licht in de kern raakt mantel onder hoek >θ_g → totale reflectie → ketst verder. Geen energieverlies aan absorptie. Daarom km-bereik mogelijk + extreem hoge bandbreedte." }],
-          niveaus: { basis: "Totale reflectie binnen vezel. A.", simpeler: "Licht ketst binnen kern zonder uit te komen. A.", nogSimpeler: "Totale refl. = A." },
+          niveaus: { basis: "Totale reflectie binnen vezel. A.", simpeler: "Licht ketst binnen kern zonder uit te komen. A.", nogSimpeler: "Totale refl." },
         },
       },
       {
@@ -158,7 +158,7 @@ const steps = [
         wrongHints: [null, "Te klein.", "Niet — hoewel handig getal.", "Te groot."],
         uitlegPad: {
           stappen: [{ titel: "sin(θ_g) = 1/n", tekst: "sin(θ_g) = 1/1,5 = 0,667 → θ_g = arcsin(0,667) ≈ **41,8°**." }],
-          niveaus: { basis: "arcsin(1/1,5)≈41,8°. A.", simpeler: "1/1,5=0,667, arcsin daarvan = 42°. A.", nogSimpeler: "42° = A." },
+          niveaus: { basis: "arcsin(1/1,5)≈41,8°. A.", simpeler: "1/1,5=0,667, arcsin daarvan = 42°. A.", nogSimpeler: "42°" },
         },
       },
     ],
@@ -178,7 +178,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "f = 1/S", tekst: "S = 2,0 D = 2,0 1/m. f = 1/S = 0,50 m = **50 cm**. Dat is de afstand waarop deze bril collimaat licht (parallel) focust." }],
           theorie: "Typische leesbrillen: +1 tot +3 D. Hoger = sterker = kortere f.",
-          niveaus: { basis: "f=1/2=0,5 m. A.", simpeler: "f is omgekeerde sterkte → 1/2 = 50 cm. A.", nogSimpeler: "50 cm = A." },
+          niveaus: { basis: "f=1/2=0,5 m. A.", simpeler: "f is omgekeerde sterkte → 1/2 = 50 cm. A.", nogSimpeler: "50 cm" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
           stappen: [
             { titel: "1/f = 1/v + 1/b", tekst: "1/20 = 1/30 + 1/b → 1/b = 1/20 − 1/30 = 3/60 − 2/60 = 1/60 → b = **60 cm**. Reëel + omgekeerd + 2× vergroot (N = 60/30 = 2)." },
           ],
-          niveaus: { basis: "b=60 cm. A.", simpeler: "Vermenigvuldig + aftrekken Snellius-formule. A.", nogSimpeler: "60 cm = A." },
+          niveaus: { basis: "b=60 cm. A.", simpeler: "Vermenigvuldig + aftrekken Snellius-formule. A.", nogSimpeler: "60 cm" },
         },
       },
       {
@@ -206,7 +206,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "v < f → virtueel", tekst: "Bij v < f lopen stralen na lens divergerend. Brein extrapoleert recht achter → schijnbaar beeld 'achter' lens (= virtueel). Rechtop en vergroot — daarom werkt het als vergrootglas." }],
           theorie: "Zelfde principe in loep, microscoop-objectief op kort voorwerpsafstand.",
-          niveaus: { basis: "Virtueel + rechtop + vergroot. A.", simpeler: "Vergrootglas: dichtbij = virtueel + vergroot. A.", nogSimpeler: "Vergroot = A." },
+          niveaus: { basis: "Virtueel + rechtop + vergroot. A.", simpeler: "Vergrootglas: dichtbij = virtueel + vergroot. A.", nogSimpeler: "Vergroot" },
         },
       },
       {
@@ -217,7 +217,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bijziend = mind focus te dicht", tekst: "Het oog focust het beeld VOOR netvlies (te sterke lens). Holle bril divergeert licht eerst → schijnbaar voorwerp dichter → oog focust dan op netvlies. Dioptrie negatief, bijv. −2 D voor matig bijziend." }],
           theorie: "Verziend (hypermetropie) is omgekeerd: positieve bril nodig.",
-          niveaus: { basis: "Holle/negatieve bril. A.", simpeler: "Bijziend = min-bril. A.", nogSimpeler: "Negatief = A." },
+          niveaus: { basis: "Holle/negatieve bril. A.", simpeler: "Bijziend = min-bril. A.", nogSimpeler: "Negatief" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
         wrongHints: [null, "Niet — v<f geeft virtueel beeld (geen opname).", "Niet — bij v=f valt beeld op oneindig.", "Niet — onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Reëel = v > f", tekst: "Reëel beeld vereist v > f. Bij v > 2f: verkleind beeld (normale foto). Bij f<v<2f: vergroot beeld (macro-fotografie). Lens-stelmotor in camera past v aan voor scherpstellen." }],
-          niveaus: { basis: "v>f. A.", simpeler: "Voorwerp verder dan brandpunt → reëel beeld. A.", nogSimpeler: "v>f = A." },
+          niveaus: { basis: "v>f. A.", simpeler: "Voorwerp verder dan brandpunt → reëel beeld. A.", nogSimpeler: "v>f" },
         },
       },
     ],
@@ -247,7 +247,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Additieve menging", tekst: "Licht: alle 3 RGB op vol → wit. Beeldschermen hebben miljoenen R-, G- en B-LEDjes. Door verschillende intensiteiten → miljoenen kleuren." }],
           theorie: "Verf werkt omgekeerd (subtractief): CMY mengen → zwart, want elke verf absorbeert deel van het spectrum.",
-          niveaus: { basis: "R + G + B. A.", simpeler: "Rood, groen, blauw voor schermen. A.", nogSimpeler: "RGB = A." },
+          niveaus: { basis: "R + G + B. A.", simpeler: "Rood, groen, blauw voor schermen. A.", nogSimpeler: "RGB" },
         },
       },
       {
@@ -258,7 +258,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen groen → niets terug", tekst: "Blad reflecteert alleen groen, absorbeert rest. Bij rode lamp: er IS geen groen licht aanwezig → blad heeft niets om te reflecteren → ziet er zwart uit." }],
           theorie: "Daarom gebruiken theaters gekleurde lampen om kleuren te 'doven': een groen kostuum verdwijnt onder magenta licht.",
-          niveaus: { basis: "Geen groen licht = zwart blad. A.", simpeler: "Blad heeft geen rood te reflecteren → zwart. A.", nogSimpeler: "Zwart = A." },
+          niveaus: { basis: "Geen groen licht = zwart blad. A.", simpeler: "Blad heeft geen rood te reflecteren → zwart. A.", nogSimpeler: "Zwart" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "f = c/λ → korte λ = hoge f", tekst: "Violet λ ≈ 400 nm → f ≈ 7,5·10¹⁴ Hz. Rood λ ≈ 700 nm → f ≈ 4,3·10¹⁴ Hz. Hoe blauwer/violetter → kortere golflengte → hogere frequentie → hogere energie per foton (E=hf)." }],
           basiskennis: [{ onderwerp: "Net buiten zichtbaar", uitleg: "Voorbij violet (kortere λ) → UV → röntgen → gamma. Voorbij rood (langere λ) → infrarood → microgolf → radio." }],
-          niveaus: { basis: "Violet = hoogste f. A.", simpeler: "Kortste golflengte = hoogste frequentie = violet. A.", nogSimpeler: "Violet = A." },
+          niveaus: { basis: "Violet = hoogste f. A.", simpeler: "Kortste golflengte = hoogste frequentie = violet. A.", nogSimpeler: "Violet" },
         },
       },
       {
@@ -286,7 +286,7 @@ const steps = [
           stappen: [
             { titel: "1/λ⁴-wet", tekst: "Korte golflengte (blauw) → veel meer verstrooid door lucht-moleculen dan lange (rood). Vandaar: zon-licht via verstrooiing → vooral blauw bereikt onze ogen uit alle richtingen → blauwe lucht. Bij zonsondergang reist licht lang door atmosfeer → al het blauw weggestrooid → rest = rood/oranje." },
           ],
-          niveaus: { basis: "Rayleigh-verstrooiing. A.", simpeler: "Blauw licht stuitert af op lucht-moleculen → komt alle kanten op naar ons toe. A.", nogSimpeler: "Verstrooiing = A." },
+          niveaus: { basis: "Rayleigh-verstrooiing. A.", simpeler: "Blauw licht stuitert af op lucht-moleculen → komt alle kanten op naar ons toe. A.", nogSimpeler: "Verstrooiing" },
         },
       },
       {
@@ -304,7 +304,7 @@ const steps = [
             { titel: "Doppler-effect voor licht", tekst: "Bron beweegt weg → golven uitgerekt → langere λ → naar rood. Andersom: ster komt naar je toe → blauwverschuiving. Hubble (1929): bijna alle sterrenstelsels rood-verschoven → heelal dijt uit." },
           ],
           theorie: "Mate van verschuiving (z-waarde) → snelheid + afstand. Verste objecten: z>1 (heelal-rand).",
-          niveaus: { basis: "Rood = weg = uitdijing-bewijs. A.", simpeler: "Roodverschuiving = bewegen vandaan. A.", nogSimpeler: "Weg = A." },
+          niveaus: { basis: "Rood = weg = uitdijing-bewijs. A.", simpeler: "Roodverschuiving = bewegen vandaan. A.", nogSimpeler: "Weg" },
         },
       },
     ],
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "Niet — wel breking, geen 45.", "Niet — te groot.", "Niet — bij intreden water (dichter)."],
         uitlegPad: {
           stappen: [{ titel: "1·sin(45)=1,33·sin(θ)", tekst: "sin(45°) = 0,707. sin(θ) = 0,707/1,33 ≈ 0,532 → θ ≈ **32,1°**. Buigen naar de normaal." }],
-          niveaus: { basis: "θ≈32°. A.", simpeler: "Snellius doorrekenen. A.", nogSimpeler: "32° = A." },
+          niveaus: { basis: "θ≈32°. A.", simpeler: "Snellius doorrekenen. A.", nogSimpeler: "32°" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
           stappen: [
             { titel: "d·sin(θ)=n·λ → θ klein", tekst: "n=1: sin(θ) = λ/d = 600·10⁻⁹ / 10⁻⁴ = 6·10⁻³ → θ ≈ 0,344°. Bij kleine hoeken: sin(θ)≈θ in radialen ≈ 0,006 rad." },
           ],
-          niveaus: { basis: "θ ≈ 0,34°. A.", simpeler: "Berg uit Snellius-Young: λ/d → klein hoek. A.", nogSimpeler: "0,34° = A." },
+          niveaus: { basis: "θ ≈ 0,34°. A.", simpeler: "Berg uit Snellius-Young: λ/d → klein hoek. A.", nogSimpeler: "0,34°" },
         },
       },
       {
@@ -353,7 +353,7 @@ const steps = [
             { titel: "Absorptie-lijnen", tekst: "Donkere lijnen in spectrum = wat de ster-atmosfeer absorbeert. Elke chemische stof heeft unieke absorptie → vingerafdruk. Verbreding lijnen → temperatuur. Doppler-verschuiving lijnen → snelheid (rood/blauwverschuiving)." },
           ],
           theorie: "Helium werd in zon-spectrum ontdekt VÓÓR aarde-laboratorium (Janssen 1868). Naam van Grieks 'helios' (zon).",
-          niveaus: { basis: "Samenstelling + T + v uit spectrum. A.", simpeler: "Spectraal-vingerafdrukken vertellen veel. A.", nogSimpeler: "Veel info = A." },
+          niveaus: { basis: "Samenstelling + T + v uit spectrum. A.", simpeler: "Spectraal-vingerafdrukken vertellen veel. A.", nogSimpeler: "Veel info" },
         },
       },
       {
@@ -370,7 +370,7 @@ const steps = [
           stappen: [
             { titel: "Twee-traps-systeem", tekst: "Objectief (klein f, dicht bij preparaat) maakt vergroot reëel beeld. Oculair fungeert als loep en vergroot dat reële beeld nog eens virtueel. Totale vergroting = N_objectief × N_oculair (bv. 40 × 10 = 400×)." },
           ],
-          niveaus: { basis: "Twee lenzen achter elkaar. A.", simpeler: "Objectief + oculair = twee-stappen-vergroting. A.", nogSimpeler: "2 lenzen = A." },
+          niveaus: { basis: "Twee lenzen achter elkaar. A.", simpeler: "Objectief + oculair = twee-stappen-vergroting. A.", nogSimpeler: "2 lenzen" },
         },
       },
       {
@@ -387,7 +387,7 @@ const steps = [
           stappen: [
             { titel: "Geen kleur-fout", tekst: "Lenzen hebben **chromatische aberratie**: verschillende kleuren breken anders → onscherp beeld met kleur-rand. Spiegels reflecteren alle kleuren gelijk → geen kleur-fout. Plus: grote lenzen vervormen onder eigen gewicht (Yerkes 1.02 m is grens). Spiegels kunnen veel groter (10+ m, ESO VLT)." },
           ],
-          niveaus: { basis: "Geen dispersie + groter mogelijk. A.", simpeler: "Spiegels hebben geen kleurfout en kunnen reuze worden. A.", nogSimpeler: "Spiegels = A." },
+          niveaus: { basis: "Geen dispersie + groter mogelijk. A.", simpeler: "Spiegels hebben geen kleurfout en kunnen reuze worden. A.", nogSimpeler: "Spiegels" },
         },
       },
     ],

@@ -54,7 +54,7 @@ const steps = [
           niveaus: {
             basis: "Europese Raad. Antwoord B.",
             simpeler: "Brede politieke crises worden besproken door de regeringsleiders = Europese Raad. Antwoord B.",
-            nogSimpeler: "Regeringsleiders = B.",
+            nogSimpeler: "Regeringsleiders",
           },
         },
       },
@@ -103,7 +103,7 @@ const steps = [
           niveaus: {
             basis: "Verzorgingsstaat. Antwoord C.",
             simpeler: "Overheid die actief jongeren ondersteunt met centra = uiting van een verzorgingsstaat. Antwoord C.",
-            nogSimpeler: "Overheid zorgt = C.",
+            nogSimpeler: "Overheid zorgt",
           },
         },
       },
@@ -152,7 +152,7 @@ const steps = [
           niveaus: {
             basis: "Beleidsvoorbereiding. Antwoord A.",
             simpeler: "Beleidsambtenaren op ministeries werken wetsvoorstellen uit = fase 2 = beleidsvoorbereiding. Antwoord A.",
-            nogSimpeler: "Voorbereiden = A.",
+            nogSimpeler: "Voorbereiden",
           },
         },
       },
@@ -199,7 +199,7 @@ const steps = [
           niveaus: {
             basis: "Sociaaldemocratische stroming. Antwoord C.",
             simpeler: "Sociale oorzaken van criminaliteit aanpakken = sociaaldemocratisch denken (PvdA-stijl). Antwoord C.",
-            nogSimpeler: "Sociale oorzaken = sociaaldemocratie = C.",
+            nogSimpeler: "Sociale oorzaken = sociaaldemocratie",
           },
         },
       },
@@ -249,7 +249,7 @@ const steps = [
           niveaus: {
             basis: "Bindingstheorie. Antwoord B.",
             simpeler: "Sterke banden (familie/school/werk) remmen criminaliteit = bindingstheorie van Hirschi. Antwoord B.",
-            nogSimpeler: "Banden = binding = B.",
+            nogSimpeler: "Banden = binding",
           },
         },
       },

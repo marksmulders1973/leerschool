@@ -56,7 +56,7 @@ const steps = [
           niveaus: {
             basis: "Spierlaag. Antwoord C.",
             simpeler: "Peristaltiek is de knijp-beweging van spieren. Minder actief = spierlaag werkt minder = trage maag. Antwoord C.",
-            nogSimpeler: "Spierlaag = C.",
+            nogSimpeler: "Spierlaag",
           },
         },
       },
@@ -111,7 +111,7 @@ const steps = [
           niveaus: {
             basis: "Bewust voelen (zoals een vol gevoel) gebeurt in de grote hersenen. Antwoord A.",
             simpeler: "Grote hersenen = bewust (voelen, denken). Kleine hersenen = balans. Hersenstam = ademen/hartslag. Een vol gevoel voel je bewust → grote hersenen. Antwoord A.",
-            nogSimpeler: "Bewust voelen = grote hersenen = A.",
+            nogSimpeler: "Bewust voelen = grote hersenen",
           },
         },
       },
@@ -167,7 +167,7 @@ const steps = [
           niveaus: {
             basis: "Hoornlaag → kiemlaag → lederhuid. Antwoord A.",
             simpeler: "Buitenste = hoornlaag (dood). Daaronder = kiemlaag (levend). Daaronder = lederhuid (met bloedvaten). Luis prikt door in die volgorde. Antwoord A.",
-            nogSimpeler: "Hoorn → kiem → leder = A.",
+            nogSimpeler: "Hoorn → kiem → leder",
           },
         },
       },
@@ -221,7 +221,7 @@ const steps = [
           niveaus: {
             basis: "Longader → aorta → halsslagader. Antwoord B.",
             simpeler: "Vanuit longblaasje gaat bloed via longader naar hart. Hart pompt door aorta. Aftakking naar kop = halsSLAGader (= weg van hart). Antwoord B.",
-            nogSimpeler: "Long → hart → kop via slagader = B.",
+            nogSimpeler: "Long → hart → kop via slagader",
           },
         },
       },
@@ -271,7 +271,7 @@ const steps = [
           niveaus: {
             basis: "Overdag en 's nachts. Antwoord C.",
             simpeler: "Alle levende cellen ademen 24/7 — ook wortelcellen. Fotosynthese is iets anders (alleen overdag, alleen in bladeren). Antwoord C.",
-            nogSimpeler: "Altijd = C.",
+            nogSimpeler: "Altijd",
           },
         },
       },
@@ -324,7 +324,7 @@ const steps = [
           niveaus: {
             basis: "Consument. Antwoord A.",
             simpeler: "Vingerdier eet larven = eet andere organismen = consument. Antwoord A.",
-            nogSimpeler: "Eet andere = consument = A.",
+            nogSimpeler: "Eet andere = consument",
           },
         },
       },

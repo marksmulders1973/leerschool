@@ -160,8 +160,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Plant ≠ dier", uitleg: "Dieren moeten eten. Planten maken zelf." }],
           niveaus: {
             basis: "Geen externe voeding. A.",
-            simpeler: "Planten maken zelf voedsel via fotosynthese. Ze hebben dus geen voer of vlees nodig — wel zon, water, lucht, mineralen uit grond. = A.",
-            nogSimpeler: "Geen extern voedsel = A.",
+            simpeler: "Planten maken zelf voedsel via fotosynthese. Ze hebben dus geen voer of vlees nodig — wel zon, water, lucht, mineralen uit grond.",
+            nogSimpeler: "Geen extern voedsel",
           },
         },
       },

@@ -547,7 +547,7 @@ const steps = [
             { type: "stap", tekst: "Bioscoop kaartje: te duur (€20) = lege zaal. Te goedkoop (€2) = uitverkocht 2 weken vooraf. Evenwicht ~€10 = vol maar geen wachtrij." },
           ],
           basiskennis: [{ onderwerp: "Niet stilstaan", uitleg: "Marktevenwicht is geen vaste prijs. Verschuift als vraag of aanbod verandert." }],
-          niveaus: { basis: "Vraag = aanbod. = A.", simpeler: "Marktevenwicht = prijs waar precies alle aangeboden producten worden gekocht. Geen overschot, geen tekort. = A.", nogSimpeler: "Vraag = aanbod = A." },
+          niveaus: { basis: "Vraag = aanbod.", simpeler: "Marktevenwicht = prijs waar precies alle aangeboden producten worden gekocht. Geen overschot, geen tekort.", nogSimpeler: "Vraag = aanbod" },
         },
       },
       {
@@ -570,7 +570,7 @@ const steps = [
             { type: "stap", tekst: "iPhone-launch: vraag piek bij release → prijs hoog. Na 6 maanden vraag daalt → prijs lager (sale)." },
           ],
           basiskennis: [{ onderwerp: "Markt-mechanisme", uitleg: "Prijs reageert OP veranderingen. Niet andersom." }],
-          niveaus: { basis: "Prijs stijgt. = A.", simpeler: "Meer vraag bij zelfde aanbod = schaarste = hogere prijs. = A.", nogSimpeler: "Prijs omhoog = A." },
+          niveaus: { basis: "Prijs stijgt.", simpeler: "Meer vraag bij zelfde aanbod = schaarste = hogere prijs.", nogSimpeler: "Prijs omhoog" },
         },
       },
       {
@@ -593,7 +593,7 @@ const steps = [
             { type: "stap", tekst: "Mode-trend: ineens populair item → vraag-lijn rechts → prijs ↑." },
           ],
           basiskennis: [{ onderwerp: "Niet zelf bewegen", uitleg: "Lijnen verschuiven door EXTERNE oorzaak. Niet zomaar uit zichzelf." }],
-          niveaus: { basis: "Inkomen, smaak, bevolking. = A.", simpeler: "Vraaglijn verschuift door consument-factoren: inkomen, smaak, bevolking, alternatief, verwachting. = A.", nogSimpeler: "Consument-factor = A." },
+          niveaus: { basis: "Inkomen, smaak, bevolking.", simpeler: "Vraaglijn verschuift door consument-factoren: inkomen, smaak, bevolking, alternatief, verwachting.", nogSimpeler: "Consument-factor" },
         },
       },
       {
@@ -617,7 +617,7 @@ const steps = [
             { type: "stap", tekst: "Telecom-markt NL: KPN + T-Mobile + Vodafone concurreren → abonnementen worden goedkoper + betere data-bundels door jaren." },
           ],
           basiskennis: [{ onderwerp: "Niet 'goedkoop is altijd beter'", uitleg: "Consument kiest ook op kwaliteit + service. Niet alles is prijs-concurrentie." }],
-          niveaus: { basis: "Prijs, kwaliteit, reclame. = A.", simpeler: "Bedrijven concurreren om klanten met lagere prijzen, betere kwaliteit, klantservice, marketing. = A.", nogSimpeler: "Strijden om klant = A." },
+          niveaus: { basis: "Prijs, kwaliteit, reclame.", simpeler: "Bedrijven concurreren om klanten met lagere prijzen, betere kwaliteit, klantservice, marketing.", nogSimpeler: "Strijden om klant" },
         },
       },
       {
@@ -642,7 +642,7 @@ const steps = [
             { type: "stap", tekst: "Auto-prijs ×2 → benzine-vraag daalt (complementair — minder rijden)." },
           ],
           basiskennis: [{ onderwerp: "Belangrijk in Cito-VMBO", uitleg: "Vraag-aanbod + substituten/complementen = examen-stof economie VMBO klas 3-4." }],
-          niveaus: { basis: "Vervanger. = A.", simpeler: "Substituut = alternatief product dat zelfde doel vervult (boter ↔ margarine). Hogere prijs van A → meer kopen van B. = A.", nogSimpeler: "Alternatief = A." },
+          niveaus: { basis: "Vervanger.", simpeler: "Substituut = alternatief product dat zelfde doel vervult (boter ↔ margarine). Hogere prijs van A → meer kopen van B.", nogSimpeler: "Alternatief" },
         },
       },
     ],

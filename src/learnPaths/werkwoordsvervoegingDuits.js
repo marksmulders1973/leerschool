@@ -126,8 +126,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Voor uitspraak", uitleg: "Anders zou je 2 medeklinkers achter elkaar krijgen die geen vloeiende uitspraak geven." }],
           niveaus: {
             basis: "du arbeitest. A.",
-            simpeler: "Werkwoord arbeiten. Stam = arbeit (eindigt op -t). Bij du komt normaal -st erbij maar 'arbeitst' is te moeilijk. Daarom tussen-e: du arbeitest. = A.",
-            nogSimpeler: "arbeitest = A.",
+            simpeler: "Werkwoord arbeiten. Stam = arbeit (eindigt op -t). Bij du komt normaal -st erbij maar 'arbeitst' is te moeilijk. Daarom tussen-e: du arbeitest.",
+            nogSimpeler: "arbeitest",
           },
         },
       },
@@ -240,8 +240,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Top 20 onregelmatige", uitleg: "Wie deze 20 kent, kan al heel veel in Duits." }],
           niveaus: {
             basis: "gegangen. A.",
-            simpeler: "gehen is onregelmatig (sterk). Voltooid deelwoord = gegangen. In zin met 'sein' als hulpwerkwoord. = A.",
-            nogSimpeler: "gegangen = A.",
+            simpeler: "gehen is onregelmatig (sterk). Voltooid deelwoord = gegangen. In zin met 'sein' als hulpwerkwoord.",
+            nogSimpeler: "gegangen",
           },
         },
       },

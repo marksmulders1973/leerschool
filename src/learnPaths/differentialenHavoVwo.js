@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet macht-regel.", "Niet — die macht klopt niet.", "Niet — dat zou integraal zijn."],
         uitlegPad: {
           stappen: [{ titel: "Macht-regel n·x^(n-1)", tekst: "f(x) = x² → f'(x) = 2·x^(2-1) = **2x**. Standaard machtsregel: macht voorop + macht 1 lager." }],
-          niveaus: { basis: "f'=2x. A.", simpeler: "x² wordt 2x. A.", nogSimpeler: "2x = A." },
+          niveaus: { basis: "f'=2x. A.", simpeler: "x² wordt 2x. A.", nogSimpeler: "2x" },
         },
       },
       {
@@ -42,7 +42,7 @@ const steps = [
         wrongHints: [null, "Niet — verwarring met functie-waarde.", "Niet — geen.", "Niet — context-onafhankelijk."],
         uitlegPad: {
           stappen: [{ titel: "Afgeleide = lokale helling", tekst: "Op x=3 stijgt de grafiek met snelheid 5 (in y-richting per eenheid x). Op die plek is raaklijn 5× horizontaal omhoog." }],
-          niveaus: { basis: "Helling = 5 bij x=3. A.", simpeler: "Stijging 5 per eenheid x. A.", nogSimpeler: "Helling = A." },
+          niveaus: { basis: "Helling = 5 bij x=3. A.", simpeler: "Stijging 5 per eenheid x. A.", nogSimpeler: "Helling" },
         },
       },
       {
@@ -53,7 +53,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Differentiëren positie", tekst: "v(t) = dx/dt = afgeleide van 3t² = 3 · 2t = **6t**. Versnellende beweging." }],
           theorie: "Versnelling a(t) = dv/dt = 6 (constant). Natuurkunde: vrije val heeft a = g ≈ 9,81 m/s²; hier 6 m/s².",
-          niveaus: { basis: "v=6t. A.", simpeler: "Afgeleide 3t²= 6t. A.", nogSimpeler: "6t = A." },
+          niveaus: { basis: "v=6t. A.", simpeler: "Afgeleide 3t²= 6t. A.", nogSimpeler: "6t" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is functie-waarde, niet afgeleide.", "Wel bepaald (gewoon 0).", "Niet — geen verband."],
         uitlegPad: {
           stappen: [{ titel: "Horizontale raaklijn", tekst: "Bij top: helling stopt met stijgen + begint dalen → moment van 0-helling. Bij dal: omgekeerd. Beide: horizontaal → f'(x) = 0. Dit is criterium voor optimalisatie." }],
-          niveaus: { basis: "f'=0. A.", simpeler: "Op top/dal staat raaklijn horizontaal. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "f'=0. A.", simpeler: "Op top/dal staat raaklijn horizontaal. A.", nogSimpeler: "0" },
         },
       },
       {
@@ -73,7 +73,7 @@ const steps = [
         wrongHints: [null, "Niet — constante is geen helling.", "Niet — dat zou f(x)=x zijn.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Constante = geen verandering", tekst: "f(x) = 7 is horizontale lijn op y=7. Geen helling overal → afgeleide is 0. Algemeen: (constante)' = 0." }],
-          niveaus: { basis: "0. A.", simpeler: "Constante heeft geen helling. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "0. A.", simpeler: "Constante heeft geen helling. A.", nogSimpeler: "0" },
         },
       },
     ],
@@ -94,7 +94,7 @@ const steps = [
           stappen: [
             { titel: "Term voor term", tekst: "(3x⁴)' = 3·4·x³ = 12x³.\n(−2x²)' = −2·2·x = −4x.\nSom: **12x³ − 4x**." },
           ],
-          niveaus: { basis: "12x³-4x. A.", simpeler: "Macht-regel per term. A.", nogSimpeler: "12x³-4x = A." },
+          niveaus: { basis: "12x³-4x. A.", simpeler: "Macht-regel per term. A.", nogSimpeler: "12x³-4x" },
         },
       },
       {
@@ -104,7 +104,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is functie zelf.", "Niet — integraal.", "Niet — vergeet macht."],
         uitlegPad: {
           stappen: [{ titel: "x⁻¹ via machtsregel", tekst: "1/x = x⁻¹. Afgeleide: −1·x⁻² = **−1/x²**. Hoe verder van 0, hoe vlakker; dichtbij 0 zeer steile (negatieve) helling." }],
-          niveaus: { basis: "−1/x². A.", simpeler: "Macht −1 → −x⁻² = −1/x². A.", nogSimpeler: "−1/x² = A." },
+          niveaus: { basis: "−1/x². A.", simpeler: "Macht −1 → −x⁻² = −1/x². A.", nogSimpeler: "−1/x²" },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
           stappen: [
             { titel: "Tweemaal differentieren", tekst: "f(x) = x⁴.\nf'(x) = 4x³.\nf''(x) = 12x².\n3e afgeleide = 24x. Etc." },
           ],
-          niveaus: { basis: "12x². A.", simpeler: "Twee keer afleiden. A.", nogSimpeler: "12x² = A." },
+          niveaus: { basis: "12x². A.", simpeler: "Twee keer afleiden. A.", nogSimpeler: "12x²" },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Niet — andere kant op.", "Niet — dat is afgeleide van cos.", "Niet — quotiënt-regel nodig."],
         uitlegPad: {
           stappen: [{ titel: "Basis-cirkel", tekst: "sin → cos → −sin → −cos → sin (cyclus). 'Klok-tegen' draaiing met π/2 elke afgeleide. Werkt alleen in radialen!" }],
-          niveaus: { basis: "cos x. A.", simpeler: "sin' = cos. A.", nogSimpeler: "cos = A." },
+          niveaus: { basis: "cos x. A.", simpeler: "sin' = cos. A.", nogSimpeler: "cos" },
         },
       },
       {
@@ -143,7 +143,7 @@ const steps = [
           stappen: [
             { titel: "Krommingsmaat", tekst: "f''(x) > 0: helling stijgt → grafiek 'lacht' (zoals x²). f''(x) < 0: helling daalt → 'frons' (zoals −x²). Buigpunt: f''=0 + wisselt teken." },
           ],
-          niveaus: { basis: "Lacht. A.", simpeler: "U-vorm. A.", nogSimpeler: "Bolling op = A." },
+          niveaus: { basis: "Lacht. A.", simpeler: "U-vorm. A.", nogSimpeler: "Bolling op" },
         },
       },
     ],
@@ -164,7 +164,7 @@ const steps = [
           stappen: [
             { titel: "Productregel f·g", tekst: "f=x, f'=1. g=cos(x), g'=−sin(x). y' = 1·cos(x) + x·(−sin(x)) = **cos(x) − x·sin(x)**." },
           ],
-          niveaus: { basis: "cos − x·sin. A.", simpeler: "Productregel toepassen. A.", nogSimpeler: "cos-x·sin = A." },
+          niveaus: { basis: "cos − x·sin. A.", simpeler: "Productregel toepassen. A.", nogSimpeler: "cos-x·sin" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
           stappen: [
             { titel: "Kettingregel", tekst: "Binnen g=2x−1, g'=2. Buiten u⁵, afgeleide 5u⁴. y' = 5(2x−1)⁴ · 2 = **10(2x−1)⁴**." },
           ],
-          niveaus: { basis: "10(2x−1)⁴. A.", simpeler: "Macht naar voren × binnen-afgeleide. A.", nogSimpeler: "10(...)⁴ = A." },
+          niveaus: { basis: "10(2x−1)⁴. A.", simpeler: "Macht naar voren × binnen-afgeleide. A.", nogSimpeler: "10(...)⁴" },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "e^u-regel met u=2x", tekst: "y = e^(2x). u=2x, u'=2. y' = e^u · u' = **2·e^(2x)**." }],
           theorie: "Algemeen: (e^(kx))' = k·e^(kx).",
-          niveaus: { basis: "2e^(2x). A.", simpeler: "e^(2x) keer afgeleide 2x = 2. A.", nogSimpeler: "2e^(2x) = A." },
+          niveaus: { basis: "2e^(2x). A.", simpeler: "e^(2x) keer afgeleide 2x = 2. A.", nogSimpeler: "2e^(2x)" },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
             { titel: "Kettingregel met ln", tekst: "u=x², u'=2x. y = ln(u). y' = (1/u) · u' = (1/x²) · 2x = **2/x**." },
           ],
           theorie: "Of via log-regel: ln(x²) = 2 ln(x) → afgeleide = 2 · (1/x) = 2/x. Zelfde antwoord.",
-          niveaus: { basis: "2/x. A.", simpeler: "ln(x²) = 2 ln x → afgeleide 2/x. A.", nogSimpeler: "2/x = A." },
+          niveaus: { basis: "2/x. A.", simpeler: "ln(x²) = 2 ln x → afgeleide 2/x. A.", nogSimpeler: "2/x" },
         },
       },
       {
@@ -210,7 +210,7 @@ const steps = [
         wrongHints: [null, "Niet — vereenvoudig eerst.", "Niet — wel gelijk maar dat is 1.", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Eerst vereenvoudigen", tekst: "x²/x = x (voor x≠0). y = x, dus y' = **1**. Quotiëntregel werkt ook maar omslachtig. Tip: altijd eerst proberen te vereenvoudigen." }],
-          niveaus: { basis: "1. A.", simpeler: "Functie vereenvoudigt tot x. A.", nogSimpeler: "1 = A." },
+          niveaus: { basis: "1. A.", simpeler: "Functie vereenvoudigt tot x. A.", nogSimpeler: "1" },
         },
       },
     ],
@@ -231,7 +231,7 @@ const steps = [
           stappen: [
             { titel: "y = f'(a)·(x-a) + f(a)", tekst: "f'(2) = 4. y = 4(x-2) + 4 = 4x - 8 + 4 = **4x - 4**. Check: bij x=2: y=4·2−4=4. ✓" },
           ],
-          niveaus: { basis: "y=4x-4. A.", simpeler: "Helling 4, gaat door (2,4). A.", nogSimpeler: "4x-4 = A." },
+          niveaus: { basis: "y=4x-4. A.", simpeler: "Helling 4, gaat door (2,4). A.", nogSimpeler: "4x-4" },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
           stappen: [
             { titel: "f'(x) = 0", tekst: "f'(x) = 2x − 6 = 0 → x = **3**.\nf(3) = 9 − 18 + 5 = −4.\nf''(x) = 2 > 0 → dal. Globaal minimum." },
           ],
-          niveaus: { basis: "x=3, waarde -4. A.", simpeler: "Top parabool bij x = -b/2a = 3. A.", nogSimpeler: "x=3 = A." },
+          niveaus: { basis: "x=3, waarde -4. A.", simpeler: "Top parabool bij x = -b/2a = 3. A.", nogSimpeler: "x=3" },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
             { titel: "1e-afgeleidetoets", tekst: "f'(x) = 3x² ≥ 0 voor alle x → f' wisselt niet van teken bij x=0. Geen top of dal. Functie stijgt monotoon, met horizontale raaklijn precies op x=0 = **buigpunt**." },
           ],
           theorie: "Klassiek voorbeeld waarom 'f'=0' alleen niet genoeg is voor extreem.",
-          niveaus: { basis: "Buigpunt. A.", simpeler: "Geen omkering = geen top/dal. A.", nogSimpeler: "Buig = A." },
+          niveaus: { basis: "Buigpunt. A.", simpeler: "Geen omkering = geen top/dal. A.", nogSimpeler: "Buig" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
             { titel: "Optimalisatie", tekst: "2L + 2W = 12 → W = 6 − L. A(L) = L(6−L) = 6L − L².\nA'(L) = 6 − 2L = 0 → L = **3**. Dus 3×3-vierkant = 9. Bij vaste omtrek is vierkant altijd optimaal." },
           ],
           theorie: "Algemener: vierkant is rechthoek met max opp/omtrek-verhouding. Cirkel is nog beter (max area per perimeter).",
-          niveaus: { basis: "L=3. A.", simpeler: "Vierkant geeft max. A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "L=3. A.", simpeler: "Vierkant geeft max. A.", nogSimpeler: "3" },
         },
       },
       {
@@ -279,7 +279,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is helling op x=0.", "Niet — andere kant.", "Niet — een hoek."],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = cos(x)", tekst: "f(x) = sin x → f'(x) = cos x. f'(π/2) = cos(π/2) = **0**. Top van sinus → horizontale raaklijn." }],
-          niveaus: { basis: "0. A.", simpeler: "Cos(π/2) = 0. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "0. A.", simpeler: "Cos(π/2) = 0. A.", nogSimpeler: "0" },
         },
       },
     ],
@@ -300,7 +300,7 @@ const steps = [
           stappen: [
             { titel: "v(t) = x'(t)", tekst: "x(t) = 5t² → v(t) = 10t. v(2) = **20 m/s**. (Komt overeen met g≈10 m/s² in eerste benadering.)" },
           ],
-          niveaus: { basis: "v(2)=20. A.", simpeler: "10·2 = 20. A.", nogSimpeler: "20 = A." },
+          niveaus: { basis: "v(2)=20. A.", simpeler: "10·2 = 20. A.", nogSimpeler: "20" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
           stappen: [
             { titel: "1e-orde voorwaarde", tekst: "Winst W(q) = R(q) − K(q). W'(q) = R'(q) − K'(q) = 0 voor max → R' = K'. Onder dat punt is R' > K' (meer produceren = winst), boven punt R' < K' (verlies). Vandaar 'maximale winst-punt'." },
           ],
-          niveaus: { basis: "R'=K' = optimum. A.", simpeler: "Extra eenheid = breakeven. A.", nogSimpeler: "R'=K' = A." },
+          niveaus: { basis: "R'=K' = optimum. A.", simpeler: "Extra eenheid = breakeven. A.", nogSimpeler: "R'=K'" },
         },
       },
       {
@@ -334,7 +334,7 @@ const steps = [
           stappen: [
             { titel: "dN/dt bij t=0", tekst: "N'(t) = 1000 · 0,02 · e^(0,02t). Bij t=0: N'(0) = 1000 · 0,02 · 1 = **20** mensen/jaar. Per jaar groeit populatie initial met 2%." },
           ],
-          niveaus: { basis: "20/jaar. A.", simpeler: "2% van 1000 = 20. A.", nogSimpeler: "20 = A." },
+          niveaus: { basis: "20/jaar. A.", simpeler: "2% van 1000 = 20. A.", nogSimpeler: "20" },
         },
       },
       {
@@ -347,7 +347,7 @@ const steps = [
             { titel: "Tweemaal afleiden", tekst: "x(t) = sin t → v(t) = cos t → a(t) = −sin t = **−x(t)**. Klassieke eigenschap harmonische trilling: versnelling tegengesteld aan uitwijking → daarom harmonisch (terug naar evenwicht)." },
           ],
           theorie: "Algemener voor sin(ωt): a(t) = −ω²·x(t). Daaruit volgt T = 2π/ω.",
-          niveaus: { basis: "−sin t = -x. A.", simpeler: "Twee keer afleiden geeft -x. A.", nogSimpeler: "-x = A." },
+          niveaus: { basis: "−sin t = -x. A.", simpeler: "Twee keer afleiden geeft -x. A.", nogSimpeler: "-x" },
         },
       },
       {
@@ -365,7 +365,7 @@ const steps = [
             { titel: "Raaklijn-snijpunt", tekst: "Idee: in punt x_n trek raaklijn aan f. Snijpunt raaklijn met x-as = betere benadering van nulpunt. Herhaal → convergeert kwadratisch snel naar werkelijk nulpunt (mits goede start)." },
           ],
           theorie: "Gebruikt in rekenmachines + Wolfram + iteratie-algoritmes overal in CAD/simulatie.",
-          niveaus: { basis: "x_n - f/f'. A.", simpeler: "Iteratief naar nulpunt. A.", nogSimpeler: "Newton = A." },
+          niveaus: { basis: "x_n - f/f'. A.", simpeler: "Iteratief naar nulpunt. A.", nogSimpeler: "Newton" },
         },
       },
     ],

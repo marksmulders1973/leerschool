@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Rondbogen + dikke muren.", "Klassiek + perspectief.", "Drama + krullen later."],
         uitlegPad: {
           stappen: [{ titel: "Gotisch = licht + hoog", tekst: "**Gotische stijl** (1150-1400): **spitsbogen** ipv romaanse rondbogen → muren konden hoger + dunner. **Glas-in-lood-ramen** (vooral roosvensters) brachten licht binnen. Symboliek: licht = goddelijk. **Stenen ribbengewelven** verdeelden gewicht. Voorbeelden: Notre-Dame Paris, Chartres, NL Sint Jan Den Bosch + Domtoren Utrecht." }],
-          niveaus: { basis: "Gotisch. A.", simpeler: "Spits = gotisch = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Gotisch. A.", simpeler: "Spits = gotisch", nogSimpeler: "A." },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Sixtijnse Kapel.", "School van Athene.", "Geboorte van Venus."],
         uitlegPad: {
           stappen: [{ titel: "1503-1519", tekst: "**Leonardo da Vinci** (1452-1519) schilderde *Mona Lisa* (1503-19). **Sfumato-techniek**: zachte overgangen tonen, mysterieuze glimlach. Hangt in **Louvre Parijs** sinds 1797. Veiligst beveiligde + meest bezocht schilderij wereld (~10 mln bezoekers/jaar). 1911 gestolen (terug 1913) — bracht extreem fame." }],
-          niveaus: { basis: "Leonardo. A.", simpeler: "Mona Lisa = Leonardo = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Leonardo. A.", simpeler: "Mona Lisa = Leonardo", nogSimpeler: "A." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Lineair perspectief", tekst: "**Filippo Brunelleschi** (1377-1446) ontwikkelde ~1420 in Florence **lineair perspectief** met **vanishing point**: parallelle lijnen lopen samen aan horizon. Revolutionair voor 2D-schilderkunst — gaf diepte-illusie. Versterkt door wiskundige berekeningen. **Masaccio** + **Donatello** + later **Leonardo + Rafaël** pasten meesterlijk toe." }],
           theorie: "Voor Brunelleschi: middeleeuwse schilderkunst plat, symbolisch. Daarna: realistische ruimte mogelijk.",
-          niveaus: { basis: "Brunelleschi. A.", simpeler: "Perspectief = Brunelleschi = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Brunelleschi. A.", simpeler: "Perspectief = Brunelleschi", nogSimpeler: "A." },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Leonardo.", "Van Eyck.", "Bosch."],
         uitlegPad: {
           stappen: [{ titel: "1508-1512", tekst: "**Michelangelo** (1475-1564) schilderde plafond **Sixtijnse Kapel** Vaticaan in 4 jaar (1508-12). 5000+ vierkante meter fresco's. Beroemd: 'Schepping van Adam' (vingers Adam + God). Later schilderde hij ook *Laatste Oordeel* op achterwand (1536-41). Michelangelo zelf zag zich primair als **beeldhouwer** (David 1504, Pietà) maar werd door Paus gedwongen tot schilderen." }],
-          niveaus: { basis: "Sixtijnse Kapel. A.", simpeler: "Michelangelo = Sixtijns = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Sixtijnse Kapel. A.", simpeler: "Michelangelo = Sixtijns", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Niet — komt later, andere betekenis.", "Niet relevant.", "Niet — wel religie + mens."],
         uitlegPad: {
           stappen: [{ titel: "Erasmus + Petrarca", tekst: "**Humanisme** (Renaissance): intellectuele beweging die **mens centraal** plaatst (anders dan middeleeuws God-centrum). Studie klassieke oudheid + talen (Latijn, Grieks, Hebreeuws). **Erasmus van Rotterdam** (1466-1536): *Lof der Zotheid* — kritiek op kerk + dwaasheid. **Petrarca** (1304-1374) bedacht 'duistere middeleeuwen' (te zwart geschilderd) — pleitte voor herontdekking klassieke geest.\n\nModern 'humanisme' = niet-religieuze ethiek — andere betekenis." }],
-          niveaus: { basis: "Mens centraal. A.", simpeler: "Humanisme = mens centraal = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Mens centraal. A.", simpeler: "Humanisme = mens centraal", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Meisje met de parel.", "Levendige portretten.", "Veel eerder, NL Renaissance."],
         uitlegPad: {
           stappen: [{ titel: "1642 Amsterdam", tekst: "**Rembrandt van Rijn** (1606-69) schilderde *De Nachtwacht* in 1642. Officieel: 'De compagnie van kapitein Frans Banning Cocq'. Schutterstuk (groepsportret) maar met drama + beweging — innovatief. Hangt **Rijksmuseum Amsterdam**. **Niet eigenlijk nacht** — gele vernis verkleurde, nu schoongemaakt. Recent verder gerestaureerd via 'Operation Night Watch' 2019+." }],
-          niveaus: { basis: "Rembrandt. A.", simpeler: "Nachtwacht = Rembrandt = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rembrandt. A.", simpeler: "Nachtwacht = Rembrandt", nogSimpeler: "A." },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Impressionisme."],
         uitlegPad: {
           stappen: [{ titel: "Italiaans 'licht-donker'", tekst: "**Chiaroscuro** (Italiaans 'licht-donker'): dramatisch contrast tussen licht + schaduw. Kenmerkend voor **barok** (Caravaggio, Rembrandt). Creëert volume + drama + psychologische diepte. Anders dan vlakke middeleeuwse verlichting." }],
-          niveaus: { basis: "Licht-donker. A.", simpeler: "Chiaroscuro = licht-donker = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Licht-donker. A.", simpeler: "Chiaroscuro = licht-donker", nogSimpeler: "A." },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is kubisme.", "Niet — middeleeuws.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "1874 Parijs-start", tekst: "**Impressionisme** (1870-1900): groep schilders (Monet, Renoir, Pissarro, Degas) breken met academische conventies. Innovaties: **buiten schilderen** ('en plein air'), **korte/losse penseelstreken**, **kleur + licht** boven vorm + lijn. Mogelijk gemaakt door industriële verftubes (1841) + portable easels. **Eerste tentoonstelling 1874** in Parijs. Naam van kritisch artikel over Monet's *Impressie, opkomende zon*." }],
-          niveaus: { basis: "Korte penseel + licht. A.", simpeler: "Imp = licht + buiten = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Korte penseel + licht. A.", simpeler: "Imp = licht + buiten", nogSimpeler: "A." },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Beroemd tijdens leven.", "Beroemd tijdens leven.", "Zeer beroemd tijdens leven."],
         uitlegPad: {
           stappen: [{ titel: "1 schilderij verkocht", tekst: "**Vincent van Gogh** (1853-1890) verkocht tijdens zijn leven maar **1 schilderij** (*De rode wijngaard*, 1888). Verbleef in armoede, depressief, sneed oor af 1888, schoot zichzelf 1890 (29 juli). Broer Theo + diens vrouw Jo van Gogh-Bonger verzamelden + promoot werk na zijn dood. Nu wereldberoemd, schilderijen tot $200+ mln waard. **Van Gogh Museum** Amsterdam." }],
-          niveaus: { basis: "Van Gogh. A.", simpeler: "Postuum = Van Gogh = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Van Gogh. A.", simpeler: "Postuum = Van Gogh", nogSimpeler: "A." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Niet — protestants, geen kerk-kunst.", "Niet primair NL.", "Niet primair NL."],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijke kunstmarkt", tekst: "**NL Gouden Eeuw** (1600s): geen rijke kerk-mecenaten (protestants), maar **welvarende burgerij** kocht kunst voor woonhuizen. Resultaat: kunstmarkt met **specialisaties** per schilder:\n• **Landschappen** (Ruisdael, Van Goyen).\n• **Stillevens** (bloemen, vanitas — Heda).\n• **Portretten** (Hals, Rembrandt).\n• **Interieurs / genre-stukken** (Vermeer, De Hooch, Steen).\n• **Zeegezichten** (Van de Velde).\n• **Stadsgezichten** (Berckheyde).\n\n~5 mln schilderijen geproduceerd in NL 1600s — meer dan ooit eerder." }],
-          niveaus: { basis: "Landschap/stilleven/portret. A.", simpeler: "NL = specialismen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Landschap/stilleven/portret. A.", simpeler: "NL = specialismen", nogSimpeler: "A." },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — Bauhaus.", "Niet — fauvisme/kubisme."],
         uitlegPad: {
           stappen: [{ titel: "1917 Leiden", tekst: "**De Stijl**: NL-beweging opgericht 1917 in Leiden door **Theo van Doesburg + Piet Mondriaan**. Strikte regels: alleen **rechthoeken + primaire kleuren (rood/geel/blauw) + zwart/wit/grijs**. Geometrische abstractie. Mondriaan = schilder, **Rietveld** = meubels + architectuur (rood-blauwe stoel 1917, Rietveld-Schröderhuis Utrecht 1924). UNESCO-erfgoed." }],
-          niveaus: { basis: "NL. A.", simpeler: "De Stijl = NL = A.", nogSimpeler: "A." },
+          niveaus: { basis: "NL. A.", simpeler: "De Stijl = NL", nogSimpeler: "A." },
         },
       },
       {
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Pop Art later.", "Kubisme.", "Surrealisme."],
         uitlegPad: {
           stappen: [{ titel: "Ready-made dadaïsme", tekst: "**Marcel Duchamp** (1887-1968) zond in 1917 een **urinoir** onder pseudoniem 'R. Mutt' naar tentoonstelling Society of Independent Artists. Werd geweigerd → schandaal → kunstgeschiedenis-mijlpaal. **Ready-made**-concept: alledaags object wordt kunst door keuze + presentatie. Fundamenteel voor 20e-eeuwse kunst — daad van benoemen = kunst." }],
-          niveaus: { basis: "Duchamp. A.", simpeler: "Urinoir = Duchamp = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Duchamp. A.", simpeler: "Urinoir = Duchamp", nogSimpeler: "A." },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Kubist.", "De Stijl.", "Barok."],
         uitlegPad: {
           stappen: [{ titel: "1962-1970s", tekst: "**Andy Warhol** (1928-1987) = boegbeeld **Pop Art**: kunst die massacultuur (soep-blikken, BN'ers, strips) verheft tot kunst. Bekendste: *Campbell's Soup Cans* (1962), *Marilyn Diptych* (na Monroe's dood 1962), *Brillo-boxes*. Werkte in **The Factory** Studio New York — massaproductie kunst. 'In the future everyone will be famous for 15 minutes' = profetisch citaat (1968)." }],
-          niveaus: { basis: "Warhol. A.", simpeler: "Pop Art = Warhol = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Warhol. A.", simpeler: "Pop Art = Warhol", nogSimpeler: "A." },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Emotie + natuur.", "Werkelijkheid.", "Klassieke idealen."],
         uitlegPad: {
           stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**Kubisme** (Picasso/Braque 1907+) + **De Stijl** (Mondriaan 1917+) + **Suprematisme** (Malevich 1915) gingen geometrisch abstract. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
-          niveaus: { basis: "Kubisme / Stijl. A.", simpeler: "Geom abstract = 20e eeuw = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Kubisme / Stijl. A.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "A." },
         },
       },
       {
@@ -195,7 +195,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet — dat is futurisme."],
         uitlegPad: {
           stappen: [{ titel: "1924 Breton-manifest", tekst: "**Surrealisme** (André Breton-manifest 1924): kunst van het **onbewuste** + dromen + ontsnappen aan rationaliteit. Geïnspireerd door **Sigmund Freud** (psychoanalyse, droomduiding 1899). **Dalí** (smeltende klokken 1931), **Magritte** (pijp), **Miró**, **Frida Kahlo**. Tegenovergesteld van rationeel kubisme + geometrische abstractie." }],
-          niveaus: { basis: "Onbewuste/dromen. A.", simpeler: "Surr = dromen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Onbewuste/dromen. A.", simpeler: "Surr = dromen", nogSimpeler: "A." },
         },
       },
     ],
@@ -214,7 +214,7 @@ const steps = [
         wrongHints: [null, "Street art.", "Pop Art.", "Kubisme."],
         uitlegPad: {
           stappen: [{ titel: "Utah 1970", tekst: "**Robert Smithson** (1938-1973) maakte **Spiral Jetty** in 1970: spiraalvormige strekdam van basaltrots, modder + zout in Great Salt Lake, Utah. 460m lang. **Land Art**: kunst van natuur in natuur. Soms zichtbaar, soms verzonken (afhankelijk waterpeil). Smithson zelf stierf jong bij vliegtuigongeluk." }],
-          niveaus: { basis: "Smithson. A.", simpeler: "Spiral Jetty = Smithson = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Smithson. A.", simpeler: "Spiral Jetty = Smithson", nogSimpeler: "A." },
         },
       },
       {
@@ -224,7 +224,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Anonieme provocateur", tekst: "**Banksy** (anoniem UK-kunstenaar, vermoedelijk geboren ~1974): **politieke pochoir-stencils** op muren wereldwijd. Onderwerpen: oorlog, kapitalisme, klimaat, migratie. Bekend: **Girl with Balloon** (verkocht 2018 voor £1mln, zelfvernietigde via interne shredder tijdens veiling — werd waardevoller). Identiteit nog onbekend (theorieën genoeg). Documentaire *Exit Through the Gift Shop* (2010)." }],
-          niveaus: { basis: "Street art. A.", simpeler: "Banksy = street = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Street art. A.", simpeler: "Banksy = street", nogSimpeler: "A." },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Geen 5.", "Wel niveaus."],
         uitlegPad: {
           stappen: [{ titel: "Drie-stappen-analyse", tekst: "**Erwin Panofsky** (Duitse kunsthistoricus, 1892-1968) ontwikkelde 3-stappen-analyse:\n1. **Pre-iconografisch**: wat zie je letterlijk? (man met zwaard).\n2. **Iconografisch**: betekenissen, symbolen (David verslaat Goliath — bijbelse referentie).\n3. **Iconologisch**: bredere culturele betekenis (Renaissance-Florence's politieke identiteit, kleine stad tegen grotere mogendheden).\n\nCito-favoriet model voor analyse." }],
-          niveaus: { basis: "Pre/icono/icono. A.", simpeler: "Panofsky = 3 niveaus = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Pre/icono/icono. A.", simpeler: "Panofsky = 3 niveaus", nogSimpeler: "A." },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [null, "Mona Lisa.", "Nachtwacht.", "Van Gogh-werken."],
         uitlegPad: {
           stappen: [{ titel: "Vermeer 1665", tekst: "*Meisje met de parel* (Johannes Vermeer, ~1665) hangt in **Mauritshuis Den Haag**. Tronie (karakterstudie, geen specifieke persoon). Soms genoemd 'Mona Lisa van het Noorden'. Cultuur-icoon — boek + film (2003 met Scarlett Johansson)." }],
-          niveaus: { basis: "Mauritshuis. A.", simpeler: "Vermeer = Mauritshuis = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Mauritshuis. A.", simpeler: "Vermeer = Mauritshuis", nogSimpeler: "A." },
         },
       },
       {
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Wie wordt vergoed?", tekst: "**AI-art-controverses 2020s**:\n• Modellen getraind op miljoenen kunstwerken **zonder toestemming** kunstenaars. Rechtszaken (Getty vs Stability AI, Sarah Andersen et al vs Stable Diffusion).\n• **Auteursrecht uitkomst-werk**: VS Copyright Office besloot 2023 dat puur AI-gegenereerd werk **niet auteursrecht-beschermd** is (alleen werken met menselijke creativiteit).\n• **Vermindering werk** voor illustrators + concept-artiesten.\n• **Identiteit-vragen**: is AI-gemanipuleerde 'kunst' gelijkwaardig aan menselijk werk?\n\nEvolutie + jurisprudentie nog onderweg." }],
-          niveaus: { basis: "Auteursrecht. A.", simpeler: "AI-art = auteursrecht = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Auteursrecht. A.", simpeler: "AI-art = auteursrecht", nogSimpeler: "A." },
         },
       },
     ],
@@ -273,7 +273,7 @@ const steps = [
         wrongHints: [null, "Renaissance.", "Expressionisme.", "Post-impressionisme."],
         uitlegPad: {
           stappen: [{ titel: "1962 Warhol", tekst: "**Campbell's Soup Cans** (Andy Warhol, 1962): 32 schilderijen, één per soep-variant. **Pop Art**-icoon. Massaproductie-cultuur als kunst. Tegenwoordig: MoMA New York." }],
-          niveaus: { basis: "Soup Cans. A.", simpeler: "Pop = Soup Cans = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Soup Cans. A.", simpeler: "Pop = Soup Cans", nogSimpeler: "A." },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
         wrongHints: [null, "Niet — chiaroscuro.", "Niet — kubisme.", "Niet — De Stijl."],
         uitlegPad: {
           stappen: [{ titel: "Zachte overgangen", tekst: "**Sfumato** (Italiaans 'gerookt'): zachte, geleidelijke overgangen tussen tonen, geen scherpe lijnen. **Leonardo da Vinci** meester: *Mona Lisa*'s mysterieuze glimlach + atmosferische landschap zijn sfumato. Andere techniek, andere meester: **chiaroscuro** (sterke licht-donker, Caravaggio + Rembrandt)." }],
-          niveaus: { basis: "Leonardo. A.", simpeler: "Sfumato = Leonardo = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Leonardo. A.", simpeler: "Sfumato = Leonardo", nogSimpeler: "A." },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Form follows function", tekst: "**Bauhaus** (1919-1933 Duitsland): designschool die kunst, ambacht + industrie verenigde. **Walter Gropius** oprichter. Filosofie: 'form follows function'. **Docenten**: Kandinsky, Klee, Mies van der Rohe, Marcel Breuer. Nazi's sloten in 1933 — docenten verhuisden naar VS → Amerikaanse moderne architectuur. Invloed: alles om je heen (IKEA, Apple, modernisme)." }],
-          niveaus: { basis: "Designschool. A.", simpeler: "Bauhaus = design = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Designschool. A.", simpeler: "Bauhaus = design", nogSimpeler: "A." },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Eerder Picasso-werk, geen oorlog.", "Renaissance.", "NL Gouden Eeuw."],
         uitlegPad: {
           stappen: [{ titel: "Anti-oorlogs-meesterwerk", tekst: "**Guernica** (Pablo Picasso, 1937): groot zwart-wit-grijs werk (3,5m × 7,8m) na **bombardement Baskische stad Guernica** door Duitse + Italiaanse vliegtuigen in opdracht Franco (26 april 1937). Toont chaos, paard, stier, lijden moeders + kinderen. Hangt in Museo Reina Sofia Madrid. **Picasso weigerde 'm aan Spanje te leveren** zolang Franco leefde — kwam pas 1981 naar Spanje na herstel democratie." }],
-          niveaus: { basis: "Guernica. A.", simpeler: "Picasso oorlog = Guernica = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Guernica. A.", simpeler: "Picasso oorlog = Guernica", nogSimpeler: "A." },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "Onvolledig.", "Niet kunst-relevant.", "Niet voldoende."],
         uitlegPad: {
           stappen: [{ titel: "Drie hoeken", tekst: "**Goede kunstanalyse**:\n• **Vorm** (compositie, kleur, lijn, materiaal).\n• **Inhoud** (wat zien we + iconografie + symbolen + thema).\n• **Context** (wanneer, waar, voor wie, hoe ontvangen).\n\nVergelijk met **Panofsky's 3 niveaus**: pre-iconografisch / iconografisch / iconologisch.\n\nGoede analyse combineert alle drie — niet alleen 'mooie kleuren' maar ook 'waarom toen + voor wie + welke betekenis'." }],
-          niveaus: { basis: "Vorm/inhoud/context. A.", simpeler: "Analyse = 3 hoeken = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Vorm/inhoud/context. A.", simpeler: "Analyse = 3 hoeken", nogSimpeler: "A." },
         },
       },
     ],

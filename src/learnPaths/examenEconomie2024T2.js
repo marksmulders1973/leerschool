@@ -61,7 +61,7 @@ const steps = [
           niveaus: {
             basis: "Export (geld van buiten → Kameroen) → nationaal inkomen stijgt. Toerisme = export diensten. Antwoord C.",
             simpeler: "Stel je voor dat jij €1.000 op vakantie naar Kameroen meeneemt. Dat geld geef je uit aan hotel, eten, taxi. Dat geld komt nu Kameroen BINNEN — voor Kameroen is dat 'verdienen aan toeristen'. Hun nationaal inkomen stijgt.",
-            nogSimpeler: "NL-toerist geeft uit in KAM = geld komt KAM binnen = inkomen omhoog = C.",
+            nogSimpeler: "NL-toerist geeft uit in KAM = geld komt KAM binnen = inkomen omhoog",
           },
         },
       },
@@ -117,7 +117,7 @@ const steps = [
           niveaus: {
             basis: "BV = rechtspersoon = niet hoofdelijk aansprakelijk. Antwoord A.",
             simpeler: "Stel: jij start een bedrijf en het gaat failliet voor €50.000. Bij een eenmanszaak: jij betaalt die €50.000 zelf (huis verkopen evt). Bij een BV: het bedrijf 'is' aparte persoon — alleen wat in het bedrijf zit gaat weg, jouw eigen huis blijft.",
-            nogSimpeler: "Niet hoofdelijk = BV = A.",
+            nogSimpeler: "Niet hoofdelijk = BV",
           },
         },
       },
@@ -178,7 +178,7 @@ const steps = [
           niveaus: {
             basis: "Luxe sanitair + keuken = aanpassing van wat Arjun verkoopt = productbeleid. Antwoord D.",
             simpeler: "De 'plaats' op een camping is het PRODUCT dat Arjun verhuurt. Als hij die luxer maakt, verandert hij wat de klant KRIJGT = product. Productbeleid.",
-            nogSimpeler: "Wat de klant krijgt = product = D.",
+            nogSimpeler: "Wat de klant krijgt = product",
           },
         },
       },
@@ -234,7 +234,7 @@ const steps = [
           niveaus: {
             basis: "i/a stijgt → meer ontvangers per werkende → moeilijker betaalbaar. Antwoord B.",
             simpeler: "Stel: 10 werkende neefjes betalen voor 5 oma's. Goed te doen. Dan worden er 8 oma's: nog 10 neefjes maar moeten meer betalen per persoon. Wordt zwaar = MINDER betaalbaar. Antwoord B.",
-            nogSimpeler: "Meer ontvangers = zwaardere last per werkende = afnemend = B.",
+            nogSimpeler: "Meer ontvangers = zwaardere last per werkende = afnemend",
           },
         },
       },
@@ -291,7 +291,7 @@ const steps = [
           niveaus: {
             basis: "Fairtrade = langlopend + pakt oorzaken (lage prijzen) = structureel. Antwoord C.",
             simpeler: "Bij een aardbeving stuurt het Rode Kruis tenten — dat is noodhulp (direct, kort). Fairtrade is anders: je BLIJFT eerlijke prijs betalen — over jaren. Geeft boeren stabiel inkomen. Dat is langdurig = structureel.",
-            nogSimpeler: "Fairtrade = lang + helpt structureel = C.",
+            nogSimpeler: "Fairtrade = lang + helpt structureel",
           },
         },
       },
@@ -348,7 +348,7 @@ const steps = [
           niveaus: {
             basis: "Vermogen stijgt als bezittingen méér in € groeien dan schulden. Optie C: +€2.000 vs +€1.200 = +€800. Antwoord C.",
             simpeler: "De truc: zelfde % op verschillende bedragen = ander €-bedrag. 2% van €100.000 = €2.000 (groot bedrag, klein %). 6% van €20.000 = maar €1.200 (klein bedrag, hoog %). Bezit groeit MEER → vermogen stijgt.",
-            nogSimpeler: "+2% × 100k > +6% × 20k = vermogen +800 = C.",
+            nogSimpeler: "+2% × 100k > +6% × 20k = vermogen +800",
           },
         },
       },

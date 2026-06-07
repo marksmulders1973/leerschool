@@ -75,7 +75,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Doel-van-bord-truc: lees laatste alinea — daar staat altijd 'please...' of wat de lezer MOET DOEN. Hier: 'ensure it is not spread' = verspreiding stoppen. Plant uit NZ → niet-native → exotisch.",
-        { basis: "Voorkomen verspreiding exotische plant. = A.", simpeler: "Bord vraagt schoenen/kleding checken zodat plant niet OP NIEUWE PLEK terechtkomt. = A.", nogSimpeler: "Verspreiding stoppen = A." },
+        { basis: "Voorkomen verspreiding exotische plant.", simpeler: "Bord vraagt schoenen/kleding checken zodat plant niet OP NIEUWE PLEK terechtkomt.", nogSimpeler: "Verspreiding stoppen" },
         [{ woord: "non-native", uitleg: "Niet-inheems, exotisch." }, { woord: "spread", uitleg: "Verspreiden." }],
       ),
     }],
@@ -105,7 +105,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Vraag 'which reason mentioned in paragraph 2' = scan ALLEEN alinea 2 voor reden. Sleutelwoord 'even before 8am, considerably earlier'. Geen 'competitive' of 'longer day' in tekst — die zijn verzonnen verleiders.",
-        { basis: "VS start vóór 8am = vroeger dan UK = meer slaaptekort. = A.", simpeler: "VS school start nog vroeger dan VK → meer slaaptekort. = A.", nogSimpeler: "Eerder = A." },
+        { basis: "VS start vóór 8am = vroeger dan UK = meer slaaptekort.", simpeler: "VS school start nog vroeger dan VK → meer slaaptekort.", nogSimpeler: "Eerder" },
         [{ woord: "ranking", uitleg: "Plek in een lijst (hoogste tot laagste)." }, { woord: "considerably", uitleg: "Aanzienlijk, behoorlijk." }],
       ),
     }],
@@ -135,7 +135,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Lees alinea 1+2 + zoek de KERN. Hier: sit-down restaurants ≠ fast-food — sit-down BLIJKT 5× ongezonder. Andere opties verzinnen iets dat NIET in tekst staat.",
-        { basis: "Restaurants > fast-food in calorieën. = D.", simpeler: "Onderzoek toont: gewone restaurants meer calorieën dan McDonalds-achtigen. = D.", nogSimpeler: "Restaurants > FF = D." },
+        { basis: "Restaurants > fast-food in calorieën.", simpeler: "Onderzoek toont: gewone restaurants meer calorieën dan McDonalds-achtigen.", nogSimpeler: "Restaurants > FF" },
         [{ woord: "sit-down restaurant", uitleg: "Gewoon restaurant waar je zit en bediening krijgt." }, { woord: "kcal", uitleg: "Kilocalorieën — eenheid energie in eten." }],
       ),
     }],
@@ -165,7 +165,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Quote-attributie: kijk wie SPREKT in de zin. Hier 'Eddie wrote' direct na de quote → Eddie is de bron. Andere opties leiden af van wie het zei.",
-        { basis: "Eddie wrote de suggestie. = C.", simpeler: "De quote komt van Eddie (6 jaar), in zijn brief aan de burgemeester. = C.", nogSimpeler: "Eddie = C." },
+        { basis: "Eddie wrote de suggestie.", simpeler: "De quote komt van Eddie (6 jaar), in zijn brief aan de burgemeester.", nogSimpeler: "Eddie" },
         [{ woord: "mayor", uitleg: "Burgemeester." }, { woord: "charitable", uitleg: "Goeddoelend, liefdadig." }],
       ),
     }],
@@ -195,7 +195,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Sleutelwoorden alinea 1+2: 'simple', 'vintage 1960s', 'old-style', 'CVT = chocolate vanilla twist'. Alles wijst op TRADITIONEEL. Verleiders verzinnen 'trending' of 'unique flavours' die juist het tegenovergestelde zijn van wat in tekst staat.",
-        { basis: "Simple + vintage + old-style = traditioneel. = D.", simpeler: "1960s truck + 3 smaken (chocolate/vanilla/twist) = ouderwets concept. = D.", nogSimpeler: "Traditional = D." },
+        { basis: "Simple + vintage + old-style = traditioneel.", simpeler: "1960s truck + 3 smaken (chocolate/vanilla/twist) = ouderwets concept.", nogSimpeler: "Traditional" },
         [{ woord: "vintage", uitleg: "Klassiek, ouderwets-mooi." }, { woord: "old-style", uitleg: "Ouderwets, traditioneel." }],
       ),
     }],
@@ -225,7 +225,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Joe's confusion zit in de combo: kostprijs $0.30, verkoopprijs $4, en influencer eist het GRATIS — alleen op claim van 100k volgers. Joe ziet dat niet als business: 'pay me, that's how this works'.",
-        { basis: "Verbaasd over gratis-vraag voor goedkope cone. = D.", simpeler: "Joe maakt voor 30 cent en verkoopt voor $4 — waarom zou hij gratis weggeven? = D.", nogSimpeler: "Gratis vs cost = D." },
+        { basis: "Verbaasd over gratis-vraag voor goedkope cone.", simpeler: "Joe maakt voor 30 cent en verkoopt voor $4 — waarom zou hij gratis weggeven?", nogSimpeler: "Gratis vs cost" },
         [{ woord: "confused", uitleg: "In de war, verbaasd." }, { woord: "encounter", uitleg: "Ontmoeting." }],
       ),
     }],

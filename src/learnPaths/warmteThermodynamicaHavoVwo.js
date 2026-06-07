@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — Kelvin is altijd ≥ 0.", "Niet — Celsius ≠ Kelvin directe waarde.", "Niet — controleer optellen 273."],
         uitlegPad: {
           stappen: [{ titel: "T(K) = T(°C) + 273", tekst: "20 + 273 = **293 K**. (Precies 293,15 K met 273,15 maar in CSE meestal 273.)" }],
-          niveaus: { basis: "20+273=293 K. A.", simpeler: "Celsius + 273 = Kelvin. A.", nogSimpeler: "293 K = A." },
+          niveaus: { basis: "20+273=293 K. A.", simpeler: "Celsius + 273 = Kelvin. A.", nogSimpeler: "293 K" },
         },
       },
       {
@@ -38,7 +38,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "0 K", tekst: "Per definitie 0 K = −273,15 °C. Lager bestaat niet — daar zou kinetische energie negatief moeten zijn, fysisch onmogelijk." }],
           theorie: "In praktijk: laboratoria komen tot ~10⁻⁹ K, maar precies 0 is fundamenteel onbereikbaar (derde hoofdwet thermodynamica).",
-          niveaus: { basis: "−273,15 °C. A.", simpeler: "Min 273 graden = nulpunt Kelvin. A.", nogSimpeler: "−273 = A." },
+          niveaus: { basis: "−273,15 °C. A.", simpeler: "Min 273 graden = nulpunt Kelvin. A.", nogSimpeler: "−273" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         wrongHints: [null, "Niet — zou negatieve T geven, onzin in formule.", "Onjuist in EU + wetenschap.", "Maakt wel uit."],
         uitlegPad: {
           stappen: [{ titel: "Absolute schaal vereist", tekst: "Bij ideale gas pV=nRT moet T evenredig met deeltjes-energie zijn — vanaf 0. Met Celsius krijg je negatieve T → negatieve p of V → onzin. Kelvin is de ENIGE schaal die werkt." }],
-          niveaus: { basis: "Kelvin. A.", simpeler: "Altijd Kelvin in formules. A.", nogSimpeler: "K = A." },
+          niveaus: { basis: "Kelvin. A.", simpeler: "Altijd Kelvin in formules. A.", nogSimpeler: "K" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tweede hoofdwet thermodynamica", tekst: "Warm object verliest energie aan koud → tot evenwicht. Andersom kost werk (koelkast, airco), niet vanzelf." }],
           theorie: "Daarom kun je niet zomaar gratis stroom maken uit alleen omgevingsruimte — vereist temperatuurverschil.",
-          niveaus: { basis: "Hoog → laag T. A.", simpeler: "Warmte gaat naar koud, niet andersom. A.", nogSimpeler: "Hoog→laag = A." },
+          niveaus: { basis: "Hoog → laag T. A.", simpeler: "Warmte gaat naar koud, niet andersom. A.", nogSimpeler: "Hoog→laag" },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Niet — energie wisselt continu.", "Niet — water wordt warmer, niet kouder.", "Onjuist — energie stroomt wel."],
         uitlegPad: {
           stappen: [{ titel: "Thermisch evenwicht", tekst: "Warmte stroomt van warmere kamer naar koudere water. Na lange tijd: gelijk. Snelheid van uitwisseling hangt af van isolatie, oppervlak, materiaal." }],
-          niveaus: { basis: "Beide dezelfde T. A.", simpeler: "Water wordt warmer tot kamer-T. A.", nogSimpeler: "Evenwicht = A." },
+          niveaus: { basis: "Beide dezelfde T. A.", simpeler: "Water wordt warmer tot kamer-T. A.", nogSimpeler: "Evenwicht" },
         },
       },
     ],
@@ -93,7 +93,7 @@ const steps = [
         wrongHints: [null, "Te groot — controleer rekensom.", "Te klein — vergeet massa.", "Veel te klein."],
         uitlegPad: {
           stappen: [{ titel: "Q = m·c·ΔT", tekst: "Q = 0,50 · 4180 · (90−20) = 0,50 · 4180 · 70 = **146 300 J ≈ 1,5·10⁵ J**." }],
-          niveaus: { basis: "Q≈1,5·10⁵ J. A.", simpeler: "Massa × c × ΔT = ~146 kJ. A.", nogSimpeler: "~1,5·10⁵ = A." },
+          niveaus: { basis: "Q≈1,5·10⁵ J. A.", simpeler: "Massa × c × ΔT = ~146 kJ. A.", nogSimpeler: "~1,5·10⁵" },
         },
       },
       {
@@ -109,7 +109,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Energie gaat in faseverandering", tekst: "Alle binnenkomende warmte breekt waterstof-bruggen in ijs → moleculen 'vrij' in vloeistof. T blijft constant tot al het ijs gesmolten is. Daarna pas opwarmen." }],
           theorie: "Daarom blijft een ijs-water-mengsel exact 0 °C totdat alle ijs op is — handig voor koel-experimenten + reactievaten.",
-          niveaus: { basis: "T blijft 0 °C tijdens smelten. A.", simpeler: "Energie gaat in smelten, niet opwarmen. A.", nogSimpeler: "0°C blijft = A." },
+          niveaus: { basis: "T blijft 0 °C tijdens smelten. A.", simpeler: "Energie gaat in smelten, niet opwarmen. A.", nogSimpeler: "0°C blijft" },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Niet — meet maar, beide kamer-T.", "Niet — geen reflectie hier.", "Niet — fysisch verschil."],
         uitlegPad: {
           stappen: [{ titel: "Warmte stroomt snel uit hand", tekst: "Metaal geleidt warmte goed → onttrekt snel warmte aan je hand → koud-gevoel. Hout is een isolator → warmte blijft → voelt minder koud. Lagere c metaal = sneller op-en-neer in T (warmte-flow groot)." }],
-          niveaus: { basis: "Geleiding + lage c. A.", simpeler: "Metaal slokt warmte uit hand. A.", nogSimpeler: "Geleiding = A." },
+          niveaus: { basis: "Geleiding + lage c. A.", simpeler: "Metaal slokt warmte uit hand. A.", nogSimpeler: "Geleiding" },
         },
       },
       {
@@ -134,7 +134,7 @@ const steps = [
         wrongHints: [null, "Niet — vermenigvuldig massa.", "Niet — dat is voor 1 kg.", "Veel te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Q = m·L_v", tekst: "Q = 0,1 · 2260 = **226 kJ**. Veel meer dan opwarmen ditzelfde water van 0 naar 100 °C (dat was 418 kJ/kg → 41,8 kJ voor 0,1 kg)." }],
-          niveaus: { basis: "0,1·2260=226. A.", simpeler: "Massa × verdampingswarmte = 226 kJ. A.", nogSimpeler: "226 = A." },
+          niveaus: { basis: "0,1·2260=226. A.", simpeler: "Massa × verdampingswarmte = 226 kJ. A.", nogSimpeler: "226" },
         },
       },
       {
@@ -150,7 +150,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "L_v water heel hoog", tekst: "Verdampen van 1 g zweet kost 2260 J — afkomstig uit huid. Daarom koelen we werkelijk af. Hoe meer wind/lage luchtvochtigheid → snellere verdamping → meer koeling. Daarom voelt het zo verkwikkend om handdoek over hoofd te leggen na de sauna." }],
           theorie: "Hond hijgt om zelfde reden — verdamping uit longen/tong.",
-          niveaus: { basis: "Verdamping kost veel energie. A.", simpeler: "Zweet verdampt → energie uit huid → koel. A.", nogSimpeler: "L_v = A." },
+          niveaus: { basis: "Verdamping kost veel energie. A.", simpeler: "Zweet verdampt → energie uit huid → koel. A.", nogSimpeler: "L_v" },
         },
       },
     ],
@@ -169,7 +169,7 @@ const steps = [
         wrongHints: [null, "Niet — pers samen → p stijgt.", "Niet — p verandert wel.", "Niet — controleer."],
         uitlegPad: {
           stappen: [{ titel: "Boyle: pV=const", tekst: "p₁V₁ = p₂V₂ → 10⁵·2 = p₂·1 → p₂ = **2,0·10⁵ Pa**. Volume gehalveerd → druk verdubbeld." }],
-          niveaus: { basis: "p₂=2·10⁵. A.", simpeler: "V/2 → p ×2. A.", nogSimpeler: "2·10⁵ = A." },
+          niveaus: { basis: "p₂=2·10⁵. A.", simpeler: "V/2 → p ×2. A.", nogSimpeler: "2·10⁵" },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         wrongHints: [null, "Niet primair de reden.", "Niet — geen vacuüm.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Gay-Lussac: p ~ T", tekst: "Bij vaste V: p/T = constant → T verdubbelen → p verdubbelen. Spuitbus binnen 5-10 atm; bij 100 °C extra reeds risico-grens overschreden → explosie." }],
-          niveaus: { basis: "T↑ → p↑ → barst. A.", simpeler: "Warm gas wil meer ruimte; bus barst. A.", nogSimpeler: "p↑ = A." },
+          niveaus: { basis: "T↑ → p↑ → barst. A.", simpeler: "Warm gas wil meer ruimte; bus barst. A.", nogSimpeler: "p↑" },
         },
       },
       {
@@ -195,7 +195,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Molair volume STP", tekst: "1 mol ideaal gas bij 0 °C + 1 atm vult 22,4 L (= 22,4·10⁻³ m³). Onafhankelijk van wélk gas (zuurstof, stikstof, etc.) — alle gassen hebben dezelfde V_mol bij STP." }],
           theorie: "Bij 25 °C (kamer-T) iets meer: 24,5 L.",
-          niveaus: { basis: "22,4 L. A.", simpeler: "1 mol = 22,4 L bij standaard. A.", nogSimpeler: "22,4 = A." },
+          niveaus: { basis: "22,4 L. A.", simpeler: "1 mol = 22,4 L bij standaard. A.", nogSimpeler: "22,4" },
         },
       },
       {
@@ -211,7 +211,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boyle: lagere p → grotere V", tekst: "Buitendruk daalt op hoogte → ballon-wand drukt minder hard tegen helium → gas zet uit. Stratosferische ballonnen kunnen oplopen tot 100× origineel volume → wand barst bij grens. Bemande ballonnen hebben een 'klep' om gas af te laten." }],
           theorie: "Ook 'lege' chips-zak bovenop berg lijkt opgeblazen — uitzettende lucht in zak bij lagere buitendruk.",
-          niveaus: { basis: "V neemt toe (lagere p). A.", simpeler: "Minder buiten-druk → ballon zet uit. A.", nogSimpeler: "V↑ = A." },
+          niveaus: { basis: "V neemt toe (lagere p). A.", simpeler: "Minder buiten-druk → ballon zet uit. A.", nogSimpeler: "V↑" },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
           stappen: [
             { titel: "n = pV/(RT)", tekst: "V = 10 L = 0,010 m³. n = pV/(RT) = (10⁵ · 0,010) / (8,314 · 300) = 1000 / 2494 ≈ **0,40 mol**." },
           ],
-          niveaus: { basis: "n≈0,40 mol. A.", simpeler: "pV/(RT) = 0,4 mol. A.", nogSimpeler: "0,4 = A." },
+          niveaus: { basis: "n≈0,40 mol. A.", simpeler: "pV/(RT) = 0,4 mol. A.", nogSimpeler: "0,4" },
         },
       },
     ],
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — arbeid uit telt min.", "Niet — gas wint, niet verliest U.", "Niet — controleer formule."],
         uitlegPad: {
           stappen: [{ titel: "ΔU = Q − W", tekst: "ΔU = 500 − 200 = **+300 J**. Gas heeft netto 300 J binnen-energie gewonnen (T stijgt of fasecomponent verandert)." }],
-          niveaus: { basis: "500−200=300. A.", simpeler: "Warmte in min arbeid uit = 300 J. A.", nogSimpeler: "+300 = A." },
+          niveaus: { basis: "500−200=300. A.", simpeler: "Warmte in min arbeid uit = 300 J. A.", nogSimpeler: "+300" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vacuüm = alleen EM-straling", tekst: "Tussen zon en aarde is vacuüm. Geleiding + convectie hebben materie nodig. Alleen straling (zichtbaar + IR + UV) plant zich voort door vacuüm." }],
           theorie: "Zonnewind brengt ook materie, maar de warmte is bijna geheel via stralings-energie.",
-          niveaus: { basis: "Straling door vacuüm. A.", simpeler: "Vacuüm: alleen EM-golven. A.", nogSimpeler: "Straling = A." },
+          niveaus: { basis: "Straling door vacuüm. A.", simpeler: "Vacuüm: alleen EM-golven. A.", nogSimpeler: "Straling" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Snelle samenpersing = adiabatisch", tekst: "Bij snel pompen kan warmte niet ontsnappen → Q≈0. Je doet arbeid op gas: ΔU = −W (W<0 want op systeem) → ΔU>0 → T stijgt. Voel je in pomp + ventiel." }],
           theorie: "Andersom: gas uit fles dat snel uitzet (adiabatisch) koelt af — daarom kan een CO₂-fles op je hand 'ijzig' aanvoelen.",
-          niveaus: { basis: "Adiabatische compressie. A.", simpeler: "Snel persen → warm zonder warmte-uit. A.", nogSimpeler: "Compressie = A." },
+          niveaus: { basis: "Adiabatische compressie. A.", simpeler: "Snel persen → warm zonder warmte-uit. A.", nogSimpeler: "Compressie" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Lage λ = isolator", tekst: "Glaswol bevat veel stilstaande lucht-poriën → lucht is slechte geleider → stoppt warmtetransport. λ ~ 0,04 W/(m·K), vergeleken met koper ~400 W/(m·K) → 10 000× verschil." }],
           theorie: "Daarom zijn winterjassen vol met lucht (donsveren, polyester-vezel): de isolatie zit in de stilstaande lucht, niet in de stof.",
-          niveaus: { basis: "Glaswol = isolator. A.", simpeler: "Glaswol heeft lucht in poriën → slecht geleiden. A.", nogSimpeler: "Glaswol = A." },
+          niveaus: { basis: "Glaswol = isolator. A.", simpeler: "Glaswol heeft lucht in poriën → slecht geleiden. A.", nogSimpeler: "Glaswol" },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
           basiskennis: [
             { onderwerp: "Tweede hoofdwet niet geschonden", uitleg: "COP > 1 lijkt vrij energie maar is gewoon transport van bestaande omgevingswarmte — werkt alleen omdat buiten warmer is dan absoluut nulpunt." },
           ],
-          niveaus: { basis: "COP=4. A.", simpeler: "Warmtepomp factor 4 zuiniger. A.", nogSimpeler: "COP = A." },
+          niveaus: { basis: "COP=4. A.", simpeler: "Warmtepomp factor 4 zuiniger. A.", nogSimpeler: "COP" },
         },
       },
     ],
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Niet — isotherm betekent ΔU=0.", "Niet — dat is fout teken.", "Niet — eerste hoofdwet zegt ΔU=Q−W."],
         uitlegPad: {
           stappen: [{ titel: "ΔU hangt alleen af van T", tekst: "Inwendige energie U van ideaal gas is functie van T. ΔT=0 → ΔU=0. Dan Q = W: alle binnenkomende warmte wordt arbeid (gas duwt zuiger weg). Klassieke 'warmte → arbeid'-stap." }],
-          niveaus: { basis: "ΔU=0 bij isotherm. A.", simpeler: "Geen T-verandering = geen U-verandering. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "ΔU=0 bij isotherm. A.", simpeler: "Geen T-verandering = geen U-verandering. A.", nogSimpeler: "0" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Onmogelijk — geen reservoir-grens van 0 K.", "Niet — controleer formule.", "Niet — andere richting."],
         uitlegPad: {
           stappen: [{ titel: "η = 1 − T_k/T_w", tekst: "η = 1 − 300/600 = 1 − 0,5 = **0,50 = 50%**. Werkelijke motoren halen lager door wrijving + niet-Carnot-cycli." }],
-          niveaus: { basis: "1−300/600=0,5. A.", simpeler: "Helft van energie wordt arbeid. A.", nogSimpeler: "50% = A." },
+          niveaus: { basis: "1−300/600=0,5. A.", simpeler: "Helft van energie wordt arbeid. A.", nogSimpeler: "50%" },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
           stappen: [
             { titel: "Warm = ijler", tekst: "Bij vaste p (atmosfeer): T↑ → V/m↑ (Charles) → ρ↓. Ballon vol hete lucht is lichter dan zelfde V koude buitenlucht → opwaartse kracht (Archimedes: F = ρ_buiten · V · g). Brander warm houden = blijven zweven." },
           ],
-          niveaus: { basis: "Warm = ijler = opwaarts. A.", simpeler: "Heet gas weegt minder; ballon stijgt. A.", nogSimpeler: "Archimedes = A." },
+          niveaus: { basis: "Warm = ijler = opwaarts. A.", simpeler: "Heet gas weegt minder; ballon stijgt. A.", nogSimpeler: "Archimedes" },
         },
       },
       {
@@ -361,7 +361,7 @@ const steps = [
           stappen: [
             { titel: "Drie barrières", tekst: "1. Dubbele wand met vacuüm → geen geleiding/convectie (geen medium).\n2. Verzilverde binnenkant → reflecteert stralingsenergie terug naar inhoud.\n3. Kurk-deksel (slechte geleider) tegen verlies door opening.\n\nResultaat: 6-12 uur thee warm." },
           ],
-          niveaus: { basis: "Vacuüm + reflectie. A.", simpeler: "Alle drie warmte-stroming geblokkeerd. A.", nogSimpeler: "3 in 1 = A." },
+          niveaus: { basis: "Vacuüm + reflectie. A.", simpeler: "Alle drie warmte-stroming geblokkeerd. A.", nogSimpeler: "3 in 1" },
         },
       },
       {
@@ -372,7 +372,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "T⁴", tekst: "P ~ T⁴. T verdubbelen → 2⁴ = **16×** zoveel vermogen. Daarom hete sterren geweldig veel feller stralen dan koude. Zon (5800 K) straalt veel feller dan rode dwerg (3000 K)." }],
           theorie: "Daarom moet je T altijd in Kelvin (absolute schaal) gebruiken — verdubbelen Celsius geeft onzin antwoord.",
-          niveaus: { basis: "2⁴=16×. A.", simpeler: "Vierde macht: 2·2·2·2 = 16. A.", nogSimpeler: "16× = A." },
+          niveaus: { basis: "2⁴=16×. A.", simpeler: "Vierde macht: 2·2·2·2 = 16. A.", nogSimpeler: "16×" },
         },
       },
     ],

@@ -60,7 +60,7 @@ const steps = [
           niveaus: {
             basis: "Recht van initiatief. Antwoord C.",
             simpeler: "Een nieuw wetsvoorstel indienen kan de Kamer doen via het initiatiefrecht. De andere rechten gaan over vragen, moties of onderzoek. Antwoord C.",
-            nogSimpeler: "Nieuwe wet = initiatief = C.",
+            nogSimpeler: "Nieuwe wet = initiatief",
           },
         },
       },
@@ -112,7 +112,7 @@ const steps = [
           niveaus: {
             basis: "Volksvertegenwoordigers. Antwoord D.",
             simpeler: "Staten-Generaal = parlement. Leden zijn door het volk gekozen = volksvertegenwoordigers. Antwoord D.",
-            nogSimpeler: "Gekozen door volk = D.",
+            nogSimpeler: "Gekozen door volk",
           },
         },
       },
@@ -167,7 +167,7 @@ const steps = [
           niveaus: {
             basis: "Europese Commissie. Antwoord A.",
             simpeler: "De Commissie is dagelijks bestuur EU + 'hoeder van verdragen' = doet toezicht op lidstaten. Antwoord A.",
-            nogSimpeler: "Commissie = toezicht = A.",
+            nogSimpeler: "Commissie = toezicht",
           },
         },
       },
@@ -221,7 +221,7 @@ const steps = [
           niveaus: {
             basis: "Hoger beroep. Antwoord A.",
             simpeler: "Alleen hoger beroep (naar gerechtshof) kan een vonnis veranderen. Andere rechten gaan over andere fasen. Antwoord A.",
-            nogSimpeler: "Vonnis aanvechten = hoger beroep = A.",
+            nogSimpeler: "Vonnis aanvechten = hoger beroep",
           },
         },
       },
@@ -275,7 +275,7 @@ const steps = [
           niveaus: {
             basis: "Leiding aan opsporingsonderzoek. Antwoord A.",
             simpeler: "Tijdens een politieactie zit je in de OPSPORINGS-fase. De officier van justitie geeft leiding aan dat onderzoek (samen met politie). Antwoord A.",
-            nogSimpeler: "Politieactie = opsporing leiden = A.",
+            nogSimpeler: "Politieactie = opsporing leiden",
           },
         },
       },

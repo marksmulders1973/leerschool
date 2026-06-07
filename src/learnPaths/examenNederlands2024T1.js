@@ -76,11 +76,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "alinea-clusters herkennen — kern" },
       ],
       uitlegPad: compact(
-        "Deelonderwerp = wat dit BLOK behandelt (niet de hele tekst). Truc: lees alinea 1 + alinea 5 — wat hebben ze gemeen? Hier: kust verdwijnt + overheid doet weinig. Rode draad = TERUGTREKKEN van kust. = C.",
+        "Deelonderwerp = wat dit BLOK behandelt (niet de hele tekst). Truc: lees alinea 1 + alinea 5 — wat hebben ze gemeen? Hier: kust verdwijnt + overheid doet weinig. Rode draad = TERUGTREKKEN van kust.",
         {
-          basis: "Alinea 1-5 = kust trekt terug. = C.",
-          simpeler: "Wat is in al die alineas hetzelfde? Kust wordt minder. = C.",
-          nogSimpeler: "Terugtrekkende kust = C.",
+          basis: "Alinea 1-5 = kust trekt terug.",
+          simpeler: "Wat is in al die alineas hetzelfde? Kust wordt minder.",
+          nogSimpeler: "Terugtrekkende kust",
         },
         [
           { woord: "deelonderwerp", uitleg: "Het sub-thema dat één blok alineas behandelt." },
@@ -118,11 +118,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "kerngedachte vinden — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdgedachte = wat de schrijver wil ZEGGEN met de hele tekst (in 1 zin). Truc: kijk naar slot + alinea-functies. Tekst eindigt met OPEN VRAAG ('wat moet bescherming?'), dus hoofdgedachte bevat OOK die vraag. = D.",
+        "Hoofdgedachte = wat de schrijver wil ZEGGEN met de hele tekst (in 1 zin). Truc: kijk naar slot + alinea-functies. Tekst eindigt met OPEN VRAAG ('wat moet bescherming?'), dus hoofdgedachte bevat OOK die vraag.",
         {
-          basis: "Slot stelt vraag — hoofdgedachte ook. = D.",
-          simpeler: "Hoofdgedachte = de KERN-boodschap. Hier: erosie + keuze maken. = D.",
-          nogSimpeler: "Erosie + keuze = D.",
+          basis: "Slot stelt vraag — hoofdgedachte ook.",
+          simpeler: "Hoofdgedachte = de KERN-boodschap. Hier: erosie + keuze maken.",
+          nogSimpeler: "Erosie + keuze",
         },
         [
           { woord: "hoofdgedachte", uitleg: "De centrale boodschap van de tekst, samengevat in 1 zin." },
@@ -159,11 +159,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "tekststructuur — kern" },
       ],
       uitlegPad: compact(
-        "Conclusie = EINDoordeel na redenering. Advies = aansporing om iets te doen. Samenvatting = alles kort herhalen. 'Kauwen helpt VOORAL bij plantaardig' = oordeel uit onderzoeken = conclusie. = B.",
+        "Conclusie = EINDoordeel na redenering. Advies = aansporing om iets te doen. Samenvatting = alles kort herhalen. 'Kauwen helpt VOORAL bij plantaardig' = oordeel uit onderzoeken = conclusie.",
         {
-          basis: "Eindoordeel uit redenering = conclusie. = B.",
-          simpeler: "De schrijver trekt de eindstreep onder alle info. = B.",
-          nogSimpeler: "Conclusie = B.",
+          basis: "Eindoordeel uit redenering = conclusie.",
+          simpeler: "De schrijver trekt de eindstreep onder alle info.",
+          nogSimpeler: "Conclusie",
         },
         [
           { woord: "conclusie", uitleg: "Het eindoordeel na een redenering of onderzoek." },
@@ -200,11 +200,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + tekstsoort koppeling — kern" },
       ],
       uitlegPad: compact(
-        "Tekstsoort → doel: NIEUWSARTIKEL = informeren, OPINIESTUK = overtuigen, COLUMN/GEDICHT = amuseren, ADVERTENTIE = activeren. Concrete oproep ('kijk op...') = activeren. = B.",
+        "Tekstsoort → doel: NIEUWSARTIKEL = informeren, OPINIESTUK = overtuigen, COLUMN/GEDICHT = amuseren, ADVERTENTIE = activeren. Concrete oproep ('kijk op...') = activeren.",
         {
-          basis: "Advertentie + 'kijk op site' = activeren. = B.",
-          simpeler: "Een advertentie WIL dat je iets doet — hier: naar de site. = B.",
-          nogSimpeler: "Activeren = B.",
+          basis: "Advertentie + 'kijk op site' = activeren.",
+          simpeler: "Een advertentie WIL dat je iets doet — hier: naar de site.",
+          nogSimpeler: "Activeren",
         },
         [
           { woord: "activeren", uitleg: "Lezer aansporen om concreet iets te doen (kopen, klikken, geven)." },
@@ -241,11 +241,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "multi-inleiding herkennen — kern" },
       ],
       uitlegPad: compact(
-        "Inleiding kan COMBINEREN. Loop ze af: aanleiding (=gebeurtenis NU)? Ja, de Facebook-storing. Anekdote (=verhaaltje)? Nee. Conclusie? Nee, staat aan begin. Deskundige? Ja, Tom de Leeuw wordt geïntroduceerd. = 1+4 = B.",
+        "Inleiding kan COMBINEREN. Loop ze af: aanleiding (=gebeurtenis NU)? Ja, de Facebook-storing. Anekdote (=verhaaltje)? Nee. Conclusie? Nee, staat aan begin. Deskundige? Ja, Tom de Leeuw wordt geïntroduceerd. = 1+4",
         {
-          basis: "Aanleiding + deskundige = 1 en 4. = B.",
-          simpeler: "De STORING = aanleiding. De PSYCHOLOOG = deskundige. = B.",
-          nogSimpeler: "1+4 = B.",
+          basis: "Aanleiding + deskundige = 1 en 4.",
+          simpeler: "De STORING = aanleiding. De PSYCHOLOOG = deskundige.",
+          nogSimpeler: "1+4",
         },
         [
           { woord: "aanleiding", uitleg: "De gebeurtenis NU die maakte dat dit geschreven werd." },
@@ -283,11 +283,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "aanleiding vs hoofdonderwerp scheiden — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdonderwerp = rode draad. Aanleiding (storing) ≠ hoofdonderwerp. Tekst beschrijft verslavingsmechanismen + cijfers + 97 minuten + normalisatie — allemaal over verslaving. Niet 1 platform → SOCIALE MEDIA in het algemeen. = D.",
+        "Hoofdonderwerp = rode draad. Aanleiding (storing) ≠ hoofdonderwerp. Tekst beschrijft verslavingsmechanismen + cijfers + 97 minuten + normalisatie — allemaal over verslaving. Niet 1 platform → SOCIALE MEDIA in het algemeen.",
         {
-          basis: "Rode draad = verslaving sociale media. = D.",
-          simpeler: "Storing was de hook, verslaving is het ONDERWERP. = D.",
-          nogSimpeler: "Verslaving SM = D.",
+          basis: "Rode draad = verslaving sociale media.",
+          simpeler: "Storing was de hook, verslaving is het ONDERWERP.",
+          nogSimpeler: "Verslaving SM",
         },
         [
           { woord: "hoofdonderwerp", uitleg: "Het centrale thema dat door ALLE alineas loopt." },

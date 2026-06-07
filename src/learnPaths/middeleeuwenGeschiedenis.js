@@ -154,8 +154,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Beroemd", uitleg: "Saladin werd ook door tegenstanders gerespecteerd voor zijn rechtvaardigheid." }],
           niveaus: {
             basis: "Saladin. A.",
-            simpeler: "Saladin was de sultan van Egypte die in 1187 Jeruzalem heroverde op de kruisvaarders. = A.",
-            nogSimpeler: "Saladin = A.",
+            simpeler: "Saladin was de sultan van Egypte die in 1187 Jeruzalem heroverde op de kruisvaarders.",
+            nogSimpeler: "Saladin",
           },
         },
       },

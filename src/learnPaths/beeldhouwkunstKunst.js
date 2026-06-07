@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Formaat is niet het onderscheid.", "Er is een duidelijk verschil: dimensies."],
         uitlegPad: {
           stappen: [{ titel: "Eromheen lopen", tekst: "**Beeldhouwkunst** is **driedimensionaal (3D)** — je kunt er **omheen** lopen. Een **schilderij** is tweedimensionaal (2D, plat). Daardoor spelen bij sculptuur massa, volume en standpunt een rol die een schilderij niet heeft." }],
-          niveaus: { basis: "3D vs 2D. A.", simpeler: "Beeld = 3D = A.", nogSimpeler: "A." },
+          niveaus: { basis: "3D vs 2D. A.", simpeler: "Beeld = 3D", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Dat is juist een vrijstaand beeld (in het rond).", "Het is geen materiaal.", "Geen gereedschap — een beeldvorm."],
         uitlegPad: {
           stappen: [{ titel: "Half uit de muur", tekst: "Een **reliëf** steekt (deels) uit een **achtergrond** en is bedoeld om van **voren** te bekijken — bv. op een muur of munt. **Bas-reliëf** is ondiep, **hoog-reliëf** steekt ver uit. Een **vrijstaand** beeld kun je daarentegen van alle kanten bekijken." }],
-          niveaus: { basis: "Steekt uit een achtergrond. A.", simpeler: "Reliëf = uit de muur = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Steekt uit een achtergrond. A.", simpeler: "Reliëf = uit de muur", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Beelden zijn juist bedoeld om te bekijken.", "Juist niet één kant — daarom loop je eromheen.", "Het heeft veel invloed."],
         uitlegPad: {
           stappen: [{ titel: "Geen 'voorkant'", tekst: "Bij een **vrijstaand beeld** is er niet één 'juiste' kant: het **verandert** terwijl je eromheen loopt. Daarom denkt een beeldhouwer in alle aanzichten tegelijk — en doet ook de **negatieve ruimte** (gaten, openingen) mee in het ontwerp." }],
-          niveaus: { basis: "Verandert al lopend. A.", simpeler: "Eromheen = ander beeld = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Verandert al lopend. A.", simpeler: "Eromheen = ander beeld", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Toevoegen past bij klei (boetseren), niet bij marmer.", "Gieten hoort bij brons.", "Lassen is voor metaal."],
         uitlegPad: {
           stappen: [{ titel: "Hakken = wegnemen", tekst: "**Steen/marmer** bewerk je **wegnemend (subtractief)**: je hakt en beitelt materiaal **weg** uit een blok. Onomkeerbaar — een fout kun je niet terugplakken. **Boetseren** (klei) is juist **opbouwend** en corrigeerbaar." }],
-          niveaus: { basis: "Wegnemend. A.", simpeler: "Marmer = weghakken = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Wegnemend. A.", simpeler: "Marmer = weghakken", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Brons is juist sterk; steen zou eerder breken.", "Gieten gebeurt juist in een mal.", "Prijs is hier niet het punt."],
         uitlegPad: {
           stappen: [{ titel: "Sterk + herhaalbaar", tekst: "Bij **bronsgieten** maak je een mal en giet je vloeibaar brons. Voordelen: je kunt **meerdere exemplaren** (een oplage) maken, en brons is **sterk** genoeg voor **dunne, uitstekende delen** (een vooruitgestoken arm) die in steen zouden afbreken." }],
-          niveaus: { basis: "Meerdere + sterk. A.", simpeler: "Brons = oplage + sterk = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Meerdere + sterk. A.", simpeler: "Brons = oplage + sterk", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Een readymade is juist géén zelf-gehakt beeld.", "Het is geen schildertechniek.", "Geen materiaal — een idee/concept."],
         uitlegPad: {
           stappen: [{ titel: "Kunst = de keuze", tekst: "Een **readymade** is een **bestaand, alledaags voorwerp** dat de kunstenaar tot **kunst verklaart** — beroemd: **Duchamp's** urinoir *Fountain* (1917). Het idee: niet het maken, maar de **keuze en context** maken het kunst. Een mijlpaal in de moderne kunst." }],
-          niveaus: { basis: "Voorwerp tot kunst. A.", simpeler: "Readymade = bestaand voorwerp = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Voorwerp tot kunst. A.", simpeler: "Readymade = bestaand voorwerp", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Het gaat om de houding van één figuur.", "Niet over ontbrekende armen.", "Niet over het materiaal."],
         uitlegPad: {
           stappen: [{ titel: "Levendige houding", tekst: "**Contrapost**: het figuur zet het gewicht op **één been**, waardoor heupen en schouders licht kantelen en het lichaam natuurlijk 'leeft' in plaats van stijf rechtop staat. Een Griekse vinding (Polykleitos) die de Renaissance weer oppakte (Michelangelo's David)." }],
-          niveaus: { basis: "Gewicht op één been. A.", simpeler: "Contrapost = één been belast = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Gewicht op één been. A.", simpeler: "Contrapost = één been belast", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Rust/strakheid past juist bij klassiek/neoclassicisme.", "Barok zit juist vól detail.", "Barok is figuratief, niet abstract."],
         uitlegPad: {
           stappen: [{ titel: "Marmer dat beweegt", tekst: "**Barok** (Bernini) draait om **drama en beweging**: een bevroren moment vol emotie en dynamiek, met wapperende stof en draaiende lichamen. *Apollo en Daphne* laat marmer bijna 'bewegen' — heel anders dan de strakke klassieke rust." }],
-          niveaus: { basis: "Drama + beweging. A.", simpeler: "Barok = drama = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Drama + beweging. A.", simpeler: "Barok = drama", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Realisme was juist het oude ideaal; de 20e eeuw breekt ermee.", "Niet vooral religieus.", "Juist veel nieuwe materialen/technieken."],
         uitlegPad: {
           stappen: [{ titel: "Vorm boven gelijkenis", tekst: "In de **20e eeuw** wordt beeldhouwkunst vaak **abstract**: het hoeft niet meer realistisch 'iets' voor te stellen. **Brancusi** vereenvoudigt tot de essentie, **Moore** maakt organische figuren met **gaten** (negatieve ruimte), **Calder** maakt bewegende **mobiles**." }],
-          niveaus: { basis: "Abstractie. A.", simpeler: "20e eeuw = abstract = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Abstractie. A.", simpeler: "20e eeuw = abstract", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "Juist groter dan één los beeldje.", "Een schilderij is plat aan de muur — geen installatie.", "Geen materiaal — een kunstvorm."],
         uitlegPad: {
           stappen: [{ titel: "Erin stappen", tekst: "**Installatiekunst** vult en ordent een **hele ruimte**; de **bezoeker stapt erín** en ervaart het van binnenuit (objecten, licht, geluid samen). Het kunstwerk is de hele **ervaring**, niet één object." }],
-          niveaus: { basis: "Hele ruimte, je stapt erin. A.", simpeler: "Installatie = ruimte in = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Hele ruimte, je stapt erin. A.", simpeler: "Installatie = ruimte in", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Juist niet overal — het hoort bij één plek.", "Het zegt niets over het materiaal.", "Het gaat om de plek, niet om het aantal makers."],
         uitlegPad: {
           stappen: [{ titel: "Hoort bij de plek", tekst: "**Site-specific** werk is gemaakt **voor één bepaalde plek**: de locatie hoort bij de betekenis, dus **verplaatsen** verandert of vernietigt het werk. **Land art** (zoals *Spiral Jetty* in een meer) is daar een vorm van." }],
-          niveaus: { basis: "Voor één plek. A.", simpeler: "Site-specific = vaste plek = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Voor één plek. A.", simpeler: "Site-specific = vaste plek", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Het materiaal is niet het twistpunt.", "Standbeelden staan juist vaak buiten.", "Er is wel degelijk discussie."],
         uitlegPad: {
           stappen: [{ titel: "Kunst + maatschappij", tekst: "Standbeelden in de **openbare ruimte** herdenken iemand of iets — en dat roept vragen op: **wie verdient een standbeeld**, en wat doen we met beelden van bv. **koloniale** of omstreden figuren? Zo raakt openbare kunst aan maatschappelijke en historische debatten." }],
-          niveaus: { basis: "Wie verdient het / koloniaal. A.", simpeler: "Standbeeld = maatschappelijk debat = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Wie verdient het / koloniaal. A.", simpeler: "Standbeeld = maatschappelijk debat", nogSimpeler: "A." },
         },
       },
     ],

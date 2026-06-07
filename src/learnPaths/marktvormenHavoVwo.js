@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Niet — wet van de vraag.", "Niet — wet van het aanbod.", "Niet — markten reageren."],
         uitlegPad: {
           stappen: [{ titel: "Beweging langs curves", tekst: "Bij prijsstijging: minder vraag (mensen kopen minder), meer aanbod (producent verdient meer per stuk → produceren meer). Dit is een BEWEGING langs de curves, geen verschuiving." }],
-          niveaus: { basis: "Qd ↓, Qs ↑. A.", simpeler: "Duur = minder kopers, meer verkopers. A.", nogSimpeler: "Qd↓Qs↑ = A." },
+          niveaus: { basis: "Qd ↓, Qs ↑. A.", simpeler: "Duur = minder kopers, meer verkopers. A.", nogSimpeler: "Qd↓Qs↑" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen substituut, levensbelangrijk", tekst: "Insuline: geen alternatief beschikbaar voor diabetes type 1; levensreddend. Vraag daalt nauwelijks bij prijsstijging → bijna volledig inelastisch (|Ev| ≈ 0). Daarom controversieel: in VS schieten insuline-prijzen omhoog → ethisch dilemma." }],
           theorie: "Inelastische vraag → producent kan veel prijs verhogen zonder veel verkoop te verliezen → reden voor regulatie.",
-          niveaus: { basis: "Inelastisch. A.", simpeler: "Moet kopen, dus prijs maakt weinig uit voor vraag. A.", nogSimpeler: "Inelastisch = A." },
+          niveaus: { basis: "Inelastisch. A.", simpeler: "Moet kopen, dus prijs maakt weinig uit voor vraag. A.", nogSimpeler: "Inelastisch" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
         wrongHints: [null, "Niet — geen vraag-verandering.", "Niet — verschuiving, niet langs.", "Wel reactie."],
         uitlegPad: {
           stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuwe evenwicht: lagere P, hogere Q. Boeren paradox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
-          niveaus: { basis: "Aanbod-shift → P daalt. A.", simpeler: "Veel oogst = lagere prijs. A.", nogSimpeler: "Q↑P↓ = A." },
+          niveaus: { basis: "Aanbod-shift → P daalt. A.", simpeler: "Veel oogst = lagere prijs. A.", nogSimpeler: "Q↑P↓" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Substituten = + Ek", tekst: "Mensen schakelen over: 'boter te duur, neem margarine'. Vraag naar margarine stijgt → curve naar rechts. Klassiek voorbeeld substituten met positieve kruiselasticiteit." }],
           theorie: "Complementen werken omgekeerd: benzine-prijs ↑ → minder auto-vraag (Ek < 0).",
-          niveaus: { basis: "Margarine-vraag stijgt. A.", simpeler: "Boter duurder = mensen kopen margarine. A.", nogSimpeler: "Margarine↑ = A." },
+          niveaus: { basis: "Margarine-vraag stijgt. A.", simpeler: "Boter duurder = mensen kopen margarine. A.", nogSimpeler: "Margarine↑" },
         },
       },
       {
@@ -96,7 +96,7 @@ const steps = [
           stappen: [
             { titel: "Onder evenwicht: Qd > Qs", tekst: "Met prijsplafond P_max < P*: bij die lage prijs willen veel mensen kopen (hoog Qd), weinig willen verkopen (laag Qs) → tekort. NL huurmarkt: gereguleerde sector → wachtlijsten + black-market. Vrije sector hogere prijzen." },
           ],
-          niveaus: { basis: "Tekort. A.", simpeler: "Te lage prijs → meer vraag dan aanbod. A.", nogSimpeler: "Tekort = A." },
+          niveaus: { basis: "Tekort. A.", simpeler: "Te lage prijs → meer vraag dan aanbod. A.", nogSimpeler: "Tekort" },
         },
       },
     ],
@@ -118,7 +118,7 @@ const steps = [
             { titel: "Weinig grote spelers", tekst: "AH (35%), Jumbo (22%), Lidl (12%), Aldi, Plus, Coop. Hoge toetredingsdrempels: distributiecentra, lange-termijn-contracten met leveranciers. Onderlinge prijs-volgers. Typisch oligopolie." },
           ],
           theorie: "Albert Heijn kartel-onderzoek 2008-2010 → boete ~€10 mln voor afspraken met concurrenten.",
-          niveaus: { basis: "Oligopolie. A.", simpeler: "5-7 grote bepalen markt. A.", nogSimpeler: "Oligopolie = A." },
+          niveaus: { basis: "Oligopolie. A.", simpeler: "5-7 grote bepalen markt. A.", nogSimpeler: "Oligopolie" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is monopolie.", "Niet — dat is oligopolie.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Theoretisch ideaal", tekst: "Modellen-marktvorm: prijs = marginale kosten = zeer efficiënt. In praktijk benaderen graan- en aandelenmarkten dit. Realiteit: meeste markten hebben enige imperfecties." }],
-          niveaus: { basis: "Veel kleinen, identiek. A.", simpeler: "Veel aanbieders met zelfde product. A.", nogSimpeler: "Volkomen = A." },
+          niveaus: { basis: "Veel kleinen, identiek. A.", simpeler: "Veel aanbieders met zelfde product. A.", nogSimpeler: "Volkomen" },
         },
       },
       {
@@ -148,7 +148,7 @@ const steps = [
         wrongHints: [null, "Niet — tegenovergesteld.", "Tegenovergesteld.", "Niet alleen."],
         uitlegPad: {
           stappen: [{ titel: "Bescherming tegen concurrenten", tekst: "Een monopolie blijft bestaan zolang anderen niet kunnen toetreden. Diverse mechanismen: investering enorm (Boeing fabriek), wettelijk monopolie (octrooi 20 jaar), netwerkeffect (WhatsApp), of natuurlijke schaal (één spoorwegnet)." }],
-          niveaus: { basis: "Hoge barrières. A.", simpeler: "Anderen kunnen niet erbij komen. A.", nogSimpeler: "Barrières = A." },
+          niveaus: { basis: "Hoge barrières. A.", simpeler: "Anderen kunnen niet erbij komen. A.", nogSimpeler: "Barrières" },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
             { titel: "Mededingingsautoriteit (ACM)", tekst: "EU + NL: prijsafspraken/marktverdeling tussen onafhankelijke bedrijven verboden onder mededingingsrecht. Boetes tot 10% wereldwijde omzet. Bekende boetes: liftbedrijven (€1 mld EU 2007), bierbrouwers (€273 mln NL 2007)." },
           ],
           theorie: "OPEC (olie-export-landen) is een kartel — maar landen vallen niet onder mededingingsrecht.",
-          niveaus: { basis: "Verboden prijsafspraken. A.", simpeler: "Stiekem geld-afspraken = illegaal. A.", nogSimpeler: "Kartel = A." },
+          niveaus: { basis: "Verboden prijsafspraken. A.", simpeler: "Stiekem geld-afspraken = illegaal. A.", nogSimpeler: "Kartel" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
         wrongHints: [null, "Niet — producten verschillen.", "Niet — niet weinig.", "Niet — veel restaurants."],
         uitlegPad: {
           stappen: [{ titel: "Veel + gedifferentieerd", tekst: "Veel restaurants (geen oligopolie of monopolie), maar elk biedt iets unieks (sushi, italiaans, vegan). Klanten hebben merken-/keuken-voorkeur → restaurant kan iets boven gemiddelde prijs vragen. Lage toetreding (huur + vergunning)." }],
-          niveaus: { basis: "Monopolistische conc. A.", simpeler: "Veel + gedifferentieerd. A.", nogSimpeler: "Monopolistisch = A." },
+          niveaus: { basis: "Monopolistische conc. A.", simpeler: "Veel + gedifferentieerd. A.", nogSimpeler: "Monopolistisch" },
         },
       },
     ],
@@ -203,7 +203,7 @@ const steps = [
             { titel: "Kosten voor derden niet in prijs", tekst: "Fabriek produceert tegen privé-kosten (loon + materiaal), maar **maatschappelijke** kosten zijn hoger (visserij verlies, ziekte stroomafwaarts). Prijs op markt is TE laag → TE veel productie + vervuiling. Oplossing: heffing of regulering." },
           ],
           theorie: "Klimaatverandering = grootste externaliteit ooit — CO₂ uitstoot betaalt nu geen prijs voor toekomstige schade.",
-          niveaus: { basis: "Negatieve externaliteit. A.", simpeler: "Schade aan anderen niet ingeprijsd. A.", nogSimpeler: "Externaliteit = A." },
+          niveaus: { basis: "Negatieve externaliteit. A.", simpeler: "Schade aan anderen niet ingeprijsd. A.", nogSimpeler: "Externaliteit" },
         },
       },
       {
@@ -221,7 +221,7 @@ const steps = [
             { titel: "Niet-uitsluitbaar + niet-rivaliserend", tekst: "Het leger beschermt iedereen of niemand — kan niet bepaalde inwoners uitsluiten. Mijn 'gebruik' (in leven blijven) vermindert die van mijn buren niet. Daarom moet overheid leger betalen via belasting — geen markt-oplossing." },
           ],
           theorie: "Andere voorbeelden: openbare verlichting, dijken, basisonderzoek, klimaatstabiliteit.",
-          niveaus: { basis: "Leger = collectief. A.", simpeler: "Iedereen profiteert ongeacht betaling. A.", nogSimpeler: "Leger = A." },
+          niveaus: { basis: "Leger = collectief. A.", simpeler: "Iedereen profiteert ongeacht betaling. A.", nogSimpeler: "Leger" },
         },
       },
       {
@@ -239,7 +239,7 @@ const steps = [
             { titel: "Akerlof 1970 (Nobel)", tekst: "Akerlof's 'The Market for Lemons': tweedehands auto-markt. Verkopers van slechte auto's ('lemons') verbergen gebreken; goede auto's halen niet hun waarde. Goede aanbieders trekken zich terug → markt 'rot van onderaf'." },
           ],
           theorie: "Oplossingen: APK-keuringen, garantie-verplichtingen, derden-rapporten, BOVAG-keurmerk.",
-          niveaus: { basis: "Asymmetrische info. A.", simpeler: "Verkoper weet meer dan koper. A.", nogSimpeler: "Lemons = A." },
+          niveaus: { basis: "Asymmetrische info. A.", simpeler: "Verkoper weet meer dan koper. A.", nogSimpeler: "Lemons" },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
           stappen: [
             { titel: "Markt produceert te weinig van", tekst: "Voorbeelden: vaccinaties (kuddebescherming voor anderen), onderwijs (productievere samenleving), groene daken (verkoeling stad). Markt onderproduceert want individu krijgt niet alle baten. Oplossing: subsidie." },
           ],
-          niveaus: { basis: "Baten voor derden. A.", simpeler: "Anderen profiteren ongevraagd. A.", nogSimpeler: "Positief = A." },
+          niveaus: { basis: "Baten voor derden. A.", simpeler: "Anderen profiteren ongevraagd. A.", nogSimpeler: "Positief" },
         },
       },
       {
@@ -274,7 +274,7 @@ const steps = [
             { titel: "Pigou 1920", tekst: "Belasting precies op activiteit met externaliteit, gelijk aan grootte schade. Voorbeeld: CO₂-heffing, accijns op sigaretten, congestion-charge London. Idee: prijs reflecteert nu **maatschappelijke** kosten → markt optimaliseert correct." },
           ],
           theorie: "Praktijk: schade exact kwantificeren is moeilijk → discussies over hoogte. Maar principe wijdverbreid.",
-          niveaus: { basis: "Belasting = schade. A.", simpeler: "Belasting maakt vervuiling duurder. A.", nogSimpeler: "Pigou = A." },
+          niveaus: { basis: "Belasting = schade. A.", simpeler: "Belasting maakt vervuiling duurder. A.", nogSimpeler: "Pigou" },
         },
       },
     ],
@@ -300,7 +300,7 @@ const steps = [
           stappen: [
             { titel: "NL inkomstenbelasting 2024", tekst: "Schijf 1 (< €38.441): 36,97%.\nSchijf 2 (€38.441-76.817): 36,97%.\nSchijf 3 (> €76.817): 49,5%.\nHogere inkomens hogere %. Progressief = herverdeling. Tegen-vorm 'regressief' (lage inkomens hoger %) — BTW heeft regressief karakter want lage inkomens consumeren groter % van inkomen." },
           ],
-          niveaus: { basis: "Hoger inkomen → hoger %. A.", simpeler: "Rijken procentueel meer. A.", nogSimpeler: "Progressief = A." },
+          niveaus: { basis: "Hoger inkomen → hoger %. A.", simpeler: "Rijken procentueel meer. A.", nogSimpeler: "Progressief" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
           stappen: [
             { titel: "Klassiek anti-inflatie", tekst: "Hogere rente: hypotheek + bedrijfslening duurder → minder investering + consumptie → minder druk op prijzen → inflatie daalt. Bijwerking: werkloosheid stijgt (minder investering, ontslagen). 2022-2024 cyclus." },
           ],
-          niveaus: { basis: "Inflatie ↓, werkloosheid ↑ mogelijk. A.", simpeler: "Duurder lenen remt economie. A.", nogSimpeler: "Remt = A." },
+          niveaus: { basis: "Inflatie ↓, werkloosheid ↑ mogelijk. A.", simpeler: "Duurder lenen remt economie. A.", nogSimpeler: "Remt" },
         },
       },
       {
@@ -329,7 +329,7 @@ const steps = [
           stappen: [
             { titel: "3% / 60%-regel", tekst: "1997 SGP-regels: jaarlijks begrotingstekort < 3% BBP, totale staatsschuld < 60% BBP. Bij overtreding 'buitensporig tekort procedure' → boete (in praktijk nauwelijks gebruikt). Tijdens COVID + energie-crisis tijdelijk geschorst. 2024: nieuwe versie." },
           ],
-          niveaus: { basis: "3%. A.", simpeler: "Tekort max 3% BBP. A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "3%. A.", simpeler: "Tekort max 3% BBP. A.", nogSimpeler: "3" },
         },
       },
       {
@@ -347,7 +347,7 @@ const steps = [
             { titel: "Anticyclisch fiscaal", tekst: "In recessie: privé-uitgaven dalen → overheid moet gat vullen via meer uitgaven (infrastructuur, sociale wetten) + minder belasting → consumenten houden meer over → vraag stijgt → werk-herstel. Crisis 2008-2009 + 2020-COVID: Keynesiaanse pakketten." },
           ],
           theorie: "Tegen-school: austerity (Hayek, Friedman): in recessie ook bezuinigen om schuld onder controle te houden. Praktijk: ECB-eurocrisis 2010-2015 gebruikte deels austerity → langere recessie Zuid-EU.",
-          niveaus: { basis: "Stimulerend. A.", simpeler: "Meer uitgaven, minder belasting. A.", nogSimpeler: "Keynes = A." },
+          niveaus: { basis: "Stimulerend. A.", simpeler: "Meer uitgaven, minder belasting. A.", nogSimpeler: "Keynes" },
         },
       },
       {
@@ -364,7 +364,7 @@ const steps = [
           stappen: [
             { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven competeren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },
           ],
-          niveaus: { basis: "Marktwerking. A.", simpeler: "Concurrentie zou prijzen drukken. A.", nogSimpeler: "Markt = A." },
+          niveaus: { basis: "Marktwerking. A.", simpeler: "Concurrentie zou prijzen drukken. A.", nogSimpeler: "Markt" },
         },
       },
     ],
@@ -388,7 +388,7 @@ const steps = [
         wrongHints: [null, "Niet — 1.", "Niet — geen Gini-verband.", "Wel meting."],
         uitlegPad: {
           stappen: [{ titel: "0 → 1 schaal", tekst: "Gini 0 = iedereen zelfde inkomen. Gini 1 = één persoon alles. NL ~0,30 = relatief gelijk; VS ~0,42 = meer ongelijk; Zuid-Afrika 0,63 = extreem ongelijk." }],
-          niveaus: { basis: "0 = gelijkheid. A.", simpeler: "Hoe lager Gini, hoe gelijker. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "0 = gelijkheid. A.", simpeler: "Hoe lager Gini, hoe gelijker. A.", nogSimpeler: "0" },
         },
       },
       {
@@ -398,7 +398,7 @@ const steps = [
         wrongHints: [null, "Niet — tegenovergesteld.", "Niet — geen verband.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Verbuiging = ongelijkheid", tekst: "45°-lijn = perfecte verdeling. Lorenz-curve buigt naar onder als rijke top steeds groter % inkomen heeft. Oppervlak tussen 45°-lijn + Lorenz / oppervlak driehoek = Gini-coëfficient." }],
-          niveaus: { basis: "Meer afstand = meer ongelijk. A.", simpeler: "Verre Lorenz = ongelijker. A.", nogSimpeler: "Ver = A." },
+          niveaus: { basis: "Meer afstand = meer ongelijk. A.", simpeler: "Verre Lorenz = ongelijker. A.", nogSimpeler: "Ver" },
         },
       },
       {
@@ -415,7 +415,7 @@ const steps = [
           stappen: [
             { titel: "Herverdeling werkt", tekst: "Bruto-inkomens Gini ~0,45 (markt). Na belasting + uitkeringen ~0,29. Welvaartsstaat reduceert ongelijkheid significant. Bij vergelijking: VS 0,42 (minder herverdeling), Denemarken 0,28 (meer), Brazilië 0,53." },
           ],
-          niveaus: { basis: "~0,30. A.", simpeler: "NL relatief gelijk na herverdeling. A.", nogSimpeler: "0,30 = A." },
+          niveaus: { basis: "~0,30. A.", simpeler: "NL relatief gelijk na herverdeling. A.", nogSimpeler: "0,30" },
         },
       },
       {
@@ -433,7 +433,7 @@ const steps = [
             { titel: "'Capital in 21e Century'", tekst: "Thomas Piketty, 2014: historisch r ~5% > g ~2-3%. Dus vermogen groeit sneller dan economie → bestaande rijken accumuleren ratio relatief. Verklaart trend stijgende ongelijkheid sinds 1980. Veel discussie + kritiek, maar invloedrijk." },
           ],
           theorie: "Oplossing volgens Piketty: globale vermogensbelasting → moeilijk politiek.",
-          niveaus: { basis: "Kapitaal > groei = concentratie. A.", simpeler: "Bezittingen groeien sneller dan economie. A.", nogSimpeler: "r>g = A." },
+          niveaus: { basis: "Kapitaal > groei = concentratie. A.", simpeler: "Bezittingen groeien sneller dan economie. A.", nogSimpeler: "r>g" },
         },
       },
       {
@@ -450,7 +450,7 @@ const steps = [
           stappen: [
             { titel: "Incentive-argument", tekst: "Als arts en kassière hetzelfde verdienen → wie wordt arts (lange dure studie + verantwoordelijkheid)? Sommige inkomensverschillen prikkelen tot inspanning + investering. Hoeveel ongelijkheid is 'gezond' is normatieve discussie — sociaal-democraten zien 0,25-0,30 als optimaal, libertaire 0,40+." },
           ],
-          niveaus: { basis: "Prikkels. A.", simpeler: "Beloning voor moeite. A.", nogSimpeler: "Prikkel = A." },
+          niveaus: { basis: "Prikkels. A.", simpeler: "Beloning voor moeite. A.", nogSimpeler: "Prikkel" },
         },
       },
     ],

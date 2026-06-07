@@ -76,7 +76,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Truc: 'Agenda Voorbereiden Bepalen Uitvoeren' = A-V-B-U. Agenda = onderwerp ontstaat. Voorbereiding = plan maken + inspraak. Bepaling = stemmen, ja/nee. Uitvoering = doen. Hier: plan ligt klaar voor reactie = fase 2.",
-        { basis: "Plan klaar + inspraak = fase 2 voorbereiding. = B.", simpeler: "Het plan IS er, mensen mogen er nog wat van vinden voordat beslist wordt. = B.", nogSimpeler: "Fase 2 = B." },
+        { basis: "Plan klaar + inspraak = fase 2 voorbereiding.", simpeler: "Het plan IS er, mensen mogen er nog wat van vinden voordat beslist wordt.", nogSimpeler: "Fase 2" },
         [{ woord: "bestemmingsplan", uitleg: "Wat de gemeente met een stuk grond wil doen." }, { woord: "beleidsvoorbereiding", uitleg: "Fase 2: plan opstellen + inspraak organiseren." }],
       ),
     }],
@@ -105,7 +105,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "CONSTITUTIONELE monarchie = koning is staatshoofd, maar zijn macht is door de GRONDWET beperkt. NL-regel sinds Thorbecke 1848: koning onschendbaar, ministers verantwoordelijk. Andere optie = absolute monarchie (koning heeft alles te zeggen — zoals Saoedi-Arabië).",
-        { basis: "Constitutie beperkt koning. = D.", simpeler: "Onze koning mag niets in zijn eentje beslissen — grondwet zegt wat hij wel/niet mag. = D.", nogSimpeler: "Grondwet beperkt = D." },
+        { basis: "Constitutie beperkt koning.", simpeler: "Onze koning mag niets in zijn eentje beslissen — grondwet zegt wat hij wel/niet mag.", nogSimpeler: "Grondwet beperkt" },
         [{ woord: "constitutionele monarchie", uitleg: "Koning + grondwet die zijn macht beperkt." }, { woord: "Trias Politica", uitleg: "Scheiding wetgevende + uitvoerende + rechterlijke macht." }],
       ),
     }],
@@ -135,7 +135,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "MOTIE = oproep aan regering ('doe iets'/'doe iets niet'). AMENDEMENT = bestaande wet wijzigen. INITIATIEF = NIEUWE wet maken. BUDGET = begroting OK. ENQUÊTE = onderzoek. INTERPELLATIE = minister ondervragen. Eerdmans roept regering OP → motie.",
-        { basis: "Oproep aan regering = motie. = B.", simpeler: "Motie = formele tekst die zegt 'regering, ga dit doen'. = B.", nogSimpeler: "Motie = B." },
+        { basis: "Oproep aan regering = motie.", simpeler: "Motie = formele tekst die zegt 'regering, ga dit doen'.", nogSimpeler: "Motie" },
         [{ woord: "motie", uitleg: "Formele oproep aan regering om iets wel/niet te doen." }, { woord: "enquêterecht", uitleg: "Recht van Kamer om onderzoek te doen via parlementaire enquête." }],
       ),
     }],
@@ -165,7 +165,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Volgorde rechtszitting (6 stappen): 1) TENLASTELEGGING (aanklacht), 2) VERHOOR, 3) REQUISITOIR (OvJ-eis), 4) PLEIDOOI (advocaat), 5) LAATSTE WOORD (verdachte), 6) VONNIS (rechter beslist). Verdachte krijgt ALTIJD als laatste het woord — fundamenteel recht.",
-        { basis: "Verdachte laatste spreker = laatste woord. = B.", simpeler: "Voor vonnis mag verdachte zelf nog wat zeggen. Heet 'laatste woord'. = B.", nogSimpeler: "Laatste woord = B." },
+        { basis: "Verdachte laatste spreker = laatste woord.", simpeler: "Voor vonnis mag verdachte zelf nog wat zeggen. Heet 'laatste woord'.", nogSimpeler: "Laatste woord" },
         [{ woord: "laatste woord", uitleg: "Recht verdachte om voor vonnis als laatste te spreken." }, { woord: "vonnis", uitleg: "Uitspraak van de rechter." }],
       ),
     }],
@@ -195,7 +195,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 belangrijkste strafwet-bronnen NL: WETBOEK VAN STRAFRECHT (Sr — moord, diefstal, mishandeling, bedreiging — KERN); OPIUMWET (drugs); WEGENVERKEERSWET (verkeer + alcohol); WET WAPENS EN MUNITIE (wapens). Klassieke delicten in Sr.",
-        { basis: "Bedreiging = klassiek delict = Wetboek Strafrecht. = D.", simpeler: "Bedreigen is een 'gewoon' misdrijf — staat in het hoofdwetboek. = D.", nogSimpeler: "Sr = D." },
+        { basis: "Bedreiging = klassiek delict = Wetboek Strafrecht.", simpeler: "Bedreigen is een 'gewoon' misdrijf — staat in het hoofdwetboek.", nogSimpeler: "Sr" },
         [{ woord: "Wetboek van Strafrecht", uitleg: "Hoofdwetboek met klassieke misdrijven (Sr)." }, { woord: "delict", uitleg: "Strafbaar feit." }],
       ),
     }],
@@ -225,7 +225,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Immaterieel = niet-stoffelijk (geen geld/spullen, wel gevoelens). 4 immateriële gevolgen criminaliteit: MORELE VERONTWAARDIGING (publiek wordt boos), NORMVERVAGING (mensen wennen aan misdaad), VERLIES VERTROUWEN (in overheid/politie), EIGENRICHTING (mensen nemen zelf wraak). Jeroen miste de morele verontwaardiging.",
-        { basis: "Boze publieke reactie = morele verontwaardiging. = B.", simpeler: "'Waar is de ophef?' = waar is de morele woede/het protest? = B.", nogSimpeler: "Verontwaardiging = B." },
+        { basis: "Boze publieke reactie = morele verontwaardiging.", simpeler: "'Waar is de ophef?' = waar is de morele woede/het protest?", nogSimpeler: "Verontwaardiging" },
         [{ woord: "morele verontwaardiging", uitleg: "Maatschappelijke woede/afschuw na misdrijf." }, { woord: "eigenrichting", uitleg: "Mensen nemen zelf het recht in handen (wraak)." }],
       ),
     }],

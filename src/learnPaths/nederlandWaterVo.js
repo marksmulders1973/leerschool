@@ -38,7 +38,7 @@ const steps = [
           stappen: [{ titel: "Nacht van 31 jan op 1 feb 1953", tekst: "Springvloed + storm samen 's nachts → dijken bezweken in Zeeland. **1.836 doden** in NL. Datum vaak afgekort als **'de Ramp'** of **'1 februari 1953'**." }],
           woorden: [{ woord: "springvloed", uitleg: "Extra hoge vloed bij volle/nieuwe maan, ~30% hoger dan normaal." }],
           theorie: "Cito-feit: 'Bevrijdingsdag' = 5 mei 1945. 'Watersnoodramp' = 1 februari 1953. Niet verwarren.",
-          niveaus: { basis: "1 februari 1953 — A.", simpeler: "1953 = watersnood = A.", nogSimpeler: "1953 = A." },
+          niveaus: { basis: "1 februari 1953 — A.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           stappen: [{ titel: "Zuidwestelijke delta", tekst: "Zeeland (Schouwen-Duiveland, Tholen), Zuid-Holland (Goeree-Overflakkee, Voorne-Putten) en West-Brabant lagen direct in de baan van de stormvloed in de **Zuidwestelijke delta**. Daar mondden Schelde, Maas + Rijn uit in zee." }],
           woorden: [{ woord: "delta", uitleg: "Gebied waar rivieren in zee uitmonden — vlak land + veel water." }],
           theorie: "Zuidwestelijke delta vandaag = Zeeland + zuid-Zuid-Holland + west-Brabant. Daar zijn ook de Deltawerken gebouwd.",
-          niveaus: { basis: "Zeeland + Zuid-Holland + Brabant — A.", simpeler: "Zuidwest NL = ramp 1953 = A.", nogSimpeler: "Zeeland = A." },
+          niveaus: { basis: "Zeeland + Zuid-Holland + Brabant — A.", simpeler: "Zuidwest NL = ramp 1953", nogSimpeler: "Zeeland" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
           woorden: [{ woord: "waterschap", uitleg: "Decentrale overheid die water beheert in een bepaald gebied." }, { woord: "peil", uitleg: "Hoogte van water in een gebied — wordt door waterschap geregeld via stuwen + gemalen." }],
           theorie: "NL kent 4 bestuurslagen: Rijk (centraal) + provincie + gemeente + **waterschap**. Het waterschap is oudste vorm van bestuur in NL.",
           voorbeelden: [{ type: "feit", tekst: "Hoogheemraadschap Rijnland (1255) bestaat al 770 jaar — oudste bestuursvorm NL." }],
-          niveaus: { basis: "Bestuurslaag water — A.", simpeler: "Waterschap = water-bestuur = A.", nogSimpeler: "Water-bestuur = A." },
+          niveaus: { basis: "Bestuurslaag water — A.", simpeler: "Waterschap = water-bestuur", nogSimpeler: "Water-bestuur" },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1.836 NL + 300 buitenland", tekst: "**1.836 NL-doden** + 28.000 dode dieren + 47.000 huizen verwoest. In België ook 28 doden + Engeland 326. Erger had nog gekund — Rotterdam ontsnapte ternauwernood." }],
           theorie: "Memo: 1836 ≈ jaartal 1836 (Belgische opstand) — koppel-ezel om jaartal/dodental te onthouden.",
-          niveaus: { basis: "1836 — A.", simpeler: "Watersnood 1953 = ~1836 doden = A.", nogSimpeler: "1836 = A." },
+          niveaus: { basis: "1836 — A.", simpeler: "Watersnood 1953 = ~1836 doden", nogSimpeler: "1836" },
         },
       },
       {
@@ -86,7 +86,7 @@ const steps = [
           stappen: [{ titel: "Dijk = aarden wal", tekst: "**Dijk** = opgeworpen aarden wal langs water (zee/rivier) om overstroming te voorkomen. NL heeft ~22.000 km dijken (zee + rivier + boezem). Hoogte 's-Heerenhoek = laagste plek NL (-6,76m NAP)." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — meetpunt zeeniveau voor hoogte in NL." }],
           theorie: "Cito-feit: ~26% van NL ligt onder NAP. Hardst beschermd: Randstad-gebied.",
-          niveaus: { basis: "Aarden wal — A.", simpeler: "Dijk = grondwal tegen water = A.", nogSimpeler: "Dijk = A." },
+          niveaus: { basis: "Aarden wal — A.", simpeler: "Dijk = grondwal tegen water", nogSimpeler: "Dijk" },
         },
       },
     ],
@@ -106,7 +106,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "28 mei 1932 = sluitstuk", tekst: "Bouw startte 1927 vanuit Wieringen + Friese kant. Beide kanten ontmoetten elkaar op 28 mei 1932 — 'sluitgat' werd gedicht. Plan Lely had geduurd van 1891 → 1932 (40 jaar van plan naar werkelijkheid)." }],
           theorie: "Cito-truc: 1932 = Afsluitdijk. 1953 = watersnood. Niet verwarren.",
-          niveaus: { basis: "1932 — A.", simpeler: "Afsluitdijk = 1932 = A.", nogSimpeler: "1932 = A." },
+          niveaus: { basis: "1932 — A.", simpeler: "Afsluitdijk = 1932", nogSimpeler: "1932" },
         },
       },
       {
@@ -117,7 +117,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zuiderzee → IJsselmeer", tekst: "Vóór 1932: open **Zuiderzee** (zout). Na Afsluitdijk: **IJsselmeer** (zoet), genoemd naar IJsselrivier die erin uitmondt. **Markermeer** is sinds 1976 apart deel (via Houtribdijk Enkhuizen-Lelystad gescheiden)." }],
           woorden: [{ woord: "Zuiderzee", uitleg: "Oude naam (vóór 1932) voor wat nu IJsselmeer + Markermeer is." }],
-          niveaus: { basis: "IJsselmeer — A.", simpeler: "Na Afsluitdijk = IJsselmeer = A.", nogSimpeler: "IJsselmeer = A." },
+          niveaus: { basis: "IJsselmeer — A.", simpeler: "Na Afsluitdijk = IJsselmeer", nogSimpeler: "IJsselmeer" },
         },
       },
       {
@@ -128,7 +128,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Lely = ingenieur + minister", tekst: "**Cornelis Lely** (1854-1929), ingenieur + minister van Waterstaat (3x). Hoofdstad Flevoland (**Lelystad**) is naar hem genoemd. Standbeeld op kop Afsluitdijk." }],
           woorden: [{ woord: "Lely", uitleg: "Cornelis Lely, ingenieur Afsluitdijk/Zuiderzeewerken." }],
-          niveaus: { basis: "Cornelis Lely — A.", simpeler: "Afsluitdijk-ontwerper = Lely = A.", nogSimpeler: "Lely = A." },
+          niveaus: { basis: "Cornelis Lely — A.", simpeler: "Afsluitdijk-ontwerper = Lely", nogSimpeler: "Lely" },
         },
       },
       {
@@ -139,7 +139,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Flevoland = 12e provincie", tekst: "**Flevoland** opgericht 1 januari **1986** uit drooggemaakte polders. Bevat: Noordoostpolder + Oostelijk Flevoland + Zuidelijk Flevoland. Hoofdstad **Lelystad** — grootste stad **Almere** (vandaag ~220.000 inwoners)." }],
           theorie: "Cito-feit: NL heeft 12 provincies sinds 1986. Daarvoor 11.",
-          niveaus: { basis: "Flevoland — A.", simpeler: "1986 = Flevoland = A.", nogSimpeler: "Flevoland = A." },
+          niveaus: { basis: "Flevoland — A.", simpeler: "1986 = Flevoland", nogSimpeler: "Flevoland" },
         },
       },
       {
@@ -150,7 +150,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Markerwaard nooit gebouwd", tekst: "**Markerwaard** = oorspronkelijk 5e polder-plan (Lely). Begin '80 geschrapt — milieubeweging + financieel + minder noodzaak. **Markermeer** bleef open water. **Marker Wadden** sinds 2016: kunstmatige eilandjes voor vogel-/natuurherstel." }],
           theorie: "Cito-actueel: Markerwaard-schrap = symbool voor milieu-bewustzijn jaren '80 (RUS-bos verzet etc).",
-          niveaus: { basis: "Geschrapte polder — A.", simpeler: "Markerwaard = nooit gebouwd = A.", nogSimpeler: "Geschrapt = A." },
+          niveaus: { basis: "Geschrapte polder — A.", simpeler: "Markerwaard = nooit gebouwd", nogSimpeler: "Geschrapt" },
         },
       },
     ],
@@ -171,7 +171,7 @@ const steps = [
           stappen: [{ titel: "Open-tenzij-storm-design", tekst: "Oosterscheldekering = grootste stormvloedkering ter wereld. **62 stalen schuiven** van 42m × 6,5m. Normaal open → eb/vloed gaat door → Oosterschelde-natuur (oesters, kreeften, zeehonden) blijft. Dicht bij storm. Compromis tussen veiligheid en natuur." }],
           woorden: [{ woord: "stormvloedkering", uitleg: "Beweegbare barrière tegen extreme vloed — normaal open, dicht bij storm." }],
           theorie: "Bouw 1976-1986 — duurde 10 jaar + extra duur wegens ontwerpwijziging na milieu-protest.",
-          niveaus: { basis: "62 schuiven — A.", simpeler: "Oosterscheldekering = open/dicht-schuiven = A.", nogSimpeler: "Schuiven = A." },
+          niveaus: { basis: "62 schuiven — A.", simpeler: "Oosterscheldekering = open/dicht-schuiven", nogSimpeler: "Schuiven" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Maeslantkering = Rotterdam-poort", tekst: "**Maeslantkering** sluit de **Nieuwe Waterweg** af bij extreem stormgevaar. 2 reuze-deuren elk 22m hoog. Beschermt 1,5 miljoen mensen + havengebied. Klaar 1997. Eerste echte storm-sluiting: 8-9 november 2007 + 2018." }],
           theorie: "Computer beslist autonoom over sluiting bij voorspelling >3m NAP — geen mens kan op tijd handelen.",
-          niveaus: { basis: "Maeslantkering — A.", simpeler: "Rotterdam = Maeslantkering = A.", nogSimpeler: "Maeslant = A." },
+          niveaus: { basis: "Maeslantkering — A.", simpeler: "Rotterdam = Maeslantkering", nogSimpeler: "Maeslant" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vader van de Deltawerken", tekst: "**Ir. Johan van Veen** (1893-1959) waarschuwde al **vóór 1953** voor dijk-zwakte in Zeeland — werd niet serieus genomen. Na de ramp werd hij eerste secretaris **Deltacommissie**. Tekende ontwerp Deltaplan. Stierf vóór voltooiing — kreeg postuum 'vader van Deltawerken' titel." }],
           theorie: "Tragiek: Van Veen had ramp kunnen voorkomen als z'n waarschuwingen waren overgenomen.",
-          niveaus: { basis: "Deltawerken-architect — A.", simpeler: "Johan van Veen = vader Deltawerken = A.", nogSimpeler: "Deltawerken = A." },
+          niveaus: { basis: "Deltawerken-architect — A.", simpeler: "Johan van Veen = vader Deltawerken", nogSimpeler: "Deltawerken" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "Bekendst, maar Maeslantkering is later.", "Begin proces.", "Wel later innovatie, maar niet Deltawerk in oorspronkelijke plan."],
         uitlegPad: {
           stappen: [{ titel: "Maeslantkering = 1997 sluitstuk", tekst: "**10 mei 1997**: Maeslantkering geopend door koningin Beatrix. Markeert **einde Deltawerken**. 44 jaar nadat Watersnoodramp 1953 het plan in gang zette." }],
-          niveaus: { basis: "1997 — A.", simpeler: "Maeslantkering 1997 = sluitstuk = A.", nogSimpeler: "1997 = A." },
+          niveaus: { basis: "1997 — A.", simpeler: "Maeslantkering 1997 = sluitstuk", nogSimpeler: "1997" },
         },
       },
       {
@@ -215,7 +215,7 @@ const steps = [
           stappen: [{ titel: "Hoogste norm ter wereld", tekst: "**Randstad-norm**: 1 keer per **10.000 jaar** mag dijk falen. Zeeland-norm: 1× per **4.000 jaar**. Rivierdijken NL: 1× per **1.250 jaar**. Internationaal record-strikt: VS-norm 1× per 100 jaar, Japan 1× per 200." }],
           woorden: [{ woord: "overstromingsnorm", uitleg: "Acceptabele kans dat een dijk faalt per jaar." }],
           theorie: "Cito-actueel: door klimaatverandering moeten dijken nóg sterker — discussie over verhoging norm naar 1× per 100.000 jaar.",
-          niveaus: { basis: "1 per 10.000 jaar — A.", simpeler: "Randstad = 1/10000 jaar = A.", nogSimpeler: "10000 = A." },
+          niveaus: { basis: "1 per 10.000 jaar — A.", simpeler: "Randstad = 1/10000 jaar", nogSimpeler: "10000" },
         },
       },
     ],
@@ -236,7 +236,7 @@ const steps = [
           stappen: [{ titel: "KNMI 2023-scenario's", tekst: "Bij **lage** CO₂-uitstoot: ~30-50 cm in 2100. Bij **hoge** uitstoot (alles blijft zo): tot ~1,2m. Bij extreme **kantelpunt-scenario's** (Antarctische ijsmelt): >2m mogelijk." }],
           woorden: [{ woord: "KNMI", uitleg: "Koninklijk Nederlands Meteorologisch Instituut — staat in De Bilt." }],
           theorie: "Cito-actueel: getallen worden elke ~5 jaar herzien als IPCC nieuwe rapporten publiceert.",
-          niveaus: { basis: "0,3-1,2 m — A.", simpeler: "Zeespiegel +0,3-1,2m tot 2100 = A.", nogSimpeler: "1m = A." },
+          niveaus: { basis: "0,3-1,2 m — A.", simpeler: "Zeespiegel +0,3-1,2m tot 2100", nogSimpeler: "1m" },
         },
       },
       {
@@ -248,7 +248,7 @@ const steps = [
           stappen: [{ titel: "Nieuwe rivierstrategie", tekst: "Na hoogwater Rijn/Maas 1993+1995 (evacuaties Roermond + Limburg) koos NL voor **anders denken**. Niet alleen hoger dijken, maar **uiterwaarden verbreden** + **nevengeulen graven**. Voorbeeld: Nijmegen kreeg een 'nieuwe Waal-arm' met park (klaar 2015)." }],
           woorden: [{ woord: "uiterwaard", uitleg: "Vlak land langs een rivier dat bij hoogwater onderloopt." }, { woord: "nevengeul", uitleg: "Extra rivierloop naast de hoofdgeul, zodat water meer weg kan." }],
           theorie: "Cito-feit: 'Ruimte voor de Rivier' programma 2007-2019, ~€2,3 miljard, 34 projecten langs Rijn/Maas/IJssel/Waal.",
-          niveaus: { basis: "Meer ruimte ipv hogere dijken — A.", simpeler: "Ruimte voor Rivier = rivier breder maken = A.", nogSimpeler: "Meer ruimte = A." },
+          niveaus: { basis: "Meer ruimte ipv hogere dijken — A.", simpeler: "Ruimte voor Rivier = rivier breder maken", nogSimpeler: "Meer ruimte" },
         },
       },
       {
@@ -260,7 +260,7 @@ const steps = [
           stappen: [{ titel: "Veen klinkt in", tekst: "West-NL ligt op **veen**. Veen bevat veel water — als waterpeil wordt verlaagd voor landbouw, droogt veen uit en klinkt in. **5-10 mm zakking per jaar** = 50 cm per eeuw. Maakt NL **steeds dieper** onder zeeniveau." }],
           woorden: [{ woord: "veen", uitleg: "Half-vergane plantenresten in moerasbodem — typisch West-NL ondergrond." }],
           theorie: "Probleem-illustratie: Schiphol ligt ~4 m onder NAP. Door bodemdaling daalt het verder. Funderingen huizen scheef → schade.",
-          niveaus: { basis: "Land zakt door veen — A.", simpeler: "Bodemdaling = veen klinkt in = A.", nogSimpeler: "Veen zakt = A." },
+          niveaus: { basis: "Land zakt door veen — A.", simpeler: "Bodemdaling = veen klinkt in", nogSimpeler: "Veen zakt" },
         },
       },
       {
@@ -272,7 +272,7 @@ const steps = [
           stappen: [{ titel: "Watertoets sinds 2003", tekst: "Bij elke **nieuwe bouwplan** (woonwijk, weg, fabriek) moet de gemeente een **watertoets** doen: kan dit gebied water aan bij extreme regen + zeespiegelstijging? Anders → niet bouwen of aanpassen. Voorkomt bouwen in kwetsbare gebieden." }],
           woorden: [{ woord: "watertoets", uitleg: "Verplichte beoordeling van waterhuishouding bij ruimtelijke plannen." }],
           theorie: "Bij twijfel adviseert het **waterschap**. Mark UX: een ouder kan bv. niet zomaar in diepste deel Beemster een huis bouwen.",
-          niveaus: { basis: "Check water bij bouw — A.", simpeler: "Watertoets = waterimpact-check = A.", nogSimpeler: "Check = A." },
+          niveaus: { basis: "Check water bij bouw — A.", simpeler: "Watertoets = waterimpact-check", nogSimpeler: "Check" },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Klimaatakkoord 2019", tekst: "**Klimaatakkoord** ondertekend juni 2019 door regering + werkgevers + milieugroepen. Doel: **49% CO₂-reductie 2030** vs 1990. **2050**: 95% reductie + klimaatneutraal. Sectoren: industrie / mobiliteit / gebouwde omgeving / landbouw / elektriciteit." }],
           theorie: "Cito-actueel: kabinet Schoof (2024+) wil minder ambitieus, terug naar 2030-doel onder druk.",
-          niveaus: { basis: "49% — A.", simpeler: "NL 2030-doel = -49% CO₂ = A.", nogSimpeler: "49% = A." },
+          niveaus: { basis: "49% — A.", simpeler: "NL 2030-doel = -49% CO₂", nogSimpeler: "49%" },
         },
       },
     ],
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Niet — Limburg + Veluwe hoger."],
         uitlegPad: {
           stappen: [{ titel: "26% onder NAP", tekst: "**~26% NL ligt onder NAP** (Normaal Amsterdams Peil = zeeniveau). Zonder dijken zou ~60% bij hoog water onderlopen. Hoogste plek = Vaalserberg 322m. Laagste = Zuidplaspolder bij Nieuwerkerk -6,76m." }],
-          niveaus: { basis: "26% — A.", simpeler: "Kwart NL onder zee = A.", nogSimpeler: "26 = A." },
+          niveaus: { basis: "26% — A.", simpeler: "Kwart NL onder zee", nogSimpeler: "26" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Niet — heet wel Rijnland, niet IJsselmeer-naamgever.", "Niet — Maas mondt in Hollands Diep.", "Niet — Waal in Merwede."],
         uitlegPad: {
           stappen: [{ titel: "IJssel mondt erin uit", tekst: "**IJssel** is Rijntak die noordwaarts naar IJsselmeer stroomt. Voor 1932 mondde IJssel in Zuiderzee — vandaar de naam. **Gelderse IJssel** + **Hollandse IJssel** + **Overijsselse Vecht** alle in IJsselmeer-gebied." }],
-          niveaus: { basis: "IJssel — A.", simpeler: "IJsselmeer = naar IJssel = A.", nogSimpeler: "IJssel = A." },
+          niveaus: { basis: "IJssel — A.", simpeler: "IJsselmeer = naar IJssel", nogSimpeler: "IJssel" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "NAP sinds 1684", tekst: "**NAP** = Normaal Amsterdams Peil. Begon als gemiddeld peil Amsterdams IJ (1684). Vandaag fysiek vastgelegd in granieten plaat in Stopera (Amsterdam stadhuis). Alle hoogtes in NL gemeten t.o.v. NAP." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — zeeniveau-referentie in NL." }],
-          niveaus: { basis: "Zeeniveau-referentie — A.", simpeler: "NAP = zeeniveau-meetpunt = A.", nogSimpeler: "NAP = A." },
+          niveaus: { basis: "Zeeniveau-referentie — A.", simpeler: "NAP = zeeniveau-meetpunt", nogSimpeler: "NAP" },
         },
       },
       {
@@ -334,7 +334,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Letten op 'niet'-vraag", tekst: "Vraag draait om wat NIET juist is. **Geen eigen verkiezingen** = onjuist (waterschappen hebben WEL eigen verkiezingen, samen met provinciale staten-verkiezingen elke 4 jaar). Andere opties zijn allemaal echte taken." }],
           theorie: "Examen-tip: lees altijd 'niet'-vragen 2x. Onderstreep 'niet' voor je antwoordt.",
-          niveaus: { basis: "Geen verkiezingen = onjuist — A.", simpeler: "Waterschappen HEBBEN verkiezingen → 'geen' = onjuist = A.", nogSimpeler: "A = onjuist." },
+          niveaus: { basis: "Geen verkiezingen = onjuist — A.", simpeler: "Waterschappen HEBBEN verkiezingen → 'geen' = onjuist", nogSimpeler: "A = onjuist." },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
         wrongHints: [null, "Afsluitdijk-jaar.", "Flevoland-oprichting.", "Maeslantkering-voltooiing."],
         uitlegPad: {
           stappen: [{ titel: "Vier kerndata water-NL", tekst: "**1932** Afsluitdijk. **1953** Watersnood. **1986** Provincie Flevoland + Oosterscheldekering. **1997** Maeslantkering. Onthoud deze 4 — kernkennis VMBO-AK." }],
-          niveaus: { basis: "1953 — A.", simpeler: "Watersnoodramp = 1953 = A.", nogSimpeler: "1953 = A." },
+          niveaus: { basis: "1953 — A.", simpeler: "Watersnoodramp = 1953", nogSimpeler: "1953" },
         },
       },
     ],

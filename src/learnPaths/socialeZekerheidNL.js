@@ -38,7 +38,7 @@ const steps = [
           stappen: [{ titel: "1901 = startpunt sociale verzekering", tekst: "**Ongevallenwet 1901** door premier Abraham Kuyper (ARP). Werknemers in industrie verplicht verzekerd tegen bedrijfsongevallen via werkgeverspremie. **Eerste sociale verzekering** — niet meer afhankelijk van liefdadigheid." }],
           woorden: [{ woord: "sociale verzekering", uitleg: "Wettelijke verzekering tegen risico's als ziekte/werkloosheid/ouderdom, betaald uit premies." }, { woord: "Kuyper", uitleg: "Abraham Kuyper, ARP-leider + premier 1901-1905." }],
           theorie: "Vergelijking: Kinderwetje 1874 was wel sociale wet maar geen verzekering — geen uitkering bij niet-werken.",
-          niveaus: { basis: "Ongevallenwet — A.", simpeler: "1901 Ongevallenwet = 1e sociale verzekering = A.", nogSimpeler: "Ongevallenwet = A." },
+          niveaus: { basis: "Ongevallenwet — A.", simpeler: "1901 Ongevallenwet = 1e sociale verzekering", nogSimpeler: "Ongevallenwet" },
         },
       },
       {
@@ -51,7 +51,7 @@ const steps = [
           woorden: [{ woord: "kinderarbeid", uitleg: "Werken in loondienst onder een bepaalde leeftijd (vroeger soms vanaf 6)." }],
           theorie: "Leerplichtwet kwam pas in **1900** (Goeman Borgesius). Daarvoor was er geen schoolplicht ondanks Kinderwetje.",
           voorbeelden: [{ type: "feit", tekst: "Vóór 1874: kinderen vanaf 6 in textielfabrieken Twente, glasfabrieken, mijnen Limburg." }],
-          niveaus: { basis: "Onder 12 niet in fabriek — A.", simpeler: "Kinderwetje = verbod fabriekswerk <12 = A.", nogSimpeler: "Verbod 1874 = A." },
+          niveaus: { basis: "Onder 12 niet in fabriek — A.", simpeler: "Kinderwetje = verbod fabriekswerk <12", nogSimpeler: "Verbod 1874" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
           stappen: [{ titel: "Grote Depressie", tekst: "**1929 Wall Street-crash** = wereldwijde economische crisis. NL-werkloosheid piekt op ~25-30%. **Geen werkloosheidsuitkering** — alleen vernederende 'steun'. Premier **Colijn** voerde zware **bezuinigingen** door (klassiek-liberale aanpak), wat de crisis verergerde." }],
           woorden: [{ woord: "Grote Depressie", uitleg: "Wereldwijde economische crisis 1929-1939." }, { woord: "Colijn", uitleg: "ARP-premier 1933-1939, koos voor bezuinigingen." }],
           theorie: "Cito-leerpunt: NL-aanpak Colijn werd later bekritiseerd. VS-president Roosevelt koos juist voor uitgaven (New Deal) — bleek effectiever.",
-          niveaus: { basis: "Massa-werkloosheid — A.", simpeler: "Jaren '30 = 30% werkloos = A.", nogSimpeler: "Werkloos = A." },
+          niveaus: { basis: "Massa-werkloosheid — A.", simpeler: "Jaren '30 = 30% werkloos", nogSimpeler: "Werkloos" },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Particuliere zorg = traditie", tekst: "Vóór WO2 sterk **verzuild**: katholieken hielpen katholieken (parochiale armenzorg), protestanten via **diaconie**, joden via joodse gemeente. Plus rijke filantropen + werkhuizen. Overheid bemoeide zich amper — armoede zag men als 'individueel falen'." }],
           woorden: [{ woord: "verzuiling", uitleg: "NL-systeem waarbij katholieken/protestanten/socialisten/liberalen in aparte 'zuilen' leefden — eigen scholen/kranten/sportclubs/ziekenhuizen." }],
-          niveaus: { basis: "Familie + kerk + liefdadigheid — A.", simpeler: "Hulp = familie/kerk, niet staat = A.", nogSimpeler: "Niet staat = A." },
+          niveaus: { basis: "Familie + kerk + liefdadigheid — A.", simpeler: "Hulp = familie/kerk, niet staat", nogSimpeler: "Niet staat" },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "AOW 1957, niet 1901.", "Premier 1933-1939, crisistijd.", "Premier 1973-77, na de welvaartsstaat opbouw."],
         uitlegPad: {
           stappen: [{ titel: "Kuyper 1901", tekst: "**Abraham Kuyper** = ARP-leider (anti-revolutionaire partij, christelijk) + premier 1901-1905. Bekend van **soevereiniteit in eigen kring** (politieke filosofie) + Vrije Universiteit Amsterdam stichten." }],
-          niveaus: { basis: "Kuyper — A.", simpeler: "1901-premier = Kuyper = A.", nogSimpeler: "Kuyper = A." },
+          niveaus: { basis: "Kuyper — A.", simpeler: "1901-premier = Kuyper", nogSimpeler: "Kuyper" },
         },
       },
     ],
@@ -106,7 +106,7 @@ const steps = [
           woorden: [{ woord: "AOW", uitleg: "Algemene Ouderdomswet — basisuitkering voor iedereen 65+/67+ in NL." }],
           theorie: "Toen Drees in 1988 op 102-jarige leeftijd overleed, droeg NL hem als nationale held — hij belichaamde de welvaartsstaat.",
           voorbeelden: [{ type: "feit", tekst: "Drees ontving zelf op 80-jarige leeftijd 80 gulden AOW, dat hij niet wilde en aan goede doelen schonk." }],
-          niveaus: { basis: "Drees — A.", simpeler: "AOW 1957 = Drees = A.", nogSimpeler: "Drees = A." },
+          niveaus: { basis: "Drees — A.", simpeler: "AOW 1957 = Drees", nogSimpeler: "Drees" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
           stappen: [{ titel: "Volks- vs werknemers-verzekering", tekst: "**Volksverzekering** (AOW, AKW kinderbijslag, AWBZ/Wlz langdurige zorg): iedereen verplicht verzekerd, ook huisvrouwen + zelfstandigen + studenten. **Werknemersverzekering** (WW, WIA, ZW): alleen voor wie loon krijgt." }],
           woorden: [{ woord: "volksverzekering", uitleg: "Verzekering voor heel NL-volk, ongeacht beroep." }, { woord: "werknemersverzekering", uitleg: "Alleen voor mensen met loondienst." }],
           theorie: "Volksverzekeringen worden betaald uit **AOW-premie** (15-jaar+ betalen) + algemene middelen. Werknemersverzekeringen via **werkgevers + werknemers** premies.",
-          niveaus: { basis: "Voor iedereen verplicht — A.", simpeler: "Volksverzekering = elk burger = A.", nogSimpeler: "Iedereen = A." },
+          niveaus: { basis: "Voor iedereen verplicht — A.", simpeler: "Volksverzekering = elk burger", nogSimpeler: "Iedereen" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
           stappen: [{ titel: "Bijstand = laatste vangnet", tekst: "**Algemene Bijstandswet** (ABW, sinds 2004: WWB → 2015: Participatiewet) = uitkering voor mensen die **geen recht op andere uitkering** hebben en **geen inkomen** kunnen verwerven. Voorbeeld: jongeren zonder werkverleden, ZZP'ers zonder klanten." }],
           woorden: [{ woord: "bijstand", uitleg: "Minimumuitkering van gemeente voor mensen zonder ander inkomen." }],
           theorie: "Bijstand wordt door **gemeente** uitgekeerd (sinds 2004 gedecentraliseerd). AOW + WW door **UWV/SVB** centraal.",
-          niveaus: { basis: "Uitkering laatste vangnet — A.", simpeler: "ABW = laatste redmiddel = A.", nogSimpeler: "Bijstand = A." },
+          niveaus: { basis: "Uitkering laatste vangnet — A.", simpeler: "ABW = laatste redmiddel", nogSimpeler: "Bijstand" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "65 sinds 1957, nu 67+", tekst: "AOW startte op **65 jaar** in 1957. Door **vergrijzing** + langere levensverwachting werd vanaf 2013 stapsgewijs verhoogd: 65→66 (2018) → 67 (2024) → gekoppeld aan levensverwachting (~67½ in 2027)." }],
           theorie: "Cito-actueel: AOW-leeftijd nu **67 jaar**. Sinds 2024 vast op 67. Daarna gekoppeld aan levensverwachting.",
-          niveaus: { basis: "65 jaar — A.", simpeler: "AOW-start = 65 = A.", nogSimpeler: "65 = A." },
+          niveaus: { basis: "65 jaar — A.", simpeler: "AOW-start = 65", nogSimpeler: "65" },
         },
       },
       {
@@ -153,7 +153,7 @@ const steps = [
           stappen: [{ titel: "Marshall + samenwerking", tekst: "**Marshall-hulp** (1948-52, ~1 miljard gulden voor NL) + **harde werkdiscipline** (loonmatiging onder Drees) maakten snelle wederopbouw mogelijk. NL was begin '60 weer op vooroorlogs welvaarts-niveau." }],
           woorden: [{ woord: "Marshall-hulp", uitleg: "US-steun voor wederopbouw Europa 1948-1952." }],
           theorie: "Marshall-plan-doel VS: Europa weer rijk maken → afzetmarkt VS + tegenwicht communisme (Koude Oorlog-context).",
-          niveaus: { basis: "Marshall + samenwerking — A.", simpeler: "VS-Marshall + werk = wederopbouw = A.", nogSimpeler: "Marshall = A." },
+          niveaus: { basis: "Marshall + samenwerking — A.", simpeler: "VS-Marshall + werk = wederopbouw", nogSimpeler: "Marshall" },
         },
       },
     ],
@@ -174,7 +174,7 @@ const steps = [
           stappen: [{ titel: "WAO = arbeidsongeschiktheid", tekst: "**Wet op de Arbeidsongeschiktheidsverzekering 1967**. Werknemer die langdurig niet kan werken door ziekte/handicap kreeg 80% van laatste loon. Veel te ruim — gebruikt voor verborgen ontslag in jaren '80. Vervangen door **WIA** (2006) met strenger criterium." }],
           woorden: [{ woord: "WAO", uitleg: "Wet op de Arbeidsongeschiktheidsverzekering 1967-2005." }, { woord: "WIA", uitleg: "Wet werk en inkomen naar arbeidsvermogen, vanaf 2006." }],
           theorie: "Cito-actueel: bij volledige + duurzame arbeidsongeschiktheid (vandaag): **IVA** (75% van loon). Bij gedeeltelijke: **WGA**.",
-          niveaus: { basis: "WAO — A.", simpeler: "1967 arbeidsongeschiktheid = WAO = A.", nogSimpeler: "WAO = A." },
+          niveaus: { basis: "WAO — A.", simpeler: "1967 arbeidsongeschiktheid = WAO", nogSimpeler: "WAO" },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
           woorden: [{ woord: "handelingsonbekwaam", uitleg: "Geen rechtsbevoegdheid om zelf rechtshandelingen te doen — moet toestemming derde hebben." }],
           theorie: "Vrouwenrechten-tijdlijn NL: 1919 kiesrecht → 1956 handelingsbekwaam → 1971 gelijk loon → 1980 anti-discriminatie → 2013 huwelijk samengelegd (man+vrouw beide ouder).",
           voorbeelden: [{ type: "feit", tekst: "Een 60-jarige oma kan zich nog herinneren dat haar moeder geen bankrekening mocht openen zonder vaders toestemming." }],
-          niveaus: { basis: "1956 — A.", simpeler: "Vrouwen werken-vrij sinds 1956 = A.", nogSimpeler: "1956 = A." },
+          niveaus: { basis: "1956 — A.", simpeler: "Vrouwen werken-vrij sinds 1956", nogSimpeler: "1956" },
         },
       },
       {
@@ -199,7 +199,7 @@ const steps = [
           stappen: [{ titel: "Slochteren = aardgas-bonanza", tekst: "**1959**: NAM ontdekt **grootste aardgasveld van Europa** bij Slochteren (Groningen). Levert NL ~400 miljard euro op tot 2024. Maar: ook aardbevingen sinds '80 → boringen gestopt 2022. Schadefonds voor Groningers blijft heet politiek thema." }],
           woorden: [{ woord: "Slochteren", uitleg: "Dorp in Groningen, naamgever van het grote aardgasveld." }],
           theorie: "Aardgas-baten financierden welvaartsstaat-uitbreiding jaren '60-'70. Critici noemen dit '**Nederlandse ziekte**': gas-rijkdom maakte industrie onnodig duur → industriële afkalving.",
-          niveaus: { basis: "Aardgas Groningen — A.", simpeler: "Slochteren = gas-veld Groningen = A.", nogSimpeler: "Gas = A." },
+          niveaus: { basis: "Aardgas Groningen — A.", simpeler: "Slochteren = gas-veld Groningen", nogSimpeler: "Gas" },
         },
       },
       {
@@ -211,7 +211,7 @@ const steps = [
           stappen: [{ titel: "Polderen = overleggen tot consensus", tekst: "**Poldermodel** = NL-overleg-cultuur waarbij werkgevers (VNO-NCW), vakbonden (FNV/CNV) en regering samen polderen voor compromis. Belangrijke instelling: **SER (Sociaal-Economische Raad)** sinds 1950. Toonbeeld: **Akkoord van Wassenaar 1982** = loonmatiging + werktijdverkorting." }],
           woorden: [{ woord: "poldermodel", uitleg: "NL-overleg- en compromis-cultuur in sociaal-economisch beleid." }, { woord: "SER", uitleg: "Sociaal-Economische Raad, adviesorgaan regering." }],
           theorie: "Stoclaim: NL is wereld-kampioen polderen. Kritiek: kan ook leiden tot trage besluitvorming.",
-          niveaus: { basis: "Werkgever-werknemer-overleg — A.", simpeler: "Poldermodel = overlegcultuur = A.", nogSimpeler: "Overleg = A." },
+          niveaus: { basis: "Werkgever-werknemer-overleg — A.", simpeler: "Poldermodel = overlegcultuur", nogSimpeler: "Overleg" },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
           stappen: [{ titel: "AKW sinds 1962", tekst: "**Algemene Kinderbijslagwet** (AKW). Iedere ouder krijgt **per kind een vast bedrag per kwartaal** van overheid, ongeacht inkomen. Volksverzekering. Bedrag stijgt met leeftijd kind. ~10 miljard euro/jaar totaal." }],
           woorden: [{ woord: "AKW", uitleg: "Algemene Kinderbijslagwet — uitkering per kind aan ouders." }],
           theorie: "Cito-feit: ouders met inkomen onder bepaalde grens kunnen ook **kindgebondenbudget** + **kinderopvangtoeslag** krijgen — extra toeslagen.",
-          niveaus: { basis: "Kinderbijslag — A.", simpeler: "AKW = kinderbijslag = A.", nogSimpeler: "Kinderbijslag = A." },
+          niveaus: { basis: "Kinderbijslag — A.", simpeler: "AKW = kinderbijslag", nogSimpeler: "Kinderbijslag" },
         },
       },
     ],
@@ -244,7 +244,7 @@ const steps = [
           stappen: [{ titel: "Autoloze zondagen 1973", tekst: "Arabische olielanden zetten **olie-embargo** in tegen NL na NL-steun aan Israël (Yom Kippur-oorlog). NL-regering reageerde met **autoloze zondagen** (4 november-1 december 1973 + nog 2 in 1974). Geen verkeer behalve hulpdiensten. Mensen reden op **fiets** + **paard-en-wagen** op de A28!" }],
           woorden: [{ woord: "olie-embargo", uitleg: "Beperking olie-export naar bepaalde landen als politiek wapen." }],
           theorie: "Cito-foto-favoriet: lege snelweg + mensen op fiets — symbool van oliecrisis.",
-          niveaus: { basis: "Autoloze zondagen — A.", simpeler: "1973 oliecrisis = autoloze zondagen = A.", nogSimpeler: "Autoloos = A." },
+          niveaus: { basis: "Autoloze zondagen — A.", simpeler: "1973 oliecrisis = autoloze zondagen", nogSimpeler: "Autoloos" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Werkgever + vakbond + Lubbers", tekst: "**24 november 1982**: VNO-NCW (werkgevers) + FNV (vakbonden) + regering Lubbers tekenen in Wassenaar. **Werkgevers**: minder loonstijging. **Werknemers**: 40-uurs naar **38-uurs werkweek**. **Regering**: minder werkloosheid + economisch herstel. **Wassenaar** = klassiek voorbeeld poldermodel." }],
           theorie: "Cito-feit: na Wassenaar groeide NL-economie hard in jaren '80 + '90. Internationaal geprezen als 'Polder-wonder'.",
-          niveaus: { basis: "Loonmatiging + werktijd — A.", simpeler: "Wassenaar = loon ↓ + uren ↓ = A.", nogSimpeler: "Loonmatiging = A." },
+          niveaus: { basis: "Loonmatiging + werktijd — A.", simpeler: "Wassenaar = loon ↓ + uren ↓", nogSimpeler: "Loonmatiging" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
           stappen: [{ titel: "Vergrijzing → 67", tekst: "Door **vergrijzing** (langer leven + minder kinderen) werd AOW-leeftijd vanaf 2013 verhoogd: 65→65y3mnd→...→**67** (sinds 2024). Voor toekomst gekoppeld aan **levensverwachting** (~67½ in 2027)." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Toename oudere bevolking + afname jongere — minder werkenden per gepensioneerde." }],
           theorie: "Cito-feit: 1957 → 65 jaar. 2024 → 67 jaar. Verhoging van 2 jaar in 67 jaar tijd. Toekomst: gekoppeld aan levensverwachting.",
-          niveaus: { basis: "67 jaar — A.", simpeler: "AOW vandaag = 67 = A.", nogSimpeler: "67 = A." },
+          niveaus: { basis: "67 jaar — A.", simpeler: "AOW vandaag = 67", nogSimpeler: "67" },
         },
       },
       {
@@ -278,7 +278,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Toeslagenaffaire = grote staat-schande", tekst: "Belastingdienst beschuldigde ~26.000 ouders onterecht van **kinderopvangtoeslag-fraude** (vooral mensen met dubbele achternaam / migratie-achtergrond). Moesten tienduizenden euro's terugbetalen. Veel gezinnen geruïneerd — schuldenproblemen, scheidingen, uithuisplaatsingen kinderen. **Kabinet Rutte III** trad af **15 januari 2021** na kritisch onderzoeksrapport." }],
           theorie: "Cito-actueel: toeslagenaffaire = grootste staat-schandaal sinds WO2. Excuses + €30.000 compensatie per ouder. Premier Rutte bleef wel aan.",
-          niveaus: { basis: "Onterecht fraude-beschuldiging ouders — A.", simpeler: "Belastingdienst pakte ouders verkeerd aan = A.", nogSimpeler: "Belastingdienst-fout = A." },
+          niveaus: { basis: "Onterecht fraude-beschuldiging ouders — A.", simpeler: "Belastingdienst pakte ouders verkeerd aan", nogSimpeler: "Belastingdienst-fout" },
         },
       },
       {
@@ -289,7 +289,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rutte I-II-III-IV (14 jaar)", tekst: "**Mark Rutte** (VVD) was **langste premier ooit** in NL — 13 jaar, 7 maanden (14 oktober 2010 - 2 juli 2024). Vier kabinetten: Rutte I (2010-12), II (2012-17), III (2017-21), IV (2022-24). Daarna overgedragen aan Dick Schoof. Rutte werd later **NAVO-secretaris-generaal** (oktober 2024)." }],
           theorie: "Rutte's lange premierschap stond in het teken van: kredietcrisis (2008-13), eurocrisis, COVID (2020-22), oorlog Oekraïne (2022+), Toeslagenaffaire (2021).",
-          niveaus: { basis: "Mark Rutte — A.", simpeler: "2010-2024 premier = Rutte = A.", nogSimpeler: "Rutte = A." },
+          niveaus: { basis: "Mark Rutte — A.", simpeler: "2010-2024 premier = Rutte", nogSimpeler: "Rutte" },
         },
       },
     ],
@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [null, "1957.", "Veel later (1962).", "1967."],
         uitlegPad: {
           stappen: [{ titel: "1901 Kuyper", tekst: "**Ongevallenwet 1901** (Kuyper). Eerste sociale verzekering NL." }],
-          niveaus: { basis: "Ongevallenwet — A.", simpeler: "1901 = Ongevallenwet = A.", nogSimpeler: "Ongevallenwet = A." },
+          niveaus: { basis: "Ongevallenwet — A.", simpeler: "1901 = Ongevallenwet", nogSimpeler: "Ongevallenwet" },
         },
       },
       {
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "WW + WAO zijn dat.", "Verplicht voor iedereen.", "Niet — wettelijke verzekering."],
         uitlegPad: {
           stappen: [{ titel: "AOW = volksverzekering", tekst: "Iedereen vanaf 15 in NL betaalt premie. Iedereen krijgt uitkering vanaf 67. Niet afhankelijk van werk-status." }],
-          niveaus: { basis: "Volksverzekering — A.", simpeler: "AOW = volksverzekering = A.", nogSimpeler: "Volk = A." },
+          niveaus: { basis: "Volksverzekering — A.", simpeler: "AOW = volksverzekering", nogSimpeler: "Volk" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
         wrongHints: [null, "Niet — Drees was sociaal-democraat.", "Niet — andere partij.", "Niet — D66 niet eens opgericht (1966)."],
         uitlegPad: {
           stappen: [{ titel: "Drees-PvdA", tekst: "**Willem Drees** = oprichter PvdA (1946) na fusie sociaaldemocraten + andere. Premier 1948-1958. Symbool sociaal-democratie + welvaartsstaat." }],
-          niveaus: { basis: "PvdA — A.", simpeler: "Drees = PvdA = A.", nogSimpeler: "PvdA = A." },
+          niveaus: { basis: "PvdA — A.", simpeler: "Drees = PvdA", nogSimpeler: "PvdA" },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
         wrongHints: [null, "Letterlijk wel, maar in context van bevolking belangrijker.", "Niet relevant — andere term.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Demografische vergrijzing", tekst: "Vergrijzing = **demografie**: aandeel 65+ groeit, aandeel jongeren krimpt. NL: 1900 ~5% boven 65, 2025 ~20%, 2050 verwacht ~25%. Gevolgen: meer AOW + zorg, minder werkenden per gepensioneerde." }],
-          niveaus: { basis: "Meer ouderen — A.", simpeler: "Vergrijzing = meer 65+ = A.", nogSimpeler: "Meer ouderen = A." },
+          niveaus: { basis: "Meer ouderen — A.", simpeler: "Vergrijzing = meer 65+", nogSimpeler: "Meer ouderen" },
         },
       },
       {
@@ -349,7 +349,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rutte III viel jan 2021", tekst: "Na rapport parlementaire onderzoekscommissie Toeslagenaffaire ('Ongekend onrecht') in december 2020 trad **kabinet Rutte III** demissionair af op **15 januari 2021**. Rutte zelf bleef premier in IV." }],
           theorie: "Cito-actueel: na demissionair kabinet kwamen verkiezingen maart 2021. Rutte IV gevormd januari 2022.",
-          niveaus: { basis: "15 januari 2021 — A.", simpeler: "Rutte III af = jan 2021 = A.", nogSimpeler: "Jan 2021 = A." },
+          niveaus: { basis: "15 januari 2021 — A.", simpeler: "Rutte III af = jan 2021", nogSimpeler: "Jan 2021" },
         },
       },
     ],

@@ -64,7 +64,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Caoutchouc = Frans voor rubber = rekbaar. Het caoutchoucartikel (1887) was de eerste uitbreiding van het censuskiesrecht uit 1848. Niet absolute mannen-stemming (kwam pas 1917), wel veel meer mannen mochten stemmen.",
-        { basis: "Caoutchoucartikel 1887. = B.", simpeler: "1887 = rekbaar artikel verbreed kiesrecht (niet meer alleen rijken). = B.", nogSimpeler: "Caoutchouc = B." },
+        { basis: "Caoutchoucartikel 1887.", simpeler: "1887 = rekbaar artikel verbreed kiesrecht (niet meer alleen rijken).", nogSimpeler: "Caoutchouc" },
         [{ woord: "caoutchoucartikel", uitleg: "Grondwet 1887, 'rekbaar' kiesrecht-artikel." }, { woord: "censuskiesrecht", uitleg: "Stemmen op basis van vermogen — 1848-1917." }],
       ),
     }],
@@ -94,7 +94,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Nazi-Duitsland (1933-1945) = terreur (Gestapo, willekeurige arrestaties) + strafkampen (Dachau 1933, Auschwitz 1940). USSR-Stalin (1924-1953) = showprocessen + zuiveringen. Cito test of je beide regimes uit elkaar houdt.",
-        { basis: "Terreur + strafkampen. = D.", simpeler: "Nazi = terreur (Gestapo) + concentratiekampen. Showprocessen = Stalin USSR. = D.", nogSimpeler: "Terreur + strafkampen = D." },
+        { basis: "Terreur + strafkampen.", simpeler: "Nazi = terreur (Gestapo) + concentratiekampen. Showprocessen = Stalin USSR.", nogSimpeler: "Terreur + strafkampen" },
         [{ woord: "Gestapo", uitleg: "Geheime staatspolitie Nazi-Duitsland." }, { woord: "showproces", uitleg: "Geënsceneerd proces met vooraf bepaalde uitspraak — kenmerk Stalin." }],
       ),
     }],
@@ -124,7 +124,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Censuur = staat controleert wat in kranten/media verschijnt. Nazi-Duitsland geleidschakeld alle media in 1933 (Goebbels = minister van Propaganda). Kritische berichten over Jodenvervolging niet toegestaan. NL was nog vrij in 1938 — daarom kon brief daar wel verschijnen.",
-        { basis: "Censuur. = A.", simpeler: "Nazi-pers werd gecensureerd. Kritische brief over Jodenvervolging mocht niet. = A.", nogSimpeler: "Censuur = A." },
+        { basis: "Censuur.", simpeler: "Nazi-pers werd gecensureerd. Kritische brief over Jodenvervolging mocht niet.", nogSimpeler: "Censuur" },
         [{ woord: "censuur", uitleg: "Staats-controle op pers/media." }, { woord: "Gleichschaltung", uitleg: "Gelijkschakeling — Nazi-controle over alle instituties (1933+)." }],
       ),
     }],
@@ -154,7 +154,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Sept 1944: regering-in-Londen vraagt spoormannen te staken om Duitse troepen te hinderen tijdens operatie Market Garden (Arnhem). Spoormannen staken — Duitsers reageren door voedseltransport naar west-NL stop te zetten. Winter '44-'45: honger + tulpenbollen eten + 20.000+ doden = Hongerwinter.",
-        { basis: "Spoorwegstaking. = D.", simpeler: "Sept 1944 Spoorwegstaking → Duitsers blokkeerden voedsel → Hongerwinter. = D.", nogSimpeler: "Spoorwegstaking = D." },
+        { basis: "Spoorwegstaking.", simpeler: "Sept 1944 Spoorwegstaking → Duitsers blokkeerden voedsel → Hongerwinter.", nogSimpeler: "Spoorwegstaking" },
         [{ woord: "Hongerwinter", uitleg: "Winter 1944-1945, west-NL, 20.000+ doden door honger." }, { woord: "Spoorwegstaking", uitleg: "Sept 1944, NL-spoormannen op bevel regering-Londen." }, { woord: "Februaristaking", uitleg: "1941 — anti-Jodenvervolging-staking in Amsterdam." }],
       ),
     }],

@@ -51,7 +51,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Thorbecke = de man die Grondwet 1848 schreef. Effect: vorst krijgt minder macht, parlement meer (constitutionele monarchie). Kiesrecht bleef CENSUS (alleen rijke mannen). Algemeen kiesrecht kwam veel later: 1917 mannen, 1919 vrouwen. Caoutchoucartikel 1887 verbreedde de census-norm.",
-        { basis: "Thorbecke + 1848 = censuskiesrecht. = B.", simpeler: "1848 = nieuw Grondwet, maar nog GEEN algemeen kiesrecht — alleen rijke mannen mochten stemmen = census. = B.", nogSimpeler: "Census = B." },
+        { basis: "Thorbecke + 1848 = censuskiesrecht.", simpeler: "1848 = nieuw Grondwet, maar nog GEEN algemeen kiesrecht — alleen rijke mannen mochten stemmen = census.", nogSimpeler: "Census" },
         [{ woord: "censuskiesrecht", uitleg: "Stemrecht voor mannen met bepaald inkomen/belasting." }, { woord: "Grondwet 1848", uitleg: "Thorbecke's wet — basis NL parlementaire democratie." }],
       ),
     }],
@@ -80,7 +80,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 politieke stromingen rond 1900: LIBERAAL (vrije markt, weinig overheid), SOCIALIST (arbeiderrechten, sociale wetten, sterke overheid voor zwakken), CONFESSIONEEL (religie centraal — katholiek RKSP / protestant ARP+CHU), FEMINISTEN (vrouwenkiesrecht + emancipatie). Arbeider+loon+sociaal = socialist.",
-        { basis: "Arbeiders + sociale wetten = socialist. = D.", simpeler: "SOCIAAL → SOCIALIST. Loon voor stakers + sociale wetten = SDAP. = D.", nogSimpeler: "Socialist = D." },
+        { basis: "Arbeiders + sociale wetten = socialist.", simpeler: "SOCIAAL → SOCIALIST. Loon voor stakers + sociale wetten = SDAP.", nogSimpeler: "Socialist" },
         [{ woord: "socialist", uitleg: "Politieke stroming voor arbeiderrechten + sociale wetten." }, { woord: "sociale wet", uitleg: "Wet die zwakke groep beschermt (ziekte, ouderdom, werkloosheid)." }],
       ),
     }],
@@ -110,7 +110,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 Nazi-kenmerken: MILITARISME (leger-cultus + oorlog-paraatheid), INDOCTRINATIE (beelden/symbolen + Hitlerjugend), RASSENLEER (Joden + 'Untermenschen'), CENSUUR (Goebbels-propaganda + pers-controle). In de tekening zie je SOLDATEN/GEWEREN (militair) + Hitler die 'klant' van schrik kapt (indoctrinatie).",
-        { basis: "Soldaten + Hitler-symboliek = militarisme + indoctrinatie. = B.", simpeler: "Geweren = militarisme. Hitler die Britse leeuw 'overtuigt' = indoctrinatie. = B.", nogSimpeler: "Militarisme + indoctrinatie = B." },
+        { basis: "Soldaten + Hitler-symboliek = militarisme + indoctrinatie.", simpeler: "Geweren = militarisme. Hitler die Britse leeuw 'overtuigt' = indoctrinatie.", nogSimpeler: "Militarisme + indoctrinatie" },
         [{ woord: "militarisme", uitleg: "Leger en oorlog-paraatheid centraal." }, { woord: "indoctrinatie", uitleg: "Mensen overtuigen via beelden/symbolen/propaganda." }],
       ),
     }],
@@ -140,7 +140,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "1938 tijdlijn: maart Anschluss Oostenrijk, sept Conferentie München → Tsjechië (Sudetenland) afgestaan aan Hitler. Chamberlain: 'Peace for our time'. November 1938: Kristallnacht (apart event, jodenvervolging). 1939: Hitler annexeerde rest Tsjechië. Sept 1939: invasie Polen = WO2 begin.",
-        { basis: "Tsjechië-toegeven 1938 = München. = A.", simpeler: "Spotprent = Britten geven Tsjechië aan Hitler. Dat gebeurde in München 1938. = A.", nogSimpeler: "München = A." },
+        { basis: "Tsjechië-toegeven 1938 = München.", simpeler: "Spotprent = Britten geven Tsjechië aan Hitler. Dat gebeurde in München 1938.", nogSimpeler: "München" },
         [{ woord: "Conferentie van München", uitleg: "Sept 1938, UK+FR+DE+IT akkoord — Sudetenland naar Duitsland." }, { woord: "appeasement", uitleg: "Toegeven aan dictator om oorlog te voorkomen." }],
       ),
     }],

@@ -66,7 +66,7 @@ const steps = [
           niveaus: {
             basis: "DNA verandert = mutatie. Antwoord B.",
             simpeler: "Stel je voor: het DNA is een lange code. Röntgenstraling 'knalt' tegen die code en verandert een letter. Die verandering noemen we een mutatie. Antwoord B.",
-            nogSimpeler: "DNA-verandering = mutatie = B.",
+            nogSimpeler: "DNA-verandering = mutatie",
           },
         },
       },
@@ -125,7 +125,7 @@ const steps = [
           niveaus: {
             basis: "X-sperma heeft rode-ogen-DNA, Y-sperma niet. 50/50 → antwoord B.",
             simpeler: "Stel je voor 100 spermacellen van dit mannetje. 50 zijn X (met oogkleur-gen), 50 zijn Y (zonder). Dus in 50% zit het stukje DNA voor rode ogen. Antwoord B.",
-            nogSimpeler: "50% (alleen de X-helft) = B.",
+            nogSimpeler: "50% (alleen de X-helft)",
           },
         },
       },
@@ -185,7 +185,7 @@ const steps = [
           niveaus: {
             basis: "Beiden hebben het mis. Antwoord A.",
             simpeler: "Kweekvlees is uit DIERLIJKE spiercellen. Die hebben een celkern (chromosomen liggen daar IN, niet los) én geen celwand. Liam en Sophie hebben dus allebei het mis. Antwoord A.",
-            nogSimpeler: "Beiden fout = A.",
+            nogSimpeler: "Beiden fout",
           },
         },
       },
@@ -245,7 +245,7 @@ const steps = [
           niveaus: {
             basis: "Beide zaadcellen + testosteron worden nog gemaakt. Beiden fout. Antwoord A.",
             simpeler: "Bij sterilisatie wordt alleen de UITGANG van de zaadcellen geblokkeerd. De TESTIKELS werken gewoon door: zaadcellen worden nog steeds gemaakt, en testosteron óók. Hans denkt aan productie-stop (fout), Karlijn ook (fout). Antwoord A.",
-            nogSimpeler: "Beiden fout = A.",
+            nogSimpeler: "Beiden fout",
           },
         },
       },
@@ -302,7 +302,7 @@ const steps = [
           niveaus: {
             basis: "Ureum ontstaat in de lever (bij eiwit-afbraak). Antwoord B.",
             simpeler: "Eiwitten worden afgebroken tot aminozuren. De lever verwerkt aminozuren en maakt daarbij ureum (een afvalstof). De nieren halen het ureum daarna uit het bloed. Antwoord B: lever.",
-            nogSimpeler: "Lever maakt ureum = B.",
+            nogSimpeler: "Lever maakt ureum",
           },
         },
       },
@@ -361,7 +361,7 @@ const steps = [
           niveaus: {
             basis: "Bewustwording = grote hersenen. Antwoord A.",
             simpeler: "Bewust horen gebeurt in de grote hersenen — de 'denker'. Andere delen sturen onbewuste functies of geleiden signalen. Antwoord A.",
-            nogSimpeler: "Bewust = grote hersenen = A.",
+            nogSimpeler: "Bewust = grote hersenen",
           },
         },
       },
@@ -418,7 +418,7 @@ const steps = [
           niveaus: {
             basis: "Alleen in de tandholte. Antwoord B.",
             simpeler: "Zenuwen zitten alleen in de zachte kern van de tand (de tandholte). Het tandbeen eromheen is hard en zonder zenuwen. Antwoord B.",
-            nogSimpeler: "Alleen tandholte = B.",
+            nogSimpeler: "Alleen tandholte",
           },
         },
       },
@@ -477,7 +477,7 @@ const steps = [
           niveaus: {
             basis: "Alleen Julia. Antwoord B.",
             simpeler: "Het hart pompt alleen BLOED. Lymfe stroomt door spier-bewegingen en kleppen. Julia (kleppen) heeft gelijk, Finn (hartpomp) niet. Antwoord B.",
-            nogSimpeler: "Julia ja, Finn nee = B.",
+            nogSimpeler: "Julia ja, Finn nee",
           },
         },
       },
@@ -532,7 +532,7 @@ const steps = [
           niveaus: {
             basis: "Alleen witte bloedcellen. Antwoord A.",
             simpeler: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen en zo in lymfe komen. De rest van het bloed blijft binnen het vat. Antwoord A.",
-            nogSimpeler: "Alleen wit = A.",
+            nogSimpeler: "Alleen wit",
           },
         },
       },
@@ -591,7 +591,7 @@ const steps = [
           niveaus: {
             basis: "Maagsap verteert eiwitten (pepsine). Antwoord A.",
             simpeler: "Maagsap bevat het enzym pepsine, dat eiwitten afbreekt. Koolhydraten/vetten/vezels worden ELDERS verwerkt. Antwoord A.",
-            nogSimpeler: "Eiwitten = A.",
+            nogSimpeler: "Eiwitten",
           },
         },
       },
@@ -648,7 +648,7 @@ const steps = [
           niveaus: {
             basis: "Nierschors + niermerg. Antwoord C.",
             simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet. Antwoord C.",
-            nogSimpeler: "Schors + merg = C.",
+            nogSimpeler: "Schors + merg",
           },
         },
       },
@@ -706,7 +706,7 @@ const steps = [
           niveaus: {
             basis: "Conditionering. Antwoord A.",
             simpeler: "De hond leert: click = snoepje. Een gekoppelde reactie op een prikkel = conditionering (zoals Pavlov's bel-experiment). Antwoord A.",
-            nogSimpeler: "Click + snoepje = conditionering = A.",
+            nogSimpeler: "Click + snoepje = conditionering",
           },
         },
       },

@@ -238,7 +238,7 @@ const steps = [
             { type: "feit", tekst: "Beroemde NL'ers die VMBO/MBO deden + later doorstapelden: Geert Wilders, Khalid Boulahrouz." },
           ],
           basiskennis: [{ onderwerp: "Niet 'lager = slechter'", uitleg: "MBO is NIET minder dan WO — verschillende beroepen + interesses. Stratenmaker (MBO) en arts (WO) zijn beide nodig." }],
-          niveaus: { basis: "Drie onderwijsniveaus. = A.", simpeler: "MBO = praktijk-beroep, HBO = hogeschool 4 jaar, WO = universiteit. Drie niveaus vervolgonderwijs in NL. = A.", nogSimpeler: "3 niveaus = A." },
+          niveaus: { basis: "Drie onderwijsniveaus.", simpeler: "MBO = praktijk-beroep, HBO = hogeschool 4 jaar, WO = universiteit. Drie niveaus vervolgonderwijs in NL.", nogSimpeler: "3 niveaus" },
         },
       },
       {
@@ -264,7 +264,7 @@ const steps = [
             { type: "feit", tekst: "Een ZZP'er valt NIET onder een CAO — moet eigen afspraken maken met klanten." },
           ],
           basiskennis: [{ onderwerp: "Niet altijd alle bedrijven", uitleg: "CAO geldt voor sectoren waar werkgevers + vakbond afspraken hebben. Niet elk bedrijf — sommige cao-loze sectoren bestaan." }],
-          niveaus: { basis: "Afspraken werk-voorwaarden. = A.", simpeler: "CAO = Collectieve Arbeidsovereenkomst. Afspraken tussen werkgevers + vakbond over salaris, vakantie, werktijden voor hele branche. = A.", nogSimpeler: "Werk-afspraken = A." },
+          niveaus: { basis: "Afspraken werk-voorwaarden.", simpeler: "CAO = Collectieve Arbeidsovereenkomst. Afspraken tussen werkgevers + vakbond over salaris, vakantie, werktijden voor hele branche.", nogSimpeler: "Werk-afspraken" },
         },
       },
       {
@@ -289,7 +289,7 @@ const steps = [
             { type: "feit", tekst: "Je krijgt ook **vakantiegeld** (8% van salaris extra in mei) — telt op bij salaris." },
           ],
           basiskennis: [{ onderwerp: "Niet stiekem", uitleg: "Werken vóór 13 of zonder regels = werkgever in overtreding. Niet jouw schuld als ouder/werkgever het niet weet." }],
-          niveaus: { basis: "13 jaar. = A.", simpeler: "Vanaf 13 mag licht werk (klusjes), vanaf 15 krant/folder, vanaf 16 bijbaan met regels (max uur, geen nacht). = A.", nogSimpeler: "13+ licht werk = A." },
+          niveaus: { basis: "13 jaar.", simpeler: "Vanaf 13 mag licht werk (klusjes), vanaf 15 krant/folder, vanaf 16 bijbaan met regels (max uur, geen nacht).", nogSimpeler: "13+ licht werk" },
         },
       },
       { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van opleiding/werk-ervaring","Auto","Reclame","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },

@@ -248,7 +248,7 @@ const steps = [
             { type: "feit", tekst: "Schaak-grootmeesters gebruiken óók stappenplannen (positie analyseren → opties bedenken → beste zet → uitvoeren). Gestructureerd denken werkt overal." },
           ],
           basiskennis: [{ onderwerp: "Niet 'tijd verspillen'", uitleg: "Stap 1 (lezen) lijkt vertraging maar BESPAART tijd: betere antwoorden, minder fouten, minder herrekenen." }],
-          niveaus: { basis: "Stap 1 = lezen. = A.", simpeler: "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Cito-tip: niet meteen tellen, eerst de vraag SNAPPEN. = A.", nogSimpeler: "Stap 1 = A." },
+          niveaus: { basis: "Stap 1 = lezen.", simpeler: "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Cito-tip: niet meteen tellen, eerst de vraag SNAPPEN.", nogSimpeler: "Stap 1" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
             { type: "voorbeeld", tekst: "Beslisboom 'vis-naam': Heeft schubben? → Heeft tentakels? etc. → Maakt biologen mogelijk te onderscheiden." },
           ],
           basiskennis: [{ onderwerp: "Onthoud grenzen", uitleg: "Bij beslisboom-vragen op Cito: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet." }],
-          niveaus: { basis: "HAVO. = A.", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535). = A.", nogSimpeler: "HAVO = A." },
+          niveaus: { basis: "HAVO.", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).", nogSimpeler: "HAVO" },
         },
       },
       {
@@ -299,7 +299,7 @@ const steps = [
             { type: "voorbeeld", tekst: "Zee-voedselketen: plankton → kleine vis → tonijn → mens." },
           ],
           basiskennis: [{ onderwerp: "Niet schaal-keten", uitleg: "Voedselketen = wie eet wie. Niet 'wie is groter' (anders zou olifant bovenaan staan). Tijger eet olifant in sommige gevallen." }],
-          niveaus: { basis: "Voedselketen. = A.", simpeler: "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat. = A.", nogSimpeler: "Voedselketen = A." },
+          niveaus: { basis: "Voedselketen.", simpeler: "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat.", nogSimpeler: "Voedselketen" },
         },
       },
       { q: "Wat is een **beslisboom**?", options: ["Schema met ja/nee-vragen die leidt naar antwoord","Boom buiten","Stappenplan zonder vragen","Tijdslijn"], answer: 0, wrongHints: [null, "Niet.", "Niet — heeft vragen.", "Niet — geen tijd."] },

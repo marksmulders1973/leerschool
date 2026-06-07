@@ -69,8 +69,8 @@ const steps = [
           voorbeelden: [{ type: "voorbeeld", tekst: "1 jan vs 31 dec geeft jaarverandering van bezit + schuld" }],
           basiskennis: [{ onderwerp: "moment vs periode", uitleg: "balans = punt, W&V = lijn" }],
           niveaus: {
-            basis: "Balans toont een moment in de tijd — bezit + schuld op één dag. = A.",
-            simpeler: "Een foto van bezit + schuld op één dag. Geen optellen over een periode. = A.",
+            basis: "Balans toont een moment in de tijd — bezit + schuld op één dag.",
+            simpeler: "Een foto van bezit + schuld op één dag. Geen optellen over een periode.",
             nogSimpeler: "Truc: balans = foto (1 moment). Winst-en-verliesrekening = film (over jaar).",
           },
         },
@@ -543,8 +543,8 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           voorbeelden: [{ type: "voorbeeld", tekst: "Maand met 0 omzet: nog steeds €X huur" }],
           basiskennis: [{ onderwerp: "verbinding met activiteit", uitleg: "huur niet, inkoop wel" }],
           niveaus: {
-            basis: "Maandhuur is een constante kost — onafhankelijk van verkoop. = A.",
-            simpeler: "Huur blijft hetzelfde bedrag of je nu 1 of 1000 stuks verkoopt. Constant dus. = A.",
+            basis: "Maandhuur is een constante kost — onafhankelijk van verkoop.",
+            simpeler: "Huur blijft hetzelfde bedrag of je nu 1 of 1000 stuks verkoopt. Constant dus.",
             nogSimpeler: "Truc: 'constant' = stilstaand bedrag. Inkoop/vracht schalen met verkoop = variabel. Huur niet = constant.",
           },
         },
@@ -585,7 +585,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
             { type: "stap", tekst: "Bakker koopt oven €10.000 contant. Debet: oven +€10.000 (activa). Credit: kas -€10.000 (ook activa, dus verschuiving binnen debet). Balans nog steeds in evenwicht." },
           ],
           basiskennis: [{ onderwerp: "Altijd in balans", uitleg: "Debet = credit. Anders is er een fout in boekhouding." }],
-          niveaus: { basis: "Bezittingen. = A.", simpeler: "Debet (links) van balans = activa = wat bedrijf bezit (gebouw, voorraad, geld). = A.", nogSimpeler: "Bezittingen = A." },
+          niveaus: { basis: "Bezittingen.", simpeler: "Debet (links) van balans = activa = wat bedrijf bezit (gebouw, voorraad, geld).", nogSimpeler: "Bezittingen" },
         },
       },
       {
@@ -609,7 +609,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
             { type: "stap", tekst: "Restaurant met €10k kas, €30k voorraad, €100k gebouw. Liquide = €10k. Bij plotselinge schuld €20k → ZIE direct probleem ondanks veel totale activa." },
           ],
           basiskennis: [{ onderwerp: "Goud regel", uitleg: "Houd 3-6 maanden kosten in kas/bank. Voor noodgevallen." }],
-          niveaus: { basis: "Snel naar geld omzetten. = A.", simpeler: "Liquiditeit = hoe snel kun je bezittingen naar geld omzetten. Kas = direct, gebouw = maanden. = A.", nogSimpeler: "Snel geld = A." },
+          niveaus: { basis: "Snel naar geld omzetten.", simpeler: "Liquiditeit = hoe snel kun je bezittingen naar geld omzetten. Kas = direct, gebouw = maanden.", nogSimpeler: "Snel geld" },
         },
       },
       {
@@ -633,7 +633,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
             { type: "stap", tekst: "Bedrijfsauto €30.000, 5 jaar, restwaarde €0. → €6.000/jaar afschrijven. Na 3 jaar boekwaarde €12.000." },
           ],
           basiskennis: [{ onderwerp: "Cito-economie-stof", uitleg: "Afschrijven = examen-VMBO-stof. Lineair-formule moeten kunnen toepassen." }],
-          niveaus: { basis: "Waarde-vermindering vast actief. = A.", simpeler: "Afschrijven = waarde van auto/machine over jaren verlagen op balans. Lineair: gelijke € per jaar. = A.", nogSimpeler: "Waarde dalen = A." },
+          niveaus: { basis: "Waarde-vermindering vast actief.", simpeler: "Afschrijven = waarde van auto/machine over jaren verlagen op balans. Lineair: gelijke € per jaar.", nogSimpeler: "Waarde dalen" },
         },
       },
       { q: "Welke is een **vast actief**?", options: ["Gebouw","Voorraad","Banksaldo","Klant-vordering"], answer: 0, wrongHints: [null, "Vlottend.", "Liquide.", "Vlottend."] },

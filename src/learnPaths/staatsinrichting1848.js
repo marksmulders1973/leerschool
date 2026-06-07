@@ -40,7 +40,7 @@ const steps = [
           theorie: "Willem-koningen volgorde: I (1815), II (1840), III (1849), Wilhelmina (1890), Juliana (1948), Beatrix (1980), Willem-Alexander (2013).",
           voorbeelden: [{ type: "feit", tekst: "Willem II zei zelf: 'Ik ben in één nacht van conservatief liberaal geworden.'" }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Verwar niet: Willem I = vader (Kroningsjaar 1815), Willem II = zoon (1840 t.b.v. grondwet 1848)." }],
-          niveaus: { basis: "Willem II — A.", simpeler: "1848 grondwet = koning Willem II + Thorbecke. A.", nogSimpeler: "Willem II = A." },
+          niveaus: { basis: "Willem II — A.", simpeler: "1848 grondwet = koning Willem II + Thorbecke. A.", nogSimpeler: "Willem II" },
         },
       },
       {
@@ -53,7 +53,7 @@ const steps = [
           woorden: [{ woord: "absoluut", uitleg: "Volledig, onbeperkt." }, { woord: "monarch", uitleg: "Koning of koningin als staatshoofd." }],
           theorie: "Tegenovergesteld = constitutionele monarchie (koning gebonden aan grondwet — NL na 1848).",
           voorbeelden: [{ type: "vergelijk", tekst: "Absoluut: koning bepaalt zelf belastingen. Constitutioneel: parlement bepaalt belastingen, koning tekent." }],
-          niveaus: { basis: "Koning heeft alle macht — A.", simpeler: "Absoluut = onbeperkt. Koning bepaalt alles. A.", nogSimpeler: "Onbeperkt = A." },
+          niveaus: { basis: "Koning heeft alle macht — A.", simpeler: "Absoluut = onbeperkt. Koning bepaalt alles. A.", nogSimpeler: "Onbeperkt" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1848 = revolutie-jaar Europa", tekst: "In 1848 vielen tegelijk koningen/regeringen in Frankrijk (Lodewijk Filips), Oostenrijk (Metternich), Italië, Duitsland. Massa-opstanden. Willem II vreesde hetzelfde in NL → wilde voorkomen door zelf hervorming." }],
           theorie: "1848 staat in elk Europees geschiedenisboek als kantelpunt: einde absolute monarchieën, opkomst grondwetten.",
-          niveaus: { basis: "1848 — A.", simpeler: "Europese revoluties 1848 = directe aanleiding. A.", nogSimpeler: "1848 = A." },
+          niveaus: { basis: "1848 — A.", simpeler: "Europese revoluties 1848 = directe aanleiding. A.", nogSimpeler: "1848" },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
           stappen: [{ titel: "Census-kiesrecht", tekst: "Census-kiesrecht: alleen wie genoeg belasting betaalde mocht stemmen. Resultaat: ~10% van mannen, 0% vrouwen. Pas in **1917 algemeen mannen-kiesrecht**, **1919 vrouwen-kiesrecht** (Aletta Jacobs)." }],
           woorden: [{ woord: "census-kiesrecht", uitleg: "Stemrecht gekoppeld aan inkomen of bezit." }, { woord: "algemeen kiesrecht", uitleg: "Iedereen volwassene mag stemmen, ongeacht inkomen/geslacht." }],
           theorie: "Cito-examen-feit: vrouwenkiesrecht NL 1919, vóór de meeste andere Europese landen.",
-          niveaus: { basis: "Alleen rijke mannen — A.", simpeler: "Census = je moest rijk genoeg zijn = A.", nogSimpeler: "Rijke mannen = A." },
+          niveaus: { basis: "Alleen rijke mannen — A.", simpeler: "Census = je moest rijk genoeg zijn", nogSimpeler: "Rijke mannen" },
         },
       },
       {
@@ -88,7 +88,7 @@ const steps = [
           stappen: [{ titel: "Thorbecke = grondlegger", tekst: "Johan Rudolph Thorbecke (1798-1872), liberaal hoogleraar in Leiden. In nacht-spoed van Willem II schreef hij in 1848 de nieuwe grondwet. Wordt gezien als **vader van de moderne Nederlandse democratie**." }],
           woorden: [{ woord: "liberaal", uitleg: "Politieke stroming: nadruk op individuele vrijheid + beperkte staatsmacht." }],
           theorie: "Standbeelden van Thorbecke staan in Amsterdam (Thorbeckeplein) + Den Haag.",
-          niveaus: { basis: "Thorbecke — A.", simpeler: "Thorbecke = liberaal, schreef grondwet 1848. A.", nogSimpeler: "Thorbecke = A." },
+          niveaus: { basis: "Thorbecke — A.", simpeler: "Thorbecke = liberaal, schreef grondwet 1848. A.", nogSimpeler: "Thorbecke" },
         },
       },
     ],
@@ -110,7 +110,7 @@ const steps = [
           woorden: [{ woord: "grondrecht", uitleg: "Recht dat de overheid moet respecteren, in grondwet vastgelegd." }],
           theorie: "Vrijheden zorgen voor: kerken zelf kiezen, kranten kritisch schrijven, scholen zelf stichten (= bijzonder onderwijs), groepen zoals vakbonden mogen organiseren.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Bijzonder onderwijs (katholiek/protestants/islamitisch) = grondrecht onderwijsvrijheid." }],
-          niveaus: { basis: "Godsdienst pers onderwijs vereniging — A.", simpeler: "G-P-O-V = vier 1848-vrijheden = A.", nogSimpeler: "GPOV = A." },
+          niveaus: { basis: "Godsdienst pers onderwijs vereniging — A.", simpeler: "G-P-O-V = vier 1848-vrijheden", nogSimpeler: "GPOV" },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
           woorden: [{ woord: "onschendbaar", uitleg: "Kan niet juridisch vervolgd worden." }, { woord: "verantwoordelijk", uitleg: "Aansprakelijk voor wat er gebeurt." }],
           theorie: "Cito-examen-vraag-klassieker: 'Wie tekent een wet?' → Koning + minister beide. → Bij fout: minister af.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Toeslagenaffaire 2021: kabinet trad af, koning bleef." }],
-          niveaus: { basis: "Koning niet vervolgbaar, minister stapt op — A.", simpeler: "Onschendbaar koning + verantwoordelijke ministers = A.", nogSimpeler: "Minister af, koning blijft = A." },
+          niveaus: { basis: "Koning niet vervolgbaar, minister stapt op — A.", simpeler: "Onschendbaar koning + verantwoordelijke ministers", nogSimpeler: "Minister af, koning blijft" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
           stappen: [{ titel: "Direct ≠ indirect", tekst: "Direct kiesrecht: burger → kandidaat (vandaag: lijst-partij). Indirect: burger → tussenpersoon → kandidaat. 1848 = direct voor Tweede Kamer. Eerste Kamer = nog indirect (door provinciale staten gekozen)." }],
           woorden: [{ woord: "direct kiesrecht", uitleg: "Burger kiest zelf z'n vertegenwoordiger." }],
           theorie: "1848 introduceerde direct stemrecht voor Tweede Kamer; Eerste Kamer bleef en blijft indirect (provinciale staten kiezen).",
-          niveaus: { basis: "Burgers stemmen direct — A.", simpeler: "Direct = jij stemt op kandidaat. A.", nogSimpeler: "Direct = A." },
+          niveaus: { basis: "Burgers stemmen direct — A.", simpeler: "Direct = jij stemt op kandidaat. A.", nogSimpeler: "Direct" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
           stappen: [{ titel: "Vertrouwens-regel sinds 1848", tekst: "Ministers hebben vertrouwen van Tweede Kamer nodig om aan te blijven. Bij **motie van wantrouwen** (= meerderheid Kamer zegt 'wij vertrouwen u niet') → minister treedt af. Soms hele kabinet → nieuwe verkiezingen." }],
           woorden: [{ woord: "motie van wantrouwen", uitleg: "Verklaring van Tweede Kamer dat minister niet meer mag aanblijven." }],
           theorie: "Voorbeeld 2022: Rutte IV-kabinet viel niet over wantrouwen maar over asielbeleid. Bij motie wantrouwen → meestal direct vertrek.",
-          niveaus: { basis: "Minister af — A.", simpeler: "Wantrouwen → minister moet stoppen. A.", nogSimpeler: "Aftreden = A." },
+          niveaus: { basis: "Minister af — A.", simpeler: "Wantrouwen → minister moet stoppen. A.", nogSimpeler: "Aftreden" },
         },
       },
       {
@@ -159,7 +159,7 @@ const steps = [
           stappen: [{ titel: "Grondwet = fundament", tekst: "**Grondwet** (constitutie) = hoogste wet. Alle andere wetten moeten daarmee in lijn zijn. Bevat staatsinrichting + grondrechten." }],
           woorden: [{ woord: "constitutie", uitleg: "Synoniem voor grondwet." }],
           theorie: "NL-grondwet is uit 1814/1815 (oudste basis) maar werd zwaar herzien in 1848 (Thorbecke) en 1983 (laatste grote herziening met o.a. discriminatie-verbod).",
-          niveaus: { basis: "Grondwet — A.", simpeler: "Hoogste wet = grondwet. A.", nogSimpeler: "Grondwet = A." },
+          niveaus: { basis: "Grondwet — A.", simpeler: "Hoogste wet = grondwet. A.", nogSimpeler: "Grondwet" },
         },
       },
     ],
@@ -180,7 +180,7 @@ const steps = [
           stappen: [{ titel: "W-U-R: wetgevend, uitvoerend, rechterlijk", tekst: "Trias = drie. Politica = macht. Drie machten: wetten MAKEN (wetgevend), wetten UITVOEREN (uitvoerend), wetten BEOORDELEN/STRAFFEN (rechterlijk). Allemaal apart, zodat geen één alles bepaalt." }],
           woorden: [{ woord: "trias politica", uitleg: "Drie-machtige scheiding van staat: wetgevend + uitvoerend + rechterlijk." }, { woord: "Montesquieu", uitleg: "Franse filosoof (1689-1755), Verlichting, schreef 'De l'esprit des lois' (1748)." }],
           theorie: "Cito-truc: ezelsbruggetje WUR — Wet maken, Uitvoeren, Recht spreken.",
-          niveaus: { basis: "Wetgevend / uitvoerend / rechterlijk — A.", simpeler: "WUR = drie functies van staat = A.", nogSimpeler: "WUR = A." },
+          niveaus: { basis: "Wetgevend / uitvoerend / rechterlijk — A.", simpeler: "WUR = drie functies van staat", nogSimpeler: "WUR" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wet-traject", tekst: "1) Regering dient **wet-voorstel** in. 2) Tweede Kamer debatteert + stemt (meerderheid nodig). 3) Eerste Kamer toetst + stemt. 4) Koning + verantwoordelijke minister tekenen. 5) Publicatie in Staatsblad → wet is geldig." }],
           theorie: "Voorbeeld: nieuwe verkeerswet — minister van Verkeer dient in, beide Kamers nemen het aan, koning + minister tekenen.",
-          niveaus: { basis: "Regering + 2 Kamers — A.", simpeler: "Wet = voorstel + 2 Kamers + handtekening = A.", nogSimpeler: "Regering + Kamers = A." },
+          niveaus: { basis: "Regering + 2 Kamers — A.", simpeler: "Wet = voorstel + 2 Kamers + handtekening", nogSimpeler: "Regering + Kamers" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
           stappen: [{ titel: "Levenslange benoeming = onafhankelijkheid", tekst: "Rechters benoemd **voor het leven** (in praktijk tot pensioen ~70). Reden: een rechter mag GEEN angst hebben dat regering hem ontslaat als hij ongunstig oordeelt. Dat beschermt **onafhankelijkheid van de rechterlijke macht**." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Niet afhankelijk van een andere instantie voor je baan/oordeel." }],
           theorie: "Cito-link: in landen zonder onafhankelijke rechter (bv. dictaturen) kan regering rechters ontslaan die ongunstig oordelen — dan is rechtspraak een schijn-instituut.",
-          niveaus: { basis: "Voor het leven — A.", simpeler: "Levenslang = onafhankelijk van regering = A.", nogSimpeler: "Levenslang = A." },
+          niveaus: { basis: "Voor het leven — A.", simpeler: "Levenslang = onafhankelijk van regering", nogSimpeler: "Levenslang" },
         },
       },
       {
@@ -215,7 +215,7 @@ const steps = [
           stappen: [{ titel: "Art. 1 grondwet (1983)", tekst: "*'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of op welke grond dan ook, is niet toegestaan.'* Toegevoegd in 1983-grondwetsherziening." }],
           woorden: [{ woord: "discriminatie", uitleg: "Ongelijke behandeling op basis van een persoonlijk kenmerk." }],
           theorie: "Voor Cito: art. 1 = anti-discriminatie. Daterend 1983 (NIET 1848 — vergissing-val).",
-          niveaus: { basis: "Gelijke behandeling — A.", simpeler: "Art. 1 = anti-discriminatie = A.", nogSimpeler: "Anti-discriminatie = A." },
+          niveaus: { basis: "Gelijke behandeling — A.", simpeler: "Art. 1 = anti-discriminatie", nogSimpeler: "Anti-discriminatie" },
         },
       },
       {
@@ -226,7 +226,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Religie + baan = art. 1", tekst: "Discriminatie op godsdienst bij werk = directe overtreding van **grondwet art. 1**. Slachtoffer kan klagen bij **College voor de Rechten van de Mens** of naar de rechter." }],
           theorie: "Discriminatie-soorten in art. 1: ras / geloof / geslacht / leeftijd / seksuele geaardheid / 'of welke grond dan ook' (open lijst).",
-          niveaus: { basis: "Art. 1 grondwet — A.", simpeler: "Religie-discriminatie = art. 1 gelijke behandeling = A.", nogSimpeler: "Art. 1 = A." },
+          niveaus: { basis: "Art. 1 grondwet — A.", simpeler: "Religie-discriminatie = art. 1 gelijke behandeling", nogSimpeler: "Art. 1" },
         },
       },
     ],
@@ -246,7 +246,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "150 = Tweede Kamer", tekst: "Sinds 1956 heeft de Tweede Kamer **150 leden** (eerder 100). Een partij heeft meerderheid bij **76 of meer** zetels. Geen enkele partij heeft dat alleen → coalitie." }],
           theorie: "Examen-feit: Tweede Kamer 150, Eerste Kamer 75. Onthoud: 'Tweede' is groter (150) dan 'Eerste' (75) — tegenintuïtief maar zo is het.",
-          niveaus: { basis: "150 — A.", simpeler: "Tweede Kamer = 150 leden = A.", nogSimpeler: "150 = A." },
+          niveaus: { basis: "150 — A.", simpeler: "Tweede Kamer = 150 leden", nogSimpeler: "150" },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Indirect via provincies", tekst: "Burgers stemmen op **provinciale staten** (provinciale verkiezingen). Provinciale staten kiezen vervolgens de **Eerste Kamer** (75 leden). Dus indirect kiesrecht voor de Eerste Kamer — zoals sinds 1848 geregeld." }],
           woorden: [{ woord: "indirect kiesrecht", uitleg: "Burger kiest een tussenpersoon die op zijn beurt de uiteindelijke vertegenwoordiger kiest." }],
-          niveaus: { basis: "Provinciale staten — A.", simpeler: "Eerste Kamer = via provincies = A.", nogSimpeler: "Provincies = A." },
+          niveaus: { basis: "Provinciale staten — A.", simpeler: "Eerste Kamer = via provincies", nogSimpeler: "Provincies" },
         },
       },
       {
@@ -268,7 +268,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "3e dinsdag september", tekst: "**Prinsjesdag** = derde dinsdag van september. Koning leest **Troonrede** voor (regerings-plannen volgend jaar) in **Ridderzaal**. Minister van Financiën biedt **Miljoenennota** aan (begroting). Gouden Koets sinds 2022 niet meer gebruikt." }],
           theorie: "Onthoud: 3-9-D (derde dinsdag, september = 9e maand, Dinsdag).",
-          niveaus: { basis: "Derde dinsdag september — A.", simpeler: "Prinsjesdag = 3e di sept = A.", nogSimpeler: "Sept = A." },
+          niveaus: { basis: "Derde dinsdag september — A.", simpeler: "Prinsjesdag = 3e di sept", nogSimpeler: "Sept" },
         },
       },
       {
@@ -279,7 +279,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Premier = politiek, koning = staatshoofd", tekst: "**Minister-president** (premier) leidt het kabinet. Hij/zij wordt na verkiezingen voorgedragen door de partij die de coalitie vormt. Koning benoemt formeel, maar de keuze is politiek. Premier = woordvoerder kabinet + voorzitter ministerraad." }],
           theorie: "Onderscheid: koning = staatshoofd (ceremonieel). Premier = regeringsleider (politiek). Beide bestaan naast elkaar.",
-          niveaus: { basis: "Politicus uit coalitie — A.", simpeler: "Premier ≠ koning. Premier = politicus = A.", nogSimpeler: "Politicus = A." },
+          niveaus: { basis: "Politicus uit coalitie — A.", simpeler: "Premier ≠ koning. Premier = politicus", nogSimpeler: "Politicus" },
         },
       },
       {
@@ -291,7 +291,7 @@ const steps = [
           stappen: [{ titel: "Val → demissionair → verkiezingen", tekst: "Kabinet valt = ministers leveren ontslag in bij koning. Kabinet wordt **demissionair** (= alleen lopende zaken). Koning ontbindt Tweede Kamer → nieuwe verkiezingen → formatie → nieuw kabinet." }],
           woorden: [{ woord: "demissionair", uitleg: "Een kabinet dat is afgetreden maar nog wel lopende taken vervult tot een nieuw kabinet er is." }],
           theorie: "Voorbeeld: Rutte IV viel juli 2023 → demissionair → verkiezingen nov 2023 → formatie → kabinet Schoof juli 2024.",
-          niveaus: { basis: "Nieuwe verkiezingen — A.", simpeler: "Val kabinet → verkiezingen = A.", nogSimpeler: "Verkiezingen = A." },
+          niveaus: { basis: "Nieuwe verkiezingen — A.", simpeler: "Val kabinet → verkiezingen", nogSimpeler: "Verkiezingen" },
         },
       },
     ],
@@ -310,7 +310,7 @@ const steps = [
         wrongHints: [null, "Niet — die was vóór 1848.", "Niet — Nederland heeft nog een koning.", "Zeker niet."],
         uitlegPad: {
           stappen: [{ titel: "Twee labels samen", tekst: "**Constitutionele monarchie** = koning gebonden aan grondwet. **Parlementaire democratie** = parlement = baas, ministers verantwoordelijk aan parlement. NL is beide tegelijk sinds 1848." }],
-          niveaus: { basis: "Constitutionele monarchie + parlementaire democratie — A.", simpeler: "Koning + grondwet + parlement = A.", nogSimpeler: "Eerste optie = A." },
+          niveaus: { basis: "Constitutionele monarchie + parlementaire democratie — A.", simpeler: "Koning + grondwet + parlement", nogSimpeler: "Eerste optie" },
         },
       },
       {
@@ -321,7 +321,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1917 mannen, 1919 vrouwen", tekst: "**Algemeen mannen-kiesrecht 1917**. **Vrouwen-kiesrecht passief 1917** (mochten gekozen worden, eerst Suze Groeneweg PvdA), **actief 1919** (mochten zelf stemmen). Initiator: **Aletta Jacobs**, eerste vrouwelijke arts NL." }],
           woorden: [{ woord: "passief kiesrecht", uitleg: "Recht om gekozen te worden." }, { woord: "actief kiesrecht", uitleg: "Recht om te stemmen." }],
-          niveaus: { basis: "1919 — A.", simpeler: "Vrouwen actief kiesrecht 1919 = A.", nogSimpeler: "1919 = A." },
+          niveaus: { basis: "1919 — A.", simpeler: "Vrouwen actief kiesrecht 1919", nogSimpeler: "1919" },
         },
       },
       {
@@ -331,7 +331,7 @@ const steps = [
         wrongHints: [null, "Eerste grondwet, nog geen ministeriële verantwoordelijkheid.", "Algemeen kiesrecht, niet hier.", "Discriminatie-artikel, niet ministeriële verantwoordelijkheid."],
         uitlegPad: {
           stappen: [{ titel: "1848-kernregel", tekst: "Deze regel is dé hoeksteen van Thorbecke's 1848-grondwet — moment waarop NL van absolute naar constitutionele monarchie ging." }],
-          niveaus: { basis: "1848 — A.", simpeler: "Regel komt uit grondwet 1848 = A.", nogSimpeler: "1848 = A." },
+          niveaus: { basis: "1848 — A.", simpeler: "Regel komt uit grondwet 1848", nogSimpeler: "1848" },
         },
       },
       {
@@ -341,7 +341,7 @@ const steps = [
         wrongHints: [null, "Wetgevende macht.", "Uitvoerende macht.", "Uitvoerende macht (regering)."],
         uitlegPad: {
           stappen: [{ titel: "Rechterlijke macht = onafhankelijke rechters", tekst: "Wetgevend = Kamers + regering. Uitvoerend = regering + ambtenaren. Rechterlijk = onafhankelijke rechters (rechtbank → gerechtshof → Hoge Raad)." }],
-          niveaus: { basis: "Rechtbanken + Hoge Raad — A.", simpeler: "Rechterlijk = rechters = A.", nogSimpeler: "Rechters = A." },
+          niveaus: { basis: "Rechtbanken + Hoge Raad — A.", simpeler: "Rechterlijk = rechters", nogSimpeler: "Rechters" },
         },
       },
       {
@@ -352,7 +352,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Coalitie 2024", tekst: "Na Tweede Kamer-verkiezingen 22 november 2023 (PVV grootste): formatie leidde tot **PVV + VVD + NSC + BBB**. Premier: Dick Schoof (technocraat, niet partij-gebonden). Beëdigd 2 juli 2024." }],
           theorie: "Onthoud-truc: 'P-V-N-B' (PVV-VVD-NSC-BBB).",
-          niveaus: { basis: "PVV + VVD + NSC + BBB — A.", simpeler: "Coalitie Schoof = P-V-N-B = A.", nogSimpeler: "PVNB = A." },
+          niveaus: { basis: "PVV + VVD + NSC + BBB — A.", simpeler: "Coalitie Schoof = P-V-N-B", nogSimpeler: "PVNB" },
         },
       },
     ],

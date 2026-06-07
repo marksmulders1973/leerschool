@@ -39,7 +39,7 @@ const steps = [
           woorden: [{ woord: "VOC", uitleg: "Verenigde Oostindische Compagnie — Nederlands handelsbedrijf in Azië 1602-1799." }, { woord: "octrooi", uitleg: "Monopolie/exclusieve recht verleend door overheid." }],
           theorie: "Cito-feit: VOC = 1602. Tegenhanger: WIC (West-Indische Compagnie) = 1621 — opereerde in Amerika/West-Afrika.",
           voorbeelden: [{ type: "feit", tekst: "VOC was eerste bedrijf ter wereld met verhandelbare aandelen (Amsterdamse beurs)." }],
-          niveaus: { basis: "1602 — A.", simpeler: "VOC = 1602 = A.", nogSimpeler: "1602 = A." },
+          niveaus: { basis: "1602 — A.", simpeler: "VOC = 1602", nogSimpeler: "1602" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
           woorden: [{ woord: "specerij", uitleg: "Geurig + smaakvol kruid uit tropen, gebruikt voor eten/conservering." }, { woord: "Molukken", uitleg: "Eilandengroep oostelijk Indonesië, beroemd om kruidnagel + nootmuskaat." }],
           theorie: "Cito-controversie: J.P. Coen wordt nu zelden meer in straatnamen genoemd vanwege Banda-massamoord.",
           voorbeelden: [{ type: "feit", tekst: "1621: ~14.000 Bandanezen vermoord/verbannen door Coen om monopolie te garanderen." }],
-          niveaus: { basis: "Specerijen — A.", simpeler: "Nootmuskaat etc. = VOC-hoofdproduct = A.", nogSimpeler: "Specerijen = A." },
+          niveaus: { basis: "Specerijen — A.", simpeler: "Nootmuskaat etc. = VOC-hoofdproduct", nogSimpeler: "Specerijen" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1799 = VOC einde", tekst: "Door **corruptie**, **lange oorlogen met Engeland** (Vierde Engelse Oorlog 1780-84) en concurrentie viel VOC om. Bezittingen werden door Nederlandse staat overgenomen — begin van koloniale staat **Nederlands-Indië**." }],
           theorie: "VOC werd 197 jaar oud (1602-1799). Cito-truc: VOC = 1602, einde 1799, dus 197 jaar.",
-          niveaus: { basis: "1799 — A.", simpeler: "VOC faillissement = 1799 = A.", nogSimpeler: "1799 = A." },
+          niveaus: { basis: "1799 — A.", simpeler: "VOC faillissement = 1799", nogSimpeler: "1799" },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Nederlands-Indië 1816-1945", tekst: "Officiële naam vanaf overdracht door Britten (1816). Bestond uit ~17.000 eilanden (Java, Sumatra, Borneo, Sulawesi, Bali, Molukken, Papoea). Hoofdstad = **Batavia** (nu Jakarta)." }],
           woorden: [{ woord: "Nederlands-Indië", uitleg: "Nederlandse kolonie 1816-1945 in zuidoost-Azië, nu Indonesië." }],
-          niveaus: { basis: "Nederlands-Indië — A.", simpeler: "Kolonie-naam = Nederlands-Indië = A.", nogSimpeler: "Ned-Indië = A." },
+          niveaus: { basis: "Nederlands-Indië — A.", simpeler: "Kolonie-naam = Nederlands-Indië", nogSimpeler: "Ned-Indië" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Batavia = oud, Jakarta = nieuw", tekst: "1619: J.P. Coen sticht **Batavia** op locatie van Jakarta-stad. Naam blijft tot 1942 (Japanse bezetting). 1949: officiële naam **Jakarta** voor onafhankelijke hoofdstad Indonesië." }],
           theorie: "Cito-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
-          niveaus: { basis: "Batavia — A.", simpeler: "Nederlandse hoofdstad-naam = Batavia = A.", nogSimpeler: "Batavia = A." },
+          niveaus: { basis: "Batavia — A.", simpeler: "Nederlandse hoofdstad-naam = Batavia", nogSimpeler: "Batavia" },
         },
       },
     ],
@@ -105,7 +105,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Van den Bosch = bedenker", tekst: "**Johannes van den Bosch** = gouverneur-generaal Nederlands-Indië 1830-1834. Bedacht Cultuurstelsel om de **NL-staatsschuld** (door Belgische opstand) terug te betalen. Werd er rijk van — kreeg adellijke titel ('graaf Van den Bosch')." }],
           woorden: [{ woord: "Cultuurstelsel", uitleg: "Systeem waarbij Indonesische boeren gedwongen werden export-gewassen te verbouwen voor de NL-staat." }],
-          niveaus: { basis: "Van den Bosch — A.", simpeler: "Cultuurstelsel-bedenker = Van den Bosch = A.", nogSimpeler: "Van den Bosch = A." },
+          niveaus: { basis: "Van den Bosch — A.", simpeler: "Cultuurstelsel-bedenker = Van den Bosch", nogSimpeler: "Van den Bosch" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
           woorden: [{ woord: "batig slot", uitleg: "Overschot in een begroting/kassa — positief saldo." }],
           theorie: "Tussen 1830-1870 leverde batig slot ~30% van de Nederlandse staats-inkomsten op. Critici noemden NL daarom 'parasitair' op kolonie.",
           voorbeelden: [{ type: "feit", tekst: "Met batig slot werden o.a. NL-spoorwegen + Schiphol-droogmaking betaald." }],
-          niveaus: { basis: "Overschot voor NL — A.", simpeler: "Batig slot = winst die naar NL ging = A.", nogSimpeler: "Winst voor NL = A." },
+          niveaus: { basis: "Overschot voor NL — A.", simpeler: "Batig slot = winst die naar NL ging", nogSimpeler: "Winst voor NL" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
           stappen: [{ titel: "Multatuli = Latijn voor 'ik heb veel geleden'", tekst: "**Eduard Douwes Dekker** (1820-1887), oud-assistent-resident op Java, schreef de roman als wraak op de NL-koloniale staat. *Max Havelaar* = klassieker van NL-literatuur + politieke aanklacht. Naam **'Max Havelaar'** is ook fairtrade-koffiemerk geworden." }],
           woorden: [{ woord: "Multatuli", uitleg: "Pseudoniem van E. Douwes Dekker, Latijn voor 'ik heb veel geleden'." }],
           theorie: "Cito-aanknopingspunt: Multatuli-citaat 'De Javaan wordt mishandeld' = bekendste protestzin van koloniale tijd.",
-          niveaus: { basis: "Multatuli — A.", simpeler: "Max Havelaar = Multatuli = A.", nogSimpeler: "Multatuli = A." },
+          niveaus: { basis: "Multatuli — A.", simpeler: "Max Havelaar = Multatuli", nogSimpeler: "Multatuli" },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
           stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek volgens **koningin Wilhelmina** (troonrede 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
           theorie: "Cito-criticus: ethische politiek was deels propaganda — in praktijk bleef het meeste geld naar NL gaan + slechts ~1% Indonesiërs kreeg onderwijs.",
-          niveaus: { basis: "Onderwijs Irrigatie Emigratie — A.", simpeler: "OIE = ethische politiek = A.", nogSimpeler: "OIE = A." },
+          niveaus: { basis: "Onderwijs Irrigatie Emigratie — A.", simpeler: "OIE = ethische politiek", nogSimpeler: "OIE" },
         },
       },
       {
@@ -153,7 +153,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boedi Oetomo 1908", tekst: "**Boedi Oetomo** ('Verheven Streven') = eerste moderne Indonesische nationalistische beweging, opgericht 20 mei 1908 door studenten. Vredig, gericht op zelfontplooiing. Datum 20 mei = **Hari Kebangkitan Nasional** (Dag van het Nationaal Ontwaken)." }],
           theorie: "Volgorde: Boedi Oetomo 1908 → Sarekat Islam 1912 → PNI 1927 (Soekarno) → Onafhankelijkheid 1945.",
-          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 = Boedi Oetomo = A.", nogSimpeler: "Boedi Oetomo = A." },
+          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
         },
       },
     ],
@@ -173,7 +173,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Maart 1942 = NL-overgave", tekst: "Pearl Harbor december 1941. Daarna Japan zuidelijk: Filipijnen, Maleisië, Singapore. Maart 1942 NL-overgave bij Kalidjati. Bezetting 1942-1945 (~3,5 jaar)." }],
           theorie: "Cito-feit: NL-Indië capituleerde sneller dan Japan-veld in Europa verloopt. 3 maanden van aanval tot overgave.",
-          niveaus: { basis: "1942 — A.", simpeler: "Japan veroverde NL-Indië in 1942 = A.", nogSimpeler: "1942 = A." },
+          niveaus: { basis: "1942 — A.", simpeler: "Japan veroverde NL-Indië in 1942", nogSimpeler: "1942" },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Duo: Soekarno + Hatta", tekst: "**Ir. Soekarno** (1901-1970) = charismatische voorman, civiel ingenieur, oprichter PNI 1927. **Mohammad Hatta** (1902-1980) = econoom, mede-strijder. Tegenovergesteld karakters maar effectief duo. Beide werden door NL meermaals verbannen." }],
           woorden: [{ woord: "Soekarno", uitleg: "Eerste president van onafhankelijk Indonesië (1945-1967)." }, { woord: "Hatta", uitleg: "Eerste vicepresident van Indonesië (1945-1956)." }],
-          niveaus: { basis: "Soekarno + Hatta — A.", simpeler: "Duo Soekarno-Hatta = A.", nogSimpeler: "Soekarno = A." },
+          niveaus: { basis: "Soekarno + Hatta — A.", simpeler: "Duo Soekarno-Hatta", nogSimpeler: "Soekarno" },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
           stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Indonesisch voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een **vergeten genocide** in NL-geschiedenisles." }],
           woorden: [{ woord: "romusha", uitleg: "Indonesische dwangarbeider tijdens Japanse bezetting WO2." }],
           theorie: "Belangrijk voor balans: ~20.000 Nederlanders + ~2 miljoen Indonesiërs slachtoffer Japanse bezetting. Schade aan Indonesische bevolking veel groter.",
-          niveaus: { basis: "Gedwongen dwangarbeiders — A.", simpeler: "Romusha = Indonesische slaaf-arbeiders Japan = A.", nogSimpeler: "Dwangarbeider = A." },
+          niveaus: { basis: "Gedwongen dwangarbeiders — A.", simpeler: "Romusha = Indonesische slaaf-arbeiders Japan", nogSimpeler: "Dwangarbeider" },
         },
       },
       {
@@ -207,7 +207,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "15 aug 1945 = V-J Day", tekst: "Na 2 atoombommen: 6 aug Hiroshima, 9 aug Nagasaki. 15 augustus 1945: **Keizer Hirohito** kondigt capitulatie aan via radio — eerste keer dat een Japanse keizer publiek sprak. Officiële tekening 2 september 1945 op USS Missouri." }],
           theorie: "Tijdlijn: 8 mei 1945 Duitsland over → 6 aug Hiroshima → 9 aug Nagasaki → 15 aug Japan capituleert → 17 aug Indonesië roept onafhankelijkheid uit.",
-          niveaus: { basis: "15 augustus 1945 — A.", simpeler: "Japan capituleert 15-8-1945 = A.", nogSimpeler: "15-8-1945 = A." },
+          niveaus: { basis: "15 augustus 1945 — A.", simpeler: "Japan capituleert 15-8-1945", nogSimpeler: "15-8-1945" },
         },
       },
       {
@@ -218,7 +218,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japan's snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
           theorie: "Cito-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
-          niveaus: { basis: "Doorbroken — A.", simpeler: "Japan won = NL-prestige weg = A.", nogSimpeler: "Doorbroken = A." },
+          niveaus: { basis: "Doorbroken — A.", simpeler: "Japan won = NL-prestige weg", nogSimpeler: "Doorbroken" },
         },
       },
     ],
@@ -238,7 +238,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "17 aug 1945 = Hari Kemerdekaan", tekst: "**Soekarno** las de **Proclamasi Kemerdekaan** (onafhankelijkheidsverklaring) voor om 10:00 op 17 augustus 1945, 2 dagen na Japans' capitulatie. Tekst werd op een typemachine getypt door **Sayuti Melik**. **Hari Kemerdekaan** (Onafhankelijkheidsdag) is Indonesische nationale feestdag." }],
           theorie: "Cito-tijdlijn: 15 aug Japan over → 17 aug Indonesië verklaart onafhankelijkheid → 1945-49 strijd → 27 dec 1949 NL erkent.",
-          niveaus: { basis: "17 augustus 1945 — A.", simpeler: "Soekarno-proclamatie = 17-8-1945 = A.", nogSimpeler: "17-8-1945 = A." },
+          niveaus: { basis: "17 augustus 1945 — A.", simpeler: "Soekarno-proclamatie = 17-8-1945", nogSimpeler: "17-8-1945" },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
           stappen: [{ titel: "'Politionele actie' = eufemisme", tekst: "**Politionele acties** klinkt onschuldig (politie-werk, orde-handhaving) maar het waren **militaire offensieven** met tienduizenden NL-soldaten. NL-regering wilde geen 'oorlog' erkennen om buitenlandse interventie te vermijden. Sinds 2022 wordt officieel **'koloniale oorlog'** gebruikt." }],
           woorden: [{ woord: "eufemisme", uitleg: "Verzachtende term voor iets onaangenaams." }, { woord: "politionele actie", uitleg: "NL-eufemisme voor militair offensief 1947 + 1948 in Indonesië." }],
           theorie: "Cito-controversie: NL-regering wijzigde in 2022 historische terminologie naar 'koloniale oorlog' op advies van wetenschappelijk onderzoek (KITLV/NIOD).",
-          niveaus: { basis: "Politionele acties — A.", simpeler: "Officiële NL-naam = politionele acties = A.", nogSimpeler: "Politioneel = A." },
+          niveaus: { basis: "Politionele acties — A.", simpeler: "Officiële NL-naam = politionele acties", nogSimpeler: "Politioneel" },
         },
       },
       {
@@ -261,7 +261,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Soevereiniteitsoverdracht Amsterdam", tekst: "**27 december 1949**: in **Paleis op de Dam, Amsterdam**, tekent **koningin Juliana** de overdracht. Sindsdien is Indonesië in NL-ogen officieel onafhankelijk. Indonesië zelf: officiele datum blijft 17-8-1945. **2005**: minister Ben Bot erkent symbolisch 17 augustus 1945 als juiste datum." }],
           theorie: "Spanning: NL viert 27-12-1949, Indonesië 17-8-1945. Verschil ~4 jaar van oorlog daartussen.",
-          niveaus: { basis: "27 december 1949 — A.", simpeler: "NL erkent soevereiniteit = 27-12-1949 = A.", nogSimpeler: "27-12-1949 = A." },
+          niveaus: { basis: "27 december 1949 — A.", simpeler: "NL erkent soevereiniteit = 27-12-1949", nogSimpeler: "27-12-1949" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
           stappen: [{ titel: "VS + VN = breekijzer", tekst: "**Verenigde Staten** dreigde **Marshall-hulp** (Europese wederopbouw na WO2) in te trekken als NL doorging. Voor NL was Marshall-geld essentieel voor wederopbouw. Plus: VN-Veiligheidsraad keurde NL-acties af (resolutie 1947). NL moest plooien." }],
           woorden: [{ woord: "Marshall-hulp", uitleg: "Amerikaans steunprogramma voor wederopbouw Europa na WO2 (1948-1952)." }],
           theorie: "Cito-context: VS in 1948 al Koude Oorlog-modus. Wilde geen instabiele kolonies waar communisme kon groeien — duwde dekolonisatie door.",
-          niveaus: { basis: "VS — A.", simpeler: "Amerika dreigde Marshall-hulp = A.", nogSimpeler: "VS = A." },
+          niveaus: { basis: "VS — A.", simpeler: "Amerika dreigde Marshall-hulp", nogSimpeler: "VS" },
         },
       },
       {
@@ -284,7 +284,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Excuses 2020", tekst: "**10 maart 2020**: koning Willem-Alexander biedt tijdens staatsbezoek Indonesië excuses aan voor 'buitensporig geweld' van NL-zijde in 1945-1949. Eerste expliciete koninklijke excuses. **2022**: ook premier Rutte excuses voor slavernijverleden in Indonesië/Suriname." }],
           theorie: "Cito-actueel: 2020-excuses + 2022-slavernij-excuses zijn kantelpunten in NL-koloniale herinnering.",
-          niveaus: { basis: "Willem-Alexander — A.", simpeler: "2020-excuses = Willem-Alexander = A.", nogSimpeler: "Willem-A = A." },
+          niveaus: { basis: "Willem-Alexander — A.", simpeler: "2020-excuses = Willem-Alexander", nogSimpeler: "Willem-A" },
         },
       },
     ],
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Niet — VOC is veel ouder dan onafhankelijkheid (~350 jaar verschil).", "Niet — VOC eerst (1602), dan cultuurstelsel.", "Niet — onafhankelijkheid is laatste in lijn."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde 1602-1949", tekst: "1) VOC **1602-1799** (handelscompagnie)\n2) Cultuurstelsel **1830-1870** (dwangcultuur)\n3) Ethische politiek **1901-1942** (welvaarts-koloniale ideologie)\n4) Onafhankelijkheid **1945** (Soekarno-proclamatie)" }],
-          niveaus: { basis: "1) VOC 2) Cultuurstelsel 3) Ethisch 4) Onafhankelijkheid — A.", simpeler: "Tijdsvolgorde = A.", nogSimpeler: "A = correct." },
+          niveaus: { basis: "1) VOC 2) Cultuurstelsel 3) Ethisch 4) Onafhankelijkheid — A.", simpeler: "Tijdsvolgorde", nogSimpeler: "A = correct." },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "1948-1980 — te laat.", "1980-2013 — veel te laat.", "Regentes 1890-1898, niet 1901."],
         uitlegPad: {
           stappen: [{ titel: "Wilhelmina = 1901-troonrede", tekst: "Koningin **Wilhelmina** (1880-1962, regering 1890-1948) sprak in troonrede 1901 over 'zedelijke roeping' = start ethische politiek." }],
-          niveaus: { basis: "Wilhelmina — A.", simpeler: "1901 = Wilhelmina = A.", nogSimpeler: "Wilhelmina = A." },
+          niveaus: { basis: "Wilhelmina — A.", simpeler: "1901 = Wilhelmina", nogSimpeler: "Wilhelmina" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "Hatta was vicepresident.", "Soeharto = tweede president (1967-1998), na Soekarno-coupe.", "Bestaat niet — verwarring met Soekarno + Soeharto."],
         uitlegPad: {
           stappen: [{ titel: "Soekarno = 1e, Soeharto = 2e", tekst: "**Soekarno** = eerste president 1945-1967. **Soeharto** = tweede president 1967-1998, na coup. Lijken op elkaar in naam maar zijn verschillend." }],
-          niveaus: { basis: "Soekarno — A.", simpeler: "Eerste president = Soekarno = A.", nogSimpeler: "Soekarno = A." },
+          niveaus: { basis: "Soekarno — A.", simpeler: "Eerste president = Soekarno", nogSimpeler: "Soekarno" },
         },
       },
       {
@@ -333,7 +333,7 @@ const steps = [
         wrongHints: [null, "Politionele acties = 1947-49, ~90 jaar later.", "Japan = 1942-45, ~80 jaar later.", "Slavenhandel = West-Indië, niet Java-context."],
         uitlegPad: {
           stappen: [{ titel: "Multatuli vs Cultuurstelsel", tekst: "*Max Havelaar* (1860) door Multatuli was geschreven om de **misbruiken van het Cultuurstelsel** (1830-1870) aan de kaak te stellen. Hielp om Cultuurstelsel langzaam af te schaffen ('Agrarische Wet' 1870)." }],
-          niveaus: { basis: "Cultuurstelsel — A.", simpeler: "Max Havelaar 1860 = tegen Cultuurstelsel = A.", nogSimpeler: "Cultuurstelsel = A." },
+          niveaus: { basis: "Cultuurstelsel — A.", simpeler: "Max Havelaar 1860 = tegen Cultuurstelsel", nogSimpeler: "Cultuurstelsel" },
         },
       },
       {
@@ -343,7 +343,7 @@ const steps = [
         wrongHints: [null, "PNI = 1927 (Soekarno).", "KNIL = NL-leger, juist onderdrukker.", "VOC was toen al 109 jaar dood."],
         uitlegPad: {
           stappen: [{ titel: "1908 = start nationalisme", tekst: "**Boedi Oetomo** opgericht 20 mei 1908 — eerste vredevolle nationalistische beweging. Vanuit medische studenten. Inspireerde latere bewegingen tot Soekarno's PNI in 1927." }],
-          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 nationalisme = Boedi Oetomo = A.", nogSimpeler: "Boedi Oetomo = A." },
+          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 nationalisme = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
         },
       },
     ],

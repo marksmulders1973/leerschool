@@ -38,7 +38,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Betoog = overtuigen", tekst: "**Betoog** = persuasieve tekst met **duidelijke mening** van schrijver + argumenten om lezer over te halen. 'Ik vind dat...' is signaal." }],
           theorie: "Tekst-doelen-cluster: betoog/beschouwing/uiteenzetting + soms beschrijving (literatuur) + activering (reclame).",
-          niveaus: { basis: "Betoog. A.", simpeler: "Overtuigen = betoog = A.", nogSimpeler: "Betoog = A." },
+          niveaus: { basis: "Betoog. A.", simpeler: "Overtuigen = betoog", nogSimpeler: "Betoog" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Beschouwing = nuance", tekst: "**Beschouwing** belicht **verschillende kanten** van kwestie. Schrijver kan **lichte voorkeur** uitspreken maar geen definitieve conclusie. Voorbeeld: NRC-opinie over migratie met meerdere perspectieven." }],
           theorie: "Cito-pattern: signaalwoorden 'aan de ene kant... aan de andere kant' wijzen bijna altijd op beschouwing.",
-          niveaus: { basis: "Voor + tegen afwegen. A.", simpeler: "Beschouwing = afwegen = A.", nogSimpeler: "Afwegen = A." },
+          niveaus: { basis: "Voor + tegen afwegen. A.", simpeler: "Beschouwing = afwegen", nogSimpeler: "Afwegen" },
         },
       },
       {
@@ -60,7 +60,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wikipedia = informeren", tekst: "**Uiteenzetting** = informatieve tekst zonder mening. Wikipedia-artikelen, schoolboek-paragrafen, instructies horen hier. Doel: **kennis overdragen**." }],
           theorie: "Cito-truc: titel 'Wat is X?' of 'Hoe werkt Y?' → uiteenzetting.",
-          niveaus: { basis: "Wikipedia. A.", simpeler: "Uiteenzetting = info = A.", nogSimpeler: "Wikipedia = A." },
+          niveaus: { basis: "Wikipedia. A.", simpeler: "Uiteenzetting = info", nogSimpeler: "Wikipedia" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = mening = betoog", tekst: "**'Ik vind dat'**, 'het is duidelijk dat', 'zonder twijfel', 'daarom moet' = signalen dat schrijver een **stellige mening** heeft. Betoog-kenmerk." }],
           theorie: "Vergelijk met 'aan de ene kant' (beschouwing) of 'ten eerste/vervolgens' (uiteenzetting).",
-          niveaus: { basis: "Ik vind. A.", simpeler: "Ik vind = mening = betoog = A.", nogSimpeler: "Ik vind = A." },
+          niveaus: { basis: "Ik vind. A.", simpeler: "Ik vind = mening = betoog", nogSimpeler: "Ik vind" },
         },
       },
       {
@@ -81,7 +81,7 @@ const steps = [
         wrongHints: [null, "Niet — heeft nuance.", "Niet — duidelijke mening.", "Niet — wil overtuigen."],
         uitlegPad: {
           stappen: [{ titel: "Uiteenzetting = neutraal", tekst: "**Uiteenzetting** = puur informatief. Geen mening. Vergelijk: encyclopedie, wetenschappelijk rapport (objectiviteit-norm). Schrijver presenteert feiten, lezer beslist zelf." }],
-          niveaus: { basis: "Uiteenzetting. A.", simpeler: "Neutraal = uiteenzetting = A.", nogSimpeler: "Neutraal = A." },
+          niveaus: { basis: "Uiteenzetting. A.", simpeler: "Neutraal = uiteenzetting", nogSimpeler: "Neutraal" },
         },
       },
     ],
@@ -101,7 +101,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Inleiding = openen", tekst: "**Inleiding**: trekt aandacht (aanleiding) + plaatst stelling. Lezer moet **eerste alinea** weten waar het over gaat én wat schrijver vindt." }],
           theorie: "Cito-tip: kijk altijd naar EERSTE ALINEA om stelling te vinden. Vaak letterlijk geformuleerd.",
-          niveaus: { basis: "Aanleiding + stelling. A.", simpeler: "Inleiding = aanleiding + stelling = A.", nogSimpeler: "Stelling = A." },
+          niveaus: { basis: "Aanleiding + stelling. A.", simpeler: "Inleiding = aanleiding + stelling", nogSimpeler: "Stelling" },
         },
       },
       {
@@ -112,7 +112,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. Eerste optie scoort op alle 3." }],
           theorie: "Cito-pattern: vermijd 'is belangrijk' (te vaag), 'wel/niet doen' zonder context, of vanzelfsprekendheden.",
-          niveaus: { basis: "Eerste optie. A.", simpeler: "Concreet + discussieerbaar = A.", nogSimpeler: "Eerste = A." },
+          niveaus: { basis: "Eerste optie. A.", simpeler: "Concreet + discussieerbaar", nogSimpeler: "Eerste" },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tegenargument noemen + weerleggen", tekst: "Een sterk betoog **onderkent tegenargumenten** ('Critici stellen X') maar **weerlegt** ze ('Dat klopt niet omdat...'). Toont dat schrijver het hele veld kent → meer geloofwaardig." }],
           theorie: "Cito-CSE-favoriet: tegenargument-weerlegging is herkennings-vraag. Zoek 'Sommigen', 'Tegenstanders', 'Critici stellen' + zin erna.",
-          niveaus: { basis: "Weerlegt het. A.", simpeler: "Tegenargument = noemen + weerleggen = A.", nogSimpeler: "Weerleggen = A." },
+          niveaus: { basis: "Weerlegt het. A.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
         wrongHints: [null, "Zwak — geen bewijs.", "Wel context maar zwakker dan feit.", "Te vaag."],
         uitlegPad: {
           stappen: [{ titel: "Hiërarchie argumenten", tekst: "Sterkste → zwakste: **feit** (onderzoek, statistiek) > **voorbeeld** (concrete case) > **autoriteit** (expert noemt) > **logica** (als-dan) > **emotie** (gevoel). Cito waardeert feit/voorbeeld het hoogst." }],
-          niveaus: { basis: "Feit. A.", simpeler: "Feit-argument = sterkste = A.", nogSimpeler: "Feit = A." },
+          niveaus: { basis: "Feit. A.", simpeler: "Feit-argument = sterkste", nogSimpeler: "Feit" },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Slot = afsluiten, niet openen", tekst: "Slot **sluit af**. Geen nieuwe argumenten — die horen in middenstuk. Slot herhaalt stelling (krachtiger) + eventueel oproep. Nieuw materiaal in slot = zwak betoog (lezer kan niet meer reageren)." }],
           theorie: "Cito-tip: in slot 'Concluderend...' / 'Daarom blijft...' / 'Het moet duidelijk zijn dat...' zijn signaalwoorden.",
-          niveaus: { basis: "Nieuwe argumenten. A.", simpeler: "Slot = geen nieuwe argumenten = A.", nogSimpeler: "Nieuwe = A." },
+          niveaus: { basis: "Nieuwe argumenten. A.", simpeler: "Slot = geen nieuwe argumenten", nogSimpeler: "Nieuwe" },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen aanval op persoon.", "Niet — geen zelf-bewijs."],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = ongelimiteerd", tekst: "**Generalisatie**: uitspraak over **alle leden** van een groep zonder bewijs. 'Iedereen', 'altijd', 'niemand', 'nooit', 'alle' = signaal. Probleem: 1 tegenvoorbeeld weerlegt." }],
-          niveaus: { basis: "Generalisatie. A.", simpeler: "Iedereen-uitspraak = generalisatie = A.", nogSimpeler: "Generalisatie = A." },
+          niveaus: { basis: "Generalisatie. A.", simpeler: "Iedereen-uitspraak = generalisatie", nogSimpeler: "Generalisatie" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je migratie willen beperken ZONDER racistisch te zijn. Onterecht binair maken." }],
           theorie: "Cito-favoriet: vals dilemma + 'wie niet voor is, is tegen' / 'óf X óf Y' / 'er is geen andere optie'.",
-          niveaus: { basis: "Vals dilemma. A.", simpeler: "Of-of zonder middenweg = vals dilemma = A.", nogSimpeler: "Vals dilemma = A." },
+          niveaus: { basis: "Vals dilemma. A.", simpeler: "Of-of zonder middenweg = vals dilemma", nogSimpeler: "Vals dilemma" },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stroman = verdraaid tegenstandpunt", tekst: "**Stroman-drogreden**: argument tegenstander **verdraaien tot extreme versie** die makkelijker te verslaan is. Bezuinigen ≠ afschaffen. Vechten tegen iets dat tegenstander niet zei." }],
           theorie: "Strawman (Engels) — schiet je een stropop neer ipv echte argument.",
-          niveaus: { basis: "Stroman. A.", simpeler: "Tegenstander verdraaien = stroman = A.", nogSimpeler: "Stroman = A." },
+          niveaus: { basis: "Stroman. A.", simpeler: "Tegenstander verdraaien = stroman", nogSimpeler: "Stroman" },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hellend vlak = ongegronde oorzaak-keten", tekst: "**Hellend vlak (slippery slope)**: claim dat A onvermijdelijk leidt tot Z via B, C, D... zonder dat keten bewezen is. **Empirisch onderzoek (Portugal-experiment)** weerlegt dat decriminaliseren cannabis tot heroïne-stijging leidt." }],
           theorie: "Cito-truc: 'Als we X toestaan, dan komt Y, dan Z' = hellend vlak. Bewijs voor elke schakel is nodig.",
-          niveaus: { basis: "Hellend vlak. A.", simpeler: "Onbewezen keten = hellend vlak = A.", nogSimpeler: "Hellend vlak = A." },
+          niveaus: { basis: "Hellend vlak. A.", simpeler: "Onbewezen keten = hellend vlak", nogSimpeler: "Hellend vlak" },
         },
       },
       {
@@ -207,7 +207,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. Andere opties zijn drogredenen (generalisatie / autoriteit / emotie)." }],
           theorie: "Cito-pattern: bij meerkeuze-vraag 'sterkste argument' → kies optie met BRON + CIJFERS / onderzoek.",
-          niveaus: { basis: "Eerste optie. A.", simpeler: "Onderzoek + cijfers = sterk = A.", nogSimpeler: "Eerste = A." },
+          niveaus: { basis: "Eerste optie. A.", simpeler: "Onderzoek + cijfers = sterk", nogSimpeler: "Eerste" },
         },
       },
     ],
@@ -227,7 +227,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vraag waarvan antwoord duidelijk", tekst: "**Retorische vraag**: vraag NIET om info maar om effect. Antwoord ligt vast ('niemand wil ongezond leven'). Doel: lezer impliciet doen instemmen." }],
           theorie: "Cito-pattern: retorische vragen vaak in opiniestukken + speeches.",
-          niveaus: { basis: "Retorische vraag. A.", simpeler: "Vraag-zonder-antwoord-nodig = retorisch = A.", nogSimpeler: "Retorisch = A." },
+          niveaus: { basis: "Retorische vraag. A.", simpeler: "Vraag-zonder-antwoord-nodig = retorisch", nogSimpeler: "Retorisch" },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Metafoor = zonder 'als'", tekst: "**Metafoor**: beeldspraak die A = B claimt (zonder 'als'). 'Leven IS rivier'. Vergelijking gebruikt WEL 'als': 'Het leven is ALS een rivier'." }],
           theorie: "Cito-tip: ezelsbrug 'Metafoor zonder als'. Vergelijking met 'als' of 'zoals'.",
-          niveaus: { basis: "Metafoor. A.", simpeler: "A = B zonder 'als' = metafoor = A.", nogSimpeler: "Metafoor = A." },
+          niveaus: { basis: "Metafoor. A.", simpeler: "A = B zonder 'als' = metafoor", nogSimpeler: "Metafoor" },
         },
       },
       {
@@ -249,7 +249,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Understatement = onderbenadrukking", tekst: "**Understatement** = bewust afzwakken. 'Niet onaardig' = heel aardig. 'Het regent een beetje' (terwijl 't plenst). Engels: 'It's a bit chilly' (bij −20°C). Vaak ironisch effect." }],
           theorie: "Britse humor-favoriet. Tegenovergesteld van hyperbool.",
-          niveaus: { basis: "Afzwakken. A.", simpeler: "Understatement = verzachten = A.", nogSimpeler: "Afzwakken = A." },
+          niveaus: { basis: "Afzwakken. A.", simpeler: "Understatement = verzachten", nogSimpeler: "Afzwakken" },
         },
       },
       {
@@ -260,7 +260,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Ironie = tegenovergestelde bedoeling", tekst: "**Ironie**: spreker zegt A, bedoelt **tegenovergestelde**. 'Geweldig weer' bij regenstorm betekent juist 'verschrikkelijk weer'. Lezer/luisteraar herkent contradictie." }],
           theorie: "Cito-favoriet: ironie herkennen in tekst — kijk naar context. Past gezegde bij situatie? Zo nee → mogelijk ironisch.",
-          niveaus: { basis: "Ironie. A.", simpeler: "Tegenovergestelde bedoelen = ironie = A.", nogSimpeler: "Ironie = A." },
+          niveaus: { basis: "Ironie. A.", simpeler: "Tegenovergestelde bedoelen = ironie", nogSimpeler: "Ironie" },
         },
       },
       {
@@ -271,7 +271,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "3 elementen = tricolon", tekst: "**Drieslag (tricolon)**: 3 elementen op rij — klinkt compleet + memorabel. Klassiek: 'Veni, vidi, vici' (Caesar), 'Vrijheid, gelijkheid, broederschap' (Franse Revolutie), 'Voor God, voor koning, voor vaderland'." }],
           theorie: "Onze hersenen onthouden patroon van 3 het best (drie-regel in retorica + reclame).",
-          niveaus: { basis: "Drieslag. A.", simpeler: "3 elementen = tricolon = A.", nogSimpeler: "Drieslag = A." },
+          niveaus: { basis: "Drieslag. A.", simpeler: "3 elementen = tricolon", nogSimpeler: "Drieslag" },
         },
       },
     ],
@@ -290,7 +290,7 @@ const steps = [
         wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — twee drogredenen tegelijk."],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
-          niveaus: { basis: "Autoriteit + generalisatie. A.", simpeler: "Opa + alle = twee drogredenen = A.", nogSimpeler: "Drogreden = A." },
+          niveaus: { basis: "Autoriteit + generalisatie. A.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },
         },
       },
       {
@@ -300,7 +300,7 @@ const steps = [
         wrongHints: [null, "Niet — geen duidelijke mening.", "Niet — meer dan alleen feiten.", "Niet — geen fictie."],
         uitlegPad: {
           stappen: [{ titel: "Verschillende kanten = beschouwing", tekst: "**Beschouwing** = belicht meerdere perspectieven zonder definitieve conclusie. Schrijver weegt af, soms met licht voorkeur, vaak open einde." }],
-          niveaus: { basis: "Beschouwing. A.", simpeler: "Verschillende kanten = beschouwing = A.", nogSimpeler: "Beschouwing = A." },
+          niveaus: { basis: "Beschouwing. A.", simpeler: "Verschillende kanten = beschouwing", nogSimpeler: "Beschouwing" },
         },
       },
       {
@@ -310,7 +310,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is retorische vraag.", "Niet — dat is antithese/contrast.", "Niet — dat is metafoor."],
         uitlegPad: {
           stappen: [{ titel: "Anafoor = begin-herhaling", tekst: "**Anafoor** = herhalen van **woord(en) aan begin** van opeenvolgende zinnen. 'Ik heb een droom dat... Ik heb een droom dat...' (Martin Luther King). Versterkt boodschap door ritme + nadruk." }],
-          niveaus: { basis: "Begin-herhaling. A.", simpeler: "Anafoor = herhaling begin = A.", nogSimpeler: "Begin = A." },
+          niveaus: { basis: "Begin-herhaling. A.", simpeler: "Anafoor = herhaling begin", nogSimpeler: "Begin" },
         },
       },
       {
@@ -320,7 +320,7 @@ const steps = [
         wrongHints: [null, "Niet — geeft zwak signaal.", "Niet — komt meestal in midden.", "Niet — slot is conclusie."],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument behandelen", tekst: "Goed betoog **erkent** tegenargumenten en weerlegt ze. Plaats: in midden, ergens tussen hoofd-argumenten. Toont kennis van veld + sterkt eigen positie." }],
-          niveaus: { basis: "Genoemd + weerlegd. A.", simpeler: "Tegenargument = noemen + weerleggen = A.", nogSimpeler: "Weerleggen = A." },
+          niveaus: { basis: "Genoemd + weerlegd. A.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
         wrongHints: [null, "Niet — bij vergelijking zou 'als een' staan.", "Niet — geen overdrijving.", "Niet — geen tegenovergestelde."],
         uitlegPad: {
           stappen: [{ titel: "Metafoor: 'is' = direct", tekst: "Hij IS een leeuw → metafoor (direct gelijkstellen). Hij is ALS een leeuw → vergelijking (met 'als'). Verschil: woord 'als' bepaalt." }],
-          niveaus: { basis: "Metafoor. A.", simpeler: "IS leeuw = metafoor = A.", nogSimpeler: "Metafoor = A." },
+          niveaus: { basis: "Metafoor. A.", simpeler: "IS leeuw = metafoor", nogSimpeler: "Metafoor" },
         },
       },
     ],

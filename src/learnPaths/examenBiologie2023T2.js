@@ -44,7 +44,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Onthoud truc: STAAFJES = STAAN (oprecht in donker) = nachtzien. KEGELTJES = KLEUR + KIES (scherp dag-zien). Donkere hal = staafjes-modus. 's Nachts buiten ook = staafjes.",
-        { basis: "Donker → staafjes. = B.", simpeler: "Staafjes werken in donker, kegeltjes alleen in licht. = B.", nogSimpeler: "Staafjes = B." },
+        { basis: "Donker → staafjes.", simpeler: "Staafjes werken in donker, kegeltjes alleen in licht.", nogSimpeler: "Staafjes" },
         [{ woord: "staafje", uitleg: "Zintuigcel netvlies — licht/donker (geen kleur)." }, { woord: "kegeltje", uitleg: "Zintuigcel netvlies — kleur + scherp (alleen genoeg licht)." }],
       ),
     }],
@@ -72,7 +72,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Geslachtelijk = ZAADJES via bloem+stuifmeel (mannelijk-vrouwelijk gecombineerd → DNA gemengd). Ongeslachtelijk = STEKJES/WORTELSTOK/UITLOPER (gewoon kopie via plant zelf). Brandnetel + aardbei + bamboe doen BEIDE — dat maakt ze hardnekkig.",
-        { basis: "Brandnetel doet beide. = C.", simpeler: "Brandnetel = bloemen (geslachtelijk) + wortels die kruipen (ongeslachtelijk). = C.", nogSimpeler: "Beide = C." },
+        { basis: "Brandnetel doet beide.", simpeler: "Brandnetel = bloemen (geslachtelijk) + wortels die kruipen (ongeslachtelijk).", nogSimpeler: "Beide" },
         [{ woord: "wortelstok", uitleg: "Ondergrondse stengel waarmee plant uitloopt." }, { woord: "ongeslachtelijk", uitleg: "Voortplanting zonder paring — kopie van moederplant." }],
       ),
     }],
@@ -101,7 +101,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Voedingsstoffen + functie: EIWITTEN = bouwen (spieren/organen/veren). KOOLHYDRATEN = brandstof snel (suiker/zetmeel). VETTEN = brandstof + reserve. MINERALEN = klein (Ca botten, Fe bloed). VITAMINEN = regelaars. Voor GROEI = eiwit nodig.",
-        { basis: "Groei = eiwit. = A.", simpeler: "Bouwen van lichaam (spieren/veren) = eiwit nodig. Rupsen = vol eiwit. = A.", nogSimpeler: "Eiwit = A." },
+        { basis: "Groei = eiwit.", simpeler: "Bouwen van lichaam (spieren/veren) = eiwit nodig. Rupsen = vol eiwit.", nogSimpeler: "Eiwit" },
         [{ woord: "eiwit", uitleg: "Bouwstof — spieren, organen, veren maken." }, { woord: "koolhydraat", uitleg: "Brandstof — energie geven." }],
       ),
     }],
@@ -130,7 +130,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Onthoud: GEN-otype = GEN-en in DNA = nooit veranderen. FEN-otype = wat je ZIET = wel veranderen. Eeneiige tweelingen = zelfde GENotype maar door omgeving verschillende FENotype. Rups = zelfde DNA als vlinder, andere genen aan/uit.",
-        { basis: "Genotype blijft gelijk. = D.", simpeler: "DNA verandert niet — wel hoe het lichaam eruitziet (fenotype). = D.", nogSimpeler: "Genotype gelijk = D." },
+        { basis: "Genotype blijft gelijk.", simpeler: "DNA verandert niet — wel hoe het lichaam eruitziet (fenotype).", nogSimpeler: "Genotype gelijk" },
         [{ woord: "genotype", uitleg: "Je DNA-code — onveranderlijk." }, { woord: "fenotype", uitleg: "Je uiterlijk + eigenschappen — wel veranderlijk." }],
       ),
     }],
@@ -159,7 +159,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Bloed wordt gemaakt in BEENMERG = zacht weefsel binnenin grote botten (heup, borstbeen, ruggenwervels). Daar zitten stamcellen die zich delen + verschillende soorten bloedcellen maken. Bij leukemie = stamcellen worden gestoord → kanker van witte bloedcellen.",
-        { basis: "Stamcellen voor bloed = in botten (beenmerg). = A.", simpeler: "Beenmerg = zacht spul binnenin bot → maakt bloed. = A.", nogSimpeler: "Botten = A." },
+        { basis: "Stamcellen voor bloed = in botten (beenmerg).", simpeler: "Beenmerg = zacht spul binnenin bot → maakt bloed.", nogSimpeler: "Botten" },
         [{ woord: "stamcel", uitleg: "Cel die zich kan delen + nieuwe cel-types vormen." }, { woord: "beenmerg", uitleg: "Zacht weefsel binnenin botten — maakt bloedcellen." }],
       ),
     }],
@@ -188,7 +188,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "2 cel-types onthouden: PROKARYOOT (bacteriën) = GEEN celkern, DNA los in cytoplasma. EUKARYOOT (plant/dier/schimmel/protisten) = WEL celkern. Alg = eukaryoot. Onderscheid: CELKERN.",
-        { basis: "Alg heeft celkern, bacterie niet. = A.", simpeler: "Alg = 'echte' cel (celkern). Bacterie = oerprimitief (geen celkern). = A.", nogSimpeler: "Celkern = A." },
+        { basis: "Alg heeft celkern, bacterie niet.", simpeler: "Alg = 'echte' cel (celkern). Bacterie = oerprimitief (geen celkern).", nogSimpeler: "Celkern" },
         [{ woord: "celkern", uitleg: "Bol in cel met DNA — alleen bij eukaryoten." }, { woord: "prokaryoot", uitleg: "Cel zonder celkern (bacterie)." }],
       ),
     }],

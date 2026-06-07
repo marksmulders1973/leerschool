@@ -33,7 +33,7 @@ const steps = [
         explanation: "**Christendom** is wereldwijd de grootste religie met ~2,4 miljard aanhangers. Islam is 2e (~1,9 mld), hindoeïsme 3e (~1,2 mld), boeddhisme 4e (~500 mln). Antwoord C.",
         uitlegPad: compact(
           "Top 5 wereldreligies: 1) christendom 2,4 mld, 2) islam 1,9 mld, 3) hindoeïsme 1,2 mld, 4) boeddhisme 0,5 mld, 5) jodendom 0,015 mld. Plus 1,2 mld zonder religie.",
-          { basis: "Christendom. = C.", simpeler: "Grootste religie = christendom (2,4 mld). = C.", nogSimpeler: "Christendom = C." },
+          { basis: "Christendom.", simpeler: "Grootste religie = christendom (2,4 mld).", nogSimpeler: "Christendom" },
           [{ woord: "wereldreligie", uitleg: "Religie met wereldwijde aanhangers." }],
         ),
       },
@@ -45,7 +45,7 @@ const steps = [
         explanation: "**Monotheïstisch** = mono (= één) + theos (= god). Drie grote monotheïsmen: christendom, islam, jodendom — alle drie geloven in dezelfde stamvader Abraham. **Polytheïstisch** = polys (= veel) = meerdere goden (hindoeïsme klassiek, oude Grieken/Romeinen). Antwoord B.",
         uitlegPad: compact(
           "Mono = 1 (monotheïsme = 1 god). Poly = veel (polytheïsme = meerdere goden). Atheïsme = geen god. Agnosticisme = niet zeker.",
-          { basis: "Monotheïstisch. = B.", simpeler: "1 god = mono. = B.", nogSimpeler: "Mono = B." },
+          { basis: "Monotheïstisch.", simpeler: "1 god = mono.", nogSimpeler: "Mono" },
           [{ woord: "monotheïsme", uitleg: "Geloof in één god (christendom/islam/jodendom)." }, { woord: "polytheïsme", uitleg: "Geloof in meerdere goden." }, { woord: "atheïsme", uitleg: "Niet geloven in god." }],
         ),
       },
@@ -57,7 +57,7 @@ const steps = [
         explanation: "**Hindoeïsme** is de oudste — >3000 jaar oud (~1500 v.Chr.). Geen één 'stichter'. Boeddhisme volgt (6e eeuw v.Chr.), dan christendom (1e eeuw), islam (7e eeuw). Jodendom is ook heel oud (~1800 v.Chr.) maar 'jonger' dan oudste hindoe-teksten. Antwoord C.",
         uitlegPad: compact(
           "Tijdlijn: HINDOEÏSME >3000 jr (oudst, ~1500 vChr). JODENDOM ~1800 vChr (Abraham). BOEDDHISME 6e eeuw vChr. CHRISTENDOM 1e eeuw nChr. ISLAM 7e eeuw nChr (jongst).",
-          { basis: "Hindoeïsme oudste. = C.", simpeler: "Hindoeïsme is +3000 jaar oud — oudste wereldreligie. = C.", nogSimpeler: "Hindoeïsme = C." },
+          { basis: "Hindoeïsme oudste.", simpeler: "Hindoeïsme is +3000 jaar oud — oudste wereldreligie.", nogSimpeler: "Hindoeïsme" },
           [{ woord: "hindoeïsme", uitleg: "Oudste wereldreligie, ontstaan in India >3000 jaar geleden." }],
         ),
       },
@@ -76,7 +76,7 @@ const steps = [
         explanation: "**Bijbel** = het heilige boek van het christendom. Bestaat uit Oude Testament (gedeeld met jodendom, ~39 boeken) + Nieuwe Testament (specifiek christelijk, ~27 boeken over Jezus + zijn leerlingen). Antwoord B.",
         uitlegPad: compact(
           "Boeken-tabel: BIJBEL = christendom. KORAN = islam. TORA/TENACH = jodendom. VEDA = hindoeïsme. TRIPITAKA = boeddhisme.",
-          { basis: "Bijbel. = B.", simpeler: "Christendom = Bijbel. = B.", nogSimpeler: "Bijbel = B." },
+          { basis: "Bijbel.", simpeler: "Christendom = Bijbel.", nogSimpeler: "Bijbel" },
           [{ woord: "Bijbel", uitleg: "Heilig boek christendom — Oude + Nieuwe Testament." }, { woord: "Oude Testament", uitleg: "Eerste deel Bijbel, gedeeld met jodendom." }],
         ),
       },
@@ -88,7 +88,7 @@ const steps = [
         explanation: "**Kerk** = christelijk gebedshuis. Grote kerken heten **kathedraal** of **basiliek**. Hoofd-rooms-katholieke kerk = Sint-Pietersbasiliek in Vaticaan, Rome. Antwoord B.",
         uitlegPad: compact(
           "Gebouwen-tabel: KERK/KATHEDRAAL = christendom. MOSKEE = islam. TEMPEL = hindoeïsme. PAGODE/TEMPEL = boeddhisme. SYNAGOGE = jodendom.",
-          { basis: "Kerk. = B.", simpeler: "Christenen = kerk. = B.", nogSimpeler: "Kerk = B." },
+          { basis: "Kerk.", simpeler: "Christenen = kerk.", nogSimpeler: "Kerk" },
           [{ woord: "kerk", uitleg: "Christelijk gebedshuis." }, { woord: "kathedraal", uitleg: "Grote bisschopskerk." }],
         ),
       },
@@ -100,7 +100,7 @@ const steps = [
         explanation: "**Maarten Luther** (1483-1546) = Duitse theoloog. In 1517 spijkerde hij 95 stellingen op een kerkdeur in Wittenberg om misbruik in de rooms-katholieke kerk aan te klagen. Dit begin de **Reformatie** → ontstaan van protestantse kerken. Antwoord C.",
         uitlegPad: compact(
           "Maarten Luther 1517 = begin van Reformatie. Splitsing rooms-katholiek vs protestants. Belangrijk in Nederland: 80-jarige Oorlog ging deels om religievrijheid.",
-          { basis: "Maarten Luther. = C.", simpeler: "Protestants = Luther 1517. = C.", nogSimpeler: "Luther = C." },
+          { basis: "Maarten Luther.", simpeler: "Protestants = Luther 1517.", nogSimpeler: "Luther" },
           [{ woord: "Reformatie", uitleg: "Religieuze hervormingsbeweging 16e eeuw — afsplitsing van rooms-katholieke kerk." }, { woord: "Maarten Luther", uitleg: "Duitse theoloog, startte Reformatie 1517." }],
         ),
       },
@@ -119,7 +119,7 @@ const steps = [
         explanation: "**Mohammed** (570-632 n.Chr.) = de profeet van de islam volgens de moslims. Geboren in Mekka. Ontving openbaringen van Allah die werden opgeschreven in de Koran. Antwoord B.",
         uitlegPad: compact(
           "Mohammed = profeet islam (570-632). Geboren Mekka. Stierf in Medina. Koran = zijn openbaringen.",
-          { basis: "Mohammed. = B.", simpeler: "Islam-profeet = Mohammed. = B.", nogSimpeler: "Mohammed = B." },
+          { basis: "Mohammed.", simpeler: "Islam-profeet = Mohammed.", nogSimpeler: "Mohammed" },
           [{ woord: "profeet", uitleg: "Iemand die boodschappen van god doorgeeft aan mensen." }, { woord: "Allah", uitleg: "Arabische naam voor god in de islam." }],
         ),
       },
@@ -131,7 +131,7 @@ const steps = [
         explanation: "**Koran** = heilig boek van de islam. Bevat de openbaringen die Mohammed kreeg van Allah via aartsengel Gabriël. 114 hoofdstukken (soera's). Geschreven in Arabisch. Antwoord C.",
         uitlegPad: compact(
           "Koran = islam (114 soera's in Arabisch). Bijbel = christendom. Tora = jodendom. Veda = hindoeïsme. Tripitaka = boeddhisme.",
-          { basis: "Koran. = C.", simpeler: "Islam = Koran. = C.", nogSimpeler: "Koran = C." },
+          { basis: "Koran.", simpeler: "Islam = Koran.", nogSimpeler: "Koran" },
           [{ woord: "Koran", uitleg: "Heilig boek islam — 114 soera's in Arabisch." }, { woord: "soera", uitleg: "Hoofdstuk in de Koran." }],
         ),
       },
@@ -143,7 +143,7 @@ const steps = [
         explanation: "**Ramadan** = 9e maand van islamitische kalender. Volwassen moslims vasten **van zonsopgang tot zonsondergang** (geen eten/drinken/roken). 's Avonds is **Iftar** (eten-bij-zonsondergang). Eind van Ramadan = **Suikerfeest (Eid al-Fitr)**. Antwoord A.",
         uitlegPad: compact(
           "Ramadan = vasten van zonsopgang tot zonsondergang, hele maand lang. Eind = Suikerfeest. Een van 5 zuilen islam.",
-          { basis: "Dag-vasten 1 maand. = A.", simpeler: "Ramadan = overdag niet eten, hele maand. = A.", nogSimpeler: "Dag-vasten = A." },
+          { basis: "Dag-vasten 1 maand.", simpeler: "Ramadan = overdag niet eten, hele maand.", nogSimpeler: "Dag-vasten" },
           [{ woord: "Ramadan", uitleg: "Maand van vasten (overdag) in islam." }, { woord: "Suikerfeest", uitleg: "Eid al-Fitr — feest na Ramadan." }],
         ),
       },
@@ -162,7 +162,7 @@ const steps = [
         explanation: "**India** is bakermat van hindoeïsme. Ook van boeddhisme (al verspreidde zich later). ~80% van India is hindoe. Hindoeïsme is oudste wereldreligie, >3000 jaar oud. Antwoord B.",
         uitlegPad: compact(
           "Hindoeïsme = India (oudste wereldreligie). Boeddhisme ook India/Nepal. China = taoïsme/confucianisme. Iran (vroeger) = zoroastrisme.",
-          { basis: "India. = B.", simpeler: "Hindoeïsme = India. = B.", nogSimpeler: "India = B." },
+          { basis: "India.", simpeler: "Hindoeïsme = India.", nogSimpeler: "India" },
           [{ woord: "hindoeïsme", uitleg: "Oudste wereldreligie, ontstaan in India." }],
         ),
       },
@@ -174,7 +174,7 @@ const steps = [
         explanation: "**Siddhartha Gautama** (~563-483 v.Chr.) = Indiaas/Nepalese prins. Verliet zijn paleis om antwoord te zoeken op het lijden. Mediteerde onder bodhi-boom en bereikte 'verlichting' (=Boeddha). Onderwees het 8-voudige pad. Antwoord A.",
         uitlegPad: compact(
           "Siddhartha Gautama = Boeddha. Indiase prins ~500 vChr. Verlichting onder bodhi-boom. Stichter boeddhisme. 4 edele waarheden + 8-voudig pad.",
-          { basis: "Indiase prins. = A.", simpeler: "Boeddha = prins Siddhartha uit India. = A.", nogSimpeler: "Prins = A." },
+          { basis: "Indiase prins.", simpeler: "Boeddha = prins Siddhartha uit India.", nogSimpeler: "Prins" },
           [{ woord: "Boeddha", uitleg: "De 'Ontwaakte' — Siddhartha Gautama na zijn verlichting." }, { woord: "verlichting", uitleg: "In boeddhisme: ontwaken uit illusie + bevrijding uit lijden." }],
         ),
       },
@@ -186,7 +186,7 @@ const steps = [
         explanation: "**Reïncarnatie** = herboren worden in nieuwe vorm. Welke vorm hangt af van **karma** (je goede/slechte daden in vorig leven). Zowel hindoeïsme als boeddhisme delen dit concept. Doel: uit deze cyclus losbreken (moksha/nirwana). Antwoord B.",
         uitlegPad: compact(
           "Reïncarnatie = herboren worden in nieuwe vorm na dood. Karma bepaalt nieuwe vorm. Hindoeïsme + boeddhisme delen dit. Christendom/islam = hemel/hel-concept.",
-          { basis: "Reïncarnatie. = B.", simpeler: "Hindoe + boeddhist = herboren worden. = B.", nogSimpeler: "Reïncarnatie = B." },
+          { basis: "Reïncarnatie.", simpeler: "Hindoe + boeddhist = herboren worden.", nogSimpeler: "Reïncarnatie" },
           [{ woord: "reïncarnatie", uitleg: "Wedergeboorte in nieuwe vorm na dood." }, { woord: "karma", uitleg: "Optelsom van goede/slechte daden — bepaalt vorm volgende leven." }, { woord: "nirwana", uitleg: "Boeddhistisch doel: bevrijding uit cyclus." }],
         ),
       },
@@ -205,7 +205,7 @@ const steps = [
         explanation: "**Davidster** = zespuntige ster. Genoemd naar koning David. Op de vlag van Israël. Plus **menora** = 7-armige kandelaar (oud joods symbool). Antwoord C.",
         uitlegPad: compact(
           "Symbolen-tabel: KRUIS=christendom. HALVE MAAN+STER=islam. DAVIDSTER=jodendom. OM=hindoeïsme. WIEL VAN DHARMA=boeddhisme.",
-          { basis: "Davidster. = C.", simpeler: "Jodendom = Davidster (zespuntige ster). = C.", nogSimpeler: "Davidster = C." },
+          { basis: "Davidster.", simpeler: "Jodendom = Davidster (zespuntige ster).", nogSimpeler: "Davidster" },
           [{ woord: "Davidster", uitleg: "Zespuntige ster — symbool jodendom + Israël." }, { woord: "menora", uitleg: "7-armige kandelaar — oudste joodse symbool." }],
         ),
       },
@@ -217,7 +217,7 @@ const steps = [
         explanation: "**Jeruzalem** (Israël) = oude heilige stad voor 3 monotheïstische religies. **Klaagmuur** = laatste overblijfsel van de oude Tempel van Jeruzalem (verwoest 70 n.Chr. door Romeinen). Joden bidden + steken briefjes in de muur. Antwoord C.",
         uitlegPad: compact(
           "Jeruzalem = heilig voor 3 religies: Klaagmuur (joden), Heilig Graf (christenen), Rotskoepel (moslims). Plus tempelberg.",
-          { basis: "Jeruzalem. = C.", simpeler: "Klaagmuur = Jeruzalem. = C.", nogSimpeler: "Jeruzalem = C." },
+          { basis: "Jeruzalem.", simpeler: "Klaagmuur = Jeruzalem.", nogSimpeler: "Jeruzalem" },
           [{ woord: "Klaagmuur", uitleg: "Heilige muur in Jeruzalem — rest van oude Tempel." }],
         ),
       },
@@ -229,7 +229,7 @@ const steps = [
         explanation: "**Sabbat** = zaterdag (van vrijdagavond tot zaterdagavond). Volgens Tora rustte God op de 7e dag van de schepping. Strikt orthodoxe joden werken dan helemaal niet (geen lichten aan, geen auto). Antwoord B.",
         uitlegPad: compact(
           "Heilige dagen: vrijdag=islam. zaterdag=jodendom (sabbat). zondag=christendom. Sabbat = vanaf zonsondergang vrijdag tot zonsondergang zaterdag.",
-          { basis: "Zaterdag. = B.", simpeler: "Joden = sabbat zaterdag. = B.", nogSimpeler: "Zaterdag = B." },
+          { basis: "Zaterdag.", simpeler: "Joden = sabbat zaterdag.", nogSimpeler: "Zaterdag" },
           [{ woord: "sabbat", uitleg: "Joodse rustdag — zaterdag." }],
         ),
       },
@@ -253,7 +253,7 @@ const steps = [
         explanation: "**Abrahamitische religies** = christendom + islam + jodendom — alle 3 monotheïstisch + delen Abraham als stamvader + Oude Testament-figuren. Hindoeïsme = polytheïstisch. Boeddhisme = niet-theïstisch. Antwoord B.",
         uitlegPad: compact(
           "Monotheïsmen: christendom, islam, jodendom. Polytheïsme: hindoeïsme. Niet-theïstisch: boeddhisme. Alle 3 monotheïsmen = delen Abraham als stamvader.",
-          { basis: "Christendom + islam + jodendom. = B.", simpeler: "3 boekreligies met Abraham. = B.", nogSimpeler: "3 mono = B." },
+          { basis: "Christendom + islam + jodendom.", simpeler: "3 boekreligies met Abraham.", nogSimpeler: "3 mono" },
           [{ woord: "Abrahamitische religies", uitleg: "Christendom + islam + jodendom — delen Abraham als stamvader." }],
         ),
       },
@@ -265,7 +265,7 @@ const steps = [
         explanation: "**India** = ~80% hindoe (~1 miljard mensen). Daarnaast ~15% moslim (~200 mln). Vandaar dat India veruit grootste hindoe-bevolking heeft. Antwoord C.",
         uitlegPad: compact(
           "Hindoeïsme = India (bakermat + grootste bevolking). Boeddhisme = Thailand/Sri Lanka/Tibet. Islam = Saudi-Arabië/Iran. Jodendom = Israël/VS.",
-          { basis: "India. = C.", simpeler: "Hindoeïsme = India (80% hindoe). = C.", nogSimpeler: "India = C." },
+          { basis: "India.", simpeler: "Hindoeïsme = India (80% hindoe).", nogSimpeler: "India" },
           [{ woord: "India", uitleg: "Land met ~1 mld hindoes (80% bevolking)." }],
         ),
       },
@@ -277,7 +277,7 @@ const steps = [
         explanation: "**Boeddhisme** = niet-theïstische religie. Geen schepper-god, geen aanbidding van god. Wel: mediteren, ethisch leven, streven naar verlichting (nirwana). Meer een filosofie/levensweg dan een religie in westerse zin. Antwoord D.",
         uitlegPad: compact(
           "Boeddhisme = niet-theïstisch = geen schepper-god. Wel: meditatie + 8-voudig pad + verlichting. Soms gerekend als filosofie i.p.v. religie.",
-          { basis: "Boeddhisme. = D.", simpeler: "Boeddha = geen god, wel filosofie. = D.", nogSimpeler: "Boeddhisme = D." },
+          { basis: "Boeddhisme.", simpeler: "Boeddha = geen god, wel filosofie.", nogSimpeler: "Boeddhisme" },
           [{ woord: "niet-theïstisch", uitleg: "Zonder geloof in een god — wel andere spirituele praktijken." }],
         ),
       },

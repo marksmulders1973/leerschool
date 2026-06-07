@@ -78,11 +78,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Hoofdonderwerp = rode draad door ALLE alinea's. Milieueffecten en samenwerking zijn losse stukken; de kern die alles verbindt is de marktplaats/oplossing tegen bomenkap. = B.",
+        "Hoofdonderwerp = rode draad door ALLE alinea's. Milieueffecten en samenwerking zijn losse stukken; de kern die alles verbindt is de marktplaats/oplossing tegen bomenkap.",
         {
-          basis: "Rode draad = oplossing tegen kap. = B.",
-          simpeler: "Waar gaat ALLES over? Bomen redden/verplaatsen. = B.",
-          nogSimpeler: "Oplossing tegen kap = B.",
+          basis: "Rode draad = oplossing tegen kap.",
+          simpeler: "Waar gaat ALLES over? Bomen redden/verplaatsen.",
+          nogSimpeler: "Oplossing tegen kap",
         },
         [
           { woord: "hoofdonderwerp", uitleg: "Het centrale thema dat door de hele tekst loopt." },
@@ -111,11 +111,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Vraag jezelf af: is het tweede een DOEL van het eerste? Het platform (12) bestaat OM burgers te informeren (13). 'Zo kun je...' = waartoe het dient = middel-doel. = A.",
+        "Vraag jezelf af: is het tweede een DOEL van het eerste? Het platform (12) bestaat OM burgers te informeren (13). 'Zo kun je...' = waartoe het dient = middel-doel.",
         {
-          basis: "Platform dient om te informeren = middel-doel. = A.",
-          simpeler: "Het ene is een middel voor het doel in het andere. = A.",
-          nogSimpeler: "Middel-doel = A.",
+          basis: "Platform dient om te informeren = middel-doel.",
+          simpeler: "Het ene is een middel voor het doel in het andere.",
+          nogSimpeler: "Middel-doel",
         },
         [
           { woord: "middel-doel", uitleg: "Verband waarbij het ene wordt gebruikt OM het andere te bereiken." },
@@ -149,11 +149,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Hoofdgedachte = boodschap van de HELE tekst in 1 zin. Niet te smal (alleen milieu of alleen marktplaats). Kern: bomen redden door ze in kaart te brengen en te verplaatsen. = D.",
+        "Hoofdgedachte = boodschap van de HELE tekst in 1 zin. Niet te smal (alleen milieu of alleen marktplaats). Kern: bomen redden door ze in kaart te brengen en te verplaatsen.",
         {
-          basis: "Kern = bomen redden + verplaatsen. = D.",
-          simpeler: "Hele tekst: kap voorkomen door verplaatsen. = D.",
-          nogSimpeler: "Redden + verplaatsen = D.",
+          basis: "Kern = bomen redden + verplaatsen.",
+          simpeler: "Hele tekst: kap voorkomen door verplaatsen.",
+          nogSimpeler: "Redden + verplaatsen",
         },
         [
           { woord: "hoofdgedachte", uitleg: "De centrale boodschap van de tekst, samengevat in 1 zin." },
@@ -187,11 +187,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Deelonderwerp = wat dit BLOK samen behandelt. De alinea's noemen meerdere mogelijke redenen — dus de overkoepelende noemer is 'verklaringen voor gapen'. = D.",
+        "Deelonderwerp = wat dit BLOK samen behandelt. De alinea's noemen meerdere mogelijke redenen — dus de overkoepelende noemer is 'verklaringen voor gapen'.",
         {
-          basis: "Blok = verschillende verklaringen. = D.",
-          simpeler: "Ze noemen meerdere redenen → verklaringen. = D.",
-          nogSimpeler: "Verklaringen = D.",
+          basis: "Blok = verschillende verklaringen.",
+          simpeler: "Ze noemen meerdere redenen → verklaringen.",
+          nogSimpeler: "Verklaringen",
         },
         [
           { woord: "deelonderwerp", uitleg: "Het sub-thema dat één blok alinea's samen behandelt." },
@@ -225,11 +225,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Informeren = uitleggen/laten weten. Overtuigen = een mening doordrukken. De tekst legt feiten en theorieën uit zonder partij te kiezen → informeren over functie en werking. = B.",
+        "Informeren = uitleggen/laten weten. Overtuigen = een mening doordrukken. De tekst legt feiten en theorieën uit zonder partij te kiezen → informeren over functie en werking.",
         {
-          basis: "Legt uit, kiest geen partij = informeren. = B.",
-          simpeler: "De tekst LEERT je hoe gapen werkt. = B.",
-          nogSimpeler: "Informeren = B.",
+          basis: "Legt uit, kiest geen partij = informeren.",
+          simpeler: "De tekst LEERT je hoe gapen werkt.",
+          nogSimpeler: "Informeren",
         },
         [
           { woord: "tekstdoel", uitleg: "Wat de schrijver met de tekst wil bereiken: informeren, overtuigen, amuseren of activeren." },
@@ -263,11 +263,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Beeldspraak ontleden: 'opvallen in de kudde' = anders dan de rest = onderscheidend. 'Laarzen in de Hollandse klei' = met beide benen op de grond = nuchter. = B.",
+        "Beeldspraak ontleden: 'opvallen in de kudde' = anders dan de rest = onderscheidend. 'Laarzen in de Hollandse klei' = met beide benen op de grond = nuchter.",
         {
-          basis: "Opvallen = onderscheidend, klei = nuchter. = B.",
-          simpeler: "Anders dan de rest + down-to-earth. = B.",
-          nogSimpeler: "Onderscheidend + nuchter = B.",
+          basis: "Opvallen = onderscheidend, klei = nuchter.",
+          simpeler: "Anders dan de rest + down-to-earth.",
+          nogSimpeler: "Onderscheidend + nuchter",
         },
         [
           { woord: "beeldspraak", uitleg: "Iets niet letterlijk zeggen maar met een beeld — hier 'laarzen in de klei' voor nuchterheid." },

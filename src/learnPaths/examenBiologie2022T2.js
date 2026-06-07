@@ -45,7 +45,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 hormonen + functie: ADRENALINE (bijnieren, stress, versnelt hart), GLUCAGON (alvleesklier, verhoogt bloedsuiker), INSULINE (alvleesklier, verlaagt bloedsuiker). Hart-effect = adrenaline. Bètablokker werkt door 'beta-receptoren' voor adrenaline te blokkeren.",
-        { basis: "Adrenaline op hart → bètablokker blokkeert adrenaline. = A.", simpeler: "Bèta-blokker → adrenaline geblokkeerd → hart langzamer. = A.", nogSimpeler: "Adrenaline = A." },
+        { basis: "Adrenaline op hart → bètablokker blokkeert adrenaline.", simpeler: "Bèta-blokker → adrenaline geblokkeerd → hart langzamer.", nogSimpeler: "Adrenaline" },
         [{ woord: "adrenaline", uitleg: "Stress-hormoon uit bijnieren — versnelt hart." }, { woord: "bètablokker", uitleg: "Medicijn dat adrenaline-receptoren blokkeert." }],
       ),
     }],
@@ -73,7 +73,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 hersendelen + functie: GROTE HERSENEN (bewust — denken/voelen/zien/horen/pijn), KLEINE HERSENEN (motoriek + evenwicht), HERSENSTAM (autonoom — ademen, hart, bloeddruk). Pijn voelen = bewust = grote hersenen.",
-        { basis: "Pijn-waarneming = bewust = grote hersenen. = A.", simpeler: "Voelen/denken/zien = grote hersenen. = A.", nogSimpeler: "Grote = A." },
+        { basis: "Pijn-waarneming = bewust = grote hersenen.", simpeler: "Voelen/denken/zien = grote hersenen.", nogSimpeler: "Grote" },
         [{ woord: "grote hersenen", uitleg: "Bewuste waarneming, denken, bewegen." }, { woord: "hersenstam", uitleg: "Autonoom — ademen, hartslag." }],
       ),
     }],
@@ -101,7 +101,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Reflexboog: prik in vinger → GEVOELSZENUW (huid naar ruggenmerg) → SCHAKELCEL (in ruggenmerg) → BEWEGINGSZENUW (van ruggenmerg naar spier) → spier trekt hand terug. Richting onthouden: 'gevoel komt binnen, beweging gaat uit'.",
-        { basis: "Huid → ruggenmerg = gevoelszenuw. = B.", simpeler: "Voelen = inkomend signaal naar ruggenmerg = gevoelszenuw. = B.", nogSimpeler: "Gevoel = B." },
+        { basis: "Huid → ruggenmerg = gevoelszenuw.", simpeler: "Voelen = inkomend signaal naar ruggenmerg = gevoelszenuw.", nogSimpeler: "Gevoel" },
         [{ woord: "gevoelszenuw", uitleg: "Brengt impuls van zintuig naar ruggenmerg/hersenen." }, { woord: "schakelcel", uitleg: "Verbindt binnen ruggenmerg/hersenen." }],
       ),
     }],
@@ -129,7 +129,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 leertypes onthouden: GEWENNING = niet meer reageren (vogel op vogelverschrikker). INPRENTING = eenmalig vroeg in leven (Lorenz' kuikens). CONDITIONERING = signaal-beloning-koppeling (Pavlov-hond bel + voer; vlinder kleur + nectar).",
-        { basis: "Signaal + beloning = conditionering. = A.", simpeler: "Kleur → nectar geleerd door herhaling = Pavlov-truc = conditionering. = A.", nogSimpeler: "Conditionering = A." },
+        { basis: "Signaal + beloning = conditionering.", simpeler: "Kleur → nectar geleerd door herhaling = Pavlov-truc = conditionering.", nogSimpeler: "Conditionering" },
         [{ woord: "conditionering", uitleg: "Leren door signaal aan beloning te koppelen." }, { woord: "inprenting", uitleg: "Eenmalig leren in kritieke periode jong." }, { woord: "gewenning", uitleg: "Stoppen met reageren op onschuldig signaal." }],
       ),
     }],
@@ -158,7 +158,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Hormoon-klier-koppels onthouden: BIJNIEREN → adrenaline + cortisol (stress). ALVLEESKLIER → insuline + glucagon (suiker). SCHILDKLIER → thyroxine (energie/stofwisseling). HYPOFYSE → 'chef-klier' onder hersenen, stuurt andere klieren. EIERSTOK/TESTIS → geslachtshormonen.",
-        { basis: "Adrenaline = bijnieren. = B.", simpeler: "BIJ-NIER (op nier) maakt adrenaline. Naam zegt 't bijna — bij-nier = klier bij de nier. = B.", nogSimpeler: "Bijnieren = B." },
+        { basis: "Adrenaline = bijnieren.", simpeler: "BIJ-NIER (op nier) maakt adrenaline. Naam zegt 't bijna — bij-nier = klier bij de nier.", nogSimpeler: "Bijnieren" },
         [{ woord: "bijnier", uitleg: "Klier op de nier — maakt adrenaline + cortisol." }, { woord: "hypofyse", uitleg: "Chef-klier onder hersenen — stuurt andere klieren aan." }],
       ),
     }],
@@ -187,7 +187,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Immunisatie 2×2 onthouden: NATUURLIJK vs KUNSTMATIG = HOE krijg je het (van moeder/ziekte vs injectie)? ACTIEF vs PASSIEF = WIE maakt antistof (lichaam zelf vs gekregen kant-en-klaar)? Moedermelk = natuurlijke route + baby krijgt antistoffen kant-en-klaar = passief.",
-        { basis: "Moedermelk = natuurlijk + passief. = D.", simpeler: "Geen prik (natuurlijk) + baby maakt niet zelf (passief). = D.", nogSimpeler: "Natuurlijk passief = D." },
+        { basis: "Moedermelk = natuurlijk + passief.", simpeler: "Geen prik (natuurlijk) + baby maakt niet zelf (passief).", nogSimpeler: "Natuurlijk passief" },
         [{ woord: "actief immuun", uitleg: "Lichaam maakt zelf antistoffen (na ziekte of vaccin)." }, { woord: "passief immuun", uitleg: "Kant-en-klare antistoffen gekregen (moedermelk, serum)." }],
       ),
     }],

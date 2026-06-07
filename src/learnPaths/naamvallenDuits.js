@@ -140,8 +140,8 @@ const steps = [
           voorbeelden: [{ type: "voorbeeld", tekst: "ein Mann, eine Frau, ein Kind" }],
           basiskennis: [{ onderwerp: "trucje", uitleg: "die ↔ eine (beide e)" }],
           niveaus: {
-            basis: "Een vrouw = eine Frau (vrouwelijk → eine). = A.",
-            simpeler: "Frau = vrouwelijk woord. Onbepaald lidwoord vrouwelijk = eine. Dus eine Frau. = A.",
+            basis: "Een vrouw = eine Frau (vrouwelijk → eine).",
+            simpeler: "Frau = vrouwelijk woord. Onbepaald lidwoord vrouwelijk = eine. Dus eine Frau.",
             nogSimpeler: "Truc: 'die' wordt 'eine' (beide eindigen op -e). 'ein' is voor de-woorden en het-woorden mannelijk/onzijdig.",
           },
         },

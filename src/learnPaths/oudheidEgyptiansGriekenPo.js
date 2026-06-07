@@ -137,7 +137,7 @@ const steps = [
             { type: "feit", tekst: "Cleopatra (laatste farao, gestorven 30 v.Chr.) sprak Grieks als hoofdtaal, niet Egyptisch — koningshuis was Grieks (Ptolemaeën-dynastie)." },
           ],
           basiskennis: [{ onderwerp: "Niet zomaar plaatjes", uitleg: "Hiërogliefen zijn echt schrift, niet 'lekker tekenen'. Elk symbool had vaste betekenis + uitspraak." }],
-          niveaus: { basis: "Egyptisch plaatjes-schrift. = A.", simpeler: "Hiërogliefen waren het schrift van oude Egyptenaren. Plaatjes die letters/klanken/woorden voorstelden. ~3000 v.Chr. tot 400 n.Chr. = A.", nogSimpeler: "Schrift Egypte = A." },
+          niveaus: { basis: "Egyptisch plaatjes-schrift.", simpeler: "Hiërogliefen waren het schrift van oude Egyptenaren. Plaatjes die letters/klanken/woorden voorstelden. ~3000 v.Chr. tot 400 n.Chr.", nogSimpeler: "Schrift Egypte" },
         },
       },
       {
@@ -163,7 +163,7 @@ const steps = [
             { type: "feit", tekst: "Op NL OS-2024 Parijs: Femke Bol won goud op 4×400m mixed estafette. Spirit van Olympia leeft door." },
           ],
           basiskennis: [{ onderwerp: "Olympia ≠ Olympus", uitleg: "**Olympia** = stad in Griekenland (waar spelen waren). **Berg Olympus** = waar Zeus woonde volgens mythologie. Andere plek." }],
-          niveaus: { basis: "Griekenland, 776 v.Chr. = A.", simpeler: "De Olympische Spelen ontstonden in 776 v.Chr. in de Griekse stad Olympia. Werden 1200 jaar lang elke 4 jaar gehouden ter ere van god Zeus. = A.", nogSimpeler: "Griekenland oud = A." },
+          niveaus: { basis: "Griekenland, 776 v.Chr.", simpeler: "De Olympische Spelen ontstonden in 776 v.Chr. in de Griekse stad Olympia. Werden 1200 jaar lang elke 4 jaar gehouden ter ere van god Zeus.", nogSimpeler: "Griekenland oud" },
         },
       },
       {
@@ -189,7 +189,7 @@ const steps = [
             { type: "feit", tekst: "Hercules deed '12 werken' (zware opdrachten) — een ervan: Nemese-leeuw doden + huid dragen. Symbool van moed." },
           ],
           basiskennis: [{ onderwerp: "Niet zelfde als sprookje", uitleg: "Mythen werden ECHT geloofd door oude volken. Sprookjes werden altijd als fictie verteld. Verschil." }],
-          niveaus: { basis: "Verhalen over goden om wereld uit te leggen. = A.", simpeler: "Mythologie = oude verhalen over goden + helden die uitleggen hoe natuur + wereld werkt. Bv. Grieks: Zeus voor bliksem. Niet wetenschappelijk maar wel cultureel waardevol. = A.", nogSimpeler: "Verhalen over goden = A." },
+          niveaus: { basis: "Verhalen over goden om wereld uit te leggen.", simpeler: "Mythologie = oude verhalen over goden + helden die uitleggen hoe natuur + wereld werkt. Bv. Grieks: Zeus voor bliksem. Niet wetenschappelijk maar wel cultureel waardevol.", nogSimpeler: "Verhalen over goden" },
         },
       },
       { q: "Bij welke **rivier** woonden de oude Egyptenaren?", options: ["De Nijl","De Amazone","De Donau","De Rijn"], answer: 0, wrongHints: [null, "Zuid-Amerika.", "Europa.", "Europa."] },

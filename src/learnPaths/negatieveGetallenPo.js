@@ -73,7 +73,7 @@ const steps = [
           theorie: "Getalslijn-regel: rechts = groter. −3 ligt rechts van −7.",
           voorbeelden: [{ type: "thermometer", tekst: "−3°C is warmer dan −7°C. Warmer = hoger = groter." }],
           basiskennis: [{ onderwerp: "Min-teken misleidt", uitleg: "7 > 3, maar −7 < −3 (omdat verder van 0 aan min-kant)." }],
-          niveaus: { basis: "−3. A.", simpeler: "Op thermometer: −3°C is warmer dan −7°C. Warmer = groter. = A.", nogSimpeler: "−3 = A." },
+          niveaus: { basis: "−3. A.", simpeler: "Op thermometer: −3°C is warmer dan −7°C. Warmer = groter.", nogSimpeler: "−3" },
         },
       },
       {
@@ -87,7 +87,7 @@ const steps = [
           theorie: "Temperatuur: positief = boven 0 (warm). Negatief = onder 0 (vries).",
           voorbeelden: [{ type: "tabel", tekst: "+20°C zomer. 0°C vriespunt. −5°C lichte vorst. −12°C hard vriest." }],
           basiskennis: [{ onderwerp: "Bestaat zeker", uitleg: "Bij ons in winter, of bij Pool/Siberië nog veel kouder (−40°C)." }],
-          niveaus: { basis: "12 graden onder nul. A.", simpeler: "Min-teken voor 12 = onder nul. Dus −12°C = 12 graden onder vriespunt. = A.", nogSimpeler: "Onder nul = A." },
+          niveaus: { basis: "12 graden onder nul. A.", simpeler: "Min-teken voor 12 = onder nul. Dus −12°C = 12 graden onder vriespunt.", nogSimpeler: "Onder nul" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
           theorie: "Volgorde groot→klein: +5 > 0 > −1 > −10.",
           voorbeelden: [{ type: "lijn", tekst: "−10 ← −1 ← 0 ← +5. Hoe verder links, hoe kleiner." }],
           basiskennis: [{ onderwerp: "Min-getallen omgekeerd", uitleg: "Bij positieven: groter getal = groter. Bij negatieven: groter cijfer = kleiner." }],
-          niveaus: { basis: "−10. A.", simpeler: "Op getalslijn: −10 ← −1 ← 0 ← +5. Kleinst = verste links = −10. = A.", nogSimpeler: "−10 = A." },
+          niveaus: { basis: "−10. A.", simpeler: "Op getalslijn: −10 ← −1 ← 0 ← +5. Kleinst = verste links = −10.", nogSimpeler: "−10" },
         },
       },
     ],
@@ -123,7 +123,7 @@ const steps = [
           theorie: "Wanneer aftrekker > beginwaarde: ga onder nul (negatief antwoord).",
           voorbeelden: [{ type: "stap", tekst: "4 − 6 = 4 − 4 − 2 = 0 − 2 = −2." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Splits: 4−4=0, dan nog 2 verder naar links → −2." }],
-          niveaus: { basis: "−2. A.", simpeler: "4 − 6: vanaf 4 zes stappen links → −2 (onder nul). = A.", nogSimpeler: "−2 = A." },
+          niveaus: { basis: "−2. A.", simpeler: "4 − 6: vanaf 4 zes stappen links → −2 (onder nul).", nogSimpeler: "−2" },
         },
       },
       {
@@ -137,7 +137,7 @@ const steps = [
           theorie: "−3+5: eerst 3 stappen tot 0 (gebruikt 3 van de 5), dan nog 2 → +2.",
           voorbeelden: [{ type: "stap", tekst: "−3 + 3 = 0. 0 + 2 = 2. Dus −3 + 5 = 2." }],
           basiskennis: [{ onderwerp: "Splits-truc", uitleg: "Splits 5 in 3+2. Eerst 3 om bij 0 te komen, dan rest." }],
-          niveaus: { basis: "+2. A.", simpeler: "−3 + 5: eerst 3 omhoog naar 0, dan 2 verder = +2. = A.", nogSimpeler: "+2 = A." },
+          niveaus: { basis: "+2. A.", simpeler: "−3 + 5: eerst 3 omhoog naar 0, dan 2 verder = +2.", nogSimpeler: "+2" },
         },
       },
       {
@@ -151,7 +151,7 @@ const steps = [
           theorie: "Bij negatief getal aftrekken: tel gewoon op wat er afgaat. −5 − 4 = −(5+4) = −9.",
           voorbeelden: [{ type: "truc", tekst: "Beide negatief denken: −5 + (−4) = −9. Of: schuld 5 + schuld 4 = schuld 9." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Schuld €5 + schuld €4 = schuld €9 = saldo −€9." }],
-          niveaus: { basis: "−9. A.", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9. = A.", nogSimpeler: "−9 = A." },
+          niveaus: { basis: "−9. A.", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9.", nogSimpeler: "−9" },
         },
       },
     ],
@@ -172,7 +172,7 @@ const steps = [
           theorie: "Tekens-regel: −− = +, ++ = +, +− = −, −+ = −.",
           voorbeelden: [{ type: "stap", tekst: "8 − (−3) = 8 + 3 = 11." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Saldo €8, schuld van €3 valt weg → €8 + €3 erbij = €11." }],
-          niveaus: { basis: "11. A.", simpeler: "Twee minnen worden plus: 8 − (−3) = 8 + 3 = 11. = A.", nogSimpeler: "11 = A." },
+          niveaus: { basis: "11. A.", simpeler: "Twee minnen worden plus: 8 − (−3) = 8 + 3 = 11.", nogSimpeler: "11" },
         },
       },
       {
@@ -186,7 +186,7 @@ const steps = [
           theorie: "Tekens-regel: +− = −. Dus +(−6) = −6.",
           voorbeelden: [{ type: "stap", tekst: "−4 + (−6) = −4 − 6 = −10." }],
           basiskennis: [{ onderwerp: "Schuld-stapelen", uitleg: "Schuld €4 + schuld €6 = schuld €10 = saldo −€10." }],
-          niveaus: { basis: "−10. A.", simpeler: "+(−6) wordt −6. Dus −4 − 6 = −10. = A.", nogSimpeler: "−10 = A." },
+          niveaus: { basis: "−10. A.", simpeler: "+(−6) wordt −6. Dus −4 − 6 = −10.", nogSimpeler: "−10" },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
           theorie: "Tekens-regel: +− = −.",
           voorbeelden: [{ type: "stap", tekst: "5 + (−2) = 5 − 2 = 3." }],
           basiskennis: [{ onderwerp: "Schuld erbij", uitleg: "Saldo €5 + schuld van €2 = €5 − €2 = €3 over." }],
-          niveaus: { basis: "+3. A.", simpeler: "5 + (−2) = 5 − 2 = 3 (plus een min wordt min). = A.", nogSimpeler: "+3 = A." },
+          niveaus: { basis: "+3. A.", simpeler: "5 + (−2) = 5 − 2 = 3 (plus een min wordt min).", nogSimpeler: "+3" },
         },
       },
     ],
@@ -221,7 +221,7 @@ const steps = [
           theorie: "Stijgen = +. Dalen = −. Bij dalen onder 5 → onder nul.",
           voorbeelden: [{ type: "stap", tekst: "5 − 5 = 0. Nog 3 verder omlaag = −3." }],
           basiskennis: [{ onderwerp: "Thermometer", uitleg: "Kwik daalt 8 streepjes vanaf +5 → komt op −3." }],
-          niveaus: { basis: "−3 °C. A.", simpeler: "Dalen 8 graden van +5: 5 − 8 = −3 (3 graden onder nul). = A.", nogSimpeler: "−3 = A." },
+          niveaus: { basis: "−3 °C. A.", simpeler: "Dalen 8 graden van +5: 5 − 8 = −3 (3 graden onder nul).", nogSimpeler: "−3" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
           theorie: "Verschil bij negatief: tel positieve deel + negatieve deel. Of: groter − kleiner.",
           voorbeelden: [{ type: "stap", tekst: "+12 − (−5) = 12 + 5 = 17 graden." }],
           basiskennis: [{ onderwerp: "Altijd positief", uitleg: "Verschil = afstand op getalslijn = altijd ≥0." }],
-          niveaus: { basis: "17. A.", simpeler: "Van +12 naar 0 = 12 stappen. Van 0 naar −5 = 5 stappen. Totaal 17. = A.", nogSimpeler: "17 = A." },
+          niveaus: { basis: "17. A.", simpeler: "Van +12 naar 0 = 12 stappen. Van 0 naar −5 = 5 stappen. Totaal 17.", nogSimpeler: "17" },
         },
       },
       {
@@ -249,7 +249,7 @@ const steps = [
           theorie: "Negatief + positief: positief eet eerst de schuld op, rest is plus.",
           voorbeelden: [{ type: "stap", tekst: "−30 + 30 = 0 (schuld weg). +50 over. Totaal +€50." }],
           basiskennis: [{ onderwerp: "Echt geld", uitleg: "Eerst schuld terugbetalen, dan kun je nog €50 uitgeven." }],
-          niveaus: { basis: "+€50. A.", simpeler: "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50. = A.", nogSimpeler: "+€50 = A." },
+          niveaus: { basis: "+€50. A.", simpeler: "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50.", nogSimpeler: "+€50" },
         },
       },
     ],
@@ -270,7 +270,7 @@ const steps = [
           theorie: "5 niet genoeg om bij 0 te komen vanaf −8 (zou 8 nodig hebben). Antwoord blijft negatief.",
           voorbeelden: [{ type: "stap", tekst: "−8 + 5 = −(8−5) = −3." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Schuld €8 − €5 betalen = nog €3 schuld over." }],
-          niveaus: { basis: "−3. A.", simpeler: "−8 + 5: 5 stappen rechts vanaf −8 → −3 (nog onder nul). = A.", nogSimpeler: "−3 = A." },
+          niveaus: { basis: "−3. A.", simpeler: "−8 + 5: 5 stappen rechts vanaf −8 → −3 (nog onder nul).", nogSimpeler: "−3" },
         },
       },
       {
@@ -284,7 +284,7 @@ const steps = [
           theorie: "Eerst tot 0 (4 stappen), dan rest (5 stappen) erna.",
           voorbeelden: [{ type: "stap", tekst: "−4 → 0 (4 stappen). 0 → +5 (5 stappen). Totaal 9 stappen = +5." }],
           basiskennis: [{ onderwerp: "Splits in stukken", uitleg: "Negatief naar positief: splits 9 in 4+5." }],
-          niveaus: { basis: "+5 °C. A.", simpeler: "−4 + 9: vanaf −4 negen omhoog. 4 om bij 0 te komen, dan nog 5 → +5°C. = A.", nogSimpeler: "+5 = A." },
+          niveaus: { basis: "+5 °C. A.", simpeler: "−4 + 9: vanaf −4 negen omhoog. 4 om bij 0 te komen, dan nog 5 → +5°C.", nogSimpeler: "+5" },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
           theorie: "0 > elke negatieve. Bij negatieven: dichter bij 0 = groter.",
           voorbeelden: [{ type: "lijn", tekst: "−15 < −8 < −2 < 0. Volgorde links naar rechts." }],
           basiskennis: [{ onderwerp: "Niet alleen negatief", uitleg: "0 > alle drie negatieven, dus 0 is de grootste." }],
-          niveaus: { basis: "0. A.", simpeler: "0 is groter dan elke negatieve. Op lijn ligt 0 het meest rechts. = A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "0. A.", simpeler: "0 is groter dan elke negatieve. Op lijn ligt 0 het meest rechts.", nogSimpeler: "0" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
           theorie: "Twee minnen achter elkaar = plus.",
           voorbeelden: [{ type: "stap", tekst: "3 − (−7) = 3 + 7 = 10." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Saldo €3, schuld €7 valt weg → €10 over." }],
-          niveaus: { basis: "+10. A.", simpeler: "Twee minnen worden plus: 3 − (−7) = 3 + 7 = 10. = A.", nogSimpeler: "+10 = A." },
+          niveaus: { basis: "+10. A.", simpeler: "Twee minnen worden plus: 3 − (−7) = 3 + 7 = 10.", nogSimpeler: "+10" },
         },
       },
       {
@@ -326,7 +326,7 @@ const steps = [
           theorie: "Wanneer uitgaven > saldo: saldo wordt rood (negatief).",
           voorbeelden: [{ type: "stap", tekst: "15 − 15 = 0 (schoon). 0 − 7 = −7 (rood)." }],
           basiskennis: [{ onderwerp: "Roodstand", uitleg: "−€7 = €7 schuld bij bank/ouders." }],
-          niveaus: { basis: "−€7. A.", simpeler: "Marc heeft €15, geeft €22 uit (€7 te veel) → saldo −€7 (rood). = A.", nogSimpeler: "−€7 = A." },
+          niveaus: { basis: "−€7. A.", simpeler: "Marc heeft €15, geeft €22 uit (€7 te veel) → saldo −€7 (rood).", nogSimpeler: "−€7" },
         },
       },
       {
@@ -350,7 +350,7 @@ const steps = [
             { type: "stap", tekst: "Verschil tussen −10 en −2: 10 − 2 = 8 (allebei negatief, kleinere afstand)." },
           ],
           basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "Cito veel met temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
-          niveaus: { basis: "17 °C. = A.", simpeler: "Van −5 naar 0 = 5. Van 0 naar +12 = 12. Samen: 17 graden verschil. = A.", nogSimpeler: "17 = A." },
+          niveaus: { basis: "17 °C.", simpeler: "Van −5 naar 0 = 5. Van 0 naar +12 = 12. Samen: 17 graden verschil.", nogSimpeler: "17" },
         },
       },
       {
@@ -374,7 +374,7 @@ const steps = [
             { type: "stap", tekst: "Onderzeeer −80 m, stijgt 30 m → −50 m." },
           ],
           basiskennis: [{ onderwerp: "Onder zeespiegel NL", uitleg: "Nederland heeft delen onder zeespiegel (−6 m bv. in Zuidplaspolder). Vandaar dijken." }],
-          niveaus: { basis: "−12 + 8 = −4. = A.", simpeler: "Duiker op −12 m. 8 omhoog = −12 + 8 = −4 m. Nog 4 m onder water. = A.", nogSimpeler: "−4 m = A." },
+          niveaus: { basis: "−12 + 8 = −4.", simpeler: "Duiker op −12 m. 8 omhoog = −12 + 8 = −4 m. Nog 4 m onder water.", nogSimpeler: "−4 m" },
         },
       },
       {
@@ -398,7 +398,7 @@ const steps = [
             { type: "stap", tekst: "Wat is groter: −7 of −20? −7 (ligt dichter bij 0)." },
           ],
           basiskennis: [{ onderwerp: "Temperatuur-vergelijking", uitleg: "Het is kouder bij −15°C dan bij −5°C. −15 < −5." }],
-          niveaus: { basis: "−9, −3, 0, +4. = A.", simpeler: "Negatieven: −9 verder van 0 = kleiner. Dus volgorde links→rechts: −9, −3, 0, +4. = A.", nogSimpeler: "−9, −3, 0, +4 = A." },
+          niveaus: { basis: "−9, −3, 0, +4.", simpeler: "Negatieven: −9 verder van 0 = kleiner. Dus volgorde links→rechts: −9, −3, 0, +4.", nogSimpeler: "−9, −3, 0, +4" },
         },
       },
       {
@@ -423,7 +423,7 @@ const steps = [
             { type: "stap", tekst: "(−1) × (−1) × (−1) = −1 (3 min = oneven = −)." },
           ],
           basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is brugklas-VO-stof, maar Cito-eindtoets test het ook." }],
-          niveaus: { basis: "−15. = A.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15. = A.", nogSimpeler: "−15 = A." },
+          niveaus: { basis: "−15.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15.", nogSimpeler: "−15" },
         },
       },
       { q: "Het is −3°C. De temperatuur stijgt 8°. Hoe warm is het nu?", options: ["5°C","11°C","−11°C","−5°C"], answer: 0, wrongHints: [null, "Niet — niet bij elkaar optellen zonder min.", "Niet — getal is gestegen.", "Niet — je telt erbij op, daalt niet."] },

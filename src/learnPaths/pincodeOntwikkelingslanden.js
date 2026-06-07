@@ -63,7 +63,7 @@ const steps = [
           theorie: "Voorbeeld: NL HDI ~0,94 (top 10) / Niger HDI ~0,40 (laagste). HDI is bredere maat dan alleen BBP/hoofd. Saoedi-Arabië heeft hoog BBP maar lagere HDI (door onderwijs/gender-issues). HDI corrigeert hiervoor.",
           voorbeelden: [{ type: "vergelijk", tekst: "BBP/hoofd: VS hoger dan NL. HDI: NL hoger dan VS. Reden: NL betere gezondheidszorg + onderwijs + minder ongelijkheid. HDI dekt dit." }],
           basiskennis: [{ onderwerp: "Niet alleen geld", uitleg: "BBP/hoofd = alleen inkomen. Toerisme = los. Auto's = bezit-indicator. HDI combineert 3 factoren." }],
-          niveaus: { basis: "Inkomen+levensverwachting+onderwijs. A.", simpeler: "HDI = 3 dingen samen: geld + leeftijd + scholing. = A.", nogSimpeler: "3 dingen = A." },
+          niveaus: { basis: "Inkomen+levensverwachting+onderwijs. A.", simpeler: "HDI = 3 dingen samen: geld + leeftijd + scholing.", nogSimpeler: "3 dingen" },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
           theorie: "Wereldwijd gemiddelde 73 jaar (was 50 in 1950). Snelste stijging in geschiedenis. Door vaccinaties, antibiotica, betere voeding. Maar grote spreiding: Sub-Sahara Afrika 60, Japan 84.",
           voorbeelden: [{ type: "landen", tekst: "Japan 84 / NL 82 / VS 77 / India 70 / Nigeria 54 / Tsjaad 53. Sterke link met welvaart + zorg." }],
           basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "80 = rijk-niveau. 100 = uitzondering. 30 = veel te laag (zelfs middeleeuwen niet)." }],
-          niveaus: { basis: "50-65 jaar. A.", simpeler: "Arm land levensverwachting = 50-65 jaar. Rijk ~80. = A.", nogSimpeler: "50-65 = A." },
+          niveaus: { basis: "50-65 jaar. A.", simpeler: "Arm land levensverwachting = 50-65 jaar. Rijk ~80.", nogSimpeler: "50-65" },
         },
       },
       {
@@ -91,7 +91,7 @@ const steps = [
           theorie: "Top HDI-landen: Noorwegen, Zwitserland, Ierland, Duitsland, NL, Australië. Laagste: Niger, Tsjaad, Centraal-Afrikaanse Rep. Sterke correlatie met geografie + politiek + onderwijs-investeringen.",
           voorbeelden: [{ type: "cijfers", tekst: "NL 0,941 (10e wereld). Mali 0,428 (186e). Bangladesh 0,661 (129e). Niger 0,400 (189e van 191)." }],
           basiskennis: [{ onderwerp: "Niet andere landen", uitleg: "Mali + Niger = Sub-Sahara Afrika, laagste HDI. Bangladesh = ontwikkelend Zuid-Azië, midden." }],
-          niveaus: { basis: "Nederland. A.", simpeler: "NL = West-Europa, hoge HDI ~0,94. Andere opties = arme landen. = A.", nogSimpeler: "NL = A." },
+          niveaus: { basis: "Nederland. A.", simpeler: "NL = West-Europa, hoge HDI ~0,94. Andere opties = arme landen.", nogSimpeler: "NL" },
         },
       },
       {
@@ -105,7 +105,7 @@ const steps = [
           theorie: "Daling 1,9 mrd → 700 mln in 30 jaar = grootste armoede-daling in geschiedenis. Vooral China: ~800 mln Chinezen uit armoede (1980-2020). India ook fors. Corona + Oekraïne-oorlog veroorzaken recente terugval.",
           voorbeelden: [{ type: "trend", tekst: "1990: 36% wereldbevolking extreem arm. 2020: 9%. Spectaculair. Maar nog steeds = 1 op 11 mensen leeft van <€2/dag." }],
           basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "10 mln = te laag. 5 mrd = bijna hele wereld, onmogelijk. Niemand = ook niet (nog 700 mln)." }],
-          niveaus: { basis: "~700 miljoen. A.", simpeler: "Extreme armoede 2020 = ~700 miljoen. Daalde van 1,9 mrd (1990). = A.", nogSimpeler: "700 mln = A." },
+          niveaus: { basis: "~700 miljoen. A.", simpeler: "Extreme armoede 2020 = ~700 miljoen. Daalde van 1,9 mrd (1990).", nogSimpeler: "700 mln" },
         },
       },
       {
@@ -119,7 +119,7 @@ const steps = [
           theorie: "Daling wereldwijd: 1990 = 12,5 mln kinderdoden, 2020 = 5 mln. Vooral door vaccinatie-campagnes (rotavirus, mazelen). Maar nog veel: 5 miljoen = 1 kind per 6 seconden. Sub-Sahara Afrika hoogste cijfers.",
           voorbeelden: [{ type: "cijfers", tekst: "NL <4 per 1000. Tsjaad 110 per 1000 (=11%!). Verschil enorm. Een Tsjaads kind 25x meer kans op overlijden voor 5e." }],
           basiskennis: [{ onderwerp: "Wel belangrijk", uitleg: "Niet onbelangrijk. Voor hele samenleving (toekomst!). Sterk verband met welvaart, niet geen." }],
-          niveaus: { basis: "Reflecteert zorg+voeding+hygiëne. A.", simpeler: "Kindersterfte raakt 4 dingen tegelijk: zorg + voeding + hygiëne + woon. Goede maat. = A.", nogSimpeler: "Alles tegelijk = A." },
+          niveaus: { basis: "Reflecteert zorg+voeding+hygiëne. A.", simpeler: "Kindersterfte raakt 4 dingen tegelijk: zorg + voeding + hygiëne + woon. Goede maat.", nogSimpeler: "Alles tegelijk" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
           theorie: "Voor: arme landen kunnen leningen + hulp krijgen tegen voordeligere voorwaarden. Status verandert: China was laag-midden, nu hoog-midden. Doel: landen klimmen op. NL = hoge-inkomen ($56k/hoofd).",
           voorbeelden: [{ type: "categorisatie", tekst: "Hoge-inkomen: NL, DE, USA, Japan. Hoog-midden: China, Brazilië, Mexico. Laag-midden: India, Indonesië. Lage-inkomen: Mali, Niger, Tsjaad, DR Congo." }],
           basiskennis: [{ onderwerp: "Per LAND niet persoon", uitleg: "€30k/persoon = ander begrip (persoonlijk inkomen). Classificatie automatisch op jaar-data. Wel categorie." }],
-          niveaus: { basis: "<$1.135/jaar BBP/hoofd. A.", simpeler: "Lage-inkomen-land = gemiddelde inkomen <$1.135/jaar/persoon. = A.", nogSimpeler: "$1.135 = A." },
+          niveaus: { basis: "<$1.135/jaar BBP/hoofd. A.", simpeler: "Lage-inkomen-land = gemiddelde inkomen <$1.135/jaar/persoon.", nogSimpeler: "$1.135" },
         },
       },
     ],
@@ -171,7 +171,7 @@ const steps = [
           theorie: "Examenval: 'welvaart' alleen = engesm zin (standaard). 'Welvaart in ruime zin' = expliciet inclusief welzijn. Toets-vraag toetst dit onderscheid. NL: hoge welvaart enge-zin, ook redelijk hoog ruime-zin (top 10 geluksindex).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Saoedi-Arabië = welvaart enge zin hoog (olie-rijk), maar ruime zin lager (gender-issues, weinig vrijheid). Costa Rica = welvaart enge zin midden, ruime zin top." }],
           basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Geluk + gezondheid = ruime zin onderdelen. Welvaart-eng = alleen materieel. Niet 'alles' (te breed)." }],
-          niveaus: { basis: "Alleen materieel. A.", simpeler: "Welvaart enge zin = alleen geld + spullen. Ruime zin = ook welzijn erbij. = A.", nogSimpeler: "Materieel = A." },
+          niveaus: { basis: "Alleen materieel. A.", simpeler: "Welvaart enge zin = alleen geld + spullen. Ruime zin = ook welzijn erbij.", nogSimpeler: "Materieel" },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
           theorie: "Geluk-factoren volgens onderzoek: (1) sociale relaties, (2) gezondheid, (3) vrijheid keuze, (4) vertrouwen overheid, (5) genereus zijn, (6) inkomen. Niet alleen geld — Noord-Europese mix wint.",
           voorbeelden: [{ type: "ranglijst", tekst: "Finland nr. 1. NL meestal nr. 5-6. VS rond 15. Saoedi-Arabië rond 30. Afghanistan/Libanon/Sierra Leone laagst." }],
           basiskennis: [{ onderwerp: "Niet andere landen", uitleg: "Olie-rijkdom = niet automatisch geluk (vrijheid+sociaal vangnet matter meer). Rusland = politieke onrust. NK = dictatuur, geen vrije meting." }],
-          niveaus: { basis: "Noord-Europa. A.", simpeler: "Hoogste geluk = Finland, Denemarken, NL. Noord-Europese mix. = A.", nogSimpeler: "Scandinavië+NL = A." },
+          niveaus: { basis: "Noord-Europa. A.", simpeler: "Hoogste geluk = Finland, Denemarken, NL. Noord-Europese mix.", nogSimpeler: "Scandinavië+NL" },
         },
       },
       {
@@ -199,7 +199,7 @@ const steps = [
           theorie: "Implicatie: na basisbehoeften focus op andere zaken voor geluk. Onderzoek update: drempel ~$75k (Kahneman/Deaton 2010), maar moderne studies (Killingsworth 2021) zien wel verdere stijging. Discussie nog gaande.",
           voorbeelden: [{ type: "vergelijk", tekst: "Iemand van €25k naar €50k = grote sprong geluk. Van €100k naar €200k = nauwelijks meer geluk. Diminishing returns." }],
           basiskennis: [{ onderwerp: "Niet tegendeel", uitleg: "Tegendeel = 'altijd kopen'. Easterlin zegt JUIST 'niet altijd'. Geluk wel ruwweg meetbaar. Niet over wat mensen willen." }],
-          niveaus: { basis: "Boven drempel geen extra geluk. A.", simpeler: "Easterlin = boven ~$20-30k levert extra geld nauwelijks meer geluk. Drempelwaarde. = A.", nogSimpeler: "Genoeg=genoeg = A." },
+          niveaus: { basis: "Boven drempel geen extra geluk. A.", simpeler: "Easterlin = boven ~$20-30k levert extra geld nauwelijks meer geluk. Drempelwaarde.", nogSimpeler: "Genoeg=genoeg" },
         },
       },
       {
@@ -213,7 +213,7 @@ const steps = [
           theorie: "Bedoeling: BBP-fixatie doorbreken. Beleidsmakers kunnen zien waar land achterloopt. NL scoort hoog op werk-privé balans + onderwijs + inkomen, gemiddeld op milieu, lager op huisvesting (woningnood).",
           voorbeelden: [{ type: "dimensies", tekst: "NL hoge score: werk-privé balans (1e wereld!), tevredenheid, onderwijs. NL lagere score: milieu, huisvesting. Top algemeen: Noorwegen, Australië, IJsland." }],
           basiskennis: [{ onderwerp: "Niet alleen 1 ding", uitleg: "BBP = 1 dimensie. Banen = 1 dimensie. Kosten = 1 dimensie. Better Life = 11 samen, breed beeld." }],
-          niveaus: { basis: "11 dimensies. A.", simpeler: "Better Life Index meet 11 aspecten kwaliteit leven (OESO). = A.", nogSimpeler: "11 dimensies = A." },
+          niveaus: { basis: "11 dimensies. A.", simpeler: "Better Life Index meet 11 aspecten kwaliteit leven (OESO).", nogSimpeler: "11 dimensies" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
           theorie: "Inspireert wereldwijd discussies over BBP-alternatieven. VN-Algemene Vergadering nam 2011 resolutie aan: landen moeten geluk meer betrekken in beleid. Maar Bhutan ZELF blijft economisch arm — laat zien dat 'geluk niet alles is' kritiek.",
           voorbeelden: [{ type: "domeinen", tekst: "9 domeinen GNH: psychologisch welzijn, gezondheid, onderwijs, tijdsgebruik, cultuur, goed bestuur, gemeenschap, ecologie, levensstandaard. Wereld kijkt mee." }],
           basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Inflatie + belasting blijven gewoon meten. GNH komt ipv BBP. Wel iets (geluksstrategie)." }],
-          niveaus: { basis: "BBP. A.", simpeler: "Bhutan vervangt BBP door GNH = geluksmeting. = A.", nogSimpeler: "BBP = A." },
+          niveaus: { basis: "BBP. A.", simpeler: "Bhutan vervangt BBP door GNH = geluksmeting.", nogSimpeler: "BBP" },
         },
       },
       {
@@ -241,7 +241,7 @@ const steps = [
           theorie: "Geld levert geluk tot basisniveau. Bovenop: relaties + gezondheid > inkomen. Sociale eenzaamheid even ongezond als roken 15 sigaretten/dag (volgens onderzoek). Voor jongeren: kies werk + woonplek met goede sociale infrastructuur, niet alleen hoogste salaris.",
           voorbeelden: [{ type: "praktisch", tekst: "Concreet: investeer in vriendschappen (kost tijd). Eet gezond + beweeg (preventie). Doe werk waar je achter staat. Maak eigen keuzes (niet alleen wat anderen verwachten)." }],
           basiskennis: [{ onderwerp: "Niet 1 ding", uitleg: "Geld alleen = niet (boven basis). Vakantie alleen = kort. Status alleen = leeg. 4 pijlers samen." }],
-          niveaus: { basis: "4 pijlers. A.", simpeler: "Gelukkig maakt: sociale relaties + gezondheid + doel + autonomie. = A.", nogSimpeler: "4 dingen = A." },
+          niveaus: { basis: "4 pijlers. A.", simpeler: "Gelukkig maakt: sociale relaties + gezondheid + doel + autonomie.", nogSimpeler: "4 dingen" },
         },
       },
     ],
@@ -279,7 +279,7 @@ const steps = [
           theorie: "Hoe doorbreken? (1) Grote investering in onderwijs (China deed dit). (2) Externe hulp + technologie-import (Zuid-Korea). (3) Stabiel bestuur + anti-corruptie. (4) Open handel. Zelden 1 ding — combinatie. Niet onmogelijk: in 50 jaar uit armoede mogelijk (ZK, Singapore).",
           voorbeelden: [{ type: "cyclus", tekst: "Bv. boer Mali → te weinig opbrengst → kinderen helpen op land → niet naar school → ongeschoold → blijven boer met lage opbrengst → kinderen ook → cyclus blijft." }],
           basiskennis: [{ onderwerp: "Niet andere uitleg", uitleg: "Niet willekeurig (heeft structuur). Niet alleen extern (vooral interne loop). Niet over gelijkheid (over zichzelf-voeden)." }],
-          niveaus: { basis: "Armoede voedt zichzelf. A.", simpeler: "Vicieuze cirkel = arm → geen scholen → ongeschoolde werkers → blijft arm. = A.", nogSimpeler: "Voedt zichzelf = A." },
+          niveaus: { basis: "Armoede voedt zichzelf. A.", simpeler: "Vicieuze cirkel = arm → geen scholen → ongeschoolde werkers → blijft arm.", nogSimpeler: "Voedt zichzelf" },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
           theorie: "Oplossing: opklimmen waarde-keten. Indonesië verbiedt sinds 2020 export ruwe nikkel — dwong bedrijven verwerking lokaal te doen. Werkt. Africa probeert dit nu ook (Ghana wil zelf chocolade maken). Trager + duurder voor consumenten Westen, maar eerlijker.",
           voorbeelden: [{ type: "chocolade", tekst: "Tony's Chocolonely-reep €3,50. Ghanese boer krijgt €0,20 (6%). Cacao-export-broker, verscheper, fabrikant, distributeur, supermarkt → samen 94%." }],
           basiskennis: [{ onderwerp: "Niet andere reden", uitleg: "Grondstoffen niet altijd schaars (cacao+olie+soja overvloedig). Havens hebben velen wel. Vervuiling = bijkomstig probleem." }],
-          niveaus: { basis: "Verwerking elders. A.", simpeler: "Ruwe export = land mist verwerking-winst (90%+ waarde). = A.", nogSimpeler: "Verwerking elders = A." },
+          niveaus: { basis: "Verwerking elders. A.", simpeler: "Ruwe export = land mist verwerking-winst (90%+ waarde).", nogSimpeler: "Verwerking elders" },
         },
       },
       {
@@ -307,7 +307,7 @@ const steps = [
           theorie: "Zuid-Korea + Taiwan + Singapore + Hong Kong = 'Aziatische Tijgers' (1960-1990 spectaculaire groei). Recept: onderwijs + export + spaarzaam + stabiel bestuur. China kopieerde dit recept sinds 1980. Niger/Tsjaad/Mali = nog niet gelukt.",
           voorbeelden: [{ type: "vergelijking", tekst: "1960: ZK $80/hoofd, Ghana $180. 2023: ZK $35.000, Ghana $2.500. Voor 14x verschil in 60 jaar. Niet 'natuurlijk' — beleid + keuzes." }],
           basiskennis: [{ onderwerp: "Niet anderen", uitleg: "Niger BBP/hoofd $600. Tsjaad $750. Mali $900. Allemaal nog veel armer dan ZK." }],
-          niveaus: { basis: "Zuid-Korea. A.", simpeler: "ZK was 1960 armer dan Ghana, nu top-rijk. Door onderwijs + export. = A.", nogSimpeler: "ZK = A." },
+          niveaus: { basis: "Zuid-Korea. A.", simpeler: "ZK was 1960 armer dan Ghana, nu top-rijk. Door onderwijs + export.", nogSimpeler: "ZK" },
         },
       },
       {
@@ -321,7 +321,7 @@ const steps = [
           theorie: "Gevolgen vandaag: (1) etnische conflicten door slechte grenzen (Rwanda 1994). (2) afhankelijkheid 1 grondstof = economisch wankel. (3) zwakke staatsinstituties (kolonialen bouwden uit, voor zichzelf, niet voor land). (4) brain drain — slimste mensen gingen naar Europa.",
           voorbeelden: [{ type: "concreet", tekst: "Rwanda-Burundi-grenzen door Belgen getrokken. Stam Tutsi-Hutu door kolonialen op identiteitskaarten gezet. Leidde tot genocide 1994 (~800.000 doden in 100 dagen)." }],
           basiskennis: [{ onderwerp: "Wel relevant", uitleg: "Niet 'aantal kolonies'. Geen belasting (geen geld-overdracht meer). Wel zeer relevant nu (60 jaar na onafhankelijkheid)." }],
-          niveaus: { basis: "Slechte grenzen + mono-cultuur. A.", simpeler: "Kolonisatie-erfenis = grenzen + economie door Westen gemaakt voor zichzelf. = A.", nogSimpeler: "Slechte grenzen = A." },
+          niveaus: { basis: "Slechte grenzen + mono-cultuur. A.", simpeler: "Kolonisatie-erfenis = grenzen + economie door Westen gemaakt voor zichzelf.", nogSimpeler: "Slechte grenzen" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
           theorie: "Schuldverlichtings-programma's (HIPC, Jubilee 2000) hielpen veel landen weer ademen. Maar nieuwe schulden komen op door corona + China-leningen (Belt and Road). 2020s opnieuw schuldencrisis Zambia, Sri Lanka, Pakistan.",
           voorbeelden: [{ type: "cijfers", tekst: "Mozambique 1995: rente = 25% budget. NL ter vergelijking: rente ~2% budget. Verschil enorm. Met 25% rente kun je niets opbouwen." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Schulden niet automatisch te groot (sommige beheersbaar). Rente vaak HOOG (5-15% voor arme landen). Schulden wel reëel." }],
-          niveaus: { basis: "Rente eet budget op. A.", simpeler: "Schulden = rente eet jaarlijks geld op, niet meer voor onderwijs/zorg. = A.", nogSimpeler: "Rente eet = A." },
+          niveaus: { basis: "Rente eet budget op. A.", simpeler: "Schulden = rente eet jaarlijks geld op, niet meer voor onderwijs/zorg.", nogSimpeler: "Rente eet" },
         },
       },
       {
@@ -349,7 +349,7 @@ const steps = [
           theorie: "Recept China: communistisch politiek systeem MAAR markt-economie. Goedkope arbeid + massale investeringen in onderwijs + infrastructuur + export = jarenlang 8-10% groei/jaar. China haalde 2010 Japan in als 2e economie wereld. Nu rivaal VS.",
           voorbeelden: [{ type: "cijfers", tekst: "1980: 88% Chinezen in armoede (>700 mln). 2020: <1% (<5 mln). 40 jaar = 800 mln uit armoede. Grootste reductie in geschiedenis." }],
           basiskennis: [{ onderwerp: "Niet onveranderd", uitleg: "Wel toeval (beleid-keuze). Wel verandering (radicaal). Communistisch label bleef, markt-praktijk veranderde alles." }],
-          niveaus: { basis: "Hervormingen + export. A.", simpeler: "China success = Deng hervormingen 1978, opening + export, 800 mln uit armoede. = A.", nogSimpeler: "Hervormingen = A." },
+          niveaus: { basis: "Hervormingen + export. A.", simpeler: "China success = Deng hervormingen 1978, opening + export, 800 mln uit armoede.", nogSimpeler: "Hervormingen" },
         },
       },
     ],
@@ -384,7 +384,7 @@ const steps = [
           theorie: "NL doneert via beide kanalen. Multilateraal: NL → EU → ontwikkelingsfonds. Bilateraal: NL → Mali direct. Voordeel multi: NL kan met andere landen samen schaal maken. Nadeel: NL minder controle waar geld heen gaat.",
           voorbeelden: [{ type: "voorbeelden", tekst: "VN-fonds = multi. UNICEF = multi. Wereldbank = multi. NL-ambassade Ghana met direct project = bilateraal. Oxfam = particulier." }],
           basiskennis: [{ onderwerp: "Niet andere vormen", uitleg: "Bilateraal = direct (NL→Mali). Particulier = NGO's (Oxfam etc). Noodhulp = doel (rampen), niet kanaal." }],
-          niveaus: { basis: "Meerdere landen samen. A.", simpeler: "Multilateraal = via VN/EU/Wereldbank, meerdere landen samen. = A.", nogSimpeler: "Samen = A." },
+          niveaus: { basis: "Meerdere landen samen. A.", simpeler: "Multilateraal = via VN/EU/Wereldbank, meerdere landen samen.", nogSimpeler: "Samen" },
         },
       },
       {
@@ -398,7 +398,7 @@ const steps = [
           theorie: "Andere bekende NL-NGO's: Oxfam Novib (armoede), Cordaid (ontwikkeling), Save the Children (kinderen), Stichting Vluchteling. Allemaal niet-overheid, gefinancierd door donaties + soms overheidssubsidies.",
           voorbeelden: [{ type: "inzet", tekst: "AzG na aardbeving Haïti 2010, Ebola-uitbraak West-Afrika 2014, Syrische oorlog vanaf 2011. Snelle inzet + medische expertise op moeilijke plekken." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Belastingdienst = NL-overheid (geen hulp). Wereldbank = multilateraal. Rabobank = commerciële bank." }],
-          niveaus: { basis: "Artsen zonder Grenzen. A.", simpeler: "Noodhulp-NGO = Artsen zonder Grenzen (AzG). Medische rampenhulp. = A.", nogSimpeler: "AzG = A." },
+          niveaus: { basis: "Artsen zonder Grenzen. A.", simpeler: "Noodhulp-NGO = Artsen zonder Grenzen (AzG). Medische rampenhulp.", nogSimpeler: "AzG" },
         },
       },
       {
@@ -412,7 +412,7 @@ const steps = [
           theorie: "Modern hulpdenken: hulp werkt beter als (1) cash-transfers in plaats van goederen, (2) tijdelijk + uitfasering, (3) lokale producten inkopen waar mogelijk, (4) capaciteit opbouwen ipv afhankelijkheid. Easterly/Banerjee/Duflo schreven hier veel over.",
           voorbeelden: [{ type: "concreet", tekst: "VS Food for Peace-programma: kreeg kritiek voor schaden Afrikaanse boeren in jaren '80-'90. Veranderd nu naar lokaal voedsel inkopen + cash-vouchers." }],
           basiskennis: [{ onderwerp: "Niet ander", uitleg: "Niet 'altijd goed' (soms slecht effect). Niet 'ondankbaar' (geen oorzaak). Voor gever duur, voor ontvanger niet." }],
-          niveaus: { basis: "Lokale producenten verliezen. A.", simpeler: "Gratis hulp = lokale producent kan niet concurreren, gaat failliet. = A.", nogSimpeler: "Lokaal verliest = A." },
+          niveaus: { basis: "Lokale producenten verliezen. A.", simpeler: "Gratis hulp = lokale producent kan niet concurreren, gaat failliet.", nogSimpeler: "Lokaal verliest" },
         },
       },
       {
@@ -426,7 +426,7 @@ const steps = [
           theorie: "NL bezuinigde op hulp vanaf 2010, accenten verschoven naar 'handel' + 'opvang in regio'. Veel NGO's kritiek hierop. Wereldgemiddelde rijke landen: ~0,3% BBP. Dus NL nog steeds boven gemiddelde, maar onder UN-norm.",
           voorbeelden: [{ type: "vergelijk", tekst: "Top: Zweden 0,99%, Noorwegen 0,86%, Denemarken 0,71%. NL 0,5%. VS 0,2%. Wereldgemiddelde ~0,35%." }],
           basiskennis: [{ onderwerp: "Niet hogere", uitleg: "5% = te hoog (zou ~€55 mrd zijn). 50% = onmogelijk. 10% = te hoog." }],
-          niveaus: { basis: "~0,5%. A.", simpeler: "NL ontwikkelingsbudget = ~0,5% BBP, onder UN-norm 0,7%. = A.", nogSimpeler: "0,5% = A." },
+          niveaus: { basis: "~0,5%. A.", simpeler: "NL ontwikkelingsbudget = ~0,5% BBP, onder UN-norm 0,7%.", nogSimpeler: "0,5%" },
         },
       },
       {
@@ -440,7 +440,7 @@ const steps = [
           theorie: "Werkt voor: koffie, thee, cacao, bananen, bloemen. Consument betaalt ~10-20% extra. Bedrijven moeten audit doorstaan om keurmerk te krijgen. Critici: niet alle boeren kunnen meedoen (organisatie-eisen). Voorstanders: alternatief voor commodity-exploitatie.",
           voorbeelden: [{ type: "koffie", tekst: "Reguliere koffie: boer Ethiopië krijgt $0,02/kop. Fair Trade: $0,08 (4x). Voor consument 10 cent meer per kop. Voor boer = dubbel salaris." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet gratis (consument betaalt nog). Wel handel (juist!). Wereldwijd, niet alleen EU." }],
-          niveaus: { basis: "Eerlijke boerenprijs. A.", simpeler: "Fair Trade = boer arme land krijgt eerlijke + minimum-prijs. Keurmerk. = A.", nogSimpeler: "Eerlijke prijs = A." },
+          niveaus: { basis: "Eerlijke boerenprijs. A.", simpeler: "Fair Trade = boer arme land krijgt eerlijke + minimum-prijs. Keurmerk.", nogSimpeler: "Eerlijke prijs" },
         },
       },
       {
@@ -454,7 +454,7 @@ const steps = [
           theorie: "Remittances zijn DIRECT geld naar gezinnen: ze gaan naar voedsel, school, woning, niet via overheid (geen corruptie-risico). Voor families enorm. Voor land: macro-stabilisatie. Critici: kan ook luiheid stimuleren (gezin wacht op geld in plaats van werk).",
           voorbeelden: [{ type: "cijfers", tekst: "Filipijnen ontvangt $35 mrd/jaar remittances = 10% BBP. India $100 mrd (1e wereld). Mexico $60 mrd. Vergelijk: alle officiële hulp wereldwijd ~$200 mrd. Remittances >> hulp." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen belasting (vrijwillig). Geen toerisme. Geen overheid (privaat-privaat tussen mensen)." }],
-          niveaus: { basis: "Migranten-geld. A.", simpeler: "Remittances = geld dat migranten naar familie thuis sturen. $700 mrd/jaar wereld. = A.", nogSimpeler: "Geld naar familie = A." },
+          niveaus: { basis: "Migranten-geld. A.", simpeler: "Remittances = geld dat migranten naar familie thuis sturen. $700 mrd/jaar wereld.", nogSimpeler: "Geld naar familie" },
         },
       },
     ],
@@ -492,7 +492,7 @@ const steps = [
           theorie: "SDG's opvolger van Millennium Goals (2000-2015). Verschil: SDG's voor ALLE landen (ook NL!), MDG's alleen ontwikkelingslanden. NL heeft SDG-werk: klimaat, ongelijkheid, stikstof, etc.",
           voorbeelden: [{ type: "top-5", tekst: "SDG1: geen armoede. SDG2: geen honger. SDG3: gezondheid. SDG4: onderwijs. SDG13: klimaatactie. Allemaal voor 2030." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Engelse afkorting (internationale standaard). Niet onderwijs-specifiek (17 brede thema's). Geen donaties (= doelen)." }],
-          niveaus: { basis: "17 VN-doelen 2030. A.", simpeler: "SDG = Sustainable Development Goals = 17 VN-doelen voor 2030. = A.", nogSimpeler: "17 doelen = A." },
+          niveaus: { basis: "17 VN-doelen 2030. A.", simpeler: "SDG = Sustainable Development Goals = 17 VN-doelen voor 2030.", nogSimpeler: "17 doelen" },
         },
       },
       {
@@ -506,7 +506,7 @@ const steps = [
           theorie: "Voor 1990: bedrijven keken alleen naar winst. Na 1990: ook milieu + sociaal. Modern denken: zonder People + Planet OOK falen op Profit op lange termijn (klimaat-schade kost geld).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Tony's Chocolonely: People (eerlijke prijs cacaoboeren), Planet (geen ontbossing), Profit (winst). Alle 3 P's." }],
           basiskennis: [{ onderwerp: "Engels", uitleg: "P's zijn Engels: People/Planet/Profit. Vandaar onthouden makkelijk. Soms vertaald als Mensen/Milieu/Munten." }],
-          niveaus: { basis: "People+Planet+Profit. A.", simpeler: "3 P's duurzaamheid = People (mensen) + Planet (milieu) + Profit (winst). = A.", nogSimpeler: "3 P's = A." },
+          niveaus: { basis: "People+Planet+Profit. A.", simpeler: "3 P's duurzaamheid = People (mensen) + Planet (milieu) + Profit (winst).", nogSimpeler: "3 P's" },
         },
       },
       {
@@ -520,7 +520,7 @@ const steps = [
           theorie: "Werkt omdat: (1) klein bedrag = haalbare terugbetaling, (2) vrouwen-focus (terugbetalen beter, investeren in gezin), (3) groep-borging (5-tal vrouwen samen verantwoordelijk). Terugbetalingspercentage 95%+ — beter dan rijke banken.",
           voorbeelden: [{ type: "verhaal", tekst: "Bangladesh-vrouw leent €100, koopt naaimachine, naait kleding, verkoopt op markt, betaalt lening in 1 jaar terug, heeft eigen inkomen voor gezin." }],
           basiskennis: [{ onderwerp: "Critici", uitleg: "Microkrediet niet perfect: soms hoge rente, soms schuldenval. Maar groot effect op individueel niveau." }],
-          niveaus: { basis: "Kleine ondernemers arme landen. A.", simpeler: "Microkrediet = mini-lening (€50-500) voor beginnende ondernemer arm land. = A.", nogSimpeler: "Kleine lening = A." },
+          niveaus: { basis: "Kleine ondernemers arme landen. A.", simpeler: "Microkrediet = mini-lening (€50-500) voor beginnende ondernemer arm land.", nogSimpeler: "Kleine lening" },
         },
       },
       {
@@ -534,7 +534,7 @@ const steps = [
           theorie: "Yunus' inzicht: arme mensen hebben WEL ondernemerschap, alleen geen toegang tot kapitaal. Geef ze kleine lening + ze betalen prima terug + komen uit armoede. Concept inmiddels wereldwijd toegepast.",
           voorbeelden: [{ type: "schaal", tekst: "Grameen Bank: 9 miljoen leden, 97% vrouwen, $30 miljard uitgeleend sinds 1976. Terugbetalingspercentage 95%+." }],
           basiskennis: [{ onderwerp: "Andere winnaars", uitleg: "Nobelprijs Vrede 2006 = Yunus. Mark Rutte/Trump/Lagarde geen Nobelprijs gewonnen." }],
-          niveaus: { basis: "Muhammad Yunus. A.", simpeler: "Microkrediet Nobelprijs 2006 = Muhammad Yunus (Grameen Bank Bangladesh). = A.", nogSimpeler: "Yunus = A." },
+          niveaus: { basis: "Muhammad Yunus. A.", simpeler: "Microkrediet Nobelprijs 2006 = Muhammad Yunus (Grameen Bank Bangladesh).", nogSimpeler: "Yunus" },
         },
       },
       {
@@ -548,7 +548,7 @@ const steps = [
           theorie: "Voordeel: arme landen hoeven niet 50 jaar wachten om Westen in te halen. Kunnen sprong maken via nieuwe tech. Vooral mobiel + internet + zonne-energie maken dit mogelijk.",
           voorbeelden: [{ type: "Afrika", tekst: "Kenia: 80% volwassenen gebruikt M-Pesa, slechts 30% heeft bankrekening. Indonesië: 60% smartphone-gebruikers, slechts 25% PC-gebruikers. Direct mobiel zonder PC-tijdperk." }],
           basiskennis: [{ onderwerp: "Engels", uitleg: "Niet kinderspel (haasje-over voor kinderen). Niet belastingontwijking. Specifieke ontwikkelings-term." }],
-          niveaus: { basis: "Stappen overslaan. A.", simpeler: "Leapfrogging = arme landen slaan tech-stappen over (vaste tel → direct mobiel). = A.", nogSimpeler: "Overslaan = A." },
+          niveaus: { basis: "Stappen overslaan. A.", simpeler: "Leapfrogging = arme landen slaan tech-stappen over (vaste tel → direct mobiel).", nogSimpeler: "Overslaan" },
         },
       },
       {
@@ -562,7 +562,7 @@ const steps = [
           theorie: "Vraagstukken: (1) rijke landen wilen niet allemaal extra betalen. (2) arme landen willen zelf nu ook industrie + groei = meer CO2. Spanning tussen ontwikkeling NU vs klimaat LATER. Klimaatconferenties (COP) onderhandelen hierover.",
           voorbeelden: [{ type: "cijfers", tekst: "Sub-Sahara Afrika: 4% wereldbevolking, <1% CO2. Maar Sahel woestijnt 50 km/jaar verder. Bangladesh: 165 miljoen mensen, 1/3 land onder zeespiegel-bedreiging." }],
           basiskennis: [{ onderwerp: "Niet ander", uitleg: "Wel sterk verband (CO2 → opwarming → droogte/storm). Tegendeel van profiteren (juist lijden). Velen weten goed (onderwerp leeft sterk)." }],
-          niveaus: { basis: "Weinig CO2, veel schade. A.", simpeler: "Arme landen veroorzaken weinig CO2 maar lijden meeste klimaatschade. Onrechtvaardig. = A.", nogSimpeler: "Slachtoffer = A." },
+          niveaus: { basis: "Weinig CO2, veel schade. A.", simpeler: "Arme landen veroorzaken weinig CO2 maar lijden meeste klimaatschade. Onrechtvaardig.", nogSimpeler: "Slachtoffer" },
         },
       },
     ],
@@ -600,7 +600,7 @@ const steps = [
           theorie: "Voordeel: boer kan plannen. Wereldmarktprijs koffie schommelt sterk (in 2001 zo laag dat boeren €0,30/kilo kregen — kosten zelfs niet). Fair Trade-minimum was toen €1,40 — bescherming.",
           voorbeelden: [{ type: "school", tekst: "Cacao-coöperatie Ghana ontvangt Fair Trade-premie. Dorp besluit samen: school bouwen, of waterput, of medicijn-kliniek. Coöperatie stemt." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet gratis (boer krijgt geld). Tegenovergestelde van korting (consument betaalt iets meer). Geen belasting (vrijwillig)." }],
-          niveaus: { basis: "Eerlijke prijs + premie. A.", simpeler: "Fair Trade = eerlijke (hogere) prijs voor boer + extra geld voor dorp-projecten. = A.", nogSimpeler: "Eerlijke prijs = A." },
+          niveaus: { basis: "Eerlijke prijs + premie. A.", simpeler: "Fair Trade = eerlijke (hogere) prijs voor boer + extra geld voor dorp-projecten.", nogSimpeler: "Eerlijke prijs" },
         },
       },
       {
@@ -614,7 +614,7 @@ const steps = [
           theorie: "Andere keurmerken voor ANDERE producten: EU-bio = biologisch eten (alle voedsel), MSC = duurzame vis, FSC = duurzame houten/papier, GOTS = bio-textiel. Pas op: keurmerk past bij PRODUCT-categorie.",
           voorbeelden: [{ type: "supermarkt", tekst: "Tony's Chocolonely-reep heeft Fairtrade + Rainforest Alliance-keurmerk. AH-huismerk koffie heeft UTZ. Verkade-chocolade heeft Rainforest Alliance." }],
           basiskennis: [{ onderwerp: "Niet andere keurmerken", uitleg: "EU-bio = bio voedsel algemeen. MSC = vis. Energy Star = energiezuinige apparaten. Allemaal andere categorieën." }],
-          niveaus: { basis: "Max Havelaar/Fairtrade/UTZ. A.", simpeler: "Koffie/cacao-keurmerk = Max Havelaar + Fairtrade + UTZ. EU-bio = ander (alle bio-eten). = A.", nogSimpeler: "Max Havelaar = A." },
+          niveaus: { basis: "Max Havelaar/Fairtrade/UTZ. A.", simpeler: "Koffie/cacao-keurmerk = Max Havelaar + Fairtrade + UTZ. EU-bio = ander (alle bio-eten).", nogSimpeler: "Max Havelaar" },
         },
       },
       {
@@ -628,7 +628,7 @@ const steps = [
           theorie: "Hoe herkennen: (1) Vage claims ('milieuvriendelijk' zonder cijfers). (2) Geen onafhankelijk keurmerk. (3) Klein duurzaam stuk versterkt voor groot vies stuk. (4) Beelden van groen blad/bos/zonnebloem zonder cijfer-bewijs. Wees kritisch.",
           voorbeelden: [{ type: "voorbeelden", tekst: "Plastic fles met '50% gerecycled'-tekst (terwijl het normaal allang is). 'CO2-neutraal'-vlucht (door compensatie kopen, niet echt CO2-loos). 'Natuurlijk'-shampoo (woord betekent niets juridisch)." }],
           basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "Niet wasmiddel (figuurlijk). Niet belasting. Tegendeel van echt duurzaam beleid." }],
-          niveaus: { basis: "Vals duurzaam imago. A.", simpeler: "Greenwashing = bedrijven doen groener dan ze zijn, voor marketing. = A.", nogSimpeler: "Nep-groen = A." },
+          niveaus: { basis: "Vals duurzaam imago. A.", simpeler: "Greenwashing = bedrijven doen groener dan ze zijn, voor marketing.", nogSimpeler: "Nep-groen" },
         },
       },
       {
@@ -642,7 +642,7 @@ const steps = [
           theorie: "In NL ~50% noemt zich flexitariër. Maar onderzoek: meeste eten nog steeds 4-5x per week vlees. Term 'flexitariër' is populair, gedrag verandert langzamer.",
           voorbeelden: [{ type: "schaal", tekst: "Hardcore vleeseter (vlees elke dag) → flexitariër (2-3x/week) → vegetariër (geen vlees) → veganist (geen dierlijk). Schaal van afnemend dierlijk consumptie." }],
           basiskennis: [{ onderwerp: "Niet andere groepen", uitleg: "Veganist = strenger (geen dierlijk). Vleeseter = elke dag. Pescatariër = alleen vis." }],
-          niveaus: { basis: "Minder vlees, niet geen. A.", simpeler: "Flexitariër = eet minder vlees (2-3×/week) maar niet helemaal geen. = A.", nogSimpeler: "Beetje vlees = A." },
+          niveaus: { basis: "Minder vlees, niet geen. A.", simpeler: "Flexitariër = eet minder vlees (2-3×/week) maar niet helemaal geen.", nogSimpeler: "Beetje vlees" },
         },
       },
       {
@@ -656,7 +656,7 @@ const steps = [
           theorie: "Vlees-productie veel zwaarder voor milieu dan plantaardig: water (15.000 L vs 1500 L tarwe), CO2 (60 kg vs 1 kg), grondgebruik (50 m² vs 2 m²). Vandaar 'minder vlees' = eenvoudigste milieu-actie.",
           voorbeelden: [{ type: "vergelijk", tekst: "1 hamburger (150g rund) = 2.250 L water. Een mens drinkt 2 L/dag. 1 burger = wat 1 mens in 3 jaar drinkt." }],
           basiskennis: [{ onderwerp: "Schaal", uitleg: "15.000 L = vol kuipbad ~150 keer. Echt veel — vandaar zware milieu-impact rundvlees." }],
-          niveaus: { basis: "~15.000 L. A.", simpeler: "1 kg rundvlees ≈ 15.000 liter water (drinkbaar+veevoer+stal). = A.", nogSimpeler: "15.000 = A." },
+          niveaus: { basis: "~15.000 L. A.", simpeler: "1 kg rundvlees ≈ 15.000 liter water (drinkbaar+veevoer+stal).", nogSimpeler: "15.000" },
         },
       },
       {
@@ -670,7 +670,7 @@ const steps = [
           theorie: "Werkt vooral bij massa: 1 persoon doet weinig, miljoenen mensen samen verschil. Limietswan: niet ALLES op individu — overheidsregelgeving + bedrijfsbeleid hebben grootste impact. Maar individuele keuzes optellen + signaleren.",
           voorbeelden: [{ type: "voorbeelden", tekst: "Plantaardige melk-boom in NL: van 2% (2010) naar 20% (2024). Door consumenten-keuze. Supermarkten zagen vraag → meer aanbod → meer keuze." }],
           basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "Geen letterlijk stemmen (geen verkiezing). Metafoor. Wel echte betekenis (consumenten-invloed)." }],
-          niveaus: { basis: "Kopen = invloed. A.", simpeler: "'Stem met je portemonnee' = wat je koopt beïnvloedt wat bedrijven maken. Macht consument. = A.", nogSimpeler: "Kopen = stemmen = A." },
+          niveaus: { basis: "Kopen = invloed. A.", simpeler: "'Stem met je portemonnee' = wat je koopt beïnvloedt wat bedrijven maken. Macht consument.", nogSimpeler: "Kopen = stemmen" },
         },
       },
     ],
@@ -707,7 +707,7 @@ const steps = [
           theorie: "Andere effectieve interventies: vaccinaties (kosten <€1, redt levens), cash-transfers (direct geld), microkrediet. Maar onderwijs blijft #1 multiplicator omdat het ALLES anders maakt op lange termijn.",
           voorbeelden: [{ type: "cijfers", tekst: "Onderzoek: elk extra jaar scholing voor meisje = 10% hoger toekomstig inkomen. 1 jaar extra = 5% lager kindersterfte." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Wapens vergroten conflict, niet ontwikkeling. Luxe-import lost geen basisproblemen op. Wel verandering nodig (status quo is armoede)." }],
-          niveaus: { basis: "Onderwijs meisjes. A.", simpeler: "Meest effectief = onderwijs, vooral voor meisjes. Levenslang multiplicator. = A.", nogSimpeler: "Scholing meisjes = A." },
+          niveaus: { basis: "Onderwijs meisjes. A.", simpeler: "Meest effectief = onderwijs, vooral voor meisjes. Levenslang multiplicator.", nogSimpeler: "Scholing meisjes" },
         },
       },
       {
@@ -721,7 +721,7 @@ const steps = [
           theorie: "Maar grote spreiding: rijke landen 80-84 jaar (Japan 84, NL 82, VS 77). Arme landen 55-65 (Sub-Sahara Afrika 60, Tsjaad 53). Verschil van 30+ jaar tussen land — onrechtvaardig.",
           voorbeelden: [{ type: "tijdlijn", tekst: "1900: ~32 jaar. 1950: ~50 jaar. 1980: ~62 jaar. 2000: ~67 jaar. 2020: ~73 jaar. Stijging vooral door minder kindersterfte." }],
           basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "30 jaar = middeleeuwen-niveau. 50 jaar = wereldwijd 1950. 100 jaar = uitzonderlijke individuen, geen gemiddelde." }],
-          niveaus: { basis: "~73 jaar. A.", simpeler: "Wereldwijd levensverwachting nu ~73 jaar (was 32 in 1900). = A.", nogSimpeler: "73 = A." },
+          niveaus: { basis: "~73 jaar. A.", simpeler: "Wereldwijd levensverwachting nu ~73 jaar (was 32 in 1900).", nogSimpeler: "73" },
         },
       },
       {
@@ -735,7 +735,7 @@ const steps = [
           theorie: "Demografische transitie: alle landen volgen pad van 'veel geboortes + veel sterfte' → 'veel geboortes + weinig sterfte' (=groei) → 'weinig geboortes + weinig sterfte' (stabiel). Afrika in middenfase. Westen al in 3e fase.",
           voorbeelden: [{ type: "cijfers", tekst: "Nigeria: 220 mln nu, 400 mln in 2050 (groter dan VS). Niger: hoogste geboortecijfer wereld (6,8 kinderen/vrouw). Japan + Italië + Zuid-Korea: krimpen al." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Europa = krimp (geboortes < sterfte). Japan = sterkst vergrijzend. Noord-Amerika = stabiel/lichte groei door migratie." }],
-          niveaus: { basis: "Afrika. A.", simpeler: "Afrika groeit het snelst: 1,4 → 2,5 miljard tegen 2050. = A.", nogSimpeler: "Afrika = A." },
+          niveaus: { basis: "Afrika. A.", simpeler: "Afrika groeit het snelst: 1,4 → 2,5 miljard tegen 2050.", nogSimpeler: "Afrika" },
         },
       },
       {
@@ -749,7 +749,7 @@ const steps = [
           theorie: "SDG1-doel: 0 extreme armoede in 2030. Niet haalbaar — recente schattingen 500-600 mln in 2030. Corona + Oekraïne-oorlog hebben terugval veroorzaakt (eerste stijging in 25 jaar in 2020-2022).",
           voorbeelden: [{ type: "context", tekst: "Hoewel veel mensen denken 'armoede stijgt', daalt het al 30 jaar. Nieuws negeert vaak goede ontwikkelingen. Boek 'Factfulness' (Hans Rosling) wijst hierop." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Wel verandering (sterke daling). Tegendeel van toename (daling). Cijfers WEL bekend (Wereldbank-data)." }],
-          niveaus: { basis: "1,9 mrd → 700 mln. A.", simpeler: "Extreme armoede daalde 1990 (1,9 mrd) naar 2020 (700 mln). Sterke daling. = A.", nogSimpeler: "Sterke daling = A." },
+          niveaus: { basis: "1,9 mrd → 700 mln. A.", simpeler: "Extreme armoede daalde 1990 (1,9 mrd) naar 2020 (700 mln). Sterke daling.", nogSimpeler: "Sterke daling" },
         },
       },
       {
@@ -763,7 +763,7 @@ const steps = [
           theorie: "Andere uitdagingen: ongelijkheid stijgt binnen landen (1% rijksten heeft groter aandeel sinds 1980). AI-automatisering bedreigt banen. Demografie (vergrijzing Westen, jong Afrika). Pandemierisico's. Geopolitiek (China-VS, Rusland).",
           voorbeelden: [{ type: "context", tekst: "Bangladesh: 1/3 land onder zeespiegel-bedreiging, 165 mln mensen. Sahel: woestijn rukt 50 km/jaar op. Maladiven: gemiddeld 1,5 m boven zeeniveau — kan verdwijnen." }],
           basiskennis: [{ onderwerp: "Niet onzin", uitleg: "Tech alom (smartphones overal). Ongelijkheid bestaat zeker (groeit zelfs). Uitdagingen bestaan absoluut." }],
-          niveaus: { basis: "Klimaatverandering. A.", simpeler: "#1 uitdaging = klimaat. Arme landen geraakt door droogte/zeespiegel/storm. = A.", nogSimpeler: "Klimaat = A." },
+          niveaus: { basis: "Klimaatverandering. A.", simpeler: "#1 uitdaging = klimaat. Arme landen geraakt door droogte/zeespiegel/storm.", nogSimpeler: "Klimaat" },
         },
       },
       {
@@ -777,7 +777,7 @@ const steps = [
           theorie: "Concrete acties: bewust kopen (Fair Trade), minder vlees, minder vliegen, stemmen op visie-partijen, baan met impact zoeken, doneren aan goede doelen, online leren (Khan Academy/Coursera/YouTube — gratis).",
           voorbeelden: [{ type: "praktisch", tekst: "Vandaag: doe je hand omhoog in klas om vraag. Volgend jaar: blijf nieuwsgierig. 10 jaar: stem op partij met klimaat-visie. 20 jaar: kies werk met betekenis. 30 jaar: leer een nieuwe vaardigheid bij." }],
           basiskennis: [{ onderwerp: "Niet passief", uitleg: "Stemmen = invloed (kies wie regels maakt). Werken = bijdrage (creëert waarde). Interesse = begin van actie." }],
-          niveaus: { basis: "Leren+internationaal+bewust. A.", simpeler: "Toekomst-burger: levenslang leren + globaal denken + bewuste keuzes maken. = A.", nogSimpeler: "Doorgaan leren = A." },
+          niveaus: { basis: "Leren+internationaal+bewust. A.", simpeler: "Toekomst-burger: levenslang leren + globaal denken + bewuste keuzes maken.", nogSimpeler: "Doorgaan leren" },
         },
       },
     ],

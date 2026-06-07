@@ -57,7 +57,7 @@ const steps = [
           niveaus: {
             basis: "Ethogram. Antwoord A.",
             simpeler: "Een ethogram is een tabel waarin een bioloog gedragingen van dieren beschrijft. Antwoord A.",
-            nogSimpeler: "Ethogram = A.",
+            nogSimpeler: "Ethogram",
           },
         },
       },
@@ -108,7 +108,7 @@ const steps = [
           niveaus: {
             basis: "Bijnieren. Antwoord B.",
             simpeler: "Adrenaline komt uit de bijnieren (boven de nieren). Bij stress: bijnier knijpt → adrenaline in bloed → vechten of vluchten. Antwoord B.",
-            nogSimpeler: "Bijnier = B.",
+            nogSimpeler: "Bijnier",
           },
         },
       },
@@ -157,7 +157,7 @@ const steps = [
           niveaus: {
             basis: "Alleen secundaire kenmerken. Antwoord B.",
             simpeler: "Hormonen veranderen uiterlijke (secundaire) kenmerken zoals borsten en vetverdeling. Geboren-mee (primaire) organen veranderen niet door hormonen. Antwoord B.",
-            nogSimpeler: "Secundair = B.",
+            nogSimpeler: "Secundair",
           },
         },
       },
@@ -210,7 +210,7 @@ const steps = [
           niveaus: {
             basis: "Alleen Finn. Antwoord A.",
             simpeler: "Finn (straling kan mutatie veroorzaken): KLOPT. Ilse (alleen in geslachtscellen): KLOPT NIET — mutaties zijn er in elke cel. Antwoord A.",
-            nogSimpeler: "Finn ja, Ilse nee = A.",
+            nogSimpeler: "Finn ja, Ilse nee",
           },
         },
       },
@@ -264,7 +264,7 @@ const steps = [
           niveaus: {
             basis: "Kiemlaag. Antwoord B.",
             simpeler: "Pigmentcellen (melanocyten) zitten in de kiemlaag — de levende onderlaag van de opperhuid. Daar wordt melanine gemaakt die de huid bruin kleurt. Antwoord B.",
-            nogSimpeler: "Kiemlaag = B.",
+            nogSimpeler: "Kiemlaag",
           },
         },
       },

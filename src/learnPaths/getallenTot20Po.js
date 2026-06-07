@@ -38,7 +38,7 @@ const steps = [
           stappen: [{ titel: "Tellen op", tekst: "Telrij: 5, 6, **7, 8**, 9, 10. Na 7 komt 8." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Tel mee: 1-2-3-4-5-6-**7**-**8**-9-10." }],
           basiskennis: [{ onderwerp: "Telrij", uitleg: "Elke keer 1 erbij = volgend getal." }],
-          niveaus: { basis: "8 komt na 7. A.", simpeler: "Tel op: 7 → 8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "8 komt na 7. A.", simpeler: "Tel op: 7 → 8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         wrongHints: [null, "Tel nog eens: 1-2-3-4-**5**.", "Te veel — er staan er minder.", "Veel te veel."],
         uitlegPad: {
           stappen: [{ titel: "Tellen", tekst: "Tel elke stip met je vinger: 1, 2, 3, 4, 5. Vijf stippen → cijfer 5." }],
-          niveaus: { basis: "5 stippen. A.", simpeler: "Tel mee: 1-2-3-4-5. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "5 stippen. A.", simpeler: "Tel mee: 1-2-3-4-5. A.", nogSimpeler: "5" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "In telrij", tekst: "8 komt EERDER dan 12 in telrij (1-2-3-4-5-6-7-**8**-9-10-11-**12**). Eerder = kleiner." }],
           woorden: [{ woord: "kleiner", uitleg: "Minder dan iets anders." }],
-          niveaus: { basis: "8 < 12. A.", simpeler: "8 komt eerst, dus 8 is kleiner. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "8 < 12. A.", simpeler: "8 komt eerst, dus 8 is kleiner. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         wrongHints: [null, "Dat komt VOOR 14.", "Dat komt NA 16.", "Veel te ver."],
         uitlegPad: {
           stappen: [{ titel: "Telrij hoge getallen", tekst: "...13, 14, **15**, 16, 17... Tussen 14 en 16 zit 15." }],
-          niveaus: { basis: "15 tussen 14 en 16. A.", simpeler: "14 → 15 → 16. A.", nogSimpeler: "15 = A." },
+          niveaus: { basis: "15 tussen 14 en 16. A.", simpeler: "14 → 15 → 16. A.", nogSimpeler: "15" },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tientallen + eenheden", tekst: "20 = 2 tientallen = 10 + 10. Twee tientallen samen = 20." }],
           theorie: "Cito-onthouden: 20 is bijzonder = 2 keer 10.",
-          niveaus: { basis: "10 + 10 = 20. A.", simpeler: "Twee tientallen = 20. A.", nogSimpeler: "10 = A." },
+          niveaus: { basis: "10 + 10 = 20. A.", simpeler: "Twee tientallen = 20. A.", nogSimpeler: "10" },
         },
       },
     ],
@@ -100,7 +100,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tel door", tekst: "5 + 3 → vanaf 5 nog 3 erbij: 6, 7, **8**. Of: 5 + 3 = 5 + 5 - 2 = 10 - 2 = 8." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Begin bij 5, tel verder: 5 → 6 (+1) → 7 (+2) → 8 (+3) ✓." }],
-          niveaus: { basis: "5 + 3 = 8. A.", simpeler: "Tel vanaf 5: 6, 7, 8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "5 + 3 = 8. A.", simpeler: "Tel vanaf 5: 6, 7, 8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dubbele van 3.", "Onmogelijk — dubbele is altijd even.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele = 2x zelfde", tekst: "4 + 4 = **8**. Even getal want je telt 2 keer hetzelfde. Onthoud lijstje: 1+1=2, 2+2=4, 3+3=6, 4+4=**8**, 5+5=10." }],
-          niveaus: { basis: "4 + 4 = 8. A.", simpeler: "Dubbele 4 = 8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "4 + 4 = 8. A.", simpeler: "Dubbele 4 = 8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -121,7 +121,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "6 + 4 = 10. Onthoud: 10 = 6+4 (buurman-paar), 7+3, 8+2, 9+1, 5+5. Allemaal samen 10." }],
           theorie: "Cito-truc: 'Welke maakt 10?' kennis = essentieel voor groep 3-4. Oefen lijstje 'tientallen-paren'.",
-          niveaus: { basis: "6 + 4 = 10. A.", simpeler: "6 en 4 samen = 10. A.", nogSimpeler: "6+4 = A." },
+          niveaus: { basis: "6 + 4 = 10. A.", simpeler: "6 en 4 samen = 10. A.", nogSimpeler: "6+4" },
         },
       },
       {
@@ -132,7 +132,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Plus 0 = niets erbij", tekst: "**+0 = blijft hetzelfde**. 7 + 0 = 7. 100 + 0 = 100. Altijd zo." }],
           theorie: "Wiskundig: 0 is 'neutraal' bij optellen. Bij vermenigvuldigen anders (X × 0 = 0).",
-          niveaus: { basis: "7. A.", simpeler: "Plus 0 = niets erbij. A.", nogSimpeler: "7 = A." },
+          niveaus: { basis: "7. A.", simpeler: "Plus 0 = niets erbij. A.", nogSimpeler: "7" },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
           stappen: [{ titel: "Wisselen mag", tekst: "Bij optellen: **volgorde maakt niet uit**. 3 + 7 = 7 + 3 = 10. Wisselen heet 'commutatief'. Maakt sommen vaak makkelijker." }],
           woorden: [{ woord: "wisselen", uitleg: "Getallen verwisselen — bij plus altijd OK." }],
           theorie: "Tip: zet grootste getal vooraan, tel kleinste erbij. 3 + 7 = 7 + 3. Vanaf 7 tellen: 8, 9, 10.",
-          niveaus: { basis: "7 + 3 = 3 + 7 = 10. A.", simpeler: "Volgorde mag wisselen. A.", nogSimpeler: "7 = A." },
+          niveaus: { basis: "7 + 3 = 3 + 7 = 10. A.", simpeler: "Volgorde mag wisselen. A.", nogSimpeler: "7" },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Te veel — dat is 6 + 2.", "Te weinig — dat is 6 - 3.", "Te veel — dat is 6 - 1."],
         uitlegPad: {
           stappen: [{ titel: "Tel terug", tekst: "6 - 2 → vanaf 6 twee stappen terug: 5, **4**. Of: 6 = 4 + 2, dus 6 - 2 = 4." }],
-          niveaus: { basis: "6 - 2 = 4. A.", simpeler: "Tel terug vanaf 6: 5, 4. A.", nogSimpeler: "4 = A." },
+          niveaus: { basis: "6 - 2 = 4. A.", simpeler: "Tel terug vanaf 6: 5, 4. A.", nogSimpeler: "4" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "10 - 7 = 3 (want 7 + 3 = 10, dus 10 - 7 = 3). **Familie-som**." }],
           theorie: "Cito-truc: '10 min iets' is **buurman van dat iets** dat samen 10 maakt.",
-          niveaus: { basis: "10 - 7 = 3. A.", simpeler: "10 - 7 = 3 (want 7+3=10). A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "10 - 7 = 3. A.", simpeler: "10 - 7 = 3 (want 7+3=10). A.", nogSimpeler: "3" },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verschil = aftrekken", tekst: "**Verschil** = groot min klein = 8 - 3 = **5**. Dus: 'wat is het verschil tussen X en Y?' altijd aftrekken." }],
           woorden: [{ woord: "verschil", uitleg: "Hoeveel meer/minder de ene is dan de ander." }],
-          niveaus: { basis: "Verschil 8-3 = 5. A.", simpeler: "Verschil = groot - klein = 5. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "Verschil 8-3 = 5. A.", simpeler: "Verschil = groot - klein = 5. A.", nogSimpeler: "5" },
         },
       },
       {
@@ -195,7 +195,7 @@ const steps = [
         wrongHints: [null, "Te veel — alles eraf = niets over.", "Te veel.", "Niet — dat is plus."],
         uitlegPad: {
           stappen: [{ titel: "Iets - zichzelf = 0", tekst: "Als je alles eraf haalt blijft er niets over. 9 - 9 = **0**. Werkt voor elk getal: 5 - 5 = 0, 100 - 100 = 0." }],
-          niveaus: { basis: "9 - 9 = 0. A.", simpeler: "Alles weg = 0. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "9 - 9 = 0. A.", simpeler: "Alles weg = 0. A.", nogSimpeler: "0" },
         },
       },
       {
@@ -205,7 +205,7 @@ const steps = [
         wrongHints: [null, "Te veel — 7 - 10 zou negatief.", "Niet — dat is 7 - 4 = 3.", "Te weinig — 7 - 2 = 5."],
         uitlegPad: {
           stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3 → wat moet er weg om 3 over te houden? 7 - **4** = 3. Familie: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
-          niveaus: { basis: "4. A.", simpeler: "7 - 4 = 3 = A.", nogSimpeler: "4 = A." },
+          niveaus: { basis: "4. A.", simpeler: "7 - 4 = 3", nogSimpeler: "4" },
         },
       },
     ],
@@ -225,7 +225,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Maak eerst 10", tekst: "8 + 5 → splits 5 in 2 + 3. 8 + 2 = 10. 10 + 3 = **13**." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "8 + 5 = 8 + 2 + 3 = 10 + 3 = 13 ✓." }],
-          niveaus: { basis: "8+5 = 13. A.", simpeler: "8+2=10, 10+3=13. A.", nogSimpeler: "13 = A." },
+          niveaus: { basis: "8+5 = 13. A.", simpeler: "8+2=10, 10+3=13. A.", nogSimpeler: "13" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
         wrongHints: [null, "Te veel — 15-6=9.", "Te weinig — 15-8=7.", "Te weinig — 15-9=6."],
         uitlegPad: {
           stappen: [{ titel: "Eerst naar 10", tekst: "15 - 7 → splits 7 in 5 + 2. 15 - 5 = 10. 10 - 2 = **8**." }],
-          niveaus: { basis: "15-7 = 8. A.", simpeler: "15-5=10, 10-2=8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "15-7 = 8. A.", simpeler: "15-5=10, 10-2=8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -246,7 +246,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Splits 14", tekst: "14 = 10 + 4. Dus 14 + 5 = 10 + 4 + 5 = 10 + 9 = **19**." }],
           theorie: "Of: 4 + 5 = 9, en dan 10 + 9 = 19. Hetzelfde resultaat.",
-          niveaus: { basis: "14+5 = 19. A.", simpeler: "14+5 = 10+4+5 = 19. A.", nogSimpeler: "19 = A." },
+          niveaus: { basis: "14+5 = 19. A.", simpeler: "14+5 = 10+4+5 = 19. A.", nogSimpeler: "19" },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Redactiesom = plus", tekst: "Krijgt 4 erbij → plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
           theorie: "Cito-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
-          niveaus: { basis: "9+4 = 13. A.", simpeler: "Plus-som: 9+4=13. A.", nogSimpeler: "13 = A." },
+          niveaus: { basis: "9+4 = 13. A.", simpeler: "Plus-som: 9+4=13. A.", nogSimpeler: "13" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
         wrongHints: [null, "Niet — 17 komt later.", "Niet — verschillend.", "Wel — beide bestaan."],
         uitlegPad: {
           stappen: [{ titel: "Tellen 11-20", tekst: "Telrij: 11, 12, **13**, 14, 15, 16, **17**, 18, 19, 20. **13 komt eerst**." }],
-          niveaus: { basis: "13. A.", simpeler: "13 < 17. A.", nogSimpeler: "13 = A." },
+          niveaus: { basis: "13. A.", simpeler: "13 < 17. A.", nogSimpeler: "13" },
         },
       },
     ],
@@ -286,7 +286,7 @@ const steps = [
         wrongHints: [null, "Te weinig — 6+6=12.", "Te veel — 6+8=14.", "Te weinig — 6+5=11."],
         uitlegPad: {
           stappen: [{ titel: "Maak 10", tekst: "6 + 7 = 6 + 4 + 3 = 10 + 3 = **13**." }],
-          niveaus: { basis: "13. A.", simpeler: "6+7=13. A.", nogSimpeler: "13 = A." },
+          niveaus: { basis: "13. A.", simpeler: "6+7=13. A.", nogSimpeler: "13" },
         },
       },
       {
@@ -296,7 +296,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Te weinig.", "Te veel — 17-7=10."],
         uitlegPad: {
           stappen: [{ titel: "Familie-som", tekst: "17 - 9 = **8** (want 9 + 8 = 17). Of: 17 - 7 = 10, 10 - 2 = 8." }],
-          niveaus: { basis: "8. A.", simpeler: "17-9 = 8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "8. A.", simpeler: "17-9 = 8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -306,7 +306,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dat is 5+5.", "Te veel — 5+5+5+5.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Driemaal vijf", tekst: "5 + 5 = 10. 10 + 5 = **15**. Drie keer 5 = 15. Dit ga je later '5 × 3' noemen — vermenigvuldigen!" }],
-          niveaus: { basis: "15. A.", simpeler: "5+5+5 = 15. A.", nogSimpeler: "15 = A." },
+          niveaus: { basis: "15. A.", simpeler: "5+5+5 = 15. A.", nogSimpeler: "15" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te veel — 12-3=9.", "Te veel — 12-2=10."],
         uitlegPad: {
           stappen: [{ titel: "Eten op = min", tekst: "'Eet op' → min-som. 12 - 4 = 12 - 2 - 2 = 10 - 2 = **8**." }],
-          niveaus: { basis: "12-4 = 8. A.", simpeler: "12-4 = 8 snoepjes over. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "12-4 = 8. A.", simpeler: "12-4 = 8 snoepjes over. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -326,7 +326,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dubbele van 4.", "Niet — dubbele van 5.", "Te veel — dubbele van 8."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele 6", tekst: "Dubbele = 2x. 6 + 6 = **12**. Of: 2 × 6 = 12 (vermenigvuldigen later)." }],
-          niveaus: { basis: "12. A.", simpeler: "Dubbele 6 = 12. A.", nogSimpeler: "12 = A." },
+          niveaus: { basis: "12. A.", simpeler: "Dubbele 6 = 12. A.", nogSimpeler: "12" },
         },
       },
     ],

@@ -28,7 +28,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "E = h·c/λ → korte λ = hoge E", tekst: "Violet: E ≈ 4,97·10⁻¹⁹ J ≈ 3,1 eV. Rood: ~1,77 eV. Violet ~1,8× zoveel energie per foton." }],
           theorie: "Daarom is UV/röntgen gevaarlijk voor cellen: hoogenergetische fotonen kunnen DNA breken. Rood licht (lager E) niet.",
-          niveaus: { basis: "Violet = hoogste E. A.", simpeler: "Kortere golflengte → meer energie per foton. A.", nogSimpeler: "Violet = A." },
+          niveaus: { basis: "Violet = hoogste E. A.", simpeler: "Kortere golflengte → meer energie per foton. A.", nogSimpeler: "Violet" },
         },
       },
       {
@@ -40,7 +40,7 @@ const steps = [
           stappen: [
             { titel: "E = hc/λ", tekst: "E = (6,626·10⁻³⁴ · 3·10⁸) / 500·10⁻⁹ = 1,988·10⁻²⁵ / 5·10⁻⁷ = **3,98·10⁻¹⁹ J** ≈ 2,48 eV. Groen licht, midden zichtbaar spectrum." },
           ],
-          niveaus: { basis: "E ≈ 4·10⁻¹⁹ J. A.", simpeler: "Plancks formule: ~4·10⁻¹⁹ J. A.", nogSimpeler: "4·10⁻¹⁹ = A." },
+          niveaus: { basis: "E ≈ 4·10⁻¹⁹ J. A.", simpeler: "Plancks formule: ~4·10⁻¹⁹ J. A.", nogSimpeler: "4·10⁻¹⁹" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
         wrongHints: [null, "Niet — J is energie-eenheid.", "Te groot.", "Wel verband."],
         uitlegPad: {
           stappen: [{ titel: "1 eV = 1 V × e", tekst: "Definitie: 1 eV = arbeid die elektron krijgt door 1 V potentiaalverschil. 1 eV = e·1V = 1,6·10⁻¹⁹ J. Praktisch in atomaire fysica omdat J-getallen anders veel decimalen heeft." }],
-          niveaus: { basis: "1 V. A.", simpeler: "e × 1V = 1 eV per definitie. A.", nogSimpeler: "1 V = A." },
+          niveaus: { basis: "1 V. A.", simpeler: "e × 1V = 1 eV per definitie. A.", nogSimpeler: "1 V" },
         },
       },
       {
@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "Niet — c is een aparte constante.", "Onzin in dit kader.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "h = 6,626·10⁻³⁴ J·s — heel klein", tekst: "Omdat h zo klein is, zien wij op dagelijkse schaal geen quantum-effecten. Een tennisbal heeft de Broglie-golf van ~10⁻³⁵ m → onmeetbaar. Een elektron heeft λ ~10⁻¹⁰ m → wel meetbaar." }],
-          niveaus: { basis: "h is schaal van quantum. A.", simpeler: "Hele kleine constante = quantum-wereld. A.", nogSimpeler: "h = A." },
+          niveaus: { basis: "h is schaal van quantum. A.", simpeler: "Hele kleine constante = quantum-wereld. A.", nogSimpeler: "h" },
         },
       },
       {
@@ -75,7 +75,7 @@ const steps = [
         wrongHints: [null, "Niet — UV is >3 eV.", "Niet — keV-bereik.", "Niet — IR is <1,5 eV."],
         uitlegPad: {
           stappen: [{ titel: "Zichtbaar = 1,8-3,1 eV", tekst: "Zichtbaar bereik per foton: rood ~1,8 eV → violet ~3,1 eV. Geel ligt rond 2,1 eV. UV begint vanaf 3,1 eV; röntgen vanaf ~100 eV." }],
-          niveaus: { basis: "2,1 eV = zichtbaar geel. A.", simpeler: "In zichtbaar bereik. A.", nogSimpeler: "Geel = A." },
+          niveaus: { basis: "2,1 eV = zichtbaar geel. A.", simpeler: "In zichtbaar bereik. A.", nogSimpeler: "Geel" },
         },
       },
     ],
@@ -99,7 +99,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zou klassieke verwachting zijn.", "Niet — alleen aantal verandert.", "Niet — intensiteit doet wel iets."],
         uitlegPad: {
           stappen: [{ titel: "Intensiteit = aantal fotonen/s", tekst: "Meer licht = meer fotonen per seconde = meer elektron-uitslagen per seconde. Maar elke foton heeft dezelfde E (hf) → elektron krijgt dezelfde energie. Dit was de cruciale Einstein-vondst: energie per elektron hangt af van FREQUENTIE, niet INTENSITEIT." }],
-          niveaus: { basis: "Aantal stijgt, E blijft. A.", simpeler: "Meer fotonen = meer elektronen, maar zelfde energie elk. A.", nogSimpeler: "Aantal = A." },
+          niveaus: { basis: "Aantal stijgt, E blijft. A.", simpeler: "Meer fotonen = meer elektronen, maar zelfde energie elk. A.", nogSimpeler: "Aantal" },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
           stappen: [
             { titel: "f_d = W/h", tekst: "W = 2,1 eV = 2,1 · 1,6·10⁻¹⁹ = 3,36·10⁻¹⁹ J. f_d = W/h = 3,36·10⁻¹⁹ / 6,626·10⁻³⁴ ≈ **5,07·10¹⁴ Hz** (oranje-gele licht). Dat is waarom cesium handig is: zelfs gewoon zichtbaar licht slaat elektronen los." },
           ],
-          niveaus: { basis: "f_d ≈ 5·10¹⁴ Hz. A.", simpeler: "W/h ≈ 5·10¹⁴ Hz (zichtbaar). A.", nogSimpeler: "5·10¹⁴ = A." },
+          niveaus: { basis: "f_d ≈ 5·10¹⁴ Hz. A.", simpeler: "W/h ≈ 5·10¹⁴ Hz (zichtbaar). A.", nogSimpeler: "5·10¹⁴" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Niet — niet genoeg E.", "Niet — totaal foute formule.", "In theorie maar drempel wel."],
         uitlegPad: {
           stappen: [{ titel: "hf < W → geen verlossing", tekst: "Foton-energie (3 eV) is te klein om elektron over uittree-arbeid (4 eV) te tillen. Foton wordt geabsorbeerd (verwarmt metaal) maar geen losgeslagen elektron. **Hogere intensiteit helpt niet** — méér zwakke fotonen blijven zwak." }],
-          niveaus: { basis: "hf<W → niets. A.", simpeler: "Foton te zwak → elektron blijft. A.", nogSimpeler: "Niets = A." },
+          niveaus: { basis: "hf<W → niets. A.", simpeler: "Foton te zwak → elektron blijft. A.", nogSimpeler: "Niets" },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Foton → elektron-gat-paar", tekst: "In silicium-zonnecel: foton met E ≥ bandkloof-energie tilt elektron uit valentieband naar geleidingsband. Achtergebleven 'gat' + vrij elektron → stroom door interne diode-structuur. Rendement 15-25% (commercieel)." }],
           theorie: "Hogere zonintensiteit → meer fotonen → meer stroom. Daarom werkt zonnecel beter bij heldere zon dan bewolkt.",
-          niveaus: { basis: "Foto-elektrisch in halfgeleider. A.", simpeler: "Licht slaat elektronen los → stroom. A.", nogSimpeler: "Foto-elektrisch = A." },
+          niveaus: { basis: "Foto-elektrisch in halfgeleider. A.", simpeler: "Licht slaat elektronen los → stroom. A.", nogSimpeler: "Foto-elektrisch" },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Niet — W is vermogen.", "Niet — V is spanning.", "Niet — Hz is frequentie."],
         uitlegPad: {
           stappen: [{ titel: "W is energie-eenheid", tekst: "Uittree-arbeid = minimum energie nodig om elektron uit metaal te krijgen. Energie-eenheid = J of vaker eV in atomaire/quantum context." }],
-          niveaus: { basis: "J of eV. A.", simpeler: "Energie-eenheid (J of eV). A.", nogSimpeler: "J = A." },
+          niveaus: { basis: "J of eV. A.", simpeler: "Energie-eenheid (J of eV). A.", nogSimpeler: "J" },
         },
       },
     ],
@@ -178,7 +178,7 @@ const steps = [
           stappen: [
             { titel: "ΔE = E_3 − E_1", tekst: "E_3 = −13,6/9 = −1,51 eV. E_1 = −13,6 eV.\nΔE = −1,51 − (−13,6) = **+12,09 eV**. Bij absorptie stijgt E. UV-foton (87 nm) nodig." },
           ],
-          niveaus: { basis: "ΔE ≈ +12,09 eV. A.", simpeler: "Verschil energieniveaus: ~12 eV. A.", nogSimpeler: "+12,1 = A." },
+          niveaus: { basis: "ΔE ≈ +12,09 eV. A.", simpeler: "Verschil energieniveaus: ~12 eV. A.", nogSimpeler: "+12,1" },
         },
       },
       {
@@ -189,7 +189,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Van n=1 naar n=∞", tekst: "Energie om elektron volledig vrij te maken = 0 − (−13,6) = **13,6 eV**. Beroemde Rydberg-energie. Goed te onthouden." }],
           theorie: "Helium: 24,6 eV. Argon: 15,8 eV. Hoge ionisatie-energie betekent kern houdt elektron stevig vast — typisch voor edelgassen (vol elektron-omhulsel).",
-          niveaus: { basis: "13,6 eV. A.", simpeler: "Klassiek H-getal: 13,6 eV. A.", nogSimpeler: "13,6 = A." },
+          niveaus: { basis: "13,6 eV. A.", simpeler: "Klassiek H-getal: 13,6 eV. A.", nogSimpeler: "13,6" },
         },
       },
       {
@@ -205,7 +205,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Discreet spectrum", tekst: "Daarom zien we voor elk atoom een **uniek spectrum** van absorptielijnen (en emissielijnen). Identificatie van sterren-samenstelling werkt zo: spectrum vergelijken met lab-spectra van elementen." }],
           theorie: "Helium werd in 1868 ontdekt in zon-spectrum (gele lijn die geen aards element matchte). Pas 30 jaar later op aarde gevonden.",
-          niveaus: { basis: "Alleen exacte sprong-E. A.", simpeler: "Gequantiseerde sprongen alleen. A.", nogSimpeler: "Exacte E = A." },
+          niveaus: { basis: "Alleen exacte sprong-E. A.", simpeler: "Gequantiseerde sprongen alleen. A.", nogSimpeler: "Exacte E" },
         },
       },
       {
@@ -221,7 +221,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sprong omlaag = foton uit", tekst: "Stof verhit (vlam, vonk, gasontlading) → elektronen aangeslagen naar hoger niveau → vallen terug → fotonen vrij met ΔE = hf. Elk element heeft uniek patroon: natrium = geel (D-lijn), neon = rood-oranje, etc." }],
           theorie: "Vuurwerk-kleuren komen ook hieruit: koper-zouten = groen, strontium = rood, natrium = geel, etc.",
-          niveaus: { basis: "Terugval geeft foton. A.", simpeler: "Atoom valt terug → licht uit. A.", nogSimpeler: "Terugval = A." },
+          niveaus: { basis: "Terugval geeft foton. A.", simpeler: "Atoom valt terug → licht uit. A.", nogSimpeler: "Terugval" },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
           stappen: [
             { titel: "Eén-elektron-model", tekst: "Bohr nam aan: 1 elektron in vaste cirkelbaan rondom kern. Werkt voor H + He⁺ (één elektron rond kern). Bij Li (3 elektronen) gaan elektronen elkaar afstoten + 'verstrengelen' (Pauli-principe) → klassieke banen onmogelijk. Moderne quantummechanica gebruikt **orbitalen** (waarschijnlijkheids-wolken s, p, d, f)." },
           ],
-          niveaus: { basis: "Meerdere elektronen → quantum-modelen. A.", simpeler: "Te complex met >1 elektron. A.", nogSimpeler: "Te complex = A." },
+          niveaus: { basis: "Meerdere elektronen → quantum-modelen. A.", simpeler: "Te complex met >1 elektron. A.", nogSimpeler: "Te complex" },
         },
       },
     ],
@@ -257,7 +257,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen vaste/dichte stof geeft continu.", "Niet — geen kouder gas vóór.", "Wel een spectrum (rode kleur)."],
         uitlegPad: {
           stappen: [{ titel: "Heet + dun gas", tekst: "Neon-gas onder elektrische ontlading: aangeslagen → emissielijnen, vooral in rood-oranje (650 nm). Discreet patroon, niet 'wit'. Daarom monochrome neon-borden." }],
-          niveaus: { basis: "Lijn-emissie. A.", simpeler: "Heet dun gas → emissielijnen. A.", nogSimpeler: "Emissielijnen = A." },
+          niveaus: { basis: "Lijn-emissie. A.", simpeler: "Heet dun gas → emissielijnen. A.", nogSimpeler: "Emissielijnen" },
         },
       },
       {
@@ -275,7 +275,7 @@ const steps = [
             { titel: "Continu + koudere absorptie", tekst: "Zon-bol (~6000 K, dicht) zendt continu spectrum uit. Daar bovenop ligt koudere chromosfeer (~4500 K, dunner gas) die specifieke λ absorbeert. Resultaat: continu met donkere strepen — Fraunhofer-lijnen, ~25 000 stuks (waterstof, helium, ijzer, calcium, etc.)." },
           ],
           theorie: "Helium ('helios' = zon) werd ontdekt als gele Fraunhofer-lijn vóórdat het op aarde was gevonden.",
-          niveaus: { basis: "Donkere absorptielijnen. A.", simpeler: "Koude zon-buitenlaag slokt fotonen op. A.", nogSimpeler: "Absorptie = A." },
+          niveaus: { basis: "Donkere absorptielijnen. A.", simpeler: "Koude zon-buitenlaag slokt fotonen op. A.", nogSimpeler: "Absorptie" },
         },
       },
       {
@@ -285,7 +285,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zou blauw-verschoven zijn.", "Niet — Doppler.", "Niet — Doppler-onafhankelijk."],
         uitlegPad: {
           stappen: [{ titel: "Doppler-effect licht", tekst: "Bron beweegt weg → golven uitgerekt → langere λ → naar rood verschoven. Mate van verschuiving (z) → snelheid weg. Hubble's wet: z evenredig met afstand → heelal-uitdijing." }],
-          niveaus: { basis: "Weg van ons. A.", simpeler: "Rood = wegbewegen. A.", nogSimpeler: "Weg = A." },
+          niveaus: { basis: "Weg van ons. A.", simpeler: "Rood = wegbewegen. A.", nogSimpeler: "Weg" },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "OBAFGKM van heet naar koel", tekst: "O-sterren zijn zeldzame, jonge, heel zware sterren (>16 zonsmassa's). Heet → blauw spectrum. Branden snel op (paar miljoen jaar) en eindigen als supernova." }],
           theorie: "Zon = G2-ster (~5800 K, geel). Sirius = A1 (~9900 K, witblauw). Betelgeuse = M2 (~3500 K, rood).",
-          niveaus: { basis: "O = heet + blauw. A.", simpeler: "O = hete blauwe ster. A.", nogSimpeler: "Heet blauw = A." },
+          niveaus: { basis: "O = heet + blauw. A.", simpeler: "O = hete blauwe ster. A.", nogSimpeler: "Heet blauw" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
         wrongHints: [null, "Niet — andersom.", "Niet — verschuift wel.", "Niet — gewoon één piek."],
         uitlegPad: {
           stappen: [{ titel: "λ_max · T = 2,9·10⁻³ m·K", tekst: "Hogere T → kortere piek-λ. Voorbeelden:\n- Kamer (300 K): piek ~10 μm (infrarood).\n- Gloeidraad (3000 K): ~1 μm (nabij IR + rood).\n- Zon (5800 K): ~500 nm (geel-groen).\n- O-ster (30 000 K): ~100 nm (UV)." }],
-          niveaus: { basis: "Korter λ bij hoger T. A.", simpeler: "Hete sterren stralen blauwer. A.", nogSimpeler: "λ↓ = A." },
+          niveaus: { basis: "Korter λ bij hoger T. A.", simpeler: "Hete sterren stralen blauwer. A.", nogSimpeler: "λ↓" },
         },
       },
     ],
@@ -338,7 +338,7 @@ const steps = [
             { titel: "E = hc/λ → eV", tekst: "E = 1240 eV·nm / 200 nm = **6,2 eV** (handige formule: hc = 1240 eV·nm). UV-bereik, kan DNA-bindingen breken." },
           ],
           theorie: "Vuistregel: 'energie in eV = 1240 / golflengte in nm'.",
-          niveaus: { basis: "E ≈ 6,2 eV. A.", simpeler: "1240/200=6,2. A.", nogSimpeler: "6,2 = A." },
+          niveaus: { basis: "E ≈ 6,2 eV. A.", simpeler: "1240/200=6,2. A.", nogSimpeler: "6,2" },
         },
       },
       {
@@ -350,7 +350,7 @@ const steps = [
           stappen: [
             { titel: "λ = h/(mv)", tekst: "λ = 6,626·10⁻³⁴ / (9,11·10⁻³¹ · 1·10⁶) = 6,626·10⁻³⁴ / 9,11·10⁻²⁵ ≈ **7,3·10⁻¹⁰ m** (sub-nanometer). Vergelijkbaar met atoom-grootte → elektron-microscoop ziet detail op die schaal." },
           ],
-          niveaus: { basis: "λ ≈ 7·10⁻¹⁰ m. A.", simpeler: "h/(mv) → ~0,7 nm. A.", nogSimpeler: "10⁻¹⁰ = A." },
+          niveaus: { basis: "λ ≈ 7·10⁻¹⁰ m. A.", simpeler: "h/(mv) → ~0,7 nm. A.", nogSimpeler: "10⁻¹⁰" },
         },
       },
       {
@@ -360,7 +360,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen dun heet gas.", "Niet — geen koud gas voor.", "Niet — geeft wel licht."],
         uitlegPad: {
           stappen: [{ titel: "Vaste stof = continu", tekst: "Hete vaste stof (wolfraam-draad, ~2500 K) zendt continu spectrum uit — alle golflengten vertegenwoordigd, met piek volgens Wien (rood-geel-warm-licht). Daarom worden gloeilampen energieverspilling: <5% in zichtbaar, 95%+ in IR (warmte)." }],
-          niveaus: { basis: "Continu. A.", simpeler: "Vaste stof straalt continu. A.", nogSimpeler: "Continu = A." },
+          niveaus: { basis: "Continu. A.", simpeler: "Vaste stof straalt continu. A.", nogSimpeler: "Continu" },
         },
       },
       {
@@ -376,7 +376,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Fundamenteel, niet meetfout", tekst: "Geen experimenteel tekort maar natuurwet. Een deeltje HEEFT geen scherp gedefinieerde plek + impuls tegelijk; het is een waarschijnlijkheidsverdeling. Bij macroscopische objecten verwaarloosbaar (ℏ is heel klein); bij elektron significant." }],
           theorie: "Daarom bestaat 'baan' van elektron in atoom niet — alleen orbitalen (waarschijnlijkheidswolken).",
-          niveaus: { basis: "Fundamentele wet. A.", simpeler: "Plek + snelheid niet beide tegelijk scherp. A.", nogSimpeler: "Wet = A." },
+          niveaus: { basis: "Fundamentele wet. A.", simpeler: "Plek + snelheid niet beide tegelijk scherp. A.", nogSimpeler: "Wet" },
         },
       },
       {
@@ -389,7 +389,7 @@ const steps = [
             { titel: "Balmer-serie naar n=2", tekst: "ΔE = E_3 − E_2 = (−1,51) − (−3,4) = +1,89 eV → λ = 1240/1,89 ≈ 656 nm (rood). Klassieke Hα-lijn, zichtbaar in waterstof-spectrum en in zon (één van de prominentste Fraunhofer-lijnen)." },
           ],
           theorie: "Balmer-serie eindigt altijd op n=2, geeft zichtbaar licht. Lyman (op n=1): UV. Paschen (n=3): IR.",
-          niveaus: { basis: "n=3 → n=2 = Hα rood. A.", simpeler: "Balmer-α-lijn = rood. A.", nogSimpeler: "3→2 = A." },
+          niveaus: { basis: "n=3 → n=2 = Hα rood. A.", simpeler: "Balmer-α-lijn = rood. A.", nogSimpeler: "3→2" },
         },
       },
     ],

@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — VN-stichting wel 24 okt 1945.", "Veel later.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Mensenrechten-dag", tekst: "10 december = Internationale Dag van de Mensenrechten, jaarlijks gevierd. Eleanor Roosevelt-commissie. Niet juridisch bindend maar morele standaard wereldwijd." }],
-          niveaus: { basis: "10-12-1948. A.", simpeler: "Dec 1948. A.", nogSimpeler: "1948 = A." },
+          niveaus: { basis: "10-12-1948. A.", simpeler: "Dec 1948. A.", nogSimpeler: "1948" },
         },
       },
       {
@@ -42,7 +42,7 @@ const steps = [
         wrongHints: [null, "Niet — 2e generatie.", "3e generatie.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Klassieke vrijheidsrechten", tekst: "1e generatie beschermt INDIVIDU tegen MACHT van staat. Vrijheid van meningsuiting, godsdienst, vereniging. Geen willekeurige arrestatie. Eerlijk proces. Stamt uit Verlichting-revoluties (Amerikaans 1776, Frans 1789)." }],
-          niveaus: { basis: "Burger + politiek. A.", simpeler: "Vrijheden tegen overheid. A.", nogSimpeler: "1e gen = A." },
+          niveaus: { basis: "Burger + politiek. A.", simpeler: "Vrijheden tegen overheid. A.", nogSimpeler: "1e gen" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Globaal, niet EVRM.", "Apart — oorlogsmisdaden.", "Wel rechtbank."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1959", tekst: "EVRM-overtreding kan elk individu in lidstaat klacht indienen na uitputten nationaal rechtsmiddel. Hof oordeelt + lidstaat moet uitspraak volgen (politieke + reputationele druk). 46 lidstaten Raad van Europa. Rusland 2022 verwijderd na Oekraïne-invasie." }],
-          niveaus: { basis: "Straatsburg. A.", simpeler: "EU-rechten-hof. A.", nogSimpeler: "Straatsburg = A." },
+          niveaus: { basis: "Straatsburg. A.", simpeler: "EU-rechten-hof. A.", nogSimpeler: "Straatsburg" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
         wrongHints: [null, "Specifiek kinderen.", "Wel.", "Wereldwijd."],
         uitlegPad: {
           stappen: [{ titel: "Meest geratificeerde verdrag ooit", tekst: "196 staten lid (alle behalve VS — wel ondertekend). Rechten kind onder 18: bescherming, onderwijs, gezin, participatie. Comité Kinderrechten in Genève monitort. NL: Defence for Children + Kinderombudsman volgen op." }],
-          niveaus: { basis: "Kinderrechten 1989. A.", simpeler: "Convention kinderen. A.", nogSimpeler: "CRC = A." },
+          niveaus: { basis: "Kinderrechten 1989. A.", simpeler: "Convention kinderen. A.", nogSimpeler: "CRC" },
         },
       },
       {
@@ -87,7 +87,7 @@ const steps = [
         wrongHints: [null, "Wel.", "Wel.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar specifiek 'auto' niet." }],
-          niveaus: { basis: "Auto niet. A.", simpeler: "Geen recht op auto. A.", nogSimpeler: "Auto = A." },
+          niveaus: { basis: "Auto niet. A.", simpeler: "Geen recht op auto. A.", nogSimpeler: "Auto" },
         },
       },
     ],
@@ -113,7 +113,7 @@ const steps = [
           stappen: [
             { titel: "WO2-overwinnaars", tekst: "Vijf zegevierende grote machten WO2: VS, UK, FR (Westen) + USSR (nu Rusland) + China (vanaf 1971 Volksrepubliek ipv Taiwan). Elk veto-recht in UNSC = kan elke bindende resolutie blokkeren. Reden voor verlamming bij conflicten Oekraïne, Syrië, Israel-Palestina." },
           ],
-          niveaus: { basis: "P5: VS/UK/FR/RU/CN. A.", simpeler: "Vijf grote machten. A.", nogSimpeler: "P5 = A." },
+          niveaus: { basis: "P5: VS/UK/FR/RU/CN. A.", simpeler: "Vijf grote machten. A.", nogSimpeler: "P5" },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Stichters waren 51.", "Wel begrensd."],
         uitlegPad: {
           stappen: [{ titel: "Bijna alle landen", tekst: "Stichting 1945: 51 landen. Vandaag 193. Niet-leden: Vaticaan (waarnemer), Taiwan (China-blokkeert), Kosovo (niet door alle landen erkend), Palestina (waarnemer-status). Zuid-Soedan was laatste toelating (2011)." }],
-          niveaus: { basis: "193. A.", simpeler: "193 landen. A.", nogSimpeler: "193 = A." },
+          niveaus: { basis: "193. A.", simpeler: "193 landen. A.", nogSimpeler: "193" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
         wrongHints: [null, "VN HQ.", "WHO HQ.", "EVRM-hof."],
         uitlegPad: {
           stappen: [{ titel: "Vredespaleis", tekst: "ICJ in Vredespaleis Den Haag (sinds 1946). Beslecht juridische geschillen tussen STATEN. ICC (apart) ook Den Haag — voor individuele oorlogsmisdadigers. NL = 'juridische hoofdstad van de wereld' door beide + Joegoslavië-tribunaal." }],
-          niveaus: { basis: "Den Haag. A.", simpeler: "NL Den Haag. A.", nogSimpeler: "DH = A." },
+          niveaus: { basis: "Den Haag. A.", simpeler: "NL Den Haag. A.", nogSimpeler: "DH" },
         },
       },
       {
@@ -143,7 +143,7 @@ const steps = [
         wrongHints: [null, "Vorige (2007-16).", "Vorige (1997-06).", "Niet VN."],
         uitlegPad: {
           stappen: [{ titel: "Vluchtelingen-achtergrond", tekst: "Voor VN was hij hoge commissaris voor vluchtelingen (UNHCR). Portugees. Klimaatactivist. Werkt aan VN-hervorming. Tweede termijn loopt tot 2026." }],
-          niveaus: { basis: "Guterres. A.", simpeler: "Guterres = SG. A.", nogSimpeler: "Guterres = A." },
+          niveaus: { basis: "Guterres. A.", simpeler: "Guterres = SG. A.", nogSimpeler: "Guterres" },
         },
       },
       {
@@ -153,7 +153,7 @@ const steps = [
         wrongHints: [null, "Niet — VS-soldaten.", "Onzin.", "Algemener."],
         uitlegPad: {
           stappen: [{ titel: "Blauwe helm + barret", tekst: "VN-troepen uit lidstaten dragen blauwe helmen voor herkenbaarheid + neutraliteit. ~100 000 wereldwijd in 12 missies. Beperkt mandaat: alleen zelfverdediging + bescherming burgers. Niet-aanvallende rol." }],
-          niveaus: { basis: "Blauwhelmen. A.", simpeler: "Blauwe helm-troepen. A.", nogSimpeler: "Blauw = A." },
+          niveaus: { basis: "Blauwhelmen. A.", simpeler: "Blauwe helm-troepen. A.", nogSimpeler: "Blauw" },
         },
       },
     ],
@@ -177,7 +177,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is ICJ.", "Niet — VN AV.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Permanente strafrechtbank", tekst: "Sinds 2002 (Rome-Statuut 1998). Tussen Neurenberg-processen (ad-hoc) + ICTY/ICTR (per conflict) → behoefte permanente rechtbank. ICC handelt VOOR (preventie via afschrikking) + NA (berechting). 124 leden, maar grootmachten ontbreken." }],
-          niveaus: { basis: "Individuele berechtigers. A.", simpeler: "ICC = strafhof persoonlijk. A.", nogSimpeler: "ICC = A." },
+          niveaus: { basis: "Individuele berechtigers. A.", simpeler: "ICC = strafhof persoonlijk. A.", nogSimpeler: "ICC" },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Vóór WO2: militairen volgden orders, niet persoonlijk verantwoordelijk. Neurenberg 1945-46 verwierp dit. Eichmann ('ich war nur ein Rädchen') opnieuw gepoogd 1961 — verworpen. Vandaag basis voor ICC. Plicht om weigerbare bevelen NIET uit te voeren." },
           ],
-          niveaus: { basis: "Orders ≠ vrij. A.", simpeler: "Persoonlijke verantwoording. A.", nogSimpeler: "Persoon = A." },
+          niveaus: { basis: "Orders ≠ vrij. A.", simpeler: "Persoonlijke verantwoording. A.", nogSimpeler: "Persoon" },
         },
       },
       {
@@ -209,7 +209,7 @@ const steps = [
         wrongHints: [null, "Apart.", "Veel later.", "UDHR apart."],
         uitlegPad: {
           stappen: [{ titel: "Vier verdragen", tekst: "I: gewonden land. II: gewonden zee. III: krijgsgevangenen. IV: burgers in oorlog. Plus aanvullende protocollen (1977). Schending = oorlogsmisdaad. Universeel geratificeerd (alle 196 landen) — uniek voor internationaal verdrag." }],
-          niveaus: { basis: "Oorlogsrecht. A.", simpeler: "Oorlogs-regels. A.", nogSimpeler: "Genève = A." },
+          niveaus: { basis: "Oorlogsrecht. A.", simpeler: "Oorlogs-regels. A.", nogSimpeler: "Genève" },
         },
       },
       {
@@ -226,7 +226,7 @@ const steps = [
           stappen: [
             { titel: "Dolus specialis", tekst: "1948-Genocideverdrag: doel = vernietigen 'in whole or in part' van groep wegens nationale/etnische/raciale/religieuze identiteit. Niet alleen daad maar BEDOELING telt. Daarom moeilijk te bewijzen. Rwanda + Srebrenica + Holocaust formeel erkend. Oekraïne deportatie Russisch standpunt: nog discussie." },
           ],
-          niveaus: { basis: "Opzet groep vernietigen. A.", simpeler: "Bedoeling tellen, niet alleen doden. A.", nogSimpeler: "Intent = A." },
+          niveaus: { basis: "Opzet groep vernietigen. A.", simpeler: "Bedoeling tellen, niet alleen doden. A.", nogSimpeler: "Intent" },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
           stappen: [
             { titel: "Voor genocide + marteling", tekst: "Concept: bepaalde misdrijven (jus cogens) zo ernstig dat ALLE staten ze mogen berechten ongeacht plek of slachtoffer. Voorbeeld: Pinochet-arrestatie Spanje 1998 voor Chileense martelingen. NL berecht Syrische ex-officieren in Den Haag. Mogelijk preventief effect: nergens veilig." },
           ],
-          niveaus: { basis: "Elke staat kan. A.", simpeler: "Iedere land mag berechten. A.", nogSimpeler: "Univ = A." },
+          niveaus: { basis: "Elke staat kan. A.", simpeler: "Iedere land mag berechten. A.", nogSimpeler: "Univ" },
         },
       },
     ],
@@ -269,7 +269,7 @@ const steps = [
           stappen: [
             { titel: "Geleerd 2018+", tekst: "Eerst bestreden, maar gelekt documenten 2019 + satellietfoto's tonen massale kampen. China noemt 'beroepsopleiding'. Westerse landen + ngo's spreken van massa-detentie, dwang-arbeid (katoen!), dwangsterilisatie. VS + UK + Canada noemen genocide. Reputatie China geschaad." },
           ],
-          niveaus: { basis: "Miljoenen in kamp. A.", simpeler: "Kampen voor moslims. A.", nogSimpeler: "Oeigoeren = A." },
+          niveaus: { basis: "Miljoenen in kamp. A.", simpeler: "Kampen voor moslims. A.", nogSimpeler: "Oeigoeren" },
         },
       },
       {
@@ -286,7 +286,7 @@ const steps = [
           stappen: [
             { titel: "Oorlogsmisdaad gedocumenteerd", tekst: "Tijdens Oekraïne-oorlog: Russische troepen brachten Oekraïense kinderen naar Rusland → 'heropvoeding' tot Russen. Onder Genocide-verdrag een vorm van etnische uitwissing. Poetin kan niet meer veilig reizen naar ICC-leden (Russen gaat naar BRICS-landen)." },
           ],
-          niveaus: { basis: "Kinder-deportatie. A.", simpeler: "Oekraïense kinderen ontvoerd. A.", nogSimpeler: "Kinderen = A." },
+          niveaus: { basis: "Kinder-deportatie. A.", simpeler: "Oekraïense kinderen ontvoerd. A.", nogSimpeler: "Kinderen" },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
           stappen: [
             { titel: "'Vrouw, leven, vrijheid'", tekst: "Mahsa Amini stierf 22 j oud na arrestatie zedenpolitie wegens 'verkeerd' dragen hijab. Wekenlang massa-protesten in Iran-steden. Slogan Zan-Zendegi-Azadi (Vrouw-Leven-Vrijheid) wereldwijd bekend. Honderden doden, duizenden gevangen. Internationaal solidariteit." },
           ],
-          niveaus: { basis: "Tegen hijab + regime. A.", simpeler: "Iran vrouwen-protest. A.", nogSimpeler: "Mahsa = A." },
+          niveaus: { basis: "Tegen hijab + regime. A.", simpeler: "Iran vrouwen-protest. A.", nogSimpeler: "Mahsa" },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "Niet — VN.", "Veel later.", "Te vroeg."],
         uitlegPad: {
           stappen: [{ titel: "Peter Benenson", tekst: "Britse jurist begon na bericht Portugese studenten gevangen voor 'vrijheid'-toost. Letter-schrijven aan dictators. Vandaag 10 mln leden, Nobelvredesprijs 1977. Rapporten over politieke gevangenen, doodstraf, marteling. Onafhankelijk van staten + bedrijven (alleen lid-bijdragen)." }],
-          niveaus: { basis: "1961. A.", simpeler: "Begin '60. A.", nogSimpeler: "1961 = A." },
+          niveaus: { basis: "1961. A.", simpeler: "Begin '60. A.", nogSimpeler: "1961" },
         },
       },
       {
@@ -325,7 +325,7 @@ const steps = [
           stappen: [
             { titel: "Vooral Afrika + Midden-Oosten + Caribisch", tekst: "Uganda + Saudi-Arabië + Iran + Soedan + Mauretanië straffen met doodstraf. Veel anderen gevangenisstraf. Tegelijkertijd: ~35 landen erkennen gay marriage (Argentinië, Australië, Nieuw-Zeeland, NL eerste in 2001). Verschillen wereldwijd enorm." },
           ],
-          niveaus: { basis: "64. A.", simpeler: "Veel landen. A.", nogSimpeler: "64 = A." },
+          niveaus: { basis: "64. A.", simpeler: "Veel landen. A.", nogSimpeler: "64" },
         },
       },
     ],
@@ -351,7 +351,7 @@ const steps = [
           stappen: [
             { titel: "Brede tekst", tekst: "Letterlijk: '...of op welke grond dan ook'. Dus naast genoemde categorieën (geslacht, ras, religie, etc.) ook open voor toekomstige interpretatie. Beschermd onder andere LGBTQ+ (formeel pas 2023 expliciet toegevoegd via grondwetwijziging: 'seksuele gerichtheid + handicap')." },
           ],
-          niveaus: { basis: "Geen discriminatie. A.", simpeler: "Verbod discriminatie. A.", nogSimpeler: "Art 1 = A." },
+          niveaus: { basis: "Geen discriminatie. A.", simpeler: "Verbod discriminatie. A.", nogSimpeler: "Art 1" },
         },
       },
       {
@@ -368,7 +368,7 @@ const steps = [
           stappen: [
             { titel: "26 000 families schade", tekst: "Belastingdienst werkte met algoritme dat 'risico' voorspelde — bias tegen mensen met dubbele nationaliteit/migratie-achtergrond. Mensen ten onrechte teruggevorderde toeslag (€30k+), schulden, kinderen uit huis. Kabinet viel jan 2021. Nog steeds compensatie-proces loopt. Schendt Art 1 (discriminatie) + EVRM (eerlijk proces). Diepe vertrouwens-crisis." },
           ],
-          niveaus: { basis: "Discriminatie+fraude-beschuldiging. A.", simpeler: "Onschuldigen vervolgd. A.", nogSimpeler: "Toeslag = A." },
+          niveaus: { basis: "Discriminatie+fraude-beschuldiging. A.", simpeler: "Onschuldigen vervolgd. A.", nogSimpeler: "Toeslag" },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
           stappen: [
             { titel: "Mensenrechten + klimaat", tekst: "Urgenda Foundation klaagde staat aan: klimaatbeleid te zwak schendt zorgplicht onder EVRM (recht op leven + familie-leven, gezondheid). Rechter agreed → NL MOET 25% CO₂-reductie 2020. Eerste wereldwijde precedent klimaat-rechtszaak tegen staat. Inspiratie voor Duitsland, Frankrijk, Pakistan, etc." },
           ],
-          niveaus: { basis: "25% CO₂-bevolen. A.", simpeler: "Klimaat-uitspraak NL. A.", nogSimpeler: "Urgenda = A." },
+          niveaus: { basis: "25% CO₂-bevolen. A.", simpeler: "Klimaat-uitspraak NL. A.", nogSimpeler: "Urgenda" },
         },
       },
       {
@@ -400,7 +400,7 @@ const steps = [
         wrongHints: [null, "Apart.", "Apart.", "Wel functie."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2012", tekst: "Onafhankelijk van regering. Behandelt klachten (kosteloos) over discriminatie + adviseert. Uitspraken niet juridisch bindend, maar morele autoriteit. Volgt VN-mensenrechten-systeem. Plus rapporteert jaarlijks over mensenrechten-situatie NL." }],
-          niveaus: { basis: "Discriminatie-klachten. A.", simpeler: "Rechten-instituut. A.", nogSimpeler: "CRM = A." },
+          niveaus: { basis: "Discriminatie-klachten. A.", simpeler: "Rechten-instituut. A.", nogSimpeler: "CRM" },
         },
       },
       {
@@ -417,7 +417,7 @@ const steps = [
           stappen: [
             { titel: "Veel kleine acties tellen op", tekst: "Geen één 'wonder-actie' — maar veel kleine acties opgeteld maken verschil. Wereld is veranderd door massa-bewegingen: vrouwenkiesrecht, burgerrechten VS, anti-apartheid Zuid-Afrika, gay marriage. Begint vaak met paar mensen die niet stoppen." },
           ],
-          niveaus: { basis: "Combineren. A.", simpeler: "Veel kleine acties. A.", nogSimpeler: "Combo = A." },
+          niveaus: { basis: "Combineren. A.", simpeler: "Veel kleine acties. A.", nogSimpeler: "Combo" },
         },
       },
     ],

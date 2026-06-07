@@ -37,7 +37,7 @@ const steps = [
           stappen: [{ titel: "Som / aantal", tekst: "Som = 3 + 6 + 9 + 12 = 30. Aantal = 4. Gemiddelde = 30 / 4 = **7,5**." }],
           woorden: [{ woord: "gemiddelde", uitleg: "Som van waarden gedeeld door aantal." }],
           theorie: "Formule: x̄ = Σx / n. Σ (sigma) = som-teken.",
-          niveaus: { basis: "7,5. A.", simpeler: "(3+6+9+12)/4 = 30/4 = 7,5. A.", nogSimpeler: "7,5 = A." },
+          niveaus: { basis: "7,5. A.", simpeler: "(3+6+9+12)/4 = 30/4 = 7,5. A.", nogSimpeler: "7,5" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
           stappen: [{ titel: "Middelste bij oneven", tekst: "Vijf waarden op volgorde: 2, 5, **8**, 11, 14. De middelste = derde positie = **8**." }],
           woorden: [{ woord: "mediaan", uitleg: "Middelste waarde in een geordende reeks." }],
           theorie: "Cito-/HAVO-trucs: middelste positie = (n+1)/2. Voor n=5 → 3e positie. Voor n=7 → 4e positie.",
-          niveaus: { basis: "8. A.", simpeler: "Middelste van 5 = 3e = 8. A.", nogSimpeler: "8 = A." },
+          niveaus: { basis: "8. A.", simpeler: "Middelste van 5 = 3e = 8. A.", nogSimpeler: "8" },
         },
       },
       {
@@ -60,7 +60,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mediaan = robuust", tekst: "**Mediaan** is **niet beïnvloed** door uitschieters — alleen de middenwaarde telt. Gemiddelde wordt sterk getrokken. Bv: 1, 2, 3, 4, 100 → mediaan = 3, gemiddelde = 22." }],
           theorie: "Toepassing: inkomens, huizenprijzen, salaris-statistieken → mediaan gebruiken want enkele uitschieters (CEOs) verstoren gemiddelde.",
-          niveaus: { basis: "Mediaan. A.", simpeler: "Mediaan negeert uitschieters = A.", nogSimpeler: "Mediaan = A." },
+          niveaus: { basis: "Mediaan. A.", simpeler: "Mediaan negeert uitschieters", nogSimpeler: "Mediaan" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vaakst voorkomend", tekst: "Aantal keren: 2 → 1x, 4 → **3x**, 7 → 1x, 8 → 1x. Modus = waarde met hoogste frequentie = **4**." }],
           woorden: [{ woord: "modus", uitleg: "Meest voorkomende waarde in dataset." }],
-          niveaus: { basis: "4. A.", simpeler: "4 komt 3x voor = modus. A.", nogSimpeler: "4 = A." },
+          niveaus: { basis: "4. A.", simpeler: "4 komt 3x voor = modus. A.", nogSimpeler: "4" },
         },
       },
       {
@@ -83,7 +83,7 @@ const steps = [
           stappen: [{ titel: "IQR = Q3 − Q1", tekst: "**IQR = Q3 − Q1 = 24 − 10 = 14**. Beschrijft 'spreiding van middelste 50%' van data." }],
           woorden: [{ woord: "IQR", uitleg: "Interquartile Range = Q3 minus Q1 = breedte middelste helft data." }],
           theorie: "Uitschieter-regel: waarde < Q1 − 1,5·IQR of > Q3 + 1,5·IQR. In dit geval: < 10-21 = -11 of > 24+21 = 45.",
-          niveaus: { basis: "14. A.", simpeler: "IQR = 24-10 = 14. A.", nogSimpeler: "14 = A." },
+          niveaus: { basis: "14. A.", simpeler: "IQR = 24-10 = 14. A.", nogSimpeler: "14" },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Range = max − min", tekst: "Hoogste = 40. Laagste = 8. Range = 40 − 8 = **32**." }],
           woorden: [{ woord: "range", uitleg: "Variatiebreedte = hoogste minus laagste waarde." }],
-          niveaus: { basis: "32. A.", simpeler: "Range = max-min = 40-8 = 32. A.", nogSimpeler: "32 = A." },
+          niveaus: { basis: "32. A.", simpeler: "Range = max-min = 40-8 = 32. A.", nogSimpeler: "32" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "σ = afstand tot gemiddelde", tekst: "**Grote σ** = waarden liggen ver van gemiddelde (verspreid). **Kleine σ** = waarden dichtbij gemiddelde (compact)." }],
           theorie: "Vergelijking: examen-cijfers klas A (σ=0,5) → iedereen ~hetzelfde. Klas B (σ=2) → grote verschillen.",
-          niveaus: { basis: "Sterk gespreid. A.", simpeler: "Grote σ = verspreid = A.", nogSimpeler: "Verspreid = A." },
+          niveaus: { basis: "Sterk gespreid. A.", simpeler: "Grote σ = verspreid", nogSimpeler: "Verspreid" },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boxplot-onderdelen", tekst: "Boxplot bevat: **Q1** (onderkant box), **mediaan/Q2** (lijn IN box), **Q3** (bovenkant box), **whiskers** (1,5·IQR), **uitschieters** (stippen)." }],
           theorie: "Gemiddelde wordt NIET in boxplot getoond — alleen kwartielen + uitschieters.",
-          niveaus: { basis: "Mediaan. A.", simpeler: "Lijn in box = mediaan = A.", nogSimpeler: "Mediaan = A." },
+          niveaus: { basis: "Mediaan. A.", simpeler: "Lijn in box = mediaan", nogSimpeler: "Mediaan" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ = typisch", tekst: "Waarden binnen 1σ van gemiddelde = typisch. Bereik: 50 ± 10 = [40, 60]. **55 valt erin** → typisch. 100 = 5σ boven gemiddelde = extreme uitschieter." }],
           theorie: "68% van normaalverdeelde data valt binnen 1σ van gemiddelde (zie volgende stap).",
-          niveaus: { basis: "55. A.", simpeler: "55 binnen [40,60] = typisch = A.", nogSimpeler: "55 = A." },
+          niveaus: { basis: "55. A.", simpeler: "55 binnen [40,60] = typisch", nogSimpeler: "55" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tukey's 1,5·IQR-regel", tekst: "**1,5 × IQR** boven Q3 of onder Q1 = uitschieter. Standaard in boxplots. Bv: Q3=30, IQR=10 → uitschieter > 30 + 15 = 45." }],
           theorie: "Cito-/HAVO-formule: vaak in examen — ken 1,5 als constante uit je hoofd.",
-          niveaus: { basis: "1,5. A.", simpeler: "Boxplot-regel = 1,5·IQR = A.", nogSimpeler: "1,5 = A." },
+          niveaus: { basis: "1,5. A.", simpeler: "Boxplot-regel = 1,5·IQR", nogSimpeler: "1,5" },
         },
       },
     ],
@@ -168,7 +168,7 @@ const steps = [
           stappen: [{ titel: "1-2-3 regel", tekst: "**68-95-99,7-regel**: 68% binnen 1σ, 95% binnen 2σ, 99,7% binnen 3σ. Onthouden!" }],
           woorden: [{ woord: "68-95-99,7-regel", uitleg: "Empirische regel voor normaalverdeling — 68% binnen 1σ, 95% binnen 2σ, 99,7% binnen 3σ." }],
           theorie: "Cito-/HAVO-favoriet: ezelsbruggetje 68-95-99,7 of '1-2-3'.",
-          niveaus: { basis: "1. A.", simpeler: "68% = 1σ. A.", nogSimpeler: "1 = A." },
+          niveaus: { basis: "1. A.", simpeler: "68% = 1σ. A.", nogSimpeler: "1" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ", tekst: "μ = 100, σ = 15. Bereik 85-115 = μ ± σ. Volgens 68%-regel: **68%** ligt hier." }],
           theorie: "Cito-voorbeeld-pattern: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
-          niveaus: { basis: "68%. A.", simpeler: "85-115 = ±1σ = 68% = A.", nogSimpeler: "68% = A." },
+          niveaus: { basis: "68%. A.", simpeler: "85-115 = ±1σ = 68%", nogSimpeler: "68%" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
           stappen: [{ titel: "Z = (x-μ)/σ", tekst: "Z = (8 − 6,5) / 1 = **1,5**. Cijfer 8 ligt 1,5 standaarddeviatie boven gemiddelde." }],
           woorden: [{ woord: "z-score", uitleg: "Standaardscore — hoeveel σ een waarde van het gemiddelde afligt." }],
           theorie: "Toepassing: vergelijking verschillende vakken. Z=2 in NL en Z=1 in WI → in NL relatief beter gescoord.",
-          niveaus: { basis: "1,5. A.", simpeler: "Z = (8-6,5)/1 = 1,5 = A.", nogSimpeler: "1,5 = A." },
+          niveaus: { basis: "1,5. A.", simpeler: "Z = (8-6,5)/1 = 1,5", nogSimpeler: "1,5" },
         },
       },
       {
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Symmetrie rond 0", tekst: "Standaard-normaalverdeling (Z) heeft gemiddelde 0. Bij symmetrische verdeling ligt **50%** onder gemiddelde. Dus P(Z < 0) = **0,5**." }],
           theorie: "Idem: P(X < μ) = 0,5 voor elke normaalverdeling.",
-          niveaus: { basis: "0,5. A.", simpeler: "P(Z<0) = helft = 0,5 = A.", nogSimpeler: "0,5 = A." },
+          niveaus: { basis: "0,5. A.", simpeler: "P(Z<0) = helft = 0,5", nogSimpeler: "0,5" },
         },
       },
       {
@@ -212,7 +212,7 @@ const steps = [
         wrongHints: [null, "Geen normaalverdeling-parameters.", "Beschrijven centrum, geen volledige normaalverdeling.", "Onvolledig."],
         uitlegPad: {
           stappen: [{ titel: "N(μ, σ)", tekst: "Normaalverdeling wordt **volledig** beschreven door **μ** (gemiddelde, locatie van piek) en **σ** (spreiding, breedte van klok). Notatie: N(μ, σ) of N(μ, σ²)." }],
-          niveaus: { basis: "μ en σ. A.", simpeler: "Normaal = N(μ,σ) = A.", nogSimpeler: "μ + σ = A." },
+          niveaus: { basis: "μ en σ. A.", simpeler: "Normaal = N(μ,σ)", nogSimpeler: "μ + σ" },
         },
       },
     ],
@@ -232,7 +232,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "r-interpretatie", tekst: "r = 0,9 → bijna +1 → **zeer sterke positieve** samenhang. Als x stijgt, stijgt y mee. Punten liggen dichtbij stijgende lijn." }],
           theorie: "Schaal: |r|>0,7 sterk, 0,3-0,7 matig, <0,3 zwak. Teken (+/-) bepaalt richting.",
-          niveaus: { basis: "Sterk positief. A.", simpeler: "r = 0,9 = sterke positieve correlatie = A.", nogSimpeler: "Sterk + = A." },
+          niveaus: { basis: "Sterk positief. A.", simpeler: "r = 0,9 = sterke positieve correlatie", nogSimpeler: "Sterk +" },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
           stappen: [{ titel: "Correlatie ≠ oorzaak", tekst: "Beide stijgen in zomer. **Warmte** is de gemeenschappelijke oorzaak. **Schijncorrelatie** — leerlingen moeten dit herkennen." }],
           woorden: [{ woord: "schijncorrelatie", uitleg: "Correlatie zonder oorzakelijk verband — door gemeenschappelijke factor." }],
           theorie: "Statistici: *'Correlation does not imply causation.'* Klassiek voorbeeld in HAVO-examens.",
-          niveaus: { basis: "Gemeenschappelijke oorzaak. A.", simpeler: "Warmte = oorzaak van beide = A.", nogSimpeler: "Warmte = A." },
+          niveaus: { basis: "Gemeenschappelijke oorzaak. A.", simpeler: "Warmte = oorzaak van beide", nogSimpeler: "Warmte" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Substitueren", tekst: "y = 2·10 + 5 = 20 + 5 = **25**." }],
           theorie: "Lineaire vergelijking: y = ax + b. a = helling, b = y-snijpunt.",
-          niveaus: { basis: "25. A.", simpeler: "2·10+5 = 25 = A.", nogSimpeler: "25 = A." },
+          niveaus: { basis: "25. A.", simpeler: "2·10+5 = 25", nogSimpeler: "25" },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
         wrongHints: [null, "Dat is b (y-snijpunt).", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "a = richtingscoëfficiënt", tekst: "**a** in y = ax + b is **helling/steilheid**. Bv. y = 2x + 3: x stijgt met 1 → y stijgt met 2. Negatieve a = dalende lijn." }],
-          niveaus: { basis: "Stijging y per x-eenheid. A.", simpeler: "Helling = stijging per x = A.", nogSimpeler: "Helling = A." },
+          niveaus: { basis: "Stijging y per x-eenheid. A.", simpeler: "Helling = stijging per x", nogSimpeler: "Helling" },
         },
       },
       {
@@ -277,7 +277,7 @@ const steps = [
           stappen: [{ titel: "Binnen bereik = veiliger", tekst: "**Interpolatie** (voorspellen binnen data-bereik) is **betrouwbaarder** dan extrapolatie. Extrapolatie buiten bereik kan compleet fout zijn — model kan niet meer lineair zijn op extremen." }],
           woorden: [{ woord: "interpolatie", uitleg: "Voorspellen binnen data-bereik." }, { woord: "extrapolatie", uitleg: "Voorspellen buiten data-bereik." }],
           theorie: "Voorbeeld: regressie lengte-leeftijd kinderen 4-16 jaar. Extrapolatie naar leeftijd 60 = onzin (mensen krimpen niet meer mee).",
-          niveaus: { basis: "Interpolatie. A.", simpeler: "Binnen bereik = veiliger = A.", nogSimpeler: "Interpolatie = A." },
+          niveaus: { basis: "Interpolatie. A.", simpeler: "Binnen bereik = veiliger", nogSimpeler: "Interpolatie" },
         },
       },
     ],
@@ -296,7 +296,7 @@ const steps = [
         wrongHints: [null, "Niet — juist robuust.", "Niet relevant — frequentie.", "Wel — gemiddelde dus."],
         uitlegPad: {
           stappen: [{ titel: "Gemiddelde = gevoelig", tekst: "Gemiddelde wordt direct beïnvloed door alle waarden — uitschieters tellen mee. Mediaan + modus niet." }],
-          niveaus: { basis: "Gemiddelde. A.", simpeler: "Gemiddelde = uitschieter-gevoelig = A.", nogSimpeler: "Gemiddelde = A." },
+          niveaus: { basis: "Gemiddelde. A.", simpeler: "Gemiddelde = uitschieter-gevoelig", nogSimpeler: "Gemiddelde" },
         },
       },
       {
@@ -307,7 +307,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Z-truc", tekst: "Z = (198 − 184)/7 = 2. P(Z > 2) ≈ **2,5%** (uit 68-95-99,7: 95% binnen 2σ → 5% buiten → 2,5% boven)." }],
           theorie: "Cito-truc-cluster: P(Z > 1) ≈ 16%. P(Z > 2) ≈ 2,5%. P(Z > 3) ≈ 0,15%.",
-          niveaus: { basis: "~2,5%. A.", simpeler: "198 = μ+2σ = top 2,5% = A.", nogSimpeler: "2,5% = A." },
+          niveaus: { basis: "~2,5%. A.", simpeler: "198 = μ+2σ = top 2,5%", nogSimpeler: "2,5%" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Positief = stijgende lijn.", "Geen lijn = 0.", "Wel mogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Dalend = negatieve correlatie", tekst: "Dalende lijn: als x stijgt, daalt y. **Negatieve correlatie**. r tussen −1 en 0. Sterk dalend → r ≈ −0,9." }],
-          niveaus: { basis: "Negatief. A.", simpeler: "Dalend = r < 0 = A.", nogSimpeler: "Negatief = A." },
+          niveaus: { basis: "Negatief. A.", simpeler: "Dalend = r < 0", nogSimpeler: "Negatief" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Niet — +0,5·8+20.", "Niet — vergeten teken.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Substitueren met negatieve helling", tekst: "y = −0,5·8 + 20 = −4 + 20 = **16**." }],
-          niveaus: { basis: "16. A.", simpeler: "−0,5·8+20 = 16 = A.", nogSimpeler: "16 = A." },
+          niveaus: { basis: "16. A.", simpeler: "−0,5·8+20 = 16", nogSimpeler: "16" },
         },
       },
       {
@@ -337,7 +337,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is Q3 − mediaan.", "Niet — dat is alleen mediaan − Q1.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Q3 − Q1", tekst: "IQR = Q3 − Q1 = 60 − 30 = **30**." }],
-          niveaus: { basis: "30. A.", simpeler: "IQR = 60-30 = 30 = A.", nogSimpeler: "30 = A." },
+          niveaus: { basis: "30. A.", simpeler: "IQR = 60-30 = 30", nogSimpeler: "30" },
         },
       },
     ],

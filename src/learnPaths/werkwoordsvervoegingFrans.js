@@ -128,8 +128,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Verschil met -er", uitleg: "Bij -er krijgt 'tu' uitgang -es; bij -re alleen -s." }],
           niveaus: {
             basis: "tu vends. A.",
-            simpeler: "vendre: verwijder -re → stam vend. Voor tu kom -s achter de stam → tu vends. = A.",
-            nogSimpeler: "tu vends = A.",
+            simpeler: "vendre: verwijder -re → stam vend. Voor tu kom -s achter de stam → tu vends.",
+            nogSimpeler: "tu vends",
           },
         },
       },
@@ -242,8 +242,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Klein detail, vaak getoetst", uitleg: "Cito test dit graag — leer de uitzonderingen." }],
           niveaus: {
             basis: "est. A.",
-            simpeler: "aller is in de MRS VANDERTRAMP-lijst → Passé composé met 'être'. Elle is vrouwelijk → 'elle est allée'. = A.",
-            nogSimpeler: "est = A.",
+            simpeler: "aller is in de MRS VANDERTRAMP-lijst → Passé composé met 'être'. Elle is vrouwelijk → 'elle est allée'.",
+            nogSimpeler: "est",
           },
         },
       },

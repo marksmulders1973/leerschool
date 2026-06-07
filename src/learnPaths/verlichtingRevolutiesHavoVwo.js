@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Niet — andere bijdragen.", "Niet — *volonté générale*.", "Eerder, empirisme."],
         uitlegPad: {
           stappen: [{ titel: "Kant 1784", tekst: "**Immanuel Kant** in *Was ist Aufklärung?* (1784): 'Sapere aude!' = 'Durf te denken!'. Verlichting = uitkomen uit onmondigheid + zelf nadenken. Kernzin van hele beweging." }],
-          niveaus: { basis: "Kant. A.", simpeler: "Sapere aude = Kant = A.", nogSimpeler: "Kant = A." },
+          niveaus: { basis: "Kant. A.", simpeler: "Sapere aude = Kant", nogSimpeler: "Kant" },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Adam Smith.", "Niet relevant (later).", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois 1748", tekst: "**Montesquieu** in *De geest van de wetten* (1748): trias politica — scheiding van **wetgevende, uitvoerende, rechterlijke** macht voorkomt tirannie. Inspireerde Amerikaanse Grondwet 1787 + Franse 1791." }],
-          niveaus: { basis: "Trias politica. A.", simpeler: "Montesquieu = scheiding = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Trias politica. A.", simpeler: "Montesquieu = scheiding", nogSimpeler: "A." },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Heeft niet geleid.", "Niet hoofdredacteur.", "Eerder, wetenschap."],
         uitlegPad: {
           stappen: [{ titel: "Kennis-monument", tekst: "**Encyclopédie** (1751-1772): 28 delen, 70.000 artikelen, 140 auteurs. Hoofdredacteuren **Denis Diderot** + **Jean d'Alembert**. Doel: alle menselijke kennis verzamelen + toegankelijk. Gecensureerd door kerk + koning. Symbool Verlichting." }],
-          niveaus: { basis: "Diderot. A.", simpeler: "Encyc. = Diderot = A.", nogSimpeler: "Diderot = A." },
+          niveaus: { basis: "Diderot. A.", simpeler: "Encyc. = Diderot", nogSimpeler: "Diderot" },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Frederik 'De Grote'", tekst: "**Frederik II van Pruisen** (1740-1786): correspondeerde met Voltaire, hervormde rechtspraak + onderwijs, religieuze tolerantie — maar bleef **absolute monarch**. 'Verlicht despotisme' = top-down hervormingen zonder volkmacht." }],
           theorie: "Andere voorbeelden: Jozef II Habsburg, Catharina II Rusland. Verschillend met echte democratie (zoals NL-tendens jaren 1780 of post-revolutie FR).",
-          niveaus: { basis: "Pruisen Frederik. A.", simpeler: "Verlicht desp. = Frederik = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Pruisen Frederik. A.", simpeler: "Verlicht desp. = Frederik", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Niet — al elders behandeld.", "Te vroeg.", "Tegenovergestelde."],
         uitlegPad: {
           stappen: [{ titel: "Vroege feminisme", tekst: "**Mary Wollstonecraft** in *A Vindication of the Rights of Woman* (1792): vrouwen verdienen onderwijs + politieke rechten. Eén van eerste systematische feministische teksten. Antwoord op Thomas Paine *Rights of Man* (1791). Moeder van Mary Shelley." }],
-          niveaus: { basis: "Vrouwen. A.", simpeler: "Wollst. = vrouwen-rechten = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Vrouwen. A.", simpeler: "Wollst. = vrouwen-rechten", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Niet — Franse Bestorming Bastille.", "Niet — Columbus.", "Niet — einde Burgeroorlog."],
         uitlegPad: {
           stappen: [{ titel: "Independence Day", tekst: "**4 juli 1776**: Continentaal Congres in Philadelphia neemt Onafhankelijkheidsverklaring aan, geschreven door **Thomas Jefferson**. Nog steeds nationale feestdag VS (4th of July)." }],
-          niveaus: { basis: "4 juli 1776. A.", simpeler: "4-7-1776 = A.", nogSimpeler: "1776 = A." },
+          niveaus: { basis: "4 juli 1776. A.", simpeler: "4-7-1776", nogSimpeler: "1776" },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet — opperbevelhebber.", "Niet — diplomaat.", "Niet — niet hoofdauteur."],
         uitlegPad: {
           stappen: [{ titel: "Jefferson auteur", tekst: "**Thomas Jefferson** (1743-1826) schreef de Onafhankelijkheidsverklaring (met aanpassingen door Franklin + Adams). Later 3e president (1801-1809). Geïnspireerd door Locke. Hypocriet: had zelf slaven." }],
-          niveaus: { basis: "Jefferson. A.", simpeler: "Jefferson = onafh.verkl. = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Jefferson. A.", simpeler: "Jefferson = onafh.verkl.", nogSimpeler: "A." },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Niet specifiek dat.", "Niet — geen verband.", "Wel context maar specifieker."],
         uitlegPad: {
           stappen: [{ titel: "Kerngrief koloniën", tekst: "**'No taxation without representation'** = Britse koloniën weigerden belasting te betalen omdat ze geen vertegenwoordigers in Brits parlement (Westminster) hadden. Fundamenteel democratie-principe. Modernisering: belastingplicht ↔ stemrecht." }],
-          niveaus: { basis: "Geen belasting zonder vert. A.", simpeler: "No tax w/o rep = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Geen belasting zonder vert. A.", simpeler: "No tax w/o rep", nogSimpeler: "A." },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Erfvijand-strategie", tekst: "**Frankrijk** steunde koloniën met leger + vloot, vooral na Slag bij Saratoga 1777. Reden: revanche op aartsvijand Engeland (na 7-jarige oorlog 1763-verlies Canada). Markies de la Fayette uit FR vocht mee. Frans-Amerikaanse alliantie kostte Frankrijk veel geld — droeg bij aan eigen revolutie 1789!" }],
           theorie: "Cito-pattern: ironie — Frankrijk hielp Amerikanen tegen monarchie, droeg bij aan eigen monarchie-val.",
-          niveaus: { basis: "Frankrijk. A.", simpeler: "FR steunde VS = A.", nogSimpeler: "FR = A." },
+          niveaus: { basis: "Frankrijk. A.", simpeler: "FR steunde VS", nogSimpeler: "FR" },
         },
       },
       {
@@ -138,7 +138,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Slavernij + inheemsen", tekst: "Onafhankelijkheidsverklaring zegt **'all men are created equal'** — maar **slavernij** bleef bestaan tot 1865 (Amerikaanse Burgeroorlog + 13e Amendement), **inheemse Amerikanen** kregen geen burgerrechten tot 1924, vrouwen geen stemrecht tot 1920. 'Alle mensen' = praktisch alleen witte, mannelijke, bezittende protestanten." }],
           theorie: "Cito-favoriet: hypocrisie-onderwerp. Belangrijk om gelijktijdig ideaal én praktijk te zien.",
-          niveaus: { basis: "Slavernij. A.", simpeler: "Slaven bleven = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Slavernij. A.", simpeler: "Slaven bleven", nogSimpeler: "A." },
         },
       },
     ],
@@ -157,7 +157,7 @@ const steps = [
         wrongHints: [null, "Niet — VS = 4 juli 1776.", "Niet — 1914.", "Niet — 1815."],
         uitlegPad: {
           stappen: [{ titel: "Symbool revolutie", tekst: "**14 juli 1789** = bestorming Bastille (staatsgevangenis) in Parijs. Symbolisch begin Franse Revolutie. Nu nationale feestdag Frankrijk: *fête nationale*. Soms 'Quatorze Juillet' genoemd." }],
-          niveaus: { basis: "Bestorming Bastille. A.", simpeler: "14-7-1789 = Bastille = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Bestorming Bastille. A.", simpeler: "14-7-1789 = Bastille", nogSimpeler: "A." },
         },
       },
       {
@@ -167,7 +167,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Niet — drie.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Drie standen", tekst: "Ancien régime: **drie standen**.\n• 1e stand: geestelijkheid (~1%).\n• 2e stand: adel (~2%, privileges).\n• 3e stand: rest (~97%): burgerij, boeren, arbeiders.\n\n3e stand droeg belasting, 1e + 2e niet. Onrechtvaardig gevonden — een van oorzaken Revolutie." }],
-          niveaus: { basis: "3. A.", simpeler: "3 standen = A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "3. A.", simpeler: "3 standen", nogSimpeler: "3" },
         },
       },
       {
@@ -177,7 +177,7 @@ const steps = [
         wrongHints: [null, "Niet — kwam later.", "Niet — was zelf slachtoffer.", "Niet — zelf onthoofd."],
         uitlegPad: {
           stappen: [{ titel: "Idealist + dictator", tekst: "**Maximilien Robespierre** leidde Comité van Openbare Veiligheid 1793-94. **Schrikbewind**: tienduizenden onthoofd om revolutie te beschermen. Idealist + extreem. Zelf onthoofd op 28 juli 1794 (9 Thermidor) — einde Terreur." }],
-          niveaus: { basis: "Robespierre. A.", simpeler: "Terreur = Robespierre = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Robespierre. A.", simpeler: "Terreur = Robespierre", nogSimpeler: "A." },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Locke/Montesquieu/Jefferson", tekst: "Verklaring Rechten Mens (aug 1789) is duidelijk **product van Verlichting** (Locke's natuurrechten, Montesquieu's machtsscheiding, Rousseau's volonté générale) + **Amerikaans voorbeeld** (1776 + Bill of Rights 1791). Universele mensenrechten — Olympe de Gouges schreef tegelijk versie voor vrouwen 1791." }],
-          niveaus: { basis: "Verlichting + VS. A.", simpeler: "Verlichting+VS = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Verlichting + VS. A.", simpeler: "Verlichting+VS", nogSimpeler: "A." },
         },
       },
       {
@@ -197,7 +197,7 @@ const steps = [
         wrongHints: [null, "Niet — Kant/Verlichting algemeen.", "Niet — VS-motto.", "Niet — kruistocht-leuze."],
         uitlegPad: {
           stappen: [{ titel: "Vrijheid-gelijkheid-broederschap", tekst: "**Liberté, égalité, fraternité** = motto Frankrijk sinds Franse Revolutie. Staat op gemeentehuizen, scholen, munten. Symboliseert idealen Revolutie. Gebruikt door alle republikeinse regimes." }],
-          niveaus: { basis: "L/É/F. A.", simpeler: "Frans motto = vrijheid-gelijk = A.", nogSimpeler: "A." },
+          niveaus: { basis: "L/É/F. A.", simpeler: "Frans motto = vrijheid-gelijk", nogSimpeler: "A." },
         },
       },
     ],
@@ -216,7 +216,7 @@ const steps = [
         wrongHints: [null, "Niet — Revolutie-begin.", "Niet — einde Napoleon.", "Begin leven, niet macht."],
         uitlegPad: {
           stappen: [{ titel: "9 november 1799", tekst: "**18 Brumaire (jaar 8)** = 9 november 1799. Napoleon pleegt staatsgreep tegen Directoire. Wordt 'Eerste Consul', begin Consulaat. 1804 wordt hij keizer." }],
-          niveaus: { basis: "18 Brumaire 1799. A.", simpeler: "1799 staatsgreep = A.", nogSimpeler: "1799 = A." },
+          niveaus: { basis: "18 Brumaire 1799. A.", simpeler: "1799 staatsgreep", nogSimpeler: "1799" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eindslag Napoleon", tekst: "**18 juni 1815, Waterloo** (België, dichtbij Brussel). Britse generaal **Wellington** + Pruisische **Blücher** verslaan Napoleon definitief. Napoleon naar Sint-Helena, sterft daar 1821." }],
           theorie: "ABBA-lied 'Waterloo' refereert aan deze slag (waterloo = nederlaag).",
-          niveaus: { basis: "18 juni 1815. A.", simpeler: "1815 Waterloo = A.", nogSimpeler: "1815 = A." },
+          niveaus: { basis: "18 juni 1815. A.", simpeler: "1815 Waterloo", nogSimpeler: "1815" },
         },
       },
       {
@@ -237,7 +237,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijk recht", tekst: "**Code Napoléon (1804)** = burgerlijk wetboek. Verspreidde Verlichtings-principes: **gelijkheid voor de wet**, vrijheid van religie, eigendom, scheiding kerk-staat, burgerlijk huwelijk. Invloed in NL, BE, IT, DE, Latijns-Amerika. NL-BW 1838 daarop gebaseerd." }],
-          niveaus: { basis: "Burgerlijk wetboek. A.", simpeler: "Code Napol = BW = A.", nogSimpeler: "BW = A." },
+          niveaus: { basis: "Burgerlijk wetboek. A.", simpeler: "Code Napol = BW", nogSimpeler: "BW" },
         },
       },
       {
@@ -248,7 +248,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Russische strategie + winter", tekst: "**1812**: Napoleon valt Rusland binnen met 600.000 man. Russen ontwijken slag, branden eigen oogst + dorpen ('verschroeide aarde') zodat Frans leger geen voedsel kan vinden. Moskou bereikt maar in vlammen. Terugtocht in winter: vrieskou + honger + Russen-aanvallen. **Slechts ~30.000 keren terug**. Catastrofe." }],
           theorie: "Lessen herhaald: Hitler-invasie RU 1941-43 = vergelijkbaar mislukt om vergelijkbare redenen.",
-          niveaus: { basis: "Winter + tactiek. A.", simpeler: "1812 = winter+Rus = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Winter + tactiek. A.", simpeler: "1812 = winter+Rus", nogSimpeler: "A." },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Buffer tegen FR", tekst: "**Congres van Wenen**: NL + BE samengevoegd tot **Verenigd Koninkrijk der Nederlanden** onder koning **Willem I** (1815). Bedoeld als sterke buffer tegen Frankrijk. Hield maar tot 1830 — **Belgische Revolutie** maakt België onafhankelijk." }],
           theorie: "Cito-pattern: Willem I gestructureerd door Verlichting + Napoleon-bestuurlijke modellen. Belgen vonden hem te calvinistisch + autoritair.",
-          niveaus: { basis: "VKN. A.", simpeler: "1815 = NL+BE samen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "VKN. A.", simpeler: "1815 = NL+BE samen", nogSimpeler: "A." },
         },
       },
     ],
@@ -278,7 +278,7 @@ const steps = [
         wrongHints: [null, "Speelde wel rol, niet primair.", "Wel — later FR.", "Wetenschap, niet politiek."],
         uitlegPad: {
           stappen: [{ titel: "Locke + Jefferson", tekst: "**Locke's natuurrechten** (leven, vrijheid, eigendom) → Jefferson maakt ervan 'life, liberty, pursuit of happiness' in Onafhankelijkheidsverklaring. Locke's recht op opstand bij tirannie ook centraal. Montesquieu beïnvloedde latere Grondwet 1787." }],
-          niveaus: { basis: "Locke. A.", simpeler: "VS = Locke = A.", nogSimpeler: "Locke = A." },
+          niveaus: { basis: "Locke. A.", simpeler: "VS = Locke", nogSimpeler: "Locke" },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
         wrongHints: [null, "Niet — andere werken.", "Niet — *Two Treatises*.", "Niet — *Kritiek*."],
         uitlegPad: {
           stappen: [{ titel: "Rousseau 1762", tekst: "**Jean-Jacques Rousseau** (1712-1778): *Du contrat social* (1762). Beroemde opening: 'De mens is vrij geboren maar overal in ketenen'. Idee algemene wil → inspirator Franse Revolutie." }],
-          niveaus: { basis: "Rousseau. A.", simpeler: "Contrat social = Rousseau = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rousseau. A.", simpeler: "Contrat social = Rousseau", nogSimpeler: "A." },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
         wrongHints: [null, "1789.", "1804.", "1215."],
         uitlegPad: {
           stappen: [{ titel: "1776 = VS", tekst: "**4 juli 1776**: Amerikaanse Onafhankelijkheidsverklaring. Verklaring Rechten Mens (FR): **augustus 1789**. Code Napoléon: 1804. Magna Carta (UK): 1215." }],
-          niveaus: { basis: "1776 = VS. A.", simpeler: "1776 = VS-onafh. = A.", nogSimpeler: "1776 = A." },
+          niveaus: { basis: "1776 = VS. A.", simpeler: "1776 = VS-onafh.", nogSimpeler: "1776" },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [null, "Niet — *volonté générale*.", "Niet — tolerantie.", "Niet — economie."],
         uitlegPad: {
           stappen: [{ titel: "1748 De l'esprit des lois", tekst: "**Montesquieu** in *De geest van de wetten* (1748): trias politica = scheiding wetgevende / uitvoerende / rechterlijke macht. Voorkomt tirannie. Basis moderne grondwetten." }],
-          niveaus: { basis: "Montesquieu. A.", simpeler: "Trias = Montesq. = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Montesquieu. A.", simpeler: "Trias = Montesq.", nogSimpeler: "A." },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onafgewerkte revolutie", tekst: "**Paradox**: Verlichtingsidealen 'alle mensen gelijk' werden geproclameerd, maar **slavernij bleef** in VS (tot 1865) + FR-koloniën (terug onder Napoleon 1802), **vrouwen kregen geen stemrecht**, **inheemse Amerikanen + kolonisaties** werden niet als gelijken behandeld. Postkoloniale kritiek: Verlichting was westers + mannelijk + bezittend, sloot anderen uit." }],
           theorie: "Cito-favoriet: ideaal vs praktijk evalueren. Belangrijk te zien dat strijd doorging in 19e + 20e eeuw (vrouwenkiesrecht 1919 NL, dekolonisatie 20e eeuw, civil rights 1960s VS).",
-          niveaus: { basis: "Slavernij. A.", simpeler: "Idealen ≠ praktijk = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Slavernij. A.", simpeler: "Idealen ≠ praktijk", nogSimpeler: "A." },
         },
       },
     ],

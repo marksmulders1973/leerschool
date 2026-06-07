@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Weber 1922", tekst: "**Max Weber**: drie types gezag.\n• **Traditioneel** (koning erft).\n• **Charismatisch** (uitstraling).\n• **Rationeel-legaal** (regels).\n\nModerne staat = vooral rationeel-legaal." }],
-          niveaus: { basis: "Trad/char/rat. A.", simpeler: "Weber-3 = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Trad/char/rat. A.", simpeler: "Weber-3", nogSimpeler: "A." },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — formaliteit alleen.", "Wel democratisch — ander deel.", "Wel regering."],
         uitlegPad: {
           stappen: [{ titel: "Grondwet > koning", tekst: "**Constitutionele monarchie**: monarch (koning) onderworpen aan **grondwet**. Niet absoluut zoals Lodewijk XIV ('l'État c'est moi'). Koning ceremonieel rol. NL sinds 1815 (Willem I) constitutioneel; ministersverantwoordelijkheid sinds 1848 (Thorbecke)." }],
-          niveaus: { basis: "Koning gebonden aan grondwet. A.", simpeler: "Const. = grondwet boven koning = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Koning gebonden aan grondwet. A.", simpeler: "Const. = grondwet boven koning", nogSimpeler: "A." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — liberalisme.", "Niet — christen-democratie.", "Niet — conservatief populisme."],
         uitlegPad: {
           stappen: [{ titel: "PvdA-GL combinatie", tekst: "**Sociaal-democratie** combineert markteconomie met sterke sociale zekerheid + herverdeling. **PvdA-GL** (samengaan PvdA + GroenLinks bij 2023-verkiezingen) is de centraal-linkse partij in NL." }],
-          niveaus: { basis: "PvdA-GL. A.", simpeler: "Soc-dem = PvdA-GL = A.", nogSimpeler: "A." },
+          niveaus: { basis: "PvdA-GL. A.", simpeler: "Soc-dem = PvdA-GL", nogSimpeler: "A." },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet — NL niet verplicht.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Onderwerp agenderen", tekst: "**Burgerinitiatief**: burgers kunnen onderwerp op agenda Tweede Kamer zetten met **40.000 handtekeningen + steun voor behandeling**. Geen referendum — alleen agendering. Resultaat niet bindend. Voorbeeld: campagne *Stop Particulier Vuurwerk* (2017)." }],
-          niveaus: { basis: "40k → parlement. A.", simpeler: "Burgerinit. = 40k handt. = A.", nogSimpeler: "A." },
+          niveaus: { basis: "40k → parlement. A.", simpeler: "Burgerinit. = 40k handt.", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Vorige Rutte-IV.", "Nooit zo.", "Niet — coalitie."],
         uitlegPad: {
           stappen: [{ titel: "Schoof-kabinet", tekst: "**Kabinet-Schoof** sinds 2 juli 2024: vierpartij-coalitie **PVV + VVD + NSC + BBB**. Eerste keer PVV in regering. Dick Schoof als minister-president (extra-parlementair, geen partij). Discussie over uitvoeringskracht + standpunten migratie." }],
-          niveaus: { basis: "PVV/VVD/NSC/BBB. A.", simpeler: "Schoof = 4 partijen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "PVV/VVD/NSC/BBB. A.", simpeler: "Schoof = 4 partijen", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is gevoel.", "Niet — dat is taakverdeling.", "Niet — wetten."],
         uitlegPad: {
           stappen: [{ titel: "Kennis + waarden samen", tekst: "**Cognitieve binding** = gedeelde normen, waarden, cultuur, taal, kennis. Mensen weten + geloven hetzelfde → voelen verbondenheid. Voorbeeld: Nederlandse taal binden NL'ers (zelfs in buitenland)." }],
-          niveaus: { basis: "Cognitief. A.", simpeler: "Cult/taal = cognitief = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Cognitief. A.", simpeler: "Cult/taal = cognitief", nogSimpeler: "A." },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is secundair.", "Tertiair.", "Tertiair."],
         uitlegPad: {
           stappen: [{ titel: "Eerste jaren = familie", tekst: "**Primaire socialisatie** = eerste belangrijke (0-6 jaar): vooral in **familie**. Daar leren kinderen basis-taal, basis-waarden, gehechtheid. **Secundair** (school, peergroep) breidt uit. **Tertiair** (werk, eigen gezin) gaat door volwassen leven." }],
-          niveaus: { basis: "Familie. A.", simpeler: "Primair = gezin = A.", nogSimpeler: "Gezin = A." },
+          niveaus: { basis: "Familie. A.", simpeler: "Primair = gezin", nogSimpeler: "Gezin" },
         },
       },
       {
@@ -117,7 +117,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Emotioneel verschil", tekst: "**Affectieve polarisatie**: niet op inhoud maar **emotioneel**. Ik kan ander politiek standpunt verdragen, maar **vind aanhanger niet aardig + wantrouw die**. Onderzoek toont stijging laatste 10 jaar. Filterbubbels online versterken." }],
           theorie: "Cito-actueel: COVID-maatregelen, klimaat, migratie, Israël-Palestina-debat hebben affectieve polarisatie versterkt.",
-          niveaus: { basis: "Emotionele afkeer. A.", simpeler: "Affectief pol = emotie = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Emotionele afkeer. A.", simpeler: "Affectief pol = emotie", nogSimpeler: "A." },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
         wrongHints: [null, "Soms gevolg, niet kern.", "Te eng.", "Niet de focus."],
         uitlegPad: {
           stappen: [{ titel: "Solidariteit-vormen", tekst: "**Durkheim**:\n• **Mechanische solidariteit** (traditioneel kleine gemeenschap): mensen **lijken** op elkaar → samenhang.\n• **Organische solidariteit** (modern complexe maatschappij): mensen **verschillen** in rol → afhankelijk van elkaar → samenhang.\n\nVoorbeeld: dorp van 100 boeren = mechanisch. Stad van 1 mln verschillende beroepen = organisch." }],
-          niveaus: { basis: "Mech → org. A.", simpeler: "Durkheim 2 soorten = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Mech → org. A.", simpeler: "Durkheim 2 soorten", nogSimpeler: "A." },
         },
       },
       {
@@ -137,7 +137,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is bonding.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Bruggen slaan", tekst: "**Bridging social capital** (Putnam): netwerken die **verschillende groepen** verbinden (etnisch, religieus, klasse). Versus **bonding capital**: binnen eigen groep (familie, kerk). Beide nodig — bridging vooral voor diverse maatschappij." }],
-          niveaus: { basis: "Tussen groepen. A.", simpeler: "Bridging = brug tussen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Tussen groepen. A.", simpeler: "Bridging = brug tussen", nogSimpeler: "A." },
         },
       },
     ],
@@ -156,7 +156,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Religie naar privé", tekst: "**Secularisatie**: religie verliest publieke invloed; wordt privé-zaak. NL: 1960 ~80% kerkelijk → 2024 ~50% onkerkelijk. Verzuiling (1900-1960) afgebroken. Vroeger eigen scholen, omroep, kranten per zuil." }],
-          niveaus: { basis: "Religie kwijnt. A.", simpeler: "Secul = religie minder = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Religie kwijnt. A.", simpeler: "Secul = religie minder", nogSimpeler: "A." },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — Marx-context.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Werkethiek + uitverkiezing", tekst: "**Weber** in *Protestantse ethiek* (1905): **calvinisme** (NL, Schotland, deel DE, VS-New England) leerde: hard werken + zuinig leven + tekenen uitverkiezing zijn. Dat creëerde mindset voor kapitalisme: arbeid + spaarzaamheid = goed. Vandaar opkomst NL als eerste 'kapitalistisch' land 17e eeuw." }],
-          niveaus: { basis: "Calvinistisch. A.", simpeler: "Weber = calvinisme + kap = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Calvinistisch. A.", simpeler: "Weber = calvinisme + kap", nogSimpeler: "A." },
         },
       },
       {
@@ -177,7 +177,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onbewuste smaak", tekst: "**Habitus** (Bourdieu): aangeleerde + grotendeels onbewuste manier van denken/voelen/handelen. Gevormd door omgeving (klasse, gezin). Bepaalt smaak (klassieke muziek vs hardcore, krant vs tv), praat, manieren. **Reproductie**: kinderen erven habitus → klasse blijft gereproduceerd ondanks formele gelijkheid." }],
           theorie: "Cito-pattern: 'leg uit waarom onderwijssucces deels afhangt van gezinscultuur' → Bourdieu's habitus + cultureel kapitaal.",
-          niveaus: { basis: "Aangeleerd. A.", simpeler: "Habitus = aangeleerde stijl = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Aangeleerd. A.", simpeler: "Habitus = aangeleerde stijl", nogSimpeler: "A." },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — beide.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Door techniek nieuwe gevaren", tekst: "**Beck**: moderne samenleving produceert door techniek + economische ontwikkeling **nieuwe risico's** die zij niet meer goed kan beheersen. Voorbeelden: klimaatverandering, kernrampen (Tsjernobyl/Fukushima), pandemieën, financiële crises (2008), AI-risico's. Klassieke risico's (oorlog, ziekte) niet weg, modern erbij." }],
-          niveaus: { basis: "Eigen risico's. A.", simpeler: "Beck = nieuwe risico's = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Eigen risico's. A.", simpeler: "Beck = nieuwe risico's", nogSimpeler: "A." },
         },
       },
       {
@@ -198,7 +198,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1997-2012", tekst: "**Gen Z** (geboren 1997-2012): **smartphone-natives** (geen tijd zonder), opgroeiend met **klimaatangst** (Greta Thunberg-generatie), **COVID** raakte hen op middelbare/HBO-leeftijd, mentale gezondheid groot thema, fluïde identiteits-opvattingen (gender, sexualiteit)." }],
           theorie: "Cito-vraag-pattern: 'koppel maatschappelijke verandering aan generatie'. Bv: klimaatbeleid groot voor Gen Z, pensioen voor boomers.",
-          niveaus: { basis: "Smartphone + klimaat. A.", simpeler: "Gen Z = smartphone + klimaat = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Smartphone + klimaat. A.", simpeler: "Gen Z = smartphone + klimaat", nogSimpeler: "A." },
         },
       },
     ],
@@ -217,7 +217,7 @@ const steps = [
         wrongHints: [null, "Niet — sociaal recht.", "Niet — sociaal recht.", "Niet primair grondrecht."],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten vs zorgplicht", tekst: "**Klassieke grondrechten** beschermen burger TEGEN staat (vrijheid van meningsuiting, godsdienst, privacy). **Sociale grondrechten** verplichten staat tot zorg voor burgers (werkgelegenheid, milieu, gezondheid, onderwijs). Verschil: klassiek = 'laat met rust', sociaal = 'doe iets voor'." }],
-          niveaus: { basis: "Mening. A.", simpeler: "Klassiek = vrijheid = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Mening. A.", simpeler: "Klassiek = vrijheid", nogSimpeler: "A." },
         },
       },
       {
@@ -228,7 +228,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "VN moreel, Europa bindend", tekst: "**UVRM** (Universele Verklaring 1948, VN): moreel + politiek krachtig, **niet juridisch bindend** voor staten. **EVRM** (Europees Verdrag 1950): **juridisch bindend** voor lidstaten Raad van Europa. Burger kan via nationaal recht uitkomen → Europees Hof Mensenrechten **Straatsburg** voor klacht tegen eigen staat." }],
           theorie: "Cito-actueel: NL veroordeeld 2023 om Klimaatzaak Urgenda + Toeslagenaffaire-elementen.",
-          niveaus: { basis: "EVRM bindend. A.", simpeler: "EVRM = bindend = A.", nogSimpeler: "A." },
+          niveaus: { basis: "EVRM bindend. A.", simpeler: "EVRM = bindend", nogSimpeler: "A." },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
         wrongHints: [null, "Niet — publiek.", "Niet — publiek.", "Niet — publiek."],
         uitlegPad: {
           stappen: [{ titel: "Burgers onderling", tekst: "**Privaat (civiel) recht**: regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huur, huwelijk, schadevergoeding. Conflict → civiele rechter (kantonrechter, rechtbank). **Publiek recht**: staat ↔ burger: strafrecht (overheid vervolgt), bestuursrecht (vergunning), staatsrecht (grondwet), belastingrecht." }],
-          niveaus: { basis: "Koopcontract. A.", simpeler: "Privaat = burger-burger = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Koopcontract. A.", simpeler: "Privaat = burger-burger", nogSimpeler: "A." },
         },
       },
       {
@@ -249,7 +249,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rechtsstaat-crisis", tekst: "**Toeslagenaffaire**: belastingdienst beschuldigde duizenden ouders **zonder grondige check** van fraude. Hoge boetes, schuld, gezinsdramas. **Rechtsstaat** faalde: geen eerlijke procedure, ouders niet gehoord, discriminatie op herkomst. Rapport-Donner + Parlementaire Enquête lieten zien dat ambtenaren-cultuur + politieke druk samenwerkten." }],
           theorie: "Cito-pattern: 'leg uit waarom Toeslagenaffaire schadelijk voor rechtsstaat'. Antwoord: schending grondrechten + onafhankelijke rechter omzeild.",
-          niveaus: { basis: "Rechtsstaat. A.", simpeler: "Toeslagen = rechtsstaat = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rechtsstaat. A.", simpeler: "Toeslagen = rechtsstaat", nogSimpeler: "A." },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
         wrongHints: [null, "Niet — geen doel.", "Niet — anti-rechtsstaat.", "Niet — wel doel."],
         uitlegPad: {
           stappen: [{ titel: "Vier doelen", tekst: "Strafdoelen: **vergelding** (verdiende straf), **preventie** (speciaal: afschrikken dader; generaal: afschrikken anderen), **resocialisatie** (heropvoeden, terug in maatschappij), **beveiliging** (gevaarlijke daders weg).\n\nNederlandse strafrecht legt nadruk op resocialisatie (TBS-systeem, kortere straffen dan VS)." }],
-          niveaus: { basis: "Resocialisatie. A.", simpeler: "Doel = resocial. = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Resocialisatie. A.", simpeler: "Doel = resocial.", nogSimpeler: "A." },
         },
       },
     ],
@@ -278,7 +278,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Cognitief = kennis", tekst: "Gedeelde **waarden, normen, cultuur** = cognitieve binding. Naast affectieve (gevoel), functionele (taakverdeling), politiek-juridische (wetten)." }],
-          niveaus: { basis: "Cognitief. A.", simpeler: "Waarden = cognitief = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Cognitief. A.", simpeler: "Waarden = cognitief", nogSimpeler: "A." },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
         wrongHints: [null, "Sociaal-dem.", "Christen-dem.", "Socialistisch."],
         uitlegPad: {
           stappen: [{ titel: "VVD-positie", tekst: "**VVD** = Volkspartij voor Vrijheid en Democratie: liberaal-rechts. Klassiek liberalisme + economische vrijheid + beperkte overheid. D66: progressief-liberaal (sociaal liberaal). Beide in liberale-traditie maar verschillende accenten." }],
-          niveaus: { basis: "VVD. A.", simpeler: "Liberaal-rechts = VVD = A.", nogSimpeler: "A." },
+          niveaus: { basis: "VVD. A.", simpeler: "Liberaal-rechts = VVD", nogSimpeler: "A." },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Ontworteling", tekst: "**Anomie** (Durkheim): gebrek aan duidelijke normen + waarden, vaak bij snelle maatschappelijke verandering (industrialisatie, oorlog, COVID). Mensen voelen zich ontworteld → angst + zelfdoding-risico (Durkheim toonde aan met zelfdoding-statistieken)." }],
-          niveaus: { basis: "Normloosheid. A.", simpeler: "Anomie = normloos = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Normloosheid. A.", simpeler: "Anomie = normloos", nogSimpeler: "A." },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [null, "Niet — apart probleem.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Macht in evenwicht", tekst: "**Trias politica** (Montesquieu): wetgevende, uitvoerende, rechterlijke macht gescheiden → geen enkele tak kan absoluut worden → **tirannie voorkomen**. Onafhankelijke rechters cruciaal: zonder hen kan regering wetten misbruiken." }],
-          niveaus: { basis: "Tirannie. A.", simpeler: "Trias = anti-tirannie = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Tirannie. A.", simpeler: "Trias = anti-tirannie", nogSimpeler: "A." },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Anti-elite politiek", tekst: "**Populisme**: politieke stijl die ' **zuivere volk** ' contrasteert met ' **corrupte elite** '. Kan links (Chavez, La France Insoumise) of rechts (PVV, FvD, Trump) zijn. Vaak charismatische leider, simpele oplossingen voor complexe problemen, weerstand tegen mainstream-media + experts." }],
           theorie: "Cito-trend: opkomst populisme in westen sinds 2008-crisis + 2016 (Brexit, Trump).",
-          niveaus: { basis: "Volk vs elite. A.", simpeler: "Populisme = volk vs elite = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Volk vs elite. A.", simpeler: "Populisme = volk vs elite", nogSimpeler: "A." },
         },
       },
     ],

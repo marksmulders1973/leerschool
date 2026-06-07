@@ -45,7 +45,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Bij bevruchting (zaadcel + eicel samenkomen) bepaalt de zaadcel-chromosoom (X of Y) of het meisje (XX) of jongen (XY) wordt. Eicel heeft altijd X. Vóór bevruchting = onbepaald. Na bevruchting = vast.",
-        { basis: "Bij bevruchting. = C.", simpeler: "Zaadcel X of Y bepaalt geslacht bij bevruchting. = C.", nogSimpeler: "Bevruchting = C." },
+        { basis: "Bij bevruchting.", simpeler: "Zaadcel X of Y bepaalt geslacht bij bevruchting.", nogSimpeler: "Bevruchting" },
         [{ woord: "bevruchting", uitleg: "Zaadcel + eicel samenkomen → nieuwe cel." }, { woord: "chromosoom", uitleg: "DNA-pakketje. X of Y bepaalt geslacht." }],
       ),
     }],
@@ -74,7 +74,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Vaccin = je krijgt een verzwakte ziekteverwekker → lichaam reageert + maakt eigen antistoffen. Dat is ACTIEF (lichaam doet zelf werk) + KUNSTMATIG (geen natuurlijke besmetting). Gabriël's 'kunstmatig' = juist. Petra's 'passief' = fout (had actief moeten zijn).",
-        { basis: "Alleen Gabriël. = B.", simpeler: "Vaccin = kunstmatig (juist) + actief (Petra zei passief = fout). = B.", nogSimpeler: "Alleen G = B." },
+        { basis: "Alleen Gabriël.", simpeler: "Vaccin = kunstmatig (juist) + actief (Petra zei passief = fout).", nogSimpeler: "Alleen G" },
         [{ woord: "kunstmatige immunisatie", uitleg: "Vaccin of injectie — niet natuurlijk." }, { woord: "actieve immunisatie", uitleg: "Lichaam maakt zelf antistoffen." }, { woord: "passieve immunisatie", uitleg: "Klaar-antistoffen krijgen (bv. tegen tetanus)." }],
       ),
     }],
@@ -102,7 +102,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "DNA + chromosomen zitten in de celkern. Bloeddeeltjes: bloedplaatjes (geen kern), rode bloedcellen (kernloos bij mensen — uniek!), witte bloedcellen (wel kern). Antwoord C.",
-        { basis: "Witte bloedcellen (hebben kern). = C.", simpeler: "Alleen witte bloedcellen hebben een kern → chromosomen → DNA. = C.", nogSimpeler: "Witte = C." },
+        { basis: "Witte bloedcellen (hebben kern).", simpeler: "Alleen witte bloedcellen hebben een kern → chromosomen → DNA.", nogSimpeler: "Witte" },
         [{ woord: "celkern", uitleg: "Waar het DNA zit." }, { woord: "leukocyt", uitleg: "Witte bloedcel — verdedigt tegen ziekten." }],
       ),
     }],
@@ -131,7 +131,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Water wordt opgenomen in het bloed via de darmwand (vooral dikke darm). Lever ontgift, maag verteert, nier filtert (water naar URINE). Antwoord A.",
-        { basis: "De darm. = A.", simpeler: "Darm neemt water op uit voedsel naar bloed. = A.", nogSimpeler: "Darm = A." },
+        { basis: "De darm.", simpeler: "Darm neemt water op uit voedsel naar bloed.", nogSimpeler: "Darm" },
       ),
     }],
   },
@@ -160,7 +160,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Spijsvertering route: mond (kauwen) → maag (verteren) → dunne darm (verteren + ABSORPTIE meeste voedingsstoffen) → dikke darm (water absorptie) → endeldarm (opslag). Koolhydraten worden in dunne darm naar bloed gebracht via vlokharen.",
-        { basis: "Dunne darm. = B.", simpeler: "Dunne darm = waar voedingsstoffen (incl. koolhydraten) in bloed komen. = B.", nogSimpeler: "Dunne darm = B." },
+        { basis: "Dunne darm.", simpeler: "Dunne darm = waar voedingsstoffen (incl. koolhydraten) in bloed komen.", nogSimpeler: "Dunne darm" },
         [{ woord: "darmvlokken", uitleg: "Kleine uitsteekseltjes in dunne darm — vergroot oppervlak voor absorptie." }, { woord: "glucose", uitleg: "Eenvoudige suiker uit koolhydraten." }],
       ),
     }],

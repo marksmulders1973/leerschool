@@ -36,7 +36,7 @@ const steps = [
           theorie: "Zelfst. nw test: 'de' of 'het' ervoor + meervoud te maken.",
           voorbeelden: [{ type: "test", tekst: "De fiets ✓ (zelfst nw). De snel ✗. De mooi ✗." }],
           basiskennis: [{ onderwerp: "Fietsen 2 betek.", uitleg: "'Fietsen' kan meervoud zelfst nw zijn (de fietsen) OF werkwoord (ik wil fietsen). Hier ww-vorm." }],
-          niveaus: { basis: "fiets = zelfst nw. A.", simpeler: "Fiets = ding. 'De fiets' past ✓ → zelfst. naamwoord. = A.", nogSimpeler: "Fiets = A." },
+          niveaus: { basis: "fiets = zelfst nw. A.", simpeler: "Fiets = ding. 'De fiets' past ✓ → zelfst. naamwoord.", nogSimpeler: "Fiets" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Zelfst. nw = personen, dingen. In zin: het ding waar 't over gaat.",
           voorbeelden: [{ type: "ontleed", tekst: "De (lidwoord) dappere (bijv) ridder (zelfst) vocht (ww) fel (bijwoord)." }],
           basiskennis: [{ onderwerp: "Vraag wie/wat", uitleg: "Wie is dapper? De ridder. Wie vecht? De ridder. → ridder is zelfst nw." }],
-          niveaus: { basis: "ridder. A.", simpeler: "Wie vocht? De ridder. Ridder = persoon = zelfst nw. = A.", nogSimpeler: "Ridder = A." },
+          niveaus: { basis: "ridder. A.", simpeler: "Wie vocht? De ridder. Ridder = persoon = zelfst nw.", nogSimpeler: "Ridder" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           theorie: "Werkwoorden zoals 'loopt' kun je niet voorzien van 'de/het'. Zelfst nw wel.",
           voorbeelden: [{ type: "test", tekst: "De tafel ✓. Amsterdam (eigennaam) ✓. Het verdriet ✓. De loopt ✗." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag wat NIET hoort. Lees scherp." }],
-          niveaus: { basis: "loopt = ww. A.", simpeler: "Loopt = werkwoord (geen 'de loopt'). Andere drie = zelfst nw. = A.", nogSimpeler: "Loopt = A." },
+          niveaus: { basis: "loopt = ww. A.", simpeler: "Loopt = werkwoord (geen 'de loopt'). Andere drie = zelfst nw.", nogSimpeler: "Loopt" },
         },
       },
     ],
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Werkwoord-test: 'ik' ervoor + vervoegbaar. Hele werkwoord eindigt op -en.",
           voorbeelden: [{ type: "vorm", tekst: "Springen, lopen, eten = hele werkwoorden. Springt, liep = vervoegingen." }],
           basiskennis: [{ onderwerp: "Sprong = ww-vorm", uitleg: "'Sprong' is verleden tijd (hij sprong) — wel werkwoord, maar niet 'het hele'." }],
-          niveaus: { basis: "springen. A.", simpeler: "Hele werkwoord eindigt op -en (springen). Sprong = vervoeging, springer = persoon (zelfst nw). = A.", nogSimpeler: "Springen = A." },
+          niveaus: { basis: "springen. A.", simpeler: "Hele werkwoord eindigt op -en (springen). Sprong = vervoeging, springer = persoon (zelfst nw).", nogSimpeler: "Springen" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Werkwoord = wat iemand doet. Vervang 'Tom' door 'ik' → 'ik schop' ✓.",
           voorbeelden: [{ type: "ontleed", tekst: "Tom (eigennaam) schopt (ww) de (lidw) bal (zelfst) weg (bijwoord)." }],
           basiskennis: [{ onderwerp: "Hele ww", uitleg: "Het hele werkwoord = schoppen. Vervoegd = schopt." }],
-          niveaus: { basis: "schopt = ww. A.", simpeler: "Wat doet Tom? Hij schopt. Schopt = werkwoord. Tom = eigennaam, bal = zelfst nw. = A.", nogSimpeler: "Schopt = A." },
+          niveaus: { basis: "schopt = ww. A.", simpeler: "Wat doet Tom? Hij schopt. Schopt = werkwoord. Tom = eigennaam, bal = zelfst nw.", nogSimpeler: "Schopt" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
           theorie: "Vervoegingen → hele werkwoord: liep/loopt/lopen → 'lopen'.",
           voorbeelden: [{ type: "tabel", tekst: "Liep → lopen. At → eten. Schreef → schrijven. Was → zijn." }],
           basiskennis: [{ onderwerp: "Onregelmatig", uitleg: "Sterke werkwoorden: stam verandert (lopen/liep, eten/at). Zwak: -de/-te (werkte)." }],
-          niveaus: { basis: "lopen. A.", simpeler: "Liep = verleden van lopen. Hele werkwoord = lopen (eindigt op -en). = A.", nogSimpeler: "Lopen = A." },
+          niveaus: { basis: "lopen. A.", simpeler: "Liep = verleden van lopen. Hele werkwoord = lopen (eindigt op -en).", nogSimpeler: "Lopen" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           theorie: "Voltooide tijd: hulp-ww (heb/ben) + voltooid deelwoord (gelezen, geweest).",
           voorbeelden: [{ type: "vorm", tekst: "Ik heb gegeten. Ik ben geweest. Ik zal komen. Hulp + hoofd." }],
           basiskennis: [{ onderwerp: "Hebben vs zijn", uitleg: "Meeste ww met 'heb' (gelezen, gegeten). Beweging/staat met 'ben' (geweest, gegaan)." }],
-          niveaus: { basis: "heb. A.", simpeler: "Twee werkwoorden: heb (hulp) + gelezen (hoofd). 'Heb' helpt om voltooide tijd te maken. = A.", nogSimpeler: "Heb = A." },
+          niveaus: { basis: "heb. A.", simpeler: "Twee werkwoorden: heb (hulp) + gelezen (hoofd). 'Heb' helpt om voltooide tijd te maken.", nogSimpeler: "Heb" },
         },
       },
     ],
@@ -148,7 +148,7 @@ const steps = [
           theorie: "Test: tussen 'de' en zelfst nw → bijvoeglijk. 'De snelle auto' ✓. 'De auto auto' ✗.",
           voorbeelden: [{ type: "test", tekst: "Snel: de snelle... ✓ → bijvoeglijk. Auto = ding (zelfst nw)." }],
           basiskennis: [{ onderwerp: "Test 'de ___ X'", uitleg: "Past tussen 'de' en zelfst nw? Dan bijvoeglijk." }],
-          niveaus: { basis: "snel. A.", simpeler: "Snel beschrijft hoe = eigenschap = bijvoeglijk. Auto=ding, rijden=ww, de=lidwoord. = A.", nogSimpeler: "Snel = A." },
+          niveaus: { basis: "snel. A.", simpeler: "Snel beschrijft hoe = eigenschap = bijvoeglijk. Auto=ding, rijden=ww, de=lidwoord.", nogSimpeler: "Snel" },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
           theorie: "Vóór een zelfst nw + krijgt -e bij 'de' → bijvoeglijk.",
           voorbeelden: [{ type: "ontleed", tekst: "De (lidw) slimme (bijv) leerling (zelfst) maakte (ww) de toets (lidw + zelfst)." }],
           basiskennis: [{ onderwerp: "Buigings-e", uitleg: "'Een slim kind' (geen e) ↔ 'het slimme kind' (met e). Bij 'de': altijd -e." }],
-          niveaus: { basis: "slimme. A.", simpeler: "Slimme beschrijft hoe leerling is = eigenschap = bijvoeglijk. = A.", nogSimpeler: "Slimme = A." },
+          niveaus: { basis: "slimme. A.", simpeler: "Slimme beschrijft hoe leerling is = eigenschap = bijvoeglijk.", nogSimpeler: "Slimme" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
           theorie: "3 trappen: stellend (snel), vergelijkend (sneller), overtreffend (snelst).",
           voorbeelden: [{ type: "tabel", tekst: "Mooi-mooier-mooist. Snel-sneller-snelst. Goed-beter-best (onregelmatig)." }],
           basiskennis: [{ onderwerp: "Snellere is verbogen", uitleg: "Snellere = sneller + e (vóór de auto). Maar trap-naam = sneller." }],
-          niveaus: { basis: "sneller. A.", simpeler: "Vergelijkende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend. = A.", nogSimpeler: "Sneller = A." },
+          niveaus: { basis: "sneller. A.", simpeler: "Vergelijkende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend.", nogSimpeler: "Sneller" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
           theorie: "Bijvoeglijk staat vóór zelfst nw. 'Op' staat na werkwoord = bijwoord/predicaat.",
           voorbeelden: [{ type: "verschil", tekst: "Lekkere taart (bijv vóór nw). Taart is op (bijwoord na ww)." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Bijvoeglijk: 'de ___ X' werkt. 'De op X' ✗ → op is geen bijvoeglijk." }],
-          niveaus: { basis: "op = niet bijvoeglijk. A.", simpeler: "'Lekkere' beschrijft taart (bijvoeglijk). 'Op' geeft toestand aan (bijwoord). = A.", nogSimpeler: "Op = A." },
+          niveaus: { basis: "op = niet bijvoeglijk. A.", simpeler: "'Lekkere' beschrijft taart (bijvoeglijk). 'Op' geeft toestand aan (bijwoord).", nogSimpeler: "Op" },
         },
       },
     ],
@@ -211,7 +211,7 @@ const steps = [
           theorie: "3 lidwoorden: de (de-woorden), het (het-woorden), een (onbepaald).",
           voorbeelden: [{ type: "lijst", tekst: "Het boek, de fiets, een huis — allemaal lidwoorden." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Mij/mijn/wie zijn voornaamwoorden — verwijzen naar personen." }],
-          niveaus: { basis: "het. A.", simpeler: "Lidwoorden zijn alleen: de, het, een. 'Het' is er één. Mij/mijn/wie = voornaamwoord. = A.", nogSimpeler: "Het = A." },
+          niveaus: { basis: "het. A.", simpeler: "Lidwoorden zijn alleen: de, het, een. 'Het' is er één. Mij/mijn/wie = voornaamwoord.", nogSimpeler: "Het" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
           theorie: "Bezittelijke voornaamwoorden: mijn (van mij), jouw (van jou), zijn (van hem), haar (van haar).",
           voorbeelden: [{ type: "tabel", tekst: "Ik → mijn. Jij → jouw. Hij → zijn. Zij → haar." }],
           basiskennis: [{ onderwerp: "Persoonlijk vs bezittelijk", uitleg: "Persoonlijk: ik/jij/hij. Bezittelijk: mijn/jouw/zijn (= van wie)." }],
-          niveaus: { basis: "bezittelijk vnw. A.", simpeler: "Mijn = van mij = bezittelijk voornaamwoord. Niet ik/jij (persoonlijk), niet de/het (lidwoord). = A.", nogSimpeler: "Bezittelijk = A." },
+          niveaus: { basis: "bezittelijk vnw. A.", simpeler: "Mijn = van mij = bezittelijk voornaamwoord. Niet ik/jij (persoonlijk), niet de/het (lidwoord).", nogSimpeler: "Bezittelijk" },
         },
       },
       {
@@ -239,7 +239,7 @@ const steps = [
           theorie: "Vragende voornaamwoorden: wie (persoon), wat (ding), welke (keuze).",
           voorbeelden: [{ type: "lijst", tekst: "Wie is dat? Wat zeg je? Welke wil je?" }],
           basiskennis: [{ onderwerp: "Naamwoord vervangen", uitleg: "'Wie' vervangt naam (Tom, Lisa, etc.) in een vraag." }],
-          niveaus: { basis: "vragend vnw. A.", simpeler: "Wie = vraagwoord (vragend voornaamwoord). Stelt een vraag. = A.", nogSimpeler: "Vragend = A." },
+          niveaus: { basis: "vragend vnw. A.", simpeler: "Wie = vraagwoord (vragend voornaamwoord). Stelt een vraag.", nogSimpeler: "Vragend" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
           theorie: "Aanwijzende voornaamwoorden: deze/dit (dichtbij), die/dat (verder weg).",
           voorbeelden: [{ type: "lijst", tekst: "Deze appel (de-woord, dichtbij). Dit huis (het-woord, dichtbij). Die boom. Dat raam." }],
           basiskennis: [{ onderwerp: "Niet lidwoord", uitleg: "Lidwoord = de/het/een. Aanwijzend = deze/die/dit/dat." }],
-          niveaus: { basis: "aanwijzend. A.", simpeler: "Deze/die/dit/dat = aanwijzende voornaamwoorden (wijzen iets aan). Niet 'de/het/een'. = A.", nogSimpeler: "Aanwijzend = A." },
+          niveaus: { basis: "aanwijzend. A.", simpeler: "Deze/die/dit/dat = aanwijzende voornaamwoorden (wijzen iets aan). Niet 'de/het/een'.", nogSimpeler: "Aanwijzend" },
         },
       },
     ],
@@ -274,7 +274,7 @@ const steps = [
           theorie: "Werkwoord = wat onderwerp doet. 'De auto rijdt' → rijdt is wat de auto doet.",
           voorbeelden: [{ type: "ontleed", tekst: "De (lidw) rode (bijv) auto (zelfst) rijdt (ww) snel (bijwoord)." }],
           basiskennis: [{ onderwerp: "Vraag wat doet?", uitleg: "Vraag 'wat doet onderwerp?' → werkwoord." }],
-          niveaus: { basis: "rijdt. A.", simpeler: "Wat doet de auto? Hij rijdt. Rijdt = werkwoord. = A.", nogSimpeler: "Rijdt = A." },
+          niveaus: { basis: "rijdt. A.", simpeler: "Wat doet de auto? Hij rijdt. Rijdt = werkwoord.", nogSimpeler: "Rijdt" },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
           theorie: "Eigennaam vs gewoon zelfst nw: hond = elke hond. Buddy = deze specifieke hond.",
           voorbeelden: [{ type: "tabel", tekst: "Hond/Buddy. Stad/Amsterdam. Land/Nederland. Soort/specifiek." }],
           basiskennis: [{ onderwerp: "Hoofdletter-truc", uitleg: "Eigennamen krijgen ALTIJD hoofdletter." }],
-          niveaus: { basis: "Buddy. A.", simpeler: "Buddy = specifieke naam van de hond (hoofdletter) = eigennaam. Hond = soort dier. = A.", nogSimpeler: "Buddy = A." },
+          niveaus: { basis: "Buddy. A.", simpeler: "Buddy = specifieke naam van de hond (hoofdletter) = eigennaam. Hond = soort dier.", nogSimpeler: "Buddy" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
           theorie: "'Het' kan lidwoord zijn (het + zelfst nw) of voornaamwoord (vervangt iets).",
           voorbeelden: [{ type: "verschil", tekst: "Het (lidw) kind. Het (pers vnw) regent. Hier: het + kind → lidwoord." }],
           basiskennis: [{ onderwerp: "Functie bepaalt", uitleg: "Kijk wat na 'het' staat. Zelfst nw → lidwoord. Werkwoord → vnw." }],
-          niveaus: { basis: "lidwoord. A.", simpeler: "Het staat hier voor 'kind' (zelfst nw) → lidwoord (zoals 'de'). = A.", nogSimpeler: "Lidwoord = A." },
+          niveaus: { basis: "lidwoord. A.", simpeler: "Het staat hier voor 'kind' (zelfst nw) → lidwoord (zoals 'de').", nogSimpeler: "Lidwoord" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
           theorie: "Snel kan beide: bijvoeglijk (de snelle auto) of bijwoord (snel rennen).",
           voorbeelden: [{ type: "verschil", tekst: "De snelle auto (bij zelfst nw = bijvoeglijk). Hij rent snel (bij ww = bijwoord)." }],
           basiskennis: [{ onderwerp: "Niet lidwoord/werkwoord", uitleg: "Snel is geen de/het/een, geen actie." }],
-          niveaus: { basis: "bijwoord/bijvoeglijk. A.", simpeler: "Snel beschrijft hoe Tom rent (bij werkwoord) = bijwoord (of bijvoeglijk in andere zinnen). = A.", nogSimpeler: "Snel = A." },
+          niveaus: { basis: "bijwoord/bijvoeglijk. A.", simpeler: "Snel beschrijft hoe Tom rent (bij werkwoord) = bijwoord (of bijvoeglijk in andere zinnen).", nogSimpeler: "Snel" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
           theorie: "4 soorten voornaamwoorden: persoonlijk (ik), bezittelijk (mijn), aanwijzend (deze), vragend (wie).",
           voorbeelden: [{ type: "lijst", tekst: "Persoonlijk: ik, jij, hij, zij, wij, jullie, zij. Object: mij, jou, hem, haar." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Mijn=bezittelijk, welke=vragend, de=lidwoord. Zij=persoonlijk." }],
-          niveaus: { basis: "zij. A.", simpeler: "Persoonlijke voornaamwoorden = ik/jij/hij/zij/wij/jullie/zij. 'Zij' is er één. = A.", nogSimpeler: "Zij = A." },
+          niveaus: { basis: "zij. A.", simpeler: "Persoonlijke voornaamwoorden = ik/jij/hij/zij/wij/jullie/zij. 'Zij' is er één.", nogSimpeler: "Zij" },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
           theorie: "3 lidwoorden: de, het, een. 'Een' staat vóór elk zelfst nw (onbepaald).",
           voorbeelden: [{ type: "ontleed", tekst: "Wij (vnw) hebben (hulp ww) een (lidw) mooi (bijv) huis (zelfst) gekocht (hoofd ww)." }],
           basiskennis: [{ onderwerp: "Bepaald vs onbepaald", uitleg: "De/het = bepaald (specifiek). Een = onbepaald (algemeen)." }],
-          niveaus: { basis: "een. A.", simpeler: "Lidwoorden = de, het, een. Hier 'een' (onbepaald) vóór 'huis'. = A.", nogSimpeler: "Een = A." },
+          niveaus: { basis: "een. A.", simpeler: "Lidwoorden = de, het, een. Hier 'een' (onbepaald) vóór 'huis'.", nogSimpeler: "Een" },
         },
       },
       { q: "*'De **snelle** auto rijdt.'* — Welk woordsoort is 'snelle'?", options: ["Bijvoeglijk naamwoord","Zelfst. naamwoord","Werkwoord","Lidwoord"], answer: 0, wrongHints: [null, "Niet — geen ding.", "Niet — geen actie.", "Niet."] },

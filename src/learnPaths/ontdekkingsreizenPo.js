@@ -203,7 +203,7 @@ const steps = [
             { type: "feit", tekst: "Tijdens 1600-1800: NL bracht ~600.000 Afrikanen als slaaf naar Caribische gebieden via WIC. Donker hoofdstuk geschiedenis." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen heldenverhaal", uitleg: "Vroeger werd het positief verteld. Tegenwoordig erkent Cito ook negatieve kanten — slavernij + onderdrukking." }],
-          niveaus: { basis: "Handel + grondstoffen. = A.", simpeler: "Ontdekkingsreizen zochten nieuwe routes om specerijen + goud te halen. Maakten Europa rijk maar veroorzaakten slavernij + uitsterving inheemse volken. = A.", nogSimpeler: "Handel + grondstoffen = A." },
+          niveaus: { basis: "Handel + grondstoffen.", simpeler: "Ontdekkingsreizen zochten nieuwe routes om specerijen + goud te halen. Maakten Europa rijk maar veroorzaakten slavernij + uitsterving inheemse volken.", nogSimpeler: "Handel + grondstoffen" },
         },
       },
       {
@@ -229,7 +229,7 @@ const steps = [
             { type: "feit", tekst: "VOC had eigen vlag, leger, ambassadeurs — bijna een 'land binnen het bedrijf'." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen positief", uitleg: "Cito-onderwijs nu benadrukt ook negatieve kant: dwangarbeid, slavernij, onderdrukking lokale volken. Andere kijk dan 50 jaar geleden." }],
-          niveaus: { basis: "Handelsbedrijf 1602-1799. = A.", simpeler: "VOC = Verenigde Oostindische Compagnie. NL handelsbedrijf 1602-1799. Eerste multinational ter wereld. Handelde in specerijen uit Indonesië + bestuurde kolonie. = A.", nogSimpeler: "Handelsbedrijf Indonesië = A." },
+          niveaus: { basis: "Handelsbedrijf 1602-1799.", simpeler: "VOC = Verenigde Oostindische Compagnie. NL handelsbedrijf 1602-1799. Eerste multinational ter wereld. Handelde in specerijen uit Indonesië + bestuurde kolonie.", nogSimpeler: "Handelsbedrijf Indonesië" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
             { type: "feit", tekst: "Inheemse Amerikaanse landbouw gaf de wereld: aardappel, tomaat, maïs, chocola, paprika, ananas, tabak, vanille, pompoen. Onze keuken zou totaal anders zijn zonder." },
           ],
           basiskennis: [{ onderwerp: "Niet 'ontdekt'", uitleg: "Het woord 'ontdekt' is moderne kritiek waard — Amerika was bewoond. 'Aangelegd contact' of 'binnengevallen' is feitelijker." }],
-          niveaus: { basis: "Massale sterfte. = A.", simpeler: "~90% van inheemse Amerikanen stierf in 150 jaar na Columbus. Vooral door Europese ziektes (pokken) + geweld + dwangarbeid. Beschavingen verloren. = A.", nogSimpeler: "Massa-sterfte = A." },
+          niveaus: { basis: "Massale sterfte.", simpeler: "~90% van inheemse Amerikanen stierf in 150 jaar na Columbus. Vooral door Europese ziektes (pokken) + geweld + dwangarbeid. Beschavingen verloren.", nogSimpeler: "Massa-sterfte" },
         },
       },
       { q: "In welk jaar **ontdekte Columbus Amerika**?", options: ["1492","1066","1776","1900"], answer: 0, wrongHints: [null, "Slag bij Hastings.", "Onafhankelijkheid VS.", "Te recent."] },

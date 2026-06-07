@@ -82,7 +82,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Bord = 'report it' = melden. Sleutelwoorden: 'reporting any suspicious activity' + 'don't get involved'. Dus alleen melden, niet ingrijpen, niet alleen onbekende boten — verdachte activiteit in het algemeen.",
-        { basis: "Suspicious activity doorgeven. = C.", simpeler: "Verdachte dingen die je ziet → mailen/bellen naar Customs. Niet zelf ingrijpen. = C.", nogSimpeler: "Doorgeven = C." },
+        { basis: "Suspicious activity doorgeven.", simpeler: "Verdachte dingen die je ziet → mailen/bellen naar Customs. Niet zelf ingrijpen.", nogSimpeler: "Doorgeven" },
         [{ woord: "smuggling", uitleg: "Smokkelen — illegale goederen over grens." }, { woord: "suspicious", uitleg: "Verdacht." }],
       ),
     }],
@@ -112,7 +112,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Idiom 'walk a mile in someone's shoes' = je inleven. Naam 'Empathy Museum' bevestigt: doel = empathie. Bezoekers luisteren via koptelefoon naar verhaal van eigenaar = perspectief overnemen.",
-        { basis: "Inleven in anderen. = B.", simpeler: "Andermans schoenen aan → naar zijn verhaal luisteren → snappen hoe het is. = B.", nogSimpeler: "Inleven = B." },
+        { basis: "Inleven in anderen.", simpeler: "Andermans schoenen aan → naar zijn verhaal luisteren → snappen hoe het is.", nogSimpeler: "Inleven" },
         [{ woord: "empathy", uitleg: "Inlevingsvermogen." }, { woord: "lived experience", uitleg: "Hoe iemand iets daadwerkelijk meemaakt." }],
       ),
     }],
@@ -142,7 +142,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Sleutelzin alinea 2: 'won't have occurred to her' + 'most children aren't even aware'. Kinderen denken niet eens aan jongen/meisje-scheiding bij hardlopen. Dat is de point.",
-        { basis: "Kinderen weten niet van verzet tegen mixed. = B.", simpeler: "De dochter weet niet eens dat sommigen vinden dat jongens/meisjes apart moeten. = B.", nogSimpeler: "Onaware = B." },
+        { basis: "Kinderen weten niet van verzet tegen mixed.", simpeler: "De dochter weet niet eens dat sommigen vinden dat jongens/meisjes apart moeten.", nogSimpeler: "Onaware" },
         [{ woord: "mixed competition", uitleg: "Wedstrijd waarin jongens en meisjes samen meedoen." }, { woord: "aware", uitleg: "Bewust van iets." }],
       ),
     }],
@@ -172,7 +172,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Upcycling = oude stof tot iets MOOIERS verwerken. Niet recycling (vermalen tot grondstof) maar TRANSFORMEREN. 'Waste fabric collected from community shop' = stof die mensen weggooiden.",
-        { basis: "Weggegooide materialen hergebruiken. = B.", simpeler: "Sottes pakt oude stoffen + maakt nieuwe kleding = upcycling. = B.", nogSimpeler: "Hergebruik = B." },
+        { basis: "Weggegooide materialen hergebruiken.", simpeler: "Sottes pakt oude stoffen + maakt nieuwe kleding = upcycling.", nogSimpeler: "Hergebruik" },
         [{ woord: "upcycling", uitleg: "Oude materialen tot iets WAARDEVOLLERS verwerken." }, { woord: "waste fabric", uitleg: "Weggegooide stof." }],
       ),
     }],
@@ -202,7 +202,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "'Introduced the new Youth Criminal Justice Act' = nieuwe wet INGEVOERD. Dat IS het systeem veranderen. Andere opties zijn niet in alinea 1 of zeggen het tegenovergestelde.",
-        { basis: "Nieuwe wet = systeem veranderen. = A.", simpeler: "Anne voerde nieuwe wet in voor jeugd-criminaliteit = ze verandert het. = A.", nogSimpeler: "Veranderen = A." },
+        { basis: "Nieuwe wet = systeem veranderen.", simpeler: "Anne voerde nieuwe wet in voor jeugd-criminaliteit = ze verandert het.", nogSimpeler: "Veranderen" },
         [{ woord: "Attorney General", uitleg: "Minister van Justitie (in Canada/VS)." }, { woord: "Act", uitleg: "Wet." }],
       ),
     }],
@@ -232,7 +232,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Alinea lijst 4 GROEPEN met 4 verschillende REDENEN: gewone mensen (gawped = staarden), artsen (medisch), rijke mensen (dineren), hervormers (moraal). Slot-zin: 'audience as varied as their hosts'. = divers publiek, diverse redenen.",
-        { basis: "Verschillende mensen, verschillende redenen. = D.", simpeler: "Artsen + rijke mensen + nieuwsgierige mensen + hervormers — allemaal anders geïnteresseerd. = D.", nogSimpeler: "Various = D." },
+        { basis: "Verschillende mensen, verschillende redenen.", simpeler: "Artsen + rijke mensen + nieuwsgierige mensen + hervormers — allemaal anders geïnteresseerd.", nogSimpeler: "Various" },
         [{ woord: "gawped", uitleg: "Aanstaarden met open mond." }, { woord: "patron", uitleg: "Rijke beschermheer/sponsor." }, { woord: "reformer", uitleg: "Iemand die maatschappij wil veranderen." }],
       ),
     }],

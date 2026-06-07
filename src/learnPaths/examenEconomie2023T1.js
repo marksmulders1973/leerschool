@@ -120,7 +120,7 @@ const steps = [
           niveaus: {
             basis: "BE-overheid heft → BE-importeur betaalt → BE-consument betaalt indirect via duurdere boter. Antwoord D.",
             simpeler: "Stel je voor: BE-importeur Frans haalt boter uit NL. BE-douane zegt 'jij moet €0,50 per kilo extra betalen'. Frans rekent dat door: in BE-winkel kost de boter nu €0,50 meer per kilo. De BE-consument betaalt dat. Niemand in NL doet eraan mee.",
-            nogSimpeler: "BE heft = BE-importeur betaalt eerst = BE-consument betaalt uiteindelijk = D.",
+            nogSimpeler: "BE heft = BE-importeur betaalt eerst = BE-consument betaalt uiteindelijk",
           },
         },
       },
@@ -250,7 +250,7 @@ const steps = [
           niveaus: {
             basis: "Veel aanbieders + heterogene producten = monopolistische concurrentie. Antwoord B.",
             simpeler: "Denk aan kappers in een grote stad: er zijn er HEEL VEEL (= veel aanbieders) en elke kapper is net iets anders (= heterogeen: prijs, sfeer, ervaring). Dat is precies monopolistische concurrentie.",
-            nogSimpeler: "Veel + verschillend = monopolistische concurrentie = B.",
+            nogSimpeler: "Veel + verschillend = monopolistische concurrentie",
           },
         },
       },
@@ -308,7 +308,7 @@ const steps = [
           niveaus: {
             basis: "Meer produceren → vaste kosten per stuk dalen → kostprijs daalt → bij gelijke verkoopprijs stijgt de winstmarge. Antwoord B.",
             simpeler: "Stel: K2 maakt eerst 100 stuks. De fabriek-huur is €1.000/maand = €10 per product. Nu maakt K2 200 stuks → huur per product = €5. Verkoopprijs gelijk → winst per stuk groter. Antwoord B.",
-            nogSimpeler: "Meer = goedkoper per stuk = grotere marge = B.",
+            nogSimpeler: "Meer = goedkoper per stuk = grotere marge",
           },
         },
       },

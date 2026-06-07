@@ -236,7 +236,7 @@ const steps = [
           theorie: "Bij '3/4 doet X — hoeveel doet niet?' → reken 1/4 (de rest), niet 3/4.",
           voorbeelden: [{ type: "stap", tekst: "20 leerlingen, 2/5 vegetarisch → 3/5 niet → 20÷5×3 = 12." }],
           basiskennis: [{ onderwerp: "Lees vraag goed", uitleg: "'Hoeveel niet' is anders dan 'hoeveel wel'. Verwissel niet." }],
-          niveaus: { basis: "1/4 van 28 = 7. = A.", simpeler: "28 ÷ 4 = 7 kinderen niet naar gym. = A.", nogSimpeler: "7 = A." },
+          niveaus: { basis: "1/4 van 28 = 7.", simpeler: "28 ÷ 4 = 7 kinderen niet naar gym.", nogSimpeler: "7" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
           theorie: "Twee-stap: eerst alles bij elkaar optellen, daarna delen door aantal personen.",
           voorbeelden: [{ type: "stap", tekst: "Boodschap €30 + statiegeld €2 = €32 ÷ 4 mensen = €8/persoon." }],
           basiskennis: [{ onderwerp: "Vergeet niets", uitleg: "Bezorgkosten, BTW, statiegeld — alles meetellen in stap 1." }],
-          niveaus: { basis: "€42 ÷ 4 = €10,50. = A.", simpeler: "Eerst totaal: €38 + €4 = €42. Dan delen: €42 ÷ 4 = €10,50. = A.", nogSimpeler: "€10,50 = A." },
+          niveaus: { basis: "€42 ÷ 4 = €10,50.", simpeler: "Eerst totaal: €38 + €4 = €42. Dan delen: €42 ÷ 4 = €10,50.", nogSimpeler: "€10,50" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
           theorie: "Drie-stap-vraag:\n1. Eenheid omrekenen (kg → g)\n2. Bereken rest-percentage (100 − % weg)\n3. Pas dat percentage toe op totaal",
           voorbeelden: [{ type: "stap", tekst: "1 kg, 25% op = 75% over = 750 gram." }],
           basiskennis: [{ onderwerp: "Vraag-eenheid", uitleg: "Antwoord in gevraagde eenheid — let goed op gram vs kg." }],
-          niveaus: { basis: "60% van 2000 g = 1200 g. = A.", simpeler: "2 kg = 2000 g. 40% op = 60% over. 60% van 2000 = 1200 g. = A.", nogSimpeler: "1200 g = A." },
+          niveaus: { basis: "60% van 2000 g = 1200 g.", simpeler: "2 kg = 2000 g. 40% op = 60% over. 60% van 2000 = 1200 g.", nogSimpeler: "1200 g" },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
             { type: "stap", tekst: "80 boeken, 25% minder: 25% van 80 = 20. Over: 60." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen toename", uitleg: "Vraag 'hoeveel dan' = nieuw totaal, niet alleen de toename." }],
-          niveaus: { basis: "120 + 12 = 132. = A.", simpeler: "10% van 120 = 12 leden erbij. 120 + 12 = 132. = A.", nogSimpeler: "132 = A." },
+          niveaus: { basis: "120 + 12 = 132.", simpeler: "10% van 120 = 12 leden erbij. 120 + 12 = 132.", nogSimpeler: "132" },
         },
       },
       {
@@ -314,7 +314,7 @@ const steps = [
           theorie: "Bij 'X-deel doet A, rest doet B' → reken (1 − X-deel) voor de rest. Of: trek 'A-aantal' af van totaal.",
           voorbeelden: [{ type: "stap", tekst: "30 kinderen, 3/5 buiten spelen → 2/5 binnen = 12 kinderen." }],
           basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "Cito-stof. Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
-          niveaus: { basis: "1/3 van 27 = 9. = A.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO. = A.", nogSimpeler: "9 = A." },
+          niveaus: { basis: "1/3 van 27 = 9.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO.", nogSimpeler: "9" },
         },
       },
       { q: "Lisa heeft 36 stickers. Ze geeft 1/4 weg. Hoeveel houdt ze over?", options: ["27","9","32","12"], answer: 0, wrongHints: [null, "Dat is wat ze WEG geeft.", "Te veel — niet alleen 4 weg.", "Niet — 1/4 is geen 12."] },

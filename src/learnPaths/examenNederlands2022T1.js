@@ -73,11 +73,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Zoek het signaalwoord. 'Daarmee' / 'daardoor' = oorzaak-gevolg. Het eerste (afleiden) veroorzaakt het tweede (kennis opdoen lukt niet). = B.",
+        "Zoek het signaalwoord. 'Daarmee' / 'daardoor' = oorzaak-gevolg. Het eerste (afleiden) veroorzaakt het tweede (kennis opdoen lukt niet).",
         {
-          basis: "'Daarmee' = gevolg. = B.",
-          simpeler: "Door A gebeurt B → oorzaak-gevolg. = B.",
-          nogSimpeler: "Oorzaak-gevolg = B.",
+          basis: "'Daarmee' = gevolg.",
+          simpeler: "Door A gebeurt B → oorzaak-gevolg.",
+          nogSimpeler: "Oorzaak-gevolg",
         },
         [
           { woord: "verband", uitleg: "De manier waarop twee zinsdelen of zinnen met elkaar samenhangen." },
@@ -112,11 +112,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Deelonderwerp = wat dit BLOK alinea's samen behandelt (niet één detail). Lees de eerste en laatste alinea van het blok: balans + leren focussen → evenwichtig gebruik. = D.",
+        "Deelonderwerp = wat dit BLOK alinea's samen behandelt (niet één detail). Lees de eerste en laatste alinea van het blok: balans + leren focussen → evenwichtig gebruik.",
         {
-          basis: "Blok 9-12 = balans zoeken. = D.",
-          simpeler: "Wat hebben die alinea's gemeen? Evenwicht zoeken. = D.",
-          nogSimpeler: "Evenwichtig gebruik = D.",
+          basis: "Blok 9-12 = balans zoeken.",
+          simpeler: "Wat hebben die alinea's gemeen? Evenwicht zoeken.",
+          nogSimpeler: "Evenwichtig gebruik",
         },
         [
           { woord: "deelonderwerp", uitleg: "Het sub-thema dat één blok alinea's samen behandelt." },
@@ -150,11 +150,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Hoofdgedachte = de boodschap van de HELE tekst in 1 zin. Niet te smal (1 detail), niet te stellig (de tekst eist geen verbod). Kern: verantwoord gebruik aanleren is belangrijk. = C.",
+        "Hoofdgedachte = de boodschap van de HELE tekst in 1 zin. Niet te smal (1 detail), niet te stellig (de tekst eist geen verbod). Kern: verantwoord gebruik aanleren is belangrijk.",
         {
-          basis: "Kern = verantwoord gebruik aanleren. = C.",
-          simpeler: "Wat wil de schrijver vooral zeggen? Leer er goed mee omgaan. = C.",
-          nogSimpeler: "Aanleren verantwoord gebruik = C.",
+          basis: "Kern = verantwoord gebruik aanleren.",
+          simpeler: "Wat wil de schrijver vooral zeggen? Leer er goed mee omgaan.",
+          nogSimpeler: "Aanleren verantwoord gebruik",
         },
         [
           { woord: "hoofdgedachte", uitleg: "De centrale boodschap van de tekst, samengevat in 1 zin." },
@@ -188,11 +188,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Lees nauwkeurig: 'toename afzwakt' = de STIJGING wordt kleiner, niet dat het IQ daalt. Het gemiddelde stijgt nog, maar minder hard. = D.",
+        "Lees nauwkeurig: 'toename afzwakt' = de STIJGING wordt kleiner, niet dat het IQ daalt. Het gemiddelde stijgt nog, maar minder hard.",
         {
-          basis: "Stijgt nog, maar trager. = D.",
-          simpeler: "Het wordt nog steeds hoger, alleen langzamer. = D.",
-          nogSimpeler: "Minder hard stijgen = D.",
+          basis: "Stijgt nog, maar trager.",
+          simpeler: "Het wordt nog steeds hoger, alleen langzamer.",
+          nogSimpeler: "Minder hard stijgen",
         },
         [
           { woord: "afzwakken", uitleg: "Minder sterk worden. Een afzwakkende toename = de stijging wordt kleiner." },
@@ -226,11 +226,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Tekstsoort → doel: NIEUWSARTIKEL = informeren, OPINIE = overtuigen, ADVERTENTIE = activeren. Hier: word vrijwilliger = oproep tot actie. = C.",
+        "Tekstsoort → doel: NIEUWSARTIKEL = informeren, OPINIE = overtuigen, ADVERTENTIE = activeren. Hier: word vrijwilliger = oproep tot actie.",
         {
-          basis: "Advertentie = activeren. = C.",
-          simpeler: "Ze willen dat je iets DOET: je aanmelden. = C.",
-          nogSimpeler: "Oproepen tot actie = C.",
+          basis: "Advertentie = activeren.",
+          simpeler: "Ze willen dat je iets DOET: je aanmelden.",
+          nogSimpeler: "Oproepen tot actie",
         },
         [
           { woord: "activeren", uitleg: "De lezer aansporen om concreet iets te doen (aanmelden, kopen, klikken)." },
@@ -264,11 +264,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Let op het verschil tussen 'kan niet' (onmogelijk), 'weigert' (onwil) en 'lukt nog niet' (wens botst met gewoonte). De tekst zegt: we willen wél, maar veranderen lukt nog niet. = D.",
+        "Let op het verschil tussen 'kan niet' (onmogelijk), 'weigert' (onwil) en 'lukt nog niet' (wens botst met gewoonte). De tekst zegt: we willen wél, maar veranderen lukt nog niet.",
         {
-          basis: "Willen wel, lukt nog niet. = D.",
-          simpeler: "We wíllen duurzamer, maar doen het (nog) niet. = D.",
-          nogSimpeler: "Wel willen, niet doen = D.",
+          basis: "Willen wel, lukt nog niet.",
+          simpeler: "We wíllen duurzamer, maar doen het (nog) niet.",
+          nogSimpeler: "Wel willen, niet doen",
         },
         [
           { woord: "discrepantie", uitleg: "Een kloof tussen twee dingen — hier: tussen wat we willen en wat we doen." },

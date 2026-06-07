@@ -81,7 +81,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Klacht-stappen NL: 1) eerst bij de organisatie zelf (klachten-afdeling), 2) bij weigering → NATIONALE OMBUDSMAN (onafhankelijk). Ombudsman onderzoekt + adviseert, niet straft. Buiten NL = Europees Ombudsman voor EU-instellingen. Algemene Zaken = ministerie van premier — niet klachten-functie.",
-        { basis: "Rijksklacht = Nationale Ombudsman. = B.", simpeler: "Klacht over Belastingdienst/UWV/politie = Ombudsman. = B.", nogSimpeler: "Ombudsman = B." },
+        { basis: "Rijksklacht = Nationale Ombudsman.", simpeler: "Klacht over Belastingdienst/UWV/politie = Ombudsman.", nogSimpeler: "Ombudsman" },
         [{ woord: "Nationale Ombudsman", uitleg: "Onafhankelijk orgaan voor burgerklachten over Rijksoverheid." }, { woord: "Rijksoverheid", uitleg: "Landelijke overheid (ministeries + uitvoeringsorganisaties)." }],
       ),
     }],
@@ -111,7 +111,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "5 politieke stromingen: LIBERAAL (vrijheid + vrije markt — VVD/D66), CHRISTEN-DEMOCRATISCH (religie + gemeenschap — CDA/CU/SGP), SOCIAAL-DEMOCRATISCH (arbeiders + sociaal — PvdA/SP), ECOLOGISCH (milieu — GroenLinks/PvdD), NATIONALISTISCH (eigen land — PVV/FvD). Duurzaam plastic = ecologisch.",
-        { basis: "Milieu/duurzaam = ecologisch. = A.", simpeler: "Ecologie = leer van leefomgeving = milieu. = A.", nogSimpeler: "Ecologisch = A." },
+        { basis: "Milieu/duurzaam = ecologisch.", simpeler: "Ecologie = leer van leefomgeving = milieu.", nogSimpeler: "Ecologisch" },
         [{ woord: "ecologische stroming", uitleg: "Politiek met milieu + duurzaamheid centraal." }, { woord: "sociaaldemocratie", uitleg: "Politiek met arbeider/gelijkheid centraal." }],
       ),
     }],
@@ -140,7 +140,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 politie-rollen: OPSPORING (na misdrijf — bewijs + verdachten zoeken), PREVENTIE (vóór misdrijf — agenten op straat, voorlichting), SANCTIE (straf opleggen — eigenlijk rechter's taak, politie schrijft hooguit boete). Camera's gebruikt POLITIE primair voor OPSPORING.",
-        { basis: "Na-misdrijf-bewijs = opsporing. = A.", simpeler: "Politie kijkt naar camera-beelden om dader te VINDEN = opsporen. = A.", nogSimpeler: "Opsporing = A." },
+        { basis: "Na-misdrijf-bewijs = opsporing.", simpeler: "Politie kijkt naar camera-beelden om dader te VINDEN = opsporen.", nogSimpeler: "Opsporing" },
         [{ woord: "opsporing", uitleg: "Na misdrijf bewijs + verdachte vinden." }, { woord: "preventie", uitleg: "Misdrijf voorkomen — vóórdat het gebeurt." }],
       ),
     }],
@@ -169,7 +169,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 sancties-categorieën: HOOFDSTRAFFEN (de hoofdtypen — cel/hechtenis/taakstraf/boete), BIJKOMENDE STRAFFEN (extra erbij — rijontzegging/ontzetting/verbeurdverklaring), MAATREGELEN (bescherming + herstel — TBS/schadevergoeding/onttrekking). Cel + rijontzegging = hoofd + bijkomend.",
-        { basis: "Cel (hoofd) + rijontzegging (bijkomend). = A.", simpeler: "Cel zit altijd 'top straf' = hoofdstraf. Rijontzegging is extra. = A.", nogSimpeler: "Hoofd + bijkomend = A." },
+        { basis: "Cel (hoofd) + rijontzegging (bijkomend).", simpeler: "Cel zit altijd 'top straf' = hoofdstraf. Rijontzegging is extra.", nogSimpeler: "Hoofd + bijkomend" },
         [{ woord: "hoofdstraf", uitleg: "Hoofd-categorie sanctie: cel/hechtenis/taakstraf/boete." }, { woord: "bijkomende straf", uitleg: "Extra sanctie naast hoofdstraf: rijontzegging/ontzetting/verbeurdverklaring." }, { woord: "maatregel", uitleg: "Niet-strafkarakter: TBS, schadevergoeding, onttrekking aan verkeer." }],
       ),
     }],
@@ -199,7 +199,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "5 criminaliteit-theorieën onthouden: ANOMIE (normloze samenleving — Durkheim), BINDING (banden voorkomen — Hirschi), ETIKETTERING (label houdt vast), NEUTRALISERING (goedpraten), RATIONELE KEUZE (kosten/baten-afweging — Becker). Berekenen van risico = rationele keuze.",
-        { basis: "Risico-afweging = rationele keuze. = D.", simpeler: "Inbreker denkt: 'als pakkans hoog → niet doen'. Dat is rationele keuze. = D.", nogSimpeler: "Rationele keuze = D." },
+        { basis: "Risico-afweging = rationele keuze.", simpeler: "Inbreker denkt: 'als pakkans hoog → niet doen'. Dat is rationele keuze.", nogSimpeler: "Rationele keuze" },
         [{ woord: "rationele keuze-theorie", uitleg: "Criminelen wegen kosten + baten af voordat ze toeslaan." }, { woord: "aangeleerd-gedrag-theorie", uitleg: "Criminaliteit door imitatie van omgeving (vrienden/ouders)." }],
       ),
     }],
@@ -229,7 +229,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Slachtoffer-rechten in NL: 1) SPREEKRECHT op de zitting (sinds 2005, verbreed 2016 naar familie), 2) SCHADEVERGOEDING via voegen-actie, 3) INZAGE in dossier (beperkt), 4) BEGELEIDING door Slachtofferhulp Nederland. NIET: straf bepalen of rechter kiezen.",
-        { basis: "Slachtoffer-recht = spreken op zitting. = D.", simpeler: "Slachtoffer mag aan rechter vertellen wat dader heeft aangedaan. = D.", nogSimpeler: "Spreken = D." },
+        { basis: "Slachtoffer-recht = spreken op zitting.", simpeler: "Slachtoffer mag aan rechter vertellen wat dader heeft aangedaan.", nogSimpeler: "Spreken" },
         [{ woord: "spreekrecht", uitleg: "Recht slachtoffer/nabestaande om op rechtszitting te spreken." }, { woord: "Slachtofferhulp NL", uitleg: "Organisatie die slachtoffers begeleidt." }],
       ),
     }],

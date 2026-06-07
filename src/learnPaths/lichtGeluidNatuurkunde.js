@@ -170,8 +170,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Diopter", uitleg: "Eenheid van brillen-sterkte. Negatief = bijziend, positief = verziend." }],
           niveaus: {
             basis: "Holle lens. A.",
-            simpeler: "Bij bijziend kan je ver weg niet scherp zien. Ooglens is te bol. Een holle bril-lens corrigeert door licht uit elkaar te duwen voor de ooglens. = A.",
-            nogSimpeler: "Holle lens = A.",
+            simpeler: "Bij bijziend kan je ver weg niet scherp zien. Ooglens is te bol. Een holle bril-lens corrigeert door licht uit elkaar te duwen voor de ooglens.",
+            nogSimpeler: "Holle lens",
           },
         },
       },

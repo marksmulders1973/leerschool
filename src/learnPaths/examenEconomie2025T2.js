@@ -61,7 +61,7 @@ const steps = [
           niveaus: {
             basis: "Begroting = vooraf inkomsten + uitgaven op rij. Antwoord D.",
             simpeler: "Stel je voor: aan het begin van de maand schrijf je op: 'wat krijg ik binnen?' (loon, zakgeld) en 'wat ga ik uitgeven?' (huur, boodschappen). Dat is begroten — vooruit kijken.",
-            nogSimpeler: "Verwacht inkomsten + uitgaven = D.",
+            nogSimpeler: "Verwacht inkomsten + uitgaven",
           },
         },
       },
@@ -118,7 +118,7 @@ const steps = [
           niveaus: {
             basis: "Productiviteit > loonstijging → ruimte voor loonsverhoging. Antwoord A.",
             simpeler: "Een werkgever kijkt: 'krijg ik genoeg terug voor wat ik betaal?' Als zijn mensen MEER gaan produceren (per uur), kan hij ze meer loon geven. Anders niet — anders maakt hij verlies.",
-            nogSimpeler: "Productiviteit > loon = ruimte = A.",
+            nogSimpeler: "Productiviteit > loon = ruimte",
           },
         },
       },
@@ -158,7 +158,7 @@ const steps = [
             { titel: "Wat doet de heffingskorting?", tekst: "Korting op te betalen IB. HOGER voor lage inkomens, LAGER voor hoge inkomens." },
             { titel: "Wie heeft daar voordeel bij?", tekst: "Lage inkomens — zij krijgen meer korting → houden relatief meer over." },
             { titel: "Wat doet dat met inkomensverschillen?", tekst: "Verschil arm ↔ rijk wordt KLEINER (laag krijgt erbij, hoog niet). = NIVELLERING." },
-            { titel: "Welke optie?", tekst: "Nivellering + voordeel laag = D." },
+            { titel: "Welke optie?", tekst: "Nivellering + voordeel laag" },
           ],
           woorden: [
             { woord: "heffingskorting", uitleg: "Vast bedrag dat wordt afgetrokken van de te betalen IB. Algemene heffingskorting daalt met inkomen." },
@@ -177,7 +177,7 @@ const steps = [
           niveaus: {
             basis: "Hogere korting voor laag = laag krijgt voordeel = verschil kleiner = nivellering. Antwoord D.",
             simpeler: "Heffingskorting helpt vooral lage inkomens (zij krijgen meer korting). Verschil tussen arm en rijk wordt KLEINER = nivellering. En het voordeel zit bij de LAGE inkomens.",
-            nogSimpeler: "Nivellering + voordeel laag = D.",
+            nogSimpeler: "Nivellering + voordeel laag",
           },
         },
       },
@@ -234,7 +234,7 @@ const steps = [
           niveaus: {
             basis: "Modaal = meest voorkomend. Antwoord C.",
             simpeler: "Modus betekent in statistiek 'wat het meest voorkomt'. Modaal inkomen = wat de meeste mensen verdienen. Niet het gemiddelde (dat trekken rijken op) en niet het minimum.",
-            nogSimpeler: "Modaal = meest voorkomend = C.",
+            nogSimpeler: "Modaal = meest voorkomend",
           },
         },
       },
@@ -292,7 +292,7 @@ const steps = [
           niveaus: {
             basis: "Koopkracht corrigeert inkomen voor INFLATIE. Antwoord A.",
             simpeler: "Stel: jouw inkomen blijft gelijk maar boodschappen worden 10% duurder. Kun je nog evenveel kopen? Nee — je koopkracht is gedaald. Dat verschil komt door INFLATIE. Daarom moet je inflatie meenemen.",
-            nogSimpeler: "Koopkracht corrigeren = inflatie = A.",
+            nogSimpeler: "Koopkracht corrigeren = inflatie",
           },
         },
       },

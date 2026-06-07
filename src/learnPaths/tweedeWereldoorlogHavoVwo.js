@@ -33,7 +33,7 @@ const steps = [
           stappen: [
             { titel: "Vernederend voor Duitsland", tekst: "DE moest 'oorlogsschuld' accepteren (artikel 231), 132 mld goudmark betalen, leger inkrimpen tot 100k man, kolonies + grondgebied verliezen. Werd als 'Diktat' ervaren. Voedde latere extremisme + Hitler's belofte 'recht doen'. Historici: te streng → veroorzaakte WO2." },
           ],
-          niveaus: { basis: "Sancties + schuld. A.", simpeler: "Streng straf voor DE. A.", nogSimpeler: "Streng = A." },
+          niveaus: { basis: "Sancties + schuld. A.", simpeler: "Streng straf voor DE. A.", nogSimpeler: "Streng" },
         },
       },
       {
@@ -43,7 +43,7 @@ const steps = [
         wrongHints: [null, "Niet — start WO2.", "Niet — München-putsch (mislukt).", "Niet — zijn dood."],
         uitlegPad: {
           stappen: [{ titel: "Wettelijk aan macht", tekst: "Hitler verkregen democratisch (NSDAP grootste partij na 1932-verkiezingen). Hindenburg benoemde hem Rijkskanselier 30 jan 1933. Binnen maanden: brand Rijksdag, machtigingswet, eenpartij-staat. Niet revolutionaire greep maar legaal achterhalen + dan systeem afbreken." }],
-          niveaus: { basis: "30-1-1933. A.", simpeler: "Begin 1933. A.", nogSimpeler: "1933 = A." },
+          niveaus: { basis: "30-1-1933. A.", simpeler: "Begin 1933. A.", nogSimpeler: "1933" },
         },
       },
       {
@@ -60,7 +60,7 @@ const steps = [
           stappen: [
             { titel: "Rechtvaardiging invasie", tekst: "Hitler: DE bevolking groeit, heeft meer ruimte nodig. Oost-Europa (Polen, Oekraïne, Rusland) zou herkoloniseerd worden als DE leefruimte. Slaven 'inferieur' → onderdrukken of uitroeien. Argument voor invasie 1941 USSR (Operation Barbarossa)." },
           ],
-          niveaus: { basis: "Leefruimte oosten. A.", simpeler: "Ruimte voor DE-volk. A.", nogSimpeler: "Lebens = A." },
+          niveaus: { basis: "Leefruimte oosten. A.", simpeler: "Ruimte voor DE-volk. A.", nogSimpeler: "Lebens" },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
           stappen: [
             { titel: "Appeasement faalde", tekst: "Chamberlain (UK) + Daladier (FR) hoopten oorlog te vermijden door Hitler Sudetenland te geven. Hitler beloofde verdere expansie te staken. 11 maanden later: invasie Polen. Klassieke les: dictatoriale agressie niet sussen via concessies. 'Peace for our time' werd ironie." },
           ],
-          niveaus: { basis: "Sudetenland weggeven. A.", simpeler: "DE krijgt deel Tsjechië. A.", nogSimpeler: "München = A." },
+          niveaus: { basis: "Sudetenland weggeven. A.", simpeler: "DE krijgt deel Tsjechië. A.", nogSimpeler: "München" },
         },
       },
       {
@@ -89,7 +89,7 @@ const steps = [
           stappen: [
             { titel: "Datum WO2-start", tekst: "1 sept 1939 vroeg ochtend: DE valt Polen binnen na grens-incident (gefabriceerd door SS). 3 sept: UK + FR verklaren oorlog aan DE. 17 sept: USSR valt OOST-Polen aan (Molotov-Ribbentrop-pact). Polen bezet binnen weken." },
           ],
-          niveaus: { basis: "Polen. A.", simpeler: "Polen 1939. A.", nogSimpeler: "Polen = A." },
+          niveaus: { basis: "Polen. A.", simpeler: "Polen 1939. A.", nogSimpeler: "Polen" },
         },
       },
     ],
@@ -110,7 +110,7 @@ const steps = [
           stappen: [
             { titel: "5-daagse oorlog", tekst: "10 mei 1940 vroeg ochtend: DE valt NL aan (Westfeldzug). 14 mei: Rotterdam-bombardement → NL capituleert om verdere steden te sparen. Koningin + regering naar Londen. Beneluxlanden + FR allemaal in 6 weken bezet — Blitzkrieg-succes." },
           ],
-          niveaus: { basis: "Mei 1940. A.", simpeler: "10-14 mei 1940. A.", nogSimpeler: "1940 = A." },
+          niveaus: { basis: "Mei 1940. A.", simpeler: "10-14 mei 1940. A.", nogSimpeler: "1940" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           stappen: [
             { titel: "Hitler-megalomanie", tekst: "Hitler wilde Stalingrad (naar Stalin genoemd) ten koste van alles. Sovjets vochten om elke straat. Winter 1942-43: 6e Leger DE omsingeld, geen ontsnapping toegestaan. Februari 1943 capitulatie. ~800 000 DE verliezen + ~1,2 mln Sovjet. Daarna USSR op offensief. Keerpunt aan oostfront." },
           ],
-          niveaus: { basis: "Keerpunt + DE verliezen. A.", simpeler: "DE verliest grote slag. A.", nogSimpeler: "DE verlies = A." },
+          niveaus: { basis: "Keerpunt + DE verliezen. A.", simpeler: "DE verliest grote slag. A.", nogSimpeler: "DE verlies" },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
           stappen: [
             { titel: "Operation Overlord", tekst: "Grootste amfibische operatie ooit. Eisenhower-commando. 5 stranden (Utah, Omaha, Gold, Juno, Sword) op Normandische kust. Omaha het bloedigst (~2400 Amerikaanse doden). Doorbraak naar Parijs (bevrijd aug 1944) en oprukken naar Duitsland. Begin van eind in West." },
           ],
-          niveaus: { basis: "Landing Normandië. A.", simpeler: "Frankrijk-invasie. A.", nogSimpeler: "Normandië = A." },
+          niveaus: { basis: "Landing Normandië. A.", simpeler: "Frankrijk-invasie. A.", nogSimpeler: "Normandië" },
         },
       },
       {
@@ -161,7 +161,7 @@ const steps = [
           stappen: [
             { titel: "Wraak voor spoorwegstaking", tekst: "Sept 1944: NL-spoorwegen staakten om geallieerde-bevrijding te steunen. DE blokkeerde voedsel-toelevering aan WEST-NL (Randstad). Strenge winter + bezetting → mensen aten tulpenbollen + suikerbieten + brandnetels. ~20 000 doden vooral oudere mannen + zwangere vrouwen. Foto's hongerige kinderen wereldwijd bekend." },
           ],
-          niveaus: { basis: "20 000 doden NL. A.", simpeler: "Hongersnood West-NL. A.", nogSimpeler: "Honger = A." },
+          niveaus: { basis: "20 000 doden NL. A.", simpeler: "Hongersnood West-NL. A.", nogSimpeler: "Honger" },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
           stappen: [
             { titel: "Officiële DE-capitulatie", tekst: "7 mei: DE tekent capitulatie in Reims. 8 mei: ratificatie Berlijn. Sovjet-tijdzone: 9 mei (Victory Day in Rusland). NL viert 5 mei (bevrijdingsdag) want dat was effectieve bevrijding voor NL-bevolking — DE-troepen in NL gaven zich over." },
           ],
-          niveaus: { basis: "8 mei 1945. A.", simpeler: "DE-capitulatie. A.", nogSimpeler: "8-5-45 = A." },
+          niveaus: { basis: "8 mei 1945. A.", simpeler: "DE-capitulatie. A.", nogSimpeler: "8-5-45" },
         },
       },
     ],
@@ -199,7 +199,7 @@ const steps = [
           stappen: [
             { titel: "Tragische uitschieter", tekst: "Van 140 000 NL-joden vermoord 104 000 — hoogste % West-Europa. Redenen: efficiënte CBS-registratie, weinig schuilplaats in dichtbevolkt klein land, weinig massaal-verzet, NSB-collaboratie. Denemarken redde bijna iedereen via boot-evacuatie naar Zweden." },
           ],
-          niveaus: { basis: "NL ~75%. A.", simpeler: "NL hoogste verlies. A.", nogSimpeler: "NL 75% = A." },
+          niveaus: { basis: "NL ~75%. A.", simpeler: "NL hoogste verlies. A.", nogSimpeler: "NL 75%" },
         },
       },
       {
@@ -216,7 +216,7 @@ const steps = [
           stappen: [
             { titel: "Bureaucratie van moord", tekst: "Heydrich + 14 hoge nazi-ambtenaren bij Wannsee-meer Berlijn. Lijst 11 mln joden + organisatorische uitvoering. Bewijst: Holocaust was PLAN, niet impuls. Wannsee-villa nu Gedenkstätte. Notities (Eichmann) ontdekt na oorlog — onmiskenbaar bewijs." },
           ],
-          niveaus: { basis: "Endlösung-plan. A.", simpeler: "Uitroeiing alle joden. A.", nogSimpeler: "Endlösung = A." },
+          niveaus: { basis: "Endlösung-plan. A.", simpeler: "Uitroeiing alle joden. A.", nogSimpeler: "Endlösung" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
           stappen: [
             { titel: "Tijdslijn", tekst: "Aug 1944: verraden, gearresteerd. Sept '44: Westerbork → Auschwitz. Okt '44: naar Bergen-Belsen (DE). Feb '45: tyfus-epidemie → Anne + zus Margot sterven. Bevrijding kamp april '45 — paar weken te laat. Otto enige overlevende familie." },
           ],
-          niveaus: { basis: "Bergen-Belsen tyfus. A.", simpeler: "Bergen-Belsen feb '45. A.", nogSimpeler: "Belsen = A." },
+          niveaus: { basis: "Bergen-Belsen tyfus. A.", simpeler: "Bergen-Belsen feb '45. A.", nogSimpeler: "Belsen" },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
           stappen: [
             { titel: "Eerste massa-protest joden-vervolging", tekst: "Na razzia's bij Joods Buurt: trambestuurders staakten, kantoor + winkel-personeel volgde. Massaal-uniek voor bezet West-Europa. DE-bezetters reageerden hard: arrestaties, executie. Toch belangrijke morele actie. Standbeeld 'De Dokwerker' op Jonas Daniël Meijerplein Amsterdam herinnert." },
           ],
-          niveaus: { basis: "Anti-joden-vervolging staking. A.", simpeler: "Amsterdammers tegen razzia. A.", nogSimpeler: "Staking = A." },
+          niveaus: { basis: "Anti-joden-vervolging staking. A.", simpeler: "Amsterdammers tegen razzia. A.", nogSimpeler: "Staking" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
           stappen: [
             { titel: "Film 'Schindler's List' 1993", tekst: "DE-zakenman + NSDAP-lid. Maakte aanvankelijk winst met joodse dwangarbeiders. Geleidelijk veranderde mening → kostte fortuin om hen veilig te houden. Door 'lijst' bewaarde 1100 voor dood. Stierf arm 1974, begraven op Mount Zion. Film Spielberg won 7 Oscars." },
           ],
-          niveaus: { basis: "1100 joden. A.", simpeler: "Fabriek redde joden. A.", nogSimpeler: "Schindler = A." },
+          niveaus: { basis: "1100 joden. A.", simpeler: "Fabriek redde joden. A.", nogSimpeler: "Schindler" },
         },
       },
     ],
@@ -293,7 +293,7 @@ const steps = [
           stappen: [
             { titel: "Verrassings-aanval", tekst: "Zondag morgen 7 dec 1941, geen oorlogsverklaring vooraf. Japanse vliegtuigen bombardeerden Amerikaanse vloot in Pearl Harbor (Hawaii). 2400 doden. VS verklaart oorlog aan Japan + komt zo in WO2 (ook Europese theater)." },
           ],
-          niveaus: { basis: "Japan→VS-Hawaii. A.", simpeler: "Japan valt VS aan. A.", nogSimpeler: "PH = A." },
+          niveaus: { basis: "Japan→VS-Hawaii. A.", simpeler: "Japan valt VS aan. A.", nogSimpeler: "PH" },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
           stappen: [
             { titel: "'Little Boy'", tekst: "8:15 ochtend. Enola Gay-bommenwerper. 13 kt TNT-equivalent (klein vs huidige H-bommen). 80 000 direct dood, stad weggevaagd. 9 aug Nagasaki. 15 aug Japan capituleert. Eerste + enige militair-gebruikte atoomwapens." },
           ],
-          niveaus: { basis: "6 aug 1945. A.", simpeler: "Augustus 1945. A.", nogSimpeler: "6-8-45 = A." },
+          niveaus: { basis: "6 aug 1945. A.", simpeler: "Augustus 1945. A.", nogSimpeler: "6-8-45" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
           stappen: [
             { titel: "Geheimst project ooit", tekst: "Begonnen 1939 na Einstein's brief aan Roosevelt (zorg dat DE eerst bom heeft). 125 000 mensen, $2 mld. Locaties: Los Alamos (design, Oppenheimer), Oak Ridge (uranium-verrijking), Hanford (plutonium). Trinity test 16 juli 1945. 3 weken later Hiroshima." },
           ],
-          niveaus: { basis: "Atoombom. A.", simpeler: "VS-atoombom-project. A.", nogSimpeler: "Atoom = A." },
+          niveaus: { basis: "Atoombom. A.", simpeler: "VS-atoombom-project. A.", nogSimpeler: "Atoom" },
         },
       },
       {
@@ -329,7 +329,7 @@ const steps = [
           stappen: [
             { titel: "Tijdens machtsvacuüm", tekst: "Soekarno + Hatta riepen onafhankelijkheid uit 2 dagen na Japan-capitulatie. NL erkende niet → 4 jaar conflict ('politionele acties'). Onder internationale druk (VN, VS) tekende NL 27 dec 1949 erkenning. Bersiap-tijd 1945-46: lokale jongeren vermoorden duizenden NL/Indo-Europeanen." },
           ],
-          niveaus: { basis: "17 aug 1945. A.", simpeler: "Augustus 1945. A.", nogSimpeler: "17-8-45 = A." },
+          niveaus: { basis: "17 aug 1945. A.", simpeler: "Augustus 1945. A.", nogSimpeler: "17-8-45" },
         },
       },
       {
@@ -346,7 +346,7 @@ const steps = [
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },
           ],
-          niveaus: { basis: "300k Chinezen vermoord. A.", simpeler: "Japans massamoord China. A.", nogSimpeler: "Nanjing = A." },
+          niveaus: { basis: "300k Chinezen vermoord. A.", simpeler: "Japans massamoord China. A.", nogSimpeler: "Nanjing" },
         },
       },
     ],
@@ -372,7 +372,7 @@ const steps = [
           stappen: [
             { titel: "Genereus + strategisch", tekst: "Genoemd naar George Marshall (VS-Secretary of State). Hulp voor wederopbouw + voorkomen communisme-uitbreiding. Sleutel naoorlogs welvaart Europa. Sovjet-zone weigerde → kloof West-Oost diep. NL ontving ~$1 mld." },
           ],
-          niveaus: { basis: "VS-hulp wederopbouw. A.", simpeler: "$13 mld voor Europa. A.", nogSimpeler: "Marshall = A." },
+          niveaus: { basis: "VS-hulp wederopbouw. A.", simpeler: "$13 mld voor Europa. A.", nogSimpeler: "Marshall" },
         },
       },
       {
@@ -389,7 +389,7 @@ const steps = [
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Klassiek beginsel: ook ambtenaren + soldaten zijn verantwoordelijk voor hun handelingen. Eichmann probeerde dit verweer ('ich war nur ein kleines Rädchen') — werd verworpen. Vandaag basis voor Internationale Strafhof Den Haag (ICC) waar oorlogsmisdaden berecht worden." },
           ],
-          niveaus: { basis: "Orders ≠ vrijbrief. A.", simpeler: "Persoonlijk verantwoordelijk. A.", nogSimpeler: "Persoon = A." },
+          niveaus: { basis: "Orders ≠ vrijbrief. A.", simpeler: "Persoonlijk verantwoordelijk. A.", nogSimpeler: "Persoon" },
         },
       },
       {
@@ -401,7 +401,7 @@ const steps = [
           stappen: [
             { titel: "VN-verdeelplan + Britse mandaat-einde", tekst: "VN-resolutie 181 (nov 1947) verdeelde mandaat-Palestina in joodse + Arabische staat. 14 mei 1948: David Ben-Gurion roept Israel uit. Direct oorlog met Egypte+Jordanië+Syrië+Libanon+Irak. Israel wint, vergroot grondgebied. Begin van conflict tot vandaag." },
           ],
-          niveaus: { basis: "1948. A.", simpeler: "Mei 1948. A.", nogSimpeler: "1948 = A." },
+          niveaus: { basis: "1948. A.", simpeler: "Mei 1948. A.", nogSimpeler: "1948" },
         },
       },
       {
@@ -418,7 +418,7 @@ const steps = [
           stappen: [
             { titel: "Schuman + Monnet", tekst: "1951: kolen + staal-industrie (oorlogsbasis) onder gemeenschappelijk bestuur Schumanplan. Idee: landen die handel + economie delen, gaan geen oorlog meer voeren. Werkt: geen oorlog meer tussen EU-leden sinds 1945. Nobelvredesprijs 2012 voor EU." },
           ],
-          niveaus: { basis: "Vrede via integratie. A.", simpeler: "Geen oorlog meer EU. A.", nogSimpeler: "Vrede = A." },
+          niveaus: { basis: "Vrede via integratie. A.", simpeler: "Geen oorlog meer EU. A.", nogSimpeler: "Vrede" },
         },
       },
       {
@@ -430,7 +430,7 @@ const steps = [
           stappen: [
             { titel: "Hutu vs Tutsi", tekst: "Apr 1994: Hutu-extremisten begonnen systematische slachting Tutsi-bevolking + gematigde Hutu. ~800 000 doden in 100 dagen via machetes + geweren. VN-vredesmacht trok terug. Internationale gemeenschap verzuimde. Belangrijke les: 'Nooit Weer' is geen automatische garantie. Sindsdien meer aandacht voor preventie genocide." },
           ],
-          niveaus: { basis: "Rwanda 1994. A.", simpeler: "Rwanda 800k doden. A.", nogSimpeler: "Rwanda = A." },
+          niveaus: { basis: "Rwanda 1994. A.", simpeler: "Rwanda 800k doden. A.", nogSimpeler: "Rwanda" },
         },
       },
     ],

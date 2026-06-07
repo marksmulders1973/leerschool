@@ -28,7 +28,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet de twee O's niet.", "Niet — dat is O₂.", "Niet — let op koolstof-deel."],
         uitlegPad: {
           stappen: [{ titel: "Som atoommassa's", tekst: "M(CO₂) = M(C) + 2·M(O) = 12 + 2·16 = **44 g/mol**." }],
-          niveaus: { basis: "12+32=44 g/mol. A.", simpeler: "C + 2 O = 12+32 = 44. A.", nogSimpeler: "44 = A." },
+          niveaus: { basis: "12+32=44 g/mol. A.", simpeler: "C + 2 O = 12+32 = 44. A.", nogSimpeler: "44" },
         },
       },
       {
@@ -38,7 +38,7 @@ const steps = [
         wrongHints: [null, "Niet — andersom (m/M).", "Niet — verwarring m vs n.", "Niet — controleer formule."],
         uitlegPad: {
           stappen: [{ titel: "n = m/M", tekst: "n = 36/18 = **2,0 mol** water." }],
-          niveaus: { basis: "36/18=2. A.", simpeler: "Massa delen door molaire massa: 2 mol. A.", nogSimpeler: "2,0 = A." },
+          niveaus: { basis: "36/18=2. A.", simpeler: "Massa delen door molaire massa: 2 mol. A.", nogSimpeler: "2,0" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "V = n · V_mol", tekst: "V = 2 · 22,4 = **44,8 L**. Alle ideale gassen nemen dezelfde volume per mol bij STP — onafhankelijk van stof." }],
           theorie: "Bij 25 °C i.p.v. 0 °C: gebruik 24,5 L/mol.",
-          niveaus: { basis: "2·22,4 L. A.", simpeler: "Per mol 22,4 L → 2 mol = 44,8 L. A.", nogSimpeler: "44,8 = A." },
+          niveaus: { basis: "2·22,4 L. A.", simpeler: "Per mol 22,4 L → 2 mol = 44,8 L. A.", nogSimpeler: "44,8" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 1 mol.", "Niet — te veel.", "Niet — dat is mol, geen deeltjes."],
         uitlegPad: {
           stappen: [{ titel: "N = n · N_A", tekst: "N = 0,50 · 6,022·10²³ = **3,01·10²³** moleculen. Avogadro-getal is constant — onafhankelijk van stof." }],
-          niveaus: { basis: "0,5·6·10²³ = 3·10²³. A.", simpeler: "Half van Avogadro = 3·10²³. A.", nogSimpeler: "3·10²³ = A." },
+          niveaus: { basis: "0,5·6·10²³ = 3·10²³. A.", simpeler: "Half van Avogadro = 3·10²³. A.", nogSimpeler: "3·10²³" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
           stappen: [
             { titel: "c = n/V", tekst: "n = 11,7/58,5 = 0,20 mol. c = 0,20/0,50 = **0,40 M** (mol/L). Vrij geconcentreerde NaCl-oplossing — vergelijkbaar met zeewater (~0,6 M)." },
           ],
-          niveaus: { basis: "c=0,40 M. A.", simpeler: "Mol delen door volume = 0,4 M. A.", nogSimpeler: "0,4 = A." },
+          niveaus: { basis: "c=0,40 M. A.", simpeler: "Mol delen door volume = 0,4 M. A.", nogSimpeler: "0,4" },
         },
       },
     ],
@@ -90,7 +90,7 @@ const steps = [
         wrongHints: [null, "Niet — links 2 H, rechts 1 H mis-balans.", "Niet — links 2 O, rechts 4 O.", "Niet — niet kleinste."],
         uitlegPad: {
           stappen: [{ titel: "2 H₂ + 1 O₂ → 2 H₂O", tekst: "Links: 4H, 2O. Rechts: 4H, 2O. ✓\nWatersynthese (knalgas-explosie)." }],
-          niveaus: { basis: "2,1,2. A.", simpeler: "Twee H₂ + één O₂ → twee H₂O. A.", nogSimpeler: "2-1-2 = A." },
+          niveaus: { basis: "2,1,2. A.", simpeler: "Twee H₂ + één O₂ → twee H₂O. A.", nogSimpeler: "2-1-2" },
         },
       },
       {
@@ -103,7 +103,7 @@ const steps = [
             { titel: "C, H, dan O", tekst: "C₃H₈ + O₂ → CO₂ + H₂O. 3 C → 3 CO₂. 8 H → 4 H₂O. Rechts: 3·2 + 4·1 = 10 O → 5 O₂.\n\n**C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**." },
           ],
           theorie: "Klassieke 'butaan/propaan-verbranding'-CSE-vraag. Brandgevaar in barbecue + gas-fornuis-reactie.",
-          niveaus: { basis: "5,3,4. A.", simpeler: "Vijf zuurstof, drie CO₂, vier water. A.", nogSimpeler: "5-3-4 = A." },
+          niveaus: { basis: "5,3,4. A.", simpeler: "Vijf zuurstof, drie CO₂, vier water. A.", nogSimpeler: "5-3-4" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
         wrongHints: [null, "Niet — moleculen veranderen wel.", "Onjuist hier — energie wel, maar vraag was atomen.", "Onjuist — wel behoud."],
         uitlegPad: {
           stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven dezelfde, alleen ze schuiven naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
-          niveaus: { basis: "Atomen behouden. A.", simpeler: "Aantal atomen elk element gelijk. A.", nogSimpeler: "Atomen = A." },
+          niveaus: { basis: "Atomen behouden. A.", simpeler: "Aantal atomen elk element gelijk. A.", nogSimpeler: "Atomen" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
             { titel: "Zuur + base → zout + water", tekst: "HCl(aq) + NaOH(aq) → **NaCl(aq) + H₂O(l)**. Klassiek neutralisatie-patroon — zuur en base elimineren elkaar." },
           ],
           theorie: "Industriële toepassing: water-zuiveren, pH-regulatie in zwembad.",
-          niveaus: { basis: "NaCl + H₂O. A.", simpeler: "Zout + water. A.", nogSimpeler: "Zout+water = A." },
+          niveaus: { basis: "NaCl + H₂O. A.", simpeler: "Zout + water. A.", nogSimpeler: "Zout+water" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is bij O-tekort.", "Bestaat niet.", "Geen waterstof in C+O."],
         uitlegPad: {
           stappen: [{ titel: "C + O₂ → CO₂", tekst: "Bij voldoende zuurstof: volledige verbranding → CO₂ (koolstof-dioxide). Bij tekort O: CO (koolmonoxide, GIFTIG, kleur- en reukloos = stille killer). Daarom altijd ventileren bij gas-apparaten." }],
-          niveaus: { basis: "CO₂ bij voldoende O. A.", simpeler: "Volledig: CO₂. Tekort: CO. A.", nogSimpeler: "CO₂ = A." },
+          niveaus: { basis: "CO₂ bij voldoende O. A.", simpeler: "Volledig: CO₂. Tekort: CO. A.", nogSimpeler: "CO₂" },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
             { titel: "Mol-verhouding 3 H₂ : 2 NH₃", tekst: "n(NH₃) = 6 · (2/3) = **4 mol**. Met N₂ in overmaat is H₂ limiterend." },
           ],
           theorie: "Haber-Bosch is industrieel kunstmest-proces, 1 % van werelds-energiegebruik. Cruciaal voor voedselproductie.",
-          niveaus: { basis: "6·2/3=4. A.", simpeler: "Voor elke 3 H₂ → 2 NH₃; dus 6 → 4. A.", nogSimpeler: "4 = A." },
+          niveaus: { basis: "6·2/3=4. A.", simpeler: "Voor elke 3 H₂ → 2 NH₃; dus 6 → 4. A.", nogSimpeler: "4" },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
           stappen: [
             { titel: "1:1 CaCO₃:CO₂", tekst: "n(CO₂) = 44/44 = 1 mol. Verhouding 1:1 → 1 mol CaCO₃ → m = 1·100 = **100 g**." },
           ],
-          niveaus: { basis: "100 g. A.", simpeler: "Een mol CO₂ = een mol CaCO₃ = 100 g. A.", nogSimpeler: "100 = A." },
+          niveaus: { basis: "100 g. A.", simpeler: "Een mol CO₂ = een mol CaCO₃ = 100 g. A.", nogSimpeler: "100" },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is verlies.", "Niet — verlies aanwezig.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Opbrengst = werk/theor × 100", tekst: "= 80/100 · 100% = **80%**. 20% verlies door niet-perfecte reactie + zuivering." }],
-          niveaus: { basis: "80%. A.", simpeler: "80 uit 100 = 80%. A.", nogSimpeler: "80 = A." },
+          niveaus: { basis: "80%. A.", simpeler: "80 uit 100 = 80%. A.", nogSimpeler: "80" },
         },
       },
       {
@@ -197,7 +197,7 @@ const steps = [
           stappen: [
             { titel: "Verhouding 2:1, gegeven 2:3", tekst: "Voor 2 mol H₂ heb je 1 mol O₂ nodig. Je hebt 3 mol O₂ = overmaat. **H₂ is limiterend** — het loopt eerder op. Resultaat: 2 mol H₂O + 2 mol O₂ over." },
           ],
-          niveaus: { basis: "H₂ limiterend. A.", simpeler: "Veel teveel O₂; H₂ raakt eerst op. A.", nogSimpeler: "H₂ = A." },
+          niveaus: { basis: "H₂ limiterend. A.", simpeler: "Veel teveel O₂; H₂ raakt eerst op. A.", nogSimpeler: "H₂" },
         },
       },
       {
@@ -209,7 +209,7 @@ const steps = [
           stappen: [
             { titel: "1:1 CH₄:CO₂", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. 1 mol CH₄ → 1 mol CO₂ → V = 1 · 22,4 = **22,4 L** bij STP." },
           ],
-          niveaus: { basis: "22,4 L. A.", simpeler: "Een mol gas = 22,4 L bij STP. A.", nogSimpeler: "22,4 = A." },
+          niveaus: { basis: "22,4 L. A.", simpeler: "Een mol gas = 22,4 L bij STP. A.", nogSimpeler: "22,4" },
         },
       },
     ],
@@ -229,7 +229,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zn: 0 → +2 = oxidatie", tekst: "Zn verliest 2 elektronen → wordt Zn²⁺. Oxidatie = elektronen verlies. Zn is dus reductor (geeft elektronen aan Cu²⁺ over)." }],
           theorie: "Klassiek demonstratie-experiment: Zn-staaf in CuSO₄-oplossing → kopermetaal slaat neer op staaf, oplossing wordt kleurloos.",
-          niveaus: { basis: "Zn → Zn²⁺ = oxidatie. A.", simpeler: "Zink geeft elektronen weg → wordt geoxideerd. A.", nogSimpeler: "Zn = A." },
+          niveaus: { basis: "Zn → Zn²⁺ = oxidatie. A.", simpeler: "Zink geeft elektronen weg → wordt geoxideerd. A.", nogSimpeler: "Zn" },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is reductie.", "Niet — verwarring zuur-base.", "Niet — niet specifiek voor redox."],
         uitlegPad: {
           stappen: [{ titel: "OIL — Oxidation Is Loss", tekst: "Onthoud-truc: OIL RIG.\n- **O**xidation **I**s **L**oss (of electrons).\n- **R**eduction **I**s **G**ain.\nOoit verwarring? Bedenk: oxidatie kwam oorspronkelijk van 'reactie met oxygen' (O₂). Maar verbreed: 'elektron-verlies' is de moderne def." }],
-          niveaus: { basis: "Verlies van e⁻. A.", simpeler: "Oxidatie = elektronen weggeven. A.", nogSimpeler: "Verlies = A." },
+          niveaus: { basis: "Verlies van e⁻. A.", simpeler: "Oxidatie = elektronen weggeven. A.", nogSimpeler: "Verlies" },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
             { titel: "Som = 0 oplossen", tekst: "K: +1 (alkali-metaal). O: −2 (×4 = −8). Totaal molecuul: 0.\n+1 + Mn + (−8) = 0 → Mn = **+7**. Sterk oxidator (paars zout, lab-reagens)." },
           ],
           theorie: "Mn in +7 is een van de hoogste oxidatiegetallen → 'wil' graag elektronen aannemen → krachtige oxidator (Mn²⁺ pink-rood eindproduct).",
-          niveaus: { basis: "Mn = +7. A.", simpeler: "K(+1) + 4·O(−2) + Mn = 0 → Mn = +7. A.", nogSimpeler: "+7 = A." },
+          niveaus: { basis: "Mn = +7. A.", simpeler: "K(+1) + 4·O(−2) + Mn = 0 → Mn = +7. A.", nogSimpeler: "+7" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Fe → Fe³⁺ in roest", tekst: "In Fe(OH)₃ of Fe₂O₃ heeft Fe oxidatiegetal +3. Ging van 0 (metaal) naar +3 = oxidatie. O₂ is hier oxidator (wordt zelf gereduceerd van 0 naar −2 in OH⁻)." }],
           theorie: "Voorkoming roest: galvaniseren (zink-laag → 'opoffert' zich, beschermt Fe), schilderen (lucht buiten houden), of edelmetalen-leg-ringen.",
-          niveaus: { basis: "Fe-geoxideerd. A.", simpeler: "IJzer geeft elektronen → oxidatie. A.", nogSimpeler: "Geoxideerd = A." },
+          niveaus: { basis: "Fe-geoxideerd. A.", simpeler: "IJzer geeft elektronen → oxidatie. A.", nogSimpeler: "Geoxideerd" },
         },
       },
       {
@@ -291,7 +291,7 @@ const steps = [
             { titel: "Anode = oxidatie", tekst: "Anode is per definitie waar oxidatie plaatsvindt (elektronen verlaten elektrode → naar extern circuit). In gewone batterij (galvanische cel): anode = − pool. In elektrolyse-cel: anode = + pool (geforceerd). Verwarrend! Onthoud regel: ANode = Anodische = OXidatie." },
           ],
           theorie: "Elektronen lopen door extern circuit van anode (−) naar kathode (+). Daarvoor 'opent' batterij het circuit.",
-          niveaus: { basis: "Anode = oxidatie. A.", simpeler: "Anode geeft elektronen weg. A.", nogSimpeler: "Anode = A." },
+          niveaus: { basis: "Anode = oxidatie. A.", simpeler: "Anode geeft elektronen weg. A.", nogSimpeler: "Anode" },
         },
       },
     ],
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "Niet — geen H₂ als product.", "Niet — geen H₂.", "Niet — geen H₂."],
         uitlegPad: {
           stappen: [{ titel: "Trick-vraag", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. Producten zijn CO₂ + H₂O. Geen H₂-gas. Stoichiometrie-vraag vereist eerst kijken: bestaat dat product? Hier: nee." }],
-          niveaus: { basis: "Geen H₂. A.", simpeler: "Verbranding geeft water, niet H₂. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "Geen H₂. A.", simpeler: "Verbranding geeft water, niet H₂. A.", nogSimpeler: "0" },
         },
       },
       {
@@ -333,7 +333,7 @@ const steps = [
             { titel: "Le Chatelier — minder mol", tekst: "Links: 1+3 = 4 mol gas. Rechts: 2 mol. Hogere druk → evenwicht naar zijde met minder mol → **rechts** (meer NH₃). Daarom werkt Haber-Bosch op 200 atm." },
           ],
           theorie: "Voor exotherme reactie zou ook KOELEN rechts schuiven; maar te koud = te traag → industrieel compromis ~450 °C.",
-          niveaus: { basis: "Druk↑ → rechts. A.", simpeler: "Minder mol-zijde = rechts. A.", nogSimpeler: "Rechts = A." },
+          niveaus: { basis: "Druk↑ → rechts. A.", simpeler: "Minder mol-zijde = rechts. A.", nogSimpeler: "Rechts" },
         },
       },
       {
@@ -349,7 +349,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verlaagt activeringsenergie", tekst: "Katalysator biedt alternatief reactie-pad met lagere Ea → reactie verloopt sneller. Geldt voor zowel heen- als terug-reactie → evenwichtspositie verandert NIET. Hoeveelheid katalysator blijft zelfde na reactie." }],
           theorie: "Voorbeelden: enzymen in cellen, platina in auto-katalysator (uitlaatgassen-zuivering), Fe in Haber-Bosch.",
-          niveaus: { basis: "Sneller, geen schuiven. A.", simpeler: "Versnelt heen + terug evenveel. A.", nogSimpeler: "Snelheid = A." },
+          niveaus: { basis: "Sneller, geen schuiven. A.", simpeler: "Versnelt heen + terug evenveel. A.", nogSimpeler: "Snelheid" },
         },
       },
       {
@@ -359,7 +359,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is dichtheid-massa.", "Niet — dat is molaliteit.", "Niet — deeltjes ≠ mol."],
         uitlegPad: {
           stappen: [{ titel: "M = molair = mol/L", tekst: "Bv. 1 M HCl = 1 mol opgelost in 1 L oplossing. Veel gebruikt in lab + medische context." }],
-          niveaus: { basis: "M = mol/L. A.", simpeler: "Molair = mol per liter. A.", nogSimpeler: "mol/L = A." },
+          niveaus: { basis: "M = mol/L. A.", simpeler: "Molair = mol per liter. A.", nogSimpeler: "mol/L" },
         },
       },
       {
@@ -377,7 +377,7 @@ const steps = [
             { titel: "Kathode = reductie", tekst: "Aan kathode (− pool): Na⁺ + e⁻ → Na (reductie). Aan anode (+ pool): 2 Cl⁻ → Cl₂ + 2 e⁻ (oxidatie). Industriële Na + Cl₂ productie via dit proces (chloor-alkali-elektrolyse)." },
           ],
           theorie: "In oplossing (NaCl in water) wint H₂O voor reductie aan kathode → H₂ ipv Na. Daarom gesmolten zout nodig voor Na-metaal.",
-          niveaus: { basis: "Na aan kathode. A.", simpeler: "Kathode reduceert Na⁺ tot Na. A.", nogSimpeler: "Na = A." },
+          niveaus: { basis: "Na aan kathode. A.", simpeler: "Kathode reduceert Na⁺ tot Na. A.", nogSimpeler: "Na" },
         },
       },
     ],

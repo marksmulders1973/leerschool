@@ -49,7 +49,7 @@ const steps = [
           stappen: [
             { titel: "Industriële melanisme", tekst: "Klassiek experiment + observatie. Voor 1850: <1% donker. Tegen 1900: >95% donker. Vogel-predatie favoriseerde camouflage met roetschors. Na Clean Air Act 1956 + schoner industrie → omgekeerd → terug naar licht. **Bewijs evolutie in mensentijdschalen**." },
           ],
-          niveaus: { basis: "Roet + predatie. A.", simpeler: "Donkere camouflage werd voordeel. A.", nogSimpeler: "Roet = A." },
+          niveaus: { basis: "Roet + predatie. A.", simpeler: "Donkere camouflage werd voordeel. A.", nogSimpeler: "Roet" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Niet — kracht is niet doorslaggevend.", "Idem.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Niet 'survival of the fittest' als kracht", tekst: "Fitness = hoeveel je doorgeeft aan volgende generatie. Pauw met verleidelijke staart: minder mobiel → hogere kans gepakt door predator, MAAR meer paartjes → meer nakomelingen → hoge fitness. Wat 'fit' is hangt af van omgeving." }],
-          niveaus: { basis: "Nakomelingen. A.", simpeler: "Wie meeste baby's krijgt = fit. A.", nogSimpeler: "Reproductie = A." },
+          niveaus: { basis: "Nakomelingen. A.", simpeler: "Wie meeste baby's krijgt = fit. A.", nogSimpeler: "Reproductie" },
         },
       },
       {
@@ -82,7 +82,7 @@ const steps = [
             { titel: "Adaptieve radiatie", tekst: "Eén voorouder-vink kwam op archipel. Op verschillende eilanden: ander voedsel beschikbaar. Selectie favoriseert snavels per habitat. In ~3 mln jaar: 15+ soorten. Klassiek voorbeeld dat Darwin tot zijn theorie bracht." },
           ],
           theorie: "Een groep verwante soorten ontstaat uit één voorouder → adaptieve radiatie. Ook bekend bij cichliden in Afrikaanse meren (>500 soorten).",
-          niveaus: { basis: "Voedsel-aanpassing. A.", simpeler: "Eigen snavel per eiland-eten. A.", nogSimpeler: "Voedsel = A." },
+          niveaus: { basis: "Voedsel-aanpassing. A.", simpeler: "Eigen snavel per eiland-eten. A.", nogSimpeler: "Voedsel" },
         },
       },
       {
@@ -97,7 +97,7 @@ const steps = [
         wrongHints: [null, "Niet — overproductie geeft selectie.", "Geen reden voor totaal-verlies.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde 3: overproductie", tekst: "Darwin's inzicht (geïnspireerd door Malthus): organismen produceren altijd meer nakomelingen dan omgeving aankan. Daardoor: concurrentie + selectie. Niet alle nakomelingen overleven → die met betere variatie hebben hogere kans → evolutie." }],
-          niveaus: { basis: "Selectie door overschot. A.", simpeler: "Te veel babys → niet alle overleven. A.", nogSimpeler: "Selectie = A." },
+          niveaus: { basis: "Selectie door overschot. A.", simpeler: "Te veel babys → niet alle overleven. A.", nogSimpeler: "Selectie" },
         },
       },
     ],
@@ -121,7 +121,7 @@ const steps = [
         wrongHints: [null, "Niet — meeste niet zo.", "Niet — neutrale wel.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Random + meestal onzichtbaar", tekst: "DNA-replicatie maakt fouten. De meeste vallen in niet-coderend DNA → geen effect. Coderende mutaties: meestal verstoren werking eiwit → schadelijk. Zeldzame: gunstig — daarop werkt selectie." }],
-          niveaus: { basis: "Meeste neutraal/schadelijk. A.", simpeler: "Mutaties willekeurig, zelden gunstig. A.", nogSimpeler: "Neut/schad = A." },
+          niveaus: { basis: "Meeste neutraal/schadelijk. A.", simpeler: "Mutaties willekeurig, zelden gunstig. A.", nogSimpeler: "Neut/schad" },
         },
       },
       {
@@ -138,7 +138,7 @@ const steps = [
           stappen: [
             { titel: "Crossing-over + onafhankelijke segregatie", tekst: "Tijdens meiose: chromosomen koppelen + wisselen stukken. Plus elke chromosoom gaat random naar ene of andere gameet. Combinatie van 2 sets ouders → enorme variatie zonder dat nieuwe genen ontstaan. Mutatie levert nieuwe variatie." },
           ],
-          niveaus: { basis: "Mengen bestaande. A.", simpeler: "Schudt genen, geen nieuwe. A.", nogSimpeler: "Mengen = A." },
+          niveaus: { basis: "Mengen bestaande. A.", simpeler: "Schudt genen, geen nieuwe. A.", nogSimpeler: "Mengen" },
         },
       },
       {
@@ -155,7 +155,7 @@ const steps = [
           stappen: [
             { titel: "Flessenhals + inteelt", tekst: "Kleine populatie: variatie smal, gevoelig voor verlies door drift + inteelt. Voorbeeld cheetah's: bottleneck ~10 000 jaar geleden → vandaag bijna geen genetische verschillen → vatbaar voor virussen. Beschermingsprogramma's mengen populaties om diversiteit te behouden." },
           ],
-          niveaus: { basis: "Verlies variatie. A.", simpeler: "Klein = arm = kwetsbaar. A.", nogSimpeler: "Klein = A." },
+          niveaus: { basis: "Verlies variatie. A.", simpeler: "Klein = arm = kwetsbaar. A.", nogSimpeler: "Klein" },
         },
       },
       {
@@ -167,7 +167,7 @@ const steps = [
           stappen: [
             { titel: "Hardy-Weinberg q²", tekst: "Frequentie aa = q² = 0,2² = **0,04 = 4%**. Heterozygoot 2pq = 2·0,8·0,2 = 0,32 = 32%. AA = p² = 0,64 = 64%. Som: 100%. ✓" },
           ],
-          niveaus: { basis: "q²=0,04. A.", simpeler: "0,2 in kwadraat = 0,04. A.", nogSimpeler: "0,04 = A." },
+          niveaus: { basis: "q²=0,04. A.", simpeler: "0,2 in kwadraat = 0,04. A.", nogSimpeler: "0,04" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
         wrongHints: [null, "Niet — verkeerde betekenis.", "Specifiek migratie, niet algemene verspreiding.", "Onjuist concept."],
         uitlegPad: {
           stappen: [{ titel: "Populaties met uitwisseling", tekst: "Wanneer individuen migreren naar nieuwe populatie + reproduceren → brengen ze hun allelen mee → genfrequenties verschuiven. Bij hoge gene flow: populaties homogeen blijven. Bij lage gene flow: populaties uitspoelen → mogelijke soortvorming." }],
-          niveaus: { basis: "Migratie brengt allelen. A.", simpeler: "Verhuizen voegt nieuwe genen toe. A.", nogSimpeler: "Migratie = A." },
+          niveaus: { basis: "Migratie brengt allelen. A.", simpeler: "Verhuizen voegt nieuwe genen toe. A.", nogSimpeler: "Migratie" },
         },
       },
     ],
@@ -206,7 +206,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — drift is naast selectie.", "Mutaties leveren variatie, niet drift."],
         uitlegPad: {
           stappen: [{ titel: "Wet van grote aantallen", tekst: "Statistisch: bij weinig waarnemingen veel ruis. In klein dorp van 50 mensen: 1 ongeluk verandert ratios sterk. In stad van 1 mln: amper effect. Drift = ruis." }],
-          niveaus: { basis: "Klein = sterke drift. A.", simpeler: "Toeval domineert in kleine groep. A.", nogSimpeler: "Klein = A." },
+          niveaus: { basis: "Klein = sterke drift. A.", simpeler: "Toeval domineert in kleine groep. A.", nogSimpeler: "Klein" },
         },
       },
       {
@@ -221,7 +221,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is sympatrisch.", "Tegenovergesteld.", "Niet — kruisen wordt onmogelijk juist."],
         uitlegPad: {
           stappen: [{ titel: "Allo = ander, patria = land", tekst: "'Allopatrisch' = letterlijk 'ander vaderland'. Bv. populatie aan beide kanten van Rocky Mountains gescheiden → onafhankelijke evolutie → na honderdduizenden jaren verschillende soorten. Meest voorkomende model." }],
-          niveaus: { basis: "Geografische barrière. A.", simpeler: "Gescheiden door berg/rivier. A.", nogSimpeler: "Allo = A." },
+          niveaus: { basis: "Geografische barrière. A.", simpeler: "Gescheiden door berg/rivier. A.", nogSimpeler: "Allo" },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
           stappen: [
             { titel: "Klassiek voorbeeld", tekst: "DNA-analyse toont ~10 000 j geleden cheetah-populatie nauw te zijn (mss ~7 individuen). Reden onbekend (mss ijstijd-einde + grote zoogdier-uitsterving). Vandaag: alle cheetah's bijna identiek genetisch → gevoelig voor virussen + lage vruchtbaarheid." },
           ],
-          niveaus: { basis: "Bottleneck. A.", simpeler: "Bijna uitgestorven in verleden. A.", nogSimpeler: "Flessenhals = A." },
+          niveaus: { basis: "Bottleneck. A.", simpeler: "Bijna uitgestorven in verleden. A.", nogSimpeler: "Flessenhals" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
           stappen: [
             { titel: "Hybrid sterility", tekst: "Bevruchting werkt → muildier levensvatbaar. MAAR muildier zelf onvruchtbaar (oneven aantal chromosomen → meiose mislukt). Dus genen worden NIET doorgegeven → reproductieve isolatie achteraf. Bewijst dat paard + ezel verschillende soorten zijn." },
           ],
-          niveaus: { basis: "Post-zygotisch. A.", simpeler: "Hybride wel geboren, niet vruchtbaar. A.", nogSimpeler: "Post = A." },
+          niveaus: { basis: "Post-zygotisch. A.", simpeler: "Hybride wel geboren, niet vruchtbaar. A.", nogSimpeler: "Post" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
             { titel: "Reciprocale aanpassing", tekst: "Charles Darwin's voorbeeld: Angraecum-orchidee in Madagascar met 28 cm spoor → voorspelde 'er moet een vlinder zijn met 28 cm tong'. Bevestigd 1903: Xanthopan-nachtvlinder. Beide drijven elkaars evolutie." },
           ],
           theorie: "Andere klassiekers: bijen + bloemen, lichaam-microbioom, prooi-predator. Wapens-wedloop.",
-          niveaus: { basis: "Orchidee + vlinder. A.", simpeler: "Wederzijds evolueren. A.", nogSimpeler: "Co = A." },
+          niveaus: { basis: "Orchidee + vlinder. A.", simpeler: "Wederzijds evolueren. A.", nogSimpeler: "Co" },
         },
       },
     ],
@@ -297,7 +297,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is analoog.", "Mogelijk maar specifiek.", "Niet — dat is rudimentair."],
         uitlegPad: {
           stappen: [{ titel: "Gemeenschappelijke voorouder bewijs", tekst: "Vleermuis-vleugel + walvis-flipper + paard-poot + mens-hand: zelfde botten in verschillende verhoudingen. Onmogelijk te verklaren zonder gemeenschappelijke voorouder. Klassiek bewijs Darwin." }],
-          niveaus: { basis: "Zelfde structuur, anders functie. A.", simpeler: "Zelfde basis-skelet, ander gebruik. A.", nogSimpeler: "Homoloog = A." },
+          niveaus: { basis: "Zelfde structuur, anders functie. A.", simpeler: "Zelfde basis-skelet, ander gebruik. A.", nogSimpeler: "Homoloog" },
         },
       },
       {
@@ -314,7 +314,7 @@ const steps = [
           stappen: [
             { titel: "Convergente evolutie", tekst: "Vleermuis evolueerde uit zoogdier; libel uit insect. Beide ontwikkelden onafhankelijk vleugels omdat omgeving vliegen 'beloont'. Geen gemeenschappelijke vlieg-voorouder. Voorbeeld convergentie." },
           ],
-          niveaus: { basis: "Analoog. A.", simpeler: "Zelfde functie, anders ontstaan. A.", nogSimpeler: "Analoog = A." },
+          niveaus: { basis: "Analoog. A.", simpeler: "Zelfde functie, anders ontstaan. A.", nogSimpeler: "Analoog" },
         },
       },
       {
@@ -325,7 +325,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bijna identiek", tekst: "Mens + chimp delen ~98,8% van DNA. Verschillen vooral in regulatoire sequenties (welke genen waar/wanneer aan staan), niet zozeer in coderende. Bevestigt recente gemeenschappelijke voorouder (~6 mln j geleden)." }],
           theorie: "Mens + muis: ~85%. Mens + banaan: ~60%. Mens + bacterie: ~50% genen vergelijkbaar. Suggereert gradiënt van verwantschap.",
-          niveaus: { basis: "98,8%. A.", simpeler: "Bijna 99% gelijk. A.", nogSimpeler: "98,8 = A." },
+          niveaus: { basis: "98,8%. A.", simpeler: "Bijna 99% gelijk. A.", nogSimpeler: "98,8" },
         },
       },
       {
@@ -343,7 +343,7 @@ const steps = [
             { titel: "Selectie zichtbaar binnen weken", tekst: "Bacterie-populatie heeft variatie (mutaties). Antibiotica doodt gevoelige stammen → resistente overleven + reproduceren. Binnen weken: hele populatie resistent. Eén van DUIDELIJKSTE evolutie-bewijzen — heeft direct medische implicaties (MRSA, etc.)." },
           ],
           theorie: "Volgens WHO mogelijk grootste medische bedreiging 2050 (geen werkende antibiotica meer voor sommige infecties).",
-          niveaus: { basis: "Directe evolutie. A.", simpeler: "Selectie voor onze ogen. A.", nogSimpeler: "Direct = A." },
+          niveaus: { basis: "Directe evolutie. A.", simpeler: "Selectie voor onze ogen. A.", nogSimpeler: "Direct" },
         },
       },
       {
@@ -360,7 +360,7 @@ const steps = [
           stappen: [
             { titel: "Mutatie-snelheid ~ constant", tekst: "Bepaalde DNA-sequenties muteren in voorspelbaar tempo (bv. mitochondriaal DNA 1 mutatie per 6500 jaar). Door verschillen tussen soorten te tellen → datering van splitsing. Mens + chimp splits ~6-7 mln j geleden volgens deze methode." },
           ],
-          niveaus: { basis: "Mutatie-tempo geeft tijd. A.", simpeler: "Tel verschillen, weet wanneer afsplitsing. A.", nogSimpeler: "DNA-klok = A." },
+          niveaus: { basis: "Mutatie-tempo geeft tijd. A.", simpeler: "Tel verschillen, weet wanneer afsplitsing. A.", nogSimpeler: "DNA-klok" },
         },
       },
     ],
@@ -384,7 +384,7 @@ const steps = [
         wrongHints: [null, "Niet — gen bepaalt.", "Wel genetisch.", "Wel selectie."],
         uitlegPad: {
           stappen: [{ titel: "Co-evolutie mens + cultuur", tekst: "Eerst koeien houden → wie melk kan verteren → meer voedsel → meer kinderen → mutatie verspreidt zich. Binnen 10 000 jaar van zeldzame mutatie naar 90% in Noord-Europa. Klassiek voorbeeld 'gen-cultuur co-evolutie'." }],
-          niveaus: { basis: "Recente evolutie. A.", simpeler: "Genen reageerden op koeien-cultuur. A.", nogSimpeler: "Evolutie = A." },
+          niveaus: { basis: "Recente evolutie. A.", simpeler: "Genen reageerden op koeien-cultuur. A.", nogSimpeler: "Evolutie" },
         },
       },
       {
@@ -402,7 +402,7 @@ const steps = [
             { titel: "Balanced polymorphism", tekst: "HbS heterozygoot (HbS/HbA): mild + malaria-beschermd → hoge fitness in malaria-gebied. Homozygoot HbS/HbS: sikkel-cel-anemie → lage fitness. Selectie houdt allel-frequentie in evenwicht ~30% Afrika. Buiten malaria-gebied: allel verdwijnt." },
           ],
           theorie: "Andere balanced polymorphism: cystische fibrose dragers mss beschermd tegen tyfus + cholera (controversieel).",
-          niveaus: { basis: "Heterozygoot voordeel. A.", simpeler: "Half-en-half krijgt voordeel. A.", nogSimpeler: "Heterozygoot = A." },
+          niveaus: { basis: "Heterozygoot voordeel. A.", simpeler: "Half-en-half krijgt voordeel. A.", nogSimpeler: "Heterozygoot" },
         },
       },
       {
@@ -419,7 +419,7 @@ const steps = [
           stappen: [
             { titel: "Wetenschappelijke 'theorie'", tekst: "In wetenschap is theorie de HOOGSTE status: verklaart vele waargenomen feiten + maakt voorspellingen die kloppen + getest door velen. Zoals zwaartekrachts-theorie, atoomtheorie, evolutie-theorie. Dagelijks 'theorie = gok' is verwarrend — 'hypothese' is dichter bij dat in wetenschap." },
           ],
-          niveaus: { basis: "Best-onderbouwde verklaring. A.", simpeler: "Geen gok — sterk bewezen verklaring. A.", nogSimpeler: "Onderbouwd = A." },
+          niveaus: { basis: "Best-onderbouwde verklaring. A.", simpeler: "Geen gok — sterk bewezen verklaring. A.", nogSimpeler: "Onderbouwd" },
         },
       },
       {
@@ -436,7 +436,7 @@ const steps = [
           stappen: [
             { titel: "Sleutel voor Darwin", tekst: "Mens fokt honden, koeien, mais. In 15 000 jaar van wolf naar chihuahua + Duitse herder + Bulldog. Darwin: 'als mens dit in eeuwen kan, kan natuur in miljoenen jaren veel meer'. Crucial inzicht voor publicatie 'Origin of Species'." },
           ],
-          niveaus: { basis: "Mens als selectie-druk. A.", simpeler: "Mens kiest wie reproduceert. A.", nogSimpeler: "Mens-selectie = A." },
+          niveaus: { basis: "Mens als selectie-druk. A.", simpeler: "Mens kiest wie reproduceert. A.", nogSimpeler: "Mens-selectie" },
         },
       },
       {
@@ -453,7 +453,7 @@ const steps = [
           stappen: [
             { titel: "Open systeem-clausule", tekst: "2e wet: in **gesloten** systeem (geen energie-uitwisseling) entropie altijd toe. Aarde is NIET gesloten — krijgt ~10¹⁷ J/s zon-energie. Lokale organisatie (leven, sneeuwvlokken, kristallen) kan ontstaan zolang elders entropie toeneemt (warmte naar ruimte). Geen tegenspraak met evolutie." },
           ],
-          niveaus: { basis: "Aarde is open. A.", simpeler: "Zon levert energie, dus geen probleem. A.", nogSimpeler: "Open = A." },
+          niveaus: { basis: "Aarde is open. A.", simpeler: "Zon levert energie, dus geen probleem. A.", nogSimpeler: "Open" },
         },
       },
     ],

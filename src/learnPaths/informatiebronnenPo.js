@@ -43,7 +43,7 @@ const steps = [
           theorie: "Cito-regel: voor woord-betekenis altijd woordenboek (Van Dale). Voor concept-uitleg encyclopedie (Wikipedia).",
           voorbeelden: [{ type: "controle", tekst: "Wat betekent 'oligarchie'? → woordenboek: 'regering door enkele personen'." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Woordenboek = wat het woord BETEKENT. Encyclopedie = wat het FENOMEEN is (geschiedenis, voorbeelden, etc.)." }],
-          niveaus: { basis: "Betekenis = woordenboek. A.", simpeler: "Voor wat een woord betekent → woordenboek. A.", nogSimpeler: "Woordenboek = A." },
+          niveaus: { basis: "Betekenis = woordenboek. A.", simpeler: "Voor wat een woord betekent → woordenboek. A.", nogSimpeler: "Woordenboek" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
           woorden: [{ woord: "atlas", uitleg: "Kaartenboek met landen, steden, water, gebergte etc." }],
           theorie: "Voor topografie + ligging → atlas. Voor land-info (bevolking, taal) → encyclopedie.",
           voorbeelden: [{ type: "controle", tekst: "'Wat zijn de hoofdsteden van Europa?' → atlas-pagina Europa." }],
-          niveaus: { basis: "Waar ligt = atlas. A.", simpeler: "Voor kaarten en ligging → atlas. A.", nogSimpeler: "Atlas = A." },
+          niveaus: { basis: "Waar ligt = atlas. A.", simpeler: "Voor kaarten en ligging → atlas. A.", nogSimpeler: "Atlas" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
           woorden: [{ woord: "actueel", uitleg: "Van vandaag/deze week." }],
           theorie: "Actueel → krant. Verleden (>1 jaar) → encyclopedie of geschiedenisboek.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Wie won gisteren de wedstrijd?' → sport-krant of nu.nl." }],
-          niveaus: { basis: "Nieuws = krant. A.", simpeler: "Actueel → krant of nieuws-site. A.", nogSimpeler: "Krant = A." },
+          niveaus: { basis: "Nieuws = krant. A.", simpeler: "Actueel → krant of nieuws-site. A.", nogSimpeler: "Krant" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         wrongHints: [null, "Woordenboek geeft alleen woord-betekenis, te weinig info.", "Atlas heeft kaarten maar geen geschiedenis-uitleg.", "Krant heeft geen Romeinse geschiedenis."],
         uitlegPad: {
           stappen: [{ titel: "Werkstuk = brede bron", tekst: "Een werkstuk vraagt **brede info** + **structuur**. Combineer **encyclopedie** (Wikipedia of Winkler Prins) voor algemeen + **schoolboek** voor jouw-niveau-uitleg. Atlas erbij als je kaarten nodig hebt." }],
-          niveaus: { basis: "Encyclopedie + schoolboek. A.", simpeler: "Werkstuk → brede info → encyclopedie. A.", nogSimpeler: "Encyclopedie = A." },
+          niveaus: { basis: "Encyclopedie + schoolboek. A.", simpeler: "Werkstuk → brede info → encyclopedie. A.", nogSimpeler: "Encyclopedie" },
         },
       },
       {
@@ -89,7 +89,7 @@ const steps = [
         wrongHints: [null, "Daarvoor pak je een naslag-bron, geen mens.", "Daarvoor is een atlas.", "Daarvoor is een woordenboek."],
         uitlegPad: {
           stappen: [{ titel: "Mens = persoonlijke uitleg", tekst: "Een expert kan **luisteren naar JOUW vraag** en uitleg geven op JOUW niveau — beter dan een boek dat alles vertelt. Vraag de juf voor uitleg, niet voor spelling." }],
-          niveaus: { basis: "Expert = persoonlijke uitleg. A.", simpeler: "Mens kan luisteren en jouw vraag aanpakken. A.", nogSimpeler: "Expert = A." },
+          niveaus: { basis: "Expert = persoonlijke uitleg. A.", simpeler: "Mens kan luisteren en jouw vraag aanpakken. A.", nogSimpeler: "Expert" },
         },
       },
     ],
@@ -126,7 +126,7 @@ const steps = [
           theorie: "Cito-truc: vergelijk gezocht woord met trefwoorden. Eerste-trefwoord ≤ gezochte ≤ laatste-trefwoord → goede bladzijde.",
           voorbeelden: [{ type: "controle", tekst: "Trefwoorden 'app — auto'. 'Aubergine' past (auto < aubergine? Nee — kijk weer: 'au' = 'au', dan 't' vs 'b' → auto < aubergine). Dus zit hier niet. Volgende bladzijde." }],
           basiskennis: [{ onderwerp: "Wat als woord trefwoord IS", uitleg: "Als gezochte woord exact = trefwoord, dan staat het op die bladzijde (vaak helemaal bovenaan of onderaan)." }],
-          niveaus: { basis: "Kok past tussen koers en komkommer. A.", simpeler: "koers < kok < komkommer = ja, kok zit ertussen. A.", nogSimpeler: "Kok = A." },
+          niveaus: { basis: "Kok past tussen koers en komkommer. A.", simpeler: "koers < kok < komkommer = ja, kok zit ertussen. A.", nogSimpeler: "Kok" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
           theorie: "Vervoegde vorm → herleid naar hele werkwoord. Meervoud → herleid naar enkelvoud.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'gegeten' → eten. 'kinderen' → kind. 'aardigste' → aardig." }],
           basiskennis: [{ onderwerp: "Onregelmatig", uitleg: "'liep' = verleden tijd van 'lopen'. 'Was' = 'zijn'. 'Zag' = 'zien'." }],
-          niveaus: { basis: "Liep → lopen. A.", simpeler: "Vervoegd werkwoord → opzoeken onder hele werkwoord. A.", nogSimpeler: "Lopen = A." },
+          niveaus: { basis: "Liep → lopen. A.", simpeler: "Vervoegd werkwoord → opzoeken onder hele werkwoord. A.", nogSimpeler: "Lopen" },
         },
       },
       {
@@ -150,7 +150,7 @@ const steps = [
         wrongHints: [null, "Niet — appel komt VOOR banaan.", "Niet — citroen komt NA banaan.", "Niet — banaan komt VOOR citroen."],
         uitlegPad: {
           stappen: [{ titel: "A-B-C", tekst: "**a**ppel (a) → **b**anaan (b) → **c**itroen (c). A → B → C = alfabetische volgorde ✓." }],
-          niveaus: { basis: "a-b-c → appel-banaan-citroen. A.", simpeler: "Volgorde a-b-c: appel, banaan, citroen. A.", nogSimpeler: "ABC = A." },
+          niveaus: { basis: "a-b-c → appel-banaan-citroen. A.", simpeler: "Volgorde a-b-c: appel, banaan, citroen. A.", nogSimpeler: "ABC" },
         },
       },
       {
@@ -160,7 +160,7 @@ const steps = [
         wrongHints: [null, "Niet — begint met 'm', andere bladzijde.", "Niet — begint met 'd'.", "Niet bestaand woord."],
         uitlegPad: {
           stappen: [{ titel: "Eerste 3 letters tellen", tekst: "**'oli'** is de start. Op de bladzijde 'oliebol — olijfboom' zou 'oligarchie' staan. Andere woorden met 'mon-', 'dem-' staan op compleet andere bladzijden." }],
-          niveaus: { basis: "Oliebol — zelfde start. A.", simpeler: "'Oli'-woorden bij elkaar. A.", nogSimpeler: "Oliebol = A." },
+          niveaus: { basis: "Oliebol — zelfde start. A.", simpeler: "'Oli'-woorden bij elkaar. A.", nogSimpeler: "Oliebol" },
         },
       },
     ],
@@ -181,7 +181,7 @@ const steps = [
           stappen: [{ titel: "Vooraan = inhoudsopgave", tekst: "Vooraan in een boek staat de **inhoudsopgave** met hoofdstukken + paginanummers in volgorde. Achteraan staat de **index** (trefwoorden alfabetisch)." }],
           woorden: [{ woord: "inhoudsopgave", uitleg: "Lijst hoofdstukken met paginanummers vooraan in boek." }],
           theorie: "Vooraan = inhoudsopgave (volgorde). Achteraan = index (alfabetisch).",
-          niveaus: { basis: "Inhoudsopgave. A.", simpeler: "Lijst hoofdstukken vooraf = inhoudsopgave. A.", nogSimpeler: "Inhoudsopgave = A." },
+          niveaus: { basis: "Inhoudsopgave. A.", simpeler: "Lijst hoofdstukken vooraf = inhoudsopgave. A.", nogSimpeler: "Inhoudsopgave" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
           stappen: [{ titel: "Specifiek = index", tekst: "Wil je **ALLE plekken** waar 'Karel V' voorkomt? → index (achteraan). 'Karel V ... 47, 89-91, 156' = drie verspreide plekken in het boek." }],
           theorie: "Index = trefwoorden + paginanummers, alfabetisch. Beste zoek-tool voor specifieke namen/begrippen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Zoek 'Anne Frank' in een WO2-boek → kijk in de index achteraan." }],
-          niveaus: { basis: "Index. A.", simpeler: "Specifieke naam → index achteraan. A.", nogSimpeler: "Index = A." },
+          niveaus: { basis: "Index. A.", simpeler: "Specifieke naam → index achteraan. A.", nogSimpeler: "Index" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "Niet — index is alfabetisch.", "Bibliografie = boekenlijst.", "Voetnoot = uitleg onderaan bladzijde."],
         uitlegPad: {
           stappen: [{ titel: "Hoofdstuk + pagina = inhoudsopgave", tekst: "**'Hoofdstuk 4 — Onderwerp ... blz N'** = klassieke inhoudsopgave-stijl. Volgorde: hoofdstuk 1, 2, 3, 4...." }],
-          niveaus: { basis: "Inhoudsopgave. A.", simpeler: "'Hoofdstuk N ... blz N' = inhoudsopgave. A.", nogSimpeler: "Hoofdstuk = A." },
+          niveaus: { basis: "Inhoudsopgave. A.", simpeler: "'Hoofdstuk N ... blz N' = inhoudsopgave. A.", nogSimpeler: "Hoofdstuk" },
         },
       },
       {
@@ -215,7 +215,7 @@ const steps = [
           stappen: [{ titel: "Roman = fictie", tekst: "Romans = **verhalen, verzonnen** = fictie-afdeling. Daar staan ze **alfabetisch op achternaam schrijver**. Bv. 'A. Achterberg' bij A, 'B. de Beer' bij B." }],
           woorden: [{ woord: "fictie", uitleg: "Verzonnen verhaal (roman, sprookje, sciencefiction)." }, { woord: "non-fictie", uitleg: "Echt gebeurd / feiten (geschiedenis, biografie, naslag)." }],
           theorie: "Fictie → alfabetisch schrijver. Non-fictie → onderwerp/classificatie-nummer.",
-          niveaus: { basis: "Fictie, alfabetisch schrijver. A.", simpeler: "Verzonnen verhaal = fictie. A.", nogSimpeler: "Fictie = A." },
+          niveaus: { basis: "Fictie, alfabetisch schrijver. A.", simpeler: "Verzonnen verhaal = fictie. A.", nogSimpeler: "Fictie" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
           stappen: [{ titel: "Glossarium = mini-woordenboek", tekst: "Een **glossarium** is een **woordenlijst** achterin een boek met de **moeilijke vak-woorden** + **uitleg**. Bv. bij geschiedenis-boek: 'feodalisme = systeem waarbij...'" }],
           woorden: [{ woord: "glossarium", uitleg: "Lijst van moeilijke woorden + uitleg in een boek (vakwoordenboek)." }],
           theorie: "Cito-vraag-soms: 'Wat is het verschil tussen glossarium en index?' → glossarium geeft BETEKENIS van vakwoord, index geeft PAGINA.",
-          niveaus: { basis: "Glossarium = vakwoorden + uitleg. A.", simpeler: "Moeilijke woorden achterin = glossarium. A.", nogSimpeler: "Vakwoorden = A." },
+          niveaus: { basis: "Glossarium = vakwoorden + uitleg. A.", simpeler: "Moeilijke woorden achterin = glossarium. A.", nogSimpeler: "Vakwoorden" },
         },
       },
     ],
@@ -249,7 +249,7 @@ const steps = [
           woorden: [{ woord: "instituut", uitleg: "Officiële organisatie voor onderzoek." }],
           theorie: "Hiërarchie: wetenschappelijk instituut > krant/overheid > Wikipedia (met bronnen) > blog > social media zonder bron.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Voor klimaat → KNMI of IPCC (wetenschap) > krantenartikel > anonieme blog." }],
-          niveaus: { basis: "NIOD. A.", simpeler: "Wetenschappelijk instituut = meest betrouwbaar. A.", nogSimpeler: "NIOD = A." },
+          niveaus: { basis: "NIOD. A.", simpeler: "Wetenschappelijk instituut = meest betrouwbaar. A.", nogSimpeler: "NIOD" },
         },
       },
       {
@@ -262,7 +262,7 @@ const steps = [
           woorden: [{ woord: "primaire bron", uitleg: "Direct van de persoon/gebeurtenis zelf (dagboek, ooggetuige, originele wet)." }, { woord: "secundaire bron", uitleg: "Iemand anders die de primaire bron beschrijft." }],
           theorie: "Cito-tip: primaire bron = origineel. Secundair = afgeleid. Onderzoek waardeert primair hoger.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Primair: brief van Rembrandt aan Saskia. Secundair: schoolboek-uitleg over hun relatie." }],
-          niveaus: { basis: "Dagboek zelf = primair. A.", simpeler: "Anne schreef het zelf = direct van bron. A.", nogSimpeler: "Dagboek = A." },
+          niveaus: { basis: "Dagboek zelf = primair. A.", simpeler: "Anne schreef het zelf = direct van bron. A.", nogSimpeler: "Dagboek" },
         },
       },
       {
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Niet — datum + auteur = juist betrouwbaar.", "Niet — bronnenlijst = teken van degelijkheid.", "Niet — veel bronnen = beter te checken."],
         uitlegPad: {
           stappen: [{ titel: "Sensationeel + anoniem = fake-signalen", tekst: "Fake news-kenmerken: SCHREEUWERIGE KOPPEN, geen schrijver-naam, geen bronvermelding, vraagt om delen ('deel met iedereen!'). Een artikel met datum + auteur + bronnen = juist betrouwbaarder." }],
-          niveaus: { basis: "Sensationeel + geen bron = fake. A.", simpeler: "Schreeuwerig + anoniem = waarschuwing. A.", nogSimpeler: "Geen bron = A." },
+          niveaus: { basis: "Sensationeel + geen bron = fake. A.", simpeler: "Schreeuwerig + anoniem = waarschuwing. A.", nogSimpeler: "Geen bron" },
         },
       },
       {
@@ -285,7 +285,7 @@ const steps = [
           woorden: [{ woord: "hallucineren", uitleg: "Wanneer AI iets verzint dat NIET waar is." }],
           theorie: "AI-output = goede STARTpunt, geen EINDpunt. 2e bron = altijd nodig.",
           voorbeelden: [{ type: "voorbeeld", tekst: "ChatGPT zegt: 'Napoleon won bij Waterloo'. Check → klopt niet, hij verloor er." }],
-          niveaus: { basis: "2e bron checken. A.", simpeler: "AI = checken bij 2e bron. A.", nogSimpeler: "Checken = A." },
+          niveaus: { basis: "2e bron checken. A.", simpeler: "AI = checken bij 2e bron. A.", nogSimpeler: "Checken" },
         },
       },
       {
@@ -296,7 +296,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bronnen-aantal = betrouwbaarheid-signaal", tekst: "Veel **goede** bronnen onderaan = veel mensen hebben dit nagekeken. Bronnen kun je zelf naast leggen. Geen bronnen = anders dan een meningstekst." }],
           theorie: "Wikipedia-checklist: hoeveel bronnen? Bekende bronnen? 'Omstreden'-banner? Recent bewerkt?",
-          niveaus: { basis: "Veel bronnen = betrouwbaarder. A.", simpeler: "Bronnen-lijst toont onderzoek = check. A.", nogSimpeler: "Bronnen = A." },
+          niveaus: { basis: "Veel bronnen = betrouwbaarder. A.", simpeler: "Bronnen-lijst toont onderzoek = check. A.", nogSimpeler: "Bronnen" },
         },
       },
     ],
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "TikTok = vaak meningen, geen onderzoek.", "Woordenboek geeft alleen betekenis, geen werkstuk-stof.", "Eén bron = niet vergelijkbaar."],
         uitlegPad: {
           stappen: [{ titel: "Combineren = sterker werkstuk", tekst: "Werkstuk-best practice: combineer **3 soorten bronnen** — wetenschap (feiten), actueel (krant/nieuws) en persoonlijk (interview). Niet 1 bron klakkeloos overnemen." }],
-          niveaus: { basis: "3 bronnen combineren. A.", simpeler: "Wetenschap + actueel + mens = sterk. A.", nogSimpeler: "Combineren = A." },
+          niveaus: { basis: "3 bronnen combineren. A.", simpeler: "Wetenschap + actueel + mens = sterk. A.", nogSimpeler: "Combineren" },
         },
       },
       {
@@ -325,7 +325,7 @@ const steps = [
         wrongHints: [null, "Bijna — vergelijk 3e/4e letter: kraan vs kralen vs krant. Kraan < kralen < krant.", "Dat is eerste.", "Niet — er IS een volgorde."],
         uitlegPad: {
           stappen: [{ titel: "3e letter vergelijken bij gelijke 1+2", tekst: "Alle 3 beginnen met 'kra'. Kijk 4e letter: kra**a**n (a) < kra**l**en (l) < kra**n**t (n). A<L<N → kraan, kralen, krant. Derde = krant." }],
-          niveaus: { basis: "Krant derde. A.", simpeler: "Volgorde: kraan, kralen, krant → 3e = krant. A.", nogSimpeler: "Krant = A." },
+          niveaus: { basis: "Krant derde. A.", simpeler: "Volgorde: kraan, kralen, krant → 3e = krant. A.", nogSimpeler: "Krant" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
         wrongHints: [null, "Niet — fake news verspreiden!", "Niet voor je gecheckt hebt.", "Niet bewerken zonder bron."],
         uitlegPad: {
           stappen: [{ titel: "Fake news-signaal", tekst: "Sensationele 'wist je dat' + 'deel!' + onlogische claim ('maan = spiegel') + geen bronvermelding = **fake news**. Niet delen, niet geloven, eerst check via NASA of wetenschapssite." }],
-          niveaus: { basis: "Niet delen. A.", simpeler: "Geen bron + 'deel!' = fake. A.", nogSimpeler: "Fake = A." },
+          niveaus: { basis: "Niet delen. A.", simpeler: "Geen bron + 'deel!' = fake. A.", nogSimpeler: "Fake" },
         },
       },
       {
@@ -345,7 +345,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen als toevallig Karel V hier behandeld wordt.", "Voorwoord = inleiding, geen feiten.", "Niet — duurt veel te lang."],
         uitlegPad: {
           stappen: [{ titel: "Specifieke naam = index", tekst: "**Index achteraan** = alfabetisch. Zoek 'Karel V' → pagina-nummers. Direct naar de juiste plek. 30 sec genoeg." }],
-          niveaus: { basis: "Index. A.", simpeler: "Specifieke naam → index achteraan. A.", nogSimpeler: "Index = A." },
+          niveaus: { basis: "Index. A.", simpeler: "Specifieke naam → index achteraan. A.", nogSimpeler: "Index" },
         },
       },
       {
@@ -355,7 +355,7 @@ const steps = [
         wrongHints: [null, "Encyclopedie geeft betekenis maar woordenboek heeft spelling-check sneller.", "Atlas heeft geen woorden.", "Krant heeft geen spelling-uitleg."],
         uitlegPad: {
           stappen: [{ titel: "Spelling = woordenboek", tekst: "Woordenboek geeft **spelling + betekenis** per woord. Voor spelling-check: woordenboek (Van Dale) of online groene-boekje." }],
-          niveaus: { basis: "Woordenboek. A.", simpeler: "Voor spelling → woordenboek. A.", nogSimpeler: "Woordenboek = A." },
+          niveaus: { basis: "Woordenboek. A.", simpeler: "Voor spelling → woordenboek. A.", nogSimpeler: "Woordenboek" },
         },
       },
     ],

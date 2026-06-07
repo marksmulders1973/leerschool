@@ -70,7 +70,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 Kamer-rechten onthouden: AMENDEMENT (wet WIJZIGEN), INITIATIEF (NIEUWE wet voorstellen), BUDGET (Rijksbegroting goedkeuren), INTERPELLATIE (minister verantwoording vragen). Plus MOTIE (oproep). D66+GroenLinks indienen = initiatief.",
-        { basis: "Nieuwe wet indienen = initiatief. = D.", simpeler: "Initiatief = jij start iets nieuws. Ze MAAKTEN de wet zelf — niet alleen aanpassen. = D.", nogSimpeler: "Initiatief = D." },
+        { basis: "Nieuwe wet indienen = initiatief.", simpeler: "Initiatief = jij start iets nieuws. Ze MAAKTEN de wet zelf — niet alleen aanpassen.", nogSimpeler: "Initiatief" },
         [{ woord: "recht van initiatief", uitleg: "Kamerleden mogen zelf nieuwe wetsvoorstellen indienen." }, { woord: "amendement", uitleg: "Wijziging op bestaande wettekst." }],
       ),
     }],
@@ -100,7 +100,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Volgorde rechtszitting: 1) TENLASTELEGGING (aanklacht voorlezen) → 2) VERHOOR (vragen aan verdachte) → 3) REQUISITOIR (OvJ eist straf) → 4) PLEIDOOI (advocaat verdedigt) → 5) VONNIS (rechter beslist). 'Officier eist X straf' = requisitoir.",
-        { basis: "OvJ eist straf = requisitoir. = C.", simpeler: "Re-quisi-toir van REQUEST = officier VRAAGT/EIST de straf. = C.", nogSimpeler: "Requisitoir = C." },
+        { basis: "OvJ eist straf = requisitoir.", simpeler: "Re-quisi-toir van REQUEST = officier VRAAGT/EIST de straf.", nogSimpeler: "Requisitoir" },
         [{ woord: "requisitoir", uitleg: "Toespraak officier van justitie met strafeis." }, { woord: "pleidooi", uitleg: "Toespraak advocaat verdedigt verdachte." }, { woord: "tenlastelegging", uitleg: "Officiële aanklacht voorlezen." }],
       ),
     }],
@@ -130,7 +130,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 criminaliteit-theorieën: ANOMIE (Durkheim — normloze samenleving), BINDING (Hirschi — sterke banden voorkomen criminaliteit), ETIKETTERING (stempel houdt iemand in criminaliteit), NEUTRALISATIE (criminelen praten gedrag goed). Vadervleugel = familieband versterken = binding.",
-        { basis: "Familieband = bindingstheorie. = B.", simpeler: "Binding aan familie/werk/school → minder criminaliteit. Vadervleugel houdt vader+kind-band. = B.", nogSimpeler: "Binding = B." },
+        { basis: "Familieband = bindingstheorie.", simpeler: "Binding aan familie/werk/school → minder criminaliteit. Vadervleugel houdt vader+kind-band.", nogSimpeler: "Binding" },
         [{ woord: "bindingstheorie", uitleg: "Sterke sociale banden voorkomen crimineel gedrag (Hirschi)." }, { woord: "anomie", uitleg: "Normloze, ontregelde samenleving." }],
       ),
     }],
@@ -159,7 +159,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 rechtsstaat-kenmerken: GELIJKHEID (iedereen gelijk voor wet), MACHTENSCHEIDING (3 machten gescheiden — Trias Politica Montesquieu), RECHTSHANDHAVING (wet WORDT naleeft), LEGALITEITSBEGINSEL (geen straf zonder wet). Latijn: 'nulla poena sine lege'.",
-        { basis: "Geen wet = geen straf = legaliteitsbeginsel. = D.", simpeler: "Legaliteit = alleen straf als het in de WET staat. Ontsnappen staat niet in de wet → geen straf. = D.", nogSimpeler: "Legaliteit = D." },
+        { basis: "Geen wet = geen straf = legaliteitsbeginsel.", simpeler: "Legaliteit = alleen straf als het in de WET staat. Ontsnappen staat niet in de wet → geen straf.", nogSimpeler: "Legaliteit" },
         [{ woord: "legaliteitsbeginsel", uitleg: "Geen straf zonder wet (nulla poena sine lege)." }, { woord: "machtenscheiding", uitleg: "Wetgevende + uitvoerende + rechterlijke macht apart (Trias Politica)." }],
       ),
     }],
@@ -188,7 +188,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Rolverdeling rechtszitting: OvJ (aanklager namens staat) leest aanklacht + eist straf. RECHTER leidt zitting + spreekt vonnis. ADVOCAAT verdedigt verdachte. Slachtoffer mag verklaring afleggen. OvJ + rechter + advocaat = de 3 hoofdrolspelers.",
-        { basis: "Aanklacht voorlezen = OvJ. = B.", simpeler: "Officier van justitie = staats-aanklager. Hij/zij leest waarvan iemand wordt beschuldigd. = B.", nogSimpeler: "OvJ = B." },
+        { basis: "Aanklacht voorlezen = OvJ.", simpeler: "Officier van justitie = staats-aanklager. Hij/zij leest waarvan iemand wordt beschuldigd.", nogSimpeler: "OvJ" },
         [{ woord: "officier van justitie", uitleg: "Aanklager namens staat — leest aanklacht en eist straf." }, { woord: "tenlastelegging", uitleg: "Officiële beschrijving wat iemand wordt verweten." }],
       ),
     }],
@@ -216,7 +216,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 media-beïnvloedingstheorieën onthouden: AGENDA (media bepalen onderwerpen — 'waar praten we over?'), FRAMING (media bepalen invalshoek — 'hoe kijken we ernaar?'), INJECTIENAALD (oude theorie: directe inwerking, achterhaald). Cool vapen = frame.",
-        { basis: "Invalshoek = framingtheorie. = B.", simpeler: "Frame = lijst om foto. Influencer stopt 'vapen' in COOL-lijst. = B.", nogSimpeler: "Framing = B." },
+        { basis: "Invalshoek = framingtheorie.", simpeler: "Frame = lijst om foto. Influencer stopt 'vapen' in COOL-lijst.", nogSimpeler: "Framing" },
         [{ woord: "framing", uitleg: "Inkadering — gekozen invalshoek bij nieuws/communicatie." }, { woord: "agendatheorie", uitleg: "Media bepalen welke onderwerpen besproken worden." }],
       ),
     }],

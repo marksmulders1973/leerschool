@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Onvolledig.", "Niet de 4 categorieën.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Holistische analyse", tekst: "Globalisering is breed verschijnsel met economische (handel, MNCs), culturele (Hollywood, taal), politieke (VN, EU) en technologische (internet, containers) facetten. Niet één daarvan verklaart alles." }],
-          niveaus: { basis: "Eco/cult/pol/tech. A.", simpeler: "4 hoofdgebieden. A.", nogSimpeler: "4 dim = A." },
+          niveaus: { basis: "Eco/cult/pol/tech. A.", simpeler: "4 hoofdgebieden. A.", nogSimpeler: "4 dim" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
           stappen: [
             { titel: "Standaard maakt alles efficiënt", tekst: "Containers met standaard formaat (20-ft, 40-ft) → laden/lossen schip in uren ipv weken → kosten 90% omlaag → vandaag bijna alles in containers vervoerd. Maritime Innovation prijs. China's exporttegelijk mogelijk gemaakt." },
           ],
-          niveaus: { basis: "Containers. A.", simpeler: "Standaard containers. A.", nogSimpeler: "Container = A." },
+          niveaus: { basis: "Containers. A.", simpeler: "Standaard containers. A.", nogSimpeler: "Container" },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
             { titel: "Grootste daling ooit", tekst: "China + India trokken honderden miljoenen uit armoede via industrialisatie + globalisering. Sub-Sahara Afrika daling minder snel. Wereldbank-cijfers (<$2,15/dag): 36% (1990) → ~9% (2024). Eén positieve kant van globalisering." },
           ],
           theorie: "COVID + voedselcrisis 2020-2022 tijdelijke terugval.",
-          niveaus: { basis: "Halvering. A.", simpeler: "Veel minder armoede. A.", nogSimpeler: "↓ = A." },
+          niveaus: { basis: "Halvering. A.", simpeler: "Veel minder armoede. A.", nogSimpeler: "↓" },
         },
       },
       {
@@ -82,7 +82,7 @@ const steps = [
         wrongHints: [null, "Cultureel.", "Economisch.", "Technologisch."],
         uitlegPad: {
           stappen: [{ titel: "Bestuur op wereldschaal", tekst: "VN (193 landen) lost conflicten op. WHO coördineert gezondheid. EU = supranationaal bestuur. Spanning: nationale soevereiniteit vs wereldwijde aanpak (klimaat vereist samenwerking, maar landen kiezen vaak eigen belang)." }],
-          niveaus: { basis: "Politiek = organisaties. A.", simpeler: "VN, EU, NAVO. A.", nogSimpeler: "VN = A." },
+          niveaus: { basis: "Politiek = organisaties. A.", simpeler: "VN, EU, NAVO. A.", nogSimpeler: "VN" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           stappen: [
             { titel: "Terug naar nationaal", tekst: "VK verliet EU → terug naar zelfstandige handel/regels. Symbolisch voor wereldwijde anti-globalisering-beweging: Trump (VS), Brexit (UK), Le Pen (FR), Modi-protectionisme (India). Reactie op verliezers van globalisering + verlies nationale identiteit." },
           ],
-          niveaus: { basis: "De-globalisering. A.", simpeler: "Terug naar nationaal. A.", nogSimpeler: "Anti-glob = A." },
+          niveaus: { basis: "De-globalisering. A.", simpeler: "Terug naar nationaal. A.", nogSimpeler: "Anti-glob" },
         },
       },
     ],
@@ -125,7 +125,7 @@ const steps = [
           stappen: [
             { titel: "Iedereen wint door specialisatie", tekst: "Ricardo's inzicht (1817): zelfs als één land in ALLES beter is, is het toch winstgevend voor beide om te specialiseren in waar comparatief voordeel groter is + te ruilen. Klassiek voorbeeld: wijn (Portugal) + textiel (Engeland)." },
           ],
-          niveaus: { basis: "Specialisatie. A.", simpeler: "Maak waar je goed in bent + ruil. A.", nogSimpeler: "Specialiseren = A." },
+          niveaus: { basis: "Specialisatie. A.", simpeler: "Maak waar je goed in bent + ruil. A.", nogSimpeler: "Specialiseren" },
         },
       },
       {
@@ -157,7 +157,7 @@ const steps = [
           stappen: [
             { titel: "Naar elders verhuizen", tekst: "Veel westerse bedrijven verplaatsten productie naar China/Vietnam/Bangladesh in jaren 1990-2010 voor lagere lonen. Resultaat: industriële banen-verlies in westen, opkomst Aziatische economieën. Recent: re-shoring trend door geopolitieke risico's." },
           ],
-          niveaus: { basis: "Naar laag-loon land. A.", simpeler: "Productie verhuizen. A.", nogSimpeler: "Off-shore = A." },
+          niveaus: { basis: "Naar laag-loon land. A.", simpeler: "Productie verhuizen. A.", nogSimpeler: "Off-shore" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
           stappen: [
             { titel: "Eind 'race to the bottom'", tekst: "Voor 2021 verschoven MNCs winst naar belasting-paradijzen (Ierland 12,5%, Bermuda 0%). G20: 'minimum 15% wereldwijd → geen ontwijking-voordeel'. Implementatie 2024-2026 wereldwijd. Apple, Google, etc. raken voordeel kwijt." },
           ],
-          niveaus: { basis: "15% minimum. A.", simpeler: "Belasting-minimum globaal. A.", nogSimpeler: "15% = A." },
+          niveaus: { basis: "15% minimum. A.", simpeler: "Belasting-minimum globaal. A.", nogSimpeler: "15%" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
           stappen: [
             { titel: "200+ leveranciers wereldwijd", tekst: "Apple ontwerp in Cupertino. TSMC (Taiwan) maakt A-chip. Foxconn (China) assembleert. Schermen Samsung (Zuid-Korea). Camera Sony (Japan). Mineralen: cobalt (Congo), lithium (Chili). Verkoop wereldwijd. Voorbeeld van extreme globalisering." },
           ],
-          niveaus: { basis: "Wereldketen. A.", simpeler: "Veel landen samen. A.", nogSimpeler: "Globaal = A." },
+          niveaus: { basis: "Wereldketen. A.", simpeler: "Veel landen samen. A.", nogSimpeler: "Globaal" },
         },
       },
     ],
@@ -217,7 +217,7 @@ const steps = [
           stappen: [
             { titel: "Breder dan economie", tekst: "Ontwikkeld door VN (UNDP) als kritiek op 'BBP alleen'. Combineert BBP/capita + onderwijs-jaren + levensverwachting. Schaal 0-1. Noorwegen, Zwitserland top (~0,96). Niger laag (~0,40). Geeft completer beeld van welzijn." },
           ],
-          niveaus: { basis: "BBP+onderwijs+leven. A.", simpeler: "Drie indicatoren samen. A.", nogSimpeler: "HDI = A." },
+          niveaus: { basis: "BBP+onderwijs+leven. A.", simpeler: "Drie indicatoren samen. A.", nogSimpeler: "HDI" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
             { titel: "Vloek van overvloed", tekst: "Paradox: olie/diamanten/cobalt-rijke landen vaak armer dan grondstofschamele. Reden: corruptie (elite steelt opbrengsten), conflict (rebellengroepen vechten om mijnen), verwaarlozing onderwijs/industrie, valuta-overwaardering. Voorbeelden: Nigeria-olie, Congo-cobalt, Sierra Leone-diamanten." },
           ],
           theorie: "Uitzonderingen: Noorwegen (olie) goed beheerd via staatsfonds. Botswana (diamanten) democratisch en stabiel.",
-          niveaus: { basis: "Grondstoffen → vaak slecht. A.", simpeler: "Rijk aan iets = ramp soms. A.", nogSimpeler: "Vloek = A." },
+          niveaus: { basis: "Grondstoffen → vaak slecht. A.", simpeler: "Rijk aan iets = ramp soms. A.", nogSimpeler: "Vloek" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
           stappen: [
             { titel: "Miracle on the Han River", tekst: "1960: BBP/capita zelfde als Ghana, Nigeria. Strategie: investeren in onderwijs, export-gerichte industrialisatie (eerst textiel, dan staal, scheepsbouw, auto's, elektronica, semiconductoren). Vandaag: Samsung, LG, Hyundai = wereld-spelers. Top-12 economie. Klassiek 'ontwikkelings-mirakel'." },
           ],
-          niveaus: { basis: "Van arm tot top. A.", simpeler: "Heel snel ontwikkeld. A.", nogSimpeler: "Stijger = A." },
+          niveaus: { basis: "Van arm tot top. A.", simpeler: "Heel snel ontwikkeld. A.", nogSimpeler: "Stijger" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
           stappen: [
             { titel: "Grameen Bank in Bangladesh", tekst: "Yunus ontdekte: armen kunnen geen bankleningen krijgen (geen onderpand). Microfinanciering: $50-500 leningen, vooral aan vrouwen, voor naaimachine/koe/winkel. Terugbetalings-tarief 95%+ (onderling-druk werkt). Verdiend Yunus Nobelvredesprijs 2006. Wereldwijd nu uitgerold." },
           ],
-          niveaus: { basis: "Kleine leningen armen. A.", simpeler: "Mini-leningen voor ondernemerschap. A.", nogSimpeler: "Micro = A." },
+          niveaus: { basis: "Kleine leningen armen. A.", simpeler: "Mini-leningen voor ondernemerschap. A.", nogSimpeler: "Micro" },
         },
       },
       {
@@ -286,7 +286,7 @@ const steps = [
           stappen: [
             { titel: "'Why Nations Fail' 2012", tekst: "Bewijs: Noord vs Zuid Korea (zelfde mens, ander instituut → enorme welvaartskloof). Inclusieve instituties (democratie, eigendomsrecht, vrije markt, gelijke kansen) → innovatie + groei. Extractieve (elite steelt, geen rechten) → stagnatie." },
           ],
-          niveaus: { basis: "Instituties. A.", simpeler: "Goede regels = groei. A.", nogSimpeler: "Insts = A." },
+          niveaus: { basis: "Instituties. A.", simpeler: "Goede regels = groei. A.", nogSimpeler: "Insts" },
         },
       },
     ],
@@ -312,7 +312,7 @@ const steps = [
           stappen: [
             { titel: "Belangrijk voor herkomstland", tekst: "Migrant in rijk land verdient + stuurt deel naar familie in arm land. Wereldwijd ~$650 mld/jaar — meer dan alle ontwikkelingshulp samen. Voor Tonga, Tadzjikistan = >20% BBP. Direct effect armoedebestrijding." },
           ],
-          niveaus: { basis: "Geld naar huis. A.", simpeler: "Migrant stuurt geld familie. A.", nogSimpeler: "Remit = A." },
+          niveaus: { basis: "Geld naar huis. A.", simpeler: "Migrant stuurt geld familie. A.", nogSimpeler: "Remit" },
         },
       },
       {
@@ -329,7 +329,7 @@ const steps = [
           stappen: [
             { titel: "Juridische bescherming", tekst: "Vluchteling = gedwongen vertrek door gevaar (oorlog, politieke vervolging, etnische zuivering). UN-Conventie 1951: landen mogen vluchtelingen NIET terugsturen naar gevaar (non-refoulement). Asiel-procedure bepaalt status. Economische migrant = vrijwillige keuze beter leven." },
           ],
-          niveaus: { basis: "Vlucht gedwongen. A.", simpeler: "Vluchteling = gevaar. A.", nogSimpeler: "Gevaar = A." },
+          niveaus: { basis: "Vlucht gedwongen. A.", simpeler: "Vluchteling = gevaar. A.", nogSimpeler: "Gevaar" },
         },
       },
       {
@@ -346,7 +346,7 @@ const steps = [
           stappen: [
             { titel: "Talent-emigratie", tekst: "Klassiek voorbeeld: Filipijnse verpleegkundigen + dokters trekken naar VS/UK voor 5× zo hoog salaris → Filipijnen verliest gezondheidszorg-personeel. India: software-ingenieurs naar Silicon Valley. Tegenwicht: remittances + soms terugkeer met expertise (return-migrants)." },
           ],
-          niveaus: { basis: "Hoog-opgeleiden weg. A.", simpeler: "Slimme mensen vertrekken. A.", nogSimpeler: "Brain drain = A." },
+          niveaus: { basis: "Hoog-opgeleiden weg. A.", simpeler: "Slimme mensen vertrekken. A.", nogSimpeler: "Brain drain" },
         },
       },
       {
@@ -358,7 +358,7 @@ const steps = [
           stappen: [
             { titel: "Massa-vlucht binnen weken", tekst: "Russische invasie 24 feb 2022 → in 6 weken 5 mln Oekraïners weg (vooral vrouwen + kinderen). Polen alleen 3 mln. EU activeerde Temporary Protection Directive → directe rechten zonder asiel-procedure. NL ~100k. Cijfer 8+ mln blijft uit huis (intern + extern verplaatst)." },
           ],
-          niveaus: { basis: "Oekraïne. A.", simpeler: "Oekraïens vluchtelingen. A.", nogSimpeler: "Oekr = A." },
+          niveaus: { basis: "Oekraïne. A.", simpeler: "Oekraïens vluchtelingen. A.", nogSimpeler: "Oekr" },
         },
       },
       {
@@ -373,7 +373,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is pull.", "Idem.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Push = wegduwen", tekst: "Push = redenen om TE VERTREKKEN uit herkomstland (oorlog, armoede, vervolging, klimaat). Pull = redenen NAAR doelland te komen (werk, veiligheid, familie). Migratie wordt vaak gedreven door combinatie." }],
-          niveaus: { basis: "Push = wegduwen. A.", simpeler: "Push = nadeel thuis. A.", nogSimpeler: "Push = A." },
+          niveaus: { basis: "Push = wegduwen. A.", simpeler: "Push = nadeel thuis. A.", nogSimpeler: "Push" },
         },
       },
     ],
@@ -392,7 +392,7 @@ const steps = [
         wrongHints: [null, "Niet — #1.", "Niet — #5.", "Niet — #4."],
         uitlegPad: {
           stappen: [{ titel: "Klimaat-doel", tekst: "Klimaat onder 1,5°C, klimaat-resilient samenleving, klimaatfinanciering arm-land. Helaas sterkst achterstand → emissies stijgen nog. CO₂ atmosfeer 420 ppm (vs doel onder 450). Beslissingen volgende 10 jaar cruciaal." }],
-          niveaus: { basis: "#13 = klimaat. A.", simpeler: "Klimaatactie. A.", nogSimpeler: "Klimaat = A." },
+          niveaus: { basis: "#13 = klimaat. A.", simpeler: "Klimaatactie. A.", nogSimpeler: "Klimaat" },
         },
       },
       {
@@ -409,7 +409,7 @@ const steps = [
           stappen: [
             { titel: "MDG → SDG", tekst: "MDGs (2000-2015): 8 doelen, vooral armoede + gezondheid in arme landen. Resultaten gemengd (sommige gehaald, andere niet). Vervangen 2015 door 17 SDGs: breder + voor ALLE landen (ook rijke moeten klimaat + ongelijkheid aanpakken)." },
           ],
-          niveaus: { basis: "MDGs. A.", simpeler: "Millenium-doelen. A.", nogSimpeler: "MDG = A." },
+          niveaus: { basis: "MDGs. A.", simpeler: "Millenium-doelen. A.", nogSimpeler: "MDG" },
         },
       },
       {
@@ -426,7 +426,7 @@ const steps = [
           stappen: [
             { titel: "Voorkomt 'carbon leakage'", tekst: "EU-bedrijven hebben CO₂-prijs (ETS). Buiten EU vaak niet → bedrijven verhuizen → CO₂-uitstoot verplaatst (leakage). CBAM: importbelasting gelijk aan EU-CO₂-prijs voor staal, cement, aluminium etc. Pressure op China/India om eigen klimaatbeleid → druk op globale klimaat-actie." },
           ],
-          niveaus: { basis: "CO₂-importbelasting. A.", simpeler: "Vervuilende import betalt extra. A.", nogSimpeler: "CBAM = A." },
+          niveaus: { basis: "CO₂-importbelasting. A.", simpeler: "Vervuilende import betalt extra. A.", nogSimpeler: "CBAM" },
         },
       },
       {
@@ -443,7 +443,7 @@ const steps = [
           stappen: [
             { titel: "Achterstand groot", tekst: "VN Sustainable Development Report 2024: minder dan 1/5 op koers voor 2030. COVID-pandemie + voedselcrisis + Oekraïne-oorlog + klimaatschade vertraagden. Vereist drastische versnelling laatste 6 jaar." },
           ],
-          niveaus: { basis: "Veel achter. A.", simpeler: "Niet halen 2030. A.", nogSimpeler: "Achter = A." },
+          niveaus: { basis: "Veel achter. A.", simpeler: "Niet halen 2030. A.", nogSimpeler: "Achter" },
         },
       },
       {
@@ -460,7 +460,7 @@ const steps = [
           stappen: [
             { titel: "Strategie-omkering", tekst: "Na decennia productie naar China → COVID-disrupties + politiek risico (Taiwan, sancties) → bedrijven herzien. Voorbeelden: Apple plaatst deel productie naar India + Vietnam, autoindustrie meer in VS/Mexico. Trend versterkt sinds 2020." },
           ],
-          niveaus: { basis: "Terug naar huis. A.", simpeler: "Productie terughalen. A.", nogSimpeler: "Re-shore = A." },
+          niveaus: { basis: "Terug naar huis. A.", simpeler: "Productie terughalen. A.", nogSimpeler: "Re-shore" },
         },
       },
     ],

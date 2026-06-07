@@ -37,7 +37,7 @@ const steps = [
           theorie: "Komma 2 plekken naar rechts schuiven = ×100. €2,75 → 275 cent.",
           voorbeelden: [{ type: "omrekenen", tekst: "€1=100c, €0,50=50c, €2,75=275c, €10=1000c." }],
           basiskennis: [{ onderwerp: "Cent = heel getal", uitleg: "Cent geen kommagetal — altijd hele getal." }],
-          niveaus: { basis: "€2,75 = 275 cent. A.", simpeler: "1 euro = 100 cent. €2,75 = 2×100 + 75 = 275 cent. = A.", nogSimpeler: "275 = A." },
+          niveaus: { basis: "€2,75 = 275 cent. A.", simpeler: "1 euro = 100 cent. €2,75 = 2×100 + 75 = 275 cent.", nogSimpeler: "275" },
         },
       },
       {
@@ -53,7 +53,7 @@ const steps = [
           theorie: "Geld-conventie: €X,YZ. Y en Z zijn altijd 2 cijfers, ook bij ronde bedragen (€10,00).",
           voorbeelden: [{ type: "notatie", tekst: "€3,50 ✓. €3,5 ✗ (mist cijfer). €3,05 = 5 cent (niet 50)." }],
           basiskennis: [{ onderwerp: "0 invullen", uitleg: "Bij minder dan 10 cent: 0 ervoor. €0,05 = 5 cent." }],
-          niveaus: { basis: "€3,50 met 2 decimalen. A.", simpeler: "Geld schrijf je altijd met 2 cijfers na komma. 50 cent = ',50'. Dus €3,50. = A.", nogSimpeler: "€3,50 = A." },
+          niveaus: { basis: "€3,50 met 2 decimalen. A.", simpeler: "Geld schrijf je altijd met 2 cijfers na komma. 50 cent = ',50'. Dus €3,50.", nogSimpeler: "€3,50" },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
           theorie: "Andersom van euro→cent: cent ÷100 = euro. 450 cent ÷100 = €4,50.",
           voorbeelden: [{ type: "cent→euro", tekst: "100c=€1. 250c=€2,50. 450c=€4,50. 1000c=€10." }],
           basiskennis: [{ onderwerp: "Komma schuiven", uitleg: "÷100 = komma 2 plekken naar links." }],
-          niveaus: { basis: "450c ÷100 = €4,50. A.", simpeler: "100 cent = €1. 400 cent = €4. + 50 cent = €4,50. = A.", nogSimpeler: "€4,50 = A." },
+          niveaus: { basis: "450c ÷100 = €4,50. A.", simpeler: "100 cent = €1. 400 cent = €4. + 50 cent = €4,50.", nogSimpeler: "€4,50" },
         },
       },
       {
@@ -90,7 +90,7 @@ const steps = [
             { type: "samenstellen", tekst: "€3,30 = €2 + €1 + 20c + 10c. Vier munten." },
           ],
           basiskennis: [{ onderwerp: "Geen 25-cent", uitleg: "Soms in oude boeken nog wel; sinds invoering euro (2002) niet meer in NL." }],
-          niveaus: { basis: "€1 + 50c + 20c + 5c = €1,75. A.", simpeler: "Tel grootste munt eerst: €1. Dan 50c = €1,50. Plus 20c = €1,70. Plus 5c = €1,75. ✓ = A.", nogSimpeler: "€1 + 50 + 20 + 5 = A." },
+          niveaus: { basis: "€1 + 50c + 20c + 5c = €1,75. A.", simpeler: "Tel grootste munt eerst: €1. Dan 50c = €1,50. Plus 20c = €1,70. Plus 5c = €1,75. ✓", nogSimpeler: "€1 + 50 + 20 + 5" },
         },
       },
     ],
@@ -113,7 +113,7 @@ const steps = [
           theorie: "Truc: tel centen apart (40+75=115). 100 cent = 1 euro extra. Schrijf 15 cent + 1 euro extra erbij.",
           voorbeelden: [{ type: "stap", tekst: "€3,40 + €1,75: cent 40+75=115 (€1,15). Euro 3+1+1=5. = €5,15." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "Schat: 3+2=5. Antwoord rond €5. €5,15 past." }],
-          niveaus: { basis: "€3,40+€1,75=€5,15. A.", simpeler: "Cent eerst: 40+75=115 (= €1,15). Euro's: 3+1+1(onthoud)=5. Antwoord €5,15. = A.", nogSimpeler: "€5,15 = A." },
+          niveaus: { basis: "€3,40+€1,75=€5,15. A.", simpeler: "Cent eerst: 40+75=115 (= €1,15). Euro's: 3+1+1(onthoud)=5. Antwoord €5,15.", nogSimpeler: "€5,15" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
           theorie: "Bij 'rond getal − iets' = vooruit-tellen vaak makkelijker dan cijferen.",
           voorbeelden: [{ type: "vooruit", tekst: "10 − 3,45: van 3,45 naar 4 = +0,55. Van 4 naar 10 = +6. Samen 6,55." }],
           basiskennis: [{ onderwerp: "Wisselgeld-truc", uitleg: "Vooruit-tellen werkt extra goed bij wisselgeld-vragen." }],
-          niveaus: { basis: "€10−€3,45=€6,55. A.", simpeler: "Vooruit-tellen vanaf 3,45: +0,55=4, +6=10. Totaal +6,55. = A.", nogSimpeler: "€6,55 = A." },
+          niveaus: { basis: "€10−€3,45=€6,55. A.", simpeler: "Vooruit-tellen vanaf 3,45: +0,55=4, +6=10. Totaal +6,55.", nogSimpeler: "€6,55" },
         },
       },
       {
@@ -146,7 +146,7 @@ const steps = [
           theorie: "Bij 3+ items: tel ze allemaal op. Centen tellen kan vaak in hoofd (afronden helpt).",
           voorbeelden: [{ type: "totaal", tekst: "Schat: 2+5+4=11. Echt: €10,50. Past." }],
           basiskennis: [{ onderwerp: "Schat eerst", uitleg: "Schatting helpt om dom-foute antwoorden uit te sluiten." }],
-          niveaus: { basis: "Totaal €10,50. A.", simpeler: "Centen: 15+80+55=150 (= €1,50). Euro: 2+4+3=9. Plus de €1,50 = €10,50. = A.", nogSimpeler: "€10,50 = A." },
+          niveaus: { basis: "Totaal €10,50. A.", simpeler: "Centen: 15+80+55=150 (= €1,50). Euro: 2+4+3=9. Plus de €1,50 = €10,50.", nogSimpeler: "€10,50" },
         },
       },
       {
@@ -170,7 +170,7 @@ const steps = [
             { type: "stap", tekst: "€4,99 + €4,99 + €4,99 = €15 − €0,03 = €14,97." },
           ],
           basiskennis: [{ onderwerp: "Cito-instinker", uitleg: "Winkel-prijzen zijn vaak X,99 om groter lijkende korting te lijken. Echte verschil is 1 cent." },],
-          niveaus: { basis: "€2,99+€4,99=€7,98. A.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98. = A.", nogSimpeler: "€7,98 = A." },
+          niveaus: { basis: "€2,99+€4,99=€7,98. A.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98.", nogSimpeler: "€7,98" },
         },
       },
     ],
@@ -193,7 +193,7 @@ const steps = [
           theorie: "Wisselgeld = betaald − prijs. Vooruit-tellen vanaf prijs is vaak sneller dan cijferen.",
           voorbeelden: [{ type: "wisselgeld", tekst: "Prijs €24,50, biljet €50: 50−24,50 = 25,50. Of vooruit-tellen vanaf 24,50." }],
           basiskennis: [{ onderwerp: "Niet de prijs!", uitleg: "Verwar wisselgeld niet met de prijs zelf." }],
-          niveaus: { basis: "€50 − €24,50 = €25,50. A.", simpeler: "Vooruit-tellen: €24,50 → €25 = +€0,50. €25 → €50 = +€25. Totaal wisselgeld €25,50. = A.", nogSimpeler: "€25,50 = A." },
+          niveaus: { basis: "€50 − €24,50 = €25,50. A.", simpeler: "Vooruit-tellen: €24,50 → €25 = +€0,50. €25 → €50 = +€25. Totaal wisselgeld €25,50.", nogSimpeler: "€25,50" },
         },
       },
       {
@@ -210,7 +210,7 @@ const steps = [
           theorie: "Bij 'meerdere stuks + wisselgeld' = 2 stappen: eerst kosten berekenen, dan aftrekken.",
           voorbeelden: [{ type: "2-stappen", tekst: "3 × €1,25 = €3,75. €5 − €3,75 = €1,25 wisselgeld." }],
           basiskennis: [{ onderwerp: "Niet 1 stap", uitleg: "Vergeet niet de aantallen mee te nemen." }],
-          niveaus: { basis: "3 × €1,25 = €3,75. €5 − €3,75 = €1,25. A.", simpeler: "Eerst kosten: 3 koeken × €1,25 = €3,75. Dan: €5 − €3,75 = €1,25. = A.", nogSimpeler: "€1,25 = A." },
+          niveaus: { basis: "3 × €1,25 = €3,75. €5 − €3,75 = €1,25. A.", simpeler: "Eerst kosten: 3 koeken × €1,25 = €3,75. Dan: €5 − €3,75 = €1,25.", nogSimpeler: "€1,25" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
           theorie: "Wisselgeld via vooruit-tellen werkt vaak snel: van prijs → ronde getal → betaalde bedrag.",
           voorbeelden: [{ type: "vooruit", tekst: "17,40 → 18 (+0,60). 18 → 20 (+2). Totaal: 2,60." }],
           basiskennis: [{ onderwerp: "2 biljetten = €20", uitleg: "Niet 1 biljet! 2×10=20." }],
-          niveaus: { basis: "20−17,40=€2,60. A.", simpeler: "2 biljetten van 10 = €20. Wisselgeld vanaf 17,40 → 18 (+0,60) → 20 (+2) = €2,60. = A.", nogSimpeler: "€2,60 = A." },
+          niveaus: { basis: "20−17,40=€2,60. A.", simpeler: "2 biljetten van 10 = €20. Wisselgeld vanaf 17,40 → 18 (+0,60) → 20 (+2) = €2,60.", nogSimpeler: "€2,60" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
             { type: "stap", tekst: "Boek €7,95 + pen €2,05 = €10. Betaald €10: wisselgeld €0 precies." },
           ],
           basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij Cito staan vaak meerdere producten — lees alles voor je rekent." }],
-          niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45. = A.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45. = A.", nogSimpeler: "€5,45 = A." },
+          niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45.", nogSimpeler: "€5,45" },
         },
       },
     ],
@@ -274,7 +274,7 @@ const steps = [
           theorie: "Voordelig vergelijken: deel prijs door aantal. Laagste prijs per stuk = winnaar.",
           voorbeelden: [{ type: "per-stuk", tekst: "A: €0,20/k. B: €0,24/k. A wint." }],
           basiskennis: [{ onderwerp: "Niet de totaalprijs", uitleg: "Hoogste totaalprijs ≠ duurder per stuk. Reken per stuk!" }],
-          niveaus: { basis: "A: €0,20. B: €0,24. A wint. A.", simpeler: "Reken per stuk: A €1,20÷6=€0,20. B €2,40÷10=€0,24. A is goedkoper per koekje. = A.", nogSimpeler: "A goedkoper = A." },
+          niveaus: { basis: "A: €0,20. B: €0,24. A wint. A.", simpeler: "Reken per stuk: A €1,20÷6=€0,20. B €2,40÷10=€0,24. A is goedkoper per koekje.", nogSimpeler: "A goedkoper" },
         },
       },
       {
@@ -290,7 +290,7 @@ const steps = [
           theorie: "Verschillende verpakkingsgrootten? Reken per 100g (of per kg). Ander niet eerlijk vergelijken.",
           voorbeelden: [{ type: "per-100g", tekst: "A €0,30/100g. B €0,28/100g. B 2 cent goedkoper per 100g." }],
           basiskennis: [{ onderwerp: "kg ≠ g", uitleg: "1 kg = 1000 g. Even omrekenen voor je vergelijkt." }],
-          niveaus: { basis: "A €0,30/100g. B €0,28/100g. B wint. A.", simpeler: "Per 100g vergelijken. A: 500g voor 1,50 → 100g voor 0,30. B: 1000g voor 2,80 → 100g voor 0,28. B 2 cent goedkoper. = A.", nogSimpeler: "B goedkoper = A." },
+          niveaus: { basis: "A €0,30/100g. B €0,28/100g. B wint. A.", simpeler: "Per 100g vergelijken. A: 500g voor 1,50 → 100g voor 0,30. B: 1000g voor 2,80 → 100g voor 0,28. B 2 cent goedkoper.", nogSimpeler: "B goedkoper" },
         },
       },
       {
@@ -306,7 +306,7 @@ const steps = [
           theorie: "Bigger pack ≠ altijd voordeliger — reken NA om te checken.",
           voorbeelden: [{ type: "per-stuk", tekst: "A €0,50/stuk. B €0,40/stuk. B wint." }],
           basiskennis: [{ onderwerp: "Reken altijd na", uitleg: "Niet vertrouwen op intuïtie — reken het uit." }],
-          niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint. A.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper. = A (= 'B').", nogSimpeler: "B goedkoper = A." },
+          niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint. A.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper. = A (= 'B').", nogSimpeler: "B goedkoper" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
             { type: "per-stuk", tekst: "Appel: 1 los €0,50 vs 5-pak €2,00 → per stuk €0,40. 5-pak voordeliger." },
           ],
           basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. Cito test of je kunt NA-rekenen." }],
-          niveaus: { basis: "A €1,20/L. B €1,30/L. A wint. = A.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter. = A.", nogSimpeler: "A goedkoper = A." },
+          niveaus: { basis: "A €1,20/L. B €1,30/L. A wint.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter.", nogSimpeler: "A goedkoper" },
         },
       },
     ],
@@ -351,7 +351,7 @@ const steps = [
           theorie: "Schat: €5+€3=€8. Antwoord rond €7,50. €7,55 past.",
           voorbeelden: [{ type: "stap", tekst: "75+80=155 (1,55). 4+2+1=7. €7,55." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "Schatting helpt om foute antwoorden uit te sluiten." }],
-          niveaus: { basis: "€4,75+€2,80=€7,55. A.", simpeler: "Cent: 75+80=155 (€1,55 = 1 euro extra + 55c). Euro 4+2+1=7. €7,55. = A.", nogSimpeler: "€7,55 = A." },
+          niveaus: { basis: "€4,75+€2,80=€7,55. A.", simpeler: "Cent: 75+80=155 (€1,55 = 1 euro extra + 55c). Euro 4+2+1=7. €7,55.", nogSimpeler: "€7,55" },
         },
       },
       {
@@ -371,7 +371,7 @@ const steps = [
           theorie: "Truc: 15% = 10% + 5%. 10% van 35 = 3,50. 5% = 1,75. Samen 5,25. Of: 35×0,15 direct.",
           voorbeelden: [{ type: "korting", tekst: "Tas €35 met 15% korting. Korting €5,25. Betalen €29,75." }],
           basiskennis: [{ onderwerp: "Niet 15", uitleg: "5,25 is de KORTING (wat je bespaart), niet wat je betaalt." }],
-          niveaus: { basis: "35−5,25=€29,75. A.", simpeler: "15% korting van €35: bereken 15% (=€5,25). Trek af: 35−5,25=€29,75. = A.", nogSimpeler: "€29,75 = A." },
+          niveaus: { basis: "35−5,25=€29,75. A.", simpeler: "15% korting van €35: bereken 15% (=€5,25). Trek af: 35−5,25=€29,75.", nogSimpeler: "€29,75" },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
           theorie: "Reken per zelfde eenheid (paar). Laagste prijs/paar wint.",
           voorbeelden: [{ type: "per-paar", tekst: "A €2/paar. B €1,60/paar. Verschil €0,40 per paar." }],
           basiskennis: [{ onderwerp: "Niet de totaalprijs", uitleg: "B kost meer (€8 vs €6) maar IS goedkoper per paar." }],
-          niveaus: { basis: "B €1,60/paar wint. A.", simpeler: "A: €6÷3=€2/paar. B: €8÷5=€1,60/paar. B is voordeliger. = A (= 'B').", nogSimpeler: "B = A." },
+          niveaus: { basis: "B €1,60/paar wint. A.", simpeler: "A: €6÷3=€2/paar. B: €8÷5=€1,60/paar. B is voordeliger. = A (= 'B').", nogSimpeler: "B" },
         },
       },
       {
@@ -402,7 +402,7 @@ const steps = [
           theorie: "2-stappen-vraag: eerst kosten, dan startbedrag − kosten.",
           voorbeelden: [{ type: "2-stappen", tekst: "€25 budget − €21,25 boeken = €3,75 over." }],
           basiskennis: [{ onderwerp: "Beide boeken", uitleg: "Niet 1 boek vergeten — tel beide op." }],
-          niveaus: { basis: "25−21,25=€3,75. A.", simpeler: "Eerst kosten: €8,50+€12,75=€21,25. Dan: €25−€21,25=€3,75. = A.", nogSimpeler: "€3,75 = A." },
+          niveaus: { basis: "25−21,25=€3,75. A.", simpeler: "Eerst kosten: €8,50+€12,75=€21,25. Dan: €25−€21,25=€3,75.", nogSimpeler: "€3,75" },
         },
       },
       {
@@ -418,7 +418,7 @@ const steps = [
           theorie: "Tip: reken in cent als prijs <€1. 12×15c=180c=€1,80. Anders met komma rekenen.",
           voorbeelden: [{ type: "stuks", tekst: "12 × 15c = 180c = €1,80. Of 12×0,15=1,80." }],
           basiskennis: [{ onderwerp: "Cent of euro", uitleg: "Beide manieren werken — kies de makkelijkste." }],
-          niveaus: { basis: "12×0,15=€1,80. A.", simpeler: "12 stickers × 15 cent = 180 cent = €1,80. = A.", nogSimpeler: "€1,80 = A." },
+          niveaus: { basis: "12×0,15=€1,80. A.", simpeler: "12 stickers × 15 cent = 180 cent = €1,80.", nogSimpeler: "€1,80" },
         },
       },
       {
@@ -442,7 +442,7 @@ const steps = [
             { type: "stap", tekst: "€5,25/week × 6 weken: 6×€5=€30, 6×€0,25=€1,50, totaal €31,50." },
           ],
           basiskennis: [{ onderwerp: "Spaardoel-rekenen", uitleg: "Cito test vaak: 'Hoe lang om €X bij elkaar te sparen?' = X ÷ weekbedrag." }],
-          niveaus: { basis: "8 × €7,50 = €60. A.", simpeler: "8 × €7 = €56. Plus 8 × €0,50 = €4. Totaal €60. = A.", nogSimpeler: "€60 = A." },
+          niveaus: { basis: "8 × €7,50 = €60. A.", simpeler: "8 × €7 = €56. Plus 8 × €0,50 = €4. Totaal €60.", nogSimpeler: "€60" },
         },
       },
       {
@@ -466,7 +466,7 @@ const steps = [
             { type: "stap", tekst: "€9,90 ÷ 3: splits in €9 + €0,90. €9÷3=€3, €0,90÷3=€0,30. Samen €3,30." },
           ],
           basiskennis: [{ onderwerp: "Check terug", uitleg: "Bij twijfel: vermenigvuldig je antwoord met het aantal. Komt het totaal eruit? Dan klopt het." }],
-          niveaus: { basis: "€7,80 ÷ 3 = €2,60. A.", simpeler: "Splits: €6 ÷ 3 = €2. €1,80 ÷ 3 = €0,60. Samen €2,60. = A.", nogSimpeler: "€2,60 = A." },
+          niveaus: { basis: "€7,80 ÷ 3 = €2,60. A.", simpeler: "Splits: €6 ÷ 3 = €2. €1,80 ÷ 3 = €0,60. Samen €2,60.", nogSimpeler: "€2,60" },
         },
       },
       { q: "Mark koopt 2 broden van €2,15. Hij betaalt met €5. Hoeveel wisselgeld?", options: ["€0,70","€1,30","€2,85","€4,30"], answer: 0, wrongHints: [null,"Niet het wisselgeld — reken €5 − (2 × €2,15).","Dat is €5 − één brood; je kocht er twee.","Dat is de prijs van 2 broden zelf, niet het wisselgeld."] },

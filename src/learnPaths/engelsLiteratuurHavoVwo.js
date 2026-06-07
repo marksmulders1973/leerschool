@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — andere periode.", "Niet — 20e eeuw.", "Niet — modernist."],
         uitlegPad: {
           stappen: [{ titel: "Austen, 1813", tekst: "Jane Austen (1775-1817): meesterwerk over Elizabeth Bennet + Mr Darcy. Onderzoekt sociale klasse, huwelijksmarkt, vrouwelijke autonomie. Subtiele ironie. Boek tot vandaag gelezen + meer dan 10× verfilmd." }],
-          niveaus: { basis: "Austen. A.", simpeler: "Pride+Prejudice = Austen. A.", nogSimpeler: "Austen = A." },
+          niveaus: { basis: "Austen. A.", simpeler: "Pride+Prejudice = Austen. A.", nogSimpeler: "Austen" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — eerder.", "Veel later.", "Veel later."],
         uitlegPad: {
           stappen: [{ titel: "Angelsaksisch epos", tekst: "Geschreven in Old English (Angelsaksisch) — totaal andere taal dan modern Engels. Held Beowulf verslaat monster Grendel + draak. Mondelinge traditie, opgeschreven ~10e eeuw." }],
-          niveaus: { basis: "Old English. A.", simpeler: "Heel oud (~700). A.", nogSimpeler: "OE = A." },
+          niveaus: { basis: "Old English. A.", simpeler: "Heel oud (~700). A.", nogSimpeler: "OE" },
         },
       },
       {
@@ -54,7 +54,7 @@ const steps = [
           stappen: [
             { titel: "Mary Shelley, 1818", tekst: "Mary Shelley schreef Frankenstein op 18-jarige leeftijd. Wetenschapper Victor Frankenstein creëert monster uit dode lichaamsdelen + reanimeert via elektriciteit. Pionier sci-fi door wetenschap als plot-driver, niet magie." },
           ],
-          niveaus: { basis: "SF. A.", simpeler: "Eerste sciencefiction. A.", nogSimpeler: "SF = A." },
+          niveaus: { basis: "SF. A.", simpeler: "Eerste sciencefiction. A.", nogSimpeler: "SF" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         wrongHints: [null, "Niet — niet alleen US.", "Niet — alleen roman.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1969", tekst: "Prestigieuze prijs voor roman in Engels. Sinds 2014 ook van Amerikaanse auteurs. Daarnaast: **Booker International** voor vertaalde werken (Marieke Lucas Rijneveld won die 2020 met 'De avond is ongemak')." }],
-          niveaus: { basis: "Roman in Engels. A.", simpeler: "Beste Engelstalige roman. A.", nogSimpeler: "Booker = A." },
+          niveaus: { basis: "Roman in Engels. A.", simpeler: "Beste Engelstalige roman. A.", nogSimpeler: "Booker" },
         },
       },
       {
@@ -86,7 +86,7 @@ const steps = [
           stappen: [
             { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, multiple verteller, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = pinnacle." },
           ],
-          niveaus: { basis: "Experiment. A.", simpeler: "Gebroken vorm + stream. A.", nogSimpeler: "Modernism = A." },
+          niveaus: { basis: "Experiment. A.", simpeler: "Gebroken vorm + stream. A.", nogSimpeler: "Modernism" },
         },
       },
     ],
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — andere monoloog.", "Niet — andere monoloog.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Beroemdste monoloog", tekst: "Hamlet's soliloquy uit Act 3 Scene 1. Filosofische vraag over leven of dood, zelfmoord, betekenis. Wereldberoemd, eindeloos geïnterpreteerd." }],
-          niveaus: { basis: "Hamlet. A.", simpeler: "Hamlet's monoloog. A.", nogSimpeler: "Hamlet = A." },
+          niveaus: { basis: "Hamlet. A.", simpeler: "Hamlet's monoloog. A.", nogSimpeler: "Hamlet" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is regels per sonnet.", "Niet — dat is aantal toneelstukken.", "Niet — minder."],
         uitlegPad: {
           stappen: [{ titel: "154 stuks", tekst: "Uitgegeven 1609 in één bundel. Eerste 126: aan de 'Fair Youth' (een mooie jonge man). 127-154: aan de 'Dark Lady'. Alle 14 regels in ABAB CDCD EFEF GG = 'Shakespearean sonnet'." }],
-          niveaus: { basis: "154. A.", simpeler: "154 sonnetten. A.", nogSimpeler: "154 = A." },
+          niveaus: { basis: "154. A.", simpeler: "154 sonnetten. A.", nogSimpeler: "154" },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         wrongHints: [null, "Niet — eindigt slecht.", "Wel historisch maar dramatisch genre = tragedy.", "Niet — toneelstuk."],
         uitlegPad: {
           stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang beide. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
-          niveaus: { basis: "Tragedy. A.", simpeler: "Tragedie. A.", nogSimpeler: "Tragedy = A." },
+          niveaus: { basis: "Tragedy. A.", simpeler: "Tragedie. A.", nogSimpeler: "Tragedy" },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
           stappen: [
             { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'Shall I com-PARE thee TO a SUM-mer's DAY?' (5 maal ta-DAH). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
           ],
-          niveaus: { basis: "5 jamben. A.", simpeler: "10 lettergrepen ta-DAH. A.", nogSimpeler: "5×ta-DAH = A." },
+          niveaus: { basis: "5 jamben. A.", simpeler: "10 lettergrepen ta-DAH. A.", nogSimpeler: "5×ta-DAH" },
         },
       },
       {
@@ -159,7 +159,7 @@ const steps = [
           stappen: [
             { titel: "Originele was 1599-1644", tekst: "Open-air ronde theater bij Theems. 'Groundlings' (lagere klasse) stonden op vloer voor 1 penny. Galerijen rondom voor rijken. Vrouwenrollen door jonge mannen gespeeld (acteursvak verboden voor vrouwen tot 1660+). Replica gebouwd 1997 in Londen — bezoekbaar." },
           ],
-          niveaus: { basis: "Open-air + mannen. A.", simpeler: "Buiten theater met staanplek. A.", nogSimpeler: "Open = A." },
+          niveaus: { basis: "Open-air + mannen. A.", simpeler: "Buiten theater met staanplek. A.", nogSimpeler: "Open" },
         },
       },
     ],
@@ -180,7 +180,7 @@ const steps = [
           stappen: [
             { titel: "Dystopie uit 1949", tekst: "Orwell schreef '1984' over totalitaire toekomst-staat: Big Brother kijkt mee, taal wordt vereenvoudigd ('Newspeak') om denken te beperken, geschiedenis wordt herschreven. Begrippen: 'doublethink', 'thoughtcrime', 'Room 101' — alledaags geworden. Sterk politiek-engagement (Orwell was tegen Stalinisme + nazisme)." },
           ],
-          niveaus: { basis: "Orwell. A.", simpeler: "Orwell 1984. A.", nogSimpeler: "Orwell = A." },
+          niveaus: { basis: "Orwell. A.", simpeler: "Orwell 1984. A.", nogSimpeler: "Orwell" },
         },
       },
       {
@@ -198,7 +198,7 @@ const steps = [
             { titel: "Victoriaanse 'tv-series'", tekst: "Dickens publiceerde in tijdschriften, ~30 weken één hoofdstuk. Mensen wachtten in spanning op volgende. Bv. 'The Old Curiosity Shop': Amerikaanse lezers wachtten op haven naar Engelse boten met de laatste aflevering om te weten of Little Nell stierf." },
           ],
           theorie: "Verklaart Dickens' stijl: cliffhangers, dramatische scènes, veel personages om aandacht vast te houden over maanden.",
-          niveaus: { basis: "Wekelijks. A.", simpeler: "In afleveringen. A.", nogSimpeler: "Serial = A." },
+          niveaus: { basis: "Wekelijks. A.", simpeler: "In afleveringen. A.", nogSimpeler: "Serial" },
         },
       },
       {
@@ -210,7 +210,7 @@ const steps = [
           stappen: [
             { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle vroeg gestorven (tuberculose)." },
           ],
-          niveaus: { basis: "Charlotte. A.", simpeler: "Charlotte Brontë. A.", nogSimpeler: "Charlotte = A." },
+          niveaus: { basis: "Charlotte. A.", simpeler: "Charlotte Brontë. A.", nogSimpeler: "Charlotte" },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
             { titel: "Notoir moeilijk maar bewonderd", tekst: "Joyce, Iers schrijver. Ulysses speelt op één dag (16 juni 1904) in Dublin. Volgt Leopold Bloom door 18 hoofdstukken, elk in andere literaire stijl. Parallel met Homerus' Odyssee (Bloom = Odysseus). Stream of consciousness pioneerde hier. Lang gecensureerd in VS + UK door taal." },
           ],
           theorie: "16 juni heet vandaag 'Bloomsday' — wereldwijd door Joyce-fans gevierd met lezingen + verkleed-tochten door Dublin.",
-          niveaus: { basis: "Joyce. A.", simpeler: "James Joyce. A.", nogSimpeler: "Joyce = A." },
+          niveaus: { basis: "Joyce. A.", simpeler: "James Joyce. A.", nogSimpeler: "Joyce" },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
           stappen: [
             { titel: "Bekendste vrek wereld", tekst: "Dickens, 1843. Scrooge wordt bezocht door 3 geesten (verleden, heden, toekomst) → bekeert van gierigaard tot vrijgevig. Naam 'scrooge' is sinds tegen synoniem voor 'vrek'. Bah humbug! Klassiek Kerst-verhaal." },
           ],
-          niveaus: { basis: "Scrooge. A.", simpeler: "Scrooge = vrek-figuur. A.", nogSimpeler: "Scrooge = A." },
+          niveaus: { basis: "Scrooge. A.", simpeler: "Scrooge = vrek-figuur. A.", nogSimpeler: "Scrooge" },
         },
       },
     ],
@@ -261,7 +261,7 @@ const steps = [
           stappen: [
             { titel: "Jazz Age, 1925", tekst: "Fitzgerald (1896-1940) schreef over rijkdom + decadentie van jaren 1920. Jay Gatsby probeert oude liefde terug te krijgen via aanzien + geld → tragedy. Klassiek beeld van American Dream + zijn schaduwzijde. Eindigt met 'So we beat on, boats against the current, borne back ceaselessly into the past.'" },
           ],
-          niveaus: { basis: "Fitzgerald. A.", simpeler: "Fitzgerald = Gatsby. A.", nogSimpeler: "Fitzgerald = A." },
+          niveaus: { basis: "Fitzgerald. A.", simpeler: "Fitzgerald = Gatsby. A.", nogSimpeler: "Fitzgerald" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
           stappen: [
             { titel: "1851, walvis-obsessie", tekst: "Kapitein Ahab jaagt op witte walvis Moby Dick die zijn been afnam. Symbolisch verhaal over obsessie, hubris, mens vs natuur. Verteld door Ishmael ('Call me Ishmael' — beroemde openingszin). Bij verschijning flop; pas in 20e eeuw als meesterwerk erkend." },
           ],
-          niveaus: { basis: "Melville. A.", simpeler: "Melville = Moby Dick. A.", nogSimpeler: "Melville = A." },
+          niveaus: { basis: "Melville. A.", simpeler: "Melville = Moby Dick. A.", nogSimpeler: "Melville" },
         },
       },
       {
@@ -285,7 +285,7 @@ const steps = [
           stappen: [
             { titel: "Eerste zwarte vrouw Nobel", tekst: "Morrison (1931-2019): meest gevierde Afro-Amerikaanse schrijver. 'Beloved' (1987, Pulitzer + basis Nobel-citation) over voormalig-slaaf vrouw wier dode dochter terugkeert als geest. Trauma-roman. Anderen: 'Song of Solomon', 'Sula'." },
           ],
-          niveaus: { basis: "1993. A.", simpeler: "Nobel 1993. A.", nogSimpeler: "1993 = A." },
+          niveaus: { basis: "1993. A.", simpeler: "Nobel 1993. A.", nogSimpeler: "1993" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
           stappen: [
             { titel: "On the road, jazz, drugs, oosterse filosofie", tekst: "Kerouac, Ginsberg, Burroughs reageerden op '50s-rust met spontane improvisatie, reizen, drugs-experimenten, oosters denken. 'On the Road' (1957): Kerouac's road-trip met Neal Cassady → manifest van vrijheid + zoektocht. Voorloper van hippy-cultuur." },
           ],
-          niveaus: { basis: "Anti-conformisme. A.", simpeler: "Reactie op brave jaren 50. A.", nogSimpeler: "Conformisme = A." },
+          niveaus: { basis: "Anti-conformisme. A.", simpeler: "Reactie op brave jaren 50. A.", nogSimpeler: "Conformisme" },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
           stappen: [
             { titel: "Echte Amerikaanse stem", tekst: "Voor Twain: Amerikaanse schrijvers imiteerden Brits Engels. Huck Finn (jong meisje van armoede) spreekt + denkt in DIALECT-Engels van Zuid-VS. Plus: hij vriendschap met weglopen-slaaf Jim → ontmaskert hypocrisie van 'fatsoenlijke' samenleving die slavernij steunde. Hemingway: 'All modern American literature comes from one book... Huckleberry Finn.'" },
           ],
-          niveaus: { basis: "Eerste Amerikaans + slavernij-kritiek. A.", simpeler: "Echt Amerikaans + over slavernij. A.", nogSimpeler: "Huck = A." },
+          niveaus: { basis: "Eerste Amerikaans + slavernij-kritiek. A.", simpeler: "Echt Amerikaans + over slavernij. A.", nogSimpeler: "Huck" },
         },
       },
     ],
@@ -340,7 +340,7 @@ const steps = [
           stappen: [
             { titel: "Atwood, 1985 (TV 2017)", tekst: "Dystopie waarin VS overgenomen door religieus regime; vruchtbare vrouwen ('handmaids') gedwongen tot baren voor elites. Vandaag herontdekt door politieke ontwikkelingen (Trump-tijdperk, anti-abortion-wetten). TV-serie hits 2017. Vervolg 'The Testaments' (2019, Booker)." },
           ],
-          niveaus: { basis: "Atwood. A.", simpeler: "Atwood. A.", nogSimpeler: "Atwood = A." },
+          niveaus: { basis: "Atwood. A.", simpeler: "Atwood. A.", nogSimpeler: "Atwood" },
         },
       },
       {
@@ -357,7 +357,7 @@ const steps = [
           stappen: [
             { titel: "Verhaal binnen verhaal", tekst: "Voorbeeld: in 'Great Gatsby' is 'green light' aan overkant van baai → symbool voor Gatsby's hoop + onbereikbare droom. Veel groter dan letterlijk lichtje. Auteur gebruikt vaak terugkerende objecten/kleuren als anker." },
           ],
-          niveaus: { basis: "Groter idee via object. A.", simpeler: "Iets staat voor iets anders. A.", nogSimpeler: "Symbool = A." },
+          niveaus: { basis: "Groter idee via object. A.", simpeler: "Iets staat voor iets anders. A.", nogSimpeler: "Symbool" },
         },
       },
       {
@@ -374,7 +374,7 @@ const steps = [
           stappen: [
             { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's één lange zin." },
           ],
-          niveaus: { basis: "Ongefilterde gedachten. A.", simpeler: "Gedachtenstroom op papier. A.", nogSimpeler: "Stream = A." },
+          niveaus: { basis: "Ongefilterde gedachten. A.", simpeler: "Gedachtenstroom op papier. A.", nogSimpeler: "Stream" },
         },
       },
       {
@@ -389,7 +389,7 @@ const steps = [
         wrongHints: [null, "Niet — flashback.", "Niet — twist verrast juist.", "Niet specifiek."],
         uitlegPad: {
           stappen: [{ titel: "Vooruitwijzen", tekst: "Auteur plaatst kleine signalen — woord, gebeurtenis, beschrijving — die later betekenis krijgen. Bv. een geweer wordt vroeg getoond in scène (Chekhov's gun): moet later afgaan. Beloont aandachtige lezers." }],
-          niveaus: { basis: "Hints geven. A.", simpeler: "Vooruit-signaal. A.", nogSimpeler: "Voorspel = A." },
+          niveaus: { basis: "Hints geven. A.", simpeler: "Vooruit-signaal. A.", nogSimpeler: "Voorspel" },
         },
       },
       {
@@ -404,7 +404,7 @@ const steps = [
         wrongHints: [null, "Niet — Moby Dick.", "Niet — A Tale of Two Cities.", "Niet — Bijbel."],
         uitlegPad: {
           stappen: [{ titel: "Beroemdste openingsregel monoloog", tekst: "Hamlet, Act 3, Scene 1. Filosofische overpeinzing over leven, dood, betekenis. Wordt vaak parodieerd, gebruikt in films + reclame. Onmiddellijk herkenbaar — toets je geletterdheid via dit citaat." }],
-          niveaus: { basis: "Hamlet. A.", simpeler: "To be or not to be = Hamlet. A.", nogSimpeler: "Hamlet = A." },
+          niveaus: { basis: "Hamlet. A.", simpeler: "To be or not to be = Hamlet. A.", nogSimpeler: "Hamlet" },
         },
       },
     ],

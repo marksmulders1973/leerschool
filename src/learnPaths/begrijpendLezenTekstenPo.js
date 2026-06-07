@@ -116,7 +116,7 @@ const steps = [
           niveaus: {
             basis: "Letterlijke vraag → vind 'eerste fiets uitgevonden' in de tekst. Zin: '1817 door Karl von Drais'. Antwoord A.",
             simpeler: "De vraag wil weten WANNEER de eerste fiets er was. Lees de tekst, zoek de eerste keer dat een fiets genoemd wordt. Eerste zin van alinea 1: 1817. Klaar.",
-            nogSimpeler: "Eerste = 1817 = A.",
+            nogSimpeler: "Eerste = 1817",
           },
         },
       },
@@ -161,7 +161,7 @@ const steps = [
           niveaus: {
             basis: "Tekst geeft de hint: groot wiel → meer afstand per trap → sneller. Antwoord A.",
             simpeler: "Stel je voor: een klein wiel maakt 1 rondje = je gaat 50 cm verder. Een GROOT wiel maakt 1 rondje = je gaat 2 meter verder. Sneller dus. Daarom maakten ze het wiel groot. Antwoord A.",
-            nogSimpeler: "Groot wiel = sneller = A.",
+            nogSimpeler: "Groot wiel = sneller",
           },
         },
       },
@@ -205,7 +205,7 @@ const steps = [
           niveaus: {
             basis: "Pedaal + omwenteling = 1x trappen rond. Antwoord A.",
             simpeler: "Lang woord? Splits 'm op. Pedaal = waar je trapt. Omwenteling = 1x rond. Samen: 1x rond trappen met de pedalen. Dat is A.",
-            nogSimpeler: "Pedaal + rondje = trappen = A.",
+            nogSimpeler: "Pedaal + rondje = trappen",
           },
         },
       },
@@ -240,16 +240,16 @@ const steps = [
           ],
           theorie: "**De hoofdgedachte vinden — 3 vragen:**\n\n1. Waar gaat ELKE alinea over? Schrijf in 1 woord per alinea.\n2. Wat zit er in ALLE alinea's? Dat is de rode draad.\n3. De hoofdgedachte is meestal een ZIN die de hele rode draad samenvat.\n\n**Trucs van Cito-makers:**\n- Vaak zijn er 4 antwoorden waarvan 3 echt KLOPPEN (komen voor in de tekst), maar als DETAIL.\n- Het juiste antwoord is meestal het ALGEMEENSTE — niet een specifiek feit.",
           voorbeelden: [
-            { type: "fiets-tekst", tekst: "4 alinea's = 4 momenten in tijd (1817 → 1900). Rode draad = VERANDERING door 200 jaar. Hoofdgedachte = A." },
+            { type: "fiets-tekst", tekst: "4 alinea's = 4 momenten in tijd (1817 → 1900). Rode draad = VERANDERING door 200 jaar. Hoofdgedachte" },
             { type: "andere", tekst: "Tekst over koffie. Alinea 1 Ethiopië, Alinea 2 Arabië, Alinea 3 Europa, Alinea 4 wereldwijd. Rode draad: VERSPREIDING. Hoofdgedachte = 'koffie heeft zich verspreid over de wereld'." },
           ],
           basiskennis: [
             { onderwerp: "Hoofdgedachte ≠ samenvatting", uitleg: "Een samenvatting noemt feiten. Een hoofdgedachte is de ENE rode draad — meestal 1 zin." },
           ],
           niveaus: {
-            basis: "Rode draad door 4 alinea's = fiets veranderde door 200 jaar = A.",
+            basis: "Rode draad door 4 alinea's = fiets veranderde door 200 jaar",
             simpeler: "Lees: 1817 loopfiets, 1860 pedalen, 1885 ketting, 1900 Nederland. Wat zie je? VERANDERING in de tijd. Antwoord A zegt precies dat.",
-            nogSimpeler: "4 momenten in tijd = veranderen = A.",
+            nogSimpeler: "4 momenten in tijd = veranderen",
           },
         },
       },
@@ -298,7 +298,7 @@ const steps = [
           niveaus: {
             basis: "Tekst: '20 paperclips + touw + schaar'. Optie A is 1-op-1 = juist.",
             simpeler: "Zoek de zin met 'je hebt nodig'. Lees wat erachter komt: 20 paperclips, touw, schaar. Dat staat letterlijk in optie A.",
-            nogSimpeler: "Lijstje uit tekst = A.",
+            nogSimpeler: "Lijstje uit tekst",
           },
         },
       },
@@ -338,7 +338,7 @@ const steps = [
           niveaus: {
             basis: "Tekst zegt 'gehaast → clips uit elkaar'. Antwoord A.",
             simpeler: "De vraag is 'waarom rustig werken?'. Zoek het woord 'rustig' in de tekst. Direct erna staat de reden: 'als je gehaast bent gaan de clips uit elkaar'. Dat is A.",
-            nogSimpeler: "Gehaast = clips kapot = A.",
+            nogSimpeler: "Gehaast = clips kapot",
           },
         },
       },
@@ -379,8 +379,8 @@ const steps = [
           ],
           niveaus: {
             basis: "Vlak voor 'sluiting maken' staat 'meet om pols'. Antwoord A.",
-            simpeler: "Stel je voor: jij maakt de armband zelf. Eerst hak je clips, dan check je of het past om je pols, DAARNA maak je het slot. 'Vlak voor het slot' = check je pols-maat = meten = A.",
-            nogSimpeler: "Voor sluiting = meten = A.",
+            simpeler: "Stel je voor: jij maakt de armband zelf. Eerst hak je clips, dan check je of het past om je pols, DAARNA maak je het slot. 'Vlak voor het slot' = check je pols-maat = meten",
+            nogSimpeler: "Voor sluiting = meten",
           },
         },
       },
@@ -422,9 +422,9 @@ const steps = [
             { onderwerp: "1 tekst = 1 hoofddoel", uitleg: "Een tekst kan een mengeling lijken, maar er is altijd 1 hoofddoel — wat de schrijver echt wil bereiken." },
           ],
           niveaus: {
-            basis: "Tekst geeft stappen om iets te maken = instrueren = A.",
+            basis: "Tekst geeft stappen om iets te maken = instrueren",
             simpeler: "Lees de tekst. Wat doet hij vooral? 'Doe dit, doe dat, maak nu...'. Hij vertelt je STAP VOOR STAP hoe je iets maakt. Dat heet instrueren. A.",
-            nogSimpeler: "Stappen om iets te maken = instructie = A.",
+            nogSimpeler: "Stappen om iets te maken = instructie",
           },
         },
       },
@@ -473,8 +473,8 @@ const steps = [
           ],
           niveaus: {
             basis: "Tekst zegt: 'telefoons horen niet thuis op de basisschool' (mening). Antwoord A.",
-            simpeler: "Wat vindt de schrijver? Lees de eerste alinea. 'Ik ben van mening... telefoons NIET op basisschool'. Dat is zijn standpunt = A.",
-            nogSimpeler: "Mening = telefoons niet op school = A.",
+            simpeler: "Wat vindt de schrijver? Lees de eerste alinea. 'Ik ben van mening... telefoons NIET op basisschool'. Dat is zijn standpunt",
+            nogSimpeler: "Mening = telefoons niet op school",
           },
         },
       },
@@ -514,7 +514,7 @@ const steps = [
           niveaus: {
             basis: "Drie argumenten staan in tekst (afleiding, sociaal, thuis-ouders). 'Te duur' staat er niet → A.",
             simpeler: "Vink elk antwoord af in de tekst. Welke staat er NIET? 'Te duur' staat nergens — dat is je antwoord. A.",
-            nogSimpeler: "Niet in tekst = A.",
+            nogSimpeler: "Niet in tekst",
           },
         },
       },
@@ -556,7 +556,7 @@ const steps = [
           niveaus: {
             basis: "Schrijver: 'klopt, maar thuis ipv school' = erkennen + verschuiven. Antwoord A.",
             simpeler: "De schrijver zegt: 'ja, dat klopt' (= erkent het) maar voegt toe 'thuis kan dat ook' (= niet op school). Hij negeert het niet, hij denkt mee. A.",
-            nogSimpeler: "Erkent + verschuift naar thuis = A.",
+            nogSimpeler: "Erkent + verschuift naar thuis",
           },
         },
       },
@@ -597,8 +597,8 @@ const steps = [
           ],
           niveaus: {
             basis: "Tekst gebruikt 'daarom', 'moet', 'recht op' = stellige toon. Antwoord A.",
-            simpeler: "Klinkt de schrijver zeker of twijfelend? Lees: 'Ik ben van mening DAT...', 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden. Stellig en overtuigd = A.",
-            nogSimpeler: "Beslissende woorden = stellig = A.",
+            simpeler: "Klinkt de schrijver zeker of twijfelend? Lees: 'Ik ben van mening DAT...', 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden. Stellig en overtuigd",
+            nogSimpeler: "Beslissende woorden = stellig",
           },
         },
       },
@@ -646,7 +646,7 @@ const steps = [
           niveaus: {
             basis: "Eerste alinea: 'geen lunchtrommel'. A.",
             simpeler: "Lees de eerste paar zinnen. Daar staat: 'Sara voelde in haar rugzak — geen lunchtrommel'. Dat is je antwoord.",
-            nogSimpeler: "Lunchtrommel = A.",
+            nogSimpeler: "Lunchtrommel",
           },
         },
       },
@@ -686,8 +686,8 @@ const steps = [
           ],
           niveaus: {
             basis: "'Schaapachtig' = verlegen/beschaamd. Sara schaamt zich. A.",
-            simpeler: "Stel je voor: jij hebt geen brood, iemand vraagt je 'heb je geen brood?'. Hoe voel je je? Een beetje gegeneerd, je wil het liever niet zeggen. Dat is 'schaapachtig'. = A.",
-            nogSimpeler: "Schaapachtig = verlegen = schamen = A.",
+            simpeler: "Stel je voor: jij hebt geen brood, iemand vraagt je 'heb je geen brood?'. Hoe voel je je? Een beetje gegeneerd, je wil het liever niet zeggen. Dat is 'schaapachtig'.",
+            nogSimpeler: "Schaapachtig = verlegen = schamen",
           },
         },
       },
@@ -728,8 +728,8 @@ const steps = [
           ],
           niveaus: {
             basis: "Tom geeft brood + draait om = wil geen drama → Sara sparen → A.",
-            simpeler: "Stel: jij hebt geen brood, een klasgenoot maakt er een SHOW van: 'oh wat erg!'. Vervelend, hè? Tom doet het tegenovergestelde — gewoon brood geven, terug naar zijn eigen lunch. Dat is uit aardigheid: hij wil Sara niet ongemakkelijk maken. = A.",
-            nogSimpeler: "Geen drama = aardig = A.",
+            simpeler: "Stel: jij hebt geen brood, een klasgenoot maakt er een SHOW van: 'oh wat erg!'. Vervelend, hè? Tom doet het tegenovergestelde — gewoon brood geven, terug naar zijn eigen lunch. Dat is uit aardigheid: hij wil Sara niet ongemakkelijk maken.",
+            nogSimpeler: "Geen drama = aardig",
           },
         },
       },
@@ -763,15 +763,15 @@ const steps = [
           ],
           theorie: "**Boodschap zoeken — vraag jezelf:**\n\n1. Wat is er VERANDERD aan het einde?\n2. Wie heeft IETS GELEERD?\n3. Wat zou een lezer mee naar huis moeten nemen?\n\nBoodschap is meestal ALGEMEEN ('vriendelijkheid loont'), niet specifiek ('vergeet je lunch niet').\n\nValstrik: opties die KLEINE feiten uit het verhaal zijn (zoals 'boterhammen smaken gedeeld') zijn meestal NIET de boodschap.",
           voorbeelden: [
-            { type: "klein → groot", tekst: "Tom: halve boterham (klein gebaar). Sara: dankbaar, schrijft briefje. Tom: schrijft terug. Een klein gebaar = grote impact = A." },
+            { type: "klein → groot", tekst: "Tom: halve boterham (klein gebaar). Sara: dankbaar, schrijft briefje. Tom: schrijft terug. Een klein gebaar = grote impact" },
           ],
           basiskennis: [
             { onderwerp: "Boodschap is algemeen", uitleg: "De boodschap kun je toepassen op ANDERE situaties dan dit verhaal. Bv. 'vriendelijkheid loont' geldt overal, niet alleen bij vergeten lunch." },
           ],
           niveaus: {
             basis: "Klein gebaar (halve boterham) → grote impact (vriendschap). A.",
-            simpeler: "Wat blijft hangen na dit verhaal? Tom doet iets KLEINS, maar het maakt voor Sara veel uit. Boodschap: kleine vriendelijkheden tellen. = A.",
-            nogSimpeler: "Klein gebaar = grote betekenis = A.",
+            simpeler: "Wat blijft hangen na dit verhaal? Tom doet iets KLEINS, maar het maakt voor Sara veel uit. Boodschap: kleine vriendelijkheden tellen.",
+            nogSimpeler: "Klein gebaar = grote betekenis",
           },
         },
       },
@@ -815,8 +815,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Lees de tekst nogmaals", uitleg: "Bij een mix-quiz mag je teruglezen. Doe dat ook." }],
           niveaus: {
             basis: "Tekst zegt 'uniek in de wereld' = alleen NL. A.",
-            simpeler: "Lees de laatste alinea van tekst 1. Daar staat: 'er zijn meer fietsen dan inwoners' + 'uniek in de wereld'. Dus stelling klopt + alleen NL = A.",
-            nogSimpeler: "Klopt + alleen NL = A.",
+            simpeler: "Lees de laatste alinea van tekst 1. Daar staat: 'er zijn meer fietsen dan inwoners' + 'uniek in de wereld'. Dus stelling klopt + alleen NL",
+            nogSimpeler: "Klopt + alleen NL",
           },
         },
       },
@@ -847,13 +847,13 @@ const steps = [
           ],
           theorie: "Bij instructies: TIPS hebben altijd een reden. Vaak gaat het om iets KAPOT GAAN (paperclips uit elkaar) of MISLOPEN (verkeerde maat).",
           voorbeelden: [
-            { type: "verbinden", tekst: "'Lichtjes trekken om te controleren' + eerder 'gehaast = clips uit elkaar' = je test of het stevig is, ZONDER het kapot te trekken. = A." },
+            { type: "verbinden", tekst: "'Lichtjes trekken om te controleren' + eerder 'gehaast = clips uit elkaar' = je test of het stevig is, ZONDER het kapot te trekken." },
           ],
           basiskennis: [{ onderwerp: "Tekst-context", uitleg: "Wat eerder in de tekst stond, helpt vaak om latere zinnen te begrijpen." }],
           niveaus: {
             basis: "Hard trekken = clips uit elkaar (eerder genoemd). Lichtjes = niet kapot. A.",
             simpeler: "Stel: jij hebt een ketting van paperclips. Trek je hard? Dan trek je 'm uit elkaar. Dus 'lichtjes' = om de ketting niet te breken. A.",
-            nogSimpeler: "Lichtjes = niet kapot = A.",
+            nogSimpeler: "Lichtjes = niet kapot",
           },
         },
       },
@@ -888,9 +888,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Argument vs feit", uitleg: "Een feit kan WAAR zijn maar geen argument zijn — als het niets te maken heeft met het standpunt." }],
           niveaus: {
-            basis: "Argument = onderbouwt standpunt + heeft bewijs. A heeft 'onderzoek toont'. = A.",
+            basis: "Argument = onderbouwt standpunt + heeft bewijs. A heeft 'onderzoek toont'.",
             simpeler: "Welke reden helpt om het standpunt 'telefoons niet op school' te bewijzen? 'Notificaties leiden af tijdens de les' helpt. Andere opties zijn niet over school of niet over telefoons. A.",
-            nogSimpeler: "Met onderzoek + over school = A.",
+            nogSimpeler: "Met onderzoek + over school",
           },
         },
       },
@@ -926,8 +926,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Hartje is niet altijd liefde", uitleg: "Symbolen veranderen van betekenis afhankelijk van situatie. Lees de hele scene." }],
           niveaus: {
             basis: "Hartje + 'bedankt' na vriendelijke daad = dankbaarheid. A.",
-            simpeler: "Wat doet je moeder met dat briefje? Ze schrijft 'bedankt' + hartje. Voor wie? Voor Tom die brood deelde. Dat is bedanken voor zijn aardigheid. = A.",
-            nogSimpeler: "Bedankt + hartje = dankbaarheid = A.",
+            simpeler: "Wat doet je moeder met dat briefje? Ze schrijft 'bedankt' + hartje. Voor wie? Voor Tom die brood deelde. Dat is bedanken voor zijn aardigheid.",
+            nogSimpeler: "Bedankt + hartje = dankbaarheid",
           },
         },
       },
@@ -950,7 +950,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "4 tekstsoorten", tekst: "Informatief (feiten), Instructief (stappen), Betogend (mening), Verhalend (verhaal)." },
-            { titel: "Welke geeft een MENING?", tekst: "'Telefoons horen niet thuis op de basisschool' = duidelijke mening. = betogend = A." },
+            { titel: "Welke geeft een MENING?", tekst: "'Telefoons horen niet thuis op de basisschool' = duidelijke mening. = betogend" },
           ],
           woorden: [
             { woord: "betogend", uitleg: "Een tekst die een mening verdedigt met argumenten." },
@@ -965,8 +965,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "Cito-vragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
           niveaus: {
             basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat. A.",
-            simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara). = A.",
-            nogSimpeler: "Mening = betoog = A.",
+            simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara).",
+            nogSimpeler: "Mening = betoog",
           },
         },
       },
@@ -1002,8 +1002,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Toets-tactiek", uitleg: "Een gok = 25% kans op punt. Leeg = 0%. Altijd invullen!" }],
           niveaus: {
             basis: "Context lezen = beste strategie. A.",
-            simpeler: "Stel je leest een woord dat je niet kent. Wat doe je? Niet overslaan. Geen woordenboek (mag niet). Lees de zinnen eromheen — die helpen je het te raden. = A.",
-            nogSimpeler: "Context lezen = A.",
+            simpeler: "Stel je leest een woord dat je niet kent. Wat doe je? Niet overslaan. Geen woordenboek (mag niet). Lees de zinnen eromheen — die helpen je het te raden.",
+            nogSimpeler: "Context lezen",
           },
         },
       },
@@ -1028,7 +1028,7 @@ const steps = [
             { type: "stap", tekst: "'Het kind keek SCHUW naar de hond.' Context: kind + hond = bang/voorzichtig → 'schuw' = verlegen, bang." },
           ],
           basiskennis: [{ onderwerp: "Bijwoord = emotie", uitleg: "Bijwoorden zoals 'wanhopig/blij/snel/rustig' beschrijven de manier of emotie van een actie." }],
-          niveaus: { basis: "Bang + verdrietig. = A.", simpeler: "Jongen rent naar moeder = nood. Wanhopig = zonder hoop + bang. = A.", nogSimpeler: "In nood = A." },
+          niveaus: { basis: "Bang + verdrietig.", simpeler: "Jongen rent naar moeder = nood. Wanhopig = zonder hoop + bang.", nogSimpeler: "In nood" },
         },
       },
       {
@@ -1050,7 +1050,7 @@ const steps = [
             { type: "stap", tekst: "'Honden zijn aardig. MAAR sommige bijten.' Tegenstelling met 'maar'." },
           ],
           basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Bij begrijpend lezen Cito: signaalwoorden zijn TOP-tip om snel structuur te zien." }],
-          niveaus: { basis: "Maar = tegenstelling. = A.", simpeler: "'Maar' signaleert tegenstelling. 'Daarom' = conclusie, 'bijvoorbeeld' = voorbeeld, 'eerst' = volgorde. = A.", nogSimpeler: "Maar = A." },
+          niveaus: { basis: "Maar = tegenstelling.", simpeler: "'Maar' signaleert tegenstelling. 'Daarom' = conclusie, 'bijvoorbeeld' = voorbeeld, 'eerst' = volgorde.", nogSimpeler: "Maar" },
         },
       },
       {
@@ -1074,7 +1074,7 @@ const steps = [
             { type: "stap", tekst: "'Dieren reageren anders op kou dan mensen.' Voorspelling: hoe? Welke dieren? Voorbeelden komen." },
           ],
           basiskennis: [{ onderwerp: "Niet altijd correct", uitleg: "Voorspelling klopt niet altijd. Goed: je let extra op = brein actief." }],
-          niveaus: { basis: "Vervolg over fietsen vroeger/nu. = A.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe lichter werden, welke materialen, etc. = A.", nogSimpeler: "Past bij thema = A." },
+          niveaus: { basis: "Vervolg over fietsen vroeger/nu.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe lichter werden, welke materialen, etc.", nogSimpeler: "Past bij thema" },
         },
       },
       { q: "Welke vraag stel je het eerst bij een tekst om de **structuur** te zien?", options: ["Hoeveel alinea's heeft de tekst?","Hoe lang is de tekst?","Wat is de kleur van het papier?","Wie heeft de tekst gedrukt?"], answer: 0, wrongHints: [null, "Lengte zegt niets over structuur.", "Niet inhoudelijk.", "Niet relevant."] },

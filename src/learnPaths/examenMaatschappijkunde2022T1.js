@@ -82,7 +82,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Onthoud: AMBTENAREN = werken op ministeries + gemeenten (vast in dienst, voeren beleid uit). KAMERLEDEN = werken in parlement (gekozen, maken wetten). FRACTIE = groep Kamerleden van zelfde partij. MINISTER = leidt ministerie + ambtenaren.",
-        { basis: "Ministerie = ambtenaren. = A.", simpeler: "Ambtenaar = personeel van de overheid. Werken op ministerie. = A.", nogSimpeler: "Ambtenaren = A." },
+        { basis: "Ministerie = ambtenaren.", simpeler: "Ambtenaar = personeel van de overheid. Werken op ministerie.", nogSimpeler: "Ambtenaren" },
         [{ woord: "ambtenaar", uitleg: "Vast personeel overheid — beleid voorbereiden + uitvoeren." }, { woord: "ministerie", uitleg: "Werkvloer + ambtenaren onder een minister." }],
       ),
     }],
@@ -112,7 +112,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "MINISTER = baas van een MINISTERIE. Politiek verantwoordelijk voor zijn vakgebied. Geeft leiding aan ambtenaren. Hoort bij kabinet (regering). Niet hetzelfde als KAMERLID (wetgevend) of FRACTIEVOORZITTER (partijleider in parlement).",
-        { basis: "Minister leidt ministerie. = C.", simpeler: "Minister = baas van zijn vakgebied + ambtenaren. = C.", nogSimpeler: "Ministerie = C." },
+        { basis: "Minister leidt ministerie.", simpeler: "Minister = baas van zijn vakgebied + ambtenaren.", nogSimpeler: "Ministerie" },
         [{ woord: "minister", uitleg: "Politiek hoofd van een ministerie." }, { woord: "fractievoorzitter", uitleg: "Leider Kamerfractie (partij in parlement)." }],
       ),
     }],
@@ -142,7 +142,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Ministeriële verantwoordelijkheid (1848 Thorbecke): KONING ONSCHENDBAAR (mag geen kritiek krijgen), MINISTERS VERANTWOORDELIJK (zij dragen politieke verantwoording in parlement). Reden: koning is niet democratisch gekozen, dus democratisch gekozen ministers zijn verantwoordelijk voor wat hij doet/zegt.",
-        { basis: "Toespraak koning = ministers verantwoordelijk. = A.", simpeler: "Koning praat namens regering — ministers schrijven mee + dragen verantwoordelijkheid. = A.", nogSimpeler: "Ministers = A." },
+        { basis: "Toespraak koning = ministers verantwoordelijk.", simpeler: "Koning praat namens regering — ministers schrijven mee + dragen verantwoordelijkheid.", nogSimpeler: "Ministers" },
         [{ woord: "onschendbaar", uitleg: "Mag geen kritiek krijgen — geldt voor de koning." }, { woord: "Nationale Ombudsman", uitleg: "Onafhankelijk orgaan voor burgerklachten over overheid." }],
       ),
     }],
@@ -171,7 +171,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "EU-trio onthouden: COMMISSIE = initiatief (alleen zij mag wetsvoorstellen indienen + Von der Leyen). PARLEMENT = controle + stemmen (gekozen MEPs). RAAD VAN EU = vakministers (stemmen mee). EUROPESE RAAD = regeringsleiders (strategische richting). Actieplan opstellen = Commissie.",
-        { basis: "Wetten/actie initiëren = Commissie. = A.", simpeler: "Alleen de Europese Commissie mag voorstellen indienen — de andere EU-organen stemmen of controleren. = A.", nogSimpeler: "Commissie = A." },
+        { basis: "Wetten/actie initiëren = Commissie.", simpeler: "Alleen de Europese Commissie mag voorstellen indienen — de andere EU-organen stemmen of controleren.", nogSimpeler: "Commissie" },
         [{ woord: "Europese Commissie", uitleg: "EU-orgaan met initiatiefrecht voor wetsvoorstellen." }, { woord: "lidstaat", uitleg: "Land dat lid is van de EU." }],
       ),
     }],
@@ -201,7 +201,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 media-effecten: 1) beïnvloeden OPVATTINGEN (waarom mensen iets denken), 2) helpen WETGEVING (aandacht voor problemen), 3) creëren STEREOTYPES (rol-beelden), 4) UITLOKKEN GEDRAG (kopieer-effect). Truc kopiëren uit serie = directe gedrags-invloed.",
-        { basis: "Truc uit serie → roof = gedrags-invloed. = D.", simpeler: "Tieners zagen iets in serie + DEDEN het. Media → gedrag. = D.", nogSimpeler: "Gedrag = D." },
+        { basis: "Truc uit serie → roof = gedrags-invloed.", simpeler: "Tieners zagen iets in serie + DEDEN het. Media → gedrag.", nogSimpeler: "Gedrag" },
         [{ woord: "media-invloed", uitleg: "Effect van TV/film/social media op kijkers (opvattingen, gedrag, beeldvorming)." }],
       ),
     }],
@@ -231,7 +231,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 strafuitsluitingsgronden: NOODWEER (jezelf/ander verdedigen tegen aanval), OVERMACHT (gedwongen door situatie), ONTOEREKENINGSVATBAARHEID (psychisch niet verantwoordelijk), WETTELIJK VOORSCHRIFT (uitvoering wet — politie schiet). EIGENRICHTING = niet uitgesloten, wel strafbaar (wraak nemen).",
-        { basis: "Aangevallen + verdedigt = noodweer. = C.", simpeler: "Inbreker aanvalt → man slaat terug = noodweer = mag van de wet. = C.", nogSimpeler: "Noodweer = C." },
+        { basis: "Aangevallen + verdedigt = noodweer.", simpeler: "Inbreker aanvalt → man slaat terug = noodweer = mag van de wet.", nogSimpeler: "Noodweer" },
         [{ woord: "noodweer", uitleg: "Strafuitsluitingsgrond — verdediging tegen wederrechtelijke aanval." }, { woord: "eigenrichting", uitleg: "Zelf wraak nemen — STRAFBAAR (geen noodweer)." }],
       ),
     }],

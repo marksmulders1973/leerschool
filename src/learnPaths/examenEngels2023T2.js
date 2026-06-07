@@ -82,7 +82,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Vraag 'becomes clear' = wat blijkt? Zoek conclusie-zinnen. Hier: 'hostile comments' + voorbeeld 'imagine your parents sold dolls of you' = duidelijk negatief. Andere opties verzinnen iets dat NIET in de tekst staat.",
-        { basis: "Hostile comments → negative reactions. = A.", simpeler: "Tekst zegt 'hostile' = vijandig. Reacties zijn dus negatief. = A.", nogSimpeler: "Negative = A." },
+        { basis: "Hostile comments → negative reactions.", simpeler: "Tekst zegt 'hostile' = vijandig. Reacties zijn dus negatief.", nogSimpeler: "Negative" },
         [{ woord: "hostile", uitleg: "Vijandig, afkeurend." }, { woord: "merch", uitleg: "Merchandise — fan-spulletjes." }],
       ),
     }],
@@ -112,7 +112,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "'Statute of limitations expired' = verjaringstermijn verlopen. Daarom geen uitlevering ('not extradited') + geen rechtszaak (no trial). Hij blijft vrij in Frankrijk — niets gebeurt verder voor de Duitse inbraak.",
-        { basis: "Verjaring → geen trial. = D.", simpeler: "Statute of limitations = verjaring. Inbraak is 9 jaar oud, te lang geleden — geen rechtszaak. = D.", nogSimpeler: "Geen trial = D." },
+        { basis: "Verjaring → geen trial.", simpeler: "Statute of limitations = verjaring. Inbraak is 9 jaar oud, te lang geleden — geen rechtszaak.", nogSimpeler: "Geen trial" },
         [{ woord: "statute of limitations", uitleg: "Verjaringstermijn — na X jaar geen rechtszaak meer." }, { woord: "extradite", uitleg: "Uitleveren aan ander land." }],
       ),
     }],
@@ -142,7 +142,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "'Text as a whole' = wat klopt over hele tekst. Naam zegt 't al: nofilter_MUSEUM = selfie-focus. Alinea 1 'everything needed for the perfect selfie'. Alinea 2 '24 rooms, creative selfies'. Andere opties zijn NIET in tekst.",
-        { basis: "Rooms designed for selfies. = D.", simpeler: "Naam museum = 'nofilter' (Instagram-filter) + alle 24 rooms voor selfies. = D.", nogSimpeler: "Selfies = D." },
+        { basis: "Rooms designed for selfies.", simpeler: "Naam museum = 'nofilter' (Instagram-filter) + alle 24 rooms voor selfies.", nogSimpeler: "Selfies" },
         [{ woord: "exhibit", uitleg: "Tentoongesteld stuk in een museum." }, { woord: "graduate", uitleg: "Afgestudeerde." }],
       ),
     }],
@@ -172,7 +172,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "'Main purpose paragraph 1' = waarom staat dit hier? Inhoud: 8-jarige kart → karten → kampioen → 1e vrouw met titel. Dit is een chronologisch overzicht van hoe haar carrière BEGON. Niet inspiratie/awards-lijst/family-life-extraordinary.",
-        { basis: "How career started. = C.", simpeler: "Alinea vertelt waar/wanneer Hailie begon met racen (op haar 8e). Dat is haar START. = C.", nogSimpeler: "Start = C." },
+        { basis: "How career started.", simpeler: "Alinea vertelt waar/wanneer Hailie begon met racen (op haar 8e). Dat is haar START.", nogSimpeler: "Start" },
         [{ woord: "debut", uitleg: "Eerste optreden/wedstrijd." }, { woord: "compete", uitleg: "Meedoen aan wedstrijd." }],
       ),
     }],
@@ -202,7 +202,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "70 dB = norm, 88 dB = werkelijk gemeten = te veel = boete = dicht. Drie andere opties (geen vergunning / trouble / ruimte voor flats) komen NIET voor in tekst.",
-        { basis: "88 > 70 dB = te luid = dicht. = A.", simpeler: "Decibels = geluid-meting. 88 boven de toegestane 70 = lawaai. Speelplaats dicht. = A.", nogSimpeler: "Lawaai = A." },
+        { basis: "88 > 70 dB = te luid = dicht.", simpeler: "Decibels = geluid-meting. 88 boven de toegestane 70 = lawaai. Speelplaats dicht.", nogSimpeler: "Lawaai" },
         [{ woord: "exceed", uitleg: "Overschrijden, boven gaan." }, { woord: "council", uitleg: "Gemeenteraad." }],
       ),
     }],
@@ -232,7 +232,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "'Still unclear' = nog onduidelijk = mysterie. Geleerden weten WEL hoe luid + waar het zingen klinkt, maar WAAROM blijft een raadsel.",
-        { basis: "Reason unclear = mystery. = A.", simpeler: "Tekst zegt 'still unclear whether to repel rivals, attract mate or other'. Reden = onbekend = mysterie. = A.", nogSimpeler: "Mystery = A." },
+        { basis: "Reason unclear = mystery.", simpeler: "Tekst zegt 'still unclear whether to repel rivals, attract mate or other'. Reden = onbekend = mysterie.", nogSimpeler: "Mystery" },
         [{ woord: "repel", uitleg: "Afweren, wegjagen." }, { woord: "inaudible", uitleg: "Onhoorbaar." }, { woord: "mate", uitleg: "Partner (voor voortplanting)." }],
       ),
     }],

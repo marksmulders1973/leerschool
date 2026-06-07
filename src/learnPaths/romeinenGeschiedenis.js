@@ -125,8 +125,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Eind Republiek", uitleg: "Na deze moord brak burgeroorlog uit; Augustus werd uiteindelijk eerste keizer (27 v.Chr.)." }],
           niveaus: {
             basis: "Vermoord in de Senaat. A.",
-            simpeler: "Op 15 maart 44 v.Chr. werd Caesar in de Senaat doodgestoken door samenzweerders die bang waren dat hij koning wilde worden. = A.",
-            nogSimpeler: "Vermoord 44 v.Chr. = A.",
+            simpeler: "Op 15 maart 44 v.Chr. werd Caesar in de Senaat doodgestoken door samenzweerders die bang waren dat hij koning wilde worden.",
+            nogSimpeler: "Vermoord 44 v.Chr.",
           },
         },
       },
@@ -266,8 +266,8 @@ const steps = [
           basiskennis: [{ onderwerp: "M, D, C, L, X, V, I", uitleg: "De 7 Romeinse symbolen om uit het hoofd te kennen." }],
           niveaus: {
             basis: "MM + XX + VI = 2000 + 20 + 6 = 2026. A.",
-            simpeler: "MM = 2× 1000 = 2000. XX = 2× 10 = 20. VI = 5+1 = 6. Samen: 2000+20+6 = 2026. = A.",
-            nogSimpeler: "2026 = A.",
+            simpeler: "MM = 2× 1000 = 2000. XX = 2× 10 = 20. VI = 5+1 = 6. Samen: 2000+20+6 = 2026.",
+            nogSimpeler: "2026",
           },
         },
       },

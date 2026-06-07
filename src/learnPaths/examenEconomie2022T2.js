@@ -46,7 +46,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 soorten werkloosheid: STRUCTUREEL (blijvende verandering — bv. fabriek dicht, banen niet terug), CONJUNCTUREEL (tijdelijk, met op/neer economie), SEIZOEN (weer/seizoen-afhankelijk), VERBORGEN (kan werken maar zoekt niet). Textiel → Bangladesh = blijvend = structureel.",
-        { basis: "Structurele werkloosheid. = C.", simpeler: "Textiel-banen weg + komen niet terug → blijvende verandering = structureel. = C.", nogSimpeler: "Structureel = C." },
+        { basis: "Structurele werkloosheid.", simpeler: "Textiel-banen weg + komen niet terug → blijvende verandering = structureel.", nogSimpeler: "Structureel" },
         [{ woord: "structurele werkloosheid", uitleg: "Door blijvende verandering in economie." }, { woord: "conjunctureel", uitleg: "Tijdelijk, met economische op/neer." }],
       ),
     }],
@@ -75,7 +75,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "3 soorten uitgaven: VASTE LASTEN (regelmatig, vast bedrag — huur, abonnement), VARIABELE LASTEN (regelmatig, wisselend — voeding, benzine), INCIDENTELE UITGAVEN (eenmalig, onverwacht — aanschaf huisdier, bruiloft, kapotte koelkast). Aanschaf = eenmalig = incidenteel.",
-        { basis: "Aanschaf dier = incidenteel. = A.", simpeler: "Incidenteel = 1×, niet elke maand/week. Vaccinatie + voeding + zaagsel komen telkens terug. = A.", nogSimpeler: "Aanschaf = A." },
+        { basis: "Aanschaf dier = incidenteel.", simpeler: "Incidenteel = 1×, niet elke maand/week. Vaccinatie + voeding + zaagsel komen telkens terug.", nogSimpeler: "Aanschaf" },
         [{ woord: "incidentele uitgave", uitleg: "Eenmalig, niet-regelmatig." }, { woord: "vaste lasten", uitleg: "Vast bedrag, regelmatig (bv. huur)." }],
       ),
     }],
@@ -104,7 +104,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Verzekering werkt zo: jij betaalt elke maand een PREMIE (= vast bedrag = vaste lasten omhoog). In ruil dekt de verzekering grote/onverwachte kosten (= incidentele uitgaven omlaag). Hond breekt poot? Verzekering betaalt. Jij hoeft niet 500 ineens uit eigen zak.",
-        { basis: "Vaste lasten ↑ + incidentele uitgaven ↓ = C.", simpeler: "Premie elke maand = vaste lasten OMHOOG. Onverwachte dierenarts gedekt = incidentele uitgaven OMLAAG. = C.", nogSimpeler: "Vaste ↑ incidenteel ↓ = C." },
+        { basis: "Vaste lasten ↑ + incidentele uitgaven ↓", simpeler: "Premie elke maand = vaste lasten OMHOOG. Onverwachte dierenarts gedekt = incidentele uitgaven OMLAAG.", nogSimpeler: "Vaste ↑ incidenteel ↓" },
         [{ woord: "premie", uitleg: "Maandelijks/jaarlijks bedrag dat je aan verzekering betaalt." }, { woord: "vaste lasten", uitleg: "Regelmatige vaste kosten (huur, abonnement, premie)." }],
       ),
     }],
@@ -132,7 +132,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "EU-protectionisme = eigen industrie beschermen. 3 instrumenten: INVOERHEFFING (extra belasting op import — duurder), INVOERQUOTA (max hoeveelheid import — schaarste), UITVOERSUBSIDIE (geld geven aan eigen export). Voor MEER zelfvoorziening: invoerheffing OMHOOG (buitenland duur → eigen markt groter).",
-        { basis: "Invoerheffing verhogen. = A.", simpeler: "Eigen suiker meer = buitenlands duurder maken = invoerheffing OMHOOG. = A.", nogSimpeler: "Invoerheffing = A." },
+        { basis: "Invoerheffing verhogen.", simpeler: "Eigen suiker meer = buitenlands duurder maken = invoerheffing OMHOOG.", nogSimpeler: "Invoerheffing" },
         [{ woord: "invoerheffing", uitleg: "Belasting op buitenlandse producten — maakt ze duurder." }, { woord: "zelfvoorzienend", uitleg: "Eigen productie dekt eigen behoefte." }],
       ),
     }],
@@ -161,7 +161,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Onthoud: CBS = STATISTIEK = meet wat geweest is (groei 2024 cijfer komt 2025). CPB = PLAN = voorspelt wat komt (Prinsjesdag-cijfers). Economische groei = stijging nationaal inkomen / BBP (Bruto Binnenlands Product). Niet besteedbaar inkomen (dat is na belasting voor één huishouden).",
-        { basis: "CBS + nationaal inkomen = A.", simpeler: "CBS meet (achteraf), CPB voorspelt (vooruit). Groei = nationaal inkomen. = A.", nogSimpeler: "CBS + nationaal = A." },
+        { basis: "CBS + nationaal inkomen", simpeler: "CBS meet (achteraf), CPB voorspelt (vooruit). Groei = nationaal inkomen.", nogSimpeler: "CBS + nationaal" },
         [{ woord: "CBS", uitleg: "Centraal Bureau voor de Statistiek — meet de werkelijkheid." }, { woord: "CPB", uitleg: "Centraal Planbureau — voorspelt." }, { woord: "nationaal inkomen", uitleg: "BBP — totale productie/inkomen van NL." }],
       ),
     }],

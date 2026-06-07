@@ -373,8 +373,8 @@ const steps = [
           voorbeelden: [{ type: "voorbeeld", tekst: "Telefoonoplader ~1 A. Wasmachine ~10 A. Bliksem 30.000 A" }],
           basiskennis: [{ onderwerp: "mA", uitleg: "milli-ampère, 1/1000 A" }],
           niveaus: {
-            basis: "Stroomsterkte wordt gemeten in **Ampère**, symbool A. = A.",
-            simpeler: "A staat voor Ampère — de eenheid van stroomsterkte. Volt is voor spanning. = A.",
+            basis: "Stroomsterkte wordt gemeten in **Ampère**, symbool A.",
+            simpeler: "A staat voor Ampère — de eenheid van stroomsterkte. Volt is voor spanning.",
             nogSimpeler: "Stroom = Ampère (A). Onthoud: A = André-Marie Ampère, Franse wetenschapper.",
           },
         },

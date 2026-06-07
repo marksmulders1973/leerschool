@@ -202,7 +202,7 @@ const steps = [
             { type: "feit", tekst: "Voeten groeien vaak vóór benen — daarom kun je in 1 jaar 2-3 schoenmaten verschillen." },
           ],
           basiskennis: [{ onderwerp: "Niet bezorgd", uitleg: "Alle kinderen groeien in eigen tempo. Klasgenoten ver voor of achter lopen = normaal." }],
-          niveaus: { basis: "Snelle groeiperiode. = A.", simpeler: "Groeispurt = periode (bv. in puberteit) waarin je heel snel langer wordt — soms 10+ cm/jaar. Door hormonen. = A.", nogSimpeler: "Snelle groei = A." },
+          niveaus: { basis: "Snelle groeiperiode.", simpeler: "Groeispurt = periode (bv. in puberteit) waarin je heel snel langer wordt — soms 10+ cm/jaar. Door hormonen.", nogSimpeler: "Snelle groei" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
             { type: "feit", tekst: "Cola + frisdrank bevatten fosforzuur dat calcium-opname kan blokkeren bij grote hoeveelheden." },
           ],
           basiskennis: [{ onderwerp: "Botten bouwen = nu", uitleg: "Cito-feit: je hebt 1 kans in je leven om sterke botten op te bouwen — tussen 10-20 jaar. Daarna alleen onderhoud mogelijk." }],
-          niveaus: { basis: "Calcium + vit D + bewegen. = A.", simpeler: "Sterke botten in groei: melk/kaas (calcium) + zonlicht (vit D) + bewegen (impact-sporten). = A.", nogSimpeler: "Calcium + zon + bewegen = A." },
+          niveaus: { basis: "Calcium + vit D + bewegen.", simpeler: "Sterke botten in groei: melk/kaas (calcium) + zonlicht (vit D) + bewegen (impact-sporten).", nogSimpeler: "Calcium + zon + bewegen" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
             { type: "feit", tekst: "Alcohol vóór 25 kan permanent brein-ontwikkeling schaden — daarom 18+-grens in NL." },
           ],
           basiskennis: [{ onderwerp: "Niet 'verkeerd'", uitleg: "Tiener-brein is niet 'mis' ontworpen — het werkt zoals het hoort. Volwassenen zijn niet 'beter' maar gewoon ANDERE fase." }],
-          niveaus: { basis: "Beslissings-deel laatst klaar. = A.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25. = A.", nogSimpeler: "Beslissings-deel laat klaar = A." },
+          niveaus: { basis: "Beslissings-deel laatst klaar.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25.", nogSimpeler: "Beslissings-deel laat klaar" },
         },
       },
       { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in puberteit.", "Te veel.", "Onjuist."] },

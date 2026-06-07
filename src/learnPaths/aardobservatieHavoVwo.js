@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — geeft rustige basalt-vulkaan.", "Niet — geen vulkanen.", "Bestaat niet zo."],
         uitlegPad: {
           stappen: [{ titel: "Subductie = explosief", tekst: "**Convergente plaatgrens met subductie** (zware oceaan-korst duikt onder continentaal): smeltend gesteente → strato-vulkanen + zware bevingen → tsunami's bij onderzeese bevingen. Voorbeeld: Indonesië, Japan, Chili." }],
-          niveaus: { basis: "Convergent. A.", simpeler: "Subductie = stratovulkaan = A.", nogSimpeler: "Subductie = A." },
+          niveaus: { basis: "Convergent. A.", simpeler: "Subductie = stratovulkaan", nogSimpeler: "Subductie" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — niet lineair.", "Niet — 1 stap = 10×, 2 stappen = 100×.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "10× per stap", tekst: "Richter is logaritmisch: **elke stap = 10× sterker amplitude**. M5 → M7 = 2 stappen = **10² = 100×** sterker (amplitude). Energie ~32× per stap → 32² = ~1000× meer energie.\n\nDaarom: M9 verwoest hele kuststreken, M6 voelbaar maar beperkt." }],
-          niveaus: { basis: "100×. A.", simpeler: "2 stappen = 10²=100× = A.", nogSimpeler: "100 = A." },
+          niveaus: { basis: "100×. A.", simpeler: "2 stappen = 10²=100×", nogSimpeler: "100" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — ander gebied.", "Niet — wel kleine afdoeling.", "Niet — relatief stabiel."],
         uitlegPad: {
           stappen: [{ titel: "Pacific Ring of Fire", tekst: "**Ring van Vuur** = ring van plaatgrenzen rond Pacifische Oceaan. 75% van wereld-vulkanen + 90% van wereld-aardbevingen. Japan, Indonesië, Filipijnen, Alaska, west-VS, Mexico, Centraal+Zuid-Amerika." }],
-          niveaus: { basis: "Pacifisch. A.", simpeler: "Ring of Fire = Pacific = A.", nogSimpeler: "Pacific = A." },
+          niveaus: { basis: "Pacifisch. A.", simpeler: "Ring of Fire = Pacific", nogSimpeler: "Pacific" },
         },
       },
       {
@@ -68,7 +68,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schild = breed + plat", tekst: "**Schildvulkaan**: basaltische lava, vloeibaar, stroomt ver → vormt grote brede koepel met lage hellingen. **Mauna Loa** (Hawaï) — grootste vulkaan op aarde, 9 km hoog vanaf oceaanbodem. Relatief rustig." }],
           theorie: "Tegenstelling: stratovulkaan = viscose lava → steile flanken + explosief. Pyroclastische stromen.",
-          niveaus: { basis: "Schildvulkaan. A.", simpeler: "Vloeibaar = schild = A.", nogSimpeler: "Schild = A." },
+          niveaus: { basis: "Schildvulkaan. A.", simpeler: "Vloeibaar = schild", nogSimpeler: "Schild" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Megathrust-aardbeving", tekst: "**26 dec 2004**: M9,1 aardbeving voor kust Sumatra → zeebodem 30 m omhoog → tsunami → 230.000 doden in 14 landen. Subductie-grens Indische plaat onder Eurazische. Slechtste natuurramp 21e eeuw." }],
           theorie: "Vergelijkbare gebeurtenissen: Chili 1960 (M9,5, sterkste ooit gemeten), Japan 2011 (M9,0 + Fukushima), Alaska 1964.",
-          niveaus: { basis: "Onderzeese aardbeving. A.", simpeler: "M9 = onderzeese beving = A.", nogSimpeler: "Beving = A." },
+          niveaus: { basis: "Onderzeese aardbeving. A.", simpeler: "M9 = onderzeese beving", nogSimpeler: "Beving" },
         },
       },
     ],
@@ -99,7 +99,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee mechanismen", tekst: "**Zeespiegelstijging**: (1) **smeltend landijs** (Groenland, Antarctica, gletsjers) voegt nieuw water toe. (2) **Thermische uitzetting**: warm water heeft groter volume. Zee-ijs heeft geen effect (zit al in water — Archimedes-principe)." }],
           theorie: "Cito-favoriet: 'Waarom heeft smelten van Arctisch zee-ijs nauwelijks invloed op zeespiegel?' Antwoord: drijft al, geen volume-toename.",
-          niveaus: { basis: "Landijs + uitzetting. A.", simpeler: "Smelten landijs + warm zeewater = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Landijs + uitzetting. A.", simpeler: "Smelten landijs + warm zeewater", nogSimpeler: "A." },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Een kwart onder zeeniveau", tekst: "Ongeveer **26%** NL ligt onder NAP. Vooral west-NL (Holland, Flevoland, Zeeland). Zonder dijken zou groot deel onder water staan. Daarom NL-investeringen in waterveiligheid extreem hoog vergeleken andere landen." }],
           theorie: "NAP = Nieuw Amsterdams Peil. Referentie sinds 17e eeuw, gebaseerd op zeespiegel-gemiddelde IJ.",
-          niveaus: { basis: "26%. A.", simpeler: "~kwart NL onder NAP = A.", nogSimpeler: "26 = A." },
+          niveaus: { basis: "26%. A.", simpeler: "~kwart NL onder NAP", nogSimpeler: "26" },
         },
       },
       {
@@ -121,7 +121,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1 feb 1953", tekst: "**Watersnoodramp 1 feb 1953**: storm + springtij → dijken Zeeland + Z-Holland breken → 1836 doden + 200.000 dieren + 47.000 huizen weg. Politieke schok → **Deltaplan** + Deltawerken-uitvoering 1958-1997." }],
           theorie: "Andere overstromings-rampen: 1916 Markermeer (start Afsluitdijk), 1995 Maas/IJssel (200.000 geëvacueerd), 2021 Limburg-watersnood (relatief lichte schade).",
-          niveaus: { basis: "1953 Zeeland. A.", simpeler: "Deltawerken na 1953 = A.", nogSimpeler: "1953 = A." },
+          niveaus: { basis: "1953 Zeeland. A.", simpeler: "Deltawerken na 1953", nogSimpeler: "1953" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet — niet systeem maar effect."],
         uitlegPad: {
           stappen: [{ titel: "Beton + asfalt = warmer", tekst: "**Urban Heat Island (UHI)** = steden zijn 5-10°C warmer dan omliggend platteland door beton/asfalt-warmte-absorptie + minder verkoeling door planten/water + airco-uitlaat. Bij hittegolf extra dodelijk in steden. Tegengaan: bomen, parken, groene daken, witte oppervlakken." }],
-          niveaus: { basis: "Steden warmer. A.", simpeler: "UHI = steden warmer = A.", nogSimpeler: "Warmer = A." },
+          niveaus: { basis: "Steden warmer. A.", simpeler: "UHI = steden warmer", nogSimpeler: "Warmer" },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "ENSO-cyclus", tekst: "**El Niño** = periodiek (2-7 jaar) opwarming oostelijke Stille Oceaan → minder regen Indonesië/Australië (droogte/brand) + meer regen Z-Amerika kust + minder visstand Peru. **La Niña** = tegenovergesteld. Beïnvloedt wereld-weer voor 1-2 jaar." }],
           theorie: "Cito-actueel: 2023-24 was sterk El Niño-jaar → extreme bosbranden Canada/Amazone, hittegolven.",
-          niveaus: { basis: "Pacific-opwarming. A.", simpeler: "El Niño = warm Pacific = A.", nogSimpeler: "El Niño = A." },
+          niveaus: { basis: "Pacific-opwarming. A.", simpeler: "El Niño = warm Pacific", nogSimpeler: "El Niño" },
         },
       },
     ],
@@ -161,7 +161,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — beheer software.", "Wel mogelijk via GIS, maar definitie breder."],
         uitlegPad: {
           stappen: [{ titel: "GIS = Geographic Info System", tekst: "**GIS** = software om geo-locatie-data (kaarten, satellietbeelden, statistieken) samen te brengen, analyseren + visualiseren. Voorbeelden: ArcGIS (commercial), QGIS (open source), Google Earth (consumer)." }],
-          niveaus: { basis: "Geo-data verwerken. A.", simpeler: "GIS = kaart-software = A.", nogSimpeler: "Software = A." },
+          niveaus: { basis: "Geo-data verwerken. A.", simpeler: "GIS = kaart-software", nogSimpeler: "Software" },
         },
       },
       {
@@ -171,7 +171,7 @@ const steps = [
         wrongHints: [null, "Te kort — kringt wel maar bedekt niet alles.", "Te lang.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "14× per dag", tekst: "Polaire-baan-satelliet (~700 km) cirkelt 14× per dag van pool-naar-pool. Aarde draait onder hem door, dus elke baan bedekt nieuwe strook. **Hele aarde** wordt in **paar dagen** bedekt. Sentinel-2 doet 5 dagen herzieningstijd." }],
-          niveaus: { basis: "Paar dagen. A.", simpeler: "Polair = paar dagen = A.", nogSimpeler: "Paar dagen = A." },
+          niveaus: { basis: "Paar dagen. A.", simpeler: "Polair = paar dagen", nogSimpeler: "Paar dagen" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "SAR = wolken-onafhankelijk", tekst: "**SAR** (Synthetic Aperture Radar): zendt zelf microgolven uit en meet reflectie. **Doordringt wolken + werkt 24/7**. Ideaal voor permanente monitoring + vervormings-detectie (mm-precisie!) na bevingen of vulkaan-opheffing." }],
           theorie: "Sentinel-1 (ESA, gratis) levert SAR-data. Cruciaal voor: vroegtijdige vulkaan-detectie, overstroming-mapping bij bewolking, scheep-monitoring.",
-          niveaus: { basis: "Radar. A.", simpeler: "SAR door wolk = A.", nogSimpeler: "Radar = A." },
+          niveaus: { basis: "Radar. A.", simpeler: "SAR door wolk", nogSimpeler: "Radar" },
         },
       },
       {
@@ -192,7 +192,7 @@ const steps = [
         wrongHints: [null, "Niet — andere meting.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Vegetation Index", tekst: "**NDVI** (Normalized Difference Vegetation Index) = (NIR − Rood) / (NIR + Rood). Gezonde planten reflecteren veel infrarood + absorberen rood → hoge NDVI (0,4-0,9). Bruin/dood → laag. Gebruikt voor: oogst-monitoring, droogte-detectie, ontbossings-tracking." }],
-          niveaus: { basis: "Vegetatie. A.", simpeler: "NDVI = plant-gezond = A.", nogSimpeler: "Planten = A." },
+          niveaus: { basis: "Vegetatie. A.", simpeler: "NDVI = plant-gezond", nogSimpeler: "Planten" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "OSM = Wikipedia van kaarten", tekst: "**OpenStreetMap** (OSM) = wereld-wijde kaart gebouwd door vrijwilligers. Iedereen kan toevoegen/corrigeren. Gratis te gebruiken (open licence). NL is volledig + zeer gedetailleerd. Gebruik: GPS-apps (Maps.me, OsmAnd), ramp-respons, planning." }],
           theorie: "Bij rampen: Humanitarian OSM Team mobiliseert vrijwilligers wereldwijd om gebied snel te karteren na aardbeving/tsunami, voor hulpverleners.",
-          niveaus: { basis: "Vrijwilligers-kaart. A.", simpeler: "OSM = vrije kaart = A.", nogSimpeler: "OSM = A." },
+          niveaus: { basis: "Vrijwilligers-kaart. A.", simpeler: "OSM = vrije kaart", nogSimpeler: "OSM" },
         },
       },
     ],
@@ -223,7 +223,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (NL aardbeving via gas-winning, lichte huizen) = matig risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
           theorie: "Cito-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
-          niveaus: { basis: "Kans × gevolg × kwetsbaarheid. A.", simpeler: "3-componenten = A.", nogSimpeler: "Drie = A." },
+          niveaus: { basis: "Kans × gevolg × kwetsbaarheid. A.", simpeler: "3-componenten", nogSimpeler: "Drie" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Dat is voorbereiding.", "Dat is herstel.", "Dat is respons."],
         uitlegPad: {
           stappen: [{ titel: "Mitigatie = voorkomen", tekst: "**Mitigatie** = maatregelen die het risico zelf verkleinen. **Dijken bouwen, water-vlaktes vrij houden, hoge gebouw-eisen**. Tegenover: voorbereiding (waarschuwen, plannen), respons (evacueren), herstel (heropbouwen)." }],
-          niveaus: { basis: "Dijken. A.", simpeler: "Mitigatie = preventie = A.", nogSimpeler: "Dijken = A." },
+          niveaus: { basis: "Dijken. A.", simpeler: "Mitigatie = preventie", nogSimpeler: "Dijken" },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Natuur helpt zelf", tekst: "**Nature-based solutions** = oplossingen die natuur inschakelen: mangroves (golven dempen), wadlanden (bufferen vloed), bomen (hitte verminderen), meanders herstellen. Vaak goedkoper + bio-divers + duurzaam dan beton-bouw." }],
           theorie: "Voorbeeld: Vietnam plant mangroves langs kust — kost veel minder dan zee-wering bouwen + biedt ook visserij.",
-          niveaus: { basis: "Mangroves. A.", simpeler: "Natuur-oplossing = A.", nogSimpeler: "Natuur = A." },
+          niveaus: { basis: "Mangroves. A.", simpeler: "Natuur-oplossing", nogSimpeler: "Natuur" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bouwvoorschriften beslissen", tekst: "**Japan**: strikte aardbevings-bestendige bouw + early-warning + oefeningen → weinig doden bij M7. **Iran**: oudere lemen huizen + corruptie bij vergunningen + weinig voorbereiding → tienduizenden doden bij M7. Zelfde fysieke kracht, **enorm verschil in kwetsbaarheid**." }],
           theorie: "Cito-pattern: 'leg verschil in uitkomst uit ondanks gelijke magnitude'. Bouwvoorschriften + economie + cultuur.",
-          niveaus: { basis: "Kwetsbaarheid. A.", simpeler: "Bouw + voorbereiding = A.", nogSimpeler: "Bouw = A." },
+          niveaus: { basis: "Kwetsbaarheid. A.", simpeler: "Bouw + voorbereiding", nogSimpeler: "Bouw" },
         },
       },
       {
@@ -266,7 +266,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vluchten voor klimaat", tekst: "**Klimaatmigratie** = mensen verlaten woonplaats door klimaat-impact: zeespiegelstijging (Pacific-eilanden), droogte (Sahel), bosbranden, extreme hitte. Schatting 2050: 100-300 miljoen klimaatmigranten. **Niet** formeel beschermd als 'vluchteling' onder Geneefse Verdrag — juridisch grijs gebied." }],
           theorie: "Voorbeelden: Tuvalu-bewoners naar Nieuw-Zeeland (eerste land met klimaat-visum). Sahel-bewoners naar Sahel-steden of Europa.",
-          niveaus: { basis: "Verhuizen door klimaat. A.", simpeler: "Klimaat → mensen vluchten = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Verhuizen door klimaat. A.", simpeler: "Klimaat → mensen vluchten", nogSimpeler: "A." },
         },
       },
     ],
@@ -285,7 +285,7 @@ const steps = [
         wrongHints: [null, "Niet — wel vulkanen.", "Niet — wel vulkanen.", "Niet — geen tsunami's primair."],
         uitlegPad: {
           stappen: [{ titel: "Continent vs continent", tekst: "Bij **continentale botsing** (India tegen Azië → Himalaya): beide platen licht → opheffen tot bergen + zware bevingen. Geen subductie diep genoeg voor smelten → geen vulkanen. Tsunami's vooral subductie-grenzen (onderzeese verstoring)." }],
-          niveaus: { basis: "Continentale botsing. A.", simpeler: "Cont. botsing = berg+beving = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Continentale botsing. A.", simpeler: "Cont. botsing = berg+beving", nogSimpeler: "A." },
         },
       },
       {
@@ -296,7 +296,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Water op", tekst: "**Kaapstad 2018**: na 3 jaar droogte dreigde stad-reservoirs leeg op een 'Day Zero' → 4 mln mensen zonder kraanwater. Met rantsoenering (50 L per dag per persoon) net vermeden. Toekomst: meer steden risico (Mexico City, Lima)." }],
           theorie: "Cito-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",
-          niveaus: { basis: "Stad zonder water. A.", simpeler: "Day Zero = water-op = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Stad zonder water. A.", simpeler: "Day Zero = water-op", nogSimpeler: "A." },
         },
       },
       {
@@ -306,7 +306,7 @@ const steps = [
         wrongHints: [null, "Niet — verschillende doelen.", "Niet — dat is mitigatie.", "Niet — dat is respons."],
         uitlegPad: {
           stappen: [{ titel: "Verschillende benaderingen", tekst: "**Mitigatie** = klimaatverandering **voorkomen/verminderen** (CO₂-uitstoot omlaag). **Adaptatie** = je aanpassen aan onvermijdelijke veranderingen (dijken, koeltere steden, droogte-bestendig gewas). Beide nodig — geen of-of." }],
-          niveaus: { basis: "Verschillende. A.", simpeler: "Adapt = aanpassen, Mit = voorkomen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Verschillende. A.", simpeler: "Adapt = aanpassen, Mit = voorkomen", nogSimpeler: "A." },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Open access", tekst: "**Sentinel** (ESA Copernicus-programma) levert gratis satelliet-data wereldwijd voor iedereen. Sentinel-1 (SAR), Sentinel-2 (optisch), Sentinel-3 (oceaan), Sentinel-5P (atmosfeer). Gebruik door wetenschappers, ngo's, journalisten, burgers." }],
           theorie: "Tegenstelling: Maxar (VS) levert sub-meter beelden maar betaald + selectief. Sentinel democratiseert aardobservatie.",
-          niveaus: { basis: "Gratis open. A.", simpeler: "Sentinel = gratis = A.", nogSimpeler: "Gratis = A." },
+          niveaus: { basis: "Gratis open. A.", simpeler: "Sentinel = gratis", nogSimpeler: "Gratis" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Wel stad maar niet bedoeld hier.", "Niet — andere doel.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "VN-akkoord 2015", tekst: "**Sendai Framework for Disaster Risk Reduction 2015-2030** = VN-akkoord (in Sendai Japan getekend) voor wereld-wijde risicoreductie. Doel: minder doden, minder schade, vooral arme landen helpen. Opvolger van Hyogo Framework (2005-2015)." }],
-          niveaus: { basis: "VN-akkoord. A.", simpeler: "Sendai = VN-rampen-akkoord = A.", nogSimpeler: "VN = A." },
+          niveaus: { basis: "VN-akkoord. A.", simpeler: "Sendai = VN-rampen-akkoord", nogSimpeler: "VN" },
         },
       },
     ],

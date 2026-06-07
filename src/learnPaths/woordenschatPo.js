@@ -36,7 +36,7 @@ const steps = [
           theorie: "Woordenschat groeit door lezen + context-truc bij onbekende woorden.",
           voorbeelden: [{ type: "groei", tekst: "Veel lezen = grote woordenschat = makkelijker begrijpend lezen." }],
           basiskennis: [{ onderwerp: "Cito test dit", uitleg: "Cito heeft veel vragen over synoniemen, antoniemen, betekenis." }],
-          niveaus: { basis: "Woorden die je kent. A.", simpeler: "Woordenschat = alle woorden die je begrijpt en kunt gebruiken. Niet alleen Engels — alle talen. = A.", nogSimpeler: "Woorden = A." },
+          niveaus: { basis: "Woorden die je kent. A.", simpeler: "Woordenschat = alle woorden die je begrijpt en kunt gebruiken. Niet alleen Engels — alle talen.", nogSimpeler: "Woorden" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Woordenschat = woord-betekenis. Spelling = woord-schrijfwijze. Twee aparte vakgebieden.",
           voorbeelden: [{ type: "verschil", tekst: "Woordenschat: 'wat betekent enorm?'. Spelling: 'hoe schrijf je enorm?'." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET hoort." }],
-          niveaus: { basis: "Spelling = niet woordenschat. A.", simpeler: "Synoniem (=B), antoniem (=C), betekenis in zin (=D) zijn ALLEMAAL woordenschat. Spelling-regels (A) is iets anders. = A.", nogSimpeler: "Spelling = niet = A." },
+          niveaus: { basis: "Spelling = niet woordenschat. A.", simpeler: "Synoniem (=B), antoniem (=C), betekenis in zin (=D) zijn ALLEMAAL woordenschat. Spelling-regels (A) is iets anders.", nogSimpeler: "Spelling = niet" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           theorie: "Syn-oniem (Grieks: 'gelijk-naam'). Twee woorden voor hetzelfde idee.",
           voorbeelden: [{ type: "syn", tekst: "groot=enorm, snel=vlug, mooi=prachtig, blij=vrolijk." }],
           basiskennis: [{ onderwerp: "Synoniem ≠ antoniem", uitleg: "Synoniem = ZELFDE. Antoniem = TEGENGESTELD." }],
-          niveaus: { basis: "Synoniem = zelfde betekenis. A.", simpeler: "Twee woorden die hetzelfde betekenen heten synoniemen. Bv. snel en vlug. = A.", nogSimpeler: "Zelfde = syn = A." },
+          niveaus: { basis: "Synoniem = zelfde betekenis. A.", simpeler: "Twee woorden die hetzelfde betekenen heten synoniemen. Bv. snel en vlug.", nogSimpeler: "Zelfde = syn" },
         },
       },
     ],
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Familie van 'groot'-woorden: groot, enorm, gigantisch, reusachtig, mega.",
           voorbeelden: [{ type: "enorm", tekst: "Een enorm huis = een heel groot huis." }],
           basiskennis: [{ onderwerp: "Niet klein", uitleg: "Klein = antoniem (tegenstelling), niet synoniem." }],
-          niveaus: { basis: "Enorm = heel groot. A.", simpeler: "Enorm betekent 'heel groot'. Niet klein, niet snel — alleen groot. = A.", nogSimpeler: "Enorm=groot = A." },
+          niveaus: { basis: "Enorm = heel groot. A.", simpeler: "Enorm betekent 'heel groot'. Niet klein, niet snel — alleen groot.", nogSimpeler: "Enorm=groot" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Snelheid-synoniemen: snel, vlug, rap, gauw, kwiek. Allemaal 'in korte tijd'.",
           voorbeelden: [{ type: "snel", tekst: "Hij liep snel = hij liep vlug = hij liep rap." }],
           basiskennis: [{ onderwerp: "Langzaam = antoniem", uitleg: "Langzaam = tegenstelling van snel, niet synoniem." }],
-          niveaus: { basis: "Snel = vlug. A.", simpeler: "Welk woord betekent ook 'snel'? Vlug. (Langzaam = tegengesteld). = A.", nogSimpeler: "Vlug = A." },
+          niveaus: { basis: "Snel = vlug. A.", simpeler: "Welk woord betekent ook 'snel'? Vlug. (Langzaam = tegengesteld).", nogSimpeler: "Vlug" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
           theorie: "Angst-makend-familie: eng, griezelig, akelig, beangstigend, scary (Engels).",
           voorbeelden: [{ type: "eng", tekst: "Een eng spook = een griezelig spook." }],
           basiskennis: [{ onderwerp: "Niet leuk", uitleg: "Eng is meestal niet leuk — kan tegenstellig of niet-verband zijn." }],
-          niveaus: { basis: "Eng = griezelig. A.", simpeler: "Iets dat je bang maakt = eng = griezelig. Niet leuk, niet slim, niet helder. = A.", nogSimpeler: "Griezelig = A." },
+          niveaus: { basis: "Eng = griezelig. A.", simpeler: "Iets dat je bang maakt = eng = griezelig. Niet leuk, niet slim, niet helder.", nogSimpeler: "Griezelig" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           theorie: "Synoniemen voor zorg: bezorgd, ongerust, bang, angstig, gespannen.",
           voorbeelden: [{ type: "bezorgd", tekst: "Hij was bezorgd voor de toets = hij was ongerust over de toets." }],
           basiskennis: [{ onderwerp: "Vervang-test", uitleg: "Past 'ongerust' in plaats van 'bezorgd' in zin? Ja → synoniem." }],
-          niveaus: { basis: "Bezorgd = ongerust. A.", simpeler: "Bezorgd over toets = ongerust over toets. Hetzelfde gevoel, ander woord. = A.", nogSimpeler: "Ongerust = A." },
+          niveaus: { basis: "Bezorgd = ongerust. A.", simpeler: "Bezorgd over toets = ongerust over toets. Hetzelfde gevoel, ander woord.", nogSimpeler: "Ongerust" },
         },
       },
     ],
@@ -148,7 +148,7 @@ const steps = [
           theorie: "Gewicht-paar: zwaar ↔ licht. Zelfde woord 'licht' kan ook ↔ donker zijn — context bepaalt.",
           voorbeelden: [{ type: "anti", tekst: "Een zware tas ↔ een lichte tas (gewicht). Het werd licht ↔ donker (helderheid)." }],
           basiskennis: [{ onderwerp: "Twee-betekenissen-woord", uitleg: "Licht heeft 2 betekenissen — kies de juiste tegenstelling per context." }],
-          niveaus: { basis: "Zwaar ↔ licht. A.", simpeler: "Wat is het tegenovergestelde van zwaar? Licht. Niet groot/klein (afmeting), niet donker (helderheid). = A.", nogSimpeler: "Licht = A." },
+          niveaus: { basis: "Zwaar ↔ licht. A.", simpeler: "Wat is het tegenovergestelde van zwaar? Licht. Niet groot/klein (afmeting), niet donker (helderheid).", nogSimpeler: "Licht" },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
           theorie: "Tijd-paar: beginnen ↔ eindigen. Stoppen lijkt erop maar is breder. Starten/openen = synoniem.",
           voorbeelden: [{ type: "anti", tekst: "De film begint om 8 ↔ de film eindigt om 10." }],
           basiskennis: [{ onderwerp: "Best passende antoniem", uitleg: "Bij twee-keuze (eindigen/stoppen): kies degene die EXACT tegenovergesteld is." }],
-          niveaus: { basis: "Beginnen ↔ eindigen. A.", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Stoppen kan ook, maar 'eindigen' is preciezer. = A.", nogSimpeler: "Eindigen = A." },
+          niveaus: { basis: "Beginnen ↔ eindigen. A.", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Stoppen kan ook, maar 'eindigen' is preciezer.", nogSimpeler: "Eindigen" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
           theorie: "Lengte-paar: verlengen ↔ verkorten. Vergroten = synoniem (groter maken).",
           voorbeelden: [{ type: "anti", tekst: "Vergadering verlengen ↔ vergadering verkorten. Touw verlengen ↔ touw verkorten." }],
           basiskennis: [{ onderwerp: "Voorvoegsel ver-", uitleg: "ver- + lang/kort verandert 'lang' en 'kort' in werkwoorden — tegenovergesteld blijft hetzelfde." }],
-          niveaus: { basis: "Verlengen ↔ verkorten. A.", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=synoniem, openen/stoppen=geen verband). = A.", nogSimpeler: "Verkorten = A." },
+          niveaus: { basis: "Verlengen ↔ verkorten. A.", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=synoniem, openen/stoppen=geen verband).", nogSimpeler: "Verkorten" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
           theorie: "Test elk paar: jong ↔ oud (tegenstelling ✓). Blij/vrolijk, snel/vlug, mooi/prachtig = synoniemen.",
           voorbeelden: [{ type: "test", tekst: "Past 'NIET' tussen woorden? Jong is NIET oud ✓. Blij is NIET vrolijk ✗ (klinkt gek)." }],
           basiskennis: [{ onderwerp: "Strikvraag", uitleg: "3 van 4 paren zijn synoniem — alleen jong/oud is antoniem." }],
-          niveaus: { basis: "Jong ↔ oud. A.", simpeler: "Antoniem = tegenstelling. Jong/oud = leeftijd-tegenstelling ✓. Andere drie paren = synoniem-paren. = A.", nogSimpeler: "Jong-oud = A." },
+          niveaus: { basis: "Jong ↔ oud. A.", simpeler: "Antoniem = tegenstelling. Jong/oud = leeftijd-tegenstelling ✓. Andere drie paren = synoniem-paren.", nogSimpeler: "Jong-oud" },
         },
       },
     ],
@@ -211,7 +211,7 @@ const steps = [
           theorie: "Context-truc: zinsgevoel (positief/negatief) bepaalt welke optie past.",
           voorbeelden: [{ type: "context", tekst: "'Ging goed' = positief → 'vorderde' = positief → vooruitgang." }],
           basiskennis: [{ onderwerp: "Schrap optie's", uitleg: "Problemen, sloeg over, bleef hetzelfde = niet positief → wegstrepen." }],
-          niveaus: { basis: "Vorderde = vooruitgang. A.", simpeler: "Tom ging het GOED = positief. Dus 'vorderde' moet positief betekenen = maakte vooruitgang. = A.", nogSimpeler: "Vooruit = A." },
+          niveaus: { basis: "Vorderde = vooruitgang. A.", simpeler: "Tom ging het GOED = positief. Dus 'vorderde' moet positief betekenen = maakte vooruitgang.", nogSimpeler: "Vooruit" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
           theorie: "Sommige woorden hebben 2 betekenissen: letterlijk + versterkend. Context bepaalt.",
           voorbeelden: [{ type: "versterking", tekst: "Belachelijk duur = heel erg duur. Belachelijk klein = heel erg klein." }],
           basiskennis: [{ onderwerp: "Versterkers", uitleg: "Woorden zoals 'belachelijk', 'absurd', 'idioot' kunnen 'extreem' betekenen." }],
-          niveaus: { basis: "Belachelijk = heel erg. A.", simpeler: "'Belachelijk klein' = HEEL ERG klein. Belachelijk versterkt het bijvoeglijk woord. = A.", nogSimpeler: "Heel erg = A." },
+          niveaus: { basis: "Belachelijk = heel erg. A.", simpeler: "'Belachelijk klein' = HEEL ERG klein. Belachelijk versterkt het bijvoeglijk woord.", nogSimpeler: "Heel erg" },
         },
       },
       {
@@ -239,7 +239,7 @@ const steps = [
           theorie: "Uit-geput = uit + putten (water uit put halen tot leeg). Beeld voor 'helemaal leeg'.",
           voorbeelden: [{ type: "uitgeput", tekst: "Na 4 uur sporten ben je uitgeput = totaal moe." }],
           basiskennis: [{ onderwerp: "Marathon = vermoeiend", uitleg: "Marathon (42 km lopen) maakt iedereen moe — context geeft betekenis." }],
-          niveaus: { basis: "Uitgeput = heel moe. A.", simpeler: "Na marathon = vermoeid. 'Uitgeput' = HELEMAAL leeg, geen energie. = heel moe = A.", nogSimpeler: "Moe = A." },
+          niveaus: { basis: "Uitgeput = heel moe. A.", simpeler: "Na marathon = vermoeid. 'Uitgeput' = HELEMAAL leeg, geen energie. = heel moe", nogSimpeler: "Moe" },
         },
       },
     ],
@@ -260,7 +260,7 @@ const steps = [
           theorie: "Synoniemen voor groot: enorm, gigantisch, reusachtig, mega — allemaal zelfde idee.",
           voorbeelden: [{ type: "syn", tekst: "Een gigantisch huis = een enorm huis = een reusachtig huis." }],
           basiskennis: [{ onderwerp: "Klein = antoniem", uitleg: "Klein = tegenstelling, niet synoniem." }],
-          niveaus: { basis: "Gigantisch = enorm. A.", simpeler: "Welk woord betekent ook 'heel groot'? Enorm. (Klein=tegengesteld). = A.", nogSimpeler: "Enorm = A." },
+          niveaus: { basis: "Gigantisch = enorm. A.", simpeler: "Welk woord betekent ook 'heel groot'? Enorm. (Klein=tegengesteld).", nogSimpeler: "Enorm" },
         },
       },
       {
@@ -274,7 +274,7 @@ const steps = [
           theorie: "Veel antoniemen via 'on-' voorvoegsel: prettig↔onprettig, geduldig↔ongeduldig.",
           voorbeelden: [{ type: "on-", tekst: "Eerlijk ↔ oneerlijk. Verstandig ↔ onverstandig. Beleefd ↔ onbeleefd." }],
           basiskennis: [{ onderwerp: "Direct herkennen", uitleg: "Optie A heeft 'on-' voor 'eerlijk' = directe tegenstelling." }],
-          niveaus: { basis: "Eerlijk ↔ oneerlijk. A.", simpeler: "Voor 'eerlijk' het voorvoegsel 'on-' zetten = oneerlijk = tegenstelling. = A.", nogSimpeler: "On+eerlijk = A." },
+          niveaus: { basis: "Eerlijk ↔ oneerlijk. A.", simpeler: "Voor 'eerlijk' het voorvoegsel 'on-' zetten = oneerlijk = tegenstelling.", nogSimpeler: "On+eerlijk" },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
           theorie: "Uitdrukkingen ('zegswijzen') = vaste woordcombinaties met aparte betekenis. Niet letterlijk vertalen.",
           voorbeelden: [{ type: "uitdr", tekst: "In zijn schik = blij. In zijn nopjes = blij. Door dolle heen = uitgelaten blij." }],
           basiskennis: [{ onderwerp: "Cadeau = positief", uitleg: "Context (cadeau krijgen) geeft hint dat het iets positiefs moet zijn." }],
-          niveaus: { basis: "In zijn schik = blij. A.", simpeler: "'In zijn schik' is een uitdrukking voor blij/tevreden. Cadeau krijgen = blij worden. = A.", nogSimpeler: "Blij = A." },
+          niveaus: { basis: "In zijn schik = blij. A.", simpeler: "'In zijn schik' is een uitdrukking voor blij/tevreden. Cadeau krijgen = blij worden.", nogSimpeler: "Blij" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
           theorie: "Snelheid-synoniemen: snel = vlug = rap. Antoniemen: langzaam = loom = sloom = traag.",
           voorbeelden: [{ type: "syn", tekst: "Hij rende snel = hij rende vlug." }],
           basiskennis: [{ onderwerp: "Twee antoniemen-strikvraag", uitleg: "Loom EN langzaam zijn beide antoniem — alleen vlug is synoniem." }],
-          niveaus: { basis: "Snel = vlug. A.", simpeler: "Vlug, rap = synoniem voor snel. Loom en langzaam = tegenstellingen. Stil = geen verband. = A.", nogSimpeler: "Vlug = A." },
+          niveaus: { basis: "Snel = vlug. A.", simpeler: "Vlug, rap = synoniem voor snel. Loom en langzaam = tegenstellingen. Stil = geen verband.", nogSimpeler: "Vlug" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
           theorie: "Versterkers: heel, zeer, uiterst, bijzonder, ongelooflijk — allemaal sterker dan zonder.",
           voorbeelden: [{ type: "uiterst", tekst: "Uiterst nuttig = heel nuttig. Uiterst belangrijk = heel belangrijk." }],
           basiskennis: [{ onderwerp: "Niet 'uiterst' = uiterlijk", uitleg: "Uiterst en uiterlijk lijken op elkaar — ander betekenis. Uiterlijk = aan de buitenkant." }],
-          niveaus: { basis: "Uiterst = heel. A.", simpeler: "'Uiterst nuttig' = heel nuttig. Uiterst maakt het bijvoeglijk woord sterker. = A.", nogSimpeler: "Heel = A." },
+          niveaus: { basis: "Uiterst = heel. A.", simpeler: "'Uiterst nuttig' = heel nuttig. Uiterst maakt het bijvoeglijk woord sterker.", nogSimpeler: "Heel" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
           theorie: "Mooi-familie: mooi, prachtig, schitterend, fraai, knap. Antoniem: lelijk.",
           voorbeelden: [{ type: "test", tekst: "Vervangtest: 'een mooie dag' → 'een prachtige dag' ✓ → 'een lelijke dag' = ander betekenis." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag zoekt het ENE woord dat NIET past. Lees opties scherp." }],
-          niveaus: { basis: "Lelijk = niet synoniem. A.", simpeler: "Prachtig, schitterend, fraai = allemaal synoniem voor mooi. Lelijk = TEGENSTELLING. = A.", nogSimpeler: "Lelijk = A." },
+          niveaus: { basis: "Lelijk = niet synoniem. A.", simpeler: "Prachtig, schitterend, fraai = allemaal synoniem voor mooi. Lelijk = TEGENSTELLING.", nogSimpeler: "Lelijk" },
         },
       },
       {
@@ -355,7 +355,7 @@ const steps = [
             { type: "stap", tekst: "'De spijker op de kop' = exact het juiste raken." },
           ],
           basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "Bij spreekwoord-vraag: kies NOOIT letterlijke optie. Altijd figuurlijke uitleg." }],
-          niveaus: { basis: "Afwachten + observeren. = A.", simpeler: "Spreekwoord 'de kat uit de boom kijken' = voorzichtig zijn, eerst kijken hoe iets verloopt voor je iets doet. NIET letterlijk. = A.", nogSimpeler: "Afwachten = A." },
+          niveaus: { basis: "Afwachten + observeren.", simpeler: "Spreekwoord 'de kat uit de boom kijken' = voorzichtig zijn, eerst kijken hoe iets verloopt voor je iets doet. NIET letterlijk.", nogSimpeler: "Afwachten" },
         },
       },
       {
@@ -379,7 +379,7 @@ const steps = [
             { type: "stap", tekst: "'De zon lacht' = personificatie, zon kan niet echt lachen." },
           ],
           basiskennis: [{ onderwerp: "Context belangrijk", uitleg: "Spreekwoord-vragen vereisen altijd de hele zin lezen. Soms helpt vorige zin ook." }],
-          niveaus: { basis: "Makkelijk te begrijpen. = A.", simpeler: "'Open boek' = figuurlijk: makkelijk te doorzien, niets verbergen, voorspelbaar. = A.", nogSimpeler: "Doorzichtig = A." },
+          niveaus: { basis: "Makkelijk te begrijpen.", simpeler: "'Open boek' = figuurlijk: makkelijk te doorzien, niets verbergen, voorspelbaar.", nogSimpeler: "Doorzichtig" },
         },
       },
       {
@@ -405,7 +405,7 @@ const steps = [
             { type: "stap", tekst: "Antoniem van 'transparant' = ondoorzichtig." },
           ],
           basiskennis: [{ onderwerp: "Niet vertroubelen", uitleg: "Antoniem is TEGENOVERGESTELDE — niet 'iets anders'. 'Mooi' antoniem is 'lelijk', niet 'rood' (rood is ander concept, geen tegenstelling)." }],
-          niveaus: { basis: "Tekort. = A.", simpeler: "Overvloed = veel → antoniem = tekort/schaarste. = A.", nogSimpeler: "Tekort = A." },
+          niveaus: { basis: "Tekort.", simpeler: "Overvloed = veel → antoniem = tekort/schaarste.", nogSimpeler: "Tekort" },
         },
       },
       { q: "Synoniem van **boos**?", options: ["kwaad","blij","verdrietig","bang"], answer: 0, wrongHints: [null, "Antoniem.", "Andere emotie.", "Andere emotie."] },

@@ -63,7 +63,7 @@ const steps = [
           niveaus: {
             basis: "Gemeentebelasting → afvalstoffenheffing. Antwoord A.",
             simpeler: "Wat doet je gemeente voor jou? Vuilnis ophalen. Wie betaalt dat? Jouw huishouden, via afvalstoffenheffing op de gemeentelijke aanslag. BTW, loonheffing en VPB gaan naar het Rijk (Belastingdienst), niet naar de gemeente.",
-            nogSimpeler: "Vuilnis = gemeente = afvalstoffenheffing = A.",
+            nogSimpeler: "Vuilnis = gemeente = afvalstoffenheffing",
           },
         },
       },
@@ -179,7 +179,7 @@ const steps = [
           niveaus: {
             basis: "Belasting over spaargeld = vermogensrendementsheffing. Antwoord D.",
             simpeler: "BTW = op aankopen. Loonheffing = op je loon. OZB = op je huis. Maar hier gaat het over je SPAARGELD = vermogen → vermogensrendementsheffing.",
-            nogSimpeler: "Spaargeld = vermogen = D.",
+            nogSimpeler: "Spaargeld = vermogen",
           },
         },
       },
@@ -235,7 +235,7 @@ const steps = [
           niveaus: {
             basis: "Loon stijgt > inflatie → koopkracht stijgt. Antwoord B.",
             simpeler: "Stel: vorig jaar kocht je voor €100 boodschappen. Dit jaar zijn dezelfde boodschappen €105 (5% inflatie). Krijgt jouw loon ook +5%? Dan blijft koopkracht gelijk. Krijg je MEER (+7%)? Dan stijgt koopkracht. Minder of niks? Dan daalt koopkracht.",
-            nogSimpeler: "Loonstijging > inflatie = koopkracht stijgt = B.",
+            nogSimpeler: "Loonstijging > inflatie = koopkracht stijgt",
           },
         },
       },
@@ -291,9 +291,9 @@ const steps = [
             { onderwerp: "Inflatie + koopkracht", uitleg: "Inflatie alleen zegt niets over hoe rijk/arm je bent — het gaat om VERSCHIL tussen prijsstijging en je inkomensstijging." },
           ],
           niveaus: {
-            basis: "Lonen meelaten stijgen met inflatie = volledige prijscompensatie = D.",
+            basis: "Lonen meelaten stijgen met inflatie = volledige prijscompensatie",
             simpeler: "Als boodschappen 5% duurder worden, en jouw loon stijgt OOK 5%, dan koop je nog steeds dezelfde boodschappen. Dat is wat 'volledige prijscompensatie' doet — koopkracht blijft op peil. De andere 3 opties maken het juist duurder of geven je minder netto.",
-            nogSimpeler: "Lonen mee met prijzen = D.",
+            nogSimpeler: "Lonen mee met prijzen",
           },
         },
       },
@@ -410,7 +410,7 @@ const steps = [
           niveaus: {
             basis: "China KOOPT (= vraag) dollars → vraag dollars stijgt → koers dollar stijgt. Antwoord B.",
             simpeler: "Stel je voor: een land koopt veel iPhones. Wat doet de iPhone-prijs? Stijgen, want iedereen wil ze. Hetzelfde met dollars: China koopt veel dollars → veel vraag → dollar wordt duurder = stijgt in waarde.",
-            nogSimpeler: "Kopen = vraag = prijs omhoog = B.",
+            nogSimpeler: "Kopen = vraag = prijs omhoog",
           },
         },
       },

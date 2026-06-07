@@ -76,7 +76,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 manieren van politieke invloed: PARTIJ (stemmen/lid), REFERENDUM (volksraadpleging — direct over vraag stemmen), LOBBYEN (druk achter de schermen), ACTIE (demonstratie/staking/petitie). 'Raadpleging onder bevolking' = referendum.",
-        { basis: "Raadpleging onder bevolking = referendum. = B.", simpeler: "Referendum = volk wordt direct gevraagd 'ja of nee'. = B.", nogSimpeler: "Referendum = B." },
+        { basis: "Raadpleging onder bevolking = referendum.", simpeler: "Referendum = volk wordt direct gevraagd 'ja of nee'.", nogSimpeler: "Referendum" },
         [{ woord: "referendum", uitleg: "Volksraadpleging — burgers stemmen direct over kwestie." }, { woord: "lobbyen", uitleg: "Achter de schermen druk uitoefenen op politici." }],
       ),
     }],
@@ -106,7 +106,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Gemeente-formatie volgorde: VERKIEZINGEN → onderhandelen → COALITIEAKKOORD → WETHOUDERS kiezen → samen vormen ze + burgemeester het COLLEGE VAN B&W (dagelijks bestuur). Burgemeester is door Kroon benoemd, niet door coalitie. Wethouder = uit gemeenteraad, door coalitie gekozen.",
-        { basis: "Na akkoord = wethouders kiezen. = A.", simpeler: "Akkoord is af → nu wie wordt wethouder van welke partij? = A.", nogSimpeler: "Wethouders = A." },
+        { basis: "Na akkoord = wethouders kiezen.", simpeler: "Akkoord is af → nu wie wordt wethouder van welke partij?", nogSimpeler: "Wethouders" },
         [{ woord: "wethouder", uitleg: "Lid van college van B&W — bestuurt specifiek vakgebied (zorg, ruimte, etc.)." }, { woord: "college van B&W", uitleg: "Dagelijks bestuur gemeente — burgemeester + wethouders." }],
       ),
     }],
@@ -136,7 +136,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "4 EU-instellingen: EUROPESE COMMISSIE (Von der Leyen — ambtenaren, wetten voorbereiden), RAAD VAN DE EU (vakministers per onderwerp), EUROPESE RAAD (Michel/Costa — regeringsleiders, strategie), EUROPEES PARLEMENT (gekozen MEPs — controle + wetten goedkeuren). Charles Michel = Europese Raad = regeringsleiders.",
-        { basis: "Europese Raad = regeringsleiders. = D.", simpeler: "Europese Raad = de presidenten/premiers van alle EU-landen samen. Michel was hun voorzitter. = D.", nogSimpeler: "Regeringsleiders = D." },
+        { basis: "Europese Raad = regeringsleiders.", simpeler: "Europese Raad = de presidenten/premiers van alle EU-landen samen. Michel was hun voorzitter.", nogSimpeler: "Regeringsleiders" },
         [{ woord: "Europese Raad", uitleg: "Bijeenkomst regeringsleiders alle EU-lidstaten." }, { woord: "Raad van de EU", uitleg: "Vakministers van EU-lidstaten (anders dan Europese Raad)." }],
       ),
     }],
@@ -164,7 +164,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "2 EU-wettypen: VERORDENING (direct in alle lidstaten — letterlijk verplicht, geen vertaling), RICHTLIJN (doel-verplicht, hoe is vrij — lidstaat schrijft eigen wet die het doel haalt). Voorbeeld: EU-richtlijn 'auto's moeten X kg CO₂ minder uitstoten' = NL maakt eigen autobelastingwet, FR maakt iets anders.",
-        { basis: "Doel verplicht, hoe vrij = richtlijn. = A.", simpeler: "Richtlijn = EU zegt WAT moet, lidstaat zegt HOE. = A.", nogSimpeler: "Doel vast, hoe vrij = A." },
+        { basis: "Doel verplicht, hoe vrij = richtlijn.", simpeler: "Richtlijn = EU zegt WAT moet, lidstaat zegt HOE.", nogSimpeler: "Doel vast, hoe vrij" },
         [{ woord: "richtlijn", uitleg: "EU-besluit met doel-verplichting; hoe is aan lidstaat." }, { woord: "verordening", uitleg: "EU-besluit direct geldig in alle lidstaten." }],
       ),
     }],
@@ -193,7 +193,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Trias Politica (Montesquieu 1748): WETGEVEND = Eerste+Tweede Kamer (wet MAKEN). UITVOEREND = regering+ambtenaren+politie+OM (wet UITVOEREN). RECHTERLIJK = rechters (wet TOEPASSEN op zaak). OM eist (uitvoerend) → rechter beslist (rechterlijk).",
-        { basis: "OM (uitvoerend) + rechter (rechterlijk) = C.", simpeler: "OM eist = doet uitvoering. Rechter spreekt vonnis = rechterlijk. = C.", nogSimpeler: "Uitvoerend + rechterlijk = C." },
+        { basis: "OM (uitvoerend) + rechter (rechterlijk)", simpeler: "OM eist = doet uitvoering. Rechter spreekt vonnis = rechterlijk.", nogSimpeler: "Uitvoerend + rechterlijk" },
         [{ woord: "Trias Politica", uitleg: "Drie scheiden machten: wetgevend + uitvoerend + rechterlijk." }, { woord: "Openbaar Ministerie", uitleg: "OM — vervolgingsinstantie, deel van uitvoerende macht." }],
       ),
     }],
@@ -223,7 +223,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Klassenjustitie = ongelijke behandeling per sociale klasse/positie. Voorbeelden: dakloze zwaarder gestraft dan rijke verdachte voor zelfde delict; allochtoon vaker gecontroleerd. RECHTSBESCHERMING = burgers beschermen tegen onrecht. RECHTSZEKERHEID = weten waar je aan toe bent. Klassenjustitie strijdig met rechtsstaat.",
-        { basis: "Ongelijke straf naar achtergrond = klassenjustitie. = A.", simpeler: "Klassen = sociale groep. Klassenjustitie = wet werkt anders voor armen/rijken/allochtonen. = A.", nogSimpeler: "Klassenjustitie = A." },
+        { basis: "Ongelijke straf naar achtergrond = klassenjustitie.", simpeler: "Klassen = sociale groep. Klassenjustitie = wet werkt anders voor armen/rijken/allochtonen.", nogSimpeler: "Klassenjustitie" },
         [{ woord: "klassenjustitie", uitleg: "Ongelijke behandeling in recht naar sociale klasse." }, { woord: "rechtszekerheid", uitleg: "Burgers weten waar ze rechtsgeldig aan toe zijn." }],
       ),
     }],

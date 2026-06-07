@@ -161,8 +161,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Niet voor zelf-thuis", uitleg: "Alcohol distilleren thuis is verboden — vergunning nodig." }],
           niveaus: {
             basis: "Destilleren. A.",
-            simpeler: "Alcohol kookt eerder dan water (78°C vs 100°C). Verwarmen → alcohol-damp eerst → opvangen → pure alcohol. = A.",
-            nogSimpeler: "Destilleren = A.",
+            simpeler: "Alcohol kookt eerder dan water (78°C vs 100°C). Verwarmen → alcohol-damp eerst → opvangen → pure alcohol.",
+            nogSimpeler: "Destilleren",
           },
         },
       },

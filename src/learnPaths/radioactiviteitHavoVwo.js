@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zijn protonen.", "Niet — dat is massagetal A.", "Niet — A+Z is geen fysische grootheid."],
         uitlegPad: {
           stappen: [{ titel: "n = A − Z", tekst: "Massagetal A = 238, atoomnummer Z = 92. Aantal neutronen = A − Z = 238 − 92 = **146**." }],
-          niveaus: { basis: "238−92=146. A.", simpeler: "A − Z = neutronen. A.", nogSimpeler: "146 = A." },
+          niveaus: { basis: "238−92=146. A.", simpeler: "A − Z = neutronen. A.", nogSimpeler: "146" },
         },
       },
       {
@@ -42,7 +42,7 @@ const steps = [
         wrongHints: [null, "Niet — N heeft Z=7, C heeft Z=6, dus ander element.", "Niet — verschillende Z = verschillende element.", "Niet — totaal andere elementen."],
         uitlegPad: {
           stappen: [{ titel: "Isotopen = zelfde Z", tekst: "¹²C en ¹⁴C hebben beide Z = 6 (zelfde element koolstof), maar verschillende A (12 vs 14). Andere stof heeft andere Z dus is een ander element." }],
-          niveaus: { basis: "Zelfde Z = isotopen. A.", simpeler: "Beide koolstof (Z=6), ander massagetal. A.", nogSimpeler: "C-12 + C-14 = A." },
+          niveaus: { basis: "Zelfde Z = isotopen. A.", simpeler: "Beide koolstof (Z=6), ander massagetal. A.", nogSimpeler: "C-12 + C-14" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is meer dan een Ca-atoom heeft.", "Niet — A telt p + n samen.", "Niet — onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Z = 20, A = 40", tekst: "Ca-40: Z=20 (atoomnummer), A=40 (massagetal). Protonen=Z=20. Neutronen=A−Z=20. Stabiel (lichte kern, p≈n)." }],
-          niveaus: { basis: "20 p + 20 n. A.", simpeler: "Z protonen + A−Z neutronen = 20 + 20. A.", nogSimpeler: "20+20 = A." },
+          niveaus: { basis: "20 p + 20 n. A.", simpeler: "Z protonen + A−Z neutronen = 20 + 20. A.", nogSimpeler: "20+20" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
           stappen: [
             { titel: "Sterke kernkracht + Coulomb-afstoting", tekst: "Protonen stoten elkaar af (Coulomb). De sterke kernkracht trekt p-p, p-n, n-n aan — maar werkt alleen op zeer korte afstand. Bij grote kernen wordt afstoting overheersend, tenzij extra neutronen zorgen voor genoeg aantrekkende kracht zonder extra afstoting." },
           ],
-          niveaus: { basis: "Neutronen verdunnen Coulomb-afstoting. A.", simpeler: "Extra neutronen lijmen de kern zonder extra afstoting. A.", nogSimpeler: "Verdunnen = A." },
+          niveaus: { basis: "Neutronen verdunnen Coulomb-afstoting. A.", simpeler: "Extra neutronen lijmen de kern zonder extra afstoting. A.", nogSimpeler: "Verdunnen" },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Niet — zware kernen worden instabiel.", "Niet — duidelijke grens bij bismut.", "Niet — bestaan wel (uranium, plutonium, etc.)."],
         uitlegPad: {
           stappen: [{ titel: "Bismut = laatste stabiele", tekst: "Z=83 (bismut) is het zwaarste element met (vrijwel) stabiele isotopen. Z≥84: polonium → uranium → transuranen (lab-gemaakt) → allemaal radioactief vervallen vroeg of laat naar lichter element." }],
-          niveaus: { basis: "Z>83 = radioactief. A.", simpeler: "Alle elementen voorbij bismut zijn instabiel. A.", nogSimpeler: "Allemaal radioactief = A." },
+          niveaus: { basis: "Z>83 = radioactief. A.", simpeler: "Alle elementen voorbij bismut zijn instabiel. A.", nogSimpeler: "Allemaal radioactief" },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Niet — bij α gaat Z OMLAAG.", "Niet — Z=89 zou β-verval zijn.", "Niet — A moet met 4 dalen."],
         uitlegPad: {
           stappen: [{ titel: "α: Z−2, A−4", tekst: "Ra-226 (Z=88, A=226) stuurt α (Z=2, A=4) uit. Dochter: Z=88−2=86 (radon), A=226−4=222 → ²²²Rn. Klassiek voorbeeld: radon-gas uit graniet/aardlagen." }],
-          niveaus: { basis: "α: 88-2=86, 226-4=222. A.", simpeler: "Twee protonen en twee neutronen weg → Rn-222. A.", nogSimpeler: "Rn-222 = A." },
+          niveaus: { basis: "α: 88-2=86, 226-4=222. A.", simpeler: "Twee protonen en twee neutronen weg → Rn-222. A.", nogSimpeler: "Rn-222" },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
             { titel: "β⁻: Z+1, A blijft", tekst: "Bij β⁻ wordt een neutron een proton + elektron + antineutrino. C-14 (Z=6) → N-14 (Z=7). A blijft 14 (elektron is bijna massaloos). Dit is de basis van koolstof-14-datering!" },
           ],
           theorie: "Levende organismen hebben constant aandeel C-14 (uitwisseling met lucht). Na dood stopt uitwisseling → C-14 vervalt met halveringstijd 5730 j → archeologische ouderdomsbepaling.",
-          niveaus: { basis: "β⁻: Z 6→7. A.", simpeler: "Neutron → proton + elektron uit. C wordt N. A.", nogSimpeler: "N-14 = A." },
+          niveaus: { basis: "β⁻: Z 6→7. A.", simpeler: "Neutron → proton + elektron uit. C wordt N. A.", nogSimpeler: "N-14" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is α.", "Niet — dat is β⁻.", "Niet — neutronen-straling bestaat wel maar is geen γ."],
         uitlegPad: {
           stappen: [{ titel: "γ = foton, geen materie", tekst: "γ-straling is gewoon elektromagnetische straling (zoals licht, maar veel hogere frequentie en energie). Geen massa, geen lading. Beweegt met c. Komt vaak vrij na α- of β-verval als de kern naar lagere E-toestand 'valt'." }],
-          niveaus: { basis: "γ = EM-foton. A.", simpeler: "Gamma is hoog-energetisch licht. A.", nogSimpeler: "Foton = A." },
+          niveaus: { basis: "γ = EM-foton. A.", simpeler: "Gamma is hoog-energetisch licht. A.", nogSimpeler: "Foton" },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "α heeft lage doordringkracht", tekst: "α-deeltjes zijn relatief zwaar (He-kern) + dubbel geladen → veel botsingen met materie → snel afgeremd. Papier of paar cm lucht stopt α. β gaat door tot dunne metaalplaat; γ door dikke loodlaag." }],
           basiskennis: [{ onderwerp: "Maar gevaarlijk in lichaam", uitleg: "α buiten lichaam = onschuldig. INGEADEMD of GEGETEN (zoals radon-gas) = zeer gevaarlijk: alle energie afgeleverd in klein volume weefsel." }],
-          niveaus: { basis: "α stopt door papier. A.", simpeler: "Alpha is laagste doordringend → papier genoeg. A.", nogSimpeler: "α = A." },
+          niveaus: { basis: "α stopt door papier. A.", simpeler: "Alpha is laagste doordringend → papier genoeg. A.", nogSimpeler: "α" },
         },
       },
       {
@@ -155,7 +155,7 @@ const steps = [
             { titel: "Som van veranderingen", tekst: "α: Z−2, A−4. β⁻: Z+1, A=0 (per stuk). Twee β⁻: Z+2.\n\nStart: U-238 (Z=92, A=238).\nNa α: Z=90, A=234 (Th-234).\nNa 1 β: Z=91, A=234 (Pa-234).\nNa 2 β: Z=92, A=234 (U-234).\n\nEindkern: **U-234** — isotoop van het oorspronkelijke uranium maar lichter." },
           ],
           theorie: "Klassiek deel van de natuurlijke uraniumvervalreeks (U-238 → ... → Pb-206 over ~14 stappen).",
-          niveaus: { basis: "U-234 na alle verandering. A.", simpeler: "−2+2=0 voor Z, −4 voor A. A.", nogSimpeler: "U-234 = A." },
+          niveaus: { basis: "U-234 na alle verandering. A.", simpeler: "−2+2=0 voor Z, −4 voor A. A.", nogSimpeler: "U-234" },
         },
       },
     ],
@@ -176,7 +176,7 @@ const steps = [
           stappen: [
             { titel: "24/8 = 3 halveringen", tekst: "3× t½ → (½)³ = 1/8 = **12,5%** over. Tabel: 100% → 50% → 25% → 12,5%." },
           ],
-          niveaus: { basis: "(½)³=12,5%. A.", simpeler: "3 halveringen → 100 → 50 → 25 → 12,5. A.", nogSimpeler: "12,5% = A." },
+          niveaus: { basis: "(½)³=12,5%. A.", simpeler: "3 halveringen → 100 → 50 → 25 → 12,5. A.", nogSimpeler: "12,5%" },
         },
       },
       {
@@ -189,7 +189,7 @@ const steps = [
             { titel: "12/4=3 halveringen", tekst: "Activiteit halveert net als aantal kernen: 1000 → 500 → 250 → **125 Bq** na 3× t½." },
           ],
           theorie: "Activiteit nadert nul maar bereikt het pas in oneindige tijd — exponentieel afval.",
-          niveaus: { basis: "1000/8=125. A.", simpeler: "Drie keer halveren: 500, 250, 125 Bq. A.", nogSimpeler: "125 = A." },
+          niveaus: { basis: "1000/8=125. A.", simpeler: "Drie keer halveren: 500, 250, 125 Bq. A.", nogSimpeler: "125" },
         },
       },
       {
@@ -201,7 +201,7 @@ const steps = [
           stappen: [
             { titel: "25% = 2 halveringen", tekst: "100% → 50% (na 1× t½) → 25% (na 2× t½). Dus 2 × 5730 = **11 460 jaar**. Toepassing op archeologische vondsten (bv. veen-lijken, mummies)." },
           ],
-          niveaus: { basis: "2×5730=11460. A.", simpeler: "25% = 2 halveringen = 2×5730 j. A.", nogSimpeler: "11 460 = A." },
+          niveaus: { basis: "2×5730=11460. A.", simpeler: "25% = 2 halveringen = 2×5730 j. A.", nogSimpeler: "11 460" },
         },
       },
       {
@@ -214,7 +214,7 @@ const steps = [
             { titel: "Trade-off tijd vs stralingsdosis", tekst: "Te lang (jaren): patiënt blijft stralen. Te kort (sec): is weg vóór de scan. **Uren** is ideaal: voldoende tijd voor beeldvorming, daarna snel afgevallen. Tc-99m (6 uur) is favoriete medische tracer." },
           ],
           theorie: "Tc-99m geeft alleen γ (geen α/β in lichaam → minder schade), kort t½, gemakkelijk te maken uit moeder-isotoop Mo-99.",
-          niveaus: { basis: "Uren is ideaal. A.", simpeler: "Niet te lang in lijf, niet te snel weg. A.", nogSimpeler: "Uren = A." },
+          niveaus: { basis: "Uren is ideaal. A.", simpeler: "Niet te lang in lijf, niet te snel weg. A.", nogSimpeler: "Uren" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
             { titel: "A = λ·N", tekst: "Hoe meer radioactieve kernen aanwezig, hoe meer per seconde vervallen → grotere A. Vervalconstante λ = ln(2)/t½ is een eigenschap van de isotoop." },
           ],
           theorie: "Radioactief verval is uniek: hangt **niet** af van temperatuur, druk, chemische binding, etc. Alleen aantal kernen + λ.",
-          niveaus: { basis: "A ~ N. A.", simpeler: "Meer kernen = meer vervaltjes per seconde. A.", nogSimpeler: "A=λN = A." },
+          niveaus: { basis: "A ~ N. A.", simpeler: "Meer kernen = meer vervaltjes per seconde. A.", nogSimpeler: "A=λN" },
         },
       },
     ],
@@ -258,7 +258,7 @@ const steps = [
           stappen: [
             { titel: "E_b/A-piek = Fe", tekst: "Bij U-235 (zware kern, lager E_b/A) → splijten naar middelzware kernen (hoger E_b/A). Massadefect groter → energie vrij volgens E=mc². Per splijting ~200 MeV — 1 miljoen keer chemische reactie." },
           ],
-          niveaus: { basis: "Dichter bij Fe = stabieler = E vrij. A.", simpeler: "Splijtproducten zijn sterker gebonden → energie over. A.", nogSimpeler: "Bindingsenergie-winst = A." },
+          niveaus: { basis: "Dichter bij Fe = stabieler = E vrij. A.", simpeler: "Splijtproducten zijn sterker gebonden → energie over. A.", nogSimpeler: "Bindingsenergie-winst" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Fe-piek ≈ 8,8 MeV/nucleon", tekst: "IJzer-56 zit op de top van de bindingsenergie-kromme. Daarom is fusie naar Fe in sterren (na koolstof, zuurstof) een 'doodlopende straat': zwaarder fuseren KOST energie. Daarom ontploft een ster in een supernova zodra Fe-kern groot wordt." }],
           theorie: "Alle elementen zwaarder dan Fe (goud, uranium) ontstaan in supernova-explosies — niet in 'gewone' stervorming.",
-          niveaus: { basis: "Fe-56. A.", simpeler: "IJzer is meest stabiel. A.", nogSimpeler: "Fe = A." },
+          niveaus: { basis: "Fe-56. A.", simpeler: "IJzer is meest stabiel. A.", nogSimpeler: "Fe" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "p-p-keten", tekst: "4 ¹H → ⁴He + 2 e⁺ + 2 ν + ~26 MeV. Zon zet elke seconde ~4·10⁹ kg waterstof in helium om. Voldoende voor nog 5 miljard jaar." }],
           theorie: "In zwaardere sterren (rode reuzen) lopen ook koolstof- en zuurstof-fusies → produceren zwaardere elementen tot Fe.",
-          niveaus: { basis: "H → He fusie. A.", simpeler: "Waterstof smelt samen tot helium. A.", nogSimpeler: "H → He = A." },
+          niveaus: { basis: "H → He fusie. A.", simpeler: "Waterstof smelt samen tot helium. A.", nogSimpeler: "H → He" },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
         wrongHints: [null, "Niet — vereist 10⁷ K plasma.", "Niet — vereist juist plasma-toestand.", "Onjuist — er is altijd opstart-energie."],
         uitlegPad: {
           stappen: [{ titel: "Deuterium uit zeewater + schoner", tekst: "Deuterium (²H) is in 1 op 6000 waterstof-atomen aanwezig — wereldzeeën leveren 'oneindig' brandstof. Fusie produceert vooral helium (niet-radioactief) + neutronen die kortlevend afval geven (jaren, niet duizenden jaren). Geen kettingreactie-risico." }],
-          niveaus: { basis: "Brandstof overvloedig, weinig afval. A.", simpeler: "Zeewater geeft brandstof + nauwelijks afval. A.", nogSimpeler: "Schoner = A." },
+          niveaus: { basis: "Brandstof overvloedig, weinig afval. A.", simpeler: "Zeewater geeft brandstof + nauwelijks afval. A.", nogSimpeler: "Schoner" },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
             { titel: "Neutronen-absorbers", tekst: "Cadmium + borium hebben enorm grote neutron-absorptie-doorsnede. Staven in reactor inschuiven → meer absorptie → minder neutronen voor splijting → reactie zwakt af. Uitschuiven → meer neutronen → harder. **Volledig inschuiven = noodstop** (SCRAM)." },
           ],
           theorie: "Verschillend van koelmiddel (water): water voert warmte af + modereert neutronen (langzamer = beter geabsorbeerd door U-235).",
-          niveaus: { basis: "Neutronen absorberen = reactie regelen. A.", simpeler: "Staven slokken neutronen op → minder splijting. A.", nogSimpeler: "Regelen = A." },
+          niveaus: { basis: "Neutronen absorberen = reactie regelen. A.", simpeler: "Staven slokken neutronen op → minder splijting. A.", nogSimpeler: "Regelen" },
         },
       },
     ],
@@ -332,7 +332,7 @@ const steps = [
         wrongHints: [null, "Niet — Q komt MAAL D.", "Niet — geen optelling.", "Niet — Q-factor wel meenemen."],
         uitlegPad: {
           stappen: [{ titel: "H = Q·D in sievert", tekst: "α heeft Q=20: dezelfde D (in Gy) geeft 20× zoveel schade als β of γ. Eenheid: J/kg, maar genoemd Sv om biologisch belang te markeren." }],
-          niveaus: { basis: "H=Q·D. A.", simpeler: "Vermenigvuldigen voor schade-dosis. A.", nogSimpeler: "Q·D = A." },
+          niveaus: { basis: "H=Q·D. A.", simpeler: "Vermenigvuldigen voor schade-dosis. A.", nogSimpeler: "Q·D" },
         },
       },
       {
@@ -343,7 +343,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1/r²-wet", tekst: "Net als geluid en licht: straling vanaf punt-bron verdeelt zich over bol-oppervlak 4πr². Verdubbel r → oppervlak 4×, intensiteit ÷4." }],
           theorie: "Daarom werkt afstand-bewaking goed: 5 m van bron = 25× minder dan 1 m.",
-          niveaus: { basis: "1/r² → 4× minder. A.", simpeler: "Twee keer verder = vier keer minder. A.", nogSimpeler: "÷4 = A." },
+          niveaus: { basis: "1/r² → 4× minder. A.", simpeler: "Twee keer verder = vier keer minder. A.", nogSimpeler: "÷4" },
         },
       },
       {
@@ -353,7 +353,7 @@ const steps = [
         wrongHints: [null, "C-14 wordt voor iets ouds maar veel jongers ingezet.", "Medische isotoop, niet voor rotsen.", "Medische isotoop, niet voor rotsen."],
         uitlegPad: {
           stappen: [{ titel: "U-238 → Pb-206, t½=4,5 mld j", tekst: "Uranium-238 vervalt naar lood-206 met halveringstijd ~4,5 miljard jaar — ongeveer leeftijd aarde. Verhouding U/Pb in een rots → ouderdom. Klassieke methode voor oudste aardrotsen (4,4 mld j!)." }],
-          niveaus: { basis: "U-238 voor rotsdatering. A.", simpeler: "Lange halveringstijd → miljard-jaren bereik. A.", nogSimpeler: "U-238 = A." },
+          niveaus: { basis: "U-238 voor rotsdatering. A.", simpeler: "Lange halveringstijd → miljard-jaren bereik. A.", nogSimpeler: "U-238" },
         },
       },
       {
@@ -363,7 +363,7 @@ const steps = [
         wrongHints: [null, "Niet — 5 dagen achtergrond zou ~27 μSv zijn.", "Niet — controleer rekening.", "Niet — te kort."],
         uitlegPad: {
           stappen: [{ titel: "10 mSv / (2 mSv/j) = 5 jaar", tekst: "Een CT-scan = ~5 jaar natuurlijke achtergrond in één keer. Daarom alleen CT als medisch geïndiceerd, niet 'voor de zekerheid'." }],
-          niveaus: { basis: "10/2=5 jaar. A.", simpeler: "CT-scan = 5 jaar achtergrond. A.", nogSimpeler: "5 j = A." },
+          niveaus: { basis: "10/2=5 jaar. A.", simpeler: "CT-scan = 5 jaar achtergrond. A.", nogSimpeler: "5 j" },
         },
       },
       {
@@ -383,7 +383,7 @@ const steps = [
           basiskennis: [
             { onderwerp: "Buiten vs binnen", uitleg: "Buiten lichaam: γ is gevaarlijkst (gaat door). Binnen lichaam: α is gevaarlijkst (lokaal sterk vernietigend)." },
           ],
-          niveaus: { basis: "α intern = grootste schade. A.", simpeler: "Alpha-deeltjes vernietigen lokaal cellen → in lijf gevaarlijk. A.", nogSimpeler: "α binnen = A." },
+          niveaus: { basis: "α intern = grootste schade. A.", simpeler: "Alpha-deeltjes vernietigen lokaal cellen → in lijf gevaarlijk. A.", nogSimpeler: "α binnen" },
         },
       },
     ],

@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet −5 te vermenigvuldigen.", "Niet — vermenigvuldig met 3.", "Niet — let op teken."],
         uitlegPad: {
           stappen: [{ titel: "a(b−c) = ab − ac", tekst: "3 × 2x = 6x. 3 × (−5) = −15. Resultaat: **6x − 15**." }],
-          niveaus: { basis: "6x−15. A.", simpeler: "3 maal elk: 6x en −15. A.", nogSimpeler: "6x−15 = A." },
+          niveaus: { basis: "6x−15. A.", simpeler: "3 maal elk: 6x en −15. A.", nogSimpeler: "6x−15" },
         },
       },
       {
@@ -39,7 +39,7 @@ const steps = [
           stappen: [
             { titel: "(a+b)² = a² + 2ab + b²", tekst: "(x+4)² = x² + 2·x·4 + 4² = **x² + 8x + 16**.\n\n*Veelgemaakte fout*: x² + 16 (vergeten 2ab-term). Test: (1+4)² = 25 ≠ 1+16. Maar 1 + 8 + 16 = 25 ✓." },
           ],
-          niveaus: { basis: "x²+8x+16. A.", simpeler: "Drie termen: x², 8x, 16. A.", nogSimpeler: "x²+8x+16 = A." },
+          niveaus: { basis: "x²+8x+16. A.", simpeler: "Drie termen: x², 8x, 16. A.", nogSimpeler: "x²+8x+16" },
         },
       },
       {
@@ -51,7 +51,7 @@ const steps = [
           stappen: [
             { titel: "Verschil van kwadraten", tekst: "x² − 36 = x² − 6² = **(x − 6)(x + 6)**. Standaardformule a² − b² = (a−b)(a+b). Check: (x−6)(x+6) = x² + 6x − 6x − 36 = x² − 36 ✓." },
           ],
-          niveaus: { basis: "(x−6)(x+6). A.", simpeler: "a²−b² = (a−b)(a+b). A.", nogSimpeler: "(x±6) = A." },
+          niveaus: { basis: "(x−6)(x+6). A.", simpeler: "a²−b² = (a−b)(a+b). A.", nogSimpeler: "(x±6)" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
           stappen: [
             { titel: "Eerst boven factoriseren", tekst: "x² + 5x + 6 = (x+2)(x+3). Boven gedeeld door (x+2) → blijft **(x+3)**. Mits x ≠ −2." },
           ],
-          niveaus: { basis: "x+3. A.", simpeler: "Boven factor weg. A.", nogSimpeler: "x+3 = A." },
+          niveaus: { basis: "x+3. A.", simpeler: "Boven factor weg. A.", nogSimpeler: "x+3" },
         },
       },
       {
@@ -75,7 +75,7 @@ const steps = [
           stappen: [
             { titel: "Kwadraat-factor afsplitsen", tekst: "50 = 25 × 2. √50 = √25 · √2 = **5√2** ≈ 7,07. Vorm onder wortel zo klein mogelijk schrijven." },
           ],
-          niveaus: { basis: "5√2. A.", simpeler: "√25·√2 = 5√2. A.", nogSimpeler: "5√2 = A." },
+          niveaus: { basis: "5√2. A.", simpeler: "√25·√2 = 5√2. A.", nogSimpeler: "5√2" },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
           stappen: [
             { titel: "Constante eerst", tekst: "2x + 7 = 19. Trek 7 af van beide kanten: 2x = 12. Deel door 2: **x = 6**. Check: 2·6 + 7 = 19 ✓." },
           ],
-          niveaus: { basis: "x=6. A.", simpeler: "12/2=6. A.", nogSimpeler: "6 = A." },
+          niveaus: { basis: "x=6. A.", simpeler: "12/2=6. A.", nogSimpeler: "6" },
         },
       },
       {
@@ -108,7 +108,7 @@ const steps = [
           stappen: [
             { titel: "Haakjes + verplaatsen", tekst: "3x − 12 = 2x + 5.\n3x − 2x = 5 + 12.\nx = **17**.\nCheck: 3(17−4) = 39. 2·17+5 = 39 ✓." },
           ],
-          niveaus: { basis: "x=17. A.", simpeler: "Verplaats x naar links: x=17. A.", nogSimpeler: "17 = A." },
+          niveaus: { basis: "x=17. A.", simpeler: "Verplaats x naar links: x=17. A.", nogSimpeler: "17" },
         },
       },
       {
@@ -120,7 +120,7 @@ const steps = [
           stappen: [
             { titel: "Vergelijking opstellen", tekst: "Breedte = b, lengte = b + 5. Omtrek = 2(L + B) = 30 → 2(b+5+b) = 30 → 4b + 10 = 30 → 4b = 20 → **b = 5**. Lengte 10. Check: 2(5+10)=30 ✓." },
           ],
-          niveaus: { basis: "b=5. A.", simpeler: "4b+10=30 → b=5. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "b=5. A.", simpeler: "4b+10=30 → b=5. A.", nogSimpeler: "5" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
             { titel: "Tegenspraak", tekst: "Verplaats x: 2x − 2x = 8 − 5 → 0 = 3. **Vals voor elke x**. Daarom: GEEN oplossing. Visueel: 2 evenwijdige rechten (zelfde helling, ander snijpunt-y) snijden nooit." },
           ],
           theorie: "Tegenovergesteld: 2x + 4 = 2(x+2) → 0 = 0 → ALTIJD waar → oneindig veel oplossingen.",
-          niveaus: { basis: "Geen oplossing. A.", simpeler: "0=3 = vals. A.", nogSimpeler: "Geen = A." },
+          niveaus: { basis: "Geen oplossing. A.", simpeler: "0=3 = vals. A.", nogSimpeler: "Geen" },
         },
       },
       {
@@ -145,7 +145,7 @@ const steps = [
           stappen: [
             { titel: "Breuk weg, dan oplossen", tekst: "Vermenigvuldig beide kanten met 2: x + 3 = 10. Trek 3 af: **x = 7**. Check: (7+3)/2 = 5 ✓." },
           ],
-          niveaus: { basis: "x=7. A.", simpeler: "10−3=7. A.", nogSimpeler: "7 = A." },
+          niveaus: { basis: "x=7. A.", simpeler: "10−3=7. A.", nogSimpeler: "7" },
         },
       },
     ],
@@ -166,7 +166,7 @@ const steps = [
           stappen: [
             { titel: "Ontbinden", tekst: "Zoek p, q met p+q=−7, p·q=12 → −3, −4. (x−3)(x−4)=0 → **x=3 of x=4**. Check: 3²−7·3+12 = 9−21+12 = 0 ✓." },
           ],
-          niveaus: { basis: "x=3 of x=4. A.", simpeler: "(x−3)(x−4)=0. A.", nogSimpeler: "3,4 = A." },
+          niveaus: { basis: "x=3 of x=4. A.", simpeler: "(x−3)(x−4)=0. A.", nogSimpeler: "3,4" },
         },
       },
       {
@@ -178,7 +178,7 @@ const steps = [
           stappen: [
             { titel: "D = b² − 4ac", tekst: "a=1, b=4, c=1. D = 16 − 4·1·1 = 16 − 4 = **12**. D>0 → twee reële oplossingen." },
           ],
-          niveaus: { basis: "D=12. A.", simpeler: "16−4=12. A.", nogSimpeler: "12 = A." },
+          niveaus: { basis: "D=12. A.", simpeler: "16−4=12. A.", nogSimpeler: "12" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
             { titel: "D = b² − 4ac", tekst: "a=1, b=−2, c=5. D = (−2)² − 4·1·5 = 4 − 20 = **−16**. **D<0 → geen reële oplossingen** (de parabool snijdt x-as niet)." },
           ],
           theorie: "Geometrisch: parabool y = x² − 2x + 5 heeft minimum boven x-as.",
-          niveaus: { basis: "D=−16. A.", simpeler: "Negatief D = geen oplossing. A.", nogSimpeler: "−16 = A." },
+          niveaus: { basis: "D=−16. A.", simpeler: "Negatief D = geen oplossing. A.", nogSimpeler: "−16" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
           stappen: [
             { titel: "Wortel-extractie", tekst: "x² = 49 → x = ±√49 = **±7**. Beide oplossingen want zowel 7² als (−7)² = 49." },
           ],
-          niveaus: { basis: "±7. A.", simpeler: "x=7 of x=−7. A.", nogSimpeler: "±7 = A." },
+          niveaus: { basis: "±7. A.", simpeler: "x=7 of x=−7. A.", nogSimpeler: "±7" },
         },
       },
       {
@@ -220,7 +220,7 @@ const steps = [
           stappen: [
             { titel: "ABC stap-voor-stap", tekst: "a=2, b=−3, c=−5. D = 9 + 40 = 49 → √49 = 7.\nx = (3 ± 7) / 4.\nx = 10/4 = 2,5 OF x = −4/4 = −1.\n→ **x = 2,5 of x = −1**.\nCheck: 2(2,5)² − 3(2,5) − 5 = 12,5 − 7,5 − 5 = 0 ✓." },
           ],
-          niveaus: { basis: "x=2,5 of −1. A.", simpeler: "Twee oplossingen via ABC. A.", nogSimpeler: "2,5/−1 = A." },
+          niveaus: { basis: "x=2,5 of −1. A.", simpeler: "Twee oplossingen via ABC. A.", nogSimpeler: "2,5/−1" },
         },
       },
     ],
@@ -241,7 +241,7 @@ const steps = [
           stappen: [
             { titel: "Optellen + delen door 2", tekst: "x + y = 10\nx − y = 4\nOptellen: 2x = 14 → **x = 7**. y = 10 − 7 = 3. Check: 7−3=4 ✓." },
           ],
-          niveaus: { basis: "x=7. A.", simpeler: "Optel beide: 2x=14, x=7. A.", nogSimpeler: "7 = A." },
+          niveaus: { basis: "x=7. A.", simpeler: "Optel beide: 2x=14, x=7. A.", nogSimpeler: "7" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
           stappen: [
             { titel: "Stelsel oplossen", tekst: "3a + 2b = 11\na + 4b = 12\n×6 tweede: 6a + 24b = 72. ×2 eerste: 6a + 4b = 22. Aftrekken: 20b = 50 → b = 2,5. a = 12 − 4·2,5 = **€2**.\nCheck: 3·2 + 2·2,5 = 6+5 = 11 ✓." },
           ],
-          niveaus: { basis: "a=€2. A.", simpeler: "Eliminatie geeft a=2. A.", nogSimpeler: "€2 = A." },
+          niveaus: { basis: "a=€2. A.", simpeler: "Eliminatie geeft a=2. A.", nogSimpeler: "€2" },
         },
       },
       {
@@ -271,7 +271,7 @@ const steps = [
             { titel: "Tweede = 2× eerste", tekst: "4x + 6y = 2(2x + 3y) = 2·12 = 24. **Beide vergelijkingen zijn IDENTIEK** → één lijn → oneindig veel oplossingen op die lijn." },
           ],
           theorie: "Indien tweede had geweest 4x + 6y = 25, dan: 24 = 25 vals → geen oplossing (evenwijdige lijnen).",
-          niveaus: { basis: "Oneindig. A.", simpeler: "Beide zelfde lijn = ∞. A.", nogSimpeler: "∞ = A." },
+          niveaus: { basis: "Oneindig. A.", simpeler: "Beide zelfde lijn = ∞. A.", nogSimpeler: "∞" },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
           stappen: [
             { titel: "Eliminatie", tekst: "4s + 3j = 50\n2s + 5j = 40 (×2): 4s + 10j = 80\nAftrekken: 7j = 30 → j = 30/7 ≈ 4,29 (niet geheel).\n\n*Som-anomalie* — getallen kloppen niet voor mooie integer. In CSE-realiteit: getallen worden zo gekozen dat resultaten geheel zijn. Voor deze opdracht: kies tweede antwoord (8) als 'best benaderbaar' — maar belangrijker = methode kennen." },
           ],
-          niveaus: { basis: "Methode: eliminatie. A.", simpeler: "Twee onbekenden = stelsel. A.", nogSimpeler: "Stelsel = A." },
+          niveaus: { basis: "Methode: eliminatie. A.", simpeler: "Twee onbekenden = stelsel. A.", nogSimpeler: "Stelsel" },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
         wrongHints: [null, "Wel methode.", "Wel methode.", "Wel methode."],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras voor driehoek", tekst: "Pythagoras (a² + b² = c²) is voor rechthoekige driehoek-zijden, NIET voor stelsels. Drie methodes voor stelsels: substitutie, eliminatie, grafisch." }],
-          niveaus: { basis: "Pythagoras niet. A.", simpeler: "Pyth = driehoek. A.", nogSimpeler: "Pyth = A." },
+          niveaus: { basis: "Pythagoras niet. A.", simpeler: "Pyth = driehoek. A.", nogSimpeler: "Pyth" },
         },
       },
     ],
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Niet — teken niet omdraaien (delen door +).", "Niet — controleer.", "Niet — geen ≥."],
         uitlegPad: {
           stappen: [{ titel: "Zoals vergelijking + > teken", tekst: "2x + 5 > 13. Verplaats: 2x > 8. Deel door 2 (positief, teken blijft): **x > 4**." }],
-          niveaus: { basis: "x>4. A.", simpeler: "Verplaats + delen. A.", nogSimpeler: "x>4 = A." },
+          niveaus: { basis: "x>4. A.", simpeler: "Verplaats + delen. A.", nogSimpeler: "x>4" },
         },
       },
       {
@@ -329,7 +329,7 @@ const steps = [
           stappen: [
             { titel: "Delen door −2: TEKEN OMDRAAIEN", tekst: "−2x ≥ 6. Deel door −2 (NEGATIEF): **x ≤ −3** (≥ wordt ≤). Check: x = −5: −2(−5) = 10 ≥ 6 ✓. x = 0: 0 ≥ 6 ✗ → klopt." },
           ],
-          niveaus: { basis: "x≤−3. A.", simpeler: "Negatief delen = teken omkeren. A.", nogSimpeler: "x≤−3 = A." },
+          niveaus: { basis: "x≤−3. A.", simpeler: "Negatief delen = teken omkeren. A.", nogSimpeler: "x≤−3" },
         },
       },
       {
@@ -346,7 +346,7 @@ const steps = [
           stappen: [
             { titel: "Ongelijkheid opstellen", tekst: "20 + 0,15g ≤ 50.\n0,15g ≤ 30.\ng ≤ 30 / 0,15 = **200**. Max 200 gesprekken." },
           ],
-          niveaus: { basis: "g ≤ 200. A.", simpeler: "30÷0,15=200. A.", nogSimpeler: "200 = A." },
+          niveaus: { basis: "g ≤ 200. A.", simpeler: "30÷0,15=200. A.", nogSimpeler: "200" },
         },
       },
       {
@@ -363,7 +363,7 @@ const steps = [
           stappen: [
             { titel: "Parabool-analyse", tekst: "x² − 4 = 0 → x = ±2. Parabool y = x² − 4 opent omhoog. BOVEN x-as wanneer x kleiner dan −2 OF groter dan 2. Onder x-as tussen −2 en 2. Dus x²−4 > 0 → **x < −2 of x > 2**." },
           ],
-          niveaus: { basis: "x<−2 of x>2. A.", simpeler: "Buiten −2 en 2. A.", nogSimpeler: "|x|>2 = A." },
+          niveaus: { basis: "x<−2 of x>2. A.", simpeler: "Buiten −2 en 2. A.", nogSimpeler: "|x|>2" },
         },
       },
       {
@@ -375,7 +375,7 @@ const steps = [
           stappen: [
             { titel: "D < 0 vereist", tekst: "D = 4 − 4a. Voor geen reële oplossing: D < 0 → 4 − 4a < 0 → a > 1. Dus **a > 1**. Test a=2: D = −4 → geen reële wortel. Test a=0: D=4 → twee oplossingen ✓." },
           ],
-          niveaus: { basis: "a>1. A.", simpeler: "D<0 vereist a>1. A.", nogSimpeler: "a>1 = A." },
+          niveaus: { basis: "a>1. A.", simpeler: "D<0 vereist a>1. A.", nogSimpeler: "a>1" },
         },
       },
     ],

@@ -76,11 +76,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "doel + scope — kern" },
       ],
       uitlegPad: compact(
-        "Informeren vs adviseren: ADVIES = 'doe X' (voorschrift). INFORMEREN = 'dit zijn de feiten / mogelijkheden'. Tekst noemt voorbeelden + tegenvallers zonder voorschrift = informeren. Antwoord met BREDE scope (wat er gedaan KAN worden) = D.",
+        "Informeren vs adviseren: ADVIES = 'doe X' (voorschrift). INFORMEREN = 'dit zijn de feiten / mogelijkheden'. Tekst noemt voorbeelden + tegenvallers zonder voorschrift = informeren. Antwoord met BREDE scope (wat er gedaan KAN worden)",
         {
-          basis: "Beschrijving van mogelijkheden = informeren. = D.",
-          simpeler: "De tekst zegt niet 'doe dit' — vertelt wat KAN. = D.",
-          nogSimpeler: "Informeren-mogelijk = D.",
+          basis: "Beschrijving van mogelijkheden = informeren.",
+          simpeler: "De tekst zegt niet 'doe dit' — vertelt wat KAN.",
+          nogSimpeler: "Informeren-mogelijk",
         },
         [
           { woord: "adviseren", uitleg: "Aanraden wat iemand moet doen ('je zou X moeten doen')." },
@@ -117,11 +117,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "doel + scope — kern" },
       ],
       uitlegPad: compact(
-        "Bij voor/nadeel-mix zonder eigen kant kiezen = informeren. Hier: snellezen heeft VOORDELEN (snelheid) en RISICO'S (begripverlies). = B.",
+        "Bij voor/nadeel-mix zonder eigen kant kiezen = informeren. Hier: snellezen heeft VOORDELEN (snelheid) en RISICO'S (begripverlies).",
         {
-          basis: "Voordelen + risico's beschreven = informeren erover. = B.",
-          simpeler: "Tekst zegt 'goed' en 'pas op'. Allebei → informeren. = B.",
-          nogSimpeler: "Voor/nadeel = B.",
+          basis: "Voordelen + risico's beschreven = informeren erover.",
+          simpeler: "Tekst zegt 'goed' en 'pas op'. Allebei → informeren.",
+          nogSimpeler: "Voor/nadeel",
         },
         [
           { woord: "nuancering", uitleg: "Een zwart/wit-beeld kleuren met genuanceerde voor- en nadelen." },
@@ -158,11 +158,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "advertentie-analyse — kern" },
       ],
       uitlegPad: compact(
-        "Doelgroep-truc: zoek wie ECHT de actie kan/wil doen. Advertentie zegt 'UW krant' → mensen die zelf een krant ontvangen worden direct aangesproken. = A.",
+        "Doelgroep-truc: zoek wie ECHT de actie kan/wil doen. Advertentie zegt 'UW krant' → mensen die zelf een krant ontvangen worden direct aangesproken.",
         {
-          basis: "'UW krant' = lezers met krant. = A.",
-          simpeler: "Wie ontvangt 'UW krant'? Mensen die abonnee zijn. = A.",
-          nogSimpeler: "Abonnees = A.",
+          basis: "'UW krant' = lezers met krant.",
+          simpeler: "Wie ontvangt 'UW krant'? Mensen die abonnee zijn.",
+          nogSimpeler: "Abonnees",
         },
         [
           { woord: "doelgroep", uitleg: "De groep mensen waar een tekst zich vooral op richt." },
@@ -199,11 +199,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + breedste passende optie — kern" },
       ],
       uitlegPad: compact(
-        "Tekst zonder OPROEP = niet activeren. Tekst zonder MENING = niet overtuigen. Tekst LEGT UIT waar het stroef gaat = informeren over PROBLEMEN. = C.",
+        "Tekst zonder OPROEP = niet activeren. Tekst zonder MENING = niet overtuigen. Tekst LEGT UIT waar het stroef gaat = informeren over PROBLEMEN.",
         {
-          basis: "Schetst alle problemen, geen oproep = informeren over problemen. = C.",
-          simpeler: "De tekst zegt: 'aanpakken is moeilijk omdat...'. = C.",
-          nogSimpeler: "Problemen = C.",
+          basis: "Schetst alle problemen, geen oproep = informeren over problemen.",
+          simpeler: "De tekst zegt: 'aanpakken is moeilijk omdat...'.",
+          nogSimpeler: "Problemen",
         },
         [
           { woord: "informeren-over-problemen", uitleg: "Lezer LATEN ZIEN waar de moeilijkheden zitten, zonder oplossing op te dringen." },
@@ -240,11 +240,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "alineas-verband — kern" },
       ],
       uitlegPad: compact(
-        "Tegenstelling-signalen tussen alineas: MAAR, ÓÓK NIET, ANDERZIJDS, AAN DE ANDERE KANT. Hier: 7 'overheid moet' ↔ 8 'maar OOK bedrijven'. = B.",
+        "Tegenstelling-signalen tussen alineas: MAAR, ÓÓK NIET, ANDERZIJDS, AAN DE ANDERE KANT. Hier: 7 'overheid moet' ↔ 8 'maar OOK bedrijven'.",
         {
-          basis: "'Niet alleen overheid maar ook bedrijven' = tegenstelling. = B.",
-          simpeler: "Alinea 7 wijst naar A, alinea 8 zegt 'ook B'. Tegenstelling. = B.",
-          nogSimpeler: "Tegenstelling = B.",
+          basis: "'Niet alleen overheid maar ook bedrijven' = tegenstelling.",
+          simpeler: "Alinea 7 wijst naar A, alinea 8 zegt 'ook B'. Tegenstelling.",
+          nogSimpeler: "Tegenstelling",
         },
         [
           { woord: "tegenstelling tussen alineas", uitleg: "Twee alineas die elkaar AANVULLEN met een tegenwerping ('niet alleen X, ook Y')." },
@@ -281,11 +281,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "kerngedachte vinden — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN. Tekst zegt: niets werkt 100% — alle inzet ten spijt blijft zwerfafval probleem. Optie D bevat ÉN burgerinitiatief ÉN overheid ÉN bedrijven ÉN conclusie 'moeilijk'. = D.",
+        "Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN. Tekst zegt: niets werkt 100% — alle inzet ten spijt blijft zwerfafval probleem. Optie D bevat ÉN burgerinitiatief ÉN overheid ÉN bedrijven ÉN conclusie 'moeilijk'.",
         {
-          basis: "Slot-toon = 'ondanks alles, blijft probleem' = D.",
-          simpeler: "Hoofdgedachte = de boodschap. Hier: 'we proberen alles maar het werkt niet goed'. = D.",
-          nogSimpeler: "Moeilijk-ondanks = D.",
+          basis: "Slot-toon = 'ondanks alles, blijft probleem'",
+          simpeler: "Hoofdgedachte = de boodschap. Hier: 'we proberen alles maar het werkt niet goed'.",
+          nogSimpeler: "Moeilijk-ondanks",
         },
         [
           { woord: "hoofdgedachte", uitleg: "De centrale boodschap van de tekst in één zin." },

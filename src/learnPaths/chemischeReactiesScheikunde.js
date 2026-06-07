@@ -663,7 +663,7 @@ const steps = [
             { type: "feit", tekst: "Verbranden hout: hout + O₂ → CO₂ + H₂O + as. Zelfde aantal atomen, andere stoffen." },
           ],
           basiskennis: [{ onderwerp: "Niet alle reacties zichtbaar", uitleg: "Sommige reacties subtiel (vertering, oxidatie metaal). Belangrijk weten: het GEBEURT, ook al zie je niet veel." }],
-          niveaus: { basis: "Stoffen veranderen. = A.", simpeler: "Chemische reactie = stoffen veranderen in andere stoffen met nieuwe eigenschappen. Atomen blijven, rangschikking nieuw. = A.", nogSimpeler: "Nieuwe stof = A." },
+          niveaus: { basis: "Stoffen veranderen.", simpeler: "Chemische reactie = stoffen veranderen in andere stoffen met nieuwe eigenschappen. Atomen blijven, rangschikking nieuw.", nogSimpeler: "Nieuwe stof" },
         },
       },
       {
@@ -687,7 +687,7 @@ const steps = [
             { type: "stap", tekst: "Verwarmen ijs (vast) → smelt naar water (vloeibaar) → kookt naar stoom (gas). Drie fasen door verwarming." },
           ],
           basiskennis: [{ onderwerp: "Plasma 4e fase", uitleg: "Geavanceerd: plasma = 4e fase, geïoniseerd gas. Cito-Po vraagt meestal alleen 3 hoofdfasen." }],
-          niveaus: { basis: "Vast, vloeibaar, gas. = A.", simpeler: "3 fasen: vast (ijs), vloeibaar (water), gas (damp). Overgangen mogelijk door warmte. = A.", nogSimpeler: "3 fasen = A." },
+          niveaus: { basis: "Vast, vloeibaar, gas.", simpeler: "3 fasen: vast (ijs), vloeibaar (water), gas (damp). Overgangen mogelijk door warmte.", nogSimpeler: "3 fasen" },
         },
       },
       {
@@ -711,7 +711,7 @@ const steps = [
             { type: "stap", tekst: "Water-molecuul H₂O: één centraal zuurstof-atoom met 2 waterstof-atomen 'armen'. ~104° hoek." },
           ],
           basiskennis: [{ onderwerp: "Cito-VMBO basis", uitleg: "Onderscheid atoom/molecuul/verbinding moeten kunnen maken." }],
-          niveaus: { basis: "Atomen verbonden. = A.", simpeler: "Molecuul = groep atomen chemisch aaneengeplakt. Bv water H₂O = 2 waterstof + 1 zuurstof. = A.", nogSimpeler: "Atomen-groep = A." },
+          niveaus: { basis: "Atomen verbonden.", simpeler: "Molecuul = groep atomen chemisch aaneengeplakt. Bv water H₂O = 2 waterstof + 1 zuurstof.", nogSimpeler: "Atomen-groep" },
         },
       },
       {
@@ -736,7 +736,7 @@ const steps = [
             { type: "feit", tekst: "Bij brandend maagzuur: maagzuur lekt naar slokdarm. Anti-zuur-pillen (Rennies) = base = neutraliseert zuur tot pH ~7." },
           ],
           basiskennis: [{ onderwerp: "Cito-VMBO scheikunde", uitleg: "pH-vragen vaak in examen-stof. Onthoud schaal + 7 = neutraal." }],
-          niveaus: { basis: "Zuur/base maat 0-14. = A.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterk base (gootsteenontstopper). = A.", nogSimpeler: "Zuur/base = A." },
+          niveaus: { basis: "Zuur/base maat 0-14.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterk base (gootsteenontstopper).", nogSimpeler: "Zuur/base" },
         },
       },
       { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Dat is H₂.","Dat is O₂.","Dat is NaCl."] },

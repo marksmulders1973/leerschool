@@ -78,11 +78,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Een kopje dekt de KERN van het blok. Alinea 2 vertelt hoe getest is, alinea 3 wat eruit kwam — de payoff. Het overkoepelende kopje is dan 'resultaten van het onderzoek'. = C.",
+        "Een kopje dekt de KERN van het blok. Alinea 2 vertelt hoe getest is, alinea 3 wat eruit kwam — de payoff. Het overkoepelende kopje is dan 'resultaten van het onderzoek'.",
         {
-          basis: "Blok eindigt in de uitkomsten. = C.",
-          simpeler: "Waar loopt het blok op uit? De resultaten. = C.",
-          nogSimpeler: "Resultaten = C.",
+          basis: "Blok eindigt in de uitkomsten.",
+          simpeler: "Waar loopt het blok op uit? De resultaten.",
+          nogSimpeler: "Resultaten",
         },
         [
           { woord: "kopje", uitleg: "Een korte titel boven een blok tekst die de inhoud ervan samenvat." },
@@ -116,11 +116,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Let op het woord 'onbekend/nieuw'. De tekst zegt dat matig/slecht gehoor al bekend was — dus dat valt af. Het nieuwe: zélfs héél lichte schade telt al. = D.",
+        "Let op het woord 'onbekend/nieuw'. De tekst zegt dat matig/slecht gehoor al bekend was — dus dat valt af. Het nieuwe: zélfs héél lichte schade telt al.",
         {
-          basis: "Nieuw = heel lichte schade telt al. = D.",
-          simpeler: "Wat wisten we nog niet? Lichte schade telt al. = D.",
-          nogSimpeler: "Heel lichte schade = D.",
+          basis: "Nieuw = heel lichte schade telt al.",
+          simpeler: "Wat wisten we nog niet? Lichte schade telt al.",
+          nogSimpeler: "Heel lichte schade",
         },
         [
           { woord: "gegeven", uitleg: "Een feit of uitkomst; hier: wat het onderzoek nieuw heeft aangetoond." },
@@ -154,11 +154,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Hoofdresultaat = wat ALLE onderzoeken samen laten zien. Hier komt steeds terug: we vergeten het meeste snel en houden alleen de kern over. = C.",
+        "Hoofdresultaat = wat ALLE onderzoeken samen laten zien. Hier komt steeds terug: we vergeten het meeste snel en houden alleen de kern over.",
         {
-          basis: "Alleen de kern blijft hangen. = C.",
-          simpeler: "Wat onthouden we echt? De kern. = C.",
-          nogSimpeler: "De kern = C.",
+          basis: "Alleen de kern blijft hangen.",
+          simpeler: "Wat onthouden we echt? De kern.",
+          nogSimpeler: "De kern",
         },
         [
           { woord: "hoofdresultaat", uitleg: "De belangrijkste uitkomst die uit de hele tekst naar voren komt." },
@@ -192,11 +192,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Informeren = uitleggen/laten weten. Adviseren = tips geven om iets te doen. De tekst beschrijft onderzoeken zonder tips → informeren over onderzoeken. = D.",
+        "Informeren = uitleggen/laten weten. Adviseren = tips geven om iets te doen. De tekst beschrijft onderzoeken zonder tips → informeren over onderzoeken.",
         {
-          basis: "Beschrijft onderzoek = informeren. = D.",
-          simpeler: "Geen tips, wel uitleg over onderzoek. = D.",
-          nogSimpeler: "Informeren = D.",
+          basis: "Beschrijft onderzoek = informeren.",
+          simpeler: "Geen tips, wel uitleg over onderzoek.",
+          nogSimpeler: "Informeren",
         },
         [
           { woord: "tekstdoel", uitleg: "Wat de schrijver wil bereiken: informeren, overtuigen, amuseren of activeren." },
@@ -230,11 +230,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "Tekstsoort flyer → doel = activeren. Aan wie is het gericht? 'Jij en je buren' = de lezer. Dus: lezers aansporen om mee te doen. = C.",
+        "Tekstsoort flyer → doel = activeren. Aan wie is het gericht? 'Jij en je buren' = de lezer. Dus: lezers aansporen om mee te doen.",
         {
-          basis: "Flyer spoort de lezer aan. = C.",
-          simpeler: "Ze willen dat JIJ meedoet. = C.",
-          nogSimpeler: "Aansporen mee te doen = C.",
+          basis: "Flyer spoort de lezer aan.",
+          simpeler: "Ze willen dat JIJ meedoet.",
+          nogSimpeler: "Aansporen mee te doen",
         },
         [
           { woord: "activeren", uitleg: "De lezer aanzetten om concreet iets te doen (meedoen, aanmelden)." },
@@ -268,11 +268,11 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: KETEN,
       uitlegPad: compact(
-        "De centrale vraag is de twijfel die de hele tekst onderzoekt. Hier komt steeds terug: menen bedrijven het (duurzaam) of doen ze maar alsof (greenwashing)? = D.",
+        "De centrale vraag is de twijfel die de hele tekst onderzoekt. Hier komt steeds terug: menen bedrijven het (duurzaam) of doen ze maar alsof (greenwashing)?",
         {
-          basis: "Echt duurzaam of doen ze alsof? = D.",
-          simpeler: "De tekst twijfelt: serieus of schijn? = D.",
-          nogSimpeler: "Duurzaam of alsof = D.",
+          basis: "Echt duurzaam of doen ze alsof?",
+          simpeler: "De tekst twijfelt: serieus of schijn?",
+          nogSimpeler: "Duurzaam of alsof",
         },
         [
           { woord: "greenwashing", uitleg: "Je groener of duurzamer voordoen dan je werkelijk bent." },

@@ -157,8 +157,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Schok in Europa", uitleg: "Andere koningen waren bang dat hun volk hetzelfde zou doen — leidde tot oorlogen tegen Frankrijk." }],
           niveaus: {
             basis: "Onthoofd met guillotine 21 jan 1793. A.",
-            simpeler: "Na de Republiek werd de koning aangeklaagd voor landverraad. Hij kreeg de doodstraf met de guillotine op 21 januari 1793. = A.",
-            nogSimpeler: "Onthoofd 1793 = A.",
+            simpeler: "Na de Republiek werd de koning aangeklaagd voor landverraad. Hij kreeg de doodstraf met de guillotine op 21 januari 1793.",
+            nogSimpeler: "Onthoofd 1793",
           },
         },
       },
@@ -238,8 +238,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Lange invloed", uitleg: "Napoleon zat maar ~10 jaar aan macht, maar systemen leven door tot vandaag." }],
           niveaus: {
             basis: "Burgerlijke staat, achternamen, kadaster. A.",
-            simpeler: "Napoleon dwong nieuwe administratie door in NL (1810-1813): officiële geboorte/huwelijksregisters, verplichte achternamen, grondbezit-register. Nog steeds in gebruik. = A.",
-            nogSimpeler: "Achternamen + kadaster = A.",
+            simpeler: "Napoleon dwong nieuwe administratie door in NL (1810-1813): officiële geboorte/huwelijksregisters, verplichte achternamen, grondbezit-register. Nog steeds in gebruik.",
+            nogSimpeler: "Achternamen + kadaster",
           },
         },
       },

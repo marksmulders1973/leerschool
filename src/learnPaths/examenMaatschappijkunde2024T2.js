@@ -55,7 +55,7 @@ const steps = [
           niveaus: {
             basis: "Fase 3 beleidsbepaling. Antwoord C.",
             simpeler: "Parlement heeft gestemd = beslissing genomen = beleidsbepaling = fase 3. Antwoord C.",
-            nogSimpeler: "Stemming = bepaling = C.",
+            nogSimpeler: "Stemming = bepaling",
           },
         },
       },
@@ -104,7 +104,7 @@ const steps = [
           niveaus: {
             basis: "Recht van initiatief. Antwoord D.",
             simpeler: "Een eigen NIEUWE wet voorstellen = recht van initiatief. Antwoord D.",
-            nogSimpeler: "Nieuwe wet = initiatief = D.",
+            nogSimpeler: "Nieuwe wet = initiatief",
           },
         },
       },
@@ -154,7 +154,7 @@ const steps = [
           niveaus: {
             basis: "Partijen in college B en W. Antwoord C.",
             simpeler: "Coalitiepartijen in gemeente = partijen die samen wethouders leveren in college van B en W. Antwoord C.",
-            nogSimpeler: "B en W = C.",
+            nogSimpeler: "B en W",
           },
         },
       },
@@ -204,7 +204,7 @@ const steps = [
           niveaus: {
             basis: "Resocialisatie. Antwoord B.",
             simpeler: "'Terug in samenleving brengen' = resocialisatie. Antwoord B.",
-            nogSimpeler: "Resocialisatie = B.",
+            nogSimpeler: "Resocialisatie",
           },
         },
       },
@@ -255,7 +255,7 @@ const steps = [
           niveaus: {
             basis: "Strafeis. Antwoord B.",
             simpeler: "Requisitoir = redevoering officier met de strafeis erin. Antwoord B.",
-            nogSimpeler: "Strafeis = B.",
+            nogSimpeler: "Strafeis",
           },
         },
       },

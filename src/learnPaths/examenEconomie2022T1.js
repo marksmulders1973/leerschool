@@ -46,7 +46,7 @@ const steps = [
       ],
       uitlegPad: compactUitleg(
         "EU heeft 4 vrijheden (sinds Maastricht 1992): goederen, diensten, kapitaal, **personen**. Wonen + werken in ander EU-land = onderdeel van vrij verkeer van personen.",
-        { basis: "Vrij verkeer van personen. = C.", simpeler: "EU heeft 4 vrijheden: goederen/diensten/kapitaal/PERSONEN. Wonen+werken = personen. = C.", nogSimpeler: "Personen = C." },
+        { basis: "Vrij verkeer van personen.", simpeler: "EU heeft 4 vrijheden: goederen/diensten/kapitaal/PERSONEN. Wonen+werken = personen.", nogSimpeler: "Personen" },
         [{ woord: "interne markt", uitleg: "EU-gebied zonder grenzen voor handel + reizen." }],
       ),
     }],
@@ -75,7 +75,7 @@ const steps = [
       ],
       uitlegPad: compactUitleg(
         "Vier instituten met afkortingen onthouden: **CBS** = Statistiek (cijfers verleden). **CPB** = Planbureau (toekomst-prognoses). **SER** = Sociaal-Economische Raad (advies). **UWV** = Werknemersverzekeringen (uitvoering). Voor Prinsjesdag-doorrekening = CPB.",
-        { basis: "CPB rekent door. = B.", simpeler: "CPB = Centraal PlanBureau = economische prognoses. = B.", nogSimpeler: "CPB = B." },
+        { basis: "CPB rekent door.", simpeler: "CPB = Centraal PlanBureau = economische prognoses.", nogSimpeler: "CPB" },
         [
           { woord: "CBS", uitleg: "Centraal Bureau voor de Statistiek." },
           { woord: "CPB", uitleg: "Centraal Plan Bureau — rekent regeringsplannen door." },
@@ -110,7 +110,7 @@ const steps = [
       ],
       uitlegPad: compactUitleg(
         "Modaal = modus = vaakst voorkomend. Bij salarissen: het inkomen dat de meeste mensen verdienen. In NL ~€37.000 bruto (2022). Niet gemiddelde (=optellen+delen). Niet hoogste/laagste.",
-        { basis: "Meest voorkomend. = C.", simpeler: "Modaal komt van 'modus' = vaakst. Modaal inkomen = wat de meeste NL'ers verdienen. = C.", nogSimpeler: "Vaakst = C." },
+        { basis: "Meest voorkomend.", simpeler: "Modaal komt van 'modus' = vaakst. Modaal inkomen = wat de meeste NL'ers verdienen.", nogSimpeler: "Vaakst" },
         [{ woord: "modaal", uitleg: "Inkomen dat het vaakst voorkomt (~€37k bruto)." }, { woord: "modus", uitleg: "Statistisch: vaakst voorkomende waarde." }],
       ),
     }],
@@ -139,7 +139,7 @@ const steps = [
       ],
       uitlegPad: compactUitleg(
         "Recordoogst = veel meer producten beschikbaar dan normaal. Bij gelijke vraag betekent dit dat boeren tegen elkaar concurreren, prijs daalt. Klassieke vraag-aanbod-curve: aanbod stijgt → prijs daalt.",
-        { basis: "Groter aanbod → prijs daalt. = A.", simpeler: "Meer producten op markt + zelfde vraag = prijs gaat omlaag. = A.", nogSimpeler: "Veel oogst = lage prijs. = A." },
+        { basis: "Groter aanbod → prijs daalt.", simpeler: "Meer producten op markt + zelfde vraag = prijs gaat omlaag.", nogSimpeler: "Veel oogst = lage prijs." },
       ),
     }],
   },
@@ -167,7 +167,7 @@ const steps = [
       ],
       uitlegPad: compactUitleg(
         "Nederland-uitkeringen-systeem: **UWV** = werknemersverzekeringen (WW, WIA, ZW — voor werkenden). **SVB** = volksverzekeringen (AOW, kinderbijslag — voor alle inwoners). **Gemeente** = bijstand (sociaal vangnet laagste). Wim werkloos = WW = UWV.",
-        { basis: "Werknemersverzekeringen. = D.", simpeler: "UWV = Uitvoeringsinstituut WerknemersVerzekeringen. WW valt onder werknemers. = D.", nogSimpeler: "UWV = werknemers = D." },
+        { basis: "Werknemersverzekeringen.", simpeler: "UWV = Uitvoeringsinstituut WerknemersVerzekeringen. WW valt onder werknemers.", nogSimpeler: "UWV = werknemers" },
         [{ woord: "UWV", uitleg: "Uitvoeringsinstituut Werknemersverzekeringen." }, { woord: "SVB", uitleg: "Sociale Verzekeringsbank — volksverzekeringen." }],
       ),
     }],

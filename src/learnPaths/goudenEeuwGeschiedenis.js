@@ -154,8 +154,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Slim", uitleg: "Belasting-regels beïnvloeden bouwstijl." }],
           niveaus: {
             basis: "Belasting was op breedte. A.",
-            simpeler: "Belasting werd gerekend per meter breedte van de gevel. Smaller huis = minder belasting. Dus rijke kooplieden bouwden smal + hoog + diep. = A.",
-            nogSimpeler: "Belasting op breedte = A.",
+            simpeler: "Belasting werd gerekend per meter breedte van de gevel. Smaller huis = minder belasting. Dus rijke kooplieden bouwden smal + hoog + diep.",
+            nogSimpeler: "Belasting op breedte",
           },
         },
       },

@@ -58,7 +58,7 @@ const steps = [
           theorie: "Drie overheidslagen, drie scopes: Rijk = landelijk (defensie, AOW), provincie = regio (provinciale wegen, natuur), gemeente = lokaal (vuilnis, paspoort, OZB).",
           voorbeelden: [{ type: "gemeente", tekst: "Vuilniswagen rijdt door jouw straat → betaald door gemeente → opbrengst uit afvalstoffenheffing op aanslag." }],
           basiskennis: [{ onderwerp: "Niet Belastingdienst", uitleg: "Belastingdienst is Rijksdienst die belasting INT, geen vuilnis ophaalt." }],
-          niveaus: { basis: "Gemeente. A.", simpeler: "Vuilnis is lokaal werk — dichtbij burgers. Dat doet de gemeente. = A.", nogSimpeler: "Lokaal = gemeente = A." },
+          niveaus: { basis: "Gemeente. A.", simpeler: "Vuilnis is lokaal werk — dichtbij burgers. Dat doet de gemeente.", nogSimpeler: "Lokaal = gemeente" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
           theorie: "NL is wereldwijd één van de meest gelijke landen (Gini ~0,28) DOOR sterke herverdeling: IB-schijven 37-49%, AOW, bijstand, zorgtoeslag, huurtoeslag.",
           voorbeelden: [{ type: "praktijk", tekst: "Iemand met €100k brutosalaris betaalt veel IB → financiert AOW + toeslagen voor lager-betaalden." }],
           basiskennis: [{ onderwerp: "Niet 'loon verhogen'", uitleg: "Overheid bepaalt geen lonen (behalve minimumloon). Banen + spaargeld zijn ook geen overheidsverdeling." }],
-          niveaus: { basis: "Belasting + toeslagen voor herverdelen. A.", simpeler: "Inkomensverdeling = overheid haalt belasting van rijken + helpt armen met toeslagen. = A.", nogSimpeler: "Herverdelen = A." },
+          niveaus: { basis: "Belasting + toeslagen voor herverdelen. A.", simpeler: "Inkomensverdeling = overheid haalt belasting van rijken + helpt armen met toeslagen.", nogSimpeler: "Herverdelen" },
         },
       },
       {
@@ -86,7 +86,7 @@ const steps = [
           theorie: "Twee kenmerken: (1) niet-rivaliteit (jouw genot vermindert dat van anderen niet — iedereen profiteert van dijk), (2) niet-uitsluitbaar (je kunt niemand wegjagen). Daarom: belasting heffen + overheid levert het.",
           voorbeelden: [{ type: "collectief", tekst: "Dijken, defensie, politie, straatverlichting, bibliotheek (deels)." }, { type: "niet collectief", tekst: "Brood, kleren, telefoon — wel rivaliteit, wel uitsluitbaar (alleen wie betaalt heeft het)." }],
           basiskennis: [{ onderwerp: "Niet 'gratis'", uitleg: "Collectief goed is GRATIS in gebruik (zee inkijken bij dijk gratis), maar wordt door belasting BETAALD." }],
-          niveaus: { basis: "Iedereen profiteert, markt levert niet. A.", simpeler: "Een collectief goed (dijk, leger) profiteert IEDEREEN — daarom betaalt de overheid het uit belasting. = A.", nogSimpeler: "Iedereen profiteert = A." },
+          niveaus: { basis: "Iedereen profiteert, markt levert niet. A.", simpeler: "Een collectief goed (dijk, leger) profiteert IEDEREEN — daarom betaalt de overheid het uit belasting.", nogSimpeler: "Iedereen profiteert" },
         },
       },
       {
@@ -100,7 +100,7 @@ const steps = [
           theorie: "Klassieke overheidstaken (nachtwakerstaat): wetten, orde, defensie. Moderne taken (verzorgingsstaat): onderwijs, zorg, sociale zekerheid, inkomensverdeling.",
           voorbeelden: [{ type: "defensie", tekst: "NL-leger uitgaven ~€20 mrd/jaar (~5% van Rijksbegroting). NAVO-verdrag verplicht 2% BBP." }],
           basiskennis: [{ onderwerp: "Niet onderwijs/sociaal", uitleg: "Onderwijs en sociale zekerheid zijn aparte taken. Defensie is veiligheid." }],
-          niveaus: { basis: "Defensie = wetten + orde. A.", simpeler: "Defensie beschermt NL = veiligheid = 'wetten en orde'-taak. = A.", nogSimpeler: "Veiligheid = A." },
+          niveaus: { basis: "Defensie = wetten + orde. A.", simpeler: "Defensie beschermt NL = veiligheid = 'wetten en orde'-taak.", nogSimpeler: "Veiligheid" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
           theorie: "Spectrum: aan ene kant nachtwaker-staat (alleen wetten/orde/defensie, lage belasting), aan andere kant verzorgingsstaat (uitgebreide voorzieningen, hoge belasting). NL + Scandinavië = klassieke verzorgingsstaat. VS = meer liberaal.",
           voorbeelden: [{ type: "NL", tekst: "Iedereen heeft gegarandeerd onderwijs + ziekenhuiszorg + bij ontslag WW. Belastingdruk ~40% van BBP." }, { type: "VS", tekst: "Geen verplichte zorgverzekering, dunne sociale vangnetten, lagere belasting (~25%)." }],
           basiskennis: [{ onderwerp: "Politiek vs economie", uitleg: "Verzorgingsstaat zegt iets over ECONOMISCH systeem (overheid groot), niet POLITIEK (democratisch of dictatuur)." }],
-          niveaus: { basis: "Veel sociale taken + hoge belasting. A.", simpeler: "Verzorgingsstaat = overheid regelt veel (zorg, school, uitkering) en burgers betalen veel belasting daarvoor. = A.", nogSimpeler: "Veel publiek = A." },
+          niveaus: { basis: "Veel sociale taken + hoge belasting. A.", simpeler: "Verzorgingsstaat = overheid regelt veel (zorg, school, uitkering) en burgers betalen veel belasting daarvoor.", nogSimpeler: "Veel publiek" },
         },
       },
       {
@@ -128,7 +128,7 @@ const steps = [
           theorie: "Markt regelt externe effecten niet zelf. Overheid grijpt in via heffingen (CO2-heffing), regulering (uitstootnormen) of subsidies (zonnepanelen).",
           voorbeelden: [{ type: "negatief", tekst: "Stikstof-uitstoot landbouw → natuur kapot, omwonenden ziek. Boer betaalt prijs niet." }, { type: "positief", tekst: "Onderwijs maakt iedereen slimmer → hele samenleving profiteert." }],
           basiskennis: [{ onderwerp: "Niet beleid", uitleg: "Belastingverlaging is BELEID, geen extern effect. Loon en spaargeld zijn interne uitkomsten." }],
-          niveaus: { basis: "Vervuiling voor derden. A.", simpeler: "Extern effect = iemand anders ondervindt jouw activiteit zonder dat het in de prijs zit. = A.", nogSimpeler: "Anderen lijden = A." },
+          niveaus: { basis: "Vervuiling voor derden. A.", simpeler: "Extern effect = iemand anders ondervindt jouw activiteit zonder dat het in de prijs zit.", nogSimpeler: "Anderen lijden" },
         },
       },
     ],
@@ -165,7 +165,7 @@ const steps = [
           theorie: "Flevoland is de jongste (1986, ingepolderd). Provincies regelen ruimtelijke ordening, provinciale wegen, natuur, openbaar vervoer in regio.",
           voorbeelden: [{ type: "feit", tekst: "Provinciale Statenverkiezingen elke 4 jaar — bepalen ook indirect de Eerste Kamer." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "12 = provincies. 21 = waterschappen. ~340 = gemeenten. Verschillende lagen, andere aantallen." }],
-          niveaus: { basis: "12 provincies. A.", simpeler: "Nederland heeft 12 provincies — van Groningen tot Limburg, plus Flevoland. = A.", nogSimpeler: "12 = A." },
+          niveaus: { basis: "12 provincies. A.", simpeler: "Nederland heeft 12 provincies — van Groningen tot Limburg, plus Flevoland.", nogSimpeler: "12" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
           theorie: "Drie grote decentralisaties van 2015: jeugdzorg, WMO (zorg voor ouderen/zieken), Participatiewet (bijstand). Bedoeling: efficiëntie + maatwerk. Werkelijkheid: gemeenten financieel in problemen.",
           voorbeelden: [{ type: "praktijk", tekst: "Gezin met probleemkind belt gemeente → consulent komt → toewijzing hulp via lokaal jeugdzorg-team." }],
           basiskennis: [{ onderwerp: "Sinds 2015 lokaal", uitleg: "Voor 2015 was jeugdzorg landelijk. Nu lokaal — gevolg: 340 verschillende systemen in NL." }],
-          niveaus: { basis: "Gemeente sinds 2015. A.", simpeler: "Sinds 2015 doet de gemeente jeugdzorg, niet meer het Rijk. = A.", nogSimpeler: "Gemeente = A." },
+          niveaus: { basis: "Gemeente sinds 2015. A.", simpeler: "Sinds 2015 doet de gemeente jeugdzorg, niet meer het Rijk.", nogSimpeler: "Gemeente" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
           theorie: "Tarief verschilt per gemeente (~0,05-0,15% van WOZ). Huiseigenaar krijgt jaarlijks gemeentelijke aanslag met OZB + afvalstoffenheffing + rioolheffing.",
           voorbeelden: [{ type: "berekening", tekst: "WOZ-waarde €400.000 × 0,1% = €400 OZB per jaar voor gemeente." }],
           basiskennis: [{ onderwerp: "Niet Rijk/accijns", uitleg: "Rijksbelastingen: IB, VPB, BTW. Accijns is op alcohol/brandstof/tabak. OZB is puur gemeente." }],
-          niveaus: { basis: "OZB = gemeente. A.", simpeler: "OZB = belasting op je huis die de GEMEENTE int. Berekend op WOZ-waarde. = A.", nogSimpeler: "Huis + gemeente = A." },
+          niveaus: { basis: "OZB = gemeente. A.", simpeler: "OZB = belasting op je huis die de GEMEENTE int. Berekend op WOZ-waarde.", nogSimpeler: "Huis + gemeente" },
         },
       },
       {
@@ -207,7 +207,7 @@ const steps = [
           theorie: "Reden voor aparte laag: water trekt zich niets aan van gemeente/provinciegrenzen. Een rivier loopt door meerdere gemeentes — best beheerd door één instantie. Bestaan al sinds Middeleeuwen.",
           voorbeelden: [{ type: "praktijk", tekst: "Waterschap Rivierenland onderhoudt dijken langs Waal + Lek. Watersnoodramp 1953 = aanleiding voor moderne Deltawerken." }],
           basiskennis: [{ onderwerp: "Niet onderwijs/politie", uitleg: "Onderwijs/politie/parkeren zijn taken van andere overheidslagen, niet waterschappen." }],
-          niveaus: { basis: "Dijken + water. A.", simpeler: "Waterschap = alles met water: dijken, sloten, waterkwaliteit. = A.", nogSimpeler: "Water = A." },
+          niveaus: { basis: "Dijken + water. A.", simpeler: "Waterschap = alles met water: dijken, sloten, waterkwaliteit.", nogSimpeler: "Water" },
         },
       },
       {
@@ -221,7 +221,7 @@ const steps = [
           theorie: "Trias politica: wetgevende macht (parlement), uitvoerende macht (regering), rechterlijke macht (rechters). Onafhankelijk van elkaar — controle/balans.",
           voorbeelden: [{ type: "wet", tekst: "Wet op het Hoger Onderwijs, Wegenverkeerswet, AOW-wet, Belastingwet." }, { type: "verordening", tekst: "Parkeerverordening gemeente Amsterdam — alleen geldig in Amsterdam." }],
           basiskennis: [{ onderwerp: "ACM = uitvoeren", uitleg: "ACM (Autoriteit Consument & Markt) voert wetten UIT, maakt ze niet." }],
-          niveaus: { basis: "Tweede + Eerste Kamer. A.", simpeler: "Landelijke wetten = Tweede Kamer + Eerste Kamer (Rijksoverheid). = A.", nogSimpeler: "Parlement = A." },
+          niveaus: { basis: "Tweede + Eerste Kamer. A.", simpeler: "Landelijke wetten = Tweede Kamer + Eerste Kamer (Rijksoverheid).", nogSimpeler: "Parlement" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
           theorie: "Effect: gemeenten moesten wachtlijsten invoeren, eigen bijdragen verhogen, of geld bijleggen uit gemeentefonds. Sommige gemeenten kondigden faillissement aan. Probleem actueel — Rijk doet incidentele bijspijkeringen.",
           voorbeelden: [{ type: "praktijk", tekst: "Gemeente Zaanstad: jeugdzorg-tekort €15 mln in 2018, moest snijden in andere voorzieningen." }],
           basiskennis: [{ onderwerp: "Wel iets merkbaar", uitleg: "Burgers merkten: langere wachtlijsten + hogere eigen bijdragen + verschillende behandeling per gemeente (postcodeloterij)." }],
-          niveaus: { basis: "Meer taken, minder geld. A.", simpeler: "Gemeenten kregen nieuwe taken EN te weinig geld → financiële problemen. = A.", nogSimpeler: "Te weinig geld = A." },
+          niveaus: { basis: "Meer taken, minder geld. A.", simpeler: "Gemeenten kregen nieuwe taken EN te weinig geld → financiële problemen.", nogSimpeler: "Te weinig geld" },
         },
       },
     ],
@@ -277,7 +277,7 @@ const steps = [
           theorie: "Begrotingsjaar = kalenderjaar. Presentatie 3 maanden voor start — parlement heeft tot eind december om vragen te stellen + amendementen in te dienen. Daadwerkelijk goedgekeurd door beide Kamers.",
           voorbeelden: [{ type: "ritueel", tekst: "Koning rijdt met de Glazen Koets naar het Binnenhof, leest de Troonrede in de Ridderzaal." }],
           basiskennis: [{ onderwerp: "Niet 1 januari", uitleg: "Op 1 jan gaat begroting in, maar presentatie gebeurt al in september." }],
-          niveaus: { basis: "3e dinsdag september. A.", simpeler: "Prinsjesdag = de derde dinsdag van september. Koning leest Troonrede. = A.", nogSimpeler: "Prinsjesdag = A." },
+          niveaus: { basis: "3e dinsdag september. A.", simpeler: "Prinsjesdag = de derde dinsdag van september. Koning leest Troonrede.", nogSimpeler: "Prinsjesdag" },
         },
       },
       {
@@ -291,7 +291,7 @@ const steps = [
           theorie: "Verdeling ~ 2024: IB+loonheffing 40%, BTW 25%, sociale premies 20%, VPB 8%, accijns 5%, rest 2%. Aardgas is gekrompen door Groninger afbouw.",
           voorbeelden: [{ type: "gas", tekst: "Aardgasbaten waren ~€10 mrd in 2010s, nu ~€1 mrd door afsluiting Groningen." }],
           basiskennis: [{ onderwerp: "Boetes klein", uitleg: "Snelheidsboetes etc. zijn voor strafhandhaving, niet voor financiering. Marginale rijksinkomst." }],
-          niveaus: { basis: "Belastingen. A.", simpeler: "Verreweg meeste rijksinkomsten komen uit BELASTINGEN — alle andere bronnen zijn klein. = A.", nogSimpeler: "Belasting = A." },
+          niveaus: { basis: "Belastingen. A.", simpeler: "Verreweg meeste rijksinkomsten komen uit BELASTINGEN — alle andere bronnen zijn klein.", nogSimpeler: "Belasting" },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
           theorie: "Naam komt van: de bedragen lopen in miljarden, maar 'Miljardennota' kwam pas later in zwang. Klassieke naam blijft Miljoenennota.",
           voorbeelden: [{ type: "praktijk", tekst: "Miljoenennota 2025 ~700 pagina's met sectorale uitgaven, belastingplannen, schuldprognose." }],
           basiskennis: [{ onderwerp: "Niet de toespraak", uitleg: "Troonrede is de TOESPRAAK van de koning. Miljoenennota is het DOCUMENT van Financiën." }],
-          niveaus: { basis: "Plan-document begroting. A.", simpeler: "Miljoenennota = boekwerk met financiële plannen Rijk voor komend jaar. = A.", nogSimpeler: "Plan-boek = A." },
+          niveaus: { basis: "Plan-document begroting. A.", simpeler: "Miljoenennota = boekwerk met financiële plannen Rijk voor komend jaar.", nogSimpeler: "Plan-boek" },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
           theorie: "Top uitgaven (~2024): sociale zekerheid 30%, zorg 20%, onderwijs 10%, openbaar bestuur+veiligheid 10%, infra 5%, defensie 3-5%, EU-afdracht 4%, rente staatsschuld 2-4%.",
           voorbeelden: [{ type: "verdeling", tekst: "Van elke €100 Rijksuitgaven: ~€30 sociaal, ~€20 zorg, ~€10 onderwijs. Verzorgingsstaat in actie." }],
           basiskennis: [{ onderwerp: "Vergrijzing-effect", uitleg: "Sociale zekerheid (vooral AOW + zorg) groeit door vergrijzing — meer ouderen, langer leven." }],
-          niveaus: { basis: "Sociale zekerheid 30%. A.", simpeler: "Grootste uitgavenpost = sociale zekerheid (~30% van alles). = A.", nogSimpeler: "AOW etc. = A." },
+          niveaus: { basis: "Sociale zekerheid 30%. A.", simpeler: "Grootste uitgavenpost = sociale zekerheid (~30% van alles).", nogSimpeler: "AOW etc." },
         },
       },
       {
@@ -333,7 +333,7 @@ const steps = [
           theorie: "EMU-norm: tekort < 3% BBP. NL had 2024 ~€20 mrd tekort = ~2,5% BBP, net onder grens. Tijdens corona ging dit ver omhoog (~13% in 2020) — uitzondering toegestaan.",
           voorbeelden: [{ type: "rekensom", tekst: "Inkomsten €350 mrd, uitgaven €370 mrd → tekort €20 mrd → staatsschuld stijgt met €20 mrd." }],
           basiskennis: [{ onderwerp: "Schuld stijgt", uitleg: "Tekort wordt geleend → staatsschuld groeit met dat bedrag. Mechanisme van schuldopbouw." }],
-          niveaus: { basis: "Uitgaven > inkomsten. A.", simpeler: "Begrotingstekort = meer uitgeven dan binnenkrijgen → overheid moet bijlenen → schuld stijgt. = A.", nogSimpeler: "Tekort = bijlenen = A." },
+          niveaus: { basis: "Uitgaven > inkomsten. A.", simpeler: "Begrotingstekort = meer uitgeven dan binnenkrijgen → overheid moet bijlenen → schuld stijgt.", nogSimpeler: "Tekort = bijlenen" },
         },
       },
       {
@@ -347,7 +347,7 @@ const steps = [
           theorie: "Parlementaire controle: Kamer kan begroting WIJZIGEN via amendement (Tweede Kamer) of AFWIJZEN (zowel Tweede als Eerste). Een afgewezen begroting = kabinet valt vaak.",
           voorbeelden: [{ type: "praktijk", tekst: "Begroting Onderwijs €40 mrd → Tweede Kamer voegt €500 mln toe voor lerarensalarissen → Eerste Kamer keurt goed → wet." }],
           basiskennis: [{ onderwerp: "Niet minister", uitleg: "Minister van Financiën STELT VOOR (Miljoenennota). Parlement beslist." }],
-          niveaus: { basis: "Tweede + Eerste Kamer. A.", simpeler: "Beide Kamers moeten goedkeuren. Dan pas is begroting officieel. = A.", nogSimpeler: "Parlement = A." },
+          niveaus: { basis: "Tweede + Eerste Kamer. A.", simpeler: "Beide Kamers moeten goedkeuren. Dan pas is begroting officieel.", nogSimpeler: "Parlement" },
         },
       },
     ],
@@ -380,7 +380,7 @@ const steps = [
           theorie: "Doel: voorkomen dat één land de euro destabiliseert. In praktijk vaak overschreden (Italië, Frankrijk, soms NL). Buitensporig-tekort-procedure leidt zelden tot harde sancties.",
           voorbeelden: [{ type: "NL", tekst: "NL ~50% BBP — keurig binnen norm." }, { type: "buiten", tekst: "Italië ~140%, Griekenland ~165%, Frankrijk ~110% — buiten norm." }],
           basiskennis: [{ onderwerp: "Niet absoluut bedrag", uitleg: "Norm is PERCENTAGE van BBP, niet vast bedrag. Grotere economieën mogen meer schuld." }],
-          niveaus: { basis: "60% BBP. A.", simpeler: "EMU-norm = staatsschuld mag max 60% van BBP zijn binnen de eurozone. = A.", nogSimpeler: "60% = A." },
+          niveaus: { basis: "60% BBP. A.", simpeler: "EMU-norm = staatsschuld mag max 60% van BBP zijn binnen de eurozone.", nogSimpeler: "60%" },
         },
       },
       {
@@ -394,7 +394,7 @@ const steps = [
           theorie: "Onderscheid: investeringen (Deltawerken, hoge-snelheidstrein, universiteiten) bouwen economisch kapitaal op. Consumptieve uitgaven (bv. AOW-verhoging) niet. Lenen voor investeringen ≠ lenen voor consumptie.",
           voorbeelden: [{ type: "infra", tekst: "Nieuwe haven Rotterdam-Maasvlakte 2: €3 mrd lenen → tientallen jaren extra haveninkomsten." }, { type: "onderwijs", tekst: "Investeren in universiteiten → hoger opgeleide beroepsbevolking → hogere lonen + meer belasting later." }],
           basiskennis: [{ onderwerp: "Niet altijd slecht", uitleg: "Een land kan in principe altijd herfinancieren (anders dan huishouden). Investeringen kunnen rentebetaling makkelijk terugverdienen." }],
-          niveaus: { basis: "Voor investeringen. A.", simpeler: "Lenen voor wegen, scholen, onderzoek levert later meer geld op dan het kost. Dat is goede schuld. = A.", nogSimpeler: "Investeringen = A." },
+          niveaus: { basis: "Voor investeringen. A.", simpeler: "Lenen voor wegen, scholen, onderzoek levert later meer geld op dan het kost. Dat is goede schuld.", nogSimpeler: "Investeringen" },
         },
       },
       {
@@ -408,7 +408,7 @@ const steps = [
           theorie: "Rente hangt af van vertrouwen in het land. NL betaalt lage rente (~3% in 2024), Griekenland veel hoger. Pensioenfondsen kopen vaak NL-obligaties — veilige belegging.",
           voorbeelden: [{ type: "praktijk", tekst: "Pensioenfonds koopt €100 mln NL-obligatie 10-jaar 3% → krijgt €3 mln rente/jaar, na 10 jaar de €100 mln terug." }],
           basiskennis: [{ onderwerp: "Niet bedrijf", uitleg: "Staatsobligatie is een PAPIERTJE, geen organisatie. Een staatsbedrijf zoals NS is iets anders." }],
-          niveaus: { basis: "Lening met rente. A.", simpeler: "Staat leent geld door obligaties te verkopen. Koper krijgt rente + bedrag terug na looptijd. = A.", nogSimpeler: "Lening = A." },
+          niveaus: { basis: "Lening met rente. A.", simpeler: "Staat leent geld door obligaties te verkopen. Koper krijgt rente + bedrag terug na looptijd.", nogSimpeler: "Lening" },
         },
       },
       {
@@ -422,7 +422,7 @@ const steps = [
           theorie: "Niet hele schuld wordt direct geraakt — alleen nieuwe + her-financierde leningen. Maar over tijd loopt effect op. €5 mrd is ongeveer wat overheid aan defensie uitgeeft.",
           voorbeelden: [{ type: "schaal", tekst: "€5 mrd = ongeveer hele defensiebudget of het volledige cultuur+onderwijs+sport-budget samen." }],
           basiskennis: [{ onderwerp: "Snel rekenen", uitleg: "1% van miljard = 10 miljoen. 1% van 500 miljard = 5 miljard. Schalen via factoren van 1000." }],
-          niveaus: { basis: "1% × 500 = 5 mrd. A.", simpeler: "1% van €500 miljard = €5 miljard. Een groot bedrag per jaar extra. = A.", nogSimpeler: "€5 mrd = A." },
+          niveaus: { basis: "1% × 500 = 5 mrd. A.", simpeler: "1% van €500 miljard = €5 miljard. Een groot bedrag per jaar extra.", nogSimpeler: "€5 mrd" },
         },
       },
       {
@@ -436,7 +436,7 @@ const steps = [
           theorie: "Vergelijking: Japan 250%, VS 120%, Frankrijk 110%, Italië 140%, Duitsland 65%, NL 50%. Japan kan dit aanhouden dankzij grotendeels binnenlandse schuld + lage rente.",
           voorbeelden: [{ type: "Japan", tekst: "Sinds 1990s 'verloren decennium' met deflatie + lage groei. Overheid leende continu bij om economie te stimuleren." }],
           basiskennis: [{ onderwerp: "Niet 0% of 1000%", uitleg: "0% bestaat praktisch niet. 1000% zou collaps zijn — schuld kan niet onbeperkt groeien." }],
-          niveaus: { basis: "~250% BBP. A.", simpeler: "Japan heeft de hoogste staatsschuld ter wereld: ongeveer 250% van het BBP. = A.", nogSimpeler: "Japan hoog = A." },
+          niveaus: { basis: "~250% BBP. A.", simpeler: "Japan heeft de hoogste staatsschuld ter wereld: ongeveer 250% van het BBP.", nogSimpeler: "Japan hoog" },
         },
       },
       {
@@ -450,7 +450,7 @@ const steps = [
           theorie: "Hoge rente-uitgaven verdringen andere posten (crowding-out effect). Politiek dilemma: bezuinigen op onderwijs/zorg of meer belasting heffen. Beide impopulair.",
           voorbeelden: [{ type: "praktijk", tekst: "€10 mrd renteslag = budget van Justitie of Defensie. Bij rentestijging 2022-2023 verschoven middelen." }],
           basiskennis: [{ onderwerp: "Burgers betalen", uitleg: "Investeerders ontvangen rente. Burgers betalen die rente via belasting." }],
-          niveaus: { basis: "Rente vreet budget. A.", simpeler: "Veel rente betalen aan investeerders → minder geld over voor onderwijs/zorg. = A.", nogSimpeler: "Rente = minder budget = A." },
+          niveaus: { basis: "Rente vreet budget. A.", simpeler: "Veel rente betalen aan investeerders → minder geld over voor onderwijs/zorg.", nogSimpeler: "Rente = minder budget" },
         },
       },
     ],
@@ -483,7 +483,7 @@ const steps = [
           theorie: "CBS meet BBP per kwartaal. Twee minussen op rij = recessie. Werkloosheid stijgt vaak NA recessie (lagging indicator). NL recessies: 2008-09, 2012-14, 2020.",
           voorbeelden: [{ type: "2020", tekst: "NL Q1 2020 −1,6%, Q2 2020 −9,3% → twee kwartalen min → recessie verklaard." }],
           basiskennis: [{ onderwerp: "Niet zomaar 'slecht'", uitleg: "Recessie is een TECHNISCHE term met regel. Niet elke economische tegenwind is recessie." }],
-          niveaus: { basis: "2 kwartalen krimp. A.", simpeler: "Recessie = de economie wordt 2 kwartalen op rij kleiner. = A.", nogSimpeler: "2 kw krimp = A." },
+          niveaus: { basis: "2 kwartalen krimp. A.", simpeler: "Recessie = de economie wordt 2 kwartalen op rij kleiner.", nogSimpeler: "2 kw krimp" },
         },
       },
       {
@@ -497,7 +497,7 @@ const steps = [
           theorie: "Logica: in recessie minder besteden burgers → minder omzet bedrijven → ontslagen → nog minder besteden. Spiraal stoppen door overheid die WEL uitgeeft. Bij groei: oversparen om buffers op te bouwen voor volgende crisis.",
           voorbeelden: [{ type: "corona 2020", tekst: "NL gaf €80 mrd uit aan NOW + TOZO + TVL → ontslagen verminderd, bedrijven overleefden, economie veerde terug." }],
           basiskennis: [{ onderwerp: "Niet bezuinigen", uitleg: "Bezuinigen in recessie = procyclisch = VERERGERT crisis. Politiek verleidelijk, economisch schadelijk." }],
-          niveaus: { basis: "Stimuleren in recessie. A.", simpeler: "Anticyclisch = overheid steekt geld in economie als die in dip zit. Belasting omlaag + meer uitgeven. = A.", nogSimpeler: "Stimuleren = A." },
+          niveaus: { basis: "Stimuleren in recessie. A.", simpeler: "Anticyclisch = overheid steekt geld in economie als die in dip zit. Belasting omlaag + meer uitgeven.", nogSimpeler: "Stimuleren" },
         },
       },
       {
@@ -511,7 +511,7 @@ const steps = [
           theorie: "Conjunctuurfasen: hoogconjunctuur (boom) → recessie → depressie (extreem) → herstel → hoogconjunctuur. Cyclus duurt vaak 5-10 jaar.",
           voorbeelden: [{ type: "boom NL", tekst: "2017-2019: BBP +2-3%/jaar, werkloosheid <4%, lonen stegen, inflatie liep op." }],
           basiskennis: [{ onderwerp: "Niet recessie", uitleg: "Recessie = krimp. Hoogconjunctuur = sterke groei. Tegengestelden." }],
-          niveaus: { basis: "Hoog: groei + lage werkloosheid. A.", simpeler: "Hoogconjunctuur = topfase: BBP stijgt, werkloosheid laag, lonen omhoog. = A.", nogSimpeler: "Topfase = A." },
+          niveaus: { basis: "Hoog: groei + lage werkloosheid. A.", simpeler: "Hoogconjunctuur = topfase: BBP stijgt, werkloosheid laag, lonen omhoog.", nogSimpeler: "Topfase" },
         },
       },
       {
@@ -525,7 +525,7 @@ const steps = [
           theorie: "Bekende voorbeelden: oliecrisis 1973, Black Monday 1987, dotcom-crash 2000, financiële crisis 2008, eurocrisis 2012, corona 2020, energie-crisis 2022.",
           voorbeelden: [{ type: "schokken", tekst: "Lehman Brothers faillissement september 2008 → wereldwijde recessie 2009." }, { type: "corona", tekst: "Lockdowns maart 2020 → toerisme/horeca/luchtvaart in vrije val." }],
           basiskennis: [{ onderwerp: "Cyclisch + extern", uitleg: "Sommige recessies zijn ook gewoon eind van conjunctuurfase. Maar externe schokken vaak directe trigger." }],
-          niveaus: { basis: "Externe schok. A.", simpeler: "Recessies komen vaak door grote externe gebeurtenissen: oorlog, virus, oliecrisis. = A.", nogSimpeler: "Schok = A." },
+          niveaus: { basis: "Externe schok. A.", simpeler: "Recessies komen vaak door grote externe gebeurtenissen: oorlog, virus, oliecrisis.", nogSimpeler: "Schok" },
         },
       },
       {
@@ -539,7 +539,7 @@ const steps = [
           theorie: "Vergelijk: 2008 financiële crisis -3,7% in 2009. Corona was net zo zwaar maar veel KORTER (sneller herstel). Overheid steun voorkwam massa-faillissementen.",
           voorbeelden: [{ type: "data", tekst: "2020 BBP NL: -3,7%. Werkloosheid steeg licht. Steunpakket NOW/TOZO/TVL voorkwam ergere klap." }],
           basiskennis: [{ onderwerp: "Niet ineenstorting", uitleg: "30-70% krimp gebeurt in oorlog/burgeroorlog. Vrede + functionerende economie verliest 'maar' enkele procenten." }],
-          niveaus: { basis: "~3,7% daling. A.", simpeler: "Corona-recessie NL: BBP daalde ongeveer 3,7% in 2020. = A.", nogSimpeler: "~3,7% = A." },
+          niveaus: { basis: "~3,7% daling. A.", simpeler: "Corona-recessie NL: BBP daalde ongeveer 3,7% in 2020.", nogSimpeler: "~3,7%" },
         },
       },
       {
@@ -553,7 +553,7 @@ const steps = [
           theorie: "Great Depression startte met Wall Street Crash 1929 → 1933 VS werkloosheid 25% → ~10 jaar herstel → eindigde pas met WO2-economie. Sindsdien beleid voorkomt dit (overheid grijpt in).",
           voorbeelden: [{ type: "Great Depression", tekst: "VS werkloosheid 1929: 3% → 1933: 25%. BBP daalde 30%. Banken faillieten massaal." }],
           basiskennis: [{ onderwerp: "Niet inflatie", uitleg: "Depressie = krimp + werkloosheid. Hyperinflatie is iets anders (prijzen exploderen)." }],
-          niveaus: { basis: "Lange diepe recessie. A.", simpeler: "Depressie = recessie die JAREN duurt en VEEL dieper is. Bv. 1930-1935. = A.", nogSimpeler: "Lang + diep = A." },
+          niveaus: { basis: "Lange diepe recessie. A.", simpeler: "Depressie = recessie die JAREN duurt en VEEL dieper is. Bv. 1930-1935.", nogSimpeler: "Lang + diep" },
         },
       },
     ],
@@ -591,7 +591,7 @@ const steps = [
           theorie: "Drie hoofdtaken: (1) toezicht op concurrentie (kartels), (2) consumentenbescherming, (3) sector-specifiek toezicht (energie, telecom, post). Kan boetes opleggen tot miljoenen.",
           voorbeelden: [{ type: "boete", tekst: "Apple AppStore-boete €50 mln voor misbruik macht. Google miljarden EU-boetes." }],
           basiskennis: [{ onderwerp: "Uitvoerend, niet wetgevend", uitleg: "ACM voert wetten UIT, maakt ze niet. Wetten komen van parlement." }],
-          niveaus: { basis: "Marktbewaking. A.", simpeler: "ACM is de marktpolitie — bewaakt eerlijke concurrentie + consumentenrechten. = A.", nogSimpeler: "Marktwaakhond = A." },
+          niveaus: { basis: "Marktbewaking. A.", simpeler: "ACM is de marktpolitie — bewaakt eerlijke concurrentie + consumentenrechten.", nogSimpeler: "Marktwaakhond" },
         },
       },
       {
@@ -605,7 +605,7 @@ const steps = [
           theorie: "Waarom illegaal? Markt werkt alleen als bedrijven écht concurreren. Kartel maakt concurrentie schijn → consumenten betalen te veel. Klokkenluiders kunnen ACM tippen + krijgen immuniteit.",
           voorbeelden: [{ type: "bouwfraude", tekst: "Bouwfraude NL 2002: tientallen bouwbedrijven verdeelden opdrachten + spraken prijzen af. Miljoenenboetes." }, { type: "EU", tekst: "Vrachtwagen-kartel EU: DAF, Volvo, Daimler etc. spraken prijzen 14 jaar af. Boete €3,8 mrd." }],
           basiskennis: [{ onderwerp: "Niet 'goedkeuring'", uitleg: "Kartel is STIEKEM, niet officieel goedgekeurd. Tegendeel — verboden." }],
-          niveaus: { basis: "Geheime prijsafspraak. A.", simpeler: "Kartel = bedrijven spreken stiekem af om prijs hoog te houden. Verboden. = A.", nogSimpeler: "Prijsafspraak = A." },
+          niveaus: { basis: "Geheime prijsafspraak. A.", simpeler: "Kartel = bedrijven spreken stiekem af om prijs hoog te houden. Verboden.", nogSimpeler: "Prijsafspraak" },
         },
       },
       {
@@ -619,7 +619,7 @@ const steps = [
           theorie: "Wet bewaakt conformiteit: koffiezetapparaat moet jaren werken, niet 6 maanden. Bij defect: eerst reparatie/vervanging GRATIS, anders prijsverlaging of geld terug. Webshops/winkels mogen geen kortere garantie afspreken.",
           voorbeelden: [{ type: "praktijk", tekst: "Telefoon kapot na 14 maanden = garantieclaim (binnen 2 jaar). Wasmachine kapot na 4 jaar = ook claim mogelijk (verwachte levensduur 10 jaar)." }],
           basiskennis: [{ onderwerp: "Niet fabrieksgarantie", uitleg: "Wettelijke garantie ≠ fabrieksgarantie. Fabriek geeft soms extra (bv. 5 jaar). Wettelijke 2 jaar is MINIMUM." }],
-          niveaus: { basis: "2 jaar wettelijk. A.", simpeler: "Wet garandeert minimaal 2 jaar bij consumentenkoop. Webshop mag dit niet inkorten. = A.", nogSimpeler: "2 jaar = A." },
+          niveaus: { basis: "2 jaar wettelijk. A.", simpeler: "Wet garandeert minimaal 2 jaar bij consumentenkoop. Webshop mag dit niet inkorten.", nogSimpeler: "2 jaar" },
         },
       },
       {
@@ -633,7 +633,7 @@ const steps = [
           theorie: "DGS is EU-regelgeving. Banken betalen jaarlijks premie aan een fonds, daaruit worden depositors uitbetaald bij faillissement. Hierdoor durf je spaargeld bij bank te laten staan.",
           voorbeelden: [{ type: "DSB Bank 2009", tekst: "DSB Bank failliet → spaarders kregen via DGS hun geld terug tot €100k." }, { type: "spreiding", tekst: "Spaargeld €250k? Verdeel over 3 banken → 3× €100k garantie." }],
           basiskennis: [{ onderwerp: "Niet belasting", uitleg: "DGS = garantieverzekering, geen belasting. Wordt gefinancierd door banken zelf." }],
-          niveaus: { basis: "€100k spaargarantie per bank. A.", simpeler: "Bank failliet → overheid garandeert tot €100.000 spaargeld per spaarder per bank. = A.", nogSimpeler: "€100k = A." },
+          niveaus: { basis: "€100k spaargarantie per bank. A.", simpeler: "Bank failliet → overheid garandeert tot €100.000 spaargeld per spaarder per bank.", nogSimpeler: "€100k" },
         },
       },
       {
@@ -647,7 +647,7 @@ const steps = [
           theorie: "NVWA inspecteert + sluit zaken (slecht restaurant, fipronil-eieren-affaire 2017), publiceert sectorrapporten. Werkt samen met EU-instanties bij grensoverschrijdende voedselzaken.",
           voorbeelden: [{ type: "praktijk", tekst: "Fipronil-eierschandaal 2017: NVWA-onderzoek leidde tot miljoenen eieren uit schap." }, { type: "restaurant", tekst: "Hygiëneinspectie + boete bij slecht onderhouden keuken." }],
           basiskennis: [{ onderwerp: "Verschillende toezichthouders", uitleg: "Voedsel = NVWA. Concurrentie/consument = ACM. Banken = DNB. Studie = DUO. Verschillende terreinen." }],
-          niveaus: { basis: "NVWA voor voedsel. A.", simpeler: "Voedselveiligheid en productveiligheid = NVWA. = A.", nogSimpeler: "Voedsel = NVWA = A." },
+          niveaus: { basis: "NVWA voor voedsel. A.", simpeler: "Voedselveiligheid en productveiligheid = NVWA.", nogSimpeler: "Voedsel = NVWA" },
         },
       },
       {
@@ -661,7 +661,7 @@ const steps = [
           theorie: "Reden: in winkel kun je product bekijken, online niet. Bedenktijd compenseert dit. Uitzonderingen: gepersonaliseerd, hygiëne-producten (zwemkleding), zegelversiegelde software/CDs/DVD's.",
           voorbeelden: [{ type: "praktijk", tekst: "Zalando-broek niet leuk? 14 dagen voor retour. Coolblue: gratis retourneren + geld terug binnen 14 dagen." }],
           basiskennis: [{ onderwerp: "Niet in winkel", uitleg: "In FYSIEKE winkel geen wettelijke bedenktijd (winkel mag wel uit servicse 30 dagen aanbieden). Online wel." }],
-          niveaus: { basis: "14 dagen. A.", simpeler: "Online aankoop: 14 dagen bedenktijd. Mag zonder reden retourneren. = A.", nogSimpeler: "14 dagen = A." },
+          niveaus: { basis: "14 dagen. A.", simpeler: "Online aankoop: 14 dagen bedenktijd. Mag zonder reden retourneren.", nogSimpeler: "14 dagen" },
         },
       },
     ],
@@ -698,7 +698,7 @@ const steps = [
           theorie: "Naam 'Tweede Kamer' komt uit historie (na Eerste Kamer-instelling kreeg ze die naam). In de praktijk is Tweede dominant — daar liggen amendement-rechten + politieke debat.",
           voorbeelden: [{ type: "verkiezing", tekst: "Verkiezingen Tweede Kamer 2023: 150 zetels verdeeld over 15+ partijen." }],
           basiskennis: [{ onderwerp: "150 onthouden", uitleg: "150 zetels = onthouden, komt elk examen voor. Coalitie heeft meerderheid van 76 zetels nodig." }],
-          niveaus: { basis: "150 zetels TK. A.", simpeler: "Tweede Kamer heeft 150 leden. Eerste Kamer 75. = A.", nogSimpeler: "150 = A." },
+          niveaus: { basis: "150 zetels TK. A.", simpeler: "Tweede Kamer heeft 150 leden. Eerste Kamer 75.", nogSimpeler: "150" },
         },
       },
       {
@@ -712,7 +712,7 @@ const steps = [
           theorie: "Doel: voorkomen dat 1 persoon/groep alles bepaalt (tirannie). Rechters MOGEN wetten toetsen, parlement mag rechters NIET ontslaan. Onafhankelijkheid = bescherming burger.",
           voorbeelden: [{ type: "praktijk NL", tekst: "Hoge Raad toetst regeringsbeleid (urgenda-vonnis 2019). Parlement laat regering vallen via motie van wantrouwen. Onderlinge balans." }],
           basiskennis: [{ onderwerp: "Politiek vs partij", uitleg: "Trias politica gaat over MACHTEN, niet over partijen. Drie verschillende soorten gezag." }],
-          niveaus: { basis: "Wetgever + uitvoerder + rechter. A.", simpeler: "Macht in drie delen: parlement maakt wetten, regering voert uit, rechters toetsen. = A.", nogSimpeler: "3 machten = A." },
+          niveaus: { basis: "Wetgever + uitvoerder + rechter. A.", simpeler: "Macht in drie delen: parlement maakt wetten, regering voert uit, rechters toetsen.", nogSimpeler: "3 machten" },
         },
       },
       {
@@ -726,7 +726,7 @@ const steps = [
           theorie: "Vier-jaarcyclus: TK-verkiezingen elke 4 jaar (kan eerder bij val kabinet). Stemtelling via evenredige vertegenwoordiging: % stemmen = % zetels.",
           voorbeelden: [{ type: "2023", tekst: "Tweede Kamerverkiezingen november 2023 → PVV grootste partij, coalitievorming volgde." }],
           basiskennis: [{ onderwerp: "Niet de regering", uitleg: "Regering komt VOORT UIT verkiezingen, niet andersom. Eerst kiezen, daarna formeren." }],
-          niveaus: { basis: "Volk, direct. A.", simpeler: "Het volk kiest direct de Tweede Kamer — om de 4 jaar verkiezingen. = A.", nogSimpeler: "Volk = A." },
+          niveaus: { basis: "Volk, direct. A.", simpeler: "Het volk kiest direct de Tweede Kamer — om de 4 jaar verkiezingen.", nogSimpeler: "Volk" },
         },
       },
       {
@@ -740,7 +740,7 @@ const steps = [
           theorie: "Regering kan wetsvoorstellen INDIENEN, maar parlement moet ze GOEDKEUREN. Voert ze daarna uit. Bij wantrouwen Tweede Kamer → kabinet valt → nieuwe verkiezingen.",
           voorbeelden: [{ type: "rol", tekst: "Minister van Financiën voert belastingbeleid uit. Minister van Justitie zet politie aan het werk." }],
           basiskennis: [{ onderwerp: "Samen met parlement", uitleg: "Wetten maken doet de regering SAMEN met parlement. Niet alleen." }],
-          niveaus: { basis: "Wetten uitvoeren + beleid. A.", simpeler: "Regering = premier + ministers. Voeren beleid uit + dienen wetsvoorstellen in. = A.", nogSimpeler: "Uitvoeren = A." },
+          niveaus: { basis: "Wetten uitvoeren + beleid. A.", simpeler: "Regering = premier + ministers. Voeren beleid uit + dienen wetsvoorstellen in.", nogSimpeler: "Uitvoeren" },
         },
       },
       {
@@ -754,7 +754,7 @@ const steps = [
           theorie: "Coalitievorming na verkiezingen: informateurs gaan praten, partijen leggen wensen op tafel, compromis = coalitieakkoord. Duurt vaak maanden in NL.",
           voorbeelden: [{ type: "Rutte-IV", tekst: "Coalitie 2022: VVD + D66 + CDA + CU (4 partijen). Coalitieakkoord 50+ pagina's." }],
           basiskennis: [{ onderwerp: "Niet 1 partij", uitleg: "NL kent geen 1-partij-meerderheid sinds 1800. Altijd coalities." }],
-          niveaus: { basis: "Samenwerkende partijen. A.", simpeler: "Coalitie = paar partijen die samen genoeg zetels hebben om kabinet te vormen. = A.", nogSimpeler: "Samen = A." },
+          niveaus: { basis: "Samenwerkende partijen. A.", simpeler: "Coalitie = paar partijen die samen genoeg zetels hebben om kabinet te vormen.", nogSimpeler: "Samen" },
         },
       },
       {
@@ -768,7 +768,7 @@ const steps = [
           theorie: "21 was de stemleeftijd tot 1972. Daarna verlaagd naar 18. Sommige landen verlaagden recent verder (Oostenrijk 16, Schotland 16 voor referendum). NL discussie hierover loopt.",
           voorbeelden: [{ type: "praktijk", tekst: "Word je 18 op 14 maart? Verkiezingen op 15 maart → je mag stemmen." }],
           basiskennis: [{ onderwerp: "Niet 21", uitleg: "21 was vroeger, niet meer. 16 is in NL niet algemeen kiesrecht (wel in sommige gemeenteraadverkiezingen-pilots)." }],
-          niveaus: { basis: "18 jaar. A.", simpeler: "Je mag stemmen in NL vanaf je 18e verjaardag. = A.", nogSimpeler: "18 = A." },
+          niveaus: { basis: "18 jaar. A.", simpeler: "Je mag stemmen in NL vanaf je 18e verjaardag.", nogSimpeler: "18" },
         },
       },
     ],

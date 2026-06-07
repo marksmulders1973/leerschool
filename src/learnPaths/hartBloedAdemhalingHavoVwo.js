@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — die pompt naar longen.", "Niet — boezem ontvangt.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Sterkste pomp", tekst: "Linkerkamer is sterkst (moet bloed door HELE lichaam pompen → dikkere spier dan rechterkamer). Aorta is dikste slagader. Bij hoge bloeddruk werkt linkerkamer extra hard → kan vergroten + falen op lange termijn." }],
-          niveaus: { basis: "Linkerkamer. A.", simpeler: "Sterkste pomp = links. A.", nogSimpeler: "Links = A." },
+          niveaus: { basis: "Linkerkamer. A.", simpeler: "Sterkste pomp = links. A.", nogSimpeler: "Links" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — longslagader.", "Niet — halsslagaders.", "Niet — leverslagader."],
         uitlegPad: {
           stappen: [{ titel: "Coronair = krans", tekst: "Hart pompt bloed maar moet zelf ook gevoed worden. Kransslagaders (coronair) lopen rondom hart als 'krans'. Verstopping → deel hartspier sterft = **hartinfarct**. Atherosclerose (vetafzetting in wand) hoofdoorzaak. Behandelt via stent of bypass." }],
-          niveaus: { basis: "Hartspier. A.", simpeler: "Krans rond hart. A.", nogSimpeler: "Hart = A." },
+          niveaus: { basis: "Hartspier. A.", simpeler: "Krans rond hart. A.", nogSimpeler: "Hart" },
         },
       },
       {
@@ -54,7 +54,7 @@ const steps = [
           stappen: [
             { titel: "Uitzondering op regel", tekst: "Gewone regel: 'slagader = zuurstofrijk, ader = arm'. Maar bij longvaten OMGEKEERD: longslagader gaat van hart NAAR longen om zuurstof OP TE NEMEN → arm bloed. Longader komt terug met zuurstofrijk bloed. Veel-gemaakte CSE-fout!" },
           ],
-          niveaus: { basis: "Arm bloed. A.", simpeler: "Naar longen voor O₂. A.", nogSimpeler: "Arm = A." },
+          niveaus: { basis: "Arm bloed. A.", simpeler: "Naar longen voor O₂. A.", nogSimpeler: "Arm" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
           stappen: [
             { titel: "Eigen ritme", tekst: "Sinusknoop genereert elektrische impuls 60-100/min spontaan. Impuls → boezems samentrekken → AV-knoop vertraging 0,1 s → kamers samentrekken. Bij defect: pacemaker-implantaat met batterij in borstkas geeft elektrische pulsen." },
           ],
-          niveaus: { basis: "Rechterboezem. A.", simpeler: "Eigen pacemaker. A.", nogSimpeler: "Sinus = A." },
+          niveaus: { basis: "Rechterboezem. A.", simpeler: "Eigen pacemaker. A.", nogSimpeler: "Sinus" },
         },
       },
       {
@@ -81,7 +81,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Sport-niveau.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "HMV = slagvolume × frequentie", tekst: "70 mL × 70 slagen/min = 4900 mL ≈ **5 L/min**. Bij maximale inspanning: 100+ × 180+ = ~20 L/min. Hele bloedvolume (~5 L) gaat dus ~elke minuut rond." }],
-          niveaus: { basis: "5 L/min. A.", simpeler: "70×70 ml = 5 L. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "5 L/min. A.", simpeler: "70×70 ml = 5 L. A.", nogSimpeler: "5" },
         },
       },
     ],
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — dat doen slagaders.", "Niet — hart doet dat.", "Niet — nieren."],
         uitlegPad: {
           stappen: [{ titel: "Wand 1 cel dik", tekst: "Daarom kunnen O₂, glucose, ionen, gassen vrij diffunderen. Alle haarvaten samen ~7000 m² oppervlak in lichaam — geen weefselcel verder dan paar μm van haarvat. Daarom zo efficiënt." }],
-          niveaus: { basis: "Uitwisseling. A.", simpeler: "Stoffen uitwisselen. A.", nogSimpeler: "Uitwiss = A." },
+          niveaus: { basis: "Uitwisseling. A.", simpeler: "Stoffen uitwisselen. A.", nogSimpeler: "Uitwiss" },
         },
       },
       {
@@ -122,7 +122,7 @@ const steps = [
           stappen: [
             { titel: "Zwaartekracht-uitdaging", tekst: "Bloed in benen-aders moet OMHOOG terug naar hart. Tegen zwaartekracht in. Kleppen open + dicht zorgen dat bloed niet terugzakt. Werk hard wanneer je staat. Bij falen → spataders. Tip: regelmatig lopen helpt 'spier-pomp' om bloed omhoog te duwen." },
           ],
-          niveaus: { basis: "Benen. A.", simpeler: "Kleppen in benen. A.", nogSimpeler: "Benen = A." },
+          niveaus: { basis: "Benen. A.", simpeler: "Kleppen in benen. A.", nogSimpeler: "Benen" },
         },
       },
       {
@@ -132,7 +132,7 @@ const steps = [
         wrongHints: [null, "Veel te hoog — hypertensie.", "Te laag.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Systolisch/diastolisch", tekst: "120 = piek (linkerkamer pompt). 80 = rust tussen slagen. Hypertensie >140/90, behandeling met medicatie + leefstijl-aanpassing. Te laag (<90/60) = duizeligheid bij opstaan." }],
-          niveaus: { basis: "120/80. A.", simpeler: "120 boven / 80 onder. A.", nogSimpeler: "120/80 = A." },
+          niveaus: { basis: "120/80. A.", simpeler: "120 boven / 80 onder. A.", nogSimpeler: "120/80" },
         },
       },
       {
@@ -149,7 +149,7 @@ const steps = [
           stappen: [
             { titel: "Slagaderverkalking", tekst: "Cholesterol + andere stoffen vormen plak in slagaderwand. Vernauwt opening + maakt wand stijf → hogere bloeddruk. Plak kan breken → stolsel → blokkeert vat → hartinfarct of beroerte. Risicofactoren: roken, dieet rijk in verzadigd vet, weinig sport, diabetes, hoge bloeddruk, genetisch." },
           ],
-          niveaus: { basis: "Slagaderverkalking. A.", simpeler: "Vet in vaatwand. A.", nogSimpeler: "Plak = A." },
+          niveaus: { basis: "Slagaderverkalking. A.", simpeler: "Vet in vaatwand. A.", nogSimpeler: "Plak" },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
           stappen: [
             { titel: "Mechanisch probleem", tekst: "Beenaderen werken tegen zwaartekracht. Kleppen helpen normaal. Bij slijtage (lang staan, leeftijd, zwangerschap, erfelijkheid) sluiten ze niet meer → bloed zakt terug → ader gerekt → blauwe slang zichtbaar onder huid. Behandeling: steunkousen, lasertherapie, sclerose-injectie." },
           ],
-          niveaus: { basis: "Klep-falen. A.", simpeler: "Bloed pools onderbeen. A.", nogSimpeler: "Klep = A." },
+          niveaus: { basis: "Klep-falen. A.", simpeler: "Bloed pools onderbeen. A.", nogSimpeler: "Klep" },
         },
       },
     ],
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Wel deels, maar O₂ primair.", "Niet — albumine.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "IJzer-houdend eiwit", tekst: "Hb in rode bloedcel bevat 4 ijzer-atomen → bindt 4 O₂-moleculen. In longen (hoge O₂): bindt. In weefsel (lage O₂): laat los. Rood door ijzer. Bij CO-vergiftiging: CO bindt sterker dan O₂ → mensen stikken." }],
-          niveaus: { basis: "O₂. A.", simpeler: "Zuurstof. A.", nogSimpeler: "O₂ = A." },
+          niveaus: { basis: "O₂. A.", simpeler: "Zuurstof. A.", nogSimpeler: "O₂" },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
         wrongHints: [null, "Niet — RBC.", "Niet — witte bloedcellen.", "Niet — plasma."],
         uitlegPad: {
           stappen: [{ titel: "Klont vormen", tekst: "Bij wond: plaatjes worden geactiveerd, klonteren samen tot prop, geven signaal voor coagulatie-cascade → fibrine-net → stolsel houdt bloeding tegen. Te weinig plaatjes (trombocytopenie): bloed makkelijk uit, blauwe plekken. Te veel: trombose-risico." }],
-          niveaus: { basis: "Stolling. A.", simpeler: "Bloedstolsel maken. A.", nogSimpeler: "Stolling = A." },
+          niveaus: { basis: "Stolling. A.", simpeler: "Bloedstolsel maken. A.", nogSimpeler: "Stolling" },
         },
       },
       {
@@ -217,7 +217,7 @@ const steps = [
           stappen: [
             { titel: "Geen antigenen → geen reactie", tekst: "O = geen A/B-antigenen. Negatief = geen Rh-antigen. Lichaam ontvanger ziet niets vreemds → geen afweer. Daarom vraagteken-bloed in noodgeval. NL: ~6% bevolking. Bloedbanken doen continu campagne voor O-negatief donoren." },
           ],
-          niveaus: { basis: "Universele donor. A.", simpeler: "Iedereen kan O− krijgen. A.", nogSimpeler: "O− = A." },
+          niveaus: { basis: "Universele donor. A.", simpeler: "Iedereen kan O− krijgen. A.", nogSimpeler: "O−" },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
           stappen: [
             { titel: "X-chromosoom-gen", tekst: "Stollingsfactor-VIII of -IX defect. Mannen (XY) hebben slechts één X — bij defect: hemofilie. Vrouwen (XX) hebben backup → drager maar meestal geen ziekte. Bekendste familie: Queen Victoria + nakomelingen (Britse + Russische tsarenfamilie + Spaanse koningshuis). Behandeling: stollingsfactor-injecties." },
           ],
-          niveaus: { basis: "Erfelijke stollings-issue. A.", simpeler: "Bloed stolt te traag. A.", nogSimpeler: "Hemof = A." },
+          niveaus: { basis: "Erfelijke stollings-issue. A.", simpeler: "Bloed stolt te traag. A.", nogSimpeler: "Hemof" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
           stappen: [
             { titel: "Te weinig O₂-transport", tekst: "Bloed kan minder O₂ vervoeren → moeheid, bleek, kortademig. Hoofdoorzaken: ijzer-tekort (vooral menstruerende vrouwen), B12-tekort (vegetariërs let op), bloedingen (maagzweer), sikkel-cel (genetisch). Behandeling: ijzer-supplement, B12-injectie, bloed transfusie." },
           ],
-          niveaus: { basis: "Te weinig RBC. A.", simpeler: "Bloedarmoede. A.", nogSimpeler: "Anemie = A." },
+          niveaus: { basis: "Te weinig RBC. A.", simpeler: "Bloedarmoede. A.", nogSimpeler: "Anemie" },
         },
       },
     ],
@@ -270,7 +270,7 @@ const steps = [
         wrongHints: [null, "Niet — geen uitwisseling daar.", "Niet — geen.", "Niet — alleen geleiding."],
         uitlegPad: {
           stappen: [{ titel: "300 mln per long", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (tennisbaan). Daarom enorme efficiëntie." }],
-          niveaus: { basis: "Alveoli. A.", simpeler: "Longblaasjes. A.", nogSimpeler: "Alveoli = A." },
+          niveaus: { basis: "Alveoli. A.", simpeler: "Longblaasjes. A.", nogSimpeler: "Alveoli" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is uitademen.", "Wel — actief.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Borstkas vergroten", tekst: "Diafragma is koepel-spier onderkant borstkas. Bij inademen: samentrekken → koepel afvlakt → naar beneden → borstkas-volume groter → druk daalt → lucht stroomt IN. Bij uitademen ontspannen → koepel terug omhoog." }],
-          niveaus: { basis: "Omlaag. A.", simpeler: "Naar beneden = ruimte. A.", nogSimpeler: "Beneden = A." },
+          niveaus: { basis: "Omlaag. A.", simpeler: "Naar beneden = ruimte. A.", nogSimpeler: "Beneden" },
         },
       },
       {
@@ -297,7 +297,7 @@ const steps = [
           stappen: [
             { titel: "Klassieke biologie-feit", tekst: "Adem-centrum in medulla meet CO₂ via pH-verandering (CO₂ + H₂O → H₂CO₃ → H+). Hoog CO₂ → 'ademen!'-signaal. Daarom kun je adem-inhouden moeilijk doorzetten: niet O₂-tekort triggert, maar CO₂-stijging. Hyperventileren (te diep, te snel) wast CO₂ weg → minder ademimpuls → duizelig." },
           ],
-          niveaus: { basis: "CO₂. A.", simpeler: "CO₂ niet O₂. A.", nogSimpeler: "CO₂ = A." },
+          niveaus: { basis: "CO₂. A.", simpeler: "CO₂ niet O₂. A.", nogSimpeler: "CO₂" },
         },
       },
       {
@@ -309,7 +309,7 @@ const steps = [
           stappen: [
             { titel: "Niet-omkeerbare longschade", tekst: "Chronic Obstructive Pulmonary Disease. ~90% door roken. Trilharen vernietigd → slijm + bacteriën → chronische ontsteking → alveolus-wanden weg → minder oppervlak → benauwd, vooral bij inspanning. NIET genezen, alleen vertragen door stoppen + medicatie." },
           ],
-          niveaus: { basis: "Roken. A.", simpeler: "Roken vernietigt longen. A.", nogSimpeler: "Roken = A." },
+          niveaus: { basis: "Roken. A.", simpeler: "Roken vernietigt longen. A.", nogSimpeler: "Roken" },
         },
       },
       {
@@ -324,7 +324,7 @@ const steps = [
         wrongHints: [null, "Niet — ademvolume in rust.", "Niet — saturatie.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "~4-5 L", tekst: "Maximum diep inademen + helemaal uitademen. Wordt gemeten met spirometer in ziekenhuis. Topsporters hoger (5-6 L). Bij COPD/longziekte daalt. Restvolume ~1,5 L blijft altijd (voorkomt alveolus-collaps)." }],
-          niveaus: { basis: "Max ademen. A.", simpeler: "Diepste in/uit-ademing. A.", nogSimpeler: "Max = A." },
+          niveaus: { basis: "Max ademen. A.", simpeler: "Diepste in/uit-ademing. A.", nogSimpeler: "Max" },
         },
       },
     ],
@@ -350,7 +350,7 @@ const steps = [
           stappen: [
             { titel: "Herken beroerte", tekst: "**F**ace: hangt mondhoek af bij glimlachen? **A**rm: kan beide armen omhoog houden? **S**peech: spraak onduidelijk? **T**ime: bel 112 ONMIDDELLIJK. Tijd is hersenweefsel - hoe sneller behandeling, hoe meer behoud. Behandeling werkt alleen binnen ~4,5 uur na begin." },
           ],
-          niveaus: { basis: "FAST. A.", simpeler: "Face Arm Speech Time. A.", nogSimpeler: "FAST = A." },
+          niveaus: { basis: "FAST. A.", simpeler: "Face Arm Speech Time. A.", nogSimpeler: "FAST" },
         },
       },
       {
@@ -367,7 +367,7 @@ const steps = [
           stappen: [
             { titel: "Bewezen door PREDIMED-studie 2013", tekst: "Spaanse studie 7000 mensen, 5 jaar. Mediterrane dieet verlaagde hart-vaatziekte ~30% vergeleken met laagvet-dieet. Olijfolie + noten gunstige vetten. Vis omega-3. Veel plantaardig. Minder rood vlees + zout. Eenvoudig + lekker." },
           ],
-          niveaus: { basis: "Mediterraan = gezond. A.", simpeler: "Olijfolie + vis + groente. A.", nogSimpeler: "Mediter = A." },
+          niveaus: { basis: "Mediterraan = gezond. A.", simpeler: "Olijfolie + vis + groente. A.", nogSimpeler: "Mediter" },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
             { titel: "Het loont altijd te stoppen", tekst: "Bekend feit van campagnes. 1 jaar stop: ~50% minder hart-aanval-risico. 5 jaar: beroerte-risico bijna gelijk nooit-roker. 10 jaar: longkanker-risico halveert. 15 jaar: bijna alle risico's gelijk. Daarom: stoppen lonen wat leeftijd ook." },
           ],
           theorie: "Vape (e-sigaret): minder schadelijk dan tabak maar niet veilig — nicotine + onbekende lange-termijn-effecten.",
-          niveaus: { basis: "Snelle daling. A.", simpeler: "Stop = veel beter binnen jaar. A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "Snelle daling. A.", simpeler: "Stop = veel beter binnen jaar. A.", nogSimpeler: "Stop" },
         },
       },
       {
@@ -402,7 +402,7 @@ const steps = [
           stappen: [
             { titel: "Levens-redder", tekst: "Bij hartstilstand: hart fibrilleert (chaotische beweging, geen pomp). AED detecteert + geeft elektrische schok om ritme te herstellen. ~80 000 AEDs in NL openbaar beschikbaar (HartslagNu.nl-app toont nabij). Gebruik vereist geen medisch diploma. Combineer met reanimatie." },
           ],
-          niveaus: { basis: "Defibrillator. A.", simpeler: "Hart-schok-apparaat. A.", nogSimpeler: "AED = A." },
+          niveaus: { basis: "Defibrillator. A.", simpeler: "Hart-schok-apparaat. A.", nogSimpeler: "AED" },
         },
       },
       {
@@ -420,7 +420,7 @@ const steps = [
             { titel: "Beweegrichtlijn", tekst: "150 min/week = 30 min × 5 dagen 'matig' (snelwandelen, fietsen, dansen). Of 75 min intensief (joggen, zwemmen, tennis). Plus 2× per week kracht-training. Lager risico hart-vaatziekte, diabetes type 2, sommige kankers, dementie." },
           ],
           theorie: "Zelfs 10k stappen per dag (wandelen) helpt aanzienlijk.",
-          niveaus: { basis: "150 min/week. A.", simpeler: "Half uur 5 dagen. A.", nogSimpeler: "150 min = A." },
+          niveaus: { basis: "150 min/week. A.", simpeler: "Half uur 5 dagen. A.", nogSimpeler: "150 min" },
         },
       },
     ],

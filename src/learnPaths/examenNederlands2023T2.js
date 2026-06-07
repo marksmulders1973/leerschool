@@ -76,11 +76,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "contrasten in alineas — kern" },
       ],
       uitlegPad: compact(
-        "Tegenstelling-signaalwoorden: MAAR, ECHTER, TOCH, NIET... MAAR, INTEGENDEEL. Hier: 'NIET het probleem... HET PROBLEEM zit in...'. Wat staat tegenover wat? Planning ↔ uitvoering. = B.",
+        "Tegenstelling-signaalwoorden: MAAR, ECHTER, TOCH, NIET... MAAR, INTEGENDEEL. Hier: 'NIET het probleem... HET PROBLEEM zit in...'. Wat staat tegenover wat? Planning ↔ uitvoering.",
         {
-          basis: "'Niet planning, maar uitvoering' = tegenstelling. = B.",
-          simpeler: "Plannen kan iedereen — DOEN is moeilijker. Dat is de tegenstelling. = B.",
-          nogSimpeler: "Planning ↔ uitvoering = B.",
+          basis: "'Niet planning, maar uitvoering' = tegenstelling.",
+          simpeler: "Plannen kan iedereen — DOEN is moeilijker. Dat is de tegenstelling.",
+          nogSimpeler: "Planning ↔ uitvoering",
         },
         [
           { woord: "tegenstelling", uitleg: "Twee dingen tegenover elkaar zetten ('niet X, maar Y')." },
@@ -117,11 +117,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "tekststructuur — kern" },
       ],
       uitlegPad: compact(
-        "Slot-alinea = vaak CONCLUSIE (eindoordeel), SAMENVATTING (alles kort herhalen), NUANCERING (ja-maar), OPROEP (doe iets), of TOEKOMSTVERWACHTING. 'Wat blijkt nu uit alles...' = klassiek conclusie-signaal. = A.",
+        "Slot-alinea = vaak CONCLUSIE (eindoordeel), SAMENVATTING (alles kort herhalen), NUANCERING (ja-maar), OPROEP (doe iets), of TOEKOMSTVERWACHTING. 'Wat blijkt nu uit alles...' = klassiek conclusie-signaal.",
         {
-          basis: "'Wat blijkt' + eindoordeel = conclusie. = A.",
-          simpeler: "Schrijver trekt de eindstreep onder het hele verhaal. = A.",
-          nogSimpeler: "Conclusie = A.",
+          basis: "'Wat blijkt' + eindoordeel = conclusie.",
+          simpeler: "Schrijver trekt de eindstreep onder het hele verhaal.",
+          nogSimpeler: "Conclusie",
         },
         [
           { woord: "conclusie", uitleg: "Eindoordeel of slotsom na een redenering." },
@@ -158,11 +158,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "tekststructuur — kern" },
       ],
       uitlegPad: compact(
-        "Inleidings-types: AANLEIDING (gebeurtenis NU), ANEKDOTE (verhaaltje), VOORBEELD (concreet geval), PROBLEEM (rode draad), SAMENVATTING (overzicht), DEFINITIE (wat IS X). Insecten-sterfte = probleem dat de tekst gaat uitleggen. = D.",
+        "Inleidings-types: AANLEIDING (gebeurtenis NU), ANEKDOTE (verhaaltje), VOORBEELD (concreet geval), PROBLEEM (rode draad), SAMENVATTING (overzicht), DEFINITIE (wat IS X). Insecten-sterfte = probleem dat de tekst gaat uitleggen.",
         {
-          basis: "Insecten-sterfte is een probleem → alinea 1 benoemt dat. = D.",
-          simpeler: "Probleem = iets dat MIS is. Hier: insecten verdwijnen. = D.",
-          nogSimpeler: "Probleem = D.",
+          basis: "Insecten-sterfte is een probleem → alinea 1 benoemt dat.",
+          simpeler: "Probleem = iets dat MIS is. Hier: insecten verdwijnen.",
+          nogSimpeler: "Probleem",
         },
         [
           { woord: "centraal probleem", uitleg: "Het kern-issue dat de hele tekst onderzoekt of oplost." },
@@ -199,11 +199,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + precisie in formulering — kern" },
       ],
       uitlegPad: compact(
-        "4 doelen: INFORMEREN, OVERTUIGEN, AMUSEREN, ACTIVEREN. Hier: feiten + onderzoek + geen mening = informeren. PAS OP nuance: 'HOOFDoorzaak' (alle insectendood door licht) ≠ 'EEN belangrijke oorzaak' (licht is één van de oorzaken). Tekst zegt het laatste. = B.",
+        "4 doelen: INFORMEREN, OVERTUIGEN, AMUSEREN, ACTIVEREN. Hier: feiten + onderzoek + geen mening = informeren. PAS OP nuance: 'HOOFDoorzaak' (alle insectendood door licht) ≠ 'EEN belangrijke oorzaak' (licht is één van de oorzaken). Tekst zegt het laatste.",
         {
-          basis: "Informeren + EEN oorzaak (niet DE). = B.",
-          simpeler: "B is voorzichtig geformuleerd: 'nieuwe, waarschijnlijk belangrijke'. Dat matcht de tekst. = B.",
-          nogSimpeler: "Informeren-EEN = B.",
+          basis: "Informeren + EEN oorzaak (niet DE).",
+          simpeler: "B is voorzichtig geformuleerd: 'nieuwe, waarschijnlijk belangrijke'. Dat matcht de tekst.",
+          nogSimpeler: "Informeren-EEN",
         },
         [
           { woord: "een vs de", uitleg: "'Een' = één van meerdere. 'De' = de enige. Bij Cito altijd opletten." },
@@ -240,11 +240,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "advertentie-analyse — kern" },
       ],
       uitlegPad: compact(
-        "Doelgroep = WIE wordt aangesproken. Truc: kijk naar de IDENTITEIT die de tekst suggereert. Goed-doel-organisatie + 'levens redden' + 'help mee' = mensen met gever-motivatie. = A.",
+        "Doelgroep = WIE wordt aangesproken. Truc: kijk naar de IDENTITEIT die de tekst suggereert. Goed-doel-organisatie + 'levens redden' + 'help mee' = mensen met gever-motivatie.",
         {
-          basis: "Artsen zonder Grenzen + €25 voor levens = gevers van goede doelen. = A.",
-          simpeler: "De advertentie zegt 'help mee', 'levens redden'. Dat raakt mensen die WILLEN GEVEN. = A.",
-          nogSimpeler: "Goed-doel-gevers = A.",
+          basis: "Artsen zonder Grenzen + €25 voor levens = gevers van goede doelen.",
+          simpeler: "De advertentie zegt 'help mee', 'levens redden'. Dat raakt mensen die WILLEN GEVEN.",
+          nogSimpeler: "Goed-doel-gevers",
         },
         [
           { woord: "doelgroep", uitleg: "De groep mensen waar een tekst zich op richt." },
@@ -281,11 +281,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel onderscheiden — kern" },
       ],
       uitlegPad: compact(
-        "Doel-truc: zoek de WERKWOORDEN. 'Beschrijven hoe ze X aanpakken' + geen mening = informeren. 'Hoeveelheid' (smal) ≠ 'manier waarop' (breed). = B.",
+        "Doel-truc: zoek de WERKWOORDEN. 'Beschrijven hoe ze X aanpakken' + geen mening = informeren. 'Hoeveelheid' (smal) ≠ 'manier waarop' (breed).",
         {
-          basis: "Beschrijving zonder mening = informeren. AANPAK = manier waarop. = B.",
-          simpeler: "De tekst vertelt WAT McDonald's doet om zwerfafval te stoppen. Dat is informeren over de aanpak. = B.",
-          nogSimpeler: "Informeren-aanpak = B.",
+          basis: "Beschrijving zonder mening = informeren. AANPAK = manier waarop.",
+          simpeler: "De tekst vertelt WAT McDonald's doet om zwerfafval te stoppen. Dat is informeren over de aanpak.",
+          nogSimpeler: "Informeren-aanpak",
         },
         [
           { woord: "aanpak", uitleg: "De manier waarop iemand een probleem oplost." },

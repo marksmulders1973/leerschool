@@ -242,7 +242,7 @@ const steps = [
             { type: "stap", tekst: "€12,10 × 5 → ~12 × 5 = ~€60 (echt: €60,50)." },
           ],
           basiskennis: [{ onderwerp: "Cito tip", uitleg: "Vraag 'ongeveer hoeveel' = schatten. Vraag 'precies hoeveel' = uitrekenen." }],
-          niveaus: { basis: "20 × 4 = 80. = A.", simpeler: "19,80 ≈ 20 euro. 4 × 20 = €80. = A.", nogSimpeler: "~80 = A." },
+          niveaus: { basis: "20 × 4 = 80.", simpeler: "19,80 ≈ 20 euro. 4 × 20 = €80.", nogSimpeler: "~80" },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
           theorie: "Bij grote getallen: gebruik afronding om FOUT-ANTWOORDEN snel uit te sluiten. Antwoord 250 of 290 zou kloppen niet bij schatting 280.",
           voorbeelden: [{ type: "stap", tekst: "234 + 167: schat 230+170=400. Echt 401. Past." }],
           basiskennis: [{ onderwerp: "Twee technieken combineren", uitleg: "Precies uitrekenen + ronde schatting als sanity-check = minste foutkans." }],
-          niveaus: { basis: "145+89+36 = 270. = A.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde). = A.", nogSimpeler: "270 = A." },
+          niveaus: { basis: "145+89+36 = 270.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde).", nogSimpeler: "270" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
           theorie: "Budget-vraag-stappenplan:\n1. Schat de kosten\n2. Vergelijk met budget\n3. Twijfel? → reken precies\n4. Antwoord = past wel/niet/net",
           voorbeelden: [{ type: "stap", tekst: "30 × €1,80 schat: 30 × €2 = €60. Klopt globaal." }],
           basiskennis: [{ onderwerp: "Niet alleen schatten", uitleg: "Voor JA/NEE bij budget: precies uitrekenen als schatting dichtbij grens zit." }],
-          niveaus: { basis: "€51,60 > €50 → past niet. = A.", simpeler: "24 × €2 = €48, + 24 × 15c = €3,60. Totaal €51,60. Boven €50. = A.", nogSimpeler: "Past niet = A." },
+          niveaus: { basis: "€51,60 > €50 → past niet.", simpeler: "24 × €2 = €48, + 24 × 15c = €3,60. Totaal €51,60. Boven €50.", nogSimpeler: "Past niet" },
         },
       },
       {
@@ -304,7 +304,7 @@ const steps = [
             { type: "stap", tekst: "1.234 op 1000: 200 < 500 → 1.000." },
           ],
           basiskennis: [{ onderwerp: "Welk cijfer kijken", uitleg: "Bij afronding op X: kijk naar het cijfer DIRECT rechts van de afrondplaats." }],
-          niveaus: { basis: "5.000 + 3.000 = 8.000. = A.", simpeler: "4.612 → 5.000 (6 ≥ 5). 3.298 → 3.000 (2 < 5). 5.000 + 3.000 = 8.000. = A.", nogSimpeler: "~8.000 = A." },
+          niveaus: { basis: "5.000 + 3.000 = 8.000.", simpeler: "4.612 → 5.000 (6 ≥ 5). 3.298 → 3.000 (2 < 5). 5.000 + 3.000 = 8.000.", nogSimpeler: "~8.000" },
         },
       },
       {
@@ -324,7 +324,7 @@ const steps = [
             { type: "stap", tekst: "10 × €2,99 ≈ 10 × €3 = €30 (echt €29,90)." },
           ],
           basiskennis: [{ onderwerp: "Winkel-trucs", uitleg: "Winkels gebruiken X,99 omdat het op X-iets-iets lijkt. Reken altijd door naar volgende euro." }],
-          niveaus: { basis: "5 × €8 = €40. = A.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40. = A.", nogSimpeler: "~€40 = A." },
+          niveaus: { basis: "5 × €8 = €40.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40.", nogSimpeler: "~€40" },
         },
       },
       { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Dat is honderdtal afgerond op."] },

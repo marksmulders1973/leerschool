@@ -55,7 +55,7 @@ const steps = [
           niveaus: {
             basis: "Veel politieke macht verloren. Antwoord B.",
             simpeler: "Vóór 1848 was de koning bijna alleenheerser. Na 1848 = ceremoniële rol + parlement neemt over. Antwoord B.",
-            nogSimpeler: "Macht verloren = B.",
+            nogSimpeler: "Macht verloren",
           },
         },
       },
@@ -99,7 +99,7 @@ const steps = [
           niveaus: {
             basis: "ARP. Antwoord A.",
             simpeler: "Abraham Kuyper stichtte de Anti-Revolutionaire Partij (ARP, 1879) — protestants-christelijk. Antwoord A.",
-            nogSimpeler: "ARP = A.",
+            nogSimpeler: "ARP",
           },
         },
       },
@@ -149,7 +149,7 @@ const steps = [
           niveaus: {
             basis: "1917, Pacificatie. Antwoord D.",
             simpeler: "Schoolstrijd opgelost via compromis in 1917 = de Pacificatie. Antwoord D.",
-            nogSimpeler: "1917 + Pacificatie = D.",
+            nogSimpeler: "1917 + Pacificatie",
           },
         },
       },
@@ -194,7 +194,7 @@ const steps = [
           niveaus: {
             basis: "Reagan. Antwoord B.",
             simpeler: "VS-president die USSR 'evil empire' noemde + wapenwedloop opdreef = Reagan (jaren '80). Antwoord B.",
-            nogSimpeler: "Reagan = B.",
+            nogSimpeler: "Reagan",
           },
         },
       },
@@ -245,7 +245,7 @@ const steps = [
           niveaus: {
             basis: "Populisme. Antwoord C.",
             simpeler: "LPF, PVV, FvD, BBB = partijen die zich opwerpen als 'stem van het volk' tegenover de 'elite' = populistische stroming. Antwoord C.",
-            nogSimpeler: "Volk vs elite = populisme = C.",
+            nogSimpeler: "Volk vs elite = populisme",
           },
         },
       },

@@ -48,7 +48,7 @@ const steps = [
           niveaus: {
             basis: "Industrialisatie. Antwoord B.",
             simpeler: "Fabrieken + machines in plaats van handwerk = industrialisatie. Antwoord B.",
-            nogSimpeler: "Fabrieken = industrialisatie = B.",
+            nogSimpeler: "Fabrieken = industrialisatie",
           },
         },
       },
@@ -98,7 +98,7 @@ const steps = [
           niveaus: {
             basis: "Antidemocratische partijen groter. Antwoord A.",
             simpeler: "Economische crisis → werkloosheid → vertrouwen in democratie weg → mensen stemmen op extremen (nazi's). Antwoord A.",
-            nogSimpeler: "Crisis → extremen groter = A.",
+            nogSimpeler: "Crisis → extremen groter",
           },
         },
       },
@@ -142,7 +142,7 @@ const steps = [
           niveaus: {
             basis: "Gestapo. Antwoord A.",
             simpeler: "Gestapo = nazi-geheime politie die politieke vijanden opspoorde. Antwoord A.",
-            nogSimpeler: "Geheime politie = Gestapo = A.",
+            nogSimpeler: "Geheime politie = Gestapo",
           },
         },
       },

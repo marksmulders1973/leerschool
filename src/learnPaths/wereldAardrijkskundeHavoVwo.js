@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Bestaat wel maar niet bedoeld.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "1995 Genève", tekst: "**WTO** = World Trade Organization, opgericht 1995 (opvolger GATT). Genève. Doel: wereldhandel reguleren via regels + geschillen-oplossing. 164 lidstaten. **China-toetreding 2001** = mega-stap voor globalisering. Sinds 2018 onder druk door VS-China-tarieven." }],
-          niveaus: { basis: "World Trade Org. A.", simpeler: "WTO = handel = A.", nogSimpeler: "A." },
+          niveaus: { basis: "World Trade Org. A.", simpeler: "WTO = handel", nogSimpeler: "A." },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Veel eerder.", "Wel impact maar andere.", "Tegenovergesteld — anti-globalisering."],
         uitlegPad: {
           stappen: [{ titel: "1,3 mld nieuwe arbeiders", tekst: "**China-WTO-toetreding 11 dec 2001**: bracht 1,3 mld Chinezen in wereldhandelssysteem. Massa-productie tegen lage prijs → goedkope producten in westen, miljoenen Chinezen uit armoede, deindustrialisatie westen. Grootste wereldhandel-event sinds containerisatie 1960s." }],
-          niveaus: { basis: "China 2001. A.", simpeler: "China-WTO 2001 = A.", nogSimpeler: "2001 = A." },
+          niveaus: { basis: "China 2001. A.", simpeler: "China-WTO 2001", nogSimpeler: "2001" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Niet — combinatie.", "Niet — combinatie.", "Wel woord."],
         uitlegPad: {
           stappen: [{ titel: "Global + local", tekst: "**Glokalisering** = globalisatie met lokale aanpassing. **Voorbeelden**:\n• McDonald's: Big Mac wereldwijd, maar McKroket NL, Maharaja Mac India (geen rund vanwege hindoeïsme), Teriyaki Burger Japan.\n• Netflix: globale platform, lokale producties (NL-series, K-drama).\n• Wereld-merken passen verpakking, smaak, marketing aan." }],
-          niveaus: { basis: "Globaal + lokaal. A.", simpeler: "Glokal = G+L = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Globaal + lokaal. A.", simpeler: "Glokal = G+L", nogSimpeler: "A." },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         wrongHints: [null, "Wel rol — eerder.", "Niet voor grote goederen.", "Lange tijd duur."],
         uitlegPad: {
           stappen: [{ titel: "Standaard-container 20ft/40ft", tekst: "**Containerisatie** (Malcom McLean, 1956): standaard-container 20 voet (TEU) of 40 voet (FEU) → snelle overslag schip-trein-truck zonder herverpakken. Daalde transport-kostprijs **90%**. Maakte wereldhandel mogelijk in massa. Rotterdam + Shanghai super-havens." }],
-          niveaus: { basis: "Container. A.", simpeler: "1956 container = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Container. A.", simpeler: "1956 container", nogSimpeler: "A." },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Globaliseringsfactor.", "Globaliseringsfactor.", "Globaliseringsfactor."],
         uitlegPad: {
           stappen: [{ titel: "Tegenbeweging", tekst: "**Re-shoring** = productie terugbrengen naar thuisland. Reden: COVID-19 + Suezkanaal-blokkade 2021 + VS-China-spanningen + chip-tekorten. Voorbeelden: **Intel** fabriek Magdeburg DE (€30 mld), **TSMC** Arizona VS. Trend van deglobalisering / 'friend-shoring' (alleen bij vrienden). Voorbeeld trade war: Trump 2018-tarieven + Biden's CHIPS Act 2022." }],
-          niveaus: { basis: "Re-shoring. A.", simpeler: "Re-shoring = anti-glob = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Re-shoring. A.", simpeler: "Re-shoring = anti-glob", nogSimpeler: "A." },
         },
       },
     ],
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Niet — interne ongelijkheid.", "Alleen economie.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "VN-indicator", tekst: "**HDI** (Human Development Index, VN) combineert 3 dimensies in 1 score 0-1:\n• Inkomen (BBP per cap).\n• Onderwijs (jaren onderwijs + verwacht).\n• Gezondheid (levensverwachting).\n\nTop 2024: Zwitserland, Noorwegen, IJsland. NL top-10. Onderaan: Tsjaad, Niger." }],
-          niveaus: { basis: "HDI. A.", simpeler: "HDI = 3-in-1 = A.", nogSimpeler: "A." },
+          niveaus: { basis: "HDI. A.", simpeler: "HDI = 3-in-1", nogSimpeler: "A." },
         },
       },
       {
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — divers.", "Niet — opkomend.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "5 opkomende reuzen", tekst: "**BRICS** = Brazilië, Rusland, India, China, Zuid-Afrika. Opkomende grote economieën. Recent uitbreiding (2024): Iran, Egypte, Verenigde Arabische Emiraten, Ethiopië, Saudi-Arabië (genodigd) → BRICS+. Doel: tegenwicht G7 + dollar." }],
-          niveaus: { basis: "B/R/I/C/ZA. A.", simpeler: "BRICS = 5 reuzen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "B/R/I/C/ZA. A.", simpeler: "BRICS = 5 reuzen", nogSimpeler: "A." },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel meting.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "0-1 schaal", tekst: "**Gini-coëfficiënt**: 0 = volledig gelijke verdeling (iedereen evenveel), 1 = volledige ongelijkheid (1 persoon heeft alles). NL ~0,28 (gelijk). VS ~0,40. ZA ~0,63 (zeer ongelijk). Sociaal-democratische landen lager." }],
-          niveaus: { basis: "Gelijk. A.", simpeler: "Gini 0 = gelijk = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Gelijk. A.", simpeler: "Gini 0 = gelijk", nogSimpeler: "A." },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Why Nations Fail 2012", tekst: "**Daron Acemoglu + James Robinson**: *Why Nations Fail* (2012). **Instellingen** (rule of law, eigendomsrechten, democratie, gelijke kansen) verklaren waarom landen welvarend worden of falen. **Inclusief vs extractief**: inclusieve instellingen verspreiden voordelen, extractieve concentreren ze. **Nobelprijs Economie 2024**." }],
           theorie: "Voorbeeld: Noord-Korea (extractief, arm) vs Zuid-Korea (inclusief, welvarend) — dezelfde bevolking + cultuur, verschillende instellingen.",
-          niveaus: { basis: "Instellingen. A.", simpeler: "A+R = instellingen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Instellingen. A.", simpeler: "A+R = instellingen", nogSimpeler: "A." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — sterk gedaald.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "China-effect vooral", tekst: "**Wereld-extreme armoede** (Wereldbank-definitie < $2,15/dag): 1990 ~1,9 mld → 2020 ~700 mln. **Sterke daling**. Vooral door China (sinds 1980 800+ mln uit armoede) + India + andere groeilanden. Maar absolute aantal nog hoog + Sub-Sahara stagneert. **SDG-doel 'nul armoede 2030'** lijkt onhaalbaar." }],
-          niveaus: { basis: "Afgenomen. A.", simpeler: "Armoede ↓ = A.", nogSimpeler: "↓ = A." },
+          niveaus: { basis: "Afgenomen. A.", simpeler: "Armoede ↓", nogSimpeler: "↓" },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Niet — westers probleem.", "Tegenovergesteld.", "Niet — wel verandering."],
         uitlegPad: {
           stappen: [{ titel: "1,2 → 2,5 → 3,9 mld", tekst: "**Sub-Sahara**: snelste groeiende bevolking wereld. ~2,5%/jaar (wereld 1%). Geboortecijfer hoog (Niger 6+), kindersterfte dalend. Projectie: 2024 1,2 mld → 2050 2,5 mld → 2100 3,9 mld. Helft wereld-bevolking-groei vanuit Afrika." }],
-          niveaus: { basis: "Snel groei. A.", simpeler: "SSA = bevolking-explosie = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Snel groei. A.", simpeler: "SSA = bevolking-explosie", nogSimpeler: "A." },
         },
       },
       {
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel verband.", "Niet allemaal."],
         uitlegPad: {
           stappen: [{ titel: "Paradox", tekst: "**Resource curse / paradox of plenty**: landen met veel natuurlijke grondstoffen blijken vaak slechter te presteren dan landen zonder. Reden: corruptie (elite pakt grondstofgeld), gebrek aan diversificatie, conflicten over hulpbronnen, 'Dutch disease' (sterke munt door olie-export beschadigt andere industrie). Voorbeeld: Nigeria (olie) vs Botswana (diamant, beter management)." }],
-          niveaus: { basis: "Grondstoffen-paradox. A.", simpeler: "Resource curse = paradox = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Grondstoffen-paradox. A.", simpeler: "Resource curse = paradox", nogSimpeler: "A." },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Niet — apart.", "Niet relevant.", "Hoorn = oost (Somalia, Ethiopia)."],
         uitlegPad: {
           stappen: [{ titel: "Overgangszone", tekst: "**Sahel** = Arabisch voor 'kust', overgangszone tussen Sahara-woestijn + tropische savanne. Loopt door Senegal, Mauritanië, Mali, Burkina Faso, Niger, Tsjaad, Soedan, Eritrea. **Klimaatcrisis-zone**: droogte + desertificatie. **Politieke crisis**: jihadisme + militaire coups (Mali 2020-21, Burkina 2022, Niger 2023)." }],
-          niveaus: { basis: "Tussen Sahara + savanne. A.", simpeler: "Sahel = overgang = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Tussen Sahara + savanne. A.", simpeler: "Sahel = overgang", nogSimpeler: "A." },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "EU heeft 'Global Gateway' als reactie.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Chinese mega-investering", tekst: "**Belt + Road Initiative (BRI)** = Chinese infrastructuur-programma sinds 2013 (Xi Jinping). $1+ biljoen geïnvesteerd in havens, spoorlijnen, wegen wereldwijd, vooral Azië + Afrika. **China grootste handelspartner Afrika** sinds 2009. Controverse: schulden-val + arbeids-omstandigheden. **EU's reactie**: Global Gateway €300 mld (2021)." }],
-          niveaus: { basis: "China. A.", simpeler: "BRI = China = A.", nogSimpeler: "A." },
+          niveaus: { basis: "China. A.", simpeler: "BRI = China", nogSimpeler: "A." },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Kigali = Singapore Afrika", tekst: "**Rwanda**: na 1994-genocide (~800.000 Tutsi's vermoord in 100 dagen) snelle wederopbouw onder Kagame. Tech-hub Kigali, schoonste stad Afrika, weinig corruptie. Schaduw: autoritair regime + persvrijheid beperkt. Cito-favoriet succes-voorbeeld in 'ontwikkelingslanden'." }],
           theorie: "Andere succes: Botswana (diamant + stabiele democratie), Ghana (democratie), Mauritius (toerisme + diensten).",
-          niveaus: { basis: "Rwanda. A.", simpeler: "Rwanda = succes = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rwanda. A.", simpeler: "Rwanda = succes", nogSimpeler: "A." },
         },
       },
     ],
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [null, "Niet — VR China oprichting.", "Niet — Deng-hervorming start.", "Niet — Tiananmen."],
         uitlegPad: {
           stappen: [{ titel: "Sleutel-event globalisering", tekst: "**11 dec 2001**: China lid WTO. **Sleutel-event** wereldgeschiedenis 21e eeuw — 1,3 mld Chinezen in wereldhandelssysteem. Versnelde productie-verschuiving naar China + uitkomst Westerse 'goedkope spullen'. Mark Carney noemde het 'tweede globalisering'." }],
-          niveaus: { basis: "2001. A.", simpeler: "China-WTO = 2001 = A.", nogSimpeler: "2001 = A." },
+          niveaus: { basis: "2001. A.", simpeler: "China-WTO = 2001", nogSimpeler: "2001" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
         wrongHints: [null, "Mao stierf 1976.", "Niet — later.", "Veel eerder."],
         uitlegPad: {
           stappen: [{ titel: "Reform + Opening 1978", tekst: "**Deng Xiaoping** (1904-1997) startte **gaige kaifang** (hervorming + opening) 1978 na Mao's dood. 'Socialisme met Chinese karakteristieken' — toestaan kapitalisme onder partij-controle. 'Kat-theorie': maakt niet uit of kat zwart of wit is, zolang ze muizen vangt." }],
-          niveaus: { basis: "Deng. A.", simpeler: "1978 = Deng = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Deng. A.", simpeler: "1978 = Deng", nogSimpeler: "A." },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Sterk groeiend, niet nog gepakt."],
         uitlegPad: {
           stappen: [{ titel: "1,44 mld 2023", tekst: "**India** werd grootste bevolking 2023 (1,44 mld) door snelle groei + China bevolkingsdaling (1-kind-beleid 1979-2015 nawerking + vergrijzing). India veel **jonger** (mediaan 28 vs China 39). Implicatie: India waarschijnlijk economische opkomst voor jaren." }],
-          niveaus: { basis: "India. A.", simpeler: "2023 = India boven China = A.", nogSimpeler: "A." },
+          niveaus: { basis: "India. A.", simpeler: "2023 = India boven China", nogSimpeler: "A." },
         },
       },
       {
@@ -246,7 +246,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1-kind-beleid-nawerking", tekst: "China **1-kind-beleid 1979-2015** voorkwam ~400 mln geboorten. Nu **gevolgen**: vergrijzing (ouder dan VS), beroepsbevolking krimpt, **bevolking daalt sinds 2022**. Verlate 2-kind- en 3-kind-beleid hielpen weinig. 'China wordt oud voor het rijk wordt' — uitdaging." }],
           theorie: "Cito-vraag-pattern: vergelijk China demografisch met India of NL.",
-          niveaus: { basis: "Vergrijzing. A.", simpeler: "China = oud + daalt = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Vergrijzing. A.", simpeler: "China = oud + daalt", nogSimpeler: "A." },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
         wrongHints: [null, "Niet — was — nu vrijwel zo.", "Niet — al lang in China.", "Niet — 1997 overgedragen."],
         uitlegPad: {
           stappen: [{ titel: "1997-2047 belofte", tekst: "**Hong Kong**: tot 1997 Brits, **overgedragen aan China**. Beloofd 'one country two systems' tot 2047 — semi-autonomie + vrijheden. **Sinds 2020 National Security Law**: persvrijheid + protest beperkt, oppositie opgesloten of in ballingschap. 'One system in praktijk'. Andere precedent voor Taiwan — afschrikwekkend." }],
-          niveaus: { basis: "One country two systems. A.", simpeler: "HK = 2 systemen erodeert = A.", nogSimpeler: "A." },
+          niveaus: { basis: "One country two systems. A.", simpeler: "HK = 2 systemen erodeert", nogSimpeler: "A." },
         },
       },
     ],
@@ -275,7 +275,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — sneller.", "Niet — wel groeit."],
         uitlegPad: {
           stappen: [{ titel: "Globalisering-effect", tekst: "**Wereldhandel groeit sneller dan BBP** sinds 1950, vooral 1990-2008 (Chinese opkomst + WTO). Tijdelijk afgevlakt door 2008-crisis + Trump-tarieven 2018+. Recent (post-COVID + Russisch-Oekraïens) iets meer re-shoring → mogelijk einde 'hyperglobalisatie'." }],
-          niveaus: { basis: "Sneller dan BBP. A.", simpeler: "Handel > BBP-groei = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Sneller dan BBP. A.", simpeler: "Handel > BBP-groei", nogSimpeler: "A." },
         },
       },
       {
@@ -285,7 +285,7 @@ const steps = [
         wrongHints: [null, "0,28 — laag.", "0,29 — laag.", "0,33 — matig."],
         uitlegPad: {
           stappen: [{ titel: "Apartheid-erfenis", tekst: "**Zuid-Afrika** heeft Gini ~0,63 = **hoogste wereld**. Erfenis apartheid (1948-94): zwarte meerderheid economisch achtergesteld, witte minderheid bezit groot deel land + bedrijven. Ondanks ANC-regering sinds 1994 niet wezenlijk verbeterd." }],
-          niveaus: { basis: "ZA. A.", simpeler: "Hoogste Gini = ZA = A.", nogSimpeler: "A." },
+          niveaus: { basis: "ZA. A.", simpeler: "Hoogste Gini = ZA", nogSimpeler: "A." },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet stabiel.", "Niet primair industrie."],
         uitlegPad: {
           stappen: [{ titel: "Olie-paradox", tekst: "**Nigeria** = grootste olie-producent Afrika + grootste Afrikaanse bevolking (~220 mln). **Resource curse**: olie-rijkdom heeft niet welvaart breed verspreid. Corruptie, geweld in Niger-Delta, jihadisme noord (Boko Haram), economische ongelijkheid. Klassiek voorbeeld 'paradox of plenty'." }],
-          niveaus: { basis: "Resource curse. A.", simpeler: "Nigeria = olie-paradox = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Resource curse. A.", simpeler: "Nigeria = olie-paradox", nogSimpeler: "A." },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
         wrongHints: [null, "Niet meer.", "Was, niet meer.", "Wel groot maar niet grootste."],
         uitlegPad: {
           stappen: [{ titel: "China-Afrika handel", tekst: "**China is grootste handelspartner Afrika sinds 2009**. Via Belt + Road Initiative: havens, spoor, wegen. Chinese bedrijven actief in mijnbouw, olie, infrastructuur. NL/EU/FR/VS gedeeltelijk verdrongen. Geopolitieke spanning: VS + EU starten eigen Afrika-strategieën om China terug te drukken." }],
-          niveaus: { basis: "China. A.", simpeler: "Afrika = China-partner = A.", nogSimpeler: "A." },
+          niveaus: { basis: "China. A.", simpeler: "Afrika = China-partner", nogSimpeler: "A." },
         },
       },
       {
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "VN 2015", tekst: "**SDG's** (Sustainable Development Goals) = VN-doelen 2015-2030. **17 doelen** met 169 targets:\n1. Geen armoede\n2. Geen honger\n3. Goede gezondheid\n4. Onderwijs\n5. Gendergelijkheid\n...\n13. Klimaat\n...\n17. Partnerschap.\n\nVoortgang: gedeeltelijk + COVID/oorlog vertraagden. Veel onhaalbaar tegen 2030." }],
-          niveaus: { basis: "17 doelen 2030. A.", simpeler: "SDG = VN-doelen 2030 = A.", nogSimpeler: "A." },
+          niveaus: { basis: "17 doelen 2030. A.", simpeler: "SDG = VN-doelen 2030", nogSimpeler: "A." },
         },
       },
     ],

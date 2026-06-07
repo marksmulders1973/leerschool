@@ -32,7 +32,7 @@ const steps = [
         explanation: "**27 lidstaten** sinds 2020 (Brexit = vertrek VK). Daarvoor was het 28. Geen ander land vertrok daarna; geen nieuw land kwam erbij (Turkije/Oekraïne staan op wachtlijst). Antwoord B.",
         uitlegPad: compact(
           "27 EU-lidstaten sinds 2020 (Brexit). Was 28 met VK erbij. Geen recente toetreding sindsdien.",
-          { basis: "27. = B.", simpeler: "VK eruit (2020) = 28 → 27. = B.", nogSimpeler: "27 = B." },
+          { basis: "27.", simpeler: "VK eruit (2020) = 28 → 27.", nogSimpeler: "27" },
           [{ woord: "lidstaat", uitleg: "Land dat lid is van de EU." }, { woord: "Brexit", uitleg: "Vertrek VK uit EU (officieel 31 januari 2020)." }],
         ),
       },
@@ -44,7 +44,7 @@ const steps = [
         explanation: "**1992 Verdrag van Maastricht** = oprichting Europese Unie. Was eerder EEG (Europese Economische Gemeenschap, 1957). Maastricht maakte de samenwerking breder: niet alleen economie, ook politiek + gemeenschappelijke munt (euro plan). Antwoord C.",
         uitlegPad: compact(
           "Verdrag van Maastricht 1992 = officieel begin van de Europese Unie. NL-stad, ondertekend door 12 landen.",
-          { basis: "1992. = C.", simpeler: "Maastricht 1992 = EU-geboorte. = C.", nogSimpeler: "1992 = C." },
+          { basis: "1992.", simpeler: "Maastricht 1992 = EU-geboorte.", nogSimpeler: "1992" },
           [{ woord: "Verdrag", uitleg: "Officiële afspraak tussen landen." }, { woord: "EEG", uitleg: "Europese Economische Gemeenschap — voorloper van EU (1957)." }],
         ),
       },
@@ -56,7 +56,7 @@ const steps = [
         explanation: "**Brussel** = de facto EU-hoofdstad. Europese Commissie, Raad van de EU, deel van het Parlement + NAVO zitten er. Straatsburg (FR) host het Parlement 1 week per maand (politiek compromis). Antwoord A.",
         uitlegPad: compact(
           "Brussel = hart van de EU. Commissie + Raad + groot deel Parlement zitten hier.",
-          { basis: "Brussel. = A.", simpeler: "België-Brussel = EU-stad. = A.", nogSimpeler: "Brussel = A." },
+          { basis: "Brussel.", simpeler: "België-Brussel = EU-stad.", nogSimpeler: "Brussel" },
           [{ woord: "Brussel", uitleg: "Hoofdstad België én feitelijke EU-hoofdstad." }],
         ),
       },
@@ -75,7 +75,7 @@ const steps = [
         explanation: "**4 vrijheden**: personen + goederen + diensten + kapitaal. Onthoud met 'PGDK' of '4 P+G+D+K'. Antwoord C.",
         uitlegPad: compact(
           "4 vrijheden van de interne EU-markt: personen, goederen, diensten, kapitaal. Vorm sinds oprichting EEG 1957.",
-          { basis: "4 vrijheden. = C.", simpeler: "PGDK = 4. = C.", nogSimpeler: "4 = C." },
+          { basis: "4 vrijheden.", simpeler: "PGDK = 4.", nogSimpeler: "4" },
           [{ woord: "interne markt", uitleg: "Gemeenschappelijk economisch gebied EU." }],
         ),
       },
@@ -87,7 +87,7 @@ const steps = [
         explanation: "**Vrij verkeer van personen** = elke EU-burger mag in elk EU-land wonen, werken, studeren, pensioenkrijgen. Geen werkvergunning vereist. Wel: meestal eerste 3 maanden registreren bij gemeente. Antwoord A.",
         uitlegPad: compact(
           "EU-burger = mag overal in EU werken + wonen zonder vergunning. Geldt niet voor niet-EU (bv. Britten sinds Brexit moeten weer vergunning).",
-          { basis: "Ja, vrij verkeer. = A.", simpeler: "NL'er in FR werken = mag, geen papier nodig. = A.", nogSimpeler: "Ja = A." },
+          { basis: "Ja, vrij verkeer.", simpeler: "NL'er in FR werken = mag, geen papier nodig.", nogSimpeler: "Ja" },
           [{ woord: "vrij verkeer personen", uitleg: "EU-burgers mogen vrij wonen/werken in EU-landen." }],
         ),
       },
@@ -99,7 +99,7 @@ const steps = [
         explanation: "**Vrij verkeer van goederen** = geen invoerheffingen tussen EU-lidstaten. NL mag geen extra belasting op Duitse auto's heffen. WEL toegestaan: BPM (Belasting van Personenauto's) op ALLE auto's (Nederlandse + Duitse) — dat is geen invoerheffing, maar gebruiks-belasting. Antwoord C.",
         uitlegPad: compact(
           "Geen invoerheffingen tussen EU-lidstaten = douanevrije markt. Wel BTW + gebruiks-belastingen (BPM) — die gelden voor alle auto's gelijk.",
-          { basis: "Nee, verboden. = C.", simpeler: "Invoerheffing binnen EU = mag niet. = C.", nogSimpeler: "Nee = C." },
+          { basis: "Nee, verboden.", simpeler: "Invoerheffing binnen EU = mag niet.", nogSimpeler: "Nee" },
           [{ woord: "invoerheffing", uitleg: "Belasting op buitenlands product bij invoer." }, { woord: "BPM", uitleg: "Belasting van Personenauto's — geldt voor ALLE NL-geregistreerde auto's." }],
         ),
       },
@@ -118,7 +118,7 @@ const steps = [
         explanation: "**Commissie heeft monopolie op initiatief**: alleen zij stelt nieuwe wetten voor. Andere EU-organen stemmen + controleren. Vergelijking NL: zoals regering vaak wetsvoorstellen indient in Tweede Kamer. Antwoord C.",
         uitlegPad: compact(
           "Commissie = motor van EU-wetgeving. Mag initiëren wat Parlement + Raad daarna goedkeuren.",
-          { basis: "Commissie. = C.", simpeler: "Alleen Commissie kan nieuwe wet voorstellen. = C.", nogSimpeler: "Commissie = C." },
+          { basis: "Commissie.", simpeler: "Alleen Commissie kan nieuwe wet voorstellen.", nogSimpeler: "Commissie" },
           [{ woord: "initiatiefrecht", uitleg: "Recht om als eerste een wetsvoorstel in te dienen." }],
         ),
       },
@@ -130,7 +130,7 @@ const steps = [
         explanation: "**MEPs worden direct door EU-burgers gekozen** in EU-parlementsverkiezingen — elke 5 jaar. Laatste verkiezingen: juni 2024. NL koos 31 MEPs uit verschillende partijen. Antwoord C.",
         uitlegPad: compact(
           "MEPs (Europees Parlement) = direct gekozen door burgers. Net als Tweede Kamerleden in NL — gekozen volk vertegenwoordigen.",
-          { basis: "Direct gekozen. = C.", simpeler: "Burgers stemmen elke 5 jaar op MEPs. = C.", nogSimpeler: "Burgers kiezen = C." },
+          { basis: "Direct gekozen.", simpeler: "Burgers stemmen elke 5 jaar op MEPs.", nogSimpeler: "Burgers kiezen" },
           [{ woord: "MEP", uitleg: "Member of European Parliament — Europarlementariër." }, { woord: "Europese verkiezingen", uitleg: "Eens per 5 jaar — alle EU-burgers stemmen." }],
         ),
       },
@@ -142,7 +142,7 @@ const steps = [
         explanation: "**Ursula von der Leyen** (Duitsland, CDU) is voorzitter van de Europese Commissie sinds december 2019. Herkozen 2024 voor 2e termijn. Antwoord D.",
         uitlegPad: compact(
           "Voorzitters EU-instellingen (2024): Commissie = Von der Leyen. Parlement = Metsola. Europese Raad = António Costa (sinds dec 2024). NAVO = Rutte.",
-          { basis: "Von der Leyen. = D.", simpeler: "Duitse vrouw, sinds 2019, Commissie-voorzitter. = D.", nogSimpeler: "Von der Leyen = D." },
+          { basis: "Von der Leyen.", simpeler: "Duitse vrouw, sinds 2019, Commissie-voorzitter.", nogSimpeler: "Von der Leyen" },
           [{ woord: "Von der Leyen", uitleg: "Voorzitter Europese Commissie sinds 2019. Duits CDU-lid." }],
         ),
       },
@@ -161,7 +161,7 @@ const steps = [
         explanation: "**Europese Raad** = bijeenkomst regeringsleiders (premiers + presidenten). Voor NL: minister-president. Antwoord B.",
         uitlegPad: compact(
           "Europese Raad = top-vergadering regeringsleiders. NIET hetzelfde als 'Raad van de EU' (ministers) of 'Europees Parlement' (MEPs).",
-          { basis: "Regeringsleiders. = B.", simpeler: "De baas van elk EU-land. = B.", nogSimpeler: "Regeringsleiders = B." },
+          { basis: "Regeringsleiders.", simpeler: "De baas van elk EU-land.", nogSimpeler: "Regeringsleiders" },
           [{ woord: "regeringsleider", uitleg: "Premier of president van een land." }],
         ),
       },
@@ -173,7 +173,7 @@ const steps = [
         explanation: "**Raad van de Europese Unie** = vakministers per onderwerp. Klimaat-onderwerp = milieu-ministers. Wisselt onderwerp per vergadering (Landbouw-Raad, Financiën-Raad, etc.). Antwoord D.",
         uitlegPad: compact(
           "Raad van de EU = ministers per vak (gewone ministers, niet premier). Verschilt per onderwerp.",
-          { basis: "Raad van de EU. = D.", simpeler: "Vak-ministers samen = Raad van EU. = D.", nogSimpeler: "Raad van EU = D." },
+          { basis: "Raad van de EU.", simpeler: "Vak-ministers samen = Raad van EU.", nogSimpeler: "Raad van EU" },
           [{ woord: "Raad van de EU", uitleg: "Bijeenkomst vakministers EU-lidstaten." }],
         ),
       },
@@ -185,7 +185,7 @@ const steps = [
         explanation: "**António Costa** (Portugal) is voorzitter van de Europese Raad sinds december 2024 — voor 2,5 jaar. Volgde Charles Michel (België) op. Antwoord B.",
         uitlegPad: compact(
           "António Costa = voorzitter Europese Raad sinds dec 2024. Portugese sociaal-democraat, oud-premier Portugal.",
-          { basis: "António Costa. = B.", simpeler: "Costa (PT) = Europese Raad-voorzitter sinds eind 2024. = B.", nogSimpeler: "Costa = B." },
+          { basis: "António Costa.", simpeler: "Costa (PT) = Europese Raad-voorzitter sinds eind 2024.", nogSimpeler: "Costa" },
           [{ woord: "Antóní­o Costa", uitleg: "Voorzitter Europese Raad sinds 1 december 2024." }],
         ),
       },
@@ -204,7 +204,7 @@ const steps = [
         explanation: "**20 landen** in de **eurozone** (sinds Kroatië in 2023). 7 EU-landen hebben eigen munt: Polen, Zweden, Denemarken, Tsjechië, Hongarije, Roemenië, Bulgarije. Antwoord B.",
         uitlegPad: compact(
           "Eurozone = 20 landen (sinds 1 jan 2023). Kroatië als jongste lid.",
-          { basis: "20 euro-landen. = B.", simpeler: "Niet alle EU = euro. 20 wel, 7 niet. = B.", nogSimpeler: "20 = B." },
+          { basis: "20 euro-landen.", simpeler: "Niet alle EU = euro. 20 wel, 7 niet.", nogSimpeler: "20" },
           [{ woord: "eurozone", uitleg: "Landen die de euro gebruiken (20 van de 27 EU-lidstaten)." }],
         ),
       },
@@ -216,7 +216,7 @@ const steps = [
         explanation: "**Polen** heeft de **zloty** (PLN). Polen besloot bewust euro NIET in te voeren. Andere EU-landen zonder euro: Zweden, Denemarken, Tsjechië, Hongarije, Roemenië, Bulgarije. Antwoord C.",
         uitlegPad: compact(
           "Polen = zloty. Andere EU-landen met eigen munt: Zweden + Denemarken (krona/krone), Tsjechië + Hongarije (forint), Roemenië + Bulgarije.",
-          { basis: "Polen heeft zloty. = C.", simpeler: "Polen = niet-euro = zloty. = C.", nogSimpeler: "Polen = C." },
+          { basis: "Polen heeft zloty.", simpeler: "Polen = niet-euro = zloty.", nogSimpeler: "Polen" },
           [{ woord: "zloty", uitleg: "Munt van Polen (PLN)." }],
         ),
       },
@@ -228,7 +228,7 @@ const steps = [
         explanation: "**ECB zit in Frankfurt am Main** (Duitsland) — sinds oprichting 1998. Bepaalt rentestand voor eurozone + drukt eurogeld. President: **Christine Lagarde** (Frans, sinds 2019). Antwoord B.",
         uitlegPad: compact(
           "ECB = Europese Centrale Bank in Frankfurt. Christine Lagarde voorzitter. Bepaalt rente voor euro.",
-          { basis: "Frankfurt. = B.", simpeler: "ECB = Frankfurt Duitsland. = B.", nogSimpeler: "Frankfurt = B." },
+          { basis: "Frankfurt.", simpeler: "ECB = Frankfurt Duitsland.", nogSimpeler: "Frankfurt" },
           [{ woord: "ECB", uitleg: "Europese Centrale Bank — bewaakt de euro." }, { woord: "Christine Lagarde", uitleg: "Voorzitter ECB sinds 2019, Frans." }],
         ),
       },
@@ -247,7 +247,7 @@ const steps = [
         explanation: "**12 sterren** op de EU-vlag — vast aantal sinds 1955 (toen er nog maar 6 landen waren). 12 staat voor perfectie/voltooidheid (12 maanden, 12 apostelen, 12 uren). VERANDERT NIET met aantal lidstaten. Antwoord B.",
         uitlegPad: compact(
           "EU-vlag = 12 gele sterren op blauw. Vast getal — niet aantal landen. Symbool van eenheid + perfectie.",
-          { basis: "12 sterren. = B.", simpeler: "Vlag heeft altijd 12 sterren, los van aantal landen. = B.", nogSimpeler: "12 = B." },
+          { basis: "12 sterren.", simpeler: "Vlag heeft altijd 12 sterren, los van aantal landen.", nogSimpeler: "12" },
           [{ woord: "EU-vlag", uitleg: "Blauw + 12 gele sterren in cirkel. Sinds 1985 ook EU-symbool." }],
         ),
       },
@@ -259,7 +259,7 @@ const steps = [
         explanation: "**Duitsland** = grootste handelspartner NL (zowel import als export). Logisch: buurland, ~84 miljoen mensen, sterke industrie. ~25% van Nederlandse export gaat naar Duitsland. Antwoord B.",
         uitlegPad: compact(
           "Duitsland = NL's grootste handelspartner. Buurland, sterke economie, ~84 mln inwoners.",
-          { basis: "Duitsland. = B.", simpeler: "DE = grootste klant van NL. = B.", nogSimpeler: "Duitsland = B." },
+          { basis: "Duitsland.", simpeler: "DE = grootste klant van NL.", nogSimpeler: "Duitsland" },
           [{ woord: "handelspartner", uitleg: "Land waar veel mee gehandeld wordt (im/export)." }],
         ),
       },
@@ -271,7 +271,7 @@ const steps = [
         explanation: "**9 mei** = Schuman-dag, naar Robert Schuman (Frans buitenlandse-minister) die op 9 mei 1950 het plan voor de Europese samenwerking presenteerde (kolen + staal). Dat is officieel het begin van de EU-samenwerking. Antwoord B.",
         uitlegPad: compact(
           "9 mei = Dag van Europa. Verwijst naar Schuman-verklaring 1950 — startpunt EU-samenwerking.",
-          { basis: "9 mei. = B.", simpeler: "9 mei = Europa-dag. Schuman 1950. = B.", nogSimpeler: "9 mei = B." },
+          { basis: "9 mei.", simpeler: "9 mei = Europa-dag. Schuman 1950.", nogSimpeler: "9 mei" },
           [{ woord: "Schuman-verklaring", uitleg: "Speech 9 mei 1950 — Robert Schuman roept op tot Europese samenwerking." }],
         ),
       },

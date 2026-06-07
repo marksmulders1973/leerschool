@@ -51,7 +51,7 @@ const steps = [
           niveaus: {
             basis: "Aan het parlement. Antwoord C.",
             simpeler: "Sinds 1848 leggen ministers verantwoording af aan het parlement (Tweede + Eerste Kamer), niet aan de koning. Antwoord C.",
-            nogSimpeler: "Parlement = C.",
+            nogSimpeler: "Parlement",
           },
         },
       },
@@ -95,7 +95,7 @@ const steps = [
           niveaus: {
             basis: "Gelijkschakeling. Antwoord B.",
             simpeler: "Alle vakbonden vervangen door 1 verplichte nazi-organisatie = gelijkschakeling. Antwoord B.",
-            nogSimpeler: "Onder nazi-controle brengen = B.",
+            nogSimpeler: "Onder nazi-controle brengen",
           },
         },
       },
@@ -144,7 +144,7 @@ const steps = [
           niveaus: {
             basis: "VN + VS. Antwoord D.",
             simpeler: "In 1947 bestonden NAVO + EGKS nog niet. Alleen de VN en VS waren grote critici van NL-militair ingrijpen in Indonesië. Antwoord D.",
-            nogSimpeler: "VN + VS = D.",
+            nogSimpeler: "VN + VS",
           },
         },
       },
@@ -189,7 +189,7 @@ const steps = [
           niveaus: {
             basis: "Soevereiniteitsoverdracht. Antwoord D.",
             simpeler: "De officiële overdracht van bestuur = soevereiniteitsoverdracht (1949). Antwoord D.",
-            nogSimpeler: "Bestuur overdragen = D.",
+            nogSimpeler: "Bestuur overdragen",
           },
         },
       },
@@ -233,7 +233,7 @@ const steps = [
           niveaus: {
             basis: "Cubacrisis. Antwoord B.",
             simpeler: "Na de Cubacrisis (1962, bijna-kernoorlog) wilden VS + USSR directe communicatie. Hotline 1963. Antwoord B.",
-            nogSimpeler: "Cubacrisis = B.",
+            nogSimpeler: "Cubacrisis",
           },
         },
       },
@@ -277,7 +277,7 @@ const steps = [
           niveaus: {
             basis: "Poldermodel. Antwoord B.",
             simpeler: "Overheid + vakbonden + werkgevers regelmatig samen aan tafel = poldermodel (NL-overlegcultuur). Antwoord B.",
-            nogSimpeler: "Drie-overleg = poldermodel = B.",
+            nogSimpeler: "Drie-overleg = poldermodel",
           },
         },
       },

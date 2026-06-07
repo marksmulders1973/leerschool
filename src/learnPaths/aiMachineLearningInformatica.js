@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "AI is niet bewust — het rekent met patronen.", "Dat zou algemene AI (AGI) zijn — bestaat nog niet.", "AI leunt juist zwaar op data."],
         uitlegPad: {
           stappen: [{ titel: "Smal = één taak", tekst: "Alle huidige AI is **smalle AI** (narrow): heel goed in **één** taak (schaken, spamfilter, chatten, gezichtsherkenning). **Algemene AI** (AGI), die net als een mens álles kan leren, bestaat (nog) niet. AI is bovendien **niet bewust**." }],
-          niveaus: { basis: "Smalle AI. A.", simpeler: "Nu = smalle AI = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Smalle AI. A.", simpeler: "Nu = smalle AI", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "AI begrijpt niet zoals een mens — het rekent.", "Geen magie — wiskunde en data.", "Niet willekeurig — gebaseerd op geleerde patronen."],
         uitlegPad: {
           stappen: [{ titel: "Rekenen met patronen", tekst: "AI **herkent en gebruikt patronen** uit grote hoeveelheden data om te voorspellen of te genereren. Het 'begrijpt' niet bewust zoals een mens. Daarom kan AI zelfverzekerd klinken en er tóch naast zitten ('hallucineren') — blijf kritisch." }],
-          niveaus: { basis: "Patronen in data. A.", simpeler: "AI = patronen uit data = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Patronen in data. A.", simpeler: "AI = patronen uit data", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Een rekenmachine volgt vaste regels, leert niets.", "Een schakelaar is gewone elektronica.", "Een agenda is geen software."],
         uitlegPad: {
           stappen: [{ titel: "Aanbevelingssystemen", tekst: "**Aanbevelingen** (YouTube, Netflix, Spotify) gebruiken AI: ze leren uit jouw (en andermans) kijk-/luistergedrag welke patronen erin zitten en voorspellen wat je leuk vindt. Een rekenmachine of schakelaar volgt vaste regels en **leert** niet." }],
-          niveaus: { basis: "Aanbevelingen. A.", simpeler: "YouTube-tips = AI = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Aanbevelingen. A.", simpeler: "YouTube-tips = AI", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Er is een wezenlijk verschil.", "ML draait juist op computers.", "Andersom: ML leert uit data, klassiek niet."],
         uitlegPad: {
           stappen: [{ titel: "Regels schrijven vs leren", tekst: "Bij **klassiek programmeren** schrijft de **mens de regels**. Bij **machine learning** geef je veel **voorbeelden (data)** en **leert het systeem zelf de patronen/regels** eruit. Je programmeert het leerproces, niet de regels." }],
-          niveaus: { basis: "ML leert uit data. A.", simpeler: "ML = leren uit voorbeelden = A.", nogSimpeler: "A." },
+          niveaus: { basis: "ML leert uit data. A.", simpeler: "ML = leren uit voorbeelden", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Betalen heeft er niets mee te maken.", "Resetten is iets anders.", "Het geleerde model wordt juist bewaard."],
         uitlegPad: {
           stappen: [{ titel: "Trainen → testen → gebruiken", tekst: "Tijdens het **trainen** leert het model **patronen uit trainingsdata** (bv. duizenden gelabelde foto's). Daarna **testen** op nieuwe data om te checken of het echt werkt, en dan **gebruiken** op echte gevallen." }],
-          niveaus: { basis: "Leren uit trainingsdata. A.", simpeler: "Trainen = leren uit data = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Leren uit trainingsdata. A.", simpeler: "Trainen = leren uit data", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Het is een uitdrukking over data-kwaliteit, niet letterlijk afval.", "Het gaat niet over bestanden wissen.", "Juist niet — slechte data geeft slechte resultaten."],
         uitlegPad: {
           stappen: [{ titel: "Data bepaalt de kwaliteit", tekst: "**'Garbage in, garbage out'**: leert een model van **slechte of eenzijdige** voorbeelden, dan worden de voorspellingen ook slecht of scheef. **Meer en betere data → beter model.** De data is dus minstens zo belangrijk als het algoritme." }],
-          niveaus: { basis: "Slechte data = slecht model. A.", simpeler: "Slechte data → slecht = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Slechte data = slecht model. A.", simpeler: "Slechte data → slecht", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Dat is juist unsupervised (zonder labels).", "ML heeft data nodig.", "Belonen/straffen is reinforcement learning."],
         uitlegPad: {
           stappen: [{ titel: "Met labels = supervised", tekst: "**Supervised** (begeleid) leert van **gelabelde** voorbeelden: data mét het juiste antwoord (foto + 'kat'). **Unsupervised** zoekt zelf groepen zonder labels; **reinforcement** leert via belonen/straffen." }],
-          niveaus: { basis: "Gelabelde voorbeelden. A.", simpeler: "Supervised = met labels = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Gelabelde voorbeelden. A.", simpeler: "Supervised = met labels", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Het kopieert niet uit één boek.", "Het 'begrijpt' niet bewust — het voorspelt.", "Niet willekeurig — op basis van geleerde patronen."],
         uitlegPad: {
           stappen: [{ titel: "Woord-voor-woord voorspellen", tekst: "Een **taalmodel (LLM)** is getraind op enorme hoeveelheden tekst en voorspelt **woord voor woord** wat waarschijnlijk volgt. Daardoor klinkt het vloeiend — maar het kan ook **feiten verzinnen** ('hallucineren'). Controleer belangrijke feiten dus altijd zelf." }],
-          niveaus: { basis: "Woord voor woord voorspellen. A.", simpeler: "LLM = volgende woord voorspellen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Woord voor woord voorspellen. A.", simpeler: "LLM = volgende woord voorspellen", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Het maakt juist nieuwe dingen, niet alleen sorteren.", "Het heeft niets met malware te maken.", "Een back-up is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Nieuwe content maken", tekst: "**Generatieve AI** **maakt nieuwe** content: tekst (chatbots/LLM's), beeld (uit een 'prompt'), muziek, code. Het is een krachtig **hulpmiddel**, maar geen orakel — het kan fouten en verzinsels bevatten." }],
-          niveaus: { basis: "Maakt nieuwe content. A.", simpeler: "Generatief = maakt nieuw = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Maakt nieuwe content. A.", simpeler: "Generatief = maakt nieuw", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "AI heeft geen bedoelingen — het ligt aan de data.", "Snelheid veroorzaakt geen bias.", "Stroom heeft er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Scheve data → scheef model", tekst: "**Bias** ontstaat doordat een model **vooroordelen in de data overneemt**. Train je een sollicitatie-AI vooral op mannen, dan benadeelt het vrouwen. Niet omdat de AI 'gemeen' is, maar omdat de **data scheef** was. Daarom is eerlijke, representatieve data essentieel." }],
-          niveaus: { basis: "Scheve data. A.", simpeler: "Bias = scheve data = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Scheve data. A.", simpeler: "Bias = scheve data", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Het gaat om nep-media, niet om 'diepte' van een bestand.", "Het heeft niets met wachtwoorden te maken.", "Niet met snelheid."],
         uitlegPad: {
           stappen: [{ titel: "AI-vervalsing", tekst: "Een **deepfake** is een met AI gemaakte **nepvideo of nep-stem** die echt lijkt. Dat kan worden misbruikt voor **desinformatie** of oplichting. Daarom: wees kritisch op wat je online ziet/hoort — niet alles is echt." }],
-          niveaus: { basis: "AI-nepvideo. A.", simpeler: "Deepfake = AI-nep = A.", nogSimpeler: "A." },
+          niveaus: { basis: "AI-nepvideo. A.", simpeler: "Deepfake = AI-nep", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "AI kan fouten/verzinsels bevatten — niet blind vertrouwen.", "Het is juist een nuttig hulpmiddel, mits kritisch gebruikt.", "Wees voorzichtig met persoonsgegevens (privacy/AVG)."],
         uitlegPad: {
           stappen: [{ titel: "Hulpmiddel, geen orakel", tekst: "Gebruik AI als **hulpmiddel**, maar blijf **kritisch**: het kan zelfverzekerd klinken en er tóch naast zitten. **Controleer** belangrijke feiten zelf, en let op **privacy** (deel niet zomaar persoonsgegevens) en **eerlijkheid** (bias)." }],
-          niveaus: { basis: "Hulpmiddel + kritisch controleren. A.", simpeler: "AI = hulpmiddel, blijf kritisch = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Hulpmiddel + kritisch controleren. A.", simpeler: "AI = hulpmiddel, blijf kritisch", nogSimpeler: "A." },
         },
       },
     ],

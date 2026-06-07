@@ -46,7 +46,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Ideologieën onthouden: LIBERALISME (vrijheid, vrije markt, rijke burgers — Thorbecke 1848), SOCIALISME (arbeider, sociale wetten — SDAP 1894), CONFESSIONALISME (religie centraal — KSP/ARP). Industrialisatie = tijdvak 8 (1800-1900 stoommachines). Pacificatie = 1917 schoolstrijd-akkoord.",
-        { basis: "Thorbecke + fabrieken = liberalisme + industrialisatie. = A.", simpeler: "Liberaal = Thorbecke (1848 Grondwet). Stoommachines = industrialisatie. = A.", nogSimpeler: "Liberalisme + industrialisatie = A." },
+        { basis: "Thorbecke + fabrieken = liberalisme + industrialisatie.", simpeler: "Liberaal = Thorbecke (1848 Grondwet). Stoommachines = industrialisatie.", nogSimpeler: "Liberalisme + industrialisatie" },
         [{ woord: "liberalisme", uitleg: "Vrijheid + parlementair stelsel + vrije markt." }, { woord: "industrialisatie", uitleg: "Overgang naar fabrieken + stoommachines." }],
       ),
     }],
@@ -75,7 +75,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Kamer-rechten onthouden: AMENDEMENT = wijzigen van een wet (regering's tekst veranderen). INITIATIEF = nieuwe wet maken (vanaf nul). BUDGET = begroting goedkeuren. INTERPELLATIE = minister grillen + verantwoording vragen. Hier: tekst aanpassen = amendement.",
-        { basis: "Tekst veranderen = amendement. = A.", simpeler: "Amendement = wijziging op bestaande tekst. = A.", nogSimpeler: "Amendement = A." },
+        { basis: "Tekst veranderen = amendement.", simpeler: "Amendement = wijziging op bestaande tekst.", nogSimpeler: "Amendement" },
         [{ woord: "amendement", uitleg: "Wijziging op bestaande wettekst." }, { woord: "interpellatie", uitleg: "Minister verantwoording vragen." }],
       ),
     }],
@@ -104,7 +104,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Interbellum Duitsland: 1919 Versailles (zware sancties), 1923 hyperinflatie + Ruhrbezetting, 1924-1929 Dawes-plan = herstelprogramma met VS-leningen → werkte. Okt 1929 Beurskrach NY → VS-banken eisten geld terug → DE-banken fail → werkloosheid → Hitler 1933 aan macht.",
-        { basis: "Beurskrach 1929 brak herstel. = A.", simpeler: "Okt 1929 New York-beurs crashed → VS-leningen aan DE terug-geëist → Duitse economie kapot. = A.", nogSimpeler: "Beurskrach = A." },
+        { basis: "Beurskrach 1929 brak herstel.", simpeler: "Okt 1929 New York-beurs crashed → VS-leningen aan DE terug-geëist → Duitse economie kapot.", nogSimpeler: "Beurskrach" },
         [{ woord: "Beurskrach", uitleg: "Plotseling instorten van aandelenmarkt." }, { woord: "Versailles 1919", uitleg: "Vredesverdrag na WO1 — Duitsland zware sancties." }],
       ),
     }],
@@ -134,7 +134,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "5 onderdrukkings-instrumenten: GEHEIME POLITIE (Gestapo/NKVD/Stasi — arresteren stil), STRAFKAMP (Dachau/Goelag — bestemming), SHOWPROCES (Stalin 1936-38 — openbaar nep-proces), CENSUUR (pers-controle), ZUIVERING (breed: massa-arrestaties + executies). Stil ophalen = geheime politie.",
-        { basis: "Geheim oppakken = geheime politie. = B.", simpeler: "Gestapo (Nazi) / NKVD (Sovjet) komen 's nachts, mensen verdwijnen. = B.", nogSimpeler: "Geheime politie = B." },
+        { basis: "Geheim oppakken = geheime politie.", simpeler: "Gestapo (Nazi) / NKVD (Sovjet) komen 's nachts, mensen verdwijnen.", nogSimpeler: "Geheime politie" },
         [{ woord: "Gestapo", uitleg: "Nazi-Duitsland geheime politie." }, { woord: "NKVD", uitleg: "Sovjet-Unie geheime politie (later KGB)." }],
       ),
     }],
@@ -163,7 +163,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Tijdlijn 1989-1990: nov 1989 val Berlijnse Muur. Mrt 1990 eerste vrije verkiezingen DDR. Okt 1990 hereniging Duitsland (DDR + BRD = Bundesrepublik). 1991 val Sovjet-Unie. Berlijn weer hoofdstad.",
-        { basis: "Na muur viel → vrije verkiezingen. = C.", simpeler: "Muur viel nov 1989 → DDR-burgers konden eindelijk vrij stemmen mrt 1990. = C.", nogSimpeler: "Verkiezingen = C." },
+        { basis: "Na muur viel → vrije verkiezingen.", simpeler: "Muur viel nov 1989 → DDR-burgers konden eindelijk vrij stemmen mrt 1990.", nogSimpeler: "Verkiezingen" },
         [{ woord: "DDR", uitleg: "Deutsche Demokratische Republik — Oost-Duitsland 1949-1990." }, { woord: "BRD", uitleg: "Bundesrepublik Deutschland — West-Duitsland." }],
       ),
     }],
@@ -192,7 +192,7 @@ const steps = [
       ],
       uitlegPad: compact(
         "Populisme = 3 kenmerken: STERKE LEIDER (charisma, 'redder'), GEWONE VOLK vs ELITE (anti-establishment), NATIONALE IDENTITEIT (eigen land voorop). Pop-ulus = volk. Leider zegt direct te spreken voor 'het echte volk'. Tegenovergesteld aan technocratische politiek.",
-        { basis: "Sterke leider + volk vs elite = populisme. = C.", simpeler: "Pop-ulisme = populus = volk. Trump/Wilders/Le Pen = populisten. = C.", nogSimpeler: "Populisme = C." },
+        { basis: "Sterke leider + volk vs elite = populisme.", simpeler: "Pop-ulisme = populus = volk. Trump/Wilders/Le Pen = populisten.", nogSimpeler: "Populisme" },
         [{ woord: "populisme", uitleg: "Politiek met sterke leider die 'echte volk' tegenover 'elite' stelt." }, { woord: "elite", uitleg: "Kleine groep aan de top — geld/macht/onderwijs." }],
       ),
     }],

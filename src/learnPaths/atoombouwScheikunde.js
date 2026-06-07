@@ -89,12 +89,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen."],
         uitlegPad: {
-          stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6 = C." }],
+          stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6" }],
           woorden: [{ woord: "atoomnummer Z", uitleg: "= aantal protonen" }],
           theorie: "Elk element heeft unieke aantal protonen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "H=1, O=8, Na=11, C=6, Fe=26" }],
           basiskennis: [{ onderwerp: "in periodiek systeem", uitleg: "elementen op Z geordend" }],
-          niveaus: { basis: "Koolstof.", simpeler: "6 = C.", nogSimpeler: "6 = C. → C." },
+          niveaus: { basis: "Koolstof.", simpeler: "6", nogSimpeler: "6 = C. → C." },
         },
       },
       {
@@ -581,7 +581,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
             { type: "feit", tekst: "Aantal protonen = atoomnummer. Periodiek systeem op atoomnummer gesorteerd: H(1), He(2), Li(3), ... C(6), N(7), O(8)." },
           ],
           basiskennis: [{ onderwerp: "Cito-stof", uitleg: "Atoom-structuur is basis-scheikunde. Kern + elektronen onderscheid moeten kunnen maken." }],
-          niveaus: { basis: "Centrum met p+n. = A.", simpeler: "Atoomkern = centrum atoom. Bevat protonen (+) + neutronen (0). Heel klein maar bevat bijna alle massa. Elektronen draaien eromheen. = A.", nogSimpeler: "Centrum atoom = A." },
+          niveaus: { basis: "Centrum met p+n.", simpeler: "Atoomkern = centrum atoom. Bevat protonen (+) + neutronen (0). Heel klein maar bevat bijna alle massa. Elektronen draaien eromheen.", nogSimpeler: "Centrum atoom" },
         },
       },
       {
@@ -605,7 +605,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
             { type: "feit", tekst: "Element 117 (Tennessine) werd in 2010 gemaakt + bestond slechts ~50 milliseconden voor het vervalde. Moeilijker maken hoe verder je gaat." },
           ],
           basiskennis: [{ onderwerp: "VMBO-stof", uitleg: "Periodiek systeem inzicht = examen-stof VMBO scheikunde. Mendeleev + werking onthouden." }],
-          niveaus: { basis: "Tabel elementen. = A.", simpeler: "Periodiek systeem = tabel met alle ~118 chemische elementen, gerangschikt op atoomnummer + eigenschappen. Mendeleev 1869. = A.", nogSimpeler: "Element-tabel = A." },
+          niveaus: { basis: "Tabel elementen.", simpeler: "Periodiek systeem = tabel met alle ~118 chemische elementen, gerangschikt op atoomnummer + eigenschappen. Mendeleev 1869.", nogSimpeler: "Element-tabel" },
         },
       },
       {
@@ -629,7 +629,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
             { type: "feit", tekst: "Waterstof heeft 3 isotopen: protium (1p, 0n), deuterium (1p, 1n), tritium (1p, 2n)." },
           ],
           basiskennis: [{ onderwerp: "Niet ander element", uitleg: "Isotopen = ZELFDE element, andere massa. Bij verandering protonen = NIEUW element (koolstof → stikstof bij C-14 verval)." }],
-          niveaus: { basis: "Zelfde protonen, andere neutronen. = A.", simpeler: "Isotoop = atoom met zelfde aantal protonen maar verschillend aantal neutronen. Bv C-12 + C-14. C-14 radioactief voor datering. = A.", nogSimpeler: "Ander neutron-aantal = A." },
+          niveaus: { basis: "Zelfde protonen, andere neutronen.", simpeler: "Isotoop = atoom met zelfde aantal protonen maar verschillend aantal neutronen. Bv C-12 + C-14. C-14 radioactief voor datering.", nogSimpeler: "Ander neutron-aantal" },
         },
       },
       { q: "Wat is de **lading** van een **proton**?", options: ["+1","-1","0","+2"], answer: 0, wrongHints: [null, "Elektron.", "Neutron.", "Niet."] },

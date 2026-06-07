@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Dat zijn juist de secundaire kleuren.", "Dat zijn geen kleuren maar tonen (grijswaarden).", "Dat zijn mengkleuren."],
         uitlegPad: {
           stappen: [{ titel: "Niet te mengen", tekst: "**Primaire kleuren** (rood, geel, blauw) kun je zelf niet uit andere kleuren mengen — maar je maakt er wél alle andere mee. Rood+geel=oranje, geel+blauw=groen, rood+blauw=paars (de **secundaire** kleuren)." }],
-          niveaus: { basis: "Rood, geel, blauw. A.", simpeler: "Primair = rood/geel/blauw = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rood, geel, blauw. A.", simpeler: "Primair = rood/geel/blauw", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Juist tegenover elkaar, niet naast elkaar.", "Het gaat om paren, niet alleen warme tinten.", "Dat is licht-donkercontrast, niet complementair."],
         uitlegPad: {
           stappen: [{ titel: "Tegenover = fel contrast", tekst: "**Complementaire kleuren** staan **tegenover** elkaar in de kleurencirkel (rood↔groen, blauw↔oranje, geel↔paars). Naast elkaar geven ze een fel **contrast** dat opvalt; gemengd worden ze grauw. Kunstenaars gebruiken ze om iets te laten knallen." }],
-          niveaus: { basis: "Tegenover elkaar. A.", simpeler: "Complementair = tegenover = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenover elkaar. A.", simpeler: "Complementair = tegenover", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Koude kleuren wijken juist naar achteren.", "Zwart heeft hier niet die rol.", "Pastel is een verzadiging, geen warm/koud-effect op zich."],
         uitlegPad: {
           stappen: [{ titel: "Warm komt, koud wijkt", tekst: "**Warme kleuren** (rood/oranje/geel) lijken naar **voren** te komen (nabijheid, energie); **koude kleuren** (blauw/groen/paars) wijken naar **achteren** (afstand, rust). Zo kun je met kleur diepte suggereren in een plat beeld." }],
-          niveaus: { basis: "Warme kleuren. A.", simpeler: "Warm = naar voren = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Warme kleuren. A.", simpeler: "Warm = naar voren", nogSimpeler: "A." },
         },
       },
       {
@@ -55,7 +55,7 @@ const steps = [
         wrongHints: [null, "Juist niet overal hetzelfde.", "Iedereen ziet kleur (op kleurenblindheid na).", "Prijs heeft er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel bepaald", tekst: "**Kleursymboliek is cultureel en tijdgebonden**: wit staat westers voor zuiverheid maar in delen van Azië voor rouw; rood kan liefde óf gevaar zijn. Bij het 'lezen' van een kunstwerk hoort dus altijd de context." }],
-          niveaus: { basis: "Cultuur + tijd. A.", simpeler: "Betekenis verschilt per cultuur = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Cultuur + tijd. A.", simpeler: "Betekenis verschilt per cultuur", nogSimpeler: "A." },
         },
       },
     ],
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Het gaat om licht/donker, niet om geld.", "Niet de verfprijs.", "Niet het formaat."],
         uitlegPad: {
           stappen: [{ titel: "Licht-donker, los van kleur", tekst: "**Toonwaarde** is hoe **licht of donker** een partij is — van wit via grijzen naar zwart, los van wélke kleur. Met **toonverloop** (licht naar donker) suggereer je **volume**: een bol lijkt rond door een lichte kant en een schaduwkant." }],
-          niveaus: { basis: "Licht/donker. A.", simpeler: "Toonwaarde = licht-donker = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Licht/donker. A.", simpeler: "Toonwaarde = licht-donker", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Het gaat om licht-donker, niet primair om kleur.", "Buiten schilderen hoort bij impressionisme.", "Geen lijst — een licht-effect."],
         uitlegPad: {
           stappen: [{ titel: "Drama door licht", tekst: "**Clair-obscur / chiaroscuro** is een sterk **licht-donkercontrast**, vaak met één lichtbron, dat **drama** geeft en de aandacht richt op het belangrijkste. Kenmerkend voor de **barok** — denk aan **Caravaggio** en **Rembrandt**." }],
-          niveaus: { basis: "Licht-donkercontrast. A.", simpeler: "Clair-obscur = licht/donker = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Licht-donkercontrast. A.", simpeler: "Clair-obscur = licht/donker", nogSimpeler: "A." },
         },
       },
       {
@@ -94,7 +94,7 @@ const steps = [
         wrongHints: [null, "Er is wel degelijk verschil.", "Andersom: de slagschaduw valt náást/achter het voorwerp.", "Kleur is hier niet het onderscheid."],
         uitlegPad: {
           stappen: [{ titel: "Op het ding vs geworpen", tekst: "De **eigen schaduw** zit op het voorwerp zelf (de van het licht afgewende kant). De **slagschaduw** is de schaduw die het voorwerp **wérpt** op de ondergrond of muur. Samen maken ze het beeld ruimtelijk en geloofwaardig." }],
-          niveaus: { basis: "Op vs geworpen. A.", simpeler: "Eigen = op voorwerp = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Op vs geworpen. A.", simpeler: "Eigen = op voorwerp", nogSimpeler: "A." },
         },
       },
     ],
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Dat past juist bij asymmetrie/dynamiek.", "Symmetrie zegt niets over licht.", "Het gaat om ordening, niet om kleur."],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen = rust", tekst: "Bij **symmetrie** spiegelen de helften → het voelt **rustig, plechtig, in evenwicht** (denk aan een kerk-interieur). **Asymmetrie** is juist dynamischer en spannender." }],
-          niveaus: { basis: "Rust/evenwicht. A.", simpeler: "Symmetrie = rust = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Rust/evenwicht. A.", simpeler: "Symmetrie = rust", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Juist níét in het midden — dat is het hele idee.", "Het gaat over plaatsing, niet over kleuren.", "Niet over het aantal figuren."],
         uitlegPad: {
           stappen: [{ titel: "Niet saai in het midden", tekst: "De **derderegel/gulden snede**: plaats belangrijke elementen op ongeveer **een derde** van het beeld (op de snijpunten van denkbeeldige derde-lijnen). Dat oogt vaak levendiger en prettiger dan alles pal in het midden." }],
-          niveaus: { basis: "Op ⅓. A.", simpeler: "Belangrijke ding op ⅓ = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Op ⅓. A.", simpeler: "Belangrijke ding op ⅓", nogSimpeler: "A." },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
         wrongHints: [null, "Formaat stuurt de blik binnen het beeld niet.", "Verfprijs doet er niet toe.", "Juist wél — compositie stuurt de blik bewust."],
         uitlegPad: {
           stappen: [{ titel: "Lijnen en blikken leiden je", tekst: "Met **leidende lijnen** (een weg, een arm, de rand van een tafel) en de **blikrichting** van figuren stuurt de kunstenaar je oog naar het belangrijkste. Compositie is **bewuste ordening** — niets staat er toevallig." }],
-          niveaus: { basis: "Leidende lijnen + blik. A.", simpeler: "Lijnen sturen je oog = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Leidende lijnen + blik. A.", simpeler: "Lijnen sturen je oog", nogSimpeler: "A." },
         },
       },
     ],
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Even groot maakt het juist vlakker.", "Eén kleur helpt diepte niet.", "Het ophangen verandert de diepte-illusie niet."],
         uitlegPad: {
           stappen: [{ titel: "Manieren om diepte te maken", tekst: "**Overlapping** (een voorwerp dat een ander deels bedekt, lijkt dichterbij) suggereert diepte. Andere manieren: **lineair perspectief** (lijnen naar een verdwijnpunt), **afnemende grootte**, en **lucht-/kleurperspectief** (ver weg = vager/blauwer/lichter)." }],
-          niveaus: { basis: "Overlapping. A.", simpeler: "Diepte = overlapping = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Overlapping. A.", simpeler: "Diepte = overlapping", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Rond + horizontaal geeft juist rust.", "Kleur is hier niet het punt.", "De lijst doet niet mee."],
         uitlegPad: {
           stappen: [{ titel: "Diagonaal = dynamiek", tekst: "**Hoekige vormen** en **diagonale lijnen** geven **spanning en beweging**. **Ronde, vloeiende** vormen en **horizontale** lijnen geven juist **rust** en vriendelijkheid. Zo stuurt de kunstenaar het gevoel van de kijker." }],
-          niveaus: { basis: "Hoekig + diagonaal. A.", simpeler: "Diagonaal = beweging = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Hoekig + diagonaal. A.", simpeler: "Diagonaal = beweging", nogSimpeler: "A." },
         },
       },
       {
@@ -172,7 +172,7 @@ const steps = [
         wrongHints: [null, "'Mooi/niet mooi' is een mening, geen analyse.", "De prijs hoort niet bij beeldanalyse.", "Tellen alleen zegt niets over de werking."],
         uitlegPad: {
           stappen: [{ titel: "Wat zie ik → welk effect", tekst: "Analyseren = eerst **benoemen wat je ziet** (kleur, licht/toon, vorm, compositie…) en dat koppelen aan het **effect/de betekenis** (welke sfeer roept het op, waar gaat je oog heen, en waarom). De kunstenaar kiest beeldaspecten **doelbewust** om iets over te brengen." }],
-          niveaus: { basis: "Zien → effect benoemen. A.", simpeler: "Analyse = wat + effect = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Zien → effect benoemen. A.", simpeler: "Analyse = wat + effect", nogSimpeler: "A." },
         },
       },
     ],

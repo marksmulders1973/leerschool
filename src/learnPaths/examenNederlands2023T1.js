@@ -77,11 +77,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "inleidingstypen herkennen — kern" },
       ],
       uitlegPad: compact(
-        "5 inleidings-typen: AANLEIDING (gebeurtenis NU), ANEKDOTE (verhaaltje), VOORBEELD (concreet geval), PROBLEEM (rode draad-issue), DEFINITIE (wat IS X). Hier: 'jongeren snappen technologie niet' = probleem dat tekst oplost. = D.",
+        "5 inleidings-typen: AANLEIDING (gebeurtenis NU), ANEKDOTE (verhaaltje), VOORBEELD (concreet geval), PROBLEEM (rode draad-issue), DEFINITIE (wat IS X). Hier: 'jongeren snappen technologie niet' = probleem dat tekst oplost.",
         {
-          basis: "Alinea 1 noemt een probleem dat de tekst gaat behandelen. = D.",
-          simpeler: "Probleem = iets dat MIS is. 'Jongeren ≠ slim met techniek' is mis → probleem. = D.",
-          nogSimpeler: "Probleem = D.",
+          basis: "Alinea 1 noemt een probleem dat de tekst gaat behandelen.",
+          simpeler: "Probleem = iets dat MIS is. 'Jongeren ≠ slim met techniek' is mis → probleem.",
+          nogSimpeler: "Probleem",
         },
         [
           { woord: "aanleiding", uitleg: "De gebeurtenis NU die maakte dat dit geschreven werd." },
@@ -119,11 +119,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "structurele rol van slot-alinea — kern" },
       ],
       uitlegPad: compact(
-        "Slot-alinea kan: (1) CONCLUSIE = eindoordeel, (2) SAMENVATTING = alles kort herhalen, (3) NUANCERING = 'ja, maar...' inzicht toevoegen, (4) TOEKOMSTVERWACHTING = voorspellen, (5) OPROEP = doe iets. Alinea 15: 'wel digitaal vaardig, maar minder vrij' = ja, maar = nuancering. = B.",
+        "Slot-alinea kan: (1) CONCLUSIE = eindoordeel, (2) SAMENVATTING = alles kort herhalen, (3) NUANCERING = 'ja, maar...' inzicht toevoegen, (4) TOEKOMSTVERWACHTING = voorspellen, (5) OPROEP = doe iets. Alinea 15: 'wel digitaal vaardig, maar minder vrij' = ja, maar = nuancering.",
         {
-          basis: "'Ja, maar...' inzicht = nuancering. = B.",
-          simpeler: "Nuancering = een KLEIN tegendeel toevoegen. 'Wel vaardig, MAAR minder vrij.' = B.",
-          nogSimpeler: "Nuancering = B.",
+          basis: "'Ja, maar...' inzicht = nuancering.",
+          simpeler: "Nuancering = een KLEIN tegendeel toevoegen. 'Wel vaardig, MAAR minder vrij.'",
+          nogSimpeler: "Nuancering",
         },
         [
           { woord: "nuancering", uitleg: "Iets verzachten of toevoegen dat het zwart-wit-beeld kleurt." },
@@ -161,11 +161,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel onderscheiden — kern" },
       ],
       uitlegPad: compact(
-        "4 schrijfdoelen: INFORMEREN (feiten, neutraal, leren), OVERTUIGEN (mening + argumenten), AMUSEREN (humor, plezier), ACTIVEREN (oproep, doe iets). Interview met experts + feiten + verschillende ontwikkelingen = informeren. = A.",
+        "4 schrijfdoelen: INFORMEREN (feiten, neutraal, leren), OVERTUIGEN (mening + argumenten), AMUSEREN (humor, plezier), ACTIVEREN (oproep, doe iets). Interview met experts + feiten + verschillende ontwikkelingen = informeren.",
         {
-          basis: "Interview met feiten, geen mening = informeren. = A.",
-          simpeler: "Informeren = JOU iets LEREN. Zonder dat de schrijver iets WIL. = A.",
-          nogSimpeler: "Informeren = A.",
+          basis: "Interview met feiten, geen mening = informeren.",
+          simpeler: "Informeren = JOU iets LEREN. Zonder dat de schrijver iets WIL.",
+          nogSimpeler: "Informeren",
         },
         [
           { woord: "informeren", uitleg: "Feiten geven zodat de lezer iets leert (zonder mening op te dringen)." },
@@ -203,11 +203,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "onderwerp vs detail — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdonderwerp = DE RODE DRAAD door ALLE alineas. Truc: lees kop + slot — wat keert telkens terug? Hier: hiphop (alinea 1-2), bieb verdwijnt (3), lezen daalt (4-5), schoolbieb-actie (8-9), hiphopdans helpt (12-14). RODE DRAAD = jongeren weer laten lezen. = B.",
+        "Hoofdonderwerp = DE RODE DRAAD door ALLE alineas. Truc: lees kop + slot — wat keert telkens terug? Hier: hiphop (alinea 1-2), bieb verdwijnt (3), lezen daalt (4-5), schoolbieb-actie (8-9), hiphopdans helpt (12-14). RODE DRAAD = jongeren weer laten lezen.",
         {
-          basis: "Alle alineas wijzen naar: jongeren aan het lezen krijgen. = B.",
-          simpeler: "Wat is het DOEL van al die acties? = jongeren laten lezen. = B.",
-          nogSimpeler: "Lezen krijgen = B.",
+          basis: "Alle alineas wijzen naar: jongeren aan het lezen krijgen.",
+          simpeler: "Wat is het DOEL van al die acties? = jongeren laten lezen.",
+          nogSimpeler: "Lezen krijgen",
         },
         [
           { woord: "hoofdonderwerp", uitleg: "Het centrale thema dat in elke alinea op de achtergrond aanwezig is." },
@@ -244,11 +244,11 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "tekstverbanden in zinnen — kern" },
       ],
       uitlegPad: compact(
-        "Signaalwoorden tekstverband: OM…TE (doel-middel), DOORDAT/OMDAT (oorzaak-gevolg), MAAR/ECHTER (tegenstelling), DUS/DAAROM (gevolg), ALS…DAN (voorwaarde), ZOALS/NAMELIJK (voorbeeld), EN/OOK (opsomming). 'Om...te' = ALTIJD doel-middel. = A.",
+        "Signaalwoorden tekstverband: OM…TE (doel-middel), DOORDAT/OMDAT (oorzaak-gevolg), MAAR/ECHTER (tegenstelling), DUS/DAAROM (gevolg), ALS…DAN (voorwaarde), ZOALS/NAMELIJK (voorbeeld), EN/OOK (opsomming). 'Om...te' = ALTIJD doel-middel.",
         {
-          basis: "'Om...te' is een doel-zin. Antwoord = A.",
-          simpeler: "Om EEN DOEL te bereiken doen we EEN MIDDEL. 'Om veilig te stellen → investeren.' = A.",
-          nogSimpeler: "Doel-middel = A.",
+          basis: "'Om...te' is een doel-zin. Antwoord",
+          simpeler: "Om EEN DOEL te bereiken doen we EEN MIDDEL. 'Om veilig te stellen → investeren.'",
+          nogSimpeler: "Doel-middel",
         },
         [
           { woord: "doel-middel", uitleg: "Een doel willen bereiken via een bepaald middel ('om...te'-zin)." },
@@ -288,9 +288,9 @@ const steps = [
       uitlegPad: compact(
         "Gevolg-signaalwoorden: ZO, DAARDOOR, DUS, DAAROM, BIJGEVOLG. Hier: 'Jongeren missen ZO een goed voorbeeld' — 'zo' = 'op die manier'. Dus zin 2 = gevolg van zin 1. = B. (Truc: bij gevolg kan je 'dus' invullen tussen de zinnen — werkt het? Dan is het gevolg.)",
         {
-          basis: "'Zo' = daardoor = gevolg-signaal. = B.",
-          simpeler: "Ouders lezen niet → dus kinderen leren het niet → gevolg. = B.",
-          nogSimpeler: "Gevolg = B.",
+          basis: "'Zo' = daardoor = gevolg-signaal.",
+          simpeler: "Ouders lezen niet → dus kinderen leren het niet → gevolg.",
+          nogSimpeler: "Gevolg",
         },
         [
           { woord: "gevolg", uitleg: "Wat er als RESULTAAT uit een oorzaak voortkomt." },

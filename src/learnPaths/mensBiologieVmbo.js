@@ -46,7 +46,7 @@ const steps = [
           niveaus: {
             basis: "Grote hersenen. Antwoord A.",
             simpeler: "Bewust waarnemen = grote hersenen, de 'denker'. Antwoord A.",
-            nogSimpeler: "Grote hersenen = A.",
+            nogSimpeler: "Grote hersenen",
           },
         },
       },
@@ -132,7 +132,7 @@ const steps = [
           niveaus: {
             basis: "Alleen witte bloedcellen. Antwoord A.",
             simpeler: "Alleen witte cellen kunnen door haarvatwand naar weefsel + lymfe. Antwoord A.",
-            nogSimpeler: "Alleen wit = A.",
+            nogSimpeler: "Alleen wit",
           },
         },
       },
@@ -207,7 +207,7 @@ const steps = [
           niveaus: {
             basis: "Longblaasjes. Antwoord A.",
             simpeler: "Lucht reist door luchtpijp en bronchiën als snelweg. Pas bij de longblaasjes wordt zuurstof opgenomen. Antwoord A.",
-            nogSimpeler: "Longblaasjes = A.",
+            nogSimpeler: "Longblaasjes",
           },
         },
       },
@@ -303,7 +303,7 @@ const steps = [
           niveaus: {
             basis: "Voedsel afbreken. Antwoord A.",
             simpeler: "Enzymen knippen voedsel-moleculen in kleine stukjes zodat het lichaam ze kan opnemen. Antwoord A.",
-            nogSimpeler: "Afbreken = A.",
+            nogSimpeler: "Afbreken",
           },
         },
       },
@@ -357,7 +357,7 @@ const steps = [
           niveaus: {
             basis: "Schors + merg. Antwoord A.",
             simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Nierbekken verzamelt alleen. Antwoord A.",
-            nogSimpeler: "Schors + merg = A.",
+            nogSimpeler: "Schors + merg",
           },
         },
       },

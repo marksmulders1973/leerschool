@@ -32,7 +32,7 @@ const steps = [
         explanation: "**Omtrek = 2× lengte + 2× breedte** = 2×8 + 2×5 = 16 + 10 = **26 m**. Een tuin heeft 4 zijden — niet 2. Antwoord B.",
         uitlegPad: compact(
           "Omtrek rechthoek = 2×(L+B). 8m+5m=13m, ×2=26m. Hek = randje = omtrek.",
-          { basis: "Omtrek = 2×(8+5) = 26 m. = B.", simpeler: "Hek rondom 4 zijden: 8+8+5+5 = 26 m. = B.", nogSimpeler: "26 m = B." },
+          { basis: "Omtrek = 2×(8+5) = 26 m.", simpeler: "Hek rondom 4 zijden: 8+8+5+5 = 26 m.", nogSimpeler: "26 m" },
           [{ woord: "omtrek", uitleg: "Totale rand langs figuur." }],
         ),
       },
@@ -44,7 +44,7 @@ const steps = [
         explanation: "**Vierkante meter (m²)** = oppervlakte. Het kleine ²-tje betekent 'maal zichzelf' = vlak. Eenheden: cm² (klein), m² (kamer/tuin), km² (provincie). Antwoord B.",
         uitlegPad: compact(
           "Eenheden ladder: m = lengte (1D). m² = vlak (2D). m³ = inhoud (3D). Steeds 1 dimensie meer.",
-          { basis: "m² (vierkante meter). = B.", simpeler: "Oppervlakte = vlak = ². = B.", nogSimpeler: "m² = B." },
+          { basis: "m² (vierkante meter).", simpeler: "Oppervlakte = vlak = ².", nogSimpeler: "m²" },
           [{ woord: "m²", uitleg: "Vierkante meter — eenheid voor oppervlakte." }, { woord: "m³", uitleg: "Kubieke meter — eenheid voor inhoud (volume)." }],
         ),
       },
@@ -56,7 +56,7 @@ const steps = [
         explanation: "**Oppervlakte = lengte × breedte** = 6 × 4 = **24 m²**. Bij tegels van 1 m² = 24 tegels. Antwoord C.",
         uitlegPad: compact(
           "Oppervlakte rechthoek = L × B. Tegels 1m²: aantal = totale oppervlakte.",
-          { basis: "6 × 4 = 24. = C.", simpeler: "Vloer = 6×4 m² = 24 m². 24 tegels. = C.", nogSimpeler: "24 = C." },
+          { basis: "6 × 4 = 24.", simpeler: "Vloer = 6×4 m² = 24 m². 24 tegels.", nogSimpeler: "24" },
           [{ woord: "oppervlakte rechthoek", uitleg: "L × B (lengte maal breedte)." }],
         ),
       },
@@ -75,7 +75,7 @@ const steps = [
         explanation: "**Omtrek = 2×L + 2×B** = 2×12 + 2×5 = 24 + 10 = **34 cm**. Of: 12+5+12+5 = 34. Antwoord B.",
         uitlegPad: compact(
           "Rechthoek omtrek = 2L + 2B = 2(L+B). 2(12+5) = 2×17 = 34 cm.",
-          { basis: "2(12+5) = 34 cm. = B.", simpeler: "12+5+12+5 = 34. = B.", nogSimpeler: "34 = B." },
+          { basis: "2(12+5) = 34 cm.", simpeler: "12+5+12+5 = 34.", nogSimpeler: "34" },
           [{ woord: "omtrek rechthoek", uitleg: "2 × lengte + 2 × breedte." }],
         ),
       },
@@ -87,7 +87,7 @@ const steps = [
         explanation: "**Vierkant heeft 4 gelijke zijden**. Omtrek = 4 × zijde → zijde = omtrek ÷ 4 = 36 ÷ 4 = **9 cm**. Check: 4×9 = 36 ✓. Antwoord B.",
         uitlegPad: compact(
           "Vierkant omtrek = 4×zijde. Terug-reken: zijde = omtrek/4. 36/4 = 9 cm.",
-          { basis: "36÷4 = 9 cm. = B.", simpeler: "Vierkant 4 gelijke zijden. 36÷4 = 9. = B.", nogSimpeler: "9 = B." },
+          { basis: "36÷4 = 9 cm.", simpeler: "Vierkant 4 gelijke zijden. 36÷4 = 9.", nogSimpeler: "9" },
           [{ woord: "vierkant", uitleg: "Rechthoek met 4 gelijke zijden." }],
         ),
       },
@@ -99,7 +99,7 @@ const steps = [
         explanation: "**Vierkant omtrek** = 4 × zijde = 4 × 7,5 = **30 cm**. Antwoord C.",
         uitlegPad: compact(
           "4 × 7,5 = 30. Truc: 4×7=28, 4×0,5=2, samen 30.",
-          { basis: "4 × 7,5 = 30 cm. = C.", simpeler: "4 zijden van 7,5 = 30. = C.", nogSimpeler: "30 = C." },
+          { basis: "4 × 7,5 = 30 cm.", simpeler: "4 zijden van 7,5 = 30.", nogSimpeler: "30" },
           [{ woord: "decimaal vermenigvuldigen", uitleg: "4 × 7,5: doe 4×7=28 + 4×0,5=2 → 30." }],
         ),
       },
@@ -118,7 +118,7 @@ const steps = [
         explanation: "**Oppervlakte = L × B** = 9 × 6 = **54 m²**. Antwoord C.",
         uitlegPad: compact(
           "Oppervlakte rechthoek = L×B. 9×6 = 54 m².",
-          { basis: "9 × 6 = 54 m². = C.", simpeler: "L×B = 9×6 = 54. = C.", nogSimpeler: "54 = C." },
+          { basis: "9 × 6 = 54 m².", simpeler: "L×B = 9×6 = 54.", nogSimpeler: "54" },
           [{ woord: "oppervlakte rechthoek", uitleg: "L × B." }],
         ),
       },
@@ -130,7 +130,7 @@ const steps = [
         explanation: "**Vierkant oppervlakte** = zijde × zijde = 12 × 12 = **144 cm²**. (Of: 12² = 144.) Antwoord C.",
         uitlegPad: compact(
           "Vierkant oppervlakte = zijde². 12² = 12×12 = 144 cm².",
-          { basis: "12 × 12 = 144 cm². = C.", simpeler: "12² = 144. = C.", nogSimpeler: "144 = C." },
+          { basis: "12 × 12 = 144 cm².", simpeler: "12² = 144.", nogSimpeler: "144" },
           [{ woord: "vierkant oppervlakte", uitleg: "zijde × zijde = z²." }],
         ),
       },
@@ -142,7 +142,7 @@ const steps = [
         explanation: "**1 m² = 100 cm × 100 cm = 10.000 cm²**. Truc: lengte-conversie ×100, maar oppervlakte (vierkant) ×100×100 = 10.000. Belangrijke Cito-trap! Antwoord C.",
         uitlegPad: compact(
           "1m = 100cm. 1m² = 100×100 = 10.000 cm² (NIET 100). Steeds 1 dimensie meer: m³ = 100³ = 1.000.000 cm³.",
-          { basis: "10.000. = C.", simpeler: "1m² = 100cm × 100cm = 10.000 cm². = C.", nogSimpeler: "10.000 = C." },
+          { basis: "10.000.", simpeler: "1m² = 100cm × 100cm = 10.000 cm².", nogSimpeler: "10.000" },
           [{ woord: "eenheid-conversie m² ↔ cm²", uitleg: "1 m² = 10.000 cm² (niet 100 — vierkant geeft ×100²)." }],
         ),
       },
@@ -161,7 +161,7 @@ const steps = [
         explanation: "**Oppervlakte driehoek = ½ × basis × hoogte** = ½ × 10 × 6 = **30 cm²**. Of: (10×6)÷2 = 60÷2 = 30. Antwoord B.",
         uitlegPad: compact(
           "Driehoek = halve rechthoek. A = (b×h)/2 = (10×6)/2 = 30 cm².",
-          { basis: "(10×6)/2 = 30. = B.", simpeler: "Driehoek = half rechthoek. 10×6=60, /2 = 30. = B.", nogSimpeler: "30 = B." },
+          { basis: "(10×6)/2 = 30.", simpeler: "Driehoek = half rechthoek. 10×6=60, /2 = 30.", nogSimpeler: "30" },
           [{ woord: "oppervlakte driehoek", uitleg: "½ × basis × hoogte (b × h ÷ 2)." }],
         ),
       },
@@ -173,7 +173,7 @@ const steps = [
         explanation: "**Bij rechthoekige driehoek**: de 2 rechte zijden ZIJN basis + hoogte (ze staan al haaks). A = ½ × 5 × 12 = ½ × 60 = **30 cm²**. Antwoord B.",
         uitlegPad: compact(
           "Rechthoekige driehoek: de 2 zijden bij de rechte hoek = basis + hoogte. (5×12)/2 = 30.",
-          { basis: "(5×12)/2 = 30 cm². = B.", simpeler: "Rechte hoek-zijden = basis+hoogte. 5×12=60, /2 = 30. = B.", nogSimpeler: "30 = B." },
+          { basis: "(5×12)/2 = 30 cm².", simpeler: "Rechte hoek-zijden = basis+hoogte. 5×12=60, /2 = 30.", nogSimpeler: "30" },
           [{ woord: "rechthoekige driehoek", uitleg: "Driehoek met 1 hoek van 90°." }],
         ),
       },
@@ -185,7 +185,7 @@ const steps = [
         explanation: "**Terug-rekenen**: A = ½×b×h → h = (2×A)÷b = (2×24)÷8 = 48÷8 = **6 cm**. Check: ½×8×6 = 24 ✓. Antwoord B.",
         uitlegPad: compact(
           "Terug-reken hoogte: h = 2A/b. 2×24/8 = 48/8 = 6 cm.",
-          { basis: "(2×24)÷8 = 6 cm. = B.", simpeler: "A=½bh, dus h = 2A/b = 48/8 = 6. = B.", nogSimpeler: "6 cm = B." },
+          { basis: "(2×24)÷8 = 6 cm.", simpeler: "A=½bh, dus h = 2A/b = 48/8 = 6.", nogSimpeler: "6 cm" },
           [{ woord: "terug-rekenen driehoek", uitleg: "Hoogte = (2 × oppervlakte) ÷ basis." }],
         ),
       },
@@ -204,7 +204,7 @@ const steps = [
         explanation: "**Omtrek = 2 × π × r** = 2 × 3,14 × 4 = 6,28 × 4 = **25,12 cm**. (Of: d = 2×4 = 8 cm, π×d = 3,14×8 = 25,12.) Antwoord B.",
         uitlegPad: compact(
           "Omtrek cirkel = 2πr = πd. r=4: 2×3,14×4 = 25,12 cm.",
-          { basis: "2×3,14×4 = 25,12 cm. = B.", simpeler: "d=2r=8. Omtrek=π×8=25,12. = B.", nogSimpeler: "25,12 = B." },
+          { basis: "2×3,14×4 = 25,12 cm.", simpeler: "d=2r=8. Omtrek=π×8=25,12.", nogSimpeler: "25,12" },
           [{ woord: "straal", uitleg: "Van middelpunt cirkel naar rand. (Helft van diameter.)" }, { woord: "diameter", uitleg: "Van rand tot rand door middelpunt. (Dubbele straal.)" }],
         ),
       },
@@ -216,7 +216,7 @@ const steps = [
         explanation: "**Diameter = 1 m, dus straal = 0,5 m**. Oppervlakte = π × r² = 3,14 × 0,5² = 3,14 × 0,25 = **0,785 m²** (= 7850 cm²). Antwoord B.",
         uitlegPad: compact(
           "Diameter=1m → straal=0,5m. Oppervlakte=πr²=3,14×0,5²=3,14×0,25=0,785 m².",
-          { basis: "π × 0,25 = 0,785 m². = B.", simpeler: "Straal halveer eerst (1m → 0,5m). Dan π × 0,5² = 0,785. = B.", nogSimpeler: "0,785 = B." },
+          { basis: "π × 0,25 = 0,785 m².", simpeler: "Straal halveer eerst (1m → 0,5m). Dan π × 0,5² = 0,785.", nogSimpeler: "0,785" },
           [{ woord: "oppervlakte cirkel", uitleg: "π × straal² (NIET diameter²)." }],
         ),
       },
@@ -228,7 +228,7 @@ const steps = [
         explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Voor Cito gebruik je meestal 3,14. Op rekenmachine = π-knop. Antwoord B.",
         uitlegPad: compact(
           "π = 3,14159... Op 2 decimalen: 3,14. Pi-dag = 14 maart (3-14 datum-notatie).",
-          { basis: "3,14. = B.", simpeler: "Pi = 3,14 op 2 decimalen. = B.", nogSimpeler: "3,14 = B." },
+          { basis: "3,14.", simpeler: "Pi = 3,14 op 2 decimalen.", nogSimpeler: "3,14" },
           [{ woord: "pi (π)", uitleg: "Wiskunde-constante ~3,14159. Verhouding omtrek/diameter cirkel." }],
         ),
       },
@@ -247,7 +247,7 @@ const steps = [
         explanation: "**Plinten gaan langs alle 4 muren** = omtrek = 2×(5+4) = 2×9 = **18 m**. (Of: 5+4+5+4 = 18.) Antwoord B.",
         uitlegPad: compact(
           "Plinten = langs muren = omtrek. 2×(5+4) = 18 m.",
-          { basis: "Omtrek 2(5+4) = 18 m. = B.", simpeler: "Plinten 4 wanden = 5+4+5+4 = 18. = B.", nogSimpeler: "18 m = B." },
+          { basis: "Omtrek 2(5+4) = 18 m.", simpeler: "Plinten 4 wanden = 5+4+5+4 = 18.", nogSimpeler: "18 m" },
           [{ woord: "plint", uitleg: "Houten randje langs muur op vloer." }],
         ),
       },
@@ -259,7 +259,7 @@ const steps = [
         explanation: "**Tuin = 20×15 = 300 m²**. **Vijver = 4×3 = 12 m²**. Gras = tuin − vijver = 300 − 12 = **288 m²**. Antwoord A.",
         uitlegPad: compact(
           "Gras = totale tuin − vijver. (20×15) − (4×3) = 300 − 12 = 288 m².",
-          { basis: "300 − 12 = 288 m². = A.", simpeler: "Tuin 300, vijver 12 eraf = 288 gras. = A.", nogSimpeler: "288 = A." },
+          { basis: "300 − 12 = 288 m².", simpeler: "Tuin 300, vijver 12 eraf = 288 gras.", nogSimpeler: "288" },
           [{ woord: "samengestelde figuur", uitleg: "Figuur uit meerdere delen — bereken stuk voor stuk." }],
         ),
       },
@@ -271,7 +271,7 @@ const steps = [
         explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Cito-trap: pas op voor diameter ipv straal! Antwoord C.",
         uitlegPad: compact(
           "Pizza diameter=30, straal=15. Oppervlakte = πr² = 3,14×225 = 706,5 cm². Niet 30² gebruiken!",
-          { basis: "π × 15² = 706,5 cm². = C.", simpeler: "Straal = halve diameter = 15. π×15² = 706,5. = C.", nogSimpeler: "706,5 = C." },
+          { basis: "π × 15² = 706,5 cm².", simpeler: "Straal = halve diameter = 15. π×15² = 706,5.", nogSimpeler: "706,5" },
           [{ woord: "straal vs diameter", uitleg: "Straal = halve diameter. In formule cirkel-oppervlakte gebruik je STRAAL (niet diameter)." }],
         ),
       },

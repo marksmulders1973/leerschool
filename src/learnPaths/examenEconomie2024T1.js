@@ -148,7 +148,7 @@ const steps = [
           niveaus: {
             basis: "Paar omroepen + verschillend = oligopolie. Antwoord C.",
             simpeler: "Stel je voor: 10 supermarktketens in NL — niet 1 (monopolie), niet 1000 (volkomen concurrentie). Een PAAR. Elke ketens heeft eigen sfeer (Lidl = goedkoop, AH = midden, Jumbo = vriendelijk). Hetzelfde geldt voor publieke omroepen — paar spelers, elk met eigen karakter = oligopolie.",
-            nogSimpeler: "Paar spelers + verschillend = oligopolie = C.",
+            nogSimpeler: "Paar spelers + verschillend = oligopolie",
           },
         },
       },
@@ -207,7 +207,7 @@ const steps = [
           niveaus: {
             basis: "Koopkracht = reëel inkomen = inkomen na inflatie-correctie. Antwoord D.",
             simpeler: "Op Prinsjesdag wil iedereen weten: 'kan ik volgend jaar nog evenveel boodschappen doen?'. Dat hangt af van loon ÉN prijzen. Het inkomen 'na prijsstijging' = reëel inkomen = koopkracht.",
-            nogSimpeler: "Koopkracht = reëel inkomen = D.",
+            nogSimpeler: "Koopkracht = reëel inkomen",
           },
         },
       },
@@ -263,7 +263,7 @@ const steps = [
           niveaus: {
             basis: "Uitgaven > inkomsten → tekort → bijlenen → schuld stijgt. Antwoord B.",
             simpeler: "Stel je voor: jij geeft elke maand €1.500 uit maar verdient maar €1.300. Tekort €200/maand → moet bijlenen → schuld groeit. Hetzelfde met Italië: meer uitgaven dan belastinginkomsten = bijlenen = schuld stijgt.",
-            nogSimpeler: "Meer uitgeven dan binnenhalen = lenen = schuld stijgt = B.",
+            nogSimpeler: "Meer uitgeven dan binnenhalen = lenen = schuld stijgt",
           },
         },
       },
@@ -322,7 +322,7 @@ const steps = [
           niveaus: {
             basis: "Citaat noemt fiets-reparatie (incidenteel) + lunch/koffie (dagelijks huishoudelijk). Antwoord B.",
             simpeler: "Het Nibud zegt: studenten onderschatten 2 dingen: (a) onverwachte kosten (fiets stuk) en (b) kleine dagelijkse kosten (broodje, koffie). Vaste lasten zoals huur zien ze WEL — die staan elke maand in de bank.",
-            nogSimpeler: "Citaat = incidenteel + dagelijks = B.",
+            nogSimpeler: "Citaat = incidenteel + dagelijks",
           },
         },
       },
@@ -380,7 +380,7 @@ const steps = [
           niveaus: {
             basis: "Bedrijven WEG = blijvend = structureel. Aanbodkant van productie. Antwoord C.",
             simpeler: "Verschil: conjunctureel = tijdelijk (slechte economie, komt weer goed). Structureel = blijvend (bedrijf is WEG, komt niet terug). Een bedrijf dat naar buitenland verhuist = blijvend = structureel.",
-            nogSimpeler: "Bedrijf verdwijnt = structureel + aanbod = C.",
+            nogSimpeler: "Bedrijf verdwijnt = structureel + aanbod",
           },
         },
       },

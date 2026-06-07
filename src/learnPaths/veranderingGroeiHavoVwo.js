@@ -38,7 +38,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vast bedrag erbij", tekst: "**Lineair**: elke stap **zelfde bedrag** erbij (of eraf). Bv +€50/maand spaaren. Procentueel (5%/jaar) is exponentieel, niet lineair." }],
           theorie: "Cito-favoriet om te onderscheiden: 'is dit lineair of exponentieel?' → kijk naar verschillen vs procenten in tabel.",
-          niveaus: { basis: "Absolute toename. A.", simpeler: "Lineair = vast bedrag erbij = A.", nogSimpeler: "Vast = A." },
+          niveaus: { basis: "Absolute toename. A.", simpeler: "Lineair = vast bedrag erbij", nogSimpeler: "Vast" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
             { titel: "Start bepalen", tekst: "y(1) = 7 = a + 4·1 → a = 3. **Formule: y = 3 + 4x**." },
             { titel: "Check", tekst: "y(2) = 3 + 8 = 11 ✓. y(4) = 3 + 16 = 19 ✓." },
           ],
-          niveaus: { basis: "y = 3 + 4x. A.", simpeler: "b=4, a=3, y=3+4x = A.", nogSimpeler: "3+4x = A." },
+          niveaus: { basis: "y = 3 + 4x. A.", simpeler: "b=4, a=3, y=3+4x", nogSimpeler: "3+4x" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "y = 20000 − 2000·t", tekst: "t=5: y = 20000 − 2000·5 = 20000 − 10000 = **€10.000**. Lineaire afschrijving." }],
           theorie: "Praktijk: vooral nieuwe auto's verliezen exponentieel (eerste jaar veel). Lineair is een vereenvoudiging.",
-          niveaus: { basis: "€10.000. A.", simpeler: "20000−2000·5=10000 = A.", nogSimpeler: "10k = A." },
+          niveaus: { basis: "€10.000. A.", simpeler: "20000−2000·5=10000", nogSimpeler: "10k" },
         },
       },
       {
@@ -73,7 +73,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen Δy, niet ÷Δx.", "Niet correct.", "Niet — 9/3=3."],
         uitlegPad: {
           stappen: [{ titel: "b = Δy/Δx", tekst: "b = (14−5) / (4−1) = 9/3 = **3**." }],
-          niveaus: { basis: "3. A.", simpeler: "9/3=3 = A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "3. A.", simpeler: "9/3=3", nogSimpeler: "3" },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Extrapolatie-risico", tekst: "Lineair past kort meetbaar bereik vaak goed, maar **extrapolatie** buiten dat bereik = risicovol omdat patroon kan kantelen (capaciteit, saturatie, technologische verandering). Bevolking ooit lineair gegroeid maar nu stagnatie." }],
           theorie: "Klassieker: Malthusiaans lineair voedsel + exp.bevolking → catastrofe. In praktijk bleek voedselgroei ook exp. door techniek.",
-          niveaus: { basis: "Patroon verandert. A.", simpeler: "Extrapolatie risico = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Patroon verandert. A.", simpeler: "Extrapolatie risico", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Niet — moet 1+...", "Niet — factor.", "Tegenovergesteld — afname."],
         uitlegPad: {
           stappen: [{ titel: "b = 1 + p/100", tekst: "5% groei → **b = 1 + 0,05 = 1,05**. Elk jaar vermenigvuldigt waarde met 1,05.\n\n€100 → na 1 jaar €105 → na 2 jaar €110,25 → na 10 jaar €162,89." }],
-          niveaus: { basis: "1,05. A.", simpeler: "5% = ×1,05 = A.", nogSimpeler: "1,05 = A." },
+          niveaus: { basis: "1,05. A.", simpeler: "5% = ×1,05", nogSimpeler: "1,05" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Niet — verschillen niet constant.", "Niet — quotiënten constant.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Quotiënten = constant", tekst: "8/4=2, 16/8=2, 32/16=2 → **factor 2 per stap = exponentieel b=2**. Formule: y = 2 · 2^x (a=2, b=2). Check: y(1)=4 ✓.\n\nKlassiek 'verdubbel-elke-stap'-patroon (bacteriegroei, schaakbord-graan-legende)." }],
-          niveaus: { basis: "Exp b=2. A.", simpeler: "Quotiënten 2 = exp = A.", nogSimpeler: "Exp = A." },
+          niveaus: { basis: "Exp b=2. A.", simpeler: "Quotiënten 2 = exp", nogSimpeler: "Exp" },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vuistregel 70", tekst: "**Vuistregel 70**: T_v ≈ 70 / groei% = 70/7 = **10 jaar**. Werkt nauwkeurig voor kleine groei-%. Exact: T_v = ln(2)/ln(1,07) ≈ 10,24." }],
           theorie: "Memo: 1%/jaar → 70 jaar verdubbeling. 7% → 10 jaar. 10% → 7 jaar.",
-          niveaus: { basis: "10 jaar. A.", simpeler: "70/7=10 = A.", nogSimpeler: "10 = A." },
+          niveaus: { basis: "10 jaar. A.", simpeler: "70/7=10", nogSimpeler: "10" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "y = 25000 · 0,8²", tekst: "Groeifactor 0,8. y = 25000 · 0,80² = 25000 · 0,64 = **€16.000**." }],
           theorie: "Lineair 'min €5000/jaar' zou na 2 jaar 15000 zijn. Exponentieel is hier nipt hoger (16000) omdat de daling ‘op kleiner bedrag’ wordt toegepast.",
-          niveaus: { basis: "16000. A.", simpeler: "25000·0,8²=16000 = A.", nogSimpeler: "16k = A." },
+          niveaus: { basis: "16000. A.", simpeler: "25000·0,8²=16000", nogSimpeler: "16k" },
         },
       },
       {
@@ -146,7 +146,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Moore's wet", tekst: "**Moore's wet** (1965): aantal transistors per chip verdubbelt ~elke 2 jaar. **Exponentiële groei**. Klopte ~50 jaar — sinds 2020 vertraagd vanwege fysieke grenzen (atomaire schaal). Vandaar specialisatie GPU/AI/quantum als opvolger." }],
           theorie: "Andere exp: internet-gebruikers tot ~2010, GenAI-modellen 2017-2024, zonne-energie-prijs dalend exp.",
-          niveaus: { basis: "Moore. A.", simpeler: "Computer = Moore = A.", nogSimpeler: "Moore = A." },
+          niveaus: { basis: "Moore. A.", simpeler: "Computer = Moore", nogSimpeler: "Moore" },
         },
       },
     ],
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is √.", "Niet — log is exponent.", "Niet — dat is log(1)."],
         uitlegPad: {
           stappen: [{ titel: "10³ = 1000", tekst: "log_10(1000) = **3** want 10³ = 1000. Logaritme = de exponent die je nodig hebt om grondtal naar getal te krijgen." }],
-          niveaus: { basis: "3. A.", simpeler: "10³=1000 → log=3 = A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "3. A.", simpeler: "10³=1000 → log=3", nogSimpeler: "3" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
             { titel: "Log nemen", tekst: "log(2) = t · log(1,05) → t = log(2) / log(1,05) = 0,301 / 0,0212 ≈ **14,2 jaar**." },
           ],
           theorie: "Vuistregel 70: 70/5 = 14 jaar — matcht.",
-          niveaus: { basis: "~14,2 jaar. A.", simpeler: "log2/log1,05 ≈ 14 = A.", nogSimpeler: "14 = A." },
+          niveaus: { basis: "~14,2 jaar. A.", simpeler: "log2/log1,05 ≈ 14", nogSimpeler: "14" },
         },
       },
       {
@@ -189,7 +189,7 @@ const steps = [
         wrongHints: [null, "Niet — fout patroon.", "Niet — moet aftrekken.", "Niet — moet × niet +."],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldig → optellen", tekst: "**log(a·b) = log(a) + log(b)**. Vermenigvuldigen wordt optellen na log-transformatie. Dit is fundamentele log-regel (uitgevonden 17e eeuw, vóór rekenmachines, om vermenigvuldigen op te lossen)." }],
-          niveaus: { basis: "log(ab) = log(a)+log(b). A.", simpeler: "× → + bij log = A.", nogSimpeler: "× → + = A." },
+          niveaus: { basis: "log(ab) = log(a)+log(b). A.", simpeler: "× → + bij log", nogSimpeler: "× → +" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
             { titel: "Tijd", tekst: "2 × 5730 = **11.460 jaar** oud." },
           ],
           theorie: "Carbon-dating betrouwbaar tot ~50.000 jaar. Daarna te weinig C-14 over. Voor oudere steen: K-Ar of U-Pb-methodes.",
-          niveaus: { basis: "11.460 jaar. A.", simpeler: "25%=2 halveringen=11460j = A.", nogSimpeler: "A." },
+          niveaus: { basis: "11.460 jaar. A.", simpeler: "25%=2 halveringen=11460j", nogSimpeler: "A." },
         },
       },
       {
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Lineair.", "Lineair.", "Lineair."],
         uitlegPad: {
           stappen: [{ titel: "pH = −log[H₃O⁺]", tekst: "**pH** is logaritmisch: pH 3 is 10× zuurder dan pH 4, 100× zuurder dan pH 5. Andere log-schalen: **Richter** (aardbeving), **decibel** (geluid), **magnitude** (sterren). Reden: schaal-bereik te groot voor lineair (10⁻¹⁴ tot 10⁰ M voor H⁺)." }],
-          niveaus: { basis: "pH. A.", simpeler: "pH = log = A.", nogSimpeler: "pH = A." },
+          niveaus: { basis: "pH. A.", simpeler: "pH = log", nogSimpeler: "pH" },
         },
       },
     ],
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet — gaat door.", "Niet — naar oneindig.", "Wel begrensd maar geen plafond — schommelt."],
         uitlegPad: {
           stappen: [{ titel: "S-curve = logistisch", tekst: "**Logistisch model**: S-vormige curve, groeit eerst snel, vlakt af naar plafond (carrying capacity K). Past op bevolking in eindig gebied, virus-uitbraak, marktverzadiging." }],
-          niveaus: { basis: "Logistisch. A.", simpeler: "Plafond = logistisch = A.", nogSimpeler: "Logist. = A." },
+          niveaus: { basis: "Logistisch. A.", simpeler: "Plafond = logistisch", nogSimpeler: "Logist." },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — herhalend.", "Niet — niet groeiend.", "Niet — geen plafond."],
         uitlegPad: {
           stappen: [{ titel: "Cyclisch herhalend", tekst: "Eb-vloed herhaalt ~12,5u (Maan-gravitatie). **Periodiek (sinus)-model** past: f(t) = a + b·sin(c·t + d). Cito-classics: getijden, dagelijkse temperatuur, hartslag, seizoens-vraag." }],
-          niveaus: { basis: "Periodiek. A.", simpeler: "Getijden = sinus = A.", nogSimpeler: "Sinus = A." },
+          niveaus: { basis: "Periodiek. A.", simpeler: "Getijden = sinus", nogSimpeler: "Sinus" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Niet — versnelling.", "Niet — daalt eerst niet exp.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "h = v₀·t − ½g·t²", tekst: "**Kwadratisch model**: hoogte stijgt eerst (lineaire bijdrage v₀·t) maar wordt door zwaartekracht (−½g·t²) afgeremd → maximum → daling. **Parabool** met top." }],
-          niveaus: { basis: "Kwadratisch. A.", simpeler: "Bal-baan = parabool = A.", nogSimpeler: "Parabool = A." },
+          niveaus: { basis: "Kwadratisch. A.", simpeler: "Bal-baan = parabool", nogSimpeler: "Parabool" },
         },
       },
       {
@@ -263,7 +263,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Logistisch met R0", tekst: "Beginfase virus: weinig immuniteit → besmetten dragen exp. Naarmate meer mensen besmet (of beschermd door maatregelen/immuniteit): R-getal daalt → groei vlakt af → **logistische curve**.\n\nMeerdere golven mogelijk (nieuwe varianten) → opvolgende S-curves." }],
           theorie: "COVID-19 grafiek-pattern: meerdere logistische golven achter elkaar.",
-          niveaus: { basis: "Logistisch. A.", simpeler: "Virus = logistisch = A.", nogSimpeler: "Logist. = A." },
+          niveaus: { basis: "Logistisch. A.", simpeler: "Virus = logistisch", nogSimpeler: "Logist." },
         },
       },
       {
@@ -274,7 +274,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Exp loopt scheef", tekst: "**Exponentieel zonder plafond** extrapoleren naar lange termijn → onrealistisch grote uitkomsten. Voorbeeld: 'bevolking groeit 3%/jaar voor altijd' → na 1000 jaar miljarden×miljarden mensen. Klopt niet door eindige voedsel/grond." }],
           theorie: "Cito-pattern: 'leg uit waarom je niet zomaar 2080 mag voorspellen via exp.'",
-          niveaus: { basis: "Exp ongebreideld. A.", simpeler: "Exp extrapolatie risico = A.", nogSimpeler: "Exp = A." },
+          niveaus: { basis: "Exp ongebreideld. A.", simpeler: "Exp extrapolatie risico", nogSimpeler: "Exp" },
         },
       },
     ],
@@ -293,7 +293,7 @@ const steps = [
         wrongHints: [null, "Lineair zou 125.000 — exp ietsje meer.", "Te groot.", "Belachelijk."],
         uitlegPad: {
           stappen: [{ titel: "y = 100.000·1,025^10", tekst: "1,025^10 ≈ 1,28. → **~128.000**.\n\nVerschil met lineair (+2500/jaar = 125.000): exp ~3000 meer door rente-op-rente." }],
-          niveaus: { basis: "~128.000. A.", simpeler: "100.000·1,025^10≈128k = A.", nogSimpeler: "128k = A." },
+          niveaus: { basis: "~128.000. A.", simpeler: "100.000·1,025^10≈128k", nogSimpeler: "128k" },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Niet — verschillen veranderen.", "Niet zo te zien.", "Wel mogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Quotiënten = 0,9", tekst: "90/100=0,9, 81/90=0,9, 72,9/81=0,9 → constante factor → **exp afnemend met b=0,9** (10% verlies/jaar)." }],
-          niveaus: { basis: "Exp b=0,9. A.", simpeler: "0,9-quotiënt = exp afn = A.", nogSimpeler: "0,9 = A." },
+          niveaus: { basis: "Exp b=0,9. A.", simpeler: "0,9-quotiënt = exp afn", nogSimpeler: "0,9" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
             { titel: "0,5³", tekst: "Na 3 halveringen: (0,5)³ = 0,125 = **12,5%**." },
           ],
           theorie: "Medisch: na 80 dagen (10 halveringen) < 0,1% → praktisch nul. Daarom Tsjernobyl-jood snel weg, Cs-137 (T_h=30 jaar) blijft veel langer.",
-          niveaus: { basis: "12,5%. A.", simpeler: "3×halveren = 1/8 = 12,5% = A.", nogSimpeler: "12,5 = A." },
+          niveaus: { basis: "12,5%. A.", simpeler: "3×halveren = 1/8 = 12,5%", nogSimpeler: "12,5" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Learning curve = S-vorm", tekst: "**Leren**: begin traag (basis snappen), dan snel (kennis groeit op kennis), uiteindelijk plateau (expertgrens, marginal returns). Klassieke S-curve = **logistisch**. Wordt gebruikt in psychologie + training-theorie." }],
           theorie: "Daarom: 15-min/dag werkt op lange termijn (volharden door beginplateau) > sprong-leren.",
-          niveaus: { basis: "Logistisch. A.", simpeler: "Leren = S-curve = A.", nogSimpeler: "S = A." },
+          niveaus: { basis: "Logistisch. A.", simpeler: "Leren = S-curve", nogSimpeler: "S" },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — voor exp.", "Wel bestaand."],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel uit ln(2)", tekst: "T_v = ln(2)/ln(1+r) ≈ 0,693/r voor kleine r (Taylor-expansie). Met r in % en uitkomst in jaar: T_v ≈ 70/p. **Werkt voor p < 10%**. Bij grotere groei (20%, 50%) wordt approximatie minder nauwkeurig — gebruik exacte formule." }],
-          niveaus: { basis: "Kleine %. A.", simpeler: "70-regel = kleine % = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Kleine %. A.", simpeler: "70-regel = kleine %", nogSimpeler: "A." },
         },
       },
     ],

@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — geen beeld-vervanging.", "Niet — niet overdreven.", "Niet — geen herhaling beginklank."],
         uitlegPad: {
           stappen: [{ titel: "Levenloos = menselijk", tekst: "De wind kan niet écht fluisteren (alleen levende wezens kunnen dat). Levenloos voorwerp (wind) krijgt menselijke eigenschap (fluisteren) → **personificatie**. Onderscheid van metafoor: bij metafoor zou wind iets ANDERS zijn, niet menselijk doen." }],
-          niveaus: { basis: "Personificatie. A.", simpeler: "Wind doet menselijk = personificatie. A.", nogSimpeler: "Person. = A." },
+          niveaus: { basis: "Personificatie. A.", simpeler: "Wind doet menselijk = personificatie. A.", nogSimpeler: "Person." },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — geen 'als'.", "Wel overdreven maar formuel = metafoor.", "Niet — tanden niet menselijk gemaakt."],
         uitlegPad: {
           stappen: [{ titel: "Geen signaalwoord = metafoor", tekst: "Bij **vergelijking**: 'haar tanden zijn ALS parels' (met als/gelijk/zoals). Bij **metafoor**: 'haar tanden ZIJN parels' (zonder signaalwoord — beeld vervangt zaak direct). Sterk beeld + compact." }],
-          niveaus: { basis: "Metafoor. A.", simpeler: "Geen 'als' = metafoor. A.", nogSimpeler: "Meta = A." },
+          niveaus: { basis: "Metafoor. A.", simpeler: "Geen 'als' = metafoor. A.", nogSimpeler: "Meta" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tegenstrijdige termen samen", tekst: "Oorverdovend = heel hard geluid. Stilte = afwezigheid geluid. **Twee tegenstrijdige woorden** = oxymoron. Effect: paradoxale ervaring (bv. heel intense stilte voelt 'oorverdovend')." }],
           theorie: "Andere voorbeelden: 'bittere zoetheid', 'levende doden', 'controlled chaos'.",
-          niveaus: { basis: "Oxymoron. A.", simpeler: "Tegenovergestelde woorden samen. A.", nogSimpeler: "Oxymoron = A." },
+          niveaus: { basis: "Oxymoron. A.", simpeler: "Tegenovergestelde woorden samen. A.", nogSimpeler: "Oxymoron" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verwant begrip", tekst: "Het Witte Huis is GEBOUW, kan zelf niet besluiten. Bedoeld: de **president/regering** die daar zit. Vervanging door VERWANT begrip = metonymia. Soms genoemd 'metonymie' in school-NL." }],
           theorie: "Andere voorbeelden: 'Den Haag besluit' (=overheid), 'glas drinken' (=inhoud), 'een Picasso' (=schilderij van Picasso).",
-          niveaus: { basis: "Metonymia. A.", simpeler: "Verwant ding gebruikt. A.", nogSimpeler: "Metonymia = A." },
+          niveaus: { basis: "Metonymia. A.", simpeler: "Verwant ding gebruikt. A.", nogSimpeler: "Metonymia" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         wrongHints: [null, "Niet — geen beeld.", "Niet — geen contrast in zin.", "Niet — geen verzachting."],
         uitlegPad: {
           stappen: [{ titel: "Bedoeld tegendeel", tekst: "Spreker zegt 'rustig' maar betekent **DRUK**. Tegengestelde van wat letterlijk staat = ironie. Op papier soms moeilijk; in spreektaal: toon doet het werk. Wanneer + agressief: sarcasme." }],
-          niveaus: { basis: "Ironie. A.", simpeler: "Bedoeld tegengesteld. A.", nogSimpeler: "Ironie = A." },
+          niveaus: { basis: "Ironie. A.", simpeler: "Bedoeld tegengesteld. A.", nogSimpeler: "Ironie" },
         },
       },
     ],
@@ -88,7 +88,7 @@ const steps = [
         wrongHints: [null, "Niet — al ver vóór.", "Veel later.", "Veel later."],
         uitlegPad: {
           stappen: [{ titel: "Middelnederlands dierenepos", tekst: "Geschreven rond 1260 door Willem (achternaam onbekend). Satire op feodale samenleving via dieren-personages. Reynaert (vos) bedriegt iedereen. Klassieker uit middelnederlands. Net als de Karel-romans uit dezelfde periode." }],
-          niveaus: { basis: "Middeleeuwen. A.", simpeler: "13e eeuw = ME. A.", nogSimpeler: "ME = A." },
+          niveaus: { basis: "Middeleeuwen. A.", simpeler: "13e eeuw = ME. A.", nogSimpeler: "ME" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
             { titel: "1860, koloniale aanklacht", tekst: "Eduard Douwes Dekker (pseudoniem **Multatuli** = 'ik heb veel geleden' in Latijn). Was ambtenaar in Indië, zag misbruik. Schreef Max Havelaar als wake-up call. Politiek-revolutionair effect — leidde tot herziening koloniaal beleid." },
           ],
           theorie: "Vandaag essentieel-lezen voor begrip Nederlandse koloniale geschiedenis.",
-          niveaus: { basis: "Multatuli. A.", simpeler: "Douwes Dekker = Multatuli. A.", nogSimpeler: "Multatuli = A." },
+          niveaus: { basis: "Multatuli. A.", simpeler: "Douwes Dekker = Multatuli. A.", nogSimpeler: "Multatuli" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
           stappen: [
             { titel: "Esthetisch programma", tekst: "Reactie op brave, moralistische 19e-eeuwse NL-literatuur. Willem Kloos: 'Kunst moet geen moraal, alleen schoonheid'. Tijdschrift 'De Nieuwe Gids' 1885. Belangrijke vernieuwers: Kloos (sonnetten), Van Eeden ('De kleine Johannes'), Gorter ('Mei')." },
           ],
-          niveaus: { basis: "Kunst om kunst. A.", simpeler: "Vorm = inhoud. A.", nogSimpeler: "Esthetiek = A." },
+          niveaus: { basis: "Kunst om kunst. A.", simpeler: "Vorm = inhoud. A.", nogSimpeler: "Esthetiek" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
           stappen: [
             { titel: "Naoorlogs proza-klassieken", tekst: "**W.F. Hermans** (1921-1995): 'De donkere kamer van Damocles', 'Nooit meer slapen'.\n**Gerard Reve** (1923-2006): 'De avonden', 'Op weg naar het einde'.\n**Harry Mulisch** (1927-2010): 'De aanslag', 'De ontdekking van de hemel'.\nGedomineerd NL-proza tussen 1947-2000." },
           ],
-          niveaus: { basis: "Hermans, Reve, Mulisch. A.", simpeler: "HRM = Grote Drie. A.", nogSimpeler: "HRM = A." },
+          niveaus: { basis: "Hermans, Reve, Mulisch. A.", simpeler: "HRM = Grote Drie. A.", nogSimpeler: "HRM" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
           stappen: [
             { titel: "Amsterdam-mythe", tekst: "Treurspel over verovering Amsterdam in 1304. Voor 200+ jaar elk Nieuwjaar opgevoerd in Schouwburg. Vondel: belangrijkste NL-toneelschrijver Renaissance. Ook 'Lucifer', 'Adam in ballingschap'." },
           ],
-          niveaus: { basis: "Vondel. A.", simpeler: "Vondel-treurspel. A.", nogSimpeler: "Vondel = A." },
+          niveaus: { basis: "Vondel. A.", simpeler: "Vondel-treurspel. A.", nogSimpeler: "Vondel" },
         },
       },
     ],
@@ -166,7 +166,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Te lang.", "Vast getal."],
         uitlegPad: {
           stappen: [{ titel: "Vaste vorm sinds Petrarca", tekst: "14 regels, twee hoofdmodellen:\n- **Italiaans/Petrarca**: 8 (octaaf) + 6 (sextet).\n- **Engels/Shakespeare**: 3 × 4 + 1 × 2 (couplet)." }],
-          niveaus: { basis: "14. A.", simpeler: "Sonnet = 14 regels. A.", nogSimpeler: "14 = A." },
+          niveaus: { basis: "14. A.", simpeler: "Sonnet = 14 regels. A.", nogSimpeler: "14" },
         },
       },
       {
@@ -181,7 +181,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is ik-perspectief.", "Niet — dat is auctorial.", "Niet — er is wel verteller."],
         uitlegPad: {
           stappen: [{ titel: "'Hij/zij' maar beperkt zicht", tekst: "Verteller in 3e persoon ('hij liep') maar kent ALLEEN gedachten/gevoel van één personage. Effect: meer afstand dan ik-perspectief maar meer intimiteit dan alwetend. Veel gebruikt in moderne literatuur." }],
-          niveaus: { basis: "3e persoon, één hoofd. A.", simpeler: "Hij/zij + één gezichtspunt. A.", nogSimpeler: "Personaal = A." },
+          niveaus: { basis: "3e persoon, één hoofd. A.", simpeler: "Hij/zij + één gezichtspunt. A.", nogSimpeler: "Personaal" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is epiek.", "Niet — dat is lyriek.", "Niet — epiek."],
         uitlegPad: {
           stappen: [{ titel: "Toneel-categorie", tekst: "Tragedie = drama-subvorm waarin hoofdpersoon ondergaat (hubris → val). Oedipus, Hamlet, Othello. Komedie = ander drama-subvorm met happy end. Roman/Novelle/Sonnet zijn epiek/lyriek." }],
-          niveaus: { basis: "Tragedie. A.", simpeler: "Tragedie = toneel. A.", nogSimpeler: "Tragedie = A." },
+          niveaus: { basis: "Tragedie. A.", simpeler: "Tragedie = toneel. A.", nogSimpeler: "Tragedie" },
         },
       },
       {
@@ -206,7 +206,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is sonnet.", "Niet — geen vaste lengte.", "Wel onderwerp."],
         uitlegPad: {
           stappen: [{ titel: "Vrijheid in vorm", tekst: "Modern poëzie sinds eind 19e eeuw: niet langer gebonden aan klassieke metriek. Whitman ('Leaves of Grass' 1855) pionier. Ritme komt uit zin-bouw + adempauze, niet uit voorgeschreven jamben." }],
-          niveaus: { basis: "Geen vaste vorm. A.", simpeler: "Geen rijm-regel. A.", nogSimpeler: "Vrij = A." },
+          niveaus: { basis: "Geen vaste vorm. A.", simpeler: "Geen rijm-regel. A.", nogSimpeler: "Vrij" },
         },
       },
       {
@@ -216,7 +216,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is trochee.", "Niet — dat is anapest.", "Niet — meestal niet 'lang-lang'."],
         uitlegPad: {
           stappen: [{ titel: "Meest voorkomend in NL", tekst: "ta-DAH-ta-DAH-ta-DAH. Voorbeeld: 'De NACHT was KOEL en STIL'. Klassieke 'jambische pentameter' = 5 jamben per regel (Shakespeare-standaard)." }],
-          niveaus: { basis: "Kort-Lang. A.", simpeler: "ta-DAH. A.", nogSimpeler: "Jambe = A." },
+          niveaus: { basis: "Kort-Lang. A.", simpeler: "ta-DAH. A.", nogSimpeler: "Jambe" },
         },
       },
     ],
@@ -240,7 +240,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is plot.", "Niet — dat is personage.", "Niet — dat is setting."],
         uitlegPad: {
           stappen: [{ titel: "Onderwerp vs thema", tekst: "**Onderwerp** = concreet (WO2, eerste liefde, verhuizing).\n**Thema** = universele gedachte (mens-onmenselijkheid, identiteit-vorming, vergankelijkheid). Eén onderwerp kan vele thema's hebben." }],
-          niveaus: { basis: "Universele gedachte. A.", simpeler: "Hoofdidee. A.", nogSimpeler: "Hoofdidee = A." },
+          niveaus: { basis: "Universele gedachte. A.", simpeler: "Hoofdidee. A.", nogSimpeler: "Hoofdidee" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is direct.", "Niet specifiek — kan ook indirect.", "Niet — auteur geeft signalen."],
         uitlegPad: {
           stappen: [{ titel: "'Show don't tell'", tekst: "Krachtiger dan direct: lezer trekt zelf conclusie uit handelingen. 'Jan pakt het laatste stuk taart zonder vragen' → wij snappen: egoïstisch. Meer literair dan: 'Jan was een egoïst'." }],
-          niveaus: { basis: "Via daden. A.", simpeler: "Tonen, niet zeggen. A.", nogSimpeler: "Tonen = A." },
+          niveaus: { basis: "Via daden. A.", simpeler: "Tonen, niet zeggen. A.", nogSimpeler: "Tonen" },
         },
       },
       {
@@ -272,7 +272,7 @@ const steps = [
           stappen: [
             { titel: "Tijd in verhaal", tekst: "Bv. 'Ulysses' (Joyce): vertelde tijd 1 dag. Vertel-tijd: 700 pagina's. Verhouding 1:700 → traag tempo, gedetailleerd. 'War and Peace': 7 jaar in 1200p → matig tempo. **Tempo** = vertel/vertelde-verhouding." },
           ],
-          niveaus: { basis: "Tijd in verhaal. A.", simpeler: "Hoeveel tijd er gebeurt. A.", nogSimpeler: "In-verhaal = A." },
+          niveaus: { basis: "Tijd in verhaal. A.", simpeler: "Hoeveel tijd er gebeurt. A.", nogSimpeler: "In-verhaal" },
         },
       },
       {
@@ -287,7 +287,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is plat.", "Niet — los van karakterisering.", "Niet — rol, niet karakter-diepte."],
         uitlegPad: {
           stappen: [{ titel: "E.M. Forster's onderscheid", tekst: "Plat = stereotype (de gemene baas, dom blondje) — voorspelbaar.\nRond = complex + soms tegenstrijdig + ontwikkelt door verhaal — realistisch. Hoofdpersonages moderne romans meestal rond." }],
-          niveaus: { basis: "Complex + ontwikkelend. A.", simpeler: "Meerlagig + verandert. A.", nogSimpeler: "Complex = A." },
+          niveaus: { basis: "Complex + ontwikkelend. A.", simpeler: "Meerlagig + verandert. A.", nogSimpeler: "Complex" },
         },
       },
       {
@@ -304,7 +304,7 @@ const steps = [
           stappen: [
             { titel: "Buiten- + binnen-verhaal", tekst: "Klassiek: '1001 Nacht' — Sheherazade vertelt elke nacht een verhaal om execitie uit te stellen. Het 'vertel-vertellen' is het raam, de individuele verhalen zijn binnen-verhalen. Ook: Boccaccio's Decamerone, Conrad's 'Heart of Darkness'." },
           ],
-          niveaus: { basis: "Verhaal-in-verhaal. A.", simpeler: "Verteller vertelt verhaal in verhaal. A.", nogSimpeler: "Raam = A." },
+          niveaus: { basis: "Verhaal-in-verhaal. A.", simpeler: "Verteller vertelt verhaal in verhaal. A.", nogSimpeler: "Raam" },
         },
       },
     ],
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "Niet — geen NL'er.", "Niet — Amerikaans.", "Niet — SF/fantasy."],
         uitlegPad: {
           stappen: [{ titel: "Internationaal doorgebroken", tekst: "Eerste Nederlandstalige auteur ooit met Booker International Prize. Roman over jong meisje na verlies broer in streng-gereformeerd boeren-milieu. Rijneveld was toen 29 — jongste laureaat ooit." }],
-          niveaus: { basis: "Booker International. A.", simpeler: "Booker 2020. A.", nogSimpeler: "Booker = A." },
+          niveaus: { basis: "Booker International. A.", simpeler: "Booker 2020. A.", nogSimpeler: "Booker" },
         },
       },
       {
@@ -341,7 +341,7 @@ const steps = [
             { titel: "Reve schreef 'De avonden'", tekst: "**'De avonden'** is van **Gerard Reve** (1947, debuutroman, baanbrekend). Mulisch-romans: 'De aanslag' (1982), 'De ontdekking van de hemel' (1992), 'Twee vrouwen', 'Het stenen bruidsbed'." },
           ],
           theorie: "Klassieke valkuil: Grote Drie naam-verwarring. Hermans schreef 'De donkere kamer van Damocles', 'Nooit meer slapen'.",
-          niveaus: { basis: "Reve, niet Mulisch. A.", simpeler: "De avonden = Reve. A.", nogSimpeler: "Reve = A." },
+          niveaus: { basis: "Reve, niet Mulisch. A.", simpeler: "De avonden = Reve. A.", nogSimpeler: "Reve" },
         },
       },
       {
@@ -356,7 +356,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is auctorial.", "Wel verteller.", "Wel emoties."],
         uitlegPad: {
           stappen: [{ titel: "Beperkt 3e-persoon", tekst: "Personaal: alles wordt verteld VANUIT één personage's gezichtspunt. Wat andere personages denken/voelen: ALLEEN via wat hoofdpersonage observeert of vermoedt. Geeft intimiteit + onbetrouwbaarheid (hoofdpersonage kan zich vergissen)." }],
-          niveaus: { basis: "Eén hoofd. A.", simpeler: "Beperkt tot één personage. A.", nogSimpeler: "Eén = A." },
+          niveaus: { basis: "Eén hoofd. A.", simpeler: "Beperkt tot één personage. A.", nogSimpeler: "Eén" },
         },
       },
       {
@@ -366,7 +366,7 @@ const steps = [
         wrongHints: [null, "Niet — geen menselijking.", "Mogelijk metafoor maar primair = overdrijving.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Sterke overdrijving", tekst: "Het regent niet ECHT katten + honden — overdrijving voor 'het regent enorm hard'. Engelse uitdrukking ('it's raining cats and dogs'), in NL minder gebruikelijk. Primair: hyperbool. Een uitdrukking als deze noem je 'idioom' of 'cliché' als vaste taalvorm." }],
-          niveaus: { basis: "Hyperbool. A.", simpeler: "Overdrijving. A.", nogSimpeler: "Hyperbool = A." },
+          niveaus: { basis: "Hyperbool. A.", simpeler: "Overdrijving. A.", nogSimpeler: "Hyperbool" },
         },
       },
       {
@@ -383,7 +383,7 @@ const steps = [
           stappen: [
             { titel: "Lezer-werk", tekst: "Auteur kiest bewust onvoltooidheid: lezer moet zelf nadenken over uitkomst. Voorbeeld: 'No Country for Old Men' (McCarthy), 'De avonden' (Reve). Versterkt thema 'onbeantwoordbare vragen van leven'." },
           ],
-          niveaus: { basis: "Niet opgelost. A.", simpeler: "Lezer mag invullen. A.", nogSimpeler: "Open = A." },
+          niveaus: { basis: "Niet opgelost. A.", simpeler: "Lezer mag invullen. A.", nogSimpeler: "Open" },
         },
       },
     ],

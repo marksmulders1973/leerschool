@@ -34,7 +34,7 @@ const steps = [
           stappen: [
             { titel: "Geologisch proces", tekst: "Algen + plankton zonken naar zeebodem → bedekt door sediment → druk + warmte → koolwaterstoffen. Daarom 'fossiele' brandstof. Niet hernieuwbaar in mensentijdschaal. Opraking-zorg: peak oil-debat." },
           ],
-          niveaus: { basis: "Zee-organismen miljoenen jaren. A.", simpeler: "Oude zeedieren onder druk. A.", nogSimpeler: "Oud = A." },
+          niveaus: { basis: "Zee-organismen miljoenen jaren. A.", simpeler: "Oude zeedieren onder druk. A.", nogSimpeler: "Oud" },
         },
       },
       {
@@ -51,7 +51,7 @@ const steps = [
           stappen: [
             { titel: "Decennia NL-welvaart", tekst: "Ontdekt 1959. Financierde welvaartsstaat NL (~€450 mld over decennia). Sinds 2012 toenemende aardbevingen → huizen-schade → boze burgers → kabinet besloot productie af te bouwen. 1 okt 2023 officieel gesloten (alleen reserve-veiligheid)." },
           ],
-          niveaus: { basis: "Afgebouwd door bevingen. A.", simpeler: "Aardbevingen → stop. A.", nogSimpeler: "Stop = A." },
+          niveaus: { basis: "Afgebouwd door bevingen. A.", simpeler: "Aardbevingen → stop. A.", nogSimpeler: "Stop" },
         },
       },
       {
@@ -68,7 +68,7 @@ const steps = [
           stappen: [
             { titel: "Energie per CO₂", tekst: "Methaan-verbranding: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Per kWh ~50% minder CO₂ dan kolen. Geen roet, weinig zwavel/stikstofoxiden. Gas dus 'transitie-brandstof' tussen kolen + hernieuwbaar. Maar methaan-lek (uit pijpleidingen) is zelf zeer sterk broeikasgas (28× CO₂)." },
           ],
-          niveaus: { basis: "Minder CO₂ + roet. A.", simpeler: "Schoner per kWh. A.", nogSimpeler: "Schoner = A." },
+          niveaus: { basis: "Minder CO₂ + roet. A.", simpeler: "Schoner per kWh. A.", nogSimpeler: "Schoner" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
           stappen: [
             { titel: "VS-revolutie", tekst: "Hydraulic fracturing: water + zand + chemicaliën onder hoge druk → schalie-gesteente barst → gas/olie stroomt vrij. Maakt VS sinds 2015 grootste olie- + gasproducent. Controverse: grondwater-vervuiling, methaan-lek, aardbevingen (Oklahoma). NL: alleen Groningen heeft conventionele winning, geen fracking." },
           ],
-          niveaus: { basis: "Hoge druk water in gesteente. A.", simpeler: "Steen barst → gas eruit. A.", nogSimpeler: "Frack = A." },
+          niveaus: { basis: "Hoge druk water in gesteente. A.", simpeler: "Steen barst → gas eruit. A.", nogSimpeler: "Frack" },
         },
       },
       {
@@ -102,7 +102,7 @@ const steps = [
           stappen: [
             { titel: "Transitie nog ver", tekst: "Ondanks wind + zon-boom: fossiel domineert wereldwijd. Olie ~30%, kolen ~27%, gas ~22%. Hernieuwbaar groeit snel maar van laag aandeel. Nucleair stabiel laag (~4%). EU ~22% hernieuwbaar, NL ~17% (groeiend)." },
           ],
-          niveaus: { basis: "Fossiel 79%. A.", simpeler: "Nog veel fossiel. A.", nogSimpeler: "79% = A." },
+          niveaus: { basis: "Fossiel 79%. A.", simpeler: "Nog veel fossiel. A.", nogSimpeler: "79%" },
         },
       },
     ],
@@ -123,7 +123,7 @@ const steps = [
           stappen: [
             { titel: "Solar-revolutie", tekst: "Sinds 2010: solar 90% goedkoper. Vandaag goedkoper dan ALLE fossiel + nucleair. Wind tweede. China bouwt zonneparken sneller dan rest wereld samen. Verandering verloopt sneller dan voorspeld 10 jaar geleden." },
           ],
-          niveaus: { basis: "Solar. A.", simpeler: "Zon = goedkoopste. A.", nogSimpeler: "Solar = A." },
+          niveaus: { basis: "Solar. A.", simpeler: "Zon = goedkoopste. A.", nogSimpeler: "Solar" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
           stappen: [
             { titel: "22,5 GW capaciteit", tekst: "Yangtze-rivier, geopend 2012. Pompt water via 32 turbines van 700 MW. Stuwdam 185 m hoog. Massief project: 1,3 mln mensen verplaatst, ecosystemen verstoord (Yangtze-dolfijn uitgestorven). Genereert ~1% China's elektriciteit." },
           ],
-          niveaus: { basis: "Grootste waterkracht. A.", simpeler: "Reusachtige dam. A.", nogSimpeler: "Three Gorges = A." },
+          niveaus: { basis: "Grootste waterkracht. A.", simpeler: "Reusachtige dam. A.", nogSimpeler: "Three Gorges" },
         },
       },
       {
@@ -157,7 +157,7 @@ const steps = [
           stappen: [
             { titel: "Kern-uitdaging transitie", tekst: "Zon schijnt overdag. Wind waait soms wel/niet. Geen 24/7 zoals gas/kolen/nuclear. Oplossingen: batterijen (Lithium-ion, opslag-uren), pumped hydro (water omhoog → omlaag bij vraag), waterstof (lange-termijn opslag), netwerk-koppeling (Europa: zon Spanje + wind Noorzee + waterkracht Noorwegen)." },
           ],
-          niveaus: { basis: "Niet altijd beschikbaar. A.", simpeler: "Zon/wind variabel. A.", nogSimpeler: "Intermittent = A." },
+          niveaus: { basis: "Niet altijd beschikbaar. A.", simpeler: "Zon/wind variabel. A.", nogSimpeler: "Intermittent" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
           stappen: [
             { titel: "'Food vs Fuel' debat", tekst: "Brazilië teelt suikerriet voor bio-ethanol → minder ruimte voedsel + Amazone-ontbossing. Indonesië palmolie voor biodiesel → tropische ontbossing. VS-mais voor ethanol gebruikt 40% mais-oogst → voedselprijzen hoger. Argument: bio uit afval (mest, restproducten) OK, maar specifiek teelt voor fuel = problematisch." },
           ],
-          niveaus: { basis: "Ontbossing/voedsel-conflict. A.", simpeler: "Voedsel-grond gebruikt voor fuel. A.", nogSimpeler: "Conflict = A." },
+          niveaus: { basis: "Ontbossing/voedsel-conflict. A.", simpeler: "Voedsel-grond gebruikt voor fuel. A.", nogSimpeler: "Conflict" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
           stappen: [
             { titel: "Noordzee-bonanza", tekst: "Op zee: 20-30% hogere capaciteitsfactor (meer wind). Geen 'not in my backyard' bezwaar. Maar duurder bouwen + onderhouden. NL plant 21 GW offshore 2030, 70 GW 2050 — voldoende voor halve nationale stroom-vraag. Doggersbank-veld UK = grootste wereld in aanbouw." },
           ],
-          niveaus: { basis: "Meer wind + minder bezwaren. A.", simpeler: "Zee = meer wind. A.", nogSimpeler: "Wind zee = A." },
+          niveaus: { basis: "Meer wind + minder bezwaren. A.", simpeler: "Zee = meer wind. A.", nogSimpeler: "Wind zee" },
         },
       },
     ],
@@ -217,7 +217,7 @@ const steps = [
           stappen: [
             { titel: "Kartel met macht", tekst: "12 leden onder leiding Saudi-Arabië. Coördineren productie → invloed wereldprijs. Reservoirs vooral Midden-Oosten + Zuid-Amerika + Afrika. Productie-quota maandelijks beslist. Saudi heeft 'spare capacity' = kan extra produceren in crisis." },
           ],
-          niveaus: { basis: "30%/80%. A.", simpeler: "Veel reserves, deel productie. A.", nogSimpeler: "OPEC = A." },
+          niveaus: { basis: "30%/80%. A.", simpeler: "Veel reserves, deel productie. A.", nogSimpeler: "OPEC" },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
           stappen: [
             { titel: "Yom Kippoer-oorlog gevolg", tekst: "Egypt + Syrië vielen Israel aan okt 1973. VS + NL + andere westerse landen steunden Israel. Arabische OPEC reageerde met boycot → olie ×4. NL: autoloze zondagen, hamster-rijdrang. Begin van energie-bewustzijn West. Versnelde isolatie-techniek + alternatieven." },
           ],
-          niveaus: { basis: "Arabische boycot. A.", simpeler: "Politieke boycot. A.", nogSimpeler: "Boycot = A." },
+          niveaus: { basis: "Arabische boycot. A.", simpeler: "Politieke boycot. A.", nogSimpeler: "Boycot" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
           stappen: [
             { titel: "Wake-up call afhankelijkheid", tekst: "EU was ~40% afhankelijk van Russisch gas (DE bijna 60%). Sancties tegen Rusland + Russen draaiden gas dicht → prijzen 10× hoger zomer 2022. EU haastte: LNG uit VS/Qatar, hernieuwbaar versnellen, energiebesparing. Pijnlijk maar leerzaam: energie-onafhankelijkheid is strategisch belang." },
           ],
-          niveaus: { basis: "EU verloor Russisch gas. A.", simpeler: "Geen Rus-gas meer. A.", nogSimpeler: "Crisis 2022 = A." },
+          niveaus: { basis: "EU verloor Russisch gas. A.", simpeler: "Geen Rus-gas meer. A.", nogSimpeler: "Crisis 2022" },
         },
       },
       {
@@ -263,7 +263,7 @@ const steps = [
           stappen: [
             { titel: "Shale-revolutie 2010+", tekst: "Fracking-techniek heeft VS van importeur naar exporteur veranderd. Sinds 2018 grootste olie-producent + grootste gas-producent. Saudi-Arabië #2 olie. Rusland #2 gas. VS exporteert nu LNG naar EU als alternatief voor Rusland." },
           ],
-          niveaus: { basis: "VS. A.", simpeler: "Verenigde Staten. A.", nogSimpeler: "VS = A." },
+          niveaus: { basis: "VS. A.", simpeler: "Verenigde Staten. A.", nogSimpeler: "VS" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
           stappen: [
             { titel: "Mysterieuze sabotage", tekst: "Nord Stream 1 (operationeel) + Nord Stream 2 (klaar maar niet geopend wegens Oekraïne-oorlog) explodeerden gelijktijdig. Vier gaten in pijp, gas in Oostzee. Onderzoeken nog lopend. Verdachten: Rusland zelf? Oekraïne? VS? Eind 2024: forse focus op Oekraïens-gerelateerde actoren in onderzoek." },
           ],
-          niveaus: { basis: "Explosie/sabotage. A.", simpeler: "Pijpleidingen kapot. A.", nogSimpeler: "Sabotage = A." },
+          niveaus: { basis: "Explosie/sabotage. A.", simpeler: "Pijpleidingen kapot. A.", nogSimpeler: "Sabotage" },
         },
       },
     ],
@@ -306,7 +306,7 @@ const steps = [
           stappen: [
             { titel: "Ethisch debat", tekst: "DR Congo dominantie + slechte arbeidsomstandigheden in 'artisanale' mijnen (kinderen, geen veiligheid). Tesla, Apple proberen 'kobalt-vrije' batterijen (LFP-chemie). Politiek: hoe responsabel sourcen? Mensenrechten-rapporten + supply-chain-audits versterken." },
           ],
-          niveaus: { basis: "DR Congo. A.", simpeler: "Afrika hoofdbron. A.", nogSimpeler: "Congo = A." },
+          niveaus: { basis: "DR Congo. A.", simpeler: "Afrika hoofdbron. A.", nogSimpeler: "Congo" },
         },
       },
       {
@@ -318,7 +318,7 @@ const steps = [
           stappen: [
             { titel: "Geopolitiek wapen", tekst: "China domineert via mijnen Inner Mongolië + low-cost verwerking. Gebruikte 2010-conflict met Japan dreiging te onderbreken → wereldwijde paniek. Sindsdien: VS + Australië + EU haasten zich eigen mijnen op te starten (bijv. Mountain Pass California). Maar inhalen duurt jaren." },
           ],
-          niveaus: { basis: "China. A.", simpeler: "China dominant. A.", nogSimpeler: "China = A." },
+          niveaus: { basis: "China. A.", simpeler: "China dominant. A.", nogSimpeler: "China" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
           stappen: [
             { titel: "Echt schoon — bij hernieuwbare bron", tekst: "Elektrolyzer: 2 elektroden in water, stroom erop, water splitst in waterstof + zuurstof. Bij gebruik (in brandstofcel of verbranding): H₂ + O₂ → H₂O + energie. **Geen CO₂ als input + output schone water**. Maar duur — alleen rendabel bij goedkope hernieuwbare stroom + opschaling." },
           ],
-          niveaus: { basis: "Elektrolyse + hernieuwbaar. A.", simpeler: "Water gesplitst door zon-stroom. A.", nogSimpeler: "Elektrolyse = A." },
+          niveaus: { basis: "Elektrolyse + hernieuwbaar. A.", simpeler: "Water gesplitst door zon-stroom. A.", nogSimpeler: "Elektrolyse" },
         },
       },
       {
@@ -352,7 +352,7 @@ const steps = [
           stappen: [
             { titel: "Hoogvlakte zout-vlaktes", tekst: "Salar de Uyuni (Bolivia), Atacama (Chili), Hombre Muerto (Argentinië). Lithium in zout-pekel, uitdroging in basins. ~55% wereld-reserves hier. China + Australië groot in productie (uit hardrock-mijnen). EV-boom → Bolivia/Chili-belang voor toekomst." },
           ],
-          niveaus: { basis: "Bolivia/Chili/Argentinië. A.", simpeler: "Zuid-Amerika hoogvlakte. A.", nogSimpeler: "Triangle = A." },
+          niveaus: { basis: "Bolivia/Chili/Argentinië. A.", simpeler: "Zuid-Amerika hoogvlakte. A.", nogSimpeler: "Triangle" },
         },
       },
       {
@@ -364,7 +364,7 @@ const steps = [
           stappen: [
             { titel: "Elektrificatie = koper-massa", tekst: "Verbrandingsauto: ~20 kg koper. EV: ~80 kg (motor-wikkelingen, batterij-cellen, kabels). EV-boom → koper-vraag explodeert. Zorg over voldoende mijnbouw-capaciteit voor 2030+. Mogelijk koper-tekort + prijspiek." },
           ],
-          niveaus: { basis: "4×. A.", simpeler: "4 keer meer. A.", nogSimpeler: "4× = A." },
+          niveaus: { basis: "4×. A.", simpeler: "4 keer meer. A.", nogSimpeler: "4×" },
         },
       },
     ],
@@ -390,7 +390,7 @@ const steps = [
           stappen: [
             { titel: "Stevig + bindend", tekst: "Ambitieus doel: bijna halveren in 11 jaar. Gerelateerd aan EU-Green-Deal-55%-doel. Vereist grootschalige actie alle sectoren. NL was 2024 ongeveer op 30% reductie sinds 1990 → versnelling nodig." },
           ],
-          niveaus: { basis: "49%. A.", simpeler: "Bijna halveren 2030. A.", nogSimpeler: "49% = A." },
+          niveaus: { basis: "49%. A.", simpeler: "Bijna halveren 2030. A.", nogSimpeler: "49%" },
         },
       },
       {
@@ -407,7 +407,7 @@ const steps = [
           stappen: [
             { titel: "Tata + chemie + raffinage", tekst: "Industrie = grootste deel: Tata Steel (#1 emitter NL), Shell/Pernis-raffinaderij, chemie-cluster Zuid-NL. Moeilijkst te elektrificeren door hoge-temperatuur-processen. Vereist groene H₂ + CCS. EU emissiehandel (ETS) bestraft sterk." },
           ],
-          niveaus: { basis: "Industrie 30%. A.", simpeler: "Fabrieken hoogste. A.", nogSimpeler: "Industrie = A." },
+          niveaus: { basis: "Industrie 30%. A.", simpeler: "Fabrieken hoogste. A.", nogSimpeler: "Industrie" },
         },
       },
       {
@@ -424,7 +424,7 @@ const steps = [
           stappen: [
             { titel: "Onverwacht knelpunt", tekst: "Tweede helft 2024: bedrijven die zonneparken willen bouwen krijgen 'geen aansluiting' van netbeheerder. Stroomnet ontworpen voor centrale grote centrales, niet vele kleine bronnen + grote vraag-pieken (EV-laadstations). TenneT investeert €100 mld+ tot 2050. Sociale + economische impact (industrie kan niet uitbreiden)." },
           ],
-          niveaus: { basis: "Net vol. A.", simpeler: "Stroomnet kan niet aan. A.", nogSimpeler: "Net vol = A." },
+          niveaus: { basis: "Net vol. A.", simpeler: "Stroomnet kan niet aan. A.", nogSimpeler: "Net vol" },
         },
       },
       {
@@ -436,7 +436,7 @@ const steps = [
           stappen: [
             { titel: "Akkoord 2022", tekst: "EU-deal: vanaf 2035 alleen nieuwe auto's met nul CO₂-emissie. Bestaande auto's mogen blijven rijden + tweedehands-markt blijft. Duitsland eiste uitzondering voor e-fuels (synthetische brandstof) — komt mogelijk. NL volgt EU. Autofabrikanten investeren miljarden in EV-productie." },
           ],
-          niveaus: { basis: "2035. A.", simpeler: "Geen nieuwe benzine 2035. A.", nogSimpeler: "2035 = A." },
+          niveaus: { basis: "2035. A.", simpeler: "Geen nieuwe benzine 2035. A.", nogSimpeler: "2035" },
         },
       },
       {
@@ -453,7 +453,7 @@ const steps = [
           stappen: [
             { titel: "Hieronder enorm verschil", tekst: "Onderzoek Wynes & Nicholas 2017: top-acties klimaat:\n1. Geen extra kind (~58 ton CO₂/jaar levenslang).\n2. Geen auto (2,4 ton).\n3. Vluchten vermijden (~1,6 ton per lange reis).\n4. Plantaardig dieet (0,8 ton).\nKleine acties (recyclen, LED) <0,2 ton elk. Niet alleen-of, maar groot belangrijker dan klein." },
           ],
-          niveaus: { basis: "Dieet + minder vliegen. A.", simpeler: "Eten + reizen = top. A.", nogSimpeler: "Levensstijl = A." },
+          niveaus: { basis: "Dieet + minder vliegen. A.", simpeler: "Eten + reizen = top. A.", nogSimpeler: "Levensstijl" },
         },
       },
     ],

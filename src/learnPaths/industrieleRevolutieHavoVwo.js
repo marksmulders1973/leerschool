@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is politiek.", "Niet — dat is bestuur.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Wintergraan/zomergraan/braak", tekst: "Driehoeks-vruchtwisseling: 1) wintergraan (rogge/tarwe). 2) zomergraan (haver/gerst). 3) braak (rust voor bodem). 1/3 grond produceerde dus NIETS. Vruchtwisseling met klaver verving braak → klaver bindt N → bodem rijker zonder rust." }],
-          niveaus: { basis: "Driedeling akkers. A.", simpeler: "Een derde liet je rusten. A.", nogSimpeler: "Drieslag = A." },
+          niveaus: { basis: "Driedeling akkers. A.", simpeler: "Een derde liet je rusten. A.", nogSimpeler: "Drieslag" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
             { titel: "Privé-grond + arbeidsoverschot", tekst: "Common land werd toegewezen aan grote landeigenaren. Kleine boeren + 'commoners' verloren toegang tot weide/brandhout. Moesten gaan werken als loonarbeider of trekken naar stad → leverde fabrieks-arbeiders." },
           ],
           theorie: "Marx noemde dit later 'oorspronkelijke accumulatie' — onteigening als basis voor kapitalisme.",
-          niveaus: { basis: "Privatisering grond. A.", simpeler: "Gemeenschappelijke gronden naar rijke landheren. A.", nogSimpeler: "Privatisering = A." },
+          niveaus: { basis: "Privatisering grond. A.", simpeler: "Gemeenschappelijke gronden naar rijke landheren. A.", nogSimpeler: "Privatisering" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Goud = welvaart", tekst: "Pre-1776 dominant: zoveel mogelijk export, zo weinig mogelijk import = handelsbalans positief → goud-instroom. Staat reguleert handel + ondersteunt monopolies (VOC, WIC)." }],
           theorie: "Adam Smith's 'Wealth of Nations' (1776) bekritiseerde mercantilisme: vrije ruil → meer welvaart voor alle landen.",
-          niveaus: { basis: "Goud verzamelen. A.", simpeler: "Veel exporteren, weinig importeren. A.", nogSimpeler: "Goud = A." },
+          niveaus: { basis: "Goud verzamelen. A.", simpeler: "Veel exporteren, weinig importeren. A.", nogSimpeler: "Goud" },
         },
       },
       {
@@ -83,7 +83,7 @@ const steps = [
           stappen: [
             { titel: "Meerdere factoren", tekst: "Steenkool-rijkdom + grote afzetmarkt (Brits Rijk) + politieke stabiliteit sinds 1688 (Glorious Revolution) + sterke maritieme handel + Inclosure-arbeidsoverschot + Verlichtings-cultuur. Frankrijk had revolutie 1789 + napoleontische oorlogen → industrialisatie pas vanaf 1830." },
           ],
-          niveaus: { basis: "Samenloop van factoren. A.", simpeler: "Veel ingrediënten samen in Engeland. A.", nogSimpeler: "Combo = A." },
+          niveaus: { basis: "Samenloop van factoren. A.", simpeler: "Veel ingrediënten samen in Engeland. A.", nogSimpeler: "Combo" },
         },
       },
       {
@@ -93,7 +93,7 @@ const steps = [
         wrongHints: [null, "Niet — fabrieken bestonden nog niet als nu.", "Niet — kleinschalig.", "Niet — minder dan 5%."],
         uitlegPad: {
           stappen: [{ titel: "Agrarische samenleving", tekst: "Tot industriële revolutie domineerde landbouw. Per 1850 (UK): nog ~30% in landbouw. Per 1900: <20%. Vandaag (NL): <3%. Reusachtige verschuiving van werk-aard binnen ~150 jaar." }],
-          niveaus: { basis: "Landbouw. A.", simpeler: "Bijna iedereen boer. A.", nogSimpeler: "80% boer = A." },
+          niveaus: { basis: "Landbouw. A.", simpeler: "Bijna iedereen boer. A.", nogSimpeler: "80% boer" },
         },
       },
     ],
@@ -115,7 +115,7 @@ const steps = [
             { titel: "Watt verbeterde Newcomen", tekst: "Newcomen had stoom-mijnpomp (1712). Watt voegde aparte condensor toe → 70% minder kolen → economisch winstgevend buiten mijnbouw. Patentverlening 1769; commercialisatie tot 1800." },
           ],
           theorie: "Eenheid 'watt' (vermogen) is naar hem genoemd.",
-          niveaus: { basis: "James Watt. A.", simpeler: "Watt 1769. A.", nogSimpeler: "Watt = A." },
+          niveaus: { basis: "James Watt. A.", simpeler: "Watt 1769. A.", nogSimpeler: "Watt" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
         wrongHints: [null, "Niet — explosief gegroeid.", "Onjuist.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Cottonopolis", tekst: "Manchester werd centrum van textiel-industrie ('Cottonopolis'). Migratie uit platteland (Inclosure-slachtoffers) + Ierse immigranten (na hongersnood 1845). Sterke verstedelijking, slechte huisvesting + sanitair." }],
-          niveaus: { basis: "~17k → 300k. A.", simpeler: "Bijna 20× zo groot in 100 jaar. A.", nogSimpeler: "18× = A." },
+          niveaus: { basis: "~17k → 300k. A.", simpeler: "Bijna 20× zo groot in 100 jaar. A.", nogSimpeler: "18×" },
         },
       },
       {
@@ -145,7 +145,7 @@ const steps = [
         wrongHints: [null, "Niet — kwam pas eind 19e eeuw.", "Tegenovergesteld.", "Niet — vrije loonarbeid, niet slavernij."],
         uitlegPad: {
           stappen: [{ titel: "Discipline + machines", tekst: "Vorm: arbeiders verzamelen in groot gebouw, werken aan machines onder opzichter. Vereist klok-discipline, gestandaardiseerde taken, hiërarchie. Vervangt 'putting-out'-systeem waarin koopman ruwe grondstof aan thuiswerkers gaf." }],
-          niveaus: { basis: "Geconcentreerde productie. A.", simpeler: "Iedereen samen in één gebouw werken. A.", nogSimpeler: "Fabriek = A." },
+          niveaus: { basis: "Geconcentreerde productie. A.", simpeler: "Iedereen samen in één gebouw werken. A.", nogSimpeler: "Fabriek" },
         },
       },
       {
@@ -156,7 +156,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "HSM 1839", tekst: "Hollandse IJzeren Spoorweg-Maatschappij (HSM) opende Amsterdam-Haarlem 1839. 20 km, ~30 min. Vooral passagiers. NL liep relatief achter — handelseconomie was minder afhankelijk van industriële infrastructuur dan UK." }],
           theorie: "Eerste passagierstrein wereldwijd: Liverpool-Manchester 1830.",
-          niveaus: { basis: "1839. A.", simpeler: "Amsterdam-Haarlem 1839. A.", nogSimpeler: "1839 = A." },
+          niveaus: { basis: "1839. A.", simpeler: "Amsterdam-Haarlem 1839. A.", nogSimpeler: "1839" },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
         wrongHints: [null, "Niet — andere uitvindingen daar.", "Niet — Stephenson.", "Niet — eerder."],
         uitlegPad: {
           stappen: [{ titel: "Vroege spin-machine", tekst: "Spinning Jenny: één arbeider bedient 8 spillen tegelijk i.p.v. 1 traditioneel. Tienvoud van productiviteit. Textiel was eerste gemechaniseerde sector — vandaar dat industriële revolutie er begon." }],
-          niveaus: { basis: "Textiel. A.", simpeler: "Garen-spinning. A.", nogSimpeler: "Textiel = A." },
+          niveaus: { basis: "Textiel. A.", simpeler: "Garen-spinning. A.", nogSimpeler: "Textiel" },
         },
       },
     ],
@@ -192,7 +192,7 @@ const steps = [
           stappen: [
             { titel: "Beperkt maar mijlpaal", tekst: "Eerste NL sociale wet. Verbood kinderarbeid in fabrieken — maar NIET in landbouw + huishouden. Handhaving zwak (geen inspectie). Toch begin van 'sociale wetgeving' in NL. Sammuel van Houten was liberaal Tweede Kamerlid." },
           ],
-          niveaus: { basis: "Verbod kinderarbeid <12 fabriek. A.", simpeler: "Geen kleine kinderen meer in fabrieken. A.", nogSimpeler: "Kinderwet = A." },
+          niveaus: { basis: "Verbod kinderarbeid <12 fabriek. A.", simpeler: "Geen kleine kinderen meer in fabrieken. A.", nogSimpeler: "Kinderwet" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Revolutiejaar 1848", tekst: "Klassiek 1848: revoluties in heel Europa (Wenen, Berlijn, Parijs, Milaan). Marx + Engels publiceren *Manifest der Kommunistischen Partei* — oproep tot arbeiders-revolutie. 'Een spook waart door Europa, het spook van het communisme.'" }],
           theorie: "1848-revoluties grotendeels mislukt; absolutisme keerde terug. Maar idee bleef bestaan → 1917 Russische Revolutie + later.",
-          niveaus: { basis: "1848. A.", simpeler: "1848 Communistisch Manifest. A.", nogSimpeler: "1848 = A." },
+          niveaus: { basis: "1848. A.", simpeler: "1848 Communistisch Manifest. A.", nogSimpeler: "1848" },
         },
       },
       {
@@ -218,7 +218,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — dat is socialisme.", "Niet — laat religie buiten."],
         uitlegPad: {
           stappen: [{ titel: "'Onzichtbare hand'", tekst: "Smith argueerde: als iedereen vrij eigen belang nastreeft, leidt 'onzichtbare hand' van de markt vanzelf tot optimale uitkomst voor allen. Staat alleen voor leger + rechtspraak + infrastructuur (klein). Probleem: werkt minder goed bij grote machts-ongelijkheid + externaliteiten (milieu)." }],
-          niveaus: { basis: "Laissez-faire. A.", simpeler: "Vrije markt zonder staat. A.", nogSimpeler: "Laissez-faire = A." },
+          niveaus: { basis: "Laissez-faire. A.", simpeler: "Vrije markt zonder staat. A.", nogSimpeler: "Laissez-faire" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — sociale experiment.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Pre-Marx socialisme", tekst: "Owen kocht textielfabriek in New Lanark (Schotland), 1810s. Verkortte werkdag, bouwde scholen voor kinderen, verbood kinderarbeid <10, betaalde betere lonen. Toch winstgevend. Bewees: humane fabriek kan. Inspireerde latere socialistische bewegingen." }],
-          niveaus: { basis: "Utopisch socialisme. A.", simpeler: "Sociale fabriek met goede voorwaarden. A.", nogSimpeler: "Owen = A." },
+          niveaus: { basis: "Utopisch socialisme. A.", simpeler: "Sociale fabriek met goede voorwaarden. A.", nogSimpeler: "Owen" },
         },
       },
       {
@@ -248,7 +248,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is werkgeversorganisatie.", "Niet — niet religieus.", "Niet — vakbond ≠ partij (al gelieerd)."],
         uitlegPad: {
           stappen: [{ titel: "Collectief gewicht > individu", tekst: "Eén arbeider kan tegen kapitalist geen onderhandelingspositie hebben. 100 arbeiders die SAMEN dreigen te staken = krachtigere stem. Sociaal recht in NL grotendeels via vakbond-druk + akkoord met werkgevers + overheid (poldermodel)." }],
-          niveaus: { basis: "Collectieve actie arbeiders. A.", simpeler: "Arbeiders samen sterker. A.", nogSimpeler: "Vakbond = A." },
+          niveaus: { basis: "Collectieve actie arbeiders. A.", simpeler: "Arbeiders samen sterker. A.", nogSimpeler: "Vakbond" },
         },
       },
     ],
@@ -268,7 +268,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Massa-productie revolutie", tekst: "Ford T (1908): auto-bouw door arbeiders die elk één taak doen aan langs-bewegende band. Bouwtijd 12 uur → 1,5 uur. Prijs daalde van ~$850 naar $260 → eerste 'massa-product' auto." }],
           theorie: "Ford betaalde arbeiders relatief hoog loon ($5/dag) zodat ze zelf auto's konden kopen → eigen afzetmarkt.",
-          niveaus: { basis: "Ford 1908. A.", simpeler: "T-Ford lopende band. A.", nogSimpeler: "Ford = A." },
+          niveaus: { basis: "Ford 1908. A.", simpeler: "T-Ford lopende band. A.", nogSimpeler: "Ford" },
         },
       },
       {
@@ -278,7 +278,7 @@ const steps = [
         wrongHints: [null, "Niet — Watt, eerder.", "Niet — Morse 1837.", "Niet — Bell 1876."],
         uitlegPad: {
           stappen: [{ titel: "Lichtgevend filament", tekst: "Edison's praktische gloeilamp (1879) gebruikte koolstof-filament dat ~40 uur brandde. Vereiste ook hele elektriciteits-distributiesysteem → Pearl Street centrale NYC 1882. Veranderde nachtleven + arbeidstijden voorgoed." }],
-          niveaus: { basis: "Gloeilamp 1879. A.", simpeler: "Edison + gloeilamp. A.", nogSimpeler: "Gloeilamp = A." },
+          niveaus: { basis: "Gloeilamp 1879. A.", simpeler: "Edison + gloeilamp. A.", nogSimpeler: "Gloeilamp" },
         },
       },
       {
@@ -296,7 +296,7 @@ const steps = [
             { titel: "Westerse technologie + Japans bestuur", tekst: "Na 250 jaar isolement (Tokugawa) opende Japan onder druk van Amerikaanse oorlogsschepen (Perry 1853). Meiji-keizer hervormde: stuur studenten naar Europa/VS, importeer machines, bouw fabrieken + leger naar westers model. In 50 jaar van feudal tot wereldmacht (versloeg Rusland 1905)." },
           ],
           theorie: "Japan toonde: industrialisatie is geen 'westers' fenomeen, maar systeem dat overal kopieerbaar is.",
-          niveaus: { basis: "Japanse modernisering. A.", simpeler: "Japan kopieerde westerse techniek snel. A.", nogSimpeler: "Meiji = A." },
+          niveaus: { basis: "Japanse modernisering. A.", simpeler: "Japan kopieerde westerse techniek snel. A.", nogSimpeler: "Meiji" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Scramble for Africa'", tekst: "Bismarck bracht 14 Europese landen samen om koloniaal Afrika-verdeling te formaliseren. Lijnen op kaart getrokken zonder rekening met inheemse etnische groepen. Veel huidige conflicten hebben hier wortels (Rwanda, Soedan, etc.)." }],
           theorie: "1914: 90% Afrika in Europese handen (uitzondering: Liberia + Ethiopië).",
-          niveaus: { basis: "Verdeling Afrika. A.", simpeler: "Europa pakt Afrika op vergadertafel. A.", nogSimpeler: "Berlin Conf. = A." },
+          niveaus: { basis: "Verdeling Afrika. A.", simpeler: "Europa pakt Afrika op vergadertafel. A.", nogSimpeler: "Berlin Conf." },
         },
       },
       {
@@ -324,7 +324,7 @@ const steps = [
           stappen: [
             { titel: "AC won 'War of Currents'", tekst: "Edison wilde gelijkstroom; Tesla + Westinghouse promootten wisselstroom. AC kan via trafo's omhoog/omlaag → lange-afstand-transport mogelijk → AC won eind 19e eeuw. Tesla werd ietwat vergeten tot recent (eer voor Edison oneerlijk groot)." },
           ],
-          niveaus: { basis: "Tesla. A.", simpeler: "Tesla bedacht wisselstroom-systeem. A.", nogSimpeler: "Tesla = A." },
+          niveaus: { basis: "Tesla. A.", simpeler: "Tesla bedacht wisselstroom-systeem. A.", nogSimpeler: "Tesla" },
         },
       },
     ],
@@ -350,7 +350,7 @@ const steps = [
           stappen: [
             { titel: "Marx had het mis", tekst: "Marx zag socialisme als logisch eindstadium van kapitalisme → revolutie zou eerst in industrieel-meest-ontwikkelde landen komen (UK, Duitsland). In praktijk: 1917 Rusland (vooral agrarisch), 1949 China (idem). UK + DE losten kwesties op via vakbond + welvaartsstaat. Voorspelling: fout. Analyse-werktuig: nog steeds gebruikt in sociologie." },
           ],
-          niveaus: { basis: "Industriële landen, niet gebeurd. A.", simpeler: "Marx dacht in rijke landen, was Rusland. A.", nogSimpeler: "UK/DE = A." },
+          niveaus: { basis: "Industriële landen, niet gebeurd. A.", simpeler: "Marx dacht in rijke landen, was Rusland. A.", nogSimpeler: "UK/DE" },
         },
       },
       {
@@ -367,7 +367,7 @@ const steps = [
           stappen: [
             { titel: "Bron van winst (Marx)", tekst: "Arbeider werkt 8 uur → produceert waarde van 16 € (zeg). Krijgt 8 € loon. Verschil 8 € = meerwaarde → winst van kapitalist. Marx zag dit als systematische uitbuiting; verdedigers van kapitalisme: arbeider verkoopt vrijwillig arbeid + winst beloont risico van investering." },
           ],
-          niveaus: { basis: "Waarde min loon. A.", simpeler: "Wat de baas overhoudt. A.", nogSimpeler: "Meerwaarde = A." },
+          niveaus: { basis: "Waarde min loon. A.", simpeler: "Wat de baas overhoudt. A.", nogSimpeler: "Meerwaarde" },
         },
       },
       {
@@ -384,7 +384,7 @@ const steps = [
           stappen: [
             { titel: "Naoorlogse opbouw", tekst: "Drees AOW 1957, Algemene Bijstandswet 1965, ziektewet/WW uitgebreid, onderwijs gratis. Sterke economische groei + brede politieke consensus. Vanaf 1980s: terugtrekking (geprivatiseerd, versoberd, sancties)." },
           ],
-          niveaus: { basis: "1945-1970. A.", simpeler: "Naoorlogse periode. A.", nogSimpeler: "Na WO2 = A." },
+          niveaus: { basis: "1945-1970. A.", simpeler: "Naoorlogse periode. A.", nogSimpeler: "Na WO2" },
         },
       },
       {
@@ -397,7 +397,7 @@ const steps = [
             { titel: "150 jaar fossiele brandstoffen", tekst: "1850: ~285 ppm. 1950: ~310 ppm. 2000: ~370 ppm. 2024: ~420 ppm. Stijgsnelheid +2,5 ppm/jaar = snelste in 800 000 jaar (volgens ijs-kernen). Doel 1,5 °C: <450 ppm." },
           ],
           theorie: "Hoogtepunten ijstijd: ~180 ppm. Tussen-tijdperken (zoals nu): ~280. We zitten ver boven natuurlijke schommeling.",
-          niveaus: { basis: "420 ppm. A.", simpeler: "Steeds hoger sinds 1850. A.", nogSimpeler: "420 = A." },
+          niveaus: { basis: "420 ppm. A.", simpeler: "Steeds hoger sinds 1850. A.", nogSimpeler: "420" },
         },
       },
       {
@@ -415,7 +415,7 @@ const steps = [
             { titel: "Cyber-fysieke systemen", tekst: "Term geïntroduceerd in 2016 (Klaus Schwab, World Economic Forum). Kenmerk: niet alleen handarbeid wordt geautomatiseerd, maar ook kenniswerk (boekhouden, juridische analyse, code schrijven, vertalen). Brengt grote vragen over werkgelegenheid, ongelijkheid, ethiek." },
           ],
           theorie: "Vergelijkbare debatten als bij 1e revolutie: nieuwe banen ontstaan ook (UX-designers, data-scientists, AI-trainers). Schaal van verschuiving onbekend.",
-          niveaus: { basis: "AI + automation. A.", simpeler: "Computers nemen denkwerk over. A.", nogSimpeler: "AI = A." },
+          niveaus: { basis: "AI + automation. A.", simpeler: "Computers nemen denkwerk over. A.", nogSimpeler: "AI" },
         },
       },
     ],

@@ -32,7 +32,7 @@ const steps = [
         explanation: "**Oeral-gebergte** loopt door Rusland van noord naar zuid. Geldt als symbolische scheidingslijn tussen Europa (west) en Azië (oost). Plus de Kaspische Zee in het zuiden. Antwoord C.",
         uitlegPad: compact(
           "Oeral = Europa-Azië-grens binnen Rusland. Westelijk = Europa, oostelijk = Azië. Plus Kaspische Zee in zuiden.",
-          { basis: "Oeral. = C.", simpeler: "Oeral splitst Europa en Azië in Rusland. = C.", nogSimpeler: "Oeral = C." },
+          { basis: "Oeral.", simpeler: "Oeral splitst Europa en Azië in Rusland.", nogSimpeler: "Oeral" },
           [{ woord: "Oeral", uitleg: "Gebergte in Rusland — symbolische Europa-Azië-grens." }, { woord: "Kaspische Zee", uitleg: "Grote binnenzee tussen Europa, Azië, Iran." }],
         ),
       },
@@ -44,7 +44,7 @@ const steps = [
         explanation: "**7 werelddelen**: Europa, Azië, Afrika, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica. Sommige tellingen combineren Noord+Zuid-Amerika tot 'Amerika' (dan 6), of laten Antarctica weg (dan 6). Standaard NL-onderwijs: 7. Antwoord C.",
         uitlegPad: compact(
           "7 werelddelen: Europa, Azië, Afrika, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica. Geheugentruc: 'EAANZOA'.",
-          { basis: "7. = C.", simpeler: "EU, AZ, AF, NA, ZA, OC, AT = 7. = C.", nogSimpeler: "7 = C." },
+          { basis: "7.", simpeler: "EU, AZ, AF, NA, ZA, OC, AT = 7.", nogSimpeler: "7" },
           [{ woord: "werelddeel", uitleg: "Continent — groot landoppervlak op aarde." }],
         ),
       },
@@ -56,7 +56,7 @@ const steps = [
         explanation: "**Zowel Rusland als Turkije** liggen op 2 werelddelen. Rusland: Europa (Moskou + Sint-Petersburg) + Azië (Vladivostok + Siberië). Turkije: Europa (Istanbul-Europees deel) + Azië (Ankara + rest). Antwoord C.",
         uitlegPad: compact(
           "2 landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt op Afrika maar Sinaï-schiereiland telt soms als Azië.",
-          { basis: "Beide. = C.", simpeler: "Rusland EN Turkije liggen in 2 werelddelen. = C.", nogSimpeler: "Beide = C." },
+          { basis: "Beide.", simpeler: "Rusland EN Turkije liggen in 2 werelddelen.", nogSimpeler: "Beide" },
           [{ woord: "Bosporus", uitleg: "Zeestraat door Istanbul — scheidt Europa van Azië." }],
         ),
       },
@@ -75,7 +75,7 @@ const steps = [
         explanation: "**Berlijn** is hoofdstad van Duitsland sinds 1990 (na Duitse hereniging). Tijdens deling (1949-1990) was West-Berlijn enclave + Bonn = hoofdstad West-Duitsland, Oost-Berlijn = hoofdstad DDR. Antwoord C.",
         uitlegPad: compact(
           "Berlijn = hoofdstad Duitsland (sinds 1990). Voor val muur: Bonn was hoofdstad West-Duitsland. Sinds hereniging: Berlijn weer.",
-          { basis: "Berlijn. = C.", simpeler: "Duitsland = Berlijn. = C.", nogSimpeler: "Berlijn = C." },
+          { basis: "Berlijn.", simpeler: "Duitsland = Berlijn.", nogSimpeler: "Berlijn" },
           [{ woord: "Berlijn", uitleg: "Hoofdstad Duitsland." }, { woord: "Bonn", uitleg: "Hoofdstad West-Duitsland 1949-1990." }],
         ),
       },
@@ -87,7 +87,7 @@ const steps = [
         explanation: "**Londen** = hoofdstad Verenigd Koninkrijk. UK bestaat uit 4 delen (Engeland + Schotland + Wales + Noord-Ierland) met elk eigen 'hoofdstad' (Londen + Edinburgh + Cardiff + Belfast), maar Londen is de hoofdstad van het hele rijk. Antwoord C.",
         uitlegPad: compact(
           "Londen = UK-hoofdstad. UK = 4 delen (Engeland + Schotland + Wales + N-Ierland). Niet meer EU-lid sinds Brexit 2020.",
-          { basis: "Londen. = C.", simpeler: "UK = Londen. = C.", nogSimpeler: "Londen = C." },
+          { basis: "Londen.", simpeler: "UK = Londen.", nogSimpeler: "Londen" },
           [{ woord: "Verenigd Koninkrijk", uitleg: "UK — Engeland + Schotland + Wales + N-Ierland." }],
         ),
       },
@@ -99,7 +99,7 @@ const steps = [
         explanation: "**Brussel** = hoofdstad België. Bijzonder: ligt in Vlaanderen-gebied (waar NL gesproken wordt) maar zelf hoofdzakelijk Franstalig. Plus: hoofdstad EU (Commissie + Raad) + NAVO. Antwoord B.",
         uitlegPad: compact(
           "Brussel = België-hoofdstad + EU-hoofdstad + NAVO-hoofdstad. Drietalig (NL/FR/DE). NL-grens-buurland.",
-          { basis: "Brussel. = B.", simpeler: "België = Brussel. = B.", nogSimpeler: "Brussel = B." },
+          { basis: "Brussel.", simpeler: "België = Brussel.", nogSimpeler: "Brussel" },
           [{ woord: "Brussel", uitleg: "Hoofdstad België + de facto EU." }],
         ),
       },
@@ -118,7 +118,7 @@ const steps = [
         explanation: "**Madrid** = hoofdstad Spanje. Ligt centraal in het land (op een hoogvlakte). Grootste stad van Spanje + financieel centrum. Antwoord B.",
         uitlegPad: compact(
           "Madrid = Spanje-hoofdstad. Centraal gelegen, ~3.3 mln inwoners. Barcelona is wel groter qua toerisme maar geen hoofdstad.",
-          { basis: "Madrid. = B.", simpeler: "Spanje = Madrid. = B.", nogSimpeler: "Madrid = B." },
+          { basis: "Madrid.", simpeler: "Spanje = Madrid.", nogSimpeler: "Madrid" },
           [{ woord: "Madrid", uitleg: "Hoofdstad Spanje, centraal." }],
         ),
       },
@@ -130,7 +130,7 @@ const steps = [
         explanation: "**Rome** = hoofdstad Italië. 'Eeuwige stad' — bestaat sinds 753 voor Christus. Bevat ook de **Vaticaanstad** (mini-staat met de paus). Antwoord C.",
         uitlegPad: compact(
           "Rome = Italië-hoofdstad. Romeinse Rijk-hoofdstad, sinds 1871 ook Italië-hoofdstad. Bevat Vaticaanstad.",
-          { basis: "Rome. = C.", simpeler: "Italië = Rome. = C.", nogSimpeler: "Rome = C." },
+          { basis: "Rome.", simpeler: "Italië = Rome.", nogSimpeler: "Rome" },
           [{ woord: "Rome", uitleg: "Hoofdstad Italië, Romeinse erfgoed." }, { woord: "Vaticaanstad", uitleg: "Kleinste land ter wereld, ligt in Rome." }],
         ),
       },
@@ -142,7 +142,7 @@ const steps = [
         explanation: "**Athene** = hoofdstad Griekenland. Een van oudste steden ter wereld (3500 jaar). Bekend om de Akropolis + Parthenon — 'wieg van de democratie'. Antwoord B.",
         uitlegPad: compact(
           "Athene = Griekenland-hoofdstad. Oudste continu bewoonde stad van Europa.",
-          { basis: "Athene. = B.", simpeler: "Griekenland = Athene. = B.", nogSimpeler: "Athene = B." },
+          { basis: "Athene.", simpeler: "Griekenland = Athene.", nogSimpeler: "Athene" },
           [{ woord: "Athene", uitleg: "Hoofdstad Griekenland, oude democratie." }, { woord: "Akropolis", uitleg: "Heuvel in Athene met Parthenon-tempel." }],
         ),
       },
@@ -161,7 +161,7 @@ const steps = [
         explanation: "**Oslo** = hoofdstad Noorwegen. Ligt aan een fjord (Oslofjord). Antwoord C.",
         uitlegPad: compact(
           "Oslo = hoofdstad Noorwegen. Aan fjord. Noorwegen niet in EU (referenda 1972 + 1994).",
-          { basis: "Oslo. = C.", simpeler: "Noorwegen = Oslo. = C.", nogSimpeler: "Oslo = C." },
+          { basis: "Oslo.", simpeler: "Noorwegen = Oslo.", nogSimpeler: "Oslo" },
           [{ woord: "fjord", uitleg: "Lange smalle zee-inham tussen bergen — kenmerkend Noorwegen." }],
         ),
       },
@@ -173,7 +173,7 @@ const steps = [
         explanation: "**Kopenhagen** = hoofdstad Denemarken. Ligt op eiland Seeland. Verbonden via brug + tunnel met Zweden (Öresundbrug). Antwoord B.",
         uitlegPad: compact(
           "Kopenhagen = Denemarken-hoofdstad. Op eiland Seeland. Brug naar Zweden.",
-          { basis: "Kopenhagen. = B.", simpeler: "Denemarken = Kopenhagen. = B.", nogSimpeler: "Kopenhagen = B." },
+          { basis: "Kopenhagen.", simpeler: "Denemarken = Kopenhagen.", nogSimpeler: "Kopenhagen" },
           [{ woord: "Kopenhagen", uitleg: "Hoofdstad Denemarken — beroemd Tivoli + Kleine Zeemeermin." }],
         ),
       },
@@ -185,7 +185,7 @@ const steps = [
         explanation: "**Noorwegen** is GEEN EU-lid. Twee referenda (1972 + 1994) wezen toetreding af — vooral vanwege visserij + olie-belangen. Wel in EER (European Economic Area) → meeste EU-regels gelden. Antwoord D.",
         uitlegPad: compact(
           "Noorwegen + IJsland + Zwitserland = EER maar geen EU-lid. Zweden/Finland/Denemarken zijn wel EU. Denemarken zit ook NIET in eurozone (heeft Deense kroon).",
-          { basis: "Noorwegen. = D.", simpeler: "Noorwegen koos 2x tegen EU. = D.", nogSimpeler: "Noorwegen = D." },
+          { basis: "Noorwegen.", simpeler: "Noorwegen koos 2x tegen EU.", nogSimpeler: "Noorwegen" },
           [{ woord: "EER", uitleg: "European Economic Area — EU + Noorwegen/IJsland/Liechtenstein." }],
         ),
       },
@@ -204,7 +204,7 @@ const steps = [
         explanation: "**Warschau** (Pools: Warszawa) = hoofdstad Polen. Antwoord C.",
         uitlegPad: compact(
           "Warschau = Polen-hoofdstad. EU-lid sinds 2004. Munt: zloty (geen euro).",
-          { basis: "Warschau. = C.", simpeler: "Polen = Warschau. = C.", nogSimpeler: "Warschau = C." },
+          { basis: "Warschau.", simpeler: "Polen = Warschau.", nogSimpeler: "Warschau" },
           [{ woord: "Warschau", uitleg: "Hoofdstad Polen — heropgebouwd na WO2-verwoesting." }],
         ),
       },
@@ -221,7 +221,7 @@ const steps = [
         explanation: "**Donau** stroomt door Wenen (Oostenrijk), Bratislava (Slowakije), Boedapest (Hongarije), Belgrado (Servië). 2e langste rivier Europa (na Wolga). Antwoord C.",
         uitlegPad: compact(
           "Donau = 2e langste rivier Europa. Door 10 landen. 4 hoofdsteden eraan: Wenen, Bratislava, Boedapest, Belgrado. (Praag aan Moldau, niet Donau.)",
-          { basis: "Wenen-Bratislava-Boedapest-Belgrado. = C.", simpeler: "WBBB ligt aan Donau. = C.", nogSimpeler: "WBBB = C." },
+          { basis: "Wenen-Bratislava-Boedapest-Belgrado.", simpeler: "WBBB ligt aan Donau.", nogSimpeler: "WBBB" },
           [{ woord: "Donau", uitleg: "Grote rivier Centraal-Europa, mond in Zwarte Zee." }],
         ),
       },
@@ -233,7 +233,7 @@ const steps = [
         explanation: "**Kiev** (Oekraïens: Kyiv) = hoofdstad Oekraïne. Sinds Russische invasie februari 2022 dagelijks in het nieuws. Antwoord C.",
         uitlegPad: compact(
           "Kiev/Kyiv = Oekraïne-hoofdstad. Russische spelling 'Kiev', Oekraïense 'Kyiv'. Sinds 2022 in oorlog met Rusland.",
-          { basis: "Kiev. = C.", simpeler: "Oekraïne = Kiev. = C.", nogSimpeler: "Kiev = C." },
+          { basis: "Kiev.", simpeler: "Oekraïne = Kiev.", nogSimpeler: "Kiev" },
           [{ woord: "Kiev", uitleg: "Hoofdstad Oekraïne." }],
         ),
       },
@@ -252,7 +252,7 @@ const steps = [
         explanation: "**Wolga** is langste rivier Europa (~3530 km). Stroomt door Rusland → Kaspische Zee. Donau is 2e (~2860 km). Antwoord C.",
         uitlegPad: compact(
           "Top 3 langste rivieren Europa: 1) Wolga (~3530 km, Rusland), 2) Donau (~2860 km), 3) Oeral.",
-          { basis: "Wolga. = C.", simpeler: "Wolga (Rusland) = langste rivier Europa. = C.", nogSimpeler: "Wolga = C." },
+          { basis: "Wolga.", simpeler: "Wolga (Rusland) = langste rivier Europa.", nogSimpeler: "Wolga" },
           [{ woord: "Wolga", uitleg: "Langste Europese rivier, door Rusland, naar Kaspische Zee." }],
         ),
       },
@@ -264,7 +264,7 @@ const steps = [
         explanation: "**Pyreneeën** = bergketen op grens Frankrijk-Spanje. ~430 km lang. Bevat Andorra (mini-staat in de bergen). Antwoord B.",
         uitlegPad: compact(
           "Pyreneeën = FR-ES grens (en Andorra). Alpen = Zwitserland-omgeving. Apennijnen = Italië. Karpaten = Oost-Europa.",
-          { basis: "Pyreneeën. = B.", simpeler: "Frankrijk-Spanje = Pyreneeën. = B.", nogSimpeler: "Pyreneeën = B." },
+          { basis: "Pyreneeën.", simpeler: "Frankrijk-Spanje = Pyreneeën.", nogSimpeler: "Pyreneeën" },
           [{ woord: "Pyreneeën", uitleg: "Bergketen Frankrijk-Spanje-grens." }, { woord: "Andorra", uitleg: "Mini-staat in de Pyreneeën." }],
         ),
       },
@@ -276,7 +276,7 @@ const steps = [
         explanation: "**Middellandse Zee** = grote binnenzee tussen Zuid-Europa, Noord-Afrika en het Midden-Oosten. Verbonden met Atlantische Oceaan via Straat van Gibraltar. Antwoord C.",
         uitlegPad: compact(
           "Middellandse Zee tussen Zuid-Europa + Noord-Afrika + Midden-Oosten. Spanje/Italië/Griekenland liggen eraan. Gibraltar = poort naar Atlantische Oceaan.",
-          { basis: "Middellandse Zee. = C.", simpeler: "Zuid-Europa-zee = Middellandse. = C.", nogSimpeler: "Middellandse = C." },
+          { basis: "Middellandse Zee.", simpeler: "Zuid-Europa-zee = Middellandse.", nogSimpeler: "Middellandse" },
           [{ woord: "Middellandse Zee", uitleg: "Grote binnenzee tussen Europa-Afrika-Azië." }, { woord: "Gibraltar", uitleg: "Zeestraat tussen Atlantische Oceaan en Middellandse Zee." }],
         ),
       },

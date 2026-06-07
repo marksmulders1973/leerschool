@@ -69,7 +69,7 @@ const steps = [
           niveaus: {
             basis: "ω = 2π/0,4 = 5π. A.",
             simpeler: "2π / 0,4 = 5π rad/s. A.",
-            nogSimpeler: "5π = A.",
+            nogSimpeler: "5π",
           },
         },
       },
@@ -87,7 +87,7 @@ const steps = [
           niveaus: {
             basis: "T = 2π·√(L/g) ≈ 2,0 s. A.",
             simpeler: "1,0 m slinger op aarde = ongeveer 2 s per trilling. A.",
-            nogSimpeler: "2,0 s = A.",
+            nogSimpeler: "2,0 s",
           },
         },
       },
@@ -151,7 +151,7 @@ const steps = [
           niveaus: {
             basis: "Trilling loodrecht op richting = transversaal. A.",
             simpeler: "Touw schudt op-en-neer, golf gaat zijwaarts → loodrecht → transversaal. A.",
-            nogSimpeler: "Touw = transversaal = A.",
+            nogSimpeler: "Touw = transversaal",
           },
         },
       },
@@ -168,7 +168,7 @@ const steps = [
           niveaus: {
             basis: "λ=v/f=343/440=0,78 m. A.",
             simpeler: "Deel snelheid door frequentie: 343/440 ≈ 0,78. A.",
-            nogSimpeler: "0,78 = A.",
+            nogSimpeler: "0,78",
           },
         },
       },
@@ -211,7 +211,7 @@ const steps = [
           niveaus: {
             basis: "Deeltjes bewegen langs voortplantingsrichting = longitudinaal. A.",
             simpeler: "Lucht wordt vooruit-achteruit geduwd in dezelfde richting als de golf = longitudinaal. A.",
-            nogSimpeler: "Langsbeweging = A.",
+            nogSimpeler: "Langsbeweging",
           },
         },
       },
@@ -270,8 +270,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Waarom vacuüm = stil?", uitleg: "Geen deeltjes = niets om te duwen. Daarom hoor je geen geluid in de ruimte (films liegen)." }],
           niveaus: {
             basis: "Stijver = sneller → staal. A.",
-            simpeler: "Staal-atomen zitten heel dicht → geluid snel = A.",
-            nogSimpeler: "Staal = A.",
+            simpeler: "Staal-atomen zitten heel dicht → geluid snel",
+            nogSimpeler: "Staal",
           },
         },
       },
@@ -285,7 +285,7 @@ const steps = [
           niveaus: {
             basis: "20-20 000 Hz. A.",
             simpeler: "Van zeer lage bas (20 Hz) tot piep-hoge tonen (20 kHz). A.",
-            nogSimpeler: "20 Hz tot 20 kHz = A.",
+            nogSimpeler: "20 Hz tot 20 kHz",
           },
         },
       },
@@ -302,7 +302,7 @@ const steps = [
           niveaus: {
             basis: "2× verder = 4× minder = −6 dB. A.",
             simpeler: "Oppervlak groeit met r² → energie ÷4 bij ×2 afstand. A.",
-            nogSimpeler: "−6 dB = A.",
+            nogSimpeler: "−6 dB",
           },
         },
       },
@@ -328,7 +328,7 @@ const steps = [
           niveaus: {
             basis: "f = 286/1,3 = 220. A.",
             simpeler: "286 gedeeld door 2·0,65 = 220 Hz. A.",
-            nogSimpeler: "220 = A.",
+            nogSimpeler: "220",
           },
         },
       },
@@ -353,7 +353,7 @@ const steps = [
           niveaus: {
             basis: "Matchen van eigenfrequentie = sterke meeresonantie. A.",
             simpeler: "Op de juiste frequentie duwen → trilling wordt steeds groter. A.",
-            nogSimpeler: "Match = grote trilling = A.",
+            nogSimpeler: "Match = grote trilling",
           },
         },
       },
@@ -370,7 +370,7 @@ const steps = [
           niveaus: {
             basis: "Half-gesloten buis: λ = 4L. A.",
             simpeler: "Dichte kant = knoop, open = buik → kortste past in 1/4 golflengte → λ = 4L. A.",
-            nogSimpeler: "4L = A.",
+            nogSimpeler: "4L",
           },
         },
       },
@@ -407,7 +407,7 @@ const steps = [
           niveaus: {
             basis: "Resonantie laat glas-trilling exploderen. A.",
             simpeler: "Stem matcht glas-eigenfrequentie → trilling groeit → glas breekt. A.",
-            nogSimpeler: "Resonantie = A.",
+            nogSimpeler: "Resonantie",
           },
         },
       },
@@ -430,7 +430,7 @@ const steps = [
           niveaus: {
             basis: "12/6=2. A.",
             simpeler: "Snelheid gedeeld door frequentie = 12÷6 = 2 m. A.",
-            nogSimpeler: "2,0 = A.",
+            nogSimpeler: "2,0",
           },
         },
       },
@@ -446,7 +446,7 @@ const steps = [
           niveaus: {
             basis: "Lager g → langere T. A.",
             simpeler: "Minder zwaartekracht trekt slinger minder snel terug → langzamer. A.",
-            nogSimpeler: "Langer = A.",
+            nogSimpeler: "Langer",
           },
         },
       },
@@ -463,7 +463,7 @@ const steps = [
           niveaus: {
             basis: "f' = 500·340/310 ≈ 548. A.",
             simpeler: "Komt naar je toe → hoger → ~548 Hz. A.",
-            nogSimpeler: "548 = A.",
+            nogSimpeler: "548",
           },
         },
       },
@@ -480,7 +480,7 @@ const steps = [
           niveaus: {
             basis: "Dubbel = +3 dB → 73 dB. A.",
             simpeler: "Twee gelijke bronnen = ×2 energie = +3 dB. A.",
-            nogSimpeler: "+3 dB = A.",
+            nogSimpeler: "+3 dB",
           },
         },
       },

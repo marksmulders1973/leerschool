@@ -116,8 +116,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Werkwoord-uitgang", uitleg: "Net als gewone present simple: -s voor 3e persoon enkelvoud." }],
           niveaus: {
             basis: "calls. A.",
-            simpeler: "Type 1 if-clause = present simple. 'She' is 3e persoon enkelvoud → werkwoord krijgt -s. Dus: calls. = A.",
-            nogSimpeler: "calls = A.",
+            simpeler: "Type 1 if-clause = present simple. 'She' is 3e persoon enkelvoud → werkwoord krijgt -s. Dus: calls.",
+            nogSimpeler: "calls",
           },
         },
       },
@@ -203,8 +203,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Spijt-formule", uitleg: "Onthoud Type 3 als de 'spijt-zin'." }],
           niveaus: {
             basis: "Spijt over verleden. A.",
-            simpeler: "Type 3 is voor situaties in het verleden die niet zijn gebeurd. Vaak met spijt: 'als ik geleerd had, was ik geslaagd.' = A.",
-            nogSimpeler: "Spijt verleden = A.",
+            simpeler: "Type 3 is voor situaties in het verleden die niet zijn gebeurd. Vaak met spijt: 'als ik geleerd had, was ik geslaagd.'",
+            nogSimpeler: "Spijt verleden",
           },
         },
       },

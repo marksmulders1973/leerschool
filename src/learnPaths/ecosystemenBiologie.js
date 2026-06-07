@@ -141,8 +141,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Producent = autotroof", uitleg: "Twee woorden voor hetzelfde concept." }],
           niveaus: {
             basis: "Wezen dat zelf voedsel maakt. A.",
-            simpeler: "Auto = zelf, troof = voedend. Een autotroof is een wezen (vooral planten) dat zelf zijn eten maakt uit zonlicht. = A.",
-            nogSimpeler: "Producent = A.",
+            simpeler: "Auto = zelf, troof = voedend. Een autotroof is een wezen (vooral planten) dat zelf zijn eten maakt uit zonlicht.",
+            nogSimpeler: "Producent",
           },
         },
       },
@@ -240,8 +240,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Klassiek biologie-concept", uitleg: "Belangrijk verschil dat regelmatig op Cito-eindexamens komt." }],
           niveaus: {
             basis: "Materie kringloopt, energie stroomt door. A.",
-            simpeler: "Atomen blijven rondgaan in een ecosysteem (kringloop). Maar energie van zonlicht eindigt als warmte die wegstraalt — dat is geen kringloop. = A.",
-            nogSimpeler: "Materie rond, energie door = A.",
+            simpeler: "Atomen blijven rondgaan in een ecosysteem (kringloop). Maar energie van zonlicht eindigt als warmte die wegstraalt — dat is geen kringloop.",
+            nogSimpeler: "Materie rond, energie door",
           },
         },
       },

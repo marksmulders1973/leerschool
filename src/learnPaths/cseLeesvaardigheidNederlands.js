@@ -154,8 +154,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Volg de logica", uitleg: "Vraag: 'dit veroorzaakte ongelukken' — wat veroorzaakte ongelukken? Niet 1 ding, beide samen." }],
           niveaus: {
             basis: "De hele situatie. A.",
-            simpeler: "'Dit' verwijst naar wat ervoor staat. 2 zinnen ervoor: regen + gladde weg. Beide samen veroorzaakten ongelukken. = A.",
-            nogSimpeler: "Hele situatie = A.",
+            simpeler: "'Dit' verwijst naar wat ervoor staat. 2 zinnen ervoor: regen + gladde weg. Beide samen veroorzaakten ongelukken.",
+            nogSimpeler: "Hele situatie",
           },
         },
       },

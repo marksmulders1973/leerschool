@@ -36,7 +36,7 @@ const steps = [
           theorie: "Kaarten zijn 2D visueel. Geluid hoort bij video, niet bij kaart.",
           voorbeelden: [{ type: "lijst", tekst: "Standaard: titel, schaal, kompasroos, legenda — geen audio." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag wat NIET hoort. Geluid is de afwijker." }],
-          niveaus: { basis: "Geluid. A.", simpeler: "Kaart is plaatje (geen geluid). Schaal/kompasroos/legenda horen er WEL bij. = A.", nogSimpeler: "Geluid = A." },
+          niveaus: { basis: "Geluid. A.", simpeler: "Kaart is plaatje (geen geluid). Schaal/kompasroos/legenda horen er WEL bij.", nogSimpeler: "Geluid" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Standaard kleuren: blauw=water, groen=laagland, geel/bruin=hoogland.",
           voorbeelden: [{ type: "tabel", tekst: "Blauw=water. Groen=bos/weiland. Bruin=bergen. Rood=hoofdwegen." }],
           basiskennis: [{ onderwerp: "Universeel", uitleg: "Werkt op bijna elke wereldkaart — wereldwijde conventie." }],
-          niveaus: { basis: "Water. A.", simpeler: "Blauw op kaart = water (zee, rivier, meer). Bergen=bruin, bos=groen. = A.", nogSimpeler: "Water = A." },
+          niveaus: { basis: "Water. A.", simpeler: "Blauw op kaart = water (zee, rivier, meer). Bergen=bruin, bos=groen.", nogSimpeler: "Water" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           theorie: "Net als bij teksten: eerst titel + samenvatting (legenda) → dan details bekijken.",
           voorbeelden: [{ type: "stap", tekst: "1) Titel lezen. 2) Legenda checken. 3) Kaart-vraag aanpakken." }],
           basiskennis: [{ onderwerp: "Tijdwinst", uitleg: "Begrip vooraf bespaart tijd bij vragen." }],
-          niveaus: { basis: "Titel + legenda. A.", simpeler: "Eerst titel (=onderwerp) + legenda (=symbolen). Dan kun je kaart goed lezen. = A.", nogSimpeler: "Titel+legenda = A." },
+          niveaus: { basis: "Titel + legenda. A.", simpeler: "Eerst titel (=onderwerp) + legenda (=symbolen). Dan kun je kaart goed lezen.", nogSimpeler: "Titel+legenda" },
         },
       },
     ],
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Conventie wereldkaarten: N altijd boven (tenzij draai-pijl iets anders zegt).",
           voorbeelden: [{ type: "kompas", tekst: "Boven=N, onder=Z, rechts=O, links=W." }],
           basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'Nooit Op Zondag Werken' — N-O-Z-W tegen klok in vanaf boven." }],
-          niveaus: { basis: "Bovenkant. A.", simpeler: "Op kaart staat N (Noord) ALTIJD boven (standaard). = A.", nogSimpeler: "Boven = A." },
+          niveaus: { basis: "Bovenkant. A.", simpeler: "Op kaart staat N (Noord) ALTIJD boven (standaard).", nogSimpeler: "Boven" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Richting-aanduiding: hoger op kaart = noordelijker.",
           voorbeelden: [{ type: "feit", tekst: "Amsterdam (hoger op kaart) is Noord van Rotterdam (lager)." }],
           basiskennis: [{ onderwerp: "NL-feit", uitleg: "Amsterdam (provincie Noord-Holland) ligt boven Rotterdam (Zuid-Holland)." }],
-          niveaus: { basis: "Noord van Rotterdam. A.", simpeler: "Amsterdam BOVEN Rotterdam → Amsterdam ligt NOORD van Rotterdam. = A.", nogSimpeler: "Noord = A." },
+          niveaus: { basis: "Noord van Rotterdam. A.", simpeler: "Amsterdam BOVEN Rotterdam → Amsterdam ligt NOORD van Rotterdam.", nogSimpeler: "Noord" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
           theorie: "Diagonale hoeken: NO=rechts-boven, ZO=rechts-onder, ZW=links-onder, NW=links-boven.",
           voorbeelden: [{ type: "kompas", tekst: "NW | NO. ZW | ZO. (rechts-onder = ZO)." }],
           basiskennis: [{ onderwerp: "Volgorde", uitleg: "Verticaal eerst (Z/N), dan horizontaal (O/W). 'Zuid' + 'Oost' = ZuidOost." }],
-          niveaus: { basis: "Zuidoost. A.", simpeler: "Rechts (=O) + onder (=Z) = Zuidoost (ZO). = A.", nogSimpeler: "ZO = A." },
+          niveaus: { basis: "Zuidoost. A.", simpeler: "Rechts (=O) + onder (=Z) = Zuidoost (ZO).", nogSimpeler: "ZO" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           theorie: "8-richtingen-kompas: N - NO - O - ZO - Z - ZW - W - NW.",
           voorbeelden: [{ type: "kompas", tekst: "Tussen elke 2 hoofdrichtingen: tussenrichting met dubbele letter." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Tussenpunt heet naar beide hoofdrichtingen ernaast." }],
-          niveaus: { basis: "NO. A.", simpeler: "Tussen Noord en Oost = NoordOost (NO). Letterlijk de hoek ertussen. = A.", nogSimpeler: "NO = A." },
+          niveaus: { basis: "NO. A.", simpeler: "Tussen Noord en Oost = NoordOost (NO). Letterlijk de hoek ertussen.", nogSimpeler: "NO" },
         },
       },
     ],
@@ -148,7 +148,7 @@ const steps = [
           theorie: "Eenheidstruc: 100.000 cm = 1.000 m = 1 km. Bij 1:100.000: 1 cm op kaart = 1 km werkelijk.",
           voorbeelden: [{ type: "tabel", tekst: "1cm = 1km. 5cm = 5km. 12cm = 12km." }],
           basiskennis: [{ onderwerp: "cm→m→km", uitleg: "100 cm = 1 m. 1000 m = 1 km. Dus 100.000 cm = 1 km." }],
-          niveaus: { basis: "1 km. A.", simpeler: "Bij 1:100.000 schaal: 1 cm op kaart = 1 km werkelijk. Handig om te onthouden! = A.", nogSimpeler: "1 km = A." },
+          niveaus: { basis: "1 km. A.", simpeler: "Bij 1:100.000 schaal: 1 cm op kaart = 1 km werkelijk. Handig om te onthouden!", nogSimpeler: "1 km" },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
           theorie: "5 cm × 100.000 = 500.000 cm = 5.000 m = 5 km.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=1km. 5cm=5km. 10cm=10km." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigingstruc", uitleg: "Cm op kaart × 1 = km werkelijk (bij deze schaal)." }],
-          niveaus: { basis: "5 km. A.", simpeler: "1:100.000 → 1cm=1km. Dus 5cm op kaart = 5km werkelijk. = A.", nogSimpeler: "5 km = A." },
+          niveaus: { basis: "5 km. A.", simpeler: "1:100.000 → 1cm=1km. Dus 5cm op kaart = 5km werkelijk.", nogSimpeler: "5 km" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
           theorie: "Bij 1:50.000: 1 cm = 500 m = 0,5 km. Dus 2 cm = 1 km.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=0,5km. 2cm=1km. 4cm=2km." }],
           basiskennis: [{ onderwerp: "Vergelijking schalen", uitleg: "1:50k toont 2× kleiner gebied (gedetailleerder) dan 1:100k." }],
-          niveaus: { basis: "1 km. A.", simpeler: "Bij 1:50.000 is 1cm = 0,5km. Dus 2cm = 1km werkelijk. = A.", nogSimpeler: "1 km = A." },
+          niveaus: { basis: "1 km. A.", simpeler: "Bij 1:50.000 is 1cm = 0,5km. Dus 2cm = 1km werkelijk.", nogSimpeler: "1 km" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
           theorie: "Hoe groter het getal achter ':', hoe meer wereld op de kaart past.",
           voorbeelden: [{ type: "tabel", tekst: "Plattegrond: 1:50. Stadsplan: 1:10.000. Provinciekaart: 1:200.000. Wereld: 1:50.000.000." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Wereld passen op A4 = werkelijke afstand veel kleiner getekend." }],
-          niveaus: { basis: "1:50.000.000. A.", simpeler: "Wereld is heel groot → schaal-getal heel groot (50 miljoen). = A.", nogSimpeler: "1:50.000.000 = A." },
+          niveaus: { basis: "1:50.000.000. A.", simpeler: "Wereld is heel groot → schaal-getal heel groot (50 miljoen).", nogSimpeler: "1:50.000.000" },
         },
       },
     ],
@@ -211,7 +211,7 @@ const steps = [
           theorie: "Standaard: driehoekje (tent-vorm) = camping. Kerk = kruisje. Station/gebouw = rechthoek. Anker = haven.",
           voorbeelden: [{ type: "tabel", tekst: "🏕️ camping = driehoek. ⛪ kerk = kruis. 🚉 station = rechthoek. ⚓ haven = anker." }],
           basiskennis: [{ onderwerp: "Visuele logica", uitleg: "Symbolen zijn vereenvoudigde tekening van het ding." }],
-          niveaus: { basis: "Driehoekje. A.", simpeler: "Camping = driehoekje (tent-vorm). Kruisje is kerk, rechthoek is station. = A.", nogSimpeler: "Driehoekje = A." },
+          niveaus: { basis: "Driehoekje. A.", simpeler: "Camping = driehoekje (tent-vorm). Kruisje is kerk, rechthoek is station.", nogSimpeler: "Driehoekje" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
           theorie: "Wegenkaart-conventie: rood (hoofdwegen), geel (provinciaal), zwart (lokaal).",
           voorbeelden: [{ type: "tabel", tekst: "Rood = snelweg. Blauw = water. Zwart-streep = spoor. Stippels = wandel/fietspad." }],
           basiskennis: [{ onderwerp: "Opvallendheid", uitleg: "Rood = signaalkleur, valt op = belangrijke wegen." }],
-          niveaus: { basis: "Snelweg. A.", simpeler: "Op wegenkaart = rode lijn meestal hoofd/snelweg. (Rivier=blauw, spoor=zwart streep). = A.", nogSimpeler: "Snelweg = A." },
+          niveaus: { basis: "Snelweg. A.", simpeler: "Op wegenkaart = rode lijn meestal hoofd/snelweg. (Rivier=blauw, spoor=zwart streep).", nogSimpeler: "Snelweg" },
         },
       },
       {
@@ -239,7 +239,7 @@ const steps = [
           theorie: "Atlas-symbolen: ster = hoofdstad. Punt = gewone stad. Lijn-stippen = grens.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Amsterdam ★ (NL hoofdstad). Berlin ★ (Duitsland)." }],
           basiskennis: [{ onderwerp: "Hoofdstad in legenda", uitleg: "Atlas-legenda toont ster-symbool als 'hoofdstad'." }],
-          niveaus: { basis: "Hoofdstad. A.", simpeler: "Ster ★ op atlas = hoofdstad (belangrijkste stad). = A.", nogSimpeler: "Hoofdstad = A." },
+          niveaus: { basis: "Hoofdstad. A.", simpeler: "Ster ★ op atlas = hoofdstad (belangrijkste stad).", nogSimpeler: "Hoofdstad" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
           theorie: "Legenda staat meestal in een hoek of langs de rand — eerste hulp bij onbekende tekens.",
           voorbeelden: [{ type: "stap", tekst: "Symbool zie je → naar legenda → 'Aha, dat is een molen'." }],
           basiskennis: [{ onderwerp: "Niet gokken", uitleg: "Cito wil precieze antwoorden. Gokken = punten verliezen." }],
-          niveaus: { basis: "Legenda. A.", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken. = A.", nogSimpeler: "Legenda = A." },
+          niveaus: { basis: "Legenda. A.", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken.", nogSimpeler: "Legenda" },
         },
       },
     ],
@@ -274,7 +274,7 @@ const steps = [
           theorie: "8 cm × 100.000 = 800.000 cm = 8.000 m = 8 km.",
           voorbeelden: [{ type: "stap", tekst: "8cm op kaart = 8km (bij 1:100k)." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigingstruc", uitleg: "Cm op kaart × 1 = km werkelijk (alleen bij 1:100.000)." }],
-          niveaus: { basis: "8 km. A.", simpeler: "1:100.000 → 1cm = 1km. 8cm = 8km. = A.", nogSimpeler: "8 km = A." },
+          niveaus: { basis: "8 km. A.", simpeler: "1:100.000 → 1cm = 1km. 8cm = 8km.", nogSimpeler: "8 km" },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
           theorie: "Eindpunt rechts-onder van startpunt: lopen naar Zuidoost (ZO).",
           voorbeelden: [{ type: "kompas", tekst: "Rechts (O) + onder (Z) = ZO." }],
           basiskennis: [{ onderwerp: "Eindpunt bepaalt", uitleg: "Niet startpunt, maar EINDPUNT bepaalt richting." }],
-          niveaus: { basis: "Zuidoost. A.", simpeler: "B ligt rechts (=O) en onder (=Z) van A → loop naar ZuidOost (ZO). = A.", nogSimpeler: "ZO = A." },
+          niveaus: { basis: "Zuidoost. A.", simpeler: "B ligt rechts (=O) en onder (=Z) van A → loop naar ZuidOost (ZO).", nogSimpeler: "ZO" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
           theorie: "Blauw = water (universeel). Vlek = oppervlakte (niet lijn).",
           voorbeelden: [{ type: "tabel", tekst: "Blauwe vlek = meer/zee. Blauwe lijn = rivier. Groene vlek = bos." }],
           basiskennis: [{ onderwerp: "Vlek vs lijn", uitleg: "Vlek = vlak (meer). Lijn = stroom (rivier)." }],
-          niveaus: { basis: "Meer/zee. A.", simpeler: "Blauwe vlek = water-oppervlak (meer of zee). Bos=groen, berg=bruin. = A.", nogSimpeler: "Water = A." },
+          niveaus: { basis: "Meer/zee. A.", simpeler: "Blauwe vlek = water-oppervlak (meer of zee). Bos=groen, berg=bruin.", nogSimpeler: "Water" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
           theorie: "25.000 cm = 250 m. Bij 1:25.000 dus: 1cm = 250m.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=250m. 4cm=1km. 8cm=2km." }],
           basiskennis: [{ onderwerp: "cm→m", uitleg: "100 cm = 1 m. 25.000 ÷ 100 = 250 m." }],
-          niveaus: { basis: "250 m. A.", simpeler: "Bij 1:25.000: 1cm op kaart = 25.000cm werkelijk = 250m. = A.", nogSimpeler: "250 = A." },
+          niveaus: { basis: "250 m. A.", simpeler: "Bij 1:25.000: 1cm op kaart = 25.000cm werkelijk = 250m.", nogSimpeler: "250" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
           theorie: "Niet alle kaarten hebben Noord boven (vakantie-folder, plattegrond). De N-pijl bepaalt altijd.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Plattegrond kasteel: N-pijl naar rechts = Noord = rechts." }],
           basiskennis: [{ onderwerp: "Pijl boven alles", uitleg: "Volg ALTIJD de N-pijl, niet 'boven=Noord' aanname." }],
-          niveaus: { basis: "Kaart is gedraaid. A.", simpeler: "N-pijl wijst altijd naar Noord. Pijl naar links = kaart staat anders gedraaid. = A.", nogSimpeler: "Gedraaid = A." },
+          niveaus: { basis: "Kaart is gedraaid. A.", simpeler: "N-pijl wijst altijd naar Noord. Pijl naar links = kaart staat anders gedraaid.", nogSimpeler: "Gedraaid" },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
           theorie: "Groot getal = elk cm staat voor meer werkelijke afstand = meer gebied past.",
           voorbeelden: [{ type: "tabel", tekst: "1:100 = kamer. 1:1.000 = gebouw. 1:10.000 = stad. 1:1.000.000 = land." }],
           basiskennis: [{ onderwerp: "Tegenintuïtief", uitleg: "Lijkt klein op kaart, maar getal hoog = groot gebied." }],
-          niveaus: { basis: "1:1.000.000. A.", simpeler: "Hoe groter het getal achter ':' hoe groter het gebied. 1.000.000 > 100. = A.", nogSimpeler: "1:1.000.000 = A." },
+          niveaus: { basis: "1:1.000.000. A.", simpeler: "Hoe groter het getal achter ':' hoe groter het gebied. 1.000.000 > 100.", nogSimpeler: "1:1.000.000" },
         },
       },
       {
@@ -369,7 +369,7 @@ const steps = [
             { type: "stap", tekst: "Atlas-kaart: lichter blauw = ondiep water, donkerder = dieper. Tonen we via kleur-verloop." },
           ],
           basiskennis: [{ onderwerp: "Altijd kijken", uitleg: "Cito-tip: kijk EERST legenda voor je een kaart-vraag beantwoordt. Anders kun je symbolen verkeerd interpreteren." }],
-          niveaus: { basis: "Uitleg symbolen. = A.", simpeler: "Legenda = vakje op kaart dat uitlegt wat de symbolen + kleuren + lijnen betekenen. = A.", nogSimpeler: "Uitleg symbolen = A." },
+          niveaus: { basis: "Uitleg symbolen.", simpeler: "Legenda = vakje op kaart dat uitlegt wat de symbolen + kleuren + lijnen betekenen.", nogSimpeler: "Uitleg symbolen" },
         },
       },
       {
@@ -394,7 +394,7 @@ const steps = [
             { type: "stap", tekst: "Kaart van Friesland: bijna geen hoogtelijnen → super vlak." },
           ],
           basiskennis: [{ onderwerp: "Niet op alle kaarten", uitleg: "Niet elke kaart heeft hoogtelijnen — toeristische kaarten vaak niet. Topografische wel." }],
-          niveaus: { basis: "Steile helling. = A.", simpeler: "Hoogtelijnen DICHT bij elkaar betekent: hoogte verandert snel = steile berg of helling. VER = vlak. = A.", nogSimpeler: "Steil = A." },
+          niveaus: { basis: "Steile helling.", simpeler: "Hoogtelijnen DICHT bij elkaar betekent: hoogte verandert snel = steile berg of helling. VER = vlak.", nogSimpeler: "Steil" },
         },
       },
       {
@@ -417,7 +417,7 @@ const steps = [
             { type: "stap", tekst: "Op stadsplattegrond Amsterdam centraal: noord-pijl helpt om noordkant Amstel te vinden." },
           ],
           basiskennis: [{ onderwerp: "Altijd checken", uitleg: "Voor route-vraag op Cito-kaart: kijk ALTIJD eerst de windroos. Anders weet je niet welke kant 'noord' is op die specifieke kaart." }],
-          niveaus: { basis: "Kompas-symbool richtingen. = A.", simpeler: "Windroos = klein kompas-tekentje op kaart dat aangeeft welke kant noord/oost/zuid/west is. = A.", nogSimpeler: "Kompas op kaart = A." },
+          niveaus: { basis: "Kompas-symbool richtingen.", simpeler: "Windroos = klein kompas-tekentje op kaart dat aangeeft welke kant noord/oost/zuid/west is.", nogSimpeler: "Kompas op kaart" },
         },
       },
       {
@@ -442,7 +442,7 @@ const steps = [
             { type: "feit", tekst: "Bij stroomuitval / netwerkstoring: papieren kaart blijft werken." },
           ],
           basiskennis: [{ onderwerp: "Niet altijd uniek-modern", uitleg: "Kaart-principe (gebied + schaal + symbolen) is duizenden jaren oud. Wel ELEKTRONISCH veel nieuwer." }],
-          niveaus: { basis: "Zelfde principe als papier. = A.", simpeler: "Google Maps werkt net als een papieren kaart maar dan elektronisch: toont gebied met schaal + symbolen + jouw eigen locatie via GPS. = A.", nogSimpeler: "Digitale kaart = A." },
+          niveaus: { basis: "Zelfde principe als papier.", simpeler: "Google Maps werkt net als een papieren kaart maar dan elektronisch: toont gebied met schaal + symbolen + jouw eigen locatie via GPS.", nogSimpeler: "Digitale kaart" },
         },
       },
       { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },

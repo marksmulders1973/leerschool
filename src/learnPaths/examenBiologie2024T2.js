@@ -63,7 +63,7 @@ const steps = [
           niveaus: {
             basis: "Enzymen verteren voedingsstoffen. Antwoord D.",
             simpeler: "Enzymen knippen voedsel-moleculen in kleine stukjes zodat het lichaam ze kan opnemen. Antwoord D.",
-            nogSimpeler: "Verteren = D.",
+            nogSimpeler: "Verteren",
           },
         },
       },
@@ -118,7 +118,7 @@ const steps = [
           niveaus: {
             basis: "Kleine hersenen. Antwoord B.",
             simpeler: "Coördinatie + balans zit in de kleine hersenen. Daarom waggelt iemand die te veel gedronken heeft. Antwoord B.",
-            nogSimpeler: "Kleine hersenen = B.",
+            nogSimpeler: "Kleine hersenen",
           },
         },
       },
@@ -174,7 +174,7 @@ const steps = [
           niveaus: {
             basis: "Longblaasjes. Antwoord B.",
             simpeler: "Lucht reist door luchtpijp + bronchiën als 'snelweg'. Bij de longblaasjes komt de lucht aan en daar wordt zuurstof opgenomen + CO₂ afgegeven. Antwoord B.",
-            nogSimpeler: "Longblaasjes = B.",
+            nogSimpeler: "Longblaasjes",
           },
         },
       },
@@ -231,7 +231,7 @@ const steps = [
           niveaus: {
             basis: "Baarmoederspieren. Antwoord A.",
             simpeler: "Weeën zijn samentrekkingen van de baarmoeder zelf — die heeft een dikke spierlaag. Onbewust aangestuurd door het hormoon oxytocine. Antwoord A.",
-            nogSimpeler: "Baarmoeder = A.",
+            nogSimpeler: "Baarmoeder",
           },
         },
       },
@@ -287,7 +287,7 @@ const steps = [
           niveaus: {
             basis: "Inwendige prikkels. Antwoord B.",
             simpeler: "Hormonen komen van binnenuit (eigen klieren), niet van buiten. Dus de prikkel die ze geven is een INwendige prikkel. Antwoord B.",
-            nogSimpeler: "Van binnen = inwendig = B.",
+            nogSimpeler: "Van binnen = inwendig",
           },
         },
       },
@@ -340,7 +340,7 @@ const steps = [
           niveaus: {
             basis: "Abiotisch (temperatuur is niet-levend). Antwoord A.",
             simpeler: "Temperatuur is warmte-meting — geen leven. Dus abiotisch. Antwoord A.",
-            nogSimpeler: "Temperatuur = abiotisch = A.",
+            nogSimpeler: "Temperatuur = abiotisch",
           },
         },
       },

@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Een taal is het middel om het op te schrijven, niet het plan zelf.", "Hardware is iets anders.", "Een algoritme is juist de oplossing, geen fout."],
         uitlegPad: {
           stappen: [{ titel: "Een recept", tekst: "Een **algoritme** is een eindige, eenduidige reeks **stappen** die een probleem oplost of een taak uitvoert — net als een recept. Het is het *plan*; pas als je het in een programmeertaal opschrijft, wordt het een programma." }],
-          niveaus: { basis: "Stapsgewijs plan. A.", simpeler: "Algoritme = stappenplan = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Stapsgewijs plan. A.", simpeler: "Algoritme = stappenplan", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Dit is juist wél een eis — geen verkeerde.", "Dit is wél een eis.", "Dit is wél een eis."],
         uitlegPad: {
           stappen: [{ titel: "Een algoritme moet stoppen", tekst: "Een goed algoritme is **eindig** (het stopt een keer), **eenduidig**, **uitvoerbaar** en **correct**. 'Eindeloos doorgaan' hoort er dus juist NIET bij — een algoritme dat nooit stopt, is fout (een 'oneindige lus')." }],
-          niveaus: { basis: "Eindeloos = fout. A.", simpeler: "Mag niet eindeloos = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Eindeloos = fout. A.", simpeler: "Mag niet eindeloos", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Er is wel degelijk verschil tussen plan en uitvoering.", "Lengte is niet het verschil.", "Andersom: het programma is wat de computer draait."],
         uitlegPad: {
           stappen: [{ titel: "Idee → code", tekst: "Het **algoritme** is het *idee/stappenplan* (taal-onafhankelijk). Een **programma** is datzelfde plan **opgeschreven in een programmeertaal** (Python, Java…) zodat de computer het kan uitvoeren. Eerst bedenken, dan coderen." }],
-          niveaus: { basis: "Plan vs code. A.", simpeler: "Algoritme = plan, programma = code = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Plan vs code. A.", simpeler: "Algoritme = plan, programma = code", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Sequentie is gewoon volgorde, zonder keuze.", "Herhaling doet iets meerdere keren.", "Een variabele slaat een waarde op — geen keuze."],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde bepaalt de weg", tekst: "**Selectie** (keuze) gebruikt een **voorwaarde** (ALS … ANDERS … / if/else) om te bepalen welke stappen worden uitgevoerd. Bij regen → paraplu, anders → zonnebril. Het programma splitst hier in twee mogelijke wegen." }],
-          niveaus: { basis: "ALS/ANDERS = selectie. A.", simpeler: "If/else = keuze = A.", nogSimpeler: "A." },
+          niveaus: { basis: "ALS/ANDERS = selectie. A.", simpeler: "If/else = keuze", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Selectie is een keuze, geen herhaling.", "Sequentie doet elke stap één keer.", "Het is normale code, geen fout."],
         uitlegPad: {
           stappen: [{ titel: "Iets meerdere keren doen", tekst: "**Herhaling** (loop) voert stappen meerdere keren uit. 'HERHAAL 10 keer' is een **vaste** herhaling (je weet hoe vaak). 'ZOLANG …' is **voorwaardelijk** (herhaalt tot de voorwaarde verandert)." }],
-          niveaus: { basis: "Herhaling. A.", simpeler: "HERHAAL = loop = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Herhaling. A.", simpeler: "HERHAAL = loop", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Met alleen volgorde kun je geen keuzes of herhaling maken.", "Het zijn er minder — de drie basisbouwstenen.", "Juist niet — drie is genoeg."],
         uitlegPad: {
           stappen: [{ titel: "Drie is genoeg", tekst: "Met **sequentie** (volgorde), **selectie** (keuze) en **herhaling** (loop) kun je elk algoritme opbouwen. Dit heet 'gestructureerd programmeren'. Functies/variabelen maken het overzichtelijker, maar de basis blijft deze drie." }],
-          niveaus: { basis: "3 bouwstenen. A.", simpeler: "Sequentie/selectie/herhaling = 3 = A.", nogSimpeler: "A." },
+          niveaus: { basis: "3 bouwstenen. A.", simpeler: "Sequentie/selectie/herhaling = 3", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Juist niet — de computer kan pseudocode niet draaien.", "Het heeft niets met malware te maken.", "Een stroomdiagram is een tékening; pseudocode is tekst."],
         uitlegPad: {
           stappen: [{ titel: "Voor mensen, niet voor de machine", tekst: "**Pseudocode** beschrijft een algoritme in **leesbare, informele taal** (LEES, ALS, TOON…). Het is bedoeld om de logica helder te krijgen vóór je echte code typt. De computer voert het niet uit — het is taal-onafhankelijk." }],
-          niveaus: { basis: "Leesbare bijna-code. A.", simpeler: "Pseudocode = bijna-taal voor mensen = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Leesbare bijna-code. A.", simpeler: "Pseudocode = bijna-taal voor mensen", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "De rechthoek is een gewone bewerking/stap.", "Het ovaal is start of stop.", "Een pijl geeft alleen de richting aan."],
         uitlegPad: {
           stappen: [{ titel: "Bij de ruit splitst de weg", tekst: "In een stroomdiagram is de **ruit (diamant)** de **beslissing**: een ja/nee-vraag waar de pijl in tweeën splitst. Rechthoek = bewerking, ovaal = start/stop, pijl = volgorde. De ruit = de selectie-bouwsteen in beeld." }],
-          niveaus: { basis: "Ruit = beslissing. A.", simpeler: "Beslissing = ruit = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Ruit = beslissing. A.", simpeler: "Beslissing = ruit", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Pseudocode draait helemaal niet.", "Geen enkele computer eist pseudocode.", "Bestandsgrootte heeft hier niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Eerst denken, dan typen", tekst: "Je vindt **logica-fouten sneller op papier** (pseudocode/flowchart) dan tussen de details van een echte taal. Bovendien is het **taal-onafhankelijk**: dezelfde opzet kun je daarna in Python óf Java uitwerken." }],
-          niveaus: { basis: "Fouten eerder vinden. A.", simpeler: "Eerst plan = fouten eerder = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Fouten eerder vinden. A.", simpeler: "Eerst plan = fouten eerder", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "Alleen als het toevallig vooraan staat.", "Dat is veel meer dan lineair zoeken kost.", "Je moet wél kijken — niet 0."],
         uitlegPad: {
           stappen: [{ titel: "Eén voor één aflopen", tekst: "**Lineair zoeken** loopt de lijst van voor naar achter af. Staat het gezochte item achteraan (of zit het er niet in), dan kijk je naar **alle n items** → ~n stappen. Sneller kan met **binair zoeken**, maar dat vereist een gesorteerde lijst." }],
-          niveaus: { basis: "~n stappen. A.", simpeler: "Slechtste geval = n = A.", nogSimpeler: "A." },
+          niveaus: { basis: "~n stappen. A.", simpeler: "Slechtste geval = n", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Lengte maakt niet uit voor de methode.", "Binair zoeken werkt juist prima met getallen.", "In een lege lijst valt niets te zoeken."],
         uitlegPad: {
           stappen: [{ titel: "Eerst sorteren", tekst: "**Binair zoeken** kijkt steeds in het midden en gooit de helft weg — dat kan alleen als de lijst **gesorteerd** is (anders weet je niet welke helft je mag weggooien). Zo zoek je een naam in een telefoonboek: midden openen, links of rechts verder." }],
-          niveaus: { basis: "Gesorteerd. A.", simpeler: "Binair zoeken = gesorteerd nodig = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Gesorteerd. A.", simpeler: "Binair zoeken = gesorteerd nodig", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Juist bij grote data telt het zwaar.", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
         uitlegPad: {
           stappen: [{ titel: "n maakt het verschil", tekst: "Bij een paar items maakt het niet uit, maar bij **miljoenen** items is het verschil tussen een slim en een traag algoritme enorm (seconden vs uren). Daarom tellen informatici het aantal **stappen** in verhouding tot de grootte n. Hetzelfde resultaat, maar veel sneller bereikt." }],
-          niveaus: { basis: "Veel data = tijd telt. A.", simpeler: "Grote data → efficiëntie telt = A.", nogSimpeler: "A." },
+          niveaus: { basis: "Veel data = tijd telt. A.", simpeler: "Grote data → efficiëntie telt", nogSimpeler: "A." },
         },
       },
     ],

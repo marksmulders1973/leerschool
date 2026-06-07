@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — m+n, niet m·n.", "Niet — grondtal blijft 2.", "Niet — controleer berekening 2⁷."],
         uitlegPad: {
           stappen: [{ titel: "a^m · a^n = a^(m+n)", tekst: "2³ · 2⁴ = 2^(3+4) = **2⁷ = 128**. Bij MACHTEN-product: tellen op (zelfde grondtal)." }],
-          niveaus: { basis: "2⁷. A.", simpeler: "Exponenten optellen: 3+4=7. A.", nogSimpeler: "2⁷ = A." },
+          niveaus: { basis: "2⁷. A.", simpeler: "Exponenten optellen: 3+4=7. A.", nogSimpeler: "2⁷" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen 0⁰ is onbepaald.", "Niet — dat is 5¹.", "Niet — voor 5≠0 is bepaald."],
         uitlegPad: {
           stappen: [{ titel: "Elke a⁰ = 1 (a≠0)", tekst: "Volgt uit regel a^n / a^n = a^(n-n) = a⁰ = (per definitie van delen) 1. Werkt voor elke a ≠ 0. 0⁰ is wiskundig onbepaald." }],
-          niveaus: { basis: "1. A.", simpeler: "Elk getal-tot-de-nul = 1. A.", nogSimpeler: "1 = A." },
+          niveaus: { basis: "1. A.", simpeler: "Elk getal-tot-de-nul = 1. A.", nogSimpeler: "1" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — verkeerde berekening.", "Niet — dat is keer.", "Niet — geen breuk."],
         uitlegPad: {
           stappen: [{ titel: "Derdemachtswortel", tekst: "a^(1/3) = ³√a. ³√8 = **2** (want 2³=8). 1/3-de macht is derdemachtswortel." }],
-          niveaus: { basis: "2. A.", simpeler: "³√8 = 2. A.", nogSimpeler: "2 = A." },
+          niveaus: { basis: "2. A.", simpeler: "³√8 = 2. A.", nogSimpeler: "2" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — niet vergeten teken.", "Niet — vermenigvuldigen ipv optellen.", "Niet — controleer optelling."],
         uitlegPad: {
           stappen: [{ titel: "−2 + 5 = 3", tekst: "a⁻² · a⁵ = a^(−2+5) = **a³**. Negatieve exponenten gewoon optellen volgens reken-regel." }],
-          niveaus: { basis: "a³. A.", simpeler: "-2 + 5 = 3, dus a³. A.", nogSimpeler: "a³ = A." },
+          niveaus: { basis: "a³. A.", simpeler: "-2 + 5 = 3, dus a³. A.", nogSimpeler: "a³" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
           stappen: [
             { titel: "Macht-van-macht", tekst: "(a^m)^n = a^(m·n) — exponenten vermenigvuldigen. Voorbeeld: (2³)² = 2⁶ = 64 = 8² ✓. Andere fouten zijn klassieke valkuilen: (a+b)² = a² + 2ab + b² (NIET a² + b²)." },
           ],
-          niveaus: { basis: "(a^m)^n correct. A.", simpeler: "Macht-van-macht = m·n. A.", nogSimpeler: "(a^m)^n = A." },
+          niveaus: { basis: "(a^m)^n correct. A.", simpeler: "Macht-van-macht = m·n. A.", nogSimpeler: "(a^m)^n" },
         },
       },
     ],
@@ -88,7 +88,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen de groei, niet totaal.", "Niet — drie keer is te veel.", "Niet — 30%."],
         uitlegPad: {
           stappen: [{ titel: "1 + r", tekst: "Bij groei: b = 1 + r/100. 3% groei → b = 1 + 0,03 = **1,03** per jaar. Na 10 jaar: factor 1,03¹⁰ ≈ 1,34 (34% meer)." }],
-          niveaus: { basis: "1,03. A.", simpeler: "100% + 3% = 1,03. A.", nogSimpeler: "1,03 = A." },
+          niveaus: { basis: "1,03. A.", simpeler: "100% + 3% = 1,03. A.", nogSimpeler: "1,03" },
         },
       },
       {
@@ -100,7 +100,7 @@ const steps = [
           stappen: [
             { titel: "(½)^(20/5) = (½)⁴", tekst: "20/5 = 4 halveringen. (½)⁴ = 1/16 = **6,25%** over. Tabel: 100→50→25→12,5→6,25." },
           ],
-          niveaus: { basis: "(½)⁴=6,25%. A.", simpeler: "4 halveringen = 6,25%. A.", nogSimpeler: "6,25 = A." },
+          niveaus: { basis: "(½)⁴=6,25%. A.", simpeler: "4 halveringen = 6,25%. A.", nogSimpeler: "6,25" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
             { titel: "Compound formula", tekst: "K = 1000 · 1,04¹⁰ = 1000 · 1,480 ≈ **€1480**. Vergelijking lineair (10×4%=40% = €1400): exponentieel geeft meer door 'rente op rente'." },
           ],
           theorie: "Vuistregel: bij ~7% rente verdubbelt geld elke 10 jaar. Bij 4%: elke ~17 jaar (rule of 70 / 4 ≈ 17,5).",
-          niveaus: { basis: "~1480. A.", simpeler: "Iets meer dan 40% groei. A.", nogSimpeler: "1480 = A." },
+          niveaus: { basis: "~1480. A.", simpeler: "Iets meer dan 40% groei. A.", nogSimpeler: "1480" },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Niet — verwarring met %.", "Niet — kwadrant fout.", "Niet — formule is 70/r."],
         uitlegPad: {
           stappen: [{ titel: "Rule of 70", tekst: "Verdubbelingstijd ≈ 70 / groei-%. Bij 7%: 70/7 = **10 jaar**. Handige vuistregel — exact via t = ln(2)/ln(1+r) ≈ 0,693/0,0677 ≈ 10,2 jaar." }],
-          niveaus: { basis: "~10 jaar. A.", simpeler: "70/7=10. A.", nogSimpeler: "10 = A." },
+          niveaus: { basis: "~10 jaar. A.", simpeler: "70/7=10. A.", nogSimpeler: "10" },
         },
       },
       {
@@ -133,7 +133,7 @@ const steps = [
         wrongHints: [null, "Niet — b<1 = daling.", "Niet — daalt.", "Niet — exponentieel nooit negatief."],
         uitlegPad: {
           stappen: [{ titel: "0 < b < 1 → verval", tekst: "Groei-factor 0,8 < 1 → elke stap 20% minder. Bij grote x → 0 (asymptoot, nooit precies 0)." }],
-          niveaus: { basis: "Nadert 0. A.", simpeler: "Daalt naar nul. A.", nogSimpeler: "0 = A." },
+          niveaus: { basis: "Nadert 0. A.", simpeler: "Daalt naar nul. A.", nogSimpeler: "0" },
         },
       },
     ],
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is helft.", "Niet — dat is wortel.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "2^? = 32", tekst: "32 = 2 · 2 · 2 · 2 · 2 = 2⁵. Dus log₂(32) = **5**. Tot welke macht moet 2 verheven worden? 5." }],
-          niveaus: { basis: "5. A.", simpeler: "2⁵=32, dus log₂(32)=5. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "5. A.", simpeler: "2⁵=32, dus log₂(32)=5. A.", nogSimpeler: "5" },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Niet — log van zichzelf.", "Niet — log van macht.", "Niet — dat is ln(e)."],
         uitlegPad: {
           stappen: [{ titel: "ln(e^n) = n", tekst: "ln neemt log met grondtal e. Macht n van e: ln(e^n) = n. Hier n=2 → **2**. Generaliseerd: log_b(b^n) = n." }],
-          niveaus: { basis: "2. A.", simpeler: "ln en e zijn omgekeerd. A.", nogSimpeler: "2 = A." },
+          niveaus: { basis: "2. A.", simpeler: "ln en e zijn omgekeerd. A.", nogSimpeler: "2" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
           stappen: [
             { titel: "log(a) + log(b) = log(a·b)", tekst: "log(100) + log(10) = log(100·10) = log(1000) = **3**. Productregel logaritmen." },
           ],
-          niveaus: { basis: "3. A.", simpeler: "Som log = log product. A.", nogSimpeler: "3 = A." },
+          niveaus: { basis: "3. A.", simpeler: "Som log = log product. A.", nogSimpeler: "3" },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
             { titel: "10× per magnitude", tekst: "Richter is log₁₀-schaal. 7−5 = 2 stappen → 10² = **100× sterker** amplitude. Energie zelfs ~32× per magnitude → bij verschil 2: ~1000× energie." },
           ],
           theorie: "Aardbeving 9,1 (Sumatra 2004) ~ 1000× sterker dan 7 — uitzonderlijk vernietigend.",
-          niveaus: { basis: "100×. A.", simpeler: "Log-schaal: 2 stappen = 100×. A.", nogSimpeler: "100 = A." },
+          niveaus: { basis: "100×. A.", simpeler: "Log-schaal: 2 stappen = 100×. A.", nogSimpeler: "100" },
         },
       },
       {
@@ -197,7 +197,7 @@ const steps = [
         wrongHints: [null, "Niet — verwarring.", "Niet — verkeerde rekensom.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Log van beide kanten", tekst: "log₂(2^x) = log₂(32). x = log₂(32) = **5**. Of direct: 2⁵=32 → x=5. Bij 2^x = 10: x = log₂(10) ≈ 3,32 (niet-geheel)." }],
-          niveaus: { basis: "5. A.", simpeler: "2^5=32. A.", nogSimpeler: "5 = A." },
+          niveaus: { basis: "5. A.", simpeler: "2^5=32. A.", nogSimpeler: "5" },
         },
       },
     ],
@@ -217,7 +217,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "120 / 20 = 6 stappen", tekst: "Aantal verdubbelingen = 120/20 = 6. Vermenigvuldigingsfactor = 2⁶ = **64**. Dus 1 bacterie → 64 in 2 uur." }],
           theorie: "Realiteit: na een tijd loopt het tegen draagkracht (voedsel op, ruimte op) → logistische groei.",
-          niveaus: { basis: "64×. A.", simpeler: "2 tot de 6e = 64. A.", nogSimpeler: "64 = A." },
+          niveaus: { basis: "64×. A.", simpeler: "2 tot de 6e = 64. A.", nogSimpeler: "64" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is λ zelf.", "Niet — close, niet exact.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "t½ = ln(2)/λ", tekst: "t½ = 0,693 / 0,1 = **6,93 jaar**. Na ~7 jaar helft over. Na ~14 jaar kwart over." }],
-          niveaus: { basis: "ln(2)/0,1 ≈ 6,93. A.", simpeler: "0,693/0,1 = ~7. A.", nogSimpeler: "6,93 = A." },
+          niveaus: { basis: "ln(2)/0,1 ≈ 6,93. A.", simpeler: "0,693/0,1 = ~7. A.", nogSimpeler: "6,93" },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
             { titel: "3 generaties", tekst: "15/5 = 3 generaties. 3³ = **27**. Dus 27× besmettingen na 15 dagen. Exponentiële groei is 'verraderlijk': lijkt klein vroeg, explodeert later." },
           ],
           theorie: "COVID-19 had R₀ ~2-3 zonder maatregelen, dubbelingstijd ~3-5 dagen. Lockdowns + vaccinaties brachten R onder 1.",
-          niveaus: { basis: "27× = A.", simpeler: "3 generaties × 3-voud = 27. A.", nogSimpeler: "27 = A." },
+          niveaus: { basis: "27×", simpeler: "3 generaties × 3-voud = 27. A.", nogSimpeler: "27" },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
           stappen: [
             { titel: "Lage densiteit = veel ruimte", tekst: "Bij lage N: dN/dt ≈ r·N (1−0) = r·N → exponentieel. Vol-tegen-K: dN/dt → 0. Daarom S-vormig: start exponentieel, eindigt vlak." },
           ],
-          niveaus: { basis: "Lage N. A.", simpeler: "Vroege fase exp, late vlak. A.", nogSimpeler: "Laag N = A." },
+          niveaus: { basis: "Lage N. A.", simpeler: "Vroege fase exp, late vlak. A.", nogSimpeler: "Laag N" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
           stappen: [
             { titel: "12,5% = (½)³ = 3 halveringstijden", tekst: "100% → 50% → 25% → 12,5%. Drie halveringstijden = 3·5730 = **17 190 jaar**. Pre-historisch (laat-ijstijd)." },
           ],
-          niveaus: { basis: "17 190. A.", simpeler: "Drie halveringen × 5730 j. A.", nogSimpeler: "17k = A." },
+          niveaus: { basis: "17 190. A.", simpeler: "Drie halveringen × 5730 j. A.", nogSimpeler: "17k" },
         },
       },
     ],
@@ -288,7 +288,7 @@ const steps = [
         wrongHints: [null, "Niet — rente erbij.", "Net iets meer.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "K · b^t", tekst: "500 · 1,04⁵ = 500 · 1,217 ≈ **€608**." }],
-          niveaus: { basis: "608. A.", simpeler: "5 jaar 4% rente. A.", nogSimpeler: "608 = A." },
+          niveaus: { basis: "608. A.", simpeler: "5 jaar 4% rente. A.", nogSimpeler: "608" },
         },
       },
       {
@@ -300,7 +300,7 @@ const steps = [
           stappen: [
             { titel: "Eerst product simplificeren", tekst: "e^7 · e^3 = e^10. ln(e^10) = **10**. Macht-regel + ln-eigenschap." },
           ],
-          niveaus: { basis: "10. A.", simpeler: "7+3=10, ln(e^10)=10. A.", nogSimpeler: "10 = A." },
+          niveaus: { basis: "10. A.", simpeler: "7+3=10, ln(e^10)=10. A.", nogSimpeler: "10" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
           stappen: [
             { titel: "log10-schaal", tekst: "pH = −log[H⁺]. Verschil 3 → 10³ = **1000× meer H⁺**. Maag-zuur ~ pH 2 = miljoen-keer zuurder dan zuiver water." },
           ],
-          niveaus: { basis: "1000×. A.", simpeler: "3 pH-eenheden = 1000×. A.", nogSimpeler: "1000 = A." },
+          niveaus: { basis: "1000×. A.", simpeler: "3 pH-eenheden = 1000×. A.", nogSimpeler: "1000" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Niet — R<1 = uitsterving.", "Niet — pas bij R=1.", "Niet — R<1 betekent geen groei."],
         uitlegPad: {
           stappen: [{ titel: "R<1 = krimp", tekst: "Bij R<1: elke generatie kleiner dan vorige → exponentieel verval. Voor pandemie cruciaal: 'platdrukken' = R<1 bereiken via maatregelen + immuniteit + vaccinatie." }],
-          niveaus: { basis: "Verval. A.", simpeler: "R<1 = krimp. A.", nogSimpeler: "Verval = A." },
+          niveaus: { basis: "Verval. A.", simpeler: "R<1 = krimp. A.", nogSimpeler: "Verval" },
         },
       },
       {
@@ -340,7 +340,7 @@ const steps = [
             { titel: "2⁴", tekst: "Per octaaf 2×. Vier octaven: 2⁴ = **16×**. Bv. A2 (110 Hz) → A6 (1760 Hz). Klassiek voorbeeld log-schaal in muziek." },
           ],
           theorie: "12 noten per octaaf in westerse muziek: elke noot = 2^(1/12) ≈ 1,059 frequentie-verhoudingsfactor.",
-          niveaus: { basis: "16×. A.", simpeler: "2^4 = 16. A.", nogSimpeler: "16 = A." },
+          niveaus: { basis: "16×. A.", simpeler: "2^4 = 16. A.", nogSimpeler: "16" },
         },
       },
     ],
