@@ -16,7 +16,7 @@
 // (copyright-policy). Externe link naar Cito's gratis voorbeeldboekje voor
 // echte voorbeelden.
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
@@ -158,6 +158,17 @@ export default function OefenpakketPage({ setPage } = {}) {
   const [email, setEmail] = useState("");
   // 'idle' | 'busy' | 'done' | 'error' — 'done' ook als eerder al ingevuld.
   const [mailStatus, setMailStatus] = useState("idle");
+  const emailRef = useRef(null);
+
+  // Vanuit de vergrendelde antwoordsleutel onderaan: scroll terug naar het
+  // e-mailveld en focus het, zodat de bezoeker op het moment van verlangen
+  // (ze zien de slot-pagina) direct kan ontgrendelen. Conversie-fix 2026-06-07.
+  function scrollNaarFormulier() {
+    try {
+      emailRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => emailRef.current?.focus(), 400);
+    } catch {}
+  }
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -350,41 +361,41 @@ export default function OefenpakketPage({ setPage } = {}) {
             </div>
           ) : (
             <form onSubmit={meldAan}>
-              <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 16, fontWeight: 800, marginBottom: 4 }}>
-                🎁 Vul je e-mail in — 2 dingen gratis erbij
+              <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 17, fontWeight: 800, marginBottom: 4 }}>
+                🔑 Weet jij straks of je kind het goed heeft?
               </div>
               <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, marginBottom: 12, lineHeight: 1.55 }}>
-                De oefenvragen print je sowieso gratis. Vul je e-mail in en je krijgt er twee dingen bij:
-                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>1) meteen de volledige antwoordsleutel met uitleg</strong>
-                {" "}— zo weet je of je kind het goed heeft — én
-                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>2) elke week 15 minuten gratis extra oefenstof</strong>
-                {" "}voor de Doorstroomtoets in je mail. Geen spam, uitschrijven kan altijd.
+                Het hele werkboek print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>gratis</strong>. Vul je e-mail in en je krijgt er meteen bij:
+                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>de volledige antwoordsleutel mét korte uitleg</strong>
+                {" "}— zo kun je samen nakijken én uitleggen waaróm iets goed is. Plus
+                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>elke week een nieuw oefenkwartiertje</strong> voor de Doorstroomtoets.
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <input
+                  ref={emailRef}
                   type="email"
                   value={email}
                   onChange={(e) => { setEmail(e.target.value); if (mailStatus === "error") setMailStatus("idle"); }}
                   placeholder="jouw@email.nl"
                   aria-label="E-mailadres"
                   style={{
-                    flex: "1 1 200px", minWidth: 0, padding: "11px 14px",
+                    flex: "1 1 200px", minWidth: 0, padding: "12px 14px",
                     borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)",
                     background: "rgba(255,255,255,0.06)", color: "var(--color-text, #e8edf5)",
-                    fontSize: 15,
+                    fontSize: 16,
                   }}
                 />
                 <button
                   type="submit"
                   disabled={mailStatus === "busy"}
                   style={{
-                    padding: "11px 22px", borderRadius: 10, border: "none",
+                    padding: "12px 22px", borderRadius: 10, border: "none",
                     background: "var(--color-accent, #42a5f5)", color: "#0b1224",
-                    fontSize: 15, fontWeight: 700,
+                    fontSize: 15, fontWeight: 800,
                     cursor: mailStatus === "busy" ? "wait" : "pointer",
                   }}
                 >
-                  {mailStatus === "busy" ? "Even bezig…" : "Ja, gratis ontvangen →"}
+                  {mailStatus === "busy" ? "Even bezig…" : "Stuur de antwoordsleutel →"}
                 </button>
               </div>
               {mailStatus === "error" && (
@@ -392,6 +403,9 @@ export default function OefenpakketPage({ setPage } = {}) {
                   Vul een geldig e-mailadres in en probeer het opnieuw.
                 </div>
               )}
+              <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 11.5, marginTop: 9, lineHeight: 1.5 }}>
+                🔒 Geen spam. We delen je adres nooit met anderen. Uitschrijven met 1 klik.
+              </div>
             </form>
           )}
         </div>
@@ -569,9 +583,21 @@ export default function OefenpakketPage({ setPage } = {}) {
             <SectieKop emoji="🔒" label="Antwoordsleutel & uitleg (vergrendeld)" />
             <p style={{ color: "#6b7785", fontSize: 14, lineHeight: 1.6, marginTop: -4 }}>
               De volledige antwoordsleutel met korte uitleg is <strong>vergrendeld</strong>.
-              Vul bovenaan deze pagina je e-mailadres in om hem gratis te ontgrendelen —
-              daarna verschijnt hij hier en kun je hem meeprinten.
+              Vul je e-mailadres in om hem gratis te ontgrendelen — daarna verschijnt hij
+              hier en kun je hem meeprinten.
             </p>
+            <button
+              type="button"
+              className="oefenpakket-noprint"
+              onClick={scrollNaarFormulier}
+              style={{
+                marginTop: 14, padding: "13px 24px", borderRadius: 12, border: "none",
+                background: "#42a5f5", color: "#0b1224", fontSize: 16, fontWeight: 800,
+                cursor: "pointer", boxShadow: "0 4px 16px rgba(66,165,245,0.35)",
+              }}
+            >
+              🔓 Ontgrendel de antwoorden (gratis)
+            </button>
           </Sheet>
         )}
       </div>
