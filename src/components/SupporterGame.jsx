@@ -85,7 +85,8 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
         if (k === " " || k === "Enter") startGame();
         return;
       }
-      if (k === "ArrowUp" || k === "w") move(0, -1);
+      // Spatie = vooruit springen (zoals in Frogger), naast de pijltjes/WASD.
+      if (k === " " || k === "ArrowUp" || k === "w") move(0, -1);
       else if (k === "ArrowDown" || k === "s") move(0, 1);
       else if (k === "ArrowLeft" || k === "a") move(-1, 0);
       else if (k === "ArrowRight" || k === "d") move(1, 0);
@@ -237,7 +238,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       </div>
 
       <p style={{ marginTop: 16, fontSize: 12, opacity: .6, textAlign: "center", maxWidth: 420 }}>
-        Tip: gebruik de pijltjestoetsen op de computer, of de knoppen hierboven op je telefoon.
+        Tip: op de computer beweeg je met de pijltjestoetsen (of WASD) en spring je vooruit met de spatiebalk. Op je telefoon gebruik je de knoppen hierboven.
       </p>
     </div>
   );
