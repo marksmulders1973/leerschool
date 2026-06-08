@@ -6,6 +6,7 @@
 // Verwijderen na de maand = de route-branch in App.jsx + routes.js weghalen
 // (en deze reactie in het wensenbord). Niets anders hangt eraan.
 import { useEffect, useRef, useState, useCallback } from "react";
+import { laadTopSupporter, schrijfSupporterScore } from "../games/supporter/scores.js";
 
 const COLS = 9;
 const ROWS = 9;
@@ -41,7 +42,7 @@ function makeCars(level) {
   return lanes;
 }
 
-export default function SupporterGame({ onHome, onPlayObliterator, supporterName = "Sahasra" }) {
+export default function SupporterGame({ onHome, onPlayObliterator, supporterName = "Sahasra", userName = "", authUser = null }) {
   const [frog, setFrog] = useState({ c: 4, r: ROWS - 1 });
   const [lives, setLives] = useState(3);
   const [score, setScore] = useState(0);
@@ -52,6 +53,21 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   });
   const [flash, setFlash] = useState(false);
   const [roundMsg, setRoundMsg] = useState("");
+  const [board, setBoard] = useState([]);
+  const [naam, setNaam] = useState(() => {
+    try { return localStorage.getItem("lk_supporter_naam") || userName || ""; } catch { return userName || ""; }
+  });
+  const [ingezonden, setIngezonden] = useState(false);
+
+  const herlaadBord = useCallback(() => { laadTopSupporter().then(setBoard); }, []);
+  useEffect(() => { herlaadBord(); }, [herlaadBord]);
+
+  const zetOpBord = useCallback(async () => {
+    const n = (naam || userName || "Speler").trim().slice(0, 24) || "Speler";
+    try { localStorage.setItem("lk_supporter_naam", n); } catch {}
+    const ok = await schrijfSupporterScore(n, authUser?.id, score);
+    if (ok) { setIngezonden(true); herlaadBord(); }
+  }, [naam, userName, authUser, score, herlaadBord]);
 
   const lanesRef = useRef(makeCars(1));
   const frogRef = useRef(frog);
@@ -75,6 +91,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
     lanesRef.current = makeCars(1);
     safeRef.current = ROWS - 1; graceRef.current = 0;
     goalRef.current = 0; restingRef.current = false; setRoundMsg("");
+    setIngezonden(false);
     setLives(3); setScore(0); setLevel(1); resetFrog();
     setStatus("playing");
   }, [resetFrog]);
@@ -245,8 +262,18 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
             ) : (
               <>
                 <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 4 }}>Game over!</div>
-                <div style={{ fontSize: 15, marginBottom: 2 }}>Score: <b>{score}</b> · Best: <b>{best}</b></div>
-                <div style={{ fontSize: 13, opacity: .85, marginBottom: 14 }}>Laat 'm aan je vriendinnen zien! 💛</div>
+                <div style={{ fontSize: 15, marginBottom: 10 }}>Score: <b>{score}</b> · Best: <b>{best}</b></div>
+                {score > 0 && !ingezonden ? (
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                    <input value={naam} onChange={(e) => setNaam(e.target.value)} maxLength={24} placeholder="Jouw naam"
+                      style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,.3)", background: "#0c1838", color: "#fff7ec", fontSize: 15, textAlign: "center", width: 200 }} />
+                    <button onClick={zetOpBord} onMouseDown={noFocus} style={btnGold}>🏆 Zet op scorebord</button>
+                  </div>
+                ) : ingezonden ? (
+                  <div style={{ fontSize: 14, color: "#7fd0a0", marginBottom: 12 }}>✓ Op het scorebord gezet! Laat 'm aan je vriendinnen zien 💛</div>
+                ) : (
+                  <div style={{ fontSize: 13, opacity: .85, marginBottom: 12 }}>Laat 'm aan je vriendinnen zien! 💛</div>
+                )}
                 <button onClick={startGame} onMouseDown={noFocus} style={btnGold}>↻ Opnieuw</button>
               </>
             )}
@@ -277,6 +304,23 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
             <div style={{ fontWeight: 700, fontSize: 14 }}>OBLITERATOR</div>
             <div style={{ fontSize: 12, opacity: .7 }}>het andere spel →</div>
           </button>
+        )}
+      </div>
+
+      {/* Scorebord van de maand */}
+      <div style={{ marginTop: 18, width: "100%", maxWidth: 460, background: "#15306a", borderRadius: 12, padding: "14px 16px" }}>
+        <div style={{ fontWeight: 800, marginBottom: 8, textAlign: "center" }}>🏆 Toppers van de maand</div>
+        {board.length === 0 ? (
+          <div style={{ fontSize: 13, opacity: .7, textAlign: "center" }}>Nog geen scores — wees de eerste! 🐸</div>
+        ) : (
+          <ol style={{ margin: 0, padding: 0, listStyle: "none" }}>
+            {board.map((r, i) => (
+              <li key={i} style={{ display: "flex", justifyContent: "space-between", padding: "5px 4px", borderBottom: i < board.length - 1 ? "1px dashed rgba(255,255,255,.12)" : "none", fontSize: 14 }}>
+                <span>{["🥇", "🥈", "🥉"][i] || `${i + 1}.`} {r.naam}</span>
+                <span style={{ fontWeight: 700 }}>{r.score}</span>
+              </li>
+            ))}
+          </ol>
         )}
       </div>
 

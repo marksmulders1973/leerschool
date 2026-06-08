@@ -1117,6 +1117,8 @@ export default function App() {
         <Suspense fallback={<PageLoader />}>
           <SupporterGame
             supporterName="Sahasra"
+            userName={userName || ""}
+            authUser={authUser}
             onHome={goHome}
             onPlayObliterator={() => setPage("obliteratorPlay")}
           />
