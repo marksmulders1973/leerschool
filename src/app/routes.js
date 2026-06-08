@@ -45,6 +45,8 @@ export const PAGE_TO_PATH = {
   // /obliterator deeplink → de play-versie (niet de "Direct"-conversie-flow,
   // die werkt alleen via ?play=obliterator query met onboarding na 3 deaths).
   obliteratorPlay: "/obliterator",
+  // Spel van de maand (tijdelijk, ~1 maand) — bedankje voor onze supporter.
+  supporterGame: "/supporter",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",
