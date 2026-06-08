@@ -91,9 +91,17 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       else if (k === "ArrowLeft" || k === "a") move(-1, 0);
       else if (k === "ArrowRight" || k === "d") move(1, 0);
     };
+    // Spatie ook op keyup blokkeren — anders activeert de browser daarmee
+    // een knop die nog focus heeft (Start of een pijl-knop), waardoor de kikker
+    // omhoog springt én meteen weer omlaag "geklikt" wordt.
+    const onKeyUp = (e) => { if (e.key === " ") e.preventDefault(); };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("keyup", onKeyUp);
+    return () => { window.removeEventListener("keydown", onKey); window.removeEventListener("keyup", onKeyUp); };
   }, [move, startGame]);
+
+  // Knoppen mogen geen focus pakken (anders activeert de spatiebalk ze).
+  const noFocus = (e) => e.preventDefault();
 
   // game-loop: autootjes bewegen, botsing + finish checken
   useEffect(() => {
@@ -197,14 +205,14 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
               <>
                 <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 6 }}>🐸 Kikker Oversteek</div>
                 <div style={{ fontSize: 14, opacity: .9, maxWidth: 300, textAlign: "center", marginBottom: 14 }}>Breng de kikker naar de overkant zonder de auto's te raken. Elke overkant = 10 punten, en het gaat steeds sneller!</div>
-                <button onClick={startGame} style={btnGold}>▶ Start</button>
+                <button onClick={startGame} onMouseDown={noFocus} style={btnGold}>▶ Start</button>
               </>
             ) : (
               <>
                 <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 4 }}>Game over!</div>
                 <div style={{ fontSize: 15, marginBottom: 2 }}>Score: <b>{score}</b> · Best: <b>{best}</b></div>
                 <div style={{ fontSize: 13, opacity: .85, marginBottom: 14 }}>Laat 'm aan je vriendinnen zien! 💛</div>
-                <button onClick={startGame} style={btnGold}>↻ Opnieuw</button>
+                <button onClick={startGame} onMouseDown={noFocus} style={btnGold}>↻ Opnieuw</button>
               </>
             )}
           </div>
@@ -214,11 +222,11 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       {/* touch-knoppen */}
       <div style={{ marginTop: 14, display: "grid", gridTemplateColumns: "repeat(3,56px)", gridTemplateRows: "repeat(2,56px)", gap: 8, justifyContent: "center" }}>
         <span />
-        <button aria-label="omhoog" onClick={() => move(0, -1)} style={dpad}>▲</button>
+        <button aria-label="omhoog" tabIndex={-1} onMouseDown={noFocus} onClick={() => move(0, -1)} style={dpad}>▲</button>
         <span />
-        <button aria-label="links" onClick={() => move(-1, 0)} style={dpad}>◀</button>
-        <button aria-label="omlaag" onClick={() => move(0, 1)} style={dpad}>▼</button>
-        <button aria-label="rechts" onClick={() => move(1, 0)} style={dpad}>▶</button>
+        <button aria-label="links" tabIndex={-1} onMouseDown={noFocus} onClick={() => move(-1, 0)} style={dpad}>◀</button>
+        <button aria-label="omlaag" tabIndex={-1} onMouseDown={noFocus} onClick={() => move(0, 1)} style={dpad}>▼</button>
+        <button aria-label="rechts" tabIndex={-1} onMouseDown={noFocus} onClick={() => move(1, 0)} style={dpad}>▶</button>
       </div>
 
       {/* 2 spellen naast elkaar */}
