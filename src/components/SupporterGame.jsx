@@ -51,6 +51,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
     try { return Number(localStorage.getItem("lk_supporter_best") || 0); } catch { return 0; }
   });
   const [flash, setFlash] = useState(false);
+  const [roundMsg, setRoundMsg] = useState("");
 
   const lanesRef = useRef(makeCars(1));
   const frogRef = useRef(frog);
@@ -59,6 +60,8 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   const lastRef = useRef(0);
   const safeRef = useRef(ROWS - 1);   // laatst bereikte veilige strook
   const graceRef = useRef(0);         // resterende landings-genade-frames
+  const goalRef = useRef(0);          // doel-rij: 0 = boven, ROWS-1 = onder
+  const restingRef = useRef(false);   // korte rust aan de overkant (speed-up)
   const [, force] = useState(0); // re-render tikker voor auto-posities
 
   useEffect(() => { frogRef.current = frog; }, [frog]);
@@ -71,6 +74,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   const startGame = useCallback(() => {
     lanesRef.current = makeCars(1);
     safeRef.current = ROWS - 1; graceRef.current = 0;
+    goalRef.current = 0; restingRef.current = false; setRoundMsg("");
     setLives(3); setScore(0); setLevel(1); resetFrog();
     setStatus("playing");
   }, [resetFrog]);
@@ -94,8 +98,10 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
         if (k === " " || k === "Enter") startGame();
         return;
       }
-      // Spatie = vooruit springen (zoals in Frogger), naast de pijltjes/WASD.
-      if (k === " " || k === "ArrowUp" || k === "w") move(0, -1);
+      if (restingRef.current) return; // even rust aan de overkant
+      // Spatie = vooruit naar de overkant (omhoog in de heen-fase, omlaag terug).
+      if (k === " ") move(0, goalRef.current === 0 ? -1 : 1);
+      else if (k === "ArrowUp" || k === "w") move(0, -1);
       else if (k === "ArrowDown" || k === "s") move(0, 1);
       else if (k === "ArrowLeft" || k === "a") move(-1, 0);
       else if (k === "ArrowRight" || k === "d") move(1, 0);
@@ -131,26 +137,32 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       }
       // landings-genade aftellen
       if (graceRef.current > 0) graceRef.current -= 1;
-      // botsing met frog?
       const f = frogRef.current;
       const lane = lanes[f.r];
-      if (lane && graceRef.current <= 0) {
+      if (lane && graceRef.current <= 0 && !restingRef.current) {
+        // botsing met een auto?
         const hit = lane.cars.some((x) => x < f.c + 0.85 && x + lane.len > f.c + 0.15);
         if (hit) {
           setFlash(true); setTimeout(() => setFlash(false), 220);
           setLives((lv) => {
             const left = lv - 1;
-            if (left <= 0) { setStatus("over"); }
+            if (left <= 0) setStatus("over");
             return left;
           });
           // terug naar de laatst bereikte veilige strook (niet helemaal naar start)
           graceRef.current = GRACE_FRAMES;
-          setFrog((fr) => ({ c: fr.c, r: safeRef.current }));
+          const back = { c: f.c, r: safeRef.current };
+          frogRef.current = back;   // direct bijwerken → voorkomt dubbel levensverlies
+          setFrog(back);
         }
-      }
-      // finish gehaald?
-      if (f.r === 0) {
-        safeRef.current = ROWS - 1;
+      } else if (f.r === goalRef.current && !restingRef.current) {
+        // Overkant bereikt: punt + auto's sneller + even uitrusten, dan de
+        // ándere kant op. goalRef DIRECT flippen, anders vuurt dit nog eens.
+        goalRef.current = goalRef.current === 0 ? ROWS - 1 : 0;
+        restingRef.current = true;
+        graceRef.current = GRACE_FRAMES;
+        setRoundMsg("🎉 Goed zo! De auto's gaan sneller…");
+        setTimeout(() => { restingRef.current = false; setRoundMsg(""); }, 800);
         setScore((s) => {
           const ns = s + 10;
           setBest((b) => {
@@ -161,7 +173,6 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
           return ns;
         });
         setLevel((l) => { const nl = l + 1; lanesRef.current = makeCars(nl); return nl; });
-        resetFrog();
       }
       force((n) => (n + 1) % 1000000);
     };
@@ -193,11 +204,14 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       {/* speelveld */}
       <div style={{ position: "relative", width: "100%", maxWidth: 460, aspectRatio: "1 / 1", borderRadius: 14, overflow: "hidden", border: `3px solid ${flash ? "#ff5252" : "rgba(255,255,255,.25)"}`, boxShadow: "0 10px 30px rgba(0,0,0,.4)" }}>
         {/* rijen */}
-        {Array.from({ length: ROWS }).map((_, r) => (
-          <div key={r} style={{ position: "absolute", left: 0, right: 0, top: `${(r / ROWS) * 100}%`, height: rowH, background: r === 0 ? GREEN : r === ROWS - 1 ? "#15306a" : SAFE_ROWS.has(r) ? "#1c3e7a" : "#2b2b33", borderBottom: "1px solid rgba(255,255,255,.06)", display: "flex", alignItems: "center", justifyContent: r === 0 ? "center" : "flex-start", fontSize: 13, color: "rgba(255,255,255,.5)" }}>
-            {r === 0 ? <span style={{ fontSize: 18 }}>🏁  FINISH  🏁</span> : null}
+        {Array.from({ length: ROWS }).map((_, r) => {
+          const isGoal = r === goalRef.current; // doel-strook (wisselt per ronde)
+          return (
+          <div key={r} style={{ position: "absolute", left: 0, right: 0, top: `${(r / ROWS) * 100}%`, height: rowH, background: isGoal ? GREEN : (r === 0 || r === ROWS - 1) ? "#15306a" : SAFE_ROWS.has(r) ? "#1c3e7a" : "#2b2b33", borderBottom: "1px solid rgba(255,255,255,.06)", display: "flex", alignItems: "center", justifyContent: isGoal ? "center" : "flex-start", fontSize: 13, color: "rgba(255,255,255,.6)" }}>
+            {isGoal ? <span style={{ fontSize: 16 }}>🏁  hierheen  🏁</span> : null}
           </div>
-        ))}
+          );
+        })}
         {/* autootjes */}
         {Object.keys(lanesRef.current).map((row) => {
           const lane = lanesRef.current[row];
@@ -212,13 +226,20 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
           🐸
         </div>
 
+        {/* "sneller!"-melding bij elke overkant */}
+        {roundMsg && (
+          <div style={{ position: "absolute", top: "44%", left: 0, right: 0, textAlign: "center", zIndex: 4, pointerEvents: "none" }}>
+            <span style={{ background: "rgba(8,16,40,.92)", color: "#7fd0a0", fontWeight: 800, padding: "10px 16px", borderRadius: 12, fontSize: 16, boxShadow: "0 6px 18px rgba(0,0,0,.4)" }}>{roundMsg}</span>
+          </div>
+        )}
+
         {/* overlays */}
         {status !== "playing" && (
           <div style={overlay}>
             {status === "start" ? (
               <>
                 <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 6 }}>🐸 Kikker Oversteek</div>
-                <div style={{ fontSize: 14, opacity: .9, maxWidth: 300, textAlign: "center", marginBottom: 14 }}>Breng de kikker naar de overkant zonder de auto's te raken. Elke overkant = 10 punten, en het gaat steeds sneller!</div>
+                <div style={{ fontSize: 14, opacity: .9, maxWidth: 320, textAlign: "center", marginBottom: 14 }}>Breng de kikker naar de groene overkant 🏁. Daar rust je heel even — dan gaan de auto's sneller en moet je weer terug! Elke overkant = 10 punten. Hoe vaker, hoe sneller en spannender.</div>
                 <button onClick={startGame} onMouseDown={noFocus} style={btnGold}>▶ Start</button>
               </>
             ) : (
@@ -260,7 +281,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
       </div>
 
       <p style={{ marginTop: 16, fontSize: 12, opacity: .6, textAlign: "center", maxWidth: 420 }}>
-        Tip: op de computer beweeg je met de pijltjestoetsen (of WASD) en spring je vooruit met de spatiebalk. Op je telefoon gebruik je de knoppen hierboven.
+        Tip: spatie = vooruit naar de overkant 🏁. Pijltjes (of WASD) voor alle kanten. Op de telefoon gebruik je de knoppen hierboven.
       </p>
     </div>
   );
