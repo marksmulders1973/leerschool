@@ -11,13 +11,16 @@ const COLS = 9;
 const ROWS = 9;
 // Rij 0 = finish (veilig). Rij 8 = start (veilig). Autobanen: 1,2,4,5,6.
 const LANES = {
-  1: { dir: 1, speed: 1.6, gap: 3, len: 1, emoji: "🚗" },
-  2: { dir: -1, speed: 2.1, gap: 4, len: 1, emoji: "🚙" },
-  4: { dir: 1, speed: 2.6, gap: 3, len: 1, emoji: "🚕" },
-  5: { dir: -1, speed: 1.9, gap: 4, len: 2, emoji: "🚌" },
-  6: { dir: 1, speed: 3.0, gap: 3, len: 1, emoji: "🛻" },
+  1: { dir: 1, speed: 1.2, gap: 4, len: 1, emoji: "🚗" },
+  2: { dir: -1, speed: 1.6, gap: 4, len: 1, emoji: "🚙" },
+  4: { dir: 1, speed: 1.9, gap: 4, len: 1, emoji: "🚕" },
+  5: { dir: -1, speed: 1.4, gap: 5, len: 2, emoji: "🚌" },
+  6: { dir: 1, speed: 2.2, gap: 4, len: 1, emoji: "🛻" },
 };
 const SAFE_ROWS = new Set([0, 3, 7, 8]);
+// Aantal frames "landings-genade" na een sprong: je sneuvelt niet meteen als er
+// net een auto op je nieuwe vakje staat — je krijgt een fractie om weer te hoppen.
+const GRACE_FRAMES = 8;
 const NAVY = "#0f1f4d";
 const GOLD = "#e8a317";
 const GREEN = "#4aa05a";
@@ -54,21 +57,27 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   const statusRef = useRef(status);
   const rafRef = useRef(0);
   const lastRef = useRef(0);
+  const safeRef = useRef(ROWS - 1);   // laatst bereikte veilige strook
+  const graceRef = useRef(0);         // resterende landings-genade-frames
   const [, force] = useState(0); // re-render tikker voor auto-posities
 
   useEffect(() => { frogRef.current = frog; }, [frog]);
   useEffect(() => { statusRef.current = status; }, [status]);
+  // onthoud de laatst bereikte veilige strook (niet de finish-rij 0)
+  useEffect(() => { if (frog.r > 0 && SAFE_ROWS.has(frog.r)) safeRef.current = frog.r; }, [frog]);
 
   const resetFrog = useCallback(() => setFrog({ c: 4, r: ROWS - 1 }), []);
 
   const startGame = useCallback(() => {
     lanesRef.current = makeCars(1);
+    safeRef.current = ROWS - 1; graceRef.current = 0;
     setLives(3); setScore(0); setLevel(1); resetFrog();
     setStatus("playing");
   }, [resetFrog]);
 
   const move = useCallback((dc, dr) => {
     if (statusRef.current !== "playing") return;
+    graceRef.current = GRACE_FRAMES; // korte onkwetsbaarheid na de sprong
     setFrog((f) => {
       const c = Math.max(0, Math.min(COLS - 1, f.c + dc));
       const r = Math.max(0, Math.min(ROWS - 1, f.r + dr));
@@ -120,10 +129,12 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
           return nx;
         });
       }
+      // landings-genade aftellen
+      if (graceRef.current > 0) graceRef.current -= 1;
       // botsing met frog?
       const f = frogRef.current;
       const lane = lanes[f.r];
-      if (lane) {
+      if (lane && graceRef.current <= 0) {
         const hit = lane.cars.some((x) => x < f.c + 0.85 && x + lane.len > f.c + 0.15);
         if (hit) {
           setFlash(true); setTimeout(() => setFlash(false), 220);
@@ -132,11 +143,14 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
             if (left <= 0) { setStatus("over"); }
             return left;
           });
-          resetFrog();
+          // terug naar de laatst bereikte veilige strook (niet helemaal naar start)
+          graceRef.current = GRACE_FRAMES;
+          setFrog((fr) => ({ c: fr.c, r: safeRef.current }));
         }
       }
       // finish gehaald?
       if (f.r === 0) {
+        safeRef.current = ROWS - 1;
         setScore((s) => {
           const ns = s + 10;
           setBest((b) => {
@@ -188,7 +202,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
         {Object.keys(lanesRef.current).map((row) => {
           const lane = lanesRef.current[row];
           return lane.cars.map((x, i) => (
-            <div key={row + "-" + i} style={{ position: "absolute", top: `${(Number(row) / ROWS) * 100}%`, left: `${(x / COLS) * 100}%`, width: `calc(${cell} * ${lane.len})`, height: rowH, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "min(6vw,26px)", transform: lane.dir < 0 ? "scaleX(-1)" : "none" }}>
+            <div key={row + "-" + i} style={{ position: "absolute", top: `${(Number(row) / ROWS) * 100}%`, left: `${(x / COLS) * 100}%`, width: `calc(${cell} * ${lane.len})`, height: rowH, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "min(6vw,26px)", transform: lane.dir > 0 ? "scaleX(-1)" : "none" }}>
               {lane.emoji}
             </div>
           ));
