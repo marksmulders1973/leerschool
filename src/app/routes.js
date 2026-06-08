@@ -47,6 +47,8 @@ export const PAGE_TO_PATH = {
   obliteratorPlay: "/obliterator",
   // Spel van de maand (tijdelijk, ~1 maand) — bedankje voor onze supporter.
   supporterGame: "/supporter",
+  // Spellen-keuzescherm (OBLITERATOR + Kikker Oversteek).
+  spellen: "/spellen",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",
@@ -74,7 +76,9 @@ export const PAGE_TO_PATH = {
 // /leaderboard — Engelse alias voor /scorebord (canonical = NL). Backward-compat
 // voor oude deeplinks en testchecklists (2026-05-11).
 const PATH_ALIASES = {
-  "/spel": "obliteratorPlay",
+  // /spel toont nu het keuzescherm (2 spellen) i.p.v. direct OBLITERATOR,
+  // zodat zowel OBLITERATOR als Kikker Oversteek bereikbaar zijn (2026-06-08).
+  "/spel": "spellen",
   "/leaderboard": "leaderboard",
 };
 

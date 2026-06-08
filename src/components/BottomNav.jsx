@@ -26,7 +26,7 @@ const ALL_TABS = [
   { id: "toets-maken",     label: "Toets maken",  emoji: "📝", target: "teacher-home" },
   // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
   // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
-  { id: "spel",            label: "Spel",         emoji: "🎮", target: "obliteratorPlay", gameRelated: true },
+  { id: "spel",            label: "Spel",         emoji: "🎮", target: "spellen", gameRelated: true },
   // Mark wens 2026-06-05: "Tip aan de maker" als vaste ingang in de bottom-nav.
   { id: "tips",            label: "Tips",         emoji: "💬", target: "wishes" },
 ];
@@ -35,7 +35,7 @@ function bepaalActieveTab(page) {
   if (page === "home" || page === "student-home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview") return "toets-maken";
-  if (page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "spel";
+  if (page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "spel";
   if (page === "wishes") return "tips";
   return null;
 }

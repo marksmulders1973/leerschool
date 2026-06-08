@@ -64,6 +64,7 @@ const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
+const SpellenHub = lazy(() => import("./components/SpellenHub.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
@@ -1102,6 +1103,15 @@ export default function App() {
             setPage("home");
           }}
         />
+      )}
+      {page === "spellen" && (
+        <Suspense fallback={<PageLoader />}>
+          <SpellenHub
+            onHome={goHome}
+            onObliterator={() => setPage("obliteratorPlay")}
+            onFrogger={() => setPage("supporterGame")}
+          />
+        </Suspense>
       )}
       {page === "supporterGame" && (
         <Suspense fallback={<PageLoader />}>
