@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getSocialVraag } from "../socialVragen.js";
 import { track } from "../utils.js";
 import { BRAND } from "../brand.js";
@@ -38,9 +38,17 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
     try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
   });
 
+  // deeplink_open exact 1× per id vuren. Vroeger hing dit aan [id, vraag];
+  // `vraag` (uit getSocialVraag) krijgt bij elke re-render een nieuwe
+  // referentie, waardoor het event opnieuw vuurde bij o.a. een antwoord-klik
+  // (~2× per sessie in de cijfers). Ref-guard op id lost dat op.
+  const openGetrackt = useRef(null);
   useEffect(() => {
+    if (openGetrackt.current === id) return;
+    openGetrackt.current = id;
     track("deeplink_open", { id: String(id || "").slice(0, 40), gevonden: !!vraag });
-  }, [id, vraag]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
 
   // Onbekende id → vriendelijke fallback met CTA.
   if (!vraag) {

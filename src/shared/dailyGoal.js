@@ -9,6 +9,8 @@
 // Bij datum-wissel automatisch reset. Target standaard 900s (=15 min) maar
 // instelbaar zodat ouders/leerkrachten het later anders kunnen zetten.
 
+import { track } from "../utils.js";
+
 const KEY = "lk_daily_goal_v1";
 const STREAK_KEY = "lk_day_streak_v1";
 export const DEFAULT_TARGET_SECONDS = 15 * 60; // 15 min = handelsmerk
@@ -72,6 +74,12 @@ export function addSeconds(deltaSeconds) {
     // dat het kwartier voor vandaag echt voltooid is. Eénmalig per dag
     // dankzij de completed-flag-guard.
     bumpDayStreak();
+    // 2026-06-08: `kwartier_reached` hier afvuren — dít is de canonieke
+    // "kwartier voor vandaag behaald"-mijlpaal die de app ook gebruikt voor
+    // streak + felicitatie. Vroeger hing het event aan een aparte LEER-pagina-
+    // teller in App.jsx, die zelden de 15 min haalde → event vuurde bijna nooit.
+    // De completed-guard zorgt dat dit max. 1× per dag per device vuurt.
+    try { track("kwartier_reached", { min: Math.floor(cur.seconds / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
   }
   write(cur);
   return cur;

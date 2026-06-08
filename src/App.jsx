@@ -373,7 +373,9 @@ export default function App() {
       milestoneShownRef.current = true;
       schrijfLeertijdVandaag(sessionSec);
       setShowKwartierToast(true);
-      track("kwartier_reached", { sessie_min: Math.floor(sessionSec / 60) });
+      // `kwartier_reached`-analytics vuurt nu vanuit dailyGoal.js (de canonieke
+      // dagdoel-mijlpaal), niet meer hier — anders dubbel geteld. Deze toast
+      // blijft als celebratie-UX op basis van de leer-pagina-teller.
     }
   }, [sessionSec]);
   const sessionMin = Math.floor(sessionSec / 60);
