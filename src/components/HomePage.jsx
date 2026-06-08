@@ -370,6 +370,27 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       });
     }
   }, [showWelcomeVideo]);
+  // Terugkerende bezoeker? Sla de rolkeuze-muur over en ga direct verder waar je
+  // was — alléén bij de EERSTE home-load van deze sessie (de Home-tab blijft
+  // daarna gewoon de homepage tonen). Dicht de grootste funnel-lek uit de
+  // 8-juni-audit: ~3/4 van wie de welkomstvideo sluit, koos anders geen rol.
+  useEffect(() => {
+    try {
+      if (pendingCode) return; // PvP-uitnodiging heeft eigen flow
+      if (sessionStorage.getItem("lk_home_autoskip")) return;
+      sessionStorage.setItem("lk_home_autoskip", "1");
+      const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+      if (saved && saved.name && saved.role) {
+        setUserName(saved.name);
+        if (saved.level) setUserLevel(saved.level);
+        if (saved.schoolType) setUserSchoolType?.(saved.schoolType);
+        track("home_autoskip_returning", { role: saved.role });
+        onSelectRole(saved.role);
+      }
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const closeWelcomeVideo = () => {
     try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
     try { track("welcome_video_closed"); } catch {}
