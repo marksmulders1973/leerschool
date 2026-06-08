@@ -270,9 +270,9 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
                     <button onClick={zetOpBord} onMouseDown={noFocus} style={btnGold}>🏆 Zet op scorebord</button>
                   </div>
                 ) : ingezonden ? (
-                  <div style={{ fontSize: 14, color: "#7fd0a0", marginBottom: 12 }}>✓ Op het scorebord gezet! Laat 'm aan je vriendinnen zien 💛</div>
+                  <div style={{ fontSize: 14, color: "#7fd0a0", marginBottom: 12 }}>✓ Op het scorebord gezet! Daag je vrienden uit om je te verslaan 💪</div>
                 ) : (
-                  <div style={{ fontSize: 13, opacity: .85, marginBottom: 12 }}>Laat 'm aan je vriendinnen zien! 💛</div>
+                  <div style={{ fontSize: 13, opacity: .85, marginBottom: 12 }}>Daag je vrienden uit om je score te verslaan! 💪</div>
                 )}
                 <button onClick={startGame} onMouseDown={noFocus} style={btnGold}>↻ Opnieuw</button>
               </>
