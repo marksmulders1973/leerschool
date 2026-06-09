@@ -179,7 +179,19 @@ const fonts = `
 
 export default function App() {
   const initialPvpJoinCode = getInitialPvpJoinCode();
-  const initialPage = getInitialPage();
+  // Cold-load deep-links: getInitialPage() (initialPage.js) kent alleen enkele
+  // speciale paden en valt anders terug op "home". Voor álle canonieke routes
+  // (PAGE_TO_PATH — bv. /supporter, /spellen, /cito) willen we dat een directe
+  // URL meteen de juiste pagina opent. Zonder dit flitst eerst 'home' (en kan de
+  // rolkeuze-skip de deeplink kapen). Vandaar de terugval op pageForPath().
+  const initialPage = (() => {
+    const p = getInitialPage();
+    if (p === "home" && typeof window !== "undefined" && window.location.pathname !== "/") {
+      const byPath = pageForPath(window.location.pathname);
+      if (byPath && byPath !== "home") return byPath;
+    }
+    return p;
+  })();
   const [page, setPage] = useState(initialPage);
   // Router-mirror (P1.2): bestaande `page`-state blijft werken, maar URL
   // volgt mee. Hierdoor werken deep links, browser-back en shareable URLs
