@@ -727,6 +727,33 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Aardrijkskunde-haakvraag (2026-06-09) — provincie-hoofdsteden-valkuil.
+  //    Linkt naar de interactieve klikbare provincie-kaart (TopoKaartNL).
+  "aardrijkskunde-provincies": {
+    vak: "aardrijkskunde",
+    leerpadLink: { id: "topografie-nederland-provincies-po", title: "Topografie Nederland — provincies & hoofdsteden" },
+    vraag: "🗺️ **Amsterdam** is de hoofdstad van Nederland. Maar wat is de hoofdstad van de **provincie Noord-Holland**?",
+    options: ["Haarlem", "Amsterdam", "Alkmaar", "Hoorn"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Logisch dat je dat denkt — maar Amsterdam is de hoofdstad van het hele lánd, niet van zijn provincie.",
+      "Een mooie stad in Noord-Holland, maar niet de hoofdstad ervan.",
+      "Ook Noord-Holland, maar niet de hoofdstad.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Land ≠ provincie", tekst: "Amsterdam is de hoofdstad van heel Nederland. Maar elke provincie heeft óók een eigen hoofdstad — en dat is niet altijd de bekendste stad." },
+        { titel: "Noord-Holland → Haarlem", tekst: "De hoofdstad van de provincie Noord-Holland is Haarlem. Daar zit het provinciebestuur." },
+      ],
+      niveaus: {
+        basis: "Amsterdam is de hoofdstad van het land, maar de hoofdstad van de provincie Noord-Holland is Haarlem (antwoord A).",
+        simpeler: "Pas op de valkuil: de bekendste stad is niet altijd de provinciehoofdstad. Voor Noord-Holland is dat Haarlem, niet Amsterdam.",
+        nogSimpeler: "Provincie Noord-Holland → hoofdstad Haar…? Antwoord A.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
