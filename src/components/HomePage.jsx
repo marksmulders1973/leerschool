@@ -648,6 +648,22 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   return (
     <div style={{ ...styles.page, background: "linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%)" }}>
+      {/* Vraag-van-de-dag funnel-banner (Mark 2026-06-09): zo landt de social
+          bio-link (leerkwartier.app) altijd direct bij de dagvraag. */}
+      <a
+        href="/vandaag"
+        style={{
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+          margin: "10px auto 0", maxWidth: 460, width: "calc(100% - 24px)",
+          padding: "12px 18px", borderRadius: 14, textDecoration: "none",
+          background: "linear-gradient(135deg, #9ae62e, #6fd00a)",
+          color: "#0e1b34", fontFamily: "var(--font-display, sans-serif)",
+          fontSize: 15, fontWeight: 800, letterSpacing: 0.2,
+          boxShadow: "0 4px 18px rgba(154,230,46,0.35)",
+        }}
+      >
+        🎯 Vraag van de dag — durf jij 'm? →
+      </a>
       {/* Bedankt-toast na delen */}
       {shareToast && (
         <div style={{
