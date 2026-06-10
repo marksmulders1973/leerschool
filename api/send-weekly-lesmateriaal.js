@@ -20,6 +20,8 @@
 //
 // Resend-gratis-tier = ~100 mails/dag. We versturen daarom max BATCH per run.
 
+import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
+
 const BATCH = 90;
 const DAGEN_TUSSEN = 6; // minimaal aantal dagen tussen twee mails
 const SITE = "https://leerkwartier.app";
@@ -40,8 +42,37 @@ function esc(s) {
   return String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
 
+// B6 niveau-indicatie: haal de referentieniveau-telling op voor dit
+// e-mailadres. Werkt ALLEEN via een geverifieerde parent_child_link
+// (de SQL-functie matcht nooit op alleen een voornaam — privacy).
+// Geen koppeling of nog niets gemeten → null → geen sectie in de mail.
+async function haalNiveauSectie(email, base, key) {
+  try {
+    const r = await sb(
+      "rpc/niveau_resultaten_voor_email",
+      { method: "POST", body: JSON.stringify({ p_email: email }) },
+      base, key
+    );
+    const rows = await r.json();
+    if (!Array.isArray(rows) || rows.length === 0) return null;
+    const leeg = () => ({ f1: { goed: 0, totaal: 0 }, s: { goed: 0, totaal: 0 } });
+    const resultaten = { rekenen: leeg(), lezen: leeg(), taalverzorging: leeg() };
+    for (const row of rows) {
+      const slot = row.ref === "1F" ? "f1" : "s";
+      if (!resultaten[row.onderdeel]) continue;
+      resultaten[row.onderdeel][slot].goed += row.correct || 0;
+      resultaten[row.onderdeel][slot].totaal += row.attempts || 0;
+    }
+    // maakOuderMailSectie bevat verplicht "onder voorbehoud" + methode-uitleg,
+    // of de eerlijke "nog even te vroeg"-variant bij te weinig vragen.
+    return maakOuderMailSectie(resultaten);
+  } catch {
+    return null; // indicatie is een extraatje — mail gaat gewoon door
+  }
+}
+
 // Bouwt de HTML + onderwerp. Welkomst bij de eerste mail, anders de week-mail.
-function maakMail(rij, welkom) {
+function maakMail(rij, welkom, niveauSectie = null) {
   const naam = esc(rij.kind_voornaam) || "";
   const hoi = naam ? `Hoi ${naam}-ouder,` : "Hoi,";
   const ref = encodeURIComponent(rij.unsubscribe_token || "");
@@ -66,6 +97,7 @@ function maakMail(rij, welkom) {
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${esc(intro)}</p>
     <a href="${vandaag}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:12px;">🎯 Doe de vraag van vandaag →</a>
     <a href="${toets}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:24px;">📝 Of de gratis oefentoets →</a>
+    ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : ""}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app. In 2026 is alles gratis &amp; onbeperkt.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
@@ -120,7 +152,9 @@ export default async function handler(req, res) {
   for (const rij of rijen) {
     if (!rij.email || !String(rij.email).includes("@")) continue;
     const welkom = !rij.sent_count;
-    const { onderwerp, html, text } = maakMail(rij, welkom);
+    // Niveau-indicatie alleen in de week-mail (welkomstmail blijft schoon).
+    const niveauSectie = welkom ? null : await haalNiveauSectie(rij.email, base, key);
+    const { onderwerp, html, text } = maakMail(rij, welkom, niveauSectie);
     try {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
