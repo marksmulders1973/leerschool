@@ -83,246 +83,6 @@ const TICKER_ITEMS = [
   { icon: "✨", text: "Snap je iets niet? Wij leggen het anders uit" },
 ];
 
-function TickerBanner() {
-  // Maand-1 snoei follow-up (2026-05-11): HoF-winners ("Leerkwartier van de
-  // maand/jaar — Sahasra") en obliteratorItems ("OBLITERATOR-kampioen Brian")
-  // uit ticker gehaald — game/scorebord-jargon past niet bij Cito-ouder-ICP.
-  // awardItems (Doorzetter/Hardwerker) en shoutouts blijven: leerinspanning,
-  // niet rangorde.
-  const [awardItems, setAwardItems] = useState([]);
-  const [shareItems, setShareItems] = useState([]);
-  const [vriendenmakerItem, setVriendenmakerItem] = useState(null);
-  // Algemene shoutouts voor élke speler die deze week actief was — niet alleen
-  // de winnaars. Doel: iedereen voelt zich gezien op de homepage, vergroot de
-  // kans dat ze de app delen ('hé, mijn naam staat erop, kijk!').
-  const [shoutoutItems, setShoutoutItems] = useState([]);
-
-  useEffect(() => {
-    // Vriendenmaker van de week (meeste shares)
-    const now = new Date();
-    const startOfWeek = new Date(now);
-    const d = now.getDay();
-    startOfWeek.setDate(now.getDate() - (d === 0 ? 6 : d - 1)); startOfWeek.setHours(0, 0, 0, 0);
-    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
-    supabase.from("share_events")
-      .select("shared_by, created_at")
-      .gte("created_at", startOfWeek.toISOString())
-      .lte("created_at", endOfWeek.toISOString())
-      .then(({ data }) => {
-        if (!data?.length) return;
-        const tally = {};
-        data.forEach(e => {
-          const n = (e.shared_by || "").trim();
-          if (!n) return;
-          tally[n] = (tally[n] || 0) + 1;
-        });
-        const top = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
-        if (top && top[1] >= 2) {
-          setVriendenmakerItem({
-            icon: "🌟",
-            text: `Top! ${top[0]} is Vriendenmaker van de week — ${top[1]} keer gedeeld!`,
-            special: true,
-          });
-        }
-      }).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    const twoDaysAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString();
-    supabase.from("share_events")
-      .select("shared_by, created_at")
-      .gte("created_at", twoDaysAgo)
-      .order("created_at", { ascending: false })
-      .limit(50)
-      .then(({ data }) => {
-        if (!data?.length) return;
-        // Dedupe per naam — één bedankje per persoon in de rotatie
-        const seen = new Set();
-        const unique = [];
-        for (const e of data) {
-          const n = (e.shared_by || "").trim();
-          if (!n || seen.has(n.toLowerCase())) continue;
-          seen.add(n.toLowerCase());
-          unique.push(n);
-          if (unique.length >= 8) break;
-        }
-        setShareItems(unique.map(name => ({
-          icon: "💙",
-          text: `${BRAND.name} bedankt ${name} voor het delen van de app!`,
-          special: true,
-        })));
-      }).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    // Fetch week-awards voor lichtkrant (Doorzetter + Hardwerker)
-    const now = new Date();
-    const startOfWeek = new Date(now);
-    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
-    startOfWeek.setHours(0, 0, 0, 0);
-    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
-
-    supabase.from("leaderboard")
-      .select("player_name, score, percentage, completed_at")
-      .gte("completed_at", startOfWeek.toISOString())
-      .lte("completed_at", endOfWeek.toISOString())
-      .order("completed_at", { ascending: true })
-      .then(({ data }) => {
-        if (!data?.length) return;
-        const byPlayer = {};
-        data.forEach(e => {
-          if (!byPlayer[e.player_name]) byPlayer[e.player_name] = [];
-          byPlayer[e.player_name].push(e);
-        });
-        const players = Object.entries(byPlayer);
-        const [doorzName, doorzE] = [...players].sort((a, b) => b[1].length - a[1].length)[0] || [];
-        const [hardName, hardE] = [...players].sort((a, b) => b[1].reduce((s, e) => s + (e.score || 0), 0) - a[1].reduce((s, e) => s + (e.score || 0), 0))[0] || [];
-        const verbPlayers = players.filter(([, e]) => e.length >= 2).map(([name, e]) => ({ name, imp: e[e.length - 1].percentage - e[0].percentage })).filter(p => p.imp > 0).sort((a, b) => b.imp - a.imp);
-        const items = [];
-        if (doorzName) items.push({ icon: "💪", text: `Knap! ${doorzName} is Doorzetter van de week — ${doorzE.length} toetsen gemaakt!`, special: true });
-        if (hardName && hardName !== doorzName) items.push({ icon: "🧠", text: `Wauw! ${hardName} is Hardwerker van de week — ${hardE.reduce((s, e) => s + (e.score || 0), 0)} vragen goed!`, special: true });
-        if (verbPlayers[0] && verbPlayers[0].name !== doorzName && verbPlayers[0].name !== hardName) items.push({ icon: "📈", text: `Super! ${verbPlayers[0].name} is Verbeteraar van de week — +${verbPlayers[0].imp}% verbeterd!`, special: true });
-        setAwardItems(items);
-      }).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    // Algemene shoutouts: voor élke speler die deze week >= 1 toets deed,
-    // toon een persoonlijke ticker-regel. Sluit Mark zelf uit (meet 'm niet
-    // omdat hij de bouwer is en eigen tests doet). Random rotatie van
-    // berichten zodat het niet altijd hetzelfde voelt.
-    const now = new Date();
-    const startOfWeek = new Date(now);
-    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
-    startOfWeek.setHours(0, 0, 0, 0);
-    const endOfWeek = new Date(startOfWeek);
-    endOfWeek.setDate(startOfWeek.getDate() + 6);
-    endOfWeek.setHours(23, 59, 59, 999);
-
-    supabase.from("leaderboard")
-      .select("player_name, subject, percentage, completed_at")
-      .gte("completed_at", startOfWeek.toISOString())
-      .lte("completed_at", endOfWeek.toISOString())
-      .then(({ data }) => {
-        if (!data?.length) return;
-        // Groepeer per speler, sluit Mark + lege namen uit
-        const stats = {};
-        const skipNames = new Set(["mark", "mark smulders", "audit", "test", "tester", ""]);
-        for (const e of data) {
-          const n = (e.player_name || "").trim();
-          if (!n || skipNames.has(n.toLowerCase())) continue;
-          if (!stats[n]) stats[n] = { name: n, count: 0, subjects: new Set(), avgPct: 0, scores: [] };
-          stats[n].count += 1;
-          stats[n].subjects.add(e.subject);
-          stats[n].scores.push(e.percentage || 0);
-        }
-        const players = Object.values(stats).map((p) => ({
-          ...p,
-          uniqueSubjects: p.subjects.size,
-          avgPct: Math.round(p.scores.reduce((s, x) => s + x, 0) / p.scores.length),
-        }));
-        // Pak top 8 op aantal toetsen, varieer berichten per persoon
-        const top = players.sort((a, b) => b.count - a.count).slice(0, 8);
-        const items = top.map((p, i) => {
-          const variants = [
-            { icon: "🌟", text: `${p.name} is bezig — ${p.count} ${p.count === 1 ? "toets" : "toetsen"} deze week!` },
-            { icon: "🚀", text: `${p.name} pakt ${p.uniqueSubjects} ${p.uniqueSubjects === 1 ? "vak" : "vakken"} aan deze week!` },
-            { icon: "💫", text: `${p.name} scoort gemiddeld ${p.avgPct}% — knap!` },
-            { icon: "🎯", text: `${p.name} oefent door — ${p.count} ${p.count === 1 ? "toets" : "toetsen"} gedaan!` },
-            { icon: "👏", text: `Goed bezig ${p.name}! Al ${p.count} ${p.count === 1 ? "toets" : "toetsen"} gemaakt deze week.` },
-          ];
-          // Kies variant op basis van eigenschappen — gepersonaliseerd
-          let variant;
-          if (p.avgPct >= 80) variant = variants[2];
-          else if (p.uniqueSubjects >= 3) variant = variants[1];
-          else if (p.count >= 3) variant = variants[0];
-          else variant = variants[i % variants.length];
-          return { icon: variant.icon, text: variant.text, special: true };
-        });
-        setShoutoutItems(items);
-      })
-      .catch(() => {});
-  }, []);
-
-  // Filter shoutouts: namen die al als award-winnaar genoemd zijn slaan we
-  // over om dubbele aandacht te voorkomen — die hebben al hun moment.
-  const namesAlreadyMentioned = new Set();
-  awardItems.forEach((a) => {
-    const m = a.text.match(/(?:Knap!|Wauw!|Super!)\s+([^\s]+)/);
-    if (m) namesAlreadyMentioned.add(m[1].trim().toLowerCase());
-  });
-  const filteredShoutouts = shoutoutItems.filter((s) => {
-    const m = s.text.match(/^(?:[^a-zA-Z]+)?([A-Za-zÀ-ž][A-Za-zÀ-ž\-]*)/) || s.text.match(/Goed bezig\s+([^!]+)!/);
-    if (!m) return true;
-    return !namesAlreadyMentioned.has(m[1].trim().toLowerCase());
-  });
-
-  // Verspreid alle speciale items (awards + share-bedankjes + Vriendenmaker + shoutouts) tussen gewone items
-  const allSpecial = [...awardItems, ...shareItems, ...(vriendenmakerItem ? [vriendenmakerItem] : []), ...filteredShoutouts];
-  const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
-  const combined = [];
-  TICKER_ITEMS.forEach((item, i) => {
-    combined.push(item);
-    const si = allSpecial[Math.floor(i / half)];
-    if (si && i % half === half - 1) combined.push(si);
-  });
-  allSpecial.forEach(si => { if (!combined.includes(si)) combined.push(si); });
-  const items = [...combined, ...combined];
-
-  return (
-    <>
-      <style>{`
-        @keyframes tickerScroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-      <div className="lk-content-wide" style={{
-        overflow: "hidden",
-        marginBottom: 18,
-        padding: "8px 0",
-        borderTop: "1px solid rgba(0,212,255,0.12)",
-        borderBottom: "1px solid rgba(0,212,255,0.12)",
-        position: "relative",
-      }}>
-        <div style={{
-          position: "absolute", left: 0, top: 0, bottom: 0, width: 32,
-          background: "linear-gradient(to right, #0f1729, transparent)",
-          zIndex: 2, pointerEvents: "none",
-        }} />
-        <div style={{
-          position: "absolute", right: 0, top: 0, bottom: 0, width: 32,
-          background: "linear-gradient(to left, #0f1729, transparent)",
-          zIndex: 2, pointerEvents: "none",
-        }} />
-        <div style={{
-          display: "flex",
-          animation: `tickerScroll ${30 + allSpecial.length * 5}s linear infinite`,
-          width: "max-content",
-        }}>
-          {items.map((item, i) => (
-            <span key={i} style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "0 18px",
-              whiteSpace: "nowrap",
-              fontFamily: "var(--font-body)",
-              fontSize: item.special ? 14 : 13,
-              fontWeight: 700,
-              color: item.special ? "#ffd700" : "rgba(255,255,255,0.65)",
-              textShadow: item.special ? "0 0 12px rgba(255,215,0,0.5)" : "none",
-            }}>
-              <span style={{ fontSize: item.special ? 17 : 15 }}>{item.icon}</span>
-              {item.text}
-              <span style={{ color: item.special ? "rgba(255,215,0,0.3)" : "rgba(0,212,255,0.35)", marginLeft: 8 }}>·</span>
-            </span>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-}
 
 // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal is uitgezet
 // (showOnboarding default false). Examen/scorebord-jargon paste niet bij Cito-ouder ICP.
@@ -652,10 +412,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
           margin: "10px auto 0", maxWidth: 460, width: "calc(100% - 24px)",
           padding: "12px 18px", borderRadius: 14, textDecoration: "none",
-          background: "linear-gradient(135deg, #9ae62e, #6fd00a)",
-          color: "#0e1b34", fontFamily: "var(--font-display, sans-serif)",
-          fontSize: 15, fontWeight: 800, letterSpacing: 0.2,
-          boxShadow: "0 4px 18px rgba(154,230,46,0.35)",
+          background: "rgba(255,213,79,0.14)",
+          border: "1px solid rgba(255,213,79,0.45)",
+          color: "#ffd54f", fontFamily: "var(--font-display, sans-serif)",
+          fontSize: 14, fontWeight: 800, letterSpacing: 0.2,
         }}
       >
         🎯 Vraag van de dag — durf jij 'm? →
@@ -843,108 +603,67 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        {/* Sociale-bewijs teller. 2026-06-05: het verzonnen basisgetal van 400 is
-            uit get_visitor_count() gehaald (juridisch + geloofwaardigheid). Toont nu
-            het ECHTE aantal geregistreerde accounts — een verdedigbare claim. */}
-        {visitorCount != null && visitorCount > 0 && (
+        {/* HERO (herbouwd 2026-06-10, verbeterplan spoor A): merk groot en
+            gecentreerd, ÉÉN slogan (BRAND.slogan — A4-fix dubbele slogan), één
+            ouder-zin, één primaire CTA, en de gratis/geen-abonnement-belofte
+            als rustige vertrouwensregel i.p.v. losse banner-dozen. */}
+        {step === "role" && (
           <div style={{
-            alignSelf: "center",
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(0,200,83,0.12)",
-            border: "1px solid rgba(0,200,83,0.35)",
-            borderRadius: 999, padding: "6px 14px",
-            marginBottom: 14,
-            fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.88)",
+            alignSelf: "center", textAlign: "center", maxWidth: 560,
+            margin: "8px auto 22px", padding: "0 12px",
           }}>
-            <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#00e676", boxShadow: "0 0 8px #00e676", flexShrink: 0 }} />
-            Al <strong style={{ color: "#69f0ae", fontWeight: 800 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen gebruiken Leerkwartier
-          </div>
-        )}
-
-        {/* Brand-mark linksboven (compact, 2-regels): pictogram + wordmark op regel 1,
-            slogan op regel 2. Speelt 1× bij open en blijft in eindframe staan.
-            Toonbaar voor iedereen — herkenning van de home-pagina. */}
-        {(() => {
-          return (
-            <div style={{
-              alignSelf: "flex-start",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: 1,
-              marginBottom: 14,
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <svg viewBox="0 0 100 100" style={{
-                  width: 24,
-                  height: 24,
-                  flexShrink: 0,
-                  opacity: 0,
-                  transformOrigin: "50% 50%",
-                  animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
-                }} aria-hidden="true">
-                  <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
-                </svg>
-                <span style={{
-                  fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                  fontSize: 17,
-                  fontWeight: 700,
-                  color: "rgba(255,255,255,0.92)",
-                  letterSpacing: "-0.01em",
-                  opacity: 0,
-                  animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
-                }}>
-                  {BRAND.name}
-                </span>
-              </div>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 8 }}>
+              <svg viewBox="0 0 100 100" style={{
+                width: 42, height: 42, flexShrink: 0, opacity: 0,
+                transformOrigin: "50% 50%",
+                animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
+              }} aria-hidden="true">
+                <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#ffd54f" />
+              </svg>
               <span style={{
-                fontFamily: "var(--font-body, -apple-system, sans-serif)",
-                fontSize: 12,
-                fontWeight: 500,
-                color: "rgba(255,255,255,0.80)",
-                letterSpacing: "0.02em",
-                marginLeft: 32,
-                opacity: 0,
-                fontStyle: "italic",
-                animation: "lk-mark-slogan 0.7s ease-out 1.05s forwards",
+                fontFamily: "var(--font-display, -apple-system, sans-serif)",
+                fontSize: 34, fontWeight: 800, color: "#fff",
+                letterSpacing: "-0.01em", opacity: 0,
+                animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
               }}>
-                {"„"}
-                <strong style={{
-                  fontWeight: 800,
-                  color: "#69f0ae",
-                  fontStyle: "normal",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.04em",
-                }}>Één</strong>
-                {" kwartier per dag — een "}
-                <strong style={{
-                  fontWeight: 800,
-                  color: "#69f0ae",
-                  fontStyle: "normal",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.04em",
-                }}>léven</strong>
-                {" lang slimmer”"}
+                {BRAND.name}
               </span>
             </div>
-          );
-        })()}
-
-        {/* Gratis-belofte + eerlijk model (Mark 2026-06-06): onbeperkt gratis tot
-            2027; daarna basis gratis + Pro-extra's per kwartier (betaal alleen voor
-            echt gebruik, geen abonnement). Onderscheidend tov de abonnement-apps. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{
-            margin: "0 auto 18px", maxWidth: 520,
-            background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(255,213,79,0.08))",
-            border: "1px solid rgba(0,200,83,0.35)", borderRadius: 16,
-            padding: "14px 18px", textAlign: "center",
-          }}>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, color: "#69f0ae", marginBottom: 4 }}>
-              🎉 Nu helemaal gratis &amp; onbeperkt — tot 2027
+            <div style={{
+              fontFamily: "var(--font-display)", fontSize: 17.5, fontWeight: 700,
+              color: "#ffd54f", marginBottom: 10, opacity: 0,
+              animation: "lk-mark-slogan 0.7s ease-out 0.9s forwards",
+            }}>
+              {BRAND.slogan}
             </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>
-              Daarna blijft de basis gratis. Alleen Pro-extra's koop je <strong style={{ color: "#fff" }}>per kwartier</strong> — je betaalt dus alléén voor wat je écht gebruikt. <strong style={{ color: "#fff" }}>Geen abonnement, geen verrassingen.</strong>
+            <div style={{
+              fontFamily: "var(--font-body)", fontSize: 14.5, lineHeight: 1.55,
+              color: "rgba(255,255,255,0.85)", marginBottom: 18,
+            }}>
+              Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en{" "}
+              <strong style={{ color: "#fff" }}>VMBO-examens</strong> — met uitleg op drie niveaus, tot je kind het écht snapt.
+            </div>
+            <button
+              onClick={() => handleFeatureClick("cito")}
+              style={{
+                display: "inline-block", cursor: "pointer", border: "none",
+                background: "linear-gradient(135deg, #ffd54f, #ffb300)",
+                color: "#1a1a00", borderRadius: 999, padding: "15px 34px",
+                fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800,
+                letterSpacing: 0.2, boxShadow: "0 6px 24px rgba(255,213,79,0.35)",
+              }}
+            >
+              Start gratis met de Doorstroomtoets →
+            </button>
+            <div style={{
+              fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
+              color: "rgba(255,255,255,0.72)", marginTop: 14,
+            }}>
+              ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
+              <br />
+              <span style={{ color: "rgba(255,255,255,0.55)" }}>
+                Na 2026 blijft de basis gratis; Pro-extra's koop je per kwartier.
+              </span>
             </div>
           </div>
         )}
@@ -957,11 +676,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <button
               onClick={handleOefenpakketClick}
               style={{
-                width: "100%", display: "flex", alignItems: "center", gap: 14,
+                width: "100%", display: "flex", alignItems: "center", gap: 12,
                 textAlign: "left", cursor: "pointer",
-                background: "linear-gradient(135deg, rgba(66,165,245,0.18), rgba(0,200,83,0.10))",
-                border: "1px solid rgba(66,165,245,0.45)", borderRadius: 16,
-                padding: "14px 16px",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.16)", borderRadius: 14,
+                padding: "11px 14px",
               }}
             >
               <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0 }}>📄</span>
@@ -978,29 +697,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* Sociale-bewijs-contrast (Mark 2026-06-06): echte ouder-klachten over de
-            abonnement-val bij betaalde oefen-apps + "hier doen wij niet aan mee".
-            Juridisch veilig: geanonimiseerd, niet bij merknaam op de homepage (de
-            naam-versie staat met disclaimer op /gratis-alternatief-squla.html). */}
+        {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
+            verhaal i.p.v. klacht-quotes over concurrenten (die lazen defensief op de
+            plek waar vertrouwen moet ontstaan). De klacht-versie mét disclaimer
+            leeft door op /gratis-alternatief-squla.html. */}
         {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.55)", fontWeight: 700, textAlign: "center", marginBottom: 8, textTransform: "uppercase", letterSpacing: 0.4 }}>
-              Wat ouders schrijven over de bekende betaalde oefen-apps
+          <div className="lk-content-wide" style={{
+            margin: "0 auto 18px", maxWidth: 520,
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
+            padding: "14px 18px", textAlign: "center",
+          }}>
+            <div style={{
+              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
+              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
+              marginBottom: 10,
+            }}>
+              {visitorCount != null && visitorCount > 0 && (
+                <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
+              )}
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> Doorstroomtoets-vragen</span>
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
             </div>
-            {[
-              "“Abonnement wordt automatisch verlengd — ook al gebruik je het al een jaar niet, ben je zo €225 kwijt.”",
-              "“Opzeggen gaat heel moeilijk… je moet er een apart ouderaccount voor aanmaken.”",
-              "“Ik had opgezegd, maar ze bleven gewoon jaren doorafschrijven.”",
-            ].map((q, i) => (
-              <div key={i} style={{
-                fontFamily: "var(--font-body)", fontSize: 13, fontStyle: "italic",
-                color: "rgba(255,255,255,0.7)", background: "rgba(255,82,82,0.06)",
-                border: "1px solid rgba(255,82,82,0.18)", borderRadius: 10,
-                padding: "8px 12px", marginBottom: 6, lineHeight: 1.45,
-              }}>{q}</div>
-            ))}
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14.5, color: "#69f0ae", textAlign: "center", marginTop: 8 }}>
-              👉 Hier doen wij niet aan mee.
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
+              Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
+              wél uitleg die werkt.
             </div>
           </div>
         )}
@@ -1249,7 +970,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                             background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
                             color: "#fff",
                             fontFamily: "var(--font-display)",
-                            fontSize: 10.5,
+                            fontSize: 12.5,
                             fontWeight: 700,
                             cursor: "pointer",
                             lineHeight: 1.2,
@@ -1291,7 +1012,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {/* Breedte-sectie (Mark 2026-06-03): koude bezoekers uit social
                   zagen alleen de rol-tegels en dachten "is dit alles?". Deze
                   rustige info-strip laat zien dat er een héél platform achter
-                  zit. BEWUST niet klikbaar — geen concurrerende CTA's met de
+                  zit. Klikbaar als stille ingang (comment gecorrigeerd 2026-06-10) — visueel ondergeschikt aan de
                   rol-tegels (Mark verwijderde 2026-05-20 een losse tekstbalk om
                   precies die reden). Pure geruststelling + breedte. Doorstroom-
                   toets-pijler gebruikt <DoorstroomtoetsLogo> ipv emoji (huisstijl). */}
@@ -1352,7 +1073,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         {f.logo ? <DoorstroomtoetsLogo size={22} /> : <span aria-hidden="true">{f.icon}</span>}
                       </div>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, color: "#fff", lineHeight: 1.15 }}>{f.title}</div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "rgba(255,255,255,0.62)", lineHeight: 1.28 }}>{f.desc}</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.62)", lineHeight: 1.28 }}>{f.desc}</div>
                     </button>
                   ))}
                 </div>
