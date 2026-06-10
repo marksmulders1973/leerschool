@@ -1510,6 +1510,7 @@ export default function App() {
           subjectFilter={citoToetsSubject}
           subjectLabel={citoToetsSubjectLabel}
           simulatieMode={citoToetsSimulatie}
+          playerName={userName}
           onBack={() => {
             setCitoToetsSubject(null);
             setCitoToetsSubjectLabel(null);

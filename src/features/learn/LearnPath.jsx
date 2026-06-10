@@ -20,6 +20,7 @@ import {
   peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
 import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
+import { recordRefAnswer } from "../mastery/mastery.js";
 import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
@@ -496,6 +497,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const handlePick = (i) => {
     if (mode !== "checking") return;
     setSelected(i);
+    // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
+    // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).
+    // Voedt uitsluitend de ouder-mail, nooit kind-facing.
+    if (attempts === 1 && currentCheck?.ref && step?.refOnderdeel && step.refOnderdeel !== "geen") {
+      recordRefAnswer({
+        playerName: player,
+        onderdeel: step.refOnderdeel,
+        ref: currentCheck.ref,
+        isCorrect: i === currentCheck.answer,
+      }).catch(() => {});
+    }
     if (i === currentCheck.answer) {
       setLastWrongAnswer(null);
       setCorrectStreak((s) => s + 1);

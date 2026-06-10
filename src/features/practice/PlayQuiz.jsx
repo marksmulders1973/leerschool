@@ -4,7 +4,7 @@ import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
 import { findLearnPathForQuestion } from "../../learnPaths/utils.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
-import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
+import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery/mastery.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
@@ -316,6 +316,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     // Schrijf prestatie weg in topic_mastery — fire-and-forget.
     if (userName && idx !== -1) {
       recordMasteryAnswer({ playerName: userName, questionText: question?.q, isCorrect }).catch(() => {});
+      // B6 niveau-indicatie: tel referentieniveau-getagde Doorstroomtoets-vragen
+      // per onderdeel × niveau (voedt alleen de ouder-mail, nooit kind-facing).
+      if (question?.ref && question?.refOnderdeel && question.refOnderdeel !== "geen") {
+        recordRefAnswer({ playerName: userName, onderdeel: question.refOnderdeel, ref: question.ref, isCorrect }).catch(() => {});
+      }
     }
     const newState = {
       ...gameState,

@@ -39,8 +39,10 @@ export async function buildProefToets({ leerpadId, aantal = 30 }) {
   // Mark infra-fix 2026-05-18: neem step.svg mee per check zodat grafiek-/
   // tabel-vragen renderable blijven in proef-toets-modus. PlayQuiz toont
   // question.svg automatisch. Skip checks met `disabled: true`.
+  // refOnderdeel (B6): stap-niveau onderdeel-label meenemen zodat PlayQuiz
+  // getagde vragen kan tellen voor de niveau-indicatie in de ouder-mail.
   const alleChecks = (pad.steps || []).flatMap((s) =>
-    (s.checks || []).map((c) => ({ ...c, svg: c.svg || s.svg || null }))
+    (s.checks || []).map((c) => ({ ...c, svg: c.svg || s.svg || null, refOnderdeel: s.refOnderdeel || null }))
   );
   const valide = alleChecks.filter(
     (c) => !c.disabled && Array.isArray(c.options) && c.options.length >= 2 && typeof c.answer === "number"

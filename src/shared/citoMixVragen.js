@@ -112,6 +112,10 @@ export async function gatherPoChecks(opts = {}) {
           // toont question.svg al automatisch). Lost root-cause op die
           // de 5 disabled-vlaggen in tabellenGrafieken patchte.
           svg: step?.svg || null,
+          // B6 niveau-indicatie: referentieniveau-tag + onderdeel meenemen
+          // zodat de toets-flow getagde vragen kan tellen (ouder-mail).
+          ref: c.ref || null,
+          refOnderdeel: step?.refOnderdeel || null,
           checkIdx,
           subject: pijler,
           pathId,

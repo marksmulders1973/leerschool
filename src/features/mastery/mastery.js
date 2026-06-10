@@ -244,6 +244,85 @@ async function safeUpsertMastery(row) {
   return { ok: false };
 }
 
+// ─── Referentieniveau-telling (B6 niveau-indicatie, Mark-besluit 2026-06-10) ──
+// Telt per (speler, onderdeel, niveau) hoeveel getagde Doorstroomtoets-vragen
+// goed/fout gingen. Alleen vragen met een ref-tag ("1F"/"S") in een stap met
+// refOnderdeel rekenen/lezen/taalverzorging tellen mee — woordenschat en
+// studievaardigheden staan op "geen" omdat die op de echte toets niet tellen.
+// Deze data voedt UITSLUITEND de ouder-mail (maakOuderMailSectie); nooit
+// kind-facing tonen.
+
+const REF_ONDERDELEN = ["rekenen", "lezen", "taalverzorging"];
+const REF_NIVEAUS = ["1F", "S"];
+
+export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, userId = null }) {
+  const player = (playerName || "").trim();
+  if (!player || !REF_ONDERDELEN.includes(onderdeel) || !REF_NIVEAUS.includes(ref)) return null;
+
+  const resolvedUserId = userId || (await getCurrentUserId());
+
+  try {
+    const { data: existing } = await supabase
+      .from("ref_mastery")
+      .select("attempts, correct")
+      .eq("player_name", player)
+      .eq("onderdeel", onderdeel)
+      .eq("ref", ref)
+      .maybeSingle();
+
+    const row = {
+      player_name: player,
+      onderdeel,
+      ref,
+      attempts: (existing?.attempts || 0) + 1,
+      correct: (existing?.correct || 0) + (isCorrect ? 1 : 0),
+      last_seen: new Date().toISOString(),
+    };
+    if (resolvedUserId) row.user_id = resolvedUserId;
+
+    const { error } = await supabase
+      .from("ref_mastery")
+      .upsert(row, { onConflict: "player_name,onderdeel,ref" });
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.warn("[mastery] ref_mastery upsert faalde:", error.message);
+      return null;
+    }
+    return { onderdeel, ref, attempts: row.attempts, correct: row.correct };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Haal de ref-tellers voor één speler op in de shape die
+ * berekenIndicatie() uit niveauIndicatie.js verwacht:
+ * { rekenen|lezen|taalverzorging: { f1: {goed, totaal}, s: {goed, totaal} } }
+ * Returnt null bij failure of als er nog niets geteld is.
+ */
+export async function getRefResultaten(playerName) {
+  const player = (playerName || "").trim();
+  if (!player) return null;
+  try {
+    const { data, error } = await supabase
+      .from("ref_mastery")
+      .select("onderdeel, ref, attempts, correct")
+      .eq("player_name", player);
+    if (error || !data || data.length === 0) return null;
+    const uit = {};
+    for (const o of REF_ONDERDELEN) uit[o] = { f1: { goed: 0, totaal: 0 }, s: { goed: 0, totaal: 0 } };
+    for (const r of data) {
+      const slot = r.ref === "1F" ? "f1" : "s";
+      if (!uit[r.onderdeel]) continue;
+      uit[r.onderdeel][slot].goed += r.correct || 0;
+      uit[r.onderdeel][slot].totaal += r.attempts || 0;
+    }
+    return uit;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Variant van recordAnswer waar het pathId expliciet wordt meegegeven.
  * Bedoeld voor mini-quiz na een leerpad-stap (AI-gegenereerde vragen

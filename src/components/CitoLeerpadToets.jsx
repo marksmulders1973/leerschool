@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
+import { recordRefAnswer } from "../features/mastery/mastery.js";
 import MdInline from "../shared/ui/MdInline.jsx";
 import { shuffleOptions } from "../shared/shuffleOptions.js";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
@@ -36,7 +37,7 @@ const PIJLER_COLOR = {
   studievaardigheden: "#e040fb",
 };
 
-export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFilter, subjectLabel, simulatieMode = false }) {
+export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFilter, subjectLabel, simulatieMode = false, playerName = "" }) {
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
   // P0-2 (4-agent-audit 2026-05-18): simulatieMode = volledige Doorstroomtoets-
@@ -106,6 +107,22 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     if (mode !== "done") return null;
     return scoreCitoMix(questions, answers);
   }, [mode, questions, answers]);
+
+  // B6 niveau-indicatie: bij afronding alle beantwoorde, referentieniveau-
+  // getagde vragen wegschrijven naar ref_mastery (per onderdeel × 1F/S).
+  // Niet-beantwoorde vragen tellen NIET mee — geen giswerk. Eén keer per toets.
+  const refRecorded = useRef(false);
+  useEffect(() => {
+    if (mode !== "done" || refRecorded.current) return;
+    refRecorded.current = true;
+    const player = (playerName || "").trim();
+    if (!player) return;
+    questions.forEach((q, i) => {
+      if (!q?.ref || !q?.refOnderdeel || q.refOnderdeel === "geen") return;
+      if (answers[i] == null) return;
+      recordRefAnswer({ playerName: player, onderdeel: q.refOnderdeel, ref: q.ref, isCorrect: answers[i] === q.answer }).catch(() => {});
+    });
+  }, [mode, questions, answers, playerName]);
 
   const pickAnswer = (a) => {
     setAnswers((prev) => {
