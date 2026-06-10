@@ -294,7 +294,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welke breuk hoort bij 0,375?", options: ["1/4", "3/8", "1/3", "5/12"], answer: 1, explanation: "0,375 = 375/1000 = 3/8." },
       { q: "Bereken: 5/6 − 1/3.", options: ["4/6", "1/2", "2/3", "1/3"], answer: 1, explanation: "5/6 − 2/6 = 3/6 = 1/2." },
       { q: "0,4 × 0,25 = ?", options: ["0,01", "0,1", "1,0", "0,25"], answer: 1, explanation: "0,4 × 0,25 = 0,1." },
-      { q: "Wat is 7/8 als decimaal getal?", options: ["0,75", "0,825", "0,875", "0,75"], answer: 2, explanation: "7 ÷ 8 = 0,875." },
+      { q: "Wat is 7/8 als decimaal getal?", options: ["0,78", "0,825", "0,875", "0,75"], answer: 2, explanation: "7 ÷ 8 = 0,875." },
       // Verhoudingen + recepten (4)
       { q: "Voor 6 pannenkoeken heb je 240 ml melk nodig. Hoeveel ml voor 9 pannenkoeken?", options: ["320 ml", "340 ml", "360 ml", "380 ml"], answer: 2, explanation: "240 ÷ 6 = 40 ml per pannenkoek. 40 × 9 = 360 ml." },
       { q: "In een mengsel zit zout en suiker in verhouding 2:5. Bij 14 lepels zout, hoeveel suiker?", options: ["28", "30", "35", "42"], answer: 2, explanation: "2:5 → 14:35. Want 14 ÷ 2 × 5 = 35." },
@@ -649,10 +649,10 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welke zin bevat een fout?", options: ["Wij gingen naar het strand.", "Hij heeft een grappig boek.", "Ik wordt vrolijk.", "Zij hebben gewonnen."], answer: 2, explanation: "'Ik wordt' is fout — moet 'Ik word' (stam zonder t bij 'ik')." },
       // Spelling (6)
       { q: "Welk woord is correct gespeld?", options: ["alarm", "allarm", "allarrm", "alarrm"], answer: 0, explanation: "'Alarm' — één l, één r, één m." },
-      { q: "Welk woord is correct gespeld?", options: ["realiteit", "realiteid", "realiteit", "realeteit"], answer: 0, explanation: "'Realiteit' — één l, eindigt op -teit." },
+      { q: "Welk woord is correct gespeld?", options: ["realiteit", "realiteid", "realliteit", "realeteit"], answer: 0, explanation: "'Realiteit' — één l, eindigt op -teit." },
       { q: "Wat is de juiste schrijfwijze?", options: ["chaos", "kaos", "chaoss", "chaaos"], answer: 0, explanation: "'Chaos' — leenwoord uit het Grieks, met 'ch'." },
-      { q: "Hoe schrijf je dit woord?", options: ["enthousiasme", "enthousiaasme", "enthousiasme", "enthousiamse"], answer: 0, explanation: "'Enthousiasme' — let op de volgorde -iasme." },
-      { q: "Welke schrijfwijze is correct?", options: ["aardrijkskunde", "aardrykskunde", "aardrijkskunde", "aardrijkskunden"], answer: 0, explanation: "'Aardrijkskunde' — één samenstelling, geen tussenklanken." },
+      { q: "Hoe schrijf je dit woord?", options: ["enthousiasme", "enthousiaasme", "entousiasme", "enthousiamse"], answer: 0, explanation: "'Enthousiasme' — let op de volgorde -iasme." },
+      { q: "Welke schrijfwijze is correct?", options: ["aardrijkskunde", "aardrykskunde", "aardrijkkunde", "aardrijkskunden"], answer: 0, explanation: "'Aardrijkskunde' — één samenstelling, geen tussenklanken." },
       { q: "Welk woord is correct?", options: ["sympathie", "sympatie", "simpatie", "sympatieë"], answer: 0, explanation: "'Sympathie' met 'th' (afkomst Grieks)." },
       // Synoniem / antoniem / betekenis (5)
       { q: "Wat is een synoniem van 'opgewekt'?", options: ["verdrietig", "vrolijk", "verveeld", "boos"], answer: 1, explanation: "'Opgewekt' = vrolijk, blij." },
@@ -677,7 +677,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat betekent het spreekwoord 'Het regent pijpenstelen'?", options: ["Het is een grappige dag", "Er vallen pijpen uit de lucht", "Het regent heel hard", "Het is een rare regen"], answer: 2, explanation: "Een Nederlands spreekwoord: 'pijpenstelen' = lange rechte regen = stortregen." },
     ],
     klas1: [
-      { q: "Wat is een metafoor?", options: ["bloemens", "bloemjes", "bloemen", "bloems"], answer: 2, explanation: "'Bloemen' is het meervoud van 'bloem'." },
+      { q: "Wat is het meervoud van 'bloem'?", options: ["bloemens", "bloemjes", "bloemen", "bloems"], answer: 2, explanation: "'Bloemen' is het meervoud van 'bloem'." },
       { q: "Welke zin is passief?", options: ["De muis wordt gegeten.", "De kat eet de muis.", "De muis rent weg.", "De kat jaagt op de muis."], answer: 0, explanation: "Passief: het onderwerp ondergaat de handeling (wordt gegeten)." },
       { q: "Wat is een bijvoeglijk naamwoord?", options: ["Een woord dat een zelfstandig naamwoord beschrijft", "Een voornaamwoord dat een zelfstandig naamwoord beschrijft", "Een voegwoord", "Een voornaamwoord"], answer: 0, explanation: "Bv: 'De grote hond'. 'Grote' is een bijvoeglijk naamwoord." },
       { q: "Welk woord is een werkwoord?", options: ["huis of snel", "rennen", "snel", "mooi"], answer: 1, explanation: "'Rennen' is een werkwoord (beschrijft een actie)." },
@@ -696,8 +696,6 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is een onbepaald voornaamwoord?", options: ["'iemand', 'niemand', 'iets'", "'mijn', 'jouw'", "'mijn', 'jouw' of 'hij', 'zij'", "'hij', 'zij'"], answer: 0, explanation: "Onbepaalde voornaamwoorden wijzen niet naar een specifieke persoon/zaak." },
       { q: "Welk woord is een tussenvoegsel?", options: ["en", "oeps", "van", "maar"], answer: 1, explanation: "'Oeps' is een tussenvoegsel (interjection) — drukt een reactie uit." },
       { q: "Welke zin bevat een indirect object?", options: ["Het boek ligt op tafel. of Ik koop een boek.", "Het boek ligt op tafel.", "Ik geef mijn zus een boek.", "Ik lees het boek."], answer: 2, explanation: "'Mijn zus' is het indirect object (meewerkend voorwerp): aan wie geef ik?" },
-    ],
-    klas1: [
       { q: "Wat is een metafoor?", options: ["Vergelijking met 'als' of Overdrijving", "Vergelijking met 'als'", "Beeldspraak zonder 'als'", "Overdrijving"], answer: 2, explanation: "Beeldspraak zonder 'als'. Bv: 'Hij is een rots.'" },
       { q: "Welke zin bevat een persoonsvorm?", options: ["Rennend door het bos", "Al lachend", "De mooie bloemen", "Zij fietst naar huis"], answer: 3, explanation: "'Fietst' is de persoonsvorm." },
       { q: "Wat is het onderwerp in: 'De hond van de buurman blaft'?", options: ["De hond van de buurman", "De hond", "blaft", "de buurman in de natuur"], answer: 0, explanation: "Wie/wat blaft? → 'De hond van de buurman'." },

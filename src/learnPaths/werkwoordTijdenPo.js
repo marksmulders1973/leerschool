@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**'Zij ____ een appel'** ('eten', verleden tijd, zij-enkelvoud):",
-        options: ["at","aten","eette","eette"],
+        options: ["at","aten","eette","ate"],
         answer: 0,
-        wrongHints: [null,"Dat is meervoud.","Niet — 'eten' is sterk: at.","Niet correct gespeld."],
+        wrongHints: [null,"Dat is meervoud.","Niet — 'eten' is een sterk werkwoord: de klank verandert.","Dat lijkt op Engels — hoe zeg je het in het Nederlands?"],
         uitlegPad: {
           stappen: [{ titel: "Eten → at", tekst: "Eten = sterk werkwoord. Klinker e → a. Zij at." }],
           woorden: [{ woord: "at", uitleg: "Verleden tijd enkelvoud van eten. Sterke vervoeging." }],

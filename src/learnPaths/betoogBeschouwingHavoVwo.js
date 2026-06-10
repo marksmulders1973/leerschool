@@ -350,7 +350,7 @@ const betoogBeschouwingHavoVwo = {
   prerequisites: [
     { id: "argumentatieleer", title: "Argumentatieleer (havo 4)", niveau: "havo4-5" },
     { id: "tekstanalyse", title: "Tekstanalyse", niveau: "havo4-5" },
-    { id: "schrijvenTeksten-po", title: "Schrijven van teksten (Cito basis)", niveau: "po-1F" },
+    { id: "schrijven-teksten-po", title: "Schrijven van teksten (Cito basis)", niveau: "po-1F" },
   ],
   intro:
     "Drie tekstsoorten (uiteenzetting/beschouwing/betoog) herkennen + analyseren + zelf schrijven. Plus argumentatie-typen, 10 drogredenen + stijlmiddelen voor HAVO/VWO Nederlands CSE. ~15 min.",

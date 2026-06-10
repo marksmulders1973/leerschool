@@ -319,7 +319,8 @@ for (let t = 1; t <= 12; t++) {
   TOPIC_QUESTIONS[`tafel van ${t}`] = Array.from({ length: 12 }, (_, j) => {
     const n = j + 1, c = n * t;
     const pos = (n + t) % 4;
-    const w = [Math.max(t, c - t), c + t, c + 2 * t];
+    // c - t kan gelijk zijn aan c (bij n=1 na de oude max-truc) → juiste antwoord stond dan dubbel
+    const w = [c - t, c + t, c + 2 * t].map((x) => (x < 1 || x === c ? c + 3 * t : x));
     const opts = [...w]; opts.splice(pos, 0, c);
     return { q: `${n} × ${t} = ?`, options: opts.slice(0, 4).map(String), answer: pos };
   });

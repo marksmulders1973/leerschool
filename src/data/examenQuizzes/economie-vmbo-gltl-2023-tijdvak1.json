@@ -114,12 +114,12 @@
       "vraagNr": 13
     },
     {
-      "q": "Waarvan is sprake als we de gegevens van 2000 vergelijken met de Lorenzcurve van 2017? inkomensverschillen in 2017 zijn in verhouding groter geworden. inkomensverschillen in 2017 zijn in verhouding kleiner geworden. inkomensverschillen in 2017 zijn in verhouding groter geworden. inkomensverschillen in 2017 zijn in verhouding kleiner geworden.",
+      "q": "Waarvan is sprake als we de gegevens van 2000 vergelijken met de Lorenzcurve van 2017?",
       "options": [
-        "Door de economische groei is er sprake van denivellering, de",
-        "Door de economische groei is er sprake van denivellering, de",
-        "Door de economische groei is er sprake van nivellering, de",
-        "Door de economische groei is er sprake van nivellering, de"
+        "Door de economische groei is er sprake van denivellering, de inkomensverschillen in 2017 zijn in verhouding groter geworden.",
+        "Door de economische groei is er sprake van denivellering, de inkomensverschillen in 2017 zijn in verhouding kleiner geworden.",
+        "Door de economische groei is er sprake van nivellering, de inkomensverschillen in 2017 zijn in verhouding groter geworden.",
+        "Door de economische groei is er sprake van nivellering, de inkomensverschillen in 2017 zijn in verhouding kleiner geworden."
       ],
       "answer": 3,
       "explanation": "Het juiste antwoord is D.",

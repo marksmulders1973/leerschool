@@ -202,7 +202,7 @@ const steps = [
         q: "Welk woord heeft een tussen-s?",
         options: ["scheepsbel", "pannenkoek", "boekenkast", "tafelpoot"],
         answer: 0,
-        wrongHints: [null, "Klopt — schip → scheeps, met -s-.", "Dat heeft juist een tussen-n.", "Ook een tussen-n.", "Die heeft helemaal geen tussenletter."],
+        wrongHints: [null, "Dat heeft juist een tussen-n.", "Ook een tussen-n.", "Die heeft helemaal geen tussenletter."],
         uitlegPad: {
           stappen: [{ titel: "scheeps-bel", tekst: "Bij 'scheepsbel' hoor je een -s- tussen scheeps en bel. De andere hebben -en- of geen tussenletter." }],
           niveaus: {
@@ -216,7 +216,7 @@ const steps = [
         q: "Hoor je in 'stadsplein' een tussen-n of een tussen-s?",
         options: ["een tussen-s", "een tussen-n", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Spreek het uit: je hoort een s, geen -en-.", "Er zit geen -en- in.", "Er zit wél een tussenletter: de s.", "Het is maar één tussenletter."],
+        wrongHints: [null, "Spreek het woord eens langzaam uit — welke letter hoor je tussen 'stad' en 'plein'?", "Er zit wél een tussenletter — luister nog eens goed.", "Het is maar één tussenletter."],
         uitlegPad: {
           stappen: [{ titel: "stads-plein", tekst: "Zeg 'stad...plein': je hoort een s. Dus stadsplein, met tussen-s." }],
           niveaus: {

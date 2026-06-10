@@ -259,9 +259,9 @@ const steps = [
       },
       {
         q: "**'Zij (meervoud) ____ pizza'** — kies juiste vorm van **eten**:",
-        options: ["eten","eett","eet","eett"],
+        options: ["eten","eett","eet","etten"],
         answer: 0,
-        wrongHints: [null,"Geen Nederlandse vorm — dubbele tt aan einde.","Dat is enkelvoud.","Geen NL vorm."],
+        wrongHints: [null,"Geen Nederlandse vorm — dubbele tt aan einde.","Dat is enkelvoud.","Geen NL vorm — kijk in je woordenboek hoe het hele werkwoord eruitziet."],
         uitlegPad: {
           stappen: [{ titel: "Meervoud = hele werkwoord", tekst: "Zij meervoud = eten (hele werkwoord)." }],
           woorden: [{ woord: "infinitief", uitleg: "Het hele werkwoord (eten, lopen, werken). Wordt gebruikt voor meervoud." }],

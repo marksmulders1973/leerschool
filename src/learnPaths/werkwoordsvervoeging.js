@@ -429,7 +429,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
       },
       {
         q: "Verleden tijd van **lachen** (ik-vorm)?",
-        options: ["lachte", "lachde", "lachten", "lachde"],
+        options: ["lachte", "lachde", "lachten", "lachtte"],
         answer: 0,
         wrongHints: [
           null,

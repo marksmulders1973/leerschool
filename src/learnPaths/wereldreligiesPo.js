@@ -72,7 +72,7 @@ const steps = [
         q: "Wat is het heilige boek van het christendom?",
         options: ["Koran", "Bijbel", "Tora", "Veda"],
         answer: 1,
-        wrongHints: [null, "Tora is wel ÉÉN deel van de christelijke Bijbel (Oude Testament) — maar niet het hele boek.", null, null],
+        wrongHints: [null, null, "Tora is wel ÉÉN deel van de christelijke Bijbel (Oude Testament) — maar niet het hele boek.", null],
         explanation: "**Bijbel** = het heilige boek van het christendom. Bestaat uit Oude Testament (gedeeld met jodendom, ~39 boeken) + Nieuwe Testament (specifiek christelijk, ~27 boeken over Jezus + zijn leerlingen).",
         uitlegPad: compact(
           "Boeken-tabel: BIJBEL = christendom. KORAN = islam. TORA/TENACH = jodendom. VEDA = hindoeïsme. TRIPITAKA = boeddhisme.",

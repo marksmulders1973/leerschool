@@ -184,7 +184,6 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "Upload":        () => makeBookCover("Upload",    "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
     "Keys":          () => makeBookCover("Keys",      "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
     "Kern Engels":   () => makeBookCover("Kern",      "Engels", ["#01579b","#0277bd","#039be5"], "KE"),
-    "Neue Kontakte": () => "/covers/neue-kontakte.png",
     // ── Aardrijkskunde VO ────────────────────────────────────────
     "De Geo":        () => "/covers/de-geo.jpg",
     "BuiteNLand":    () => "/covers/buitenland-new.png",
@@ -239,7 +238,6 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "BvJ MAX VWO Bovenbouw":  () => "/covers/bvj-max-vwo-bovenbouw.jpg",
     "Vivo":          () => "/covers/vivo.jpg",
     "Nectar":        (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar-new.png",
-    "Vivo":          () => makeBookCover("Vivo",     "Biologie", ["#1b5e20","#388e3c","#4caf50"], "V"),
     "10 voor Biologie":() => "/covers/10voorbiologie.jpg",
     // ── Natuurkunde VO ───────────────────────────────────────────
     "Systematische Natuurkunde":() => "/covers/sys-nk-new.png",
@@ -331,7 +329,6 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "Getal & Ruimte VWO B6":   () => makeBookCover("GR VWO","B6",   ["#0d47a1","#1565c0","#1976d2"], "B6"),
     "Moderne Wiskunde Havo A4":() => makeBookCover("MW Havo","A4",  ["#311b92","#4527a0","#512da8"], "A4"),
     "Moderne Wiskunde Havo A5":() => makeBookCover("MW Havo","A5",  ["#311b92","#4527a0","#512da8"], "A5"),
-    "Moderne Wiskunde VWO B4": () => makeBookCover("MW VWO","B4",   ["#4a148c","#6a1b9a","#7b1fa2"], "B4"),
     "Moderne Wiskunde VWO B5": () => makeBookCover("MW VWO","B5",   ["#4a148c","#6a1b9a","#7b1fa2"], "B5"),
     "KERN Wiskunde A Havo 4":  () => makeBookCover("KERN","A Havo 4",["#006064","#00838f","#0097a7"],"KA"),
     "KERN Wiskunde A VWO 4":   () => makeBookCover("KERN","A VWO 4", ["#006064","#00838f","#0097a7"],"KA"),

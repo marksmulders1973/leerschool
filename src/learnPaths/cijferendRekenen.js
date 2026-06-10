@@ -130,7 +130,7 @@ const steps = [
       },
       {
         q: "**4985 + 1567** = ?",
-        options: ["6552","6452","6452","5552"],
+        options: ["6552","6452","6442","5552"],
         answer: 0,
         wrongHints: [null,"Te weinig — heb je in elke kolom het onthoudje meegenomen?","Te weinig — controleer met schatting (5000+1500=6500).","Veel te weinig — duizendtallen onjuist."],
         uitlegPad: {
@@ -172,9 +172,9 @@ const steps = [
       },
       {
         q: "**1000 − 376** = ?",
-        options: ["624","624","634","724"],
+        options: ["624","623","634","724"],
         answer: 0,
-        wrongHints: [null,"Te veel — gebruik 999-truc: 999−376=623, +1=624.","Te veel — heb je correct door alle nullen geleend?","Veel te veel — controleer met 1000−400=600 (en 24 erbij)."],
+        wrongHints: [null,"Nét te weinig — als je de 999-truc gebruikt: vergeet de allerlaatste stap niet.","Te veel — heb je correct door alle nullen geleend?","Veel te veel — controleer met schatting: 1000−400=600, en dan?"],
         uitlegPad: {
           stappen: [
             { titel: "999-truc", tekst: "Bij 1000-iets: doe 999-iets, dan +1. Veel makkelijker dan door nullen lenen." },
@@ -189,9 +189,9 @@ const steps = [
       },
       {
         q: "**4567 − 2389** = ?",
-        options: ["2178","2278","2188","2178"],
+        options: ["2178","2278","2188","2168"],
         answer: 0,
-        wrongHints: [null,"Te veel — gebruik schatting: 4500−2400=2100.","Te veel — controleer eenheden: 17−9=8 na lenen.","Te veel — kolom-controle nodig."],
+        wrongHints: [null,"Te veel — gebruik schatting: 4500−2400=2100.","Te veel — controleer eenheden: 17−9=8 na lenen.","Te weinig — kolom-controle nodig."],
         uitlegPad: {
           stappen: [
             { titel: "Stappen", tekst: "7−9→leen. 17−9=8. 6−1−8→leen. 15−8=7. 5−1−3=1. 4−2=2. Antwoord 2178." },
@@ -425,7 +425,7 @@ const steps = [
       },
       {
         q: "**432 × 6** = ?",
-        options: ["2592","2492","2692","2592"],
+        options: ["2592","2492","2692","2582"],
         answer: 0,
         wrongHints: [null,"Te weinig — heb je elk cijfer × 6 met onthoudje?","Te veel — extra onthoudje?","Te weinig — controleer middelste kolom."],
         uitlegPad: {

@@ -448,7 +448,7 @@ const ecosystemenHavoVwo = {
   referentieNiveau: "havo-3F / vwo-3S",
   sloThema: "Biologie — Ecosystemen + Biodiversiteit (CSE-onderwerp)",
   prerequisites: [
-    { id: "cellen-biologie", title: "Cellen + leven (basis)", niveau: "vmbo-2" },
+    { id: "cel-biologie", title: "Cellen + leven (basis)", niveau: "vmbo-2" },
   ],
   intro:
     "Ecosystemen voor HAVO/VWO eindexamen — voedselweb + 10%-energie, populatie-dynamica + draagkracht, successie + kringlopen (C/N/water), biodiversiteit + bedreigingen, mens-natuur-interactie. 5 stappen × 5 vragen. ~15 min.",

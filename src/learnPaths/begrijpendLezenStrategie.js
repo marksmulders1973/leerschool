@@ -77,7 +77,7 @@ const steps = [
         q: "Wat is **begrijpend lezen**?",
         options: ["Hardop lezen","Echt snappen wat de tekst zegt en bedoelt","Snel lezen","Spelling oefenen"],
         answer: 1,
-        wrongHints: [null,"Snap je een tekst beter als je 'm hardop leest, of als je nadenkt over de inhoud?","Gaat lezen om hoe snel je bent, of om wat je ervan begrijpt?","Heeft spelling te maken met begrijpen of met goed schrijven?"],
+        wrongHints: ["Snap je een tekst beter als je 'm hardop leest, of als je nadenkt over de inhoud?",null,"Gaat lezen om hoe snel je bent, of om wat je ervan begrijpt?","Heeft spelling te maken met begrijpen of met goed schrijven?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is het verschil?", tekst: "Hardop lezen, snel lezen, spelling — dat zijn ANDERE vaardigheden. Begrijpend lezen gaat om SNAPPEN." },
@@ -101,7 +101,7 @@ const steps = [
         q: "Op de Doorstroomtoets — hoe wordt begrijpend lezen getest?",
         options: ["Korte zinnen","3-5 lange teksten + vragen erover","Alleen 1 woord per vraag","Liedjes zingen"],
         answer: 1,
-        wrongHints: [null,"Test een toets begrijpend lezen met losse zinnen, of met echte teksten?","Kun je begrijpend lezen testen met maar één woord per vraag?","Hoort zingen bij begrijpend lezen — of bij iets anders?"],
+        wrongHints: ["Test een toets begrijpend lezen met losse zinnen, of met echte teksten?",null,"Kun je begrijpend lezen testen met maar één woord per vraag?","Hoort zingen bij begrijpend lezen — of bij iets anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat zit op de Doorstroomtoets?", tekst: "Bij begrijpend lezen krijg je echte LEESTEKSTEN (200-300 woorden) met vragen erover. Niet losse zinnen." },
@@ -131,7 +131,7 @@ const steps = [
         q: "Welke tekstsoort wil je **overtuigen**?",
         options: ["Informatief","Betogend","Verhalend","Beschrijvend"],
         answer: 1,
-        wrongHints: [null,"Wil een tekst met alleen feiten je iets laten geloven, of vooral iets weten?","Probeert een verhaal je te overtuigen, of wil het je vooral meenemen in een gebeurtenis?","Geeft 'beschrijven' een mening, of vooral details?"],
+        wrongHints: ["Wil een tekst met alleen feiten je iets laten geloven, of vooral iets weten?",null,"Probeert een verhaal je te overtuigen, of wil het je vooral meenemen in een gebeurtenis?","Geeft 'beschrijven' een mening, of vooral details?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is overtuigen?", tekst: "Iemand zo praten dat hij JOUW MENING gaat geloven." },
@@ -156,7 +156,7 @@ const steps = [
         q: "Wat is een typische **informatieve** tekst?",
         options: ["Een sprookje","Een krantenartikel met feiten","Een opiniestuk","Een liedjestekst"],
         answer: 1,
-        wrongHints: [null,"Wat doet een sprookje vooral: feiten geven of een verhaal vertellen?","Geeft een opiniestuk vooral feiten, of probeert het je iets te laten denken?","Wat doet een liedjestekst vaak — informeren, overtuigen of een verhaal vertellen?"],
+        wrongHints: ["Wat doet een sprookje vooral: feiten geven of een verhaal vertellen?",null,"Geeft een opiniestuk vooral feiten, of probeert het je iets te laten denken?","Wat doet een liedjestekst vaak — informeren, overtuigen of een verhaal vertellen?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is informatief?", tekst: "Een tekst die FEITEN geeft. Geen mening, geen verhaal." },
@@ -180,7 +180,7 @@ const steps = [
         q: "Welk woord helpt herkennen dat een tekst **betogend** is?",
         options: ["bijvoorbeeld","'fantastisch' of 'verschrikkelijk'","gisteren","de man"],
         answer: 1,
-        wrongHints: [null,"Komt 'bijvoorbeeld' alleen voor als iemand je wil overtuigen, of ook bij gewone uitleg?","Wijst 'gisteren' naar een mening, of vooral naar wanneer iets gebeurde?","Vertelt 'de man' iets over de toon van een tekst, of is het neutraal?"],
+        wrongHints: ["Komt 'bijvoorbeeld' alleen voor als iemand je wil overtuigen, of ook bij gewone uitleg?",null,"Wijst 'gisteren' naar een mening, of vooral naar wanneer iets gebeurde?","Vertelt 'de man' iets over de toon van een tekst, of is het neutraal?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoe herken je betogend?", tekst: "Door EMOTIONELE woorden — woorden die een mening uitdrukken." },
@@ -211,7 +211,7 @@ const steps = [
         q: "Welk signaalwoord laat **oorzaak/gevolg** zien?",
         options: ["maar","daardoor","bijvoorbeeld","ten slotte"],
         answer: 1,
-        wrongHints: [null,"Wat doet 'maar' — laat het zien dat iets veroorzaakt wordt, of zet het iets tegenover elkaar?","Volgt na 'bijvoorbeeld' een gevolg, of een illustratie?","Komt 'ten slotte' aan het begin of aan het eind van een rijtje?"],
+        wrongHints: ["Wat doet 'maar' — laat het zien dat iets veroorzaakt wordt, of zet het iets tegenover elkaar?",null,"Volgt na 'bijvoorbeeld' een gevolg, of een illustratie?","Komt 'ten slotte' aan het begin of aan het eind van een rijtje?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is oorzaak/gevolg?", tekst: "Iets gebeurt OMDAT iets anders gebeurde. Bv: 'Het regende DAARDOOR werd de wedstrijd afgelast.'" },
@@ -236,7 +236,7 @@ const steps = [
         q: "Welk signaalwoord introduceert een **tegenstelling**?",
         options: ["dus","echter","ook","bijvoorbeeld"],
         answer: 1,
-        wrongHints: [null,"Trekt 'dus' een conclusie, of zet het iets tegenover iets anders?","Voegt 'ook' iets toe aan een rij, of laat het een tegenstelling zien?","Geeft 'bijvoorbeeld' een tegenstelling of een illustratie?"],
+        wrongHints: ["Trekt 'dus' een conclusie, of zet het iets tegenover iets anders?",null,"Voegt 'ook' iets toe aan een rij, of laat het een tegenstelling zien?","Geeft 'bijvoorbeeld' een tegenstelling of een illustratie?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een tegenstelling?", tekst: "Iets ONVERWACHTS of TEGENOVERGESTELDS van wat eraan voorafging. 'Het regent — ECHTER, we gaan toch buiten spelen.'" },

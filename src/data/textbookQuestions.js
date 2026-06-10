@@ -272,7 +272,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       { q: "Wat is 487 + 263?", options: ["750", "640", "740", "850"], answer: 0, explanation: "487 + 263: 7+3=10, 8+6+1=15, 4+2+1=7. Antwoord: 750." },
-      { q: "Wat is 832 − 359?", options: ["473", "483", "563", "473"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
+      { q: "Wat is 832 − 359?", options: ["473", "483", "563", "463"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
       { q: "Een schoolreis kost €18,50 per leerling. Voor 10 leerlingen?", options: ["€185", "€185,50", "€18,50", "€1850"], answer: 0, explanation: "10 × 18,50 = 185. Vermenigvuldigen met 10 = decimaal-punt 1 plek naar rechts." },
       { q: "Wat is 3000 − 1750 + 250?", options: ["1500", "1000", "2000", "1250"], answer: 0, explanation: "3000 − 1750 = 1250. 1250 + 250 = 1500." },
     ],
@@ -321,7 +321,7 @@ export const TEXTBOOK_QUESTIONS = {
     1: [
       { q: "Wat is 1234 + 567?", options: ["1801", "1791", "1811", "1701"], answer: 0, explanation: "1234 + 567: 4+7=11, 3+6+1=10, 2+5+1=8, 1. → 1801." },
       { q: "Wat is 9000 − 4321?", options: ["4679", "4789", "5679", "4669"], answer: 0, explanation: "9000 − 4321: 9000−4000=5000, 5000−321=4679." },
-      { q: "Sara had 250 punten, won 175 en verloor 80. Hoeveel nu?", options: ["345", "425", "265", "345"], answer: 0, explanation: "250 + 175 = 425. 425 − 80 = 345." },
+      { q: "Sara had 250 punten, won 175 en verloor 80. Hoeveel nu?", options: ["345", "425", "265", "505"], answer: 0, explanation: "250 + 175 = 425. 425 − 80 = 345." },
       { q: "Welke som geeft 1000?", options: ["456 + 544", "423 + 678", "501 + 500", "789 + 200"], answer: 0, explanation: "456+544=1000. Andere: 1101, 1001, 989." },
     ],
     2: [
@@ -870,7 +870,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Indonesië ligt in?", options: ["Zuidoost-Azië", "Zuid-Amerika", "Afrika", "Oceanië"], answer: 0, explanation: "Indonesië = eilandengroep in Zuidoost-Azië, ~17.000 eilanden. Hoofdstad: Jakarta. Vroeger Nederlandse kolonie." },
-      { q: "Welk is een BELANGRIJK eiland van Indonesië?", options: ["Java", "Madagascar", "Bali (klopt ook!)", "Madagascar"], answer: 0, explanation: "Java is meest dichtbevolkte eiland (>140 mln). Bali is ook van Indonesië maar kleiner. Madagascar ligt bij Afrika." },
+      { q: "Welk eiland hoort bij Indonesië?", options: ["Java", "Madagascar", "Sri Lanka", "Cuba"], answer: 0, explanation: "Java is het dichtstbevolkte eiland van Indonesië (>140 mln). Madagascar ligt bij Afrika, Sri Lanka bij India, Cuba in de Caraïben." },
     ],
     5: [
       { q: "Welk klimaat heeft Zuid-Spanje?", options: ["Mediterraan (mild + droge zomer)", "Tropisch", "Polair", "Continentaal"], answer: 0, explanation: "Mediterraan klimaat: warme droge zomers, milde natte winters. Typisch Middellandse Zee-gebied." },
@@ -1362,7 +1362,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk woord is een SIGNAAL voor TEGENSTELLING?", options: ["Echter", "Bovendien", "Daarom", "Omdat"], answer: 0, explanation: "Echter / hoewel / daarentegen → tegenstelling. Bovendien = opsomming, daarom = gevolg." },
     ],
     3: [
-      { q: "Welke is GOED gespeld?", options: ["restaurant", "ristaurant", "restaurant", "restourant"], answer: 0, explanation: "Restaurant — Frans leenwoord met die exacte spelling. Onthouden of opzoeken." },
+      { q: "Welke is GOED gespeld?", options: ["restaurant", "ristaurant", "restaurand", "restourant"], answer: 0, explanation: "Restaurant — Frans leenwoord met die exacte spelling. Onthouden of opzoeken." },
       { q: "Hij ___ 't hard. (verleden tijd, regelmatig)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
     ],
     4: [

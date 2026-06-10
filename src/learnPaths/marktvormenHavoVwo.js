@@ -468,7 +468,7 @@ const marktvormenHavoVwo = {
   referentieNiveau: "havo-3F / vwo-3S",
   sloThema: "Economie — Marktvormen + Markfalen + Inkomensverdeling (CSE-onderwerp)",
   prerequisites: [
-    { id: "vraag-aanbod", title: "Vraag + Aanbod basis", niveau: "havo-2F" },
+    { id: "vraag-aanbod-economie", title: "Vraag + Aanbod basis", niveau: "havo-2F" },
     { id: "bbp-conjunctuur-economie", title: "BBP + Conjunctuur", niveau: "havo-3F" },
   ],
   intro:
