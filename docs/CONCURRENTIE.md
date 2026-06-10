@@ -1,5 +1,7 @@
 # Concurrentie-analyse — waar staat Leerkwartier?
 
+> **Update 2026-06-10:** verdiepende 5-agent-scan (design/funnel/ads/internationaal + kritische zelf-review) → concreet actieplan in **docs/VERBETERPLAN-2026-06.md**. Kern: marktgat bevestigd, maar de homepage-voordeur lekt (11 CTA's, geen ouder-ingang); opzeg-woede bij alle concurrenten = onze anti-claim.
+
 > Opgesteld 2026-06-04 met live web-research (2 agents). Herzien bij elke 15-agent-audit.
 
 ## TL;DR
