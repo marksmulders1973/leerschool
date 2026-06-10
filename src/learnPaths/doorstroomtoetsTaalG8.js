@@ -63,6 +63,7 @@ const steps = [
   // STAP 1: Woordenschat (~20 min)
   {
     title: "Woordenschat — ~20 min",
+    refOnderdeel: "geen",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nBij taal krijg je vaak 10-15 woordenschatvragen. De toets test:\n\n• **Wat betekent een moeilijk woord**? *(bv. 'verlamd' — kan zich niet bewegen)*\n• **Welke uitspraak hoort bij een woord** in een tekst? *(context-vraag)*\n• **Welk woord past in een zin** (synoniem-vraag)? *(bv. 'opvallend' = 'in het oog springend')*\n\n**Cito-truc 1 — context geeft de hint**:\nLees het hele zinnetje, niet alleen het woord. Vaak staat de betekenis vlak vóór of na het woord.\n\nVoorbeeld: *'Iedereen was **stomverbaasd** toen de poes het deurtje opende.'*\n→ Stomverbaasd = heel erg verbaasd, want het was iets bijzonders.\n\n**Cito-truc 2 — eliminatie**:\nBij 4 keuzes: streep 2 antwoorden door die zeker fout zijn. Dan heb je 50% kans, dat is veel beter dan gokken.\n\n**Cito-truc 3 — woordfamilies**:\n• 'verlamd' lijkt op 'lam' = niet kunnen bewegen.\n• 'onbarmhartig' = 'on' + 'barmhartig' (vriendelijk-meelevend) = niet meelevend, hard.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
@@ -816,11 +817,13 @@ const steps = [
   // STAP 2: Begrijpend lezen (~20 min)
   {
     title: "Begrijpend lezen — ~20 min",
+    refOnderdeel: "lezen",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nBegrijpend lezen is de **grootste taal-onderdeel**: 20-30 vragen na een paar teksten.\n\n**De Cito-vraagsoorten** *(uit je hoofd!)*:\n• **Hoofdgedachte**: 'Waar gaat de hele tekst over?' → meestal in de eerste of laatste alinea.\n• **Detail**: 'Wat staat er in alinea 2?' → zoek in alinea 2.\n• **Verband**: 'Waarom?' / 'Wat is het gevolg?' → zoek signaalwoorden zoals 'omdat', 'daardoor'.\n• **Bedoeling**: 'Waarom schreef de schrijver?' → informeren / overtuigen / amuseren.\n\n**Stappenplan**:\n1. **Skim** de tekst — lees titel + eerste/laatste zin van elke alinea.\n2. **Lees de vraag** voordat je de hele tekst leest.\n3. **Zoek terug** in de tekst — leg je vinger bij de juiste alinea.\n4. **Check** dat het antwoord echt in de tekst staat, niet je eigen mening.\n\n**Cito-strikvraag** — let op deze 3:\n• *'Welke zin klopt **niet**?'* — het juiste antwoord is degene die fout is.\n• Antwoorden die 'lijken te kloppen' maar net niet zo in de tekst staan.\n• 'Altijd' / 'nooit' in antwoorden — vaak fout (te absoluut).\n\n**Voorbeeld-tekst**:\n*'In Nederland slapen vleermuizen meestal overdag. Ze hangen onderste-boven aan een tak. 's Avonds vliegen ze uit om insecten te vangen.'*\n\n**Vraag**: Wanneer vliegen vleermuizen?\n• Antwoord: 's avonds *(staat letterlijk in de tekst)*.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
       {
         q: "*Tekst: 'De zon schijnt vandaag fel. Veel mensen gaan naar het strand.'* **Waarom** gaan veel mensen naar het strand?",
+        ref: "1F",
         options: ["Omdat de zon fel schijnt", "Omdat ze honger hebben", "Omdat het regent", "Omdat het avond is"],
         answer: 0,
         wrongHints: [null, "Niet in de tekst genoemd.", "De zon schijnt — niet regen.", "Niet genoemd in de tekst."],
@@ -881,6 +884,7 @@ const steps = [
       },
       {
         q: "Een tekst gaat over hoe **honden helpen** bij brand. **Hoofdgedachte**?",
+        ref: "1F",
         options: ["Honden zijn nuttig bij brand", "Honden eten brood", "Brand is gevaarlijk", "Iedereen wil een hond"],
         answer: 0,
         wrongHints: [null, "Te specifiek — niet de hoofdgedachte.", "Klopt maar niet de hoofdgedachte over honden.", "Te algemeen — niet specifiek over honden."],
@@ -909,6 +913,7 @@ const steps = [
       },
       {
         q: "*Tekst: 'In de Sahara valt **bijna nooit** regen. Toch leven er kamelen.'* Welke **signaalwoord** geeft een **tegenstelling**?",
+        ref: "1F",
         options: ["Toch", "In", "Er", "Leven"],
         answer: 0,
         wrongHints: [null, "Plaats, niet tegenstelling.", "Verwijst naar Sahara.", "Werkwoord."],
@@ -929,18 +934,21 @@ const steps = [
       },
       {
         q: "*Tekst: 'Tom oefende elke dag 1 uur. **Daarom** won hij de wedstrijd.'* Wat geeft **'daarom'** aan?",
+        ref: "1F",
         options: ["Gevolg / reden", "Tegenstelling", "Opsomming", "Plek"],
         answer: 0,
         wrongHints: [null, "Geen tegenstelling.", "Niet opsommend.", "Niet plaats."],
       },
       {
         q: "*'De auteur wil je **vooral overtuigen**'* — wat is dan de **bedoeling** van de tekst?",
+        ref: "S",
         options: ["Overhalen om iets te doen of denken", "Informeren met feiten", "Amuseren met grappen", "Beschrijven hoe iets is"],
         answer: 0,
         wrongHints: [null, "Informeren is doel #2 maar niet 'overtuigen'.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
       },
       {
         q: "*Tekst: 'Eerst moet je de fles open. **Vervolgens** schenk je het water.'* Wat geeft **'vervolgens'** aan?",
+        ref: "1F",
         options: ["Volgorde / opeenvolging", "Tegenstelling", "Reden", "Doel"],
         answer: 0,
         wrongHints: [null, "Geen tegenstelling.", "Geen reden.", "Geen doel."],
@@ -953,12 +961,14 @@ const steps = [
       },
       {
         q: "*Hoofdgedachte* van tekst — meestal te vinden in:",
+        ref: "1F",
         options: ["Eerste of laatste alinea", "Middelste alinea", "Plaatje", "Voetnoot"],
         answer: 0,
         wrongHints: [null, "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
       },
       {
         q: "Wat is **alinea**?",
+        ref: "1F",
         options: ["Groep zinnen over één onderwerp", "Eén zin", "Hele tekst", "Plaatje"],
         answer: 0,
         wrongHints: [null, "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
@@ -987,6 +997,7 @@ const steps = [
       },
       {
         q: "Signaalwoord **'bijvoorbeeld'** introduceert?",
+        ref: "1F",
         options: ["Een voorbeeld", "Tegenstelling", "Gevolg", "Conclusie"],
         answer: 0,
         wrongHints: [null, "Tegenstelling = 'maar' / 'echter'.", "Gevolg = 'dus' / 'daardoor'.", "Conclusie = 'kortom' / 'dus'."],
@@ -999,6 +1010,7 @@ const steps = [
       },
       {
         q: "Signaalwoord **'omdat'** introduceert?",
+        ref: "1F",
         options: ["Reden / oorzaak", "Gevolg", "Tegenstelling", "Voorbeeld"],
         answer: 0,
         wrongHints: [null, "Gevolg = 'daardoor'.", "Tegenstelling = 'maar'.", "Voorbeeld = 'bijvoorbeeld'."],
@@ -1027,6 +1039,7 @@ const steps = [
       },
       {
         q: "Signaalwoord **'daardoor'** introduceert?",
+        ref: "1F",
         options: ["Gevolg", "Reden", "Voorbeeld", "Tegenstelling"],
         answer: 0,
         wrongHints: [null, "Reden = 'omdat' of 'doordat'.", "Voorbeeld = 'bijvoorbeeld' of 'zoals'.", "Tegenstelling = 'maar' of 'echter'."],
@@ -1080,6 +1093,7 @@ const steps = [
       },
       {
         q: "*Tekst: 'Veel kinderen sporten weinig. **Toch** is sporten heel gezond.'* Wat is de **conclusie** van de schrijver?",
+        ref: "S",
         options: ["Kinderen moeten meer sporten", "Sport is gezond, dus stop kinderen", "Kinderen mogen niet sporten", "Onbekend"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet.", "Wel te bepalen."],
@@ -1120,6 +1134,7 @@ const steps = [
       },
       {
         q: "*'De plant ging dood **doordat** Tom hem te weinig water gaf.'* Wat is hier de **reden**?",
+        ref: "1F",
         options: ["Te weinig water geven", "De plant ging dood", "Het was zomer", "Tom is weg"],
         answer: 0,
         wrongHints: [null, "Dat is het gevolg, niet de reden.", "Niet genoemd in de zin.", "Niet genoemd in de zin."],
@@ -1141,12 +1156,14 @@ const steps = [
       },
       {
         q: "Een schrijver gebruikt het woord **'echter'** om aan te geven dat...",
+        ref: "S",
         options: ["Er komt een tegenstelling", "Er komt een gevolg", "Hij iets gaat herhalen", "Hij ophoudt"],
         answer: 0,
         wrongHints: [null, "Gevolg-signaal is 'daardoor'/'dus'.", "Echter is geen herhaal-signaal.", "Echter staat midden in een tekst, geen einde-signaal."],
       },
       {
         q: "*'De hoofdgedachte van een tekst is...'*",
+        ref: "1F",
         options: ["De belangrijkste boodschap", "De eerste zin", "Het langste stuk", "De namen van personen"],
         answer: 0,
         wrongHints: [null, "Vaak begint een tekst met inleiding, niet altijd met de hoofdgedachte.", "Het langste stuk hoeft niet het belangrijkste te zijn.", "Namen zijn details, geen hoofdgedachte."],
@@ -1168,12 +1185,14 @@ const steps = [
       },
       {
         q: "Een **alinea** is...",
+        ref: "1F",
         options: ["Een blok tekst over één onderwerp", "Een hoofdletter", "Een leesteken", "Een titel"],
         answer: 0,
         wrongHints: [null, "Hoofdletter is iets anders.", "Leesteken is een punt/komma — geen alinea.", "Titel staat boven de tekst, alinea is in de tekst."],
       },
       {
         q: "*Wat is het verschil tussen* **'feit'** *en* **'mening'**?",
+        ref: "S",
         options: ["Feit kun je controleren, mening is wat iemand vindt", "Feit is positief, mening is negatief", "Geen verschil", "Feit staat in inleiding, mening in slot"],
         answer: 0,
         wrongHints: [null, "Geen verband met positief/negatief.", "Wel een verschil — belangrijk bij Cito!", "Staat geen vaste plek voor."],
@@ -1202,6 +1221,7 @@ const steps = [
       },
       {
         q: "Welk woord wijst op een **voorbeeld**?",
+        ref: "1F",
         options: ["Bijvoorbeeld", "Omdat", "Maar", "Dus"],
         answer: 0,
         wrongHints: [null, "Reden-signaal.", "Tegenstelling.", "Gevolg-signaal."],
@@ -1229,6 +1249,7 @@ const steps = [
       },
       {
         q: "Een tekst die je **wil overtuigen** van iets is een...",
+        ref: "S",
         options: ["Betoog", "Verslag", "Verhaal", "Recept"],
         answer: 0,
         wrongHints: [null, "Verslag geeft feiten, geen mening.", "Verhaal is fictie.", "Geen tekst-soort die overtuigt."],
@@ -1241,6 +1262,7 @@ const steps = [
       },
       {
         q: "Bij **kritisch lezen** vraag je je vooral af...",
+        ref: "S",
         options: ["Klopt dit en hoe weet de schrijver dat?", "Hoe oud is de tekst?", "Wat is het lettertype?", "Hoe lang is de tekst?"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet relevant voor kritisch lezen.", "Niet relevant."],
@@ -1262,18 +1284,21 @@ const steps = [
       },
       {
         q: "Een **inleiding** van een tekst is meestal...",
+        ref: "1F",
         options: ["De start, om je interesse te wekken", "Het einde van de tekst", "Een lange opsomming", "De index"],
         answer: 0,
         wrongHints: [null, "Dat is het slot.", "Niet — inleiding is kort en uitnodigend.", "Index staat achterin een boek."],
       },
       {
         q: "Welke **tekstsoort** is bedoeld om te **informeren**?",
+        ref: "1F",
         options: ["Krantenartikel", "Sprookje", "Reclame", "Gedicht"],
         answer: 0,
         wrongHints: [null, "Verhaal, niet info.", "Wil overtuigen, niet informeren.", "Kunst, niet primair info."],
       },
       {
         q: "*'Allereerst... Vervolgens... Ten slotte...'* Welke **structuur**?",
+        ref: "1F",
         options: ["Volgorde / stappen", "Tegenstelling", "Oorzaak-gevolg", "Voorbeeld-opsomming"],
         answer: 0,
         wrongHints: [null, "Geen tegenstelling-woorden.", "Geen reden-woorden.", "Volgorde wel zichtbaar."],
@@ -1294,24 +1319,28 @@ const steps = [
       },
       {
         q: "De **conclusie** van een betoog is meestal...",
+        ref: "S",
         options: ["Aan het einde", "Aan het begin", "In het midden", "In de titel"],
         answer: 0,
         wrongHints: [null, "Soms wel, maar gewoonlijk einde.", "Niet — conclusie volgt na argumenten.", "Niet — titel is overzicht."],
       },
       {
         q: "Een **tekst voor kinderen** versus **tekst voor wetenschappers** verschilt vooral in...",
+        ref: "S",
         options: ["Moeilijkheidsgraad van woorden", "Aantal pagina's", "Kleur van het papier", "Land van uitgifte"],
         answer: 0,
         wrongHints: [null, "Lengte zegt niets over doelgroep.", "Niet relevant.", "Niet relevant."],
       },
       {
         q: "Het **doel** van een **reclame-tekst** is...",
+        ref: "1F",
         options: ["Kopers overtuigen iets te kopen", "Informeren neutraal", "Entertainen met verhaal", "Wetenschap uitleggen"],
         answer: 0,
         wrongHints: [null, "Reclame is niet neutraal.", "Niet primair.", "Niet — reclame ≠ educatie."],
       },
       {
         q: "Wat is een **citaat** in een tekst?",
+        ref: "1F",
         options: ["Letterlijke aanhaling van iemand", "De inleiding", "Een afbeelding", "De voetnoot"],
         answer: 0,
         wrongHints: [null, "Niet — citaat = woorden van iemand.", "Niet.", "Bron-verwijzing, niet citaat."],
@@ -1333,12 +1362,14 @@ const steps = [
       },
       {
         q: "Een **samenvatting** van een tekst...",
+        ref: "1F",
         options: ["Geeft de hoofdpunten kort weer", "Is langer dan de tekst", "Bevat alleen citaten", "Bevat alleen vragen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — samenvatting is KORTER.", "Niet — eigen woorden.", "Niet — antwoorden ook."],
       },
       {
         q: "*'Egels houden een winterslaap. In de herfst eten ze extra veel om vet op te slaan. Van november tot maart slapen ze in een nest van bladeren.'*\n\nWaarom eten egels in de herfst extra veel?",
+        ref: "1F",
         options: ["Om vet op te slaan voor de winterslaap", "Omdat er in de herfst meer eten is", "Omdat ze dan jongen krijgen", "Omdat bladeren lekker zijn"],
         answer: 0,
         wrongHints: [null, "Mogelijk waar, maar staat dát in de tekst? Zoek het woordje 'om'.", "Over jongen zegt de tekst niets.", "De bladeren zijn voor het nest, niet om te eten."],
@@ -1346,6 +1377,7 @@ const steps = [
       },
       {
         q: "*'Steeds meer scholen verbieden mobieltjes in de klas. Leerlingen blijken zich beter te concentreren zonder telefoon. Ook praten kinderen in de pauze meer met elkaar.'*\n\nWat is de **hoofdgedachte** van deze tekst?",
+        ref: "S",
         options: ["Een mobielverbod op school heeft voordelen", "Mobieltjes zijn duur", "Kinderen praten te weinig", "Pauzes moeten langer duren"],
         answer: 0,
         wrongHints: [null, "Over geld gaat de tekst helemaal niet.", "Dat is hooguit één detail — wat is de boodschap van de héle tekst?", "Over de lengte van pauzes staat er niets."],
@@ -1367,6 +1399,7 @@ const steps = [
       },
       {
         q: "*'Lisa wilde naar buiten. **Daarom** trok ze haar jas aan.'*\n\nWelk verband geeft het woord **daarom** aan?",
+        ref: "1F",
         options: ["Oorzaak en gevolg", "Tegenstelling", "Opsomming", "Vergelijking"],
         answer: 0,
         wrongHints: [null, "Een tegenstelling herken je aan 'maar' of 'echter' — staat dat hier?", "Bij een opsomming hoort 'en', 'ook', 'bovendien'.", "Een vergelijking gebruikt 'zoals' of 'net als'."],
@@ -1374,6 +1407,7 @@ const steps = [
       },
       {
         q: "*'Veel mensen denken dat spinnen insecten zijn. **Dit** klopt niet: insecten hebben zes poten, spinnen acht.'*\n\nWaar verwijst **dit** naar?",
+        ref: "S",
         options: ["Het idee dat spinnen insecten zijn", "Dat insecten zes poten hebben", "Dat spinnen acht poten hebben", "Dat veel mensen spinnen eng vinden"],
         answer: 0,
         wrongHints: [null, "Dat staat ná het woord 'dit' — een verwijswoord wijst meestal terug.", "Ook dit staat er pas ná.", "Over eng vinden zegt de tekst niets."],
@@ -1381,6 +1415,7 @@ const steps = [
       },
       {
         q: "*'Kom naar het Zomerfestival! Drie dagen muziek, theater en eten uit de hele wereld. Kaarten nu met korting via onze site!'*\n\nWat is het **doel** van deze tekst?",
+        ref: "1F",
         options: ["De lezer overhalen om te komen", "Uitleggen wat een festival is", "Een verslag geven van het festival", "De lezer waarschuwen"],
         answer: 0,
         wrongHints: [null, "Een uitleg-tekst heeft geen uitroeptekens en kortingen nodig.", "Een verslag schrijf je achteraf — dit festival moet nog komen.", "Waarschuwen? De tekst maakt het juist aantrekkelijk."],
@@ -1388,6 +1423,7 @@ const steps = [
       },
       {
         q: "*'Eerst kneed je het deeg. Vervolgens laat je het een uur rijzen. Daarna vorm je er bolletjes van. Ten slotte bak je ze 20 minuten.'*\n\nWat voor soort tekst is dit?",
+        ref: "1F",
         options: ["Een instructie", "Een betoog", "Een verhaal", "Een nieuwsbericht"],
         answer: 0,
         wrongHints: [null, "Een betoog wil je overtuigen van een mening — zie je hier een mening?", "Een verhaal heeft personages en gebeurtenissen — wie is hier de hoofdpersoon?", "Een nieuwsbericht vertelt wat er gebeurd ís — dit vertelt wat jij moet dóén."],
@@ -1395,6 +1431,7 @@ const steps = [
       },
       {
         q: "*'Het schoolreisje gaat dit jaar niet naar de Efteling **maar** naar een klimpark.'*\n\nWelk signaalwoord zit in deze zin en wat geeft het aan?",
+        ref: "1F",
         options: ["'Maar' — een tegenstelling", "'Maar' — een opsomming", "'Niet' — een oorzaak", "'Dit jaar' — een gevolg"],
         answer: 0,
         wrongHints: [null, "Bij een opsomming komen dingen erbíj — hier wordt iets juist vervangen.", "'Niet' ontkent alleen; het signaalwoord dat twee dingen tegenover elkaar zet is een ander woord.", "'Dit jaar' zegt alleen wanneer — welk woord draait de zin om?"],
@@ -1402,6 +1439,7 @@ const steps = [
       },
       {
         q: "*'IJsberen lijken wit, maar hun huid is zwart en hun haren zijn doorzichtig. Het zonlicht weerkaatst in de holle haren, waardoor de vacht wit oogt.'*\n\nWelke zin klopt **niet** volgens de tekst?",
+        ref: "S",
         options: ["IJsberen hebben witte haren", "IJsberen hebben een zwarte huid", "De haren van een ijsbeer zijn hol", "Zonlicht weerkaatst in de haren"],
         answer: 0,
         wrongHints: [null, "Lees terug: wat zegt de tekst over de huid?", "De tekst noemt 'holle haren' letterlijk.", "Ook dit staat letterlijk in de tekst."],
@@ -1423,6 +1461,7 @@ const steps = [
       },
       {
         q: "*'Hoewel het stortregende, ging de voetbalwedstrijd gewoon door.'*\n\nWat betekent deze zin?",
+        ref: "S",
         options: ["Ondanks de regen werd er gevoetbald", "Door de regen werd de wedstrijd afgelast", "Het regende tijdens de hele wedstrijd niet", "De wedstrijd werd verplaatst"],
         answer: 0,
         wrongHints: [null, "'Ging gewoon door' — werd er nou wel of niet gespeeld?", "Lees het begin: 'hoewel het stortregende'.", "Over een andere plek of tijd staat er niets."],
@@ -1430,6 +1469,7 @@ const steps = [
       },
       {
         q: "*'De gemeente plant 500 nieuwe bomen. Bomen vangen fijnstof af, geven schaduw op hete dagen en bieden een thuis aan vogels en insecten.'*\n\nHoeveel redenen voor het planten noemt de tekst?",
+        ref: "1F",
         options: ["Drie", "Eén", "Twee", "Vier"],
         answer: 0,
         wrongHints: [null, "Tel nog eens — er staan komma's en een 'en' in de opsomming.", "Kijk goed: na de eerste reden komt nog meer.", "Tel alleen wat er écht staat, verzin er geen bij."],
@@ -1437,6 +1477,7 @@ const steps = [
       },
       {
         q: "*'Tim keek uit het raam. Zijn koffer stond al klaar bij de deur. Nog één nachtje slapen, dacht hij, en dan…'*\n\nWat kun je uit deze tekst **afleiden**?",
+        ref: "S",
         options: ["Tim gaat morgen op reis", "Tim is net thuisgekomen", "Tim is zijn koffer kwijt", "Tim vindt reizen vervelend"],
         answer: 0,
         wrongHints: [null, "Zou zijn koffer dan al ingepakt bij de deur staan?", "De koffer staat er juist — kwijt is hij niet.", "'Nog één nachtje slapen' klinkt eerder als aftellen van plezier."],
@@ -1444,6 +1485,7 @@ const steps = [
       },
       {
         q: "*'Eet je groente, **want** daar word je sterk van.'*\n\nWat geeft het signaalwoord **want** aan?",
+        ref: "1F",
         options: ["Een reden", "Een tegenstelling", "Een tijdsvolgorde", "Een voorbeeld"],
         answer: 0,
         wrongHints: [null, "Een tegenstelling draait iets om — hier wordt iets juist uitgelegd.", "Tijdwoorden zijn 'eerst', 'daarna', 'toen'.", "Een voorbeeld begint met 'bijvoorbeeld' of 'zoals'."],
@@ -1451,6 +1493,7 @@ const steps = [
       },
       {
         q: "*'In de bieb is het stil. Mensen lezen of werken er. **Toch** hoor je soms gefluister bij de balie.'*\n\nWat doet het woord **toch** in deze tekst?",
+        ref: "S",
         options: ["Het geeft een uitzondering op de stilte aan", "Het somt een extra voordeel op", "Het geeft de oorzaak van de stilte", "Het sluit de tekst af"],
         answer: 0,
         wrongHints: [null, "Een opsomming voegt iets toe; 'toch' botst juist met wat ervoor staat.", "Een oorzaak leg je uit met 'omdat' of 'doordat'.", "De tekst kan na 'toch' gewoon doorgaan — het is geen slotwoord."],
@@ -1458,6 +1501,7 @@ const steps = [
       },
       {
         q: "Waar vind je meestal de **hoofdgedachte** van een alinea?",
+        ref: "1F",
         options: ["In de eerste of laatste zin", "Altijd precies in het midden", "In de langste zin", "In de zin met de moeilijkste woorden"],
         answer: 0,
         wrongHints: [null, "Het midden is meestal voor details en voorbeelden.", "Lengte zegt niets over belangrijkheid.", "Moeilijke woorden maken een zin niet belangrijker."],
@@ -1465,6 +1509,7 @@ const steps = [
       },
       {
         q: "*'Wist je dat een slak wel 25.000 tandjes heeft? Ze zitten op zijn tong, de radula. Daarmee raspt hij stukjes van bladeren.'*\n\nWat is de **radula**?",
+        ref: "1F",
         options: ["De tong van de slak", "Een soort blad", "Het huisje van de slak", "Een tandarts voor dieren"],
         answer: 0,
         wrongHints: [null, "Lees terug: waar zitten de tandjes op? Het woord erna legt het uit.", "Het huisje wordt nergens genoemd.", "Denk niet te ver — het antwoord staat gewoon in de tekst."],
@@ -1472,6 +1517,7 @@ const steps = [
       },
       {
         q: "*'Sara spaarde drie maanden voor nieuwe schaatsen. Toen ze eindelijk genoeg had, bleek de winkel ze niet meer te verkopen.'*\n\nWelk gevoel past het best bij Sara aan het einde?",
+        ref: "S",
         options: ["Teleurgesteld", "Opgelucht", "Trots", "Verveeld"],
         answer: 0,
         wrongHints: [null, "Opgelucht ben je als iets juist góéd afloopt.", "Trots past bij het sparen — maar hoe loopt het áf?", "Verveeld? Er gebeurt juist iets heftigs."],
@@ -1483,6 +1529,7 @@ const steps = [
   // STAP 3: Spelling (~20 min)
   {
     title: "Spelling — ~20 min",
+    refOnderdeel: "taalverzorging",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\n5-10 spelling-vragen — vaak meerkeuze: 'welk woord is **goed gespeld**?'\n\n**De top-5 valkuilen**:\n• **d/t/dt** — *'wordt'* (hij wordt = stam + t) vs *'word'* (ik word = alleen stam).\n• **ei vs ij** — hier helpt geen regel, je moet ze **uit je hoofd kennen** (zie [spelling-ei-ij-au-ou pad]).\n• **au vs ou** — zelfde verhaal, uit je hoofd.\n• **Samengestelde woorden**: 'paardenstaart' is één woord, 'paard staart' niet.\n• **Hoofdletters**: alleen aan begin van zin, of bij namen.\n\n**'t kofschip-truc voor werkwoord-spelling** *(verleden tijd!)*:\n• Stam eindigt op **'t kofschip-letter** (t, k, f, s, ch, p) → **+ te** of **+ ten**.\n• Anders → **+ de** of **+ den**.\n\nVoorbeelden:\n• 'praten' → 'praat' (stam) → eindigt op 't' → 't kofschip → 'praatte' (verleden tijd).\n• 'wandelen' → 'wandel' → eindigt op 'l' (niet 't kofschip) → 'wandelde'.\n\n**Cito-truc — 'wordt' of 'word'?**\n• 'Ik **word** ziek' *(ik + stam, geen t)*.\n• 'Hij **wordt** ziek' *(hij + stam + t)*.\n• Vervang door 'lopen': loop / loopt. Hetzelfde patroon.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
@@ -1890,6 +1937,7 @@ const steps = [
       },
       {
         q: "*'**...** jij morgen mee naar de film?'* Welk woord hoort op de puntjes?",
+        ref: "S",
         options: ["Ga", "Gaat", "Gaad", "Gaan"],
         answer: 0,
         wrongHints: [null, "Let op: 'jij' staat hier ACHTER het werkwoord — wat gebeurt er dan met de t?", "Die vorm bestaat niet in het Nederlands.", "Dat is meervoud — hier gaat het om één persoon (jij)."],
@@ -1911,6 +1959,7 @@ const steps = [
       },
       {
         q: "Wat is de juiste **verleden tijd** van *'fietsen'* (wij-vorm)?",
+        ref: "1F",
         options: ["wij fietsten", "wij fietsden", "wij fietste", "wij gefietst"],
         answer: 0,
         wrongHints: [null, "Check 't kofschip: de stam 'fiets' eindigt op s — kies je dan -de(n) of -te(n)?", "Dat is enkelvoud — 'wij' is meervoud.", "'Gefietst' is een voltooid deelwoord; je zoekt de verleden tijd."],
@@ -1918,6 +1967,7 @@ const steps = [
       },
       {
         q: "Welke zin is **goed gespeld**?",
+        ref: "1F",
         options: ["Het feest vindt plaats in mei.", "Het feest vind plaats in mei.", "Het feest vint plaats in mei.", "Het feest vinden plaats in mei."],
         answer: 0,
         wrongHints: [null, "'Het feest' = hij/zij/het → wat komt er dan achter de stam?", "Die spelling bestaat niet — de stam is 'vind'.", "Meervoudsvorm bij een enkelvoudig onderwerp ('het feest')."],
@@ -1925,6 +1975,7 @@ const steps = [
       },
       {
         q: "Hoe schrijf je het **voltooid deelwoord** van *'verhuizen'*?",
+        ref: "S",
         options: ["verhuisd", "verhuist", "verhuizd", "verhuisdt"],
         answer: 0,
         wrongHints: [null, "Pas op: dit is de hij-vorm tegenwoordige tijd. Gebruik de verlengingstruc: 'verhuisde' — hoor je een d of t?", "De z verandert in een s in de stam.", "Een d én een t samen kan alleen bij 'stam-op-d + t' (zoals 'hij wordt')."],
@@ -1932,6 +1983,7 @@ const steps = [
       },
       {
         q: "Welk woord is **goed gespeld**?",
+        ref: "1F",
         options: ["allebei", "alebei", "allebij", "alebij"],
         answer: 0,
         wrongHints: [null, "Denk aan 'alle' — met dubbele l.", "Dit woord eindigt op -ei, niet op -ij. Uit je hoofd leren!", "Twee fouten tegelijk — check de l én de ei."],
@@ -1939,6 +1991,7 @@ const steps = [
       },
       {
         q: "Welke zin heeft de **hoofdletters** goed?",
+        ref: "1F",
         options: ["Wij vieren Koningsdag in Amsterdam.", "Wij vieren koningsdag in Amsterdam.", "Wij vieren Koningsdag in amsterdam.", "wij vieren koningsdag in amsterdam."],
         answer: 0,
         wrongHints: [null, "Feestdagen krijgen een hoofdletter.", "Plaatsnamen krijgen óók een hoofdletter.", "En het begin van de zin dan?"],
@@ -1946,6 +1999,7 @@ const steps = [
       },
       {
         q: "Wat is het juiste **meervoud** van *'paraplu'*?",
+        ref: "1F",
         options: ["paraplu's", "paraplus", "parapluen", "parapluutjes"],
         answer: 0,
         wrongHints: [null, "Zonder apostrof zou je 'plus' lezen — de uitspraak gaat dan mis.", "Die vorm bestaat niet.", "Dat is een verkleinwoord-meervoud, geen gewoon meervoud."],
@@ -1953,6 +2007,7 @@ const steps = [
       },
       {
         q: "Welk woord is **goed gespeld**?",
+        ref: "S",
         options: ["onmiddellijk", "onmiddelijk", "onmidellijk", "ommiddellijk"],
         answer: 0,
         wrongHints: [null, "Er missen letters — dit woord heeft dubbel-d én dubbel-l.", "Check het midden van het woord nog eens.", "Het begint met 'on-', niet met 'om-'."],
@@ -1960,6 +2015,7 @@ const steps = [
       },
       {
         q: "*'De hond **...** de hele nacht.'* (verleden tijd van 'blaffen')",
+        ref: "1F",
         options: ["blafte", "blafde", "blaftte", "blafften"],
         answer: 0,
         wrongHints: [null, "Stam 'blaf' eindigt op f — zit f in 't kofschip?", "Eén t is genoeg: de stam eindigt niet op een t.", "Meervoud — maar er is maar één hond."],
@@ -1967,6 +2023,7 @@ const steps = [
       },
       {
         q: "Hoe schrijf je dit woord goed: een ... (vrouw die rechtspreekt)?",
+        ref: "1F",
         options: ["rechter", "regter", "rechcter", "rechtter"],
         answer: 0,
         wrongHints: [null, "De ch-klank schrijf je hier met ch, niet met g.", "Er sluipt een extra letter in — spreek het langzaam uit.", "Eén t is genoeg."],
@@ -1974,6 +2031,7 @@ const steps = [
       },
       {
         q: "Welke zin is **goed gespeld**?",
+        ref: "1F",
         options: ["Heb je je huiswerk gedaan?", "Heb je je huiswerk gedaant?", "Hep je je huiswerk gedaan?", "Heb je, je huiswerk gedaan?"],
         answer: 0,
         wrongHints: [null, "'Gedaan' eindigt op -aan, zonder t — check het voltooid deelwoord.", "De stam van 'hebben' is 'heb', met een b.", "Een komma tussen 'je' en 'je' hoort hier niet."],
@@ -1981,6 +2039,7 @@ const steps = [
       },
       {
         q: "Wat is het juiste **verkleinwoord** van *'ring'*?",
+        ref: "S",
         options: ["ringetje", "rinkje", "ringje", "ringtje"],
         answer: 0,
         wrongHints: [null, "Na -ng komt er een tussenstukje: -etje.", "Bijna — maar na een korte klank op -ng komt -etje.", "Die combinatie -gtje bestaat niet."],
@@ -1988,6 +2047,7 @@ const steps = [
       },
       {
         q: "*'Er **...** veel mensen op het plein.'* Welk werkwoord hoort op de puntjes?",
+        ref: "1F",
         options: ["lopen", "loopt", "loop", "gelopen"],
         answer: 0,
         wrongHints: [null, "Het onderwerp is 'veel mensen' — is dat enkelvoud of meervoud?", "Dat is de ik-vorm.", "Dat is een voltooid deelwoord — er mist dan een hulpwerkwoord."],
@@ -1995,6 +2055,7 @@ const steps = [
       },
       {
         q: "Welk woord is **fout** gespeld?",
+        ref: "S",
         options: ["gebeurd (in: 'het gebeurd vaak')", "gebeurde", "gebeurt (in: 'het gebeurt vaak')", "gebeuren"],
         answer: 0,
         wrongHints: [null, "Verleden tijd met -de: prima gespeld.", "Tegenwoordige tijd 'het gebeurt' = stam + t: klopt juist wél.", "Het hele werkwoord: klopt."],
@@ -2002,6 +2063,7 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: *'de trui van **...** (meervoud van 'dame')'*?",
+        ref: "1F",
         options: ["dames", "dame's", "damens", "damees"],
         answer: 0,
         wrongHints: [null, "De apostrof-s is alleen nodig na een lange eindklinker zoals u of o ('oma's') — eindigt 'dame' daarop?", "Die vorm bestaat niet.", "De e wordt niet verdubbeld."],
@@ -2013,6 +2075,7 @@ const steps = [
   // STAP 4: Taalverzorging — mix (~20 min)
   {
     title: "Taalverzorging — interpunctie & zinnen — ~20 min",
+    refOnderdeel: "taalverzorging",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nTaalverzorging = **leestekens + zinsbouw**. 5-10 vragen.\n\n**Top-4 onderwerpen**:\n• **Punt of vraagteken?** Een vraag eindigt op **'?'**. Een zin op **'.'**\n• **Komma's** — bij opsommingen (appel, peer, druif **en** banaan) en tussen 2 zinnen met *omdat / maar / als*.\n• **Aanhalingstekens** *''*\\* — bij wat iemand zegt.\n• **Hoofdletter aan begin** — altijd.\n\n**Cito-truc 1 — opsomming**:\n• 'Ik kocht appels, peren, druiven **en** bananen.'\n• Tussen de laatste 2 staat **'en'** (geen komma).\n\n**Cito-truc 2 — zinnen verbinden**:\n• 'Ik ben moe, **omdat** ik laat opbleef.' *(één zin met 2 delen)*\n• Geen punt midden in — de komma scheidt de delen.\n\n**Cito-truc 3 — directe rede**:\n• Mama zei: '**Ga je tanden poetsen.**'\n• Aanhalingstekens om wat ze zegt + dubbele punt ervoor.\n\n**Cito-truc 4 — zin vs deelzin**:\nEen volledige zin heeft een **onderwerp** (wie?) + **werkwoord** (doet wat?). Anders is het geen complete zin.\n• ✓ 'De hond rent.' *(hond = onderwerp, rent = werkwoord)*\n• ✗ 'De rennende hond.' *(geen werkwoord — geen zin)*\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
@@ -2470,6 +2533,7 @@ const steps = [
       },
       {
         q: "Welke zin heeft de **leestekens** goed?",
+        ref: "1F",
         options: ["Wat een mooie dag is het vandaag!", "Wat een mooie dag is het vandaag.", "Wat een mooie dag, is het vandaag!", "wat een mooie dag is het vandaag!"],
         answer: 0,
         wrongHints: [null, "Een uitroep van verbazing of blijdschap krijgt een ander leesteken dan een punt.", "De komma breekt de zin op een rare plek.", "Vergeet het begin van de zin niet."],
@@ -2477,6 +2541,7 @@ const steps = [
       },
       {
         q: "Wat is het **onderwerp** in: *'De kinderen van groep 8 oefenen elke dag.'*?",
+        ref: "1F",
         options: ["De kinderen van groep 8", "oefenen", "elke dag", "groep 8"],
         answer: 0,
         wrongHints: [null, "Dat is de persoonsvorm (het werkwoord).", "Dat zegt wannéér — niet wie.", "Bijna — maar het hele zinsdeel hoort erbij. Wie oefenen er?"],
@@ -2484,6 +2549,7 @@ const steps = [
       },
       {
         q: "Welke zin heeft de **komma** op de juiste plek?",
+        ref: "S",
         options: ["Als je klaar bent, mag je naar buiten.", "Als je, klaar bent mag je naar buiten.", "Als je klaar, bent mag je naar buiten.", "Als je klaar bent mag, je naar buiten."],
         answer: 0,
         wrongHints: [null, "De komma splijt hier 'je' van 'klaar bent' — lees hardop: waar pauzeer je vanzelf?", "De komma hoort tussen de twee delen van de zin, niet midden in een deel.", "Lees hardop — pauzeer je écht na 'mag'?"],
@@ -2491,6 +2557,7 @@ const steps = [
       },
       {
         q: "*'Lisa zei **...** ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
+        ref: "S",
         options: ["Dubbele punt en aanhalingstekens (: “…”)", "Alleen een komma", "Een puntkomma", "Niets"],
         answer: 0,
         wrongHints: [null, "Bij iemand die létterlijk iets zegt, is een komma alleen niet genoeg.", "Een puntkomma verbindt twee zinnen — hier kondig je gesproken woorden aan.", "Zonder leestekens zie je niet waar het citaat begint."],
@@ -2498,6 +2565,7 @@ const steps = [
       },
       {
         q: "Welk **verwijswoord** hoort op de puntjes? *'Het meisje **...** daar fietst, is mijn zus.'*",
+        ref: "1F",
         options: ["dat", "die", "wat", "wie"],
         answer: 0,
         wrongHints: [null, "'Die' hoort bij de-woorden — is het 'de meisje' of 'het meisje'?", "'Wat' verwijst naar iets onbepaalds ('alles wat...').", "'Wie' gebruik je na een voorzetsel ('met wie')."],
@@ -2519,6 +2587,7 @@ const steps = [
       },
       {
         q: "Welke zin staat in de **lijdende vorm** (passief)?",
+        ref: "S",
         options: ["De taart wordt door oma gebakken.", "Oma bakt een taart.", "Oma gaat een taart bakken.", "De taart van oma is lekker."],
         answer: 0,
         wrongHints: [null, "Hier dóét oma het zelf — dat is de bedrijvende vorm.", "Ook hier is oma zelf aan het werk.", "Deze zin zegt alleen iets óver de taart, er gebeurt geen handeling."],
@@ -2526,6 +2595,7 @@ const steps = [
       },
       {
         q: "Wat is het **lijdend voorwerp** in: *'Max leent een boek van de bieb.'*?",
+        ref: "1F",
         options: ["een boek", "Max", "de bieb", "leent"],
         answer: 0,
         wrongHints: [null, "Max is degene die leent — het onderwerp.", "'Van de bieb' zegt waar het vandaan komt.", "Dat is de persoonsvorm."],
@@ -2533,6 +2603,7 @@ const steps = [
       },
       {
         q: "Welke zin is een **vraagzin** met het juiste leesteken?",
+        ref: "1F",
         options: ["Weet jij hoe laat de bus komt?", "Weet jij hoe laat de bus komt.", "Jij weet hoe laat de bus komt?", "Weet jij hoe laat de bus komt!"],
         answer: 0,
         wrongHints: [null, "De zin vráágt iets — welk leesteken hoort daarbij?", "De woordvolgorde is hier van een gewone zin, geen vraag.", "Een uitroepteken is voor uitroepen, niet voor vragen."],
@@ -2540,6 +2611,7 @@ const steps = [
       },
       {
         q: "*'mijn broertje en ik gaan zaterdag naar artis in amsterdam'* — hoeveel **hoofdletters** mist deze zin?",
+        ref: "1F",
         options: ["Drie", "Eén", "Twee", "Vier"],
         answer: 0,
         wrongHints: [null, "Kijk ook naar namen van dierentuinen en steden.", "Tel nog eens: zinsbegin + twee namen.", "'Zaterdag' en 'broertje' krijgen er geen — tel alleen wat echt moet."],
@@ -2547,6 +2619,7 @@ const steps = [
       },
       {
         q: "Welke zin zegt dat het **misschien** gaat gebeuren?",
+        ref: "S",
         options: ["Het feest gaat mogelijk niet door.", "Het feest gaat zeker niet door.", "Het feest gaat nooit door.", "Het feest ging niet door."],
         answer: 0,
         wrongHints: [null, "'Zeker' laat geen twijfel over.", "'Nooit' is nog stelliger.", "Deze zin staat in de verleden tijd — het is al gebeurd."],
@@ -2554,6 +2627,7 @@ const steps = [
       },
       {
         q: "Wat is het **meewerkend voorwerp** in: *'De juf geeft de klas een compliment.'*?",
+        ref: "S",
         options: ["de klas", "De juf", "een compliment", "geeft"],
         answer: 0,
         wrongHints: [null, "De juf is degene die geeft — het onderwerp.", "Dat is wát ze geeft — het lijdend voorwerp.", "Dat is de persoonsvorm."],
@@ -2561,6 +2635,7 @@ const steps = [
       },
       {
         q: "Welke zin is **netjes geschreven** (geen spreektaal)?",
+        ref: "1F",
         options: ["Dat heeft hij niet gedaan.", "Dat heb die niet gedaan.", "Dat hebbie niet gedaan.", "Dattie niet heb gedaan."],
         answer: 0,
         wrongHints: [null, "'Die' als onderwerp voor een persoon is spreektaal — wat hoort er in schrijftaal?", "'Hebbie' is hoe je het zégt, niet hoe je het schrijft.", "Twee spreektaal-vormen tegelijk."],
@@ -2568,18 +2643,21 @@ const steps = [
       },
       {
         q: "*'Open vraag*': welk leesteken hoort aan het eind van *'Pas op voor de gladde vloer'* als waarschuwing? (typ het leesteken)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["!", "uitroepteken"],
         explanation: "Een waarschuwing krijgt een **uitroepteken**: 'Pas op voor de gladde vloer!'",
       },
       {
         q: "*'Open vraag*': wat is het **onderwerp** in *'Morgen begint de zomervakantie'*? (typ het zinsdeel)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["de zomervakantie", "zomervakantie"],
         explanation: "Vraag: wat begint er? → **de zomervakantie**. Niet elke zin begint met het onderwerp — 'morgen' is een tijdsbepaling.",
       },
       {
         q: "*'Open vraag*': verbeter het verwijswoord: *'het huis **die** te koop staat'* → het huis ... te koop staat (typ het juiste woord)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["dat"],
         explanation: "'Het huis' is een het-woord → verwijswoord **dat**: het huis dat te koop staat.",

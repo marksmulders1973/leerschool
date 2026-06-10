@@ -57,6 +57,7 @@ const steps = [
   // ─── Stap 1: Breuken & decimalen ──────────────────
   {
     title: "Breuken & decimalen — ~20 min",
+    refOnderdeel: "rekenen",
     explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie Cito.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
@@ -285,6 +286,7 @@ const steps = [
       },
       {
         q: "Wat is **5/6 − 1/2**?",
+        ref: "S",
         options: ["1/3", "4/4", "1/6", "2/3"],
         answer: 0,
         wrongHints: [null, "Niet zo.", "Te klein.", "Te groot."],
@@ -504,6 +506,7 @@ const steps = [
       },
       {
         q: "Welke breuk is **gelijk aan 0,4**?",
+        ref: "S",
         options: ["2/5", "1/4", "4/100", "1/40"],
         answer: 0,
         wrongHints: [null, "1/4 = 0,25 — reken maar na: 1 ÷ 4.", "4/100 = 0,04 — let op de plaats van de komma.", "Dat is nóg tien keer kleiner."],
@@ -511,6 +514,7 @@ const steps = [
       },
       {
         q: "**3/4 + 1/8** = ?",
+        ref: "S",
         options: ["7/8", "4/12", "4/8", "1/2"],
         answer: 0,
         wrongHints: [null, "Tellers en noemers zomaar optellen mag niet — maak ze eerst gelijknamig.", "Hoeveel achtsten is 3/4? Dan pas optellen.", "Dat is mínder dan waar je mee begon — kan dat bij optellen?"],
@@ -518,6 +522,7 @@ const steps = [
       },
       {
         q: "Zet op volgorde van **klein naar groot**: 0,8 — 0,75 — 0,9",
+        ref: "1F",
         options: ["0,75 — 0,8 — 0,9", "0,8 — 0,75 — 0,9", "0,9 — 0,8 — 0,75", "0,75 — 0,9 — 0,8"],
         answer: 0,
         wrongHints: [null, "Vergelijk per honderdste: 0,80 en 0,75 — welke is kleiner?", "Dit is van groot naar klein — lees de vraag nog eens.", "Check de laatste twee: is 0,9 kleiner dan 0,8?"],
@@ -525,6 +530,7 @@ const steps = [
       },
       {
         q: "**1/3 van 27** = ?",
+        ref: "1F",
         options: ["9", "3", "24", "81"],
         answer: 0,
         wrongHints: [null, "Dat is 27 ÷ 9 — je moet door de noemer 3 delen.", "Aftrekken is iets anders dan een derde nemen.", "Dat is 27 × 3 — een derde némen is juist delen."],
@@ -532,6 +538,7 @@ const steps = [
       },
       {
         q: "**2,5 + 1,75** = ?",
+        ref: "1F",
         options: ["4,25", "3,75", "4,75", "3,25"],
         answer: 0,
         wrongHints: [null, "Tel nog eens: 2,5 = 2,50 — zet de komma's onder elkaar.", "Te veel — check de optelling van de halve en driekwart.", "Te weinig — vergeet de hele getallen niet."],
@@ -539,6 +546,7 @@ const steps = [
       },
       {
         q: "Welk kommagetal hoort bij **3/8**?",
+        ref: "S",
         options: ["0,375", "0,38", "3,8", "0,335"],
         answer: 0,
         wrongHints: [null, "Bijna — maar 0,38 is afgerond. Reken 3 ÷ 8 precies uit.", "Dat is bijna 4 — kan dat als 3/8 minder dan een half is?", "Reken stap voor stap: 1/8 = 0,125, dus 3/8 = ?"],
@@ -567,6 +575,7 @@ const steps = [
       },
       {
         q: "**0,06 × 10** = ?",
+        ref: "1F",
         options: ["0,6", "6", "0,006", "60"],
         answer: 0,
         wrongHints: [null, "Dat is ×100 — de komma schuift maar één plek.", "De komma schuift naar rechts bij vermenigvuldigen, niet naar links.", "Veel te groot — dat is ×1000."],
@@ -574,6 +583,7 @@ const steps = [
       },
       {
         q: "Een pizza is verdeeld in 12 punten. Jij eet er 3. Welk **deel** van de pizza at je?",
+        ref: "1F",
         options: ["1/4", "1/3", "3/4", "1/12"],
         answer: 0,
         wrongHints: [null, "3/12 — vereenvoudig: deel teller en noemer door 3.", "Dat zou 9 van de 12 punten zijn.", "Dat is maar één punt."],
@@ -581,6 +591,7 @@ const steps = [
       },
       {
         q: "Welk getal ligt **precies tussen** 0,3 en 0,4?",
+        ref: "S",
         options: ["0,35", "0,34", "0,7", "0,305"],
         answer: 0,
         wrongHints: [null, "Dichtbij — maar ligt 0,34 precies in het midden?", "Dat is 0,3 + 0,4 — je zoekt het midden, niet de som.", "Dat ligt vlak bij 0,3, niet in het midden."],
@@ -588,6 +599,7 @@ const steps = [
       },
       {
         q: "**3 × 2/9** = ?",
+        ref: "S",
         options: ["2/3", "6/27", "5/9", "2/27"],
         answer: 0,
         wrongHints: [null, "6/9 kan eenvoudiger — deel teller en noemer door 3.", "Je vermenigvuldigt alleen de téller met 3, niet de noemer.", "Optellen van 3 en 2/9 is iets anders dan vermenigvuldigen."],
@@ -595,6 +607,7 @@ const steps = [
       },
       {
         q: "**1,2 ÷ 0,4** = ?",
+        ref: "S",
         options: ["3", "0,3", "30", "0,8"],
         answer: 0,
         wrongHints: [null, "Hoe vaak past 0,4 in 1,2? Tel maar: 0,4 — 0,8 — 1,2.", "Maak er een makkelijke som van: beide getallen ×10.", "Dat is aftrekken (1,2 − 0,4), geen delen."],
@@ -602,6 +615,7 @@ const steps = [
       },
       {
         q: "Welke breuk is het **grootst**?",
+        ref: "S",
         options: ["5/8", "1/2", "3/8", "5/16"],
         answer: 0,
         wrongHints: [null, "1/2 = 4/8 — is dat meer of minder dan 5/8?", "3/8 is kleiner dan de helft (4/8).", "Zestienden zijn kleinere stukken — vergelijk via achtsten."],
@@ -609,6 +623,7 @@ const steps = [
       },
       {
         q: "Sam drinkt elke dag 0,25 liter sap. Hoeveel liter is dat in **een week**?",
+        ref: "1F",
         options: ["1,75 liter", "2,5 liter", "1,5 liter", "0,75 liter"],
         answer: 0,
         wrongHints: [null, "Dat is 10 dagen — een week heeft er 7.", "Dat is 6 dagen — tel er nog één bij.", "Dat is maar 3 dagen."],
@@ -616,6 +631,7 @@ const steps = [
       },
       {
         q: "**Open vraag**: schrijf 7/10 als kommagetal.",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["0,7", "0.7"],
         explanation: "7/10 = zeven tienden = **0,7**.",
@@ -626,6 +642,7 @@ const steps = [
   // ─── Stap 2: Procenten & verhoudingen ──────────────────
   {
     title: "Procenten & verhoudingen — ~20 min",
+    refOnderdeel: "rekenen",
     explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële Cito-voorbeelden in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROCENT-TRUCS</text>
@@ -706,6 +723,7 @@ const steps = [
       },
       {
         q: "Tom fietst **15 km in 30 minuten**. Snelheid in km/uur?",
+        ref: "S",
         options: ["30 km/u", "15 km/u", "45 km/u", "7,5 km/u"],
         answer: 0,
         wrongHints: [null, "15 = aantal km, niet snelheid per uur.", "45 zou betekenen 22,5 km in 30 min — meer.", "7,5 zou betekenen halve afstand in dezelfde tijd."],
@@ -1139,6 +1157,7 @@ const steps = [
       },
       {
         q: "Een jas van **€80** is afgeprijsd met **25%**. Wat kost de jas nu?",
+        ref: "1F",
         options: ["€60", "€20", "€55", "€75"],
         answer: 0,
         wrongHints: [null, "Dat is de kórting zelf — de vraag is wat je nog betáált.", "Bijna — 25% van €80 is geen €25. Reken eerst 10% uit.", "Dan zou de korting maar €5 zijn — klopt dat met 25%?"],
@@ -1160,6 +1179,7 @@ const steps = [
       },
       {
         q: "**15% van 60** = ?",
+        ref: "1F",
         options: ["9", "15", "6", "4"],
         answer: 0,
         wrongHints: [null, "Dat is het percentage zelf, niet het deel van 60.", "Dat is 10% — je moet er nog de helft daarvan bij.", "60 ÷ 15 is een andere som dan 15% van 60."],
@@ -1167,6 +1187,7 @@ const steps = [
       },
       {
         q: "In een klas van 28 kinderen dragen er 7 een bril. Hoeveel **procent** is dat?",
+        ref: "1F",
         options: ["25%", "7%", "21%", "28%"],
         answer: 0,
         wrongHints: [null, "7 is het aantál — hoeveel procent van 28 is dat? Welk deel is 7 van 28?", "21 is het aantal zónder bril.", "Dat is het totaal aantal kinderen."],
@@ -1174,6 +1195,7 @@ const steps = [
       },
       {
         q: "Limonadesiroop meng je **1 : 4** met water (1 deel siroop op 4 delen water). Hoeveel water hoort bij 200 ml siroop?",
+        ref: "1F",
         options: ["800 ml", "200 ml", "500 ml", "50 ml"],
         answer: 0,
         wrongHints: [null, "Dan zou de verhouding 1 : 1 zijn.", "Tel je het totaal? De vraag gaat alleen over het water.", "Dan zit er méér siroop dan water in — klopt dat met 1 : 4?"],
@@ -1181,6 +1203,7 @@ const steps = [
       },
       {
         q: "Een fiets kostte **€400** en kost nu **€440**. Met hoeveel **procent** is de prijs gestegen?",
+        ref: "S",
         options: ["10%", "40%", "4%", "11%"],
         answer: 0,
         wrongHints: [null, "€40 is de stijging in euro's — de vraag is hoeveel procent dat van €400 is.", "4% van €400 zou maar €16 zijn.", "Pas op: je deelt door de óúde prijs (€400), niet door de nieuwe."],
@@ -1188,6 +1211,7 @@ const steps = [
       },
       {
         q: "**Welk percentage hoort bij 3/5?**",
+        ref: "1F",
         options: ["60%", "35%", "53%", "30%"],
         answer: 0,
         wrongHints: [null, "Lees de breuk goed: 3 op de 5, niet 35 op de 100.", "De cijfers achter elkaar plakken is geen rekenen — deel 3 door 5.", "Dat is 3/10 — let op de noemer."],
@@ -1195,6 +1219,7 @@ const steps = [
       },
       {
         q: "Bij de bakker kosten 3 croissants **€4,50**. Wat kosten **5** croissants?",
+        ref: "1F",
         options: ["€7,50", "€6,00", "€9,00", "€22,50"],
         answer: 0,
         wrongHints: [null, "Reken eerst de prijs van één croissant uit: €4,50 ÷ 3.", "Dat is de prijs van 6 — net te veel.", "Je hebt €4,50 met 5 vermenigvuldigd — maar €4,50 is de prijs van drie."],
@@ -1202,6 +1227,7 @@ const steps = [
       },
       {
         q: "Van de 250 bezoekers van het schoolfeest is **40%** ouder. Hoeveel **ouders** waren er?",
+        ref: "1F",
         options: ["100", "40", "150", "210"],
         answer: 0,
         wrongHints: [null, "40 is het percentage — reken het aantal uit: 10% van 250 eerst.", "Dat is 60% — het deel dat géén ouder is.", "Dan zouden bijna alle bezoekers ouders zijn."],
@@ -1209,6 +1235,7 @@ const steps = [
       },
       {
         q: "Een spel van **€25** wordt **20% duurder**. Wat is de nieuwe prijs?",
+        ref: "1F",
         options: ["€30", "€27", "€20", "€45"],
         answer: 0,
         wrongHints: [null, "20% van €25 is geen €2 — reken eerst 10% uit.", "De prijs stijgt juist — hij wordt niet lager.", "Dan zou de stijging €20 zijn — dat is 80%."],
@@ -1216,6 +1243,7 @@ const steps = [
       },
       {
         q: "De verhouding jongens : meisjes in de klas is **3 : 4**. Er zijn 12 jongens. Hoeveel **meisjes** zijn er?",
+        ref: "S",
         options: ["16", "12", "9", "21"],
         answer: 0,
         wrongHints: [null, "Dan zou de verhouding 1 : 1 zijn.", "Dan zouden er minder meisjes dan jongens zijn — klopt dat met 3 : 4?", "Dat is bijna het totáál — de vraag gaat alleen over de meisjes."],
@@ -1223,6 +1251,7 @@ const steps = [
       },
       {
         q: "**Welke korting is het voordeligst** bij een broek van €50?",
+        ref: "S",
         options: ["30% korting", "€10 korting", "een kwart korting", "20% korting"],
         answer: 0,
         wrongHints: [null, "€10 van €50 = 20% — vergelijk dat met de andere opties.", "Een kwart = 25% — is er een hogere korting bij de opties?", "20% van €50 = €10 — zoek de grootste korting."],
@@ -1230,6 +1259,7 @@ const steps = [
       },
       {
         q: "Op een pak hagelslag staat: **'nu 20% extra gratis'**. Het pak was 400 gram. Hoeveel gram zit er nu in?",
+        ref: "1F",
         options: ["480 gram", "420 gram", "500 gram", "380 gram"],
         answer: 0,
         wrongHints: [null, "20% van 400 gram is meer dan 20 gram — reken 10% eerst.", "Dat zou 25% extra zijn.", "Er komt iets bíj — het pak wordt niet lichter."],
@@ -1237,6 +1267,7 @@ const steps = [
       },
       {
         q: "Tessa krijgt **€2,50 zakgeld** per week. Hoeveel krijgt ze in **een jaar** (52 weken)?",
+        ref: "1F",
         options: ["€130", "€125", "€104", "€150"],
         answer: 0,
         wrongHints: [null, "Net te weinig — 50 × €2,50 = €125, maar het jaar heeft 52 weken.", "Dat is 52 × €2 — vergeet de halve euro niet.", "Dat zou bijna €3 per week zijn."],
@@ -1244,6 +1275,7 @@ const steps = [
       },
       {
         q: "In een zak zitten rode en blauwe knikkers in de verhouding **2 : 3**. Er zitten 30 knikkers in de zak. Hoeveel zijn er **rood**?",
+        ref: "S",
         options: ["12", "20", "15", "10"],
         answer: 0,
         wrongHints: [null, "Dat zijn de blauwe (3 delen).", "Dat is de helft — maar de verhouding is niet 1 : 1.", "Een deel is 6 knikkers — rood heeft er twéé."],
@@ -1251,12 +1283,14 @@ const steps = [
       },
       {
         q: "**Open vraag**: hoeveel is **10% van €85**? (typ het bedrag, bv. 8,50)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["8,50", "8.50", "8,5", "8.5", "€8,50", "€8,50"],
         explanation: "10% = delen door 10: €85 ÷ 10 = **€8,50**.",
       },
       {
         q: "**Open vraag**: 50% van een getal is 18. Welk getal is dat?",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["36"],
         numericTolerance: 0,
@@ -1268,6 +1302,7 @@ const steps = [
   // ─── Stap 3: Meten & schaal ──────────────────
   {
     title: "Meten & schaal — ~20 min",
+    refOnderdeel: "rekenen",
     explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zit 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: Cito.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENGTE-TRAPJE</text>
@@ -1348,6 +1383,7 @@ const steps = [
       },
       {
         q: "Een rechthoekige tuin is **6 m × 4 m**. Oppervlakte?",
+        ref: "1F",
         options: ["24 m²", "10 m²", "20 m²", "12 m²"],
         answer: 0,
         wrongHints: [null, "10 = lengte + breedte. Voor opp moet je vermenigvuldigen.", "20 = omtrek (2× lengte + 2× breedte). Geen oppervlakte.", "12 = halve oppervlakte. Reken opnieuw."],
@@ -1564,6 +1600,7 @@ const steps = [
       },
       {
         q: "**45 minuten** is hoeveel **uur** (in decimaal)?",
+        ref: "S",
         options: ["0,75 uur", "0,45 uur", "1,45 uur", "4,5 uur"],
         answer: 0,
         wrongHints: [null, "Niet — direct delen door 100 werkt niet bij tijd (60 min/uur).", "Veel te veel — minder dan 1 uur.", "Veel te veel."],
@@ -1678,6 +1715,7 @@ const steps = [
       },
       {
         q: "**3,5 km** = hoeveel meter?",
+        ref: "1F",
         options: ["3.500 m", "350 m", "35.000 m", "35 m"],
         answer: 0,
         wrongHints: [null, "1 km = 1.000 m — je schuift drie plekken, niet twee.", "Dat is tien keer te veel.", "Dat is maar 35 meter — korter dan een voetbalveld."],
@@ -1706,6 +1744,7 @@ const steps = [
       },
       {
         q: "Op een kaart met **schaal 1 : 50.000** meet je 6 cm. Hoeveel km is dat in het echt?",
+        ref: "S",
         options: ["3 km", "30 km", "300 m", "6 km"],
         answer: 0,
         wrongHints: [null, "6 × 50.000 = 300.000 cm — reken dat om: hoeveel km?", "Eén nul te veel bij het omrekenen.", "De schaal vergroot — 6 cm op de kaart is niet 6 km in het echt."],
@@ -1713,6 +1752,7 @@ const steps = [
       },
       {
         q: "**2,5 liter** = hoeveel milliliter?",
+        ref: "1F",
         options: ["2.500 ml", "250 ml", "25 ml", "25.000 ml"],
         answer: 0,
         wrongHints: [null, "1 liter = 1.000 ml — schuif drie plekken.", "Dat is een klein glaasje — past 2,5 liter daarin?", "Eén nul te veel."],
@@ -1720,6 +1760,7 @@ const steps = [
       },
       {
         q: "Een pak melk weegt **1,03 kg**. Hoeveel **gram** is dat?",
+        ref: "S",
         options: ["1.030 gram", "103 gram", "10.300 gram", "1.003 gram"],
         answer: 0,
         wrongHints: [null, "1 kg = 1.000 gram — vermenigvuldig 1,03 met 1.000.", "Dat zou ruim 10 kg zijn.", "Let op: 0,03 kg = 30 gram, niet 3 gram."],
@@ -1727,6 +1768,7 @@ const steps = [
       },
       {
         q: "De school begint om **8:45** en de les duurt **70 minuten**. Hoe laat is de les afgelopen?",
+        ref: "1F",
         options: ["9:55", "9:15", "10:15", "9:45"],
         answer: 0,
         wrongHints: [null, "70 minuten is meer dan een half uur.", "Dat zou 90 minuten zijn.", "Dat is precies één uur — er komen nog 10 minuten bij."],
@@ -1734,6 +1776,7 @@ const steps = [
       },
       {
         q: "Een kubus heeft ribben van **3 cm**. Wat is de **inhoud**?",
+        ref: "S",
         options: ["27 cm³", "9 cm³", "18 cm³", "27 cm²"],
         answer: 0,
         wrongHints: [null, "Dat is 3 × 3 — voor inhoud reken je lengte × breedte × hoogte.", "Dat is 3 × 6 — tel je vlakken?", "Het getal klopt, maar inhoud meet je in kubieke centimeters (cm³)."],
@@ -1748,6 +1791,7 @@ const steps = [
       },
       {
         q: "Een hardloper doet **12 km in 1 uur**. Hoe lang doet hij over 3 km (zelfde tempo)?",
+        ref: "S",
         options: ["15 minuten", "12 minuten", "20 minuten", "30 minuten"],
         answer: 0,
         wrongHints: [null, "Bijna — 3 km is een kwart van 12 km. Wat is een kwart van 60 minuten?", "Dan zou hij 9 km in een uur lopen.", "Dat is voor 6 km."],
@@ -1755,6 +1799,7 @@ const steps = [
       },
       {
         q: "Welke eenheid gebruik je voor de **afstand Amsterdam–Parijs**?",
+        ref: "1F",
         options: ["kilometer", "meter", "centimeter", "hectometer"],
         answer: 0,
         wrongHints: [null, "Dat zou een getal van honderdduizenden geven — onhandig groot.", "Daarmee meet je een potlood.", "Hectometers zie je alleen op bordjes langs de snelweg."],
@@ -1762,6 +1807,7 @@ const steps = [
       },
       {
         q: "Een aquarium is **60 cm lang, 30 cm breed en 40 cm hoog**. Hoeveel **liter** past erin? (1 liter = 1.000 cm³)",
+        ref: "S",
         options: ["72 liter", "130 liter", "7,2 liter", "720 liter"],
         answer: 0,
         wrongHints: [null, "60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.", "Eén komma-plek mis — deel 72.000 cm³ door 1.000.", "Tien keer te veel — check de nullen."],
@@ -1769,6 +1815,7 @@ const steps = [
       },
       {
         q: "Het is **kwart voor vier 's middags**. Hoe schrijf je dat in 24-uurs notatie?",
+        ref: "1F",
         options: ["15:45", "16:45", "3:45", "16:15"],
         answer: 0,
         wrongHints: [null, "Kwart voor vier = 15 minuten vóór 16:00.", "Dat is de 12-uurs schrijfwijze — 's middags tel je er 12 bij op.", "Dat is kwart óver vier."],
@@ -1776,6 +1823,7 @@ const steps = [
       },
       {
         q: "Een muur is **4 m breed**. Op de bouwtekening (schaal 1 : 100) is die muur dus ___?",
+        ref: "S",
         options: ["4 cm", "40 cm", "4 mm", "1 cm"],
         answer: 0,
         wrongHints: [null, "400 cm ÷ 100 — check je nullen.", "Dat zou schaal 1 : 1.000 zijn.", "Dan was de schaal 1 : 400."],
@@ -1783,6 +1831,7 @@ const steps = [
       },
       {
         q: "**Open vraag**: hoeveel cm is **1,25 m**? (typ het getal)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["125"],
         numericTolerance: 0,
@@ -1790,6 +1839,7 @@ const steps = [
       },
       {
         q: "**Open vraag**: een film duurt 95 minuten en begint om 19:30. Hoe laat is hij afgelopen? (typ bv. 21:05)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["21:05", "21.05", "21:05 uur"],
         explanation: "95 min = 1 uur en 35 min. 19:30 + 1:35 = **21:05**.",
@@ -1800,6 +1850,7 @@ const steps = [
   // ─── Stap 4: Redactie-eindopdracht ──────────────────
   {
     title: "Redactiesommen — eindopdracht ~20 min",
+    refOnderdeel: "rekenen",
     explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. Cito geeft alleen punten voor goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: Cito.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">REDACTIE-AANPAK</text>
@@ -2330,6 +2381,7 @@ const steps = [
       },
       {
         q: "Noor koopt 3 schriften van **€1,25** per stuk en betaalt met **€5**. Hoeveel krijgt ze terug?",
+        ref: "1F",
         options: ["€1,25", "€3,75", "€2,25", "€0,75"],
         answer: 0,
         wrongHints: [null, "Dat is wat de schriften sámen kosten — de vraag is wat ze terugkrijgt.", "3 × €1,25 = €3,75; trek dát van €5 af.", "Check de aftrekking: €5,00 − €3,75."],
@@ -2337,6 +2389,7 @@ const steps = [
       },
       {
         q: "Groep 8 gaat met **53 kinderen** op kamp. In elke tent passen **6** kinderen. Hoeveel tenten zijn er nodig?",
+        ref: "S",
         options: ["9", "8", "10", "6"],
         answer: 0,
         wrongHints: [null, "53 ÷ 6 = 8 rest 5 — waar slapen die laatste 5 kinderen?", "Eén te veel — reken 9 × 6 maar na.", "Dan passen er maar 36 kinderen."],
@@ -2358,6 +2411,7 @@ const steps = [
       },
       {
         q: "Een bioscoopkaartje kost **€11,50**. Met de familiekorting betaal je **€2 minder** per kaartje. Wat kosten **4 kaartjes** met korting?",
+        ref: "1F",
         options: ["€38", "€46", "€44", "€36"],
         answer: 0,
         wrongHints: [null, "Dat is 4 × €11,50 — je vergeet de korting.", "Dat is alleen de korting eraf bij het totaal van €46... reken na: 4 × €9,50.", "Net te weinig — het kaartje kost €9,50, niet €9."],
@@ -2365,6 +2419,7 @@ const steps = [
       },
       {
         q: "Op het schoolplein staan fietsen en steps: samen **20 voertuigen met 46 wielen**. Een fiets heeft 2 wielen, een step ook 2... behalve de 6 driewielers van de kleuters. Hoeveel wielen hebben de 14 gewone voertuigen samen?",
+        ref: "S",
         options: ["28", "46", "18", "40"],
         answer: 0,
         wrongHints: [null, "Dat is het totaal — de vraag gaat alleen over de gewone tweewielers.", "6 driewielers × 3 wielen = 18; trek die van 46 af.", "Check: 14 × 2 wielen."],
@@ -2372,6 +2427,7 @@ const steps = [
       },
       {
         q: "Drie vrienden verdelen **€45** zó dat ieder evenveel krijgt, maar Jin krijgt **€6 extra** omdat hij het langst hielp. Eerst de €6 eraf — hoeveel krijgt ieder van de rest?",
+        ref: "S",
         options: ["€13", "€15", "€19", "€11"],
         answer: 0,
         wrongHints: [null, "€45 ÷ 3 — maar haal eerst Jins extra €6 van het totaal af.", "Dat zou €13 + €6 zijn — de vraag is het basisbedrag.", "Check: 3 × €11 + €6 = €39, geen €45."],
@@ -2379,6 +2435,7 @@ const steps = [
       },
       {
         q: "Een trein vertrekt om **10:48** en komt aan om **12:15**. Hoe lang duurt de reis?",
+        ref: "S",
         options: ["1 uur en 27 minuten", "1 uur en 33 minuten", "2 uur en 27 minuten", "87 uur"],
         answer: 0,
         wrongHints: [null, "Reken in stappen: 10:48 → 11:00 is 12 min, dan nog 1 uur en 15 min.", "Van 10:48 tot 12:48 zou 2 uur zijn — de trein is er eerder.", "Minuten en uren door elkaar — 87 minuten is 1 uur en 27 minuten."],
@@ -2386,6 +2443,7 @@ const steps = [
       },
       {
         q: "Bij de bakker kost een brood **€2,80**. Vandaag: **'2e brood halve prijs'**. Wat kosten 2 broden vandaag?",
+        ref: "1F",
         options: ["€4,20", "€5,60", "€2,80", "€4,90"],
         answer: 0,
         wrongHints: [null, "Dat is 2 × €2,80 — zonder de actie.", "Dat is maar één brood.", "Halve prijs van €2,80 is €1,40 — tel opnieuw op."],
@@ -2393,6 +2451,7 @@ const steps = [
       },
       {
         q: "Mila leest elke avond **25 bladzijden**. Haar boek heeft **180 bladzijden**. Na hoeveel avonden heeft ze het uit?",
+        ref: "S",
         options: ["8", "7", "9", "6"],
         answer: 0,
         wrongHints: [null, "180 ÷ 25 = 7 rest 5 — die laatste 5 bladzijden tellen ook.", "Eén te veel: na 8 avonden is het boek al uit.", "Dan heeft ze pas 150 bladzijden gelezen."],
@@ -2400,6 +2459,7 @@ const steps = [
       },
       {
         q: "Een klas spaart voor het schoolreisje: ze hebben al **€78** en er moet **€195** komen. De resterende kosten verdelen ze over **26 kinderen**. Hoeveel betaalt elk kind?",
+        ref: "S",
         options: ["€4,50", "€7,50", "€3,00", "€117"],
         answer: 0,
         wrongHints: [null, "Eerst het tekort: €195 − €78. Deel dát door 26.", "Dat zou €195 ÷ 26 zijn — maar er is al €78 gespaard.", "Dat is het tekort zélf, niet het bedrag per kind."],
@@ -2407,6 +2467,7 @@ const steps = [
       },
       {
         q: "Opa is **3 keer zo oud** als Daan. Samen zijn ze **76 jaar**. Hoe oud is Daan?",
+        ref: "S",
         options: ["19", "25", "57", "38"],
         answer: 0,
         wrongHints: [null, "Samen zijn ze 4 'delen' (1 voor Daan + 3 voor opa). Deel 76 door 4.", "Dat is de leeftijd van opa min een paar jaar — reken met delen.", "Dat is de helft — maar opa is geen 2 keer maar 3 keer zo oud."],
@@ -2414,6 +2475,7 @@ const steps = [
       },
       {
         q: "Een doos met **24 flesjes** water kost **€6**. Op het festival kost één flesje **€2,50**. Hoeveel keer zo duur is een festival-flesje?",
+        ref: "S",
         options: ["10 keer", "4 keer", "2,5 keer", "6 keer"],
         answer: 0,
         wrongHints: [null, "Eerst de prijs per flesje uit de doos: €6 ÷ 24.", "€6 ÷ 24 = €0,25 — hoeveel keer past dat in €2,50?", "Vergelijk per flesje, niet per doos."],
@@ -2421,6 +2483,7 @@ const steps = [
       },
       {
         q: "Het vliegtuig vertrekt om **14:20**. Je moet **2,5 uur van tevoren** inchecken en de reis naar het vliegveld duurt **45 minuten**. Hoe laat moet je uiterlijk van huis?",
+        ref: "S",
         options: ["11:05", "11:50", "12:35", "10:45"],
         answer: 0,
         wrongHints: [null, "Twee stappen terug: 14:20 − 2:30 = 11:50, en dan nóg de reistijd eraf.", "Dat is alleen het inchecken — de autorit moet er nog vanaf.", "Dat is alleen de reistijd eraf — het inchecken mist."],
@@ -2428,6 +2491,7 @@ const steps = [
       },
       {
         q: "Een recept voor **4 personen** vraagt **300 gram** pasta. Hoeveel gram heb je nodig voor **6 personen**?",
+        ref: "1F",
         options: ["450 gram", "500 gram", "600 gram", "350 gram"],
         answer: 0,
         wrongHints: [null, "Per persoon: 300 ÷ 4 = 75 gram. Maal 6.", "Dat zou voor 8 personen zijn.", "50 gram per extra persoon is te weinig — reken per persoon."],
@@ -2435,12 +2499,14 @@ const steps = [
       },
       {
         q: "**Open vraag**: Job koopt een broodje van €3,45 en een pakje drinken van €1,80. Hij betaalt met €10. Hoeveel krijgt hij terug? (typ bv. 4,75)",
+        ref: "1F",
         kind: "open",
         acceptedAnswers: ["4,75", "4.75", "€4,75"],
         explanation: "€3,45 + €1,80 = €5,25. Terug: €10,00 − €5,25 = **€4,75**.",
       },
       {
         q: "**Open vraag**: een zwembad-abonnement kost €120 per jaar. Losse kaartjes kosten €4. Vanaf hoeveel zwembeurten per jaar is het abonnement voordeliger? (typ het aantal)",
+        ref: "S",
         kind: "open",
         acceptedAnswers: ["31"],
         numericTolerance: 0,
