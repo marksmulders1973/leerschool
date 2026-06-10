@@ -64,14 +64,16 @@ Doel: **70 echte vragen per vak** = ~2 complete examens (jouw voorstel 2026-05-1
 
 ## Huidige status (2026-05-14)
 
-### Doorstroomtoets G8 — 36% gevuld
+### Doorstroomtoets G8 — ✅ 100% gevuld (2026-06-10)
 
 | Onderdeel | Doel | Nu | Gevuld | Tekort |
 |---|---:|---:|---:|---:|
-| Taal G8 | 210 | 74 | 35% | **136q** |
-| Rekenen G8 | 210 | 74 | 35% | **136q** |
-| Studievaardigheden G8 | 210 | 79 | 38% | **131q** |
-| **Subtotaal** | **630** | **227** | **36%** | **403q** |
+| Taal G8 | 210 | 213 | ✅ 101% | 0 |
+| Rekenen G8 | 210 | 217 | ✅ 103% | 0 |
+| Studievaardigheden G8 | 210 | 210 | ✅ 100% | 0 |
+| **Subtotaal** | **630** | **640** | **✅ 102%** | **0** |
+
+*(Stand 2026-05-14 was 227/630 = 36%; sessies mei-juni vulden aan tot ~450; sessie 2026-06-10 maakte het af: +62 taal, +61 rekenen, +60 studievaardigheden — commits 383e223 / cf8ef11 / 190fa69.)*
 
 ### VMBO-examens — 85% maar scheef
 
