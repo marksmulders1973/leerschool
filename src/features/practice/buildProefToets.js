@@ -8,6 +8,7 @@
 // Mode is "examen" — PlayQuiz verbergt dan hints/YouTube/uitlegPad-trigger.
 
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
+import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -51,7 +52,7 @@ export async function buildProefToets({ leerpadId, aantal = 30 }) {
   // Strip uitlegPad zodat PlayQuiz geen "ik snap het niet"-flow toont in examen-modus
   const questions = selectie.map((c) => {
     const { uitlegPad: _u, ...rest } = c;
-    return rest;
+    return shuffleOpties(rest);
   });
   const quiz = {
     id: `proeftoets-${leerpadId}`,

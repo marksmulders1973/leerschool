@@ -13,6 +13,7 @@
 // laden we alleen de PO-paden (~25-30 van 165), niet de hele bundel.
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { getLearnPath } from "../learnPaths/pathLoaders.js";
+import { shuffleOpties } from "./shuffleOpties.js";
 import { getWrongChecks } from "./adaptiveStore.js";
 
 // Welke `subject`-keys horen bij welk Cito-onderdeel.
@@ -223,7 +224,11 @@ export async function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
     }
   }
 
-  return shuffle(picked, rng);
+  // Opties schudden tegen altijd-A-bias (juiste antwoord staat in de data
+  // vrijwel altijd op index 0). Authentieke examenvragen (examenBron) houden
+  // hun officiële volgorde. shuffleOpties stript ook de letter-shorthand
+  // ("… A.") uit uitlegPad-niveaus zodat de uitleg blijft kloppen.
+  return shuffle(picked, rng).map((v) => (v.examenBron ? v : shuffleOpties(v, rng)));
 }
 
 // Score-berekening per pijler. Returnt {total: {correct, total, pct}, perPijler: {...}}.

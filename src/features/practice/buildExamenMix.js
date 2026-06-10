@@ -10,6 +10,7 @@
 
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
+import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -72,9 +73,11 @@ export async function buildExamenMix({ subject, aantal = null }) {
   // Strip uitlegPad: in examen-modus toont PlayQuiz geen "ik snap het
   // niet"-flow. examenBron blijft staan zodat per-vraag de bron-info
   // (jaar+tijdvak+vraag-nr) zichtbaar is via de examenBron-pill.
+  // Opties schudden tegen altijd-A-bias — behalve bij authentieke
+  // examenvragen (examenBron): daar is de officiële volgorde heilig.
   const questions = finalSelectie.map((c) => {
     const { uitlegPad: _u, ...rest } = c;
-    return rest;
+    return rest.examenBron ? rest : shuffleOpties(rest);
   });
   const label = VAK_LABELS[subject] || subject;
   const quiz = {
