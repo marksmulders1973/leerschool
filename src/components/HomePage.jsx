@@ -449,10 +449,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     if (feedbackQuotaReached()) { setFeedbackError("Je hebt vandaag al 3 berichten gestuurd. Probeer morgen weer."); return; }
     setFeedbackBusy(true); setFeedbackError("");
     try {
-      // Sprint-2 privacy-fix (G2a): bewaar OOK het path zodat admin signed URL
-      // kan gebruiken zodra bucket privatified is. publicUrl blijft als fallback
-      // voor backwards-compat met bestaande rijen.
-      let screenshotUrl = null;
+      // Privacy (G2a): bucket is privé — alleen het path opslaan; admin haalt
+      // er een signed URL bij op. Geen publicUrl meer (werkt toch niet op een
+      // privébucket en hoort niet in de tabel).
       let screenshotPath = null;
       if (feedbackImage) {
         const ext = (feedbackImage.name.split(".").pop() || "png").toLowerCase().slice(0, 5);
@@ -460,8 +459,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         const { error: upErr } = await supabase.storage.from("feedback-screenshots").upload(path, feedbackImage, { contentType: feedbackImage.type, upsert: false });
         if (upErr) throw upErr;
         screenshotPath = path;
-        const { data } = supabase.storage.from("feedback-screenshots").getPublicUrl(path);
-        screenshotUrl = data?.publicUrl || null;
       }
       const { error } = await supabase.from("feedback").insert({
         message: tekst.slice(0, 2000),
@@ -469,7 +466,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         user_id: authUser?.id || null,
         page_url: typeof window !== "undefined" ? window.location.href.slice(0, 500) : null,
         user_agent: typeof navigator !== "undefined" ? (navigator.userAgent || "").slice(0, 300) : null,
-        screenshot_url: screenshotUrl,
         screenshot_path: screenshotPath,
       });
       if (error) throw error;

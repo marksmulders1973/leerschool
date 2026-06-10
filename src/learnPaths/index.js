@@ -310,6 +310,23 @@ import koudeOorlogModernPo from "./koudeOorlogModernPo.js";
 import eetcultuurNederlandPo from "./eetcultuurNederlandPo.js";
 import kritischDenkenPo from "./kritischDenkenPo.js";
 import oudheidEgyptiansGriekenPo from "./oudheidEgyptiansGriekenPo.js";
+// Nageregistreerd 2026-06-10 — stonden wel in het manifest (UI) maar niet hier,
+// waardoor vraag→pad-matching (findLearnPathForQuestion) ze niet zag.
+import basisGrammaticaEngelsPo from "./basisGrammaticaEngelsPo.js";
+import cryptoBlockchainGeldBeco from "./cryptoBlockchainGeldBeco.js";
+import examenNederlands2022T1 from "./examenNederlands2022T1.js";
+import examenNederlands2022T2 from "./examenNederlands2022T2.js";
+import examenNederlands2023T1 from "./examenNederlands2023T1.js";
+import examenNederlands2023T2 from "./examenNederlands2023T2.js";
+import examenNederlands2024T1 from "./examenNederlands2024T1.js";
+import examenNederlands2024T2 from "./examenNederlands2024T2.js";
+import examenNederlands2025T1 from "./examenNederlands2025T1.js";
+import examenNederlands2025T2 from "./examenNederlands2025T2.js";
+import moederbedrijfOvernameSonacBeco from "./moederbedrijfOvernameSonacBeco.js";
+import topografieEuropaLandenPo from "./topografieEuropaPo.jsx";
+import topografieNederlandProvinciesPo from "./topografieNederlandProvinciesPo.jsx";
+import topografieWereldWerelddelenPo from "./topografieWereldWerelddelenPo.jsx";
+import woordenschatEngelsPo from "./woordenschatEngelsPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -637,6 +654,22 @@ export const ALL_LEARN_PATHS = {
   // PO Wereld & Natuur
   "dieren-seizoenen-natuur": dierenSeizoenenNatuur,
   "sterren-planeten": sterrenPlaneten,
+  // Nageregistreerd 2026-06-10 (zie import-blok)
+  "basis-grammatica-engels-po": basisGrammaticaEngelsPo,
+  "crypto-blockchain-geld-beco": cryptoBlockchainGeldBeco,
+  "examen-nederlands-2022-t1": examenNederlands2022T1,
+  "examen-nederlands-2022-t2": examenNederlands2022T2,
+  "examen-nederlands-2023-t1": examenNederlands2023T1,
+  "examen-nederlands-2023-t2": examenNederlands2023T2,
+  "examen-nederlands-2024-t1": examenNederlands2024T1,
+  "examen-nederlands-2024-t2": examenNederlands2024T2,
+  "examen-nederlands-2025-t1": examenNederlands2025T1,
+  "examen-nederlands-2025-t2": examenNederlands2025T2,
+  "moederbedrijf-overname-sonac-beco": moederbedrijfOvernameSonacBeco,
+  "topografie-europa-landen-po": topografieEuropaLandenPo,
+  "topografie-nederland-provincies-po": topografieNederlandProvinciesPo,
+  "topografie-wereld-werelddelen-po": topografieWereldWerelddelenPo,
+  "woordenschat-engels-po": woordenschatEngelsPo,
 };
 
 import { QUESTION_PATH_MAP } from "./questionPathMap.generated.js";

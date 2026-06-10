@@ -9,7 +9,7 @@ import {
   getBijlageUrl,
   getUitwerkbijlageUrl,
 } from "../data/examens.js";
-import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
+import { isExamenSpeelbaar } from "../data/examenQuizzes/speelbaar.js";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { countExamenMixVragen } from "../features/practice/buildExamenMix.js";
 

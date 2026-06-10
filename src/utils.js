@@ -25,6 +25,7 @@ function _cleanProps(p) {
     if (/e?mail|naam|name(?!_length)|wachtwoord|password|adres|telefoon/i.test(k)) continue; // PII-sleutels weg
     const v = p[k];
     if (typeof v === "string" && v.length > 60) continue; // geen lange vrije tekst loggen
+    if (typeof v === "string" && /\S+@\S+\.\S+/.test(v)) continue; // e-mail als wáárde onder onschuldige sleutel
     out[k] = v;
   }
   return Object.keys(out).length ? out : null;

@@ -36,9 +36,11 @@ function getClientIp(req) {
 export function guardRequest(req) {
   const origin = req.headers.get?.("origin") || "";
   const referer = req.headers.get?.("referer") || "";
-  const isAllowed = ALLOWED_ORIGINS.some((o) =>
-    origin === o || referer.startsWith(o + "/")
-  );
+  // Origin is leidend; referer alleen als fallback wanneer er géén origin
+  // meegestuurd is (een mismatchende origin mag niet via referer alsnog door).
+  const isAllowed = origin
+    ? ALLOWED_ORIGINS.includes(origin)
+    : ALLOWED_ORIGINS.some((o) => referer.startsWith(o + "/"));
   if (!isAllowed) {
     return new Response(JSON.stringify({ error: "Forbidden origin" }), {
       status: 403,

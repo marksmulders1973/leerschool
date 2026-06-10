@@ -1200,6 +1200,25 @@ export const CHAPTER_TITLES = {
     "Techniek",
     "Nederland en de wereld",
   ],
+  // ── Klassieke talen + levensbeschouwing (eigen oefenvragen) ──
+  "prima-nova": [
+    "Eerste woorden Latijn",
+    "Naamvallen",
+    "Beroemde uitspraken",
+    "Rome en de Romeinen",
+  ],
+  "hellas": [
+    "Het Griekse alfabet",
+    "Filosofen en het land",
+    "De Griekse stad",
+    "Homerus en de mythen",
+  ],
+  "zingeving": [
+    "Levensvragen",
+    "Ethiek en wereldgodsdiensten",
+    "Respect en deugden",
+    "Stilte en bezinning",
+  ],
 };
 
 // Paragraaftitels per boek per hoofdstuk (index 0 = §X.1)
