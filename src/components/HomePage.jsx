@@ -506,7 +506,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 transformOrigin: "50% 50%",
                 animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
               }} aria-hidden="true">
-                <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#ffd54f" />
+                <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
               </svg>
               <span style={{
                 fontFamily: "var(--font-display, -apple-system, sans-serif)",
