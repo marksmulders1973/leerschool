@@ -105,31 +105,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
   // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal UIT.
-  // Welkom-video TERUG (Mark wens) — alleen 1× bij allereerste bezoek
-  // via localStorage `lk_zag_intro_video`. Daarna nooit meer.
+  // Intro-video definitief verwijderd 2026-06-10 (Mark-besluit).
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const [showWelcomeVideo, setShowWelcomeVideo] = useState(() => {
-    try { return !localStorage.getItem("lk_zag_intro_video"); } catch { return false; }
-  });
-  // Mark wens 2026-05-11: standaard geluid AAN.
-  // Browser kan autoplay-met-geluid blokkeren — dan vangen we via videoRef
-  // de play()-rejection af en schakelen alsnog muted in.
-  const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(false);
-  const welcomeVideoRef = useRef(null);
-  // Mark wens 2026-06-02: intro speelt max 2× en stopt dan (geen oneindige loop).
-  const welcomeVideoPlaysRef = useRef(0);
-  useEffect(() => {
-    if (!showWelcomeVideo || !welcomeVideoRef.current) return;
-    const el = welcomeVideoRef.current;
-    const tryPlay = el.play();
-    if (tryPlay && typeof tryPlay.catch === "function") {
-      tryPlay.catch(() => {
-        // Autoplay-met-geluid geblokkeerd → fallback naar muted + retry.
-        setWelcomeVideoMuted(true);
-        setTimeout(() => { try { el.play(); } catch {} }, 50);
-      });
-    }
-  }, [showWelcomeVideo]);
+  // Intro-video verwijderd 2026-06-10 — zie comment bij de voormalige modal.
   // Terugkerende bezoeker? Sla de rolkeuze-muur over en ga direct verder waar je
   // was — alléén bij de EERSTE home-load van deze sessie (de Home-tab blijft
   // daarna gewoon de homepage tonen). Dicht de grootste funnel-lek uit de
@@ -151,11 +129,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const closeWelcomeVideo = () => {
-    try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
-    try { track("welcome_video_closed"); } catch {}
-    setShowWelcomeVideo(false);
-  };
   // PWA-install via gedeelde hook (audit-2 v2 + Mark feedback 2026-05-08).
   const pwa = usePwaInstall();
   const [showInstallHelp, setShowInstallHelp] = useState(false);
@@ -435,95 +408,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           {shareToast}
         </div>
       )}
-      {showWelcomeVideo && (
-        <div
-          onClick={closeWelcomeVideo}
-          style={{
-            position: "fixed", inset: 0, zIndex: 10000,
-            background: "rgba(0,0,0,0.92)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            padding: 16,
-          }}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              position: "relative",
-              width: "100%",
-              maxWidth: 480,
-              borderRadius: 20,
-              overflow: "hidden",
-              boxShadow: "0 12px 60px rgba(0,0,0,0.7)",
-              background: "#000",
-            }}
-          >
-            <video
-              ref={welcomeVideoRef}
-              src="/reclame.mp4"
-              autoPlay
-              muted={welcomeVideoMuted}
-              playsInline
-              onEnded={() => {
-                welcomeVideoPlaysRef.current += 1;
-                // Na 1e keer: nog één keer afspelen. Na 2e keer: laten staan (stop).
-                if (welcomeVideoPlaysRef.current < 2 && welcomeVideoRef.current) {
-                  try { welcomeVideoRef.current.play(); } catch {}
-                }
-              }}
-              onClick={() => setWelcomeVideoMuted((m) => !m)}
-              style={{ width: "100%", display: "block", cursor: "pointer" }}
-            />
-            <button
-              onClick={closeWelcomeVideo}
-              aria-label="Sluiten"
-              style={{
-                position: "absolute", top: 10, right: 10,
-                width: 36, height: 36, borderRadius: "50%",
-                border: "none", background: "rgba(0,0,0,0.7)",
-                color: "#fff", fontSize: 18, cursor: "pointer",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                lineHeight: 1,
-              }}
-            >
-              ✕
-            </button>
-            <button
-              onClick={() => setWelcomeVideoMuted((m) => !m)}
-              aria-label={welcomeVideoMuted ? "Geluid aan" : "Geluid uit"}
-              style={{
-                position: "absolute", top: 10, left: 10,
-                padding: "8px 14px", borderRadius: 999,
-                border: "none", background: "rgba(0,0,0,0.7)",
-                color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
-                fontFamily: "var(--font-display, sans-serif)",
-              }}
-            >
-              {welcomeVideoMuted ? "🔇 Geluid aan" : "🔊 Geluid uit"}
-            </button>
-            <div style={{
-              padding: "16px 20px 20px",
-              background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 30%)",
-              position: "absolute", left: 0, right: 0, bottom: 0,
-              display: "flex", flexDirection: "column", alignItems: "center", gap: 10,
-            }}>
-              <button
-                onClick={closeWelcomeVideo}
-                style={{
-                  padding: "13px 32px", borderRadius: 999,
-                  border: "none",
-                  background: "linear-gradient(135deg, #00C853, #00e676)",
-                  color: "#fff", fontFamily: "var(--font-display, sans-serif)",
-                  fontSize: 16, fontWeight: 800, cursor: "pointer",
-                  boxShadow: "0 6px 20px rgba(0,200,83,0.45)",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                Probeer gratis →
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Intro-video verwijderd 2026-06-10 (Mark: "als de intro video niet
+          goed is mag het weg") — review wees autoplay-met-geluid aan als grootste
+          afhaak-risico voor nieuwe mobiele bezoekers; de nieuwe hero draagt de
+          boodschap. Bestand public/ blijft staan voor evt. hergebruik op /over. */}
       {showOnboarding && (
         <div style={{
           position: "fixed", inset: 0, zIndex: 9999,
