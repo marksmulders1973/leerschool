@@ -2,6 +2,44 @@
 
 _Opgesteld 2026-06-05 op basis van 4 parallelle research-agents (communities, scholen/leerkrachten, platform-algoritmes, betaald/partners/referral). Doel: zo snel mogelijk **échte, relevante** volgers. Strikt wettelijk — geen gekochte/bot-volgers (illegaal, tegen platform-regels én waardeloos)._
 
+---
+
+## ⚡ AGRESSIEF PLAN v2 — 11 juni 2026 (leidend; vervangt de oude dagcadans)
+
+_Aanleiding: Mark 11 jun "veel te weinig volgers — agressief volgers genereren". Stand: Threads 4 · IG 85 · FB 32. Diagnose: IG groeit zodra we consistent posten + engagen (+19 in 2 dagen); Threads en FB staan stil omdat (a) we Doorstroomtoets-content pushen in het **laagseizoen** (toets = feb) en (b) FB-paginagroei zonder Mark's handwerk niet kan._
+
+### De 5 hefbomen (volgorde = verwachte impact)
+
+**1. Seizoens-pivot: zomerdip + brugklas (nu → eind aug).**
+De Doorstroomtoets-ouder slaapt in juni; dezelfde ouder is nu wakker op twee andere zorgen: de **zomerdip** (summer learning loss) en **"is mijn kind klaar voor de brugklas?"**. Alle dagcontent draait tot september om die twee haken: "15 min per dag tegen de zomerdip", brugklas-checklists, "weet jouw kind dit nog?"-quizvragen. Eind aug pivot terug naar Doorstroomtoets (nieuwe groep-8-lichting oriënteert dan). Zomerdip-volgers = exact de ouders die in nov-feb Doorstroomtoets-content willen.
+
+**2. Threads = volume-machine (4 → 50 in 30 dagen).**
+Threads beloont tekst + replies, geen beelden. Nieuw regime per sessie (Claude):
+- **3 tekst-posts per dag**: 1 oefenvraag-prikkel ("75% van de ouders heeft deze groep-8-som fout — jij?") + 1 herkenbare ouder-observatie + 1 mini-tip. Beste tijden 7:30-8:30 en 20:00-21:30.
+- **Reply-sniping**: elke sessie reageren op vérse posts van grote NL-accounts over onderwijs/opvoeding (@meesterjesper 800K, juffen-accounts, NOS/AD-onderwijs-threads). Eén sterke reply onder een groot account > 10 eigen posts.
+- Elke eigen post sluit met micro-CTA: "Volg @leerkwartier voor elke dag 1 oefenvraag." (Ontbrak tot nu; om volgers vrágen werkt.)
+
+**3. Leerkracht-ambassadeurs via gratis deelbaar materiaal (multiplier).**
+De 44 leerkracht-follows van 9 jun opvolgen met content die juffen/meesters DELEN: het bestaande oefenpakket-PDF (`/oefenpakket`) framen als "gratis zomer-werkboek — print & deel gerust met je klas". Juffen delen gratis materiaal massaal in juli. 1 share door een juf met 5K volgers = honderden ICP-ouders. Wekelijks 1 "voor juffen & meesters"-post + reageren op hun content (géén DM-spam).
+
+**4. Volg-&-win-klapper (1× per maand, gepind op alle 3 profielen).**
+Uitbreiding van de bestaande deel-&-win (/actie): "Volg @leerkwartier + tag een ouder die dit kan gebruiken = kans op een gratis Pro-jaar 2027." Voorwaarden op /actie (Gedragscode Promotionele Kansspelen: gratis deelname, kleine prijs, voorwaarden vindbaar, 'niet gesponsord door Instagram/Meta'-disclaimer). Tag-mechaniek = de enige nette manier waarop bestaande volgers nieuwe aandragen.
+
+**5. FB: eigen groep i.p.v. pagina duwen (open beslissing #3 uit §7 → advies: JA, nu).**
+Paginagroei zonder Mark kan niet (FB staat pagina-engagement bij personen/groepen niet toe). Een **groep** "Doorstroomtoets & brugklas — ouders helpen ouders" groeit wél organisch (FB pusht groepen hard). Claude beheert + post dagelijks 1 discussie-starter; Mark hoeft alleen (a) eenmalig de groep aan te maken (5 min) en (b) wekelijks ~10 vrienden uit te nodigen.
+
+### Wat we bewust NIET doen (agressief ≠ dom)
+- Geen gekochte volgers/bots (waardeloos, bannable, misleidend = onwettig).
+- Geen follow/unfollow-churning boven platform-limieten, geen massa-DM's. Caps blijven ~20-40 follows + ~15-25 replies per kanaal per dag, rustig opgebouwd — een geband account is 100% volgersverlies.
+- Geen linkdumps in groepen, geen "100% gratis"-claims, geen Cito-merkclaims (RCC).
+
+### Cadans & meting
+- **Claude, elke sessie**: 3 Threads-posts + reply-batch + follow-batch (binnen caps) · IG 1 post + hashtag-engagement · FB-groep discussie-starter · tracker-logboek bijwerken + volgers tellen.
+- **Mark, ~20 min/week**: FB-groep aanmaken (eenmalig) · wekelijks vrienden uitnodigen · IG Stories via telefoon (2-3×/wk, poll-sticker) · reels uploaden via telefoon.
+- **Mijlpalen 11 juli**: Threads ≥50 · IG ≥200 · FB-pagina ≥50 + groep ≥100 leden. Mijlpaal niet gehaald → hefboom vervangen, niet harder duwen.
+
+---
+
 ICP: bezorgde **Doorstroomtoets-ouder van groep 6-8** (+ secundair VMBO-ouders/leerlingen). Bewezen trechter: `leerkwartier.app/v/<id>` (echte oefenvraag → uitleg op 3 niveaus). Gemeten: een gepromote /v/-examenvraag → **60 link-klikks** (veruit de beste verkeersbron).
 
 ---
