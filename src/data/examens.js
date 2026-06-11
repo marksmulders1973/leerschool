@@ -54,6 +54,10 @@ const VAKCODES_VMBO_GLTL = {
   economie:        { code: "0233", titel: "Economie — VMBO GL/TL",       heeftBijlage: true,  heeftUitwerkbijlage: false },
   geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL",   heeftBijlage: true,  heeftUitwerkbijlage: false },
   aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL", heeftBijlage: false, heeftUitwerkbijlage: false },
+  // Geverifieerd via curl 2026-06-11: o/b/c HTTP 200 voor 2022-2025 beide
+  // tijdvakken, -u bestaat niet (404). Mark-melding: tegels toonden
+  // "PDF niet beschikbaar" terwijl de examen-paden er al waren.
+  maatschappijkunde: { code: "1127", titel: "Maatschappijkunde — VMBO GL/TL", heeftBijlage: true, heeftUitwerkbijlage: false },
 };
 
 // Helper: genereer entries voor 1 vak × meerdere jaren × 2 tijdvakken.

@@ -134,8 +134,9 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
         const m = p.id.match(/^examen-maatschappijkunde-(\d{4})-t(\d)$/);
         const jaar = m ? Number(m[1]) : 0;
         const tijdvak = m ? Number(m[2]) : 0;
-        // Voor maatschappij staan PDFs onder e.vak === "maatschappijleer"
-        const pdf = EXAMENS.find((e) => e.vak === "maatschappijleer" && e.jaar === jaar && e.tijdvak === tijdvak) || null;
+        // pdfByKey normaliseert maatschappijleer → maatschappijkunde, dus dit
+        // vindt de entries uit de vakcode-tabel (1127, toegevoegd 2026-06-11).
+        const pdf = pdfByKey.get(`maatschappijkunde-${jaar}-${tijdvak}`) || null;
         return { jaar, tijdvak, expectedPadId: p.id, pad: p, pdf };
       }).sort((a, b) => `${b.jaar}-${b.tijdvak}`.localeCompare(`${a.jaar}-${a.tijdvak}`));
     }
