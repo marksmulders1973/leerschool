@@ -3,6 +3,7 @@ import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import { recordRefAnswer } from "../features/mastery/mastery.js";
+import { track } from "../utils.js";
 import MdInline from "../shared/ui/MdInline.jsx";
 import { shuffleOptions } from "../shared/shuffleOptions.js";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
@@ -95,6 +96,9 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
       setIdx(0);
       setSecondsLeft(config.minutes * 60);
       setMode("running");
+      // Dagrapport-meting (2026-06-11): toets-starts waren onzichtbaar in
+      // events — reclame-effect op de simulatie was daardoor niet meetbaar.
+      track("cito_toets_gestart", { simulatie: !!simulatieMode, vak: subjectFilter || "mix", aantal: shuffled.length });
     } catch (e) {
       console.error("sampleCitoMix failed:", e);
       alert("Kon de vragen niet laden. Probeer het opnieuw.");
@@ -115,6 +119,12 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   useEffect(() => {
     if (mode !== "done" || refRecorded.current) return;
     refRecorded.current = true;
+    track("cito_toets_afgerond", {
+      simulatie: !!simulatieMode,
+      vak: subjectFilter || "mix",
+      beantwoord: answers.filter((a) => a != null).length,
+      totaal: questions.length,
+    });
     const player = (playerName || "").trim();
     if (!player) return;
     questions.forEach((q, i) => {
