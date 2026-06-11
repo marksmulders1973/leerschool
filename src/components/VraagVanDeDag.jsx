@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SOCIAL_VRAGEN } from "../socialVragen.js";
+import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import { track } from "../utils.js";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
 
@@ -28,14 +28,10 @@ function _dagKey() {
 }
 
 // Deterministische dag-index zodat iedereen op dezelfde dag dezelfde vraag ziet
-// (en het rouleert per dag door de pool).
+// (en het rouleert per dag door de pool). getSocialVraag levert de opties in
+// de vaste, per-id geschudde volgorde (altijd-A-fix) — zelfde volgorde als /v/<id>.
 function _vraagVanVandaag() {
-  const ids = Object.keys(SOCIAL_VRAGEN);
-  if (!ids.length) return null;
-  const d = new Date();
-  const dagNr = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
-  const id = ids[((dagNr % ids.length) + ids.length) % ids.length];
-  return { id, ...SOCIAL_VRAGEN[id] };
+  return getSocialVraag(vraagVanVandaagId());
 }
 
 export default function VraagVanDeDag() {

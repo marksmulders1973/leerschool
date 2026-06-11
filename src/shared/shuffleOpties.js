@@ -17,6 +17,25 @@ function stripLetterShorthand(s) {
   return typeof s === "string" ? s.replace(/\s[A-D]\.?$/, "") : s;
 }
 
+// Deterministische variant: zelfde vraag-id → zelfde volgorde, voor iedereen
+// en elke dag. Nodig voor de vraag van de dag / /v/-deeplinks, waar de
+// volgorde op de site moet matchen met de geposte social-afbeelding.
+export function shuffleOptiesSeeded(q, seedString) {
+  let h = 1779033703 ^ String(seedString).length;
+  for (const ch of String(seedString)) {
+    h = Math.imul(h ^ ch.charCodeAt(0), 3432918353);
+    h = (h << 13) | (h >>> 19);
+  }
+  let s = h >>> 0;
+  const rng = () => {
+    s = (s + 0x6d2b79f5) >>> 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  return shuffleOpties(q, rng);
+}
+
 export function shuffleOpties(q, rng = Math.random) {
   if (!q || !Array.isArray(q.options) || typeof q.answer !== "number") return q;
   if (q.options.some((o) => typeof o === "string" && POSITIE_VAST.test(o))) return q;

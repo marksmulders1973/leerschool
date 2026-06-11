@@ -14,6 +14,8 @@
 //   wrongHints[] (null voor juiste, denkprikkel voor fout), uitlegPad:{stappen,niveaus},
 //   bron? (alleen bij authentieke examenvraag) }
 
+import { shuffleOptiesSeeded } from "./shared/shuffleOpties.js";
+
 export const SOCIAL_VRAGEN = {
   // ── Pilot 1: breuk-van-een-geheel met "rest"-valkuil ──────
   "rekenpuzzel1": {
@@ -87,7 +89,7 @@ export const SOCIAL_VRAGEN = {
         { titel: "Verschil met de regering", tekst: "De regering (koning + ministers) en het kabinet (ministers + staatssecretarissen) bestúren het land. De volksvertegenwoordigers controleren hén — dat is de scheiding tussen besturen en controleren." },
       ],
       niveaus: {
-        basis: "De Staten-Generaal = Eerste + Tweede Kamer. De mensen daar zijn gekozen door de burgers en beslissen namens hen mee over de wetten. Dat noemen we volksvertegenwoordigers (antwoord D).",
+        basis: "De Staten-Generaal = Eerste + Tweede Kamer. De mensen daar zijn gekozen door de burgers en beslissen namens hen mee over de wetten. Dat noemen we volksvertegenwoordigers.",
         simpeler: "Bij verkiezingen kies jij wie er voor jou in de Tweede Kamer gaat zitten. Die gekozen personen 'vertegenwoordigen' jou — vandaar volksvertegenwoordigers. De regering bestuurt; zij controleren de regering.",
         nogSimpeler: "Jij mag niet zelf elke wet bespreken, dus kies je iemand die dat vóór jou doet. Die persoon spreekt namens het volk = een volksvertegenwoordiger.",
       },
@@ -295,7 +297,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "De hoofdgedachte is de rode draad door alle zinnen. Hier draait alles om: bijen zijn belangrijk voor planten en ons eten (B).",
         simpeler: "Vraag jezelf: waar gaat het in ELKE zin over? Steeds over hoe belangrijk bijen zijn. Dat is de hoofdgedachte.",
-        nogSimpeler: "Waar gaat de hele tekst over? Over bijen die belangrijk zijn. Antwoord B.",
+        nogSimpeler: "Waar gaat de hele tekst over? Over bijen die belangrijk zijn.",
       },
     },
   },
@@ -320,7 +322,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Lees de context: 'bang dat hij zou instorten'. Bouwvallig = vervallen, op instorten (B).",
         simpeler: "Je kent het woord misschien niet — kijk naar de zin ernaast. Die zegt: kan instorten. Dus bouwvallig = bijna kapot.",
-        nogSimpeler: "De brug kan instorten → bouwvallig betekent: bijna kapot. Antwoord B.",
+        nogSimpeler: "De brug kan instorten → bouwvallig betekent: bijna kapot.",
       },
     },
   },
@@ -395,7 +397,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Een uitdrukking is niet letterlijk. 'De kat uit de boom kijken' betekent: eerst rustig afwachten (A).",
         simpeler: "Het gaat niet echt over een kat. Het betekent: je doet nog niks, je kijkt eerst de situatie aan.",
-        nogSimpeler: "Het betekent: eerst afwachten. Antwoord A.",
+        nogSimpeler: "Het betekent: eerst afwachten.",
       },
     },
   },
@@ -418,9 +420,9 @@ export const SOCIAL_VRAGEN = {
         { titel: "d of t?", tekst: "Stam van 'gebeuren' is 'gebeur'. De 'r' zit niet in 't kofschip → voltooid deelwoord met -d: gebeurd." },
       ],
       niveaus: {
-        basis: "'Gebeurd' is een voltooid deelwoord (zoals 'gewerkt'). Stam 'gebeur' + d = gebeurd. Antwoord A.",
+        basis: "'Gebeurd' is een voltooid deelwoord (zoals 'gewerkt'). Stam 'gebeur' + d = gebeurd.",
         simpeler: "Vergelijk met 'gespeeld' en 'gewerkt': 'er is gebeurd' hoort in dat rijtje, met -d aan het eind.",
-        nogSimpeler: "Het is 'gebeurd' (zoals 'gewerkt'). Antwoord A.",
+        nogSimpeler: "Het is 'gebeurd' (zoals 'gewerkt').",
       },
     },
   },
@@ -497,7 +499,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Bij breuken met een 1 bovenaan: hoe kleiner het onderste getal, hoe groter de breuk. ½ heeft het kleinste onderste getal → grootst.",
         simpeler: "Denk aan een taart: in 2 delen zijn de stukken groter dan in 5 delen. Dus ½ > ⅓ > ¼ > ⅕.",
-        nogSimpeler: "½ is het meeste. Antwoord A.",
+        nogSimpeler: "½ is het meeste.",
       },
     },
   },
@@ -520,9 +522,9 @@ export const SOCIAL_VRAGEN = {
         { titel: "Het tegenovergestelde", tekst: "Niet voor even, maar voor altijd = blijvend." },
       ],
       niveaus: {
-        basis: "Tijdelijk = voor even. Het tegenovergestelde is 'blijvend' (voor altijd). Antwoord A.",
+        basis: "Tijdelijk = voor even. Het tegenovergestelde is 'blijvend' (voor altijd).",
         simpeler: "Tijdelijk betekent kort / niet voor altijd. Het tegenovergestelde is iets dat wél blijft: blijvend.",
-        nogSimpeler: "Tijdelijk ↔ blijvend. Antwoord A.",
+        nogSimpeler: "Tijdelijk ↔ blijvend.",
       },
     },
   },
@@ -545,9 +547,9 @@ export const SOCIAL_VRAGEN = {
         { titel: "Het verband", tekst: "Doordat Tim hard trainde, won hij. Dat is een oorzaak-gevolg-verband." },
       ],
       niveaus: {
-        basis: "Eerst trainen, dan winnen: het trainen is de oorzaak van het winnen. Antwoord A.",
+        basis: "Eerst trainen, dan winnen: het trainen is de oorzaak van het winnen.",
         simpeler: "Vraag: waaróm won hij? Omdat hij hard trainde. Trainen → winnen.",
-        nogSimpeler: "Hard trainen zorgde dat hij won. Antwoord A.",
+        nogSimpeler: "Hard trainen zorgde dat hij won.",
       },
     },
   },
@@ -572,7 +574,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Op een kaart is 'boven' het noorden. De pijl naar boven = het noorden (A).",
         simpeler: "Vaste afspraak: de bovenkant van een kaart is het noorden.",
-        nogSimpeler: "Boven op de kaart = noorden. Antwoord A.",
+        nogSimpeler: "Boven op de kaart = noorden.",
       },
     },
   },
@@ -647,9 +649,9 @@ export const SOCIAL_VRAGEN = {
         { titel: "Dus", tekst: "'Wat vind jij ervan?' is goed gespeld." },
       ],
       niveaus: {
-        basis: "Bij 'jij' áchter het werkwoord valt de -t weg: 'vind jij' (niet 'vindt jij'). Antwoord A.",
+        basis: "Bij 'jij' áchter het werkwoord valt de -t weg: 'vind jij' (niet 'vindt jij').",
         simpeler: "Vergelijk: 'jij vindt' (jij vooraan, mét t) maar 'vind jij?' (jij achteraan, zónder t).",
-        nogSimpeler: "'Vind jij' — zonder t. Antwoord A.",
+        nogSimpeler: "'Vind jij' — zonder t.",
       },
     },
   },
@@ -674,7 +676,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Een mening is wat iemand vindt; daar kun je het oneens mee zijn. 'Voetbal is de leukste sport' is een mening (A).",
         simpeler: "Kun je het nameten of controleren? Dan is het een feit. 'Leukste sport' kun je niet meten — dat is een mening.",
-        nogSimpeler: "'Leukste' = mening. Antwoord A.",
+        nogSimpeler: "'Leukste' = mening.",
       },
     },
   },
@@ -699,7 +701,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "Een inhoudsopgave zegt waar iets begint: hoofdstuk 3 over vulkanen start op bladzijde 24 (A).",
         simpeler: "Het getal achteraan is het bladzijdenummer waar het hoofdstuk begint. Dus: blz. 24.",
-        nogSimpeler: "Hoofdstuk 3 begint op blz. 24. Antwoord A.",
+        nogSimpeler: "Hoofdstuk 3 begint op blz. 24.",
       },
     },
   },
@@ -723,7 +725,7 @@ export const SOCIAL_VRAGEN = {
       niveaus: {
         basis: "'Een hekel aan iets hebben' betekent: iets echt niet leuk vinden (A).",
         simpeler: "Als je een hekel aan iets hebt, baal je ervan / vind je het naar.",
-        nogSimpeler: "Hekel = niet leuk vinden. Antwoord A.",
+        nogSimpeler: "Hekel = niet leuk vinden.",
       },
     },
   },
@@ -748,18 +750,23 @@ export const SOCIAL_VRAGEN = {
         { titel: "Noord-Holland → Haarlem", tekst: "De hoofdstad van de provincie Noord-Holland is Haarlem. Daar zit het provinciebestuur." },
       ],
       niveaus: {
-        basis: "Amsterdam is de hoofdstad van het land, maar de hoofdstad van de provincie Noord-Holland is Haarlem (antwoord A).",
+        basis: "Amsterdam is de hoofdstad van het land, maar de hoofdstad van de provincie Noord-Holland is Haarlem.",
         simpeler: "Pas op de valkuil: de bekendste stad is niet altijd de provinciehoofdstad. Voor Noord-Holland is dat Haarlem, niet Amsterdam.",
-        nogSimpeler: "Provincie Noord-Holland → hoofdstad Haar…? Antwoord A.",
+        nogSimpeler: "Provincie Noord-Holland → hoofdstad Haar…?",
       },
     },
   },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
+// Altijd-A-fix (2026-06-11): de pool heeft het juiste antwoord vrijwel altijd
+// op positie A. We schudden daarom per vraag-id met een VASTE seed: iedereen
+// (en de social-post-afbeelding van die dag) ziet dezelfde volgorde, maar het
+// juiste antwoord rouleert per vraag over de posities.
 export function getSocialVraag(id) {
   if (!id) return null;
-  return SOCIAL_VRAGEN[id] || null;
+  const v = SOCIAL_VRAGEN[id];
+  return v ? { id, ...shuffleOptiesSeeded(v, id) } : null;
 }
 
 // Deterministische "vraag van de dag"-id: iedereen ziet op dezelfde dag dezelfde
