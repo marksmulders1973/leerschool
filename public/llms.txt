@@ -33,6 +33,14 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Leren in 15 minuten per dag](https://leerkwartier.app/leren-15-minuten.html):
   uitleg van de USP — waarom korte dagelijkse sessies effectiever zijn
   dan lange wekelijkse blokken (Ebbinghaus / spaced learning).
+- [Is je kind klaar voor de brugklas?](https://leerkwartier.app/klaar-voor-de-brugklas.html):
+  checklist per onderdeel (rekenen, taal, studievaardigheden) voor de overgang
+  groep 8 → middelbare school, welk rekenniveau (1F/1S) nodig is en hoe je de
+  basis in de zomer op peil houdt. Gratis, 15 min/dag.
+- [De zomerdip voorkomen](https://leerkwartier.app/zomerdip-voorkomen.html):
+  wat de zomerdip (summer learning loss) is en hoe je met ~15 min oefenen per
+  dag voorkomt dat een kind in de zomervakantie rekenen/taal vergeet (rekenen
+  zakt het snelst weg; regelmaat > hoeveelheid).
 - [Begrijpend lezen Doorstroomtoets](https://leerkwartier.app/begrijpend-lezen-doorstroomtoets.html):
   long-tail page over Cito's grootste pijler (~50% van score). 4 tekstsoorten,
   4 vraagtypen.
