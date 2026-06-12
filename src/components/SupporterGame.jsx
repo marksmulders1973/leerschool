@@ -19,9 +19,10 @@ const LANES = {
   6: { dir: 1, speed: 2.2, gap: 4, len: 1, emoji: "🛻" },
 };
 const SAFE_ROWS = new Set([0, 3, 7, 8]);
-// Aantal frames "landings-genade" na een sprong: je sneuvelt niet meteen als er
-// net een auto op je nieuwe vakje staat — je krijgt een fractie om weer te hoppen.
-const GRACE_FRAMES = 8;
+// Landings-genade na een sprong in MILLISECONDEN (was 8 frames — op een
+// 144Hz-scherm was dat maar ~55ms en sneuvelde je vrijwel meteen): je krijgt
+// even de tijd om weer weg te hoppen als er net een auto aankomt.
+const GRACE_MS = 350;
 const NAVY = "#0f1f4d";
 const GOLD = "#e8a317";
 const GREEN = "#4aa05a";
@@ -75,7 +76,8 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   const rafRef = useRef(0);
   const lastRef = useRef(0);
   const safeRef = useRef(ROWS - 1);   // laatst bereikte veilige strook
-  const graceRef = useRef(0);         // resterende landings-genade-frames
+  const graceRef = useRef(0);         // timestamp tot wanneer landings-genade geldt
+  const [hitFx, setHitFx] = useState(false); // 💥 op de kikker tijdens de raak-pauze
   const goalRef = useRef(0);          // doel-rij: 0 = boven, ROWS-1 = onder
   const restingRef = useRef(false);   // korte rust aan de overkant (speed-up)
   const [, force] = useState(0); // re-render tikker voor auto-posities
@@ -90,7 +92,7 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
   const startGame = useCallback(() => {
     lanesRef.current = makeCars(1);
     safeRef.current = ROWS - 1; graceRef.current = 0;
-    goalRef.current = 0; restingRef.current = false; setRoundMsg("");
+    goalRef.current = 0; restingRef.current = false; setRoundMsg(""); setHitFx(false);
     setIngezonden(false);
     setLives(3); setScore(0); setLevel(1); resetFrog();
     setStatus("playing");
@@ -98,7 +100,8 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
 
   const move = useCallback((dc, dr) => {
     if (statusRef.current !== "playing") return;
-    graceRef.current = GRACE_FRAMES; // korte onkwetsbaarheid na de sprong
+    if (restingRef.current) return; // ook touch-knoppen blokkeren tijdens rust/raak-pauze
+    graceRef.current = performance.now() + GRACE_MS; // korte onkwetsbaarheid na de sprong
     setFrog((f) => {
       const c = Math.max(0, Math.min(COLS - 1, f.c + dc));
       const r = Math.max(0, Math.min(ROWS - 1, f.r + dr));
@@ -152,32 +155,42 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
           return nx;
         });
       }
-      // landings-genade aftellen
-      if (graceRef.current > 0) graceRef.current -= 1;
       const f = frogRef.current;
       const lane = lanes[f.r];
-      if (lane && graceRef.current <= 0 && !restingRef.current) {
+      if (lane && performance.now() > graceRef.current && !restingRef.current) {
         // botsing met een auto?
         const hit = lane.cars.some((x) => x < f.c + 0.85 && x + lane.len > f.c + 0.15);
         if (hit) {
-          setFlash(true); setTimeout(() => setFlash(false), 220);
+          // Raak-pauze (bugfix 2026-06-13): de kikker werd vroeger ONZICHTBAAR
+          // snel teruggeteleporteerd naar de veilige strook — dat zag eruit
+          // als een "verkeerde sprong". Nu: 💥 + melding + korte bevriezing,
+          // dán pas terugzetten, zodat de speler ziet dat hij geraakt is.
+          setFlash(true); setTimeout(() => setFlash(false), 500);
+          restingRef.current = true; // bevries input + verdere botsingen
+          setHitFx(true);
+          setRoundMsg("💥 Geraakt! Terug naar de veilige strook…");
           setLives((lv) => {
             const left = lv - 1;
             if (left <= 0) setStatus("over");
             return left;
           });
-          // terug naar de laatst bereikte veilige strook (niet helemaal naar start)
-          graceRef.current = GRACE_FRAMES;
-          const back = { c: f.c, r: safeRef.current };
-          frogRef.current = back;   // direct bijwerken → voorkomt dubbel levensverlies
-          setFrog(back);
+          setTimeout(() => {
+            // terug naar de laatst bereikte veilige strook (niet helemaal naar start)
+            const back = { c: f.c, r: safeRef.current };
+            frogRef.current = back;   // direct bijwerken → voorkomt dubbel levensverlies
+            setFrog(back);
+            graceRef.current = performance.now() + GRACE_MS;
+            restingRef.current = false;
+            setHitFx(false);
+            setRoundMsg("");
+          }, 700);
         }
       } else if (f.r === goalRef.current && !restingRef.current) {
         // Overkant bereikt: punt + auto's sneller + even uitrusten, dan de
         // ándere kant op. goalRef DIRECT flippen, anders vuurt dit nog eens.
         goalRef.current = goalRef.current === 0 ? ROWS - 1 : 0;
         restingRef.current = true;
-        graceRef.current = GRACE_FRAMES;
+        graceRef.current = performance.now() + GRACE_MS;
         setRoundMsg("🎉 Goed zo! De auto's gaan sneller…");
         setTimeout(() => { restingRef.current = false; setRoundMsg(""); }, 800);
         setScore((s) => {
@@ -240,13 +253,13 @@ export default function SupporterGame({ onHome, onPlayObliterator, supporterName
         })}
         {/* kikker */}
         <div style={{ position: "absolute", top: `${(frog.r / ROWS) * 100}%`, left: `${(frog.c / COLS) * 100}%`, width: cell, height: rowH, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "min(7vw,30px)", transition: "top .08s, left .08s", zIndex: 2 }}>
-          🐸
+          {hitFx ? "💥" : "🐸"}
         </div>
 
         {/* "sneller!"-melding bij elke overkant */}
         {roundMsg && (
           <div style={{ position: "absolute", top: "44%", left: 0, right: 0, textAlign: "center", zIndex: 4, pointerEvents: "none" }}>
-            <span style={{ background: "rgba(8,16,40,.92)", color: "#7fd0a0", fontWeight: 800, padding: "10px 16px", borderRadius: 12, fontSize: 16, boxShadow: "0 6px 18px rgba(0,0,0,.4)" }}>{roundMsg}</span>
+            <span style={{ background: "rgba(8,16,40,.92)", color: roundMsg.startsWith("💥") ? "#ff8a80" : "#7fd0a0", fontWeight: 800, padding: "10px 16px", borderRadius: 12, fontSize: 16, boxShadow: "0 6px 18px rgba(0,0,0,.4)" }}>{roundMsg}</span>
           </div>
         )}
 
