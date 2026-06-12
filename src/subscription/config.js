@@ -47,7 +47,12 @@ export const FREE_QUOTA = {
   examModePerWeek: 0,
 };
 
-// Pricing (toon in UI; bedragen geverifieerd uit audit 2026-05-13).
+// ⚠️ VEROUDERD (B1.1, 7-bots-review 2026-06-13): deze abonnement-bedragen
+// stammen van vóór de prijsmodel-wissel naar per-kwartier-bijkopen (Mark
+// 2026-06-06, zie proPlan.js). NIET in UI tonen — proPlan.js is de bron van
+// waarheid voor alle gebruiker-facing prijs-copy. Dit blok blijft alleen
+// staan tot de Stripe-koppeling in jan 2027 definitieve kwartier-prijzen
+// krijgt; dan herijken of verwijderen.
 export const PRICING = {
   parent_monthly: { price: 5.99, currency: "EUR", interval: "maand", label: "Maandabonnement" },
   parent_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Jaarabonnement (save 45%)" },

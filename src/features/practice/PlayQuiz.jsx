@@ -431,9 +431,16 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         </>
       )}
 
-      {noTimer && !isCitoSimulation && (
+      {/* B1.2 (7-bots-review): in examen-modus geen "neem de tijd!"-knuffel —
+          dat ondergraaft de belofte "net als het echte examen". */}
+      {noTimer && !isCitoSimulation && !isExamMode && (
         <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#00e676", marginBottom: 12 }}>
           ⏸️ Geen tijdslimiet per vraag — neem de tijd!
+        </div>
+      )}
+      {noTimer && !isCitoSimulation && isExamMode && (
+        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#ffd54f", marginBottom: 12 }}>
+          🎓 Examen-modus — maak de vragen zoals op het echte examen
         </div>
       )}
 

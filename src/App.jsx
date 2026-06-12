@@ -995,9 +995,12 @@ export default function App() {
           authUser={authUser}
           onBack={() => setPage(learnPathReturnPage || "home")}
           onHome={goHome}
-          onPickPath={(id) => {
+          onPickPath={(id, stepIdx) => {
             setActiveLearnPathId(id);
-            setActiveLearnStepIdx(0);
+            // B2.5 (7-bots-review): examRefs uit AllDone geven de stap van de
+            // oorspronkelijke examenvraag mee — leerling landt dan op "snap je
+            // 'm nu wel?" i.p.v. op vraag 1 van het examen-pad.
+            setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : 0);
           }}
         />
       )}

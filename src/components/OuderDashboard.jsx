@@ -369,11 +369,15 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         {/* Pro gate */}
         {!isPro && (
           <div style={{ borderRadius: 16, border: "2px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.08)", padding: "16px 18px" }}>
+            {/* B1.1 (7-bots-review): hier stond "€1,95/maand" — een abonnement,
+                in tegenspraak met het per-kwartier-model dat overal elders
+                beloofd wordt. Eén bron van waarheid: proPlan.js. */}
             <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#00b0ff", marginBottom: 4 }}>
-              ✨ Ouder Pro — €1,95/maand
+              ✨ Ouder Pro — nu gratis · vanaf 2027 per kwartier
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
               Volg de voortgang van je kind, zie scores per vak en bereid de Doorstroomtoets voor.
+              Geen abonnement — niks op te zeggen.
             </div>
             <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#00b0ff", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               Meer info & aanmelden →

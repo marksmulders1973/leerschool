@@ -197,7 +197,18 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             </div>
             <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; VO</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
-              {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"].map(s => (
+              {/* B3.1 (7-bots-review): gevoelige thema's (seksuele voorlichting,
+                  roken & drugs, puberteit) alleen tonen vanaf groep 7 of VO —
+                  niet aan een 7-jarige in groep 3. Bij onbekende groep wél
+                  tonen (volwassene/gast kan ook MBO/HBO zijn). */}
+              {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"]
+                .filter((s) => {
+                  const gevoelig = ["Seksuele voorlichting", "Puberteit", "Roken & drugs"].includes(s);
+                  if (!gevoelig) return true;
+                  const groep = userRole === "leerling" && userLevel ? Number(userLevel) : null;
+                  return groep === null || groep >= 7;
+                })
+                .map(s => (
                 <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
                   style={{ padding: "4px 12px", background: topic === s ? "var(--color-brand-primary)" : "#162a1e", border: `1px solid ${topic === s ? "var(--color-brand-primary)" : "#2a4a3a"}`, borderRadius: 20, color: topic === s ? "#000" : "var(--color-brand-primary-100)", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
                   {s}

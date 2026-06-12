@@ -1346,7 +1346,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               );
             })}
             {selected !== null && selected === currentCheck.answer && (
-              <div style={{
+              // B5.2: role=status zodat een screenreader het resultaat voorleest
+              <div role="status" aria-live="polite" style={{
                 marginTop: 14,
                 padding: "10px 14px",
                 borderRadius: 10,
@@ -1413,7 +1414,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
 
         {mode === "wrong" && currentCheck && (
-          <div style={{ ...cardStyle(C.bad), animation: "slideUp 0.25s ease-out" }}>
+          // B5.2: role=status zodat een screenreader "Nog niet helemaal" + hint voorleest
+          <div role="status" aria-live="polite" style={{ ...cardStyle(C.bad), animation: "slideUp 0.25s ease-out" }}>
             <div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
               ❌ Nog niet helemaal
             </div>
@@ -1426,8 +1428,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {/* Examen-correctievoorschrift óók bij fout tonen — kern-loop:
                 bij een fout op een examenvraag wíl je juist de officiële
                 uitleg zien (stond eerder alleen in de 'goed'-tak). */}
+            {/* B2.2 (7-bots-review): stond `open` — antwoord direct zichtbaar
+                bij fout, waarna de retry als "beheerst" telde. Nu dicht:
+                eerst de wrongHint verwerken, uitklappen is een bewuste keuze. */}
             {currentCheck.examenBron && currentCheck.explanation && (
-              <details style={{ marginTop: 10 }} open>
+              <details style={{ marginTop: 10 }}>
                 <summary style={{
                   cursor: "pointer",
                   padding: "8px 12px",
@@ -2001,7 +2006,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
             return (
               <button
                 key={examPathId}
-                onClick={() => onPickPath(examPathId)}
+                onClick={() => onPickPath(examPathId, ref.stepIdx)}
                 style={{
                   width: "100%",
                   marginTop: 6,
@@ -2148,7 +2153,10 @@ function btnPrimary() {
     border: "none",
     borderRadius: 14,
     background: `linear-gradient(135deg, ${C.good}, #00a040)`,
-    color: "var(--color-text-strong)",
+    // B5.1 (7-bots-review): wit op dit groen haalde ~2,2:1 — ver onder
+    // WCAG AA (4,5:1). Donkere tekst (zelfde patroon als de "▶ Door"-knop)
+    // haalt ~8:1 op beide gradient-uiteinden.
+    color: "#06211a",
     fontWeight: 700,
     fontSize: 16,
     fontFamily: "var(--font-display)",

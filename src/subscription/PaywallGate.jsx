@@ -3,7 +3,7 @@
 // Daarna: bij geblokkeerd → upsell-prompt, anders children.
 
 import { useCanUseFeature } from "./useSubscription.js";
-import { PAYWALL_ACTIVE, PRICING } from "./config.js";
+import { PAYWALL_ACTIVE } from "./config.js";
 
 const styles = {
   card: {
@@ -82,12 +82,13 @@ export default function PaywallGate({ feature, authUser = null, children, fallba
   return (
     <div style={styles.card} role="region" aria-label={`${label} vereist premium`}>
       <div style={styles.title}>🔒 {label} — premium-feature</div>
+      {/* B1.1 (7-bots-review): geen maand-/jaarprijzen meer — prijsmodel is
+          per-kwartier-bijkopen zonder abonnement (proPlan.js = bron). */}
       <div style={styles.body}>
-        Krijg toegang tot {label.toLowerCase()} met Leerkwartier premium —
-        vanaf <strong>€{PRICING.parent_monthly.price.toString().replace(".", ",")}/maand</strong>.
+        {label} is een Pro-extra: je koopt het per kwartier bij —
+        geen abonnement, niks op te zeggen. De basis blijft gratis.
       </div>
-      <a href="/abonnement.html" style={styles.cta}>Bekijk abonnement</a>
-      <span style={styles.small}>Examenperiode €{PRICING.parent_exam_period.price.toString().replace(".", ",")} • Jaar €{PRICING.parent_yearly.price}</span>
+      <a href="/abonnement.html" style={styles.cta}>Bekijk wat Pro is</a>
     </div>
   );
 }
