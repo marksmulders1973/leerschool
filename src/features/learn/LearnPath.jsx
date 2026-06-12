@@ -583,7 +583,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       if (currentCheck.uitlegPad) {
         bumpVraagFouten(`${pathId}__${stepIdx}__${realCheckIdx}`);
       }
-      setMode("wrong");
+      // Micro-interactie (2026-06-13): laat de fout gekozen knop eerst even
+      // zichtbaar rood kleuren + zacht schudden vóór het hint-kaartje komt —
+      // anders verdwijnt de vraag abrupt en mist de leerling wélke optie fout
+      // was. 550ms ≈ duur van lk-wrong-shake + korte naloop.
+      setTimeout(() => setMode("wrong"), 550);
     }
   };
 
@@ -1044,7 +1048,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
 
         {mode === "checking" && !step.interactiveComponent && currentCheck && (
-          <div style={cardStyle()}>
+          // key op vraag-index: bij vraagwissel remount de kaart en speelt
+          // lk-q-in (korte cross-fade) — geen harde swap meer (2026-06-13).
+          <div key={`q-${stepIdx}-${checkIdx}`} style={{ ...cardStyle(), animation: "lk-q-in 0.25s ease-out" }}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
@@ -1267,12 +1273,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               // currentCheck.examenBron aanwezig → echt examen-item.
               const isExamen = !!currentCheck.examenBron;
               const letter = String.fromCharCode(65 + i);
+              const isWrongPick = isSelected && selected !== currentCheck.answer;
               return (
                 <button
                   key={i}
+                  className="lk-answer-btn"
                   onClick={() => handlePick(i)}
                   disabled={selected !== null}
-                  style={optionStyle(isSelected, isCorrect, selected !== null)}
+                  style={{
+                    ...optionStyle(isSelected, isCorrect, selected !== null),
+                    ...(isWrongPick ? { animation: "lk-wrong-shake 0.4s ease" } : {}),
+                  }}
                 >
                   {isExamen ? (
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 12, width: "100%" }}>
@@ -1325,7 +1336,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 )}
               </div>
             )}
-            {selected !== null && currentCheck.examenBron && currentCheck.explanation && (
+            {selected !== null && selected === currentCheck.answer && currentCheck.examenBron && currentCheck.explanation && (
               <details style={{ marginTop: 10 }}>
                 <summary style={{
                   cursor: "pointer",
@@ -1360,7 +1371,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
 
         {mode === "wrong" && currentCheck && (
-          <div style={cardStyle(C.bad)}>
+          <div style={{ ...cardStyle(C.bad), animation: "slideUp 0.25s ease-out" }}>
             <div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
               ❌ Nog niet helemaal
             </div>
@@ -1505,11 +1516,25 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 accent={C.warm}
                 onClick={() => setShowMiniQuiz(true)}
               />
-              {stepIdx + 1 < totalSteps && (
+              {stepIdx + 1 < totalSteps ? (
                 <NextStepCard
                   eyebrow="Volgend deel"
                   title={`${stepIdx + 2}. ${stripExamenVraagPrefix(path.steps[stepIdx + 1]?.title || "Verder")}`}
                   hint="Doorgaan met dit onderwerp"
+                  accent={C.good}
+                  primary
+                  onClick={goNext}
+                />
+              ) : (
+                // Zonder deze kaart is het afrond-scherm (score + vervolg-
+                // suggesties + examenvragen-links) onbereikbaar: de header-
+                // "Volgend deel"-knop is op de laatste stap disabled en
+                // goNext werd nergens anders aangeroepen (bug gevonden
+                // 2026-06-13 bij animatie-werk).
+                <NextStepCard
+                  eyebrow="Afronden"
+                  title="🏁 Klaar — bekijk je resultaat"
+                  hint="Je score + wat je hierna kunt doen"
                   accent={C.good}
                   primary
                   onClick={goNext}
@@ -1826,14 +1851,52 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
   );
 }
 
+// Confetti-burst bij pad-afronding (2026-06-13). Bewust zonder library
+// (bundle-budget) en deterministisch ipv Math.random — zelfde burst elke
+// keer is prima, het gaat om het vier-momentje. prefers-reduced-motion
+// schakelt dit globaal uit via tokens.css.
+const CONFETTI_COLORS = ["#ffd54f", "#42a5f5", "#2ecc71", "#ff8a65", "#ba68c8", "#4dd0e1"];
+const CONFETTI_PIECES = Array.from({ length: 18 }, (_, i) => ({
+  left: (i * 53 + 7) % 100,
+  size: 6 + (i % 3) * 3,
+  color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
+  delay: (i % 6) * 0.09,
+  duration: 1.3 + (i % 5) * 0.18,
+  round: i % 4 === 0,
+}));
+
+function ConfettiBurst() {
+  return (
+    <div aria-hidden="true" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 0, pointerEvents: "none" }}>
+      {CONFETTI_PIECES.map((p, i) => (
+        <span
+          key={i}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: `${p.left}%`,
+            width: p.size,
+            height: p.round ? p.size : p.size * 0.6,
+            background: p.color,
+            borderRadius: p.round ? "50%" : 2,
+            opacity: 0,
+            animation: `lk-confetti-fall ${p.duration}s ease-in ${p.delay}s forwards`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs }) {
   // A6: toon score + suggestie volgend examen-/leerpad.
   const pct = score?.total > 0 ? Math.round((score.correct / score.total) * 100) : null;
   const isExamen = (path.id || "").startsWith("examen-");
   const streak = getDayStreak();
   return (
-    <div style={{ textAlign: "center", padding: "30px 12px" }}>
-      <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
+    <div style={{ textAlign: "center", padding: "30px 12px", position: "relative", overflow: "hidden" }}>
+      <ConfettiBurst />
+      <div style={{ fontSize: 64, marginBottom: 12, animation: "lk-streak-pop 0.5s ease-out" }}>🎉</div>
       <h2 style={{ fontFamily: "var(--font-display)", fontSize: 26, color: "var(--color-text-strong)", marginBottom: 8 }}>
         Knap gedaan!
       </h2>

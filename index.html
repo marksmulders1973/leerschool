@@ -263,6 +263,33 @@
         from { opacity: 0; transform: translateY(8px); }
         to   { opacity: 1; transform: translateY(0); }
       }
+      /* 2026-06-13 (vraagflow micro-interacties): zachte schud op fout gekozen
+         antwoord, cross-fade bij vraagwissel, confetti bij pad-afronding.
+         Bewust rustig gehouden — leerflow is geen game (design-system regel).
+         wrongShake stond alleen in HomePage's <style>; hier globaal zodat
+         PlayQuiz (regel 562) 'm ook echt heeft als HomePage niet gemount is. */
+      @keyframes wrongShake {
+        0%, 100% { transform: translateX(0); }
+        15%, 45%, 75% { transform: translateX(-6px); }
+        30%, 60%, 90% { transform: translateX(6px); }
+      }
+      @keyframes lk-wrong-shake {
+        0%, 100% { transform: translateX(0); }
+        20%, 60% { transform: translateX(-4px); }
+        40%, 80% { transform: translateX(4px); }
+      }
+      @keyframes lk-q-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes lk-confetti-fall {
+        0%   { opacity: 1; transform: translateY(-12px) rotate(0turn); }
+        80%  { opacity: 1; }
+        100% { opacity: 0; transform: translateY(260px) rotate(2turn); }
+      }
+      .lk-answer-btn:active:not(:disabled) {
+        transform: scale(0.97);
+      }
       /* Hero-tiles grid: 4 even grote vierkanten (3D-teaser + 3 rol-tegels),
          responsive. Op alle viewports een 2×2 layout — geen 3-koloms variant
          zoals bij de oude 6-tegel-versie, want 4 op 3 col geeft een lelijk
