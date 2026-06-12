@@ -1413,7 +1413,7 @@
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "differentieren",
@@ -1497,7 +1497,7 @@
     ],
     "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
     "stepCount": 4,
-    "checkCount": 156,
+    "checkCount": 217,
     "chapterCount": 4,
     "estimatedMinutes": 90
   },
@@ -1526,7 +1526,7 @@
     ],
     "intro": "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~100 min totaal (5× ~2",
     "stepCount": 5,
-    "checkCount": 150,
+    "checkCount": 210,
     "chapterCount": 5,
     "estimatedMinutes": 90
   },
@@ -1554,7 +1554,7 @@
     ],
     "intro": "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorb",
     "stepCount": 4,
-    "checkCount": 151,
+    "checkCount": 213,
     "chapterCount": 4,
     "estimatedMinutes": 90
   },
@@ -3116,7 +3116,7 @@
   },
   {
     "id": "exponentieel",
-    "file": "./exponentieel.js",
+    "file": "./exponentieel.jsx",
     "title": "Exponentiële groei en afname",
     "subject": "wiskunde",
     "level": "klas3-vmbo-vwo",
