@@ -321,9 +321,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Heel maken", uitleg: "Als de teller gelijk is aan de noemer (4/4, 8/8, 3/3): dat is 1 heel." }],
           niveaus: {
-            basis: "3/4 + 1/4 = 4/4 = 1. A.",
+            basis: "3/4 + 1/4 = 4/4 = 1.",
             simpeler: "Zelfde noemer → tellers samen: 3+1 = 4. → 4/4 = 1.",
-            nogSimpeler: "Allebei 'kwart' → samen = heel. A.",
+            nogSimpeler: "Allebei 'kwart' → samen = heel.",
           },
         },
       },
@@ -351,7 +351,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst delen door noemer, dan keer teller. Of: keer breuk, dan delen — beide werkt." }],
           niveaus: {
-            basis: "60 ÷ 2 = 30. A.",
+            basis: "60 ÷ 2 = 30.",
             simpeler: "Helft van 60 = 60/2 = 30.",
             nogSimpeler: "60 : 2 = 30",
           },
@@ -384,7 +384,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/4 + 1/2 = 1/4 + 2/4 = 3/4." }],
           basiskennis: [{ onderwerp: "KGV", uitleg: "Kleinste gemene veelvoud = kleinste getal waar beide noemers in passen. Voor 2 en 3 = 6. Voor 4 en 6 = 12." }],
           niveaus: {
-            basis: "5/6. A.",
+            basis: "5/6.",
             simpeler: "Gelijknamig maken: 3/6 + 2/6 = 5/6.",
             nogSimpeler: "3/6 + 2/6 = 5/6",
           },
@@ -422,7 +422,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "4 × 1/2 = 4/2 = 2 hele." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Als teller > noemer wordt: kun je het omzetten naar heel getal + breuk." }],
           niveaus: {
-            basis: "3/4. A.",
+            basis: "3/4.",
             simpeler: "Drie kwartjes = 3/4.",
             nogSimpeler: "3 × 1/4 = 3/4",
           },
@@ -442,7 +442,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8/12: beide door 4 = 2/3." }],
           basiskennis: [{ onderwerp: "Onvereenvoudigbaar", uitleg: "Breuken zoals 3/8, 5/7, 2/9: geen gemene deler — al simpelst." }],
           niveaus: {
-            basis: "Niet te vereenvoudigen. A.",
+            basis: "Niet te vereenvoudigen.",
             simpeler: "3 en 8 hebben geen gemene deler.",
             nogSimpeler: "Niet kleiner",
           },
@@ -486,7 +486,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/3 × 1/2 = 1/6. 'helft van een derde'." }],
           basiskennis: [{ onderwerp: "Visueel", uitleg: "Een halve pizza, daarvan de helft = een kwart pizza." }],
           niveaus: {
-            basis: "1/4. A.",
+            basis: "1/4.",
             simpeler: "1×1/2×2 = 1/4.",
             nogSimpeler: "1/4",
           },
@@ -805,7 +805,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "10% van €80 = €8. Verhoogd: €80+€8=€88. Korting: €80−€8=€72." }],
           basiskennis: [{ onderwerp: "Verhoging vs korting", uitleg: "Verhoging = + (groter). Korting = − (kleiner). Beide gebruiken hetzelfde % maar tegenovergesteld." }],
           niveaus: {
-            basis: "€66 (€60 + 10%). A.",
+            basis: "€66 (€60 + 10%).",
             simpeler: "10% van €60 = €6. €60 + €6 = €66.",
             nogSimpeler: "€66",
           },
@@ -832,7 +832,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "50% van 1/2 = 1/2 × 1/2 = 1/4. 25% van 1/2 = 1/4 × 1/2 = 1/8." }],
           basiskennis: [{ onderwerp: "Visualiseer", uitleg: "Pizza in 2 = halve. Half daarvan = kwart. Klopt." }],
           niveaus: {
-            basis: "1/4 (helft van helft). A.",
+            basis: "1/4 (helft van helft).",
             simpeler: "50% = 1/2. 1/2 × 1/2 = 1/4.",
             nogSimpeler: "1/4",
           },
@@ -878,7 +878,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Verhouding 1:4 totaal 20 → 20÷5 = 4 per deel. 1 deel = 4, 4 delen = 16." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "15 jongens + 10 meisjes = 25 ✓. Verhouding 15:10 = 3:2 ✓." }],
           niveaus: {
-            basis: "15 (3×5). A.",
+            basis: "15 (3×5).",
             simpeler: "3+2=5 delen, 25÷5=5 per deel, jongens 3×5=15.",
             nogSimpeler: "15",
           },
@@ -920,7 +920,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Voor €50: 50 × 1,21 = €60,50." }],
           basiskennis: [{ onderwerp: "Soorten BTW", uitleg: "21% = meeste goederen. 9% = voedsel, boeken, kapper. 0% = export." }],
           niveaus: {
-            basis: "€121. A.",
+            basis: "€121.",
             simpeler: "21% van €100 = €21. €100 + €21 = €121.",
             nogSimpeler: "€121",
           },
@@ -951,7 +951,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst 10% berekenen, dan vermenigvuldigen of optellen." }],
           niveaus: {
-            basis: "€20 korting. A.",
+            basis: "€20 korting.",
             simpeler: "25% = 1/4. €80 ÷ 4 = €20.",
             nogSimpeler: "Kwart van €80 = €20",
           },
@@ -975,7 +975,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Volgorde", uitleg: "Eerst delen door het getal aan jouw kant, dan keer het andere." }],
           niveaus: {
-            basis: "8 peren. A.",
+            basis: "8 peren.",
             simpeler: "12 ÷ 3 = 4 sets. 4 × 2 = 8 peren.",
             nogSimpeler: "4 sets × 2 = 8",
           },
@@ -1017,7 +1017,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1% = / 100. 10% = / 10. 50% = / 2. 25% = / 4. 75% = 3/4." }],
           niveaus: {
-            basis: "25. A.",
+            basis: "25.",
             simpeler: "250 / 10 = 25.",
             nogSimpeler: "Komma 1 links: 25",
           },
@@ -1050,7 +1050,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "25% van 80 = 0,25 × 80 = 20." }],
           basiskennis: [{ onderwerp: "Snel uit het hoofd", uitleg: "50% = helft. 10% = /10. Bouw andere % daaruit op." }],
           niveaus: {
-            basis: "40. A.",
+            basis: "40.",
             simpeler: "10% van 50 = 5. 8 × 5 = 40.",
             nogSimpeler: "0,8 × 50 = 40",
           },
@@ -1077,7 +1077,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "20% korting op €50 = €50 × 0,80 = €40." }],
           basiskennis: [{ onderwerp: "Verhoging", uitleg: "Verhoging 15%: (100+15)% = 115% × oud bedrag." }],
           niveaus: {
-            basis: "€34. A.",
+            basis: "€34.",
             simpeler: "15% van €40 = €6. €40 − €6 = €34.",
             nogSimpeler: "€34",
           },
@@ -1110,7 +1110,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Recept 4 pers = 8 eieren. Per pers = 2. Voor 6 pers = 12 eieren." }],
           basiskennis: [{ onderwerp: "Direct evenredig", uitleg: "Bij dit type vraag: ratio blijft gelijk. 2× zoveel personen = 2× zoveel materiaal." }],
           niveaus: {
-            basis: "300 g. A.",
+            basis: "300 g.",
             simpeler: "Per pers 50 g. 6 × 50 = 300.",
             nogSimpeler: "50 × 6 = 300",
           },
@@ -1131,7 +1131,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "200% van 50 = 100. 175% van 20 = 35." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij verhogingen > 100%: pak hele + extra deel apart." }],
           niveaus: {
-            basis: "60. A.",
+            basis: "60.",
             simpeler: "40 + helft (20) = 60.",
             nogSimpeler: "1,5 × 40 = 60",
           },
@@ -1519,7 +1519,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Trapje", uitleg: "kg → hg → dag → g → dg → cg → mg. Tussen kg en g: ×1000." }],
           niveaus: {
-            basis: "2500 g. A.",
+            basis: "2500 g.",
             simpeler: "2,5 × 1000 = 2500.",
             nogSimpeler: "2500",
           },
@@ -1541,7 +1541,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Schaal 1:1000, 5 cm op kaart = 5 × 1000 = 5000 cm = 50 m werkelijk." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vermenigvuldig kaartmaat × schaal → cm werkelijk → omrekenen naar m of km." }],
           niveaus: {
-            basis: "1 km. A.",
+            basis: "1 km.",
             simpeler: "2 cm × 50.000 = 100.000 cm = 1 km.",
             nogSimpeler: "100.000 cm = 1 km",
           },
@@ -1580,7 +1580,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1500 mL = 1,5 L. 250 mL = 0,25 L." }],
           basiskennis: [{ onderwerp: "Trap", uitleg: "L → dL → cL → mL met telkens × 10. Komma per stap." }],
           niveaus: {
-            basis: "0,75 L. A.",
+            basis: "0,75 L.",
             simpeler: "75 / 100 = 0,75.",
             nogSimpeler: "0,75 L",
           },
@@ -1617,7 +1617,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schrijf in kwartieren: 1, 2, 3 of 4. 1 kwartier = 0,25 uur." }],
           niveaus: {
-            basis: "0,75 uur. A.",
+            basis: "0,75 uur.",
             simpeler: "45 / 60 = 0,75. Of 3 kwartier = 0,75.",
             nogSimpeler: "3 × 0,25 = 0,75",
           },
@@ -1644,7 +1644,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Kubus 2×2×2 = 8 cm³. Kubus 4×4×4 = 64 cm³." }],
           basiskennis: [{ onderwerp: "Inhoud", uitleg: "1 cm³ = 1 mL. 1 dm³ = 1 L. 1000 cm³ = 1 L." }],
           niveaus: {
-            basis: "60 cm³. A.",
+            basis: "60 cm³.",
             simpeler: "3 × 4 × 5 = 60.",
             nogSimpeler: "60",
           },
@@ -1689,7 +1689,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vierkant opp 100 cm² → zijde 10 cm." }],
           basiskennis: [{ onderwerp: "Anders", uitleg: "Bij rechthoek heb je 2 maten nodig om zijde te vinden. Bij vierkant 1 maat." }],
           niveaus: {
-            basis: "8 cm. A.",
+            basis: "8 cm.",
             simpeler: "√64 = 8.",
             nogSimpeler: "8 × 8 = 64",
           },
@@ -1965,7 +1965,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5 × €1,80 = 5×1 + 5×0,8 = 5 + 4 = 9. 3 × €2,50 = 3×2 + 3×0,5 = 6 + 1,5 = €7,50." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "5 glazen voor €9 = bijna €2 per glas. Past." }],
           niveaus: {
-            basis: "€9,00 (5 × €1,80). A.",
+            basis: "€9,00 (5 × €1,80).",
             simpeler: "5 × €1,80 = 5 + 4 = €9.",
             nogSimpeler: "€9",
           },
@@ -2009,7 +2009,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tablet €120, spaar €10/wk = 12 wkn. Game €80, spaar €8/wk = 10 wkn." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "12 × €5 = €60 ✓. Realiteit-check: 12 weken is bijna 3 maanden — realistisch sparen." }],
           niveaus: {
-            basis: "12 weken (€60 ÷ €5). A.",
+            basis: "12 weken (€60 ÷ €5).",
             simpeler: "Hoeveel keer €5 in €60? €60 ÷ €5 = 12.",
             nogSimpeler: "12",
           },
@@ -2081,7 +2081,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5 ijsjes voor €10 → per ijsje €2. 4 boeken €24 → per boek €6." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "€12 × 3 = €36 ✓. Realiteit-check helpt fouten vinden." }],
           niveaus: {
-            basis: "€12 (€36÷3). A.",
+            basis: "€12 (€36÷3).",
             simpeler: "Drie boeken samen €36 → één boek = €36÷3 = €12.",
             nogSimpeler: "€12",
           },
@@ -2114,7 +2114,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "€60 over 4 vrienden = €60 ÷ 4 = €15 per persoon." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Controleer met vermenigvuldigen: €9 × 3 = €27 ✓." }],
           niveaus: {
-            basis: "€9 per persoon. A.",
+            basis: "€9 per persoon.",
             simpeler: "€27 ÷ 3 = €9.",
             nogSimpeler: "Delen = €9",
           },
@@ -2141,7 +2141,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Cijfers 4, 6 en 8 — gemiddelde = (4+6+8)/3 = 18/3 = 6." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Antwoord moet altijd liggen tussen kleinste en grootste waarde." }],
           niveaus: {
-            basis: "Gemiddelde = 7,5. A.",
+            basis: "Gemiddelde = 7,5.",
             simpeler: "(7+8+6+9)/4 = 30/4 = 7,5.",
             nogSimpeler: "30 ÷ 4 = 7,5",
           },
@@ -2171,7 +2171,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Daling", uitleg: "Bij daling: zelfde formule, je krijgt een negatief getal of noemt het percentage daling." }],
           niveaus: {
-            basis: "25% stijging. A.",
+            basis: "25% stijging.",
             simpeler: "Verschil 20. Oud was 80. 20/80 = 0,25 = 25%.",
             nogSimpeler: "20/80 = 25%",
           },
@@ -2192,7 +2192,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "€60 sparen, €4/week → 60 ÷ 4 = 15 weken." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Vermenigvuldig terug: aantal × bedrag/keer = totaal." }],
           niveaus: {
-            basis: "24 weken. A.",
+            basis: "24 weken.",
             simpeler: "120 ÷ 5 = 24.",
             nogSimpeler: "120 / 5 = 24",
           },
@@ -2225,7 +2225,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Opp 50 m², lengte 10 m → breedte = 50 / 10 = 5 m." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Vermenigvuldig terug: 6 × 4 = 24 ✓." }],
           niveaus: {
-            basis: "6 m. A.",
+            basis: "6 m.",
             simpeler: "24 / 4 = 6 m.",
             nogSimpeler: "Opp / breedte = lengte = 6",
           },
@@ -2252,7 +2252,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "100 koeken, 1/5 verkocht: verkocht=20, over=80." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Tel weggegeven + over: moet totaal zijn. 60 + 180 = 240 ✓." }],
           niveaus: {
-            basis: "180. A.",
+            basis: "180.",
             simpeler: "240 − 60 = 180.",
             nogSimpeler: "3/4 = 180",
           },
@@ -2290,7 +2290,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "10% van €25,50 = €2,55." }],
           basiskennis: [{ onderwerp: "5%", uitleg: "5% = helft van 10%. Dus 5% van €12,50 = €1,25 / 2 = €0,625." }],
           niveaus: {
-            basis: "€1,25. A.",
+            basis: "€1,25.",
             simpeler: "10% van €12,50 = €1,25.",
             nogSimpeler: "€1,25",
           },
@@ -2310,7 +2310,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Dobbelsteen — kans op 6 = 1/6 ≈ 17%." }],
           basiskennis: [{ onderwerp: "Som = 100%", uitleg: "Kans op meisje + jongen = 100%. 60% + 40% = 100% ✓." }],
           niveaus: {
-            basis: "60%. A.",
+            basis: "60%.",
             simpeler: "18/30 × 100 = 60.",
             nogSimpeler: "60%",
           },

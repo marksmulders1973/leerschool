@@ -245,7 +245,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "63 ÷ 9: zoek wat × 9 = 63. Antwoord: 7." }],
           basiskennis: [{ onderwerp: "Tafels kennen", uitleg: "Vlot delen vereist vlot tafels." }],
           niveaus: {
-            basis: "7. A.",
+            basis: "7.",
             simpeler: "Wat keer 9 is 63? Tafel-9 op: 9, 18, 27, 36, 45, 54, 63. Dat is de 7e. Dus 63 ÷ 9 = 7.",
             nogSimpeler: "7",
           },
@@ -299,7 +299,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Bij 'aantal containers/dozen': rest = extra container nodig." }],
           basiskennis: [{ onderwerp: "Niet afsnijden", uitleg: "Je kunt geen halve doos hebben." }],
           niveaus: {
-            basis: "4 dozen. A.",
+            basis: "4 dozen.",
             simpeler: "20 eieren ÷ 6 per doos = 3 dozen vol + 2 eieren over. Die 2 ook in een doos = 4 dozen totaal.",
             nogSimpeler: "4 dozen",
           },

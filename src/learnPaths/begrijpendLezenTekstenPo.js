@@ -423,7 +423,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Tekst geeft stappen om iets te maken = instrueren",
-            simpeler: "Lees de tekst. Wat doet hij vooral? 'Doe dit, doe dat, maak nu...'. Hij vertelt je STAP VOOR STAP hoe je iets maakt. Dat heet instrueren. A.",
+            simpeler: "Lees de tekst. Wat doet hij vooral? 'Doe dit, doe dat, maak nu...'. Hij vertelt je STAP VOOR STAP hoe je iets maakt. Dat heet instrueren.",
             nogSimpeler: "Stappen om iets te maken = instructie",
           },
         },
@@ -513,7 +513,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Drie argumenten staan in tekst (afleiding, sociaal, thuis-ouders). 'Te duur' staat er niet → A.",
-            simpeler: "Vink elk antwoord af in de tekst. Welke staat er NIET? 'Te duur' staat nergens — dat is je antwoord. A.",
+            simpeler: "Vink elk antwoord af in de tekst. Welke staat er NIET? 'Te duur' staat nergens — dat is je antwoord.",
             nogSimpeler: "Niet in tekst",
           },
         },
@@ -555,7 +555,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Schrijver: 'klopt, maar thuis ipv school' = erkennen + verschuiven.",
-            simpeler: "De schrijver zegt: 'ja, dat klopt' (= erkent het) maar voegt toe 'thuis kan dat ook' (= niet op school). Hij negeert het niet, hij denkt mee. A.",
+            simpeler: "De schrijver zegt: 'ja, dat klopt' (= erkent het) maar voegt toe 'thuis kan dat ook' (= niet op school). Hij negeert het niet, hij denkt mee.",
             nogSimpeler: "Erkent + verschuift naar thuis",
           },
         },
@@ -644,7 +644,7 @@ const steps = [
             { onderwerp: "Verhaal-opening = setup", uitleg: "Een verhaal begint vaak met de probleemstelling. Zoek daar bij letterlijke vragen." },
           ],
           niveaus: {
-            basis: "Eerste alinea: 'geen lunchtrommel'. A.",
+            basis: "Eerste alinea: 'geen lunchtrommel'.",
             simpeler: "Lees de eerste paar zinnen. Daar staat: 'Sara voelde in haar rugzak — geen lunchtrommel'. Dat is je antwoord.",
             nogSimpeler: "Lunchtrommel",
           },
@@ -685,7 +685,7 @@ const steps = [
             { onderwerp: "Letterlijk vs figuurlijk", uitleg: "Bij verhalen mag je niet alle woorden letterlijk nemen. 'In tranen uitbarsten' = niet echt exploderen." },
           ],
           niveaus: {
-            basis: "'Schaapachtig' = verlegen/beschaamd. Sara schaamt zich. A.",
+            basis: "'Schaapachtig' = verlegen/beschaamd. Sara schaamt zich.",
             simpeler: "Stel je voor: jij hebt geen brood, iemand vraagt je 'heb je geen brood?'. Hoe voel je je? Een beetje gegeneerd, je wil het liever niet zeggen. Dat is 'schaapachtig'.",
             nogSimpeler: "Schaapachtig = verlegen = schamen",
           },
@@ -769,7 +769,7 @@ const steps = [
             { onderwerp: "Boodschap is algemeen", uitleg: "De boodschap kun je toepassen op ANDERE situaties dan dit verhaal. Bv. 'vriendelijkheid loont' geldt overal, niet alleen bij vergeten lunch." },
           ],
           niveaus: {
-            basis: "Klein gebaar (halve boterham) → grote impact (vriendschap). A.",
+            basis: "Klein gebaar (halve boterham) → grote impact (vriendschap).",
             simpeler: "Wat blijft hangen na dit verhaal? Tom doet iets KLEINS, maar het maakt voor Sara veel uit. Boodschap: kleine vriendelijkheden tellen.",
             nogSimpeler: "Klein gebaar = grote betekenis",
           },
@@ -814,7 +814,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Lees de tekst nogmaals", uitleg: "Bij een mix-quiz mag je teruglezen. Doe dat ook." }],
           niveaus: {
-            basis: "Tekst zegt 'uniek in de wereld' = alleen NL. A.",
+            basis: "Tekst zegt 'uniek in de wereld' = alleen NL.",
             simpeler: "Lees de laatste alinea van tekst 1. Daar staat: 'er zijn meer fietsen dan inwoners' + 'uniek in de wereld'. Dus stelling klopt + alleen NL",
             nogSimpeler: "Klopt + alleen NL",
           },
@@ -851,8 +851,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Tekst-context", uitleg: "Wat eerder in de tekst stond, helpt vaak om latere zinnen te begrijpen." }],
           niveaus: {
-            basis: "Hard trekken = clips uit elkaar (eerder genoemd). Lichtjes = niet kapot. A.",
-            simpeler: "Stel: jij hebt een ketting van paperclips. Trek je hard? Dan trek je 'm uit elkaar. Dus 'lichtjes' = om de ketting niet te breken. A.",
+            basis: "Hard trekken = clips uit elkaar (eerder genoemd). Lichtjes = niet kapot.",
+            simpeler: "Stel: jij hebt een ketting van paperclips. Trek je hard? Dan trek je 'm uit elkaar. Dus 'lichtjes' = om de ketting niet te breken.",
             nogSimpeler: "Lichtjes = niet kapot",
           },
         },
@@ -889,7 +889,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Argument vs feit", uitleg: "Een feit kan WAAR zijn maar geen argument zijn — als het niets te maken heeft met het standpunt." }],
           niveaus: {
             basis: "Argument = onderbouwt standpunt + heeft bewijs. A heeft 'onderzoek toont'.",
-            simpeler: "Welke reden helpt om het standpunt 'telefoons niet op school' te bewijzen? 'Notificaties leiden af tijdens de les' helpt. Andere opties zijn niet over school of niet over telefoons. A.",
+            simpeler: "Welke reden helpt om het standpunt 'telefoons niet op school' te bewijzen? 'Notificaties leiden af tijdens de les' helpt. Andere opties zijn niet over school of niet over telefoons.",
             nogSimpeler: "Met onderzoek + over school",
           },
         },
@@ -925,7 +925,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Hartje is niet altijd liefde", uitleg: "Symbolen veranderen van betekenis afhankelijk van situatie. Lees de hele scene." }],
           niveaus: {
-            basis: "Hartje + 'bedankt' na vriendelijke daad = dankbaarheid. A.",
+            basis: "Hartje + 'bedankt' na vriendelijke daad = dankbaarheid.",
             simpeler: "Wat doet je moeder met dat briefje? Ze schrijft 'bedankt' + hartje. Voor wie? Voor Tom die brood deelde. Dat is bedanken voor zijn aardigheid.",
             nogSimpeler: "Bedankt + hartje = dankbaarheid",
           },
@@ -964,7 +964,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "Cito-vragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
           niveaus: {
-            basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat. A.",
+            basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat.",
             simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara).",
             nogSimpeler: "Mening = betoog",
           },
@@ -1001,7 +1001,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Toets-tactiek", uitleg: "Een gok = 25% kans op punt. Leeg = 0%. Altijd invullen!" }],
           niveaus: {
-            basis: "Context lezen = beste strategie. A.",
+            basis: "Context lezen = beste strategie.",
             simpeler: "Stel je leest een woord dat je niet kent. Wat doe je? Niet overslaan. Geen woordenboek (mag niet). Lees de zinnen eromheen — die helpen je het te raden.",
             nogSimpeler: "Context lezen",
           },

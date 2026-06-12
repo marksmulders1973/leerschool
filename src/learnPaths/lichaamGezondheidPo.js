@@ -193,7 +193,7 @@ const steps = [
           niveaus: {
             basis: "Gewricht = plek waar 2 botten elkaar ontmoeten.",
             simpeler: "Gewricht = verbinding tussen 2 botten waar beweging mogelijk is. Voorbeeld: knie, elleboog.",
-            nogSimpeler: "Plek waar botten samenkomen. A.",
+            nogSimpeler: "Plek waar botten samenkomen.",
           },
         },
       },
@@ -416,7 +416,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Wondje → plaatjes maken korst." }],
           basiskennis: [{ onderwerp: "Niet alleen rood", uitleg: "Bloed lijkt rood maar bevat ook witte cellen + plaatjes." }],
           niveaus: {
-            basis: "3. A.",
+            basis: "3.",
             simpeler: "Drie hoofdsoorten: rode (zuurstof), witte (afweer), plaatjes (stolling).",
             nogSimpeler: "3",
           },

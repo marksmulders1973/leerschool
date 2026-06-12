@@ -118,7 +118,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "België weigerde Duitse troepen door te laten — moest met geweld bezet worden, kostte tijd." }],
           basiskennis: [{ onderwerp: "2-fronten-oorlog", uitleg: "Oorlog aan oostkant + westkant tegelijk — gevreesd door Duitsland." }],
           niveaus: {
-            basis: "Schlieffenplan. A.",
+            basis: "Schlieffenplan.",
             simpeler: "Duitsland wilde eerst Frankrijk uitschakelen via België. Hopen dat het in 6 weken klaar was. Mislukte — Frankrijk + Engeland stopten Duitsers bij de Marne.",
             nogSimpeler: "Schlieffenplan",
           },

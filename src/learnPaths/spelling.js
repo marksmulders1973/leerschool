@@ -76,7 +76,7 @@ const steps = [
           voorbeelden: [{ type: "open", tekst: "ma-nen, ho-pen, vu-ren — allemaal lange klinker, 1 medeklinker erna." }],
           basiskennis: [{ onderwerp: "Klinkers", uitleg: "a, e, i, o, u — de 5 klinkers. Rest = medeklinkers." }],
           niveaus: {
-            basis: "Lange o → open lettergreep → lo-pen. A.",
+            basis: "Lange o → open lettergreep → lo-pen.",
             simpeler: "Klap mee: 'lo - pen' = 2 keer. Eerst stuk 'lo' eindigt op de o (klinker, lang) → open lettergreep.",
             nogSimpeler: "lo-pen",
           },
@@ -104,7 +104,7 @@ const steps = [
           voorbeelden: [{ type: "gesloten", tekst: "kam-men, hop-pen, bus-sen — alle eerste lettergreep eindigt op medeklinker = gesloten = korte klank ervoor." }],
           basiskennis: [{ onderwerp: "Halfopen bestaat niet", uitleg: "In spelling: alleen 'open' of 'gesloten'. Niets ertussen." }],
           niveaus: {
-            basis: "'kam' eindigt op m (medeklinker) = gesloten. A.",
+            basis: "'kam' eindigt op m (medeklinker) = gesloten.",
             simpeler: "Stel: 'kam-men'. Eerste stuk = 'kam'. Laatste letter = 'm'. M is geen klinker, dus medeklinker. Lettergreep eindigt op medeklinker = gesloten.",
             nogSimpeler: "Eindigt op m = gesloten",
           },
@@ -159,7 +159,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord hardop. Klinkt de klinker kort (kèt) of lang (kaas)?" }],
           niveaus: {
-            basis: "Pen = korte e → verdubbel n → pennen. A.",
+            basis: "Pen = korte e → verdubbel n → pennen.",
             simpeler: "Hoor je 'pen' (kort) of 'peen' (lang)? Kort. Bij kort: medeklinker dubbel. dus pen + n + en = pennen.",
             nogSimpeler: "Kort = dubbel = pennen",
           },
@@ -189,7 +189,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Bom vs boom", uitleg: "Verschillende woorden! 'Bom' (korte o) → bommen. 'Boom' (lange oo) → bomen." }],
           niveaus: {
-            basis: "Boom = lange oo → bo-men → 1 o = bomen. A.",
+            basis: "Boom = lange oo → bo-men → 1 o = bomen.",
             simpeler: "Boom heeft lange oo. Bij meervoud: bo-men. De eerste lettergreep 'bo-' eindigt op klinker (open) en daar is 1 o genoeg om lang te klinken.",
             nogSimpeler: "Lang = 1 = bomen",
           },
@@ -231,7 +231,7 @@ const steps = [
           voorbeelden: [{ type: "verlengen", tekst: "'Hond' klinkt als 'hont'. Maar verleng: 'honden' = D. Dus hond eindigt op D." }],
           basiskennis: [{ onderwerp: "Niet 'td' of 'dt'", uitleg: "Bij gewone zelfstandige naamwoorden 1 letter, niet combinaties." }],
           niveaus: {
-            basis: "Paard verleng = paarden = D. A.",
+            basis: "Paard verleng = paarden = D.",
             simpeler: "Hoor je 'paart' aan het eind? Maak 'm langer: 'paarden'. Daar hoor je duidelijk een D. Dus paard eindigt op D.",
             nogSimpeler: "Paarden = D",
           },
@@ -256,7 +256,7 @@ const steps = [
           voorbeelden: [{ type: "v→f", tekst: "Lieve → lief. Brieven → brief. Halve → half." }],
           basiskennis: [{ onderwerp: "Verleng om te checken", uitleg: "Twijfel je? Maak 'm langer: 'lieve' = v. Aan het eind: f." }],
           niveaus: {
-            basis: "V aan eind = F. Lief. A.",
+            basis: "V aan eind = F. Lief.",
             simpeler: "'Lieve' (lange vorm) heeft V. Maar aan het eind van een woord wordt V altijd F. Dus 'lief'.",
             nogSimpeler: "Lieve → lief",
           },
@@ -305,7 +305,7 @@ const steps = [
           voorbeelden: [{ type: "korte-e", tekst: "melk, hek, weg, heg, ster — allemaal korte e zonder ei/ij." }],
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord. Hoor je 'mei' (ei-klank) of 'mè' (korte e)?" }],
           niveaus: {
-            basis: "Melk = korte e, geen ei/ij. A.",
+            basis: "Melk = korte e, geen ei/ij.",
             simpeler: "Strikvraag! De vraag noemt 'plein' (ei) maar het echte woord 'melk' heeft alleen een korte e. Geen ei, geen ij.",
             nogSimpeler: "Melk = gewoon e",
           },
@@ -331,7 +331,7 @@ const steps = [
           voorbeelden: [{ type: "familie", tekst: "blij → blijheid, klein → kleinheid, wijs → wijsheid — familie houdt zelfde spelling." }],
           basiskennis: [{ onderwerp: "y bestaat haast niet", uitleg: "In modern Nederlands gebruiken we y bijna nooit. Alleen in leenwoorden (yoghurt, baby)." }],
           niveaus: {
-            basis: "Vrijheid = ij. A.",
+            basis: "Vrijheid = ij.",
             simpeler: "Familie van vrij/vrije/vrijgevig — allemaal IJ. Dus vrijheid ook IJ.",
             nogSimpeler: "Vrij = ij",
           },
@@ -378,7 +378,7 @@ const steps = [
           voorbeelden: [{ type: "au-woord", tekst: "auto, augustus, paus, applaus, blauw, saus — leren als rijtje." }],
           basiskennis: [{ onderwerp: "Geen W", tekst: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'.", uitleg: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'." }],
           niveaus: {
-            basis: "Auto = au-woord. A.",
+            basis: "Auto = au-woord.",
             simpeler: "Auto is een woord dat je VAAK ziet — gewoon onthouden: a-u-t-o. Geen w, geen ou.",
             nogSimpeler: "Auto",
           },
@@ -405,7 +405,7 @@ const steps = [
           voorbeelden: [{ type: "familie", tekst: "koud → kouder, koudst, koude — alles ou." }],
           basiskennis: [{ onderwerp: "Engels ≠ Nederlands", uitleg: "Engelse cold (cowd) is niet de Nederlandse spelling." }],
           niveaus: {
-            basis: "Koud = ou-woord. A.",
+            basis: "Koud = ou-woord.",
             simpeler: "Tegengesteld van warm = koud. Bekend NL-woord met ou. Familie: koud, kouder, koudst — allemaal OU.",
             nogSimpeler: "Koud",
           },
@@ -450,7 +450,7 @@ const steps = [
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht voor t-klank." }],
           basiskennis: [{ onderwerp: "Niet kt, niet ggt", uitleg: "De klank lijkt soms op k (grakt) of dubbele g (graggt) maar die spelling bestaat niet." }],
           niveaus: {
-            basis: "G/ch + t-klank = cht → gracht. A.",
+            basis: "G/ch + t-klank = cht → gracht.",
             simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je altijd 'cht'. Gracht hoort daarbij.",
             nogSimpeler: "Cht",
           },
@@ -495,7 +495,7 @@ const steps = [
           voorbeelden: [{ type: "aaneen", tekst: "schoolboek, telefoonabonnement, wereldkampioenschap — allemaal 1 woord." }],
           basiskennis: [{ onderwerp: "Engels ≠ NL", uitleg: "In Engels: spaties OK. In NL: NEE. Lange woorden zijn normaal." }],
           niveaus: {
-            basis: "NL = aaneen → zomervakantie. A.",
+            basis: "NL = aaneen → zomervakantie.",
             simpeler: "Twee woorden samen = 1 woord in NL. Zomer + vakantie = zomervakantie. Geen spatie.",
             nogSimpeler: "Aaneen",
           },
@@ -523,7 +523,7 @@ const steps = [
           voorbeelden: [{ type: "koppel", tekst: "zee-egel ✓, na-apen ✓, auto-ongeluk ✓ — bij samenstellingen met klinker-botsing." }],
           basiskennis: [{ onderwerp: "Trema vs koppelteken", uitleg: "Trema = ¨ binnen woord (reëel). Koppelteken = - tussen woorden (zee-egel)." }],
           niveaus: {
-            basis: "Klinker-botsing → koppelteken → zee-egel. A.",
+            basis: "Klinker-botsing → koppelteken → zee-egel.",
             simpeler: "Zee + egel = 3 e's = lastig lezen. Daarom plak je koppelteken: zee-egel. Geen trema (die is voor andere woorden).",
             nogSimpeler: "Botsing = -",
           },
@@ -566,7 +566,7 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paardenstal, kindertekening, hondenbak — allemaal met tussen-n." }],
           basiskennis: [{ onderwerp: "Geen koppelteken", uitleg: "Pan-koek bestaat niet. Samenstellingen schrijf je aaneen, geen streepje (tenzij klinker-botsing)." }],
           niveaus: {
-            basis: "Pan → pannen → pannenkoek. A.",
+            basis: "Pan → pannen → pannenkoek.",
             simpeler: "Wat is meervoud van 'pan'? Pannen. Dus samenstelling = pannen + koek = pannenkoek.",
             nogSimpeler: "Pannen + koek",
           },
@@ -610,7 +610,7 @@ const steps = [
           voorbeelden: [{ type: "wel-tussen-s", tekst: "verkeer**s**licht, staat**s**bezoek, liefde**s**verklaring — overal hoorbaar." }],
           basiskennis: [{ onderwerp: "Aaneen", uitleg: "Samenstellingen schrijf je aaneen. Geen spatie of streepje (behalve bij botsing)." }],
           niveaus: {
-            basis: "Hoor je 's' tussen → schrijf 'm. Meningsverschil. A.",
+            basis: "Hoor je 's' tussen → schrijf 'm. Meningsverschil.",
             simpeler: "Zeg het hardop: 'mening-S-verschil'. Hoor je die S? Ja. Dus schrijf 'm: meningsverschil.",
             nogSimpeler: "S hoorbaar = schrijf 'm",
           },
@@ -665,7 +665,7 @@ const steps = [
           voorbeelden: [{ type: "NL", tekst: "december, maandag, zomer, leerling = klein. Nederland, Anna, Engels = hoofdletter." }],
           basiskennis: [{ onderwerp: "Begin altijd hoofdletter", uitleg: "Eerste woord van zin = ALTIJD hoofdletter, ook als het 'mijn' is." }],
           niveaus: {
-            basis: "Begin (Mijn) + Nederland hoofdletter. December klein. A.",
+            basis: "Begin (Mijn) + Nederland hoofdletter. December klein.",
             simpeler: "In NL: maandnamen klein (december). Eigennamen hoofdletter (Nederland). Begin van zin altijd hoofdletter (Mijn). Optie A heeft alle 3 goed.",
             nogSimpeler: "NL: maand klein, land hoofdletter",
           },
@@ -707,7 +707,7 @@ const steps = [
           voorbeelden: [{ type: "m-pje", tekst: "boom → boompje, raam → raampje, film → filmpje, arm → armpje." }],
           basiskennis: [{ onderwerp: "Spreek-truc", uitleg: "Zeg het hardop: 'boom-je' klinkt vreemd. 'Boom-pje' klinkt natuurlijk." }],
           niveaus: {
-            basis: "Eindigt op m → -pje → boompje. A.",
+            basis: "Eindigt op m → -pje → boompje.",
             simpeler: "Boom eindigt op M. Bij M gebruik je -pje als verkleinwoord. Dus boom + pje = boompje.",
             nogSimpeler: "M = pje",
           },
@@ -735,7 +735,7 @@ const steps = [
           voorbeelden: [{ type: "klinker", tekst: "auto → autootje, foto → fotootje, taxi → taxi'tje (apostrof)." }],
           basiskennis: [{ onderwerp: "Spreek-truc", uitleg: "Zeg 'autootje' — voelt natuurlijk. 'Autotje' niet." }],
           niveaus: {
-            basis: "Auto + tje + extra o = autootje. A.",
+            basis: "Auto + tje + extra o = autootje.",
             simpeler: "Auto eindigt op o (klinker). Bij verkleinwoord komt -tje, maar de o moet 'lang' blijven. Daarom extra o: a-u-t-o-o-tje.",
             nogSimpeler: "Autootje",
           },
@@ -778,7 +778,7 @@ const steps = [
           voorbeelden: [{ type: "apostrof", tekst: "auto's, foto's, baby's, taxi's, menu's." }],
           basiskennis: [{ onderwerp: "Eindigt op klinker?", uitleg: "Check de laatste letter. Klinker = apostrof. Medeklinker (woord op b,d,k,p enz.) = gewoon -s of -en." }],
           niveaus: {
-            basis: "Auto eindigt op o → auto's. A.",
+            basis: "Auto eindigt op o → auto's.",
             simpeler: "Stel: 'autos' zonder apostrof. Lijkt 'au-tos' (kort). Met apostrof: 'au-to-s' (lange o). Daarom: auto's.",
             nogSimpeler: "O + ' + s",
           },
@@ -817,7 +817,7 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "pad → paddenstoel, pan → pannenkoek, boek → boekenkast." }],
           basiskennis: [{ onderwerp: "Aaneen", uitleg: "Geen spatie of streepje in samenstellingen." }],
           niveaus: {
-            basis: "Pad → padden → paddenstoel. A.",
+            basis: "Pad → padden → paddenstoel.",
             simpeler: "Wat is meervoud van pad? Padden. Dus samenstelling = padden + stoel = paddenstoel.",
             nogSimpeler: "Padden + stoel",
           },
@@ -845,7 +845,7 @@ const steps = [
           voorbeelden: [{ type: "kort vs lang", tekst: "man → mannen, maan → manen. Hond → honden, hond gaat anders (lange klank in honden? nee, honden korte o → hondden zou je verwachten maar wegens d-stam wordt het 'honden')." }],
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Mèn (kort) of maan (lang)? Bepaalt de spelling." }],
           niveaus: {
-            basis: "Man (kort) → mannen (verdubbel). A.",
+            basis: "Man (kort) → mannen (verdubbel).",
             simpeler: "Korte a in 'man' → bij meervoud verdubbel je de n: mannen. (Manen = meervoud van maan, ander woord).",
             nogSimpeler: "Kort = dubbel",
           },
@@ -878,7 +878,7 @@ const steps = [
           voorbeelden: [{ type: "fix", tekst: "Goed: 'In de zomer ga ik op vakantie naar Frankrijk in augustus.'" }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: December, August. In NL: december, augustus." }],
           niveaus: {
-            basis: "Frankrijk = hoofd, augustus = klein. A.",
+            basis: "Frankrijk = hoofd, augustus = klein.",
             simpeler: "Loop de zin langs: zomer (klein OK), vakantie (klein OK), frankrijk (FOUT — moet hoofdletter want land), Augustus (FOUT — moet klein want maand). Antwoord A noemt deze 2.",
             nogSimpeler: "Frankrijk + augustus",
           },
@@ -903,7 +903,7 @@ const steps = [
           voorbeelden: [{ type: "apostrof", tekst: "foto's, auto's, baby's, taxi's, menu's." }],
           basiskennis: [{ onderwerp: "Geen extra o", uitleg: "Geen 'fotoo's' — gewoon 1 o + apostrof + s." }],
           niveaus: {
-            basis: "O + meervoud = 's → foto's. A.",
+            basis: "O + meervoud = 's → foto's.",
             simpeler: "Foto eindigt op o. Meervoud = foto's (met apostrof). Net als auto's, baby's.",
             nogSimpeler: "Foto's",
           },
@@ -946,7 +946,7 @@ const steps = [
           voorbeelden: [{ type: "regels", tekst: "Wind → winden = D. Koud = ou-woord. Bomen = open lettergreep, 1 o." }],
           basiskennis: [{ onderwerp: "Systematisch lezen", uitleg: "Bij zinnen: check elk woord apart, niet in 1 oogopslag." }],
           niveaus: {
-            basis: "Alle 4 woorden in A correct. A.",
+            basis: "Alle 4 woorden in A correct.",
             simpeler: "Lees A langs: koude ✓ (ou), wind ✓ (d), oude ✓ (ou), bomen ✓ (1 o). Andere opties hebben ergens een fout.",
             nogSimpeler: "Allemaal goed",
           },
@@ -972,7 +972,7 @@ const steps = [
           voorbeelden: [{ type: "apostrof-y", tekst: "baby → baby's, lady → lady's, hobby → hobby's." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels: babies. NL: baby's. Schrijf wat NL voorschrijft." }],
           niveaus: {
-            basis: "Y + meervoud = 's → baby's. A.",
+            basis: "Y + meervoud = 's → baby's.",
             simpeler: "Baby eindigt op y. Meervoud krijgt apostrof + s, net als auto's en foto's. Dus: baby's. (Niet 'babies' — dat is Engels.)",
             nogSimpeler: "Baby's",
           },
@@ -997,7 +997,7 @@ const steps = [
           voorbeelden: [{ type: "ing-kje", tekst: "koning → koninkje, ketting → kettinkje, haring → harinkje, ring → rinkje." }],
           basiskennis: [{ onderwerp: "Klank verandert", uitleg: "Spreek 'koningje' uit — voelt onnatuurlijk. 'Koninkje' is wat je hoort." }],
           niveaus: {
-            basis: "-ing → -kje → koninkje. A.",
+            basis: "-ing → -kje → koninkje.",
             simpeler: "Bij woorden die eindigen op -ing krijg je verkleinwoord met -kje (g eruit, k erin). Koning + kje = koninkje.",
             nogSimpeler: "-ing → -kje",
           },
@@ -1022,7 +1022,7 @@ const steps = [
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht." }],
           basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Geen uitzonderingen." }],
           niveaus: {
-            basis: "Lucht = cht. A.",
+            basis: "Lucht = cht.",
             simpeler: "Hoor je in 'lucht' een 'ch'-klank gevolgd door 't'? Ja. Dan altijd 'cht'. Lucht.",
             nogSimpeler: "Cht",
           },

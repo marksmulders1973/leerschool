@@ -40,7 +40,7 @@ const steps = [
           voorbeelden: [{ type: "isch", tekst: "logisch, fantastisch, komisch, elektrisch, tropisch — allemaal -isch." }],
           basiskennis: [{ onderwerp: "Latijnse afkomst", uitleg: "Veel -isch-woorden komen uit Grieks/Latijn." }],
           niveaus: {
-            basis: "Iese-klank → -isch. A.",
+            basis: "Iese-klank → -isch.",
             simpeler: "Zeg 'tropisch-e'. Hoor je 'iese'? Ja. Dan -isch (sch).",
             nogSimpeler: "Iese = isch",
           },
@@ -61,7 +61,7 @@ const steps = [
           voorbeelden: [{ type: "lijk", tekst: "vrolijk, mogelijk, gevaarlijk, gemakkelijk, waarschijnlijk." }],
           basiskennis: [{ onderwerp: "Stille ij", uitleg: "De ij in -lijk wordt zwak uitgesproken (bijna 'uk' klank), maar wel ij geschreven." }],
           niveaus: {
-            basis: "Uk-klank → -lijk. A.",
+            basis: "Uk-klank → -lijk.",
             simpeler: "'Mogelijk' klinkt als 'mogeluk' aan het eind, maar SCHRIJF altijd -lijk (met ij).",
             nogSimpeler: "Uk = lijk",
           },
@@ -81,7 +81,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "fantasties ✗ → fantastisch ✓." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET klopt, niet wat wel klopt." }],
           niveaus: {
-            basis: "Fantasties = fout (moet fantastisch). A.",
+            basis: "Fantasties = fout (moet fantastisch).",
             simpeler: "Iese-klank → altijd -isch. 'Fantasties' is verkeerd, moet 'fantastisch' zijn.",
             nogSimpeler: "Fantasties fout",
           },
@@ -101,7 +101,7 @@ const steps = [
           voorbeelden: [{ type: "lijk", tekst: "gevaarlijk, vrolijk, mogelijk, gemakkelijk." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "-lijk komt heel vaak voor in NL." }],
           niveaus: {
-            basis: "Uk-klank = -lijk → gevaarlijk. A.",
+            basis: "Uk-klank = -lijk → gevaarlijk.",
             simpeler: "Klinkt als 'gevaar-luk', schrijf 'gevaar-lijk'. Standaard NL-regel.",
             nogSimpeler: "Lijk",
           },
@@ -128,7 +128,7 @@ const steps = [
           voorbeelden: [{ type: "vraag", tekst: "'Wat is je naam?', 'Hoe heet je?', 'Ga je mee?' — allemaal ?." }],
           basiskennis: [{ onderwerp: "Stem omhoog", uitleg: "Bij vraag gaat je stem omhoog aan het eind. Hoor je dat → ?." }],
           niveaus: {
-            basis: "Vraag = ?. A.",
+            basis: "Vraag = ?.",
             simpeler: "'Hoe oud ben je' is een vraag. Bij vragen schrijf je een vraagteken: ?.",
             nogSimpeler: "Vraag = ?",
           },
@@ -148,7 +148,7 @@ const steps = [
           voorbeelden: [{ type: "!", tekst: "Wauw! / Pas op! / Wat fijn! — allemaal !." }],
           basiskennis: [{ onderwerp: "Niet overdrijven", uitleg: "Niet ELKE zin met !, alleen sterke gevoelens." }],
           niveaus: {
-            basis: "Uitroep + uitroep = ! + !. A.",
+            basis: "Uitroep + uitroep = ! + !.",
             simpeler: "Wauw is een verbaasde uitroep — !. 'Wat een mooi cadeau' is ook een uitroep van blijheid — !. Dus ! en !.",
             nogSimpeler: "Twee uitroepen = !!",
           },
@@ -168,7 +168,7 @@ const steps = [
           voorbeelden: [{ type: "opsomming", tekst: "Goed: 'rood, geel, groen en blauw'. Fout: 'rood geel groen en blauw'." }],
           basiskennis: [{ onderwerp: "Komma = pauze", uitleg: "Komma = kleine pauze in lezen. Bij opsomming pauzeer je tussen items." }],
           niveaus: {
-            basis: "Opsomming zonder komma's = fout. A.",
+            basis: "Opsomming zonder komma's = fout.",
             simpeler: "Lees A hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. = A is fout.",
             nogSimpeler: "Geen komma's = A fout",
           },
@@ -195,7 +195,7 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paddenstoel, boekenkast, hondenbak — allemaal tussen-n." }],
           basiskennis: [{ onderwerp: "Geen spatie", uitleg: "Samenstellingen aaneen geschreven, geen spatie of streepje." }],
           niveaus: {
-            basis: "Pan → pannen → pannenkoek. A.",
+            basis: "Pan → pannen → pannenkoek.",
             simpeler: "Meervoud van pan = pannen. Bij samenstelling met -en-meervoud → tussen-n. Pannen + koek = pannenkoek.",
             nogSimpeler: "Pannenkoek",
           },
@@ -215,7 +215,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "Voetbal schoen ✗ → voetbalschoen ✓. Net als tandarts en zonnebril." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET klopt." }],
           niveaus: {
-            basis: "Voetbal schoen los = fout. A.",
+            basis: "Voetbal schoen los = fout.",
             simpeler: "In NL plak je samenstellingen aaneen. 'Voetbal schoen' met spatie = fout. Moet 'voetbalschoen' zijn.",
             nogSimpeler: "Spatie = fout",
           },
@@ -235,7 +235,7 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "boekenkast (boeken), pannenkoek (pannen), kindertekening — wacht, kind heeft meervoud kinderen → kindertekening." }],
           basiskennis: [{ onderwerp: "Niet altijd", uitleg: "Niet alle samenstellingen krijgen -en-. Alleen als eerste woord meervoud op -en heeft." }],
           niveaus: {
-            basis: "Tussen-n want meervoud boeken. A.",
+            basis: "Tussen-n want meervoud boeken.",
             simpeler: "Een 'boekenkast' is een kast VOOR meerdere boeken. Meervoud van boek = boeken. Daarom -en- ertussen.",
             nogSimpeler: "Meervoud → -en-",
           },
@@ -255,7 +255,7 @@ const steps = [
           voorbeelden: [{ type: "aaneen", tekst: "zonnebril, schoolboek, fietsenrek." }],
           basiskennis: [{ onderwerp: "Geen 'zonen'", uitleg: "Zonen = meervoud van zoon (kind). Geen relatie met zon." }],
           niveaus: {
-            basis: "Aaneen = zonnebril. A.",
+            basis: "Aaneen = zonnebril.",
             simpeler: "Zon + bril = zonnebril, aaneen. (Niet 'zonen' — dat zijn kinderen, niet de zon).",
             nogSimpeler: "Zonnebril",
           },
@@ -282,7 +282,7 @@ const steps = [
           voorbeelden: [{ type: "goed", tekst: "Tom (naam) + Amsterdam (plaats) = hoofd. Maandag (dag) = klein." }],
           basiskennis: [{ onderwerp: "Niet alles hoofd", uitleg: "Niet ELK woord met hoofdletter zoals in titels — alleen waar regels zeggen." }],
           niveaus: {
-            basis: "Tom + Amsterdam hoofd, maandag klein. A.",
+            basis: "Tom + Amsterdam hoofd, maandag klein.",
             simpeler: "Tom (naam = hoofdletter), Amsterdam (plaats = hoofdletter), maandag (dag = klein). A heeft alle 3 goed.",
             nogSimpeler: "Naam + plaats hoofd",
           },
@@ -302,7 +302,7 @@ const steps = [
           voorbeelden: [{ type: "hoofd", tekst: "Nederland, Anna, Amsterdam = hoofd. maandag, mei, kerst = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels: Monday, December. NL: maandag, december." }],
           niveaus: {
-            basis: "Land = hoofdletter. Nederland. A.",
+            basis: "Land = hoofdletter. Nederland.",
             simpeler: "Welke is een land? Nederland — krijgt hoofdletter. De rest (dagen/maanden/feestdag) klein.",
             nogSimpeler: "Land = hoofd",
           },
@@ -322,7 +322,7 @@ const steps = [
           voorbeelden: [{ type: "talen", tekst: "Frans, Engels, Duits, Spaans, Italiaans, Chinees — allemaal hoofdletter." }],
           basiskennis: [{ onderwerp: "Niet ALLE caps", uitleg: "Niet 'FRANS' in hoofdletters — gewoon eerste letter hoofdletter." }],
           niveaus: {
-            basis: "Talen = hoofdletter. A.",
+            basis: "Talen = hoofdletter.",
             simpeler: "Frans en Engels zijn TALEN. Talen krijgen in NL hoofdletter (anders dan dagen/maanden). Dus: Frans, Engels.",
             nogSimpeler: "Talen = hoofd",
           },
@@ -342,7 +342,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "'mijn naam is sara' ✗ → 'Mijn naam is Sara.' ✓" }],
           basiskennis: [{ onderwerp: "Altijd punt aan einde", uitleg: "Mededeling-zin eindigt op punt." }],
           niveaus: {
-            basis: "A heeft 3 fouten (Mijn, Sara, punt). A.",
+            basis: "A heeft 3 fouten (Mijn, Sara, punt).",
             simpeler: "Loop A langs: 'mijn' (FOUT, begin zin moet hoofdletter), 'sara' (FOUT, eigennaam moet hoofdletter), geen punt aan eind (FOUT). 3 fouten = duidelijk fout.",
             nogSimpeler: "Geen hoofdletters/punt",
           },
@@ -369,7 +369,7 @@ const steps = [
           voorbeelden: [{ type: "isch", tekst: "fantastisch, logisch, tropisch — allemaal -isch." }],
           basiskennis: [{ onderwerp: "Volgorde: s-c-h", uitleg: "Letters in volgorde: eerst s, dan c, dan h." }],
           niveaus: {
-            basis: "Iese = -isch → fantastisch. A.",
+            basis: "Iese = -isch → fantastisch.",
             simpeler: "Hoor je 'iese' op eind? Schrijf altijd -isch (s-c-h). Fantastisch klopt.",
             nogSimpeler: "Iese = isch",
           },
@@ -389,7 +389,7 @@ const steps = [
           voorbeelden: [{ type: "vraag", tekst: "Ben jij klaar?, Hoe heet je?, Wat doe je? — allemaal ?." }],
           basiskennis: [{ onderwerp: "Begin = signaal", uitleg: "Vragen beginnen vaak met werkwoord (Ben, Doe, Heb) of vraag-woord (Wat, Hoe)." }],
           niveaus: {
-            basis: "Vraag = ?. A.",
+            basis: "Vraag = ?.",
             simpeler: "'Ben jij klaar' is een vraag (begint met werkwoord 'Ben'). Vragen krijgen ?.",
             nogSimpeler: "Vraag = ?",
           },
@@ -409,7 +409,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "'Voetbal schoen' ✗ → 'voetbalschoen' ✓." }],
           basiskennis: [{ onderwerp: "Aaneen", uitleg: "Geen spatie, geen streepje (tenzij klinker-botsing)." }],
           niveaus: {
-            basis: "Spatie in samenstelling = fout. A.",
+            basis: "Spatie in samenstelling = fout.",
             simpeler: "'Voetbal schoen' met spatie = fout. Moet aaneen: voetbalschoen.",
             nogSimpeler: "Spatie = A fout",
           },
@@ -429,7 +429,7 @@ const steps = [
           voorbeelden: [{ type: "hoofd", tekst: "België, Nederland, Frankrijk = hoofd. dinsdag, mei, kerst = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: Tuesday, May. NL: dinsdag, mei." }],
           niveaus: {
-            basis: "Land = hoofd → België. A.",
+            basis: "Land = hoofd → België.",
             simpeler: "Welke is een land? België. Landen krijgen hoofdletter. De rest (dag, maand, feest) klein.",
             nogSimpeler: "Land = hoofd",
           },
@@ -449,7 +449,7 @@ const steps = [
           voorbeelden: [{ type: "combo", tekst: "Gemak + kelijk → gemakkelijk. Net als vrolijk, mogelijk." }],
           basiskennis: [{ onderwerp: "2 regels", uitleg: "Soms moet je 2 spelregels tegelijk toepassen." }],
           niveaus: {
-            basis: "Dubbele k + -lijk = gemakkelijk. A.",
+            basis: "Dubbele k + -lijk = gemakkelijk.",
             simpeler: "Korte a in 'gemak' → verdubbel k bij uitbreiding. Plus uk-klank = -lijk. Samen: gemakkelijk.",
             nogSimpeler: "Kk + lijk",
           },
@@ -469,7 +469,7 @@ const steps = [
           voorbeelden: [{ type: "!", tekst: "Wat een leuk feest!, Wat fijn!, Wat een geluk! — allemaal !." }],
           basiskennis: [{ onderwerp: "Wat een ... !", uitleg: "Combinatie 'Wat een' + bijvoeglijk = signaal voor uitroep." }],
           niveaus: {
-            basis: "Uitroep = !. A.",
+            basis: "Uitroep = !.",
             simpeler: "'Wat een leuk feest' is een blije uitroep — krijg je een uitroepteken (!) bij.",
             nogSimpeler: "Wat een... !",
           },

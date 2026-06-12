@@ -160,7 +160,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Alcohol-water: alcohol kookt op 78°C, water op 100°C. Verschil van 22°C is genoeg." }],
           basiskennis: [{ onderwerp: "Niet voor zelf-thuis", uitleg: "Alcohol distilleren thuis is verboden — vergunning nodig." }],
           niveaus: {
-            basis: "Destilleren. A.",
+            basis: "Destilleren.",
             simpeler: "Alcohol kookt eerder dan water (78°C vs 100°C). Verwarmen → alcohol-damp eerst → opvangen → pure alcohol.",
             nogSimpeler: "Destilleren",
           },

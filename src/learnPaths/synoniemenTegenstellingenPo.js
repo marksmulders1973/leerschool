@@ -281,7 +281,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vriendelijk → onvriendelijk. Zichtbaar → onzichtbaar. Mogelijk → onmogelijk." }],
           basiskennis: [{ onderwerp: "Niet altijd", uitleg: "On-weer en on-kruid zijn specifieke woorden, niet zomaar 'geen weer/kruid'." }],
           niveaus: {
-            basis: "Onmogelijk. A.",
+            basis: "Onmogelijk.",
             simpeler: "Mogelijk → met 'on-' voor → onmogelijk = het tegenovergestelde.",
             nogSimpeler: "Onmogelijk",
           },

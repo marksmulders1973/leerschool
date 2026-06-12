@@ -111,7 +111,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Walvis (zee), vleermuis (lucht), mol (grond) zijn allemaal zoogdieren." }],
           basiskennis: [{ onderwerp: "Niet plek-gebonden", uitleg: "Klasse hangt niet af van waar het dier woont, maar van eigenschappen." }],
           niveaus: {
-            basis: "Zoogdier. A.",
+            basis: "Zoogdier.",
             simpeler: "Een walvis ziet eruit als een vis maar is een zoogdier: ademt lucht en zoogt jongen met melk. Plek waar dier leeft (zee) bepaalt niet de klasse.",
             nogSimpeler: "Zoogdier",
           },
@@ -231,7 +231,7 @@ const steps = [
           niveaus: {
             basis: "Olifant = zoogdier (zoogt + haren + warmbloedig).",
             simpeler: "Olifant geeft melk aan jongen → zoogdier. Anderen: slang=reptiel, mus=vogel, vis=vis.",
-            nogSimpeler: "Olifant = zoogdier. A.",
+            nogSimpeler: "Olifant = zoogdier.",
           },
         },
       },
@@ -259,7 +259,7 @@ const steps = [
           niveaus: {
             basis: "Zoogdieren zoogen jongen met melk.",
             simpeler: "Naam = zoog-dier = melk-geven. Andere opties horen bij andere klassen.",
-            nogSimpeler: "Melk = zoogdier-kenmerk. A.",
+            nogSimpeler: "Melk = zoogdier-kenmerk.",
           },
         },
       },

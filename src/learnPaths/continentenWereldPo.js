@@ -263,7 +263,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "China grenst aan Rusland (noord), India (zuid), Vietnam." }],
           basiskennis: [{ onderwerp: "Azië is groot", uitleg: "Azië bevat veel grote landen — China, India, Indonesië, Japan." }],
           niveaus: {
-            basis: "Azië. A.",
+            basis: "Azië.",
             simpeler: "China is een land in Oost-Azië. Dus continent = Azië.",
             nogSimpeler: "Azië",
           },

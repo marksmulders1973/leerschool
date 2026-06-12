@@ -81,7 +81,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:25.000 → 1 cm = 250 m. 1:50.000 → 1 cm = 500 m. 1:200.000 → 1 cm = 2 km." }],
           basiskennis: [{ onderwerp: "Omrekening", uitleg: "100.000 cm = 1.000 m = 1 km. Onthoud deze stap." }],
           niveaus: {
-            basis: "3 km. A.",
+            basis: "3 km.",
             simpeler: "1:100.000 betekent 1 cm = 1 km. Dus 3 cm = 3 km.",
             nogSimpeler: "3",
           },
@@ -101,7 +101,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Bv: blauw = water, groen = bos, bruin = berg/heuvel." }],
           basiskennis: [{ onderwerp: "Plek op kaart", uitleg: "Vaak in een hoekje van de kaart of apart kader." }],
           niveaus: {
-            basis: "Uitleg van symbolen + kleuren. A.",
+            basis: "Uitleg van symbolen + kleuren.",
             simpeler: "Legenda = wat-betekent-wat-tabel naast de kaart.",
             nogSimpeler: "Symbolen-uitleg",
           },
@@ -122,7 +122,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Bij 1:100.000 is 1 cm op kaart = 1 km. Handig om te onthouden." }],
           basiskennis: [{ onderwerp: "100 cm = 1 m, 1000 m = 1 km", uitleg: "Centimeter, meter, kilometer — stappen van 100 en 1000." }],
           niveaus: {
-            basis: "4 × 50.000 = 200.000 cm = 2 km. A.",
+            basis: "4 × 50.000 = 200.000 cm = 2 km.",
             simpeler: "Schaal 1:50.000 → 1 cm op kaart = 500 m = 0,5 km. 4 cm × 0,5 km = 2 km.",
             nogSimpeler: "2 km",
           },
@@ -234,7 +234,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Schweiz-kaart: veel bruine en witte vlekken = Alpen. NL-kaart: vrijwel alleen groen + blauw (plat land)." }],
           basiskennis: [{ onderwerp: "Legenda checken", uitleg: "Elke kaart heeft eigen kleurcodes — controleer altijd de legenda!" }],
           niveaus: {
-            basis: "Berg of heuvel. A.",
+            basis: "Berg of heuvel.",
             simpeler: "Bruin op kaart = hoog land.",
             nogSimpeler: "Berg",
           },
@@ -276,7 +276,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:1.000 = bouwtekening (1 cm = 10 m). 1:25.000 = wandelkaart. 1:1.000.000 = wereldatlas." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Hoe kleiner het getal achter ':' hoe meer je ziet per cm. Vice versa." }],
           niveaus: {
-            basis: "Groter (kleiner schaalgetal = meer detail). A.",
+            basis: "Groter (kleiner schaalgetal = meer detail).",
             simpeler: "1:10.000 = stadsplattegrond. 1:100.000 = streekkaart met minder detail. Eerste is 'groter'.",
             nogSimpeler: "Groter",
           },
@@ -427,7 +427,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:100.000 — 5 cm = 5 km." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schuif komma in schaal-getal 5 plekken naar links voor km: 200.000 cm → 2 km." }],
           niveaus: {
-            basis: "4 km. A.",
+            basis: "4 km.",
             simpeler: "2 × 200.000 = 400.000 cm = 4 km.",
             nogSimpeler: "4 km",
           },
@@ -453,7 +453,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vanuit Amsterdam ligt Duitsland in het oosten." }],
           basiskennis: [{ onderwerp: "Tussen-richtingen", uitleg: "NO = noord-oost (tussen N en O). ZW = zuid-west. Etc." }],
           niveaus: {
-            basis: "O (oost). A.",
+            basis: "O (oost).",
             simpeler: "Klok: N→O→Z→W.",
             nogSimpeler: "Rechts van N = O",
           },
@@ -504,7 +504,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Wandelroute: 1:10.000 (kleine schaal). Atlas van Europa: 1:5.000.000." }],
           basiskennis: [{ onderwerp: "Klein vs groot", uitleg: "Kleine schaal = klein getal (1:100) = klein gebied groot getekend. Grote schaal = groot getal = veel land in kleine ruimte." }],
           niveaus: {
-            basis: "Wereldkaart / land-overzicht. A.",
+            basis: "Wereldkaart / land-overzicht.",
             simpeler: "1:1 miljoen = veel land op 1 kaart.",
             nogSimpeler: "Groot gebied",
           },
@@ -683,7 +683,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "10+20+30 = (10+20)+30 = 30+30 = 60. Tussenstappen helpen fouten voorkomen." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "Schat eerst: ~10+10+20+20+30 = ~90. Past." }],
           niveaus: {
-            basis: "90 (alles optellen). A.",
+            basis: "90 (alles optellen).",
             simpeler: "12+8=20, +18=38, +22=60, +30=90.",
             nogSimpeler: "90",
           },
@@ -703,7 +703,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Drie groepen 30% + 40% + ? = 100 → derde groep = 30%." }],
           basiskennis: [{ onderwerp: "100% = alles", uitleg: "Een hele cirkel staat altijd voor alles samen = 100%." }],
           niveaus: {
-            basis: "100 − 50 − 25 − 15 = 10%. A.",
+            basis: "100 − 50 − 25 − 15 = 10%.",
             simpeler: "Totaal = 100%. Trek af wat we al hebben: 100 − (50+25+15) = 100 − 90 = 10%.",
             nogSimpeler: "10%",
           },
@@ -724,7 +724,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Temperatuur door dag: vroeg laag, midden hoog, avond weer laag → klassiek 'piek'-patroon." }],
           basiskennis: [{ onderwerp: "Top of dal", uitleg: "Top = hoogste punt midden in. Dal = laagste punt midden in." }],
           niveaus: {
-            basis: "Eerst stijgen, dan dalen (piek in midden). A.",
+            basis: "Eerst stijgen, dan dalen (piek in midden).",
             simpeler: "Tot dag 3 omhoog (25 = piek), daarna omlaag.",
             nogSimpeler: "Op-neer",
           },
@@ -855,7 +855,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Temperatuur over week = lijn. Aantal kinderen per klas = staaf. Hobby-verdeling % = cirkel." }],
           basiskennis: [{ onderwerp: "X-as = onafhankelijk", uitleg: "Tijd, leeftijd, dagen — daar zet je op X-as. Wat je meet komt op Y-as." }],
           niveaus: {
-            basis: "Lijngrafiek. A.",
+            basis: "Lijngrafiek.",
             simpeler: "Verandering over tijd = lijngrafiek.",
             nogSimpeler: "Lijn",
           },
@@ -987,7 +987,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Som 1+2+3+4+5 = (1+5)+(2+4)+3 = 6+6+3 = 15." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Som groter dan grootste term (50) — klopt." }],
           niveaus: {
-            basis: "€150. A.",
+            basis: "€150.",
             simpeler: "10+20+30+40+50 = 150.",
             nogSimpeler: "150",
           },
@@ -1042,7 +1042,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Grafiek 'Temperatuur per uur' = lijn die op- en neergaat over 24 uur." }],
           basiskennis: [{ onderwerp: "Andere typen", uitleg: "Staaf = vergelijken groepen. Cirkel = verdeling geheel. Lijn = verloop tijd." }],
           niveaus: {
-            basis: "Verandering door tijd. A.",
+            basis: "Verandering door tijd.",
             simpeler: "Lijn die op- en neergaat = tijd-verloop.",
             nogSimpeler: "Tijd",
           },
@@ -1075,7 +1075,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vier delen: 25% + 35% + 25% + x. x = 100 − 85 = 15%." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Tel alle delen op: moeten 100% zijn." }],
           niveaus: {
-            basis: "20%. A.",
+            basis: "20%.",
             simpeler: "100 − 50 − 30 = 20.",
             nogSimpeler: "Rest = 100 − 80 = 20%",
           },
@@ -1126,7 +1126,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1 t/m 5: 1, 2, 3, 4, 5 = 5 getallen." }],
           basiskennis: [{ onderwerp: "Exclusief", uitleg: "Bij 'tussen 10 en 20' (exclusief): 11, 12, ..., 19 = 9 getallen." }],
           niveaus: {
-            basis: "11. A.",
+            basis: "11.",
             simpeler: "20 − 10 + 1 = 11.",
             nogSimpeler: "11",
           },
@@ -1272,7 +1272,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "boek → bos → brood (b-o-e vs b-o-s vs b-r-o, eerst o-e, dan o-s, dan r)." }],
           basiskennis: [{ onderwerp: "Alfabet-volgorde", uitleg: "A-B-C-D-...-P-Q-R-S-T-U-V-W-X-Y-Z. P komt vóór U." }],
           niveaus: {
-            basis: "appel. A.",
+            basis: "appel.",
             simpeler: "a-p (appel) komt vóór a-u (auto) in alfabet.",
             nogSimpeler: "appel",
           },
@@ -1327,7 +1327,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Boek vóór boeken. Tafel vóór tafels." }],
           basiskennis: [{ onderwerp: "Letter voor letter", uitleg: "Niet hele woord vergelijken — letter voor letter, links naar rechts." }],
           niveaus: {
-            basis: "kat. A.",
+            basis: "kat.",
             simpeler: "kat is k-a-t (3 letters), kater is k-a-t-e-r (5 letters). Eerste 3 letters gelijk; bij gelijke prefix staat het kortere woord eerder.",
             nogSimpeler: "kat",
           },
@@ -1357,7 +1357,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Rotterdam ... 14 B3' = blz 14, vak B3 (kolom B, rij 3)." }],
           basiskennis: [{ onderwerp: "Letter vs cijfer", uitleg: "Letter is altijd kolom (horizontaal), cijfer is rij (verticaal)." }],
           niveaus: {
-            basis: "Bladzijde 22, vak D5. A.",
+            basis: "Bladzijde 22, vak D5.",
             simpeler: "Eerste getal = bladzijde (22). Daarna staat de vakcode (D5).",
             nogSimpeler: "blz 22, vak D5",
           },
@@ -1451,7 +1451,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'appel' vs 'boom': a (1) vs b (2) → appel eerder. 'huis' vs 'kat': h (8) vs k (11) → huis eerder." }],
           basiskennis: [{ onderwerp: "Alfabet onthouden", uitleg: "Tip: leer rijtjes A-G, H-N, O-T, U-Z." }],
           niveaus: {
-            basis: "paars (p < r). A.",
+            basis: "paars (p < r).",
             simpeler: "p komt voor r in alfabet. Dus 'paars' eerst.",
             nogSimpeler: "paars",
           },
@@ -1490,7 +1490,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Berlijn ... 14 B2' → blz 14, vak B2 (kolom B, rij 2)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Letter = kolom (links-rechts). Cijfer = rij (boven-onder)." }],
           niveaus: {
-            basis: "Vak op de kaart. A.",
+            basis: "Vak op de kaart.",
             simpeler: "C4 = vak in kaart-raster.",
             nogSimpeler: "Vak",
           },
@@ -1523,7 +1523,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Zoek 'Madrid' → index zegt '22 C4' → blz 22 vak C4 op de kaart." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Index = einde, alfabetisch. Inhoudsopgave = begin, op volgorde van hoofdstukken." }],
           niveaus: {
-            basis: "Index. A.",
+            basis: "Index.",
             simpeler: "Index achterin geeft direct de pagina.",
             nogSimpeler: "Index",
           },
@@ -1573,7 +1573,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "In digitale Cito-toets met lange tekst: Ctrl+F → typ 'kerncentrale' → ga direct naar die plek." }],
           basiskennis: [{ onderwerp: "Andere sneltoetsen", uitleg: "Ctrl+C = kopiëren. Ctrl+V = plakken. Ctrl+S = opslaan. Ctrl+P = print." }],
           niveaus: {
-            basis: "Zoekfunctie. A.",
+            basis: "Zoekfunctie.",
             simpeler: "Ctrl+F = Find = zoek.",
             nogSimpeler: "Zoek",
           },
@@ -1714,7 +1714,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Telefoonboom: 'Vraag X? ja → A / nee → B'. Met ruiten voor de vraag." }],
           basiskennis: [{ onderwerp: "Vormen", uitleg: "Rechthoek = stap, ruit = keuze, ovaal/cirkel = start/eind, pijl = verbinding." }],
           niveaus: {
-            basis: "Stappen met pijlen. A.",
+            basis: "Stappen met pijlen.",
             simpeler: "Een schema dat 'wat-eerst, wat-daarna' aangeeft met pijlen.",
             nogSimpeler: "Stappen + pijlen",
           },
@@ -1735,7 +1735,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Volgorde taart: 1. Recept lezen → 2. Ingrediënten verzamelen → 3. Mengen → 4. Bakken → 5. Afkoelen → 6. Eten." }],
           basiskennis: [{ onderwerp: "Logica eerst", uitleg: "Stappen die NIETS weten over volgende = beginstappen." }],
           niveaus: {
-            basis: "Recept lezen. A.",
+            basis: "Recept lezen.",
             simpeler: "Eerste stap = wat moet ik weten? = Recept lezen.",
             nogSimpeler: "Recept",
           },
@@ -1875,7 +1875,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Schema 'start → A → B → einde' = volgorde A vóór B." }],
           basiskennis: [{ onderwerp: "Pijlrichting", uitleg: "Pijl wijst naar wat NA komt. Niet wat ervóór staat." }],
           niveaus: {
-            basis: "Volgorde van stappen. A.",
+            basis: "Volgorde van stappen.",
             simpeler: "Pijl wijst van vorig naar volgend = volgorde.",
             nogSimpeler: "Volgorde",
           },
@@ -1901,7 +1901,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Eerste mens op de maan (1969) ligt tussen WO2-einde (1945) en val Berlijnse Muur (1989)." }],
           basiskennis: [{ onderwerp: "Eeuw", uitleg: "Eeuw = 100 jaar. 20e eeuw = 1901-2000." }],
           niveaus: {
-            basis: "1950 en 2000. A.",
+            basis: "1950 en 2000.",
             simpeler: "1975 ligt tussen 1950 en 2000.",
             nogSimpeler: "1950 < 1975 < 2000",
           },
@@ -1939,7 +1939,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Plant → rups → vogel → roofvogel." }],
           basiskennis: [{ onderwerp: "Hoogste", uitleg: "Aan einde van keten staan vaak roofdieren met geen vijanden (top-predatoren)." }],
           niveaus: {
-            basis: "Konijn. A.",
+            basis: "Konijn.",
             simpeler: "Pijl konijn → vos betekent: vos eet konijn.",
             nogSimpeler: "Konijn",
           },
@@ -2096,7 +2096,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:25.000 = 1 cm = 250 m. 8 cm = 8 × 250 m = 2000 m = 2 km." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "1:25.000 = wandelkaart. 1:50.000 = ANWB-kaart. 1:1.000.000 = atlas." }],
           niveaus: {
-            basis: "2 km. A.",
+            basis: "2 km.",
             simpeler: "8 cm × 25.000 = 200.000 cm. 200.000 cm = 2 km.",
             nogSimpeler: "2 km",
           },
@@ -2117,7 +2117,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tussen 'balk' en 'ballon': 'balk' = b-a-l-k, 'ballon' = b-a-l-l. K (11e) vs L (12e). Dus 'balk' eerst." }],
           basiskennis: [{ onderwerp: "Volgorde compleet", uitleg: "bal → balk → balkon → ballon." }],
           niveaus: {
-            basis: "bal. A.",
+            basis: "bal.",
             simpeler: "Alle 4 beginnen met 'bal'. 'bal' is het kortst — staat dus eerst.",
             nogSimpeler: "bal",
           },
@@ -2138,7 +2138,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "20 + 35 + ? = 100 → ? = 45." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Het kleinste stuk is meestal 'de rest'. Hier: 10% past." }],
           niveaus: {
-            basis: "10% (100 − 90). A.",
+            basis: "10% (100 − 90).",
             simpeler: "40+30+20=90. 100−90=10.",
             nogSimpeler: "10%",
           },
@@ -2204,7 +2204,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Turkije: deels Azië, deels Europa, primair Azië. Rusland: deels Europa, deels Azië, vaak beide genoemd." }],
           basiskennis: [{ onderwerp: "Buurlanden Egypte", uitleg: "Egypte grenst aan: Libië (W), Sudan (Z), Israël (NO). Plus Middellandse Zee + Rode Zee." }],
           niveaus: {
-            basis: "Afrika. A.",
+            basis: "Afrika.",
             simpeler: "Egypte ligt in Noord-Afrika met de Nijl.",
             nogSimpeler: "Afrika",
           },
@@ -2260,7 +2260,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'kat' vs 'kar': k-a-t vs k-a-r → t na r. Dus 'kar' eerst." }],
           basiskennis: [{ onderwerp: "Geheugensteun", uitleg: "ABCDEFGHIJK..." }],
           niveaus: {
-            basis: "taart eerst. A.",
+            basis: "taart eerst.",
             simpeler: "ta-a- vóór ta-b- vóór ta-f-.",
             nogSimpeler: "a vóór b vóór f. taart",
           },
@@ -2305,7 +2305,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Kaart met blauw = water, groen = bos, geel = zand → legenda toont dit." }],
           basiskennis: [{ onderwerp: "Soort tekens", uitleg: "Legenda kan symbolen tonen (•, ★, ▲), of kleuren, of streep-patronen." }],
           niveaus: {
-            basis: "Goed. A.",
+            basis: "Goed.",
             simpeler: "Legenda = uitleg van kleuren/symbolen.",
             nogSimpeler: "Goed",
           },

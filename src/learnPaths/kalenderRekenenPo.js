@@ -150,7 +150,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Di + 7 = di. Di + 1 = wo. Wo + 1 = do. Do + 1 = vr. Totaal: vr." }],
           basiskennis: [{ onderwerp: "Niet alle 10 één voor één", uitleg: "Slim is groepjes van 7 dagen wegtrekken." }],
           niveaus: {
-            basis: "Vrijdag. A.",
+            basis: "Vrijdag.",
             simpeler: "10 dagen = 1 week + 3 dagen. Dinsdag + 1 week = dinsdag. + 3 dagen = vrijdag.",
             nogSimpeler: "Vrijdag",
           },
@@ -261,7 +261,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Geboren 20 oktober 2013, vandaag 5 maart 2026 → leeftijd 12." }],
           basiskennis: [{ onderwerp: "Verjaardag-check", uitleg: "Altijd checken: heeft hij al verjaardag gehad dit jaar?" }],
           niveaus: {
-            basis: "12 jaar. A.",
+            basis: "12 jaar.",
             simpeler: "2026 - 2013 = 13. Maar verjaardag (oktober) is nog niet geweest in maart. Dus 1 eraf = 12 jaar.",
             nogSimpeler: "12 jaar",
           },
@@ -314,7 +314,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Iemand van 40 jaar in 2026 = geboren in 1986." }],
           basiskennis: [{ onderwerp: "Aftrekken", uitleg: "Hoe ouder, hoe eerder geboren." }],
           niveaus: {
-            basis: "1986. A.",
+            basis: "1986.",
             simpeler: "Wie 40 wordt in 2026 is geboren in 2026 - 40 = 1986.",
             nogSimpeler: "1986",
           },

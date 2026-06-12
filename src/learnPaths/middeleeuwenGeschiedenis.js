@@ -153,7 +153,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Slag van Hattin (1187) waar Saladin de kruisvaarders versloeg." }],
           basiskennis: [{ onderwerp: "Beroemd", uitleg: "Saladin werd ook door tegenstanders gerespecteerd voor zijn rechtvaardigheid." }],
           niveaus: {
-            basis: "Saladin. A.",
+            basis: "Saladin.",
             simpeler: "Saladin was de sultan van Egypte die in 1187 Jeruzalem heroverde op de kruisvaarders.",
             nogSimpeler: "Saladin",
           },

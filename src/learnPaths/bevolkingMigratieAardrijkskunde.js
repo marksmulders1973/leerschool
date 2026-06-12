@@ -135,7 +135,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Nederland: 17,9M ÷ 34.000 km² = ~527 mensen/km²." }],
           basiskennis: [{ onderwerp: "Eenheden", uitleg: "1 mln = 1.000.000. 100K = 100.000." }],
           niveaus: {
-            basis: "10M ÷ 100K = 100 mensen/km². A.",
+            basis: "10M ÷ 100K = 100 mensen/km².",
             simpeler: "Deel het aantal mensen door de oppervlakte: 10.000.000 ÷ 100.000 = 100.",
             nogSimpeler: "100",
           },

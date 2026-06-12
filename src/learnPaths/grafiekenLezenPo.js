@@ -295,7 +295,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Donderdag = 30, dinsdag = 18. 30 − 18 = 12. Dus 12 kinderen meer." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft 'totaal'. Aftrekken geeft 'verschil'." }],
           niveaus: {
-            basis: "30 − 18 = 12 kinderen. A.",
+            basis: "30 − 18 = 12 kinderen.",
             simpeler: "Vergelijk donderdag (30) met dinsdag (18). Verschil = 30 − 18 = 12.",
             nogSimpeler: "12 kinderen",
           },
@@ -418,7 +418,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "22 °C − 12 °C = 10 °C warmer." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Schrijf °C bij het antwoord." }],
           niveaus: {
-            basis: "22 − 12 = 10 °C. A.",
+            basis: "22 − 12 = 10 °C.",
             simpeler: "Om 14u is het 22 °C, om 8u is het 12 °C. 22 − 12 = 10 °C warmer.",
             nogSimpeler: "10 °C",
           },
@@ -542,7 +542,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "50% van 20 kinderen = 10 kinderen voetbal." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij Cito: schrijf 'kinderen' of de juiste eenheid bij het getal." }],
           niveaus: {
-            basis: "50% × 20 = 10 kinderen. A.",
+            basis: "50% × 20 = 10 kinderen.",
             simpeler: "50% is de helft. De helft van 20 = 10. Dus 10 kinderen kiezen voetbal.",
             nogSimpeler: "10 kinderen",
           },
@@ -684,7 +684,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "30 − 12 = 18. Dus 18 ijsjes meer op vrijdag." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft totaal. Aftrekken geeft verschil." }],
           niveaus: {
-            basis: "30 − 12 = 18 ijsjes. A.",
+            basis: "30 − 12 = 18 ijsjes.",
             simpeler: "Vrijdag = 30. Maandag = 12. Verschil = 30 − 12 = 18 ijsjes meer.",
             nogSimpeler: "18 ijsjes",
           },
@@ -858,7 +858,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5, 7, 9, 11, 13 — telkens +2." }],
           basiskennis: [{ onderwerp: "Vast verschil", uitleg: "Als telkens hetzelfde getal erbij komt, is dat het patroon." }],
           niveaus: {
-            basis: "Elke dag 2 meer. A.",
+            basis: "Elke dag 2 meer.",
             simpeler: "Verschil tussen elke 2 dagen = 2. Dus elke dag 2 koekjes meer.",
             nogSimpeler: "+2 per dag",
           },

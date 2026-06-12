@@ -235,7 +235,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "9 × 3 = 30 - 3 = 27." }],
           basiskennis: [{ onderwerp: "9-truc", uitleg: "Gebruik de 10-tafel + aftrekken voor 9-tafel." }],
           niveaus: {
-            basis: "27. A.",
+            basis: "27.",
             simpeler: "Tafel van 3 op: 3, 6, 9, 12, 15, 18, 21, 24, 27. Negende stap = 27. Of: 10×3=30, dan -3 = 27.",
             nogSimpeler: "27",
           },

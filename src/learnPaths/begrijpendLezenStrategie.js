@@ -114,7 +114,7 @@ const steps = [
           voorbeelden: [{ type: "Toets-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
           basiskennis: [{ onderwerp: "Cito = breed", uitleg: "Cito test rekenen, taal, studievaardigheden — niet alleen lezen." }],
           niveaus: {
-            basis: "Cito = lange teksten + vragen. B.",
+            basis: "Cito = lange teksten + vragen.",
             simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat Cito doet bij begrijpend lezen.",
             nogSimpeler: "Lange teksten + vragen",
           },
@@ -146,7 +146,7 @@ const steps = [
           voorbeelden: [{ type: "betogen", tekst: "Opiniestuk in de krant 'Iedereen moet meer fruit eten omdat...' = betogend." }],
           basiskennis: [{ onderwerp: "Doel van tekst", uitleg: "Elke tekst heeft een doel — weten, overtuigen of vermaken." }],
           niveaus: {
-            basis: "Overtuigen = betogend. B.",
+            basis: "Overtuigen = betogend.",
             simpeler: "Stel je voor: iemand wil je laten geloven dat zonnepanelen goed zijn. Hij schrijft een tekst MET argumenten. Dat heet betogen.",
             nogSimpeler: "Mening + overtuigen = betogend",
           },
@@ -194,7 +194,7 @@ const steps = [
           voorbeelden: [{ type: "emotioneel", tekst: "'Het is FANTASTISCH om te helpen' = mening (positief) → betogend." }],
           basiskennis: [{ onderwerp: "Toon = signaal", uitleg: "Hoe een schrijver woorden kiest, vertelt vaak meer dan WAT hij zegt." }],
           niveaus: {
-            basis: "Emotioneel woord = mening = betogend. B.",
+            basis: "Emotioneel woord = mening = betogend.",
             simpeler: "Welk woord laat een GEVOEL zien? 'Fantastisch' (super positief) of 'verschrikkelijk' (super negatief). Die woorden gebruikt iemand alleen als hij een mening heeft. Dus = betogend.",
             nogSimpeler: "Emotie = mening",
           },
@@ -226,7 +226,7 @@ const steps = [
           voorbeelden: [{ type: "gevolg", tekst: "'Hij at te veel snoep, DAARDOOR werd hij ziek.' = oorzaak (snoep) → gevolg (ziek)." }],
           basiskennis: [{ onderwerp: "6 signaalgroepen", uitleg: "Tijd / Oorzaak/gevolg / Opsomming / Tegenstelling / Voorbeeld / Conclusie." }],
           niveaus: {
-            basis: "'Daardoor' = oorzaak/gevolg. B.",
+            basis: "'Daardoor' = oorzaak/gevolg.",
             simpeler: "Stel: 'Het regende, DAARDOOR werd het modderig.' → regen = oorzaak, modder = gevolg. 'Daardoor' wijst dat verband aan.",
             nogSimpeler: "Daardoor = gevolg",
           },
@@ -250,7 +250,7 @@ const steps = [
           voorbeelden: [{ type: "tegenstelling", tekst: "'Hij studeerde hard. ECHTER, hij zakte voor de toets.' = onverwacht / tegenovergesteld." }],
           basiskennis: [{ onderwerp: "Synoniemen tegenstelling", uitleg: "'Maar' (informeel) = 'echter' (formeel). Beide signaleren tegenstelling." }],
           niveaus: {
-            basis: "'Echter' = tegenstelling. B.",
+            basis: "'Echter' = tegenstelling.",
             simpeler: "Stel: 'Het is koud. ECHTER, ik ga zwemmen.' Het tweede is ONVERWACHT (je verwacht dat hij niet gaat). 'Echter' wijst dat aan.",
             nogSimpeler: "Echter = tegen",
           },
@@ -274,7 +274,7 @@ const steps = [
           voorbeelden: [{ type: "samenvatten", tekst: "'Argument 1, argument 2, argument 3. KORTOM: ik vind dat iedereen meer moet sporten.' = afsluiten + samenvatten." }],
           basiskennis: [{ onderwerp: "Slot van tekst", uitleg: "De laatste alinea heeft vaak 'kortom' of 'tot slot' om af te ronden." }],
           niveaus: {
-            basis: "'Kortom' = samenvatten. A.",
+            basis: "'Kortom' = samenvatten.",
             simpeler: "Stel je vertelt 3 dingen aan een vriend, en wil ze samen optellen tot 1 conclusie. 'KORTOM:...' Dat is samenvatten.",
             nogSimpeler: "Kortom = samenvatten",
           },
@@ -305,7 +305,7 @@ const steps = [
           voorbeelden: [{ type: "rode draad", tekst: "Tekst over fiets door 4 alinea's = rode draad VERANDERING. Hoofdgedachte = 'fiets is in 200 jaar veranderd'." }],
           basiskennis: [{ onderwerp: "1 boodschap per tekst", uitleg: "Een tekst heeft 1 hoofdgedachte. Alle alinea's ondersteunen die." }],
           niveaus: {
-            basis: "Hoofdgedachte = grote kernboodschap. A.",
+            basis: "Hoofdgedachte = grote kernboodschap.",
             simpeler: "Stel je een vriend vraagt 'waar gaat dat artikel over?'. Jij antwoordt in 1 zin = de hoofdgedachte.",
             nogSimpeler: "Hele boodschap",
           },
@@ -330,7 +330,7 @@ const steps = [
           voorbeelden: [{ type: "begin+eind", tekst: "Tekst opent: 'Drinken is belangrijk.' Sluit af: 'Kortom: drink genoeg water.' Hoofdgedachte = drinken belangrijk." }],
           basiskennis: [{ onderwerp: "Eerste + laatste tip", uitleg: "Lees eerste én laatste alinea bij hoofdgedachte-vragen. Dat scheelt heel veel tijd." }],
           niveaus: {
-            basis: "Begin of eind van tekst. A.",
+            basis: "Begin of eind van tekst.",
             simpeler: "Bij een verhaal of artikel komt het belangrijkste vaak BIJ HET BEGIN of HET EIND. Niet midden in.",
             nogSimpeler: "Begin/eind",
           },
@@ -354,7 +354,7 @@ const steps = [
           voorbeelden: [{ type: "skim", tekst: "4 alinea's? 4 eerste zinnen + 1 laatste = 5 zinnen lezen. In 30 sec heb je de boodschap." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft 5-7 min per tekst. Skimmen = sneller, niet minder grondig." }],
           niveaus: {
-            basis: "Eerste + laatste zin per alinea. A.",
+            basis: "Eerste + laatste zin per alinea.",
             simpeler: "Niet alle 200 woorden lezen. Lees alleen de eerste zin van elke alinea — daar staat meestal de hoofdpunt. Plus de laatste zin (die vat vaak samen).",
             nogSimpeler: "Skim eerste/laatste zinnen",
           },
@@ -385,7 +385,7 @@ const steps = [
           voorbeelden: [{ type: "skim", tekst: "Krantenartikel met 8 alinea's. Skim: titel + eerste zin elke alinea = je weet het onderwerp in 30 sec." }],
           basiskennis: [{ onderwerp: "Snelle vs grondige", uitleg: "Skimmen = snel oppervlakkig. Diep lezen = grondig. Beide hebben hun moment." }],
           niveaus: {
-            basis: "Skimmen = snel overzicht via titels + eerste zinnen. A.",
+            basis: "Skimmen = snel overzicht via titels + eerste zinnen.",
             simpeler: "Stel je hebt geen tijd om een artikel helemaal te lezen. Wat doe je? Titel kijken + eerste zinnen scannen. Dat is skimmen.",
             nogSimpeler: "Skim = snel overzicht",
           },
@@ -409,7 +409,7 @@ const steps = [
           voorbeelden: [{ type: "scannen", tekst: "Vraag: 'Hoeveel mensen wonen in Brussel?' Scan tekst voor 'Brussel' of een aantal-cijfer. Lees die zin. Klaar." }],
           basiskennis: [{ onderwerp: "Wanneer wat?", uitleg: "Skim BIJ START. Scan PER VRAAG. Niet alles tegelijk." }],
           niveaus: {
-            basis: "Scannen = gericht zoeken. A.",
+            basis: "Scannen = gericht zoeken.",
             simpeler: "Stel je zoekt jouw naam in een ledenlijst van 100 namen. Lees je alle 100? Nee — je SCANT, je oog springt naar 'M' en daar zoek je verder. Dat is scannen.",
             nogSimpeler: "Scan = gericht zoeken",
           },
@@ -432,7 +432,7 @@ const steps = [
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen lezen 30 sec + scannen ~3 min = ~4 min. Je hebt 1-3 min over voor twijfelvragen." }],
           basiskennis: [{ onderwerp: "Strategie wint van snelheid", uitleg: "Slim aanpakken > snel lezen. Een goede strategie scheelt minuten." }],
           niveaus: {
-            basis: "Skim → vragen → scan. A.",
+            basis: "Skim → vragen → scan.",
             simpeler: "Stappen voor Cito: (1) snel overzicht tekst (skim), (2) lees wat je moet vinden (vragen), (3) zoek elk antwoord gericht (scan). Dat is de slimste volgorde.",
             nogSimpeler: "Skim → vragen → scan",
           },
@@ -462,7 +462,7 @@ const steps = [
           voorbeelden: [{ type: "checklist", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' Loop alle 4 opties langs in tekst → 3 staan er, 1 niet → die niet-staande is je antwoord." }],
           basiskennis: [{ onderwerp: "Lees vragen 2x", uitleg: "Vooral bij NIET — anders kies je het tegenovergestelde antwoord." }],
           niveaus: {
-            basis: "NIET-vraag = zoek wat NIET in tekst staat. A.",
+            basis: "NIET-vraag = zoek wat NIET in tekst staat.",
             simpeler: "Stel: 'Welk dier zit NIET in deze dierentuin?'. Je kijkt welk dier in de tekst voorkomt en welk niet. Het ENE dier dat niet genoemd is = jouw antwoord.",
             nogSimpeler: "NIET = zoek de 1 die er niet is",
           },
@@ -486,7 +486,7 @@ const steps = [
           voorbeelden: [{ type: "afleiden", tekst: "Tekst: 'Sara liet haar hoofd hangen.' = inferentie: Sara is verdrietig. Niet letterlijk gezegd, wel duidelijk." }],
           basiskennis: [{ onderwerp: "Letterlijk vs inferentie", uitleg: "Letterlijk = woord-voor-woord vinden. Inferentie = puzzelstukjes verbinden." }],
           niveaus: {
-            basis: "Inferentie = let op emoties + signaalwoorden. A.",
+            basis: "Inferentie = let op emoties + signaalwoorden.",
             simpeler: "Stel iemand zucht en kijkt op de klok. Zegt hij 'ik verveel me'? Nee — maar je SNAPT het wel. Dat is tussen de regels lezen. Bij inferentie-vragen werkt het zo.",
             nogSimpeler: "Hints zoeken",
           },
@@ -511,7 +511,7 @@ const steps = [
           voorbeelden: [{ type: "strik", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' — als je 'NIET' mist, kies je het verkeerde antwoord." }],
           basiskennis: [{ onderwerp: "Lees zorgvuldig", uitleg: "Bij Cito: liever 30 sec extra lezen dan strik missen." }],
           niveaus: {
-            basis: "Strikvraag = bedoeld om je af te leiden. A.",
+            basis: "Strikvraag = bedoeld om je af te leiden.",
             simpeler: "Stel: een vraag is zo geformuleerd dat je het verkeerde antwoord kiest. Dat heet strikvraag. Niet om je te plagen — om te testen of je goed leest.",
             nogSimpeler: "Misleidend = strik",
           },
@@ -541,7 +541,7 @@ const steps = [
           voorbeelden: [{ type: "synoniem", tekst: "'Hij ging naar bed OMDAT hij moe was' = 'Hij ging naar bed DOORDAT hij moe was'." }],
           basiskennis: [{ onderwerp: "Synoniemen kennen", uitleg: "Verschillende woorden voor hetzelfde — handig om te herkennen." }],
           niveaus: {
-            basis: "'Doordat' = synoniem van 'omdat'. A.",
+            basis: "'Doordat' = synoniem van 'omdat'.",
             simpeler: "'Omdat' en 'doordat' betekenen praktisch hetzelfde: ze geven de REDEN aan.",
             nogSimpeler: "Doordat = omdat",
           },
@@ -564,7 +564,7 @@ const steps = [
           voorbeelden: [{ type: "boodschap", tekst: "'Wat is de boodschap van het verhaal?' = hoofdgedachte. 'Hoe oud is Sara?' = detail." }],
           basiskennis: [{ onderwerp: "Boodschap vs detail", uitleg: "Boodschap = hele tekst. Detail = klein deel." }],
           niveaus: {
-            basis: "'Boodschap' = hoofdgedachte. A.",
+            basis: "'Boodschap' = hoofdgedachte.",
             simpeler: "Welke vraag gaat over de HELE tekst en niet één klein feit? 'Wat is de boodschap?' Andere vragen gaan over kleine details.",
             nogSimpeler: "Boodschap = hoofdgedachte",
           },
@@ -587,7 +587,7 @@ const steps = [
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen 30 sec = 1 min. Daarna scan je per vraag. Totaal sneller dan alles woord-voor-woord." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft strakke tijd per onderdeel. Strategie wint." }],
           niveaus: {
-            basis: "Skim + vragen lezen = eerste stap. A.",
+            basis: "Skim + vragen lezen = eerste stap.",
             simpeler: "Stel je krijgt een lange tekst. Begin je woord-voor-woord? Nee — eerst even snel scannen wat erin staat (skim) + bekijk de vragen. Daarna gericht zoeken.",
             nogSimpeler: "Skim eerst",
           },
@@ -610,7 +610,7 @@ const steps = [
           voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {
-            basis: "5-7 min per tekst. A.",
+            basis: "5-7 min per tekst.",
             simpeler: "Bij Cito: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Moet je strak op tijd werken.",
             nogSimpeler: "5-7 min",
           },
@@ -633,7 +633,7 @@ const steps = [
           voorbeelden: [{ type: "markeren", tekst: "Vraag: 'Welk dier zit __NIET__ in de dierentuin?' Onderlijnen helpt je herinneren: ik zoek het ene dat MIST." }],
           basiskennis: [{ onderwerp: "Tijdens toets schrijven mag", uitleg: "Bij Cito mag je het examenboekje markeren met potlood." }],
           niveaus: {
-            basis: "Onderlijn 'NIET'. A.",
+            basis: "Onderlijn 'NIET'.",
             simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderlijn 'm — dan vergeet je niet dat je het TEGENOVERGESTELDE zoekt.",
             nogSimpeler: "Markeer NIET",
           },

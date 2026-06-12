@@ -93,7 +93,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Hij werkte hard. Echter (however) zakte hij. Tegenovergesteld van verwachting." }],
           basiskennis: [{ onderwerp: "Logica eerst, dan woord", uitleg: "Vraag jezelf: wat is de relatie tussen 2 zinnen? Dan kies het signaalwoord dat past." }],
           niveaus: {
-            basis: "However. A.",
+            basis: "However.",
             simpeler: "Tom werkte hard maar zakte. Dat is tegenstelling. 'However' = echter/maar.",
             nogSimpeler: "However",
           },
@@ -293,7 +293,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'It rained. The roads were wet. This caused accidents.' → 'this' = de hele situatie (regen + natte wegen)." }],
           basiskennis: [{ onderwerp: "Logica volgen", uitleg: "Vraag: 'is why' duidt op oorzaak. Wat is de oorzaak? Hele situatie samen." }],
           niveaus: {
-            basis: "De hele situatie. A.",
+            basis: "De hele situatie.",
             simpeler: "'This' verwijst naar wat eerder staat. In dit geval: examen was moeilijk én tijd was kort. Beide samen veroorzaakten zakken.",
             nogSimpeler: "Hele situatie",
           },

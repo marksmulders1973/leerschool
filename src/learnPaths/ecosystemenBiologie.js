@@ -140,7 +140,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Eik (boom) = autotroof. Eekhoorn (eet noten) = heterotroof." }],
           basiskennis: [{ onderwerp: "Producent = autotroof", uitleg: "Twee woorden voor hetzelfde concept." }],
           niveaus: {
-            basis: "Wezen dat zelf voedsel maakt. A.",
+            basis: "Wezen dat zelf voedsel maakt.",
             simpeler: "Auto = zelf, troof = voedend. Een autotroof is een wezen (vooral planten) dat zelf zijn eten maakt uit zonlicht.",
             nogSimpeler: "Producent",
           },
@@ -239,7 +239,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Sterren maakten ooit jouw koolstof-atomen. Die zijn nooit verdwenen — circuleren al miljarden jaren." }],
           basiskennis: [{ onderwerp: "Klassiek biologie-concept", uitleg: "Belangrijk verschil dat regelmatig op Cito-eindexamens komt." }],
           niveaus: {
-            basis: "Materie kringloopt, energie stroomt door. A.",
+            basis: "Materie kringloopt, energie stroomt door.",
             simpeler: "Atomen blijven rondgaan in een ecosysteem (kringloop). Maar energie van zonlicht eindigt als warmte die wegstraalt — dat is geen kringloop.",
             nogSimpeler: "Materie rond, energie door",
           },

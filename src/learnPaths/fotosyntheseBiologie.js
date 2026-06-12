@@ -159,7 +159,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Plant gebruikt zonlicht om glucose te maken. Hoeft niet te jagen of grazen." }],
           basiskennis: [{ onderwerp: "Plant ≠ dier", uitleg: "Dieren moeten eten. Planten maken zelf." }],
           niveaus: {
-            basis: "Geen externe voeding. A.",
+            basis: "Geen externe voeding.",
             simpeler: "Planten maken zelf voedsel via fotosynthese. Ze hebben dus geen voer of vlees nodig — wel zon, water, lucht, mineralen uit grond.",
             nogSimpeler: "Geen extern voedsel",
           },

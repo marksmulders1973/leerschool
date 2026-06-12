@@ -174,7 +174,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1u 70 min → 1u + (60+10) min → (1+1)u + 10 min = 2u 10 min." }],
           basiskennis: [{ onderwerp: "Geen 100", uitleg: "Tijd gaat met 60, niet 100!" }],
           niveaus: {
-            basis: "2u 10 min. A.",
+            basis: "2u 10 min.",
             simpeler: "70 minuten is meer dan 1 uur. 70 min = 60 min + 10 min = 1 uur + 10 min. Plus de 1 uur die er al was = 2 uur 10 min.",
             nogSimpeler: "2u 10min",
           },
@@ -213,7 +213,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8:45 → 10:15 in 3 stappen: 15+60+15 = 90 min = 1u 30 min." }],
           basiskennis: [{ onderwerp: "Niet zomaar aftrekken", uitleg: "15 − 45 gaat niet — leen via het uur." }],
           niveaus: {
-            basis: "1 uur 30 min. A.",
+            basis: "1 uur 30 min.",
             simpeler: "Opklimmen: 8:45 → 9:00 (15 min), 9:00 → 10:00 (1 uur), 10:00 → 10:15 (15 min). Totaal: 15+60+15 = 90 min = 1u 30 min.",
             nogSimpeler: "1u 30m",
           },
@@ -261,7 +261,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "19:30 + 1u 50min = 21:20." }],
           basiskennis: [{ onderwerp: "60 niet 100", uitleg: "Tijd is geen decimaal." }],
           niveaus: {
-            basis: "19:30 + 1u 50min = 21:20. A.",
+            basis: "19:30 + 1u 50min = 21:20.",
             simpeler: "Voeg eerst 1 uur toe: 19:30 → 20:30. Voeg dan 50 min toe: 20:30 + 50 min = 21:20 (30 + 50 = 80 = 1u 20).",
             nogSimpeler: "21:20",
           },
@@ -321,7 +321,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "23:45 + 40 min = 00:25." }],
           basiskennis: [{ onderwerp: "Volgende dag", uitleg: "Na 23:59 komt 00:00, geen 24:00 of 25:00." }],
           niveaus: {
-            basis: "00:25. A.",
+            basis: "00:25.",
             simpeler: "23:45 + 15 min = 00:00 (middernacht). Nog 25 min: 00:00 + 25 min = 00:25.",
             nogSimpeler: "00:25",
           },
@@ -364,7 +364,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "30 + 15 + 30 = 75 min = 1u 15 min. 15:00 + 1u 15min = 16:15." }],
           basiskennis: [{ onderwerp: "Niet vergeten pauze", uitleg: "Pauze telt mee in tijdsduur, niet in speelduur." }],
           niveaus: {
-            basis: "16:15. A.",
+            basis: "16:15.",
             simpeler: "15:00 + 30 = 15:30 (helft 1). 15:30 + 15 = 15:45 (na pauze). 15:45 + 30 = 16:15 (eind).",
             nogSimpeler: "16:15",
           },

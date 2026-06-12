@@ -88,7 +88,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "blij = vrolijk. snel = vlug. mooi = prachtig. boos = woedend." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Het tegenovergestelde van een synoniem is een 'antoniem' — woord met juist andere betekenis." }],
           niveaus: {
-            basis: "Heel groot. A.",
+            basis: "Heel groot.",
             simpeler: "Enorm betekent zelfde als 'heel groot'.",
             nogSimpeler: "Heel groot",
           },
@@ -108,7 +108,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Verlamd' lijkt op 'lam' = niet kunnen bewegen." }],
           basiskennis: [{ onderwerp: "Lees de hele zin", uitleg: "Niet alleen het woord — de zin om het woord heen geeft hints." }],
           niveaus: {
-            basis: "Niet kunnen bewegen. A.",
+            basis: "Niet kunnen bewegen.",
             simpeler: "De zin zegt dat het dier niet meer kan lopen. Verlamd = niet bewegen.",
             nogSimpeler: "Niet bewegen",
           },
@@ -128,7 +128,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "tevreden ↔ ontevreden. blij ↔ verdrietig. rustig ↔ druk." }],
           basiskennis: [{ onderwerp: "Positief vs negatief", uitleg: "Sorteer eerst opties: welke zijn positief? Tevreden is positief, dus zoek positief synoniem." }],
           niveaus: {
-            basis: "Blij met situatie. A.",
+            basis: "Blij met situatie.",
             simpeler: "Tevreden = blij + akkoord. Optie A 'Blij met situatie' = juist.",
             nogSimpeler: "Blij",
           },
@@ -149,7 +149,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij gaf een toelichting bij zijn keuze' = hij legde uit waarom hij koos." }],
           basiskennis: [{ onderwerp: "Stam: licht", uitleg: "'Licht' kan ook 'helder/duidelijk' betekenen. Toelichten = duidelijk maken." }],
           niveaus: {
-            basis: "Een uitleg. A.",
+            basis: "Een uitleg.",
             simpeler: "Toelichting = uitleg. De docent gaf uitleg bij de som.",
             nogSimpeler: "Uitleg",
           },
@@ -170,7 +170,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De kapitein bleef onverstoorbaar tijdens de storm' = hij bleef kalm onder zware omstandigheden." }],
           basiskennis: [{ onderwerp: "Toets-context", uitleg: "'Tijdens de toets' = stresssituatie. Onverstoorbaar past = rustig blijven." }],
           niveaus: {
-            basis: "Rustig en niet uit balans. A.",
+            basis: "Rustig en niet uit balans.",
             simpeler: "On- = niet. Niet-verstoorbaar = niet uit balans.",
             nogSimpeler: "Rustig",
           },
@@ -196,7 +196,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De zieke baby's gezondheid was precair' = ernstige zorg. Daarom 'onzeker/gevaarlijk'" }],
           basiskennis: [{ onderwerp: "Context-hint", uitleg: "'Uiterst precair' = heel onzeker. 'Uiterst' versterkt = niet positief." }],
           niveaus: {
-            basis: "Onzeker / gevaarlijk. A.",
+            basis: "Onzeker / gevaarlijk.",
             simpeler: "Precair = riskant. Een precaire situatie = situatie waar snel iets mis kan gaan.",
             nogSimpeler: "Onzeker",
           },
@@ -220,7 +220,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Inmenging in buitenlandse politiek' = ander land mengt zich (negatief). 'Inmenging van leerkracht' = leerkracht bemoeit zich ongewenst." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Inmenging ↔ afzijdig blijven / je niet ermee bemoeien." }],
           niveaus: {
-            basis: "Bemoeien met wat je niet aangaat. A.",
+            basis: "Bemoeien met wat je niet aangaat.",
             simpeler: "In + mengen = ergens in mengen waar het niet hoort.",
             nogSimpeler: "Bemoeien",
           },
@@ -240,7 +240,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij liep gehaast naar de tram' = hij rende bijna omdat hij laat was." }],
           basiskennis: [{ onderwerp: "Tegenstellingen", uitleg: "Gehaast ↔ rustig / kalm / op je gemak." }],
           niveaus: {
-            basis: "Snel + gestrest. A.",
+            basis: "Snel + gestrest.",
             simpeler: "Gehaast = haast hebben = snel + gestrest.",
             nogSimpeler: "Snel",
           },
@@ -261,7 +261,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Soortgelijke woorden: dapper, heldhaftig, onverschrokken — alle met-moed-doen." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Moedig ↔ bang/laf/vreesachtig." }],
           niveaus: {
-            basis: "Dapper, niet bang. A.",
+            basis: "Dapper, niet bang.",
             simpeler: "Moedig = met moed = durft = niet bang.",
             nogSimpeler: "Dapper",
           },
@@ -282,7 +282,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij beloofde plechtig' = beloofde serieus + formeel. 'Plechtige opening' = officiële opening." }],
           basiskennis: [{ onderwerp: "Verwant", uitleg: "Plechtigheid = de gebeurtenis zelf (bv huwelijksplechtigheid). Plechtig = de manier." }],
           niveaus: {
-            basis: "Met respect / serieus. A.",
+            basis: "Met respect / serieus.",
             simpeler: "Plechtig = formeel, niet luchtig.",
             nogSimpeler: "Serieus",
           },
@@ -421,7 +421,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Uitgeput ↔ uitgerust. Beide met 'uit-' maar tegengesteld." }],
           basiskennis: [{ onderwerp: "Letterlijke/figuurlijke betekenis", uitleg: "Een put kan ook 'uitgeput' zijn = leeg = geen water meer. Zelfde idee voor mensen: geen energie." }],
           niveaus: {
-            basis: "Heel moe. A.",
+            basis: "Heel moe.",
             simpeler: "Uitgeput = leeg van energie = heel moe.",
             nogSimpeler: "Moe",
           },
@@ -472,7 +472,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij vertelde een leugen over zijn rapport' = hij gaf een verkeerd cijfer door bewust." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Leugen = bewust niet-waar. Vergissing = niet-waar maar niet bewust. Geheim = waar maar achtergehouden." }],
           niveaus: {
-            basis: "Niet-waar verhaal. A.",
+            basis: "Niet-waar verhaal.",
             simpeler: "Verzon = bedacht. Leugen = niet waar.",
             nogSimpeler: "Niet-waar",
           },
@@ -492,7 +492,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Wat een briljant plan!' = wat een geweldig plan." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Briljant ≈ schitterend, geniaal, geweldig (in betekenis 'heel goed')." }],
           niveaus: {
-            basis: "Heel slim / schitterend. A.",
+            basis: "Heel slim / schitterend.",
             simpeler: "Briljant = top-slim.",
             nogSimpeler: "Schitterend",
           },
@@ -518,7 +518,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Het doelpunt was doorslaggevend voor de wedstrijd' = dat doelpunt bepaalde de uitslag." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "'Beslissend' is een goed synoniem. Tegenover: 'onbelangrijk' of 'bijzaak'." }],
           niveaus: {
-            basis: "Bepalend / beslissend. A.",
+            basis: "Bepalend / beslissend.",
             simpeler: "Doorslaggevend = wat de keuze maakt.",
             nogSimpeler: "Bepalend",
           },
@@ -544,7 +544,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'In een hachelijke positie' = in een lastige/gevaarlijke positie." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Hachelijk ≈ riskant, gevaarlijk, netelig, kritiek." }],
           niveaus: {
-            basis: "Gevaarlijk / riskant. A.",
+            basis: "Gevaarlijk / riskant.",
             simpeler: "Hachelijk = kan misgaan.",
             nogSimpeler: "Gevaarlijk",
           },
@@ -568,7 +568,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Spreekwoord = vaste zin. Uitdrukking = vaak vaste woordcombi (bv 'in de wolken zijn' = blij)." }],
           niveaus: {
-            basis: "Eerst rustig kijken. A.",
+            basis: "Eerst rustig kijken.",
             simpeler: "Afwachten = kat uit de boom.",
             nogSimpeler: "Afwachten",
           },
@@ -603,7 +603,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "gelovig ↔ ongelovig. Sociaal ↔ asociaal." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "Synoniem optimist ≈ positief, hoopvol. Synoniem pessimist ≈ negatief, somber." }],
           niveaus: {
-            basis: "Pessimistisch. A.",
+            basis: "Pessimistisch.",
             simpeler: "Tegenover hoopvol staat somber = pessimistisch.",
             nogSimpeler: "Pessimistisch",
           },
@@ -647,7 +647,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Snel = vlug = rap = vlot." }],
           basiskennis: [{ onderwerp: "Andere synoniemen voor snel", uitleg: "vlug, vlot, ras, kwiek, behendig." }],
           niveaus: {
-            basis: "rap. A.",
+            basis: "rap.",
             simpeler: "Synoniem snel = rap.",
             nogSimpeler: "rap",
           },
@@ -870,7 +870,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vraag noemt 'vleermuis-tijd' → zoek 'avond' of 'nacht' in de tekst." }],
           basiskennis: [{ onderwerp: "Slim lezen", uitleg: "Niet alles even diep lezen — focus waar je het antwoord verwacht." }],
           niveaus: {
-            basis: "Lees eerst de vragen. A.",
+            basis: "Lees eerst de vragen.",
             simpeler: "Cito-tip: kijk eerst even welke vragen er gesteld worden. Dan weet je waar je naar moet zoeken.",
             nogSimpeler: "De vragen",
           },
@@ -926,7 +926,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Soorten: oorzaak/gevolg (omdat, daardoor), tegenstelling (maar, toch), opsomming (en, ook)." }],
           basiskennis: [{ onderwerp: "Verbanden", uitleg: "Snel signaalwoorden vinden = snel verbanden begrijpen = sneller Cito-tekst-vragen oplossen." }],
           niveaus: {
-            basis: "Toch. A.",
+            basis: "Toch.",
             simpeler: "'Toch' betekent 'maar' — geeft een tegenstelling aan. In de Sahara valt geen regen, MAAR (toch) leven er kamelen.",
             nogSimpeler: "Toch = tegenstelling",
           },
@@ -1148,9 +1148,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik ben moe doordat ik laat naar bed ging.' → reden = laat naar bed." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'WAAROM gebeurde het?' Antwoord = reden." }],
           niveaus: {
-            basis: "Te weinig water. A.",
+            basis: "Te weinig water.",
             simpeler: "Doordat = reden. Wat staat erna? Te weinig water.",
-            nogSimpeler: "Reden = wat erna staat = water. A.",
+            nogSimpeler: "Reden = wat erna staat = water.",
           },
         },
       },
@@ -1177,7 +1177,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tekst over hond uitlaten met regen: hoofdgedachte = 'ook bij slecht weer is uitlaten nodig'. NIET: 'het regende veel'." }],
           basiskennis: [{ onderwerp: "Anders dan", uitleg: "Onderwerp ≠ hoofdgedachte. Onderwerp = WAAR de tekst over gaat. Hoofdgedachte = WAT de schrijver erover zegt." }],
           niveaus: {
-            basis: "Belangrijkste boodschap. A.",
+            basis: "Belangrijkste boodschap.",
             simpeler: "Wat zegt de tekst écht? = hoofdgedachte",
             nogSimpeler: "Belangrijkste",
           },
@@ -1213,7 +1213,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Feit = waar voor iedereen. Mening = waar voor één persoon." }],
           niveaus: {
-            basis: "Feit kun je controleren, mening niet. A.",
+            basis: "Feit kun je controleren, mening niet.",
             simpeler: "Feit = bewijsbaar. Mening = persoonlijk.",
             nogSimpeler: "Controleerbaar",
           },
@@ -1241,7 +1241,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Alinea over honden — kernzin: 'Honden zijn loyale dieren.' De rest geeft voorbeelden." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofdgedachte = boodschap van HELE tekst. Kernzin = boodschap van ÉÉN alinea." }],
           niveaus: {
-            basis: "Kernzin = de zin met de hoofdgedachte van de alinea. A.",
+            basis: "Kernzin = de zin met de hoofdgedachte van de alinea.",
             simpeler: "Belangrijkste zin in alinea = kernzin.",
             nogSimpeler: "Belangrijkste zin",
           },
@@ -1276,7 +1276,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Reclame: 'Onze pasta is het lekkerst!' → mening van fabrikant. Niet betrouwbaar als feit." }],
           basiskennis: [{ onderwerp: "Bronnen", uitleg: "Wetenschappers, officiële instanties (CBS, RIVM) zijn betrouwbaarder dan reclame of social-media-posts." }],
           niveaus: {
-            basis: "Klopt dit en waarom denkt de schrijver dat? A.",
+            basis: "Klopt dit en waarom denkt de schrijver dat?",
             simpeler: "Kritisch = vragen naar bewijs.",
             nogSimpeler: "Bewijs zoeken",
           },
@@ -1311,7 +1311,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Receptenboek = volgorde-structuur. Politiek artikel = vaak voor/tegen-structuur." }],
           basiskennis: [{ onderwerp: "Andere structuren", uitleg: "Voorbeeld-opsomming, vergelijking, oorzaak-gevolg." }],
           niveaus: {
-            basis: "Volgorde / stappen. A.",
+            basis: "Volgorde / stappen.",
             simpeler: "Eerst/vervolgens/ten slotte = stappen.",
             nogSimpeler: "Stappen",
           },
@@ -1354,7 +1354,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De aarde draait,' zei Galileo. → citaat van Galileo." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Citaat = letterlijke woorden. Parafrase = navertelling in eigen woorden." }],
           niveaus: {
-            basis: "Letterlijke aanhaling. A.",
+            basis: "Letterlijke aanhaling.",
             simpeler: "Citaat = woorden tussen aanhalingstekens.",
             nogSimpeler: "Letterlijke aanhaling",
           },
@@ -1553,7 +1553,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "fiets (op s) → fietste / wandel (op l) → wandelde." }],
           basiskennis: [{ onderwerp: "Persoonsvorm", uitleg: "'Ik' = enkelvoud, dus enkelvoudig werkwoord (-te, niet -ten)." }],
           niveaus: {
-            basis: "fietste (stam 'fiets' op s → -te). A.",
+            basis: "fietste (stam 'fiets' op s → -te).",
             simpeler: "Werkwoord: fietsen. Stam: fiets. Eindigt op s (zit in 't kofschip). Voor verleden tijd + -te. Dus: ik fietste.",
             nogSimpeler: "fietste",
           },
@@ -1589,7 +1589,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Met ei: trein/reis/mei/zei/klein. Met ij: blij/wijn/lijden/pijn/krijgen." }],
           basiskennis: [{ onderwerp: "Tip", uitleg: "Veel met ij: werkwoorden (krijgen, blijven, lijken). Veel met ei: korte concrete dingen (trein, mei, zei, klein)." }],
           niveaus: {
-            basis: "trein. A.",
+            basis: "trein.",
             simpeler: "Trein = ei. Vlijtig/lijden/blijven = ij.",
             nogSimpeler: "trein",
           },
@@ -1615,7 +1615,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "EN: 'Monday in March' (beide hoofdletters). NL: 'maandag in maart' (beide klein)." }],
           basiskennis: [{ onderwerp: "Verschil EN-NL", uitleg: "Engels gebruikt veel meer hoofdletters dan Nederlands. Daarom letten op." }],
           niveaus: {
-            basis: "dinsdag (klein). A.",
+            basis: "dinsdag (klein).",
             simpeler: "Weekdagen in NL krijgen GEEN hoofdletter. Dus 'dinsdag', niet 'Dinsdag'.",
             nogSimpeler: "dinsdag",
           },
@@ -1743,9 +1743,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Single vs meervoud", uitleg: "Enkelvoud: wandelde. Meervoud: wandelden." }],
           niveaus: {
-            basis: "wandelden. A.",
+            basis: "wandelden.",
             simpeler: "We = meervoud + verleden. 'l' geen kofschip → +den.",
-            nogSimpeler: "Meervoud verleden = +den. A.",
+            nogSimpeler: "Meervoud verleden = +den.",
           },
         },
       },
@@ -1779,7 +1779,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Twee woorden → één betekenis → aan elkaar." }],
           niveaus: {
-            basis: "fietspad — samenstelling. A.",
+            basis: "fietspad — samenstelling.",
             simpeler: "Fiets + pad = 1 ding = aan elkaar.",
             nogSimpeler: "Aan elkaar",
           },
@@ -1809,7 +1809,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Geheugentruc", uitleg: "Soms helpt het: 'lijn' (recht) heeft ij. 'plein' (waar mensen samen komen) heeft ei. Maar er zijn veel uitzonderingen." }],
           niveaus: {
-            basis: "eiland. A.",
+            basis: "eiland.",
             simpeler: "'Eiland' kennen we, 'ijland' niet.",
             nogSimpeler: "eiland",
           },
@@ -1845,7 +1845,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Geen tussen-n bij: paardebloem (geen 'paarden' meervoud nodig), zonneschijn (geen 'zonnen' nodig)." }],
           niveaus: {
-            basis: "pannenkoek met tussen-n. A.",
+            basis: "pannenkoek met tussen-n.",
             simpeler: "Pannen + koek = pannenkoek.",
             nogSimpeler: "Tussen-n",
           },
@@ -1871,7 +1871,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "vakantie (vak-an-sie), informatie, politie, kantine — allemaal 'ti'." }],
           basiskennis: [{ onderwerp: "Geheugen", uitleg: "Bijna alle '-sie'-klinkende achtervoegsels schrijf je '-tie'." }],
           niveaus: {
-            basis: "station. A.",
+            basis: "station.",
             simpeler: "Sie-klank, maar ti-spelling = station.",
             nogSimpeler: "station",
           },
@@ -1923,7 +1923,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (huizie, autie) is spreektaal — Cito wil schrijftaal." }],
           niveaus: {
-            basis: "huisje. A.",
+            basis: "huisje.",
             simpeler: "Verkleinwoord NL = -je.",
             nogSimpeler: "huisje",
           },
@@ -2099,7 +2099,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "appels, peren, druiven en bananen — komma's tussen items, niet vóór 'en'." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Een komma zegt: 'er komt nog meer'. Bij 'en' is dat al duidelijk." }],
           niveaus: {
-            basis: "Komma tussen items, geen komma vóór 'en'. A.",
+            basis: "Komma tussen items, geen komma vóór 'en'.",
             simpeler: "Bij een opsomming: appels, peren en druiven. Tussen losse items komma, vóór 'en' geen komma.",
             nogSimpeler: "Optie a",
           },
@@ -2321,7 +2321,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Drie items: 'A, B en C'. Vier items: 'A, B, C en D'." }],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Geen komma bij 2 items: 'rood en blauw' — geen komma." }],
           niveaus: {
-            basis: "appels, peren en druiven — komma + komma + en. A.",
+            basis: "appels, peren en druiven — komma + komma + en.",
             simpeler: "Komma's tussen, geen komma voor 'en'.",
             nogSimpeler: "Geen komma voor 'en'",
           },
@@ -2384,7 +2384,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Talen krijgen WEL hoofdletter (Engels, Nederlands, Frans). Dagen niet (maandag, dinsdag)." }],
           niveaus: {
-            basis: "Op zaterdag ga ik naar Amsterdam. A.",
+            basis: "Op zaterdag ga ik naar Amsterdam.",
             simpeler: "Begin + plaats = hoofdletter. Dag = klein.",
             nogSimpeler: "Amsterdam met A, zaterdag met z",
           },
@@ -2435,7 +2435,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Recept: '500g meel, 2 eieren'. De dubbele punt kondigt de lijst aan." }],
           basiskennis: [{ onderwerp: "Andere tekens", uitleg: "Komma = pauze. Punt = einde. Vraagteken = vraag. Uitroepteken = nadruk/emotie." }],
           niveaus: {
-            basis: "Dubbele punt. A.",
+            basis: "Dubbele punt.",
             simpeler: "`:` kondigt opsomming aan.",
             nogSimpeler: "Dubbele punt",
           },
@@ -2477,7 +2477,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Bijwoord vs bijvoeglijk", uitleg: "Bijwoord: bij werkwoord (rent snel). Bijvoeglijk: bij zelfst.nw (de snelle auto)." }],
           niveaus: {
-            basis: "snel. A.",
+            basis: "snel.",
             simpeler: "'Snel' beschrijft hoe Tom rent.",
             nogSimpeler: "snel",
           },

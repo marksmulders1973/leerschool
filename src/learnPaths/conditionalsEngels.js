@@ -115,7 +115,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "If she calls = correct. If she call = fout (mist -s)." }],
           basiskennis: [{ onderwerp: "Werkwoord-uitgang", uitleg: "Net als gewone present simple: -s voor 3e persoon enkelvoud." }],
           niveaus: {
-            basis: "calls. A.",
+            basis: "calls.",
             simpeler: "Type 1 if-clause = present simple. 'She' is 3e persoon enkelvoud → werkwoord krijgt -s. Dus: calls.",
             nogSimpeler: "calls",
           },
@@ -202,7 +202,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'If I had studied, I would have passed' = ik heb niet geleerd, dus gezakt." }],
           basiskennis: [{ onderwerp: "Spijt-formule", uitleg: "Onthoud Type 3 als de 'spijt-zin'." }],
           niveaus: {
-            basis: "Spijt over verleden. A.",
+            basis: "Spijt over verleden.",
             simpeler: "Type 3 is voor situaties in het verleden die niet zijn gebeurd. Vaak met spijt: 'als ik geleerd had, was ik geslaagd.'",
             nogSimpeler: "Spijt verleden",
           },

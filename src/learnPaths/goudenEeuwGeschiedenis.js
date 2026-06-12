@@ -153,7 +153,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Op herengracht: huizen 5-6 m breed, 4-5 verdiepingen hoog, 30 m diep." }],
           basiskennis: [{ onderwerp: "Slim", uitleg: "Belasting-regels beïnvloeden bouwstijl." }],
           niveaus: {
-            basis: "Belasting was op breedte. A.",
+            basis: "Belasting was op breedte.",
             simpeler: "Belasting werd gerekend per meter breedte van de gevel. Smaller huis = minder belasting. Dus rijke kooplieden bouwden smal + hoog + diep.",
             nogSimpeler: "Belasting op breedte",
           },

@@ -153,7 +153,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De zon scheen. Het was warm. Dit was fijn.' → 'dit' = beide eerdere zinnen samen." }],
           basiskennis: [{ onderwerp: "Volg de logica", uitleg: "Vraag: 'dit veroorzaakte ongelukken' — wat veroorzaakte ongelukken? Niet 1 ding, beide samen." }],
           niveaus: {
-            basis: "De hele situatie. A.",
+            basis: "De hele situatie.",
             simpeler: "'Dit' verwijst naar wat ervoor staat. 2 zinnen ervoor: regen + gladde weg. Beide samen veroorzaakten ongelukken.",
             nogSimpeler: "Hele situatie",
           },

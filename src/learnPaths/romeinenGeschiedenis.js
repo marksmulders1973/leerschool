@@ -124,7 +124,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Brutus was de stiefzoon van Caesar; zijn deelname maakte de moord extra tragisch." }],
           basiskennis: [{ onderwerp: "Eind Republiek", uitleg: "Na deze moord brak burgeroorlog uit; Augustus werd uiteindelijk eerste keizer (27 v.Chr.)." }],
           niveaus: {
-            basis: "Vermoord in de Senaat. A.",
+            basis: "Vermoord in de Senaat.",
             simpeler: "Op 15 maart 44 v.Chr. werd Caesar in de Senaat doodgestoken door samenzweerders die bang waren dat hij koning wilde worden.",
             nogSimpeler: "Vermoord 44 v.Chr.",
           },
@@ -265,7 +265,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "MCMXCIX = 1000 + (1000-100) + (100-10) + (10-1) = 1999." }],
           basiskennis: [{ onderwerp: "M, D, C, L, X, V, I", uitleg: "De 7 Romeinse symbolen om uit het hoofd te kennen." }],
           niveaus: {
-            basis: "MM + XX + VI = 2000 + 20 + 6 = 2026. A.",
+            basis: "MM + XX + VI = 2000 + 20 + 6 = 2026.",
             simpeler: "MM = 2× 1000 = 2000. XX = 2× 10 = 20. VI = 5+1 = 6. Samen: 2000+20+6 = 2026.",
             nogSimpeler: "2026",
           },

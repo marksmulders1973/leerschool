@@ -180,7 +180,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Plas op straat verdampt sneller op zonnig dag met wind." }],
           basiskennis: [{ onderwerp: "Oppervlak", uitleg: "Hoe meer oppervlak, hoe sneller verdamping." }],
           niveaus: {
-            basis: "Vlakke schaal. A.",
+            basis: "Vlakke schaal.",
             simpeler: "Verdampen gebeurt aan het oppervlak. Een vlakke schaal heeft meer oppervlak (water-lucht contact) dan een diep glas. Dus verdampt sneller.",
             nogSimpeler: "Vlakke schaal",
           },

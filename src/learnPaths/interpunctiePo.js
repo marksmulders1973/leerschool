@@ -140,7 +140,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik leer Frans op woensdag in januari.' (Frans WEL, woensdag NIET, januari NIET)." }],
           basiskennis: [{ onderwerp: "Tegenintuïtief", uitleg: "Dit verschilt soms van Engels — onthoud de regel goed." }],
           niveaus: {
-            basis: "Frans (taal). A.",
+            basis: "Frans (taal).",
             simpeler: "Talen krijgen hoofdletter in Nederlands. Dagen/maanden/seizoenen niet. Frans is een taal, dus wél hoofdletter.",
             nogSimpeler: "Frans",
           },
@@ -261,7 +261,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik ga naar buiten, maar het regent.' = ondanks regen ga ik." }],
           basiskennis: [{ onderwerp: "Welk woord?", uitleg: "Maar = tegenstelling. Omdat = reden. Als = voorwaarde." }],
           niveaus: {
-            basis: ", maar. A.",
+            basis: ", maar.",
             simpeler: "Tegenstelling tussen 'naar buiten' en 'regen'. Gebruik 'maar' met komma ervoor.",
             nogSimpeler: ", maar",
           },

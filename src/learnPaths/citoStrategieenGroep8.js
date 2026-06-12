@@ -101,7 +101,7 @@ const steps = [
           voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + Cito havo → school MOET heroverwegen. Andersom (advies havo + Cito vmbo) → advies blijft havo." }],
           basiskennis: [{ onderwerp: "Geen zakken", uitleg: "Iedereen mag door naar de middelbare school. Geen examen-stress." }],
           niveaus: {
-            basis: "Cito = toets in groep 8 + advies middelbare school. A.",
+            basis: "Cito = toets in groep 8 + advies middelbare school.",
             simpeler: "Aan het einde van groep 8 maak je een grote toets. Die helpt te bepalen welk soort middelbare school (vmbo/havo/vwo) bij jou past.",
             nogSimpeler: "Toets + advies middelbare school",
           },
@@ -125,7 +125,7 @@ const steps = [
           voorbeelden: [{ type: "leidend", tekst: "Schooladvies = vmbo-tl. Cito = havo. School heroverweegt → advies meestal omhoog naar havo." }],
           basiskennis: [{ onderwerp: "Vertrouw je leerkracht", uitleg: "8 jaar observatie weegt zwaarder dan 1 toets." }],
           niveaus: {
-            basis: "Schooladvies = leidend. A.",
+            basis: "Schooladvies = leidend.",
             simpeler: "Wie weet het beste wat bij jou past? Iemand die je 1 dag toetst, of iemand die je al jaren elke dag ziet? Dat is je leerkracht.",
             nogSimpeler: "Schooladvies",
           },
@@ -172,7 +172,7 @@ const steps = [
           voorbeelden: [{ type: "tijdverdeling", tekst: "75 min, 50 vragen = 1.5 min/vraag. Vastlopen op 1 vraag mag niet meer dan 2 min." }],
           basiskennis: [{ onderwerp: "Markeer skip", uitleg: "Onderlijn vraagnummer op kladpapier zodat je 'm later terugvindt." }],
           niveaus: {
-            basis: "Vastloop = skip + later terug. A.",
+            basis: "Vastloop = skip + later terug.",
             simpeler: "Stel je vast op vraag 8. Doorpiekeren = je verliest tijd voor vraag 9-15. Beter: skip 8, doe 9-15 makkelijk, kom terug op 8.",
             nogSimpeler: "Vast = skip",
           },
@@ -193,7 +193,7 @@ const steps = [
           voorbeelden: [{ type: "pacing", tekst: "Na 10 vragen op klok kijken. Pas 8 min ipv 10? Te snel. 12 min? Te langzaam — versnel." }],
           basiskennis: [{ onderwerp: "Tijd-bewustzijn", uitleg: "Een klok in zicht = essentieel voor pacing." }],
           niveaus: {
-            basis: "~1 min per vraag. A.",
+            basis: "~1 min per vraag.",
             simpeler: "75 min ÷ 50 vragen = 1.5 min per vraag. Reken iets minder voor controle = ~1 min per vraag goed gemiddelde.",
             nogSimpeler: "1 min per vraag",
           },
@@ -214,7 +214,7 @@ const steps = [
           voorbeelden: [{ type: "kans", tekst: "Twijfel tussen A en B = 50% goed. Bij 4 onbekend = 25%. Bij 0 invullen = altijd 0%." }],
           basiskennis: [{ onderwerp: "Geen strafpunten", uitleg: "Bij Cito zijn er geen aftrek-punten voor fout." }],
           niveaus: {
-            basis: "Gokken = altijd beter dan leeg. A.",
+            basis: "Gokken = altijd beter dan leeg.",
             simpeler: "Stel: leeg = 0 punten. Gokken = misschien 1 punt. Wat kies je? Gokken natuurlijk.",
             nogSimpeler: "Leeg nooit = gokken",
           },
@@ -242,7 +242,7 @@ const steps = [
           voorbeelden: [{ type: "voorbedenken", tekst: "Vraag: 'Hoofdstad van België?' Eerst denken: 'Brussel'. Dan opties bekijken — Brussel staat erbij = direct kiezen." }],
           basiskennis: [{ onderwerp: "Anti-valstrik", uitleg: "Cito-makers zetten BEWUST verleidelijke foute opties. Voorbedenken beschermt je." }],
           niveaus: {
-            basis: "Eerst zelf bedenken. A.",
+            basis: "Eerst zelf bedenken.",
             simpeler: "Stel: vraag over hoofdstad België. Bedenk EERST 'Brussel' in je hoofd. Daarna kijk je naar opties — je herkent Brussel meteen. Anders laat je je verwarren door 'Antwerpen' of 'Brugge'.",
             nogSimpeler: "Voor-denken",
           },
@@ -265,7 +265,7 @@ const steps = [
           voorbeelden: [{ type: "elimineren", tekst: "Vraag: 'Hoofdstad België?' Opties: A) Parijs (= FR ✗), B) Brussel, C) Berlijn (= DE ✗), D) Madrid (= ES ✗). 3 weg, 1 over" }],
           basiskennis: [{ onderwerp: "Halve kennis = vol antwoord", uitleg: "Je hoeft 't antwoord niet 100% te weten. Genoeg om 3 fouten te herkennen." }],
           niveaus: {
-            basis: "Eliminatie = foute antwoorden wegstrepen. A.",
+            basis: "Eliminatie = foute antwoorden wegstrepen.",
             simpeler: "Stel je weet niet WIE Spider-Man speelt, maar je weet wel dat Brad Pitt 't NIET is. Streep Brad Pitt weg. Doe dat met 3 opties → 1 blijft over. = eliminatie",
             nogSimpeler: "Foute weg",
           },
@@ -289,7 +289,7 @@ const steps = [
           voorbeelden: [{ type: "absoluut", tekst: "'Vogels kunnen ALTIJD vliegen' = fout (pinguïn, struisvogel kunnen niet). 'Vogels kunnen MEESTAL vliegen' = OK." }],
           basiskennis: [{ onderwerp: "Logica van extremen", uitleg: "Extreme uitspraken zijn meestal ongenuanceerd = fout in toetsen." }],
           niveaus: {
-            basis: "'Altijd'/'nooit' = verdacht. A.",
+            basis: "'Altijd'/'nooit' = verdacht.",
             simpeler: "Bijna alles heeft uitzonderingen. Dus 'altijd waar' of 'nooit waar' is bijna nooit het juiste antwoord. Zoek 'meestal', 'vaak', 'soms' — die zijn realistischer.",
             nogSimpeler: "Altijd/nooit = vaak fout",
           },
@@ -317,7 +317,7 @@ const steps = [
           voorbeelden: [{ type: "tijd", tekst: "Skim 30s + vragen 30s = 1 min. Daarna 1 min per vraag = past in 5-7 min totaal." }],
           basiskennis: [{ onderwerp: "Niet woord-voor-woord", uitleg: "Cito-tijd is te kort voor diep-lezen. Slim aanpakken." }],
           niveaus: {
-            basis: "Skim + vragen lezen eerst. A.",
+            basis: "Skim + vragen lezen eerst.",
             simpeler: "Niet meteen heel artikel lezen. Eerst snel scannen waar het over gaat (skim) + bekijken wat je moet vinden (vragen). Dan gericht zoeken.",
             nogSimpeler: "Skim + vragen",
           },
@@ -338,7 +338,7 @@ const steps = [
           voorbeelden: [{ type: "eigen mening", tekst: "Vraag: 'Volgens de schrijver, is roken slecht?' Schrijver kan ANDERE mening hebben dan jij. Antwoord = wat schrijver zegt, niet jouw mening." }],
           basiskennis: [{ onderwerp: "Cito ≠ algemene kennis", uitleg: "Begrijpend lezen test LEEScapaciteit, niet weten." }],
           niveaus: {
-            basis: "Antwoord = uit tekst. A.",
+            basis: "Antwoord = uit tekst.",
             simpeler: "Wat de schrijver zegt geldt — ook al ben je het er niet mee eens. Je eigen kennis of mening telt niet bij begrijpend lezen.",
             nogSimpeler: "Tekst = bron",
           },
@@ -359,7 +359,7 @@ const steps = [
           voorbeelden: [{ type: "checklist", tekst: "Vraag 'Welk dier zit NIET in...': vink elk dier af in tekst. 3 staan er, 1 niet → die niet-staande = antwoord." }],
           basiskennis: [{ onderwerp: "Lees vragen 2x", uitleg: "Vooral bij NIET — anders kies je het tegengestelde." }],
           niveaus: {
-            basis: "Onderlijn 'NIET'. A.",
+            basis: "Onderlijn 'NIET'.",
             simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderlijn 'm direct als je 'm ziet — dan vergeet je niet dat je het TEGENGESTELDE zoekt.",
             nogSimpeler: "Markeer NIET",
           },
@@ -387,7 +387,7 @@ const steps = [
           voorbeelden: [{ type: "schatting", tekst: "Vraag: 19 × 21. Schat: 20 × 20 = 400. Echt antwoord moet rond 400 liggen. Optie 800 = fout, 399 = OK." }],
           basiskennis: [{ onderwerp: "Afronden helpt", uitleg: "Naar tientallen of vijftallen ronden = snel schatten." }],
           niveaus: {
-            basis: "Eerst schatten. A.",
+            basis: "Eerst schatten.",
             simpeler: "Stel je krijgt 19 × 21. Reken niet meteen — schat eerst: 20 × 20 = 400. Nu weet je: antwoord ligt rond 400. Bij rekenen: check of je antwoord daar bij past.",
             nogSimpeler: "Schat",
           },
@@ -412,7 +412,7 @@ const steps = [
           voorbeelden: [{ type: "korting", tekst: "€80 met 25% korting: ¼ van 80 = 20. Betaal: 80 − 20 = €60. Of 75% × 80 = 60." }],
           basiskennis: [{ onderwerp: "25% = kwart", uitleg: "Onthoud: 25% = ¼, 50% = ½, 75% = ¾." }],
           niveaus: {
-            basis: "25% van €40 = €10 korting → €30 betalen. A.",
+            basis: "25% van €40 = €10 korting → €30 betalen.",
             simpeler: "Stel: rok €40. 25% korting. ¼ van €40 = €10 (€40 ÷ 4). Trek af: €40 − €10 = €30.",
             nogSimpeler: "€40 − €10 = €30",
           },
@@ -439,7 +439,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Richting eerst", uitleg: "Bepaal eerst HOGER of LAGER, dan reken pas." }],
           niveaus: {
-            basis: "Goedkoper = −, verhoogd = +. A.",
+            basis: "Goedkoper = −, verhoogd = +.",
             simpeler: "Goedkoper = prijs gaat OMLAAG. Verhoogd = prijs gaat OMHOOG. Helemaal verschillend, ook al is het percentage gelijk.",
             nogSimpeler: "Min vs plus",
           },
@@ -467,7 +467,7 @@ const steps = [
           voorbeelden: [{ type: "markeer", tekst: "Tijdens toets: vraag 7, 12, 23 = twijfel. Vink op kladpapier. Aan einde: 5 min over → check alleen 7, 12, 23." }],
           basiskennis: [{ onderwerp: "Tijd voor controle", uitleg: "Plan ~5 min over voor controle aan einde. Niet meer, niet minder." }],
           niveaus: {
-            basis: "Markeer twijfels, check aan einde. A.",
+            basis: "Markeer twijfels, check aan einde.",
             simpeler: "Tijdens toets twijfel je bij sommige vragen. Schrijf die vraagnummers op kladpapier. Aan het eind, met overgebleven tijd, kijk je alleen die nog eens.",
             nogSimpeler: "Markeer + check eind",
           },
@@ -488,7 +488,7 @@ const steps = [
           voorbeelden: [{ type: "mantra", tekst: "Voor toets: zeg in jezelf 'ik ben voorbereid, ik doe mijn best, dat is genoeg'. Werkt." }],
           basiskennis: [{ onderwerp: "Cito ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waar je voor zakt." }],
           niveaus: {
-            basis: "Rustig + best doen. A.",
+            basis: "Rustig + best doen.",
             simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' Cito (geen zakken). Doe gewoon je best.",
             nogSimpeler: "Rustig + best",
           },
@@ -512,7 +512,7 @@ const steps = [
           voorbeelden: [{ type: "advies", tekst: "Schooladvies = vmbo-tl (januari). Cito-advies = havo (februari). School heroverweegt → vaak gaat advies naar havo." }],
           basiskennis: [{ onderwerp: "Geen punt-cijfer", uitleg: "Anders dan rapport: Cito geeft niveau-categorie, geen cijfer." }],
           niveaus: {
-            basis: "Cito = advies vervolg-niveau. A.",
+            basis: "Cito = advies vervolg-niveau.",
             simpeler: "Wat krijg je terug van Cito? Geen 7 of 8. Maar: 'past best bij vmbo' of 'past best bij havo' — een advies voor je middelbare school.",
             nogSimpeler: "Advies",
           },
@@ -536,7 +536,7 @@ const steps = [
           voorbeelden: [{ type: "heroverweging", tekst: "Schooladvies vmbo-tl + Cito havo → school heroverweegt → vaak naar havo. Andersom (havo-advies + Cito vmbo) blijft havo." }],
           basiskennis: [{ onderwerp: "Twee adviezen", uitleg: "Vroeger: 1 advies. Nu: 2 (school + toets), school telt zwaarder." }],
           niveaus: {
-            basis: "Schooladvies eerst + leidend. Toetsadvies kan ophogen. A.",
+            basis: "Schooladvies eerst + leidend. Toetsadvies kan ophogen.",
             simpeler: "Eerst krijg je schooladvies van leerkracht (januari). Dan Cito (februari). Cito-resultaat hoger = school MOET nog eens kijken. Lager = schooladvies blijft.",
             nogSimpeler: "School eerst + Cito-check",
           },
@@ -557,7 +557,7 @@ const steps = [
           voorbeelden: [{ type: "tijdverlies", tekst: "Vraag 8 = lastig. Doorpiekeren 5 min → vraag 9-15 niet gehaald. = 7 punten verloren voor misschien 1 punt." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito-tijd is strak. Elke minuut telt." }],
           niveaus: {
-            basis: "Doorpiekeren = niet handig. A.",
+            basis: "Doorpiekeren = niet handig.",
             simpeler: "De andere opties (skippen, gokken, eliminatie) zijn allemaal SLIM. Doorpiekeren op 1 vraag = je verliest tijd voor 5 andere. Slechtste optie.",
             nogSimpeler: "Vastlopen",
           },

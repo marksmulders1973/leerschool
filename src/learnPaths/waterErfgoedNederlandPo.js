@@ -166,7 +166,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Maeslantkering = bij Rotterdam. Oosterscheldekering = in Zeeland." }],
           basiskennis: [{ onderwerp: "Niet permanent dicht", uitleg: "Schepen moeten door — kering moet open kunnen." }],
           niveaus: {
-            basis: "Maeslantkering. A.",
+            basis: "Maeslantkering.",
             simpeler: "Maeslantkering is de stormvloedkering bij Rotterdam — sluit alleen bij storm.",
             nogSimpeler: "Maeslantkering",
           },
@@ -319,7 +319,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "62 pijlers, 4 km lang. Sluit ~1× per jaar." }],
           basiskennis: [{ onderwerp: "Compromis", uitleg: "Veiligheid + natuur beide gewogen." }],
           niveaus: {
-            basis: "Beweegbaar. A.",
+            basis: "Beweegbaar.",
             simpeler: "Bijzonder: hij is niet permanent dicht (zoals andere dammen) maar beweegbaar. Sluit alleen bij storm — om de natuur in Oosterschelde te sparen.",
             nogSimpeler: "Beweegbaar",
           },

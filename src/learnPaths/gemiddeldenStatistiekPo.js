@@ -118,7 +118,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5, 7, 9 → gem = 21/3 = 7. Inderdaad tussen 5 en 9." }],
           basiskennis: [{ onderwerp: "Check je antwoord", uitleg: "Als je gemiddelde lager dan het laagste of hoger dan het hoogste is — fout!" }],
           niveaus: {
-            basis: "3 ligt onder de minimum (5). Dus 3 kan niet. A.",
+            basis: "3 ligt onder de minimum (5). Dus 3 kan niet.",
             simpeler: "Laagste = 5, hoogste = 9. Gemiddelde moet daar tussenin liggen. 3 ligt eronder, dus 3 kan niet.",
             nogSimpeler: "3",
           },
@@ -154,7 +154,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Stap 1: 6+7+8+7 = 28. Stap 2: 4 cijfers. Stap 3: 28 ÷ 4 = 7." }],
           basiskennis: [{ onderwerp: "Niet alleen optellen", uitleg: "Som is pas de eerste stap. Daarna nog delen." }],
           niveaus: {
-            basis: "(6+7+8+7) ÷ 4 = 28 ÷ 4 = 7. A.",
+            basis: "(6+7+8+7) ÷ 4 = 28 ÷ 4 = 7.",
             simpeler: "Tel cijfers op: 6+7+8+7 = 28. Deel door aantal: 28 ÷ 4 = 7. Gemiddeld een 7.",
             nogSimpeler: "7",
           },
@@ -269,7 +269,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Voor kleuren werkt geen gemiddelde — alleen modus." }],
           basiskennis: [{ onderwerp: "Vaakst ≠ hoogst", uitleg: "Modus = vaakst voorkomend. Niet altijd het grootste getal." }],
           niveaus: {
-            basis: "Blauw (8 stemmen). A.",
+            basis: "Blauw (8 stemmen).",
             simpeler: "Tel hoe vaak elke kleur is gestemd. Blauw is 8×, meeste. Dus modus = blauw.",
             nogSimpeler: "Blauw",
           },
@@ -333,7 +333,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "4, 6, 8, 10 → middelste 2 = 6 en 8 → mediaan = 7." }],
           basiskennis: [{ onderwerp: "Sorteren", uitleg: "Altijd eerst op volgorde zetten!" }],
           niveaus: {
-            basis: "(6+8) ÷ 2 = 7. A.",
+            basis: "(6+8) ÷ 2 = 7.",
             simpeler: "Op volgorde: 4, 6, 8, 10. 4 getallen = even. Pak 6 en 8 (middelste). Gemiddelde = 7.",
             nogSimpeler: "7",
           },

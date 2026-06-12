@@ -169,7 +169,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Bril sterkte -3.0 = correctie voor bijziendheid." }],
           basiskennis: [{ onderwerp: "Diopter", uitleg: "Eenheid van brillen-sterkte. Negatief = bijziend, positief = verziend." }],
           niveaus: {
-            basis: "Holle lens. A.",
+            basis: "Holle lens.",
             simpeler: "Bij bijziend kan je ver weg niet scherp zien. Ooglens is te bol. Een holle bril-lens corrigeert door licht uit elkaar te duwen voor de ooglens.",
             nogSimpeler: "Holle lens",
           },
