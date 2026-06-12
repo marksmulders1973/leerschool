@@ -6,12 +6,25 @@
 // Gebruik:
 //   <MdInline text={currentCheck.q} />
 
+import KatexSpan, { splitMath } from "./KatexSpan.jsx";
+
 // Match eerst dubbele **...**, dan enkele *...* met niet-spatie-grenzen.
 const BOLD_RX = /\*\*([^*]+)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
 
 export default function MdInline({ text }) {
   if (text == null) return null;
   const s = String(text);
+  // $...$-formules → KaTeX (lazy). De rest gaat door de bold-parser.
+  if (s.includes("$")) {
+    const segs = splitMath(s);
+    if (segs.some((sg) => sg.type === "math")) {
+      return segs.map((sg, si) =>
+        sg.type === "math"
+          ? <KatexSpan key={`m${si}`} tex={sg.tex} />
+          : <MdInline key={`t${si}`} text={sg.text} />
+      );
+    }
+  }
   if (!s.includes("*")) return s;
 
   const parts = [];

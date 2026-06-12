@@ -4,6 +4,7 @@ import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.j
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import KatexSpan, { splitMath } from "../../shared/ui/KatexSpan.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
 import { BRAND } from "../../brand.js";
 import { interactive3DEnabled } from "../../shared/featureFlags.js";
@@ -66,6 +67,15 @@ function renderInline(text) {
   // Ondersteunt **bold**, *bold* (asterisks raken niet-spatie aan beide kanten
   // zodat "2 * 3" niet per ongeluk vet wordt) en [label](url)-markdown-links
   // die als <a>-tag renderen — anders ziet de gebruiker rauwe Markdown-syntax.
+  // $...$-formules renderen via KaTeX (lazy geladen, zie KatexSpan).
+  const segs = splitMath(text);
+  if (segs.some((sg) => sg.type === "math")) {
+    return segs.map((sg, si) =>
+      sg.type === "math"
+        ? <KatexSpan key={`m${si}`} tex={sg.tex} />
+        : <span key={`t${si}`}>{renderInline(sg.text)}</span>
+    );
+  }
   const parts = text.split(/(\*\*[^*]+\*\*|\*\S[^*]*\S\*|\*\S\*|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((p, i) => {
     if (p.startsWith("**") && p.endsWith("**")) {
@@ -1653,8 +1663,14 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
 
       <div style={{ padding: "0 14px 32px" }}>
         {path.chapters.map((ch) => {
+          // Defensief: sommige paden hebben hoofdstuk-indexen die voorbij de
+          // laatste stap wijzen (stappen ooit gesnoeid zonder chapters bij te
+          // werken) — 12 paden gevonden in audit 2026-06-12. Clamp op de
+          // echte array-lengte, anders crasht de overview op steps[i].title.
           const stepsInCh = [];
-          for (let i = ch.from; i <= ch.to; i++) stepsInCh.push(i);
+          const lastIdx = Math.min(ch.to, path.steps.length - 1);
+          for (let i = ch.from; i <= lastIdx; i++) stepsInCh.push(i);
+          if (stepsInCh.length === 0) return null; // hoofdstuk volledig buiten bereik
           const doneCount = stepsInCh.filter((i) => completedSteps.has(i)).length;
           const allDone = doneCount === stepsInCh.length;
           return (
