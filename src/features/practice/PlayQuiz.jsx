@@ -83,6 +83,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
   const wrongOverlayTimerRef = useRef(null);
+  // B0.3 (7-bots-review): advance-naar-volgende-vraag-timeout in een ref zodat
+  // hij gecanceld wordt bij quit/leerpad-uitstap — anders vuurde onFinish nog
+  // (leaderboard-insert + sprong naar results) nadat de speler al weg was.
+  const advanceTimerRef = useRef(null);
+  useEffect(() => () => { clearTimeout(advanceTimerRef.current); clearTimeout(wrongOverlayTimerRef.current); }, []);
   const elapsedRef = useRef(null);
   // Bron-tekst panel open/dicht (alleen relevant voor examen-quiz met bronTekst).
   // Default open zodat leerling de tekst direct ziet bij elke nieuwe vraag.
@@ -338,7 +343,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       }
     } else {
       const delay = isCorrect ? 1200 : 5000;
-      setTimeout(() => {
+      advanceTimerRef.current = setTimeout(() => {
         if (isLast) onFinish(newState);
         else setGameState({ ...newState, currentQ: newState.currentQ + 1 });
       }, delay);
@@ -604,6 +609,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
               clearInterval(timerRef.current);
               clearTimeout(wrongOverlayTimerRef.current);
+              clearTimeout(advanceTimerRef.current);
               if (matched) {
                 onLearnPathRequest(matched);
               } else {
@@ -901,6 +907,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 onClick={() => {
                   clearInterval(timerRef.current);
                   clearTimeout(wrongOverlayTimerRef.current);
+                  clearTimeout(advanceTimerRef.current);
                   track("learn_path_from_quiz", { path: matched.pathId, step: matched.stepIdx, at_question: gameState.currentQ + 1 });
                   onLearnPathRequest(matched);
                 }}
@@ -913,6 +920,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               onClick={() => {
                 clearInterval(timerRef.current);
                 clearTimeout(wrongOverlayTimerRef.current);
+                clearTimeout(advanceTimerRef.current);
                 onQuit();
               }}
             >

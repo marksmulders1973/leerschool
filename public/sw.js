@@ -28,7 +28,11 @@ const APP_SHELL = [
 // Static asset extensions
 const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|svg|woff2|woff|ttf|ico)(\?.*)?$/;
 
-// Install: cache de app shell + skipWaiting zodat nieuwe SW direct activeert.
+// Install: cache de app shell. GEEN skipWaiting hier (B0.2, 7-bots-review):
+// dat liet elke deploy direct activeren → controllerchange → harde reload,
+// óók midden in een quiz (toets-state is in-memory). De nieuwe SW blijft nu
+// netjes in "waiting" tot index.html SKIP_WAITING stuurt — silent bij eerste
+// laad, via de UpdateBanner tijdens actief gebruik.
 // addAll is atomic: bij failure van 1 asset hele install faalt + oude SW
 // blijft actief. Daarom: kritieke shell ("/", manifest, icon) via addAll,
 // en de extra precache-assets per stuk via Promise.allSettled zodat een
@@ -45,7 +49,6 @@ self.addEventListener("install", (e) => {
           )
         );
       }
-      await self.skipWaiting();
     })
   );
 });

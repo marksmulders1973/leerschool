@@ -984,7 +984,11 @@ export default function App() {
         />
       )}
       {page === "learn-path" && activeLearnPathId && (
+        // key dwingt remount bij pad-wissel (B0.1, 7-bots-review): zonder key
+        // bleef stepIdx/mode van het vorige pad staan → crash op step.title
+        // als het nieuwe pad minder stappen heeft.
         <LearnPath
+          key={activeLearnPathId}
           pathId={activeLearnPathId}
           initialStepIdx={activeLearnStepIdx}
           userName={userName || "Speler"}

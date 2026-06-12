@@ -18,8 +18,12 @@ export default function UpdateBanner() {
     setVerwerken(true);
     const sw = window.__pendingSw;
     if (sw && typeof sw.postMessage === "function") {
+      // Reload gebeurt via de controllerchange-listener in index.html zodra
+      // de nieuwe SW heeft overgenomen — geen blinde timer ernaast (die gaf
+      // dubbele reloads op trage telefoons). Vangnet: als de SW na 8s nog
+      // niet overgenomen heeft (activatie gefaald), alsnog handmatig.
       sw.postMessage({ type: "SKIP_WAITING" });
-      setTimeout(() => window.location.reload(), 2500);
+      setTimeout(() => window.location.reload(), 8000);
     } else {
       window.location.reload();
     }

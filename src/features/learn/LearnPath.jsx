@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import supabase from "../../supabase";
 import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
@@ -400,6 +400,25 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [showUitlegPad, setShowUitlegPad] = useState(false);
   const [showTekstHerlees, setShowTekstHerlees] = useState(false);
 
+  // B0.3 (7-bots-review 2026-06-13): alle flow-timeouts (advance na goed,
+  // wrong-delay, interactieve voltooiing) via schedule() zodat ze gecanceld
+  // worden bij stap-wissel / terug-naar-overzicht / unmount. Zonder dit
+  // vuurde completeStep of setMode("wrong") nog ná navigatie en sleurde de
+  // leerling terug naar een verlaten context.
+  const pendingTimersRef = useRef([]);
+  // Eerste-poging-score van deze sessie (B0.6) — voedt het AllDone-scherm.
+  const sessionScoreRef = useRef({ tries: 0, correct: 0 });
+  const schedule = useCallback((fn, ms) => {
+    const id = setTimeout(fn, ms);
+    pendingTimersRef.current.push(id);
+    return id;
+  }, []);
+  const clearPendingTimers = useCallback(() => {
+    pendingTimersRef.current.forEach(clearTimeout);
+    pendingTimersRef.current = [];
+  }, []);
+  useEffect(() => clearPendingTimers, [clearPendingTimers]);
+
   // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval, 2026-05-16):
   // bij entry van een latere stap, peek of er een check uit een vorige stap
   // klaar staat voor herhaling. Als ja, banner + modal-flow zichtbaar.
@@ -429,12 +448,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     let cancelled = false;
     (async () => {
       try {
-        const { data } = await supabase
+        const { data, error } = await supabase
           .from("learn_progress")
           .select("step_idx")
           .eq("player_name", player)
           .eq("learn_path_id", pathId);
         if (cancelled) return;
+        // supabase-js v2 throwt niet — error-veld expliciet checken (B0.4)
+        if (error) console.warn("[LearnPath] voortgang laden faalde:", error.message);
         if (Array.isArray(data) && data.length > 0) {
           setCompletedSteps(new Set(data.map((r) => r.step_idx)));
         }
@@ -505,6 +526,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   })();
 
   const goToStep = (idx) => {
+    clearPendingTimers();
     setStepIdx(idx);
     setCheckIdx(0);
     setSelected(null);
@@ -513,6 +535,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setShowTekstHerlees(false);
     setMode("reading");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const goOverview = () => {
+    clearPendingTimers();
+    setMode("overview");
   };
 
   const startCheck = () => {
@@ -525,6 +552,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const handlePick = (i) => {
     if (mode !== "checking") return;
     setSelected(i);
+    // B0.6 (7-bots-review): tel eerste pogingen van DEZE sessie voor de
+    // AllDone-score. De oude berekening (totaal − persistente fout-set uit
+    // adaptiveStore) telde fouten van vorige weken mee → "6 van de 10 meteen
+    // goed" terwijl de leerling vandaag alles goed had.
+    if (attempts === 1) {
+      sessionScoreRef.current.tries += 1;
+      if (i === currentCheck.answer) sessionScoreRef.current.correct += 1;
+    }
     // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
     // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).
     // Voedt uitsluitend de ouder-mail, nooit kind-facing.
@@ -559,7 +594,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         setMode("correctEvidence");
         return;
       }
-      setTimeout(() => {
+      schedule(() => {
         if (checkIdx + 1 < checks.length) {
           setCheckIdx(checkIdx + 1);
           setSelected(null);
@@ -587,7 +622,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // zichtbaar rood kleuren + zacht schudden vóór het hint-kaartje komt —
       // anders verdwijnt de vraag abrupt en mist de leerling wélke optie fout
       // was. 550ms ≈ duur van lk-wrong-shake + korte naloop.
-      setTimeout(() => setMode("wrong"), 550);
+      schedule(() => setMode("wrong"), 550);
     }
   };
 
@@ -611,7 +646,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const handleInteractiveAnswer = (correct /*, optionId */) => {
     if (mode !== "checking") return;
     if (correct) {
-      setTimeout(() => completeStep(), 1200);
+      schedule(() => completeStep(), 1200);
     } else {
       setAttempts((a) => a + 1);
     }
@@ -628,19 +663,26 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     newDone.add(stepIdx);
     setCompletedSteps(newDone);
     setMode("stepDone");
+    // B0.4 (7-bots-review): supabase-js v2 throwt niet — de oude try/catch
+    // ving dus nooit iets en een RLS-/offline-fout verdween geruisloos
+    // terwijl de UI "voltooid!" toonde. Nu: error-veld checken + 1 retry.
+    const row = {
+      player_name: player,
+      user_id: authUser?.id || null,
+      learn_path_id: pathId,
+      step_idx: stepIdx,
+      attempts,
+    };
+    const opts = { onConflict: "player_name,learn_path_id,step_idx" };
     try {
-      await supabase.from("learn_progress").upsert(
-        {
-          player_name: player,
-          user_id: authUser?.id || null,
-          learn_path_id: pathId,
-          step_idx: stepIdx,
-          attempts,
-        },
-        { onConflict: "player_name,learn_path_id,step_idx" }
-      );
+      const { error } = await supabase.from("learn_progress").upsert(row, opts);
+      if (error) {
+        await new Promise((r) => setTimeout(r, 1500));
+        const { error: retryError } = await supabase.from("learn_progress").upsert(row, opts);
+        if (retryError) console.warn("[LearnPath] voortgang NIET opgeslagen:", retryError.message);
+      }
     } catch (e) {
-      // niet kritiek
+      // netwerk volledig weg — voortgang blijft deze sessie in state staan
     }
   };
 
@@ -673,9 +715,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
   if (mode === "allDone") {
     // A6 (10-agent circulariteit 2026-05-10): score + volgend-pad-suggestie.
-    const totalChecks = (path.steps || []).reduce((n, s) => n + (s.checks?.length || 0), 0);
-    const wrongCount = Object.values(wrongPerStep || {}).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
-    const correctCount = Math.max(0, totalChecks - wrongCount);
+    // B0.6: score = eerste pogingen van déze sessie (eerlijk + actueel);
+    // geen vragen beantwoord (alles via "markeer voltooid") → geen score-blok.
+    const sess = sessionScoreRef.current;
     // Volgende pad: zelfde subject + level, eerstvolgende met hogere id (alfa).
     // QW7 STAP 2: via pathManifest (metadata-only) zodat geen 5,8MB bundle nodig.
     const nextPath = (() => {
@@ -689,13 +731,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     const examRefs = (path.id || "").startsWith("examen-") ? [] : getExamRefsForPath(path.id);
     return (
       <div style={pageStyle()}>
-        <Header onBack={() => setMode("overview")} onHome={onHome} title={path.title} emoji={path.emoji} />
+        <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} />
         <div style={{ padding: "10px 18px 28px" }}>
           <AllDone
             path={path}
             onHome={onHome}
-            onBackToOverview={() => setMode("overview")}
-            score={{ correct: correctCount, total: totalChecks }}
+            onBackToOverview={goOverview}
+            score={sess.tries > 0 ? { correct: sess.correct, total: sess.tries } : null}
             nextPath={nextPath}
             onPickPath={onPickPath}
             examRefs={examRefs}
@@ -713,7 +755,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         stepIdx={stepIdx}
         onStopForToday={() => { if (onHome) onHome(); }}
       />
-      <Header onBack={() => setMode("overview")} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
+      <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
 
       {/* Mini-info: stap nummer + voortgangsbalk + prev/next-navigatie */}
       <div style={{ padding: "12px 18px 6px" }}>
@@ -1545,7 +1587,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 title="Terug naar paden"
                 hint="Andere stap kiezen"
                 accent={C.muted}
-                onClick={() => setMode("overview")}
+                onClick={goOverview}
               />
             </div>
           </>
