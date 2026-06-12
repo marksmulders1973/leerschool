@@ -159,6 +159,24 @@ function Explanation({ text }) {
     <div style={{ lineHeight: 1.65, fontSize: 15, color: C.text }}>
       {blocks.map((block, bi) => {
         if (isTableBlock(block)) return renderTable(block, bi);
+        // "## Kopje" op een eigen regel → tussenkop (gebruikerswens bord
+        // 2026-06-11: hoofdonderdelen in lange uitleg een eigen header geven
+        // zodat ze niet als deel van de lopende zin lezen).
+        if (/^##\s+/.test(block.trim()) && !block.includes("\n")) {
+          return (
+            <h4
+              key={bi}
+              style={{
+                margin: "18px 0 6px",
+                fontSize: 15.5,
+                fontWeight: 800,
+                color: "var(--color-text-strong)",
+              }}
+            >
+              {renderInline(block.trim().replace(/^##\s+/, ""))}
+            </h4>
+          );
+        }
         const lines = block.split("\n");
         const isList = lines.length > 0 && lines.every((l) => l.trim().startsWith("•"));
         if (isList) {

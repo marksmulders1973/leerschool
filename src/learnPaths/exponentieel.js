@@ -2,6 +2,8 @@
 // 14 stappen in 5 hoofdstukken (A t/m E).
 // Voorbouw op machten + lineaire-formules. Voorbereiding op havo wisA.
 
+import InteractieveGroeiGrafiek from "../components/learn/graph/InteractieveGroeiGrafiek.jsx";
+
 const COLORS = {
   axis: "#e0e6f0",
   grid: "#2a3f5f",
@@ -137,6 +139,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
   },
   {
     title: "Tabel + grafiek vergelijken",
+    // Interactieve grafiek ipv statische SVG (gebruikerswens bord 2026-06-11):
+    // schuif over x en zie op elk punt de berekening lineair vs exponentieel.
+    illustrationComponent: InteractieveGroeiGrafiek,
     explanation: "**Hoe herken je lineair vs exponentieel uit een tabel?**\n\n**Truc lineair**: kijk naar de **verschillen** tussen opeenvolgende waardes.\n• Constant verschil → lineair.\n\n**Truc exponentieel**: kijk naar de **factor** tussen opeenvolgende waardes.\n• Constante factor → exponentieel.\n\n**Voorbeeld 1** (lineair):\n| t | y |\n|---|---|\n| 0 | 5 |\n| 1 | 8 |\n| 2 | 11 |\n| 3 | 14 |\n• Verschil: +3, +3, +3 (constant) → **lineair**, y = 3t + 5.\n\n**Voorbeeld 2** (exponentieel):\n| t | N |\n|---|---|\n| 0 | 100 |\n| 1 | 110 |\n| 2 | 121 |\n| 3 | 133.1 |\n• Verschil: +10, +11, +12.1 (niet constant!).\n• Factor: 110/100 = 1.1, 121/110 = 1.1, 133.1/121 = 1.1 (constant!) → **exponentieel**, N = 100 · 1.1^t.\n\n**Grafisch**:\n• Lineair: rechte lijn (constante helling).\n• Exponentieel: kromme die steeds steiler wordt (bij g > 1).\n\n**Wat is wat in de praktijk?**\n• Salaris met vast bedrag erbij per jaar = lineair.\n• Salaris met vast percentage erbij per jaar = exponentieel.\n• Auto-snelheid bij vaste versnelling = lineair.\n• Aantal mensen in een groeiende stad (vast %) = exponentieel.",
     svg: (() => {
       const { toX, toY } = baseAxes(0, 5, 0, 40);
