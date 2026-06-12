@@ -20,30 +20,30 @@ Cito + examens versterken. Drie type werk:
 > agent-rapporten in de sessie van 13 juni. Volgorde binnen elk blok = prioriteit.
 
 ### B0 — Echte bugs (eerst, klein werk, raakt elke gebruiker)
-- [ ] **B0.1 `<LearnPath>` zonder `key` → crash/corrupte staat bij pad-wissel** (App.jsx:986-998). "Volgend onderwerp"/VoorkennisKeten-jump houdt oude stepIdx → `step` undefined bij korter pad. Fix: `key={activeLearnPathId}`.
-- [ ] **B0.2 SW forceert harde reload midden in quiz bij elke deploy** (public/sw.js:48 `skipWaiting()` in install + index.html controllerchange-reload). Toets-state is in-memory → alles weg. Fix: skipWaiting weg uit install; UpdateBanner-flow werkt dan eindelijk.
-- [ ] **B0.3 Ongecancelde setTimeouts in LearnPath** (562-571 advance, 590 wrong-delay, 611-618 interactief) + PlayQuiz advance-timeout (341-344) overleven navigatie → completeStep/onFinish vuurt in verkeerde context. Fix: ids in ref + clear bij goToStep/quit/unmount.
-- [ ] **B0.4 Supabase-fouten stil**: completeStep-upsert destructureert `error` niet (LearnPath.jsx:626-645) → "voltooid!" getoond, niets opgeslagen. Zelfde bij progress-fetch.
-- [ ] **B0.5 Shuffle breekt letter-verwijzingen**: 695× "…. A."-uitlegPads + "Antwoord D…"-correctievoorschriften verwijzen naar pre-shuffle volgorde (shuffleOptions.js:20-33). Samen oplossen met D1.
-- [ ] **B0.6 AllDone-score klopt niet**: telt persistente fout-set van vorige sessies mee (LearnPath.jsx:676-678 + adaptiveStore STREAK_TO_MASTER=3). Fix: eerste-poging-correct per sessie tellen.
+- [x] ✓13/6 **B0.1 `<LearnPath>` zonder `key` → crash/corrupte staat bij pad-wissel** (App.jsx:986-998). "Volgend onderwerp"/VoorkennisKeten-jump houdt oude stepIdx → `step` undefined bij korter pad. Fix: `key={activeLearnPathId}`.
+- [x] ✓13/6 **B0.2 SW forceert harde reload midden in quiz bij elke deploy** (public/sw.js:48 `skipWaiting()` in install + index.html controllerchange-reload). Toets-state is in-memory → alles weg. Fix: skipWaiting weg uit install; UpdateBanner-flow werkt dan eindelijk.
+- [x] ✓13/6 **B0.3 Ongecancelde setTimeouts in LearnPath** (562-571 advance, 590 wrong-delay, 611-618 interactief) + PlayQuiz advance-timeout (341-344) overleven navigatie → completeStep/onFinish vuurt in verkeerde context. Fix: ids in ref + clear bij goToStep/quit/unmount.
+- [x] ✓13/6 **B0.4 Supabase-fouten stil**: completeStep-upsert destructureert `error` niet (LearnPath.jsx:626-645) → "voltooid!" getoond, niets opgeslagen. Zelfde bij progress-fetch.
+- [x] ✓13/6 (deels: 338 niveau-letters gestript via scripts/fix-uitlegpad-letters.mjs; "Antwoord D"-correctievoorschriften nog open) **B0.5 Shuffle breekt letter-verwijzingen**: 695× "…. A."-uitlegPads + "Antwoord D…"-correctievoorschriften verwijzen naar pre-shuffle volgorde (shuffleOptions.js:20-33). Samen oplossen met D1.
+- [x] ✓13/6 **B0.6 AllDone-score klopt niet**: telt persistente fout-set van vorige sessies mee (LearnPath.jsx:676-678 + adaptiveStore STREAK_TO_MASTER=3). Fix: eerste-poging-correct per sessie tellen.
 
 ### B1 — Belofte vs werkelijkheid (vertrouwen ICP)
-- [ ] **B1.1 Prijs-tegenspraak**: OuderDashboard.jsx:373 "€1,95/maand" (abonnement!) vs per-kwartier-belofte overal elders + config.js:52 €5,99 intern. Eén bron: proPlan.js.
-- [ ] **B1.2 "Geen tijdslimiet — neem de tijd!"-banner staat boven examenvragen in examen-modus** (PlayQuiz.jsx:429-433) terwijl ExamensPage "geen hints, echte examentraining" belooft. Plus: geen timer (App.jsx:766 timePerQuestion:0) en feedback na élke vraag. Fix: examen-mix totaal-timer + feedback uitstellen tot eind (Cito-simulatie-patroon bestaat al).
+- [x] ✓13/6 **B1.1 Prijs-tegenspraak**: OuderDashboard.jsx:373 "€1,95/maand" (abonnement!) vs per-kwartier-belofte overal elders + config.js:52 €5,99 intern. Eén bron: proPlan.js.
+- [x] ✓13/6 (deels: banner → "🎓 Examen-modus"; totaal-timer + feedback-uitstel nog open) **B1.2 "Geen tijdslimiet — neem de tijd!"-banner staat boven examenvragen in examen-modus** (PlayQuiz.jsx:429-433) terwijl ExamensPage "geen hints, echte examentraining" belooft. Plus: geen timer (App.jsx:766 timePerQuestion:0) en feedback na élke vraag. Fix: examen-mix totaal-timer + feedback uitstellen tot eind (Cito-simulatie-patroon bestaat al).
 - [ ] **B1.3 "Alles voor groep 1 t/m 8"** maar 5 paden voor groep 3-4, 0 voor groep 1-2 (pathManifest). Belofte afzwakken óf content bouwen.
 - [ ] **B1.4 Gratis-scope 2027 onduidelijk** voor ICP: blijft Doorstroomtoets-oefenen gratis ná jan 2027? Expliciet maken in abonnement.html + homepage.
 - [ ] **B1.5 15-min belofte**: 206/322 paden > 15 min, 163 paden > 5 stappen (eigen manifest-data). Splits-programma + build-gate op estimatedMinutes.
 
 ### B2 — Didactiek (antwoord-verklap op schaal)
 - [ ] **B2.1 695× uitlegPad-niveau eindigt op het letterlijke antwoord** ("300. A." / nogSimpeler="300") in 154 files — juist zwakste leerling (auto-switch naar simpeler bij ≥2 fout) krijgt het minste denkwerk. Script-matig detecteerbaar: niveau-tekst bevat options[answer].
-- [ ] **B2.2 Correctievoorschrift staat `open` in wrong-mode** (LearnPath.jsx:1388) → antwoord zichtbaar → retry telt als beheerst. `open` weghalen + retry-na-reveal niet als "meteen goed" registreren.
+- [x] ✓13/6 **B2.2 Correctievoorschrift staat `open` in wrong-mode** (LearnPath.jsx:1388) → antwoord zichtbaar → retry telt als beheerst. `open` weghalen + retry-na-reveal niet als "meteen goed" registreren.
 - [ ] **B2.3 Eliminatie-leaks + verklap-hints**: signaalwoordenVerbandenPo.js:129, omzettenBreukProcentKommaPo.js:258/262, procenten.js:465 ("Niet." ×12), doorstroomtoetsRekenenG8.js:144/158/193 + duplicate vraag :96/:141. lint-wronghints.mjs uitbreiden + draaien.
 - [ ] **B2.4 Spaced repetition is write-only** (getDueChecks heeft 0 consumers) — aansluiten op StudentHome-kaart of writes verwijderen.
-- [ ] **B2.5 Kern-loop half dicht**: AllDone→examRefs negeert stepIdx (LearnPath.jsx:1962) → leerling landt op vraag 1 i.p.v. "snap je 'm nu wel?"-vraag. `onPickPath(examPathId, ref.stepIdx)`.
+- [x] ✓13/6 **B2.5 Kern-loop half dicht**: AllDone→examRefs negeert stepIdx (LearnPath.jsx:1962) → leerling landt op vraag 1 i.p.v. "snap je 'm nu wel?"-vraag. `onPickPath(examPathId, ref.stepIdx)`.
 - [ ] **B2.6 Antwoord opzoekbaar vóór eerste poging** via "Ik begrijp de vraag niet" → Korte uitleg (1 tik). Niveau-sectie pas na eerste poging tonen.
 
 ### B3 — Doelgroep-fit
-- [ ] **B3.1 "Seksuele voorlichting" + "Roken & drugs"-chips zichtbaar voor élke leeftijd** (SelfStudy.jsx:200). Filter op groep ≥7/VO.
+- [x] ✓13/6 **B3.1 "Seksuele voorlichting" + "Roken & drugs"-chips zichtbaar voor élke leeftijd** (SelfStudy.jsx:200). Filter op groep ≥7/VO.
 - [ ] **B3.2 PO is één bak "groep 1-8" zonder groep-filter** (LearnPathsHub.jsx:96) — 7-jarige verdrinkt in groep 6-8 paden. Gekozen groep (bestaat al bij naam-invoer) als default-filter.
 - [ ] **B3.3 g3+g4 delen één vragen-bucket** met "53+29" voor beginnende rekenaars (SelfStudy.jsx:8 + sampleQuestions.js:142-156). Splitsen.
 - [ ] **B3.4 VO'er moet langs Doorstroomtoets-blokken scrollen** vóór examen-balken (StudentHome.jsx:429-912, isVoLevel bestaat al). Herordenen bij VO.
@@ -58,8 +58,8 @@ Cito + examens versterken. Drie type werk:
 - [ ] **B4.5 Leerkracht kan leerpad/Doorstroomtoets-onderdeel niet klaarzetten** als opdracht — USP onbenut in klas-kanaal.
 
 ### B5 — Toegankelijkheid (kinderen met leerproblemen = kern-doelgroep)
-- [ ] **B5.1 btnPrimary wit-op-groen ≈ 2,2:1 contrast** (LearnPath.jsx:2102-2117) — hoofdknop hele leerflow. Donkere tekst (patroon bestaat al op :973).
-- [ ] **B5.2 Goed/fout-banners zonder aria-live** in LearnPath (1306-1338, 1373-1380) — blind kind hoort niks; PlayQuiz-patroon kopiëren.
+- [x] ✓13/6 **B5.1 btnPrimary wit-op-groen ≈ 2,2:1 contrast** (LearnPath.jsx:2102-2117) — hoofdknop hele leerflow. Donkere tekst (patroon bestaat al op :973).
+- [x] ✓13/6 **B5.2 Goed/fout-banners zonder aria-live** in LearnPath (1306-1338, 1373-1380) — blind kind hoort niks; PlayQuiz-patroon kopiëren.
 - [ ] **B5.3 3 modals zonder focus-trap/Escape** (AITutor, KwartierPauze, Tips-modal) — useFocusTrap-hook bestaat al.
 - [ ] **B5.4 Auto-advance zonder pauze**: CorrectEvidenceCard 2800ms + advance 1100ms — trage lezer verliest uitleg. "Verder ▶"-knop.
 - [ ] **B5.5 Touch targets < 44px** op ~8 plekken (iconBtn 30×34, markeer-voltooid 23px hoog, groep-knoppen 38×38) — token --tap-target-min bestaat, toepassen.
@@ -391,6 +391,8 @@ Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
 ## Sessie-log
 
 Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
+
+- 2026-06-13 — **7-bots-review (71 bevindingen) + 13 fixes** (laatste push 823dcbf). (1) Vraagflow-animaties: fout-schud + cross-fade + confetti + AllDone-bereikbaarheids-bugfix (afrond-kaart op laatste stap, commit 202d618). (2) Kikker Oversteek: raak-pauze 💥 + frame-onafhankelijke genade (17d0b58). (3) 7 persona-agents → sectie "🤖 7-BOTS-REVIEW" bovenaan deze backlog. (4) Gefixt: B0.1 LearnPath-key, B0.2 SW-skipWaiting-reload, B0.3 timeout-cleanups, B0.4 stille Supabase-fouten, B0.6 sessie-score, B1.1 prijs-tegenspraak, B1.2-banner, B2.2 correctievoorschrift-dicht, B2.5 examRef-stepIdx, B3.1 leeftijdsfilter chips, B5.1 contrast, B5.2 aria-live, B0.5-deels (338 antwoord-letters gestript, nieuw script scripts/fix-uitlegpad-letters.mjs). **Volgende sessie: B1.2-timer, B2.1-content-herschrijf, B4-leerkrachtblok.**
 
 - 2026-06-12 — **Herkansing-landing + bob-tips + crash-fix 12 paden + KaTeX** (laatste push 02e3792). (1) `/herkansing` live: examen-oefenpaden per vak gebundeld voor uitslag-week, 2 Threads-reacties bij gezakt-posts verwijzen ernaartoe. (2) Bord-tips "bob" verwerkt: `## kopjes`-support in uitleg-renderer, machtsregels-spiekbriefje, eerste interactieve grafiek (`InteractieveGroeiGrafiek` op exponentieel stap 3) + 5 maker-bedankjes op /tips. (3) **BUGFIX productie**: 12 paden (klokkijken, verhoudingen, machten, statistiek, e.a.) crashten op overview — chapters wezen voorbij laatste stap; UI clampt nu + machten-data gefixt. **OPEN: chapters-data van de overige 11 paden nog corrigeren** (scan-script in sessie; UI vangt het af maar data blijft scheef). (4) KaTeX lazy ($...$-notatie) in renderInline+MdInline; formules omgezet in machten/logaritmen/differentialen-paden. **LES: leerpad-file die een component importeert MOET .jsx zijn** — buildPathManifest (Vercel prebuild) kan JSX-imports in .js niet laden → pad valt stilletjes uit manifest ("bestaat niet meer" op prod).
 
