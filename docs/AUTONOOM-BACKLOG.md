@@ -14,6 +14,69 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🤖 7-BOTS-REVIEW (2026-06-13) — 7 persona's (kind-7 / VMBO-15 / ouder / nerd / leerkracht / didactiek / a11y), 71 bevindingen
+
+> Mark-opdracht: "test de app door 7 bots met elk een andere bril". Synthese hieronder; volledige
+> agent-rapporten in de sessie van 13 juni. Volgorde binnen elk blok = prioriteit.
+
+### B0 — Echte bugs (eerst, klein werk, raakt elke gebruiker)
+- [ ] **B0.1 `<LearnPath>` zonder `key` → crash/corrupte staat bij pad-wissel** (App.jsx:986-998). "Volgend onderwerp"/VoorkennisKeten-jump houdt oude stepIdx → `step` undefined bij korter pad. Fix: `key={activeLearnPathId}`.
+- [ ] **B0.2 SW forceert harde reload midden in quiz bij elke deploy** (public/sw.js:48 `skipWaiting()` in install + index.html controllerchange-reload). Toets-state is in-memory → alles weg. Fix: skipWaiting weg uit install; UpdateBanner-flow werkt dan eindelijk.
+- [ ] **B0.3 Ongecancelde setTimeouts in LearnPath** (562-571 advance, 590 wrong-delay, 611-618 interactief) + PlayQuiz advance-timeout (341-344) overleven navigatie → completeStep/onFinish vuurt in verkeerde context. Fix: ids in ref + clear bij goToStep/quit/unmount.
+- [ ] **B0.4 Supabase-fouten stil**: completeStep-upsert destructureert `error` niet (LearnPath.jsx:626-645) → "voltooid!" getoond, niets opgeslagen. Zelfde bij progress-fetch.
+- [ ] **B0.5 Shuffle breekt letter-verwijzingen**: 695× "…. A."-uitlegPads + "Antwoord D…"-correctievoorschriften verwijzen naar pre-shuffle volgorde (shuffleOptions.js:20-33). Samen oplossen met D1.
+- [ ] **B0.6 AllDone-score klopt niet**: telt persistente fout-set van vorige sessies mee (LearnPath.jsx:676-678 + adaptiveStore STREAK_TO_MASTER=3). Fix: eerste-poging-correct per sessie tellen.
+
+### B1 — Belofte vs werkelijkheid (vertrouwen ICP)
+- [ ] **B1.1 Prijs-tegenspraak**: OuderDashboard.jsx:373 "€1,95/maand" (abonnement!) vs per-kwartier-belofte overal elders + config.js:52 €5,99 intern. Eén bron: proPlan.js.
+- [ ] **B1.2 "Geen tijdslimiet — neem de tijd!"-banner staat boven examenvragen in examen-modus** (PlayQuiz.jsx:429-433) terwijl ExamensPage "geen hints, echte examentraining" belooft. Plus: geen timer (App.jsx:766 timePerQuestion:0) en feedback na élke vraag. Fix: examen-mix totaal-timer + feedback uitstellen tot eind (Cito-simulatie-patroon bestaat al).
+- [ ] **B1.3 "Alles voor groep 1 t/m 8"** maar 5 paden voor groep 3-4, 0 voor groep 1-2 (pathManifest). Belofte afzwakken óf content bouwen.
+- [ ] **B1.4 Gratis-scope 2027 onduidelijk** voor ICP: blijft Doorstroomtoets-oefenen gratis ná jan 2027? Expliciet maken in abonnement.html + homepage.
+- [ ] **B1.5 15-min belofte**: 206/322 paden > 15 min, 163 paden > 5 stappen (eigen manifest-data). Splits-programma + build-gate op estimatedMinutes.
+
+### B2 — Didactiek (antwoord-verklap op schaal)
+- [ ] **B2.1 695× uitlegPad-niveau eindigt op het letterlijke antwoord** ("300. A." / nogSimpeler="300") in 154 files — juist zwakste leerling (auto-switch naar simpeler bij ≥2 fout) krijgt het minste denkwerk. Script-matig detecteerbaar: niveau-tekst bevat options[answer].
+- [ ] **B2.2 Correctievoorschrift staat `open` in wrong-mode** (LearnPath.jsx:1388) → antwoord zichtbaar → retry telt als beheerst. `open` weghalen + retry-na-reveal niet als "meteen goed" registreren.
+- [ ] **B2.3 Eliminatie-leaks + verklap-hints**: signaalwoordenVerbandenPo.js:129, omzettenBreukProcentKommaPo.js:258/262, procenten.js:465 ("Niet." ×12), doorstroomtoetsRekenenG8.js:144/158/193 + duplicate vraag :96/:141. lint-wronghints.mjs uitbreiden + draaien.
+- [ ] **B2.4 Spaced repetition is write-only** (getDueChecks heeft 0 consumers) — aansluiten op StudentHome-kaart of writes verwijderen.
+- [ ] **B2.5 Kern-loop half dicht**: AllDone→examRefs negeert stepIdx (LearnPath.jsx:1962) → leerling landt op vraag 1 i.p.v. "snap je 'm nu wel?"-vraag. `onPickPath(examPathId, ref.stepIdx)`.
+- [ ] **B2.6 Antwoord opzoekbaar vóór eerste poging** via "Ik begrijp de vraag niet" → Korte uitleg (1 tik). Niveau-sectie pas na eerste poging tonen.
+
+### B3 — Doelgroep-fit
+- [ ] **B3.1 "Seksuele voorlichting" + "Roken & drugs"-chips zichtbaar voor élke leeftijd** (SelfStudy.jsx:200). Filter op groep ≥7/VO.
+- [ ] **B3.2 PO is één bak "groep 1-8" zonder groep-filter** (LearnPathsHub.jsx:96) — 7-jarige verdrinkt in groep 6-8 paden. Gekozen groep (bestaat al bij naam-invoer) als default-filter.
+- [ ] **B3.3 g3+g4 delen één vragen-bucket** met "53+29" voor beginnende rekenaars (SelfStudy.jsx:8 + sampleQuestions.js:142-156). Splitsen.
+- [ ] **B3.4 VO'er moet langs Doorstroomtoets-blokken scrollen** vóór examen-balken (StudentHome.jsx:429-912, isVoLevel bestaat al). Herordenen bij VO.
+- [ ] **B3.5 E-mail-muur op fouten-overzicht** (ResultsPage.jsx:23-28) — 15-jarige én klas-leerling haken af op hét leermoment; AVG-vraagteken bij minderjarigen in klasverband. Vrijgeven voor examen/klas-toetsen.
+- [ ] **B3.6 Groep-6 toon in examen-context** ("Zeg het 3× hardop", confetti, "Knap gedaan!") — zakelijke variant bij examen-flows.
+
+### B4 — Leerkracht-spoor (half af)
+- [ ] **B4.1 Voortgang-dashboard leest localStorage van leerkracht-device** (App.jsx:1839-1846) → leeg bij echt klasgebruik. Leaderboard-query (bestaat al voor per-toets-uitklap) hergebruiken.
+- [ ] **B4.2 Geen vraag-niveau inzicht**: leaderboard slaat alleen score op (App.jsx:873-887). Answers-array meesturen → fout-percentage per vraag.
+- [ ] **B4.3 Kind-gegevens (naam/mail/06) in localStorage** ClassManager (TeacherComponents.jsx:41-47) — naar Supabase met RLS, standaard alleen voornaam.
+- [ ] **B4.4 Naam-koppeling ouder = privacy-lek**: voornaam-match accepteert elke gelijknamige (KindAcceptBanner.jsx:23-27) en toont landelijke leaderboard-data (OuderDashboard.jsx:96-99). Alleen koppelcode-flow houden.
+- [ ] **B4.5 Leerkracht kan leerpad/Doorstroomtoets-onderdeel niet klaarzetten** als opdracht — USP onbenut in klas-kanaal.
+
+### B5 — Toegankelijkheid (kinderen met leerproblemen = kern-doelgroep)
+- [ ] **B5.1 btnPrimary wit-op-groen ≈ 2,2:1 contrast** (LearnPath.jsx:2102-2117) — hoofdknop hele leerflow. Donkere tekst (patroon bestaat al op :973).
+- [ ] **B5.2 Goed/fout-banners zonder aria-live** in LearnPath (1306-1338, 1373-1380) — blind kind hoort niks; PlayQuiz-patroon kopiëren.
+- [ ] **B5.3 3 modals zonder focus-trap/Escape** (AITutor, KwartierPauze, Tips-modal) — useFocusTrap-hook bestaat al.
+- [ ] **B5.4 Auto-advance zonder pauze**: CorrectEvidenceCard 2800ms + advance 1100ms — trage lezer verliest uitleg. "Verder ▶"-knop.
+- [ ] **B5.5 Touch targets < 44px** op ~8 plekken (iconBtn 30×34, markeer-voltooid 23px hoog, groep-knoppen 38×38) — token --tap-target-min bestaat, toepassen.
+- [ ] **B5.6 Klein grut**: alt verplicht op bronAfbeelding, stap-status alleen emoji/kleur, ticker zonder pauze, --color-text-soft token bestaat niet (VraagUitlegPad.jsx:78).
+
+### B6 — Ouder-funnel (conversie)
+- [ ] **B6.1 Ouder-ingang = mini-footerknop onder de fold** (HomePage.jsx:1312) terwijl ouder=koper. Regel onder hero-CTA: "Ouder? Volg de voortgang →".
+- [ ] **B6.2 Dashboard toont momentopname, geen trend** — trend-pijl per vak + oefenminuten/week.
+- [ ] **B6.3 Geen toets-plan**: countdown naar feb 2027 + 12-weken-schema op CitoPage (Kwartierplan-idee).
+- [ ] **B6.4 Kapotte link /voor-ouders.html** (abonnement.html:196) + AVG-contact = privé-Gmail (privacy.html:41) → info@leerkwartier.app.
+- [ ] **B6.5 "één vader, geen marketingmachine" + lage live-teller** kunnen hobby-gevoel versterken — teller boven drempel + 1-2 echte ouder-quotes.
+
+### Klein technisch grut (verzameld)
+- [ ] rateMap onbegrensd (api/_guard.js:24), ls_leaderboard delete-vs-write tegenspraak (App.jsx:441/499), UpdateBanner dubbele reload (UpdateBanner.jsx:22), SupporterGame force-tikker re-rendert alles per frame + setState-in-updater side effects, PlayQuiz handleAnswer(-1) in setTimeLeft-updater (StrictMode dubbel), "Ik ben leerling/student" → "basisschool/middelbare school", uitlegPad "…. A."-jargon, deadline niet gehandhaafd bij join, ExamensPage accordions default dicht + dubbele legenda-knop, QR-code generiek.
+
+---
+
 ## 🚨 SPRINT-0 — 15-agent-audit bevindingen (2026-05-13) — KRITIEK EERST
 
 **Audit-rapport identificeerde 3 fatale gaten + 2 financiële tijdbommen.** Volgorde HARD aanhouden — geen nieuwe content tot Sprint-0 op groen.
