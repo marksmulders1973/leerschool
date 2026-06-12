@@ -25,6 +25,7 @@ const TopicPicker = lazy(() => import("./features/practice/TopicPicker.jsx"));
 const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
 const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"));
 const ExamensPage = lazy(() => import("./components/ExamensPage.jsx"));
+const HerkansingPage = lazy(() => import("./components/HerkansingPage.jsx"));
 const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
 const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
@@ -1503,6 +1504,21 @@ export default function App() {
           }}
           onStartExamenMix={startExamenMix}
           onGoCito={() => setPage("cito")}
+        />
+      )}
+      {/* /herkansing — landing voor herkansers (uitslag-week juni 2026):
+          bundelt de examen-oefenpaden per vak. Social-reacties linken hierheen. */}
+      {page === "herkansing" && (
+        <HerkansingPage
+          onBack={() => setPage("home")}
+          onHome={goHome}
+          onPickPath={(pathId) => {
+            setActiveLearnPathId(pathId);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("herkansing");
+            setPage("learn-path");
+          }}
+          onGoExamens={() => setPage("examens")}
         />
       )}
       {page === "cito-leerpad-toets" && (

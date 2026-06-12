@@ -31,6 +31,7 @@ export const PAGE_TO_PATH = {
   textbook: "/oefenen",
   cito: "/cito",
   examens: "/examens",
+  herkansing: "/herkansing",
   "cito-leerpad-toets": "/doorstroomtoets-oefentoets",
   rondleiding: "/rondleiding",
   oefenpakket: "/oefenpakket",
