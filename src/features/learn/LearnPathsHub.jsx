@@ -131,6 +131,50 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
+// Synoniemen-laag (Mark 2026-06-14): gebruikers typen lekentaal ("nederlands",
+// "rekenen", "topografie") terwijl de paden interne vak-namen hebben ("taal",
+// "wiskunde", "aardrijkskunde"). Deze map koppelt zoekwoorden aan vak-keys zodat
+// een zoekterm óók paden van dat vak vindt, ook als het woord niet letterlijk in
+// titel/trefwoorden staat. Geen dev-jargon-eis: ouders hoeven onze keys niet te kennen.
+const SUBJECT_SYNONYMS = [
+  { terms: ["nederlands", "taal", "spelling", "grammatica", "werkwoord", "werkwoorden", "ontleden", "woordsoorten", "woordenschat", "begrijpend", "lezen", "leesvaardigheid", "schrijven", "tekstverband", "samenvatten"], subjects: ["taal", "nederlands", "begrijpend-lezen"] },
+  { terms: ["rekenen", "wiskunde", "reken", "getallen", "breuken", "procenten", "verhoudingen", "meten", "meetkunde", "tafels", "sommen", "kommagetallen", "oppervlakte", "pythagoras"], subjects: ["rekenen", "wiskunde"] },
+  { terms: ["engels", "english"], subjects: ["engels"] },
+  { terms: ["duits", "deutsch"], subjects: ["duits"] },
+  { terms: ["frans", "francais", "français"], subjects: ["frans"] },
+  { terms: ["aardrijkskunde", "topografie", "topo", "kaart", "kaartlezen", "provincies", "landen", "klimaat"], subjects: ["aardrijkskunde"] },
+  { terms: ["geschiedenis", "historie", "tijdvak", "tijdvakken", "oorlog"], subjects: ["geschiedenis"] },
+  { terms: ["biologie", "planten", "dieren", "lichaam", "organen"], subjects: ["biologie", "natuur"] },
+  { terms: ["natuur", "natuuronderwijs"], subjects: ["natuur", "biologie"] },
+  { terms: ["natuurkunde", "nask", "krachten", "elektriciteit", "energie"], subjects: ["natuurkunde"] },
+  { terms: ["scheikunde", "chemie", "stoffen"], subjects: ["scheikunde"] },
+  { terms: ["economie", "geld", "sparen", "lenen", "economisch"], subjects: ["economie"] },
+  { terms: ["maatschappijleer", "maatschappij", "burgerschap", "politiek"], subjects: ["maatschappijleer", "wereldorientatie"] },
+  { terms: ["informatica", "programmeren", "computer"], subjects: ["informatica"] },
+  { terms: ["kunst", "tekenen", "muziek", "beeldend"], subjects: ["kunst"] },
+  { terms: ["studievaardigheden", "studievaardigheid", "grafiek", "grafieken", "tabel", "tabellen"], subjects: ["studievaardigheden"] },
+  { terms: ["verkeer", "verkeersexamen", "vvn", "voorrang", "fiets", "verkeersbord", "verkeersborden"], subjects: ["verkeer", "wereldorientatie"] },
+  { terms: ["wereldorientatie", "wereldoriëntatie", "wereld"], subjects: ["wereldorientatie", "aardrijkskunde", "geschiedenis", "natuur", "biologie"] },
+];
+
+// Geeft de set vak-keys terug die bij een zoekterm horen (of null als niets matcht).
+// Match: heel woord in de query, of de term begint met de query (partieel typen:
+// "neder" → "nederlands"), of de query begint met de term ("nederlandse" → "nederlands").
+function subjectsForQuery(qRaw) {
+  if (!qRaw || qRaw.length < 2) return null;
+  const qWords = qRaw.split(/\s+/).filter(Boolean);
+  const out = new Set();
+  for (const g of SUBJECT_SYNONYMS) {
+    const hit = g.terms.some((t) =>
+      qWords.includes(t) ||
+      (qRaw.length >= 3 && t.startsWith(qRaw)) ||
+      (qRaw.length >= 4 && qRaw.startsWith(t))
+    );
+    if (hit) g.subjects.forEach((s) => out.add(s));
+  }
+  return out.size ? out : null;
+}
+
 export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "" }) {
   const player = (userName || "Speler").trim() || "Speler";
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
@@ -172,6 +216,9 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   const [entrySearch, setEntrySearch] = useState(initialSearch || "");
   const [pijlerFilter, setPijlerFilter] = useState(null); // "taal" | "rekenen" | "lezen" | "wereld" | null
   const [niveauFilter, setNiveauFilter] = useState(null); // "po" | "vo-onderbouw" | "vo-bovenbouw" | null
+  // Mark 2026-06-14: tijdelijk het rol-filter (PO/VO) negeren zodat een leerling
+  // óók de resultaten van het andere niveau kan zien ("er is meer dan dit").
+  const [showAllLevels, setShowAllLevels] = useState(false);
   // Reset class-filter naar "mijn klas" wanneer de leerling van vak wisselt.
   // Anders blijft een vorige keuze hangen die op het nieuwe vak misschien
   // niets oplevert.
@@ -237,12 +284,19 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   //   "groep*" / "po" → PO-pad
   //   "klas*" / "havo*" / "vwo*" / "vmbo*" → VO-pad
   const allPaths = useMemo(() => {
+    if (showAllLevels) return ALL_PATHS_MANIFEST;
     const isPoLevel = (lvl) => /^(groep|po)/i.test(String(lvl || ""));
     const isVoLevel = (lvl) => /^(klas|havo|vwo|vmbo)/i.test(String(lvl || ""));
     if (effectivePo) return ALL_PATHS_MANIFEST.filter((p) => isPoLevel(p.level));
     if (effectiveVo) return ALL_PATHS_MANIFEST.filter((p) => isVoLevel(p.level));
     return ALL_PATHS_MANIFEST;
-  }, [effectivePo, effectiveVo]);
+  }, [effectivePo, effectiveVo, showAllLevels]);
+
+  // Reset de "toon alle niveaus"-keuze zodra alle entry-filters leeg zijn, zodat
+  // de vak-grid niet onbedoeld VO-vakken toont aan een basisschool-leerling.
+  useEffect(() => {
+    if (!entrySearch && !pijlerFilter && !niveauFilter) setShowAllLevels(false);
+  }, [entrySearch, pijlerFilter, niveauFilter]);
   // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
   // state vanuit vak-grid-klik). filterSubject heeft voorrang. Wanneer beide
   // null zijn: tonen we het vak-grid entry-screen (Oefenen-tab-stijl).
@@ -343,23 +397,32 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     // Filterde resultaten (alleen relevant als filterActief).
     const pijlerSubjects = hasPijler ? new Set(CITO_PIJLERS[pijlerFilter].subjects) : null;
     const niveauBuckets = hasNiveau ? new Set(NIVEAU_BUCKETS[niveauFilter].buckets) : null;
-    const filteredPaths = filterActief
-      ? allPaths.filter((p) => {
-          if (hasPijler && !pijlerSubjects.has(p.subject || "wiskunde")) return false;
-          if (hasNiveau && !niveauBuckets.has(parseLevel(p.level).bucketKey)) return false;
-          if (hasSearch) {
-            const hay = [
-              p.title,
-              p.intro,
-              p.subject,
-              p.sloThema,
-              ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
-            ].filter(Boolean).join(" ").toLowerCase();
-            if (!hay.includes(qRaw)) return false;
-          }
-          return true;
-        })
-      : [];
+    // Synoniemen: zoekterm → vak-keys, zodat "nederlands" ook 'taal'-paden vindt.
+    const synonymSubjects = hasSearch ? subjectsForQuery(qRaw) : null;
+    const matchesFilter = (p) => {
+      if (hasPijler && !pijlerSubjects.has(p.subject || "wiskunde")) return false;
+      if (hasNiveau && !niveauBuckets.has(parseLevel(p.level).bucketKey)) return false;
+      if (hasSearch) {
+        const hay = [
+          p.title,
+          p.intro,
+          p.subject,
+          p.sloThema,
+          ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
+        ].filter(Boolean).join(" ").toLowerCase();
+        const subjMatch = synonymSubjects && synonymSubjects.has(p.subject || "wiskunde");
+        if (!hay.includes(qRaw) && !subjMatch) return false;
+      }
+      return true;
+    };
+    const filteredPaths = filterActief ? allPaths.filter(matchesFilter) : [];
+    // Rol-filter (PO/VO) kan resultaten verbergen. Tel hoeveel matches er in het
+    // ándere niveau zijn, zodat we "er is meer" kunnen melden i.p.v. kaal lijken.
+    const roleHidesResults = (effectivePo || effectiveVo) && !showAllLevels;
+    const hiddenOtherLevel = (filterActief && roleHidesResults)
+      ? ALL_PATHS_MANIFEST.filter(matchesFilter).length - filteredPaths.length
+      : 0;
+    const otherLevelLabel = effectivePo ? "de middelbare school" : "de basisschool";
     // Sorteer vakken op aantal paden (meest gevulde eerst), met wiskunde+taal
     // als eerste twee zodat de meest-gebruikte vakken bovenin staan.
     const orderedSubjects = Object.keys(subjectStats).sort((a, b) => {
@@ -585,6 +648,37 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
               {hasNiveau && ` · ${NIVEAU_BUCKETS[niveauFilter].label}`}
               {hasSearch && ` · "${entrySearch}"`}
             </div>
+            {hiddenOtherLevel > 0 && (
+              <button
+                onClick={() => setShowAllLevels(true)}
+                style={{
+                  width: "100%", textAlign: "left", cursor: "pointer",
+                  display: "flex", alignItems: "center", gap: 10,
+                  background: "rgba(79,195,247,0.10)",
+                  border: "1px solid rgba(79,195,247,0.35)", borderRadius: 12,
+                  padding: "10px 14px", marginBottom: 12,
+                  color: "#bbdefb", fontFamily: "var(--font-body)", fontSize: 13, lineHeight: 1.45,
+                }}
+              >
+                <span aria-hidden="true" style={{ fontSize: 18 }}>➕</span>
+                <span style={{ flex: 1 }}>
+                  Er {hiddenOtherLevel === 1 ? "is" : "zijn"} ook <strong>{hiddenOtherLevel}</strong> {hiddenOtherLevel === 1 ? "resultaat" : "resultaten"} voor {otherLevelLabel}.
+                  <span style={{ color: "#4fc3f7", fontWeight: 700 }}> Toon ook →</span>
+                </span>
+              </button>
+            )}
+            {showAllLevels && (
+              <button
+                onClick={() => setShowAllLevels(false)}
+                style={{
+                  background: "transparent", border: "none", cursor: "pointer",
+                  color: C.muted, fontFamily: "var(--font-body)", fontSize: 12,
+                  textDecoration: "underline", padding: "0 4px 10px",
+                }}
+              >
+                ↩ Alleen mijn niveau tonen
+              </button>
+            )}
             {filteredPaths.length === 0 ? (
               <div style={{
                 padding: "20px 14px", background: "rgba(255,179,0,0.08)",
