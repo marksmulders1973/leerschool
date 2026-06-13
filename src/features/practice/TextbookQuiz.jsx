@@ -23,7 +23,7 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   return false;
 };
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, onPickLearnPath, onPickTopicPicker, prefilledCategory }) {
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, onPickLearnPath, onPickTopicPicker, prefilledCategory, prefilledBook }) {
   const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
   const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
   const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
@@ -32,16 +32,21 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
   const initLevel = userRole === "leerling" ? (groepBuckets[userLevel] || "") : userRole === "student" ? (klasBuckets[userLevel] || "") : "";
   // Audit 2 QA bug #2: prefilledCategory uit StudentHome-vakkenkeuze. Skipt
   // direct naar stap 2 (boekkeuze) als de gebruiker al een vak gekozen heeft.
-  const [step, setStep] = useState(prefilledCategory ? 2 : 1);
+  // Mark 2026-06-14: specifiek boek vooraf openen vanuit de hub-zoek → direct
+  // naar stap 3 (hoofdstuk kiezen), boek al geselecteerd.
+  const _prefBook = (prefilledBook && prefilledCategory && Array.isArray(TEXTBOOKS[prefilledCategory]))
+    ? (TEXTBOOKS[prefilledCategory].find((b) => b.id === prefilledBook) || null)
+    : null;
+  const [step, setStep] = useState(_prefBook ? 3 : prefilledCategory ? 2 : 1);
   const [category, setCategory] = useState(prefilledCategory || "");
-  const [selectedBook, setSelectedBook] = useState(null);
+  const [selectedBook, setSelectedBook] = useState(_prefBook);
   const [customBook, setCustomBook] = useState("");
   const [showCustomInput, setShowCustomInput] = useState(false);
   const [deel, setDeel] = useState("");
   const [chapterNum, setChapterNum] = useState("");
   const [paragraaf, setParagraaf] = useState("");
   const [topic, setTopic] = useState("");
-  const [level, setLevel] = useState(initLevel);
+  const [level, setLevel] = useState(_prefBook?.defaultLevel || initLevel);
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [coverUrl, setCoverUrl] = useState(null);

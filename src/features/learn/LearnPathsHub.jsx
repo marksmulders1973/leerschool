@@ -3,6 +3,7 @@ import supabase from "../../supabase";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
+import { TEXTBOOKS } from "../../data/textbooks.js";
 import LeerpadBot from "./LeerpadBot.jsx";
 
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
@@ -10,6 +11,12 @@ import LeerpadBot from "./LeerpadBot.jsx";
 // (~155 kB) ipv 5,8 MB full pad-data.
 const ALL_PATHS_MANIFEST = pathManifest;
 const ALL_PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
+
+// Platte, doorzoekbare lijst van alle schoolboek-methodes (Mark 2026-06-14:
+// boek-methodes óók vindbaar via de zoekbalk). subject = de TEXTBOOKS-sleutel.
+const ALL_BOOKS = Object.entries(TEXTBOOKS).flatMap(([subject, list]) =>
+  (Array.isArray(list) ? list : []).map((b) => ({ id: b.id, name: b.name, icon: b.icon, subject }))
+);
 
 const C = {
   bg: "#0f1729",
@@ -175,7 +182,7 @@ function subjectsForQuery(qRaw) {
   return out.size ? out : null;
 }
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "" }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null }) {
   const player = (userName || "Speler").trim() || "Speler";
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
@@ -423,6 +430,17 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
       ? ALL_PATHS_MANIFEST.filter(matchesFilter).length - filteredPaths.length
       : 0;
     const otherLevelLabel = effectivePo ? "de middelbare school" : "de basisschool";
+    // Schoolboek-methodes die bij de zoekterm passen (Mark 2026-06-14): match op
+    // boeknaam óf op vak (via de synoniemen). Aparte sectie onder de leerpaden.
+    const matchingBooks = (hasSearch && onOpenTextbook)
+      ? ALL_BOOKS
+          .filter((b) =>
+            b.name.toLowerCase().includes(qRaw) ||
+            (synonymSubjects && synonymSubjects.has(b.subject))
+          )
+          .sort((a, b) => a.name.localeCompare(b.name, "nl", { sensitivity: "base" }))
+          .slice(0, 12)
+      : [];
     // Sorteer vakken op aantal paden (meest gevulde eerst), met wiskunde+taal
     // als eerste twee zodat de meest-gebruikte vakken bovenin staan.
     const orderedSubjects = Object.keys(subjectStats).sort((a, b) => {
@@ -679,7 +697,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                 ↩ Alleen mijn niveau tonen
               </button>
             )}
-            {filteredPaths.length === 0 ? (
+            {filteredPaths.length === 0 && matchingBooks.length === 0 ? (
               <div style={{
                 padding: "20px 14px", background: "rgba(255,179,0,0.08)",
                 border: `1px solid rgba(255,179,0,0.25)`, borderRadius: 12,
@@ -762,6 +780,48 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                       </button>
                     );
                   })}
+              </div>
+            )}
+            {matchingBooks.length > 0 && (
+              <div style={{ marginTop: filteredPaths.length ? 24 : 6 }}>
+                <div style={{
+                  padding: "8px 4px 12px", fontSize: 12, color: C.muted,
+                  fontFamily: "var(--font-display)", letterSpacing: 1.2, textTransform: "uppercase", fontWeight: 700,
+                }}>
+                  📚 Ook in schoolboeken ({matchingBooks.length})
+                </div>
+                <div className="lp-grid">
+                  {matchingBooks.map((b) => {
+                    const subjMeta = SUBJECT_LABELS[b.subject] || { title: b.subject, emoji: "📘" };
+                    return (
+                      <button
+                        key={b.subject + "/" + b.id}
+                        onClick={() => onOpenTextbook(b.subject, b.id)}
+                        style={pathCard({ gradient: "linear-gradient(135deg, #5d4037, #8d6e63)", accent: "#ffcc80" }, false)}
+                        onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
+                        onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                      >
+                        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                          <div style={{
+                            width: 48, height: 48, borderRadius: 12,
+                            background: "linear-gradient(135deg, #5d4037, #8d6e63)", display: "flex",
+                            alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0,
+                            boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                          }}>{b.icon || "📕"}</div>
+                          <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                            <div style={{ fontFamily: "var(--font-display)", fontSize: 15, color: "var(--color-text-strong)", fontWeight: 700, marginBottom: 4 }}>
+                              {b.name}
+                            </div>
+                            <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4 }}>
+                              📕 Schoolboek · {subjMeta.emoji} {subjMeta.title} · oefen per hoofdstuk
+                            </div>
+                          </div>
+                          <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>

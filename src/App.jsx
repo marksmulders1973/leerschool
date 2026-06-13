@@ -348,6 +348,8 @@ export default function App() {
   // Audit 2 QA bug #2: Oefenen-knop op StudentHome-vakkenkeuze geeft nu vak-id
   // mee zodat TextbookQuiz de juiste category vooraf selecteert.
   const [pendingTextbookSubject, setPendingTextbookSubject] = useState(null);
+  // Specifiek boek vooraf openen vanuit de hub-zoek (Mark 2026-06-14).
+  const [pendingTextbookBook, setPendingTextbookBook] = useState(null);
   // Mark UX 2026-05-18: "Per onderwerp"-flow — selecteer een topic-pad
   // direct, zonder boek-mapping of leerpad-stappen ertussen.
   const [pendingTopicCategory, setPendingTopicCategory] = useState(null);
@@ -1019,6 +1021,7 @@ export default function App() {
           }
           filterSubject={learnFilterSubject}
           initialSearch={learnInitialSearch}
+          onOpenTextbook={(subject, bookId) => { setPendingTextbookSubject(subject); setPendingTextbookBook(bookId || null); setPage("textbook"); }}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);
@@ -1239,7 +1242,7 @@ export default function App() {
             setRole(r);
             track("role_selected", { role: r, feature: feature || null });
             if (currentQuiz) { startGame(currentQuiz, "self"); return; }
-            if (feature === "schoolboeken") { setPage("textbook"); return; }
+            if (feature === "schoolboeken") { setPendingTextbookSubject(null); setPendingTextbookBook(null); setPage("textbook"); return; }
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
             if (feature === "cito") { setEntryContext("cito"); setPage("cito"); return; }
@@ -1606,6 +1609,7 @@ export default function App() {
       {page === "textbook" && (
         <TextbookQuiz
           prefilledCategory={pendingTextbookSubject}
+          prefilledBook={pendingTextbookBook}
           onStart={(config) => {
             const quiz = {
               id: "book-" + Date.now(),
