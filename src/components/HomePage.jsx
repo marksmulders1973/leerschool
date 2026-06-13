@@ -550,7 +550,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
               <br />
               <span style={{ color: "rgba(255,255,255,0.55)" }}>
-                Na 2026 blijft de basis gratis; Pro-extra's koop je per kwartier.
+                Ook ná 2026 blijft oefenen voor de Doorstroomtoets gratis; alleen Pro-extra's koop je per kwartier.
               </span>
             </div>
           </div>
