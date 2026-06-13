@@ -18,7 +18,8 @@ const steps = [
       "**Verkeersborden** = ronde, driehoekige of vierkante borden die regels geven.\nKleur + vorm vertellen wat ze betekenen.\n\n**Verbodsborden** *(rood + wit, rond)*:\nIets **mag niet**.\n• 🚫 Geslotenverklaring *(in beide richtingen)*.\n• 🚷 Geen voetgangers.\n• 🚳 Geen fietsen.\n• 🛑 Stoppen *(verplicht stoppen)*.\n• 📵 Geen mobielgebruik in auto.\n• Inhaal-verbod.\n• Snelheid-verbod *(50, 80, etc. doorgekruist)*.\n\n**Gebodsborden** *(blauw + wit, rond)*:\nIets **moet**.\n• Verplicht fietspad *(blauw met wit fiets)*.\n• Verplicht voetpad.\n• Rijrichting *(pijl)*.\n• Minimumsnelheid *(blauwe cirkel met wit getal)*.\n\n*(Let op: **maximum**snelheid is GEEN gebodsbord — dat is een rond bord met een **rode rand** en zwart getal, dus een verbodsbord.)*\n\n**Waarschuwingsborden** *(rood + wit, driehoek met punt boven)*:\nLet op gevaar.\n• Voorrangskruising.\n• Steile helling.\n• Bocht.\n• Wegversmalling.\n• Spoorwegovergang.\n• Kinderen *(school)*.\n\n**Voorrangsborden** *(geel of wit, rond/driehoek punt onder)*:\nWie heeft voorrang.\n• Voorrangsweg *(geel ruitje met wit)*.\n• Verleen voorrang *(driehoek punt naar onder)*.\n• Stop-bord *(8-hoekig rood)*.\n\n**Informatieborden** *(blauw + wit, vierkant)*:\nNuttige info.\n• Voetgangersoversteekplaats *(zebrapad)*.\n• Parkeren.\n• Wijzers naar plaats.\n• Snelweg-vluchtstrook.\n\n**Verkeerslichten** 🚦:\n\n**Voor auto's**:\n• 🔴 **Rood**: stoppen.\n• 🟡 **Geel**: voorzichtig — bijna rood. Stop als kan.\n• 🟢 **Groen**: rijden mag.\n• Knipperend geel: kruising met voorrang voor wegverkeer — extra opletten.\n\n**Voor fietsers**:\nKleinere lichten, vaak naast auto-lichten.\nIcoon van fiets erin.\n\n**Voor voetgangers**:\nIcoon van lopende persoon.\n• 🔴 Rood mannetje = niet oversteken.\n• 🟢 Groen mannetje = wel oversteken.\n• Soms knipperend groen = bijna rood, schiet op.\n\n**Cito-feitje**:\n**Stoplicht-cyclus** in NL: meestal 60-90 seconden totaal. Wachten op groen kan irriteren — gebruik die tijd om om je heen te kijken naar verkeer.",
     checks: [
       {
-        q: "Wat betekent **rood rond met witte streep**?",
+        q: "Wat betekent **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/c2-inrijden-verboden.png", alt: "Rond rood bord met een witte balk", caption: "verkeersbord", maxHeight: 150 },
         options: ["Verbod (mag niet)", "Gebod", "Waarschuwing", "Info"],
         answer: 0,
         wrongHints: [null, "Blauw.", "Driehoek.", "Vierkant."],
@@ -47,7 +48,8 @@ const steps = [
         },
       },
       {
-        q: "Wat doet **driehoek met punt boven**?",
+        q: "Wat doet **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/j21-kinderen.png", alt: "Rode driehoek met spelende kinderen", caption: "verkeersbord", maxHeight: 150 },
         options: ["Waarschuwen voor gevaar", "Verbieden", "Voorrang geven", "Niets"],
         answer: 0,
         wrongHints: [null, "Rond.", "Punt onder.", "Wel."],
@@ -59,10 +61,11 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel actie.", "Bijna maar specifiek dit."],
       },
       {
-        q: "**Stop-bord** vorm?",
-        options: ["8-hoekig (rood)", "Driehoek", "Rond", "Vierkant"],
+        q: "Wat moet je doen bij **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/b7-stop.png", alt: "Rood achthoekig STOP-bord", caption: "verkeersbord", maxHeight: 150 },
+        options: ["Altijd eerst volledig stoppen", "Doorrijden mag", "Alleen toeteren", "Niets"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Nee — bij dit bord moet je echt stilstaan.", "Nee — toeteren is geen regel.", "Nee — dit bord vraagt een actie."],
       },
     ],
   },

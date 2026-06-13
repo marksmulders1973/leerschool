@@ -32,10 +32,11 @@ const steps = [
       "Op het **VVN-verkeersexamen** komen veel vragen over **verkeersborden**. Geluk: aan de vorm + kleur kun je vaak al de betekenis raden.\n\n**Vorm + kleur = betekenis-categorie**:\n\n**Rond + rode rand = VERBOD**:\n• Mag NIET. Bv. 🚫 inrijden verboden, geen fietsen toegestaan, snelheid-limiet.\n• Rode rand = stop / niet doen / verboden.\n• Snelheid-bord: cijfer in rondje met rode rand = maximumsnelheid.\n\n**Rond + blauw = GEBOD**:\n• Je MOET. Bv. ✓ verplicht fietspad, voorgeschreven rijrichting.\n• Blauwe achtergrond met witte pijl = je MOET die richting.\n\n**Driehoekig + rode rand = WAARSCHUWING**:\n• Pas op! Bv. ⚠️ gevaarlijke bocht, schoolzone, drempel.\n• Wit binnen, rode rand, driehoekig staand op punt.\n\n**Vierkant of rechthoekig + blauw = INFORMATIE**:\n• Vertelt je iets. Bv. ℹ️ ziekenhuis, parkeerplaats, einde fietspad.\n• Geen verplichting, alleen info.\n\n**Achthoekig + rood = STOP**:\n• Eén specifiek bord: **STOP-bord** (8-hoekig, rood). Altijd stoppen + voorrang verlenen.\n\n**Belangrijke borden voor fietsers**:\n• **B6** (omgekeerde driehoek, rode rand): verleen voorrang — JIJ moet wachten. Hoort bij de **haaientanden** op het wegdek.\n• **B1** (gele ruit met witte rand): voorrangsweg — JIJ hebt juist voorrang.\n• **G11** (rond, blauw): verplicht fietspad — je MOET hier rijden als fietser.\n• **G13** (rechthoekig, blauw): onverplicht fietspad (alternatief).\n\n**Cito-VVN-truc**: bij twijfel — wat is de **vorm**? Wat is de **kleur**? Daar zit de halve betekenis.",
     checks: [
       {
-        q: "Welke vorm + kleur betekent **'verboden'**?",
-        options: ["Rond + rode rand","Driehoek + rode rand","Vierkant + blauw","Rond + blauw"],
+        q: "Wat betekent **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/c2-inrijden-verboden.png", alt: "Rond rood bord met een witte balk", caption: "verkeersbord", maxHeight: 150 },
+        options: ["Verbod — iets mag niet","Gebod — iets moet","Waarschuwing — pas op","Informatie"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is waarschuwing.", "Niet — dat is informatie.", "Niet — dat is gebod (verplicht)."],
+        wrongHints: [null, "Dat zou rond + blauw zijn.", "Dat zou een driehoek + rood zijn.", "Dat zou vierkant + blauw zijn."],
         uitlegPad: {
           stappen: [{ titel: "Rond rood = verbod", tekst: "**Rond + rode rand** = altijd 'mag niet'. Voorbeeld: bord '50' rond met rode rand = max 50 km/u. Bord met fiets en streep erdoor = fietsen verboden." }],
           woorden: [{ woord: "verbod", uitleg: "Iets mag NIET." }, { woord: "gebod", uitleg: "Iets MOET." }],
@@ -44,7 +45,8 @@ const steps = [
         },
       },
       {
-        q: "Een driehoekig bord met rode rand betekent:",
+        q: "Wat betekent **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/j21-kinderen.png", alt: "Driehoekig bord met rode rand en spelende kinderen", caption: "verkeersbord", maxHeight: 150 },
         options: ["Waarschuwing — pas op","Verboden","Verplicht","Informatie"],
         answer: 0,
         wrongHints: [null, "Niet — dat is rond + rood.", "Niet — dat is rond + blauw.", "Niet — dat is rechthoekig + blauw."],
@@ -55,10 +57,11 @@ const steps = [
         },
       },
       {
-        q: "Welk verkeersbord is **achthoekig** (8 hoeken)?",
-        options: ["STOP-bord","Voorrangsweg","Verboden inrijden","Fietspad"],
+        q: "Wat moet je doen bij **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/b7-stop.png", alt: "Rood achthoekig bord met de tekst STOP", caption: "verkeersbord", maxHeight: 150 },
+        options: ["Altijd volledig stoppen","Doorrijden mag","Alleen toeteren","Niets — gewoon door"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ruitvormig.", "Rond + rode rand.", "Rond + blauw."],
+        wrongHints: [null, "Nee — bij dit bord mag je niet zomaar doorrijden.", "Nee — toeteren is geen regel.", "Nee — dit bord vraagt juist een duidelijke actie."],
         uitlegPad: {
           stappen: [{ titel: "Stop = uniek bord", tekst: "**STOP-bord** = enige achthoekige verkeersbord. Internationaal — altijd hetzelfde, ook in VS, EU, Japan. **Altijd stoppen** (zelfs als geen ander verkeer) + voorrang verlenen aan iedereen op gekruiste weg." }],
           theorie: "VVN-examen-feit: bij STOP-bord moet je **echt** stilstaan (wielen niet bewegen). Anders boete.",
@@ -77,7 +80,8 @@ const steps = [
         },
       },
       {
-        q: "Op een **fietspad-bord** (rond + blauw + witte fiets): wat moet je?",
+        q: "Wat moet je bij **dit bord** als fietser?",
+        bronAfbeelding: { src: "/verkeer/g11-verplicht-fietspad.png", alt: "Rond blauw bord met een witte fiets", caption: "verkeersbord", maxHeight: 150 },
         options: ["Verplicht hier fietsen","Verboden hier fietsen","Mag kiezen","Stoppen"],
         answer: 0,
         wrongHints: [null, "Niet — blauw = MOET.", "Niet — wel verplicht.", "Niet — geen stop-bord."],
@@ -151,6 +155,18 @@ const steps = [
           stappen: [{ titel: "Rood = altijd stop", tekst: "**Rood verkeerslicht** = altijd stoppen voor stopstreep, ongeacht ander verkeer. Wachten tot **groen**. Boete bij door rood: fietser €110, auto €280. Bij ongeluk: jouw schuld." }],
           theorie: "Cito-VVN: bij rood ALTIJD stop. Geen uitzonderingen voor fietsers (in tegenstelling tot sommige andere landen — in België mogen fietsers soms rechtsaf bij rood).",
           niveaus: { basis: "Stoppen — A.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
+        },
+      },
+      {
+        q: "Wat betekent **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/b1-voorrangsweg.png", alt: "Gele ruit met witte rand", caption: "verkeersbord", maxHeight: 150 },
+        options: ["Voorrangsweg — JIJ hebt voorrang","Verleen voorrang — jij wacht","Verboden in te rijden","Einde voorrangsweg"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist de omgekeerde rode driehoek (B6).", "Nee — een gele ruit is geen verbodsbord.", "Nee — bij 'einde' zit er een streep doorheen."],
+        uitlegPad: {
+          stappen: [{ titel: "Gele ruit = voorrangsweg", tekst: "De **gele ruit** (bord **B1**) betekent: jij rijdt op de **voorrangsweg** — JIJ hebt voorrang, ander verkeer moet wachten. Let op het verschil met de **omgekeerde rode driehoek** (B6 'verleen voorrang') én de **haaientanden** op de weg: dáár moet JIJ juist wachten." }],
+          theorie: "Verwar B1 (gele ruit = jij hebt voorrang) niet met B6 (omgekeerde driehoek = jij verleent voorrang). Dat is een veelgemaakte fout op het examen.",
+          niveaus: { basis: "Voorrangsweg — A.", simpeler: "Gele ruit = jij hebt voorrang", nogSimpeler: "Jij voor" },
         },
       },
     ],
@@ -295,17 +311,19 @@ const steps = [
       "Mix van borden + voorrang + veilig fietsen + gevaren. Cito-VVN-stijl.\n\nVeel succes!",
     checks: [
       {
-        q: "Verkeersbord **rond + rode rand + cijfer 30**:",
-        options: ["Max 30 km/u","Min 30 km/u","Stop bij 30","Niet relevant"],
+        q: "Wat betekent **dit bord**?",
+        bronAfbeelding: { src: "/verkeer/a1-50-maxsnelheid.png", alt: "Rond wit bord met rode rand en het getal 50", caption: "verkeersbord", maxHeight: 150 },
+        options: ["Maximaal 50 km/u","Minimaal 50 km/u","Stop bij 50","Niet relevant"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'minimum'-bord in NL.", "Niet — geen STOP-bord.", "Niet — wel relevant."],
+        wrongHints: [null, "Niet — hiervoor bestaat geen 'minimum'-bord met rode rand.", "Niet — geen STOP-bord.", "Niet — wel relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Rond rood + getal = max-snelheid", tekst: "Cijfer in rondje met rode rand = **maximumsnelheid**. 30 km/u-borden vooral in **woonwijken, schoolzones**. Boete bij overtreding: ~€100-300 afhankelijk van overschrijding." }],
-          niveaus: { basis: "Max 30 — A.", simpeler: "30 in rondje rood = max 30", nogSimpeler: "Max 30" },
+          stappen: [{ titel: "Rond rood + getal = max-snelheid", tekst: "Een getal in een rondje met **rode rand** = **maximumsnelheid**. Hier dus max 50 km/u (de standaard binnen de bebouwde kom). 30-borden zie je vooral in woonwijken en schoolzones." }],
+          niveaus: { basis: "Max 50 — A.", simpeler: "Getal in rondje rood = max-snelheid", nogSimpeler: "Max 50" },
         },
       },
       {
-        q: "Bij **STOP-bord** mag je dóórgaan als:",
+        q: "Bij **dit bord** mag je dóórgaan als:",
+        bronAfbeelding: { src: "/verkeer/b7-stop.png", alt: "Rood achthoekig STOP-bord", caption: "verkeersbord", maxHeight: 150 },
         options: ["Eerst gestopt + voorrang verleend, dan vrij is","Geen verkeer zichtbaar","Achter de auto rijden","Doortrappen om vaart te houden"],
         answer: 0,
         wrongHints: [null, "Bijna — moet eerst stoppen.", "Niet — STOP-bord vereist altijd stoppen.", "Niet — gevaarlijk."],
