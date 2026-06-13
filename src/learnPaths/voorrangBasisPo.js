@@ -42,22 +42,22 @@ function kruispuntSvg({ vanLinks, vanRechts, vanBoven, vanOnder, label }) {
     <line x1="140" y1="120" x2="140" y2="${H}" stroke="${KLEUR.wegLijn}" stroke-width="2" stroke-dasharray="8,6"/>
     ${vanLinks ? `
       <rect x="10" y="92" width="22" height="16" fill="${vanLinks.kleur}" rx="2"/>
-      <polygon points="40,100 50,95 50,105" fill="${KLEUR.pijl}"/>
+      <polygon points="50,100 40,95 40,105" fill="${KLEUR.pijl}"/>
       <text x="22" y="78" fill="#fff" font-size="10" text-anchor="middle" font-family="sans-serif">${vanLinks.label}</text>
     ` : ""}
     ${vanRechts ? `
       <rect x="${W - 32}" y="92" width="22" height="16" fill="${vanRechts.kleur}" rx="2"/>
-      <polygon points="${W - 40},100 ${W - 50},95 ${W - 50},105" fill="${KLEUR.pijl}"/>
+      <polygon points="${W - 50},100 ${W - 40},95 ${W - 40},105" fill="${KLEUR.pijl}"/>
       <text x="${W - 22}" y="78" fill="#fff" font-size="10" text-anchor="middle" font-family="sans-serif">${vanRechts.label}</text>
     ` : ""}
     ${vanBoven ? `
       <rect x="132" y="10" width="16" height="22" fill="${vanBoven.kleur}" rx="2"/>
-      <polygon points="140,40 135,50 145,50" fill="${KLEUR.pijl}"/>
+      <polygon points="140,50 135,40 145,40" fill="${KLEUR.pijl}"/>
       <text x="165" y="22" fill="#fff" font-size="10" font-family="sans-serif">${vanBoven.label}</text>
     ` : ""}
     ${vanOnder ? `
       <rect x="132" y="${H - 32}" width="16" height="22" fill="${vanOnder.kleur}" rx="2"/>
-      <polygon points="140,${H - 40} 135,${H - 50} 145,${H - 50}" fill="${KLEUR.pijl}"/>
+      <polygon points="140,${H - 50} 135,${H - 40} 145,${H - 40}" fill="${KLEUR.pijl}"/>
       <text x="165" y="${H - 18}" fill="#fff" font-size="10" font-family="sans-serif">${vanOnder.label}</text>
     ` : ""}
   </svg>`;
@@ -190,18 +190,18 @@ const steps = [
     title: "Op een gelijkwaardig kruispunt",
     emoji: "↗️",
     svg: kruispuntSvg({
-      vanLinks: { kleur: KLEUR.fietser, label: "JIJ (fiets)" },
+      vanOnder: { kleur: KLEUR.fietser, label: "JIJ (fiets)" },
       vanRechts: { kleur: KLEUR.auto, label: "auto" },
       label: "gelijkwaardig kruispunt zonder borden",
     }),
     explanation:
-      "Een **gelijkwaardig kruispunt** heeft **geen borden + geen stoplichten + geen haaientanden**.\n\n**Regel: rechts heeft voorrang**.\n\nIn het plaatje kom **jij van links** op de fiets. **De auto komt van rechts**. De auto mag eerst — **jij wacht**.\n\nDit is de meest voorkomende voorrang-vraag op het VVN-examen. Onthoud: 'rechts gaat eerst'.",
+      "Een **gelijkwaardig kruispunt** heeft **geen borden + geen stoplichten + geen haaientanden**.\n\n**Regel: rechts heeft voorrang**.\n\nIn het plaatje kom **jij van onderen** aanrijden op de fiets. **De auto komt van rechts** — dat is jouw rechterhand. Rechts heeft voorrang → de auto mag eerst, **jij wacht**.\n\nDit is de meest voorkomende voorrang-vraag op het VVN-examen. Onthoud: 'rechts gaat eerst'.",
     checks: [
       {
         q: "Op het kruispunt in het plaatje: wie heeft voorrang?",
         options: ["De auto van rechts","Jij op de fiets","Wie het hardst gaat","Niemand"],
         answer: 0,
-        wrongHints: [null, "Jij komt van LINKS — links moet wachten.", "Snelheid heeft niets met voorrang te maken.", "Er is altijd een regel."],
+        wrongHints: [null, "De auto komt van rechts — rechts heeft voorrang, dus jij wacht.", "Snelheid heeft niets met voorrang te maken.", "Er is altijd een regel."],
         uitlegPad: {
           stappen: [{ titel: "Rechts = eerst", tekst: "Op gelijkwaardige kruispunten (geen bord, geen stoplicht): **rechts heeft voorrang**. Auto komt van rechts → auto eerst → jij wacht." }],
           niveaus: { basis: "Auto van rechts. A.", simpeler: "Rechts = eerst", nogSimpeler: "Rechts" },
