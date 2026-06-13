@@ -69,7 +69,7 @@ import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import topografieNederland from "./topografieNederland.js";
 import europeseUniePo from "./europeseUniePo.js";
-import topografieEuropaPo from "./topografieEuropaPo.jsx";
+import topografieEuropaPo from "./topografieEuropaPo.js";
 import wereldreligiesPo from "./wereldreligiesPo.js";
 import oppervlakteOmtrekPo from "./oppervlakteOmtrekPo.js";
 import citoStrategieenGroep8 from "./citoStrategieenGroep8.js";
