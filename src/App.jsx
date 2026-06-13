@@ -277,6 +277,8 @@ export default function App() {
   const [activeLearnPathId, setActiveLearnPathId] = useState(getInitialLeerpadId());
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
+  // Begin-zoekterm voor de leerpaden-hub (Mark 2026-06-14: zoekbalk op home).
+  const [learnInitialSearch, setLearnInitialSearch] = useState("");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);
   // Mark UX-keuze (2026-05-08): vak-tegels op StudentHome krijgen 3 acties
   // (Leren / Oefenen / Cito oefenen) voor Cito-relevante vakken; volgorde
@@ -412,7 +414,7 @@ export default function App() {
   // Bottom-nav navigatie. "_home" = altijd de marketing-HomePage (Mark wens).
   const handleBottomNavNavigate = (target) => {
     // Bottom-tab "Leren" opent altijd de volledige hub — geen vakfilter
-    if (target === "learn-paths-hub") { setLearnFilterSubject(null); setPage(target); return; }
+    if (target === "learn-paths-hub") { setLearnFilterSubject(null); setLearnInitialSearch(""); setPage(target); return; }
     if (target === "_home") { setLearnFilterSubject(null); setPage("home"); return; }
     setLearnFilterSubject(null); setPage(target);
   };
@@ -1016,6 +1018,7 @@ export default function App() {
               : userLevel
           }
           filterSubject={learnFilterSubject}
+          initialSearch={learnInitialSearch}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);
@@ -1221,7 +1224,8 @@ export default function App() {
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
-          onLearnPathsHub={() => { setEntryContext("leren"); setPage("learn-paths-hub"); }}
+          onLearnPathsHub={() => { setLearnInitialSearch(""); setEntryContext("leren"); setPage("learn-paths-hub"); }}
+          onSearchPaths={(q) => { setLearnFilterSubject(null); setLearnInitialSearch(q); setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onMyMastery={() => setPage("my-mastery")}
           onPickPath={(id) => {
             // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.

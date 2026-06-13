@@ -131,7 +131,7 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "" }) {
   const player = (userName || "Speler").trim() || "Speler";
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
@@ -169,7 +169,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   // niveau. Bij actief filter switchen we van vak-grid naar resultaten-lijst
   // zodat ouders met "breuken groep 6"-vraag direct vinden i.p.v. 80+ paden
   // doorscrollen.
-  const [entrySearch, setEntrySearch] = useState("");
+  const [entrySearch, setEntrySearch] = useState(initialSearch || "");
   const [pijlerFilter, setPijlerFilter] = useState(null); // "taal" | "rekenen" | "lezen" | "wereld" | null
   const [niveauFilter, setNiveauFilter] = useState(null); // "po" | "vo-onderbouw" | "vo-bovenbouw" | null
   // Reset class-filter naar "mijn klas" wanneer de leerling van vak wisselt.
@@ -216,6 +216,15 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   useEffect(() => {
     if (filterSubject != null) setSelectedSubject(null);
   }, [filterSubject]);
+
+  // Home-zoekbalk (Mark 2026-06-14): komt er een begin-zoekterm mee, vul dan de
+  // entry-zoekbalk en toon meteen het resultaten-scherm (geen vak eerst kiezen).
+  useEffect(() => {
+    if (initialSearch && initialSearch.trim()) {
+      setEntrySearch(initialSearch);
+      setSelectedSubject(null);
+    }
+  }, [initialSearch]);
 
   // Bij wisseling van vak: reset class-filter naar leerling's eigen klas
   // (of "alle" als die niet bekend is).

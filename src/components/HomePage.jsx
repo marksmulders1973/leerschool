@@ -91,12 +91,13 @@ const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
   const [shake, setShake] = useState(false);
   const [nameError, setNameError] = useState("");
+  const [homeSearch, setHomeSearch] = useState("");
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [pendingFeature, setPendingFeature] = useState(null);
@@ -552,6 +553,48 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span style={{ color: "rgba(255,255,255,0.55)" }}>
                 Ook ná 2026 blijft oefenen voor de Doorstroomtoets gratis; alleen Pro-extra's koop je per kwartier.
               </span>
+            </div>
+          </div>
+        )}
+
+        {/* Zoekbalk op de home (Mark 2026-06-14): bezoekers landen op home/deeplink
+            maar de leerpaden-zoekbalk stond alleen in de hub. Hier kun je direct
+            een onderwerp zoeken (bv. "begrijpend lezen") → springt naar de
+            gefilterde leerpaden-lijst. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
+            <div style={{
+              display: "flex", gap: 8, alignItems: "center",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.16)",
+              borderRadius: 999, padding: "6px 6px 6px 16px",
+            }}>
+              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
+              <input
+                type="search"
+                value={homeSearch}
+                onChange={(e) => setHomeSearch(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
+                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
+                aria-label="Zoek een onderwerp"
+                style={{
+                  flex: 1, minWidth: 0, border: "none", outline: "none",
+                  background: "transparent", color: "#fff",
+                  fontFamily: "var(--font-body)", fontSize: 14,
+                }}
+              />
+              <button
+                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
+                aria-label="Zoeken"
+                style={{
+                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
+                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
+                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+                  padding: "9px 18px",
+                }}
+              >
+                Zoek
+              </button>
             </div>
           </div>
         )}
