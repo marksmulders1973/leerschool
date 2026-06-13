@@ -9991,7 +9991,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 {BRAND.name} is de <strong>leer-app</strong> waar dit spel in zit:
               </div>
               <div>📚 Doorstroomtoets · spelling · rekenen · wiskunde · talen</div>
-              <div>🎓 Voor groep 1-8, MAVO, HAVO, VWO en gymnasium</div>
+              <div>🎓 Voor groep 3-8, MAVO, HAVO, VWO en gymnasium</div>
               <div>🏆 Verdien medailles, kom in de Hall of Fame</div>
               <div>💯 In 2026 helemaal gratis · geen advertenties</div>
             </div>

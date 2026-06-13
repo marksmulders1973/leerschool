@@ -30,7 +30,7 @@ Cito + examens versterken. Drie type werk:
 ### B1 — Belofte vs werkelijkheid (vertrouwen ICP)
 - [x] ✓13/6 **B1.1 Prijs-tegenspraak**: OuderDashboard.jsx:373 "€1,95/maand" (abonnement!) vs per-kwartier-belofte overal elders + config.js:52 €5,99 intern. Eén bron: proPlan.js.
 - [x] ✓13/6 (deels: banner → "🎓 Examen-modus"; totaal-timer + feedback-uitstel nog open) **B1.2 "Geen tijdslimiet — neem de tijd!"-banner staat boven examenvragen in examen-modus** (PlayQuiz.jsx:429-433) terwijl ExamensPage "geen hints, echte examentraining" belooft. Plus: geen timer (App.jsx:766 timePerQuestion:0) en feedback na élke vraag. Fix: examen-mix totaal-timer + feedback uitstellen tot eind (Cito-simulatie-patroon bestaat al).
-- [ ] **B1.3 "Alles voor groep 1 t/m 8"** maar 5 paden voor groep 3-4, 0 voor groep 1-2 (pathManifest). Belofte afzwakken óf content bouwen.
+- [x] ✓13/6 **B1.3 "Alles voor groep 1 t/m 8"** maar 5 paden voor groep 3-4, 0 voor groep 1-2 (pathManifest). → Belofte afgezwakt naar **"groep 3 t/m 8"** in alle content-claims (HomePage chip/hero/promise, ResultsPage share, ObliteratorGame, welkom.html/over.html/mail-scholen.html/index.html meta+schema). School-type-descriptors ("basisschool = groep 1-8") + beroepenWerkPo-uitleg bewust gelaten (feitelijk correct). NB: NiveauWizardBanner-picker biedt nog groep 1-2 aan zonder content → mogelijke dead-end, los apart op als gewenst.
 - [ ] **B1.4 Gratis-scope 2027 onduidelijk** voor ICP: blijft Doorstroomtoets-oefenen gratis ná jan 2027? Expliciet maken in abonnement.html + homepage.
 - [ ] **B1.5 15-min belofte**: 206/322 paden > 15 min, 163 paden > 5 stappen (eigen manifest-data). Splits-programma + build-gate op estimatedMinutes.
 

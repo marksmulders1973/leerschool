@@ -79,7 +79,7 @@ const TICKER_ITEMS = [
   { icon: "✖️", text: "Tafels oefenen groep 3 t/m 6" },
   { icon: "📐", text: "Rekenen, taal, spelling" },
   { icon: "💬", text: "Uitleg op jouw niveau — bij elke vraag" },
-  { icon: "🎒", text: "Groep 1 t/m 8" },
+  { icon: "🎒", text: "Groep 3 t/m 8" },
   { icon: "✨", text: "Snap je iets niet? Wij leggen het anders uit" },
 ];
 
@@ -667,7 +667,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 />
               ),
               label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>leerling</span></>),
-              sub: "basisschool · groep 1 t/m 8",
+              sub: "basisschool · groep 3 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: {
                 // Mark UX 2026-05-18: "Of ..." op beide CTA's positioneert ze
@@ -922,7 +922,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   color: "rgba(255,255,255,0.6)",
                   marginBottom: 14,
                 }}>
-                  Alles voor groep 1 t/m 8 op één plek · in 2026 helemaal gratis
+                  Alles voor groep 3 t/m 8 op één plek · in 2026 helemaal gratis
                 </div>
                 <div style={{
                   display: "grid",
