@@ -1449,6 +1449,36 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
               {currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}
             </div>
+            {/* Reveal-video óók bij een fout antwoord (Mark 2026-06-14): laat zien
+                hoe het hoort — wie er voorrang heeft en wat je had moeten doen. */}
+            {currentCheck.bronVideo && (
+              <div style={{
+                background: "rgba(255,107,53,0.06)",
+                border: "1px solid rgba(255,107,53,0.30)",
+                borderRadius: 10,
+                margin: "10px 0",
+                padding: "10px 12px",
+              }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
+                  🎬 Zo gaat het — let op wie er eerst mag
+                </div>
+                <video
+                  src={currentCheck.bronVideo}
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  style={{
+                    width: "100%",
+                    maxHeight: currentCheck.bronAfbeelding?.maxHeight || 340,
+                    objectFit: "contain",
+                    display: "block",
+                    borderRadius: 6,
+                    background: "rgba(255,255,255,0.04)",
+                  }}
+                />
+              </div>
+            )}
             {/* Begrijpend-lezen: laat de plek in de tekst zien waar het
                 antwoord vandaan komt (Mark feedback 2026-05-08). */}
             <EvidenceQuote text={currentCheck.evidence} label="💡 Hint — kijk hier in de tekst" />
