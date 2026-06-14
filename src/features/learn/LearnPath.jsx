@@ -603,7 +603,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         } else {
           completeStep();
         }
-      }, 1100);
+        // Bij een check met reveal-video (Mark 2026-06-14): geef de video de tijd
+        // om af te spelen vóór we doorschakelen, zodat de leerling de afloop ziet.
+      }, currentCheck.bronVideo ? 6200 : 1100);
     } else {
       // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
       // kan reageren als de leerling om hulp vraagt.
@@ -1120,21 +1122,46 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 padding: "10px 12px",
               }}>
                 <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
-                  🖼️ Bron — {currentCheck.bronAfbeelding.caption || "afbeelding"}
+                  {currentCheck.bronVideo
+                    ? (selected !== null
+                        ? "🎬 Zo gaat het — let op wie er eerst mag"
+                        : "🚦 De situatie — wie heeft voorrang?")
+                    : `🖼️ Bron — ${currentCheck.bronAfbeelding.caption || "afbeelding"}`}
                 </div>
-                <img
-                  src={currentCheck.bronAfbeelding.src}
-                  alt={currentCheck.bronAfbeelding.alt || ""}
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    maxHeight: currentCheck.bronAfbeelding.maxHeight || 400,
-                    objectFit: "contain",
-                    display: "block",
-                    borderRadius: 6,
-                    background: "rgba(255,255,255,0.04)",
-                  }}
-                />
+                {/* Verkeer-situatie (Mark 2026-06-14): toon de stille foto bij de vraag;
+                    zodra de leerling geantwoord heeft (selected !== null) speelt de
+                    video af die laat zien hoe het afloopt + wie voorrang heeft. */}
+                {currentCheck.bronVideo && selected !== null ? (
+                  <video
+                    src={currentCheck.bronVideo}
+                    autoPlay
+                    muted
+                    playsInline
+                    loop
+                    style={{
+                      width: "100%",
+                      maxHeight: currentCheck.bronAfbeelding.maxHeight || 400,
+                      objectFit: "contain",
+                      display: "block",
+                      borderRadius: 6,
+                      background: "rgba(255,255,255,0.04)",
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={currentCheck.bronAfbeelding.src}
+                    alt={currentCheck.bronAfbeelding.alt || ""}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      maxHeight: currentCheck.bronAfbeelding.maxHeight || 400,
+                      objectFit: "contain",
+                      display: "block",
+                      borderRadius: 6,
+                      background: "rgba(255,255,255,0.04)",
+                    }}
+                  />
+                )}
               </div>
             )}
 

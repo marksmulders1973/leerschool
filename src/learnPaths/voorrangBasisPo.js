@@ -195,6 +195,7 @@ const steps = [
       {
         q: "Bekijk de tekening. Wie heeft hier voorrang?",
         bronAfbeelding: { src: "/verkeer/kruispunt-rechts-voorrang.jpg", alt: "Kruispunt zonder borden van bovenaf: jij komt van onderen op de fiets, een auto nadert van rechts", caption: "kruispunt zonder borden", maxHeight: 340 },
+        bronVideo: "/verkeer/kruispunt-rechts-voorrang.mp4",
         options: ["De auto van rechts","Jij op de fiets","Wie het hardst gaat","Niemand"],
         answer: 0,
         wrongHints: [null, "De auto komt van rechts — rechts heeft voorrang, dus jij wacht.", "Snelheid heeft niets met voorrang te maken.", "Er is altijd een regel."],
