@@ -7,7 +7,7 @@ import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
-import { getSocialVraag } from "../socialVragen.js";
+import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import usePwaInstall from "../shared/usePwaInstall.js";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
@@ -72,7 +72,7 @@ class TeaserErrorBoundary extends Component {
 // leren, rekenen/taal-onderwerpen die Cito-ouder herkent.
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
-  { icon: <DoorstroomtoetsLogo size={15} />, text: "Doorstroomtoets oefenen (voorheen Cito-eindtoets)" },
+  { icon: <DoorstroomtoetsLogo size={15} />, text: "Oefenen voor de eindtoets (groep 6-8)" },
   { icon: "📅", text: "15 minuten per dag is genoeg" },
   { icon: "🧠", text: "Een rustige bijlesdocent in je broekzak" },
   { icon: "📖", text: "Begrijpend lezen groep 5 t/m 8" },
@@ -97,7 +97,7 @@ const ONBOARDING_STEPS = [
 // antwoord een nudge de gratis-trechter in. Rol/niveau + leeftijdscheck blijven
 // gewoon bestaan (gebeuren bij Start gratis / account).
 function ProefVraagKaart({ onStart }) {
-  const vraag = getSocialVraag("rekenpuzzel2");
+  const vraag = getSocialVraag(vraagVanVandaagId());
   const [chosen, setChosen] = useState(null);
   if (!vraag) return null;
   const goed = chosen != null && chosen === vraag.answer;
@@ -108,7 +108,7 @@ function ProefVraagKaart({ onStart }) {
       borderRadius: 16, padding: "14px 16px",
     }}>
       <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
-        🎯 Probeer meteen een oefenvraag
+        🎯 Probeer meteen de vraag van de dag
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
         {String(vraag.vraag || "").replace(/\*\*/g, "")}
@@ -445,22 +445,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   return (
     <div style={{ ...styles.page, background: "linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%)" }}>
-      {/* Vraag-van-de-dag funnel-banner (Mark 2026-06-09): zo landt de social
-          bio-link (leerkwartier.app) altijd direct bij de dagvraag. */}
-      <a
-        href="/vandaag"
-        style={{
-          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-          margin: "10px auto 0", maxWidth: 460, width: "calc(100% - 24px)",
-          padding: "12px 18px", borderRadius: 14, textDecoration: "none",
-          background: "rgba(255,213,79,0.14)",
-          border: "1px solid rgba(255,213,79,0.45)",
-          color: "#ffd54f", fontFamily: "var(--font-display, sans-serif)",
-          fontSize: 14, fontWeight: 800, letterSpacing: 0.2,
-        }}
-      >
-        🎯 Vraag van de dag — durf jij 'm? →
-      </a>
+      {/* Losse vraag-van-de-dag-banner verwijderd (Mark 2026-06-14): de
+          interactieve ProefVraagKaart hieronder ÍS nu de vraag van de dag
+          (dagelijks roterend via vraagVanVandaagId). Twee vliegen in één klap. */}
       {/* Bedankt-toast na delen */}
       {shareToast && (
         <div style={{
@@ -672,9 +659,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* Gratis oefenpakket-CTA (Mark 2026-06-07): lead-magnet was onzichtbaar op
-            de homepage (302 bezoekers, 0 ingang). Prominente kaart die naar het
-            printbare Doorstroomtoets-werkboek + e-mail-opt-in leidt. */}
+        {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
+            verhaal i.p.v. klacht-quotes over concurrenten. Vóór de oefenpakket-kaart
+            (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{
+            margin: "0 auto 18px", maxWidth: 520,
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
+            padding: "14px 18px", textAlign: "center",
+          }}>
+            <div style={{
+              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
+              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
+              marginBottom: 10,
+            }}>
+              {visitorCount != null && visitorCount > 0 && (
+                <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
+              )}
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> oefenvragen</span>
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
+              Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
+              wél uitleg die werkt.
+            </div>
+          </div>
+        )}
+
+        {/* Gratis oefenpakket-CTA (Mark 2026-06-07): lead-magnet. Ná de bewijs-strip
+            geplaatst (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
         {step === "role" && (
           <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
             <button
@@ -698,35 +712,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
             </button>
-          </div>
-        )}
-
-        {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
-            verhaal i.p.v. klacht-quotes over concurrenten (die lazen defensief op de
-            plek waar vertrouwen moet ontstaan). De klacht-versie mét disclaimer
-            leeft door op /gratis-alternatief-squla.html. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{
-            margin: "0 auto 18px", maxWidth: 520,
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
-            padding: "14px 18px", textAlign: "center",
-          }}>
-            <div style={{
-              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
-              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
-              marginBottom: 10,
-            }}>
-              {visitorCount != null && visitorCount > 0 && (
-                <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
-              )}
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> Doorstroomtoets-vragen</span>
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
-            </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
-              Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
-              wél uitleg die werkt.
-            </div>
           </div>
         )}
 
@@ -1046,7 +1031,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   gap: 10,
                 }}>
                   {[
-                    { logo: true, color: "#ff8c42", title: "Doorstroomtoets oefenen", desc: "Eindtoets-simulatie én per onderdeel", onClick: () => handleFeatureClick("cito") },
+                    { logo: true, color: "#ff8c42", title: "Eindtoets oefenen", desc: "Doorstroomtoets-simulatie én per onderdeel", onClick: () => handleFeatureClick("cito") },
                     { icon: "📚", color: "#0072ff", title: "Leerpaden per vak", desc: "Rekenen, taal, begrijpend lezen & meer", onClick: handleLerenClick },
                     { icon: "🎓", color: "#7c3aed", title: "Echte examens", desc: "VMBO · HAVO · VWO, oefenen mét uitleg", onClick: () => handleFeatureClick("examens") },
                     { icon: "💬", color: "#00C853", title: "Uitleg op 3 niveaus", desc: "Snap je iets niet? Wij leggen het ánders uit", onClick: handleOefenenClick },
