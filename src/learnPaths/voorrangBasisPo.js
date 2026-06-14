@@ -211,12 +211,13 @@ const steps = [
   {
     title: "Witte driehoekjes (haaientanden)",
     emoji: "🦈",
-    svg: haaientandenSvg(),
     explanation:
       "Zie je **witte driehoekjes op de weg** die naar jou wijzen? Dat zijn **haaientanden**.\n\n**Betekenis**: jij **moet voorrang verlenen**. De andere weg is voorrangsweg.\n\nIn het plaatje: jij komt op de fiets van onder. Haaientanden wijzen naar jou. De auto komt van links over de **voorrangsweg**. **Jij wacht**, de auto rijdt door.",
     checks: [
       {
         q: "Je ziet haaientanden voor je wiel. Wat doe je?",
+        bronAfbeelding: { src: "/verkeer/haaientanden-voorrang.jpg", alt: "Kruispunt van bovenaf met haaientanden (witte driehoeken) op jouw rijbaan; een auto rijdt over de voorrangsweg", caption: "haaientanden op de weg", maxHeight: 340 },
+        bronVideo: "/verkeer/haaientanden-voorrang.mp4",
         options: ["Voorrang verlenen (wachten)","Doorrijden — jij hebt voorrang","Stoppen + uitstappen","Toeteren"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — de andere weg heeft voorrang.", "Niet — wel wachten, geen uitstappen.", "Toeteren is geen voorrangsregel."],
