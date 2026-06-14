@@ -100,6 +100,21 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
         {renderTekst(vraag.vraag)}
       </div>
 
+      {/* Bron-beeld (Mark 2026-06-14): stille foto bij de vraag; zodra je geantwoord
+          hebt (gekozen != null) speelt de reveal-video — bv. de auto van rechts.
+          Ontbrak eerder op de /v/-pagina terwijl de social-post 'm wél beloofde. */}
+      {vraag.bronAfbeelding?.src && (
+        <div style={{ marginBottom: 16, borderRadius: 12, overflow: "hidden", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }}>
+          {vraag.bronVideo && gekozen != null ? (
+            <video src={vraag.bronVideo} autoPlay muted playsInline loop
+              style={{ width: "100%", maxHeight: 360, objectFit: "contain", display: "block" }} />
+          ) : (
+            <img src={vraag.bronAfbeelding.src} alt={vraag.bronAfbeelding.alt || ""} loading="lazy"
+              style={{ width: "100%", maxHeight: 360, objectFit: "contain", display: "block" }} />
+          )}
+        </div>
+      )}
+
       {/* Opties A/B/C/D */}
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: beantwoord ? 14 : 0 }}>
         {vraag.options.map((o, i) => {

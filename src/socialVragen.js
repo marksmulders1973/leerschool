@@ -21,6 +21,8 @@ export const SOCIAL_VRAGEN = {
   "voorrang1": {
     vak: "verkeer",
     leerpadLink: { id: "voorrang-basis-po", title: "Voorrang in plaatjes (groep 5-8)" },
+    bronAfbeelding: { src: "/verkeer/kruispunt-rechts-voorrang.jpg", alt: "Kruispunt zonder borden van bovenaf: jij komt van onderen op de fiets, een auto nadert van rechts" },
+    bronVideo: "/verkeer/kruispunt-rechts-voorrang.mp4",
     vraag: "Je komt op de **fiets** aanrijden bij een kruispunt **zonder borden of stoplichten**. Er komt een **auto van rechts**. **Wie mag eerst?**",
     options: ["De auto van rechts", "Jij op de fiets", "Wie het eerst bij het kruispunt is", "Allebei tegelijk doorrijden"],
     answer: 0,
