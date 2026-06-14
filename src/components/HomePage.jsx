@@ -4,7 +4,6 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
-import UspDemo from "./UspDemo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
@@ -109,7 +108,7 @@ function ProefVraagKaart({ onStart }) {
       borderRadius: 16, padding: "14px 16px",
     }}>
       <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
-        🎯 Probeer meteen een Doorstroomtoets-vraag
+        🎯 Probeer meteen een oefenvraag
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
         {String(vraag.vraag || "").replace(/\*\*/g, "")}
@@ -151,7 +150,7 @@ function ProefVraagKaart({ onStart }) {
               borderRadius: 999, padding: "13px",
               fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800,
             }}>
-            Start gratis met de Doorstroomtoets →
+            Ga verder — gratis oefenen →
           </button>
         </div>
       )}
@@ -610,7 +609,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 letterSpacing: 0.2, boxShadow: "0 6px 24px rgba(255,213,79,0.35)",
               }}
             >
-              Start gratis met de Doorstroomtoets →
+              Start gratis met oefenen →
             </button>
             <div style={{
               fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
@@ -619,7 +618,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
               <br />
               <span style={{ color: "rgba(255,255,255,0.55)" }}>
-                Ook ná 2026 blijft oefenen voor de Doorstroomtoets gratis; alleen Pro-extra's koop je per kwartier.
+                Ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
               </span>
             </div>
           </div>
@@ -1336,9 +1335,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* "Zo werkt Leerkwartier" — verplaatst naar onderaan (Mark 2026-06-05),
-            niet meer frontaal bovenaan. Onder de tegels/CTA, boven de deel-rij. */}
-        {step === "role" && <UspDemo />}
+        {/* "Zo werkt Leerkwartier" (UspDemo) verwijderd van de home (Mark 2026-06-14):
+            de proefvraag bovenaan laat het al zien; component bewaard in UspDemo.jsx. */}
 
         {/* Compacte footer-rij: deel-links + tip. Vervangt de 5 grote knoppen
             (WhatsApp, Facebook, Deel-OBLI, Speel-OBLI, Tip-aan-maker) die de
