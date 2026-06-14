@@ -1851,14 +1851,20 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
               </div>
               {(() => {
                 const repSvg = stepsInCh.map((i) => path.steps[i]?.svg).find((s) => s);
-                if (!repSvg) return null;
-                const sizedSvg = repSvg.replace(
+                // Geen step-svg? Pak een representatief plaatje uit een check
+                // (bronAfbeelding) zodat een foto-vraag óók een overzicht-thumbnail
+                // krijgt waar eerst de tekening stond (Mark 2026-06-14).
+                const repImg = repSvg ? null : stepsInCh
+                  .map((i) => (path.steps[i]?.checks || []).find((c) => c?.bronAfbeelding?.src)?.bronAfbeelding?.src)
+                  .find((s) => s);
+                if (!repSvg && !repImg) return null;
+                const sizedSvg = repSvg ? repSvg.replace(
                   /<svg\b([^>]*)>/i,
                   (m, attrs) => {
                     const cleaned = attrs.replace(/\s(width|height|style)="[^"]*"/g, "");
                     return `<svg${cleaned} style="height:100%;width:auto;display:block;">`;
                   }
-                );
+                ) : null;
                 return (
                   <div
                     style={{
@@ -1875,10 +1881,19 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                       opacity: allDone ? 0.55 : 1,
                     }}
                   >
-                    <div
-                      style={{ height: "100%", display: "flex", alignItems: "center" }}
-                      dangerouslySetInnerHTML={{ __html: sanitizeSvg(sizedSvg) }}
-                    />
+                    {repImg ? (
+                      <img
+                        src={repImg}
+                        alt=""
+                        loading="lazy"
+                        style={{ height: "100%", width: "auto", objectFit: "contain", borderRadius: 6 }}
+                      />
+                    ) : (
+                      <div
+                        style={{ height: "100%", display: "flex", alignItems: "center" }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeSvg(sizedSvg) }}
+                      />
+                    )}
                   </div>
                 );
               })()}
