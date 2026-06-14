@@ -234,12 +234,13 @@ const steps = [
   {
     title: "Voetganger op zebrapad",
     emoji: "🚶",
-    svg: zebrapadSvg(),
     explanation:
       "Een **zebrapad** is een oversteekplaats met **witte strepen**.\n\n**Regel**: een voetganger die **al oversteekt** (of duidelijk gaat oversteken) heeft **altijd voorrang**.\n\nJij komt op de fiets aan, voetganger staat op het zebrapad. **Jij stopt** en laat de voetganger oversteken. Pas daarna rij je door.\n\nGeldt voor fietsers, auto's, scooters — iedereen.",
     checks: [
       {
         q: "Voetganger staat midden op het zebrapad. Wat doe je op de fiets?",
+        bronAfbeelding: { src: "/verkeer/zebrapad-voorrang.jpg", alt: "Zebrapad van bovenaf: een voetganger steekt over, jij komt op de fiets aanrijden", caption: "voetganger op het zebrapad", maxHeight: 340 },
+        bronVideo: "/verkeer/zebrapad-voorrang.mp4",
         options: ["Stoppen + laten oversteken","Snel langs rijden","Toeteren","Achteruit"],
         answer: 0,
         wrongHints: [null, "Niet — voetganger heeft voorrang, je MOET stoppen.", "Toeteren mag niet als voetganger oversteekt.", "Niet logisch."],
