@@ -8,6 +8,7 @@ import UspDemo from "./UspDemo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { getSocialVraag } from "../socialVragen.js";
 import usePwaInstall from "../shared/usePwaInstall.js";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
@@ -90,6 +91,73 @@ const TICKER_ITEMS = [
 const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
+
+// Probeer-meteen-een-vraag-kaart op de home (Mark 2026-06-14, voorstel 3 uit
+// dagrapport, aangepast: de welkomstvideo was al weg sinds 10-6). Nieuwe bezoeker
+// ervaart direct een Doorstroomtoets-vraag i.p.v. eerst een keuzescherm; na het
+// antwoord een nudge de gratis-trechter in. Rol/niveau + leeftijdscheck blijven
+// gewoon bestaan (gebeuren bij Start gratis / account).
+function ProefVraagKaart({ onStart }) {
+  const vraag = getSocialVraag("rekenpuzzel2");
+  const [chosen, setChosen] = useState(null);
+  if (!vraag) return null;
+  const goed = chosen != null && chosen === vraag.answer;
+  return (
+    <div className="lk-content-wide" style={{
+      margin: "0 auto 16px", maxWidth: 520,
+      background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.16)",
+      borderRadius: 16, padding: "14px 16px",
+    }}>
+      <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
+        🎯 Probeer meteen een Doorstroomtoets-vraag
+      </div>
+      <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
+        {String(vraag.vraag || "").replace(/\*\*/g, "")}
+      </div>
+      <div style={{ display: "grid", gap: 8 }}>
+        {(vraag.options || []).map((opt, i) => {
+          const isChosen = chosen === i;
+          const isAns = i === vraag.answer;
+          let bg = "rgba(255,255,255,0.06)", border = "1px solid rgba(255,255,255,0.18)";
+          if (chosen != null) {
+            if (isAns) { bg = "rgba(0,200,83,0.18)"; border = "1.5px solid #00C853"; }
+            else if (isChosen) { bg = "rgba(255,82,82,0.16)"; border = "1.5px solid #ff5252"; }
+          }
+          return (
+            <button key={i} type="button" disabled={chosen != null}
+              onClick={() => { setChosen(i); track("home_proefvraag_answered", { goed: i === vraag.answer }); }}
+              style={{
+                textAlign: "left", padding: "10px 12px", borderRadius: 10,
+                background: bg, border, color: "#fff",
+                fontFamily: "var(--font-body)", fontSize: 14.5,
+                cursor: chosen != null ? "default" : "pointer",
+              }}>
+              {opt}{chosen != null && isAns ? "  ✓" : ""}
+            </button>
+          );
+        })}
+      </div>
+      {chosen != null && (
+        <div style={{ marginTop: 12 }}>
+          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.9)", marginBottom: 10, lineHeight: 1.5 }}>
+            {goed
+              ? "✅ Goed! Zo voelt elke vraag — met uitleg op 3 niveaus tot je 'm écht snapt."
+              : "Geen zorgen — in de app krijg je uitleg op 3 niveaus tot je 'm wél snapt."}
+          </div>
+          <button type="button" onClick={onStart}
+            style={{
+              width: "100%", cursor: "pointer", border: "none",
+              background: "linear-gradient(135deg, #ffd54f, #ffb300)", color: "#1a1a00",
+              borderRadius: 999, padding: "13px",
+              fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800,
+            }}>
+            Start gratis met de Doorstroomtoets →
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
@@ -555,6 +623,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </span>
             </div>
           </div>
+        )}
+
+        {/* Voorstel 3 (Mark 2026-06-14): nieuwe bezoeker doet meteen één
+            Doorstroomtoets-vraag i.p.v. een keuzescherm; daarna nudge de trechter in. */}
+        {step === "role" && (
+          <ProefVraagKaart onStart={() => handleFeatureClick("cito")} />
         )}
 
         {/* Zoekbalk op de home (Mark 2026-06-14): bezoekers landen op home/deeplink
