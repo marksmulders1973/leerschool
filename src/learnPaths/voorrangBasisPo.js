@@ -292,12 +292,13 @@ const steps = [
   {
     title: "Politie / ambulance / brandweer",
     emoji: "🚨",
-    svg: ambulanceSvg(),
     explanation:
       "**Voorrangsvoertuigen** zijn **politie, ambulance, brandweer** met **zwaailicht ÉN sirene tegelijk**.\n\n**Regel**: zij hebben **altijd voorrang**. Iedereen maakt plaats.\n\n**Wat doe jij op de fiets**?\n1. Naar de **kant van de weg** (rechts).\n2. **Stoppen** als het kan — niet middenop weg.\n3. Wachten tot het voertuig voorbij is.\n4. Pas daarna doorrijden.\n\n**Belangrijk**: zwaailicht zónder sirene = geen voorrang (alleen 'kijk uit'). Pas met sirene erbij heeft het voertuig écht voorrang.",
     checks: [
       {
         q: "Ambulance komt aan met zwaailicht + sirene. Wat doe je op de fiets?",
+        bronAfbeelding: { src: "/verkeer/ambulance-voorrang.jpg", alt: "Een ambulance met blauwe zwaailichten rijdt voorbij; jij staat met de fiets aan de kant", caption: "ambulance met zwaailicht + sirene", maxHeight: 340 },
+        bronVideo: "/verkeer/ambulance-voorrang.mp4",
         options: ["Naar de kant + stoppen","Sneller fietsen","Doorgaan zoals je was","Toeteren naar de ambulance"],
         answer: 0,
         wrongHints: [null, "Niet — je moet juist stoppen.", "Niet — ambulance moet voor jou kunnen passeren.", "Niet relevant."],
