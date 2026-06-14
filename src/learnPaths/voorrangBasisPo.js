@@ -189,16 +189,12 @@ const steps = [
   {
     title: "Op een gelijkwaardig kruispunt",
     emoji: "↗️",
-    svg: kruispuntSvg({
-      vanOnder: { kleur: KLEUR.fietser, label: "JIJ (fiets)" },
-      vanRechts: { kleur: KLEUR.auto, label: "auto" },
-      label: "gelijkwaardig kruispunt zonder borden",
-    }),
     explanation:
       "Een **gelijkwaardig kruispunt** heeft **geen borden + geen stoplichten + geen haaientanden**.\n\n**Regel: rechts heeft voorrang**.\n\nIn het plaatje kom **jij van onderen** aanrijden op de fiets. **De auto komt van rechts** — dat is jouw rechterhand. Rechts heeft voorrang → de auto mag eerst, **jij wacht**.\n\nDit is de meest voorkomende voorrang-vraag op het VVN-examen. Onthoud: 'rechts gaat eerst'.",
     checks: [
       {
-        q: "Op het kruispunt in het plaatje: wie heeft voorrang?",
+        q: "Bekijk de tekening. Wie heeft hier voorrang?",
+        bronAfbeelding: { src: "/verkeer/kruispunt-rechts-voorrang.jpg", alt: "Kruispunt zonder borden van bovenaf: jij komt van onderen op de fiets, een auto nadert van rechts", caption: "kruispunt zonder borden", maxHeight: 340 },
         options: ["De auto van rechts","Jij op de fiets","Wie het hardst gaat","Niemand"],
         answer: 0,
         wrongHints: [null, "De auto komt van rechts — rechts heeft voorrang, dus jij wacht.", "Snelheid heeft niets met voorrang te maken.", "Er is altijd een regel."],
