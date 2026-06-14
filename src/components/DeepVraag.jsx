@@ -178,24 +178,36 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
       {/* CTA-nudge na antwoord */}
       {beantwoord && (
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 16 }}>
-          <div style={{ fontSize: 14.5, color: "rgba(255,255,255,0.85)", marginBottom: 12, textAlign: "center" }}>
-            Dit zit achter <strong style={{ color: "#fff" }}>élke</strong> vraag in {BRAND.name}. In 2026 helemaal gratis.
+          <div style={{ fontSize: 15, color: "rgba(255,255,255,0.9)", marginBottom: 12, textAlign: "center", lineHeight: 1.5 }}>
+            {gekozen === vraag.answer
+              ? <>✅ <strong style={{ color: "#fff" }}>Goed gedaan!</strong> Ben jij klaar voor de Doorstroomtoets? Test het hieronder.</>
+              : <>Geen zorgen — <strong style={{ color: "#fff" }}>zó</strong> snap je 'm wél. Leer dit stap voor stap:</>}
           </div>
-          {/* Leerpad-link: sluit de USP-lus (vraag → uitleg → volledig leerpad). */}
-          {vraag.leerpadLink && onOpenLeerpad && (
-            <button type="button"
-              onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "leerpad", pad: vraag.leerpadLink.id }); onOpenLeerpad(vraag.leerpadLink.id); }}
-              style={{
-                display: "block", width: "100%", marginBottom: 10, padding: "13px 14px",
-                background: "rgba(0,200,83,0.10)", border: `1.5px solid ${GROEN}`, borderRadius: 12,
-                color: GROEN_LICHT, fontFamily: "var(--font-body, sans-serif)", fontSize: 15, fontWeight: 800, cursor: "pointer",
-              }}>
-              📚 Leer dit helemaal: {vraag.leerpadLink.title} →
-            </button>
-          )}
-          <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
-            Doe de gratis oefentoets →
-          </PrimaryCTA>
+          {/* Volgorde op maat (Mark 2026-06-14, /v/-trechter-fix): bij een goed
+              antwoord eerst de oefentoets (ben je er klaar voor?), bij een fout
+              antwoord eerst het leerpad (leer het stap voor stap). Sluit de USP-lus. */}
+          {(() => {
+            const goed = gekozen === vraag.answer;
+            const leerpadBtn = (vraag.leerpadLink && onOpenLeerpad) ? (
+              <button type="button" key="lp"
+                onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "leerpad", pad: vraag.leerpadLink.id }); onOpenLeerpad(vraag.leerpadLink.id); }}
+                style={{
+                  display: "block", width: "100%", marginBottom: 10, padding: "13px 14px",
+                  background: "rgba(0,200,83,0.10)", border: `1.5px solid ${GROEN}`, borderRadius: 12,
+                  color: GROEN_LICHT, fontFamily: "var(--font-body, sans-serif)", fontSize: 15, fontWeight: 800, cursor: "pointer",
+                }}>
+                📚 Leer dit helemaal: {vraag.leerpadLink.title} →
+              </button>
+            ) : null;
+            const toetsBtn = (
+              <div key="toets" style={{ marginBottom: 10 }}>
+                <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
+                  Doe de gratis oefentoets →
+                </PrimaryCTA>
+              </div>
+            );
+            return goed ? [toetsBtn, leerpadBtn] : [leerpadBtn, toetsBtn].filter(Boolean);
+          })()}
           {/* Mond-tot-mond: deel-knop sluit de groei-bal (bezoek → nieuwe bezoeker). */}
           <div style={{ marginTop: 10 }}>
             <DeelVraagKnop id={id} />
