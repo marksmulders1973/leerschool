@@ -257,12 +257,13 @@ const steps = [
   {
     title: "Stopbord + rood verkeerslicht",
     emoji: "🛑",
-    svg: stopBordSvg(),
     explanation:
       "**Stopbord** (rode 8-hoek): **altijd stilstaan** — ook als er geen verkeer is. Pas doorrijden als het veilig is.\n\n**Rood verkeerslicht**: stoppen voor de **stopstreep** (witte dikke streep). Wachten tot **groen**. Ook als er niemand komt — rood = stop.\n\n**Verschil**:\n• Stopbord = jij beslist wanneer je weer rijdt (na controle).\n• Rood licht = je wacht tot licht zelf op groen springt.",
     checks: [
       {
         q: "Je ziet een STOP-bord (rood 8-hoek). Wat doe je?",
+        bronAfbeelding: { src: "/verkeer/stopbord-voorrang.jpg", alt: "Kind op de fiets nadert een rood achthoekig STOP-bord", caption: "STOP-bord", maxHeight: 340 },
+        bronVideo: "/verkeer/stopbord-voorrang.mp4",
         options: ["Stilstaan + dan pas verder","Langzamer rijden","Doorrijden als geen verkeer","Toeteren"],
         answer: 0,
         wrongHints: [null, "Niet — stoppen, niet alleen vertragen.", "Niet — stopbord = altijd stilstaan.", "Niet — toeteren mag niet."],
@@ -273,7 +274,8 @@ const steps = [
       },
       {
         q: "Bij een rood verkeerslicht voor jou: wat doe je?",
-        svg: verkeerslichtSvg(),
+        bronAfbeelding: { src: "/verkeer/roodlicht-voorrang.jpg", alt: "Kind op de fiets wacht voor een verkeerslicht dat op rood staat", caption: "rood verkeerslicht", maxHeight: 340 },
+        bronVideo: "/verkeer/roodlicht-voorrang.mp4",
         options: ["Stoppen voor de stopstreep, wachten op groen","Doorrijden als niemand komt","Naast wachten oversteken","Vragen aan voorbijganger"],
         answer: 0,
         wrongHints: [null, "Niet — rood is altijd stop, ook zonder verkeer.", "Niet — gevaarlijk + boete.", "Niet relevant."],
