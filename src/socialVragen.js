@@ -17,6 +17,32 @@
 import { shuffleOptiesSeeded } from "./shared/shuffleOpties.js";
 
 export const SOCIAL_VRAGEN = {
+  // ── Verkeer: voorrang op gelijkwaardig kruispunt (sterke reactie-bait) ──
+  "voorrang1": {
+    vak: "verkeer",
+    leerpadLink: { id: "voorrang-basis-po", title: "Voorrang in plaatjes (groep 5-8)" },
+    vraag: "Je komt op de **fiets** aanrijden bij een kruispunt **zonder borden of stoplichten**. Er komt een **auto van rechts**. **Wie mag eerst?**",
+    options: ["De auto van rechts", "Jij op de fiets", "Wie het eerst bij het kruispunt is", "Allebei tegelijk doorrijden"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Tegenovergesteld — op een gelijkwaardig kruispunt geldt 'rechts gaat voor'.",
+      "Niet wie het snelst is — er is een vaste regel.",
+      "Gevaarlijk — er moet er één wachten.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Gelijkwaardig kruispunt", tekst: "Geen borden, geen stoplichten, geen haaientanden? Dan is het een **gelijkwaardig kruispunt**." },
+        { titel: "Rechts heeft voorrang", tekst: "De auto komt van **rechts** — dat is jouw rechterhand. Rechts gaat eerst, dus **jij wacht** en laat de auto door." },
+      ],
+      niveaus: {
+        basis: "Op een gelijkwaardig kruispunt heeft verkeer van rechts voorrang. De auto komt van rechts → de auto eerst, jij wacht.",
+        simpeler: "Geen borden = 'rechts gaat voor'. De auto zit aan jouw rechterkant, dus die mag eerst.",
+        nogSimpeler: "Rechts = eerst. De auto is rechts, dus de auto. Jij wacht even.",
+      },
+    },
+  },
+
   // ── Pilot 1: breuk-van-een-geheel met "rest"-valkuil ──────
   "rekenpuzzel1": {
     vak: "rekenen",
