@@ -130,6 +130,15 @@ function parseLevel(level) {
   return fallback;
 }
 
+// B3.2: parse de groep-range van een PO-pad ("groep4-7" → [4,7], "groep8" → [8,8]).
+// Gebruikt voor de PO-groep-filter zodat een groep-4 leerling niet in groep 6-8
+// paden verdrinkt. null = geen groep-range (dan altijd tonen, veilig).
+function poGroupRange(level) {
+  const m = String(level || "").match(/groep\s*(\d+)\s*(?:-\s*(\d+))?/i);
+  if (!m) return null;
+  return [Number(m[1]), m[2] ? Number(m[2]) : Number(m[1])];
+}
+
 // `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".
 // Mag ook een array zijn (bv. NaSk = ["biologie","natuurkunde","scheikunde"]).
 // Indien gezet, toont alleen paden + curricula van die vakken.
@@ -212,6 +221,16 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   // Default: kies de bucket van de leerling's eigen userLevel als die er is.
   const myBucket = userLevel ? parseLevel(userLevel).bucketKey : null;
   const [classFilter, setClassFilter] = useState(myBucket);
+  // B3.2: binnen PO zijn de klas-buckets allemaal "po" → geen granulariteit.
+  // Leid de groep van de leerling af uit userLevel ("groep4" → 4) en gebruik die
+  // als default-filter zodat een jonge leerling niet in 100 groep-6/7/8-paden
+  // verdrinkt. null = "alle groepen". Alleen voor PO-gebruikers met bekende groep.
+  const myPoGroup = (() => {
+    if (!effectivePo) return null;
+    const mm = String(userLevel || "").match(/groep\s*(\d+)/i);
+    return mm ? Number(mm[1]) : null;
+  })();
+  const [poGroupFilter, setPoGroupFilter] = useState(myPoGroup);
   // Zoekbalk-state (P0b vindbaarheid bij 67+ PO-paden, audit 2026-05-12).
   // Filtert paden op title + triggerKeywords + subject.
   const [searchQuery, setSearchQuery] = useState("");
@@ -1079,6 +1098,17 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
             const availableBuckets = [...new Set(pathList.map((p) => parseLevel(p.level).bucketKey))]
               .sort((a, b) => BUCKET_ORDER.indexOf(a) - BUCKET_ORDER.indexOf(b));
 
+            // B3.2: welke PO-groepen (3-8) komen voor in dit vak? Voor de groep-chips.
+            const poGroupsHere = effectivePo
+              ? [...new Set(pathList.flatMap((p) => {
+                  const r = poGroupRange(p.level);
+                  if (!r) return [];
+                  const gs = [];
+                  for (let g = r[0]; g <= r[1]; g++) gs.push(g);
+                  return gs;
+                }))].sort((a, b) => a - b)
+              : [];
+
             // Filter op klas (als classFilter is gezet en bestaat in dit vak),
             // anders toon alles. Als gekozen filter niet bestaat in dit vak →
             // val terug op "alles" zodat we geen lege staat hebben zonder reden.
@@ -1090,10 +1120,22 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
               ? pathList.filter((p) => parseLevel(p.level).bucketKey === activeFilter)
               : pathList;
 
+            // B3.2: PO-groep-filter binnen het vak. Toon de paden die bij de
+            // gekozen groep horen; valt terug op alles als die groep hier niets
+            // heeft (geen dode lege staat).
+            let groupFilteredPaths = classFilteredPaths;
+            if (effectivePo && poGroupFilter) {
+              const matched = classFilteredPaths.filter((p) => {
+                const r = poGroupRange(p.level);
+                return !r || (poGroupFilter >= r[0] && poGroupFilter <= r[1]);
+              });
+              if (matched.length > 0) groupFilteredPaths = matched;
+            }
+
             // Search-filter: title + triggerKeywords + subject + intro.
             const q = searchQuery.trim().toLowerCase();
             const filteredPaths = q
-              ? classFilteredPaths.filter((p) => {
+              ? groupFilteredPaths.filter((p) => {
                   const hay = [
                     p.title,
                     p.intro,
@@ -1103,7 +1145,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                   ].filter(Boolean).join(" ").toLowerCase();
                   return hay.includes(q);
                 })
-              : classFilteredPaths;
+              : groupFilteredPaths;
 
             // Sortering: bij "alle klassen" gesorteerd op nabijheid van
             // leerling's eigen klas (zelfde klas eerst, dan op afstand).
@@ -1269,6 +1311,35 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                       }}>
                         <span>🎯 {subjectCurricula.length > 0 ? "Of pak een los onderwerp" : "Onderwerpen"}</span>
                       </div>
+
+                      {/* B3.2: PO-groep-filter — toon groep-chips als dit vak meer
+                          dan 1 groep dekt. Default = eigen groep (uit naam-invoer),
+                          met "Alle groepen" als uitweg. Voorkomt dat een jonge
+                          leerling in groep 6-8 paden verdrinkt. */}
+                      {effectivePo && poGroupsHere.length > 1 && (
+                        <div style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: 6,
+                          marginBottom: 12,
+                          padding: "0 4px",
+                        }}>
+                          <ClassFilterPill
+                            label="Alle groepen"
+                            active={!poGroupFilter}
+                            onClick={() => setPoGroupFilter(null)}
+                          />
+                          {poGroupsHere.map((g) => (
+                            <ClassFilterPill
+                              key={g}
+                              label={g === myPoGroup ? `✦ Groep ${g} (jouw groep)` : `Groep ${g}`}
+                              active={poGroupFilter === g}
+                              accent={g === myPoGroup}
+                              onClick={() => setPoGroupFilter(g)}
+                            />
+                          ))}
+                        </div>
+                      )}
 
                       {/* Klas-filter pillen — alleen tonen als er meer dan 1
                           klas-bucket bestaat in dit vak (anders zinloos). */}

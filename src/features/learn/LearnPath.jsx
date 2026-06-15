@@ -1291,6 +1291,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     uitlegPad={currentCheck.uitlegPad}
                     vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                     onClose={() => setShowUitlegPad(false)}
+                    verbergNiveaus={attempts === 1}
                   />
                 )}
                 {showUitlegPad && !currentCheck.uitlegPad && currentCheck.leerpadLink && (

@@ -38,7 +38,7 @@ export function bumpVraagFouten(vraagId) {
   }
 }
 
-export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis" }) {
+export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false }) {
   if (!uitlegPad) return null;
 
   const fouten = useMemo(() => (vraagId ? getVraagFouten(vraagId) : 0), [vraagId]);
@@ -105,10 +105,29 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         </div>
       )}
 
+      {/* B2.6: vóór de eerste poging GEEN niveau-uitleg tonen — die bevat in veel
+          paden (bijna) het antwoord en zou opzoekbaar zijn vóór de leerling zelf
+          heeft nagedacht. Dan alleen concept-hulp (stappen/woorden/theorie). */}
+      {verbergNiveaus && (
+        <div style={{
+          marginBottom: 12,
+          padding: "8px 12px",
+          background: "rgba(66,165,245,0.10)",
+          border: "1px solid rgba(66,165,245,0.25)",
+          borderRadius: 8,
+          fontSize: 12.5,
+          lineHeight: 1.5,
+          color: "var(--color-text)",
+        }}>
+          💪 Probeer het straks eerst zelf. Hieronder staat hulp om de vraag te
+          begrijpen — de korte uitleg met het antwoord verschijnt pas ná je eerste poging.
+        </div>
+      )}
+
       {/* NIVEAU-UITLEG — default DICHT om antwoord-verklap te vermijden.
           niveaus.basis is in veel paden letterlijk het antwoord ("9.", "Ja.")
           en zou de leerling van denken weghouden. Audit 2026-05-13 QW1. */}
-      {niveauTekst && (
+      {!verbergNiveaus && niveauTekst && (
         <Section title="💡 Korte uitleg" defaultOpen={false}>
           <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
             <MdInline text={niveauTekst} />
