@@ -25,6 +25,8 @@ import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 const BATCH = 90;
 const DAGEN_TUSSEN = 6; // minimaal aantal dagen tussen twee mails
 const SITE = "https://leerkwartier.app";
+// Dagrapport-ontvanger (Mark wil elke dag horen hoeveel mails er uitgingen).
+const ADMIN_EMAIL = process.env.EMAIL_ADMIN || "Mark-smulders@hotmail.com";
 
 async function sb(path, opts, base, key) {
   return fetch(`${base}/rest/v1/${path}`, {
@@ -107,6 +109,41 @@ function maakMail(rij, welkom, niveauSectie = null) {
   return { onderwerp, html, text };
 }
 
+// Dagrapport naar Mark: hoeveel content-mails zijn er deze run (= vandaag) verstuurd.
+// Draait ook op dagen met 0 (niemand 'due') — Mark wil het elke dag in zijn inbox zien.
+// Faalt nooit hard: een fout in het rapport mag de hoofdtaak niet blokkeren.
+async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden }) {
+  if (!RESEND) return;
+  let datum;
+  try {
+    datum = new Date().toLocaleDateString("nl-NL", { weekday: "long", day: "numeric", month: "long" });
+  } catch {
+    datum = new Date().toISOString().slice(0, 10);
+  }
+  const n = sent || 0;
+  const foutTekst = fouten && fouten.length ? `${fouten.length} (${fouten.join(", ")})` : "0";
+  const onderwerp = `📬 Leerkwartier dagrapport: ${n} mail${n === 1 ? "" : "s"} verstuurd`;
+  const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.6;color:#1a2332;">
+    <p style="margin:0 0 4px;"><strong>Dagrapport e-mailmachine</strong></p>
+    <p style="margin:0 0 14px;color:#6b7785;font-size:13px;">${datum}</p>
+    <p style="font-size:24px;font-weight:800;margin:0 0 12px;">${n} mail${n === 1 ? "" : "s"} verstuurd vandaag</p>
+    <p style="margin:0 0 4px;">Kandidaten (due vandaag): ${kandidaten ?? 0}</p>
+    <p style="margin:0 0 4px;">Fouten: ${foutTekst}</p>
+    ${reden ? `<p style="margin:0 0 4px;">Notitie: ${reden}</p>` : ""}
+    <p style="font-size:12px;color:#7d8aa0;margin-top:16px;">Welkomst- + wekelijkse oefenmails. 0 is normaal op dagen dat niemand 'due' is.</p>
+  </div>`;
+  const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}`;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: FROM, to: [ADMIN_EMAIL], subject: onderwerp, html, text }),
+    });
+  } catch {
+    // rapport mislukt — stil; mag de cron niet laten falen
+  }
+}
+
 export default async function handler(req, res) {
   // Beveiliging: alleen Vercel-cron (Bearer CRON_SECRET) of handmatig ?key=.
   const secret = process.env.CRON_SECRET;
@@ -143,9 +180,13 @@ export default async function handler(req, res) {
     rijen = await q.json();
     if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
   } catch (e) {
+    await stuurDagrapport(RESEND, FROM, { sent: 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) });
     return res.status(500).json({ error: "lijst-lezen-fout", detail: String(e).slice(0, 200) });
   }
-  if (rijen.length === 0) return res.status(200).json({ ok: true, sent: 0, reason: "niemand-due" });
+  if (rijen.length === 0) {
+    await stuurDagrapport(RESEND, FROM, { sent: 0, kandidaten: 0, fouten: [], reden: "niemand-due" });
+    return res.status(200).json({ ok: true, sent: 0, reason: "niemand-due" });
+  }
 
   let gelukt = 0;
   const fouten = [];
@@ -177,5 +218,6 @@ export default async function handler(req, res) {
     }
   }
 
+  await stuurDagrapport(RESEND, FROM, { sent: gelukt, kandidaten: rijen.length, fouten });
   return res.status(200).json({ ok: true, sent: gelukt, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
