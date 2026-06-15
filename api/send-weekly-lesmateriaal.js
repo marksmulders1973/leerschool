@@ -21,7 +21,11 @@
 // Resend-gratis-tier = ~100 mails/dag. We versturen daarom max BATCH per run.
 
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
+import rekenenPad from "../src/learnPaths/doorstroomtoetsRekenenG8.js";
+import taalPad from "../src/learnPaths/doorstroomtoetsTaalG8.js";
+import studiePad from "../src/learnPaths/doorstroomtoetsStudievaardighedenG8.js";
 
+const LETTERS = ["A", "B", "C", "D", "E", "F"];
 const BATCH = 90;
 const DAGEN_TUSSEN = 6; // minimaal aantal dagen tussen twee mails
 const SITE = "https://leerkwartier.app";
@@ -73,8 +77,83 @@ async function haalNiveauSectie(email, base, key) {
   }
 }
 
+// ── Oefenvraag voor in de mail (v2, Mark 2026-06-15) ──────────────
+// De weekmail was "te dun" (alleen links). We zetten nu een echte 4-keuzevraag
+// mét uitleg in de mail zelf, zodat 'm openen waarde heeft i.p.v. een kopie van
+// de app. Bron = de Doorstroomtoets-leerpaden (zelfde vragen als het oefenpakket).
+function _stripMd(t = "") {
+  return String(t).replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1");
+}
+function _mdNaarHtml(t = "") {
+  return String(t)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*(?!\*)(.+?)\*(?!\*)/g, "$1<em>$2</em>");
+}
+// Alleen schone tekst-vragen (geen plaatjes/SVG/formules/links) in de mail.
+function _mailGeschikt(c) {
+  const blob = (c.q || "") + " " + (c.options || []).join(" ");
+  return !/[<$]|!\[|\]\(|http/i.test(blob);
+}
+let _vragenCache = null;
+function alleOefenvragen() {
+  if (_vragenCache) return _vragenCache;
+  const out = [];
+  for (const pad of [rekenenPad, taalPad, studiePad]) {
+    for (const step of pad.steps || []) {
+      for (const c of step.checks || []) {
+        const geldig = Array.isArray(c.options) && c.options.length >= 2 &&
+          Number.isInteger(c.answer) && c.answer >= 0 && c.answer < c.options.length && c.q;
+        if (!geldig || !_mailGeschikt(c)) continue;
+        const u = c.uitlegPad || {};
+        const uitleg = (u.niveaus && u.niveaus.basis) ||
+          (Array.isArray(u.stappen) && u.stappen[0] && u.stappen[0].tekst) || u.theorie || "";
+        out.push({ vak: pad.subject || "", q: c.q, options: c.options, answer: c.answer, uitleg });
+      }
+    }
+  }
+  _vragenCache = out;
+  return out;
+}
+// Eén vraag die dagelijks roteert (iedereen die op dezelfde dag mail krijgt,
+// krijgt dezelfde vraag; verandert per dag).
+function kiesOefenvraag() {
+  const v = alleOefenvragen();
+  if (!v.length) return null;
+  const now = new Date();
+  const dag = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+  return v[dag % v.length];
+}
+const VAK_LABEL = { rekenen: "rekenen", taal: "taal", studievaardigheden: "studievaardigheden" };
+function maakVraagBlok(vraag) {
+  if (!vraag) return { html: "", text: "" };
+  const vak = VAK_LABEL[vraag.vak] || "oefenen";
+  const opts = vraag.options
+    .map((o, i) => `<div style="font-size:15px;color:#cdd6e5;margin:0 0 6px;"><strong style="color:#69f0ae;">${LETTERS[i]}.</strong> ${_mdNaarHtml(o)}</div>`)
+    .join("");
+  const goed = `${LETTERS[vraag.answer]}. ${_stripMd(vraag.options[vraag.answer])}`;
+  const uitlegHtml = vraag.uitleg
+    ? `<p style="font-size:14px;line-height:1.55;color:#aeb9cc;margin:8px 0 0;">${_mdNaarHtml(vraag.uitleg)}</p>`
+    : "";
+  const html = `
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px;margin:0 0 22px;">
+      <div style="font-size:13px;font-weight:700;color:#69f0ae;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;">🧠 Oefenvraag · ${vak}</div>
+      <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.45;margin:0 0 12px;">${_mdNaarHtml(vraag.q)}</div>
+      ${opts}
+      <div style="font-size:13px;color:#7d8aa0;margin:12px 0 10px;">Denk eerst zelf na — het antwoord staat hieronder 👇</div>
+      <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:12px;">
+        <div style="font-size:15px;color:#fff;"><strong style="color:#69f0ae;">✅ Antwoord:</strong> ${_mdNaarHtml(goed)}</div>
+        ${uitlegHtml}
+      </div>
+    </div>`;
+  const textOpts = vraag.options.map((o, i) => `${LETTERS[i]}. ${_stripMd(o)}`).join("\n");
+  const text = `🧠 Oefenvraag (${vak})\n${_stripMd(vraag.q)}\n${textOpts}\n\n(Denk eerst zelf na — antwoord hieronder)\n✅ Antwoord: ${goed}${vraag.uitleg ? "\n" + _stripMd(vraag.uitleg) : ""}\n\n`;
+  return { html, text };
+}
+
 // Bouwt de HTML + onderwerp. Welkomst bij de eerste mail, anders de week-mail.
-function maakMail(rij, welkom, niveauSectie = null) {
+function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
+  const vraagBlok = maakVraagBlok(oefenvraag);
   const naam = esc(rij.kind_voornaam) || "";
   const hoi = naam ? `Hoi ${naam}-ouder,` : "Hoi,";
   const ref = encodeURIComponent(rij.unsubscribe_token || "");
@@ -97,6 +176,7 @@ function maakMail(rij, welkom, niveauSectie = null) {
     <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">${hoi}</p>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${esc(intro)}</p>
+    ${vraagBlok.html}
     <a href="${vandaag}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:12px;">🎯 Doe de vraag van vandaag →</a>
     <a href="${toets}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:24px;">📝 Of de gratis oefentoets →</a>
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : ""}
@@ -104,7 +184,7 @@ function maakMail(rij, welkom, niveauSectie = null) {
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
 
   return { onderwerp, html, text };
 }
@@ -188,6 +268,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true, sent: 0, reason: "niemand-due" });
   }
 
+  const oefenvraag = kiesOefenvraag();
   let gelukt = 0;
   const fouten = [];
   for (const rij of rijen) {
@@ -195,7 +276,7 @@ export default async function handler(req, res) {
     const welkom = !rij.sent_count;
     // Niveau-indicatie alleen in de week-mail (welkomstmail blijft schoon).
     const niveauSectie = welkom ? null : await haalNiveauSectie(rij.email, base, key);
-    const { onderwerp, html, text } = maakMail(rij, welkom, niveauSectie);
+    const { onderwerp, html, text } = maakMail(rij, welkom, niveauSectie, oefenvraag);
     try {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
