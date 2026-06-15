@@ -67,7 +67,7 @@ const steps = [
           theorie: "Drie types ondernemingen: productie (zelf maken), handel (doorverkopen) en diensten (onstoffelijk leveren). Test: 'wat zit er in de winkel: jouw werk, ingekochte spullen, of iets dat je DOET?'",
           voorbeelden: [{ type: "productie", tekst: "Bakker bakt brood. Sieraden-maker maakt ketting." }, { type: "handel", tekst: "Albert Heijn koopt brood in en verkoopt het." }, { type: "dienst", tekst: "Kapper knipt jouw haar." }],
           basiskennis: [{ onderwerp: "Kanaal vs type", uitleg: "Webshop is een KANAAL (waar je verkoopt). Type onderneming gaat over WAT je verkoopt." }],
-          niveaus: { basis: "Zelf maken = productie. A.", simpeler: "Je MAAKT de sieraden zelf. Daarom productie. Webshop is alleen de manier waarop je verkoopt.", nogSimpeler: "Zelf maken" },
+          niveaus: { basis: "Zelf maken = productie.", simpeler: "Je MAAKT de sieraden zelf. Daarom productie. Webshop is alleen de manier waarop je verkoopt.", nogSimpeler: "Zelf maken" },
         },
       },
       {
@@ -81,7 +81,7 @@ const steps = [
           theorie: "Bij dienst lever je iets dat de klant niet kan opstapelen of in een vitrine zetten — kennisoverdracht (bijles), wel-zijn (massage), advies (consultant).",
           voorbeelden: [{ type: "dienst", tekst: "Bijles, kapper, taxi, fitness-instructeur, advocaat, fysiotherapeut." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Kun je het opbergen in een doos? Nee → dienst." }],
-          niveaus: { basis: "Bijles = dienst. A.", simpeler: "Je geeft uitleg + tijd. Niet iets tastbaars. Dat is een dienst.", nogSimpeler: "Niet tastbaar" },
+          niveaus: { basis: "Bijles = dienst.", simpeler: "Je geeft uitleg + tijd. Niet iets tastbaars. Dat is een dienst.", nogSimpeler: "Niet tastbaar" },
         },
       },
       {
@@ -95,7 +95,7 @@ const steps = [
           theorie: "KvK-inschrijving (€80 in 2024) levert je een KvK-nummer op. Vervolgens stuurt KvK je gegevens door naar de Belastingdienst → automatisch BTW-nummer.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam met de foodtruck: inschrijven bij KvK in Utrecht, betaalt €80, krijgt KvK-nummer + automatisch BTW-nummer." }],
           basiskennis: [{ onderwerp: "Niet de gemeente", uitleg: "Gemeente is voor vergunningen (terras, geluid). Ondernemerschap zelf gaat via KvK." }],
-          niveaus: { basis: "KvK schrijft in. A.", simpeler: "Voor officieel ondernemer = inschrijven bij Kamer van Koophandel.", nogSimpeler: "KvK" },
+          niveaus: { basis: "KvK schrijft in.", simpeler: "Voor officieel ondernemer = inschrijven bij Kamer van Koophandel.", nogSimpeler: "KvK" },
         },
       },
       {
@@ -109,7 +109,7 @@ const steps = [
           theorie: "Risico is de essentie van ondernemen. Werknemer krijgt loon ongeacht resultaat. Ondernemer krijgt winst BIJ succes en verlies BIJ falen. Vandaar de potentiële beloning (winst).",
           voorbeelden: [{ type: "verlies", tekst: "Sam investeert €15.000 in foodtruck. Festival regent weg, geen klanten → verlies €10.000." }, { type: "winst", tekst: "Sam draait goed weekend → omzet €3.000, kosten €1.500 → winst €1.500." }],
           basiskennis: [{ onderwerp: "Belasting + werken", uitleg: "Ondernemer betaalt ook belasting (over winst, en BTW). Hij werkt vaak juist heel hard." }],
-          niveaus: { basis: "Hij kan zijn investering verliezen. A.", simpeler: "Risico = kans dat het mis gaat. Ondernemer kan het geld kwijtraken als bedrijf failliet gaat.", nogSimpeler: "Geld kwijt" },
+          niveaus: { basis: "Hij kan zijn investering verliezen.", simpeler: "Risico = kans dat het mis gaat. Ondernemer kan het geld kwijtraken als bedrijf failliet gaat.", nogSimpeler: "Geld kwijt" },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
           theorie: "Logica: zonder marktonderzoek weet je niet wat in het plan moet. Zonder plan kun je je niet zinvol inschrijven (KvK wil weten wat je doet) of investeren.",
           voorbeelden: [{ type: "Sam", tekst: "Sam wil foodtruck. Onderzoek toont: festivalbezoekers willen friet €5. Plan gebruikt deze info → bestelt truck → KvK → start." }],
           basiskennis: [{ onderwerp: "Idee → onderzoek → plan", uitleg: "Drie stappen vóór je iets formaliseert. Daarna KvK + starten." }],
-          niveaus: { basis: "Marktonderzoek voor plan. A.", simpeler: "Eerst kijken of er vraag is (onderzoek), DAN plan maken hoe je het gaat doen.", nogSimpeler: "Onderzoek eerst" },
+          niveaus: { basis: "Marktonderzoek voor plan.", simpeler: "Eerst kijken of er vraag is (onderzoek), DAN plan maken hoe je het gaat doen.", nogSimpeler: "Onderzoek eerst" },
         },
       },
       {
@@ -137,7 +137,7 @@ const steps = [
           theorie: "Drie kerneigenschappen ondernemer: (1) kansen zien, (2) investeren, (3) risico nemen. Een baas hebben zou dit allemaal omkeren — dan ben je werknemer.",
           voorbeelden: [{ type: "ondernemer", tekst: "Sam beslist zelf welke festivals + welke prijzen + werkt 60 uur in seizoen." }, { type: "werknemer", tekst: "Frituurmedewerker bij McDonalds krijgt rooster van manager + vast loon, geen risico." }],
           basiskennis: [{ onderwerp: "Geen baas = ondernemer", uitleg: "De afwezigheid van een baas is wat ondernemer onderscheidt. Hij is zelfstandig." }],
-          niveaus: { basis: "Baas hebben = werknemer, niet ondernemer. A.", simpeler: "Een ondernemer heeft GEEN baas. Hij beslist zelf. Daarom past 'heeft een baas' niet bij hem.", nogSimpeler: "Baas = werknemer" },
+          niveaus: { basis: "Baas hebben = werknemer, niet ondernemer.", simpeler: "Een ondernemer heeft GEEN baas. Hij beslist zelf. Daarom past 'heeft een baas' niet bij hem.", nogSimpeler: "Baas = werknemer" },
         },
       },
     ],
@@ -182,7 +182,7 @@ const steps = [
           theorie: "Goedkoop + snel maar ALGEMEEN. Je weet veel over de markt in algemene zin, maar niet specifiek over JOUW doelgroep.",
           voorbeelden: [{ type: "desk", tekst: "Sam googelt 'aantal foodtrucks in NL' + 'gemiddelde prijs friet op festival'." }],
           basiskennis: [{ onderwerp: "Niet meubel", uitleg: "Engelse 'desk' = bureau. Niet letterlijk een meubel." }],
-          niveaus: { basis: "Desk = computer-onderzoek. A.", simpeler: "Deskresearch = info opzoeken (Google, CBS, socials). Veldonderzoek = de straat op (interviews).", nogSimpeler: "Computer = desk" },
+          niveaus: { basis: "Desk = computer-onderzoek.", simpeler: "Deskresearch = info opzoeken (Google, CBS, socials). Veldonderzoek = de straat op (interviews).", nogSimpeler: "Computer = desk" },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
           theorie: "Het MEDIUM (papier, internet, op straat) maakt niet uit. Wat telt: verzamel je ZELF nieuwe data (veld) of zoek je BESTAANDE info (desk).",
           voorbeelden: [{ type: "veld", tekst: "Instagram-poll, straatinterview, focusgroep, klant-test." }, { type: "desk", tekst: "CBS-rapport, Google-trends, brancheblog." }],
           basiskennis: [{ onderwerp: "Online ≠ desk", uitleg: "Online onderzoek kan veld zijn (poll, enquête) OF desk (bestaande info). Het gaat om: zelf vragen of opzoeken?" }],
-          niveaus: { basis: "Poll = enquête = veld. A.", simpeler: "Een Instagram-poll vraagt aan mensen wat ze vinden. Dat is veldonderzoek — jij verzamelt nieuwe data.", nogSimpeler: "Vragen stellen = veld" },
+          niveaus: { basis: "Poll = enquête = veld.", simpeler: "Een Instagram-poll vraagt aan mensen wat ze vinden. Dat is veldonderzoek — jij verzamelt nieuwe data.", nogSimpeler: "Vragen stellen = veld" },
         },
       },
       {
@@ -210,7 +210,7 @@ const steps = [
           theorie: "SWOT helpt om voor te zijn: ken je sterke punten (uitspelen), zwakke punten (verbeteren), kansen (benutten), bedreigingen (anticiperen).",
           voorbeelden: [{ type: "SWOT Sam", tekst: "S: enige Belgische friet op markt. W: weinig kapitaal. O: bezorg-trend. T: regen." }],
           basiskennis: [{ onderwerp: "Letter-grep", uitleg: "Onthoud per letter wat het in Engels betekent — komt 't zelfde terug op elke business-kaart." }],
-          niveaus: { basis: "W = Weaknesses = zwak. A.", simpeler: "SWOT: S = sterk, W = zwak, O = kansen, T = bedreigingen. W staat voor Weaknesses.", nogSimpeler: "W = zwak" },
+          niveaus: { basis: "W = Weaknesses = zwak.", simpeler: "SWOT: S = sterk, W = zwak, O = kansen, T = bedreigingen. W staat voor Weaknesses.", nogSimpeler: "W = zwak" },
         },
       },
       {
@@ -224,7 +224,7 @@ const steps = [
           theorie: "Bedreigingen + kansen zijn EXTERN (buiten jezelf). Sterke + zwakke punten zijn INTERN (in je bedrijf). Trouwe klanten + goede recensies + lage huur zijn INTERN of POSITIEF — geen bedreigingen.",
           voorbeelden: [{ type: "T Sam", tekst: "Concurrent-truck arriveert op zelfde festival → markt halveert." }, { type: "T algemeen", tekst: "Weer slecht → festival afgelast → 0 omzet die dag." }],
           basiskennis: [{ onderwerp: "EXTERN", uitleg: "Bedreiging komt van BUITEN, niet uit eigen bedrijf." }],
-          niveaus: { basis: "Grote concurrent = T. A.", simpeler: "Een grote concurrent op zelfde festival = gevaar van buitenaf = bedreiging.", nogSimpeler: "Concurrent = T" },
+          niveaus: { basis: "Grote concurrent = T.", simpeler: "Een grote concurrent op zelfde festival = gevaar van buitenaf = bedreiging.", nogSimpeler: "Concurrent = T" },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
           theorie: "Tradeoff: desk is goedkoop + snel maar oppervlakkig. Veld is duur + tijdsintensief maar diep + specifiek. Beste combinatie: eerst desk (overzicht), daarna veld (concreet maken).",
           voorbeelden: [{ type: "desk only", tekst: "CBS: NL bezoekt 800 festivals/jaar. Maar willen ZE jouw friet? Onbekend." }, { type: "veld", tekst: "Sam vraagt 30 festivalbezoekers persoonlijk — krijgt concrete prijs-feedback." }],
           basiskennis: [{ onderwerp: "Tijd + geld", uitleg: "Veldonderzoek kost altijd MEER tijd én geld dan deskresearch. Geen gratis." }],
-          niveaus: { basis: "Van jouw eigen klanten. A.", simpeler: "Veldonderzoek krijgt antwoorden van JOUW doelgroep over JOUW idee. Specifieker dus nuttiger.", nogSimpeler: "Eigen klanten" },
+          niveaus: { basis: "Van jouw eigen klanten.", simpeler: "Veldonderzoek krijgt antwoorden van JOUW doelgroep over JOUW idee. Specifieker dus nuttiger.", nogSimpeler: "Eigen klanten" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
           theorie: "Nadelen: ALGEMEEN (niet specifiek voor jouw idee) + soms VEROUDERD + iedereen ziet hetzelfde (geen voorsprong).",
           voorbeelden: [{ type: "snel desk", tekst: "Sam googelt 1 uur lang: aantal foodtrucks, prijsranges, populaire toppings. Klaar." }],
           basiskennis: [{ onderwerp: "Tegenover veld", uitleg: "Desk en veld zijn complementair. Desk eerst (overzicht), veld erna (specifiek voor jou)." }],
-          niveaus: { basis: "Desk = goedkoop + snel. A.", simpeler: "Deskresearch via internet/cijfers is gratis of goedkoop én snel uit te voeren.", nogSimpeler: "Snel + goedkoop" },
+          niveaus: { basis: "Desk = goedkoop + snel.", simpeler: "Deskresearch via internet/cijfers is gratis of goedkoop én snel uit te voeren.", nogSimpeler: "Snel + goedkoop" },
         },
       },
     ],
@@ -293,7 +293,7 @@ const steps = [
           theorie: "Doelgroep beschrijf je via: leeftijd, geslacht, inkomen, woonplaats, levensstijl, koopgedrag. Hoe specifieker, hoe makkelijker te bereiken.",
           voorbeelden: [{ type: "Sam", tekst: "Doelgroep Funky Fries: festival-bezoekers 16-35, willen lekker snel-eten, instagram-actief." }, { type: "niet doelgroep", tekst: "Personeel werkt VOOR jou. Concurrent = andere ondernemer. Leverancier levert AAN jou." }],
           basiskennis: [{ onderwerp: "Niet 'iedereen'", uitleg: "'Iedereen' is geen doelgroep — dan kun je niemand specifiek aanspreken." }],
-          niveaus: { basis: "Doelgroep = jouw klanten. A.", simpeler: "De mensen voor wie je product GEMAAKT IS = doelgroep. Niet personeel, niet concurrenten, niet leveranciers.", nogSimpeler: "Klanten" },
+          niveaus: { basis: "Doelgroep = jouw klanten.", simpeler: "De mensen voor wie je product GEMAAKT IS = doelgroep. Niet personeel, niet concurrenten, niet leveranciers.", nogSimpeler: "Klanten" },
         },
       },
       {
@@ -307,7 +307,7 @@ const steps = [
           theorie: "Elke P is een KNOP die je kan instellen. Voor Sam: Product (Belgische friet), Prijs (€5), Plaats (festival), Promotie (TikTok). 4 keuzes samen = marketingstrategie.",
           voorbeelden: [{ type: "premium", tekst: "Apple: Product (high-end), Prijs (hoog), Plaats (eigen winkels), Promotie (cinematisch)." }, { type: "discount", tekst: "Lidl: Product (eigen merk), Prijs (laag), Plaats (eigen filiaal), Promotie (folder)." }],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Ezelsbruggetje: Pin Pin Pin Pin — Product Prijs Plaats Promotie. 4 keer P." }],
-          niveaus: { basis: "Product, Prijs, Plaats, Promotie. A.", simpeler: "Marketing 4 P's: wat verkoop je (Product), voor hoeveel (Prijs), waar (Plaats), hoe vertel je het (Promotie).", nogSimpeler: "4P's = Product/Prijs/Plaats/Promotie" },
+          niveaus: { basis: "Product, Prijs, Plaats, Promotie.", simpeler: "Marketing 4 P's: wat verkoop je (Product), voor hoeveel (Prijs), waar (Plaats), hoe vertel je het (Promotie).", nogSimpeler: "4P's = Product/Prijs/Plaats/Promotie" },
         },
       },
       {
@@ -321,7 +321,7 @@ const steps = [
           theorie: "Sterke USP's: kwaliteit (beste), prijs (goedkoopste), service (snelst), variatie (meeste keuze), niche (alleen vegan/glutenvrij). Eén heldere USP > tien zwakke claims.",
           voorbeelden: [{ type: "Sam USP", tekst: "'Enige foodtruck met 100% Belgische dubbel-gefrituurde friet + glutenvrije sauzen' = duidelijke USP." }, { type: "andere USP", tekst: "Coolblue USP: 'glimlach in elke doos' (klantenservice + verpakking)." }],
           basiskennis: [{ onderwerp: "Niet financieel", uitleg: "USP heeft niks met geld, belasting of leningen te maken. Het is een MARKETING-begrip." }],
-          niveaus: { basis: "USP = uniek punt. A.", simpeler: "USP = waarom KOPEN MENSEN BIJ JOU en niet bij concurrent? Iets wat alleen jij hebt of doet.", nogSimpeler: "Uniek" },
+          niveaus: { basis: "USP = uniek punt.", simpeler: "USP = waarom KOPEN MENSEN BIJ JOU en niet bij concurrent? Iets wat alleen jij hebt of doet.", nogSimpeler: "Uniek" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
           theorie: "Drie hoofdstrategieën: (1) laagste prijs (Lidl, Action), (2) middenklasse (AH, HEMA), (3) premium (Albert Heijn-XL, Apple). Hoge prijs = signaal van exclusiviteit. Te lage prijs bij premium-product wekt wantrouwen.",
           voorbeelden: [{ type: "premium friet", tekst: "€8 friet met truffel-saus + biologische aardappel + festival-sfeer = premium." }, { type: "massa friet", tekst: "€2 friet bij snackbar = volume-strategie." }],
           basiskennis: [{ onderwerp: "Doelgroep volgt prijs", uitleg: "Doelgroep + prijs moeten OP ELKAAR PASSEN. Hoge prijs + lage-inkomens-doelgroep = mismatch." }],
-          niveaus: { basis: "Hoge prijs = exclusief. A.", simpeler: "Hoge prijs trekt mensen die kwaliteit/exclusiviteit zoeken. Niet massa, niet laag-inkomen.", nogSimpeler: "Hoog = exclusief" },
+          niveaus: { basis: "Hoge prijs = exclusief.", simpeler: "Hoge prijs trekt mensen die kwaliteit/exclusiviteit zoeken. Niet massa, niet laag-inkomen.", nogSimpeler: "Hoog = exclusief" },
         },
       },
       {
@@ -349,7 +349,7 @@ const steps = [
           theorie: "Vuistregel uit marketing: nieuwe klant kost 5-7× meer dan bestaande klant tevreden houden. Daarom: investeer in service, klantloyaliteit, herhaalkortingen.",
           voorbeelden: [{ type: "kosten nieuw", tekst: "Sam moet 1 nieuwe klant via Instagram-advertentie kosten ~€10. Een bestaande klant met loyaliteitskaart: €2." }],
           basiskennis: [{ onderwerp: "Klant = investering", uitleg: "Eerste verkoop levert vaak weinig op (kosten reclame). Tweede + derde verkoop = winst." }],
-          niveaus: { basis: "5× duurder voor nieuwe klant. A.", simpeler: "Nieuwe klant overtuigen kost reclame + moeite. Bestaande klant tevreden houden is veel goedkoper. ~5× verschil.", nogSimpeler: "Nieuwe duurder" },
+          niveaus: { basis: "5× duurder voor nieuwe klant.", simpeler: "Nieuwe klant overtuigen kost reclame + moeite. Bestaande klant tevreden houden is veel goedkoper. ~5× verschil.", nogSimpeler: "Nieuwe duurder" },
         },
       },
       {
@@ -363,7 +363,7 @@ const steps = [
           theorie: "Voor elke leeftijd/levensstijl een ander kanaal. 16-35 = TikTok/Instagram. 35-55 = Facebook/LinkedIn. 55+ = krant/radio. Niche-doelgroepen via niche-platforms.",
           voorbeelden: [{ type: "Sam", tekst: "Sam post Instagram-reel van friet-bereiding + TikTok-video op festival. Bereikt duizenden bezoekers." }, { type: "ander", tekst: "Uitvaartonderneming kiest krant + radio (oudere doelgroep)." }],
           basiskennis: [{ onderwerp: "Niet alles werkt", uitleg: "Geld in verkeerd kanaal = weggegooid. Telefoongidsen worden niet meer gelezen door 16-35." }],
-          niveaus: { basis: "Insta+TikTok voor jong. A.", simpeler: "Festival-doelgroep 16-35 zit op Instagram + TikTok. Daar moet je adverteren.", nogSimpeler: "Insta" },
+          niveaus: { basis: "Insta+TikTok voor jong.", simpeler: "Festival-doelgroep 16-35 zit op Instagram + TikTok. Daar moet je adverteren.", nogSimpeler: "Insta" },
         },
       },
     ],
@@ -409,7 +409,7 @@ const steps = [
           theorie: "Stappenplan: (1) totale kosten optellen: €500 + €800 = €1.300. (2) winst = omzet − totale kosten: €2.000 − €1.300 = €700.",
           voorbeelden: [{ type: "berekening", tekst: "Omzet 2000, kosten samen 1300 → winst 700." }, { type: "verlies-check", tekst: "Als kosten > omzet → verlies. Hier €1.300 < €2.000 → winst." }],
           basiskennis: [{ onderwerp: "Niet half aftrekken", uitleg: "Veelgemaakte fout: alleen vaste of alleen variabele aftrekken. Beide moeten!" }],
-          niveaus: { basis: "2000 − (500+800) = 700. A.", simpeler: "Vaste + variabele kosten = €1.300. Omzet €2.000 − €1.300 = €700 winst.", nogSimpeler: "2000−1300=700" },
+          niveaus: { basis: "2000 − (500+800) = 700.", simpeler: "Vaste + variabele kosten = €1.300. Omzet €2.000 − €1.300 = €700 winst.", nogSimpeler: "2000−1300=700" },
         },
       },
       {
@@ -423,7 +423,7 @@ const steps = [
           theorie: "Test: 'Als ik 100 frieten extra maak, gaat deze kost dan omhoog?' Ja → variabel. Nee → vast. Aardappelen + olie + saus + bakje: ja. Huur kraampje + verzekering + telefoon-abo: nee.",
           voorbeelden: [{ type: "variabel", tekst: "Sam bakt 200 friet → €300 aardappel/olie. 100 friet → €150. Schaalbaar met productie." }, { type: "vast", tekst: "Sam huurt kraampje €40/dag — of hij 1 of 1000 friet verkoopt." }],
           basiskennis: [{ onderwerp: "Hoeveelheid is sleutel", uitleg: "Variabele kosten zijn ALTIJD per stuk. Vaste kosten ALTIJD per periode (dag/maand)." }],
-          niveaus: { basis: "Aardappel + olie = variabel. A.", simpeler: "Aardappelen heb je MEER NODIG als je meer friet maakt. Dat is variabele kost.", nogSimpeler: "Per stuk = variabel" },
+          niveaus: { basis: "Aardappel + olie = variabel.", simpeler: "Aardappelen heb je MEER NODIG als je meer friet maakt. Dat is variabele kost.", nogSimpeler: "Per stuk = variabel" },
         },
       },
       {
@@ -437,7 +437,7 @@ const steps = [
           theorie: "Formule: BEP = vaste kosten / dekkingsbijdrage per stuk. Vertelt je hoe groot je MINIMAAL moet verkopen om geen verlies te maken.",
           voorbeelden: [{ type: "Sam", tekst: "Vaste €125. Dekkingsbijdrage €5−€1,50 = €3,50. BEP = 125/3,50 ≈ 36 frieten. Boven 36 = winst." }],
           basiskennis: [{ onderwerp: "Niet maximum", uitleg: "BEP is MINIMUM (niet maximum). Winst groeit boven dit punt." }],
-          niveaus: { basis: "Omzet = kosten. A.", simpeler: "Break-even = punt waar je net niet verliest en net niet wint. Omzet dekt precies alle kosten.", nogSimpeler: "Quitte" },
+          niveaus: { basis: "Omzet = kosten.", simpeler: "Break-even = punt waar je net niet verliest en net niet wint. Omzet dekt precies alle kosten.", nogSimpeler: "Quitte" },
         },
       },
       {
@@ -451,7 +451,7 @@ const steps = [
           theorie: "Elke friet 'pakt' €3,50 van de vaste kosten af. Met €140 vaste kosten, en €3,50 per friet, heb je 40 frieten nodig om quitte te draaien.",
           voorbeelden: [{ type: "rekenstap", tekst: "Bij 39 frieten: 39 × €3,50 = €136,50 dekking. Te weinig (vaste kosten €140). Bij 40: 40 × €3,50 = €140 ✓." }, { type: "bovenBEP", tekst: "41e friet = €3,50 pure winst. 100 frieten = €60 × €3,50 = €210 winst boven BEP." }],
           basiskennis: [{ onderwerp: "Formule", uitleg: "BEP-formule: vaste kosten / dekkingsbijdrage per stuk = aantal." }],
-          niveaus: { basis: "140/3,50 = 40. A.", simpeler: "Per friet hou je over: €5−€1,50 = €3,50. Vaste kosten €140 / €3,50 = 40 frieten = break-even.", nogSimpeler: "40" },
+          niveaus: { basis: "140/3,50 = 40.", simpeler: "Per friet hou je over: €5−€1,50 = €3,50. Vaste kosten €140 / €3,50 = 40 frieten = break-even.", nogSimpeler: "40" },
         },
       },
       {
@@ -465,7 +465,7 @@ const steps = [
           theorie: "Marge zegt: 'van elke verkoop-euro, hoeveel houd je over voor jezelf'. Hoge marge (70%) = veel ruimte voor vaste kosten + winst. Lage marge (15%) = je moet veel volume draaien.",
           voorbeelden: [{ type: "hoge marge", tekst: "Friet 70%: per €5 verkoop houd je €3,50 over." }, { type: "lage marge", tekst: "Supermarkt-A-merken: marge ~5-15%. Vandaar dat ze huismerken pushen (hogere marge)." }],
           basiskennis: [{ onderwerp: "Niet inkoop/verkoop swap", uitleg: "30% is inkoop / verkoop. 350% is verkoop als % van inkoop. Marge gaat over WINST als % van VERKOOP." }],
-          niveaus: { basis: "3,50/5 × 100 = 70%. A.", simpeler: "Verkoopprijs €5. Inkoopprijs €1,50. Winst €3,50. Dat is €3,50 op €5 = 70% van de verkoopprijs.", nogSimpeler: "70%" },
+          niveaus: { basis: "3,50/5 × 100 = 70%.", simpeler: "Verkoopprijs €5. Inkoopprijs €1,50. Winst €3,50. Dat is €3,50 op €5 = 70% van de verkoopprijs.", nogSimpeler: "70%" },
         },
       },
       {
@@ -479,7 +479,7 @@ const steps = [
           theorie: "Omzet is BRUTO inkomen van het bedrijf. Veel hoger dan winst — kosten gaan er nog vanaf. Winst = wat de ondernemer ECHT verdient.",
           voorbeelden: [{ type: "Sam", tekst: "200 friet × €5 = €1.000 omzet per dag. Kosten €425 → winst €575." }, { type: "verschil", tekst: "Apple omzet $400 miljard, winst ~$100 miljard. Verschil van $300 mrd kosten." }],
           basiskennis: [{ onderwerp: "Niet winst", uitleg: "Omzet ≠ winst. Omzet is alles wat binnenkomt; winst is wat over is nadat kosten zijn afgetrokken." }],
-          niveaus: { basis: "Aantal × prijs. A.", simpeler: "Omzet = alle verkoop bij elkaar opgeteld. Niet wat over is — dat is winst.", nogSimpeler: "Verkoop totaal" },
+          niveaus: { basis: "Aantal × prijs.", simpeler: "Omzet = alle verkoop bij elkaar opgeteld. Niet wat over is — dat is winst.", nogSimpeler: "Verkoop totaal" },
         },
       },
     ],
@@ -514,7 +514,7 @@ const steps = [
           theorie: "Test-vraag: 'Als appels duurder worden, koop je dan MEER of MINDER?' Minder. Daarom: prijs ↑ → vraag ↓. Geldt voor bijna alles (uitzondering: luxegoederen waar hogere prijs juist status geeft).",
           voorbeelden: [{ type: "appels", tekst: "€1/kg → mensen kopen 5 kg. €4/kg → mensen kopen 2 kg." }, { type: "concertkaart", tekst: "€80 ticket → 50.000 willen. €200 ticket → 20.000 willen." }],
           basiskennis: [{ onderwerp: "Geen 'sneller'", uitleg: "Wet gaat over HOEVEEL je koopt, niet over snelheid." }],
-          niveaus: { basis: "Duurder = minder vraag. A.", simpeler: "Wat doet jij als boodschappen duurder worden? Minder kopen. Iedereen doet hetzelfde.", nogSimpeler: "Duurder = minder" },
+          niveaus: { basis: "Duurder = minder vraag.", simpeler: "Wat doet jij als boodschappen duurder worden? Minder kopen. Iedereen doet hetzelfde.", nogSimpeler: "Duurder = minder" },
         },
       },
       {
@@ -528,7 +528,7 @@ const steps = [
           theorie: "Test: 'Als de prijs van koffie verdubbelt, gaat de boer dan meer of minder koffie verbouwen?' Meer! Hoge prijs = lonend om uit te breiden.",
           voorbeelden: [{ type: "boer", tekst: "Bij appelprijs €1/kg ploeg je niet bij. Bij €4/kg ga je nieuwe boomgaard planten." }, { type: "industrie", tekst: "Hogere olieprijs in 2022 → meer schaliegas-winning in VS." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld aan vraag", uitleg: "Vraag: hoog prijs = laag aantal. Aanbod: hoog prijs = hoog aantal. Tegenovergesteld!" }],
-          niveaus: { basis: "Hogere prijs = meer leveren. A.", simpeler: "Hoge prijs = veel winst per stuk = verkoper wil méér leveren.", nogSimpeler: "Meer winst = meer" },
+          niveaus: { basis: "Hogere prijs = meer leveren.", simpeler: "Hoge prijs = veel winst per stuk = verkoper wil méér leveren.", nogSimpeler: "Meer winst = meer" },
         },
       },
       {
@@ -542,7 +542,7 @@ const steps = [
           theorie: "Boven evenwichtsprijs → te veel aanbod → prijs daalt terug. Onder evenwichtsprijs → te veel vraag → prijs stijgt terug. Markt streeft naar evenwicht.",
           voorbeelden: [{ type: "appels", tekst: "Boer wil €4/kg leveren (veel), kopers willen alleen €1/kg betalen (veel). Compromis: €2,50/kg waar beide tevreden zijn." }],
           basiskennis: [{ onderwerp: "Geen hoogste/laagste", uitleg: "Evenwichtsprijs is niet automatisch hoog of laag — het is waar markt 'in balans' is." }],
-          niveaus: { basis: "Vraag = aanbod. A.", simpeler: "Evenwichtsprijs = waar wat kopers willen kopen = wat verkopers willen leveren. Markt klikt.", nogSimpeler: "Balanspunt" },
+          niveaus: { basis: "Vraag = aanbod.", simpeler: "Evenwichtsprijs = waar wat kopers willen kopen = wat verkopers willen leveren. Markt klikt.", nogSimpeler: "Balanspunt" },
         },
       },
       {
@@ -556,7 +556,7 @@ const steps = [
           theorie: "Beweging naar evenwichtsprijs: bij krapte gaan prijzen omhoog, totdat vraag daalt (te duur) en aanbod stijgt (winstgevend). Bij overschot omgekeerd.",
           voorbeelden: [{ type: "concert", tekst: "Taylor Swift: 50.000 fans, 35.000 plekken. Officiele €120 → zwarte markt €500+." }, { type: "PS5", tekst: "PS5 launch 2020: enorme vraag, geen voorraad → tweedehands €800+." }],
           basiskennis: [{ onderwerp: "Beweging", uitleg: "Prijs blijft niet bij krapte. Beweging is altijd OMHOOG." }],
-          niveaus: { basis: "Krapte = prijs omhoog. A.", simpeler: "Iedereen wil het, weinig te krijgen → mensen betalen meer om het toch te krijgen → prijs stijgt.", nogSimpeler: "Krapte = duur" },
+          niveaus: { basis: "Krapte = prijs omhoog.", simpeler: "Iedereen wil het, weinig te krijgen → mensen betalen meer om het toch te krijgen → prijs stijgt.", nogSimpeler: "Krapte = duur" },
         },
       },
       {
@@ -570,7 +570,7 @@ const steps = [
           theorie: "Belangrijk voor prijsbeleid: als concurrent veel substituten heeft (Coca-Pepsi-Spa Cola), kun je niet zomaar de prijs verhogen — klanten lopen weg.",
           voorbeelden: [{ type: "substituten", tekst: "Pepsi/Coca, AH-merk/A-merk, trein/auto, Spotify/Apple Music." }, { type: "complementen", tekst: "Printer + inkt, telefoon + lader, auto + benzine, tandpasta + tandenborstel." }],
           basiskennis: [{ onderwerp: "Niet gratis/belastingvrij", uitleg: "Substituut heeft niks met prijs te maken in absolute zin — het gaat om VERVANGBAARHEID." }],
-          niveaus: { basis: "Vervangbaar = substituut. A.", simpeler: "Pepsi en Coca = beide cola, vervangen elkaar = substituten.", nogSimpeler: "Vervang" },
+          niveaus: { basis: "Vervangbaar = substituut.", simpeler: "Pepsi en Coca = beide cola, vervangen elkaar = substituten.", nogSimpeler: "Vervang" },
         },
       },
       {
@@ -584,7 +584,7 @@ const steps = [
           theorie: "Patroon: kijk naar de KANT — gaat het over vraag (kopers) of aanbod (verkopers). Kopers + duurder → minder = wet van de vraag.",
           voorbeelden: [{ type: "vraag", tekst: "€3-100kg, €1-400kg = vraag stijgt als prijs daalt." }, { type: "aanbod", tekst: "Bij aanbod werkt het andersom: €3-400kg, €1-100kg = verkopers leveren meer bij hogere prijs." }],
           basiskennis: [{ onderwerp: "Inflatie ≠ wet", uitleg: "Inflatie is prijsstijging in de tijd. Wet van vraag/aanbod is relatie tussen prijs en hoeveelheid op één moment." }],
-          niveaus: { basis: "Hogere prijs, minder gevraagd. A.", simpeler: "€1 → 400 kopen, €3 → 100 kopen. Duurder → minder vraag = wet van de vraag.", nogSimpeler: "Vraag" },
+          niveaus: { basis: "Hogere prijs, minder gevraagd.", simpeler: "€1 → 400 kopen, €3 → 100 kopen. Duurder → minder vraag = wet van de vraag.", nogSimpeler: "Vraag" },
         },
       },
     ],
@@ -626,7 +626,7 @@ const steps = [
           theorie: "Bij veel aanbieders kan niemand boven marktprijs vragen (klant gaat naar concurrent). Voorbeeld: aardappel-veiling, tarwe-markt, simpele grondstoffen.",
           voorbeelden: [{ type: "aardappel", tekst: "Op de groothandelsmarkt verkopen 200+ boeren ongeveer dezelfde aardappel — prijs is overal gelijk." }],
           basiskennis: [{ onderwerp: "Telling", uitleg: "Weinig (3-10) = oligopolie. 1 = monopolie. Veel + identiek = volkomen. Veel + verschillend = monopolistische conc." }],
-          niveaus: { basis: "Veel aanbieders. A.", simpeler: "Volkomen concurrentie heeft veel verkopers van hetzelfde product.", nogSimpeler: "Veel" },
+          niveaus: { basis: "Veel aanbieders.", simpeler: "Volkomen concurrentie heeft veel verkopers van hetzelfde product.", nogSimpeler: "Veel" },
         },
       },
       {
@@ -640,7 +640,7 @@ const steps = [
           theorie: "Kenmerk oligopolie: spelers KIJKEN naar elkaar. Als KPN tarief verhoogt, kijkt Vodafone of zij ook gaan stijgen. Prijzen verschillen weinig, kunnen samen 'omhoog kruipen' (gevaar voor kartel — daarom ACM oplet).",
           voorbeelden: [{ type: "telecom", tekst: "4 spelers in NL. Tarieven binnen €5-10 van elkaar. Onbenutte data soms identiek." }, { type: "ander", tekst: "Supermarkten (AH/Jumbo/Lidl/Aldi/Plus), benzine (Shell/BP/Esso/Total), banken." }],
           basiskennis: [{ onderwerp: "Vergelijken loont", uitleg: "Bij oligopolie bestaan kleine verschillen — vergelijken kan €100-300/jaar opleveren." }],
-          niveaus: { basis: "4 spelers = oligopolie. A.", simpeler: "Telecom heeft 4 grote spelers. Niet 1 (mono), niet 50 (veel) — dus oligopolie.", nogSimpeler: "4 = oligo" },
+          niveaus: { basis: "4 spelers = oligopolie.", simpeler: "Telecom heeft 4 grote spelers. Niet 1 (mono), niet 50 (veel) — dus oligopolie.", nogSimpeler: "4 = oligo" },
         },
       },
       {
@@ -654,7 +654,7 @@ const steps = [
           theorie: "Monopolies zijn vaak ontstaan door patenten (medicijn), schaarse grondstoffen, of natuurlijke noodzaak (1 spoornet). Daarom houdt overheid prijzen vaak in de gaten (NMa, NZa).",
           voorbeelden: [{ type: "NS", tekst: "NS heeft monopolie op grootste deel hoofdrailnet. Overheid reguleert tarieven." }, { type: "patent", tekst: "Pfizer's COVID-vaccin had patent → tijdelijk monopolie → hoge prijs." }],
           basiskennis: [{ onderwerp: "Niet 'veel'", uitleg: "Veel aanbieders = volkomen of monopolistische concurrentie, niet monopolie." }],
-          niveaus: { basis: "1 aanbieder. A.", simpeler: "Monopolie = ÉÉN verkoper. Hij bepaalt prijs want klanten kunnen nergens anders heen.", nogSimpeler: "1 = monopolie" },
+          niveaus: { basis: "1 aanbieder.", simpeler: "Monopolie = ÉÉN verkoper. Hij bepaalt prijs want klanten kunnen nergens anders heen.", nogSimpeler: "1 = monopolie" },
         },
       },
       {
@@ -668,7 +668,7 @@ const steps = [
           theorie: "ACM kan boetes opleggen (Apple AppStore, Google), fusies blokkeren (Heineken-Vrumona 2020), tariefverhogingen onderzoeken. Doel: consument beschermen tegen marktmacht.",
           voorbeelden: [{ type: "fusie", tekst: "ACM blokkeerde Telfort-KPN fusie destijds — zou oligopolie te dichtbij monopolie brengen." }, { type: "boete", tekst: "Cement-kartel in NL kreeg miljoenen boete voor jarenlange prijsafspraken." }],
           basiskennis: [{ onderwerp: "Niet wetgevend", uitleg: "ACM voert wetten UIT, maakt ze niet. Wetten komen van parlement. ACM int ook geen belasting (= Belastingdienst)." }],
-          niveaus: { basis: "Bewaakt eerlijke markt. A.", simpeler: "ACM is de marktpolitie — voorkomt dat bedrijven samen prijzen te hoog maken.", nogSimpeler: "Marktwaakhond" },
+          niveaus: { basis: "Bewaakt eerlijke markt.", simpeler: "ACM is de marktpolitie — voorkomt dat bedrijven samen prijzen te hoog maken.", nogSimpeler: "Marktwaakhond" },
         },
       },
       {
@@ -682,7 +682,7 @@ const steps = [
           theorie: "Verschil met volkomen concurrentie: bij volkomen is product identiek (alle tarwe is gelijk). Bij monopolistische heeft elk merk eigen voordeel — Nike kan iets meer vragen omdat het bekend is.",
           voorbeelden: [{ type: "kleding", tekst: "Nike, Adidas, Puma, Asics, Under Armour, New Balance — allemaal sportschoenen, allemaal eigen identiteit." }, { type: "cafés", tekst: "50 cafés in een stad — elk eigen sfeer, locatie, menu. Concurreren maar zijn niet identiek." }],
           basiskennis: [{ onderwerp: "Niet oligopolie", uitleg: "Oligopolie = WEINIG grote spelers (3-10). Bij vele tientallen sportmerken: monopolistisch." }],
-          niveaus: { basis: "Veel + verschillend = mono. conc. A.", simpeler: "Veel kledingmerken die allemaal anders zijn = monopolistische concurrentie.", nogSimpeler: "Veel + uniek" },
+          niveaus: { basis: "Veel + verschillend = mono. conc.", simpeler: "Veel kledingmerken die allemaal anders zijn = monopolistische concurrentie.", nogSimpeler: "Veel + uniek" },
         },
       },
       {
@@ -696,7 +696,7 @@ const steps = [
           theorie: "Bij volkomen concurrentie zijn alle prijzen al gelijk (geen winst). Bij monopolie heb je geen keuze. Bij monopolistische concurrentie verschillen producten (lastig vergelijken). Bij oligopolie zijn producten redelijk gelijk maar prijzen verschillen — JACKPOT voor vergelijken.",
           voorbeelden: [{ type: "telecom", tekst: "KPN €40, Vodafone €35, T-Mobile €32, Odido €28/maand. Verschil €144/jr." }, { type: "energie", tekst: "Eneco vs Vattenfall vs Essent: verschillen tot €300/jaar op contract." }],
           basiskennis: [{ onderwerp: "Vergelijkings-websites", uitleg: "Bestaan dankzij oligopolie-marktvormen waar prijzen vergelijken loont (Consumentenbond, Pricewise, Independer)." }],
-          niveaus: { basis: "Oligopolie. A.", simpeler: "Bij oligopolie (weinig grote spelers zoals telecom) verschillen prijzen genoeg om vergelijken €100+/jaar op te leveren.", nogSimpeler: "Oligopolie" },
+          niveaus: { basis: "Oligopolie.", simpeler: "Bij oligopolie (weinig grote spelers zoals telecom) verschillen prijzen genoeg om vergelijken €100+/jaar op te leveren.", nogSimpeler: "Oligopolie" },
         },
       },
     ],
@@ -745,7 +745,7 @@ const steps = [
           theorie: "Bij faillissement BV verkoopt curator alleen BV-bezittingen. Bij eenmanszaak/VOF kan ook jouw huis worden verkocht. Daarom is BV vooral interessant bij hoge omzet of risicovolle markt.",
           voorbeelden: [{ type: "BV-bescherming", tekst: "Sam runt foodtruck als BV. Truck brand af + grote schuld → BV failliet, maar zijn huis blijft veilig." }, { type: "Eenmanszaak-risico", tekst: "Sam runt eenmanszaak met €50k schuld → schuldeisers kunnen ook zijn auto en spaargeld pakken." }],
           basiskennis: [{ onderwerp: "Drempel BV", uitleg: "BV oprichten kost notaris-uren (~€500-1500). Pas bij hogere omzet/risico de moeite waard." }],
-          niveaus: { basis: "BV = niet privé. A.", simpeler: "Alleen BV beschermt je privé-vermogen bij faillissement. Eenmanszaak + VOF niet.", nogSimpeler: "BV = veilig" },
+          niveaus: { basis: "BV = niet privé.", simpeler: "Alleen BV beschermt je privé-vermogen bij faillissement. Eenmanszaak + VOF niet.", nogSimpeler: "BV = veilig" },
         },
       },
       {
@@ -759,7 +759,7 @@ const steps = [
           theorie: "Daarom is een goed VOF-contract zo belangrijk: regelt taakverdeling, beslissingsbevoegdheid, exit-regelingen. Anders gevaar: vennoot maakt geheime schuld → JIJ moet betalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Vennoot Tom koopt €30k materiaal zonder overleg → bedrijf failliet → Sam moet de €30k alleen aflossen als Tom geen geld heeft." }],
           basiskennis: [{ onderwerp: "Vertrouwen essentieel", uitleg: "VOF werkt alleen met sterk vertrouwen onderling. Bij twijfel: kies BV." }],
-          niveaus: { basis: "Hoofdelijk privé aansprakelijk. A.", simpeler: "Bij VOF kan de schuld van JE PARTNER ook bij JOU terechtkomen. Dat is het grootste risico.", nogSimpeler: "Schuld partner = jouw schuld" },
+          niveaus: { basis: "Hoofdelijk privé aansprakelijk.", simpeler: "Bij VOF kan de schuld van JE PARTNER ook bij JOU terechtkomen. Dat is het grootste risico.", nogSimpeler: "Schuld partner = jouw schuld" },
         },
       },
       {
@@ -773,7 +773,7 @@ const steps = [
           theorie: "VPB-tarief (2024): 19% over eerste €200k, 25,8% daarboven. Eigenaar krijgt loon (DGA-loon, ~€56k verplicht) en betaalt daarover IB. Plus dividenden uit BV worden in Box 2 belast (~26,9%).",
           voorbeelden: [{ type: "BV", tekst: "Sam's BV maakt €300k winst → VPB ~€57k. Sam keert €100k dividend uit → €26,9k Box 2 IB." }],
           basiskennis: [{ onderwerp: "Twee belastingen", uitleg: "Bij BV: eerst VPB op winst, dan IB op loon + Box 2 op dividend. Vandaar 'dubbel belasten' angst." }],
-          niveaus: { basis: "BV = VPB. A.", simpeler: "BV is een aparte 'persoon' en betaalt zijn eigen belasting: vennootschapsbelasting (VPB).", nogSimpeler: "BV = VPB" },
+          niveaus: { basis: "BV = VPB.", simpeler: "BV is een aparte 'persoon' en betaalt zijn eigen belasting: vennootschapsbelasting (VPB).", nogSimpeler: "BV = VPB" },
         },
       },
       {
@@ -787,7 +787,7 @@ const steps = [
           theorie: "Eenmanszaak is dé start-rechtsvorm in NL. Drie redenen: goedkoop, snel, met fiscaal voordeel (zelfstandigenaftrek €5k + starter-aftrek €2k = €7k aftrek in jaar 1).",
           voorbeelden: [{ type: "Sam", tekst: "Sam start als eenmanszaak Funky Fries. Kosten €80 KvK, dezelfde dag BTW-nummer, direct factureren." }],
           basiskennis: [{ onderwerp: "Later omzetten", uitleg: "Begonnen als eenmanszaak, te groot geworden? Je kunt later naar BV omzetten." }],
-          niveaus: { basis: "Eenmanszaak. A.", simpeler: "Alleen, lage kosten, snel beginnen = eenmanszaak.", nogSimpeler: "Alleen + goedkoop" },
+          niveaus: { basis: "Eenmanszaak.", simpeler: "Alleen, lage kosten, snel beginnen = eenmanszaak.", nogSimpeler: "Alleen + goedkoop" },
         },
       },
       {
@@ -801,7 +801,7 @@ const steps = [
           theorie: "Eenmanszaak-fiscaalbeleid: aftrekposten maken effectief IB-tarief laag bij beperkte winst. BV: vast VPB-tarief plus DGA-loon. Daardoor BV pas interessant boven omslagpunt (~€100k, varieert per situatie).",
           voorbeelden: [{ type: "€50k", tekst: "Eenmanszaak met €50k winst: na aftrekken ~ €8k IB. BV zou ~€10k VPB + DGA-loon belasting moeten betalen. Eenmanszaak wint." }, { type: "€200k", tekst: "BV: €38k VPB + DGA-loon belasting. Eenmanszaak: ~€80k IB. BV wint." }],
           basiskennis: [{ onderwerp: "Niet absoluut", uitleg: "€100k is ruwe vuistregel. Boekhouder kan exact berekenen per situatie." }],
-          niveaus: { basis: "~€100k winst. A.", simpeler: "Onder €100k winst per jaar is eenmanszaak goedkoper. Erboven wordt BV beter.", nogSimpeler: "€100k" },
+          niveaus: { basis: "~€100k winst.", simpeler: "Onder €100k winst per jaar is eenmanszaak goedkoper. Erboven wordt BV beter.", nogSimpeler: "€100k" },
         },
       },
       {
@@ -815,7 +815,7 @@ const steps = [
           theorie: "Twee soorten rechtssubjecten: natuurlijke personen (mensen) en rechtspersonen (BV, NV, etc.). Eenmanszaak is GEEN rechtspersoon — de zaak en de mens zijn 1.",
           voorbeelden: [{ type: "BV", tekst: "'Funky Fries BV' kan zelf een huurcontract tekenen, eigen bankrekening hebben, failliet gaan." }, { type: "eenmanszaak", tekst: "Sam's eenmanszaak Funky Fries — alle contracten staan op Sam's naam, niet op de zaak." }],
           basiskennis: [{ onderwerp: "Niet beroep", uitleg: "Rechtspersoon is geen beroep (zoals advocaat) of opleiding (diploma). Het is een JURIDISCH BEGRIP." }],
-          niveaus: { basis: "Bedrijf als juridische persoon. A.", simpeler: "Een rechtspersoon is een BEDRIJF dat juridisch een eigen 'persoon' is — zoals een BV.", nogSimpeler: "Bedrijf-als-persoon" },
+          niveaus: { basis: "Bedrijf als juridische persoon.", simpeler: "Een rechtspersoon is een BEDRIJF dat juridisch een eigen 'persoon' is — zoals een BV.", nogSimpeler: "Bedrijf-als-persoon" },
         },
       },
     ],
@@ -857,7 +857,7 @@ const steps = [
           theorie: "NL-BTW-tarieven (2024): 21% standaard. 9% voor voedsel/boeken/kapper/OV/water. 0% voor export en bepaalde zorg.",
           voorbeelden: [{ type: "9%", tekst: "Brood, melk, fruit, restaurant-eten, kapsels, boek, treintickets." }, { type: "21%", tekst: "Kleding, elektronica, meubels, alcohol, diensten van advocaat." }],
           basiskennis: [{ onderwerp: "Geen 25%", uitleg: "25% bestaat niet als NL-BTW-tarief. Wel in andere landen (bv. Denemarken)." }],
-          niveaus: { basis: "Boodschappen = 9%. A.", simpeler: "Eten valt onder LAGE BTW = 9%. Niet 21% (algemeen).", nogSimpeler: "Eten = 9%" },
+          niveaus: { basis: "Boodschappen = 9%.", simpeler: "Eten valt onder LAGE BTW = 9%. Niet 21% (algemeen).", nogSimpeler: "Eten = 9%" },
         },
       },
       {
@@ -871,7 +871,7 @@ const steps = [
           theorie: "Formule: prijs incl = prijs excl × 1,21 (bij 21%) of × 1,09 (bij 9%). De factor maakt het rekenen makkelijk.",
           voorbeelden: [{ type: "21%", tekst: "€50 excl → €50 × 1,21 = €60,50 incl." }, { type: "9%", tekst: "€50 excl → €50 × 1,09 = €54,50 incl." }],
           basiskennis: [{ onderwerp: "Niet aftrekken", uitleg: "BTW komt ERBIJ van excl naar incl, gaat ERAF van incl naar excl." }],
-          niveaus: { basis: "€100 × 1,21 = €121. A.", simpeler: "€100 + 21% (= €21 BTW) = €121 totaal.", nogSimpeler: "121" },
+          niveaus: { basis: "€100 × 1,21 = €121.", simpeler: "€100 + 21% (= €21 BTW) = €121 totaal.", nogSimpeler: "121" },
         },
       },
       {
@@ -885,7 +885,7 @@ const steps = [
           theorie: "Veelgemaakte fout: 21% × €121 = €25,41. Maar dat zou betekenen dat €121 het excl bedrag is. Onthoud: bij 21% tarief is BTW ongeveer 17,4% van het incl-bedrag.",
           voorbeelden: [{ type: "berekening", tekst: "€121 / 1,21 = €100 excl. BTW = €21. Controle: €100 + €21 = €121 ✓." }],
           basiskennis: [{ onderwerp: "Niet 21% × incl", uitleg: "21% × incl is fout. 21% gaat over het EXCL-bedrag, niet incl." }],
-          niveaus: { basis: "121/1,21 = 100, BTW = 21. A.", simpeler: "Deel €121 door 1,21 = €100 excl. Verschil €21 = BTW.", nogSimpeler: "€21" },
+          niveaus: { basis: "121/1,21 = 100, BTW = 21.", simpeler: "Deel €121 door 1,21 = €100 excl. Verschil €21 = BTW.", nogSimpeler: "€21" },
         },
       },
       {
@@ -899,7 +899,7 @@ const steps = [
           theorie: "Belastingdienst kan factuur opvragen tot 7 jaar later. Slordige facturen = boete-risico. Boekhoudprogramma's (MoneyMonk, e-Boekhouden) genereren correcte facturen automatisch.",
           voorbeelden: [{ type: "correct", tekst: "'Funky Fries, KvK 12345678, BTW NL001234567B01' + datum 12-05-2026 + factuurnr 2026-042 + '200 friet x €5 = €1.000 incl 9% BTW'." }],
           basiskennis: [{ onderwerp: "Niet vrij", uitleg: "Factuur is geen kassabon. Strenge eisen. Bij ontbrekende info is factuur juridisch geen factuur." }],
-          niveaus: { basis: "Alle 5 items verplicht. A.", simpeler: "Factuur moet jouw + klant gegevens, datum, factuurnummer en prijs met BTW vermelden.", nogSimpeler: "Veel verplicht" },
+          niveaus: { basis: "Alle 5 items verplicht.", simpeler: "Factuur moet jouw + klant gegevens, datum, factuurnummer en prijs met BTW vermelden.", nogSimpeler: "Veel verplicht" },
         },
       },
       {
@@ -913,7 +913,7 @@ const steps = [
           theorie: "Wat bewaren: facturen (verstuurd + ontvangen), bonnen, bankafschriften, contracten, jaarrekening, BTW-aangiftes. Voor onroerend goed: 10 jaar.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam start in 2026 → moet bonnen van 2026 tot 2033 bewaren." }, { type: "digitaal", tekst: "Mag ook gescand zijn, mits leesbaar en authentiek." }],
           basiskennis: [{ onderwerp: "Boete bij weggooi", uitleg: "Te vroeg weggegooid = boete bij belastingcontrole + onbewijsbare aftrek." }],
-          niveaus: { basis: "7 jaar. A.", simpeler: "Wettelijke bewaarplicht = 7 jaar. Niet weggooien.", nogSimpeler: "7 jaar" },
+          niveaus: { basis: "7 jaar.", simpeler: "Wettelijke bewaarplicht = 7 jaar. Niet weggooien.", nogSimpeler: "7 jaar" },
         },
       },
       {
@@ -927,7 +927,7 @@ const steps = [
           theorie: "Bij 9%: BTW ≈ incl × 8,26% (= 0,09 / 1,09). Bij 21%: BTW ≈ incl × 17,36%. Vuistregels handig om snel te schatten.",
           voorbeelden: [{ type: "rekenstap", tekst: "€1.000 / 1,09 = €917,43 (excl). €1.000 − €917,43 = €82,57 BTW. Afgerond €83." }],
           basiskennis: [{ onderwerp: "Geen 9% van €1000", uitleg: "9% × €1.000 = €90 — maar dat is FOUT als €1.000 al incl is. BTW is altijd berekend op excl-bedrag." }],
-          niveaus: { basis: "1000/1,09 = ~917, BTW ~83. A.", simpeler: "€1.000 / 1,09 = ~€917 excl. BTW = €1.000 − €917 = ~€83 voor de Belastingdienst.", nogSimpeler: "~€83" },
+          niveaus: { basis: "1000/1,09 = ~917, BTW ~83.", simpeler: "€1.000 / 1,09 = ~€917 excl. BTW = €1.000 − €917 = ~€83 voor de Belastingdienst.", nogSimpeler: "~€83" },
         },
       },
     ],
@@ -965,7 +965,7 @@ const steps = [
           theorie: "Debiteurenrisico is groot voor zzp'ers en MKB. Een grote klant die 90 dagen wacht met betalen kan jouw cashflow doodmaken. Tips: vooruitbetaling vragen, kortere betaaltermijn (14 dagen), kredietverzekering.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam levert €5.000 catering aan een festival. Festival gaat failliet zonder betaling → Sam €5.000 kwijt." }],
           basiskennis: [{ onderwerp: "Niet belasting", uitleg: "Belastingdienst is een SCHULDEISER van jou, geen DEBITEUR. Andere richting." }],
-          niveaus: { basis: "Klant betaalt niet. A.", simpeler: "Debiteurenrisico = kans dat klanten je niet betalen wat ze schuldig zijn.", nogSimpeler: "Niet betalen" },
+          niveaus: { basis: "Klant betaalt niet.", simpeler: "Debiteurenrisico = kans dat klanten je niet betalen wat ze schuldig zijn.", nogSimpeler: "Niet betalen" },
         },
       },
       {
@@ -979,7 +979,7 @@ const steps = [
           theorie: "Daarom kiezen ondernemers met groeiende risico's vaak voor BV: bescherming van privé-vermogen. Bij eenmanszaak: alles is in dezelfde 'pot' — verliezen raken jou direct.",
           voorbeelden: [{ type: "Sam eenmanszaak", tekst: "Foodtruck failliet met €40k schuld → schuldeisers kunnen Sam's spaarrekening + auto opeisen." }, { type: "Sam BV", tekst: "Funky Fries BV failliet → alleen truck en BV-bankrekening worden verkocht. Sam's privé spaargeld blijft veilig." }],
           basiskennis: [{ onderwerp: "Niet 'altijd erger'", uitleg: "BV beschermt juist — niet erger maar veiliger voor eigenaar." }],
-          niveaus: { basis: "Privé in gevaar bij eenmanszaak. A.", simpeler: "Eenmanszaak: ook je privé-bezittingen kunnen verkocht worden. BV beschermt je daartegen.", nogSimpeler: "Privé verkoop" },
+          niveaus: { basis: "Privé in gevaar bij eenmanszaak.", simpeler: "Eenmanszaak: ook je privé-bezittingen kunnen verkocht worden. BV beschermt je daartegen.", nogSimpeler: "Privé verkoop" },
         },
       },
       {
@@ -993,7 +993,7 @@ const steps = [
           theorie: "Procedure: (1) faillissement-aanvraag (door eigenaar of schuldeiser), (2) rechter verklaart failliet + benoemt curator, (3) curator inventariseert bezittingen + schulden, (4) bezittingen worden verkocht, (5) opbrengst verdeeld volgens wettelijke volgorde (preferent eerst).",
           voorbeelden: [{ type: "praktijk", tekst: "V&D failliet 2015 → curator benoemd → winkels uitverkoop → opbrengst onder schuldeisers verdeeld." }],
           basiskennis: [{ onderwerp: "Niet accountant", uitleg: "Accountant doet administratie/cijfers; curator doet juridische afwikkeling." }],
-          niveaus: { basis: "Curator door rechter. A.", simpeler: "De rechter wijst een curator aan — die regelt het failliete bedrijf.", nogSimpeler: "Curator" },
+          niveaus: { basis: "Curator door rechter.", simpeler: "De rechter wijst een curator aan — die regelt het failliete bedrijf.", nogSimpeler: "Curator" },
         },
       },
       {
@@ -1007,7 +1007,7 @@ const steps = [
           theorie: "Andere risico-beperkers: verzekeringen (AOV, aansprakelijkheid, inventaris), klant-spreiding (geen 80% omzet bij 1 klant), realistische groei (eerst tester, dan opschalen).",
           voorbeelden: [{ type: "buffer Sam", tekst: "Sam houdt €8k buffer voor 4 maanden vaste kosten. Festival regent weg + 1 maand geen omzet → blijft overeind." }, { type: "geen buffer", tekst: "Concullega zonder buffer: 1 slechte maand → kan vaste kosten niet betalen → in problemen." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Snel groeien + 1 grote klant + geen verzekering zijn allemaal RISICO-VERGROOTERS, niet -verkleiners." }],
-          niveaus: { basis: "Buffer van 3-6 mnd. A.", simpeler: "Een spaarpotje van 3-6 maanden kosten = veiligheid bij tegenvallers.", nogSimpeler: "Buffer" },
+          niveaus: { basis: "Buffer van 3-6 mnd.", simpeler: "Een spaarpotje van 3-6 maanden kosten = veiligheid bij tegenvallers.", nogSimpeler: "Buffer" },
         },
       },
       {
@@ -1021,7 +1021,7 @@ const steps = [
           theorie: "Vuistregel: geen klant mag meer dan 20-30% van je omzet zijn. Anders kan vertrek van die klant je bedrijf doodmaken. Door spreiding ben je 'antifragiel'.",
           voorbeelden: [{ type: "diverse", tekst: "Sam levert aan 8 festivals + 5 bedrijfsfeestjes — als 1 wegvalt, blijft 92% omzet." }, { type: "geconcentreerd", tekst: "Cateraar levert 80% aan 1 grote tech-bedrijf. Bedrijf zegt op → 80% omzet weg." }],
           basiskennis: [{ onderwerp: "Spreiding", uitleg: "Diversificatie ≠ prijsdifferentiatie. Gaat om HOEVEEL klanten, niet welke prijs." }],
-          niveaus: { basis: "Veel verschillende klanten. A.", simpeler: "Spreiding = veel verschillende klanten zodat je niet van 1 afhankelijk bent.", nogSimpeler: "Spreiden" },
+          niveaus: { basis: "Veel verschillende klanten.", simpeler: "Spreiding = veel verschillende klanten zodat je niet van 1 afhankelijk bent.", nogSimpeler: "Spreiden" },
         },
       },
       {
@@ -1035,7 +1035,7 @@ const steps = [
           theorie: "Werknemers krijgen automatisch WIA bij arbeidsongeschiktheid. Zelfstandigen niet — moeten zelf AOV regelen (kost €100-300/mnd). Velen doen dit niet → blootgesteld.",
           voorbeelden: [{ type: "ziekte", tekst: "Sam breekt z'n been op een festival → 2 maanden niet werken → €0 omzet, maar wel vaste kosten van €500/mnd door. Buffer + AOV cruciaal." }],
           basiskennis: [{ onderwerp: "Niet operationeel", uitleg: "BTW-aangifte/marketing/logo zijn OPERATIONELE issues, geen PERSOONLIJKE risico's." }],
-          niveaus: { basis: "Ziekte = persoonlijk risico. A.", simpeler: "Jij bent het bedrijf. Word je ziek → geen omzet. Dat is het grote persoonlijke risico.", nogSimpeler: "Ziek = geen omzet" },
+          niveaus: { basis: "Ziekte = persoonlijk risico.", simpeler: "Jij bent het bedrijf. Word je ziek → geen omzet. Dat is het grote persoonlijke risico.", nogSimpeler: "Ziek = geen omzet" },
         },
       },
     ],

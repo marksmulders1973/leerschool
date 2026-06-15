@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Niet — modern Nederlands.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Geen J/U/W", tekst: "**Klassiek Latijn = 23 letters**: A B C D E F G H I K L M N O P Q R S T V X Y Z. **Geen J, U of W**. J = I (Iulius = Yulius), U = V (vita = wita). Moderne edities voegen J+U toe voor leesbaarheid." }],
-          niveaus: { basis: "23. A.", simpeler: "23 letters", nogSimpeler: "23" },
+          niveaus: { basis: "23.", simpeler: "23 letters", nogSimpeler: "23" },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Kerkelijk Latijn.", "Engels.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "C = K", tekst: "**Klassiek Latijn** (Erasmus-uitspraak): C = altijd K. Caesar = **Kaesar** (Kai-sar). Vandaar Duitse 'Kaiser' + Russische 'Tsar' (verwerving). **Kerkelijk Latijn**: C voor e/i = ch → Tsesar. Op gymnasium wordt klassieke uitspraak geleerd." }],
-          niveaus: { basis: "Kaesar. A.", simpeler: "C = K = Kaesar", nogSimpeler: "A." },
+          niveaus: { basis: "Kaesar.", simpeler: "C = K = Kaesar", nogSimpeler: "A." },
         },
       },
       {
@@ -55,7 +55,7 @@ const steps = [
         wrongHints: [null, "Niet correct.", "Niet relevant.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Romeinse cijfers", tekst: "MM = 1000+1000 = **2000**. XX = 10+10 = **20**. V = **5**. Samen = **2025**." }],
-          niveaus: { basis: "2025. A.", simpeler: "MM=2000, XX=20, V=5 → 2025", nogSimpeler: "A." },
+          niveaus: { basis: "2025.", simpeler: "MM=2000, XX=20, V=5 → 2025", nogSimpeler: "A." },
         },
       },
       {
@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "Niet — carpe diem.", "Niet — veni vidi vici.", "Niet — memento mori."],
         uitlegPad: {
           stappen: [{ titel: "Descartes 1637", tekst: "**Cogito, ergo sum** = Ik denk, dus ik ben. Descartes' onbetwijfelbaar startpunt in *Discours de la méthode* (1637). Latijn omdat hij voor geleerde Europa schreef. Fundament moderne filosofie." }],
-          niveaus: { basis: "Ik denk dus ik ben. A.", simpeler: "Cogito = denken", nogSimpeler: "A." },
+          niveaus: { basis: "Ik denk dus ik ben.", simpeler: "Cogito = denken", nogSimpeler: "A." },
         },
       },
       {
@@ -75,7 +75,7 @@ const steps = [
         wrongHints: [null, "Niet — i.e.", "Niet — vs.", "Niet — NB."],
         uitlegPad: {
           stappen: [{ titel: "Exempli gratia", tekst: "**e.g.** = *exempli gratia* (Latijn 'voor het geval van een voorbeeld') = **bijvoorbeeld**. Verschilt van **i.e.** = *id est* = 'dat is' (toelichting/herformulering). Verschil belangrijk in academisch + zakelijk schrijven." }],
-          niveaus: { basis: "Bijvoorbeeld. A.", simpeler: "e.g. = bv", nogSimpeler: "bv" },
+          niveaus: { basis: "Bijvoorbeeld.", simpeler: "e.g. = bv", nogSimpeler: "bv" },
         },
       },
     ],
@@ -94,7 +94,7 @@ const steps = [
         wrongHints: [null, "Niet — Duits.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Nom/Gen/Dat/Acc/Abl/Voc", tekst: "**Latijn: 6 naamvallen** — Nominatief (onderwerp), Genitief (bezit), Datief (mee.vw), Accusatief (lijd.vw), Ablatief (omstandigheden), Vocatief (aanspreken). Duits heeft 4 (geen Abl + Voc). NL geen naamvallen meer in moderne taal." }],
-          niveaus: { basis: "6. A.", simpeler: "Latijn = 6 nv", nogSimpeler: "6" },
+          niveaus: { basis: "6.", simpeler: "Latijn = 6 nv", nogSimpeler: "6" },
         },
       },
       {
@@ -104,7 +104,7 @@ const steps = [
         wrongHints: [null, "Nominatief.", "Genitief.", "Vocatief."],
         uitlegPad: {
           stappen: [{ titel: "Accusatief = lijd vw", tekst: "**Accusatief** = lijdend voorwerp ('wie/wat ondergaat actie?'). *Video Caesarem* = Ik zie **Caesar** (Caesar ondergaat het zien). Bij 'Caesar venit' (Caesar komt) = Caesar is nominatief (onderwerp)." }],
-          niveaus: { basis: "Lijd vw. A.", simpeler: "Acc = lijd vw", nogSimpeler: "A." },
+          niveaus: { basis: "Lijd vw.", simpeler: "Acc = lijd vw", nogSimpeler: "A." },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Nominatief.", "Accusatief.", "Datief mv."],
         uitlegPad: {
           stappen: [{ titel: "1e declinatie", tekst: "**1e declinatie** (-a-stam, meestal vrouwelijk):\n```\nNom: puella\nGen: puellae\nDat: puellae\nAcc: puellam\nAbl: puella (lange a)\n```\nGenitief = 'van het meisje'. Voorbeeld: *liber puellae* = boek van het meisje." }],
-          niveaus: { basis: "puellae. A.", simpeler: "Gen 1e decl = -ae", nogSimpeler: "A." },
+          niveaus: { basis: "puellae.", simpeler: "Gen 1e decl = -ae", nogSimpeler: "A." },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Niet — geen.", "Niet — geen.", "Niet — geen."],
         uitlegPad: {
           stappen: [{ titel: "Geen artikelen", tekst: "**Latijn heeft geen lidwoorden** — geen 'de/het/een/het'. Context bepaalt. **Italiaans, Spaans, Frans** ontwikkelden lidwoorden later uit demonstratiefiva (illa/illud → la/le)." }],
-          niveaus: { basis: "Nee. A.", simpeler: "Geen lidwoord", nogSimpeler: "A." },
+          niveaus: { basis: "Nee.", simpeler: "Geen lidwoord", nogSimpeler: "A." },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aanroep", tekst: "**'Et tu, Brute?'** = 'En jij, Brutus?' (laatste woorden Caesar bij moord). **Vocatief** voor aanspreken. Bij 2e declinatie -us → -e in vocatief: Brutus → **Brute**. Caesar → Caesar (vocatief = nominatief)." }],
           theorie: "Shakespeare's beroemde regel uit *Julius Caesar* (1599) — Latijn meebehouden door auteur voor effect.",
-          niveaus: { basis: "Vocatief. A.", simpeler: "Brute = vocatief", nogSimpeler: "A." },
+          niveaus: { basis: "Vocatief.", simpeler: "Brute = vocatief", nogSimpeler: "A." },
         },
       },
     ],
@@ -154,7 +154,7 @@ const steps = [
         wrongHints: [null, "Dat zou amas zijn.", "Dat is amamus.", "Dat is ama!"],
         uitlegPad: {
           stappen: [{ titel: "Amat = hij/zij heeft lief", tekst: "**Amat**: persoonsuitgang **-t** = 3e persoon enkelvoud. Praesens-stam ama- + t = 'hij/zij heeft lief'. Onderdeel paradigma: amo, amas, amat, amamus, amatis, amant." }],
-          niveaus: { basis: "3 ev presens. A.", simpeler: "amat = hij heeft lief", nogSimpeler: "A." },
+          niveaus: { basis: "3 ev presens.", simpeler: "amat = hij heeft lief", nogSimpeler: "A." },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Praesens = amat.", "Futurum = amabit.", "Perf = amavit."],
         uitlegPad: {
           stappen: [{ titel: "-ba-marker", tekst: "**Imperfectum**: stam + **-bā-** + uitgang. amat → ama-ba-t = **amabat** = hij was aan het liefhebben / hij had lief (continue actie in verleden). Verschilt van perfectum (amavit = hij heeft liefgehad, voltooid).\n\n**-bi-** voor futurum: amabit = hij zal liefhebben." }],
-          niveaus: { basis: "Imperfectum. A.", simpeler: "amaBAt = imperf", nogSimpeler: "Imperf" },
+          niveaus: { basis: "Imperfectum.", simpeler: "amaBAt = imperf", nogSimpeler: "Imperf" },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         wrongHints: [null, "Niet — vorm-mix.", "Onvolledig.", "Onvolledig."],
         uitlegPad: {
           stappen: [{ titel: "Stam-leren", tekst: "Elk Latijn-werkwoord heeft **4 hoofdvormen** waaruit alle andere vormen worden gemaakt:\n• **Infinitief**: amare.\n• **1e persoon presens**: amo.\n• **1e persoon perfectum**: amavi.\n• **Perfect deelwoord (PPP)**: amatus.\n\nUit hoofd leren — basis voor alle vervoegingen." }],
-          niveaus: { basis: "amare/amo/amavi/amatus. A.", simpeler: "4 hoofdvormen", nogSimpeler: "A." },
+          niveaus: { basis: "amare/amo/amavi/amatus.", simpeler: "4 hoofdvormen", nogSimpeler: "A." },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         wrongHints: [null, "Liefhebben.", "Maken.", "Dragen."],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig", tekst: "**Esse** (zijn) — onregelmatig:\n• sum (ik ben)\n• es (jij)\n• est (hij/zij)\n• sumus (wij)\n• estis (jullie)\n• sunt (zij)\n\nVergelijkbaar met Engelse 'am/are/is/are/are/are'." }],
-          niveaus: { basis: "esse. A.", simpeler: "Zijn = esse", nogSimpeler: "A." },
+          niveaus: { basis: "esse.", simpeler: "Zijn = esse", nogSimpeler: "A." },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "3e ev presens.", "Infinitief.", "Perfectum."],
         uitlegPad: {
           stappen: [{ titel: "Stam + niets", tekst: "**Imperatief enkelvoud** = presens-stam zonder uitgang. amare → stam = ama- → **ama!** (heb lief!). Meervoud: stam + **-te**: amate! (heb lief!, jullie). Beroemd: *carpe* (diem) — imperatief van *carpere* = pluk!" }],
-          niveaus: { basis: "Ama! A.", simpeler: "Imp ev = stam = ama", nogSimpeler: "A." },
+          niveaus: { basis: "Ama!", simpeler: "Imp ev = stam = ama", nogSimpeler: "A." },
         },
       },
     ],
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Niet — redenaar.", "Niet — dichter.", "Niet — keizertijd historicus."],
         uitlegPad: {
           stappen: [{ titel: "Caesar's eigen oorlog", tekst: "**Gaius Iulius Caesar** schreef *De Bello Gallico* — verslag eigen veldtochten in Gallië (58-50 v.Chr.). Propagandistisch + literair meesterwerk. Heldere, beknopte stijl. Beroemde opening: 'Gallia est omnis divisa in partes tres' = 'Heel Gallië is in 3 delen verdeeld'." }],
-          niveaus: { basis: "Caesar. A.", simpeler: "Bello Gallico = Caesar", nogSimpeler: "A." },
+          niveaus: { basis: "Caesar.", simpeler: "Bello Gallico = Caesar", nogSimpeler: "A." },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Niet — Augustus-troon.", "Einde West-Rome.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Romulus + Remus", tekst: "**753 v.Chr.**: legendarische stichting Rome door Romulus (broer Remus, die hij doodde). Tweelingen werden volgens mythe gevoed door wolvin. Historisch: bewoning Tiber-heuvels al eerder, maar 753 = officiële Romeinse jaartelling (Ab Urbe Condita)." }],
-          niveaus: { basis: "753 v.Chr. A.", simpeler: "753 = stichting", nogSimpeler: "753" },
+          niveaus: { basis: "753 v.Chr.", simpeler: "753 = stichting", nogSimpeler: "753" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Niet — werd dictator, niet keizer.", "Veel later.", "Vroeg-christelijke keizer veel later."],
         uitlegPad: {
           stappen: [{ titel: "27 v.Chr.", tekst: "**Octavianus** (Caesar's adoptief-zoon) wordt **27 v.Chr.** door Senaat 'Augustus' genoemd → eerste **keizer** ('imperator'). Caesar zelf was dictator (perpetua) maar werd vermoord vóór keizertijd. Augustus regeerde tot 14 n.Chr. — Pax Romana." }],
-          niveaus: { basis: "Augustus. A.", simpeler: "Eerste keizer = Augustus", nogSimpeler: "A." },
+          niveaus: { basis: "Augustus.", simpeler: "Eerste keizer = Augustus", nogSimpeler: "A." },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
         wrongHints: [null, "44 v.Chr.", "753 v.Chr.", "313 n.Chr."],
         uitlegPad: {
           stappen: [{ titel: "Pompeii + Herculaneum", tekst: "**24 augustus 79 n.Chr.**: vulkaan **Vesuvius** uitbarsting → **Pompeii + Herculaneum** bedekt onder as. ~16.000 doden. **Plinius de Oudere** stierf bij reddingspoging. **Plinius de Jongere** schreef ooggetuigenverslag. Archeologisch ontdekt 18e eeuw — uniek inzicht in dagelijks Romeins leven." }],
-          niveaus: { basis: "Vesuvius 79. A.", simpeler: "79 = Vesuvius", nogSimpeler: "79" },
+          niveaus: { basis: "Vesuvius 79.", simpeler: "79 = Vesuvius", nogSimpeler: "79" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [null, "Niet — oden.", "Niet — Metamorphoses.", "Niet — redenaar."],
         uitlegPad: {
           stappen: [{ titel: "Romeinse Ilias", tekst: "**Publius Vergilius Maro** schreef *Aeneis* (Aeneis) tussen 29-19 v.Chr. Epos over Trojaanse held **Aeneas** die na val Troje naar Italië reist en stichter Rome wordt. Eerste regels: 'Arma virumque cano' (Ik bezing wapens + man). Gymnasium-canon-tekst." }],
-          niveaus: { basis: "Vergilius. A.", simpeler: "Aeneis = Vergilius", nogSimpeler: "A." },
+          niveaus: { basis: "Vergilius.", simpeler: "Aeneis = Vergilius", nogSimpeler: "A." },
         },
       },
     ],
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Niet — andere voorzetsel.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Horatius Oden 1.11", tekst: "**Carpe diem** = letterlijk 'pluk de dag' (carpe = imperatief 'pluk', diem = accusatief 'dag'). Uit **Horatius** Oden 1.11 (23 v.Chr.). Boodschap: leef in het nu, want toekomst onzeker. Veel later beroemd door Robin Williams in film *Dead Poets Society* (1989)." }],
-          niveaus: { basis: "Pluk de dag. A.", simpeler: "Carpe diem = leef nu", nogSimpeler: "A." },
+          niveaus: { basis: "Pluk de dag.", simpeler: "Carpe diem = leef nu", nogSimpeler: "A." },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Republiek-motto", tekst: "**SPQR** = *Senatus Populusque Romanus* = 'De Senaat + het Volk van Rome'. Symboolt **Romeinse Republiek** (509-27 v.Chr.). Stond op standaarden, gebouwen. Vandaag: nog steeds in gebruik door gemeente Rome (op deksels van rioolputten, gebouwen)." }],
-          niveaus: { basis: "Senatus Populusque Romanus. A.", simpeler: "SPQR = Senaat+Volk", nogSimpeler: "A." },
+          niveaus: { basis: "Senatus Populusque Romanus.", simpeler: "SPQR = Senaat+Volk", nogSimpeler: "A." },
         },
       },
       {
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "200 jaar relatieve vrede", tekst: "**Pax Romana** ('Romeinse vrede') = 207 jaar relatieve interne vrede + welvaart in Romeinse Rijk: **27 v.Chr.-180 n.Chr.** (Augustus tot Marcus Aurelius). Niet zonder oorlog (grens-conflicten Germanen, Britten, Parten), maar binnen Rijk relatief stabiel. Handel + cultuur bloeiden. Begrip vergelijkbaar met 'Pax Americana' (post-WO2 westen)." }],
-          niveaus: { basis: "Vrede 27 v-180 n. A.", simpeler: "Pax Romana = vrede-tijd", nogSimpeler: "A." },
+          niveaus: { basis: "Vrede 27 v-180 n.", simpeler: "Pax Romana = vrede-tijd", nogSimpeler: "A." },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Niet — Venus.", "Niet — Neptunus.", "Niet — Plutonius/Hades."],
         uitlegPad: {
           stappen: [{ titel: "Romeins oorlogs-god", tekst: "**Mars** = Romeinse oorlogsgod (Griekse Ares). Vader van Romulus + Remus volgens legende. Daarom **Mars Pater** ('Mars Vader') belangrijk. Maand **maart** vernoemd. Symbolen: speer + schild. Planeet Mars rood vanwege ijzer-oxide — geassocieerd met 'bloed' van oorlog." }],
-          niveaus: { basis: "Oorlog. A.", simpeler: "Mars = oorlog", nogSimpeler: "A." },
+          niveaus: { basis: "Oorlog.", simpeler: "Mars = oorlog", nogSimpeler: "A." },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Idus Martiae", tekst: "**15 maart 44 v.Chr.** = **Idus van Maart**: Caesar vermoord in Senaat door samenzweerders (Cassius, Brutus, ~60 senatoren). Hadden gewaarschuwd door waarzegger 'Hoed u voor de Idus van Maart' (volgens Shakespeare). Caesar's laatste woorden: 'Et tu, Brute?' Brutus was Caesar's vroegere gunsteling." }],
           theorie: "Cito-favoriet datum onthouden. Beroemd ook door Shakespeare's *Julius Caesar* (1599).",
-          niveaus: { basis: "Caesar-moord. A.", simpeler: "15-3-44 = Caesar dood", nogSimpeler: "A." },
+          niveaus: { basis: "Caesar-moord.", simpeler: "15-3-44 = Caesar dood", nogSimpeler: "A." },
         },
       },
     ],

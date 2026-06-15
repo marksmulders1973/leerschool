@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Wel specifiek (gericht op virus).", "Specifieke afweer.", "Specifiek."],
         uitlegPad: {
           stappen: [{ titel: "Niet-gericht", tekst: "Huid blokkeert ALLES: virussen, bacteriën, parasieten — geen onderscheid. Aspecifiek = aangeboren + algemeen. Specifiek = doelgericht (B/T-cellen + antilichamen)." }],
-          niveaus: { basis: "Huid. A.", simpeler: "Huid = barrière voor alles. A.", nogSimpeler: "Huid" },
+          niveaus: { basis: "Huid.", simpeler: "Huid = barrière voor alles.", nogSimpeler: "Huid" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is specifieke afweer.", "Niet — gevolg, niet mechanisme.", "Niet — wel afweer, ander."],
         uitlegPad: {
           stappen: [{ titel: "'Fago' = eten, 'cyt' = cel", tekst: "Macrofagen + neutrofielen omsluiten pathogeen met celmembraan → opnemen in cel → afbreken met enzymen. Klassieke aspecifieke afweer. Macrofaag = 'grote eter' in Grieks." }],
-          niveaus: { basis: "Cellen eten pathogeen. A.", simpeler: "Witte bloedcel slokt op. A.", nogSimpeler: "Eten" },
+          niveaus: { basis: "Cellen eten pathogeen.", simpeler: "Witte bloedcel slokt op.", nogSimpeler: "Eten" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           stappen: [
             { titel: "T-stijging als wapen", tekst: "Bij infectie maakt lichaam **pyrogenen** (interleukine-1) die hypothalamus opdragen T omhoog te zetten. Pathogenen + virus-replicatie remmen bij hogere T. Immuuncel-werking versnelt. Bij T>40°C wel risico — paracetamol-grens." },
           ],
-          niveaus: { basis: "Pathogenen geremd. A.", simpeler: "Warmte slecht voor ziektes. A.", nogSimpeler: "Warmte" },
+          niveaus: { basis: "Pathogenen geremd.", simpeler: "Warmte slecht voor ziektes.", nogSimpeler: "Warmte" },
         },
       },
       {
@@ -81,7 +81,7 @@ const steps = [
           stappen: [
             { titel: "5 tekenen ontsteking", tekst: "Rubor (rood), calor (warm), tumor (zwelling), dolor (pijn), functio laesa (functieverlies). Veroorzaakt door histamine + ander cytokinen. Bloedvaten verwijden + doorlatender → meer immuunwerk ter plekke." },
           ],
-          niveaus: { basis: "Ontstekingsreactie. A.", simpeler: "Inflammation. A.", nogSimpeler: "Ontsteking" },
+          niveaus: { basis: "Ontstekingsreactie.", simpeler: "Inflammation.", nogSimpeler: "Ontsteking" },
         },
       },
       {
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Wel barrière.", "Wel barrière.", "Wel barrière."],
         uitlegPad: {
           stappen: [{ titel: "T-cellen zijn intern", tekst: "T-lymfocyten zijn witte bloedcellen → SPECIFIEKE INTERNE afweer (lymfeknopen, bloed). Huid/slijmvliezen/maagsap/traanvocht zijn externe barrières (eerste-lijn aspecifiek)." }],
-          niveaus: { basis: "T-cellen niet extern. A.", simpeler: "T-cel = intern specifiek. A.", nogSimpeler: "T" },
+          niveaus: { basis: "T-cellen niet extern.", simpeler: "T-cel = intern specifiek.", nogSimpeler: "T" },
         },
       },
     ],
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Niet — pancreas-cellen.", "Niet — rode bloedcellen.", "Niet — bijnieren."],
         uitlegPad: {
           stappen: [{ titel: "Plasmacel-fabriek", tekst: "Een actieve B-cell (plasmacel) maakt tot 2000 antilichaam-moleculen per seconde. Antilichamen circuleren in bloed + lymfe → binden aan antigeen op pathogeen → markeren voor opruiming." }],
-          niveaus: { basis: "Antilichamen. A.", simpeler: "B = antilichaam-maker. A.", nogSimpeler: "Ab" },
+          niveaus: { basis: "Antilichamen.", simpeler: "B = antilichaam-maker.", nogSimpeler: "Ab" },
         },
       },
       {
@@ -132,7 +132,7 @@ const steps = [
           stappen: [
             { titel: "HIV vernietigt deze cellen", tekst: "T-helper coördineert hele immuunrespons. HIV-virus richt zich specifiek op T-helpers → bij AIDS vermindering tot <200 cellen/mm³ → immuunsysteem instort → opportunistische infecties. Daarom werkt HIV-therapie via T-helper-bescherming." },
           ],
-          niveaus: { basis: "Activator. A.", simpeler: "Dirigent immuunsysteem. A.", nogSimpeler: "Activator" },
+          niveaus: { basis: "Activator.", simpeler: "Dirigent immuunsysteem.", nogSimpeler: "Activator" },
         },
       },
       {
@@ -149,7 +149,7 @@ const steps = [
           stappen: [
             { titel: "Antigeen = herken-molecuul", tekst: "Antigenen zijn eiwitten/suikers op pathogeen-oppervlak. Antilichamen binden specifiek aan één antigeen. Vaccin bevat (verzwakt) antigeen → lichaam maakt geheugen zonder ziekte." },
           ],
-          niveaus: { basis: "Pathogeen-molecuul. A.", simpeler: "Vlag op pathogeen. A.", nogSimpeler: "Antigen" },
+          niveaus: { basis: "Pathogeen-molecuul.", simpeler: "Vlag op pathogeen.", nogSimpeler: "Antigen" },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
           stappen: [
             { titel: "Sneller via geheugen", tekst: "Primair: 1-2 weken voor antilichaam-productie. Secundair: 1-3 dagen, met 10-100× meer antilichamen. Verklaart waarom mazelen na één keer nooit meer terug komt + waarom vaccinaties werken." },
           ],
-          niveaus: { basis: "Sneller + krachtiger. A.", simpeler: "2e keer sneller dankzij geheugen. A.", nogSimpeler: "Snel" },
+          niveaus: { basis: "Sneller + krachtiger.", simpeler: "2e keer sneller dankzij geheugen.", nogSimpeler: "Snel" },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
           stappen: [
             { titel: "Virus-respons", tekst: "Virussen verstoppen binnen lichaamscellen → antilichamen kunnen daar niet komen. T-killers herkennen geïnfecteerde cellen via virale antigenen op celoppervlak → doden cel (apoptose) → virus stopt vermenigvuldiging. Cruciaal voor virus-bestrijding." },
           ],
-          niveaus: { basis: "Geïnfecteerde cellen. A.", simpeler: "Cellen vol virus weg. A.", nogSimpeler: "Geinf cellen" },
+          niveaus: { basis: "Geïnfecteerde cellen.", simpeler: "Cellen vol virus weg.", nogSimpeler: "Geinf cellen" },
         },
       },
     ],
@@ -207,7 +207,7 @@ const steps = [
         wrongHints: [null, "Passieve immuniteit.", "Passief (via moedermelk).", "Geen erfelijke immuniteit."],
         uitlegPad: {
           stappen: [{ titel: "Eigen aanmaak", tekst: "Lichaam maakt zelf antilichamen + geheugen-cellen. Duurzaam (jaren-levenslang). Vaccinatie geeft hetzelfde effect zonder ziekte. Passief = kant-en-klare antilichamen ontvangen (geen geheugen, tijdelijk)." }],
-          niveaus: { basis: "Ziekte of vaccin. A.", simpeler: "Eigen aanmaak. A.", nogSimpeler: "Eigen" },
+          niveaus: { basis: "Ziekte of vaccin.", simpeler: "Eigen aanmaak.", nogSimpeler: "Eigen" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
             { titel: "Indirecte bescherming", tekst: "Bij hoge vaccinatie-graad: pathogeen kan niet circuleren. Zelfs niet-immune individu (baby <14 mnd voor BMR, chemo-patiënt, allergische voor vaccin) wordt beschermd want niemand om hem heen kan ziek worden. **Solidariteits-aspect** van vaccinatie." },
           ],
           theorie: "Daarom doet anti-vaccinatie schade aan mensen die niet kunnen vaccineren — niet alleen aan zichzelf.",
-          niveaus: { basis: "Niet-vaccineerbaren. A.", simpeler: "Beschermt kwetsbaren. A.", nogSimpeler: "Kwetsbaar" },
+          niveaus: { basis: "Niet-vaccineerbaren.", simpeler: "Beschermt kwetsbaren.", nogSimpeler: "Kwetsbaar" },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
             { titel: "Eerste mRNA-vaccin breed gebruikt 2021", tekst: "Lipid-nanodeeltjes leveren mRNA aan cellen → cellen produceren spike-eiwit (van coronavirus) → immuunsysteem leert dit eiwit herkennen. mRNA wordt binnen dagen afgebroken. Voordeel: snel ontwikkelbaar (~weken na ontdekking pathogeen). Werd gebruikt voor COVID-19 in record-tijd." },
           ],
           theorie: "Onderzoek loopt naar mRNA-vaccins voor kanker + andere ziektes.",
-          niveaus: { basis: "Eigen cellen maken antigeen. A.", simpeler: "mRNA → eigen eiwit → immuniteit. A.", nogSimpeler: "mRNA" },
+          niveaus: { basis: "Eigen cellen maken antigeen.", simpeler: "mRNA → eigen eiwit → immuniteit.", nogSimpeler: "mRNA" },
         },
       },
       {
@@ -260,7 +260,7 @@ const steps = [
           stappen: [
             { titel: "Eerste mensziekte uitgeroeid", tekst: "WHO-campagne 1967-1980 met mass-vaccinatie + isolatie → laatste natuurlijk geval Somalië 1977. WHO verklaarde 1980 uitroeiing. **Enige menselijke pathogeen ooit uitgeroeid** (rinderpest 2011 voor dier). Polio bijna ook — Afghanistan + Pakistan nog endemisch." },
           ],
-          niveaus: { basis: "Uitgeroeid 1980. A.", simpeler: "Niet meer wereldwijd. A.", nogSimpeler: "Uitgeroeid" },
+          niveaus: { basis: "Uitgeroeid 1980.", simpeler: "Niet meer wereldwijd.", nogSimpeler: "Uitgeroeid" },
         },
       },
       {
@@ -277,7 +277,7 @@ const steps = [
           stappen: [
             { titel: "Moeder-bescherming eerste maanden", tekst: "Tijdens zwangerschap passeren IgG-antilichamen placenta → baby beschermd tegen wat moeder immuun voor is. Eerste maanden moedermelk geeft extra IgA. Dat verdwijnt na ~6-12 mnd → daarom vaccinaties dan starten." },
           ],
-          niveaus: { basis: "Placenta + melk. A.", simpeler: "Moeder geeft antilichamen door. A.", nogSimpeler: "Moeder" },
+          niveaus: { basis: "Placenta + melk.", simpeler: "Moeder geeft antilichamen door.", nogSimpeler: "Moeder" },
         },
       },
     ],
@@ -303,7 +303,7 @@ const steps = [
           stappen: [
             { titel: "β-cellen weg", tekst: "T-cellen herkennen β-cel-antigenen als 'vreemd' → vernietigen. Geen insuline-productie → bloedsuiker stijgt. Patiënt moet levenslang insuline inspuiten. Verschilt van type-2 (insuline-resistentie, leefstijl-gerelateerd)." },
           ],
-          niveaus: { basis: "Auto-immuun pancreas. A.", simpeler: "Lichaam doodt eigen insuline-cellen. A.", nogSimpeler: "Auto" },
+          niveaus: { basis: "Auto-immuun pancreas.", simpeler: "Lichaam doodt eigen insuline-cellen.", nogSimpeler: "Auto" },
         },
       },
       {
@@ -320,7 +320,7 @@ const steps = [
           stappen: [
             { titel: "EpiPen redden levens", tekst: "Systemische IgE-reactie: massa histamine → bloedvaten verwijden + lekken → bloeddruk valt + luchtweg zwelt. Binnen minuten levensbedreigend. **Adrenaline-injectie (EpiPen)** keert reactie om → naar ziekenhuis. Triggers: pinda's, schaaldieren, wespsteek, medicijnen." },
           ],
-          niveaus: { basis: "Levensgevaarlijke allergie. A.", simpeler: "Extreem allergie + EpiPen. A.", nogSimpeler: "Anaf" },
+          niveaus: { basis: "Levensgevaarlijke allergie.", simpeler: "Extreem allergie + EpiPen.", nogSimpeler: "Anaf" },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
             { titel: "'Immuun-training'", tekst: "Sinds 1950 stijgen allergie + auto-immuun in westerse landen. Theorie: te schoon → immuunsysteem 'verveelt' → reageert op stuifmeel, eten. Boerderijkinderen hebben minder allergie (vroege diersmet)." },
           ],
           theorie: "Niet bedoeld 'wees vies' maar: balans + diverse blootstelling (probiotica, buitenspelen, brede dieet).",
-          niveaus: { basis: "Te schoon = meer allergie. A.", simpeler: "Vroege microben = beter immuun. A.", nogSimpeler: "Hygiene-hypo" },
+          niveaus: { basis: "Te schoon = meer allergie.", simpeler: "Vroege microben = beter immuun.", nogSimpeler: "Hygiene-hypo" },
         },
       },
       {
@@ -355,7 +355,7 @@ const steps = [
           stappen: [
             { titel: "T-helpers cruciaal", tekst: "HIV bindt CD4-receptor op T-helpers → infecteert + doodt ze. CD4-aantal daalt onder 200/mm³ = AIDS. Zonder T-helpers: geen activatie B + T-killer cellen → opportunistische infecties (PCP-longontsteking, Kaposi-sarcoom). Antiretrovirale therapie (ART) houdt virus laag, behoud CD4." },
           ],
-          niveaus: { basis: "T-helpers weg. A.", simpeler: "HIV doodt dirigent-cellen. A.", nogSimpeler: "T-help" },
+          niveaus: { basis: "T-helpers weg.", simpeler: "HIV doodt dirigent-cellen.", nogSimpeler: "T-help" },
         },
       },
       {
@@ -373,7 +373,7 @@ const steps = [
             { titel: "Gluten-trigger", tekst: "Bij coeliakie triggert gluten (eiwit in tarwe) een auto-immuunreactie tegen darm-villi → afbraak villi → opname-stoornis (gewichtsverlies, bloedarmoede). Behandeling: GLUTENVRIJ dieet voor altijd. ~1 op 100 mensen wereldwijd." },
           ],
           theorie: "Verschilt van gluten-intolerantie (niet auto-immuun, mildere symptomen).",
-          niveaus: { basis: "Gluten. A.", simpeler: "Tarwe-eiwit. A.", nogSimpeler: "Gluten" },
+          niveaus: { basis: "Gluten.", simpeler: "Tarwe-eiwit.", nogSimpeler: "Gluten" },
         },
       },
     ],
@@ -397,7 +397,7 @@ const steps = [
         wrongHints: [null, "Niet — R>1 groeit.", "Niet — niet stabiel.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Elke besmetting verdubbelt", tekst: "R₀ = 2: elke besmette geeft 2 nieuwe. Generatie 1: 1 → 2 → 4 → 8 → ... Exponentieel. Daarom maatregelen zoeken om R<1 te krijgen. COVID-Omicron R₀ tot ~10. Mazelen R₀ 12-18 (extreem besmettelijk)." }],
-          niveaus: { basis: "Exponentieel. A.", simpeler: "Verdubbelt per generatie. A.", nogSimpeler: "Groei" },
+          niveaus: { basis: "Exponentieel.", simpeler: "Verdubbelt per generatie.", nogSimpeler: "Groei" },
         },
       },
       {
@@ -409,7 +409,7 @@ const steps = [
           stappen: [
             { titel: "Virussen ≠ bacteriën", tekst: "Antibiotica richten zich op bacterie-specifieke structuren (celwand, ribosomen). Virussen hebben dat niet → werken niet. Voor virussen: antivirale middelen (oseltamivir voor griep, paxlovid voor COVID) of vaccinatie. Veel artsen schrijven antibiotica voor griep — IS NUTLOZE praktijk + draagt bij aan resistentie." },
           ],
-          niveaus: { basis: "Niet tegen virussen. A.", simpeler: "Virus is geen bacterie. A.", nogSimpeler: "Niet virus" },
+          niveaus: { basis: "Niet tegen virussen.", simpeler: "Virus is geen bacterie.", nogSimpeler: "Niet virus" },
         },
       },
       {
@@ -426,7 +426,7 @@ const steps = [
           stappen: [
             { titel: "Wij = 50% niet-menselijk", tekst: "~38 trillion bacteriële cellen vs ~30 trillion menselijke cellen. Vooral in darmen. Helpen vertering, vitamine-aanmaak, immuun-training. Verstoring (slecht dieet, te veel antibiotica) → diverse ziektes. Nieuw veld: probiotica + faeces-transplantatie." },
           ],
-          niveaus: { basis: "Eigen bacterie-ecosysteem. A.", simpeler: "Goede bacteriën in lichaam. A.", nogSimpeler: "Bacteriën" },
+          niveaus: { basis: "Eigen bacterie-ecosysteem.", simpeler: "Goede bacteriën in lichaam.", nogSimpeler: "Bacteriën" },
         },
       },
       {
@@ -444,7 +444,7 @@ const steps = [
             { titel: "Major Histocompatibility Complex", tekst: "HLA = MHC bij mensen. Eiwitten op celoppervlak die immuunsysteem 'eigen' vs 'vreemd' onderscheiden. Bij transplantatie: hoe meer HLA-match donor/ontvanger, hoe minder afstotingsrisico. Plus levenslange immuunsuppressiva." },
           ],
           theorie: "Eeneiige tweelingen zijn 100% HLA-match (klassieker transplantatie-keuze). Familieleden vaak betere match dan vreemden.",
-          niveaus: { basis: "HLA = zelf-markers. A.", simpeler: "Match nodig voor geen afstoten. A.", nogSimpeler: "HLA" },
+          niveaus: { basis: "HLA = zelf-markers.", simpeler: "Match nodig voor geen afstoten.", nogSimpeler: "HLA" },
         },
       },
       {
@@ -461,7 +461,7 @@ const steps = [
           stappen: [
             { titel: "Patiënt eigen leger uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** dat kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },
           ],
-          niveaus: { basis: "Eigen T-cellen reprogrammeren. A.", simpeler: "T-cellen 'leren' kanker doden. A.", nogSimpeler: "CAR-T" },
+          niveaus: { basis: "Eigen T-cellen reprogrammeren.", simpeler: "T-cellen 'leren' kanker doden.", nogSimpeler: "CAR-T" },
         },
       },
     ],

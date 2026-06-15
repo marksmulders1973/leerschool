@@ -72,7 +72,7 @@ const steps = [
           theorie: "Hoofdregel: optellen kan alleen met gelijke noemers. Tel dan alleen tellers. Noemer hetzelfde houden.",
           voorbeelden: [{ type: "tekening", tekst: "Pizza in 8 stukken. 3 stukken + 4 stukken = 7 stukken van de 8. = 7/8." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "7/8 < 1 helemaal. Dat klopt — minder dan een hele pizza." }],
-          niveaus: { basis: "Tellers optellen, noemer blijft. A.", simpeler: "3 + 4 = 7. Noemer blijft 8. Antwoord = 7/8.", nogSimpeler: "7/8" },
+          niveaus: { basis: "Tellers optellen, noemer blijft.", simpeler: "3 + 4 = 7. Noemer blijft 8. Antwoord = 7/8.", nogSimpeler: "7/8" },
         },
       },
       {
@@ -89,7 +89,7 @@ const steps = [
           theorie: "Truc: vermenigvuldig de noemers met elkaar voor KGN (mag groter zijn dan strikt nodig). Dan tellers aanpassen + optellen.",
           voorbeelden: [{ type: "stap-voor-stap", tekst: "1/3 = ?/12 → 12÷3=4 → 1×4=4 → 4/12. 1/4 = ?/12 → 12÷4=3 → 1×3=3 → 3/12. 4/12 + 3/12 = 7/12." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen rekenen 1/3 + 1/4 = 2/7. Fout! Tellers EN noemers samen optellen mag NIET." }],
-          niveaus: { basis: "KGN=12, dan 4/12+3/12=7/12. A.", simpeler: "Stap 1: gelijke noemer. 3×4=12. Stap 2: 1/3=4/12 en 1/4=3/12. Stap 3: 4+3=7. Antwoord 7/12.", nogSimpeler: "7/12" },
+          niveaus: { basis: "KGN=12, dan 4/12+3/12=7/12.", simpeler: "Stap 1: gelijke noemer. 3×4=12. Stap 2: 1/3=4/12 en 1/4=3/12. Stap 3: 4+3=7. Antwoord 7/12.", nogSimpeler: "7/12" },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
           theorie: "Twee methodes: (1) gelijknamig maken (handig op papier), (2) decimaal omzetten (handig met rekenmachine). Beide werken altijd.",
           voorbeelden: [{ type: "intuïtief", tekst: "3/5 = 60% van iets. 2/3 = ~67% van iets. 67% > 60%, dus 2/3 groter." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "2/3 = bijna 70%. 3/5 = precies 60%. Verschil ~7%-punt. 2/3 wint." }],
-          niveaus: { basis: "2/3 (KGN=15: 10>9). A.", simpeler: "Maak gelijk: 3/5=9/15, 2/3=10/15. 10>9 dus 2/3 groter.", nogSimpeler: "2/3" },
+          niveaus: { basis: "2/3 (KGN=15: 10>9).", simpeler: "Maak gelijk: 3/5=9/15, 2/3=10/15. 10>9 dus 2/3 groter.", nogSimpeler: "2/3" },
         },
       },
       {
@@ -120,7 +120,7 @@ const steps = [
           theorie: "Veel-voorkomende breuken om uit hoofd te kennen: 1/2=0,5 / 1/4=0,25 / 3/4=0,75 / 1/5=0,2 / 1/10=0,1 / 1/8=0,125.",
           voorbeelden: [{ type: "geld", tekst: "3/4 van €1 = €0,75. Want €1 = 4 kwartjes, 3 ervan = 75 cent." }],
           basiskennis: [{ onderwerp: "Geheugentruc", uitleg: "3/4 = 75% omdat 75 = 3×25 en 100 = 4×25. Net als kwartjes!" }],
-          niveaus: { basis: "0,75. A.", simpeler: "3/4 = 3 gedeeld door 4 = 0,75. Of: 3 van 4 kwartjes = 75 cent.", nogSimpeler: "0,75" },
+          niveaus: { basis: "0,75.", simpeler: "3/4 = 3 gedeeld door 4 = 0,75. Of: 3 van 4 kwartjes = 75 cent.", nogSimpeler: "0,75" },
         },
       },
       {
@@ -134,7 +134,7 @@ const steps = [
           theorie: "6 = 2×3. 9 = 3×3. Gemene factor = 3. Door 3 delen: 6→2, 9→3. Antwoord 2/3. Verder kan niet (2 en 3 hebben geen gemene deler > 1).",
           voorbeelden: [{ type: "tekening", tekst: "Pizza in 9 stukken, 6 stukken gepakt. = 2/3 van de pizza (dezelfde hoeveelheid, andere uitdrukking)." }],
           basiskennis: [{ onderwerp: "Examen-tip", uitleg: "Vereenvoudig altijd zo ver mogelijk. Cito rekent 6/9 vaak fout als 'niet vereenvoudigd'." }],
-          niveaus: { basis: "2/3 (door 3 delen). A.", simpeler: "6 en 9 delen beide door 3. 6/9 = 2/3.", nogSimpeler: "2/3" },
+          niveaus: { basis: "2/3 (door 3 delen).", simpeler: "6 en 9 delen beide door 3. 6/9 = 2/3.", nogSimpeler: "2/3" },
         },
       },
       {
@@ -148,7 +148,7 @@ const steps = [
           theorie: "Truc: zet beide breuken in decimaal. 3/5 = 0,60. 2/3 = 0,666... Groter = 2/3.",
           voorbeelden: [{ type: "stap", tekst: "0,60 < 0,67 → 3/5 < 2/3 → groter is 2/3." }],
           basiskennis: [{ onderwerp: "Vergelijkingstruc", uitleg: "Bij twee breuken vergelijken: decimaal omzetten of gelijknamig maken." }],
-          niveaus: { basis: "2/3 is groter. A.", simpeler: "3/5 = 0,60. 2/3 ≈ 0,67. 0,67 > 0,60.", nogSimpeler: "2/3" },
+          niveaus: { basis: "2/3 is groter.", simpeler: "3/5 = 0,60. 2/3 ≈ 0,67. 0,67 > 0,60.", nogSimpeler: "2/3" },
         },
       },
       {
@@ -669,7 +669,7 @@ const steps = [
           theorie: "Algemeen: % × bedrag = (procent / 100) × bedrag. 20/100 × 60 = 1200/100 = 12.",
           voorbeelden: [{ type: "winkel", tekst: "Trui van €60 met 20% korting → je betaalt €60 - €12 = €48." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "20% is 1/5 deel. €60 ÷ 5 = €12. Klopt." }],
-          niveaus: { basis: "€12 (10%=€6, ×2). A.", simpeler: "10% van €60 = €6. 20% = 2 keer dat = €12.", nogSimpeler: "€12" },
+          niveaus: { basis: "€12 (10%=€6, ×2).", simpeler: "10% van €60 = €6. 20% = 2 keer dat = €12.", nogSimpeler: "€12" },
         },
       },
       {
@@ -686,7 +686,7 @@ const steps = [
           theorie: "Twee stappen altijd: (1) korting in euro's uitrekenen, (2) van oude prijs aftrekken. Niet 'gewoon 25% nemen'.",
           voorbeelden: [{ type: "rekensom", tekst: "€40 × 25/100 = €10 korting. €40 - €10 = €30. Of sneller: 75% van €40 = €30." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen kiezen €10 — dat is de korting, niet de prijs. Lees vraag goed: 'wat betaal je?'" }],
-          niveaus: { basis: "€30 (€40 - €10 korting). A.", simpeler: "Korting = 25% × €40 = €10. Te betalen = €40 - €10 = €30.", nogSimpeler: "€30" },
+          niveaus: { basis: "€30 (€40 - €10 korting).", simpeler: "Korting = 25% × €40 = €10. Te betalen = €40 - €10 = €30.", nogSimpeler: "€30" },
         },
       },
       {
@@ -700,7 +700,7 @@ const steps = [
           theorie: "Algemeen: percentage = (deel ÷ geheel) × 100. Geheugentruc: deel teller door noemer, vermenigvuldig met 100.",
           voorbeelden: [{ type: "rekensom", tekst: "12 ÷ 60 = 0,2. 0,2 × 100 = 20. Antwoord: 20%." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "12/60 = 1/5 (vereenvoudig). 1/5 = 20%. Past." }],
-          niveaus: { basis: "20% (12÷60×100). A.", simpeler: "12 ÷ 60 = 0,2. × 100 = 20%.", nogSimpeler: "20%" },
+          niveaus: { basis: "20% (12÷60×100).", simpeler: "12 ÷ 60 = 0,2. × 100 = 20%.", nogSimpeler: "20%" },
         },
       },
       {
@@ -718,7 +718,7 @@ const steps = [
           theorie: "Algemene methode: (1) tel alle delen op, (2) bereken één deel, (3) vermenigvuldig met aantal delen per groep.",
           voorbeelden: [{ type: "check", tekst: "9 meiden + 15 jongens = 24 ✓. Verhouding 9:15 = 3:5 ✓ (beide ÷3)." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "9 meiden van 24 = 37,5% = bijna 4 op de 10. Past bij verhouding 3:5." }],
-          niveaus: { basis: "9 meiden (24÷8×3). A.", simpeler: "3+5=8 delen. 24÷8=3 per deel. Meiden=3×3=9.", nogSimpeler: "9" },
+          niveaus: { basis: "9 meiden (24÷8×3).", simpeler: "3+5=8 delen. 24÷8=3 per deel. Meiden=3×3=9.", nogSimpeler: "9" },
         },
       },
       {
@@ -736,7 +736,7 @@ const steps = [
           theorie: "Formule: snelheid (v) = afstand (s) ÷ tijd (t). Onthouden via 'vst-driehoek': v = s/t / s = v×t / t = s/v.",
           voorbeelden: [{ type: "vergelijk", tekst: "Lopen: ~5 km/u. Fietsen: 15-30 km/u. Auto stad: 30-50 km/u. Auto snelweg: 100-130 km/u." }],
           basiskennis: [{ onderwerp: "Tijd in uren", uitleg: "30 min = 0,5 uur (niet 30!). 15 min = 0,25 uur. 45 min = 0,75 uur." }],
-          niveaus: { basis: "30 km/u (×2 want 30 min). A.", simpeler: "30 min = half uur. 15 km in half uur = 30 km in een heel uur.", nogSimpeler: "30" },
+          niveaus: { basis: "30 km/u (×2 want 30 min).", simpeler: "30 min = half uur. 15 km in half uur = 30 km in een heel uur.", nogSimpeler: "30" },
         },
       },
       {
@@ -753,7 +753,7 @@ const steps = [
           theorie: "Eindprijs = oude prijs × (1 − percentage/100). 80 × (1 − 0,25) = 80 × 0,75 = €60.",
           voorbeelden: [{ type: "snelle-truc", tekst: "25% korting = ¾ overhouden. 80 × ¾ = 60." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "€60 < €80 (klopt: korting), en €60 > €40 (niet half af). ✓" }],
-          niveaus: { basis: "€60 (€80 − 25%). A.", simpeler: "25% van €80 = €20. €80 − €20 = €60.", nogSimpeler: "€60" },
+          niveaus: { basis: "€60 (€80 − 25%).", simpeler: "25% van €80 = €20. €80 − €20 = €60.", nogSimpeler: "€60" },
         },
       },
       {
@@ -1332,7 +1332,7 @@ const steps = [
           theorie: "Formule: km × 1000 = m. Of: komma 3 plekken naar rechts schuiven.",
           voorbeelden: [{ type: "fiets", tekst: "Wandeling 2,5 km = 2500 m. Een gemiddelde school-naar-huis-loopje." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "1 km = 1000 m (dat is een vaste). 2,5 km = 2 × 1000 + 0,5 × 1000 = 2000 + 500 = 2500." }],
-          niveaus: { basis: "2500 m. A.", simpeler: "km × 1000 = m. 2,5 × 1000 = 2500.", nogSimpeler: "2500" },
+          niveaus: { basis: "2500 m.", simpeler: "km × 1000 = m. 2,5 × 1000 = 2500.", nogSimpeler: "2500" },
         },
       },
       {
@@ -1346,7 +1346,7 @@ const steps = [
           theorie: "Algemeen: kleinere eenheid naar grotere → delen. Grotere naar kleinere → vermenigvuldigen.",
           voorbeelden: [{ type: "vergelijken", tekst: "Pak suiker = 1000 g = 1 kg. 350 g = 0,35 kg = ongeveer 1/3 pak." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "0,35 kg = 350 g = een appel + sinaasappel. Klopt." }],
-          niveaus: { basis: "0,35 kg. A.", simpeler: "350 g ÷ 1000 = 0,35 kg.", nogSimpeler: "0,35" },
+          niveaus: { basis: "0,35 kg.", simpeler: "350 g ÷ 1000 = 0,35 kg.", nogSimpeler: "0,35" },
         },
       },
       {
@@ -1364,7 +1364,7 @@ const steps = [
           theorie: "Twee stappen: (1) cm × schaalgetal = cm werkelijk. (2) cm werkelijk → m → km (delen door 100 dan door 1000).",
           voorbeelden: [{ type: "kaart", tekst: "Schaal 1:25.000 (wandelkaart): 1 cm = 250 m. Schaal 1:1.000.000 (atlas): 1 cm = 10 km." }],
           basiskennis: [{ onderwerp: "Examen-tip", uitleg: "Schaal staat altijd in legenda. Vragen Doorstroomtoets gebruiken meestal 1:25.000 of 1:50.000." }],
-          niveaus: { basis: "2 km. A.", simpeler: "4 cm × 50.000 = 200.000 cm = 2 km.", nogSimpeler: "2 km" },
+          niveaus: { basis: "2 km.", simpeler: "4 cm × 50.000 = 200.000 cm = 2 km.", nogSimpeler: "2 km" },
         },
       },
       {
@@ -1378,7 +1378,7 @@ const steps = [
           theorie: "Inhoud-trapje: L → dL → cL → mL. Elke stap = × 10. L naar mL = 3 stappen = × 1000.",
           voorbeelden: [{ type: "vergelijken", tekst: "Pak melk = 1 L = 1000 mL. 2,5 L = 2,5 pakken melk = 2500 mL." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "2,5 L past in fles cola, in mL is 2500." }],
-          niveaus: { basis: "2500 mL. A.", simpeler: "2,5 L × 1000 = 2500 mL.", nogSimpeler: "2500" },
+          niveaus: { basis: "2500 mL.", simpeler: "2,5 L × 1000 = 2500 mL.", nogSimpeler: "2500" },
         },
       },
       {
@@ -1393,7 +1393,7 @@ const steps = [
           theorie: "Rechthoek-formule: A = l × b. Vierkant-formule: A = z² (zijde × zijde). Driehoek: A = ½ × basis × hoogte.",
           voorbeelden: [{ type: "verschil", tekst: "Oppervlakte = 24 m² (de hele tuin). Omtrek = 2×6 + 2×4 = 20 m (de RAND, hoeveel hek je nodig hebt)." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen verwarren oppervlakte (×) en omtrek (+). Oppervlakte = vermenigvuldigen, omtrek = optellen." }],
-          niveaus: { basis: "24 m². A.", simpeler: "6 m × 4 m = 24 m².", nogSimpeler: "24" },
+          niveaus: { basis: "24 m².", simpeler: "6 m × 4 m = 24 m².", nogSimpeler: "24" },
         },
       },
       {
@@ -1416,7 +1416,7 @@ const steps = [
           theorie: "Kubus: V = z³. Rechthoekig blok: V = l × b × h. Inhoud altijd in 'kubieke' eenheden.",
           voorbeelden: [{ type: "alledaags", tekst: "1000 cm³ = 1 liter = pak melk." }],
           basiskennis: [{ onderwerp: "3 dimensies", uitleg: "Oppervlakte = 2D (m²), volume = 3D (m³ of cm³)." }],
-          niveaus: { basis: "1000 cm³ (10³). A.", simpeler: "10 × 10 × 10 = 1000. Eenheid is cm³.", nogSimpeler: "1000" },
+          niveaus: { basis: "1000 cm³ (10³).", simpeler: "10 × 10 × 10 = 1000. Eenheid is cm³.", nogSimpeler: "1000" },
         },
       },
       {
@@ -1879,7 +1879,7 @@ const steps = [
           theorie: "Twee stappen: (1) eerst totale kosten uitrekenen (×), (2) dan aftrekken van betaald bedrag (-).",
           voorbeelden: [{ type: "check", tekst: "€37,50 + €12,50 = €50 ✓. Wisselgeld klopt." }],
           basiskennis: [{ onderwerp: "Lezen", uitleg: "Vraag is 'wisselgeld', niet 'totale kosten'. Onderscheid maken!" }],
-          niveaus: { basis: "€12,50. A.", simpeler: "3×€12,50=€37,50. €50-€37,50=€12,50 wisselgeld.", nogSimpeler: "€12,50" },
+          niveaus: { basis: "€12,50.", simpeler: "3×€12,50=€37,50. €50-€37,50=€12,50 wisselgeld.", nogSimpeler: "€12,50" },
         },
       },
       {
@@ -1896,7 +1896,7 @@ const steps = [
           theorie: "Formule: gemiddelde = (a₁ + a₂ + ... + aₙ) ÷ n. Veel-gebruikt op rapport en in statistiek.",
           voorbeelden: [{ type: "check", tekst: "7,25 ligt tussen 6,5 en 8. Past in midden van de range. Klopt." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Gemiddelde 7,25 = 'voldoende met ruim marge'. Een 7,4 of hoger op rapport is mooi." }],
-          niveaus: { basis: "7,25. A.", simpeler: "Totaal=29. ÷ 4 cijfers = 7,25.", nogSimpeler: "7,25" },
+          niveaus: { basis: "7,25.", simpeler: "Totaal=29. ÷ 4 cijfers = 7,25.", nogSimpeler: "7,25" },
         },
       },
       {
@@ -1913,7 +1913,7 @@ const steps = [
           theorie: "Snel: 25% korting = 75% betalen. 75% × €32 = €24. Sneller dan 'korting eraf trekken'.",
           voorbeelden: [{ type: "check", tekst: "€24 + €8 = €32 ✓. Korting klopt." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel kiezen €8 (de korting, niet de eindprijs). Lees vraag: 'wat betaal je?'" }],
-          niveaus: { basis: "€24. A.", simpeler: "Korting=€8 (25% van €32). Te betalen=€32-€8=€24.", nogSimpeler: "€24" },
+          niveaus: { basis: "€24.", simpeler: "Korting=€8 (25% van €32). Te betalen=€32-€8=€24.", nogSimpeler: "€24" },
         },
       },
       {
@@ -1930,7 +1930,7 @@ const steps = [
           theorie: "Formule: s = v × t. Pas op: tijd in uren! 30 min = 0,5 u. 45 min = 0,75 u. 15 min = 0,25 u. 20 min = 1/3 u.",
           voorbeelden: [{ type: "check", tekst: "90 km in 1 uur. Dus 30 km in 1/3 uur. Past." }],
           basiskennis: [{ onderwerp: "Tijd-omzetting", uitleg: "Veel mensen vergeten minuten naar uur om te zetten. 20 min ≠ 20/100 u, wel 20/60 u." }],
-          niveaus: { basis: "30 km (1/3 × 90). A.", simpeler: "20 min = 1/3 u. 1/3 × 90 km/u = 30 km.", nogSimpeler: "30" },
+          niveaus: { basis: "30 km (1/3 × 90).", simpeler: "20 min = 1/3 u. 1/3 × 90 km/u = 30 km.", nogSimpeler: "30" },
         },
       },
       {
@@ -1947,7 +1947,7 @@ const steps = [
           theorie: "Truc: 100% - bekend % = complement. Dan dat percentage uitrekenen. Alternatief: aantal voldoendes uitrekenen (21), dan aftrekken van totaal (28-21=7).",
           voorbeelden: [{ type: "check", tekst: "7 + 21 = 28 ✓. Klopt." }],
           basiskennis: [{ onderwerp: "Lezen", uitleg: "Vraag is ONVOLDOENDES. Veel mensen rekenen voldoendes uit (21) en vergeten af te trekken." }],
-          niveaus: { basis: "7 onvoldoendes (25% × 28). A.", simpeler: "75% voldoende = 25% onvoldoende. 25% × 28 = 7.", nogSimpeler: "7" },
+          niveaus: { basis: "7 onvoldoendes (25% × 28).", simpeler: "75% voldoende = 25% onvoldoende. 25% × 28 = 7.", nogSimpeler: "7" },
         },
       },
       {
@@ -1991,7 +1991,7 @@ const steps = [
           theorie: "Hoofdregel rekenen met gemengde eenheden: ALTIJD eerst gelijke eenheid maken. Dan pas optellen/aftrekken.",
           voorbeelden: [{ type: "alledaags", tekst: "Tas met boodschappen + kg-pak: alles in kg → optellen." }],
           basiskennis: [{ onderwerp: "Valkuil", uitleg: "Veel mensen doen 800 + 2 = 802. Fout — eenheden niet gelijk!" }],
-          niveaus: { basis: "2,8 kg (0,8 + 2). A.", simpeler: "800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.", nogSimpeler: "2,8" },
+          niveaus: { basis: "2,8 kg (0,8 + 2).", simpeler: "800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.", nogSimpeler: "2,8" },
         },
       },
       {

@@ -35,7 +35,7 @@ const steps = [
           theorie: "Werkwoord = wat onderwerp doet. Vraag 'wat doet Tom?' → danst.",
           voorbeelden: [{ type: "ontleed", tekst: "Tom (eigennaam) danst (ww) op (vz) het (lidw) plein (zelfst nw)." }],
           basiskennis: [{ onderwerp: "Test ik+ww", uitleg: "'Ik dans' ✓ → ww. 'Ik Tom' ✗ → geen ww." }],
-          niveaus: { basis: "danst. A.", simpeler: "Wat doet Tom? Hij danst. Danst = werkwoord.", nogSimpeler: "Danst" },
+          niveaus: { basis: "danst.", simpeler: "Wat doet Tom? Hij danst. Danst = werkwoord.", nogSimpeler: "Danst" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
           theorie: "Hele werkwoord = infinitief op -en. Lopend (deelwoord), liep (vt), loopt (3e pers) zijn vormen.",
           voorbeelden: [{ type: "tabel", tekst: "lopend → lopen. Schreef → schrijven. At → eten." }],
           basiskennis: [{ onderwerp: "Hele = woordenboek", uitleg: "Hele werkwoord = vorm in woordenboek (lopen, niet loopt)." }],
-          niveaus: { basis: "lopen. A.", simpeler: "Lopend komt van lopen. Hele werkwoord eindigt op -en = lopen.", nogSimpeler: "Lopen" },
+          niveaus: { basis: "lopen.", simpeler: "Lopend komt van lopen. Hele werkwoord eindigt op -en = lopen.", nogSimpeler: "Lopen" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
           theorie: "Echte zin heeft minstens één werkwoord. 'Auto rood' mist 'is' (toestand-ww).",
           voorbeelden: [{ type: "test", tekst: "De auto rood ✗ → 'is' ontbreekt. De auto IS rood ✓." }],
           basiskennis: [{ onderwerp: "Toestands-ww", uitleg: "'Is/zijn/wordt' zijn ook werkwoorden — zonder hen is zin incompleet." }],
-          niveaus: { basis: "Zin 1 = geen ww. A.", simpeler: "Zin 1 mist 'is' tussen auto en rood. De andere zinnen hebben rijdt/fiets/loopt = ww.", nogSimpeler: "Zin 1" },
+          niveaus: { basis: "Zin 1 = geen ww.", simpeler: "Zin 1 mist 'is' tussen auto en rood. De andere zinnen hebben rijdt/fiets/loopt = ww.", nogSimpeler: "Zin 1" },
         },
       },
     ],
@@ -84,7 +84,7 @@ const steps = [
           theorie: "Hij/zij/het = stam + t in tegenwoordige tijd.",
           voorbeelden: [{ type: "tabel", tekst: "Ik speel (stam). Jij/hij speelt (stam+t). Wij spelen (heel ww)." }],
           basiskennis: [{ onderwerp: "Niet -de", uitleg: "Verleden tijd zou 'speelde' zijn. Hier vragen ze TT." }],
-          niveaus: { basis: "speelt. A.", simpeler: "Spelen → stam speel. Hij + stam + t = speelt.", nogSimpeler: "Speelt" },
+          niveaus: { basis: "speelt.", simpeler: "Spelen → stam speel. Hij + stam + t = speelt.", nogSimpeler: "Speelt" },
         },
       },
       {
@@ -98,7 +98,7 @@ const steps = [
           theorie: "Regel: stam + t. Maar als stam al op t eindigt → geen extra t (geen 'praatt')." ,
           voorbeelden: [{ type: "tabel", tekst: "Praten → hij praat. Eten → hij eet. Zitten → hij zit. Stam eindigt op t = geen extra t." }],
           basiskennis: [{ onderwerp: "Verschil met d", uitleg: "Stam op d → wél extra t (vinden → vindt). Stam op t → niet (praten → praat)." }],
-          niveaus: { basis: "praat. A.", simpeler: "Praten → stam praat. Eindigt al op t → geen tweede t. → praat.", nogSimpeler: "Praat" },
+          niveaus: { basis: "praat.", simpeler: "Praten → stam praat. Eindigt al op t → geen tweede t. → praat.", nogSimpeler: "Praat" },
         },
       },
       {
@@ -112,7 +112,7 @@ const steps = [
           theorie: "Stam eindigend op d: wél extra t toevoegen. Vind + t = vindt. Klinkt als 'vint' maar D blijft.",
           voorbeelden: [{ type: "tabel", tekst: "Vinden → hij vindt. Worden → hij wordt. Houden → hij houdt." }],
           basiskennis: [{ onderwerp: "Klink-truc", uitleg: "Hoor 'vint' maar SCHRIJF 'vindt' (d behouden + t erbij)." }],
-          niveaus: { basis: "vindt. A.", simpeler: "Vinden → stam vind. Hij + stam + t = vindt (klinkt als vint, maar schrijven met d en t).", nogSimpeler: "Vindt" },
+          niveaus: { basis: "vindt.", simpeler: "Vinden → stam vind. Hij + stam + t = vindt (klinkt als vint, maar schrijven met d en t).", nogSimpeler: "Vindt" },
         },
       },
     ],
@@ -133,7 +133,7 @@ const steps = [
           theorie: "Zwakke werkwoorden: stam in kofschip → -te. Niet in kofschip → -de.",
           voorbeelden: [{ type: "tabel", tekst: "Stop+te (P=kofschip). Werk+te (K). Vis+te (S). Hoor+de (R, niet kofschip)." }],
           basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'t Kofschip — neem letters t, k, f, s, ch, p uit het woord 'kofschip'." }],
-          niveaus: { basis: "stopte. A.", simpeler: "Stoppen → stam stop. P zit in kofschip → -te → stopte.", nogSimpeler: "Stopte" },
+          niveaus: { basis: "stopte.", simpeler: "Stoppen → stam stop. P zit in kofschip → -te → stopte.", nogSimpeler: "Stopte" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
           theorie: "Meervoud (wij/jullie/zij): stam + -den (zwak) of -ten (kofschip).",
           voorbeelden: [{ type: "tabel", tekst: "Wij hoorden (R, geen kofschip). Wij stopten (P, kofschip). Wij werkten (K, kofschip)." }],
           basiskennis: [{ onderwerp: "Enkel vs meervoud", uitleg: "Ik hoorde (-de). Wij hoorden (-den)." }],
-          niveaus: { basis: "hoorden. A.", simpeler: "Horen → R (geen kofschip) → -de. Meervoud (wij) = -den → hoorden.", nogSimpeler: "Hoorden" },
+          niveaus: { basis: "hoorden.", simpeler: "Horen → R (geen kofschip) → -de. Meervoud (wij) = -den → hoorden.", nogSimpeler: "Hoorden" },
         },
       },
       {
@@ -161,7 +161,7 @@ const steps = [
           theorie: "Letter X = K+S klank → telt als kofschip. Faxen → faxte. Mixen → mixte.",
           voorbeelden: [{ type: "leenwoorden", tekst: "Faxen→faxte. Mixen→mixte. Fixen→fixte. Allemaal -te." }],
           basiskennis: [{ onderwerp: "Engelse leen-ww", uitleg: "Engelse werkwoorden volgen NL kofschip-regel: stam-eindigt-op-x → -te." }],
-          niveaus: { basis: "fixte. A.", simpeler: "Fixen → x (=ks, kofschip) → -te → fixte.", nogSimpeler: "Fixte" },
+          niveaus: { basis: "fixte.", simpeler: "Fixen → x (=ks, kofschip) → -te → fixte.", nogSimpeler: "Fixte" },
         },
       },
     ],
@@ -182,7 +182,7 @@ const steps = [
           theorie: "Sterke werkwoorden volgen GEEN kofschip-regel. Klinker-wisseling. Uit hoofd leren.",
           voorbeelden: [{ type: "tabel", tekst: "Lopen→liep. Schrijven→schreef. Vinden→vond. Eten→at." }],
           basiskennis: [{ onderwerp: "Klink-test", uitleg: "Voelt 'loopde' raar? → meestal sterk werkwoord." }],
-          niveaus: { basis: "liep. A.", simpeler: "Lopen is sterk werkwoord. Klinker oo wordt ie → liep. (Niet loopde — geen kofschip-regel).", nogSimpeler: "Liep" },
+          niveaus: { basis: "liep.", simpeler: "Lopen is sterk werkwoord. Klinker oo wordt ie → liep. (Niet loopde — geen kofschip-regel).", nogSimpeler: "Liep" },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
           theorie: "Sterke vervoeging lezen: lees-las-gelezen. Klinker-sprong e→a→e.",
           voorbeelden: [{ type: "tabel", tekst: "Lezen → ik las / wij lazen / gelezen." }],
           basiskennis: [{ onderwerp: "Bij twijfel uitspreken", uitleg: "'Hij leesde' klinkt fout → sterk → las." }],
-          niveaus: { basis: "las. A.", simpeler: "Lezen sterk: e→a → las. Hij las het boek.", nogSimpeler: "Las" },
+          niveaus: { basis: "las.", simpeler: "Lezen sterk: e→a → las. Hij las het boek.", nogSimpeler: "Las" },
         },
       },
       {
@@ -210,7 +210,7 @@ const steps = [
           theorie: "Onregelmatige werkwoorden: stam verandert volledig. Gaan→ging/gingen. Zijn→was/waren. Hebben→had/hadden.",
           voorbeelden: [{ type: "tabel", tekst: "Gaan: ik ging, wij gingen. Komen: kwam, kwamen. Doen: deed, deden." }],
           basiskennis: [{ onderwerp: "Top-onregelmatige", uitleg: "Zijn, hebben, gaan, komen, doen — leer uit hoofd." }],
-          niveaus: { basis: "gingen. A.", simpeler: "Gaan is onregelmatig: ik ging, wij gingen. Niet gaande/gaden — geen regel werkt.", nogSimpeler: "Gingen" },
+          niveaus: { basis: "gingen.", simpeler: "Gaan is onregelmatig: ik ging, wij gingen. Niet gaande/gaden — geen regel werkt.", nogSimpeler: "Gingen" },
         },
       },
     ],
@@ -231,7 +231,7 @@ const steps = [
           theorie: "Hij/zij/het: stam + t in tegenwoordige tijd.",
           voorbeelden: [{ type: "vorm", tekst: "Ik werk. Jij werkt. Hij werkt. Wij werken." }],
           basiskennis: [{ onderwerp: "Niet -te", uitleg: "'Werkte' = verleden tijd. Hier vragen ze nu (tegenwoordig)." }],
-          niveaus: { basis: "werkt. A.", simpeler: "Werken → stam werk + t = werkt (hij-vorm tegenwoordige tijd).", nogSimpeler: "Werkt" },
+          niveaus: { basis: "werkt.", simpeler: "Werken → stam werk + t = werkt (hij-vorm tegenwoordige tijd).", nogSimpeler: "Werkt" },
         },
       },
       {
@@ -245,7 +245,7 @@ const steps = [
           theorie: "Wanneer stam op t eindigt + kofschip → meervoud krijgt 2 t's: praat-ten = praatten.",
           voorbeelden: [{ type: "stap", tekst: "Praten: stam praat. T in kofschip → -te. Wij = ten → praat+ten = praatten." }],
           basiskennis: [{ onderwerp: "Geen 'pratten'", uitleg: "Stam = praat (lange aa), niet prat. Spelling: praatten." }],
-          niveaus: { basis: "praatten. A.", simpeler: "Praten → stam praat → -te (kofschip) → wij = -ten → praat + ten = praatten.", nogSimpeler: "Praatten" },
+          niveaus: { basis: "praatten.", simpeler: "Praten → stam praat → -te (kofschip) → wij = -ten → praat + ten = praatten.", nogSimpeler: "Praatten" },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
           theorie: "Sterke vervoeging eten: eet-at-gegeten. Klinker e→a→e.",
           voorbeelden: [{ type: "tabel", tekst: "Ik at. Wij aten. Heb gegeten." }],
           basiskennis: [{ onderwerp: "Voelt fout", uitleg: "'Eette' klinkt fout → sterk werkwoord → at." }],
-          niveaus: { basis: "at. A.", simpeler: "Eten sterk: e→a → at. Zij at een appel.", nogSimpeler: "At" },
+          niveaus: { basis: "at.", simpeler: "Eten sterk: e→a → at. Zij at een appel.", nogSimpeler: "At" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
           theorie: "Hij/zij/het: stam + t. Werkt ook bij sterke ww in tegenwoordige tijd.",
           voorbeelden: [{ type: "tabel", tekst: "Ik lees. Jij/hij leest. Wij lezen. (Verleden: las, lazen)." }],
           basiskennis: [{ onderwerp: "TT vs VT", uitleg: "Tegenwoordige tijd = nu. Las = verleden tijd." }],
-          niveaus: { basis: "leest. A.", simpeler: "Lezen → stam lees + t = leest (hij-vorm tegenwoordige tijd).", nogSimpeler: "Leest" },
+          niveaus: { basis: "leest.", simpeler: "Lezen → stam lees + t = leest (hij-vorm tegenwoordige tijd).", nogSimpeler: "Leest" },
         },
       },
       {
@@ -287,7 +287,7 @@ const steps = [
           theorie: "Zwak ww: stam (ren) niet in kofschip → -de → rende.",
           voorbeelden: [{ type: "vorm", tekst: "Ik rende. Jij/hij rende. Wij renden." }],
           basiskennis: [{ onderwerp: "Stam = ren", uitleg: "Rennen → ren-nen → stam ren (één n)." }],
-          niveaus: { basis: "rende. A.", simpeler: "Rennen → stam ren → N (geen kofschip) → -de → rende.", nogSimpeler: "Rende" },
+          niveaus: { basis: "rende.", simpeler: "Rennen → stam ren → N (geen kofschip) → -de → rende.", nogSimpeler: "Rende" },
         },
       },
       {

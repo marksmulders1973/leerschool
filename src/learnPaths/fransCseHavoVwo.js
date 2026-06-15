@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Andere staan op SE.", "Niet — leesvaardigheid.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Lezen op CSE, rest op SE", tekst: "**CSE Frans** = alleen leesvaardigheid. Luistervaardigheid, spreekvaardigheid, schrijfvaardigheid worden in **SE (schoolexamen)** getest tijdens jaar." }],
-          niveaus: { basis: "Lezen. A.", simpeler: "CSE = lezen", nogSimpeler: "Lezen" },
+          niveaus: { basis: "Lezen.", simpeler: "CSE = lezen", nogSimpeler: "Lezen" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee tegelijk = sterk", tekst: "Bij CSE Frans **beide toegestaan**: eentalig Frans (Larousse) + tweetalig Frans-NL. **Beide tegelijk gebruiken** = handig: tweetalig snel voor onbekend woord, eentalig voor nuance + uitleg uit context." }],
           theorie: "Tip: koop ze voor 4e/5e klas. Vraag school of Open Boek-pool ze leent.",
-          niveaus: { basis: "Beide. A.", simpeler: "Eentalig + tweetalig", nogSimpeler: "Beide" },
+          niveaus: { basis: "Beide.", simpeler: "Eentalig + tweetalig", nogSimpeler: "Beide" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Niet — VWO.", "Te lang."],
         uitlegPad: {
           stappen: [{ titel: "HAVO 2,5 / VWO 3", tekst: "**HAVO: 2,5 uur**. VWO: 3 uur. Bij dyslexie-/dyscalculie-verklaring 30 min extra toegestaan." }],
-          niveaus: { basis: "2,5 uur. A.", simpeler: "HAVO=2,5 uur", nogSimpeler: "2,5" },
+          niveaus: { basis: "2,5 uur.", simpeler: "HAVO=2,5 uur", nogSimpeler: "2,5" },
         },
       },
       {
@@ -68,7 +68,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CEFR-niveaus", tekst: "**HAVO Frans CSE: B1** ('zelfstandig taalgebruiker') — kan hoofdpunten begrijpen in heldere standaard-taal. **VWO Frans CSE: B2** ('vaardig taalgebruiker') — kan complexere teksten met argumentatie + abstracte ideeën." }],
           theorie: "Voor moedertaal-niveau (Frans als 1e taal): C2.",
-          niveaus: { basis: "B1. A.", simpeler: "HAVO Frans = B1", nogSimpeler: "B1" },
+          niveaus: { basis: "B1.", simpeler: "HAVO Frans = B1", nogSimpeler: "B1" },
         },
       },
       {
@@ -78,7 +78,7 @@ const steps = [
         wrongHints: [null, "Te kort om grondig.", "Veel te lang.", "Belachelijk lang."],
         uitlegPad: {
           stappen: [{ titel: "Tijdverdeling", tekst: "2,5 uur = 150 min ÷ 10 teksten = **~15 min per tekst**. Verdeel: 5 min globaal lezen, 8 min vragen, 2 min controle. Bij twijfel volgende → kom terug." }],
-          niveaus: { basis: "~15 min. A.", simpeler: "150/10=15 min", nogSimpeler: "15" },
+          niveaus: { basis: "~15 min.", simpeler: "150/10=15 min", nogSimpeler: "15" },
         },
       },
     ],
@@ -97,7 +97,7 @@ const steps = [
         wrongHints: [null, "Goed voor detail-vraag.", "Te traag.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Top + bottom = hoofd", tekst: "**Hoofdgedachte** staat meestal in **eerste of laatste alinea** (thesis-zin of conclusie). Daar gericht lezen. Detail-vragen vergen scanning op kernwoord." }],
-          niveaus: { basis: "Eerst + laatst. A.", simpeler: "Hoofdgedachte = top+bottom", nogSimpeler: "A." },
+          niveaus: { basis: "Eerst + laatst.", simpeler: "Hoofdgedachte = top+bottom", nogSimpeler: "A." },
         },
       },
       {
@@ -108,7 +108,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Faux ami #1", tekst: "**Librairie** = boekwinkel (waar je boeken **koopt**). Bibliotheek (waar je boeken **leent**) = **bibliothèque**. Cito-klassieker — leerlingen verwarren dit constant." }],
           theorie: "Memo: 'librairie' is een 'librai' (boekverkoper) z'n winkel.",
-          niveaus: { basis: "Boekwinkel. A.", simpeler: "Librairie = boekwinkel", nogSimpeler: "Boekwinkel" },
+          niveaus: { basis: "Boekwinkel.", simpeler: "Librairie = boekwinkel", nogSimpeler: "Boekwinkel" },
         },
       },
       {
@@ -119,7 +119,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "ne...que ≠ ontkenning", tekst: "**ne...que** = alleen maar = beperking, **niet** ontkenning. *Il ne lit que des romans* = Hij leest **alleen** romans (= Hij leest niets anders dan romans).\n\nVerwarrend omdat *ne* meestal ontkenning is. Cito-favoriete val." }],
           theorie: "Andere ne-constructies: ne...pas (niet), ne...jamais (nooit), ne...rien (niets), ne...personne (niemand) — die zijn wel ontkenning.",
-          niveaus: { basis: "Alleen. A.", simpeler: "ne...que = alleen", nogSimpeler: "Alleen" },
+          niveaus: { basis: "Alleen.", simpeler: "ne...que = alleen", nogSimpeler: "Alleen" },
         },
       },
       {
@@ -129,7 +129,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is donc.", "Niet — dat is parce que.", "Niet — dat is ensuite/puis."],
         uitlegPad: {
           stappen: [{ titel: "Cependant = tegenstelling", tekst: "**Cependant** = echter, niettemin, maar. Signaleert tegenargument of nuance. Synoniemen: *toutefois*, *néanmoins*, *pourtant*. Belangrijke marker voor 'auteur draait richting om'." }],
-          niveaus: { basis: "Echter. A.", simpeler: "Cependant = echter", nogSimpeler: "Echter" },
+          niveaus: { basis: "Echter.", simpeler: "Cependant = echter", nogSimpeler: "Echter" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord wijst terug", tekst: "**Cela / ce / ça** verwijst meestal naar iets dat **vóór** is genoemd in de tekst (anaphoor). Lees 1-3 zinnen terug, zoek concept/idee dat past." }],
           theorie: "Idem voor: *il, elle, ils, elles, lui, leur, en, y* — eerst kijken waar verwezen wordt.",
-          niveaus: { basis: "Vooraf. A.", simpeler: "Cela = terugverwijzen", nogSimpeler: "Terug" },
+          niveaus: { basis: "Vooraf.", simpeler: "Cela = terugverwijzen", nogSimpeler: "Terug" },
         },
       },
     ],
@@ -159,7 +159,7 @@ const steps = [
         wrongHints: [null, "Faux ami! Niet 100%.", "Te zwak.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Faux ami val", tekst: "**Sans doute** = waarschijnlijk (~80% kans). Klinkt als 'zonder twijfel' maar betekent juist **niet** absoluut zeker. Voor 'zeker' gebruik je *sans aucun doute*. Cito-favoriete val." }],
-          niveaus: { basis: "Waarschijnlijk. A.", simpeler: "Sans doute = wschnl.", nogSimpeler: "Wschnl" },
+          niveaus: { basis: "Waarschijnlijk.", simpeler: "Sans doute = wschnl.", nogSimpeler: "Wschnl" },
         },
       },
       {
@@ -169,7 +169,7 @@ const steps = [
         wrongHints: [null, "Klinkt zo maar nee.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Slang voor livre", tekst: "**Bouquin** = boek (informeel, slang/argot). Komt in moderne teksten + interviews voor. Andere argot: *boulot* (werk), *fric* (geld), *flic* (politie). Verlan: *meuf* (femme), *keuf* (flic)." }],
-          niveaus: { basis: "Boek. A.", simpeler: "Bouquin = boek", nogSimpeler: "Boek" },
+          niveaus: { basis: "Boek.", simpeler: "Bouquin = boek", nogSimpeler: "Boek" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld bedoeld.", "Niet — figuurlijk.", "Niet — emotionele uitspraak."],
         uitlegPad: {
           stappen: [{ titel: "Litote = onderschatting", tekst: "**Litote**: zegt minder dan bedoeld voor effect. 'Ce n'est pas mal' = letterlijk 'het is niet slecht' = bedoeld als **'het is goed/best aardig'** (positieve waardering). Voorbeelden litote: 'Pas bête!' = 'slim!'. 'Pas mauvais' = 'lekker'." }],
-          niveaus: { basis: "Best goed. A.", simpeler: "Litote = onderschatten", nogSimpeler: "Goed" },
+          niveaus: { basis: "Best goed.", simpeler: "Litote = onderschatten", nogSimpeler: "Goed" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Imparfait = was-aan-het-eten", tekst: "**Imparfait**: doorlopende of gewoonte-handeling in verleden. *Je mangeais quand il a téléphoné* = Ik was aan het eten toen hij belde. **Passé composé** voor voltooide: *J'ai mangé* = Ik heb gegeten." }],
           theorie: "Cito-pattern: tijdlijn-vragen door tijden interpreteren.",
-          niveaus: { basis: "Doorlopend. A.", simpeler: "Imparfait = bezig/gewoonte", nogSimpeler: "A." },
+          niveaus: { basis: "Doorlopend.", simpeler: "Imparfait = bezig/gewoonte", nogSimpeler: "A." },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
         wrongHints: [null, "Niet — komt alinea 1.", "Niet — komt aan eind.", "Wel functie."],
         uitlegPad: {
           stappen: [{ titel: "Concession-alinea", tekst: "In argumentatieve teksten komt vaak een **tegenargument-alinea** (concession): 'sommigen zeggen X, maar...'. Auteur erkent kritisch geluid, weerlegt het, versterkt eigen positie. Signaal-woorden: *certes, il est vrai que, on pourrait dire que*." }],
-          niveaus: { basis: "Tegenargument. A.", simpeler: "Alinea 3 = concession", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenargument.", simpeler: "Alinea 3 = concession", nogSimpeler: "A." },
         },
       },
     ],
@@ -220,7 +220,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1905-wet", tekst: "**Laïcité** = Frans staats-secularisme: openbare ruimte (school, stadhuis, ziekenhuis) is religieus-neutraal. Wet 1905 scheidt kerk en staat. Daarom: geen hoofddoek op openbare scholen, geen religieuze symbolen in ambtenaren-ruimten. Vaak fel debat." }],
           theorie: "Cito-favoriet: hoofddoekenwet 2004, burqa-verbod 2010, debat over politieagenten met religieuze symbolen.",
-          niveaus: { basis: "Secularisme. A.", simpeler: "Laïcité = neutrale staat", nogSimpeler: "Neutraal" },
+          niveaus: { basis: "Secularisme.", simpeler: "Laïcité = neutrale staat", nogSimpeler: "Neutraal" },
         },
       },
       {
@@ -230,7 +230,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — algemeen nieuws.", "Niet — kwaliteits-krant."],
         uitlegPad: {
           stappen: [{ titel: "Krant van referentie", tekst: "**Le Monde** = belangrijkste kwaliteits-krant Frankrijk. Centrum-links, oprichting 1944. Internationale invloed. CSE-bron-favoriet. Tegenstellingen: Le Figaro (rechts), Libération (links)." }],
-          niveaus: { basis: "Kwaliteits-krant. A.", simpeler: "Le Monde = kwaliteit-link", nogSimpeler: "A." },
+          niveaus: { basis: "Kwaliteits-krant.", simpeler: "Le Monde = kwaliteit-link", nogSimpeler: "A." },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
         wrongHints: [null, "Voor Brexit.", "Te weinig.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Brexit 2020", tekst: "Voor Brexit: 28 lidstaten. Na Brexit (31 jan 2020 officieel): **27 lidstaten**. Eurozone: 20 (sinds Kroatië 2023)." }],
-          niveaus: { basis: "27. A.", simpeler: "28-1=27", nogSimpeler: "27" },
+          niveaus: { basis: "27.", simpeler: "28-1=27", nogSimpeler: "27" },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zou *quartier chic* zijn.", "Niet — banlieue is rand.", "Niet — buiten stad maar urbaan."],
         uitlegPad: {
           stappen: [{ titel: "Banlieue = sociale kwestie", tekst: "**Banlieue** = letterlijk 'voorstad'. In Franse context vaak **sociaal kwetsbare wijk** rond grote steden (Parijs, Lyon, Marseille). Veel woningbouw uit jaren '60-70, hoge werkloosheid, soms etnische spanning. Onderwerp van politieke debatten + rellen (2005, 2023)." }],
-          niveaus: { basis: "Sociaal-kwetsbaar. A.", simpeler: "Banlieue = arme voorstad", nogSimpeler: "A." },
+          niveaus: { basis: "Sociaal-kwetsbaar.", simpeler: "Banlieue = arme voorstad", nogSimpeler: "A." },
         },
       },
       {
@@ -261,7 +261,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Kern = Franse keuze", tekst: "**Frankrijk: ~70% elektriciteit uit kernenergie** (56 reactoren). Sinds jaren '70 strategische keuze. Pro: lage CO₂, energie-onafhankelijk. Con: afval, ontmanteling-kosten, Fukushima-zorgen. Macron heeft pro-kern-koers; nieuwe EPR-reactoren in aanbouw." }],
           theorie: "Cito-actueel: klimaat-debat + energie-onafhankelijkheid sinds Oekraïne-oorlog → Europa heroverweegt kern.",
-          niveaus: { basis: "Kernenergie. A.", simpeler: "FR 70% = kern", nogSimpeler: "Kern" },
+          niveaus: { basis: "Kernenergie.", simpeler: "FR 70% = kern", nogSimpeler: "Kern" },
         },
       },
     ],
@@ -280,7 +280,7 @@ const steps = [
         wrongHints: [null, "Faux ami met EN 'actually'.", "Niet — *aujourd'hui*.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Faux ami met EN", tekst: "**Actuellement** = momenteel / op dit moment / tegenwoordig. **Niet** 'actually' (daadwerkelijk) = *en fait, vraiment*. Cito-favoriete val voor leerlingen die ook Engels leren." }],
-          niveaus: { basis: "Momenteel. A.", simpeler: "Actuellement = nu", nogSimpeler: "Nu" },
+          niveaus: { basis: "Momenteel.", simpeler: "Actuellement = nu", nogSimpeler: "Nu" },
         },
       },
       {
@@ -290,7 +290,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is *ensuite*.", "Niet — dat is *donc*.", "Klinkt zo maar nee."],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling", tekst: "**En revanche** = daarentegen, anderzijds. Markeert contrast tussen 2 ideeën. Synoniemen: *par contre, en revanche, à l'inverse*." }],
-          niveaus: { basis: "Daarentegen. A.", simpeler: "En revanche = daarentegen", nogSimpeler: "A." },
+          niveaus: { basis: "Daarentegen.", simpeler: "En revanche = daarentegen", nogSimpeler: "A." },
         },
       },
       {
@@ -300,7 +300,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Recent Nobel", tekst: "**Annie Ernaux** (geb. 1940) won **Nobelprijs Literatuur 2022**. Autobiografische romans over werkende klasse, vrouwelijke ervaring. Bekendste werken: *La Place*, *Les Années*, *L'Événement*. Vaak in CSE-teksten over hedendaagse Franse literatuur." }],
-          niveaus: { basis: "Schrijfster Nobel. A.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "A." },
+          niveaus: { basis: "Schrijfster Nobel.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "A." },
         },
       },
       {
@@ -310,7 +310,7 @@ const steps = [
         wrongHints: [null, "Verboden.", "Verboden.", "Verboden."],
         uitlegPad: {
           stappen: [{ titel: "Alleen woordenboeken", tekst: "**Toegestaan**: papieren woordenboeken (eentalig + tweetalig). **Verboden**: telefoon, smartwatch, tablet, internet, vertaal-app, eigen aantekeningen, andere boeken. Bij overtreding: examen ongeldig." }],
-          niveaus: { basis: "Beide woordenboeken. A.", simpeler: "Alleen woordenboeken", nogSimpeler: "A." },
+          niveaus: { basis: "Beide woordenboeken.", simpeler: "Alleen woordenboeken", nogSimpeler: "A." },
         },
       },
       {
@@ -320,7 +320,7 @@ const steps = [
         wrongHints: [null, "Onvoldoende.", "Onvoldoende.", "Niet — eenzaam examen."],
         uitlegPad: {
           stappen: [{ titel: "Drie-fasen-strategie", tekst: "**Strategie**: (1) 5 min globaal lezen voor structuur. (2) 8 min vragen + scanning. (3) 2 min antwoorden checken. Bij lange teksten ietsje meer voor stap 1. Bij twijfel-vraag: ga door, kom terug." }],
-          niveaus: { basis: "3 fasen. A.", simpeler: "Lezen+vragen+check", nogSimpeler: "3" },
+          niveaus: { basis: "3 fasen.", simpeler: "Lezen+vragen+check", nogSimpeler: "3" },
         },
       },
     ],

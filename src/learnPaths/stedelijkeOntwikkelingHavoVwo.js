@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Te weinig — was 1950.", "Te veel.", "Veel te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Tipping point ~2007", tekst: "In 2007 voor eerst meer mensen in steden dan op platteland (50/50). Sindsdien stijgend. Schatting 2050: 68%. Asia + Africa drijven groei." }],
-          niveaus: { basis: "~57%. A.", simpeler: "Iets meer dan helft. A.", nogSimpeler: "57%" },
+          niveaus: { basis: "~57%.", simpeler: "Iets meer dan helft.", nogSimpeler: "57%" },
         },
       },
       {
@@ -44,7 +44,7 @@ const steps = [
           stappen: [
             { titel: "Tuin + auto", tekst: "Naoorlogse trend in westen: gezinnen kopen huis met tuin in voorstad + pendelen met auto. NL: Almere (1976-) speciaal als suburbanisatie-stad gebouwd. Zoetermeer, Houten, Hoofddorp idem. Stadcentrum 'leegt' (donut-effect)." },
           ],
-          niveaus: { basis: "Naar voorstad. A.", simpeler: "Stad-rand groeit. A.", nogSimpeler: "Suburb" },
+          niveaus: { basis: "Naar voorstad.", simpeler: "Stad-rand groeit.", nogSimpeler: "Suburb" },
         },
       },
       {
@@ -61,7 +61,7 @@ const steps = [
           stappen: [
             { titel: "Verheviging woningmarkt", tekst: "Voorbeelden: Brooklyn (NYC) ooit arbeiderswijk, nu hipster-paradijs. Amsterdam-Noord ooit volkswijk, nu yuppie-buurt. Voordeel: investering + leefbaarheid. Nadeel: oorspronkelijke bewoners niet meer kunnen betalen, kunnen niet meer in eigen wijk wonen." },
           ],
-          niveaus: { basis: "Verdringing door welvaart. A.", simpeler: "Wijken duurder = arme weg. A.", nogSimpeler: "Gentr" },
+          niveaus: { basis: "Verdringing door welvaart.", simpeler: "Wijken duurder = arme weg.", nogSimpeler: "Gentr" },
         },
       },
       {
@@ -78,7 +78,7 @@ const steps = [
           stappen: [
             { titel: "Demografische + economische druk", tekst: "Afrika: jong bevolking + landbouw mechaniseert → mensen trekken naar steden. Lagos van 200k (1950) → ~21 mln vandaag → 35 mln in 2050 verwacht. Dhaka, Karachi, Kinshasa idem. Infrastructuur kan tempo niet bijhouden → krottenwijken." },
           ],
-          niveaus: { basis: "Afrika. A.", simpeler: "Sub-Sahara Afrika snel. A.", nogSimpeler: "Afrika" },
+          niveaus: { basis: "Afrika.", simpeler: "Sub-Sahara Afrika snel.", nogSimpeler: "Afrika" },
         },
       },
       {
@@ -95,7 +95,7 @@ const steps = [
           stappen: [
             { titel: "Trend versterkt door COVID + thuiswerk", tekst: "Sommige hoogopgeleiden + welvarende families verlaten dure stad voor platteland/kleine stad. Vereist hoge huizenprijs in stad + thuiswerk-mogelijkheid. Beperkt fenomeen — netto wereld nog steeds urbaniseert." },
           ],
-          niveaus: { basis: "Van stad weg. A.", simpeler: "Stad verlaten. A.", nogSimpeler: "Anti-stad" },
+          niveaus: { basis: "Van stad weg.", simpeler: "Stad verlaten.", nogSimpeler: "Anti-stad" },
         },
       },
     ],
@@ -119,7 +119,7 @@ const steps = [
         wrongHints: [null, "Onzin.", "Onzin.", "Wel betekenis."],
         uitlegPad: {
           stappen: [{ titel: "Zakelijk centrum", tekst: "Centrum met hoofdkantoren, grote winkels, restaurants. Hoge gronden-prijzen → hoogbouw. NL: Zuidas (A'dam-zuid), Beurs/Damrak (binnenstad). Londen: City + Canary Wharf. NYC: Manhattan-zuid." }],
-          niveaus: { basis: "Central Business District. A.", simpeler: "Centrum kantoren. A.", nogSimpeler: "CBD" },
+          niveaus: { basis: "Central Business District.", simpeler: "Centrum kantoren.", nogSimpeler: "CBD" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
           stappen: [
             { titel: "Chicago 1925", tekst: "5 ringen: CBD → overgang → arbeiders → middenklasse → pendelaars. Aanname: stad groeit RADIAAL. Eenvoudig maar deels achterhaald. Werkt nog deels voor oude Europese steden. Niet voor moderne edge-cities + meerdere-centrum-steden." },
           ],
-          niveaus: { basis: "Ringen. A.", simpeler: "Concentrische cirkels. A.", nogSimpeler: "Ringen" },
+          niveaus: { basis: "Ringen.", simpeler: "Concentrische cirkels.", nogSimpeler: "Ringen" },
         },
       },
       {
@@ -153,7 +153,7 @@ const steps = [
           stappen: [
             { titel: "Garreau 1991", tekst: "Vooral in VS sinds 1980: nieuwe kantoor- + winkelclusters AAN RAND, vaak rond snelweg-knooppunt + luchthaven. Bv. Reston (Washington), Schaumburg (Chicago), Walnut Creek (San Francisco). Mensen werken + winkelen DAAR, hoeven niet meer naar binnenstad." },
           ],
-          niveaus: { basis: "Nieuw centrum aan rand. A.", simpeler: "Subcentrum bij snelweg. A.", nogSimpeler: "Edge" },
+          niveaus: { basis: "Nieuw centrum aan rand.", simpeler: "Subcentrum bij snelweg.", nogSimpeler: "Edge" },
         },
       },
       {
@@ -170,7 +170,7 @@ const steps = [
           stappen: [
             { titel: "Leeg gat in midden", tekst: "Naoorlogs: gezinnen verhuizen naar voorsteden. Centrum verliest woningen, alleen kantoor + winkel. Avond: centrum LEEG. Vandaag deels omgekeerd door gentrification + re-urbanisatie." },
           ],
-          niveaus: { basis: "Centrum leeg, rand vol. A.", simpeler: "Lege binnenstad 's avonds. A.", nogSimpeler: "Donut" },
+          niveaus: { basis: "Centrum leeg, rand vol.", simpeler: "Lege binnenstad 's avonds.", nogSimpeler: "Donut" },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
           stappen: [
             { titel: "Slum-economie", tekst: "1-2 mln mensen op 2 km². Verbazend economisch actief: ~$1 mld jaaromzet uit pottenbakkerijen, recycling, kledingindustrie. Geen formele woningen, slechte sanitair. Bekend uit film 'Slumdog Millionaire'. Indiase overheid plant herontwikkeling." },
           ],
-          niveaus: { basis: "Grote krottenwijk. A.", simpeler: "Mumbai-slum. A.", nogSimpeler: "Dharavi" },
+          niveaus: { basis: "Grote krottenwijk.", simpeler: "Mumbai-slum.", nogSimpeler: "Dharavi" },
         },
       },
     ],
@@ -206,7 +206,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dat is 'grote stad'.", "Onmogelijk.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "VN-definitie", tekst: ">10 mln in stedelijk gebied (incl. voorsteden, niet alleen stadsgrens). 1950: alleen NYC + Tokyo. 2024: ~35 stuks. Vrijwel alle nieuwe in globale-zuid (Lagos, Dhaka, Karachi)." }],
-          niveaus: { basis: ">10 mln. A.", simpeler: "10 miljoen+. A.", nogSimpeler: "10M" },
+          niveaus: { basis: ">10 mln.", simpeler: "10 miljoen+.", nogSimpeler: "10M" },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
           stappen: [
             { titel: "Drie-stad-as", tekst: "Sassen identificeerde NY-LON-TOK als top-3: financiële markten wereldwijd lopen door deze drie. Vandaag uitgebreid (Hongkong, Singapore, Shanghai, Frankfurt). Hub-functie voor MNCs, banken, internationale verbindingen." },
           ],
-          niveaus: { basis: "Wereldeconomie-leider. A.", simpeler: "Stad die wereld aanstuurt. A.", nogSimpeler: "Global" },
+          niveaus: { basis: "Wereldeconomie-leider.", simpeler: "Stad die wereld aanstuurt.", nogSimpeler: "Global" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Niet — kleiner.", "Veel kleiner.", "Veel kleiner."],
         uitlegPad: {
           stappen: [{ titel: "Stedelijk gigant", tekst: "Tokyo-Yokohama-Kawasaki: ~37 mln. Op één plek 4x NL-bevolking. Goed georganiseerd: 's werelds beste openbaar vervoer (Yamanote-lijn elke 3 min). Maar bevolking krimpt (Japan-veroudering)." }],
-          niveaus: { basis: "Tokyo. A.", simpeler: "Tokyo metropool. A.", nogSimpeler: "Tokyo" },
+          niveaus: { basis: "Tokyo.", simpeler: "Tokyo metropool.", nogSimpeler: "Tokyo" },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
           stappen: [
             { titel: "Van 200k naar 21 mln in 70 jaar", tekst: "1950: 200 000 inwoners. 2024: ~21 mln. Predictie 2050: 35 mln (in 2100 mss 100 mln). Onbetwist snelst-groeiend wereldwijd. Mix van miljardairs en grootste krottenwijken. Olie + nieuwe industrie + Nigerian-film (Nollywood) trekken instroom." },
           ],
-          niveaus: { basis: "Snelst groeiend. A.", simpeler: "Lagos = boom city. A.", nogSimpeler: "Snel" },
+          niveaus: { basis: "Snelst groeiend.", simpeler: "Lagos = boom city.", nogSimpeler: "Snel" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
           stappen: [
             { titel: "Data-gedreven beheer", tekst: "Singapore-voorbeeld: sensoren in straten (verkeer, lucht, vuilnis), apps voor parkeren, gemeentelijke data open beschikbaar. Songdo (KR) gepland als smart city-totaal. Barcelona, Amsterdam (Smart-City-tag) experimenteren met sensor-netwerken." },
           ],
-          niveaus: { basis: "Tech voor stad. A.", simpeler: "Sensoren + data + AI. A.", nogSimpeler: "Smart" },
+          niveaus: { basis: "Tech voor stad.", simpeler: "Sensoren + data + AI.", nogSimpeler: "Smart" },
         },
       },
     ],
@@ -293,7 +293,7 @@ const steps = [
           stappen: [
             { titel: "Beton + asfalt + auto's", tekst: "Beton absorbeert + houdt warmte vast. Minder bomen + parken voor verkoeling. Auto's + airconditioning produceren warmte. Resultaat: stadscentrum 2-5°C warmer dan omliggend platteland. Versterkt door klimaatverandering → hittegolven extra gevaarlijk in stad (ouderen-sterfte)." },
           ],
-          niveaus: { basis: "2-5°C warmer. A.", simpeler: "Stad = warmer. A.", nogSimpeler: "Warmer" },
+          niveaus: { basis: "2-5°C warmer.", simpeler: "Stad = warmer.", nogSimpeler: "Warmer" },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te weinig.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Energie + verkeer + industrie", tekst: "Steden verbruiken veel energie voor verlichting, koeling, transport, productie. ~70% van CO₂ komt hieruit. Cruciaal aanpakken steden = cruciaal klimaatactie. Daarom 'C40-coalitie' van 96 grote steden samenwerkt." }],
-          niveaus: { basis: "70%. A.", simpeler: "Steden grootste vervuiler. A.", nogSimpeler: "70%" },
+          niveaus: { basis: "70%.", simpeler: "Steden grootste vervuiler.", nogSimpeler: "70%" },
         },
       },
       {
@@ -320,7 +320,7 @@ const steps = [
           stappen: [
             { titel: "Burgemeester Hidalgo 2020", tekst: "Concept: school, dokter, winkel, park, werk binnen 15 min van huis. Vermindert verkeer, sociale binding, klimaat-impact. Parijs leidende stad. Vergelijkbaar: 'Superblocks' Barcelona (verkeers-luwe wijken)." },
           ],
-          niveaus: { basis: "Alles dichtbij. A.", simpeler: "15 min naar alles. A.", nogSimpeler: "15min" },
+          niveaus: { basis: "Alles dichtbij.", simpeler: "15 min naar alles.", nogSimpeler: "15min" },
         },
       },
       {
@@ -337,7 +337,7 @@ const steps = [
           stappen: [
             { titel: "Wake-up call", tekst: "Aanhoudende droogte → reservoirs daalden onder 13%. Stad maakte plan om watertoevoer aan inwoners stop te zetten ('Day Zero'), inwoners moesten met emmer naar verzamelpunten. Net op tijd regende het → crisis afgewend. Eerste wereldstad die zoiets bijna meemaakte. Klimaatverandering maakt dit meer waarschijnlijk." },
           ],
-          niveaus: { basis: "Water-crisis. A.", simpeler: "Bijna zonder water. A.", nogSimpeler: "Water" },
+          niveaus: { basis: "Water-crisis.", simpeler: "Bijna zonder water.", nogSimpeler: "Water" },
         },
       },
       {
@@ -354,7 +354,7 @@ const steps = [
           stappen: [
             { titel: "Goedkoper alternatief voor metro", tekst: "Curitiba 1974 pionier. Eigen bus-baan in midden weg, vooruitbetaling bij station (snelle inscheping), grote bussen (180 mensen). Veel goedkoper dan metro maar bijna zelfde capaciteit. Wereldwijd gekopieerd: Bogotá, Mexico City, Istanbul, Johannesburg." },
           ],
-          niveaus: { basis: "Bus op eigen baan. A.", simpeler: "Snelle bus-corridor. A.", nogSimpeler: "BRT" },
+          niveaus: { basis: "Bus op eigen baan.", simpeler: "Snelle bus-corridor.", nogSimpeler: "BRT" },
         },
       },
     ],
@@ -375,7 +375,7 @@ const steps = [
           stappen: [
             { titel: "Eerste wereldstad CO₂-neutraal", tekst: "Kopenhagen heeft ~10 jaar werk: 50% verplaatsingen fiets, geothermische + windkracht, alle gemeentelijke gebouwen verduurzaamd. Doel mss niet exact 2025 gehaald maar veel verder dan andere wereldsteden." },
           ],
-          niveaus: { basis: "Kopenhagen. A.", simpeler: "Kopenhagen = klimaat-leider. A.", nogSimpeler: "Kop" },
+          niveaus: { basis: "Kopenhagen.", simpeler: "Kopenhagen = klimaat-leider.", nogSimpeler: "Kop" },
         },
       },
       {
@@ -392,7 +392,7 @@ const steps = [
           stappen: [
             { titel: "Kate Raworth 2017", tekst: "Donut-vorm: binnenste cirkel = sociale ondergrens (geen mens zonder onderdak, eten, gezondheid, etc.). Buitenste = planetaire grens (klimaat, biodiversiteit). Economie moet TUSSEN beide rings opereren. Amsterdam eerste stad die dit officieel omarmde (2020) als beleidskader." },
           ],
-          niveaus: { basis: "Sociale + ecologische grens. A.", simpeler: "Tussen mens + planeet. A.", nogSimpeler: "Donut" },
+          niveaus: { basis: "Sociale + ecologische grens.", simpeler: "Tussen mens + planeet.", nogSimpeler: "Donut" },
         },
       },
       {
@@ -409,7 +409,7 @@ const steps = [
           stappen: [
             { titel: "Cruciaal voor klimaat + lucht", tekst: "'Modus' = vervoersmiddel. 'Shift' = verschuiving. Voorbeeld: NL 1970s veel auto's → vanaf 1980 sterk fiets-beleid → 27% van verplaatsingen op fiets (wereldrecord). Modal shift verbeterd lucht + minder CO₂ + minder ruimte voor auto's." },
           ],
-          niveaus: { basis: "Verschuiving vervoer. A.", simpeler: "Auto naar fiets/OV. A.", nogSimpeler: "Modal" },
+          niveaus: { basis: "Verschuiving vervoer.", simpeler: "Auto naar fiets/OV.", nogSimpeler: "Modal" },
         },
       },
       {
@@ -426,7 +426,7 @@ const steps = [
           stappen: [
             { titel: "Geen lineair (maken-gebruiken-weggooien)", tekst: "In plaats van afval naar stortplaats: hergebruik, repareer, recycle. NL leidende positie: PET-flessen voor 95%+ recycled, oude kleren naar second-hand. Doel 2050 EU: volledig circulaire economie." },
           ],
-          niveaus: { basis: "Hergebruik continu. A.", simpeler: "Geen afval, alles nieuw gebruik. A.", nogSimpeler: "Circular" },
+          niveaus: { basis: "Hergebruik continu.", simpeler: "Geen afval, alles nieuw gebruik.", nogSimpeler: "Circular" },
         },
       },
       {
@@ -438,7 +438,7 @@ const steps = [
           stappen: [
             { titel: "Natuurlijke bron", tekst: "IJsland zit op tektonische breuk → veel vulkanische activiteit + hot springs. Reykjavik (en hele IJsland) gebruikt geothermische warmte voor verwarming + waterkracht voor elektriciteit. Bijna 100% hernieuwbaar. Klein voorbeeld dat moeilijk te kopiëren elders." },
           ],
-          niveaus: { basis: "Reykjavik. A.", simpeler: "IJsland-hoofdstad. A.", nogSimpeler: "Reyk" },
+          niveaus: { basis: "Reykjavik.", simpeler: "IJsland-hoofdstad.", nogSimpeler: "Reyk" },
         },
       },
     ],

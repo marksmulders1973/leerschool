@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Niet — VWO.", "Te lang."],
         uitlegPad: {
           stappen: [{ titel: "Standaard", tekst: "**HAVO Duits CSE: 2,5 uur**. VWO: 3 uur. Bij dyslexie 30 min extra." }],
-          niveaus: { basis: "2,5u. A.", simpeler: "HAVO=2,5u", nogSimpeler: "2,5" },
+          niveaus: { basis: "2,5u.", simpeler: "HAVO=2,5u", nogSimpeler: "2,5" },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Veel te veel.", "Absurd."],
         uitlegPad: {
           stappen: [{ titel: "9-12 stuks", tekst: "Op CSE Duits HAVO: **9-12 teksten**, totaal ~3500-4500 woorden. VWO iets meer + complexer. Sommige kort (1 alinea), sommige lang (~1000 woorden)." }],
-          niveaus: { basis: "~10. A.", simpeler: "~10 teksten", nogSimpeler: "10" },
+          niveaus: { basis: "~10.", simpeler: "~10 teksten", nogSimpeler: "10" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Te laag.", "Niet — VWO.", "Te hoog."],
         uitlegPad: {
           stappen: [{ titel: "B1 voor HAVO", tekst: "**HAVO Duits CSE: B1** (zelfstandig taalgebruiker, hoofdpunten begrijpen). VWO: B2 (complexe argumentatie + abstract). C1+ alleen nodig voor studie/werk." }],
-          niveaus: { basis: "B1. A.", simpeler: "HAVO=B1", nogSimpeler: "B1" },
+          niveaus: { basis: "B1.", simpeler: "HAVO=B1", nogSimpeler: "B1" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is tweetalig.", "Niet — Frans.", "Niet — Engels."],
         uitlegPad: {
           stappen: [{ titel: "Duden = standaard", tekst: "**Duden** = standaard eentalig Duits woordenboek (Duitse equivalent van Van Dale). Wahrig is alternatief. Op CSE beide toegestaan." }],
-          niveaus: { basis: "Duden. A.", simpeler: "Eentalig = Duden", nogSimpeler: "Duden" },
+          niveaus: { basis: "Duden.", simpeler: "Eentalig = Duden", nogSimpeler: "Duden" },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Niet — vaker natuur.", "Niet — keuze.", "Wel keuze."],
         uitlegPad: {
           stappen: [{ titel: "C&M-profiel", tekst: "**HAVO C&M (Cultuur + Maatschappij)**: vaak Duits + Frans verplicht of zwaarwegend. E&M (Economie+Maatschappij): keuze. N&T (Natuur+Techniek): meestal niet. Talen-profielen kiezen vaak DU + FR." }],
-          niveaus: { basis: "C&M. A.", simpeler: "C&M = talen", nogSimpeler: "C&M" },
+          niveaus: { basis: "C&M.", simpeler: "C&M = talen", nogSimpeler: "C&M" },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wechselpräposition + Akk = beweging", tekst: "**In** is een Wechselpräposition. Bij **beweging richting plek** → Akkusativ (*die* voor v). Bij **statisch in/op plek** → Dativ (*der*).\n\n*Ich gehe in **die** Schule* (akk — ik ga ergens **naar toe**).\n*Ich bin in **der** Schule* (dat — ik ben er **al**)." }],
           theorie: "Memo: Akk = beweging IN, Dat = al binnen. Cito-favoriet om naamval te testen.",
-          niveaus: { basis: "Akkusativ. A.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },
+          niveaus: { basis: "Akkusativ.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },
         },
       },
       {
@@ -107,7 +107,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Faux ami klassiek", tekst: "**Bekommen** = krijgen, ontvangen. NIET 'worden' (dat is *werden*). NL'ers verwarren dit vaak. Voorbeeld: *Ich bekomme ein Geschenk* = Ik **krijg** een cadeau (NIET 'ik word een cadeau')." }],
           theorie: "Andere faux amis: das Gymnasium (school, niet zaal), die Mappe (tas, kan map), eventuell (mogelijk).",
-          niveaus: { basis: "Krijgen. A.", simpeler: "Bekommen = krijgen", nogSimpeler: "Krijgen" },
+          niveaus: { basis: "Krijgen.", simpeler: "Bekommen = krijgen", nogSimpeler: "Krijgen" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bijzin = werkwoord-eind", tekst: "Bij bijzinnen met *weil, dass, wenn, ob, obwohl, als, falls* gaat het werkwoord **helemaal naar het einde**.\n\n*Ich gehe in die Schule, **weil** ich Mathe **mag**.*\n(En niet *...weil ich mag Mathe.*)" }],
           theorie: "Cito-pattern: lange zin met bijzin → werkwoord vinden aan einde voor context.",
-          niveaus: { basis: "Einde. A.", simpeler: "Weil = werkwoord eind", nogSimpeler: "Eind" },
+          niveaus: { basis: "Einde.", simpeler: "Weil = werkwoord eind", nogSimpeler: "Eind" },
         },
       },
       {
@@ -129,7 +129,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Konjunktiv I = citeren", tekst: "**Konjunktiv I** wordt gebruikt voor **indirecte rede** (vooral journalistiek). Auteur citeert bewering zonder zelf in te staan voor waarheid. *Er sei krank* = 'Hij zou ziek zijn (zo zegt hij althans)'.\n\nKonjunktiv II is voor wens/hypothese: *Wenn ich Zeit **hätte***." }],
           theorie: "Cito-pattern: bij krantenartikel-citaten kijk naar Konjunktiv I voor 'wat anderen claimden'.",
-          niveaus: { basis: "K I, indirecte rede. A.", simpeler: "sei = K I", nogSimpeler: "K I" },
+          niveaus: { basis: "K I, indirecte rede.", simpeler: "sei = K I", nogSimpeler: "K I" },
         },
       },
       {
@@ -139,7 +139,7 @@ const steps = [
         wrongHints: [null, "Niet — vaste Akk.", "Niet — vaste Akk.", "Wel naamval."],
         uitlegPad: {
           stappen: [{ titel: "FUDGOB-Akkusativ-set", tekst: "**Für, durch, gegen, ohne, um, bis** vragen altijd Akkusativ. Memo: *für **mich***, *ohne **dich***, *gegen **ihn***. Geen wisseling met beweging/plaats." }],
-          niveaus: { basis: "Akkusativ. A.", simpeler: "für = Akk", nogSimpeler: "Akk" },
+          niveaus: { basis: "Akkusativ.", simpeler: "für = Akk", nogSimpeler: "Akk" },
         },
       },
     ],
@@ -158,7 +158,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is *deshalb*.", "Niet — *außerdem*.", "Niet — *vielleicht*."],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling-marker", tekst: "**Trotzdem / dennoch** = toch, niettemin. Signaleert dat ondanks vorige bewering iets anders volgt. Synoniem: *allerdings, jedoch*." }],
-          niveaus: { basis: "Toch. A.", simpeler: "Trotzdem = toch", nogSimpeler: "Toch" },
+          niveaus: { basis: "Toch.", simpeler: "Trotzdem = toch", nogSimpeler: "Toch" },
         },
       },
       {
@@ -169,7 +169,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hoffelijk-Konjunktiv", tekst: "*Sie **hätte** gern...* = **Konjunktiv II** voor **hoffelijkheid**. Letterlijk 'zij zou graag hebben' = beleefde manier om te vragen. Vergelijk *Ich möchte...* (ik zou willen) en *Könnten Sie...* (zou u kunnen)." }],
           theorie: "Indikativ: *Ich will einen Kaffee* (te direct). Konjunktiv II: *Ich hätte gern...* (beleefd). Verschil komt vaak terug op CSE.",
-          niveaus: { basis: "K II hoffelijk. A.", simpeler: "hätte gern = beleefd", nogSimpeler: "K II" },
+          niveaus: { basis: "K II hoffelijk.", simpeler: "hätte gern = beleefd", nogSimpeler: "K II" },
         },
       },
       {
@@ -180,7 +180,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Scheidbare prefix = einde", tekst: "Bij scheidbaar werkwoord in **hoofdzin** scheidt prefix af + gaat naar einde.\n\n*Ich **rufe** meinen Freund **an**.*\n\nIn bijzin blijft hij samen: *..., dass ich meinen Freund **anrufe**.*" }],
           theorie: "Memo: hoofdzin = uit elkaar, bijzin = samen. Cito-classic.",
-          niveaus: { basis: "Einde. A.", simpeler: "Scheidbaar hoofdzin = einde", nogSimpeler: "Eind" },
+          niveaus: { basis: "Einde.", simpeler: "Scheidbaar hoofdzin = einde", nogSimpeler: "Eind" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
         wrongHints: [null, "Niet — heel informeel.", "Niet relevant.", "Niet — afwijkend."],
         uitlegPad: {
           stappen: [{ titel: "Slang", tekst: "**Jugendsprache** = jongerentaal Duits. Voorbeelden: *krass* (heftig/cool), *geil* (super), *cringe* (gênant), *abhängen* (chillen), *Bock haben* (zin hebben). Komt op CSE alleen in zeer informele context (sociale media, jongeren-interviews)." }],
-          niveaus: { basis: "Jongerentaal. A.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "A." },
+          niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "A." },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
         wrongHints: [null, "Niet — twee betekenissen.", "Niet — twee betekenissen.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele betekenis", tekst: "**Während** heeft 2 betekenissen:\n• **Tijd**: *Während ich aß, klingelte das Telefon* = Terwijl ik at, ging de telefoon.\n• **Tegenstelling**: *Während die Eltern arbeiten, spielen die Kinder* = De ouders werken, **terwijl/daarentegen** de kinderen spelen.\n\nContext beslist. Cito-favoriet om beide betekenissen te testen." }],
-          niveaus: { basis: "Beide. A.", simpeler: "Während = tijd of contrast", nogSimpeler: "Beide" },
+          niveaus: { basis: "Beide.", simpeler: "Während = tijd of contrast", nogSimpeler: "Beide" },
         },
       },
     ],
@@ -219,7 +219,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — afkorting.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Acroniem 3 landen", tekst: "**DACH** = **D**eutschland + **A**ustria (Österreich) + **CH** (Schweiz, Confoederatio Helvetica). Drie Duitstalige landen samen genoemd. Soms ook FL (Liechtenstein) toegevoegd → DACHL." }],
-          niveaus: { basis: "DE+AT+CH. A.", simpeler: "DACH = drie landen", nogSimpeler: "A." },
+          niveaus: { basis: "DE+AT+CH.", simpeler: "DACH = drie landen", nogSimpeler: "A." },
         },
       },
       {
@@ -229,7 +229,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Politiek Duits", tekst: "**Bundestag** = federale parlement Duitsland in Berlin (Reichstag-gebouw). Verkozen leden + Bondskanselier daar gekozen. Daarnaast **Bundesrat** = vertegenwoordiging van 16 deelstaten." }],
-          niveaus: { basis: "Federale parlement. A.", simpeler: "Bundestag = parlement", nogSimpeler: "A." },
+          niveaus: { basis: "Federale parlement.", simpeler: "Bundestag = parlement", nogSimpeler: "A." },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vier-talig", tekst: "Zwitserland heeft **4 officiële talen**: Duits (63%), Frans (23%), Italiaans (8%), Reto-Romaans (0,5%). Dit weerspiegelt regionale verschillen — kantons hebben eigen voertaal. Op munten + identiteitsbewijs alle 4 vertaald." }],
           theorie: "Cito-favoriet: 'welk land in DACH heeft 4 talen?' → Zwitserland.",
-          niveaus: { basis: "4. A.", simpeler: "CH = 4 talen", nogSimpeler: "4" },
+          niveaus: { basis: "4.", simpeler: "CH = 4 talen", nogSimpeler: "4" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "9 nov 1989", tekst: "**Mauerfall** = val Berlijnse Muur op **9 november 1989** (29 jaar na bouw 1961). Symbolisch einde Koude Oorlog. **3 oktober 1990**: formele hereniging Duitsland (Wiedervereinigung) — feestdag van Duitse Eenheid." }],
           theorie: "Cito-favoriet: dates onthouden. 8/9 mei 1945 = einde WO2 in Europa. 17 juni 1953 = opstand DDR (vroegere herdenkingsdag).",
-          niveaus: { basis: "9 nov 1989. A.", simpeler: "Muur 1989", nogSimpeler: "1989" },
+          niveaus: { basis: "9 nov 1989.", simpeler: "Muur 1989", nogSimpeler: "1989" },
         },
       },
       {
@@ -262,7 +262,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Energie-omslag", tekst: "**Energiewende** = Duitse beleid sinds 2000: overstap van fossiel + kernenergie naar **hernieuwbaar** (zon, wind, biomassa). Versneld na Fukushima 2011. **Kernuitstap 2023** voltooid: laatste 3 kerncentrales gesloten. Hot topic: kost veel, leverde nog niet alles op." }],
           theorie: "Vergelijking: FR zet juist op kern (~70%), DE op hernieuwbaar. Politiek omstreden in DACH.",
-          niveaus: { basis: "Energie-omslag. A.", simpeler: "Energiewende = groen-overstap", nogSimpeler: "A." },
+          niveaus: { basis: "Energie-omslag.", simpeler: "Energiewende = groen-overstap", nogSimpeler: "A." },
         },
       },
     ],
@@ -281,7 +281,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Twijfel uitdrukken", tekst: "**Eventuell** = mogelijk, misschien (~50% kans). NL'ers verwarren soms met 'eventueel' (= 'als het zo uitkomt') — andere nuance. Voor 'definitief' gebruik *bestimmt, sicher, definitiv*." }],
-          niveaus: { basis: "Mogelijk. A.", simpeler: "Eventuell = mogelijk", nogSimpeler: "A." },
+          niveaus: { basis: "Mogelijk.", simpeler: "Eventuell = mogelijk", nogSimpeler: "A." },
         },
       },
       {
@@ -291,7 +291,7 @@ const steps = [
         wrongHints: [null, "Niet — Nominativ.", "Niet — Dativ.", "Niet — Genitiv."],
         uitlegPad: {
           stappen: [{ titel: "Akk m = den", tekst: "Akkusativ mannelijk: **den**. Tabel: *ich sehe **den** Mann*. Nom: der, Akk: den, Dat: dem, Gen: des. Bij feminin/onzijdig/mv: Akk = Nom (geen verandering)." }],
-          niveaus: { basis: "den. A.", simpeler: "Akk m = den", nogSimpeler: "den" },
+          niveaus: { basis: "den.", simpeler: "Akk m = den", nogSimpeler: "den" },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is omdat.", "Niet — toch.", "Niet — dat."],
         uitlegPad: {
           stappen: [{ titel: "Middel/wijze", tekst: "**Indem** = doordat, terwijl (in zin van middel). *Er lernt, **indem** er Filme schaut* = Hij leert **door** films te kijken. Verschil met **weil** (omdat = oorzaak) en **dass** (dat = inhoud)." }],
-          niveaus: { basis: "Indem. A.", simpeler: "Doordat = indem", nogSimpeler: "Indem" },
+          niveaus: { basis: "Indem.", simpeler: "Doordat = indem", nogSimpeler: "Indem" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sinds mei 2025", tekst: "**Friedrich Merz** (CDU) is Bondskanselier sinds **mei 2025**, na regering-Scholz (SPD-Grüne-FDP-coalitie 2021-2025) viel. Coalitie: CDU/CSU + SPD ('Große Koalition')." }],
           theorie: "Merkel was kanselier 2005-2021 (16 jaar, langste na Kohl 16 jaar). Scholz 2021-2025.",
-          niveaus: { basis: "Merz. A.", simpeler: "Sinds 2025 = Merz", nogSimpeler: "Merz" },
+          niveaus: { basis: "Merz.", simpeler: "Sinds 2025 = Merz", nogSimpeler: "Merz" },
         },
       },
       {
@@ -322,7 +322,7 @@ const steps = [
         wrongHints: [null, "Niet — Dat bij plaats.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Beweging = Akk", tekst: "Bij Wechselpräpositionen: **Akkusativ** bij beweging-richting (waar naartoe), **Dativ** bij plaats (waar). *Ich gehe **in die** Stadt* (Akk, naar toe). *Ich bin **in der** Stadt* (Dat, ben er)." }],
-          niveaus: { basis: "Akkusativ. A.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },
+          niveaus: { basis: "Akkusativ.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },
         },
       },
     ],

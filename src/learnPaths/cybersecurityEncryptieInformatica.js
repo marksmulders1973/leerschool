@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Het is juist kwaadaardig, geen bescherming.", "Het heeft niets met wachtwoorden te maken.", "Een firewall beschermt juist."],
         uitlegPad: {
           stappen: [{ titel: "Gijzelsoftware", tekst: "**Ransomware** is malware die je bestanden **versleutelt** en **losgeld** (ransom) eist om ze terug te geven. Beste bescherming: **back-ups** (dan kun je herstellen zonder te betalen) + niet op verdachte links/bijlagen klikken." }],
-          niveaus: { basis: "Gijzelt bestanden voor losgeld. A.", simpeler: "Ransomware = losgeld-malware", nogSimpeler: "A." },
+          niveaus: { basis: "Gijzelt bestanden voor losgeld.", simpeler: "Ransomware = losgeld-malware", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Het heeft niets met snelheid te maken.", "Het is geen back-up — het is oplichting.", "Geen taal — een vorm van oplichting."],
         uitlegPad: {
           stappen: [{ titel: "Nep-bericht met haast", tekst: "**Phishing** is een **nep-bericht** (mail/sms/app) dat doet alsof het van je bank/school/bekende komt, om je **wachtwoord, pincode of geld** te ontfutselen — vaak met haast en een nep-link. Herken het aan: rare afzender/URL, taalfouten, onverwachte vraag, druk. Bij twijfel zelf naar de officiële site gaan." }],
-          niveaus: { basis: "Nep-bericht voor je gegevens. A.", simpeler: "Phishing = nep-bericht", nogSimpeler: "A." },
+          niveaus: { basis: "Nep-bericht voor je gegevens.", simpeler: "Phishing = nep-bericht", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Het gaat om mensen misleiden, niet om stroom.", "Niet de hardware, maar de gebruiker.", "Beeldscherm heeft er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "De zwakste schakel", tekst: "**Social engineering** manipuleert **de mens** in plaats van de computer te hacken — bv. bellen en doen alsof je de helpdesk bent. Omdat mensen te vertrouwen/behulpzaam zijn, is de mens vaak de **zwakste schakel** in de beveiliging." }],
-          niveaus: { basis: "De mens. A.", simpeler: "Social engineering = mens misleiden", nogSimpeler: "A." },
+          niveaus: { basis: "De mens.", simpeler: "Social engineering = mens misleiden", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Kort is juist zwak, ook met hoofdletter.", "Je naam is makkelijk te raden.", "Overal hetzelfde is het gevaarlijkst."],
         uitlegPad: {
           stappen: [{ titel: "Lang + uniek", tekst: "**Lengte** maakt een wachtwoord sterk (een lange zin is moeilijk te kraken én te onthouden), en het moet **uniek per site** zijn — lekt er één, dan liggen niet meteen al je accounts open. Een **wachtwoordmanager** helpt hierbij." }],
-          niveaus: { basis: "Lang + uniek. A.", simpeler: "Sterk = lang + uniek", nogSimpeler: "A." },
+          niveaus: { basis: "Lang + uniek.", simpeler: "Sterk = lang + uniek", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Niet hetzelfde twee keer — een ánder soort bewijs.", "Het is een tweede stap, geen langer wachtwoord.", "Het gaat om bewijs, niet om twee namen."],
         uitlegPad: {
           stappen: [{ titel: "Iets weten + iets hebben", tekst: "**2FA** voegt een **tweede bewijs** toe naast je wachtwoord: een code via een app/sms of je vingerafdruk. Zelfs met je wachtwoord komt een aanvaller er niet in zonder die tweede stap. Het is de belangrijkste extra beveiliging die je kunt aanzetten." }],
-          niveaus: { basis: "Tweede bewijs. A.", simpeler: "2FA = extra code", nogSimpeler: "A." },
+          niveaus: { basis: "Tweede bewijs.", simpeler: "2FA = extra code", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Leesbaar bewaren is juist onveilig (lekt het, dan ligt alles open).", "Een foto van je wachtwoord is geen opslagmethode.", "De site moet 'm wel kunnen controleren — dus opslaan, maar als hash."],
         uitlegPad: {
           stappen: [{ titel: "Hashing", tekst: "Een goede site bewaart een **hash**: een **onomkeerbare** versleuteling. Dezelfde invoer → dezelfde hash, maar je kunt het wachtwoord er niet uit terugrekenen. Lekt de database, dan zien hackers alleen hashes. Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen laten resetten." }],
-          niveaus: { basis: "Als hash. A.", simpeler: "Wachtwoord = als hash bewaren", nogSimpeler: "A." },
+          niveaus: { basis: "Als hash.", simpeler: "Wachtwoord = als hash bewaren", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Verkleinen is compressie — iets anders.", "Snelheid is niet het doel.", "Dat doet antivirus, niet encryptie."],
         uitlegPad: {
           stappen: [{ titel: "Geheim met een sleutel", tekst: "**Encryptie** zet klare tekst om in onleesbare **cijfertekst** met een **sleutel**. Alleen wie de juiste sleutel heeft, kan het terug omzetten. Zo blijft informatie geheim, ook als iemand het onderschept." }],
-          niveaus: { basis: "Onleesbaar zonder sleutel. A.", simpeler: "Encryptie = versleutelen", nogSimpeler: "A." },
+          niveaus: { basis: "Onleesbaar zonder sleutel.", simpeler: "Encryptie = versleutelen", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Eén sleutel = symmetrisch, niet asymmetrisch.", "Zonder sleutel is er geen encryptie.", "Niet per letter — per persoon een sleutelpaar."],
         uitlegPad: {
           stappen: [{ titel: "Publiek + privé", tekst: "**Asymmetrische encryptie** gebruikt een **sleutelpaar**: een **publieke sleutel** (mag iedereen hebben) om te versleutelen, en een geheime **privésleutel** om te ontsleutelen. Zo kun je veilig communiceren met iemand zonder vooraf een geheime sleutel te delen. **Symmetrisch** gebruikt juist één gedeelde sleutel." }],
-          niveaus: { basis: "Publieke + privé. A.", simpeler: "Asymmetrisch = 2 sleutels", nogSimpeler: "A." },
+          niveaus: { basis: "Publieke + privé.", simpeler: "Asymmetrisch = 2 sleutels", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Het zegt niets over de prijs.", "Reclame blokkeren doet iets anders.", "Snelheid is niet het doel van HTTPS."],
         uitlegPad: {
           stappen: [{ titel: "Versleuteld webverkeer", tekst: "Bij **HTTPS** zetten je browser en de server (met asymmetrische encryptie) veilig een gedeelde sleutel op en **versleutelen daarna al het verkeer**. Niemand onderweg kan meelezen — belangrijk bij wachtwoorden en betalingen." }],
-          niveaus: { basis: "Verkeer afschermen. A.", simpeler: "🔒 = verkeer versleuteld", nogSimpeler: "A." },
+          niveaus: { basis: "Verkeer afschermen.", simpeler: "🔒 = verkeer versleuteld", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "Uiterlijk helpt niet tegen dataverlies.", "Reclame beschermt niets.", "Een wachtwoord op je scherm is juist onveilig."],
         uitlegPad: {
           stappen: [{ titel: "Back-ups = je vangnet", tekst: "Met een recente **back-up** (liefst ook offline/in de cloud) kun je je gegevens herstellen na ransomware, diefstal of een crash — zonder losgeld te betalen. Samen met updates, 2FA en niet-zomaar-klikken is dit digitale basishygiëne." }],
-          niveaus: { basis: "Back-ups. A.", simpeler: "Dataverlies voorkomen = back-up", nogSimpeler: "A." },
+          niveaus: { basis: "Back-ups.", simpeler: "Dataverlies voorkomen = back-up", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Updates laden je batterij niet op.", "Updates wissen je bestanden niet (back-up blijft slim).", "Het gaat om veiligheid, niet alleen uiterlijk."],
         uitlegPad: {
           stappen: [{ titel: "Gaten dichten", tekst: "Software bevat soms **beveiligingsgaten** (kwetsbaarheden). **Updates** dichten die. Verouderde software is een open deur voor aanvallers — daarom: updates niet uitstellen." }],
-          niveaus: { basis: "Dichten gaten. A.", simpeler: "Updates = gaten dichten", nogSimpeler: "A." },
+          niveaus: { basis: "Dichten gaten.", simpeler: "Updates = gaten dichten", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "De AVG gaat over privacy, niet over snelheid.", "Het bepaalt geen kleuren.", "Het is een privacywet, niets met malware maken."],
         uitlegPad: {
           stappen: [{ titel: "Europese privacywet", tekst: "De **AVG** (Algemene Verordening Gegevensbescherming) regelt hoe organisaties met **persoonsgegevens** mogen omgaan: dataminimalisatie (alleen wat nodig is), doelbinding, toestemming, en je recht op **inzage, correctie en verwijdering** — plus veilig bewaren." }],
-          niveaus: { basis: "Omgaan met persoonsgegevens. A.", simpeler: "AVG = privacywet", nogSimpeler: "A." },
+          niveaus: { basis: "Omgaan met persoonsgegevens.", simpeler: "AVG = privacywet", nogSimpeler: "A." },
         },
       },
     ],

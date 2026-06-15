@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer decimaal.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "1 km = 1000 m → 3,5 km × 1000 = **3500 m**. De komma schuift 3 plaatsen naar rechts." }],
-          niveaus: { basis: "3,5 × 1000 = 3500. A.", simpeler: "Vermenigvuldig met 1000. A.", nogSimpeler: "3500" },
+          niveaus: { basis: "3,5 × 1000 = 3500.", simpeler: "Vermenigvuldig met 1000.", nogSimpeler: "3500" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Te veel — verwarring met mm.", "Te weinig.", "Onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "÷ 100", tekst: "1 m = 100 cm → 450 cm / 100 = **4,5 m**. De komma schuift 2 plaatsen naar links." }],
-          niveaus: { basis: "450/100=4,5. A.", simpeler: "Deel door 100. A.", nogSimpeler: "4,5" },
+          niveaus: { basis: "450/100=4,5.", simpeler: "Deel door 100.", nogSimpeler: "4,5" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — × niet ÷.", "Te klein.", "Veel te klein."],
         uitlegPad: {
           stappen: [{ titel: "÷ 10", tekst: "1 cm = 10 mm → 75 mm / 10 = **7,5 cm**. Klein voorbeeld: 1 cm-streepje is 10 mm-streepjes." }],
-          niveaus: { basis: "75/10=7,5. A.", simpeler: "Deel door 10. A.", nogSimpeler: "7,5" },
+          niveaus: { basis: "75/10=7,5.", simpeler: "Deel door 10.", nogSimpeler: "7,5" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
           stappen: [
             { titel: "Alles naar m", tekst: "1 km = 1000 m.\n250 m blijft.\n50 cm = 0,5 m.\nSom: 1000 + 250 + 0,5 = **1250,5 m**." },
           ],
-          niveaus: { basis: "1000+250+0,5=1250,5. A.", simpeler: "Alles m → optellen. A.", nogSimpeler: "1250,5" },
+          niveaus: { basis: "1000+250+0,5=1250,5.", simpeler: "Alles m → optellen.", nogSimpeler: "1250,5" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
           stappen: [
             { titel: "4 cm × 50 000 = 200 000 cm", tekst: "200 000 cm = 2000 m = **2 km**. Werkwijze: cm-op-kaart × schaalfactor = cm-echt → omzetten naar km." },
           ],
-          niveaus: { basis: "2 km. A.", simpeler: "4 × 50 000 cm = 2 km. A.", nogSimpeler: "2" },
+          niveaus: { basis: "2 km.", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "2" },
         },
       },
     ],
@@ -90,7 +90,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet niet × 2.", "Niet — dat is oppervlakte (m²).", "Niet — controleer."],
         uitlegPad: {
           stappen: [{ titel: "2(L+B)", tekst: "2(6+4) = 2 × 10 = **20 m**. Stel je het rond-lopen voor: 6 + 4 + 6 + 4 = 20 m." }],
-          niveaus: { basis: "2(6+4)=20. A.", simpeler: "6+4+6+4=20. A.", nogSimpeler: "20" },
+          niveaus: { basis: "2(6+4)=20.", simpeler: "6+4+6+4=20.", nogSimpeler: "20" },
         },
       },
       {
@@ -100,7 +100,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is omtrek.", "Niet — niet 2×.", "Niet — eenheid moet cm²."],
         uitlegPad: {
           stappen: [{ titel: "z²", tekst: "7 × 7 = **49 cm²**. Eenheid OPPERVLAKTE = cm² (vierkante cm), niet cm." }],
-          niveaus: { basis: "7²=49 cm². A.", simpeler: "Zijde keer zijde = 49. A.", nogSimpeler: "49" },
+          niveaus: { basis: "7²=49 cm².", simpeler: "Zijde keer zijde = 49.", nogSimpeler: "49" },
         },
       },
       {
@@ -112,7 +112,7 @@ const steps = [
           stappen: [
             { titel: "× 10 000 per m² → cm²", tekst: "1 m² = 10 000 cm² (= 100×100). 2,5 × 10 000 = **25 000 cm²**. Veelgemaakte fout: alleen ×100 gebruiken (lengte-truc) → vergeet 2D-effect." },
           ],
-          niveaus: { basis: "2,5 × 10000 = 25000. A.", simpeler: "Per m² is 10000 cm². A.", nogSimpeler: "25000" },
+          niveaus: { basis: "2,5 × 10000 = 25000.", simpeler: "Per m² is 10000 cm².", nogSimpeler: "25000" },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
             { titel: "Geheel min stuk", tekst: "Volledig rechthoek: 10 × 6 = 60 m². Min hoekje: 3 × 2 = 6 m². Resultaat: 60 − 6 = **54 m²**." },
           ],
           theorie: "Andere aanpak: opdelen in twee rechthoeken + optellen. Komt op zelfde antwoord.",
-          niveaus: { basis: "60−6=54. A.", simpeler: "Heel min hoekje. A.", nogSimpeler: "54" },
+          niveaus: { basis: "60−6=54.", simpeler: "Heel min hoekje.", nogSimpeler: "54" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1 ha = 10 000 m²", tekst: "2 × 10 000 = **20 000 m²**. Een hectare is dus 100 × 100 m (vierkant)." }],
           theorie: "Voetbalveld ~7140 m² (105×68). 1 ha ≈ 1,4 voetbalveld.",
-          niveaus: { basis: "2 × 10 000 = 20 000. A.", simpeler: "1 ha = 10 000 m². A.", nogSimpeler: "20000" },
+          niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "20000" },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet ½ niet.", "Niet — geen omtrek.", "Niet — eenheid cm² nodig."],
         uitlegPad: {
           stappen: [{ titel: "½ × b × h", tekst: "½ × 10 × 6 = **30 cm²**. Tip: één manier om 't te onthouden: rechthoek-helft. Driehoek = halve rechthoek met zelfde basis + hoogte." }],
-          niveaus: { basis: "½·10·6=30 cm². A.", simpeler: "Half van b×h = 30. A.", nogSimpeler: "30" },
+          niveaus: { basis: "½·10·6=30 cm².", simpeler: "Half van b×h = 30.", nogSimpeler: "30" },
         },
       },
       {
@@ -167,7 +167,7 @@ const steps = [
           stappen: [
             { titel: "Omtrek = π · d", tekst: "Met diameter direct: π × d = 3,14 × 14 = **43,96 cm**. Of via straal: r = 7, 2 × 3,14 × 7 = 43,96." },
           ],
-          niveaus: { basis: "π·d=43,96. A.", simpeler: "π × 14 = 44. A.", nogSimpeler: "~44" },
+          niveaus: { basis: "π·d=43,96.", simpeler: "π × 14 = 44.", nogSimpeler: "~44" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
           stappen: [
             { titel: "π · r²", tekst: "π × 10² = 3,14 × 100 = **314 m²**. Belangrijk: r² = 100, niet 10×2." },
           ],
-          niveaus: { basis: "π·100=314. A.", simpeler: "π × straal² = 314 m². A.", nogSimpeler: "314" },
+          niveaus: { basis: "π·100=314.", simpeler: "π × straal² = 314 m².", nogSimpeler: "314" },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "½ × 4 × 3", tekst: "Schuine zijde 5 niet nodig voor oppervlakte. Alleen basis (4) + hoogte (3) tellen: ½ × 4 × 3 = **6**. Schuine zijde is voor controle (Pythagoras: 3²+4²=25=5²)." }],
           theorie: "Bij rechthoekige driehoek vallen rechthoek-zijden samen met basis + hoogte.",
-          niveaus: { basis: "½·4·3=6. A.", simpeler: "Half van basis×hoogte = 6. A.", nogSimpeler: "6" },
+          niveaus: { basis: "½·4·3=6.", simpeler: "Half van basis×hoogte = 6.", nogSimpeler: "6" },
         },
       },
       {
@@ -202,7 +202,7 @@ const steps = [
           stappen: [
             { titel: "½ × π × r²", tekst: "Hele cirkel: π × 4² = 3,14 × 16 = 50,24 cm². Half: 50,24 / 2 = **25,12 cm²**." },
           ],
-          niveaus: { basis: "½ · π · 16 = 25,12. A.", simpeler: "Hele cirkel ÷ 2. A.", nogSimpeler: "25,12" },
+          niveaus: { basis: "½ · π · 16 = 25,12.", simpeler: "Hele cirkel ÷ 2.", nogSimpeler: "25,12" },
         },
       },
     ],
@@ -221,7 +221,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is opp van één vlak.", "Niet — dat is 3 × z.", "Onjuist."],
         uitlegPad: {
           stappen: [{ titel: "z³", tekst: "5 × 5 × 5 = **125 cm³**. Eenheid INHOUD = cm³ (kubieke cm). Of in liter: 125 mL." }],
-          niveaus: { basis: "5³=125 cm³. A.", simpeler: "z×z×z = 125. A.", nogSimpeler: "125" },
+          niveaus: { basis: "5³=125 cm³.", simpeler: "z×z×z = 125.", nogSimpeler: "125" },
         },
       },
       {
@@ -231,7 +231,7 @@ const steps = [
         wrongHints: [null, "Niet — vermenigvuldigen alle drie.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "L × B × H", tekst: "8 × 4 × 3 = **96 cm³**. Volgorde maakt niet uit." }],
-          niveaus: { basis: "8·4·3=96. A.", simpeler: "Drie maten vermenigvuldigen. A.", nogSimpeler: "96" },
+          niveaus: { basis: "8·4·3=96.", simpeler: "Drie maten vermenigvuldigen.", nogSimpeler: "96" },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
           stappen: [
             { titel: "cm³ → liter", tekst: "Volume = 60 × 30 × 25 = 45 000 cm³. 1 L = 1000 cm³ → 45 000 / 1000 = **45 L**." },
           ],
-          niveaus: { basis: "45 000/1000=45 L. A.", simpeler: "Cm³ delen door 1000 voor L. A.", nogSimpeler: "45 L" },
+          niveaus: { basis: "45 000/1000=45 L.", simpeler: "Cm³ delen door 1000 voor L.", nogSimpeler: "45 L" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
           stappen: [
             { titel: "π · r² · h", tekst: "π × 5² × 10 = 3,14 × 25 × 10 = **785 cm³**. (Of 785 mL — een groot glas water.)" },
           ],
-          niveaus: { basis: "π·25·10=785. A.", simpeler: "Cirkel-opp × hoogte. A.", nogSimpeler: "785" },
+          niveaus: { basis: "π·25·10=785.", simpeler: "Cirkel-opp × hoogte.", nogSimpeler: "785" },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "1 m³ = 1000 L", tekst: "2500 / 1000 = **2,5 m³**. Vuistregel: groot bad ~150-200 L; klein zwembad ~5000 L = 5 m³." }],
-          niveaus: { basis: "2500/1000=2,5. A.", simpeler: "L delen door 1000 voor m³. A.", nogSimpeler: "2,5" },
+          niveaus: { basis: "2500/1000=2,5.", simpeler: "L delen door 1000 voor m³.", nogSimpeler: "2,5" },
         },
       },
     ],
@@ -286,7 +286,7 @@ const steps = [
           stappen: [
             { titel: "Omtrek → zijde → oppervlakte", tekst: "Vierkant: 4 zijden gelijk. Omtrek 32 → zijde = 32/4 = 8 m. Oppervlakte = 8 × 8 = **64 m²**." },
           ],
-          niveaus: { basis: "Zijde=8, opp=64. A.", simpeler: "Omtrek/4=zijde=8; 8·8=64. A.", nogSimpeler: "64" },
+          niveaus: { basis: "Zijde=8, opp=64.", simpeler: "Omtrek/4=zijde=8; 8·8=64.", nogSimpeler: "64" },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
           stappen: [
             { titel: "Altijd naar boven afronden", tekst: "Muur: 3 × 5 = 15 m². Blikken: 15 / 6 = 2,5 → afronden naar **3 blikken** (anders deel-muur ongedekt)." },
           ],
-          niveaus: { basis: "15/6=2,5 → 3. A.", simpeler: "Naar boven afronden. A.", nogSimpeler: "3" },
+          niveaus: { basis: "15/6=2,5 → 3.", simpeler: "Naar boven afronden.", nogSimpeler: "3" },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
             { titel: "m³ × 1000 = L", tekst: "Inhoud: 5 × 3 × 1 = 15 m³. 1 m³ = 1000 L → **15 000 L**." },
           ],
           theorie: "Vergelijking: standaard badkuip ~250 L. Dit zwembad = 60 baden water.",
-          niveaus: { basis: "15 × 1000 = 15 000. A.", simpeler: "15 m³ = 15 000 L. A.", nogSimpeler: "15 000" },
+          niveaus: { basis: "15 × 1000 = 15 000.", simpeler: "15 m³ = 15 000 L.", nogSimpeler: "15 000" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
           stappen: [
             { titel: "π · r²", tekst: "3,14 × 4² = 3,14 × 16 = **50,24 m²**." },
           ],
-          niveaus: { basis: "π·16=50,24. A.", simpeler: "π · 16 = 50,24 m². A.", nogSimpeler: "50,24" },
+          niveaus: { basis: "π·16=50,24.", simpeler: "π · 16 = 50,24 m².", nogSimpeler: "50,24" },
         },
       },
       {
@@ -336,7 +336,7 @@ const steps = [
             { titel: "Werkelijke maten eerst", tekst: "5 cm × 10 000 = 50 000 cm = 500 m. 4 cm × 10 000 = 40 000 cm = 400 m.\nOppervlakte: 500 × 400 = **200 000 m²**.\n\nHmmm, antwoord-optie is 20 000 m² maar werkelijk = 200 000.\n\nWacht — laat me herchecken. 5 cm op kaart * 10000 = 50 000 cm = 500 m. 4 cm * 10000 = 400 m. Opp = 500*400 = 200 000 m².\n\nLet op: bij schaal-vragen kun je ook eerst opp op kaart × schaal²:\n5×4 = 20 cm² × 10 000² = 20 × 10⁸ cm² = 2·10⁹ cm² = 200 000 m².\n\nDus 200 000 m². Optie hierboven 20 000 is fout in onze tekst. **Correctie**: het juiste antwoord is 200 000 m²." },
           ],
           theorie: "Bij schaal voor oppervlakte: eerst lineaire maten omrekenen, dan oppervlakte berekenen. Of: opp op kaart × schaal².",
-          niveaus: { basis: "200 000 m². A.", simpeler: "500m × 400m = 200 000 m². A.", nogSimpeler: "200k" },
+          niveaus: { basis: "200 000 m².", simpeler: "500m × 400m = 200 000 m².", nogSimpeler: "200k" },
         },
       },
     ],

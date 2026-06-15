@@ -26,7 +26,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer.", "Niet — dat is 2 uur.", "Niet — 3 uur."],
         uitlegPad: {
           stappen: [{ titel: "× 60", tekst: "2,5 × 60 = **150 min**. Of: 2 uur = 120 min, half uur = 30 min, samen 150 min." }],
-          niveaus: { basis: "2,5×60=150. A.", simpeler: "Vermenigvuldig 60. A.", nogSimpeler: "150" },
+          niveaus: { basis: "2,5×60=150.", simpeler: "Vermenigvuldig 60.", nogSimpeler: "150" },
         },
       },
       {
@@ -38,7 +38,7 @@ const steps = [
           stappen: [
             { titel: "Stap-methode", tekst: "14:45 + 15 min → 15:00.\n15:00 + 2 h → 17:00.\n17:00 + 20 min → 17:20.\nTotaal: 15 min + 2 h + 20 min = **2 h 35 min**." },
           ],
-          niveaus: { basis: "2h35min. A.", simpeler: "Stap voor stap optellen. A.", nogSimpeler: "2:35" },
+          niveaus: { basis: "2h35min.", simpeler: "Stap voor stap optellen.", nogSimpeler: "2:35" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           stappen: [
             { titel: "Januari + februari", tekst: "Januari: 31 dagen. Februari (niet-schrikkel): 28 dagen. Totaal: 31 + 28 = **59 dagen**. (In schrikkeljaar 60.)" },
           ],
-          niveaus: { basis: "31+28=59. A.", simpeler: "Jan + feb dagen. A.", nogSimpeler: "59" },
+          niveaus: { basis: "31+28=59.", simpeler: "Jan + feb dagen.", nogSimpeler: "59" },
         },
       },
       {
@@ -62,7 +62,7 @@ const steps = [
           stappen: [
             { titel: "Over middernacht", tekst: "22:45 + 15 min → 23:00.\n23:00 + 1 h → 00:00.\n00:00 + 2 h → 02:00.\n02:00 + 30 min → 02:30.\nTotaal: 15 min + 1 h + 2 h + 30 min = **3 h 45 min**.\n\nOf: 24:00 − 22:45 = 1 h 15 min vanaf start tot middernacht. + 2 h 30 min na middernacht = **3 h 45 min**." },
           ],
-          niveaus: { basis: "3h45min. A.", simpeler: "Over middernacht splitsen. A.", nogSimpeler: "3:45" },
+          niveaus: { basis: "3h45min.", simpeler: "Over middernacht splitsen.", nogSimpeler: "3:45" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is minuten.", "Niet — dat is 1 uur.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "24 × 60 × 60", tekst: "1 dag = 24 uur = 24 × 60 minuten = 1440 min = 1440 × 60 = **86 400 seconden**." }],
-          niveaus: { basis: "24·3600=86400. A.", simpeler: "Uren × 3600. A.", nogSimpeler: "86 400" },
+          niveaus: { basis: "24·3600=86400.", simpeler: "Uren × 3600.", nogSimpeler: "86 400" },
         },
       },
     ],
@@ -91,7 +91,7 @@ const steps = [
         wrongHints: [null, "Niet — te veel.", "Te veel.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "÷ 3,6", tekst: "90 / 3,6 = **25 m/s**. Standaard auto-snelheid op snelweg." }],
-          niveaus: { basis: "90÷3,6=25. A.", simpeler: "km/h gedeeld door 3,6. A.", nogSimpeler: "25" },
+          niveaus: { basis: "90÷3,6=25.", simpeler: "km/h gedeeld door 3,6.", nogSimpeler: "25" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Veel te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "× 3,6", tekst: "12 × 3,6 = **43,2 km/h**. Snelle fietser (recreatief 15-20, sportief 30-40)." }],
-          niveaus: { basis: "12·3,6=43,2. A.", simpeler: "m/s keer 3,6 = km/h. A.", nogSimpeler: "43,2" },
+          niveaus: { basis: "12·3,6=43,2.", simpeler: "m/s keer 3,6 = km/h.", nogSimpeler: "43,2" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
           stappen: [
             { titel: "Totale afstand / totale tijd", tekst: "1 h × 60 km/h = 60 km. 1 h × 90 km/h = 90 km. Totaal: 150 km in 2 h → 150/2 = **75 km/h**.\n\nNB: omdat tijden GELIJK zijn (beide 1 uur), is gem snelheid hier ook gemiddelde van twee snelheden ((60+90)/2 = 75). Bij ongelijke tijden werkt dat niet!" },
           ],
-          niveaus: { basis: "75 km/h. A.", simpeler: "Optellen + delen 2. A.", nogSimpeler: "75" },
+          niveaus: { basis: "75 km/h.", simpeler: "Optellen + delen 2.", nogSimpeler: "75" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
           stappen: [
             { titel: "Klassieke val", tekst: "Tijd 1: 50/25 = 2 h. Tijd 2: 50/50 = 1 h. Totaal: 100 km in 3 h → **33,3 km/h**.\n\n**Veel mensen dachten 37,5** ((25+50)/2). Maar dat klopt alleen bij gelijke TIJDEN, niet bij gelijke AFSTANDEN. Bij gelijke afstand telt langzame deel zwaarder (kost meer tijd)." },
           ],
-          niveaus: { basis: "33,3 km/h. A.", simpeler: "Klein langzaam telt meer. A.", nogSimpeler: "33,3" },
+          niveaus: { basis: "33,3 km/h.", simpeler: "Klein langzaam telt meer.", nogSimpeler: "33,3" },
         },
       },
       {
@@ -145,7 +145,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Veel te weinig.", "Niet — vaste grens."],
         uitlegPad: {
           stappen: [{ titel: "Constante c", tekst: "c = 299 792 458 m/s = **300 000 km/s** = 1 080 000 000 km/h. Niets sneller (Einstein). Licht zon → aarde: 8 min 20 s. Licht maan → aarde: 1,3 s." }],
-          niveaus: { basis: "300 000 km/s. A.", simpeler: "Bijna 300 000 km per seconde. A.", nogSimpeler: "300k" },
+          niveaus: { basis: "300 000 km/s.", simpeler: "Bijna 300 000 km per seconde.", nogSimpeler: "300k" },
         },
       },
     ],
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is afstand/tijd.", "Niet — verkeerde rekening.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "S = V·T", tekst: "90 × 3 = **270 km**. Eenheid km (snelheid km/h × tijd h)." }],
-          niveaus: { basis: "90·3=270. A.", simpeler: "Snelheid × tijd. A.", nogSimpeler: "270" },
+          niveaus: { basis: "90·3=270.", simpeler: "Snelheid × tijd.", nogSimpeler: "270" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
           stappen: [
             { titel: "Eerst tijd → uur", tekst: "15 min = 15/60 h = 0,25 h.\nAfstand = 20 × 0,25 = **5 km**." },
           ],
-          niveaus: { basis: "5 km. A.", simpeler: "15 min = 1/4 uur → 20/4=5. A.", nogSimpeler: "5" },
+          niveaus: { basis: "5 km.", simpeler: "15 min = 1/4 uur → 20/4=5.", nogSimpeler: "5" },
         },
       },
       {
@@ -188,7 +188,7 @@ const steps = [
           stappen: [
             { titel: "0,5 uur tussen tijden", tekst: "14:30 - 14:00 = 30 min = 0,5 h.\nAfstand = 10 × 0,5 = **5 km**." },
           ],
-          niveaus: { basis: "5 km. A.", simpeler: "Half uur lopen × 10 km/h = 5 km. A.", nogSimpeler: "5" },
+          niveaus: { basis: "5 km.", simpeler: "Half uur lopen × 10 km/h = 5 km.", nogSimpeler: "5" },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
           stappen: [
             { titel: "Bij constante v: rechthoek", tekst: "Oppervlakte = V × T = afstand. Werkt ook bij wisselende snelheid: oppervlakte onder kromme = totale afstand. Cito klassieke vraag." },
           ],
-          niveaus: { basis: "Afstand. A.", simpeler: "Onder v-t = km. A.", nogSimpeler: "Afstand" },
+          niveaus: { basis: "Afstand.", simpeler: "Onder v-t = km.", nogSimpeler: "Afstand" },
         },
       },
       {
@@ -212,7 +212,7 @@ const steps = [
           stappen: [
             { titel: "Som per stuk", tekst: "Deel 1: 80 × 2 = 160 km.\nDeel 2: 120 × 1 = 120 km.\nTotaal: 160 + 120 = **280 km**." },
           ],
-          niveaus: { basis: "160+120=280. A.", simpeler: "Twee delen optellen. A.", nogSimpeler: "280" },
+          niveaus: { basis: "160+120=280.", simpeler: "Twee delen optellen.", nogSimpeler: "280" },
         },
       },
     ],
@@ -231,7 +231,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Niet — controleer.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "V = S/T", tekst: "300 / 4 = **75 km/h**. Onder snelweg-limiet, redelijk tempo." }],
-          niveaus: { basis: "300/4=75. A.", simpeler: "Afstand gedeeld door tijd. A.", nogSimpeler: "75" },
+          niveaus: { basis: "300/4=75.", simpeler: "Afstand gedeeld door tijd.", nogSimpeler: "75" },
         },
       },
       {
@@ -241,7 +241,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te veel.", "Veel te weinig."],
         uitlegPad: {
           stappen: [{ titel: "T = S/V", tekst: "240 / 80 = **3 uur**." }],
-          niveaus: { basis: "240/80=3. A.", simpeler: "Afstand/snelheid. A.", nogSimpeler: "3h" },
+          niveaus: { basis: "240/80=3.", simpeler: "Afstand/snelheid.", nogSimpeler: "3h" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
           stappen: [
             { titel: "Tijd berekenen", tekst: "T = 40/50 = 0,8 h = 48 min.\nAankomst: 8:00 + 48 min = **8:48**." },
           ],
-          niveaus: { basis: "8:48. A.", simpeler: "48 min later dan 8:00. A.", nogSimpeler: "8:48" },
+          niveaus: { basis: "8:48.", simpeler: "48 min later dan 8:00.", nogSimpeler: "8:48" },
         },
       },
       {
@@ -263,7 +263,7 @@ const steps = [
         wrongHints: [null, "Niet — × ipv ÷.", "Te weinig.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "V = S/T", tekst: "6 / 1,5 = **4 km/h**. Normaal wandel-tempo." }],
-          niveaus: { basis: "6÷1,5=4. A.", simpeler: "Tempo wandelen. A.", nogSimpeler: "4" },
+          niveaus: { basis: "6÷1,5=4.", simpeler: "Tempo wandelen.", nogSimpeler: "4" },
         },
       },
       {
@@ -275,7 +275,7 @@ const steps = [
           stappen: [
             { titel: "Sommatie snelheden", tekst: "Naar elkaar toe = snelheden optellen: 60 + 40 = 100 km/h.\nTijd: 100 km / 100 km/h = **1 uur**." },
           ],
-          niveaus: { basis: "1 uur. A.", simpeler: "Naar elkaar = + snelheden. A.", nogSimpeler: "1h" },
+          niveaus: { basis: "1 uur.", simpeler: "Naar elkaar = + snelheden.", nogSimpeler: "1h" },
         },
       },
     ],
@@ -301,7 +301,7 @@ const steps = [
           stappen: [
             { titel: "Rij + pauze tijd", tekst: "Rij-tijd: 220/100 = 2,2 h = 2 h 12 min.\nPauze: 30 min.\nTotale tijd: 2 h 12 min + 30 min = 2 h 42 min.\nAankomst: 14:00 + 2 h 42 min = **16:42**." },
           ],
-          niveaus: { basis: "16:42. A.", simpeler: "2:12 rijden + 30 min = 2:42 later. A.", nogSimpeler: "16:42" },
+          niveaus: { basis: "16:42.", simpeler: "2:12 rijden + 30 min = 2:42 later.", nogSimpeler: "16:42" },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer.", "Niet — dat is 3,5 uur.", "Wel mogelijk."],
         uitlegPad: {
           stappen: [{ titel: "V=S/T", tekst: "42/3 = **14 km/h**. Wereldrecord marathon (~2:01) = ~21 km/h. Top-amateur ~12-15 km/h." }],
-          niveaus: { basis: "42/3=14. A.", simpeler: "Marathon-tempo. A.", nogSimpeler: "14" },
+          niveaus: { basis: "42/3=14.", simpeler: "Marathon-tempo.", nogSimpeler: "14" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
           stappen: [
             { titel: "T = 250/100 = 2,5 h", tekst: "14:30 + 2 h 30 min = **17:00**." },
           ],
-          niveaus: { basis: "17:00. A.", simpeler: "2,5 uur later. A.", nogSimpeler: "17:00" },
+          niveaus: { basis: "17:00.", simpeler: "2,5 uur later.", nogSimpeler: "17:00" },
         },
       },
       {
@@ -345,7 +345,7 @@ const steps = [
           stappen: [
             { titel: "V = 100/10 = 10 m/s", tekst: "10 m/s × 3,6 = **36 km/h**. Top-sprinter (Bolt) bijna 38 km/h piek." },
           ],
-          niveaus: { basis: "10 m/s = 36 km/h. A.", simpeler: "100/10 + × 3,6. A.", nogSimpeler: "10/36" },
+          niveaus: { basis: "10 m/s = 36 km/h.", simpeler: "100/10 + × 3,6.", nogSimpeler: "10/36" },
         },
       },
       {
@@ -362,7 +362,7 @@ const steps = [
           stappen: [
             { titel: "Tijd verschil", tekst: "Auto-tijd: 40/80 = 0,5 h = 30 min.\nFiets-tijd: 40/16 = 2,5 h = 2 h 30 min.\nVerschil: 2 h 30 min − 30 min = **2 uur**.\nAuto 2 uur eerder aan." },
           ],
-          niveaus: { basis: "2 uur. A.", simpeler: "Auto 30 min, fiets 2,5 h. Diff 2h. A.", nogSimpeler: "2h" },
+          niveaus: { basis: "2 uur.", simpeler: "Auto 30 min, fiets 2,5 h. Diff 2h.", nogSimpeler: "2h" },
         },
       },
     ],

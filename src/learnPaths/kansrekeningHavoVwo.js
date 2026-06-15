@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Te weinig — er zijn 3 even op 6.", "Niet — dat is kans op 1 specifiek getal.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "3 even van 6 totaal", tekst: "Even getallen op dobbelsteen: 2, 4, 6 = 3 stuks. Totaal uitkomsten: 6. P(even) = 3/6 = **1/2 = 0,5 = 50%**." }],
-          niveaus: { basis: "1/2. A.", simpeler: "3 even / 6 totaal = 1/2", nogSimpeler: "50%" },
+          niveaus: { basis: "1/2.", simpeler: "3 even / 6 totaal = 1/2", nogSimpeler: "50%" },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Complement = 1 − P(A)", tekst: "Som van P(A) + P(niet A) = 1 (alle mogelijkheden). Dus P(niet A) = **1 − 0,3 = 0,7**." }],
           theorie: "Cito-truc: bij 'minstens 1' vragen → gebruik complement. P(minstens 1) = 1 − P(niemand).",
-          niveaus: { basis: "0,7. A.", simpeler: "1 − 0,3 = 0,7", nogSimpeler: "0,7" },
+          niveaus: { basis: "0,7.", simpeler: "1 − 0,3 = 0,7", nogSimpeler: "0,7" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijk", tekst: "P(eerste 6) = 1/6. P(tweede 6) = 1/6. Onafhankelijk → P(beide 6) = 1/6 × 1/6 = **1/36**." }],
           theorie: "Cito-pattern: 'én'-vragen + onafhankelijk → vermenigvuldigen.",
-          niveaus: { basis: "1/36. A.", simpeler: "1/6 × 1/6 = 1/36", nogSimpeler: "1/36" },
+          niveaus: { basis: "1/36.", simpeler: "1/6 × 1/6 = 1/36", nogSimpeler: "1/36" },
         },
       },
       {
@@ -68,7 +68,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Afhankelijk = beïnvloed", tekst: "Voorbeeld: 2 kaarten trekken **zonder terugleggen**. Eerste kaart heart → 12 harten over van 51 kaarten. Eerste kaart geen heart → 13 harten van 51. **Kans tweede hangt af van eerste**." }],
           theorie: "Wel terugleggen = onafhankelijk. Niet terugleggen = afhankelijk.",
-          niveaus: { basis: "Uitkomst 1e. A.", simpeler: "Afhankelijk = 1e beïnvloedt 2e", nogSimpeler: "1e" },
+          niveaus: { basis: "Uitkomst 1e.", simpeler: "Afhankelijk = 1e beïnvloedt 2e", nogSimpeler: "1e" },
         },
       },
       {
@@ -78,7 +78,7 @@ const steps = [
         wrongHints: [null, "Niet — onmogelijk.", "Niet — onmogelijk.", "Niet — beperkt."],
         uitlegPad: {
           stappen: [{ titel: "0 ≤ P ≤ 1", tekst: "Kans **altijd tussen 0 en 1** (of 0% en 100%). 0 = onmogelijk, 1 = zeker. Negatieve kansen of >1 = wiskundig onzin." }],
-          niveaus: { basis: "0 tot 1. A.", simpeler: "Kans = 0 t/m 1", nogSimpeler: "0-1" },
+          niveaus: { basis: "0 tot 1.", simpeler: "Kans = 0 t/m 1", nogSimpeler: "0-1" },
         },
       },
     ],
@@ -98,7 +98,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Pad = vermenigvuldigen", tekst: "**Langs één pad**: vermenigvuldig kansen (product-regel). **Tussen verschillende paden**: tel kansen op (som-regel)." }],
           theorie: "Onthoud: 'én' = ×, 'of' = +.",
-          niveaus: { basis: "Langs pad. A.", simpeler: "Pad = vermenigvuldigen", nogSimpeler: "Pad ×" },
+          niveaus: { basis: "Langs pad.", simpeler: "Pad = vermenigvuldigen", nogSimpeler: "Pad ×" },
         },
       },
       {
@@ -108,7 +108,7 @@ const steps = [
         wrongHints: [null, "Niet — kans op blauw.", "Niet — aantal, niet kans.", "Niet — totaal, niet kans."],
         uitlegPad: {
           stappen: [{ titel: "Gunstig / totaal", tekst: "P(rood) = 4 / (4+6) = 4/10 = **0,4 = 40%**." }],
-          niveaus: { basis: "0,4. A.", simpeler: "4/10 = 0,4", nogSimpeler: "0,4" },
+          niveaus: { basis: "0,4.", simpeler: "4/10 = 0,4", nogSimpeler: "0,4" },
         },
       },
       {
@@ -119,7 +119,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "2^n = paden", tekst: "Bij n worpen met 2 uitkomsten: **2^n paden**. 3 muntjes → 2³ = **8 paden** (KKK, KKM, ..., MMM)." }],
           theorie: "Formule: aantal paden = aantal-uitkomsten-per-stap ^ aantal-stappen.",
-          niveaus: { basis: "8. A.", simpeler: "2³ = 8 paden", nogSimpeler: "8" },
+          niveaus: { basis: "8.", simpeler: "2³ = 8 paden", nogSimpeler: "8" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Afhankelijk: tel ook af", tekst: "P(rood 1e) = 2/5. Daarna: 1 rood + 3 blauw = 4 over. P(rood 2e) = 1/4. Product: 2/5 × 1/4 = **2/20 = 1/10 = 0,1**." }],
           theorie: "Met terugleggen → onafhankelijk = (2/5)² = 4/25. Zonder = afhankelijk = 1/10. Verschil!",
-          niveaus: { basis: "1/10. A.", simpeler: "2/5 × 1/4 = 1/10", nogSimpeler: "1/10" },
+          niveaus: { basis: "1/10.", simpeler: "2/5 × 1/4 = 1/10", nogSimpeler: "1/10" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Complement-truc", tekst: "**Minstens 1** is gemakkelijker via complement: P(≥1 succes) = **1 − P(0 successen)**. Sneller dan optellen van P(1) + P(2) + P(3)." }],
           theorie: "Cito-CSE-favoriet: 'minstens 1' → altijd complement.",
-          niveaus: { basis: "Complement. A.", simpeler: "Minstens 1 = 1 − P(nul)", nogSimpeler: "Complement" },
+          niveaus: { basis: "Complement.", simpeler: "Minstens 1 = 1 − P(nul)", nogSimpeler: "Complement" },
         },
       },
     ],
@@ -161,7 +161,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Faculteit = aftellen × elkaar", tekst: "5! = 5 × 4 × 3 × 2 × 1 = **120**." }],
           theorie: "Cito-truc: faculteit groeit snel. 10! = 3.628.800. 20! is veel groter dan miljarden.",
-          niveaus: { basis: "120. A.", simpeler: "5×4×3×2×1 = 120", nogSimpeler: "120" },
+          niveaus: { basis: "120.", simpeler: "5×4×3×2×1 = 120", nogSimpeler: "120" },
         },
       },
       {
@@ -171,7 +171,7 @@ const steps = [
         wrongHints: [null, "Niet — daar telt volgorde.", "Niet — formule fout.", "Niet — dat is C(10,1)."],
         uitlegPad: {
           stappen: [{ titel: "Combinaties C(10,3)", tekst: "C(10,3) = 10! / (3! × 7!) = (10×9×8)/(3×2×1) = 720/6 = **120**. Volgorde maakt niet uit dus deel door 3! permutaties van zelfde 3 mensen." }],
-          niveaus: { basis: "120. A.", simpeler: "C(10,3) = 120", nogSimpeler: "120" },
+          niveaus: { basis: "120.", simpeler: "C(10,3) = 120", nogSimpeler: "120" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Permutaties = volgorde", tekst: "**Medailles** = goud/zilver/brons = volgorde telt. P(8,3) = 8! / 5! = 8 × 7 × 6 = **336** mogelijke podiums." }],
           theorie: "Verschil: combinaties = 56, permutaties = 336. Permutaties = combinaties × k! (factor 3! = 6 erbij door volgorde).",
-          niveaus: { basis: "336. A.", simpeler: "8×7×6 = 336", nogSimpeler: "336" },
+          niveaus: { basis: "336.", simpeler: "8×7×6 = 336", nogSimpeler: "336" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Productregel", tekst: "**26 letters × 26 × 10 cijfers × 10 × 10 × 26 × 26 = 26⁴ × 10³ = 456.976.000** mogelijke kentekens. In praktijk minder door uitsluiting verwarrende combinaties." }],
           theorie: "Cito-pattern: productregel voor 'aantal codes/wachtwoorden/etiketten' vragen.",
-          niveaus: { basis: "26²×10³×26². A.", simpeler: "Productregel = 26⁴·10³", nogSimpeler: "A = veel." },
+          niveaus: { basis: "26²×10³×26².", simpeler: "Productregel = 26⁴·10³", nogSimpeler: "A = veel." },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "Niet — 0! = 1 definitie.", "Wel mogelijk — definitie 1.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "0! = 1 (definitie)", tekst: "**0! = 1**. Wiskundige conventie zodat formules werken: C(n,0) = 1 (één manier om niets te kiezen), C(n,n) = 1. Zou breken als 0! ≠ 1." }],
-          niveaus: { basis: "1. A.", simpeler: "0! = 1", nogSimpeler: "1" },
+          niveaus: { basis: "1.", simpeler: "0! = 1", nogSimpeler: "1" },
         },
       },
     ],
@@ -223,7 +223,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Som-regel: tel + trek af", tekst: "P(A of B) = P(A) + P(B) − P(A en B) = 0,5 + 0,4 − 0,2 = **0,7**." }],
           theorie: "Cito-Venn-favoriet. Trek doorsnede af om dubbel-telling te voorkomen.",
-          niveaus: { basis: "0,7. A.", simpeler: "0,5+0,4-0,2 = 0,7", nogSimpeler: "0,7" },
+          niveaus: { basis: "0,7.", simpeler: "0,5+0,4-0,2 = 0,7", nogSimpeler: "0,7" },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Σ (waarde × kans)", tekst: "E = (1+2+3+4+5+6) × 1/6 = 21/6 = **3,5**. Op lange termijn gemiddeld 3,5 per worp." }],
           theorie: "Dobbelsteen heeft geen 3,5-zijde — verwachtingswaarde is gemiddelde, geen mogelijke uitkomst.",
-          niveaus: { basis: "3,5. A.", simpeler: "21/6 = 3,5", nogSimpeler: "3,5" },
+          niveaus: { basis: "3,5.", simpeler: "21/6 = 3,5", nogSimpeler: "3,5" },
         },
       },
       {
@@ -245,7 +245,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "E = 0 betekent fair", tekst: "**Eerlijk spel**: lange termijn winst = 0. Speler wint of verliest niets gemiddeld. Casino's bouwen E < 0 in (voor speler) → winstgevend op de lange termijn voor het huis." }],
           theorie: "Voorbeeld: muntje gooien om €1 — eerlijk (E=0). Casino-spel — niet eerlijk (E<0 speler).",
-          niveaus: { basis: "0. A.", simpeler: "Eerlijk = E = 0", nogSimpeler: "0" },
+          niveaus: { basis: "0.", simpeler: "Eerlijk = E = 0", nogSimpeler: "0" },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Disjunct = kunnen niet samen", tekst: "**Disjunct** = onverenigbaar = uitsluitend. Bv: dobbelsteen 6 EN dobbelsteen 5 in zelfde worp = onmogelijk. **P(A en B) = 0**." }],
           theorie: "Onverenigbaar ≠ onafhankelijk! Onafhankelijk: A en B beïnvloeden elkaar niet maar kunnen wel samen. Disjunct: kunnen NIET samen.",
-          niveaus: { basis: "0. A.", simpeler: "Disjunct = P(A∩B) = 0", nogSimpeler: "0" },
+          niveaus: { basis: "0.", simpeler: "Disjunct = P(A∩B) = 0", nogSimpeler: "0" },
         },
       },
       {
@@ -267,7 +267,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Winst = uitkomst − inzet", tekst: "Winnen: ontvang 20 − inzet 5 = +15 met kans 1/10. Niet winnen: verlies 5 met kans 9/10. E(winst) = 15×0,1 + (−5)×0,9 = 1,5 − 4,5 = **−3**. Speler verliest gemiddeld €3 per lot." }],
           theorie: "Tip: bij E-vragen altijd 'netto winst' uitrekenen (incl. inzet aftrek).",
-          niveaus: { basis: "−3. A.", simpeler: "E = 15·0,1 − 5·0,9 = −3", nogSimpeler: "−3" },
+          niveaus: { basis: "−3.", simpeler: "E = 15·0,1 − 5·0,9 = −3", nogSimpeler: "−3" },
         },
       },
     ],
@@ -286,7 +286,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is P(A) zelf.", "Niet — kansen ≤1.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Complement", tekst: "1 − 0,7 = 0,3." }],
-          niveaus: { basis: "0,3. A.", simpeler: "Complement = 1-0,7 = 0,3", nogSimpeler: "0,3" },
+          niveaus: { basis: "0,3.", simpeler: "Complement = 1-0,7 = 0,3", nogSimpeler: "0,3" },
         },
       },
       {
@@ -297,7 +297,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Ronde tafel = (n-1)!", tekst: "Bij **ronde tafel** is 'eerste plaats' niet uniek → (n-1)! = 4! = **24**. Voor rij is 't 5! = 120." }],
           theorie: "Cito-truc: ronde tafel = (n-1)! ipv n!. Belangrijk verschil.",
-          niveaus: { basis: "24. A.", simpeler: "(5-1)! = 24", nogSimpeler: "24" },
+          niveaus: { basis: "24.", simpeler: "(5-1)! = 24", nogSimpeler: "24" },
         },
       },
       {
@@ -307,7 +307,7 @@ const steps = [
         wrongHints: [null, "Niet — kans op zwart.", "Niet — aantal.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "3/10", tekst: "P(wit) = 3 / 10 = **0,3**." }],
-          niveaus: { basis: "0,3. A.", simpeler: "3/10 = 0,3", nogSimpeler: "0,3" },
+          niveaus: { basis: "0,3.", simpeler: "3/10 = 0,3", nogSimpeler: "0,3" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet kans-vermenigvuldiging.", "Niet — geen winst zonder kans.", "Niet — andere combo."],
         uitlegPad: {
           stappen: [{ titel: "E = waarde × kans", tekst: "E = 10 × 0,4 + 0 × 0,6 = **4**." }],
-          niveaus: { basis: "4. A.", simpeler: "10·0,4 = 4", nogSimpeler: "4" },
+          niveaus: { basis: "4.", simpeler: "10·0,4 = 4", nogSimpeler: "4" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen onafhankelijk.", "Niet — disjunct = 0.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijkheid", tekst: "**Onafhankelijk** = A beïnvloedt B niet. Dan P(A∩B) = P(A)·P(B). Bij afhankelijk: P(A∩B) = P(A)·P(B|A)." }],
-          niveaus: { basis: "Onafhankelijk. A.", simpeler: "Onafhankelijk → vermenigvuldigen", nogSimpeler: "Onafhankelijk" },
+          niveaus: { basis: "Onafhankelijk.", simpeler: "Onafhankelijk → vermenigvuldigen", nogSimpeler: "Onafhankelijk" },
         },
       },
     ],

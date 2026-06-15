@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "RAM is werkgeheugen, het rekent niet.", "De voeding levert alleen stroom.", "Het scherm is output."],
         uitlegPad: {
           stappen: [{ titel: "De processor rekent", tekst: "De **CPU** (Central Processing Unit, processor) is het 'brein': hij voert de instructies van programma's uit en rekent. Snelheid meet je in **GHz** (miljarden bewerkingen/sec), en moderne CPU's hebben meerdere **cores** die parallel werken." }],
-          niveaus: { basis: "De CPU. A.", simpeler: "Brein = CPU", nogSimpeler: "A." },
+          niveaus: { basis: "De CPU.", simpeler: "Brein = CPU", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Dat is juist opslag (SSD/HDD), niet RAM.", "Dat is de GPU.", "Dat is de voeding."],
         uitlegPad: {
           stappen: [{ titel: "Vluchtig werkgeheugen", tekst: "**RAM** is **snel** maar **vluchtig**: het bewaart wat je *nú* gebruikt (lopende programma's) en is **leeg bij uitzetten**. Bestanden bewaar je blijvend op **opslag** (SSD/HDD), die groter maar langzamer is." }],
-          niveaus: { basis: "Snel + tijdelijk. A.", simpeler: "RAM = tijdelijk geheugen", nogSimpeler: "A." },
+          niveaus: { basis: "Snel + tijdelijk.", simpeler: "RAM = tijdelijk geheugen", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Beide zijn opslag, geen werkgeheugen.", "SSD's kunnen ook groot zijn.", "Ze verschillen duidelijk in snelheid en techniek."],
         uitlegPad: {
           stappen: [{ titel: "Flash vs schijf", tekst: "Een **SSD** (Solid State Drive) gebruikt flashgeheugen — **snel**, stil, geen bewegende delen. Een **HDD** (Hard Disk Drive) heeft een **draaiende schijf** en is langzamer. Beide bewaren bestanden blijvend; SSD's zijn tegenwoordig de standaard." }],
-          niveaus: { basis: "SSD sneller, geen bewegende delen. A.", simpeler: "SSD = sneller", nogSimpeler: "A." },
+          niveaus: { basis: "SSD sneller, geen bewegende delen.", simpeler: "SSD = sneller", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Dat zijn bewerkingen in een tekstprogramma.", "Dat hoort bij internet/bestanden delen.", "Dat is geen CPU-cyclus."],
         uitlegPad: {
           stappen: [{ titel: "Ophalen, ontcijferen, uitvoeren", tekst: "De CPU herhaalt de **fetch-decode-execute-cyclus**: instructie ophalen (fetch), ontcijferen (decode), uitvoeren (execute) — miljarden keren per seconde. Zo werkt hij een programma stap voor stap af." }],
-          niveaus: { basis: "Fetch-decode-execute. A.", simpeler: "Ophalen-ontcijferen-uitvoeren", nogSimpeler: "A." },
+          niveaus: { basis: "Fetch-decode-execute.", simpeler: "Ophalen-ontcijferen-uitvoeren", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "De SSD is niet-vluchtig — die blijft bewaard.", "Het OS staat op opslag en blijft.", "Niet-opgeslagen werk in RAM ben je wél kwijt."],
         uitlegPad: {
           stappen: [{ titel: "RAM is vluchtig", tekst: "**RAM** is **vluchtig**: zonder stroom is het leeg. Werk dat je nog niet hebt **opgeslagen** (en dus alleen in RAM stond) ben je kwijt. Wat op de **SSD/HDD** staat (niet-vluchtig) blijft bewaard." }],
-          niveaus: { basis: "Niet-opgeslagen werk in RAM. A.", simpeler: "RAM weg = niet-opgeslagen werk", nogSimpeler: "A." },
+          niveaus: { basis: "Niet-opgeslagen werk in RAM.", simpeler: "RAM weg = niet-opgeslagen werk", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Andersom: opslag is juist langzamer dan RAM.", "Opslag is juist veel groter dan RAM.", "Cache is juist het snelst."],
         uitlegPad: {
           stappen: [{ titel: "Snel & klein vs traag & groot", tekst: "Hoe **dichter bij de CPU**, hoe **sneller maar kleiner**: registers/cache (in de CPU) → RAM → opslag (SSD/HDD). Data reist van opslag naar RAM naar de CPU. De cache is supersnel maar piepklein; opslag is groot maar traag." }],
-          niveaus: { basis: "Dichterbij = sneller, kleiner. A.", simpeler: "Bij CPU = sneller+kleiner", nogSimpeler: "A." },
+          niveaus: { basis: "Dichterbij = sneller, kleiner.", simpeler: "Bij CPU = sneller+kleiner", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Het OS legt geen kabels aan.", "Het OS doet veel meer dan games."],
         uitlegPad: {
           stappen: [{ titel: "De brug hardware ↔ software", tekst: "Het **OS** (Windows, macOS, Linux, Android…) is de **brug** tussen hardware en jouw programma's: het beheert hardware (via drivers), verdeelt CPU-tijd en geheugen over processen, regelt bestanden, de interface en beveiliging. Zonder OS kun je de computer niet gebruiken." }],
-          niveaus: { basis: "Hardware + programma's beheren. A.", simpeler: "OS = beheert alles", nogSimpeler: "A." },
+          niveaus: { basis: "Hardware + programma's beheren.", simpeler: "OS = beheert alles", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Internet heeft er niets mee te maken.", "Schermen doen niet mee.", "Opslaggrootte regelt geen multitasking."],
         uitlegPad: {
           stappen: [{ titel: "CPU-tijd verdelen", tekst: "Het OS doet aan **multitasking**: het verdeelt de **CPU-tijd** razendsnel over alle lopende **processen**, zodat het lijkt alsof alles tegelijk draait. In werkelijkheid wisselt de CPU continu tussen taken." }],
-          niveaus: { basis: "Multitasking. A.", simpeler: "Tegelijk = multitasking", nogSimpeler: "A." },
+          niveaus: { basis: "Multitasking.", simpeler: "Tegelijk = multitasking", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Windows is gesloten (closed source).", "macOS is grotendeels gesloten.", "Linux is juist een bekend open-source-OS."],
         uitlegPad: {
           stappen: [{ titel: "Code openbaar", tekst: "**Linux** (en Android, dat erop bouwt) is **open source**: de broncode is openbaar, iedereen mag meekijken/aanpassen, vaak gratis. **Windows** en **macOS** zijn **gesloten** — de code is eigendom van het bedrijf." }],
-          niveaus: { basis: "Linux. A.", simpeler: "Open source = Linux", nogSimpeler: "A." },
+          niveaus: { basis: "Linux.", simpeler: "Open source = Linux", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "De grootte staat los van de extensie.", "De maker is iets anders.", "De locatie is het pad, niet de extensie."],
         uitlegPad: {
           stappen: [{ titel: "Het type", tekst: "De **extensie** (`.jpg`, `.docx`, `.py`…) geeft het **bestandstype** aan en bepaalt met welk programma het standaard opent. Let op: alleen de extensie hernoemen verandert niet de echte **inhoud** van het bestand." }],
-          niveaus: { basis: "Het type. A.", simpeler: "Extensie = bestandstype", nogSimpeler: "A." },
+          niveaus: { basis: "Het type.", simpeler: "Extensie = bestandstype", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Cloud heeft juist internet nodig.", "Je vertrouwt je data aan een bedrijf toe — let op privacy.", "Het kost wel degelijk (cloud)opslag."],
         uitlegPad: {
           stappen: [{ titel: "Overal + back-up", tekst: "**Cloudopslag** (Drive, iCloud, Dropbox) staat op servers via internet: **overal bereikbaar**, automatische **back-up** en makkelijk **samenwerken**. Nadelen: je hebt **internet** nodig en je vertrouwt je gegevens toe aan een bedrijf (privacy/AVG)." }],
-          niveaus: { basis: "Overal + back-up. A.", simpeler: "Cloud = overal bereikbaar", nogSimpeler: "A." },
+          niveaus: { basis: "Overal + back-up.", simpeler: "Cloud = overal bereikbaar", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Grootte zegt niets over de locatie.", "De extensie zegt het type, niet de plek.", "Een IP-adres hoort bij netwerken."],
         uitlegPad: {
           stappen: [{ titel: "Een pad door de boom", tekst: "Een **pad** beschrijft de route door de **boomstructuur** van mappen naar het bestand, bv. `Documenten/School/verslag.docx`. Mappen kunnen in mappen zitten; het pad zegt precies waar het bestand staat." }],
-          niveaus: { basis: "Een pad. A.", simpeler: "Locatie = pad", nogSimpeler: "A." },
+          niveaus: { basis: "Een pad.", simpeler: "Locatie = pad", nogSimpeler: "A." },
         },
       },
     ],

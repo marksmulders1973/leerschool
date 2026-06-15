@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Klassieke NL-fout.", "Past simple.", "Continuous."],
         uitlegPad: {
           stappen: [{ titel: "He works", tekst: "**Present simple**: 3e persoon enkelvoud (he/she/it) krijgt **-s**. I work, you work, **he works**, we work, they work. Spelling: -es bij sis/sj-klanken (he watches, she misses). **NL-leerlingen vergeten 's' vaak**: 'He work' is fout, moet 'He works' zijn. Examencommissie strafs." }],
-          niveaus: { basis: "-s. A.", simpeler: "3e p ev = -s", nogSimpeler: "-s" },
+          niveaus: { basis: "-s.", simpeler: "3e p ev = -s", nogSimpeler: "-s" },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verleden met heden-relevantie", tekst: "**Present perfect**: have/has + past participle. Geeft handeling die **begon in verleden + nog relevant of doorgaand** is. 'I **have lived** here for 10 years' = ik woon hier (nog steeds) sinds 10 jaar geleden. Verschil met past simple: 'I lived here for 10 years' = verleden, niet meer." }],
           theorie: "Cito-val: 'How long have you...' altijd present perfect, niet past simple.",
-          niveaus: { basis: "Have+lived. A.", simpeler: "Pres perf = have+pp", nogSimpeler: "A." },
+          niveaus: { basis: "Have+lived.", simpeler: "Pres perf = have+pp", nogSimpeler: "A." },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Type 1 = if + present + will.", "Type 3 = if had had + would have.", "Type 0 = algemeen waarheid."],
         uitlegPad: {
           stappen: [{ titel: "If + past + would", tekst: "**Type 2 conditional**: if + past simple, ... would + infinitief. Betekent **onwaarschijnlijk of hypothetisch** in heden/toekomst. 'If I **had** money (ik heb het niet), I **would travel** (ik ga niet doen)'.\n\n**Type 1** = mogelijk: 'If it rains, I will stay'.\n**Type 3** = onmogelijk verleden: 'If I had studied, I would have passed'." }],
-          niveaus: { basis: "Type 2. A.", simpeler: "If+past+would = T2", nogSimpeler: "T2" },
+          niveaus: { basis: "Type 2.", simpeler: "If+past+would = T2", nogSimpeler: "T2" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         wrongHints: [null, "Correct.", "Correct.", "Correct."],
         uitlegPad: {
           stappen: [{ titel: "Be + age, niet have", tekst: "**'I have 16 years' = WRONG**. NL letterlijk vertaalt 'ik heb 16 jaar' (zoals FR + ES). Engels: **'I am 16 (years old)'**. Met 'be' + leeftijd, niet 'have'.\n\nAndere klassieke NL-fouten:\n• 'I am born in' → 'I was born in'.\n• 'Become' (worden) vaak verward met 'krijgen' (= get).\n• 'Eventually' = uiteindelijk, niet 'eventueel'." }],
-          niveaus: { basis: "I have 16 years. A.", simpeler: "Have age = fout", nogSimpeler: "A." },
+          niveaus: { basis: "I have 16 years.", simpeler: "Have age = fout", nogSimpeler: "A." },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Niet — enkelvoud.", "Engels heeft geen geslachten.", "Wel regel."],
         uitlegPad: {
           stappen: [{ titel: "Klinker-klank → an", tekst: "**A vs an**: 'an' voor woord beginnend met **klinker-klank** (uitspraak, niet spelling!).\n• An apple, an hour (silent h), an MP.\n• A book, a university (yu-klank, geen klinker-klank), a one (wun).\n\nLet op: uitspraak telt, niet de letter." }],
-          niveaus: { basis: "Klinker-klank. A.", simpeler: "an = klinker", nogSimpeler: "A." },
+          niveaus: { basis: "Klinker-klank.", simpeler: "an = klinker", nogSimpeler: "A." },
         },
       },
     ],
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Bij specifieke naam.", "Te informeel.", "Te informeel."],
         uitlegPad: {
           stappen: [{ titel: "Formele match", tekst: "**Yours faithfully** = bij 'Dear Sir or Madam' (naam onbekend). **Yours sincerely** = bij 'Dear Mr/Ms [naam]' (naam bekend). Onthouden: 'sir = faithfully' beide met 's', 'name = sincerely' beide andere paren. Onbeleefd om verkeerde pair te gebruiken in formeel verkeer." }],
-          niveaus: { basis: "Yours faithfully. A.", simpeler: "Dear Sir = faithfully", nogSimpeler: "A." },
+          niveaus: { basis: "Yours faithfully.", simpeler: "Dear Sir = faithfully", nogSimpeler: "A." },
         },
       },
       {
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Te vaag.", "Te vaag.", "Niet zakelijk."],
         uitlegPad: {
           stappen: [{ titel: "Concreet + duidelijk", tekst: "Goede subject line: **concreet onderwerp + waarom je schrijft**. 'Application for Marketing Internship Summer 2026' geeft direct duidelijkheid. Slechte: 'Hi', 'Question', 'Important' — lezer weet niet waar over. Lange subject lines (>10 woorden) ook slecht: cruciaal eerste 6 woorden moeten alles overbrengen." }],
-          niveaus: { basis: "Application. A.", simpeler: "Subject = concreet", nogSimpeler: "A." },
+          niveaus: { basis: "Application.", simpeler: "Subject = concreet", nogSimpeler: "A." },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Niet — gepast.", "Wel correct.", "Niet — gepast direct."],
         uitlegPad: {
           stappen: [{ titel: "Standaard-zin", tekst: "**'Please find my CV attached'** = klassieke formele zin sollicitatie. Anders: 'I have attached my CV' (iets minder formeel). Recente trend: 'I've attached my CV for your review' (modern + helder).\n\nVermijden: 'I attach my CV' (oud), 'Here is my CV' (te informeel)." }],
-          niveaus: { basis: "Standaard. A.", simpeler: "Find CV attached = standaard", nogSimpeler: "A." },
+          niveaus: { basis: "Standaard.", simpeler: "Find CV attached = standaard", nogSimpeler: "A." },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Veel te lang.", "Wel impliciete limiet."],
         uitlegPad: {
           stappen: [{ titel: "Kort + krachtig", tekst: "**Cover letter ideaal: 200-300 woorden**. Reden: HR-mensen scannen — lange brief = niet gelezen. Vier alinea's: introductie, wie ik ben + vaardigheden, waarom dit bedrijf, afsluiting + actie. Geen lange CV-inhoud — die staat in CV bijgevoegd." }],
-          niveaus: { basis: "200-300 w. A.", simpeler: "Cover letter = 300 w", nogSimpeler: "A." },
+          niveaus: { basis: "200-300 w.", simpeler: "Cover letter = 300 w", nogSimpeler: "A." },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
         wrongHints: [null, "Niet — TO ontbreekt.", "Niet — niet gerund.", "Niet — niet gerund."],
         uitlegPad: {
           stappen: [{ titel: "TO + -ing", tekst: "**Look forward TO + gerund (-ing)**. Bv. 'I look forward TO hearing from you.' 'TO' is **voorzetsel** hier, niet infinitief-marker → krijgt -ing-vorm na zich. Klassieke fout: 'look forward to hear' (verkeerd, moet 'to hearing'). Andere voorbeelden: 'I'm used to studying' (niet 'to study')." }],
-          niveaus: { basis: "TO hearing. A.", simpeler: "Look fwd TO + -ing", nogSimpeler: "A." },
+          niveaus: { basis: "TO hearing.", simpeler: "Look fwd TO + -ing", nogSimpeler: "A." },
         },
       },
     ],
@@ -154,7 +154,7 @@ const steps = [
         wrongHints: [null, "Zwak.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Drie criteria", tekst: "**Sterke thesis**:\n• **Specifiek**: niet 'social media is bad' maar 'Instagram increases anxiety in teen girls due to algorithmic body-comparison'.\n• **Omstreden**: mensen zouden ander mening kunnen hebben (anders is het feit, geen essay).\n• **Onderbouwbaar**: jij hebt bewijs/argumenten.\n\n**Plaatsing**: einde inleiding-alinea. Vaak 1 zin." }],
-          niveaus: { basis: "3 criteria. A.", simpeler: "Thesis = specifiek+omstreden", nogSimpeler: "A." },
+          niveaus: { basis: "3 criteria.", simpeler: "Thesis = specifiek+omstreden", nogSimpeler: "A." },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Niet — however.", "Niet — therefore.", "Niet — then."],
         uitlegPad: {
           stappen: [{ titel: "Adding", tekst: "**Furthermore** = bovendien, daarnaast. Voor het toevoegen van argument. Synoniemen: moreover, in addition, additionally. Tegenstelling: however, nevertheless. Gevolg: therefore, consequently. Variatie in connectors = beter Engels." }],
-          niveaus: { basis: "Toevoegen. A.", simpeler: "Furthermore = +", nogSimpeler: "A." },
+          niveaus: { basis: "Toevoegen.", simpeler: "Furthermore = +", nogSimpeler: "A." },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         wrongHints: [null, "Niet — wel gebruiken.", "Niet — wel gebruiken.", "Niet — wel gebruiken."],
         uitlegPad: {
           stappen: [{ titel: "Formele stijl", tekst: "**Contractions** (samentrekkingen 'don't, I'm, won't, it's') zijn **informeel** — vermijden in academische essays. Gebruik volledig: 'do not, I am, will not, it is'. Ook vermijden: spreektaal ('kids, a lot of, stuff'), persoonlijke uitspraken ('I think' in argumentative — laat argument spreken), retorische vragen (sparingly)." }],
-          niveaus: { basis: "Contractions. A.", simpeler: "don't = vermijden", nogSimpeler: "A." },
+          niveaus: { basis: "Contractions.", simpeler: "don't = vermijden", nogSimpeler: "A." },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         wrongHints: [null, "Klopt deels maar primair direct.", "Niet — beide bestaan.", "Wel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld", tekst: "**Active** (sterk): 'Researchers found that social media affects mental health.'\n**Passive** (zwakker): 'It was found by researchers that mental health is affected by social media.'\n\nActive is **directer + korter + duidelijker** wie doet wat. Passive heeft plaats (bv. wetenschappelijk gerelateerd, of als doel = focus) maar **niet als default**. Engelse stijlgidsen (Strunk + White) verdedigen active." }],
-          niveaus: { basis: "Direct. A.", simpeler: "Active = direct", nogSimpeler: "A." },
+          niveaus: { basis: "Direct.", simpeler: "Active = direct", nogSimpeler: "A." },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "Veel te kort.", "Te lang.", "Wel verwachting."],
         uitlegPad: {
           stappen: [{ titel: "Concreet beperkt", tekst: "**HAVO**: ~250-300 woorden. **VWO**: ~350-400 woorden. Korter = onvoldoende uitwerking, langer = padding. School-specifiek verschilt licht. **Plan: 4 alinea's** met intro + 2-3 argumenten + conclusie. Per alinea ~60-80 woorden." }],
-          niveaus: { basis: "250-300. A.", simpeler: "HAVO = 300w", nogSimpeler: "A." },
+          niveaus: { basis: "250-300.", simpeler: "HAVO = 300w", nogSimpeler: "A." },
         },
       },
     ],
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Niet — slordig.", "Niet — examinator wacht.", "Niet — fouten worden meer."],
         uitlegPad: {
           stappen: [{ titel: "Vloeiend pauzeren", tekst: "**Goede speech fillers** (Engels):\n• 'Well, let me think for a moment...'\n• 'That's a really interesting question.'\n• 'You know, I would say that...'\n• 'Actually, I believe...'\n• 'Hmm, in my opinion...'\n\nGeeft je tijd om te denken zonder onhandige stilte. Vermijd NL 'eh euh' (klinkt onzeker). Beter rustig + bewust pauzeren met deze zinnen." }],
-          niveaus: { basis: "Well let me think. A.", simpeler: "Speech filler", nogSimpeler: "A." },
+          niveaus: { basis: "Well let me think.", simpeler: "Speech filler", nogSimpeler: "A." },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Correct.", "Correct.", "Correct."],
         uitlegPad: {
           stappen: [{ titel: "Past simple bij specifieke tijd", tekst: "**Fout**: 'I have seen her yesterday'. Reden: **'yesterday' is specifieke tijd in verleden** → vereist past simple, niet present perfect. Correct: **'I saw her yesterday'**.\n\nRegel: present perfect bij **onbepaalde tijd** ('I have seen her') of voor doorgaand effect. Past simple bij **specifieke tijd**. Cito-klassieker — NL'ers verwarren vaak." }],
-          niveaus: { basis: "Have seen yesterday. A.", simpeler: "PP+yesterday=fout", nogSimpeler: "A." },
+          niveaus: { basis: "Have seen yesterday.", simpeler: "PP+yesterday=fout", nogSimpeler: "A." },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 'this'.", "Bestaat wel.", "Anders dan s."],
         uitlegPad: {
           stappen: [{ titel: "Twee th-klanken", tekst: "**Engels heeft 2 th-klanken**:\n• **Stemloos** (zoals 'think, three, throw, mouth, tooth'): tongtip tussen tanden, **geen stem** — alleen lucht. /θ/.\n• **Stemhebbend** (zoals 'this, that, mother, father, breathe'): zelfde positie maar **met stem** — trilling. /ð/.\n\nNL'ers vervangen vaak met 'd' (denken voor think) of 's' (sink voor think) — fout. Oefenen: tongtip tussen tanden + verschil voelen tussen lucht-alleen en stem." }],
-          niveaus: { basis: "Stemloos. A.", simpeler: "Think = stemloos", nogSimpeler: "A." },
+          niveaus: { basis: "Stemloos.", simpeler: "Think = stemloos", nogSimpeler: "A." },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
         wrongHints: [null, "Wel doen.", "Wel doen.", "Wel doen."],
         uitlegPad: {
           stappen: [{ titel: "Examinator merkt het", tekst: "**Niet** uit hoofd leren tekst. Examinator merkt aan: vlotte vloed zonder pauze + onnatuurlijke stijl + vastlopen als zijweg ontstaat. **Wel doen**:\n• Structuur + outline voorbereiden.\n• Key vocabulary leren.\n• Voorbeelden + verhalen achter de hand.\n• Speech-fillers oefenen.\n• Hardop oefenen tegen jezelf of vriend.\n\nDoel: **natuurlijk klinkende, doordachte gesproken Engels**." }],
-          niveaus: { basis: "Uit hoofd. A.", simpeler: "Niet uit hoofd", nogSimpeler: "A." },
+          niveaus: { basis: "Uit hoofd.", simpeler: "Niet uit hoofd", nogSimpeler: "A." },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [null, "Onbeleefd.", "Onbeleefd.", "Te kort + onbeleefd."],
         uitlegPad: {
           stappen: [{ titel: "Diplomatisch oneens", tekst: "**Beleefde oneens-zinnen**:\n• 'I see your point, but I think...'\n• 'That's an interesting perspective, however...'\n• 'I understand what you mean, although...'\n• 'I'm not entirely sure I agree...'\n• 'There might be another way to look at it...'\n\nDirecte ('You're wrong') komt hard over — toont onvolwassenheid. **Diplomatie** = goed Engels-vaardigheidsteken bij examen. Erkenning andere standpunt versterkt eigen positie." }],
-          niveaus: { basis: "I see your point. A.", simpeler: "Beleefd oneens", nogSimpeler: "A." },
+          niveaus: { basis: "I see your point.", simpeler: "Beleefd oneens", nogSimpeler: "A." },
         },
       },
     ],
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Niet — 3e p ev = -s.", "Niet zinvol.", "Wel mogelijk maar emphatic, niet standaard."],
         uitlegPad: {
           stappen: [{ titel: "3e p ev = -s", tekst: "**She works hard** — 3e persoon enkelvoud present simple krijgt **-s** aan einde werkwoord. 'She work hard' is fout. 'She does work hard' is grammaticaal correct maar **emphatic** (nadruk: ze werkt wèl hard, in tegenstelling tot ...) — niet de neutrale standaardvorm." }],
-          niveaus: { basis: "Works. A.", simpeler: "She works", nogSimpeler: "A." },
+          niveaus: { basis: "Works.", simpeler: "She works", nogSimpeler: "A." },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Niet — bij faithfully.", "Niet — afsluiting zelf.", "Niet — informeel."],
         uitlegPad: {
           stappen: [{ titel: "Sincerely + specifieke naam", tekst: "**'Yours sincerely'** = afsluiting wanneer je naam ontvanger weet ('Dear Mr Smith'). **'Yours faithfully'** = bij onbekende naam ('Dear Sir or Madam'). Memo: 'sir = faithfully' (beide starten met 's' verschilling onthouden), 'name = sincerely' (beide 's')." }],
-          niveaus: { basis: "Naam bekend. A.", simpeler: "Sincerely = naam", nogSimpeler: "A." },
+          niveaus: { basis: "Naam bekend.", simpeler: "Sincerely = naam", nogSimpeler: "A." },
         },
       },
       {
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: [null, "Niet — 'to' is infinitief-marker.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "TO + infinitief", tekst: "**'It's important TO study'** — 'to' als infinitief-marker volgt door **bare infinitive** (eerste vorm werkwoord). Verschil met 'TO + gerund' (waar 'to' voorzetsel is): 'I look forward TO studying' (here gerund). Truc: vervangbaar door noun (NL 'studeren') → infinitief. Vervangbaar door 'this' (NL 'dit') → gerund." }],
-          niveaus: { basis: "Infinitief. A.", simpeler: "Important to + inf", nogSimpeler: "A." },
+          niveaus: { basis: "Infinitief.", simpeler: "Important to + inf", nogSimpeler: "A." },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Niet — passieve toestand.", "Niet — niet doel.", "Niet — verbuigd."],
         uitlegPad: {
           stappen: [{ titel: "Passief past participle", tekst: "**'My CV is attached'** = passief: CV wordt **bijgevoegd** (door iemand/iets). Past participle (3e vorm) = 'attached'. Volledig: 'My CV is attached to this email'. Of formeler: 'Please find my CV attached'." }],
-          niveaus: { basis: "Attached. A.", simpeler: "Is attached", nogSimpeler: "A." },
+          niveaus: { basis: "Attached.", simpeler: "Is attached", nogSimpeler: "A." },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet primair.", "Wel maar onvolledig."],
         uitlegPad: {
           stappen: [{ titel: "Vier hoofd-criteria", tekst: "**Spreekexamen** beoordeling:\n• **Inhoud**: relevantie, diepgang, voorbeelden, structuur.\n• **Taalbeheersing**: woordkeus, grammatica, vloeiendheid.\n• **Uitspraak**: helderheid, intonatie (niet perfect accent).\n• **Interactie**: bij dialoog — reageren, vragen, dialoog opbouwen.\n\nMatched score per criterium. Goede balans belangrijker dan exceleren op één punt." }],
-          niveaus: { basis: "4 criteria. A.", simpeler: "Inhoud+taal+uitspr+inter", nogSimpeler: "A." },
+          niveaus: { basis: "4 criteria.", simpeler: "Inhoud+taal+uitspr+inter", nogSimpeler: "A." },
         },
       },
     ],

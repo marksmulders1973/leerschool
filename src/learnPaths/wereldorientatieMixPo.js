@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Niet — 1800s.", "Niet — 1700s.", "Niet — 1900s."],
         uitlegPad: {
           stappen: [{ titel: "1600-1700", tekst: "**Gouden Eeuw NL** valt in **Tijd van regenten + vorsten (1600-1700)** = tijdvak 6 (van 10). Welvaart door VOC + handel. Rembrandt + Vermeer + Hugo de Groot leefden toen. Andere termen: regenten = bestuurders, vorsten = koningen elders." }],
-          niveaus: { basis: "Regenten + vorsten. A.", simpeler: "Gouden Eeuw = 1600s", nogSimpeler: "A." },
+          niveaus: { basis: "Regenten + vorsten.", simpeler: "Gouden Eeuw = 1600s", nogSimpeler: "A." },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Niet — markeerde Afsluitdijk-bouw.", "Niet — kleinere overstromingen Limburg.", "Niet — recente kleinere."],
         uitlegPad: {
           stappen: [{ titel: "1 februari 1953", tekst: "**Watersnoodramp 1 februari 1953**: zware storm + springtij → dijken breken in Zeeland + Zuid-Holland. **1836 doden** + 200.000 dieren + 47.000 huizen verwoest. Reactie: **Deltawerken** gebouwd 1958-1997 (Oosterscheldekering, Maeslantkering)." }],
-          niveaus: { basis: "1953. A.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
+          niveaus: { basis: "1953.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Veel later (1919).", "Veel later (1891).", "Veel later (1907)."],
         uitlegPad: {
           stappen: [{ titel: "Eerste multinational", tekst: "**VOC** (Verenigde Oostindische Compagnie) opgericht 1602 in Amsterdam. **Eerste multinationale onderneming** wereldwijd. Handel met Azië (specerijen, thee, koffie). Bestond tot 1799. Donkere zijde: betrokken bij slavenhandel + koloniale onderdrukking Indonesië." }],
-          niveaus: { basis: "VOC. A.", simpeler: "1602 = VOC", nogSimpeler: "VOC" },
+          niveaus: { basis: "VOC.", simpeler: "1602 = VOC", nogSimpeler: "VOC" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair — wel schrijver."],
         uitlegPad: {
           stappen: [{ titel: "Achterhuis Amsterdam", tekst: "**Anne Frank** (1929-1945, Frankfurt → Amsterdam): Joodse onderduikster met familie + 4 anderen in **Achterhuis Prinsengracht 263**, 1942-1944. Opgepakt 4 augustus 1944, deported, stierf typhus in **Bergen-Belsen** februari/maart 1945. **Dagboek** bewaard door Miep Gies, na oorlog uitgegeven door vader Otto Frank → wereldberoemd document over Holocaust." }],
-          niveaus: { basis: "Joodse onderduikster. A.", simpeler: "Anne = onderduiken", nogSimpeler: "A." },
+          niveaus: { basis: "Joodse onderduikster.", simpeler: "Anne = onderduiken", nogSimpeler: "A." },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Begin bezetting.", "Algemene Europa-bevrijding.", "Niet — D-Day was juni 1944."],
         uitlegPad: {
           stappen: [{ titel: "Bevrijdingsdag", tekst: "**5 mei 1945**: NL volledig bevrijd door geallieerden (Canadezen + Britten + Amerikanen). Bezet sinds 10 mei 1940. Capitulatie Duits leger NL ondertekend hotel De Wereld Wageningen door generaal Blaskowitz. **Bevrijdingsdag NL** elke 5 mei sinds 1990 nationale feestdag. **4 mei** = Dodenherdenking." }],
-          niveaus: { basis: "5 mei 1945. A.", simpeler: "5-5-45", nogSimpeler: "A." },
+          niveaus: { basis: "5 mei 1945.", simpeler: "5-5-45", nogSimpeler: "A." },
         },
       },
     ],
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Niet correct (Flevoland erbij sinds 1986).", "Niet correct.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Inclusief Flevoland", tekst: "**12 provincies NL**: Noord-Holland, Zuid-Holland, Utrecht, Gelderland, Overijssel, Drenthe, Groningen, Friesland, **Flevoland** (sinds 1986!), Noord-Brabant, Limburg, Zeeland. **Flevoland = jongste provincie**, ingepolderd 1957-1968." }],
-          niveaus: { basis: "12. A.", simpeler: "NL = 12 prov", nogSimpeler: "12" },
+          niveaus: { basis: "12.", simpeler: "NL = 12 prov", nogSimpeler: "12" },
         },
       },
       {
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — regering zit daar, niet hoofdstad.", "Niet — grootste haven.", "Niet — vierde stad."],
         uitlegPad: {
           stappen: [{ titel: "Amsterdam vs Den Haag", tekst: "**Amsterdam = hoofdstad NL** (Grondwet art 32). **Den Haag** = regerings-zetel (parlement + ministeries + koning). Internationaal Hof + ICC ook in Den Haag. Klassieke val: 'wat is hoofdstad?' = Amsterdam. 'Wat is regerings-zetel?' = Den Haag." }],
-          niveaus: { basis: "Amsterdam. A.", simpeler: "Hoofdstad = Adam", nogSimpeler: "Adam" },
+          niveaus: { basis: "Amsterdam.", simpeler: "Hoofdstad = Adam", nogSimpeler: "Adam" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Nummer 2 (~1,4 mld).", "Nummer 3 (~745 mln).", "~580 mln."],
         uitlegPad: {
           stappen: [{ titel: "Azië-dominantie", tekst: "**Azië** = grootste werelddeel qua bevolking: ~**4,7 miljard mensen** (~60% wereldbevolking). Inclusief China (1,4 mld) + India (1,44 mld) + Indonesië + Pakistan + Bangladesh + Japan + Filipijnen + etc. **Afrika** is op 2: ~1,4 mld + snelst groeiend." }],
-          niveaus: { basis: "Azië. A.", simpeler: "Grootste = Azië", nogSimpeler: "A." },
+          niveaus: { basis: "Azië.", simpeler: "Grootste = Azië", nogSimpeler: "A." },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         wrongHints: [null, "Vóór Brexit 2020.", "Niet correct.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Brexit 2020", tekst: "**27 EU-lidstaten** sinds Verenigd Koninkrijk uitgetreden 31 jan 2020 (Brexit). Voor Brexit: 28. **Eurozone**: 20 landen (sinds Kroatië 2023). Brussel = hoofdstad EU. Andere instellingen in Straatsburg + Luxemburg + Frankfurt (ECB)." }],
-          niveaus: { basis: "27. A.", simpeler: "EU = 27", nogSimpeler: "27" },
+          niveaus: { basis: "27.", simpeler: "EU = 27", nogSimpeler: "27" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
         wrongHints: [null, "Klein deel.", "Niet primair.", "Niet primair menselijk."],
         uitlegPad: {
           stappen: [{ titel: "Broeikaseffect", tekst: "**CO₂** (koolstofdioxide) uit verbranding **fossiele brandstoffen** (olie + gas + kolen): hoofdoorzaak klimaatverandering. CO₂ houdt warmte in atmosfeer vast (**broeikaseffect**). Sinds 1880 is aarde ~1,2°C warmer. **Parijs-akkoord 2015**: doel onder 1,5-2°C blijven. Ook bijdragend: methaan (vee-houderij + gas), ontbossing." }],
-          niveaus: { basis: "CO₂ fossiel. A.", simpeler: "Klimaat = CO2", nogSimpeler: "A." },
+          niveaus: { basis: "CO₂ fossiel.", simpeler: "Klimaat = CO2", nogSimpeler: "A." },
         },
       },
     ],
@@ -154,7 +154,7 @@ const steps = [
         wrongHints: [null, "Reptiel.", "Insect.", "Vis."],
         uitlegPad: {
           stappen: [{ titel: "Voedt jongen met melk", tekst: "**Walvissen zijn zoogdieren** (niet vissen!). Leven in water maar: ademen lucht (komen boven), warmbloedig, voeden jongen met **melk**. **Definitie zoogdier**: voedt jongen via melkklieren. Vleermuizen = enige vliegende zoogdier. Vogelbekdier = legt eieren maar voedt melk → ook zoogdier." }],
-          niveaus: { basis: "Walvis. A.", simpeler: "Walvis = zoogd", nogSimpeler: "A." },
+          niveaus: { basis: "Walvis.", simpeler: "Walvis = zoogd", nogSimpeler: "A." },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Niet — planten zijn producenten.", "Niet relevant.", "Onderdeel maar niet fotosynth."],
         uitlegPad: {
           stappen: [{ titel: "Producent", tekst: "**Fotosynthese**: planten gebruiken **CO₂ + water + zonlicht** om **suiker (glucose) + zuurstof** te maken. Vindt plaats in **chloroplasten** (groene cellen) met **chlorofyl** (groen pigment). Zonder fotosynthese geen leven op aarde — alle voedsel begint hier. Bijproduct = zuurstof voor dieren." }],
-          niveaus: { basis: "Maakt suiker + zuurstof. A.", simpeler: "Fotosynth = energie", nogSimpeler: "A." },
+          niveaus: { basis: "Maakt suiker + zuurstof.", simpeler: "Fotosynth = energie", nogSimpeler: "A." },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         wrongHints: [null, "Veel te weinig.", "Te veel.", "Absurd."],
         uitlegPad: {
           stappen: [{ titel: "206 bij volwassene", tekst: "**Volwassene: ~206 botten**. Baby's hebben ~270 botten — sommige groeien vast tijdens leven (bv. schedelplaten + heupbotten). Grootste bot: dijbeen (femur, ~46 cm). Kleinste: stijgbeugel in oor (3 mm). Skelet houdt lichaamsvorm + beschermt organen + biedt aanhechting spieren." }],
-          niveaus: { basis: "206. A.", simpeler: "~206", nogSimpeler: "206" },
+          niveaus: { basis: "206.", simpeler: "~206", nogSimpeler: "206" },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         wrongHints: [null, "Niet — insecten hebben 6 poten.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Klassieke val!", tekst: "**Spinnen zijn GEEN insecten**. **Insecten**: 6 poten + 3 lichaamsdelen (kop/borst/achterlijf) + vaak vleugels. **Spinnen**: 8 poten + 2 lichaamsdelen + nooit vleugels — horen bij groep 'spinachtigen' (arachniden, samen met schorpioenen + mijten + teken). Vaak verwarrend. Cito-vraag-classic." }],
-          niveaus: { basis: "Geen insect. A.", simpeler: "Spin ≠ insect", nogSimpeler: "A." },
+          niveaus: { basis: "Geen insect.", simpeler: "Spin ≠ insect", nogSimpeler: "A." },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "Consument.", "Reducent.", "Consument."],
         uitlegPad: {
           stappen: [{ titel: "Maakt eigen voedsel", tekst: "**Producent** = maakt eigen voedsel via fotosynthese — **planten** + algen. **Consument** = eet anderen (dieren). **Reducent** = breekt dood materiaal af (schimmels + bacteriën). Voedselketen begint altijd bij producent (plant → herbivoor → carnivoor)." }],
-          niveaus: { basis: "Plant. A.", simpeler: "Producent = plant", nogSimpeler: "A." },
+          niveaus: { basis: "Plant.", simpeler: "Producent = plant", nogSimpeler: "A." },
         },
       },
     ],
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Verfijnde later met relativiteit.", "Wel bewegingen onderzocht maar niet zwaartekracht-wetten.", "Andere theorie."],
         uitlegPad: {
           stappen: [{ titel: "Appel-verhaal", tekst: "**Isaac Newton** (1643-1727 UK): zwaartekracht + 3 bewegingswetten. Volgens legende inspireerde vallende appel. *Philosophiæ Naturalis Principia Mathematica* (1687). Beschreef hoe maan om aarde + planeten om zon door zwaartekracht. **Einstein** verfijnde later met algemene relativiteit (1915) — ruimte-tijd-kromming." }],
-          niveaus: { basis: "Newton. A.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "A." },
+          niveaus: { basis: "Newton.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "A." },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Gagarin in ruimte.", "Spoetnik (satelliet).", "Wubbo Ockels."],
         uitlegPad: {
           stappen: [{ titel: "Apollo 11", tekst: "**20 juli 1969**: Neil Armstrong stapt als eerste mens op maan. 'One small step for man, one giant leap for mankind'. Apollo 11-missie (VS). Bemanning: **Armstrong** + **Buzz Aldrin** (ook op maan) + **Michael Collins** (in baan). Onderdeel space race tegen USSR. Tot 1972 6× geslaagde maan-landingen — daarna niemand meer." }],
-          niveaus: { basis: "20-7-1969. A.", simpeler: "1969 = maan", nogSimpeler: "A." },
+          niveaus: { basis: "20-7-1969.", simpeler: "1969 = maan", nogSimpeler: "A." },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Echte planeet.", "Echte planeet.", "Echte planeet."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2006 dwergplaneet", tekst: "**Pluto** was van 1930-2006 9e planeet. Sinds 2006 'gedegradeerd' door **Internationale Astronomische Unie (IAU)** tot **dwergplaneet** — te klein + niet 'baan-vrij'. Echte 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Pluto vandaag samen met Eris, Makemake, Haumea = dwergplaneten." }],
-          niveaus: { basis: "Pluto. A.", simpeler: "Pluto = geen planeet", nogSimpeler: "A." },
+          niveaus: { basis: "Pluto.", simpeler: "Pluto = geen planeet", nogSimpeler: "A." },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
         wrongHints: [null, "Niet — andere chemische formule.", "Niet — NaCl.", "Mengsel, geen molecuul."],
         uitlegPad: {
           stappen: [{ titel: "Watermolecule", tekst: "**H₂O = water**: 2 waterstof-atomen (H) + 1 zuurstof-atoom (O). H₂ = subscript betekent '2 keer'. Cruciaal voor leven. Andere bekende formules:\n• **CO₂** = koolstofdioxide.\n• **NaCl** = natriumchloride (keukenzout).\n• **C₆H₁₂O₆** = glucose (suiker).\n• **O₂** = zuurstof (gas)." }],
-          niveaus: { basis: "Water. A.", simpeler: "H2O = water", nogSimpeler: "A." },
+          niveaus: { basis: "Water.", simpeler: "H2O = water", nogSimpeler: "A." },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [null, "1× (1921).", "Geen Nobelprijs (vóór Nobels tijd).", "Geen Nobelprijs."],
         uitlegPad: {
           stappen: [{ titel: "Unieke prestatie", tekst: "**Marie Curie** (1867-1934, Pools-Frans): **eerste vrouw + eerste persoon met 2 Nobelprijzen in verschillende vakken**:\n• Natuurkunde 1903 (met Pierre + Becquerel, radioactiviteit).\n• Scheikunde 1911 (radium + polonium isolatie).\n\nStierf aan straling-blootstelling — haar notitieboeken nog radioactief vandaag." }],
-          niveaus: { basis: "Curie. A.", simpeler: "2× Nobel = Curie", nogSimpeler: "A." },
+          niveaus: { basis: "Curie.", simpeler: "2× Nobel = Curie", nogSimpeler: "A." },
         },
       },
     ],
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Vaak fout.", "Niet — punten kwijt.", "Niet — op examen alleen."],
         uitlegPad: {
           stappen: [{ titel: "Cito-strategie", tekst: "Bij **lange leesvraag** (Cito-stijl): **lees zorgvuldig + check stap voor stap**. Niet meteen 1e antwoord kiezen — kijk welke optie alle voorwaarden uit tekst nakomt. Vaak zit val in details. Tip: streep belangrijke woorden in vraag onder." }],
-          niveaus: { basis: "Stap voor stap. A.", simpeler: "Stap voor stap", nogSimpeler: "A." },
+          niveaus: { basis: "Stap voor stap.", simpeler: "Stap voor stap", nogSimpeler: "A." },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Niet — apart werelddeel.", "Niet relevant.", "Niet bewoond."],
         uitlegPad: {
           stappen: [{ titel: "EU-lid", tekst: "**Nederland ligt in Europa** (West-Europa specifiek). Onderdeel van **EU** sinds oprichting EEG 1957. NL = klein land (41.500 km²) maar grote economische rol door handel + havens. Buurlanden: België + Duitsland + Noordzee." }],
-          niveaus: { basis: "Europa. A.", simpeler: "NL = Europa", nogSimpeler: "A." },
+          niveaus: { basis: "Europa.", simpeler: "NL = Europa", nogSimpeler: "A." },
         },
       },
       {
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: ["Wel correct maar niet alleen.", "WO1.", "Wel beste.", null],
         uitlegPad: {
           stappen: [{ titel: "WO1 vs WO2", tekst: "**WO1**: 1914-1918 (NL **neutraal**, niet bezet). **WO2**: 1939-1945 wereldwijd, **NL 1940-1945** bezet (Duitse inval 10 mei 1940 → bevrijding 5 mei 1945)." }],
-          niveaus: { basis: "Beide jaartallen correct. A.", simpeler: "WO2-NL = 40-45", nogSimpeler: "A." },
+          niveaus: { basis: "Beide jaartallen correct.", simpeler: "WO2-NL = 40-45", nogSimpeler: "A." },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Herbivoor.", "Omnivoor.", "Producent."],
         uitlegPad: {
           stappen: [{ titel: "Latijnse termen", tekst: "**Carnivoor** (Latijn 'caro' = vlees + 'vorare' = eten) = vleeseter. Voorbeelden: leeuw, tijger, haai, krokodil, gier. **Herbivoor** = planteneter (koe, paard, konijn). **Omnivoor** = alleseter (mens, varken, beer). Goede ezelsbruggetje: HERB = herbal = planten." }],
-          niveaus: { basis: "Vleeseter. A.", simpeler: "Carni = vlees", nogSimpeler: "A." },
+          niveaus: { basis: "Vleeseter.", simpeler: "Carni = vlees", nogSimpeler: "A." },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Vroegere koninginnedag.", "Bevrijdingsdag.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Verjaardag Willem-Alexander", tekst: "**Koningsdag = 27 april**, sinds 2014 (verjaardag koning Willem-Alexander, geboren 1967). Voor 2014: **Koninginnedag 30 april** (Juliana's geb-dag, later Beatrix). Beatrix' eigen geb-dag is 31 januari — koos voor 30 april ter ere van moeder Juliana. Bij valt op zondag → wordt naar zaterdag verschoven." }],
-          niveaus: { basis: "27 april. A.", simpeler: "Koningsdag = 27-4", nogSimpeler: "A." },
+          niveaus: { basis: "27 april.", simpeler: "Koningsdag = 27-4", nogSimpeler: "A." },
         },
       },
     ],

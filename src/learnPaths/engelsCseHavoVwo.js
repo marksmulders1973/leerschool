@@ -38,7 +38,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "150 min sinds 2024", tekst: "Beide HAVO en VWO **150 min** sinds examen-jaar 2024 (eerder 120-150 min wisselend). ~50 vragen over 7-8 teksten." }],
           theorie: "Examenblad.nl-info: officiële regelgeving per jaar. Check altijd actuele duur per examenjaar.",
-          niveaus: { basis: "150 minuten. A.", simpeler: "VWO CSE = 150 min", nogSimpeler: "150" },
+          niveaus: { basis: "150 minuten.", simpeler: "VWO CSE = 150 min", nogSimpeler: "150" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Papier wel, elektronisch niet", tekst: "**Alleen papieren woordenboek** Engels-NL (of Engels-Engels). Geen elektronische woordenboeken, geen vertaal-apps, geen telefoon. Niet alle scholen leveren woordenboeken — vraag tijdig of zelf meenemen." }],
           theorie: "Tip: gebruik woordenboek spaarzaam. Per opzoek 30-60 sec verloren. Beter eerst raden uit context.",
-          niveaus: { basis: "Papieren woordenboek. A.", simpeler: "Woordenboek papier OK", nogSimpeler: "Papieren" },
+          niveaus: { basis: "Papieren woordenboek.", simpeler: "Woordenboek papier OK", nogSimpeler: "Papieren" },
         },
       },
       {
@@ -60,7 +60,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "VWO heeft fictie-tekst", tekst: "**VWO**: een van de teksten is een **literair fragment** (uit roman / short story). Vereist andere skills: tone, irony, character-analyse, sub-tekst. **HAVO**: meer journalistiek + non-fictie." }],
           theorie: "Literair fragment heeft typisch ~10-15 vragen — kan groot deel van examen-cijfer bepalen.",
-          niveaus: { basis: "Literair fragment. A.", simpeler: "VWO = fictie-fragment", nogSimpeler: "Fictie" },
+          niveaus: { basis: "Literair fragment.", simpeler: "VWO = fictie-fragment", nogSimpeler: "Fictie" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "150/50 = 3", tekst: "**150 min / 50 vragen = 3 min/vraag** gemiddeld. Realistisch: korter voor scan-vragen (1 min), langer voor inhouds-vragen (4-5 min)." }],
           theorie: "Trek 10-15 min eind-check af → effectief ~2,7 min/vraag. Houd timer per pagina.",
-          niveaus: { basis: "3 min. A.", simpeler: "150/50 = 3", nogSimpeler: "3" },
+          niveaus: { basis: "3 min.", simpeler: "150/50 = 3", nogSimpeler: "3" },
         },
       },
       {
@@ -82,7 +82,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opinion = mening", tekst: "**Opinion column** (vaak in The Guardian, NY Times etc.) = persoonlijke mening van schrijver, vaak controversieel. CSE-favoriet voor intentie- en toon-vragen." }],
           theorie: "Cito-tip: in opinion column zit auteur-mening duidelijk; in nieuws-artikel pas op met 'mening van schrijver vs van geïnterviewde'.",
-          niveaus: { basis: "Opinion column. A.", simpeler: "Subjectief = opinion", nogSimpeler: "Opinion" },
+          niveaus: { basis: "Opinion column.", simpeler: "Subjectief = opinion", nogSimpeler: "Opinion" },
         },
       },
     ],
@@ -102,7 +102,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Purpose = intentie/doel", tekst: "**Purpose** = WAAROM schrijver dit deel schreef. Niet 'wat staat er' (detail) of 'hoe formeel is 't' (register), maar 'wat wil schrijver bereiken'. Vaak: conclude / persuade / warn / criticise." }],
           theorie: "Cito-strategie: lees laatste alinea zorgvuldig + kijk naar zinnen die actie/conclusie suggereren.",
-          niveaus: { basis: "Intentie. A.", simpeler: "Purpose = intentie", nogSimpeler: "Purpose" },
+          niveaus: { basis: "Intentie.", simpeler: "Purpose = intentie", nogSimpeler: "Purpose" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
           stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'although'), **whereupon** (vs 'then'). Allemaal **Latijns-Frans-derived** = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
           woorden: [{ woord: "register", uitleg: "Formaliteit-niveau van taal (formal / neutral / informal)." }],
           theorie: "Engelse taal heeft 2 lagen: Germaans (kortere woorden, informeler) en Latijns/Frans (langere, formeler). Buy vs purchase. Help vs assist. Sweat vs perspire.",
-          niveaus: { basis: "Formal. A.", simpeler: "Lange Latin-woorden = formal", nogSimpeler: "Formal" },
+          niveaus: { basis: "Formal.", simpeler: "Lange Latin-woorden = formal", nogSimpeler: "Formal" },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "However = tegenstelling", tekst: "**However** = klassiek contrast-signaalwoord. Voorgaande zin zei iets positiefs over studie; deze keert om: 'maar is bekritiseerd'. Vooral belangrijk bij conclusie-vragen — zin na 'however' is vaak echte mening." }],
           theorie: "Cito-trick: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
-          niveaus: { basis: "Contrast. A.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
+          niveaus: { basis: "Contrast.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasm in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
           theorie: "Cito-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
-          niveaus: { basis: "Sarcastisch. A.", simpeler: "Positief woord + slechte situatie = sarcasme", nogSimpeler: "Sarcastisch" },
+          niveaus: { basis: "Sarcastisch.", simpeler: "Positief woord + slechte situatie = sarcasme", nogSimpeler: "Sarcastisch" },
         },
       },
       {
@@ -146,7 +146,7 @@ const steps = [
         wrongHints: [null, "Niet — geen vertaling.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Function = rol binnen tekst", tekst: "**Function** = welke ROL deze alinea heeft in de tekst-structuur. Opties: introduceren / illustreren / nuanceren / weerleggen / contrasteren / concluderen. Kijk naar **inhoud relatie** met omringende alinea's." }],
-          niveaus: { basis: "Wat alinea toevoegt. A.", simpeler: "Function = rol in tekst", nogSimpeler: "Rol" },
+          niveaus: { basis: "Wat alinea toevoegt.", simpeler: "Function = rol in tekst", nogSimpeler: "Rol" },
         },
       },
     ],
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Te langzaam.", "Niet — eerst overzicht.", "Niet — eerst lezen."],
         uitlegPad: {
           stappen: [{ titel: "Pre-read = oriëntatie", tekst: "**Pre-read** = snel overzicht krijgen. Titel + 1e/laatste alinea = wat is hoofdpunt. Daarna pas details bekijken. Bespaart tijd + voorkomt verdwalen." }],
-          niveaus: { basis: "Pre-read. A.", simpeler: "Eerst overzicht = pre-read", nogSimpeler: "Pre-read" },
+          niveaus: { basis: "Pre-read.", simpeler: "Eerst overzicht = pre-read", nogSimpeler: "Pre-read" },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Markeer + door", tekst: "Bij **twijfel/onzeker** vraag: markeer met **\\*** of cirkel rond vraag-nummer + ga **door** naar volgende. Aan eind terug. Voorkomt tijd-verlies + frisse blik op tweede beurt." }],
           theorie: "Cito-strategie: max 2-3 min per vraag. Daarna markeren + door. Niet 8 min op 1 vraag besteden.",
-          niveaus: { basis: "Bij twijfel. A.", simpeler: "Twijfel = markeer + door", nogSimpeler: "Markeer" },
+          niveaus: { basis: "Bij twijfel.", simpeler: "Twijfel = markeer + door", nogSimpeler: "Markeer" },
         },
       },
       {
@@ -187,7 +187,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs uit tekst", tekst: "Open vragen: **Nederlands volledige zin** + **2-3 bewijspunten** uit tekst. 'De schrijver vindt X omdat (1) ... en (2) ...'. Punten per bewijspunt." }],
           theorie: "Cito-scoring: 1 bewijs = 1 punt, 2 = 2 punten. Geen extra punten voor lang antwoord.",
-          niveaus: { basis: "NL volledig + bewijs. A.", simpeler: "Open = NL volle zin + bewijs", nogSimpeler: "NL + bewijs" },
+          niveaus: { basis: "NL volledig + bewijs.", simpeler: "Open = NL volle zin + bewijs", nogSimpeler: "NL + bewijs" },
         },
       },
       {
@@ -198,7 +198,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Context > woordenboek", tekst: "**Eerst context lezen** (zin met onbekend woord + 1-2 ervoor/erna). Vaak kun je betekenis raden uit context. Pas als context niet helpt: woordenboek (30-60 sec verlies). Direct woordenboek = tijd-verlies." }],
           theorie: "Cito-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
-          niveaus: { basis: "Context eerst. A.", simpeler: "Onbekend = context lezen", nogSimpeler: "Context" },
+          niveaus: { basis: "Context eerst.", simpeler: "Onbekend = context lezen", nogSimpeler: "Context" },
         },
       },
       {
@@ -209,7 +209,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt teveel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
           theorie: "Cito-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
-          niveaus: { basis: "Eind-haasten. A.", simpeler: "Eind-haasten = punten missen", nogSimpeler: "Eind-haasten" },
+          niveaus: { basis: "Eind-haasten.", simpeler: "Eind-haasten = punten missen", nogSimpeler: "Eind-haasten" },
         },
       },
     ],
@@ -229,7 +229,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mood ≠ tone", tekst: "**Mood** = sfeer/atmosfeer die LEZER voelt (gloomy / hopeful / tense). **Tone** = houding van AUTEUR/verteller (sarcastic / earnest / detached). Kan verschillen: somber mood + ironic tone tegelijk." }],
           theorie: "Cito-VWO-favoriet om dit verschil te testen. Onthouden: mood = atmosfeer, tone = attitude.",
-          niveaus: { basis: "Mood=sfeer, tone=houding. A.", simpeler: "Mood = lezer-sfeer, tone = auteur-houding", nogSimpeler: "Verschillen" },
+          niveaus: { basis: "Mood=sfeer, tone=houding.", simpeler: "Mood = lezer-sfeer, tone = auteur-houding", nogSimpeler: "Verschillen" },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
           theorie: "Cito-VWO-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
-          niveaus: { basis: "Misleidende verteller. A.", simpeler: "Unreliable = liegt/mist info", nogSimpeler: "Misleidt" },
+          niveaus: { basis: "Misleidende verteller.", simpeler: "Unreliable = liegt/mist info", nogSimpeler: "Misleidt" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Voorspel-hint", tekst: "**Foreshadowing** = auteur geeft subtiel **hint over toekomstige gebeurtenis** in verhaal. Vroeg in verhaal: kraai vliegt over → later: dood van personage. Lezer voelt achteraf 'ik had het kunnen zien'." }],
           theorie: "Klassiek voorbeeld: Harry Potter — Trelawney-voorspelling die later uitkomt.",
-          niveaus: { basis: "Hint vooraf. A.", simpeler: "Foreshadowing = hint toekomst", nogSimpeler: "Hint" },
+          niveaus: { basis: "Hint vooraf.", simpeler: "Foreshadowing = hint toekomst", nogSimpeler: "Hint" },
         },
       },
       {
@@ -262,7 +262,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Woordkeuze = mood", tekst: "**Empty / echoing / silence** = somber, vacuüm, eenzaam. Lezer voelt zelf onbehagen. Klassieke woorden voor 'lonely / eerie mood'." }],
           theorie: "Cito-tip: bij mood-vragen — zoek **3-5 adjectieven/zelfstandige naamwoorden** met emotie-lading.",
-          niveaus: { basis: "Eenzaam. A.", simpeler: "Empty + echoing = lonely mood", nogSimpeler: "Eenzaam" },
+          niveaus: { basis: "Eenzaam.", simpeler: "Empty + echoing = lonely mood", nogSimpeler: "Eenzaam" },
         },
       },
       {
@@ -273,7 +273,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "First-person = ik", tekst: "**First-person**: 'I went to the store.' Verteller = personage. **Subjectief** — beperkt tot wat dit personage weet. Catcher in the Rye, To Kill a Mockingbird etc." }],
           theorie: "VWO-CSE-vraag: 'From whose POV is this fragment told?' Antwoord: kijk naar voornaamwoorden + bewustzijn.",
-          niveaus: { basis: "I/we. A.", simpeler: "First-person = ik-verteller", nogSimpeler: "I" },
+          niveaus: { basis: "I/we.", simpeler: "First-person = ik-verteller", nogSimpeler: "I" },
         },
       },
     ],
@@ -293,7 +293,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Notwithstanding = ondanks", tekst: "**Notwithstanding** = 'in spite of' = 'ondanks'. Formal concessie-signaalwoord. Synoniemen: despite, in spite of, notwithstanding the fact that." }],
           theorie: "Formal vocabulary CSE-favoriet: notwithstanding, albeit, henceforth, nonetheless.",
-          niveaus: { basis: "Concessie. A.", simpeler: "Notwithstanding = ondanks", nogSimpeler: "Ondanks" },
+          niveaus: { basis: "Concessie.", simpeler: "Notwithstanding = ondanks", nogSimpeler: "Ondanks" },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Niet relevant op leesvaardigheid.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test Cito: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
-          niveaus: { basis: "Intentie + ironie. A.", simpeler: "Sarcasme = ironie-vraag", nogSimpeler: "Ironie" },
+          niveaus: { basis: "Intentie + ironie.", simpeler: "Sarcasme = ironie-vraag", nogSimpeler: "Ironie" },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "Niet — feit-vraag.", "Niet — feit-vraag.", "Niet — definitie."],
         uitlegPad: {
           stappen: [{ titel: "Sub-text + character", tekst: "**Literair-fragment-vragen** gaan om **sub-tekst**, character-emoties, symbolisme. 'What does silence reveal?' = wat zegt deze stilte over personages/relatie? Klassiek lit-vraag." }],
-          niveaus: { basis: "Eerste. A.", simpeler: "Sub-text-vraag = literair", nogSimpeler: "Eerste" },
+          niveaus: { basis: "Eerste.", simpeler: "Sub-text-vraag = literair", nogSimpeler: "Eerste" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "Niet — meestal NL.", "Te kort.", "Te lang."],
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs = goed", tekst: "Open vragen: **NL volledige zin** + 2-3 bewijspunten uit tekst. 'De schrijver vindt X omdat (1)...(2)...'. Punten per bewijspunt." }],
-          niveaus: { basis: "NL volle zin. A.", simpeler: "Open = NL + bewijs", nogSimpeler: "NL + bewijs" },
+          niveaus: { basis: "NL volle zin.", simpeler: "Open = NL + bewijs", nogSimpeler: "NL + bewijs" },
         },
       },
       {
@@ -334,7 +334,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Preliminary + suggest = voorzichtig", tekst: "**'While preliminary, suggest'** = voorzichtig + voorlopig. Niet definitief, maar wijst wel in richting. Wetenschappelijke voorzichtigheid-toon." }],
           theorie: "Cito-vocab: 'preliminary' (voorlopig), 'tentative' (aarzelend), 'inconclusive' (geen conclusie mogelijk) = vaak in onderzoek-teksten.",
-          niveaus: { basis: "Voorlopig. A.", simpeler: "Preliminary = voorlopig + nieuwe richting", nogSimpeler: "Voorlopig" },
+          niveaus: { basis: "Voorlopig.", simpeler: "Preliminary = voorlopig + nieuwe richting", nogSimpeler: "Voorlopig" },
         },
       },
     ],

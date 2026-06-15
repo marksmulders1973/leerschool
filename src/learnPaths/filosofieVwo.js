@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — empirist.", "Niet — Antiek.", "Niet — synthese."],
         uitlegPad: {
           stappen: [{ titel: "1637", tekst: "**René Descartes** (1596-1650) in *Discours de la méthode* (1637) + *Meditationes* (1641). 'Cogito, ergo sum' = 'Ik denk, dus ik ben'. Onbetwijfelbaar startpunt voor zekere kennis." }],
-          niveaus: { basis: "Descartes. A.", simpeler: "Cogito = Descartes", nogSimpeler: "A." },
+          niveaus: { basis: "Descartes.", simpeler: "Cogito = Descartes", nogSimpeler: "A." },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Tabula rasa = leeg blad", tekst: "**Locke** stelde: bij geboorte is geest een **tabula rasa** (leeg schrijfblok). Alle kennis ontstaat via ervaring (zintuigen + reflectie). Tegen rationalisten die zeiden dat we aangeboren kennis hebben (Plato: anamnese, Descartes: ideeën van God)." }],
-          niveaus: { basis: "Leeg blad. A.", simpeler: "Tabula rasa = leeg", nogSimpeler: "Leeg" },
+          niveaus: { basis: "Leeg blad.", simpeler: "Tabula rasa = leeg", nogSimpeler: "Leeg" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Analytisch = definitie", tekst: "**Analytisch**: waarheid volgt uit **definitie** van termen. 'Vrijgezel' = 'ongehuwde man' → 'alle vrijgezellen zijn ongehuwd' is automatisch waar zonder waarneming. **Synthetisch**: betekenis voegt iets toe wat moet worden gecheckt." }],
           theorie: "Kant onderscheidde: analytisch a priori (wiskunde), synthetisch a posteriori (empirisch), en uitvond synthetisch a priori (controversieel).",
-          niveaus: { basis: "Vrijgezel/ongehuwd. A.", simpeler: "Definitie-waar = analytisch", nogSimpeler: "A." },
+          niveaus: { basis: "Vrijgezel/ongehuwd.", simpeler: "Definitie-waar = analytisch", nogSimpeler: "A." },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Falsifikatie-criterium", tekst: "**Popper**: theorie is **wetenschappelijk** als ze in principe **gefalsifieerd** (weerlegd) kan worden door waarneming. Theorie nooit definitief 'bewezen', alleen 'nog niet weerlegd'. Astrologie + freudianisme = niet falsificeerbaar = pseudoscience volgens Popper." }],
           theorie: "Cito-pattern: 'is X wetenschap volgens Popper?' → kan deze claim getest + weerlegd worden?",
-          niveaus: { basis: "Falsificeerbaar. A.", simpeler: "Popper = falsifieerbaar", nogSimpeler: "A." },
+          niveaus: { basis: "Falsificeerbaar.", simpeler: "Popper = falsifieerbaar", nogSimpeler: "A." },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Beperkte kennis", tekst: "**Kant**: zintuigen + categorieën-denken (oorzaak/ruimte/tijd) leveren **fenomeen** (wat verschijnt). Werkelijkheid zelf (**Ding-an-sich, noumenon**) blijft principieel **onkenbaar**. We kennen alleen 'gefilterde' versie." }],
           theorie: "Compromis tussen rationalisme (Descartes — kennis vanuit denken) en empirisme (Locke/Hume — alleen uit ervaring).",
-          niveaus: { basis: "Fenomenen. A.", simpeler: "Alleen fenomeen", nogSimpeler: "A." },
+          niveaus: { basis: "Fenomenen.", simpeler: "Alleen fenomeen", nogSimpeler: "A." },
         },
       },
     ],
@@ -100,7 +100,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Idealistische empirist", tekst: "**George Berkeley** (1685-1753): 'esse est percipi' = bestaan = waargenomen worden. Voorbeeld: tafel bestaat zolang iemand hem ziet. God ziet altijd alles → alles blijft bestaan. Empirist-idealist." }],
           theorie: "Limerick Knox: 'There was once a young man who said \"God / Must think it exceedingly odd / If he finds that this tree / Continues to be / When there's no one about in the quad...\"'",
-          niveaus: { basis: "Berkeley. A.", simpeler: "Esse=percipi = Berkeley", nogSimpeler: "A." },
+          niveaus: { basis: "Berkeley.", simpeler: "Esse=percipi = Berkeley", nogSimpeler: "A." },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         wrongHints: [null, "Niet — monisme.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Lichaam vs geest", tekst: "**Cartesiaans dualisme**: twee fundamenteel verschillende substanties: **res extensa** (uitgebreide ding = materie) en **res cogitans** (denkende ding = geest). Hoe interacteren ze? Probleem 'mind-body'." }],
-          niveaus: { basis: "Twee. A.", simpeler: "Dualisme = 2", nogSimpeler: "2" },
+          niveaus: { basis: "Twee.", simpeler: "Dualisme = 2", nogSimpeler: "2" },
         },
       },
       {
@@ -121,7 +121,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hume + Dennett", tekst: "**Compatibilisme**: vrije wil + determinisme **zijn niet in conflict**. 'Vrij' = handelen volgens eigen wensen + redenering (zonder externe dwang), zelfs als die wensen zelf oorzakelijk bepaald zijn. Verschillend van Cartesiaans-libertarisch 'absoluut vrije wil'." }],
           theorie: "Cito-pattern: 'past dit bij compatibilisme of libertarisme?' Beoordeel definitie.",
-          niveaus: { basis: "Compatibilisme. A.", simpeler: "Verzoenen = compatib", nogSimpeler: "Compat" },
+          niveaus: { basis: "Compatibilisme.", simpeler: "Verzoenen = compatib", nogSimpeler: "Compat" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Andere vraag (ethiek).", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Theodicee", tekst: "**Probleem van het kwaad**: als God **almachtig + alwetend + goed** is, waarom is er lijden? Drie eigenschappen lijken onverenigbaar met realiteit van lijden. Klassiek atheïstisch argument. Theologen verdedigen met 'theodicee': vrije wil (Plantinga), zielsvorming, mysterie." }],
-          niveaus: { basis: "God + lijden onverenigbaar. A.", simpeler: "Prob kwaad = God+lijden", nogSimpeler: "A." },
+          niveaus: { basis: "God + lijden onverenigbaar.", simpeler: "Prob kwaad = God+lijden", nogSimpeler: "A." },
         },
       },
       {
@@ -142,7 +142,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Deus sive Natura", tekst: "**Spinoza** (1632-1677, Amsterdam): één substantie = **God = Natuur** (panentheïsme). Alle dingen = uitdrukkingen ('modi') van deze ene substantie. Geen aparte 'God' tegenover wereld. **Joods-Portugese** filosoof, uitgesloten uit synagoge voor zijn ideeën." }],
           theorie: "Einstein: 'Ik geloof in de God van Spinoza' (de wetmatigheden van natuur, niet persoonlijke God).",
-          niveaus: { basis: "Eén substantie. A.", simpeler: "Spinoza = God=Natuur", nogSimpeler: "A." },
+          niveaus: { basis: "Eén substantie.", simpeler: "Spinoza = God=Natuur", nogSimpeler: "A." },
         },
       },
     ],
@@ -161,7 +161,7 @@ const steps = [
         wrongHints: [null, "Niet — utilitarist.", "Niet — deugd-ethiek.", "Niet — Antiek."],
         uitlegPad: {
           stappen: [{ titel: "Deontologisch principe", tekst: "**Kant** in *Grundlegung zur Metaphysik der Sitten* (1785). **Categorische imperatief**: handel alleen volgens regel die je tot universele wet zou willen maken. Toets: zou iedereen dit kunnen doen zonder zelf-tegenspraak?\n\n2e formule: 'Behandel mensen nooit louter als middel, maar altijd ook als doel op zich.'" }],
-          niveaus: { basis: "Kant. A.", simpeler: "Cat. imp. = Kant", nogSimpeler: "Kant" },
+          niveaus: { basis: "Kant.", simpeler: "Cat. imp. = Kant", nogSimpeler: "Kant" },
         },
       },
       {
@@ -171,7 +171,7 @@ const steps = [
         wrongHints: [null, "Niet — speelt rol bij Kant.", "Niet — dat is deontologie.", "Niet — dat is regel-ethiek."],
         uitlegPad: {
           stappen: [{ titel: "Consequenties tellen", tekst: "**Utilitarisme** (Bentham, Mill): handeling is goed als ze **grootste geluk voor grootste aantal** oplevert. Beoordeel **gevolgen**, niet intentie of regel. Klassieke critiek: rechtvaardigt slechte middelen voor goed doel (organen oogsten van 1 om 5 te redden?)." }],
-          niveaus: { basis: "Gevolgen. A.", simpeler: "Utili = gevolgen", nogSimpeler: "Gevolg" },
+          niveaus: { basis: "Gevolgen.", simpeler: "Utili = gevolgen", nogSimpeler: "Gevolg" },
         },
       },
       {
@@ -181,7 +181,7 @@ const steps = [
         wrongHints: [null, "Te eng — eudaimonia is dieper.", "Niet — externe goed.", "Niet — extern."],
         uitlegPad: {
           stappen: [{ titel: "Bloei door deugd", tekst: "**Eudaimonia** (εὐδαιμονία) = goed leven / bloei / flourishing. Niet alleen geluksgevoel, maar **kompleet leven volgens deugd + redelijk handelen**. Iemand kan tijdelijk lijden maar nog steeds eudaimon zijn als hij deugdzaam leeft. Hedendaagse vertaling: 'flourishing' beter dan 'happiness'." }],
-          niveaus: { basis: "Goed leven. A.", simpeler: "Eudaimonia = bloei", nogSimpeler: "Bloei" },
+          niveaus: { basis: "Goed leven.", simpeler: "Eudaimonia = bloei", nogSimpeler: "Bloei" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
         wrongHints: [null, "Niet — deontoloog zou dat zeggen.", "Niet — wel oordeel.", "Niet — moet kiezen."],
         uitlegPad: {
           stappen: [{ titel: "Calculatie", tekst: "**Utilitarist**: 5 mensen levens > 1. Switch trekken minimaliseert dood. Doen.\n\n**Deontoloog (Kant)**: switch trekken = actief 1 persoon doden = persoon gebruiken als middel = fout. Nee (niet actief tussenkomen).\n\nVarianten testen intuïties verder: dikke man duwen (zelfde getal-uitkomst, maar lichamelijk anders) → veel mensen vinden dat erger." }],
-          niveaus: { basis: "Ja. A.", simpeler: "Utili = ja", nogSimpeler: "Ja" },
+          niveaus: { basis: "Ja.", simpeler: "Utili = ja", nogSimpeler: "Ja" },
         },
       },
       {
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Dier-ethiek", tekst: "**Peter Singer** (1946-) Australisch filosoof, *Animal Liberation* (1975). **Speciecism / soortisme** = discriminatie op basis van soort, analoog aan racisme of seksisme. Stelling: lijdenscapaciteit = wat telt, niet soort. Implicatie: vleeseten moreel problematisch." }],
           theorie: "Singer is utilitarist — toepassing utilisme op dieren. Tegenstander Tom Regan: dieren-rechten-theorie (deontologisch).",
-          niveaus: { basis: "Speciecism. A.", simpeler: "Singer = speciecism", nogSimpeler: "A." },
+          niveaus: { basis: "Speciecism.", simpeler: "Singer = speciecism", nogSimpeler: "A." },
         },
       },
     ],
@@ -221,7 +221,7 @@ const steps = [
         wrongHints: [null, "Niet — Rousseau-achtig.", "Niet relevant.", "Niet — dat is Locke/Rousseau."],
         uitlegPad: {
           stappen: [{ titel: "Bellum omnium...", tekst: "**Hobbes** in *Leviathan*: zonder staat = 'oorlog van allen tegen allen' (bellum omnium contra omnes). Leven 'solitary, poor, nasty, brutish, and short'. Daarom geven mensen macht af aan absolute soeverein voor veiligheid." }],
-          niveaus: { basis: "Oorlog allen tegen allen. A.", simpeler: "Hobbes natuur = oorlog", nogSimpeler: "A." },
+          niveaus: { basis: "Oorlog allen tegen allen.", simpeler: "Hobbes natuur = oorlog", nogSimpeler: "A." },
         },
       },
       {
@@ -231,7 +231,7 @@ const steps = [
         wrongHints: [null, "Niet — andere methode.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Onpartijdig kiezen", tekst: "**Rawls' veil of ignorance**: stel je zou principes voor maatschappij kiezen zonder te weten of je rijk/arm, man/vrouw, gezond/ziek wordt. Dan kies je principes die meest kwetsbaren beschermen (omdat je dat zelf zou kunnen zijn). Resultaat: redelijk egalitaire samenleving." }],
-          niveaus: { basis: "Welke principes. A.", simpeler: "Sluier = onbevooroordeeld kiezen", nogSimpeler: "A." },
+          niveaus: { basis: "Welke principes.", simpeler: "Sluier = onbevooroordeeld kiezen", nogSimpeler: "A." },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eichmann-proces 1961", tekst: "**Arendt** (1906-1975) over Adolf Eichmann (nazi-bureaucraat verantwoordelijk voor deportatie Joden): geen monster maar gehoorzame ambtenaar zonder kritische reflectie. **Banaliteit van het kwaad** = grote misdaden begaan door 'gewone mensen' die functioneren zonder oordeel. Boek 1963, omstreden indertijd." }],
           theorie: "Toepassing modern: hoe systemen kwaad mogelijk maken (slavernij, holocaust, ecologische crisis) — niet door 'monsters' maar door routine + onreflexieve mensen.",
-          niveaus: { basis: "Arendt. A.", simpeler: "Banaliteit = Arendt", nogSimpeler: "Arendt" },
+          niveaus: { basis: "Arendt.", simpeler: "Banaliteit = Arendt", nogSimpeler: "Arendt" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Niet — andere scheiding.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Trias politica", tekst: "**Montesquieu** in *De l'esprit des lois* (1748): **trias politica** = drie machten gescheiden:\n• **Wetgevend** (parlement maakt wet).\n• **Uitvoerend** (regering past toe).\n• **Rechterlijk** (rechters beoordelen).\n\nOm tirannie te voorkomen. Basis moderne rechtsstaten." }],
-          niveaus: { basis: "Wetg/uitv/rechtsp. A.", simpeler: "Trias = 3 machten", nogSimpeler: "3" },
+          niveaus: { basis: "Wetg/uitv/rechtsp.", simpeler: "Trias = 3 machten", nogSimpeler: "3" },
         },
       },
       {
@@ -263,7 +263,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Libertarisme rechts", tekst: "**Robert Nozick** in *Anarchy, State, and Utopia* (1974): libertarisme. Staat moet minimaal zijn (alleen veiligheid + recht). **Herverdeling-belasting** = staat dwingt jou te werken voor anderen = vorm dwangarbeid. Recht op eigendom heilig. Reactie op Rawls' egalitarisme." }],
           theorie: "Cito-pattern: Rawls vs Nozick is klassiek debat: gelijkheid vs vrijheid.",
-          niveaus: { basis: "Belasting=dwang. A.", simpeler: "Nozick = libertair", nogSimpeler: "A." },
+          niveaus: { basis: "Belasting=dwang.", simpeler: "Nozick = libertair", nogSimpeler: "A." },
         },
       },
     ],
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Niet — deugd ligt in midden.", "Niet — niet democratisch.", "Niet — humanistisch."],
         uitlegPad: {
           stappen: [{ titel: "Gulden middenweg", tekst: "**Aristoteles**: deugd = **mediocritas / golden mean** tussen twee uitersten. Moed = tussen lafheid (te weinig) en roekeloosheid (te veel). Vrijgevigheid = tussen gierigheid en verkwisting. Niet voor elke eigenschap — pure rechtvaardigheid heeft geen tegendeel." }],
-          niveaus: { basis: "Midden. A.", simpeler: "Aristoteles = midden", nogSimpeler: "Midden" },
+          niveaus: { basis: "Midden.", simpeler: "Aristoteles = midden", nogSimpeler: "Midden" },
         },
       },
       {
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: [null, "Niet — Foucault's punt.", "Niet relevant.", "Bestaat wel."],
         uitlegPad: {
           stappen: [{ titel: "Macht-relaties overal", tekst: "**Michel Foucault** stelt dat **macht overal aanwezig** is — niet alleen bij staat, ook in school, ziekenhuis, gevangenis, familie. Macht produceert kennis ('discours'). Niet alleen onderdrukkend maar ook normerend." }],
-          niveaus: { basis: "Overal. A.", simpeler: "Foucault = overal macht", nogSimpeler: "A." },
+          niveaus: { basis: "Overal.", simpeler: "Foucault = overal macht", nogSimpeler: "A." },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Niet — utilitarist.", "Niet — wel issue.", "Niet — dat is consequentialist."],
         uitlegPad: {
           stappen: [{ titel: "Regel zonder uitzondering", tekst: "**Deontologie (Kant)**: handeling beoordeeld op aard, niet uitkomst. **Liegen** = niet universaliseerbaar (als iedereen liegt, geen vertrouwen). Dus altijd fout. Beroemd-extreem voorbeeld: Kant zei zelfs **geen liegen tegen moordenaar** die vraagt waar slachtoffer is.\n\n(Niet alle deontologen volgen Kant zo strikt — moderne kunnen 'witte leugen' toestaan.)" }],
-          niveaus: { basis: "Altijd fout. A.", simpeler: "Deontoloog liegt nooit", nogSimpeler: "A." },
+          niveaus: { basis: "Altijd fout.", simpeler: "Deontoloog liegt nooit", nogSimpeler: "A." },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — radicaler.", "Niet — Marx ziet dat onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Marxistische theorie", tekst: "**Marx**: kapitalisme bevat tegenstellingen → arbeiders (proletariaat) worden bewust → **revolutie** tegen bezittende klasse (bourgeoisie). Daarna 'dictatuur van proletariaat' → uiteindelijk klassenloze + staatsloze samenleving (communisme).\n\nPraktijk 20e eeuw: Sovjet-Unie + China stopten op 'dictatuur'-fase, geen echte communisme bereikt." }],
-          niveaus: { basis: "Klassenstrijd. A.", simpeler: "Marx = revolutie", nogSimpeler: "Revol." },
+          niveaus: { basis: "Klassenstrijd.", simpeler: "Marx = revolutie", nogSimpeler: "Revol." },
         },
       },
       {
@@ -322,7 +322,7 @@ const steps = [
         wrongHints: [null, "Niet — metaforisch.", "Klopt impliciet maar de uitspraak gaat verder.", "Niet — culturele observatie."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel feit", tekst: "**Nietzsche** in *Die fröhliche Wissenschaft* (1882): 'Gott ist tot'. Geen feitelijke claim — **cultuurdiagnose**: na Verlichting + wetenschap geloven westerse mensen niet meer in God. Probleem: traditionele moraal hing aan God. Wat nu? Nietzsche zelf: schep eigen waarden (Übermensch).\n\nMisbruikt door Nazi's; Nietzsche zelf was anti-antisemitisme + anti-nationalisme." }],
-          niveaus: { basis: "Einde moraal. A.", simpeler: "God dood = einde moraal", nogSimpeler: "A." },
+          niveaus: { basis: "Einde moraal.", simpeler: "God dood = einde moraal", nogSimpeler: "A." },
         },
       },
     ],

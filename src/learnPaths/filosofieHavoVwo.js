@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Schreef niets zelf.", "Tegenovergesteld.", "Filosofie + wetenschap waren één."],
         uitlegPad: {
           stappen: [{ titel: "'Maieutiek' = vroedvrouw-methode", tekst: "Socrates vergeleek zichzelf met vroedvrouw: niet zelf bevallen maar anderen helpen hun ideeën 'baren'. Door vragen te stellen ontdekt mens zelf wat hij denkt. 'Ik weet dat ik niets weet' = vertrekpunt voor eerlijk onderzoek." }],
-          niveaus: { basis: "Vragen stellen. A.", simpeler: "Socratisch = vraag-methode. A.", nogSimpeler: "Vragen" },
+          niveaus: { basis: "Vragen stellen.", simpeler: "Socratisch = vraag-methode.", nogSimpeler: "Vragen" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
           stappen: [
             { titel: "'Politeia' boek 7", tekst: "Vastgebonden mensen in grot zien alleen schaduwen op muur (= zintuiglijke wereld). Filosoof bevrijdt zichzelf, ziet zon (= waarheid/Goed). Teruggekeerd worden ze niet geloofd. Plato's punt: filosofische waarheid is verborgen + ongemakkelijk." },
           ],
-          niveaus: { basis: "Zintuig vs waarheid. A.", simpeler: "Wat we zien = niet echt. A.", nogSimpeler: "Grot" },
+          niveaus: { basis: "Zintuig vs waarheid.", simpeler: "Wat we zien = niet echt.", nogSimpeler: "Grot" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
           stappen: [
             { titel: "Wetenschappelijk denken", tekst: "Aristoteles brak met Plato's pure-ideeën. Hij observeerde dieren, plantte planten, verzamelde data. Vader van biologie + logica. Voorbeeld: classificeerde ~500 dier-soorten. Klassiek empirisme begin. Domineerde tot 1500." },
           ],
-          niveaus: { basis: "Observatie. A.", simpeler: "Empirisme = waarnemen. A.", nogSimpeler: "Observatie" },
+          niveaus: { basis: "Observatie.", simpeler: "Empirisme = waarnemen.", nogSimpeler: "Observatie" },
         },
       },
       {
@@ -83,7 +83,7 @@ const steps = [
           stappen: [
             { titel: "Stoa-school Athene", tekst: "Marcus Aurelius (Romeinse keizer): 'Meditaties' — dagboek met stoïsche reflecties. Epictetus: 'Wat in onze macht ligt: oordeel, neiging. Buiten onze macht: lichaam, bezit, reputatie.' Vandaag heropleving als 'modern stoicism' + self-help (Tim Ferriss e.a.)." },
           ],
-          niveaus: { basis: "Aanvaarden + controle. A.", simpeler: "Sta sterk bij tegenslag. A.", nogSimpeler: "Stoa" },
+          niveaus: { basis: "Aanvaarden + controle.", simpeler: "Sta sterk bij tegenslag.", nogSimpeler: "Stoa" },
         },
       },
       {
@@ -98,7 +98,7 @@ const steps = [
         wrongHints: [null, "Niet — taalfilosofie.", "Niet — esthetiek.", "Niet — apart vak."],
         uitlegPad: {
           stappen: [{ titel: "Naar fysica + verder", tekst: "Aristoteles' boek 'na de fysica' = metafysica. Onderzoekt fundamentele aard werkelijkheid: bestaat God? Wat is ziel? Vrije wil? Wat is 'zijn'? Klassieke filosofische onderwerp." }],
-          niveaus: { basis: "Wat is. A.", simpeler: "Werkelijkheid + God-vragen. A.", nogSimpeler: "Meta" },
+          niveaus: { basis: "Wat is.", simpeler: "Werkelijkheid + God-vragen.", nogSimpeler: "Meta" },
         },
       },
     ],
@@ -124,7 +124,7 @@ const steps = [
           stappen: [
             { titel: "Onbetwijfelbaar startpunt", tekst: "Descartes begon met alles te twijfelen (kan ik mijn zintuigen vertrouwen? mijn gedachten? misschien is alles droom of demon-bedrog?). Maar als hij denkt, MOET hij bestaan om te denken. 'Ik denk dus ik ben' = onwrikbaar fundament voor verdere kennis." },
           ],
-          niveaus: { basis: "Ik denk dus ik ben. A.", simpeler: "Cogito ergo sum. A.", nogSimpeler: "Cogito" },
+          niveaus: { basis: "Ik denk dus ik ben.", simpeler: "Cogito ergo sum.", nogSimpeler: "Cogito" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
           stappen: [
             { titel: "Empirisme-fundament", tekst: "Locke: bij geboorte kent baby NIETS. Alle kennis komt uit zintuiglijke ervaring. Tegen-Plato's aangeboren ideeën. Implicatie: onderwijs cruciaal, mensen vormbaar. Inspireerde Amerikaanse + Franse Revolutie (gelijke kansen vanaf geboorte)." },
           ],
-          niveaus: { basis: "Lege lei bij geboorte. A.", simpeler: "Niets aangeboren. A.", nogSimpeler: "Leeg" },
+          niveaus: { basis: "Lege lei bij geboorte.", simpeler: "Niets aangeboren.", nogSimpeler: "Leeg" },
         },
       },
       {
@@ -158,7 +158,7 @@ const steps = [
           stappen: [
             { titel: "Deus sive Natura", tekst: "Spinoza: God = Natuur. Geen apart wezen buiten universum, maar het universum ZELF is goddelijk. Werd om deze visie vervloekt door joodse gemeenschap Amsterdam (cherem 1656). Vandaag invloedrijke filosoof, Einstein noemde hem zijn voorbeeld." },
           ],
-          niveaus: { basis: "God = Natuur. A.", simpeler: "Universum = God. A.", nogSimpeler: "Pantheïsme" },
+          niveaus: { basis: "God = Natuur.", simpeler: "Universum = God.", nogSimpeler: "Pantheïsme" },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
           stappen: [
             { titel: "1784 'Was ist Aufklärung?'", tekst: "Kant: Verlichting = uitgaan uit zelf-veroorzaakte onmondigheid. Niet anderen (priester, autoriteit) laten denken voor jou. SAPERE AUDE = durf te weten. Kernidee Verlichting + zelfontwikkeling tot vandaag." },
           ],
-          niveaus: { basis: "Heb moed te denken. A.", simpeler: "Eigen denken durven. A.", nogSimpeler: "Sapere aude" },
+          niveaus: { basis: "Heb moed te denken.", simpeler: "Eigen denken durven.", nogSimpeler: "Sapere aude" },
         },
       },
       {
@@ -192,7 +192,7 @@ const steps = [
           stappen: [
             { titel: "Synthese 13e eeuw", tekst: "Toen Aristoteles' werken terugkwamen via Arabische vertalingen → conflict met kerk. Aquinas (Dominicaanse monnik) integreerde Aristoteles' logica + observatie in katholieke theologie. 'Summa Theologica' = grote werk. Vijf bewijzen voor God's bestaan. Officieel katholiek filosoof." },
           ],
-          niveaus: { basis: "Aristoteles + Christendom. A.", simpeler: "Filo + religie samen. A.", nogSimpeler: "Aquinas" },
+          niveaus: { basis: "Aristoteles + Christendom.", simpeler: "Filo + religie samen.", nogSimpeler: "Aquinas" },
         },
       },
     ],
@@ -218,7 +218,7 @@ const steps = [
           stappen: [
             { titel: "Universaliseren", tekst: "Voorbeeld liegen: als IEDEREEN zou liegen, werkt taal niet → tegenstrijdig → liegen verboden. Niet liegen omdat je gepakt wordt, maar omdat het logisch onmogelijk algemeen kan worden. Strenge plichtethiek." },
           ],
-          niveaus: { basis: "Universele wet. A.", simpeler: "Maak van actie algemene regel. A.", nogSimpeler: "Cat. imp." },
+          niveaus: { basis: "Universele wet.", simpeler: "Maak van actie algemene regel.", nogSimpeler: "Cat. imp." },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
           stappen: [
             { titel: "Historisch materialisme", tekst: "Marx: door tijd heen klassenstrijd: meester vs slaaf → adel vs boer → kapitalist vs arbeider. Klassenstrijd drijft historische verandering. Voorspelling: arbeiders revolutioneren → klasseloze maatschappij. Praktijk-implementatie (Stalin, Mao) liep slecht af." },
           ],
-          niveaus: { basis: "Klassenstrijd. A.", simpeler: "Klassen vechten in tijd. A.", nogSimpeler: "Klassen" },
+          niveaus: { basis: "Klassenstrijd.", simpeler: "Klassen vechten in tijd.", nogSimpeler: "Klassen" },
         },
       },
       {
@@ -247,7 +247,7 @@ const steps = [
           stappen: [
             { titel: "Diagnose, niet juich-kreet", tekst: "Nietzsche bedoelde: christelijke God + traditionele waarden verliezen autoriteit door wetenschap + secularisatie. Niemand gelooft echt meer. Probleem: hoe nu morele basis? Antwoord: Übermensch creëert eigen waarden. Veel-misbegrepen als atheïsme-overwinning; meer als crisis-vaststelling." },
           ],
-          niveaus: { basis: "Nietzsche. A.", simpeler: "Friedrich Nietzsche. A.", nogSimpeler: "Nietzsche" },
+          niveaus: { basis: "Nietzsche.", simpeler: "Friedrich Nietzsche.", nogSimpeler: "Nietzsche" },
         },
       },
       {
@@ -264,7 +264,7 @@ const steps = [
           stappen: [
             { titel: "Gevolgen-ethiek", tekst: "Bentham (1789): meet geluk + pijn voor alle betrokkenen, kies actie met meeste netto-geluk. Mill verfijnde: kwalitatieve verschillen (Socrates ontevreden > varken tevreden). Praktisch: veel beleid (kosten-baten-analyse) impliciet utilitaristisch. Kritiek: kan minderheden offeren voor meerderheid." },
           ],
-          niveaus: { basis: "Meeste geluk. A.", simpeler: "Wat maakt meeste mensen blij. A.", nogSimpeler: "Geluk" },
+          niveaus: { basis: "Meeste geluk.", simpeler: "Wat maakt meeste mensen blij.", nogSimpeler: "Geluk" },
         },
       },
       {
@@ -281,7 +281,7 @@ const steps = [
           stappen: [
             { titel: "Drie-staps-beweging", tekst: "Een idee (these) roept tegenoverstelling op (antithese). Conflict resulteert in nieuwe synthese die deels beide bevat. Synthese wordt nieuwe these → cyclus herhaalt. Marx draaide om: niet ideeën maar economische klassen drijven dialectiek." },
           ],
-          niveaus: { basis: "These/anti/synthese. A.", simpeler: "Conflict → samen. A.", nogSimpeler: "Dialectiek" },
+          niveaus: { basis: "These/anti/synthese.", simpeler: "Conflict → samen.", nogSimpeler: "Dialectiek" },
         },
       },
     ],
@@ -302,7 +302,7 @@ const steps = [
           stappen: [
             { titel: "'Le deuxième sexe' 1949", tekst: "De Beauvoir: 'vrouwelijkheid' is sociale constructie, niet biologisch lot. Vrouwen leren op te treden als 'het andere' van mannen. Klassieker tweede-feministische-golf, basis voor moderne genderstudies. Schreef ook 'De grijze leeftijd' over ouder-worden." },
           ],
-          niveaus: { basis: "De Beauvoir. A.", simpeler: "Beauvoir = feministisch. A.", nogSimpeler: "Beauv" },
+          niveaus: { basis: "De Beauvoir.", simpeler: "Beauvoir = feministisch.", nogSimpeler: "Beauv" },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
           stappen: [
             { titel: "Hypothetische start-positie", tekst: "Stel: je gaat samenleving ontwerpen + weet niet of je rijk/arm, man/vrouw, wit/zwart, gezond/ziek, hoog/laag-opgeleid wordt. Welke regels kies je? Rawls: meeste mensen zouden basisinkomen + gezondheidszorg + onderwijs zekerstellen (je zou tot 'onderkant' kunnen behoren). Beroemd liberaal-progressief argument." },
           ],
-          niveaus: { basis: "Onbekende positie. A.", simpeler: "Ontwerp rechtvaardig zonder eigenbelang. A.", nogSimpeler: "Veil" },
+          niveaus: { basis: "Onbekende positie.", simpeler: "Ontwerp rechtvaardig zonder eigenbelang.", nogSimpeler: "Veil" },
         },
       },
       {
@@ -336,7 +336,7 @@ const steps = [
           stappen: [
             { titel: "Power/knowledge", tekst: "Foucault: scholen, ziekenhuizen, gevangenissen, psychiatrie disciplineren mensen subtieler dan direct geweld. Wetenschap (sexualiteit, criminaliteit) zelf creëert categorieën die mensen beheersen. Panopticon (Bentham-design): cel-ontwerp waar bewaker iedereen kan zien zonder zelf gezien te worden → mensen disciplineren zichzelf." },
           ],
-          niveaus: { basis: "Macht overal. A.", simpeler: "Kennis = macht. A.", nogSimpeler: "Foucault" },
+          niveaus: { basis: "Macht overal.", simpeler: "Kennis = macht.", nogSimpeler: "Foucault" },
         },
       },
       {
@@ -353,7 +353,7 @@ const steps = [
           stappen: [
             { titel: "'Eichmann in Jerusalem' 1963", tekst: "Arendt volgde proces tegen Eichmann (Holocaust-bureaucraat). Zag geen demonisch monster maar bureaucratische middelmaat die orders volgde zonder na te denken. Kwaad ontstaat door gedachtenloosheid + conformisme, niet alleen door bewust evil. Controversieel: critici vonden ze Eichmann te zacht beoordeelde." },
           ],
-          niveaus: { basis: "Gewone ambtenaar = kwaad. A.", simpeler: "Banaal kwaad. A.", nogSimpeler: "Banaliteit" },
+          niveaus: { basis: "Gewone ambtenaar = kwaad.", simpeler: "Banaal kwaad.", nogSimpeler: "Banaliteit" },
         },
       },
       {
@@ -370,7 +370,7 @@ const steps = [
           stappen: [
             { titel: "'Animal Liberation' 1975", tekst: "Singer: morele cirkel uitbreiden naar dieren (ze voelen pijn). 'Speciesisme' (zoals racisme of seksisme) is onhoudbaar. Argumenteert tegen vee-industrie. Effectief altruïsme: geef aan organisaties die meeste levens redden per euro. Controversieel: ook standpunt over zwaar-gehandicapte baby's." },
           ],
-          niveaus: { basis: "Dier-rechten. A.", simpeler: "Dieren ook moreel telt. A.", nogSimpeler: "Singer" },
+          niveaus: { basis: "Dier-rechten.", simpeler: "Dieren ook moreel telt.", nogSimpeler: "Singer" },
         },
       },
     ],
@@ -396,7 +396,7 @@ const steps = [
           stappen: [
             { titel: "Reken-ethiek", tekst: "Utilitarist telt geluk + ellende. 5 levens > 1 leven → schakelen is moreel verplicht (volgens deze school). Maar bij 'dikke man van brug duwen': intuïtief verzet — directere actie voelt slechter. Filosofen blijven discussiëren of dit consistent is." },
           ],
-          niveaus: { basis: "Doen — 5>1. A.", simpeler: "Meer redden = doen. A.", nogSimpeler: "5>1" },
+          niveaus: { basis: "Doen — 5>1.", simpeler: "Meer redden = doen.", nogSimpeler: "5>1" },
         },
       },
       {
@@ -413,7 +413,7 @@ const steps = [
           stappen: [
             { titel: "Geen middel-doel-rechtvaardiging", tekst: "Kant: behandel mensen nooit ALLEEN als middel. Actief de tram doorsturen → gebruik je 1 persoon als instrument om 5 te redden → ongeoorloofd. Verschil tussen: laten sterven (5 niet redden) en actief doden (1 doodrijden). Veel mensen voelen dit verschil intuïtief." },
           ],
-          niveaus: { basis: "Niet doden. A.", simpeler: "Actief doden = nooit. A.", nogSimpeler: "Niet doen" },
+          niveaus: { basis: "Niet doden.", simpeler: "Actief doden = nooit.", nogSimpeler: "Niet doen" },
         },
       },
       {
@@ -430,7 +430,7 @@ const steps = [
           stappen: [
             { titel: "Veel-gebruikt + vaak fout", tekst: "Voorbeeld: 'Als euthanasie wettelijk wordt, eindigen we bij ongewenste ouderen actief vermoorden.' Maar: geen bewijs dat A → B → Z onvermijdelijk. Sommige hellende-vlakken kloppen wel (waakzaamheid nodig), andere zijn bangmakerij. Onderscheid: zijn er buffers + checks in proces?" },
           ],
-          niveaus: { basis: "Onbewezen domino. A.", simpeler: "A leidt onvermijdelijk tot Z = vaak fout. A.", nogSimpeler: "Hellend" },
+          niveaus: { basis: "Onbewezen domino.", simpeler: "A leidt onvermijdelijk tot Z = vaak fout.", nogSimpeler: "Hellend" },
         },
       },
       {
@@ -447,7 +447,7 @@ const steps = [
           stappen: [
             { titel: "1994 wet, 2002 verfijnd", tekst: "NL eerste land met legalisering. Vereist: ondraaglijk + uitzichtloos lijden, vrijwillig + weloverwogen verzoek, geen alternatief, second opinion onafhankelijk arts. Toetsings-commissie controleert achteraf. ~10 000 euthanasie-verzoeken/jaar, ~7000 uitgevoerd. Internationaal blijft NL voorloper." },
           ],
-          niveaus: { basis: "Strikte voorwaarden. A.", simpeler: "Arts + lijden vereist. A.", nogSimpeler: "Strikt" },
+          niveaus: { basis: "Strikte voorwaarden.", simpeler: "Arts + lijden vereist.", nogSimpeler: "Strikt" },
         },
       },
       {
@@ -464,7 +464,7 @@ const steps = [
           stappen: [
             { titel: "Frankrijk-trio uitgebreid", tekst: "Franse Revolutie: 'Liberté, égalité, fraternité' (vrijheid, gelijkheid, broederschap = solidariteit). Plus moderne toevoeging 'verantwoordelijkheid'. Politiek liberaal: focus op vrijheid. Sociaal-democratisch: gelijkheid. Conservatief: verantwoordelijkheid. Communautair: solidariteit. Geen recept maar balans." },
           ],
-          niveaus: { basis: "4 waarden. A.", simpeler: "Vrijheid + gelijkheid + ... A.", nogSimpeler: "4" },
+          niveaus: { basis: "4 waarden.", simpeler: "Vrijheid + gelijkheid + ...", nogSimpeler: "4" },
         },
       },
     ],

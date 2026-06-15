@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is SE.", "Niet — SE.", "Niet — SE."],
         uitlegPad: {
           stappen: [{ titel: "Lezen + samenvatten", tekst: "**CSE Nederlands** = leesvaardigheid (HAVO + VWO) + **samenvatten** (VWO). Schrijfvaardigheid (essay/betoog), spreken, luisteren, literatuur = SE." }],
-          niveaus: { basis: "Lezen + samenvatten. A.", simpeler: "CSE NL = lezen+samenv", nogSimpeler: "A." },
+          niveaus: { basis: "Lezen + samenvatten.", simpeler: "CSE NL = lezen+samenv", nogSimpeler: "A." },
         },
       },
       {
@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Te kort.", "Te lang."],
         uitlegPad: {
           stappen: [{ titel: "Drie uur", tekst: "**CSE Nederlands HAVO + VWO: 3 uur**. Bij dyslexie/dyscalculie 30 min extra. Plus woordenboeken-tijd." }],
-          niveaus: { basis: "3 uur. A.", simpeler: "3u", nogSimpeler: "3" },
+          niveaus: { basis: "3 uur.", simpeler: "3u", nogSimpeler: "3" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Veel te laag.", "Niet — HAVO 4-5 niveau onder.", "HAVO."],
         uitlegPad: {
           stappen: [{ titel: "CEFR-niveaus", tekst: "**VWO Nederlands: C1** ('competente taalgebruiker'): complexe argumentatieve teksten met implicaties + nuance + abstract denken. **HAVO: B2** (vaardig taalgebruiker). NL als moedertaal bouwt boven die CEFR-niveaus uit." }],
-          niveaus: { basis: "C1. A.", simpeler: "VWO = C1", nogSimpeler: "A." },
+          niveaus: { basis: "C1.", simpeler: "VWO = C1", nogSimpeler: "A." },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
         wrongHints: [null, "Wel toegestaan.", "Niet onderscheid.", "Niet onderscheid."],
         uitlegPad: {
           stappen: [{ titel: "Papieren hulpmiddelen", tekst: "**CSE Nederlands**: papieren NL-woordenboek + synoniemenwoordenboek toegestaan. **Niet**: digitaal, vertaalapp, telefoon, eigen aantekeningen. Synoniemen-woordenboek vooral handig voor samenvatting (VWO)." }],
-          niveaus: { basis: "Ja. A.", simpeler: "Synoniemenwb = mag", nogSimpeler: "A." },
+          niveaus: { basis: "Ja.", simpeler: "Synoniemenwb = mag", nogSimpeler: "A." },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Wel kernvak.", "Wel voor beide.", "Verplicht."],
         uitlegPad: {
           stappen: [{ titel: "Kernvakken-regel", tekst: "**Nederlands** = kernvak (HAVO + VWO). Andere kernvakken: Engels + wiskunde A/B/C/D. Voor **slagen** mag je **maximaal 1 onvoldoende (5)** in deze 3 vakken samen hebben. Verder zoals normaal: gemiddeld 5,5+." }],
-          niveaus: { basis: "Ja. A.", simpeler: "NL = kernvak", nogSimpeler: "A." },
+          niveaus: { basis: "Ja.", simpeler: "NL = kernvak", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Toegegeven, maar...'", tekst: "**Concessio** (concessie / tegenwerping): alinea waarin auteur **kritiek of tegenargument erkent**, vaak gevolgd door **weerlegging** in volgende alinea. Signaalwoorden: *toegegeven, weliswaar, het is waar dat, hoewel, men zou kunnen stellen dat*. Versterkt eigen betoog door tegenstanders serieus te nemen." }],
           theorie: "Cito-favoriet: 'wat is de functie van alinea X?' → vaak concessio + weerlegging-paar.",
-          niveaus: { basis: "Tegenarg erkennen. A.", simpeler: "Concessio = tegenarg", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenarg erkennen.", simpeler: "Concessio = tegenarg", nogSimpeler: "A." },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet — andere woorden.", "Niet — kortom.", "Niet — omdat."],
         uitlegPad: {
           stappen: [{ titel: "Contrast-marker", tekst: "**Daarentegen** = tegenstelling-signaal. Synoniemen: *echter, niettemin, toch, maar, integendeel, anderzijds, aan de andere kant*. Signaleert: 'hier komt iets dat tegenovergesteld is aan wat eerder gezegd'. Lezer: focus, draaipunt." }],
-          niveaus: { basis: "Tegenstelling. A.", simpeler: "Daarentegen = contrast", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenstelling.", simpeler: "Daarentegen = contrast", nogSimpeler: "A." },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Niet hier.", "Niet primair.", "Anders gericht."],
         uitlegPad: {
           stappen: [{ titel: "P-O-patroon", tekst: "**Probleem-oplossing-structuur**: inleiding (probleem schetsen) → middendeel (mogelijke oplossingen analyseren) → slot (beste oplossing aanbevelen of vooruitblik). Veel gebruikt in beleids-artikelen, opinies. **Cito-vraag-pattern**: 'Welk structuur-type heeft deze tekst?'" }],
-          niveaus: { basis: "Probleem-oplossing. A.", simpeler: "PO-structuur", nogSimpeler: "A." },
+          niveaus: { basis: "Probleem-oplossing.", simpeler: "PO-structuur", nogSimpeler: "A." },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Zelden cataforisch.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Anaphora", tekst: "**Dit / dat / deze / die / hij / zij / het** = anaforische verwijzing: terug naar iets eerder genoemd in tekst. Cito-vraag: 'Waar verwijst *dit* in regel 23 naar?' → kijk eerdere zin/concept. Zelden cataforisch (vooruit): *Dit kun je niet ontkennen: feit X.*" }],
-          niveaus: { basis: "Terug. A.", simpeler: "Dit = anaphora", nogSimpeler: "A." },
+          niveaus: { basis: "Terug.", simpeler: "Dit = anaphora", nogSimpeler: "A." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Tegenstelling.", "Conclusie.", "Oorzaak."],
         uitlegPad: {
           stappen: [{ titel: "Opsomming-markers", tekst: "**Opsomming**: ten eerste/ten tweede/ten derde, vervolgens, daarnaast, bovendien, ook, eveneens. Markeert: auteur somt argumenten/voorbeelden/feiten op. Stel mentaal lijst op om structuur te volgen." }],
-          niveaus: { basis: "Ten eerste etc. A.", simpeler: "Opsomming-markers", nogSimpeler: "A." },
+          niveaus: { basis: "Ten eerste etc.", simpeler: "Opsomming-markers", nogSimpeler: "A." },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Aanval op persoon", tekst: "**Ad hominem** (Latijn 'aan de persoon'): aanval op tegenstander zelf ipv op zijn argument. **Drogreden**. Voorbeeld: 'Hij is een rechtse zelot, dus argument is fout.' De persoon's eigenschappen zeggen niets over kracht van argument." }],
-          niveaus: { basis: "Persoonlijke aanval. A.", simpeler: "Ad hominem = persoon", nogSimpeler: "A." },
+          niveaus: { basis: "Persoonlijke aanval.", simpeler: "Ad hominem = persoon", nogSimpeler: "A." },
         },
       },
       {
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Ad populum.", "Ad hominem.", "Vergelijking is geldig."],
         uitlegPad: {
           stappen: [{ titel: "Slippery slope", tekst: "**Hellend vlak**: 'A leidt tot B, B tot C, C tot ramp Z'. Vaak onbewezen kettingsequentie. Voorbeeld: 'Marihuana legaliseren → iedereen heroïne → samenleving instort'. Slecht onderbouwd. Drogreden." }],
-          niveaus: { basis: "Slippery slope. A.", simpeler: "Hellend vlak", nogSimpeler: "A." },
+          niveaus: { basis: "Slippery slope.", simpeler: "Hellend vlak", nogSimpeler: "A." },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — drogreden.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Strawman fallacy", tekst: "**Stroman**: tegenstander's standpunt **vertekenen** tot iets makkelijker te weerleggen. Voorbeeld: 'Tegenstander wil dat we **iedereen** dwingen vegan te zijn' (terwijl die alleen vlees-belasting wil). Bestrijden van die overdreven versie = 'gemakkelijker schieten op stroman ipv echte persoon'." }],
-          niveaus: { basis: "Vertekenen. A.", simpeler: "Stroman = vertekenen", nogSimpeler: "A." },
+          niveaus: { basis: "Vertekenen.", simpeler: "Stroman = vertekenen", nogSimpeler: "A." },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Persoon.", "Vertekening.", "Kettingdrogreden."],
         uitlegPad: {
           stappen: [{ titel: "Post hoc ergo propter hoc", tekst: "**Post hoc ergo propter hoc** ('daarna, dus daardoor'): omdat A vóór B kwam, denken dat A oorzaak is van B. Vaak fout. **Klassieker**: ijsverkoop + verdrinking stijgen samen in zomer — niet causaal, beide door warm weer.\n\n**Correlatie ≠ causatie**: twee dingen kunnen samenvallen zonder dat één de ander veroorzaakt. **Confounding** = derde factor verklaart beide." }],
-          niveaus: { basis: "Post hoc. A.", simpeler: "Corr ≠ cause = post hoc", nogSimpeler: "A." },
+          niveaus: { basis: "Post hoc.", simpeler: "Corr ≠ cause = post hoc", nogSimpeler: "A." },
         },
       },
       {
@@ -195,7 +195,7 @@ const steps = [
         wrongHints: [null, "Andere drogreden.", "Andere drogreden.", "Andere drogreden."],
         uitlegPad: {
           stappen: [{ titel: "Begging the question", tekst: "**Cirkelredenering**: conclusie als argument gebruiken — verwijst naar zichzelf. **Voorbeeld**: 'God bestaat omdat de Bijbel zegt dat God bestaat. De Bijbel is waar omdat God dat zegt.' Geen externe basis — circle. Subtiel: vaak verkapt in lange teksten." }],
-          niveaus: { basis: "Conclusie = argument. A.", simpeler: "Cirkel = circulair", nogSimpeler: "A." },
+          niveaus: { basis: "Conclusie = argument.", simpeler: "Cirkel = circulair", nogSimpeler: "A." },
         },
       },
     ],
@@ -214,7 +214,7 @@ const steps = [
         wrongHints: [null, "Te kort.", "Te lang.", "Te lang."],
         uitlegPad: {
           stappen: [{ titel: "10% van origineel", tekst: "**VWO-samenvatting CSE**: ~250 woorden (±10% = 225-275). Originele tekst meestal ~2000-2500 w. Te kort = punten kwijt. Te lang = ook punten kwijt. **Eerst tellen + dan inleveren**." }],
-          niveaus: { basis: "250. A.", simpeler: "Samenv = 250 w", nogSimpeler: "A." },
+          niveaus: { basis: "250.", simpeler: "Samenv = 250 w", nogSimpeler: "A." },
         },
       },
       {
@@ -224,7 +224,7 @@ const steps = [
         wrongHints: [null, "Niet — punten kwijt.", "Niet relevant.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Eigen verwoording", tekst: "**Samenvatting**: gebruik **eigen woorden**. Geen citaten of zinnen letterlijk overschrijven. Dit toont begrip + taalvaardigheid. Examencommissie strafs letterlijk-overnemen met aftrek." }],
-          niveaus: { basis: "Eigen woorden. A.", simpeler: "Geen citaten", nogSimpeler: "A." },
+          niveaus: { basis: "Eigen woorden.", simpeler: "Geen citaten", nogSimpeler: "A." },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
         wrongHints: [null, "Wel.", "Wel.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Objectief weergeven", tekst: "**Samenvatting** = objectieve weergave standpunt auteur. **Geen eigen mening** ('Ik vind dat...' verboden). Ook geen eigen waardering ('De auteur heeft gelijk omdat...'). Alleen: 'De auteur betoogt dat...'." }],
-          niveaus: { basis: "Eigen mening. A.", simpeler: "Niet je eigen mening", nogSimpeler: "A." },
+          niveaus: { basis: "Eigen mening.", simpeler: "Niet je eigen mening", nogSimpeler: "A." },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [null, "Niet — inhoud eerst.", "Wel taal maar niet primair.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Inhoud > vorm", tekst: "**Inhoud (60%)** > taalverzorging (40%). Eerst zorgen dat alle hoofdpunten erin staan, daarna verbeteren van zinsbouw + woordkeus. Details + voorbeelden weg, tenzij essentieel voor begrip hoofdpunt." }],
-          niveaus: { basis: "Hoofdpunten. A.", simpeler: "Inhoud > vorm", nogSimpeler: "A." },
+          niveaus: { basis: "Hoofdpunten.", simpeler: "Inhoud > vorm", nogSimpeler: "A." },
         },
       },
       {
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Niet — eerst denken.", "Niet — eerst lezen.", "Niet — te weinig tijd voor schrijven."],
         uitlegPad: {
           stappen: [{ titel: "Plan tijd", tekst: "**45 min**:\n• 15-20 min: grondig lezen + structuur + schema maken.\n• 25 min: schrijven (~250 woorden).\n• 5 min: nakijken + tellen.\n\nVooraf goed denken = beter resultaat dan direct schrijven. Schema voorkomt dat je hoofdpunt mist." }],
-          niveaus: { basis: "20/25/5. A.", simpeler: "Tijdverdeling", nogSimpeler: "A." },
+          niveaus: { basis: "20/25/5.", simpeler: "Tijdverdeling", nogSimpeler: "A." },
         },
       },
     ],
@@ -273,7 +273,7 @@ const steps = [
         wrongHints: [null, "2 valse opties.", "Niet — geen circular.", "Niet — geen ketting."],
         uitlegPad: {
           stappen: [{ titel: "Argumentum ad populum", tekst: "**Ad populum** = beroep op meerderheid. 'Iedereen denkt zo, dus klopt het.' Drogreden: meerderheid kan zich vergissen (vroeger geloofde iedereen dat aarde plat was). Geldigheid argument hangt niet af van aantal aanhangers." }],
-          niveaus: { basis: "Ad populum. A.", simpeler: "Iedereen vindt = ad populum", nogSimpeler: "A." },
+          niveaus: { basis: "Ad populum.", simpeler: "Iedereen vindt = ad populum", nogSimpeler: "A." },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
         wrongHints: [null, "Voorbeeld.", "Tegenstelling.", "Oorzaak."],
         uitlegPad: {
           stappen: [{ titel: "Slotmarkers", tekst: "**Conclusie-signalen**: kortom, samenvattend, concluderend, alles bij elkaar genomen, dus, daarmee, tot slot. Auteur trekt samenvattende conclusie van eerder besproken argumenten." }],
-          niveaus: { basis: "Kortom. A.", simpeler: "Conclusie = kortom", nogSimpeler: "A." },
+          niveaus: { basis: "Kortom.", simpeler: "Conclusie = kortom", nogSimpeler: "A." },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
         wrongHints: [null, "Niet — thesis.", "Niet — concessio.", "Niet — slot."],
         uitlegPad: {
           stappen: [{ titel: "Concretiseren", tekst: "**Voorbeeld-alinea** geeft **concreet geval** dat eerder gestelde argument illustreert. Signaalwoorden: bijvoorbeeld, zo, neem, denk aan, ter illustratie. Niet hetzelfde als zelfstandig argument — ondersteunt iets dat al gesteld is." }],
-          niveaus: { basis: "Illustratie. A.", simpeler: "Voorbeeld = illustreert", nogSimpeler: "A." },
+          niveaus: { basis: "Illustratie.", simpeler: "Voorbeeld = illustreert", nogSimpeler: "A." },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Soms aanwijzing maar te kort."],
         uitlegPad: {
           stappen: [{ titel: "Begin of eind", tekst: "**Hoofdgedachte** staat meestal in **inleiding** (thesis-zin, vaak alinea 1-2) of in **slot** (conclusie-alinea als bevestiging). Soms beide (introductie + bevestiging). Middendeel werkt argumenten uit. Cito-pattern: 'Wat is de hoofdgedachte?' — kijk eerst eerste + laatste alinea." }],
-          niveaus: { basis: "Begin/eind. A.", simpeler: "Hoofdgedachte = top/eind", nogSimpeler: "A." },
+          niveaus: { basis: "Begin/eind.", simpeler: "Hoofdgedachte = top/eind", nogSimpeler: "A." },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "Beide tellen.", "Beide tellen.", "Wel criteria."],
         uitlegPad: {
           stappen: [{ titel: "Twee componenten", tekst: "**Samenvatting**: inhoud (alle hoofdpunten gedekt) telt **60%**, taalverzorging (zinsbouw + woordkeus + spelling) **40%**. Plus woordenaantal binnen marge. Goede balans: snel zorgen dat hoofdpunten erin, dan finishen taal." }],
-          niveaus: { basis: "60/40. A.", simpeler: "Inhoud+taal = 60+40", nogSimpeler: "A." },
+          niveaus: { basis: "60/40.", simpeler: "Inhoud+taal = 60+40", nogSimpeler: "A." },
         },
       },
     ],

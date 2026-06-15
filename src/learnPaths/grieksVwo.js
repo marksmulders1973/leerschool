@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Niet — modern Engels.", "Niet — te veel.", "Niet — te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Α t/m Ω", tekst: "**Grieks alfabet: 24 letters** van **Alfa (Α)** tot **Omega (Ω)**. Engelse 'from alpha to omega' = van begin tot eind. Tussen-letters waar Engels niet heeft: theta (θ), xi (ξ), psi (ψ), phi (φ), chi (χ), omega (ω). Wetenschap leent veel: π (pi), δ (delta), Σ (sigma) etc." }],
-          niveaus: { basis: "24. A.", simpeler: "Grieks = 24 letters", nogSimpeler: "24" },
+          niveaus: { basis: "24.", simpeler: "Grieks = 24 letters", nogSimpeler: "24" },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is omicron.", "Niet — theta.", "Wel klein ook, hoofdletter Ω."],
         uitlegPad: {
           stappen: [{ titel: "Lange vs korte o", tekst: "**Omega Ω/ω** = lange o (oh). **Omicron Ο/ο** = korte o. Grieks onderscheidt klinker-lengtes — belangrijk voor klemtoon + metrum poëzie. Vergelijkbaar: Eta (Η/η) = lange e vs Epsilon (Ε/ε) = korte e." }],
-          niveaus: { basis: "Ω. A.", simpeler: "Omega = Ω lange o", nogSimpeler: "A." },
+          niveaus: { basis: "Ω.", simpeler: "Omega = Ω lange o", nogSimpeler: "A." },
         },
       },
       {
@@ -55,7 +55,7 @@ const steps = [
         wrongHints: [null, "Niet — sophia.", "Niet — nomos.", "Niet — strategos."],
         uitlegPad: {
           stappen: [{ titel: "Δῆμος = volk", tekst: "**Demos** (δῆμος) = volk. **Demo-cratie** = letterlijk 'macht van het volk'. Athene 5e eeuw v.Chr. = eerste democratie (alle vrije mannelijke burgers konden meebeslissen, niet vrouwen of slaven). Verwant: epidemie ('over het volk'), demografie ('schrijven over volk')." }],
-          niveaus: { basis: "Volk. A.", simpeler: "Demos = volk", nogSimpeler: "A." },
+          niveaus: { basis: "Volk.", simpeler: "Demos = volk", nogSimpeler: "A." },
         },
       },
       {
@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "Spiritus lenis.", "Niet — andere markering.", "Niet — accenten apart."],
         uitlegPad: {
           stappen: [{ titel: "῾ = ruwe ademing", tekst: "**Spiritus asper** (῾, 'ruwe ademing'): geeft h-klank vooraf. *ἑπτά* = hepta = zeven. *ἥλιος* = hèlios = zon. **Spiritus lenis** (᾽, 'gladde ademing'): geen h. *ἀγαθός* = agathos = goed. **Rho** (ρ) krijgt altijd asper aan begin." }],
-          niveaus: { basis: "H-klank. A.", simpeler: "Asper = h", nogSimpeler: "A." },
+          niveaus: { basis: "H-klank.", simpeler: "Asper = h", nogSimpeler: "A." },
         },
       },
       {
@@ -75,7 +75,7 @@ const steps = [
         wrongHints: [null, "Niet — pi.", "Niet — beta.", "Niet — theta."],
         uitlegPad: {
           stappen: [{ titel: "Aspirate p → f", tekst: "**Phi (Φ/φ)** = oorspronkelijk 'p-h' (geaspireerde p), in klassieke uitspraak meestal als **f**. Vandaar 'philosophy' = liefhebber wijsheid. **Theta (θ)** = th, **chi (χ)** = ch — beide ook geaspireerde varianten van t en k." }],
-          niveaus: { basis: "F. A.", simpeler: "Φ = F", nogSimpeler: "F" },
+          niveaus: { basis: "F.", simpeler: "Φ = F", nogSimpeler: "F" },
         },
       },
     ],
@@ -94,7 +94,7 @@ const steps = [
         wrongHints: [null, "Latijn.", "Duits.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Geen ablatief", tekst: "**Grieks: 5 naamvallen** — Nom/Gen/Dat/Acc/Voc. **Geen ablatief** (functies daarvan zitten in datief + genitief + voorzetsels). **Latijn** 6, **Duits** 4. Voor Grieks-leerlingen die ook Latijn doen: 'minder werk dan Latijn' (alleen 1 minder)." }],
-          niveaus: { basis: "5. A.", simpeler: "Grieks = 5 nv", nogSimpeler: "5" },
+          niveaus: { basis: "5.", simpeler: "Grieks = 5 nv", nogSimpeler: "5" },
         },
       },
       {
@@ -104,7 +104,7 @@ const steps = [
         wrongHints: [null, "Niet — wel.", "Niet — onbepaald LIDWOORD ontbreekt eigenlijk.", "Niet — alle geslachten."],
         uitlegPad: {
           stappen: [{ titel: "ὁ ἡ τό", tekst: "**Grieks heeft lidwoorden** (anders dan Latijn): **ὁ (m), ἡ (v), τό (n)** voor 'de/het'. Buigen verbuigen in alle naamvallen.\n\n**Geen onbepaald lidwoord** ('een') in klassiek Grieks — context bepaalt." }],
-          niveaus: { basis: "Ja. A.", simpeler: "Grieks = lidwoord", nogSimpeler: "A." },
+          niveaus: { basis: "Ja.", simpeler: "Grieks = lidwoord", nogSimpeler: "A." },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Niet — eindigt op os.", "Niet — pattern duidelijk.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "2e decl -ος", tekst: "**Logos** (λόγος) = mannelijk, eindigt op **-ος** = **2e declinatie**. Gen: λόγου, Dat: λόγῳ, Acc: λόγον, Voc: λόγε.\n\nOnzijdig 2e decl eindigt op -ον: δῶρον (doron, geschenk)." }],
-          niveaus: { basis: "2e. A.", simpeler: "-ος = 2e decl", nogSimpeler: "2e" },
+          niveaus: { basis: "2e.", simpeler: "-ος = 2e decl", nogSimpeler: "2e" },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Met datief = in.", "Met gen = uit.", "Met gen = van."],
         uitlegPad: {
           stappen: [{ titel: "Richting = εἰς + acc", tekst: "**εἰς + Acc** = 'naar' (richting beweging). *εἰς τὴν πόλιν* = naar de stad. Tegenstelling: **ἐν + Dat** = 'in' (rust). *ἐν τῇ πόλει* = in de stad.\n\nGriekse voorzetsels veranderen betekenis afhankelijk naamval." }],
-          niveaus: { basis: "εἰς. A.", simpeler: "Richting = εἰς+acc", nogSimpeler: "A." },
+          niveaus: { basis: "εἰς.", simpeler: "Richting = εἰς+acc", nogSimpeler: "A." },
         },
       },
       {
@@ -134,7 +134,7 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Niet zo.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "3 genera", tekst: "**Grieks heeft 3 grammaticale geslachten** (zoals Duits + Latijn): **mannelijk (ὁ), vrouwelijk (ἡ), onzijdig (τό)**. Geslacht is grammaticaal, niet altijd biologisch (ἡ νῆσος = het eiland is vrouwelijk). Belangrijk: lidwoord + bijvoeglijk naamwoord + voornaamwoord stemmen overeen." }],
-          niveaus: { basis: "3 geslachten. A.", simpeler: "3 genera", nogSimpeler: "3" },
+          niveaus: { basis: "3 geslachten.", simpeler: "3 genera", nogSimpeler: "3" },
         },
       },
     ],
@@ -153,7 +153,7 @@ const steps = [
         wrongHints: [null, "Niet — drievoudig.", "Niet — meer.", "Wel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Aspect = manier van handelen", tekst: "Grieks heeft **3 aspecten**:\n• **Imperfectief** (praesens, imperfectum): doorlopend / herhalend.\n• **Aoristisch** (aoristus): eenmalig / geheel.\n• **Perfectief** (perfectum): voltooid met doorlopend resultaat.\n\nLatijn heeft hoofdzakelijk tijden-onderscheid (verleden/heden/toekomst), Grieks combineert tijd + aspect." }],
-          niveaus: { basis: "Imperfectief/aoristisch/perfectief. A.", simpeler: "3 aspecten", nogSimpeler: "A." },
+          niveaus: { basis: "Imperfectief/aoristisch/perfectief.", simpeler: "3 aspecten", nogSimpeler: "A." },
         },
       },
       {
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Spreken.", "Schrijven.", "Liefhebben."],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig 'zijn'", tekst: "**εἰμί** (eimi) = ik ben. Vervoeging: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν). Onregelmatig (zoals Latijn 'esse' + Engels 'be'). Bekendste citaat: *Πάντα ῥεῖ* (panta rhei) = 'alles stroomt', maar dat is een ander werkwoord (ῥέω, stromen)." }],
-          niveaus: { basis: "εἰμί. A.", simpeler: "Zijn = εἰμί", nogSimpeler: "A." },
+          niveaus: { basis: "εἰμί.", simpeler: "Zijn = εἰμί", nogSimpeler: "A." },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Verleden-marker", tekst: "**Augment** (Grieks ἐ-) staat vóór stam voor **verleden tijden** (imperfectum, aoristus, plusquamperfectum).\n\n• Praesens: λύω.\n• Imperfectum: **ἔ**λυον = ik was los aan het maken.\n• Aoristus: **ἔ**λυσα = ik maakte los.\n\nLijkt op augment in Sanskriet — beide Indo-Europees." }],
-          niveaus: { basis: "Verleden tijd. A.", simpeler: "ἐ- = verleden", nogSimpeler: "A." },
+          niveaus: { basis: "Verleden tijd.", simpeler: "ἐ- = verleden", nogSimpeler: "A." },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
         wrongHints: [null, "Geen augment.", "Anders gevormd.", "Anders gevormd."],
         uitlegPad: {
           stappen: [{ titel: "Augment + presens-stam", tekst: "**ἔγραφον** = augment (ἐ-) + presens-stam (γραφ-) + uitgang -ον. **Imperfectum**: 'ik was aan het schrijven' of 'ik schreef herhaaldelijk'. **Imperfectief aspect** in verleden.\n\nVergelijk: **ἔγραψα** = aoristus, eenmalige actie." }],
-          niveaus: { basis: "Imperfectum. A.", simpeler: "ἔγραφον = imperf", nogSimpeler: "A." },
+          niveaus: { basis: "Imperfectum.", simpeler: "ἔγραφον = imperf", nogSimpeler: "A." },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         wrongHints: [null, "Niet — meer.", "Niet — minder.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "+ Optatief", tekst: "**Grieks: 4 wijzen** — indicatief (mededelend), conjunctief (aanvoegend), **optatief** (wens/mogelijkheid), imperatief (gebiedend). Latijn heeft 3 (geen optatief — gebruikt conjunctief breder). **Optatief**: 'mocht het zijn', 'ware het zo'." }],
-          niveaus: { basis: "4. A.", simpeler: "Grieks = 4 wijzen", nogSimpeler: "4" },
+          niveaus: { basis: "4.", simpeler: "Grieks = 4 wijzen", nogSimpeler: "4" },
         },
       },
     ],
@@ -212,7 +212,7 @@ const steps = [
         wrongHints: [null, "Niet — Plato eerder.", "Veel eerder.", "Heel anders thema."],
         uitlegPad: {
           stappen: [{ titel: "Aristoteles 343 v.Chr.", tekst: "**Aristoteles** (384-322 v.Chr.) was 3 jaar (vanaf 343 v.Chr.) leraar van **Alexander de Grote** (toen ~13-16 jaar oud) in Macedonië. Filip II (Alexander's vader) huurde Aristoteles in. Onderwijs in filosofie, ethiek, politiek, retorica, natuurwetenschap." }],
-          niveaus: { basis: "Aristoteles. A.", simpeler: "Alex leraar = Aristoteles", nogSimpeler: "A." },
+          niveaus: { basis: "Aristoteles.", simpeler: "Alex leraar = Aristoteles", nogSimpeler: "A." },
         },
       },
       {
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Niet — moderne start.", "Niet — Slag Marathon.", "Niet — Rome stichting."],
         uitlegPad: {
           stappen: [{ titel: "Olympia Peloponnesos", tekst: "**776 v.Chr.**: eerste Olympische Spelen in **Olympia** (Peloponnesos), te ere van Zeus. Tot 393 n.Chr. (verboden door christelijke keizer Theodosius). **Moderne herstart 1896** door Pierre de Coubertin in Athene." }],
-          niveaus: { basis: "776 v.Chr. A.", simpeler: "Olympia = 776 vC", nogSimpeler: "776" },
+          niveaus: { basis: "776 v.Chr.", simpeler: "Olympia = 776 vC", nogSimpeler: "776" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet — andere theorieën.", "Niet — zelf niets geschreven.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Politeia VII", tekst: "**Plato's grotgelijkenis** (*Politeia* VII): mensen vastgeketend in grot zien alleen schaduwen, denken dat realiteit is. Eén ontsnapt → ziet zonlicht (werkelijkheid van Ideeën) → keert terug om anderen te bevrijden (filosoof). Metafoor voor: onwetendheid vs ware kennis, fysieke wereld vs Ideeën-wereld." }],
-          niveaus: { basis: "Plato. A.", simpeler: "Grot = Plato", nogSimpeler: "Plato" },
+          niveaus: { basis: "Plato.", simpeler: "Grot = Plato", nogSimpeler: "Plato" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — tragedie.", "Niet — tragedie.", "Niet — historicus."],
         uitlegPad: {
           stappen: [{ titel: "~750 v.Chr.", tekst: "**Homerus** (~750 v.Chr., legendarische dichter) — eigenlijk waarschijnlijk traditie van orale dichters die geconsolideerd werden onder die naam. **Ilias** = laatste jaar Trojaanse Oorlog (Achilles' woede). **Odyssee** = Odysseus' 10-jarige terugkeer. Dactylisch hexameter — fundament westerse literatuur." }],
-          niveaus: { basis: "Homerus. A.", simpeler: "Ilias = Homerus", nogSimpeler: "A." },
+          niveaus: { basis: "Homerus.", simpeler: "Ilias = Homerus", nogSimpeler: "A." },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Atheners winnen", tekst: "**490 v.Chr.**: Atheners onder Miltiades verslaan Perzen op vlakte van **Marathon** (~25 km van Athene). Boodschapper Phidippides liep terug naar Athene om overwinning te melden, viel dood neer (volgens legende) → **modern Marathon-loop** (42,2 km) vernoemd. Onderdeel **Persische Oorlogen** 499-449 v.Chr." }],
           theorie: "10 jaar later: 480 v.Chr. Xerxes komt terug — Slag bij Salamis (Atheense zee-overwinning) + Thermopylae (300 Spartanen).",
-          niveaus: { basis: "Atheners + Perzen. A.", simpeler: "Marathon = AT vs PE", nogSimpeler: "A." },
+          niveaus: { basis: "Atheners + Perzen.", simpeler: "Marathon = AT vs PE", nogSimpeler: "A." },
         },
       },
     ],
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Niet — Parmenides.", "Niet relevant.", "Wel etymologie 'filosofie' maar andere zin."],
         uitlegPad: {
           stappen: [{ titel: "Heraclitus' beweging", tekst: "**Panta rhei** (πάντα ῥεῖ) = 'alles stroomt'. **Heraclitus** (~500 v.Chr.): werkelijkheid is constant verandering, zoals rivier waar je nooit twee keer in zelfde water staat. Tegenstelling: **Parmenides** — alles is één + onveranderlijk." }],
-          niveaus: { basis: "Alles stroomt. A.", simpeler: "Panta rhei = stroomt", nogSimpeler: "A." },
+          niveaus: { basis: "Alles stroomt.", simpeler: "Panta rhei = stroomt", nogSimpeler: "A." },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Niet — Sokrates' student.", "Niet — andere ideeën.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Socratische bescheidenheid", tekst: "**Sokrates**: 'Ik weet dat ik niets weet.' (overgeleverd via Plato). Vroeg vragen tot tegenstanders zelf zagen dat ze niets wisten. Spotseer-paradox: hij wist meer dan anderen juist door zijn besef van onwetendheid. **Daadwerkelijk uitgesproken** (en in Plato's *Apologie*): 'Ik weet alleen dat ik niets weet'." }],
-          niveaus: { basis: "Sokrates. A.", simpeler: "Niets weten = Sokrates", nogSimpeler: "A." },
+          niveaus: { basis: "Sokrates.", simpeler: "Niets weten = Sokrates", nogSimpeler: "A." },
         },
       },
       {
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: [null, "Niet — Aphrodite.", "Niet — Ares.", "Niet — Poseidon."],
         uitlegPad: {
           stappen: [{ titel: "Olympus-leider", tekst: "**Zeus** (Ζεύς) = oppergod Olympus. Romeinse equivalent: **Jupiter**. Wapen: bliksem. Vader van velen (Athena uit zijn hoofd, Heracles uit verhouding met mens, etc.). Zeer overspelig — bron veel mythen. Cultus-centrum: Olympia + Dodona." }],
-          niveaus: { basis: "Oppergod. A.", simpeler: "Zeus = oppergod", nogSimpeler: "A." },
+          niveaus: { basis: "Oppergod.", simpeler: "Zeus = oppergod", nogSimpeler: "A." },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Euripides.", "Aristofanes (komedie).", "Homerus (epos)."],
         uitlegPad: {
           stappen: [{ titel: "Tragisch lot", tekst: "**Sofokles** schreef *Oidipous Tyrannos* (Koning Oedipus): koning ontdekt dat hij vader doodde + moeder huwde, ondanks pogingen lot te ontvluchten. **Freud-inspirator** (Oedipus-complex). Sofokles schreef 120+ stukken, 7 bewaard. Andere: *Antigone*, *Elektra*, *Aias*." }],
-          niveaus: { basis: "Oidipous. A.", simpeler: "Sofokles = Oidipous", nogSimpeler: "A." },
+          niveaus: { basis: "Oidipous.", simpeler: "Sofokles = Oidipous", nogSimpeler: "A." },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Niet — verovering Korinthe.", "Niet — Byzantion-hoofdstad.", "Niet — Marathon."],
         uitlegPad: {
           stappen: [{ titel: "Babylon, 32 jaar oud", tekst: "**Alexander de Grote** (356-323 v.Chr.) stierf op 32-jarige leeftijd in **Babylon** (Mesopotamië). Doodsoorzaak: koorts/ziekte (mogelijk malaria, tyfus of vergiftiging — onbekend). In 13 jaar (336-323) had hij van Macedonië tot India veroverd. Na zijn dood: rijk verdeeld onder zijn generaals (Diadochen). Start **Hellenistische periode**." }],
-          niveaus: { basis: "323 v.Chr. A.", simpeler: "Alex dood = 323 vC", nogSimpeler: "323" },
+          niveaus: { basis: "323 v.Chr.", simpeler: "Alex dood = 323 vC", nogSimpeler: "323" },
         },
       },
     ],

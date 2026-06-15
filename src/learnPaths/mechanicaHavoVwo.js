@@ -37,7 +37,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t = afstand", tekst: "Bij eenparige beweging: x = v·t. Op v-t-grafiek vormt v·t een **rechthoek** waarvan oppervlakte = afstand. Bij variabele v: oppervlakte onder curve = integraal van v over t = **verplaatsing**." }],
           theorie: "Cito-classics: 'gegeven v-t-diagram, hoeveel m heeft auto afgelegd?' Antwoord: oppervlakte bepalen (rechthoek, driehoek, trapezium).",
-          niveaus: { basis: "Verplaatsing. A.", simpeler: "Opp. v-t = afstand", nogSimpeler: "Afstand" },
+          niveaus: { basis: "Verplaatsing.", simpeler: "Opp. v-t = afstand", nogSimpeler: "Afstand" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is a.", "Niet — dat is verplaatsing.", "Wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "v = v₀ + a·t", tekst: "Begin v₀ = 0. **v(t) = 0 + 2 × 5 = 10 m/s**. Eenparig versneld dus snelheid groeit lineair." }],
-          niveaus: { basis: "10 m/s. A.", simpeler: "v=at=2·5=10", nogSimpeler: "10" },
+          niveaus: { basis: "10 m/s.", simpeler: "v=at=2·5=10", nogSimpeler: "10" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tijd-loze formule", tekst: "v² = v₀² + 2g·h = 0 + 2·10·5 = 100. **v = √100 = 10 m/s** bij grond." }],
           theorie: "Of via tijd: h=½gt² → 5=5t² → t=1s → v=gt=10 m/s.",
-          niveaus: { basis: "10 m/s. A.", simpeler: "v²=2·g·h=100, v=10", nogSimpeler: "10" },
+          niveaus: { basis: "10 m/s.", simpeler: "v²=2·g·h=100, v=10", nogSimpeler: "10" },
         },
       },
       {
@@ -68,7 +68,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel bepaald.", "Niet — gewoon 0 op precies dat moment."],
         uitlegPad: {
           stappen: [{ titel: "Snelheid keert om", tekst: "Bal stijgt → snelheid daalt door zwaartekracht → bereikt nul precies op hoogste punt → daarna negatief (terug). Op **top** = v=0**. Versnelling blijft wel g (-9,81 m/s²) — zwaartekracht blijft." }],
-          niveaus: { basis: "0. A.", simpeler: "Top = v=0", nogSimpeler: "0" },
+          niveaus: { basis: "0.", simpeler: "Top = v=0", nogSimpeler: "0" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "km/h ÷ 3,6 = m/s", tekst: "1 km = 1000 m, 1 h = 3600 s → 1 km/h = 1000/3600 = **1/3,6 m/s**. Dus km/h ÷ 3,6 = m/s. Omgekeerd: m/s × 3,6 = km/h.\n\nVoorbeeld: 90 km/h ÷ 3,6 = 25 m/s." }],
           theorie: "Cito-klassieker. Onthoud: 36 km/h = 10 m/s.",
-          niveaus: { basis: "÷ 3,6. A.", simpeler: "km/h → m/s = ÷3,6", nogSimpeler: "÷3,6" },
+          niveaus: { basis: "÷ 3,6.", simpeler: "km/h → m/s = ÷3,6", nogSimpeler: "÷3,6" },
         },
       },
     ],
@@ -98,7 +98,7 @@ const steps = [
         wrongHints: [null, "Niet — die is traagheid.", "Niet — die is actie-reactie.", "Wel correct."],
         uitlegPad: {
           stappen: [{ titel: "F=ma is tweede", tekst: "**Tweede Newton-wet**: F_res = m·a. Verbindt kracht, massa, versnelling. **Eerste** = traagheid (F=0 → v constant). **Derde** = actie-reactie." }],
-          niveaus: { basis: "Tweede. A.", simpeler: "F=ma = 2e Newton", nogSimpeler: "2e" },
+          niveaus: { basis: "Tweede.", simpeler: "F=ma = 2e Newton", nogSimpeler: "2e" },
         },
       },
       {
@@ -108,7 +108,7 @@ const steps = [
         wrongHints: [null, "Niet — niet rechtstreeks kracht.", "Niet — verwisseld.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "a = F/m", tekst: "Tweede Newton: F = m·a → **a = F/m = 5000/1000 = 5 m/s²**." }],
-          niveaus: { basis: "5 m/s². A.", simpeler: "5000/1000 = 5", nogSimpeler: "5" },
+          niveaus: { basis: "5 m/s².", simpeler: "5000/1000 = 5", nogSimpeler: "5" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
         wrongHints: [null, "Niet — vermenigvuldig met g.", "Te klein.", "Niet kg — N."],
         uitlegPad: {
           stappen: [{ titel: "F_z = mg", tekst: "**F_z = m × g = 10 × 10 = 100 N**. Massa blijft 10 kg (overal). Op maan: 10 × 1,62 ≈ 16 N." }],
-          niveaus: { basis: "100 N. A.", simpeler: "10·10 = 100 N", nogSimpeler: "100" },
+          niveaus: { basis: "100 N.", simpeler: "10·10 = 100 N", nogSimpeler: "100" },
         },
       },
       {
@@ -128,7 +128,7 @@ const steps = [
         wrongHints: [null, "Niet — die gaat over evenwicht.", "Niet primair — wel meegerekend.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Actie = reactie", tekst: "Je duwt trampoline naar beneden (actie). Trampoline duwt jou met gelijke kracht omhoog (reactie). **Derde Newton-wet**. Beide krachten gelijk in grootte, tegengesteld, op verschillende objecten." }],
-          niveaus: { basis: "Derde. A.", simpeler: "Actie+reactie = 3e Newton", nogSimpeler: "3e" },
+          niveaus: { basis: "Derde.", simpeler: "Actie+reactie = 3e Newton", nogSimpeler: "3e" },
         },
       },
       {
@@ -139,7 +139,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "a = g·sin(α)", tekst: "Component zwaartekracht langs helling: F_// = m·g·sin(α). Versnelling: **a = g·sin(α) = 10·sin(30°) = 10·0,5 = 5 m/s²**.\n\n(Massa valt weg in formule.)" }],
           theorie: "Memo: 30° → sin=0,5, cos=0,866. 45° → beide 0,707. 60° → sin=0,866, cos=0,5.",
-          niveaus: { basis: "5 m/s². A.", simpeler: "g·sin30 = 5", nogSimpeler: "5" },
+          niveaus: { basis: "5 m/s².", simpeler: "g·sin30 = 5", nogSimpeler: "5" },
         },
       },
     ],
@@ -158,7 +158,7 @@ const steps = [
         wrongHints: [null, "Niet — verkeerde bewerking.", "Niet — verkeerde bewerking.", "Mist factor s."],
         uitlegPad: {
           stappen: [{ titel: "W = F·s", tekst: "Bij parallelle F en s: **W = F · s = 20 × 5 = 100 J**." }],
-          niveaus: { basis: "100 J. A.", simpeler: "W=F·s=20·5=100", nogSimpeler: "100" },
+          niveaus: { basis: "100 J.", simpeler: "W=F·s=20·5=100", nogSimpeler: "100" },
         },
       },
       {
@@ -169,7 +169,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "E_k = ½mv²", tekst: "E_k = ½ × m × v² = ½ × 1000 × 20² = ½ × 1000 × 400 = **200.000 J = 200 kJ**." }],
           theorie: "Bij verdubbelen v wordt E_k 4×. Cito-favoriet: 'auto van 50 → 100 km/h hoeveel x energie meer?' → 4×.",
-          niveaus: { basis: "200.000 J. A.", simpeler: "½·1000·400 = 200000", nogSimpeler: "200 kJ" },
+          niveaus: { basis: "200.000 J.", simpeler: "½·1000·400 = 200000", nogSimpeler: "200 kJ" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
             { titel: "Energie-behoud", tekst: "E_p_boven = E_k_beneden → mgh = ½mv² → v² = 2gh = 2·10·5 = 100 → **v = 10 m/s**." },
             { titel: "Massa valt weg", tekst: "Massa in beide kanten — valt weg. Snelheid hangt alleen af van hoogte (zonder lucht)." },
           ],
-          niveaus: { basis: "10 m/s. A.", simpeler: "v²=2gh=100, v=10", nogSimpeler: "10" },
+          niveaus: { basis: "10 m/s.", simpeler: "v²=2gh=100, v=10", nogSimpeler: "10" },
         },
       },
       {
@@ -192,7 +192,7 @@ const steps = [
         wrongHints: [null, "Niet — door tijd delen.", "Niet — vermenigvuldigd.", "Niet — fout-omgedraaid."],
         uitlegPad: {
           stappen: [{ titel: "P = W/t", tekst: "**Vermogen = energie/tijd = 2400 / 60 = 40 W**." }],
-          niveaus: { basis: "40 W. A.", simpeler: "2400/60 = 40", nogSimpeler: "40" },
+          niveaus: { basis: "40 W.", simpeler: "2400/60 = 40", nogSimpeler: "40" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "v² in formule", tekst: "Remafstand s = v²/(2a). Verdubbelen v → v² ×4 → **s ×4**.\n\n50 km/h vergt bv 15 m. 100 km/h vergt 60 m.\n\nDit is reden waarom snelheidslimiet zo cruciaal is voor verkeersveiligheid." }],
           theorie: "Cito-toepassing: dodehoek + reactietijd. Reactietijd schaalt lineair (×2), remafstand schaalt kwadratisch (×4). Samen veel langere stopafstand bij hoge snelheid.",
-          niveaus: { basis: "4× lang. A.", simpeler: "v² → ×4", nogSimpeler: "4×" },
+          niveaus: { basis: "4× lang.", simpeler: "v² → ×4", nogSimpeler: "4×" },
         },
       },
     ],
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Niet — vermenigvuldig met v.", "Niet — niet rechtstreeks.", "Niet — fout-bewerking."],
         uitlegPad: {
           stappen: [{ titel: "p = m·v", tekst: "**Impuls** p = m × v = 500 × 10 = **5000 kg·m/s**." }],
-          niveaus: { basis: "5000 kg·m/s. A.", simpeler: "p=mv=500·10=5000", nogSimpeler: "5000" },
+          niveaus: { basis: "5000 kg·m/s.", simpeler: "p=mv=500·10=5000", nogSimpeler: "5000" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet — plastisch verliest kinetische.", "Niet — energie niet bij plastisch.", "Wel impuls."],
         uitlegPad: {
           stappen: [{ titel: "Impulsbehoud universeel", tekst: "**Impulsbehoud** geldt in **elke** botsing (zonder externe kracht). Kinetische energie-behoud alleen bij **elastische** botsing. Plastische (plakken) verliest E_k aan warmte + vervorming." }],
-          niveaus: { basis: "Impuls. A.", simpeler: "Botsing = impulsbehoud", nogSimpeler: "Impuls" },
+          niveaus: { basis: "Impuls.", simpeler: "Botsing = impulsbehoud", nogSimpeler: "Impuls" },
         },
       },
       {
@@ -245,7 +245,7 @@ const steps = [
             { titel: "Impulsbehoud", tekst: "Voor: p = 4·6 + 2·0 = 24 kg·m/s. Na: p = (4+2)·v = 6v." },
             { titel: "Oplos v", tekst: "6v = 24 → **v = 4 m/s**." },
           ],
-          niveaus: { basis: "4 m/s. A.", simpeler: "24/6=4", nogSimpeler: "4" },
+          niveaus: { basis: "4 m/s.", simpeler: "24/6=4", nogSimpeler: "4" },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "F = Δp/Δt", tekst: "**Airbag** rekt botstijd Δt op (van milliseconden naar 0,1-0,5 s). Bij vaste Δp (snelheidsverandering): grotere Δt → **kleinere F** op lichaam. Voorkomt levensgevaarlijke krachten op hoofd/borst." }],
           theorie: "Zelfde principe: kreukel-zone, bouwhelm, paratroop-rolafval, springtouw op trampoline.",
-          niveaus: { basis: "Botstijd↑ → kracht↓. A.", simpeler: "Airbag = tijd langer = F lager", nogSimpeler: "A." },
+          niveaus: { basis: "Botstijd↑ → kracht↓.", simpeler: "Airbag = tijd langer = F lager", nogSimpeler: "A." },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
             { titel: "Klassieke biljart-uitkomst", tekst: "Bij **elastische botsing van 2 gelijke massa's** met 1 in rust: bewegende stopt, stilstaande neemt alle snelheid over. Impuls + E_k beide behouden." },
             { titel: "Check", tekst: "Impuls voor: m·5. Impuls na: 0 + m·5 ✓. E_k voor: ½m·25. E_k na: 0 + ½m·25 ✓." },
           ],
-          niveaus: { basis: "A stop, B beweegt. A.", simpeler: "Gelijk massa elastisch = ruil snelheid", nogSimpeler: "Ruil" },
+          niveaus: { basis: "A stop, B beweegt.", simpeler: "Gelijk massa elastisch = ruil snelheid", nogSimpeler: "Ruil" },
         },
       },
     ],
@@ -288,7 +288,7 @@ const steps = [
         wrongHints: [null, "Niet — opp. v-t = 80/2.", "Niet correct.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t-driehoek", tekst: "Op v-t-diagram is dit driehoek met basis 4 + hoogte 20. **Opp = ½·4·20 = 40 m** = verplaatsing. (Of via x=½·a·t² met a=5: ½·5·16=40 m. ✓)" }],
-          niveaus: { basis: "40 m. A.", simpeler: "½·4·20=40", nogSimpeler: "40" },
+          niveaus: { basis: "40 m.", simpeler: "½·4·20=40", nogSimpeler: "40" },
         },
       },
       {
@@ -298,7 +298,7 @@ const steps = [
         wrongHints: [null, "Niet — vermenigvuldig.", "Mist v.", "Mist F."],
         uitlegPad: {
           stappen: [{ titel: "P = F·v", tekst: "Bij constante snelheid: **P = F × v = 100 × 2 = 200 W**." }],
-          niveaus: { basis: "200 W. A.", simpeler: "P=Fv=100·2=200", nogSimpeler: "200" },
+          niveaus: { basis: "200 W.", simpeler: "P=Fv=100·2=200", nogSimpeler: "200" },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [null, "Niet — F=ma.", "Niet — actie-reactie.", "Bestaat niet."],
         uitlegPad: {
           stappen: [{ titel: "Eerste = traagheid", tekst: "**Eerste Newton-wet** = **wet van traagheid**: zonder netto kracht behoudt object snelheid (incl. richting) of blijft in rust. Tweede = F=ma. Derde = actie-reactie." }],
-          niveaus: { basis: "Eerste. A.", simpeler: "Traagheid = 1e", nogSimpeler: "1e" },
+          niveaus: { basis: "Eerste.", simpeler: "Traagheid = 1e", nogSimpeler: "1e" },
         },
       },
       {
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "Niet — wel meer.", "Niet correct.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Tegen zwaartekracht = mgh", tekst: "Arbeid = ΔE_p = m·g·h = 70 × 10 × 2 = **1400 J**." }],
-          niveaus: { basis: "1400 J. A.", simpeler: "70·10·2=1400", nogSimpeler: "1400" },
+          niveaus: { basis: "1400 J.", simpeler: "70·10·2=1400", nogSimpeler: "1400" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
         wrongHints: [null, "Niet — traagheid speelt geen rol bij lancering.", "Niet relevant.", "Wel Newton."],
         uitlegPad: {
           stappen: [{ titel: "Raket = actie-reactie", tekst: "Raket duwt gas omlaag (actie) → gas duwt raket omhoog met gelijke kracht (reactie). **Derde Newton + impulsbehoud** zorgen samen voor lift. Hoe meer gasmassa × gas-snelheid eruit, hoe meer raketsnelheid omhoog." }],
-          niveaus: { basis: "Derde. A.", simpeler: "Raket = 3e Newton", nogSimpeler: "3e" },
+          niveaus: { basis: "Derde.", simpeler: "Raket = 3e Newton", nogSimpeler: "3e" },
         },
       },
     ],

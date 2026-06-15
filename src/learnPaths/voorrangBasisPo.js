@@ -201,7 +201,7 @@ const steps = [
         wrongHints: [null, "De auto komt van rechts — rechts heeft voorrang, dus jij wacht.", "Snelheid heeft niets met voorrang te maken.", "Er is altijd een regel."],
         uitlegPad: {
           stappen: [{ titel: "Rechts = eerst", tekst: "Op gelijkwaardige kruispunten (geen bord, geen stoplicht): **rechts heeft voorrang**. Auto komt van rechts → auto eerst → jij wacht." }],
-          niveaus: { basis: "Auto van rechts. A.", simpeler: "Rechts = eerst", nogSimpeler: "Rechts" },
+          niveaus: { basis: "Auto van rechts.", simpeler: "Rechts = eerst", nogSimpeler: "Rechts" },
         },
       },
     ],
@@ -224,7 +224,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Haaientanden = jij wacht", tekst: "**Haaientanden** = driehoekjes die naar jou wijzen op de weg. Betekenen: **jij moet voorrang geven**. De andere weg is voorrangsweg. Hetzelfde als bord B6." }],
           theorie: "Cito-VVN-favoriet. Ezelsbruggetje: haai 'eet jou op' = jij moet wachten.",
-          niveaus: { basis: "Wachten. A.", simpeler: "Haaientanden = jij wacht", nogSimpeler: "Wachten" },
+          niveaus: { basis: "Wachten.", simpeler: "Haaientanden = jij wacht", nogSimpeler: "Wachten" },
         },
       },
     ],
@@ -247,7 +247,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zebra = voetganger eerst", tekst: "Op zebrapad heeft de **voetganger altijd voorrang** zodra hij oversteekt. Fietsers + auto's stoppen. Pas doorrijden als voetganger veilig op trottoir is." }],
           theorie: "Boete bij overtreding: ~€280 voor auto, ~€110 voor fiets. Geldt ook voor scooter + e-step.",
-          niveaus: { basis: "Stoppen. A.", simpeler: "Zebra + voetganger = stop", nogSimpeler: "Stop" },
+          niveaus: { basis: "Stoppen.", simpeler: "Zebra + voetganger = stop", nogSimpeler: "Stop" },
         },
       },
     ],
@@ -269,7 +269,7 @@ const steps = [
         wrongHints: [null, "Niet — stoppen, niet alleen vertragen.", "Niet — stopbord = altijd stilstaan.", "Niet — toeteren mag niet."],
         uitlegPad: {
           stappen: [{ titel: "STOP = stilstaan", tekst: "Bij een STOP-bord moet je **stilstaan** (volledig stop, voeten op grond bij fiets). Daarna pas verder als kruising vrij is. Verschil met voorrangsverlenen (haaientanden): daar mag je langzaam rijden als alles vrij is. STOP = altijd echt stilstaan." }],
-          niveaus: { basis: "Stilstaan. A.", simpeler: "STOP = stilstaan", nogSimpeler: "Stop" },
+          niveaus: { basis: "Stilstaan.", simpeler: "STOP = stilstaan", nogSimpeler: "Stop" },
         },
       },
       {
@@ -282,7 +282,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rood = stop", tekst: "**Rood licht = altijd stoppen** voor de stopstreep. Wachten tot het licht zelf op groen springt. Geldt voor alle weggebruikers — ook fietsers (anders dan in België waar fietsers soms wel mogen)." }],
           theorie: "Boete door rood fietsen: ~€110. Bij ongeluk dat door jou-door-rood ontstaat: jouw schuld.",
-          niveaus: { basis: "Stoppen + wachten. A.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
+          niveaus: { basis: "Stoppen + wachten.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
         },
       },
     ],
@@ -305,7 +305,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opzij + stoppen", tekst: "Bij sirene + zwaailicht: **fietser gaat naar de rechterkant van de weg en stopt**. Auto's doen hetzelfde. Doe het rustig — geen paniek-stuur — zodat de ambulance een vrije baan heeft." }],
           theorie: "Zwaailicht zonder sirene = alleen 'kijk uit, ik werk' — geen voorrang. Sirene mag pas aan bij echt spoedgeval.",
-          niveaus: { basis: "Naar kant + stop. A.", simpeler: "Sirene = opzij + stop", nogSimpeler: "Opzij" },
+          niveaus: { basis: "Naar kant + stop.", simpeler: "Sirene = opzij + stop", nogSimpeler: "Opzij" },
         },
       },
     ],

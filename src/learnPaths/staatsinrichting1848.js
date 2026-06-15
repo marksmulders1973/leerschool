@@ -40,7 +40,7 @@ const steps = [
           theorie: "Willem-koningen volgorde: I (1815), II (1840), III (1849), Wilhelmina (1890), Juliana (1948), Beatrix (1980), Willem-Alexander (2013).",
           voorbeelden: [{ type: "feit", tekst: "Willem II zei zelf: 'Ik ben in één nacht van conservatief liberaal geworden.'" }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Verwar niet: Willem I = vader (Kroningsjaar 1815), Willem II = zoon (1840 t.b.v. grondwet 1848)." }],
-          niveaus: { basis: "Willem II — A.", simpeler: "1848 grondwet = koning Willem II + Thorbecke. A.", nogSimpeler: "Willem II" },
+          niveaus: { basis: "Willem II — A.", simpeler: "1848 grondwet = koning Willem II + Thorbecke.", nogSimpeler: "Willem II" },
         },
       },
       {
@@ -53,7 +53,7 @@ const steps = [
           woorden: [{ woord: "absoluut", uitleg: "Volledig, onbeperkt." }, { woord: "monarch", uitleg: "Koning of koningin als staatshoofd." }],
           theorie: "Tegenovergesteld = constitutionele monarchie (koning gebonden aan grondwet — NL na 1848).",
           voorbeelden: [{ type: "vergelijk", tekst: "Absoluut: koning bepaalt zelf belastingen. Constitutioneel: parlement bepaalt belastingen, koning tekent." }],
-          niveaus: { basis: "Koning heeft alle macht — A.", simpeler: "Absoluut = onbeperkt. Koning bepaalt alles. A.", nogSimpeler: "Onbeperkt" },
+          niveaus: { basis: "Koning heeft alle macht — A.", simpeler: "Absoluut = onbeperkt. Koning bepaalt alles.", nogSimpeler: "Onbeperkt" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1848 = revolutie-jaar Europa", tekst: "In 1848 vielen tegelijk koningen/regeringen in Frankrijk (Lodewijk Filips), Oostenrijk (Metternich), Italië, Duitsland. Massa-opstanden. Willem II vreesde hetzelfde in NL → wilde voorkomen door zelf hervorming." }],
           theorie: "1848 staat in elk Europees geschiedenisboek als kantelpunt: einde absolute monarchieën, opkomst grondwetten.",
-          niveaus: { basis: "1848 — A.", simpeler: "Europese revoluties 1848 = directe aanleiding. A.", nogSimpeler: "1848" },
+          niveaus: { basis: "1848 — A.", simpeler: "Europese revoluties 1848 = directe aanleiding.", nogSimpeler: "1848" },
         },
       },
       {
@@ -88,7 +88,7 @@ const steps = [
           stappen: [{ titel: "Thorbecke = grondlegger", tekst: "Johan Rudolph Thorbecke (1798-1872), liberaal hoogleraar in Leiden. In nacht-spoed van Willem II schreef hij in 1848 de nieuwe grondwet. Wordt gezien als **vader van de moderne Nederlandse democratie**." }],
           woorden: [{ woord: "liberaal", uitleg: "Politieke stroming: nadruk op individuele vrijheid + beperkte staatsmacht." }],
           theorie: "Standbeelden van Thorbecke staan in Amsterdam (Thorbeckeplein) + Den Haag.",
-          niveaus: { basis: "Thorbecke — A.", simpeler: "Thorbecke = liberaal, schreef grondwet 1848. A.", nogSimpeler: "Thorbecke" },
+          niveaus: { basis: "Thorbecke — A.", simpeler: "Thorbecke = liberaal, schreef grondwet 1848.", nogSimpeler: "Thorbecke" },
         },
       },
     ],
@@ -135,7 +135,7 @@ const steps = [
           stappen: [{ titel: "Direct ≠ indirect", tekst: "Direct kiesrecht: burger → kandidaat (vandaag: lijst-partij). Indirect: burger → tussenpersoon → kandidaat. 1848 = direct voor Tweede Kamer. Eerste Kamer = nog indirect (door provinciale staten gekozen)." }],
           woorden: [{ woord: "direct kiesrecht", uitleg: "Burger kiest zelf z'n vertegenwoordiger." }],
           theorie: "1848 introduceerde direct stemrecht voor Tweede Kamer; Eerste Kamer bleef en blijft indirect (provinciale staten kiezen).",
-          niveaus: { basis: "Burgers stemmen direct — A.", simpeler: "Direct = jij stemt op kandidaat. A.", nogSimpeler: "Direct" },
+          niveaus: { basis: "Burgers stemmen direct — A.", simpeler: "Direct = jij stemt op kandidaat.", nogSimpeler: "Direct" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
           stappen: [{ titel: "Vertrouwens-regel sinds 1848", tekst: "Ministers hebben vertrouwen van Tweede Kamer nodig om aan te blijven. Bij **motie van wantrouwen** (= meerderheid Kamer zegt 'wij vertrouwen u niet') → minister treedt af. Soms hele kabinet → nieuwe verkiezingen." }],
           woorden: [{ woord: "motie van wantrouwen", uitleg: "Verklaring van Tweede Kamer dat minister niet meer mag aanblijven." }],
           theorie: "Voorbeeld 2022: Rutte IV-kabinet viel niet over wantrouwen maar over asielbeleid. Bij motie wantrouwen → meestal direct vertrek.",
-          niveaus: { basis: "Minister af — A.", simpeler: "Wantrouwen → minister moet stoppen. A.", nogSimpeler: "Aftreden" },
+          niveaus: { basis: "Minister af — A.", simpeler: "Wantrouwen → minister moet stoppen.", nogSimpeler: "Aftreden" },
         },
       },
       {
@@ -159,7 +159,7 @@ const steps = [
           stappen: [{ titel: "Grondwet = fundament", tekst: "**Grondwet** (constitutie) = hoogste wet. Alle andere wetten moeten daarmee in lijn zijn. Bevat staatsinrichting + grondrechten." }],
           woorden: [{ woord: "constitutie", uitleg: "Synoniem voor grondwet." }],
           theorie: "NL-grondwet is uit 1814/1815 (oudste basis) maar werd zwaar herzien in 1848 (Thorbecke) en 1983 (laatste grote herziening met o.a. discriminatie-verbod).",
-          niveaus: { basis: "Grondwet — A.", simpeler: "Hoogste wet = grondwet. A.", nogSimpeler: "Grondwet" },
+          niveaus: { basis: "Grondwet — A.", simpeler: "Hoogste wet = grondwet.", nogSimpeler: "Grondwet" },
         },
       },
     ],

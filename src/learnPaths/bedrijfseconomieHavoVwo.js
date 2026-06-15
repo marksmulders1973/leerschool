@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is activa.", "Niet — wel termen maar niet beide pasiva.", "Niet — W&V."],
         uitlegPad: {
           stappen: [{ titel: "Rechts op balans", tekst: "**Passiva** (credit-zijde balans) = **hoe** bedrijf gefinancierd is: Eigen Vermogen + Vreemd Vermogen. Tegenover **activa** (debet) = **wat** bedrijf bezit: gebouwen, voorraad, debiteuren, etc. Balans altijd in evenwicht: A = P." }],
-          niveaus: { basis: "EV + VV. A.", simpeler: "Passiva = EV+VV", nogSimpeler: "A." },
+          niveaus: { basis: "EV + VV.", simpeler: "Passiva = EV+VV", nogSimpeler: "A." },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is debt-equity-ratio.", "Niet — winstmarge.", "Niet — winstmarge."],
         uitlegPad: {
           stappen: [{ titel: "Eigen vermogen-aandeel", tekst: "**Solvabiliteit** = **EV / Totaal vermogen × 100%**. Toont in welke mate bedrijf zijn schulden kan betalen bij faillissement. Vuistregel ≥25-30%. Banken eisen vaak 40%+ voor lening." }],
-          niveaus: { basis: "EV/TV ×100. A.", simpeler: "Solv = EV/TV", nogSimpeler: "A." },
+          niveaus: { basis: "EV/TV ×100.", simpeler: "Solv = EV/TV", nogSimpeler: "A." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is nettowinst.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Verschil verkoop-inkoop", tekst: "**Brutowinst** = omzet − inkoopwaarde van verkochte producten. Bv: kocht voor €300k, verkocht voor €500k → brutowinst €200k. Daarvan moeten nog lonen, huur, afschrijvingen, rente, belasting af → nettowinst." }],
-          niveaus: { basis: "Omzet − inkoop. A.", simpeler: "Bruto = O − I", nogSimpeler: "A." },
+          niveaus: { basis: "Omzet − inkoop.", simpeler: "Bruto = O − I", nogSimpeler: "A." },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Spread van kosten", tekst: "**Afschrijving** = jaarlijkse waardevermindering vaste activa (gebouw, machine, auto). Lineair: (aanschaf − restwaarde) / levensduur. Bv. machine €50k, restwaarde €5k, levensduur 10 jaar → €4500/jaar afschrijving. Spread van kosten over gebruiksperiode." }],
-          niveaus: { basis: "Waardeverlies activa. A.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "A." },
+          niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Bedrijf zou direct failliet.", "Te hoog — kapitaalverspilling.", "Absurd."],
         uitlegPad: {
           stappen: [{ titel: "Liquiditeit-grens", tekst: "**Current ratio** = vlottende activa / kort VV. Indicator liquiditeit (direct betaalvermogen). **Minimaal 1** = even veel vlottend bezit als kort schuld. **1,5+** = comfortabel. Te laag = mogelijk niet kunnen betalen op tijd. Te hoog = misschien te veel kapitaal vast (geld werkt niet)." }],
-          niveaus: { basis: "~1. A.", simpeler: "Min current ratio = 1", nogSimpeler: "1" },
+          niveaus: { basis: "~1.", simpeler: "Min current ratio = 1", nogSimpeler: "1" },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zijn variabele.", "Niet noodzakelijk — huur loopt door.", "Niet primair definitie."],
         uitlegPad: {
           stappen: [{ titel: "Vast = vast", tekst: "**Constante (vaste) kosten** blijven gelijk ongeacht hoeveel je produceert: huur, vaste lonen, verzekeringen, afschrijving. **Variabele kosten** stijgen met productie: grondstof, energie. Per stuk dalen constante als je meer maakt." }],
-          niveaus: { basis: "Onafhankelijk productie. A.", simpeler: "Constant = vast", nogSimpeler: "Vast" },
+          niveaus: { basis: "Onafhankelijk productie.", simpeler: "Constant = vast", nogSimpeler: "Vast" },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet — algemene rentabiliteit.", "Niet — omzet.", "Niet — REV."],
         uitlegPad: {
           stappen: [{ titel: "Constant ÷ dekkingsbijdrage", tekst: "**BEP** = **Constante kosten / (Prijs per stuk − Variabele kosten per stuk)**. Noemer = **dekkingsbijdrage per stuk** (DB). Hoeveel stuks moet je verkopen tot DB samen = constante kosten. Pas daarboven winst." }],
-          niveaus: { basis: "K/(P−V). A.", simpeler: "BEP = constant/DB", nogSimpeler: "A." },
+          niveaus: { basis: "K/(P−V).", simpeler: "BEP = constant/DB", nogSimpeler: "A." },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer formule.", "Te laag.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Bereken", tekst: "BEP = 10.000 / (25 − 5) = 10.000/20 = **500 stuks**. Bij 500 stuks: omzet = 500×25 = 12.500. Kosten = 10.000 + 500×5 = 12.500. ✓ Break-even." }],
-          niveaus: { basis: "500. A.", simpeler: "10k/20 = 500", nogSimpeler: "500" },
+          niveaus: { basis: "500.", simpeler: "10k/20 = 500", nogSimpeler: "500" },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Niet — Apple kiest niet voor laag.", "Te eenvoudig — Apple denkt markt-strategisch.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Premium-strategie", tekst: "**Skimming**: hoge start-prijs voor early-adopters bereid te betalen. Later prijsverlaging. Apple-classic: nieuwe iPhone €1200+, oudere modellen blijven beschikbaar lager. Tesla-debut zelfde patroon. **Penetratie**: tegenovergestelde — lage start om markt te winnen (Aldi, Netflix-NL-start)." }],
-          niveaus: { basis: "Skimming. A.", simpeler: "iPhone-nieuw = skimming", nogSimpeler: "A." },
+          niveaus: { basis: "Skimming.", simpeler: "iPhone-nieuw = skimming", nogSimpeler: "A." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Niet — laag tarief.", "Niet — alleen export.", "Niet — absurd."],
         uitlegPad: {
           stappen: [{ titel: "Drie tarieven", tekst: "**NL BTW**:\n• **21% (hoog)**: meeste producten + diensten.\n• **9% (laag)**: voedsel, water, boeken, OV, geneesmiddelen, cultuur, hotel.\n• **0%**: export (geen NL-BTW heffen). Bedrijven betalen wel BTW op inkoop maar krijgen terug.\n\nBTW is **omzet-belasting** — consument draagt, bedrijf draagt af." }],
-          niveaus: { basis: "21%. A.", simpeler: "BTW hoog = 21%", nogSimpeler: "21" },
+          niveaus: { basis: "21%.", simpeler: "BTW hoog = 21%", nogSimpeler: "21" },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Vreemd vermogen.", "Vreemd vermogen.", "Vreemd vermogen."],
         uitlegPad: {
           stappen: [{ titel: "EV-bronnen", tekst: "**Eigen vermogen** (EV) = geld eigenaren (bij oprichting + ingehouden winst + aandelen). Geen rente, geen aflossing. **Vreemd vermogen** (VV) = geleend (bank, obligaties, leveranciers) — heeft rente + aflossings-plicht. EV is duurder (verdunning) maar veiliger." }],
-          niveaus: { basis: "Eigenaars + winst. A.", simpeler: "EV = eigenaars-geld", nogSimpeler: "A." },
+          niveaus: { basis: "Eigenaars + winst.", simpeler: "EV = eigenaars-geld", nogSimpeler: "A." },
         },
       },
       {
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer.", "Veel te lang.", "Veel te kort."],
         uitlegPad: {
           stappen: [{ titel: "TVT-formule", tekst: "**TVT = investering / netto-cashflow** = 60.000 / 20.000 = **3 jaar**. Simpele methode. Beter: NCW (discontering). TVT < levensduur machine = positief signaal." }],
-          niveaus: { basis: "3 jaar. A.", simpeler: "60k/20k=3", nogSimpeler: "3" },
+          niveaus: { basis: "3 jaar.", simpeler: "60k/20k=3", nogSimpeler: "3" },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Niet — aandelen wel vrij.", "Niet — persoonlijk aansprakelijk.", "Niet — persoonlijk."],
         uitlegPad: {
           stappen: [{ titel: "BV = Besloten", tekst: "**BV (Besloten Vennootschap)**: aandelen niet vrij verhandelbaar (alleen bij notaris + akkoord andere aandeelhouders). **Beperkte aansprakelijkheid**: alleen tot inleg aandelen. Meest gebruikte vorm MKB NL. **NV (Naamloze)** = aandelen wel vrij — voor beurshandel." }],
-          niveaus: { basis: "BV. A.", simpeler: "Besloten = BV", nogSimpeler: "BV" },
+          niveaus: { basis: "BV.", simpeler: "Besloten = BV", nogSimpeler: "BV" },
         },
       },
       {
@@ -186,7 +186,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Winst ≠ cash", tekst: "**Winst** is boekhoudkundig (omzet − kosten), maar **cashflow** is werkelijk geld. Als klanten op factuur kopen (op rekening) maar nog niet betaald → winst staat in boek maar geen cash. Bedrijven kunnen failliet ondanks 'winstgevend' zijn. **'Cash is king'** — focus op kasstroom." }],
           theorie: "Klassieker: snel-groeiende bedrijven (groot werkkapitaal nodig) komen vaak in cash-tekort. Daarom externe financiering nodig.",
-          niveaus: { basis: "Klanten niet betaald. A.", simpeler: "Cashflow ≠ winst", nogSimpeler: "A." },
+          niveaus: { basis: "Klanten niet betaald.", simpeler: "Cashflow ≠ winst", nogSimpeler: "A." },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
         wrongHints: [null, "Niet — laag tarief.", "BTW.", "BTW laag."],
         uitlegPad: {
           stappen: [{ titel: "Twee schijven", tekst: "**Vennootschapsbelasting** (vpb) 2024:\n• **19%** over eerste €200.000 winst.\n• **25,8%** boven €200.000.\n\nHerschikkingen recent: kabinet wil naar 25%. Belastingplanning groot bij grote bedrijven — controverse over multinationals (Shell, Apple-NL-route)." }],
-          niveaus: { basis: "25,8%. A.", simpeler: "Vpb hoog = 25,8%", nogSimpeler: "A." },
+          niveaus: { basis: "25,8%.", simpeler: "Vpb hoog = 25,8%", nogSimpeler: "A." },
         },
       },
     ],
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Wel populair (3P's MVO) maar niet originele 4P's."],
         uitlegPad: {
           stappen: [{ titel: "McCarthy 1960", tekst: "**4 P's** (Jerome McCarthy 1960): **Product, Prijs, Plaats, Promotie**. Marketing-mix-basis. Moderne uitbreidingen: People, Process, Physical evidence (vooral diensten)." }],
-          niveaus: { basis: "Prod/Prijs/Plaats/Promotie. A.", simpeler: "4P", nogSimpeler: "A." },
+          niveaus: { basis: "Prod/Prijs/Plaats/Promotie.", simpeler: "4P", nogSimpeler: "A." },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Linksomafronding", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Werkt bewezen — €9,99-prijs verkoopt 20-30% beter dan €10. Ook €99 vs €100, €499 vs €500." }],
-          niveaus: { basis: "9,99 voelt lager. A.", simpeler: "Psy prijs", nogSimpeler: "9,99" },
+          niveaus: { basis: "9,99 voelt lager.", simpeler: "Psy prijs", nogSimpeler: "9,99" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
         wrongHints: [null, "Niet — andere theorie.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Michael Porter 1979", tekst: "**5 Forces** (Porter): analyse-framework concurrentie sector.\n1. Concurrentie binnen sector.\n2. Macht leveranciers.\n3. Macht klanten.\n4. Dreiging nieuwe toetreders.\n5. Substituten.\n\nBedrijven analyseren hun positie via deze 5 invalshoeken." }],
-          niveaus: { basis: "Concurrentie. A.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "A." },
+          niveaus: { basis: "Concurrentie.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "A." },
         },
       },
       {
@@ -246,7 +246,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Toyota-methode", tekst: "**Just-in-time**: voorraad zo minimaal mogelijk; producten + onderdelen worden geleverd **op het moment dat ze nodig zijn**. Spaart opslagkosten + werkkapitaal. **Toyota pionier** vanaf jaren '50. Zwakte: kwetsbaar bij verstoring keten (COVID-19 + chiptekort 2020-22 toonde dit)." }],
           theorie: "Cito-actueel: discussie 'just-in-case' (meer voorraad voor zekerheid) als reactie op kwetsbaarheid JIT.",
-          niveaus: { basis: "Voorraad min. A.", simpeler: "JIT = min voorraad", nogSimpeler: "A." },
+          niveaus: { basis: "Voorraad min.", simpeler: "JIT = min voorraad", nogSimpeler: "A." },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Triple bottom line", tekst: "**MVO** = Maatschappelijk Verantwoord Ondernemen (Engels CSR = Corporate Social Responsibility). Bedrijven hebben verantwoordelijkheid voor **People, Planet, Profit** (triple bottom line). Voorbeelden NL: Tony's Chocolonely (slavernij-vrij chocolade), Triodos Bank, Patagonia. EU verplicht rapportage via CSRD sinds 2024 voor grote bedrijven." }],
-          niveaus: { basis: "MVO. A.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "A." },
+          niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "A." },
         },
       },
     ],
@@ -275,7 +275,7 @@ const steps = [
         wrongHints: [null, "Vast actief.", "Vast actief.", "Eigen vermogen (passiva)."],
         uitlegPad: {
           stappen: [{ titel: "<1 jaar = vlottend", tekst: "**Vlottende activa**: < 1 jaar gebruikt. Voorraad, debiteuren, kas, bank. **Vaste activa**: > 1 jaar. Gebouwen, machines, voertuigen. Onderscheid belangrijk voor balans-analyse + liquiditeit." }],
-          niveaus: { basis: "Voorraad. A.", simpeler: "Voorraad = vlottend", nogSimpeler: "A." },
+          niveaus: { basis: "Voorraad.", simpeler: "Voorraad = vlottend", nogSimpeler: "A." },
         },
       },
       {
@@ -285,7 +285,7 @@ const steps = [
         wrongHints: [null, "Geen marge-formule.", "Niet — REV.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Bruto-rendement op omzet", tekst: "**Brutomarge** = (Omzet − Inkoopwaarde) / Omzet × 100%. Toont % van elke euro omzet dat als brutowinst overblijft. Sectoren verschillen: tech 60-80%, detailhandel 30-50%, auto's 10-15%." }],
-          niveaus: { basis: "(O−I)/O ×100. A.", simpeler: "Bruto = (O−I)/O", nogSimpeler: "A." },
+          niveaus: { basis: "(O−I)/O ×100.", simpeler: "Bruto = (O−I)/O", nogSimpeler: "A." },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet — andere ratio."],
         uitlegPad: {
           stappen: [{ titel: "EV-aandeel", tekst: "**Solvabiliteit 60%** = EV / Totaal vermogen = 60%. Dus 60% gefinancierd met eigen geld, 40% met schuld. Sterk solvabel, banken zullen graag lenen. Vuistregel: ≥25-30% redelijk." }],
-          niveaus: { basis: "60% EV. A.", simpeler: "Solv 60% = 60% EV", nogSimpeler: "A." },
+          niveaus: { basis: "60% EV.", simpeler: "Solv 60% = 60% EV", nogSimpeler: "A." },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
         wrongHints: [null, "Niet — vreemd = lenen.", "Niet hier.", "Wel financiering, intern."],
         uitlegPad: {
           stappen: [{ titel: "Self-funded", tekst: "**Ingehouden winst** = niet uitgekeerd aan eigenaren, geherinvesteerd in bedrijf. Vorm van **intern EV**. Voordeel: geen rente, geen verdunning. Nadeel: groei beperkt door winst. Veel familiebedrijven groeien zo. Externe financiering nodig voor snellere groei." }],
-          niveaus: { basis: "Intern. A.", simpeler: "Ingehouden winst = intern", nogSimpeler: "A." },
+          niveaus: { basis: "Intern.", simpeler: "Ingehouden winst = intern", nogSimpeler: "A." },
         },
       },
       {
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "Wel prijs.", "Wel prijs.", "Wel prijs."],
         uitlegPad: {
           stappen: [{ titel: "Promotie ≠ prijs", tekst: "**Reclame** zit in 4e P (Promotie), niet 2e (Prijs). Stimuleert vraag zonder per se prijs aan te passen. Andere genoemde opties zijn allemaal prijs-strategieën." }],
-          niveaus: { basis: "Reclame = promotie. A.", simpeler: "Reclame ≠ prijs", nogSimpeler: "A." },
+          niveaus: { basis: "Reclame = promotie.", simpeler: "Reclame ≠ prijs", nogSimpeler: "A." },
         },
       },
     ],

@@ -57,7 +57,7 @@ const steps = [
           theorie: "NL exporteert ~€700 mrd/jaar — kaas, machines, chemie, hightech. Importeert ~€650 mrd — olie, koffie, smartphones.",
           voorbeelden: [{ type: "lijst", tekst: "Heineken-bier naar 200 landen = export. Saudi-olie naar NL = import." }],
           basiskennis: [{ onderwerp: "Ezelsbruggetje", uitleg: "Ex- = uit (zoals 'exit'). Im- = in (zoals 'import' = naar binnen)." }],
-          niveaus: { basis: "NL verkoopt aan buitenland. A.", simpeler: "Export = NL verkoopt aan ander land. Import = NL koopt uit ander land.", nogSimpeler: "Verkopen" },
+          niveaus: { basis: "NL verkoopt aan buitenland.", simpeler: "Export = NL verkoopt aan ander land. Import = NL koopt uit ander land.", nogSimpeler: "Verkopen" },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
           theorie: "Land A maakt 100 brood OF 50 wijn. Land B maakt 80 brood OF 60 wijn. A heeft VOORDEEL in brood, B in wijn. Allebei specialiseren + ruilen = meer totaal.",
           voorbeelden: [{ type: "praktijk", tekst: "NL maakt zuivel + chips. Saudi-Arabië pompt olie. Allebei goed in eigen specialiteit → ruilen." }],
           basiskennis: [{ onderwerp: "Niet absoluut", uitleg: "Goedkoopste = absoluut voordeel. Comparatief = waar je RELATIEF beste bent." }],
-          niveaus: { basis: "Relatief sterk + ruilen. A.", simpeler: "Land A is goed in kaas, land B in wijn. Ruilen = beide rijker. Dat is comparatief voordeel.", nogSimpeler: "Specialiseren" },
+          niveaus: { basis: "Relatief sterk + ruilen.", simpeler: "Land A is goed in kaas, land B in wijn. Ruilen = beide rijker. Dat is comparatief voordeel.", nogSimpeler: "Specialiseren" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
           theorie: "NL heeft meestal handelsoverschot (~€50 mrd/jaar). VS heeft tekort.",
           voorbeelden: [{ type: "rekening", tekst: "Als jij meer verdient dan uitgeeft = overschot in jouw geld-balans." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Tekort = import > export." }],
-          niveaus: { basis: "Export > import. A.", simpeler: "Overschot = OVER (te veel). Land verkoopt meer aan buitenland dan het koopt = export groter dan import.", nogSimpeler: "Verkopen > kopen" },
+          niveaus: { basis: "Export > import.", simpeler: "Overschot = OVER (te veel). Land verkoopt meer aan buitenland dan het koopt = export groter dan import.", nogSimpeler: "Verkopen > kopen" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Geografie + infrastructuur maken NL aantrekkelijk als doorvoerland. ~50% van export = re-export (binnen-uit doorgevoerd).",
           voorbeelden: [{ type: "feit", tekst: "Rotterdam ~470 mln ton goederen/jaar. Bloemen Aalsmeer = wereldhandel." }],
           basiskennis: [{ onderwerp: "Niet eigen productie", uitleg: "NL is geen 'productie-gigant' maar wel 'handels-hub'." }],
-          niveaus: { basis: "Havens + ligging. A.", simpeler: "NL heeft Rotterdam (grootste haven EU) + Schiphol + ligt midden in Europa = ideaal voor handel.", nogSimpeler: "Havens" },
+          niveaus: { basis: "Havens + ligging.", simpeler: "NL heeft Rotterdam (grootste haven EU) + Schiphol + ligt midden in Europa = ideaal voor handel.", nogSimpeler: "Havens" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
           theorie: "~50% van NL-export is re-export (Chinese spullen via Rotterdam → Duitsland). NL = logistiek knooppunt.",
           voorbeelden: [{ type: "praktijk", tekst: "Chinese kleding aankomt Rotterdam → vrachtwagen naar Berlijn. Re-export." }],
           basiskennis: [{ onderwerp: "Niet 2× verkopen", uitleg: "Re- = opnieuw (heen). Niet hetzelfde 2× verkopen, wel doorvoeren." }],
-          niveaus: { basis: "Doorvoer NL → ander land. A.", simpeler: "Goederen komen NL binnen (uit China) + gaan door naar Duitsland = re-export (doorvoer).", nogSimpeler: "Doorvoer" },
+          niveaus: { basis: "Doorvoer NL → ander land.", simpeler: "Goederen komen NL binnen (uit China) + gaan door naar Duitsland = re-export (doorvoer).", nogSimpeler: "Doorvoer" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           theorie: "Wereldwijde productie = goedkoper, maar kwetsbaar voor verstoring (oorlog, pandemie, sancties).",
           voorbeelden: [{ type: "feit", tekst: "Corona 2020: tekort mondkapjes (uit China). Oorlog Oekraïne: tekort gas (Rusland)." }],
           basiskennis: [{ onderwerp: "Reshoring", uitleg: "Antwoord: kritieke productie terughalen naar EU = minder afhankelijk." }],
-          niveaus: { basis: "Tekorten bij verstoring. A.", simpeler: "Afhankelijk van buitenland = bij oorlog/pandemie geen toegang tot essentiële goederen (medicijnen, chips).", nogSimpeler: "Tekort" },
+          niveaus: { basis: "Tekorten bij verstoring.", simpeler: "Afhankelijk van buitenland = bij oorlog/pandemie geen toegang tot essentiële goederen (medicijnen, chips).", nogSimpeler: "Tekort" },
         },
       },
     ],
@@ -165,7 +165,7 @@ const steps = [
           theorie: "Doel: eigen producenten beschermen tegen goedkope import. Bv. EU-heffing op Chinese EVs (45%, 2024).",
           voorbeelden: [{ type: "praktijk", tekst: "Chinese fiets €100 → na 30% heffing = €130 → EU-fiets van €120 lijkt aantrekkelijker." }],
           basiskennis: [{ onderwerp: "Niet BTW", uitleg: "BTW = op alle producten (binnen+buiten). Invoerheffing = alleen import." }],
-          niveaus: { basis: "Belasting op import. A.", simpeler: "Invoerheffing = belasting aan de grens, alleen op spullen uit het buitenland.", nogSimpeler: "Grens-belasting" },
+          niveaus: { basis: "Belasting op import.", simpeler: "Invoerheffing = belasting aan de grens, alleen op spullen uit het buitenland.", nogSimpeler: "Grens-belasting" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
           theorie: "Quotum vs heffing: quotum = aantal, heffing = geld. Beide beschermen eigen markt.",
           voorbeelden: [{ type: "praktijk", tekst: "EU laat max 10.000 ton Chinese kleding per jaar binnen. Boven dat = belast extra." }],
           basiskennis: [{ onderwerp: "Strikt", uitleg: "Quotum is harde grens, geen onderhandeling." }],
-          niveaus: { basis: "Maximum aantal. A.", simpeler: "Quotum = max aantal dat je mag importeren. Bv. max 10.000 stuks. Boven dat: niet binnen.", nogSimpeler: "Max" },
+          niveaus: { basis: "Maximum aantal.", simpeler: "Quotum = max aantal dat je mag importeren. Bv. max 10.000 stuks. Boven dat: niet binnen.", nogSimpeler: "Max" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
           theorie: "EU geeft veel subsidies aan boeren (GLB) en innovatieve sectoren (chips).",
           voorbeelden: [{ type: "feit", tekst: "ASML krijgt EU-subsidies voor R&D → kan goedkoper innoveren → wereldleider." }],
           basiskennis: [{ onderwerp: "Niet altijd toegestaan", uitleg: "WTO heeft regels — bepaalde subsidies mogen, andere niet (concurrentievervalsing)." }],
-          niveaus: { basis: "Goedkoper produceren. A.", simpeler: "Subsidie = geld erbij van overheid → eigen bedrijf produceert goedkoper → kan beter concurreren.", nogSimpeler: "Goedkoper" },
+          niveaus: { basis: "Goedkoper produceren.", simpeler: "Subsidie = geld erbij van overheid → eigen bedrijf produceert goedkoper → kan beter concurreren.", nogSimpeler: "Goedkoper" },
         },
       },
       {
@@ -207,7 +207,7 @@ const steps = [
           theorie: "WTO maakt handelsverdragen + regelt klachten (bv. EU klaagt China aan voor dumping).",
           voorbeelden: [{ type: "feit", tekst: "WTO 1995 opgericht (opvolger GATT). Bepaalt wat wel/niet mag bij invoerheffingen." }],
           basiskennis: [{ onderwerp: "Niet hetzelfde als VN", uitleg: "VN = vredesorganisatie. WTO = handelsspecifiek." }],
-          niveaus: { basis: "WTO. A.", simpeler: "World Trade Organization (WTO) regelt globale handel. EU is regionaal, ECB is over euro.", nogSimpeler: "WTO" },
+          niveaus: { basis: "WTO.", simpeler: "World Trade Organization (WTO) regelt globale handel. EU is regionaal, ECB is over euro.", nogSimpeler: "WTO" },
         },
       },
       {
@@ -221,7 +221,7 @@ const steps = [
           theorie: "Trend na corona/oorlog: bedrijven willen minder afhankelijk van verre productie. Chips, medicijnen terug naar EU/VS.",
           voorbeelden: [{ type: "feit", tekst: "Intel bouwt chipfabriek in Duitsland (€30 mrd). EU CHIPS Act stimuleert reshoring." }],
           basiskennis: [{ onderwerp: "Tegenovergestelde", uitleg: "Offshoring = naar buitenland. Reshoring = terug." }],
-          niveaus: { basis: "Productie terug naar eigen continent. A.", simpeler: "Reshoring = productie weer in eigen land/EU doen, ipv China. Vooral kritieke sectoren (chips, medicijnen).", nogSimpeler: "Terug" },
+          niveaus: { basis: "Productie terug naar eigen continent.", simpeler: "Reshoring = productie weer in eigen land/EU doen, ipv China. Vooral kritieke sectoren (chips, medicijnen).", nogSimpeler: "Terug" },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
           theorie: "Bescherming = minder import = minder concurrentie = duurdere prijzen voor consument. Maar wel meer banen in eigen land.",
           voorbeelden: [{ type: "feit", tekst: "EU heffing Chinese auto's = goed voor EU-fabriek, slecht voor EU-koper (duurdere auto)." }],
           basiskennis: [{ onderwerp: "Geen 'gratis' beleid", uitleg: "Alle handelsbeleid heeft winnaars + verliezers." }],
-          niveaus: { basis: "Voor + nadeel. A.", simpeler: "Protectionisme: voordeel = banen beschermd; nadeel = duurder voor consument. Beide kanten.", nogSimpeler: "Trade-off" },
+          niveaus: { basis: "Voor + nadeel.", simpeler: "Protectionisme: voordeel = banen beschermd; nadeel = duurder voor consument. Beide kanten.", nogSimpeler: "Trade-off" },
         },
       },
     ],
@@ -267,7 +267,7 @@ const steps = [
           theorie: "Geschiedenis: 1957 EEG (6 landen) → 2007 EU 27 → 2013 28 (Kroatië) → 2020 27 (Brexit).",
           voorbeelden: [{ type: "groei", tekst: "Begon klein (NL/BE/LUX/DE/FR/IT) → uitgebreid naar Oost-Europa 2004." }],
           basiskennis: [{ onderwerp: "Niet hetzelfde als eurozone", uitleg: "Eurozone = 20 landen die EURO gebruiken (subset EU)." }],
-          niveaus: { basis: "27. A.", simpeler: "EU heeft 27 lidstaten (sinds Brexit 2020). Eurozone is 20.", nogSimpeler: "27" },
+          niveaus: { basis: "27.", simpeler: "EU heeft 27 lidstaten (sinds Brexit 2020). Eurozone is 20.", nogSimpeler: "27" },
         },
       },
       {
@@ -281,7 +281,7 @@ const steps = [
           theorie: "EU-landen ZONDER euro: Polen, Tsjechië, Hongarije, Zweden, Denemarken, Roemenië, Bulgarije.",
           voorbeelden: [{ type: "lijst", tekst: "Wel euro: NL, FR, DE, ES, IT, PT, IE, BE, AT, FI..." }],
           basiskennis: [{ onderwerp: "Vrijwillig", uitleg: "EU-lidmaatschap ≠ euro verplicht. Sommige landen kiezen ervoor weg te blijven." }],
-          niveaus: { basis: "Polen. A.", simpeler: "Polen heeft eigen valuta (złoty), geen euro. FR/ES/DE wel.", nogSimpeler: "Polen" },
+          niveaus: { basis: "Polen.", simpeler: "Polen heeft eigen valuta (złoty), geen euro. FR/ES/DE wel.", nogSimpeler: "Polen" },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
           theorie: "Goederen=geen grenscontrole. Personen=werken/wonen waar je wilt. Diensten=bedrijf openen overal. Kapitaal=geld vrij verplaatsen.",
           voorbeelden: [{ type: "praktijk", tekst: "Pool werkt in NL bouw (personen). NL-kaas naar FR zonder heffing (goederen)." }],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "G-P-D-K. 4 letters voor 4 vrijheden." }],
-          niveaus: { basis: "G+P+D+K. A.", simpeler: "EU 4 vrijheden = vrij verkeer van Goederen, Personen, Diensten, Kapitaal binnen alle EU-landen.", nogSimpeler: "GPDK" },
+          niveaus: { basis: "G+P+D+K.", simpeler: "EU 4 vrijheden = vrij verkeer van Goederen, Personen, Diensten, Kapitaal binnen alle EU-landen.", nogSimpeler: "GPDK" },
         },
       },
       {
@@ -309,7 +309,7 @@ const steps = [
           theorie: "EU-instellingen: Commissie (regering), Parlement (wetgever, 705 leden gekozen), Raad (ministers lidstaten), Hof van Justitie (rechter), ECB (bank).",
           voorbeelden: [{ type: "feit", tekst: "Commissie stelt voor: 'verbod op ICE-auto's vanaf 2035'. Parlement + Raad keuren goed." }],
           basiskennis: [{ onderwerp: "Niet gekozen", uitleg: "Commissarissen worden voorgedragen door regeringen, niet direct gekozen." }],
-          niveaus: { basis: "Regering. A.", simpeler: "Europese Commissie = 'regering' van EU — maakt voorstellen + voert beleid uit. Parlement = wetgever.", nogSimpeler: "Regering" },
+          niveaus: { basis: "Regering.", simpeler: "Europese Commissie = 'regering' van EU — maakt voorstellen + voert beleid uit. Parlement = wetgever.", nogSimpeler: "Regering" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
           theorie: "Reden: UK wilde controle over wetten + grenzen. Resultaat: minder handel met EU, problemen Noord-Ierland.",
           voorbeelden: [{ type: "feit", tekst: "UK is enige land ooit dat EU verlaten heeft. EU-reactie: zware regels om vertrek af te raden." }],
           basiskennis: [{ onderwerp: "Lessen", uitleg: "Brexit liet zien dat EU-vertrek complex en duur is — afschrikwekkend voor andere landen." }],
-          niveaus: { basis: "UK weg. A.", simpeler: "Brexit (Britain + Exit) = UK verliet EU in 2020 na referendum 2016.", nogSimpeler: "Vertrek UK" },
+          niveaus: { basis: "UK weg.", simpeler: "Brexit (Britain + Exit) = UK verliet EU in 2020 na referendum 2016.", nogSimpeler: "Vertrek UK" },
         },
       },
       {
@@ -337,7 +337,7 @@ const steps = [
           theorie: "Vóór euro (1999): toerist NL→IT moest guldens → lires wisselen, kostte 5-10%. Nu: zelfde euro overal in eurozone.",
           voorbeelden: [{ type: "praktijk", tekst: "Vakantie Spanje: euro in portemonnee werkt direct, geen extra kosten." }],
           basiskennis: [{ onderwerp: "Buiten eurozone", uitleg: "Buiten eurozone (UK, Polen, US, Thailand) wel wisselen nodig." }],
-          niveaus: { basis: "Geen wisselkosten. A.", simpeler: "Met euro hoef je in 20 EU-landen niet te wisselen — bespaart kosten + koersrisico.", nogSimpeler: "Geen wissel" },
+          niveaus: { basis: "Geen wisselkosten.", simpeler: "Met euro hoef je in 20 EU-landen niet te wisselen — bespaart kosten + koersrisico.", nogSimpeler: "Geen wissel" },
         },
       },
     ],
@@ -371,7 +371,7 @@ const steps = [
           theorie: "Van vreemde valuta naar euro: deel door koers. $220 / 1,10 = €200.",
           voorbeelden: [{ type: "stap", tekst: "$220 / $1,10 = €200. Check: €200 × 1,10 = $220 ✓." }],
           basiskennis: [{ onderwerp: "Niet vermenigvuldigen", uitleg: "$220 × 1,10 = $242 (fout). We willen euro, niet meer dollar." }],
-          niveaus: { basis: "€200. A.", simpeler: "$220 ÷ 1,10 (euro-koers) = €200 nodig.", nogSimpeler: "€200" },
+          niveaus: { basis: "€200.", simpeler: "$220 ÷ 1,10 (euro-koers) = €200 nodig.", nogSimpeler: "€200" },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
           theorie: "NL-exporteur: prijs in euro blijft, maar Amerikaan betaalt meer dollar = duurder voor hem = minder verkoop.",
           voorbeelden: [{ type: "stap", tekst: "Kaas €100. Bij €1=$1,10 → US-koper betaalt $110. Bij €1=$1,30 → US-koper betaalt $130 (duurder)." }],
           basiskennis: [{ onderwerp: "Andersom voor import", uitleg: "Sterke euro = goedkoop importeren (Amerikaanse iPhone wordt minder euro)." }],
-          niveaus: { basis: "Duurder voor US-koper. A.", simpeler: "Sterke euro: Amerikaan moet meer dollars geven voor NL-product → duurder → minder verkoop.", nogSimpeler: "Duurder" },
+          niveaus: { basis: "Duurder voor US-koper.", simpeler: "Sterke euro: Amerikaan moet meer dollars geven voor NL-product → duurder → minder verkoop.", nogSimpeler: "Duurder" },
         },
       },
       {
@@ -399,7 +399,7 @@ const steps = [
           theorie: "Hogere rente = meer kapitaal stroomt naar dat land = valuta sterker. Hoge inflatie = valuta zwakker.",
           voorbeelden: [{ type: "feit", tekst: "ECB verhoogt rente → euro sterker. Brexit → pond zwakker (politieke onzekerheid)." }],
           basiskennis: [{ onderwerp: "Veel factoren", uitleg: "Geen enkelvoudige oorzaak — combinatie." }],
-          niveaus: { basis: "4 factoren. A.", simpeler: "Wisselkoers verandert door vraag/aanbod, rente, politiek (oorlog/verkiezingen), inflatie.", nogSimpeler: "Meerdere" },
+          niveaus: { basis: "4 factoren.", simpeler: "Wisselkoers verandert door vraag/aanbod, rente, politiek (oorlog/verkiezingen), inflatie.", nogSimpeler: "Meerdere" },
         },
       },
       {
@@ -413,7 +413,7 @@ const steps = [
           theorie: "Klassieke safe havens: USD (dollar), CHF (Zwitserse frank), goud, JPY. Stabiele economieën + politiek.",
           voorbeelden: [{ type: "feit", tekst: "Oorlog Oekraïne 2022: dollar + CHF werden sterker, terwijl rubel kelderde." }],
           basiskennis: [{ onderwerp: "Niet crypto", uitleg: "Crypto is volatiel = tegenovergestelde van safe haven." }],
-          niveaus: { basis: "Vluchthaven valuta. A.", simpeler: "Safe haven = valuta waar beleggers naar vluchten bij crisis (CHF, USD). Stabiele landen.", nogSimpeler: "Veilig" },
+          niveaus: { basis: "Vluchthaven valuta.", simpeler: "Safe haven = valuta waar beleggers naar vluchten bij crisis (CHF, USD). Stabiele landen.", nogSimpeler: "Veilig" },
         },
       },
       {
@@ -427,7 +427,7 @@ const steps = [
           theorie: "Beter: pinnen ter plaatse met gewone bankpas (kleinste marges) of vooraf bij eigen bank.",
           voorbeelden: [{ type: "feit", tekst: "Schiphol-wisselkantoor: 5-8% slechter dan markt-koers." }],
           basiskennis: [{ onderwerp: "Tip", uitleg: "Pin op je vakantie alleen voor cash dat je echt nodig hebt." }],
-          niveaus: { basis: "Luchthaven. A.", simpeler: "Wisselkantoor luchthaven = slechtste koers + hoge commissie. Pinnen ter plaatse beter.", nogSimpeler: "Vliegveld" },
+          niveaus: { basis: "Luchthaven.", simpeler: "Wisselkantoor luchthaven = slechtste koers + hoge commissie. Pinnen ter plaatse beter.", nogSimpeler: "Vliegveld" },
         },
       },
       {
@@ -441,7 +441,7 @@ const steps = [
           theorie: "3 systemen: vrij zwevend (USD, EUR), gereguleerd (CNY deels), vast (HKD aan USD).",
           voorbeelden: [{ type: "lijst", tekst: "USD/EUR/JPY zweven vrij. China stuurt yuan deels. Hong Kong dollar = vast aan USD." }],
           basiskennis: [{ onderwerp: "Voor- en nadeel", uitleg: "Vrij = flexibel maar onvoorspelbaar. Vast = stabiel maar moeilijk te handhaven." }],
-          niveaus: { basis: "Markt bepaalt. A.", simpeler: "Vrije zwevende koers = vraag + aanbod op valutamarkt bepaalt prijs. Overheid blijft erbuiten.", nogSimpeler: "Markt" },
+          niveaus: { basis: "Markt bepaalt.", simpeler: "Vrije zwevende koers = vraag + aanbod op valutamarkt bepaalt prijs. Overheid blijft erbuiten.", nogSimpeler: "Markt" },
         },
       },
     ],
@@ -476,7 +476,7 @@ const steps = [
           theorie: "Drijvers: goedkoop transport (containers), internet, vrijhandel, Engelse wereldtaal.",
           voorbeelden: [{ type: "feit", tekst: "Smartphone in NL: chips Taiwan, batterij Korea, assemblage China, design California." }],
           basiskennis: [{ onderwerp: "Niet 1 regering", uitleg: "Globalisering is economisch/cultureel proces, geen politieke unie." }],
-          niveaus: { basis: "Wereld verbonden. A.", simpeler: "Globalisering = wereld wordt steeds meer verbonden via handel + internet + reizen.", nogSimpeler: "Verbonden" },
+          niveaus: { basis: "Wereld verbonden.", simpeler: "Globalisering = wereld wordt steeds meer verbonden via handel + internet + reizen.", nogSimpeler: "Verbonden" },
         },
       },
       {
@@ -490,7 +490,7 @@ const steps = [
           theorie: "NL is groot in multinationals voor zo'n klein land. Top: Shell, ASML, Heineken, Unilever, ING, Philips.",
           voorbeelden: [{ type: "feit", tekst: "ASML in Veldhoven, klanten: TSMC (Taiwan), Samsung (Korea), Intel (US)." }],
           basiskennis: [{ onderwerp: "AH = binnenlands", uitleg: "Albert Heijn is groot in NL/BE, geen wereldwijde multinational." }],
-          niveaus: { basis: "Shell/ASML/Heineken. A.", simpeler: "NL multinationals = Shell, ASML, Heineken, Unilever — werken wereldwijd. AH alleen NL/BE.", nogSimpeler: "Shell etc" },
+          niveaus: { basis: "Shell/ASML/Heineken.", simpeler: "NL multinationals = Shell, ASML, Heineken, Unilever — werken wereldwijd. AH alleen NL/BE.", nogSimpeler: "Shell etc" },
         },
       },
       {
@@ -504,7 +504,7 @@ const steps = [
           theorie: "Globalisering heeft winnaars + verliezers. Verliezers: arbeiders in sectoren die niet kunnen concurreren met lage-loon-landen.",
           voorbeelden: [{ type: "feit", tekst: "NL textielfabrieken sloten 1980-2000. Banen naar Bangladesh." }],
           basiskennis: [{ onderwerp: "Politieke gevolgen", uitleg: "Verliezers stemmen anti-globalisering (Trump, Brexit, populisten)." }],
-          niveaus: { basis: "Westerse arbeiders. A.", simpeler: "Westerse fabriekarbeider = verliezer. Banen verdwenen naar China = werkloos.", nogSimpeler: "Arbeider" },
+          niveaus: { basis: "Westerse arbeiders.", simpeler: "Westerse fabriekarbeider = verliezer. Banen verdwenen naar China = werkloos.", nogSimpeler: "Arbeider" },
         },
       },
       {
@@ -518,7 +518,7 @@ const steps = [
           theorie: "Sinds corona + oorlog Oekraïne: trend van offshoring → reshoring. Vooral chips, medicijnen, energie.",
           voorbeelden: [{ type: "feit", tekst: "EU CHIPS Act 2023: €43 mrd om chipproductie naar EU te halen." }],
           basiskennis: [{ onderwerp: "Reden", uitleg: "Bedrijven willen minder kwetsbaar voor verre verstoringen." }],
-          niveaus: { basis: "Productie terug. A.", simpeler: "Reshoring = productie weer in eigen continent doen. Sinds corona populair.", nogSimpeler: "Terug" },
+          niveaus: { basis: "Productie terug.", simpeler: "Reshoring = productie weer in eigen continent doen. Sinds corona populair.", nogSimpeler: "Terug" },
         },
       },
       {
@@ -532,7 +532,7 @@ const steps = [
           theorie: "Voor containers: arbeiders pakten elk pakje los in/uit schip. Met containers: kraan tilt 1 ding = 100x goedkoper.",
           voorbeelden: [{ type: "feit", tekst: "Vóór: 5 dollar per ton lossen. Na: 16 cent. Globalisering werd betaalbaar." }],
           basiskennis: [{ onderwerp: "Onzichtbare revolutie", uitleg: "Container is misschien belangrijkste uitvinding voor globalisering." }],
-          niveaus: { basis: "Gestandaardiseerd. A.", simpeler: "Container = standaard maat → snel + goedkoop transporteren tussen schip/trein/truck. Geen overpakken.", nogSimpeler: "Standaard" },
+          niveaus: { basis: "Gestandaardiseerd.", simpeler: "Container = standaard maat → snel + goedkoop transporteren tussen schip/trein/truck. Geen overpakken.", nogSimpeler: "Standaard" },
         },
       },
       {
@@ -546,7 +546,7 @@ const steps = [
           theorie: "EU CBAM (CO2-importheffing) probeert dit te bestrijden — koolstof-intensief import wordt belast.",
           voorbeelden: [{ type: "feit", tekst: "Containerschip Maersk → 1 schip = 50 mln auto's CO2. Cement uit China = veel meer CO2 dan EU." }],
           basiskennis: [{ onderwerp: "Discussie", uitleg: "Wie 'verantwoordelijk' voor productie-CO2 — productieland of consumentland?" }],
-          niveaus: { basis: "CO2 transport + lakse regels. A.", simpeler: "Globalisering = veel transport-CO2 + productie verhuist naar landen met minder strenge milieu-regels.", nogSimpeler: "CO2 + vervuiling" },
+          niveaus: { basis: "CO2 transport + lakse regels.", simpeler: "Globalisering = veel transport-CO2 + productie verhuist naar landen met minder strenge milieu-regels.", nogSimpeler: "CO2 + vervuiling" },
         },
       },
     ],
@@ -581,7 +581,7 @@ const steps = [
           theorie: "Soms ook 'transnational corporation' (TNC). Macht groot — Apple is meer waard dan veel landen-BBPs samen.",
           voorbeelden: [{ type: "lijst", tekst: "Apple, Shell, Toyota, Samsung, McDonald's, Unilever, Nestlé." }],
           basiskennis: [{ onderwerp: "Niet land", uitleg: "Land en bedrijf zijn fundamenteel verschillend." }],
-          niveaus: { basis: "Bedrijf in meerdere landen. A.", simpeler: "Multi (meerdere) + nationaal (land) = bedrijf in meerdere landen tegelijk.", nogSimpeler: "Meerdere landen" },
+          niveaus: { basis: "Bedrijf in meerdere landen.", simpeler: "Multi (meerdere) + nationaal (land) = bedrijf in meerdere landen tegelijk.", nogSimpeler: "Meerdere landen" },
         },
       },
       {
@@ -595,7 +595,7 @@ const steps = [
           theorie: "NL multinationals: Shell, ASML, Heineken, Unilever, Philips, ING. Apple/Toyota/McD = niet NL.",
           voorbeelden: [{ type: "lijst", tekst: "Apple = US (Cupertino). Toyota = Japan. McDonald's = US. Shell = NL/UK." }],
           basiskennis: [{ onderwerp: "Hoofdkantoor wisselt", uitleg: "Shell verplaatste 2022 hoofdkantoor naar UK voor fiscale redenen." }],
-          niveaus: { basis: "Shell. A.", simpeler: "Shell = NL multinational (olie/energie). Apple/Toyota/McDonald's = niet NL.", nogSimpeler: "Shell" },
+          niveaus: { basis: "Shell.", simpeler: "Shell = NL multinational (olie/energie). Apple/Toyota/McDonald's = niet NL.", nogSimpeler: "Shell" },
         },
       },
       {
@@ -609,7 +609,7 @@ const steps = [
           theorie: "Land probeert multinationals aan te trekken voor banen + belastinginkomsten. NL was lang aantrekkelijk door fiscale regels.",
           voorbeelden: [{ type: "feit", tekst: "ASML draagt jaarlijks miljarden bij via belasting + duizenden hooggeschoolde banen." }],
           basiskennis: [{ onderwerp: "Voor iedereen", uitleg: "Banen zijn voor allerlei opleidingsniveaus, niet alleen rijken." }],
-          niveaus: { basis: "Banen + belasting + innovatie. A.", simpeler: "Multinationals geven NL: banen, belastinginkomsten en innovatie (R&D). Veel voordelen.", nogSimpeler: "Banen+geld" },
+          niveaus: { basis: "Banen + belasting + innovatie.", simpeler: "Multinationals geven NL: banen, belastinginkomsten en innovatie (R&D). Veel voordelen.", nogSimpeler: "Banen+geld" },
         },
       },
       {
@@ -623,7 +623,7 @@ const steps = [
           theorie: "Voorbeelden van structuren: Dutch sandwich (vroeger), Ierland-tussenholding, Caribische postbus.",
           voorbeelden: [{ type: "feit", tekst: "Apple betaalde in Ierland 0,005% belasting via Ierse structuur (EU-rechtbank dwong terugbetaling 2024)." }],
           basiskennis: [{ onderwerp: "Internationale aanpak", uitleg: "OESO BEPS: minimum-tarief 15% VPB wereldwijd (2023+)." }],
-          niveaus: { basis: "Belastingontwijking. A.", simpeler: "Multinationals ontwijken belasting via internationale structuren — landen krijgen minder geld.", nogSimpeler: "Belasting ontwijken" },
+          niveaus: { basis: "Belastingontwijking.", simpeler: "Multinationals ontwijken belasting via internationale structuren — landen krijgen minder geld.", nogSimpeler: "Belasting ontwijken" },
         },
       },
       {
@@ -637,7 +637,7 @@ const steps = [
           theorie: "EUV-machines kosten €200 mln/stuk. Klanten: TSMC, Samsung, Intel. Zonder ASML geen geavanceerde chips wereldwijd.",
           voorbeelden: [{ type: "feit", tekst: "ASML beurswaarde >€300 mrd (2024). Grootste tech-bedrijf EU." }],
           basiskennis: [{ onderwerp: "Strategisch", uitleg: "ASML staat midden in geopolitiek (US-China chip-oorlog) — mag niet alle machines aan China verkopen." }],
-          niveaus: { basis: "Chipmachines. A.", simpeler: "ASML = NL bedrijf dat chipmachines maakt (EUV-monopolie). Klanten: chipfabrikanten wereldwijd.", nogSimpeler: "Chips" },
+          niveaus: { basis: "Chipmachines.", simpeler: "ASML = NL bedrijf dat chipmachines maakt (EUV-monopolie). Klanten: chipfabrikanten wereldwijd.", nogSimpeler: "Chips" },
         },
       },
       {
@@ -651,7 +651,7 @@ const steps = [
           theorie: "EU = boetes (Google €2,4 mrd 2017 voor mededingingsovertredingen). OESO = belastingafspraken (BEPS). ESG = beleggers eisen duurzaamheid.",
           voorbeelden: [{ type: "feit", tekst: "OESO BEPS 2023: minimum 15% vennootschapsbelasting wereldwijd voor multinationals." }],
           basiskennis: [{ onderwerp: "Niet 1 partij", uitleg: "Internationaal toezicht is samenwerking, niet enkele organisatie." }],
-          niveaus: { basis: "EU + OESO + ESG. A.", simpeler: "Toezicht via 3 lagen: EU (boetes), OESO (belasting-afspraken), ESG (duurzaamheid).", nogSimpeler: "Drie" },
+          niveaus: { basis: "EU + OESO + ESG.", simpeler: "Toezicht via 3 lagen: EU (boetes), OESO (belasting-afspraken), ESG (duurzaamheid).", nogSimpeler: "Drie" },
         },
       },
     ],
@@ -688,7 +688,7 @@ const steps = [
           theorie: "Centrale bank = bank van banken. Geeft niet aan jou direct geld, maar aan banken die het doorlenen.",
           voorbeelden: [{ type: "taken", tekst: "Rente vaststellen, euro-biljetten uitgeven, banken-toezicht (samen met DNB)." }],
           basiskennis: [{ onderwerp: "Niet belasting", uitleg: "Belasting innen = Belastingdienst (lidstaat). ECB regelt monetair beleid." }],
-          niveaus: { basis: "Beheer euro. A.", simpeler: "ECB beheert de euro: bepaalt rente, geldhoeveelheid + bestrijdt inflatie.", nogSimpeler: "Euro-beheer" },
+          niveaus: { basis: "Beheer euro.", simpeler: "ECB beheert de euro: bepaalt rente, geldhoeveelheid + bestrijdt inflatie.", nogSimpeler: "Euro-beheer" },
         },
       },
       {
@@ -702,7 +702,7 @@ const steps = [
           theorie: "0% inflatie = risico deflatie (prijzen dalen, mensen wachten kopen, economie stopt). >4% = mensen verliezen vertrouwen in geld.",
           voorbeelden: [{ type: "tabel", tekst: "2022: NL inflatie ~10% (gas-crisis). 2024: ~3%. ECB doel: ~2%." }],
           basiskennis: [{ onderwerp: "Niet alleen ECB", uitleg: "Andere centrale banken (Fed, Bank of England) hebben ook ~2% doel." }],
-          niveaus: { basis: "~2%. A.", simpeler: "ECB-doel: inflatie ongeveer 2% per jaar — stabiel niveau. Niet 0% (deflatie-risico) of 5% (te hoog).", nogSimpeler: "2%" },
+          niveaus: { basis: "~2%.", simpeler: "ECB-doel: inflatie ongeveer 2% per jaar — stabiel niveau. Niet 0% (deflatie-risico) of 5% (te hoog).", nogSimpeler: "2%" },
         },
       },
       {
@@ -716,7 +716,7 @@ const steps = [
           theorie: "Mechanisme: hoge rente → mensen sparen meer + lenen minder → bedrijven investeren minder → minder vraag → prijsdruk weg.",
           voorbeelden: [{ type: "feit", tekst: "2022-2024: ECB-rente van 0% naar 4,5% om hoge inflatie (10%) te bestrijden. Werkte: 2024 inflatie ~2,5%." }],
           basiskennis: [{ onderwerp: "Bijwerking", uitleg: "Hoge rente = ook minder economische groei, soms recessie." }],
-          niveaus: { basis: "Inflatie bestrijden. A.", simpeler: "ECB verhoogt rente om hoge inflatie te bestrijden — duurder lenen → minder vraag → prijzen omlaag.", nogSimpeler: "Inflatie ↓" },
+          niveaus: { basis: "Inflatie bestrijden.", simpeler: "ECB verhoogt rente om hoge inflatie te bestrijden — duurder lenen → minder vraag → prijzen omlaag.", nogSimpeler: "Inflatie ↓" },
         },
       },
       {
@@ -730,7 +730,7 @@ const steps = [
           theorie: "Wanneer rente al 0% is en economie nog stagneert → QE als laatste redmiddel. ECB deed €5+ biljoen QE 2015-2022.",
           voorbeelden: [{ type: "feit", tekst: "Corona 2020: ECB kocht massaal obligaties om economie te steunen." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "QT = Quantitative Tightening = geld terug uit economie halen." }],
-          niveaus: { basis: "Geld bijdrukken. A.", simpeler: "QE = ECB drukt veel digitaal geld bij om economie te helpen (vooral bij crisis).", nogSimpeler: "Geld bij" },
+          niveaus: { basis: "Geld bijdrukken.", simpeler: "QE = ECB drukt veel digitaal geld bij om economie te helpen (vooral bij crisis).", nogSimpeler: "Geld bij" },
         },
       },
       {
@@ -744,7 +744,7 @@ const steps = [
           theorie: "Spaarrente volgt ECB-rente met vertraging + altijd minder. ECB 4% → spaarrente meestal 2-3%.",
           voorbeelden: [{ type: "tabel", tekst: "2022 (ECB 0%): spaarrente 0,01%. 2024 (ECB 4%): spaarrente ~2,5%." }],
           basiskennis: [{ onderwerp: "Vertraging", uitleg: "Banken passen niet meteen aan — duurt maanden." }],
-          niveaus: { basis: "Meer rente. A.", simpeler: "ECB-rente omhoog → bank betaalt jou meer rente op spaargeld (volgt mee).", nogSimpeler: "Meer" },
+          niveaus: { basis: "Meer rente.", simpeler: "ECB-rente omhoog → bank betaalt jou meer rente op spaargeld (volgt mee).", nogSimpeler: "Meer" },
         },
       },
       {
@@ -758,7 +758,7 @@ const steps = [
           theorie: "Geschiedenis: landen waar centrale bank politiek-aangestuurd was (Argentinië, Turkije) hebben hoge inflatie + zwakke valuta.",
           voorbeelden: [{ type: "feit", tekst: "ECB statuten: politici MOGEN ECB niet beïnvloeden. Lagarde antwoordt aan Europees Parlement maar volgt eigen beleid." }],
           basiskennis: [{ onderwerp: "Vergelijk Fed", uitleg: "Trump probeerde Fed-rente te beïnvloeden 2018-2020 → Fed weigerde. Onafhankelijkheid in praktijk." }],
-          niveaus: { basis: "Politiek-bias. A.", simpeler: "Politici willen rente verlagen voor verkiezingen (= populair, maar slecht voor inflatie). Daarom ECB onafhankelijk.", nogSimpeler: "Politiek-bias" },
+          niveaus: { basis: "Politiek-bias.", simpeler: "Politici willen rente verlagen voor verkiezingen (= populair, maar slecht voor inflatie). Daarom ECB onafhankelijk.", nogSimpeler: "Politiek-bias" },
         },
       },
     ],

@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zou cos zijn.", "Niet — dat is tan.", "Niet — sin is altijd ≤ 1."],
         uitlegPad: {
           stappen: [{ titel: "SOH: sin = O/S", tekst: "sin α = overstaand/schuin = 3/5 = **0,6**. Cos zou 4/5 = 0,8 (aanliggend met pythagoras: √(25-9)=4)." }],
-          niveaus: { basis: "3/5=0,6. A.", simpeler: "Overstaande/schuine = 3/5 = 0,6. A.", nogSimpeler: "0,6" },
+          niveaus: { basis: "3/5=0,6.", simpeler: "Overstaande/schuine = 3/5 = 0,6.", nogSimpeler: "0,6" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is sin 30°.", "Niet — dat is bvb sin 45° + cos 45° gecombineerd.", "Niet — dat is tan 0°."],
         uitlegPad: {
           stappen: [{ titel: "45° = gelijkbenig", tekst: "In 45°-driehoek: overstaande = aanliggende → tan = O/A = 1. Klassiek getal te onthouden." }],
-          niveaus: { basis: "1. A.", simpeler: "tan 45° = 1. A.", nogSimpeler: "1" },
+          niveaus: { basis: "1.", simpeler: "tan 45° = 1.", nogSimpeler: "1" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "c² = a² + b²", tekst: "c² = 6² + 8² = 36+64 = 100 → c = **10**. Klassieke 6-8-10 (= 3-4-5 × 2) driehoek." }],
           theorie: "3-4-5, 5-12-13, 8-15-17 zijn klassieke gehele-driehoeken (Pythagorean triples).",
-          niveaus: { basis: "c=√100=10. A.", simpeler: "Pythagoras → 10. A.", nogSimpeler: "10" },
+          niveaus: { basis: "c=√100=10.", simpeler: "Pythagoras → 10.", nogSimpeler: "10" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         wrongHints: [null, "Niet — net niet.", "Onmogelijk.", "Te groot."],
         uitlegPad: {
           stappen: [{ titel: "Identiteit sin²+cos²=1", tekst: "Voor **elke** hoek geldt sin² α + cos² α = 1. Volgt uit Pythagoras op eenheidscirkel. Check: (0,5)² + (√3/2)² = 0,25 + 0,75 = 1. ✓" }],
-          niveaus: { basis: "Identiteit = 1. A.", simpeler: "Altijd 1 — vaste regel. A.", nogSimpeler: "1" },
+          niveaus: { basis: "Identiteit = 1.", simpeler: "Altijd 1 — vaste regel.", nogSimpeler: "1" },
         },
       },
       {
@@ -70,7 +70,7 @@ const steps = [
           stappen: [
             { titel: "cos α = aanliggend/schuin", tekst: "cos α = 3/5 = 0,6 → α = arccos(0,6) ≈ **53°**. Hoek tussen ladder en grond. (Met muur zou 37° zijn.)" },
           ],
-          niveaus: { basis: "α ≈ 53°. A.", simpeler: "arccos(3/5) ≈ 53°. A.", nogSimpeler: "53°" },
+          niveaus: { basis: "α ≈ 53°.", simpeler: "arccos(3/5) ≈ 53°.", nogSimpeler: "53°" },
         },
       },
     ],
@@ -89,7 +89,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 90°.", "Niet — dat is 30°.", "Niet — dat is 180°."],
         uitlegPad: {
           stappen: [{ titel: "Formule rad = ° · π/180", tekst: "45 · π/180 = **π/4** rad ≈ 0,785 rad. Octant van volle cirkel." }],
-          niveaus: { basis: "π/4. A.", simpeler: "45° = π/4 rad. A.", nogSimpeler: "π/4" },
+          niveaus: { basis: "π/4.", simpeler: "45° = π/4 rad.", nogSimpeler: "π/4" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
         wrongHints: [null, "Niet — Q1 is 0-90°.", "Niet — Q3 is 180-270°.", "Niet — Q4 is 270-360°."],
         uitlegPad: {
           stappen: [{ titel: "Tussen 90° en 180° = Q2", tekst: "120° ligt in Q2. Daar: sin positief (y>0), cos negatief (x<0). Specifiek: sin 120° = √3/2, cos 120° = −0,5." }],
-          niveaus: { basis: "Q2. A.", simpeler: "120° = tussen 90° en 180° = Q2. A.", nogSimpeler: "Q2" },
+          niveaus: { basis: "Q2.", simpeler: "120° = tussen 90° en 180° = Q2.", nogSimpeler: "Q2" },
         },
       },
       {
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is x = cos 90° = 0.", "Niet — sin 30°.", "Niet — dat is sin 270°."],
         uitlegPad: {
           stappen: [{ titel: "Top van cirkel = (0,1)", tekst: "Bij 90° staat punt aan top van eenheidscirkel: x = 0, y = 1. sin 90° = **1** (max), cos 90° = 0." }],
-          niveaus: { basis: "1. A.", simpeler: "Top: y=1. A.", nogSimpeler: "1" },
+          niveaus: { basis: "1.", simpeler: "Top: y=1.", nogSimpeler: "1" },
         },
       },
       {
@@ -119,7 +119,7 @@ const steps = [
         wrongHints: [null, "Niet — sin is oneven.", "Niet — verwisseling.", "Wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "sin is oneven", tekst: "sin(−x) = −sin(x) voor alle x. Op eenheidscirkel: hoek −30° = 30° onder x-as → y-coord is omgekeerd → −0,5." }],
-          niveaus: { basis: "−0,5. A.", simpeler: "sin negatieve hoek = min sin positieve. A.", nogSimpeler: "−0,5" },
+          niveaus: { basis: "−0,5.", simpeler: "sin negatieve hoek = min sin positieve.", nogSimpeler: "−0,5" },
         },
       },
       {
@@ -129,7 +129,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is π.", "Niet — dat is 2π.", "Niet — dat is π/2."],
         uitlegPad: {
           stappen: [{ titel: "rad · 180/π = °", tekst: "3π/2 · 180/π = 3·180/2 = **270°**. Driekwart-rondje, onderkant cirkel. sin 270° = −1, cos 270° = 0." }],
-          niveaus: { basis: "270°. A.", simpeler: "3/4 van 360° = 270°. A.", nogSimpeler: "270" },
+          niveaus: { basis: "270°.", simpeler: "3/4 van 360° = 270°.", nogSimpeler: "270" },
         },
       },
     ],
@@ -149,7 +149,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "cos 90° = 0", tekst: "c² = 10² + 14² − 2·10·14·0 = 100 + 196 = 296. c = √296 ≈ 17,2. Bij C=90° vervalt cosinusregel naar **Pythagoras**." }],
           theorie: "Cosinusregel is een super-Pythagoras voor elke hoek.",
-          niveaus: { basis: "c²=296. A.", simpeler: "Bij 90°: gewoon a²+b² = 296. A.", nogSimpeler: "296" },
+          niveaus: { basis: "c²=296.", simpeler: "Bij 90°: gewoon a²+b² = 296.", nogSimpeler: "296" },
         },
       },
       {
@@ -161,7 +161,7 @@ const steps = [
           stappen: [
             { titel: "b = a · sin B / sin A", tekst: "b = 8 · 0,6 / 0,5 = 8 · 1,2 = **9,6**. Hoek B groter dan A (sin B > sin A) → b groter dan a." },
           ],
-          niveaus: { basis: "9,6. A.", simpeler: "Sinusregel: 8 × 0,6/0,5 = 9,6. A.", nogSimpeler: "9,6" },
+          niveaus: { basis: "9,6.", simpeler: "Sinusregel: 8 × 0,6/0,5 = 9,6.", nogSimpeler: "9,6" },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
           stappen: [
             { titel: "O = ½ a·b·sin C", tekst: "O = ½ · 6 · 4 · sin 30° = ½ · 24 · 0,5 = **6**. Korte formule wanneer 2 zijden + ingesloten hoek bekend." },
           ],
-          niveaus: { basis: "O=6. A.", simpeler: "Half × 6 × 4 × 0,5 = 6. A.", nogSimpeler: "6" },
+          niveaus: { basis: "O=6.", simpeler: "Half × 6 × 4 × 0,5 = 6.", nogSimpeler: "6" },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Klassieke regel", tekst: "In een **vlakke** driehoek: A + B + C = 180°. Of in radialen: π. Gevolg: bij 2 hoeken bekend → derde = 180° − (A + B)." }],
           theorie: "Op een bol (zoals aarde) is hoekensom > 180° — sferische geometrie. Niet voor middelbare wiskunde, maar wel bij navigatie/astronomie.",
-          niveaus: { basis: "180°. A.", simpeler: "Drie hoeken samen = 180°. A.", nogSimpeler: "180" },
+          niveaus: { basis: "180°.", simpeler: "Drie hoeken samen = 180°.", nogSimpeler: "180" },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
           stappen: [
             { titel: "cos C = (a² + b² − c²)/(2ab)", tekst: "cos C = (25 + 49 − 64) / (2·5·7) = 10/70 = **1/7 ≈ 0,143**. → C = arccos(0,143) ≈ 81,8°." },
           ],
-          niveaus: { basis: "cos C = 1/7. A.", simpeler: "Reorganiseer cosinusregel. A.", nogSimpeler: "1/7" },
+          niveaus: { basis: "cos C = 1/7.", simpeler: "Reorganiseer cosinusregel.", nogSimpeler: "1/7" },
         },
       },
     ],
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is tan-periode.", "Niet — kwart-periode.", "Niet — twee periodes."],
         uitlegPad: {
           stappen: [{ titel: "360° herhaalt", tekst: "sin x = sin(x + 2π) voor alle x. Volledig patroon herhaalt na 2π radialen = 360°." }],
-          niveaus: { basis: "2π. A.", simpeler: "Sin herhaalt elke 360° = 2π. A.", nogSimpeler: "2π" },
+          niveaus: { basis: "2π.", simpeler: "Sin herhaalt elke 360° = 2π.", nogSimpeler: "2π" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is voor sin x.", "Niet — dat is nulpunt.", "Niet — dat is minimum."],
         uitlegPad: {
           stappen: [{ titel: "Amplitude × max sin", tekst: "Max sin x = 1, dus max van 3 sin x = 3·1 = **3**. Schommelt tussen −3 en +3." }],
-          niveaus: { basis: "3. A.", simpeler: "Amplitude 3 = max 3. A.", nogSimpeler: "3" },
+          niveaus: { basis: "3.", simpeler: "Amplitude 3 = max 3.", nogSimpeler: "3" },
         },
       },
       {
@@ -237,7 +237,7 @@ const steps = [
           stappen: [
             { titel: "tan = sin/cos → asymp waar cos=0", tekst: "cos x = 0 bij x = π/2, 3π/2, 5π/2, ... (= π/2 + k·π). Daar wordt tan x = sin x / 0 → ±∞ → verticale asymptoot." },
           ],
-          niveaus: { basis: "π/2 + kπ. A.", simpeler: "Waar cos = 0. A.", nogSimpeler: "π/2-vouwen" },
+          niveaus: { basis: "π/2 + kπ.", simpeler: "Waar cos = 0.", nogSimpeler: "π/2-vouwen" },
         },
       },
       {
@@ -249,7 +249,7 @@ const steps = [
           stappen: [
             { titel: "(top + min) / 2", tekst: "(5 + (−1)) / 2 = 4/2 = **2**. Functie ziet eruit als y = 3·sin(...) + 2 (amplitude 3, verschuiving 2 omhoog)." },
           ],
-          niveaus: { basis: "y=2. A.", simpeler: "Gemiddelde van 5 en −1 = 2. A.", nogSimpeler: "2" },
+          niveaus: { basis: "y=2.", simpeler: "Gemiddelde van 5 en −1 = 2.", nogSimpeler: "2" },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
         wrongHints: [null, "Niet — periode 2π.", "Niet — periode 2π.", "Niet — periode 4π."],
         uitlegPad: {
           stappen: [{ titel: "Periode = 2π/b", tekst: "Voor sin(bx): periode = 2π/b. Bij b=2: periode = 2π/2 = **π**. Twee keer zo veel oscillaties per 2π." }],
-          niveaus: { basis: "sin(2x) → π. A.", simpeler: "b=2 verdubbelt frequentie → halve periode. A.", nogSimpeler: "sin(2x)" },
+          niveaus: { basis: "sin(2x) → π.", simpeler: "b=2 verdubbelt frequentie → halve periode.", nogSimpeler: "sin(2x)" },
         },
       },
     ],
@@ -278,7 +278,7 @@ const steps = [
         wrongHints: [null, "Niet — geen kwadraat.", "Niet — andere identiteit.", "Niet — vergeet cos."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele-hoek identiteit", tekst: "sin 2α = 2·sin α·cos α. Klassiek te onthouden. Bv. sin 60° = 2 · sin 30° · cos 30° = 2 · 0,5 · √3/2 = √3/2 ✓." }],
-          niveaus: { basis: "2 sin α cos α. A.", simpeler: "Vaste formule. A.", nogSimpeler: "2sin·cos" },
+          niveaus: { basis: "2 sin α cos α.", simpeler: "Vaste formule.", nogSimpeler: "2sin·cos" },
         },
       },
       {
@@ -290,7 +290,7 @@ const steps = [
           stappen: [
             { titel: "cos = 0 op π/2 + kπ", tekst: "In [0, 2π] zijn dat: π/2 en 3π/2. Dat zijn de top en onderkant van de eenheidscirkel (cos = x-coord = 0)." },
           ],
-          niveaus: { basis: "π/2 en 3π/2. A.", simpeler: "Cos=0 op kwartronde en driekwartronde. A.", nogSimpeler: "π/2, 3π/2" },
+          niveaus: { basis: "π/2 en 3π/2.", simpeler: "Cos=0 op kwartronde en driekwartronde.", nogSimpeler: "π/2, 3π/2" },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Basisformule", tekst: "d/dx (sin x) = **cos x**. Bewijs via verschilformule + limiet. Werkt alleen wanneer x in radialen!" }],
           theorie: "Volgorde sin → cos → −sin → −cos → sin (terug). Elke afleiding draait de cirkel met π/2.",
-          niveaus: { basis: "cos x. A.", simpeler: "sin' = cos. A.", nogSimpeler: "cos" },
+          niveaus: { basis: "cos x.", simpeler: "sin' = cos.", nogSimpeler: "cos" },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
           stappen: [
             { titel: "u(t) = A sin(2π f t)", tekst: "Standaardvorm voor trilling: u(t) = A·sin(2π·f·t). Vergelijk: A = 5, **f = 3 Hz**, T = 1/3 s." },
           ],
-          niveaus: { basis: "f=3 Hz. A.", simpeler: "2π·f → f = 3. A.", nogSimpeler: "3" },
+          niveaus: { basis: "f=3 Hz.", simpeler: "2π·f → f = 3.", nogSimpeler: "3" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "Niet — tan π/2 is ∞.", "Niet — antwoord in radialen.", "Niet — tan π = 0."],
         uitlegPad: {
           stappen: [{ titel: "tan 45° = 1", tekst: "tan(π/4) = 1 → arctan(1) = **π/4** = 45°. Klassiek geheugen-feit." }],
-          niveaus: { basis: "π/4. A.", simpeler: "tan=1 bij 45° = π/4 rad. A.", nogSimpeler: "π/4" },
+          niveaus: { basis: "π/4.", simpeler: "tan=1 bij 45° = π/4 rad.", nogSimpeler: "π/4" },
         },
       },
     ],

@@ -37,7 +37,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zuur staat proton af", tekst: "**Brønsted-zuur** = stof die **H⁺ (proton) afstaat** aan andere stof. Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺. HCl is zuur, geeft proton aan H₂O." }],
           theorie: "Cito-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
-          niveaus: { basis: "H⁺-donor. A.", simpeler: "Zuur = H⁺ afgeven", nogSimpeler: "Donor" },
+          niveaus: { basis: "H⁺-donor.", simpeler: "Zuur = H⁺ afgeven", nogSimpeler: "Donor" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zuur min proton = geconj. base", tekst: "**HCl → H⁺ + Cl⁻**. Zonder proton heet de zuurrest **Cl⁻**: geconjugeerde base van HCl. Geconjugeerd = ontstaan uit." }],
           theorie: "Patroon: HX (zuur) ⇌ X⁻ (geconj.base) + H⁺.",
-          niveaus: { basis: "Cl⁻. A.", simpeler: "HCl − H⁺ = Cl⁻", nogSimpeler: "Cl⁻" },
+          niveaus: { basis: "Cl⁻.", simpeler: "HCl − H⁺ = Cl⁻", nogSimpeler: "Cl⁻" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         wrongHints: [null, "Niet wat amfoteer betekent.", "Wel kan, maar niet altijd.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Amfoteer = beide", tekst: "**Amfoteer**: kan zowel als zuur als als base functioneren. **Water**: met HCl is het base (neemt H⁺ op). Met NH₃ is het zuur (geeft H⁺ af). Komt door OH-groep + H die beide overgedragen kunnen worden." }],
-          niveaus: { basis: "Beide. A.", simpeler: "Amfoteer = zuur+base", nogSimpeler: "Beide" },
+          niveaus: { basis: "Beide.", simpeler: "Amfoteer = zuur+base", nogSimpeler: "Beide" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sterke zuren-lijst", tekst: "**Sterke zuren** (volledig dissociëren in water): **HCl, H₂SO₄, HNO₃, HBr, HI, HClO₄**. Alle andere zijn zwak (azijnzuur, citroenzuur, koolzuur, etc.). Onthouden uit hoofd voor eindexamen." }],
           theorie: "Memo: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄ = de 6 standaard-sterke zuren.",
-          niveaus: { basis: "HCl. A.", simpeler: "Sterk zuur = HCl", nogSimpeler: "HCl" },
+          niveaus: { basis: "HCl.", simpeler: "Sterk zuur = HCl", nogSimpeler: "HCl" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         wrongHints: [null, "Wel reactie.", "Soms (bv. CO₂), niet altijd.", "Niet algemeen."],
         uitlegPad: {
           stappen: [{ titel: "Neutralisatie", tekst: "**Neutralisatie**: zuur + base → zout + water. Voorbeelden:\n• HCl + NaOH → NaCl + H₂O\n• H₂SO₄ + 2 KOH → K₂SO₄ + 2 H₂O\npH-verandering naar neutraal (7) als zuur + base evenredig zijn." }],
-          niveaus: { basis: "Zout + water. A.", simpeler: "Z+B → zout+water", nogSimpeler: "Zout+water" },
+          niveaus: { basis: "Zout + water.", simpeler: "Z+B → zout+water", nogSimpeler: "Zout+water" },
         },
       },
     ],
@@ -98,7 +98,7 @@ const steps = [
         wrongHints: [null, "Niet — −log positief.", "Niet — niet rechtstreeks.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "pH = −log[H₃O⁺]", tekst: "pH = −log(10⁻⁴) = −(−4) = **4**. Bij macht van 10 = exponent invers (zonder min)." }],
-          niveaus: { basis: "4. A.", simpeler: "−log(10⁻⁴) = 4", nogSimpeler: "4" },
+          niveaus: { basis: "4.", simpeler: "−log(10⁻⁴) = 4", nogSimpeler: "4" },
         },
       },
       {
@@ -108,7 +108,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is pOH-achtig.", "Niet — 0,1 M zou pH=1 zijn.", "Niet — wel zuur."],
         uitlegPad: {
           stappen: [{ titel: "Sterk zuur = volledige dissoc.", tekst: "HCl is sterk → 0,01 M HCl geeft [H₃O⁺] = 0,01 = 10⁻². **pH = −log(10⁻²) = 2**. Zuur." }],
-          niveaus: { basis: "2. A.", simpeler: "0,01M HCl → pH=2", nogSimpeler: "2" },
+          niveaus: { basis: "2.", simpeler: "0,01M HCl → pH=2", nogSimpeler: "2" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
         wrongHints: [null, "Niet — wel som.", "Niet — som.", "Alleen bij neutraal (beide = 7)."],
         uitlegPad: {
           stappen: [{ titel: "Kw = 10⁻¹⁴", tekst: "Waterconstante: [H₃O⁺][OH⁻] = **10⁻¹⁴**. Log-versie: **pH + pOH = 14** (bij 25°C). Bij neutraal: pH = pOH = 7." }],
-          niveaus: { basis: "pH + pOH = 14. A.", simpeler: "Som = 14", nogSimpeler: "14" },
+          niveaus: { basis: "pH + pOH = 14.", simpeler: "Som = 14", nogSimpeler: "14" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
             { titel: "Eerst pOH", tekst: "[OH⁻] = 10⁻² → pOH = 2." },
             { titel: "Dan pH", tekst: "pH = 14 − pOH = 14 − 2 = **12**. Basische oplossing." },
           ],
-          niveaus: { basis: "12. A.", simpeler: "pOH=2, pH=14−2=12", nogSimpeler: "12" },
+          niveaus: { basis: "12.", simpeler: "pOH=2, pH=14−2=12", nogSimpeler: "12" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
         wrongHints: [null, "Niet — pH stijgt na verdunnen.", "Niet pH.", "Niet — geen base."],
         uitlegPad: {
           stappen: [{ titel: "10× verdund = pH +1", tekst: "0,1 M HCl heeft pH=1. **10× verdund** → 0,01 M → pH=**2**. Algemene regel: 10× verdunnen = pH stijgt 1 (zuur) of daalt 1 (base). Maximaal tot pH=7 (verdunde sterk zuur kan nooit basisch worden)." }],
-          niveaus: { basis: "2. A.", simpeler: "10× verdund = pH+1 = 2", nogSimpeler: "2" },
+          niveaus: { basis: "2.", simpeler: "10× verdund = pH+1 = 2", nogSimpeler: "2" },
         },
       },
     ],
@@ -160,7 +160,7 @@ const steps = [
         wrongHints: [null, "Dat is sterk zuur.", "Wel — een beetje.", "Niet temperatuur-cruciaal hier."],
         uitlegPad: {
           stappen: [{ titel: "Evenwicht ⇌", tekst: "**Zwak zuur**: dissocieert **gedeeltelijk** → evenwicht tussen HA, A⁻ en H⁺. Bv. azijnzuur: ~1% gedissocieerd bij 0,1 M. Sterk zuur dissocieert volledig (~100%)." }],
-          niveaus: { basis: "Gedeeltelijk. A.", simpeler: "Zwak = gedeeltelijk", nogSimpeler: "Deels" },
+          niveaus: { basis: "Gedeeltelijk.", simpeler: "Zwak = gedeeltelijk", nogSimpeler: "Deels" },
         },
       },
       {
@@ -170,7 +170,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel zuur.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Ka = mate dissociatie", tekst: "**Ka** = evenwichts-constante zuur-dissociatie. **Hoge Ka** = veel gedissocieerd = sterk zuur. **Lage Ka** = weinig gedissocieerd = zwak zuur. pKa = −log(Ka) → lage pKa = sterk." }],
-          niveaus: { basis: "Zwakker. A.", simpeler: "Lage Ka = zwak", nogSimpeler: "Zwak" },
+          niveaus: { basis: "Zwakker.", simpeler: "Lage Ka = zwak", nogSimpeler: "Zwak" },
         },
       },
       {
@@ -180,7 +180,7 @@ const steps = [
         wrongHints: [null, "Niet — sterk zuur geen buffer.", "Niet — geen weerstand.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Zwak-zuur-paar = buffer", tekst: "**Buffer** = oplossing met **zwak zuur + zijn geconjugeerde base** (of zwakke base + geconj. zuur). Weerstaat pH-verandering bij toevoegen klein beetje zuur/base. Voorbeeld: azijnzuur + acetaat-zout." }],
-          niveaus: { basis: "Zwak zuur + geconj.base. A.", simpeler: "Buffer = zwak-paar", nogSimpeler: "A." },
+          niveaus: { basis: "Zwak zuur + geconj.base.", simpeler: "Buffer = zwak-paar", nogSimpeler: "A." },
         },
       },
       {
@@ -190,7 +190,7 @@ const steps = [
         wrongHints: [null, "Niet — daar is buffer voor.", "Niet — bufferreactie.", "Wel reactie."],
         uitlegPad: {
           stappen: [{ titel: "Base-component vangt H⁺", tekst: "Acetaat-buffer: CH₃COO⁻ + H⁺ → CH₃COOH. H⁺ wordt opgenomen, pH blijft (bijna) gelijk. **Buffercapaciteit** is wel begrensd — bij grote hoeveelheid zuur loopt buffer 'op' en pH zakt alsnog snel." }],
-          niveaus: { basis: "Blijft gelijk. A.", simpeler: "Buffer = pH stabiel", nogSimpeler: "Stabiel" },
+          niveaus: { basis: "Blijft gelijk.", simpeler: "Buffer = pH stabiel", nogSimpeler: "Stabiel" },
         },
       },
       {
@@ -201,7 +201,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — afwijking >0,4 = levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
           theorie: "Cito-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
-          niveaus: { basis: "Bicarbonaat. A.", simpeler: "Bloed-buffer = bicarbonaat", nogSimpeler: "Bicarbonaat" },
+          niveaus: { basis: "Bicarbonaat.", simpeler: "Bloed-buffer = bicarbonaat", nogSimpeler: "Bicarbonaat" },
         },
       },
     ],
@@ -220,7 +220,7 @@ const steps = [
         wrongHints: [null, "Niet — begin = pH onbekend.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Stoichiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterk base = pH 7. Bij zwak/sterk-combinaties anders." }],
-          niveaus: { basis: "Stoichiometrisch evenwicht. A.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
+          niveaus: { basis: "Stoichiometrisch evenwicht.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
         },
       },
       {
@@ -230,7 +230,7 @@ const steps = [
         wrongHints: [null, "Niet — meer volume nodig.", "Niet — niet 10× verschil.", "Niet — wel substantieel zuur."],
         uitlegPad: {
           stappen: [{ titel: "Cz·Vz = Cb·Vb", tekst: "1-protonig: **C_zuur × V_zuur = C_base × V_base**. C_HCl × 10 = 0,1 × 15 → C_HCl = 1,5/10 = **0,15 M**." }],
-          niveaus: { basis: "0,15 M. A.", simpeler: "0,1·15/10 = 0,15", nogSimpeler: "0,15" },
+          niveaus: { basis: "0,15 M.", simpeler: "0,1·15/10 = 0,15", nogSimpeler: "0,15" },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
         wrongHints: [null, "Niet — omslag te vroeg.", "Te vaag.", "Wel nodig."],
         uitlegPad: {
           stappen: [{ titel: "Zwak zuur + sterk base = basisch eq.", tekst: "Bij zwak zuur (azijn) + sterk base (NaOH): equivalentiepunt **pH > 7** (acetaat-ion is base). **Fenolftaleïne** omslagt rond pH 8,2 → match. Methyloranje slaat al om bij pH 4 → veel te vroeg." }],
-          niveaus: { basis: "Fenolftaleïne. A.", simpeler: "Azijn+NaOH = fenolftaleïne", nogSimpeler: "Fenolft." },
+          niveaus: { basis: "Fenolftaleïne.", simpeler: "Azijn+NaOH = fenolftaleïne", nogSimpeler: "Fenolft." },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is pipet.", "Niet — geen verhitter.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Buret = lange schaal-cilinder", tekst: "**Buret** = lange glazen cilinder met kraan + schaalverdeling (vaak 50 mL met 0,1 mL nauwkeurig). Voor druppelsgewijs toevoegen + nauwkeurig volume aflezen tijdens titratie. **Pipet** = vast volume (10 mL, 25 mL)." }],
-          niveaus: { basis: "Variabel + aflezen. A.", simpeler: "Buret = druppelen+meten", nogSimpeler: "Buret" },
+          niveaus: { basis: "Variabel + aflezen.", simpeler: "Buret = druppelen+meten", nogSimpeler: "Buret" },
         },
       },
       {
@@ -261,7 +261,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Half-eq. = pKa", tekst: "Bij halfequivalentiepunt is precies de helft van zwak zuur omgezet in geconjugeerde base. Dan: [HA] = [A⁻] → Henderson-Hasselbalch: pH = pKa + log(1) = **pKa**. Handig om pKa experimenteel te bepalen." }],
           theorie: "Cito-toepassing: titratiekromme aflezen → punt waar pH=pKa.",
-          niveaus: { basis: "Ja. A.", simpeler: "Half-eq.: pH=pKa", nogSimpeler: "Ja" },
+          niveaus: { basis: "Ja.", simpeler: "Half-eq.: pH=pKa", nogSimpeler: "Ja" },
         },
       },
     ],
@@ -280,7 +280,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is pOH.", "Niet — 0,01 M zou 12 zijn.", "Niet neutraal."],
         uitlegPad: {
           stappen: [{ titel: "Bereken via pOH", tekst: "[OH⁻] = 0,001 = 10⁻³ → pOH = 3 → pH = 14 − 3 = **11**." }],
-          niveaus: { basis: "11. A.", simpeler: "pOH=3, pH=11", nogSimpeler: "11" },
+          niveaus: { basis: "11.", simpeler: "pOH=3, pH=11", nogSimpeler: "11" },
         },
       },
       {
@@ -290,7 +290,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is geconj. base.", "Niet relevant.", "Wel — NH₃ kan H⁺ opnemen."],
         uitlegPad: {
           stappen: [{ titel: "Base + H⁺ = geconj. zuur", tekst: "NH₃ + H⁺ → NH₄⁺ (ammonium-ion). Dus **NH₄⁺** = geconjugeerd zuur van NH₃. (Geconjugeerde base zou NH₂⁻ zijn — NH₃ als zuur, ongebruikelijk in water.)" }],
-          niveaus: { basis: "NH₄⁺. A.", simpeler: "NH₃ + H⁺ = NH₄⁺", nogSimpeler: "NH₄⁺" },
+          niveaus: { basis: "NH₄⁺.", simpeler: "NH₃ + H⁺ = NH₄⁺", nogSimpeler: "NH₄⁺" },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CO₂ uit → pH op", tekst: "**Hyperventilatie** = snel ademen → veel CO₂ uitgeademd → minder H₂CO₃ in bloed → minder H⁺ → pH **stijgt** (alkalose). Behandeling: in tasje ademen om CO₂ weer op te bouwen." }],
           theorie: "Onderademing (hypoventilatie): omgekeerd, pH daalt (acidose). Beide gevaarlijk.",
-          niveaus: { basis: "Stijgen. A.", simpeler: "Hyperventilatie = pH↑", nogSimpeler: "Op" },
+          niveaus: { basis: "Stijgen.", simpeler: "Hyperventilatie = pH↑", nogSimpeler: "Op" },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
         wrongHints: [null, "Niet — beide zwak.", "Niet primair.", "Wel werking."],
         uitlegPad: {
           stappen: [{ titel: "Klassieker", tekst: "**Azijnzuur + natriumacetaat** = zwak zuur + zijn geconjugeerde base = **buffer**. pH-bereik rond pKa azijnzuur (4,75)." }],
-          niveaus: { basis: "Buffer. A.", simpeler: "Mengsel = buffer", nogSimpeler: "Buffer" },
+          niveaus: { basis: "Buffer.", simpeler: "Mengsel = buffer", nogSimpeler: "Buffer" },
         },
       },
       {
@@ -322,7 +322,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Glazuur kwetsbaar", tekst: "Cola pH 2,5 → veel onder 5,5 → glazuur lost op. Tips: minder drinken, **water spoelen** na om pH te verhogen, **niet direct poetsen** (glazuur is verzacht — poetsen schuurt het weg). Wacht 30 min." }],
           theorie: "Cito-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",
-          niveaus: { basis: "Spoelen + niet poetsen. A.", simpeler: "Niet meteen poetsen, wel spoelen", nogSimpeler: "Spoelen" },
+          niveaus: { basis: "Spoelen + niet poetsen.", simpeler: "Niet meteen poetsen, wel spoelen", nogSimpeler: "Spoelen" },
         },
       },
     ],

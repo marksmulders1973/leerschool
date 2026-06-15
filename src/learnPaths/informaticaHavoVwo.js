@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — concept.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Recept-analogie", tekst: "**Algoritme** = stap-voor-stap-instructies om probleem op te lossen. Niet computer-specifiek — kookrecept is ook algoritme. **Goede algoritme**: helder, eindig, deterministisch (zelfde input → zelfde output). **Programma** = algoritme + concrete code." }],
-          niveaus: { basis: "Stappenplan. A.", simpeler: "Algoritme = recept", nogSimpeler: "A." },
+          niveaus: { basis: "Stappenplan.", simpeler: "Algoritme = recept", nogSimpeler: "A." },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Geen Python.", "Niet — dat is C/Java.", "Onvolledig + while ipv for."],
         uitlegPad: {
           stappen: [{ titel: "Python for-loop", tekst: "**Python for-lus**: `for i in range(5): print(i)` print getallen 0,1,2,3,4 (range begint bij 0, telt tot maar exclusief 5). Andere talen anders: Java `for(int i=0; i<5; i++)`. Python is leesbaar + populair bij beginners en data science." }],
-          niveaus: { basis: "for i in range(5). A.", simpeler: "Python for", nogSimpeler: "A." },
+          niveaus: { basis: "for i in range(5).", simpeler: "Python for", nogSimpeler: "A." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — vereist sortering.", "Niet — algemener.", "Niet — werkt op alles vergelijkbaar."],
         uitlegPad: {
           stappen: [{ titel: "Telefoonboek-strategie", tekst: "**Binair zoeken** (binary search): in **gesorteerde** lijst, kijk middelste element. Te groot? Zoek in eerste helft. Te klein? In tweede helft. Halveer bereik elke stap → **O(log n)** = zeer snel.\n\n1 miljoen items: binair zoekt in max 20 stappen, lineair (één voor één) in gemiddeld 500.000.\n\nWerkt zoals zoeken in oud telefoonboek: open midden, wij in correcte helft." }],
-          niveaus: { basis: "Halveren in gesorteerd. A.", simpeler: "Binair = halveren", nogSimpeler: "A." },
+          niveaus: { basis: "Halveren in gesorteerd.", simpeler: "Binair = halveren", nogSimpeler: "A." },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Dat is O(n).", "Dat is O(log n).", "Dat is O(1)."],
         uitlegPad: {
           stappen: [{ titel: "Big O", tekst: "**Big O-notatie**: hoe schaalt algoritme met n input-grootte?\n• O(1): constant (bv. array[5]).\n• O(log n): logaritmisch (binair zoeken).\n• O(n): lineair (lineair zoeken).\n• **O(n²): kwadratisch** (bubble sort, geneste lussen).\n• O(2^n): exponentieel (rugzakprobleem brute-force).\n\nBij n=1000: O(n²) = 1 miljoen operaties. O(n log n) = 10.000. Verschil groot.\n\nKies algoritme op basis van schaal." }],
-          niveaus: { basis: "Kwadratisch. A.", simpeler: "n² = kwadratisch", nogSimpeler: "A." },
+          niveaus: { basis: "Kwadratisch.", simpeler: "n² = kwadratisch", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Hergebruik", tekst: "**DRY = Don't Repeat Yourself**: maak van herhaalde code een **functie/klasse** om duplicatie te vermijden. Voordeel: één plek aanpassen → effect overal. Tegenovergesteld: WET (Write Everything Twice — slecht). Onderhoudbaarheid groot verschil." }],
-          niveaus: { basis: "Don't Repeat Yourself. A.", simpeler: "DRY = niet herhalen", nogSimpeler: "A." },
+          niveaus: { basis: "Don't Repeat Yourself.", simpeler: "DRY = niet herhalen", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Niet — apart protocol.", "Niet — IP doet routering.", "Niet — FTP."],
         uitlegPad: {
           stappen: [{ titel: "Telefoonboek internet", tekst: "**DNS** (Domain Name System): vertaalt **leesbare domeinnaam** (google.com) naar **IP-adres** (142.250.74.110). Als 'telefoonboek' internet. Je intypt google.com → browser vraagt DNS → krijgt IP → maakt verbinding.\n\nDNS-servers wereldwijd, hiërarchisch (root → TLD → autoritatief)." }],
-          niveaus: { basis: "Domeinnaam → IP. A.", simpeler: "DNS = vertaler", nogSimpeler: "A." },
+          niveaus: { basis: "Domeinnaam → IP.", simpeler: "DNS = vertaler", nogSimpeler: "A." },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Niet — vaak iets trager.", "Niet relevant.", "Niet — alle sites."],
         uitlegPad: {
           stappen: [{ titel: "S = Secure", tekst: "**HTTPS** (HTTP Secure): verkeer geëncrypteerd via **TLS** (vroeger SSL). Voorkomt afluisteren + manipulatie tijdens transport. Vandaag standaard — browsers waarschuwen voor HTTP-sites. Sloten-symbool naast URL = HTTPS actief." }],
-          niveaus: { basis: "Encryptie. A.", simpeler: "HTTPS = TLS", nogSimpeler: "A." },
+          niveaus: { basis: "Encryptie.", simpeler: "HTTPS = TLS", nogSimpeler: "A." },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Phishing.", "SQL injection.", "Malware (apart concept)."],
         uitlegPad: {
           stappen: [{ titel: "Distributed Denial of Service", tekst: "**DDoS** = **Distributed Denial of Service**. Vele computers tegelijk overspoelen target-server met verkeer → server kan legitieme gebruikers niet meer bedienen. **Distributed** = vele bronnen (botnet — geïnfecteerde computers). Verdedigen lastig — schaalbare infrastructuur + Cloudflare-achtige diensten." }],
-          niveaus: { basis: "Overspoelen verkeer. A.", simpeler: "DDoS = overspoelen", nogSimpeler: "A." },
+          niveaus: { basis: "Overspoelen verkeer.", simpeler: "DDoS = overspoelen", nogSimpeler: "A." },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Verouderd + gebroken.", "Voorganger WPA3.", "Geen beveiliging."],
         uitlegPad: {
           stappen: [{ titel: "WPA3 = nieuwste", tekst: "**WLAN-beveiligings-evolutie**: WEP (1997, gebroken) → WPA (2003) → **WPA2** (2004, lange tijd standaard) → **WPA3** (2018, nieuwste). WPA3 lost zwakheden WPA2 op (KRACK-aanval) + biedt bescherming tegen offline brute-force-aanvallen. Bij router-instellingen: kies WPA3 als beschikbaar." }],
-          niveaus: { basis: "WPA3. A.", simpeler: "Veiligst = WPA3", nogSimpeler: "A." },
+          niveaus: { basis: "WPA3.", simpeler: "Veiligst = WPA3", nogSimpeler: "A." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — wet niet standaard.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "GDPR/AVG", tekst: "**AVG** (Algemene Verordening Gegevensbescherming) = NL-naam. **GDPR** (General Data Protection Regulation) = EU. Sinds 25 mei 2018. Bescherming persoonsgegevens van EU-burgers. Rechten: inzage, correctie, **vergetelheid** ('right to be forgotten'), dataportabiliteit. **Datalek** moet binnen 72u gemeld worden bij Autoriteit Persoonsgegevens. Boetes tot 4% wereldwijde omzet of €20 mln (hoogste van twee)." }],
-          niveaus: { basis: "EU-privacy-wet. A.", simpeler: "AVG = privacy", nogSimpeler: "A." },
+          niveaus: { basis: "EU-privacy-wet.", simpeler: "AVG = privacy", nogSimpeler: "A." },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Identificeert rij uniek", tekst: "**Primary key**: uniek identificatie per rij. Vaak auto-incrementing ID (1, 2, 3, ...). Garandeert geen duplicates. Andere tabellen kunnen verwijzen via **foreign key**. Voorbeeld: Leerling-ID 1 verschilt van Leerling-ID 2 zelfs als beide 'Anna' heten." }],
-          niveaus: { basis: "Uniek ID. A.", simpeler: "PK = uniek", nogSimpeler: "A." },
+          niveaus: { basis: "Uniek ID.", simpeler: "PK = uniek", nogSimpeler: "A." },
         },
       },
       {
@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Geen SQL.", "Geen SQL.", "Geen SQL."],
         uitlegPad: {
           stappen: [{ titel: "SELECT-syntax", tekst: "**SQL SELECT**: `SELECT [kolommen] FROM [tabel] WHERE [conditie];`\n\n`SELECT * FROM Leerlingen WHERE klas = '4A';` selecteert alle kolommen voor rijen waar klas '4A' is. **\\*** = alle kolommen. **WHERE** = filter. **String-waarden in quotes**." }],
-          niveaus: { basis: "SELECT...WHERE. A.", simpeler: "SQL = SELECT FROM WHERE", nogSimpeler: "A." },
+          niveaus: { basis: "SELECT...WHERE.", simpeler: "SQL = SELECT FROM WHERE", nogSimpeler: "A." },
         },
       },
       {
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Dat is ORDER BY.", "Dat is DISTINCT.", "Dat is CREATE TABLE."],
         uitlegPad: {
           stappen: [{ titel: "Tabellen koppelen", tekst: "**JOIN**: combineert rijen uit 2+ tabellen op basis van overeenkomende kolommen (vaak foreign-primary key match). Types: **INNER JOIN** (alleen matches), **LEFT JOIN** (alle uit linker tabel), RIGHT JOIN, FULL JOIN.\n\nVoorbeeld: leerling + diens cijfers in één query." }],
-          niveaus: { basis: "Combineert tabellen. A.", simpeler: "JOIN = combineren", nogSimpeler: "A." },
+          niveaus: { basis: "Combineert tabellen.", simpeler: "JOIN = combineren", nogSimpeler: "A." },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "1NF = elke cel één waarde", tekst: "**1e Normaalvorm (1NF)**: elke cel bevat **één enkele atomaire waarde**, geen lijsten of geneste structuren. **Foute** cel: 'Wiskunde, Engels, Frans' in één cel. **Goede** oplossing: aparte rijen per vak in vakken-tabel.\n\nHogere normaalvormen (2NF, 3NF) elimineren verdere redundantie + afhankelijkheid-anomalieën." }],
-          niveaus: { basis: "Atomair. A.", simpeler: "1NF = 1 waarde per cel", nogSimpeler: "A." },
+          niveaus: { basis: "Atomair.", simpeler: "1NF = 1 waarde per cel", nogSimpeler: "A." },
         },
       },
       {
@@ -195,7 +195,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "4 V-kenmerken", tekst: "**Big Data 4 V's**:\n• **Volume**: groot (terabytes/petabytes).\n• **Velocity**: snelheid van data-stroom (real-time IoT, social media).\n• **Variety**: verschillende formaten (tekst, video, log, sensor).\n• **Veracity**: betrouwbaarheid + accuratheid (data kan vies, onzeker zijn).\n\nSoms 5e V: Value (waarde). Klassiek voorbeeld: Twitter-feed = volume + velocity + variety + veracity-uitdagingen tegelijk." }],
-          niveaus: { basis: "Vol/Vel/Var/Ver. A.", simpeler: "4V", nogSimpeler: "A." },
+          niveaus: { basis: "Vol/Vel/Var/Ver.", simpeler: "4V", nogSimpeler: "A." },
         },
       },
     ],
@@ -214,7 +214,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "1950 Turing", tekst: "**Alan Turing** stelde 1950 voor: machine is 'intelligent' als mens in tekst-conversatie niet kan onderscheiden of antwoord van mens of machine komt. **Turing-test**. Beperkt criterium (geen begrip-vereiste), maar invloedrijk. ChatGPT slaagt vaak — definitie 'intelligent' nu omstreden." }],
-          niveaus: { basis: "Mens vs machine onderscheiden. A.", simpeler: "Turing = mens-of-machine", nogSimpeler: "A." },
+          niveaus: { basis: "Mens vs machine onderscheiden.", simpeler: "Turing = mens-of-machine", nogSimpeler: "A." },
         },
       },
       {
@@ -224,7 +224,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Voorspel volgend woord", tekst: "**LLM = Large Language Model**: model getraind op enorme tekst-corpus dat 'volgend woord' voorspelt op basis context. Voorbeelden: **ChatGPT** (OpenAI), **Claude** (Anthropic), **Gemini** (Google), **LLaMA** (Meta open source). Onderscheid: niet **denken** — herkennen patronen op grote schaal." }],
-          niveaus: { basis: "LLM. A.", simpeler: "LLM = taalmodel", nogSimpeler: "A." },
+          niveaus: { basis: "LLM.", simpeler: "LLM = taalmodel", nogSimpeler: "A." },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Verzonnen feiten", tekst: "**Hallucinatie**: LLM produceert antwoord dat **plausibel klinkt** maar **onjuist** is. Bv. verzint feiten, bronnen, citaten. Komt door: LLM is patroon-voorspeller, niet feit-checker. **Gevolg**: niet blind vertrouwen, altijd verifiëren. Modellen worden beter (RAG = Retrieval Augmented Generation hangt feiten erbij) maar probleem blijft." }],
-          niveaus: { basis: "Plausibele onzin. A.", simpeler: "Hallucinatie = verzinnen", nogSimpeler: "A." },
+          niveaus: { basis: "Plausibele onzin.", simpeler: "Hallucinatie = verzinnen", nogSimpeler: "A." },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Garbage in, garbage out", tekst: "**Bias** = systemische vertekening in AI-output. Komt door **vooringenomen trainingsdata**. Voorbeelden:\n• Gezichtsherkenning: getraind op vooral lichte huidskleur → werkt slechter op donkere.\n• Amazon-sollicitatie-AI: getraind op CV's mannen → discrimineerde vrouwen.\n• LLM's: kunnen sexisme, racisme overnemen uit web-data.\n\nAanpakken: diverse data, audits, fairness-evaluaties." }],
-          niveaus: { basis: "Trainingsdata. A.", simpeler: "Bias = vooringenomen data", nogSimpeler: "A." },
+          niveaus: { basis: "Trainingsdata.", simpeler: "Bias = vooringenomen data", nogSimpeler: "A." },
         },
       },
       {
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Risicogebaseerd", tekst: "**EU AI Act** (eerste grote AI-wet wereldwijd, 2024): **risico-niveau-aanpak**:\n• **Onaanvaardbaar** (verboden): social scoring (China-stijl), realtime biometrie publieke ruimte, manipulatie.\n• **Hoog risico**: medisch, kritieke infra, HR, onderwijs-AI — strenge regels.\n• **Beperkt risico** (transparantie): chatbots, deepfakes moeten gemarkeerd.\n• **Minimaal**: vrije gebruik (zoals spamfilter).\n\nBoetes tot 7% wereldwijde omzet. NL implementeert via aanvullende wet 2025." }],
-          niveaus: { basis: "Risico-niveau. A.", simpeler: "AI Act = risico-tiers", nogSimpeler: "A." },
+          niveaus: { basis: "Risico-niveau.", simpeler: "AI Act = risico-tiers", nogSimpeler: "A." },
         },
       },
     ],
@@ -273,7 +273,7 @@ const steps = [
         wrongHints: [null, "Lineair worst case.", "Niet — veel minder.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "log₂(1 miljoen) ≈ 20", tekst: "**Binair zoeken**: O(log n). log₂(1.000.000) ≈ **20**. Elke stap halveer je bereik: 1.000.000 → 500.000 → 250.000 → ... → 1.\n\nVergelijk: lineair zoeken = O(n) = gemiddeld 500.000 stappen.\n\nVerschil: 20 vs 500.000 = factor 25.000 sneller bij grote lijsten." }],
-          niveaus: { basis: "~20. A.", simpeler: "log n = 20", nogSimpeler: "A." },
+          niveaus: { basis: "~20.", simpeler: "log n = 20", nogSimpeler: "A." },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
         wrongHints: [null, "Web-pagina's.", "Bestanden.", "Naam → IP."],
         uitlegPad: {
           stappen: [{ titel: "SMTP", tekst: "**SMTP** (Simple Mail Transfer Protocol): voor **versturen** e-mail. **POP3** of **IMAP**: voor **ontvangen** (cliënt-server). HTTP = web, FTP = bestanden, DNS = naam→IP-vertaling." }],
-          niveaus: { basis: "SMTP. A.", simpeler: "Mail = SMTP", nogSimpeler: "A." },
+          niveaus: { basis: "SMTP.", simpeler: "Mail = SMTP", nogSimpeler: "A." },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
         wrongHints: [null, "Niet — hash is one-way.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Eenrichtings-versleuteling", tekst: "**Hashing** (SHA-256, bcrypt): converteert input naar fixed-length output. **One-way**: kan niet terug. Toepassing: wachtwoorden — niet plain opslaan, maar hash. Bij login: hash invoer + vergelijk met opgeslagen hash. Database-lek → wachtwoorden niet direct bruikbaar (mits sterke hash + salt).\n\nVerschil met encryptie: encryptie is omkeerbaar (juiste sleutel → originele tekst). Hash niet." }],
-          niveaus: { basis: "Wachtwoorden one-way. A.", simpeler: "Hash = one-way", nogSimpeler: "A." },
+          niveaus: { basis: "Wachtwoorden one-way.", simpeler: "Hash = one-way", nogSimpeler: "A." },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Relationeel.", "Relationeel.", "Relationeel."],
         uitlegPad: {
           stappen: [{ titel: "Document-database", tekst: "**MongoDB** = NoSQL document-database (JSON-achtige documenten). **PostgreSQL, MySQL, Oracle, SQL Server** = relationele SQL-databases. NoSQL-typen ook: Redis (key-value), Cassandra (column), Neo4j (graph). Gebruikt voor schaalbare web-apps + flexibele schema's." }],
-          niveaus: { basis: "MongoDB. A.", simpeler: "NoSQL = MongoDB", nogSimpeler: "A." },
+          niveaus: { basis: "MongoDB.", simpeler: "NoSQL = MongoDB", nogSimpeler: "A." },
         },
       },
       {
@@ -313,7 +313,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Woord-grap."],
         uitlegPad: {
           stappen: [{ titel: "Supervised = met labels", tekst: "**Supervised learning**: model getraind op **gelabelde** voorbeelden (input + verwachte output). Voorbeeld: 10.000 foto's gelabeld 'kat' of 'hond' → model leert onderscheid. **Unsupervised**: zonder labels, vindt patronen zelf (clustering). **Reinforcement**: leren via beloning (zoals AlphaGo)." }],
-          niveaus: { basis: "Gelabelde data. A.", simpeler: "Supervised = labels", nogSimpeler: "A." },
+          niveaus: { basis: "Gelabelde data.", simpeler: "Supervised = labels", nogSimpeler: "A." },
         },
       },
     ],

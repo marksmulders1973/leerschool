@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Zintuigen zijn perifeer.", "Spieren niet — die zijn doel.", "Niet — zijn perifeer + effector."],
         uitlegPad: {
           stappen: [{ titel: "CZS = brein + ruggenmerg", tekst: "**Centrale zenuwstelsel** = hersenen + ruggenmerg. Beschermd door schedel + wervelkolom + hersenvliezen + hersenvocht. Alle andere zenuwen heten perifeer." }],
-          niveaus: { basis: "Hersenen + ruggenmerg. A.", simpeler: "CZS = brein + ruggenmerg", nogSimpeler: "A." },
+          niveaus: { basis: "Hersenen + ruggenmerg.", simpeler: "CZS = brein + ruggenmerg", nogSimpeler: "A." },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Cerebellum = balans", tekst: "**Kleine hersenen (cerebellum)**: coördinatie + evenwicht + fijne motoriek. Beschadiging → wankel lopen + tremor. Bv: alcohol-effect zit hier deels." }],
           theorie: "Cito-favoriet: 'iemand kan niet meer rechtuit lopen' → kleine hersenen.",
-          niveaus: { basis: "Kleine hersenen. A.", simpeler: "Coördinatie = cerebellum", nogSimpeler: "Klein" },
+          niveaus: { basis: "Kleine hersenen.", simpeler: "Coördinatie = cerebellum", nogSimpeler: "Klein" },
         },
       },
       {
@@ -59,7 +59,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Axon = uitgaande", tekst: "**Axon** = lange uitloper waarmee prikkel weg-gaat. Per neuron 1 axon (kan vertakken). **Dendrieten** ontvangen (er zijn er vele)." }],
           theorie: "Memo: 'A' van Axon = Afgeven. 'D' van Dendriet = Doorkrijgen.",
-          niveaus: { basis: "Axon. A.", simpeler: "Verstuurt = axon", nogSimpeler: "Axon" },
+          niveaus: { basis: "Axon.", simpeler: "Verstuurt = axon", nogSimpeler: "Axon" },
         },
       },
       {
@@ -70,7 +70,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sympathisch = actie", tekst: "**Sympathisch zenuwstelsel** activeert bij stress: hartslag↑, ademhaling↑, pupillen wijd, bloed naar spieren, vertering↓. Bereidt voor op vechten of vluchten. Adrenaline ondersteunt." }],
           theorie: "Memo: 'sym' van Sympathisch = Snel + Stress. 'Para' = Pauze (rust).",
-          niveaus: { basis: "Sympathisch. A.", simpeler: "Vecht/vlucht = sympathisch", nogSimpeler: "Sympathisch" },
+          niveaus: { basis: "Sympathisch.", simpeler: "Vecht/vlucht = sympathisch", nogSimpeler: "Sympathisch" },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld richting.", "Niet — binnen CZS.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Motor = beweging", tekst: "**Motorisch neuron** = van CZS naar effector (spier of klier). Veroorzaakt beweging of secretie. Tegenover: **sensorisch** (zintuig → CZS). Daartussen vaak: **schakelneuron** binnen CZS." }],
-          niveaus: { basis: "Motorisch. A.", simpeler: "Naar spier = motor", nogSimpeler: "Motor" },
+          niveaus: { basis: "Motorisch.", simpeler: "Naar spier = motor", nogSimpeler: "Motor" },
         },
       },
     ],
@@ -99,7 +99,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is piek actiepotentiaal.", "Niet — wel verschil.", "Niet realistisch."],
         uitlegPad: {
           stappen: [{ titel: "−70 mV in rust", tekst: "**Rustpotentiaal** ≈ **−70 mV**. Binnen-cel meer negatief geladen dan buiten (door K⁺ binnen + Na⁺ buiten + grote negatieve eiwitten binnen). Na⁺/K⁺-pomp onderhoudt dit met ATP." }],
-          niveaus: { basis: "−70 mV. A.", simpeler: "Rust = −70 mV", nogSimpeler: "−70" },
+          niveaus: { basis: "−70 mV.", simpeler: "Rust = −70 mV", nogSimpeler: "−70" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Na⁺ binnenstromen", tekst: "**Depolarisatie**: drempel overschreden → Na⁺-kanalen openen → Na⁺ stroomt naar binnen (sterke gradient). Spanning klimt van −70 naar +40 mV. Begint actiepotentiaal." }],
           theorie: "Cyclus: rust (−70) → depolarisatie (+40) → repolarisatie (−70) → hyperpolarisatie (−80) → rust.",
-          niveaus: { basis: "Na⁺ in, + spanning. A.", simpeler: "Depolarisatie = Na⁺ in", nogSimpeler: "Na⁺" },
+          niveaus: { basis: "Na⁺ in, + spanning.", simpeler: "Depolarisatie = Na⁺ in", nogSimpeler: "Na⁺" },
         },
       },
       {
@@ -121,7 +121,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Chemische brug", tekst: "**Neurotransmitter** = chemische stof in synaptische blaasjes. Bij actiepotentiaal vrijgegeven, diffundeert door synapsspleet, bindt receptor op volgende cel. Voorbeelden: acetylcholine, dopamine, serotonine, GABA, glutamaat." }],
           theorie: "Drugs werken vaak via neurotransmitters: SSRI blokkeert serotonine-heropname (anti-depressivum), nicotine bindt acetylcholine-receptor.",
-          niveaus: { basis: "Neurotransmitter. A.", simpeler: "Synaps = neurotransmitter", nogSimpeler: "NT" },
+          niveaus: { basis: "Neurotransmitter.", simpeler: "Synaps = neurotransmitter", nogSimpeler: "NT" },
         },
       },
       {
@@ -132,7 +132,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Snel = via ruggenmerg", tekst: "**Reflexboog**: receptor → sensorisch neuron → ruggenmerg (eventueel schakelneuron) → motorneuron → spier. **Omzeilt** grote hersenen. Bewustzijn ('au!') komt later via opwaartse banen." }],
           theorie: "Cito-favoriet: 'waarom is reflex zo snel?' Antwoord: omzeilt grote hersenen.",
-          niveaus: { basis: "Via ruggenmerg. A.", simpeler: "Reflex = ruggenmerg", nogSimpeler: "Ruggenmerg" },
+          niveaus: { basis: "Via ruggenmerg.", simpeler: "Reflex = ruggenmerg", nogSimpeler: "Ruggenmerg" },
         },
       },
       {
@@ -143,7 +143,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "MS = myeline aangetast", tekst: "**Multiple Sclerose**: auto-immuun-aandoening waarbij eigen afweersysteem myeline rond axonen afbreekt. Gevolgen: tragere geleiding, fouten, klachten als spierzwakte, vermoeidheid, visusproblemen. Cito-eindexamen-classic." }],
           theorie: "Onderscheid: MS = myeline. ALS = motorneuron-cellichaam. Parkinson = dopamine-neuronen. Alzheimer = hippocampus-cellen.",
-          niveaus: { basis: "Myelineschede. A.", simpeler: "MS = myeline", nogSimpeler: "Myeline" },
+          niveaus: { basis: "Myelineschede.", simpeler: "MS = myeline", nogSimpeler: "Myeline" },
         },
       },
     ],
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Niet — stuurt energie.", "Niet — bloedsuiker.", "Niet — stress."],
         uitlegPad: {
           stappen: [{ titel: "Hypofyse stuurt rest", tekst: "**Hypofyse** ('meester-klier') stuurt andere klieren aan via opdracht-hormonen: TSH → schildklier, ACTH → bijnier, FSH/LH → geslachtsklieren. Wordt zelf gestuurd door hypothalamus." }],
-          niveaus: { basis: "Hypofyse. A.", simpeler: "Meester = hypofyse", nogSimpeler: "Hypofyse" },
+          niveaus: { basis: "Hypofyse.", simpeler: "Meester = hypofyse", nogSimpeler: "Hypofyse" },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Insuline = naar omlaag", tekst: "**Insuline** (alvleesklier β-cellen) wordt vrijgegeven bij hoge bloedsuiker (na eten). Zorgt dat cellen glucose opnemen + lever opslaat als glycogeen. Bloedsuiker daalt. Tegenovergesteld: glucagon (α-cellen, bij lage suiker)." }],
           theorie: "Memo: 'In-suline' brengt glucose IN de cel. 'Gluc-Agon' geeft glucose Af aan bloed.",
-          niveaus: { basis: "Insuline. A.", simpeler: "Suiker omlaag = insuline", nogSimpeler: "Insuline" },
+          niveaus: { basis: "Insuline.", simpeler: "Suiker omlaag = insuline", nogSimpeler: "Insuline" },
         },
       },
       {
@@ -184,7 +184,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schildklier = energiethermostaat", tekst: "**Thyroxine (T4)** + actieve vorm T3 van schildklier. Stuurt **stofwisseling-snelheid** (basaal metabolisme). Te weinig → traag, koud, dik. Te veel → rusteloos, warm, mager." }],
           theorie: "Schildklier gebruikt jodium om T4 te maken. Daarom zout met jodium (vanaf 1940s NL).",
-          niveaus: { basis: "Thyroxine. A.", simpeler: "Stofwisseling = thyroxine", nogSimpeler: "Thyroxine" },
+          niveaus: { basis: "Thyroxine.", simpeler: "Stofwisseling = thyroxine", nogSimpeler: "Thyroxine" },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "Niet — cortisol (langzamer).", "Niet — thyroxine.", "Niet — stuurt aan, niet eindproduct."],
         uitlegPad: {
           stappen: [{ titel: "Adrenaline = uit merg", tekst: "**Bijniermerg** (binnenste deel bijnier): adrenaline + noradrenaline bij acute stress (vechten/vluchten). Werkt seconden. **Bijnierschors** (buitenste): cortisol langzamer + langer." }],
-          niveaus: { basis: "Bijniermerg. A.", simpeler: "Adrenaline = merg", nogSimpeler: "Merg" },
+          niveaus: { basis: "Bijniermerg.", simpeler: "Adrenaline = merg", nogSimpeler: "Merg" },
         },
       },
       {
@@ -204,7 +204,7 @@ const steps = [
         wrongHints: [null, "Niet — werkt andersom.", "Niet relevant.", "Niet — andere aandoening."],
         uitlegPad: {
           stappen: [{ titel: "Type 1 = β-cellen kapot", tekst: "**Diabetes type 1**: eigen afweersysteem vernietigt β-cellen alvleesklier → geen insuline-productie meer. Patiënt moet dagelijks insuline spuiten. Vaak vanaf jonge leeftijd. **Type 2**: cellen reageren slechter op insuline (resistentie) — vaak ouder + leefstijl-gerelateerd." }],
-          niveaus: { basis: "Insuline. A.", simpeler: "DM1 = insuline-tekort", nogSimpeler: "Insuline" },
+          niveaus: { basis: "Insuline.", simpeler: "DM1 = insuline-tekort", nogSimpeler: "Insuline" },
         },
       },
     ],
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Onderdeel ervan, niet definitie.", "Niet — alleen onderdeel.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Inwendige balans", tekst: "**Homeostase** = stabiele interne omstandigheden (T, glucose, pH, water, etc.) ondanks externe verandering. Continu actief proces via sensors → CZS/hormonen → effectoren." }],
-          niveaus: { basis: "Stabiel intern. A.", simpeler: "Homeostase = balans", nogSimpeler: "Balans" },
+          niveaus: { basis: "Stabiel intern.", simpeler: "Homeostase = balans", nogSimpeler: "Balans" },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Negatief = tegen-bewegend", tekst: "**Negatieve terugkoppeling**: afwijking → tegenmaatregel → terug naar setpoint. Te warm → zweten → koeler. Te koud → rillen → warmer. Werkt zoals thermostaat: stabiliseert systeem." }],
           theorie: "Cito-favoriet: 'beschrijf negatieve terugkoppeling bij lichaamstemperatuur' — bovenstaande regel.",
-          niveaus: { basis: "Negatieve terugkoppeling. A.", simpeler: "Negatief = corrigeert", nogSimpeler: "Negatief" },
+          niveaus: { basis: "Negatieve terugkoppeling.", simpeler: "Negatief = corrigeert", nogSimpeler: "Negatief" },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [null, "Niet — bloedsuiker.", "Niet — acute stress.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "ADH = anti-diuretisch", tekst: "**ADH** (anti-diuretisch hormoon = vasopressine, hypofyse). 'Anti-diuretisch' = tegen plassen. Zorgt dat nieren water terugresorberen → minder + geconcentreerder urine. Bij dorst hoge ADH. Alcohol blokkeert ADH → meer plassen + uitdroging." }],
-          niveaus: { basis: "ADH. A.", simpeler: "Water vasthouden = ADH", nogSimpeler: "ADH" },
+          niveaus: { basis: "ADH.", simpeler: "Water vasthouden = ADH", nogSimpeler: "ADH" },
         },
       },
       {
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — verlaagt suiker.", "Wel actie.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Glucagon mobiliseert", tekst: "**Lage bloedsuiker** → α-cellen alvleesklier geven **glucagon** → lever breekt **glycogeen** (opslag-glucose) af → glucose vrij in bloed → suiker normaal. Bij langere honger ook: adrenaline + cortisol." }],
-          niveaus: { basis: "Glucagon. A.", simpeler: "Laag suiker = glucagon", nogSimpeler: "Glucagon" },
+          niveaus: { basis: "Glucagon.", simpeler: "Laag suiker = glucagon", nogSimpeler: "Glucagon" },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Cortisol = ochtend-wekker", tekst: "**Cortisol** piekt rond 6-8 uur 's ochtends → helpt wakker worden + bloedsuiker omhoog voor energie. **Melatonine** doet tegenovergestelde: piekt 's nachts → slaperig. Beide aangestuurd door hypothalamus + pijnappelklier." }],
           theorie: "Verstoord ritme bij schermtijd 's avonds (blauw licht remt melatonine) → slecht slapen.",
-          niveaus: { basis: "Cortisol. A.", simpeler: "'s Ochtends = cortisol", nogSimpeler: "Cortisol" },
+          niveaus: { basis: "Cortisol.", simpeler: "'s Ochtends = cortisol", nogSimpeler: "Cortisol" },
         },
       },
     ],
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — rust + suiker.", "Niet — werkt veel trager.", "Niet — stofwisseling."],
         uitlegPad: {
           stappen: [{ titel: "Acute schrik = vecht-vlucht", tekst: "Schrik → sympathisch zenuwstelsel direct actief (seconden) + bijniermerg geeft adrenaline (versterkt sympathisch effect). Hartslag↑, ademhaling↑, bloedsuiker↑." }],
-          niveaus: { basis: "Sympathisch + adrenaline. A.", simpeler: "Schrik = sympathisch+adrenaline", nogSimpeler: "A." },
+          niveaus: { basis: "Sympathisch + adrenaline.", simpeler: "Schrik = sympathisch+adrenaline", nogSimpeler: "A." },
         },
       },
       {
@@ -294,7 +294,7 @@ const steps = [
         wrongHints: [null, "Niet — versnelt juist.", "Wel verband.", "Wel mogelijk in te schatten."],
         uitlegPad: {
           stappen: [{ titel: "Myeline = sprong-geleiding", tekst: "Zonder myeline: 1-5 m/s. Met myeline: tot 120 m/s via sprong-geleiding tussen knopen van Ranvier. **30 m/s** is duidelijk gemyeliniseerd." }],
-          niveaus: { basis: "Ja. A.", simpeler: "30 m/s = met myeline", nogSimpeler: "Ja" },
+          niveaus: { basis: "Ja.", simpeler: "30 m/s = met myeline", nogSimpeler: "Ja" },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hypothyreoïdie", tekst: "Symptomen passen bij **hypothyreoïdie** (te weinig schildklier-thyroxine): trage stofwisseling → koud, vermoeid, gewichtstoename, droge huid, depressief. Behandeling: synthetische T4 (levothyroxine) dagelijks." }],
           theorie: "Tegengesteld: hyperthyreoïdie = te veel = warm, rusteloos, mager, hartkloppingen.",
-          niveaus: { basis: "Schildklier (te laag). A.", simpeler: "Koud+traag+aankomen = schildklier laag", nogSimpeler: "Schildklier" },
+          niveaus: { basis: "Schildklier (te laag).", simpeler: "Koud+traag+aankomen = schildklier laag", nogSimpeler: "Schildklier" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Positief = versterking", tekst: "**Bevalling**: weeën rekken baarmoederhals → hypofyse geeft oxytocine → meer weeën → meer rek → meer oxytocine. **Positieve terugkoppeling**: versterkt zichzelf tot geboorte plaatsvindt. Daarna stopt cyclus." }],
           theorie: "Andere voorbeelden positieve terugkoppeling: bloedstolling (cascade), borstvoeding (prolactine), eisprong (LH-piek).",
-          niveaus: { basis: "Positief. A.", simpeler: "Weeën versterken zelf = positief", nogSimpeler: "Positief" },
+          niveaus: { basis: "Positief.", simpeler: "Weeën versterken zelf = positief", nogSimpeler: "Positief" },
         },
       },
       {
@@ -326,7 +326,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — significant verschillend.", "Wel — animale + autonoom."],
         uitlegPad: {
           stappen: [{ titel: "Snel vs aanhoudend", tekst: "**Zenuwstelsel** = elektrische signalen, ms-snel, specifiek doelcel, korte werking. **Hormoonstelsel** = chemische stoffen in bloed, sec tot dagen, alle cellen met receptor, langere werking. Samenwerken voor regulatie." }],
-          niveaus: { basis: "Zenuw snel+kort, hormoon traag+lang. A.", simpeler: "Zenuw: snel kort, hormoon: traag lang", nogSimpeler: "A." },
+          niveaus: { basis: "Zenuw snel+kort, hormoon traag+lang.", simpeler: "Zenuw: snel kort, hormoon: traag lang", nogSimpeler: "A." },
         },
       },
     ],

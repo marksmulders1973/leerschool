@@ -39,7 +39,7 @@ const steps = [
           stappen: [{ titel: "4 valentie-elektronen", tekst: "Koolstof heeft **4 elektronen** in buitenste schil. Wil naar 8 (octet) → deelt 4 met andere atomen → **4 covalente bindingen**. Altijd. Stabiel." }],
           woorden: [{ woord: "valentie-elektron", uitleg: "Elektron in buitenste schil — bepaalt binding-gedrag." }, { woord: "covalente binding", uitleg: "Gedeelde elektronenparen tussen atomen." }],
           theorie: "Octetregel: atomen willen 8 elektronen in buitenste schil (edelgas-config Ne, Ar, Kr).",
-          niveaus: { basis: "4. A.", simpeler: "Koolstof = 4 bindingen", nogSimpeler: "4" },
+          niveaus: { basis: "4.", simpeler: "Koolstof = 4 bindingen", nogSimpeler: "4" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1 C + 4 H = methaan", tekst: "**Methaan** = simpelste alkaan. 1 koolstof + 4 waterstof = CH₄. Structuur: tetrahedrisch (4 H rond C, hoeken 109,5°)." }],
           theorie: "Aardgas = grotendeels methaan. Geur (rotte eieren) is toegevoegd voor veiligheid — methaan zelf reukloos.",
-          niveaus: { basis: "CH₄. A.", simpeler: "Methaan = CH₄", nogSimpeler: "CH4" },
+          niveaus: { basis: "CH₄.", simpeler: "Methaan = CH₄", nogSimpeler: "CH4" },
         },
       },
       {
@@ -61,7 +61,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "H = 1 elektron = 1 binding", tekst: "Waterstof heeft maar **1 elektron** → maar 1 binding. Vandaar dat H altijd 'eindpunt' is in organische molecule." }],
           theorie: "Onthoud: C=4, H=1, O=2, N=3, halogenen=1.",
-          niveaus: { basis: "H. A.", simpeler: "Waterstof = 1 binding", nogSimpeler: "H" },
+          niveaus: { basis: "H.", simpeler: "Waterstof = 1 binding", nogSimpeler: "H" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Organisch = koolstof-verbinding", tekst: "**Organisch** = bevat koolstof (en meestal waterstof). Glucose = C₆H₁₂O₆ = klassiek organisch. Water, zout, zuurstofgas = anorganisch (geen C of geen typische C-H-binding)." }],
           theorie: "Uitzonderingen: CO₂, CO, carbonaten (zoals kalk CaCO₃) zijn koolstof-bevattend maar anorganisch.",
-          niveaus: { basis: "Glucose. A.", simpeler: "Glucose heeft C = organisch", nogSimpeler: "Glucose" },
+          niveaus: { basis: "Glucose.", simpeler: "Glucose heeft C = organisch", nogSimpeler: "Glucose" },
         },
       },
       {
@@ -82,7 +82,7 @@ const steps = [
         wrongHints: [null, "Niet — ook C=C en C≡C.", "Niet — ook enkele.", "Niet — max 3 (octetregel)."],
         uitlegPad: {
           stappen: [{ titel: "Enkele/dubbele/drievoudige", tekst: "Koolstof kan delen: **1 paar** (enkele, C-C), **2 paren** (dubbele, C=C), **3 paren** (drievoudige, C≡C). Voorbeeld: ethaan (enkel), etheen (dubbel), ethyn (drievoudig)." }],
-          niveaus: { basis: "Drie soorten. A.", simpeler: "1, 2 of 3 paren", nogSimpeler: "1-2-3" },
+          niveaus: { basis: "Drie soorten.", simpeler: "1, 2 of 3 paren", nogSimpeler: "1-2-3" },
         },
       },
     ],
@@ -102,7 +102,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verzadigd = max H", tekst: "Alkanen = alleen enkele bindingen = max waterstof. Formule **CₙH₂ₙ₊₂**. Bv. n=3: C₃H₈ (propaan)." }],
           theorie: "Onthoud verschil: alkaan CₙH₂ₙ₊₂, alkeen CₙH₂ₙ (1 dubbel), alkyn CₙH₂ₙ₋₂ (1 driedubbel), cyclo-alkaan CₙH₂ₙ.",
-          niveaus: { basis: "CₙH₂ₙ₊₂. A.", simpeler: "Alkaan = CₙH₂ₙ₊₂", nogSimpeler: "2n+2" },
+          niveaus: { basis: "CₙH₂ₙ₊₂.", simpeler: "Alkaan = CₙH₂ₙ₊₂", nogSimpeler: "2n+2" },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Penta = 5", tekst: "Penta-prefix (Grieks: vijf). **Pentaan = C₅H₁₂**. Veel-gebruikt: penthouse (5 verdiepingen), pentagram (5-puntige ster), pentathlon (5 sporten)." }],
           theorie: "Memo: meth=1, eth=2, prop=3, but=4, pent=5, hex=6, hept=7, oct=8, non=9, dec=10.",
-          niveaus: { basis: "5. A.", simpeler: "Pentaan = 5 C", nogSimpeler: "5" },
+          niveaus: { basis: "5.", simpeler: "Pentaan = 5 C", nogSimpeler: "5" },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% octaan + 5% heptaan." }],
           theorie: "Cito-actueel: Euro 95 / 98 verwijst naar octaangetal. Hogere octaangetal = duurder + voor zwaardere motoren.",
-          niveaus: { basis: "Verbrandingseigenschap. A.", simpeler: "Octaangetal = brandkwaliteit", nogSimpeler: "Brand" },
+          niveaus: { basis: "Verbrandingseigenschap.", simpeler: "Octaangetal = brandkwaliteit", nogSimpeler: "Brand" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
           stappen: [{ titel: "Twee isomeren C₄H₁₀", tekst: "1) **n-Butaan**: rechte keten CH₃-CH₂-CH₂-CH₃. 2) **2-Methylpropaan** (iso-butaan): vertakt. Zelfde formule, andere structuur." }],
           woorden: [{ woord: "isomeer", uitleg: "Verbinding met dezelfde molecuulformule maar verschillende structuur." }],
           theorie: "C₅H₁₂ heeft 3 isomeren, C₆H₁₄ heeft 5, C₁₀H₂₂ heeft 75. Aantal groeit snel.",
-          niveaus: { basis: "2. A.", simpeler: "C₄H₁₀ = 2 isomeren", nogSimpeler: "2" },
+          niveaus: { basis: "2.", simpeler: "C₄H₁₀ = 2 isomeren", nogSimpeler: "2" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Butaan = vloeibaar bij druk", tekst: "**Butaan** (C₄H₁₀) is gas bij kamertemperatuur maar wordt **vloeibaar onder druk** in aansteker. Bij openen vervliegt + ontbrandt. Propaan (C₃H₈) zit in barbecue-tanks." }],
           theorie: "Cito-pattern: butaan vs propaan = vergelijkbaar maar butaan vloeibaar bij lagere druk.",
-          niveaus: { basis: "Butaan. A.", simpeler: "Aansteker = butaan", nogSimpeler: "Butaan" },
+          niveaus: { basis: "Butaan.", simpeler: "Aansteker = butaan", nogSimpeler: "Butaan" },
         },
       },
     ],
@@ -167,7 +167,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "-OL = alcohol = -OH", tekst: "**Ethanol** (drank-alcohol) C₂H₅OH heeft een **hydroxylgroep** (-OH) → het IS een alcohol. -ol uitgang in naam." }],
           woorden: [{ woord: "hydroxylgroep", uitleg: "-OH groep, kenmerk van alcohol." }],
-          niveaus: { basis: "-OH. A.", simpeler: "Ethanol = alcohol = -OH", nogSimpeler: "-OH" },
+          niveaus: { basis: "-OH.", simpeler: "Ethanol = alcohol = -OH", nogSimpeler: "-OH" },
         },
       },
       {
@@ -178,7 +178,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Azijn = 5% ethaanzuur", tekst: "Azijn = waterige oplossing van **5% ethaanzuur** (= azijnzuur, CH₃COOH). Smaak zuur door H⁺ vrijgave in water." }],
           theorie: "Andere namen: 'azijnzuur' is dezelfde stof als 'ethaanzuur' (= IUPAC).",
-          niveaus: { basis: "Ethaanzuur. A.", simpeler: "Azijn = ethaanzuur", nogSimpeler: "Azijnzuur" },
+          niveaus: { basis: "Ethaanzuur.", simpeler: "Azijn = ethaanzuur", nogSimpeler: "Azijnzuur" },
         },
       },
       {
@@ -189,7 +189,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + carbonzuur → ester + water** (omkeerbare reactie). Voorbeeld: ethanol + azijnzuur → ethylacetaat + water. Esters geuren prettig (fruit, parfum)." }],
           theorie: "Cito-favoriet: ester-vorming als reactie-vraag. Vergeet 'water' niet als bijproduct.",
-          niveaus: { basis: "Ester. A.", simpeler: "Alcohol + zuur = ester (+ water)", nogSimpeler: "Ester" },
+          niveaus: { basis: "Ester.", simpeler: "Alcohol + zuur = ester (+ water)", nogSimpeler: "Ester" },
         },
       },
       {
@@ -200,7 +200,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Keton vs aldehyde", tekst: "**Keton**: C=O groep **in midden** van keten (R-CO-R'). **Aldehyde**: C=O groep **aan einde** (R-CHO). Aceton (CH₃COCH₃) = midden → keton. Naamgeving -on-uitgang." }],
           theorie: "Toepassing aceton: nagellak-verwijderaar, plastic-oplosmiddel.",
-          niveaus: { basis: "Keton. A.", simpeler: "C=O midden = keton", nogSimpeler: "Keton" },
+          niveaus: { basis: "Keton.", simpeler: "C=O midden = keton", nogSimpeler: "Keton" },
         },
       },
       {
@@ -211,7 +211,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Amine = ammoniak-derivaat", tekst: "**Amines** (-NH₂) zijn afgeleid van ammoniak (NH₃). N heeft 1 vrij elektronenpaar — kan H⁺ opnemen → basisch. pH > 7 in water." }],
           theorie: "Cito-pattern: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
-          niveaus: { basis: "N neemt H⁺ op. A.", simpeler: "Amine basisch door N", nogSimpeler: "H⁺ op" },
+          niveaus: { basis: "N neemt H⁺ op.", simpeler: "Amine basisch door N", nogSimpeler: "H⁺ op" },
         },
       },
     ],
@@ -231,7 +231,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CH₄ + 2 O₂ → CO₂ + 2 H₂O", tekst: "Volledige verbranding methaan: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. Balanceer: 1 C, 4 H, 4 O links + rechts. Kloppen ✓." }],
           theorie: "Onvolledige verbranding (te weinig O₂): CH₄ + minder O₂ → CO (giftig) + H₂O + roet.",
-          niveaus: { basis: "CO₂ + H₂O. A.", simpeler: "Volledig = CO₂+H₂O", nogSimpeler: "CO₂+H₂O" },
+          niveaus: { basis: "CO₂ + H₂O.", simpeler: "Volledig = CO₂+H₂O", nogSimpeler: "CO₂+H₂O" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CO bind aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht-ventileerde geisers = klassieke oorzaak." }],
           theorie: "Cito-actueel: CO-melders verplicht sinds 2024 in elke woning met gasapparaat. Voorkomt ~10 NL-doden per jaar.",
-          niveaus: { basis: "Reukloos + dodelijk. A.", simpeler: "CO = stille killer", nogSimpeler: "Reukloos" },
+          niveaus: { basis: "Reukloos + dodelijk.", simpeler: "CO = stille killer", nogSimpeler: "Reukloos" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Additie aan dubbele binding", tekst: "**Additie**: C=C neemt H₂ op → C-C (enkele binding). C₂H₄ (etheen, onverzadigd) + H₂ → **C₂H₆** (ethaan, verzadigd)." }],
           theorie: "Cito-pattern: onverzadigde verbindingen (=C= of ≡C≡) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
-          niveaus: { basis: "Ethaan. A.", simpeler: "Etheen + H₂ = ethaan", nogSimpeler: "Ethaan" },
+          niveaus: { basis: "Ethaan.", simpeler: "Etheen + H₂ = ethaan", nogSimpeler: "Ethaan" },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
           stappen: [{ titel: "Plastic-keten", tekst: "**Polyetheen (PE)** = duizenden etheen-moleculen aan elkaar gekoppeld via polymerisatie. C₂H₄ → (-CH₂-CH₂-)ₙ. Toepassing: plastic-zakken, flessen." }],
           woorden: [{ woord: "polymerisatie", uitleg: "Reactie waarbij vele kleine moleculen (monomeren) één lange keten (polymeer) vormen." }],
           theorie: "Verschil PE-LDPE (laag-dichtheid, flexibel) vs PE-HDPE (hoog-dichtheid, stevig).",
-          niveaus: { basis: "Polymeer etheen. A.", simpeler: "PE = polyetheen = veel etheen", nogSimpeler: "Polymeer" },
+          niveaus: { basis: "Polymeer etheen.", simpeler: "PE = polyetheen = veel etheen", nogSimpeler: "Polymeer" },
         },
       },
       {
@@ -276,7 +276,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CO₂ = broeikasgas", tekst: "Bij verbranding van fossiele brandstof komt **CO₂** vrij. CO₂ houdt warmte vast in atmosfeer → **versterkt broeikaseffect** → klimaatopwarming. Sinds 1850: CO₂ van 280 ppm → 420 ppm (2024)." }],
           theorie: "Cito-actueel: NL-klimaatakkoord 2019 wil 49% CO₂-reductie 2030 vs 1990 (zie pad Sociale Zekerheid).",
-          niveaus: { basis: "CO₂ = broeikas. A.", simpeler: "CO₂ → klimaatopwarming", nogSimpeler: "CO₂" },
+          niveaus: { basis: "CO₂ = broeikas.", simpeler: "CO₂ → klimaatopwarming", nogSimpeler: "CO₂" },
         },
       },
     ],
@@ -295,7 +295,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is ethaan.", "Niet — dat is butaan.", "Niet — dat is methaan."],
         uitlegPad: {
           stappen: [{ titel: "Prop = 3", tekst: "**Propaan** = 3 C-atomen alkaan = C₃H₈ (volgens 2n+2 → 8H)." }],
-          niveaus: { basis: "C₃H₈. A.", simpeler: "Propaan = C₃H₈", nogSimpeler: "C₃H₈" },
+          niveaus: { basis: "C₃H₈.", simpeler: "Propaan = C₃H₈", nogSimpeler: "C₃H₈" },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is -OH.", "Niet — dat is -CHO.", "Niet — dat is -COO-."],
         uitlegPad: {
           stappen: [{ titel: "-COOH = zuur", tekst: "**-COOH** = carbonzuur-groep. C=O + O-H. Geeft H⁺ vrij in water → zuur. Naamgeving: -zuur." }],
-          niveaus: { basis: "Carbonzuur. A.", simpeler: "-COOH = zuur", nogSimpeler: "Zuur" },
+          niveaus: { basis: "Carbonzuur.", simpeler: "-COOH = zuur", nogSimpeler: "Zuur" },
         },
       },
       {
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "Niet.", "Wel bestaand.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk + meer = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
-          niveaus: { basis: "Zelfde formule. A.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },
+          niveaus: { basis: "Zelfde formule.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },
         },
       },
       {
@@ -325,7 +325,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — geen oxidatie hier.", "Niet — wel uitgangsstof."],
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + zuur → ester + water**. Ethanol (C₂H₅OH) + azijnzuur (CH₃COOH) → **ethylacetaat (CH₃COOC₂H₅) + H₂O**." }],
-          niveaus: { basis: "Ester. A.", simpeler: "Alc + zuur = ester (+water)", nogSimpeler: "Ester" },
+          niveaus: { basis: "Ester.", simpeler: "Alc + zuur = ester (+water)", nogSimpeler: "Ester" },
         },
       },
       {
@@ -335,7 +335,7 @@ const steps = [
         wrongHints: [null, "Niet — biologisch (uit organisch).", "Niet relevant.", "Niet — uit suiker, niet methaan."],
         uitlegPad: {
           stappen: [{ titel: "Bio = uit levende organismen", tekst: "**Bio-ethanol** = ethanol gemaakt door **fermentatie** van suikers (uit maïs, suikerriet, etc.) door gist. Hernieuwbaar maar nadeel: concurreert met voedsel-landbouw. Gebruikt als brandstof-bijmenging (E10, E85)." }],
-          niveaus: { basis: "Uit planten. A.", simpeler: "Bio-ethanol = uit plant-suiker", nogSimpeler: "Plant" },
+          niveaus: { basis: "Uit planten.", simpeler: "Bio-ethanol = uit plant-suiker", nogSimpeler: "Plant" },
         },
       },
     ],

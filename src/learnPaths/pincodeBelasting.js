@@ -59,7 +59,7 @@ const steps = [
           theorie: "Frisdrank valt onder 9%-tarief (eten/drinken). Glas €3? Dan zit er ~€0,25 BTW in (9% van excl-prijs €2,75). Sinds 2024 ook extra suikertaks erbij.",
           voorbeelden: [{ type: "frisdrank", tekst: "Glas Cola €3 in café = ~€2,75 excl + €0,25 BTW + horeca-marge." }, { type: "tegenovergesteld", tekst: "IB over loon = direct (je krijgt aanslag). BTW = indirect (zit in prijs)." }],
           basiskennis: [{ onderwerp: "Niet IB/VPB/erf", uitleg: "IB = over loon. VPB = over BV-winst. Erf = bij overlijden. Geen van die zit in frisdrank." }],
-          niveaus: { basis: "BTW = indirect. A.", simpeler: "Bij elke aankoop betaal je BTW automatisch — die zit verstopt in de prijs.", nogSimpeler: "In prijs = BTW" },
+          niveaus: { basis: "BTW = indirect.", simpeler: "Bij elke aankoop betaal je BTW automatisch — die zit verstopt in de prijs.", nogSimpeler: "In prijs = BTW" },
         },
       },
       {
@@ -73,7 +73,7 @@ const steps = [
           theorie: "Praktisch verschil: belasting voelt 'kwijt'. Premie voelt als investering — je krijgt later iets (pensioen, uitkering bij ontslag, zorgvergoeding).",
           voorbeelden: [{ type: "belasting", tekst: "€500 IB-aanslag → naar Rijk → besteed waar regering wil." }, { type: "premie", tekst: "€150 zorgpremie/mnd → naar zorgverzekeraar → terugbetaalt jouw doktersbezoek." }],
           basiskennis: [{ onderwerp: "Geen hoogte-verschil", uitleg: "Premie kan laag of hoog zijn, belasting ook. Verschil zit in BESTEMMING." }],
-          niveaus: { basis: "Doel vs algemene pot. A.", simpeler: "Premie = voor specifiek doel (AOW/zorg). Belasting = voor algemene overheidsuitgaven.", nogSimpeler: "Doel = premie" },
+          niveaus: { basis: "Doel vs algemene pot.", simpeler: "Premie = voor specifiek doel (AOW/zorg). Belasting = voor algemene overheidsuitgaven.", nogSimpeler: "Doel = premie" },
         },
       },
       {
@@ -87,7 +87,7 @@ const steps = [
           theorie: "AOW-premie is GEEN belasting (gaat niet naar algemene pot) maar ook geen toeslag (jij betaalt, geen ontvanger). Het is een verzekeringspremie voor het AOW-stelsel.",
           voorbeelden: [{ type: "loonstrook", tekst: "Bruto €3.000 → loonheffing inclusief AOW-premie €600 → netto €2.400. AOW-deel daarvan ~€350." }],
           basiskennis: [{ onderwerp: "Specifiek doel", uitleg: "Premie heeft altijd SPECIFIEK doel (zorg/AOW/WW). Belasting heeft dat niet." }],
-          niveaus: { basis: "Premie voor AOW. A.", simpeler: "AOW-premie = betaling voor het AOW-pensioenstelsel. Heeft specifiek doel = premie.", nogSimpeler: "Premie AOW" },
+          niveaus: { basis: "Premie voor AOW.", simpeler: "AOW-premie = betaling voor het AOW-pensioenstelsel. Heeft specifiek doel = premie.", nogSimpeler: "Premie AOW" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
           theorie: "Vrijstelling: partner €795k, kinderen €25k, andere €2.658 (2024). Boven vrijstelling: 10% (partner/kinderen) tot 40% (verre familie/vreemden).",
           voorbeelden: [{ type: "kind erft", tekst: "Kind erft €100k → vrijstelling €25k → 10% over €75k = €7.500 erfbelasting." }, { type: "verre familie", tekst: "Neef erft €100k → vrijstelling €2.658 → 30% over €97k = €29k. Veel hoger." }],
           basiskennis: [{ onderwerp: "Niet indirect", uitleg: "Geen prijs van product — direct over je nieuwe vermogen." }],
-          niveaus: { basis: "Direct. A.", simpeler: "Erfbelasting krijg JIJ aangeslagen over wat jij erft. Persoonlijke aanslag = direct.", nogSimpeler: "Direct" },
+          niveaus: { basis: "Direct.", simpeler: "Erfbelasting krijg JIJ aangeslagen over wat jij erft. Persoonlijke aanslag = direct.", nogSimpeler: "Direct" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
           theorie: "Wie heft wat? Rijk: IB, BTW, VPB, accijns. Provincie: opcenten MRB. Gemeente: OZB, hondenbelasting, toeristen, parkeer. Waterschap: waterschapsbelasting. Elk eigen bron.",
           voorbeelden: [{ type: "praktijk", tekst: "Huis WOZ €350k × 0,1% gemeentetarief = €350 OZB/jaar op gemeentelijke aanslag." }],
           basiskennis: [{ onderwerp: "Niet Belastingdienst", uitleg: "Belastingdienst is Rijksdienst. OZB is gemeente — eigen aanslag, eigen inning." }],
-          niveaus: { basis: "Gemeente. A.", simpeler: "OZB = gemeentebelasting over huis. Gemeente bepaalt + int.", nogSimpeler: "Gemeente" },
+          niveaus: { basis: "Gemeente.", simpeler: "OZB = gemeentebelasting over huis. Gemeente bepaalt + int.", nogSimpeler: "Gemeente" },
         },
       },
       {
@@ -129,7 +129,7 @@ const steps = [
           theorie: "Vergelijking: Denemarken ~46% (hoogste), Zweden ~44%, NL ~38%, Duitsland ~38%, USA ~27%. Verzorgingsstaten zoals NL/Scandinavië hebben hogere belastingdruk dan liberale economieën.",
           voorbeelden: [{ type: "NL", tekst: "BBP ~€1.000 mrd × 38% = ~€380 mrd belasting + premies per jaar." }],
           basiskennis: [{ onderwerp: "Niet 70%/95%", uitleg: "Geen land in EU komt boven 50%. 95% zou betekenen overheid neemt bijna alles — onmogelijk." }],
-          niveaus: { basis: "~38%. A.", simpeler: "Nederland: ongeveer 38% van het BBP is belasting + premies.", nogSimpeler: "38%" },
+          niveaus: { basis: "~38%.", simpeler: "Nederland: ongeveer 38% van het BBP is belasting + premies.", nogSimpeler: "38%" },
         },
       },
     ],
@@ -169,7 +169,7 @@ const steps = [
           theorie: "Veelgemaakte fout: 21% van €330 aftrekken = €69,30 → €260,70. FOUT! 21% gaat over het EXCL-bedrag, niet incl. Daarom delen, niet aftrekken.",
           voorbeelden: [{ type: "controle", tekst: "€272,73 × 1,21 = €330. ✓" }],
           basiskennis: [{ onderwerp: "Niet aftrekken", uitleg: "Incl naar excl = DELEN. Niet 21% er afhalen — dat is wiskundig onjuist." }],
-          niveaus: { basis: "330 / 1,21 = 272,73. A.", simpeler: "€330 / 1,21 = €272,73 excl. (Dit klopt: €272,73 × 1,21 = €330.)", nogSimpeler: "€272,73" },
+          niveaus: { basis: "330 / 1,21 = 272,73.", simpeler: "€330 / 1,21 = €272,73 excl. (Dit klopt: €272,73 × 1,21 = €330.)", nogSimpeler: "€272,73" },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
           theorie: "Vuistregel: bij 21% tarief is BTW ongeveer 17,4% van het INCL-bedrag (= 0,21 / 1,21).",
           voorbeelden: [{ type: "berekening", tekst: "€121 / 1,21 = €100 → €121 − €100 = €21 BTW." }],
           basiskennis: [{ onderwerp: "Niet 21% × €121", uitleg: "= €25,41, fout. 21% gaat over excl, niet incl." }],
-          niveaus: { basis: "121/1,21 = 100, BTW 21. A.", simpeler: "€121 incl ÷ 1,21 = €100 excl. Verschil = €21 BTW.", nogSimpeler: "€21" },
+          niveaus: { basis: "121/1,21 = 100, BTW 21.", simpeler: "€121 incl ÷ 1,21 = €100 excl. Verschil = €21 BTW.", nogSimpeler: "€21" },
         },
       },
       {
@@ -197,7 +197,7 @@ const steps = [
           theorie: "9%-categorieën: voedsel, drinken (excl alcohol), water, boeken, openbaar vervoer, kapper, fysiotherapeut, bioscoop. 21%: alle andere goederen + diensten.",
           voorbeelden: [{ type: "9%", tekst: "Brood, melk, fruit, restaurant, sportles, treintickets." }, { type: "21%", tekst: "Kleding, elektronica, bier (alcohol), benzine, meubel." }],
           basiskennis: [{ onderwerp: "Geen 25%", uitleg: "Geen NL-tarief op 25%. Bestaat in Denemarken, niet NL." }],
-          niveaus: { basis: "Boodschappen = 9%. A.", simpeler: "Boodschappen vallen onder lage BTW = 9%. Niet 21%.", nogSimpeler: "Eten = 9%" },
+          niveaus: { basis: "Boodschappen = 9%.", simpeler: "Boodschappen vallen onder lage BTW = 9%. Niet 21%.", nogSimpeler: "Eten = 9%" },
         },
       },
       {
@@ -211,7 +211,7 @@ const steps = [
           theorie: "Pakje sigaretten 2024: ~€10. Daarvan ~€7,50 = accijns + BTW. Effect: rookcijfers NL dalen al jaren, deels door accijnsverhogingen. Win-win voor staat (inkomsten + minder zorgkosten later).",
           voorbeelden: [{ type: "tabak", tekst: "Pakje €10: ~€2 productiekosten + €1 winst voor verkoopketen + €7 accijns/BTW." }, { type: "alcohol", tekst: "Per liter wijn ~€1 accijns. Per liter sterke drank veel meer." }],
           basiskennis: [{ onderwerp: "Niet productiekosten", uitleg: "Sigaretten produceren is goedkoop. Hoge prijs = belasting, niet productie." }],
-          niveaus: { basis: "Ontmoediging + inkomsten. A.", simpeler: "Hoge accijns op tabak = (1) overheid verdient eraan, (2) ontmoedigt roken.", nogSimpeler: "2 doelen" },
+          niveaus: { basis: "Ontmoediging + inkomsten.", simpeler: "Hoge accijns op tabak = (1) overheid verdient eraan, (2) ontmoedigt roken.", nogSimpeler: "2 doelen" },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
           theorie: "Niet-starters (35+) of duurder huis (>€510k): 2%. Beleggers (tweede huis): 10,4% sinds 2023 om woningmarkt te beschermen. Veranderlijk beleid — check actuele regels.",
           voorbeelden: [{ type: "starter", tekst: "26 jaar koopt eerste huis €400k → 0% overdracht = €0 (bespaart €8k)." }, { type: "regulier", tekst: "40 jaar koopt huis €400k → 2% = €8.000 overdrachtsbelasting." }],
           basiskennis: [{ onderwerp: "Niet 2% meer voor starters", uitleg: "Was 2% tot 2021. Nu 0% voor jonge starters — recente regelwijziging." }],
-          niveaus: { basis: "0% voor starters. A.", simpeler: "Jonger dan 35 + huis < €510k = 0% overdrachtsbelasting (starter-vrijstelling).", nogSimpeler: "0%" },
+          niveaus: { basis: "0% voor starters.", simpeler: "Jonger dan 35 + huis < €510k = 0% overdrachtsbelasting (starter-vrijstelling).", nogSimpeler: "0%" },
         },
       },
       {
@@ -239,7 +239,7 @@ const steps = [
           theorie: "Vuistregel: bij 9% tarief is BTW ~8,3% van incl. Bij 21% tarief ~17,4%. Handig voor schatten zonder rekenmachine.",
           voorbeelden: [{ type: "Sam friet", tekst: "200 friet × €5 = €1.000 omzet incl 9% BTW → €917 excl + €83 BTW apart voor Belastingdienst." }],
           basiskennis: [{ onderwerp: "Niet 9% × €1000", uitleg: "= €90. Fout, want €1.000 is INCL, niet excl." }],
-          niveaus: { basis: "1000/1,09 ≈ 917, BTW 83. A.", simpeler: "€1.000 incl 9% / 1,09 = €917 excl. Verschil ~€83 BTW.", nogSimpeler: "~€83" },
+          niveaus: { basis: "1000/1,09 ≈ 917, BTW 83.", simpeler: "€1.000 incl 9% / 1,09 = €917 excl. Verschil ~€83 BTW.", nogSimpeler: "~€83" },
         },
       },
     ],
@@ -274,7 +274,7 @@ const steps = [
           theorie: "Doel: inkomensverschillen kleiner maken. Mensen met €100k betalen relatief MEER % dan mensen met €30k. NL Gini ~0,28 dankzij progressie + toeslagen.",
           voorbeelden: [{ type: "€30k", tekst: "Heel inkomen in schijf 1 → 36,97%." }, { type: "€100k", tekst: "Eerste €75k in schijf 1 → 36,97%. Rest €25k in schijf 2 → 49,5%. Gemiddeld: ~40%." }],
           basiskennis: [{ onderwerp: "Niet 'elk jaar hoger'", uitleg: "Progressief = binnen 1 jaar trapsgewijs stijgen. Niet jaar op jaar verhoging." }],
-          niveaus: { basis: "Hoger inkomen = hoger %. A.", simpeler: "Progressief = wie meer verdient, betaalt een hoger percentage belasting.", nogSimpeler: "Trap omhoog" },
+          niveaus: { basis: "Hoger inkomen = hoger %.", simpeler: "Progressief = wie meer verdient, betaalt een hoger percentage belasting.", nogSimpeler: "Trap omhoog" },
         },
       },
       {
@@ -288,7 +288,7 @@ const steps = [
           theorie: "Werknemers + zzp + gepensioneerden = Box 1. DGA's met BV ook Box 2. Spaarders/beleggers ook Box 3.",
           voorbeelden: [{ type: "loonwerker", tekst: "Lerares: salaris + eigenwoningforfait + hypotheekrenteaftrek = allemaal Box 1." }, { type: "gemixt", tekst: "BV-eigenaar: zijn DGA-loon = Box 1. Aandelen in eigen BV = Box 2. Spaarrekening = Box 3." }],
           basiskennis: [{ onderwerp: "Werk = box 1", uitleg: "Alle 'verdiende inkomen' (loon, winst, uitkering) = box 1." }],
-          niveaus: { basis: "Loon + woning. A.", simpeler: "Box 1 = inkomen uit werken (loon/winst/AOW) + eigen huis.", nogSimpeler: "Werk = box 1" },
+          niveaus: { basis: "Loon + woning.", simpeler: "Box 1 = inkomen uit werken (loon/winst/AOW) + eigen huis.", nogSimpeler: "Werk = box 1" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
           theorie: "Verschil: €1.000 aftrekpost bij 37% = €370 minder belasting. €1.000 heffingskorting = €1.000 minder belasting. Heffingskorting is sterker per euro.",
           voorbeelden: [{ type: "berekening", tekst: "IB €15.000 berekend. Heffingskortingen totaal €4.500. Te betalen: €10.500." }],
           basiskennis: [{ onderwerp: "Niet winkel", uitleg: "'Korting' verwart soms — niet als winkel-korting. Korting op te betalen belasting." }],
-          niveaus: { basis: "Bedrag in mindering op IB. A.", simpeler: "Heffingskorting gaat 1-op-1 van je IB af. €500 korting = €500 minder belasting.", nogSimpeler: "Af van IB" },
+          niveaus: { basis: "Bedrag in mindering op IB.", simpeler: "Heffingskorting gaat 1-op-1 van je IB af. €500 korting = €500 minder belasting.", nogSimpeler: "Af van IB" },
         },
       },
       {
@@ -316,7 +316,7 @@ const steps = [
           theorie: "Voordeel voorinhouding: belasting wordt verspreid over jaar, niet 1× per jaar. Werkgever krijgt verklaring (loon­heffings­korting) van werknemer → bepaalt welke kortingen toepasbaar.",
           voorbeelden: [{ type: "loonstrook", tekst: "Bruto €3.500 − loonheffing €1.050 = netto €2.450. Loonheffing gaat naar Rijk." }],
           basiskennis: [{ onderwerp: "Niet werknemer zelf", uitleg: "Werknemer zelf doet AANGIFTE in mei (correctie). Inhouding loopt via werkgever." }],
-          niveaus: { basis: "Werkgever. A.", simpeler: "Werkgever houdt loonheffing in op brutoloon en stuurt het naar Belastingdienst.", nogSimpeler: "Werkgever" },
+          niveaus: { basis: "Werkgever.", simpeler: "Werkgever houdt loonheffing in op brutoloon en stuurt het naar Belastingdienst.", nogSimpeler: "Werkgever" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
           theorie: "Aangifte tegenwoordig vaak 'vooraf ingevuld' (Belastingdienst kent veel via banken/werkgever). Werknemers krijgen vaak teruggave omdat te veel loonheffing was ingehouden.",
           voorbeelden: [{ type: "praktijk", tekst: "Aangifte 2024 → indienen vóór 1 mei 2025. Vooringevuld via Mijn Belastingdienst (DigiD)." }],
           basiskennis: [{ onderwerp: "Niet 1 januari", uitleg: "Op 1 januari heeft Belastingdienst nog niets — werkgevers leveren pas in maart de jaaropgave." }],
-          niveaus: { basis: "Vóór 1 mei. A.", simpeler: "Standaard deadline IB-aangifte = 1 mei. Bij uitstel: 1 september.", nogSimpeler: "1 mei" },
+          niveaus: { basis: "Vóór 1 mei.", simpeler: "Standaard deadline IB-aangifte = 1 mei. Bij uitstel: 1 september.", nogSimpeler: "1 mei" },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
           theorie: "Tarief: ~36% over fictief rendement. Voor 2024 ~6% fictief op aandelen, ~1,3% op spaargeld → effectief 0,5-2% van vermogen per jaar. Box 3 staat politiek onder druk vanwege onrechtvaardigheid (rente was 0% maar fictief 6%).",
           voorbeelden: [{ type: "spaarder", tekst: "Spaargeld €100k − vrijstelling €57k = €43k belast. Fictief 1,3% rendement = €559. Belast 36% = €201 Box 3 / jr." }],
           basiskennis: [{ onderwerp: "Niet werk", uitleg: "Werk-inkomen = box 1. BV-aandelen = box 2. Erf = aparte erfbelasting." }],
-          niveaus: { basis: "Spaargeld + beleggingen boven vrijstelling. A.", simpeler: "Box 3 = belasting over je vermogen (spaargeld/beleggingen) boven ~€57k vrijstelling.", nogSimpeler: "Vermogen = box 3" },
+          niveaus: { basis: "Spaargeld + beleggingen boven vrijstelling.", simpeler: "Box 3 = belasting over je vermogen (spaargeld/beleggingen) boven ~€57k vrijstelling.", nogSimpeler: "Vermogen = box 3" },
         },
       },
     ],
@@ -383,7 +383,7 @@ const steps = [
           theorie: "Doel: 'werk loont'. Iemand met werk houdt netto MEER over dan iemand met uitkering (zelfde brutoloon). Bedoeld om mensen aan werk te helpen.",
           voorbeelden: [{ type: "werker", tekst: "Bruto €30k werk → IB €11k − algemene korting €3k − arbeidskorting €4,5k = €3,5k IB." }, { type: "uitkering", tekst: "Bijstand €30k → IB €11k − algemene korting €3k = €8k IB. €4,5k meer dan werker." }],
           basiskennis: [{ onderwerp: "Niet bij geen werk", uitleg: "Uitkering/pensioen geen arbeid → geen arbeidskorting." }],
-          niveaus: { basis: "Arbeidsinkomen vereist. A.", simpeler: "Arbeidskorting alleen als je WERKT (baan/zelfstandig). Niet bij uitkering.", nogSimpeler: "Werken" },
+          niveaus: { basis: "Arbeidsinkomen vereist.", simpeler: "Arbeidskorting alleen als je WERKT (baan/zelfstandig). Niet bij uitkering.", nogSimpeler: "Werken" },
         },
       },
       {
@@ -397,7 +397,7 @@ const steps = [
           theorie: "Solidariteit ingebakken: lage inkomens profiteren maximaal, hoge inkomens niet meer. Versterkt herverdelend effect van progressieve IB.",
           voorbeelden: [{ type: "laag", tekst: "Inkomen €15k → AHK ~€3.300 vol (laagste schijf)." }, { type: "midden", tekst: "Inkomen €50k → AHK ~€1.500 (deels uitgefaseerd)." }, { type: "hoog", tekst: "Inkomen €80k → AHK €0 (volledig weg)." }],
           basiskennis: [{ onderwerp: "Niet alleen rijken/werknemers", uitleg: "Iedereen met inkomen krijgt het — werker, uitkering, pensioen. Tegendeel van wat de naam suggereert." }],
-          niveaus: { basis: "Iedereen, dalend bij hoog. A.", simpeler: "AHK krijgt iedereen. Lage inkomens max, hoge inkomens steeds minder, boven €75k niets.", nogSimpeler: "Iedereen dalend" },
+          niveaus: { basis: "Iedereen, dalend bij hoog.", simpeler: "AHK krijgt iedereen. Lage inkomens max, hoge inkomens steeds minder, boven €75k niets.", nogSimpeler: "Iedereen dalend" },
         },
       },
       {
@@ -411,7 +411,7 @@ const steps = [
           theorie: "Voorwaarden: (1) werkend (arbeidsinkomen), (2) kind onder 12 in huishouden, (3) niet de meestverdienende partner (bij stel). Max ~€2.700/jr bij midden-inkomen.",
           voorbeelden: [{ type: "moeder", tekst: "Moeder met kind 6, werkt 4 dagen, verdient €30k → IACK ~€2.500/jr extra heffingskorting." }],
           basiskennis: [{ onderwerp: "Niet geslachtgebonden", uitleg: "Voor BEIDE ouders, ongeacht geslacht. Hoofdverdiener krijgt 'm meestal niet — kleinere verdiener wel." }],
-          niveaus: { basis: "Werkende ouders < 12 jr kind. A.", simpeler: "IACK = extra korting voor ouders die werken én een jong kind hebben.", nogSimpeler: "Werk+kind" },
+          niveaus: { basis: "Werkende ouders < 12 jr kind.", simpeler: "IACK = extra korting voor ouders die werken én een jong kind hebben.", nogSimpeler: "Werk+kind" },
         },
       },
       {
@@ -425,7 +425,7 @@ const steps = [
           theorie: "Formule: (brutoinkomen × tarief) − aftrekposten × tarief − heffingskortingen = te betalen IB. Heffingskorting werkt EUR-voor-EUR.",
           voorbeelden: [{ type: "berekening", tekst: "€11k IB − €3k AHK − €1,5k arbeidskorting = €6,5k te betalen." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Heffingskortingen worden AFGETROKKEN, niet bijgeteld. €11k + €4,5k = €15,5k zou fout zijn." }],
-          niveaus: { basis: "11000 − 4500 = 6500. A.", simpeler: "IB van €11k MINUS heffingskortingen €4,5k = €6,5k betalen.", nogSimpeler: "€6.500" },
+          niveaus: { basis: "11000 − 4500 = 6500.", simpeler: "IB van €11k MINUS heffingskortingen €4,5k = €6,5k betalen.", nogSimpeler: "€6.500" },
         },
       },
       {
@@ -439,7 +439,7 @@ const steps = [
           theorie: "Algemene heffingskorting fase uit tussen €25k en €75k. Per €1 extra inkomen vermindert AHK met ~6 cent. Voor hoog-betaalden bouwt effectieve belastingdruk op (50%+).",
           voorbeelden: [{ type: "berekening", tekst: "Inkomen €30k: AHK €3.000. Inkomen €60k: AHK €1.500. Verschil van €1.500 over €30k extra inkomen = 5% extra effectieve belastingdruk." }],
           basiskennis: [{ onderwerp: "Niet 'verdwijnt na 1 jaar'", uitleg: "Uitfasering gebeurt op basis van INKOMEN, niet tijd." }],
-          niveaus: { basis: "Daalt bij hoger inkomen. A.", simpeler: "Uitfasering = korting wordt minder als je meer verdient — geleidelijk, niet ineens.", nogSimpeler: "Daalt" },
+          niveaus: { basis: "Daalt bij hoger inkomen.", simpeler: "Uitfasering = korting wordt minder als je meer verdient — geleidelijk, niet ineens.", nogSimpeler: "Daalt" },
         },
       },
       {
@@ -453,7 +453,7 @@ const steps = [
           theorie: "Zonder arbeidskorting zou werken nauwelijks netto-verschil maken met uitkering. Door arbeidskorting (~€5k) heeft werker meestal €300-500/mnd meer netto. Stimuleert om aan werk te gaan/blijven.",
           voorbeelden: [{ type: "vergelijking", tekst: "Werker €30k → netto ~€26k. Bijstandontvanger €15k → netto ~€14k. Werker verdient veel meer." }],
           basiskennis: [{ onderwerp: "Niet 'zwaar' of 'verplicht'", uitleg: "Term gaat over FINANCIEEL voordeel werken, niet over zwaarte/plicht." }],
-          niveaus: { basis: "Werk levert netto meer op. A.", simpeler: "'Werk loont' = werkenden houden netto meer over dan uitkeringsontvangers, dankzij arbeidskorting.", nogSimpeler: "Werk = meer netto" },
+          niveaus: { basis: "Werk levert netto meer op.", simpeler: "'Werk loont' = werkenden houden netto meer over dan uitkeringsontvangers, dankzij arbeidskorting.", nogSimpeler: "Werk = meer netto" },
         },
       },
     ],
@@ -490,7 +490,7 @@ const steps = [
           theorie: "2024: max ~€127/mnd alleenstaande, ~€243 stel. Vraag aan via mijn.toeslagen.nl met DigiD. Voorlopig op basis van geschat jaarinkomen.",
           voorbeelden: [{ type: "praktijk", tekst: "Student €15k inkomen → zorgtoeslag ~€127/mnd → bedekt grootste deel zorgpremie €140/mnd." }],
           basiskennis: [{ onderwerp: "Niet AOW", uitleg: "AOW is pensioen, niet toeslag. Toeslagen worden door Belastingdienst uitbetaald." }],
-          niveaus: { basis: "Zorgtoeslag. A.", simpeler: "Voor zorgverzekering = zorgtoeslag.", nogSimpeler: "Zorg" },
+          niveaus: { basis: "Zorgtoeslag.", simpeler: "Voor zorgverzekering = zorgtoeslag.", nogSimpeler: "Zorg" },
         },
       },
       {
@@ -504,7 +504,7 @@ const steps = [
           theorie: "Bedrag stijgt met leeftijd kind: 0-5: ~€275/kwartaal. 6-11: ~€336. 12-17: ~€395. Via SVB uitbetaald, niet Belastingdienst.",
           voorbeelden: [{ type: "iedereen", tekst: "Ouder met €30k of €500k → beiden krijgen dezelfde kinderbijslag (~€336/kwartaal voor 8-jarige)." }],
           basiskennis: [{ onderwerp: "Niet inkomensafhankelijk", uitleg: "Onderscheid kinderbijslag (universeel) vs kindgebonden budget (inkomensafhankelijk)." }],
-          niveaus: { basis: "Iedere ouder. A.", simpeler: "Kinderbijslag = elk gezin krijgt vast bedrag per kind, ongeacht inkomen.", nogSimpeler: "Iedereen" },
+          niveaus: { basis: "Iedere ouder.", simpeler: "Kinderbijslag = elk gezin krijgt vast bedrag per kind, ongeacht inkomen.", nogSimpeler: "Iedereen" },
         },
       },
       {
@@ -518,7 +518,7 @@ const steps = [
           theorie: "Compensatieregeling loopt nog (€30k+ per ouder). Leidde tot vallen kabinet Rutte III (2021). Wijst op gevaar van algoritmes zonder menselijk toezicht + structurele racisme in systeem.",
           voorbeelden: [{ type: "schadebeeld", tekst: "Ouder krijgt €5k toeslag → algoritme markeert als 'fraude' → €100k naheffing + boete → schulden → uithuisplaatsing → jaren strijd." }],
           basiskennis: [{ onderwerp: "Niet 'te veel uitbetaald'", uitleg: "Het probleem was ONTERECHTE beschuldiging, niet teveel uitbetaling." }],
-          niveaus: { basis: "Onterechte fraudebeschuldigingen. A.", simpeler: "Belastingdienst beschuldigde 26.000 ouders ten onrechte van fraude → families in financiële nood.", nogSimpeler: "Schandaal" },
+          niveaus: { basis: "Onterechte fraudebeschuldigingen.", simpeler: "Belastingdienst beschuldigde 26.000 ouders ten onrechte van fraude → families in financiële nood.", nogSimpeler: "Schandaal" },
         },
       },
       {
@@ -532,7 +532,7 @@ const steps = [
           theorie: "Tip: schat je inkomen RUIM. Liever te weinig toeslag krijgen + nakrijgen dan te veel + terugbetalen. Of: gebruik officiele inkomensschatting-tool.",
           voorbeelden: [{ type: "schadebeeld", tekst: "Geschat €20k → werkelijk €30k (extra bijbaan) → te veel zorgtoeslag → €600 terugbetalen." }],
           basiskennis: [{ onderwerp: "Niet boete", uitleg: "Verkeerde schatting ≠ fraude. Geen boete, wel terugbetalen." }],
-          niveaus: { basis: "Terugbetalen. A.", simpeler: "Te laag inkomen geschat → te veel toeslag gehad → Belastingdienst vordert terug.", nogSimpeler: "Terugbetalen" },
+          niveaus: { basis: "Terugbetalen.", simpeler: "Te laag inkomen geschat → te veel toeslag gehad → Belastingdienst vordert terug.", nogSimpeler: "Terugbetalen" },
         },
       },
       {
@@ -546,7 +546,7 @@ const steps = [
           theorie: "Toeslag tot ~96% bij lage inkomens, dalend bij hoog inkomen. Per uur, per kind, max uren afhankelijk van werkuren. Reden voor 2-verdieners-vriendelijk beleid.",
           voorbeelden: [{ type: "stel", tekst: "Twee werkende ouders, kind 3 op crèche €1.000/mnd → toeslag €700-900 afhankelijk van inkomen." }],
           basiskennis: [{ onderwerp: "Niet iedere ouder", uitleg: "Geen opvang gebruikt = geen toeslag. Niet werkend = geen toeslag." }],
-          niveaus: { basis: "Werkende/studerende ouders. A.", simpeler: "Kinderopvangtoeslag = bijdrage in crèche-kosten als je werkt of studeert.", nogSimpeler: "Werk + opvang" },
+          niveaus: { basis: "Werkende/studerende ouders.", simpeler: "Kinderopvangtoeslag = bijdrage in crèche-kosten als je werkt of studeert.", nogSimpeler: "Werk + opvang" },
         },
       },
       {
@@ -560,7 +560,7 @@ const steps = [
           theorie: "Vooral kwetsbare groepen (laag opgeleid, migratie-achtergrond, ouderen) lopen toeslagen mis. Goed bedoeld stelsel werkt voor hen niet. Politieke wens: vereenvoudiging, automatische toekenning waar mogelijk.",
           voorbeelden: [{ type: "schadebeeld", tekst: "Lage-inkomen-huishouden met recht op €3k/jr toeslagen → vraagt niets aan → leeft armer dan nodig." }],
           basiskennis: [{ onderwerp: "Niet 'iedereen vraagt teveel'", uitleg: "Tegendeel. Velen vragen JUIST NIET aan wat ze recht hebben." }],
-          niveaus: { basis: "10-20% vraagt niet aan. A.", simpeler: "Veel mensen weten niet dat ze toeslag kunnen krijgen + vragen het niet aan.", nogSimpeler: "Niet-gebruik" },
+          niveaus: { basis: "10-20% vraagt niet aan.", simpeler: "Veel mensen weten niet dat ze toeslag kunnen krijgen + vragen het niet aan.", nogSimpeler: "Niet-gebruik" },
         },
       },
     ],
@@ -598,7 +598,7 @@ const steps = [
           theorie: "Bekend: Apple parkeert winst via Ierland (~12,5% VPB) ipv VS/NL (25%+). Starbucks 'leent' royalty's tussen dochters om winst te verschuiven. Legaal maar publiek negatief.",
           voorbeelden: [{ type: "MNC", tekst: "Multinationals: winst-verschuiving naar Bermuda/Ierland. Legaal, miljarden minder VPB." }, { type: "particulier", tekst: "Familiebedrijf in BV-structuur om erfbelasting te verlagen. Legaal." }],
           basiskennis: [{ onderwerp: "Niet ontduiking", uitleg: "Ontwijking = legaal. Ontduiking = illegaal (verzwijgen)." }],
-          niveaus: { basis: "Legaal mazen gebruiken. A.", simpeler: "Ontwijking = slim binnen de wet minder belasting. Moreel grijs gebied.", nogSimpeler: "Legaal slim" },
+          niveaus: { basis: "Legaal mazen gebruiken.", simpeler: "Ontwijking = slim binnen de wet minder belasting. Moreel grijs gebied.", nogSimpeler: "Legaal slim" },
         },
       },
       {
@@ -612,7 +612,7 @@ const steps = [
           theorie: "Sancties: 25% boete (slordigheid), 50% (grove schuld), 100% (opzet). Bij grote bedragen ook strafrecht (gevangenis). Belastingdienst kan tot 12 jaar terug bij buitenland.",
           voorbeelden: [{ type: "ontduiking", tekst: "Zzp'er verzwijgt 50% omzet → ontdekt na 5 jaar → naheffing €50k + 50% boete €25k = €75k." }],
           basiskennis: [{ onderwerp: "Verschil legaal/illegaal", uitleg: "Ontwijking ≠ ontduiking. Een letter verschil, groot juridisch verschil." }],
-          niveaus: { basis: "Verzwijgen = illegaal. A.", simpeler: "Ontduiking = bewust verzwijgen, illegaal. Boete tot 100% + gevangenis.", nogSimpeler: "Illegaal" },
+          niveaus: { basis: "Verzwijgen = illegaal.", simpeler: "Ontduiking = bewust verzwijgen, illegaal. Boete tot 100% + gevangenis.", nogSimpeler: "Illegaal" },
         },
       },
       {
@@ -626,7 +626,7 @@ const steps = [
           theorie: "Beide partijen riskeren: tuinman bij ontdekking boete + naheffing. Klant bij aansprakelijkheid voor inhouding (bijv. bij klusjes >€1.000). Risico vooral bij grote werken.",
           voorbeelden: [{ type: "klein", tekst: "€100 cash voor knippen heg — onbekend bij Belastingdienst, vaak ongestraft." }, { type: "groot", tekst: "€10k aan tuinaanleg cash zonder factuur → groot risico bij ontdekking." }],
           basiskennis: [{ onderwerp: "Niet 'gewoon'", uitleg: "Cash zonder factuur is wel WERKEND maar BUITEN de belastingregels. Mogelijk illegaal." }],
-          niveaus: { basis: "Zwart geld. A.", simpeler: "Cash zonder factuur = vaak zwart werk → geen belasting betaald.", nogSimpeler: "Geen factuur = zwart" },
+          niveaus: { basis: "Zwart geld.", simpeler: "Cash zonder factuur = vaak zwart werk → geen belasting betaald.", nogSimpeler: "Geen factuur = zwart" },
         },
       },
       {
@@ -640,7 +640,7 @@ const steps = [
           theorie: "Gevolgen: IJslandse premier afgetreden, Britse premier Cameron in moeilijkheden, internationaal onderzoek + nieuwe wetten. Daarna ook Paradise Papers (2017), Pandora Papers (2021) — zelfde patroon, nieuwe namen.",
           voorbeelden: [{ type: "leiders", tekst: "130+ politici/leiders genoemd in Panama Papers — Putin, Cameron, Aliyev, Sharif." }],
           basiskennis: [{ onderwerp: "Niet wet/verdrag", uitleg: "Papers zijn ONTHULLINGEN, geen wetgeving. Wel aanleiding voor nieuwe wetten." }],
-          niveaus: { basis: "Lek over offshore-bedrijven. A.", simpeler: "Panama Papers = enorm datalek dat geheime belasting-constructies van wereldleiders onthulde.", nogSimpeler: "Mega-lek" },
+          niveaus: { basis: "Lek over offshore-bedrijven.", simpeler: "Panama Papers = enorm datalek dat geheime belasting-constructies van wereldleiders onthulde.", nogSimpeler: "Mega-lek" },
         },
       },
       {
@@ -654,7 +654,7 @@ const steps = [
           theorie: "NL belastingmoraal relatief hoog (~80% vindt eerlijk betalen normaal). Vergelijk: Italië, Griekenland veel lager → grijzere economie + slechtere voorzieningen → vicieuze cirkel.",
           voorbeelden: [{ type: "ondernemer", tekst: "Eerlijke ondernemer betaalt €50k VPB. Concurrent ontwijkt naar €10k → laatste kan goedkoper aanbieden, verdringt eerlijke." }],
           basiskennis: [{ onderwerp: "Voor iedereen", uitleg: "Niet alleen rijken — iedereen profiteert van werkende overheid, dus iedereen moet bijdragen." }],
-          niveaus: { basis: "3 redenen. A.", simpeler: "Eerlijk betalen = solidariteit + financiering overheid + eerlijke concurrentie.", nogSimpeler: "Allemaal mee" },
+          niveaus: { basis: "3 redenen.", simpeler: "Eerlijk betalen = solidariteit + financiering overheid + eerlijke concurrentie.", nogSimpeler: "Allemaal mee" },
         },
       },
       {
@@ -668,7 +668,7 @@ const steps = [
           theorie: "Bekende: Kaaimaneilanden (0% VPB), Bermuda, Bahama's, Panama, Liechtenstein. Nederland werd zelf gezien als 'doorvoer-paradijs' voor royalty-constructies — sinds 2020 strenger.",
           voorbeelden: [{ type: "Apple", tekst: "Apple parkeerde $250 mrd winst via Ierland → 0,005% effectieve belasting. EU eiste €13 mrd naheffing." }],
           basiskennis: [{ onderwerp: "Niet 'geen belasting'", uitleg: "Meeste paradijzen hebben WEL belasting, maar zeer laag. Pure 0% bestaat zelden." }],
-          niveaus: { basis: "Lage belasting + geheim. A.", simpeler: "Belastingparadijs = land met heel lage belasting + waar overheid niet meekijkt.", nogSimpeler: "Laag + geheim" },
+          niveaus: { basis: "Lage belasting + geheim.", simpeler: "Belastingparadijs = land met heel lage belasting + waar overheid niet meekijkt.", nogSimpeler: "Laag + geheim" },
         },
       },
     ],
@@ -708,7 +708,7 @@ const steps = [
           theorie: "Vooraf ingevuld via Mijn Belastingdienst (DigiD). Werkenden krijgen vaak teruggave (te veel ingehouden loonheffing). Te laat = boete €385+.",
           voorbeelden: [{ type: "praktijk", tekst: "Loontrekker: 5 minuten check + indienen. Zzp'er: complex, 2-5 uur." }],
           basiskennis: [{ onderwerp: "Niet vrije keuze", uitleg: "Wel deadline, anders boete oplopend tot €5.514 voor recidivisten." }],
-          niveaus: { basis: "Vóór 1 mei. A.", simpeler: "IB-aangifte moet vóór 1 mei (standaard). Anders: uitstel of boete.", nogSimpeler: "1 mei" },
+          niveaus: { basis: "Vóór 1 mei.", simpeler: "IB-aangifte moet vóór 1 mei (standaard). Anders: uitstel of boete.", nogSimpeler: "1 mei" },
         },
       },
       {
@@ -722,7 +722,7 @@ const steps = [
           theorie: "DigiD-app vervangt steeds vaker SMS-codes. Veiliger + sneller. Voor Mijn Belastingdienst + Toeslagen + UWV + gemeente. Belangrijk: DigiD nooit delen!",
           voorbeelden: [{ type: "praktijk", tekst: "Login: gebruikersnaam + wachtwoord → SMS-code of DigiD-app-bevestiging → toegang Mijn Belastingdienst." }],
           basiskennis: [{ onderwerp: "Niet BSN alleen", uitleg: "BSN is bekend bij velen — onvoldoende beveiliging. DigiD voegt wachtwoord + 2FA toe." }],
-          niveaus: { basis: "DigiD. A.", simpeler: "Inloggen overheidsdiensten = DigiD (gebruikersnaam + wachtwoord + bevestiging).", nogSimpeler: "DigiD" },
+          niveaus: { basis: "DigiD.", simpeler: "Inloggen overheidsdiensten = DigiD (gebruikersnaam + wachtwoord + bevestiging).", nogSimpeler: "DigiD" },
         },
       },
       {
@@ -736,7 +736,7 @@ const steps = [
           theorie: "Bezwaar = kosteloos. Beroep = griffierecht (~€50-300). Daarna hoger beroep mogelijk. Belastingdienst kan zelf aanslag terugnemen of aanpassen — vaak gunstig.",
           voorbeelden: [{ type: "praktijk", tekst: "Aanslag €5.000 in september → bezwaar mogelijk tot eind oktober. Stuur brief met argumenten." }],
           basiskennis: [{ onderwerp: "Niet onbeperkt", uitleg: "Na 6 weken vervalt bezwaarrecht. Termijn strikt." }],
-          niveaus: { basis: "6 weken. A.", simpeler: "Bezwaar mogelijk binnen 6 weken na aanslagdatum. Daarna te laat.", nogSimpeler: "6 weken" },
+          niveaus: { basis: "6 weken.", simpeler: "Bezwaar mogelijk binnen 6 weken na aanslagdatum. Daarna te laat.", nogSimpeler: "6 weken" },
         },
       },
       {
@@ -750,7 +750,7 @@ const steps = [
           theorie: "Praktijk: Belastingdienst geeft meestal eerst kans op vrijwillige verbetering. Maar opzet ontdekt = volledige boete. Bekende zaken: Klaas Bruinsma, vastgoedhandelaren.",
           voorbeelden: [{ type: "opzet", tekst: "Zzp'er verzwijgt €100k omzet → naheffing €40k + boete 100% = €80k totaal + strafrechtelijk onderzoek." }],
           basiskennis: [{ onderwerp: "Niet korting", uitleg: "Geen 'korting' of waarschuwing bij opzettelijke fraude. Direct boete + soms cel." }],
-          niveaus: { basis: "100% boete + strafrecht. A.", simpeler: "Opzettelijke fraude: tot 100% boete bovenop naheffing + mogelijk gevangenis.", nogSimpeler: "Streng" },
+          niveaus: { basis: "100% boete + strafrecht.", simpeler: "Opzettelijke fraude: tot 100% boete bovenop naheffing + mogelijk gevangenis.", nogSimpeler: "Streng" },
         },
       },
       {
@@ -764,7 +764,7 @@ const steps = [
           theorie: "Wat bewaren: facturen (verstuurd + ontvangen), bonnen, bankafschriften, contracten, jaarrekeningen, BTW-aangiftes. Te vroeg weggegooid = boete + ongunstige conclusie (Belastingdienst gaat ervan uit dat het tegen jou pleit).",
           voorbeelden: [{ type: "praktijk", tekst: "Zzp 2024 → bewaar bonnen + admin tot 2031. Daarna mag weg." }],
           basiskennis: [{ onderwerp: "Niet alleen ondernemers", uitleg: "Particulieren ook: hypotheekrente-bewijzen, giften, ziektekosten — voor IB-aangifte + controle." }],
-          niveaus: { basis: "7 jaar. A.", simpeler: "Administratie 7 jaar bewaren. Niet weggooien — wettelijke plicht.", nogSimpeler: "7 jaar" },
+          niveaus: { basis: "7 jaar.", simpeler: "Administratie 7 jaar bewaren. Niet weggooien — wettelijke plicht.", nogSimpeler: "7 jaar" },
         },
       },
       {
@@ -778,7 +778,7 @@ const steps = [
           theorie: "Gevolgen: kabinet Rutte III viel (2021). Compensatieregeling €30k+ per ouder loopt nog. Hervorming Belastingdienst. Wereldwijd voorbeeld van gevaren algoritmes zonder menselijk toezicht.",
           voorbeelden: [{ type: "schadebeeld", tekst: "Ouder met dubbele nationaliteit krijgt €5k kinderopvangtoeslag → algoritme markeert → 'fraude' → naheffing €120k → schuldsanering → kinderen uit huis geplaatst." }],
           basiskennis: [{ onderwerp: "Geen te veel uitbetaling", uitleg: "Probleem was niet teveel — was onterechte BESCHULDIGING + terugvordering van mensen die niets fout deden." }],
-          niveaus: { basis: "Onterechte fraudebeschuldigingen. A.", simpeler: "26.000 ouders door algoritme ten onrechte fraudeur genoemd → grote financiële nood + uithuisplaatsingen.", nogSimpeler: "Schandaal" },
+          niveaus: { basis: "Onterechte fraudebeschuldigingen.", simpeler: "26.000 ouders door algoritme ten onrechte fraudeur genoemd → grote financiële nood + uithuisplaatsingen.", nogSimpeler: "Schandaal" },
         },
       },
     ],

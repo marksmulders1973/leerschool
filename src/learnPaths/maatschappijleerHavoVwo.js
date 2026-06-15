@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Eerste Kamer.", "Niet correct.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Vast aantal", tekst: "**Tweede Kamer: 150 leden** (sinds 1956). Direct gekozen door volk elke 4 jaar via evenredige vertegenwoordiging. **Eerste Kamer: 75 leden** (indirect via Provinciale Staten). Daarvoor: TK had 100 leden — uitgebreid om beter representatie te krijgen na uitbreiding kiesrecht." }],
-          niveaus: { basis: "150. A.", simpeler: "TK = 150", nogSimpeler: "150" },
+          niveaus: { basis: "150.", simpeler: "TK = 150", nogSimpeler: "150" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — Marx kwam later.", "Locke beïnvloedde wel maar Montesquieu formaliseerde.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois", tekst: "**Montesquieu** in *De geest van de wetten* (1748): **trias politica** = scheiding van wetgevende, uitvoerende, rechterlijke macht voorkomt tirannie. Geïnspireerd door Engels parlementair systeem. Invloed: Amerikaanse Grondwet 1787, Franse 1791, NL 1815." }],
-          niveaus: { basis: "Montesquieu. A.", simpeler: "Trias = Montesq.", nogSimpeler: "A." },
+          niveaus: { basis: "Montesquieu.", simpeler: "Trias = Montesq.", nogSimpeler: "A." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Dat is regering.", "Te breed.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Regering vs kabinet", tekst: "**Regering** = koning + ministers + staatssecretarissen. **Kabinet** = alleen ministers + staatssecretarissen (zonder koning). Hoofd: **minister-president** (premier). Kabinet vergadert vrijdagen in 'Trêveszaal' (Den Haag). Beslissingen bij meerderheid + collegiale verantwoordelijkheid." }],
-          niveaus: { basis: "Ministers. A.", simpeler: "Kabinet = ministers", nogSimpeler: "A." },
+          niveaus: { basis: "Ministers.", simpeler: "Kabinet = ministers", nogSimpeler: "A." },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Frankrijk Revolutie.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Aletta Jacobs", tekst: "Vrouwen NL-stemrecht: **1919** (passief 1917, actief 1919). Strijd geleid door **Aletta Jacobs** (1854-1929), eerste vrouwelijke arts NL. **Mannen algemeen stemrecht**: 1917 (loskoppeling van welvaart-vereiste). Vergelijking: Nieuw-Zeeland 1893 (eerste vrouwen-stemrecht wereldwijd), UK 1918/1928 (gefaseerd), VS 1920, Frankrijk 1944 (laat!)." }],
-          niveaus: { basis: "1919. A.", simpeler: "Vrouwen 1919", nogSimpeler: "A." },
+          niveaus: { basis: "1919.", simpeler: "Vrouwen 1919", nogSimpeler: "A." },
         },
       },
       {
@@ -77,7 +77,7 @@ const steps = [
         wrongHints: [null, "Niet huidige.", "Niet huidige.", "Onmogelijk NL."],
         uitlegPad: {
           stappen: [{ titel: "Eerste PVV-deelname", tekst: "**Kabinet-Schoof** sinds 2 juli 2024: 4-partij-coalitie **PVV + VVD + NSC + BBB**. **Premier**: Dick Schoof (extra-parlementair, geen partij). Eerste keer PVV in regering. Compromis-akkoord 'Hoofdlijnenakkoord'. Controvers + spanningen rond migratie + EU-positie." }],
-          niveaus: { basis: "4 partijen. A.", simpeler: "Schoof = PVV/VVD/NSC/BBB", nogSimpeler: "A." },
+          niveaus: { basis: "4 partijen.", simpeler: "Schoof = PVV/VVD/NSC/BBB", nogSimpeler: "A." },
         },
       },
     ],
@@ -96,7 +96,7 @@ const steps = [
         wrongHints: [null, "Niet — aanpassen.", "Niet — apart.", "Niet integratie."],
         uitlegPad: {
           stappen: [{ titel: "Salad bowl", tekst: "**Multiculturalisme**: migranten behouden eigen culturele identiteit naast nieuwe samenleving ('salad bowl'). **Assimilatie**: volledig aanpassen aan dominante cultuur ('smelting pot' VS-traditioneel). NL heeft historisch geneigd richting multiculturalisme, sinds 2002 (Fortuyn-moord) meer assimilatie-eis." }],
-          niveaus: { basis: "Multiculturalisme. A.", simpeler: "Behoud cultuur = multi", nogSimpeler: "A." },
+          niveaus: { basis: "Multiculturalisme.", simpeler: "Behoud cultuur = multi", nogSimpeler: "A." },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
         wrongHints: [null, "Te laag.", "Te hoog.", "Veel te laag."],
         uitlegPad: {
           stappen: [{ titel: "CBS-cijfers", tekst: "NL-bevolking 2024 (~18 mln):\n• **Autochtoon**: ~75% (NL-geboren met NL-geboren ouders).\n• **Westers** (EU/VS/etc.): ~10%.\n• **Niet-westers**: **~15%** (Turks, Marokkaans, Surinaams, Antilliaans, Syrisch, Iraans, etc.).\n\nGroei van migratie-achtergrond: 1972 ~9%, 2024 ~25%. CBS-definities veranderd 2022 — nu meer focus op herkomst-land." }],
-          niveaus: { basis: "15%. A.", simpeler: "Niet-westers ~15%", nogSimpeler: "15" },
+          niveaus: { basis: "15%.", simpeler: "Niet-westers ~15%", nogSimpeler: "15" },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         wrongHints: [null, "Dat zijn pull-factoren.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Push vs Pull", tekst: "**Push-factoren**: redenen om **weg** te gaan uit thuisland — oorlog, vervolging, armoede, klimaat. **Pull-factoren**: redenen om naar **nieuw** land te gaan — werk, kansen, familie, veiligheid. Migratie-beslissing meestal combinatie van beide. Vluchteling: push dominant. Expat: pull dominant." }],
-          niveaus: { basis: "Weg-redenen. A.", simpeler: "Push = weg", nogSimpeler: "A." },
+          niveaus: { basis: "Weg-redenen.", simpeler: "Push = weg", nogSimpeler: "A." },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Te laag.", "Te hoog.", "Christelijk."],
         uitlegPad: {
           stappen: [{ titel: "Sterke secularisatie", tekst: "**NL 2023**: ~55% geen religie / atheïst / agnost. Christendom ~30% (RK 20%, protestants 10%). Islam ~5%. Andere <1%.\n\n**Trend secularisatie**: 1960 ~80% kerkelijk → 2023 ~30%. Eén van snelst-seculierende landen wereld. Verzuiling (1900-1960) afgebroken." }],
-          niveaus: { basis: "55%. A.", simpeler: "Geen religie = 55%", nogSimpeler: "55" },
+          niveaus: { basis: "55%.", simpeler: "Geen religie = 55%", nogSimpeler: "55" },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Etnisch profileren", tekst: "**Toeslagenaffaire (2005-2019)**: belastingdienst beschuldigde ~26.000 ouders van fraude met kinderopvang-toeslag. Ouders met migratie-achtergrond (vooral Surinaams + Turks-Marokkaans) **disproportioneel** geraakt door indirecte discriminatie via algoritme dat 'risico-profielen' creëerde. Hoge boetes + schuld → financiële drama's. Kabinet-Rutte III viel 2021. Symbool van rechtsstaat-falen + structurele discriminatie." }],
-          niveaus: { basis: "Discriminatie. A.", simpeler: "Toeslagen = discr", nogSimpeler: "A." },
+          niveaus: { basis: "Discriminatie.", simpeler: "Toeslagen = discr", nogSimpeler: "A." },
         },
       },
     ],
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten", tekst: "**Klassieke grondrechten**: burger TEGEN overheid (vrijheidsrechten). Overheid moet 'met rust laten' (negatief recht). Bv. meningsuiting, godsdienst, privacy, vereniging. **Sociale grondrechten**: overheid moet 'iets doen' (positief recht) — werkgelegenheid, milieu, gezondheid, onderwijs." }],
-          niveaus: { basis: "Tegen overheid. A.", simpeler: "Klassiek = vrijheid vs staat", nogSimpeler: "A." },
+          niveaus: { basis: "Tegen overheid.", simpeler: "Klassiek = vrijheid vs staat", nogSimpeler: "A." },
         },
       },
       {
@@ -166,7 +166,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hof Straatsburg", tekst: "**EVRM** (Europees Verdrag Rechten van de Mens, 1950) is **juridisch bindend** voor Raad van Europa-lidstaten. Burgers kunnen klagen bij **Europees Hof Mensenrechten (EHRM) Straatsburg**. **UVRM** (Universele Verklaring, 1948) is wereldwijd moreel sterk maar **niet juridisch bindend**." }],
           theorie: "Cito-actueel: NL veroordeeld bij EHRM voor o.a. Toeslagenaffaire-elementen + Urgenda klimaat.",
-          niveaus: { basis: "EVRM. A.", simpeler: "EVRM = bindend", nogSimpeler: "A." },
+          niveaus: { basis: "EVRM.", simpeler: "EVRM = bindend", nogSimpeler: "A." },
         },
       },
       {
@@ -176,7 +176,7 @@ const steps = [
         wrongHints: [null, "Niet — hoger beroep, maar nog niet hoogste.", "Eerste aanleg.", "Geen rechter."],
         uitlegPad: {
           stappen: [{ titel: "Cassatie", tekst: "**Hoge Raad** (Den Haag) = hoogste rechter NL. **Cassatie**: niet over feiten, maar of wet correct is toegepast door lagere rechter. Boven Hoge Raad alleen internationale instanties (EHRM voor mensenrechten, HvJ EU voor EU-recht). HR kan **niet** wetten toetsen aan grondwet (art 120 — uniek NL-element)." }],
-          niveaus: { basis: "Hoge Raad. A.", simpeler: "Hoogste = HR", nogSimpeler: "HR" },
+          niveaus: { basis: "Hoge Raad.", simpeler: "Hoogste = HR", nogSimpeler: "HR" },
         },
       },
       {
@@ -186,7 +186,7 @@ const steps = [
         wrongHints: [null, "Verdiende straf.", "Afschrikken.", "Apart houden."],
         uitlegPad: {
           stappen: [{ titel: "Heropvoeden", tekst: "**Resocialisatie**: dader heropvoeden + voorbereiden op terugkeer in maatschappij. Bv. via onderwijs in gevangenis, werk-projecten, reclassering, schuldhulp. NL-strafrecht legt **veel nadruk** op resocialisatie (kortere straffen dan VS). Tegenargument: te lichte straffen geven slechte signaal. Andere doelen: vergelding, preventie, beveiliging." }],
-          niveaus: { basis: "Resocialisatie. A.", simpeler: "Terug in maatschappij", nogSimpeler: "A." },
+          niveaus: { basis: "Resocialisatie.", simpeler: "Terug in maatschappij", nogSimpeler: "A." },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
         wrongHints: [null, "Staat vervolgt.", "Overheid neemt besluiten.", "Grondwet + instituties."],
         uitlegPad: {
           stappen: [{ titel: "Civiel recht", tekst: "**Privaatrecht (civiel)** regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huwelijk, schade, erfrecht, arbeidsrecht. Conflict → civiele rechter. **Publiek recht** (staat ↔ burger): strafrecht, bestuursrecht, staatsrecht, belastingrecht." }],
-          niveaus: { basis: "Privaat. A.", simpeler: "Burger-burger = privaat", nogSimpeler: "A." },
+          niveaus: { basis: "Privaat.", simpeler: "Burger-burger = privaat", nogSimpeler: "A." },
         },
       },
     ],
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet specifiek."],
         uitlegPad: {
           stappen: [{ titel: "Edwin Sutherland 1939", tekst: "**White-collar crime** (Edwin Sutherland 1939): door **'nette' mensen** in hun beroep gepleegd. Fraude, omkoping, witwassen, milieumisdrijven, belastingontduiking. **Tegenovergesteld** klassieke 'street crime'. Vaak: hogere schade, lager opsporings-percentage, mildere straffen. Voorbeelden NL: Vestia-affaire, Imtech-faillissement, recente ABN AMRO-witwasboetes." }],
-          niveaus: { basis: "'Nette' functies. A.", simpeler: "Witteboord = nette", nogSimpeler: "A." },
+          niveaus: { basis: "'Nette' functies.", simpeler: "Witteboord = nette", nogSimpeler: "A." },
         },
       },
       {
@@ -225,7 +225,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — wel veranderd.", "Wel bekend."],
         uitlegPad: {
           stappen: [{ titel: "Dark figure groter", tekst: "**Aangifte-bereidheid** is **sterk gedaald** sinds 2002. Redenen: 'politie doet er toch niets mee', lange wachttijden, online opmaken te omslachtig, lichte feiten niet meer aangegeven. Daardoor: officiële cijfers lager → maar werkelijke criminaliteit niet noodzakelijk lager. **Dark figure** (niet-geregistreerde criminaliteit) groot." }],
-          niveaus: { basis: "Gedaald. A.", simpeler: "Aangifte ↓", nogSimpeler: "A." },
+          niveaus: { basis: "Gedaald.", simpeler: "Aangifte ↓", nogSimpeler: "A." },
         },
       },
       {
@@ -235,7 +235,7 @@ const steps = [
         wrongHints: [null, "Niet primair stelling.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Kelling + Wilson 1982", tekst: "**Broken windows-theorie**: zichtbare verloedering (gebroken ramen, graffiti, vandalisme) signaleert dat niemand controleert → mensen denken normen zijn afwezig → meer criminaliteit. Aanpak: snel ingrijpen op kleine vergrijpen + buurt schoon houden. **New York-burgemeester Giuliani** 1990s pasten radicaal toe — criminaliteit daalde (oorzaak omstreden). Kritiek: leidt tot etnisch profileren + over-aanhouding minderheden." }],
-          niveaus: { basis: "Verloedering → crim. A.", simpeler: "BW = verloedering", nogSimpeler: "A." },
+          niveaus: { basis: "Verloedering → crim.", simpeler: "BW = verloedering", nogSimpeler: "A." },
         },
       },
       {
@@ -245,7 +245,7 @@ const steps = [
         wrongHints: [null, "Niet primair georg.", "Witteboorden.", "Veelvoorkomend, niet georg."],
         uitlegPad: {
           stappen: [{ titel: "Cocaine + heroïne via havens", tekst: "**Georganiseerde criminaliteit NL**: vooral **drugshandel** via Rotterdam + Antwerpen-havens. NL = belangrijk doorvoerland EU. Bij wachten op container: enorme bedragen + geweld. Liquidaties (Marengo-zaak Ridouan Taghi). **Peter R. de Vries vermoord 2021** door criminele organisatie. Discussie 'narcostaat'. Aanpak via 'ondermijningsfonds' + politie + justitie." }],
-          niveaus: { basis: "Drugs. A.", simpeler: "Georg = drugs", nogSimpeler: "A." },
+          niveaus: { basis: "Drugs.", simpeler: "Georg = drugs", nogSimpeler: "A." },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
         wrongHints: [null, "Objectief.", "Objectief.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Gevoel vs cijfers", tekst: "**Subjectieve veiligheid** = gevoel + perceptie van veiligheid. Kan **afwijken** van objectieve criminaliteit. Voorbeeld: criminaliteit NL daalt sinds 2002, maar **gevoel onveiligheid stijgt** door media-aandacht voor incidenten + polarisatie. **Moral panic**: overdreven angst over specifieke groep (jongeren, migranten, etc.). Belangrijk voor politiek beleid." }],
-          niveaus: { basis: "Gevoel. A.", simpeler: "Subj = gevoel", nogSimpeler: "A." },
+          niveaus: { basis: "Gevoel.", simpeler: "Subj = gevoel", nogSimpeler: "A." },
         },
       },
     ],
@@ -274,7 +274,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Eli Pariser 2011", tekst: "**Filterbubbel**: algoritmes (Facebook, YouTube, etc.) tonen je vooral content die je waarschijnlijk leuk vindt → je komt alleen eigen mening tegen → polarisatie versterkt. **Echokamer**: vergelijkbaar maar specifieker over gemeenschap (vrienden) die dezelfde opvattingen versterkt. Term door Eli Pariser (*The Filter Bubble*, 2011).\n\nOplossing: actief diverse bronnen zoeken, niet alleen aanbevolen content." }],
-          niveaus: { basis: "Eigen mening. A.", simpeler: "Filter = eigen mening", nogSimpeler: "A." },
+          niveaus: { basis: "Eigen mening.", simpeler: "Filter = eigen mening", nogSimpeler: "A." },
         },
       },
       {
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [null, "Niet — beperkte reclame.", "Niet — institutioneel.", "Niet — geen aandelen."],
         uitlegPad: {
           stappen: [{ titel: "Publieke omroep", tekst: "**NPO** (Nederlandse Publieke Omroep) wordt vooral **gefinancierd via belasting** (~€800 mln/jaar Mediafonds). Beperkte reclame toegestaan (Ster). Onafhankelijk van regering — eigen bestuur. Bedoeld voor pluriforme + kwalitatieve programmering. Tegenovergesteld: SBS/RTL = commercieel, gefinancierd door reclame + abonnementen." }],
-          niveaus: { basis: "Belasting. A.", simpeler: "NPO = belasting", nogSimpeler: "A." },
+          niveaus: { basis: "Belasting.", simpeler: "NPO = belasting", nogSimpeler: "A." },
         },
       },
       {
@@ -294,7 +294,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Wet 2019", tekst: "**Bronbescherming**: journalisten hoeven hun **bron niet te onthullen**, ook niet aan rechter of politie (behalve uitzonderlijke gevallen, bv. terrorisme). Wet Bronbescherming 2019 NL. Cruciaal voor **persvrijheid** — zonder bronbescherming durven mensen geen info te geven. Beschermd ook door EVRM art 10 (vrijheid van meningsuiting + ontvangen)." }],
-          niveaus: { basis: "Bron geheim. A.", simpeler: "Bronbescherming", nogSimpeler: "A." },
+          niveaus: { basis: "Bron geheim.", simpeler: "Bronbescherming", nogSimpeler: "A." },
         },
       },
       {
@@ -304,7 +304,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Edmund Burke", tekst: "**Vierde macht** (fourth estate): onafhankelijke media als controlerend orgaan naast trias politica (wetgevend/uitvoerend/rechterlijk). Term uit Britse parlement. **Waakhond democratie** — onthullen schandalen, controleren machthebbers (Watergate, Panama Papers, MeToo, Toeslagenaffaire-onthullingen door Trouw + RTL). Vandaag onder druk door commercialisering + sociale media + populisme." }],
-          niveaus: { basis: "Media. A.", simpeler: "4e macht = media", nogSimpeler: "A." },
+          niveaus: { basis: "Media.", simpeler: "4e macht = media", nogSimpeler: "A." },
         },
       },
       {
@@ -314,7 +314,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "The Anxious Generation 2024", tekst: "**Jonathan Haidt** (NYU psycholoog) — *The Anxious Generation* (2024): stelt dat **smartphones + sociale media** sinds ~2010 mentale gezondheid jongeren beschadigen (depressie + angst + zelfdoding gestegen). Aanbevelingen: **geen smartphone vóór 14**, **geen sociale media vóór 16**, **smartphone-vrije scholen**. Internationaal debat — diverse landen overwegen wetgeving (Australië verbiedt sociale media <16 jaar 2025)." }],
-          niveaus: { basis: "Mentale gezondheid jongeren. A.", simpeler: "Haidt = mental health", nogSimpeler: "A." },
+          niveaus: { basis: "Mentale gezondheid jongeren.", simpeler: "Haidt = mental health", nogSimpeler: "A." },
         },
       },
     ],

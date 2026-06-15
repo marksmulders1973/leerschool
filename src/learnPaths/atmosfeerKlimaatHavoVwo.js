@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — stabiel + droog daar.", "Te hoog.", "Te hoog."],
         uitlegPad: {
           stappen: [{ titel: "Onderste laag", tekst: "Troposfeer (0-12 km): bevat waterdamp + verticale luchtbeweging → wolken + neerslag + wind. Boven tropopauze: stabiel, geen weer." }],
-          niveaus: { basis: "Troposfeer. A.", simpeler: "Onderste laag = weer. A.", nogSimpeler: "Troposfeer" },
+          niveaus: { basis: "Troposfeer.", simpeler: "Onderste laag = weer.", nogSimpeler: "Troposfeer" },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
             { titel: "O₃ absorbeert UV", tekst: "Ozon (O₃) absorbeert UV-fotonen → splitsen + samenstellen continu → UV blijft in atmosfeer + minder dringt door naar aarde. Cruciaal voor DNA-bescherming alle leven." },
           ],
           theorie: "Zonder ozonlaag: huidkanker-rates omhoog + foto-synthese problemen.",
-          niveaus: { basis: "Beschermt tegen UV. A.", simpeler: "Stopt schadelijke straling. A.", nogSimpeler: "UV-filter" },
+          niveaus: { basis: "Beschermt tegen UV.", simpeler: "Stopt schadelijke straling.", nogSimpeler: "UV-filter" },
         },
       },
       {
@@ -62,7 +62,7 @@ const steps = [
           stappen: [
             { titel: "Glas-effect in kas", tekst: "Naam komt van tuinkas: licht komt in, warmte uit moeilijk. Atmosfeer doet zelfde: zon (kort-golf) door, aarde-warmte (lang-golf IR) deels vastgehouden door CO₂/CH₄/H₂O. Natuurlijk effect = +33°C; versterkt = klimaatverandering." },
           ],
-          niveaus: { basis: "IR vasthouden. A.", simpeler: "Atmosfeer als glas. A.", nogSimpeler: "IR-trap" },
+          niveaus: { basis: "IR vasthouden.", simpeler: "Atmosfeer als glas.", nogSimpeler: "IR-trap" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is O₂.", "Niet — dat is N₂.", "Hoger dan werkelijk."],
         uitlegPad: {
           stappen: [{ titel: "Spoor-gas met groot effect", tekst: "CO₂ is slechts ~420 ppm = 0,042% van atmosfeer. Toch enorme klimaat-impact want het effectief absorbeert IR. Pre-industrieel: 280 ppm. Stijgend ~2,5 ppm/jaar." }],
-          niveaus: { basis: "0,042% (420 ppm). A.", simpeler: "Hele klein deel: 0,04%. A.", nogSimpeler: "420 ppm" },
+          niveaus: { basis: "0,042% (420 ppm).", simpeler: "Hele klein deel: 0,04%.", nogSimpeler: "420 ppm" },
         },
       },
       {
@@ -90,7 +90,7 @@ const steps = [
             { titel: "Internationaal succesverhaal", tekst: "Wetenschappers ontdekten 1985 ozongat → 1987 wereld-akkoord CFK's uitfaseren → ozonlaag herstelt langzaam → volledig herstel verwacht ~2070. Bewijs dat internationale samenwerking milieu-problemen kan oplossen." },
           ],
           theorie: "Klimaatverandering blijkt veel moeilijker — meer gevarieerde belangen + meer industrie betrokken.",
-          niveaus: { basis: "CFK-verbod. A.", simpeler: "Verbood spuitbus-gas voor ozon. A.", nogSimpeler: "CFK" },
+          niveaus: { basis: "CFK-verbod.", simpeler: "Verbood spuitbus-gas voor ozon.", nogSimpeler: "CFK" },
         },
       },
     ],
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Niet — te laag.", "Niet — te hoog.", "Niet — wel standaard."],
         uitlegPad: {
           stappen: [{ titel: "1 atm = 1013 hPa = 1013 mbar", tekst: "Standaard atmosfeer-druk op zee-niveau, 0°C. Op weerkaart 'hoog' = >1015 hPa, 'laag' = <1010 hPa. Verandert door temperatuur + weersysteem." }],
-          niveaus: { basis: "1013 hPa. A.", simpeler: "Standaard ~1000 hPa. A.", nogSimpeler: "1013" },
+          niveaus: { basis: "1013 hPa.", simpeler: "Standaard ~1000 hPa.", nogSimpeler: "1013" },
         },
       },
       {
@@ -126,7 +126,7 @@ const steps = [
           stappen: [
             { titel: "Daleende lucht = drogend", tekst: "In anticycloon zakt lucht → warmt op + verliest relatieve vochtigheid → minder wolken. Daarom: zonnig + droog. Vooral in zomer 'hittegolf' onder H-gebied; in winter 'mistig + ijskoud'." },
           ],
-          niveaus: { basis: "Mooi weer. A.", simpeler: "Hogedruk = zon. A.", nogSimpeler: "Mooi" },
+          niveaus: { basis: "Mooi weer.", simpeler: "Hogedruk = zon.", nogSimpeler: "Mooi" },
         },
       },
       {
@@ -143,7 +143,7 @@ const steps = [
           stappen: [
             { titel: "Aarde-rotatie schijneffect", tekst: "Aarde draait van west naar oost. Voor waarnemer op draaiende aarde lijkt lucht naar rechts (NH) of links (ZH) af te buigen. Effect 0 op evenaar, maximaal op polen. Verklaart waarom orkanen op NH tegen de klok in draaien." },
           ],
-          niveaus: { basis: "Rechts NH. A.", simpeler: "NH: rechts. ZH: links. A.", nogSimpeler: "Rechts" },
+          niveaus: { basis: "Rechts NH.", simpeler: "NH: rechts. ZH: links.", nogSimpeler: "Rechts" },
         },
       },
       {
@@ -160,7 +160,7 @@ const steps = [
           stappen: [
             { titel: "Coriolis + drukgradiënt", tekst: "Lucht stroomt naar L-centrum. Coriolis-buiging naar rechts op NH → spiraal tegen de klok in. Op ZH: met de klok mee. Orkanen volgen zelfde patroon (grote depressies)." },
           ],
-          niveaus: { basis: "Tegen klok in (NH). A.", simpeler: "Linksom op NH. A.", nogSimpeler: "Tegen klok" },
+          niveaus: { basis: "Tegen klok in (NH).", simpeler: "Linksom op NH.", nogSimpeler: "Tegen klok" },
         },
       },
       {
@@ -178,7 +178,7 @@ const steps = [
             { titel: "Adiabatische opwarming", tekst: "Vochtige lucht stijgt aan windkant berg → koelt → condenseert → regen → lucht nu DROOG. Aan andere kant zakt droge lucht → adiabatische opwarming (1°C per 100m). Bovenop berg 0°C → in dal 25°C. Vooral Alpen + Schotse Hooglanden." },
           ],
           theorie: "Soms heel snel: föhn kan in uren temperatuur 10-15°C laten stijgen → fenomeen 'föhn-koorts' (gezondheid-impact).",
-          niveaus: { basis: "Warm + droog aan lij. A.", simpeler: "Berg-effect: warm aan andere kant. A.", nogSimpeler: "Föhn" },
+          niveaus: { basis: "Warm + droog aan lij.", simpeler: "Berg-effect: warm aan andere kant.", nogSimpeler: "Föhn" },
         },
       },
     ],
@@ -202,7 +202,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is warmtefront.", "Niet — geen mist.", "Pas NA passage."],
         uitlegPad: {
           stappen: [{ titel: "Steile lift = hevig", tekst: "Koude lucht dringt onder warme door → warme lucht snel omhoog → snel condensatie → cumulonimbus (verticale onweerswolken). Resultaat: korte hevige buien, soms hagel + onweer. Na passage: temperatuur daalt + heldere lucht." }],
-          niveaus: { basis: "Buien + onweer. A.", simpeler: "Korte hevige bui. A.", nogSimpeler: "Onweer" },
+          niveaus: { basis: "Buien + onweer.", simpeler: "Korte hevige bui.", nogSimpeler: "Onweer" },
         },
       },
       {
@@ -217,7 +217,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zijn isothermen.", "Niet — isohyetes.", "Niet — anders weergegeven."],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk, baar = druk", tekst: "Hoe dichter op elkaar isobaren → groter drukgradient → harder wind. Patronen rond H + L op weerkaart vertellen waar het waait + hoe hard." }],
-          niveaus: { basis: "Gelijke druk. A.", simpeler: "Iso-druk-lijnen. A.", nogSimpeler: "Druk" },
+          niveaus: { basis: "Gelijke druk.", simpeler: "Iso-druk-lijnen.", nogSimpeler: "Druk" },
         },
       },
       {
@@ -234,7 +234,7 @@ const steps = [
           stappen: [
             { titel: "Eind-stadium depressie", tekst: "Koudefront beweegt sneller dan warmtefront → klampt eraan → warme lucht-pakket tussen wordt OMHOOG gedrukt + verdwijnt aan oppervlakte. Resultaat: één front met gemengde eigenschappen. Daarna sterft depressie uit." },
           ],
-          niveaus: { basis: "Koud haalt warm in. A.", simpeler: "Beide fronten botsen. A.", nogSimpeler: "Occlusie" },
+          niveaus: { basis: "Koud haalt warm in.", simpeler: "Beide fronten botsen.", nogSimpeler: "Occlusie" },
         },
       },
       {
@@ -251,7 +251,7 @@ const steps = [
           stappen: [
             { titel: "Chaos-grens (Lorenz)", tekst: "Edward Lorenz 1963 ontdekte: atmosfeer is chaotisch systeem. Kleinste verstoring (vlinder-effect) groeit exponentieel. Praktisch: 1-3 dagen vrij betrouwbaar, 7 dagen indicatie, na 14 dagen vrijwel willekeurig. Daarom: weer-modellen draaien tientallen variaties (ensemble) + tonen waarschijnlijkheidsbereik." },
           ],
-          niveaus: { basis: "3-7 dagen. A.", simpeler: "Week-vooruit nog ok. A.", nogSimpeler: "~5 dgn" },
+          niveaus: { basis: "3-7 dagen.", simpeler: "Week-vooruit nog ok.", nogSimpeler: "~5 dgn" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
             { titel: "Latente warmte uit verdamping", tekst: "Warme oceaan: water verdampt → waterdamp omhoog → condenseert → releases latente warmte → drijft opwaartse luchtstroom → cyclonale spiraal. Daarom orkanen vooral tropisch eind zomer (warmste water). Verdwijnt boven land of koud water (geen energiebron meer)." },
           ],
           theorie: "Klimaatverandering verwarmt oceanen → potentieel sterkere orkanen + langere seizoenen.",
-          niveaus: { basis: "Warm water >26°C. A.", simpeler: "Warme zee = brandstof. A.", nogSimpeler: "Warm zee" },
+          niveaus: { basis: "Warm water >26°C.", simpeler: "Warme zee = brandstof.", nogSimpeler: "Warm zee" },
         },
       },
     ],
@@ -289,7 +289,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mild + nat hele jaar", tekst: "Cfb: gematigd (C), zonder droog seizoen (f), warmste maand <22°C maar koudste >−3°C (b). NL klassieker — door zee-invloed mild jaarrond." }],
           theorie: "Zonder Golfstroom: NL Df (continentaal, streng winter zoals St-Petersburg op zelfde breedte).",
-          niveaus: { basis: "Cfb. A.", simpeler: "Zee-klimaat: mild + nat. A.", nogSimpeler: "Cfb" },
+          niveaus: { basis: "Cfb.", simpeler: "Zee-klimaat: mild + nat.", nogSimpeler: "Cfb" },
         },
       },
       {
@@ -306,7 +306,7 @@ const steps = [
           stappen: [
             { titel: "Twee mechanismen", tekst: "1. Humboldt-stroom (koud water langs Chili-kust) → koude lucht erboven → weinig verdamping → weinig regen.\n2. Andes-gebergte aan oost-kant: vochtige Atlantische lucht regent uit aan oostkant → droge lucht aan west = Atacama.\n\nResultaat: meest droge woestijn ter aarde (sommige plekken <1 mm regen/jaar)." },
           ],
-          niveaus: { basis: "Humboldt + Andes-schaduw. A.", simpeler: "Koude zee + bergen. A.", nogSimpeler: "Humboldt" },
+          niveaus: { basis: "Humboldt + Andes-schaduw.", simpeler: "Koude zee + bergen.", nogSimpeler: "Humboldt" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
           stappen: [
             { titel: "Lopende band warmte", tekst: "Golfstroom transporteert ~1 PW (= 10¹⁵ W) warmte van tropen naar Noord-Atlantische. Zonder: London zou klimaat hebben van Labrador (Canada) op zelfde breedte (~50°N). Engeland + NL profiteren enorm." },
           ],
-          niveaus: { basis: "NW-Europa. A.", simpeler: "Maakt NL milder. A.", nogSimpeler: "NL" },
+          niveaus: { basis: "NW-Europa.", simpeler: "Maakt NL milder.", nogSimpeler: "NL" },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — constant.", "Niet — hoogte → klimaat-verandering."],
         uitlegPad: {
           stappen: [{ titel: "Af = altijd nat + warm", tekst: "Amazone, Congo, Borneo, Sumatra: bijna evenaar + constante warmte (~25°C) + 2000+ mm regen/jaar. Hoogste biodiversiteit + grootste netto-fotosynthese ter aarde." }],
-          niveaus: { basis: "Warm + nat. A.", simpeler: "Altijd warm + regen. A.", nogSimpeler: "Warm/nat" },
+          niveaus: { basis: "Warm + nat.", simpeler: "Altijd warm + regen.", nogSimpeler: "Warm/nat" },
         },
       },
       {
@@ -356,7 +356,7 @@ const steps = [
             { titel: "Thermo (T) + halien (zout)", tekst: "Warm + zoet water = licht → drijft. Koud + zout = dicht → zinkt. In NW Atlantische zinkt water naar diepe → terug naar tropen via diep-stroom → cyclus van 1000 jaar. Klimaat-bepalend voor halve wereld." },
           ],
           theorie: "IPCC: smelt-water uit Groenland kan circulatie verzwakken — gevreesde 'tipping point'.",
-          niveaus: { basis: "Dichtheid (T + zout). A.", simpeler: "Zwaar water zinkt = motor. A.", nogSimpeler: "Dichtheid" },
+          niveaus: { basis: "Dichtheid (T + zout).", simpeler: "Zwaar water zinkt = motor.", nogSimpeler: "Dichtheid" },
         },
       },
     ],
@@ -375,7 +375,7 @@ const steps = [
         wrongHints: [null, "Waterdamp natuurlijk; CO₂ menselijk.", "Niet — ozon-laag herstelt.", "Niet — N₂ inert."],
         uitlegPad: {
           stappen: [{ titel: "CO₂ + lange levensduur", tekst: "CO₂ blijft eeuwen in atmosfeer. CH₄ veel sterker maar afgebroken in ~12 j. CO₂ is de hoofd-driver van langetermijn opwarming. Pre-industrieel 280 ppm → 2024: 420 ppm." }],
-          niveaus: { basis: "CO₂. A.", simpeler: "Koolstof-dioxide uit kolen + olie. A.", nogSimpeler: "CO₂" },
+          niveaus: { basis: "CO₂.", simpeler: "Koolstof-dioxide uit kolen + olie.", nogSimpeler: "CO₂" },
         },
       },
       {
@@ -392,7 +392,7 @@ const steps = [
           stappen: [
             { titel: "Twee aanpakken", tekst: "**Mitigatie**: CO₂-uitstoot verminderen → klimaat-verandering beperken (zon/wind, EV, etc.).\n**Adaptatie**: zelfs met mitigatie blijft opwarming → samenleving aanpassen (hogere dijken, droogte-resistente gewassen, koeler bouwen).\nBeide nodig — niet of/of." },
           ],
-          niveaus: { basis: "Oorzaak vs gevolg. A.", simpeler: "Voorkomen vs erop reageren. A.", nogSimpeler: "Anders" },
+          niveaus: { basis: "Oorzaak vs gevolg.", simpeler: "Voorkomen vs erop reageren.", nogSimpeler: "Anders" },
         },
       },
       {
@@ -404,7 +404,7 @@ const steps = [
           stappen: [
             { titel: "Klimaatwetenschappelijk doel", tekst: "<1,5°C = 'veilig', <2°C = 'beheersbaar'. Boven 2°C: tipping points cascade-risico. Huidige plannen: ~2,5°C tegen 2100 zonder versterkte actie. 1,5°C waarschijnlijk al onbereikbaar zonder revolutionaire CCS." },
           ],
-          niveaus: { basis: "1,5-2°C. A.", simpeler: "Onder 2 graden. A.", nogSimpeler: "2°C" },
+          niveaus: { basis: "1,5-2°C.", simpeler: "Onder 2 graden.", nogSimpeler: "2°C" },
         },
       },
       {
@@ -422,7 +422,7 @@ const steps = [
             { titel: "Feedback-loops", tekst: "Permafrost-voorbeeld: opwarming → permafrost ontdooit → CH₄ vrij → meer opwarming → meer ontdooiing → cyclus. Eenmaal voorbij drempel niet meer te stoppen. IPCC identificeert ~10 grote tipping points (Golfstroom, Amazone, Antarctische ijskap, etc.)." },
           ],
           theorie: "Sommige tipping points zouden actief kunnen zijn rond 1,5-2°C — daarom is 1,5°C-doel zo belangrijk.",
-          niveaus: { basis: "Onomkeerbare drempel. A.", simpeler: "Punt van geen terug. A.", nogSimpeler: "Drempel" },
+          niveaus: { basis: "Onomkeerbare drempel.", simpeler: "Punt van geen terug.", nogSimpeler: "Drempel" },
         },
       },
       {
@@ -440,7 +440,7 @@ const steps = [
             { titel: "Geografie + bevolking", tekst: "NL ligt grotendeels in delta + onder zeeniveau (Randstad, Flevoland). Met zeespiegelstijging + extreme stormvloeden vereist veel investering in dijken + 'Plan Deltacommissaris' (2008+). Plus dichte stedelijke bevolking → hittegolf-stress." },
           ],
           theorie: "Andere kwetsbaarheden: hittegolven (stedelijke heat island), wateroverlast door hevige regen, droogte op zandgronden.",
-          niveaus: { basis: "Onder zeeniveau + delta. A.", simpeler: "Onder zee + kustland. A.", nogSimpeler: "Onder zee" },
+          niveaus: { basis: "Onder zeeniveau + delta.", simpeler: "Onder zee + kustland.", nogSimpeler: "Onder zee" },
         },
       },
     ],

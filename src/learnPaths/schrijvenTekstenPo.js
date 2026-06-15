@@ -43,7 +43,7 @@ const steps = [
           theorie: "Hulpvraag: wil de schrijver dat ik (1) iets DOE → Instrueren, (2) iets WEET → Beschrijven, (3) iets DENK → Overtuigen, (4) iets LEUK vind → Amuseren.",
           voorbeelden: [{ type: "controle", tekst: "Recept: 'meng het meel met water'. Doel = Instrueren ✓." }],
           basiskennis: [{ onderwerp: "Handleiding-signalen", uitleg: "Woorden als 'stap', 'eerst', 'daarna', 'tot slot' → bijna altijd Instrueren." }],
-          niveaus: { basis: "Handleiding = HOE iets moet = Instrueren. A.", simpeler: "Handleiding zegt 'doe dit, dan dit' = stappen = I van OBIA. A.", nogSimpeler: "Handleiding = stappen = Instrueren. A." },
+          niveaus: { basis: "Handleiding = HOE iets moet = Instrueren.", simpeler: "Handleiding zegt 'doe dit, dan dit' = stappen = I van OBIA.", nogSimpeler: "Handleiding = stappen = Instrueren." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
           theorie: "Reclame is altijd Overtuigen — ook als 't grappig is. De grap is een truc om je over te halen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Met dit toetje voel je je top!' → niet feiten, maar overtuigen om te kopen." }],
           basiskennis: [{ onderwerp: "Overtuig-signalen", uitleg: "Woorden als 'koop', 'kies', 'doe mee', 'beste', '50% korting' → Overtuigen." }],
-          niveaus: { basis: "Reclame = Overtuigen. A.", simpeler: "'Koop nu' = oproep = je moet iets DOEN = Overtuigen. A.", nogSimpeler: "Reclame = O. A." },
+          niveaus: { basis: "Reclame = Overtuigen.", simpeler: "'Koop nu' = oproep = je moet iets DOEN = Overtuigen.", nogSimpeler: "Reclame = O." },
         },
       },
       {
@@ -71,7 +71,7 @@ const steps = [
           theorie: "Krantenbericht / journaal / school-tekstboek → bijna altijd Informeren. Geen mening, geen oproep.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Nederland heeft 17,8 miljoen inwoners' → feit → Informeren." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Een opiniestuk in de krant is WEL Overtuigen (mening). Nieuws is Informeren." }],
-          niveaus: { basis: "Nieuws = feiten = Informeren. A.", simpeler: "Bericht geeft feiten. Geen mening. = Informeren. A.", nogSimpeler: "Nieuws = I (van OBIA-B). A." },
+          niveaus: { basis: "Nieuws = feiten = Informeren.", simpeler: "Bericht geeft feiten. Geen mening. = Informeren.", nogSimpeler: "Nieuws = I (van OBIA-B)." },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Gedicht / roman / mop / kinderverhaal → Amuseren. Soms ook iets leren erbij, maar plezier is hoofdzaak.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Annie M.G. Schmidt-gedichtje → Amuseren." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Een leerboek over gedichten = Informeren. Het gedicht zelf = Amuseren." }],
-          niveaus: { basis: "Gedicht = mooi = Amuseren. A.", simpeler: "Gedicht is om van te genieten = A van OBIA. A.", nogSimpeler: "Gedicht = A. A." },
+          niveaus: { basis: "Gedicht = mooi = Amuseren.", simpeler: "Gedicht is om van te genieten = A van OBIA.", nogSimpeler: "Gedicht = A." },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Cito-truc: zoek 'ik vind', 'volgens mij', 'het is belangrijk dat'. → Overtuigen.",
           voorbeelden: [{ type: "controle", tekst: "'Ik vind voetbal de mooiste sport.' = mening = Overtuigen." }],
           basiskennis: [{ onderwerp: "Mening vs feit", uitleg: "FEIT: '40% van NL doet aan sport'. MENING: 'Sporten is geweldig'." }],
-          niveaus: { basis: "Ik vind = mening = Overtuigen. A.", simpeler: "'Ik vind' is geen feit maar mening. Schrijver wil je overtuigen. A.", nogSimpeler: "Mening = Overtuigen" },
+          niveaus: { basis: "Ik vind = mening = Overtuigen.", simpeler: "'Ik vind' is geen feit maar mening. Schrijver wil je overtuigen.", nogSimpeler: "Mening = Overtuigen" },
         },
       },
     ],
@@ -122,7 +122,7 @@ const steps = [
           theorie: "Test: ken ik deze persoon? Nee → formeel. Twijfel? → formeel (kan geen kwaad).",
           voorbeelden: [{ type: "controle", tekst: "Brief aan de schooldirecteur → 'Geachte mevrouw [naam]'. Brief aan beste vriend → 'Hoi Tim'." }],
           basiskennis: [{ onderwerp: "Veilig kiezen", uitleg: "Bij twijfel altijd 'Geachte heer/mevrouw' — fout maken kan amper." }],
-          niveaus: { basis: "Gemeente = formeel = Geachte. A.", simpeler: "Gemeente is geen vriend — schrijf beleefd: 'Geachte heer/mevrouw'. A.", nogSimpeler: "Formeel = Geachte. A." },
+          niveaus: { basis: "Gemeente = formeel = Geachte.", simpeler: "Gemeente is geen vriend — schrijf beleefd: 'Geachte heer/mevrouw'.", nogSimpeler: "Formeel = Geachte." },
         },
       },
       {
@@ -136,7 +136,7 @@ const steps = [
           theorie: "Cito-regel: formele brief → altijd u/uw. Informele brief → je/jouw of jij.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Hoe gaat het met u?' Informeel: 'Hoe gaat het met jou?'" }],
           basiskennis: [{ onderwerp: "Hoofdletter U", uitleg: "U met hoofdletter is extra-beleefd (bv. aan koningshuis). Normaal kleine 'u'." }],
-          niveaus: { basis: "Formeel = u. A.", simpeler: "Beleefd → u en uw (niet jij/je). A.", nogSimpeler: "U-vorm = formeel. A." },
+          niveaus: { basis: "Formeel = u.", simpeler: "Beleefd → u en uw (niet jij/je).", nogSimpeler: "U-vorm = formeel." },
         },
       },
       {
@@ -150,7 +150,7 @@ const steps = [
           theorie: "Informeel: Groetjes / Doei / Veel liefs. Formeel: Met vriendelijke groet / Hoogachtend.",
           voorbeelden: [{ type: "controle", tekst: "Aan oma: 'Groetjes, Sam'. Aan school: 'Met vriendelijke groet, Sam de Boer'." }],
           basiskennis: [{ onderwerp: "Hoogachtend", uitleg: "Hoogachtend = zeer formeel, voor zakelijke klacht-brieven. Te zwaar voor schoolbrief." }],
-          niveaus: { basis: "Oma = informeel = Groetjes. A.", simpeler: "Familie = vriendelijke toon = 'Groetjes'. A.", nogSimpeler: "Oma = Groetjes. A." },
+          niveaus: { basis: "Oma = informeel = Groetjes.", simpeler: "Familie = vriendelijke toon = 'Groetjes'.", nogSimpeler: "Oma = Groetjes." },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
           theorie: "Formele zinnen: langer, hoffelijker, geen straattaal. 'Hierbij', 'verzoek', 'graag' zijn formele signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Ik zou u graag willen spreken.' Informeel: 'Kan ik je even spreken?'" }],
           basiskennis: [{ onderwerp: "Cito-val", uitleg: "Een te losse zin in formele context → punten aftrek. 'Hey' / 'doei' / afkortingen → mijden." }],
-          niveaus: { basis: "Eerste = formeel + beleefd. A.", simpeler: "'Hierbij...verzoeken...u' = beleefde brief-taal. A.", nogSimpeler: "Beleefd" },
+          niveaus: { basis: "Eerste = formeel + beleefd.", simpeler: "'Hierbij...verzoeken...u' = beleefde brief-taal.", nogSimpeler: "Beleefd" },
         },
       },
       {
@@ -178,7 +178,7 @@ const steps = [
           theorie: "Cito-truc: tel formele signalen. Achternaam, u-vorm, beleefde woorden = 3-uit-3 → formeel.",
           voorbeelden: [{ type: "controle", tekst: "Informeel: 'Hoi Piet, ik schrijf je namens m'n klas' (voornaam + 'je')." }],
           basiskennis: [{ onderwerp: "'Beste' is dubbel", uitleg: "'Beste meneer Janssen' = formeel (achternaam). 'Beste Piet' = informeel (voornaam). Het verschil zit in WIE." }],
-          niveaus: { basis: "Meneer + u = formeel. A.", simpeler: "Achternaam + u-vorm + 'namens' = formele brief. A.", nogSimpeler: "Formeel" },
+          niveaus: { basis: "Meneer + u = formeel.", simpeler: "Achternaam + u-vorm + 'namens' = formele brief.", nogSimpeler: "Formeel" },
         },
       },
     ],
@@ -201,7 +201,7 @@ const steps = [
           theorie: "Vijf-stappen-plan: 1) lezen, 2) hoofdgedachte vinden, 3) kern-zinnen markeren, 4) eigen woorden, 5) check op lengte 20-30%.",
           voorbeelden: [{ type: "controle", tekst: "Tekst van 500 woorden → samenvatting 100-150 woorden." }],
           basiskennis: [{ onderwerp: "Niet-skippen", uitleg: "Veel leerlingen slaan stap 1 over — kost punten op Cito." }],
-          niveaus: { basis: "Eerst lezen. A.", simpeler: "Stap 1 van samenvatten = hele tekst lezen. A.", nogSimpeler: "Eerst lezen. A." },
+          niveaus: { basis: "Eerst lezen.", simpeler: "Stap 1 van samenvatten = hele tekst lezen.", nogSimpeler: "Eerst lezen." },
         },
       },
       {
@@ -215,7 +215,7 @@ const steps = [
           theorie: "Cito-leesstrategie: scan op signaalwoorden VOOR je grondig leest. Levert hoofdgedachte snel.",
           voorbeelden: [{ type: "controle", tekst: "'Kortom, sporten is goed voor je gezondheid.' = hoofdgedachte." }],
           basiskennis: [{ onderwerp: "Niet alle signaalwoorden zijn conclusie", uitleg: "'Bijvoorbeeld' = voorbeeld-signaal. 'Maar' = tegenstelling-signaal. 'Want' = reden-signaal." }],
-          niveaus: { basis: "Kortom = conclusie. A.", simpeler: "'Kortom' kondigt hoofdgedachte aan. A.", nogSimpeler: "Kortom" },
+          niveaus: { basis: "Kortom = conclusie.", simpeler: "'Kortom' kondigt hoofdgedachte aan.", nogSimpeler: "Kortom" },
         },
       },
       {
@@ -229,7 +229,7 @@ const steps = [
           theorie: "Wel: hoofdgedachte, kern-zinnen, conclusie. Niet: voorbeelden, details, herhaling, mening (tenzij belangrijk).",
           voorbeelden: [{ type: "controle", tekst: "Tekst: 'Honden zijn lief, zoals bv. labradors en herders.' Samenvatting: 'Honden zijn lief.' (zonder de voorbeelden)." }],
           basiskennis: [{ onderwerp: "Lengte-check", uitleg: "Goede samenvatting = ~25% van origineel. Te lang? Voorbeelden weghalen helpt." }],
-          niveaus: { basis: "Voorbeelden weglaten. A.", simpeler: "Samenvatting = kern, niet details. Voorbeelden = details = weg. A.", nogSimpeler: "Voorbeelden weg. A." },
+          niveaus: { basis: "Voorbeelden weglaten.", simpeler: "Samenvatting = kern, niet details. Voorbeelden = details = weg.", nogSimpeler: "Voorbeelden weg." },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
           theorie: "Cito-tip: tel woorden. Past je samenvatting niet in 20-30%? Schrap voorbeelden en details.",
           voorbeelden: [{ type: "controle", tekst: "300-woord tekst → ~75 woord samenvatting." }],
           basiskennis: [{ onderwerp: "Niet te kort", uitleg: "1 zin = geen samenvatting, maar slogan. Verlies van nuance." }],
-          niveaus: { basis: "20-30%. A.", simpeler: "Vuistregel: een kwart van origineel. A.", nogSimpeler: "Korter, maar niet té. A." },
+          niveaus: { basis: "20-30%.", simpeler: "Vuistregel: een kwart van origineel.", nogSimpeler: "Korter, maar niet té." },
         },
       },
       {
@@ -257,7 +257,7 @@ const steps = [
           theorie: "Cito-strategie: zoek 'kortom' / 'concluderend' / 'het komt erop neer dat' → de zin erna is je hoofdgedachte.",
           voorbeelden: [{ type: "controle", tekst: "'Concluderend: lezen vergroot je woordenschat.' → hoofdgedachte = 'Lezen vergroot je woordenschat'." }],
           basiskennis: [{ onderwerp: "Geen interpretatie", uitleg: "Bij conclusie-zinnen niet zelf woorden veranderen. Letterlijk overnemen." }],
-          niveaus: { basis: "De conclusie-zin. A.", simpeler: "Na 'kortom' staat de hoofdgedachte. A.", nogSimpeler: "Kortom-zin = hoofdgedachte" },
+          niveaus: { basis: "De conclusie-zin.", simpeler: "Na 'kortom' staat de hoofdgedachte.", nogSimpeler: "Kortom-zin = hoofdgedachte" },
         },
       },
     ],
@@ -280,7 +280,7 @@ const steps = [
           theorie: "Sterkste argumenten: feit > voorbeeld > autoriteit > gevoel. Cito waardeert feit/voorbeeld het meest.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Feit: 'WHO zegt dat 60 min sport/dag het immuunsysteem verbetert' → bewijs." }],
           basiskennis: [{ onderwerp: "Bewijsbaarheid", uitleg: "Feit = kan worden gecheckt. Gevoel = alleen jouw beleving." }],
-          niveaus: { basis: "Gezond = bewijsbaar = feit. A.", simpeler: "'Gezond' kun je meten → feit-argument. A.", nogSimpeler: "Bewijsbaar = feit" },
+          niveaus: { basis: "Gezond = bewijsbaar = feit.", simpeler: "'Gezond' kun je meten → feit-argument.", nogSimpeler: "Bewijsbaar = feit" },
         },
       },
       {
@@ -294,7 +294,7 @@ const steps = [
           theorie: "Cito-letten op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Alle kinderen houden van pizza' → niet waar — er zijn kinderen die geen pizza lusten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Vraag: ken ik 1 voorbeeld dat tégen deze uitspraak ingaat? Zo ja → generalisatie." }],
-          niveaus: { basis: "'Iedereen' = generaliseren. A.", simpeler: "'Iedereen weet' is geen bewijs — drogreden. A.", nogSimpeler: "Iedereen" },
+          niveaus: { basis: "'Iedereen' = generaliseren.", simpeler: "'Iedereen weet' is geen bewijs — drogreden.", nogSimpeler: "Iedereen" },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
           theorie: "Cito-tip: een voorbeeld-argument begint vaak met 'Ik las...', 'Laatst zag ik...', 'Bij ons in de klas...'.",
           voorbeelden: [{ type: "controle", tekst: "Goed voorbeeld: 'Toen ik dyslexie kreeg, lezen werd minder leuk maar ik leerde dat met de juiste hulp het lukt.'" }],
           basiskennis: [{ onderwerp: "Persoonlijk maar concreet", uitleg: "Voorbeeld-argument = jouw ervaring met FEITEN. Niet alleen je gevoel." }],
-          niveaus: { basis: "Concrete ervaring = voorbeeld. A.", simpeler: "Boek + plankton geleerd = voorbeeld. A.", nogSimpeler: "Eigen ervaring" },
+          niveaus: { basis: "Concrete ervaring = voorbeeld.", simpeler: "Boek + plankton geleerd = voorbeeld.", nogSimpeler: "Eigen ervaring" },
         },
       },
       {
@@ -322,7 +322,7 @@ const steps = [
           theorie: "Opbouw opiniestuk: mening → 2-3 argumenten → tegenargument + weerlegging → herhaalde mening (slot).",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Sommige ouders vinden zakgeld leerzaam, maar onderzoek toont dat kinderen zonder zakgeld even goed leren omgaan met geld.'" }],
           basiskennis: [{ onderwerp: "Niet drogreden-weerlegging", uitleg: "Weerleg met FEIT/voorbeeld, niet met 'jij hebt ongelijk' (= persoonlijke aanval-drogreden)." }],
-          niveaus: { basis: "Noemen + weerleggen. A.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw. A.", nogSimpeler: "Weerleggen" },
+          niveaus: { basis: "Noemen + weerleggen.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw.", nogSimpeler: "Weerleggen" },
         },
       },
       {
@@ -336,7 +336,7 @@ const steps = [
           theorie: "Signaal: 'óf...óf...', 'wie niet voor is, is tegen', 'er is geen andere optie'. Vaak drogreden.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Of je bent vegan, of je bent dieronvriendelijk.' → 3e optie: minder vlees eten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Kun je een 3e of 4e optie verzinnen? Ja → vals dilemma." }],
-          niveaus: { basis: "Of...of zonder middenweg = vals dilemma. A.", simpeler: "Nep-keuze tussen 2 dingen = vals dilemma. A.", nogSimpeler: "Vals dilemma" },
+          niveaus: { basis: "Of...of zonder middenweg = vals dilemma.", simpeler: "Nep-keuze tussen 2 dingen = vals dilemma.", nogSimpeler: "Vals dilemma" },
         },
       },
     ],
@@ -355,7 +355,7 @@ const steps = [
         wrongHints: [null, "Niet — opiniestuk MOET een mening hebben.", "Niet — opiniestuk gaat juist over jouw mening.", "Niet — dat is een handleiding-structuur."],
         uitlegPad: {
           stappen: [{ titel: "Opiniestuk-structuur", tekst: "Goede opbouw: 1) Mening (1 zin); 2) 2-3 argumenten met voorbeeld; 3) Tegenargument noemen + weerleggen; 4) Slot-zin (mening herhalen). Cito kijkt naar deze 4 elementen." }],
-          niveaus: { basis: "4 stappen: mening, argumenten, tegen weerleggen, slot. A.", simpeler: "Opiniestuk = jouw mening + redenen + tegenargument-weerleggen. A.", nogSimpeler: "Opbouw 1" },
+          niveaus: { basis: "4 stappen: mening, argumenten, tegen weerleggen, slot.", simpeler: "Opiniestuk = jouw mening + redenen + tegenargument-weerleggen.", nogSimpeler: "Opbouw 1" },
         },
       },
       {
@@ -365,7 +365,7 @@ const steps = [
         wrongHints: [null, "Niet — informeel.", "Twijfelachtig — 'Beste' kan formeel maar voelt minder beleefd zonder naam.", "Niet — veel te informeel."],
         uitlegPad: {
           stappen: [{ titel: "Algemene formele aanhef", tekst: "Zonder naam → 'Geachte heer/mevrouw' is het veiligste. 'Beste' werkt ook maar minder formeel-genoeg voor instanties." }],
-          niveaus: { basis: "Geachte heer/mevrouw. A.", simpeler: "Naam onbekend + formeel = 'Geachte heer/mevrouw'. A.", nogSimpeler: "Geachte. A." },
+          niveaus: { basis: "Geachte heer/mevrouw.", simpeler: "Naam onbekend + formeel = 'Geachte heer/mevrouw'.", nogSimpeler: "Geachte." },
         },
       },
       {
@@ -375,7 +375,7 @@ const steps = [
         wrongHints: [null, "Dat is 1 argument, niet de hoofdgedachte.", "Niet in de tekst genoemd.", "Niet in de tekst genoemd."],
         uitlegPad: {
           stappen: [{ titel: "Eerste zin = vaak hoofdgedachte", tekst: "'Sport is belangrijk' = de stelling. De zinnen erna geven argumenten (gezond, samenwerken, vrolijk). Hoofdgedachte = de stelling." }],
-          niveaus: { basis: "Sport is belangrijk. A.", simpeler: "Eerste zin = stelling = hoofdgedachte. A.", nogSimpeler: "Eerste zin. A." },
+          niveaus: { basis: "Sport is belangrijk.", simpeler: "Eerste zin = stelling = hoofdgedachte.", nogSimpeler: "Eerste zin." },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
         wrongHints: [null, "Schoolboek geeft geen mening — feiten.", "Niet — niet bedoeld als grap.", "Niet — geen stappen."],
         uitlegPad: {
           stappen: [{ titel: "Schoolboek = feiten", tekst: "Schoolboek-paragraaf geeft feiten (data, mensen, gebeurtenissen). Geen mening, geen reclame, geen stappen. → Informeren." }],
-          niveaus: { basis: "Schoolboek = informeren. A.", simpeler: "Feiten zonder mening = Informeren. A.", nogSimpeler: "I van OBIA. A." },
+          niveaus: { basis: "Schoolboek = informeren.", simpeler: "Feiten zonder mening = Informeren.", nogSimpeler: "I van OBIA." },
         },
       },
       {
@@ -395,7 +395,7 @@ const steps = [
         wrongHints: [null, "Niet — grammaticaal klopt het.", "Niet de kwestie hier — kijk naar 'iedereen'.", "Niet — lengte is geen probleem."],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Cito-val." }],
-          niveaus: { basis: "Iedereen = generaliseren. A.", simpeler: "'Iedereen' is geen bewijs = drogreden. A.", nogSimpeler: "Generaliseren" },
+          niveaus: { basis: "Iedereen = generaliseren.", simpeler: "'Iedereen' is geen bewijs = drogreden.", nogSimpeler: "Generaliseren" },
         },
       },
     ],

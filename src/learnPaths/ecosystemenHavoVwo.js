@@ -32,7 +32,7 @@ const steps = [
         wrongHints: [null, "Niet — carnivoor is consument.", "Niet — dat is reducent.", "Niet — biologisch concept."],
         uitlegPad: {
           stappen: [{ titel: "P = autotroof", tekst: "Producenten (autotrofen) gebruiken zonlicht/anorganische stoffen om organisch materiaal te maken. Vooral planten + algen + cyanobacteriën. Begin van alle voedselketens." }],
-          niveaus: { basis: "Plant via fotosynthese. A.", simpeler: "Maakt zelf voedsel uit zon. A.", nogSimpeler: "Plant" },
+          niveaus: { basis: "Plant via fotosynthese.", simpeler: "Maakt zelf voedsel uit zon.", nogSimpeler: "Plant" },
         },
       },
       {
@@ -43,7 +43,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10%-regel", tekst: "Per niveau gaat ~10% over, 90% verloren (ademhaling, warmte, oneetbaar). Daarom zijn ecosysteem-piramides smal aan de top." }],
           theorie: "Daarom kunnen we max ~3-4 trofische niveaus hebben — daarna te weinig energie voor populatie.",
-          niveaus: { basis: "90% verlies. A.", simpeler: "Slechts ~10% door per niveau. A.", nogSimpeler: "90% weg" },
+          niveaus: { basis: "90% verlies.", simpeler: "Slechts ~10% door per niveau.", nogSimpeler: "90% weg" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         wrongHints: [null, "Niet — eet alleen geen plant.", "Niet — eet vlees.", "Niet — vos is geen schimmel."],
         uitlegPad: {
           stappen: [{ titel: "Trofische niveau", tekst: "Gras → P. Haas (eet plant) → C1. Vos (eet haas = C1) → **C2**. Een havik die vossen eet zou C3 zijn." }],
-          niveaus: { basis: "C2. A.", simpeler: "Vos eet vleeseter → niveau 3 = C2. A.", nogSimpeler: "C2" },
+          niveaus: { basis: "C2.", simpeler: "Vos eet vleeseter → niveau 3 = C2.", nogSimpeler: "C2" },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
             { titel: "R = afbraak → mineralen", tekst: "Reducenten breken dode stof af → maken anorganische mineralen vrij (N, P, K). Zonder R: voedingsstoffen zouden vastzitten in lijken; planten zouden geen nutriënten hebben → ecosysteem stort in." },
           ],
           theorie: "Daarom is bodemleven (regenwormen, schimmels, bacteriën) zo belangrijk voor landbouw + bosbouw.",
-          niveaus: { basis: "Reducenten. A.", simpeler: "Bacteriën + schimmels recyclen. A.", nogSimpeler: "R" },
+          niveaus: { basis: "Reducenten.", simpeler: "Bacteriën + schimmels recyclen.", nogSimpeler: "R" },
         },
       },
       {
@@ -91,7 +91,7 @@ const steps = [
         wrongHints: [null, "Niet — relevant maar geen reden.", "Tautologisch.", "Niet — beleid, niet ecologie."],
         uitlegPad: {
           stappen: [{ titel: "Energie-piramide", tekst: "Met 10% over per niveau: na 4 niveaus is er 0,001 (= 0,1%) van originele zonne-energie over. Te weinig om een groot dier te voeden. Daarom adelaars zeldzaam + groot territorium." }],
-          niveaus: { basis: "Energie op. A.", simpeler: "Niet genoeg eten meer hoger. A.", nogSimpeler: "Energie-grens" },
+          niveaus: { basis: "Energie op.", simpeler: "Niet genoeg eten meer hoger.", nogSimpeler: "Energie-grens" },
         },
       },
     ],
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Niet — letterlijk fout.", "Niet — biomassa is gerelateerd maar K is anders.", "Niet — dat is biodiversiteit."],
         uitlegPad: {
           stappen: [{ titel: "K = ceiling", tekst: "Boven K kan ecosysteem populatie niet meer voeden/herbergen → sterfte > geboorte → terugkeer naar K. Dynamische evenwichtswaarde." }],
-          niveaus: { basis: "Max duurzame populatie. A.", simpeler: "Plafond voor populatie-grootte. A.", nogSimpeler: "K" },
+          niveaus: { basis: "Max duurzame populatie.", simpeler: "Plafond voor populatie-grootte.", nogSimpeler: "K" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen rem = explosie", tekst: "Klassiek voorbeeld: bacteriën in vers medium verdubbelen elke 20 minuten — zou in 3 dagen massa-aarde overschrijden ZONDER beperking. In praktijk lopen ze tegen K aan." }],
           theorie: "Daarom zijn invasieve soorten zo'n probleem: nieuwe omgeving zonder co-geëvolueerde predatoren → exponentieel.",
-          niveaus: { basis: "Geen beperkingen → J-curve. A.", simpeler: "Vrij baan = explosie. A.", nogSimpeler: "Invasief" },
+          niveaus: { basis: "Geen beperkingen → J-curve.", simpeler: "Vrij baan = explosie.", nogSimpeler: "Invasief" },
         },
       },
       {
@@ -149,7 +149,7 @@ const steps = [
             { titel: "Predator volgt prooi", tekst: "Tijd-lijn: 1) haas-piek (overvloed voedsel voor lynx). 2) lynx groeit. 3) lynx-piek → haas-daling. 4) lynx krimpt. 5) haas herstelt. 6) terug naar 1. Cyclus ~10 jaar in Canada-gegevens." },
           ],
           theorie: "Hudson Bay Company-gegevens (1845-1935) tonen 10-jaars-cycli — klassiek bewijs in ecologie-leerboeken.",
-          niveaus: { basis: "Haas eerst, dan lynx. A.", simpeler: "Veel prooi → daarna veel predator. A.", nogSimpeler: "Haas eerst" },
+          niveaus: { basis: "Haas eerst, dan lynx.", simpeler: "Veel prooi → daarna veel predator.", nogSimpeler: "Haas eerst" },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Niet — 'sterkste' is te simpel.", "Niet — er IS competitie.", "Niet — er IS competitie."],
         uitlegPad: {
           stappen: [{ titel: "Niche-uitsplitsing", tekst: "Bij identieke niche: een soort verdrijft de andere. Vandaar dat in natuur soorten **niche-uitsplitsen** (eten andere insecten, op andere tijden actief, andere hoogtes in boom). Co-existentie vereist ecologisch verschil." }],
-          niveaus: { basis: "Identieke niche kan niet. A.", simpeler: "Soorten moeten verschillen in niche om samen te leven. A.", nogSimpeler: "Verschil nodig" },
+          niveaus: { basis: "Identieke niche kan niet.", simpeler: "Soorten moeten verschillen in niche om samen te leven.", nogSimpeler: "Verschil nodig" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
         wrongHints: [null, "Niet — orkaan werkt onafhankelijk van populatie-densiteit.", "Niet — geen predator.", "Niet — geen soort-conflict."],
         uitlegPad: {
           stappen: [{ titel: "Storm slaat blind toe", tekst: "Densiteit-onafhankelijk: effect onafhankelijk van hoe vol het bos is. Tegen-voorbeeld densiteit-afhankelijk: ziekte verspreidt sneller bij volle populatie (meer contact)." }],
-          niveaus: { basis: "Densiteit-onafh. A.", simpeler: "Storm slaat onafhankelijk van populatie. A.", nogSimpeler: "Onafh" },
+          niveaus: { basis: "Densiteit-onafh.", simpeler: "Storm slaat onafhankelijk van populatie.", nogSimpeler: "Onafh" },
         },
       },
     ],
@@ -199,7 +199,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "P komt uit gesteente", tekst: "Fosfor zit voornamelijk in rots-mineralen + opgelost in water/bodem. Geen significante luchtfase (in tegenstelling tot C, N, H₂O). Daarom lokaal: één plek 'pakt' fosfor en geeft 'm langzaam vrij." }],
           theorie: "Daarom is fosfaat-meststof een eindige hulpbron. Belangrijke geopolitieke kwestie (Marokko + China hebben grote voorraden).",
-          niveaus: { basis: "Fosfor = geen lucht. A.", simpeler: "P-kringloop alleen via bodem/water. A.", nogSimpeler: "P" },
+          niveaus: { basis: "Fosfor = geen lucht.", simpeler: "P-kringloop alleen via bodem/water.", nogSimpeler: "P" },
         },
       },
       {
@@ -214,7 +214,7 @@ const steps = [
         wrongHints: [null, "Niet — bomen vereisen bodem.", "Niet — eten gras dat er niet is.", "Niet — vereisen planten."],
         uitlegPad: {
           stappen: [{ titel: "Korstmossen breken rots af", tekst: "Korstmossen (symbiose schimmel + alg) produceren zuren die rots langzaam verweren. Pionierende mossen volgen, dan kruiden, struiken, bomen. Successie maakt bodem dieper + rijker." }],
-          niveaus: { basis: "Korstmossen. A.", simpeler: "Eerste leven op kale rots. A.", nogSimpeler: "Korstmossen" },
+          niveaus: { basis: "Korstmossen.", simpeler: "Eerste leven op kale rots.", nogSimpeler: "Korstmossen" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
             { titel: "Drievoudige stikstof-binding doorbreken", tekst: "N₂ heeft 3-voudige binding (heel sterk). Slechts enkele bacteriën (rhizobia, vrijwonend Azotobacter) + cyanobacteriën hebben enzym nitrogenase om dit te kraken. Plus: bliksem-energie vormt NO. Mens: industrieel Haber-Bosch sinds 1909 → 40% van wereldbevolking-voedsel afhankelijk." },
           ],
           theorie: "Vlinderbloemigen (klaver, soja, erwten) hebben rhizobia in wortelknolletjes → 'vangen' stikstof gratis. Daarom verbouw je ze in vruchtwisseling.",
-          niveaus: { basis: "Bacteriën + bliksem. A.", simpeler: "Specifieke bacteriën vangen N₂ uit lucht. A.", nogSimpeler: "Bacteriën" },
+          niveaus: { basis: "Bacteriën + bliksem.", simpeler: "Specifieke bacteriën vangen N₂ uit lucht.", nogSimpeler: "Bacteriën" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — verkeerd klimaat.", "Niet — te koud.", "Niet — te droog."],
         uitlegPad: {
           stappen: [{ titel: "Klimaat bepaalt climax", tekst: "Gematigd zee-klimaat in NL → loofbos eind-stadium. Eik (langzaam, schaduwbestendig) + beuk overheersen. Zonder mens-intervention zou ~95% NL bos zijn." }],
-          niveaus: { basis: "Loofbos. A.", simpeler: "Eikenbos = NL-climax. A.", nogSimpeler: "Loofbos" },
+          niveaus: { basis: "Loofbos.", simpeler: "Eikenbos = NL-climax.", nogSimpeler: "Loofbos" },
         },
       },
       {
@@ -260,7 +260,7 @@ const steps = [
             { titel: "Vastgelegd C → atmosferisch C", tekst: "Kolen/olie/gas = miljoenen-jaren oude plant-C, opgesloten onder de grond. Verbranding zet snel om naar CO₂ → atmosfeer 0,03% (preindustrieel) → 0,042% (2024). Versterkt broeikaseffect → opwarming." },
           ],
           theorie: "Wereldwijd ~37 Gt CO₂/jaar. Halvering t/m 2030 nodig voor 1,5 °C-doel.",
-          niveaus: { basis: "Koolstofkringloop. A.", simpeler: "Fossielen → CO₂ → opwarming. A.", nogSimpeler: "CO₂" },
+          niveaus: { basis: "Koolstofkringloop.", simpeler: "Fossielen → CO₂ → opwarming.", nogSimpeler: "CO₂" },
         },
       },
     ],
@@ -279,7 +279,7 @@ const steps = [
         wrongHints: [null, "Niet — niet direct.", "Niet — klimaat is een aparte factor.", "Niet — sub-onderdeel."],
         uitlegPad: {
           stappen: [{ titel: "H-I-P-P-O", tekst: "**H**abitatverlies → **I**nvasieve → **P**ollutie → **P**opulatie → **O**verexploitatie. Onthoud-truc, gebruikt door E.O. Wilson. Klimaat als 6e factor toegevoegd in laatste tijd." }],
-          niveaus: { basis: "Habitatverlies. A.", simpeler: "H = habitat. A.", nogSimpeler: "Habitat" },
+          niveaus: { basis: "Habitatverlies.", simpeler: "H = habitat.", nogSimpeler: "Habitat" },
         },
       },
       {
@@ -297,7 +297,7 @@ const steps = [
             { titel: "Vier categorieën (Millennium Ecosystem Assessment)", tekst: "1. **Productie**: voedsel, hout, water.\n2. **Regulering**: klimaat, water-zuivering, bestuiving.\n3. **Culturele**: recreatie, spirituele.\n4. **Ondersteunend**: bodemvorming, nutriënten-kringloop." },
           ],
           theorie: "Bestuivers (bijen) leveren ~$235-577 miljard waarde wereldwijd per jaar — bijensterfte heeft enorme economische impact.",
-          niveaus: { basis: "Natuur-functie voor mens. A.", simpeler: "Bv. bestuiving, water-zuivering. A.", nogSimpeler: "Functie" },
+          niveaus: { basis: "Natuur-functie voor mens.", simpeler: "Bv. bestuiving, water-zuivering.", nogSimpeler: "Functie" },
         },
       },
       {
@@ -312,7 +312,7 @@ const steps = [
         wrongHints: [null, "Onzin — snelheid is gewoon hetzelfde.", "Niet — kleur niet gerelateerd.", "Wel — kwetsbaarheid stijgt."],
         uitlegPad: {
           stappen: [{ titel: "Variatie = adaptatie-potentieel", tekst: "Met weinig genetische variatie zijn er weinig 'opties' bij nieuwe selectie-druk (nieuwe ziekte, klimaatwijziging). Bij identieke genen kan één virus de hele populatie wegvagen. Aardappel-Ierland 1845: monocultuur → Phytophthora → ramp." }],
-          niveaus: { basis: "Minder adaptatie. A.", simpeler: "Genetisch arm → kwetsbaar. A.", nogSimpeler: "Kwetsbaar" },
+          niveaus: { basis: "Minder adaptatie.", simpeler: "Genetisch arm → kwetsbaar.", nogSimpeler: "Kwetsbaar" },
         },
       },
       {
@@ -327,7 +327,7 @@ const steps = [
         wrongHints: [null, "Niet — vrijwel inert gas.", "N kan ook leiden tot zure regen maar dat is indirect.", "Geen relatie."],
         uitlegPad: {
           stappen: [{ titel: "N-arme habitats lijden", tekst: "Heide, veen, kustduinen zijn van nature N-arm. Soorten daar aangepast aan armoede. Stikstof-depositie (uit veehouderij + verkeer) → vergrassing → biodiversiteit-verlies. Daarom: 'stikstof-crisis' in NL (boerprotesten 2019+)." }],
-          niveaus: { basis: "N verstoort N-arme habitats. A.", simpeler: "Te veel mest → zeldzame planten verdwijnen. A.", nogSimpeler: "N-overschot" },
+          niveaus: { basis: "N verstoort N-arme habitats.", simpeler: "Te veel mest → zeldzame planten verdwijnen.", nogSimpeler: "N-overschot" },
         },
       },
       {
@@ -342,7 +342,7 @@ const steps = [
         wrongHints: [null, "Dat IS een bedreiging.", "Idem.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Natura 2000 = bescherming", tekst: "Natura 2000 = EU-netwerk van beschermde natuurgebieden. Andere opties zijn allemaal bedreigingen: plastic verstrengelt + giftig, palmolie-ontbossing = habitatverlies, klimaat verschuift habitats sneller dan soorten kunnen volgen." }],
-          niveaus: { basis: "Natura 2000 = oplossing. A.", simpeler: "Beschermd gebied is goed. A.", nogSimpeler: "Natura" },
+          niveaus: { basis: "Natura 2000 = oplossing.", simpeler: "Beschermd gebied is goed.", nogSimpeler: "Natura" },
         },
       },
     ],
@@ -366,7 +366,7 @@ const steps = [
         wrongHints: [null, "Niet — successie is langere termijn.", "Niet — geen klimaat-element.", "Niet — geen 'beiden-winnen'."],
         uitlegPad: {
           stappen: [{ titel: "Eén soort, grote impact", tekst: "Sleutelsoort (keystone species) heeft impact die veel groter is dan hun aantal of biomassa zou suggereren. Wolven aantal: klein, maar effect op hele ecosysteem: groot. Andere keystones: zee-otters voor kelpbossen, olifanten voor savanne." }],
-          niveaus: { basis: "Trophische cascade. A.", simpeler: "Top-predator stuurt hele systeem. A.", nogSimpeler: "Cascade" },
+          niveaus: { basis: "Trophische cascade.", simpeler: "Top-predator stuurt hele systeem.", nogSimpeler: "Cascade" },
         },
       },
       {
@@ -378,7 +378,7 @@ const steps = [
           stappen: [
             { titel: "ln(N/N₀) = r·t", tekst: "N(t)/N₀ = e^(rt) → ln(2) = r·1 → r = **ln 2 ≈ 0,693 per jaar**. Hoog tempo." },
           ],
-          niveaus: { basis: "r ≈ 0,69. A.", simpeler: "Verdubbelen geeft r = ln 2. A.", nogSimpeler: "0,69" },
+          niveaus: { basis: "r ≈ 0,69.", simpeler: "Verdubbelen geeft r = ln 2.", nogSimpeler: "0,69" },
         },
       },
       {
@@ -396,7 +396,7 @@ const steps = [
             { titel: "Te veel N+P", tekst: "Mest-afspoeling + riolering → veel N + P → algen-explosie → algen sterven → bacteriën verbruiken zuurstof om af te breken → anoxie → vissen sterven. Klassiek probleem rond agrarische gebieden + steden." },
           ],
           theorie: "Algen-bloei kan ook toxisch zijn (blauwalg) → zwemverbod NL-meren in zomer.",
-          niveaus: { basis: "Nutriënten-overdaad. A.", simpeler: "Te veel mest = algen-explosie + vis-sterfte. A.", nogSimpeler: "Eutrofiëring" },
+          niveaus: { basis: "Nutriënten-overdaad.", simpeler: "Te veel mest = algen-explosie + vis-sterfte.", nogSimpeler: "Eutrofiëring" },
         },
       },
       {
@@ -412,7 +412,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eerste antropogene massa-uitsterven", tekst: "Vorige 5 events door geologisch/astronomisch oorzaken (asteroïde Krijt-Tertiair, vulkanen Perm-Trias). Huidige door **mens-activiteiten**: ontbossing, jacht, klimaat-verandering, invasieve soorten. Tempo: 100-1000× natuurlijk basistempo." }],
           theorie: "Schattingen: 1 mln soorten dreigen uit te sterven, ~25% van zoogdieren in directe gevaar.",
-          niveaus: { basis: "Door mens veroorzaakt. A.", simpeler: "Eerste keer door één soort. A.", nogSimpeler: "Mens" },
+          niveaus: { basis: "Door mens veroorzaakt.", simpeler: "Eerste keer door één soort.", nogSimpeler: "Mens" },
         },
       },
       {
@@ -430,7 +430,7 @@ const steps = [
             { titel: "Wynes & Nicholas 2017 review", tekst: "Onderzoek wetenschappelijke studies: top-4 grote impact:\n1. Eén kind minder krijgen (~58 ton CO₂/jaar).\n2. Auto-vrij leven (~2,4 ton).\n3. Vluchten vermijden (~1,6 ton/lange reis).\n4. Plantaardig dieet (~0,8 ton).\n\nKleine acties (recyclen, lampen) belangrijk maar relatief klein effect (<0,2 ton elk)." },
           ],
           basiskennis: [{ onderwerp: "Niet 'óf-óf'", uitleg: "Beste: combineer grote + kleine acties + politieke betrokkenheid (stemmen, bedrijven aanspreken)." }],
-          niveaus: { basis: "Grote levensstijl-keuzes. A.", simpeler: "Vlees, auto, vlucht = top-impact. A.", nogSimpeler: "Top-4" },
+          niveaus: { basis: "Grote levensstijl-keuzes.", simpeler: "Vlees, auto, vlucht = top-impact.", nogSimpeler: "Top-4" },
         },
       },
     ],

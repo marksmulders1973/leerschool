@@ -40,7 +40,7 @@ const steps = [
           stappen: [{ titel: "Chargaff's regel", tekst: "**A** (adenine) plakt altijd op **T** (thymine) via 2 waterstofbruggen. **G** (guanine) op **C** (cytosine) via 3 waterstofbruggen. Daarom is %A = %T en %G = %C in elke DNA-streng (Chargaff)." }],
           woorden: [{ woord: "nucleotide", uitleg: "DNA-bouwsteen: suiker + fosfaat + base." }, { woord: "Chargaff's regel", uitleg: "In elk DNA: %A = %T en %G = %C." }],
           theorie: "Cito-CSE-pattern: gegeven %A → bereken %T (=zelfde), %G + %C (= 100% - 2·%A samen).",
-          niveaus: { basis: "A-T, G-C. A.", simpeler: "A↔T, G↔C = basenparing. A.", nogSimpeler: "A-T" },
+          niveaus: { basis: "A-T, G-C.", simpeler: "A↔T, G↔C = basenparing.", nogSimpeler: "A-T" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
           stappen: [{ titel: "Meiose halveert", tekst: "Lichaamscel = **diploïd (2n) = 46 chromosomen**. Bij **meiose** (vorming geslachtscel) wordt aantal gehalveerd → **haploïd (n) = 23**. Bij bevruchting: sperma (23) + eicel (23) = zygote 46." }],
           woorden: [{ woord: "haploïd", uitleg: "Cel met 1 set chromosomen (n)." }, { woord: "diploïd", uitleg: "Cel met 2 sets chromosomen (2n)." }, { woord: "meiose", uitleg: "Celdeling waarbij 1 diploïde cel → 4 haploïde geslachtscellen." }],
           theorie: "Cito-eindexamen-favoriet: meiose vs mitose. Mitose = lichaamscel-deling (2n → 2n). Meiose = geslachtscel-vorming (2n → n).",
-          niveaus: { basis: "23 (haploïd). A.", simpeler: "Geslachtscel = 23 = haploïd", nogSimpeler: "23" },
+          niveaus: { basis: "23 (haploïd).", simpeler: "Geslachtscel = 23 = haploïd", nogSimpeler: "23" },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hetero = verschillend", tekst: "**Heterozygoot** = twee **verschillende** allelen (Bb). **Homozygoot** = twee dezelfde (BB = homozygoot dominant, bb = homozygoot recessief)." }],
           woorden: [{ woord: "heterozygoot", uitleg: "Twee verschillende allelen voor een gen." }, { woord: "homozygoot", uitleg: "Twee dezelfde allelen voor een gen." }],
-          niveaus: { basis: "Heterozygoot. A.", simpeler: "Bb = verschillende allelen = hetero", nogSimpeler: "Hetero" },
+          niveaus: { basis: "Heterozygoot.", simpeler: "Bb = verschillende allelen = hetero", nogSimpeler: "Hetero" },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Fenotype = zichtbaar", tekst: "**Fenotype** = wat je **ziet** of meet (bruine ogen, lengte 1,80m, bloedgroep A). **Genotype** = de allel-combinatie (Bb, OO, AA). Genotype → fenotype via dominantie." }],
           theorie: "Voorbeeld: bruine ogen kunnen Bb of BB zijn (zelfde fenotype, ander genotype). Blauwe ogen alleen bb.",
-          niveaus: { basis: "Uiterlijk. A.", simpeler: "Fenotype = wat je ziet", nogSimpeler: "Zichtbaar" },
+          niveaus: { basis: "Uiterlijk.", simpeler: "Fenotype = wat je ziet", nogSimpeler: "Zichtbaar" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geslachtsbepaling man", tekst: "Vrouw = **XX** (paar 23). Man = **XY**. De **vader** bepaalt geslacht — sperma met X → meisje, sperma met Y → jongen. Eicel is altijd X." }],
           theorie: "Cito-pattern: SRY-gen op Y-chromosoom triggert mannelijke ontwikkeling. Zonder Y → vrouwelijke ontwikkeling default.",
-          niveaus: { basis: "XY. A.", simpeler: "Man = XY", nogSimpeler: "XY" },
+          niveaus: { basis: "XY.", simpeler: "Man = XY", nogSimpeler: "XY" },
         },
       },
     ],
@@ -105,7 +105,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Klassieke 3:1", tekst: "Bb × Bb → 25% BB + 50% Bb + 25% bb genotype. Bij volledige dominantie: BB + Bb beide dominante fenotype → **75% dominant : 25% recessief = 3:1**." }],
           theorie: "Cito-CSE: 3:1-verhouding altijd in monohybride kruising heterozygoot × heterozygoot, bij volledige dominantie.",
-          niveaus: { basis: "3:1. A.", simpeler: "Bb × Bb = 3 dominant : 1 recessief", nogSimpeler: "3:1" },
+          niveaus: { basis: "3:1.", simpeler: "Bb × Bb = 3 dominant : 1 recessief", nogSimpeler: "3:1" },
         },
       },
       {
@@ -116,7 +116,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Uniformiteitswet (1e wet)", tekst: "BB-ouder geeft alleen B-allel. bb-ouder geeft alleen b-allel. F1-kinderen krijgen 1 van elke ouder = Bb. **Alle F1 = uniform Bb**." }],
           theorie: "Eerste Mendel-wet: kruising homozygoten met verschillende allelen → uniforme F1 (alle heterozygoot).",
-          niveaus: { basis: "100% Bb. A.", simpeler: "BB × bb = alleen Bb F1", nogSimpeler: "Bb" },
+          niveaus: { basis: "100% Bb.", simpeler: "BB × bb = alleen Bb F1", nogSimpeler: "Bb" },
         },
       },
       {
@@ -128,7 +128,7 @@ const steps = [
           stappen: [{ titel: "Tussenvorm bij onvolledig", tekst: "Bij **onvolledige dominantie** is heterozygoot een **tussenvorm**. RR × rr → 100% Rr **roze**. F2 (Rr × Rr): 25% rood, 50% roze, 25% wit (= 1:2:1)." }],
           woorden: [{ woord: "onvolledige dominantie", uitleg: "Heterozygoot vertoont tussenvorm-fenotype." }],
           theorie: "Voorbeelden in natuur: leeuwebek-bloem rood/wit/roze, vergelijkbare planten.",
-          niveaus: { basis: "Roze. A.", simpeler: "Onvolledig dominant = tussenvorm = roze", nogSimpeler: "Roze" },
+          niveaus: { basis: "Roze.", simpeler: "Onvolledig dominant = tussenvorm = roze", nogSimpeler: "Roze" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
           stappen: [{ titel: "AB = beide allelen actief", tekst: "ABO-bloedgroep: 3 allelen (A, B, O). Genotype **AB** → fenotype **AB** met beide antigenen op rode bloedcellen. Allel A en B zijn **co-dominant** (beide volledig zichtbaar). O is recessief." }],
           woorden: [{ woord: "co-dominantie", uitleg: "Beide allelen volledig en gelijktijdig tot uiting." }],
           theorie: "Bloedgroep-genotypes: AA/AO = A, BB/BO = B, AB = AB, OO = O.",
-          niveaus: { basis: "AB. A.", simpeler: "Bloedgroep AB = beide allelen zichtbaar", nogSimpeler: "AB" },
+          niveaus: { basis: "AB.", simpeler: "Bloedgroep AB = beide allelen zichtbaar", nogSimpeler: "AB" },
         },
       },
       {
@@ -151,7 +151,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mendel = vader genetica", tekst: "**Gregor Mendel** (1822-1884) was Tsjechische augustijner-monnik in Brno. Werkte ~10 jaar met erwten-experimenten. Publiceerde 1866 — werd lange tijd genegeerd. **Herontdekt 1900** door 3 wetenschappers gelijktijdig — start moderne genetica." }],
           theorie: "Geen DNA bekend toen — Mendel sprak over 'erfelijke factoren' (later: genen). DNA pas in 1953 ontrafeld door Watson + Crick + Franklin.",
-          niveaus: { basis: "Mendel-monnik. A.", simpeler: "Mendel = erwt-erfelijkheid", nogSimpeler: "Mendel" },
+          niveaus: { basis: "Mendel-monnik.", simpeler: "Mendel = erwt-erfelijkheid", nogSimpeler: "Mendel" },
         },
       },
     ],
@@ -171,7 +171,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Dihybride klassiek", tekst: "AaBb × AaBb in 4×4 Punnett-vierkant → 16 combinaties. Fenotypes: **9** dom-dom : **3** dom-rec : **3** rec-dom : **1** rec-rec. Mendel-3:1 × Mendel-3:1 = 9:3:3:1." }],
           theorie: "Cito-truc: 9+3+3+1 = 16. Komt altijd uit bij dihybride kruising heterozygoten.",
-          niveaus: { basis: "9:3:3:1. A.", simpeler: "Dihybride AaBb × AaBb = 9:3:3:1", nogSimpeler: "9:3:3:1" },
+          niveaus: { basis: "9:3:3:1.", simpeler: "Dihybride AaBb × AaBb = 9:3:3:1", nogSimpeler: "9:3:3:1" },
         },
       },
       {
@@ -182,7 +182,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "XY mist tweede X-kopie", tekst: "Vrouwen XX: als 1 X-allel ziek is, kan andere X compenseren → meestal draagster, geen ziekte. Mannen XY: 1 ziek X-allel → ziekte direct, geen tweede kopie als reserve." }],
           theorie: "Daarom zijn hemofilie/Duchenne/kleurenblindheid bijna alleen bij mannen. Vrouwen kunnen **draagster** zijn — geven door aan zonen.",
-          niveaus: { basis: "Maar 1 X. A.", simpeler: "Man = XY = 1 X = geen reserve", nogSimpeler: "1 X" },
+          niveaus: { basis: "Maar 1 X.", simpeler: "Man = XY = 1 X = geen reserve", nogSimpeler: "1 X" },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Punnett geslachtsgebonden", tekst: "Moeder XcX × vader XY:\n```\n       Xc    X\n  X | XcX  XX (dochters)\n  Y | XcY  XY (zonen)\n```\nZonen: 50% XcY (kleurenblind) + 50% XY (normaal). **50% van zonen kleurenblind**." }],
           theorie: "Dochters: 50% draagster XcX + 50% normaal XX. Geen kleurenblinde dochter (moet 2 Xc hebben, vader gaf gezonde X).",
-          niveaus: { basis: "50%. A.", simpeler: "Draagster × normaal = 50% zonen ziek", nogSimpeler: "50%" },
+          niveaus: { basis: "50%.", simpeler: "Draagster × normaal = 50% zonen ziek", nogSimpeler: "50%" },
         },
       },
       {
@@ -204,7 +204,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Testcross = bepaal genotype", tekst: "**Testcross** = onbekend genotype kruisen met homozygoot recessief (bb). \n• BB × bb → alle Bb → 100% dominant fenotype.\n• Bb × bb → 50% Bb (dominant) + 50% bb (recessief).\nUitkomst zegt of onbekende BB of Bb was." }],
           theorie: "Cito-pattern: 'Hoe bepaal je of dominante plant homo- of heterozygoot is?' Antwoord: testcross.",
-          niveaus: { basis: "× homozygoot recessief. A.", simpeler: "Testcross = × bb", nogSimpeler: "× bb" },
+          niveaus: { basis: "× homozygoot recessief.", simpeler: "Testcross = × bb", nogSimpeler: "× bb" },
         },
       },
       {
@@ -215,7 +215,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hemofilie op X-chromosoom", tekst: "**Hemofilie** = bloedstollings-stoornis. Gen voor stollingsfactor zit op X-chromosoom. **Recessief**, dus vrouwen alleen ziek bij XcXc (zeldzaam), mannen al ziek bij XcY (1 X). Beroemd: Russische tsaren-familie (Romanovs), Engelse koningshuis (via koningin Victoria)." }],
           theorie: "Andere voorbeelden geslachtsgebonden recessief: Duchenne, kleurenblindheid, Lesch-Nyhan-syndroom.",
-          niveaus: { basis: "Geslachtsgebonden recessief. A.", simpeler: "Hemofilie = X-gebonden recessief", nogSimpeler: "X-recessief" },
+          niveaus: { basis: "Geslachtsgebonden recessief.", simpeler: "Hemofilie = X-gebonden recessief", nogSimpeler: "X-recessief" },
         },
       },
     ],
@@ -235,7 +235,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Gezonde ouders + ziek kind = recessief", tekst: "Bij **recessieve aandoening**: beide ouders zijn **dragers** (Aa). Kruising Aa × Aa → 25% kans op aa (ziek). Bij dominante: minstens 1 ouder zou ziek moeten zijn." }],
           theorie: "Cito-truc voor stambomen: zoek 'gezonde ouders + ziek kind'-combinatie → vrijwel zeker recessief.",
-          niveaus: { basis: "Recessief, ouders dragers. A.", simpeler: "Gezonde ouders + ziek kind = recessief", nogSimpeler: "Recessief" },
+          niveaus: { basis: "Recessief, ouders dragers.", simpeler: "Gezonde ouders + ziek kind = recessief", nogSimpeler: "Recessief" },
         },
       },
       {
@@ -247,7 +247,7 @@ const steps = [
           stappen: [{ titel: "Trisomie 21 = 3× chromosoom 21", tekst: "**Down-syndroom** = persoon heeft **3 kopieën van chromosoom 21** ipv 2 (= trisomie 21). Oorzaak: fout in meiose — chromosoom-paar splitst niet correct. Risico stijgt met leeftijd moeder. Niet erfelijk in de meeste gevallen (toeval)." }],
           woorden: [{ woord: "trisomie", uitleg: "3 kopieën van een chromosoom in plaats van 2." }, { woord: "aneuploïdie", uitleg: "Verkeerd aantal chromosomen (trisomie, monosomie)." }],
           theorie: "Andere trisomieën: Edwards (18), Patau (13) — meestal niet-levensvatbaar. Down is mildste vorm.",
-          niveaus: { basis: "Trisomie 21. A.", simpeler: "Down = 3× chrom 21", nogSimpeler: "Trisomie 21" },
+          niveaus: { basis: "Trisomie 21.", simpeler: "Down = 3× chrom 21", nogSimpeler: "Trisomie 21" },
         },
       },
       {
@@ -258,7 +258,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Huntington = dominant", tekst: "**Huntington** = ziekte van zenuwstelsel, openbaart zich pas rond 40-50 jaar. Autosomaal dominant: 1 ziek allel = ziekte. 50% kans op overerving van aangedane ouder. Geen 'draagsters' — wie het gen heeft, wordt ziek." }],
           theorie: "Klassiek dilemma: testen op Huntington-gen is ethisch beladen — wil je weten dat je over 30 jaar dementeert?",
-          niveaus: { basis: "Huntington. A.", simpeler: "Autosomaal dominant = Huntington", nogSimpeler: "Huntington" },
+          niveaus: { basis: "Huntington.", simpeler: "Autosomaal dominant = Huntington", nogSimpeler: "Huntington" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Insertie/deletie = leeskader-shift", tekst: "**Frameshift** = invoeging (insertie) of weglaten (deletie) van basen — niet 3 of 6 etc. Hele **leeskader** verschuift → alle aminozuren erna fout → eiwit functioneert niet. Meestal ernstig." }],
           theorie: "Cito-pattern: leeskader = codons van 3 basen. Verschuiving 1-2-3 basen = ramp. Verschuiving van 3 = 1 codon weg/erbij = minder ernstig.",
-          niveaus: { basis: "Invoeging/deletie. A.", simpeler: "Frameshift = leeskader-shift", nogSimpeler: "Shift" },
+          niveaus: { basis: "Invoeging/deletie.", simpeler: "Frameshift = leeskader-shift", nogSimpeler: "Shift" },
         },
       },
       {
@@ -280,7 +280,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "CF = recessief", tekst: "**Cystic fibrosis (CF, taaislijmziekte)** = autosomaal recessief. Gen op chromosoom 7. **1 op 25 NL'ers** is drager (heterozygoot, gezond). Ziek alleen bij dubbel-recessief (homozygoot). Behandeling laatste jaren sterk verbeterd (Trikafta-medicatie)." }],
           theorie: "Cito-actueel: CF was 30 jaar geleden dodelijk in kindertijd. Nu mediaan levensverwachting ~50 jaar door betere medicatie.",
-          niveaus: { basis: "Autosomaal recessief. A.", simpeler: "CF = recessief", nogSimpeler: "Recessief" },
+          niveaus: { basis: "Autosomaal recessief.", simpeler: "CF = recessief", nogSimpeler: "Recessief" },
         },
       },
     ],
@@ -299,7 +299,7 @@ const steps = [
         wrongHints: [null, "Niet — testcross is 1:1.", "Wel mogelijk maar dit is testcross — 50:50.", "Wel mogelijk maar dit is testcross — 50:50."],
         uitlegPad: {
           stappen: [{ titel: "Testcross = 1:1", tekst: "Aa geeft 50% A, 50% a. aa geeft alleen a. F1: 50% Aa + 50% aa. **Klassieke testcross-uitkomst**." }],
-          niveaus: { basis: "50:50. A.", simpeler: "Aa × aa = 1:1", nogSimpeler: "50:50" },
+          niveaus: { basis: "50:50.", simpeler: "Aa × aa = 1:1", nogSimpeler: "50:50" },
         },
       },
       {
@@ -310,7 +310,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Genotype-puzzel", tekst: "Kind is OO (alleen OO geeft fenotype O). Kind krijgt 1 allel van elk. Dus moeder MOET een O-allel hebben. Moeder is A-fenotype → genotype AO (heterozygoot). AA zou nooit O-kind kunnen krijgen." }],
           theorie: "Cito-pattern: 'bepaal genotype ouder op basis van kind-fenotype' — vooral als kind recessief is.",
-          niveaus: { basis: "AO. A.", simpeler: "A-moeder + O-kind = AO heterozygoot", nogSimpeler: "AO" },
+          niveaus: { basis: "AO.", simpeler: "A-moeder + O-kind = AO heterozygoot", nogSimpeler: "AO" },
         },
       },
       {
@@ -320,7 +320,7 @@ const steps = [
         wrongHints: [null, "Niet — slechts 50%.", "Niet — wel kans.", "Niet — dochters worden geen ziektedragers automatisch, alleen draagsters."],
         uitlegPad: {
           stappen: [{ titel: "X-gebonden recessief patroon", tekst: "XcX × XY → dochters: 50% XX (normaal) + 50% XcX (draagster). Zonen: 50% XY (normaal) + 50% XcY (ziek). **50% zonen ziek, 50% dochters draagster**." }],
-          niveaus: { basis: "50% zonen ziek + 50% dochters draagster. A.", simpeler: "Hemofilie-draagster + gezond", nogSimpeler: "Eerste optie" },
+          niveaus: { basis: "50% zonen ziek + 50% dochters draagster.", simpeler: "Hemofilie-draagster + gezond", nogSimpeler: "Eerste optie" },
         },
       },
       {
@@ -331,7 +331,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Meiose = halveren", tekst: "**Meiose**: diploïde cel (2n=46) → 4 haploïde geslachtscellen (n=23). Voor sperma/eicel-productie. **Mitose**: diploïd → diploïd kopieën voor groei + reparatie." }],
           theorie: "Cito-tip: meiose alleen in geslachtsklieren (testis + ovarium). Mitose overal in lichaam.",
-          niveaus: { basis: "Meiose. A.", simpeler: "Haploïd = meiose", nogSimpeler: "Meiose" },
+          niveaus: { basis: "Meiose.", simpeler: "Haploïd = meiose", nogSimpeler: "Meiose" },
         },
       },
       {
@@ -342,7 +342,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Dubbele helix 1953", tekst: "**James Watson + Francis Crick** publiceerden in **Nature, 25 april 1953** de dubbele-helix-structuur van DNA. Mede dankzij röntgen-foto's van **Rosalind Franklin** (vaak vergeten in NL-leerboeken). Kreeg Nobelprijs 1962 — Franklin was inmiddels overleden." }],
           theorie: "Cito-historische context: 1953 = mijlpaal moleculaire biologie. Mogelijk maakte 50 jaar later het Human Genome Project.",
-          niveaus: { basis: "Dubbele helix DNA. A.", simpeler: "1953 = DNA-structuur", nogSimpeler: "DNA" },
+          niveaus: { basis: "Dubbele helix DNA.", simpeler: "1953 = DNA-structuur", nogSimpeler: "DNA" },
         },
       },
     ],

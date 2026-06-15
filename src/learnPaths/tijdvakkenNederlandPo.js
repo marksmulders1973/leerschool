@@ -37,7 +37,7 @@ const steps = [
           theorie: "Hunebedden = oudste bouwwerken van NL. Alleen in Drenthe te vinden.",
           voorbeelden: [{ type: "feit", tekst: "53 hunebedden in NL — allemaal Drenthe (1 in Groningen)." }],
           basiskennis: [{ onderwerp: "Hunebedcentrum Borger", uitleg: "Drentse plaats Borger heeft museum." }],
-          niveaus: { basis: "Drenthe. A.", simpeler: "Hunebedden = stenen graven uit prehistorie. Vindplek: provincie Drenthe (noordoost).", nogSimpeler: "Drenthe" },
+          niveaus: { basis: "Drenthe.", simpeler: "Hunebedden = stenen graven uit prehistorie. Vindplek: provincie Drenthe (noordoost).", nogSimpeler: "Drenthe" },
         },
       },
       {
@@ -51,7 +51,7 @@ const steps = [
           theorie: "Rijn = noordgrens Romeinse Rijk. Boven Rijn = Germanië (vrij). Onder = Romeins.",
           voorbeelden: [{ type: "feit", tekst: "Forten langs Rijn: Nijmegen, Utrecht (Trajectum), Katwijk." }],
           basiskennis: [{ onderwerp: "Werelderfgoed", uitleg: "Limes is sinds 2021 UNESCO werelderfgoed." }],
-          niveaus: { basis: "Rijn. A.", simpeler: "Romeinse rijksgrens (Limes) volgde de Rijn — die liep dwars door NL.", nogSimpeler: "Rijn" },
+          niveaus: { basis: "Rijn.", simpeler: "Romeinse rijksgrens (Limes) volgde de Rijn — die liep dwars door NL.", nogSimpeler: "Rijn" },
         },
       },
       {
@@ -66,7 +66,7 @@ const steps = [
           theorie: "Romeinse steden lagen langs Limes (Rijn). Nijmegen aan zuidkant Rijn = veilig binnen Rijk.",
           voorbeelden: [{ type: "feit", tekst: "Nijmegen heette vroeger Ulpia Noviomagus — bestaat ~2000 jaar." }],
           basiskennis: [{ onderwerp: "Niet AMS/RTM", uitleg: "Amsterdam, Rotterdam ontstonden pas in middeleeuwen." }],
-          niveaus: { basis: "Nijmegen. A.", simpeler: "Nijmegen = oudste stad NL, was Romeinse stad Noviomagus. AMS/RTM bestonden toen niet.", nogSimpeler: "Nijmegen" },
+          niveaus: { basis: "Nijmegen.", simpeler: "Nijmegen = oudste stad NL, was Romeinse stad Noviomagus. AMS/RTM bestonden toen niet.", nogSimpeler: "Nijmegen" },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
           theorie: "3 stammen verdeeld geografisch: Friezen=Noord, Saksen=Oost, Franken=Zuid.",
           voorbeelden: [{ type: "verdeling", tekst: "Friesland (Friezen). Saksen (Twente). Franken (Limburg/zuid)." }],
           basiskennis: [{ onderwerp: "Vikingen later", uitleg: "Vikingen kwamen ~800 n.Chr., maar plunderden vooral, niet vestiging." }],
-          niveaus: { basis: "Friezen, Saksen, Franken. A.", simpeler: "Na Romeinen (~400) kwamen 3 Germaanse stammen wonen: Friezen (N), Saksen (O), Franken (Z).", nogSimpeler: "3 stammen" },
+          niveaus: { basis: "Friezen, Saksen, Franken.", simpeler: "Na Romeinen (~400) kwamen 3 Germaanse stammen wonen: Friezen (N), Saksen (O), Franken (Z).", nogSimpeler: "3 stammen" },
         },
       },
     ],
@@ -102,7 +102,7 @@ const steps = [
           theorie: "Anker-jaar 800 = kroning Karel. Onthoud als startpunt middeleeuwen.",
           voorbeelden: [{ type: "feit", tekst: "Karel verbreidde rijk over heel West-Europa. Hoofdstad Aken." }],
           basiskennis: [{ onderwerp: "Niet de andere drie", uitleg: "Floris V (1296), Willem v Oranje (1584), Napoleon (1804) — allemaal eeuwen later." }],
-          niveaus: { basis: "Karel de Grote. A.", simpeler: "Karel de Grote (Frankisch koning) werd in 800 keizer. Andere opties leefden eeuwen later.", nogSimpeler: "Karel" },
+          niveaus: { basis: "Karel de Grote.", simpeler: "Karel de Grote (Frankisch koning) werd in 800 keizer. Andere opties leefden eeuwen later.", nogSimpeler: "Karel" },
         },
       },
       {
@@ -121,7 +121,7 @@ const steps = [
           theorie: "Feodaal = leenstelsel. Macht-piramide: koning bovenaan, boeren onderaan.",
           voorbeelden: [{ type: "structuur", tekst: "Koning > hertog > graaf > ridder > boer. Elke laag werkt voor de laag erboven." }],
           basiskennis: [{ onderwerp: "Niet democratie", uitleg: "Boeren hadden geen rechten; iedereen was juist heel ongelijk." }],
-          niveaus: { basis: "Koning gaf leen. A.", simpeler: "Feodaal stelsel = piramide: koning bovenaan, geeft grond (leen) aan ridders/graven, die regeren over boeren.", nogSimpeler: "Leenstelsel" },
+          niveaus: { basis: "Koning gaf leen.", simpeler: "Feodaal stelsel = piramide: koning bovenaan, geeft grond (leen) aan ridders/graven, die regeren over boeren.", nogSimpeler: "Leenstelsel" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
           theorie: "Floris hielp boeren tegen edelen. Edelen vermoordden hem in 1296 (kasteel Muiderslot/Muiderberg).",
           voorbeelden: [{ type: "context", tekst: "Floris was populair bij gewone volk maar gehaat bij rijke edelen." }],
           basiskennis: [{ onderwerp: "Andere vermoorden", uitleg: "Willem v Oranje OOK vermoord (1584), maar hij was geen middeleeuwse graaf." }],
-          niveaus: { basis: "Floris V. A.", simpeler: "Floris V (graaf Holland, 1254-1296) werd vermoord door edelen.", nogSimpeler: "Floris V" },
+          niveaus: { basis: "Floris V.", simpeler: "Floris V (graaf Holland, 1254-1296) werd vermoord door edelen.", nogSimpeler: "Floris V" },
         },
       },
       {
@@ -149,7 +149,7 @@ const steps = [
           theorie: "Steden werkten samen voor: bescherming tegen rovers, gezamenlijke regels, betere prijzen.",
           voorbeelden: [{ type: "feit", tekst: "Hanzesteden bloei 1300-1500. Handel Oostzee + Noordzee." }],
           basiskennis: [{ onderwerp: "Stadsmacht", uitleg: "Steden werden machtig door handel — eerste vorm van burgerlijke macht." }],
-          niveaus: { basis: "Handelsverbond. A.", simpeler: "Hanze = verbond van middeleeuwse handelssteden (samen sterker = veiliger handel).", nogSimpeler: "Handel" },
+          niveaus: { basis: "Handelsverbond.", simpeler: "Hanze = verbond van middeleeuwse handelssteden (samen sterker = veiliger handel).", nogSimpeler: "Handel" },
         },
       },
     ],
@@ -170,7 +170,7 @@ const steps = [
           theorie: "Naam zegt het: tachtig + jaar. Reken: 1648 - 1568 = 80.",
           voorbeelden: [{ type: "ankers", tekst: "1568 = begin (Slag bij Heiligerlee). 1648 = einde (Vrede van Münster)." }],
           basiskennis: [{ onderwerp: "Niet 30-jarig", uitleg: "Dertigjarige Oorlog (1618-1648) was Duitse oorlog — andere conflict." }],
-          niveaus: { basis: "80 jaar. A.", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "80" },
+          niveaus: { basis: "80 jaar.", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "80" },
         },
       },
       {
@@ -185,7 +185,7 @@ const steps = [
           theorie: "Willem startte opstand. Filips II was juist de SPAANSE koning (=tegenstander).",
           voorbeelden: [{ type: "feit", tekst: "Willem stierf 1584 in Delft (vermoord door Balthasar Gerards). Frederik Hendrik kwam later." }],
           basiskennis: [{ onderwerp: "Wilhelmus", uitleg: "Volkslied 'Wilhelmus van Nassouwe' is over Willem v Oranje." }],
-          niveaus: { basis: "Willem van Oranje. A.", simpeler: "Willem van Oranje = leider NL opstand tegen Spanje. Filips II was juist de Spaanse koning.", nogSimpeler: "Willem" },
+          niveaus: { basis: "Willem van Oranje.", simpeler: "Willem van Oranje = leider NL opstand tegen Spanje. Filips II was juist de Spaanse koning.", nogSimpeler: "Willem" },
         },
       },
       {
@@ -199,7 +199,7 @@ const steps = [
           theorie: "Tijdlijn: 1568 begin → 1581 plakkaat (verklaring) → 1648 vrede (erkenning). Pas vrede = officieel onafhankelijk.",
           voorbeelden: [{ type: "stap", tekst: "Plakkaat 1581 = 'wij verklaren ons los'. Münster 1648 = Spanje accepteert dat." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Verklaring (eenzijdig) ≠ erkenning (door tegenpartij)." }],
-          niveaus: { basis: "1648. A.", simpeler: "Vrede van Münster (1648) = einde oorlog + officieel onafhankelijk. Plakkaat 1581 was de verklaring (door NL zelf).", nogSimpeler: "1648" },
+          niveaus: { basis: "1648.", simpeler: "Vrede van Münster (1648) = einde oorlog + officieel onafhankelijk. Plakkaat 1581 was de verklaring (door NL zelf).", nogSimpeler: "1648" },
         },
       },
       {
@@ -218,7 +218,7 @@ const steps = [
           theorie: "VOC = bedrijf, niet leger of kerk. Maar had wél eigen leger en mocht oorlog voeren.",
           voorbeelden: [{ type: "feit", tekst: "VOC bestond 1602-1799. Hoofdkantoor Amsterdam. Handelsposten van Kaapstad tot Japan." }],
           basiskennis: [{ onderwerp: "Donkere kant", uitleg: "VOC was ook betrokken bij slavenhandel — hoort bij Gouden Eeuw-discussie." }],
-          niveaus: { basis: "Handel Azië. A.", simpeler: "VOC = handelscompagnie (bedrijf) voor handel met Azië. Specerijen, thee, zijde.", nogSimpeler: "Handel" },
+          niveaus: { basis: "Handel Azië.", simpeler: "VOC = handelscompagnie (bedrijf) voor handel met Azië. Specerijen, thee, zijde.", nogSimpeler: "Handel" },
         },
       },
     ],
@@ -240,7 +240,7 @@ const steps = [
           theorie: "Tijdlijn: stadhouders → Bataafse Republiek (1795) → Lodewijk Napoleon (1806) → Willem I koning (1815).",
           voorbeelden: [{ type: "feit", tekst: "Willem I was zoon van Willem V (laatste stadhouder). Niet familie van Willem v Oranje." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Willem v Oranje (16e eeuw, stadhouder/leider) ≠ Willem I (19e eeuw, koning)." }],
-          niveaus: { basis: "Willem I. A.", simpeler: "Eerste echte koning NL = Willem I (1815). Lodewijk Napoleon was opgelegd door Napoleon (1806).", nogSimpeler: "Willem I" },
+          niveaus: { basis: "Willem I.", simpeler: "Eerste echte koning NL = Willem I (1815). Lodewijk Napoleon was opgelegd door Napoleon (1806).", nogSimpeler: "Willem I" },
         },
       },
       {
@@ -255,7 +255,7 @@ const steps = [
           theorie: "WO1: NL neutraal. WO2: NL bezet (Duitsland viel binnen mei 1940). Belangrijk verschil!",
           voorbeelden: [{ type: "feit", tekst: "WO1: koningin Wilhelmina. NL ving wel veel Belgische vluchtelingen op." }],
           basiskennis: [{ onderwerp: "Verschil WO1/WO2", uitleg: "WO1: NL buiten conflict. WO2: NL slachtoffer Duitse bezetting." }],
-          niveaus: { basis: "Ja, neutraal. A.", simpeler: "In WO1 (1914-1918) deed NL NIET mee = neutraal. Pas WO2 (1940) was NL bezet.", nogSimpeler: "Ja" },
+          niveaus: { basis: "Ja, neutraal.", simpeler: "In WO1 (1914-1918) deed NL NIET mee = neutraal. Pas WO2 (1940) was NL bezet.", nogSimpeler: "Ja" },
         },
       },
       {
@@ -269,7 +269,7 @@ const steps = [
           theorie: "Tijdlijn WO2 NL: 10 mei 1940 (binnenval) → 5 jaar bezetting → 5 mei 1945 (bevrijding).",
           voorbeelden: [{ type: "ankers", tekst: "10 mei 1940 = bezetting begint. 5 mei 1945 = bevrijding. Precies 5 jaar." }],
           basiskennis: [{ onderwerp: "Augustus = Japan", uitleg: "Aug 1945 = Japan capituleert (atoombom). NL werd al in mei bevrijd door Geallieerden." }],
-          niveaus: { basis: "Mei 1945. A.", simpeler: "5 mei 1945 = bevrijdingsdag NL. Mei 1940 was juist begin bezetting (5 jaar eerder).", nogSimpeler: "Mei 1945" },
+          niveaus: { basis: "Mei 1945.", simpeler: "5 mei 1945 = bevrijdingsdag NL. Mei 1940 was juist begin bezetting (5 jaar eerder).", nogSimpeler: "Mei 1945" },
         },
       },
       {
@@ -283,7 +283,7 @@ const steps = [
           theorie: "Tijdlijn: 1999 = euro digitaal. 2002 = briefjes + munten. Daarna gulden ongeldig.",
           voorbeelden: [{ type: "stap", tekst: "1999: bedrijven rekenen al in euro. 2002: jij hebt euro-briefjes in je portemonnee." }],
           basiskennis: [{ onderwerp: "Gulden weg", uitleg: "Gulden bleef nog 1 maand naast euro geldig (jan 2002), daarna alleen euro." }],
-          niveaus: { basis: "2002. A.", simpeler: "Euro briefjes/munten = 1 januari 2002. (1999 was alleen digitaal).", nogSimpeler: "2002" },
+          niveaus: { basis: "2002.", simpeler: "Euro briefjes/munten = 1 januari 2002. (1999 was alleen digitaal).", nogSimpeler: "2002" },
         },
       },
     ],
@@ -304,7 +304,7 @@ const steps = [
           theorie: "Tijdvak-volgorde: prehistorie → Romeinen → middeleeuwen → Gouden Eeuw → Napoleontische tijd → modern.",
           voorbeelden: [{ type: "ankers", tekst: "0 n.Chr. (Romeinen) → 800 (Karel) → 1584 (Willem) → 1800 (Napoleon)." }],
           basiskennis: [{ onderwerp: "Tijdlijn-truc", uitleg: "Hoe vroeger het jaar, hoe ouder de gebeurtenis. Romeinen = vóór jaar 0." }],
-          niveaus: { basis: "Romeinen. A.", simpeler: "Romeinen kwamen al rond jaar 0, ver vóór andere drie. Eerst chronologisch.", nogSimpeler: "Romeinen" },
+          niveaus: { basis: "Romeinen.", simpeler: "Romeinen kwamen al rond jaar 0, ver vóór andere drie. Eerst chronologisch.", nogSimpeler: "Romeinen" },
         },
       },
       {
@@ -318,7 +318,7 @@ const steps = [
           theorie: "Floris (middeleeuwen) → Willem v Oranje (Gouden Eeuw start) → Napoleon (~1800) → Willem I (1815).",
           voorbeelden: [{ type: "ankers", tekst: "1296 < 1584 < 1800 < 1815." }],
           basiskennis: [{ onderwerp: "Niet door naam misleid", uitleg: "Twee 'Willems' — verwar niet. Willem v Oranje (1584) ≠ Willem I (1815)." }],
-          niveaus: { basis: "Floris V. A.", simpeler: "Floris V (1296, middeleeuwen) was vóór alle andere drie.", nogSimpeler: "Floris V" },
+          niveaus: { basis: "Floris V.", simpeler: "Floris V (1296, middeleeuwen) was vóór alle andere drie.", nogSimpeler: "Floris V" },
         },
       },
       {
@@ -332,7 +332,7 @@ const steps = [
           theorie: "Eeuw-truc: jaar 16XX → 17e eeuw (eerste 2 cijfers + 1).",
           voorbeelden: [{ type: "tabel", tekst: "Rembrandt schilderde rond 1650 = 17e eeuw = Gouden Eeuw." }],
           basiskennis: [{ onderwerp: "VOC 1602", uitleg: "VOC opgericht 1602 = vroege 17e eeuw = begin Gouden Eeuw." }],
-          niveaus: { basis: "17e eeuw. A.", simpeler: "Gouden Eeuw = 1600-1700 = 17e eeuw. (Jaar 16XX = 17e eeuw, want eeuw +1).", nogSimpeler: "17e" },
+          niveaus: { basis: "17e eeuw.", simpeler: "Gouden Eeuw = 1600-1700 = 17e eeuw. (Jaar 16XX = 17e eeuw, want eeuw +1).", nogSimpeler: "17e" },
         },
       },
       {
@@ -346,7 +346,7 @@ const steps = [
           theorie: "WO2 NL = 1940-1945. Anne Frank's onderduik = 1942-1944, valt binnen die periode.",
           voorbeelden: [{ type: "feit", tekst: "Achterhuis aan Prinsengracht Amsterdam = nu museum." }],
           basiskennis: [{ onderwerp: "Andere drie", uitleg: "Plakkaat 1581 (T80jr Oorlog), Bataaf 1795 (Frans), VOC 1602 (Gouden Eeuw)." }],
-          niveaus: { basis: "Anne Frank. A.", simpeler: "Anne Frank schreef dagboek 1942-1944 = midden in WO2. Andere opties zijn veel ouder.", nogSimpeler: "Anne Frank" },
+          niveaus: { basis: "Anne Frank.", simpeler: "Anne Frank schreef dagboek 1942-1944 = midden in WO2. Andere opties zijn veel ouder.", nogSimpeler: "Anne Frank" },
         },
       },
       {
@@ -360,7 +360,7 @@ const steps = [
           theorie: "1648 = sleuteljaar. Onthoud naast 1568 (begin oorlog), 1602 (VOC), 1815 (koning).",
           voorbeelden: [{ type: "tabel", tekst: "1568 begin → 1648 vrede → 80 jaar oorlog." }],
           basiskennis: [{ onderwerp: "Memo-truc", uitleg: "1648 ligt 80 jaar na 1568. Reken: 1568+80=1648." }],
-          niveaus: { basis: "Vrede van Münster. A.", simpeler: "1648 = Vrede van Münster (einde Tachtigjarige Oorlog). NL officieel onafhankelijk.", nogSimpeler: "Münster" },
+          niveaus: { basis: "Vrede van Münster.", simpeler: "1648 = Vrede van Münster (einde Tachtigjarige Oorlog). NL officieel onafhankelijk.", nogSimpeler: "Münster" },
         },
       },
       {
@@ -374,7 +374,7 @@ const steps = [
           theorie: "Sleutel-jaartallen: 1568 (begin 80jr) → 1648 (einde 80jr) → 1815 (koninkrijk) → 1945 (bevrijding).",
           voorbeelden: [{ type: "context", tekst: "Na Napoleon-tijd (1795-1813) werd Willem I in 1815 koning." }],
           basiskennis: [{ onderwerp: "Niet 1648", uitleg: "1648 = Republiek (geen koning), 1815 = Koninkrijk (eerste koning)." }],
-          niveaus: { basis: "1815. A.", simpeler: "Eerste koning NL = Willem I in 1815. (Daarvoor: stadhouders/Republiek/Bataafs/Lodewijk Napoleon).", nogSimpeler: "1815" },
+          niveaus: { basis: "1815.", simpeler: "Eerste koning NL = Willem I in 1815. (Daarvoor: stadhouders/Republiek/Bataafs/Lodewijk Napoleon).", nogSimpeler: "1815" },
         },
       },
       {

@@ -37,7 +37,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Macht-regel", tekst: "∫ x^n dx = **x^(n+1) / (n+1) + C**. Hier n=2 → x³/3 + C. Check: d/dx(x³/3) = 3x²/3 = x². ✓" }],
           theorie: "Voor ∫ x^n: macht +1, gedeeld door nieuwe macht. Spiegelt differentiatie-regel.",
-          niveaus: { basis: "x³/3 + C. A.", simpeler: "n=2 → x^(2+1)/(2+1) = x³/3 + C", nogSimpeler: "x³/3+C" },
+          niveaus: { basis: "x³/3 + C.", simpeler: "n=2 → x^(2+1)/(2+1) = x³/3 + C", nogSimpeler: "x³/3+C" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Mist /2.", "Niet — dat is afgeleide-achtig.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Constante voor integraal", tekst: "∫ 6x dx = 6 · ∫ x dx = 6 · x²/2 + C = **3x² + C**. Check: d/dx(3x²) = 6x. ✓" }],
-          niveaus: { basis: "3x² + C. A.", simpeler: "6·x²/2 = 3x² + C", nogSimpeler: "3x²+C" },
+          niveaus: { basis: "3x² + C.", simpeler: "6·x²/2 = 3x² + C", nogSimpeler: "3x²+C" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Goniometrische tabel", tekst: "**∫ sin(x) dx = −cos(x) + C**. Reden: d/dx(−cos x) = −(−sin x) = sin x. ✓\n\nVergelijk: ∫ cos(x) dx = sin(x) + C (zonder min)." }],
           theorie: "Cito-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
-          niveaus: { basis: "−cos(x) + C. A.", simpeler: "sin → −cos", nogSimpeler: "−cos+C" },
+          niveaus: { basis: "−cos(x) + C.", simpeler: "sin → −cos", nogSimpeler: "−cos+C" },
         },
       },
       {
@@ -69,7 +69,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Uitzondering n=−1", tekst: "Bij ∫ x^n dx geldt **n ≠ −1**. Voor n=−1 (oftewel 1/x): **∫ 1/x dx = ln|x| + C**. Absolute waarde omdat ln voor negatieve waarden niet bestaat." }],
           theorie: "Onthoud uit hoofd: e^x → e^x, 1/x → ln|x|, sin → −cos, cos → sin.",
-          niveaus: { basis: "ln|x| + C. A.", simpeler: "1/x = uitzondering, → ln|x| + C", nogSimpeler: "ln|x|+C" },
+          niveaus: { basis: "ln|x| + C.", simpeler: "1/x = uitzondering, → ln|x| + C", nogSimpeler: "ln|x|+C" },
         },
       },
       {
@@ -79,7 +79,7 @@ const steps = [
         wrongHints: [null, "Niet — macht-regel werkt niet voor e^x.", "Verkeerde regel.", "Niet zinvol."],
         uitlegPad: {
           stappen: [{ titel: "e blijft e", tekst: "**∫ e^x dx = e^x + C**. Speciaal: e^x is z'n eigen afgeleide EN primitieve. Komt uit hoofd kennen." }],
-          niveaus: { basis: "e^x + C. A.", simpeler: "e^x → e^x", nogSimpeler: "e^x+C" },
+          niveaus: { basis: "e^x + C.", simpeler: "e^x → e^x", nogSimpeler: "e^x+C" },
         },
       },
     ],
@@ -99,7 +99,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "F(b)−F(a)", tekst: "∫ 2x dx = x². ∫[0,3] 2x dx = [x²] van 0 tot 3 = 3² − 0² = **9**." }],
           theorie: "Eerst primitieve, dan invullen b en a, dan aftrekken.",
-          niveaus: { basis: "9. A.", simpeler: "[x²] 0→3 = 9−0 = 9", nogSimpeler: "9" },
+          niveaus: { basis: "9.", simpeler: "[x²] 0→3 = 9−0 = 9", nogSimpeler: "9" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Integraal = oppervlakte", tekst: "Bij **f(x) ≥ 0** op [a,b]: bepaalde integraal **= oppervlakte** tussen grafiek en x-as, tussen x=a en x=b. Geometrische interpretatie van integralen." }],
           theorie: "Cito-favoriet: 'wat stelt deze integraal voor in figuur?' Antwoord: gearceerde gebied.",
-          niveaus: { basis: "Oppervlakte. A.", simpeler: "f≥0 → integraal = opp", nogSimpeler: "Opp" },
+          niveaus: { basis: "Oppervlakte.", simpeler: "f≥0 → integraal = opp", nogSimpeler: "Opp" },
         },
       },
       {
@@ -120,7 +120,7 @@ const steps = [
         wrongHints: [null, "Niet — los x² = 2x op.", "Niet — andere oplossing.", "Niet — twee snijpunten."],
         uitlegPad: {
           stappen: [{ titel: "Snijpunten = vergelijk", tekst: "x² = 2x → x² − 2x = 0 → **x(x−2) = 0** → x=0 of x=2. Dit zijn de grenzen van het ingesloten gebied." }],
-          niveaus: { basis: "x=0 en x=2. A.", simpeler: "x²=2x → x=0,2", nogSimpeler: "0,2" },
+          niveaus: { basis: "x=0 en x=2.", simpeler: "x²=2x → x=0,2", nogSimpeler: "0,2" },
         },
       },
       {
@@ -131,7 +131,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opp = ∫(boven−onder)", tekst: "Op [0,2]: 2x ≥ x² (lineair boven parabool). Oppervlakte = ∫[0,2] (2x − x²) dx = [x² − x³/3] van 0 tot 2 = (4 − 8/3) − 0 = **12/3 − 8/3 = 4/3**." }],
           theorie: "Pattern: snijpunten → 'boven minus onder' → integraal nemen.",
-          niveaus: { basis: "4/3. A.", simpeler: "∫(2x−x²) van 0→2 = 4−8/3 = 4/3", nogSimpeler: "4/3" },
+          niveaus: { basis: "4/3.", simpeler: "∫(2x−x²) van 0→2 = 4−8/3 = 4/3", nogSimpeler: "4/3" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
         wrongHints: [null, "Niet — geen evaluatie nodig.", "Wel = 0 maar via andere reden.", "Wel bepaald, 0."],
         uitlegPad: {
           stappen: [{ titel: "Gelijke grenzen", tekst: "**∫[a tot a] f(x) dx = 0**. Geen interval = geen oppervlakte = 0. Eigenschap bepaalde integraal." }],
-          niveaus: { basis: "0. A.", simpeler: "Gelijke grenzen = 0", nogSimpeler: "0" },
+          niveaus: { basis: "0.", simpeler: "Gelijke grenzen = 0", nogSimpeler: "0" },
         },
       },
     ],
@@ -160,7 +160,7 @@ const steps = [
         wrongHints: [null, "Niet — geen product van twee aparte functies.", "Niet — kettingvorm aanwezig.", "Wel — via substitutie."],
         uitlegPad: {
           stappen: [{ titel: "Substitutie-cue: f(g(x))·g'(x)", tekst: "**Substitutie**. u=x², du=2x dx. ∫ 2x·cos(x²) dx → ∫ cos(u) du = sin(u) + C = **sin(x²) + C**. De 2x naast cos(x²) is de afgeleide van het binnen-deel x². Klassieke substitutie-vorm." }],
-          niveaus: { basis: "Substitutie u=x². A.", simpeler: "2x·cos(x²) = substitutie", nogSimpeler: "Subst" },
+          niveaus: { basis: "Substitutie u=x².", simpeler: "2x·cos(x²) = substitutie", nogSimpeler: "Subst" },
         },
       },
       {
@@ -170,7 +170,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet niet door 2.", "Niet — dat is afgeleide.", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ e^(ax+b) dx = **e^(ax+b)/a + C**. Hier a=2: ∫ e^(2x) dx = **e^(2x)/2 + C**. Check: d/dx(e^(2x)/2) = 2·e^(2x)/2 = e^(2x). ✓" }],
-          niveaus: { basis: "e^(2x)/2 + C. A.", simpeler: "e^(ax) → e^(ax)/a", nogSimpeler: "/2" },
+          niveaus: { basis: "e^(2x)/2 + C.", simpeler: "e^(ax) → e^(ax)/a", nogSimpeler: "/2" },
         },
       },
       {
@@ -181,7 +181,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Product = partieel", tekst: "**Partiële integratie**. ∫ u dv = uv − ∫ v du. Kies u = x (Algebraïsch, wordt simpel) en dv = e^x dx (heeft primitieve). Dan du = dx, v = e^x.\n\n∫ x·e^x dx = x·e^x − ∫ e^x dx = x·e^x − e^x + C = **(x−1)e^x + C**." }],
           theorie: "LIATE-cue: kies meest-links-beschikbare als u. Hier alleen A (x) en E (e^x) → A wordt u.",
-          niveaus: { basis: "Partiële integratie. A.", simpeler: "Product x·e^x = partieel", nogSimpeler: "Partieel" },
+          niveaus: { basis: "Partiële integratie.", simpeler: "Product x·e^x = partieel", nogSimpeler: "Partieel" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
         wrongHints: [null, "Mist /2 door binnen-afgeleide.", "Niet — andere regel.", "Mist deling."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ (ax+b)^n dx = **(ax+b)^(n+1) / [a·(n+1)] + C**. Hier a=2, n=3: (2x+1)⁴ / (2·4) = **(2x+1)⁴/8 + C**. Check: d/dx((2x+1)⁴/8) = 4(2x+1)³·2/8 = (2x+1)³. ✓" }],
-          niveaus: { basis: "(2x+1)⁴/8 + C. A.", simpeler: "Macht+1, gedeeld door [a·nieuwe macht]", nogSimpeler: "/8" },
+          niveaus: { basis: "(2x+1)⁴/8 + C.", simpeler: "Macht+1, gedeeld door [a·nieuwe macht]", nogSimpeler: "/8" },
         },
       },
       {
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Partieel met truc", tekst: "Truc: schrijf ln(x) = ln(x) · 1. Partieel: u=ln(x), du=1/x dx; dv=1·dx, v=x. ∫ ln(x) dx = x·ln(x) − ∫ x · (1/x) dx = x·ln(x) − ∫ 1 dx = **x·ln(x) − x + C**." }],
           theorie: "Cito-klassieker. Onthoud: ∫ ln(x) dx = x(ln x − 1) + C.",
-          niveaus: { basis: "x·ln(x) − x + C. A.", simpeler: "Partieel met truc → x·ln(x) − x + C", nogSimpeler: "x·ln(x)−x+C" },
+          niveaus: { basis: "x·ln(x) − x + C.", simpeler: "Partieel met truc → x·ln(x) − x + C", nogSimpeler: "x·ln(x)−x+C" },
         },
       },
     ],
@@ -222,7 +222,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "s = ∫v dt", tekst: "Afstand = ∫[0,5] 2t dt = [t²] van 0 tot 5 = 25 − 0 = **25 m**." }],
           theorie: "Algemene regel: ∫ snelheid dt = afstand. Cito-klassieker.",
-          niveaus: { basis: "25 m. A.", simpeler: "[t²]0→5 = 25", nogSimpeler: "25" },
+          niveaus: { basis: "25 m.", simpeler: "[t²]0→5 = 25", nogSimpeler: "25" },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schijf-methode", tekst: "V = π · ∫[a,b] [f(x)]² dx = π · ∫[0,3] x² dx = π · [x³/3] van 0 tot 3 = π · 9 = **9π**. (≈ 28,3 eenheden³)" }],
           theorie: "Cone om x-as is dit precies — kegel met straal 3, hoogte 3. V = (1/3)πr²h = (1/3)·π·9·3 = 9π. ✓",
-          niveaus: { basis: "9π. A.", simpeler: "π·∫x²dx 0→3 = 9π", nogSimpeler: "9π" },
+          niveaus: { basis: "9π.", simpeler: "π·∫x²dx 0→3 = 9π", nogSimpeler: "9π" },
         },
       },
       {
@@ -244,7 +244,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "f_gem-formule", tekst: "f_gem = (1/(b−a)) · ∫[a,b] f(x) dx = (1/3) · ∫[0,3] x² dx = (1/3) · [x³/3] 0→3 = (1/3) · 9 = **3**." }],
           theorie: "Cito-toepassing: 'gem temperatuur tussen 12u en 18u' = (1/6)·∫T(t) dt.",
-          niveaus: { basis: "3. A.", simpeler: "(1/3)·9 = 3", nogSimpeler: "3" },
+          niveaus: { basis: "3.", simpeler: "(1/3)·9 = 3", nogSimpeler: "3" },
         },
       },
       {
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Mist /2.", "Niet integraal.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "v = ∫a dt + v₀", tekst: "v(t) = ∫ 6t dt + v₀ = 3t² + C. Begin-conditie: v(0)=2 → C=2. **v(t) = 3t² + 2**." }],
-          niveaus: { basis: "3t²+2. A.", simpeler: "∫6t = 3t² + v₀", nogSimpeler: "3t²+2" },
+          niveaus: { basis: "3t²+2.", simpeler: "∫6t = 3t² + v₀", nogSimpeler: "3t²+2" },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Cumulatief = integraal", tekst: "Totaal = ∫[0,10] (100 − 5t) dt = [100t − 5t²/2] 0→10 = 1000 − 250 = **€750**." }],
           theorie: "Toepassing: tempo van toename × tijd = totaal opbrengst.",
-          niveaus: { basis: "€750. A.", simpeler: "∫(100−5t) 0→10 = 1000−250 = 750", nogSimpeler: "€750" },
+          niveaus: { basis: "€750.", simpeler: "∫(100−5t) 0→10 = 1000−250 = 750", nogSimpeler: "€750" },
         },
       },
     ],
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is afgeleide.", "Mist /2 bij 4x.", "Niet correct (waar zijn /3, /2?)."],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "∫ 3x² = x³, ∫ 4x = 2x², ∫ −5 = −5x. Totaal: **x³ + 2x² − 5x + C**." }],
-          niveaus: { basis: "x³+2x²−5x+C. A.", simpeler: "Per term primitief", nogSimpeler: "A." },
+          niveaus: { basis: "x³+2x²−5x+C.", simpeler: "Per term primitief", nogSimpeler: "A." },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "ln-primitief", tekst: "∫ 1/x dx = ln|x|. ∫[1,2] 1/x dx = ln(2) − ln(1) = ln(2) − 0 = **ln(2)** ≈ 0,693." }],
           theorie: "ln(1) = 0 altijd onthouden.",
-          niveaus: { basis: "ln(2). A.", simpeler: "ln(2)−ln(1) = ln(2)", nogSimpeler: "ln 2" },
+          niveaus: { basis: "ln(2).", simpeler: "ln(2)−ln(1) = ln(2)", nogSimpeler: "ln 2" },
         },
       },
       {
@@ -308,7 +308,7 @@ const steps = [
             { titel: "Snijpunten met x-as", tekst: "4 − x² = 0 → x = ±2. Parabool snijdt x-as op x=−2 en x=2." },
             { titel: "Integreer", tekst: "Opp = ∫[−2,2] (4 − x²) dx = [4x − x³/3] −2→2 = (8 − 8/3) − (−8 + 8/3) = (24/3 − 8/3) + (8 − 8/3) = 16/3 + 16/3 = **32/3** ≈ 10,67." },
           ],
-          niveaus: { basis: "32/3. A.", simpeler: "∫(4−x²)−2→2 = 32/3", nogSimpeler: "32/3" },
+          niveaus: { basis: "32/3.", simpeler: "∫(4−x²)−2→2 = 32/3", nogSimpeler: "32/3" },
         },
       },
       {
@@ -319,7 +319,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Negatieve snelheid", tekst: "v(t) = t²−4. Voor t<2: v<0 (achteruit). t>2: v>0.\n\nVerplaatsing = ∫[0,3] (t²−4) dt = [t³/3 − 4t] 0→3 = 9 − 12 = **−3**.\n\nDus netto 3 m **achteruit** verplaatst. (Afgelegde afstand = som van |stukken| = anders.)" }],
           theorie: "Verschil tussen 'verplaatsing' (integraal, kan negatief) en 'afstand' (positieve som). Cito let goed op.",
-          niveaus: { basis: "−3. A.", simpeler: "∫(t²−4) 0→3 = 9−12 = −3", nogSimpeler: "−3" },
+          niveaus: { basis: "−3.", simpeler: "∫(t²−4) 0→3 = 9−12 = −3", nogSimpeler: "−3" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "LIATE: A vóór T", tekst: "**Partiële integratie**. Kies u = x (A), dv = sin(x) dx (T). Dan du=dx, v=−cos(x).\n\n∫ x·sin(x) dx = x·(−cos x) − ∫ (−cos x) dx = −x·cos x + sin x + C = **sin(x) − x·cos(x) + C**." }],
           theorie: "Cito-klassieker. LIATE: A=x voor T=sin → x wordt u.",
-          niveaus: { basis: "Partieel. A.", simpeler: "x·sin = partieel", nogSimpeler: "Partieel" },
+          niveaus: { basis: "Partieel.", simpeler: "x·sin = partieel", nogSimpeler: "Partieel" },
         },
       },
     ],

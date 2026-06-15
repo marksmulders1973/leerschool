@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Niet — definitie.", "Niet relevant.", "Niet — i² is gedefinieerd."],
         uitlegPad: {
           stappen: [{ titel: "Imaginaire eenheid", tekst: "**i² = −1** is de **definitie**. Daaruit volgt: i³ = i·i² = i·(−1) = −i. i⁴ = i²·i² = (−1)·(−1) = 1. Daarna herhaalt: i⁵ = i, i⁶ = −1, etc. Cyclus 4." }],
-          niveaus: { basis: "−1. A.", simpeler: "i² = −1", nogSimpeler: "−1" },
+          niveaus: { basis: "−1.", simpeler: "i² = −1", nogSimpeler: "−1" },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
           stappen: [
             { titel: "FOIL + i²=−1", tekst: "(3 + 2i)(1 + i) = 3·1 + 3·i + 2i·1 + 2i·i = 3 + 3i + 2i + 2i² = 3 + 5i − 2 = **1 + 5i**." },
           ],
-          niveaus: { basis: "1 + 5i. A.", simpeler: "3 + 5i − 2 = 1 + 5i", nogSimpeler: "1+5i" },
+          niveaus: { basis: "1 + 5i.", simpeler: "3 + 5i − 2 = 1 + 5i", nogSimpeler: "1+5i" },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — niet optellen.", "Mist wortel.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras", tekst: "**|z| = √(a² + b²)**. Hier: |3 + 4i| = √(9 + 16) = √25 = **5**.\n\nKlassieke Pythagoras-rechthoekige driehoek 3-4-5." }],
-          niveaus: { basis: "5. A.", simpeler: "√(9+16)=5", nogSimpeler: "5" },
+          niveaus: { basis: "5.", simpeler: "√(9+16)=5", nogSimpeler: "5" },
         },
       },
       {
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet — andere reëel deel.", "Niet — beide tekens.", "Geen verandering."],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen langs reële as", tekst: "**Geconjugeerde** = imaginaire deel-teken omkeren. 3 − 4i → **3 + 4i**. In complex vlak: spiegelen langs reële (horizontale) as.\n\nEigenschap: z·z̄ = (3−4i)(3+4i) = 9 + 16 = 25 (altijd reëel)." }],
-          niveaus: { basis: "3+4i. A.", simpeler: "Geconjugeerd = teken om", nogSimpeler: "A." },
+          niveaus: { basis: "3+4i.", simpeler: "Geconjugeerd = teken om", nogSimpeler: "A." },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
             { titel: "Discriminant negatief", tekst: "D = b² − 4ac = 16 − 52 = −36. Negatief → complexe oplossing." },
             { titel: "Wortelformule", tekst: "x = (4 ± √(−36)) / 2 = (4 ± 6i)/2 = **2 ± 3i**. Twee complexe wortels, elkaars geconjugeerde." },
           ],
-          niveaus: { basis: "2±3i. A.", simpeler: "(4±6i)/2 = 2±3i", nogSimpeler: "A." },
+          niveaus: { basis: "2±3i.", simpeler: "(4±6i)/2 = 2±3i", nogSimpeler: "A." },
         },
       },
     ],
@@ -99,7 +99,7 @@ const steps = [
         wrongHints: [null, "Mist i.", "Niet correct.", "Wel waar maar niet Euler-formule."],
         uitlegPad: {
           stappen: [{ titel: "Verband e met sin+cos", tekst: "**Eulerformule**: e^(iθ) = cos θ + i·sin θ. Verbindt exponent met goniometrie. **Beroemd gevolg**: e^(iπ) = cos π + i·sin π = −1 + 0 = −1. Daarom: **e^(iπ) + 1 = 0** = Euler's identiteit ('mooiste formule in wiskunde')." }],
-          niveaus: { basis: "e^(iθ) = cos+i·sin. A.", simpeler: "Euler-formule", nogSimpeler: "A." },
+          niveaus: { basis: "e^(iθ) = cos+i·sin.", simpeler: "Euler-formule", nogSimpeler: "A." },
         },
       },
       {
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Niet correct.", "Niet correct.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Mod × Arg +", tekst: "**r₁·e^(iθ₁) · r₂·e^(iθ₂) = (r₁·r₂)·e^(i(θ₁+θ₂))**. Modulus vermenigvuldigt, argumenten optellen. Komt door regel e^a·e^b = e^(a+b)." }],
-          niveaus: { basis: "Mod × Arg +. A.", simpeler: "× = mod×, arg+", nogSimpeler: "A." },
+          niveaus: { basis: "Mod × Arg +.", simpeler: "× = mod×, arg+", nogSimpeler: "A." },
         },
       },
       {
@@ -119,7 +119,7 @@ const steps = [
         wrongHints: [null, "Niet — i².", "Niet — i¹.", "Niet — i³."],
         uitlegPad: {
           stappen: [{ titel: "Cyclus 4", tekst: "i¹=i, i²=−1, i³=−i, **i⁴=1**, i⁵=i, ... Cyclus van lengte 4. Werk: i⁴ = (i²)² = (−1)² = **1**." }],
-          niveaus: { basis: "1. A.", simpeler: "i⁴=1", nogSimpeler: "1" },
+          niveaus: { basis: "1.", simpeler: "i⁴=1", nogSimpeler: "1" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "i = e^(iπ/2)", tekst: "**Vermenigvuldigen met i**: |i|=1 (modulus 1, geen schaling), arg(i)=π/2 (90°). Resultaat: rotatie 90° **tegen klok**. Voorbeeld: 1·i = i (van punt (1,0) naar (0,1)). i·i = −1 (van (0,1) naar (−1,0)). Eindeloos draaien." }],
           theorie: "Toepassing: computer graphics, signaal-bewerking.",
-          niveaus: { basis: "Rotatie 90°. A.", simpeler: "×i = 90° draaien", nogSimpeler: "A." },
+          niveaus: { basis: "Rotatie 90°.", simpeler: "×i = 90° draaien", nogSimpeler: "A." },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
             { titel: "Vierde macht", tekst: "z⁴ = (√2)⁴ · e^(i·4·π/4) = 4 · e^(iπ) = 4 · (−1) = **−4**." },
             { titel: "Check directe", tekst: "(1+i)² = 1 + 2i + i² = 2i. (2i)² = 4i² = −4. ✓" },
           ],
-          niveaus: { basis: "−4. A.", simpeler: "(1+i)⁴ = −4", nogSimpeler: "A." },
+          niveaus: { basis: "−4.", simpeler: "(1+i)⁴ = −4", nogSimpeler: "A." },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel bestaand.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde telt", tekst: "Matrix-vermenigvuldiging is **NIET commutatief**: in het algemeen A·B ≠ B·A. Soms verschilt de dimensie zelfs zodat B·A niet eens gedefinieerd is. Belangrijk verschil met getal-vermenigvuldiging (2·3 = 3·2)." }],
-          niveaus: { basis: "Niet commutatief. A.", simpeler: "AB ≠ BA", nogSimpeler: "A." },
+          niveaus: { basis: "Niet commutatief.", simpeler: "AB ≠ BA", nogSimpeler: "A." },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer.", "Niet — ad+bc?", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "ad − bc", tekst: "**det([[a,b],[c,d]]) = ad − bc** = 2·4 − 3·1 = 8 − 3 = **5**." }],
-          niveaus: { basis: "5. A.", simpeler: "ad−bc = 8−3 = 5", nogSimpeler: "5" },
+          niveaus: { basis: "5.", simpeler: "ad−bc = 8−3 = 5", nogSimpeler: "5" },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
         wrongHints: [null, "Niet — wel inverteerbaar.", "Voorwaarde maar niet doorslaggevend.", "Wel inverteerbaar (als geen nul-diagonaal)."],
         uitlegPad: {
           stappen: [{ titel: "Singulier", tekst: "Matrix **niet inverteerbaar** (singulier) als **det = 0**. Reden: inverse-formule heeft 1/det → deling door 0. Geometrisch: matrix 'plat-drukt' ruimte (verliest dimensie). Stelsel met det=0 heeft 0 of oneindig veel oplossingen, geen unieke." }],
-          niveaus: { basis: "det=0. A.", simpeler: "Singulier = det=0", nogSimpeler: "A." },
+          niveaus: { basis: "det=0.", simpeler: "Singulier = det=0", nogSimpeler: "A." },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — nulmatrix.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Multiplicatief neutraal", tekst: "**I_n** (eenheidsmatrix): hoofddiagonaal **1**, rest **0**. I₃ = [[1,0,0],[0,1,0],[0,0,1]]. Eigenschap: A·I = I·A = A. Net zoals 1 voor getallen. Inverse-relatie: A·A^(−1) = I." }],
-          niveaus: { basis: "Diagonaal 1, rest 0. A.", simpeler: "I = diag 1", nogSimpeler: "A." },
+          niveaus: { basis: "Diagonaal 1, rest 0.", simpeler: "I = diag 1", nogSimpeler: "A." },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — geen verandering.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Rijen ↔ kolommen", tekst: "**Transpose A^T**: rijen worden kolommen + vice versa. Rij 1 (1,2) wordt kolom 1. Rij 2 (3,4) wordt kolom 2. **A^T = [[1,3],[2,4]]**." }],
-          niveaus: { basis: "[[1,3],[2,4]]. A.", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "A." },
+          niveaus: { basis: "[[1,3],[2,4]].", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "A." },
         },
       },
     ],
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Eenheidsmatrix.", "180° rotatie.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "cos 90 = 0, sin 90 = 1", tekst: "**R(θ) = [[cos θ, −sin θ], [sin θ, cos θ]]**. Voor θ = 90°: cos 90° = 0, sin 90° = 1 → **R(90°) = [[0, −1], [1, 0]]**.\n\nTest: R · (1, 0)^T = (0, 1). Punt (1,0) draait naar (0,1) — correct 90° tegen klok." }],
-          niveaus: { basis: "[[0,-1],[1,0]]. A.", simpeler: "R90 = [[0,-1],[1,0]]", nogSimpeler: "A." },
+          niveaus: { basis: "[[0,-1],[1,0]].", simpeler: "R90 = [[0,-1],[1,0]]", nogSimpeler: "A." },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Andere operatie.", "Indirect via."],
         uitlegPad: {
           stappen: [{ titel: "Systematische methode", tekst: "**Gauss-eliminatie**: methode om stelsel lineaire vergelijkingen systematisch op te lossen door rij-operaties (vermenigvuldigen, optellen, verwisselen). Reduceer naar **bovendriehoek-vorm**, dan terugsubstitutie. Carl Friedrich Gauss (1777-1855) — werd grootste wiskundige zijn tijd genoemd." }],
-          niveaus: { basis: "Stelsels. A.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "A." },
+          niveaus: { basis: "Stelsels.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "A." },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — eigenvector ≠ 0.", "Niet zinvol.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Karakteristieke vergelijking", tekst: "**Eigenvector v** van matrix A: **A·v = λ·v** voor scalair λ. v wordt door A op zichzelf afgebeeld (alleen geschaald met λ). λ = **eigenwaarde**. Vinden: oplossen det(A − λI) = 0.\n\nToepassing: PCA, PageRank, Markov-stabiel, trillingen." }],
-          niveaus: { basis: "A·v = λv. A.", simpeler: "Eig: A·v = λv", nogSimpeler: "A." },
+          niveaus: { basis: "A·v = λv.", simpeler: "Eig: A·v = λv", nogSimpeler: "A." },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Spiegeling in x-as.", "Spiegeling in y=x.", "Geen verandering."],
         uitlegPad: {
           stappen: [{ titel: "x-coord teken om", tekst: "**Spiegeling y-as**: x-coord wisselt van teken, y blijft. (1,2) → (−1,2). Matrix: **[[−1,0],[0,1]]**. (−1)·1 + 0·2 = −1. 0·1 + 1·2 = 2. ✓" }],
-          niveaus: { basis: "[[-1,0],[0,1]]. A.", simpeler: "y-as = [[-1,0],[0,1]]", nogSimpeler: "A." },
+          niveaus: { basis: "[[-1,0],[0,1]].", simpeler: "y-as = [[-1,0],[0,1]]", nogSimpeler: "A." },
         },
       },
       {
@@ -262,7 +262,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Larry Page 1996", tekst: "**PageRank** (Google-algoritme, Larry Page + Sergey Brin 1996): pagina's geranked op basis van **eigenvector** van matrix die links tussen pagina's representeert. Pagina populair als veel populaire pagina's ernaar linken (recursief). Eigenvector met eigenwaarde 1 = stabiele oplossing. Toonde kracht van lineaire algebra voor web-zoeken — basis Google-success." }],
-          niveaus: { basis: "Eigenvector. A.", simpeler: "PageRank = eig vec", nogSimpeler: "A." },
+          niveaus: { basis: "Eigenvector.", simpeler: "PageRank = eig vec", nogSimpeler: "A." },
         },
       },
     ],
@@ -281,7 +281,7 @@ const steps = [
         wrongHints: [null, "Imaginair deel teken.", "Niet — moet optellen.", "Niet — niet vermenigvuldigen."],
         uitlegPad: {
           stappen: [{ titel: "Reëel + reëel, im + im", tekst: "**Component-wise** optellen: reële delen optellen (2+4=6), imaginaire delen optellen (3+(−5)=−2). = **6 − 2i**." }],
-          niveaus: { basis: "6−2i. A.", simpeler: "6−2i", nogSimpeler: "A." },
+          niveaus: { basis: "6−2i.", simpeler: "6−2i", nogSimpeler: "A." },
         },
       },
       {
@@ -291,7 +291,7 @@ const steps = [
         wrongHints: [null, "Niet — niet optellen.", "Niet correct.", "Niet — niet vermenigvuldigen."],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras", tekst: "|5 − 12i| = √(5² + 12²) = √(25 + 144) = √169 = **13**. Klassiek Pythagoras-triple 5-12-13." }],
-          niveaus: { basis: "13. A.", simpeler: "√169 = 13", nogSimpeler: "A." },
+          niveaus: { basis: "13.", simpeler: "√169 = 13", nogSimpeler: "A." },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         wrongHints: [null, "Niet — geen schaling.", "Spiegeling 90°.", "Alleen y-schaling."],
         uitlegPad: {
           stappen: [{ titel: "Uniforme schaling", tekst: "**Uniforme schaling met factor k**: matrix [[k,0],[0,k]]. Voor **2×**: **[[2,0],[0,2]]**. Test op (3,4): 2·3 + 0·4 = 6; 0·3 + 2·4 = 8. (3,4) → (6,8) = dubbel. ✓" }],
-          niveaus: { basis: "[[2,0],[0,2]]. A.", simpeler: "2× schaling", nogSimpeler: "A." },
+          niveaus: { basis: "[[2,0],[0,2]].", simpeler: "2× schaling", nogSimpeler: "A." },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
         wrongHints: [null, "Niet — meer.", "Niet — n stuks.", "Niet — eindig."],
         uitlegPad: {
           stappen: [{ titel: "Regelmatige n-hoek", tekst: "**Elk complex getal z ≠ 0 heeft precies n n-de wortels**. Ze vormen een regelmatige n-hoek op cirkel rond oorsprong (met straal |z|^(1/n)). Bv. 4 vierde wortels uit 1: 1, i, −1, −i (op hoeken 90° apart). Fundamenteel verschil met reëel: x² = 4 heeft 2 reële oplossingen (±2), x² = −4 heeft 0 reële maar 2 complexe (±2i)." }],
-          niveaus: { basis: "n. A.", simpeler: "n wortels", nogSimpeler: "n" },
+          niveaus: { basis: "n.", simpeler: "n wortels", nogSimpeler: "n" },
         },
       },
       {
@@ -321,7 +321,7 @@ const steps = [
         wrongHints: [null, "Niet correct.", "Niet altijd.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Carl Friedrich Gauss 1799", tekst: "**Fundamentele Stelling Algebra**: elk polynoom van graad **n ≥ 1** (met complexe coëfficiënten) heeft **precies n complexe wortels** (met multipliciteit). Bewezen door **Gauss** in 1799 (proefschrift, 22 jaar oud!). Reden om ℝ uit te breiden naar ℂ: alle polynomen factorizeerbaar in lineaire factoren. Onmisbaar voor algebra + complexe analyse." }],
-          niveaus: { basis: "n wortels. A.", simpeler: "Polynoom n = n wortels", nogSimpeler: "A." },
+          niveaus: { basis: "n wortels.", simpeler: "Polynoom n = n wortels", nogSimpeler: "A." },
         },
       },
     ],

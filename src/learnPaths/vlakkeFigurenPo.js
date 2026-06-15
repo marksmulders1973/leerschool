@@ -64,7 +64,7 @@ const steps = [
           theorie: "Vierkant-formules: omtrek = 4 × zijde. Oppervlakte = zijde × zijde.",
           voorbeelden: [{ type: "stap", tekst: "Zijde 7m → omtrek = 4×7 = 28 m. Oppervlakte = 7×7 = 49 m²." }],
           basiskennis: [{ onderwerp: "Eenheid", uitleg: "Omtrek = m (lengte). Oppervlakte = m² (vlak)." }],
-          niveaus: { basis: "28 m. A.", simpeler: "Vierkant = 4 gelijke zijden. Omtrek = 4 × 7 = 28 m.", nogSimpeler: "28" },
+          niveaus: { basis: "28 m.", simpeler: "Vierkant = 4 gelijke zijden. Omtrek = 4 × 7 = 28 m.", nogSimpeler: "28" },
         },
       },
       {
@@ -78,7 +78,7 @@ const steps = [
           theorie: "Rechthoek-formules: omtrek = 2×(L+B). Oppervlakte = L×B.",
           voorbeelden: [{ type: "stap", tekst: "10×4 = 40. Eenheid m² (want 2 dimensies)." }],
           basiskennis: [{ onderwerp: "m² niet m", uitleg: "Oppervlakte ALTIJD m² (lengte × lengte). Niet zomaar m." }],
-          niveaus: { basis: "40 m². A.", simpeler: "Oppervlakte = L × B = 10 × 4 = 40. Eenheid: m² (oppervlakte).", nogSimpeler: "40 m²" },
+          niveaus: { basis: "40 m².", simpeler: "Oppervlakte = L × B = 10 × 4 = 40. Eenheid: m² (oppervlakte).", nogSimpeler: "40 m²" },
         },
       },
       {
@@ -92,7 +92,7 @@ const steps = [
           theorie: "Omkeerformule vierkant: zijde = omtrek ÷ 4.",
           voorbeelden: [{ type: "stap", tekst: "Omtrek 20 → zijde = 20÷4 = 5 cm. Check: 4×5 = 20 ✓." }],
           basiskennis: [{ onderwerp: "Tafel van 4", tekst: "20÷4 = 5 (uit tafel: 4×5=20)." }],
-          niveaus: { basis: "5 cm. A.", simpeler: "Vierkant heeft 4 gelijke zijden. Omtrek 20 ÷ 4 zijden = 5 cm per zijde.", nogSimpeler: "5" },
+          niveaus: { basis: "5 cm.", simpeler: "Vierkant heeft 4 gelijke zijden. Omtrek 20 ÷ 4 zijden = 5 cm per zijde.", nogSimpeler: "5" },
         },
       },
     ],
@@ -113,7 +113,7 @@ const steps = [
           theorie: "Praktijk-truc: 'rondom' = omtrek. Rechthoek-omtrek = 2(L+B).",
           voorbeelden: [{ type: "stap", tekst: "18+12 = 30 (halve omtrek). ×2 = 60 m hek." }],
           basiskennis: [{ onderwerp: "Niet oppervlakte", uitleg: "Hek = lengte (m), niet vlak (m²). 18×12 = oppervlakte." }],
-          niveaus: { basis: "60 m. A.", simpeler: "Hek = omtrek. Omtrek = 2×(18+12) = 2×30 = 60 m.", nogSimpeler: "60" },
+          niveaus: { basis: "60 m.", simpeler: "Hek = omtrek. Omtrek = 2×(18+12) = 2×30 = 60 m.", nogSimpeler: "60" },
         },
       },
       {
@@ -127,7 +127,7 @@ const steps = [
           theorie: "Praktijk-truc: 'vloer/gras/verf/tegels' = oppervlakte. Rechthoek = L×B.",
           voorbeelden: [{ type: "stap", tekst: "5×4 = 20 m² vloer (oppervlakte)." }],
           basiskennis: [{ onderwerp: "Eenheid", uitleg: "Oppervlakte ALTIJD m². 'm' zonder ² = lengte (omtrek)." }],
-          niveaus: { basis: "20 m². A.", simpeler: "Vloer = oppervlakte = L×B = 5×4 = 20 m² (let op eenheid m²).", nogSimpeler: "20 m²" },
+          niveaus: { basis: "20 m².", simpeler: "Vloer = oppervlakte = L×B = 5×4 = 20 m² (let op eenheid m²).", nogSimpeler: "20 m²" },
         },
       },
       {
@@ -141,7 +141,7 @@ const steps = [
           theorie: "Vierkant-omtrek = 4 × zijde.",
           voorbeelden: [{ type: "stap", tekst: "4 × 6 = 24 m." }],
           basiskennis: [{ onderwerp: "Niet oppervlakte", uitleg: "36 m² = oppervlakte (6×6). Vraag wil omtrek (m)." }],
-          niveaus: { basis: "24 m. A.", simpeler: "Vierkant 4 × zijde = 4×6 = 24 m omtrek.", nogSimpeler: "24" },
+          niveaus: { basis: "24 m.", simpeler: "Vierkant 4 × zijde = 4×6 = 24 m omtrek.", nogSimpeler: "24" },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
           theorie: "Driehoek = halve rechthoek. Daarom ÷ 2.",
           voorbeelden: [{ type: "stap", tekst: "12 × 8 = 96. 96 ÷ 2 = 48 m²." }],
           basiskennis: [{ onderwerp: "Vergeet ÷2 niet", uitleg: "96 = oppervlakte rechthoek met dezelfde maten. Driehoek = helft." }],
-          niveaus: { basis: "48 m². A.", simpeler: "Driehoek = (basis × hoogte) ÷ 2 = (12×8)÷2 = 96÷2 = 48 m².", nogSimpeler: "48" },
+          niveaus: { basis: "48 m².", simpeler: "Driehoek = (basis × hoogte) ÷ 2 = (12×8)÷2 = 96÷2 = 48 m².", nogSimpeler: "48" },
         },
       },
       {
@@ -177,7 +177,7 @@ const steps = [
           theorie: "Bij even getal: kun je eerst ÷2, dan vermenigvuldigen. 4÷2=2. 5×2=10.",
           voorbeelden: [{ type: "stap", tekst: "5×4÷2 = 5×2 = 10 cm²." }],
           basiskennis: [{ onderwerp: "Hoogte loodrecht", uitleg: "Hoogte = recht naar boven, niet schuine zijde." }],
-          niveaus: { basis: "10 cm². A.", simpeler: "(5×4)÷2 = 20÷2 = 10 cm².", nogSimpeler: "10" },
+          niveaus: { basis: "10 cm².", simpeler: "(5×4)÷2 = 20÷2 = 10 cm².", nogSimpeler: "10" },
         },
       },
       {
@@ -191,7 +191,7 @@ const steps = [
           theorie: "Driehoek-oppervlakte: ALTIJD ÷ 2 op het einde.",
           voorbeelden: [{ type: "stap", tekst: "6×9=54. 54÷2=27. Of: 6÷2=3, 3×9=27." }],
           basiskennis: [{ onderwerp: "Even getal eerst ÷2", uitleg: "6 is even → 6÷2=3 → 3×9=27. Voorkomt grote getallen." }],
-          niveaus: { basis: "27 m². A.", simpeler: "Driehoek = (6×9)÷2 = 54÷2 = 27 m² gras.", nogSimpeler: "27" },
+          niveaus: { basis: "27 m².", simpeler: "Driehoek = (6×9)÷2 = 54÷2 = 27 m² gras.", nogSimpeler: "27" },
         },
       },
     ],
@@ -212,7 +212,7 @@ const steps = [
           theorie: "2-stappen: 1) bereken omtrek. 2) keer prijs per meter.",
           voorbeelden: [{ type: "stap", tekst: "Omtrek 2×(15+12)=54m. ×€10 = €540." }],
           basiskennis: [{ onderwerp: "Niet ×oppervlakte", uitleg: "180 m² × €10 = €1800 (fout). Hek = lengte!" }],
-          niveaus: { basis: "€540. A.", simpeler: "Hek = omtrek = 2×(15+12) = 54m. Kosten = 54 × €10 = €540.", nogSimpeler: "€540" },
+          niveaus: { basis: "€540.", simpeler: "Hek = omtrek = 2×(15+12) = 54m. Kosten = 54 × €10 = €540.", nogSimpeler: "€540" },
         },
       },
       {
@@ -226,7 +226,7 @@ const steps = [
           theorie: "2-stappen: 1) oppervlakte (L×B). 2) keer prijs per m².",
           voorbeelden: [{ type: "stap", tekst: "8×6 = 48 m². ×€12 = €576." }],
           basiskennis: [{ onderwerp: "48 × 12", uitleg: "48×12 = 48×10 + 48×2 = 480+96 = 576." }],
-          niveaus: { basis: "€576. A.", simpeler: "Vloer = 8×6 = 48 m². Kosten = 48 × €12 = €576.", nogSimpeler: "€576" },
+          niveaus: { basis: "€576.", simpeler: "Vloer = 8×6 = 48 m². Kosten = 48 × €12 = €576.", nogSimpeler: "€576" },
         },
       },
       {
@@ -240,7 +240,7 @@ const steps = [
           theorie: "Driehoek-oppervlakte = (B×H)÷2. Dan × prijs.",
           voorbeelden: [{ type: "stap", tekst: "(10×4)÷2 = 20 m². 20×€6 = €120." }],
           basiskennis: [{ onderwerp: "÷2 niet vergeten", uitleg: "Zonder ÷2 = 40 m² → €240 (fout)." }],
-          niveaus: { basis: "€120. A.", simpeler: "Driehoek = (10×4)÷2 = 20 m². Kosten = 20 × €6 = €120.", nogSimpeler: "€120" },
+          niveaus: { basis: "€120.", simpeler: "Driehoek = (10×4)÷2 = 20 m². Kosten = 20 × €6 = €120.", nogSimpeler: "€120" },
         },
       },
     ],
@@ -261,7 +261,7 @@ const steps = [
           theorie: "Vierkant: alle zijden gelijk → opp = zijde². 9² = 81.",
           voorbeelden: [{ type: "stap", tekst: "9×9 = 81 m²." }],
           basiskennis: [{ onderwerp: "Tafels", uitleg: "9×9 = 81 (uit tafels)." }],
-          niveaus: { basis: "81 m². A.", simpeler: "Vierkant: opp = zijde × zijde = 9×9 = 81 m².", nogSimpeler: "81" },
+          niveaus: { basis: "81 m².", simpeler: "Vierkant: opp = zijde × zijde = 9×9 = 81 m².", nogSimpeler: "81" },
         },
       },
       {
@@ -275,7 +275,7 @@ const steps = [
           theorie: "Rechthoek: 2 lange + 2 korte zijden. Som = 2(L+B).",
           voorbeelden: [{ type: "stap", tekst: "2(20+5) = 2×25 = 50 m." }],
           basiskennis: [{ onderwerp: "Niet 100", uitleg: "100 = oppervlakte (20×5). Omtrek = 50." }],
-          niveaus: { basis: "50 m. A.", simpeler: "Rechthoek-omtrek = 2×(20+5) = 2×25 = 50 m.", nogSimpeler: "50" },
+          niveaus: { basis: "50 m.", simpeler: "Rechthoek-omtrek = 2×(20+5) = 2×25 = 50 m.", nogSimpeler: "50" },
         },
       },
       {
@@ -289,7 +289,7 @@ const steps = [
           theorie: "Tip: bij even getal eerst ÷2. 6÷2 = 3. 14×3 = 42.",
           voorbeelden: [{ type: "stap", tekst: "14×6÷2 = 14×3 = 42 cm²." }],
           basiskennis: [{ onderwerp: "Vergeet ÷2 niet", uitleg: "Zonder ÷2: 84 (fout). Driehoek = halve rechthoek." }],
-          niveaus: { basis: "42 cm². A.", simpeler: "Driehoek = (14×6)÷2 = 84÷2 = 42 cm².", nogSimpeler: "42" },
+          niveaus: { basis: "42 cm².", simpeler: "Driehoek = (14×6)÷2 = 84÷2 = 42 cm².", nogSimpeler: "42" },
         },
       },
       {
@@ -303,7 +303,7 @@ const steps = [
           theorie: "Rondom = omtrek = 2(L+B). 1000 m² = oppervlakte (verkeerd voor lengte).",
           voorbeelden: [{ type: "stap", tekst: "40+25=65 (halve omtrek). ×2 = 130 m." }],
           basiskennis: [{ onderwerp: "Eenheid m niet m²", uitleg: "Lengte = m. Vlak = m²." }],
-          niveaus: { basis: "130 m. A.", simpeler: "Rondom = omtrek = 2×(40+25) = 130 m.", nogSimpeler: "130" },
+          niveaus: { basis: "130 m.", simpeler: "Rondom = omtrek = 2×(40+25) = 130 m.", nogSimpeler: "130" },
         },
       },
       {
@@ -317,7 +317,7 @@ const steps = [
           theorie: "2-stappen: 1) oppervlakte. 2) ÷ dekking per liter.",
           voorbeelden: [{ type: "stap", tekst: "6×5 = 30 m². 30÷20 = 1,5 L verf." }],
           basiskennis: [{ onderwerp: "Decimaal antwoord", uitleg: "30÷20 = 1,5 (niet rond getal — kun je gewoon 1,5L kopen)." }],
-          niveaus: { basis: "1,5 L. A.", simpeler: "Vloer 6×5 = 30 m². 30 m² ÷ 20 m²/L = 1,5 L verf.", nogSimpeler: "1,5" },
+          niveaus: { basis: "1,5 L.", simpeler: "Vloer 6×5 = 30 m². 30 m² ÷ 20 m²/L = 1,5 L verf.", nogSimpeler: "1,5" },
         },
       },
       {

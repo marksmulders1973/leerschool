@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Een variabele is normaal, geen fout.", "Het heeft niets met je beeldscherm te maken.", "Geen netwerk — een opslagplek in het programma."],
         uitlegPad: {
           stappen: [{ titel: "Een doosje met naam", tekst: "Een **variabele** bewaart een waarde onder een **naam** (`leeftijd = 12`), zodat je 'm later kunt gebruiken of wijzigen. De `=` betekent **toekennen** (waarde rechts in variabele links), niet 'is gelijk aan' zoals in wiskunde." }],
-          niveaus: { basis: "Doosje met een waarde. A.", simpeler: "Variabele = doosje", nogSimpeler: "A." },
+          niveaus: { basis: "Doosje met een waarde.", simpeler: "Variabele = doosje", nogSimpeler: "A." },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Een integer is een geheel getal.", "Een string is tekst.", "Een float is een kommagetal."],
         uitlegPad: {
           stappen: [{ titel: "Waar of onwaar", tekst: "Een **boolean** (bool) kan maar twee waarden hebben: **True** (waar) of **False** (onwaar). Booleans zijn het resultaat van vergelijkingen (`5 > 3` → True) en sturen keuzes (if/else) aan. int = geheel getal, float = kommagetal, string = tekst." }],
-          niveaus: { basis: "Boolean. A.", simpeler: "True/False = boolean", nogSimpeler: "A." },
+          niveaus: { basis: "Boolean.", simpeler: "True/False = boolean", nogSimpeler: "A." },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "7 zou het zijn bij getallen: 3 + 4.", "12 is vermenigvuldigen, en het zijn geen getallen.", "Het mag gewoon — strings plakken aan elkaar."],
         uitlegPad: {
           stappen: [{ titel: "Tekst plakt, getallen rekenen", tekst: "Met aanhalingstekens zijn `\"3\"` en `\"4\"` **strings (tekst)**. `+` plakt tekst aan elkaar → **\"34\"**. Zónder aanhalingstekens (`3 + 4`) zijn het getallen → **7**. Daarom is het **datatype** zo belangrijk." }],
-          niveaus: { basis: "\"34\". A.", simpeler: "Tekst + tekst = plakken", nogSimpeler: "A." },
+          niveaus: { basis: "\"34\".", simpeler: "Tekst + tekst = plakken", nogSimpeler: "A." },
         },
       },
     ],
@@ -64,7 +64,7 @@ const steps = [
         wrongHints: [null, "Ze doen echt iets verschillends.", "Net andersom.", "== werkt voor getallen én tekst."],
         uitlegPad: {
           stappen: [{ titel: "Toekennen vs vergelijken", tekst: "**`=`** kent een waarde **toe** (`x = 5`). **`==`** **vergelijkt** en geeft een boolean (`x == 5` → True/False). In een `if` gebruik je dus `==`. Per ongeluk `=` schrijven in een vergelijking is een klassieke beginnersfout." }],
-          niveaus: { basis: "= toekennen, == vergelijken. A.", simpeler: "== is vergelijken", nogSimpeler: "A." },
+          niveaus: { basis: "= toekennen, == vergelijken.", simpeler: "== is vergelijken", nogSimpeler: "A." },
         },
       },
       {
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "Niet altijd — alleen als de voorwaarde klopt.", "Het wordt wél uitgevoerd als de voorwaarde waar is.", "Het gaat om de getal-voorwaarde, niet om tekst."],
         uitlegPad: {
           stappen: [{ titel: "Alleen bij True", tekst: "Een **if** voert zijn (ingesprongen) blok alleen uit als de voorwaarde **True** is. Bij `leeftijd >= 18` gebeurt dat vanaf 18. Is het False, dan kijkt Python naar **elif**/**else**." }],
-          niveaus: { basis: "Als de voorwaarde True is. A.", simpeler: "if = alleen bij waar", nogSimpeler: "A." },
+          niveaus: { basis: "Als de voorwaarde True is.", simpeler: "if = alleen bij waar", nogSimpeler: "A." },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Dat zou 'or' zijn, niet 'and'.", "Dan is het juist False.", "Niet altijd — alleen in het bereik 12-19."],
         uitlegPad: {
           stappen: [{ titel: "and = beide", tekst: "**and** vereist dat **beide** voorwaarden waar zijn. `leeftijd >= 12 and leeftijd < 20` is alleen True voor 12 t/m 19. **or** zou genoeg hebben aan één; **not** keert een waarde om." }],
-          niveaus: { basis: "Beide waar. A.", simpeler: "and = beide", nogSimpeler: "A." },
+          niveaus: { basis: "Beide waar.", simpeler: "and = beide", nogSimpeler: "A." },
         },
       },
     ],
@@ -103,7 +103,7 @@ const steps = [
         wrongHints: [null, "range begint bij 0, niet bij 1, en stopt vóór 5.", "range(5) telt niet 5 keer 5.", "Er wordt wel degelijk geprint."],
         uitlegPad: {
           stappen: [{ titel: "range begint bij 0", tekst: "`range(5)` levert **0, 1, 2, 3, 4** (vijf getallen, beginnend bij 0, tot maar niet inclusief 5). De for-loop print ze één voor één: **0 1 2 3 4**." }],
-          niveaus: { basis: "0 t/m 4. A.", simpeler: "range(5) = 0-4", nogSimpeler: "A." },
+          niveaus: { basis: "0 t/m 4.", simpeler: "range(5) = 0-4", nogSimpeler: "A." },
         },
       },
       {
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Over een lijst lopen is juist een for-loop.", "Een vast aantal keren past beter bij for.", "while bestaat zeker wel."],
         uitlegPad: {
           stappen: [{ titel: "Onbekend aantal → while", tekst: "Een **while** herhaalt **zolang een voorwaarde waar is** — handig als je vooraf niet weet hoe vaak (bv. 'zolang het antwoord fout is'). Weet je het aantal of loop je over een lijst, kies dan **for**." }],
-          niveaus: { basis: "Onbekend aantal. A.", simpeler: "while = zolang voorwaarde", nogSimpeler: "A." },
+          niveaus: { basis: "Onbekend aantal.", simpeler: "while = zolang voorwaarde", nogSimpeler: "A." },
         },
       },
       {
@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Sneller? Nee — het loopt juist eindeloos.", "Hij draait juist eindeloos, niet één keer.", "Het is een echte bug."],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde wordt nooit False", tekst: "Als de teller niet verandert, blijft de while-voorwaarde **altijd waar** → een **oneindige lus**: het programma stopt nooit (en loopt vast). Zorg dus dat er in de loop iets gebeurt waardoor de voorwaarde ooit **False** wordt." }],
-          niveaus: { basis: "Oneindige lus. A.", simpeler: "Geen ophoging = eeuwig", nogSimpeler: "A." },
+          niveaus: { basis: "Oneindige lus.", simpeler: "Geen ophoging = eeuwig", nogSimpeler: "A." },
         },
       },
     ],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [null, "Een functie sluit niets af.", "Niets met schermgrootte.", "Niets met internetsnelheid."],
         uitlegPad: {
           stappen: [{ titel: "Eén keer schrijven, vaak gebruiken", tekst: "Een **functie** geeft een stukje code een **naam**, zodat je het kunt **hergebruiken** (met `def …` definiëren, daarna aanroepen). Voordeel: schrijf logica één keer (DRY), pas fouten op één plek aan, en je code blijft leesbaar." }],
-          niveaus: { basis: "Code benoemen + hergebruiken. A.", simpeler: "Functie = herbruikbaar blok", nogSimpeler: "A." },
+          niveaus: { basis: "Code benoemen + hergebruiken.", simpeler: "Functie = herbruikbaar blok", nogSimpeler: "A." },
         },
       },
       {
@@ -152,7 +152,7 @@ const steps = [
         wrongHints: [null, "Tonen is `print` — return geeft een waarde terug (zonder per se te tonen).", "Het stopt alleen de functie, niet de computer.", "Een variabele maken doe je met `=`."],
         uitlegPad: {
           stappen: [{ titel: "Terruggeven ≠ printen", tekst: "**return** geeft een **uitkomst terug** uit de functie, die je daarna kunt opslaan of verder gebruiken (`resultaat = kwadraat(5)`). Dat is anders dan **print**, dat alleen iets op het scherm toont en geen waarde teruggeeft." }],
-          niveaus: { basis: "Geeft een waarde terug. A.", simpeler: "return = waarde terug", nogSimpeler: "A." },
+          niveaus: { basis: "Geeft een waarde terug.", simpeler: "return = waarde terug", nogSimpeler: "A." },
         },
       },
       {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Een logische fout draait wél, maar geeft een fout antwoord.", "Het ligt niet aan het netwerk.", "Het is zeker een fout — het start niet."],
         uitlegPad: {
           stappen: [{ titel: "Syntax = grammatica", tekst: "Een **syntaxfout** is een fout in de 'grammatica' van de code (vergeten `:`, haakje of dubbele punt) — het programma **start niet**. Een **logische fout (bug)** draait wél, maar geeft het **verkeerde** antwoord; die spoor je op met test-voorbeelden en tussentijdse `print()`-regels." }],
-          niveaus: { basis: "Syntaxfout. A.", simpeler: "Start niet = syntaxfout", nogSimpeler: "A." },
+          niveaus: { basis: "Syntaxfout.", simpeler: "Start niet = syntaxfout", nogSimpeler: "A." },
         },
       },
     ],
