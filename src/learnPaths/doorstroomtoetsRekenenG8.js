@@ -138,24 +138,10 @@ const steps = [
         },
       },
       {
-        q: "Welke breuk is **groter**: 3/5 of 2/3?",
-        options: ["2/3", "3/5", "Even groot", "Niet te bepalen"],
-        answer: 0,
-        wrongHints: [null, "Kleiner dan 2/3.", "Niet — verschillende waarden.", "Wel — maak gelijknamig of decimaal."],
-        uitlegPad: {
-          stappen: [{ titel: "Gelijknamig maken", tekst: "Maak gelijke noemer. KGN van 5 en 3 = 15. 3/5 = 9/15. 2/3 = 10/15. Dus 2/3 > 3/5." }],
-          woorden: [{ woord: "KGN", uitleg: "Kleinste Gemeenschappelijke Noemer — kleinste getal waar beide noemers in passen." }],
-          theorie: "Truc: zet beide breuken in decimaal. 3/5 = 0,60. 2/3 = 0,666... Groter = 2/3.",
-          voorbeelden: [{ type: "stap", tekst: "0,60 < 0,67 → 3/5 < 2/3 → groter is 2/3." }],
-          basiskennis: [{ onderwerp: "Vergelijkingstruc", uitleg: "Bij twee breuken vergelijken: decimaal omzetten of gelijknamig maken." }],
-          niveaus: { basis: "2/3 is groter.", simpeler: "3/5 = 0,60. 2/3 ≈ 0,67. 0,67 > 0,60.", nogSimpeler: "2/3" },
-        },
-      },
-      {
         q: "Hoeveel is **1/4 in decimalen**?",
         options: ["0,25", "0,14", "0,4", "0,75"],
         answer: 0,
-        wrongHints: [null, "Niet — 1/4 is een kwart.", "Niet — dat is 4/10.", "Dat is 3/4."],
+        wrongHints: [null, "Een kwart is kleiner dan dat — deel 1 door 4.", "Dat lijkt op de breuk-cijfers; reken echt 1 ÷ 4 uit.", "Te groot — dat is drie kwart, niet één kwart."],
         uitlegPad: {
           stappen: [
             { titel: "Breuk = deling", tekst: "Een breuk is eigenlijk een deling. 1/4 betekent: '1 gedeeld door 4'." },
@@ -190,7 +176,7 @@ const steps = [
         q: "Wat is **2/3 − 1/6**?",
         options: ["1/2", "1/3", "1/6", "2/6"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Niet vereenvoudigd."],
+        wrongHints: [null, "Maak eerst gelijke noemers (zesden) en trek dan af.", "Dat is maar één deel; je houdt meer over na 2/3.", "Bijna — maar deze breuk kun je nog kleiner schrijven."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: gelijke noemers maken", tekst: "Je kunt alleen breuken aftrekken met DEZELFDE noemer. 2/3 en 1/6 hebben niet dezelfde — eerst gelijknamig maken." },

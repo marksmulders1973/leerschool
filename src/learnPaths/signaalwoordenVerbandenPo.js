@@ -126,7 +126,7 @@ const steps = [
         q: "Welk woord past? *De wedstrijd ging niet door, ___ het hard regende.*",
         options: ["omdat", "maar", "zodat", "of"],
         answer: 0,
-        wrongHints: [null, "Dat is een tegenstelling; hier wordt een reden gegeven.", "Dat geeft een doel, geen reden.", "Dat geeft een keuze."],
+        wrongHints: [null, "Dit woord zet juist twee dingen tegenover elkaar.", "Dit woord wijst naar een doel of gevolg.", "Dit woord biedt een keuze tussen twee dingen."],
         uitlegPad: {
           stappen: [{ titel: "Reden = omdat", tekst: "Waarom ging de wedstrijd niet door? Omdat het regende. 'Omdat' geeft de reden." }],
           niveaus: {

@@ -20,7 +20,6 @@ import {
   popDueRetrieval,
   peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
-import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
 import { recordRefAnswer } from "../mastery/mastery.js";
 import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
@@ -578,8 +577,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // beheerst — ook ná wrongHint + uitlegpad + retry. Anders straft het
       // systeem leerlingen die wel ECHT bijleren via de uitleg.
       adaptRecordRight(pathId, stepIdx, realCheckIdx);
-      // A11: spaced repetition — schuif interval-stap (correct na fout = consolideren).
-      srRecordSeen(pathId, stepIdx, realCheckIdx, true, attempts);
       // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval-practice, 2026-05-16):
       // correct antwoord terwijl het uitlegpad open staat = de leerling heeft net
       // uitleg gezien én kan het toepassen. Markeer voor retrieval-herhaling
@@ -612,8 +609,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       setLastWrongAnswer(currentCheck.options?.[i] || null);
       setCorrectStreak(0);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
-      // A11: spaced repetition — fout = reset naar morgen.
-      srRecordSeen(pathId, stepIdx, realCheckIdx, false, attempts);
       // Tel fout per vraag voor adaptief uitlegpad-niveau (auto-switch naar simpeler bij ≥2).
       // Audit 2026-05-13 QW2: examenBron-conditie verwijderd zodat ALLE 2000+ uitlegPad-checks
       // adaptief werken, niet alleen de 61 examenvragen.

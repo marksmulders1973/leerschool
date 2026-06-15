@@ -1,5 +1,13 @@
 // Spaced repetition (SM-2-light) — A11 (10-agent circulariteit-review 2026-05-10).
 //
+// ⚠️ SLAPEND (B2.4, 2026-06-15): dit per-check-Leitner-spoor wordt NIET gebruikt.
+// Het live "Herhaal vandaag"-systeem (StudentHome) draait op topic_mastery
+// (src/shared/mastery.js → loadDueTopics, per onderwerp). De write-only-aanroepen
+// in LearnPath.jsx zijn verwijderd (schreven naar een store die niemand las).
+// Dit bestand blijft als toekomst-ready scaffolding: wil je ooit herhaling op
+// vraag-niveau (fijner dan onderwerp-niveau), importeer dan getDueChecks/recordSeen
+// en sluit het aan op een UI-kaart. Tot die tijd: bewust ongebruikt, geen consumers.
+//
 // Per check (pathId+stepIdx+checkIdx) houden we bij:
 //   - lastSeenAt: timestamp laatste poging
 //   - dueAt: timestamp wanneer hij weer beoordeeld moet worden

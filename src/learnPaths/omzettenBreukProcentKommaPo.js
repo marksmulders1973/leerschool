@@ -255,13 +255,13 @@ const steps = [
         q: "Welke korting is meer: ¼ korting of 20% korting?",
         options: ["¼ korting", "20% korting", "ze zijn gelijk", "geen van beide"],
         answer: 0,
-        wrongHints: [null, "Reken ¼ om naar procent en vergelijk.", "25% en 20% zijn niet gelijk.", "Eén is duidelijk meer."],
+        wrongHints: [null, "Reken ¼ om naar procent en vergelijk met 20%.", "Reken ¼ om naar procent — dan zie je dat ze niet gelijk zijn.", "Eén korting haalt echt meer van de prijs af; reken ¼ om."],
         uitlegPad: {
           stappen: [{ titel: "¼ = 25%", tekst: "¼ = 25%. En 25% > 20%, dus ¼ korting is meer." }],
           niveaus: {
             basis: "¼ = 25%, dat is meer dan 20%.",
             simpeler: "Reken ¼ om naar procent: 25%. Is dat meer dan 20%?",
-            nogSimpeler: "Is 25% meer of minder dan 20%?",
+            nogSimpeler: "Hoeveel procent is ¼? Vergelijk dat met 20%.",
           },
         },
       },

@@ -151,7 +151,9 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // A11-snoei (visie-bewaker maand 1): srDueCount banner verwijderd.
   // Bestaande topic-niveau dueCount + DailyChallengeBanner-flow heeft al
   // echte quiz-trigger (onHerhaalQuiz). Twee banners = verwarring (STOPLIST §5).
-  // spacedRepetition.js store BLIJFT achter de schermen — toekomst-ready.
+  // dueCount hieronder komt uit topic_mastery (mastery.js loadDueTopics).
+  // De aparte spacedRepetition.js (per-check) is sinds B2.4 slapend/ongebruikt —
+  // geen writes meer; zie de header van dat bestand.
 
   // A12 (10-agent circulariteit-review 2026-05-10): web push opt-in.
   // permState: "unsupported" | "default" | "granted" | "denied"
