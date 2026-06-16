@@ -181,7 +181,7 @@ const steps = [
   },
   {
     title: "Onbekende invullen — kruisproduct",
-    explanation: "Een snellere manier voor verhoudingstabellen: het **kruisproduct** (of 'kruisvermenigvuldigen').\n\n**Voorbeeld**: 4 ballonnen kosten €3. Hoeveel kosten 10 ballonnen?\n\n| 4 | 3 |\n| 10 | x |\n\n**Kruisproduct**: 4 · x = 10 · 3, dus 4x = 30, dus **x = 7,50**.\n\n**Regel**: bij twee verhoudingen die gelijk zijn (a : b = c : d), geldt:\n\n**a · d = b · c**\n\nDit heet het kruisproduct. Werkt altijd.\n\n**Voorbeeld 2**: 6 : 9 = 4 : x. Dan 6x = 36, dus **x = 6**.",
+    explanation: "Een snellere manier voor verhoudingstabellen: het **kruisproduct** (of 'kruisvermenigvuldigen').\n\n**Voorbeeld**: 4 ballonnen kosten €3. Hoeveel kosten 10 ballonnen?\n\n| 4 | 3 |\n| 10 | x |\n\n**Kruisproduct**: 4 · x = 10 · 3, dus 4x = 30, dus **x = 7,50**.\n\n**Regel**: bij twee verhoudingen die gelijk zijn ($a : b = c : d$), geldt:\n\n$a \\cdot d = b \\cdot c$\n\nDit heet het kruisproduct. Werkt altijd.\n\n**Voorbeeld 2**: 6 : 9 = 4 : x. Dan 6x = 36, dus **x = 6**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5"/>
 <line x1="40" y1="80" x2="260" y2="80" stroke="${COLORS.curve}" stroke-width="1"/>
@@ -208,7 +208,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Kruisproduct", tekst: "5·x = 15·8 = 120. x = 120÷5 = 24." }],
           woorden: [{ woord: "kruisproduct", uitleg: "diagonaal vermenigvuldigen" }],
-          theorie: "a:b = c:d → a·d = b·c.",
+          theorie: "$a:b = c:d \\Rightarrow a \\cdot d = b \\cdot c$.",
           voorbeelden: [{ type: "voorbeeld", tekst: "15 is 3× zo groot als 5, dus x = 3×8 = 24" }],
           basiskennis: [{ onderwerp: "factor", uitleg: "15÷5 = 3 → x = 3×8 = 24" }],
           niveaus: {

@@ -147,7 +147,7 @@ const steps = [
   },
   {
     title: "Optellen met negatieve getallen",
-    explanation: "**+ negatief getal** = aftrekken.\n\n**Voorbeelden**:\n• 5 + (−3) = 5 − 3 = **2**\n• 8 + (−10) = 8 − 10 = **−2**\n• 4 + (−4) = **0**\n\n**Regel**: een plus en een min naast elkaar werkt als één **min**.\n\n**Visualisatie op de getallenlijn**: bij +3 ga je 3 stappen naar **rechts**. Bij +(−3) ga je 3 stappen naar **links**.\n\n**Negatief + negatief** geeft een nóg meer negatief getal:\n• −3 + (−5) = −8 (twee minnen samen → 8 stappen naar links vanaf 0)\n\n**Trucje**: bij + (−x) doe je gewoon − x. Schrap de + en de haakjes.",
+    explanation: "**+ negatief getal** = aftrekken.\n\n**Voorbeelden**:\n• 5 + (−3) = 5 − 3 = **2**\n• 8 + (−10) = 8 − 10 = **−2**\n• 4 + (−4) = **0**\n\n**Regel**: een plus en een min naast elkaar werkt als één **min**.\n\n**Visualisatie op de getallenlijn**: bij +3 ga je 3 stappen naar **rechts**. Bij +(−3) ga je 3 stappen naar **links**.\n\n**Negatief + negatief** geeft een nóg meer negatief getal:\n• −3 + (−5) = −8 (twee minnen samen → 8 stappen naar links vanaf 0)\n\n**Trucje**: bij $+(-x)$ doe je gewoon $-x$. Schrap de + en de haakjes.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="50" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−4</text>
@@ -190,7 +190,7 @@ const steps = [
   },
   {
     title: "Aftrekken met negatieve getallen",
-    explanation: "**− negatief getal** = optellen!\n\n**Voorbeelden**:\n• 5 − (−3) = 5 + 3 = **8**\n• −2 − (−7) = −2 + 7 = **5**\n• 0 − (−4) = 0 + 4 = **4**\n\n**Regel**: twee minnen naast elkaar worden een **plus**.\n\n**Truc**: − (−x) = + x. Schrap allebei de mintekens, dan staat er een plus.\n\n**Waarom?** 'Het tegenovergestelde van iets aftrekken' = 'iets toevoegen'.\n\n**Voorbeeld in het echt**: schuld van −5 minder hebben = 5 erbij in je portemonnee.",
+    explanation: "**− negatief getal** = optellen!\n\n**Voorbeelden**:\n• 5 − (−3) = 5 + 3 = **8**\n• −2 − (−7) = −2 + 7 = **5**\n• 0 − (−4) = 0 + 4 = **4**\n\n**Regel**: twee minnen naast elkaar worden een **plus**.\n\n**Truc**: $-(-x) = +x$. Schrap allebei de mintekens, dan staat er een plus.\n\n**Waarom?** 'Het tegenovergestelde van iets aftrekken' = 'iets toevoegen'.\n\n**Voorbeeld in het echt**: schuld van −5 minder hebben = 5 erbij in je portemonnee.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial" font-weight="bold">a − (−b) = a + b</text>

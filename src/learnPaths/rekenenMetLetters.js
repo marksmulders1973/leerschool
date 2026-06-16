@@ -151,7 +151,7 @@ const steps = [
   // ─── B. Haakjes wegwerken ────────────────────────────
   {
     title: "a(b + c) = ab + ac",
-    explanation: "**Haakjes wegwerken** = een uitdrukking met haakjes ompschrijven naar één zonder haakjes.\n\n**Hoofdregel**: a · (b + c) = a·b + a·c\n\nIn woorden: vermenigvuldig **elk** ding binnen de haakjes met wat ervoor staat.\n\n**Voorbeelden**:\n• 3(x + 5) = 3·x + 3·5 = **3x + 15**\n• 4(2y − 3) = 4·2y − 4·3 = **8y − 12**\n• 5(a + b) = **5a + 5b**\n• x(x + 4) = x·x + x·4 = **x² + 4x**\n\n**Tip**: vergeet **niet** de tweede vermenigvuldiging. Veel leerlingen schrijven 3(x + 5) = 3x + 5 (fout). Je moet 3 ook keer 5 doen!",
+    explanation: "**Haakjes wegwerken** = een uitdrukking met haakjes ompschrijven naar één zonder haakjes.\n\n**Hoofdregel**: $a \\cdot (b + c) = a \\cdot b + a \\cdot c$\n\nIn woorden: vermenigvuldig **elk** ding binnen de haakjes met wat ervoor staat.\n\n**Voorbeelden**:\n• 3(x + 5) = 3·x + 3·5 = **3x + 15**\n• 4(2y − 3) = 4·2y − 4·3 = **8y − 12**\n• 5(a + b) = **5a + 5b**\n• x(x + 4) = x·x + x·4 = **x² + 4x**\n\n**Tip**: vergeet **niet** de tweede vermenigvuldiging. Veel leerlingen schrijven 3(x + 5) = 3x + 5 (fout). Je moet 3 ook keer 5 doen!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="50" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="8"/>
 <text x="80" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">3</text>
@@ -283,7 +283,7 @@ const steps = [
   // ─── C. Merkwaardige producten ────────────────────────────
   {
     title: "(a + b)² — wat is het?",
-    explanation: "Een speciaal geval: **(a + b)²** = (a + b)(a + b) — een uitdrukking in het kwadraat.\n\n**Hoe werk je dit uit?**\n\n(a + b)² = (a + b) · (a + b)\n         = a·a + a·b + b·a + b·b\n         = a² + 2ab + b²\n\n**De regel**:\n\n**(a + b)² = a² + 2ab + b²**\n\nDit heet een **merkwaardig product**.\n\n**Voorbeelden**:\n• (x + 3)² = x² + 2·x·3 + 3² = **x² + 6x + 9**\n• (y + 5)² = y² + 10y + 25\n• (2x + 1)² = (2x)² + 2·2x·1 + 1² = **4x² + 4x + 1**\n\n**Veelgemaakte fout**: denken dat (a + b)² = a² + b². **Fout!** De middelste term **2ab** vergeten — niet doen.",
+    explanation: "Een speciaal geval: **(a + b)²** = (a + b)(a + b) — een uitdrukking in het kwadraat.\n\n**Hoe werk je dit uit?**\n\n$(a + b)^2 = (a + b)(a + b) = a \\cdot a + a \\cdot b + b \\cdot a + b \\cdot b = a^2 + 2ab + b^2$\n\n**De regel**:\n\n$(a + b)^2 = a^2 + 2ab + b^2$\n\nDit heet een **merkwaardig product**.\n\n**Voorbeelden**:\n• (x + 3)² = x² + 2·x·3 + 3² = **x² + 6x + 9**\n• (y + 5)² = y² + 10y + 25\n• (2x + 1)² = (2x)² + 2·2x·1 + 1² = **4x² + 4x + 1**\n\n**Veelgemaakte fout**: denken dat (a + b)² = a² + b². **Fout!** De middelste term **2ab** vergeten — niet doen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)² = a² + 2ab + b²</text>
@@ -322,7 +322,7 @@ const steps = [
   },
   {
     title: "(a − b)² — met een min",
-    explanation: "Bij **(a − b)²** verandert er weinig — alleen de middelste term wordt **min**:\n\n**(a − b)² = a² − 2ab + b²**\n\nWaarom blijft b² positief? Omdat (−b)² = b² (kwadraat van een negatief is positief, zie H5).\n\n**Voorbeelden**:\n• (x − 3)² = x² − 6x + 9\n• (y − 5)² = y² − 10y + 25\n• (2x − 1)² = 4x² − 4x + 1\n\n**Schema** voor zowel + als −:\n• Eerste term² (a²)\n• ± middelste term (2ab) — teken volgt de ± in de haakjes\n• Tweede term² (b²) — altijd plus\n\n**Tip**: schrijf altijd alle drie de termen op. Vergeet de middelste niet.",
+    explanation: "Bij **(a − b)²** verandert er weinig — alleen de middelste term wordt **min**:\n\n$(a - b)^2 = a^2 - 2ab + b^2$\n\nWaarom blijft b² positief? Omdat (−b)² = b² (kwadraat van een negatief is positief, zie H5).\n\n**Voorbeelden**:\n• (x − 3)² = x² − 6x + 9\n• (y − 5)² = y² − 10y + 25\n• (2x − 1)² = 4x² − 4x + 1\n\n**Schema** voor zowel + als −:\n• Eerste term² (a²)\n• ± middelste term (2ab) — teken volgt de ± in de haakjes\n• Tweede term² (b²) — altijd plus\n\n**Tip**: schrijf altijd alle drie de termen op. Vergeet de middelste niet.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a − b)² = a² − 2ab + b²</text>
@@ -360,7 +360,7 @@ const steps = [
   },
   {
     title: "(a + b)(a − b) = a² − b²",
-    explanation: "Een derde merkwaardig product: **plus en min combineren**.\n\n**(a + b)(a − b) = a² − b²**\n\nDit is verrassend simpel — alleen twee termen, geen middelste term.\n\n**Waarom?** Werk uit:\n(a + b)(a − b) = a·a + a·(−b) + b·a + b·(−b)\n               = a² − ab + ba − b²\n               = a² − b² (de middelste termen heffen elkaar op!)\n\n**Voorbeelden**:\n• (x + 3)(x − 3) = x² − 9\n• (y + 7)(y − 7) = y² − 49\n• (2x + 5)(2x − 5) = 4x² − 25\n\nDeze regel is heel handig — soms kun je 'm omkeerd gebruiken om snel een uitdrukking te factoriseren:\n\n• x² − 16 = (x + 4)(x − 4)\n• x² − 100 = (x + 10)(x − 10)\n\nDat heet **factoriseren met merkwaardige producten**.",
+    explanation: "Een derde merkwaardig product: **plus en min combineren**.\n\n$(a + b)(a - b) = a^2 - b^2$\n\nDit is verrassend simpel — alleen twee termen, geen middelste term.\n\n**Waarom?** Werk uit:\n(a + b)(a − b) = a·a + a·(−b) + b·a + b·(−b)\n               = a² − ab + ba − b²\n               = a² − b² (de middelste termen heffen elkaar op!)\n\n**Voorbeelden**:\n• (x + 3)(x − 3) = x² − 9\n• (y + 7)(y − 7) = y² − 49\n• (2x + 5)(2x − 5) = 4x² − 25\n\nDeze regel is heel handig — soms kun je 'm omkeerd gebruiken om snel een uitdrukking te factoriseren:\n\n• x² − 16 = (x + 4)(x − 4)\n• x² − 100 = (x + 10)(x − 10)\n\nDat heet **factoriseren met merkwaardige producten**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)(a − b) = a² − b²</text>
@@ -396,7 +396,7 @@ const steps = [
   // ─── D. Rekenen met machten ────────────────────────────
   {
     title: "Vermenigvuldigen: x³ · x² = x⁵",
-    explanation: "Bij **vermenigvuldigen** van machten met **dezelfde basis** (zelfde letter): **exponenten optellen**.\n\n**Regel**: xⁿ · xᵐ = x^(n+m)\n\n**Voorbeelden**:\n• x³ · x² = x^(3+2) = **x⁵**\n• x⁴ · x = x⁴ · x¹ = **x⁵**\n• y² · y⁵ = **y⁷**\n• a · a · a = a³\n\n**Waarom?** Bekijk eens:\n• x³ = x·x·x (3 keer x)\n• x² = x·x (2 keer x)\n• x³ · x² = (x·x·x)·(x·x) = x·x·x·x·x = x⁵ (5 keer x totaal)\n\n**Pas op**: dit werkt **alleen** met dezelfde basis. x³ · y² blijft gewoon x³y² — niet samen te voegen.",
+    explanation: "Bij **vermenigvuldigen** van machten met **dezelfde basis** (zelfde letter): **exponenten optellen**.\n\n**Regel**: $x^n \\cdot x^m = x^{n+m}$\n\n**Voorbeelden**:\n• x³ · x² = x^(3+2) = **x⁵**\n• x⁴ · x = x⁴ · x¹ = **x⁵**\n• y² · y⁵ = **y⁷**\n• a · a · a = a³\n\n**Waarom?** Bekijk eens:\n• x³ = x·x·x (3 keer x)\n• x² = x·x (2 keer x)\n• x³ · x² = (x·x·x)·(x·x) = x·x·x·x·x = x⁵ (5 keer x totaal)\n\n**Pas op**: dit werkt **alleen** met dezelfde basis. x³ · y² blijft gewoon x³y² — niet samen te voegen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ · xᵐ = x^(n+m)</text>
@@ -432,7 +432,7 @@ const steps = [
   },
   {
     title: "Delen: x⁵ / x² = x³",
-    explanation: "Bij **delen** van machten met **dezelfde basis**: **exponenten aftrekken**.\n\n**Regel**: xⁿ / xᵐ = x^(n−m)\n\n**Voorbeelden**:\n• x⁵ / x² = x^(5−2) = **x³**\n• y⁷ / y³ = **y⁴**\n• a⁶ / a = a⁶ / a¹ = **a⁵**\n\n**Waarom?** \n• x⁵ / x² = (x·x·x·x·x) / (x·x) = x·x·x = x³ (twee x'en wegstrepen tegen die in de noemer)\n\n**Bijzondere gevallen**:\n• x⁴ / x⁴ = x⁰ = **1** (alles delen door zichzelf is 1)\n• x³ / x⁵ = x^(3−5) = x⁻² = **1/x²** (komt later in andere hoofdstukken)\n\nVoor nu: gewoon de exponent in de teller min de exponent in de noemer.",
+    explanation: "Bij **delen** van machten met **dezelfde basis**: **exponenten aftrekken**.\n\n**Regel**: $x^n / x^m = x^{n-m}$\n\n**Voorbeelden**:\n• x⁵ / x² = x^(5−2) = **x³**\n• y⁷ / y³ = **y⁴**\n• a⁶ / a = a⁶ / a¹ = **a⁵**\n\n**Waarom?** \n• x⁵ / x² = (x·x·x·x·x) / (x·x) = x·x·x = x³ (twee x'en wegstrepen tegen die in de noemer)\n\n**Bijzondere gevallen**:\n• x⁴ / x⁴ = x⁰ = **1** (alles delen door zichzelf is 1)\n• x³ / x⁵ = x^(3−5) = x⁻² = **1/x²** (komt later in andere hoofdstukken)\n\nVoor nu: gewoon de exponent in de teller min de exponent in de noemer.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ / xᵐ = x^(n−m)</text>
@@ -467,7 +467,7 @@ const steps = [
   },
   {
     title: "Macht van een macht: (x²)³ = x⁶",
-    explanation: "Wat als je een macht **nogmaals** kwadrateert (of tot een andere macht verheft)? Dan **vermenigvuldig** je de exponenten:\n\n**Regel**: (xⁿ)ᵐ = x^(n·m)\n\n**Voorbeelden**:\n• (x²)³ = x^(2·3) = **x⁶**\n• (y³)⁴ = y¹²\n• (a⁵)² = a¹⁰\n\n**Waarom?**\n(x²)³ = x² · x² · x² (drie keer x² met elkaar vermenigvuldigen)\n      = x^(2+2+2) = x⁶\n\n**Samenvatting van de drie regels**:\n• xⁿ · xᵐ = x^(n+m) — vermenigvuldigen → optellen\n• xⁿ / xᵐ = x^(n−m) — delen → aftrekken\n• (xⁿ)ᵐ = x^(n·m) — macht van macht → vermenigvuldigen\n\n**Pas op**: deze regels werken alleen met dezelfde basis. Voor verschillende bases (x³ en y²) gelden ze niet.",
+    explanation: "Wat als je een macht **nogmaals** kwadrateert (of tot een andere macht verheft)? Dan **vermenigvuldig** je de exponenten:\n\n**Regel**: $(x^n)^m = x^{n \\cdot m}$\n\n**Voorbeelden**:\n• (x²)³ = x^(2·3) = **x⁶**\n• (y³)⁴ = y¹²\n• (a⁵)² = a¹⁰\n\n**Waarom?**\n(x²)³ = x² · x² · x² (drie keer x² met elkaar vermenigvuldigen)\n      = x^(2+2+2) = x⁶\n\n**Samenvatting van de drie regels**:\n• xⁿ · xᵐ = x^(n+m) — vermenigvuldigen → optellen\n• xⁿ / xᵐ = x^(n−m) — delen → aftrekken\n• (xⁿ)ᵐ = x^(n·m) — macht van macht → vermenigvuldigen\n\n**Pas op**: deze regels werken alleen met dezelfde basis. Voor verschillende bases (x³ en y²) gelden ze niet.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(xⁿ)ᵐ = x^(n·m)</text>

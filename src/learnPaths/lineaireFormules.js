@@ -142,7 +142,7 @@ ${baseAxes}
   // ─── B. y = ax + b ────────────────────────────
   {
     title: "De algemene vorm: y = ax + b",
-    explanation: "Elke lineaire formule kun je schrijven in deze **standaardvorm**:\n\n**y = ax + b**\n\nTwee belangrijke getallen:\n• **a** = de **helling** (richtingscoëfficiënt)\n• **b** = het **snijpunt met de y-as** (waar de lijn de y-as kruist)\n\nVoorbeelden:\n• **y = 3x + 2** → a = 3, b = 2\n• **y = -x + 5** → a = -1, b = 5\n• **y = ½x − 4** → a = ½, b = -4\n• **y = 7x** → a = 7, b = 0 (geen los getal)\n• **y = 6** → a = 0, b = 6 (constante, dus horizontale lijn)\n\nKlinkt bekend? De a en b doen iets vergelijkbaars als bij parabolen y = ax² + bx + c, maar nu zonder x².",
+    explanation: "Elke lineaire formule kun je schrijven in deze **standaardvorm**:\n\n$y = ax + b$\n\nTwee belangrijke getallen:\n• **a** = de **helling** (richtingscoëfficiënt)\n• **b** = het **snijpunt met de y-as** (waar de lijn de y-as kruist)\n\nVoorbeelden:\n• **y = 3x + 2** → a = 3, b = 2\n• **y = -x + 5** → a = -1, b = 5\n• **y = ½x − 4** → a = ½, b = -4\n• **y = 7x** → a = 7, b = 0 (geen los getal)\n• **y = 6** → a = 0, b = 6 (constante, dus horizontale lijn)\n\nKlinkt bekend? De a en b doen iets vergelijkbaars als bij parabolen y = ax² + bx + c, maar nu zonder x².",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="46" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">y = ax + b</text>
@@ -296,7 +296,7 @@ ${baseAxes}
   },
   {
     title: "Helling uitrekenen vanuit twee punten",
-    explanation: "Heb je **twee punten** en wil je weten wat de helling is? Gebruik deze formule:\n\n**a = (y₂ − y₁) / (x₂ − x₁)**\n\nIn woorden: het **verschil in y** delen door het **verschil in x**.\n\n**Voorbeeld**: punten (1, 3) en (4, 9).\n• Verschil in y: 9 − 3 = 6\n• Verschil in x: 4 − 1 = 3\n• Helling a = 6 / 3 = **2**\n\nNog een: punten (0, 5) en (2, 1).\n• Verschil y: 1 − 5 = -4\n• Verschil x: 2 − 0 = 2\n• Helling = -4 / 2 = **-2** (lijn daalt)\n\n**Trucje**: hetzelfde principe als 'hoeveel y stijgt per +1 in x' — alleen nu met twee willekeurige punten.",
+    explanation: "Heb je **twee punten** en wil je weten wat de helling is? Gebruik deze formule:\n\n$a = \\dfrac{y_2 - y_1}{x_2 - x_1}$\n\nIn woorden: het **verschil in y** delen door het **verschil in x**.\n\n**Voorbeeld**: punten (1, 3) en (4, 9).\n• Verschil in y: 9 − 3 = 6\n• Verschil in x: 4 − 1 = 3\n• Helling a = 6 / 3 = **2**\n\nNog een: punten (0, 5) en (2, 1).\n• Verschil y: 1 − 5 = -4\n• Verschil x: 2 − 0 = 2\n• Helling = -4 / 2 = **-2** (lijn daalt)\n\n**Trucje**: hetzelfde principe als 'hoeveel y stijgt per +1 in x' — alleen nu met twee willekeurige punten.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 <line x1="80" y1="155" x2="240" y2="55" stroke="${COLORS.curve}" stroke-width="2.5"/>
@@ -333,7 +333,7 @@ ${baseAxes}
   },
   {
     title: "Formule opstellen — gegeven helling en snijpunt",
-    explanation: "Andersom: heb je **helling a** en **snijpunt b** gegeven? Dan stel je direct de formule op:\n\n**y = ax + b**\n\nVul in.\n\n**Voorbeeld 1**: helling 4, snijpunt y-as op (0, -3).\n• a = 4, b = -3\n• Formule: **y = 4x − 3**\n\n**Voorbeeld 2**: helling -2, gaat door oorsprong.\n• a = -2, b = 0 (oorsprong = (0, 0))\n• Formule: **y = -2x**\n\n**Wat als je twee punten hebt** (geen helling/snijpunt direct)?\n1. Bereken eerst de helling (vorige stap)\n2. Gebruik één van de punten + de helling om b uit te rekenen: y = ax + b → b = y − ax\n\nVoorbeeld: punten (1, 3) en (4, 9).\n• Stap 1: a = (9-3)/(4-1) = 2\n• Stap 2: vul (1, 3) in: 3 = 2·1 + b → b = 1\n• Formule: **y = 2x + 1**",
+    explanation: "Andersom: heb je **helling a** en **snijpunt b** gegeven? Dan stel je direct de formule op:\n\n$y = ax + b$\n\nVul in.\n\n**Voorbeeld 1**: helling 4, snijpunt y-as op (0, -3).\n• a = 4, b = -3\n• Formule: **y = 4x − 3**\n\n**Voorbeeld 2**: helling -2, gaat door oorsprong.\n• a = -2, b = 0 (oorsprong = (0, 0))\n• Formule: **y = -2x**\n\n**Wat als je twee punten hebt** (geen helling/snijpunt direct)?\n1. Bereken eerst de helling (vorige stap)\n2. Gebruik één van de punten + de helling om b uit te rekenen: y = ax + b → b = y − ax\n\nVoorbeeld: punten (1, 3) en (4, 9).\n• Stap 1: a = (9-3)/(4-1) = 2\n• Stap 2: vul (1, 3) in: 3 = 2·1 + b → b = 1\n• Formule: **y = 2x + 1**",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <text x="55" y="42" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">gegeven 2 punten:</text>

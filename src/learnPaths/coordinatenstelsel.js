@@ -377,7 +377,7 @@ const steps = [
   // ─── D. Meerdere punten + lijnen ──────────────────────
   {
     title: "Twee punten verbinden = een lijn",
-    explanation: "Als je **twee punten** hebt, kun je ze verbinden met een **rechte lijn**. Dit is de basis van veel grafieken.\n\n**Voorbeeld**: punten A(1, 2) en B(4, 5).\n• Plaats beide punten in het assenstelsel.\n• Trek met een lineaal een rechte lijn van A naar B.\n• Lijn loopt schuin omhoog (van linksonder naar rechtsboven).\n\n**Wat zegt een lijn?**\n• **Stijgend** (van linksonder naar rechtsboven) → y wordt groter als x groter wordt. Bijvoorbeeld: hoe meer uren werken, hoe meer geld.\n• **Dalend** (van linksboven naar rechtsonder) → y wordt kleiner als x groter wordt. Bijvoorbeeld: hoe verder van de oven, hoe kouder.\n• **Horizontaal** → y blijft hetzelfde, ongeacht x.\n• **Verticaal** → x blijft hetzelfde, ongeacht y.\n\n**Belangrijk** voor later: in het volgende leerpad (\"lineaire formules\") leer je hoe je een **formule** opstelt voor zo'n lijn. Bijvoorbeeld y = x + 1, of y = 2x − 3.",
+    explanation: "Als je **twee punten** hebt, kun je ze verbinden met een **rechte lijn**. Dit is de basis van veel grafieken.\n\n**Voorbeeld**: punten A(1, 2) en B(4, 5).\n• Plaats beide punten in het assenstelsel.\n• Trek met een lineaal een rechte lijn van A naar B.\n• Lijn loopt schuin omhoog (van linksonder naar rechtsboven).\n\n**Wat zegt een lijn?**\n• **Stijgend** (van linksonder naar rechtsboven) → y wordt groter als x groter wordt. Bijvoorbeeld: hoe meer uren werken, hoe meer geld.\n• **Dalend** (van linksboven naar rechtsonder) → y wordt kleiner als x groter wordt. Bijvoorbeeld: hoe verder van de oven, hoe kouder.\n• **Horizontaal** → y blijft hetzelfde, ongeacht x.\n• **Verticaal** → x blijft hetzelfde, ongeacht y.\n\n**Belangrijk** voor later: in het volgende leerpad (\"lineaire formules\") leer je hoe je een **formule** opstelt voor zo'n lijn. Bijvoorbeeld $y = x + 1$, of $y = 2x - 3$.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       const ax = toX(1), ay = toY(2);
@@ -434,7 +434,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Collineair = op één lijn", tekst: "Latijn 'co' (samen) + 'lineair' (lijn). Punten zijn collineair als ze allemaal op één rechte lijn liggen. Geen driehoek mogelijk." }],
           woorden: [{ woord: "collineair", uitleg: "Op één lijn liggend. Engels: collinear." }],
-          theorie: "Test op collineariteit: verschillen y/x constant? Voor punten (0,0), (2,4), (4,8): per x-stap +2 wordt y +4. Constant → collineair. Liggen op y=2x.",
+          theorie: "Test op collineariteit: verschillen y/x constant? Voor punten (0,0), (2,4), (4,8): per x-stap +2 wordt y +4. Constant → collineair. Liggen op $y = 2x$.",
           voorbeelden: [{ type: "andere termen", tekst: "Concentrisch = zelfde middelpunt (cirkels). Parallel = lijnen die elkaar nooit kruisen. Diagonaal = dwarslijn." }],
           basiskennis: [{ onderwerp: "Toepassing", uitleg: "Bij rechte-lijn-formules (y=ax+b): alle (x,y) op die lijn zijn collineair. Basis lineaire algebra." }],
           niveaus: { basis: "Collineair.", simpeler: "3 punten op één lijn = collineair.", nogSimpeler: "Collineair" },
@@ -444,7 +444,7 @@ const steps = [
   },
   {
     title: "Patronen herkennen — punten op één lijn",
-    explanation: "Soms krijg je een **rij punten** en moet je herkennen of ze op één rechte lijn liggen — of dat er een ander patroon is.\n\n**Voorbeeld 1**: (1, 2), (2, 4), (3, 6), (4, 8)\n• Plot ze: ze liggen op een rechte lijn die schuin omhoog gaat.\n• Patroon: y = 2x. Voor elke x is y twee keer zo groot.\n\n**Voorbeeld 2**: (-1, 1), (0, 0), (1, 1), (2, 4), (3, 9)\n• Plot ze: ze liggen op een **kromme lijn** (een parabool!).\n• Patroon: y = x².\n\n**Truc om te herkennen of punten op een rechte lijn liggen**:\n• Verschillen in y per stap in x **moeten constant zijn**.\n• Voorbeeld 1: bij x=1→2, y gaat 2→4 (verschil 2). Bij x=2→3, y gaat 4→6 (verschil 2). → constant → rechte lijn ✓\n• Voorbeeld 2: bij x=0→1, y gaat 0→1 (verschil 1). Bij x=1→2, y gaat 1→4 (verschil 3). → niet constant → kromme lijn (parabool).\n\n**Belangrijk**: deze patroon-analyse is de basis voor **lineaire formules** (= rechte lijnen, volgend leerpad) en **parabolen** (= U-vormen, leerpad daarna).",
+    explanation: "Soms krijg je een **rij punten** en moet je herkennen of ze op één rechte lijn liggen — of dat er een ander patroon is.\n\n**Voorbeeld 1**: (1, 2), (2, 4), (3, 6), (4, 8)\n• Plot ze: ze liggen op een rechte lijn die schuin omhoog gaat.\n• Patroon: $y = 2x$. Voor elke x is y twee keer zo groot.\n\n**Voorbeeld 2**: (-1, 1), (0, 0), (1, 1), (2, 4), (3, 9)\n• Plot ze: ze liggen op een **kromme lijn** (een parabool!).\n• Patroon: $y = x^2$.\n\n**Truc om te herkennen of punten op een rechte lijn liggen**:\n• Verschillen in y per stap in x **moeten constant zijn**.\n• Voorbeeld 1: bij x=1→2, y gaat 2→4 (verschil 2). Bij x=2→3, y gaat 4→6 (verschil 2). → constant → rechte lijn ✓\n• Voorbeeld 2: bij x=0→1, y gaat 0→1 (verschil 1). Bij x=1→2, y gaat 1→4 (verschil 3). → niet constant → kromme lijn (parabool).\n\n**Belangrijk**: deze patroon-analyse is de basis voor **lineaire formules** (= rechte lijnen, volgend leerpad) en **parabolen** (= U-vormen, leerpad daarna).",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes(-2, 5, -1, 10);
       const pts = [[1, 2], [2, 4], [3, 6], [4, 8]];
@@ -581,7 +581,7 @@ const steps = [
             { titel: "Rechte lijn", tekst: "Constant verschil → rechte lijn. Formule: y = 2x." },
           ],
           woorden: [{ woord: "rechte lijn", uitleg: "Punten waarvoor y-verschil constant is per x-stap." }],
-          theorie: "Test eindopdracht: kijk constant. Hier elke 2 x-stappen: y +4. Dus per 1 x-stap: y +2 → helling 2. Lijn y=2x.",
+          theorie: "Test eindopdracht: kijk constant. Hier elke 2 x-stappen: y +4. Dus per 1 x-stap: y +2 → helling 2. Lijn $y = 2x$.",
           voorbeelden: [{ type: "andere lijn", tekst: "(0,0), (1,2), (2,4): y stijgt +2 per +1 x. Constant → rechte lijn y=2x. Zelfde lijn als deze opgave!" }],
           basiskennis: [{ onderwerp: "Collineair", uitleg: "Drie punten op rechte lijn = collineair. Geen driehoek." }],
           niveaus: { basis: "Ja, constant.", simpeler: "Y-verschillen constant (+4) → rechte lijn.", nogSimpeler: "Ja" },
