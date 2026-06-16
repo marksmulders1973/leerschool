@@ -5,18 +5,36 @@
 
 import { GeoKaart, makeGeoCheck } from "../components/learn/geo/GeoTopo.jsx";
 import { WERELD_VIEWBOX, WERELDDELEN } from "../components/learn/geo/wereldData.js";
+import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
 
 const WERELD = { viewBox: WERELD_VIEWBOX, regios: WERELDDELEN };
 const OverzichtWereld = () => <GeoKaart data={WERELD} showLabels labelFontSize={22} maxHeight={360} />;
 const check = (type, doel) => makeGeoCheck({ data: WERELD, type, doel, naam: "werelddeel", labelFontSize: 20, maxHeight: 340 });
 
 const chapters = [
-  { letter: "A", title: "De werelddelen", emoji: "🌍", from: 0, to: 1 },
-  { letter: "B", title: "Groot & ver", emoji: "🧭", from: 2, to: 3 },
-  { letter: "C", title: "Het zuiden", emoji: "🦘", from: 4, to: 4 },
+  { letter: "A", title: "De werelddelen", emoji: "🌍", from: 0, to: 2 },
+  { letter: "B", title: "Groot & ver", emoji: "🧭", from: 3, to: 4 },
+  { letter: "C", title: "Het zuiden", emoji: "🦘", from: 5, to: 5 },
 ];
 
 const steps = [
+  {
+    title: "Draai de wereldbol 🌍",
+    explanation:
+      "Dit is de échte **aarde** als een draaiende **wereldbol**! Sleep met je muis of veeg met je vinger om hem rond te draaien.\n\n" +
+      "Tik daarna op een **werelddeel** — een groot stuk land — en raad welk het is. De zeven werelddelen zijn: **Afrika**, **Europa**, **Azië**, **Noord-Amerika**, **Zuid-Amerika**, **Oceanië** en **Antarctica** (helemaal onderaan, bij de zuidpool).",
+    interactiveComponent: Wereldbol,
+    checks: [
+      {
+        q: "Hoeveel werelddelen (continenten) heeft de aarde?",
+        options: ["7", "5", "3", "10"],
+        answer: 0,
+        wrongHints: [null, "Bijna — tel Antarctica ook mee.", "Het zijn er meer.", "Zoveel zijn het er niet."],
+        uitlegPad: { stappen: [{ titel: "7 werelddelen", tekst: "Afrika, Europa, Azië, Noord-Amerika, Zuid-Amerika, Oceanië en Antarctica = samen 7." }],
+          niveaus: { basis: "De aarde heeft 7 werelddelen.", simpeler: "Tel ze: Afrika, Europa, Azië, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica.", nogSimpeler: "Zeven." } },
+      },
+    ],
+  },
   {
     title: "De aarde heeft werelddelen",
     explanation:
