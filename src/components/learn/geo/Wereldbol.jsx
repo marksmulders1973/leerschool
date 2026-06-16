@@ -167,7 +167,8 @@ export default function Wereldbol({ onAnswer }) {
 
         globe = new THREE.Mesh(
           new THREE.SphereGeometry(1, 64, 48),
-          new THREE.MeshPhongMaterial({ map: tex, shininess: 6 })
+          // Egaal-helder (geen schaduwzijde) — werelddelen overal goed zichtbaar.
+          new THREE.MeshBasicMaterial({ map: tex })
         );
         globe.rotation.y = -2.1; // start met Afrika/Europa naar voren
         scene.add(globe);
