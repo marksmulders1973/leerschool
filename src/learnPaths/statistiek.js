@@ -128,7 +128,7 @@ const steps = [
   },
   {
     title: "Het gemiddelde",
-    explanation: "Het **gemiddelde** (ook 'rekenkundig gemiddelde') is misschien de meest gebruikte statistiek.\n\n**Formule**:\n\n**gemiddelde = som van alle waarden ÷ aantal waarden**\n\n**Voorbeeld**: cijfers 6, 7, 8, 5, 9.\n• Som: 6 + 7 + 8 + 5 + 9 = 35\n• Aantal: 5\n• Gemiddelde: 35 ÷ 5 = **7**\n\n**Voorbeeld 2**: schoenmaten 38, 40, 38, 42, 39, 38, 41, 40, 39, 38.\n• Som: 38+40+38+42+39+38+41+40+39+38 = 393\n• Aantal: 10\n• Gemiddelde: 393 ÷ 10 = **39,3**\n\nHet gemiddelde geeft een 'middelste waarde' van alle data. Maar pas op: bij **uitschieters** kan het gemiddelde misleidend zijn (zie volgende stappen).",
+    explanation: "Het **gemiddelde** (ook 'rekenkundig gemiddelde') is misschien de meest gebruikte statistiek.\n\n**Formule**:\n\n$\\bar{x} = \\dfrac{\\text{som van alle waarden}}{\\text{aantal waarden}}$\n\n**Voorbeeld**: cijfers 6, 7, 8, 5, 9.\n• Som: 6 + 7 + 8 + 5 + 9 = 35\n• Aantal: 5\n• Gemiddelde: 35 ÷ 5 = **7**\n\n**Voorbeeld 2**: schoenmaten 38, 40, 38, 42, 39, 38, 41, 40, 39, 38.\n• Som: 38+40+38+42+39+38+41+40+39+38 = 393\n• Aantal: 10\n• Gemiddelde: 393 ÷ 10 = **39,3**\n\nHet gemiddelde geeft een 'middelste waarde' van alle data. Maar pas op: bij **uitschieters** kan het gemiddelde misleidend zijn (zie volgende stappen).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">gem = som ÷ aantal</text>
@@ -150,7 +150,7 @@ const steps = [
             { titel: "Delen door aantal", tekst: "Aantal = 4. Gemiddelde = 28 ÷ 4 = 7." },
           ],
           woorden: [{ woord: "gemiddelde", uitleg: "Som ÷ aantal. Standaard centrummaat." }],
-          theorie: "Formule: gemiddelde = (a₁ + a₂ + ... + aₙ) ÷ n. Eerst alles optellen, dan delen door aantal. Niet andersom.",
+          theorie: "Formule: $\\bar{x} = \\dfrac{a_1 + a_2 + \\cdots + a_n}{n}$. Eerst alles optellen, dan delen door aantal. Niet andersom.",
           voorbeelden: [{ type: "check", tekst: "Klopt dat 7 'in midden' van 4-10 ligt? Ja: tussen kleinste (4) en grootste (10), netjes in midden." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen kiezen 28 (de som). Maar dat is geen gemiddelde — moet nog gedeeld worden." }],
           niveaus: { basis: "7 (28÷4).", simpeler: "Som 28 ÷ 4 getallen = 7 gemiddeld.", nogSimpeler: "7" },
@@ -264,7 +264,7 @@ const steps = [
   },
   {
     title: "Het bereik",
-    explanation: "Het **bereik** zegt hoe **uitgespreid** de data is.\n\n**Formule**: bereik = grootste − kleinste\n\n**Voorbeelden**:\n• 5, 7, 10, 4, 12 → bereik = 12 − 4 = **8**\n• 100, 102, 105, 110 → bereik = 110 − 100 = **10**\n• 1, 100 → bereik = **99** (grote spreiding!)\n• 50, 50, 50 → bereik = **0** (geen spreiding)\n\nEen **klein bereik** betekent: de getallen liggen dicht bij elkaar.\nEen **groot bereik** betekent: ze liggen ver uiteen.\n\n**Toepassing**: bij twee toetsen met **gelijk gemiddelde** kan het bereik enorm verschillen — sommige klassen zijn 'eerlijker' (klein bereik), andere zijn meer ongelijk (groot bereik).",
+    explanation: "Het **bereik** zegt hoe **uitgespreid** de data is.\n\n**Formule**: $\\text{bereik} = \\text{grootste} - \\text{kleinste}$\n\n**Voorbeelden**:\n• 5, 7, 10, 4, 12 → bereik = 12 − 4 = **8**\n• 100, 102, 105, 110 → bereik = 110 − 100 = **10**\n• 1, 100 → bereik = **99** (grote spreiding!)\n• 50, 50, 50 → bereik = **0** (geen spreiding)\n\nEen **klein bereik** betekent: de getallen liggen dicht bij elkaar.\nEen **groot bereik** betekent: ze liggen ver uiteen.\n\n**Toepassing**: bij twee toetsen met **gelijk gemiddelde** kan het bereik enorm verschillen — sommige klassen zijn 'eerlijker' (klein bereik), andere zijn meer ongelijk (groot bereik).",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
 <circle cx="60" cy="100" r="6" fill="${COLORS.point}"/>
@@ -293,7 +293,7 @@ const steps = [
             { titel: "Bereik = aftrekken", tekst: "Bereik = 30 - 8 = 22." },
           ],
           woorden: [{ woord: "bereik", uitleg: "Spreidingsmaat. Verschil tussen max en min. Engels: range." }],
-          theorie: "Formule: bereik = max - min. Klein bereik = data dicht bij elkaar. Groot bereik = wijd verspreid. Voorbeeld: 50,50,50 = bereik 0 (geen spreiding).",
+          theorie: "Formule: $\\text{bereik} = \\text{max} - \\text{min}$. Klein bereik = data dicht bij elkaar. Groot bereik = wijd verspreid. Voorbeeld: 50,50,50 = bereik 0 (geen spreiding).",
           voorbeelden: [{ type: "interpretatie", tekst: "Bereik 22 op data 8-30 is fors (gebied 22 wijd in plek 22 breed). Veel variatie tussen min en max." }],
           basiskennis: [{ onderwerp: "Niet enkel waarden", uitleg: "8 en 30 zijn min/max, NIET het bereik zelf. Bereik = verschil tussen die twee." }],
           niveaus: { basis: "22 (30-8).", simpeler: "Bereik = 30 - 8 = 22.", nogSimpeler: "22" },

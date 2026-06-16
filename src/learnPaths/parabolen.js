@@ -1051,7 +1051,7 @@ ${gridSvg}
   },
   {
     title: 'Een nieuwe term: de "b"',
-    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n**y = ax² + bx + c**\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = x² + 5 → a = 1, b = 0 (geen x-term), c = 5\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar **links of rechts** schuift. Kijk naar het plaatje: drie parabolen, allemaal a = 1, maar met verschillende b. De top verspringt horizontaal.",
+    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n$y = ax^2 + bx + c$\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = x² + 5 → a = 1, b = 0 (geen x-term), c = 5\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar **links of rechts** schuift. Kijk naar het plaatje: drie parabolen, allemaal a = 1, maar met verschillende b. De top verspringt horizontaal.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -1114,7 +1114,7 @@ ${gridSvg}
   },
   {
     title: "De topformule x_top = -b/(2a)",
-    explanation: "Om de **x-coördinaat van de top** te vinden bij y = ax² + bx + c, gebruik je deze formule:\n\n**x_top = −b / (2·a)**\n\nIn woorden: tegengesteld teken van b, gedeeld door 2 maal a.\n\nVoorbeeld 1: **y = x² + 4x**\n• a = 1, b = 4\n• x_top = −4 / (2·1) = **−2**\n• Vul x = −2 in: y = (−2)² + 4·(−2) = 4 − 8 = **−4**\n• Top = **(−2, −4)**\n\nVoorbeeld 2: **y = 2x² − 8x + 3**\n• a = 2, b = −8\n• x_top = −(−8) / (2·2) = 8 / 4 = **2**\n• Vul x = 2 in: y = 2·(2²) − 8·2 + 3 = 8 − 16 + 3 = **−5**\n• Top = **(2, −5)**\n\nLet op die dubbele min in voorbeeld 2: −(−8) wordt **+8**.",
+    explanation: "Om de **x-coördinaat van de top** te vinden bij y = ax² + bx + c, gebruik je deze formule:\n\n$x_{top} = \\dfrac{-b}{2a}$\n\nIn woorden: tegengesteld teken van b, gedeeld door 2 maal a.\n\nVoorbeeld 1: **y = x² + 4x**\n• a = 1, b = 4\n• x_top = −4 / (2·1) = **−2**\n• Vul x = −2 in: y = (−2)² + 4·(−2) = 4 − 8 = **−4**\n• Top = **(−2, −4)**\n\nVoorbeeld 2: **y = 2x² − 8x + 3**\n• a = 2, b = −8\n• x_top = −(−8) / (2·2) = 8 / 4 = **2**\n• Vul x = 2 in: y = 2·(2²) − 8·2 + 3 = 8 − 16 + 3 = **−5**\n• Top = **(2, −5)**\n\nLet op die dubbele min in voorbeeld 2: −(−8) wordt **+8**.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">y = 2x² − 8x + 3</text>
 <text x="150" y="40" text-anchor="middle" fill="${COLORS.muted || '#8899aa'}" font-size="11" font-family="Arial">a = 2,  b = −8,  c = 3</text>

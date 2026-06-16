@@ -190,7 +190,7 @@ const steps = [
   // ─── B. De stelling ────────────────────────────
   {
     title: "De stelling van Pythagoras",
-    explanation: "De **stelling van Pythagoras** zegt iets bijzonders over rechthoekige driehoeken:\n\n**a² + b² = c²**\n\nIn woorden: de **twee rechthoekszijden in het kwadraat opgeteld** geven hetzelfde als **de schuine zijde in het kwadraat**.\n\nVoorbeeld: een driehoek met a = 3, b = 4. Wat is c?\n• a² + b² = c²\n• 3² + 4² = c²\n• 9 + 16 = c²\n• 25 = c²\n• c = √25 = **5**\n\nDus c = 5. Dit heet de '3-4-5'-driehoek — bekend voorbeeld.\n\nDe stelling is ruim 2500 jaar oud en vernoemd naar de Griekse wiskundige Pythagoras. Hij werkt **alleen** bij rechthoekige driehoeken.",
+    explanation: "De **stelling van Pythagoras** zegt iets bijzonders over rechthoekige driehoeken:\n\n$a^2 + b^2 = c^2$\n\nIn woorden: de **twee rechthoekszijden in het kwadraat opgeteld** geven hetzelfde als **de schuine zijde in het kwadraat**.\n\nVoorbeeld: een driehoek met a = 3, b = 4. Wat is c?\n• a² + b² = c²\n• 3² + 4² = c²\n• 9 + 16 = c²\n• 25 = c²\n• c = √25 = **5**\n\nDus c = 5. Dit heet de '3-4-5'-driehoek — bekend voorbeeld.\n\nDe stelling is ruim 2500 jaar oud en vernoemd naar de Griekse wiskundige Pythagoras. Hij werkt **alleen** bij rechthoekige driehoeken.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="80,160 200,160 80,70" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <rect x="80" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="2"/>
@@ -249,7 +249,7 @@ const steps = [
   },
   {
     title: "Wanneer gebruik je Pythagoras?",
-    explanation: "Pythagoras is je gereedschap als:\n\n1. Je hebt een **rechthoekige** driehoek (eerst checken: zit er een rechte hoek?)\n2. Je weet **2 van de 3 zijden**\n3. Je wilt de **derde zijde** vinden\n\nAls deze drie kloppen, kun je Pythagoras toepassen: **a² + b² = c²**.\n\nDrie scenarios:\n\n• **Beide rechthoekszijden bekend, schuine zijde zoeken**: vul a en b in, los c op.\n• **Schuine zijde + één rechthoekszijde bekend, andere rechthoekszijde zoeken**: omschrijven en oplossen.\n• **Geen rechte hoek**: Pythagoras werkt **niet**, gebruik andere methodes (later).\n\n**Tip bij het opschrijven**: zet altijd eerst de stelling neer (a² + b² = c²), vul daarna de getallen in. Voorkomt fouten.",
+    explanation: "Pythagoras is je gereedschap als:\n\n1. Je hebt een **rechthoekige** driehoek (eerst checken: zit er een rechte hoek?)\n2. Je weet **2 van de 3 zijden**\n3. Je wilt de **derde zijde** vinden\n\nAls deze drie kloppen, kun je Pythagoras toepassen: $a^2 + b^2 = c^2$.\n\nDrie scenarios:\n\n• **Beide rechthoekszijden bekend, schuine zijde zoeken**: vul a en b in, los c op.\n• **Schuine zijde + één rechthoekszijde bekend, andere rechthoekszijde zoeken**: omschrijven en oplossen.\n• **Geen rechte hoek**: Pythagoras werkt **niet**, gebruik andere methodes (later).\n\n**Tip bij het opschrijven**: zet altijd eerst de stelling neer (a² + b² = c²), vul daarna de getallen in. Voorkomt fouten.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">stappenplan</text>
 <rect x="40" y="42" width="220" height="2" fill="${COLORS.curve}" opacity="0.4"/>
@@ -283,7 +283,7 @@ const steps = [
   // ─── C. Schuine zijde berekenen ────────────────────────────
   {
     title: "Voorbeeld: a = 5, b = 12",
-    explanation: "**Vraag**: een rechthoekige driehoek heeft rechthoekszijden a = 5 en b = 12. Hoe lang is de schuine zijde c?\n\n**Stappen**:\n\n1. Schrijf op: **a² + b² = c²**\n2. Vul in: 5² + 12² = c²\n3. Reken kwadraten: 25 + 144 = c²\n4. Tel op: 169 = c²\n5. Wortel: c = √169 = **13**\n\nDus de schuine zijde is **13**.\n\n**Check**: 13 is groter dan 12 ✓ (schuine is langste).\n\nDeze driehoek (5-12-13) is ook een 'mooie' rechthoekige driehoek — alle zijden zijn gehele getallen. Net als 3-4-5 bestaan er meer van dit soort: 6-8-10, 8-15-17, 7-24-25.",
+    explanation: "**Vraag**: een rechthoekige driehoek heeft rechthoekszijden a = 5 en b = 12. Hoe lang is de schuine zijde c?\n\n**Stappen**:\n\n1. Schrijf op: $a^2 + b^2 = c^2$\n2. Vul in: 5² + 12² = c²\n3. Reken kwadraten: 25 + 144 = c²\n4. Tel op: 169 = c²\n5. Wortel: c = √169 = **13**\n\nDus de schuine zijde is **13**.\n\n**Check**: 13 is groter dan 12 ✓ (schuine is langste).\n\nDeze driehoek (5-12-13) is ook een 'mooie' rechthoekige driehoek — alle zijden zijn gehele getallen. Net als 3-4-5 bestaan er meer van dit soort: 6-8-10, 8-15-17, 7-24-25.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="2"/>
@@ -382,7 +382,7 @@ const steps = [
   // ─── D. Rechthoekszijde berekenen ────────────────────────────
   {
     title: "Andersom: rechthoekszijde zoeken",
-    explanation: "Soms ken je de **schuine zijde** en **één rechthoekszijde**, en moet je de andere rechthoekszijde vinden.\n\nDe stelling blijft hetzelfde:  **a² + b² = c²**\n\nMaar nu schrijf je 'm anders om. Stel je weet c en b, en je zoekt a:\n\n**a² = c² − b²**\n\n(verplaats b² naar de andere kant)\n\nDan: **a = √(c² − b²)**\n\nVoorbeeld: c = 13, b = 5. Wat is a?\n• a² = 13² − 5² = 169 − 25 = 144\n• a = √144 = **12**\n\n**Pas op**: bij het omschrijven werkt het alleen omdat c² **groter** is dan b² (de schuine zijde is altijd langer dan een rechthoekszijde). Bij een echte rechthoekige driehoek is c² − b² altijd positief.",
+    explanation: "Soms ken je de **schuine zijde** en **één rechthoekszijde**, en moet je de andere rechthoekszijde vinden.\n\nDe stelling blijft hetzelfde:  $a^2 + b^2 = c^2$\n\nMaar nu schrijf je 'm anders om. Stel je weet c en b, en je zoekt a:\n\n$a^2 = c^2 - b^2$\n\n(verplaats b² naar de andere kant)\n\nDan: $a = \\sqrt{c^2 - b^2}$\n\nVoorbeeld: c = 13, b = 5. Wat is a?\n• a² = 13² − 5² = 169 − 25 = 144\n• a = √144 = **12**\n\n**Pas op**: bij het omschrijven werkt het alleen omdat c² **groter** is dan b² (de schuine zijde is altijd langer dan een rechthoekszijde). Bij een echte rechthoekige driehoek is c² − b² altijd positief.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="2"/>
