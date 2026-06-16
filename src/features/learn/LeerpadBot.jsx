@@ -77,17 +77,22 @@ function logMiss(query) {
   }
 }
 
-export default function LeerpadBot({ paths, onPickPath, subject = null, compact = false }) {
+export default function LeerpadBot({ paths, onPickPath, subject = null, levelFilter = null, compact = false }) {
   const [query, setQuery] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
 
-  // Lijst van paden om te doorzoeken. Filter optioneel op 1 of meer vakken.
+  // Lijst van paden om te doorzoeken. Filter optioneel op 1 of meer vakken,
+  // én op niveau (2026-06-16): een basisschool-kind hoort geen HAVO/VWO-paden
+  // bovenaan te zien, en andersom. levelFilter "po" → alleen groep-paden,
+  // "vo" → alleen klas/havo/vwo/vmbo-paden. Zelfde detectie als de vakken-grid.
   const candidates = useMemo(() => {
-    const all = Object.values(paths || {}).filter(Boolean);
+    let all = Object.values(paths || {}).filter(Boolean);
+    if (levelFilter === "po") all = all.filter((p) => /^(groep|po)/i.test(String(p.level || "")));
+    else if (levelFilter === "vo") all = all.filter((p) => /^(klas|havo|vwo|vmbo)/i.test(String(p.level || "")));
     if (!subject) return all;
     const allowed = Array.isArray(subject) ? subject : [subject];
     return all.filter((p) => allowed.includes(p.subject));
-  }, [paths, subject]);
+  }, [paths, subject, levelFilter]);
 
   // Top-3 matches berekenen.
   const results = useMemo(() => {

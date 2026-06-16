@@ -492,6 +492,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           <LeerpadBot
             paths={ALL_PATHS_BY_ID}
             subject={null}
+            levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
             onPickPath={(path) => onPickPath(path.id)}
           />
 
@@ -989,6 +990,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
         <LeerpadBot
           paths={ALL_PATHS_BY_ID}
           subject={effectiveFilter}
+          levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
           onPickPath={(path) => onPickPath(path.id)}
         />
 
