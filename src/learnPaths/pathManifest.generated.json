@@ -1497,7 +1497,7 @@
     ],
     "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
     "stepCount": 4,
-    "checkCount": 217,
+    "checkCount": 216,
     "chapterCount": 4,
     "estimatedMinutes": 90
   },
@@ -6267,6 +6267,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "rechtsvormen-overzicht",
+    "file": "./rechtsvormenOverzicht.js",
+    "title": "Rechtsvormen: eenmanszaak, VOF, BV & NV",
+    "subject": "economie",
+    "level": "vmbo-gt-4",
+    "emoji": "⚖️",
+    "referentieNiveau": "VMBO-GT / havo-vwo onderbouw economie",
+    "sloThema": "Economie - rechtsvormen: eenmanszaak, VOF, BV, NV",
+    "triggerKeywords": [
+      "rechtsvorm",
+      "rechtsvormen",
+      "eenmanszaak",
+      "vof",
+      "v.o.f.",
+      "vennootschap onder firma",
+      "nv",
+      "n.v.",
+      "bv",
+      "b.v.",
+      "naamloze vennootschap",
+      "besloten vennootschap"
+    ],
+    "intro": "Wat is het verschil tussen een eenmanszaak, een VOF, een BV en een NV? In een kwartier leer je wie aansprakelijk is, welke belasting elke vorm betaalt, hoe je opricht en wanneer je welke kiest. Met vo",
+    "stepCount": 5,
+    "checkCount": 15,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "recyclen-afval-po",
     "file": "./recyclenAfvalPo.js",
     "title": "Recyclen + afval + duurzaam (Cito groep 6-8)",
@@ -7389,8 +7418,8 @@
     "sloThema": "aardrijkskunde-topografie-wereld",
     "triggerKeywords": [],
     "intro": "",
-    "stepCount": 5,
-    "checkCount": 5,
+    "stepCount": 6,
+    "checkCount": 6,
     "chapterCount": 3,
     "estimatedMinutes": 5
   },
