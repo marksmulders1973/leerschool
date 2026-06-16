@@ -5,6 +5,7 @@ import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { TEXTBOOKS } from "../../data/textbooks.js";
 import LeerpadBot from "./LeerpadBot.jsx";
+import { subjectsForQuery } from "./subjectSynonyms.js";
 
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
 // import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
@@ -147,49 +148,9 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
-// Synoniemen-laag (Mark 2026-06-14): gebruikers typen lekentaal ("nederlands",
-// "rekenen", "topografie") terwijl de paden interne vak-namen hebben ("taal",
-// "wiskunde", "aardrijkskunde"). Deze map koppelt zoekwoorden aan vak-keys zodat
-// een zoekterm óók paden van dat vak vindt, ook als het woord niet letterlijk in
-// titel/trefwoorden staat. Geen dev-jargon-eis: ouders hoeven onze keys niet te kennen.
-const SUBJECT_SYNONYMS = [
-  { terms: ["nederlands", "taal", "spelling", "grammatica", "werkwoord", "werkwoorden", "ontleden", "woordsoorten", "woordenschat", "begrijpend", "lezen", "leesvaardigheid", "schrijven", "tekstverband", "samenvatten"], subjects: ["taal", "nederlands", "begrijpend-lezen"] },
-  { terms: ["rekenen", "wiskunde", "reken", "getallen", "breuken", "procenten", "verhoudingen", "meten", "meetkunde", "tafels", "sommen", "kommagetallen", "oppervlakte", "pythagoras"], subjects: ["rekenen", "wiskunde"] },
-  { terms: ["engels", "english"], subjects: ["engels"] },
-  { terms: ["duits", "deutsch"], subjects: ["duits"] },
-  { terms: ["frans", "francais", "français"], subjects: ["frans"] },
-  { terms: ["aardrijkskunde", "topografie", "topo", "kaart", "kaartlezen", "provincies", "landen", "klimaat"], subjects: ["aardrijkskunde"] },
-  { terms: ["geschiedenis", "historie", "tijdvak", "tijdvakken", "oorlog"], subjects: ["geschiedenis"] },
-  { terms: ["biologie", "planten", "dieren", "lichaam", "organen"], subjects: ["biologie", "natuur"] },
-  { terms: ["natuur", "natuuronderwijs"], subjects: ["natuur", "biologie"] },
-  { terms: ["natuurkunde", "nask", "krachten", "elektriciteit", "energie"], subjects: ["natuurkunde"] },
-  { terms: ["scheikunde", "chemie", "stoffen"], subjects: ["scheikunde"] },
-  { terms: ["economie", "geld", "sparen", "lenen", "economisch"], subjects: ["economie"] },
-  { terms: ["maatschappijleer", "maatschappij", "burgerschap", "politiek"], subjects: ["maatschappijleer", "wereldorientatie"] },
-  { terms: ["informatica", "programmeren", "computer"], subjects: ["informatica"] },
-  { terms: ["kunst", "tekenen", "muziek", "beeldend"], subjects: ["kunst"] },
-  { terms: ["studievaardigheden", "studievaardigheid", "grafiek", "grafieken", "tabel", "tabellen"], subjects: ["studievaardigheden"] },
-  { terms: ["verkeer", "verkeersexamen", "vvn", "voorrang", "fiets", "verkeersbord", "verkeersborden"], subjects: ["verkeer", "wereldorientatie"] },
-  { terms: ["wereldorientatie", "wereldoriëntatie", "wereld"], subjects: ["wereldorientatie", "aardrijkskunde", "geschiedenis", "natuur", "biologie"] },
-];
-
-// Geeft de set vak-keys terug die bij een zoekterm horen (of null als niets matcht).
-// Match: heel woord in de query, of de term begint met de query (partieel typen:
-// "neder" → "nederlands"), of de query begint met de term ("nederlandse" → "nederlands").
-function subjectsForQuery(qRaw) {
-  if (!qRaw || qRaw.length < 2) return null;
-  const qWords = qRaw.split(/\s+/).filter(Boolean);
-  const out = new Set();
-  for (const g of SUBJECT_SYNONYMS) {
-    const hit = g.terms.some((t) =>
-      qWords.includes(t) ||
-      (qRaw.length >= 3 && t.startsWith(qRaw)) ||
-      (qRaw.length >= 4 && qRaw.startsWith(t))
-    );
-    if (hit) g.subjects.forEach((s) => out.add(s));
-  }
-  return out.size ? out : null;
-}
+// Synoniemen-laag staat nu in de gedeelde module ./subjectSynonyms.js
+// (subjectsForQuery), zodat de vakken-grid-zoekbalk én de "Wat wil je
+// leren?"-zoekbalk (LeerpadBot) identiek reageren op vak-namen.
 
 export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null }) {
   const player = (userName || "Speler").trim() || "Speler";

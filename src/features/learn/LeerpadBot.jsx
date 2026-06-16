@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
+import { subjectsForQuery } from "./subjectSynonyms.js";
 
 // Leerpad-zoeker / "bot" — Mark idee 2026-05-09.
 // Olivia (10jr+) typt iets in zoals "rood staan" of "BTW berekenen", en de
@@ -92,8 +93,18 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, compact 
   const results = useMemo(() => {
     const q = query.trim();
     if (q.length < 2) return [];
+    // Subject-boost (2026-06-16): typt iemand een vak-naam ("aardrijkskunde",
+    // "topografie", "rekenen"), dan horen de paden van dát vak boven te komen —
+    // ook al staat het woord niet in hun triggerKeywords/titel. Zonder deze laag
+    // gaf "aardrijkskunde" keyword-ruis (logaritmen/optica) ipv de AK-paden.
+    // Zelfde synoniemen-bron als de vakken-grid-zoekbalk (LearnPathsHub).
+    const subjectSet = subjectsForQuery(q.toLowerCase());
     const scored = candidates
-      .map((p) => ({ path: p, score: scorePath(q, p) }))
+      .map((p) => {
+        let score = scorePath(q, p);
+        if (subjectSet && p.subject && subjectSet.has(p.subject)) score += 70;
+        return { path: p, score };
+      })
       .filter((r) => r.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 3);
