@@ -147,7 +147,9 @@ const tint = (hex, f) => {
 };
 
 // ── Wereldkaart-canvas bouwen (per modus/stand andere opties) ──────────────────
-function bouwKaart(features, opts, W = 2048, H = 1024) {
+// Hoge resolutie (4096×2048) zodat je flink kunt inzoomen zonder dat het wazig wordt.
+function bouwKaart(features, opts, W = 4096, H = 2048) {
+  const s = W / 2048; // schaalfactor t.o.v. basis-resolutie
   const cv = document.createElement("canvas");
   cv.width = W; cv.height = H;
   const ctx = cv.getContext("2d");
@@ -186,27 +188,48 @@ function bouwKaart(features, opts, W = 2048, H = 1024) {
   // 2) Landgrenzen
   if (opts.grenzen) {
     ctx.strokeStyle = "rgba(255,255,255,0.55)";
-    ctx.lineWidth = 1.4;
+    ctx.lineWidth = 1.4 * s;
     for (const info of infos) for (const poly of info.polys) { tekenRing(poly[0]); ctx.stroke(); }
   }
 
-  const halo = (tekst, x, y, font, kleur = "#fff") => {
-    ctx.font = font;
+  // Tekst met donkere halo zodat het op elke kleur leesbaar is.
+  const halo = (tekst, x, y, fontPx, kleur = "#fff") => {
+    ctx.font = `600 ${fontPx.toFixed(1)}px 'Fredoka', sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.lineWidth = 3.5;
-    ctx.strokeStyle = "rgba(8,18,28,0.85)";
+    ctx.lineWidth = Math.max(2, fontPx * 0.18);
+    ctx.strokeStyle = "rgba(8,18,28,0.9)";
     ctx.strokeText(tekst, x, y);
     ctx.fillStyle = kleur;
     ctx.fillText(tekst, x, y);
   };
 
-  // 3) Landnamen (NL) op het zwaartepunt
+  // Bounding-box van de grootste ring (vasteland) → labelmaat afstemmen op het land.
+  const landBox = (info) => {
+    let ring = null, len = -1;
+    for (const poly of info.polys) { const r = poly[0]; if (r && r.length > len) { len = r.length; ring = r; } }
+    if (!ring) return null;
+    let minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+    for (const [lng, lat] of ring) {
+      const x = X(lng), y = Y(lat);
+      if (x < minX) minX = x; if (x > maxX) maxX = x;
+      if (y < minY) minY = y; if (y > maxY) maxY = y;
+    }
+    return { w: Math.min(maxX - minX, W * 0.18), h: maxY - minY };
+  };
+
+  // 3) Landnamen — geschaald zodat ze min of meer in het land passen.
   if (opts.landnamen) {
     for (const info of infos) {
       const land = LANDEN[info.naamEn];
       if (!land) continue;
-      halo(land[0], X(info.lng), Y(info.lat), "600 22px 'Fredoka', sans-serif");
+      const box = landBox(info);
+      if (!box) continue;
+      let fs = Math.max(8 * s, Math.min(20 * s, box.h * 0.45));
+      ctx.font = `600 ${fs}px 'Fredoka', sans-serif`;
+      const tw = ctx.measureText(land[0]).width;
+      if (tw > box.w * 0.92) fs = Math.max(7 * s, (fs * box.w * 0.92) / tw);
+      halo(land[0], X(info.lng), Y(info.lat), fs);
     }
   }
 
@@ -216,13 +239,13 @@ function bouwKaart(features, opts, W = 2048, H = 1024) {
       const [, hoofdstad, lat, lng] = v;
       const x = X(lng), y = Y(lat);
       ctx.beginPath();
-      ctx.arc(x, y, 7, 0, Math.PI * 2);
+      ctx.arc(x, y, 6 * s, 0, Math.PI * 2);
       ctx.fillStyle = "#0b0f14";
       ctx.fill();
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = 2.2 * s;
       ctx.strokeStyle = "#fff";
       ctx.stroke();
-      if (opts.hoofdstadnamen) halo(hoofdstad, x, y - 18, "600 19px 'Fredoka', sans-serif", "#ffe08a");
+      if (opts.hoofdstadnamen) halo(hoofdstad, x, y - 16 * s, 15 * s, "#ffe08a");
     }
   }
 
@@ -349,7 +372,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
 
         // ── Slepen / draaien + zoomen ──
         const PAUZE_MS = 5000;
-        const ZOOM_DICHTBIJ = 1.6, ZOOM_VER = 3.6;
+        const ZOOM_DICHTBIJ = 1.12, ZOOM_VER = 3.6; // dichterbij = verder inzoomen
         let dragging = false, moved = false, px = 0, py = 0, hervatAt = 0;
         const pointers = new Map();
         let pinchVorig = 0;
