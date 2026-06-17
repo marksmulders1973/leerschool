@@ -655,9 +655,11 @@
               if (!installing) return;
               installing.addEventListener("statechange", () => {
                 if (installing.state === "installed" && navigator.serviceWorker.controller) {
-                  // Bij eerste open → silent. Tijdens actief gebruik (al voorbij
-                  // initialLoad) → banner zodat user niet midden in een quiz reload krijgt.
-                  triggerUpdate(reg.waiting || installing, { silent: initialLoad });
+                  // Altijd vanzelf vernieuwen (Mark 2026-06-17: geen "Vernieuw"-knop
+                  // meer). De controllerchange-listener hieronder zorgt dat de reload
+                  // beleefd gebeurt — niet midden in een quiz, maar zodra de app naar
+                  // de achtergrond gaat (of via vangnet-timer).
+                  triggerUpdate(reg.waiting || installing, { silent: true });
                 }
               });
             });
@@ -682,13 +684,21 @@
           window.addEventListener("pageshow", onResume);
           window.addEventListener("focus", onResume);
 
-          // Controllerchange = nieuwe SW heeft overgenomen → 1x reload zodat
-          // user direct de nieuwe code draait.
+          // Controllerchange = nieuwe SW heeft overgenomen → reload zodat de user
+          // de nieuwe code draait. Vanzelf, zónder knop, maar BELEEFD: niet midden
+          // in een quiz. Bij eerste open of als de tab niet zichtbaar is → meteen.
+          // Tijdens actief gebruik → wachten tot de app naar de achtergrond gaat
+          // (bij een PWA op de telefoon gebeurt dat zodra je wegklikt/scherm sluit),
+          // met een vangnet-timer voor het geval dat lang uitblijft.
           let reloaded = false;
           navigator.serviceWorker.addEventListener("controllerchange", () => {
             if (reloaded) return;
             reloaded = true;
-            window.location.reload();
+            const doReload = () => { try { window.location.reload(); } catch (e) {} };
+            if (initialLoad || document.hidden) { doReload(); return; }
+            const onHide = () => { if (document.hidden) doReload(); };
+            document.addEventListener("visibilitychange", onHide);
+            setTimeout(doReload, 5 * 60 * 1000);
           });
         });
       }
