@@ -2,7 +2,11 @@
 // Cito-onderdeel wereldoriëntatie (aardrijkskunde). Referentieniveau 1F.
 // 6 stappen met uitlegPad. Bouwt voort op topografieNederland.
 
+import { createElement } from "react";
 import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
+
+// Wereldbol in land-modus: tik op een land → "welk land?" of "wat is de hoofdstad?".
+const LandBol = (props) => createElement(Wereldbol, { ...props, modus: "land" });
 
 const COLORS = {
   text: "#e0e6f0",
@@ -202,7 +206,8 @@ const steps = [
   {
     title: "Beroemde landen op elk continent",
     explanation:
-      "**Per continent een paar landen** om te kennen *(Cito stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**Cito-vragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** in Europa liggen. Beide liggen voor het grootste deel in Azië *(maar hebben een klein stuk in Europa)*. Voor Cito: meestal Azië.",
+      "**Per continent een paar landen** om te kennen *(Cito stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**🌍 Tik op de wereldbol** op een land — dan vragen we welk land het is, of wat de hoofdstad is. Draai en zoom om het goede land te vinden.\n\n**Cito-vragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** in Europa liggen. Beide liggen voor het grootste deel in Azië *(maar hebben een klein stuk in Europa)*. Voor Cito: meestal Azië.",
+    interactiveComponent: LandBol,
     checks: [
       {
         q: "In welk continent ligt **Brazilië**?",

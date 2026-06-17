@@ -112,6 +112,68 @@ function tekenWereldkaart(features, W, H) {
   return cv;
 }
 
+// ── Landen + hoofdsteden (modus="land") ──────────────────────────────────────
+// Sleutel = Engelse naam uit world-atlas (Natural Earth). Waarde = [NL-naam, hoofdstad].
+// Alleen bekende landen met een onomstreden hoofdstad → die zijn klikbaar.
+const LANDEN = {
+  // Europa
+  "Netherlands": ["Nederland", "Amsterdam"], "Belgium": ["België", "Brussel"],
+  "France": ["Frankrijk", "Parijs"], "Germany": ["Duitsland", "Berlijn"],
+  "Spain": ["Spanje", "Madrid"], "Portugal": ["Portugal", "Lissabon"],
+  "Italy": ["Italië", "Rome"], "United Kingdom": ["Verenigd Koninkrijk", "Londen"],
+  "Ireland": ["Ierland", "Dublin"], "Switzerland": ["Zwitserland", "Bern"],
+  "Austria": ["Oostenrijk", "Wenen"], "Poland": ["Polen", "Warschau"],
+  "Czechia": ["Tsjechië", "Praag"], "Czech Rep.": ["Tsjechië", "Praag"],
+  "Greece": ["Griekenland", "Athene"], "Sweden": ["Zweden", "Stockholm"],
+  "Norway": ["Noorwegen", "Oslo"], "Denmark": ["Denemarken", "Kopenhagen"],
+  "Finland": ["Finland", "Helsinki"], "Iceland": ["IJsland", "Reykjavik"],
+  "Hungary": ["Hongarije", "Boedapest"], "Romania": ["Roemenië", "Boekarest"],
+  "Ukraine": ["Oekraïne", "Kiev"], "Russia": ["Rusland", "Moskou"],
+  "Croatia": ["Kroatië", "Zagreb"], "Serbia": ["Servië", "Belgrado"],
+  "Bulgaria": ["Bulgarije", "Sofia"],
+  // Azië
+  "China": ["China", "Peking"], "India": ["India", "New Delhi"],
+  "Japan": ["Japan", "Tokio"], "South Korea": ["Zuid-Korea", "Seoul"],
+  "Korea": ["Zuid-Korea", "Seoul"], "North Korea": ["Noord-Korea", "Pyongyang"],
+  "Indonesia": ["Indonesië", "Jakarta"], "Thailand": ["Thailand", "Bangkok"],
+  "Vietnam": ["Vietnam", "Hanoi"], "Malaysia": ["Maleisië", "Kuala Lumpur"],
+  "Philippines": ["Filipijnen", "Manilla"], "Pakistan": ["Pakistan", "Islamabad"],
+  "Iran": ["Iran", "Teheran"], "Iraq": ["Irak", "Bagdad"],
+  "Saudi Arabia": ["Saoedi-Arabië", "Riyad"], "Afghanistan": ["Afghanistan", "Kaboel"],
+  "Turkey": ["Turkije", "Ankara"], "Kazakhstan": ["Kazachstan", "Astana"],
+  // Afrika
+  "Egypt": ["Egypte", "Caïro"], "Morocco": ["Marokko", "Rabat"],
+  "Algeria": ["Algerije", "Algiers"], "South Africa": ["Zuid-Afrika", "Pretoria"],
+  "Nigeria": ["Nigeria", "Abuja"], "Kenya": ["Kenia", "Nairobi"],
+  "Ethiopia": ["Ethiopië", "Addis Abeba"], "Tanzania": ["Tanzania", "Dodoma"],
+  "Ghana": ["Ghana", "Accra"], "Libya": ["Libië", "Tripoli"],
+  "Sudan": ["Soedan", "Khartoem"],
+  // Noord-Amerika
+  "United States of America": ["Verenigde Staten", "Washington"],
+  "United States": ["Verenigde Staten", "Washington"],
+  "Canada": ["Canada", "Ottawa"], "Mexico": ["Mexico", "Mexico-Stad"],
+  "Cuba": ["Cuba", "Havana"],
+  // Zuid-Amerika
+  "Brazil": ["Brazilië", "Brasília"], "Argentina": ["Argentinië", "Buenos Aires"],
+  "Chile": ["Chili", "Santiago"], "Peru": ["Peru", "Lima"],
+  "Colombia": ["Colombia", "Bogotá"], "Venezuela": ["Venezuela", "Caracas"],
+  // Oceanië
+  "Australia": ["Australië", "Canberra"], "New Zealand": ["Nieuw-Zeeland", "Wellington"],
+  "Papua New Guinea": ["Papoea-Nieuw-Guinea", "Port Moresby"],
+};
+const ALLE_LANDEN = [...new Set(Object.values(LANDEN).map((v) => v[0]))];
+const ALLE_HOOFD = [...new Set(Object.values(LANDEN).map((v) => v[1]))];
+
+// Ray-casting punt-in-polygoon (lng/lat) — bepaalt welk land je aantikte.
+function puntInRing(lng, lat, ring) {
+  let binnen = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+    if (((yi > lat) !== (yj > lat)) && (lng < ((xj - xi) * (lat - yi)) / (yj - yi) + xi)) binnen = !binnen;
+  }
+  return binnen;
+}
+
 // Dichtstbijzijnde werelddeel bij een uitgelezen pixel (tolerantie voor randen).
 function pixelNaarKey(r, g, b) {
   // oceaan?
@@ -125,12 +187,17 @@ function pixelNaarKey(r, g, b) {
   return bestD < 120 ? beste : null;
 }
 
-export default function Wereldbol({ onAnswer }) {
+export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const mountRef = useRef(null);
   const canvasRef = useRef(null);      // wereldkaart-canvas (voor pixel-pick)
+  const landenRef = useRef([]);        // landen + polygonen (modus="land")
+  const vraagRef = useRef(false);      // staat er een vraag open? → bol bevriezen
   const [status, setStatus] = useState("laden"); // laden | klaar | fout
-  const [vraag, setVraag] = useState(null);       // { key, opties:[keys] } | null
-  const [feedback, setFeedback] = useState(null); // { goed:bool, gekozen:key } | null
+  const [vraag, setVraag] = useState(null);       // { tekst, opties:[{label,kleur?}], juist, naam } | null
+  const [feedback, setFeedback] = useState(null); // { goed:bool, gekozen:index } | null
+
+  // Zolang een vraag open staat: bol stil houden zodat je rustig kunt antwoorden.
+  useEffect(() => { vraagRef.current = !!vraag; }, [vraag]);
 
   // Three.js + data opzetten
   useEffect(() => {
@@ -148,6 +215,14 @@ export default function Wereldbol({ onAnswer }) {
         const topo = topoMod.default || topoMod;
         const feature = tjMod.feature || (tjMod.default && tjMod.default.feature);
         const geo = feature(topo, topo.objects.countries);
+        // Landen + polygonen klaarzetten voor klik-detectie (modus="land").
+        landenRef.current = geo.features
+          .filter((f) => LANDEN[f.properties?.name])
+          .map((f) => {
+            const info = featureInfo(f);
+            const [naam, hoofdstad] = LANDEN[f.properties.name];
+            return { naam, hoofdstad, polys: info ? info.polys : [] };
+          });
         const cv = tekenWereldkaart(geo.features, 2048, 1024);
         canvasRef.current = cv.getContext("2d", { willReadFrequently: true });
         const tex = new THREE.CanvasTexture(cv);
@@ -247,12 +322,20 @@ export default function Wereldbol({ onAnswer }) {
         const raycaster = new THREE.Raycaster();
         const ndc = new THREE.Vector2();
         function handleTap(e) {
+          if (vraagRef.current) return; // vraag staat al open
           const rect = dom.getBoundingClientRect();
           ndc.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
           ndc.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
           raycaster.setFromCamera(ndc, camera);
           const hit = raycaster.intersectObject(globe)[0];
           if (!hit || !hit.uv) return;
+          if (modus === "land") {
+            const lng = hit.uv.x * 360 - 180;
+            const lat = hit.uv.y * 180 - 90;
+            const land = landenRef.current.find((l) => l.polys.some((p) => puntInRing(lng, lat, p[0])));
+            if (land) stelLandVraag(land); // onbekend land / oceaan → negeer
+            return;
+          }
           const cx = Math.floor(hit.uv.x * cv.width);
           const cy = Math.floor((1 - hit.uv.y) * cv.height);
           const px2 = canvasRef.current.getImageData(cx, cy, 1, 1).data;
@@ -272,7 +355,7 @@ export default function Wereldbol({ onAnswer }) {
         // render-lus (autodraai als je niet sleept)
         const loop = () => {
           if (stop) return;
-          if (!dragging && performance.now() >= hervatAt) globe.rotation.y += 0.0016;
+          if (!dragging && !vraagRef.current && performance.now() >= hervatAt) globe.rotation.y += 0.0016;
           renderer.render(scene, camera);
           raf = requestAnimationFrame(loop);
         };
@@ -305,16 +388,42 @@ export default function Wereldbol({ onAnswer }) {
   // Stel een 4-keuze-vraag samen voor het aangetikte werelddeel.
   function stelVraag(key) {
     if (vraag || feedback) return; // al bezig
-    const afleiders = shuffle(Object.keys(CONTINENTEN).filter((k) => k !== key)).slice(0, 3);
-    const opties = shuffle([key, ...afleiders]);
-    setVraag({ key, opties });
+    const keys = shuffle([key, ...shuffle(Object.keys(CONTINENTEN).filter((k) => k !== key)).slice(0, 3)]);
+    setVraag({
+      tekst: "Welk werelddeel heb je aangetikt?",
+      opties: keys.map((k) => ({ label: CONTINENTEN[k].naam, kleur: CONTINENTEN[k].kleur })),
+      juist: keys.indexOf(key),
+      naam: CONTINENTEN[key].naam,
+    });
   }
 
-  function kies(optie) {
+  // Stel een vraag over het aangetikte land: welk land, of (50%) wat is de hoofdstad.
+  function stelLandVraag(land) {
+    if (vraag || feedback) return;
+    if (land.hoofdstad && Math.random() < 0.5) {
+      const opts = shuffle([land.hoofdstad, ...shuffle(ALLE_HOOFD.filter((h) => h !== land.hoofdstad)).slice(0, 3)]);
+      setVraag({
+        tekst: `Wat is de hoofdstad van ${land.naam}?`,
+        opties: opts.map((s) => ({ label: s })),
+        juist: opts.indexOf(land.hoofdstad),
+        naam: land.hoofdstad,
+      });
+    } else {
+      const opts = shuffle([land.naam, ...shuffle(ALLE_LANDEN.filter((n) => n !== land.naam)).slice(0, 3)]);
+      setVraag({
+        tekst: "Welk land heb je aangetikt?",
+        opties: opts.map((s) => ({ label: s })),
+        juist: opts.indexOf(land.naam),
+        naam: land.naam,
+      });
+    }
+  }
+
+  function kies(i) {
     if (!vraag || feedback) return;
-    const goed = optie === vraag.key;
-    setFeedback({ goed, gekozen: optie });
-    onAnswer?.(goed, CONTINENTEN[vraag.key].naam);
+    const goed = i === vraag.juist;
+    setFeedback({ goed, gekozen: i });
+    onAnswer?.(goed, vraag.naam);
     if (goed) {
       setTimeout(() => { setVraag(null); setFeedback(null); }, 1400);
     }
@@ -329,8 +438,8 @@ export default function Wereldbol({ onAnswer }) {
       }}>
         {status === "laden" && "🌍 De aardbol laadt…"}
         {status === "fout" && "De aardbol kon niet laden — tik op de knop hieronder."}
-        {status === "klaar" && !vraag && "🌍 Draai de aardbol (sleep / veeg), zoom met scroll of 2 vingers, en tik op een werelddeel."}
-        {status === "klaar" && vraag && !feedback && "Welk werelddeel heb je aangetikt?"}
+        {status === "klaar" && !vraag && `🌍 Draai de aardbol (sleep / veeg), zoom met scroll of 2 vingers, en tik op een ${modus === "land" ? "land" : "werelddeel"}.`}
+        {status === "klaar" && vraag && !feedback && vraag.tekst}
         {feedback && (feedback.goed ? "✅ Goed gedaan!" : "❌ Bijna — probeer nog eens.")}
       </div>
 
@@ -351,13 +460,13 @@ export default function Wereldbol({ onAnswer }) {
       {status === "klaar" && vraag && (
         <div style={{ marginTop: 10 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-            {vraag.opties.map((opt) => {
-              const isGoed = feedback && opt === vraag.key;
-              const isFoutGekozen = feedback && opt === feedback.gekozen && !feedback.goed;
+            {vraag.opties.map((opt, i) => {
+              const isGoed = feedback && i === vraag.juist;
+              const isFoutGekozen = feedback && i === feedback.gekozen && !feedback.goed;
               return (
                 <button
-                  key={opt}
-                  onClick={() => kies(opt)}
+                  key={i}
+                  onClick={() => kies(i)}
                   disabled={!!feedback}
                   style={{
                     padding: "12px 10px", borderRadius: 12, fontSize: 15, fontWeight: 700,
@@ -368,8 +477,8 @@ export default function Wereldbol({ onAnswer }) {
                     color: "#eaf2fb",
                   }}
                 >
-                  <span style={{ display: "inline-block", width: 12, height: 12, borderRadius: 3, marginRight: 8, verticalAlign: "middle", background: CONTINENTEN[opt].kleur }} />
-                  {CONTINENTEN[opt].naam}
+                  {opt.kleur && <span style={{ display: "inline-block", width: 12, height: 12, borderRadius: 3, marginRight: 8, verticalAlign: "middle", background: opt.kleur }} />}
+                  {opt.label}
                 </button>
               );
             })}
