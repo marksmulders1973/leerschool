@@ -97,7 +97,7 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/l
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
-import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
+import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId, parseLeerpadId } from "./app/initialPage.js";
 import { flushPendingScores } from "./games/obliterator/scores.js";
 import { vraagVanVandaagId } from "./socialVragen.js";
 import DeepVraag from "./components/DeepVraag.jsx";
@@ -212,6 +212,12 @@ export default function App() {
       // /v/<id> — social-deep-link naar één vraag; pad blijft staan zodat
       // DeepVraag de id uit de URL kan lezen.
       if (location.pathname.match(/^\/v\//i)) return;
+      // ?pad=<id> — social-deeplink naar een leerpad. Laat de URL met de id
+      // staan i.p.v. 'm te strippen naar een kaal /leren/pad. Anders verliest
+      // een reload (bv. de stille SW-update reload) het id → leeg leerpad-scherm
+      // (blauw scherm, Mark 2026-06-16). page+activeLearnPathId zijn al via
+      // getInitialPage()/getInitialLeerpadId() gezet.
+      if (parseLeerpadId(location.search)) return;
       const fromUrl = pageForPath(location.pathname);
       if (fromUrl !== page) {
         // Bij /?go=tafels (of ?play=obliterator) is `page` al door
@@ -256,6 +262,16 @@ export default function App() {
     if (newPage !== page) setPage(newPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
+
+  // Vangnet: beland je op het leerpad-scherm zónder pad-id (bv. een kale
+  // /leren/pad-URL of een verlopen deeplink), toon dan de leerpaden-overzicht
+  // i.p.v. een leeg scherm (blauw scherm voorkomen — Mark 2026-06-16).
+  useEffect(() => {
+    if (page === "learn-path" && !activeLearnPathId) {
+      setPage("learn-paths-hub");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, activeLearnPathId]);
 
   // Body-class voor lichtere achtergrond op homepage. Interne pagina's
   // (leerpaden, vragen) houden het donkere thema voor minder afleiding.

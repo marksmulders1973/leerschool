@@ -70,7 +70,17 @@ export function getInitialVraagId() {
 
 export function getInitialLeerpadId() {
   if (typeof window === "undefined") return null;
-  return parseLeerpadId(window.location.search);
+  // Lees zowel ?pad=<id> (social-deeplink) als ?id=<id> (SEO-landingpage
+  // /leren/pad?id=...). Zo overleeft het pad-id een reload — bv. de stille
+  // service-worker-update die window.location.reload() doet — i.p.v. op een
+  // leeg /leren/pad te belanden (blauw scherm, Mark 2026-06-16).
+  try {
+    const sp = new URLSearchParams(window.location.search);
+    const p = sp.get("pad") || sp.get("id");
+    return p && /^[A-Za-z0-9_-]{2,60}$/.test(p) ? p : null;
+  } catch {
+    return null;
+  }
 }
 
 export function getInitialPage() {
