@@ -5,8 +5,10 @@
 import { createElement } from "react";
 import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
 
-// Wereldbol in land-modus: tik op een land → "welk land?" of "wat is de hoofdstad?".
+// Wereldbol in land-modus: landen ontdekken + aanwijzen.
 const LandBol = (props) => createElement(Wereldbol, { ...props, modus: "land" });
+// Wereldbol in hoofdstad-modus: hoofdsteden (zwarte stippen) ontdekken + aanwijzen.
+const HoofdstadBol = (props) => createElement(Wereldbol, { ...props, modus: "hoofdstad" });
 
 const COLORS = {
   text: "#e0e6f0",
@@ -310,7 +312,8 @@ const steps = [
   {
     title: "Beroemde steden en wonderen",
     explanation:
-      "Cito vraagt vaak naar **beroemde plaatsen**.\n\n**Europa**:\n• **Parijs** — hoofdstad Frankrijk, Eiffeltoren.\n• **Londen** — hoofdstad Engeland, Big Ben, Buckingham Palace.\n• **Rome** — hoofdstad Italië, Colosseum, Vaticaan.\n• **Madrid** — hoofdstad Spanje.\n• **Berlijn** — hoofdstad Duitsland.\n• **Amsterdam** — hoofdstad Nederland.\n• **Brussel** — hoofdstad België, EU-hoofdkwartier.\n\n**Buiten Europa**:\n• **New York** — Vrijheidsbeeld, Empire State.\n• **Washington D.C.** — hoofdstad VS.\n• **Tokio** — hoofdstad Japan.\n• **Beijing** — hoofdstad China, Verboden Stad.\n• **Mumbai** + **New Delhi** — India.\n• **Sydney** — Australië, Opera House.\n• **Rio de Janeiro** — Brazilië, Christusbeeld.\n• **Caïro** — Egypte, dichtbij piramiden van Gizeh.\n\n**De 7 Wereldwonderen (oudheid)**:\n1. Piramiden van Gizeh *(Egypte, enige nog bestaand)*.\n2. Hangende tuinen van Babylon *(verdwenen)*.\n3. Beeld van Zeus in Olympia *(Griekenland, verdwenen)*.\n4. Tempel van Artemis te Efeze *(Turkije, verdwenen)*.\n5. Mausoleum van Halicarnassus *(Turkije, verdwenen)*.\n6. Kolossus van Rhodos *(Griekenland, verdwenen)*.\n7. Vuurtoren van Alexandrië *(Egypte, verdwenen)*.\n\n**Moderne wereldwonderen** *(nieuw, 2007)*:\n• Chinese Muur *(China)*.\n• Petra *(Jordanië)*.\n• Christusbeeld *(Brazilië)*.\n• Machu Picchu *(Peru)*.\n• Chichén Itzá *(Mexico)*.\n• Colosseum *(Italië)*.\n• Taj Mahal *(India)*.\n\n**Cito-truc — koppelingen**:\n• Eiffeltoren → Parijs → Frankrijk → Europa.\n• Big Ben → Londen → Engeland → Europa.\n• Piramiden → Gizeh → Egypte → Afrika.\n• Christusbeeld → Rio → Brazilië → Zuid-Amerika.",
+      "Cito vraagt vaak naar **beroemde plaatsen**.\n\n**🏙️ Tik op de wereldbol** op de zwarte stip van een hoofdstad om te ontdekken welke stad het is, of kies 'Oefenen' en zoek de gevraagde hoofdstad op.\n\n**Europa**:\n• **Parijs** — hoofdstad Frankrijk, Eiffeltoren.\n• **Londen** — hoofdstad Engeland, Big Ben, Buckingham Palace.\n• **Rome** — hoofdstad Italië, Colosseum, Vaticaan.\n• **Madrid** — hoofdstad Spanje.\n• **Berlijn** — hoofdstad Duitsland.\n• **Amsterdam** — hoofdstad Nederland.\n• **Brussel** — hoofdstad België, EU-hoofdkwartier.\n\n**Buiten Europa**:\n• **New York** — Vrijheidsbeeld, Empire State.\n• **Washington D.C.** — hoofdstad VS.\n• **Tokio** — hoofdstad Japan.\n• **Beijing** — hoofdstad China, Verboden Stad.\n• **Mumbai** + **New Delhi** — India.\n• **Sydney** — Australië, Opera House.\n• **Rio de Janeiro** — Brazilië, Christusbeeld.\n• **Caïro** — Egypte, dichtbij piramiden van Gizeh.\n\n**De 7 Wereldwonderen (oudheid)**:\n1. Piramiden van Gizeh *(Egypte, enige nog bestaand)*.\n2. Hangende tuinen van Babylon *(verdwenen)*.\n3. Beeld van Zeus in Olympia *(Griekenland, verdwenen)*.\n4. Tempel van Artemis te Efeze *(Turkije, verdwenen)*.\n5. Mausoleum van Halicarnassus *(Turkije, verdwenen)*.\n6. Kolossus van Rhodos *(Griekenland, verdwenen)*.\n7. Vuurtoren van Alexandrië *(Egypte, verdwenen)*.\n\n**Moderne wereldwonderen** *(nieuw, 2007)*:\n• Chinese Muur *(China)*.\n• Petra *(Jordanië)*.\n• Christusbeeld *(Brazilië)*.\n• Machu Picchu *(Peru)*.\n• Chichén Itzá *(Mexico)*.\n• Colosseum *(Italië)*.\n• Taj Mahal *(India)*.\n\n**Cito-truc — koppelingen**:\n• Eiffeltoren → Parijs → Frankrijk → Europa.\n• Big Ben → Londen → Engeland → Europa.\n• Piramiden → Gizeh → Egypte → Afrika.\n• Christusbeeld → Rio → Brazilië → Zuid-Amerika.",
+    interactiveComponent: HoofdstadBol,
     checks: [
       {
         q: "In welke stad staat de **Eiffeltoren**?",
