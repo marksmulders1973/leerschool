@@ -307,6 +307,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const alleLandenRef = useRef([]);    // alle landen (continent-detectie)
   const landPoolRef = useRef([]);      // benoemde landen (land-modus)
   const hoofdPoolRef = useRef([]);     // landen met hoofdstad + coord (hoofdstad-modus)
+  const zoekIndexRef = useRef([]);     // zoekbare plekken (land + hoofdstad) met coördinaten
   const modusRef = useRef(modus);
   const standRef = useRef("leren");
   const opdrachtenRef = useRef([]);
@@ -317,6 +318,8 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const [modusState, setModusState] = useState(modus); // werelddeel | land | hoofdstad (start = prop)
   const [stand, setStand] = useState("leren");      // leren | oefenen
   const [info, setInfo] = useState(null);           // ontdek-stand: laatste tekst
+  const [zoek, setZoek] = useState("");             // ontdek-stand: zoekterm
+  const [suggesties, setSuggesties] = useState([]);
   const [opdrachten, setOpdrachten] = useState([]);
   const [opdrachtI, setOpdrachtI] = useState(0);
   const [fb, setFb] = useState(null);               // 'goed' | 'fout' | null
@@ -332,6 +335,13 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   useEffect(() => {
     if (besturingRef.current) besturingRef.current.setTextuur(kaartOpties(modusState, stand));
   }, [modusState, stand, status]);
+
+  // Zoek-suggesties (land + hoofdstad) op basis van de zoekterm.
+  useEffect(() => {
+    const q = zoek.trim().toLowerCase().normalize("NFD").split("").filter((c) => { const x = c.charCodeAt(0); return x < 0x300 || x > 0x36f; }).join("");
+    if (q.length < 2) { setSuggesties([]); return; }
+    setSuggesties(zoekIndexRef.current.filter((x) => x._n.includes(q)).slice(0, 6));
+  }, [zoek]);
 
   // ── Three.js opzetten ──
   useEffect(() => {
@@ -355,7 +365,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
         alleLandenRef.current = features.map((f) => {
           const i = featureInfo(f);
           const naamEn = f.properties?.name || "";
-          return { naamEn, key: i ? classify(naamEn, i.lat, i.lng) : "azie", polys: i ? i.polys : [] };
+          return { naamEn, key: i ? classify(naamEn, i.lat, i.lng) : "azie", polys: i ? i.polys : [], lng: i ? i.lng : 0, lat: i ? i.lat : 0 };
         });
         // Land-modus: alle benoemde landen die ook echt op de kaart staan.
         landPoolRef.current = alleLandenRef.current.reduce((acc, l) => {
@@ -368,6 +378,15 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
           if (!acc.some((x) => x.hoofdstad === v[1])) acc.push({ naamEn, naam: v[0], hoofdstad: v[1], lat: v[2], lng: v[3], key: classify(naamEn, v[2], v[3]) });
           return acc;
         }, []);
+        // Zoek-index: landen (centroïde) + hoofdsteden (coörd). Genormaliseerd voor zoeken.
+        const norm = (t) => t.toLowerCase().normalize("NFD").split("").filter((c) => { const x = c.charCodeAt(0); return x < 0x300 || x > 0x36f; }).join("");
+        const idx = [];
+        for (const l of alleLandenRef.current) {
+          const naam = LAND_NL[l.naamEn];
+          if (naam && !idx.some((x) => x.type === "land" && x.label === naam)) idx.push({ label: naam, type: "land", lng: l.lng, lat: l.lat, _n: norm(naam) });
+        }
+        for (const b of hoofdPoolRef.current) idx.push({ label: b.hoofdstad, type: "hoofdstad", land: b.naam, lng: b.lng, lat: b.lat, _n: norm(b.hoofdstad) });
+        zoekIndexRef.current = idx;
 
         const w = mount.clientWidth || 360;
         const h = 360;
@@ -394,7 +413,21 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
         );
         scene.add(glow);
 
-        // Textuur-setter exposen voor de modus/stand-effect.
+        // Markertje dat bij 'zoeken' op de gevonden plek verschijnt.
+        const marker = new THREE.Mesh(
+          new THREE.SphereGeometry(0.035, 16, 16),
+          new THREE.MeshBasicMaterial({ color: 0xffe14d })
+        );
+        marker.visible = false;
+        globe.add(marker);
+
+        // ── Beweeg-/zoom-toestand (ook gebruikt door zoeken) ──
+        const PAUZE_MS = 5000;
+        const ZOOM_DICHTBIJ = 1.12, ZOOM_VER = 3.6; // dichterbij = verder inzoomen
+        let dragging = false, moved = false, px = 0, py = 0, hervatAt = 0;
+        let animTot = 0, doelRy = globe.rotation.y, doelRx = globe.rotation.x, doelZoom = camera.position.z;
+
+        // Besturing exposen voor de React-laag (textuur, zoeken, marker).
         besturingRef.current = {
           setTextuur(opts) {
             const cv = bouwKaart(features, opts);
@@ -404,13 +437,29 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
             globe.material.map = tex;
             globe.material.needsUpdate = true;
           },
+          verbergMarker() { marker.visible = false; },
+          gaNaar(lng, lat) {
+            // marker op het boloppervlak zetten
+            const u = (lng + 180) / 360;
+            const theta = ((90 - lat) * Math.PI) / 180;
+            const phi = 2 * Math.PI * u;
+            const r = 1.02;
+            marker.position.set(-r * Math.cos(phi) * Math.sin(theta), r * Math.cos(theta), r * Math.sin(phi) * Math.sin(theta));
+            marker.visible = true;
+            // doel-rotatie zodat de plek naar voren draait + inzoomen
+            doelRy = -Math.PI / 2 - (Math.PI * lng) / 180;
+            while (doelRy - globe.rotation.y > Math.PI) doelRy -= 2 * Math.PI;
+            while (doelRy - globe.rotation.y < -Math.PI) doelRy += 2 * Math.PI;
+            doelRx = Math.max(-1.2, Math.min(1.2, (lat * Math.PI) / 180));
+            doelZoom = 1.9;
+            const now = performance.now();
+            animTot = now + 1100;
+            hervatAt = now + 1100 + PAUZE_MS;
+          },
         };
         besturingRef.current.setTextuur(kaartOpties(modusRef.current, standRef.current));
 
         // ── Slepen / draaien + zoomen ──
-        const PAUZE_MS = 5000;
-        const ZOOM_DICHTBIJ = 1.12, ZOOM_VER = 3.6; // dichterbij = verder inzoomen
-        let dragging = false, moved = false, px = 0, py = 0, hervatAt = 0;
         const pointers = new Map();
         let pinchVorig = 0;
         const zoomNaar = (z) => { camera.position.z = Math.max(ZOOM_DICHTBIJ, Math.min(ZOOM_VER, z)); };
@@ -543,8 +592,16 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
 
         const loop = () => {
           if (stop) return;
-          const draaien = !dragging && standRef.current !== "oefenen" && performance.now() >= hervatAt;
-          if (draaien) globe.rotation.y += 0.0016;
+          const now = performance.now();
+          if (animTot && now < animTot) {
+            // soepel naar de gezochte plek toe draaien + zoomen
+            globe.rotation.y += (doelRy - globe.rotation.y) * 0.12;
+            globe.rotation.x += (doelRx - globe.rotation.x) * 0.12;
+            camera.position.z += (doelZoom - camera.position.z) * 0.12;
+          } else {
+            if (animTot) animTot = 0;
+            if (!dragging && standRef.current !== "oefenen" && now >= hervatAt) globe.rotation.y += 0.0016;
+          }
           renderer.render(scene, camera);
           raf = requestAnimationFrame(loop);
         };
@@ -581,6 +638,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   }
   function startStand(s) {
     setFb(null); setInfo(null); setKlaar(false); bezigRef.current = false;
+    setZoek(""); setSuggesties([]); besturingRef.current?.verbergMarker();
     if (s === "oefenen") {
       const lijst = bouwOpdrachten(modusRef.current);
       setOpdrachten(lijst); opdrachtenRef.current = lijst;
@@ -593,7 +651,13 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
     setModusState(m);
     setStand("leren"); standRef.current = "leren";
     setFb(null); setInfo(null); setKlaar(false); setOpdrachten([]);
+    setZoek(""); setSuggesties([]); besturingRef.current?.verbergMarker();
     bezigRef.current = false;
+  }
+  function kiesZoek(sg) {
+    besturingRef.current?.gaNaar(sg.lng, sg.lat);
+    setInfo(sg.type === "hoofdstad" ? `📍 ${sg.label} — hoofdstad van ${sg.land}` : `🗺️ ${sg.label}`);
+    setZoek(""); setSuggesties([]);
   }
   function beoordeel(goed, naam) {
     bezigRef.current = true;
@@ -663,6 +727,41 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
               }}
             >{label}</button>
           ))}
+        </div>
+      )}
+
+      {/* Zoekbalk (alleen in Ontdekken) */}
+      {status === "klaar" && stand === "leren" && (
+        <div style={{ position: "relative", maxWidth: 320, margin: "0 auto 8px" }}>
+          <input
+            value={zoek}
+            onChange={(e) => setZoek(e.target.value)}
+            placeholder="🔎 Zoek een land of hoofdstad…"
+            style={{
+              width: "100%", boxSizing: "border-box", padding: "9px 12px", borderRadius: 10,
+              fontFamily: "'Fredoka',sans-serif", fontSize: 14,
+              border: "2px solid rgba(255,255,255,0.18)", background: "#0e2236", color: "#eaf2fb",
+            }}
+          />
+          {suggesties.length > 0 && (
+            <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 4, background: "#0e2236", border: "2px solid rgba(255,255,255,0.18)", borderRadius: 10, overflow: "hidden", boxShadow: "0 8px 24px rgba(0,0,0,0.45)" }}>
+              {suggesties.map((sg, i) => (
+                <button
+                  key={i}
+                  onClick={() => kiesZoek(sg)}
+                  style={{
+                    display: "block", width: "100%", textAlign: "left", padding: "9px 12px",
+                    border: "none", borderTop: i ? "1px solid rgba(255,255,255,0.08)" : "none",
+                    background: "transparent", color: "#eaf2fb", cursor: "pointer",
+                    fontFamily: "'Fredoka',sans-serif", fontSize: 14,
+                  }}
+                >
+                  {sg.type === "hoofdstad" ? "🏙️" : "🗺️"} {sg.label}
+                  {sg.land ? <span style={{ color: "#9fc0e0" }}> — {sg.land}</span> : null}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
