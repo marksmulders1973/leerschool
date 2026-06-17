@@ -185,10 +185,38 @@ export default function Wereldbol({ onAnswer }) {
         dir.position.set(3, 2, 4);
         scene.add(dir);
 
-        // ── Slepen / draaien (muis + touch via pointer events) ──
+        // ── Slepen/draaien (1 vinger/muis) + zoom (muis-wiel & 2-vinger-knijp) ──
+        const MIN_Z = 1.55, MAX_Z = 5.2; // hoe dichtbij / ver de camera mag
+        const clampZoom = (z) => Math.max(MIN_Z, Math.min(MAX_Z, z));
+        const pointers = new Map(); // pointerId → {x,y} (voor pinch met 2 vingers)
         let dragging = false, moved = false, px = 0, py = 0;
-        const onDown = (e) => { dragging = true; moved = false; px = e.clientX; py = e.clientY; renderer.domElement.style.cursor = "grabbing"; };
+        let pinchStartDist = 0, pinchStartZ = 0;
+        const dom = renderer.domElement;
+
+        const onDown = (e) => {
+          dom.setPointerCapture?.(e.pointerId);
+          pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+          if (pointers.size === 1) {
+            dragging = true; moved = false; px = e.clientX; py = e.clientY;
+            dom.style.cursor = "grabbing";
+          } else if (pointers.size === 2) {
+            const [a, b] = [...pointers.values()];
+            pinchStartDist = Math.hypot(a.x - b.x, a.y - b.y);
+            pinchStartZ = camera.position.z;
+            moved = true; // 2 vingers = nooit een tik
+          }
+        };
         const onMove = (e) => {
+          if (!pointers.has(e.pointerId)) return;
+          pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+          if (pointers.size >= 2) { // knijp-zoom
+            const [a, b] = [...pointers.values()];
+            const dist = Math.hypot(a.x - b.x, a.y - b.y);
+            if (pinchStartDist > 0 && dist > 0) {
+              camera.position.z = clampZoom(pinchStartZ * (pinchStartDist / dist));
+            }
+            return;
+          }
           if (!dragging) return;
           const dx = e.clientX - px, dy = e.clientY - py;
           if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
@@ -197,14 +225,27 @@ export default function Wereldbol({ onAnswer }) {
           px = e.clientX; py = e.clientY;
         };
         const onUp = (e) => {
-          renderer.domElement.style.cursor = "grab";
-          if (dragging && !moved) handleTap(e);
-          dragging = false;
+          const wasPinch = pointers.size === 2;
+          pointers.delete(e.pointerId);
+          dom.style.cursor = "grab";
+          if (pointers.size === 0) {
+            if (dragging && !moved) handleTap(e);
+            dragging = false;
+          } else if (pointers.size === 1 && wasPinch) {
+            // van knijpen terug naar 1 vinger → draai-referentie resetten
+            const [p] = [...pointers.values()];
+            px = p.x; py = p.y; dragging = true; moved = true;
+          }
         };
-        const dom = renderer.domElement;
+        const onWheel = (e) => {
+          e.preventDefault(); // niet de pagina scrollen
+          camera.position.z = clampZoom(camera.position.z + e.deltaY * 0.0016);
+        };
         dom.addEventListener("pointerdown", onDown);
         window.addEventListener("pointermove", onMove);
         window.addEventListener("pointerup", onUp);
+        window.addEventListener("pointercancel", onUp);
+        dom.addEventListener("wheel", onWheel, { passive: false });
 
         const raycaster = new THREE.Raycaster();
         const ndc = new THREE.Vector2();
@@ -246,6 +287,8 @@ export default function Wereldbol({ onAnswer }) {
           dom.removeEventListener("pointerdown", onDown);
           window.removeEventListener("pointermove", onMove);
           window.removeEventListener("pointerup", onUp);
+          window.removeEventListener("pointercancel", onUp);
+          dom.removeEventListener("wheel", onWheel);
           ro && ro.disconnect();
           cancelAnimationFrame(raf);
           tex.dispose();
@@ -290,7 +333,7 @@ export default function Wereldbol({ onAnswer }) {
       }}>
         {status === "laden" && "🌍 De aardbol laadt…"}
         {status === "fout" && "De aardbol kon niet laden — tik op de knop hieronder."}
-        {status === "klaar" && !vraag && "🌍 Draai de aardbol (sleep / veeg) en tik op een werelddeel."}
+        {status === "klaar" && !vraag && "🌍 Draai de aardbol (sleep/veeg), zoom met je muiswiel of knijp met 2 vingers, en tik op een werelddeel."}
         {status === "klaar" && vraag && !feedback && "Welk werelddeel heb je aangetikt?"}
         {feedback && (feedback.goed ? "✅ Goed gedaan!" : "❌ Bijna — probeer nog eens.")}
       </div>
