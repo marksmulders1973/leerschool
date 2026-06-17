@@ -97,7 +97,7 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/l
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
-import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId, parseLeerpadId } from "./app/initialPage.js";
+import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
 import { flushPendingScores } from "./games/obliterator/scores.js";
 import { vraagVanVandaagId } from "./socialVragen.js";
 import DeepVraag from "./components/DeepVraag.jsx";
@@ -212,12 +212,6 @@ export default function App() {
       // /v/<id> — social-deep-link naar één vraag; pad blijft staan zodat
       // DeepVraag de id uit de URL kan lezen.
       if (location.pathname.match(/^\/v\//i)) return;
-      // ?pad=<id> — social-deeplink naar een leerpad. Laat de URL met de id
-      // staan i.p.v. 'm te strippen naar een kaal /leren/pad. Anders verliest
-      // een reload (bv. de stille SW-update reload) het id → leeg leerpad-scherm
-      // (blauw scherm, Mark 2026-06-16). page+activeLearnPathId zijn al via
-      // getInitialPage()/getInitialLeerpadId() gezet.
-      if (parseLeerpadId(location.search)) return;
       const fromUrl = pageForPath(location.pathname);
       if (fromUrl !== page) {
         // Bij /?go=tafels (of ?play=obliterator) is `page` al door
@@ -226,7 +220,16 @@ export default function App() {
         // bijschrijven naar het pad dat bij `page` hoort, zodat deeplinks
         // van SEO-landingpages de juiste pagina openen.
         if (fromUrl === "home" && page !== "home") {
-          const expected = pathForPage(page);
+          let expected = pathForPage(page);
+          // ?pad=<id> social-deeplink: behoud de pad-id in de URL als
+          // /leren/pad?id=<id>. Anders strippen we 'm naar een kaal /leren/pad
+          // en verliest een reload (bv. de stille SW-update reload die na een
+          // deploy bij iedereen vuurt) het id → leeg leerpad-scherm (blauw
+          // scherm, Mark 2026-06-16). getInitialLeerpadId leest ?pad én ?id.
+          if (page === "learn-path") {
+            const padId = getInitialLeerpadId();
+            if (padId) expected = `/leren/pad?id=${encodeURIComponent(padId)}`;
+          }
           if (expected) navigate(expected, { replace: true });
         } else {
           setPage(fromUrl);
