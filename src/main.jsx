@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
+import ReclameBol from "./components/ReclameBol.jsx";
 import ErrorBoundary, { isChunkLoadError, recoverFromChunkError } from "./app/ErrorBoundary.jsx";
 import { Analytics } from "@vercel/analytics/react";
 import "./shared/tokens.css";
@@ -29,6 +30,21 @@ if (typeof window !== "undefined") {
   });
 }
 
+// Verborgen promo-/showcase-route voor de 3D-wereldbol (?reclamebol). Vóór de
+// App-router afgevangen zodat we de hook-volgorde van App.jsx niet raken én geen
+// rolkeuze/onboarding-chrome tonen op de opname.
+const isReclameBol =
+  typeof window !== "undefined" && /[?&]reclamebol\b/.test(window.location.search);
+
+if (isReclameBol) {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <ErrorBoundary>
+        <ReclameBol />
+      </ErrorBoundary>
+    </React.StrictMode>
+  );
+} else {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ErrorBoundary>
@@ -42,3 +58,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+}
