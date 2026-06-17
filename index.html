@@ -701,5 +701,62 @@
         window.__pwaInstallPrompt = null;
       });
     </script>
+    <script>
+      // ─── Render-watchdog (self-heal blauw scherm) ──────────────────────────
+      // Symptoom (Mark 2026-06-16, via FB-link): de HTML-shell laadt wél (footer
+      // zichtbaar) maar de React-app mount niet → leeg #root → blauw scherm. Bijna
+      // altijd een vastgeplakte/stale service worker die oude of kapotte bundles
+      // serveert na een redeploy. De bestaande kill-switch hierboven vangt alleen
+      // de oude "v\d+"-caches; deze watchdog vangt elk geval generiek:
+      //   als een SW de pagina bestuurt én #root is na 10s nog leeg →
+      //   SW's unregisteren, caches legen, en 1× hard reloaden (cache-buster).
+      // Veiligheid: draait alleen als er een SW-controller is (dus NIET bij een
+      // eerste bezoek zonder SW), en hooguit 1× per sessie (sessionStorage-flag),
+      // zodat een echt kapotte app nooit in een reload-loop belandt.
+      (function () {
+        var KEY = "lk_render_recover";
+        function mounted() {
+          var r = document.getElementById("root");
+          return !!(r && r.children.length > 0);
+        }
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            if (mounted()) { try { sessionStorage.removeItem(KEY); } catch (e) {} return; }
+            // Alleen ingrijpen als een service worker de pagina daadwerkelijk
+            // bestuurt — anders is het geen SW-probleem en helpt reloaden niet.
+            if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) return;
+            try {
+              if (sessionStorage.getItem(KEY) === "1") return; // al 1× geprobeerd
+              sessionStorage.setItem(KEY, "1");
+            } catch (e) {}
+            // eslint-disable-next-line no-console
+            console.warn("[lk-watchdog] app niet gemount + actieve SW — opruimen en herladen");
+            var reload = function () {
+              try {
+                var sep = location.search ? "&" : "?";
+                window.location.replace(location.pathname + location.search + sep + "_lkfix=" + Date.now() + location.hash);
+              } catch (e) { window.location.reload(); }
+            };
+            var tasks = [];
+            try {
+              tasks.push(
+                navigator.serviceWorker.getRegistrations()
+                  .then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); })
+                  .catch(function () {})
+              );
+              if ("caches" in window) {
+                tasks.push(
+                  caches.keys()
+                    .then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); })
+                    .catch(function () {})
+                );
+              }
+            } catch (e) {}
+            Promise.all(tasks).then(reload).catch(reload);
+            setTimeout(reload, 2500); // safety-net: nooit eindeloos wachten op cleanup
+          }, 10000);
+        });
+      })();
+    </script>
   </body>
 </html>
