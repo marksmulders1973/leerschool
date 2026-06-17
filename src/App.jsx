@@ -263,16 +263,6 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
-  // Vangnet: beland je op het leerpad-scherm zónder pad-id (bv. een kale
-  // /leren/pad-URL of een verlopen deeplink), toon dan de leerpaden-overzicht
-  // i.p.v. een leeg scherm (blauw scherm voorkomen — Mark 2026-06-16).
-  useEffect(() => {
-    if (page === "learn-path" && !activeLearnPathId) {
-      setPage("learn-paths-hub");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, activeLearnPathId]);
-
   // Body-class voor lichtere achtergrond op homepage. Interne pagina's
   // (leerpaden, vragen) houden het donkere thema voor minder afleiding.
   useEffect(() => {
@@ -293,6 +283,17 @@ export default function App() {
   const [activeLearnPathId, setActiveLearnPathId] = useState(getInitialLeerpadId());
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
+
+  // Vangnet: beland je op het leerpad-scherm zónder pad-id (bv. een kale
+  // /leren/pad-URL of een verlopen deeplink), toon dan de leerpaden-overzicht
+  // i.p.v. een leeg scherm (blauw scherm voorkomen — Mark 2026-06-16).
+  // NB: staat ná de useState van activeLearnPathId — anders TDZ in de dep-array.
+  useEffect(() => {
+    if (page === "learn-path" && !activeLearnPathId) {
+      setPage("learn-paths-hub");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, activeLearnPathId]);
   // Begin-zoekterm voor de leerpaden-hub (Mark 2026-06-14: zoekbalk op home).
   const [learnInitialSearch, setLearnInitialSearch] = useState("");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);
