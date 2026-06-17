@@ -186,8 +186,11 @@ export default function Wereldbol({ onAnswer }) {
         scene.add(dir);
 
         // ── Slepen / draaien (muis + touch via pointer events) ──
-        let dragging = false, moved = false, px = 0, py = 0;
-        const onDown = (e) => { dragging = true; moved = false; px = e.clientX; py = e.clientY; renderer.domElement.style.cursor = "grabbing"; };
+        // Na elke aanraking staat de bol 5 sec stil zodat je rustig kunt
+        // zoeken/aanwijzen; daarna draait hij vanzelf weer verder.
+        const PAUZE_MS = 5000;
+        let dragging = false, moved = false, px = 0, py = 0, hervatAt = 0;
+        const onDown = (e) => { dragging = true; moved = false; px = e.clientX; py = e.clientY; hervatAt = Infinity; renderer.domElement.style.cursor = "grabbing"; };
         const onMove = (e) => {
           if (!dragging) return;
           const dx = e.clientX - px, dy = e.clientY - py;
@@ -200,6 +203,7 @@ export default function Wereldbol({ onAnswer }) {
           renderer.domElement.style.cursor = "grab";
           if (dragging && !moved) handleTap(e);
           dragging = false;
+          hervatAt = performance.now() + PAUZE_MS; // 5 sec stil, dan weer draaien
         };
         const dom = renderer.domElement;
         dom.addEventListener("pointerdown", onDown);
@@ -234,7 +238,7 @@ export default function Wereldbol({ onAnswer }) {
         // render-lus (autodraai als je niet sleept)
         const loop = () => {
           if (stop) return;
-          if (!dragging) globe.rotation.y += 0.0016;
+          if (!dragging && performance.now() >= hervatAt) globe.rotation.y += 0.0016;
           renderer.render(scene, camera);
           raf = requestAnimationFrame(loop);
         };
