@@ -50,7 +50,7 @@ const steps = [
         q: "Wat is **export** voor Nederland?",
         options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Toeristen die naar NL komen", "Een NL bedrijf in Duitsland"],
         answer: 0,
-        wrongHints: [null, "Dat is import.", "Toerisme is wel een vorm export van diensten.", "Vestiging = directe investering."],
+        wrongHints: [null, "Dat is import.", "Toerisme is wel een vorm van export — maar van diensten.", "Vestiging = directe investering."],
         uitlegPad: {
           stappen: [{ titel: "Export = uit-voer", tekst: "Export = NL verkoopt iets aan buitenland (kaas naar DE, ASML-machines naar TW)." }],
           woorden: [{ woord: "export", uitleg: "Verkopen aan ander land. Tegenovergestelde van import." }, { woord: "import", uitleg: "Kopen uit ander land." }],
