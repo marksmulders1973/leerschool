@@ -2,6 +2,8 @@
 // Cito-onderdeel wereldoriëntatie (aardrijkskunde). Referentieniveau 1F.
 // 6 stappen met uitlegPad. Bouwt voort op topografieNederland.
 
+import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
+
 const COLORS = {
   text: "#e0e6f0",
   muted: "#8899aa",
@@ -29,42 +31,13 @@ const chapters = [
   { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
-function wereldSvg() {
-  return `<svg viewBox="0 0 320 200">
-<rect x="0" y="0" width="320" height="200" fill="${COLORS.paper}"/>
-<text x="160" y="20" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">Wereldkaart — 7 continenten</text>
-<rect x="20" y="40" width="280" height="130" fill="rgba(21,101,192,0.10)" stroke="${COLORS.oceaan}" stroke-width="1"/>
-<!-- Noord-Amerika -->
-<ellipse cx="80" cy="75" rx="35" ry="20" fill="${COLORS.amerika}" opacity="0.6"/>
-<text x="80" y="78" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">N-Amerika</text>
-<!-- Zuid-Amerika -->
-<ellipse cx="100" cy="135" rx="22" ry="22" fill="${COLORS.amerika}" opacity="0.6"/>
-<text x="100" y="138" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">Z-Amerika</text>
-<!-- Europa -->
-<ellipse cx="180" cy="65" rx="20" ry="12" fill="${COLORS.europa}" opacity="0.8"/>
-<text x="180" y="69" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">Europa</text>
-<!-- Afrika -->
-<ellipse cx="190" cy="120" rx="22" ry="25" fill="${COLORS.afrika}" opacity="0.7"/>
-<text x="190" y="124" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">Afrika</text>
-<!-- Azië -->
-<ellipse cx="240" cy="80" rx="40" ry="20" fill="${COLORS.azie}" opacity="0.7"/>
-<text x="240" y="84" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">Azië</text>
-<!-- Oceanië -->
-<ellipse cx="265" cy="140" rx="20" ry="10" fill="${COLORS.oceanie}" opacity="0.7"/>
-<text x="265" y="144" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">Oceanië</text>
-<!-- Antarctica -->
-<rect x="40" y="175" width="240" height="10" fill="${COLORS.antarctica}" opacity="0.6"/>
-<text x="160" y="194" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">Antarctica (Zuidpool)</text>
-</svg>`;
-}
-
 const steps = [
   // STAP 1: 7 continenten
   {
     title: "De 7 continenten",
     explanation:
       "De wereld is verdeeld in **7 continenten** *(grote stukken land)*.\n\n**De 7 continenten** *(uit je hoofd!)*:\n1. **Noord-Amerika** — Canada, VS, Mexico.\n2. **Zuid-Amerika** — Brazilië, Argentinië, Peru.\n3. **Europa** — Nederland, Frankrijk, Duitsland.\n4. **Afrika** — Egypte, Zuid-Afrika, Marokko.\n5. **Azië** — China, India, Japan.\n6. **Oceanië** — Australië, Nieuw-Zeeland.\n7. **Antarctica** — geen land, alleen ijs en pinguïns.\n\n**Grootste en kleinste**:\n• **Grootste continent**: Azië (44 miljoen km²).\n• **Kleinste continent**: Oceanië *(of Australië — geldt als één)*.\n• **Koudste**: Antarctica.\n• **Heetste**: Afrika (Sahara-woestijn).\n• **Meeste mensen**: Azië (~4,7 miljard mensen).\n\n**Wonderfeitje — Antarctica**:\n• Niemand woont er permanent.\n• Het is een echte ijswoestijn — temperatuur -50 °C tot -80 °C.\n• Enige 'inwoners': pinguïns, zeehonden, onderzoekers in stations.\n\n**Truc om de continenten te onthouden**:\n**N**ederland-noord, **N**ederland-zuid?\n• **N**oord-Amerika — **Z**uid-Amerika.\n• **E**uropa, **A**zië, **A**frika.\n• **O**ceanië, **A**ntarctica.\nKun je ook onthouden als: 'N, Z, E, A, A, O, A' van groot naar klein.",
-    svg: wereldSvg(),
+    interactiveComponent: Wereldbol,
     checks: [
       {
         q: "Hoeveel **continenten** zijn er?",
