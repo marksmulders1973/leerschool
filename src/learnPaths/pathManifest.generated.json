@@ -7408,6 +7408,22 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "topografie-wereld-hoofdsteden-po",
+    "file": "./topografieWereldHoofdstedenPo.jsx",
+    "title": "Topografie Wereld — landen, hoofdsteden & wereldwonderen",
+    "subject": "aardrijkskunde",
+    "level": "groep8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "aardrijkskunde-topografie-wereld",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "topografie-wereld-werelddelen-po",
     "file": "./topografieWereldWerelddelenPo.jsx",
     "title": "Topografie Wereld — de werelddelen",
