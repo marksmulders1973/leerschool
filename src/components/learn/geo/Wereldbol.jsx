@@ -674,7 +674,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
           return next;
         });
       }
-    }, goed ? 800 : 1000);
+    }, goed ? 1300 : 1100);
   }
 
   const huidige = opdrachten[opdrachtI];
@@ -683,6 +683,15 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
     if (modusState === "werelddeel") return `Wijs ${CONTINENTEN[huidige.key].naam} aan`;
     if (modusState === "hoofdstad") return `Klik op de hoofdstad van ${huidige.naam}`;
     return `Wijs ${huidige.naam} aan${huidige.key ? ` (in ${CONTINENTEN[huidige.key].naam})` : ""}`;
+  };
+  // Naam van de vólgende opdracht (voor de "zoek nu …"-aankondiging na een goed
+  // antwoord). null = dit was de laatste → ronde klaar.
+  const volgendeNaam = () => {
+    const n = opdrachten[opdrachtI + 1];
+    if (!n) return null;
+    if (modusState === "werelddeel") return CONTINENTEN[n.key].naam;
+    if (modusState === "hoofdstad") return `de hoofdstad van ${n.naam}`;
+    return n.naam;
   };
 
   const verbWoord = modusState === "hoofdstad" ? "hoofdstad" : modusState === "land" ? "land" : "werelddeel";
@@ -770,18 +779,27 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
         {status === "laden" && "🌍 De aardbol laadt…"}
         {status === "fout" && "De aardbol kon niet laden — tik op de knop hieronder."}
         {status === "klaar" && stand === "leren" && (info || `🌍 Draai (sleep/veeg), zoom (scroll/2 vingers) en tik op een ${verbWoord} om te ontdekken.`)}
-        {status === "klaar" && stand === "oefenen" && !klaar && (
+        {status === "klaar" && stand === "oefenen" && !klaar && fb === "goed" && (
+          <span style={{ fontSize: 19, fontWeight: 800, color: "#69f0ae" }}>
+            ✅ GOED!
+            {volgendeNaam()
+              ? <span style={{ color: "#fff", fontWeight: 700 }}> — zoek nu {volgendeNaam()} 👇</span>
+              : <span style={{ color: "#ffd54f", fontWeight: 700 }}> 🎉 Alle werelddelen gehad!</span>}
+          </span>
+        )}
+        {status === "klaar" && stand === "oefenen" && !klaar && fb === "fout" && (
+          <span style={{ fontSize: 16, fontWeight: 700, color: "#ff8a8a" }}>❌ Net niet — {opdrachtTekst()}</span>
+        )}
+        {status === "klaar" && stand === "oefenen" && !klaar && !fb && (
           <span style={{ fontSize: 16, fontWeight: 700, color: "#fff" }}>{opdrachtTekst()}</span>
         )}
         {status === "klaar" && stand === "oefenen" && klaar && "🎉 Alle opdrachten gedaan! Kies 'Oefenen' voor een nieuwe ronde."}
       </div>
 
-      {/* Voortgang + feedback (oefenen) */}
+      {/* Voortgang (oefenen) */}
       {status === "klaar" && stand === "oefenen" && !klaar && (
         <div style={{ textAlign: "center", marginBottom: 6, fontFamily: "'Fredoka',sans-serif", fontSize: 13 }}>
           <span style={{ color: "#9fc0e0" }}>{opdrachtI} / {opdrachten.length} goed</span>
-          {fb === "goed" && <span style={{ color: "#69f0ae", fontWeight: 700, marginLeft: 10 }}>✅ Goed!</span>}
-          {fb === "fout" && <span style={{ color: "#ff8a8a", fontWeight: 700, marginLeft: 10 }}>❌ Net niet — probeer nog eens</span>}
         </div>
       )}
 

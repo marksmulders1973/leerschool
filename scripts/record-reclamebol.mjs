@@ -15,7 +15,10 @@ const browser = await chromium.launch({ args: ["--use-gl=swiftshader", "--enable
 const context = await browser.newContext({
   viewport: { width: W, height: H },
   deviceScaleFactor: SCALE,
-  recordVideo: { dir: OUT, size: { width: W * SCALE, height: H * SCALE } },
+  // recordVideo-size MOET de CSS-viewport matchen (Playwright negeert dsf hier;
+  // een grotere size plakt de pagina in de hoek + grijze rest). We schalen na
+  // afloop met ffmpeg op naar 1080x1920.
+  recordVideo: { dir: OUT, size: { width: W, height: H } },
 });
 const page = await context.newPage();
 await page.goto(`http://localhost:${PORT}/?reclamebol`, { waitUntil: "networkidle" });
