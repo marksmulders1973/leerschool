@@ -60,10 +60,58 @@ function classify(naam, lat, lng) {
   return "azie";
 }
 
-// ── Landen + hoofdsteden ──────────────────────────────────────────────────────
-// Sleutel = Engelse naam uit world-atlas. Waarde = [NL-naam, hoofdstad, lat, lng].
-// Alleen bekende landen met een onomstreden hoofdstad → die zijn klikbaar.
-const LANDEN = {
+// ── Landnamen (breed) ─────────────────────────────────────────────────────────
+// Sleutel = Engelse naam uit world-atlas. Waarde = Nederlandse naam.
+// Voor de landnamen op de kaart + de "welk land?"-modus. Veel landen benoemd.
+const LAND_NL = {
+  Afghanistan: "Afghanistan", Angola: "Angola", Albania: "Albanië",
+  "United Arab Emirates": "Ver. Arabische Emiraten", Argentina: "Argentinië", Armenia: "Armenië",
+  Australia: "Australië", Austria: "Oostenrijk", Azerbaijan: "Azerbeidzjan",
+  Burundi: "Burundi", Belgium: "België", Benin: "Benin", "Burkina Faso": "Burkina Faso",
+  Bangladesh: "Bangladesh", Bulgaria: "Bulgarije", Bahamas: "Bahama's",
+  "Bosnia and Herz.": "Bosnië-Herz.", Belarus: "Wit-Rusland", Belize: "Belize",
+  Bolivia: "Bolivia", Brazil: "Brazilië", Brunei: "Brunei", Bhutan: "Bhutan", Botswana: "Botswana",
+  "Central African Rep.": "Centr.-Afrik. Rep.", Canada: "Canada", Switzerland: "Zwitserland",
+  Chile: "Chili", China: "China", "Côte d'Ivoire": "Ivoorkust", Cameroon: "Kameroen",
+  "Dem. Rep. Congo": "DR Congo", Congo: "Congo", Colombia: "Colombia", "Costa Rica": "Costa Rica",
+  Cuba: "Cuba", Cyprus: "Cyprus", Czechia: "Tsjechië", "Czech Rep.": "Tsjechië",
+  Germany: "Duitsland", Djibouti: "Djibouti", Denmark: "Denemarken", "Dominican Rep.": "Dominic. Rep.",
+  Algeria: "Algerije", Ecuador: "Ecuador", Egypt: "Egypte", Eritrea: "Eritrea", Spain: "Spanje",
+  Estonia: "Estland", Ethiopia: "Ethiopië", Finland: "Finland", Fiji: "Fiji", France: "Frankrijk",
+  Gabon: "Gabon", "United Kingdom": "Ver. Koninkrijk", Georgia: "Georgië", Ghana: "Ghana",
+  Guinea: "Guinee", Gambia: "Gambia", Greece: "Griekenland", Greenland: "Groenland",
+  Guatemala: "Guatemala", Guyana: "Guyana", Honduras: "Honduras", Croatia: "Kroatië",
+  Haiti: "Haïti", Hungary: "Hongarije", Indonesia: "Indonesië", India: "India", Ireland: "Ierland",
+  Iran: "Iran", Iraq: "Irak", Iceland: "IJsland", Israel: "Israël", Italy: "Italië",
+  Jamaica: "Jamaica", Jordan: "Jordanië", Japan: "Japan", Kazakhstan: "Kazachstan", Kenya: "Kenia",
+  Kyrgyzstan: "Kirgizië", Cambodia: "Cambodja", "South Korea": "Zuid-Korea", Korea: "Zuid-Korea",
+  "North Korea": "Noord-Korea", Kosovo: "Kosovo", Kuwait: "Koeweit", "Lao PDR": "Laos", Laos: "Laos",
+  Lebanon: "Libanon", Liberia: "Liberia", Libya: "Libië", "Sri Lanka": "Sri Lanka", Lesotho: "Lesotho",
+  Lithuania: "Litouwen", Luxembourg: "Luxemburg", Latvia: "Letland", Morocco: "Marokko",
+  Moldova: "Moldavië", Madagascar: "Madagaskar", Mexico: "Mexico", Macedonia: "N.-Macedonië",
+  "North Macedonia": "N.-Macedonië", Mali: "Mali", Myanmar: "Myanmar", Montenegro: "Montenegro",
+  Mongolia: "Mongolië", Mozambique: "Mozambique", Mauritania: "Mauritanië", Malawi: "Malawi",
+  Malaysia: "Maleisië", Namibia: "Namibië", Niger: "Niger", Nigeria: "Nigeria", Nicaragua: "Nicaragua",
+  Netherlands: "Nederland", Norway: "Noorwegen", Nepal: "Nepal", "New Zealand": "Nieuw-Zeeland",
+  Oman: "Oman", Pakistan: "Pakistan", Panama: "Panama", Peru: "Peru", Philippines: "Filipijnen",
+  "Papua New Guinea": "Papoea-N.-Guinea", Poland: "Polen", Portugal: "Portugal", Paraguay: "Paraguay",
+  Qatar: "Qatar", Romania: "Roemenië", Russia: "Rusland", Rwanda: "Rwanda",
+  "Saudi Arabia": "Saoedi-Arabië", Sudan: "Soedan", "S. Sudan": "Zuid-Soedan", Senegal: "Senegal",
+  "Sierra Leone": "Sierra Leone", "El Salvador": "El Salvador", Somalia: "Somalië", Serbia: "Servië",
+  Suriname: "Suriname", Slovakia: "Slowakije", Slovenia: "Slovenië", Sweden: "Zweden", Syria: "Syrië",
+  Chad: "Tsjaad", Togo: "Togo", Thailand: "Thailand", Tajikistan: "Tadzjikistan",
+  Turkmenistan: "Turkmenistan", "Timor-Leste": "Oost-Timor", "East Timor": "Oost-Timor",
+  Tunisia: "Tunesië", Turkey: "Turkije", Taiwan: "Taiwan", Tanzania: "Tanzania", Uganda: "Oeganda",
+  Ukraine: "Oekraïne", Uruguay: "Uruguay", "United States of America": "Verenigde Staten",
+  "United States": "Verenigde Staten", Uzbekistan: "Oezbekistan", Venezuela: "Venezuela",
+  Vietnam: "Vietnam", Yemen: "Jemen", "South Africa": "Zuid-Afrika", Zambia: "Zambia",
+  Zimbabwe: "Zimbabwe",
+};
+
+// ── Hoofdsteden ───────────────────────────────────────────────────────────────
+// Sleutel = Engelse naam. Waarde = [NL-naam, hoofdstad, lat, lng].
+// Subset met een onomstreden hoofdstad → die krijgen een stip + hoofdstad-vraag.
+const HOOFDSTEDEN = {
   // Europa
   "Netherlands": ["Nederland", "Amsterdam", 52.37, 4.90], "Belgium": ["België", "Brussel", 50.85, 4.35],
   "France": ["Frankrijk", "Parijs", 48.85, 2.35], "Germany": ["Duitsland", "Berlijn", 52.52, 13.40],
@@ -109,7 +157,7 @@ const LANDEN = {
   "Australia": ["Australië", "Canberra", -35.28, 149.13], "New Zealand": ["Nieuw-Zeeland", "Wellington", -41.29, 174.78],
   "Papua New Guinea": ["Papoea-Nieuw-Guinea", "Port Moresby", -9.44, 147.18],
 };
-const ALLE_HOOFD = [...new Set(Object.values(LANDEN).map((v) => v[1]))];
+const ALLE_HOOFD = [...new Set(Object.values(HOOFDSTEDEN).map((v) => v[1]))];
 
 // ── Geometrie-helpers ─────────────────────────────────────────────────────────
 
@@ -204,38 +252,18 @@ function bouwKaart(features, opts, W = 4096, H = 2048) {
     ctx.fillText(tekst, x, y);
   };
 
-  // Bounding-box van de grootste ring (vasteland) → labelmaat afstemmen op het land.
-  const landBox = (info) => {
-    let ring = null, len = -1;
-    for (const poly of info.polys) { const r = poly[0]; if (r && r.length > len) { len = r.length; ring = r; } }
-    if (!ring) return null;
-    let minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
-    for (const [lng, lat] of ring) {
-      const x = X(lng), y = Y(lat);
-      if (x < minX) minX = x; if (x > maxX) maxX = x;
-      if (y < minY) minY = y; if (y > maxY) maxY = y;
-    }
-    return { w: Math.min(maxX - minX, W * 0.18), h: maxY - minY };
-  };
-
-  // 3) Landnamen — geschaald zodat ze min of meer in het land passen.
+  // 3) Landnamen — allemaal even klein, midden in het land.
   if (opts.landnamen) {
     for (const info of infos) {
-      const land = LANDEN[info.naamEn];
-      if (!land) continue;
-      const box = landBox(info);
-      if (!box) continue;
-      let fs = Math.max(8 * s, Math.min(20 * s, box.h * 0.45));
-      ctx.font = `600 ${fs}px 'Fredoka', sans-serif`;
-      const tw = ctx.measureText(land[0]).width;
-      if (tw > box.w * 0.92) fs = Math.max(7 * s, (fs * box.w * 0.92) / tw);
-      halo(land[0], X(info.lng), Y(info.lat), fs);
+      const naam = LAND_NL[info.naamEn];
+      if (!naam) continue;
+      halo(naam, X(info.lng), Y(info.lat), 6 * s);
     }
   }
 
   // 4) Hoofdstad-stippen (+ optioneel hun naam)
   if (opts.stippen) {
-    for (const v of Object.values(LANDEN)) {
+    for (const v of Object.values(HOOFDSTEDEN)) {
       const [, hoofdstad, lat, lng] = v;
       const x = X(lng), y = Y(lat);
       ctx.beginPath();
@@ -277,7 +305,8 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const mountRef = useRef(null);
   const besturingRef = useRef(null);   // { setTextuur } — gezet door three-init
   const alleLandenRef = useRef([]);    // alle landen (continent-detectie)
-  const bekendRef = useRef([]);        // bekende landen (nl/hoofdstad/coord)
+  const landPoolRef = useRef([]);      // benoemde landen (land-modus)
+  const hoofdPoolRef = useRef([]);     // landen met hoofdstad + coord (hoofdstad-modus)
   const modusRef = useRef(modus);
   const standRef = useRef("leren");
   const opdrachtenRef = useRef([]);
@@ -285,6 +314,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const bezigRef = useRef(false);      // even blokkeren tijdens feedback-flits
 
   const [status, setStatus] = useState("laden");   // laden | klaar | fout
+  const [modusState, setModusState] = useState(modus); // werelddeel | land | hoofdstad (start = prop)
   const [stand, setStand] = useState("leren");      // leren | oefenen
   const [info, setInfo] = useState(null);           // ontdek-stand: laatste tekst
   const [opdrachten, setOpdrachten] = useState([]);
@@ -292,15 +322,16 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const [fb, setFb] = useState(null);               // 'goed' | 'fout' | null
   const [klaar, setKlaar] = useState(false);
 
-  useEffect(() => { modusRef.current = modus; }, [modus]);
+  useEffect(() => { modusRef.current = modusState; }, [modusState]);
+  useEffect(() => { setModusState(modus); }, [modus]); // prop verandert (ander leerpad) → volgen
   useEffect(() => { standRef.current = stand; }, [stand]);
   useEffect(() => { opdrachtenRef.current = opdrachten; }, [opdrachten]);
   useEffect(() => { opdrachtIRef.current = opdrachtI; }, [opdrachtI]);
 
   // Bij wissel van modus/stand: juiste textuur opbouwen.
   useEffect(() => {
-    if (besturingRef.current) besturingRef.current.setTextuur(kaartOpties(modus, stand));
-  }, [modus, stand, status]);
+    if (besturingRef.current) besturingRef.current.setTextuur(kaartOpties(modusState, stand));
+  }, [modusState, stand, status]);
 
   // ── Three.js opzetten ──
   useEffect(() => {
@@ -326,9 +357,15 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
           const naamEn = f.properties?.name || "";
           return { naamEn, key: i ? classify(naamEn, i.lat, i.lng) : "azie", polys: i ? i.polys : [] };
         });
-        bekendRef.current = Object.entries(LANDEN).reduce((acc, [naamEn, v]) => {
-          // dubbele NL-namen (alias-keys) overslaan
-          if (!acc.some((x) => x.naam === v[0])) acc.push({ naamEn, naam: v[0], hoofdstad: v[1], lat: v[2], lng: v[3], key: classify(naamEn, v[2], v[3]) });
+        // Land-modus: alle benoemde landen die ook echt op de kaart staan.
+        landPoolRef.current = alleLandenRef.current.reduce((acc, l) => {
+          const naam = LAND_NL[l.naamEn];
+          if (naam && !acc.some((x) => x.naam === naam)) acc.push({ naamEn: l.naamEn, naam, key: l.key });
+          return acc;
+        }, []);
+        // Hoofdstad-modus: subset met hoofdstad + coördinaten.
+        hoofdPoolRef.current = Object.entries(HOOFDSTEDEN).reduce((acc, [naamEn, v]) => {
+          if (!acc.some((x) => x.hoofdstad === v[1])) acc.push({ naamEn, naam: v[0], hoofdstad: v[1], lat: v[2], lng: v[3], key: classify(naamEn, v[2], v[3]) });
           return acc;
         }, []);
 
@@ -438,7 +475,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
           const X = (g) => ((g + 180) / 360) * W, Y = (a) => ((90 - a) / 180) * H;
           const cx = X(lng), cy = Y(lat);
           let beste = null, bestD = 1e9;
-          for (const b of bekendRef.current) {
+          for (const b of hoofdPoolRef.current) {
             const d = Math.hypot(cx - X(b.lng), cy - Y(b.lat));
             if (d < bestD) { bestD = d; beste = b; }
           }
@@ -485,9 +522,10 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
 
           // modus === "land"
           if (!land) return;
-          const bekend = bekendRef.current.find((b) => b.naamEn === land.naamEn);
+          const bekend = landPoolRef.current.find((b) => b.naamEn === land.naamEn);
+          const hs = HOOFDSTEDEN[land.naamEn];
           if (s === "leren") {
-            setInfo(bekend ? `${bekend.naam}${bekend.hoofdstad ? ` — hoofdstad ${bekend.hoofdstad}` : ""}` : `Dit land kennen we (nog) niet.`);
+            setInfo(bekend ? `${bekend.naam}${hs ? ` — hoofdstad ${hs[1]}` : ""}` : `Dit land kennen we (nog) niet.`);
           } else {
             const t = opdrachtenRef.current[opdrachtIRef.current];
             if (!t) return;
@@ -538,7 +576,8 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   // ── Oefen-logica ──
   function bouwOpdrachten(m) {
     if (m === "werelddeel") return shuffle(CONTINENT_KEYS).map((key) => ({ key }));
-    return shuffle(bekendRef.current).slice(0, 8);
+    if (m === "hoofdstad") return shuffle(hoofdPoolRef.current).slice(0, 8);
+    return shuffle(landPoolRef.current).slice(0, 8);
   }
   function startStand(s) {
     setFb(null); setInfo(null); setKlaar(false); bezigRef.current = false;
@@ -548,6 +587,13 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
       setOpdrachtI(0); opdrachtIRef.current = 0;
     }
     setStand(s);
+  }
+  function wisselModus(m) {
+    modusRef.current = m;
+    setModusState(m);
+    setStand("leren"); standRef.current = "leren";
+    setFb(null); setInfo(null); setKlaar(false); setOpdrachten([]);
+    bezigRef.current = false;
   }
   function beoordeel(goed, naam) {
     bezigRef.current = true;
@@ -570,15 +616,37 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
   const huidige = opdrachten[opdrachtI];
   const opdrachtTekst = () => {
     if (!huidige) return "";
-    if (modus === "werelddeel") return `Wijs ${CONTINENTEN[huidige.key].naam} aan`;
-    if (modus === "hoofdstad") return `Klik op de hoofdstad van ${huidige.naam}`;
+    if (modusState === "werelddeel") return `Wijs ${CONTINENTEN[huidige.key].naam} aan`;
+    if (modusState === "hoofdstad") return `Klik op de hoofdstad van ${huidige.naam}`;
     return `Wijs ${huidige.naam} aan${huidige.key ? ` (in ${CONTINENTEN[huidige.key].naam})` : ""}`;
   };
 
-  const verbWoord = modus === "hoofdstad" ? "hoofdstad" : modus === "land" ? "land" : "werelddeel";
+  const verbWoord = modusState === "hoofdstad" ? "hoofdstad" : modusState === "land" ? "land" : "werelddeel";
 
   return (
     <div style={{ width: "100%" }}>
+      {/* Onderwerp-keuze (dropdown) + stand-keuze */}
+      {status === "klaar" && (
+        <div style={{ display: "flex", gap: 8, justifyContent: "center", alignItems: "center", marginBottom: 8, flexWrap: "wrap" }}>
+          <label style={{ fontFamily: "'Fredoka',sans-serif", fontSize: 13, color: "#9fc0e0" }}>
+            Leer:{" "}
+            <select
+              value={modusState}
+              onChange={(e) => wisselModus(e.target.value)}
+              style={{
+                padding: "6px 10px", borderRadius: 10, fontFamily: "'Fredoka',sans-serif",
+                fontSize: 14, fontWeight: 700, cursor: "pointer",
+                border: "2px solid rgba(255,255,255,0.18)", background: "#13283d", color: "#eaf2fb",
+              }}
+            >
+              <option value="werelddeel">🌍 Werelddelen</option>
+              <option value="land">🗺️ Landen</option>
+              <option value="hoofdstad">🏙️ Hoofdsteden</option>
+            </select>
+          </label>
+        </div>
+      )}
+
       {/* Stand-keuze */}
       {status === "klaar" && (
         <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 8 }}>
