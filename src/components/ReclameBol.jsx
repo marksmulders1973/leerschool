@@ -6,15 +6,13 @@
 // Wordt gebruikt om een GIF/video van de draaiende bol op te nemen voor social
 // (FB/IG/Threads) en als klikbare web-promo / landingspagina.
 import React, { Suspense, lazy, useEffect, useState } from "react";
-import supabase from "../supabase.js";
-import { track, getIncomingRef } from "../utils.js";
+import { track } from "../utils.js";
 
 const Wereldbol = lazy(() => import("./learn/geo/Wereldbol.jsx"));
+const TopografieCheck = lazy(() => import("./TopografieCheck.jsx"));
 
 // Deeplink naar het echte leerpad waar de bol in zit.
 const DEEPLINK = "/?pad=continenten-wereld-po";
-// Lokaal vlaggetje zodat we het e-mail-blok niet opnieuw tonen na aanmelden.
-const EMAIL_DONE_KEY = "lk_reclamebol_email_done";
 
 export default function ReclameBol() {
   // Trechter meetbaar maken: log dat iemand via de wereldbol-reclame binnenkwam
@@ -22,44 +20,10 @@ export default function ReclameBol() {
   // overgeslagen, dus deze cijfers zijn schoon.
   useEffect(() => { track("reclamebol_open"); }, []);
 
-  // E-mail-haakje: verschijnt pas ná ~25 sec spelen (eerst de bol laten ontdekken),
-  // tenzij iemand zich hier al eerder aanmeldde.
-  const [emailZichtbaar, setEmailZichtbaar] = useState(false);
-  const [email, setEmail] = useState("");
-  const [emailStatus, setEmailStatus] = useState("idle"); // idle | busy | done | error
-
-  useEffect(() => {
-    let al = false;
-    try { al = localStorage.getItem(EMAIL_DONE_KEY) === "1"; } catch {}
-    if (al) { setEmailStatus("done"); return; }
-    const t = setTimeout(() => {
-      setEmailZichtbaar(true);
-      track("reclamebol_email_shown");
-    }, 25000);
-    return () => clearTimeout(t);
-  }, []);
-
-  const meldEmailAan = async (e) => {
-    e?.preventDefault?.();
-    if (emailStatus === "busy") return;
-    if (!email.includes("@") || !email.includes(".")) { setEmailStatus("error"); return; }
-    setEmailStatus("busy");
-    try {
-      const { error } = await supabase.from("upgrade_waitlist").insert({
-        email: email.trim(),
-        plan: "wereldbol",
-        source: "reclamebol",
-        consent_at: new Date().toISOString(),
-        ref: getIncomingRef(),
-      });
-      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
-      try { localStorage.setItem(EMAIL_DONE_KEY, "1"); } catch {}
-      track("reclamebol_email");
-      setEmailStatus("done");
-    } catch {
-      setEmailStatus("error");
-    }
-  };
+  // Ouder-check (topografie): kind doet de toets → ouder krijgt de uitslag + 10
+  // oefenvragen mét uitleg per mail. Dit is de e-mail-capture van de wereldbol.
+  const [checkOpen, setCheckOpen] = useState(false);
+  const openCheck = () => { setCheckOpen(true); track("topocheck_open_from_bol"); };
 
   return (
     <div
@@ -146,69 +110,23 @@ export default function ReclameBol() {
         leerkwartier.app · een kwartier per dag, écht begrijpen wat je leert
       </p>
 
-      {/* E-mail-haakje — verschijnt na ~25s spelen: bewaar voortgang + gratis
-          oefenblad. Schrijft naar upgrade_waitlist (plan 'wereldbol'). */}
-      {emailZichtbaar && (
-        <form
-          onSubmit={meldEmailAan}
+      {/* Ouder-check entry: kind doet de toets → ouder krijgt uitslag + 10
+          oefenvragen mét uitleg per mail. Dit is de e-mail-capture. */}
+      {!checkOpen ? (
+        <button
+          onClick={openCheck}
           style={{
-            marginTop: 24, width: "100%", maxWidth: 460,
-            background: "rgba(0,200,83,0.10)",
-            border: "1.5px solid rgba(0,200,83,0.35)",
-            borderRadius: 16, padding: "16px 18px", textAlign: "center",
-            animation: "lkFadeUp 0.4s ease",
+            marginTop: 22, padding: "13px 24px", borderRadius: 999, border: "2px solid rgba(0,200,83,0.55)",
+            background: "rgba(0,200,83,0.12)", color: "#69f0ae",
+            fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, cursor: "pointer",
           }}
         >
-          <style>{`@keyframes lkFadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}`}</style>
-          {emailStatus === "done" ? (
-            <div style={{ color: "#69f0ae", fontWeight: 700, fontSize: 15 }}>
-              ✅ Gelukt! We sturen je het gratis oefenblad. Tot snel 🌍
-            </div>
-          ) : (
-            <>
-              <div style={{ fontSize: 16, fontWeight: 800, color: "#69f0ae", marginBottom: 4 }}>
-                📩 Wil je het gratis topografie-oefenblad?
-              </div>
-              <p style={{ margin: "0 0 12px", fontSize: 13, color: "#bcd6f2" }}>
-                Laat je e-mail achter — we sturen je het printbare oefenblad (PDF) +
-                af en toe een tip. Uitschrijven kan altijd.
-              </p>
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => { setEmail(e.target.value); if (emailStatus === "error") setEmailStatus("idle"); }}
-                  placeholder="jouw@email.nl"
-                  style={{
-                    flex: "1 1 200px", minWidth: 0, boxSizing: "border-box",
-                    padding: "11px 14px", borderRadius: 10,
-                    border: "2px solid rgba(255,255,255,0.18)",
-                    background: "#0e2236", color: "#eaf2fb",
-                    fontFamily: "'Fredoka', sans-serif", fontSize: 15,
-                  }}
-                />
-                <button
-                  type="submit"
-                  disabled={emailStatus === "busy"}
-                  style={{
-                    padding: "11px 20px", borderRadius: 10, border: "none",
-                    background: "linear-gradient(180deg,#00e676,#00c853)",
-                    color: "#04210f", fontWeight: 800, fontSize: 15,
-                    cursor: emailStatus === "busy" ? "default" : "pointer",
-                    whiteSpace: "nowrap", fontFamily: "'Fredoka', sans-serif",
-                  }}
-                >
-                  {emailStatus === "busy" ? "Versturen…" : "Stuur me het oefenblad"}
-                </button>
-              </div>
-              {emailStatus === "error" && (
-                <div style={{ marginTop: 8, color: "#ff8a8a", fontSize: 13 }}>
-                  Vul een geldig e-mailadres in.
-                </div>
-              )}
-            </>
-          )}
-        </form>
+          📝 Doe de topografie-check — gratis oefenblad in je mail
+        </button>
+      ) : (
+        <Suspense fallback={<div style={{ marginTop: 24, color: "#9fc0e0" }}>laden…</div>}>
+          <TopografieCheck />
+        </Suspense>
       )}
     </div>
   );
