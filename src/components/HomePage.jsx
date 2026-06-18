@@ -617,47 +617,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           <ProefVraagKaart onStart={() => handleFeatureClick("cito")} />
         )}
 
-        {/* Zoekbalk op de home (Mark 2026-06-14): bezoekers landen op home/deeplink
-            maar de leerpaden-zoekbalk stond alleen in de hub. Hier kun je direct
-            een onderwerp zoeken (bv. "begrijpend lezen") → springt naar de
-            gefilterde leerpaden-lijst. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
-            <div style={{
-              display: "flex", gap: 8, alignItems: "center",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.16)",
-              borderRadius: 999, padding: "6px 6px 6px 16px",
-            }}>
-              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
-              <input
-                type="search"
-                value={homeSearch}
-                onChange={(e) => setHomeSearch(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
-                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
-                aria-label="Zoek een onderwerp"
-                style={{
-                  flex: 1, minWidth: 0, border: "none", outline: "none",
-                  background: "transparent", color: "#fff",
-                  fontFamily: "var(--font-body)", fontSize: 14,
-                }}
-              />
-              <button
-                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
-                aria-label="Zoeken"
-                style={{
-                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
-                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
-                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
-                  padding: "9px 18px",
-                }}
-              >
-                Zoek
-              </button>
-            </div>
-          </div>
-        )}
+        {/* Zoekbalk verplaatst naar ONDER het oefenpakket (Robert-tip 18 jun:
+            rustiger eerste scherm). Stond hier direct onder de hero en concurreerde
+            met de hoofd-CTA + de "doe één vraag"-kaart. */}
 
         {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
             verhaal i.p.v. klacht-quotes over concurrenten. Vóór de oefenpakket-kaart
@@ -712,6 +674,46 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
             </button>
+          </div>
+        )}
+
+        {/* Zoekbalk — power-functie voor wie al weet wat hij zoekt. Bewust ONDER
+            de hero/oefenpakket (Robert-tip 18 jun: minder keuzes in het eerste scherm). */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
+            <div style={{
+              display: "flex", gap: 8, alignItems: "center",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.16)",
+              borderRadius: 999, padding: "6px 6px 6px 16px",
+            }}>
+              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
+              <input
+                type="search"
+                value={homeSearch}
+                onChange={(e) => setHomeSearch(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
+                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
+                aria-label="Zoek een onderwerp"
+                style={{
+                  flex: 1, minWidth: 0, border: "none", outline: "none",
+                  background: "transparent", color: "#fff",
+                  fontFamily: "var(--font-body)", fontSize: 14,
+                }}
+              />
+              <button
+                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
+                aria-label="Zoeken"
+                style={{
+                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
+                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
+                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+                  padding: "9px 18px",
+                }}
+              >
+                Zoek
+              </button>
+            </div>
           </div>
         )}
 
