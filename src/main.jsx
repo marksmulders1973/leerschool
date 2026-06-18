@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import ReclameBol from "./components/ReclameBol.jsx";
+import { BioPlaatPagina } from "./components/learn/bio/KlikbarePlaat.jsx";
+import { BIO_PLATEN } from "./data/bioPlaten.jsx";
 import ErrorBoundary, { isChunkLoadError, recoverFromChunkError } from "./app/ErrorBoundary.jsx";
 import { Analytics } from "@vercel/analytics/react";
 import "./shared/tokens.css";
@@ -33,14 +35,26 @@ if (typeof window !== "undefined") {
 // Verborgen promo-/showcase-route voor de 3D-wereldbol (?reclamebol). Vóór de
 // App-router afgevangen zodat we de hook-volgorde van App.jsx niet raken én geen
 // rolkeuze/onboarding-chrome tonen op de opname.
-const isReclameBol =
-  typeof window !== "undefined" && /[?&]reclamebol\b/.test(window.location.search);
+const _params =
+  typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
+const isReclameBol = _params.has("reclamebol");
+// ?bioplaat=cel — directe showcase van een interactieve biologie-plaat (idee van
+// gebruiker "bob"). Zelfde aanpak als ?reclamebol: vóór de App-router afgevangen.
+const bioPlaatId = _params.get("bioplaat");
 
 if (isReclameBol) {
   ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
       <ErrorBoundary>
         <ReclameBol />
+      </ErrorBoundary>
+    </React.StrictMode>
+  );
+} else if (bioPlaatId && BIO_PLATEN[bioPlaatId]) {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <ErrorBoundary>
+        <BioPlaatPagina plaat={BIO_PLATEN[bioPlaatId]} />
       </ErrorBoundary>
     </React.StrictMode>
   );
