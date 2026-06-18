@@ -193,5 +193,120 @@ const oog = {
   ],
 };
 
-export const BIO_PLATEN = { cel, oog };
+// ── Fotosynthese (proces: in- en uitgangen klikbaar) ─────────────────────────
+const fotosynthese = {
+  id: "fotosynthese",
+  titel: "Fotosynthese",
+  ondertitel: "Tik op een onderdeel van het proces 👆",
+  viewBox: "0 0 420 360",
+  onderdelen: [
+    {
+      id: "wortels",
+      label: "Wortels",
+      kleur: "#8d6e63",
+      uitleg: "De wortels zuigen water (en mineralen) uit de grond op en sturen het via de stengel omhoog naar de bladeren.",
+      el: (
+        <g>
+          <rect x="0" y="300" width="420" height="60" fill="#6d4c41" />
+          <rect x="0" y="300" width="420" height="9" fill="#8d6e63" />
+          <rect x="208" y="212" width="10" height="92" fill="#558b2f" />
+          <g stroke="#5d4037" strokeWidth="5" strokeLinecap="round" fill="none">
+            <path d="M213 308 q-26 16 -40 44" /><path d="M213 310 q4 26 0 46" /><path d="M213 308 q26 16 38 42" />
+          </g>
+        </g>
+      ),
+    },
+    {
+      id: "water",
+      label: "Water (H₂O)",
+      kleur: "#29b6f6",
+      uitleg: "Water is een grondstof voor de plant. Het komt via de wortels binnen en gaat omhoog naar het blad, waar het wordt gebruikt.",
+      el: (
+        <g>
+          <g fill="#29b6f6"><path d="M120 298 q-8 12 0 18 q8 -6 0 -18 Z" /><path d="M138 306 q-7 10 0 15 q7 -5 0 -15 Z" /></g>
+          <path d="M150 318 L186 248" stroke="#29b6f6" strokeWidth="4" strokeLinecap="round" />
+          <polygon points="186,248 178,259 190,258" fill="#29b6f6" />
+        </g>
+      ),
+    },
+    {
+      id: "zonlicht",
+      label: "Zonlicht",
+      kleur: "#ffb300",
+      uitleg: "De energie voor het proces. De plant vangt zonlicht op om er suiker mee te maken — zonder licht geen fotosynthese.",
+      el: (
+        <g>
+          <circle cx="58" cy="56" r="26" fill="#ffd54f" />
+          <g stroke="#ffd54f" strokeWidth="5" strokeLinecap="round">
+            <line x1="58" y1="16" x2="58" y2="6" /><line x1="20" y1="56" x2="10" y2="56" />
+            <line x1="30" y1="28" x2="23" y2="21" /><line x1="30" y1="84" x2="23" y2="91" /><line x1="86" y1="28" x2="93" y2="21" />
+          </g>
+          <path d="M82 78 L150 138" stroke="#ffca28" strokeWidth="4" strokeDasharray="2 7" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      id: "co2",
+      label: "Koolstofdioxide (CO₂)",
+      kleur: "#90a4ae",
+      uitleg: "Het gas CO₂ uit de lucht. Komt via kleine gaatjes in het blad (huidmondjes) naar binnen. Dit is óók een grondstof.",
+      el: (
+        <g>
+          <g fill="#b0bec5"><ellipse cx="362" cy="118" rx="34" ry="19" /><circle cx="344" cy="110" r="13" /><circle cx="374" cy="108" r="15" /></g>
+          <text x="362" y="124" fill="#37474f" fontSize="15" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">CO₂</text>
+          <path d="M330 128 L288 150" stroke="#90a4ae" strokeWidth="4" strokeLinecap="round" />
+          <polygon points="288,150 299,144 297,154" fill="#90a4ae" />
+        </g>
+      ),
+    },
+    {
+      id: "zuurstof",
+      label: "Zuurstof (O₂)",
+      kleur: "#4fc3f7",
+      uitleg: "Zuurstof komt vrij als 'restproduct' en gaat de lucht in — handig, want dít ademen mens en dier juist in!",
+      el: (
+        <g>
+          <g fill="#81d4fa"><ellipse cx="300" cy="56" rx="29" ry="17" /><circle cx="286" cy="50" r="12" /></g>
+          <text x="300" y="62" fill="#01579b" fontSize="15" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">O₂</text>
+          <path d="M286 118 L296 80" stroke="#4fc3f7" strokeWidth="4" strokeLinecap="round" />
+          <polygon points="296,80 289,91 301,90" fill="#4fc3f7" />
+        </g>
+      ),
+    },
+    {
+      id: "bladgroen",
+      label: "Bladgroen",
+      kleur: "#2e7d32",
+      uitleg: "Bladgroen (chlorofyl) zit in de bladgroenkorrels en is groen. Het vangt het zonlicht op — dít is de plek waar de fotosynthese gebeurt.",
+      el: (
+        <g>
+          <path d="M150 210 C150 112 252 110 286 150 C300 214 210 246 150 210 Z" fill="#43a047" stroke="#2e7d32" strokeWidth="3" />
+          <path d="M156 207 C202 184 246 160 282 150" stroke="#2e7d32" strokeWidth="3" fill="none" />
+          <g fill="#1b5e20"><circle cx="196" cy="174" r="6" /><circle cx="226" cy="164" r="6" /><circle cx="210" cy="194" r="6" /><circle cx="246" cy="180" r="6" /></g>
+        </g>
+      ),
+    },
+    {
+      id: "glucose",
+      label: "Glucose (suiker)",
+      kleur: "#fb8c00",
+      uitleg: "Glucose (suiker) is wat de plant zélf maakt — z'n eigen voedsel om van te groeien. Dit is het belangrijkste product van de fotosynthese.",
+      el: (
+        <g>
+          <circle cx="226" cy="232" r="21" fill="#fff3e0" stroke="#fb8c00" strokeWidth="3" />
+          <text x="226" y="237" fill="#e65100" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">suiker</text>
+        </g>
+      ),
+    },
+  ],
+  vragen: [
+    { vraag: "Wat heeft een plant nodig om fotosynthese te doen?", opties: ["Alleen water", "Zonlicht, CO₂ en water", "Alleen zuurstof", "Suiker en zuurstof"], antwoord: 1, uitleg: "De grondstoffen zijn zonlicht (energie), CO₂ en water." },
+    { vraag: "Wat MAAKT de plant bij fotosynthese?", opties: ["Zonlicht", "Glucose (suiker) en zuurstof", "Alleen CO₂", "Alleen water"], antwoord: 1, uitleg: "De producten zijn glucose (voedsel) + zuurstof." },
+    { vraag: "Waar gebeurt de fotosynthese?", opties: ["In de wortels", "In het bladgroen", "In de bloem", "In de stengel"], antwoord: 1, uitleg: "In de bladgroenkorrels (chlorofyl) in het blad." },
+    { vraag: "Welk gas komt vrij dat mens en dier inademen?", opties: ["Koolstofdioxide", "Zuurstof", "Waterstof", "Stikstof"], antwoord: 1, uitleg: "Zuurstof (O₂) komt vrij — dat ademen wij in." },
+    { vraag: "Hoe komt het water in de plant?", opties: ["Via de bladeren", "Via de wortels", "Via de bloemen", "Via de lucht"], antwoord: 1, uitleg: "De wortels zuigen water uit de grond op." },
+  ],
+};
+
+export const BIO_PLATEN = { cel, oog, fotosynthese };
 export default BIO_PLATEN;
