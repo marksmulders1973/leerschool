@@ -381,5 +381,174 @@ const hart = {
   ],
 };
 
-export const BIO_PLATEN = { cel, oog, fotosynthese, hart };
+// ── De zenuwcel (neuron) ─────────────────────────────────────────────────────
+const zenuwcel = {
+  id: "zenuwcel",
+  titel: "De zenuwcel",
+  ondertitel: "Tik op een onderdeel — het signaal loopt van links naar rechts 👆",
+  viewBox: "0 0 480 300",
+  onderdelen: [
+    {
+      id: "dendrieten",
+      label: "Dendrieten",
+      kleur: "#43a047",
+      uitleg: "De vertakkingen die signalen (prikkels) van andere zenuwcellen OPVANGEN en naar het cellichaam brengen.",
+      el: (
+        <g stroke="#43a047" strokeWidth="4" fill="none" strokeLinecap="round">
+          <path d="M120 150 q-42 -30 -72 -56" /><path d="M120 150 q-48 -10 -88 -14" />
+          <path d="M120 150 q-40 26 -74 50" /><path d="M120 150 q-26 42 -40 72" />
+          <path d="M48 94 l-12 -8 M48 94 l-3 -14 M32 136 l-14 -3 M46 200 l-9 12 M80 222 l-3 14" />
+        </g>
+      ),
+    },
+    {
+      id: "cellichaam",
+      label: "Cellichaam (soma)",
+      kleur: "#7e57c2",
+      uitleg: "Het cellichaam met de kern. Hier worden de binnenkomende signalen 'opgeteld'; is het samen sterk genoeg, dan ontstaat een nieuwe prikkel.",
+      el: (
+        <g>
+          <circle cx="135" cy="150" r="38" fill="#9575cd" stroke="#5e35b1" strokeWidth="2" />
+          <circle cx="135" cy="150" r="14" fill="#4527a0" />
+        </g>
+      ),
+    },
+    {
+      id: "axon",
+      label: "Axon (zenuwvezel)",
+      kleur: "#5c6bc0",
+      uitleg: "De lange uitloper die de prikkel WEGstuurt — soms wel een meter lang. Het signaal reist hier als een klein elektrisch pulsje (de actiepotentiaal).",
+      el: <line x1="172" y1="150" x2="430" y2="150" stroke="#5c6bc0" strokeWidth="8" strokeLinecap="round" />,
+    },
+    {
+      id: "myelineschede",
+      label: "Myelineschede",
+      kleur: "#f9a825",
+      uitleg: "Een vetlaagje dat als isolatie om het axon zit. Het laat de prikkel veel sneller 'springen' van knoop naar knoop.",
+      el: (
+        <g fill="#ffd54f" stroke="#f9a825" strokeWidth="2">
+          <ellipse cx="220" cy="150" rx="24" ry="14" /><ellipse cx="290" cy="150" rx="24" ry="14" /><ellipse cx="360" cy="150" rx="24" ry="14" />
+        </g>
+      ),
+    },
+    {
+      id: "knoop",
+      label: "Knoop van Ranvier",
+      kleur: "#3949ab",
+      uitleg: "De kleine kale plekjes tussen de myeline. De prikkel springt van knoop naar knoop — daardoor gaat hij supersnel.",
+      el: (
+        <g fill="#283593">
+          <circle cx="255" cy="150" r="5" /><circle cx="325" cy="150" r="5" /><circle cx="190" cy="150" r="5" />
+        </g>
+      ),
+    },
+    {
+      id: "synaps",
+      label: "Synaps (uiteinde)",
+      kleur: "#fb8c00",
+      uitleg: "Het uiteinde waar de prikkel wordt doorgegeven aan de volgende zenuwcel of een spier — met kleine stofjes (neurotransmitters).",
+      el: (
+        <g>
+          <g stroke="#5c6bc0" strokeWidth="4" fill="none" strokeLinecap="round">
+            <path d="M430 150 q22 -22 40 -32" /><path d="M430 150 q24 0 44 2" /><path d="M430 150 q22 22 38 34" />
+          </g>
+          <g fill="#fb8c00"><circle cx="472" cy="116" r="7" /><circle cx="476" cy="152" r="7" /><circle cx="470" cy="186" r="7" /></g>
+        </g>
+      ),
+    },
+  ],
+  vragen: [
+    { vraag: "Wat vangen de dendrieten op?", opties: ["Bloed", "Signalen van andere zenuwcellen", "Zuurstof", "Voedsel"], antwoord: 1, uitleg: "Dendrieten vangen prikkels van andere cellen op." },
+    { vraag: "Welk deel stuurt de prikkel weg, soms wel een meter ver?", opties: ["De dendrieten", "Het axon", "Het cellichaam", "De synaps"], antwoord: 1, uitleg: "Het axon is de lange uitloper die het signaal wegstuurt." },
+    { vraag: "Wat doet de myelineschede?", opties: ["Maakt het signaal langzamer", "Isoleert en versnelt het signaal", "Maakt nieuwe cellen", "Vangt signalen op"], antwoord: 1, uitleg: "Myeline isoleert; de prikkel springt sneller van knoop naar knoop." },
+    { vraag: "Waar wordt de prikkel doorgegeven aan de volgende cel?", opties: ["In het cellichaam", "Bij de synaps", "In het axon", "Bij de dendrieten"], antwoord: 1, uitleg: "Bij de synaps, via neurotransmitters." },
+    { vraag: "Hoe reist de prikkel door het axon?", opties: ["Als bloed", "Als een klein elektrisch pulsje", "Als water", "Als lucht"], antwoord: 1, uitleg: "Als een elektrisch pulsje: de actiepotentiaal." },
+  ],
+};
+
+// ── De actiepotentiaal (spanning–tijd-grafiek met klikbare fasen) ─────────────
+const actiepotentiaal = {
+  id: "actiepotentiaal",
+  titel: "De actiepotentiaal",
+  ondertitel: "Tik op een fase van het signaal 👆 (spanning binnen in de cel)",
+  viewBox: "0 0 440 300",
+  onderdelen: [
+    {
+      id: "rustpotentiaal",
+      label: "Rustpotentiaal",
+      kleur: "#90a4b8",
+      uitleg: "In rust is de binnenkant van de zenuwcel negatief (ongeveer −70 mV). De cel 'wacht' op een prikkel.",
+      el: (
+        <g fontFamily="sans-serif">
+          <line x1="48" y1="95" x2="48" y2="272" stroke="#6b7a90" strokeWidth="2" />
+          <line x1="48" y1="272" x2="422" y2="272" stroke="#6b7a90" strokeWidth="2" />
+          <line x1="48" y1="150" x2="422" y2="150" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
+          <text x="42" y="117" fill="#9fc0e0" fontSize="11" textAnchor="end">+30</text>
+          <text x="42" y="154" fill="#9fc0e0" fontSize="11" textAnchor="end">0</text>
+          <text x="42" y="242" fill="#9fc0e0" fontSize="11" textAnchor="end">−70</text>
+          <text x="236" y="291" fill="#9fc0e0" fontSize="11" textAnchor="middle">tijd →</text>
+          <path d="M48 238 L140 238 M300 238 L420 238" stroke="#90a4b8" strokeWidth="4" fill="none" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      id: "drempel",
+      label: "Drempelwaarde",
+      kleur: "#ffb300",
+      uitleg: "Pas als de prikkel groot genoeg is en de drempelwaarde (~ −55 mV) haalt, gaat de actiepotentiaal áf. Het is alles-of-niets.",
+      el: (
+        <g fontFamily="sans-serif">
+          <line x1="48" y1="219" x2="420" y2="219" stroke="#ffb300" strokeWidth="1.5" strokeDasharray="4 5" />
+          <circle cx="160" cy="219" r="7" fill="#ffb300" />
+          <text x="160" y="209" fill="#ffd54f" fontSize="10" textAnchor="middle">drempel</text>
+        </g>
+      ),
+    },
+    {
+      id: "depolarisatie",
+      label: "Depolarisatie",
+      kleur: "#ef5350",
+      uitleg: "Natrium (Na⁺) stroomt razendsnel naar binnen → de spanning schiet omhoog tot ongeveer +30 mV. Dit is de piek.",
+      el: (
+        <g>
+          <path d="M140 238 L160 219 L185 113" stroke="#ef5350" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="172" cy="162" r="7" fill="#ef5350" />
+        </g>
+      ),
+    },
+    {
+      id: "repolarisatie",
+      label: "Repolarisatie",
+      kleur: "#42a5f5",
+      uitleg: "Kalium (K⁺) stroomt naar buiten → de spanning daalt weer terug naar negatief.",
+      el: (
+        <g>
+          <path d="M185 113 L235 248" stroke="#42a5f5" strokeWidth="5" fill="none" strokeLinecap="round" />
+          <circle cx="210" cy="182" r="7" fill="#42a5f5" />
+        </g>
+      ),
+    },
+    {
+      id: "hyperpolarisatie",
+      label: "Hyperpolarisatie",
+      kleur: "#7e57c2",
+      uitleg: "Heel even té negatief (onder −70 mV) — een korte 'rustpauze' waarin de cel niet meteen opnieuw kan vuren. Daarna terug naar rust.",
+      el: (
+        <g>
+          <path d="M235 248 Q252 257 300 238" stroke="#7e57c2" strokeWidth="5" fill="none" strokeLinecap="round" />
+          <circle cx="262" cy="251" r="7" fill="#7e57c2" />
+        </g>
+      ),
+    },
+  ],
+  vragen: [
+    { vraag: "Wat is de rustpotentiaal van een zenuwcel ongeveer?", opties: ["0 mV", "−70 mV", "+30 mV", "+70 mV"], antwoord: 1, uitleg: "In rust is de binnenkant ~ −70 mV." },
+    { vraag: "Wanneer gaat een actiepotentiaal áf?", opties: ["Altijd, automatisch", "Als de prikkel de drempelwaarde haalt", "Alleen 's nachts", "Nooit"], antwoord: 1, uitleg: "Pas boven de drempel (~ −55 mV): alles-of-niets." },
+    { vraag: "Wat gebeurt er bij de depolarisatie?", opties: ["Natrium stroomt naar binnen, spanning omhoog", "De cel gaat dood", "Kalium stroomt naar buiten", "Er gebeurt niets"], antwoord: 0, uitleg: "Na⁺ naar binnen → piek tot ~ +30 mV." },
+    { vraag: "Het principe 'het gaat helemaal AF of helemaal niet' heet…", opties: ["Alles-of-niets", "Half-om-half", "Langzaam-aan", "Stap-voor-stap"], antwoord: 0, uitleg: "De actiepotentiaal is alles-of-niets." },
+    { vraag: "Wat zorgt voor het herstel (repolarisatie)?", opties: ["Natrium naar binnen", "Kalium naar buiten", "Bloed", "Zuurstof"], antwoord: 1, uitleg: "K⁺ stroomt naar buiten → spanning daalt weer." },
+  ],
+};
+
+export const BIO_PLATEN = { cel, oog, fotosynthese, hart, zenuwcel, actiepotentiaal };
 export default BIO_PLATEN;
