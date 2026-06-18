@@ -107,12 +107,20 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
   if (step === "done") {
     return (
       <div style={wrap}>
-        <div style={titel}><span aria-hidden="true">📩</span> Elke week 15 minuten gratis extra lesmateriaal</div>
+        <div style={titel}><span aria-hidden="true">📩</span> Elke week een gratis oefenvraag in je mail</div>
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>
-          ✅ Gelukt — je staat op de lijst! Je ontvangt binnenkort je eerste gratis oefenkwartiertje.
+          ✅ Gelukt — je staat op de lijst! Je ontvangt binnenkort je eerste gratis oefenvraag.
           {onPrintPakket && (
             <> {" "}<button onClick={onPrintPakket} style={linkBtn}>Nu al oefenen? Print het gratis oefenpakket →</button></>
           )}
+        </div>
+        {/* Help ons helpen (Mark 2026-06-18): vriendelijke wederkerigheid ná aanmelden. */}
+        <div style={{
+          marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.12)",
+          fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5,
+        }}>
+          💛 <strong style={{ color: "#fff" }}>Help ons helpen.</strong> Leerkwartier is gratis en gemaakt door één vader.
+          Mis je iets of kan iets beter? <a href="/tips" style={{ color: "#69f0ae", fontWeight: 700 }}>Geef de maker een tip →</a>
         </div>
       </div>
     );
@@ -120,13 +128,14 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
 
   return (
     <div style={wrap}>
-      <div style={titel}>{title || <><span aria-hidden="true">📩</span> Elke week 15 minuten gratis extra lesmateriaal</>}</div>
+      <div style={titel}>{title || <><span aria-hidden="true">📩</span> Elke week een gratis oefenvraag in je mail</>}</div>
 
       {step === "email" && (
         <>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.5, marginBottom: 12 }}>
-            Laat je e-mail achter en ontvang elke week een nieuw oefenkwartiertje voor de
-            Doorstroomtoets — gratis in je mail. Geen spam, uitschrijven kan altijd.
+            Laat je e-mail achter en ontvang elke week één gratis oefenvraag voor de
+            Doorstroomtoets — om samen met je kind te maken. Geen nieuwsbrief, gewoon één
+            goede vraag (of mini-test). Uitschrijven kan altijd.
           </div>
 
           <form onSubmit={naarProfiel}>
@@ -144,7 +153,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
                 style={{ marginTop: 3, width: 18, height: 18, flexShrink: 0, accentColor: "#00C853" }}
               />
               <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.7)", lineHeight: 1.45 }}>
-                Ik ben de ouder/verzorger en geef toestemming om wekelijks gratis lesmateriaal op
+                Ik ben de ouder/verzorger en geef toestemming om wekelijks een gratis oefenvraag op
                 dit adres te ontvangen.{" "}
                 <a href="/privacy.html" target="_blank" rel="noreferrer" style={{ color: "#69f0ae" }}>Privacybeleid</a>.
               </span>
