@@ -42,10 +42,12 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
   // P0-2 (4-agent-audit 2026-05-18): simulatieMode = volledige Doorstroomtoets-
-  // simulatie (50 vragen, 60 min) met niveau-advies. Anders losse-onderdeel-test
-  // (15 vragen, 15 min default).
+  // simulatie (50 vragen, 60 min) met niveau-advies. Anders losse-onderdeel-test.
+  // Default verlaagd 15→5 vragen (18 jun, na dagrapport: 8 starts → 1 afronding,
+  // 87% haakt na vraag 1 af). Snelle "even kijken waar je staat"-check; wie meer
+  // wil kan opschalen naar 15/30.
   const [config, setConfig] = useState(
-    simulatieMode ? { count: 50, minutes: 60 } : { count: 15, minutes: 15 }
+    simulatieMode ? { count: 50, minutes: 60 } : { count: 5, minutes: 5 }
   );
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
@@ -189,29 +191,45 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
             </div>
           ) : (
             <>
-              <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 18 }}>
-                Een echte oefen-toets met vragen uit de leerpaden die je hier op Leerkwartier hebt gedaan.
+              <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 14 }}>
+                Even kijken waar je staat — een korte oefen-toets met vragen uit de leerpaden van Leerkwartier.
                 Mix van <strong style={{ color: PIJLER_COLOR.rekenen }}>rekenen</strong>,{" "}
                 <strong style={{ color: PIJLER_COLOR.taal }}>taal</strong> en{" "}
                 <strong style={{ color: PIJLER_COLOR.studievaardigheden }}>studievaardigheden</strong>.
               </p>
+
+              {/* Tijdsverwachting vooraf (18 jun): zet de drempel laag — bezoekers
+                  haakten af bij 15 vragen zonder te weten hoe lang het duurt. */}
+              <div style={{
+                display: "flex", alignItems: "center", gap: 10, marginBottom: 18,
+                padding: "12px 14px", borderRadius: 12,
+                background: "rgba(0,200,83,0.10)", border: "1px solid rgba(0,200,83,0.35)",
+              }}>
+                <span style={{ fontSize: 22 }} aria-hidden="true">⏱️</span>
+                <div style={{ fontSize: 13.5, lineHeight: 1.45, color: C.text }}>
+                  <strong style={{ color: C.good }}>Klaar in ~2 minuten.</strong>{" "}
+                  {config.count} korte vragen — geen voorbereiding nodig, gewoon beginnen.
+                </div>
+              </div>
 
               <div style={{ ...cardStyle(), marginBottom: 14 }}>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: C.warm, marginBottom: 6 }}>
                   ⏱️ Hoe het werkt
                 </div>
                 <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
-                  <li>{config.count} meerkeuze-vragen</li>
-                  <li>{config.minutes} minuten countdown</li>
+                  <li>{config.count} meerkeuze-vragen — voortgangsbalk laat zien hoe ver je bent</li>
+                  <li>{config.minutes} minuten de tijd (ruim genoeg)</li>
                   <li>Je kunt vooruit en terug navigeren</li>
-                  <li>Aan het einde: score per onderdeel + hints</li>
+                  <li>Aan het einde: score per onderdeel + uitleg bij fouten</li>
                 </ul>
               </div>
 
               <div style={{ marginBottom: 14 }}>
-                <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Aantal vragen</div>
+                <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>
+                  Aantal vragen <span style={{ fontWeight: 400, opacity: 0.7 }}>(5 = snelle check, meer = uitgebreider)</span>
+                </div>
                 <div style={{ display: "flex", gap: 8 }}>
-                  {[15, 30, 50].map((n) => (
+                  {[5, 15, 30].map((n) => (
                     <button
                       key={n}
                       onClick={() => setConfig((c) => ({ ...c, count: n, minutes: Math.round(n) }))}
@@ -226,7 +244,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               <div style={{ marginBottom: 22 }}>
                 <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Minuten</div>
                 <div style={{ display: "flex", gap: 8 }}>
-                  {[15, 30, 60].map((m) => (
+                  {[5, 15, 30].map((m) => (
                     <button
                       key={m}
                       onClick={() => setConfig((c) => ({ ...c, minutes: m }))}
@@ -241,7 +259,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           )}
 
           <button onClick={start} disabled={loading} style={{ ...btnPrimary(), opacity: loading ? 0.6 : 1, cursor: loading ? "wait" : "pointer" }}>
-            {loading ? "⏳ Vragen laden…" : (simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : "🚀 Start oefen-Doorstroomtoets")}
+            {loading ? "⏳ Vragen laden…" : (simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : `🚀 Start — ${config.count} ${config.count === 1 ? "vraag" : "vragen"}${config.count <= 5 ? " · ~2 min" : ""}`)}
           </button>
         </div>
       </div>
