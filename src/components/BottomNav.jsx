@@ -20,28 +20,40 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 // hetzelfde was verwarrend. Vervangen door "Toets maken" (leerkracht-route)
 // als ontdekbare ingang naar de Pro-kritische leerkracht-flow.
 
-const ALL_TABS = [
-  { id: "home",            label: "Home",         emoji: "🏠", target: "_home" },
-  { id: "leren",           label: "Leren",        emoji: "📚", target: "learn-paths-hub" },
-  { id: "toets-maken",     label: "Toets maken",  emoji: "📝", target: "teacher-home" },
-  // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
-  // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
-  { id: "spel",            label: "Spel",         emoji: "🎮", target: "spellen", gameRelated: true },
-  // Mark wens 2026-06-05: "Tip aan de maker" als vaste ingang in de bottom-nav.
-  { id: "tips",            label: "Tips",         emoji: "💬", target: "wishes" },
-];
+// Rol-bewuste tabs (browsertest 2026-06-18: een LEERLING die op "Toets maken"
+// klikte landde op het leerkracht-dashboard — verwarrend). Nu: alleen een
+// leerkracht ziet "Toets maken" (→ teacher-home); leerling/ouder/onbekend krijgt
+// "Toets" → de Doorstroomtoets-ingang (USP + ICP). Zelfde tab-id zodat de
+// actief-markering simpel blijft.
+function maakTabs(isTeacher) {
+  return [
+    { id: "home",        label: "Home",  emoji: "🏠", target: "_home" },
+    { id: "leren",       label: "Leren", emoji: "📚", target: "learn-paths-hub" },
+    isTeacher
+      ? { id: "toets-maken", label: "Toets maken", emoji: "📝", target: "teacher-home" }
+      : { id: "toets-maken", label: "Toets",       emoji: "📝", target: "cito" },
+    // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
+    // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
+    { id: "spel",        label: "Spel",  emoji: "🎮", target: "spellen", gameRelated: true },
+    // Mark wens 2026-06-05: "Tip aan de maker" als vaste ingang in de bottom-nav.
+    { id: "tips",        label: "Tips",  emoji: "💬", target: "wishes" },
+  ];
+}
 
 function bepaalActieveTab(page) {
   if (page === "home" || page === "student-home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
-  if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview") return "toets-maken";
+  if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "spel";
   if (page === "wishes") return "tips";
   return null;
 }
 
-export default function BottomNav({ currentPage, onNavigate, authUser }) {
+export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   const actief = bepaalActieveTab(currentPage);
+  // Rol-bewuste tabs: alleen leerkracht ziet "Toets maken" (→ teacher-home).
+  const isTeacher = role === "teacher" || role === "leerkracht";
+  const ALL_TABS = maakTabs(isTeacher);
   // Filter game-related tabs voor niet-ingelogden als feature-flag aanstaat
   const gameZichtbaar = gameVisibleForUser(authUser, urlHasGameDeepLink());
   const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);

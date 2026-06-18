@@ -1989,7 +1989,7 @@ export default function App() {
     </Suspense>
     </main>
     {BOTTOMNAV_PAGES.has(page) && (
-      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} />
+      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} role={role} />
     )}
     {/* 15-min "kwartier zit erop" toast — viert het bereiken van het
         dag-doel. Bouwt op de slogan "Een kwartier per dag, een leven lang

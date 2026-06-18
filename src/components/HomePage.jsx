@@ -1422,7 +1422,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <button
               type="button"
               style={{ background: "none", border: "none", color: "#00897b", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-              onClick={() => handleRoleClick("teacher")}
+              onClick={() => handleFeatureClick("leerkrachten")}
             >
               <span>👩‍🏫</span>
               Voor leerkrachten
