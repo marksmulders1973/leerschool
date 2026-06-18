@@ -308,5 +308,78 @@ const fotosynthese = {
   ],
 };
 
-export const BIO_PLATEN = { cel, oog, fotosynthese };
+// ── Het hart (schematische vooraanzicht-doorsnede) ───────────────────────────
+// Kleur = bloedsoort: blauw = zuurstofarm (rechterkant), rood = zuurstofrijk
+// (linkerkant). NB: "rechts/links" is vanuit de persoon zelf gezien.
+const hart = {
+  id: "hart",
+  titel: "Het hart",
+  ondertitel: "Tik op een onderdeel — blauw = zuurstofarm, rood = zuurstofrijk 👆",
+  viewBox: "0 0 420 380",
+  onderdelen: [
+    {
+      id: "rechterboezem",
+      label: "Rechterboezem",
+      kleur: "#1e88e5",
+      uitleg: "Vangt het zuurstofarme bloed op dat uit het hele lichaam terugkomt (via de holle aders). Geeft het door aan de rechterkamer.",
+      el: <ellipse cx="168" cy="150" rx="44" ry="36" fill="#90caf9" stroke="#1565c0" strokeWidth="2" />,
+    },
+    {
+      id: "linkerboezem",
+      label: "Linkerboezem",
+      kleur: "#e53935",
+      uitleg: "Vangt het zuurstofrijke bloed op dat net uit de longen komt. Geeft het door aan de linkerkamer.",
+      el: <ellipse cx="258" cy="150" rx="44" ry="36" fill="#ef9a9a" stroke="#c62828" strokeWidth="2" />,
+    },
+    {
+      id: "rechterkamer",
+      label: "Rechterkamer",
+      kleur: "#1565c0",
+      uitleg: "Pompt het zuurstofarme bloed naar de longen (via de longslagader) om daar nieuwe zuurstof op te halen.",
+      el: <path d="M124 195 Q116 290 190 330 L206 205 Q166 182 124 195 Z" fill="#42a5f5" stroke="#1565c0" strokeWidth="3" />,
+    },
+    {
+      id: "linkerkamer",
+      label: "Linkerkamer",
+      kleur: "#b71c1c",
+      uitleg: "Pompt het zuurstofrijke bloed met krácht het hele lichaam in (via de aorta). Daarom heeft hij de dikste spierwand.",
+      el: <path d="M206 205 L190 330 Q262 292 286 198 Q248 180 206 205 Z" fill="#ef5350" stroke="#b71c1c" strokeWidth="5" />,
+    },
+    {
+      id: "aorta",
+      label: "Aorta (lichaamsslagader)",
+      kleur: "#e53935",
+      uitleg: "De grootste slagader van het lichaam. Voert het zuurstofrijke bloed vanuit de linkerkamer naar je hele lijf.",
+      el: <path d="M232 128 C234 76 288 74 298 112" fill="none" stroke="#e53935" strokeWidth="13" strokeLinecap="round" />,
+    },
+    {
+      id: "longslagader",
+      label: "Longslagader",
+      kleur: "#1e88e5",
+      uitleg: "Brengt zuurstofarm bloed van de rechterkamer naar de longen. (De enige slagader met zuurstofarm bloed!)",
+      el: <path d="M186 128 C180 78 146 78 136 110" fill="none" stroke="#1e88e5" strokeWidth="12" strokeLinecap="round" />,
+    },
+    {
+      id: "hartkleppen",
+      label: "Hartkleppen",
+      kleur: "#cfd8dc",
+      uitleg: "Deurtjes die maar één kant op opengaan, zodat het bloed niet terugstroomt. Het 'tik-tak' van je hartslag is het dichtklappen van de kleppen.",
+      el: (
+        <g fill="#ffffff" stroke="#78909c" strokeWidth="2" strokeLinejoin="round">
+          <path d="M150 188 l18 11 l18 -11 l-4 -6 l-14 8 l-14 -8 Z" />
+          <path d="M240 188 l18 11 l18 -11 l-4 -6 l-14 8 l-14 -8 Z" />
+        </g>
+      ),
+    },
+  ],
+  vragen: [
+    { vraag: "Welk hartdeel pompt het bloed het hele lichaam in?", opties: ["Rechterboezem", "Linkerkamer", "Rechterkamer", "Linkerboezem"], antwoord: 1, uitleg: "De linkerkamer pompt met kracht het hele lichaam in (dikste wand)." },
+    { vraag: "Waar gaat het bloed heen vanuit de rechterkamer?", opties: ["Naar het lichaam", "Naar de longen", "Naar de hersenen", "Naar de maag"], antwoord: 1, uitleg: "Naar de longen, via de longslagader, om zuurstof op te halen." },
+    { vraag: "Wat doen de hartkleppen?", opties: ["Bloed maken", "Voorkomen dat het bloed terugstroomt", "Zuurstof toevoegen", "Het hart laten kloppen"], antwoord: 1, uitleg: "Kleppen laten het bloed maar één kant op stromen." },
+    { vraag: "Welke slagader voert bloed naar het hele lichaam?", opties: ["De longslagader", "De aorta", "De holle ader", "De longader"], antwoord: 1, uitleg: "De aorta is de grote lichaamsslagader." },
+    { vraag: "Welk bloed zit er in de rechterkant van het hart?", opties: ["Zuurstofrijk (rood)", "Zuurstofarm (blauw)", "Geen bloed", "Alleen water"], antwoord: 1, uitleg: "Rechts = zuurstofarm bloed (op weg naar de longen)." },
+  ],
+};
+
+export const BIO_PLATEN = { cel, oog, fotosynthese, hart };
 export default BIO_PLATEN;

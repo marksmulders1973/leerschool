@@ -47,8 +47,8 @@ Grok draait via Mark's browser (rate-limited). Per item: Claude prept de slot/co
 ## 📊 Status
 | Item | Status |
 |---|---|
-| P4 cel + oog + fotosynthese (interactieve platen, self-authored) | ✅ LIVE (`?bioplaat=cel` / `oog` / `fotosynthese`) |
-| P4 hart / zenuw-actiepotentiaal | ⏳ te bouwen |
+| P4 cel + oog + fotosynthese + hart (interactieve platen) | ✅ LIVE (`?bioplaat=cel` / `oog` / `fotosynthese` / `hart`) |
+| P4 zenuw-actiepotentiaal | ⏳ te bouwen |
 | P1-P3, P5-P10 | ⏳ wacht op Grok-sessie (browser) |
 | B1 kapotte all-right-cover + B2 wees-afbeeldingen | ✅ opgeruimd (18 jun) |
 | B3 logo-doorstroomtoets.png comprimeren | ⏳ open |
