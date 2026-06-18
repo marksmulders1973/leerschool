@@ -14,6 +14,12 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 📥 Inbox — nieuwe wensen / ideeën
+
+- [ ] **Begrijpend lezen ÉCHT opbouwend** (collega-feedback 18 jun; dochter vond teksten te lang). Tekstlengte-ladder: 1-2 zinnen → korte alinea → korte tekst → langere tekst. Korte teksten eerst, nooit een muur tekst bij de start. Sluit aan op "te druk/te lang"-thema (Robert-tip + afhaak-cijfers). Detail: memory `begrijpend-lezen-opbouwend`.
+
+---
+
 ## 🤖 7-BOTS-REVIEW (2026-06-13) — 7 persona's (kind-7 / VMBO-15 / ouder / nerd / leerkracht / didactiek / a11y), 71 bevindingen
 
 > Mark-opdracht: "test de app door 7 bots met elk een andere bril". Synthese hieronder; volledige
