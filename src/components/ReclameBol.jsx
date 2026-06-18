@@ -5,7 +5,8 @@
 //
 // Wordt gebruikt om een GIF/video van de draaiende bol op te nemen voor social
 // (FB/IG/Threads) en als klikbare web-promo / landingspagina.
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
+import { track } from "../utils.js";
 
 const Wereldbol = lazy(() => import("./learn/geo/Wereldbol.jsx"));
 
@@ -13,6 +14,11 @@ const Wereldbol = lazy(() => import("./learn/geo/Wereldbol.jsx"));
 const DEEPLINK = "/?pad=continenten-wereld-po";
 
 export default function ReclameBol() {
+  // Trechter meetbaar maken: log dat iemand via de wereldbol-reclame binnenkwam
+  // (1× per bezoek). Interne bezoeken (Mark/Claude) worden door track() zelf
+  // overgeslagen, dus deze cijfers zijn schoon.
+  useEffect(() => { track("reclamebol_open"); }, []);
+
   return (
     <div
       style={{
@@ -75,6 +81,7 @@ export default function ReclameBol() {
       {/* Klikbare CTA → echte leerpad (deeplink) */}
       <a
         href={DEEPLINK}
+        onClick={() => track("reclamebol_cta")}
         style={{
           marginTop: 22,
           display: "inline-flex",
