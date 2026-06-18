@@ -108,5 +108,90 @@ const cel = {
   ],
 };
 
-export const BIO_PLATEN = { cel };
+// ── Het oog (dwarsdoorsnede, kijkt naar links) ───────────────────────────────
+const oog = {
+  id: "oog",
+  titel: "Het oog",
+  ondertitel: "Tik op een onderdeel om te zien wat het doet 👆",
+  viewBox: "0 0 420 330",
+  onderdelen: [
+    {
+      id: "oogwit",
+      label: "Oogwit (harde oogvlies)",
+      kleur: "#90a4b8",
+      uitleg: "De stevige, witte buitenkant. Beschermt het oog en houdt het in z'n ronde vorm.",
+      el: <circle cx="235" cy="165" r="130" fill="#fbfcff" stroke="#b8c4d6" strokeWidth="3" />,
+    },
+    {
+      id: "glasvocht",
+      label: "Glasvocht",
+      kleur: "#29b6f6",
+      uitleg: "De heldere gelei die het oog vult. Geeft het oog z'n bolvorm en laat het licht door naar achteren.",
+      el: <ellipse cx="255" cy="165" rx="104" ry="112" fill="#dbf2ff" />,
+    },
+    {
+      id: "netvlies",
+      label: "Netvlies",
+      kleur: "#ff7043",
+      uitleg: "De 'film' aan de achterkant met miljoenen kleine lichtsensoren (staafjes en kegeltjes). Hier ontstaat het beeld.",
+      el: <path d="M255 50 A115 115 0 0 1 255 280" fill="none" stroke="#ff7043" strokeWidth="11" strokeLinecap="round" />,
+    },
+    {
+      id: "gelevlek",
+      label: "Gele vlek",
+      kleur: "#fdd835",
+      uitleg: "Het plekje op het netvlies waar je het állerscherpst ziet. Hier kijk je mee als je iets goed bekijkt.",
+      el: <circle cx="360" cy="165" r="11" fill="#fdd835" stroke="#f9a825" strokeWidth="2" />,
+    },
+    {
+      id: "oogzenuw",
+      label: "Oogzenuw",
+      kleur: "#ef9a9a",
+      uitleg: "De 'kabel' achter het oog die het beeld van het netvlies naar de hersenen stuurt. Pas daar 'zie' je het echt.",
+      el: <path d="M350 150 q48 -20 62 15 q-14 35 -62 15 q14 -15 0 -30 Z" fill="#ef9a9a" stroke="#e57373" strokeWidth="2" />,
+    },
+    {
+      id: "ooglens",
+      label: "Ooglens",
+      kleur: "#42a5f5",
+      uitleg: "Een doorzichtig lensje dat het licht scherpstelt op het netvlies — net als het scherpstellen van een fototoestel. Hij kan boller en platter worden.",
+      el: <ellipse cx="158" cy="165" rx="15" ry="42" fill="#bbdefb" stroke="#42a5f5" strokeWidth="3" />,
+    },
+    {
+      id: "iris",
+      label: "Iris (regenboogvlies)",
+      kleur: "#3f8fd6",
+      uitleg: "Het gekleurde deel (blauw, bruin of groen). Maakt de pupil groter of kleiner om te regelen hoeveel licht er binnenkomt.",
+      el: (
+        <g fill="#3f8fd6">
+          <ellipse cx="125" cy="135" rx="10" ry="24" />
+          <ellipse cx="125" cy="195" rx="10" ry="24" />
+        </g>
+      ),
+    },
+    {
+      id: "pupil",
+      label: "Pupil",
+      kleur: "#10141c",
+      uitleg: "Het zwarte rondje — eigenlijk een gaatje waar het licht doorheen gaat. Wordt klein bij fel licht en groot in het donker.",
+      el: <ellipse cx="125" cy="165" rx="9" ry="20" fill="#0a0e16" />,
+    },
+    {
+      id: "hoornvlies",
+      label: "Hoornvlies",
+      kleur: "#4fc3f7",
+      uitleg: "Het doorzichtige 'venster' helemaal vooraan. Laat licht naar binnen en buigt het alvast een beetje de goede kant op.",
+      el: <path d="M128 105 Q66 165 128 225" fill="rgba(79,195,247,0.18)" stroke="#4fc3f7" strokeWidth="6" strokeLinecap="round" />,
+    },
+  ],
+  vragen: [
+    { vraag: "Waardoor gaat het licht het oog binnen?", opties: ["De oogzenuw", "De pupil", "Het netvlies", "De gele vlek"], antwoord: 1, uitleg: "De pupil is het gaatje waar het licht doorheen gaat." },
+    { vraag: "Wat regelt hoeveel licht er binnenkomt?", opties: ["De lens", "De iris", "Het netvlies", "De oogzenuw"], antwoord: 1, uitleg: "De iris maakt de pupil groter of kleiner." },
+    { vraag: "Waar ontstaat het beeld (met de lichtsensoren)?", opties: ["Op het netvlies", "In de pupil", "In de lens", "In het hoornvlies"], antwoord: 0, uitleg: "Op het netvlies achterin zitten de lichtsensoren." },
+    { vraag: "Wat stuurt het beeld naar de hersenen?", opties: ["De iris", "De oogzenuw", "De lens", "Het glasvocht"], antwoord: 1, uitleg: "De oogzenuw is de kabel naar de hersenen." },
+    { vraag: "Wat doet de ooglens?", opties: ["Hij beschermt het oog", "Hij stelt het licht scherp", "Hij geeft kleur aan het oog", "Hij maakt traanvocht"], antwoord: 1, uitleg: "De lens stelt scherp op het netvlies." },
+  ],
+};
+
+export const BIO_PLATEN = { cel, oog };
 export default BIO_PLATEN;
