@@ -21,7 +21,7 @@ const C = {
   accent: "#69f0ae",
 };
 
-export default function BegrijpendLezenLadder({ onBack, onHome }) {
+export default function BegrijpendLezenLadder({ onBack, onHome, onNaarTeksten }) {
   const [mode, setMode] = useState("intro"); // intro | lezen | klaar
   const [theme, setTheme] = useState(LADDER_THEMES[0].id);
   const [startNiveau, setStartNiveau] = useState(0);
@@ -126,11 +126,16 @@ export default function BegrijpendLezenLadder({ onBack, onHome }) {
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.82)", marginBottom: 22 }}>
             Je bent van een paar zinnen naar een echte tekst gegaan — zo word je steeds beter in
-            langere teksten lezen. Wil je het nog eens doen met een ander onderwerp?
+            langere teksten lezen. Klaar voor de echte oefenteksten?
           </p>
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <button onClick={() => setMode("intro")} style={btnPrimary()}>🔄 Ander onderwerp kiezen</button>
-            <button onClick={onBack} style={btnSecondary()}>← Terug</button>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {onNaarTeksten && (
+              <button onClick={onNaarTeksten} style={btnPrimary()}>📖 Nu een echte oefentekst proberen →</button>
+            )}
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <button onClick={() => setMode("intro")} style={btnSecondary()}>🔄 Ander onderwerp</button>
+              <button onClick={onBack} style={btnSecondary()}>← Terug</button>
+            </div>
           </div>
         </div>
       </div>

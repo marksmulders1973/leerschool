@@ -13,7 +13,13 @@ export default function BegrijpendLezenPage({ userName, studentProgress = [], on
   // met keuzes vooraf; teruglink valt terug op deze keuzepagina.
   const [ladder, setLadder] = useState(false);
   if (ladder) {
-    return <BegrijpendLezenLadder onBack={() => setLadder(false)} onHome={onHome} />;
+    return (
+      <BegrijpendLezenLadder
+        onBack={() => setLadder(false)}
+        onHome={onHome}
+        onNaarTeksten={() => onStart("mix")}
+      />
+    );
   }
 
   const getStatus = (cat) => {
