@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Header from "./Header.jsx";
+import BegrijpendLezenLadder from "./BegrijpendLezenLadder.jsx";
 
 const CATEGORIES = [
   { id: "informatief", label: "Informatief",  icon: "📰", color: "#42a5f5", desc: "Feiten, beschrijvingen" },
@@ -7,6 +9,13 @@ const CATEGORIES = [
 ];
 
 export default function BegrijpendLezenPage({ userName, studentProgress = [], onStart, onBack, onHome }) {
+  // Opbouwend pad (collega-wens 18 jun): begin heel kort en loop op. Eigen scherm
+  // met keuzes vooraf; teruglink valt terug op deze keuzepagina.
+  const [ladder, setLadder] = useState(false);
+  if (ladder) {
+    return <BegrijpendLezenLadder onBack={() => setLadder(false)} onHome={onHome} />;
+  }
+
   const getStatus = (cat) => {
     const results = studentProgress.filter(
       (p) => p.player === userName && p.topic === `begrijpend-lezen ${cat}`
@@ -32,6 +41,28 @@ export default function BegrijpendLezenPage({ userName, studentProgress = [], on
     <div style={{ minHeight: "100dvh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
       <Header title="Begrijpend Lezen" subtitle="Groep 5–8" onBack={onBack} onHome={onHome} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 16px 32px" }}>
+
+        {/* Opbouwend pad — begin heel kort (voor wie gewone teksten te lang vindt) */}
+        <button
+          onClick={() => setLadder(true)}
+          style={{
+            width: "100%", marginBottom: 18, padding: "16px 18px", borderRadius: 16, cursor: "pointer",
+            background: "linear-gradient(135deg, rgba(105,240,174,0.18), rgba(0,200,83,0.10))",
+            border: "2px solid rgba(105,240,174,0.45)", color: "var(--color-text-strong)",
+            display: "flex", alignItems: "center", gap: 14, textAlign: "left",
+          }}
+        >
+          <span style={{ fontSize: 30, flexShrink: 0 }} aria-hidden="true">📈</span>
+          <span style={{ flex: 1 }}>
+            <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800, color: "var(--color-brand-primary-100)" }}>
+              Stap voor stap — begin heel kort
+            </span>
+            <span style={{ display: "block", fontSize: 12.5, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+              Start met 1-2 zinnen en lees elke stap iets meer. Kies je onderwerp en lengte.
+            </span>
+          </span>
+          <span style={{ fontSize: 20, color: "var(--color-brand-primary-100)", flexShrink: 0 }} aria-hidden="true">›</span>
+        </button>
 
         {/* Voortgangsbalk */}
         <div style={{ marginBottom: 20, padding: "14px 16px", background: "#1a2a3a", borderRadius: 14, border: "1px solid rgba(255,255,255,0.08)" }}>
