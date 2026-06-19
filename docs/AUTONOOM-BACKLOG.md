@@ -16,7 +16,7 @@ Cito + examens versterken. Drie type werk:
 
 ## 📥 Inbox — nieuwe wensen / ideeën
 
-- [ ] **Begrijpend lezen ÉCHT opbouwend** (collega-feedback 18 jun; dochter vond teksten te lang). Tekstlengte-ladder: 1-2 zinnen → korte alinea → korte tekst → langere tekst. Korte teksten eerst, nooit een muur tekst bij de start. Sluit aan op "te druk/te lang"-thema (Robert-tip + afhaak-cijfers). Detail: memory `begrijpend-lezen-opbouwend`.
+- [x] **Begrijpend lezen ÉCHT opbouwend** ✅ 19 jun. Tekstlengte-ladder met keuzescherm vooraf (onderwerp + startlengte; 2 dropdowns). 4 onderwerpen × 4 niveaus (heel kort 1-2 zinnen → lang), echte begripsvragen. `src/data/begrijpendLezenOpbouwend.js` + `src/components/BegrijpendLezenLadder.jsx`, knop "📈 Stap voor stap" bovenaan `BegrijpendLezenPage`. Commit 0b10df8. Detail: memory `begrijpend-lezen-opbouwend`.
 
 ---
 
