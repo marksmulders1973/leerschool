@@ -31,6 +31,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [loaded, setLoaded] = useState(false);
   const [reward, setReward] = useState(null);
   const [melding, setMelding] = useState(null);
+  const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
 
@@ -143,6 +144,8 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           <span style={{ font: "800 11px system-ui", color: "#5b3d00", background: "#ffd54a", padding: "3px 9px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>🚧 In opbouw</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
+          <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>
@@ -218,6 +221,58 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           </div>
         )}
       </div>
+
+      {/* Overlays: uitleg + diergids. */}
+      {panel && (
+        <div
+          onClick={() => setPanel(null)}
+          style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ width: "min(560px, 96vw)", maxHeight: "86vh", overflowY: "auto", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}
+          >
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>
+                {panel === "uitleg" ? "ℹ️ Hoe werkt je park?" : "📖 Diergids"}
+              </h2>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+
+            {panel === "uitleg" ? (
+              <div style={{ font: "500 14.5px/1.5 system-ui", color: "#333" }}>
+                <p style={{ marginTop: 0 }}>In <b>{parkNaam}</b> verzamel je dieren en laat je je eigen dierentuin groeien.</p>
+                <p><b>🪙 Muntjes verdien je zo:</b></p>
+                <ul style={{ paddingLeft: 20, margin: "6px 0" }}>
+                  <li>Elke dag <b>inloggen</b> (+5, met streak-bonus 🔥 die oploopt).</li>
+                  <li>Elke dag je <b>kwartier leren</b> afronden (+8).</li>
+                  <li>Je <b>park zelf</b> levert muntjes op: hoe meer verblijven en jonkies, hoe meer per dag.</li>
+                </ul>
+                <p><b>🦊 Dieren:</b> koop een dier — het komt <b>mét een ruim verblijf</b>. Tik een verblijf aan om het te <b>verplaatsen</b> of <b>weg te halen</b> (je krijgt de muntjes terug).</p>
+                <p><b>🐣 Jonkies:</b> dieren kunnen er met de tijd een jonkie bij krijgen — dat levert extra muntjes op.</p>
+                <p><b>🕹️ Rondkijken:</b> sleep om te draaien, scroll of knijp om in/uit te zoomen.</p>
+                <p style={{ color: "#777", fontSize: 12.5 }}>Het park is nog volop in opbouw 🚧 — er komt steeds meer bij (attracties, paden en meer).</p>
+              </div>
+            ) : (
+              <div>
+                <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alle dieren die je kunt kopen. Elk dier komt met een ruim verblijf.</p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
+                  {PLAATSBAAR.map((p) => (
+                    <div key={p.assetId} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", background: "#f5f3ea", borderRadius: 12 }}>
+                      <span style={{ fontSize: 24 }}>{p.emoji}</span>
+                      <div style={{ lineHeight: 1.2 }}>
+                        <div style={{ font: "800 13.5px system-ui", color: "#234" }}>{p.label}</div>
+                        <div style={{ font: "600 12px system-ui", color: "#7a5b00" }}>{p.price} 🪙</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p style={{ color: "#777", fontSize: 12.5, marginBottom: 0 }}>🚧 Binnenkort: attracties (zoals een patatkraam) en paden — met hun eigen prijzen.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
