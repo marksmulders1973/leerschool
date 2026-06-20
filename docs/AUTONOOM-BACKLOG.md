@@ -16,6 +16,16 @@ Cito + examens versterken. Drie type werk:
 
 ## 📥 Inbox — nieuwe wensen / ideeën
 
+### 📊 Dagrapport-analyse 2026-06-20 (data sinds 4 jun, 16 dagen — betrouwbaarheid LAAG)
+Geverifieerd via Supabase + 2 review-agents. Kerncijfers 7d: 126 sessies (~19 écht extern: chatgpt 7 / fb 6 / google 5), 795 events.
+- [x] ✅ **Kapotte footer-link `/voor-ouders.html`** (B6.4-deel) → `doorstroomtoets-2027-gids.html` (commit ec39672). Brede scan: enige kapotte interne link.
+- [x] ✅ **SEO/AI-discovery gaten gedicht** (commit cfb0ed3): `gratis-bijles.html` in sitemap; 5 content-pagina's toegevoegd aan llms.txt (cito-eindtoets-oefenen, begrijpend-lezen-oefenen, gratis-bijles, onderwijs-begrippen, tafels-oefenen). Voedt Doorstroomtoets-koning.
+- [ ] 🟡 **MARK-BESLISSING — privacy/AVG-contact** (privacy.html:41/117/131 = `marksmulders1973@gmail.com`). Backlog wilde → `info@leerkwartier.app`, maar onverifieerbaar of die mailbox post ontvangt. Werkend Gmail vervangen door mogelijk-dode mailbox = slechter voor compliance. Bewust NIET gewijzigd. Mark: bevestig dat info@ ontvangt, dan omzetten.
+- [ ] 🔴 **GROOTSTE HEFBOOM — e-mail-lijst groeit niet** (upgrade_waitlist: 0 nieuw in 7d, 6 totaal). Oorzaak: de e-mail-haak zit op ResultsPage (achter het fouten-overzicht), maar `quiz_completed` = 1/week → bijna niemand bereikt 'm. Plus ouder-funnel leeg: 0 `parent_child_links`, 0 `ref_mastery` → de wekelijkse ouder-rapportmail (sterkste retentie-wapen) heeft geen data. **MARK-BESLISSING:** e-mail-capture verplaatsen naar een moment dat méér mensen halen (na de home-proefvraag/vraag-van-de-dag: 8 resp. 6 sessies vs 1 quiz-afronding) + 60-sec ouder-koppeling. = nieuwe flow/architectuur → samen oppakken.
+- [ ] 🟡 **MARK-BESLISSING — e-mail-gate op fouten-overzicht** (ResultsPage, "zachte gate" 6 jun). Blokkeert hét leermoment ("begrijp je dit?") voor de weinigen die afronden, met ~0 lijst-groei als opbrengst. Overweeg gate vrijgeven (zie ook B3.5). Mark's bewuste keuze → niet autonoom gewijzigd.
+- [x] Rapport-correcties (al gedaan, stale in oude notities): reclamebol-route al verwijderd 18 jun (de 9 opens = restdata); `kwartier_reached` vuurt weer (16×); UpdateBanner dubbele-reload al gefixt. `quiz_completed`=1 = echte drop-off, geen bug.
+- [ ] **Wens Robert Plant (18 jun): "minder druk scherm, uitklapbaar menu"** — deels gedaan (zoekbalk onder de vouw), kern (homepage ~11 CTA's) = VERBETERPLAN A1-A4, nog open. Pending wish op /tips → maker-reactie sturen. Ook Sahasra (20 jun) "wat is een supporter?" pending.
+
 - [x] **Begrijpend lezen ÉCHT opbouwend** ✅ 19 jun. Tekstlengte-ladder met keuzescherm vooraf (onderwerp + startlengte; 2 dropdowns). 4 onderwerpen × 4 niveaus (heel kort 1-2 zinnen → lang), echte begripsvragen. `src/data/begrijpendLezenOpbouwend.js` + `src/components/BegrijpendLezenLadder.jsx`, knop "📈 Stap voor stap" bovenaan `BegrijpendLezenPage`. Commit 0b10df8. Detail: memory `begrijpend-lezen-opbouwend`.
 
 ---
