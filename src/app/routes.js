@@ -50,6 +50,8 @@ export const PAGE_TO_PATH = {
   supporterGame: "/supporter",
   // Spellen-keuzescherm (OBLITERATOR + Kikker Oversteek).
   spellen: "/spellen",
+  // Zookwartier — 3D verzamel-dierentuin als beloningsspel (lazy three.js).
+  zoo: "/dierentuin",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",
