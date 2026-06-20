@@ -51,6 +51,11 @@ Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. 
 4. Volg terug wie ons volgde.
 5. Meld kort aan Mark: huidige volgers per kanaal + delta sinds gisteren + wat gedaan.
 
+**🧵 Threads-dagritueel (Mark 2026-06-20, na deep-research reply-first) — vast onderdeel van bovenstaande check:**
+- **Vraag-van-de-dag als THREAD:** hoofdpost = native dagvraag (`vraagVanVandaagId()`) + "antwoord in de reacties 👇" + **één topic-tag** (Doorstroomtoets/Cito), **GÉÉN link in de hoofdpost**; de link `leerkwartier.app/vandaag?utm_source=threads` komt in een **gekoppelde 2e post** ("Add to thread"). Reden: link-posts knijpen bereik; reply-first + native = max bereik.
+- **Reageren = #1 hefboom:** een paar oprechte waarde-replies op verse ICP-gesprekken (zoek `doorstroomtoets`/`schooladvies`/`citostress`/`bijles`/`groep 8`) + paar ICP-follows. **STOP bij het eerste throttle-signaal** (follow registreert niet) — nooit doorrammen tot een block (jong account = ban-risico).
+- **KLIK-METEN (in élk dagrapport):** query events `source='threads' OR props->>'utm_source'='threads'` → "via Threads: N" melden. NB: reply-first optimaliseert eerst voor volgers/bereik; klikken zijn secundair/lagging. Volledig recept: memory [[project_studiebol_vraag_vd_dag_post]] + [[studiebol-threads]].
+
 **Posting/engagement-werkwijze per kanaal** staat in [[project_studiebol_autopost]] (memory) — Claude post/engaget zelf via de browser, niet automatisch op de achtergrond. **Stoppen met deze dagelijkse taak** zodra de mijlpalen gehaald zijn (dan herijken met Mark). Draait Chrome niet? Meld dat de social-groei-batch Chrome nodig heeft en sla 'm over die dag.
 
 ## Autonome modus (actief tot app gevuld — geen einddatum)
