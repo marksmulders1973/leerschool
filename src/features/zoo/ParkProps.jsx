@@ -137,7 +137,7 @@ export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox" }) {
       <mesh position={[0, 0.55, h]}><boxGeometry args={[size, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       <mesh position={[-h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       <mesh position={[h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
-      <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={-0.6} />
+      <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.6, size / 2 - 1.3)} />
     </group>
   );
 }
