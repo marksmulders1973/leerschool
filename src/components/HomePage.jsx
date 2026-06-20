@@ -4,6 +4,7 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
@@ -99,6 +100,12 @@ const ONBOARDING_STEPS = [
 function ProefVraagKaart({ onStart }) {
   const vraag = getSocialVraag(vraagVanVandaagId());
   const [chosen, setChosen] = useState(null);
+  // E-mail-capture op het hoogste-motivatie-moment (Mark 2026-06-20): ná het
+  // beantwoorden van de proefvraag — veel meer bezoekers halen dit dan een
+  // hele toets afronden. Optioneel: de "Ga verder"-knop blijft, dus geen gate.
+  const [aangemeld, setAangemeld] = useState(() => {
+    try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
+  });
   if (!vraag) return null;
   const goed = chosen != null && chosen === vraag.answer;
   return (
@@ -143,6 +150,16 @@ function ProefVraagKaart({ onStart }) {
               ? "✅ Goed! Zo voelt elke vraag — met uitleg op 3 niveaus tot je 'm écht snapt."
               : "Geen zorgen — in de app krijg je uitleg op 3 niveaus tot je 'm wél snapt."}
           </div>
+          {!aangemeld && (
+            <div style={{ marginBottom: 12 }}>
+              <GratisLesmateriaal
+                source="home-proefvraag"
+                compact
+                onSubmitted={() => setAangemeld(true)}
+                title={<><span aria-hidden="true">📩</span> Krijg elke week zo'n vraag — gratis in je mail</>}
+              />
+            </div>
+          )}
           <button type="button" onClick={onStart}
             style={{
               width: "100%", cursor: "pointer", border: "none",
