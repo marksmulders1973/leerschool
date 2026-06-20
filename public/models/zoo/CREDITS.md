@@ -1,18 +1,27 @@
 # Zookwartier — 3D-modellen: bronnen & licenties
 
-Alle modellen hier zijn ingeladen glTF/GLB-bestanden. Per model: bron + licentie.
-Houd deze lijst bij elke nieuwe download bij (verplicht voor een betaald kinderproduct).
+Alle modellen zijn ingeladen glTF/GLB-bestanden. Allemaal **CC0** (publiek domein,
+commercieel bruikbaar — veilig voor een betaald kinderproduct).
 
-## Stap 1 — pijplijn-bewijs (tijdelijk demo-model)
+## Dieren — `animals/`
+**Quaternius — "Ultimate Animated Animals"** (quaternius.com) · **CC0 1.0**
+Vertex-colored low-poly (geen losse textuur → worden nooit "wit").
+Fox, Deer, Stag, Alpaca, Cow, Donkey, Horse, Husky, ShibaInu, Wolf.
 
-- **fox/Fox.glb** — "Fox" — model door **PixelMannen** (CC0) met rig + animatie door
-  **tomkranis** (CC-BY 4.0). Bron: Khronos glTF-Sample-Models.
-  Gebruikt om de model-pijplijn te bewijzen (één geanimeerd dier, netjes belicht).
+## Natuur — `nature/`
+**Kenney — "Nature Kit"** (kenney.nl) · **CC0 1.0**
+tree_default, tree_oak, tree_palm, flower_redA/yellowA/purpleA, grass, mushroom_redGroup,
+fence_simple, fence_corner, fence_gate.
 
-## Nog te doen (echte zoo-content)
+## Figuurtje (poppetje)
+Voorlopig zelf-gebouwd (ParkProps.jsx) — geen losse textuur, wordt nooit "wit".
+Kenney "Blocky Characters" gebruikt een externe textuur-atlas en gaf laad-/cache-
+problemen; later evt. een vertex-colored model.
 
-- **Kenney** packs (kenney.nl, **CC0**) — gekozen door Mark 2026-06-20:
-  - Animal Pack (dieren)
-  - Nature Kit (bomen/struiken/hekken/decor)
-  - Carnival / fun-fair kit (attracties: draaimolen, reuzenrad, kraampjes)
-  - Eén samenhangende low-poly stijl. Download via kenney.nl (JS-knop) of itch.io.
+## Oud / niet meer gebruikt
+- `fox/Fox.glb` — Khronos-vos (CC-BY); was het pijplijn-bewijs in stap 1, nu
+  vervangen door de Quaternius-vos. Mag verwijderd worden.
+
+## Nog te doen
+- **Draaimolen / attracties**: Kenney/Quaternius hebben geen kermis-pack; de
+  draaimolen is voorlopig zelf-gebouwd (ParkProps.jsx). Later evt. los CC0-model.

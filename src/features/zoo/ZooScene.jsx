@@ -80,7 +80,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
     <Canvas
       shadows
       dpr={[1, 2]}
-      camera={{ position: [11, 8.5, 15], fov: 42, near: 0.1, far: 100 }}
+      camera={{ position: [14, 10, 19], fov: 42, near: 0.1, far: 100 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none" }}
     >
       <color attach="background" args={["#aaddff"]} />

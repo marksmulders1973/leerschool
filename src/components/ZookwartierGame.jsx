@@ -8,12 +8,16 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward } from "../features/zoo/zooEconomy";
+import { PLAATSBARE_DIEREN, getAsset } from "../features/zoo/AssetRegistry";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
-// Wat je kunt plaatsen + de prijs in muntjes. Groeit later met Kenney-dieren/attracties.
-const PLAATSBAAR = [{ assetId: "fox", emoji: "🦊", label: "Vos", price: 10 }];
-const prijsVan = (assetId) => PLAATSBAAR.find((p) => p.assetId === assetId)?.price ?? 0;
+// Dieren-winkel: opgebouwd uit de AssetRegistry.
+const PLAATSBAAR = PLAATSBARE_DIEREN.map((id) => {
+  const a = getAsset(id);
+  return { assetId: id, emoji: a.emoji, label: a.name, price: a.price };
+});
+const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
 export default function ZookwartierGame({ onHome, userName, authUser }) {
   const naam = (userName || "").trim();
@@ -175,19 +179,22 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
             <button onClick={() => setSelectedIdx(null)} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
         ) : (
-          <>
-            {PLAATSBAAR.map((p) => {
-              const kan = coins >= p.price;
-              return (
-                <button key={p.assetId} onClick={() => startKopen(p)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: kan ? "#234" : "#888", background: kan ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.55)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed" }}>
-                  {p.emoji} {p.label} plaatsen ({p.price} 🪙)
-                </button>
-              );
-            })}
-            <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {placedItems.length} zelf geplaatst · tik een dier aan om te verplaatsen of weg te halen
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+            <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
+              Koop een dier (tik een geplaatst dier aan om te verplaatsen of weg te halen)
             </span>
-          </>
+            <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
+              {PLAATSBAAR.map((p) => {
+                const kan = coins >= p.price;
+                return (
+                  <button key={p.assetId} onClick={() => startKopen(p)} title={`${p.label} plaatsen`} style={{ flex: "0 0 auto", border: "none", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: kan ? "#234" : "#999", background: kan ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.5)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed", whiteSpace: "nowrap" }}>
+                    <span style={{ fontSize: 18 }}>{p.emoji}</span> {p.label}<br />
+                    <span style={{ fontSize: 11, opacity: 0.85 }}>{p.price} 🪙</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         )}
       </div>
     </div>

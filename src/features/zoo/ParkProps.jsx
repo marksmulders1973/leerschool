@@ -58,15 +58,14 @@ export function Carousel({ position = [0, 0, 0] }) {
   );
 }
 
-// Het poppetje van de speler — wiebelt zachtjes.
+// Het poppetje van de speler — zelf-gebouwd (geen losse textuur → nooit "wit"),
+// wiebelt zachtjes. Later evt. vervangen door een vertex-colored model.
 export function Character({ position = [0, 0, 0], rotation = 0 }) {
   const ref = useRef();
   useFrame((s) => {
     if (ref.current) ref.current.position.y = position[1] + Math.sin(s.clock.elapsedTime * 2) * 0.04;
   });
-  const huid = "#f1c27d";
-  const shirt = "#4a90d9";
-  const broek = "#3a4a6b";
+  const huid = "#f1c27d", shirt = "#4a90d9", broek = "#3a4a6b";
   return (
     <group ref={ref} position={position} rotation={[0, rotation, 0]}>
       <mesh castShadow position={[-0.12, 0.3, 0]}><boxGeometry args={[0.18, 0.6, 0.18]} /><meshStandardMaterial color={broek} flatShading roughness={1} /></mesh>
@@ -80,8 +79,32 @@ export function Character({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
-// Een omheind dierverblijf met een dier erin.
-export function Enclosure({ position = [0, 0, 0], size = 3.6, assetId = "fox" }) {
+// Een paar bomen + bloemen rond het park voor sfeer.
+export function Decor() {
+  const bomen = [
+    { id: "tree", p: [-14, 0, 4] },
+    { id: "treeOak", p: [14, 0, 4] },
+    { id: "tree", p: [-15, 0, -9] },
+    { id: "treeOak", p: [15, 0, -9] },
+    { id: "treePalm", p: [0, 0, -14] },
+  ];
+  const bloemen = [
+    { id: "flowerRed", p: [-3.5, 0, 7.5] },
+    { id: "flowerYellow", p: [3.5, 0, 7.5] },
+    { id: "flowerPurple", p: [-2.2, 0, 8.4] },
+    { id: "mushroom", p: [2.4, 0, 8.6] },
+  ];
+  return (
+    <group>
+      {bomen.map((b, i) => <ZooModel key={`t${i}`} assetId={b.id} position={b.p} rotation={(i * 1.3) % 6.28} />)}
+      {bloemen.map((b, i) => <ZooModel key={`f${i}`} assetId={b.id} position={b.p} rotation={(i * 2.1) % 6.28} />)}
+    </group>
+  );
+}
+
+// Een omheind dierverblijf met een dier erin. Standaard ruim (school-app: geen
+// dier op 2×2 m), met wat ruimte rondom het dier.
+export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox" }) {
   const h = size / 2;
   const hout = "#8a5a2b";
   const n = 5;
@@ -134,10 +157,11 @@ export function ParkBase() {
   return (
     <group>
       <Paths />
+      <Decor />
       <Carousel position={[0, 0, 0]} />
-      <Character position={[0, 0, 6.2]} rotation={Math.PI} />
-      <Enclosure position={[-6.4, 0, -5.2]} assetId="fox" />
-      <Enclosure position={[6.4, 0, -5.2]} assetId="fox" />
+      <Character position={[0, 0, 6.6]} rotation={Math.PI} />
+      <Enclosure position={[-9.5, 0, -4]} assetId="deer" />
+      <Enclosure position={[9.5, 0, -4]} assetId="alpaca" />
     </group>
   );
 }
