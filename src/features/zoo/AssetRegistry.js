@@ -25,6 +25,8 @@ export const ZOO_ASSETS = {
     name: "Vos",
     url: "/models/zoo/fox/Fox.glb",
     targetHeight: 1.1,
+    // Terugvalkleur als de textuur onverhoopt niet laadt (voorkomt "witte vos").
+    fallbackColor: "#e08a3c",
     // De Khronos-vos heeft 3 animaties: "Survey", "Walk", "Run".
     defaultClip: "Survey",
     credit: "Fox by PixelMannen (CC0) + rig/animatie tomkranis (CC-BY 4.0)",

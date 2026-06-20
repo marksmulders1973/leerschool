@@ -4,8 +4,10 @@
 import supabase from "../../supabase";
 import { START_COINS } from "./zooEconomy";
 
-// Beginindeling: nooit leeg starten — één dier staat er al.
-export const STARTER_LAYOUT = [{ assetId: "fox", cell: [0, 0], rotation: -0.5 }];
+// Beginindeling van de zelf-geplaatste dieren: leeg. "Nooit leeg starten" wordt
+// vervuld door het vaste mini-park (draaimolen, paden, poppetje, twee
+// dierverblijven met een dier) uit ParkProps — dat staat er altijd.
+export const STARTER_LAYOUT = [];
 
 export function defaultState() {
   return {
