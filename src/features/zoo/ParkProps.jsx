@@ -4,6 +4,7 @@
 // Kenney/Quaternius-modellen (de laad-pijplijn ligt klaar).
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Vector3 } from "three";
 import ZooModel from "./ZooModel";
 
 const SEAT_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a"];
@@ -73,6 +74,66 @@ export function Character({ position = [0, 0, 0], rotation = 0 }) {
       <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.5, 0.6, 0.3]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
       <mesh castShadow position={[-0.34, 0.9, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0.34, 0.9, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 1.42, 0]}><sphereGeometry args={[0.26, 16, 16]} /><meshStandardMaterial color={huid} flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.54, 0]}><sphereGeometry args={[0.275, 16, 16, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#6b4a2b" flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Bestuurbaar poppetje van de speler: loopt rond met toetsen (laptop) of de
+// touch-joystick (telefoon). Beweegt camera-relatief; beentjes/armpjes zwaaien.
+export function Player({ inputRef, start = [0, 0, 13] }) {
+  const g = useRef();
+  const legL = useRef(), legR = useRef(), armL = useRef(), armR = useRef();
+  const phase = useRef(0);
+  const pos = useRef(new Vector3(start[0], 0, start[2]));
+  const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
+
+  useFrame((state, dt) => {
+    const inp = inputRef?.current || {};
+    const k = inp.keys || {};
+    let mx = (k.ArrowRight || k.KeyD ? 1 : 0) - (k.ArrowLeft || k.KeyA ? 1 : 0) + (inp.joy?.x || 0);
+    let my = (k.ArrowDown || k.KeyS ? 1 : 0) - (k.ArrowUp || k.KeyW ? 1 : 0) + (inp.joy?.y || 0);
+    mx = Math.max(-1, Math.min(1, mx));
+    my = Math.max(-1, Math.min(1, my));
+    const mag = Math.hypot(mx, my);
+    const node = g.current;
+    if (!node) return;
+
+    if (mag > 0.12) {
+      state.camera.getWorldDirection(fwd.current);
+      fwd.current.y = 0; fwd.current.normalize();
+      right.current.set(fwd.current.z, 0, -fwd.current.x);
+      dir.current.set(0, 0, 0);
+      dir.current.addScaledVector(fwd.current, -my);
+      dir.current.addScaledVector(right.current, mx);
+      if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
+      pos.current.addScaledVector(dir.current, 3.4 * dt * Math.min(1, mag));
+      const d = Math.hypot(pos.current.x, pos.current.z);
+      if (d > 27) { pos.current.x *= 27 / d; pos.current.z *= 27 / d; }
+      node.rotation.y = Math.atan2(dir.current.x, dir.current.z);
+      phase.current += dt * 11;
+      const sw = Math.sin(phase.current) * 0.5;
+      if (legL.current) legL.current.rotation.x = sw;
+      if (legR.current) legR.current.rotation.x = -sw;
+      if (armL.current) armL.current.rotation.x = -sw;
+      if (armR.current) armR.current.rotation.x = sw;
+    } else {
+      [legL, legR, armL, armR].forEach((r) => { if (r.current) r.current.rotation.x *= 0.82; });
+    }
+    node.position.set(pos.current.x, pos.current.y, pos.current.z);
+  });
+
+  const huid = "#f1c27d", shirt = "#4a90d9", broek = "#3a4a6b";
+  return (
+    <group ref={g} position={start}>
+      {/* benen (draaipunt bij de heup) */}
+      <group ref={legL} position={[-0.12, 0.6, 0]}><mesh castShadow position={[0, -0.3, 0]}><boxGeometry args={[0.18, 0.6, 0.18]} /><meshStandardMaterial color={broek} flatShading roughness={1} /></mesh></group>
+      <group ref={legR} position={[0.12, 0.6, 0]}><mesh castShadow position={[0, -0.3, 0]}><boxGeometry args={[0.18, 0.6, 0.18]} /><meshStandardMaterial color={broek} flatShading roughness={1} /></mesh></group>
+      <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.5, 0.6, 0.3]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
+      {/* armen (draaipunt bij de schouder) */}
+      <group ref={armL} position={[-0.34, 1.2, 0]}><mesh castShadow position={[0, -0.27, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh></group>
+      <group ref={armR} position={[0.34, 1.2, 0]}><mesh castShadow position={[0, -0.27, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh></group>
       <mesh castShadow position={[0, 1.42, 0]}><sphereGeometry args={[0.26, 16, 16]} /><meshStandardMaterial color={huid} flatShading roughness={1} /></mesh>
       <mesh position={[0, 1.54, 0]}><sphereGeometry args={[0.275, 16, 16, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#6b4a2b" flatShading roughness={1} /></mesh>
     </group>
@@ -171,7 +232,7 @@ export function ParkBase() {
       <Paths />
       <Decor />
       <Carousel position={[0, 0, 0]} />
-      <Character position={[0, 0, 13]} rotation={Math.PI} />
+      {/* Het poppetje wordt los gerenderd (bestuurbaar) in ZooScene. */}
     </group>
   );
 }

@@ -4,7 +4,7 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure } from "./ParkProps";
+import { ParkBase, Enclosure, Player } from "./ParkProps";
 import {
   GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
   isPlaatsbaar, bezetteCellenVan,
@@ -62,7 +62,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placedItems = [], onPlace, onSelectPlaced, onClearSelection, selectedIdx = null, moveIdx = -1 }) {
+export default function ZooScene({ placingAsset = null, placedItems = [], onPlace, onSelectPlaced, onClearSelection, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const placing = !!placingAsset;
 
@@ -105,6 +105,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
         <GrasGrond placing={placing} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
 
         <ParkBase />
+        <Player inputRef={inputRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

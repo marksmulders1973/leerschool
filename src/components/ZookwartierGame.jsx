@@ -12,6 +12,37 @@ import { PLAATSBARE_DIEREN, getAsset } from "../features/zoo/AssetRegistry";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
+// Touch-joystick (telefoon) om het poppetje te laten lopen. Schrijft naar
+// inputRef.current.joy (genormaliseerd -1..1). Werkt ook met de muis.
+function Joystick({ inputRef }) {
+  const base = useRef(null);
+  const active = useRef(false);
+  const [knob, setKnob] = useState({ x: 0, y: 0 });
+  const R = 44;
+  const naar = (cx, cy) => {
+    const r = base.current.getBoundingClientRect();
+    let dx = cx - (r.left + r.width / 2);
+    let dy = cy - (r.top + r.height / 2);
+    const d = Math.hypot(dx, dy);
+    if (d > R) { dx = (dx / d) * R; dy = (dy / d) * R; }
+    setKnob({ x: dx, y: dy });
+    inputRef.current.joy = { x: dx / R, y: dy / R };
+  };
+  const stop = () => { active.current = false; setKnob({ x: 0, y: 0 }); inputRef.current.joy = { x: 0, y: 0 }; };
+  return (
+    <div
+      ref={base}
+      onPointerDown={(e) => { active.current = true; try { e.currentTarget.setPointerCapture(e.pointerId); } catch {} naar(e.clientX, e.clientY); }}
+      onPointerMove={(e) => { if (active.current) naar(e.clientX, e.clientY); }}
+      onPointerUp={stop}
+      onPointerCancel={stop}
+      style={{ position: "absolute", left: 16, bottom: 92, width: 104, height: 104, borderRadius: "50%", background: "rgba(255,255,255,0.26)", border: "2px solid rgba(255,255,255,0.55)", zIndex: 12, touchAction: "none", boxShadow: "0 3px 10px rgba(0,0,0,.2)" }}
+    >
+      <div style={{ position: "absolute", left: "50%", top: "50%", width: 44, height: 44, marginLeft: -22, marginTop: -22, transform: `translate(${knob.x}px, ${knob.y}px)`, borderRadius: "50%", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 6px rgba(0,0,0,.3)" }} />
+    </div>
+  );
+}
+
 // Dieren-winkel: opgebouwd uit de AssetRegistry.
 const PLAATSBAAR = PLAATSBARE_DIEREN.map((id) => {
   const a = getAsset(id);
@@ -34,6 +65,17 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
+  const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
+
+  // Toetsenbord-besturing (laptop): pijltjes / WASD.
+  useEffect(() => {
+    const codes = new Set(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "KeyW", "KeyA", "KeyS", "KeyD"]);
+    const down = (e) => { if (codes.has(e.code)) { inputRef.current.keys[e.code] = true; if (e.code.startsWith("Arrow")) e.preventDefault(); } };
+    const up = (e) => { if (codes.has(e.code)) inputRef.current.keys[e.code] = false; };
+    window.addEventListener("keydown", down);
+    window.addEventListener("keyup", up);
+    return () => { window.removeEventListener("keydown", down); window.removeEventListener("keyup", up); };
+  }, []);
 
   const flits = (tekst) => {
     setMelding(tekst);
@@ -183,8 +225,12 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onClearSelection={() => setSelectedIdx(null)}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
+          inputRef={inputRef}
         />
       </Suspense>
+
+      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren). */}
+      {!placing && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
       {/* Onderbalk: contextueel. */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>
