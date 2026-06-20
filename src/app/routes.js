@@ -48,9 +48,8 @@ export const PAGE_TO_PATH = {
   obliteratorPlay: "/obliterator",
   // Spel van de maand (tijdelijk, ~1 maand) — bedankje voor onze supporter.
   supporterGame: "/supporter",
-  // Spellen-keuzescherm (OBLITERATOR + Kikker Oversteek).
-  spellen: "/spellen",
-  // Zookwartier — 3D verzamel-dierentuin als beloningsspel (lazy three.js).
+  // Zookwartier "Mijn Park" — 3D verzamel-dierentuin als beloningsspel (lazy
+  // three.js). Verving 2026-06-20 de oude spellen-hub; /spellen + /spel = aliassen.
   zoo: "/dierentuin",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
@@ -79,9 +78,12 @@ export const PAGE_TO_PATH = {
 // /leaderboard — Engelse alias voor /scorebord (canonical = NL). Backward-compat
 // voor oude deeplinks en testchecklists (2026-05-11).
 const PATH_ALIASES = {
-  // /spel toont nu het keuzescherm (2 spellen) i.p.v. direct OBLITERATOR,
-  // zodat zowel OBLITERATOR als Kikker Oversteek bereikbaar zijn (2026-06-08).
-  "/spel": "spellen",
+  // 2026-06-20: de oude spellen-hub is vervangen door "Mijn Park" (3D-dierentuin).
+  // /spel en /spellen openen nu het park. De directe game-deeplinks /obliterator
+  // en /supporter blijven resolvable (lopende ads breken niet) maar zijn nergens
+  // in de app nog klikbaar.
+  "/spel": "zoo",
+  "/spellen": "zoo",
   "/leaderboard": "leaderboard",
 };
 

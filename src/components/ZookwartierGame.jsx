@@ -8,7 +8,10 @@ import { lazy, Suspense } from "react";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
-export default function ZookwartierGame({ onHome }) {
+export default function ZookwartierGame({ onHome, userName }) {
+  const naam = (userName || "").trim();
+  // Gepersonaliseerde parknaam: ingelogd → "Mark's Park", anders "Mijn Park".
+  const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   return (
     <div style={{ position: "fixed", inset: 0, background: "#bfe3ff", overflow: "hidden" }}>
       {/* Header met titel + terug-knop, zwevend boven de canvas. */}
@@ -27,8 +30,23 @@ export default function ZookwartierGame({ onHome }) {
           pointerEvents: "none",
         }}
       >
-        <div style={{ color: "#fff", font: "800 18px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)" }}>
-          🦊 Mijn Dierentuin
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ color: "#fff", font: "800 18px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)" }}>
+            🐾 {parkNaam}
+          </div>
+          <span
+            style={{
+              font: "800 11px system-ui",
+              color: "#5b3d00",
+              background: "#ffd54a",
+              padding: "3px 9px",
+              borderRadius: 999,
+              boxShadow: "0 2px 6px rgba(0,0,0,.2)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            🚧 In opbouw
+          </span>
         </div>
         <button
           onClick={onHome}

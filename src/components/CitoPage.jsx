@@ -604,15 +604,15 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               padding: "12px 16px", cursor: "pointer", color: "var(--color-text)",
               display: "flex", alignItems: "center", gap: 12, marginTop: 4,
             }}
-            title="Speel OBLITERATOR — beloning-spel"
+            title="Ga naar je park — jouw dierentuin (in opbouw)"
           >
-            <span style={{ fontSize: 28 }}>🎮</span>
+            <span style={{ fontSize: 28 }}>🐾</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42" }}>
-                Pauze? Speel OBLITERATOR
+                Ga naar je park 🚧
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                Beloning-spel — even ontladen tussen oefenen door.
+                Jouw eigen dierentuin — nog in opbouw.
               </div>
             </div>
             <span style={{ fontSize: 18, color: "rgba(255,107,53,0.6)" }}>›</span>

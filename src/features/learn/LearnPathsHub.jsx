@@ -908,15 +908,15 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                 color: "var(--color-text)", fontFamily: "var(--font-body)",
                 display: "flex", alignItems: "center", gap: 12,
               }}
-              title="Speel OBLITERATOR — beloning-spel"
+              title="Ga naar je park — jouw dierentuin (in opbouw)"
             >
-              <span style={{ fontSize: 26 }}>🎮</span>
+              <span style={{ fontSize: 26 }}>🐾</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ff8c42" }}>
-                  Pauze? Speel OBLITERATOR
+                  Ga naar je park 🚧
                 </div>
                 <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>
-                  Beloning-spel — even ontladen tussen leren door.
+                  Jouw eigen dierentuin — nog in opbouw.
                 </div>
               </div>
               <span style={{ fontSize: 16, color: "rgba(255,107,53,0.6)" }}>›</span>

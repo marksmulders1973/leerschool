@@ -1446,8 +1446,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span>👩‍🏫</span>
               Voor leerkrachten
             </button>
-            {/* OBLITERATOR-footer-knop weggehaald 2026-05-17 (Mark wens):
-                bottom-nav heeft nu 🎮 Spel-tab, anders dubbel op home. */}
+            {/* 2026-06-20: oude spellen vervangen door "Mijn Park" (3D-dierentuin,
+                in opbouw). Ingang op home zodat het zichtbaar meegroeit. */}
+            {onPlayObliterator && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "#ff8c42", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5, fontWeight: 700 }}
+                onClick={onPlayObliterator}
+              >
+                <span>🐾</span>
+                Ga naar je park 🚧
+              </button>
+            )}
             {isAdmin && onAdminFeedback && (
               <button
                 type="button"

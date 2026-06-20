@@ -65,7 +65,6 @@ const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
-const SpellenHub = lazy(() => import("./components/SpellenHub.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
@@ -1055,7 +1054,7 @@ export default function App() {
           }}
           onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
           onHome={() => { setLearnFilterSubject(null); goHome(); }}
-          onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPlayObliterator={() => setPage("zoo")}
         />
       )}
       {page === "my-mastery" && (() => {
@@ -1151,15 +1150,6 @@ export default function App() {
           }}
         />
       )}
-      {page === "spellen" && (
-        <Suspense fallback={<PageLoader />}>
-          <SpellenHub
-            onHome={goHome}
-            onObliterator={() => setPage("obliteratorPlay")}
-            onFrogger={() => setPage("supporterGame")}
-          />
-        </Suspense>
-      )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
           <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} />
@@ -1250,7 +1240,7 @@ export default function App() {
           onAdminStats={() => setPage("admin-stats")}
           onActie={() => setPage("actie")}
           onOefenpakket={() => setPage("oefenpakket")}
-          onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => { setLearnInitialSearch(""); setEntryContext("leren"); setPage("learn-paths-hub"); }}
@@ -1626,7 +1616,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onStartProefToets={(leerpadId) => startProefToets(leerpadId, 30)}
-          onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPlayObliterator={() => setPage("zoo")}
           onPrintPakket={() => setPage("oefenpakket")}
           onBack={() => setPage("student-home")}
           onHome={goHome}
@@ -2027,7 +2017,7 @@ export default function App() {
               Top — je kwartier zit erop!
             </div>
             <div style={{ fontSize: 12, opacity: 0.85, marginTop: 2 }}>
-              {KWARTIER_TARGET_MIN} minuten geoefend. Klaar voor vandaag, of nog even spelen?
+              {KWARTIER_TARGET_MIN} minuten geoefend. Klaar voor vandaag, of even naar je park?
             </div>
           </div>
         </div>
@@ -2052,7 +2042,7 @@ export default function App() {
           {gameVisibleForUser(authUser, urlHasGameDeepLink()) && (
             <button
               type="button"
-              onClick={() => { track("kwartier_action", { keuze: "obliterator" }); setShowKwartierToast(false); setPage("obliteratorPlay"); }}
+              onClick={() => { track("kwartier_action", { keuze: "park" }); setShowKwartierToast(false); setPage("zoo"); }}
               style={{
                 flex: "1 1 auto", minWidth: 130,
                 padding: "8px 12px",
@@ -2066,7 +2056,7 @@ export default function App() {
                 boxShadow: "0 3px 10px rgba(255,80,40,0.35)",
               }}
             >
-              🛸 OBLITERATOR
+              🐾 Naar je park
             </button>
           )}
           <button
