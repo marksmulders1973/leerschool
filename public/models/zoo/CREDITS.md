@@ -8,6 +8,12 @@ commercieel bruikbaar — veilig voor een betaald kinderproduct).
 Vertex-colored low-poly (geen losse textuur → worden nooit "wit").
 Fox, Deer, Stag, Alpaca, Cow, Donkey, Horse, Husky, ShibaInu, Wolf.
 
+## Dino's — `dinos/`
+**Quaternius — "Animated Dinosaurs"** (quaternius.com) · **CC0 1.0**
+T-Rex, Triceratops, Stegosaurus, Velociraptor, Apatosaurus, Parasaurolophus.
+Geanimeerd (Walk/Idle/Run). FBX→GLB geconverteerd met `fbx2gltf` (binair, geen
+data:-URI → werkt met de productie-CSP).
+
 ## Natuur — `nature/`
 **Kenney — "Nature Kit"** (kenney.nl) · **CC0 1.0**
 tree_default, tree_oak, tree_palm, flower_redA/yellowA/purpleA, grass, mushroom_redGroup,

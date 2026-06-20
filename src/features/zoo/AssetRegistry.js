@@ -26,6 +26,15 @@ export const ZOO_ASSETS = {
   shibaInu: { id: "shibaInu", kind: "animal", name: "Shiba", emoji: "🐕", url: "/models/zoo/animals/ShibaInu.glb", targetHeight: 0.8, price: 12 },
   wolf: { id: "wolf", kind: "animal", name: "Wolf", emoji: "🐺", url: "/models/zoo/animals/Wolf.glb", targetHeight: 0.95, price: 16 },
 
+  // ---- Dino's (Quaternius "Animated Dinosaurs", CC0). FBX→GLB gaf een
+  // armature-schaal 300 → vaste schaal i.p.v. bbox-normalisatie. ----
+  velociraptor: { id: "velociraptor", kind: "animal", name: "Raptor", emoji: "🦖", url: "/models/zoo/dinos/Velociraptor.glb", fixedScale: 0.22, price: 30 },
+  triceratops: { id: "triceratops", kind: "animal", name: "Triceratops", emoji: "🦕", url: "/models/zoo/dinos/Triceratops.glb", fixedScale: 0.26, price: 40 },
+  stegosaurus: { id: "stegosaurus", kind: "animal", name: "Stegosaurus", emoji: "🦕", url: "/models/zoo/dinos/Stegosaurus.glb", fixedScale: 0.26, price: 45 },
+  parasaurolophus: { id: "parasaurolophus", kind: "animal", name: "Parasaurus", emoji: "🦕", url: "/models/zoo/dinos/Parasaurolophus.glb", fixedScale: 0.30, price: 50 },
+  trex: { id: "trex", kind: "animal", name: "T-Rex", emoji: "🦖", url: "/models/zoo/dinos/Trex.glb", fixedScale: 0.32, price: 60 },
+  apatosaurus: { id: "apatosaurus", kind: "animal", name: "Apatosaurus", emoji: "🦕", url: "/models/zoo/dinos/Apatosaurus.glb", fixedScale: 0.38, price: 70 },
+
   // ---- Natuur (Kenney Nature Kit) ----
   tree: { id: "tree", kind: "nature", name: "Boom", url: "/models/zoo/nature/tree_default.glb", targetHeight: 2.8 },
   treeOak: { id: "treeOak", kind: "nature", name: "Eik", url: "/models/zoo/nature/tree_oak.glb", targetHeight: 3.0 },
@@ -37,7 +46,7 @@ export const ZOO_ASSETS = {
 };
 
 // Dieren die de speler kan kopen/plaatsen (volgorde = winkel-volgorde).
-export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse"];
+export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
 
 export function getAsset(id) {
   return ZOO_ASSETS[id] || null;

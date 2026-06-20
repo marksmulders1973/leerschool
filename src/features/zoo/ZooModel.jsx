@@ -13,9 +13,16 @@ import { getAsset } from "./AssetRegistry";
 
 // Clip-keuze op naam (Quaternius: Walk/Idle/Idle_2/Eating/…). Valt terug op
 // de eerste beschikbare clip als een naam ontbreekt.
+// Vindt een clip op naam. Werkt voor zowel "Walk"/"Idle" (Quaternius-dieren) als
+// "Armature|TRex_Walk" (geconverteerde dino's): exact, anders eindigt-op-keyword.
 function kies(names, ...voorkeur) {
   for (const v of voorkeur) {
-    const hit = names.find((n) => n.toLowerCase() === v.toLowerCase());
+    const lv = v.toLowerCase();
+    let hit = names.find((n) => n.toLowerCase() === lv);
+    if (!hit) hit = names.find((n) => {
+      const ln = n.toLowerCase();
+      return ln.endsWith("_" + lv) || ln.endsWith("|" + lv) || ln.endsWith(lv);
+    });
     if (hit) return hit;
   }
   return null;
@@ -27,13 +34,18 @@ export default function ZooModel({ assetId, position = [0, 0, 0], rotation = 0, 
   const cloned = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
   const { scale, yOffset } = useMemo(() => {
+    // Sommige (geconverteerde) skinned modellen geven een onbetrouwbare
+    // bounding-box → dan een vaste schaal gebruiken i.p.v. normaliseren.
+    if (asset.fixedScale != null) {
+      return { scale: asset.fixedScale, yOffset: asset.yLift || 0 };
+    }
     const box = new Box3().setFromObject(cloned);
     const size = new Vector3();
     box.getSize(size);
     const height = size.y || 1;
     const s = asset.targetHeight / height;
     return { scale: s, yOffset: -box.min.y * s };
-  }, [cloned, asset.targetHeight]);
+  }, [cloned, asset.targetHeight, asset.fixedScale, asset.yLift]);
 
   useEffect(() => {
     const fallback = asset.fallbackColor ? new Color(asset.fallbackColor) : null;
