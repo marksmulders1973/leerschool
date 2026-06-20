@@ -67,6 +67,21 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [VMBO-examens downloaden + inzien](https://leerkwartier.app/vmbo-examens-downloaden.html):
   hoe je VMBO-examens downloadt via examenblad.nl + verschil met
   interactief oefenen op Leerkwartier. Inclusief URL-patronen.
+- [Cito-eindtoets oefenen](https://leerkwartier.app/cito-eindtoets-oefenen.html):
+  gratis oefenen voor de Cito-eindtoets groep 8 — rekenen, taal, begrijpend
+  lezen en wereldoriëntatie, direct online en zonder account.
+- [Begrijpend lezen oefenen (groep 5-8)](https://leerkwartier.app/begrijpend-lezen-oefenen.html):
+  gratis begrijpend lezen oefenen voor groep 5 t/m 8 met echte teksten,
+  directe feedback en uitleg — goede Cito-voorbereiding.
+- [Gratis bijles-alternatief voor de Doorstroomtoets](https://leerkwartier.app/gratis-bijles.html):
+  voor ouders die bijles te duur vinden — het kind oefent zelf met uitleg op
+  3 niveaus, een kwartier per dag, zonder de kosten van een docent.
+- [Onderwijs-begrippen helder uitgelegd](https://leerkwartier.app/onderwijs-begrippen.html):
+  uitleg voor ouders van termen als doorstroomtoets, schooladvies,
+  referentieniveaus, kerndoelen en kansrijke heroverweging.
+- [Tafels oefenen (groep 3-6)](https://leerkwartier.app/tafels-oefenen.html):
+  gratis alle tafels van 1 t/m 12 oefenen met directe feedback en
+  scoreoverzicht, geen account nodig.
 - [Gratis Doorstroomtoets-oefentoets (in-app)](https://leerkwartier.app/doorstroomtoets-oefentoets):
   een complete oefentoets in de stijl van de Doorstroomtoets — rekenen, taal
   en studievaardigheden door elkaar, met directe uitleg op 3 niveaus na elke
