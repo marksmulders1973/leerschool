@@ -82,17 +82,19 @@ export function Character({ position = [0, 0, 0], rotation = 0 }) {
 // Een paar bomen + bloemen rond het park voor sfeer.
 export function Decor() {
   const bomen = [
-    { id: "tree", p: [-14, 0, 4] },
-    { id: "treeOak", p: [14, 0, 4] },
-    { id: "tree", p: [-15, 0, -9] },
-    { id: "treeOak", p: [15, 0, -9] },
-    { id: "treePalm", p: [0, 0, -14] },
+    { id: "tree", p: [-17, 0, 6] },
+    { id: "treeOak", p: [17, 0, 6] },
+    { id: "tree", p: [-18, 0, -11] },
+    { id: "treeOak", p: [18, 0, -11] },
+    { id: "treePalm", p: [0, 0, -18] },
+    { id: "treeOak", p: [-15, 0, 16] },
+    { id: "tree", p: [15, 0, 16] },
   ];
   const bloemen = [
-    { id: "flowerRed", p: [-3.5, 0, 7.5] },
-    { id: "flowerYellow", p: [3.5, 0, 7.5] },
-    { id: "flowerPurple", p: [-2.2, 0, 8.4] },
-    { id: "mushroom", p: [2.4, 0, 8.6] },
+    { id: "flowerRed", p: [-13, 0, 13] },
+    { id: "flowerYellow", p: [13, 0, 13] },
+    { id: "flowerPurple", p: [-14, 0, 11] },
+    { id: "mushroom", p: [14, 0, 11] },
   ];
   return (
     <group>
@@ -159,9 +161,7 @@ export function ParkBase() {
       <Paths />
       <Decor />
       <Carousel position={[0, 0, 0]} />
-      <Character position={[0, 0, 6.6]} rotation={Math.PI} />
-      <Enclosure position={[-9.5, 0, -4]} assetId="deer" />
-      <Enclosure position={[9.5, 0, -4]} assetId="alpaca" />
+      <Character position={[0, 0, 13]} rotation={Math.PI} />
     </group>
   );
 }

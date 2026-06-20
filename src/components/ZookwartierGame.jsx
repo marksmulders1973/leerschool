@@ -49,7 +49,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       const base = row
         ? { coins: row.coins, streak: row.streak, last_login: row.last_login, last_kwartier_date: row.last_kwartier_date, owned: row.owned || [] }
         : { coins: d.coins, streak: d.streak, last_login: d.last_login, last_kwartier_date: d.last_kwartier_date, owned: d.owned };
-      const layout = Array.isArray(row?.layout) ? row.layout : STARTER_LAYOUT;
+      const layout = row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT;
 
       const login = applyDailyLogin(base);
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
@@ -159,6 +159,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onSelectPlaced={(idx) => { setPlacing(null); setSelectedIdx(idx); }}
           onClearSelection={() => setSelectedIdx(null)}
           selectedIdx={selectedIdx}
+          moveIdx={placing?.moveIdx ?? -1}
         />
       </Suspense>
 
@@ -167,13 +168,13 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         {placing ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {placing.moveIdx != null ? "Tik op een groen vakje om te verplaatsen" : "Tik op een groen vakje om je dier neer te zetten"}
+              {placing.moveIdx != null ? "Tik op een groen vak om het verblijf te verplaatsen" : "Tik op een groen vak om het verblijf neer te zetten"}
             </div>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>
         ) : selectedIdx != null ? (
           <>
-            <span style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>Dier gekozen:</span>
+            <span style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>Verblijf gekozen:</span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
             <button onClick={() => setSelectedIdx(null)} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
@@ -181,7 +182,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              Koop een dier (tik een geplaatst dier aan om te verplaatsen of weg te halen)
+              Koop een dier — komt mét een ruim verblijf · tik een verblijf aan om te verplaatsen of weg te halen
             </span>
             <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
               {PLAATSBAAR.map((p) => {

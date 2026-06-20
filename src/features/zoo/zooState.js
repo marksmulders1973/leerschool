@@ -4,10 +4,13 @@
 import supabase from "../../supabase";
 import { START_COINS } from "./zooEconomy";
 
-// Beginindeling van de zelf-geplaatste dieren: leeg. "Nooit leeg starten" wordt
-// vervuld door het vaste mini-park (draaimolen, paden, poppetje, twee
-// dierverblijven met een dier) uit ParkProps — dat staat er altijd.
-export const STARTER_LAYOUT = [];
+// Beginindeling: twee ruime starter-verblijven (hert + alpaca) zodat een nieuw
+// park nooit leeg is. price 0 → bij weghalen geen "gratis" muntjes. Het vaste
+// decor (draaimolen, paden, poppetje, bomen) staat daarnaast altijd.
+export const STARTER_LAYOUT = [
+  { assetId: "deer", cell: [-4, -1], rotation: 0, price: 0 },
+  { assetId: "alpaca", cell: [4, -1], rotation: 0, price: 0 },
+];
 
 export function defaultState() {
   return {
