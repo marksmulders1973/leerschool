@@ -11,8 +11,50 @@ export const LOGIN_BASE = 5;            // basis voor dagelijks inloggen
 export const LOGIN_STREAK_BONUS_MAX = 7; // +1 per streakdag, tot dit maximum
 export const KWARTIER_REWARD = 8;       // 15 min leren voltooid
 
+// Park-groei: elk verblijf levert muntjes per dag op (meer park = meer muntjes).
+export const INKOMST_PER_VERBLIJF = 2;  // per dier/verblijf per dag
+export const INKOMST_PER_BABY = 1;      // extra per jonkie per dag
+export const MAX_DAGEN_INKOMST = 3;     // offline-opbrengst gecapt op 3 dagen
+// Jonkies: per nieuwe dag kans dat een verblijf er een baby bij krijgt.
+export const BABY_KANS = 0.35;
+export const MAX_BABIES = 3;            // per verblijf
+export const BABY_BONUS = 5;            // eenmalige muntjes bij een geboorte
+
 function todayStr(d = new Date()) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+export function vandaag() {
+  return todayStr();
+}
+
+// Aantal hele dagen tussen twee datums (null/onbekend → 1).
+export function dagenVerschil(fromStr, toStr = todayStr()) {
+  if (!fromStr) return 1;
+  const a = new Date(`${fromStr}T00:00:00`);
+  const b = new Date(`${toStr}T00:00:00`);
+  const d = Math.round((b - a) / 86400000);
+  return d > 0 ? d : 0;
+}
+
+// Wat je park per dag oplevert (som over alle verblijven + hun jonkies).
+export function inkomstenPerDag(items) {
+  return (items || []).reduce((s, it) => s + INKOMST_PER_VERBLIJF + (it.babies || 0) * INKOMST_PER_BABY, 0);
+}
+
+// Laat (op een nieuwe dag) verblijven kans maken op een jonkie. Geeft de nieuwe
+// indeling + aantal geboortes terug.
+export function groeiBabies(items) {
+  let births = 0;
+  const layout = (items || []).map((it) => {
+    const b = it.babies || 0;
+    if (b < MAX_BABIES && Math.random() < BABY_KANS) {
+      births++;
+      return { ...it, babies: b + 1 };
+    }
+    return it;
+  });
+  return { layout, births };
 }
 
 function isYesterday(dateStr, today = todayStr()) {
