@@ -123,7 +123,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
               }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} />}
-              <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={it.assetId} />
+              <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={it.assetId} babies={it.babies || 0} />
             </group>
           );
         })}

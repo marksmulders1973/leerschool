@@ -7,7 +7,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
-import { applyDailyLogin, applyKwartierReward } from "../features/zoo/zooEconomy";
+import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, getAsset } from "../features/zoo/AssetRegistry";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
@@ -51,21 +51,36 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         : { coins: d.coins, streak: d.streak, last_login: d.last_login, last_kwartier_date: d.last_kwartier_date, owned: d.owned };
       const layout = row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT;
 
+      const prevLogin = base.last_login;          // vóór de login-update
+      const isNieuweDag = prevLogin !== vandaag();
       const login = applyDailyLogin(base);
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
-      const finalMeta = kw.state;
-      const gained = login.gained + kw.gained;
+      let finalMeta = kw.state;
+      let finalLayout = layout;
+      let parkGain = 0, births = 0;
+
+      // Park-groei: op een nieuwe dag levert je park muntjes op (meer verblijven/
+      // jonkies = meer) en kunnen dieren een jonkie krijgen.
+      if (isNieuweDag) {
+        const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
+        parkGain = inkomstenPerDag(layout) * dagen;
+        const g = groeiBabies(layout);
+        finalLayout = g.layout;
+        births = g.births;
+        finalMeta = { ...finalMeta, coins: finalMeta.coins + parkGain + births * BABY_BONUS };
+      }
+      const gained = login.gained + kw.gained + parkGain + births * BABY_BONUS;
 
       if (cancel) return;
       setMeta(finalMeta);
-      setPlacedItems(layout);
+      setPlacedItems(finalLayout);
       setLoaded(true);
       if (gained > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained });
+        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, births });
         clearTimeout(rewardTimer.current);
-        rewardTimer.current = setTimeout(() => setReward(null), 5000);
+        rewardTimer.current = setTimeout(() => setReward(null), 6000);
       }
-      if (userId) saveZooState(userId, { ...finalMeta, layout });
+      if (userId) saveZooState(userId, { ...finalMeta, layout: finalLayout });
     })();
     return () => { cancel = true; clearTimeout(rewardTimer.current); clearTimeout(meldingTimer.current); };
   }, [userId]);
@@ -139,8 +154,13 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       {reward && (
         <div style={{ position: "absolute", top: 64, left: "50%", transform: "translateX(-50%)", zIndex: 11, background: "rgba(255,255,255,0.96)", color: "#234", borderRadius: 14, padding: "10px 16px", boxShadow: "0 6px 20px rgba(0,0,0,.25)", font: "700 14px system-ui", textAlign: "center", maxWidth: "90%" }}>
           🎉 +{reward.total} muntjes!
-          <div style={{ font: "600 12px system-ui", opacity: 0.75, marginTop: 2 }}>
-            {reward.login > 0 ? `Inloggen +${reward.login}` : ""}{reward.login > 0 && reward.kwartier > 0 ? " · " : ""}{reward.kwartier > 0 ? `Kwartier geleerd +${reward.kwartier}` : ""}
+          <div style={{ font: "600 12px system-ui", opacity: 0.78, marginTop: 2 }}>
+            {[
+              reward.login > 0 && `Inloggen +${reward.login}`,
+              reward.kwartier > 0 && `Kwartier +${reward.kwartier}`,
+              reward.park > 0 && `Je park +${reward.park}`,
+              reward.births > 0 && `🐣 ${reward.births} jonkie${reward.births > 1 ? "s" : ""} geboren! +${reward.births * BABY_BONUS}`,
+            ].filter(Boolean).join("  ·  ")}
           </div>
         </div>
       )}
@@ -182,7 +202,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              Koop een dier — komt mét een ruim verblijf · tik een verblijf aan om te verplaatsen of weg te halen
+              📈 Je park verdient 🪙{inkomstenPerDag(placedItems)} per dag · koop een dier (komt mét een ruim verblijf) · tik een verblijf aan om te verplaatsen of weg te halen
             </span>
             <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
               {PLAATSBAAR.map((p) => {

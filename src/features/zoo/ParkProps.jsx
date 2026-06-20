@@ -106,7 +106,7 @@ export function Decor() {
 
 // Een omheind dierverblijf met een dier erin. Standaard ruim (school-app: geen
 // dier op 2×2 m), met wat ruimte rondom het dier.
-export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox" }) {
+export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox", babies = 0 }) {
   const h = size / 2;
   const hout = "#8a5a2b";
   const n = 5;
@@ -138,6 +138,16 @@ export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox" }) {
       <mesh position={[-h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       <mesh position={[h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.6, size / 2 - 1.3)} />
+      {/* Jonkies: kleinere versies van hetzelfde dier die ook rondscharrelen. */}
+      {Array.from({ length: babies }).map((_, i) => {
+        const ang = (i / Math.max(1, babies)) * Math.PI * 2 + 0.6;
+        const r = size * 0.22;
+        return (
+          <group key={`baby${i}`} position={[Math.cos(ang) * r, 0, Math.sin(ang) * r]} scale={0.55}>
+            <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.4, size / 2 - 2)} />
+          </group>
+        );
+      })}
     </group>
   );
 }
