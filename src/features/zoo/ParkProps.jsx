@@ -3,9 +3,65 @@
 // warme stijl, als "in opbouw"-visualisatie. Worden later vervangen door echte
 // Kenney/Quaternius-modellen (de laad-pijplijn ligt klaar).
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Vector3, Color } from "three";
 import ZooModel from "./ZooModel";
+
+// Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
+// tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
+// (schoolapp, kinderen moeten hun park blijven zien).
+const CYCLE = 300; // seconden per dag
+const KLEUR_DAG = new Color("#aaddff");
+const KLEUR_NACHT = new Color("#1b2a4a");
+const KLEUR_ZONSOP = new Color("#ffb27a");
+const ZON_DAG = new Color("#fff4e0");
+const ZON_HORIZON = new Color("#ff9a5a");
+
+export function DayNight() {
+  const { scene } = useThree();
+  const sun = useRef();
+  const amb = useRef();
+  const tmp = useRef(new Color());
+  useFrame((state) => {
+    const phase = (state.clock.elapsedTime % CYCLE) / CYCLE; // 0..1
+    const e = Math.sin(phase * Math.PI * 2);                 // zon-hoogte -1..1 (0.25=middag)
+    const daglicht = Math.max(0, Math.min(1, (e + 0.2) / 1.0));
+    const horizon = Math.max(0, 1 - Math.abs(e) / 0.35);     // 1 bij zonsop/onder
+
+    // Luchtkleur: nacht→dag, met oranje gloed bij de horizon.
+    const sky = tmp.current.copy(KLEUR_NACHT).lerp(KLEUR_DAG, daglicht).lerp(KLEUR_ZONSOP, horizon * 0.6);
+    if (scene.background && scene.background.isColor) scene.background.copy(sky);
+    else scene.background = sky.clone();
+    if (scene.fog) scene.fog.color.copy(sky);
+
+    if (sun.current) {
+      sun.current.position.set(Math.cos(phase * Math.PI * 2) * 18, Math.max(-4, e * 22 + 3), 9);
+      sun.current.intensity = 0.12 + daglicht * 1.25;
+      sun.current.color.copy(ZON_DAG).lerp(ZON_HORIZON, horizon);
+    }
+    if (amb.current) amb.current.intensity = 0.28 + daglicht * 0.4;
+  });
+  return (
+    <>
+      <ambientLight ref={amb} intensity={0.6} />
+      <hemisphereLight args={["#eaf6ff", "#6f9a4a", 0.5]} />
+      <directionalLight
+        ref={sun}
+        castShadow
+        position={[12, 16, 9]}
+        intensity={1.2}
+        shadow-mapSize={[2048, 2048]}
+        shadow-camera-near={1}
+        shadow-camera-far={64}
+        shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
+        shadow-bias={-0.0004}
+      />
+    </>
+  );
+}
 
 const SEAT_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a"];
 

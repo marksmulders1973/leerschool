@@ -5,7 +5,7 @@
 import { Suspense, useState, useMemo, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
@@ -126,21 +126,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <color attach="background" args={["#aaddff"]} />
       <fog attach="fog" args={["#aaddff", 34, 78]} />
 
-      <ambientLight intensity={0.55} />
-      <hemisphereLight args={["#eaf6ff", "#6f9a4a", 0.6]} />
-      <directionalLight
-        castShadow
-        position={[12, 16, 9]}
-        intensity={1.2}
-        shadow-mapSize={[2048, 2048]}
-        shadow-camera-near={1}
-        shadow-camera-far={64}
-        shadow-camera-left={-20}
-        shadow-camera-right={20}
-        shadow-camera-top={20}
-        shadow-camera-bottom={-20}
-        shadow-bias={-0.0004}
-      />
+      {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
+      <DayNight />
 
       <Suspense fallback={<Laden />}>
         <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
