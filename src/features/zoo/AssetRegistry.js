@@ -57,6 +57,8 @@ export const ZOO_ASSETS = {
 
   // ---- Natuur & bouwen (Kenney Nature Kit + procedureel pad). cells:1 = klein.
   // Decor levert geen muntjes op; je gebruikt het om je park in te richten. ----
+  heuvel: { id: "heuvel", kind: "decor", name: "Heuveltje", emoji: "⛰️", procedural: "hill", color: "#83bd54", hillSize: 1.3, cells: 1, price: 5 },
+  groteHeuvel: { id: "groteHeuvel", kind: "decor", name: "Grote heuvel", emoji: "⛰️", procedural: "hill", color: "#77ad4b", hillSize: 2.3, cells: 1, price: 8 },
   path: { id: "path", kind: "decor", name: "Pad zand", emoji: "🟫", procedural: "path", color: "#dcc48f", cells: 1, price: 3 },
   pathStone: { id: "pathStone", kind: "decor", name: "Pad steen", emoji: "⬜", procedural: "path", color: "#b9b6ab", cells: 1, price: 3 },
   pathRed: { id: "pathRed", kind: "decor", name: "Pad rood", emoji: "🟥", procedural: "path", color: "#cf6a5a", cells: 1, price: 3 },
@@ -79,7 +81,7 @@ export const ZOO_ASSETS = {
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
 export const PLAATSBARE_BOUWWERKEN = ["huisRood", "huisBlauw", "huisGroen", "huisGeel", "villaRoze", "stadshuisPaars", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
-export const PLAATSBARE_NATUUR = ["path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
+export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
 // Footprint (aantal vakjes) van een item; klein decor = 1, rest = 3.
 export function cellsVan(id) {

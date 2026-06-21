@@ -330,6 +330,18 @@ export function PathTile({ position = [0, 0, 0], color = "#dcc48f" }) {
   );
 }
 
+// Grasheuvel (procedureel) — een zachte glooiing in de grond die je overal kunt
+// neerzetten zodat je park niet vlak is.
+export function HillMound({ position = [0, 0, 0], size = 1.2, color = "#82bb55" }) {
+  const w = 1.45 * size, h = 0.62 * size;
+  return (
+    <mesh position={[position[0], 0, position[2]]} scale={[w, h, w]} castShadow receiveShadow>
+      <sphereGeometry args={[1, 22, 12, 0, Math.PI * 2, 0, Math.PI / 2]} />
+      <meshStandardMaterial color={color} roughness={1} />
+    </mesh>
+  );
+}
+
 // Geen vast decor meer: álles (draaimolen, paden, bomen, verblijven) is een
 // plaatsbaar/weghaalbaar item geworden. Alleen het poppetje wordt los
 // gerenderd (bestuurbaar) in ZooScene.

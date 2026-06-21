@@ -5,7 +5,7 @@
 import { Suspense, useState, useMemo, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
@@ -20,7 +20,7 @@ function isVast(assetId) {
   const a = getAsset(assetId);
   if (!a) return false;
   if (a.kind === "animal" || a.kind === "building" || a.kind === "attraction") return true;
-  if (a.kind === "decor") return a.procedural !== "path" && !String(assetId).startsWith("flower") && assetId !== "mushroom";
+  if (a.kind === "decor") return a.procedural !== "path" && a.procedural !== "hill" && !String(assetId).startsWith("flower") && assetId !== "mushroom";
   return false;
 }
 
@@ -31,6 +31,7 @@ function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable =
   if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
   if (a.procedural === "carousel") return <Carousel position={[x, 0, z]} />;
   if (a.procedural === "path") return <PathTile position={[x, 0, z]} color={a.color} />;
+  if (a.procedural === "hill") return <HillMound position={[x, 0, z]} size={a.hillSize} color={a.color} />;
   return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
 }
 
