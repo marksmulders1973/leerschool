@@ -6,7 +6,7 @@
 // groeperen de hoekpunten per vlakje (= per onderdeel), en zetten het model om
 // naar per-hoekpunt-kleuren. Daarna kun je een onderdeel aanklikken en die hele
 // groep een nieuwe kleur geven. De gekozen kleuren staan per huis in `colors`.
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { Box3, Vector3, BufferAttribute, MeshStandardMaterial, Color } from "three";
 import { getAsset } from "./AssetRegistry";
@@ -78,10 +78,16 @@ function analyseer(url, scene) {
   }
 }
 
-export default function HouseModel({ assetId, position = [0, 0, 0], rotation = 0, colors, editable = false, onPickPart, fallback }) {
+export default function HouseModel({ assetId, position = [0, 0, 0], rotation = 0, colors, editable = false, onPickPart, onParts, fallback }) {
   const asset = getAsset(assetId);
   const { scene } = useGLTF(asset.url);
   const a = useMemo(() => analyseer(asset.url, scene), [asset.url, scene]);
+
+  // Meld de gevonden onderdelen (basiskleuren) aan de UI, zodat die per-onderdeel
+  // kleur-chips kan tonen (kleuren zonder dat je het 3D-deel exact hoeft te raken).
+  useEffect(() => {
+    if (onParts) onParts(a ? a.baseColors.map((c) => [c[0], c[1], c[2]]) : null);
+  }, [a, onParts]);
 
   // Per-huis geometrie met eigen kleur-attribuut (basiskleur of jouw keuze).
   const geom = useMemo(() => {

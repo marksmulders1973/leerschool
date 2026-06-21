@@ -30,7 +30,7 @@ function isVast(assetId) {
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} />;
@@ -47,7 +47,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
     return (
       <HouseModel
         assetId={assetId} position={[x, y, z]} rotation={rotation}
-        colors={colors} editable={colorEditable} onPickPart={onPickPart}
+        colors={colors} editable={colorEditable} onPickPart={onPickPart} onParts={colorEditable ? onParts : undefined}
         fallback={<ZooModel assetId={assetId} position={[x, y, z]} rotation={rotation} />}
       />
     );
@@ -126,7 +126,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -222,6 +222,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0}
                 colors={it.colors} colorEditable={colorEditIdx === idx}
                 onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
+                onParts={onHouseParts}
               />
             </group>
           );
