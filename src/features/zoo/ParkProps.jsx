@@ -8,9 +8,6 @@ import { Html } from "@react-three/drei";
 import { Vector3, Color } from "three";
 import ZooModel from "./ZooModel";
 
-// Wat bezoekers denken (denkwolkje boven hun hoofd).
-const GEDACHTEN = ["🍟", "🦊", "🦕", "🎠", "🪙", "❤️", "🌳", "😋", "🐾", "⭐", "🎡", "🍦"];
-
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
 // (schoolapp, kinderen moeten hun park blijven zien).
@@ -225,32 +222,87 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   );
 }
 
-// Bezoekers: kleine figuurtjes die door het park wandelen. Hoe meer je park te
-// bieden heeft, hoe meer bezoekers — zo komt het park tot leven (en zie je
-// waarvoor je park muntjes verdient). Puur sfeer; geen botsing.
+// Bezoekers: kleine figuurtjes die door het park wandelen. Ze krijgen honger of
+// dorst (denkwolkje "Ik heb honger"/"Ik heb dorst"), lopen naar een passend
+// kraampje (patat = eten, drank = drinken) en kopen iets — zo verdien JIJ muntjes.
+// Hoe hoger je de prijs zet, hoe meer een hapje oplevert, maar bij een te hoge
+// prijs haken sommige bezoekers af (😖). Geen botsing; puur sfeer + verdienen.
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
 
-function Visitor({ seed, onTip, canTip, heightRef }) {
+// "Eerlijke" prijs per soort: tot hier koopt vrijwel iedereen; daarboven haken
+// er steeds meer af. Kindvriendelijk: er koopt altijd nog een enkeling.
+const EERLIJKE_PRIJS = { food: 5, drink: 4 };
+function koopKans(kind, prijs) {
+  const fair = EERLIJKE_PRIJS[kind] || 4;
+  return Math.max(0.12, Math.min(1, 1.3 - prijs / (fair * 2)));
+}
+
+function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), coin = useRef();
-  const [bubble, setBubble] = useState(null);
+  const [bubble, setBubble] = useState(null); // { e, t? }
   const st = useRef({
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
     tx: 0, tz: 0, rest: (seed % 3) * 0.7, resting: true, phase: seed,
-    tip: 8 + (seed % 11), coinT: -1, bt: 3 + (seed % 9), bon: false,
+    need: null, needT: 4 + (seed % 9), acting: false, coinT: -1, bt: 0,
   });
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
+  const toon = (b, dur) => { setBubble(b); st.current.bt = dur; };
+
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
-    // Wandelen.
+    const stands = standsRef?.current || { food: [], drink: [] };
+    const prices = pricesRef?.current || EERLIJKE_PRIJS;
+
+    // Denkwolkje vanzelf laten verdwijnen.
+    if (s.bt > 0) { s.bt -= dt; if (s.bt <= 0) setBubble(null); }
+
+    // Honger/dorst opwekken (alleen als bezoeker nog niets onderhanden heeft).
+    if (!s.need && !s.acting) {
+      s.needT -= dt;
+      if (s.needT <= 0) {
+        const kind = Math.random() < 0.5 ? "food" : "drink";
+        const lijst = stands[kind] || [];
+        if (lijst.length) {
+          // Loop naar het dichtstbijzijnde passende kraampje.
+          let best = lijst[0], bd = Infinity;
+          for (const p of lijst) { const d = Math.hypot(p[0] - s.x, p[1] - s.z); if (d < bd) { bd = d; best = p; } }
+          const dx = s.x - best[0], dz = s.z - best[1]; const dd = Math.hypot(dx, dz) || 1;
+          s.tx = best[0] + (dx / dd) * 2.6; s.tz = best[1] + (dz / dd) * 2.6;
+          s.need = kind; s.acting = true; s.resting = false;
+          toon(kind === "food" ? { e: "🍔", t: "Ik heb honger" } : { e: "🥤", t: "Ik heb dorst" }, 4);
+        } else {
+          // Geen passend kraampje → bezoeker baalt even (hint om er een te kopen).
+          toon(kind === "food" ? { e: "🍔", t: "Ik heb honger" } : { e: "🥤", t: "Ik heb dorst" }, 4);
+          s.needT = 11 + Math.random() * 12;
+        }
+      }
+    }
+
+    // Wandelen / aankomen.
     if (s.resting) {
       s.rest -= dt;
-      if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 18; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
+      if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 17; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
     } else {
       const dx = s.tx - s.x, dz = s.tz - s.z; const d = Math.hypot(dx, dz);
-      if (d < 0.12) { s.resting = true; s.rest = 1 + Math.random() * 3; if (legL.current) legL.current.rotation.x = 0; if (legR.current) legR.current.rotation.x = 0; }
-      else {
-        const step = Math.min(d, dt * 1.7); s.x += (dx / d) * step; s.z += (dz / d) * step;
+      if (d < 0.18) {
+        if (s.acting) {
+          // Bij het kraampje: kopen? Goedkoop = bijna altijd; te duur = afhaken.
+          const kind = s.need; const prijs = prices[kind] ?? (EERLIJKE_PRIJS[kind] || 4);
+          if (Math.random() < koopKans(kind, prijs)) {
+            onBuy && onBuy(kind, prijs);
+            s.coinT = 0;
+            toon({ e: kind === "food" ? "😋" : "😋" }, 2.2);
+          } else {
+            toon({ e: "😖", t: "Te duur!" }, 2.2);
+          }
+          s.acting = false; s.need = null; s.needT = 13 + Math.random() * 13;
+        }
+        s.resting = true; s.rest = 1 + Math.random() * 2.5;
+        if (legL.current) legL.current.rotation.x = 0; if (legR.current) legR.current.rotation.x = 0;
+      } else {
+        const speed = s.acting ? 2.2 : 1.7;
+        const step = Math.min(d, dt * speed); s.x += (dx / d) * step; s.z += (dz / d) * step;
         node.rotation.y = Math.atan2(dx, dz);
         s.phase += dt * 10; const sw = Math.sin(s.phase) * 0.5;
         if (legL.current) legL.current.rotation.x = sw;
@@ -258,9 +310,8 @@ function Visitor({ seed, onTip, canTip, heightRef }) {
       }
     }
     node.position.set(s.x, heightRef?.current ? heightRef.current(s.x, s.z) : 0, s.z);
-    // Af en toe een muntje betalen (zweeft omhoog en vervaagt).
-    s.tip -= dt;
-    if (s.tip <= 0) { s.tip = 16 + Math.random() * 20; if (canTip && canTip()) { s.coinT = 0; onTip && onTip(1); } }
+
+    // Muntje-pop bij een aankoop (zweeft omhoog en vervaagt).
     if (coin.current) {
       if (s.coinT >= 0) {
         s.coinT += dt; const p = s.coinT / 1.5;
@@ -272,18 +323,15 @@ function Visitor({ seed, onTip, canTip, heightRef }) {
         if (s.coinT > 1.5) s.coinT = -1;
       } else coin.current.visible = false;
     }
-    // Denkwolkje: af en toe een gedachte tonen.
-    s.bt -= dt;
-    if (s.bt <= 0) {
-      if (s.bon) { s.bon = false; s.bt = 7 + Math.random() * 10; setBubble(null); }
-      else { s.bon = true; s.bt = 3 + Math.random() * 2; setBubble(GEDACHTEN[Math.floor(Math.random() * GEDACHTEN.length)]); }
-    }
   });
   return (
     <group ref={g} scale={0.78}>
       {bubble && (
         <Html position={[0, 2.4, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
-          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 9px", fontSize: 20, lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap" }}>{bubble}</div>
+          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
+            <span style={{ fontSize: 20 }}>{bubble.e}</span>
+            {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>}
+          </div>
         </Html>
       )}
       <group ref={legL} position={[-0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
@@ -291,7 +339,7 @@ function Visitor({ seed, onTip, canTip, heightRef }) {
       <mesh castShadow position={[0, 0.85, 0]}><boxGeometry args={[0.46, 0.55, 0.28]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 1.32, 0]}><sphereGeometry args={[0.24, 14, 14]} /><meshStandardMaterial color="#f1c27d" flatShading roughness={1} /></mesh>
       <mesh position={[0, 1.43, 0]}><sphereGeometry args={[0.255, 14, 14, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#4a3525" flatShading roughness={1} /></mesh>
-      {/* Fooi-muntje (verborgen tot een bezoeker betaalt). */}
+      {/* Muntje (verborgen tot een bezoeker iets koopt). */}
       <mesh ref={coin} position={[0, 1.9, 0]} rotation={[Math.PI / 2, 0, 0]} visible={false}>
         <cylinderGeometry args={[0.18, 0.18, 0.045, 18]} />
         <meshStandardMaterial color="#ffd23a" emissive="#8a6a00" emissiveIntensity={0.25} transparent metalness={0.3} roughness={0.5} />
@@ -300,10 +348,10 @@ function Visitor({ seed, onTip, canTip, heightRef }) {
   );
 }
 
-export function Visitors({ count = 4, onTip, canTip, heightRef }) {
+export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} onTip={onTip} canTip={canTip} heightRef={heightRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} />)}
     </group>
   );
 }
@@ -441,6 +489,36 @@ export function PatatKraam({ position = [0, 0, 0] }) {
       {/* patatpuntzak op de toonbank */}
       <mesh castShadow position={[0.5, 1.13, 0.12]} rotation={[0.15, 0, 0]}><coneGeometry args={[0.13, 0.32, 12]} /><meshStandardMaterial color="#e2574c" flatShading roughness={1} /></mesh>
       <mesh position={[0.5, 1.36, 0.12]}><cylinderGeometry args={[0.11, 0.07, 0.28, 8]} /><meshStandardMaterial color="#f2cd4a" flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Drankkraam (procedureel) — een vrolijk drankkraam met blauw/witte luifel en
+// een grote beker met rietje op de toonbank. Bezoekers met dorst kopen hier.
+export function DrankKraam({ position = [0, 0, 0] }) {
+  const hout = "#caa44a";
+  return (
+    <group position={[position[0], 0, position[2]]}>
+      {/* toonbank */}
+      <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#e3f0f7" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#3a8fb8" flatShading roughness={1} /></mesh>
+      {/* achterwand + bord */}
+      <mesh castShadow position={[0, 1.15, -0.45]}><boxGeometry args={[1.8, 1.4, 0.12]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.37]}><boxGeometry args={[1.3, 0.5, 0.06]} /><meshStandardMaterial color="#4ec0e6" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.33]}><boxGeometry args={[0.9, 0.18, 0.04]} /><meshStandardMaterial color="#2a6f99" flatShading roughness={1} /></mesh>
+      {/* palen */}
+      <mesh position={[-0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      <mesh position={[0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      {/* gestreepte luifel (blauw/wit), schuin naar voren */}
+      <group position={[0, 2.15, 0.05]} rotation={[-0.32, 0, 0]}>
+        {[-0.75, -0.45, -0.15, 0.15, 0.45, 0.75].map((x, i) => (
+          <mesh key={i} castShadow position={[x, 0, 0]}><boxGeometry args={[0.3, 0.07, 1.05]} /><meshStandardMaterial color={i % 2 ? "#ffffff" : "#4ec0e6"} flatShading roughness={1} /></mesh>
+        ))}
+      </group>
+      {/* grote beker met deksel + rietje op de toonbank */}
+      <mesh castShadow position={[0.5, 1.16, 0.12]}><cylinderGeometry args={[0.14, 0.11, 0.4, 14]} /><meshStandardMaterial color="#e2574c" flatShading roughness={1} /></mesh>
+      <mesh position={[0.5, 1.37, 0.12]}><cylinderGeometry args={[0.15, 0.15, 0.04, 14]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      <mesh position={[0.56, 1.52, 0.12]} rotation={[0, 0, -0.35]}><cylinderGeometry args={[0.022, 0.022, 0.34, 8]} /><meshStandardMaterial color="#ffd23a" roughness={0.7} /></mesh>
     </group>
   );
 }

@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry } from "three";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -37,6 +37,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, walls, edi
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "patatkraam") return <PatatKraam position={[x, y, z]} />;
+  if (a.procedural === "drankkraam") return <DrankKraam position={[x, y, z]} />;
   if (a.kind === "building" && String(assetId).startsWith("house")) {
     return (
       <HouseModel
@@ -120,7 +121,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onBuy, prices = { food: 5, drink: 4 }, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -140,6 +141,23 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     return k === "animal" || k === "building" || k === "attraction";
   }).length;
   const bezoekers = Math.max(2, Math.min(14, Math.round(trekpleisters * 1.3) + 2));
+
+  // Kraampjes-locaties (wereldcoördinaten) per soort behoefte: patat = food,
+  // drank = drink. Bezoekers lopen naar het dichtstbijzijnde passende kraampje.
+  const standsRef = useRef({ food: [], drink: [] });
+  standsRef.current = useMemo(() => {
+    const food = [], drink = [];
+    placedItems.forEach((it) => {
+      const voorziet = getAsset(it.assetId)?.voorziet;
+      if (!voorziet) return;
+      const [sx, sz] = cellToWorld(it.cell[0], it.cell[1]);
+      (voorziet === "food" ? food : drink).push([sx, sz]);
+    });
+    return { food, drink };
+  }, [placedItems]);
+  // Prijzen die de speler instelt — via ref zodat de loop altijd de laatste leest.
+  const pricesRef = useRef(prices);
+  pricesRef.current = prices;
 
   // Botsing: vakjes die "vast" zijn, zodat het poppetje er niet doorheen loopt.
   const vasteCellen = useMemo(() => {
@@ -179,7 +197,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <ParkBase />
         <Player inputRef={inputRef} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam} />
-        <Visitors count={bezoekers} onTip={onTip} canTip={canTip} heightRef={heightFnRef} />
+        <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

@@ -22,7 +22,8 @@ export function defaultState() {
     last_login: null,
     last_kwartier_date: null,
     layout: STARTER_LAYOUT,
-    owned: [],
+    // owned (jsonb) bewaart o.a. de ingestelde kraampjes-prijzen.
+    owned: { foodPrice: 5, drinkPrice: 4 },
   };
 }
 
@@ -32,7 +33,7 @@ export async function loadZooState(userId) {
   try {
     const { data, error } = await supabase
       .from("zoo_state")
-      .select("coins, streak, last_login, last_kwartier_date, layout, owned")
+      .select("coins, streak, last_login, last_kwartier_date, layout, owned, terrain")
       .eq("user_id", userId)
       .maybeSingle();
     if (error) {

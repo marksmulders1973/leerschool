@@ -40,7 +40,8 @@ export const ZOO_ASSETS = {
   stallRed: { id: "stallRed", kind: "building", name: "Kraampje", emoji: "🏪", url: "/models/zoo/build/stall-red.glb", targetHeight: 2.2, price: 25 },
   stallGreen: { id: "stallGreen", kind: "building", name: "Groen kraampje", emoji: "🏪", url: "/models/zoo/build/stall-green.glb", targetHeight: 2.2, price: 25 },
   cart: { id: "cart", kind: "building", name: "Marktkar", emoji: "🛒", url: "/models/zoo/build/cart-high.glb", targetHeight: 1.9, price: 20 },
-  patatkraam: { id: "patatkraam", kind: "building", name: "Patatkraam", emoji: "🍟", procedural: "patatkraam", price: 35 },
+  patatkraam: { id: "patatkraam", kind: "building", name: "Patatkraam", emoji: "🍟", procedural: "patatkraam", price: 35, voorziet: "food" },
+  drankkraam: { id: "drankkraam", kind: "building", name: "Drankkraam", emoji: "🥤", procedural: "drankkraam", price: 35, voorziet: "drink" },
   fountain: { id: "fountain", kind: "building", name: "Fontein", emoji: "⛲", url: "/models/zoo/build/fountain.glb", targetHeight: 1.4, price: 35 },
   // Echte Kenney-huizen met hun natuurlijke (realistische) kleuren — elk een
   // ander dak/muur-schema. Géén monochrome tint.
@@ -87,7 +88,7 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
-export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
