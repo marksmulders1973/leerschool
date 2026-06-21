@@ -2017,7 +2017,7 @@ export default function App() {
               Top — je kwartier zit erop!
             </div>
             <div style={{ fontSize: 12, opacity: 0.85, marginTop: 2 }}>
-              {KWARTIER_TARGET_MIN} minuten geoefend. Klaar voor vandaag, of even naar je park?
+              {KWARTIER_TARGET_MIN} minuten geoefend — je verdiende 🪙 park tokens! Klaar voor vandaag, of even naar je park?
             </div>
           </div>
         </div>

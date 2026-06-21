@@ -179,6 +179,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
+  // Park tokens (de muntjes uit Mijn Park) als haak op de home: laat je saldo
+  // zien zodat je wilt terugkomen en wilt leren om meer te verdienen.
+  const [parkTokens, setParkTokens] = useState(null);
+  useEffect(() => {
+    if (!authUser?.id) return;
+    let cancel = false;
+    supabase.from("zoo_state").select("coins").eq("user_id", authUser.id).maybeSingle()
+      .then(({ data }) => { if (!cancel && data) setParkTokens(data.coins); })
+      .catch(() => {});
+    return () => { cancel = true; };
+  }, [authUser?.id]);
   const [shake, setShake] = useState(false);
   const [nameError, setNameError] = useState("");
   const [homeSearch, setHomeSearch] = useState("");
@@ -1451,11 +1462,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             {onPlayObliterator && (
               <button
                 type="button"
-                style={{ background: "none", border: "none", color: "#ff8c42", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5, fontWeight: 700 }}
+                title="Verdien park tokens door 15 min te leren!"
+                style={{ background: "none", border: "none", color: "#ff8c42", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700 }}
                 onClick={onPlayObliterator}
               >
                 <span>🐾</span>
-                Ga naar je park 🚧
+                {parkTokens != null ? "Mijn Park" : "Ga naar je park 🚧"}
+                {parkTokens != null && (
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "#ffe08a", color: "#5b3d00", borderRadius: 999, padding: "2px 8px", fontSize: 12.5, fontWeight: 800 }}>
+                    🪙 {parkTokens} park tokens
+                  </span>
+                )}
               </button>
             )}
             {isAdmin && onAdminFeedback && (
