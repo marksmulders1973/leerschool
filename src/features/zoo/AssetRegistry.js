@@ -44,6 +44,13 @@ export const ZOO_ASSETS = {
   houseA: { id: "houseA", kind: "building", name: "Huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, price: 60 },
   houseE: { id: "houseE", kind: "building", name: "Villa", emoji: "🏡", url: "/models/zoo/build/house-e.glb", targetHeight: 3.6, price: 75 },
   houseH: { id: "houseH", kind: "building", name: "Stadshuis", emoji: "🏘️", url: "/models/zoo/build/house-h.glb", targetHeight: 3.8, price: 75 },
+  // Vrolijk gekleurde huisjes (zelfde modellen, lichte kleur-tint over het wit).
+  huisRood: { id: "huisRood", kind: "building", name: "Rood huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, tint: "#f3a89c", price: 60 },
+  huisBlauw: { id: "huisBlauw", kind: "building", name: "Blauw huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, tint: "#a9cdf5", price: 60 },
+  huisGroen: { id: "huisGroen", kind: "building", name: "Groen huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, tint: "#b3e09a", price: 60 },
+  huisGeel: { id: "huisGeel", kind: "building", name: "Geel huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, tint: "#f5dd8e", price: 60 },
+  villaRoze: { id: "villaRoze", kind: "building", name: "Roze villa", emoji: "🏡", url: "/models/zoo/build/house-e.glb", targetHeight: 3.6, tint: "#f3b6d2", price: 75 },
+  stadshuisPaars: { id: "stadshuisPaars", kind: "building", name: "Paars stadshuis", emoji: "🏘️", url: "/models/zoo/build/house-h.glb", targetHeight: 3.8, tint: "#c5b1e8", price: 75 },
 
   // ---- Attractie (zelf-gebouwd, procedureel) ----
   carousel: { id: "carousel", kind: "attraction", name: "Draaimolen", emoji: "🎠", procedural: "carousel", price: 60 },
@@ -70,7 +77,7 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
-export const PLAATSBARE_BOUWWERKEN = ["houseA", "houseE", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_BOUWWERKEN = ["huisRood", "huisBlauw", "huisGroen", "huisGeel", "villaRoze", "stadshuisPaars", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_NATUUR = ["path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 

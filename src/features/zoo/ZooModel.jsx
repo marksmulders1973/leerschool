@@ -49,21 +49,29 @@ export default function ZooModel({ assetId, position = [0, 0, 0], rotation = 0, 
 
   useEffect(() => {
     const fallback = asset.fallbackColor ? new Color(asset.fallbackColor) : null;
+    const tint = asset.tint ? new Color(asset.tint) : null;
     cloned.traverse((o) => {
       if (!o.isMesh) return;
       o.castShadow = true;
       o.receiveShadow = true;
-      const mats = Array.isArray(o.material) ? o.material : [o.material];
-      mats.forEach((m) => {
-        if (!m) return;
-        if (m.map) { m.map.colorSpace = SRGBColorSpace; m.map.needsUpdate = true; }
-        else if (fallback) m.color = fallback.clone();
-        if ("metalness" in m) m.metalness = 0;
-        if ("roughness" in m) m.roughness = Math.max(0.6, m.roughness ?? 1);
-        m.needsUpdate = true;
+      const wasArray = Array.isArray(o.material);
+      const mats = wasArray ? o.material : [o.material];
+      const out = mats.map((m) => {
+        if (!m) return m;
+        // Bij een tint het materiaal klonen, zodat we niet het gecachete
+        // gedeelde materiaal kleuren (dat zou álle exemplaren tinten).
+        const mat = tint ? m.clone() : m;
+        if (mat.map) { mat.map.colorSpace = SRGBColorSpace; mat.map.needsUpdate = true; }
+        else if (fallback) mat.color = fallback.clone();
+        if ("metalness" in mat) mat.metalness = 0;
+        if ("roughness" in mat) mat.roughness = Math.max(0.6, mat.roughness ?? 1);
+        if (tint && mat.color) mat.color.multiply(tint);
+        mat.needsUpdate = true;
+        return mat;
       });
+      o.material = wasArray ? out : out[0];
     });
-  }, [cloned, asset.fallbackColor]);
+  }, [cloned, asset.fallbackColor, asset.tint]);
 
   const group = useRef();
   const mover = useRef();
