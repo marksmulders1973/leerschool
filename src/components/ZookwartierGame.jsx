@@ -9,6 +9,7 @@ import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset } from "../features/zoo/AssetRegistry";
+import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -76,6 +77,9 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
   const [pickedPart, setPickedPart] = useState(null);   // gekozen onderdeel-groep
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
+  const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
+  const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
+  const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
@@ -142,6 +146,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       if (cancel) return;
       setMeta(finalMeta);
       setPlacedItems(finalLayout);
+      setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
       if (gained > 0) {
         setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, births });
@@ -153,12 +158,12 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
     return () => { cancel = true; clearTimeout(rewardTimer.current); clearTimeout(meldingTimer.current); };
   }, [userId]);
 
-  // Debounced opslaan na wijzigingen.
+  // Debounced opslaan na wijzigingen (incl. het geboetseerde terrein).
   useEffect(() => {
     if (!loaded || !userId || !meta) return;
-    const t = setTimeout(() => saveZooState(userId, { ...meta, layout: placedItems }), 2000);
+    const t = setTimeout(() => saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }), 2000);
     return () => clearTimeout(t);
-  }, [placedItems, meta, loaded, userId]);
+  }, [placedItems, meta, terrain, loaded, userId]);
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
@@ -227,7 +232,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
     if (!userId || !meta) { flits("Nog niet ingelogd — opslaan lukt zo niet"); return; }
-    await saveZooState(userId, { ...meta, layout: placedItems });
+    await saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) });
     flits("Park opgeslagen ✓");
   };
 
@@ -244,6 +249,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
+          <button onClick={() => { setSculptMode((v) => !v); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>
@@ -286,18 +292,31 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onPickPart={(idx, grp) => setPickedPart(grp)}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
+          terrain={terrain}
+          onTerrainChange={setTerrain}
+          sculptMode={sculptMode}
+          sculptDir={sculptDir}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}
         />
       </Suspense>
 
-      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren). */}
-      {!placing && selectedIdx == null && <Joystick inputRef={inputRef} />}
+      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren). */}
+      {!placing && !sculptMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
       {/* Onderbalk: contextueel. */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>
-        {placing ? (
+        {sculptMode ? (
+          <>
+            <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
+              ⛰️ Tik op de grond om de vloer {sculptDir > 0 ? "omhoog" : "omlaag"} te boetseren
+            </div>
+            <button onClick={() => setSculptDir(1)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: sculptDir > 0 ? "#fff" : "#234", background: sculptDir > 0 ? "#2e7d32" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>⬆️ Omhoog</button>
+            <button onClick={() => setSculptDir(-1)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: sculptDir < 0 ? "#fff" : "#234", background: sculptDir < 0 ? "#2e7d32" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>⬇️ Omlaag</button>
+            <button onClick={() => setSculptMode(false)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
+          </>
+        ) : placing ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
               {`Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}

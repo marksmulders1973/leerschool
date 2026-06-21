@@ -5,11 +5,13 @@
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { Vector3 } from "three";
+import { Vector3, PlaneGeometry } from "three";
 import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
+import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG } from "./terrain";
+import { useEffect } from "react";
 import {
   CELL, GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
   footprint, isPlaatsbaar, bezetteCellenVan,
@@ -26,25 +28,51 @@ function isVast(assetId) {
   return false;
 }
 
-// Eén geplaatst item, gerenderd op basis van zijn soort.
-function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable = false, onToggleWall, colors, colorEditable = false, onPickPart }) {
+// Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, walls, editable = false, onToggleWall, colors, colorEditable = false, onPickPart }) {
   const a = getAsset(assetId);
   if (!a) return null;
-  if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
-  if (a.procedural === "carousel") return <Carousel position={[x, 0, z]} />;
-  if (a.procedural === "path") return <PathTile position={[x, 0, z]} color={a.color} />;
-  if (a.procedural === "hill") return <HillMound position={[x, 0, z]} size={a.hillSize} color={a.color} />;
-  if (a.procedural === "patatkraam") return <PatatKraam position={[x, 0, z]} />;
+  if (a.kind === "animal") return <Enclosure position={[x, y, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
+  if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
+  if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
+  if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
+  if (a.procedural === "patatkraam") return <PatatKraam position={[x, y, z]} />;
   if (a.kind === "building" && String(assetId).startsWith("house")) {
     return (
       <HouseModel
-        assetId={assetId} position={[x, 0, z]} rotation={rotation}
+        assetId={assetId} position={[x, y, z]} rotation={rotation}
         colors={colors} editable={colorEditable} onPickPart={onPickPart}
-        fallback={<ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />}
+        fallback={<ZooModel assetId={assetId} position={[x, y, z]} rotation={rotation} />}
       />
     );
   }
-  return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
+  return <ZooModel assetId={assetId} position={[x, y, z]} rotation={rotation} />;
+}
+
+// De parkvloer als boetseerbaar terrein (volgt het hoogteveld).
+function Terrain({ field, placing, cells, sculpt, onHover, onPlace, onMissTap, onSculpt }) {
+  const geom = useMemo(() => {
+    const g = new PlaneGeometry(TER_SIZE, TER_SIZE, TER_SEG, TER_SEG);
+    const pos = g.attributes.position;
+    for (let k = 0; k < pos.count; k++) {
+      pos.setZ(k, heightAt(field, pos.getX(k), -pos.getY(k)));
+    }
+    pos.needsUpdate = true;
+    g.computeVertexNormals();
+    return g;
+  }, [field]);
+  useEffect(() => () => geom.dispose(), [geom]);
+  return (
+    <mesh
+      geometry={geom}
+      rotation={[-Math.PI / 2, 0, 0]}
+      receiveShadow
+      onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
+      onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
+    >
+      <meshStandardMaterial color="#86c05a" roughness={1} metalness={0} />
+    </mesh>
+  );
 }
 
 function GrasGrond({ placing, cells, onHover, onPlace, onMissTap }) {
@@ -92,10 +120,14 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, followCam = false, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
+  // Hoogte-functie die altijd het laatste terrein leest (geen re-subscribe in loops).
+  const heightFnRef = useRef(() => 0);
+  heightFnRef.current = (x, z) => heightAt(terrain, x, z);
+  const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.6)); };
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
@@ -143,11 +175,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <DayNight />
 
       <Suspense fallback={<Laden />}>
-        <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
+        <Terrain field={terrain} placing={placing} cells={placingCells} sculpt={sculptMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} />
         <ParkBase />
-        <Player inputRef={inputRef} isSolid={isSolid} posRef={playerPos} />
+        <Player inputRef={inputRef} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam} />
-        <Visitors count={bezoekers} onTip={onTip} canTip={canTip} />
+        <Visitors count={bezoekers} onTip={onTip} canTip={canTip} heightRef={heightFnRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
@@ -156,14 +188,15 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* Geplaatste items — klikbaar om te selecteren. */}
         {placedItems.map((it, idx) => {
           const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+          const y = heightAt(terrain, x, z);
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
-              onPointerDown={(e) => { if (placing) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
+              onPointerDown={(e) => { if (placing || sculptMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem
-                assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0}
+                assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0}
                 walls={it.walls} editable={selectedIdx === idx && getAsset(it.assetId)?.kind === "animal"}
                 onToggleWall={(side) => onToggleWall && onToggleWall(idx, side)}
                 colors={it.colors} colorEditable={colorEditIdx === idx}
@@ -177,7 +210,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {placing && ghost && (
           <>
             <FootprintMarker cell={ghost} valid={ghostValid} cells={placingCells} />
-            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} rotation={placingRot} />
+            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightAt(terrain, cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} />
           </>
         )}
 

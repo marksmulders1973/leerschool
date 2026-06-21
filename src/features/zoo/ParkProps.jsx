@@ -151,7 +151,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), armL = useRef(), armR = useRef();
   const phase = useRef(0);
@@ -200,8 +200,9 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef }) {
     } else {
       [legL, legR, armL, armR].forEach((r) => { if (r.current) r.current.rotation.x *= 0.82; });
     }
-    node.position.set(pos.current.x, pos.current.y, pos.current.z);
-    if (posRef) posRef.current.set(pos.current.x, pos.current.y, pos.current.z);
+    const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    node.position.set(pos.current.x, ty, pos.current.z);
+    if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
   });
 
   const huid = "#f1c27d", shirt = "#4a90d9", broek = "#3a4a6b";
@@ -225,7 +226,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef }) {
 // waarvoor je park muntjes verdient). Puur sfeer; geen botsing.
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
 
-function Visitor({ seed, onTip, canTip }) {
+function Visitor({ seed, onTip, canTip, heightRef }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), coin = useRef();
   const st = useRef({
@@ -251,7 +252,7 @@ function Visitor({ seed, onTip, canTip }) {
         if (legR.current) legR.current.rotation.x = -sw;
       }
     }
-    node.position.set(s.x, 0, s.z);
+    node.position.set(s.x, heightRef?.current ? heightRef.current(s.x, s.z) : 0, s.z);
     // Af en toe een muntje betalen (zweeft omhoog en vervaagt).
     s.tip -= dt;
     if (s.tip <= 0) { s.tip = 16 + Math.random() * 20; if (canTip && canTip()) { s.coinT = 0; onTip && onTip(1); } }
@@ -283,10 +284,10 @@ function Visitor({ seed, onTip, canTip }) {
   );
 }
 
-export function Visitors({ count = 4, onTip, canTip }) {
+export function Visitors({ count = 4, onTip, canTip, heightRef }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} onTip={onTip} canTip={canTip} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} onTip={onTip} canTip={canTip} heightRef={heightRef} />)}
     </group>
   );
 }
