@@ -146,16 +146,18 @@ export function Player({ inputRef, start = [0, 0, 13] }) {
 // waarvoor je park muntjes verdient). Puur sfeer; geen botsing.
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
 
-function Visitor({ seed }) {
+function Visitor({ seed, onTip, canTip }) {
   const g = useRef();
-  const legL = useRef(), legR = useRef();
+  const legL = useRef(), legR = useRef(), coin = useRef();
   const st = useRef({
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
     tx: 0, tz: 0, rest: (seed % 3) * 0.7, resting: true, phase: seed,
+    tip: 8 + (seed % 11), coinT: -1,
   });
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
+    // Wandelen.
     if (s.resting) {
       s.rest -= dt;
       if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 18; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
@@ -171,6 +173,20 @@ function Visitor({ seed }) {
       }
     }
     node.position.set(s.x, 0, s.z);
+    // Af en toe een muntje betalen (zweeft omhoog en vervaagt).
+    s.tip -= dt;
+    if (s.tip <= 0) { s.tip = 16 + Math.random() * 20; if (canTip && canTip()) { s.coinT = 0; onTip && onTip(1); } }
+    if (coin.current) {
+      if (s.coinT >= 0) {
+        s.coinT += dt; const p = s.coinT / 1.5;
+        coin.current.visible = true;
+        coin.current.position.y = 1.9 + p * 1.3;
+        coin.current.rotation.z += dt * 5;
+        coin.current.scale.setScalar(p < 0.2 ? p / 0.2 : 1);
+        if (coin.current.material) coin.current.material.opacity = Math.max(0, 1 - p);
+        if (s.coinT > 1.5) s.coinT = -1;
+      } else coin.current.visible = false;
+    }
   });
   return (
     <group ref={g} scale={0.78}>
@@ -179,14 +195,19 @@ function Visitor({ seed }) {
       <mesh castShadow position={[0, 0.85, 0]}><boxGeometry args={[0.46, 0.55, 0.28]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 1.32, 0]}><sphereGeometry args={[0.24, 14, 14]} /><meshStandardMaterial color="#f1c27d" flatShading roughness={1} /></mesh>
       <mesh position={[0, 1.43, 0]}><sphereGeometry args={[0.255, 14, 14, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#4a3525" flatShading roughness={1} /></mesh>
+      {/* Fooi-muntje (verborgen tot een bezoeker betaalt). */}
+      <mesh ref={coin} position={[0, 1.9, 0]} rotation={[Math.PI / 2, 0, 0]} visible={false}>
+        <cylinderGeometry args={[0.18, 0.18, 0.045, 18]} />
+        <meshStandardMaterial color="#ffd23a" emissive="#8a6a00" emissiveIntensity={0.25} transparent metalness={0.3} roughness={0.5} />
+      </mesh>
     </group>
   );
 }
 
-export function Visitors({ count = 4 }) {
+export function Visitors({ count = 4, onTip, canTip }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} onTip={onTip} canTip={canTip} />)}
     </group>
   );
 }

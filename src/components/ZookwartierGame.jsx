@@ -77,6 +77,18 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
 
+  // Bezoekers-fooi: af en toe geeft een bezoeker een muntje, gelimiteerd per
+  // bezoek (zodat het niet te farmen is). setMeta is stabiel → ref is veilig.
+  const tipCountRef = useRef(0);
+  const tipApi = useRef({
+    canTip: () => tipCountRef.current < 20,
+    onTip: (n = 1) => {
+      if (tipCountRef.current >= 20) return;
+      tipCountRef.current += n;
+      setMeta((m) => (m ? { ...m, coins: m.coins + n } : m));
+    },
+  }).current;
+
   // Toetsenbord-besturing (laptop): pijltjes / WASD.
   useEffect(() => {
     const codes = new Set(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "KeyW", "KeyA", "KeyS", "KeyD"]);
@@ -250,6 +262,8 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onSelectPlaced={(idx) => { setPlacing(null); setSelectedIdx(idx); }}
           onClearSelection={() => setSelectedIdx(null)}
           onToggleWall={toggleWall}
+          onTip={tipApi.onTip}
+          canTip={tipApi.canTip}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}

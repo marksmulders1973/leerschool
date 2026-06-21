@@ -68,7 +68,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
@@ -119,7 +119,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
         <ParkBase />
         <Player inputRef={inputRef} />
-        <Visitors count={bezoekers} />
+        <Visitors count={bezoekers} onTip={onTip} canTip={canTip} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
