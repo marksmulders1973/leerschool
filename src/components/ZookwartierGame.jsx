@@ -10,6 +10,7 @@ import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../fea
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
+import { track } from "../utils.js";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -75,7 +76,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
   const [shopCat, setShopCat] = useState("dier");
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
-  const [pickedPart, setPickedPart] = useState(null);   // gekozen onderdeel-groep
+  const [brushColor, setBrushColor] = useState("#e2574c"); // gekozen verfkleur
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
@@ -95,6 +96,9 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       setMeta((m) => (m ? { ...m, coins: m.coins + n } : m));
     },
   }).current;
+
+  // Meten hoeveel mensen het park spelen: één event per keer openen.
+  useEffect(() => { try { track("park_open"); } catch { /* nooit laten breken */ } }, []);
 
   // Toetsenbord-besturing (laptop): pijltjes / WASD.
   useEffect(() => {
@@ -227,7 +231,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const setHuisKleur = (idx, grp, hex) => {
     setPlacedItems((items) => items.map((it, i) => (i === idx ? { ...it, colors: { ...(it.colors || {}), [grp]: hex } } : it)));
   };
-  const sluitSelectie = () => { setSelectedIdx(null); setColorMode(false); setPickedPart(null); };
+  const sluitSelectie = () => { setSelectedIdx(null); setColorMode(false); };
 
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
@@ -284,12 +288,12 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
-          onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setPickedPart(null); setSelectedIdx(idx); }}
+          onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
           onToggleWall={toggleWall}
           onTip={tipApi.onTip}
           canTip={tipApi.canTip}
-          onPickPart={(idx, grp) => setPickedPart(grp)}
+          onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
           terrain={terrain}
@@ -327,13 +331,13 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : selectedIdx != null && colorMode ? (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              🎨 Tik op een onderdeel van het huis (dak, muur, kozijn…){pickedPart != null ? " en kies een kleur:" : ""}
+              🎨 Kies een kleur en tik op het huis (dak, muur of kozijn) om dat onderdeel te kleuren
             </span>
-            <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
-              {pickedPart != null && HUIS_KLEUREN.map((c) => (
-                <button key={c} onClick={() => setHuisKleur(selectedIdx, pickedPart, c)} title="Kleur" style={{ width: 30, height: 30, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.8)", background: c, cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.25)" }} />
+            <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+              {HUIS_KLEUREN.map((c) => (
+                <button key={c} onClick={() => setBrushColor(c)} title="Kies deze kleur" style={{ width: 32, height: 32, borderRadius: "50%", border: brushColor === c ? "3px solid #2e7d32" : "2px solid rgba(255,255,255,0.85)", background: c, cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.25)", transform: brushColor === c ? "scale(1.12)" : "none" }} />
               ))}
-              <button onClick={() => { setColorMode(false); setPickedPart(null); }} style={{ border: "none", borderRadius: 999, padding: "8px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
+              <button onClick={() => setColorMode(false)} style={{ border: "none", borderRadius: 999, padding: "8px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
             </div>
           </div>
         ) : selectedIdx != null ? (
@@ -342,7 +346,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
               {selKind === "animal" ? "✏️ Tik op een hek-kant om die weg te halen of terug te zetten · of:" : "Gekozen:"}
             </span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
-            {selIsHuis && <button onClick={() => { setColorMode(true); setPickedPart(null); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
+            {selIsHuis && <button onClick={() => setColorMode(true)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
             <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>

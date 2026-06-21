@@ -2,10 +2,14 @@
 // dierverblijven). VOORLOPIG opgebouwd uit eenvoudige low-poly vormen in één
 // warme stijl, als "in opbouw"-visualisatie. Worden later vervangen door echte
 // Kenney/Quaternius-modellen (de laad-pijplijn ligt klaar).
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
+import { Html } from "@react-three/drei";
 import { Vector3, Color } from "three";
 import ZooModel from "./ZooModel";
+
+// Wat bezoekers denken (denkwolkje boven hun hoofd).
+const GEDACHTEN = ["🍟", "🦊", "🦕", "🎠", "🪙", "❤️", "🌳", "😋", "🐾", "⭐", "🎡", "🍦"];
 
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
@@ -229,10 +233,11 @@ const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8",
 function Visitor({ seed, onTip, canTip, heightRef }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), coin = useRef();
+  const [bubble, setBubble] = useState(null);
   const st = useRef({
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
     tx: 0, tz: 0, rest: (seed % 3) * 0.7, resting: true, phase: seed,
-    tip: 8 + (seed % 11), coinT: -1,
+    tip: 8 + (seed % 11), coinT: -1, bt: 3 + (seed % 9), bon: false,
   });
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
   useFrame((_, dt) => {
@@ -267,9 +272,20 @@ function Visitor({ seed, onTip, canTip, heightRef }) {
         if (s.coinT > 1.5) s.coinT = -1;
       } else coin.current.visible = false;
     }
+    // Denkwolkje: af en toe een gedachte tonen.
+    s.bt -= dt;
+    if (s.bt <= 0) {
+      if (s.bon) { s.bon = false; s.bt = 7 + Math.random() * 10; setBubble(null); }
+      else { s.bon = true; s.bt = 3 + Math.random() * 2; setBubble(GEDACHTEN[Math.floor(Math.random() * GEDACHTEN.length)]); }
+    }
   });
   return (
     <group ref={g} scale={0.78}>
+      {bubble && (
+        <Html position={[0, 2.4, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 9px", fontSize: 20, lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap" }}>{bubble}</div>
+        </Html>
+      )}
       <group ref={legL} position={[-0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
       <group ref={legR} position={[0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
       <mesh castShadow position={[0, 0.85, 0]}><boxGeometry args={[0.46, 0.55, 0.28]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
