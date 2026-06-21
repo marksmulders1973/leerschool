@@ -141,6 +141,56 @@ export function Player({ inputRef, start = [0, 0, 13] }) {
   );
 }
 
+// Bezoekers: kleine figuurtjes die door het park wandelen. Hoe meer je park te
+// bieden heeft, hoe meer bezoekers — zo komt het park tot leven (en zie je
+// waarvoor je park muntjes verdient). Puur sfeer; geen botsing.
+const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
+
+function Visitor({ seed }) {
+  const g = useRef();
+  const legL = useRef(), legR = useRef();
+  const st = useRef({
+    x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
+    tx: 0, tz: 0, rest: (seed % 3) * 0.7, resting: true, phase: seed,
+  });
+  const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
+  useFrame((_, dt) => {
+    const s = st.current; const node = g.current; if (!node) return;
+    if (s.resting) {
+      s.rest -= dt;
+      if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 18; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
+    } else {
+      const dx = s.tx - s.x, dz = s.tz - s.z; const d = Math.hypot(dx, dz);
+      if (d < 0.12) { s.resting = true; s.rest = 1 + Math.random() * 3; if (legL.current) legL.current.rotation.x = 0; if (legR.current) legR.current.rotation.x = 0; }
+      else {
+        const step = Math.min(d, dt * 1.7); s.x += (dx / d) * step; s.z += (dz / d) * step;
+        node.rotation.y = Math.atan2(dx, dz);
+        s.phase += dt * 10; const sw = Math.sin(s.phase) * 0.5;
+        if (legL.current) legL.current.rotation.x = sw;
+        if (legR.current) legR.current.rotation.x = -sw;
+      }
+    }
+    node.position.set(s.x, 0, s.z);
+  });
+  return (
+    <group ref={g} scale={0.78}>
+      <group ref={legL} position={[-0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
+      <group ref={legR} position={[0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
+      <mesh castShadow position={[0, 0.85, 0]}><boxGeometry args={[0.46, 0.55, 0.28]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 1.32, 0]}><sphereGeometry args={[0.24, 14, 14]} /><meshStandardMaterial color="#f1c27d" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.43, 0]}><sphereGeometry args={[0.255, 14, 14, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#4a3525" flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+export function Visitors({ count = 4 }) {
+  return (
+    <group>
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} />)}
+    </group>
+  );
+}
+
 // Een paar bomen + bloemen rond het park voor sfeer.
 export function Decor() {
   const bomen = [

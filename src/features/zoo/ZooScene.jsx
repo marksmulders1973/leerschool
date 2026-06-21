@@ -5,7 +5,7 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player, Carousel, PathTile } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
@@ -76,6 +76,13 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan);
   const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells);
 
+  // Aantal bezoekers schaalt mee met wat je park te bieden heeft.
+  const trekpleisters = placedItems.filter((it) => {
+    const k = getAsset(it.assetId)?.kind;
+    return k === "animal" || k === "building" || k === "attraction";
+  }).length;
+  const bezoekers = Math.max(2, Math.min(14, Math.round(trekpleisters * 1.3) + 2));
+
   const handlePlace = (cell) => {
     if (!onPlace) return;
     if (!isPlaatsbaar(cell[0], cell[1], bezet, placingCells)) return;
@@ -112,6 +119,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
         <ParkBase />
         <Player inputRef={inputRef} />
+        <Visitors count={bezoekers} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
