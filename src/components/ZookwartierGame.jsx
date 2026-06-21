@@ -73,6 +73,8 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
   const [shopCat, setShopCat] = useState("dier");
+  const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
+  const [pickedPart, setPickedPart] = useState(null);   // gekozen onderdeel-groep
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
@@ -213,6 +215,13 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   };
 
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
+  const selIsHuis = selKind === "building" && String(placedItems[selectedIdx]?.assetId || "").startsWith("house");
+
+  const HUIS_KLEUREN = ["#e2574c", "#e8833c", "#f2cd4a", "#7bbf5a", "#3cb5a8", "#4a90d9", "#8a6ad8", "#e58fb0", "#8a5a3c", "#f5f0e2", "#b9b6ab", "#3a3f47"];
+  const setHuisKleur = (idx, grp, hex) => {
+    setPlacedItems((items) => items.map((it, i) => (i === idx ? { ...it, colors: { ...(it.colors || {}), [grp]: hex } } : it)));
+  };
+  const sluitSelectie = () => { setSelectedIdx(null); setColorMode(false); setPickedPart(null); };
 
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
@@ -267,11 +276,13 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
-          onSelectPlaced={(idx) => { setPlacing(null); setSelectedIdx(idx); }}
-          onClearSelection={() => setSelectedIdx(null)}
+          onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setPickedPart(null); setSelectedIdx(idx); }}
+          onClearSelection={sluitSelectie}
           onToggleWall={toggleWall}
           onTip={tipApi.onTip}
           canTip={tipApi.canTip}
+          onPickPart={(idx, grp) => setPickedPart(grp)}
+          colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}
@@ -291,14 +302,27 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
             <button onClick={draai} title="Draaien" style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↻ Draai</button>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>
+        ) : selectedIdx != null && colorMode ? (
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+            <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
+              🎨 Tik op een onderdeel van het huis (dak, muur, kozijn…){pickedPart != null ? " en kies een kleur:" : ""}
+            </span>
+            <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+              {pickedPart != null && HUIS_KLEUREN.map((c) => (
+                <button key={c} onClick={() => setHuisKleur(selectedIdx, pickedPart, c)} title="Kleur" style={{ width: 30, height: 30, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.8)", background: c, cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.25)" }} />
+              ))}
+              <button onClick={() => { setColorMode(false); setPickedPart(null); }} style={{ border: "none", borderRadius: 999, padding: "8px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
+            </div>
+          </div>
         ) : selectedIdx != null ? (
           <>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
               {selKind === "animal" ? "✏️ Tik op een hek-kant om die weg te halen of terug te zetten · of:" : "Gekozen:"}
             </span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
+            {selIsHuis && <button onClick={() => { setColorMode(true); setPickedPart(null); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
-            <button onClick={() => setSelectedIdx(null)} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
+            <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
         ) : (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 5 }}>

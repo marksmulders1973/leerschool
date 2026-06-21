@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight } from "./ParkProps";
 import ZooModel from "./ZooModel";
+import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
   CELL, GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
@@ -25,7 +26,7 @@ function isVast(assetId) {
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort.
-function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable = false, onToggleWall }) {
+function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable = false, onToggleWall, colors, colorEditable = false, onPickPart }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
@@ -33,6 +34,15 @@ function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable =
   if (a.procedural === "path") return <PathTile position={[x, 0, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, 0, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "patatkraam") return <PatatKraam position={[x, 0, z]} />;
+  if (a.kind === "building" && String(assetId).startsWith("house")) {
+    return (
+      <HouseModel
+        assetId={assetId} position={[x, 0, z]} rotation={rotation}
+        colors={colors} editable={colorEditable} onPickPart={onPickPart}
+        fallback={<ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />}
+      />
+    );
+  }
   return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
 }
 
@@ -81,7 +91,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
@@ -152,6 +162,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0}
                 walls={it.walls} editable={selectedIdx === idx && getAsset(it.assetId)?.kind === "animal"}
                 onToggleWall={(side) => onToggleWall && onToggleWall(idx, side)}
+                colors={it.colors} colorEditable={colorEditIdx === idx}
+                onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
               />
             </group>
           );
