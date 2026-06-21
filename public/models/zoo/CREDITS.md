@@ -14,6 +14,12 @@ T-Rex, Triceratops, Stegosaurus, Velociraptor, Apatosaurus, Parasaurolophus.
 Geanimeerd (Walk/Idle/Run). FBX→GLB geconverteerd met `fbx2gltf` (binair, geen
 data:-URI → werkt met de productie-CSP).
 
+## Gebouwen & kraampjes — `build/`
+**Kenney — "Fantasy Town Kit"** (kenney.nl) · **CC0 1.0**
+stall-red, stall-green (kraampjes), cart-high (marktkar), windmill, watermill.
+Gebruikte een gedeelde externe textuur (colormap.png) → met `@gltf-transform/cli
+copy` ingebakken in elke GLB (zelfstandig, CSP-proof).
+
 ## Natuur — `nature/`
 **Kenney — "Nature Kit"** (kenney.nl) · **CC0 1.0**
 tree_default, tree_oak, tree_palm, flower_redA/yellowA/purpleA, grass, mushroom_redGroup,

@@ -42,11 +42,12 @@ export function inkomstenPerDag(items) {
   return (items || []).reduce((s, it) => s + INKOMST_PER_VERBLIJF + (it.babies || 0) * INKOMST_PER_BABY, 0);
 }
 
-// Laat (op een nieuwe dag) verblijven kans maken op een jonkie. Geeft de nieuwe
-// indeling + aantal geboortes terug.
-export function groeiBabies(items) {
+// Laat (op een nieuwe dag) dier-verblijven kans maken op een jonkie. Gebouwen
+// (kraampjes/molens) krijgen geen jonkies. Geeft nieuwe indeling + geboortes.
+export function groeiBabies(items, isDier = () => true) {
   let births = 0;
   const layout = (items || []).map((it) => {
+    if (!isDier(it.assetId)) return it;
     const b = it.babies || 0;
     if (b < MAX_BABIES && Math.random() < BABY_KANS) {
       births++;

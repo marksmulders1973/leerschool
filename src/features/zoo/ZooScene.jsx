@@ -5,10 +5,20 @@ import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { ParkBase, Enclosure, Player } from "./ParkProps";
+import ZooModel from "./ZooModel";
+import { getAsset } from "./AssetRegistry";
 import {
   GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
   isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
+
+// Een geplaatst item: gebouw = los model, dier = ruim verblijf met hek.
+function PlacedItem({ assetId, x, z, rotation = 0, babies = 0 }) {
+  if (getAsset(assetId)?.kind === "building") {
+    return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
+  }
+  return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} />;
+}
 
 function GrasGrond({ placing, onHover, onPlace, onMissTap }) {
   return (
@@ -124,7 +134,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
               }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} />}
-              <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={it.assetId} babies={it.babies || 0} />
+              <PlacedItem assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0} />
             </group>
           );
         })}
@@ -133,7 +143,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
         {placing && ghost && (
           <>
             <FootprintMarker cell={ghost} valid={ghostValid} />
-            <Enclosure position={[cellToWorld(ghost[0], ghost[1])[0], 0, cellToWorld(ghost[0], ghost[1])[1]]} size={ENCLOSURE_SIZE} assetId={placingAsset} />
+            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} />
           </>
         )}
 

@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, getAsset } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, getAsset } from "../features/zoo/AssetRegistry";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -43,11 +43,12 @@ function Joystick({ inputRef }) {
   );
 }
 
-// Dieren-winkel: opgebouwd uit de AssetRegistry.
-const PLAATSBAAR = PLAATSBARE_DIEREN.map((id) => {
-  const a = getAsset(id);
-  return { assetId: id, emoji: a.emoji, label: a.name, price: a.price };
-});
+// Winkel: dieren + gebouwen/kraampjes, opgebouwd uit de AssetRegistry.
+const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.emoji, label: a.name, price: a.price, kind: a.kind }; };
+const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
+const BOUW_SHOP = PLAATSBARE_BOUWWERKEN.map(mkItem);
+const PLAATSBAAR = [...DIEREN_SHOP, ...BOUW_SHOP];
+const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
 export default function ZookwartierGame({ onHome, userName, authUser }) {
@@ -107,7 +108,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       if (isNieuweDag) {
         const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
         parkGain = inkomstenPerDag(layout) * dagen;
-        const g = groeiBabies(layout);
+        const g = groeiBabies(layout, isDier);
         finalLayout = g.layout;
         births = g.births;
         finalMeta = { ...finalMeta, coins: finalMeta.coins + parkGain + births * BABY_BONUS };
@@ -237,7 +238,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         {placing ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {placing.moveIdx != null ? "Tik op een groen vak om het verblijf te verplaatsen" : "Tik op een groen vak om het verblijf neer te zetten"}
+              {`Tik op een groen vak om ${isDier(placing.assetId) ? "het verblijf" : "het gebouw"} ${placing.moveIdx != null ? "te verplaatsen" : "neer te zetten"}`}
             </div>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>
@@ -251,7 +252,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              📈 Je park verdient 🪙{inkomstenPerDag(placedItems)} per dag · koop een dier (komt mét een ruim verblijf) · tik een verblijf aan om te verplaatsen of weg te halen
+              📈 Je park verdient 🪙{inkomstenPerDag(placedItems)} per dag · koop een dier (mét verblijf) of een gebouw · tik iets aan om te verplaatsen of weg te halen
             </span>
             <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
               {PLAATSBAAR.map((p) => {
@@ -301,19 +302,24 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
               </div>
             ) : (
               <div>
-                <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alle dieren die je kunt kopen. Elk dier komt met een ruim verblijf.</p>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
-                  {PLAATSBAAR.map((p) => (
-                    <div key={p.assetId} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", background: "#f5f3ea", borderRadius: 12 }}>
-                      <span style={{ fontSize: 24 }}>{p.emoji}</span>
-                      <div style={{ lineHeight: 1.2 }}>
-                        <div style={{ font: "800 13.5px system-ui", color: "#234" }}>{p.label}</div>
-                        <div style={{ font: "600 12px system-ui", color: "#7a5b00" }}>{p.price} 🪙</div>
-                      </div>
+                <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alles wat je kunt kopen. Dieren komen met een ruim verblijf; gebouwen zet je los neer.</p>
+                {[{ titel: "🦊 Dieren", lijst: DIEREN_SHOP }, { titel: "🏪 Gebouwen & kraampjes", lijst: BOUW_SHOP }].map((sec) => (
+                  <div key={sec.titel} style={{ marginBottom: 12 }}>
+                    <div style={{ font: "800 14px system-ui", color: "#234", margin: "4px 0 6px" }}>{sec.titel}</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
+                      {sec.lijst.map((p) => (
+                        <div key={p.assetId} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", background: "#f5f3ea", borderRadius: 12 }}>
+                          <span style={{ fontSize: 24 }}>{p.emoji}</span>
+                          <div style={{ lineHeight: 1.2 }}>
+                            <div style={{ font: "800 13.5px system-ui", color: "#234" }}>{p.label}</div>
+                            <div style={{ font: "600 12px system-ui", color: "#7a5b00" }}>{p.price} 🪙</div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <p style={{ color: "#777", fontSize: 12.5, marginBottom: 0 }}>🚧 Binnenkort: attracties (zoals een patatkraam) en paden — met hun eigen prijzen.</p>
+                  </div>
+                ))}
+                <p style={{ color: "#777", fontSize: 12.5, marginBottom: 0 }}>🚧 Binnenkort: nog meer attracties en paden.</p>
               </div>
             )}
           </div>

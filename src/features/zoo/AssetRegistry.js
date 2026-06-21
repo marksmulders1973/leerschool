@@ -35,6 +35,16 @@ export const ZOO_ASSETS = {
   trex: { id: "trex", kind: "animal", name: "T-Rex", emoji: "🦖", url: "/models/zoo/dinos/Trex.glb", fixedScale: 0.32, price: 60 },
   apatosaurus: { id: "apatosaurus", kind: "animal", name: "Apatosaurus", emoji: "🦕", url: "/models/zoo/dinos/Apatosaurus.glb", fixedScale: 0.38, price: 70 },
 
+  // ---- Gebouwen & kraampjes (Kenney Fantasy Town + City Kit, CC0). Textuur
+  // ingebakken met gltf-transform → zelfstandig/CSP-proof. ----
+  stallRed: { id: "stallRed", kind: "building", name: "Kraampje", emoji: "🏪", url: "/models/zoo/build/stall-red.glb", targetHeight: 2.2, price: 25 },
+  stallGreen: { id: "stallGreen", kind: "building", name: "Groen kraampje", emoji: "🏪", url: "/models/zoo/build/stall-green.glb", targetHeight: 2.2, price: 25 },
+  cart: { id: "cart", kind: "building", name: "Marktkar", emoji: "🛒", url: "/models/zoo/build/cart-high.glb", targetHeight: 1.9, price: 20 },
+  fountain: { id: "fountain", kind: "building", name: "Fontein", emoji: "⛲", url: "/models/zoo/build/fountain.glb", targetHeight: 1.4, price: 35 },
+  houseA: { id: "houseA", kind: "building", name: "Huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, price: 60 },
+  houseE: { id: "houseE", kind: "building", name: "Villa", emoji: "🏡", url: "/models/zoo/build/house-e.glb", targetHeight: 3.6, price: 75 },
+  houseH: { id: "houseH", kind: "building", name: "Stadshuis", emoji: "🏘️", url: "/models/zoo/build/house-h.glb", targetHeight: 3.8, price: 75 },
+
   // ---- Natuur (Kenney Nature Kit) ----
   tree: { id: "tree", kind: "nature", name: "Boom", url: "/models/zoo/nature/tree_default.glb", targetHeight: 2.8 },
   treeOak: { id: "treeOak", kind: "nature", name: "Eik", url: "/models/zoo/nature/tree_oak.glb", targetHeight: 3.0 },
@@ -47,6 +57,9 @@ export const ZOO_ASSETS = {
 
 // Dieren die de speler kan kopen/plaatsen (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
+
+// Gebouwen/kraampjes die de speler kan plaatsen (zonder hek eromheen).
+export const PLAATSBARE_BOUWWERKEN = ["houseA", "houseE", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 
 export function getAsset(id) {
   return ZOO_ASSETS[id] || null;
