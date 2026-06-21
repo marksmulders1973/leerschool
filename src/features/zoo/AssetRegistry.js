@@ -88,6 +88,12 @@ export const ZOO_ASSETS = {
   pathGreen: { id: "pathGreen", kind: "decor", name: "Pad groen", emoji: "🟩", procedural: "path", color: "#7bbf5a", cells: 1, price: 3 },
   pathBlue: { id: "pathBlue", kind: "decor", name: "Pad blauw", emoji: "🟦", procedural: "path", color: "#6aa3d8", cells: 1, price: 3 },
   pathDark: { id: "pathDark", kind: "decor", name: "Pad donker", emoji: "🟪", procedural: "path", color: "#7a6a8a", cells: 1, price: 3 },
+  // Losse hekpanelen (procedureel, houten rail-stijl) — vul één rastervakje en
+  // klik ze aan elkaar tot een kooi in elke vorm (T, L, vierkant). Draaibaar,
+  // los te kopen/weghalen. Solide → de speler kan er niet doorheen.
+  hekPaneel: { id: "hekPaneel", kind: "decor", name: "Hekpaneel", emoji: "🚧", procedural: "fencePanel", cells: 1, price: 4 },
+  hekPoort: { id: "hekPoort", kind: "decor", name: "Hek-poort", emoji: "🚪", procedural: "fenceGate", cells: 1, price: 6 },
+  // Legacy GLB-hekken (niet meer in de winkel, blijven bestaande parken renderen).
   fence: { id: "fence", kind: "decor", name: "Hek", emoji: "🚧", url: "/models/zoo/nature/fence_simple.glb", targetHeight: 0.85, cells: 1, price: 5 },
   fenceCorner: { id: "fenceCorner", kind: "decor", name: "Hoek-hek", emoji: "🚧", url: "/models/zoo/nature/fence_corner.glb", targetHeight: 0.85, cells: 1, price: 5 },
   fenceGate: { id: "fenceGate", kind: "decor", name: "Hek-poort", emoji: "🚪", url: "/models/zoo/nature/fence_gate.glb", targetHeight: 0.85, cells: 1, price: 6 },
@@ -104,11 +110,17 @@ export const ZOO_ASSETS = {
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
 export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
-export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
+export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekPoort"];
+export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
-// Footprint (aantal vakjes) van een item; klein decor = 1, rest = 3.
+// Footprint (aantal vakjes) van een item; klein decor = 1, dieren lopen vrij
+// rond → ook 1 vakje (je bouwt zelf een hek eromheen), rest = 3.
 export function cellsVan(id) {
-  return ZOO_ASSETS[id]?.cells || 3;
+  const a = ZOO_ASSETS[id];
+  if (!a) return 3;
+  if (a.cells) return a.cells;
+  if (a.kind === "animal") return 1;
+  return 3;
 }
 
 export function getAsset(id) {

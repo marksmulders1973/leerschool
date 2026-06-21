@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { track } from "../utils.js";
 
@@ -50,9 +50,11 @@ const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
 const BOUW_SHOP = PLAATSBARE_BOUWWERKEN.map(mkItem);
 const ATTRACTIE_SHOP = PLAATSBARE_ATTRACTIES.map(mkItem);
+const HEK_SHOP = PLAATSBARE_HEKKEN.map(mkItem);
 const NATUUR_SHOP = PLAATSBARE_NATUUR.map(mkItem);
 const SHOP_CATS = [
   { key: "dier", label: "🦊 Dieren", items: DIEREN_SHOP },
+  { key: "hek", label: "🚧 Hekken", items: HEK_SHOP },
   { key: "gebouw", label: "🏠 Gebouwen", items: BOUW_SHOP },
   { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
   { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
@@ -218,16 +220,6 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
     if (terug > 0) flits(`Weggehaald — +${terug} 🪙 terug`);
   };
 
-  // Een hek-kant van een geselecteerd verblijf weghalen/terugzetten.
-  const toggleWall = (idx, side) => {
-    setPlacedItems((items) => items.map((it, i) => {
-      if (i !== idx) return it;
-      const w = Array.isArray(it.walls) ? [...it.walls] : [true, true, true, true];
-      w[side] = w[side] === false;
-      return { ...it, walls: w };
-    }));
-  };
-
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
   const selIsHuis = selKind === "building" && String(placedItems[selectedIdx]?.assetId || "").startsWith("house");
   // Kraampje geselecteerd? Dan kun je de prijs van patat/drinken instellen.
@@ -309,7 +301,6 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onPlace={plaatsOpVakje}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
-          onToggleWall={toggleWall}
           onBuy={buyApi.onBuy}
           prices={prices}
           onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
@@ -378,7 +369,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : selectedIdx != null ? (
           <>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {selKind === "animal" ? "✏️ Tik op een hek-kant om die weg te halen of terug te zetten · of:" : "Gekozen:"}
+              {selKind === "animal" ? "🦊 Dier loopt vrij rond — bouw er zelf een hek omheen met 🚧 Hekken:" : "Gekozen:"}
             </span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             {selIsHuis && <button onClick={() => setColorMode(true)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
@@ -437,15 +428,16 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
                   <li>Je <b>park zelf</b> levert muntjes op: hoe meer verblijven en jonkies, hoe meer per dag.</li>
                   <li><b>Kraampjes</b> 🍟🥤🍦🍿: bezoekers krijgen honger, dorst of zin in iets lekkers. Zet een <b>patat-</b>, <b>drank-</b>, <b>ijsco-</b> of <b>popcornkraam</b> neer en kies de prijs — elke verkoop levert muntjes op. Bezoekers verlangen naar wat jij aanbiedt; te duur? Dan haken ze af, dus zoek de juiste prijs!</li>
                 </ul>
-                <p><b>🦊 Dieren:</b> koop een dier — het komt <b>mét een ruim verblijf</b>. Tik een verblijf aan om het te <b>verplaatsen</b> of <b>weg te halen</b> (je krijgt de muntjes terug).</p>
+                <p><b>🦊 Dieren:</b> koop een dier — het <b>loopt vrij rond</b> in je park. Tik een dier aan om het te <b>verplaatsen</b> of <b>weg te halen</b> (je krijgt de muntjes terug).</p>
+                <p><b>🚧 Hekken:</b> wil je een dier insluiten? Koop <b>losse hekpanelen</b> en zet ze aan elkaar — in een vierkant, T- of L-vorm, wat je wilt. Elk paneel kun je los weghalen of er een gelijke bij kopen. Een <b>hek-poort</b> maakt een nette ingang.</p>
                 <p><b>🐣 Jonkies:</b> dieren kunnen er met de tijd een jonkie bij krijgen — dat levert extra muntjes op.</p>
                 <p><b>🕹️ Rondkijken:</b> sleep om te draaien, scroll of knijp om in/uit te zoomen.</p>
                 <p style={{ color: "#777", fontSize: 12.5 }}>Het park is nog volop in opbouw 🚧 — er komt steeds meer bij (attracties, paden en meer).</p>
               </div>
             ) : (
               <div>
-                <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alles wat je kunt kopen. Dieren komen met een ruim verblijf; gebouwen zet je los neer.</p>
-                {[{ titel: "🦊 Dieren", lijst: DIEREN_SHOP }, { titel: "🏠 Gebouwen & kraampjes", lijst: BOUW_SHOP }, { titel: "🎠 Attracties", lijst: ATTRACTIE_SHOP }, { titel: "🌳 Natuur & bouwen", lijst: NATUUR_SHOP }].map((sec) => (
+                <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alles wat je kunt kopen. Dieren lopen vrij rond; met losse hekpanelen bouw je zelf een kooi.</p>
+                {[{ titel: "🦊 Dieren", lijst: DIEREN_SHOP }, { titel: "🚧 Hekken", lijst: HEK_SHOP }, { titel: "🏠 Gebouwen & kraampjes", lijst: BOUW_SHOP }, { titel: "🎠 Attracties", lijst: ATTRACTIE_SHOP }, { titel: "🌳 Natuur & bouwen", lijst: NATUUR_SHOP }].map((sec) => (
                   <div key={sec.titel} style={{ marginBottom: 12 }}>
                     <div style={{ font: "800 14px system-ui", color: "#234", margin: "4px 0 6px" }}>{sec.titel}</div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>

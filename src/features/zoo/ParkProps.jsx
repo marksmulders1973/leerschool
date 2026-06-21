@@ -396,64 +396,69 @@ export function Decor() {
   );
 }
 
-// Eén kant van het verblijf-hek (palen + bovenligger). `on` = staat er een hek;
-// `editable` → een onzichtbaar tik-vlak zodat je de kant kunt weghalen of
-// terugzetten (zo bouw je twee verblijven aan elkaar tot één).
-function Wall({ side, size, on, editable, onToggle }) {
-  const h = size / 2;
-  const hout = "#8a5a2b";
-  const n = 5;
-  const isNS = side === 0 || side === 2;          // noord/zuid lopen langs x
-  const fixed = side === 0 ? -h : side === 2 ? h : side === 3 ? -h : h;
-  const ts = [];
-  for (let i = 0; i <= n; i++) ts.push(-h + (size * i) / n);
+// Een vrij rondlopend dier (geen vast hek meer). Het dier scharrelt rond binnen
+// een straal; jonkies lopen mee. Wil je het insluiten? Bouw zelf een kooi met
+// losse hekpanelen eromheen (T/L/vierkant — wat je wilt).
+const DIER_STRAAL = 3.0;
+export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0 }) {
   return (
-    <group onPointerDown={editable ? (e) => { e.stopPropagation(); onToggle && onToggle(side); } : undefined}>
-      {on && ts.map((t, i) => (
-        <mesh key={i} castShadow position={isNS ? [t, 0.35, fixed] : [fixed, 0.35, t]}>
-          <boxGeometry args={[0.1, 0.7, 0.1]} />
-          <meshStandardMaterial color={hout} flatShading roughness={1} />
-        </mesh>
-      ))}
-      {on && (
-        <mesh position={isNS ? [0, 0.55, fixed] : [fixed, 0.55, 0]}>
-          <boxGeometry args={isNS ? [size, 0.08, 0.08] : [0.08, 0.08, size]} />
-          <meshStandardMaterial color={hout} roughness={1} />
-        </mesh>
-      )}
-      {editable && (
-        <mesh position={isNS ? [0, 0.5, fixed] : [fixed, 0.5, 0]}>
-          <boxGeometry args={isNS ? [size, 1.1, 0.45] : [0.45, 1.1, size]} />
-          <meshBasicMaterial color={on ? "#ff7a59" : "#3ddc6a"} transparent opacity={editable ? 0.16 : 0} depthWrite={false} />
-        </mesh>
-      )}
+    <group position={position}>
+      <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL} />
+      {Array.from({ length: babies }).map((_, i) => {
+        const ang = (i / Math.max(1, babies)) * Math.PI * 2 + 0.6;
+        const r = 1.0;
+        return (
+          <group key={`baby${i}`} position={[Math.cos(ang) * r, 0, Math.sin(ang) * r]} scale={0.55}>
+            <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL * 0.8} />
+          </group>
+        );
+      })}
     </group>
   );
 }
 
-// Een omheind dierverblijf met een dier erin. Hekken per kant (walls = [N,E,S,W]);
-// in bewerk-modus tikbaar om kanten weg te halen/terug te zetten.
-export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox", babies = 0, walls = [true, true, true, true], editable = false, onToggleWall }) {
+// Eén los hekpaneel (procedureel) — een houten rail-stuk dat precies één
+// rastervakje (2 m) vult. Draai het 90° voor een verticale loop. Zet er meerdere
+// naast/achter elkaar om een kooi in elke vorm te bouwen (T, L, vierkant).
+export function FencePanel({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#8a5a2b";
+  const L = 2.0, n = 4;
+  const palen = [];
+  for (let i = 0; i <= n; i++) palen.push(-L / 2 + (L * i) / n);
   return (
-    <group position={position}>
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
-        <planeGeometry args={[size, size]} />
-        <meshStandardMaterial color="#cdb188" roughness={1} />
-      </mesh>
-      {[0, 1, 2, 3].map((side) => (
-        <Wall key={side} side={side} size={size} on={walls[side] !== false} editable={editable} onToggle={onToggleWall} />
+    <group position={[position[0], position[1], position[2]]} rotation={[0, rotation, 0]}>
+      {palen.map((x, i) => (
+        <mesh key={i} castShadow position={[x, 0.35, 0]}>
+          <boxGeometry args={[0.1, 0.7, 0.1]} />
+          <meshStandardMaterial color={hout} flatShading roughness={1} />
+        </mesh>
       ))}
-      <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.6, size / 2 - 1.3)} />
-      {/* Jonkies: kleinere versies van hetzelfde dier die ook rondscharrelen. */}
-      {Array.from({ length: babies }).map((_, i) => {
-        const ang = (i / Math.max(1, babies)) * Math.PI * 2 + 0.6;
-        const r = size * 0.22;
-        return (
-          <group key={`baby${i}`} position={[Math.cos(ang) * r, 0, Math.sin(ang) * r]} scale={0.55}>
-            <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.4, size / 2 - 2)} />
-          </group>
-        );
-      })}
+      <mesh castShadow position={[0, 0.55, 0]}><boxGeometry args={[L, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.3, 0]}><boxGeometry args={[L, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Een hek-poort (procedureel) — twee stevige palen met een boog erboven en twee
+// deurtjes die op een kier staan. Zelfde breedte als een hekpaneel (1 vakje), zo
+// maak je een nette ingang in je kooi.
+export function FenceGate({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#8a5a2b", deur = "#b9824a";
+  const L = 2.0;
+  return (
+    <group position={[position[0], position[1], position[2]]} rotation={[0, rotation, 0]}>
+      {/* stevige poortpalen aan de uiteinden */}
+      <mesh castShadow position={[-L / 2, 0.55, 0]}><boxGeometry args={[0.16, 1.1, 0.16]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[L / 2, 0.55, 0]}><boxGeometry args={[0.16, 1.1, 0.16]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {/* boog/bovenbalk */}
+      <mesh castShadow position={[0, 1.12, 0]}><boxGeometry args={[L + 0.12, 0.14, 0.14]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {/* twee deurtjes op een kier */}
+      <group position={[-L / 2 + 0.08, 0.4, 0.04]} rotation={[0, 0.45, 0]}>
+        <mesh castShadow position={[L / 4 - 0.05, 0, 0]}><boxGeometry args={[L / 2 - 0.16, 0.72, 0.06]} /><meshStandardMaterial color={deur} flatShading roughness={1} /></mesh>
+      </group>
+      <group position={[L / 2 - 0.08, 0.4, 0.04]} rotation={[0, -0.45, 0]}>
+        <mesh castShadow position={[-L / 4 + 0.05, 0, 0]}><boxGeometry args={[L / 2 - 0.16, 0.72, 0.06]} /><meshStandardMaterial color={deur} flatShading roughness={1} /></mesh>
+      </group>
     </group>
   );
 }

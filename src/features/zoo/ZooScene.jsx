@@ -6,14 +6,14 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry } from "three";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG } from "./terrain";
 import { useEffect } from "react";
 import {
-  CELL, GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
+  CELL, GRID_SIZE, GRID_DIV, snapToCell, cellToWorld, cellKey,
   footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
@@ -23,19 +23,22 @@ import {
 function isVast(assetId) {
   const a = getAsset(assetId);
   if (!a) return false;
-  if (a.kind === "animal" || a.kind === "building" || a.kind === "attraction") return true;
+  if (a.kind === "building" || a.kind === "attraction") return true;
+  if (a.kind === "animal") return false; // dieren lopen vrij rond → niet solide
   if (a.kind === "decor") return a.procedural !== "path" && a.procedural !== "hill" && !String(assetId).startsWith("flower") && assetId !== "mushroom";
   return false;
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, walls, editable = false, onToggleWall, colors, colorEditable = false, onPickPart }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart }) {
   const a = getAsset(assetId);
   if (!a) return null;
-  if (a.kind === "animal") return <Enclosure position={[x, y, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
+  if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
+  if (a.procedural === "fencePanel") return <FencePanel position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "fenceGate") return <FenceGate position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "patatkraam") return <PatatKraam position={[x, y, z]} />;
   if (a.procedural === "drankkraam") return <DrankKraam position={[x, y, z]} />;
   if (a.procedural === "ijscokraam") return <IJsKraam position={[x, y, z]} />;
@@ -123,7 +126,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -217,8 +220,6 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem
                 assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0}
-                walls={it.walls} editable={selectedIdx === idx && getAsset(it.assetId)?.kind === "animal"}
-                onToggleWall={(side) => onToggleWall && onToggleWall(idx, side)}
                 colors={it.colors} colorEditable={colorEditIdx === idx}
                 onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
               />
