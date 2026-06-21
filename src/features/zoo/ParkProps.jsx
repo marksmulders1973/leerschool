@@ -7,6 +7,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, Color } from "three";
 import ZooModel from "./ZooModel";
+import { KRAAM_SOORTEN, KRAAM_KEYS } from "./AssetRegistry";
 
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
@@ -222,18 +223,16 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   );
 }
 
-// Bezoekers: kleine figuurtjes die door het park wandelen. Ze krijgen honger of
-// dorst (denkwolkje "Ik heb honger"/"Ik heb dorst"), lopen naar een passend
-// kraampje (patat = eten, drank = drinken) en kopen iets — zo verdien JIJ muntjes.
-// Hoe hoger je de prijs zet, hoe meer een hapje oplevert, maar bij een te hoge
-// prijs haken sommige bezoekers af (😖). Geen botsing; puur sfeer + verdienen.
+// Bezoekers: kleine figuurtjes die door het park wandelen. Ze krijgen een
+// behoefte (honger/dorst/zin in ijs of popcorn) en gaan verlangen naar wat JIJ
+// in je park aanbiedt — denkwolkje boven hun hoofd — lopen naar het bijbehorende
+// kraampje en kopen iets, zodat jij muntjes verdient. Hoe hoger de prijs, hoe
+// meer per stuk, maar bij een te hoge prijs haken bezoekers af (😖). Geen
+// botsing; puur sfeer + verdienen.
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
 
-// "Eerlijke" prijs per soort: tot hier koopt vrijwel iedereen; daarboven haken
-// er steeds meer af. Kindvriendelijk: er koopt altijd nog een enkeling.
-const EERLIJKE_PRIJS = { food: 5, drink: 4 };
 function koopKans(kind, prijs) {
-  const fair = EERLIJKE_PRIJS[kind] || 4;
+  const fair = KRAAM_SOORTEN[kind]?.fair || 4;
   return Math.max(0.12, Math.min(1, 1.3 - prijs / (fair * 2)));
 }
 
@@ -251,17 +250,21 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef }) {
 
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
-    const stands = standsRef?.current || { food: [], drink: [] };
-    const prices = pricesRef?.current || EERLIJKE_PRIJS;
+    const stands = standsRef?.current || {};
+    const prices = pricesRef?.current || {};
 
     // Denkwolkje vanzelf laten verdwijnen.
     if (s.bt > 0) { s.bt -= dt; if (s.bt <= 0) setBubble(null); }
 
-    // Honger/dorst opwekken (alleen als bezoeker nog niets onderhanden heeft).
+    // Behoefte opwekken (alleen als bezoeker nog niets onderhanden heeft). De
+    // bezoeker verlangt bij voorkeur naar een soort die je park ook aanbiedt.
     if (!s.need && !s.acting) {
       s.needT -= dt;
       if (s.needT <= 0) {
-        const kind = Math.random() < 0.5 ? "food" : "drink";
+        const beschikbaar = KRAAM_KEYS.filter((k) => (stands[k] || []).length);
+        const pool = beschikbaar.length ? beschikbaar : KRAAM_KEYS;
+        const kind = pool[Math.floor(Math.random() * pool.length)];
+        const soort = KRAAM_SOORTEN[kind];
         const lijst = stands[kind] || [];
         if (lijst.length) {
           // Loop naar het dichtstbijzijnde passende kraampje.
@@ -270,10 +273,10 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef }) {
           const dx = s.x - best[0], dz = s.z - best[1]; const dd = Math.hypot(dx, dz) || 1;
           s.tx = best[0] + (dx / dd) * 2.6; s.tz = best[1] + (dz / dd) * 2.6;
           s.need = kind; s.acting = true; s.resting = false;
-          toon(kind === "food" ? { e: "🍔", t: "Ik heb honger" } : { e: "🥤", t: "Ik heb dorst" }, 4);
+          toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
         } else {
           // Geen passend kraampje → bezoeker baalt even (hint om er een te kopen).
-          toon(kind === "food" ? { e: "🍔", t: "Ik heb honger" } : { e: "🥤", t: "Ik heb dorst" }, 4);
+          toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
           s.needT = 11 + Math.random() * 12;
         }
       }
@@ -288,11 +291,11 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef }) {
       if (d < 0.18) {
         if (s.acting) {
           // Bij het kraampje: kopen? Goedkoop = bijna altijd; te duur = afhaken.
-          const kind = s.need; const prijs = prices[kind] ?? (EERLIJKE_PRIJS[kind] || 4);
+          const kind = s.need; const prijs = prices[kind] ?? (KRAAM_SOORTEN[kind]?.start || 4);
           if (Math.random() < koopKans(kind, prijs)) {
             onBuy && onBuy(kind, prijs);
             s.coinT = 0;
-            toon({ e: kind === "food" ? "😋" : "😋" }, 2.2);
+            toon({ e: "😋" }, 2.2);
           } else {
             toon({ e: "😖", t: "Te duur!" }, 2.2);
           }
@@ -519,6 +522,70 @@ export function DrankKraam({ position = [0, 0, 0] }) {
       <mesh castShadow position={[0.5, 1.16, 0.12]}><cylinderGeometry args={[0.14, 0.11, 0.4, 14]} /><meshStandardMaterial color="#e2574c" flatShading roughness={1} /></mesh>
       <mesh position={[0.5, 1.37, 0.12]}><cylinderGeometry args={[0.15, 0.15, 0.04, 14]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
       <mesh position={[0.56, 1.52, 0.12]} rotation={[0, 0, -0.35]}><cylinderGeometry args={[0.022, 0.022, 0.34, 8]} /><meshStandardMaterial color="#ffd23a" roughness={0.7} /></mesh>
+    </group>
+  );
+}
+
+// IJscokraam (procedureel) — pastel kraampje met roze/mint luifel en een grote
+// ijshoorn op de toonbank. Bezoekers met zin in ijs kopen hier.
+export function IJsKraam({ position = [0, 0, 0] }) {
+  const hout = "#caa44a";
+  return (
+    <group position={[position[0], 0, position[2]]}>
+      {/* toonbank */}
+      <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#fdeaf2" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#e98bb4" flatShading roughness={1} /></mesh>
+      {/* achterwand + bord */}
+      <mesh castShadow position={[0, 1.15, -0.45]}><boxGeometry args={[1.8, 1.4, 0.12]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.37]}><boxGeometry args={[1.3, 0.5, 0.06]} /><meshStandardMaterial color="#7fd4c1" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.33]}><boxGeometry args={[0.9, 0.18, 0.04]} /><meshStandardMaterial color="#e98bb4" flatShading roughness={1} /></mesh>
+      {/* palen */}
+      <mesh position={[-0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      <mesh position={[0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      {/* gestreepte luifel (roze/mint), schuin naar voren */}
+      <group position={[0, 2.15, 0.05]} rotation={[-0.32, 0, 0]}>
+        {[-0.75, -0.45, -0.15, 0.15, 0.45, 0.75].map((x, i) => (
+          <mesh key={i} castShadow position={[x, 0, 0]}><boxGeometry args={[0.3, 0.07, 1.05]} /><meshStandardMaterial color={i % 2 ? "#fbeaf1" : "#7fd4c1"} flatShading roughness={1} /></mesh>
+        ))}
+      </group>
+      {/* grote ijshoorn op de toonbank: wafel + drie bolletjes */}
+      <mesh castShadow position={[0.5, 1.12, 0.12]} rotation={[Math.PI, 0, 0]}><coneGeometry args={[0.13, 0.34, 12]} /><meshStandardMaterial color="#e0a25a" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.5, 1.34, 0.12]}><sphereGeometry args={[0.14, 12, 12]} /><meshStandardMaterial color="#f7a8c4" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.5, 1.5, 0.12]}><sphereGeometry args={[0.12, 12, 12]} /><meshStandardMaterial color="#fff0b8" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.5, 1.64, 0.12]}><sphereGeometry args={[0.1, 12, 12]} /><meshStandardMaterial color="#b3e0a0" flatShading roughness={1} /></mesh>
+      <mesh position={[0.5, 1.72, 0.12]}><sphereGeometry args={[0.03, 8, 8]} /><meshStandardMaterial color="#d2453a" flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Popcornkraam (procedureel) — rood/wit kraampje met een grote popcornbak vol
+// gele popcorn op de toonbank. Bezoekers met zin in popcorn kopen hier.
+export function PopcornKraam({ position = [0, 0, 0] }) {
+  const hout = "#caa44a";
+  return (
+    <group position={[position[0], 0, position[2]]}>
+      {/* toonbank */}
+      <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#fbeceb" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#d2453a" flatShading roughness={1} /></mesh>
+      {/* achterwand + bord */}
+      <mesh castShadow position={[0, 1.15, -0.45]}><boxGeometry args={[1.8, 1.4, 0.12]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.37]}><boxGeometry args={[1.3, 0.5, 0.06]} /><meshStandardMaterial color="#ffd23a" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.33]}><boxGeometry args={[0.9, 0.18, 0.04]} /><meshStandardMaterial color="#d2453a" flatShading roughness={1} /></mesh>
+      {/* palen */}
+      <mesh position={[-0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      <mesh position={[0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      {/* gestreepte luifel (rood/wit), schuin naar voren */}
+      <group position={[0, 2.15, 0.05]} rotation={[-0.32, 0, 0]}>
+        {[-0.75, -0.45, -0.15, 0.15, 0.45, 0.75].map((x, i) => (
+          <mesh key={i} castShadow position={[x, 0, 0]}><boxGeometry args={[0.3, 0.07, 1.05]} /><meshStandardMaterial color={i % 2 ? "#ffffff" : "#d2453a"} flatShading roughness={1} /></mesh>
+        ))}
+      </group>
+      {/* rood/wit gestreepte popcornbak met gele popcorn */}
+      <mesh castShadow position={[0.5, 1.18, 0.12]}><boxGeometry args={[0.3, 0.34, 0.26]} /><meshStandardMaterial color="#e8554b" flatShading roughness={1} /></mesh>
+      <mesh position={[0.5, 1.18, 0.135]}><boxGeometry args={[0.1, 0.34, 0.26]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      {[[-0.06, 0.36, 0], [0.07, 0.38, 0.04], [0, 0.4, -0.05], [0.05, 0.43, -0.02], [-0.05, 0.42, 0.05]].map((p, i) => (
+        <mesh key={i} castShadow position={[0.5 + p[0], 1.01 + p[1], 0.12 + p[2]]}><sphereGeometry args={[0.07, 8, 8]} /><meshStandardMaterial color={i % 2 ? "#fff3c4" : "#ffe27a"} flatShading roughness={1} /></mesh>
+      ))}
     </group>
   );
 }

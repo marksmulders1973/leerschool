@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { track } from "../utils.js";
 
@@ -233,17 +233,16 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   // Kraampje geselecteerd? Dan kun je de prijs van patat/drinken instellen.
   const selVoorziet = selectedIdx != null ? getAsset(placedItems[selectedIdx]?.assetId)?.voorziet : null;
 
-  // Kraampjes-prijzen (in muntjes). Bewaard in meta.owned → opgeslagen in Supabase.
-  const foodPrice = meta?.owned?.foodPrice ?? 5;
-  const drinkPrice = meta?.owned?.drinkPrice ?? 4;
-  const prices = { food: foodPrice, drink: drinkPrice };
+  // Kraampjes-prijzen (in muntjes) per soort. Bewaard in meta.owned als
+  // `<soort>Price` → opgeslagen in Supabase. Valt terug op de standaardprijs.
+  const prijsVanKraam = (kind) => meta?.owned?.[`${kind}Price`] ?? (KRAAM_SOORTEN[kind]?.start ?? 4);
+  const prices = Object.fromEntries(KRAAM_KEYS.map((k) => [k, prijsVanKraam(k)]));
   const setPrice = (kind, val) => {
     const v = Math.max(1, Math.min(15, val));
-    const key = kind === "food" ? "foodPrice" : "drinkPrice";
     setMeta((m) => {
       if (!m) return m;
       const o = m.owned && !Array.isArray(m.owned) ? m.owned : {};
-      return { ...m, owned: { ...o, [key]: v } };
+      return { ...m, owned: { ...o, [`${kind}Price`]: v } };
     });
   };
 
@@ -363,12 +362,12 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         ) : selectedIdx != null && selVoorziet ? (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 7 }}>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              {selVoorziet === "food" ? "🍟 Patatkraam" : "🥤 Drankkraam"} — zet de prijs. Goedkoop = meer kopers, duur = meer per stuk (te duur → bezoekers haken af).
+              {KRAAM_SOORTEN[selVoorziet]?.emoji} {KRAAM_SOORTEN[selVoorziet]?.label} — zet de prijs. Goedkoop = meer kopers, duur = meer per stuk (te duur → bezoekers haken af).
             </span>
             <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.96)", borderRadius: 999, padding: "6px 10px", boxShadow: "0 3px 10px rgba(0,0,0,.22)" }}>
-              <button onClick={() => setPrice(selVoorziet, (selVoorziet === "food" ? foodPrice : drinkPrice) - 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#d9534f", cursor: "pointer" }}>−</button>
-              <span style={{ font: "900 18px system-ui", color: "#234", minWidth: 78, textAlign: "center" }}>{selVoorziet === "food" ? foodPrice : drinkPrice} 🪙</span>
-              <button onClick={() => setPrice(selVoorziet, (selVoorziet === "food" ? foodPrice : drinkPrice) + 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer" }}>+</button>
+              <button onClick={() => setPrice(selVoorziet, prices[selVoorziet] - 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#d9534f", cursor: "pointer" }}>−</button>
+              <span style={{ font: "900 18px system-ui", color: "#234", minWidth: 78, textAlign: "center" }}>{prices[selVoorziet]} 🪙</span>
+              <button onClick={() => setPrice(selVoorziet, prices[selVoorziet] + 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer" }}>+</button>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
               <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
@@ -436,7 +435,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
                   <li>Elke dag <b>inloggen</b> (+5, met streak-bonus 🔥 die oploopt).</li>
                   <li>Elke dag je <b>kwartier leren</b> afronden (+8).</li>
                   <li>Je <b>park zelf</b> levert muntjes op: hoe meer verblijven en jonkies, hoe meer per dag.</li>
-                  <li><b>Kraampjes</b> 🍟🥤: bezoekers krijgen honger of dorst. Zet een <b>patatkraam</b> of <b>drankkraam</b> neer en kies de prijs — elke verkoop levert muntjes op. Te duur? Dan haken bezoekers af, dus zoek de juiste prijs!</li>
+                  <li><b>Kraampjes</b> 🍟🥤🍦🍿: bezoekers krijgen honger, dorst of zin in iets lekkers. Zet een <b>patat-</b>, <b>drank-</b>, <b>ijsco-</b> of <b>popcornkraam</b> neer en kies de prijs — elke verkoop levert muntjes op. Bezoekers verlangen naar wat jij aanbiedt; te duur? Dan haken ze af, dus zoek de juiste prijs!</li>
                 </ul>
                 <p><b>🦊 Dieren:</b> koop een dier — het komt <b>mét een ruim verblijf</b>. Tik een verblijf aan om het te <b>verplaatsen</b> of <b>weg te halen</b> (je krijgt de muntjes terug).</p>
                 <p><b>🐣 Jonkies:</b> dieren kunnen er met de tijd een jonkie bij krijgen — dat levert extra muntjes op.</p>

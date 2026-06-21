@@ -13,6 +13,18 @@ export const ASSET_KINDS = {
   CHARACTER: "character",
 };
 
+// Kraampjes-soorten: elk een "behoefte" die bezoekers kunnen krijgen. `voorziet`
+// op een gebouw-asset koppelt het kraampje aan een soort. fair = "eerlijke prijs"
+// (tot hier koopt vrijwel iedereen; daarboven haken er steeds meer af). start =
+// standaard-instelprijs. craving = denkwolkje-tekst boven een bezoeker.
+export const KRAAM_SOORTEN = {
+  food: { label: "Patatkraam", emoji: "🍟", craving: "Ik heb honger", cravingEmoji: "🍔", fair: 5, start: 5 },
+  drink: { label: "Drankkraam", emoji: "🥤", craving: "Ik heb dorst", cravingEmoji: "🥤", fair: 4, start: 4 },
+  ice: { label: "IJscokraam", emoji: "🍦", craving: "Ik wil een ijsje", cravingEmoji: "🍦", fair: 4, start: 4 },
+  popcorn: { label: "Popcornkraam", emoji: "🍿", craving: "Zin in popcorn", cravingEmoji: "🍿", fair: 4, start: 4 },
+};
+export const KRAAM_KEYS = Object.keys(KRAAM_SOORTEN);
+
 export const ZOO_ASSETS = {
   // ---- Dieren (Quaternius, vertex-colored → nooit "wit") ----
   fox: { id: "fox", kind: "animal", name: "Vos", emoji: "🦊", url: "/models/zoo/animals/Fox.glb", targetHeight: 0.8, price: 10 },
@@ -42,6 +54,8 @@ export const ZOO_ASSETS = {
   cart: { id: "cart", kind: "building", name: "Marktkar", emoji: "🛒", url: "/models/zoo/build/cart-high.glb", targetHeight: 1.9, price: 20 },
   patatkraam: { id: "patatkraam", kind: "building", name: "Patatkraam", emoji: "🍟", procedural: "patatkraam", price: 35, voorziet: "food" },
   drankkraam: { id: "drankkraam", kind: "building", name: "Drankkraam", emoji: "🥤", procedural: "drankkraam", price: 35, voorziet: "drink" },
+  ijscokraam: { id: "ijscokraam", kind: "building", name: "IJscokraam", emoji: "🍦", procedural: "ijscokraam", price: 35, voorziet: "ice" },
+  popcornkraam: { id: "popcornkraam", kind: "building", name: "Popcornkraam", emoji: "🍿", procedural: "popcornkraam", price: 35, voorziet: "popcorn" },
   fountain: { id: "fountain", kind: "building", name: "Fontein", emoji: "⛲", url: "/models/zoo/build/fountain.glb", targetHeight: 1.4, price: 35 },
   // Echte Kenney-huizen met hun natuurlijke (realistische) kleuren — elk een
   // ander dak/muur-schema. Géén monochrome tint.
@@ -88,7 +102,7 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
-export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
