@@ -226,14 +226,19 @@ export function Paths() {
   );
 }
 
-// Het hele vaste mini-park (altijd aanwezig, niet weghaalbaar).
-export function ParkBase() {
+// Pad-tegel (procedureel) — vult één rastervakje (2×2 m).
+export function PathTile({ position = [0, 0, 0] }) {
   return (
-    <group>
-      <Paths />
-      <Decor />
-      <Carousel position={[0, 0, 0]} />
-      {/* Het poppetje wordt los gerenderd (bestuurbaar) in ZooScene. */}
-    </group>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[position[0], 0.025, position[2]]} receiveShadow>
+      <planeGeometry args={[2.02, 2.02]} />
+      <meshStandardMaterial color="#dcc48f" roughness={1} />
+    </mesh>
   );
+}
+
+// Geen vast decor meer: álles (draaimolen, paden, bomen, verblijven) is een
+// plaatsbaar/weghaalbaar item geworden. Alleen het poppetje wordt los
+// gerenderd (bestuurbaar) in ZooScene.
+export function ParkBase() {
+  return null;
 }

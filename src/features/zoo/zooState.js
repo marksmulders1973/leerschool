@@ -8,8 +8,11 @@ import { START_COINS } from "./zooEconomy";
 // park nooit leeg is. price 0 → bij weghalen geen "gratis" muntjes. Het vaste
 // decor (draaimolen, paden, poppetje, bomen) staat daarnaast altijd.
 export const STARTER_LAYOUT = [
+  { assetId: "carousel", cell: [0, 0], rotation: 0, price: 0 },
   { assetId: "deer", cell: [-4, -1], rotation: 0, price: 0 },
   { assetId: "alpaca", cell: [4, -1], rotation: 0, price: 0 },
+  { assetId: "tree", cell: [-6, 4], rotation: 0, price: 0 },
+  { assetId: "treeOak", cell: [6, 4], rotation: 0, price: 0 },
 ];
 
 export function defaultState() {

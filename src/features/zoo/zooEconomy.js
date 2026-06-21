@@ -6,7 +6,7 @@
 //
 // Uitgeven aan dieren/attracties komt in de winkel (stap 4).
 
-export const START_COINS = 25;
+export const START_COINS = 200; // ruim startbudget (lanceerweek) zodat je meteen kunt bouwen
 export const LOGIN_BASE = 5;            // basis voor dagelijks inloggen
 export const LOGIN_STREAK_BONUS_MAX = 7; // +1 per streakdag, tot dit maximum
 export const KWARTIER_REWARD = 8;       // 15 min leren voltooid
@@ -37,9 +37,15 @@ export function dagenVerschil(fromStr, toStr = todayStr()) {
   return d > 0 ? d : 0;
 }
 
-// Wat je park per dag oplevert (som over alle verblijven + hun jonkies).
-export function inkomstenPerDag(items) {
-  return (items || []).reduce((s, it) => s + INKOMST_PER_VERBLIJF + (it.babies || 0) * INKOMST_PER_BABY, 0);
+// Wat je park per dag oplevert. Dieren, gebouwen en attracties trekken
+// bezoekers → muntjes; decor (paden/hekken/bomen) levert niets op.
+export function inkomstenPerDag(items, kindVan = () => "animal") {
+  return (items || []).reduce((s, it) => {
+    const k = kindVan(it.assetId);
+    if (k === "animal") return s + INKOMST_PER_VERBLIJF + (it.babies || 0) * INKOMST_PER_BABY;
+    if (k === "building" || k === "attraction") return s + INKOMST_PER_VERBLIJF;
+    return s;
+  }, 0);
 }
 
 // Laat (op een nieuwe dag) dier-verblijven kans maken op een jonkie. Gebouwen

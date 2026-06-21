@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, getAsset } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_NATUUR, getAsset } from "../features/zoo/AssetRegistry";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -43,12 +43,20 @@ function Joystick({ inputRef }) {
   );
 }
 
-// Winkel: dieren + gebouwen/kraampjes, opgebouwd uit de AssetRegistry.
+// Winkel: alles plaatsbaar, opgebouwd uit de AssetRegistry, per categorie.
 const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.emoji, label: a.name, price: a.price, kind: a.kind }; };
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
 const BOUW_SHOP = PLAATSBARE_BOUWWERKEN.map(mkItem);
-const PLAATSBAAR = [...DIEREN_SHOP, ...BOUW_SHOP];
+const ATTRACTIE_SHOP = PLAATSBARE_ATTRACTIES.map(mkItem);
+const NATUUR_SHOP = PLAATSBARE_NATUUR.map(mkItem);
+const SHOP_CATS = [
+  { key: "dier", label: "🦊 Dieren", items: DIEREN_SHOP },
+  { key: "gebouw", label: "🏠 Gebouwen", items: BOUW_SHOP },
+  { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
+  { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
+];
 const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
+const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
 export default function ZookwartierGame({ onHome, userName, authUser }) {
@@ -64,6 +72,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [reward, setReward] = useState(null);
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
+  const [shopCat, setShopCat] = useState("dier");
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
@@ -107,7 +116,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       // jonkies = meer) en kunnen dieren een jonkie krijgen.
       if (isNieuweDag) {
         const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
-        parkGain = inkomstenPerDag(layout) * dagen;
+        parkGain = inkomstenPerDag(layout, kindVan) * dagen;
         const g = groeiBabies(layout, isDier);
         finalLayout = g.layout;
         births = g.births;
@@ -142,29 +151,32 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const startKopen = (p) => {
     if (coins < p.price) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
     setSelectedIdx(null);
-    setPlacing({ assetId: p.assetId, price: p.price });
+    setPlacing({ assetId: p.assetId, price: p.price, rot: 0 });
   };
+
+  const draai = () => setPlacing((p) => (p ? { ...p, rot: (p.rot || 0) + Math.PI / 2 } : p));
 
   const plaatsOpVakje = (cell) => {
     if (!placing) return;
-    // Verplaatsen: bestaand dier naar nieuw vakje.
+    const rot = placing.rot || 0;
+    // Verplaatsen: bestaand item naar nieuw vakje (met huidige draaihoek).
     if (placing.moveIdx != null) {
-      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell } : it)));
+      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell, rotation: rot } : it)));
       setPlacing(null);
       return;
     }
     // Kopen + plaatsen.
     if (coins < placing.price) { flits("Niet genoeg muntjes."); setPlacing(null); return; }
     setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
-    setPlacedItems((items) => [...items, { assetId: placing.assetId, cell, rotation: 0, price: placing.price }]);
-    // Blijf in koop-modus zolang er muntjes zijn.
+    setPlacedItems((items) => [...items, { assetId: placing.assetId, cell, rotation: rot, price: placing.price }]);
+    // Blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
     if (coins - placing.price < placing.price) setPlacing(null);
   };
 
   const verplaatsGeselecteerde = () => {
     if (selectedIdx == null) return;
     const it = placedItems[selectedIdx];
-    setPlacing({ assetId: it.assetId, price: it.price ?? prijsVan(it.assetId), moveIdx: selectedIdx });
+    setPlacing({ assetId: it.assetId, price: it.price ?? prijsVan(it.assetId), moveIdx: selectedIdx, rot: it.rotation || 0 });
     setSelectedIdx(null);
   };
 
@@ -220,6 +232,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
           placingAsset={placing?.assetId || null}
+          placingRot={placing?.rot || 0}
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
           onSelectPlaced={(idx) => { setPlacing(null); setSelectedIdx(idx); }}
@@ -238,27 +251,33 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
         {placing ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {`Tik op een groen vak om ${isDier(placing.assetId) ? "het verblijf" : "het gebouw"} ${placing.moveIdx != null ? "te verplaatsen" : "neer te zetten"}`}
+              {`Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
             </div>
+            <button onClick={draai} title="Draaien" style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↻ Draai</button>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>
         ) : selectedIdx != null ? (
           <>
-            <span style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>Verblijf gekozen:</span>
+            <span style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>Gekozen:</span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
             <button onClick={() => setSelectedIdx(null)} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
         ) : (
-          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 5 }}>
             <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              📈 Je park verdient 🪙{inkomstenPerDag(placedItems)} per dag · koop een dier (mét verblijf) of een gebouw · tik iets aan om te verplaatsen of weg te halen
+              📈 Je park verdient 🪙{inkomstenPerDag(placedItems, kindVan)} per dag · kies iets en zet het neer · tik iets aan om te verplaatsen of weg te halen
             </span>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "center" }}>
+              {SHOP_CATS.map((c) => (
+                <button key={c.key} onClick={() => setShopCat(c.key)} style={{ border: "none", borderRadius: 999, padding: "5px 11px", font: "800 12px system-ui", color: shopCat === c.key ? "#fff" : "#234", background: shopCat === c.key ? "#2e7d32" : "rgba(255,255,255,0.9)", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>{c.label}</button>
+              ))}
+            </div>
             <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
-              {PLAATSBAAR.map((p) => {
+              {(SHOP_CATS.find((c) => c.key === shopCat)?.items || []).map((p) => {
                 const kan = coins >= p.price;
                 return (
-                  <button key={p.assetId} onClick={() => startKopen(p)} title={`${p.label} plaatsen`} style={{ flex: "0 0 auto", border: "none", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: kan ? "#234" : "#999", background: kan ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.5)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed", whiteSpace: "nowrap" }}>
+                  <button key={p.assetId} onClick={() => startKopen(p)} title={`${p.label} plaatsen`} style={{ flex: "0 0 auto", border: "none", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: kan ? "#234" : "#999", background: kan ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.5)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed", whiteSpace: "nowrap", textAlign: "center" }}>
                     <span style={{ fontSize: 18 }}>{p.emoji}</span> {p.label}<br />
                     <span style={{ fontSize: 11, opacity: 0.85 }}>{p.price} 🪙</span>
                   </button>
@@ -303,7 +322,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
             ) : (
               <div>
                 <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Alles wat je kunt kopen. Dieren komen met een ruim verblijf; gebouwen zet je los neer.</p>
-                {[{ titel: "🦊 Dieren", lijst: DIEREN_SHOP }, { titel: "🏪 Gebouwen & kraampjes", lijst: BOUW_SHOP }].map((sec) => (
+                {[{ titel: "🦊 Dieren", lijst: DIEREN_SHOP }, { titel: "🏠 Gebouwen & kraampjes", lijst: BOUW_SHOP }, { titel: "🎠 Attracties", lijst: ATTRACTIE_SHOP }, { titel: "🌳 Natuur & bouwen", lijst: NATUUR_SHOP }].map((sec) => (
                   <div key={sec.titel} style={{ marginBottom: 12 }}>
                     <div style={{ font: "800 14px system-ui", color: "#234", margin: "4px 0 6px" }}>{sec.titel}</div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>

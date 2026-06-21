@@ -1,41 +1,36 @@
 // ZooScene — de 3D-canvas van Mijn Park: camera, belichting, schaduw,
-// grasgrond, vast mini-park (paden/draaimolen/poppetje/decor), raster en
-// orbit-besturing. Dieren komen mét een ruim verblijf dat op het grid snapt.
+// grasgrond, orbit-besturing + het bestuurbare poppetje. Álles in het park
+// (draaimolen, paden, hekken, gebouwen, dier-verblijven) is een plaatsbaar/
+// weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile } from "./ParkProps";
 import ZooModel from "./ZooModel";
-import { getAsset } from "./AssetRegistry";
+import { getAsset, cellsVan } from "./AssetRegistry";
 import {
-  GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
+  CELL, GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
   isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
-// Een geplaatst item: gebouw = los model, dier = ruim verblijf met hek.
+// Eén geplaatst item, gerenderd op basis van zijn soort.
 function PlacedItem({ assetId, x, z, rotation = 0, babies = 0 }) {
-  if (getAsset(assetId)?.kind === "building") {
-    return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
-  }
-  return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} />;
+  const a = getAsset(assetId);
+  if (!a) return null;
+  if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} />;
+  if (a.procedural === "carousel") return <Carousel position={[x, 0, z]} />;
+  if (a.procedural === "path") return <PathTile position={[x, 0, z]} />;
+  return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
 }
 
-function GrasGrond({ placing, onHover, onPlace, onMissTap }) {
+function GrasGrond({ placing, cells, onHover, onPlace, onMissTap }) {
   return (
     <mesh
       rotation={[-Math.PI / 2, 0, 0]}
       position={[0, 0, 0]}
       receiveShadow
-      onPointerMove={(e) => {
-        if (!placing) return;
-        e.stopPropagation();
-        onHover(snapToCell(e.point.x, e.point.z));
-      }}
-      onPointerDown={(e) => {
-        e.stopPropagation();
-        if (placing) onPlace(snapToCell(e.point.x, e.point.z));
-        else onMissTap && onMissTap();
-      }}
+      onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
+      onPointerDown={(e) => { e.stopPropagation(); if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
     >
       <circleGeometry args={[34, 96]} />
       <meshStandardMaterial color="#86c05a" roughness={1} metalness={0} />
@@ -43,22 +38,23 @@ function GrasGrond({ placing, onHover, onPlace, onMissTap }) {
   );
 }
 
-function FootprintMarker({ cell, valid }) {
+function FootprintMarker({ cell, valid, cells }) {
   if (!cell) return null;
   const [x, z] = cellToWorld(cell[0], cell[1]);
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.05, z]}>
-      <planeGeometry args={[ENCLOSURE_SIZE, ENCLOSURE_SIZE]} />
+      <planeGeometry args={[cells * CELL, cells * CELL]} />
       <meshBasicMaterial color={valid ? "#3ddc6a" : "#ff5a4d"} transparent opacity={0.4} />
     </mesh>
   );
 }
 
-function SelectieRing({ cell }) {
+function SelectieRing({ cell, cells }) {
   const [x, z] = cellToWorld(cell[0], cell[1]);
+  const s = cells * CELL;
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.06, z]}>
-      <ringGeometry args={[ENCLOSURE_SIZE * 0.62, ENCLOSURE_SIZE * 0.72, 4]} />
+      <ringGeometry args={[s * 0.42, s * 0.5, 4]} />
       <meshBasicMaterial color="#ffd54a" transparent opacity={0.95} />
     </mesh>
   );
@@ -72,16 +68,17 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placedItems = [], onPlace, onSelectPlaced, onClearSelection, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const placing = !!placingAsset;
+  const placingCells = placing ? cellsVan(placingAsset) : 3;
 
-  const bezet = bezetteCellenVan(placedItems, moveIdx);
-  const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet);
+  const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan);
+  const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells);
 
   const handlePlace = (cell) => {
     if (!onPlace) return;
-    if (!isPlaatsbaar(cell[0], cell[1], bezet)) return;
+    if (!isPlaatsbaar(cell[0], cell[1], bezet, placingCells)) return;
     onPlace(cell);
   };
 
@@ -112,8 +109,7 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
       />
 
       <Suspense fallback={<Laden />}>
-        <GrasGrond placing={placing} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
-
+        <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
         <ParkBase />
         <Player inputRef={inputRef} />
 
@@ -121,29 +117,25 @@ export default function ZooScene({ placingAsset = null, placedItems = [], onPlac
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
         )}
 
-        {/* Geplaatste verblijven (dier + hek) — klikbaar om te selecteren. */}
+        {/* Geplaatste items — klikbaar om te selecteren. */}
         {placedItems.map((it, idx) => {
           const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
-              onPointerDown={(e) => {
-                if (placing) return;
-                e.stopPropagation();
-                onSelectPlaced && onSelectPlaced(idx);
-              }}
+              onPointerDown={(e) => { if (placing) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
-              {selectedIdx === idx && <SelectieRing cell={it.cell} />}
+              {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0} />
             </group>
           );
         })}
 
-        {/* Ghost-preview tijdens plaatsen: verblijf + groen/rood vlak. */}
+        {/* Ghost-preview tijdens plaatsen. */}
         {placing && ghost && (
           <>
-            <FootprintMarker cell={ghost} valid={ghostValid} />
-            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} />
+            <FootprintMarker cell={ghost} valid={ghostValid} cells={placingCells} />
+            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} rotation={placingRot} />
           </>
         )}
 
