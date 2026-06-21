@@ -2,7 +2,7 @@
 // grasgrond, orbit-besturing + het bestuurbare poppetje. Álles in het park
 // (draaimolen, paden, hekken, gebouwen, dier-verblijven) is een plaatsbaar/
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
-import { Suspense, useState } from "react";
+import { Suspense, useState, useMemo, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors } from "./ParkProps";
@@ -10,8 +10,19 @@ import ZooModel from "./ZooModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
   CELL, GRID_SIZE, GRID_DIV, ENCLOSURE_SIZE, snapToCell, cellToWorld, cellKey,
-  isPlaatsbaar, bezetteCellenVan,
+  footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
+
+// Welke items zijn "vast" (kan het poppetje niet doorheen lopen)? Paden en
+// kleine bloemen/paddenstoel zijn beloopbaar; de rest (verblijven, gebouwen,
+// attracties, hekken, bomen) houdt tegen.
+function isVast(assetId) {
+  const a = getAsset(assetId);
+  if (!a) return false;
+  if (a.kind === "animal" || a.kind === "building" || a.kind === "attraction") return true;
+  if (a.kind === "decor") return a.procedural !== "path" && !String(assetId).startsWith("flower") && assetId !== "mushroom";
+  return false;
+}
 
 // Eén geplaatst item, gerenderd op basis van zijn soort.
 function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable = false, onToggleWall }) {
@@ -83,6 +94,20 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   }).length;
   const bezoekers = Math.max(2, Math.min(14, Math.round(trekpleisters * 1.3) + 2));
 
+  // Botsing: vakjes die "vast" zijn, zodat het poppetje er niet doorheen loopt.
+  const vasteCellen = useMemo(() => {
+    const s = new Set();
+    placedItems.forEach((it) => {
+      if (!isVast(it.assetId)) return;
+      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
+    });
+    return s;
+  }, [placedItems]);
+  const isSolid = useCallback((x, z) => {
+    const [gx, gz] = snapToCell(x, z, 1);
+    return vasteCellen.has(cellKey(gx, gz));
+  }, [vasteCellen]);
+
   const handlePlace = (cell) => {
     if (!onPlace) return;
     if (!isPlaatsbaar(cell[0], cell[1], bezet, placingCells)) return;
@@ -118,7 +143,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <Suspense fallback={<Laden />}>
         <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
         <ParkBase />
-        <Player inputRef={inputRef} />
+        <Player inputRef={inputRef} isSolid={isSolid} />
         <Visitors count={bezoekers} onTip={onTip} canTip={canTip} />
 
         {placing && (

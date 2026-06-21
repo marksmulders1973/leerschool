@@ -82,12 +82,14 @@ export function Character({ position = [0, 0, 0], rotation = 0 }) {
 
 // Bestuurbaar poppetje van de speler: loopt rond met toetsen (laptop) of de
 // touch-joystick (telefoon). Beweegt camera-relatief; beentjes/armpjes zwaaien.
-export function Player({ inputRef, start = [0, 0, 13] }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), armL = useRef(), armR = useRef();
   const phase = useRef(0);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
+  const solidRef = useRef(isSolid);
+  solidRef.current = isSolid;
 
   useFrame((state, dt) => {
     const inp = inputRef?.current || {};
@@ -109,7 +111,14 @@ export function Player({ inputRef, start = [0, 0, 13] }) {
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
-      pos.current.addScaledVector(dir.current, 3.4 * dt * Math.min(1, mag));
+      // Beweging met botsing: probeer eerst diagonaal, anders langs één as glijden.
+      const step = 3.4 * dt * Math.min(1, mag);
+      const nx = pos.current.x + dir.current.x * step;
+      const nz = pos.current.z + dir.current.z * step;
+      const solid = solidRef.current;
+      const vast = solid ? solid(pos.current.x, pos.current.z) : false; // al binnen? dan eruit kunnen
+      if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
+      else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
       const d = Math.hypot(pos.current.x, pos.current.z);
       if (d > 27) { pos.current.x *= 27 / d; pos.current.z *= 27 / d; }
       node.rotation.y = Math.atan2(dir.current.x, dir.current.z);
