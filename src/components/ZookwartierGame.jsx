@@ -63,7 +63,7 @@ const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
-export default function ZookwartierGame({ onHome, userName, authUser }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator }) {
   const naam = (userName || "").trim();
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
@@ -275,6 +275,9 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
           <button onClick={() => { setSculptMode((v) => !v); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
+          {onPlayObliterator && (
+            <button onClick={onPlayObliterator} title="OBLITERATOR — extra spel" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "0 13px", height: 38, font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3df0,#b13df0)", boxShadow: "0 2px 8px rgba(0,0,0,.22)", cursor: "pointer", whiteSpace: "nowrap" }}>🎮 Extra spel</button>
+          )}
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>

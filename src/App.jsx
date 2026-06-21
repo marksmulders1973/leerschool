@@ -1152,7 +1152,7 @@ export default function App() {
       )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
-          <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} />
+          <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")} />
         </Suspense>
       )}
       {page === "supporterGame" && (
