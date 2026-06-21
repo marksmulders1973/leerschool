@@ -5,7 +5,7 @@
 import { Suspense, useState, useMemo, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound } from "./ParkProps";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import {
@@ -32,6 +32,7 @@ function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable =
   if (a.procedural === "carousel") return <Carousel position={[x, 0, z]} />;
   if (a.procedural === "path") return <PathTile position={[x, 0, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, 0, z]} size={a.hillSize} color={a.color} />;
+  if (a.procedural === "patatkraam") return <PatatKraam position={[x, 0, z]} />;
   return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
 }
 

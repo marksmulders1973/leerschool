@@ -330,6 +330,34 @@ export function PathTile({ position = [0, 0, 0], color = "#dcc48f" }) {
   );
 }
 
+// Patatkraam (procedureel) — een vrolijk snackkraam met gestreepte luifel.
+export function PatatKraam({ position = [0, 0, 0] }) {
+  const hout = "#caa44a";
+  return (
+    <group position={[position[0], 0, position[2]]}>
+      {/* toonbank */}
+      <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#efe2c0" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#c98a3a" flatShading roughness={1} /></mesh>
+      {/* achterwand + bord */}
+      <mesh castShadow position={[0, 1.15, -0.45]}><boxGeometry args={[1.8, 1.4, 0.12]} /><meshStandardMaterial color="#f5f0e2" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.37]}><boxGeometry args={[1.3, 0.5, 0.06]} /><meshStandardMaterial color="#ffd23a" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.7, -0.33]}><boxGeometry args={[0.9, 0.18, 0.04]} /><meshStandardMaterial color="#e2574c" flatShading roughness={1} /></mesh>
+      {/* palen */}
+      <mesh position={[-0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      <mesh position={[0.85, 1.45, 0.42]}><cylinderGeometry args={[0.06, 0.06, 1.7, 8]} /><meshStandardMaterial color={hout} roughness={0.8} /></mesh>
+      {/* gestreepte luifel (rood/wit), schuin naar voren */}
+      <group position={[0, 2.15, 0.05]} rotation={[-0.32, 0, 0]}>
+        {[-0.75, -0.45, -0.15, 0.15, 0.45, 0.75].map((x, i) => (
+          <mesh key={i} castShadow position={[x, 0, 0]}><boxGeometry args={[0.3, 0.07, 1.05]} /><meshStandardMaterial color={i % 2 ? "#ffffff" : "#e2574c"} flatShading roughness={1} /></mesh>
+        ))}
+      </group>
+      {/* patatpuntzak op de toonbank */}
+      <mesh castShadow position={[0.5, 1.13, 0.12]} rotation={[0.15, 0, 0]}><coneGeometry args={[0.13, 0.32, 12]} /><meshStandardMaterial color="#e2574c" flatShading roughness={1} /></mesh>
+      <mesh position={[0.5, 1.36, 0.12]}><cylinderGeometry args={[0.11, 0.07, 0.28, 8]} /><meshStandardMaterial color="#f2cd4a" flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
 // Grasheuvel (procedureel) — een zachte glooiing in de grond die je overal kunt
 // neerzetten zodat je park niet vlak is.
 export function HillMound({ position = [0, 0, 0], size = 1.2, color = "#82bb55" }) {
