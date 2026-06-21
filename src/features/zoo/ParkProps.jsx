@@ -166,39 +166,53 @@ export function Decor() {
   );
 }
 
-// Een omheind dierverblijf met een dier erin. Standaard ruim (school-app: geen
-// dier op 2×2 m), met wat ruimte rondom het dier.
-export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox", babies = 0 }) {
+// Eén kant van het verblijf-hek (palen + bovenligger). `on` = staat er een hek;
+// `editable` → een onzichtbaar tik-vlak zodat je de kant kunt weghalen of
+// terugzetten (zo bouw je twee verblijven aan elkaar tot één).
+function Wall({ side, size, on, editable, onToggle }) {
   const h = size / 2;
   const hout = "#8a5a2b";
   const n = 5;
-  const posts = [];
-  for (let s = 0; s < 4; s++) {
-    for (let i = 0; i <= n; i++) {
-      const t = -h + (size * i) / n;
-      if (s === 0) posts.push([t, -h]);
-      else if (s === 1) posts.push([t, h]);
-      else if (s === 2) posts.push([-h, t]);
-      else posts.push([h, t]);
-    }
-  }
+  const isNS = side === 0 || side === 2;          // noord/zuid lopen langs x
+  const fixed = side === 0 ? -h : side === 2 ? h : side === 3 ? -h : h;
+  const ts = [];
+  for (let i = 0; i <= n; i++) ts.push(-h + (size * i) / n);
+  return (
+    <group onPointerDown={editable ? (e) => { e.stopPropagation(); onToggle && onToggle(side); } : undefined}>
+      {on && ts.map((t, i) => (
+        <mesh key={i} castShadow position={isNS ? [t, 0.35, fixed] : [fixed, 0.35, t]}>
+          <boxGeometry args={[0.1, 0.7, 0.1]} />
+          <meshStandardMaterial color={hout} flatShading roughness={1} />
+        </mesh>
+      ))}
+      {on && (
+        <mesh position={isNS ? [0, 0.55, fixed] : [fixed, 0.55, 0]}>
+          <boxGeometry args={isNS ? [size, 0.08, 0.08] : [0.08, 0.08, size]} />
+          <meshStandardMaterial color={hout} roughness={1} />
+        </mesh>
+      )}
+      {editable && (
+        <mesh position={isNS ? [0, 0.5, fixed] : [fixed, 0.5, 0]}>
+          <boxGeometry args={isNS ? [size, 1.1, 0.45] : [0.45, 1.1, size]} />
+          <meshBasicMaterial color={on ? "#ff7a59" : "#3ddc6a"} transparent opacity={editable ? 0.16 : 0} depthWrite={false} />
+        </mesh>
+      )}
+    </group>
+  );
+}
+
+// Een omheind dierverblijf met een dier erin. Hekken per kant (walls = [N,E,S,W]);
+// in bewerk-modus tikbaar om kanten weg te halen/terug te zetten.
+export function Enclosure({ position = [0, 0, 0], size = 6, assetId = "fox", babies = 0, walls = [true, true, true, true], editable = false, onToggleWall }) {
   return (
     <group position={position}>
       <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
         <planeGeometry args={[size, size]} />
         <meshStandardMaterial color="#cdb188" roughness={1} />
       </mesh>
-      {posts.map((p, i) => (
-        <mesh key={i} castShadow position={[p[0], 0.35, p[1]]}>
-          <boxGeometry args={[0.1, 0.7, 0.1]} />
-          <meshStandardMaterial color={hout} flatShading roughness={1} />
-        </mesh>
+      {[0, 1, 2, 3].map((side) => (
+        <Wall key={side} side={side} size={size} on={walls[side] !== false} editable={editable} onToggle={onToggleWall} />
       ))}
-      {/* bovenliggers */}
-      <mesh position={[0, 0.55, -h]}><boxGeometry args={[size, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
-      <mesh position={[0, 0.55, h]}><boxGeometry args={[size, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
-      <mesh position={[-h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
-      <mesh position={[h, 0.55, 0]}><boxGeometry args={[0.08, 0.08, size]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={Math.max(0.6, size / 2 - 1.3)} />
       {/* Jonkies: kleinere versies van hetzelfde dier die ook rondscharrelen. */}
       {Array.from({ length: babies }).map((_, i) => {
@@ -226,12 +240,12 @@ export function Paths() {
   );
 }
 
-// Pad-tegel (procedureel) — vult één rastervakje (2×2 m).
-export function PathTile({ position = [0, 0, 0] }) {
+// Pad-tegel (procedureel) — vult één rastervakje (2×2 m), in een kleur naar keuze.
+export function PathTile({ position = [0, 0, 0], color = "#dcc48f" }) {
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[position[0], 0.025, position[2]]} receiveShadow>
       <planeGeometry args={[2.02, 2.02]} />
-      <meshStandardMaterial color="#dcc48f" roughness={1} />
+      <meshStandardMaterial color={color} roughness={1} />
     </mesh>
   );
 }

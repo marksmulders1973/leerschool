@@ -14,12 +14,12 @@ import {
 } from "./grid";
 
 // Eén geplaatst item, gerenderd op basis van zijn soort.
-function PlacedItem({ assetId, x, z, rotation = 0, babies = 0 }) {
+function PlacedItem({ assetId, x, z, rotation = 0, babies = 0, walls, editable = false, onToggleWall }) {
   const a = getAsset(assetId);
   if (!a) return null;
-  if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} />;
+  if (a.kind === "animal") return <Enclosure position={[x, 0, z]} size={ENCLOSURE_SIZE} assetId={assetId} babies={babies} walls={walls} editable={editable} onToggleWall={onToggleWall} />;
   if (a.procedural === "carousel") return <Carousel position={[x, 0, z]} />;
-  if (a.procedural === "path") return <PathTile position={[x, 0, z]} />;
+  if (a.procedural === "path") return <PathTile position={[x, 0, z]} color={a.color} />;
   return <ZooModel assetId={assetId} position={[x, 0, z]} rotation={rotation} />;
 }
 
@@ -68,7 +68,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
@@ -126,7 +126,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               onPointerDown={(e) => { if (placing) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
-              <PlacedItem assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0} />
+              <PlacedItem
+                assetId={it.assetId} x={x} z={z} rotation={it.rotation || 0} babies={it.babies || 0}
+                walls={it.walls} editable={selectedIdx === idx && getAsset(it.assetId)?.kind === "animal"}
+                onToggleWall={(side) => onToggleWall && onToggleWall(idx, side)}
+              />
             </group>
           );
         })}

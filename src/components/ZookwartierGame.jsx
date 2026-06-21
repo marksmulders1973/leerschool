@@ -190,6 +190,18 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
     if (terug > 0) flits(`Weggehaald — +${terug} 🪙 terug`);
   };
 
+  // Een hek-kant van een geselecteerd verblijf weghalen/terugzetten.
+  const toggleWall = (idx, side) => {
+    setPlacedItems((items) => items.map((it, i) => {
+      if (i !== idx) return it;
+      const w = Array.isArray(it.walls) ? [...it.walls] : [true, true, true, true];
+      w[side] = w[side] === false;
+      return { ...it, walls: w };
+    }));
+  };
+
+  const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
+
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
       {/* Header. */}
@@ -237,6 +249,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           onPlace={plaatsOpVakje}
           onSelectPlaced={(idx) => { setPlacing(null); setSelectedIdx(idx); }}
           onClearSelection={() => setSelectedIdx(null)}
+          onToggleWall={toggleWall}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}
@@ -258,7 +271,9 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           </>
         ) : selectedIdx != null ? (
           <>
-            <span style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>Gekozen:</span>
+            <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
+              {selKind === "animal" ? "✏️ Tik op een hek-kant om die weg te halen of terug te zetten · of:" : "Gekozen:"}
+            </span>
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
             <button onClick={() => setSelectedIdx(null)} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
