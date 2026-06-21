@@ -50,7 +50,25 @@ function analyseer(url, scene) {
       if (grp === undefined) { grp = baseColors.length; keyToGroup.set(qk, grp); baseColors.push([r / 255, g / 255, b / 255]); }
       vertexGroup[i] = grp;
     }
-    const res = { geom, vertexGroup, baseColors };
+    // Bijna-identieke kleurvlakjes samenvoegen tot één "onderdeel" (bv. de twee
+    // dak-tinten), maar echt verschillende delen (muur/kozijn/deur) apart houden.
+    const THRESH2 = 0.13 * 0.13 * 3; // gekwadrateerde kleurafstand
+    const partRep = [];
+    const groupToPart = new Int16Array(baseColors.length);
+    for (let gi = 0; gi < baseColors.length; gi++) {
+      const c = baseColors[gi];
+      let p = -1;
+      for (let pi = 0; pi < partRep.length; pi++) {
+        const r = partRep[pi];
+        const d = (c[0] - r[0]) ** 2 + (c[1] - r[1]) ** 2 + (c[2] - r[2]) ** 2;
+        if (d < THRESH2) { p = pi; break; }
+      }
+      if (p === -1) { p = partRep.length; partRep.push(c); }
+      groupToPart[gi] = p;
+    }
+    const vertexPart = new Int16Array(n);
+    for (let i = 0; i < n; i++) vertexPart[i] = groupToPart[vertexGroup[i]];
+    const res = { geom, vertexGroup: vertexPart, baseColors: partRep };
     cache[url] = res;
     return res;
   } catch (e) {
