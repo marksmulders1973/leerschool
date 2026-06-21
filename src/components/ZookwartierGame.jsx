@@ -75,6 +75,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
   const [shopCat, setShopCat] = useState("dier");
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
   const [pickedPart, setPickedPart] = useState(null);   // gekozen onderdeel-groep
+  const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
@@ -242,6 +243,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
+          <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>
@@ -283,6 +285,7 @@ export default function ZookwartierGame({ onHome, userName, authUser }) {
           canTip={tipApi.canTip}
           onPickPart={(idx, grp) => setPickedPart(grp)}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
+          followCam={followCam}
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}

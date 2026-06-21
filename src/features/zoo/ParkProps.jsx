@@ -138,7 +138,20 @@ export function Character({ position = [0, 0, 0], rotation = 0 }) {
 
 // Bestuurbaar poppetje van de speler: loopt rond met toetsen (laptop) of de
 // touch-joystick (telefoon). Beweegt camera-relatief; beentjes/armpjes zwaaien.
-export function Player({ inputRef, start = [0, 0, 13], isSolid }) {
+// Camera volgt het poppetje: schuift het orbit-draaipunt mee naar de speler,
+// zodat de camera meeloopt terwijl je nog steeds kunt draaien/zoomen.
+export function CameraFollow({ posRef, controlsRef, active }) {
+  const tmp = useRef(new Vector3());
+  useFrame(() => {
+    if (!active || !controlsRef?.current || !posRef?.current) return;
+    tmp.current.set(posRef.current.x, 0.9, posRef.current.z);
+    controlsRef.current.target.lerp(tmp.current, 0.1);
+    controlsRef.current.update();
+  });
+  return null;
+}
+
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef }) {
   const g = useRef();
   const legL = useRef(), legR = useRef(), armL = useRef(), armR = useRef();
   const phase = useRef(0);
@@ -188,6 +201,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid }) {
       [legL, legR, armL, armR].forEach((r) => { if (r.current) r.current.rotation.x *= 0.82; });
     }
     node.position.set(pos.current.x, pos.current.y, pos.current.z);
+    if (posRef) posRef.current.set(pos.current.x, pos.current.y, pos.current.z);
   });
 
   const huid = "#f1c27d", shirt = "#4a90d9", broek = "#3a4a6b";

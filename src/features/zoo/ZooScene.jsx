@@ -2,10 +2,11 @@
 // grasgrond, orbit-besturing + het bestuurbare poppetje. Álles in het park
 // (draaimolen, paden, hekken, gebouwen, dier-verblijven) is een plaatsbaar/
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
-import { Suspense, useState, useMemo, useCallback } from "react";
+import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight } from "./ParkProps";
+import { Vector3 } from "three";
+import { ParkBase, Enclosure, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -91,8 +92,10 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onToggleWall, onTip, canTip, onPickPart, colorEditIdx = -1, followCam = false, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
+  const playerPos = useRef(new Vector3());
+  const orbitRef = useRef();
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
@@ -142,7 +145,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <Suspense fallback={<Laden />}>
         <GrasGrond placing={placing} cells={placingCells} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} />
         <ParkBase />
-        <Player inputRef={inputRef} isSolid={isSolid} />
+        <Player inputRef={inputRef} isSolid={isSolid} posRef={playerPos} />
+        <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam} />
         <Visitors count={bezoekers} onTip={onTip} canTip={canTip} />
 
         {placing && (
@@ -181,6 +185,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       </Suspense>
 
       <OrbitControls
+        ref={orbitRef}
         makeDefault
         enableDamping
         dampingFactor={0.08}
