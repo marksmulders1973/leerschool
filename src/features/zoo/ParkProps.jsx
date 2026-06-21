@@ -103,7 +103,8 @@ export function Player({ inputRef, start = [0, 0, 13] }) {
     if (mag > 0.12) {
       state.camera.getWorldDirection(fwd.current);
       fwd.current.y = 0; fwd.current.normalize();
-      right.current.set(fwd.current.z, 0, -fwd.current.x);
+      // Rechts t.o.v. de camera = normalize(cross(forward, up)) = (-fz, 0, fx).
+      right.current.set(-fwd.current.z, 0, fwd.current.x);
       dir.current.set(0, 0, 0);
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
