@@ -42,8 +42,15 @@ export const ZOO_ASSETS = {
   cart: { id: "cart", kind: "building", name: "Marktkar", emoji: "🛒", url: "/models/zoo/build/cart-high.glb", targetHeight: 1.9, price: 20 },
   patatkraam: { id: "patatkraam", kind: "building", name: "Patatkraam", emoji: "🍟", procedural: "patatkraam", price: 35 },
   fountain: { id: "fountain", kind: "building", name: "Fontein", emoji: "⛲", url: "/models/zoo/build/fountain.glb", targetHeight: 1.4, price: 35 },
-  houseA: { id: "houseA", kind: "building", name: "Huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, price: 60 },
+  // Echte Kenney-huizen met hun natuurlijke (realistische) kleuren — elk een
+  // ander dak/muur-schema. Géén monochrome tint.
+  houseA: { id: "houseA", kind: "building", name: "Huis 1", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, price: 60 },
+  houseB: { id: "houseB", kind: "building", name: "Huis 2", emoji: "🏠", url: "/models/zoo/build/house-b.glb", targetHeight: 3.4, price: 60 },
+  houseC: { id: "houseC", kind: "building", name: "Huis 3", emoji: "🏠", url: "/models/zoo/build/house-c.glb", targetHeight: 3.4, price: 60 },
+  houseD: { id: "houseD", kind: "building", name: "Huis 4", emoji: "🏠", url: "/models/zoo/build/house-d.glb", targetHeight: 3.5, price: 65 },
   houseE: { id: "houseE", kind: "building", name: "Villa", emoji: "🏡", url: "/models/zoo/build/house-e.glb", targetHeight: 3.6, price: 75 },
+  houseF: { id: "houseF", kind: "building", name: "Huis 5", emoji: "🏠", url: "/models/zoo/build/house-f.glb", targetHeight: 3.5, price: 65 },
+  houseG: { id: "houseG", kind: "building", name: "Huis 6", emoji: "🏠", url: "/models/zoo/build/house-g.glb", targetHeight: 3.5, price: 65 },
   houseH: { id: "houseH", kind: "building", name: "Stadshuis", emoji: "🏘️", url: "/models/zoo/build/house-h.glb", targetHeight: 3.8, price: 75 },
   // Vrolijk gekleurde huisjes (zelfde modellen, lichte kleur-tint over het wit).
   huisRood: { id: "huisRood", kind: "building", name: "Rood huisje", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, tint: "#f3a89c", price: 60 },
@@ -80,7 +87,7 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
-export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "huisRood", "huisBlauw", "huisGroen", "huisGeel", "villaRoze", "stadshuisPaars", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "fence", "fenceCorner", "fenceGate", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
