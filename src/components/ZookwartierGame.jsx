@@ -93,6 +93,48 @@ function LookControl({ inputRef }) {
   );
 }
 
+// Echte reken-vraag bij een kraam, met de eigen cijfers (inkoop/verkoop) zodat het
+// kind winst/prijs leert rekenen terwijl het speelt. Meerkeuze (3 opties). Geen AI
+// nodig — gewone sommen die we zelf maken.
+function maakRekenVraag(kraam) {
+  const inkoop = kraam?.inkoop ?? 2;
+  const verkoop = kraam?.verkoop ?? 4;
+  const label = (kraam?.label || "product").toLowerCase();
+  const winst = verkoop - inkoop;
+  const kanWinst = winst > 0;
+  const rnd = (n) => Math.floor(Math.random() * n);
+  // Bij winst ≤ 0 alleen vragen die niet op winst leunen (prijs zoeken / omzet).
+  const types = kanWinst ? [0, 1, 2, 3] : [2, 3];
+  const type = types[rnd(types.length)];
+  let vraag, antwoord;
+  if (type === 0) {
+    vraag = `Je koopt een ${label} in voor ${inkoop} 🪙 en verkoopt 'm voor ${verkoop} 🪙. Hoeveel winst maak je per stuk?`;
+    antwoord = verkoop - inkoop;
+  } else if (type === 1) {
+    const n = 2 + rnd(4);
+    vraag = `Je verkoopt ${n} keer een ${label} met ${winst} 🪙 winst per stuk. Hoeveel winst in totaal?`;
+    antwoord = n * winst;
+  } else if (type === 2) {
+    const doel = 2 + rnd(4);
+    vraag = `Een ${label} kost jou ${inkoop} 🪙 inkoop. Je wilt er ${doel} 🪙 winst op maken. Voor hoeveel moet je 'm verkopen?`;
+    antwoord = inkoop + doel;
+  } else {
+    const n = 2 + rnd(4);
+    vraag = `Je verkoopt ${n} keer een ${label} voor ${verkoop} 🪙 per stuk. Hoeveel muntjes krijg je binnen?`;
+    antwoord = n * verkoop;
+  }
+  // Twee plausibele afleiders rond het juiste antwoord.
+  const set = new Set([antwoord]);
+  let pogingen = 0;
+  while (set.size < 3 && pogingen++ < 30) {
+    const delta = rnd(5) - 2;            // -2..2
+    const cand = antwoord + (delta === 0 ? 3 : delta);
+    if (cand > 0 && cand !== antwoord) set.add(cand);
+  }
+  const opties = [...set].sort(() => Math.random() - 0.5);
+  return { vraag, antwoord, opties, emoji: kraam?.emoji || "🧮" };
+}
+
 // Winkel: alles plaatsbaar, opgebouwd uit de AssetRegistry, per categorie.
 const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.emoji, label: a.name, price: a.price, kind: a.kind }; };
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
@@ -141,6 +183,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
   const [zwakVak, setZwakVak] = useState("");            // vak dat het lastigst gaat → bezoeker kan ernaar vragen
   const [dialoog, setDialoog] = useState(null);          // open praatje met een bezoeker { step, reply? }
+  const [rekenVraag, setRekenVraag] = useState(null);    // open reken-vraag bij een kraam
+  const [rekenUitslag, setRekenUitslag] = useState(null);// null | "goed" | "fout"
+  const rekenBonusRef = useRef(0);                        // session-cap op de muntjesbonus
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -519,6 +564,29 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     else onHome && onHome();
   };
 
+  // Reken-vraag bij de geselecteerde kraam.
+  const REKEN_BONUS = 2;            // muntjes per goed antwoord
+  const REKEN_BONUS_CAP = 30;       // max bonus-antwoorden per sessie (geen farmen)
+  const openRekenVraag = () => {
+    if (!selKraam) return;
+    setRekenVraag(maakRekenVraag(selKraam));
+    setRekenUitslag(null);
+    try { track("park_rekenvraag"); } catch { /* nooit laten breken */ }
+  };
+  const beantwoordReken = (optie) => {
+    if (!rekenVraag || rekenUitslag === "goed") return;
+    if (optie === rekenVraag.antwoord) {
+      setRekenUitslag("goed");
+      try { track("park_rekenvraag_goed"); } catch { /* niet laten breken */ }
+      if (rekenBonusRef.current < REKEN_BONUS_CAP) {
+        rekenBonusRef.current += 1;
+        setMeta((m) => (m ? { ...m, coins: m.coins + REKEN_BONUS } : m));
+      }
+    } else {
+      setRekenUitslag("fout");
+    }
+  };
+
   // ⚙️-menu: helpers. Bij het kiezen van een functie sluit het menu vanzelf.
   const sluitMenu = () => setMenuOpen(false);
   const doeEnSluit = (fn) => { fn(); sluitMenu(); };
@@ -763,6 +831,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   : "Mooie prijs! Veel bezoekers kopen dit."}
             </span>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+              <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧮 Reken-vraag</button>
               <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
               <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
               <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
@@ -837,6 +906,46 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 </>
               )}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Reken-vraag bij de kraam → echte winst-/prijs-som + muntjesbonus. */}
+      {rekenVraag && (
+        <div onClick={() => setRekenVraag(null)} style={{ position: "absolute", inset: 0, zIndex: 23, background: "rgba(10,20,10,0.5)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(440px, 96vw)", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 18px 16px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+              <div style={{ font: "800 16px system-ui", color: "#234" }}>🧮 Reken-vraag</div>
+              <button onClick={() => setRekenVraag(null)} style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "700 15px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+            <p style={{ margin: "0 0 14px", font: "700 15.5px/1.5 system-ui", color: "#234" }}>{rekenVraag.vraag}</p>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {rekenVraag.opties.map((opt) => {
+                const goedGekozen = rekenUitslag === "goed" && opt === rekenVraag.antwoord;
+                return (
+                  <button
+                    key={opt}
+                    onClick={() => beantwoordReken(opt)}
+                    disabled={rekenUitslag === "goed"}
+                    style={{ flex: "1 1 28%", border: "none", borderRadius: 14, padding: "14px 8px", font: "900 18px system-ui", color: goedGekozen ? "#fff" : "#234", background: goedGekozen ? "#2e9e4f" : "rgba(0,0,0,0.05)", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: rekenUitslag === "goed" ? "default" : "pointer" }}
+                  >
+                    {opt} 🪙
+                  </button>
+                );
+              })}
+            </div>
+            {rekenUitslag === "fout" && (
+              <p style={{ margin: "12px 0 0", font: "800 13.5px system-ui", color: "#c0392b", textAlign: "center" }}>Bijna! Probeer nog een keer 💪</p>
+            )}
+            {rekenUitslag === "goed" && (
+              <div style={{ marginTop: 12 }}>
+                <p style={{ margin: "0 0 10px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusRef.current <= REKEN_BONUS_CAP ? `+${REKEN_BONUS} 🪙` : ""} 🎉</p>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+                  <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nieuwe vraag</button>
+                  <button onClick={() => { setRekenVraag(null); gaOefenen(); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>▶ Meer rekenen oefenen</button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
