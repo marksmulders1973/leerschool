@@ -29,6 +29,14 @@ if (typeof window !== "undefined") {
       recoverFromChunkError().catch(() => window.location.reload());
     }
   });
+  // Vite's eigen signaal voor een mislukte lazy-import (bv. de park-chunk na een
+  // nieuwe deploy). Vuurt direct → meteen herstellen, vóór een witte pagina.
+  window.addEventListener("vite:preloadError", (event) => {
+    // eslint-disable-next-line no-console
+    console.warn("[chunk-load] auto-recovery (vite:preloadError)");
+    event.preventDefault();
+    recoverFromChunkError().catch(() => window.location.reload());
+  });
 }
 
 // ?bioplaat=cel — directe showcase van een interactieve biologie-plaat (idee van
