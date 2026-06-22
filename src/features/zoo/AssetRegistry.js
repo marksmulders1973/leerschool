@@ -158,6 +158,21 @@ export function getAsset(id) {
   return ZOO_ASSETS[id] || null;
 }
 
+// Kiesbare speler-karakters (Quaternius "Animated Men/Women", CC0, gekleurde
+// materialen + loop-animatie). Niet in de winkel — kies je eigen poppetje.
+export const CHARACTERS = [
+  { id: "girl1", name: "Meisje casual", emoji: "👧", url: "/models/zoo/people/girl1.glb" },
+  { id: "girl2", name: "Meisje jurk", emoji: "👧", url: "/models/zoo/people/girl2.glb" },
+  { id: "girl3", name: "Meisje tanktop", emoji: "👧", url: "/models/zoo/people/girl3.glb" },
+  { id: "girl4", name: "Meisje stoer", emoji: "👧", url: "/models/zoo/people/girl4.glb" },
+  { id: "boy1", name: "Jongen casual", emoji: "👦", url: "/models/zoo/people/boy1.glb" },
+  { id: "boy2", name: "Jongen shirt", emoji: "👦", url: "/models/zoo/people/boy2.glb" },
+  { id: "boy3", name: "Jongen trui", emoji: "👦", url: "/models/zoo/people/boy3.glb" },
+  { id: "boy4", name: "Jongen pak", emoji: "👦", url: "/models/zoo/people/boy4.glb" },
+];
+export const CHARACTER_BY_ID = Object.fromEntries(CHARACTERS.map((c) => [c.id, c]));
+export const DEFAULT_AVATAR = "girl1";
+
 export function allModelUrls() {
   return [...new Set(Object.values(ZOO_ASSETS).map((a) => a.url))];
 }

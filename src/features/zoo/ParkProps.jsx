@@ -7,7 +7,8 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, Color, CanvasTexture } from "three";
 import ZooModel from "./ZooModel";
-import { KRAAM_SOORTEN, KRAAM_KEYS } from "./AssetRegistry";
+import CharacterModel from "./CharacterModel";
+import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
 
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
@@ -279,14 +280,14 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl }) {
   const g = useRef();
-  const legL = useRef(), legR = useRef(), armL = useRef(), armR = useRef();
-  const phase = useRef(0);
+  const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
   const solidRef = useRef(isSolid);
   solidRef.current = isSolid;
+  const url = avatarUrl || CHARACTERS[0].url;
 
   useFrame((state, dt) => {
     const inp = inputRef?.current || {};
@@ -300,51 +301,35 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     if (!node) return;
 
     if (mag > 0.12) {
+      moving.current = true;
       state.camera.getWorldDirection(fwd.current);
       fwd.current.y = 0; fwd.current.normalize();
-      // Rechts t.o.v. de camera = normalize(cross(forward, up)) = (-fz, 0, fx).
       right.current.set(-fwd.current.z, 0, fwd.current.x);
       dir.current.set(0, 0, 0);
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
-      // Beweging met botsing: probeer eerst diagonaal, anders langs één as glijden.
       const step = 3.4 * dt * Math.min(1, mag);
       const nx = pos.current.x + dir.current.x * step;
       const nz = pos.current.z + dir.current.z * step;
       const solid = solidRef.current;
-      const vast = solid ? solid(pos.current.x, pos.current.z) : false; // al binnen? dan eruit kunnen
+      const vast = solid ? solid(pos.current.x, pos.current.z) : false;
       if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
       else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
       const d = Math.hypot(pos.current.x, pos.current.z);
-      if (d > 27) { pos.current.x *= 27 / d; pos.current.z *= 27 / d; }
+      if (d > 38) { pos.current.x *= 38 / d; pos.current.z *= 38 / d; }
       node.rotation.y = Math.atan2(dir.current.x, dir.current.z);
-      phase.current += dt * 11;
-      const sw = Math.sin(phase.current) * 0.5;
-      if (legL.current) legL.current.rotation.x = sw;
-      if (legR.current) legR.current.rotation.x = -sw;
-      if (armL.current) armL.current.rotation.x = -sw;
-      if (armR.current) armR.current.rotation.x = sw;
     } else {
-      [legL, legR, armL, armR].forEach((r) => { if (r.current) r.current.rotation.x *= 0.82; });
+      moving.current = false;
     }
     const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
     node.position.set(pos.current.x, ty, pos.current.z);
     if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
   });
 
-  const huid = "#f1c27d", shirt = "#4a90d9", broek = "#3a4a6b";
   return (
     <group ref={g} position={start}>
-      {/* benen (draaipunt bij de heup) */}
-      <group ref={legL} position={[-0.12, 0.6, 0]}><mesh castShadow position={[0, -0.3, 0]}><boxGeometry args={[0.18, 0.6, 0.18]} /><meshStandardMaterial color={broek} flatShading roughness={1} /></mesh></group>
-      <group ref={legR} position={[0.12, 0.6, 0]}><mesh castShadow position={[0, -0.3, 0]}><boxGeometry args={[0.18, 0.6, 0.18]} /><meshStandardMaterial color={broek} flatShading roughness={1} /></mesh></group>
-      <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.5, 0.6, 0.3]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
-      {/* armen (draaipunt bij de schouder) */}
-      <group ref={armL} position={[-0.34, 1.2, 0]}><mesh castShadow position={[0, -0.27, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh></group>
-      <group ref={armR} position={[0.34, 1.2, 0]}><mesh castShadow position={[0, -0.27, 0]}><boxGeometry args={[0.14, 0.55, 0.16]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh></group>
-      <mesh castShadow position={[0, 1.42, 0]}><sphereGeometry args={[0.26, 16, 16]} /><meshStandardMaterial color={huid} flatShading roughness={1} /></mesh>
-      <mesh position={[0, 1.54, 0]}><sphereGeometry args={[0.275, 16, 16, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#6b4a2b" flatShading roughness={1} /></mesh>
+      <CharacterModel url={url} movingRef={moving} />
     </group>
   );
 }
@@ -370,7 +355,9 @@ const DENK_STRAAL = 2.2;
 
 function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
   const g = useRef();
-  const legL = useRef(), legR = useRef(), coin = useRef();
+  const coin = useRef();
+  const moving = useRef(false);
+  const charUrl = CHARACTERS[seed % CHARACTERS.length].url;
   const [bubble, setBubble] = useState(null); // { e, t? }
   const st = useRef({
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
@@ -443,16 +430,13 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
           s.acting = false; s.need = null; s.needT = 13 + Math.random() * 13;
         }
         s.resting = true; s.rest = 1 + Math.random() * 2.5;
-        if (legL.current) legL.current.rotation.x = 0; if (legR.current) legR.current.rotation.x = 0;
       } else {
         const speed = s.acting ? 2.2 : 1.7;
         const step = Math.min(d, dt * speed); s.x += (dx / d) * step; s.z += (dz / d) * step;
         node.rotation.y = Math.atan2(dx, dz);
-        s.phase += dt * 10; const sw = Math.sin(s.phase) * 0.5;
-        if (legL.current) legL.current.rotation.x = sw;
-        if (legR.current) legR.current.rotation.x = -sw;
       }
     }
+    moving.current = !s.resting;
     node.position.set(s.x, heightRef?.current ? heightRef.current(s.x, s.z) : 0, s.z);
 
     // Muntje-pop bij een aankoop (zweeft omhoog en vervaagt).
@@ -469,22 +453,18 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
     }
   });
   return (
-    <group ref={g} scale={0.78}>
+    <group ref={g}>
       {bubble && (
-        <Html position={[0, 2.4, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+        <Html position={[0, 2.0, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
           <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
             <span style={{ fontSize: 20 }}>{bubble.e}</span>
             {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>}
           </div>
         </Html>
       )}
-      <group ref={legL} position={[-0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
-      <group ref={legR} position={[0.11, 0.55, 0]}><mesh castShadow position={[0, -0.28, 0]}><boxGeometry args={[0.16, 0.55, 0.16]} /><meshStandardMaterial color="#3a4a6b" flatShading roughness={1} /></mesh></group>
-      <mesh castShadow position={[0, 0.85, 0]}><boxGeometry args={[0.46, 0.55, 0.28]} /><meshStandardMaterial color={shirt} flatShading roughness={1} /></mesh>
-      <mesh castShadow position={[0, 1.32, 0]}><sphereGeometry args={[0.24, 14, 14]} /><meshStandardMaterial color="#f1c27d" flatShading roughness={1} /></mesh>
-      <mesh position={[0, 1.43, 0]}><sphereGeometry args={[0.255, 14, 14, 0, Math.PI * 2, 0, Math.PI / 2]} /><meshStandardMaterial color="#4a3525" flatShading roughness={1} /></mesh>
+      <CharacterModel url={charUrl} movingRef={moving} targetHeight={1.55} />
       {/* Muntje (verborgen tot een bezoeker iets koopt). */}
-      <mesh ref={coin} position={[0, 1.9, 0]} rotation={[Math.PI / 2, 0, 0]} visible={false}>
+      <mesh ref={coin} position={[0, 1.75, 0]} rotation={[Math.PI / 2, 0, 0]} visible={false}>
         <cylinderGeometry args={[0.18, 0.18, 0.045, 18]} />
         <meshStandardMaterial color="#ffd23a" emissive="#8a6a00" emissiveIntensity={0.25} transparent metalness={0.3} roughness={0.5} />
       </mesh>

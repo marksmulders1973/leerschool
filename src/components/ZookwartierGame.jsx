@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
@@ -192,6 +192,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
+
+  // Gekozen speler-poppetje (avatar). Opgeslagen in meta.owned.avatar.
+  const avatarId = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatar) || DEFAULT_AVATAR;
+  const avatarUrl = (CHARACTER_BY_ID[avatarId] || CHARACTERS[0]).url;
+  const kiesAvatar = (id) => {
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatar: id } }; });
+    flits("Poppetje gekozen ✓");
+  };
 
   // Verzorging is PER DIER: elk dier heeft een eigen `fed`-datum. Recent voeren →
   // eerder jonkies; een gekocht dier dat te lang geen hooi kreeg loopt weg.
@@ -382,6 +390,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={() => { setPanel("uitleg"); setResetArmed(false); }} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <button onClick={voerAlles} title="Alle dieren voeren (of tik een dier aan om los te voeren)" style={{ pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🌾</button>
+          <button onClick={() => setPanel("karakter")} title="Kies je poppetje" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>👤</button>
           <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setPanel("reset")} title="Park resetten naar het begin" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>♻️</button>
@@ -453,6 +462,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           ground={ground}
           groundMode={groundMode}
           onGround={onGroundTik}
+          avatarUrl={avatarUrl}
         />
       </Suspense>
 
@@ -648,6 +658,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <p style={{ color: "#777", fontSize: 12, marginBottom: 0, marginTop: 12 }}>De link toont geen naam en niemand kan je park veranderen. Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.</p>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Karakter-kiezer: kies je eigen poppetje (jongens/meisjes). */}
+      {panel === "karakter" && (
+        <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>👤 Kies je poppetje</h2>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+            <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Dit is het poppetje waarmee jij door je park loopt.</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))", gap: 8 }}>
+              {CHARACTERS.map((c) => (
+                <button key={c.id} onClick={() => kiesAvatar(c.id)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 12px", borderRadius: 12, border: avatarId === c.id ? "3px solid #2e7d32" : "2px solid #e7e3d6", background: avatarId === c.id ? "#eaf6e8" : "#f5f3ea", cursor: "pointer", font: "800 13px system-ui", color: "#234" }}>
+                  <span style={{ fontSize: 24 }}>{c.emoji}</span>{c.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
