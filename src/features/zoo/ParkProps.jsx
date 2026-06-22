@@ -491,6 +491,27 @@ export function FenceCorner({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// Rotsen/keien (procedureel) — low-poly grijze stenen die bij de rotsige bergen
+// passen. `variant` "single" = één grotere kei, "group" = een clustertje keien.
+export function Rock({ position = [0, 0, 0], rotation = 0, variant = "single" }) {
+  const grijs = "#8f8c87", grijs2 = "#7b7874", grijs3 = "#9b9893";
+  if (variant === "group") {
+    return (
+      <group position={position} rotation={[0, rotation, 0]}>
+        <mesh castShadow receiveShadow position={[-0.42, 0.28, 0.12]} rotation={[0.3, 0.5, 0.2]}><icosahedronGeometry args={[0.5, 0]} /><meshStandardMaterial color={grijs} flatShading roughness={1} metalness={0} /></mesh>
+        <mesh castShadow receiveShadow position={[0.46, 0.2, -0.22]} rotation={[0.5, 1.1, 0.1]}><icosahedronGeometry args={[0.38, 0]} /><meshStandardMaterial color={grijs2} flatShading roughness={1} metalness={0} /></mesh>
+        <mesh castShadow receiveShadow position={[0.12, 0.16, 0.5]} rotation={[0.2, 0.3, 0.45]}><icosahedronGeometry args={[0.3, 0]} /><meshStandardMaterial color={grijs3} flatShading roughness={1} metalness={0} /></mesh>
+      </group>
+    );
+  }
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow receiveShadow position={[0, 0.52, 0]} rotation={[0.25, 0.6, 0.15]} scale={[1.15, 0.85, 1]}><icosahedronGeometry args={[0.9, 0]} /><meshStandardMaterial color={grijs} flatShading roughness={1} metalness={0} /></mesh>
+      <mesh castShadow receiveShadow position={[0.52, 0.22, 0.34]} rotation={[0.4, 0.2, 0.5]}><icosahedronGeometry args={[0.4, 0]} /><meshStandardMaterial color={grijs2} flatShading roughness={1} metalness={0} /></mesh>
+    </group>
+  );
+}
+
 // Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
 // boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
 function maakNaambord(tekst) {

@@ -105,6 +105,9 @@ export const ZOO_ASSETS = {
   flowerYellow: { id: "flowerYellow", kind: "decor", name: "Gele bloem", emoji: "🌼", url: "/models/zoo/nature/flower_yellowA.glb", targetHeight: 0.45, cells: 1, price: 2 },
   flowerPurple: { id: "flowerPurple", kind: "decor", name: "Paarse bloem", emoji: "🌸", url: "/models/zoo/nature/flower_purpleA.glb", targetHeight: 0.45, cells: 1, price: 2 },
   mushroom: { id: "mushroom", kind: "decor", name: "Paddenstoel", emoji: "🍄", url: "/models/zoo/nature/mushroom_redGroup.glb", targetHeight: 0.5, cells: 1, price: 2 },
+  // Rotsen/keien (procedureel, low-poly grijs) — passen bij de rotsige bergen.
+  kei: { id: "kei", kind: "decor", name: "Rots", emoji: "🪨", procedural: "rock", variant: "single", cells: 1, price: 4 },
+  keien: { id: "keien", kind: "decor", name: "Keitjes", emoji: "🪨", procedural: "rock", variant: "group", cells: 1, price: 3 },
 };
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
@@ -112,7 +115,7 @@ export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", 
 export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
-export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
+export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
 // Footprint (aantal vakjes) van een item; klein decor = 1, dieren lopen vrij
 // rond → ook 1 vakje (je bouwt zelf een hek eromheen), rest = 3.
