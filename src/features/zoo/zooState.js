@@ -7,12 +7,19 @@ import { START_COINS } from "./zooEconomy";
 // Beginindeling: twee ruime starter-verblijven (hert + alpaca) zodat een nieuw
 // park nooit leeg is. price 0 → bij weghalen geen "gratis" muntjes. Het vaste
 // decor (draaimolen, paden, poppetje, bomen) staat daarnaast altijd.
+// Pad van de ingang-poort (voorrand, ~cel z=18) naar het midden (draaimolen op
+// [0,0], die de cellen z=-1..1 vult → pad stopt bij z=2). Eén tegel breed langs
+// de middenlijn (x=0). Bedraagt het "hoofdpad" waar het poppetje binnenkomt.
+const ENTRANCE_PATH = [];
+for (let gz = 2; gz <= 18; gz++) ENTRANCE_PATH.push({ assetId: "path", cell: [0, gz], rotation: 0, price: 0 });
+
 export const STARTER_LAYOUT = [
   { assetId: "carousel", cell: [0, 0], rotation: 0, price: 0 },
   { assetId: "deer", cell: [-4, -1], rotation: 0, price: 0 },
   { assetId: "alpaca", cell: [4, -1], rotation: 0, price: 0 },
   { assetId: "tree", cell: [-6, 4], rotation: 0, price: 0 },
   { assetId: "treeOak", cell: [6, 4], rotation: 0, price: 0 },
+  ...ENTRANCE_PATH,
 ];
 
 export function defaultState() {

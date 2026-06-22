@@ -203,7 +203,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
-        <Player inputRef={inputRef} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} />
+        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam} />
         <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} />
 
