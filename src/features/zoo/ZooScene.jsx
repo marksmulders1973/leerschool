@@ -32,10 +32,10 @@ function isVast(assetId) {
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij" }) {
   const a = getAsset(assetId);
   if (!a) return null;
-  if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} />;
+  if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} />;
@@ -254,7 +254,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, dierHongerig = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -359,6 +359,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 colors={it.colors} colorEditable={colorEditIdx === idx}
                 onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
                 onParts={onHouseParts}
+                mood={dierHongerig ? "honger" : "blij"}
               />
             </group>
           );

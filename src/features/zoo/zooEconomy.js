@@ -18,8 +18,10 @@ export const INKOMST_PER_BABY = 1;      // extra per jonkie per dag
 export const MAX_DAGEN_INKOMST = 3;     // offline-opbrengst gecapt op 3 dagen
 // Jonkies: per nieuwe dag kans dat een verblijf er een baby bij krijgt.
 export const BABY_KANS = 0.35;
+export const BABY_KANS_GEVOERD = 0.6;   // goed verzorgd (recent gevoerd) → eerder jonkies
 export const MAX_BABIES = 3;            // per verblijf
 export const BABY_BONUS = 5;            // eenmalige muntjes bij een geboorte
+export const VERWAARLOOS_DAGEN = 3;     // zoveel dagen niet voeren → een dier loopt weg
 
 function todayStr(d = new Date()) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -53,19 +55,31 @@ export function inkomstenPerDag(items, kindVan = () => "animal") {
 }
 
 // Laat (op een nieuwe dag) dier-verblijven kans maken op een jonkie. Gebouwen
-// (kraampjes/molens) krijgen geen jonkies. Geeft nieuwe indeling + geboortes.
-export function groeiBabies(items, isDier = () => true) {
+// (kraampjes/molens) krijgen geen jonkies. `kans` hoger = sneller jonkies (bij
+// goede verzorging). Geeft nieuwe indeling + geboortes.
+export function groeiBabies(items, isDier = () => true, kans = BABY_KANS) {
   let births = 0;
   const layout = (items || []).map((it) => {
     if (!isDier(it.assetId)) return it;
     const b = it.babies || 0;
-    if (b < MAX_BABIES && Math.random() < BABY_KANS) {
+    if (b < MAX_BABIES && Math.random() < kans) {
       births++;
       return { ...it, babies: b + 1 };
     }
     return it;
   });
   return { layout, births };
+}
+
+// Verzorging: als de dieren te lang (>= VERWAARLOOS_DAGEN) geen hooi kregen,
+// loopt er één weg (het laatst geplaatste dier eerst → starter-dieren blijven
+// het langst). Geeft de nieuwe indeling + hoeveel er weglopen (0 of 1).
+export function verwaarloosCheck(items, isDier = () => true, daysSinceFed = 0) {
+  if (daysSinceFed < VERWAARLOOS_DAGEN) return { layout: items, weggelopen: 0 };
+  let wegIdx = -1;
+  (items || []).forEach((it, i) => { if (isDier(it.assetId)) wegIdx = i; });
+  if (wegIdx < 0) return { layout: items, weggelopen: 0 };
+  return { layout: items.filter((_, i) => i !== wegIdx), weggelopen: 1 };
 }
 
 function isYesterday(dateStr, today = todayStr()) {

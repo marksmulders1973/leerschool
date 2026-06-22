@@ -356,6 +356,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
 // meer per stuk, maar bij een te hoge prijs haken bezoekers af (😖). Geen
 // botsing; puur sfeer + verdienen.
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
+// Blije gedachten van bezoekers over het park.
+const BEZOEKER_BLIJ = [{ e: "😍", t: "Wat een mooi park!" }, { e: "😊", t: "Leuk hier!" }, { e: "👍", t: "Top dierentuin!" }, { e: "🎉", t: "Wat gezellig!" }];
 
 function koopKans(kind, prijs) {
   const fair = KRAAM_SOORTEN[kind]?.fair || 4;
@@ -414,8 +416,9 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
             s.needT = 11 + Math.random() * 12;
           }
         } else {
-          // Niet dichtbij jouw poppetje → nog even niet denken; snel opnieuw kijken.
-          s.needT = 2 + Math.random() * 3;
+          // Niet dichtbij jouw poppetje → soms een blije gedachte over het park.
+          if (Math.random() < 0.3) { const p = BEZOEKER_BLIJ[Math.floor(Math.random() * BEZOEKER_BLIJ.length)]; toon(p, 3); }
+          s.needT = 3 + Math.random() * 4;
         }
       }
     }
@@ -526,9 +529,33 @@ export function Decor() {
 // een straal; jonkies lopen mee. Wil je het insluiten? Bouw zelf een kooi met
 // losse hekpanelen eromheen (T/L/vierkant — wat je wilt).
 const DIER_STRAAL = 3.0;
-export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0 }) {
+// Gedachten van dieren — honger/dorst/meer plek (bij verwaarlozing) of blij.
+const DIER_HONGER = [{ e: "🌾", t: "Ik heb honger" }, { e: "💧", t: "Ik heb dorst" }, { e: "🏃", t: "Meer plek graag" }];
+const DIER_BLIJ = [{ e: "😊", t: "Ik ben blij!" }, { e: "❤️", t: "Mooi park!" }, { e: "🎶", t: "Heerlijk hier" }];
+
+export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, mood = "blij" }) {
+  const [bubble, setBubble] = useState(null);
+  const st = useRef({ next: 5 + Math.random() * 12, show: 0 });
+  useFrame((_, dt) => {
+    const s = st.current;
+    if (s.show > 0) { s.show -= dt; if (s.show <= 0) setBubble(null); return; }
+    s.next -= dt;
+    if (s.next <= 0) {
+      const pool = mood === "honger" ? DIER_HONGER : DIER_BLIJ;
+      setBubble(pool[Math.floor(Math.random() * pool.length)]);
+      s.show = 3; s.next = 12 + Math.random() * 16;
+    }
+  });
   return (
     <group position={position}>
+      {bubble && (
+        <Html position={[0, 1.9, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
+            <span style={{ fontSize: 18 }}>{bubble.e}</span>
+            <span style={{ fontSize: 11.5, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>
+          </div>
+        </Html>
+      )}
       <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL} />
       {Array.from({ length: babies }).map((_, i) => {
         const ang = (i / Math.max(1, babies)) * Math.PI * 2 + 0.6;

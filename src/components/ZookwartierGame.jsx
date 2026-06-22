@@ -7,7 +7,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
-import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
+import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, BABY_KANS, BABY_KANS_GEVOERD, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -150,16 +150,23 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
       let finalMeta = kw.state;
       let finalLayout = layout;
-      let parkGain = 0, births = 0;
+      let parkGain = 0, births = 0, weggelopen = 0, goedVerzorgd = false;
 
       // Park-groei: op een nieuwe dag levert je park muntjes op (meer verblijven/
-      // jonkies = meer) en kunnen dieren een jonkie krijgen.
+      // jonkies = meer). Verzorging: recent gevoerd → eerder jonkies; te lang niet
+      // gevoerd (>= 3 dagen) → er loopt een dier weg.
       if (isNieuweDag) {
         const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
         parkGain = inkomstenPerDag(layout, kindVan) * dagen;
-        const g = groeiBabies(layout, isDier);
+        const lastFed = ownedObj && ownedObj.last_fed;
+        const daysSinceFed = lastFed ? dagenVerschil(lastFed) : 999;
+        goedVerzorgd = daysSinceFed <= 1;
+        const g = groeiBabies(layout, isDier, goedVerzorgd ? BABY_KANS_GEVOERD : BABY_KANS);
         finalLayout = g.layout;
         births = g.births;
+        const v = verwaarloosCheck(finalLayout, isDier, daysSinceFed);
+        finalLayout = v.layout;
+        weggelopen = v.weggelopen;
         finalMeta = { ...finalMeta, coins: finalMeta.coins + parkGain + births * BABY_BONUS };
       }
       const gained = login.gained + kw.gained + parkGain + births * BABY_BONUS;
@@ -169,8 +176,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setPlacedItems(finalLayout);
       setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
-      if (gained > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, births });
+      if (gained > 0 || weggelopen > 0) {
+        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, births, weggelopen, goedVerzorgd });
         clearTimeout(rewardTimer.current);
         rewardTimer.current = setTimeout(() => setReward(null), 6000);
       }
@@ -188,6 +195,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
+
+  // Verzorging: hooi geven (1×/dag). Recent voeren → eerder jonkies; te lang niet
+  // → een dier loopt weg (zie laad-effect). De dieren "denken" honger als het te
+  // lang geleden is.
+  const lastFed = (meta?.owned && !Array.isArray(meta.owned)) ? meta.owned.last_fed : null;
+  const isGevoerd = lastFed === vandaag();
+  const dierenHongerig = !lastFed || dagenVerschil(lastFed) >= 2;
+  const voeren = () => {
+    if (isGevoerd) { flits("Je hebt de dieren vandaag al gevoerd 🌾"); return; }
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, last_fed: vandaag() } }; });
+    flits("Lekker gevoerd! 🌾 De dieren zijn blij.");
+  };
 
   const startKopen = (p) => {
     if (coins < p.price) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
@@ -354,6 +373,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <button onClick={() => { setPanel("uitleg"); setResetArmed(false); }} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
+          <button onClick={voeren} title="Dieren voeren (hooi) — goed verzorgd = eerder jonkies" style={{ pointerEvents: "auto", border: dierenHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: isGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🌾</button>
           <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setPanel("reset")} title="Park resetten naar het begin" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>♻️</button>
@@ -374,15 +394,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Beloning-melding bij binnenkomst. */}
       {reward && (
         <div style={{ position: "absolute", top: 64, left: "50%", transform: "translateX(-50%)", zIndex: 11, background: "rgba(255,255,255,0.96)", color: "#234", borderRadius: 14, padding: "10px 16px", boxShadow: "0 6px 20px rgba(0,0,0,.25)", font: "700 14px system-ui", textAlign: "center", maxWidth: "90%" }}>
-          🎉 +{reward.total} muntjes!
+          {reward.total > 0 ? `🎉 +${reward.total} muntjes!` : (reward.weggelopen > 0 ? "🐾 Er is iets veranderd in je park" : "")}
           <div style={{ font: "600 12px system-ui", opacity: 0.78, marginTop: 2 }}>
             {[
               reward.login > 0 && `Inloggen +${reward.login}`,
               reward.kwartier > 0 && `Kwartier +${reward.kwartier}`,
               reward.park > 0 && `Je park +${reward.park}`,
+              reward.goedVerzorgd && `🌾 Goed verzorgd!`,
               reward.births > 0 && `🐣 ${reward.births} jonkie${reward.births > 1 ? "s" : ""} geboren! +${reward.births * BABY_BONUS}`,
             ].filter(Boolean).join("  ·  ")}
           </div>
+          {reward.weggelopen > 0 && (
+            <div style={{ font: "700 12px system-ui", color: "#c0392b", marginTop: 4 }}>🐾 Een dier liep weg — het kreeg te lang geen hooi. Geef ze elke dag 🌾!</div>
+          )}
         </div>
       )}
       {/* Korte info-melding. */}
@@ -421,6 +445,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           ground={ground}
           groundMode={groundMode}
           onGround={onGroundTik}
+          dierHongerig={dierenHongerig}
         />
       </Suspense>
 
