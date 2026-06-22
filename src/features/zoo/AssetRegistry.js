@@ -38,6 +38,22 @@ export const ZOO_ASSETS = {
   shibaInu: { id: "shibaInu", kind: "animal", name: "Shiba", emoji: "🐕", url: "/models/zoo/animals/ShibaInu.glb", targetHeight: 0.8, price: 12 },
   wolf: { id: "wolf", kind: "animal", name: "Wolf", emoji: "🐺", url: "/models/zoo/animals/Wolf.glb", targetHeight: 0.95, price: 16 },
 
+  // ---- Boerderijdieren (Quaternius "Farm Animal Pack", FBX→GLB). ----
+  pig: { id: "pig", kind: "animal", name: "Varken", emoji: "🐷", url: "/models/zoo/animals/Pig.glb", targetHeight: 0.9, price: 14 },
+  sheep: { id: "sheep", kind: "animal", name: "Schaap", emoji: "🐑", url: "/models/zoo/animals/Sheep.glb", targetHeight: 1.0, price: 14 },
+  zebra: { id: "zebra", kind: "animal", name: "Zebra", emoji: "🦓", url: "/models/zoo/animals/Zebra.glb", targetHeight: 1.6, price: 22 },
+  pug: { id: "pug", kind: "animal", name: "Hondje", emoji: "🐶", url: "/models/zoo/animals/Pug.glb", targetHeight: 0.6, price: 12 },
+
+  // ---- Vissen (Quaternius "Animated Fish Pack", FBX→GLB). Zet ze in een
+  // meertje (graaf een dal, doe er water in) → ze zwemmen onder water. ----
+  fishClown: { id: "fishClown", kind: "animal", name: "Visje", emoji: "🐠", url: "/models/zoo/fish/Fish1.glb", targetHeight: 0.45, price: 8 },
+  fishBlue: { id: "fishBlue", kind: "animal", name: "Blauw visje", emoji: "🐟", url: "/models/zoo/fish/Fish2.glb", targetHeight: 0.45, price: 8 },
+  fishYellow: { id: "fishYellow", kind: "animal", name: "Geel visje", emoji: "🐠", url: "/models/zoo/fish/Fish3.glb", targetHeight: 0.45, price: 8 },
+  dolphin: { id: "dolphin", kind: "animal", name: "Dolfijn", emoji: "🐬", url: "/models/zoo/fish/Dolphin.glb", targetHeight: 0.9, price: 25 },
+  shark: { id: "shark", kind: "animal", name: "Haai", emoji: "🦈", url: "/models/zoo/fish/Shark.glb", targetHeight: 1.0, price: 30 },
+  whale: { id: "whale", kind: "animal", name: "Walvis", emoji: "🐋", url: "/models/zoo/fish/Whale.glb", targetHeight: 1.6, price: 40 },
+  mantaray: { id: "mantaray", kind: "animal", name: "Manta", emoji: "🐡", url: "/models/zoo/fish/Mantaray.glb", targetHeight: 0.5, price: 22 },
+
   // ---- Dino's (Quaternius "Animated Dinosaurs", CC0). FBX→GLB gaf een
   // armature-schaal 300 → vaste schaal i.p.v. bbox-normalisatie. ----
   velociraptor: { id: "velociraptor", kind: "animal", name: "Raptor", emoji: "🦖", url: "/models/zoo/dinos/Velociraptor.glb", fixedScale: 0.22, price: 30 },
@@ -109,17 +125,18 @@ export const ZOO_ASSETS = {
   flowerYellow: { id: "flowerYellow", kind: "decor", name: "Gele bloem", emoji: "🌼", url: "/models/zoo/nature/flower_yellowA.glb", targetHeight: 0.45, cells: 1, price: 2 },
   flowerPurple: { id: "flowerPurple", kind: "decor", name: "Paarse bloem", emoji: "🌸", url: "/models/zoo/nature/flower_purpleA.glb", targetHeight: 0.45, cells: 1, price: 2 },
   mushroom: { id: "mushroom", kind: "decor", name: "Paddenstoel", emoji: "🍄", url: "/models/zoo/nature/mushroom_redGroup.glb", targetHeight: 0.5, cells: 1, price: 2 },
+  grasplukje: { id: "grasplukje", kind: "decor", name: "Graspol", emoji: "🌾", url: "/models/zoo/nature/grass.glb", targetHeight: 0.4, cells: 1, price: 2 },
   // Rotsen/keien (procedureel, low-poly grijs) — passen bij de rotsige bergen.
   kei: { id: "kei", kind: "decor", name: "Rots", emoji: "🪨", procedural: "rock", variant: "single", cells: 1, price: 4 },
   keien: { id: "keien", kind: "decor", name: "Keitjes", emoji: "🪨", procedural: "rock", variant: "group", cells: 1, price: 3 },
 };
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
-export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
+export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
-export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
+export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
 // Footprint (aantal vakjes) van een item; klein decor = 1, dieren lopen vrij
 // rond → ook 1 vakje (je bouwt zelf een hek eromheen), rest = 3.
