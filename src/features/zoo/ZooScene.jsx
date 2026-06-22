@@ -255,7 +255,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "" }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -271,12 +271,13 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     return {
       naam: spelerNaam,
       zwakVak,
+      goedeScore,
       baby: baby ? naamVan(baby) : null,
       honger: honger ? naamVan(honger) : null,
       dier: dieren.length ? naamVan(dieren[0]) : null,
       veel: dieren.length >= 5,
     };
-  }, [placedItems, spelerNaam, zwakVak]);
+  }, [placedItems, spelerNaam, zwakVak, goedeScore]);
   // Hoogte-functie die altijd het laatste terrein leest (geen re-subscribe in loops).
   const heightFnRef = useRef(() => 0);
   heightFnRef.current = (x, z) => heightAt(terrain, x, z);

@@ -13,6 +13,7 @@ import { serialize as serTerrain, deserialize as deserTerrain } from "../feature
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
+import { loadMasteryForPlayer } from "../features/mastery/mastery.js";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -134,6 +135,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [activePart, setActivePart] = useState(0);      // welk onderdeel je nu kleurt
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
+  const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -159,6 +161,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   // Meten hoeveel mensen het park spelen: één event per keer openen.
   useEffect(() => { try { track("park_open"); } catch { /* nooit laten breken */ } }, []);
+
+  // Echte Leerkwartier-score ophalen (alleen ingelogd + met naam) → een bezoeker
+  // maakt er een persoonlijk compliment over ("ik hoorde dat je 80% goed had bij
+  // biologie!"). Kies de hoogste score met genoeg vragen; faalt stil.
+  useEffect(() => {
+    if (!userId || !naam) return;
+    let cancel = false;
+    (async () => {
+      try {
+        const recs = await loadMasteryForPlayer(naam);
+        const goed = (recs || []).filter((r) => r.attempts >= 5 && r.correct / r.attempts >= 0.7);
+        if (!goed.length || cancel) return;
+        goed.sort((a, b) => b.correct / b.attempts - a.correct / a.attempts);
+        const r = goed[0];
+        const vak = r.path?.subject || r.path?.title;
+        if (vak) setGoedeScore({ vak, pct: Math.round((r.correct / r.attempts) * 100) });
+      } catch { /* geen compliment, geen probleem */ }
+    })();
+    return () => { cancel = true; };
+  }, [userId, naam]);
 
   // Toetsenbord-besturing (laptop): pijltjes / WASD.
   useEffect(() => {
@@ -497,6 +519,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           followCam={followCam}
           firstPerson={firstPerson}
           spelerNaam={naam}
+          goedeScore={goedeScore}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}

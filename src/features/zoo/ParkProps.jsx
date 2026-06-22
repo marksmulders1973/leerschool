@@ -416,6 +416,16 @@ function maakBegroeting(facts) {
   const low = (s) => (s || "").toLowerCase();
   const cap = (s) => { const l = low(s); return l ? l[0].toUpperCase() + l.slice(1) : ""; };
   const o = [];
+  // Echte score uit Leerkwartier (alleen ingelogd) → persoonlijk compliment. Krijgt
+  // extra gewicht zodat het vaak langskomt als er een mooie score is.
+  if (f.goedeScore && f.goedeScore.vak) {
+    const v = low(f.goedeScore.vak), p = f.goedeScore.pct;
+    o.push(
+      { e: "🎉", t: `${hoi}! Ik hoorde dat je ${p}% goed had bij ${v} — top!` },
+      { e: "🌟", t: `${hoi}! Knap hoor, ${p}% bij ${v}!` },
+      { e: "👏", t: `${naam ? naam + ", j" : "J"}e bent goed in ${v}!` },
+    );
+  }
   if (f.baby) o.push({ e: "🐣", t: `${hoi}! Een baby${low(f.baby)} — schattig!` }, { e: "🐣", t: `Een jong ${low(f.baby)} geboren!` });
   if (f.honger) o.push({ e: "🌾", t: `${cap(f.honger)} ziet er hongerig uit…` });
   if (f.dier) o.push({ e: "😍", t: `${cap(f.dier)} is mijn lievelingsdier!` });
