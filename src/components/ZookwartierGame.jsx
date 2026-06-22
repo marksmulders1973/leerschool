@@ -135,6 +135,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [activePart, setActivePart] = useState(0);      // welk onderdeel je nu kleurt
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
+  const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
+  const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
   const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
   const [zwakVak, setZwakVak] = useState("");            // vak dat het lastigst gaat → bezoeker kan ernaar vragen
@@ -292,6 +294,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const dieren = placedItems.filter(isDierItem);
   const alleGevoerd = dieren.length > 0 && dieren.every(dierGevoerdVandaag);
   const enigDierHongerig = dieren.some((it) => !it.fed || dagenVerschil(it.fed) >= 2);
+  const hongerAantal = dieren.filter((it) => !dierGevoerdVandaag(it)).length; // badge op de 🌾-knop
   // Voer één dier (op index in placedItems).
   const voerDier = (idx) => {
     setPlacedItems((items) => items.map((it, i) => (i === idx ? { ...it, fed: vandaag() } : it)));
@@ -480,6 +483,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     else onHome && onHome();
   };
 
+  // ⚙️-menu: helpers. Bij het kiezen van een functie sluit het menu vanzelf.
+  const sluitMenu = () => setMenuOpen(false);
+  const doeEnSluit = (fn) => { fn(); sluitMenu(); };
+  const menuRij = (actief) => ({ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, width: "100%", border: actief ? "2px solid #2e7d32" : "1px solid rgba(0,0,0,0.06)", borderRadius: 12, padding: "11px 12px", font: "800 14px system-ui", color: "#234", background: actief ? "#cdeccb" : "rgba(0,0,0,0.03)", cursor: "pointer", textAlign: "left" });
+  const menuKop = { font: "800 11px system-ui", color: "#8a939c", textTransform: "uppercase", letterSpacing: 0.5, margin: "6px 2px 2px" };
+  // Onboarding: een vers park (alleen het startpark, nog niets bijgekocht).
+  const versPark = loaded && placedItems.length <= STARTER_LAYOUT.length;
+
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
       {/* Header. */}
@@ -489,18 +500,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <span style={{ font: "800 11px system-ui", color: "#5b3d00", background: "#ffd54a", padding: "3px 9px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>🚧 In opbouw</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
-          <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
-          <button onClick={voerAlles} title="Alle dieren voeren (of tik een dier aan om los te voeren)" style={{ pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🌾</button>
-          <button onClick={() => setPanel("karakter")} title="Kies je poppetje" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>👤</button>
-          <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
-          <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
-          <button onClick={() => setPanel("reset")} title="Park resetten naar het begin" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>♻️</button>
-          <button onClick={() => { setFollowCam((v) => !v); setFirstPerson(false); }} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
-          <button onClick={() => { setFirstPerson((v) => !v); setFollowCam(false); setPlacing(null); setSelectedIdx(null); }} title="Door de ogen van je poppetje (eerstepersoons)" style={{ pointerEvents: "auto", border: firstPerson ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: firstPerson ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>👁️</button>
-          <button onClick={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
-          <button onClick={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Water — vul een dal met een meertje" style={{ pointerEvents: "auto", border: waterMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: waterMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💧</button>
-          <button onClick={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} title="Grond schilderen (zand, sneeuw, aarde…)" style={{ pointerEvents: "auto", border: groundMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: groundMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🏖️</button>
+          {/* Voeren = de enige dagelijkse zorgactie → altijd zichtbaar, met hint bij honger. */}
+          <button onClick={voerAlles} title="Dieren voeren" style={{ position: "relative", pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>
+            🌾
+            {hongerAantal > 0 && <span style={{ position: "absolute", top: -4, right: -4, minWidth: 18, height: 18, padding: "0 4px", borderRadius: 999, background: "#e23b3b", color: "#fff", font: "800 11px system-ui", display: "grid", placeItems: "center", boxShadow: "0 1px 3px rgba(0,0,0,.3)" }}>{hongerAantal}</span>}
+          </button>
+          {/* Alle overige functies gebundeld in één menu → rustige balk voor een kind. */}
+          <button onClick={() => setMenuOpen((v) => !v)} title="Meer" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⚙️</button>
           {onPlayObliterator && (
             <button onClick={onPlayObliterator} title="OBLITERATOR — extra spel" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "0 13px", height: 38, font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3df0,#b13df0)", boxShadow: "0 2px 8px rgba(0,0,0,.22)", cursor: "pointer", whiteSpace: "nowrap" }}>🎮 Extra spel</button>
           )}
@@ -510,6 +516,44 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
         </div>
       </div>
+
+      {/* ⚙️-menu: alle extra functies, gegroepeerd. Tik buiten = sluiten. */}
+      {menuOpen && (
+        <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ position: "absolute", top: 56, right: 12, width: "min(290px, 92vw)", maxHeight: "80vh", overflowY: "auto", background: "#fffef8", borderRadius: 16, boxShadow: "0 12px 36px rgba(0,0,0,.35)", padding: "12px 12px 14px", display: "flex", flexDirection: "column", gap: 6 }}>
+            <div style={menuKop}>📷 Camera</div>
+            <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); })} style={menuRij(followCam)}>🎥 Camera volgt je poppetje</button>
+            <button onClick={() => doeEnSluit(() => { setFirstPerson((v) => !v); setFollowCam(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
+
+            <div style={menuKop}>🛠️ Landschap bouwen</div>
+            <button onClick={() => doeEnSluit(() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(sculptMode)}>⛰️ Heuvels boetseren</button>
+            <button onClick={() => doeEnSluit(() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(waterMode)}>💧 Water / meertjes</button>
+            <button onClick={() => doeEnSluit(() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(groundMode)}>🏖️ Grond schilderen</button>
+
+            <div style={menuKop}>🏡 Mijn park</div>
+            <button onClick={() => doeEnSluit(() => setPanel("karakter"))} style={menuRij(false)}>👤 Mijn poppetje kiezen</button>
+            <button onClick={() => doeEnSluit(opslaan)} style={menuRij(false)}>💾 Park opslaan</button>
+            <button onClick={() => doeEnSluit(openDelen)} style={menuRij(false)}>📤 Park delen met een vriend</button>
+            <button onClick={() => doeEnSluit(() => setPanel("reset"))} style={menuRij(false)}>♻️ Opnieuw beginnen</button>
+
+            <div style={menuKop}>❓ Hulp</div>
+            <button onClick={() => doeEnSluit(() => setPanel("uitleg"))} style={menuRij(false)}>ℹ️ Hoe werkt het?</button>
+            <button onClick={() => doeEnSluit(() => setPanel("gids"))} style={menuRij(false)}>📖 Diergids</button>
+          </div>
+        </div>
+      )}
+
+      {/* Onboarding: vers park → wijs het kind naar de winkelbalk. */}
+      {versPark && !welkomWeg && !placing && !dialoog && !menuOpen && (
+        <div style={{ position: "absolute", left: "50%", bottom: 150, transform: "translateX(-50%)", zIndex: 9, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, pointerEvents: "none", maxWidth: "92%" }}>
+          <div style={{ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, background: "#fffef8", color: "#234", borderRadius: 14, padding: "10px 12px 10px 14px", boxShadow: "0 6px 20px rgba(0,0,0,.28)", font: "800 13.5px system-ui" }}>
+            <span style={{ fontSize: 20 }}>👋</span>
+            <span>Welkom{naam ? ` ${naam}` : ""}! Kies hieronder een dier en zet het in je park 🦊</span>
+            <button onClick={() => setWelkomWeg(true)} style={{ border: "none", borderRadius: 999, width: 26, height: 26, font: "700 13px system-ui", background: "#eee", cursor: "pointer", flex: "0 0 auto" }}>✕</button>
+          </div>
+          <span style={{ fontSize: 22, lineHeight: 1, filter: "drop-shadow(0 2px 3px rgba(0,0,0,.3))" }}>⬇️</span>
+        </div>
+      )}
 
       {/* Beloning-melding bij binnenkomst. */}
       {reward && (
