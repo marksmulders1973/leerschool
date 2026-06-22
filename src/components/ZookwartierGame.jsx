@@ -10,7 +10,7 @@ import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode 
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
-import { floodWater } from "../features/zoo/water";
+import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
 
@@ -301,20 +301,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   // Water-bronnen (meertjes) staan in meta.owned.water als lijst van [gx,gz].
   const waterSeeds = (meta?.owned && !Array.isArray(meta.owned) && Array.isArray(meta.owned.water)) ? meta.owned.water : [];
-  // Tik in water-modus: vul een dal (toevoegen) of haal het meertje weg.
+  // Tik in water-modus: plaats een waterbron (het water stroomt vanzelf de
+  // laagste weg naar beneden en vult dalen) of haal een bron + z'n water weg.
   const onWaterTik = (cell) => {
-    const basin = floodWater(terrain, [cell]);
-    if (!basin.length) { flits("Graaf eerst een dal (⛰️ → ⬇️) — water blijft in lagere plekken staan."); return; }
-    const huidige = floodWater(terrain, waterSeeds);
-    const isWater = huidige.some((c) => c[0] === cell[0] && c[1] === cell[1]);
+    const { streams, pools } = computeWater(terrain, waterSeeds);
+    const inWater = streams.some((p) => p.some((c) => c[0] === cell[0] && c[1] === cell[1]))
+      || pools.some((c) => c[0] === cell[0] && c[1] === cell[1]);
     let next;
-    if (isWater) {
-      const basinSet = new Set(basin.map((c) => `${c[0]},${c[1]}`));
-      next = waterSeeds.filter((s) => !basinSet.has(`${s[0]},${s[1]}`));
+    if (inWater) {
+      next = waterSeeds.filter((s) => !bronRaaktCel(terrain, s, cell[0], cell[1]));
       flits("Water weggehaald");
     } else {
       next = [...waterSeeds, cell];
-      flits("Water toegevoegd 💧");
+      flits("Waterbron geplaatst 💧");
     }
     setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, water: next } }; });
   };
@@ -444,7 +443,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         ) : waterMode ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              💧 Tik in een <b>dal</b> om er een meertje van te maken · tik op water om het weg te halen
+              💧 Tik om een <b>waterbron</b> te plaatsen — het water stroomt vanzelf naar beneden (graaf geultjes met ⛰️⬇️) en vult dalen · tik op water om het weg te halen
             </div>
             <button onClick={() => setWaterMode(false)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>

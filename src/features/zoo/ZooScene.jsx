@@ -11,7 +11,7 @@ import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG } from "./terrain";
-import { floodWater, WATER_SURFACE_Y } from "./water";
+import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { GROUND_COLOR } from "./ground";
 import { useEffect } from "react";
 import {
@@ -135,6 +135,74 @@ function WaterPools({ cells }) {
   );
 }
 
+// Stromende beek langs één pad: blauwe tegels die de helling volgen + witte
+// schuim-vlokjes die naar beneden "stromen" (geanimeerd). De beek volgt het
+// steilste-afdaling-pad (dus de geultjes die je graaft).
+function Stream({ path, terrain }) {
+  const foamRefs = useRef([]);
+  // Wereldpunten langs het pad (op terreinhoogte) + cumulatieve lengtes.
+  const { points, cum, total } = useMemo(() => {
+    const pts = path.map(([gx, gz]) => {
+      const [x, z] = cellToWorld(gx, gz);
+      return new Vector3(x, celWereldHoogte(terrain, gx, gz) + 0.12, z);
+    });
+    const cumArr = [0];
+    for (let i = 1; i < pts.length; i++) cumArr.push(cumArr[i - 1] + pts[i].distanceTo(pts[i - 1]));
+    return { points: pts, cum: cumArr, total: cumArr[cumArr.length - 1] || 0.0001 };
+  }, [path, terrain]);
+
+  const puntOp = (u) => {
+    const d = u * total;
+    let i = 1;
+    while (i < cum.length && cum[i] < d) i++;
+    if (i >= points.length) return points[points.length - 1];
+    const seg = cum[i] - cum[i - 1] || 1;
+    const t = (d - cum[i - 1]) / seg;
+    return points[i - 1].clone().lerp(points[i], t);
+  };
+
+  const FOAM = points.length >= 2 ? 4 : 0;
+  useFrame((st) => {
+    if (!FOAM) return;
+    const base = (st.clock.elapsedTime * 0.18) % 1; // stroomsnelheid
+    for (let k = 0; k < FOAM; k++) {
+      const m = foamRefs.current[k];
+      if (!m) continue;
+      const u = (base + k / FOAM) % 1;
+      const p = puntOp(u);
+      m.position.set(p.x, p.y + 0.03, p.z);
+    }
+  });
+
+  if (!points.length) return null;
+  return (
+    <group>
+      {/* waterbedding langs de beek */}
+      {path.map(([gx, gz], i) => {
+        const p = points[i];
+        return (
+          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[p.x, p.y - 0.08, p.z]}>
+            <planeGeometry args={[1.5, 1.5]} />
+            <meshStandardMaterial color="#3f9fd6" transparent opacity={0.72} roughness={0.15} metalness={0.1} />
+          </mesh>
+        );
+      })}
+      {/* schuim-vlokjes die naar beneden stromen */}
+      {Array.from({ length: FOAM }).map((_, k) => (
+        <mesh key={`f${k}`} ref={(el) => (foamRefs.current[k] = el)} rotation={[-Math.PI / 2, 0, 0]}>
+          <circleGeometry args={[0.32, 10]} />
+          <meshStandardMaterial color="#eaf6ff" transparent opacity={0.8} roughness={0.2} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+function WaterStreams({ paths, terrain }) {
+  if (!paths || !paths.length) return null;
+  return paths.map((p, i) => <Stream key={i} path={p} terrain={terrain} />);
+}
+
 function GrasGrond({ placing, cells, onHover, onPlace, onMissTap }) {
   return (
     <mesh
@@ -188,8 +256,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const heightFnRef = useRef(() => 0);
   heightFnRef.current = (x, z) => heightAt(terrain, x, z);
   const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.9)); };
-  // Ondergelopen vakjes (meertjes) op basis van het terrein + de water-bronnen.
-  const waterCells = useMemo(() => floodWater(terrain, waterSeeds), [terrain, waterSeeds]);
+  // Beken (stroompaden) + meertjes op basis van het terrein + de water-bronnen.
+  const water = useMemo(() => computeWater(terrain, waterSeeds), [terrain, waterSeeds]);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
@@ -257,7 +325,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
 
       <Suspense fallback={<Laden />}>
         <Terrain field={terrain} ground={ground} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} paintGround={groundMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} onGround={onGround} />
-        <WaterPools cells={waterCells} />
+        <WaterPools cells={water.pools} />
+        <WaterStreams paths={water.streams} terrain={terrain} />
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
