@@ -322,7 +322,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
           prices={prices}
-          onPickPart={(idx, grp) => { setActivePart(grp); setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
+          onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
           onHouseParts={setHouseParts}
           paintCursor={colorMode && selIsHuis ? verfCursor(brushColor) : null}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
@@ -360,26 +360,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>
         ) : selectedIdx != null && colorMode ? (
-          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              🎨 Kies een <b>kleur</b> (je muis wordt die kleur) → <b>klik op een deel van het huis</b> om het te verven. Of tik een onderdeel-chip hieronder.
+              🎨 Kies een <b>kleur</b> en tik dan op een deel van het huis (dak, muur, deur…). Andere kleur kiezen en opnieuw tikken = wijzigen.
             </span>
-            {/* Onderdelen van dit huis — elk chip toont de huidige kleur. */}
-            {houseParts && houseParts.length > 0 ? (
-              <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
-                {houseParts.map((_, i) => (
-                  <button key={i} onClick={() => setActivePart(i)} title={`Onderdeel ${i + 1}`} style={{ width: 40, height: 40, borderRadius: 12, border: activePart === i ? "3px solid #2e7d32" : "2px solid rgba(255,255,255,0.85)", background: huidigeDeelKleur(i), cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.3)", transform: activePart === i ? "scale(1.12)" : "none" }} />
-                ))}
-              </div>
-            ) : (
-              <span style={{ color: "#fff", font: "600 12px system-ui", opacity: 0.85 }}>Onderdelen laden… (of tik een deel op het huis aan)</span>
-            )}
-            {/* Kleurenpalet — past meteen toe op het gekozen onderdeel. */}
-            <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+            {/* Eén simpele rij kleuren — altijd te gebruiken. Kies een kleur (de
+                gekozen kleur licht op) en tik daarna het onderdeel op het huis. */}
+            <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
               {HUIS_KLEUREN.map((c) => (
-                <button key={c} onClick={() => { setBrushColor(c); setHuisKleur(selectedIdx, activePart, c); }} title="Kies deze kleur" style={{ width: 32, height: 32, borderRadius: "50%", border: brushColor === c ? "3px solid #2e7d32" : "2px solid rgba(255,255,255,0.85)", background: c, cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.25)", transform: brushColor === c ? "scale(1.12)" : "none" }} />
+                <button key={c} onClick={() => setBrushColor(c)} title="Kies deze kleur" style={{ width: 38, height: 38, borderRadius: "50%", border: brushColor === c ? "4px solid #fff" : "2px solid rgba(255,255,255,0.6)", background: c, cursor: "pointer", boxShadow: brushColor === c ? "0 0 0 3px #2e7d32, 0 2px 8px rgba(0,0,0,.35)" : "0 2px 6px rgba(0,0,0,.25)", transform: brushColor === c ? "scale(1.18)" : "none" }} />
               ))}
-              <button onClick={() => { setColorMode(false); setHouseParts(null); }} style={{ border: "none", borderRadius: 999, padding: "8px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
+              <button onClick={() => { setColorMode(false); setHouseParts(null); }} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
             </div>
           </div>
         ) : selectedIdx != null && selVoorziet ? (
