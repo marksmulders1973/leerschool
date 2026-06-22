@@ -255,11 +255,28 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "" }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
   const orbitRef = useRef();
+  // Feiten over je park (naam, een pas geboren jong, hongerig dier, je lievelings-
+  // dier, groot park, zwak vak) → bezoekers gebruiken dit voor persoonlijke praatjes.
+  const factsRef = useRef({});
+  factsRef.current = useMemo(() => {
+    const dieren = placedItems.filter((it) => getAsset(it.assetId)?.kind === "animal");
+    const naamVan = (it) => getAsset(it.assetId)?.name || "dier";
+    const baby = dieren.find((it) => (it.babies || 0) > 0);
+    const honger = dieren.find((it) => !(it.fed && dagenVerschil(it.fed) < 2));
+    return {
+      naam: spelerNaam,
+      zwakVak,
+      baby: baby ? naamVan(baby) : null,
+      honger: honger ? naamVan(honger) : null,
+      dier: dieren.length ? naamVan(dieren[0]) : null,
+      veel: dieren.length >= 5,
+    };
+  }, [placedItems, spelerNaam, zwakVak]);
   // Hoogte-functie die altijd het laatste terrein leest (geen re-subscribe in loops).
   const heightFnRef = useRef(() => 0);
   heightFnRef.current = (x, z) => heightAt(terrain, x, z);
@@ -341,7 +358,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
-        <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} />
+        <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

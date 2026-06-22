@@ -496,6 +496,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
           firstPerson={firstPerson}
+          spelerNaam={naam}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}

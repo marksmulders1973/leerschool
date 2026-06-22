@@ -403,6 +403,38 @@ const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8",
 // Blije gedachten van bezoekers over het park.
 const BEZOEKER_BLIJ = [{ e: "😍", t: "Wat een mooi park!" }, { e: "😊", t: "Leuk hier!" }, { e: "👍", t: "Top dierentuin!" }, { e: "🎉", t: "Wat gezellig!" }];
 
+// Persoonlijke begroeting van een bezoeker aan de speler: spreekt je bij naam aan
+// en reageert op iets ECHTS in je park (een pas geboren jong, een hongerig dier,
+// een mooi dier, een groot park). Bewust zónder AI — die gebeurtenissen kennen we
+// al, dus dit is gratis, werkt offline en stuurt geen kindgegevens naar buiten.
+// (Een AI-variant die de zinnen vrijer formuleert kan later als optionele,
+// gecachte online "smaakmaker".)
+function maakBegroeting(facts) {
+  const f = facts || {};
+  const naam = (f.naam || "").trim();
+  const hoi = naam ? `Hoi ${naam}` : "Hoi";
+  const low = (s) => (s || "").toLowerCase();
+  const cap = (s) => { const l = low(s); return l ? l[0].toUpperCase() + l.slice(1) : ""; };
+  const o = [];
+  if (f.baby) o.push({ e: "🐣", t: `${hoi}! Een baby${low(f.baby)} — schattig!` }, { e: "🐣", t: `Een jong ${low(f.baby)} geboren!` });
+  if (f.honger) o.push({ e: "🌾", t: `${cap(f.honger)} ziet er hongerig uit…` });
+  if (f.dier) o.push({ e: "😍", t: `${cap(f.dier)} is mijn lievelingsdier!` });
+  if (f.veel) o.push({ e: "🎡", t: `${hoi}, wat een groot park!` });
+  // School/leren — verbindt het park met het leren (en normaliseert dat oefenen
+  // soms lastig is). Als we een zwak vak kennen, noemen we dat.
+  if (f.zwakVak) o.push({ e: "🧮", t: `${hoi}! Zin om ${low(f.zwakVak)} te oefenen?` });
+  o.push(
+    { e: "👋", t: `${hoi}!` },
+    { e: "😊", t: `${hoi}, leuk park!` },
+    { e: "🌟", t: naam ? `${naam}, wat een mooie dierentuin!` : "Wat mooi hier!" },
+    { e: "📚", t: "Leer een kwartier, dan groeit je park!" },
+    { e: "🧮", t: naam ? `${naam}, hoe gaat het met rekenen?` : "Hoe gaat het met rekenen?" },
+    { e: "💪", t: "Ik vind breuken soms lastig… jij ook?" },
+    { e: "✏️", t: "Heb jij vandaag al een kwartier geleerd?" },
+  );
+  return o[Math.floor(Math.random() * o.length)];
+}
+
 function koopKans(kind, prijs) {
   const fair = KRAAM_SOORTEN[kind]?.fair || 4;
   return Math.max(0.12, Math.min(1, 1.3 - prijs / (fair * 2)));
@@ -412,7 +444,7 @@ function koopKans(kind, prijs) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
+function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -442,7 +474,12 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
       if (s.needT <= 0) {
         const pp = playerRef?.current;
         const dichtbij = pp && Math.hypot(pp.x - s.x, pp.z - s.z) <= DENK_STRAAL;
-        if (dichtbij || Math.random() < 0.12) {
+        // Loop je vlak langs een bezoeker? Dan groet die je vaak persoonlijk (bij
+        // naam + iets uit je park/leren). Anders: af en toe een kraampje-behoefte.
+        if (dichtbij && Math.random() < 0.6) {
+          toon(maakBegroeting(factsRef?.current), 3.6);
+          s.needT = 5 + Math.random() * 5;
+        } else if (dichtbij || Math.random() < 0.12) {
           const beschikbaar = KRAAM_KEYS.filter((k) => (stands[k] || []).length);
           const pool = beschikbaar.length ? beschikbaar : KRAAM_KEYS;
           const kind = pool[Math.floor(Math.random() * pool.length)];
@@ -531,10 +568,10 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
   );
 }
 
-export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
+export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} />)}
     </group>
   );
 }
