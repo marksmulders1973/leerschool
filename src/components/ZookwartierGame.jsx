@@ -137,6 +137,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
   const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
+  const [zwakVak, setZwakVak] = useState("");            // vak dat het lastigst gaat → bezoeker kan ernaar vragen
   const [dialoog, setDialoog] = useState(null);          // open praatje met een bezoeker { step, reply? }
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
@@ -172,7 +173,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     let cancel = false;
     (async () => {
       try {
-        const recs = await loadMasteryForPlayer(naam);
+        const recs = await loadMasteryForPlayer(naam, userId);
         if (cancel) return;
         // Beste vak → compliment.
         const goed = (recs || []).filter((r) => r.attempts >= 5 && r.correct / r.attempts >= 0.7);
@@ -185,6 +186,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         // Volgende onderwerp om te oefenen → "ga oefenen"-knop in het praatje.
         const rec = recommendNextTopic(recs || []);
         if (rec?.path) setOefenPad({ id: rec.pathId, title: rec.path.title, subject: rec.path.subject });
+        // Lastigste vak (laagste %, genoeg vragen) → bezoeker kan ernaar vragen.
+        const zwak = (recs || []).filter((r) => r.attempts >= 5 && r.correct / r.attempts < 0.7);
+        if (zwak.length) {
+          zwak.sort((a, b) => a.correct / a.attempts - b.correct / b.attempts);
+          const v = zwak[0].path?.subject || zwak[0].path?.title;
+          if (v) setZwakVak(v);
+        }
       } catch { /* geen compliment, geen probleem */ }
     })();
     return () => { cancel = true; };
@@ -481,7 +489,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <span style={{ font: "800 11px system-ui", color: "#5b3d00", background: "#ffd54a", padding: "3px 9px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>🚧 In opbouw</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <button onClick={() => { setPanel("uitleg"); setResetArmed(false); }} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
+          <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <button onClick={voerAlles} title="Alle dieren voeren (of tik een dier aan om los te voeren)" style={{ pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🌾</button>
           <button onClick={() => setPanel("karakter")} title="Kies je poppetje" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>👤</button>
@@ -546,6 +554,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           firstPerson={firstPerson}
           spelerNaam={naam}
           goedeScore={goedeScore}
+          zwakVak={zwakVak}
           onTapBezoeker={tapBezoeker}
           terrain={terrain}
           onTerrainChange={setTerrain}

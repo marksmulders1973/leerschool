@@ -413,15 +413,18 @@ export async function loadDueTopics(playerName) {
 
 // Haal alle mastery-records op voor één speler.
 // Returnt array van { pathId, attempts, correct, level, lastSeen, path }.
-export async function loadMasteryForPlayer(playerName) {
+export async function loadMasteryForPlayer(playerName, userId = null) {
   const player = (playerName || "").trim();
   if (!player) return [];
   try {
-    const { data } = await supabase
+    let q = supabase
       .from("topic_mastery")
       .select("path_id, attempts, correct, last_seen, next_due_at, streak")
-      .eq("player_name", player)
-      .order("last_seen", { ascending: false });
+      .eq("player_name", player);
+    // Ingelogd? Filter ook op user_id, zodat twee kinderen met dezelfde naam
+    // niet elkaars scores te zien krijgen.
+    if (userId) q = q.eq("user_id", userId);
+    const { data } = await q.order("last_seen", { ascending: false });
     if (!Array.isArray(data)) return [];
     return data.map((r) => ({
       pathId: r.path_id,

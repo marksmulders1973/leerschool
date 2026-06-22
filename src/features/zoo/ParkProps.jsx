@@ -353,7 +353,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
-      const step = 3.4 * dt * Math.min(1, mag);
+      const step = 3.4 * dts * Math.min(1, mag);
       const nx = pos.current.x + dir.current.x * step;
       const nz = pos.current.z + dir.current.z * step;
       const solid = solidRef.current;
