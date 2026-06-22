@@ -54,14 +54,20 @@ export function inkomstenPerDag(items, kindVan = () => "animal") {
   }, 0);
 }
 
-// Laat (op een nieuwe dag) dier-verblijven kans maken op een jonkie. Gebouwen
-// (kraampjes/molens) krijgen geen jonkies. `kans` hoger = sneller jonkies (bij
-// goede verzorging). Geeft nieuwe indeling + geboortes.
-export function groeiBabies(items, isDier = () => true, kans = BABY_KANS) {
+// Recent gevoerd? Verzorging is PER DIER (it.fed = datum waarop dit dier voor het
+// laatst hooi kreeg). Recent gevoerd = vandaag of gisteren.
+export function dierRecentGevoerd(it) {
+  return it && it.fed && dagenVerschil(it.fed) <= 1;
+}
+
+// Laat (op een nieuwe dag) elk dier kans maken op een jonkie. Goed verzorgde
+// dieren (recent gevoerd) krijgen sneller een jonkie. Gebouwen krijgen niks.
+export function groeiBabies(items, isDier = () => true) {
   let births = 0;
   const layout = (items || []).map((it) => {
     if (!isDier(it.assetId)) return it;
     const b = it.babies || 0;
+    const kans = dierRecentGevoerd(it) ? BABY_KANS_GEVOERD : BABY_KANS;
     if (b < MAX_BABIES && Math.random() < kans) {
       births++;
       return { ...it, babies: b + 1 };
@@ -71,15 +77,19 @@ export function groeiBabies(items, isDier = () => true, kans = BABY_KANS) {
   return { layout, births };
 }
 
-// Verzorging: als de dieren te lang (>= VERWAARLOOS_DAGEN) geen hooi kregen,
-// loopt er één weg (het laatst geplaatste dier eerst → starter-dieren blijven
-// het langst). Geeft de nieuwe indeling + hoeveel er weglopen (0 of 1).
-export function verwaarloosCheck(items, isDier = () => true, daysSinceFed = 0) {
-  if (daysSinceFed < VERWAARLOOS_DAGEN) return { layout: items, weggelopen: 0 };
-  let wegIdx = -1;
-  (items || []).forEach((it, i) => { if (isDier(it.assetId)) wegIdx = i; });
-  if (wegIdx < 0) return { layout: items, weggelopen: 0 };
-  return { layout: items.filter((_, i) => i !== wegIdx), weggelopen: 1 };
+// Verzorging per dier: een GEKOCHT dier dat >= VERWAARLOOS_DAGEN geen hooi kreeg
+// loopt weg. Starter-dieren (price 0) blijven altijd. Geeft nieuwe indeling +
+// aantal weggelopen dieren.
+export function verwaarloosCheck(items, isDier = () => true) {
+  let weggelopen = 0;
+  const layout = (items || []).filter((it) => {
+    if (!isDier(it.assetId)) return true;
+    if ((it.price || 0) <= 0) return true; // starter-dier → blijft
+    const dagen = it.fed ? dagenVerschil(it.fed) : 999;
+    if (dagen >= VERWAARLOOS_DAGEN) { weggelopen++; return false; }
+    return true;
+  });
+  return { layout, weggelopen };
 }
 
 function isYesterday(dateStr, today = todayStr()) {
