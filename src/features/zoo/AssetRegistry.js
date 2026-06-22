@@ -91,7 +91,8 @@ export const ZOO_ASSETS = {
   // Losse hekpanelen (procedureel, houten rail-stijl) — vul één rastervakje en
   // klik ze aan elkaar tot een kooi in elke vorm (T, L, vierkant). Draaibaar,
   // los te kopen/weghalen. Solide → de speler kan er niet doorheen.
-  hekPaneel: { id: "hekPaneel", kind: "decor", name: "Hekpaneel", emoji: "🚧", procedural: "fencePanel", cells: 1, price: 4 },
+  hekPaneel: { id: "hekPaneel", kind: "decor", name: "Recht hek", emoji: "🚧", procedural: "fencePanel", cells: 1, price: 4 },
+  hekHoek: { id: "hekHoek", kind: "decor", name: "Hoek-hek", emoji: "📐", procedural: "fenceCorner", cells: 1, price: 4 },
   hekPoort: { id: "hekPoort", kind: "decor", name: "Hek-poort", emoji: "🚪", procedural: "fenceGate", cells: 1, price: 6 },
   // Legacy GLB-hekken (niet meer in de winkel, blijven bestaande parken renderen).
   fence: { id: "fence", kind: "decor", name: "Hek", emoji: "🚧", url: "/models/zoo/nature/fence_simple.glb", targetHeight: 0.85, cells: 1, price: 5 },
@@ -110,7 +111,7 @@ export const ZOO_ASSETS = {
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
 export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
-export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekPoort"];
+export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
 // Footprint (aantal vakjes) van een item; klein decor = 1, dieren lopen vrij

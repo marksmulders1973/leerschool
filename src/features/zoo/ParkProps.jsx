@@ -463,6 +463,34 @@ export function FenceGate({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// Hoek-hek (procedureel) — een hoekstuk dat netjes aansluit op twee rechte
+// panelen. Een hek loopt door het midden van een vakje; op een hoek verandert de
+// richting, en dan past er maar één recht paneel → een gat. Dit stuk heeft twee
+// HALVE rails (naar +X én +Z) die elk tot precies de vakje-rand reiken, met een
+// stevige hoekpaal in het midden. Draai 'm 90° om elke hoek (4 standen) te maken,
+// zodat de laatste meters van je verblijf op elkaar "klikken".
+export function FenceCorner({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#8a5a2b";
+  const half = 1.0;            // van het midden tot de vakje-rand
+  const rails = [0.55, 0.3];   // zelfde hoogtes als een recht paneel
+  return (
+    <group position={[position[0], position[1], position[2]]} rotation={[0, rotation, 0]}>
+      {/* stevige hoekpaal in het midden */}
+      <mesh castShadow position={[0, 0.37, 0]}><boxGeometry args={[0.13, 0.74, 0.13]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {/* arm naar +X */}
+      {rails.map((h, i) => (
+        <mesh key={`x${i}`} castShadow position={[half / 2, h, 0]}><boxGeometry args={[half, 0.08, 0.08]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+      ))}
+      <mesh castShadow position={[half, 0.35, 0]}><boxGeometry args={[0.1, 0.7, 0.1]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {/* arm naar +Z */}
+      {rails.map((h, i) => (
+        <mesh key={`z${i}`} castShadow position={[0, h, half / 2]}><boxGeometry args={[0.08, 0.08, half]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+      ))}
+      <mesh castShadow position={[0, 0.35, half]}><boxGeometry args={[0.1, 0.7, 0.1]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
 // Paden: een kruis door het midden + een ring rond de draaimolen.
 export function Paths() {
   const pad = "#dcc48f";
