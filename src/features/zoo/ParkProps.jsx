@@ -454,10 +454,12 @@ function koopKans(kind, prijs) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap }) {
+function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
+  const solidRef = useRef(isSolid);
+  solidRef.current = isSolid;
   const charUrl = CHARACTERS[seed % CHARACTERS.length].url;
   const [bubble, setBubble] = useState(null); // { e, t? }
   const st = useRef({
@@ -538,8 +540,29 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
         s.resting = true; s.rest = 1 + Math.random() * 2.5;
       } else {
         const speed = s.acting ? 2.2 : 1.7;
-        const step = Math.min(d, dt * speed); s.x += (dx / d) * step; s.z += (dz / d) * step;
+        const step = Math.min(d, dt * speed);
+        const nx = s.x + (dx / d) * step, nz = s.z + (dz / d) * step;
+        // Botsing met hekken/gebouwen: glijd langs de muur. Zit de bezoeker al in
+        // een vol vakje (bv. hek er net omheen gezet), dan mag-ie eruit lopen.
+        const solid = solidRef.current;
+        const vast = solid ? solid(s.x, s.z) : false;
+        let moved = false;
+        if (!solid || vast || !solid(nx, nz)) { s.x = nx; s.z = nz; moved = true; }
+        else {
+          if (!solid(nx, s.z)) { s.x = nx; moved = true; }
+          if (!solid(s.x, nz)) { s.z = nz; moved = true; }
+        }
         node.rotation.y = Math.atan2(dx, dz);
+        // Klem tegen een hek? Geef het doel op en kies een nieuwe wandelplek
+        // (geen eindeloos tegen het hek duwen / door het hek glitchen).
+        if (!moved) {
+          s.stuck = (s.stuck || 0) + dt;
+          if (s.stuck > 0.35) {
+            s.stuck = 0; s.acting = false; s.need = null; s.needT = 4 + Math.random() * 6;
+            const a = Math.random() * Math.PI * 2, r = 4 + Math.random() * 16;
+            s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r;
+          }
+        } else s.stuck = 0;
       }
     }
     moving.current = !s.resting;
@@ -583,10 +606,10 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
   );
 }
 
-export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap }) {
+export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} />)}
     </group>
   );
 }

@@ -359,7 +359,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
-        <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} />
+        <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
