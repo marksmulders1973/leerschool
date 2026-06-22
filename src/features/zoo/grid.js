@@ -3,7 +3,8 @@
 // snapt op het raster en mag niet overlappen of in de draaimolen-zone vallen.
 
 export const CELL = 2;        // celgrootte in wereld-units (≈ meter)
-export const HALF = 6;        // vakjes vanaf het midden (-6..6 => 13×13 raster)
+export const HALF = 10;       // vakjes vanaf het midden (-10..10 => 21×21 raster).
+                              // Max ~11 want de vloer (terrain) loopt tot ±22.
 export const GRID_SIZE = HALF * 2 * CELL;
 export const GRID_DIV = HALF * 2;
 

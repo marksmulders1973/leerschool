@@ -126,7 +126,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -188,11 +188,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     <Canvas
       shadows
       dpr={[1, 2]}
-      camera={{ position: [16, 12, 22], fov: 42, near: 0.1, far: 120 }}
-      style={{ width: "100%", height: "100%", display: "block", touchAction: "none" }}
+      camera={{ position: [22, 16, 30], fov: 42, near: 0.1, far: 140 }}
+      style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
     >
       <color attach="background" args={["#aaddff"]} />
-      <fog attach="fog" args={["#aaddff", 34, 78]} />
+      <fog attach="fog" args={["#aaddff", 48, 105]} />
 
       {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
       <DayNight />
@@ -245,7 +245,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         enableDamping
         dampingFactor={0.08}
         minDistance={6}
-        maxDistance={34}
+        maxDistance={50}
         maxPolarAngle={Math.PI / 2 - 0.05}
         target={[0, 0.8, 0]}
         enablePan={false}

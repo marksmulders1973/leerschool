@@ -246,6 +246,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   // [r,g,b] in 0..1 → #rrggbb (voor de onderdeel-chips).
   const rgbHex = (c) => "#" + c.map((v) => Math.round(Math.max(0, Math.min(1, v)) * 255).toString(16).padStart(2, "0")).join("");
+  // Een "verf-cursor" in de gekozen kleur, zodat je op de laptop ziet welke kleur
+  // actief is: klik dan op een huis-onderdeel om het te verven (paint-bucket).
+  const verfCursor = (hex) => {
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><circle cx='15' cy='15' r='9' fill='${hex}' stroke='#ffffff' stroke-width='3'/><circle cx='15' cy='15' r='10.5' fill='none' stroke='#000000' stroke-width='1'/></svg>`;
+    return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 15 15, crosshair`;
+  };
   // Huidige kleur van een onderdeel: jouw keuze, anders de basiskleur uit de textuur.
   const huidigeDeelKleur = (i) => {
     const ov = placedItems[selectedIdx]?.colors?.[i];
@@ -316,8 +322,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
           prices={prices}
-          onPickPart={(idx, grp) => setActivePart(grp)}
+          onPickPart={(idx, grp) => { setActivePart(grp); setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
           onHouseParts={setHouseParts}
+          paintCursor={colorMode && selIsHuis ? verfCursor(brushColor) : null}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
           terrain={terrain}
@@ -355,7 +362,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         ) : selectedIdx != null && colorMode ? (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              🎨 Kies eerst een <b>onderdeel</b> (of tik het op het huis aan), kies dan een <b>kleur</b>
+              🎨 Kies een <b>kleur</b> (je muis wordt die kleur) → <b>klik op een deel van het huis</b> om het te verven. Of tik een onderdeel-chip hieronder.
             </span>
             {/* Onderdelen van dit huis — elk chip toont de huidige kleur. */}
             {houseParts && houseParts.length > 0 ? (
