@@ -25,6 +25,33 @@ export const KRAAM_SOORTEN = {
 };
 export const KRAAM_KEYS = Object.keys(KRAAM_SOORTEN);
 
+// Producten per kraam: je kiest er één om te verkopen. `inkoop` = wat het jou kost
+// (vast). De speler bepaalt zelf de verkoopprijs → winst = verkoop − inkoop. Zo
+// oefent het kind rekenen (winst/marge) terwijl het muntjes verdient. "fair" voor
+// de koopkans leiden we af van de inkoop (≈ 2× inkoop = nog steeds aantrekkelijk).
+export const KRAAM_PRODUCTEN = {
+  food: [
+    { id: "patat", label: "Patat", emoji: "🍟", inkoop: 3 },
+    { id: "hotdog", label: "Hotdog", emoji: "🌭", inkoop: 4 },
+    { id: "hamburger", label: "Hamburger", emoji: "🍔", inkoop: 5 },
+  ],
+  drink: [
+    { id: "frisdrank", label: "Frisdrank", emoji: "🥤", inkoop: 2 },
+    { id: "koffie", label: "Koffie", emoji: "☕", inkoop: 3 },
+    { id: "milkshake", label: "Milkshake", emoji: "🥛", inkoop: 4 },
+  ],
+  ice: [
+    { id: "waterijs", label: "Waterijsje", emoji: "🍧", inkoop: 2 },
+    { id: "softijs", label: "Softijs", emoji: "🍦", inkoop: 3 },
+    { id: "sundae", label: "IJscoupe", emoji: "🍨", inkoop: 4 },
+  ],
+  popcorn: [
+    { id: "popcorn", label: "Popcorn", emoji: "🍿", inkoop: 2 },
+    { id: "suikerspin", label: "Suikerspin", emoji: "🍭", inkoop: 3 },
+    { id: "snoep", label: "Snoepzak", emoji: "🍬", inkoop: 3 },
+  ],
+};
+
 export const ZOO_ASSETS = {
   // ---- Dieren (Quaternius, vertex-colored → nooit "wit") ----
   fox: { id: "fox", kind: "animal", name: "Vos", emoji: "🦊", url: "/models/zoo/animals/Fox.glb", targetHeight: 0.8, price: 10 },

@@ -445,16 +445,18 @@ function maakBegroeting(facts) {
   return o[Math.floor(Math.random() * o.length)];
 }
 
-function koopKans(kind, prijs) {
-  const fair = KRAAM_SOORTEN[kind]?.fair || 4;
-  return Math.max(0.12, Math.min(1, 1.3 - prijs / (fair * 2)));
+// Koopkans op basis van de verkoopprijs t.o.v. de "eerlijke" prijs (≈ 2× inkoop):
+// goedkoop → bijna iedereen koopt; veel te duur → bijna niemand.
+function koopKans(prijs, fair) {
+  const f = fair || 4;
+  return Math.max(0.08, Math.min(1, 1.3 - prijs / (f * 2)));
 }
 
 // Binnen welke straal (m) van jouw poppetje een bezoeker "gaat denken" (honger/
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -473,7 +475,7 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
     const stands = standsRef?.current || {};
-    const prices = pricesRef?.current || {};
+    const kr = kraamRef?.current || {};
 
     // Denkwolkje vanzelf laten verdwijnen.
     if (s.bt > 0) { s.bt -= dt; if (s.bt <= 0) setBubble(null); }
@@ -486,34 +488,32 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
       if (s.needT <= 0) {
         const pp = playerRef?.current;
         const dichtbij = pp && Math.hypot(pp.x - s.x, pp.z - s.z) <= DENK_STRAAL;
-        // Loop je vlak langs een bezoeker? Dan groet die je vaak persoonlijk (bij
-        // naam + iets uit je park/leren). Anders: af en toe een kraampje-behoefte.
-        if (dichtbij && Math.random() < 0.6) {
+        const beschikbaar = KRAAM_KEYS.filter((k) => (stands[k] || []).length);
+        // Loop je vlak langs een bezoeker? Dan groet die je vaak persoonlijk.
+        if (dichtbij && Math.random() < 0.5) {
           toon(maakBegroeting(factsRef?.current), 3.6);
           s.needT = 5 + Math.random() * 5;
-        } else if (dichtbij || Math.random() < 0.12) {
-          const beschikbaar = KRAAM_KEYS.filter((k) => (stands[k] || []).length);
-          const pool = beschikbaar.length ? beschikbaar : KRAAM_KEYS;
-          const kind = pool[Math.floor(Math.random() * pool.length)];
+        } else if (beschikbaar.length && Math.random() < 0.6) {
+          // Er zijn kraampjes → ga vaak iets kopen (zo zijn je kramen ook echt druk).
+          const kind = beschikbaar[Math.floor(Math.random() * beschikbaar.length)];
           const soort = KRAAM_SOORTEN[kind];
           const lijst = stands[kind] || [];
-          if (lijst.length) {
-            // Loop naar het dichtstbijzijnde passende kraampje.
-            let best = lijst[0], bd = Infinity;
-            for (const p of lijst) { const d = Math.hypot(p[0] - s.x, p[1] - s.z); if (d < bd) { bd = d; best = p; } }
-            const dx = s.x - best[0], dz = s.z - best[1]; const dd = Math.hypot(dx, dz) || 1;
-            s.tx = best[0] + (dx / dd) * 2.6; s.tz = best[1] + (dz / dd) * 2.6;
-            s.need = kind; s.acting = true; s.resting = false;
-            toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
-          } else {
-            // Geen passend kraampje → bezoeker baalt even (hint om er een te kopen).
-            toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
-            s.needT = 11 + Math.random() * 12;
-          }
+          let best = lijst[0], bd = Infinity;
+          for (const p of lijst) { const d = Math.hypot(p[0] - s.x, p[1] - s.z); if (d < bd) { bd = d; best = p; } }
+          const dx = s.x - best[0], dz = s.z - best[1]; const dd = Math.hypot(dx, dz) || 1;
+          s.tx = best[0] + (dx / dd) * 2.6; s.tz = best[1] + (dz / dd) * 2.6;
+          s.need = kind; s.acting = true; s.resting = false;
+          toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
+        } else if (!beschikbaar.length && Math.random() < 0.25) {
+          // Nog geen kraampje → bezoeker baalt even (hint om er een te bouwen).
+          const kind = KRAAM_KEYS[Math.floor(Math.random() * KRAAM_KEYS.length)];
+          const soort = KRAAM_SOORTEN[kind];
+          toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
+          s.needT = 8 + Math.random() * 8;
         } else {
-          // Niet dichtbij jouw poppetje → soms een blije gedachte over het park.
+          // Anders af en toe een blije gedachte over het park.
           if (Math.random() < 0.3) { const p = BEZOEKER_BLIJ[Math.floor(Math.random() * BEZOEKER_BLIJ.length)]; toon(p, 3); }
-          s.needT = 3 + Math.random() * 4;
+          s.needT = 4 + Math.random() * 5;
         }
       }
     }
@@ -527,15 +527,15 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
       if (d < 0.18) {
         if (s.acting) {
           // Bij het kraampje: kopen? Goedkoop = bijna altijd; te duur = afhaken.
-          const kind = s.need; const prijs = prices[kind] ?? (KRAAM_SOORTEN[kind]?.start || 4);
-          if (Math.random() < koopKans(kind, prijs)) {
+          const kind = s.need; const info = kr[kind] || {}; const prijs = info.verkoop ?? 4;
+          if (Math.random() < koopKans(prijs, info.fair)) {
             onBuy && onBuy(kind, prijs);
             s.coinT = 0;
-            toon({ e: "😋" }, 2.2);
+            toon({ e: info.emoji || "😋", t: "Lekker!" }, 2.0);
           } else {
             toon({ e: "😖", t: "Te duur!" }, 2.2);
           }
-          s.acting = false; s.need = null; s.needT = 13 + Math.random() * 13;
+          s.acting = false; s.need = null; s.needT = 7 + Math.random() * 9;
         }
         s.resting = true; s.rest = 1 + Math.random() * 2.5;
       } else {
@@ -624,10 +624,10 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
   );
 }
 
-export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
+export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} />)}
     </group>
   );
 }

@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
@@ -151,16 +151,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 }, look: { active: false, dx: 0, dy: 0 } }); // besturing poppetje
 
-  // Bezoekers kopen bij je kraampjes (patat/drinken) → jij verdient de prijs in
-  // muntjes. Gelimiteerd per bezoek-sessie zodat het niet eindeloos te farmen is.
-  // setMeta is stabiel → ref is veilig.
+  // Bezoekers kopen bij je kraampjes → jij verdient de WINST (verkoop − inkoop) in
+  // muntjes. Verkoop je te goedkoop (≤ inkoop), dan verdien je niets — zo leert het
+  // kind dat je boven je inkoopprijs moet verkopen. Gelimiteerd per bezoek-sessie.
   const saleCountRef = useRef(0);
+  const kraamLiveRef = useRef({}); // laatste kraam-data (product/inkoop/verkoop) voor de loop
   const buyApi = useRef({
-    onBuy: (kind, price = 1) => {
+    onBuy: (kind, verkoop = 1) => {
       if (saleCountRef.current >= 400) return;             // session-cap op verdienste
       if (saleCountRef.current === 0) { try { track("park_sale"); } catch { /* niet laten breken */ } }
-      saleCountRef.current += price;
-      setMeta((m) => (m ? { ...m, coins: m.coins + price } : m));
+      saleCountRef.current += 1;
+      const inkoop = kraamLiveRef.current?.[kind]?.inkoop ?? 0;
+      const winst = Math.max(0, verkoop - inkoop);         // verlies kost geen muntjes (kind raakt niet in de min)
+      if (winst <= 0) return;
+      setMeta((m) => (m ? { ...m, coins: m.coins + winst } : m));
     },
   }).current;
 
@@ -355,19 +359,40 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
   const selIsHuis = selKind === "building" && String(placedItems[selectedIdx]?.assetId || "").startsWith("house");
-  // Kraampje geselecteerd? Dan kun je de prijs van patat/drinken instellen.
+  // Kraampje geselecteerd? Dan kies je het product + de verkoopprijs (reken-moment).
   const selVoorziet = selectedIdx != null ? getAsset(placedItems[selectedIdx]?.assetId)?.voorziet : null;
 
-  // Kraampjes-prijzen (in muntjes) per soort. Bewaard in meta.owned als
-  // `<soort>Price` → opgeslagen in Supabase. Valt terug op de standaardprijs.
-  const prijsVanKraam = (kind) => meta?.owned?.[`${kind}Price`] ?? (KRAAM_SOORTEN[kind]?.start ?? 4);
-  const prices = Object.fromEntries(KRAAM_KEYS.map((k) => [k, prijsVanKraam(k)]));
+  // Per kraam: welk product je verkoopt + voor welke prijs. Bewaard in meta.owned
+  // als `<soort>Product` (index) en `<soort>Price` (jouw verkoopprijs).
+  const productIdxVanKraam = (kind) => {
+    const max = KRAAM_PRODUCTEN[kind].length - 1;
+    return Math.max(0, Math.min(max, meta?.owned?.[`${kind}Product`] ?? 0));
+  };
+  const productVanKraam = (kind) => KRAAM_PRODUCTEN[kind][productIdxVanKraam(kind)];
+  const prijsVanKraam = (kind) => meta?.owned?.[`${kind}Price`] ?? (productVanKraam(kind).inkoop * 2);
+  // Alle kraam-info bij elkaar voor de simulatie (verkoop/inkoop/fair = ~2× inkoop).
+  const kramen = Object.fromEntries(KRAAM_KEYS.map((k) => {
+    const p = productVanKraam(k);
+    return [k, { verkoop: prijsVanKraam(k), inkoop: p.inkoop, fair: p.inkoop * 2, label: p.label, emoji: p.emoji, id: p.id }];
+  }));
+  kraamLiveRef.current = kramen; // de bezoekers-loop leest de laatste inkoopprijs hieruit
+  const selKraam = selVoorziet ? kramen[selVoorziet] : null;
+  const selWinst = selKraam ? selKraam.verkoop - selKraam.inkoop : 0;
   const setPrice = (kind, val) => {
-    const v = Math.max(1, Math.min(15, val));
+    const v = Math.max(1, Math.min(20, val));
     setMeta((m) => {
       if (!m) return m;
       const o = m.owned && !Array.isArray(m.owned) ? m.owned : {};
       return { ...m, owned: { ...o, [`${kind}Price`]: v } };
+    });
+  };
+  // Ander product kiezen → verkoopprijs terug naar een verstandig startpunt (2× inkoop).
+  const setProduct = (kind, idx) => {
+    setMeta((m) => {
+      if (!m) return m;
+      const o = m.owned && !Array.isArray(m.owned) ? m.owned : {};
+      const suggestie = (KRAAM_PRODUCTEN[kind][idx]?.inkoop ?? 2) * 2;
+      return { ...m, owned: { ...o, [`${kind}Product`]: idx, [`${kind}Price`]: suggestie } };
     });
   };
 
@@ -600,7 +625,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
-          prices={prices}
+          kramen={kramen}
           onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
           onHouseParts={setHouseParts}
           paintCursor={colorMode && selIsHuis ? verfCursor(brushColor) : null}
@@ -702,15 +727,41 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             </div>
           </div>
         ) : selectedIdx != null && selVoorziet ? (
-          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 7 }}>
-            <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              {KRAAM_SOORTEN[selVoorziet]?.emoji} {KRAAM_SOORTEN[selVoorziet]?.label} — zet de prijs. Goedkoop = meer kopers, duur = meer per stuk (te duur → bezoekers haken af).
+          <div style={{ width: "100%", maxWidth: 560, display: "flex", flexDirection: "column", alignItems: "center", gap: 7 }}>
+            <span style={{ color: "#fff", font: "800 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
+              {KRAAM_SOORTEN[selVoorziet]?.emoji} {KRAAM_SOORTEN[selVoorziet]?.label} — kies wat je verkoopt en bepaal je prijs
             </span>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.96)", borderRadius: 999, padding: "6px 10px", boxShadow: "0 3px 10px rgba(0,0,0,.22)" }}>
-              <button onClick={() => setPrice(selVoorziet, prices[selVoorziet] - 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#d9534f", cursor: "pointer" }}>−</button>
-              <span style={{ font: "900 18px system-ui", color: "#234", minWidth: 78, textAlign: "center" }}>{prices[selVoorziet]} 🪙</span>
-              <button onClick={() => setPrice(selVoorziet, prices[selVoorziet] + 1)} style={{ border: "none", borderRadius: "50%", width: 36, height: 36, font: "900 20px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer" }}>+</button>
+            {/* Product kiezen. */}
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "center" }}>
+              {KRAAM_PRODUCTEN[selVoorziet].map((p, i) => {
+                const actief = p.id === selKraam?.id;
+                return (
+                  <button key={p.id} onClick={() => setProduct(selVoorziet, i)} style={{ border: actief ? "2px solid #2e7d32" : "1px solid rgba(255,255,255,0.6)", borderRadius: 12, padding: "6px 11px", font: "800 13px system-ui", color: "#234", background: actief ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 6px rgba(0,0,0,.2)", cursor: "pointer", whiteSpace: "nowrap" }}>{p.emoji} {p.label}</button>
+                );
+              })}
             </div>
+            {/* Reken-rij: inkoop (vast) → verkoop (instelbaar) → winst (live). */}
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "center", background: "rgba(255,255,255,0.96)", borderRadius: 16, padding: "8px 12px", boxShadow: "0 3px 10px rgba(0,0,0,.22)" }}>
+              <span style={{ font: "800 13px system-ui", color: "#555" }}>Inkoop <b style={{ color: "#234", fontSize: 16 }}>{selKraam?.inkoop} 🪙</b></span>
+              <span style={{ font: "900 16px system-ui", color: "#999" }}>→</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ font: "800 13px system-ui", color: "#555" }}>Verkoop</span>
+                <button onClick={() => setPrice(selVoorziet, selKraam.verkoop - 1)} style={{ border: "none", borderRadius: "50%", width: 34, height: 34, font: "900 19px system-ui", color: "#fff", background: "#d9534f", cursor: "pointer" }}>−</button>
+                <span style={{ font: "900 18px system-ui", color: "#234", minWidth: 52, textAlign: "center" }}>{selKraam?.verkoop} 🪙</span>
+                <button onClick={() => setPrice(selVoorziet, selKraam.verkoop + 1)} style={{ border: "none", borderRadius: "50%", width: 34, height: 34, font: "900 19px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer" }}>+</button>
+              </div>
+              <span style={{ font: "900 16px system-ui", color: "#999" }}>=</span>
+              <span style={{ font: "900 14px system-ui", color: selWinst > 0 ? "#1f7a3a" : "#c0392b", background: selWinst > 0 ? "#e7f3e2" : "#fdecea", borderRadius: 999, padding: "5px 11px" }}>
+                {selWinst > 0 ? `Winst ${selWinst} 🪙` : "Geen winst!"}
+              </span>
+            </div>
+            <span style={{ color: "#fff", font: "700 11.5px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.45)", textAlign: "center", maxWidth: 420 }}>
+              {selWinst <= 0
+                ? `Verkoop duurder dan je inkoop (${selKraam?.inkoop} 🪙), anders verdien je niets.`
+                : selKraam?.verkoop > selKraam?.fair + 2
+                  ? "Best duur — dan haken sommige bezoekers af. Lagere prijs = meer kopers."
+                  : "Mooie prijs! Veel bezoekers kopen dit."}
+            </span>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
               <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
               <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
