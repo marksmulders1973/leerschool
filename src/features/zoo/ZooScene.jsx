@@ -134,7 +134,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   // Hoogte-functie die altijd het laatste terrein leest (geen re-subscribe in loops).
   const heightFnRef = useRef(() => 0);
   heightFnRef.current = (x, z) => heightAt(terrain, x, z);
-  const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.6)); };
+  const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.9)); };
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 

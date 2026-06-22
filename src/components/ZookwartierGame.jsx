@@ -78,6 +78,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
   const [shareUrl, setShareUrl] = useState(null);
   const [shareCopied, setShareCopied] = useState(false);
+  const [resetArmed, setResetArmed] = useState(false); // 2-staps-bevestiging reset
   const [shopCat, setShopCat] = useState("dier");
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
   const [brushColor, setBrushColor] = useState("#e2574c"); // gekozen verfkleur
@@ -279,6 +280,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   const whatsappLink = shareUrl ? `https://wa.me/?text=${encodeURIComponent("Kom mijn park bekijken! " + shareUrl)}` : null;
 
+  // Park terugzetten naar het standaard begin-park (poort + pad + dier + huis).
+  // Muntjes blijven; alleen de indeling + het geboetseerde terrein gaan terug.
+  const resetPark = () => {
+    setPlacing(null); setSelectedIdx(null); setColorMode(false); setSculptMode(false);
+    setPlacedItems(STARTER_LAYOUT);
+    setTerrain(null);
+    if (userId && meta) saveZooState(userId, { ...meta, layout: STARTER_LAYOUT, terrain: null });
+    setResetArmed(false);
+    setPanel(null);
+    flits("Je park staat weer op het begin ✓");
+  };
+
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
     if (!userId || !meta) { flits("Nog niet ingelogd — opslaan lukt zo niet"); return; }
@@ -295,7 +308,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <span style={{ font: "800 11px system-ui", color: "#5b3d00", background: "#ffd54a", padding: "3px 9px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>🚧 In opbouw</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
+          <button onClick={() => { setPanel("uitleg"); setResetArmed(false); }} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
           <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
@@ -477,6 +490,22 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <p><b>🐣 Jonkies:</b> dieren kunnen er met de tijd een jonkie bij krijgen — dat levert extra muntjes op.</p>
                 <p><b>🕹️ Rondkijken:</b> sleep om te draaien, scroll of knijp om in/uit te zoomen.</p>
                 <p style={{ color: "#777", fontSize: 12.5 }}>Het park is nog volop in opbouw 🚧 — er komt steeds meer bij (attracties, paden en meer).</p>
+                <p><b>⛰️ Bergen & dalen:</b> tik op de <b>⛰️-knop</b> bovenin, kies <b>omhoog</b> of <b>omlaag</b> en tik dan op de grond om heuvels te maken of kuilen te graven.</p>
+
+                {/* Reset — zet het park terug naar het standaard begin-park. */}
+                <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid #eee" }}>
+                  {!resetArmed ? (
+                    <button onClick={() => setResetArmed(true)} style={{ border: "2px solid #d9534f", borderRadius: 999, padding: "9px 16px", font: "800 13.5px system-ui", color: "#d9534f", background: "#fff", cursor: "pointer" }}>♻️ Park resetten</button>
+                  ) : (
+                    <div style={{ background: "#fdeceb", borderRadius: 12, padding: "12px 14px" }}>
+                      <div style={{ font: "700 13.5px system-ui", color: "#234", marginBottom: 8 }}>Weet je het zeker? Je hele park gaat terug naar het begin (poort, pad, een dier en een huis). Je muntjes blijven.</div>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <button onClick={resetPark} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13.5px system-ui", color: "#fff", background: "#d9534f", cursor: "pointer" }}>Ja, reset mijn park</button>
+                        <button onClick={() => setResetArmed(false)} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13.5px system-ui", color: "#234", background: "#eee", cursor: "pointer" }}>Annuleer</button>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             ) : (
               <div>

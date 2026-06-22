@@ -35,7 +35,7 @@ export function heightAt(field, x, z) {
 
 // Zacht penseel: verhoog/verlaag rond (x,z) met cosinus-afval → ronde glooiing.
 // Geeft een NIEUW veld terug (voor React-state). radius in wereld-units.
-export function applyBrush(field, x, z, delta, radius = 4.5) {
+export function applyBrush(field, x, z, delta, radius = 8) {
   const out = field ? Float32Array.from(field) : flatField();
   const r = radius;
   for (let i = 0; i < TER_N; i++) {

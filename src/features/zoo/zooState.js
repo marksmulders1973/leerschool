@@ -14,11 +14,15 @@ const ENTRANCE_PATH = [];
 for (let gz = 2; gz <= 18; gz++) ENTRANCE_PATH.push({ assetId: "path", cell: [0, gz], rotation: 0, price: 0 });
 
 export const STARTER_LAYOUT = [
-  { assetId: "carousel", cell: [0, 0], rotation: 0, price: 0 },
-  { assetId: "deer", cell: [-4, -1], rotation: 0, price: 0 },
-  { assetId: "alpaca", cell: [4, -1], rotation: 0, price: 0 },
-  { assetId: "tree", cell: [-6, 4], rotation: 0, price: 0 },
-  { assetId: "treeOak", cell: [6, 4], rotation: 0, price: 0 },
+  { assetId: "carousel", cell: [0, 0], rotation: 0, price: 0 },   // draaimolen in het midden
+  { assetId: "houseA", cell: [-5, 7], rotation: 0, price: 0 },    // een huisje
+  { assetId: "deer", cell: [5, 6], rotation: 0, price: 0 },       // een dier
+  { assetId: "alpaca", cell: [-6, -3], rotation: 0, price: 0 },   // nog een dier
+  { assetId: "tree", cell: [-8, 3], rotation: 0, price: 0 },
+  { assetId: "treeOak", cell: [8, 3], rotation: 0, price: 0 },
+  { assetId: "treePalm", cell: [8, 11], rotation: 0, price: 0 },
+  { assetId: "flowerRed", cell: [-2, 15], rotation: 0, price: 0 },
+  { assetId: "flowerYellow", cell: [2, 15], rotation: 0, price: 0 },
   ...ENTRANCE_PATH,
 ];
 
