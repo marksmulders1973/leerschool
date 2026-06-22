@@ -3,11 +3,11 @@
 // Alles (dieren, hekken, gebouwen, poppetje) volgt de hoogte via heightAt().
 // Standaard helemaal vlak (alle hoogtes 0) → bestaande parken veranderen niet.
 
-export const TER_EXT = 22;            // halve breedte in wereld-units (vloer ±22)
+export const TER_EXT = 40;            // halve breedte in wereld-units (vloer ±40)
 export const TER_STEP = 2;           // afstand tussen rasterpunten
-export const TER_N = (TER_EXT * 2) / TER_STEP + 1; // 23 punten per as
-export const TER_SIZE = TER_EXT * 2; // 44
-export const TER_SEG = TER_N - 1;    // 22 segmenten
+export const TER_N = (TER_EXT * 2) / TER_STEP + 1; // 41 punten per as
+export const TER_SIZE = TER_EXT * 2; // 80
+export const TER_SEG = TER_N - 1;    // 40 segmenten
 
 export const MIN_H = -3.5;
 export const MAX_H = 7;

@@ -354,6 +354,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           selectedIdx={selectedIdx}
           moveIdx={placing?.moveIdx ?? -1}
           inputRef={inputRef}
+          parkNaam={parkNaam}
         />
       </Suspense>
 

@@ -126,6 +126,7 @@ export default function ParkBezoek({ code, onHome }) {
           selectedIdx={null}
           moveIdx={-1}
           inputRef={inputRef}
+          parkNaam="Dierenpark"
         />
       </Suspense>
 

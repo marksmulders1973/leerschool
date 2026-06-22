@@ -2,10 +2,10 @@
 // dierverblijven). VOORLOPIG opgebouwd uit eenvoudige low-poly vormen in één
 // warme stijl, als "in opbouw"-visualisatie. Worden later vervangen door echte
 // Kenney/Quaternius-modellen (de laad-pijplijn ligt klaar).
-import { useRef, useState } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3, Color } from "three";
+import { Vector3, Color, CanvasTexture } from "three";
 import ZooModel from "./ZooModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS } from "./AssetRegistry";
 
@@ -487,6 +487,61 @@ export function FenceCorner({ position = [0, 0, 0], rotation = 0 }) {
         <mesh key={`z${i}`} castShadow position={[0, h, half / 2]}><boxGeometry args={[0.08, 0.08, half]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
       ))}
       <mesh castShadow position={[0, 0.35, half]}><boxGeometry args={[0.1, 0.7, 0.1]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
+// boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
+function maakNaambord(tekst) {
+  const cnv = document.createElement("canvas");
+  cnv.width = 640; cnv.height = 160;
+  const ctx = cnv.getContext("2d");
+  // houten plank-achtergrond met rand
+  ctx.fillStyle = "#5a3b1e"; ctx.fillRect(0, 0, 640, 160);
+  ctx.fillStyle = "#754c27"; ctx.fillRect(10, 10, 620, 140);
+  ctx.fillStyle = "#fff5e0";
+  ctx.font = "bold 70px system-ui, sans-serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  // tekst inkorten als 'ie te lang is
+  let t = (tekst || "Mijn Park").trim();
+  while (ctx.measureText(t).width > 580 && t.length > 4) t = t.slice(0, -1);
+  if (t !== (tekst || "").trim()) t = t.slice(0, -1) + "…";
+  ctx.fillText(t, 320, 84);
+  const tex = new CanvasTexture(cnv);
+  tex.anisotropy = 4;
+  return tex;
+}
+
+// Ingang-poort (Zoo Tycoon-stijl): twee stevige pilaren, een balk erover en een
+// naambord met de parknaam erboven. Vast decor aan de voorkant van het park.
+export function EntranceGate({ name = "Mijn Park", position = [0, 0, 0], rotation = 0 }) {
+  const tex = useMemo(() => maakNaambord(name), [name]);
+  useEffect(() => () => tex.dispose(), [tex]);
+  const hout = "#6b4a2b", steen = "#caa472";
+  const W = 9;                 // breedte tussen de pilaren-buitenkant
+  const H = 3.6;               // pilaarhoogte
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* pilaren */}
+      {[-W / 2, W / 2].map((x, i) => (
+        <group key={i} position={[x, 0, 0]}>
+          <mesh castShadow position={[0, H / 2, 0]}><boxGeometry args={[0.8, H, 0.8]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+          <mesh castShadow position={[0, H + 0.15, 0]}><boxGeometry args={[1.0, 0.3, 1.0]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+        </group>
+      ))}
+      {/* bovenbalk */}
+      <mesh castShadow position={[0, H + 0.5, 0]}><boxGeometry args={[W + 1.2, 0.5, 0.8]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {/* naambord boven de balk (kijkt naar de voorkant) */}
+      <mesh position={[0, H + 1.35, 0.05]}>
+        <planeGeometry args={[W * 0.92, (W * 0.92) / 4]} />
+        <meshStandardMaterial map={tex} roughness={1} />
+      </mesh>
+      {/* zelfde bord aan de achterkant zodat het ook van binnenuit leesbaar is */}
+      <mesh position={[0, H + 1.35, -0.05]} rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[W * 0.92, (W * 0.92) / 4]} />
+        <meshStandardMaterial map={tex} roughness={1} />
+      </mesh>
     </group>
   );
 }
