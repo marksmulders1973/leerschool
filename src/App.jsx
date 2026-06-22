@@ -1156,7 +1156,9 @@ export default function App() {
           {new URLSearchParams(window.location.search).get("bezoek") ? (
             <ParkBezoek code={new URLSearchParams(window.location.search).get("bezoek")} onHome={() => { window.location.href = "/dierentuin"; }} />
           ) : (
-            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")} />
+            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")}
+              onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
+              onOpenLeerpaden={() => setPage("learn-paths-hub")} />
           )}
         </Suspense>
       )}

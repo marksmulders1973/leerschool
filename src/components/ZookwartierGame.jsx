@@ -13,7 +13,7 @@ import { serialize as serTerrain, deserialize as deserTerrain } from "../feature
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
-import { loadMasteryForPlayer } from "../features/mastery/mastery.js";
+import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -113,7 +113,7 @@ const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden }) {
   const naam = (userName || "").trim();
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
@@ -136,6 +136,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
+  const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
+  const [dialoog, setDialoog] = useState(null);          // open praatje met een bezoeker { step, reply? }
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -171,12 +173,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     (async () => {
       try {
         const recs = await loadMasteryForPlayer(naam);
+        if (cancel) return;
+        // Beste vak → compliment.
         const goed = (recs || []).filter((r) => r.attempts >= 5 && r.correct / r.attempts >= 0.7);
-        if (!goed.length || cancel) return;
-        goed.sort((a, b) => b.correct / b.attempts - a.correct / a.attempts);
-        const r = goed[0];
-        const vak = r.path?.subject || r.path?.title;
-        if (vak) setGoedeScore({ vak, pct: Math.round((r.correct / r.attempts) * 100) });
+        if (goed.length) {
+          goed.sort((a, b) => b.correct / b.attempts - a.correct / a.attempts);
+          const r = goed[0];
+          const vak = r.path?.subject || r.path?.title;
+          if (vak) setGoedeScore({ vak, pct: Math.round((r.correct / r.attempts) * 100) });
+        }
+        // Volgende onderwerp om te oefenen → "ga oefenen"-knop in het praatje.
+        const rec = recommendNextTopic(recs || []);
+        if (rec?.path) setOefenPad({ id: rec.pathId, title: rec.path.title, subject: rec.path.subject });
       } catch { /* geen compliment, geen probleem */ }
     })();
     return () => { cancel = true; };
@@ -446,6 +454,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     flits("Park opgeslagen ✓");
   };
 
+  // Tik op een bezoeker → praatje openen (niet tijdens bouwen/plaatsen/selecteren).
+  const tapBezoeker = () => {
+    if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
+    setDialoog({ step: 0 });
+  };
+  // Vak waar het praatje over gaat: aanbevolen oefenpad, anders je beste vak.
+  const praatVak = oefenPad?.subject || oefenPad?.title || goedeScore?.vak || "rekenen";
+  const gaOefenen = () => {
+    setDialoog(null);
+    if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+    else if (onOpenLeerpaden) onOpenLeerpaden();
+    else onHome && onHome();
+  };
+
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
       {/* Header. */}
@@ -520,6 +542,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           firstPerson={firstPerson}
           spelerNaam={naam}
           goedeScore={goedeScore}
+          onTapBezoeker={tapBezoeker}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}
@@ -657,6 +680,43 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </div>
         )}
       </div>
+
+      {/* Praatje met een bezoeker → leidt terug naar leren ("ga oefenen"). */}
+      {dialoog && (
+        <div onClick={() => setDialoog(null)} style={{ position: "absolute", inset: 0, zIndex: 22, background: "rgba(10,20,10,0.5)", display: "grid", placeItems: "end center", padding: "0 14px calc(20px + env(safe-area-inset-bottom))" }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(440px, 96vw)", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "16px 18px", marginBottom: 8 }}>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+              <div style={{ fontSize: 34, lineHeight: 1, flex: "0 0 auto" }}>🧑</div>
+              <div style={{ flex: 1 }}>
+                <p style={{ margin: "2px 0 0", font: "700 15.5px/1.45 system-ui", color: "#234" }}>
+                  {dialoog.step === 0
+                    ? `${naam ? "Hoi " + naam + "! " : "Hoi! "}Hoe gaat het met ${String(praatVak).toLowerCase()}?`
+                    : dialoog.reply === "lastig"
+                      ? "Niet erg — samen oefenen maakt het zo makkelijker. Zullen we?"
+                      : "Knap! Nog even oefenen om het goed vast te houden?"}
+                </p>
+              </div>
+              <button onClick={() => setDialoog(null)} style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "700 15px system-ui", background: "#eee", cursor: "pointer", flex: "0 0 auto" }}>✕</button>
+            </div>
+
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, justifyContent: "flex-end" }}>
+              {dialoog.step === 0 ? (
+                <>
+                  <button onClick={() => setDialoog({ step: 1, reply: "goed" })} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "#e7f3e2", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: "pointer" }}>Goed! 😄</button>
+                  <button onClick={() => setDialoog({ step: 1, reply: "lastig" })} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "#fdeede", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: "pointer" }}>Best lastig 😅</button>
+                </>
+              ) : (
+                <>
+                  <button onClick={() => setDialoog(null)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Misschien later</button>
+                  <button onClick={gaOefenen} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
+                    ▶ {oefenPad?.title ? `Oefen: ${oefenPad.title}` : "Ga oefenen"}
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Overlays: uitleg + diergids. */}
       {(panel === "uitleg" || panel === "gids") && (

@@ -454,7 +454,7 @@ function koopKans(kind, prijs) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef }) {
+function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -559,7 +559,12 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
     }
   });
   return (
-    <group ref={g}>
+    <group
+      ref={g}
+      onPointerDown={onTap ? (e) => { e.stopPropagation(); onTap(); } : undefined}
+      onPointerOver={onTap ? (e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; } : undefined}
+      onPointerOut={onTap ? () => { document.body.style.cursor = "default"; } : undefined}
+    >
       {bubble && (
         <Html position={[0, 2.0, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
           <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
@@ -578,10 +583,10 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
   );
 }
 
-export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef }) {
+export function Visitors({ count = 4, standsRef, pricesRef, onBuy, heightRef, playerRef, factsRef, onTap }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} />)}
     </group>
   );
 }
