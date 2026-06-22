@@ -458,11 +458,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const tapBezoeker = () => {
     if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
     setDialoog({ step: 0 });
+    // Trechter-meting (park → leren): praatje geopend.
+    try { track("park_praatje"); } catch { /* nooit laten breken */ }
   };
   // Vak waar het praatje over gaat: aanbevolen oefenpad, anders je beste vak.
   const praatVak = oefenPad?.subject || oefenPad?.title || goedeScore?.vak || "rekenen";
   const gaOefenen = () => {
     setDialoog(null);
+    // Trechter-meting: vanuit het park doorgeklikt naar een leerpad (of de hub).
+    try { track("park_naar_leren", { pad: oefenPad?.id || null }); } catch { /* nooit laten breken */ }
     if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
     else if (onOpenLeerpaden) onOpenLeerpaden();
     else onHome && onHome();
