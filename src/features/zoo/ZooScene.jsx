@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -39,6 +39,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} />;
+  if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;

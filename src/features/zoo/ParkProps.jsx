@@ -193,6 +193,56 @@ export function SwingRide({ position = [0, 0, 0] }) {
   );
 }
 
+// Treintje (procedureel) — een locomotief + 2 wagonnetjes die rondjes rijden
+// over een rond spoor. De hele trein-groep draait om het midden; elke wagon
+// staat op zijn hoek met de neus in de rij-richting (raaklijn).
+export function TrainRide({ position = [0, 0, 0] }) {
+  const train = useRef();
+  useFrame((_, dt) => { if (train.current) train.current.rotation.y += dt * 0.5; });
+  const R = 2.0;
+  const wagons = [
+    { a: 0, loco: true, color: "#d65a5a" },
+    { a: -0.42, loco: false, color: "#4a90d9" },
+    { a: -0.84, loco: false, color: "#f2b134" },
+  ];
+  const hout = "#7a6f63", staal = "#555";
+  return (
+    <group position={position}>
+      {/* rond spoor */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0]} receiveShadow>
+        <ringGeometry args={[R - 0.2, R + 0.2, 44]} />
+        <meshStandardMaterial color={hout} roughness={1} />
+      </mesh>
+      {/* draaiende trein */}
+      <group ref={train}>
+        {wagons.map((w, i) => {
+          const x = Math.cos(w.a) * R, z = Math.sin(w.a) * R;
+          return (
+            <group key={i} position={[x, 0, z]} rotation={[0, -w.a, 0]}>
+              {w.loco ? (
+                <>
+                  <mesh castShadow position={[0, 0.32, 0]}><boxGeometry args={[0.5, 0.4, 0.9]} /><meshStandardMaterial color={w.color} flatShading roughness={0.9} /></mesh>
+                  <mesh castShadow position={[0, 0.66, -0.18]}><boxGeometry args={[0.5, 0.36, 0.42]} /><meshStandardMaterial color={w.color} flatShading roughness={0.9} /></mesh>
+                  <mesh position={[0, 0.72, 0.32]}><cylinderGeometry args={[0.08, 0.1, 0.34, 10]} /><meshStandardMaterial color={staal} roughness={0.7} /></mesh>
+                </>
+              ) : (
+                <>
+                  <mesh castShadow position={[0, 0.3, 0]}><boxGeometry args={[0.5, 0.34, 0.7]} /><meshStandardMaterial color={w.color} flatShading roughness={0.9} /></mesh>
+                  <mesh castShadow position={[0, 0.52, 0]}><boxGeometry args={[0.56, 0.08, 0.74]} /><meshStandardMaterial color="#eee" roughness={0.8} /></mesh>
+                </>
+              )}
+              {/* wieltjes */}
+              {[-0.28, 0.28].map((zz, k) => (
+                <mesh key={k} position={[0, 0.12, zz]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.12, 0.12, 0.54, 10]} /><meshStandardMaterial color={staal} roughness={0.6} /></mesh>
+              ))}
+            </group>
+          );
+        })}
+      </group>
+    </group>
+  );
+}
+
 // Het poppetje van de speler — zelf-gebouwd (geen losse textuur → nooit "wit"),
 // wiebelt zachtjes. Later evt. vervangen door een vertex-colored model.
 export function Character({ position = [0, 0, 0], rotation = 0 }) {
