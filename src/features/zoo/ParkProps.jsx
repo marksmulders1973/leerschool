@@ -280,14 +280,27 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
+  const yaw = useRef(0);       // kijkrichting (eerstepersoons)
+  const wasFP = useRef(false); // net overgeschakeld naar eerstepersoons?
   const solidRef = useRef(isSolid);
   solidRef.current = isSolid;
   const url = avatarUrl || CHARACTERS[0].url;
+
+  // Botsings-bewust verplaatsen naar (nx,nz): glijdt langs muren i.p.v. vast te
+  // lopen. Begrenst ook tot binnen het park.
+  const verplaats = (nx, nz) => {
+    const solid = solidRef.current;
+    const vast = solid ? solid(pos.current.x, pos.current.z) : false;
+    if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
+    else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
+    const d = Math.hypot(pos.current.x, pos.current.z);
+    if (d > 38) { pos.current.x *= 38 / d; pos.current.z *= 38 / d; }
+  };
 
   useFrame((state, dt) => {
     const inp = inputRef?.current || {};
@@ -299,6 +312,29 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     const mag = Math.hypot(mx, my);
     const node = g.current;
     if (!node) return;
+    const dts = Math.min(dt, 0.05); // tijdstap begrenzen (geen sprong na tab-wissel)
+
+    // ── Eerstepersoons: links/rechts draait je blik, vooruit/achteruit loopt waar
+    //    je kijkt. De camera zit in het hoofd (model verborgen). ──
+    if (firstPerson) {
+      if (!wasFP.current) { yaw.current = node.rotation.y; wasFP.current = true; }
+      yaw.current -= mx * 2.2 * dts;                 // draaien
+      const fx = Math.sin(yaw.current), fz = Math.cos(yaw.current);
+      const walk = -my;                               // joystick omhoog = vooruit
+      moving.current = Math.abs(walk) > 0.12 || Math.abs(mx) > 0.12;
+      if (Math.abs(walk) > 0.12) {
+        const step = 3.0 * dts * walk;
+        verplaats(pos.current.x + fx * step, pos.current.z + fz * step);
+      }
+      node.rotation.y = yaw.current;
+      const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      node.position.set(pos.current.x, ty, pos.current.z);
+      if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
+      // Mikpunt iets vóór + iets onder ooghoogte → natuurlijke blik.
+      if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.5 - 0.22, pos.current.z + fz * 4);
+      return;
+    }
+    wasFP.current = false;
 
     if (mag > 0.12) {
       moving.current = true;
@@ -328,10 +364,24 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   });
 
   return (
-    <group ref={g} position={start}>
+    // In eerstepersoons zit de camera in het hoofd → eigen poppetje verbergen.
+    <group ref={g} position={start} visible={!firstPerson}>
       <CharacterModel key={url} url={url} movingRef={moving} />
     </group>
   );
+}
+
+// Eerstepersoons-camera: zit in het hoofd van de speler en kijkt mee in z'n
+// blikrichting (de Player schrijft positie + mikpunt elke frame). OrbitControls
+// staat dan uit, zodat niets tegenwerkt.
+export function FirstPersonCamera({ posRef, lookRef, active }) {
+  useFrame((state) => {
+    if (!active || !posRef?.current || !lookRef?.current) return;
+    const p = posRef.current;
+    state.camera.position.set(p.x, p.y + 1.5, p.z); // ooghoogte ~1,5 m
+    state.camera.lookAt(lookRef.current);
+  });
+  return null;
 }
 
 // Bezoekers: kleine figuurtjes die door het park wandelen. Ze krijgen een

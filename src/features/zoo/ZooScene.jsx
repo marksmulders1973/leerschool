@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow, FirstPersonCamera } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -255,9 +255,10 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
+  const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
   const orbitRef = useRef();
   // Hoogte-functie die altijd het laatste terrein leest (geen re-subscribe in loops).
   const heightFnRef = useRef(() => 0);
@@ -337,8 +338,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
-        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} />
-        <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam} />
+        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
+        <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
+        <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} pricesRef={pricesRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} />
 
         {placing && (
@@ -380,6 +382,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <OrbitControls
         ref={orbitRef}
         makeDefault
+        enabled={!firstPerson}
         enableDamping
         dampingFactor={0.08}
         minDistance={6}

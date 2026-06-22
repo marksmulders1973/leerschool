@@ -88,6 +88,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [houseParts, setHouseParts] = useState(null);   // gevonden onderdelen (basiskleuren) van het gekozen huis
   const [activePart, setActivePart] = useState(0);      // welk onderdeel je nu kleurt
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
+  const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -394,7 +395,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setPanel("reset")} title="Park resetten naar het begin" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>♻️</button>
-          <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
+          <button onClick={() => { setFollowCam((v) => !v); setFirstPerson(false); }} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
+          <button onClick={() => { setFirstPerson((v) => !v); setFollowCam(false); setPlacing(null); setSelectedIdx(null); }} title="Door de ogen van je poppetje (eerstepersoons)" style={{ pointerEvents: "auto", border: firstPerson ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: firstPerson ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>👁️</button>
           <button onClick={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
           <button onClick={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Water — vul een dal met een meertje" style={{ pointerEvents: "auto", border: waterMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: waterMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💧</button>
           <button onClick={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} title="Grond schilderen (zand, sneeuw, aarde…)" style={{ pointerEvents: "auto", border: groundMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: groundMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🏖️</button>
@@ -448,6 +450,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           paintCursor={colorMode && selIsHuis ? verfCursor(brushColor) : null}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
+          firstPerson={firstPerson}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}
