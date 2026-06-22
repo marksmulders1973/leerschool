@@ -57,6 +57,10 @@ export const ZOO_ASSETS = {
   ijscokraam: { id: "ijscokraam", kind: "building", name: "IJscokraam", emoji: "🍦", procedural: "ijscokraam", price: 35, voorziet: "ice" },
   popcornkraam: { id: "popcornkraam", kind: "building", name: "Popcornkraam", emoji: "🍿", procedural: "popcornkraam", price: 35, voorziet: "popcorn" },
   fountain: { id: "fountain", kind: "building", name: "Fontein", emoji: "⛲", url: "/models/zoo/build/fountain.glb", targetHeight: 1.4, price: 35 },
+  // Gast-voorzieningen (procedureel, klein). Donatiebox levert passief muntjes op.
+  bankje: { id: "bankje", kind: "decor", name: "Bankje", emoji: "🪑", procedural: "bench", cells: 1, price: 5 },
+  prullenbak: { id: "prullenbak", kind: "decor", name: "Prullenbak", emoji: "🗑️", procedural: "trash", cells: 1, price: 3 },
+  donatiebox: { id: "donatiebox", kind: "decor", name: "Donatiebox", emoji: "💰", procedural: "donation", cells: 1, price: 20, inkomst: 4 },
   // Echte Kenney-huizen met hun natuurlijke (realistische) kleuren — elk een
   // ander dak/muur-schema. Géén monochrome tint.
   houseA: { id: "houseA", kind: "building", name: "Huis 1", emoji: "🏠", url: "/models/zoo/build/house-a.glb", targetHeight: 3.4, price: 60 },
@@ -112,7 +116,7 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "deer", "alpaca", "cow", "donkey", "wolf", "stag", "horse", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"];
-export const PLAATSBARE_BOUWWERKEN = ["patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_BOUWWERKEN = ["donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["carousel"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];

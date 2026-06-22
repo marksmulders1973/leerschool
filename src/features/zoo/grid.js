@@ -52,10 +52,11 @@ export function isPlaatsbaar(gx, gz, bezetteCellen, cells = DEFAULT_CELLS) {
 
 // Set van bezette vakjes uit de geplaatste items (elk met eigen footprint via
 // cellsOf(assetId)). Optioneel één index overslaan (bv. tijdens verplaatsen).
-export function bezetteCellenVan(items, skipIdx = -1, cellsOf = () => DEFAULT_CELLS) {
+export function bezetteCellenVan(items, skipIdx = -1, cellsOf = () => DEFAULT_CELLS, blokkeert = () => true) {
   const s = new Set();
   items.forEach((it, i) => {
     if (i === skipIdx) return;
+    if (!blokkeert(it.assetId)) return; // niet-blokkerend (bv. paden) → je mag er iets op zetten
     for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsOf(it.assetId))) s.add(cellKey(cx, cz));
   });
   return s;

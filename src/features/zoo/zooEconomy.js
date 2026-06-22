@@ -5,6 +5,7 @@
 //  - 15 min leren voltooid (de canonieke kwartier-mijlpaal): +vast bedrag
 //
 // Uitgeven aan dieren/attracties komt in de winkel (stap 4).
+import { getAsset } from "./AssetRegistry";
 
 export const START_COINS = 200; // ruim startbudget (lanceerweek) zodat je meteen kunt bouwen
 export const LOGIN_BASE = 5;            // basis voor dagelijks inloggen
@@ -38,9 +39,12 @@ export function dagenVerschil(fromStr, toStr = todayStr()) {
 }
 
 // Wat je park per dag oplevert. Dieren, gebouwen en attracties trekken
-// bezoekers → muntjes; decor (paden/hekken/bomen) levert niets op.
+// bezoekers → muntjes; decor (paden/hekken/bomen) levert niets op. Een asset met
+// een eigen `inkomst`-veld (bv. de donatiebox) levert dat vaste bedrag per dag.
 export function inkomstenPerDag(items, kindVan = () => "animal") {
   return (items || []).reduce((s, it) => {
+    const a = getAsset(it.assetId);
+    if (a && a.inkomst) return s + a.inkomst;
     const k = kindVan(it.assetId);
     if (k === "animal") return s + INKOMST_PER_VERBLIJF + (it.babies || 0) * INKOMST_PER_BABY;
     if (k === "building" || k === "attraction") return s + INKOMST_PER_VERBLIJF;

@@ -512,6 +512,46 @@ export function Rock({ position = [0, 0, 0], rotation = 0, variant = "single" })
   );
 }
 
+// Bankje (procedureel) — een houten parkbankje waar bezoekers kunnen zitten.
+export function Bench({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#9a6a36", poot = "#5a3b1e";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow position={[0, 0.45, 0]}><boxGeometry args={[1.6, 0.1, 0.5]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.74, -0.21]}><boxGeometry args={[1.6, 0.42, 0.08]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      {[[-0.7, 0.18], [0.7, 0.18], [-0.7, -0.18], [0.7, -0.18]].map(([x, z], i) => (
+        <mesh key={i} castShadow position={[x, 0.2, z]}><boxGeometry args={[0.1, 0.4, 0.1]} /><meshStandardMaterial color={poot} flatShading roughness={1} /></mesh>
+      ))}
+    </group>
+  );
+}
+
+// Prullenbak (procedureel) — een vrolijke groene afvalbak met deksel.
+export function TrashCan({ position = [0, 0, 0], rotation = 0 }) {
+  const groen = "#3a7d3a", grijs = "#6b6f73";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow position={[0, 0.35, 0]}><cylinderGeometry args={[0.28, 0.24, 0.7, 14]} /><meshStandardMaterial color={groen} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.73, 0]}><cylinderGeometry args={[0.31, 0.31, 0.08, 14]} /><meshStandardMaterial color={grijs} flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Donatiebox (procedureel) — een spaarpot op een paaltje met een doorzichtige
+// bovenkant en een muntsymbool. Levert passief muntjes op (zie zooEconomy).
+export function DonationBox({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#8a5a2b", paal = "#6b4a2b", glas = "#bfe6ff", geel = "#f2c94c";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow position={[0, 0.4, 0]}><boxGeometry args={[0.12, 0.8, 0.12]} /><meshStandardMaterial color={paal} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.95, 0]}><boxGeometry args={[0.5, 0.5, 0.4]} /><meshStandardMaterial color={hout} flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.24, 0]}><boxGeometry args={[0.42, 0.14, 0.32]} /><meshStandardMaterial color={glas} transparent opacity={0.45} roughness={0.1} /></mesh>
+      <mesh position={[0, 1.18, 0.205]}><boxGeometry args={[0.22, 0.04, 0.03]} /><meshStandardMaterial color="#3a2a18" /></mesh>
+      <mesh position={[0, 0.95, 0.205]}><circleGeometry args={[0.13, 18]} /><meshStandardMaterial color={geel} flatShading roughness={0.6} metalness={0.2} /></mesh>
+    </group>
+  );
+}
+
 // Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
 // boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
 function maakNaambord(tekst) {

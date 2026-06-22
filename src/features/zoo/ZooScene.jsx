@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -40,6 +40,9 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
+  if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fencePanel") return <FencePanel position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceCorner") return <FenceCorner position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceGate") return <FenceGate position={[x, y, z]} rotation={rotation} />;
@@ -190,7 +193,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
-  const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan);
+  // Paden blokkeren niet → je mag er planten/hekjes/bankjes op zetten.
+  const blokkeert = (id) => getAsset(id)?.procedural !== "path";
+  const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan, blokkeert);
   const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells);
 
   // Aantal bezoekers schaalt mee met wat je park te bieden heeft.
