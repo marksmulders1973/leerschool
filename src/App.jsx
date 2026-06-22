@@ -66,6 +66,7 @@ const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
+const ParkBezoek = lazy(() => import("./components/ParkBezoek.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
@@ -1152,7 +1153,11 @@ export default function App() {
       )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
-          <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")} />
+          {new URLSearchParams(window.location.search).get("bezoek") ? (
+            <ParkBezoek code={new URLSearchParams(window.location.search).get("bezoek")} onHome={() => { window.location.href = "/dierentuin"; }} />
+          ) : (
+            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")} />
+          )}
         </Suspense>
       )}
       {page === "supporterGame" && (

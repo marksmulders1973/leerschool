@@ -6,7 +6,7 @@
 // De zware three.js-scene laadt lazy, zodat de leer-app snel blijft.
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
-import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT } from "../features/zoo/zooState";
+import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
@@ -75,7 +75,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [loaded, setLoaded] = useState(false);
   const [reward, setReward] = useState(null);
   const [melding, setMelding] = useState(null);
-  const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | null
+  const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
+  const [shareUrl, setShareUrl] = useState(null);
+  const [shareCopied, setShareCopied] = useState(false);
   const [shopCat, setShopCat] = useState("dier");
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
   const [brushColor, setBrushColor] = useState("#e2574c"); // gekozen verfkleur
@@ -260,6 +262,23 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   const sluitSelectie = () => { setSelectedIdx(null); setColorMode(false); setHouseParts(null); setActivePart(0); };
 
+  // Deel je park: onraadbare link → vriend opent 'm en bekijkt je park (alleen
+  // kijken). Geen namen/chat → veilig. Link via WhatsApp of kopiëren.
+  const openDelen = async () => {
+    setPanel("delen");
+    setShareCopied(false);
+    if (!shareUrl && userId) {
+      const code = await getShareCode(userId);
+      if (code) setShareUrl(`${window.location.origin}/dierentuin?bezoek=${code}`);
+    }
+  };
+  const kopieerLink = async () => {
+    if (!shareUrl) return;
+    try { await navigator.clipboard.writeText(shareUrl); setShareCopied(true); setTimeout(() => setShareCopied(false), 2000); }
+    catch { flits("Kopiëren lukte niet — selecteer de link handmatig"); }
+  };
+  const whatsappLink = shareUrl ? `https://wa.me/?text=${encodeURIComponent("Kom mijn park bekijken! " + shareUrl)}` : null;
+
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
     if (!userId || !meta) { flits("Nog niet ingelogd — opslaan lukt zo niet"); return; }
@@ -278,6 +297,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <button onClick={() => setPanel("uitleg")} title="Uitleg" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>ℹ️</button>
           <button onClick={() => setPanel("gids")} title="Diergids" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📖</button>
+          <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
           <button onClick={() => { setSculptMode((v) => !v); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
@@ -425,7 +445,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       </div>
 
       {/* Overlays: uitleg + diergids. */}
-      {panel && (
+      {(panel === "uitleg" || panel === "gids") && (
         <div
           onClick={() => setPanel(null)}
           style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}
@@ -477,6 +497,33 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   </div>
                 ))}
                 <p style={{ color: "#777", fontSize: 12.5, marginBottom: 0 }}>🚧 Binnenkort: nog meer attracties en paden.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Deel-modal: link om je park te laten bekijken (alleen kijken). */}
+      {panel === "delen" && (
+        <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>📤 Deel je park</h2>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+            {!userId ? (
+              <p style={{ font: "500 14.5px/1.5 system-ui", color: "#555", marginTop: 0 }}>Log eerst in om je eigen park te kunnen delen.</p>
+            ) : !shareUrl ? (
+              <p style={{ font: "500 14.5px/1.5 system-ui", color: "#555", marginTop: 0 }}>Link maken…</p>
+            ) : (
+              <div style={{ font: "500 14.5px/1.5 system-ui", color: "#333" }}>
+                <p style={{ marginTop: 0 }}>Stuur deze link naar een vriend. Wie 'm opent, mag jouw park <b>bekijken en erin rondlopen</b> — maar niets veranderen. 🔒</p>
+                <div style={{ display: "flex", gap: 6, alignItems: "center", background: "#f0eee4", borderRadius: 10, padding: "8px 10px", margin: "10px 0" }}>
+                  <input readOnly value={shareUrl} onFocus={(e) => e.target.select()} style={{ flex: 1, border: "none", background: "transparent", font: "600 13px system-ui", color: "#234", outline: "none", minWidth: 0 }} />
+                  <button onClick={kopieerLink} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "7px 12px", font: "800 12.5px system-ui", color: "#fff", background: shareCopied ? "#2e7d32" : "#4a90d9", cursor: "pointer" }}>{shareCopied ? "Gekopieerd ✓" : "Kopieer"}</button>
+                </div>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", textDecoration: "none", border: "none", borderRadius: 999, padding: "11px 14px", font: "800 14.5px system-ui", color: "#fff", background: "#25d366", boxShadow: "0 3px 10px rgba(0,0,0,.18)" }}>💬 Deel via WhatsApp</a>
+                <p style={{ color: "#777", fontSize: 12, marginBottom: 0, marginTop: 12 }}>De link toont geen naam en niemand kan je park veranderen. Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.</p>
               </div>
             )}
           </div>

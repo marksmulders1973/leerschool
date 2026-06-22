@@ -47,6 +47,43 @@ export async function loadZooState(userId) {
   }
 }
 
+// Onraadbare deel-code (8 tekens). Per park, zodat je je park read-only kunt
+// delen via een link. Geen PII in de code.
+function randomShareCode() {
+  return Math.random().toString(36).slice(2, 6) + Math.random().toString(36).slice(2, 6);
+}
+
+// Haalt de deel-code van dit park op; maakt er een aan als die er nog niet is.
+export async function getShareCode(userId) {
+  if (!userId) return null;
+  try {
+    let { data } = await supabase.from("zoo_state").select("share_code").eq("user_id", userId).maybeSingle();
+    if (data?.share_code) return data.share_code;
+    const code = randomShareCode();
+    const { error } = await supabase.from("zoo_state").upsert({ user_id: userId, share_code: code }, { onConflict: "user_id" });
+    if (error) { console.warn("[zoo] deel-code maken mislukt:", error.message); return null; }
+    return code;
+  } catch (e) {
+    console.warn("[zoo] deel-code exception:", e?.message);
+    return null;
+  }
+}
+
+// Laadt een gedeeld park (alleen-lezen) op basis van de deel-code. Gebruikt de
+// veilige RPC die enkel de indeling teruggeeft (geen naam/user-id/muntjes).
+export async function loadSharedPark(code) {
+  if (!code) return null;
+  try {
+    const { data, error } = await supabase.rpc("get_shared_park", { code });
+    if (error) { console.warn("[zoo] bezoek laden mislukt:", error.message); return null; }
+    const row = Array.isArray(data) ? data[0] : data;
+    return row || null;
+  } catch (e) {
+    console.warn("[zoo] bezoek exception:", e?.message);
+    return null;
+  }
+}
+
 // Schrijft de (gedeeltelijke) staat weg. Upsert op user_id.
 export async function saveZooState(userId, patch) {
   if (!userId) return;
