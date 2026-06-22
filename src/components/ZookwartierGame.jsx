@@ -47,6 +47,51 @@ function Joystick({ inputRef }) {
   );
 }
 
+// Eerstepersoons-besturing: richten + lopen met muis of vinger. Schrijft naar
+// inputRef.current.look = { active, dx, dy } (active = ingedrukt → vooruit).
+//  • Muis (laptop): beweeg om rond te kijken (positie t.o.v. midden draait/kijkt,
+//    met dode zone in het midden); linkerknop ingedrukt houden = vooruit lopen.
+//  • Touch (telefoon): vinger neerzetten = lopen; tijdens vasthouden links/rechts
+//    vegen = draaien, omhoog/omlaag = omhoog/omlaag kijken.
+function LookControl({ inputRef }) {
+  const ref = useRef(null);
+  const drag = useRef(null);
+  const set = (patch) => { const l = inputRef.current.look || (inputRef.current.look = { active: false, dx: 0, dy: 0 }); Object.assign(l, patch); };
+  const clamp = (v) => Math.max(-1, Math.min(1, v));
+  const dz = (v) => { const a = Math.abs(v); return a < 0.18 ? 0 : Math.sign(v) * Math.min(1, (a - 0.18) / 0.6); };
+  const onDown = (e) => {
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+    if (e.pointerType === "touch") drag.current = { x: e.clientX, y: e.clientY };
+    set({ active: true });
+  };
+  const onMove = (e) => {
+    const r = ref.current.getBoundingClientRect();
+    if (e.pointerType === "touch") {
+      if (!drag.current) return;
+      set({ dx: clamp((e.clientX - drag.current.x) / (r.width * 0.22)), dy: clamp((e.clientY - drag.current.y) / (r.height * 0.22)) });
+    } else {
+      set({ dx: dz((e.clientX - (r.left + r.width / 2)) / (r.width / 2)), dy: dz((e.clientY - (r.top + r.height / 2)) / (r.height / 2)) });
+    }
+  };
+  const onUp = (e) => {
+    drag.current = null;
+    if (e.pointerType === "touch") set({ active: false, dx: 0, dy: 0 });
+    else set({ active: false });
+  };
+  const leave = () => { drag.current = null; set({ active: false, dx: 0, dy: 0 }); };
+  return (
+    <div
+      ref={ref}
+      onPointerDown={onDown}
+      onPointerMove={onMove}
+      onPointerUp={onUp}
+      onPointerCancel={leave}
+      onPointerLeave={(e) => { if (e.pointerType !== "touch") leave(); }}
+      style={{ position: "absolute", inset: 0, zIndex: 5, touchAction: "none", cursor: "crosshair" }}
+    />
+  );
+}
+
 // Winkel: alles plaatsbaar, opgebouwd uit de AssetRegistry, per categorie.
 const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.emoji, label: a.name, price: a.price, kind: a.kind }; };
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
@@ -97,7 +142,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [groundType, setGroundType] = useState("zand");  // gekozen grondsoort
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
-  const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
+  const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 }, look: { active: false, dx: 0, dy: 0 } }); // besturing poppetje
 
   // Bezoekers kopen bij je kraampjes (patat/drinken) → jij verdient de prijs in
   // muntjes. Gelimiteerd per bezoek-sessie zodat het niet eindeloos te farmen is.
@@ -469,8 +514,21 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         />
       </Suspense>
 
-      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren). */}
-      {!placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
+      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren
+          en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld). */}
+      {!firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
+
+      {/* Eerstepersoons-besturing: richten + lopen over het hele beeld. */}
+      {firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && (
+        <>
+          <LookControl inputRef={inputRef} />
+          <div style={{ position: "absolute", left: "50%", bottom: 96, transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none", background: "rgba(20,30,20,0.7)", color: "#fff", borderRadius: 999, padding: "7px 14px", font: "700 12.5px system-ui", textAlign: "center", maxWidth: "92%" }}>
+            👁️ Beweeg om rond te kijken · <b>ingedrukt houden = lopen</b> · 👁️ knop = terug
+          </div>
+          {/* Vast richtkruis in het midden. */}
+          <div style={{ position: "absolute", left: "50%", top: "50%", width: 10, height: 10, marginLeft: -5, marginTop: -5, zIndex: 6, pointerEvents: "none", borderRadius: "50%", border: "2px solid rgba(255,255,255,0.85)", boxShadow: "0 0 4px rgba(0,0,0,.5)" }} />
+        </>
+      )}
 
       {/* Onderbalk: contextueel. */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>

@@ -318,10 +318,16 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     //    je kijkt. De camera zit in het hoofd (model verborgen). ──
     if (firstPerson) {
       if (!wasFP.current) { yaw.current = node.rotation.y; wasFP.current = true; }
-      yaw.current -= mx * 2.2 * dts;                 // draaien
+      // `look` = muis/vinger-besturing (zie LookControl): dx draait, dy kijkt
+      // omhoog/omlaag, active = ingedrukt houden → vooruit lopen. Pijltjes/WASD
+      // blijven ook werken (mx draait, my vooruit/achteruit).
+      const look = inp.look || {};
+      const turn = Math.max(-1, Math.min(1, mx + (look.dx || 0)));
+      const walk = Math.max(-1, Math.min(1, -my + (look.active ? 1 : 0)));
+      const pitch = Math.max(-1, Math.min(1, look.dy || 0));
+      yaw.current -= turn * 2.0 * dts;
       const fx = Math.sin(yaw.current), fz = Math.cos(yaw.current);
-      const walk = -my;                               // joystick omhoog = vooruit
-      moving.current = Math.abs(walk) > 0.12 || Math.abs(mx) > 0.12;
+      moving.current = Math.abs(walk) > 0.12 || Math.abs(turn) > 0.05;
       if (Math.abs(walk) > 0.12) {
         const step = 3.0 * dts * walk;
         verplaats(pos.current.x + fx * step, pos.current.z + fz * step);
@@ -330,8 +336,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
       node.position.set(pos.current.x, ty, pos.current.z);
       if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
-      // Mikpunt iets vóór + iets onder ooghoogte → natuurlijke blik.
-      if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.5 - 0.22, pos.current.z + fz * 4);
+      // Mikpunt: vóór de speler; omhoog/omlaag met pitch (muis-/veeg-verticaal).
+      if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.5 - 0.22 - pitch * 2.2, pos.current.z + fz * 4);
       return;
     }
     wasFP.current = false;
