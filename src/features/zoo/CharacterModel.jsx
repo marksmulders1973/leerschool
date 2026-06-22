@@ -62,7 +62,9 @@ export default function CharacterModel({ url, movingRef, targetHeight = 1.65 }) 
     actions[n].reset().fadeIn(0.25).play();
     cur.current = n;
   };
-  useEffect(() => { speel(clips.idle); /* eslint-disable-next-line */ }, [actions]);
+  // Nieuw model/nieuwe actions → state resetten zodat de nieuwe idle écht
+  // opnieuw start (action-instanties zijn nieuw, ook al heet de clip hetzelfde).
+  useEffect(() => { cur.current = null; speel(clips.idle); /* eslint-disable-next-line */ }, [actions]);
   useFrame(() => { speel(movingRef?.current ? (clips.walk || clips.idle) : clips.idle); });
 
   return (

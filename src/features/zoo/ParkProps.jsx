@@ -329,7 +329,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
 
   return (
     <group ref={g} position={start}>
-      <CharacterModel url={url} movingRef={moving} />
+      <CharacterModel key={url} url={url} movingRef={moving} />
     </group>
   );
 }
@@ -462,7 +462,7 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef }) {
           </div>
         </Html>
       )}
-      <CharacterModel url={charUrl} movingRef={moving} targetHeight={1.55} />
+      <CharacterModel key={charUrl} url={charUrl} movingRef={moving} targetHeight={1.55} />
       {/* Muntje (verborgen tot een bezoeker iets koopt). */}
       <mesh ref={coin} position={[0, 1.75, 0]} rotation={[Math.PI / 2, 0, 0]} visible={false}>
         <cylinderGeometry args={[0.18, 0.18, 0.045, 18]} />
