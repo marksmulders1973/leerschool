@@ -552,6 +552,45 @@ export function DonationBox({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// Struik (procedureel) — een clustertje low-poly groene bollen.
+export function Bush({ position = [0, 0, 0], rotation = 0 }) {
+  const g1 = "#4e8a3a", g2 = "#5fa047", g3 = "#6fb053";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow receiveShadow position={[-0.3, 0.36, 0.1]}><icosahedronGeometry args={[0.46, 0]} /><meshStandardMaterial color={g1} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.33, 0.3, -0.12]}><icosahedronGeometry args={[0.38, 0]} /><meshStandardMaterial color={g2} flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.05, 0.46, 0.3]}><icosahedronGeometry args={[0.34, 0]} /><meshStandardMaterial color={g3} flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Varen/graspol (procedureel) — een paar smalle bladeren die naar buiten waaieren.
+export function Fern({ position = [0, 0, 0], rotation = 0 }) {
+  const groen = "#5a9c3f", groen2 = "#6fb24a";
+  const blades = [[0, 0, 0], [0.35, 0.25, 0.4], [-0.35, -0.2, -0.35], [0.2, 0.55, -0.3], [-0.25, 0.5, 0.35]];
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {blades.map(([rx, rz, yaw], i) => (
+        <mesh key={i} castShadow position={[0, 0.45, 0]} rotation={[rx, yaw, rz]}>
+          <coneGeometry args={[0.09, 0.95, 5]} />
+          <meshStandardMaterial color={i % 2 ? groen2 : groen} flatShading roughness={1} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+// Boomstronk (procedureel) — een afgezaagde stam met lichter hout op de snede.
+export function Stump({ position = [0, 0, 0], rotation = 0 }) {
+  const bast = "#6b4a2b", hout = "#b89160";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh castShadow receiveShadow position={[0, 0.3, 0]}><cylinderGeometry args={[0.4, 0.46, 0.6, 10]} /><meshStandardMaterial color={bast} flatShading roughness={1} /></mesh>
+      <mesh position={[0, 0.605, 0]}><cylinderGeometry args={[0.38, 0.38, 0.04, 10]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+    </group>
+  );
+}
+
 // Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
 // boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
 function maakNaambord(tekst) {

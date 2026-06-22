@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, DayNight, CameraFollow } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -43,6 +43,9 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "bush") return <Bush position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "fern") return <Fern position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "stump") return <Stump position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fencePanel") return <FencePanel position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceCorner") return <FenceCorner position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceGate") return <FenceGate position={[x, y, z]} rotation={rotation} />;
