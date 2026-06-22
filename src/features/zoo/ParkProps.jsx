@@ -285,8 +285,10 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
-  const yaw = useRef(0);       // kijkrichting (eerstepersoons)
-  const wasFP = useRef(false); // net overgeschakeld naar eerstepersoons?
+  // Beginrichting: kijk naar het parkmidden (0,0) i.p.v. met je rug ernaartoe.
+  const startYaw = Math.atan2(-start[0], -start[2]);
+  const yaw = useRef(startYaw); // kijkrichting (eerstepersoons)
+  const wasFP = useRef(false);  // net overgeschakeld naar eerstepersoons?
   const solidRef = useRef(isSolid);
   solidRef.current = isSolid;
   const url = avatarUrl || CHARACTERS[0].url;
@@ -371,7 +373,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
 
   return (
     // In eerstepersoons zit de camera in het hoofd → eigen poppetje verbergen.
-    <group ref={g} position={start} visible={!firstPerson}>
+    // Begin gedraaid naar het parkmidden, zodat je meteen het park ziet.
+    <group ref={g} position={start} rotation={[0, startYaw, 0]} visible={!firstPerson}>
       <CharacterModel key={url} url={url} movingRef={moving} />
     </group>
   );
