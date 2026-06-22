@@ -97,6 +97,8 @@ export const ZOO_ASSETS = {
 
   // ---- Attractie (zelf-gebouwd, procedureel) ----
   carousel: { id: "carousel", kind: "attraction", name: "Draaimolen", emoji: "🎠", procedural: "carousel", price: 60 },
+  ferris: { id: "ferris", kind: "attraction", name: "Reuzenrad", emoji: "🎡", procedural: "ferris", price: 90 },
+  swing: { id: "swing", kind: "attraction", name: "Zweefmolen", emoji: "🎢", procedural: "swing", price: 70 },
 
   // ---- Natuur & bouwen (Kenney Nature Kit + procedureel pad). cells:1 = klein.
   // Decor levert geen muntjes op; je gebruikt het om je park in te richten. ----
@@ -137,7 +139,7 @@ export const ZOO_ASSETS = {
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
-export const PLAATSBARE_ATTRACTIES = ["carousel"];
+export const PLAATSBARE_ATTRACTIES = ["carousel", "ferris", "swing"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 

@@ -117,6 +117,82 @@ export function Carousel({ position = [0, 0, 0] }) {
   );
 }
 
+// Reuzenrad (procedureel) — een groot draaiend wiel met gondels die rechtop
+// blijven hangen. Het wiel draait om de Z-as (verticaal vlak); de gondels worden
+// elke frame op hun rim-positie gezet zonder mee te kantelen.
+export function FerrisWheel({ position = [0, 0, 0] }) {
+  const wheel = useRef();
+  const gond = useRef([]);
+  const R = 2.7, N = 8, hubY = 3.4;
+  const spaken = Array.from({ length: N }, (_, i) => (i / N) * Math.PI * 2);
+  useFrame((_, dt) => {
+    if (wheel.current) wheel.current.rotation.z += dt * 0.35;
+    const t = wheel.current ? wheel.current.rotation.z : 0;
+    for (let i = 0; i < N; i++) {
+      const m = gond.current[i];
+      if (!m) continue;
+      const a = t + (i / N) * Math.PI * 2;
+      m.position.set(Math.cos(a) * R, hubY + Math.sin(a) * R, 0);
+    }
+  });
+  const staal = "#9aa0a6", frame = "#d65a5a";
+  return (
+    <group position={position}>
+      {/* steunbenen: twee A-frames (voor/achter) */}
+      {[0.6, -0.6].map((z, k) => (
+        <group key={k}>
+          <mesh castShadow position={[1.0, hubY / 2, z]} rotation={[0, 0, -0.32]}><cylinderGeometry args={[0.1, 0.13, hubY + 1.2, 8]} /><meshStandardMaterial color={staal} flatShading roughness={0.8} /></mesh>
+          <mesh castShadow position={[-1.0, hubY / 2, z]} rotation={[0, 0, 0.32]}><cylinderGeometry args={[0.1, 0.13, hubY + 1.2, 8]} /><meshStandardMaterial color={staal} flatShading roughness={0.8} /></mesh>
+        </group>
+      ))}
+      {/* as */}
+      <mesh position={[0, hubY, 0]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.16, 0.16, 1.5, 12]} /><meshStandardMaterial color={staal} roughness={0.7} /></mesh>
+      {/* draaiend wiel: twee ringen + spaken */}
+      <group ref={wheel} position={[0, hubY, 0]}>
+        {[0.55, -0.55].map((z, k) => (
+          <mesh key={k} position={[0, 0, z]}><torusGeometry args={[R, 0.08, 8, 32]} /><meshStandardMaterial color={frame} flatShading roughness={0.8} /></mesh>
+        ))}
+        {spaken.map((a, i) => (
+          <mesh key={i} rotation={[0, 0, a]} position={[0, 0, 0]}><boxGeometry args={[R * 2, 0.05, 0.05]} /><meshStandardMaterial color={frame} roughness={0.8} /></mesh>
+        ))}
+      </group>
+      {/* gondels — rechtop, elke frame op hun rim-plek gezet */}
+      {Array.from({ length: N }).map((_, i) => (
+        <group key={i} ref={(el) => (gond.current[i] = el)}>
+          <mesh castShadow position={[0, -0.05, 0]}><boxGeometry args={[0.62, 0.5, 0.95]} /><meshStandardMaterial color={SEAT_KLEUREN[i % SEAT_KLEUREN.length]} flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.28, 0]}><boxGeometry args={[0.05, 0.3, 0.05]} /><meshStandardMaterial color={staal} roughness={0.8} /></mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
+// Zweefmolen (procedureel) — een paal met een draaiend dak en stoeltjes aan
+// kettingen die naar buiten zweven.
+export function SwingRide({ position = [0, 0, 0] }) {
+  const top = useRef();
+  useFrame((_, dt) => { if (top.current) top.current.rotation.y += dt * 0.7; });
+  const N = 8, topY = 3.6, R = 1.7;
+  const hoeken = Array.from({ length: N }, (_, i) => (i / N) * Math.PI * 2);
+  const paal = "#caa44a", dak = "#e2574c";
+  return (
+    <group position={position}>
+      <mesh castShadow position={[0, topY / 2, 0]}><cylinderGeometry args={[0.18, 0.22, topY, 12]} /><meshStandardMaterial color={paal} flatShading roughness={0.8} /></mesh>
+      <group ref={top} position={[0, topY, 0]}>
+        <mesh castShadow position={[0, 0.1, 0]}><coneGeometry args={[1.9, 0.9, 16]} /><meshStandardMaterial color={dak} flatShading roughness={0.9} /></mesh>
+        <mesh position={[0, -0.15, 0]}><cylinderGeometry args={[1.7, 1.7, 0.12, 16]} /><meshStandardMaterial color={paal} flatShading roughness={0.8} /></mesh>
+        {hoeken.map((a, i) => (
+          <group key={i} rotation={[0, a, 0]}>
+            {/* ketting naar buiten gekanteld */}
+            <mesh position={[R * 0.75, -0.7, 0]} rotation={[0, 0, -0.5]}><cylinderGeometry args={[0.02, 0.02, 1.5, 6]} /><meshStandardMaterial color="#777" roughness={0.6} /></mesh>
+            <mesh castShadow position={[R, -1.35, 0]}><boxGeometry args={[0.4, 0.35, 0.4]} /><meshStandardMaterial color={SEAT_KLEUREN[i % SEAT_KLEUREN.length]} flatShading roughness={0.9} /></mesh>
+          </group>
+        ))}
+      </group>
+    </group>
+  );
+}
+
 // Het poppetje van de speler — zelf-gebouwd (geen losse textuur → nooit "wit"),
 // wiebelt zachtjes. Later evt. vervangen door een vertex-colored model.
 export function Character({ position = [0, 0, 0], rotation = 0 }) {
