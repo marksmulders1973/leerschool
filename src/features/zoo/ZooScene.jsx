@@ -12,6 +12,7 @@ import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG } from "./terrain";
 import { floodWater, WATER_SURFACE_Y } from "./water";
+import { GROUND_COLOR } from "./ground";
 import { useEffect } from "react";
 import {
   CELL, GRID_SIZE, GRID_DIV, HALF, snapToCell, cellToWorld, cellKey,
@@ -73,7 +74,7 @@ function hoogteKleur(h, out) {
 // De parkvloer als boetseerbaar terrein (volgt het hoogteveld). De vloer krijgt
 // per hoekpunt een kleur op basis van de hoogte → groene grond, rotsachtige
 // hellingen en grijze bergtoppen.
-function Terrain({ field, placing, cells, sculpt, water, onHover, onPlace, onMissTap, onSculpt, onWater }) {
+function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGround, onHover, onPlace, onMissTap, onSculpt, onWater, onGround }) {
   const geom = useMemo(() => {
     const g = new PlaneGeometry(TER_SIZE, TER_SIZE, TER_SEG, TER_SEG);
     const pos = g.attributes.position;
@@ -81,16 +82,20 @@ function Terrain({ field, placing, cells, sculpt, water, onHover, onPlace, onMis
     const col = new Float32Array(n * 3);
     const c = new Color();
     for (let k = 0; k < n; k++) {
-      const h = heightAt(field, pos.getX(k), -pos.getY(k));
+      const wx = pos.getX(k), wz = -pos.getY(k);
+      const h = heightAt(field, wx, wz);
       pos.setZ(k, h);
-      hoogteKleur(h, c);
+      // Geschilderde grondsoort wint van de natuurlijke hoogte-kleur.
+      const gk = `${Math.round(wx / CELL)},${Math.round(wz / CELL)}`;
+      const verf = ground[gk] ? GROUND_COLOR[ground[gk]] : null;
+      if (verf) c.set(verf); else hoogteKleur(h, c);
       col[k * 3] = c.r; col[k * 3 + 1] = c.g; col[k * 3 + 2] = c.b;
     }
     pos.needsUpdate = true;
     g.setAttribute("color", new BufferAttribute(col, 3));
     g.computeVertexNormals();
     return g;
-  }, [field]);
+  }, [field, ground]);
   useEffect(() => () => geom.dispose(), [geom]);
   return (
     <mesh
@@ -98,7 +103,7 @@ function Terrain({ field, placing, cells, sculpt, water, onHover, onPlace, onMis
       rotation={[-Math.PI / 2, 0, 0]}
       receiveShadow
       onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
-      onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (water) onWater(snapToCell(e.point.x, e.point.z, 1)); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
+      onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (water) onWater(snapToCell(e.point.x, e.point.z, 1)); else if (paintGround) onGround(snapToCell(e.point.x, e.point.z, 1)); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
     >
       <meshStandardMaterial vertexColors roughness={1} metalness={0} />
     </mesh>
@@ -171,7 +176,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -245,7 +250,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <DayNight />
 
       <Suspense fallback={<Laden />}>
-        <Terrain field={terrain} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} />
+        <Terrain field={terrain} ground={ground} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} paintGround={groundMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} onGround={onGround} />
         <WaterPools cells={waterCells} />
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
@@ -265,7 +270,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
-              onPointerDown={(e) => { if (placing || sculptMode || waterMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
+              onPointerDown={(e) => { if (placing || sculptMode || waterMode || groundMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem

@@ -11,6 +11,7 @@ import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, dag
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { floodWater } from "../features/zoo/water";
+import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
@@ -60,6 +61,8 @@ const SHOP_CATS = [
   { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
   { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
 ];
+// Stabiele lege grond-map (zelfde referentie) → terrein herberekent niet onnodig.
+const EMPTY_GROUND = {};
 const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
@@ -90,6 +93,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
   const [waterMode, setWaterMode] = useState(false);     // meertjes maken in dalen
+  const [groundMode, setGroundMode] = useState(false);   // grondsoort schilderen
+  const [groundType, setGroundType] = useState("zand");  // gekozen grondsoort
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 } }); // besturing poppetje
@@ -314,6 +319,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, water: next } }; });
   };
 
+  // Geschilderde grondsoorten staan in meta.owned.ground als { "gx,gz": type }.
+  const ground = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.ground) ? meta.owned.ground : EMPTY_GROUND;
+  // Tik in grond-modus: schilder een penseel (3×3) met de gekozen grondsoort.
+  // "gras" wist → terug naar de natuurlijke hoogte-kleur.
+  const onGroundTik = (cell) => {
+    const [cx, cz] = cell;
+    setMeta((m) => {
+      if (!m) return m;
+      const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {};
+      const g = { ...(o.ground || {}) };
+      for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) {
+        const k = `${cx + dx},${cz + dz}`;
+        if (groundType === "gras") delete g[k]; else g[k] = groundType;
+      }
+      return { ...m, owned: { ...o, ground: g } };
+    });
+  };
+
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
     if (!userId || !meta) { flits("Nog niet ingelogd — opslaan lukt zo niet"); return; }
@@ -335,8 +358,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={openDelen} title="Deel je park met een vriend" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>📤</button>
           <button onClick={opslaan} title="Opslaan" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💾</button>
           <button onClick={() => setFollowCam((v) => !v)} title="Camera volgt je poppetje" style={{ pointerEvents: "auto", border: followCam ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: followCam ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🎥</button>
-          <button onClick={() => { setSculptMode((v) => !v); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
-          <button onClick={() => { setWaterMode((v) => !v); setSculptMode(false); setPlacing(null); setSelectedIdx(null); }} title="Water — vul een dal met een meertje" style={{ pointerEvents: "auto", border: waterMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: waterMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💧</button>
+          <button onClick={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Vloer boetseren (heuvels)" style={{ pointerEvents: "auto", border: sculptMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: sculptMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⛰️</button>
+          <button onClick={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} title="Water — vul een dal met een meertje" style={{ pointerEvents: "auto", border: waterMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: waterMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>💧</button>
+          <button onClick={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} title="Grond schilderen (zand, sneeuw, aarde…)" style={{ pointerEvents: "auto", border: groundMode ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: groundMode ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>🏖️</button>
           {onPlayObliterator && (
             <button onClick={onPlayObliterator} title="OBLITERATOR — extra spel" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "0 13px", height: 38, font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3df0,#b13df0)", boxShadow: "0 2px 8px rgba(0,0,0,.22)", cursor: "pointer", whiteSpace: "nowrap" }}>🎮 Extra spel</button>
           )}
@@ -394,15 +418,30 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           waterMode={waterMode}
           waterSeeds={waterSeeds}
           onWater={onWaterTik}
+          ground={ground}
+          groundMode={groundMode}
+          onGround={onGroundTik}
         />
       </Suspense>
 
       {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren). */}
-      {!placing && !sculptMode && !waterMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
+      {!placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
       {/* Onderbalk: contextueel. */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>
-        {waterMode ? (
+        {groundMode ? (
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+            <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
+              🏖️ Kies een <b>grondsoort</b> en tik op de grond om te schilderen. "Gras" maakt het weer normaal.
+            </span>
+            <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+              {GROUND_TYPES.map((g) => (
+                <button key={g.key} onClick={() => setGroundType(g.key)} title={g.label} style={{ border: groundType === g.key ? "3px solid #2e7d32" : "2px solid rgba(255,255,255,0.85)", borderRadius: 12, padding: "7px 12px", font: "800 13px system-ui", color: "#234", background: g.color || "#7cbf5a", boxShadow: "0 2px 6px rgba(0,0,0,.25)", cursor: "pointer", transform: groundType === g.key ? "scale(1.08)" : "none" }}>{g.emoji} {g.label}</button>
+              ))}
+              <button onClick={() => setGroundMode(false)} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
+            </div>
+          </div>
+        ) : waterMode ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
               💧 Tik in een <b>dal</b> om er een meertje van te maken · tik op water om het weg te halen
