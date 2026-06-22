@@ -465,6 +465,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     flits("Park opgeslagen ✓");
   };
 
+  // Eerstepersoons aan/uit met een korte hint bij het aanzetten (werkt ook op
+  // telefoon, waar een title-tooltip niets doet).
+  const toggleFirstPerson = () => {
+    const aan = !firstPerson;
+    setFirstPerson(aan);
+    if (aan) {
+      setFollowCam(false); setPlacing(null); setSelectedIdx(null);
+      flits("👁️ Beweeg om rond te kijken · houd ingedrukt om te lopen");
+    }
+  };
+
   // Tik op een bezoeker → praatje openen (niet tijdens bouwen/plaatsen/selecteren).
   const tapBezoeker = () => {
     if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
@@ -523,7 +534,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <div onClick={(e) => e.stopPropagation()} style={{ position: "absolute", top: 56, right: 12, width: "min(290px, 92vw)", maxHeight: "80vh", overflowY: "auto", background: "#fffef8", borderRadius: 16, boxShadow: "0 12px 36px rgba(0,0,0,.35)", padding: "12px 12px 14px", display: "flex", flexDirection: "column", gap: 6 }}>
             <div style={menuKop}>📷 Camera</div>
             <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); })} style={menuRij(followCam)}>🎥 Camera volgt je poppetje</button>
-            <button onClick={() => doeEnSluit(() => { setFirstPerson((v) => !v); setFollowCam(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
+            <button onClick={() => doeEnSluit(toggleFirstPerson)} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
 
             <div style={menuKop}>🛠️ Landschap bouwen</div>
             <button onClick={() => doeEnSluit(() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(sculptMode)}>⛰️ Heuvels boetseren</button>
@@ -627,8 +638,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <>
           <LookControl inputRef={inputRef} />
           <div style={{ position: "absolute", left: "50%", bottom: 96, transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none", background: "rgba(20,30,20,0.7)", color: "#fff", borderRadius: 999, padding: "7px 14px", font: "700 12.5px system-ui", textAlign: "center", maxWidth: "92%" }}>
-            👁️ Beweeg om rond te kijken · <b>ingedrukt houden = lopen</b> · 👁️ knop = terug
+            👁️ Beweeg om rond te kijken · <b>ingedrukt houden = lopen</b>
           </div>
+          {/* Praten kan in eerstepersoons niet door te tikken → aparte knop. */}
+          <button onClick={tapBezoeker} style={{ position: "absolute", left: 16, bottom: 92, zIndex: 7, pointerEvents: "auto", border: "none", borderRadius: 999, padding: "11px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>💬 Praat</button>
+          {/* Duidelijke uitknop (de 👁️-knop zit nu in het ⚙️-menu). */}
+          <button onClick={() => setFirstPerson(false)} title="Terug naar normaal beeld" style={{ position: "absolute", right: 16, bottom: 92, zIndex: 7, pointerEvents: "auto", border: "none", borderRadius: 999, padding: "11px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✕ Normaal</button>
           {/* Vast richtkruis in het midden. */}
           <div style={{ position: "absolute", left: "50%", top: "50%", width: 10, height: 10, marginLeft: -5, marginTop: -5, zIndex: 6, pointerEvents: "none", borderRadius: "50%", border: "2px solid rgba(255,255,255,0.85)", boxShadow: "0 0 4px rgba(0,0,0,.5)" }} />
         </>

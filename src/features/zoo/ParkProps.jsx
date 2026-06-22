@@ -13,7 +13,7 @@ import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
 // (schoolapp, kinderen moeten hun park blijven zien).
-const CYCLE = 300; // seconden per dag
+const CYCLE = 600; // seconden per dag (langere dag → kind speelt vrijwel altijd in het licht)
 const KLEUR_DAG = new Color("#aaddff");
 const KLEUR_NACHT = new Color("#1b2a4a");
 const KLEUR_ZONSOP = new Color("#ffb27a");
@@ -42,7 +42,7 @@ export function DayNight() {
       sun.current.intensity = 0.12 + daglicht * 1.25;
       sun.current.color.copy(ZON_DAG).lerp(ZON_HORIZON, horizon);
     }
-    if (amb.current) amb.current.intensity = 0.28 + daglicht * 0.4;
+    if (amb.current) amb.current.intensity = 0.42 + daglicht * 0.32; // 's nachts niet te donker (kind moet park blijven zien)
   });
   return (
     <>
@@ -668,6 +668,13 @@ export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, moo
             <span style={{ fontSize: 18 }}>{bubble.e}</span>
             <span style={{ fontSize: 11.5, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>
           </div>
+        </Html>
+      )}
+      {/* Persistente honger-waarschuwing: het dier kreeg ≥2 dagen geen hooi en
+          loopt straks weg → rood "!" zodat het kind het op tijd voert. */}
+      {mood === "honger" && (
+        <Html position={[0, 2.35, 0]} center distanceFactor={9} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
+          <div title="Geef dit dier hooi 🌾" style={{ background: "#e23b3b", color: "#fff", borderRadius: 999, width: 24, height: 24, display: "grid", placeItems: "center", font: "900 16px system-ui", boxShadow: "0 2px 6px rgba(0,0,0,.35)", border: "2px solid #fff" }}>!</div>
         </Html>
       )}
       <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL} />
