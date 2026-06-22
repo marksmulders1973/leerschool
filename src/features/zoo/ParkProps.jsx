@@ -542,27 +542,45 @@ function Visitor({ seed, standsRef, pricesRef, onBuy, heightRef, playerRef, fact
         const speed = s.acting ? 2.2 : 1.7;
         const step = Math.min(d, dt * speed);
         const nx = s.x + (dx / d) * step, nz = s.z + (dz / d) * step;
+        // "Ontsnap-modus": opgesloten in een verblijf → tijdelijk dwars door het
+        // hek naar buiten lopen (anders blijft-ie er eeuwig in rondjes lopen).
+        const escaping = (s.escape || 0) > 0;
+        if (s.escape > 0) s.escape -= dt;
         // Botsing met hekken/gebouwen: glijd langs de muur. Zit de bezoeker al in
         // een vol vakje (bv. hek er net omheen gezet), dan mag-ie eruit lopen.
         const solid = solidRef.current;
         const vast = solid ? solid(s.x, s.z) : false;
         let moved = false;
-        if (!solid || vast || !solid(nx, nz)) { s.x = nx; s.z = nz; moved = true; }
+        if (escaping || !solid || vast || !solid(nx, nz)) { s.x = nx; s.z = nz; moved = true; }
         else {
           if (!solid(nx, s.z)) { s.x = nx; moved = true; }
           if (!solid(s.x, nz)) { s.z = nz; moved = true; }
         }
         node.rotation.y = Math.atan2(dx, dz);
-        // Klem tegen een hek? Geef het doel op en kies een nieuwe wandelplek
-        // (geen eindeloos tegen het hek duwen / door het hek glitchen).
         if (!moved) {
           s.stuck = (s.stuck || 0) + dt;
           if (s.stuck > 0.35) {
-            s.stuck = 0; s.acting = false; s.need = null; s.needT = 4 + Math.random() * 6;
-            const a = Math.random() * Math.PI * 2, r = 4 + Math.random() * 16;
-            s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r;
+            s.stuck = 0;
+            // Tel hek-botsingen binnen een venster. Een vrije bezoeker raakt zelden
+            // een hek; een opgesloten bezoeker botst telkens tegen de omheining.
+            s.penHits = (s.penHits || 0) + 1; s.penTimer = 7;
+            if (s.penHits >= 3) {
+              // Waarschijnlijk opgesloten in een verblijf → loop in een rechte lijn
+              // naar buiten (tijdelijk dwars door het hek heen).
+              s.penHits = 0; s.escape = 2.6;
+              s.acting = false; s.need = null; s.needT = 5 + Math.random() * 6;
+              const ang = (s.x || s.z) ? Math.atan2(s.z, s.x) : Math.random() * Math.PI * 2;
+              s.tx = Math.cos(ang) * 32; s.tz = Math.sin(ang) * 32; s.resting = false;
+            } else {
+              // Gewone klem tegen een hek → nieuw wandeldoel kiezen.
+              s.acting = false; s.need = null; s.needT = 4 + Math.random() * 6;
+              const a = Math.random() * Math.PI * 2, r = 4 + Math.random() * 16;
+              s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r;
+            }
           }
         } else s.stuck = 0;
+        // Venster voor hek-botsingen laten verlopen (los van of we net bewogen).
+        if (s.penTimer > 0) { s.penTimer -= dt; if (s.penTimer <= 0) s.penHits = 0; }
       }
     }
     moving.current = !s.resting;
