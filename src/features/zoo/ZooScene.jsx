@@ -5,7 +5,7 @@
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
-import { Vector3, PlaneGeometry } from "three";
+import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
 import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, DayNight, CameraFollow } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
@@ -56,15 +56,37 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   return <ZooModel assetId={assetId} position={[x, y, z]} rotation={rotation} />;
 }
 
-// De parkvloer als boetseerbaar terrein (volgt het hoogteveld).
+// Hoogte → kleur: gras onderaan, rots op de hellingen, grijze (besneeuwde-ogende)
+// toppen op de bergen. Geeft de bergen een rotsachtige look.
+const KL_GRAS = new Color("#7cbf5a");
+const KL_ROTS = new Color("#9a8b76");
+const KL_GRIJS = new Color("#8d8a85");
+const KL_TOP = new Color("#cbc8c1");
+function hoogteKleur(h, out) {
+  if (h <= 0.5) { out.copy(KL_GRAS); return; }
+  if (h < 2.2) { out.copy(KL_GRAS).lerp(KL_ROTS, (h - 0.5) / 1.7); return; }
+  if (h < 4.5) { out.copy(KL_ROTS).lerp(KL_GRIJS, (h - 2.2) / 2.3); return; }
+  out.copy(KL_GRIJS).lerp(KL_TOP, Math.min(1, (h - 4.5) / 2));
+}
+
+// De parkvloer als boetseerbaar terrein (volgt het hoogteveld). De vloer krijgt
+// per hoekpunt een kleur op basis van de hoogte → groene grond, rotsachtige
+// hellingen en grijze bergtoppen.
 function Terrain({ field, placing, cells, sculpt, onHover, onPlace, onMissTap, onSculpt }) {
   const geom = useMemo(() => {
     const g = new PlaneGeometry(TER_SIZE, TER_SIZE, TER_SEG, TER_SEG);
     const pos = g.attributes.position;
-    for (let k = 0; k < pos.count; k++) {
-      pos.setZ(k, heightAt(field, pos.getX(k), -pos.getY(k)));
+    const n = pos.count;
+    const col = new Float32Array(n * 3);
+    const c = new Color();
+    for (let k = 0; k < n; k++) {
+      const h = heightAt(field, pos.getX(k), -pos.getY(k));
+      pos.setZ(k, h);
+      hoogteKleur(h, c);
+      col[k * 3] = c.r; col[k * 3 + 1] = c.g; col[k * 3 + 2] = c.b;
     }
     pos.needsUpdate = true;
+    g.setAttribute("color", new BufferAttribute(col, 3));
     g.computeVertexNormals();
     return g;
   }, [field]);
@@ -77,7 +99,7 @@ function Terrain({ field, placing, cells, sculpt, onHover, onPlace, onMissTap, o
       onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
       onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
     >
-      <meshStandardMaterial color="#86c05a" roughness={1} metalness={0} />
+      <meshStandardMaterial vertexColors roughness={1} metalness={0} />
     </mesh>
   );
 }
