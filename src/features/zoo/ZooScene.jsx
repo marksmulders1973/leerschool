@@ -3,7 +3,7 @@
 // (draaimolen, paden, hekken, gebouwen, dier-verblijven) is een plaatsbaar/
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
 import { ParkBase, LosDier, Player, Carousel, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, DayNight, CameraFollow } from "./ParkProps";
@@ -11,9 +11,10 @@ import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG } from "./terrain";
+import { floodWater, WATER_SURFACE_Y } from "./water";
 import { useEffect } from "react";
 import {
-  CELL, GRID_SIZE, GRID_DIV, snapToCell, cellToWorld, cellKey,
+  CELL, GRID_SIZE, GRID_DIV, HALF, snapToCell, cellToWorld, cellKey,
   footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
@@ -72,7 +73,7 @@ function hoogteKleur(h, out) {
 // De parkvloer als boetseerbaar terrein (volgt het hoogteveld). De vloer krijgt
 // per hoekpunt een kleur op basis van de hoogte → groene grond, rotsachtige
 // hellingen en grijze bergtoppen.
-function Terrain({ field, placing, cells, sculpt, onHover, onPlace, onMissTap, onSculpt }) {
+function Terrain({ field, placing, cells, sculpt, water, onHover, onPlace, onMissTap, onSculpt, onWater }) {
   const geom = useMemo(() => {
     const g = new PlaneGeometry(TER_SIZE, TER_SIZE, TER_SEG, TER_SEG);
     const pos = g.attributes.position;
@@ -97,10 +98,31 @@ function Terrain({ field, placing, cells, sculpt, onHover, onPlace, onMissTap, o
       rotation={[-Math.PI / 2, 0, 0]}
       receiveShadow
       onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
-      onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
+      onPointerDown={(e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (water) onWater(snapToCell(e.point.x, e.point.z, 1)); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
     >
       <meshStandardMaterial vertexColors roughness={1} metalness={0} />
     </mesh>
+  );
+}
+
+// Meertjes: doorzichtige blauwe wateroppervlakken op de ondergelopen vakjes, met
+// een zachte golf-beweging. De cellen komen uit floodWater (dal-vulling).
+function WaterPools({ cells }) {
+  const ref = useRef();
+  useFrame((st) => { if (ref.current) ref.current.position.y = Math.sin(st.clock.elapsedTime * 1.3) * 0.035; });
+  if (!cells.length) return null;
+  return (
+    <group ref={ref}>
+      {cells.map(([gx, gz]) => {
+        const [x, z] = cellToWorld(gx, gz);
+        return (
+          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[x, WATER_SURFACE_Y, z]} receiveShadow>
+            <planeGeometry args={[CELL + 0.02, CELL + 0.02]} />
+            <meshStandardMaterial color="#3aa6d8" transparent opacity={0.62} roughness={0.2} metalness={0.1} />
+          </mesh>
+        );
+      })}
+    </group>
   );
 }
 
@@ -149,7 +171,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park" }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, prices = { food: 5, drink: 4, ice: 4, popcorn: 4 }, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const orbitRef = useRef();
@@ -157,6 +179,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const heightFnRef = useRef(() => 0);
   heightFnRef.current = (x, z) => heightAt(terrain, x, z);
   const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.9)); };
+  // Ondergelopen vakjes (meertjes) op basis van het terrein + de water-bronnen.
+  const waterCells = useMemo(() => floodWater(terrain, waterSeeds), [terrain, waterSeeds]);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
@@ -221,7 +245,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       <DayNight />
 
       <Suspense fallback={<Laden />}>
-        <Terrain field={terrain} placing={placing} cells={placingCells} sculpt={sculptMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} />
+        <Terrain field={terrain} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} />
+        <WaterPools cells={waterCells} />
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
@@ -240,7 +265,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
-              onPointerDown={(e) => { if (placing || sculptMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
+              onPointerDown={(e) => { if (placing || sculptMode || waterMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem
