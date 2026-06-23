@@ -8331,6 +8331,33 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "winst-rekenen-po",
+    "file": "./winstRekenenPo.js",
+    "title": "Winst rekenen (groep 6-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "📈",
+    "referentieNiveau": "1F",
+    "sloThema": "Rekenen + leefwereld — financiële educatie (winst)",
+    "triggerKeywords": [
+      "winst",
+      "verlies",
+      "inkoop",
+      "verkoop",
+      "inkoopprijs",
+      "verkoopprijs",
+      "opbrengst",
+      "winst per stuk",
+      "handel",
+      "kraam"
+    ],
+    "intro": "Winst rekenen voor groep 6-8 — inkoop, verkoop en winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs en het verschil tussen opbrengst en winst. Met echte kraam- en pa",
+    "stepCount": 3,
+    "checkCount": 16,
+    "chapterCount": 3,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "wiskunde-d-vwo",
     "file": "./wiskundeDVwo.js",
     "title": "Wiskunde D (VWO specialisatie)",

@@ -6,9 +6,9 @@
 // krijgt ronde getallen + één begrip, VMBO (vo) krijgt de echte termen.
 //
 // HARDE REGEL: elk `leerpad`-id MOET een bestaand pad zijn (anders kapotte loop).
-// Geverifieerd 2026-06-23: "financiele-vorming-po", "geld-rekenen" en
-// "belasting-po" bestaan. Voeg pas een nieuw id toe als dat leerpad ook echt
-// bestaat.
+// Geverifieerd 2026-06-23: "financiele-vorming-po", "geld-rekenen",
+// "belasting-po" en "winst-rekenen-po" bestaan. Voeg pas een nieuw id toe als
+// dat leerpad ook echt bestaat.
 
 export const LEERMOMENTEN = {
   brutoloon: {
@@ -57,7 +57,7 @@ export const LEERMOMENTEN = {
       po: "Dit is wat het dier jou kost. Wil je later winst maken, dan moet je het voor méér verkopen.",
       vo: "De inkoopprijs zijn je kosten. Winst maak je pas als de verkoopprijs daarboven uitkomt.",
     },
-    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+    leerpad: { po: "winst-rekenen-po", vo: "winst-rekenen-po" },
   },
   winst: {
     titel: "Winst",
@@ -65,7 +65,7 @@ export const LEERMOMENTEN = {
       po: "Winst is wat je overhoudt: de verkoopprijs min wat het jou kostte (de inkoop).",
       vo: "Winst = opbrengst − kosten. Verkoop je boven de inkoopprijs, dan maak je winst.",
     },
-    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+    leerpad: { po: "winst-rekenen-po", vo: "winst-rekenen-po" },
   },
 };
 
