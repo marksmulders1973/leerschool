@@ -14,6 +14,7 @@ import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
 import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
+import Loonstrook from "./EconomieUitleg";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -166,6 +167,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [reward, setReward] = useState(null);
+  const [loonstrook, setLoonstrook] = useState(null); // {netto, niveau} — opt-in loonstrookje na kwartier
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
   const [shareUrl, setShareUrl] = useState(null);
@@ -327,6 +329,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
+  const econLevel = meta?.owned?.econLevel || "po"; // niveau van de economie-uitleg (po/vo)
 
   // Gekozen speler-poppetje (avatar). Opgeslagen in meta.owned.avatar.
   const avatarId = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatar) || DEFAULT_AVATAR;
@@ -672,10 +675,28 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               reward.births > 0 && `🐣 ${reward.births} jonkie${reward.births > 1 ? "s" : ""} geboren! +${reward.births * BABY_BONUS}`,
             ].filter(Boolean).join("  ·  ")}
           </div>
+          {reward.kwartier > 0 && (
+            <button
+              onClick={() => { setLoonstrook({ netto: reward.kwartier, niveau: econLevel }); try { track("econ_open", { scherm: "loonstrook", niveau: econLevel }); } catch { /* nooit laten breken */ } }}
+              style={{ marginTop: 8, border: "none", background: "linear-gradient(135deg,#1c7d3c,#0a9d4a)", color: "#fff", font: "800 12px system-ui", padding: "8px 14px", borderRadius: 999, cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,.18)" }}
+            >
+              📄 Bekijk je loonstrookje
+            </button>
+          )}
           {reward.weggelopen > 0 && (
             <div style={{ font: "700 12px system-ui", color: "#c0392b", marginTop: 4 }}>🐾 Een dier liep weg — het kreeg te lang geen hooi. Geef ze elke dag 🌾!</div>
           )}
         </div>
+      )}
+      {/* Loonstrookje (opt-in na kwartier leren) — bruto → belasting → netto, met doorklik naar leerpaden. */}
+      {loonstrook && (
+        <Loonstrook
+          netto={loonstrook.netto}
+          niveau={loonstrook.niveau}
+          onOpenLeerpad={(id) => { setLoonstrook(null); if (onOpenLeerpad) onOpenLeerpad(id); else if (onOpenLeerpaden) onOpenLeerpaden(); }}
+          onClose={() => setLoonstrook(null)}
+          track={track}
+        />
       )}
       {/* Korte info-melding. */}
       {melding && (

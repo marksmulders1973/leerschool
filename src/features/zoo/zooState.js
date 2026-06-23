@@ -34,7 +34,7 @@ export function defaultState() {
     last_kwartier_date: null,
     layout: STARTER_LAYOUT,
     // owned (jsonb) bewaart o.a. de ingestelde kraampjes-prijzen per soort.
-    owned: { foodPrice: 5, drinkPrice: 4, icePrice: 4, popcornPrice: 4 },
+    owned: { foodPrice: 5, drinkPrice: 4, icePrice: 4, popcornPrice: 4, econLevel: "po" },
   };
 }
 
