@@ -16,6 +16,7 @@ import { track } from "../utils.js";
 import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
 import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
+import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier } from "../features/zoo/unlocks";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -171,6 +172,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [loonstrook, setLoonstrook] = useState(null); // {netto, niveau} — opt-in loonstrookje na kwartier
   const [inkoopBon, setInkoopBon] = useState(null); // bonnetje (btw zichtbaar) bij het kopen van een dier
   const inkoopBonGetoondRef = useRef(false); // bon hooguit 1× per parksessie — breekt de speelflow nooit
+  const [unlockMelding, setUnlockMelding] = useState(null); // viering bij een nieuw vrijgespeeld dier
+  const unlockCheckedRef = useRef(false); // unlock-check hooguit 1× per parksessie
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
   const [shareUrl, setShareUrl] = useState(null);
@@ -334,6 +337,35 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const streak = meta?.streak ?? 0;
   const econLevel = meta?.owned?.econLevel || "po"; // niveau van de economie-uitleg (po/vo)
 
+  // Welke vrijspeel-dieren bezit dit park al (in owned.unlocked).
+  const unlockedDieren = (meta?.owned && !Array.isArray(meta.owned) && Array.isArray(meta.owned.unlocked)) ? meta.owned.unlocked : [];
+  // Zelfde sleutel als de leerpaden gebruiken voor learn_progress.
+  const leerNaam = (userName || "Speler").trim() || "Speler";
+
+  // Vrijspeel-check: heeft de speler een leerpad 100% afgerond → dier verdienen?
+  // Draait 1× per parksessie nadat het park geladen is. Voegt nieuwe dieren toe
+  // aan owned.unlocked (autosave pakt het op) en toont een viering.
+  useEffect(() => {
+    if (!loaded || !meta || unlockCheckedRef.current) return;
+    unlockCheckedRef.current = true;
+    let cancel = false;
+    (async () => {
+      const nieuw = await nieuweVrijspeelDieren(leerNaam, unlockedDieren);
+      if (cancel || !nieuw.length) return;
+      setMeta((m) => {
+        if (!m) return m;
+        const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {};
+        const cur = Array.isArray(o.unlocked) ? o.unlocked : [];
+        return { ...m, owned: { ...o, unlocked: [...new Set([...cur, ...nieuw])] } };
+      });
+      const eerste = vrijspeelDier(nieuw[0]);
+      setUnlockMelding(eerste);
+      try { track("zoo_unlock", { dier: nieuw[0], pad: eerste?.pad }); } catch { /* nooit laten breken */ }
+    })();
+    return () => { cancel = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded, meta]);
+
   // Gekozen speler-poppetje (avatar). Opgeslagen in meta.owned.avatar.
   const avatarId = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatar) || DEFAULT_AVATAR;
   const avatarUrl = (CHARACTER_BY_ID[avatarId] || CHARACTERS[0]).url;
@@ -397,8 +429,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setInkoopBon({ emoji: a?.emoji || "🐾", label: a?.name || "dier", incl, excl, btw, tarief, niveau: econLevel });
       try { track("econ_open", { scherm: "inkoopbon", niveau: econLevel }); } catch { /* nooit laten breken */ }
     }
-    // Blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
-    if (coins - placing.price < placing.price) setPlacing(null);
+    // Vrijspeel-dier: precies één per park → meteen uit koop-modus. Anders:
+    // blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
+    if (vrijspeelDier(placing.assetId)) setPlacing(null);
+    else if (coins - placing.price < placing.price) setPlacing(null);
   };
 
   const verplaatsGeselecteerde = () => {
@@ -720,6 +754,22 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           track={track}
         />
       )}
+      {/* Vrijspeel-viering: een leerpad 100% af → bijzonder dier verdiend. */}
+      {unlockMelding && (
+        <div onClick={() => setUnlockMelding(null)} style={{ position: "absolute", inset: 0, zIndex: 32, background: "rgba(8,14,28,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 340, background: "#fff", borderRadius: 20, boxShadow: "0 14px 44px rgba(0,0,0,.4)", overflow: "hidden", textAlign: "center", font: "system-ui" }}>
+            <div style={{ background: "linear-gradient(135deg,#f6c84c,#f59e0b)", padding: "20px 18px 16px" }}>
+              <div style={{ fontSize: 52, lineHeight: 1 }}>{unlockMelding.emoji}</div>
+              <div style={{ font: "900 18px system-ui", color: "#3a2a00", marginTop: 6 }}>{unlockMelding.naam} vrijgespeeld! ✨</div>
+            </div>
+            <div style={{ padding: "16px 18px 4px", font: "600 14px system-ui", color: "#56627a", lineHeight: 1.5 }}>{unlockMelding.waarom}</div>
+            <div style={{ padding: "12px 16px 18px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <button onClick={() => { setShopCat("dier"); startKopen({ assetId: unlockMelding.assetId, price: 0, emoji: unlockMelding.emoji, label: unlockMelding.naam }); setUnlockMelding(null); }} style={{ width: "100%", border: "none", background: "linear-gradient(135deg,#00C853,#00a846)", color: "#fff", font: "800 15px system-ui", padding: "13px", borderRadius: 12, cursor: "pointer" }}>{unlockMelding.emoji} Zet 'm in je park</button>
+              <button onClick={() => setUnlockMelding(null)} style={{ width: "100%", border: "none", background: "transparent", color: "#8a939c", font: "700 13px system-ui", padding: "6px", cursor: "pointer" }}>Later</button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Korte info-melding. */}
       {melding && (
         <div style={{ position: "absolute", top: 110, left: "50%", transform: "translateX(-50%)", zIndex: 11, background: "rgba(20,30,20,0.86)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "700 13px system-ui", textAlign: "center", maxWidth: "90%" }}>
@@ -908,6 +958,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   <button key={p.assetId} onClick={() => startKopen(p)} title={`${p.label} plaatsen`} style={{ flex: "0 0 auto", border: "none", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: kan ? "#234" : "#999", background: kan ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.5)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed", whiteSpace: "nowrap", textAlign: "center" }}>
                     <span style={{ fontSize: 18 }}>{p.emoji}</span> {p.label}<br />
                     <span style={{ fontSize: 11, opacity: 0.85 }}>{p.price} 🪙</span>
+                  </button>
+                );
+              })}
+              {/* Vrijspeel-dieren (alleen in Dieren-tab): te verdienen door te leren,
+                  niet te koop. Vergrendeld → tik = naar het leerpad (loop terug). */}
+              {shopCat === "dier" && VRIJSPEEL_DIEREN.map((v) => {
+                const isUnlocked = unlockedDieren.includes(v.assetId);
+                const alGeplaatst = placedItems.some((it) => it.assetId === v.assetId);
+                if (isUnlocked) {
+                  return (
+                    <button key={v.assetId} disabled={alGeplaatst} onClick={() => { if (!alGeplaatst) startKopen({ assetId: v.assetId, price: 0, emoji: v.emoji, label: v.naam }); }} title={alGeplaatst ? "Staat al in je park" : `${v.naam} plaatsen`} style={{ flex: "0 0 auto", border: "2px solid #f6c84c", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: "#7a5b00", background: alGeplaatst ? "rgba(246,200,76,0.25)" : "rgba(255,247,224,0.98)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: alGeplaatst ? "default" : "pointer", whiteSpace: "nowrap", textAlign: "center", opacity: alGeplaatst ? 0.7 : 1 }}>
+                      <span style={{ fontSize: 18 }}>{v.emoji}</span> {v.naam}<br />
+                      <span style={{ fontSize: 11, opacity: 0.85 }}>{alGeplaatst ? "✓ in je park" : "vrijgespeeld ✨"}</span>
+                    </button>
+                  );
+                }
+                return (
+                  <button key={v.assetId} onClick={() => { try { track("zoo_unlock_klik", { dier: v.assetId, pad: v.pad }); } catch { /* */ } if (onOpenLeerpad) onOpenLeerpad(v.pad); else if (onOpenLeerpaden) onOpenLeerpaden(); }} title={`Speel ${v.naam} vrij`} style={{ flex: "0 0 auto", border: "2px dashed #c9b06a", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: "#8a7a4a", background: "rgba(255,255,255,0.55)", boxShadow: "0 3px 10px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap", textAlign: "center" }}>
+                    <span style={{ fontSize: 18 }}>🔒</span> {v.naam}<br />
+                    <span style={{ fontSize: 10, opacity: 0.9 }}>leer sparen → speel vrij</span>
                   </button>
                 );
               })}

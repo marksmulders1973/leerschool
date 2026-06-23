@@ -33,8 +33,9 @@ export function defaultState() {
     last_login: null,
     last_kwartier_date: null,
     layout: STARTER_LAYOUT,
-    // owned (jsonb) bewaart o.a. de ingestelde kraampjes-prijzen per soort.
-    owned: { foodPrice: 5, drinkPrice: 4, icePrice: 4, popcornPrice: 4, econLevel: "po" },
+    // owned (jsonb) bewaart o.a. de kraampjes-prijzen per soort + vrijgespeelde
+    // dieren (unlocked: assetId's verdiend door leerpaden af te ronden).
+    owned: { foodPrice: 5, drinkPrice: 4, icePrice: 4, popcornPrice: 4, econLevel: "po", unlocked: [] },
   };
 }
 
