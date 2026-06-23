@@ -28,11 +28,18 @@ Alleen "**ja, want hier is het didactische bewijs**" = JA.
 - Geen AI-suggestie van vakken/paden
 - **Reden**: AI = chaos-trekker, vertrouwde uitlegpaden zijn beter dan onvoorspelbare AI-antwoorden
 
-### 2. Gamification-toevoegingen
-- Geen badges/levels/XP/coins
-- Geen streaks-uitbreiding (het bestaande streak-mechanisme blijft, maar geen NIEUWE)
-- Geen power-ups, geen daily-rewards anders dan wat al bestaat
-- **Reden**: Cito-doelgroep krijgt faalangst van vergelijking. Game-DNA is OBLITERATOR's domein, niet de leer-app.
+### 2. Gamification — HERZIEN 2026-06-23 (Zookwartier-pivot)
+
+> **Update:** de oude regel ("geen coins/levels/daily-rewards, game-DNA hoort niet in de leer-app") is **vervallen**. Mark koos 20 jun 2026 bewust voor **Zookwartier / "Mijn Park"** als beloningsspel: muntjes verdienen met leren + dagelijks inloggen, daarmee een 3D-dierenpark bouwen, met een economie-leerlaag (loonstrookje, btw-bon, winst-rekenvragen) die de muntjes aan échte Cito-rekenstof koppelt. Dat is nu een **bewust onderdeel van het product**. We vervangen het verbod door **guardrails** — de kern van de oude *reden* blijft namelijk gelden.
+
+**Wat MAG** (Zookwartier):
+- Muntjes + dagbonus + parkgroei als beloning voor leren.
+- Bedragen in het park aanklikbaar → uitleg → leerpad (de economie-brug).
+
+**Guardrails** (hier zit de oude angst nog in):
+- **Geen sociale vergelijking / ranglijsten / publieke scores.** Dát gaf de Cito-doelgroep faalangst — niet de muntjes zelf. Park blijft een privé-beloning.
+- **Het spel moet leren VOEDEN, niet vervangen.** Beloningen (login-bonus, parkopbrengst) bij voorkeur achter het dagdoel; bewaak de `park_*`- en `econ_*`-trechters en stuur bij als het park leertijd opeet.
+- **Game ↔ leer blijven visueel gescheiden** (design-system): het park is de beloning, niet het leerscherm zelf.
 
 ### 3. Sociale features
 - Geen vrienden-lijst
@@ -71,7 +78,7 @@ Het mini-spel **blijft bestaan** als hobby-project van Mark's 11-jarige zoon. Re
 **Maar**: OBLITERATOR is GEEN onderdeel van de Leerkwartier-product-flow.
 - ❌ Niet in hoofdmenu
 - ❌ Niet in Hall of Fame (Hall of Fame ZELF gaat ook weg uit hoofd-flow)
-- ❌ Niet als beloning-default na 15-min-milestone
+- ❌ Niet als beloning-default na 15-min-milestone — *die rol vervult sinds 20 jun 2026 **Zookwartier** (zie §2), niet OBLITERATOR.*
 - ✅ Op eigen route (bv. `/spel` of `/obliterator`) zodat zoon vrij kan bouwen
 - ✅ Code-base ongemoeid in repo
 
