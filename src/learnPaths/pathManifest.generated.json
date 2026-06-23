@@ -537,6 +537,34 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "belasting-po",
+    "file": "./belastingPo.js",
+    "title": "Belasting snappen (groep 6-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "🏛️",
+    "referentieNiveau": "1F",
+    "sloThema": "Rekenen + leefwereld — financiële educatie (belasting)",
+    "triggerKeywords": [
+      "belasting",
+      "btw",
+      "loonheffing",
+      "brutoloon",
+      "nettoloon",
+      "bruto",
+      "netto",
+      "Belastingdienst",
+      "samen betalen",
+      "overheid",
+      "redactiesom geld"
+    ],
+    "intro": "Belasting voor groep 6-8 — waarom we samen betalen voor wegen, scholen en ziekenhuizen, belasting op je loon (bruto → belasting eraf → netto) en btw die in de winkelprijs zit (9% / 21%). Met echte red",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "beroepen-werk-po",
     "file": "./beroepenWerkPo.js",
     "title": "Beroepen + werk (Cito groep 6-8)",
@@ -951,35 +979,6 @@
     "checkCount": 35,
     "chapterCount": 6,
     "estimatedMinutes": 20
-  },
-  {
-    "id": "continenten-wereld-po",
-    "file": "./continentenWereldPo.js",
-    "title": "Continenten en wereldkennis (groep 6-8)",
-    "subject": "aardrijkskunde",
-    "level": "groep6-8",
-    "emoji": "🌍",
-    "referentieNiveau": "1F",
-    "sloThema": "Aardrijkskunde — wereldoriëntatie",
-    "triggerKeywords": [
-      "continent",
-      "continenten",
-      "oceaan",
-      "oceanen",
-      "wereldkaart",
-      "tijdzone",
-      "wereldwonder",
-      "Europa",
-      "Azië",
-      "Afrika",
-      "Amerika",
-      "Oceanië"
-    ],
-    "intro": "De wereld voor groep 6-8 — 7 continenten, 5 oceanen, beroemde landen + steden, tijdzones, wereldwonderen. ~15 min.",
-    "stepCount": 6,
-    "checkCount": 40,
-    "chapterCount": 6,
-    "estimatedMinutes": 25
   },
   {
     "id": "coordinatenstelsel",

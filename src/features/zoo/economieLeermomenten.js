@@ -6,9 +6,9 @@
 // krijgt ronde getallen + één begrip, VMBO (vo) krijgt de echte termen.
 //
 // HARDE REGEL: elk `leerpad`-id MOET een bestaand pad zijn (anders kapotte loop).
-// Geverifieerd 2026-06-23: "financiele-vorming-po" en "geld-rekenen" bestaan.
-// Voeg pas een nieuw id toe als dat leerpad ook echt bestaat (bv. "belasting-po"
-// komt in Fase 2).
+// Geverifieerd 2026-06-23: "financiele-vorming-po", "geld-rekenen" en
+// "belasting-po" bestaan. Voeg pas een nieuw id toe als dat leerpad ook echt
+// bestaat.
 
 export const LEERMOMENTEN = {
   brutoloon: {
@@ -25,7 +25,7 @@ export const LEERMOMENTEN = {
       po: "Een stukje van je loon gaat naar de overheid. Daar betalen we samen wegen, scholen en ziekenhuizen van.",
       vo: "Loonheffing is belasting die meteen van je loon wordt ingehouden door je werkgever.",
     },
-    leerpad: { po: "financiele-vorming-po", vo: "financiele-vorming-po" },
+    leerpad: { po: "belasting-po", vo: "belasting-po" },
   },
   premie: {
     titel: "Premies",
@@ -49,7 +49,7 @@ export const LEERMOMENTEN = {
       po: "In de prijs zit al een beetje belasting verstopt: de btw. Die betaal je mee als je iets koopt.",
       vo: "Btw (belasting toegevoegde waarde) zit in de verkoopprijs: 9% op o.a. dieren en eten, 21% op de rest.",
     },
-    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+    leerpad: { po: "belasting-po", vo: "belasting-po" },
   },
   inkoop: {
     titel: "Inkoopprijs",
