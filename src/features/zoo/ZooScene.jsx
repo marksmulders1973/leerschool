@@ -33,7 +33,7 @@ function isVast(assetId) {
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij" }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
@@ -53,10 +53,10 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "fencePanel") return <FencePanel position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceCorner") return <FenceCorner position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "fenceGate") return <FenceGate position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "patatkraam") return <PatatKraam position={[x, y, z]} />;
-  if (a.procedural === "drankkraam") return <DrankKraam position={[x, y, z]} />;
-  if (a.procedural === "ijscokraam") return <IJsKraam position={[x, y, z]} />;
-  if (a.procedural === "popcornkraam") return <PopcornKraam position={[x, y, z]} />;
+  if (a.procedural === "patatkraam") return <PatatKraam position={[x, y, z]} kraam={kraam} />;
+  if (a.procedural === "drankkraam") return <DrankKraam position={[x, y, z]} kraam={kraam} />;
+  if (a.procedural === "ijscokraam") return <IJsKraam position={[x, y, z]} kraam={kraam} />;
+  if (a.procedural === "popcornkraam") return <PopcornKraam position={[x, y, z]} kraam={kraam} />;
   if (a.kind === "building" && String(assetId).startsWith("house")) {
     return (
       <HouseModel
@@ -381,6 +381,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
                 onParts={onHouseParts}
                 mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
+                kraam={kramen[getAsset(it.assetId)?.voorziet]}
               />
             </group>
           );

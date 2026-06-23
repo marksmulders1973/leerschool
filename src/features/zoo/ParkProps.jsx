@@ -960,11 +960,61 @@ export function PathTile({ position = [0, 0, 0], color = "#dcc48f" }) {
   );
 }
 
+// Verkoper achter de toonbank — blokkig poppetje dat zachtjes wuift. Maakt
+// zichtbaar dat er iemand achter de kraam staat (die je salaris kost — zie het
+// kraam-dagoverzicht). `tint` = de kleur van het kraampje.
+function Verkoper({ tint = "#e2574c" }) {
+  const arm = useRef();
+  useFrame((s) => { if (arm.current) arm.current.rotation.z = -0.35 + Math.sin(s.clock.elapsedTime * 2.2) * 0.28; });
+  const huid = "#f4c89a";
+  return (
+    <group position={[-0.34, 0, -0.08]}>
+      {/* benen */}
+      <mesh castShadow position={[-0.1, 0.3, 0]}><boxGeometry args={[0.13, 0.6, 0.15]} /><meshStandardMaterial color="#39507a" flatShading roughness={1} /></mesh>
+      <mesh castShadow position={[0.1, 0.3, 0]}><boxGeometry args={[0.13, 0.6, 0.15]} /><meshStandardMaterial color="#39507a" flatShading roughness={1} /></mesh>
+      {/* lichaam in kraamkleur + witte schort */}
+      <mesh castShadow position={[0, 0.92, 0]}><boxGeometry args={[0.4, 0.66, 0.25]} /><meshStandardMaterial color={tint} flatShading roughness={1} /></mesh>
+      <mesh position={[0, 0.82, 0.13]}><boxGeometry args={[0.3, 0.42, 0.02]} /><meshStandardMaterial color="#f7f3e8" flatShading roughness={1} /></mesh>
+      {/* linkerarm vast, rechterarm wuift */}
+      <mesh castShadow position={[-0.26, 0.96, 0.02]} rotation={[0, 0, 0.18]}><boxGeometry args={[0.1, 0.46, 0.11]} /><meshStandardMaterial color={tint} flatShading roughness={1} /></mesh>
+      <group ref={arm} position={[0.24, 1.14, 0.02]}>
+        <mesh castShadow position={[0.02, -0.22, 0]}><boxGeometry args={[0.1, 0.46, 0.11]} /><meshStandardMaterial color={tint} flatShading roughness={1} /></mesh>
+        <mesh position={[0.03, -0.47, 0]}><boxGeometry args={[0.1, 0.1, 0.11]} /><meshStandardMaterial color={huid} flatShading roughness={1} /></mesh>
+      </group>
+      {/* hoofd + gezicht */}
+      <mesh castShadow position={[0, 1.4, 0]}><boxGeometry args={[0.27, 0.27, 0.25]} /><meshStandardMaterial color={huid} flatShading roughness={1} /></mesh>
+      <mesh position={[-0.06, 1.43, 0.13]}><boxGeometry args={[0.035, 0.05, 0.02]} /><meshStandardMaterial color="#2a2a2a" /></mesh>
+      <mesh position={[0.06, 1.43, 0.13]}><boxGeometry args={[0.035, 0.05, 0.02]} /><meshStandardMaterial color="#2a2a2a" /></mesh>
+      <mesh position={[0, 1.34, 0.13]}><boxGeometry args={[0.1, 0.03, 0.02]} /><meshStandardMaterial color="#b5663f" /></mesh>
+      {/* petje in kraamkleur */}
+      <mesh position={[0, 1.57, 0]}><boxGeometry args={[0.29, 0.1, 0.27]} /><meshStandardMaterial color={tint} flatShading roughness={1} /></mesh>
+      <mesh position={[0, 1.55, 0.19]}><boxGeometry args={[0.26, 0.04, 0.12]} /><meshStandardMaterial color={tint} flatShading roughness={1} /></mesh>
+    </group>
+  );
+}
+
+// Meebewegend bord boven de kraam: toont WAT je verkoopt + de PRIJS. Werkt mee
+// als de speler de prijs aanpast (de `kraam`-prop verandert → bord update). Het
+// bord wijst altijd naar de camera (Html-billboard), klikken gaat eronderdoor.
+function KraamBord({ kraam }) {
+  if (!kraam) return null;
+  return (
+    <Html position={[0, 2.6, 0.1]} center distanceFactor={8} zIndexRange={[20, 0]} style={{ pointerEvents: "none", userSelect: "none" }}>
+      <div style={{ background: "#fffefb", border: "3px solid #3a2a12", borderRadius: 10, padding: "3px 10px 4px", textAlign: "center", boxShadow: "0 3px 9px rgba(0,0,0,.3)", whiteSpace: "nowrap" }}>
+        <div style={{ font: "800 13px system-ui", color: "#2a2018" }}>{kraam.emoji} {kraam.label}</div>
+        <div style={{ font: "900 14px system-ui", color: "#0a7d3c" }}>{kraam.verkoop} 🪙</div>
+      </div>
+    </Html>
+  );
+}
+
 // Patatkraam (procedureel) — een vrolijk snackkraam met gestreepte luifel.
-export function PatatKraam({ position = [0, 0, 0] }) {
+export function PatatKraam({ position = [0, 0, 0], kraam = null }) {
   const hout = "#caa44a";
   return (
     <group position={[position[0], 0, position[2]]}>
+      <Verkoper tint="#e2574c" />
+      <KraamBord kraam={kraam} />
       {/* toonbank */}
       <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#efe2c0" flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#c98a3a" flatShading roughness={1} /></mesh>
@@ -990,10 +1040,12 @@ export function PatatKraam({ position = [0, 0, 0] }) {
 
 // Drankkraam (procedureel) — een vrolijk drankkraam met blauw/witte luifel en
 // een grote beker met rietje op de toonbank. Bezoekers met dorst kopen hier.
-export function DrankKraam({ position = [0, 0, 0] }) {
+export function DrankKraam({ position = [0, 0, 0], kraam = null }) {
   const hout = "#caa44a";
   return (
     <group position={[position[0], 0, position[2]]}>
+      <Verkoper tint="#2a6f99" />
+      <KraamBord kraam={kraam} />
       {/* toonbank */}
       <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#e3f0f7" flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#3a8fb8" flatShading roughness={1} /></mesh>
@@ -1020,10 +1072,12 @@ export function DrankKraam({ position = [0, 0, 0] }) {
 
 // IJscokraam (procedureel) — pastel kraampje met roze/mint luifel en een grote
 // ijshoorn op de toonbank. Bezoekers met zin in ijs kopen hier.
-export function IJsKraam({ position = [0, 0, 0] }) {
+export function IJsKraam({ position = [0, 0, 0], kraam = null }) {
   const hout = "#caa44a";
   return (
     <group position={[position[0], 0, position[2]]}>
+      <Verkoper tint="#e98bb4" />
+      <KraamBord kraam={kraam} />
       {/* toonbank */}
       <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#fdeaf2" flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#e98bb4" flatShading roughness={1} /></mesh>
@@ -1052,10 +1106,12 @@ export function IJsKraam({ position = [0, 0, 0] }) {
 
 // Popcornkraam (procedureel) — rood/wit kraampje met een grote popcornbak vol
 // gele popcorn op de toonbank. Bezoekers met zin in popcorn kopen hier.
-export function PopcornKraam({ position = [0, 0, 0] }) {
+export function PopcornKraam({ position = [0, 0, 0], kraam = null }) {
   const hout = "#caa44a";
   return (
     <group position={[position[0], 0, position[2]]}>
+      <Verkoper tint="#d2453a" />
+      <KraamBord kraam={kraam} />
       {/* toonbank */}
       <mesh castShadow receiveShadow position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.8]} /><meshStandardMaterial color="#fbeceb" flatShading roughness={1} /></mesh>
       <mesh castShadow position={[0, 0.93, 0]}><boxGeometry args={[1.95, 0.1, 0.95]} /><meshStandardMaterial color="#d2453a" flatShading roughness={1} /></mesh>
