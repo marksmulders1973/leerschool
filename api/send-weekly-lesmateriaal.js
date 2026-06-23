@@ -194,7 +194,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
 // Dagrapport naar Mark: hoeveel content-mails zijn er deze run (= vandaag) verstuurd.
 // Draait ook op dagen met 0 (niemand 'due') — Mark wil het elke dag in zijn inbox zien.
 // Faalt nooit hard: een fout in het rapport mag de hoofdtaak niet blokkeren.
-async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden }) {
+async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, perPlan }) {
   if (!RESEND) return;
   let datum;
   try {
@@ -204,17 +204,22 @@ async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden }
   }
   const n = sent || 0;
   const foutTekst = fouten && fouten.length ? `${fouten.length} (${fouten.join(", ")})` : "0";
-  const onderwerp = `📬 Leerkwartier dagrapport: ${n} mail${n === 1 ? "" : "s"} verstuurd`;
+  // Uitsplitsing per type/plan (Mark-wens 2026-06-23: "6 mails verstuurd met bv oefenpakket").
+  const perPlanTekst = perPlan && Object.keys(perPlan).length
+    ? Object.entries(perPlan).map(([k, v]) => `${v}× ${k}`).join(", ")
+    : "";
+  const onderwerp = `📬 Leerkwartier dagrapport: ${n} mail${n === 1 ? "" : "s"} verstuurd${perPlanTekst ? ` — ${perPlanTekst}` : ""}`;
   const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.6;color:#1a2332;">
     <p style="margin:0 0 4px;"><strong>Dagrapport e-mailmachine</strong></p>
     <p style="margin:0 0 14px;color:#6b7785;font-size:13px;">${datum}</p>
     <p style="font-size:24px;font-weight:800;margin:0 0 12px;">${n} mail${n === 1 ? "" : "s"} verstuurd vandaag</p>
+    ${perPlanTekst ? `<p style="margin:0 0 4px;">Type: <strong>${perPlanTekst}</strong></p>` : ""}
     <p style="margin:0 0 4px;">Kandidaten (due vandaag): ${kandidaten ?? 0}</p>
     <p style="margin:0 0 4px;">Fouten: ${foutTekst}</p>
     ${reden ? `<p style="margin:0 0 4px;">Notitie: ${reden}</p>` : ""}
     <p style="font-size:12px;color:#7d8aa0;margin-top:16px;">Welkomst- + wekelijkse oefenmails. 0 is normaal op dagen dat niemand 'due' is.</p>
   </div>`;
-  const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}`;
+  const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.${perPlanTekst ? `\nType: ${perPlanTekst}` : ""}\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}`;
   try {
     await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -253,7 +258,7 @@ export default async function handler(req, res) {
     `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol)` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
-    `&select=id,email,kind_voornaam,sent_count,unsubscribe_token` +
+    `&select=id,email,kind_voornaam,sent_count,unsubscribe_token,plan` +
     `&order=last_sent_at.asc.nullsfirst&limit=${BATCH}`;
 
   let rijen;
@@ -273,6 +278,7 @@ export default async function handler(req, res) {
   const oefenvraag = kiesOefenvraag();
   let gelukt = 0;
   const fouten = [];
+  const perPlan = {}; // uitsplitsing voor het dagrapport ("6× oefenpakket")
   for (const rij of rijen) {
     if (!rij.email || !String(rij.email).includes("@")) continue;
     const welkom = !rij.sent_count;
@@ -296,11 +302,13 @@ export default async function handler(req, res) {
         base, key
       );
       gelukt++;
+      const planKey = welkom ? `${rij.plan || "onbekend"} (welkomst)` : (rij.plan || "onbekend");
+      perPlan[planKey] = (perPlan[planKey] || 0) + 1;
     } catch (e) {
       fouten.push(String(rij.id).slice(0, 8) + ":" + String(e).slice(0, 60));
     }
   }
 
-  await stuurDagrapport(RESEND, FROM, { sent: gelukt, kandidaten: rijen.length, fouten });
+  await stuurDagrapport(RESEND, FROM, { sent: gelukt, kandidaten: rijen.length, fouten, perPlan });
   return res.status(200).json({ ok: true, sent: gelukt, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
