@@ -16,6 +16,27 @@ export const KWARTIER_REWARD = 8;       // 15 min leren voltooid
 export const INKOMST_PER_VERBLIJF = 2;  // per dier/verblijf per dag
 export const INKOMST_PER_BABY = 1;      // extra per jonkie per dag
 export const MAX_DAGEN_INKOMST = 3;     // offline-opbrengst gecapt op 3 dagen
+
+// Loonkosten: een kraam heeft een verkoper die je elke dag salaris kost. Zo
+// leert het kind "vaste kosten" — je betaalt het óók op een rustige dag. Zacht
+// gehouden: het verlaagt je dagopbrengst maar maakt je nooit failliet (de netto
+// dagopbrengst wordt op 0 afgekapt, nooit negatief). In het echt kost een
+// verkoper ~€60-70 per dag (zie het kraam-dagoverzicht voor die vergelijking).
+export const VERKOPER_LOON = 6;         // muntjes per kraam per dag
+export const VERKOPER_LOON_EURO = 70;   // ter vergelijking: echt dagloon in euro's
+
+// Heeft dit item een verkoper (is het een kraam)? Kramen hebben een `voorziet`.
+function isKraam(assetId) {
+  const a = getAsset(assetId);
+  return !!(a && a.voorziet);
+}
+export function aantalKramen(items) {
+  return (items || []).filter((it) => isKraam(it.assetId)).length;
+}
+// Totale loonkost per dag = aantal kramen × het dagloon van één verkoper.
+export function loonkostenPerDag(items) {
+  return aantalKramen(items) * VERKOPER_LOON;
+}
 // Jonkies: per nieuwe dag kans dat een verblijf er een baby bij krijgt.
 export const BABY_KANS = 0.35;
 export const BABY_KANS_GEVOERD = 0.6;   // goed verzorgd (recent gevoerd) → eerder jonkies

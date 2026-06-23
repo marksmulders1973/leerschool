@@ -7,7 +7,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
-import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST } from "../features/zoo/zooEconomy";
+import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -174,6 +174,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const inkoopBonGetoondRef = useRef(false); // bon hooguit 1× per parksessie — breekt de speelflow nooit
   const [unlockMelding, setUnlockMelding] = useState(null); // viering bij een nieuw vrijgespeeld dier
   const unlockCheckedRef = useRef(false); // unlock-check hooguit 1× per parksessie
+  const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
+  const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
   const [shareUrl, setShareUrl] = useState(null);
@@ -216,6 +218,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       saleCountRef.current += 1;
       const inkoop = kraamLiveRef.current?.[kind]?.inkoop ?? 0;
       const winst = Math.max(0, verkoop - inkoop);         // verlies kost geen muntjes (kind raakt niet in de min)
+      // Dagoverzicht: tel élke verkoop + de opbrengst mee (ook bij 0 winst),
+      // zodat het kind in het kraam-overzicht ziet wat er binnenkwam vs. wat het kostte.
+      setSaleStats((s) => {
+        const c = s[kind] || { count: 0, opbrengst: 0, inkoopkosten: 0 };
+        return { ...s, [kind]: { count: c.count + 1, opbrengst: c.opbrengst + verkoop, inkoopkosten: c.inkoopkosten + inkoop } };
+      });
       if (winst <= 0) return;
       setMeta((m) => (m ? { ...m, coins: m.coins + winst } : m));
     },
@@ -293,14 +301,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
       let finalMeta = kw.state;
       let finalLayout = layout;
-      let parkGain = 0, births = 0, weggelopen = 0;
+      let parkGain = 0, births = 0, weggelopen = 0, loon = 0;
 
       // Park-groei: op een nieuwe dag levert je park muntjes op. Verzorging is PER
       // DIER (it.fed): recent gevoerd → eerder jonkies; een gekocht dier dat >= 3
       // dagen geen hooi kreeg loopt weg (starters blijven).
       if (isNieuweDag) {
         const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
-        parkGain = inkomstenPerDag(layout, kindVan) * dagen;
+        // Bruto parkopbrengst − loon van de verkopers (vaste kost). Netto nooit
+        // negatief: te veel kramen eet je winst op, maar je raakt nooit in de min.
+        const brutoPark = inkomstenPerDag(layout, kindVan) * dagen;
+        loon = loonkostenPerDag(layout) * dagen;
+        parkGain = Math.max(0, brutoPark - loon);
         const g = groeiBabies(layout, isDier);
         finalLayout = g.layout;
         births = g.births;
@@ -317,7 +329,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
       if (gained > 0 || weggelopen > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, births, weggelopen });
+        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, weggelopen });
         clearTimeout(rewardTimer.current);
         rewardTimer.current = setTimeout(() => setReward(null), 6000);
       }
@@ -718,6 +730,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               reward.login > 0 && `Inloggen +${reward.login}`,
               reward.kwartier > 0 && `Kwartier +${reward.kwartier}`,
               reward.park > 0 && `Je park +${reward.park}`,
+              reward.loon > 0 && `🧑 Verkopers-loon −${reward.loon}`,
               reward.goedVerzorgd && `🌾 Goed verzorgd!`,
               reward.births > 0 && `🐣 ${reward.births} jonkie${reward.births > 1 ? "s" : ""} geboren! +${reward.births * BABY_BONUS}`,
             ].filter(Boolean).join("  ·  ")}
@@ -770,6 +783,44 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </div>
         </div>
       )}
+      {/* Kraam-dagoverzicht: opbrengst − inkoop − loon = nettowinst (vaste kosten leren). */}
+      {kraamOverzicht && kramen[kraamOverzicht] && (() => {
+        const kr = kramen[kraamOverzicht];
+        const st = saleStats[kraamOverzicht] || { count: 0, opbrengst: 0, inkoopkosten: 0 };
+        const brutowinst = st.opbrengst - st.inkoopkosten;
+        const netto = brutowinst - VERKOPER_LOON;
+        const Rij = ({ label, waarde, sub, sterk, kleur }) => (
+          <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: sterk ? "10px 0 2px" : "5px 0", borderTop: sterk ? "2px solid #e7ebf1" : "none" }}>
+            <span style={{ font: sterk ? "800 14px system-ui" : "600 13px system-ui", color: "#46506a" }}>{label}{sub && <span style={{ font: "500 11px system-ui", color: "#9aa3b2" }}> {sub}</span>}</span>
+            <span style={{ font: sterk ? "900 16px system-ui" : "800 14px system-ui", color: kleur || "#1c2840", whiteSpace: "nowrap" }}>{waarde}</span>
+          </div>
+        );
+        return (
+          <div onClick={() => setKraamOverzicht(null)} style={{ position: "absolute", inset: 0, zIndex: 32, background: "rgba(8,14,28,0.5)", display: "grid", placeItems: "center", padding: 16 }}>
+            <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 380, background: "#fff", borderRadius: 18, boxShadow: "0 14px 44px rgba(0,0,0,.38)", overflow: "hidden", font: "system-ui" }}>
+              <div style={{ background: "linear-gradient(135deg,#0a9d4a,#0a7d3c)", color: "#fff", padding: "14px 18px" }}>
+                <div style={{ font: "900 16px system-ui" }}>📊 {KRAAM_SOORTEN[kraamOverzicht]?.label} — dagoverzicht</div>
+                <div style={{ font: "700 12px system-ui", opacity: 0.92, marginTop: 3 }}>📋 In de aanbieding: {kr.emoji} {kr.label} voor {kr.verkoop} 🪙</div>
+              </div>
+              <div style={{ padding: "10px 18px 4px" }}>
+                <Rij label="Verkocht" sub="(deze parksessie)" waarde={`${st.count} stuks`} />
+                <Rij label="Opbrengst" sub="(alles wat binnenkwam)" waarde={`${st.opbrengst} 🪙`} kleur="#0a7d3c" />
+                <Rij label={`Inkoopkosten`} sub={`(${st.count} × ${kr.inkoop} 🪙)`} waarde={`− ${st.inkoopkosten} 🪙`} kleur="#c0392b" />
+                <Rij label="Brutowinst" waarde={`${brutowinst} 🪙`} sterk kleur={brutowinst >= 0 ? "#0a7d3c" : "#c0392b"} />
+                <Rij label="🧑 Verkopers-loon" sub="(vaste kost / dag)" waarde={`− ${VERKOPER_LOON} 🪙`} kleur="#c0392b" />
+                <Rij label="Nettowinst vandaag" waarde={`${netto} 🪙`} sterk kleur={netto >= 0 ? "#0a7d3c" : "#c0392b"} />
+              </div>
+              <div style={{ margin: "8px 18px 0", padding: "9px 12px", background: "#fff8e6", border: "1px solid #f3e0a8", borderRadius: 12, font: "600 12px system-ui", color: "#7a5b00", lineHeight: 1.45 }}>
+                💶 In het echt kost een verkoper ongeveer <b>€{VERKOPER_LOON_EURO} per dag</b>. Je betaalt 'm élke dag — ook als er weinig verkocht wordt. Daarom moet je genoeg verkopen om je verkoper te kunnen betalen.
+              </div>
+              <div style={{ padding: "12px 16px 16px", display: "flex", flexDirection: "column", gap: 8 }}>
+                <button onClick={() => { setKraamOverzicht(null); try { track("econ_naar_leren", { scherm: "kraam_overzicht", pad: "winst-rekenen-po" }); } catch { /* */ } if (onOpenLeerpad) onOpenLeerpad("winst-rekenen-po"); else if (onOpenLeerpaden) onOpenLeerpaden(); }} style={{ width: "100%", border: "none", background: "linear-gradient(135deg,#00C853,#00a846)", color: "#fff", font: "800 14px system-ui", padding: "12px", borderRadius: 12, cursor: "pointer" }}>💡 Leer hoe winst & kosten werken →</button>
+                <button onClick={() => setKraamOverzicht(null)} style={{ width: "100%", border: "none", background: "#eef1f5", color: "#33404f", font: "800 13px system-ui", padding: "10px", borderRadius: 12, cursor: "pointer" }}>Sluiten</button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
       {/* Korte info-melding. */}
       {melding && (
         <div style={{ position: "absolute", top: 110, left: "50%", transform: "translateX(-50%)", zIndex: 11, background: "rgba(20,30,20,0.86)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "700 13px system-ui", textAlign: "center", maxWidth: "90%" }}>
@@ -924,6 +975,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   : "Mooie prijs! Veel bezoekers kopen dit."}
             </span>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+              <button onClick={() => { setKraamOverzicht(selVoorziet); try { track("kraam_overzicht_open", { kraam: selVoorziet }); } catch { /* */ } }} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#0a9d4a,#0a7d3c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>📊 Dagoverzicht</button>
               <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧮 Reken-vraag</button>
               <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
               <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
