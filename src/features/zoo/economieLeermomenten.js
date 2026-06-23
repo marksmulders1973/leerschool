@@ -43,6 +43,30 @@ export const LEERMOMENTEN = {
     },
     leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
   },
+  btw: {
+    titel: "Btw",
+    uitleg: {
+      po: "In de prijs zit al een beetje belasting verstopt: de btw. Die betaal je mee als je iets koopt.",
+      vo: "Btw (belasting toegevoegde waarde) zit in de verkoopprijs: 9% op o.a. dieren en eten, 21% op de rest.",
+    },
+    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+  },
+  inkoop: {
+    titel: "Inkoopprijs",
+    uitleg: {
+      po: "Dit is wat het dier jou kost. Wil je later winst maken, dan moet je het voor méér verkopen.",
+      vo: "De inkoopprijs zijn je kosten. Winst maak je pas als de verkoopprijs daarboven uitkomt.",
+    },
+    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+  },
+  winst: {
+    titel: "Winst",
+    uitleg: {
+      po: "Winst is wat je overhoudt: de verkoopprijs min wat het jou kostte (de inkoop).",
+      vo: "Winst = opbrengst − kosten. Verkoop je boven de inkoopprijs, dan maak je winst.",
+    },
+    leerpad: { po: "geld-rekenen", vo: "geld-rekenen" },
+  },
 };
 
 // Geef het leermoment voor een sleutel, met de teksten al op het juiste niveau.

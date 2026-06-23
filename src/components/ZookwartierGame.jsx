@@ -14,7 +14,8 @@ import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
 import { track } from "../utils.js";
 import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
-import Loonstrook from "./EconomieUitleg";
+import Loonstrook, { InkoopBon } from "./EconomieUitleg";
+import { splitsBtw, btwTarief } from "../features/zoo/btw";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -168,6 +169,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [loaded, setLoaded] = useState(false);
   const [reward, setReward] = useState(null);
   const [loonstrook, setLoonstrook] = useState(null); // {netto, niveau} — opt-in loonstrookje na kwartier
+  const [inkoopBon, setInkoopBon] = useState(null); // bonnetje (btw zichtbaar) bij het kopen van een dier
+  const inkoopBonGetoondRef = useRef(false); // bon hooguit 1× per parksessie — breekt de speelflow nooit
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
   const [shareUrl, setShareUrl] = useState(null);
@@ -382,8 +385,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
     // Nieuw dier start "gevoerd" (vandaag), zodat het niet meteen honger heeft.
     const nieuw = { assetId: placing.assetId, cell, rotation: rot, price: placing.price };
-    if (kindVan(placing.assetId) === "animal") nieuw.fed = vandaag();
+    const isAnimal = kindVan(placing.assetId) === "animal";
+    if (isAnimal) nieuw.fed = vandaag();
     setPlacedItems((items) => [...items, nieuw]);
+    // Bonnetje: laat bij de éérste dier-aankoop (≥10 🪙) zien dat er btw in de
+    // prijs zit. Hooguit 1× per parksessie — anders breekt het de speelflow.
+    if (isAnimal && placing.price >= 10 && !inkoopBonGetoondRef.current) {
+      inkoopBonGetoondRef.current = true;
+      const a = getAsset(placing.assetId);
+      const { incl, excl, btw, tarief } = splitsBtw(placing.price, btwTarief("animal"));
+      setInkoopBon({ emoji: a?.emoji || "🐾", label: a?.name || "dier", incl, excl, btw, tarief, niveau: econLevel });
+      try { track("econ_open", { scherm: "inkoopbon", niveau: econLevel }); } catch { /* nooit laten breken */ }
+    }
     // Blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
     if (coins - placing.price < placing.price) setPlacing(null);
   };
@@ -695,6 +708,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           niveau={loonstrook.niveau}
           onOpenLeerpad={(id) => { setLoonstrook(null); if (onOpenLeerpad) onOpenLeerpad(id); else if (onOpenLeerpaden) onOpenLeerpaden(); }}
           onClose={() => setLoonstrook(null)}
+          track={track}
+        />
+      )}
+      {/* Inkoop-bonnetje (bij het kopen van een dier) — prijs → btw → totaal, met doorklik naar leerpaden. */}
+      {inkoopBon && (
+        <InkoopBon
+          {...inkoopBon}
+          onOpenLeerpad={(id) => { setInkoopBon(null); if (onOpenLeerpad) onOpenLeerpad(id); else if (onOpenLeerpaden) onOpenLeerpaden(); }}
+          onClose={() => setInkoopBon(null)}
           track={track}
         />
       )}
