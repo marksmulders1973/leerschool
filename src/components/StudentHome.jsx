@@ -8,7 +8,6 @@ import pathManifest from "../learnPaths/pathManifest.generated.json";
 // komt nu uit pathManifest.generated.json (~130 kB ipv 5,8 MB).
 const pathManifestById = Object.fromEntries(pathManifest.map(p => [p.id, p]));
 import Header from "./Header.jsx";
-import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
 import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
 import NieuwTopografieBanner from "./NieuwTopografieBanner.jsx";
@@ -244,7 +243,6 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
       <Header title={`Hoi ${userName}`} subtitle="Welk kwartier wordt het vandaag?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
-        <KindAcceptBanner userName={userName} />
         <KoppelcodeBanner userName={userName} />
         <NieuwTopografieBanner />
         {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen

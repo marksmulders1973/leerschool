@@ -51,10 +51,8 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   const [selectedChild, setSelectedChild] = useState(null);
   const [childScores, setChildScores] = useState([]);
   const [citoScores, setCitoScores] = useState([]);
-  const [newChildName, setNewChildName] = useState("");
   const [loading, setLoading] = useState(false);
   const [scoresLoading, setScoresLoading] = useState(false);
-  const [linkMethod, setLinkMethod] = useState("whatsapp"); // "whatsapp" | "naam"
   const [inviteCode, setInviteCode] = useState("");
   const [inviteSent, setInviteSent] = useState(false);
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
@@ -117,22 +115,6 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       .order("created_at", { ascending: false })
       .then(({ data }) => setCitoScores(data || []));
   }, [selectedChild, selectedChildVerified]);
-
-  const addChild = async () => {
-    if (!newChildName.trim() || !authUser) return;
-    setLoading(true);
-    // Insert met verified=false — kind moet via koppelcode in StudentHome
-    // bevestigen (RLS-policy schrijft dan verified=true).
-    const { data } = await supabase.from("parent_child_links")
-      .insert({ parent_user_id: authUser.id, child_name: newChildName.trim(), verified: false })
-      .select().single();
-    if (data) {
-      setChildren(prev => [...prev, data]);
-      setSelectedChild(data.child_name);
-      setNewChildName("");
-    }
-    setLoading(false);
-  };
 
   const removeChild = async (id) => {
     await supabase.from("parent_child_links").delete().eq("id", id);
@@ -411,26 +393,24 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             </div>
           ))}
 
-          {/* Methode tabs */}
-          <div style={{ display: "flex", gap: 6, marginBottom: 12, marginTop: children.length ? 10 : 0 }}>
-            {[
-              { id: "whatsapp", label: "📱 Via WhatsApp", desc: "Kind op telefoon" },
-              { id: "naam",     label: "✏️ Naam invullen", desc: "Zit naast je" },
-            ].map(m => (
-              <button key={m.id} onClick={() => setLinkMethod(m.id)} style={{
-                flex: 1, padding: "9px 6px", borderRadius: 10, cursor: "pointer",
-                border: linkMethod === m.id ? "1.5px solid rgba(0,176,255,0.5)" : "1px solid rgba(255,255,255,0.1)",
-                background: linkMethod === m.id ? "rgba(0,176,255,0.1)" : "rgba(255,255,255,0.03)",
-              }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: linkMethod === m.id ? "#00b0ff" : "rgba(255,255,255,0.5)" }}>{m.label}</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>{m.desc}</div>
-              </button>
-            ))}
-          </div>
+          {/* Koppel je kind — alléén de veilige WhatsApp-koppelcode-route.
+              De oude "naam invullen"-route is verwijderd: door de RLS-policy
+              (auth.uid() = parent_user_id) kon het kind die koppeling nooit
+              bevestigen → 100% dode flow (diagnose 2026-06-24). */}
+          {children.length === 0 && (
+            <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.10)", padding: "13px 15px", marginBottom: 12, marginTop: 4 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, color: "#00b0ff", marginBottom: 4 }}>
+                📊 Koppel je kind en zie de voortgang
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
+                Maak een koppelcode aan en stuur 'm via WhatsApp. Je kind voert 'm
+                één keer in — daarna zie je per vak hoe het gaat richting de Doorstroomtoets.
+              </div>
+            </div>
+          )}
 
-          {/* WhatsApp flow */}
-          {linkMethod === "whatsapp" && (
-            <div>
+          {/* WhatsApp-koppelcode-flow (de enige route) */}
+          <div style={{ marginTop: children.length ? 10 : 0 }}>
               {!inviteCode ? (
                 <>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10, lineHeight: 1.5 }}>
@@ -494,28 +474,6 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 </div>
               )}
             </div>
-          )}
-
-          {/* Naam invullen flow */}
-          {linkMethod === "naam" && (
-            <div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10 }}>
-                Vul de naam in zoals je kind die gebruikt in de app.
-              </div>
-              <div style={{ display: "flex", gap: 8 }}>
-                <input
-                  value={newChildName}
-                  onChange={e => setNewChildName(e.target.value)}
-                  onKeyDown={e => e.key === "Enter" && addChild()}
-                  placeholder="Naam van je kind"
-                  style={{ flex: 1, padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 13, outline: "none" }}
-                />
-                <button onClick={addChild} disabled={loading || !newChildName.trim()} style={{ padding: "9px 14px", borderRadius: 10, border: "none", background: newChildName.trim() ? "#00b0ff" : "rgba(255,255,255,0.1)", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
-                  {loading ? "..." : "Voeg toe"}
-                </button>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Dashboard inhoud — alleen als kind geselecteerd */}
