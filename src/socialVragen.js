@@ -784,6 +784,33 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Eenheden/inhoud-valkuil (2026-06-25) — m³ → cm³ ("hoeveel suikerklontjes").
+  "suiker1": {
+    vak: "rekenen",
+    leerpadLink: { id: "meten-gewicht-inhoud-tijd-po", title: "Meten: gewicht, inhoud & tijd (groep 8)" },
+    vraag: "🧊 Hoeveel **suikerklontjes** van **1 cm × 1 cm × 1 cm** passen er in een doos van **10 m³**?",
+    options: ["10 miljoen", "1 miljoen", "10.000", "100 miljoen"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Bijna! Maar je hebt 10 m³, niet 1 m³. En 1 m³ = 1 miljoen cm³.",
+      "Te weinig — let op de valkuil: 1 m³ = 1.000.000 cm³ (1.000 cm³ is een liter).",
+      "Te veel — reken nog eens: 10 × 1.000.000.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Zet 1 m³ om naar cm³", tekst: "1 meter = 100 cm. Een kubieke meter is 100 × 100 × 100 = **1.000.000 cm³** (een miljoen blokjes van 1 cm)." },
+        { titel: "Maal 10", tekst: "Je hebt 10 m³: 10 × 1.000.000 = 10.000.000 cm³." },
+        { titel: "Eén klontje = 1 cm³", tekst: "Een klontje van 1×1×1 cm is precies 1 cm³. Dus er passen **10.000.000 (10 miljoen)** klontjes in." },
+      ],
+      niveaus: {
+        basis: "1 m³ = 1.000.000 cm³. 10 m³ = 10.000.000 cm³. Eén klontje is 1 cm³, dus 10 miljoen klontjes.",
+        simpeler: "Een kubieke meter is een kubus van 1 m = 100 cm. In blokjes van 1 cm: 100×100×100 = 1 miljoen. Tien kubieke meter = 10 miljoen.",
+        nogSimpeler: "1 m³ = 1 miljoen klontjes. 10 m³ = tien keer zoveel = 10 miljoen.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
