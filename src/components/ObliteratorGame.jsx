@@ -2797,6 +2797,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // loopt door — alleen het scherm ziet er anders uit. Bij overleven:
     // bonus-hart + score-boost. Dood = normaal life-verlies, geen extra straf.
     const portals = []; // entries kunnen `type: 'dungeon'` (default) of `type: 'hell'` zijn
+    // ── GRABBEL-MAATJE dat je deze run draagt (Brian 2026-06-26) ──
+    // {id, niveau, veilig} | null. Init uit het uitgeruste maatje — dat staat
+    // ON-VEILIG (at risk!) tot je door een kluis-portaal gaat. Ga je af zonder
+    // portaal → maatje permanent kwijt.
+    let gedragenSprite = (() => {
+      const id = uitgerustRef.current;
+      const lvl = id ? (verzamelingRef.current[id] || 0) : 0;
+      return (id && lvl > 0) ? { id, niveau: lvl, veilig: false } : null;
+    })();
+    const kluisPortals = []; // groene veilig-portalen om je maatje te bewaren
+    let kluisPortalSpawnTeller = 0;
     let dungeonMode = false;
     let dungeonFrames = 0;
     let dungeonFadeIn = 0;        // > 0 = aan het inkomen
@@ -3552,6 +3563,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       plafondStekels.length = 0;
       schansen.length = 0;
       portals.length = 0;
+      kluisPortals.length = 0;
       schatkisten.length = 0;
       vissen.length = 0;
       bubbels.length = 0;
@@ -4003,6 +4015,49 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.arc(cx, cy, r * 0.4, 0, Math.PI * 2);
         ctx.fill();
       }
+      ctx.restore();
+    }
+    // Kluis-portaal (Brian 2026-06-26): groen veilig-portaal met maatje-emoji erin.
+    function tekenKluisPortal(kp) {
+      const cx = kp.x, cy = kp.y, r = kp.grootte / 2;
+      ctx.save();
+      ctx.shadowBlur = 24;
+      ctx.shadowColor = "#39e08a";
+      // buitenste groene ring
+      ctx.strokeStyle = "rgba(57, 224, 138, 0.9)";
+      ctx.lineWidth = 5 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, kp.fase, kp.fase + Math.PI * 1.7);
+      ctx.stroke();
+      // middelste lichtere ring
+      ctx.strokeStyle = "rgba(180, 255, 210, 0.8)";
+      ctx.lineWidth = 3 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.66, -kp.fase * 1.3, -kp.fase * 1.3 + Math.PI * 1.7);
+      ctx.stroke();
+      // centrum-glow
+      ctx.shadowBlur = 0;
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 0.55);
+      grad.addColorStop(0, "rgba(220, 255, 235, 0.92)");
+      grad.addColorStop(0.6, "rgba(60, 220, 130, 0.5)");
+      grad.addColorStop(1, "rgba(20, 120, 70, 0)");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.55, 0, Math.PI * 2);
+      ctx.fill();
+      // maatje-emoji in het midden (wat je veiligstelt)
+      const meta = gedragenSprite ? SPRITE_BY_ID[gedragenSprite.id] : null;
+      if (meta) {
+        ctx.font = `${20 * SCHAAL}px serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(meta.emoji, cx, cy + 1 * SCHAAL);
+      }
+      // label boven het portaal
+      ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.fillStyle = "#bfffd6";
+      ctx.shadowBlur = 8; ctx.shadowColor = "#39e08a";
+      ctx.fillText("VEILIG", cx, cy - r - 6 * SCHAAL);
       ctx.restore();
     }
     function tekenLavaGrond() {
@@ -5668,7 +5723,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // GRABBEL (Brian 2026-06-26): elke 10 levels één keer trekken/oplevelen
           if (nieuwLevel > 0 && nieuwLevel % SPRITE_GRABBEL_LEVELS === 0 && !GRABBEL_GEDAAN.has(nieuwLevel)) {
             GRABBEL_GEDAAN.add(nieuwLevel);
-            try { doeGrabbelRef.current(); } catch {}
+            if (!gedragenSprite) {
+              // win een willekeurig maatje (rariteit = de kans) — nog ON-VEILIG
+              const s = kiesGrabbelSprite();
+              gedragenSprite = { id: s.id, niveau: 1, veilig: false };
+              try { grabbelBannerRef.current({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false }); } catch {}
+            } else if (gedragenSprite.niveau < SPRITE_MAX_NIVEAU) {
+              // level je maatje op (+1)
+              gedragenSprite.niveau = Math.min(SPRITE_MAX_NIVEAU, gedragenSprite.niveau + 1);
+              const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
+              // als 't al veilig is, meteen de hogere stand bewaren
+              if (gedragenSprite.veilig) { try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {} }
+              try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: true, isNew: false, maxed: gedragenSprite.niveau >= SPRITE_MAX_NIVEAU }); } catch {}
+            } else {
+              // al MAX → kleine munten-bonus als troost
+              const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
+              try { bonusMuntenRef.current(10); } catch {}
+              try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: false, isNew: false, maxed: true }); } catch {}
+            }
             // feestelijk: regenboog-confetti + jingle
             spawnParticles(W * 0.5, H * 0.32, 34, "#ffd54f", { spread: 13, opwaarts: 5, leven: 75, grootte: 6, glow: 24 });
             spawnParticles(W * 0.5, H * 0.32, 22, "#b15cff", { spread: 11, opwaarts: 4, leven: 60, grootte: 5, glow: 20 });
@@ -6152,6 +6224,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               type: "hell",
             });
           }
+          // KLUIS-PORTAAL (Brian 2026-06-26) — alleen als je een ON-VEILIG maatje
+          // draagt. Groen portaal; eraan raken = maatje voor altijd bewaard.
+          // Spawnt regelmatig (elke ~7 obstakels) zodat het haalbaar is.
+          if (
+            gedragenSprite && !gedragenSprite.veilig &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode && !customLevelMode &&
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 7 === 0 &&
+            kluisPortals.length === 0
+          ) {
+            const yPos = (165 + Math.random() * 70) * SCHAAL;
+            kluisPortals.push({ x: W + 40, y: yPos, grootte: 54 * SCHAAL, fase: 0, opgepakt: false });
+          }
           // SCHANS / LOOPING — elke ~6 obstakels, 85% kans. Skip tijdens boss,
           // FLIP en dungeon (super-jump in dungeon = vlieg door plafond-stekels
           // = direct dood).
@@ -6356,6 +6440,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
         }
         if (p.x + p.grootte < 0 || p.opgepakt) portals.splice(i, 1);
+      }
+      // ───── KLUIS-PORTALEN (Brian 2026-06-26) — maatje veiligstellen ─────
+      for (let i = kluisPortals.length - 1; i >= 0; i--) {
+        const kp = kluisPortals[i];
+        kp.x -= effSnelheid;
+        kp.fase += 0.12;
+        if (!kp.opgepakt && gedragenSprite && !gedragenSprite.veilig && !bossActief && flipFrames === 0 && !loopActief) {
+          const dx = (speler.x + speler.breedte / 2) - kp.x;
+          const dy = (speler.y + speler.hoogte / 2) - kp.y;
+          if (Math.sqrt(dx * dx + dy * dy) < (kp.grootte + speler.breedte) / 2) {
+            kp.opgepakt = true;
+            gedragenSprite.veilig = true;
+            try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {}
+            const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
+            try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: true, isNew: false, veiliggesteld: true }); } catch {}
+            spawnParticles(kp.x, kp.y, 30, "#69f0ae", { spread: 9, opwaarts: 2, leven: 40, grootte: 6, glow: 24 });
+            spawnParticles(kp.x, kp.y, 16, "#ffffff", { spread: 6, opwaarts: 1, leven: 28, grootte: 4, glow: 16 });
+            shakeKracht = Math.max(shakeKracht, 5);
+            piep(660, 0.14, "sine", 0.15);
+            setTimeout(() => piep(990, 0.16, "sine", 0.14), 90);
+          }
+        }
+        if (kp.x + kp.grootte < 0 || kp.opgepakt) kluisPortals.splice(i, 1);
       }
       // ───── FAN-SPANDOEKEN ─────
       // Periodieke spandoek-spawn met top-3 highscore-namen
@@ -7259,7 +7366,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       tekenGrabbelMaatje();
     }
     function tekenGrabbelMaatje() {
-      const sp = actieveSpriteRef.current;
+      const sp = gedragenSprite;
       if (!sp) return;
       const meta = SPRITE_BY_ID[sp.id];
       if (!meta) return;
@@ -7267,6 +7374,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const x = 12;
       const y = 122 * SCHAAL; // net onder de HP-balk
       const r = 14 * SCHAAL;   // straal cirkel-badge
+      // onveilig = knipperende rode rand (in gevaar); veilig = groene rand
+      const randKleur = sp.veilig ? "#69f0ae" : "#ff4040";
+      const knipper = sp.veilig ? 1 : (Math.sin(frameTeller * 0.18) * 0.35 + 0.65);
       ctx.save();
       // badge-cirkel met rariteit-glow
       ctx.beginPath();
@@ -7275,9 +7385,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.shadowBlur = 12;
       ctx.shadowColor = kleur;
       ctx.fill();
-      ctx.lineWidth = 2 * SCHAAL;
-      ctx.strokeStyle = kleur;
+      ctx.shadowBlur = sp.veilig ? 10 : 14 * knipper;
+      ctx.shadowColor = randKleur;
+      ctx.lineWidth = 2.5 * SCHAAL;
+      ctx.globalAlpha = knipper;
+      ctx.strokeStyle = randKleur;
       ctx.stroke();
+      ctx.globalAlpha = 1;
       ctx.shadowBlur = 0;
       // maatje-emoji
       ctx.font = `${17 * SCHAAL}px serif`;
@@ -7303,6 +7417,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.font = `bold ${8 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.fillText("MAX", balkX + balkW + 4, balkY - 1);
       }
+      // veilig/onveilig-label onder de balk
+      ctx.font = `bold ${8 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.globalAlpha = knipper;
+      ctx.fillStyle = randKleur;
+      ctx.fillText(sp.veilig ? "✓ VEILIG" : "⚠ ZOEK PORTAAL", balkX, balkY + balkH + 7 * SCHAAL);
+      ctx.globalAlpha = 1;
       ctx.restore();
     }
     function tekenHpBalk() {
@@ -7598,6 +7718,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const o of obstakels) tekenObstakel(o);
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
+      for (const kp of kluisPortals) tekenKluisPortal(kp);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte, ps.vorm);
       for (const m of zwevendeMinen) tekenZwevendeMine(m);
       // Mystery-blokken — gouden ?-blok met pulserende rand. Na trigger wordt
@@ -8464,6 +8585,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         for (const h of haaien) tekenHaai(h);
         for (const sc of schansen) tekenSchans(sc);
         for (const p of portals) tekenPortal(p);
+        for (const kp of kluisPortals) tekenKluisPortal(kp);
+      for (const kp of kluisPortals) tekenKluisPortal(kp);
         for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte, ps.vorm);
         for (const m of zwevendeMinen) tekenZwevendeMine(m);
         ctx.restore();
@@ -8501,6 +8624,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function respawn() {
       // clear obstakels + particles + bonusHarten + raketten + flipPickups, reset speler, score blijft
       clearCustomSpawned();
+      kluisPortals.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
@@ -8581,6 +8705,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     function eindeSessie() {
+      // GRABBEL-MAATJE afrekenen (Brian 2026-06-26): door portaal = bewaren,
+      // anders = voor altijd kwijt. Eindscherm toont de uitkomst.
+      if (gedragenSprite) {
+        if (gedragenSprite.veilig) {
+          try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {}
+          try { maatjeUitkomstRef.current({ status: "veilig", id: gedragenSprite.id, niveau: gedragenSprite.niveau }); } catch {}
+        } else {
+          try { loseSpriteRef.current(gedragenSprite.id); } catch {}
+          try { maatjeUitkomstRef.current({ status: "verloren", id: gedragenSprite.id, niveau: gedragenSprite.niveau }); } catch {}
+        }
+        gedragenSprite = null;
+      }
       // PvP-mode: finalize match in DB en broadcast end
       if (pvpMatch && pvpSub) {
         const ownScore = score;
@@ -8847,49 +8983,62 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   useEffect(() => { actieveTrailRef.current = actieveTrail; }, [actieveTrail]);
   const [prizeSpinning, setPrizeSpinning] = useState(false);
   const [prizeRevealed, setPrizeRevealed] = useState(null); // {id, soort, naam, emoji, waarde, isNew}
-  // ── GRABBEL-MAATJE (Brian 2026-06-26) ── actief maatje blijft bewaard tussen runs
-  const [actieveSprite, setActieveSprite] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("obliterator-sprite") || "null"); } catch { return null; }
-  }); // { id, niveau } | null
+  // ── GRABBEL-MAATJES + VERZAMEL-KAST (Brian 2026-06-26) ──
+  // verzameling = { spriteId: niveau } van VEILIG-gestelde maatjes (door portaal).
+  const [verzameling, setVerzameling] = useState(() => {
+    try {
+      const v = JSON.parse(localStorage.getItem("obliterator-verzameling") || "null");
+      if (v && typeof v === "object") return v;
+      // migratie van oud single-sprite model
+      const oud = JSON.parse(localStorage.getItem("obliterator-sprite") || "null");
+      if (oud && oud.id) return { [oud.id]: oud.niveau || 1 };
+    } catch {}
+    return {};
+  });
   useEffect(() => {
-    try { localStorage.setItem("obliterator-sprite", JSON.stringify(actieveSprite)); } catch {}
-  }, [actieveSprite]);
-  const actieveSpriteRef = useRef(actieveSprite);
-  useEffect(() => { actieveSpriteRef.current = actieveSprite; }, [actieveSprite]);
-  const [grabbelBanner, setGrabbelBanner] = useState(null); // {emoji,naam,rariteit,niveau,gewonnen,isNew,maxed} | null
+    try { localStorage.setItem("obliterator-verzameling", JSON.stringify(verzameling)); } catch {}
+  }, [verzameling]);
+  const verzamelingRef = useRef(verzameling);
+  useEffect(() => { verzamelingRef.current = verzameling; }, [verzameling]);
+  // welk maatje je de volgende run meeneemt (en dus riskeert)
+  const [uitgerustId, setUitgerustId] = useState(() => {
+    try { return localStorage.getItem("obliterator-uitgerust") || ""; } catch { return ""; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-uitgerust", uitgerustId || ""); } catch {}
+  }, [uitgerustId]);
+  const uitgerustRef = useRef(uitgerustId);
+  useEffect(() => { uitgerustRef.current = uitgerustId; }, [uitgerustId]);
+  const [maatjesKastOpen, setMaatjesKastOpen] = useState(false);
+  // popup bij grabbel / veiligstellen / verliezen
+  const [grabbelBanner, setGrabbelBanner] = useState(null);
   useEffect(() => {
     if (!grabbelBanner) return;
     const t = setTimeout(() => setGrabbelBanner(null), 3500);
     return () => clearTimeout(t);
   }, [grabbelBanner]);
-  // Wordt vanuit de game-loop aangeroepen bij elke 10e level (ref blijft stabiel)
-  const doeGrabbelRef = useRef(() => {});
+  // ref-setters die de game-loop aanroept (refs blijven stabiel)
+  const bankSpriteRef = useRef(() => {});
   useEffect(() => {
-    doeGrabbelRef.current = () => {
-      const huidige = actieveSpriteRef.current;
-      if (!huidige) {
-        // eerste grabbel → win een willekeurig maatje (rariteit = de kans)
-        const s = kiesGrabbelSprite();
-        const nieuw = { id: s.id, niveau: 1 };
-        actieveSpriteRef.current = nieuw;
-        setActieveSprite(nieuw);
-        setGrabbelBanner({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false });
-      } else if (huidige.niveau < SPRITE_MAX_NIVEAU) {
-        // level je maatje op (+1)
-        const nv = Math.min(SPRITE_MAX_NIVEAU, huidige.niveau + 1);
-        const upd = { id: huidige.id, niveau: nv };
-        actieveSpriteRef.current = upd;
-        setActieveSprite(upd);
-        const meta = SPRITE_BY_ID[huidige.id] || {};
-        setGrabbelBanner({ ...meta, niveau: nv, gewonnen: true, isNew: false, maxed: nv >= SPRITE_MAX_NIVEAU });
-      } else {
-        // al MAX → kleine munten-bonus als troost
-        const meta = SPRITE_BY_ID[huidige.id] || {};
-        setMunten((m) => m + 10);
-        setGrabbelBanner({ ...meta, niveau: huidige.niveau, gewonnen: false, isNew: false, maxed: true });
-      }
+    bankSpriteRef.current = (id, niveau) => {
+      setVerzameling((prev) => ({ ...prev, [id]: Math.max(prev[id] || 0, niveau) }));
     };
   }, []);
+  const loseSpriteRef = useRef(() => {});
+  useEffect(() => {
+    loseSpriteRef.current = (id) => {
+      setVerzameling((prev) => { const n = { ...prev }; delete n[id]; return n; });
+      setUitgerustId((prev) => (prev === id ? "" : prev));
+    };
+  }, []);
+  const grabbelBannerRef = useRef(() => {});
+  useEffect(() => { grabbelBannerRef.current = (b) => setGrabbelBanner(b); }, []);
+  const bonusMuntenRef = useRef(() => {});
+  useEffect(() => { bonusMuntenRef.current = (n) => setMunten((m) => m + n); }, []);
+  // uitkomst van het gedragen maatje deze run — getoond op het eindscherm
+  const [maatjeUitkomst, setMaatjeUitkomst] = useState(null); // {status:'veilig'|'verloren', id, niveau} | null
+  const maatjeUitkomstRef = useRef(() => {});
+  useEffect(() => { maatjeUitkomstRef.current = (u) => setMaatjeUitkomst(u); }, []);
   // 2026-05-18 — naam-prompt vóór game-start. Mark wens: 'als speler 'Speler'
   // heet valt de high-score tegen. Vraag de naam voordat ze beginnen, maar
   // niet verplicht (skip-knop).
@@ -8915,6 +9064,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       start_level: gekozenStartLevel,
     });
     setActieveMissies(kiesRandomMissies(3));
+    setMaatjeUitkomst(null); // nieuwe run: maatje-uitkomst wissen
     const m = kiesMutator();
     setActiveMutator(m);
     if (m.id !== "normaal") setMutatorBanner(m);
@@ -9405,6 +9555,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 Letters voor de prijsmachine: <strong>{verzameldeLetters.length}/{MISSIE_LETTERS.length}</strong>
               </div>
             )}
+
+            {/* Maatjes-kast (Brian 2026-06-26): bekijk + kies je grabbel-maatjes */}
+            <button onClick={() => setMaatjesKastOpen(true)} style={{
+              width: "100%", maxWidth: 320, marginBottom: 14,
+              padding: "12px 18px",
+              background: "linear-gradient(135deg, #5fd35f 0%, #45b6f5 50%, #b15cff 100%)",
+              border: "none", borderRadius: 14,
+              color: "#0a0014",
+              fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: 18, letterSpacing: 1.5,
+              fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 6px 22px rgba(120,90,255,0.45), 0 0 22px rgba(95,211,95,0.3)",
+            }}>
+              🧸 Maatjes-kast ({Object.keys(verzameling).length}/{SPRITE_POOL.length})
+            </button>
 
             {/* Level-start-dropdown (Mark wens 2026-05-17): kies bij welk level
                 je begint, tot maxKiesbaar (= hoogste vrijgespeelde level). */}
@@ -10919,6 +11084,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </p>
             )}
 
+            {/* Maatje-uitkomst (Brian 2026-06-26) — veilig of voor altijd kwijt */}
+            {maatjeUitkomst && SPRITE_BY_ID[maatjeUitkomst.id] && (
+              <div style={{
+                marginTop: 8, marginBottom: 4, padding: "8px 14px", borderRadius: 12,
+                display: "inline-flex", alignItems: "center", gap: 8,
+                background: maatjeUitkomst.status === "veilig" ? "rgba(105,240,174,0.12)" : "rgba(255,64,64,0.12)",
+                border: `1px solid ${maatjeUitkomst.status === "veilig" ? "rgba(105,240,174,0.5)" : "rgba(255,64,64,0.5)"}`,
+                fontFamily: "'Fredoka', sans-serif",
+              }}>
+                <span style={{ fontSize: 26, filter: maatjeUitkomst.status === "veilig" ? "none" : "grayscale(0.7)" }}>
+                  {SPRITE_BY_ID[maatjeUitkomst.id].emoji}
+                </span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: maatjeUitkomst.status === "veilig" ? "#69f0ae" : "#ff7070" }}>
+                  {maatjeUitkomst.status === "veilig"
+                    ? `✓ ${SPRITE_BY_ID[maatjeUitkomst.id].naam} Lv ${maatjeUitkomst.niveau} bewaard!`
+                    : `💔 ${SPRITE_BY_ID[maatjeUitkomst.id].naam} verloren — geen portaal gehaald`}
+                </span>
+              </div>
+            )}
+
             {/* Top high scores — compact in landscape */}
             <div style={{
               marginTop: 10, marginBottom: 12, padding: "10px 14px", borderRadius: 10,
@@ -11196,6 +11381,109 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         </div>
       )}
 
+      {/* MAATJES-KAST (Brian 2026-06-26): alle 60 maatjes, welke je hebt + kiezen */}
+      {maatjesKastOpen && (
+        <div onClick={() => setMaatjesKastOpen(false)} style={{
+          position: "fixed", inset: 0, zIndex: 120,
+          background: "rgba(0,0,0,0.88)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          padding: 14,
+        }}>
+          <div onClick={(e) => e.stopPropagation()} style={{
+            width: "100%", maxWidth: 460, maxHeight: "92%",
+            display: "flex", flexDirection: "column",
+            background: "linear-gradient(135deg, #150a22, #1e1230)",
+            border: "2px solid rgba(150,110,255,0.5)",
+            borderRadius: 18,
+            boxShadow: "0 20px 60px rgba(0,0,0,0.7)",
+            fontFamily: "'Fredoka', sans-serif", color: "#fff",
+            overflow: "hidden",
+          }}>
+            {/* Header */}
+            <div style={{ padding: "14px 16px 8px", textAlign: "center", flexShrink: 0 }}>
+              <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: 0.5 }}>🧸 Maatjes-kast</div>
+              <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2 }}>
+                {Object.keys(verzameling).length}/{SPRITE_POOL.length} verzameld · kies wie je meeneemt
+              </div>
+              {uitgerustId && SPRITE_BY_ID[uitgerustId] && (
+                <div style={{ fontSize: 12, marginTop: 6, color: "#69f0ae", fontWeight: 700 }}>
+                  Uitgerust: {SPRITE_BY_ID[uitgerustId].emoji} {SPRITE_BY_ID[uitgerustId].naam} Lv {verzameling[uitgerustId]}
+                </div>
+              )}
+              <div style={{ fontSize: 10, opacity: 0.55, marginTop: 4, lineHeight: 1.35 }}>
+                ⚠ Wie je meeneemt is in gevaar! Ga door een groen portaal om hem te bewaren — ga je af zonder, ben je hem kwijt.
+              </div>
+            </div>
+            {/* Grid */}
+            <div style={{ overflowY: "auto", padding: "8px 12px 12px", flex: 1 }}>
+              {["groen","blauw","paars","legendarisch","speciaal","mythisch"].map((rar) => (
+                <div key={rar} style={{ marginBottom: 12 }}>
+                  <div style={{
+                    fontSize: 11, fontWeight: 800, letterSpacing: 1, textTransform: "uppercase",
+                    color: RARITEIT_KLEUR[rar], marginBottom: 6,
+                  }}>{rar}</div>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 6 }}>
+                    {SPRITE_POOL.filter((s) => s.rariteit === rar).map((s) => {
+                      const heeft = verzameling[s.id] != null;
+                      const lvl = verzameling[s.id] || 0;
+                      const isUit = uitgerustId === s.id;
+                      const kleur = RARITEIT_KLEUR[rar];
+                      return (
+                        <button key={s.id}
+                          onClick={() => { if (heeft) setUitgerustId(isUit ? "" : s.id); }}
+                          style={{
+                            position: "relative",
+                            aspectRatio: "1", padding: 2,
+                            borderRadius: 10,
+                            border: isUit ? `2px solid ${kleur}` : "1px solid rgba(255,255,255,0.12)",
+                            background: heeft ? `${kleur}22` : "rgba(255,255,255,0.04)",
+                            cursor: heeft ? "pointer" : "default",
+                            display: "flex", flexDirection: "column",
+                            alignItems: "center", justifyContent: "center", gap: 1,
+                            boxShadow: isUit ? `0 0 14px ${kleur}88` : "none",
+                          }}>
+                          <span style={{ fontSize: 22, filter: heeft ? "none" : "grayscale(1) brightness(0.4)", opacity: heeft ? 1 : 0.5 }}>
+                            {heeft ? s.emoji : "❔"}
+                          </span>
+                          <span style={{ fontSize: 8, opacity: heeft ? 0.85 : 0.4, fontWeight: 700, lineHeight: 1 }}>
+                            {heeft ? s.naam : "???"}
+                          </span>
+                          {heeft && (
+                            <span style={{
+                              position: "absolute", top: 2, right: 3,
+                              fontSize: 8, fontWeight: 800, color: lvl >= SPRITE_MAX_NIVEAU ? "#ffd54f" : "#fff",
+                            }}>{lvl >= SPRITE_MAX_NIVEAU ? "MAX" : `L${lvl}`}</span>
+                          )}
+                          {isUit && (
+                            <span style={{ position: "absolute", bottom: 2, fontSize: 7, color: kleur, fontWeight: 800 }}>✓ MEE</span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Footer */}
+            <div style={{ padding: "8px 12px 12px", flexShrink: 0, display: "flex", gap: 8 }}>
+              {uitgerustId && (
+                <button onClick={() => setUitgerustId("")} style={{
+                  flex: 1, padding: "10px", borderRadius: 12,
+                  background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)",
+                  color: "#fff", fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13,
+                }}>Niemand meenemen</button>
+              )}
+              <button onClick={() => setMaatjesKastOpen(false)} style={{
+                flex: 1, padding: "10px", borderRadius: 12,
+                background: "linear-gradient(135deg, #5fd35f, #45b6f5)",
+                border: "none", color: "#0a0014", fontWeight: 800, cursor: "pointer",
+                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 15, letterSpacing: 1,
+              }}>Klaar</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Sprint 8 — Mutator-intro-banner: 4 sec popup midden in scherm bij
           run-start. Alleen als mutator != 'normaal'. Toont emoji + naam +
           beschrijving zodat kid weet wat anders is deze run. */}
@@ -11250,7 +11538,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             pointerEvents: "none",
           }}>
             <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
-              🎁 Grabbelton
+              {grabbelBanner.veiliggesteld ? "🟢 Kluis-portaal" : "🎁 Grabbelton"}
             </div>
             <div style={{ fontSize: 52, margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
               {grabbelBanner.emoji}
@@ -11263,14 +11551,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 {grabbelBanner.rariteit}
               </div>
             )}
-            <div style={{ fontSize: 15, fontWeight: 700, marginTop: 8, color: "#fff" }}>
-              {grabbelBanner.isNew
-                ? "🎉 Nieuw maatje! Lv 1"
-                : grabbelBanner.maxed && !grabbelBanner.gewonnen
-                  ? "⭐ MAX! +10 munten"
-                  : grabbelBanner.maxed
-                    ? `⭐ Lv ${grabbelBanner.niveau} — MAX!`
-                    : `⬆️ Level up! Lv ${grabbelBanner.niveau}`}
+            <div style={{ fontSize: 15, fontWeight: 700, marginTop: 8, color: grabbelBanner.veiliggesteld ? "#69f0ae" : "#fff" }}>
+              {grabbelBanner.veiliggesteld
+                ? `✓ VEILIG! Lv ${grabbelBanner.niveau} bewaard`
+                : grabbelBanner.isNew
+                  ? "🎉 Nieuw maatje! Zoek een groen portaal!"
+                  : grabbelBanner.maxed && !grabbelBanner.gewonnen
+                    ? "⭐ MAX! +10 munten"
+                    : grabbelBanner.maxed
+                      ? `⭐ Lv ${grabbelBanner.niveau} — MAX!`
+                      : `⬆️ Level up! Lv ${grabbelBanner.niveau}`}
             </div>
           </div>
         );
