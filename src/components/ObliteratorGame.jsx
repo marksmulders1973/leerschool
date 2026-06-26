@@ -9024,6 +9024,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   }, [verzameling]);
   const verzamelingRef = useRef(verzameling);
   useEffect(() => { verzamelingRef.current = verzameling; }, [verzameling]);
+  // Admin (Brian) krijgt de hele maatjes-kast meteen vol — alle 60 op MAX
+  // niveau. (Brian 2026-06-26: "ik wil gewoon alles unlocked in de maatjes-
+  // kast".) Net als de skins-admin-unlock; werkt zodra het spel je als "brian"
+  // kent (ingelogd óf naam "Brian" ingetypt — zie isObliterAdmin).
+  useEffect(() => {
+    if (!isObliterAdmin) return;
+    setVerzameling((prev) => {
+      const next = { ...prev };
+      let changed = false;
+      for (const sp of SPRITE_POOL) {
+        if ((next[sp.id] || 0) < SPRITE_MAX_NIVEAU) { next[sp.id] = SPRITE_MAX_NIVEAU; changed = true; }
+      }
+      return changed ? next : prev;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isObliterAdmin]);
   // welk maatje je de volgende run meeneemt (en dus riskeert)
   const [uitgerustId, setUitgerustId] = useState(() => {
     try { return localStorage.getItem("obliterator-uitgerust") || ""; } catch { return ""; }
@@ -11496,6 +11512,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </div>
               ))}
             </div>
+            {/* Admin-knop (alleen Brian): alles in één tik unlocken */}
+            {isObliterAdmin && Object.keys(verzameling).length < SPRITE_POOL.length && (
+              <div style={{ padding: "0 12px 8px", flexShrink: 0 }}>
+                <button onClick={() => setVerzameling(() => {
+                  const vol = {};
+                  for (const sp of SPRITE_POOL) vol[sp.id] = SPRITE_MAX_NIVEAU;
+                  return vol;
+                })} style={{
+                  width: "100%", padding: "10px", borderRadius: 12,
+                  background: "linear-gradient(135deg, #ffb13b, #ff5fa2)",
+                  border: "none", color: "#0a0014", fontWeight: 800, cursor: "pointer",
+                  fontFamily: "'Fredoka', sans-serif", fontSize: 13, letterSpacing: 0.5,
+                }}>🔓 Alles unlocken (alle 60 op MAX)</button>
+              </div>
+            )}
             {/* Footer */}
             <div style={{ padding: "8px 12px 12px", flexShrink: 0, display: "flex", gap: 8 }}>
               {uitgerustId && (
