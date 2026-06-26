@@ -83,72 +83,72 @@ const RARITEIT_GEWICHT = {
   groen: 30, blauw: 18, paars: 10, legendarisch: 5, speciaal: 4, mythisch: 1,
 };
 const SPRITE_POOL = [
-  // GROEN (algemeen)
-  { id: "googly",   naam: "Googly",    emoji: "🟢", rariteit: "groen" },
-  { id: "leaflet",  naam: "Leaflet",   emoji: "🍃", rariteit: "groen" },
-  { id: "limey",    naam: "Limey",     emoji: "🟩", rariteit: "groen" },
-  { id: "cacty",    naam: "Cacty",     emoji: "🌵", rariteit: "groen" },
-  { id: "mossy",    naam: "Mossy",     emoji: "🌿", rariteit: "groen" },
-  { id: "pickley",  naam: "Pickley",   emoji: "🥒", rariteit: "groen" },
-  { id: "bamboot",  naam: "Bamboot",   emoji: "🎋", rariteit: "groen" },
-  { id: "slimeling",naam: "Slimeling", emoji: "🫧", rariteit: "groen" },
-  { id: "sprouty",  naam: "Sprouty",   emoji: "🌱", rariteit: "groen" },
-  { id: "gloom",    naam: "Gloom",     emoji: "🫒", rariteit: "groen" },
+  // GROEN (algemeen) — `ability` is de kracht die je in de Spritevibes-kast ziet
+  { id: "googly",   naam: "Googly",    emoji: "🟢", rariteit: "groen", ability: "Wiebeloog — kijkt obstakels nerveus aan 👀" },
+  { id: "leaflet",  naam: "Leaflet",   emoji: "🍃", rariteit: "groen", ability: "Bladwervel — dwarrelt zachtjes mee in de wind" },
+  { id: "limey",    naam: "Limey",     emoji: "🟩", rariteit: "groen", ability: "Zuurspetter — laat een frisse limoen-trail na" },
+  { id: "cacty",    naam: "Cacty",     emoji: "🌵", rariteit: "groen", ability: "Stekelschild — prik! kleine bots-bescherming" },
+  { id: "mossy",    naam: "Mossy",     emoji: "🌿", rariteit: "groen", ability: "Mosdek — groeit rustig, super chill" },
+  { id: "pickley",  naam: "Pickley",   emoji: "🥒", rariteit: "groen", ability: "Augurk-glij — glibbert lekker snel weg" },
+  { id: "bamboot",  naam: "Bamboot",   emoji: "🎋", rariteit: "groen", ability: "Bamboeschot — schiet recht omhoog" },
+  { id: "slimeling",naam: "Slimeling", emoji: "🫧", rariteit: "groen", ability: "Slijmstuiter — botst zacht als slijm" },
+  { id: "sprouty",  naam: "Sprouty",   emoji: "🌱", rariteit: "groen", ability: "Groeispurt — kleine sprong-boost" },
+  { id: "gloom",    naam: "Gloom",     emoji: "🫒", rariteit: "groen", ability: "Olijfrol — rolt stiekem langs gevaar" },
   // BLAUW
-  { id: "aqua",     naam: "Aqua",      emoji: "💧", rariteit: "blauw" },
-  { id: "bubbly",   naam: "Bubbly",    emoji: "🫧", rariteit: "blauw" },
-  { id: "splash",   naam: "Splash",    emoji: "💦", rariteit: "blauw" },
-  { id: "wavy",     naam: "Wavy",      emoji: "🌊", rariteit: "blauw" },
-  { id: "glacier",  naam: "Glacier",   emoji: "🧊", rariteit: "blauw" },
-  { id: "tidal",    naam: "Tidal",     emoji: "🌊", rariteit: "blauw" },
-  { id: "nimbus",   naam: "Nimbus",    emoji: "🌧️", rariteit: "blauw" },
-  { id: "frosty",   naam: "Frosty",    emoji: "❄️", rariteit: "blauw" },
-  { id: "surge",    naam: "Surge",     emoji: "⚡", rariteit: "blauw" },
-  { id: "h2go",     naam: "H2GO",      emoji: "🚰", rariteit: "blauw" },
+  { id: "aqua",     naam: "Aqua",      emoji: "💧", rariteit: "blauw", ability: "Druppeldans — glijdt soepel als water" },
+  { id: "bubbly",   naam: "Bubbly",    emoji: "🫧", rariteit: "blauw", ability: "Bellenschild — pop! kleine bubbel-bescherming" },
+  { id: "splash",   naam: "Splash",    emoji: "💦", rariteit: "blauw", ability: "Spetterboost — natte snelheidsspat" },
+  { id: "wavy",     naam: "Wavy",      emoji: "🌊", rariteit: "blauw", ability: "Golfrit — surft op een mini-golf" },
+  { id: "glacier",  naam: "Glacier",   emoji: "🧊", rariteit: "blauw", ability: "IJsglij — bevriest de grond een tikje" },
+  { id: "tidal",    naam: "Tidal",     emoji: "🌊", rariteit: "blauw", ability: "Vloedstoot — duwt je vooruit met een golf" },
+  { id: "nimbus",   naam: "Nimbus",    emoji: "🌧️", rariteit: "blauw", ability: "Regenwolk — laat een verfrissend buitje vallen" },
+  { id: "frosty",   naam: "Frosty",    emoji: "❄️", rariteit: "blauw", ability: "Vriesadem — koelt alles ijzig af ❄️" },
+  { id: "surge",    naam: "Surge",     emoji: "⚡", rariteit: "blauw", ability: "Stroomstoot — korte elektro-sprint ⚡" },
+  { id: "h2go",     naam: "H2GO",      emoji: "🚰", rariteit: "blauw", ability: "Tankstop — vult je energie bij" },
   // PAARS
-  { id: "shadow",   naam: "Shadow",    emoji: "🟣", rariteit: "paars" },
-  { id: "voidling", naam: "Voidling",  emoji: "🔮", rariteit: "paars" },
-  { id: "volt",     naam: "Volt",      emoji: "🟪", rariteit: "paars" },
-  { id: "boolet",   naam: "Boolet",    emoji: "👾", rariteit: "paars" },
-  { id: "phantom",  naam: "Phantom",   emoji: "👻", rariteit: "paars" },
-  { id: "crystalyn",naam: "Crystalyn", emoji: "💜", rariteit: "paars" },
-  { id: "dreamy",   naam: "Dreamy",    emoji: "🎧", rariteit: "paars" },
-  { id: "riftie",   naam: "Riftie",    emoji: "🌀", rariteit: "paars" },
-  { id: "grimpix",  naam: "Grimpix",   emoji: "👾", rariteit: "paars" },
-  { id: "astral",   naam: "Astral",    emoji: "🔮", rariteit: "paars" },
+  { id: "shadow",   naam: "Shadow",    emoji: "🟣", rariteit: "paars", ability: "Schaduwsprong — wordt heel even onzichtbaar" },
+  { id: "voidling", naam: "Voidling",  emoji: "🔮", rariteit: "paars", ability: "Leegtekijk — tovert een gaatje in de lucht" },
+  { id: "volt",     naam: "Volt",      emoji: "🟪", rariteit: "paars", ability: "Voltstoot — paarse bliksemflits" },
+  { id: "boolet",   naam: "Boolet",    emoji: "👾", rariteit: "paars", ability: "Glitch-zip — flitst door de pixels heen" },
+  { id: "phantom",  naam: "Phantom",   emoji: "👻", rariteit: "paars", ability: "Spookzweef — zweeft door muren 👻" },
+  { id: "crystalyn",naam: "Crystalyn", emoji: "💜", rariteit: "paars", ability: "Kristalschijn — laat diamantjes glimmen" },
+  { id: "dreamy",   naam: "Dreamy",    emoji: "🎧", rariteit: "paars", ability: "Dromenbeat — speelt chill muziek 🎧" },
+  { id: "riftie",   naam: "Riftie",    emoji: "🌀", rariteit: "paars", ability: "Wervelpoort — draait een mini-portaaltje 🌀" },
+  { id: "grimpix",  naam: "Grimpix",   emoji: "👾", rariteit: "paars", ability: "Grimglitch — laat het scherm even shaken" },
+  { id: "astral",   naam: "Astral",    emoji: "🔮", rariteit: "paars", ability: "Sterrenkijk — toont verborgen ringen" },
   // LEGENDARISCH
-  { id: "lumin",    naam: "Lumin",     emoji: "⭐", rariteit: "legendarisch" },
-  { id: "solaris",  naam: "Solaris",   emoji: "🌞", rariteit: "legendarisch" },
-  { id: "celesto",  naam: "Celesto",   emoji: "🌟", rariteit: "legendarisch" },
-  { id: "galaxi",   naam: "Galaxi",    emoji: "🌌", rariteit: "legendarisch" },
-  { id: "nebula",   naam: "Nebula",    emoji: "🌠", rariteit: "legendarisch" },
-  { id: "aurora",   naam: "Aurora",    emoji: "💠", rariteit: "legendarisch" },
-  { id: "eclipse",  naam: "Eclipse",   emoji: "🌑", rariteit: "legendarisch" },
-  { id: "starborn", naam: "Starborn",  emoji: "✨", rariteit: "legendarisch" },
-  { id: "inferno",  naam: "Inferno",   emoji: "🔥", rariteit: "legendarisch" },
-  { id: "chronos",  naam: "Chronos",   emoji: "⏰", rariteit: "legendarisch" },
+  { id: "lumin",    naam: "Lumin",     emoji: "⭐", rariteit: "legendarisch", ability: "Lichtflits — verlicht het hele pad ⭐" },
+  { id: "solaris",  naam: "Solaris",   emoji: "🌞", rariteit: "legendarisch", ability: "Zonnevuur — warme stralenboost ☀️" },
+  { id: "celesto",  naam: "Celesto",   emoji: "🌟", rariteit: "legendarisch", ability: "Sterrenregen — laat punten-sterren vallen" },
+  { id: "galaxi",   naam: "Galaxi",    emoji: "🌌", rariteit: "legendarisch", ability: "Melkwegrit — sleept je door de ruimte 🌌" },
+  { id: "nebula",   naam: "Nebula",    emoji: "🌠", rariteit: "legendarisch", ability: "Nevelmist — verbergt je voor gevaar" },
+  { id: "aurora",   naam: "Aurora",    emoji: "💠", rariteit: "legendarisch", ability: "Poollicht — kleurige super-glow 💠" },
+  { id: "eclipse",  naam: "Eclipse",   emoji: "🌑", rariteit: "legendarisch", ability: "Verduistering — maakt het heel even nacht 🌑" },
+  { id: "starborn", naam: "Starborn",  emoji: "✨", rariteit: "legendarisch", ability: "Sterrenkracht — glinster-schild ✨" },
+  { id: "inferno",  naam: "Inferno",   emoji: "🔥", rariteit: "legendarisch", ability: "Vuurspoor — laat een vlammen-trail na 🔥" },
+  { id: "chronos",  naam: "Chronos",   emoji: "⏰", rariteit: "legendarisch", ability: "Tijdrek — vertraagt heel even de tijd ⏰" },
   // SPECIAAL
-  { id: "rainbow",  naam: "Rainbow",   emoji: "🌈", rariteit: "speciaal" },
-  { id: "glitchy",  naam: "Glitchy",   emoji: "👾", rariteit: "speciaal" },
-  { id: "pixel",    naam: "Pixel",     emoji: "🕹️", rariteit: "speciaal" },
-  { id: "disco",    naam: "Disco",     emoji: "🪩", rariteit: "speciaal" },
-  { id: "party",    naam: "Party",     emoji: "🎉", rariteit: "speciaal" },
-  { id: "popcorn",  naam: "Popcorn",   emoji: "🍿", rariteit: "speciaal" },
-  { id: "sushi",    naam: "Sushi",     emoji: "🍣", rariteit: "speciaal" },
-  { id: "boba",     naam: "Boba",      emoji: "🧋", rariteit: "speciaal" },
-  { id: "cupcake",  naam: "Cupcake",   emoji: "🧁", rariteit: "speciaal" },
-  { id: "donut",    naam: "Donut",     emoji: "🍩", rariteit: "speciaal" },
+  { id: "rainbow",  naam: "Rainbow",   emoji: "🌈", rariteit: "speciaal", ability: "Regenboogrit — alles wordt kleurig 🌈" },
+  { id: "glitchy",  naam: "Glitchy",   emoji: "👾", rariteit: "speciaal", ability: "Mega-glitch — laat het spel even haperen" },
+  { id: "pixel",    naam: "Pixel",     emoji: "🕹️", rariteit: "speciaal", ability: "Pixelpower — retro 8-bit boost 🕹️" },
+  { id: "disco",    naam: "Disco",     emoji: "🪩", rariteit: "speciaal", ability: "Discokoorts — laat de wereld dansen 🪩" },
+  { id: "party",    naam: "Party",     emoji: "🎉", rariteit: "speciaal", ability: "Feestknal — confetti-explosie 🎉" },
+  { id: "popcorn",  naam: "Popcorn",   emoji: "🍿", rariteit: "speciaal", ability: "Popcornbui — laat snacks regenen 🍿" },
+  { id: "sushi",    naam: "Sushi",     emoji: "🍣", rariteit: "speciaal", ability: "Sushi-rol — rolt razendsnel voorbij 🍣" },
+  { id: "boba",     naam: "Boba",      emoji: "🧋", rariteit: "speciaal", ability: "Bubbelthee — slurp! energie-boost 🧋" },
+  { id: "cupcake",  naam: "Cupcake",   emoji: "🧁", rariteit: "speciaal", ability: "Suikerspurt — zoete snelheids-boost 🧁" },
+  { id: "donut",    naam: "Donut",     emoji: "🍩", rariteit: "speciaal", ability: "Donutloop — rolt als een wiel 🍩" },
   // MYTHISCH (super zeldzaam)
-  { id: "infinity", naam: "Infinity",  emoji: "♾️", rariteit: "mythisch" },
-  { id: "omega",    naam: "Omega",     emoji: "🛡️", rariteit: "mythisch" },
-  { id: "voidking", naam: "Void King", emoji: "👑", rariteit: "mythisch" },
-  { id: "prismatic",naam: "Prismatic", emoji: "💎", rariteit: "mythisch" },
-  { id: "godspark", naam: "Godspark",  emoji: "⚡", rariteit: "mythisch" },
-  { id: "reality",  naam: "Reality",   emoji: "🕳️", rariteit: "mythisch" },
-  { id: "zenith",   naam: "Zenith",    emoji: "🔱", rariteit: "mythisch" },
-  { id: "nova",     naam: "Nova",      emoji: "💫", rariteit: "mythisch" },
-  { id: "apex",     naam: "Apex",      emoji: "🌋", rariteit: "mythisch" },
-  { id: "origin",   naam: "Origin",    emoji: "🐼", rariteit: "mythisch" },
+  { id: "infinity", naam: "Infinity",  emoji: "♾️", rariteit: "mythisch", ability: "Oneindig — nooit-stoppende energie ♾️" },
+  { id: "omega",    naam: "Omega",     emoji: "🛡️", rariteit: "mythisch", ability: "Omegaschild — onbreekbare bescherming 🛡️" },
+  { id: "voidking", naam: "Void King", emoji: "👑", rariteit: "mythisch", ability: "Leegtekoning — heerst over alle gevaar 👑" },
+  { id: "prismatic",naam: "Prismatic", emoji: "💎", rariteit: "mythisch", ability: "Prismakracht — bundelt alle kleuren 💎" },
+  { id: "godspark", naam: "Godspark",  emoji: "⚡", rariteit: "mythisch", ability: "Godvonk — goddelijke bliksem-blast ⚡" },
+  { id: "reality",  naam: "Reality",   emoji: "🕳️", rariteit: "mythisch", ability: "Realiteitsscheur — buigt de wereld 🕳️" },
+  { id: "zenith",   naam: "Zenith",    emoji: "🔱", rariteit: "mythisch", ability: "Toppunt — ultieme drietand-power 🔱" },
+  { id: "nova",     naam: "Nova",      emoji: "💫", rariteit: "mythisch", ability: "Supernova — explosie van licht 💫" },
+  { id: "apex",     naam: "Apex",      emoji: "🌋", rariteit: "mythisch", ability: "Vulkaankracht — laat de grond beven 🌋" },
+  { id: "origin",   naam: "Origin",    emoji: "🐼", rariteit: "mythisch", ability: "Oerkracht — de allereerste pandakracht 🐼" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
 function kiesGrabbelSprite() {
@@ -9608,7 +9608,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               fontWeight: 700, cursor: "pointer",
               boxShadow: "0 6px 22px rgba(120,90,255,0.45), 0 0 22px rgba(95,211,95,0.3)",
             }}>
-              🧸 Maatjes-kast ({Object.keys(verzameling).length}/{SPRITE_POOL.length})
+              🧸 Spritevibes-kast ({Object.keys(verzameling).length}/{SPRITE_POOL.length})
             </button>
 
             {/* Level-start-dropdown (Mark wens 2026-05-17): kies bij welk level
@@ -11449,13 +11449,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }}>
             {/* Header */}
             <div style={{ padding: "14px 16px 8px", textAlign: "center", flexShrink: 0 }}>
-              <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: 0.5 }}>🧸 Maatjes-kast</div>
+              <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: 0.5 }}>🧸 Spritevibes-kast</div>
               <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2 }}>
                 {Object.keys(verzameling).length}/{SPRITE_POOL.length} verzameld · kies wie je meeneemt
               </div>
               {uitgerustId && SPRITE_BY_ID[uitgerustId] && (
-                <div style={{ fontSize: 12, marginTop: 6, color: "#69f0ae", fontWeight: 700 }}>
-                  Uitgerust: {SPRITE_BY_ID[uitgerustId].emoji} {SPRITE_BY_ID[uitgerustId].naam} Lv {verzameling[uitgerustId]}
+                <div style={{
+                  marginTop: 8, textAlign: "left",
+                  background: "rgba(105,240,174,0.1)",
+                  border: "1px solid rgba(105,240,174,0.4)",
+                  borderRadius: 10, padding: "8px 10px",
+                }}>
+                  <div style={{ fontSize: 12, color: "#69f0ae", fontWeight: 800 }}>
+                    Uitgerust: {SPRITE_BY_ID[uitgerustId].emoji} {SPRITE_BY_ID[uitgerustId].naam} Lv {verzameling[uitgerustId]}
+                  </div>
+                  <div style={{ fontSize: 12, marginTop: 4, opacity: 0.95, lineHeight: 1.35 }}>
+                    ⚡ <b>Ability:</b> {SPRITE_BY_ID[uitgerustId].ability}
+                  </div>
                 </div>
               )}
               <div style={{ fontSize: 10, opacity: 0.55, marginTop: 4, lineHeight: 1.35 }}>
@@ -11618,7 +11628,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               {grabbelBanner.veiliggesteld
                 ? `✓ VEILIG! Lv ${grabbelBanner.niveau} bewaard`
                 : grabbelBanner.isNew
-                  ? "🎉 Nieuw maatje! Zoek een groen portaal!"
+                  ? "🎉 Nieuwe Spritevibe! Zoek een groen portaal!"
                   : grabbelBanner.maxed && !grabbelBanner.gewonnen
                     ? "⭐ MAX! +10 munten"
                     : grabbelBanner.maxed
