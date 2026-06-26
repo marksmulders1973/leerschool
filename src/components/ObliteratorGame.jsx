@@ -151,6 +151,58 @@ const SPRITE_POOL = [
   { id: "origin",   naam: "Origin",    emoji: "🐼", rariteit: "mythisch", ability: "Oerkracht — de allereerste pandakracht 🐼" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
+
+// ── SPRITEVIBE-ABILITIES als ECHTE kracht (Brian 2026-06-26) ──
+// Elke vibe heeft 1 effect-soort; de sterkte schaalt met rariteit (groen→mythisch)
+// én met het niveau (Lv1-10). De kracht haakt op exact dezelfde game-systemen
+// als de skin-krachten: punten, munten, magneet, start-schild, sprong en snelheid.
+const SPRITE_EFFECT = {
+  // groen
+  googly:"magneet", leaflet:"sprong", limey:"score", cacty:"schild", mossy:"munt",
+  pickley:"tempo", bamboot:"sprong", slimeling:"schild", sprouty:"sprong", gloom:"magneet",
+  // blauw
+  aqua:"tempo", bubbly:"schild", splash:"tempo", wavy:"sprong", glacier:"schild",
+  tidal:"sprong", nimbus:"munt", frosty:"schild", surge:"tempo", h2go:"schild",
+  // paars
+  shadow:"schild", voidling:"magneet", volt:"tempo", boolet:"tempo", phantom:"schild",
+  crystalyn:"munt", dreamy:"score", riftie:"magneet", grimpix:"score", astral:"magneet",
+  // legendarisch
+  lumin:"score", solaris:"score", celesto:"score", galaxi:"tempo", nebula:"schild",
+  aurora:"munt", eclipse:"schild", starborn:"schild", inferno:"score", chronos:"schild",
+  // speciaal
+  rainbow:"score", glitchy:"munt", pixel:"tempo", disco:"score", party:"score",
+  popcorn:"munt", sushi:"tempo", boba:"schild", cupcake:"tempo", donut:"sprong",
+  // mythisch
+  infinity:"schild", omega:"schild", voidking:"schild", prismatic:"score", godspark:"tempo",
+  reality:"magneet", zenith:"munt", nova:"score", apex:"sprong", origin:"score",
+};
+// Kid-vriendelijk labeltje per effect — getoond in de Spritevibes-kast.
+const SPRITE_EFFECT_LABEL = {
+  score:   "💎 Meer punten",
+  munt:    "🪙 Meer munten",
+  magneet: "🧲 Ringen-magneet (altijd aan)",
+  schild:  "🛡️ Start-schild",
+  sprong:  "⬆️ Hoger springen",
+  tempo:   "💨 Sneller rennen",
+};
+const RARITEIT_TIER = { groen:1, blauw:2, paars:3, legendarisch:4, speciaal:4, mythisch:5 };
+// Geeft een kracht-object terug in hetzelfde formaat als getSkinKracht().
+function getSpriteKracht(id, niveau) {
+  const meta = id ? SPRITE_BY_ID[id] : null;
+  if (!meta || !niveau) return {};
+  const tier = RARITEIT_TIER[meta.rariteit] || 1;
+  const lvlF = 0.4 + 0.6 * (Math.min(niveau, SPRITE_MAX_NIVEAU) / SPRITE_MAX_NIVEAU); // Lv1≈0.46 → Lv10=1.0
+  const k = tier * lvlF; // ~0.46 (groen Lv1) .. 5.0 (mythisch Lv10)
+  switch (SPRITE_EFFECT[id]) {
+    case "score":   return { scoreMul: 1 + 0.10 * k };        // tot +50% punten
+    case "munt":    return { muntMul: 1 + 0.20 * k };         // tot +100% munten
+    case "magneet": return { altijdAan: true, straalMul: 1 + 0.15 * k };
+    case "schild":  return { startSchildSec: 1 * k };         // tot ~5 sec start-schild
+    case "sprong":  return { sprongMul: 1 + 0.05 * k };       // tot +25% sprong
+    case "tempo":   return { tempoMul: 1 + 0.04 * k };        // tot +20% snelheid (meer ringen)
+    default:        return {};
+  }
+}
 function kiesGrabbelSprite() {
   // Weighted random op rariteit-gewicht
   const totaal = SPRITE_POOL.reduce((s, sp) => s + (RARITEIT_GEWICHT[sp.rariteit] || 1), 0);
@@ -1046,13 +1098,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // De actieve skin geeft een passieve kracht die sterker is bij hogere
     // rarity. Eénmalig per run uitgelezen; haakt op bestaande systemen in.
     const skinKracht = getSkinKracht(skinRef.current);
-    const skinScoreMul = skinKracht.scoreMul || 1;
-    const skinMuntMul = skinKracht.muntMul || 1;
-    const skinSprongMul = skinKracht.sprongMul || 1;
-    const skinTempoMul = skinKracht.tempoMul || 1;
-    const skinMagneetAan = !!skinKracht.altijdAan;
-    const skinMagneetStraalMul = skinKracht.straalMul || 1;
-    const skinStartSchildFrames = Math.round((skinKracht.startSchildSec || 0) * 60);
+    // ── SPRITEVIBE-ABILITY (Brian 2026-06-26) ── echte kracht van de uitgeruste
+    // vibe, gebaseerd op welke je meeneemt + zijn niveau. Stapelt met de skin-kracht.
+    const _vibeId = uitgerustRef.current;
+    const _vibeLvl = _vibeId ? (verzamelingRef.current[_vibeId] || 0) : 0;
+    const spriteKracht = getSpriteKracht(_vibeId, _vibeLvl);
+    const skinScoreMul = (skinKracht.scoreMul || 1) * (spriteKracht.scoreMul || 1);
+    const skinMuntMul = (skinKracht.muntMul || 1) * (spriteKracht.muntMul || 1);
+    const skinSprongMul = (skinKracht.sprongMul || 1) * (spriteKracht.sprongMul || 1);
+    const skinTempoMul = (skinKracht.tempoMul || 1) * (spriteKracht.tempoMul || 1);
+    const skinMagneetAan = !!skinKracht.altijdAan || !!spriteKracht.altijdAan;
+    const skinMagneetStraalMul = (skinKracht.straalMul || 1) * (spriteKracht.straalMul || 1);
+    const skinStartSchildFrames = Math.round(((skinKracht.startSchildSec || 0) + (spriteKracht.startSchildSec || 0)) * 60);
     const mutatorRingregenAan = mutatorRef.current === "ringregen";
     void mutatorRingregenAan; // TODO Sprint 8b: dubbele ring-spawn rate
     const mutatorShipModeAan = mutatorRef.current === "shipmode";
@@ -11466,6 +11523,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   <div style={{ fontSize: 12, marginTop: 4, opacity: 0.95, lineHeight: 1.35 }}>
                     ⚡ <b>Ability:</b> {SPRITE_BY_ID[uitgerustId].ability}
                   </div>
+                  {SPRITE_EFFECT_LABEL[SPRITE_EFFECT[uitgerustId]] && (
+                    <div style={{
+                      display: "inline-block", marginTop: 6,
+                      background: "rgba(255,209,79,0.18)", border: "1px solid rgba(255,209,79,0.55)",
+                      borderRadius: 8, padding: "3px 8px",
+                      fontSize: 11, fontWeight: 800, color: "#ffd54f",
+                    }}>
+                      {SPRITE_EFFECT_LABEL[SPRITE_EFFECT[uitgerustId]]} · werkt in het spel! · sterker op hoger niveau
+                    </div>
+                  )}
                 </div>
               )}
               <div style={{ fontSize: 10, opacity: 0.55, marginTop: 4, lineHeight: 1.35 }}>
