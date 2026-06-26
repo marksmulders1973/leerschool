@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { BRAND } from "../brand.js";
@@ -564,13 +564,47 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const oblivionTriggerRef = useRef({ trigger: false, lastSeenEventId: 0 });
   // 2× munten-event (admin-getriggerd, wereldwijd)
   const muntenMultiplierRef = useRef(1);
-  const [bonusEventEinde, setBonusEventEinde] = useState(null); // ms-timestamp of null
+  const [bonusEventEinde, setBonusEventEinde] = useState(null); // ms-timestamp of null (2× munten)
   const [bonusTik, setBonusTik] = useState(0); // dwingt re-render voor countdown
   // 🌈 Rainbow-event (admin) — 2 min lang heeft elke gespawnde ring 10% kans
   // op rainbow-vorm = 5 munten per stuk (× actieve multipliers).
   const rainbowActiefRef = useRef(false);
   const [rainbowEventEinde, setRainbowEventEinde] = useState(null);
-  // Initiële fetch: is er nu een actief event (2×-munten of rainbow)?
+  // ── Brian's EVENTS (2026-06-26) ──
+  // 🪩 Disco = 5× munten (2 min). 🌈 Rainbow Hour = 10× munten + iedereen +1
+  // bonus-hartje (30s). 🎁 Random-sprite = iedereen krijgt direct een willekeurige
+  // Spritevibe. Alles broadcast via dezelfde obliterator_bonus_events-tabel.
+  const munten2xEindeRef = useRef(0);   // ms, 0 = uit — bron-van-waarheid voor multiplier
+  const discoEindeRef = useRef(0);
+  const rainbowHourEindeRef = useRef(0);
+  const [discoEinde, setDiscoEinde] = useState(null);
+  const [rainbowHourEinde, setRainbowHourEinde] = useState(null);
+  // Mid-run injecties die de game-loop elke frame uitleest + toepast.
+  const geefBonusHartRef = useRef(0);     // +N hartjes (boven de normale cap)
+  const geefRandomSpriteRef = useRef(0);  // +N keer "geef random Spritevibe"
+  // De munten-multiplier = de STERKSTE actieve munten-boost (2× / 5× / 10×).
+  const syncMuntenMul = useCallback(() => {
+    const now = Date.now();
+    let m = 1;
+    if (now < munten2xEindeRef.current) m = Math.max(m, 2);
+    if (now < discoEindeRef.current) m = Math.max(m, 5);
+    if (now < rainbowHourEindeRef.current) m = Math.max(m, 10);
+    muntenMultiplierRef.current = m;
+  }, []);
+  // Eén plek om een binnenkomend bonus-event toe te passen (realtime + polling + fetch).
+  const pasBonusEventToe = useCallback((eventType, eindMs, opts) => {
+    if (eventType === "munten_2x") { munten2xEindeRef.current = eindMs; setBonusEventEinde(eindMs); }
+    else if (eventType === "disco") { discoEindeRef.current = eindMs; setDiscoEinde(eindMs); }
+    else if (eventType === "rainbow_hour") {
+      rainbowHourEindeRef.current = eindMs; setRainbowHourEinde(eindMs);
+      if (opts && opts.meteenHart) geefBonusHartRef.current += 1;
+    }
+    else if (eventType === "rainbow") { rainbowActiefRef.current = true; setRainbowEventEinde(eindMs); }
+    else if (eventType === "random_sprite") { geefRandomSpriteRef.current += 1; }
+    syncMuntenMul();
+  }, [syncMuntenMul]);
+  const DUUR_EVENT_TYPES = ["munten_2x", "disco", "rainbow_hour", "rainbow"];
+  // Initiële fetch: welke duur-events zijn nu nog actief?
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -578,31 +612,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const { data } = await supabase
           .from("obliterator_bonus_events")
           .select("event_type, expires_at")
-          .in("event_type", ["munten_2x", "rainbow"])
+          .in("event_type", DUUR_EVENT_TYPES)
           .gt("expires_at", new Date().toISOString())
           .order("expires_at", { ascending: false });
         if (cancelled || !data) return;
-        const muntenEv = data.find((e) => e.event_type === "munten_2x");
-        if (muntenEv) {
-          const t = new Date(muntenEv.expires_at).getTime();
-          if (t > Date.now()) {
-            muntenMultiplierRef.current = 2;
-            setBonusEventEinde(t);
-          }
-        }
-        const rainbowEv = data.find((e) => e.event_type === "rainbow");
-        if (rainbowEv) {
-          const t = new Date(rainbowEv.expires_at).getTime();
-          if (t > Date.now()) {
-            rainbowActiefRef.current = true;
-            setRainbowEventEinde(t);
-          }
+        for (const type of DUUR_EVENT_TYPES) {
+          const ev = data.find((e) => e.event_type === type);
+          if (!ev) continue;
+          const t = new Date(ev.expires_at).getTime();
+          if (t > Date.now()) pasBonusEventToe(type, t); // geen meteenHart bij reload
         }
       } catch {}
     })();
     return () => { cancelled = true; };
-  }, []);
-  // Realtime: live picken op nieuwe bonus-events (munten-2x én rainbow)
+  }, [pasBonusEventToe]);
+  // Realtime: live nieuwe bonus-events oppikken
   useEffect(() => {
     const channel = supabase
       .channel(`bonus-events-${Math.random().toString(36).slice(2, 8)}`)
@@ -612,23 +636,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         (payload) => {
           const ev = payload?.new;
           if (!ev) return;
+          if (ev.event_type === "random_sprite") { pasBonusEventToe("random_sprite", 0); return; }
+          if (!DUUR_EVENT_TYPES.includes(ev.event_type)) return;
           const t = new Date(ev.expires_at).getTime();
           if (!(t > Date.now())) return;
-          if (ev.event_type === "munten_2x") {
-            muntenMultiplierRef.current = 2;
-            setBonusEventEinde(t);
-          } else if (ev.event_type === "rainbow") {
-            rainbowActiefRef.current = true;
-            setRainbowEventEinde(t);
-          }
+          pasBonusEventToe(ev.event_type, t, { meteenHart: ev.event_type === "rainbow_hour" });
         }
       )
       .subscribe();
     return () => { try { supabase.removeChannel(channel); } catch {} };
-  }, []);
-  // Polling-fallback: elke 30s opnieuw checken of er een actief event is.
-  // Vangt het geval op dat de Realtime-websocket gedropt is (mobiel achter-
-  // grond, slechte wifi, sleep/wake) en de INSERT-broadcast gemist is.
+  }, [pasBonusEventToe]);
+  // Polling-fallback: elke 30s opnieuw checken (vangt gemiste realtime-broadcasts).
   useEffect(() => {
     let cancelled = false;
     const poll = async () => {
@@ -636,47 +654,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const { data } = await supabase
           .from("obliterator_bonus_events")
           .select("event_type, expires_at")
-          .in("event_type", ["munten_2x", "rainbow"])
+          .in("event_type", DUUR_EVENT_TYPES)
           .gt("expires_at", new Date().toISOString())
           .order("expires_at", { ascending: false });
         if (cancelled || !data) return;
-        const muntenEv = data.find((e) => e.event_type === "munten_2x");
-        if (muntenEv) {
-          const t = new Date(muntenEv.expires_at).getTime();
-          if (t > Date.now() && muntenMultiplierRef.current !== 2) {
-            muntenMultiplierRef.current = 2;
-            setBonusEventEinde(t);
-          }
-        }
-        const rainbowEv = data.find((e) => e.event_type === "rainbow");
-        if (rainbowEv) {
-          const t = new Date(rainbowEv.expires_at).getTime();
-          if (t > Date.now() && !rainbowActiefRef.current) {
-            rainbowActiefRef.current = true;
-            setRainbowEventEinde(t);
-          }
+        for (const type of DUUR_EVENT_TYPES) {
+          const ev = data.find((e) => e.event_type === type);
+          if (!ev) continue;
+          const t = new Date(ev.expires_at).getTime();
+          if (t > Date.now()) pasBonusEventToe(type, t); // geen meteenHart bij polling
         }
       } catch {}
     };
     const id = setInterval(poll, 30000);
     return () => { cancelled = true; clearInterval(id); };
-  }, []);
-  // Per-seconde tik om expiry te checken + countdown te updaten
+  }, [pasBonusEventToe]);
+  // Per-seconde tik om verlopen events op te ruimen + countdown te updaten
   useEffect(() => {
     const id = setInterval(() => {
+      const now = Date.now();
       let tikje = false;
-      if (bonusEventEinde && Date.now() >= bonusEventEinde) {
-        muntenMultiplierRef.current = 1;
-        setBonusEventEinde(null);
-      } else if (bonusEventEinde) tikje = true;
-      if (rainbowEventEinde && Date.now() >= rainbowEventEinde) {
-        rainbowActiefRef.current = false;
-        setRainbowEventEinde(null);
-      } else if (rainbowEventEinde) tikje = true;
+      if (bonusEventEinde && now >= bonusEventEinde) { munten2xEindeRef.current = 0; setBonusEventEinde(null); }
+      else if (bonusEventEinde) tikje = true;
+      if (discoEinde && now >= discoEinde) { discoEindeRef.current = 0; setDiscoEinde(null); }
+      else if (discoEinde) tikje = true;
+      if (rainbowHourEinde && now >= rainbowHourEinde) { rainbowHourEindeRef.current = 0; setRainbowHourEinde(null); }
+      else if (rainbowHourEinde) tikje = true;
+      if (rainbowEventEinde && now >= rainbowEventEinde) { rainbowActiefRef.current = false; setRainbowEventEinde(null); }
+      else if (rainbowEventEinde) tikje = true;
+      syncMuntenMul();
       if (tikje) setBonusTik((n) => n + 1);
     }, 1000);
     return () => clearInterval(id);
-  }, [bonusEventEinde, rainbowEventEinde]);
+  }, [bonusEventEinde, rainbowEventEinde, discoEinde, rainbowHourEinde, syncMuntenMul]);
 
   // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
   // bij iedereen die op dat moment speelt de cutscene triggert.
@@ -5526,6 +5536,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return; // alle game-logic pauzeren
       }
 
+      // ── Brian's EVENTS mid-run uitdelen (2026-06-26) ──
+      // Bonus-hartje (boven de cap) bij Rainbow Hour; random Spritevibe bij het
+      // random-sprite-event. De refs worden gezet door de admin-knop + realtime.
+      if (geefBonusHartRef.current > 0) {
+        levens += geefBonusHartRef.current;
+        geefBonusHartRef.current = 0;
+        recordBannerTekst = "💖 +1 BONUS-HARTJE!";
+        recordBannerKleur = "#ff6b9d";
+        recordBannerTeller = 120;
+        spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 26, "#ff6b9d", { spread: 11, opwaarts: 4, leven: 70, grootte: 6, glow: 22 });
+        piep(880, 0.12, "sine", 0.16);
+        setTimeout(() => piep(1180, 0.12, "sine", 0.14), 110);
+      }
+      if (geefRandomSpriteRef.current > 0) {
+        geefRandomSpriteRef.current = 0;
+        if (!gedragenSprite) {
+          const s = kiesGrabbelSprite();
+          gedragenSprite = { id: s.id, niveau: 1, veilig: false };
+          try { grabbelBannerRef.current({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false }); } catch {}
+        } else if (gedragenSprite.niveau < SPRITE_MAX_NIVEAU) {
+          gedragenSprite.niveau = Math.min(SPRITE_MAX_NIVEAU, gedragenSprite.niveau + 1);
+          const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
+          if (gedragenSprite.veilig) { try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {} }
+          try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: true, isNew: false, maxed: gedragenSprite.niveau >= SPRITE_MAX_NIVEAU }); } catch {}
+        } else {
+          const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
+          try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: false, isNew: false, maxed: true }); } catch {}
+        }
+        spawnParticles(W * 0.5, H * 0.32, 30, "#ffd54f", { spread: 12, opwaarts: 5, leven: 70, grootte: 6, glow: 22 });
+        piep(660, 0.14, "sine", 0.16);
+      }
+
       checkBioomWissel();
       spelSnelheid = START_SNELHEID; // basis — moeilijkheid was eerst via obstakel-density
       // SLOW-MO: vermenigvuldig alle scroll-snelheden met deze factor (zonder spelSnelheid zelf te wijzigen,
@@ -10176,8 +10218,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         });
                       } catch {}
                       // lokaal direct activeren
-                      muntenMultiplierRef.current = 2;
-                      setBonusEventEinde(Date.now() + duurMin * 60 * 1000);
+                      munten2xEindeRef.current = Date.now() + duurMin * 60 * 1000;
+                      setBonusEventEinde(munten2xEindeRef.current);
+                      syncMuntenMul();
                     }}
                     disabled={bonusEventEinde && Date.now() < bonusEventEinde}
                     style={{
@@ -10236,6 +10279,146 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   </button>
                   <p style={{ color: "rgba(220,180,255,0.7)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
                     10% kans per ring op rainbow-versie = 5× munten elk
+                  </p>
+
+                  {/* ── Brian's EVENTS (2026-06-26) ── */}
+                  <div style={{ borderTop: "1px solid rgba(180,60,220,0.35)", margin: "12px 0 8px" }} />
+                  <div style={{ color: "#ffd54f", fontSize: 12, fontWeight: 800, letterSpacing: 0.5, textAlign: "center", marginBottom: 6 }}>
+                    🎮 BRIAN&apos;S EVENTS
+                  </div>
+
+                  {/* 🪩 DISCO — 2 min · 5× munten */}
+                  <button
+                    onClick={async () => {
+                      const eind = Date.now() + 2 * 60 * 1000;
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert({
+                          event_type: "disco",
+                          triggered_by_name: (userName || "Admin").trim(),
+                          expires_at: new Date(eind).toISOString(),
+                        });
+                      } catch {}
+                      pasBonusEventToe("disco", eind);
+                    }}
+                    disabled={discoEinde && Date.now() < discoEinde}
+                    style={{
+                      width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                      background: discoEinde && Date.now() < discoEinde
+                        ? "rgba(255,95,162,0.18)"
+                        : "linear-gradient(135deg, #ff5fa2, #a060ff, #40c0ff)",
+                      border: "none",
+                      color: discoEinde && Date.now() < discoEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                      cursor: discoEinde && Date.now() < discoEinde ? "not-allowed" : "pointer",
+                      letterSpacing: 0.4,
+                    }}
+                  >
+                    {discoEinde && Date.now() < discoEinde
+                      ? `🪩 DISCO actief (${Math.max(0, Math.ceil((discoEinde - Date.now()) / 1000))}s over)`
+                      : "🪩 Disco-event (2 min · 5× munten)"}
+                  </button>
+
+                  {/* 🌈 RAINBOW HOUR — 30s · 10× munten + bonus-hartje */}
+                  <button
+                    onClick={async () => {
+                      const eind = Date.now() + 30 * 1000;
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert({
+                          event_type: "rainbow_hour",
+                          triggered_by_name: (userName || "Admin").trim(),
+                          expires_at: new Date(eind).toISOString(),
+                        });
+                      } catch {}
+                      pasBonusEventToe("rainbow_hour", eind, { meteenHart: true });
+                    }}
+                    disabled={rainbowHourEinde && Date.now() < rainbowHourEinde}
+                    style={{
+                      width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                      background: rainbowHourEinde && Date.now() < rainbowHourEinde
+                        ? "rgba(160,96,255,0.18)"
+                        : "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff)",
+                      border: "none",
+                      color: rainbowHourEinde && Date.now() < rainbowHourEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                      cursor: rainbowHourEinde && Date.now() < rainbowHourEinde ? "not-allowed" : "pointer",
+                      letterSpacing: 0.4,
+                      textShadow: rainbowHourEinde && Date.now() < rainbowHourEinde ? "none" : "0 1px 2px rgba(255,255,255,0.45)",
+                    }}
+                  >
+                    {rainbowHourEinde && Date.now() < rainbowHourEinde
+                      ? `🌈 RAINBOW HOUR (${Math.max(0, Math.ceil((rainbowHourEinde - Date.now()) / 1000))}s over)`
+                      : "🌈 Rainbow Hour (30s · 10× munten + ❤️)"}
+                  </button>
+                  <p style={{ color: "rgba(255,213,79,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                    Iedereen krijgt 10× munten én meteen een extra bonus-hartje
+                  </p>
+
+                  {/* 🎁 RANDOM SPRITEVIBE voor iedereen */}
+                  <button
+                    onClick={async () => {
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert({
+                          event_type: "random_sprite",
+                          triggered_by_name: (userName || "Admin").trim(),
+                          expires_at: new Date(Date.now() + 60 * 1000).toISOString(),
+                        });
+                      } catch {}
+                      pasBonusEventToe("random_sprite", 0);
+                    }}
+                    style={{
+                      width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                      background: "linear-gradient(135deg, #69f0ae, #45b6f5)",
+                      border: "none", color: "#0a0014",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                      cursor: "pointer", letterSpacing: 0.4,
+                    }}
+                  >
+                    🎁 Random Spritevibe voor iedereen
+                  </button>
+                  <p style={{ color: "rgba(105,240,174,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                    Elke speler krijgt direct een willekeurige vibe (of +1 niveau)
+                  </p>
+
+                  {/* 🫰 BRIAN SNAP — alle events tegelijk (BEHALVE zwart gat) */}
+                  <button
+                    onClick={async () => {
+                      const now = Date.now();
+                      const discoEind = now + 2 * 60 * 1000;
+                      const rhEind = now + 30 * 1000;
+                      const m2xEind = now + 10 * 60 * 1000;
+                      const rainbowEind = now + 2 * 60 * 1000;
+                      const naam = (userName || "Admin").trim();
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert([
+                          { event_type: "disco", triggered_by_name: naam, expires_at: new Date(discoEind).toISOString() },
+                          { event_type: "rainbow_hour", triggered_by_name: naam, expires_at: new Date(rhEind).toISOString() },
+                          { event_type: "munten_2x", triggered_by_name: naam, expires_at: new Date(m2xEind).toISOString() },
+                          { event_type: "rainbow", triggered_by_name: naam, expires_at: new Date(rainbowEind).toISOString() },
+                          { event_type: "random_sprite", triggered_by_name: naam, expires_at: new Date(now + 60 * 1000).toISOString() },
+                        ]);
+                      } catch {}
+                      // lokaal alles meteen aanzetten (zwart gat NIET — die blijft apart)
+                      pasBonusEventToe("disco", discoEind);
+                      pasBonusEventToe("rainbow_hour", rhEind, { meteenHart: true });
+                      pasBonusEventToe("munten_2x", m2xEind);
+                      pasBonusEventToe("rainbow", rainbowEind);
+                      pasBonusEventToe("random_sprite", 0);
+                    }}
+                    style={{
+                      width: "100%", marginTop: 12, padding: "14px 14px", borderRadius: 12,
+                      background: "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff, #ff5fa2)",
+                      border: "2px solid rgba(255,255,255,0.5)",
+                      color: "#1a0008",
+                      fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 16, fontWeight: 900,
+                      cursor: "pointer", letterSpacing: 1,
+                      textShadow: "0 1px 2px rgba(255,255,255,0.55)",
+                      boxShadow: "0 4px 22px rgba(255,160,48,0.5)",
+                    }}
+                  >
+                    🫰 BRIAN SNAP — ALLE events tegelijk!
+                  </button>
+                  <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                    Disco + Rainbow Hour + 2× munten + rainbow-ringen + random vibe — alles in één klap (zwart gat blijft z&apos;n eigen knop)
                   </p>
                 </div>
               );
