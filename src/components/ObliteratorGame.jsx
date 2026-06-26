@@ -66,6 +66,100 @@ const PRIZE_POOL = [
   { id: "titel-componist", soort: "titel",  naam: "Titel: Componist", emoji: "🎼", waarde: "Componist" },
 ];
 
+// ── GRABBEL-MAATJES (Brian 2026-06-26, "Fortnite Runners"-sprites) ──
+// Elke 10 levels mag je grabbelen. Eerste keer win je een willekeurig maatje
+// (rariteit = de "kans"); volgende grabbels levelen 'm op (+1, max 10). Het
+// actieve maatje staat onder je hartjes in de HUD en blijft bewaard tussen runs.
+const SPRITE_MAX_NIVEAU = 10;
+const SPRITE_GRABBEL_LEVELS = 10; // elke 10 levels
+const RARITEIT_KLEUR = {
+  groen: "#5fd35f", blauw: "#45b6f5", paars: "#b15cff",
+  legendarisch: "#ffb13b", speciaal: "#ff5fa2", mythisch: "#ff4d4d",
+};
+// gewicht = relatieve kans per maatje (zeldzamer = lager)
+const RARITEIT_GEWICHT = {
+  groen: 30, blauw: 18, paars: 10, legendarisch: 5, speciaal: 4, mythisch: 1,
+};
+const SPRITE_POOL = [
+  // GROEN (algemeen)
+  { id: "googly",   naam: "Googly",    emoji: "🟢", rariteit: "groen" },
+  { id: "leaflet",  naam: "Leaflet",   emoji: "🍃", rariteit: "groen" },
+  { id: "limey",    naam: "Limey",     emoji: "🟩", rariteit: "groen" },
+  { id: "cacty",    naam: "Cacty",     emoji: "🌵", rariteit: "groen" },
+  { id: "mossy",    naam: "Mossy",     emoji: "🌿", rariteit: "groen" },
+  { id: "pickley",  naam: "Pickley",   emoji: "🥒", rariteit: "groen" },
+  { id: "bamboot",  naam: "Bamboot",   emoji: "🎋", rariteit: "groen" },
+  { id: "slimeling",naam: "Slimeling", emoji: "🫧", rariteit: "groen" },
+  { id: "sprouty",  naam: "Sprouty",   emoji: "🌱", rariteit: "groen" },
+  { id: "gloom",    naam: "Gloom",     emoji: "🫒", rariteit: "groen" },
+  // BLAUW
+  { id: "aqua",     naam: "Aqua",      emoji: "💧", rariteit: "blauw" },
+  { id: "bubbly",   naam: "Bubbly",    emoji: "🫧", rariteit: "blauw" },
+  { id: "splash",   naam: "Splash",    emoji: "💦", rariteit: "blauw" },
+  { id: "wavy",     naam: "Wavy",      emoji: "🌊", rariteit: "blauw" },
+  { id: "glacier",  naam: "Glacier",   emoji: "🧊", rariteit: "blauw" },
+  { id: "tidal",    naam: "Tidal",     emoji: "🌊", rariteit: "blauw" },
+  { id: "nimbus",   naam: "Nimbus",    emoji: "🌧️", rariteit: "blauw" },
+  { id: "frosty",   naam: "Frosty",    emoji: "❄️", rariteit: "blauw" },
+  { id: "surge",    naam: "Surge",     emoji: "⚡", rariteit: "blauw" },
+  { id: "h2go",     naam: "H2GO",      emoji: "🚰", rariteit: "blauw" },
+  // PAARS
+  { id: "shadow",   naam: "Shadow",    emoji: "🟣", rariteit: "paars" },
+  { id: "voidling", naam: "Voidling",  emoji: "🔮", rariteit: "paars" },
+  { id: "volt",     naam: "Volt",      emoji: "🟪", rariteit: "paars" },
+  { id: "boolet",   naam: "Boolet",    emoji: "👾", rariteit: "paars" },
+  { id: "phantom",  naam: "Phantom",   emoji: "👻", rariteit: "paars" },
+  { id: "crystalyn",naam: "Crystalyn", emoji: "💜", rariteit: "paars" },
+  { id: "dreamy",   naam: "Dreamy",    emoji: "🎧", rariteit: "paars" },
+  { id: "riftie",   naam: "Riftie",    emoji: "🌀", rariteit: "paars" },
+  { id: "grimpix",  naam: "Grimpix",   emoji: "👾", rariteit: "paars" },
+  { id: "astral",   naam: "Astral",    emoji: "🔮", rariteit: "paars" },
+  // LEGENDARISCH
+  { id: "lumin",    naam: "Lumin",     emoji: "⭐", rariteit: "legendarisch" },
+  { id: "solaris",  naam: "Solaris",   emoji: "🌞", rariteit: "legendarisch" },
+  { id: "celesto",  naam: "Celesto",   emoji: "🌟", rariteit: "legendarisch" },
+  { id: "galaxi",   naam: "Galaxi",    emoji: "🌌", rariteit: "legendarisch" },
+  { id: "nebula",   naam: "Nebula",    emoji: "🌠", rariteit: "legendarisch" },
+  { id: "aurora",   naam: "Aurora",    emoji: "💠", rariteit: "legendarisch" },
+  { id: "eclipse",  naam: "Eclipse",   emoji: "🌑", rariteit: "legendarisch" },
+  { id: "starborn", naam: "Starborn",  emoji: "✨", rariteit: "legendarisch" },
+  { id: "inferno",  naam: "Inferno",   emoji: "🔥", rariteit: "legendarisch" },
+  { id: "chronos",  naam: "Chronos",   emoji: "⏰", rariteit: "legendarisch" },
+  // SPECIAAL
+  { id: "rainbow",  naam: "Rainbow",   emoji: "🌈", rariteit: "speciaal" },
+  { id: "glitchy",  naam: "Glitchy",   emoji: "👾", rariteit: "speciaal" },
+  { id: "pixel",    naam: "Pixel",     emoji: "🕹️", rariteit: "speciaal" },
+  { id: "disco",    naam: "Disco",     emoji: "🪩", rariteit: "speciaal" },
+  { id: "party",    naam: "Party",     emoji: "🎉", rariteit: "speciaal" },
+  { id: "popcorn",  naam: "Popcorn",   emoji: "🍿", rariteit: "speciaal" },
+  { id: "sushi",    naam: "Sushi",     emoji: "🍣", rariteit: "speciaal" },
+  { id: "boba",     naam: "Boba",      emoji: "🧋", rariteit: "speciaal" },
+  { id: "cupcake",  naam: "Cupcake",   emoji: "🧁", rariteit: "speciaal" },
+  { id: "donut",    naam: "Donut",     emoji: "🍩", rariteit: "speciaal" },
+  // MYTHISCH (super zeldzaam)
+  { id: "infinity", naam: "Infinity",  emoji: "♾️", rariteit: "mythisch" },
+  { id: "omega",    naam: "Omega",     emoji: "🛡️", rariteit: "mythisch" },
+  { id: "voidking", naam: "Void King", emoji: "👑", rariteit: "mythisch" },
+  { id: "prismatic",naam: "Prismatic", emoji: "💎", rariteit: "mythisch" },
+  { id: "godspark", naam: "Godspark",  emoji: "⚡", rariteit: "mythisch" },
+  { id: "reality",  naam: "Reality",   emoji: "🕳️", rariteit: "mythisch" },
+  { id: "zenith",   naam: "Zenith",    emoji: "🔱", rariteit: "mythisch" },
+  { id: "nova",     naam: "Nova",      emoji: "💫", rariteit: "mythisch" },
+  { id: "apex",     naam: "Apex",      emoji: "🌋", rariteit: "mythisch" },
+  { id: "origin",   naam: "Origin",    emoji: "🐼", rariteit: "mythisch" },
+];
+const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
+function kiesGrabbelSprite() {
+  // Weighted random op rariteit-gewicht
+  const totaal = SPRITE_POOL.reduce((s, sp) => s + (RARITEIT_GEWICHT[sp.rariteit] || 1), 0);
+  let r = Math.random() * totaal;
+  for (const sp of SPRITE_POOL) {
+    r -= (RARITEIT_GEWICHT[sp.rariteit] || 1);
+    if (r <= 0) return sp;
+  }
+  return SPRITE_POOL[0];
+}
+
 // Mutators-per-run (Sprint 8 light — 15-agent-audit, Hades-stijl).
 // Bij elke run wordt random 1 mutator gekozen uit deze pool. Geeft elke
 // ronde een merkbare 'twist' zonder content-explosie. Mutators worden
@@ -991,6 +1085,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const BOSS_PROJECTIEL_SNELHEID = 7 * SCHAAL;
     const SPELER_LASER_SNELHEID = 12 * SCHAAL;
     const BOSS_NA_LEVEL_VLAGGEN = new Set(); // welke triggers in deze sessie al gespeeld
+    const GRABBEL_GEDAAN = new Set(); // welke 10-level-grabbels deze run al getrokken zijn
     let bossActief = false;
     let bossHp = 0;
     let bossMaxHpHuidig = BOSS_MAX_HP_BASE;
@@ -5570,6 +5665,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           setBiomeVoorLevel(nieuwLevel);
           // Sprint 6 — missie-update: level + overleef-tijd
           try { missieUpdateRef.current("level", nieuwLevel); } catch {}
+          // GRABBEL (Brian 2026-06-26): elke 10 levels één keer trekken/oplevelen
+          if (nieuwLevel > 0 && nieuwLevel % SPRITE_GRABBEL_LEVELS === 0 && !GRABBEL_GEDAAN.has(nieuwLevel)) {
+            GRABBEL_GEDAAN.add(nieuwLevel);
+            try { doeGrabbelRef.current(); } catch {}
+            // feestelijk: regenboog-confetti + jingle
+            spawnParticles(W * 0.5, H * 0.32, 34, "#ffd54f", { spread: 13, opwaarts: 5, leven: 75, grootte: 6, glow: 24 });
+            spawnParticles(W * 0.5, H * 0.32, 22, "#b15cff", { spread: 11, opwaarts: 4, leven: 60, grootte: 5, glow: 20 });
+            piep(660, 0.14, "sine", 0.16);
+            setTimeout(() => piep(990, 0.14, "sine", 0.15), 120);
+            setTimeout(() => piep(1480, 0.20, "sine", 0.14), 260);
+          }
           // bonus piep
           piep(880, 0.10, "sine", 0.15);
           setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
@@ -7149,6 +7255,55 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
       // HP-balk vlak onder de hartjes — toont schade-buffer voor huidige leven
       tekenHpBalk();
+      // Grabbel-maatje (Brian 2026-06-26) — onder de hartjes/HP-balk
+      tekenGrabbelMaatje();
+    }
+    function tekenGrabbelMaatje() {
+      const sp = actieveSpriteRef.current;
+      if (!sp) return;
+      const meta = SPRITE_BY_ID[sp.id];
+      if (!meta) return;
+      const kleur = RARITEIT_KLEUR[meta.rariteit] || "#ffffff";
+      const x = 12;
+      const y = 122 * SCHAAL; // net onder de HP-balk
+      const r = 14 * SCHAAL;   // straal cirkel-badge
+      ctx.save();
+      // badge-cirkel met rariteit-glow
+      ctx.beginPath();
+      ctx.arc(x + r, y + r, r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(0,0,0,0.55)";
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = kleur;
+      ctx.fill();
+      ctx.lineWidth = 2 * SCHAAL;
+      ctx.strokeStyle = kleur;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+      // maatje-emoji
+      ctx.font = `${17 * SCHAAL}px serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(meta.emoji, x + r, y + r + 1 * SCHAAL);
+      // Lv-tekst rechts van de badge
+      ctx.textAlign = "left";
+      ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillText(`Lv ${sp.niveau}`, x + 2 * r + 6, y + r - 6 * SCHAAL);
+      // mini level-balk (niveau/10)
+      const balkX = x + 2 * r + 6;
+      const balkY = y + r + 2 * SCHAAL;
+      const balkW = 46 * SCHAAL;
+      const balkH = 5 * SCHAAL;
+      ctx.fillStyle = "rgba(0,0,0,0.5)";
+      ctx.fillRect(balkX - 1, balkY - 1, balkW + 2, balkH + 2);
+      ctx.fillStyle = kleur;
+      ctx.fillRect(balkX, balkY, balkW * (sp.niveau / SPRITE_MAX_NIVEAU), balkH);
+      if (sp.niveau >= SPRITE_MAX_NIVEAU) {
+        ctx.fillStyle = "#ffd54f";
+        ctx.font = `bold ${8 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("MAX", balkX + balkW + 4, balkY - 1);
+      }
+      ctx.restore();
     }
     function tekenHpBalk() {
       const balkX = 12;
@@ -8692,6 +8847,49 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   useEffect(() => { actieveTrailRef.current = actieveTrail; }, [actieveTrail]);
   const [prizeSpinning, setPrizeSpinning] = useState(false);
   const [prizeRevealed, setPrizeRevealed] = useState(null); // {id, soort, naam, emoji, waarde, isNew}
+  // ── GRABBEL-MAATJE (Brian 2026-06-26) ── actief maatje blijft bewaard tussen runs
+  const [actieveSprite, setActieveSprite] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("obliterator-sprite") || "null"); } catch { return null; }
+  }); // { id, niveau } | null
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-sprite", JSON.stringify(actieveSprite)); } catch {}
+  }, [actieveSprite]);
+  const actieveSpriteRef = useRef(actieveSprite);
+  useEffect(() => { actieveSpriteRef.current = actieveSprite; }, [actieveSprite]);
+  const [grabbelBanner, setGrabbelBanner] = useState(null); // {emoji,naam,rariteit,niveau,gewonnen,isNew,maxed} | null
+  useEffect(() => {
+    if (!grabbelBanner) return;
+    const t = setTimeout(() => setGrabbelBanner(null), 3500);
+    return () => clearTimeout(t);
+  }, [grabbelBanner]);
+  // Wordt vanuit de game-loop aangeroepen bij elke 10e level (ref blijft stabiel)
+  const doeGrabbelRef = useRef(() => {});
+  useEffect(() => {
+    doeGrabbelRef.current = () => {
+      const huidige = actieveSpriteRef.current;
+      if (!huidige) {
+        // eerste grabbel → win een willekeurig maatje (rariteit = de kans)
+        const s = kiesGrabbelSprite();
+        const nieuw = { id: s.id, niveau: 1 };
+        actieveSpriteRef.current = nieuw;
+        setActieveSprite(nieuw);
+        setGrabbelBanner({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false });
+      } else if (huidige.niveau < SPRITE_MAX_NIVEAU) {
+        // level je maatje op (+1)
+        const nv = Math.min(SPRITE_MAX_NIVEAU, huidige.niveau + 1);
+        const upd = { id: huidige.id, niveau: nv };
+        actieveSpriteRef.current = upd;
+        setActieveSprite(upd);
+        const meta = SPRITE_BY_ID[huidige.id] || {};
+        setGrabbelBanner({ ...meta, niveau: nv, gewonnen: true, isNew: false, maxed: nv >= SPRITE_MAX_NIVEAU });
+      } else {
+        // al MAX → kleine munten-bonus als troost
+        const meta = SPRITE_BY_ID[huidige.id] || {};
+        setMunten((m) => m + 10);
+        setGrabbelBanner({ ...meta, niveau: huidige.niveau, gewonnen: false, isNew: false, maxed: true });
+      }
+    };
+  }, []);
   // 2026-05-18 — naam-prompt vóór game-start. Mark wens: 'als speler 'Speler'
   // heet valt de high-score tegen. Vraag de naam voordat ze beginnen, maar
   // niet verplicht (skip-knop).
@@ -11030,6 +11228,53 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           </div>
         </div>
       )}
+
+      {/* GRABBEL-popup (Brian 2026-06-26) — elke 10 levels: maatje winnen/oplevelen */}
+      {fase === "spelen" && grabbelBanner && (() => {
+        const kleur = RARITEIT_KLEUR[grabbelBanner.rariteit] || "#ffd54f";
+        return (
+          <div style={{
+            position: "absolute", top: "32%", left: "50%", transform: "translate(-50%, -50%)",
+            padding: "16px 24px",
+            background: "rgba(20,15,30,0.94)",
+            border: `2px solid ${kleur}`,
+            borderRadius: 18,
+            backdropFilter: "blur(8px)",
+            color: "#fff",
+            fontFamily: "'Fredoka', sans-serif",
+            textAlign: "center",
+            maxWidth: 320,
+            boxShadow: `0 12px 32px rgba(0,0,0,0.6), 0 0 34px ${kleur}66`,
+            zIndex: 12,
+            animation: "obliterator-audio-card-in 320ms ease-out",
+            pointerEvents: "none",
+          }}>
+            <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
+              🎁 Grabbelton
+            </div>
+            <div style={{ fontSize: 52, margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
+              {grabbelBanner.emoji}
+            </div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: kleur }}>
+              {grabbelBanner.naam}
+            </div>
+            {grabbelBanner.rariteit && (
+              <div style={{ fontSize: 12, opacity: 0.75, marginTop: 2, textTransform: "capitalize" }}>
+                {grabbelBanner.rariteit}
+              </div>
+            )}
+            <div style={{ fontSize: 15, fontWeight: 700, marginTop: 8, color: "#fff" }}>
+              {grabbelBanner.isNew
+                ? "🎉 Nieuw maatje! Lv 1"
+                : grabbelBanner.maxed && !grabbelBanner.gewonnen
+                  ? "⭐ MAX! +10 munten"
+                  : grabbelBanner.maxed
+                    ? `⭐ Lv ${grabbelBanner.niveau} — MAX!`
+                    : `⬆️ Level up! Lv ${grabbelBanner.niveau}`}
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Sprint 7 — Tijdperk-bubble: bij elke biome-wissel verschijnt 5 sec
           lang een tekstwolkje met jaar + denker + plek. 10 denkers per
