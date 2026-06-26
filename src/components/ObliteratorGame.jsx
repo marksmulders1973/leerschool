@@ -13,6 +13,8 @@ import {
   DECOR_RENDER,
   SKINS,
   SKIN_BY_ID,
+  RARITY_META,
+  getSkinKracht,
   PRESET_LEVELS,
 } from "../games/obliterator/constants.js";
 
@@ -1031,6 +1033,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const mutatorTempoMul = mutatorRef.current === "tempoplus" ? 1.25 : 1;
     const mutatorMinispelerMul = mutatorRef.current === "minispeler" ? 0.7 : 1;
     const mutatorMagneetAan = mutatorRef.current === "magneet";
+    // ── SKIN-KRACHT (Brian 2026-06-26) ──
+    // De actieve skin geeft een passieve kracht die sterker is bij hogere
+    // rarity. Eénmalig per run uitgelezen; haakt op bestaande systemen in.
+    const skinKracht = getSkinKracht(skinRef.current);
+    const skinScoreMul = skinKracht.scoreMul || 1;
+    const skinMuntMul = skinKracht.muntMul || 1;
+    const skinSprongMul = skinKracht.sprongMul || 1;
+    const skinTempoMul = skinKracht.tempoMul || 1;
+    const skinMagneetAan = !!skinKracht.altijdAan;
+    const skinMagneetStraalMul = skinKracht.straalMul || 1;
+    const skinStartSchildFrames = Math.round((skinKracht.startSchildSec || 0) * 60);
     const mutatorRingregenAan = mutatorRef.current === "ringregen";
     void mutatorRingregenAan; // TODO Sprint 8b: dubbele ring-spawn rate
     const mutatorShipModeAan = mutatorRef.current === "shipmode";
@@ -1059,7 +1072,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // 2026-06-07 (Mark-wens, 15-agent-analyse): 10→11 = +10% score-output.
     // Balans-veilig (elke bron schaalt identiek, level-curve onveranderd).
     // Bestaande DB-scores worden NIET gemigreerd (historie heilig).
-    const SCORE_MUL = 11;
+    const SCORE_MUL = 11 * skinScoreMul; // skin-kracht "Puntenbonus" schaalt mee
     // PvP forceert L1 zodat beide spelers identieke start-condities hebben.
     let huidigLevel = pvpMatch ? 1 : (startLevelRef.current || 1);
     // ── CUSTOM LEVEL ── speel een door iemand gemaakt level uit DB
@@ -1132,7 +1145,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // MAGNEET-power-up (ringen vliegen naar je toe)
     let magneetFrames = 0;
     const MAGNEET_DUUR = 480;     // 8 sec
-    const MAGNEET_RADIUS = 220 * SCHAAL;
+    const MAGNEET_RADIUS = 220 * SCHAAL * skinMagneetStraalMul; // skin-kracht "Magneet" vergroot bereik
     const MAGNEET_TREK = 9 * SCHAAL; // px per frame max
     const magneetPickups = [];
     // SLOW-MO-power-up (wereld in halve snelheid)
@@ -5142,7 +5155,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const kracht = sprongNr === 0 ? 1 : sprongNr === 1 ? 0.85 : 0.75;
         // tijdens FLIP: omgekeerd (omlaag duiken)
         const richting = flipFrames > 0 ? -1 : 1;
-        speler.snelheidY = SPRING_KRACHT * kracht * richting;
+        speler.snelheidY = SPRING_KRACHT * kracht * richting * skinSprongMul; // skin-kracht "Hoge sprong"
         // Sprint 6 — missie: spring
         try { missieUpdateRef.current("spring", 1); } catch {}
         // Lichte voorwaartse zet bij sprong — minder statisch dan puur op-en-neer.
@@ -5468,7 +5481,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const beatMul = (afgeremFrames <= 0 && !bonusFase && !bossActief)
         ? 1 + Math.min(0.35, audioBeatRef.current * 0.4)
         : 1;
-      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul * mutatorTempoMul;
+      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul * mutatorTempoMul * skinTempoMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
@@ -6956,7 +6969,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           r.opgepakt = true;
           streak++;
           // Munten: 1 ring = 1 munt (× 2 tijdens 2×-event, × 5 als rainbow-ring)
-          const ringMunten = (r.rainbow ? 5 : 1) * (muntenMultiplierRef.current || 1);
+          const ringMunten = Math.round((r.rainbow ? 5 : 1) * (muntenMultiplierRef.current || 1) * skinMuntMul); // skin-kracht "Muntmagnaat"
           muntenRef.current += ringMunten;
           try { schrijfInt(muntenKey, muntenRef.current); } catch {}
           if (r.rainbow) {
@@ -7248,7 +7261,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (shakeKracht > 0) shakeKracht *= 0.85;
       if (bloomFlashTeller > 0) bloomFlashTeller--;
       // Sprint 8 — mutator 'magneet': altijd actief deze run
-      if (mutatorMagneetAan) magneetFrames = Math.max(magneetFrames, 60);
+      if (mutatorMagneetAan || skinMagneetAan) magneetFrames = Math.max(magneetFrames, 60); // skin-kracht "Magneet" altijd aan
       // Trail-ghost: push huidige speler-positie, oud frame eraf zodra ringbuffer vol
       spelerTrail.push({ x: speler.x, y: speler.y, rotatie: speler.rotatie || 0 });
       if (spelerTrail.length > TRAIL_LEN) spelerTrail.shift();
@@ -8821,6 +8834,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Initialiseer biome + muziek voor het start-level (level 1 of hoger)
     setBiomeVoorLevel(pvpMatch ? 1 : startLevelRef.current);
     levelUpFlash = 0; // we tonen geen "level X gehaald" voor de start zelf
+    // Skin-kracht "Startschild": begin de ronde een paar sec onkwetsbaar.
+    if (skinStartSchildFrames > 0) vliegFrames = Math.max(vliegFrames, skinStartSchildFrames);
     if (!pvpMatch && startLevelRef.current > 1) {
       // pre-set frameTeller zodat density-formule meteen op level-niveau zit
       frameTeller = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
@@ -9953,11 +9968,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   </div>
                   {/* Skin-selector */}
                   <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
-                    <div style={{ color: "#fff", fontSize: 13, marginBottom: 6 }}>👕 Skin · ontgrendel elke 10 levels</div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(78px, 1fr))", gap: 6 }}>
+                    <div style={{ color: "#fff", fontSize: 13, marginBottom: 6 }}>👕 Skin · elke skin heeft een eigen kracht — zeldzamer = sterker</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(82px, 1fr))", gap: 6 }}>
                       {SKINS.map((s) => {
                         const ontgrendeld = unlockedSkins.includes(s.id);
                         const isActive = selectedSkin === s.id;
+                        const rar = RARITY_META[s.rarity] || RARITY_META.common;
+                        const kr = getSkinKracht(s.id);
                         return (
                           <button
                             key={s.id}
@@ -9965,19 +9982,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             disabled={!ontgrendeld}
                             style={{
                               padding: "6px 4px", borderRadius: 10,
-                              border: isActive ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.15)",
+                              border: isActive ? "2px solid #69f0ae" : `2px solid ${rar.kleur}`,
+                              boxShadow: isActive ? "0 0 10px rgba(105,240,174,0.45)" : `0 0 6px ${rar.kleur}55`,
                               background: isActive ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)",
                               color: ontgrendeld ? "#fff" : "rgba(255,255,255,0.4)",
                               fontFamily: "'Fredoka', sans-serif", fontSize: 10,
                               cursor: ontgrendeld ? "pointer" : "not-allowed",
                               filter: ontgrendeld ? "none" : "grayscale(0.85)",
                             }}
-                            title={ontgrendeld ? s.label : (s.unlockHint || `Ontgrendel bij Level ${s.unlockLevel ?? "?"}`)}
+                            title={`${s.label} — ${rar.label}\n${kr.emoji} ${kr.naam}: ${kr.beschrijving}${ontgrendeld ? "" : "\n🔒 " + (s.unlockHint || `Ontgrendel bij Level ${s.unlockLevel ?? "?"}`)}`}
                           >
                             <div style={{ fontSize: 22, marginBottom: 2 }}>{s.emoji}</div>
                             <div style={{ fontSize: 9, lineHeight: 1.2 }}>{s.label}</div>
-                            {!ontgrendeld && (
-                              <div style={{ fontSize: 8, opacity: 0.7, marginTop: 2 }}>
+                            <div style={{ fontSize: 8, color: rar.kleur, marginTop: 1, letterSpacing: -0.5 }}>{rar.ster}</div>
+                            {ontgrendeld ? (
+                              <div style={{ fontSize: 8, opacity: 0.85, marginTop: 1, lineHeight: 1.1 }}>
+                                {kr.emoji} {kr.naam}
+                              </div>
+                            ) : (
+                              <div style={{ fontSize: 8, opacity: 0.7, marginTop: 1 }}>
                                 🔒 {s.unlockHint ? s.unlockHint : (s.unlockLevel != null ? `L${s.unlockLevel}` : "Oblivion")}
                               </div>
                             )}

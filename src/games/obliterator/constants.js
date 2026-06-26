@@ -224,32 +224,87 @@ export const PRESET_LEVELS = [
 // (geen regressie op reeds vrijgespeelde skins). unlockLevel UNIEK per skin
 // (de live "ontgrendeld!"-celebratie matcht op exact level). 100% cosmetisch,
 // gratis, kind-veilig. Emoji's bewust enkel-codepoint (canvas fillText, geen ZWJ).
+// Brian-wens 2026-06-26: elke skin krijgt een EIGEN kracht (`kracht`) + een
+// zeldzaamheid (`rarity`). Hoe zeldzamer de skin, hoe sterker de kracht
+// (de rarity-tier 1..6 schaalt het effect — zie getSkinKracht hieronder).
+// 100% gratis + kind-veilig, geen pay-to-win: krachten zijn klein/leuk.
 export const SKINS = [
-  { id: "default",   label: BRAND.name,    emoji: "🔴", unlockLevel: 1 },
-  { id: "spider",    label: "Spin",         emoji: "🕷️", unlockLevel: 3 },
-  { id: "robot",     label: "Robot",        emoji: "🤖", unlockLevel: 5 },
-  { id: "popje",     label: "Popje",        emoji: "🪆", unlockLevel: 8 },
-  { id: "ninja",     label: "Ninja",        emoji: "🥷", unlockLevel: 12 },
-  { id: "elephant",  label: "Olifant",      emoji: "🐘", unlockLevel: 16 },
-  { id: "professor", label: "Professor",    emoji: "🎓", unlockLevel: 22 },
-  { id: "trollface", label: "Trollface",    emoji: "😈", unlockLevel: 28 },
-  { id: "astronaut", label: "Ruimtevaarder", emoji: "🚀", unlockLevel: 35 },
-  { id: "triangle",  label: "Driehoek",     emoji: "🔺", unlockLevel: 42 },
-  { id: "xbox",      label: "Xbox",         emoji: "🎮", unlockLevel: 50 },
-  { id: "pharaoh",   label: "Farao",        emoji: "🏺", unlockLevel: 58 },
-  { id: "dragon",    label: "Drakenmeester", emoji: "🐉", unlockLevel: 66 },
-  { id: "gorilla",   label: "Gorilla",      emoji: "🦍", unlockLevel: 72 },
-  { id: "yinyang",   label: "Yin Yang",     emoji: "☯️", unlockLevel: 80 },
-  { id: "eye",       label: "Oog",           emoji: "👁️", unlockLevel: 88 },
-  { id: "champion",  label: "Kampioen",     emoji: "🏆", unlockLevel: 94 },
-  { id: "lvl100",    label: "Level 100",    emoji: "💎", unlockLevel: 100 },
+  { id: "default",   label: BRAND.name,    emoji: "🔴", unlockLevel: 1,   rarity: "common",    kracht: "score" },
+  { id: "spider",    label: "Spin",         emoji: "🕷️", unlockLevel: 3,   rarity: "uncommon",  kracht: "magneet" },
+  { id: "robot",     label: "Robot",        emoji: "🤖", unlockLevel: 5,   rarity: "uncommon",  kracht: "munt" },
+  { id: "popje",     label: "Popje",        emoji: "🪆", unlockLevel: 8,   rarity: "common",    kracht: "sprong" },
+  { id: "ninja",     label: "Ninja",        emoji: "🥷", unlockLevel: 12,  rarity: "rare",      kracht: "sprong" },
+  { id: "elephant",  label: "Olifant",      emoji: "🐘", unlockLevel: 16,  rarity: "rare",      kracht: "slow" },
+  { id: "professor", label: "Professor",    emoji: "🎓", unlockLevel: 22,  rarity: "rare",      kracht: "score" },
+  { id: "trollface", label: "Trollface",    emoji: "😈", unlockLevel: 28,  rarity: "uncommon",  kracht: "munt" },
+  { id: "astronaut", label: "Ruimtevaarder", emoji: "🚀", unlockLevel: 35, rarity: "epic",      kracht: "sprong" },
+  { id: "triangle",  label: "Driehoek",     emoji: "🔺", unlockLevel: 42,  rarity: "rare",      kracht: "score" },
+  { id: "xbox",      label: "Xbox",         emoji: "🎮", unlockLevel: 50,  rarity: "epic",      kracht: "munt" },
+  { id: "pharaoh",   label: "Farao",        emoji: "🏺", unlockLevel: 58,  rarity: "epic",      kracht: "schild" },
+  { id: "dragon",    label: "Drakenmeester", emoji: "🐉", unlockLevel: 66, rarity: "legendary", kracht: "schild" },
+  { id: "gorilla",   label: "Gorilla",      emoji: "🦍", unlockLevel: 72,  rarity: "epic",      kracht: "sprong" },
+  { id: "yinyang",   label: "Yin Yang",     emoji: "☯️", unlockLevel: 80,  rarity: "legendary", kracht: "slow" },
+  { id: "eye",       label: "Oog",           emoji: "👁️", unlockLevel: 88, rarity: "legendary", kracht: "magneet" },
+  { id: "champion",  label: "Kampioen",     emoji: "🏆", unlockLevel: 94,  rarity: "legendary", kracht: "score" },
+  { id: "lvl100",    label: "Level 100",    emoji: "💎", unlockLevel: 100, rarity: "mythic",    kracht: "munt" },
   // Prestige + achievement-skins (unlockLevel null = niet via level). De
   // achievement-skins (2026-06-07, 15-agent-advies) geven een tweede unlock-
   // route náást level, zodat ook een speler die geen hoog level haalt skins
   // kan verdienen via vaardigheid/trouw. unlockHint = picker-label.
-  { id: "blackhole",    label: "Black Hole",   emoji: "🕳️", unlockLevel: null, unlockHint: "Overleef Oblivion" },
-  { id: "boss_slayer",  label: "Boss Slayer",  emoji: "⚔️", unlockLevel: null, unlockHint: "Versla je 1e boss" },
-  { id: "woordmeester", label: "Woordmeester", emoji: "📚", unlockLevel: null, unlockHint: "Spel LEERKWART" },
-  { id: "vuurtje",      label: "Vuurtje",      emoji: "🔥", unlockLevel: null, unlockHint: "3 dagen op rij" },
+  { id: "blackhole",    label: "Black Hole",   emoji: "🕳️", unlockLevel: null, unlockHint: "Overleef Oblivion", rarity: "mythic",    kracht: "magneet" },
+  { id: "boss_slayer",  label: "Boss Slayer",  emoji: "⚔️", unlockLevel: null, unlockHint: "Versla je 1e boss",  rarity: "epic",      kracht: "schild" },
+  { id: "woordmeester", label: "Woordmeester", emoji: "📚", unlockLevel: null, unlockHint: "Spel LEERKWART",     rarity: "rare",      kracht: "score" },
+  { id: "vuurtje",      label: "Vuurtje",      emoji: "🔥", unlockLevel: null, unlockHint: "3 dagen op rij",     rarity: "legendary", kracht: "sprong" },
 ];
 export const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
+
+// ── ZELDZAAMHEID (rarity) ────────────────────────────────────────
+// tier 1..6 = hoe sterk de kracht wordt. kleur + ster voor de UI.
+export const RARITY_META = {
+  common:    { tier: 1, label: "Gewoon",        kleur: "#9e9e9e", ster: "★" },
+  uncommon:  { tier: 2, label: "Ongewoon",      kleur: "#5dd15d", ster: "★★" },
+  rare:      { tier: 3, label: "Zeldzaam",      kleur: "#42a5f5", ster: "★★★" },
+  epic:      { tier: 4, label: "Episch",        kleur: "#b569f0", ster: "★★★★" },
+  legendary: { tier: 5, label: "Legendarisch",  kleur: "#ffb300", ster: "★★★★★" },
+  mythic:    { tier: 6, label: "Mythisch",      kleur: "#ff3e7f", ster: "★★★★★★" },
+};
+
+// ── SKIN-KRACHT-RESOLVER ─────────────────────────────────────────
+// Geeft de uitgewerkte kracht van een skin terug: het type, de
+// rarity-info én de concrete getallen (sterker bij hogere rarity).
+// De game leest hier de multipliers/flags uit; de UI de naam/tekst.
+export function getSkinKracht(skinId) {
+  const skin = SKIN_BY_ID[skinId] || SKIN_BY_ID.default;
+  const rarity = skin.rarity || "common";
+  const meta = RARITY_META[rarity] || RARITY_META.common;
+  const t = meta.tier; // 1..6
+  const type = skin.kracht || "score";
+  const basis = { type, rarity, meta };
+  switch (type) {
+    case "magneet":
+      return { ...basis, naam: "Magneet", emoji: "🧲", altijdAan: true,
+        straalMul: 1 + t * 0.25,
+        beschrijving: `Ringen vliegen vanzelf naar je toe (bereik +${Math.round(t * 25)}%).` };
+    case "schild":
+      return { ...basis, naam: "Startschild", emoji: "🛡️",
+        startSchildSec: t,
+        beschrijving: `Je begint elke ronde ${t} sec onkwetsbaar.` };
+    case "munt":
+      return { ...basis, naam: "Muntmagnaat", emoji: "💰",
+        muntMul: 1 + t,
+        beschrijving: `${1 + t}× zoveel munten per ring.` };
+    case "sprong":
+      return { ...basis, naam: "Hoge sprong", emoji: "🦘",
+        sprongMul: 1 + t * 0.05,
+        beschrijving: `Je springt ${Math.round(t * 5)}% hoger.` };
+    case "slow":
+      return { ...basis, naam: "Slome wereld", emoji: "🐢",
+        tempoMul: 1 - t * 0.035,
+        beschrijving: `Wereld ${Math.round(t * 3.5)}% langzamer — makkelijker ontwijken.` };
+    case "score":
+    default:
+      return { ...basis, type: "score", naam: "Puntenbonus", emoji: "⭐",
+        scoreMul: 1 + t * 0.25,
+        beschrijving: `${(1 + t * 0.25).toFixed(2)}× zoveel punten.` };
+  }
+}
