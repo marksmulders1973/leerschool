@@ -458,7 +458,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Skin-systeem — 11 skins die je per 10 levels ontgrendelt + Black Hole
   // (via Oblivion Pulse). Admins (vaste lijst, bv. Brian) krijgen alles
   // automatisch.
-  const isObliterAdmin = OBLIVION_ADMINS.includes(((userName || "").trim().toLowerCase()));
+  // Admin-check: óf de ingelogde app-naam, óf de lokaal opgeslagen
+  // spelersnaam (obliterator-naam). Zo blijft Brian admin zodra hij één keer
+  // zijn naam "Brian" heeft ingetypt — ook zonder ingelogd te zijn. (Brian
+  // 2026-06-26: "ik heb de skins met krachten niet".)
+  const lokaleObliterNaam = (() => {
+    try { return (localStorage.getItem("obliterator-naam") || "").trim().toLowerCase(); } catch { return ""; }
+  })();
+  const isObliterAdmin =
+    OBLIVION_ADMINS.includes(((userName || "").trim().toLowerCase())) ||
+    OBLIVION_ADMINS.includes(lokaleObliterNaam);
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     try {
       const raw = localStorage.getItem("obliterator-unlocked-skins");
