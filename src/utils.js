@@ -18,6 +18,19 @@ function _sessionId() {
   } catch { return null; }
 }
 
+// Stabiele, anonieme apparaat-id (Mark 2026-06-27): random string in localStorage
+// → blijft over sessies/tabs heen (i.t.t. de sessie-id). Géén PII — puur om
+// "unieke mensen" te kunnen tellen (COUNT(DISTINCT props->>'uid')) i.p.v. losse
+// sessies. Wissen kan door localStorage te legen; interne check-bezoeken loggen
+// sowieso niets (zie track()).
+function _deviceId() {
+  try {
+    let u = localStorage.getItem("lk_uid");
+    if (!u) { u = "u_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("lk_uid", u); }
+    return u;
+  } catch { return null; }
+}
+
 function _cleanProps(p) {
   if (!p || typeof p !== "object") return null;
   const out = {};
@@ -87,9 +100,14 @@ export function track(event, params = {}) {
   try { window.gtag?.("event", event, params); } catch (e) {}
   // (2) eigen, anonieme eerstepartij-log in Supabase (fire-and-forget, blokkeert niets)
   try {
+    // uid altijd meesturen (ook als de overige props leeg zijn), zodat je per
+    // event unieke mensen kunt tellen i.p.v. losse sessies.
+    const cleaned = _cleanProps({ ..._campaignParams(), ...params }) || {};
+    const uid = _deviceId();
+    if (uid) cleaned.uid = uid;
     supabase.from("events").insert({
       name: String(event).slice(0, 60),
-      props: _cleanProps({ ..._campaignParams(), ...params }),
+      props: Object.keys(cleaned).length ? cleaned : null,
       path: typeof location !== "undefined" ? location.pathname.slice(0, 120) : null,
       source: _source(),
       session: _sessionId(),
