@@ -8,7 +8,8 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { HALF, footprint, cellKey } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
@@ -177,7 +178,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
-  const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | null
+  const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
+  const [autoBudget, setAutoBudget] = useState(0); // 🏗️ muntjes-inzet voor auto-bouw
   const [shareUrl, setShareUrl] = useState(null);
   const [shareCopied, setShareCopied] = useState(false);
   const [shopCat, setShopCat] = useState("dier");
@@ -464,6 +466,83 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (terug > 0) flits(`Weggehaald — +${terug} 🪙 terug`);
   };
 
+  // 🏗️ AUTO-BOUW (Mark 2026-06-27): zet muntjes in en laat het park zelf nette
+  // verblijven bouwen — een hek met een poort, een huisje erin en een dier. Het
+  // bouwt zoveel mogelijk complete verblijven tot het budget op is of er geen
+  // plek meer is. Varieert het dier per verblijf zodat het levendig blijft.
+  const autoBouw = (budget) => {
+    if (!meta) return;
+    budget = Math.min(Math.floor(budget || 0), coins);
+    const PLOT_W = 6, PLOT_H = 5;
+    const HEK_PANEEL = getAsset("hekPaneel")?.price ?? 4;
+    const HEK_POORT = getAsset("hekPoort")?.price ?? 6;
+    const HUIS = getAsset("houseA")?.price ?? 60;
+    const BOOM = getAsset("tree")?.price ?? 8;
+    const BLOEM = getAsset("flowerRed")?.price ?? 2;
+    const dierVoorraad = ["cow", "sheep", "pig", "alpaca", "donkey", "horse", "deer", "husky", "wolf", "zebra"];
+    // 17 panelen + 1 poort + huis + dier (gem. ~15) + boom + bloem
+    const dierKost = 15;
+    const VOL_PLOT = 17 * HEK_PANEEL + HEK_POORT + HUIS + dierKost + BOOM + BLOEM;
+    const MINI_PLOT = 17 * HEK_PANEEL + HEK_POORT + dierKost + BOOM; // zonder huis
+    if (budget < MINI_PLOT) { flits(`Zet wat meer muntjes in (min. ${MINI_PLOT}) 🪙`); return; }
+
+    const blokkeert = (id) => { const a = getAsset(id); return !(a && a.procedural === "path"); };
+    const bezet = new Set();
+    placedItems.forEach((it) => {
+      if (!blokkeert(it.assetId)) return;
+      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) bezet.add(cellKey(cx, cz));
+    });
+    const blokVrij = (x0, z0) => {
+      for (let dx = 0; dx < PLOT_W; dx++) for (let dz = 0; dz < PLOT_H; dz++) {
+        const cx = x0 + dx, cz = z0 + dz;
+        if (cx < -HALF || cx > HALF || cz < -HALF || cz > HALF) return false;
+        if (bezet.has(cellKey(cx, cz))) return false;
+      }
+      return true;
+    };
+    const zoekBlok = () => {
+      for (let x0 = -HALF; x0 + PLOT_W - 1 <= HALF; x0++)
+        for (let z0 = -HALF; z0 + PLOT_H - 1 <= HALF; z0++)
+          if (blokVrij(x0, z0)) return [x0, z0];
+      return null;
+    };
+
+    const nieuwe = [];
+    let kosten = 0, gebouwd = 0, dierIdx = 0;
+    const mk = (id, x, z) => { const p = prijsVan(id); const it = { assetId: id, cell: [x, z], rotation: 0, price: p }; if (kindVan(id) === "animal") it.fed = vandaag(); nieuwe.push(it); kosten += p; };
+
+    while (true) {
+      const rest = budget - kosten;
+      if (rest < MINI_PLOT) break;
+      const metHuis = rest >= VOL_PLOT;
+      const spot = zoekBlok();
+      if (!spot) break;
+      const [x0, z0] = spot;
+      const x1 = x0, z1 = z0, x2 = x0 + PLOT_W - 1, z2 = z0 + PLOT_H - 1;
+      // reserveer het hele blok zodat het volgende verblijf niet overlapt
+      for (let dx = 0; dx < PLOT_W; dx++) for (let dz = 0; dz < PLOT_H; dz++) bezet.add(cellKey(x0 + dx, z0 + dz));
+      // hek-rand met poort midden-voor
+      const poortX = Math.round((x1 + x2) / 2);
+      for (let x = x1; x <= x2; x++) { mk("hekPaneel", x, z1); mk(x === poortX ? "hekPoort" : "hekPaneel", x, z2); }
+      for (let z = z1 + 1; z < z2; z++) { mk("hekPaneel", x1, z); mk("hekPaneel", x2, z); }
+      // huisje (3×3) in het verblijf
+      if (metHuis) mk("houseA", x1 + 2, z1 + 2);
+      // dier + boom + bloem in de vrije rechterkolom
+      mk(dierVoorraad[dierIdx % dierVoorraad.length], x2 - 1, z1 + 1);
+      dierIdx++;
+      mk("tree", x2 - 1, z1 + 3);
+      mk("flowerRed", x2 - 1, z1 + 2);
+      gebouwd++;
+      if (gebouwd >= 12) break; // veiligheidslimiet
+    }
+
+    if (gebouwd === 0) { flits("Geen vrije plek meer voor een verblijf 🐾"); return; }
+    setMeta((m) => ({ ...m, coins: m.coins - kosten }));
+    setPlacedItems((items) => [...items, ...nieuwe]);
+    setPanel(null);
+    flits(`🏗️ ${gebouwd} verblijf${gebouwd > 1 ? "en" : ""} gebouwd voor ${kosten} 🪙!`);
+  };
+
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
   const selIsHuis = selKind === "building" && String(placedItems[selectedIdx]?.assetId || "").startsWith("house");
   // Kraampje geselecteerd? Dan kies je het product + de verkoopprijs (reken-moment).
@@ -697,6 +776,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <button onClick={() => doeEnSluit(() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(groundMode)}>🏖️ Grond schilderen</button>
 
             <div style={menuKop}>🏡 Mijn park</div>
+            <button onClick={() => doeEnSluit(() => { setAutoBudget(coins); setPanel("autobouw"); })} style={menuRij(false)}>🏗️ Auto-bouw (muntjes inzetten)</button>
             <button onClick={() => doeEnSluit(() => setPanel("karakter"))} style={menuRij(false)}>👤 Mijn poppetje kiezen</button>
             <button onClick={() => doeEnSluit(opslaan)} style={menuRij(false)}>💾 Park opslaan</button>
             <button onClick={() => doeEnSluit(openDelen)} style={menuRij(false)}>📤 Park delen met een vriend</button>
@@ -1225,6 +1305,30 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
 
       {/* Reset-modal: park terug naar het standaard begin-park (met bevestiging). */}
+      {panel === "autobouw" && (
+        <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(420px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>🏗️ Auto-bouw</h2>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+            <p style={{ font: "500 14px/1.5 system-ui", color: "#333", marginTop: 0 }}>Zet muntjes in en het park bouwt zelf nette verblijven — een <b>hek met een poort</b>, een <b>huisje</b> en een <b>dier</b>. Hoe meer muntjes, hoe meer verblijven.</p>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", font: "800 15px system-ui", color: "#234", marginBottom: 4 }}>
+              <span>Inzet</span>
+              <span style={{ color: "#5b3d00", background: "#ffe08a", padding: "4px 12px", borderRadius: 999 }}>🪙 {autoBudget}</span>
+            </div>
+            <input type="range" min={0} max={coins} step={5} value={autoBudget} onChange={(e) => setAutoBudget(parseInt(e.target.value, 10) || 0)} style={{ width: "100%", accentColor: "#2e7d32" }} />
+            <div style={{ display: "flex", justifyContent: "space-between", font: "600 11px system-ui", color: "#777", marginTop: 2 }}>
+              <span>0</span><span>je hebt 🪙 {coins}</span>
+            </div>
+            <p style={{ font: "600 12px/1.4 system-ui", color: "#777", margin: "8px 0 0" }}>≈ {Math.max(0, Math.floor(autoBudget / 157))} compleet verblijf{Math.floor(autoBudget / 157) === 1 ? "" : "en"} (huis + hek + dier). Ongebruikte muntjes blijven van jou.</p>
+            <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 14 }}>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "#eee", cursor: "pointer" }}>Annuleer</button>
+              <button onClick={() => autoBouw(autoBudget)} disabled={autoBudget < 1} style={{ border: "none", borderRadius: 999, padding: "10px 20px", font: "800 14px system-ui", color: "#fff", background: autoBudget < 1 ? "#9bbf9b" : "linear-gradient(135deg,#00C853,#00a846)", boxShadow: "0 3px 10px rgba(0,0,0,.2)", cursor: autoBudget < 1 ? "default" : "pointer" }}>🏗️ Bouw!</button>
+            </div>
+          </div>
+        </div>
+      )}
       {panel === "reset" && (
         <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
           <div onClick={(e) => e.stopPropagation()} style={{ width: "min(420px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
