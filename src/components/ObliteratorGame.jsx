@@ -1291,6 +1291,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // alleen incrementeren, nog niet gebruikt door render of physics.
     let worldScrollX = 0;
     let frameTeller = 0;
+    // 🎪 KERMIS-MODUS (Mark 2026-06-27, Geometry-Dash-geïnspireerd): wilde
+    // snelheids-uitbarstingen + lichtshow. wildFrames > 0 = nu een sprint.
+    let wildFrames = 0;
+    let wildTeller = 600 + Math.floor(Math.random() * 600); // eerste burst na ~10-20s
     let score = 0;
     let spelLoopt = true;
     let volgendObstakelOver = 60;
@@ -5959,7 +5963,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const beatMul = (afgeremFrames <= 0 && !bonusFase && !bossActief)
         ? 1 + Math.min(0.35, audioBeatRef.current * 0.4)
         : 1;
-      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul * mutatorTempoMul * skinTempoMul;
+      // 🎪 WILD-uitbarsting: elke ~16-26s een korte sprint (~3,5s) met +40%
+      // snelheid + shake + banner. Niet tijdens boss/bonus/afgeremd.
+      if (!bossActief && !bonusFase && afgeremFrames <= 0 && !customLevelMode) {
+        if (wildFrames > 0) {
+          wildFrames--;
+          if (frameTeller % 9 === 0) {
+            const kl = ["#ff2db5", "#ffe24a", "#22d3ff", "#8a5cff"][frameTeller % 4];
+            spawnParticles(Math.random() * W, -10, 5, kl, { spread: 7, opwaarts: -3, leven: 60, grootte: 5, zwaartekracht: 0.22, glow: 14 });
+          }
+        }
+        else {
+          wildTeller--;
+          if (wildTeller <= 0) {
+            wildFrames = 210; // ~3,5s
+            wildTeller = 960 + Math.floor(Math.random() * 600); // 16-26s tot de volgende
+            recordBannerTekst = "🎪 WILD! SNELLER!";
+            recordBannerKleur = "#ff2db5";
+            recordBannerTeller = 90;
+            shakeKracht = Math.max(shakeKracht, 7);
+            piep(520, 0.1, "sawtooth", 0.14);
+            setTimeout(() => piep(780, 0.1, "square", 0.12), 90);
+          }
+        }
+      } else { wildFrames = 0; }
+      const wildMul = wildFrames > 0 ? 1.4 : 1;
+      if (wildFrames > 0 && frameTeller % 5 === 0) shakeKracht = Math.max(shakeKracht, 3);
+      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul * mutatorTempoMul * skinTempoMul * wildMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
@@ -7911,6 +7941,54 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Grabbel-maatje (Brian 2026-06-26) — onder de hartjes/HP-balk
       tekenGrabbelMaatje();
     }
+    // 🎪 KERMIS-LICHTSHOW (Mark 2026-06-27): zwaaiende, op-de-beat pulserende
+    // spotlights vanaf onderaan — geeft een wild funfair/stage-gevoel. Additief
+    // gemengd + lage alpha zodat het de gameplay niet verbergt.
+    function tekenKermisSpots() {
+      const beat = audioBeatRef.current || 0;
+      const px = W * 0.5, py = H + 30 * SCHAAL;
+      const kleuren = ["#ff2db5", "#22d3ff", "#ffe24a", "#8a5cff"];
+      ctx.save();
+      ctx.globalCompositeOperation = "lighter";
+      for (let i = 0; i < 4; i++) {
+        const hoek = -Math.PI / 2 + Math.sin(frameTeller * 0.011 + i * 1.9) * 0.62 + (i - 1.5) * 0.16;
+        const len = H * 1.3, breed = (28 + beat * 55) * SCHAAL;
+        const tx = px + Math.cos(hoek) * len, ty = py + Math.sin(hoek) * len;
+        const perp = hoek + Math.PI / 2;
+        ctx.globalAlpha = 0.05 + beat * 0.14;
+        ctx.fillStyle = kleuren[i];
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(tx + Math.cos(perp) * breed, ty + Math.sin(perp) * breed);
+        ctx.lineTo(tx - Math.cos(perp) * breed, ty - Math.sin(perp) * breed);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      ctx.restore();
+    }
+    // 🎪 Slinger met kleurige knipperende lampjes bovenaan — kermis-sfeer.
+    function tekenSlingerLichtjes() {
+      const n = 14, beat = audioBeatRef.current || 0;
+      const kleuren = ["#ff3b6b", "#ffd24a", "#3bd6ff", "#7CFC00", "#b06bff"];
+      ctx.save();
+      ctx.strokeStyle = "rgba(0,0,0,0.32)";
+      ctx.lineWidth = 2 * SCHAAL;
+      ctx.beginPath();
+      for (let i = 0; i <= n; i++) { const x = (i / n) * W; const y = 9 * SCHAAL + Math.sin((i / n) * Math.PI) * 13 * SCHAAL; i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); }
+      ctx.stroke();
+      for (let i = 0; i <= n; i++) {
+        const x = (i / n) * W, y = 9 * SCHAAL + Math.sin((i / n) * Math.PI) * 13 * SCHAAL + 4 * SCHAAL;
+        const fase = Math.sin(frameTeller * 0.08 + i * 0.9) * 0.5 + 0.5;
+        const kl = kleuren[i % kleuren.length];
+        ctx.globalAlpha = Math.min(1, 0.4 + fase * 0.6 + beat * 0.3);
+        ctx.shadowBlur = (6 + beat * 10) * SCHAAL; ctx.shadowColor = kl;
+        ctx.fillStyle = kl;
+        ctx.beginPath(); ctx.arc(x, y, 3.2 * SCHAAL, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+      ctx.restore();
+    }
     // 🕺 Michael Jackson moonwalkt over het scherm (Brian 2026-06-27): alleen als
     // je de Michael-vibe draagt. Decoratief (geen collision), half-doorzichtig in
     // het bovenste deel zodat het de gameplay niet blokkeert.
@@ -8222,6 +8300,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         tekenLavaGrond();
       } else {
         tekenBakstenenMuur(); tekenGlasInLood();
+        tekenKermisSpots(); // 🎪 zwaaiende beat-spotlights achter de actie
+        tekenSlingerLichtjes(); // 🎪 kleurige lichtjes-slinger bovenaan
         tekenMichaelDanser(); // 🕺 MJ moonwalkt op het scherm als je 'm draagt
         // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
         if (logoGeladen && studiebolLogos.length) {
