@@ -1395,6 +1395,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const VLIEG_DUUR = 600; // 10 sec
     // 💧 SECRET Violetide-kracht: elke 30 sec een 5-sec schild als je 'm draagt.
     let violetideSchildTeller = 0;
+    // 🗣️ Violetide praat (Brian 2026-06-27): { tekst, frames, kleur } | null
+    let violetideSpeech = null;
+    let violetideNeeTeller = 0;
     // bubbel-shield (vis-pickup) — vernietigt haaien op contact i.p.v. damage
     let bubbelFrames = 0;
     const BUBBEL_DUUR = 300; // 5 sec
@@ -5757,8 +5760,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return; // alle game-logic pauzeren
       }
 
+      // speech-timer aftellen (Violetide-praat)
+      if (violetideSpeech) { violetideSpeech.frames--; if (violetideSpeech.frames <= 0) violetideSpeech = null; }
       // 💧 SECRET Violetide-kracht (Brian 2026-06-27): draag je Violetide, dan
-      // krijg je elke 30 sec automatisch een schild van 5 sec (immune).
+      // krijg je elke 30 sec automatisch een schild van 5 sec (immune). En hij
+      // praat: "NEE NEE NEE" zolang-ie nog niet veilig is.
       if (gedragenSprite && gedragenSprite.id === "violetide") {
         violetideSchildTeller++;
         if (violetideSchildTeller >= 1800) { // 30 sec @ 60fps
@@ -5772,8 +5778,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           piep(620, 0.12, "sine", 0.15);
           setTimeout(() => piep(930, 0.12, "sine", 0.13), 100);
         }
+        // bang "NEE NEE NEE" zolang-ie nog niet veilig is
+        if (!gedragenSprite.veilig) {
+          violetideNeeTeller++;
+          if (violetideNeeTeller >= 330) { // ~5,5 sec
+            violetideNeeTeller = 0;
+            violetideSpeech = { tekst: "NEE NEE NEE!", frames: 80, kleur: "#ff6b6b" };
+          }
+        }
       } else {
         violetideSchildTeller = 0;
+        violetideNeeTeller = 0;
       }
 
       // ── Brian's EVENTS mid-run uitdelen (2026-06-26) ──
@@ -6844,6 +6859,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (Math.sqrt(dx * dx + dy * dy) < (kp.grootte + speler.breedte) / 2) {
             kp.opgepakt = true;
             gedragenSprite.veilig = true;
+            // 🗣️ Violetide juicht als-ie veilig is (Brian 2026-06-27)
+            if (gedragenSprite.id === "violetide") violetideSpeech = { tekst: "YES IM SAFE!", frames: 130, kleur: "#69f0ae" };
             try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {}
             const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
             try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: true, isNew: false, veiliggesteld: true }); } catch {}
@@ -7861,6 +7878,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.fillText(sp.veilig ? "✓ VEILIG" : "⚠ ZOEK PORTAAL", balkX, balkY + balkH + 7 * SCHAAL);
       ctx.globalAlpha = 1;
       ctx.restore();
+      // 🗣️ Violetide-tekstballon boven de speler (Brian 2026-06-27)
+      if (violetideSpeech && sp.id === "violetide") {
+        ctx.save();
+        const txt = violetideSpeech.tekst;
+        ctx.font = `bold ${11 * SCHAAL}px Impact, 'Arial Black', sans-serif`;
+        const tw = ctx.measureText(txt).width;
+        const padX = 8 * SCHAAL, bh = 20 * SCHAAL, bw = tw + padX * 2;
+        const cxp = speler.x + speler.breedte / 2;
+        const bx = cxp - bw / 2;
+        const by = speler.y - bh - 14 * SCHAAL + Math.sin(frameTeller * 0.3) * 1.5 * SCHAAL;
+        ctx.fillStyle = "rgba(18,8,30,0.92)";
+        ctx.strokeStyle = violetideSpeech.kleur;
+        ctx.lineWidth = 2 * SCHAAL;
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(bx, by, bw, bh, 7 * SCHAAL); else ctx.rect(bx, by, bw, bh);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cxp - 5 * SCHAAL, by + bh - 1);
+        ctx.lineTo(cxp + 5 * SCHAAL, by + bh - 1);
+        ctx.lineTo(cxp, by + bh + 8 * SCHAAL);
+        ctx.closePath();
+        ctx.fillStyle = "rgba(18,8,30,0.92)";
+        ctx.fill();
+        ctx.fillStyle = violetideSpeech.kleur;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(txt, cxp, by + bh / 2);
+        ctx.restore();
+      }
     }
     function tekenHpBalk() {
       const balkX = 12;
@@ -11979,12 +12026,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 fontFamily: "'Fredoka', sans-serif",
               }}>
                 <span style={{ fontSize: 26, filter: maatjeUitkomst.status === "veilig" ? "none" : "grayscale(0.7)" }}>
-                  {SPRITE_BY_ID[maatjeUitkomst.id].emoji}
+                  {SPRITE_BY_ID[maatjeUitkomst.id].secret
+                    ? <PaarseWaterVibe size={28} />
+                    : SPRITE_BY_ID[maatjeUitkomst.id].emoji}
                 </span>
-                <span style={{ fontSize: 13, fontWeight: 700, color: maatjeUitkomst.status === "veilig" ? "#69f0ae" : "#ff7070" }}>
-                  {maatjeUitkomst.status === "veilig"
-                    ? `✓ ${SPRITE_BY_ID[maatjeUitkomst.id].naam} Lv ${maatjeUitkomst.niveau} bewaard!`
-                    : `💔 ${SPRITE_BY_ID[maatjeUitkomst.id].naam} verloren — geen portaal gehaald`}
+                <span style={{ display: "flex", flexDirection: "column" }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: maatjeUitkomst.status === "veilig" ? "#69f0ae" : "#ff7070" }}>
+                    {maatjeUitkomst.status === "veilig"
+                      ? `✓ ${SPRITE_BY_ID[maatjeUitkomst.id].naam} Lv ${maatjeUitkomst.niveau} bewaard!`
+                      : `💔 ${SPRITE_BY_ID[maatjeUitkomst.id].naam} verloren — geen portaal gehaald`}
+                  </span>
+                  {maatjeUitkomst.id === "violetide" && maatjeUitkomst.status === "veilig" && (
+                    <span style={{ fontSize: 13, fontWeight: 900, color: "#c44dff", letterSpacing: 0.5, fontStyle: "italic" }}>
+                      😎 OHH EASY TOOOOO EASYYYYY
+                    </span>
+                  )}
                 </span>
               </div>
             )}
@@ -12467,8 +12523,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
               {grabbelBanner.veiliggesteld ? "🟢 Kluis-portaal" : "🎁 Grabbelton"}
             </div>
-            <div style={{ margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
+            <div style={{ margin: "6px 0", position: "relative", display: "inline-block", filter: `drop-shadow(0 0 14px ${kleur})` }}>
               <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} emotie={spriteEmotie(grabbelBanner.rariteit)} lachen={true} customBody={grabbelBanner.secret ? <PaarseWaterVibe size={52} /> : null} />
+              {/* ✨ glinstering als je een SECRET wint (Brian 2026-06-27) */}
+              {grabbelBanner.secret && [
+                { top: "-12%", left: "-8%", s: 16, d: "0s" },
+                { top: "4%", left: "92%", s: 13, d: "0.4s" },
+                { top: "78%", left: "-10%", s: 12, d: "0.8s" },
+                { top: "88%", left: "86%", s: 15, d: "0.2s" },
+                { top: "-16%", left: "55%", s: 11, d: "0.6s" },
+                { top: "44%", left: "100%", s: 10, d: "1s" },
+              ].map((p, i) => (
+                <span key={i} style={{
+                  position: "absolute", top: p.top, left: p.left, fontSize: p.s,
+                  pointerEvents: "none",
+                  animation: "obliterator-twinkle 1.2s ease-in-out infinite",
+                  animationDelay: p.d,
+                }}>✨</span>
+              ))}
             </div>
             <div style={{ fontSize: 22, fontWeight: 800, color: kleur }}>
               {grabbelBanner.naam}
@@ -12625,6 +12697,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           35%  { opacity: 0.85; }
           65%  { opacity: 0.85; }
           100% { transform: translateX(320%) rotate(16deg); opacity: 0; }
+        }
+        @keyframes obliterator-twinkle {
+          0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+          50%      { opacity: 1; transform: scale(1.15) rotate(25deg); }
         }
       `}</style>
     </div>
