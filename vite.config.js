@@ -56,6 +56,13 @@ function injectSwVersion() {
 
 export default defineConfig({
   plugins: [react(), injectSwVersion()],
+  // Dev-server: bestandsbewaking via polling. Op deze pc detecteert de
+  // standaard fs-watcher wijzigingen niet (2026-06-27: HMR pakte edits niet op,
+  // dev-server moest steeds handmatig herstart). Polling lost dat op zodat
+  // code-wijzigingen voortaan automatisch live komen.
+  server: {
+    watch: { usePolling: true, interval: 300 },
+  },
   build: {
     // QA mini-audit 2026-05-06: hoofd-bundle was 1.2 MB gzip → 9-13s LCP op
     // school-wifi. Manual chunks splitsen zware vendor-libs en data-blokken
