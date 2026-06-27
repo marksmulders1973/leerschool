@@ -10174,11 +10174,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               )}
             </div>
 
-            {/* Admin-paneel — alleen voor namen in OBLIVION_ADMINS (vast, niet leaderboard-gebonden) */}
+            {/* Admin-paneel — voor namen in OBLIVION_ADMINS. Gebruikt dezelfde
+                check als de rest van het spel (isObliterAdmin): zowel app-login
+                ALS de in OBLITERATOR ingetypte naam "Brian" tellen mee. */}
             {(() => {
-              const myName = (userName || "").trim().toLowerCase();
-              const isAdmin = myName.length > 0 && OBLIVION_ADMINS.includes(myName);
-              if (!isAdmin) return null;
+              if (!isObliterAdmin) return null;
+              const adminNaam = userName
+                || (lokaleObliterNaam ? lokaleObliterNaam.charAt(0).toUpperCase() + lokaleObliterNaam.slice(1) : "Admin");
               return (
                 <div style={{
                   marginBottom: 14, padding: "12px 14px", borderRadius: 10,
@@ -10193,7 +10195,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         ADMIN PANEEL
                       </div>
                       <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
-                        Welkom, {userName}
+                        Welkom, {adminNaam}
                       </div>
                     </div>
                   </div>
