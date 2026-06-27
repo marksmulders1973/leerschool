@@ -4,27 +4,75 @@
 import supabase from "../../supabase";
 import { START_COINS } from "./zooEconomy";
 
-// Beginindeling: twee ruime starter-verblijven (hert + alpaca) zodat een nieuw
-// park nooit leeg is. price 0 → bij weghalen geen "gratis" muntjes. Het vaste
-// decor (draaimolen, paden, poppetje, bomen) staat daarnaast altijd.
-// Pad van de ingang-poort (voorrand, ~cel z=18) naar het midden (draaimolen op
-// [0,0], die de cellen z=-1..1 vult → pad stopt bij z=2). Eén tegel breed langs
-// de middenlijn (x=0). Bedraagt het "hoofdpad" waar het poppetje binnenkomt.
-const ENTRANCE_PATH = [];
-for (let gz = 2; gz <= 18; gz++) ENTRANCE_PATH.push({ assetId: "path", cell: [0, gz], rotation: 0, price: 0 });
+// 🎨 Voorbeeld-park (Mark 2026-06-27): een mooi, symmetrisch ingericht park dat
+// nieuwe spelers als voorbeeld krijgen én dat je kunt delen. Opgebouwd met kleine
+// generators zodat het overzichtelijk blijft. Footprints: dieren + decor = 1×1,
+// gebouwen + attracties = 3×3 (zie cellsVan). Raster loopt van -20..20.
+// price 0 → bij weghalen geen "gratis" muntjes.
+function bouwVoorbeeldPark() {
+  const L = [];
+  const add = (assetId, x, z, rotation = 0) => L.push({ assetId, cell: [x, z], rotation, price: 0 });
+  const rij = (asset, z, x1, x2) => { for (let x = x1; x <= x2; x++) add(asset, x, z); };
+  const kolom = (asset, x, z1, z2) => { for (let z = z1; z <= z2; z++) add(asset, x, z); };
+  const vlak = (asset, x1, x2, z1, z2) => { for (let x = x1; x <= x2; x++) for (let z = z1; z <= z2; z++) add(asset, x, z); };
+  // Hek-rechthoek met een poort midden-voor (z2). Hoeken + panelen.
+  const hek = (x1, z1, x2, z2, poortX) => {
+    for (let x = x1; x <= x2; x++) { add("hekPaneel", x, z1); if (x === poortX) add("hekPoort", x, z2); else add("hekPaneel", x, z2); }
+    for (let z = z1 + 1; z < z2; z++) { add("hekPaneel", x1, z); add("hekPaneel", x2, z); }
+  };
+  const verblijf = (x1, z1, x2, z2, poortX, dieren) => {
+    hek(x1, z1, x2, z2, poortX);
+    dieren.forEach((a, i) => add(a, x1 + 1 + (i % (x2 - x1 - 1)), z1 + 1 + Math.floor(i / (x2 - x1 - 1))));
+  };
 
-export const STARTER_LAYOUT = [
-  { assetId: "carousel", cell: [0, 0], rotation: 0, price: 0 },   // draaimolen in het midden
-  { assetId: "houseA", cell: [-5, 7], rotation: 0, price: 0 },    // een huisje
-  { assetId: "deer", cell: [5, 6], rotation: 0, price: 0 },       // een dier
-  { assetId: "alpaca", cell: [-6, -3], rotation: 0, price: 0 },   // nog een dier
-  { assetId: "tree", cell: [-8, 3], rotation: 0, price: 0 },
-  { assetId: "treeOak", cell: [8, 3], rotation: 0, price: 0 },
-  { assetId: "treePalm", cell: [8, 11], rotation: 0, price: 0 },
-  { assetId: "flowerRed", cell: [-2, 15], rotation: 0, price: 0 },
-  { assetId: "flowerYellow", cell: [2, 15], rotation: 0, price: 0 },
-  ...ENTRANCE_PATH,
-];
+  // ── PADEN ── hoofdboulevard (steen) van de ingang naar achteren + kruispaden
+  kolom("pathStone", 0, -14, 17);
+  rij("pathStone", 17, -2, 2); rij("pathStone", 16, -2, 2); // brede ingang
+  rij("pathStone", 6, -9, 9); rij("pathStone", -6, -9, 9);  // kruispaden
+  vlak("pathRed", -3, 3, -3, 3);                            // plein rond de draaimolen
+
+  // ── INGANG ──
+  add("hekPoort", 0, 18);
+  add("treePalm", -3, 18); add("treePalm", 3, 18);
+  rij("flowerRed", 17, -5, -4); rij("flowerYellow", 17, 4, 5);
+  add("bankje", -2, 15); add("bankje", 2, 15);
+  add("prullenbak", -2, 13); add("donatiebox", 2, 13);
+
+  // ── MIDDEN: draaimolen + fontein ──
+  add("carousel", 0, 0);
+  add("fountain", 0, 10);
+  rij("flowerPurple", 13, -1, 1);
+
+  // ── ATTRACTIES achterin ──
+  add("ferris", 0, -12);
+  add("swing", -8, -12);
+  add("trein", 8, -12);
+
+  // ── ETEN bij de ingang (kraampjes, 3×3) ──
+  add("patatkraam", -7, 12); add("drankkraam", 7, 12);
+  add("ijscokraam", -7, 7);  add("popcornkraam", 7, 7);
+  add("bankje", -10, 12); add("bankje", 10, 12);
+
+  // ── DIER-VERBLIJVEN (4 stuks, met hek + poort) ──
+  verblijf(-17, 3, -11, 9, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor)
+  verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter)
+  verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);               // hertenkamp (rechts-voor)
+  verblijf(11, -9, 17, -3, 14, ["trex", "triceratops", "stegosaurus", "velociraptor"]); // dino's (rechts-achter)
+
+  // ── HUIZEN-DORPje helemaal achterin ──
+  ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
+
+  // ── GROEN & DECOR: bomenlaan langs het hoofdpad + bloemen + rotsen ──
+  for (let z = -10; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }
+  add("struik", -4, 8); add("struik", 4, 8); add("struik", -4, -8); add("struik", 4, -8);
+  add("kei", -19, 0); add("kei", 19, 0);
+  add("mushroom", -18, -18); add("mushroom", 18, -18);
+  add("grasplukje", -2, -10); add("grasplukje", 2, -10);
+
+  return L;
+}
+
+export const STARTER_LAYOUT = bouwVoorbeeldPark();
 
 export function defaultState() {
   return {
