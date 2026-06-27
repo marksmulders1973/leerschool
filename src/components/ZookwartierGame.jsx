@@ -509,7 +509,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
     const nieuwe = [];
     let kosten = 0, gebouwd = 0, dierIdx = 0;
-    const mk = (id, x, z) => { const p = prijsVan(id); const it = { assetId: id, cell: [x, z], rotation: 0, price: p }; if (kindVan(id) === "animal") it.fed = vandaag(); nieuwe.push(it); kosten += p; };
+    const mk = (id, x, z, rotation = 0) => { const p = prijsVan(id); const it = { assetId: id, cell: [x, z], rotation, price: p }; if (kindVan(id) === "animal") it.fed = vandaag(); nieuwe.push(it); kosten += p; };
 
     while (true) {
       const rest = budget - kosten;
@@ -521,10 +521,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const x1 = x0, z1 = z0, x2 = x0 + PLOT_W - 1, z2 = z0 + PLOT_H - 1;
       // reserveer het hele blok zodat het volgende verblijf niet overlapt
       for (let dx = 0; dx < PLOT_W; dx++) for (let dz = 0; dz < PLOT_H; dz++) bezet.add(cellKey(x0 + dx, z0 + dz));
-      // hek-rand met poort midden-voor
+      // hek-rand die netjes aansluit: hoeken + panelen (Z-wand 90° gedraaid), poort midden-voor
       const poortX = Math.round((x1 + x2) / 2);
-      for (let x = x1; x <= x2; x++) { mk("hekPaneel", x, z1); mk(x === poortX ? "hekPoort" : "hekPaneel", x, z2); }
-      for (let z = z1 + 1; z < z2; z++) { mk("hekPaneel", x1, z); mk("hekPaneel", x2, z); }
+      mk("hekHoek", x1, z1, 0);
+      mk("hekHoek", x2, z1, -Math.PI / 2);
+      mk("hekHoek", x1, z2, Math.PI / 2);
+      mk("hekHoek", x2, z2, Math.PI);
+      for (let x = x1 + 1; x < x2; x++) { mk("hekPaneel", x, z1, 0); mk(x === poortX ? "hekPoort" : "hekPaneel", x, z2, 0); }
+      for (let z = z1 + 1; z < z2; z++) { mk("hekPaneel", x1, z, Math.PI / 2); mk("hekPaneel", x2, z, Math.PI / 2); }
       // huisje (3×3) in het verblijf
       if (metHuis) mk("houseA", x1 + 2, z1 + 2);
       // dier + boom + bloem in de vrije rechterkolom

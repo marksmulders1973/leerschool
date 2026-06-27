@@ -15,10 +15,22 @@ function bouwVoorbeeldPark() {
   const rij = (asset, z, x1, x2) => { for (let x = x1; x <= x2; x++) add(asset, x, z); };
   const kolom = (asset, x, z1, z2) => { for (let z = z1; z <= z2; z++) add(asset, x, z); };
   const vlak = (asset, x1, x2, z1, z2) => { for (let x = x1; x <= x2; x++) for (let z = z1; z <= z2; z++) add(asset, x, z); };
-  // Hek-rechthoek met een poort midden-voor (z2). Hoeken + panelen.
+  // Hek-rechthoek die NETJES aansluit: rechte panelen langs X = rotatie 0, langs Z
+  // = 90° gedraaid, en op de 4 hoeken een hoek-stuk met de juiste stand. Poort
+  // midden-voor (z2-wand).
   const hek = (x1, z1, x2, z2, poortX) => {
-    for (let x = x1; x <= x2; x++) { add("hekPaneel", x, z1); if (x === poortX) add("hekPoort", x, z2); else add("hekPaneel", x, z2); }
-    for (let z = z1 + 1; z < z2; z++) { add("hekPaneel", x1, z); add("hekPaneel", x2, z); }
+    add("hekHoek", x1, z1, 0);
+    add("hekHoek", x2, z1, -Math.PI / 2);
+    add("hekHoek", x1, z2, Math.PI / 2);
+    add("hekHoek", x2, z2, Math.PI);
+    for (let x = x1 + 1; x < x2; x++) {
+      add("hekPaneel", x, z1, 0);
+      add(x === poortX ? "hekPoort" : "hekPaneel", x, z2, 0);
+    }
+    for (let z = z1 + 1; z < z2; z++) {
+      add("hekPaneel", x1, z, Math.PI / 2);
+      add("hekPaneel", x2, z, Math.PI / 2);
+    }
   };
   const verblijf = (x1, z1, x2, z2, poortX, dieren) => {
     hek(x1, z1, x2, z2, poortX);
