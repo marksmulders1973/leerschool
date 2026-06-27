@@ -1055,7 +1055,7 @@ export default function App() {
           }}
           onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
           onHome={() => { setLearnFilterSubject(null); goHome(); }}
-          onPlayObliterator={() => setPage("zoo")}
+          onPlayObliterator={() => setPage("parkKeuze")}
         />
       )}
       {page === "my-mastery" && (() => {
@@ -1150,6 +1150,27 @@ export default function App() {
             setPage("home");
           }}
         />
+      )}
+      {page === "parkKeuze" && (
+        // Keuzescherm (Mark 2026-06-27): bij "Park" eerst kiezen tussen het
+        // 3D-park en het extra spel OBLITERATOR.
+        <div style={{ minHeight: "100dvh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, padding: 20, paddingBottom: 96, background: "linear-gradient(160deg,#0d1b2e,#14243d)", color: "#fff" }}>
+          <h1 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 26, margin: 0, textAlign: "center" }}>Wat wil je doen?</h1>
+          <p style={{ opacity: 0.7, margin: 0, textAlign: "center", fontSize: 14 }}>Kies je park of het extra spel</p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", marginTop: 6, width: "100%", maxWidth: 620 }}>
+            <button onClick={() => setPage("zoo")} style={{ flex: "1 1 240px", minWidth: 215, maxWidth: 300, aspectRatio: "4 / 5", borderRadius: 20, border: "2px solid rgba(105,240,174,0.5)", background: "linear-gradient(160deg, rgba(20,90,60,0.55), rgba(10,40,30,0.6))", color: "#fff", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>
+              <div style={{ fontSize: 64, lineHeight: 1 }}>🐾</div>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, fontWeight: 800 }}>Mijn Park</div>
+              <div style={{ fontSize: 13, opacity: 0.85, padding: "0 16px", textAlign: "center", lineHeight: 1.4 }}>Jouw 3D-dierentuin — verzamel dieren met je park-tokens</div>
+            </button>
+            <button onClick={() => setPage("obliteratorPlay")} style={{ flex: "1 1 240px", minWidth: 215, maxWidth: 300, aspectRatio: "4 / 5", borderRadius: 20, border: "2px solid rgba(160,96,255,0.6)", background: "linear-gradient(160deg, rgba(80,30,150,0.55), rgba(40,10,80,0.65))", color: "#fff", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>
+              <div style={{ fontSize: 64, lineHeight: 1 }}>🎮</div>
+              <div style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 22, letterSpacing: 1 }}>OBLITERATOR</div>
+              <div style={{ fontSize: 13, opacity: 0.85, padding: "0 16px", textAlign: "center", lineHeight: 1.4 }}>Het extra actie-spel — spring, verzamel ringen &amp; vibes</div>
+            </button>
+          </div>
+          <button onClick={goHome} style={{ marginTop: 12, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", borderRadius: 12, padding: "10px 22px", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 14 }}>← Terug naar home</button>
+        </div>
       )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
@@ -1247,7 +1268,7 @@ export default function App() {
           onAdminStats={() => setPage("admin-stats")}
           onActie={() => setPage("actie")}
           onOefenpakket={() => setPage("oefenpakket")}
-          onPlayObliterator={() => setPage("zoo")}
+          onPlayObliterator={() => setPage("parkKeuze")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => { setLearnInitialSearch(""); setEntryContext("leren"); setPage("learn-paths-hub"); }}
@@ -1623,7 +1644,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onStartProefToets={(leerpadId) => startProefToets(leerpadId, 30)}
-          onPlayObliterator={() => setPage("zoo")}
+          onPlayObliterator={() => setPage("parkKeuze")}
           onPrintPakket={() => setPage("oefenpakket")}
           onBack={() => setPage("student-home")}
           onHome={goHome}
