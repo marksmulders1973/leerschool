@@ -1141,6 +1141,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const spelerTrail = []; // [{x, y, rotatie}, ...] oudste eerst
     let aantalObstakelsTotaal = 0;
     const bonusHarten = [];
+    const bonusBallen = []; // 🟡 kleine stuiter-ballen (Brian 2026-06-27), level 75-100
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
     let countdown = COUNTDOWN_FRAMES;
     // Levels: 18 sec per level, max 100 levels (= 30 min totaal voor MAX).
@@ -1397,6 +1398,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       plafondStekels.length = 0;
       zwevendeMinen.length = 0;
       bonusHarten.length = 0;
+      bonusBallen.length = 0;
       raketten.length = 0;
       flipPickups.length = 0;
       magneetPickups.length = 0;
@@ -3666,6 +3668,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Reguliere pickups ook weg — focus is alleen ringen-schieten
       ringen.length = 0;
       bonusHarten.length = 0;
+      bonusBallen.length = 0;
       raketten.length = 0;
       flipPickups.length = 0;
       magneetPickups.length = 0;
@@ -6311,6 +6314,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               const yPos = (170 + Math.random() * 100) * SCHAAL;
               speedBoostPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
             }
+            // 🟡 KLEINE STUITER-BAL: alleen L75-100 (Brian 2026-06-27). Zweeft in
+            // het midden en stuitert tussen boven- en onderkant. Oppikken = bonus-
+            // munten + punten. Geen schade — puur extra te pakken op hoge levels.
+            if (huidigLevel >= 75 && huidigLevel <= 100 && aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 24 === 0 && Math.random() < 0.6) {
+              bonusBallen.push({ x: W + 30, baseY: H / 2, fase: Math.random() * Math.PI * 2, amp: H * 0.36, grootte: 16 * SCHAAL, opgepakt: false });
+            }
             // BOMB-pickup: elke ~40 obstakels, 35% kans (zeldzaam, krachtig effect)
             if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 40 === 0 && Math.random() < 0.35) {
               const yPos = (180 + Math.random() * 80) * SCHAAL;
@@ -6394,6 +6403,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             // Voorkom dat het volgende obstakel direct ná deze schans spawnt
             // — duwt 'm naar achter zodat de safe-zone na de schans niet
             // meteen op een nieuwe spike valt.
+            volgendObstakelOver = Math.max(volgendObstakelOver, 110);
+          }
+          // 🎢 EXTRA RAMPS bij level 50-100 (Brian 2026-06-27) — een 'ramp-zone'
+          // met merkbaar meer schansen. Zelfde schans-systeem (super-jump + ringen-
+          // boog), dus render + collision werken al. Geen loops, puur schansen.
+          if (
+            huidigLevel >= 50 && huidigLevel <= 100 &&
+            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode && !oblivionMode && !customLevelMode &&
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 10 === 0 &&
+            Math.random() < 0.6
+          ) {
+            const hoogte = 0.25 * H;
+            const breedte = 0.36 * H;
+            const wx_s = worldScrollX + W + 40;
+            const baseY_s = GROND_Y + SPELER_GROOTTE - hoogte;
+            schansen.push({
+              x: W + 40,
+              y: baseY_s - vloerHoogte(wx_s),
+              breedte,
+              hoogte,
+              type: "schans",
+              geactiveerd: false,
+              worldX: wx_s,
+              baseY: baseY_s,
+            });
             volgendObstakelOver = Math.max(volgendObstakelOver, 110);
           }
           // (plafond-stekel-spawn werkt nu via eigen plafondStekelSpawnTeller, hieronder)
@@ -6852,6 +6886,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           spawnParticles(h.x, h.y, 8, "#ffaaaa", { spread: 3, opwaarts: 1, leven: 25, grootte: 3, zwaartekracht: 0, glow: 14 });
         }
         if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
+      }
+
+      // 🟡 KLEINE STUITER-BALLEN (Brian 2026-06-27) — L75-100. Stuiteren tussen
+      // boven en onder in het midden; oppikken = bonus-munten + punten (geen schade).
+      for (let i = bonusBallen.length - 1; i >= 0; i--) {
+        const b = bonusBallen[i];
+        b.x -= effSnelheid;
+        b.fase += 0.07;
+        b.y = b.baseY + Math.sin(b.fase) * b.amp;
+        const dx = (speler.x + speler.breedte / 2) - b.x;
+        const dy = (speler.y + speler.hoogte / 2) - b.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!b.opgepakt && dist < (b.grootte + speler.breedte) / 2) {
+          b.opgepakt = true;
+          score += 5 * SCORE_MUL;
+          scoreElText = score;
+          try { bonusMuntenRef.current(3); } catch {}
+          piep(990, 0.06, "sine", 0.14);
+          setTimeout(() => piep(1480, 0.08, "sine", 0.11), 50);
+          spawnParticles(b.x, b.y, 14, "#ffe24a", { spread: 6, opwaarts: 2, leven: 30, grootte: 4, glow: 20 });
+        }
+        if (b.x < -50 || b.opgepakt) bonusBallen.splice(i, 1);
       }
 
       // platform spawn — lichtblauwe rust-blokjes halverwege canvas.
@@ -8275,6 +8331,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // 🟡 kleine stuiter-ballen tekenen (Brian 2026-06-27) — glanzend geel balletje
+      for (const b of bonusBallen) {
+        ctx.save();
+        ctx.translate(b.x, b.y);
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#ffe24a";
+        const grd = ctx.createRadialGradient(-b.grootte * 0.3, -b.grootte * 0.3, b.grootte * 0.1, 0, 0, b.grootte);
+        grd.addColorStop(0, "#fff7c0");
+        grd.addColorStop(0.5, "#ffe24a");
+        grd.addColorStop(1, "#f7a800");
+        ctx.fillStyle = grd;
+        ctx.beginPath();
+        ctx.arc(0, 0, b.grootte, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
       // Sprint 4 — bloom-flash overlay (Tetris Effect-trick). 1-frame
       // fullscreen wit + 8-frame fade na ring-pickup. Brein leest dit als
       // 'iets groots gebeurde'. Skip bij low-FX.
@@ -8755,6 +8828,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       kluisPortals.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
+      bonusBallen.length = 0;
       raketten.length = 0;
       flipPickups.length = 0;
       magneetPickups.length = 0;
@@ -8982,6 +9056,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         portals.length = 0;
         fans.length = 0;
         bonusHarten.length = 0;
+      bonusBallen.length = 0;
         raketten.length = 0;
         bombPickups.length = 0;
         magneetPickups.length = 0;
