@@ -517,9 +517,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const lokaleObliterNaam = (() => {
     try { return (localStorage.getItem("obliterator-naam") || "").trim().toLowerCase(); } catch { return ""; }
   })();
-  const isObliterAdmin =
-    OBLIVION_ADMINS.includes(((userName || "").trim().toLowerCase())) ||
-    OBLIVION_ADMINS.includes(lokaleObliterNaam);
+  // Admin als de app-naam OF de ingetypte spelersnaam een admin-naam BEVAT.
+  // Substring-match zodat "BrainrotBrian10", "Brian10" enz. ook gewoon "brian"
+  // herkennen (Brian 2026-06-27: zag het paneel niet omdat z'n naam niet exact
+  // "brian" was).
+  const _naamMatchtAdmin = (naam) => {
+    const n = (naam || "").trim().toLowerCase();
+    if (!n) return false;
+    return OBLIVION_ADMINS.some((a) => n === a || n.includes(a));
+  };
+  const isObliterAdmin = _naamMatchtAdmin(userName) || _naamMatchtAdmin(lokaleObliterNaam);
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     try {
       const raw = localStorage.getItem("obliterator-unlocked-skins");
