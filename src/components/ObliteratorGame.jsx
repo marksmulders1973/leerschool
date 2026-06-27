@@ -225,6 +225,8 @@ function SpriteVibeMetGezicht({ emoji, size = 22 }) {
               width: eye, height: eye, borderRadius: "50%", background: "#fff",
               boxShadow: "0 0 0 0.5px rgba(0,0,0,0.3)",
               display: "flex", alignItems: "center", justifyContent: "center",
+              animation: "obliterator-knipper 4s infinite",
+              transformOrigin: "center",
             }}>
               <span style={{ width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a" }} />
             </span>
@@ -12408,6 +12410,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           50%  { transform: rotate(180deg)  scale(1); }
           75%  { transform: rotate(270deg)  scale(1.15); }
           100% { transform: rotate(360deg)  scale(1); }
+        }
+        @keyframes obliterator-knipper {
+          0%, 88%, 100% { transform: scaleY(1); }
+          93%           { transform: scaleY(0.08); }
         }
       `}</style>
     </div>
