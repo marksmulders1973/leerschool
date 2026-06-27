@@ -456,7 +456,7 @@ function koopKans(prijs, fair) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -527,7 +527,32 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
       s.rest -= dt;
       // langzaam rondkijken tijdens de pauze i.p.v. bevroren staren
       node.rotation.y += s.idleTurn * dt * 0.6;
-      if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 17; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
+      if (s.rest <= 0) {
+        // 🎯 kies een bezigheid: meestal over de paden slenteren, soms een dier
+        // aaien of een foto maken. (Kopen verloopt via het 'need'-blok hierboven.)
+        const paden = padsRef?.current || [];
+        const dieren = dierenRef?.current || [];
+        const pret = pretRef?.current || [];
+        const r = Math.random();
+        if (dieren.length && r < 0.22) {
+          const a = dieren[Math.floor(Math.random() * dieren.length)];
+          s.tx = a[0] + (Math.random() - 0.5) * 1.2; s.tz = a[1] + 1.5 + (Math.random() - 0.5) * 0.6;
+          s.intent = "pet"; s.subj = a;
+        } else if ((dieren.length || pret.length) && r < 0.38) {
+          const pool = (pret.length && Math.random() < 0.5) ? pret : (dieren.length ? dieren : pret);
+          const a = pool[Math.floor(Math.random() * pool.length)];
+          s.tx = a[0] + (Math.random() - 0.5) * 2; s.tz = a[1] + 3 + (Math.random() - 0.5) * 1.5;
+          s.intent = "photo"; s.subj = a;
+        } else if (paden.length && r < 0.9) {
+          const p = paden[Math.floor(Math.random() * paden.length)];
+          s.tx = p[0] + (Math.random() - 0.5) * 0.7; s.tz = p[1] + (Math.random() - 0.5) * 0.7;
+          s.intent = "stroll"; s.subj = null;
+        } else {
+          const a = Math.random() * Math.PI * 2, rr = 4 + Math.random() * 16;
+          s.tx = Math.cos(a) * rr; s.tz = Math.sin(a) * rr; s.intent = "stroll"; s.subj = null;
+        }
+        s.resting = false;
+      }
     } else {
       const dx = s.tx - s.x, dz = s.tz - s.z; const d = Math.hypot(dx, dz);
       if (d < 0.18) {
@@ -542,8 +567,21 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
             toon({ e: "😖", t: "Te duur!" }, 2.2);
           }
           s.acting = false; s.need = null; s.needT = 7 + Math.random() * 9;
+        } else if (s.intent === "pet" && s.subj) {
+          // 🐾 dier aaien: draai naar het dier + blije bubbel, even blijven.
+          node.rotation.y = Math.atan2(s.subj[0] - s.x, s.subj[1] - s.z);
+          toon({ e: ["❤️", "🥰", "🐾"][seed % 3], t: "Aaien!" }, 2.4);
+        } else if (s.intent === "photo" && s.subj) {
+          // 📸 foto maken: draai naar het onderwerp + foto-bubbel.
+          node.rotation.y = Math.atan2(s.subj[0] - s.x, s.subj[1] - s.z);
+          toon({ e: "📸", t: "Foto!" }, 2.4);
         }
-        s.resting = true; s.rest = 1 + Math.random() * 2.5;
+        const klaarMet = s.intent;
+        s.intent = null; s.subj = null;
+        s.resting = true;
+        s.rest = klaarMet === "pet" ? 2 + Math.random() * 1.5
+          : klaarMet === "photo" ? 1.8 + Math.random() * 1.4
+          : 1 + Math.random() * 2.5;
       } else {
         const speed = (s.acting ? 2.2 : 1.7) * s.speedF;
         const step = Math.min(d, dt * speed);
@@ -635,10 +673,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   );
 }
 
-export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid }) {
+export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} />)}
     </group>
   );
 }
