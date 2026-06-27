@@ -83,7 +83,8 @@ export default function ZooModel({ assetId, position = [0, 0, 0], rotation = 0, 
     idles: [kies(names, "Idle"), kies(names, "Idle_2"), kies(names, "Eating")].filter(Boolean),
     first: names[0],
   }), [names]);
-  const st = useRef({ inited: false, resting: true, rest: 1 + Math.random() * 2, tx: 0, tz: 0, current: null });
+  // speedF (Mark 2026-06-27): elk dier een eigen loop-tempo → natuurlijker beeld.
+  const st = useRef({ inited: false, resting: true, rest: 1 + Math.random() * 2, tx: 0, tz: 0, current: null, speedF: 0.8 + Math.random() * 0.5 });
 
   const speel = (naam) => {
     if (!naam || !actions[naam] || st.current.current === naam) return;
@@ -128,11 +129,15 @@ export default function ZooModel({ assetId, position = [0, 0, 0], rotation = 0, 
       speel(clips.idles.length ? clips.idles[Math.floor(Math.random() * clips.idles.length)] : clips.first);
       return;
     }
-    const stap = Math.min(dist, dt * 0.7);
+    const stap = Math.min(dist, dt * 0.7 * s.speedF);
     m.position.x += (dx / dist) * stap;
     m.position.z += (dz / dist) * stap;
-    // Naar de looprichting draaien (model kijkt langs +Z).
-    m.rotation.y = Math.atan2(dx, dz);
+    // Vloeiend naar de looprichting draaien (model kijkt langs +Z) i.p.v. instant.
+    const doel = Math.atan2(dx, dz);
+    let diff = doel - m.rotation.y;
+    while (diff > Math.PI) diff -= Math.PI * 2;
+    while (diff < -Math.PI) diff += Math.PI * 2;
+    m.rotation.y += diff * Math.min(1, dt * 6);
   });
 
   return (
