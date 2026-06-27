@@ -695,6 +695,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     return () => clearInterval(id);
   }, [bonusEventEinde, rainbowEventEinde, discoEinde, rainbowHourEinde, syncMuntenMul]);
 
+  // ⏰ AUTO-EVENT elke 15 minuten (Brian 2026-06-27): kies een willekeurig event
+  // en zet het lokaal aan. Elk event heeft z'n eigen achtergrond (zie teken).
+  // Lokaal-only (geen DB-broadcast) zodat het niet de event-tabel volspamt.
+  const AUTO_EVENT_KEUZE = ["disco", "rainbow_hour", "munten_2x", "rainbow", "random_sprite"];
+  useEffect(() => {
+    const id = setInterval(() => {
+      const ev = AUTO_EVENT_KEUZE[Math.floor(Math.random() * AUTO_EVENT_KEUZE.length)];
+      const now = Date.now();
+      if (ev === "disco") pasBonusEventToe("disco", now + 2 * 60 * 1000);
+      else if (ev === "rainbow_hour") pasBonusEventToe("rainbow_hour", now + 30 * 1000, { meteenHart: true });
+      else if (ev === "munten_2x") pasBonusEventToe("munten_2x", now + 10 * 60 * 1000);
+      else if (ev === "rainbow") pasBonusEventToe("rainbow", now + 2 * 60 * 1000);
+      else pasBonusEventToe("random_sprite", 0);
+    }, 15 * 60 * 1000);
+    return () => clearInterval(id);
+  }, [pasBonusEventToe]);
+
   // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
   // bij iedereen die op dat moment speelt de cutscene triggert.
   // Als de speler op het MENU staat: automatisch in 'spelen' fase springen
@@ -2126,7 +2143,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenBakstenenMuur() {
       const grondTop = GROND_Y + SPELER_GROOTTE;
       const bg = ctx.createLinearGradient(0, 0, 0, H);
-      bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
+      // 🎨 EVENT-ACHTERGROND (Brian 2026-06-27): elk actief event krijgt z'n eigen
+      // lucht. Prioriteit: disco → rainbow hour → rainbow → 2× munten → normaal biome.
+      const _nu = Date.now();
+      let _evThema = null;
+      if (_nu < discoEindeRef.current) _evThema = "disco";
+      else if (_nu < rainbowHourEindeRef.current) _evThema = "rainbowhour";
+      else if (rainbowActiefRef.current) _evThema = "rainbow";
+      else if (_nu < munten2xEindeRef.current) _evThema = "goud";
+      if (_evThema === "disco") {
+        // Knipperende disco-kleuren die snel ronddraaien
+        const h = (frameTeller * 5) % 360;
+        bg.addColorStop(0, `hsl(${h},85%,55%)`);
+        bg.addColorStop(0.5, `hsl(${(h + 120) % 360},85%,55%)`);
+        bg.addColorStop(1, `hsl(${(h + 240) % 360},80%,48%)`);
+      } else if (_evThema === "rainbowhour") {
+        // Volle, langzaam schuivende regenboog
+        const h = (frameTeller * 2) % 360;
+        bg.addColorStop(0, `hsl(${h},90%,62%)`);
+        bg.addColorStop(0.3, `hsl(${(h + 60) % 360},90%,60%)`);
+        bg.addColorStop(0.6, `hsl(${(h + 140) % 360},88%,58%)`);
+        bg.addColorStop(1, `hsl(${(h + 240) % 360},85%,52%)`);
+      } else if (_evThema === "rainbow") {
+        // Zachte pastel-regenboog (rainbow-ringen-event)
+        const h = frameTeller % 360;
+        bg.addColorStop(0, `hsl(${h},70%,78%)`);
+        bg.addColorStop(1, `hsl(${(h + 180) % 360},70%,72%)`);
+      } else if (_evThema === "goud") {
+        // Gouden gloed bij 2× munten
+        bg.addColorStop(0, "rgb(255,212,90)");
+        bg.addColorStop(1, "rgb(176,118,20)");
+      } else {
+        bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
+      }
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
       const cheerfulMixVal = cheerfulMix();
