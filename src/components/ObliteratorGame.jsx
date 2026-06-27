@@ -10299,6 +10299,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         });
                       } catch {}
                       pasBonusEventToe("disco", eind);
+                      // Speel je zelf niet? Spring meteen het spel in zodat je 't ziet.
+                      if (fase !== "spelen") setFase("spelen");
                     }}
                     disabled={discoEinde && Date.now() < discoEinde}
                     style={{
@@ -10330,6 +10332,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         });
                       } catch {}
                       pasBonusEventToe("rainbow_hour", eind, { meteenHart: true });
+                      if (fase !== "spelen") setFase("spelen");
                     }}
                     disabled={rainbowHourEinde && Date.now() < rainbowHourEinde}
                     style={{
@@ -10364,6 +10367,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         });
                       } catch {}
                       pasBonusEventToe("random_sprite", 0);
+                      if (fase !== "spelen") setFase("spelen");
                     }}
                     style={{
                       width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
@@ -10403,6 +10407,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       pasBonusEventToe("munten_2x", m2xEind);
                       pasBonusEventToe("rainbow", rainbowEind);
                       pasBonusEventToe("random_sprite", 0);
+                      if (fase !== "spelen") setFase("spelen");
                     }}
                     style={{
                       width: "100%", marginTop: 12, padding: "14px 14px", borderRadius: 12,
