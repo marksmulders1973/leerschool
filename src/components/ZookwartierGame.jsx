@@ -189,6 +189,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [activePart, setActivePart] = useState(0);      // welk onderdeel je nu kleurt
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
+  const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
   const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
@@ -773,6 +774,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={menuKop}>📷 Camera</div>
             <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); })} style={menuRij(followCam)}>🎥 Camera volgt je poppetje</button>
             <button onClick={() => doeEnSluit(toggleFirstPerson)} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
+            {placedItems.some((it) => it.assetId === "rail") && (
+              <button onClick={() => doeEnSluit(() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); })} style={menuRij(rideTrain)}>🚂 Meerijden met de trein</button>
+            )}
 
             <div style={menuKop}>🛠️ Landschap bouwen</div>
             <button onClick={() => doeEnSluit(() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(sculptMode)}>⛰️ Heuvels boetseren</button>
@@ -928,6 +932,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
           followCam={followCam}
           firstPerson={firstPerson}
+          rideTrain={rideTrain}
           spelerNaam={naam}
           goedeScore={goedeScore}
           zwakVak={zwakVak}
@@ -968,6 +973,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           {/* Vast richtkruis in het midden. */}
           <div style={{ position: "absolute", left: "50%", top: "50%", width: 10, height: 10, marginLeft: -5, marginTop: -5, zIndex: 6, pointerEvents: "none", borderRadius: "50%", border: "2px solid rgba(255,255,255,0.85)", boxShadow: "0 0 4px rgba(0,0,0,.5)" }} />
         </>
+      )}
+
+      {/* 🚂 Meerijden-modus: zichtbare stop-knop. */}
+      {rideTrain && (
+        <button onClick={() => setRideTrain(false)} title="Stop met meerijden" style={{ position: "absolute", right: 16, bottom: 92, zIndex: 8, pointerEvents: "auto", border: "none", borderRadius: 999, padding: "11px 16px", font: "800 14px system-ui", color: "#fff", background: "#c0392b", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>🚂 ✕ Stop meerijden</button>
       )}
 
       {/* Onderbalk: contextueel. */}

@@ -1156,3 +1156,153 @@ export function HillMound({ position = [0, 0, 0], size = 1.2, color = "#82bb55" 
 export function ParkBase() {
   return null;
 }
+
+// ──────────────────────────────────────────────────────────────────────────
+// 🚂 TREIN-OP-RAILS (Mark 2026-06-27): losse rails + station + lange route-trein.
+// ──────────────────────────────────────────────────────────────────────────
+
+// Eén rail-tegel: ballast + dwarsliggers + twee stalen rails. Default langs X;
+// rotation oriënteert 'm. Bij bochten ziet het er nog recht uit, maar de trein
+// stuurt netjes de hoek om.
+export function RailTile({ position = [0, 0, 0], rotation = 0 }) {
+  const hout = "#6b4a2b", staal = "#aab0b6";
+  return (
+    <group position={[position[0], position[1], position[2]]} rotation={[0, rotation, 0]}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]} receiveShadow>
+        <planeGeometry args={[2, 1.3]} />
+        <meshStandardMaterial color="#b8a06a" roughness={1} />
+      </mesh>
+      {[-0.7, -0.35, 0, 0.35, 0.7].map((x, i) => (
+        <mesh key={i} position={[x, 0.06, 0]} castShadow>
+          <boxGeometry args={[0.13, 0.07, 1.0]} />
+          <meshStandardMaterial color={hout} flatShading roughness={1} />
+        </mesh>
+      ))}
+      <mesh position={[0, 0.11, 0.34]}><boxGeometry args={[2, 0.06, 0.06]} /><meshStandardMaterial color={staal} metalness={0.6} roughness={0.4} /></mesh>
+      <mesh position={[0, 0.11, -0.34]}><boxGeometry args={[2, 0.06, 0.06]} /><meshStandardMaterial color={staal} metalness={0.6} roughness={0.4} /></mesh>
+    </group>
+  );
+}
+
+// Treinstation: een perron met een afdakje en een bordje. Heeft een instapprijs
+// (de inkomst per dag); dat staat in de asset-data, hier puur het 3D-uiterlijk.
+export function Station({ position = [0, 0, 0], rotation = 0 }) {
+  return (
+    <group position={[position[0], position[1], position[2]]} rotation={[0, rotation, 0]}>
+      {/* perron */}
+      <mesh position={[0, 0.15, 0]} castShadow receiveShadow><boxGeometry args={[3.2, 0.3, 1.7]} /><meshStandardMaterial color="#cbb389" roughness={1} /></mesh>
+      {/* palen + dak */}
+      {[-1.3, 1.3].map((x, i) => (
+        <mesh key={i} position={[x, 1.0, -0.5]} castShadow><boxGeometry args={[0.14, 1.6, 0.14]} /><meshStandardMaterial color="#7a5230" flatShading roughness={1} /></mesh>
+      ))}
+      <mesh position={[0, 1.9, -0.35]} rotation={[0.22, 0, 0]} castShadow><boxGeometry args={[3.4, 0.12, 1.5]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.9} /></mesh>
+      {/* bordje */}
+      <mesh position={[0, 1.55, 0.85]}><boxGeometry args={[1.5, 0.5, 0.08]} /><meshStandardMaterial color="#2c3e50" roughness={0.8} /></mesh>
+      <Html position={[0, 1.55, 0.92]} center distanceFactor={11} pointerEvents="none">
+        <div style={{ font: "800 13px system-ui", color: "#fff", whiteSpace: "nowrap" }}>🚉 Station</div>
+      </Html>
+    </group>
+  );
+}
+
+// De lange trein die JOUW route volgt: een locomotief + meerdere wagons. `route`
+// = { pts:[{x,y,z}...], loop:bool }. We lopen met een afstand `s` over de poly-
+// lijn; elke wagon zit een vaste afstand achter de vorige. `headRef` krijgt de
+// kop-positie + rijrichting zodat de camera mee kan rijden.
+export function RouteTrain({ route, headRef = null, wagons = 3 }) {
+  const refs = useRef([]);
+  const sRef = useRef(0);
+  const data = useMemo(() => {
+    if (!route || !route.pts || route.pts.length < 2) return null;
+    const pts = route.pts.map((p) => new Vector3(p.x, p.y, p.z));
+    if (route.loop) pts.push(pts[0].clone());
+    const seg = [];
+    let total = 0;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const len = pts[i].distanceTo(pts[i + 1]);
+      seg.push({ a: pts[i], b: pts[i + 1], len, acc: total });
+      total += len;
+    }
+    return { pts, seg, total, loop: !!route.loop };
+  }, [route]);
+
+  const SNELHEID = 2.6; // wereld-units per sec
+  const WAGON_GAP = 1.7;
+
+  const posOp = (s) => {
+    if (!data || data.total <= 0) return null;
+    let d = data.loop ? ((s % data.total) + data.total) % data.total : Math.max(0, Math.min(data.total, s));
+    for (const sg of data.seg) {
+      if (d <= sg.acc + sg.len || sg === data.seg[data.seg.length - 1]) {
+        const t = sg.len > 0 ? (d - sg.acc) / sg.len : 0;
+        const p = sg.a.clone().lerp(sg.b, Math.max(0, Math.min(1, t)));
+        const dir = sg.b.clone().sub(sg.a).normalize();
+        return { p, dir };
+      }
+    }
+    return null;
+  };
+
+  useFrame((_, dt) => {
+    if (!data) return;
+    sRef.current += dt * SNELHEID;
+    if (!data.loop && (sRef.current > data.total || sRef.current < 0)) {
+      // heen-en-weer bij een open lijn
+      sRef.current = Math.max(0, Math.min(data.total, sRef.current));
+      // keer om door snelheid te spiegelen via een richtingsvlag op de ref
+      headRef && (headRef._omkeer = !headRef._omkeer);
+    }
+    const headS = sRef.current;
+    for (let i = 0; i < refs.current.length; i++) {
+      const g = refs.current[i];
+      if (!g) continue;
+      const info = posOp(headS - i * WAGON_GAP);
+      if (!info) continue;
+      g.position.copy(info.p);
+      g.rotation.y = Math.atan2(info.dir.x, info.dir.z);
+      if (i === 0 && headRef) { headRef.current = { p: info.p.clone(), dir: info.dir.clone() }; }
+    }
+  });
+
+  if (!data) return null;
+  const carts = [{ loco: true }, ...Array.from({ length: wagons }, () => ({ loco: false }))];
+  return (
+    <group>
+      {carts.map((c, i) => (
+        <group key={i} ref={(el) => (refs.current[i] = el)}>
+          {c.loco ? (
+            <group>
+              <mesh position={[0, 0.45, 0]} castShadow><boxGeometry args={[1.5, 0.7, 0.9]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.7} /></mesh>
+              <mesh position={[0.5, 0.95, 0]} castShadow><boxGeometry args={[0.5, 0.55, 0.8]} /><meshStandardMaterial color="#922b21" flatShading roughness={0.7} /></mesh>
+              <mesh position={[-0.55, 0.85, 0]} castShadow><cylinderGeometry args={[0.12, 0.16, 0.4, 10]} /><meshStandardMaterial color="#34495e" roughness={0.8} /></mesh>
+              <mesh position={[0, 0.18, 0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
+              <mesh position={[0, 0.18, -0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
+            </group>
+          ) : (
+            <group>
+              <mesh position={[0, 0.42, 0]} castShadow><boxGeometry args={[1.3, 0.55, 0.85]} /><meshStandardMaterial color={i % 2 ? "#2e86c1" : "#f1c40f"} flatShading roughness={0.7} /></mesh>
+              <mesh position={[0, 0.75, 0]} castShadow><boxGeometry args={[1.34, 0.12, 0.9]} /><meshStandardMaterial color="#fff" roughness={0.8} /></mesh>
+              <mesh position={[0, 0.16, 0.3]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.15, 0.15, 0.1, 10]} /><meshStandardMaterial color="#222" /></mesh>
+              <mesh position={[0, 0.16, -0.3]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.15, 0.15, 0.1, 10]} /><meshStandardMaterial color="#222" /></mesh>
+            </group>
+          )}
+        </group>
+      ))}
+    </group>
+  );
+}
+
+// Camera die meerijdt met de trein: zet de camera net achter+boven de kop en
+// kijkt vooruit. Actief zolang `rideRef.current` (de kop-positie) bestaat.
+export function RideCamera({ headRef, active }) {
+  const { camera } = useThree();
+  useFrame(() => {
+    if (!active || !headRef || !headRef.current) return;
+    const { p, dir } = headRef.current;
+    if (!p || !dir) return;
+    const back = dir.clone().multiplyScalar(-3.2);
+    camera.position.set(p.x + back.x, p.y + 2.4, p.z + back.z);
+    camera.lookAt(p.x + dir.x * 2, p.y + 0.6, p.z + dir.z * 2);
+  });
+  return null;
+}

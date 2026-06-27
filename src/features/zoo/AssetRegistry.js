@@ -130,6 +130,11 @@ export const ZOO_ASSETS = {
   ferris: { id: "ferris", kind: "attraction", name: "Reuzenrad", emoji: "🎡", procedural: "ferris", price: 90 },
   swing: { id: "swing", kind: "attraction", name: "Zweefmolen", emoji: "🎢", procedural: "swing", price: 70 },
   trein: { id: "trein", kind: "attraction", name: "Treintje", emoji: "🚂", procedural: "train", price: 65 },
+  // ---- TREIN-op-rails (Mark 2026-06-27): leg losse rails neer → de trein rijdt
+  // jouw route. Rails = klein, niet-blokkerend decor (snapt op het raster). Het
+  // station is een gebouw met instapprijs (passieve muntjes per dag). ----
+  rail: { id: "rail", kind: "decor", name: "Rails", emoji: "🛤️", procedural: "rail", cells: 1, price: 6, beloopbaar: true },
+  station: { id: "station", kind: "building", name: "Treinstation", emoji: "🚉", procedural: "station", price: 80, inkomst: 8 },
 
   // ---- Natuur & bouwen (Kenney Nature Kit + procedureel pad). cells:1 = klein.
   // Decor levert geen muntjes op; je gebruikt het om je park in te richten. ----
@@ -169,8 +174,8 @@ export const ZOO_ASSETS = {
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
-export const PLAATSBARE_BOUWWERKEN = ["donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
-export const PLAATSBARE_ATTRACTIES = ["carousel", "ferris", "swing", "trein"];
+export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
+export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 

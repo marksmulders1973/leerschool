@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow, FirstPersonCamera } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, DayNight, CameraFollow, FirstPersonCamera, RailTile, Station, RouteTrain, RideCamera } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -41,6 +41,8 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} />;
   if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
+  if (a.procedural === "rail") return <RailTile position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "station") return <Station position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
@@ -255,7 +257,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -298,6 +300,29 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     return k === "animal" || k === "building" || k === "attraction";
   }).length;
   const bezoekers = Math.max(2, Math.min(7, Math.round(trekpleisters * 0.8) + 2));
+
+  // 🚂 Trein-route: orden de losse rail-tegels tot een aaneengesloten pad zodat de
+  // trein er overheen rijdt. We lopen van buur naar buur (raster-aangrenzend).
+  const trainHeadRef = useRef({});
+  const railRoute = useMemo(() => {
+    const rails = placedItems.filter((it) => getAsset(it.assetId)?.procedural === "rail").map((it) => it.cell);
+    if (rails.length < 2) return null;
+    const k = (c) => `${c[0]},${c[1]}`;
+    const set = new Map(rails.map((c) => [k(c), c]));
+    const buren = (c) => [[1, 0], [-1, 0], [0, 1], [0, -1]].map(([dx, dz]) => [c[0] + dx, c[1] + dz]).filter((n) => set.has(k(n)));
+    const start = rails.find((c) => buren(c).length === 1) || rails[0];
+    const ordered = []; const seen = new Set();
+    let cur = start, prev = null;
+    while (cur && !seen.has(k(cur))) {
+      ordered.push(cur); seen.add(k(cur));
+      const nb = buren(cur).filter((n) => !seen.has(k(n)) && (!prev || k(n) !== k(prev)));
+      prev = cur; cur = nb[0];
+    }
+    if (ordered.length < 2) return null;
+    const loop = ordered.length > 2 && buren(ordered[ordered.length - 1]).some((n) => k(n) === k(ordered[0]));
+    const pts = ordered.map(([gx, gz]) => { const [x, z] = cellToWorld(gx, gz); return { x, y: heightFnRef.current(x, z) + 0.16, z }; });
+    return { pts, loop };
+  }, [placedItems, terrain]);
 
   // Kraampjes-locaties (wereldcoördinaten) per soort behoefte: patat = food,
   // drank = drink. Bezoekers lopen naar het dichtstbijzijnde passende kraampje.
@@ -359,6 +384,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
+        {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
+        <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} />
 
         {placing && (
