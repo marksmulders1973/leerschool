@@ -526,7 +526,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     if (!n) return false;
     return OBLIVION_ADMINS.some((a) => n === a || n.includes(a));
   };
-  const isObliterAdmin = _naamMatchtAdmin(userName) || _naamMatchtAdmin(lokaleObliterNaam);
+  const isObliterAdmin = _naamMatchtAdmin(userName) || _naamMatchtAdmin(lokaleObliterNaam); // hot-reload bump
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     try {
       const raw = localStorage.getItem("obliterator-unlocked-skins");
@@ -9853,6 +9853,226 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     style={{ width: "100%", accentColor: "#69f0ae" }}
                   />
                 </div>
+              </div>
+            )}
+
+            {/* 👑 ADMIN-PANEEL — verplaatst naar de ECHTE menu (Brian 2026-06-27).
+                Stond eerder in het uitgeschakelde 'false &&'-blok hieronder, dus
+                het verscheen nooit. Alleen zichtbaar voor admins (Brian). */}
+            {isObliterAdmin && (
+              <div style={{
+                marginTop: 14, width: "100%", maxWidth: 320, textAlign: "left",
+                padding: "12px 14px", borderRadius: 12,
+                background: "linear-gradient(135deg, rgba(180,60,220,0.20), rgba(80,20,120,0.15))",
+                border: "1px solid rgba(180,60,220,0.5)",
+                boxShadow: "0 0 18px rgba(180,60,220,0.3)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                  <span style={{ fontSize: 22 }}>👑</span>
+                  <div>
+                    <div style={{ color: "#e0a0ff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13 }}>
+                      ADMIN PANEEL
+                    </div>
+                    <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
+                      Welkom, {userName || (lokaleObliterNaam ? lokaleObliterNaam.charAt(0).toUpperCase() + lokaleObliterNaam.slice(1) : "Admin")}
+                    </div>
+                  </div>
+                </div>
+
+                {/* 🌌 Oblivion Pulse (zwart gat) — apart, niet in de snap */}
+                <button
+                  onClick={async () => {
+                    oblivionTriggerRef.current.trigger = true;
+                    try {
+                      const { data: ins } = await supabase
+                        .from("oblivion_events")
+                        .insert({ triggered_by_name: (userName || "Admin").trim() })
+                        .select("id").single();
+                      if (ins?.id) oblivionTriggerRef.current.lastSeenEventId = ins.id;
+                    } catch {}
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  style={{
+                    width: "100%", padding: "12px 14px", borderRadius: 10,
+                    background: "linear-gradient(135deg, #b440e0, #6020a0)",
+                    border: "none", color: "#fff",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                    cursor: "pointer", boxShadow: "0 4px 18px rgba(180,60,220,0.45)", letterSpacing: 0.5,
+                  }}
+                >🌌 Activeer Oblivion Pulse (zwart gat)</button>
+
+                {/* ✨ 2× MUNTEN (10 min) */}
+                <button
+                  onClick={async () => {
+                    const eind = Date.now() + 10 * 60 * 1000;
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert({
+                        event_type: "munten_2x", triggered_by_name: (userName || "Admin").trim(),
+                        expires_at: new Date(eind).toISOString(),
+                      });
+                    } catch {}
+                    munten2xEindeRef.current = eind; setBonusEventEinde(eind); syncMuntenMul();
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  disabled={bonusEventEinde && Date.now() < bonusEventEinde}
+                  style={{
+                    width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                    background: bonusEventEinde && Date.now() < bonusEventEinde ? "rgba(255,213,79,0.18)" : "linear-gradient(135deg, #ffd54f, #f9a825)",
+                    border: "none", color: bonusEventEinde && Date.now() < bonusEventEinde ? "rgba(255,213,79,0.7)" : "#1a0008",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                    cursor: bonusEventEinde && Date.now() < bonusEventEinde ? "not-allowed" : "pointer", letterSpacing: 0.4,
+                  }}
+                >
+                  {bonusEventEinde && Date.now() < bonusEventEinde
+                    ? `✨ 2× MUNTEN actief (${Math.max(0, Math.ceil((bonusEventEinde - Date.now()) / 60000))} min over)`
+                    : "✨ 2× MUNTEN event (10 min)"}
+                </button>
+
+                {/* 🌈 Rainbow-ringen (2 min) */}
+                <button
+                  onClick={async () => {
+                    const eind = Date.now() + 2 * 60 * 1000;
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert({
+                        event_type: "rainbow", triggered_by_name: (userName || "Admin").trim(),
+                        expires_at: new Date(eind).toISOString(),
+                      });
+                    } catch {}
+                    rainbowActiefRef.current = true; setRainbowEventEinde(eind);
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  disabled={rainbowEventEinde && Date.now() < rainbowEventEinde}
+                  style={{
+                    width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                    background: rainbowEventEinde && Date.now() < rainbowEventEinde ? "rgba(160,96,255,0.18)" : "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff)",
+                    border: "none", color: rainbowEventEinde && Date.now() < rainbowEventEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                    cursor: rainbowEventEinde && Date.now() < rainbowEventEinde ? "not-allowed" : "pointer", letterSpacing: 0.5,
+                  }}
+                >
+                  {rainbowEventEinde && Date.now() < rainbowEventEinde
+                    ? `🌈 RAINBOW actief (${Math.max(0, Math.ceil((rainbowEventEinde - Date.now()) / 1000))}s over)`
+                    : "🌈 Rainbow-ringen (2 min)"}
+                </button>
+
+                <div style={{ borderTop: "1px solid rgba(180,60,220,0.35)", margin: "12px 0 8px" }} />
+                <div style={{ color: "#ffd54f", fontSize: 12, fontWeight: 800, letterSpacing: 0.5, textAlign: "center", marginBottom: 6 }}>
+                  🎮 BRIAN&apos;S EVENTS
+                </div>
+
+                {/* 🪩 DISCO — 2 min · 5× munten */}
+                <button
+                  onClick={async () => {
+                    const eind = Date.now() + 2 * 60 * 1000;
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert({
+                        event_type: "disco", triggered_by_name: (userName || "Admin").trim(),
+                        expires_at: new Date(eind).toISOString(),
+                      });
+                    } catch {}
+                    pasBonusEventToe("disco", eind);
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  disabled={discoEinde && Date.now() < discoEinde}
+                  style={{
+                    width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                    background: discoEinde && Date.now() < discoEinde ? "rgba(255,95,162,0.18)" : "linear-gradient(135deg, #ff5fa2, #a060ff, #40c0ff)",
+                    border: "none", color: discoEinde && Date.now() < discoEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                    cursor: discoEinde && Date.now() < discoEinde ? "not-allowed" : "pointer", letterSpacing: 0.4,
+                  }}
+                >
+                  {discoEinde && Date.now() < discoEinde
+                    ? `🪩 DISCO actief (${Math.max(0, Math.ceil((discoEinde - Date.now()) / 1000))}s over)`
+                    : "🪩 Disco-event (2 min · 5× munten)"}
+                </button>
+
+                {/* 🌈 RAINBOW HOUR — 30s · 10× munten + bonus-hartje */}
+                <button
+                  onClick={async () => {
+                    const eind = Date.now() + 30 * 1000;
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert({
+                        event_type: "rainbow_hour", triggered_by_name: (userName || "Admin").trim(),
+                        expires_at: new Date(eind).toISOString(),
+                      });
+                    } catch {}
+                    pasBonusEventToe("rainbow_hour", eind, { meteenHart: true });
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  disabled={rainbowHourEinde && Date.now() < rainbowHourEinde}
+                  style={{
+                    width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                    background: rainbowHourEinde && Date.now() < rainbowHourEinde ? "rgba(160,96,255,0.18)" : "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff)",
+                    border: "none", color: rainbowHourEinde && Date.now() < rainbowHourEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                    cursor: rainbowHourEinde && Date.now() < rainbowHourEinde ? "not-allowed" : "pointer", letterSpacing: 0.4,
+                  }}
+                >
+                  {rainbowHourEinde && Date.now() < rainbowHourEinde
+                    ? `🌈 RAINBOW HOUR (${Math.max(0, Math.ceil((rainbowHourEinde - Date.now()) / 1000))}s over)`
+                    : "🌈 Rainbow Hour (30s · 10× munten + ❤️)"}
+                </button>
+
+                {/* 🎁 RANDOM SPRITEVIBE voor iedereen */}
+                <button
+                  onClick={async () => {
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert({
+                        event_type: "random_sprite", triggered_by_name: (userName || "Admin").trim(),
+                        expires_at: new Date(Date.now() + 60 * 1000).toISOString(),
+                      });
+                    } catch {}
+                    pasBonusEventToe("random_sprite", 0);
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  style={{
+                    width: "100%", marginTop: 8, padding: "10px 14px", borderRadius: 10,
+                    background: "linear-gradient(135deg, #69f0ae, #45b6f5)",
+                    border: "none", color: "#0a0014",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                    cursor: "pointer", letterSpacing: 0.4,
+                  }}
+                >🎁 Random Spritevibe voor iedereen</button>
+
+                {/* 🫰 BRIAN SNAP — alles tegelijk (BEHALVE zwart gat) */}
+                <button
+                  onClick={async () => {
+                    speelSnapGeluid();
+                    const now = Date.now();
+                    const discoEind = now + 2 * 60 * 1000;
+                    const rhEind = now + 30 * 1000;
+                    const m2xEind = now + 10 * 60 * 1000;
+                    const rainbowEind = now + 2 * 60 * 1000;
+                    const naam = (userName || "Admin").trim();
+                    try {
+                      await supabase.from("obliterator_bonus_events").insert([
+                        { event_type: "disco", triggered_by_name: naam, expires_at: new Date(discoEind).toISOString() },
+                        { event_type: "rainbow_hour", triggered_by_name: naam, expires_at: new Date(rhEind).toISOString() },
+                        { event_type: "munten_2x", triggered_by_name: naam, expires_at: new Date(m2xEind).toISOString() },
+                        { event_type: "rainbow", triggered_by_name: naam, expires_at: new Date(rainbowEind).toISOString() },
+                        { event_type: "random_sprite", triggered_by_name: naam, expires_at: new Date(now + 60 * 1000).toISOString() },
+                      ]);
+                    } catch {}
+                    pasBonusEventToe("disco", discoEind);
+                    pasBonusEventToe("rainbow_hour", rhEind, { meteenHart: true });
+                    pasBonusEventToe("munten_2x", m2xEind);
+                    pasBonusEventToe("rainbow", rainbowEind);
+                    pasBonusEventToe("random_sprite", 0);
+                    if (fase !== "spelen") setFase("spelen");
+                  }}
+                  style={{
+                    width: "100%", marginTop: 12, padding: "14px 14px", borderRadius: 12,
+                    background: "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff, #ff5fa2)",
+                    border: "2px solid rgba(255,255,255,0.5)", color: "#1a0008",
+                    fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 16, fontWeight: 900,
+                    cursor: "pointer", letterSpacing: 1,
+                    textShadow: "0 1px 2px rgba(255,255,255,0.55)", boxShadow: "0 4px 22px rgba(255,160,48,0.5)",
+                  }}
+                >🫰 BRIAN SNAP — ALLE events tegelijk!</button>
+                <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                  Disco + Rainbow Hour + 2× munten + rainbow + random vibe (zwart gat blijft apart)
+                </p>
               </div>
             )}
           </div>
