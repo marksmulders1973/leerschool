@@ -232,11 +232,24 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false 
     }} />
   );
   return (
-    <span style={{
-      position: "relative", display: "inline-block", lineHeight: 1, fontSize: size,
-      transformOrigin: "bottom center",
-      ...(dansen ? { animation: "obliterator-dans 5s ease-in-out infinite", animationDelay: `${dansDelay}s` } : {}),
-    }} aria-hidden="true">
+    <span style={{ position: "relative", display: "inline-block", lineHeight: 1, fontSize: size, verticalAlign: "middle" }} aria-hidden="true">
+      {/* 🌑 grond-schaduwtje onder de springende vibe — krimpt als-ie hoog springt */}
+      {dansen && (
+        <span style={{
+          position: "absolute", left: "50%", bottom: -size * 0.06,
+          marginLeft: -size * 0.3, width: size * 0.6, height: size * 0.16,
+          background: "radial-gradient(ellipse at center, rgba(0,0,0,0.5), rgba(0,0,0,0) 70%)",
+          borderRadius: "50%",
+          animation: "obliterator-dans-schaduw 5s ease-in-out infinite",
+          animationDelay: `${dansDelay}s`,
+          pointerEvents: "none",
+        }} />
+      )}
+      <span style={{
+        position: "relative", display: "block",
+        transformOrigin: "bottom center",
+        ...(dansen ? { animation: "obliterator-dans 5s ease-in-out infinite", animationDelay: `${dansDelay}s` } : {}),
+      }}>
       <span style={{ display: "block" }}>{emoji}</span>
       <span style={{
         position: "absolute", left: 0, right: 0, top: "50%",
@@ -275,6 +288,7 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false 
         ) : (
           <Mond />
         )}
+      </span>
       </span>
     </span>
   );
@@ -7707,6 +7721,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(meta.emoji, x + r, y + r + 1 * SCHAAL);
+      // 😢 HUILEN bij weinig HP (Brian 2026-06-27): twee blauwe traantjes druppen
+      // van het buddy-badge zolang je hp laag is.
+      if (hp <= HP_PER_HIT) {
+        const cx2 = x + r, cyTop = y + r + r * 0.25;
+        ctx.save();
+        for (const sgn of [-1, 1]) {
+          const fase = (((frameTeller + (sgn > 0 ? 23 : 0)) % 46) / 46); // 0..1 drip-cyclus
+          const tx = cx2 + sgn * r * 0.5;
+          const ty = cyTop + fase * r * 1.15;
+          ctx.globalAlpha = 0.92 * (1 - fase * 0.55);
+          ctx.fillStyle = "#5fc8ff";
+          ctx.beginPath();
+          ctx.ellipse(tx, ty, r * 0.12, r * 0.18, 0, 0, Math.PI * 2);
+          ctx.fill();
+          // glansje
+          ctx.globalAlpha = 0.5 * (1 - fase * 0.55);
+          ctx.fillStyle = "#d6f3ff";
+          ctx.beginPath();
+          ctx.arc(tx - r * 0.04, ty - r * 0.05, r * 0.04, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
       // Lv-tekst rechts van de badge
       ctx.textAlign = "left";
       ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
@@ -12470,6 +12507,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           76%           { transform: translateY(-30%) rotate(-9deg); }
           82%           { transform: translateY(0)    rotate(8deg); }
           90%           { transform: translateY(-16%) rotate(0deg); }
+        }
+        @keyframes obliterator-dans-schaduw {
+          0%, 58%, 100% { transform: scale(1);    opacity: 0.4; }
+          64%           { transform: scale(0.55); opacity: 0.14; }
+          70%           { transform: scale(1);    opacity: 0.4; }
+          76%           { transform: scale(0.68); opacity: 0.22; }
+          82%           { transform: scale(1);    opacity: 0.4; }
+          90%           { transform: scale(0.82); opacity: 0.3; }
         }
       `}</style>
     </div>
