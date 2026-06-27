@@ -7911,6 +7911,65 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Grabbel-maatje (Brian 2026-06-26) — onder de hartjes/HP-balk
       tekenGrabbelMaatje();
     }
+    // 🕺 Michael Jackson moonwalkt over het scherm (Brian 2026-06-27): alleen als
+    // je de Michael-vibe draagt. Decoratief (geen collision), half-doorzichtig in
+    // het bovenste deel zodat het de gameplay niet blokkeert.
+    function tekenMichaelDanser() {
+      if (!gedragenSprite || gedragenSprite.id !== "moonwalker") return;
+      const t = frameTeller;
+      const sweep = Math.sin(t * 0.011);                 // -1..1 langzaam heen en weer
+      const cx = W * 0.5 + sweep * W * 0.38;
+      const groundY = H * 0.30;
+      const s = 1.5 * SCHAAL;                              // schaal-eenheid
+      const bob = Math.abs(Math.sin(t * 0.22)) * 2 * SCHAAL;
+      const legPhase = Math.sin(t * 0.4);
+      ctx.save();
+      ctx.translate(cx, groundY - bob);
+      ctx.rotate((sweep >= 0 ? 1 : -1) * 0.06);           // lichte lean (moonwalk-feel)
+      // schaduw
+      ctx.globalAlpha = 0.22;
+      ctx.fillStyle = "#000";
+      ctx.beginPath(); ctx.ellipse(0, 3 * s, 9 * s, 2.4 * s, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.globalAlpha = 0.62;
+      // benen (zwart) — shuffle
+      const legL = -3 * s + legPhase * 2 * s, legR = 3 * s - legPhase * 2 * s;
+      ctx.fillStyle = "#111";
+      ctx.fillRect(legL - 1.3 * s, -9 * s, 2.6 * s, 9 * s);
+      ctx.fillRect(legR - 1.3 * s, -9 * s, 2.6 * s, 9 * s);
+      // witte sokken
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(legL - 1.6 * s, -1.4 * s, 3.2 * s, 1.7 * s);
+      ctx.fillRect(legR - 1.6 * s, -1.4 * s, 3.2 * s, 1.7 * s);
+      // rood jasje
+      ctx.fillStyle = "#d10000";
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(-6 * s, -22 * s, 12 * s, 13 * s, 3 * s); else ctx.rect(-6 * s, -22 * s, 12 * s, 13 * s);
+      ctx.fill();
+      // gouden knopen
+      ctx.fillStyle = "#ffd54f";
+      ctx.beginPath(); ctx.arc(0, -19 * s, 0.9 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(0, -15 * s, 0.9 * s, 0, Math.PI * 2); ctx.fill();
+      // witte handschoen
+      ctx.fillStyle = "#fff";
+      ctx.beginPath(); ctx.arc(-7 * s, -14 * s, 1.8 * s, 0, Math.PI * 2); ctx.fill();
+      // hoofd (huid)
+      ctx.fillStyle = "#d9a06b";
+      ctx.beginPath(); ctx.arc(0, -27 * s, 5 * s, 0, Math.PI * 2); ctx.fill();
+      // zwart krullend haar
+      ctx.fillStyle = "#0a0a0a";
+      ctx.beginPath(); ctx.arc(0, -30 * s, 5.2 * s, Math.PI, 0); ctx.fill();
+      ctx.beginPath(); ctx.arc(-4 * s, -29 * s, 2.2 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(4 * s, -29 * s, 2.2 * s, 0, Math.PI * 2); ctx.fill();
+      // ogen
+      ctx.fillStyle = "#1a1a1a";
+      ctx.beginPath(); ctx.arc(-1.8 * s, -27 * s, 0.7 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(1.8 * s, -27 * s, 0.7 * s, 0, Math.PI * 2); ctx.fill();
+      // zingende mond (hoogte varieert mee)
+      const mh = (0.6 + Math.abs(Math.sin(t * 0.5)) * 1.2) * s;
+      ctx.fillStyle = "#4a0d0d";
+      ctx.beginPath(); ctx.ellipse(0, -23.5 * s, 1.4 * s, mh, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
     function tekenGrabbelMaatje() {
       const sp = gedragenSprite;
       if (!sp) return;
@@ -8163,6 +8222,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         tekenLavaGrond();
       } else {
         tekenBakstenenMuur(); tekenGlasInLood();
+        tekenMichaelDanser(); // 🕺 MJ moonwalkt op het scherm als je 'm draagt
         // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
         if (logoGeladen && studiebolLogos.length) {
           ctx.save();
