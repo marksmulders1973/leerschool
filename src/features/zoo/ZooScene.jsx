@@ -346,20 +346,23 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const padsRef = useRef([]);
   const dierenRef = useRef([]);
   const pretRef = useRef([]);
+  const bankjesRef = useRef([]);
   const _routes = useMemo(() => {
-    const paden = [], dieren = [], pret = [];
+    const paden = [], dieren = [], pret = [], bankjes = [];
     placedItems.forEach((it) => {
       const a = getAsset(it.assetId); if (!a) return;
       const [wx, wz] = cellToWorld(it.cell[0], it.cell[1]);
       if (a.procedural === "path") paden.push([wx, wz]);
+      else if (a.procedural === "bench") bankjes.push([wx, wz, it.rotation || 0]);
       else if (a.kind === "animal") dieren.push([wx, wz]);
       else if (a.kind === "attraction") pret.push([wx, wz]);
     });
-    return { paden, dieren, pret };
+    return { paden, dieren, pret, bankjes };
   }, [placedItems]);
   padsRef.current = _routes.paden;
   dierenRef.current = _routes.dieren;
   pretRef.current = _routes.pret;
+  bankjesRef.current = _routes.bankjes;
 
   // Botsing: vakjes die "vast" zijn, zodat het poppetje er niet doorheen loopt.
   const vasteCellen = useMemo(() => {
@@ -406,7 +409,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
-        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} />
+        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

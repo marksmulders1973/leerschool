@@ -456,7 +456,7 @@ function koopKans(prijs, fair) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -533,16 +533,22 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         const paden = padsRef?.current || [];
         const dieren = dierenRef?.current || [];
         const pret = pretRef?.current || [];
+        const bankjes = bankjesRef?.current || [];
         const r = Math.random();
-        if (dieren.length && r < 0.22) {
+        if (dieren.length && r < 0.20) {
           const a = dieren[Math.floor(Math.random() * dieren.length)];
           s.tx = a[0] + (Math.random() - 0.5) * 1.2; s.tz = a[1] + 1.5 + (Math.random() - 0.5) * 0.6;
           s.intent = "pet"; s.subj = a;
-        } else if ((dieren.length || pret.length) && r < 0.38) {
+        } else if ((dieren.length || pret.length) && r < 0.34) {
           const pool = (pret.length && Math.random() < 0.5) ? pret : (dieren.length ? dieren : pret);
           const a = pool[Math.floor(Math.random() * pool.length)];
           s.tx = a[0] + (Math.random() - 0.5) * 2; s.tz = a[1] + 3 + (Math.random() - 0.5) * 1.5;
           s.intent = "photo"; s.subj = a;
+        } else if (bankjes.length && r < 0.47) {
+          // 🪑 even op een bankje uitrusten
+          const b = bankjes[Math.floor(Math.random() * bankjes.length)];
+          s.tx = b[0]; s.tz = b[1];
+          s.intent = "sit"; s.subj = b;
         } else if (paden.length && r < 0.9) {
           const p = paden[Math.floor(Math.random() * paden.length)];
           s.tx = p[0] + (Math.random() - 0.5) * 0.7; s.tz = p[1] + (Math.random() - 0.5) * 0.7;
@@ -575,12 +581,17 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           // 📸 foto maken: draai naar het onderwerp + foto-bubbel.
           node.rotation.y = Math.atan2(s.subj[0] - s.x, s.subj[1] - s.z);
           toon({ e: "📸", t: "Foto!" }, 2.4);
+        } else if (s.intent === "sit" && s.subj) {
+          // 🪑 op het bankje uitrusten: ga in de bankje-richting zitten + bubbel.
+          node.rotation.y = s.subj[2] || 0;
+          toon({ e: ["😌", "🪑", "☕"][seed % 3], t: "Even rusten" }, 3.5);
         }
         const klaarMet = s.intent;
         s.intent = null; s.subj = null;
         s.resting = true;
         s.rest = klaarMet === "pet" ? 2 + Math.random() * 1.5
           : klaarMet === "photo" ? 1.8 + Math.random() * 1.4
+          : klaarMet === "sit" ? 4.5 + Math.random() * 3.5
           : 1 + Math.random() * 2.5;
       } else {
         const speed = (s.acting ? 2.2 : 1.7) * s.speedF;
@@ -673,10 +684,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   );
 }
 
-export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef }) {
+export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef }) {
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />)}
     </group>
   );
 }
