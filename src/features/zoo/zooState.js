@@ -69,7 +69,7 @@ function bouwVoorbeeldPark() {
   verblijf(-17, 3, -11, 9, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor)
   verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter)
   verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);               // hertenkamp (rechts-voor)
-  verblijf(11, -9, 17, -3, 14, ["trex", "triceratops", "stegosaurus", "velociraptor"]); // dino's (rechts-achter)
+  verblijf(10, -11, 18, -3, 14, ["trex", "triceratops", "stegosaurus", "velociraptor"]); // dino's (rechts-achter) — ruimer hek, want de dino-modellen zijn groot
 
   // ── HUIZEN-DORPje helemaal achterin ──
   ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
