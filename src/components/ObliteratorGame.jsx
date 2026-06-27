@@ -356,12 +356,19 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false,
     </span>
   );
 }
-function kiesGrabbelSprite() {
-  // Weighted random op rariteit-gewicht
-  const totaal = SPRITE_POOL.reduce((s, sp) => s + (RARITEIT_GEWICHT[sp.rariteit] || 1), 0);
+function kiesGrabbelSprite(luck = false) {
+  // Weighted random op rariteit-gewicht. luck = Violetide-kracht (Brian 2026-06-27):
+  // zeldzamere vibes krijgen veel meer gewicht (× tier²), dus grotere kans op rare.
+  const gewicht = (sp) => {
+    const base = RARITEIT_GEWICHT[sp.rariteit] || 1;
+    if (!luck) return base;
+    const tier = RARITEIT_TIER[sp.rariteit] || 1;
+    return base * tier * tier;
+  };
+  const totaal = SPRITE_POOL.reduce((s, sp) => s + gewicht(sp), 0);
   let r = Math.random() * totaal;
   for (const sp of SPRITE_POOL) {
-    r -= (RARITEIT_GEWICHT[sp.rariteit] || 1);
+    r -= gewicht(sp);
     if (r <= 0) return sp;
   }
   return SPRITE_POOL[0];
@@ -1386,6 +1393,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
+    // 💧 SECRET Violetide-kracht: elke 30 sec een 5-sec schild als je 'm draagt.
+    let violetideSchildTeller = 0;
     // bubbel-shield (vis-pickup) — vernietigt haaien op contact i.p.v. damage
     let bubbelFrames = 0;
     const BUBBEL_DUUR = 300; // 5 sec
@@ -5748,6 +5757,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return; // alle game-logic pauzeren
       }
 
+      // 💧 SECRET Violetide-kracht (Brian 2026-06-27): draag je Violetide, dan
+      // krijg je elke 30 sec automatisch een schild van 5 sec (immune).
+      if (gedragenSprite && gedragenSprite.id === "violetide") {
+        violetideSchildTeller++;
+        if (violetideSchildTeller >= 1800) { // 30 sec @ 60fps
+          violetideSchildTeller = 0;
+          vliegFrames = Math.max(vliegFrames, 300); // 5 sec immune (zelfde als raket-schild)
+          recordBannerTekst = "💧 VIOLETIDE-SCHILD! 5s";
+          recordBannerKleur = "#c44dff";
+          recordBannerTeller = 120;
+          spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 24, "#c44dff", { spread: 9, opwaarts: 2, leven: 55, grootte: 5, glow: 24 });
+          spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 14, "#e0b3ff", { spread: 6, opwaarts: 1.5, leven: 40, grootte: 4, glow: 16 });
+          piep(620, 0.12, "sine", 0.15);
+          setTimeout(() => piep(930, 0.12, "sine", 0.13), 100);
+        }
+      } else {
+        violetideSchildTeller = 0;
+      }
+
       // ── Brian's EVENTS mid-run uitdelen (2026-06-26) ──
       // Bonus-hartje (boven de cap) bij Rainbow Hour; random Spritevibe bij het
       // random-sprite-event. De refs worden gezet door de admin-knop + realtime.
@@ -5764,7 +5792,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (geefRandomSpriteRef.current > 0) {
         geefRandomSpriteRef.current = 0;
         if (!gedragenSprite) {
-          const s = kiesGrabbelSprite();
+          const s = kiesGrabbelSprite(verzamelingRef.current["violetide"] != null);
           gedragenSprite = { id: s.id, niveau: 1, veilig: false };
           try { grabbelBannerRef.current({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false }); } catch {}
         } else if (gedragenSprite.niveau < SPRITE_MAX_NIVEAU) {
@@ -6058,7 +6086,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             GRABBEL_GEDAAN.add(nieuwLevel);
             if (!gedragenSprite) {
               // win een willekeurig maatje (rariteit = de kans) — nog ON-VEILIG
-              const s = kiesGrabbelSprite();
+              const s = kiesGrabbelSprite(verzamelingRef.current["violetide"] != null);
               gedragenSprite = { id: s.id, niveau: 1, veilig: false };
               try { grabbelBannerRef.current({ ...s, niveau: 1, gewonnen: true, isNew: true, maxed: false }); } catch {}
             } else if (gedragenSprite.niveau < SPRITE_MAX_NIVEAU) {
@@ -12283,6 +12311,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       fontSize: 11, fontWeight: 800, color: "#ffd54f",
                     }}>
                       {SPRITE_EFFECT_LABEL[SPRITE_EFFECT[uitgerustId]]} · werkt in het spel! · sterker op hoger niveau
+                    </div>
+                  )}
+                  {uitgerustId === "violetide" && (
+                    <div style={{ marginTop: 8, fontSize: 11, lineHeight: 1.45, color: "#e6c4ff" }}>
+                      <div style={{ fontWeight: 800, color: "#c44dff" }}>✦ Geheime krachten:</div>
+                      <div>🍀 Grotere kans op zeldzame vibes bij het grabbelen</div>
+                      <div>🛡️ Elke 30 sec automatisch een schild van 5 seconden</div>
                     </div>
                   )}
                 </div>
