@@ -153,6 +153,9 @@ const SPRITE_POOL = [
   // ✦✦✦ SECRET (Brian 2026-06-27) — ultra-zeldzame paarse water-vibe met een
   // eigen, realistisch getekend lichaam (zie SpriteVibeMetGezicht customBody).
   { id: "violetide", naam: "Violetide", emoji: "🟣", rariteit: "secret", secret: true, ability: "Paarse vloed — een geheime water-kracht 💧" },
+  // ✦✦✦ SECRET — Moonwalker (Brian 2026-06-27): MJ-figuur, rood pak + krullend
+  // haar, zingt + loopt heen en weer. Eigen gezicht (geen standaard-overlay).
+  { id: "moonwalker", naam: "Moonwalker", emoji: "🕺", rariteit: "secret", secret: true, michael: true, eigenGezicht: true, ability: "King of Pop — danst, zingt & blaast obstakels weg 🕺" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
 
@@ -180,7 +183,7 @@ const SPRITE_EFFECT = {
   infinity:"schild", omega:"schild", voidking:"schild", prismatic:"score", godspark:"tempo",
   reality:"magneet", zenith:"munt", nova:"score", apex:"sprong", origin:"score",
   // secret
-  violetide:"schild",
+  violetide:"schild", moonwalker:"score",
 };
 // Kid-vriendelijk labeltje per effect — getoond in de Spritevibes-kast.
 const SPRITE_EFFECT_LABEL = {
@@ -254,11 +257,60 @@ function PaarseWaterVibe({ size = 22 }) {
     </span>
   );
 }
+// ✦ SECRET — Moonwalker / Michael-vibe (Brian 2026-06-27): rood pak, zwart
+// krullend haar, zingende mond (open/dicht) en hij loopt de hele tijd heen en
+// weer (moonwalk-sway). Heeft z'n eigen gezicht ingebouwd.
+function MichaelVibe({ size = 22 }) {
+  return (
+    <span style={{ position: "relative", display: "block", width: size, height: size, overflow: "visible" }}>
+      <span style={{ position: "absolute", inset: 0, animation: "obliterator-mj-loop 2.4s ease-in-out infinite", transformOrigin: "bottom center" }}>
+        {/* benen (zwarte broek) + witte sokken */}
+        <span style={{ position: "absolute", bottom: size * 0.04, left: "38%", width: size * 0.1, height: size * 0.2, background: "#111", borderRadius: 2 }} />
+        <span style={{ position: "absolute", bottom: size * 0.04, left: "52%", width: size * 0.1, height: size * 0.2, background: "#111", borderRadius: 2 }} />
+        <span style={{ position: "absolute", bottom: 0, left: "37%", width: size * 0.12, height: size * 0.06, background: "#fff", borderRadius: "2px 2px 3px 3px" }} />
+        <span style={{ position: "absolute", bottom: 0, left: "51%", width: size * 0.12, height: size * 0.06, background: "#fff", borderRadius: "2px 2px 3px 3px" }} />
+        {/* rood jasje */}
+        <span style={{
+          position: "absolute", bottom: size * 0.21, left: "27%", width: size * 0.46, height: size * 0.34,
+          background: "linear-gradient(#ff3030, #b80000)", borderRadius: "32% 32% 22% 22%",
+          boxShadow: "inset 0 0 3px rgba(0,0,0,0.45)",
+        }}>
+          {/* gouden epaulet/knopen */}
+          <span style={{ position: "absolute", top: "18%", left: "44%", width: size * 0.045, height: size * 0.045, background: "#ffd54f", borderRadius: "50%" }} />
+          <span style={{ position: "absolute", top: "48%", left: "44%", width: size * 0.045, height: size * 0.045, background: "#ffd54f", borderRadius: "50%" }} />
+        </span>
+        {/* witte handschoen */}
+        <span style={{ position: "absolute", bottom: size * 0.3, left: "16%", width: size * 0.11, height: size * 0.11, background: "#fff", borderRadius: "45%", boxShadow: "0 0 3px rgba(255,255,255,0.9)" }} />
+        {/* hoofd (huid) */}
+        <span style={{ position: "absolute", top: size * 0.06, left: "33%", width: size * 0.34, height: size * 0.34, background: "linear-gradient(#e6b485, #c98c5a)", borderRadius: "50%" }}>
+          {/* ogen */}
+          <span style={{ position: "absolute", top: "36%", left: "20%", width: size * 0.05, height: size * 0.055, background: "#1a1a1a", borderRadius: "50%" }} />
+          <span style={{ position: "absolute", top: "36%", left: "62%", width: size * 0.05, height: size * 0.055, background: "#1a1a1a", borderRadius: "50%" }} />
+          {/* zingende mond (O die open/dicht gaat) */}
+          <span style={{ position: "absolute", top: "60%", left: "37%", width: size * 0.13, height: size * 0.14, background: "#4a0d0d", borderRadius: "50%", transformOrigin: "center", animation: "obliterator-mj-zing 0.45s ease-in-out infinite" }} />
+        </span>
+        {/* zwart krullend haar */}
+        <span style={{ position: "absolute", top: size * 0.01, left: "30%", width: size * 0.4, height: size * 0.2, background: "#0a0a0a", borderRadius: "50% 50% 35% 35%" }}>
+          <span style={{ position: "absolute", bottom: -size * 0.05, left: "-8%", width: size * 0.13, height: size * 0.13, background: "#0a0a0a", borderRadius: "50%" }} />
+          <span style={{ position: "absolute", bottom: -size * 0.04, left: "38%", width: size * 0.13, height: size * 0.13, background: "#0a0a0a", borderRadius: "50%" }} />
+          <span style={{ position: "absolute", bottom: -size * 0.05, right: "-8%", width: size * 0.13, height: size * 0.13, background: "#0a0a0a", borderRadius: "50%" }} />
+        </span>
+      </span>
+    </span>
+  );
+}
+// Kies het juiste 'eigen lichaam' voor een speciale vibe (of null = gewone emoji).
+function vibeBody(s, size) {
+  if (!s) return null;
+  if (s.id === "violetide") return <PaarseWaterVibe size={size} />;
+  if (s.id === "moonwalker") return <MichaelVibe size={size} />;
+  return null;
+}
 // 😊😠😂 Elke spritevibe een schattig gezichtje (Brian 2026-06-27): emoji (of een
 // customBody zoals de water-vibe) + een overlay met googly-oogjes (knipperen +
 // rondkijken) en een mond (open/dicht). emotie: "blij"/"boos". lachen = grote
 // open lach + blije oogjes + giggle (gebruikt als je een vibe wint).
-function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false, lachen = false, customBody = null }) {
+function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false, lachen = false, customBody = null, eigenGezicht = false }) {
   const eye = Math.max(3, size * 0.2);
   const pup = Math.max(1.5, eye * 0.48);
   const gap = size * 0.14;
@@ -305,6 +357,7 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false,
       )}
       <span style={{ position: "relative", display: "block", transformOrigin: "bottom center", ...bodyAnim }}>
       {customBody ? customBody : <span style={{ display: "block" }}>{emoji}</span>}
+      {!eigenGezicht && (
       <span style={{
         position: "absolute", left: 0, right: 0, top: "50%",
         transform: "translateY(-58%)",
@@ -352,6 +405,7 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false,
           <Mond />
         )}
       </span>
+      )}
       </span>
     </span>
   );
@@ -1399,6 +1453,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // 🗣️ Violetide praat (Brian 2026-06-27): { tekst, frames, kleur } | null
     let violetideSpeech = null;
     let violetideNeeTeller = 0;
+    // 🕺 Moonwalker (Brian 2026-06-27): obstakel-blast elke 30s + funky disco-bas
+    let moonwalkerTeller = 0;
+    let mjBassTeller = 0;
+    let mjBassIdx = 0;
     // bubbel-shield (vis-pickup) — vernietigt haaien op contact i.p.v. damage
     let bubbelFrames = 0;
     const BUBBEL_DUUR = 300; // 5 sec
@@ -5790,6 +5848,62 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       } else {
         violetideSchildTeller = 0;
         violetideNeeTeller = 0;
+      }
+
+      // 🕺 MOONWALKER-krachten (Brian 2026-06-27): draag je hem, dan (1) speelt
+      // een funky disco-groove en (2) blaast hij elke 30 sec alle obstakels weg
+      // binnen ~20 poppetjes. (Eigen muziekje — niet de echte song.)
+      if (gedragenSprite && gedragenSprite.id === "moonwalker") {
+        // (1) funky disco-bas: elke ~14 frames de volgende noot (alleen met geluid aan)
+        if (audioVolumeRef.current && audioVolumeRef.current.aan) {
+          mjBassTeller++;
+          if (mjBassTeller % 14 === 0) {
+            const groove = [110, 110, 146.83, 110, 130.81, 110, 164.81, 146.83]; // origineel walking-bass riffje
+            try { piep(groove[mjBassIdx % groove.length], 0.15, "triangle", 0.09); } catch {}
+            mjBassIdx++;
+          }
+        }
+        // (2) obstakel-blast elke 30 sec binnen ~20 poppetjes
+        moonwalkerTeller++;
+        if (moonwalkerTeller >= 1800) {
+          moonwalkerTeller = 0;
+          const range = 20 * SPELER_GROOTTE;
+          const px = speler.x + speler.breedte / 2;
+          bombFlash = 24;
+          shakeKracht = Math.max(shakeKracht, 8);
+          for (let k = obstakels.length - 1; k >= 0; k--) {
+            const o = obstakels[k];
+            const ocx = o.x + (o.breedte || 12) / 2;
+            if (Math.abs(ocx - px) < range) {
+              spawnParticles(ocx, o.y + (o.hoogte || 30) / 2, 12, "#ff2a2a", { spread: 8, opwaarts: 3, leven: 34, grootte: 5, zwaartekracht: 0.12, glow: 22 });
+              spawnParticles(ocx, o.y + (o.hoogte || 30) / 2, 6, "#ffd54f", { spread: 5, opwaarts: 2, leven: 26, grootte: 4, glow: 16 });
+              obstakels.splice(k, 1);
+            }
+          }
+          for (let k = plafondStekels.length - 1; k >= 0; k--) {
+            const ps = plafondStekels[k];
+            if (Math.abs((ps.x + (ps.breedte || 12) / 2) - px) < range) {
+              spawnParticles(ps.x + (ps.breedte || 12) / 2, ps.y + (ps.hoogte || 30) / 2, 10, "#ff2a2a", { spread: 8, opwaarts: -2, leven: 32, grootte: 5, glow: 20 });
+              plafondStekels.splice(k, 1);
+            }
+          }
+          for (let k = zwevendeMinen.length - 1; k >= 0; k--) {
+            const m = zwevendeMinen[k];
+            if (Math.abs(m.x - px) < range) {
+              spawnParticles(m.x, m.y + Math.sin(m.fase) * m.amp, 12, "#ff2a2a", { spread: 8, opwaarts: 2, leven: 32, grootte: 5, glow: 20 });
+              zwevendeMinen.splice(k, 1);
+            }
+          }
+          recordBannerTekst = "🕺 MOONWALK BLAST!";
+          recordBannerKleur = "#ff2a2a";
+          recordBannerTeller = 120;
+          piep(180, 0.18, "sawtooth", 0.14);
+          setTimeout(() => piep(120, 0.2, "square", 0.1), 70);
+          setTimeout(() => piep(330, 0.12, "sine", 0.1), 180);
+        }
+      } else {
+        moonwalkerTeller = 0;
+        mjBassTeller = 0;
       }
 
       // ── Brian's EVENTS mid-run uitdelen (2026-06-26) ──
@@ -12027,9 +12141,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 fontFamily: "'Fredoka', sans-serif",
               }}>
                 <span style={{ fontSize: 26, filter: maatjeUitkomst.status === "veilig" ? "none" : "grayscale(0.7)" }}>
-                  {SPRITE_BY_ID[maatjeUitkomst.id].secret
-                    ? <PaarseWaterVibe size={28} />
-                    : SPRITE_BY_ID[maatjeUitkomst.id].emoji}
+                  {vibeBody(SPRITE_BY_ID[maatjeUitkomst.id], 28) || SPRITE_BY_ID[maatjeUitkomst.id].emoji}
                 </span>
                 <span style={{ display: "flex", flexDirection: "column" }}>
                   <span style={{ fontSize: 13, fontWeight: 700, color: maatjeUitkomst.status === "veilig" ? "#69f0ae" : "#ff7070" }}>
@@ -12377,6 +12489,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       <div>🛡️ Elke 30 sec automatisch een schild van 5 seconden</div>
                     </div>
                   )}
+                  {uitgerustId === "moonwalker" && (
+                    <div style={{ marginTop: 8, fontSize: 11, lineHeight: 1.45, color: "#ffd0d0" }}>
+                      <div style={{ fontWeight: 800, color: "#ff3030" }}>✦ Geheime krachten:</div>
+                      <div>🎵 Funky disco-groove speelt terwijl je speelt</div>
+                      <div>🕺 Elke 30 sec blaast hij alle obstakels weg (~20 poppetjes ver)</div>
+                    </div>
+                  )}
                 </div>
               )}
               <div style={{ fontSize: 10, opacity: 0.55, marginTop: 4, lineHeight: 1.35 }}>
@@ -12412,7 +12531,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             boxShadow: isUit ? `0 0 14px ${kleur}88` : "none",
                           }}>
                           <span style={{ filter: heeft ? "none" : "grayscale(1) brightness(0.4)", opacity: heeft ? 1 : 0.5 }}>
-                            {heeft ? <SpriteVibeMetGezicht emoji={s.emoji} size={22} emotie={spriteEmotie(s.rariteit)} dansen={s.rariteit === "mythisch"} customBody={s.secret ? <PaarseWaterVibe size={22} /> : null} /> : <span style={{ fontSize: 22 }}>❔</span>}
+                            {heeft ? <SpriteVibeMetGezicht emoji={s.emoji} size={22} emotie={spriteEmotie(s.rariteit)} dansen={s.rariteit === "mythisch"} customBody={vibeBody(s, 22)} eigenGezicht={!!s.eigenGezicht} /> : <span style={{ fontSize: 22 }}>❔</span>}
                           </span>
                           <span style={{ fontSize: 8, opacity: heeft ? 0.85 : 0.4, fontWeight: 700, lineHeight: 1 }}>
                             {heeft ? s.naam : "???"}
@@ -12525,7 +12644,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               {grabbelBanner.veiliggesteld ? "🟢 Kluis-portaal" : "🎁 Grabbelton"}
             </div>
             <div style={{ margin: "6px 0", position: "relative", display: "inline-block", filter: `drop-shadow(0 0 14px ${kleur})` }}>
-              <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} emotie={spriteEmotie(grabbelBanner.rariteit)} lachen={true} customBody={grabbelBanner.secret ? <PaarseWaterVibe size={52} /> : null} />
+              <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} emotie={spriteEmotie(grabbelBanner.rariteit)} lachen={true} customBody={vibeBody(grabbelBanner, 52)} eigenGezicht={!!grabbelBanner.eigenGezicht} />
               {/* ✨ glinstering als je een SECRET wint (Brian 2026-06-27) */}
               {grabbelBanner.secret && [
                 { top: "-12%", left: "-8%", s: 16, d: "0s" },
@@ -12702,6 +12821,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         @keyframes obliterator-twinkle {
           0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
           50%      { opacity: 1; transform: scale(1.15) rotate(25deg); }
+        }
+        @keyframes obliterator-mj-loop {
+          0%   { transform: translateX(-22%) rotate(-4deg); }
+          50%  { transform: translateX(22%)  rotate(4deg); }
+          100% { transform: translateX(-22%) rotate(-4deg); }
+        }
+        @keyframes obliterator-mj-zing {
+          0%, 100% { transform: scaleY(0.45); }
+          50%      { transform: scaleY(1.05); }
         }
       `}</style>
     </div>
