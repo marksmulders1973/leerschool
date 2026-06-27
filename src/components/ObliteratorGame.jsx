@@ -209,7 +209,6 @@ function SpriteVibeMetGezicht({ emoji, size = 22 }) {
   const eye = Math.max(3, size * 0.2);
   const pup = Math.max(1.5, eye * 0.48);
   const gap = size * 0.14;
-  const mondB = Math.max(1.4, size * 0.07);
   return (
     <span style={{ position: "relative", display: "inline-block", lineHeight: 1, fontSize: size }} aria-hidden="true">
       <span style={{ display: "block" }}>{emoji}</span>
@@ -228,14 +227,17 @@ function SpriteVibeMetGezicht({ emoji, size = 22 }) {
               animation: "obliterator-knipper 4s infinite",
               transformOrigin: "center",
             }}>
-              <span style={{ width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a" }} />
+              <span style={{
+                width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a",
+                animation: "obliterator-kijk 6s infinite", transformOrigin: "center",
+              }} />
             </span>
           ))}
         </span>
         <span style={{
-          width: size * 0.26, height: size * 0.13,
-          borderBottom: `${mondB}px solid #1a1a1a`,
-          borderRadius: "0 0 90% 90%",
+          width: size * 0.3, height: size * 0.2, background: "#1a1a1a",
+          borderRadius: "42% 42% 58% 58%",
+          animation: "obliterator-mond 2.6s infinite", transformOrigin: "center",
         }} />
       </span>
     </span>
@@ -12414,6 +12416,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         @keyframes obliterator-knipper {
           0%, 88%, 100% { transform: scaleY(1); }
           93%           { transform: scaleY(0.08); }
+        }
+        @keyframes obliterator-kijk {
+          0%, 22%   { transform: translateX(0); }
+          32%, 48%  { transform: translateX(-65%); }
+          58%, 74%  { transform: translateX(65%); }
+          84%, 100% { transform: translateX(0); }
+        }
+        @keyframes obliterator-mond {
+          0%, 42%, 100% { transform: scaleY(0.3); }
+          56%, 76%      { transform: scaleY(1); }
         }
       `}</style>
     </div>
