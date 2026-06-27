@@ -9080,6 +9080,40 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const audioBeatRef = useRef(0); // 0..1 — current bass-energy intensiteit
   const audioCtxRef = useRef(null);
   const analyserRef = useRef(null);
+  // 🔊 Geluidje voor de BRIAN SNAP (2026-06-27): vinger-knip + stijgende
+  // magische arpeggio + glinster-top. Werkt vanuit de menu-knop (eigen
+  // mini-synth op de gedeelde AudioContext, of een verse als die er nog niet is).
+  const speelSnapGeluid = useCallback(() => {
+    try {
+      let ctx = audioCtxRef.current;
+      if (!ctx) {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        ctx = new Ctx();
+        audioCtxRef.current = ctx;
+      }
+      if (ctx.state === "suspended") ctx.resume().catch(() => {});
+      const t0 = ctx.currentTime;
+      const toon = (freq, start, duur, type = "triangle", vol = 0.16) => {
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, t0 + start);
+        g.gain.setValueAtTime(0.0001, t0 + start);
+        g.gain.exponentialRampToValueAtTime(vol, t0 + start + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + start + duur);
+        osc.connect(g);
+        g.connect(ctx.destination);
+        osc.start(t0 + start);
+        osc.stop(t0 + start + duur + 0.05);
+      };
+      toon(170, 0, 0.07, "square", 0.13);             // de "knip"
+      const noten = [523, 659, 784, 1047, 1319];      // C E G C E — stijgend
+      noten.forEach((f, i) => toon(f, 0.07 + i * 0.07, 0.24, "triangle", 0.16));
+      toon(1568, 0.5, 0.55, "sine", 0.13);            // glinster-top
+      toon(2093, 0.55, 0.55, "sine", 0.10);
+    } catch {}
+  }, []);
   // 2026-05-22 — playlist-rotatie: Cheerio (vol) → klassiek (kort) → Cheerio (andere tempo) → ...
   const playlistModeRef = useRef("main");   // "main" | "interlude"
   const interludeIdxRef = useRef(0);        // cycle door INTERLUDE_TRACKS
@@ -10386,6 +10420,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   {/* 🫰 BRIAN SNAP — alle events tegelijk (BEHALVE zwart gat) */}
                   <button
                     onClick={async () => {
+                      speelSnapGeluid(); // 🔊 epische knip + magische opbouw
                       const now = Date.now();
                       const discoEind = now + 2 * 60 * 1000;
                       const rhEind = now + 30 * 1000;
