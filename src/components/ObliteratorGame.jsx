@@ -203,6 +203,42 @@ function getSpriteKracht(id, niveau) {
     default:        return {};
   }
 }
+// 😊 Elke spritevibe een schattig gezichtje (Brian 2026-06-27): de emoji + een
+// overlay met twee googly-oogjes en een lachje. Werkt voor alle 60 vibes.
+function SpriteVibeMetGezicht({ emoji, size = 22 }) {
+  const eye = Math.max(3, size * 0.2);
+  const pup = Math.max(1.5, eye * 0.48);
+  const gap = size * 0.14;
+  const mondB = Math.max(1.4, size * 0.07);
+  return (
+    <span style={{ position: "relative", display: "inline-block", lineHeight: 1, fontSize: size }} aria-hidden="true">
+      <span style={{ display: "block" }}>{emoji}</span>
+      <span style={{
+        position: "absolute", left: 0, right: 0, top: "50%",
+        transform: "translateY(-58%)",
+        display: "flex", flexDirection: "column", alignItems: "center", gap: size * 0.06,
+        pointerEvents: "none",
+      }}>
+        <span style={{ display: "flex", gap }}>
+          {[0, 1].map((i) => (
+            <span key={i} style={{
+              width: eye, height: eye, borderRadius: "50%", background: "#fff",
+              boxShadow: "0 0 0 0.5px rgba(0,0,0,0.3)",
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>
+              <span style={{ width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a" }} />
+            </span>
+          ))}
+        </span>
+        <span style={{
+          width: size * 0.26, height: size * 0.13,
+          borderBottom: `${mondB}px solid #1a1a1a`,
+          borderRadius: "0 0 90% 90%",
+        }} />
+      </span>
+    </span>
+  );
+}
 function kiesGrabbelSprite() {
   // Weighted random op rariteit-gewicht
   const totaal = SPRITE_POOL.reduce((s, sp) => s + (RARITEIT_GEWICHT[sp.rariteit] || 1), 0);
@@ -12143,8 +12179,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             alignItems: "center", justifyContent: "center", gap: 1,
                             boxShadow: isUit ? `0 0 14px ${kleur}88` : "none",
                           }}>
-                          <span style={{ fontSize: 22, filter: heeft ? "none" : "grayscale(1) brightness(0.4)", opacity: heeft ? 1 : 0.5 }}>
-                            {heeft ? s.emoji : "❔"}
+                          <span style={{ filter: heeft ? "none" : "grayscale(1) brightness(0.4)", opacity: heeft ? 1 : 0.5 }}>
+                            {heeft ? <SpriteVibeMetGezicht emoji={s.emoji} size={22} /> : <span style={{ fontSize: 22 }}>❔</span>}
                           </span>
                           <span style={{ fontSize: 8, opacity: heeft ? 0.85 : 0.4, fontWeight: 700, lineHeight: 1 }}>
                             {heeft ? s.naam : "???"}
@@ -12256,8 +12292,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
               {grabbelBanner.veiliggesteld ? "🟢 Kluis-portaal" : "🎁 Grabbelton"}
             </div>
-            <div style={{ fontSize: 52, margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
-              {grabbelBanner.emoji}
+            <div style={{ margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
+              <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} />
             </div>
             <div style={{ fontSize: 22, fontWeight: 800, color: kleur }}>
               {grabbelBanner.naam}
