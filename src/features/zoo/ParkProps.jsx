@@ -468,6 +468,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,
     tx: 0, tz: 0, rest: (seed % 3) * 0.7, resting: true, phase: seed,
     need: null, needT: 8 + (seed % 10), acting: false, coinT: -1, bt: 0,
+    // 🚶 natuurlijker lopen (Mark 2026-06-27): elke bezoeker een eigen loop-tempo
+    // + een zachte 'rondkijk'-draairichting tijdens pauzes.
+    speedF: 0.82 + ((seed * 7) % 42) / 100,            // ~0.82..1.23
+    idleTurn: ((seed % 2) ? 1 : -1) * (0.25 + (seed % 4) * 0.12),
   });
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
   const toon = (b, dur) => { setBubble(b); st.current.bt = dur; };
@@ -521,6 +525,8 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // Wandelen / aankomen.
     if (s.resting) {
       s.rest -= dt;
+      // langzaam rondkijken tijdens de pauze i.p.v. bevroren staren
+      node.rotation.y += s.idleTurn * dt * 0.6;
       if (s.rest <= 0) { const a = Math.random() * Math.PI * 2; const r = 4 + Math.random() * 17; s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r; s.resting = false; }
     } else {
       const dx = s.tx - s.x, dz = s.tz - s.z; const d = Math.hypot(dx, dz);
@@ -539,7 +545,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         }
         s.resting = true; s.rest = 1 + Math.random() * 2.5;
       } else {
-        const speed = s.acting ? 2.2 : 1.7;
+        const speed = (s.acting ? 2.2 : 1.7) * s.speedF;
         const step = Math.min(d, dt * speed);
         const nx = s.x + (dx / d) * step, nz = s.z + (dz / d) * step;
         // "Ontsnap-modus": opgesloten in een verblijf → tijdelijk dwars door het
@@ -556,7 +562,12 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           if (!solid(nx, s.z)) { s.x = nx; moved = true; }
           if (!solid(s.x, nz)) { s.z = nz; moved = true; }
         }
-        node.rotation.y = Math.atan2(dx, dz);
+        // Vloeiend naar de looprichting draaien i.p.v. instant snappen.
+        const doelHoek = Math.atan2(dx, dz);
+        let draaiDiff = doelHoek - node.rotation.y;
+        while (draaiDiff > Math.PI) draaiDiff -= Math.PI * 2;
+        while (draaiDiff < -Math.PI) draaiDiff += Math.PI * 2;
+        node.rotation.y += draaiDiff * Math.min(1, dt * 7);
         if (!moved) {
           s.stuck = (s.stuck || 0) + dt;
           if (s.stuck > 0.35) {
