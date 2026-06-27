@@ -386,7 +386,8 @@ const MUTATOR_POOL = [
   { id: "minispeler", naam: "Mini-speler",           beschrijving: "Speler is kleiner — moeilijker te raken.",          emoji: "🐭", kans: 1 },
   { id: "tempoplus",  naam: "Snelheid +25%",         beschrijving: "Wereld scrollt sneller, meer ringen per minuut.",   emoji: "💨", kans: 1 },
   { id: "ringregen",  naam: "Ringen-regen",          beschrijving: "Veel meer ringen, maar ook meer obstakels.",        emoji: "💍", kans: 1 },
-  { id: "shipmode",   naam: "Ship-mode",             beschrijving: "Houd de spatie ingedrukt om omhoog te stuwen. Loslaten = vallen.", emoji: "🚀", kans: 1 },
+  // Ship-mode (hold-to-jump) verwijderd op Brian's verzoek 2026-06-27 — "dat is
+  // geen kracht maar sabotage". Komt nu nooit meer voor.
 ];
 function kiesMutator() {
   // Weighted random op kans
