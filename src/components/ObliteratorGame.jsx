@@ -155,7 +155,7 @@ const SPRITE_POOL = [
   { id: "violetide", naam: "Violetide", emoji: "🟣", rariteit: "secret", secret: true, ability: "Paarse vloed — een geheime water-kracht 💧" },
   // ✦✦✦ SECRET — Moonwalker (Brian 2026-06-27): MJ-figuur, rood pak + krullend
   // haar, zingt + loopt heen en weer. Eigen gezicht (geen standaard-overlay).
-  { id: "moonwalker", naam: "Moonwalker", emoji: "🕺", rariteit: "secret", secret: true, michael: true, eigenGezicht: true, ability: "King of Pop — danst, zingt & blaast obstakels weg 🕺" },
+  { id: "moonwalker", naam: "Michael Jackson", emoji: "🕺", rariteit: "secret", secret: true, michael: true, eigenGezicht: true, ability: "King of Pop — danst, zingt & blaast obstakels weg 🕺" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
 
