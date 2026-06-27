@@ -77,10 +77,11 @@ const SPRITE_GRABBEL_LEVELS = 10; // elke 10 levels
 const RARITEIT_KLEUR = {
   groen: "#5fd35f", blauw: "#45b6f5", paars: "#b15cff",
   legendarisch: "#ffb13b", speciaal: "#ff5fa2", mythisch: "#ff4d4d",
+  secret: "#c44dff", // ✦ SECRET — paarse water-vibe (Brian 2026-06-27)
 };
-// gewicht = relatieve kans per maatje (zeldzamer = lager)
+// gewicht = relatieve kans per maatje (zeldzamer = lager). secret = ultra-zeldzaam.
 const RARITEIT_GEWICHT = {
-  groen: 30, blauw: 18, paars: 10, legendarisch: 5, speciaal: 4, mythisch: 1,
+  groen: 30, blauw: 18, paars: 10, legendarisch: 5, speciaal: 4, mythisch: 1, secret: 0.3,
 };
 const SPRITE_POOL = [
   // GROEN (algemeen) — `ability` is de kracht die je in de Spritevibes-kast ziet
@@ -149,6 +150,9 @@ const SPRITE_POOL = [
   { id: "nova",     naam: "Nova",      emoji: "💫", rariteit: "mythisch", ability: "Supernova — explosie van licht 💫" },
   { id: "apex",     naam: "Apex",      emoji: "🌋", rariteit: "mythisch", ability: "Vulkaankracht — laat de grond beven 🌋" },
   { id: "origin",   naam: "Origin",    emoji: "🐼", rariteit: "mythisch", ability: "Oerkracht — de allereerste pandakracht 🐼" },
+  // ✦✦✦ SECRET (Brian 2026-06-27) — ultra-zeldzame paarse water-vibe met een
+  // eigen, realistisch getekend lichaam (zie SpriteVibeMetGezicht customBody).
+  { id: "violetide", naam: "Violetide", emoji: "🟣", rariteit: "secret", secret: true, ability: "Paarse vloed — een geheime water-kracht 💧" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
 
@@ -175,6 +179,8 @@ const SPRITE_EFFECT = {
   // mythisch
   infinity:"schild", omega:"schild", voidking:"schild", prismatic:"score", godspark:"tempo",
   reality:"magneet", zenith:"munt", nova:"score", apex:"sprong", origin:"score",
+  // secret
+  violetide:"schild",
 };
 // Kid-vriendelijk labeltje per effect — getoond in de Spritevibes-kast.
 const SPRITE_EFFECT_LABEL = {
@@ -185,7 +191,7 @@ const SPRITE_EFFECT_LABEL = {
   sprong:  "⬆️ Hoger springen",
   tempo:   "💨 Sneller rennen",
 };
-const RARITEIT_TIER = { groen:1, blauw:2, paars:3, legendarisch:4, speciaal:4, mythisch:5 };
+const RARITEIT_TIER = { groen:1, blauw:2, paars:3, legendarisch:4, speciaal:4, mythisch:5, secret:6 };
 // Geeft een kracht-object terug in hetzelfde formaat als getSkinKracht().
 function getSpriteKracht(id, niveau) {
   const meta = id ? SPRITE_BY_ID[id] : null;
@@ -210,20 +216,58 @@ function spriteEmotie(rariteit) {
   if (rariteit === "mythisch") return "boos";
   return null;
 }
-// 😊😠 Elke spritevibe een schattig gezichtje (Brian 2026-06-27): de emoji + een
-// overlay met googly-oogjes (knipperen + rondkijken) en een mond (open/dicht).
-// emotie: "blij" = lach + roze wangetjes, "boos" = wenkbrauwen + frons.
-function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false }) {
+// ✦ SECRET — realistische paarse water-vibe (Brian 2026-06-27, MAX DETAIL):
+// een glossy water-orb met diepe paarse gradient, binnen-gloed, glans-highlights
+// en een bewegende water-schittering. Krijgt hetzelfde gezicht als de andere.
+function PaarseWaterVibe({ size = 22 }) {
+  return (
+    <span style={{ position: "relative", display: "block", width: size, height: size }}>
+      {/* hoofd-orb met diepe paarse water-gradient + binnen-schaduw + glow */}
+      <span style={{
+        position: "absolute", inset: 0, borderRadius: "50% 50% 52% 52% / 54% 54% 50% 50%",
+        background: "radial-gradient(circle at 36% 30%, #f0d4ff 0%, #c98cff 22%, #9b3df0 50%, #6a16c4 74%, #3a0a78 100%)",
+        boxShadow: `inset 0 ${-size * 0.16}px ${size * 0.22}px rgba(30,0,70,0.7), inset 0 ${size * 0.06}px ${size * 0.12}px rgba(255,255,255,0.35), 0 0 ${size * 0.35}px rgba(170,80,255,0.65)`,
+        overflow: "hidden",
+      }}>
+        {/* binnenste water-gloed onderin */}
+        <span style={{
+          position: "absolute", left: "12%", right: "12%", bottom: "8%", height: "38%", borderRadius: "50%",
+          background: "radial-gradient(ellipse at center, rgba(200,140,255,0.6), rgba(200,140,255,0) 70%)",
+        }} />
+        {/* bewegende glans-schittering over het water */}
+        <span style={{
+          position: "absolute", top: "-30%", left: "-45%", width: "55%", height: "160%",
+          background: "linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%)",
+          animation: "obliterator-water-shimmer 3.6s ease-in-out infinite",
+        }} />
+      </span>
+      {/* grote glossy highlight links-boven */}
+      <span style={{
+        position: "absolute", top: size * 0.12, left: size * 0.15, width: size * 0.34, height: size * 0.24,
+        borderRadius: "50%", background: "radial-gradient(circle at 40% 40%, rgba(255,255,255,0.95), rgba(255,255,255,0) 70%)",
+      }} />
+      {/* kleine secundaire glans rechts-onder */}
+      <span style={{
+        position: "absolute", top: size * 0.54, left: size * 0.62, width: size * 0.13, height: size * 0.1,
+        borderRadius: "50%", background: "rgba(255,255,255,0.6)",
+      }} />
+    </span>
+  );
+}
+// 😊😠😂 Elke spritevibe een schattig gezichtje (Brian 2026-06-27): emoji (of een
+// customBody zoals de water-vibe) + een overlay met googly-oogjes (knipperen +
+// rondkijken) en een mond (open/dicht). emotie: "blij"/"boos". lachen = grote
+// open lach + blije oogjes + giggle (gebruikt als je een vibe wint).
+function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false, lachen = false, customBody = null }) {
   const eye = Math.max(3, size * 0.2);
   const pup = Math.max(1.5, eye * 0.48);
   const gap = size * 0.14;
-  // Gespreide dans-vertraging per vibe (deterministisch uit de emoji) zodat ze
-  // niet allemaal tegelijk dansen.
-  const dansDelay = ((emoji.codePointAt(0) || 0) % 25) / 10;
+  const dansDelay = (((emoji && emoji.codePointAt(0)) || 0) % 25) / 10;
   const browW = eye * 0.95, browH = Math.max(1.5, size * 0.06);
   const wang = Math.max(2.5, size * 0.1);
   const mondRadius = emotie === "boos" ? "62% 62% 35% 35%"
     : emotie === "blij" ? "40% 40% 72% 72%" : "42% 42% 58% 58%";
+  const Wang = () => <span style={{ width: wang, height: wang, borderRadius: "50%", background: "rgba(255,120,150,0.75)" }} />;
   const Mond = () => (
     <span style={{
       width: size * 0.3, height: size * 0.2, background: "#1a1a1a",
@@ -231,10 +275,24 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false 
       animation: "obliterator-mond 2.6s infinite", transformOrigin: "center",
     }} />
   );
+  // 😂 grote lach-mond met tongetje
+  const LachMond = () => (
+    <span style={{
+      position: "relative", width: size * 0.42, height: size * 0.3, background: "#1a1a1a",
+      borderRadius: "32% 32% 55% 55%", overflow: "hidden",
+    }}>
+      <span style={{
+        position: "absolute", left: "22%", right: "22%", bottom: "-8%", height: "58%",
+        background: "#ff6b81", borderRadius: "50%",
+      }} />
+    </span>
+  );
+  const bodyAnim = lachen ? { animation: "obliterator-giggle 0.7s ease-in-out infinite" }
+    : dansen ? { animation: "obliterator-dans 5s ease-in-out infinite", animationDelay: `${dansDelay}s` } : {};
   return (
     <span style={{ position: "relative", display: "inline-block", lineHeight: 1, fontSize: size, verticalAlign: "middle" }} aria-hidden="true">
       {/* 🌑 grond-schaduwtje onder de springende vibe — krimpt als-ie hoog springt */}
-      {dansen && (
+      {dansen && !lachen && (
         <span style={{
           position: "absolute", left: "50%", bottom: -size * 0.06,
           marginLeft: -size * 0.3, width: size * 0.6, height: size * 0.16,
@@ -245,45 +303,50 @@ function SpriteVibeMetGezicht({ emoji, size = 22, emotie = null, dansen = false 
           pointerEvents: "none",
         }} />
       )}
-      <span style={{
-        position: "relative", display: "block",
-        transformOrigin: "bottom center",
-        ...(dansen ? { animation: "obliterator-dans 5s ease-in-out infinite", animationDelay: `${dansDelay}s` } : {}),
-      }}>
-      <span style={{ display: "block" }}>{emoji}</span>
+      <span style={{ position: "relative", display: "block", transformOrigin: "bottom center", ...bodyAnim }}>
+      {customBody ? customBody : <span style={{ display: "block" }}>{emoji}</span>}
       <span style={{
         position: "absolute", left: 0, right: 0, top: "50%",
         transform: "translateY(-58%)",
         display: "flex", flexDirection: "column", alignItems: "center", gap: size * 0.05,
         pointerEvents: "none",
       }}>
-        {emotie === "boos" && (
+        {emotie === "boos" && !lachen && (
           <span style={{ display: "flex", gap: gap * 1.1, marginBottom: -size * 0.05 }}>
             <span style={{ width: browW, height: browH, background: "#1a1a1a", borderRadius: 2, transform: "rotate(22deg)" }} />
             <span style={{ width: browW, height: browH, background: "#1a1a1a", borderRadius: 2, transform: "rotate(-22deg)" }} />
           </span>
         )}
         <span style={{ display: "flex", gap }}>
-          {[0, 1].map((i) => (
-            <span key={i} style={{
-              width: eye, height: eye, borderRadius: "50%", background: "#fff",
-              boxShadow: "0 0 0 0.5px rgba(0,0,0,0.3)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              animation: "obliterator-knipper 4s infinite",
-              transformOrigin: "center",
-            }}>
-              <span style={{
-                width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a",
-                animation: "obliterator-kijk 6s infinite", transformOrigin: "center",
-              }} />
-            </span>
-          ))}
+          {lachen
+            ? [0, 1].map((i) => (
+                <span key={i} style={{
+                  width: eye * 1.1, height: eye * 0.62,
+                  borderBottom: `${Math.max(1.5, browH)}px solid #1a1a1a`,
+                  borderRadius: "0 0 65% 65%",
+                }} />
+              ))
+            : [0, 1].map((i) => (
+                <span key={i} style={{
+                  width: eye, height: eye, borderRadius: "50%", background: "#fff",
+                  boxShadow: "0 0 0 0.5px rgba(0,0,0,0.3)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  animation: "obliterator-knipper 4s infinite", transformOrigin: "center",
+                }}>
+                  <span style={{
+                    width: pup, height: pup, borderRadius: "50%", background: "#1a1a1a",
+                    animation: "obliterator-kijk 6s infinite", transformOrigin: "center",
+                  }} />
+                </span>
+              ))}
         </span>
-        {emotie === "blij" ? (
+        {lachen ? (
           <span style={{ display: "flex", alignItems: "center", gap: size * 0.03 }}>
-            <span style={{ width: wang, height: wang, borderRadius: "50%", background: "rgba(255,120,150,0.75)" }} />
-            <Mond />
-            <span style={{ width: wang, height: wang, borderRadius: "50%", background: "rgba(255,120,150,0.75)" }} />
+            <Wang /><LachMond /><Wang />
+          </span>
+        ) : emotie === "blij" ? (
+          <span style={{ display: "flex", alignItems: "center", gap: size * 0.03 }}>
+            <Wang /><Mond /><Wang />
           </span>
         ) : (
           <Mond />
@@ -12230,7 +12293,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             </div>
             {/* Grid */}
             <div style={{ overflowY: "auto", padding: "8px 12px 12px", flex: 1 }}>
-              {["groen","blauw","paars","legendarisch","speciaal","mythisch"].map((rar) => (
+              {["groen","blauw","paars","legendarisch","speciaal","mythisch","secret"].map((rar) => (
                 <div key={rar} style={{ marginBottom: 12 }}>
                   <div style={{
                     fontSize: 11, fontWeight: 800, letterSpacing: 1, textTransform: "uppercase",
@@ -12257,7 +12320,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             boxShadow: isUit ? `0 0 14px ${kleur}88` : "none",
                           }}>
                           <span style={{ filter: heeft ? "none" : "grayscale(1) brightness(0.4)", opacity: heeft ? 1 : 0.5 }}>
-                            {heeft ? <SpriteVibeMetGezicht emoji={s.emoji} size={22} emotie={spriteEmotie(s.rariteit)} dansen={s.rariteit === "mythisch"} /> : <span style={{ fontSize: 22 }}>❔</span>}
+                            {heeft ? <SpriteVibeMetGezicht emoji={s.emoji} size={22} emotie={spriteEmotie(s.rariteit)} dansen={s.rariteit === "mythisch"} customBody={s.secret ? <PaarseWaterVibe size={22} /> : null} /> : <span style={{ fontSize: 22 }}>❔</span>}
                           </span>
                           <span style={{ fontSize: 8, opacity: heeft ? 0.85 : 0.4, fontWeight: 700, lineHeight: 1 }}>
                             {heeft ? s.naam : "???"}
@@ -12370,7 +12433,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               {grabbelBanner.veiliggesteld ? "🟢 Kluis-portaal" : "🎁 Grabbelton"}
             </div>
             <div style={{ margin: "6px 0", filter: `drop-shadow(0 0 14px ${kleur})` }}>
-              <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} emotie={spriteEmotie(grabbelBanner.rariteit)} dansen={grabbelBanner.rariteit === "mythisch"} />
+              <SpriteVibeMetGezicht emoji={grabbelBanner.emoji} size={52} emotie={spriteEmotie(grabbelBanner.rariteit)} lachen={true} customBody={grabbelBanner.secret ? <PaarseWaterVibe size={52} /> : null} />
             </div>
             <div style={{ fontSize: 22, fontWeight: 800, color: kleur }}>
               {grabbelBanner.naam}
@@ -12515,6 +12578,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           76%           { transform: scale(0.68); opacity: 0.22; }
           82%           { transform: scale(1);    opacity: 0.4; }
           90%           { transform: scale(0.82); opacity: 0.3; }
+        }
+        @keyframes obliterator-giggle {
+          0%, 100% { transform: translateY(0) scale(1); }
+          25%      { transform: translateY(-9%) scale(1.06); }
+          50%      { transform: translateY(0) scale(0.98); }
+          75%      { transform: translateY(-5%) scale(1.04); }
+        }
+        @keyframes obliterator-water-shimmer {
+          0%   { transform: translateX(-40%) rotate(16deg); opacity: 0; }
+          35%  { opacity: 0.85; }
+          65%  { opacity: 0.85; }
+          100% { transform: translateX(320%) rotate(16deg); opacity: 0; }
         }
       `}</style>
     </div>
