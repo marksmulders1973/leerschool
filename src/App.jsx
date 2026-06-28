@@ -9,6 +9,7 @@ import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate
 import LoadingOverlay from "./components/LoadingOverlay.jsx";
 import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
+import DeelTrotsKnop from "./components/DeelTrotsKnop.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
 import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
@@ -2104,6 +2105,13 @@ export default function App() {
           >
             Klaar voor vandaag
           </button>
+        </div>
+        {/* Deel-loop (Titan 2026-06-28): op het moment van trots kan de ouder
+            de mijlpaal met andere ouders delen → mond-tot-mond-groei. Secundair
+            onder een scheidingslijn, sluit niet automatisch zodat de
+            kopieer-bevestiging zichtbaar blijft. */}
+        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(13,27,46,0.18)" }}>
+          <DeelTrotsKnop />
         </div>
       </div>
     )}
