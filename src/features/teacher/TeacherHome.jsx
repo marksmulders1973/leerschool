@@ -7,7 +7,7 @@ import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
 import ProBadge from "../../subscription/ProBadge.jsx";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
   // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
@@ -348,10 +348,18 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
             <span style={{ fontWeight: 700 }}>Voortgang</span>
           </button>
         </div>
-        <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1565c0, #1e88e5)", width: "100%", marginBottom: 16 }} onClick={onManageClasses}>
+        <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1565c0, #1e88e5)", width: "100%", marginBottom: 12 }} onClick={onManageClasses}>
           <span style={{ fontSize: 28 }}>👥</span>
           <span style={{ fontWeight: 700 }}>Mijn Klassen{classes.length > 0 ? ` (${classes.length})` : ""}</span>
         </button>
+        {/* Takenlijst (Brian's idee 2026-06-28): zet een lijstje leerpaden klaar
+            voor de klas i.p.v. alleen een toets. */}
+        {onCreateTakenlijst && (
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #7b1fa2, #9c27b0)", width: "100%", marginBottom: 16 }} onClick={onCreateTakenlijst}>
+            <span style={{ fontSize: 28 }}>📋</span>
+            <span style={{ fontWeight: 700 }}>Nieuwe Takenlijst</span>
+          </button>
+        )}
 
         {/* ── QR code sectie ── */}
         <div style={{ marginBottom: 20, padding: "16px", background: "#0d1b2a", borderRadius: 16, border: "1px solid #2a3f5f", textAlign: "center" }}>

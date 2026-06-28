@@ -69,6 +69,7 @@ const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
+const TakenlijstMaker = lazy(() => import("./components/TakenlijstMaker.jsx"));
 const ParkBezoek = lazy(() => import("./components/ParkBezoek.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
@@ -1330,6 +1331,7 @@ export default function App() {
           isTeacherPro={isTeacherPro}
           trialDaysLeft={trialDaysLeft}
           onCreateQuiz={() => quizLimitReached ? setPage("pro") : setPage("create-quiz")}
+          onCreateTakenlijst={() => setPage("takenlijst-maker")}
           onViewProgress={() => setPage("teacher-progress")}
           onManageClasses={() => setPage("class-manager")}
           onUpgrade={() => setPage("pro")}
@@ -1548,6 +1550,11 @@ export default function App() {
           onPlayReward={() => setPage("zoo")}
           onHome={goHome}
         />
+      )}
+      {page === "takenlijst-maker" && (
+        <Suspense fallback={<PageLoader />}>
+          <TakenlijstMaker userId={authUser?.id} onClose={() => setPage("teacher-home")} />
+        </Suspense>
       )}
       {page === "self-study" && (
         <SelfStudy
