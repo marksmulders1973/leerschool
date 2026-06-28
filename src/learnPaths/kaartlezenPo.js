@@ -29,7 +29,7 @@ const steps = [
         q: "Welke is **GEEN** onderdeel van een kaart?",
         options: ["Geluid","Schaal","Kompasroos","Legenda"],
         answer: 0,
-        wrongHints: [null,"Wel onderdeel.","Wel onderdeel.","Wel onderdeel."],
+        wrongHints: [null,"De schaal staat wél op een kaart — die zegt hoeveel kleiner alles getekend is.","De kompasroos hoort bij een kaart — die wijst het noorden aan.","De legenda hoort er juist bij — die legt de symbolen uit."],
         uitlegPad: {
           stappen: [{ titel: "Kaart = visueel", tekst: "Kaart is plat/visueel — geen geluid. Schaal/kompasroos/legenda horen erbij." }],
           woorden: [{ woord: "kaartonderdelen", uitleg: "Titel, schaal, kompasroos, legenda, coördinaten." }],

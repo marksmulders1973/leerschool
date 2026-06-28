@@ -447,7 +447,7 @@ const steps = [
             nogSimpeler: "Moeder + pasta = anecdote",
           },
         },
-        wrongHints: [null,"Hoofdzaak.","Hoofdzaak.","Hoofdzaak."],
+        wrongHints: [null,"Dit gaat over gezond eten in het algemeen — een hoofdzaak.","Een algemeen feit over het onderwerp — dat is een hoofdzaak.","Algemene info over gezond eten — hoofdzaak. Welke zin gaat over één persoon?"],
       },
       {
         q: "Wat is **NIET** een goed samenvattings-strategie?",
