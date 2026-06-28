@@ -71,7 +71,7 @@ Geverifieerd via Supabase + 2 review-agents. Kerncijfers 7d: 126 sessies (~19 é
 - [ ] **B4.2 Geen vraag-niveau inzicht**: leaderboard slaat alleen score op (App.jsx:873-887). Answers-array meesturen → fout-percentage per vraag.
 - [ ] **B4.3 Kind-gegevens (naam/mail/06) in localStorage** ClassManager (TeacherComponents.jsx:41-47) — naar Supabase met RLS, standaard alleen voornaam.
 - [ ] **B4.4 Naam-koppeling ouder = privacy-lek**: voornaam-match accepteert elke gelijknamige (KindAcceptBanner.jsx:23-27) en toont landelijke leaderboard-data (OuderDashboard.jsx:96-99). Alleen koppelcode-flow houden.
-- [ ] **B4.5 Leerkracht kan leerpad/Doorstroomtoets-onderdeel niet klaarzetten** als opdracht — USP onbenut in klas-kanaal.
+- [x] ✓28/6 **B4.5 Leerkracht-takenlijst** (Brian's idee) — juf zet lijstje leerpaden klaar → deelcode → leerling vinkt af (uit learn_progress) → park-beloning. Hergebruikt quizzes-tabel (geen migratie). `TakenlijstView`/`TakenlijstMaker`/`takenlijst.js` + App+TeacherHome-wiring. End-to-end browser-geverifieerd. Memory: `project_studiebol_takenlijst`. **Vervolg (optioneel):** taak→toets-link, deadline, per-klas, leerkracht-voortgang.
 
 ### B5 — Toegankelijkheid (kinderen met leerproblemen = kern-doelgroep)
 - [x] ✓13/6 **B5.1 btnPrimary wit-op-groen ≈ 2,2:1 contrast** (LearnPath.jsx:2102-2117) — hoofdknop hele leerflow. Donkere tekst (patroon bestaat al op :973).
