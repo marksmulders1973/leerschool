@@ -42,7 +42,7 @@ const steps = [
         q: "Maak een vraag van *Tom fietst naar school.* Welk woord springt vooraan en is dus de persoonsvorm?",
         options: ["Fietst", "Tom", "naar", "school"],
         answer: 0,
-        wrongHints: [null, "Dat is degene die fietst, niet wat hij doet.", "Dat is een klein verbindingswoord.", "Dat is de plaats."],
+        wrongHints: [null, "Dat is degene die de handeling doet, niet de handeling zelf.", "Dat is een klein verbindingswoord.", "Dat is de plaats."],
         uitlegPad: {
           stappen: [{ titel: "Ja/nee-vraag maken", tekst: "'Fietst Tom naar school?' — het werkwoord 'fietst' springt naar voren. Dat is de persoonsvorm." }],
           niveaus: {

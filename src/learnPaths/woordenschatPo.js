@@ -141,7 +141,7 @@ const steps = [
         q: "Tegenstelling van **'zwaar'**?",
         options: ["licht","groot","klein","donker"],
         answer: 0,
-        wrongHints: [null,"Niet — past bij groot/klein (afmeting), zwaar gaat over gewicht.","Past bij groot/klein, niet bij zwaar.","Past bij licht/donker (helderheid), niet zwaar."],
+        wrongHints: [null,"Niet — past bij groot/klein (afmeting), zwaar gaat over gewicht.","Past bij groot/klein, niet bij zwaar.","Dat hoort bij helderheid (donker/...), niet bij gewicht."],
         uitlegPad: {
           stappen: [{ titel: "Zwaar ↔ licht", tekst: "Zwaar = veel gewicht. Tegenovergesteld = licht (weinig gewicht)." }],
           woorden: [{ woord: "licht", uitleg: "Twee betekenissen: weinig gewicht (↔ zwaar) of veel helderheid (↔ donker)." }],
