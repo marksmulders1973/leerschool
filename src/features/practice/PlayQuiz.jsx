@@ -511,7 +511,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             <button
               type="button"
               onClick={() => setZoomedImage(questionImage)}
-              aria-label="Vergroot afbeelding"
+              aria-label="Afbeelding bij de vraag — tik om te vergroten"
               title="Tik om te vergroten"
               style={{ position: "relative", padding: 0, border: 0, background: "transparent", cursor: "zoom-in", flexShrink: 0 }}
             >
@@ -665,7 +665,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 <button
                   type="button"
                   onClick={() => setZoomedImage(questionImage)}
-                  aria-label="Vergroot afbeelding"
+                  aria-label="Afbeelding bij de vraag — tik om te vergroten"
                   title="Tik om te vergroten"
                   style={{ position: "relative", width: "100%", padding: 0, border: 0, background: "transparent", cursor: "zoom-in", marginBottom: question.source ? 8 : 0, display: "block" }}
                 >
@@ -974,7 +974,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           >×</button>
           <img
             src={zoomedImage}
-            alt=""
+            alt="Afbeelding bij de vraag"
             onClick={(e) => e.stopPropagation()}
             style={{
               maxWidth: "100%",
