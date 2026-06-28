@@ -172,7 +172,7 @@ const steps = [
         q: "Wat is **KNMI**?",
         options: ["NL-weerinstituut (De Bilt)", "Belasting", "Sport", "School"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "De Belastingdienst gaat over geld, niet over het weer.", "Geen sport — dit instituut meet en voorspelt het weer.", "Geen school — denk aan wie het weerbericht maakt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is KNMI?", tekst: "**KNMI** = **Koninklijk Nederlands Meteorologisch Instituut**. Sinds **1854** verantwoordelijk voor weervoorspelling + onderzoek naar klimaat in Nederland." },
@@ -244,7 +244,7 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Weer vs klimaat**: weer = ?", options: ["Nu / vandaag", "Gemiddelde jaren", "Geen verschil", "Niet bekend"], answer: 0, wrongHints: [null, "Klimaat.", "Wel.", "Wel."] },
-      { q: "**KNMI** zit in?", options: ["De Bilt", "Den Haag", "Amsterdam", "Rotterdam"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**KNMI** zit in?", options: ["De Bilt", "Den Haag", "Amsterdam", "Rotterdam"], answer: 0, wrongHints: [null, "Den Haag is de regeringsstad, niet de plek van het KNMI.", "De hoofdstad, maar niet waar het weerinstituut zit.", "De havenstad, niet waar het KNMI zit."] },
       { q: "**Hoge druk (H)** = ?", options: ["Goed weer", "Regen", "Storm", "Onweer"], answer: 0, wrongHints: [null, "Lage druk.", "Wind.", "Lage druk."] },
       { q: "**Beaufort 12** = ?", options: ["Orkaan (>32 m/s)", "Windstil", "Matige wind", "Sneeuwstorm"], answer: 0, wrongHints: [null, "0.", "5.", "Niet specifiek."] },
       { q: "**Eenheid neerslag**?", options: ["mm", "kg", "graden", "m³"], answer: 0, wrongHints: [null, "Niet.", "Temp.", "Niet."] },
@@ -331,7 +331,7 @@ const steps = [
       { q: "**Bliksem** is sneller dan **donder** omdat?", options: ["Licht reist sneller dan geluid","Bliksem komt eerst","Donder is verzonnen","Geen verschil"], answer: 0, wrongHints: [null, "Wel — maar wat is de REDEN?", "Donder bestaat wel.", "Wel verschil."] },
       { q: "Welk weersymbool betekent **regenbui**?", options: ["Wolk met druppels","Zon","Sneeuwvlok","Streep"], answer: 0, wrongHints: [null, "Mooi weer.", "Sneeuw.", "Niet."] },
       { q: "Wat is **luchtdruk**?", options: ["Kracht waarmee lucht drukt","Wind","Temperatuur","Vochtigheid"], answer: 0, wrongHints: [null, "Beweging lucht.", "Warmte.", "Vocht."] },
-      { q: "Hoge luchtdruk = welk weer?", options: ["Mooi/droog","Storm","Onweer","Regen"], answer: 0, wrongHints: [null, "Lage druk.", "Lage druk.", "Lage druk."] },
+      { q: "Hoge luchtdruk = welk weer?", options: ["Mooi/droog","Storm","Onweer","Regen"], answer: 0, wrongHints: [null, "Storm hoort bij lágedruk, niet hoge.", "Onweer komt bij lagedruk en opstijgende lucht.", "Regen hoort bij lagedruk — wat doet hoge druk dan?"] },
       { q: "Welke windrichting waait meestal in NL?", options: ["Zuidwest","Noord","Oost","Zuid"], answer: 0, wrongHints: [null, "Soms.", "Soms (oosterwind koud).", "Niet primair."] },
       { q: "Welke wolk lijkt op **bloemkool**?", options: ["Cumulus","Cirrus","Stratus","Cumulonimbus"], answer: 0, wrongHints: [null, "IJskristal.", "Vlakke laag.", "Onweerswolk."] },
       { q: "Welke schaal meet **temperatuur** in NL?", options: ["Celsius","Fahrenheit","Kelvin","Beaufort"], answer: 0, wrongHints: [null, "VS-stelsel.", "Wetenschap.", "Wind."] },

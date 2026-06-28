@@ -439,7 +439,7 @@ const steps = [
         },
       },
       { q: "**Tweede Wereldoorlog** duurde welke jaren in NL?", options: ["1940-1945","1914-1918","1939-1945","1945-1950"], answer: 0, wrongHints: [null, "WO1.", "Wereld-WO2 begin sept 1939.", "Wederopbouw."] },
-      { q: "**Anne Frank** zat in onderduik in?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Anne Frank** zat in onderduik in?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Niet de regeringsstad — denk aan het Achterhuis aan een gracht.", "Niet de havenstad — het Achterhuis staat er nog als museum.", "Niet Utrecht — Anne hield haar dagboek bij in het Achterhuis."] },
       { q: "**Tachtigjarige Oorlog** begon in welk jaar?", options: ["1568","1648","1500","1600"], answer: 0, wrongHints: [null, "Eind.", "Te vroeg.", "Te laat."] },
       { q: "**Gouden Eeuw** is welke eeuw?", options: ["17e eeuw","16e","18e","19e"], answer: 0, wrongHints: [null, "80jr oorlog.", "Te laat.", "Industrieel."] },
       { q: "Welke **kolonie** had NL het langst?", options: ["Indonesië","Brazilië","India","Vietnam"], answer: 0, wrongHints: [null, "Kort, ~30 jr.", "Niet NL-kolonie.", "Niet NL."] },
@@ -452,7 +452,7 @@ const steps = [
       { q: "**EU-lidmaatschap NL** sinds?", options: ["Begin EEG/EU (1957/1993)","1900","1965","2010"], answer: 0, wrongHints: [null, "Te vroeg.", "Niet exact.", "Veel later."] },
       { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars (steentijd)","Romeinen","Vikingen","Spanjaarden"], answer: 0, wrongHints: [null, "Veel later.", "Wel geweest.", "Niet eerste."] },
       { q: "Welke koningin **regeerde lang** in NL (62 jaar)?", options: ["Wilhelmina (1898-1948)","Juliana","Beatrix","Maxima"], answer: 0, wrongHints: [null, "Korter.", "Korter.", "Geen koningin."] },
-      { q: "**Watersnoodramp** Zeeland = welk jaar?", options: ["1953","1900","1945","1980"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Watersnoodramp** Zeeland = welk jaar?", options: ["1953","1900","1945","1980"], answer: 0, wrongHints: [null, "Te vroeg — het was ná de Tweede Wereldoorlog.", "1945 is het eind van de oorlog; de ramp kwam een paar jaar later.", "Te laat — het was in de jaren '50."] },
     ],
   },
 ];
