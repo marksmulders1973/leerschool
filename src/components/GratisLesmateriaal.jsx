@@ -43,12 +43,13 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
   const [vakken, setVakken] = useState(VAKKEN.filter((v) => v.kern).map((v) => v.id));
   const [status, setStatus] = useState("idle"); // idle | busy | error
   const [fout, setFout] = useState("");
+  const [rowId, setRowId] = useState(null); // id van de al-opgeslagen lead (stap 1)
 
   useEffect(() => {
     try { if (localStorage.getItem(doneKey)) setStep("done"); } catch {}
   }, []);
 
-  function naarProfiel(e) {
+  async function naarProfiel(e) {
     e?.preventDefault?.();
     if (!email.trim().includes("@") || email.trim().length < 5) {
       setFout("Vul even een geldig e-mailadres in (bv. naam@voorbeeld.nl)."); return;
@@ -56,7 +57,26 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
     if (!consent) {
       setFout("Vink even aan dat je ouder/verzorger bent en akkoord gaat."); return;
     }
-    setFout("");
+    setFout(""); setStatus("busy");
+    // Lead DIRECT vastleggen (Titan-fix 2026-06-28): e-mail + ouder-consent zijn
+    // hier al gegeven, dus sla nú op. Voorheen gebeurde de insert pas ná de
+    // optionele profiel-stap → iedereen die daar afhaakte ging verloren (0
+    // aanmeldingen in 17 dagen). Het profiel verrijkt straks alleen nog deze rij.
+    try {
+      const { data, error } = await supabase.from("upgrade_waitlist").insert({
+        email: email.trim(),
+        plan: "gratis-lesmateriaal",
+        source,
+        consent_at: new Date().toISOString(),
+        ref: getIncomingRef(),
+      }).select("id").single();
+      if (!error && data?.id) {
+        setRowId(data.id);
+        try { localStorage.setItem(doneKey, "1"); } catch {}
+        track("lesmateriaal_signup", { source, groep: "", vakken: 0, stap: "email" });
+      }
+    } catch { /* niet blokkeren — stap 2 doet desnoods een fallback-insert */ }
+    setStatus("idle");
     setStep("profiel");
   }
 
@@ -70,6 +90,21 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
 
   async function meldAan() {
     setStatus("busy"); setFout("");
+    // Stap 1 sloeg de lead al op. Hier verrijken we 'm alleen met het profiel.
+    if (rowId) {
+      try {
+        await supabase.from("upgrade_waitlist").update({
+          kind_voornaam: voornaam.trim() || null,
+          kind_groep: groep || null,
+          vakken: vakken.length ? vakken : null,
+        }).eq("id", rowId);
+      } catch { /* lead is al binnen; profiel-verrijking is best-effort */ }
+      track("lesmateriaal_profiel", { source, groep: groep || "", vakken: vakken.length });
+      setStep("done");
+      onSubmitted?.();
+      return;
+    }
+    // Fallback: stap-1-insert was mislukt → nu alsnog de volledige aanmelding.
     try {
       const { error } = await supabase.from("upgrade_waitlist").insert({
         email: email.trim(),
@@ -81,7 +116,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
         vakken: vakken.length ? vakken : null,
         ref: getIncomingRef(),
       });
-      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
+      if (error) throw error;
       try { localStorage.setItem(doneKey, "1"); } catch {}
       track("lesmateriaal_signup", { source, groep: groep || "", vakken: vakken.length });
       setStep("done");
@@ -159,7 +194,9 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
               </span>
             </label>
 
-            <button type="submit" style={primaryBtn}>Verder →</button>
+            <button type="submit" disabled={status === "busy"} style={{ ...primaryBtn, opacity: status === "busy" ? 0.7 : 1 }}>
+              {status === "busy" ? "Bezig…" : "Verder →"}
+            </button>
           </form>
         </>
       )}
