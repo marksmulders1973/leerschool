@@ -202,10 +202,10 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welke is goed? — *We ___ in this street since 2010.* (NB: signaalwoord 'usually'?)\n\nKies bij: *Tom usually ___ to school by bike.*",
+        q: "Welke is goed? — *Tom usually ___ to school by bike.*",
         options: ["goes", "is going", "go", "going"],
         answer: 0,
-        wrongHints: [null, "Continuous past niet bij usually.", "Tom → goes, niet go.", "Geen -ing zonder hulpwerkwoord."],
+        wrongHints: [null, "Geen 'continuous' bij 'usually' (een gewoonte).", "Tom = hij → goes mét -s.", "Geen -ing zonder hulpwerkwoord."],
       },
       {
         q: "Welke is goed? — *Sarah ___ a film at the moment.*",
