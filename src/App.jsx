@@ -10,6 +10,8 @@ import LoadingOverlay from "./components/LoadingOverlay.jsx";
 import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import DeelTrotsKnop from "./components/DeelTrotsKnop.jsx";
+import TakenlijstView from "./components/TakenlijstView.jsx";
+import { isTakenlijst } from "./data/takenlijst.js";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
 import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
@@ -286,6 +288,9 @@ export default function App() {
 
   // Deep-link ?pad=<id> opent direct een leerpad (social-reclame-link).
   const [activeLearnPathId, setActiveLearnPathId] = useState(getInitialLeerpadId());
+  // Takenlijst (Brian's idee 2026-06-28): de leerkracht-takenlijst die een
+  // leerling via een code opende. Hergebruikt de quizzes-tabel (type-discriminator).
+  const [activeTakenlijst, setActiveTakenlijst] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
 
@@ -582,6 +587,8 @@ export default function App() {
         setPendingCode("");
         return;
       }
+      // Takenlijst (Brian) via deeplink → toon het takenlijst-scherm.
+      if (isTakenlijst(quiz)) { setActiveTakenlijst(quiz); setPendingCode(""); setPage("takenlijst"); return; }
       setCurrentQuiz(quiz);
       setPendingCode("");
       // Lees naam direct uit localStorage om stale closure te vermijden
@@ -1457,10 +1464,15 @@ export default function App() {
           onJoinQuiz={async (code) => {
             const upper = code.toUpperCase();
             const local = quizzes.find((q) => q.code.toUpperCase() === upper);
-            if (local) { setCurrentQuiz(local); setPendingCode(""); startGame(local, "self"); return; }
+            if (local) {
+              if (isTakenlijst(local)) { setActiveTakenlijst(local); setPendingCode(""); setPage("takenlijst"); return; }
+              setCurrentQuiz(local); setPendingCode(""); startGame(local, "self"); return;
+            }
             // Niet lokaal → zoek in Supabase
             const remote = await findQuizByCode(upper);
             if (!remote) return "not_found";
+            // Takenlijst (Brian) i.p.v. quiz? → toon het takenlijst-scherm.
+            if (isTakenlijst(remote)) { setActiveTakenlijst(remote); setPendingCode(""); setPage("takenlijst"); return; }
             setCurrentQuiz(remote);
             setPendingCode("");
             startGame(remote, "self");
@@ -1520,6 +1532,21 @@ export default function App() {
             setPage("examens");
           }}
           onOpenWishes={() => setPage("wishes")}
+        />
+      )}
+      {page === "takenlijst" && activeTakenlijst && (
+        <TakenlijstView
+          takenlijst={activeTakenlijst}
+          userName={userName || ""}
+          onOpenLeerpad={(pathId) => {
+            if (!pathId) return;
+            setActiveLearnPathId(pathId);
+            setActiveLearnStepIdx(0);
+            setLearnPathReturnPage("takenlijst");
+            setPage("learn-path");
+          }}
+          onPlayReward={() => setPage("zoo")}
+          onHome={goHome}
         />
       )}
       {page === "self-study" && (
