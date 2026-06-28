@@ -47,6 +47,18 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Rekenen Doorstroomtoets](https://leerkwartier.app/rekenen-doorstroomtoets.html):
   long-tail page over de 6 reken-domeinen + uitleg waarom 60-70% van
   reken-vragen redactiesommen zijn.
+- [Spelling Doorstroomtoets](https://leerkwartier.app/spelling-doorstroomtoets.html):
+  long-tail page over werkwoordspelling en de d/t-regel (grootste struikelblok
+  bij taalverzorging) + de "vervang door lopen"-truc, ei/ij, verdubbeling en
+  samenstellingen.
+- [Woordenschat Doorstroomtoets](https://leerkwartier.app/woordenschat-doorstroomtoets.html):
+  long-tail page over woordenschat als voorspeller van het toetsresultaat —
+  betekenis uit context afleiden, synoniemen/tegenstellingen, woorddelen en
+  schooltaalwoorden.
+- [Studievaardigheden Doorstroomtoets](https://leerkwartier.app/studievaardigheden-doorstroomtoets.html):
+  long-tail page over de onderschatte derde pijler — kaarten lezen, grafieken
+  en tabellen aflezen, informatie opzoeken, schema's en tijdlijnen ("scannen
+  en combineren").
 - [Cito-toets oefenen](https://leerkwartier.app/cito-toets-oefenen.html):
   voor mensen die "Cito" nog gebruiken ipv "Doorstroomtoets" — uitleg
   van de naamwijziging + oefenen per groep (6, 7, 8).
