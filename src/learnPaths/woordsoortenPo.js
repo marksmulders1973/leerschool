@@ -356,7 +356,7 @@ const steps = [
       { q: "*'Op de **tafel**.'* — Welk woordsoort is 'tafel'?", options: ["Zelfstandig naamwoord","Werkwoord","Bijvoeglijk","Voornaamwoord"], answer: 0, wrongHints: [null, "Geen actie.", "Geen eigenschap.", "Niet."] },
       { q: "Welk **voorzetsel** in: 'Ik zit OP de stoel'?", options: ["op","ik","zit","de"], answer: 0, wrongHints: [null, "Voornaamwoord.", "Werkwoord.", "Lidwoord."] },
       { q: "*'Hij rent **snel**.'* Wat is 'snel'?", options: ["Bijwoord","Bijvoeglijk","Werkwoord","Zelfst. nw"], answer: 0, wrongHints: [null, "Bijvoeglijk staat bij zn.", "Geen actie.", "Geen ding."] },
-      { q: "Wat is een **persoonlijk voornaamwoord**?", options: ["Vervangt een persoon (ik/jij/hij/zij)","Lidwoord","Voorzetsel","Bijwoord"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is een **persoonlijk voornaamwoord**?", options: ["Vervangt een persoon (ik/jij/hij/zij)","Lidwoord","Voorzetsel","Bijwoord"], answer: 0, wrongHints: [null, "Een lidwoord is 'de/het/een' — dat vervangt geen persoon.", "Een voorzetsel geeft plaats aan (op/onder/naast).", "Een bijwoord zegt iets over een werkwoord (snel, vaak)."] },
       { q: "*'Wij gaan **morgen** zwemmen.'* Wat is 'morgen'?", options: ["Bijwoord van tijd","Zelfst. nw","Voornaamwoord","Lidwoord"], answer: 0, wrongHints: [null, "Geen ding.", "Geen vervanging.", "Niet."] },
       { q: "**Hoeveel** woordsoorten kent het Nederlands ongeveer?", options: ["~8 hoofdsoorten","2","5","15"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
       { q: "**Telwoord** in: 'Ik heb 5 boeken'?", options: ["5 (vijf)","ik","heb","boeken"], answer: 0, wrongHints: [null, "Voornaamwoord.", "Werkwoord.", "Zelfst. nw."] },

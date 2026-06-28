@@ -412,7 +412,7 @@ const steps = [
       { q: "**56 ÷ 7** = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Te hoog."] },
       { q: "**Rest** bij 23 ÷ 5 = ?", options: ["3","2","4","0"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — wel rest."] },
       { q: "**Rest** bij 30 ÷ 4 = ?", options: ["2","1","4","0"], answer: 0, wrongHints: [null, "Niet.", "Te veel.", "Niet — wel rest."] },
-      { q: "Welke is **deeltafel** van 10: 10/10 = ?", options: ["1","10","100","0"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke is **deeltafel** van 10: 10/10 = ?", options: ["1","10","100","0"], answer: 0, wrongHints: [null, "Hoe vaak past 10 in 10? Dat is niet 10 keer.", "Delen maakt kleiner, niet groter.", "Een getal door zichzelf delen is niet 0 — er past wél iets in."] },
       { q: "**24 ÷ 6** = ?", options: ["4","6","8","3"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
       { q: "Welk getal **deelt** 48 in 8 gelijk?", options: ["6","8","4","12"], answer: 0, wrongHints: [null, "Aantal groepen.", "Niet.", "Niet."] },
       { q: "100 ÷ 25 = ?", options: ["4","25","5","10"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },

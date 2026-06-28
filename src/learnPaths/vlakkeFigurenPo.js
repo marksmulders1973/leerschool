@@ -400,7 +400,7 @@ const steps = [
       { q: "Eenheid van oppervlakte is?", options: ["m² of cm²","m","cm","kg"], answer: 0, wrongHints: [null, "Lengte.", "Lengte.", "Gewicht."] },
       { q: "Eenheid van omtrek is?", options: ["m of cm","m² of cm²","kg","L"], answer: 0, wrongHints: [null, "Oppervlakte.", "Gewicht.", "Inhoud."] },
       { q: "Hoeveel **hoeken** heeft een rechthoek?", options: ["4","3","5","6"], answer: 0, wrongHints: [null, "Driehoek.", "Vijfhoek.", "Zeshoek."] },
-      { q: "Hoeveel **gelijke zijden** heeft een vierkant?", options: ["4","2","3","1"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoeveel **gelijke zijden** heeft een vierkant?", options: ["4","2","3","1"], answer: 0, wrongHints: [null, "Tel álle zijden van een vierkant — het zijn er meer dan 2.", "3 gelijke zijden hoort bij een driehoek.", "Een vierkant heeft meerdere even lange zijden — tel ze."] },
       { q: "Omtrek van driehoek met zijden 3, 4, 5?", options: ["12","60","11","9"], answer: 0, wrongHints: [null, "Niet — som, geen ×.", "Niet.", "Niet."] },
       { q: "Oppervlakte vierkant 5 m bij 5 m?", options: ["25 m²","20 m²","10 m²","100 m²"], answer: 0, wrongHints: [null, "Omtrek.", "Niet.", "Niet."] },
       { q: "Tegel 50 cm × 50 cm. Oppervlakte?", options: ["2500 cm² (= 0,25 m²)","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
