@@ -458,7 +458,8 @@ export const SOCIAL_VRAGEN = {
   "studie3": {
     vak: "studievaardigheden",
     leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Grafieken lezen (groep 8)" },
-    vraag: "Een staafdiagram toont verkochte ijsjes: maandag **20**, dinsdag **35**, woensdag **50**, donderdag **15**. **Op welke dag werden de meeste ijsjes verkocht?**",
+    bronAfbeelding: { src: "/studievaardigheden/ijsjes-staafdiagram.svg", alt: "Staafdiagram van verkochte ijsjes per dag: maandag, dinsdag, woensdag en donderdag" },
+    vraag: "Kijk goed naar het **staafdiagram**. **Op welke dag werden de meeste ijsjes verkocht?**",
     options: ["woensdag", "dinsdag", "maandag", "donderdag"],
     answer: 0,
     wrongHints: [

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 270" width="380" height="270" role="img" aria-label="Staafdiagram verkochte ijsjes: maandag 20, dinsdag 35, woensdag 50, donderdag 15">
+  <rect x="0" y="0" width="380" height="270" rx="14" fill="#ffffff"/>
+  <text x="190" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#16314f">Verkochte ijsjes deze week</text>
+
+  <!-- assen -->
+  <line x1="48" y1="48" x2="48" y2="214" stroke="#c9d4e0" stroke-width="2"/>
+  <line x1="48" y1="214" x2="356" y2="214" stroke="#c9d4e0" stroke-width="2"/>
+
+  <!-- y-gridlijnen + labels (0,10,20,30,40,50) -->
+  <g font-family="Arial, sans-serif" font-size="11" fill="#7a8aa0">
+    <line x1="48" y1="214" x2="356" y2="214" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="218" text-anchor="end">0</text>
+    <line x1="48" y1="180.8" x2="356" y2="180.8" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="184.8" text-anchor="end">10</text>
+    <line x1="48" y1="147.6" x2="356" y2="147.6" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="151.6" text-anchor="end">20</text>
+    <line x1="48" y1="114.4" x2="356" y2="114.4" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="118.4" text-anchor="end">30</text>
+    <line x1="48" y1="81.2" x2="356" y2="81.2" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="85.2" text-anchor="end">40</text>
+    <line x1="48" y1="48" x2="356" y2="48" stroke="#eef2f7" stroke-width="1"/>
+    <text x="40" y="52" text-anchor="end">50</text>
+  </g>
+
+  <!-- staven (1 eenheid = 3.32px; nulpunt y=214). Eén kleur, zodat je op HOOGTE leest, niet op kleur. -->
+  <g fill="#4f8ff7">
+    <rect x="66"  y="147.6" width="48" height="66.4"  rx="4"/>
+    <rect x="146" y="98.8"  width="48" height="115.2" rx="4"/>
+    <rect x="226" y="48"    width="48" height="166"   rx="4"/>
+    <rect x="306" y="164.2" width="48" height="49.8"  rx="4"/>
+  </g>
+
+  <!-- waarde-labels boven de staven -->
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#16314f" text-anchor="middle">
+    <text x="90"  y="141">20</text>
+    <text x="170" y="92">35</text>
+    <text x="250" y="41">50</text>
+    <text x="330" y="158">15</text>
+  </g>
+
+  <!-- dag-labels onder de staven -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#42526b" text-anchor="middle">
+    <text x="90"  y="232">maandag</text>
+    <text x="170" y="232">dinsdag</text>
+    <text x="250" y="232">woensdag</text>
+    <text x="330" y="232">donderdag</text>
+  </g>
+</svg>

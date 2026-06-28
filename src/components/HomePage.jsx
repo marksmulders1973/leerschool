@@ -120,6 +120,10 @@ function ProefVraagKaart({ onStart }) {
       <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
         {String(vraag.vraag || "").replace(/\*\*/g, "")}
       </div>
+      {vraag.bronAfbeelding?.src && (
+        <img src={vraag.bronAfbeelding.src} alt={vraag.bronAfbeelding.alt || "Afbeelding bij de vraag"} loading="lazy"
+          style={{ display: "block", width: "100%", maxWidth: 360, margin: "0 auto 12px", borderRadius: 12 }} />
+      )}
       <div style={{ display: "grid", gap: 8 }}>
         {(vraag.options || []).map((opt, i) => {
           const isChosen = chosen === i;

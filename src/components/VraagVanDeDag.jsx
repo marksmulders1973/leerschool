@@ -78,6 +78,11 @@ export default function VraagVanDeDag() {
         {renderTekst(vraag.vraag)}
       </div>
 
+      {vraag.bronAfbeelding?.src && (
+        <img src={vraag.bronAfbeelding.src} alt={vraag.bronAfbeelding.alt || "Afbeelding bij de vraag"} loading="lazy"
+          style={{ display: "block", width: "100%", maxWidth: 360, margin: "0 auto 12px", borderRadius: 12 }} />
+      )}
+
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {vraag.options.map((o, i) => {
           const onthul = beantwoord;
