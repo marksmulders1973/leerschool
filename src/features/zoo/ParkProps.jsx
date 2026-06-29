@@ -943,6 +943,71 @@ export function Stump({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// Boom (procedureel, Mark 2026-06-29: "maak de bomen mooier"). Volle, ronde
+// low-poly kroon met diepte — donkere blobs onderaan, lichtere bovenop — in
+// dezelfde flatShading-stijl als Bush/Fern. Varianten: round (standaard),
+// oak (groter + warmer groen), palm. Mooier én lichter dan een glTF-model.
+export function Tree({ position = [0, 0, 0], rotation = 0, variant = "round" }) {
+  if (variant === "palm") return <PalmTree position={position} rotation={rotation} />;
+  const oak = variant === "oak";
+  const s = oak ? 1.16 : 1;
+  const donker = oak ? "#39692b" : "#3f7a32";
+  const mid = oak ? "#4d8736" : "#4e8a3a";
+  const licht = oak ? "#74b552" : "#6fb053";
+  // Kroon-blobs: [x, y, z, straal, kleur]. Onderaan donker, bovenop licht → diepte.
+  const blobs = [
+    [0, 1.62, 0, 0.86, donker],
+    [0.56, 1.54, 0.12, 0.6, mid],
+    [-0.52, 1.58, -0.16, 0.62, mid],
+    [0.24, 1.78, 0.46, 0.5, mid],
+    [-0.3, 1.82, -0.4, 0.5, mid],
+    [0.08, 2.0, 0.06, 0.64, licht],
+    [-0.18, 1.94, 0.3, 0.42, licht],
+  ];
+  return (
+    <group position={position} rotation={[0, rotation, 0]} scale={s}>
+      <mesh castShadow receiveShadow position={[0, 0.6, 0]}>
+        <cylinderGeometry args={[0.15, 0.22, 1.2, 8]} />
+        <meshStandardMaterial color="#6b4a2b" flatShading roughness={1} />
+      </mesh>
+      {blobs.map(([x, y, z, r, c], i) => (
+        <mesh key={i} castShadow position={[x, y, z]}>
+          <icosahedronGeometry args={[r, 0]} />
+          <meshStandardMaterial color={c} flatShading roughness={1} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+// Palmboom (procedureel) — licht gebogen stam in segmenten + een waaier van
+// bladeren bovenop, met kokosnoten.
+function PalmTree({ position = [0, 0, 0], rotation = 0 }) {
+  const stam = "#9b7a45", stam2 = "#876837", blad = "#56a544", blad2 = "#418f34";
+  const segs = [[0, 0.4, 0, 0], [0.05, 1.12, 0.02, 0.06], [0.15, 1.82, 0.05, 0.12], [0.3, 2.46, 0.08, 0.18]];
+  const fronds = Array.from({ length: 7 }, (_, i) => (i / 7) * Math.PI * 2);
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {segs.map(([x, y, z, tilt], i) => (
+        <mesh key={i} castShadow receiveShadow position={[x, y, z]} rotation={[0, 0, tilt]}>
+          <cylinderGeometry args={[0.13 - i * 0.015, 0.16 - i * 0.015, 0.78, 8]} />
+          <meshStandardMaterial color={i % 2 ? stam : stam2} flatShading roughness={1} />
+        </mesh>
+      ))}
+      <group position={[0.34, 2.78, 0.1]}>
+        {fronds.map((a, i) => (
+          <mesh key={i} castShadow rotation={[1.15, a, 0]} position={[Math.cos(a) * 0.18, -0.05, Math.sin(a) * 0.18]}>
+            <coneGeometry args={[0.17, 1.2, 4]} />
+            <meshStandardMaterial color={i % 2 ? blad : blad2} flatShading roughness={1} />
+          </mesh>
+        ))}
+        <mesh castShadow position={[0.05, -0.04, 0.05]}><icosahedronGeometry args={[0.13, 0]} /><meshStandardMaterial color="#6b4a2b" flatShading roughness={1} /></mesh>
+        <mesh castShadow position={[-0.1, -0.06, -0.02]}><icosahedronGeometry args={[0.12, 0]} /><meshStandardMaterial color="#5a3f24" flatShading roughness={1} /></mesh>
+      </group>
+    </group>
+  );
+}
+
 // Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
 // boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
 function maakNaambord(tekst) {
