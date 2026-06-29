@@ -259,7 +259,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0 }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "" }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -414,7 +414,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons). */}
-        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} />}
+        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} />}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />

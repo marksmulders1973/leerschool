@@ -18,7 +18,7 @@ export const BUDDIES = [
     accent: "#ffd23a",
     karakter: "enthousiast & moedig",
     verdien: 6,   // geleerde stappen nodig als dit NIET je gratis startkeuze is
-    intro: "Hoi, ik ben Vonk! Samen maken we er een vuurtje van. 🔥",
+    flavor: "Samen maken we er een vuurtje van! 🔥",
   },
   {
     id: "eenhoorn",
@@ -30,7 +30,7 @@ export const BUDDIES = [
     accent: "#ff8fcf",
     karakter: "lief & aanmoedigend",
     verdien: 12,
-    intro: "Ik ben Sterre. Wat fijn dat je er bent! ✨",
+    flavor: "Wat fijn dat je er bent! ✨",
   },
   {
     id: "uil",
@@ -42,7 +42,7 @@ export const BUDDIES = [
     accent: "#f2d49b",
     karakter: "wijs, geeft leertips",
     verdien: 20,
-    intro: "Pluis hier. Wie elke dag een kwartier leert, wordt knap-uil-slim. 🦉",
+    flavor: "Wie elke dag een kwartier leert, wordt knap-uil-slim. 🦉",
   },
   {
     id: "bubbel",
@@ -54,7 +54,7 @@ export const BUDDIES = [
     accent: "#bff4ff",
     karakter: "speels & grappig",
     verdien: 30,
-    intro: "Boing! Ik ben Bubbel. Stuiter je mee? 🫧",
+    flavor: "Stuiter je mee? 🫧",
   },
 ];
 
@@ -62,6 +62,22 @@ export const BUDDY_BY_ID = Object.fromEntries(BUDDIES.map((b) => [b.id, b]));
 
 const LS_KEUZE = "lk_buddy";          // gekozen maatje-id
 const LS_BEZIT = "lk_buddies";        // JSON-array van ontgrendelde id's
+const LS_NAAM = "lk_buddy_naam";      // JSON-map { buddyId: zelfgekozen naam }
+
+// Zelfgekozen naam van een maatje (per soort). Valt terug op de standaardnaam.
+export function buddyNaam(id, fallback = "") {
+  try {
+    const m = JSON.parse(localStorage.getItem(LS_NAAM) || "{}");
+    return ((m && m[id]) || "").trim() || fallback;
+  } catch { return fallback; }
+}
+export function zetBuddyNaam(id, naam) {
+  try {
+    const m = JSON.parse(localStorage.getItem(LS_NAAM) || "{}");
+    m[id] = (naam || "").replace(/\s+/g, " ").trim().slice(0, 16);
+    localStorage.setItem(LS_NAAM, JSON.stringify(m));
+  } catch { /* localStorage geblokkeerd → stil falen */ }
+}
 
 export function gekozenBuddy() {
   try { return localStorage.getItem(LS_KEUZE) || ""; } catch { return ""; }

@@ -2,9 +2,12 @@
 // gratis aan het begin; de rest "verdien" je door te leren (voltooide stappen).
 // Vergrendelde maatjes tonen hoeveel je nog moet leren. Keuze gaat naar
 // localStorage via buddies.js (geen Supabase-migratie nodig).
-import { BUDDIES, buddyBeschikbaar, bezitBuddies, heeftGekozen, kiesBuddy } from "./buddies";
+import { useState } from "react";
+import { BUDDIES, BUDDY_BY_ID, buddyBeschikbaar, bezitBuddies, heeftGekozen, kiesBuddy, buddyNaam, zetBuddyNaam } from "./buddies";
 
-export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, currentId = "", onChoose }) {
+export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, currentId = "", onChoose, onRename }) {
+  const [naamInput, setNaamInput] = useState("");
+  const [naamVoor, setNaamVoor] = useState("");
   if (!open) return null;
   const eerste = !heeftGekozen();
   const bezit = new Set(bezitBuddies());
@@ -13,6 +16,20 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
     kiesBuddy(b.id);
     if (onChoose) onChoose(b.id);
     onClose && onClose();
+  };
+
+  // Naam-veld synchroniseren met het actieve maatje (zonder extra effect).
+  const actiefBuddy = BUDDY_BY_ID[currentId];
+  if (currentId && naamVoor !== currentId) {
+    setNaamVoor(currentId);
+    setNaamInput(buddyNaam(currentId, actiefBuddy?.naam || ""));
+  }
+  const bewaarNaam = () => {
+    if (!currentId) return;
+    const n = (naamInput || "").trim() || (actiefBuddy?.naam || "");
+    zetBuddyNaam(currentId, n);
+    setNaamInput(n);
+    if (onRename) onRename(currentId, n);
   };
 
   return (
@@ -64,6 +81,24 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
             );
           })}
         </div>
+
+        {actiefBuddy && (
+          <div style={{ marginTop: 14, padding: "11px 12px", background: "#f6faf3", border: "1px solid #dcebd4", borderRadius: 14 }}>
+            <div style={{ font: "800 12.5px system-ui", color: "#2e5a2a", marginBottom: 7 }}>✏️ Geef {actiefBuddy.emoji} een naam</div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <input
+                value={naamInput}
+                onChange={(e) => setNaamInput(e.target.value)}
+                onBlur={bewaarNaam}
+                onKeyDown={(e) => { if (e.key === "Enter") { bewaarNaam(); e.currentTarget.blur(); } }}
+                maxLength={16}
+                placeholder={actiefBuddy.naam}
+                style={{ flex: 1, minWidth: 0, border: "2px solid #cfe0c6", borderRadius: 10, padding: "9px 11px", font: "700 14px system-ui", color: "#234", background: "#fff" }}
+              />
+              <button onClick={bewaarNaam} style={{ border: "none", borderRadius: 10, padding: "0 16px", font: "800 13px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer", whiteSpace: "nowrap" }}>Bewaar</button>
+            </div>
+          </div>
+        )}
 
         <div style={{ textAlign: "center", marginTop: 14 }}>
           <div style={{ font: "700 12px system-ui", color: "#8a93a0", marginBottom: 10 }}>📚 Jij hebt al <b>{geleerdeStappen}</b> {geleerdeStappen === 1 ? "stap" : "stappen"} geleerd</div>

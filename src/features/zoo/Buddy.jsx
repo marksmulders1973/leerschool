@@ -119,8 +119,9 @@ function Lijf({ soort, c, flapRef, squashRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0 }) {
+export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "" }) {
   const b = BUDDY_BY_ID[kind];
+  const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
   const lijf = useRef();      // het lijf apart, zodat we het kunnen laten "meegroeien"
   const hart = useRef();      // zwevend hartje bij een aai
@@ -191,7 +192,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0 }) 
     if (st.current.bt > 0) { st.current.bt -= dt; if (st.current.bt <= 0) setBubble(null); }
     st.current.next -= dt;
     if (st.current.next <= 0) {
-      if (!st.current.introDone) { setBubble({ e: b.emoji, t: b.intro }); st.current.introDone = true; st.current.bt = 4.5; }
+      if (!st.current.introDone) { setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}! ${b.flavor}` }); st.current.introDone = true; st.current.bt = 4.5; }
       else { setBubble(buddyPraatje(b.soort, factsRef?.current)); st.current.bt = 3.8; }
       st.current.next = 9 + Math.random() * 8;
     }

@@ -19,7 +19,7 @@ import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
 import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier } from "../features/zoo/unlocks";
 import BuddyPicker from "../features/zoo/BuddyPicker";
-import { gekozenBuddy, heeftGekozen, telGeleerdeStappen } from "../features/zoo/buddies";
+import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID } from "../features/zoo/buddies";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -193,6 +193,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
   const [buddyId, setBuddyId] = useState(() => gekozenBuddy()); // 🐾 gekozen droom-maatje
+  const [buddyNaamEff, setBuddyNaamEff] = useState(() => { const id = gekozenBuddy(); return id ? buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "") : ""; });
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
   const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
@@ -978,6 +979,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           avatarUrl={avatarUrl}
           buddyId={buddyId}
           buddyGroei={geleerdeStappen}
+          buddyNaam={buddyNaamEff}
         />
       </Suspense>
 
@@ -987,7 +989,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         onClose={() => setBuddyPickerOpen(false)}
         geleerdeStappen={geleerdeStappen}
         currentId={buddyId}
-        onChoose={(id) => { setBuddyId(id); try { track("buddy_gekozen", { id }); } catch { /* */ } }}
+        onChoose={(id) => { setBuddyId(id); setBuddyNaamEff(buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "")); try { track("buddy_gekozen", { id }); } catch { /* */ } }}
+        onRename={(id, n) => { if (id === buddyId) setBuddyNaamEff(n); try { track("buddy_naam", { id }); } catch { /* */ } }}
       />
 
       {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren
