@@ -89,6 +89,11 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Begrijpend lezen oefenen (groep 5-8)](https://leerkwartier.app/begrijpend-lezen-oefenen.html):
   gratis begrijpend lezen oefenen voor groep 5 t/m 8 met echte teksten,
   directe feedback en uitleg — goede Cito-voorbereiding.
+- [Gratis oefen-takenlijst voor je klas (leerkrachten)](https://leerkwartier.app/leerkracht-takenlijst.html):
+  een leerkracht zet in 3 stappen een oefen-lijstje klaar voor de klas (kies
+  onderwerpen → deel een code → leerlingen oefenen + vinken af, met uitleg op 3
+  niveaus). Gratis, geen leerling-account nodig. Distributie-wig voor het
+  klas-kanaal.
 - [Gratis bijles-alternatief voor de Doorstroomtoets](https://leerkwartier.app/gratis-bijles.html):
   voor ouders die bijles te duur vinden — het kind oefent zelf met uitleg op
   3 niveaus, een kwartier per dag, zonder de kosten van een docent.
