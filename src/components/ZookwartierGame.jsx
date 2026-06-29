@@ -1198,10 +1198,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             )}
             {rekenUitslag === "goed" && (
               <div style={{ marginTop: 12 }}>
-                <p style={{ margin: "0 0 10px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusRef.current <= REKEN_BONUS_CAP ? `+${REKEN_BONUS} 🪙` : ""} 🎉</p>
+                <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusRef.current <= REKEN_BONUS_CAP ? `+${REKEN_BONUS} 🪙` : ""} 🎉</p>
+                {/* Park→leren-brug (Titan 2026-06-29): koppel leren aan de munt-economie
+                    die het kind al motiveert. Leren 15 min geeft echt extra munten
+                    (kwartier_reached → zooEconomy). Zo voedt het park het leren i.p.v.
+                    het op te eten — park_naar_leren was 2 vs 17 goede rekenvragen. */}
+                <p style={{ margin: "0 0 10px", font: "600 12.5px/1.45 system-ui", color: "#5a6b50", textAlign: "center" }}>💡 Goed in rekenen? Verdien <b>véél meer 🪙 munten</b> met een echt leerkwartier — <b>leren = munten voor je park!</b></p>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
-                  <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nieuwe vraag</button>
-                  <button onClick={() => { setRekenVraag(null); gaOefenen(); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>▶ Meer rekenen oefenen</button>
+                  <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nog een vraag</button>
+                  <button onClick={() => { try { track("park_rekenvraag_naar_leren"); } catch {} setRekenVraag(null); gaOefenen(); }} style={{ border: "none", borderRadius: 999, padding: "11px 20px", font: "900 14.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 12px rgba(46,158,79,.4)", cursor: "pointer" }}>▶ Verdien 🪙 — start een leerkwartier</button>
                 </div>
               </div>
             )}
