@@ -181,13 +181,16 @@ export function Carousel({ position = [0, 0, 0] }) {
 // Reuzenrad (procedureel) — een groot draaiend wiel met gondels die rechtop
 // blijven hangen. Het wiel draait om de Z-as (verticaal vlak); de gondels worden
 // elke frame op hun rim-positie gezet zonder mee te kantelen.
+const CABINE_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c", "#3cb5a8", "#e85aa0"];
+const LAMP_KLEUREN = ["#fff2a8", "#ff8f8f", "#9fd0ff", "#b6f5a0"];
 export function FerrisWheel({ position = [0, 0, 0] }) {
   const wheel = useRef();
   const gond = useRef([]);
-  const R = 2.7, N = 8, hubY = 3.4;
+  const lampen = useRef();
+  const R = 2.9, N = 8, hubY = 3.7;
   const spaken = Array.from({ length: N }, (_, i) => (i / N) * Math.PI * 2);
-  useFrame((_, dt) => {
-    if (wheel.current) wheel.current.rotation.z += dt * 0.35;
+  useFrame((s, dt) => {
+    if (wheel.current) wheel.current.rotation.z += dt * 0.32;
     const t = wheel.current ? wheel.current.rotation.z : 0;
     for (let i = 0; i < N; i++) {
       const m = gond.current[i];
@@ -195,35 +198,71 @@ export function FerrisWheel({ position = [0, 0, 0] }) {
       const a = t + (i / N) * Math.PI * 2;
       m.position.set(Math.cos(a) * R, hubY + Math.sin(a) * R, 0);
     }
+    // lampjes laten "knipperen" met een lopend lichtje
+    if (lampen.current) {
+      const tt = s.clock.elapsedTime * 5;
+      lampen.current.children.forEach((b, i) => {
+        const aan = (Math.sin(tt - i * 0.6) + 1) * 0.5; // 0..1 golf
+        if (b.material) b.material.emissiveIntensity = 0.25 + aan * 0.85;
+      });
+    }
   });
-  const staal = "#9aa0a6", frame = "#d65a5a";
+  const staal = "#b9c0c7", frame = "#e85c5c";
   return (
     <group position={position}>
+      {/* voetplaten */}
+      {[[1.5, 0.75], [-1.5, 0.75], [1.5, -0.75], [-1.5, -0.75]].map(([x, z], k) => (
+        <mesh key={k} castShadow position={[x, 0.13, z]}><boxGeometry args={[0.6, 0.26, 0.6]} /><meshStandardMaterial color="#7a818a" flatShading roughness={0.9} /></mesh>
+      ))}
       {/* steunbenen: twee A-frames (voor/achter) */}
-      {[0.6, -0.6].map((z, k) => (
+      {[0.75, -0.75].map((z, k) => (
         <group key={k}>
-          <mesh castShadow position={[1.0, hubY / 2, z]} rotation={[0, 0, -0.32]}><cylinderGeometry args={[0.1, 0.13, hubY + 1.2, 8]} /><meshStandardMaterial color={staal} flatShading roughness={0.8} /></mesh>
-          <mesh castShadow position={[-1.0, hubY / 2, z]} rotation={[0, 0, 0.32]}><cylinderGeometry args={[0.1, 0.13, hubY + 1.2, 8]} /><meshStandardMaterial color={staal} flatShading roughness={0.8} /></mesh>
+          <mesh castShadow position={[1.15, hubY / 2, z]} rotation={[0, 0, -0.32]}><cylinderGeometry args={[0.11, 0.15, hubY + 1.5, 10]} /><meshStandardMaterial color={staal} flatShading roughness={0.7} metalness={0.2} /></mesh>
+          <mesh castShadow position={[-1.15, hubY / 2, z]} rotation={[0, 0, 0.32]}><cylinderGeometry args={[0.11, 0.15, hubY + 1.5, 10]} /><meshStandardMaterial color={staal} flatShading roughness={0.7} metalness={0.2} /></mesh>
         </group>
       ))}
       {/* as */}
-      <mesh position={[0, hubY, 0]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.16, 0.16, 1.5, 12]} /><meshStandardMaterial color={staal} roughness={0.7} /></mesh>
-      {/* draaiend wiel: twee ringen + spaken */}
+      <mesh position={[0, hubY, 0]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.16, 0.16, 1.7, 12]} /><meshStandardMaterial color={staal} roughness={0.6} metalness={0.3} /></mesh>
+      {/* draaiend wiel: buitenringen + binnenring + spaken + hub + lampjes */}
       <group ref={wheel} position={[0, hubY, 0]}>
-        {[0.55, -0.55].map((z, k) => (
-          <mesh key={k} position={[0, 0, z]}><torusGeometry args={[R, 0.08, 8, 32]} /><meshStandardMaterial color={frame} flatShading roughness={0.8} /></mesh>
+        {[0.65, -0.65].map((z, k) => (
+          <mesh key={k} position={[0, 0, z]}><torusGeometry args={[R, 0.09, 8, 44]} /><meshStandardMaterial color={frame} flatShading roughness={0.6} /></mesh>
+        ))}
+        {[0.65, -0.65].map((z, k) => (
+          <mesh key={`in${k}`} position={[0, 0, z]}><torusGeometry args={[R * 0.5, 0.05, 8, 30]} /><meshStandardMaterial color="#ffd54a" roughness={0.5} metalness={0.3} /></mesh>
         ))}
         {spaken.map((a, i) => (
-          <mesh key={i} rotation={[0, 0, a]} position={[0, 0, 0]}><boxGeometry args={[R * 2, 0.05, 0.05]} /><meshStandardMaterial color={frame} roughness={0.8} /></mesh>
+          <mesh key={i} rotation={[0, 0, a]}><boxGeometry args={[R * 2, 0.045, 0.045]} /><meshStandardMaterial color="#dfe4e8" roughness={0.7} metalness={0.2} /></mesh>
         ))}
+        {/* hub-schijf */}
+        <mesh rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.42, 0.42, 1.4, 16]} /><meshStandardMaterial color="#ffd54a" roughness={0.5} metalness={0.3} /></mesh>
+        {/* lichtjes rond de buitenrand */}
+        <group ref={lampen}>
+          {Array.from({ length: 16 }).map((_, i) => {
+            const a = (i / 16) * Math.PI * 2;
+            const c = LAMP_KLEUREN[i % LAMP_KLEUREN.length];
+            return <mesh key={i} position={[Math.cos(a) * R, Math.sin(a) * R, 0.7]}><sphereGeometry args={[0.1, 8, 8]} /><meshStandardMaterial color={c} emissive={c} emissiveIntensity={0.6} roughness={0.4} /></mesh>;
+          })}
+        </group>
       </group>
       {/* gondels — rechtop, elke frame op hun rim-plek gezet */}
-      {Array.from({ length: N }).map((_, i) => (
-        <group key={i} ref={(el) => (gond.current[i] = el)}>
-          <mesh castShadow position={[0, -0.05, 0]}><boxGeometry args={[0.62, 0.5, 0.95]} /><meshStandardMaterial color={SEAT_KLEUREN[i % SEAT_KLEUREN.length]} flatShading roughness={0.9} /></mesh>
-          <mesh position={[0, 0.28, 0]}><boxGeometry args={[0.05, 0.3, 0.05]} /><meshStandardMaterial color={staal} roughness={0.8} /></mesh>
-        </group>
-      ))}
+      {Array.from({ length: N }).map((_, i) => {
+        const c = CABINE_KLEUREN[i % CABINE_KLEUREN.length];
+        return (
+          <group key={i} ref={(el) => (gond.current[i] = el)}>
+            {/* ophangbeugel */}
+            <mesh position={[0, 0.36, 0]}><boxGeometry args={[0.06, 0.4, 0.06]} /><meshStandardMaterial color={staal} roughness={0.7} /></mesh>
+            {/* cabine */}
+            <mesh castShadow position={[0, -0.05, 0]}><boxGeometry args={[0.66, 0.52, 0.8]} /><meshStandardMaterial color={c} flatShading roughness={0.85} /></mesh>
+            {/* bodem */}
+            <mesh position={[0, -0.33, 0]}><boxGeometry args={[0.72, 0.08, 0.86]} /><meshStandardMaterial color="#f4e7c4" flatShading roughness={0.9} /></mesh>
+            {/* puntdakje */}
+            <mesh castShadow position={[0, 0.3, 0]} rotation={[0, Math.PI / 4, 0]}><coneGeometry args={[0.58, 0.34, 4]} /><meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} /></mesh>
+            {/* raampje (lichte voorpaneel) */}
+            <mesh position={[0, -0.02, 0.41]}><boxGeometry args={[0.42, 0.3, 0.02]} /><meshStandardMaterial color="#dff1ff" roughness={0.4} metalness={0.1} /></mesh>
+          </group>
+        );
+      })}
     </group>
   );
 }
@@ -233,20 +272,53 @@ export function FerrisWheel({ position = [0, 0, 0] }) {
 export function SwingRide({ position = [0, 0, 0] }) {
   const top = useRef();
   useFrame((_, dt) => { if (top.current) top.current.rotation.y += dt * 0.7; });
-  const N = 8, topY = 3.6, R = 1.7;
+  const N = 10, topY = 3.7, R = 1.8;
   const hoeken = Array.from({ length: N }, (_, i) => (i / N) * Math.PI * 2);
-  const paal = "#caa44a", dak = "#e2574c";
+  const paal = "#f2b134";
+  const stoel = ["#e2574c", "#4a90d9", "#7bbf5a", "#b06ad6", "#ff8f3c"];
+  // gestreept dak: afwisselend rood/wit taartpunten
+  const punten = Array.from({ length: 12 }, (_, i) => i);
   return (
     <group position={position}>
-      <mesh castShadow position={[0, topY / 2, 0]}><cylinderGeometry args={[0.18, 0.22, topY, 12]} /><meshStandardMaterial color={paal} flatShading roughness={0.8} /></mesh>
+      {/* middenpaal + ringen */}
+      <mesh castShadow position={[0, topY / 2, 0]}><cylinderGeometry args={[0.18, 0.24, topY, 14]} /><meshStandardMaterial color={paal} flatShading roughness={0.7} /></mesh>
+      {[1.0, 2.4].map((y, k) => (
+        <mesh key={k} position={[0, y, 0]}><torusGeometry args={[0.25, 0.05, 8, 16]} /><meshStandardMaterial color="#ffd54a" roughness={0.5} metalness={0.3} /></mesh>
+      ))}
       <group ref={top} position={[0, topY, 0]}>
-        <mesh castShadow position={[0, 0.1, 0]}><coneGeometry args={[1.9, 0.9, 16]} /><meshStandardMaterial color={dak} flatShading roughness={0.9} /></mesh>
-        <mesh position={[0, -0.15, 0]}><cylinderGeometry args={[1.7, 1.7, 0.12, 16]} /><meshStandardMaterial color={paal} flatShading roughness={0.8} /></mesh>
+        {/* draaikop-schijf waar de kettingen aan hangen */}
+        <mesh position={[0, -0.15, 0]}><cylinderGeometry args={[1.75, 1.75, 0.14, 20]} /><meshStandardMaterial color="#e7d6a8" flatShading roughness={0.85} /></mesh>
+        {/* gestreept tentdak */}
+        <group position={[0, 0.15, 0]}>
+          {punten.map((i) => (
+            <mesh key={i} castShadow rotation={[0, (i / 12) * Math.PI * 2, 0]}>
+              <coneGeometry args={[2.0, 0.95, 3, 1, false, 0, Math.PI / 6]} />
+              <meshStandardMaterial color={i % 2 === 0 ? "#e2574c" : "#fdfbf6"} flatShading roughness={0.9} />
+            </mesh>
+          ))}
+        </group>
+        {/* lichtjes langs de dakrand */}
+        {Array.from({ length: 12 }).map((_, i) => {
+          const a = (i / 12) * Math.PI * 2;
+          const c = LAMP_KLEUREN[i % LAMP_KLEUREN.length];
+          return <mesh key={`l${i}`} position={[Math.cos(a) * 1.78, -0.06, Math.sin(a) * 1.78]}><sphereGeometry args={[0.08, 8, 8]} /><meshStandardMaterial color={c} emissive={c} emissiveIntensity={0.6} roughness={0.4} /></mesh>;
+        })}
+        {/* knop + vlaggetje */}
+        <mesh position={[0, 0.7, 0]}><sphereGeometry args={[0.16, 12, 12]} /><meshStandardMaterial color="#ffd54a" roughness={0.45} metalness={0.3} /></mesh>
+        <mesh position={[0, 1.05, 0]}><cylinderGeometry args={[0.035, 0.035, 0.6, 8]} /><meshStandardMaterial color="#caa44a" roughness={0.6} /></mesh>
+        <mesh position={[0.16, 1.25, 0]}><boxGeometry args={[0.32, 0.2, 0.02]} /><meshStandardMaterial color="#4a90d9" flatShading roughness={0.85} side={2} /></mesh>
+        {/* stoeltjes aan kettingen, naar buiten zwevend */}
         {hoeken.map((a, i) => (
           <group key={i} rotation={[0, a, 0]}>
-            {/* ketting naar buiten gekanteld */}
-            <mesh position={[R * 0.75, -0.7, 0]} rotation={[0, 0, -0.5]}><cylinderGeometry args={[0.02, 0.02, 1.5, 6]} /><meshStandardMaterial color="#777" roughness={0.6} /></mesh>
-            <mesh castShadow position={[R, -1.35, 0]}><boxGeometry args={[0.4, 0.35, 0.4]} /><meshStandardMaterial color={SEAT_KLEUREN[i % SEAT_KLEUREN.length]} flatShading roughness={0.9} /></mesh>
+            {/* twee kettingen naar buiten gekanteld */}
+            {[-0.16, 0.16].map((zz, k) => (
+              <mesh key={k} position={[R * 0.78, -0.72, zz]} rotation={[0, 0, -0.5]}><cylinderGeometry args={[0.018, 0.018, 1.55, 6]} /><meshStandardMaterial color="#888" roughness={0.6} metalness={0.3} /></mesh>
+            ))}
+            {/* zitje + rugleuning */}
+            <group position={[R, -1.4, 0]}>
+              <mesh castShadow position={[0, 0, 0]}><boxGeometry args={[0.42, 0.12, 0.44]} /><meshStandardMaterial color={stoel[i % stoel.length]} flatShading roughness={0.9} /></mesh>
+              <mesh castShadow position={[-0.21, 0.2, 0]}><boxGeometry args={[0.1, 0.42, 0.44]} /><meshStandardMaterial color={stoel[i % stoel.length]} flatShading roughness={0.9} /></mesh>
+            </group>
           </group>
         ))}
       </group>
@@ -1146,6 +1218,52 @@ export function SkyClouds() {
     <group>
       {wolken.map((w, i) => <Wolk key={i} data={w} />)}
       {vogels.map((v, i) => <Vogel key={i} {...v} />)}
+    </group>
+  );
+}
+
+// Tros feest-ballonnen die zacht wiegen — vast aan één punt (bv. naast de
+// ingang). Puur sfeer; geen botsing. Elke ballon dobbert met eigen fase.
+const BALLON_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c", "#3cb5a8"];
+function Ballon({ offset, color, phase }) {
+  const ref = useRef();
+  const hoogte = 2.6 + offset[1];
+  useFrame((s) => {
+    const m = ref.current; if (!m) return;
+    const t = s.clock.elapsedTime;
+    m.position.x = offset[0] + Math.sin(t * 0.8 + phase) * 0.12;
+    m.position.y = hoogte + Math.sin(t * 1.1 + phase) * 0.12;
+    m.position.z = offset[2] + Math.cos(t * 0.7 + phase) * 0.12;
+    m.rotation.z = Math.sin(t * 0.9 + phase) * 0.12;
+  });
+  return (
+    <group ref={ref} position={[offset[0], hoogte, offset[2]]}>
+      {/* ballon-lijf */}
+      <mesh castShadow scale={[1, 1.18, 1]}><sphereGeometry args={[0.34, 16, 16]} /><meshStandardMaterial color={color} roughness={0.45} metalness={0.05} /></mesh>
+      {/* knoopje */}
+      <mesh position={[0, -0.4, 0]}><coneGeometry args={[0.06, 0.1, 6]} /><meshStandardMaterial color={color} roughness={0.5} /></mesh>
+      {/* touwtje omlaag naar het ankerpunt */}
+      <mesh position={[-offset[0] / 2, -hoogte / 2 - 0.2, -offset[2] / 2]}>
+        <cylinderGeometry args={[0.01, 0.01, hoogte, 4]} />
+        <meshStandardMaterial color="#cfcabf" roughness={0.7} />
+      </mesh>
+    </group>
+  );
+}
+
+export function Balloons({ position = [0, 0, 0] }) {
+  const trossen = useMemo(() => ([
+    { offset: [0.0, 0.5, 0.0], c: 0, phase: 0.0 },
+    { offset: [0.55, 0.2, 0.1], c: 1, phase: 1.2 },
+    { offset: [-0.5, 0.3, -0.1], c: 2, phase: 2.4 },
+    { offset: [0.25, 0.75, -0.4], c: 3, phase: 3.1 },
+    { offset: [-0.3, 0.65, 0.4], c: 4, phase: 4.0 },
+  ]), []);
+  return (
+    <group position={position}>
+      {/* paaltje waar de tros aan vastzit */}
+      <mesh castShadow position={[0, 0.5, 0]}><cylinderGeometry args={[0.06, 0.07, 1.0, 8]} /><meshStandardMaterial color="#8a6b3f" flatShading roughness={1} /></mesh>
+      {trossen.map((b, i) => <Ballon key={i} offset={b.offset} color={BALLON_KLEUREN[b.c % BALLON_KLEUREN.length]} phase={b.phase} />)}
     </group>
   );
 }

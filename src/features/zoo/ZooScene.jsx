@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import { getAsset, cellsVan } from "./AssetRegistry";
@@ -407,6 +407,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <ParkBase />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
+        {/* Vrolijke ballontros naast de ingang. */}
+        <Balloons position={[5.4, heightAt(terrain, 5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
         <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
