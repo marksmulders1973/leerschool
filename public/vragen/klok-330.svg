@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-label="Een klok die half vier (3:30) aangeeft">
+  <defs>
+    <linearGradient id="kbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2a4a"/>
+      <stop offset="1" stop-color="#0f1d38"/>
+    </linearGradient>
+    <radialGradient id="face" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dfe8f5"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fd0ff"/>
+      <stop offset="1" stop-color="#4a8fe0"/>
+    </linearGradient>
+    <filter id="cs" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="10" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="360" height="340" rx="20" fill="url(#kbg)"/>
+  <circle cx="270" cy="70" r="44" fill="#ffffff" opacity="0.06"/>
+  <circle cx="70" cy="280" r="30" fill="#ffffff" opacity="0.05"/>
+
+  <g filter="url(#cs)">
+    <circle cx="180" cy="170" r="124" fill="url(#rim)"/>
+    <circle cx="180" cy="170" r="112" fill="url(#face)"/>
+  </g>
+
+  <!-- uur-streepjes -->
+  <g stroke="#2a4a7a" stroke-linecap="round">
+    <!-- 12 -->
+    <line x1="180" y1="70"  x2="180" y2="84"  stroke-width="5"/>
+    <!-- 3 -->
+    <line x1="280" y1="170" x2="266" y2="170" stroke-width="5"/>
+    <!-- 6 -->
+    <line x1="180" y1="270" x2="180" y2="256" stroke-width="5"/>
+    <!-- 9 -->
+    <line x1="80"  y1="170" x2="94"  y2="170" stroke-width="5"/>
+  </g>
+  <g stroke="#9bb0d0" stroke-width="3" stroke-linecap="round">
+    <line x1="230" y1="83"  x2="224" y2="94"/>
+    <line x1="267" y1="120" x2="256" y2="126"/>
+    <line x1="267" y1="220" x2="256" y2="214"/>
+    <line x1="230" y1="257" x2="224" y2="246"/>
+    <line x1="130" y1="257" x2="136" y2="246"/>
+    <line x1="93"  y1="220" x2="104" y2="214"/>
+    <line x1="93"  y1="120" x2="104" y2="126"/>
+    <line x1="130" y1="83"  x2="136" y2="94"/>
+  </g>
+
+  <!-- wijzers: 3:30 → minuut naar 6 (omlaag), uur tussen 3 en 4 -->
+  <line x1="180" y1="170" x2="180" y2="256" stroke="#27406b" stroke-width="8" stroke-linecap="round"/>
+  <line x1="180" y1="170" x2="238" y2="186" stroke="#ff5252" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="180" cy="170" r="9" fill="#27406b"/>
+  <circle cx="180" cy="170" r="4" fill="#ff7a7a"/>
+</svg>

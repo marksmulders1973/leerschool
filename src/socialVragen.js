@@ -510,6 +510,61 @@ export const SOCIAL_VRAGEN = {
     },
   },
 
+  "snoep1": {
+    vak: "rekenen",
+    doelgroep: "🎒 Zit jij op de basisschool? (groep 7-8)",
+    leerpadLink: { id: "delen-po", title: "Keer- en deelsommen (groep 7-8)" },
+    bronAfbeelding: { src: "/vragen/snoeppot.svg", alt: "Een snoeppot vol kleurige snoepjes" },
+    vraag: "In een snoeppot zitten **4 lagen** van **6 snoepjes**. Je verdeelt ze **eerlijk over 3 vrienden**. **Hoeveel krijgt ieder?**",
+    options: ["8", "6", "9", "12"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "6 is het aantal per laag — reken eerst het totaal uit.",
+      "Deel het totaal door 3, niet iets anders.",
+      "12 zou kloppen bij 2 vrienden, niet bij 3.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Eerst het totaal", tekst: "4 lagen × 6 snoepjes = 24 snoepjes in totaal." },
+        { titel: "Eerlijk verdelen", tekst: "24 snoepjes ÷ 3 vrienden = 8 per persoon." },
+      ],
+      niveaus: {
+        basis: "4 × 6 = 24 snoepjes. 24 ÷ 3 = 8.",
+        simpeler: "Tel eerst alles: 4 lagen van 6 = 24. Deel dan door 3 = 8.",
+        nogSimpeler: "24 snoepjes, 3 vrienden → 8 elk.",
+      },
+    },
+  },
+
+  "klok1": {
+    vak: "rekenen",
+    doelgroep: "🎓 Zit jij op de middelbare school?",
+    leerpadLink: { id: "klokkijken", title: "Klok & hoeken (groep 7-8)" },
+    bronAfbeelding: { src: "/vragen/klok-330.svg", alt: "Een klok die half vier (3:30) aangeeft" },
+    vraag: "Kijk naar de klok: het is **half 4 (3:30)**. **Hoeveel graden** zit er tussen de twee wijzers?",
+    options: ["75°", "90°", "105°", "60°"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "90° klopt om 3:00 — maar om 3:30 is de uurwijzer al verder doorgeschoven.",
+      "De minuutwijzer staat op de 6, de uurwijzer net vóór de 4.",
+      "Iets te weinig — de uurwijzer staat halverwege de 3 en de 4.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Minuutwijzer", tekst: "Om 3:30 staat de minuutwijzer op de 6 → 180° vanaf de 12." },
+        { titel: "Uurwijzer", tekst: "De uurwijzer staat halverwege 3 en 4: 3,5 × 30° = 105° vanaf de 12." },
+        { titel: "Verschil", tekst: "180° − 105° = 75°." },
+      ],
+      niveaus: {
+        basis: "Minuutwijzer 180°, uurwijzer 105°. Verschil = 75°.",
+        simpeler: "Elke uur-stap is 30°. Om 3:30 staat de uurwijzer op 3,5 stappen = 105°, de minuutwijzer op 180°. 180 − 105 = 75°.",
+        nogSimpeler: "180° − 105° = 75°.",
+      },
+    },
+  },
+
   "studie4": {
     vak: "studievaardigheden",
     leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Woordenboek & alfabet (groep 8)" },
