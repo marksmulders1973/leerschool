@@ -18,6 +18,8 @@ import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/ma
 import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
 import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier } from "../features/zoo/unlocks";
+import BuddyPicker from "../features/zoo/BuddyPicker";
+import { gekozenBuddy, heeftGekozen, telGeleerdeStappen } from "../features/zoo/buddies";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
@@ -190,6 +192,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
+  const [buddyId, setBuddyId] = useState(() => gekozenBuddy()); // 🐾 gekozen droom-maatje
+  const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
+  const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
   const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
@@ -267,6 +272,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     })();
     return () => { cancel = true; };
   }, [userId, naam]);
+
+  // 🐾 Maatjes: geleerde-stappen tellen (voedt de ontgrendeling) + de eerste keer
+  // het keuze-scherm openen zodat een nieuwe speler meteen een maatje kiest.
+  useEffect(() => {
+    let cancel = false;
+    (async () => {
+      const n = await telGeleerdeStappen(naam);
+      if (cancel) return;
+      setGeleerdeStappen(n);
+      if (!heeftGekozen()) setBuddyPickerOpen(true);
+    })();
+    return () => { cancel = true; };
+  }, [naam]);
+  // Open het maatjes-scherm (ververst eerst de geleerde-stappen-teller).
+  const openBuddyPicker = async () => {
+    try { setGeleerdeStappen(await telGeleerdeStappen(naam)); } catch { /* */ }
+    setBuddyPickerOpen(true);
+  };
 
   // Toetsenbord-besturing (laptop): pijltjes / WASD.
   useEffect(() => {
@@ -786,6 +809,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={menuKop}>🏡 Mijn park</div>
             <button onClick={() => doeEnSluit(() => { setAutoBudget(coins); setPanel("autobouw"); })} style={menuRij(false)}>🏗️ Auto-bouw (muntjes inzetten)</button>
             <button onClick={() => doeEnSluit(() => setPanel("karakter"))} style={menuRij(false)}>👤 Mijn poppetje kiezen</button>
+            <button onClick={() => doeEnSluit(openBuddyPicker)} style={menuRij(false)}>🐾 Kies je maatje</button>
             <button onClick={() => doeEnSluit(opslaan)} style={menuRij(false)}>💾 Park opslaan</button>
             <button onClick={() => doeEnSluit(openDelen)} style={menuRij(false)}>📤 Park delen met een vriend</button>
             <button onClick={() => doeEnSluit(() => setPanel("reset"))} style={menuRij(false)}>♻️ Opnieuw beginnen</button>
@@ -952,8 +976,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           groundMode={groundMode}
           onGround={onGroundTik}
           avatarUrl={avatarUrl}
+          buddyId={buddyId}
         />
       </Suspense>
+
+      {/* 🐾 Maatjes-kiezer (eerste keer automatisch; daarna via ⚙️-menu). */}
+      <BuddyPicker
+        open={buddyPickerOpen}
+        onClose={() => setBuddyPickerOpen(false)}
+        geleerdeStappen={geleerdeStappen}
+        currentId={buddyId}
+        onChoose={(id) => { setBuddyId(id); try { track("buddy_gekozen", { id }); } catch { /* */ } }}
+      />
 
       {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren
           en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld). */}
