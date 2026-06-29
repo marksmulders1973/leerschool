@@ -977,6 +977,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onGround={onGroundTik}
           avatarUrl={avatarUrl}
           buddyId={buddyId}
+          buddyGroei={geleerdeStappen}
         />
       </Suspense>
 

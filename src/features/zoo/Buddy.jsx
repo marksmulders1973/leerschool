@@ -6,7 +6,7 @@ import { useRef, useState, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3 } from "three";
-import { buddyPraatje, BUDDY_BY_ID } from "./buddies";
+import { buddyPraatje, buddyAai, buddyGrootte, BUDDY_BY_ID } from "./buddies";
 
 // ── Procedurele lijfjes per soort ──────────────────────────────────────────
 function Draakje({ c, flapRef }) {
@@ -119,20 +119,48 @@ function Lijf({ soort, c, flapRef, squashRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, heightRef, factsRef }) {
+export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0 }) {
   const b = BUDDY_BY_ID[kind];
   const g = useRef();
+  const lijf = useRef();      // het lijf apart, zodat we het kunnen laten "meegroeien"
+  const hart = useRef();      // zwevend hartje bij een aai
   const cur = useRef(new Vector3(2, 0, 12));
   const flapRef = useRef([]);
   const squashRef = useRef();
   const [bubble, setBubble] = useState(null);
-  const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false });
+  const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
   const zweef = kind === "draakje" || kind === "bubbel";
   const baseY = zweef ? 0.62 : 0.36;
+  const doelGrootte = buddyGrootte(groei);
+
+  // Aaien/aantikken → blije reactie: sprongetje, knuffel-praatje en een hartje.
+  const aai = (e) => {
+    if (e) e.stopPropagation();
+    setBubble(buddyAai(b?.soort, factsRef?.current));
+    st.current.bt = 2.6;
+    st.current.pet = 0.9;
+  };
 
   useFrame((s, dt) => {
     const node = g.current; if (!node || !b) return;
+    // soepel naar de doel-grootte groeien (meegroeien met geleerde stappen)
+    st.current.grow += (doelGrootte - st.current.grow) * Math.min(1, dt * 2);
+    if (lijf.current) lijf.current.scale.setScalar(st.current.grow);
+
     const p = posRef?.current;
+    let petHop = 0;
+    // aai-sprongetje + hartje
+    if (st.current.pet > 0) {
+      st.current.pet -= dt;
+      const pr = Math.min(1, 1 - st.current.pet / 0.9); // 0..1
+      petHop = Math.sin(pr * Math.PI) * 0.45;           // één boog omhoog
+      if (hart.current) {
+        hart.current.visible = true;
+        hart.current.position.y = 1.0 + pr * 0.9;
+        hart.current.scale.setScalar((pr < 0.25 ? pr / 0.25 : 1) * 0.5);
+      }
+    } else if (hart.current) hart.current.visible = false;
+
     if (p) {
       // doel: een vaste zij-offset naast de speler (front-rechts)
       const tx = p.x + 1.25, tz = p.z + 0.7;
@@ -144,7 +172,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef }) {
       const beweegt = ver > 0.06;
       const gy = heightRef?.current ? heightRef.current(cur.current.x, cur.current.z) : 0;
       const hop = Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
-      node.position.set(cur.current.x, gy + baseY + hop, cur.current.z);
+      node.position.set(cur.current.x, gy + baseY + hop + petHop, cur.current.z);
       if (beweegt) {
         const doel = Math.atan2(dx, dz);
         let d = doel - node.rotation.y;
@@ -171,16 +199,31 @@ export default function Buddy({ kind, posRef, heightRef, factsRef }) {
 
   if (!b) return null;
   return (
-    <group ref={g} position={[2, baseY, 12]} scale={0.92}>
+    <group
+      ref={g}
+      position={[2, baseY, 12]}
+      onPointerDown={aai}
+      onPointerOver={(e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; }}
+      onPointerOut={() => { document.body.style.cursor = "default"; }}
+    >
       {bubble && (
-        <Html position={[0, 1.0, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+        <Html position={[0, 1.05, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
           <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
             <span style={{ fontSize: 18 }}>{bubble.e}</span>
             {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>}
           </div>
         </Html>
       )}
-      <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} />
+      {/* zwevend hartje bij een aai (verborgen tot je 'm aait) */}
+      <group ref={hart} position={[0, 1.0, 0]} visible={false}>
+        {[[-0.07, 0.04], [0.07, 0.04]].map(([x, y], i) => (
+          <mesh key={i} position={[x, y, 0]}><sphereGeometry args={[0.1, 10, 10]} /><meshStandardMaterial color="#ff5a7a" emissive="#ff3a64" emissiveIntensity={0.4} roughness={0.5} /></mesh>
+        ))}
+        <mesh position={[0, -0.06, 0]} rotation={[0, 0, Math.PI]}><coneGeometry args={[0.14, 0.2, 4]} /><meshStandardMaterial color="#ff5a7a" emissive="#ff3a64" emissiveIntensity={0.4} roughness={0.5} /></mesh>
+      </group>
+      <group ref={lijf}>
+        <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} />
+      </group>
     </group>
   );
 }

@@ -159,3 +159,24 @@ export function buddyPraatje(soort, facts) {
 
   return o[Math.floor(Math.random() * o.length)];
 }
+
+// Blije reactie als je je maatje aait/aantikt — korter en uitbundiger.
+export function buddyAai(soort, facts) {
+  const f = facts || {};
+  const naam = (f.naam || "").trim();
+  const hoi = naam ? naam : "vriend";
+  const m = {
+    draakje: [{ e: "🔥", t: "Joehoe! Samen onverslaanbaar!" }, { e: "😄", t: `Aai! Jij bent de beste, ${hoi}!` }, { e: "💪", t: "Kom, we gaan knallen!" }],
+    eenhoorn: [{ e: "💗", t: `Aaah, wat lief ${hoi}!` }, { e: "✨", t: "Knuffel! Ik vind jou zo lief." }, { e: "🌈", t: "Jij maakt mij blij!" }],
+    uil: [{ e: "🦉", t: "Hoehoe! Fijn dat je er bent." }, { e: "📚", t: "Zullen we iets slims leren?" }, { e: "💡", t: `Wijze keuze, ${hoi}.` }],
+    bubbel: [{ e: "🫧", t: "Boing! Hihi, dat kietelt!" }, { e: "🤪", t: `Nog een keer, ${hoi}!` }, { e: "🎈", t: "Wheee! Ik stuiter van geluk!" }],
+  };
+  const o = m[soort] || m.bubbel;
+  return o[Math.floor(Math.random() * o.length)];
+}
+
+// Hoe groot is het maatje, op basis van het aantal geleerde stappen? Het maatje
+// "groeit met je mee": klein als je begint, voller naarmate je meer leert.
+export function buddyGrootte(geleerdeStappen = 0) {
+  return 0.78 + Math.min(0.42, (geleerdeStappen || 0) * 0.011); // ~0.78 → 1.2
+}
