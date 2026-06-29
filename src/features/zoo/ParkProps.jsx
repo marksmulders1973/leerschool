@@ -68,51 +68,111 @@ export function DayNight() {
 
 const SEAT_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a"];
 
-// Draaimolen die echt ronddraait.
+// Eén carrousel-paardje (low-poly), wit met gekleurd zadel. Compact opgebouwd
+// uit boxen zodat het bij ronddraaien als een echt kermispaardje leest.
+function CarouselPaard({ color }) {
+  return (
+    <group>
+      {/* romp */}
+      <mesh castShadow position={[0, 0.5, 0]}><boxGeometry args={[0.7, 0.36, 0.26]} /><meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} /></mesh>
+      {/* borst/hals omhoog */}
+      <mesh castShadow position={[0.3, 0.72, 0]} rotation={[0, 0, 0.7]}><boxGeometry args={[0.34, 0.24, 0.24]} /><meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} /></mesh>
+      {/* hoofd */}
+      <mesh castShadow position={[0.46, 0.92, 0]} rotation={[0, 0, 0.25]}><boxGeometry args={[0.3, 0.2, 0.2]} /><meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} /></mesh>
+      {/* manen */}
+      <mesh position={[0.28, 0.86, 0]} rotation={[0, 0, 0.7]}><boxGeometry args={[0.12, 0.34, 0.26]} /><meshStandardMaterial color={color} flatShading roughness={0.9} /></mesh>
+      {/* staart */}
+      <mesh position={[-0.36, 0.56, 0]} rotation={[0, 0, -0.6]}><boxGeometry args={[0.12, 0.34, 0.22]} /><meshStandardMaterial color={color} flatShading roughness={0.9} /></mesh>
+      {/* zadel */}
+      <mesh position={[-0.02, 0.69, 0]}><boxGeometry args={[0.34, 0.1, 0.3]} /><meshStandardMaterial color={color} flatShading roughness={0.9} /></mesh>
+      {/* 4 benen */}
+      {[[0.26, 0.13], [0.26, -0.13], [-0.26, 0.13], [-0.26, -0.13]].map(([x, z], k) => (
+        <mesh key={k} castShadow position={[x, 0.22, z]}><boxGeometry args={[0.12, 0.42, 0.12]} /><meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} /></mesh>
+      ))}
+    </group>
+  );
+}
+
+// Draaimolen die echt ronddraait — een vrolijke kermis-carrousel met gestreept
+// tentdak, schulprand, op-en-neer wippende paardjes en een vlaggetje bovenop.
+const CARR_PAARD = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c"];
 export function Carousel({ position = [0, 0, 0] }) {
   const top = useRef();
-  useFrame((_, dt) => {
-    if (top.current) top.current.rotation.y += dt * 0.5;
+  const paarden = useRef([]);
+  const vlag = useRef();
+  const N = 6;
+  const Rij = 2.0;          // straal van de paardjes-ring
+  const dakY = 2.7;         // hoogte van de dakrand
+  useFrame((s, dt) => {
+    if (top.current) top.current.rotation.y += dt * 0.45;
+    const t = s.clock.elapsedTime;
+    // paardjes wippen op-en-neer, elk met eigen fase
+    for (let i = 0; i < N; i++) {
+      const m = paarden.current[i];
+      if (m) m.position.y = 0.55 + Math.sin(t * 2.2 + i * 1.05) * 0.18;
+    }
+    if (vlag.current) vlag.current.rotation.y = Math.sin(t * 3) * 0.5;
   });
-  const plekken = [0, 1, 2, 3].map((i) => {
-    const a = (i / 4) * Math.PI * 2;
-    return [Math.cos(a) * 1.5, Math.sin(a) * 1.5];
+  const plekken = Array.from({ length: N }, (_, i) => {
+    const a = (i / N) * Math.PI * 2;
+    return { x: Math.cos(a) * Rij, z: Math.sin(a) * Rij, a };
   });
+  // gestreept dak: afwisselend rood/wit taartpunten
+  const punten = Array.from({ length: 12 }, (_, i) => i);
   return (
     <group position={position}>
-      <mesh castShadow receiveShadow position={[0, 0.15, 0]}>
-        <cylinderGeometry args={[2.3, 2.4, 0.3, 28]} />
-        <meshStandardMaterial color="#e7d6a8" flatShading roughness={1} />
+      {/* fundering / platform met sierrand */}
+      <mesh castShadow receiveShadow position={[0, 0.12, 0]}>
+        <cylinderGeometry args={[2.7, 2.85, 0.24, 32]} />
+        <meshStandardMaterial color="#caa44a" flatShading roughness={1} />
       </mesh>
+      <mesh receiveShadow position={[0, 0.26, 0]}>
+        <cylinderGeometry args={[2.55, 2.6, 0.1, 32]} />
+        <meshStandardMaterial color="#f4e7c4" flatShading roughness={1} />
+      </mesh>
+      {/* centrale zuil */}
       <mesh position={[0, 1.5, 0]}>
-        <cylinderGeometry args={[0.12, 0.12, 2.8, 12]} />
-        <meshStandardMaterial color="#caa44a" flatShading roughness={0.8} />
+        <cylinderGeometry args={[0.22, 0.26, 2.9, 16]} />
+        <meshStandardMaterial color="#f2b134" flatShading roughness={0.7} />
       </mesh>
+      {/* gouden ringen om de zuil */}
+      {[1.0, 2.4].map((y, k) => (
+        <mesh key={k} position={[0, y, 0]}><torusGeometry args={[0.27, 0.05, 8, 18]} /><meshStandardMaterial color="#ffd54a" roughness={0.5} metalness={0.3} /></mesh>
+      ))}
+
+      {/* draaiend bovendeel: paardjes + dak */}
       <group ref={top} position={[0, 0.3, 0]}>
         {plekken.map((p, i) => (
-          <group key={i} position={[p[0], 0, p[1]]}>
-            <mesh position={[0, 1.0, 0]}>
-              <cylinderGeometry args={[0.05, 0.05, 2.0, 8]} />
-              <meshStandardMaterial color="#caa44a" roughness={0.7} />
-            </mesh>
-            <mesh castShadow position={[0, 0.62, 0]}>
-              <boxGeometry args={[0.45, 0.5, 0.9]} />
-              <meshStandardMaterial color={SEAT_KLEUREN[i]} flatShading roughness={0.9} />
-            </mesh>
-            <mesh castShadow position={[0, 1.0, 0.36]}>
-              <sphereGeometry args={[0.22, 14, 14]} />
-              <meshStandardMaterial color={SEAT_KLEUREN[i]} flatShading roughness={0.9} />
-            </mesh>
+          <group key={i} position={[p.x, 0, p.z]} rotation={[0, -p.a + Math.PI / 2, 0]}>
+            {/* glimmende messing stang */}
+            <mesh position={[0, 1.25, 0]}><cylinderGeometry args={[0.045, 0.045, 2.5, 8]} /><meshStandardMaterial color="#ffd54a" roughness={0.4} metalness={0.4} /></mesh>
+            {/* wippend paardje */}
+            <group ref={(el) => (paarden.current[i] = el)} position={[0, 0.55, 0]}>
+              <CarouselPaard color={CARR_PAARD[i % CARR_PAARD.length]} />
+            </group>
           </group>
         ))}
-        <mesh castShadow position={[0, 2.35, 0]}>
-          <coneGeometry args={[2.6, 1.2, 16]} />
-          <meshStandardMaterial color="#e2574c" flatShading roughness={0.95} />
+
+        {/* schulprand (valletje) onder het dak */}
+        <mesh position={[0, dakY - 0.22, 0]}>
+          <cylinderGeometry args={[2.75, 2.95, 0.34, 24, 1, true]} />
+          <meshStandardMaterial color="#fdfbf6" flatShading roughness={0.85} side={2} />
         </mesh>
-        <mesh position={[0, 3.0, 0]}>
-          <sphereGeometry args={[0.18, 12, 12]} />
-          <meshStandardMaterial color="#ffd54a" roughness={0.6} />
-        </mesh>
+        {/* gestreept tentdak: taartpunten in 2 kleuren */}
+        <group position={[0, dakY, 0]}>
+          {punten.map((i) => (
+            <mesh key={i} castShadow rotation={[0, (i / 12) * Math.PI * 2, 0]}>
+              <coneGeometry args={[2.9, 1.5, 3, 1, false, 0, Math.PI / 6]} />
+              <meshStandardMaterial color={i % 2 === 0 ? "#e2574c" : "#fdfbf6"} flatShading roughness={0.9} />
+            </mesh>
+          ))}
+        </group>
+        {/* knop + vlaggetje bovenop */}
+        <mesh position={[0, dakY + 1.5, 0]}><sphereGeometry args={[0.2, 14, 14]} /><meshStandardMaterial color="#ffd54a" roughness={0.45} metalness={0.3} /></mesh>
+        <mesh position={[0, dakY + 1.9, 0]}><cylinderGeometry args={[0.04, 0.04, 0.7, 8]} /><meshStandardMaterial color="#caa44a" roughness={0.6} /></mesh>
+        <group ref={vlag} position={[0, dakY + 2.15, 0]}>
+          <mesh position={[0.18, 0, 0]}><boxGeometry args={[0.36, 0.22, 0.02]} /><meshStandardMaterial color="#4a90d9" flatShading roughness={0.85} side={2} /></mesh>
+        </group>
       </group>
     </group>
   );
