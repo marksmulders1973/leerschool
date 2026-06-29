@@ -206,7 +206,8 @@ export const SOCIAL_VRAGEN = {
   "studie1": {
     vak: "studievaardigheden",
     leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Tabellen & grafieken lezen (groep 8)" },
-    vraag: "In een tabel staat de temperatuur: maandag **12°C**, dinsdag **9°C**, woensdag **15°C**, donderdag **7°C**. **Op welke dag was het het kóudst?**",
+    bronAfbeelding: { src: "/studievaardigheden/temperatuur-tabel.svg", alt: "Tabel met de temperatuur per dag: maandag, dinsdag, woensdag en donderdag" },
+    vraag: "Kijk goed naar de **tabel**. **Op welke dag was het het kóudst?**",
     options: ["donderdag", "dinsdag", "maandag", "woensdag"],
     answer: 0,
     wrongHints: [

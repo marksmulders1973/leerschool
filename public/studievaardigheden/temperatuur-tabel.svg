@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 232" width="340" height="232" role="img" aria-label="Tabel met de temperatuur per dag: maandag 12 graden, dinsdag 9 graden, woensdag 15 graden, donderdag 7 graden">
+  <rect x="0" y="0" width="340" height="232" rx="14" fill="#ffffff"/>
+  <text x="170" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#16314f">Temperatuur deze week</text>
+
+  <!-- tabel -->
+  <g font-family="Arial, sans-serif" font-size="14" fill="#16314f">
+    <!-- kop -->
+    <rect x="28" y="46" width="284" height="34" rx="6" fill="#eef3f9"/>
+    <text x="48" y="68" font-weight="700">Dag</text>
+    <text x="292" y="68" text-anchor="end" font-weight="700">Temperatuur</text>
+
+    <!-- rijen -->
+    <line x1="28" y1="80" x2="312" y2="80" stroke="#e3e9f1" stroke-width="1"/>
+    <text x="48" y="104">maandag</text><text x="292" y="104" text-anchor="end" font-weight="700">12 °C</text>
+    <line x1="28" y1="116" x2="312" y2="116" stroke="#eef2f7" stroke-width="1"/>
+    <text x="48" y="140">dinsdag</text><text x="292" y="140" text-anchor="end" font-weight="700">9 °C</text>
+    <line x1="28" y1="152" x2="312" y2="152" stroke="#eef2f7" stroke-width="1"/>
+    <text x="48" y="176">woensdag</text><text x="292" y="176" text-anchor="end" font-weight="700">15 °C</text>
+    <line x1="28" y1="188" x2="312" y2="188" stroke="#eef2f7" stroke-width="1"/>
+    <text x="48" y="212">donderdag</text><text x="292" y="212" text-anchor="end" font-weight="700">7 °C</text>
+  </g>
+
+  <!-- buitenrand -->
+  <rect x="28" y="46" width="284" height="184" rx="6" fill="none" stroke="#d6deea" stroke-width="1.5"/>
+</svg>
