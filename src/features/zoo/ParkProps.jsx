@@ -1068,6 +1068,88 @@ function PalmTree({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// Lucht-sfeer: een paar dikke low-poly wolken die langzaam over het park drijven
+// + wat vogeltjes die rustig rondcirkelen. Puur decor, vult de lege blauwe lucht
+// en geeft diepte. Geen schaduw (te duur + zou raar staan), licht emissief zodat
+// ze ook in de schemering nog zacht oplichten.
+function Wolk({ data }) {
+  const ref = useRef();
+  useFrame((_, dt) => {
+    const m = ref.current; if (!m) return;
+    m.position.x += dt * data.speed;
+    if (m.position.x > 52) m.position.x = -52;        // wrap-around → eindeloze stoet
+  });
+  return (
+    <group ref={ref} position={data.pos} scale={data.scale}>
+      {data.blobs.map(([x, y, z, r], i) => (
+        <mesh key={i} position={[x, y, z]}>
+          <icosahedronGeometry args={[r, 1]} />
+          <meshStandardMaterial color="#ffffff" emissive="#dfeefc" emissiveIntensity={0.35} flatShading roughness={1} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+function Vogel({ radius, height, speed, phase, color }) {
+  const ref = useRef();
+  const vleugels = useRef([]);
+  useFrame((s) => {
+    const t = s.clock.elapsedTime * speed + phase;
+    const g = ref.current; if (!g) return;
+    g.position.set(Math.cos(t) * radius, height + Math.sin(t * 1.6) * 0.8, Math.sin(t) * radius);
+    g.rotation.y = -t + Math.PI / 2;                  // neus in de vliegrichting
+    const flap = Math.sin(s.clock.elapsedTime * 9 + phase) * 0.5;
+    if (vleugels.current[0]) vleugels.current[0].rotation.z = 0.3 + flap;
+    if (vleugels.current[1]) vleugels.current[1].rotation.z = -0.3 - flap;
+  });
+  return (
+    <group ref={ref}>
+      <mesh ref={(el) => (vleugels.current[0] = el)} position={[0.18, 0, 0]}>
+        <boxGeometry args={[0.5, 0.04, 0.16]} />
+        <meshStandardMaterial color={color} flatShading roughness={1} />
+      </mesh>
+      <mesh ref={(el) => (vleugels.current[1] = el)} position={[-0.18, 0, 0]}>
+        <boxGeometry args={[0.5, 0.04, 0.16]} />
+        <meshStandardMaterial color={color} flatShading roughness={1} />
+      </mesh>
+      <mesh position={[0, 0, 0]}>
+        <boxGeometry args={[0.12, 0.1, 0.34]} />
+        <meshStandardMaterial color={color} flatShading roughness={1} />
+      </mesh>
+    </group>
+  );
+}
+
+export function SkyClouds() {
+  // Bouw één keer een set wolk-clusters: elk een handvol overlappende blobs.
+  const wolken = useMemo(() => {
+    const maakBlobs = (n) => Array.from({ length: n }, () => [
+      (Math.random() - 0.5) * 3.4, (Math.random() - 0.5) * 0.7, (Math.random() - 0.5) * 1.6,
+      0.8 + Math.random() * 0.7,
+    ]);
+    return Array.from({ length: 6 }, (_, i) => ({
+      pos: [-50 + (i * 104) / 6 + Math.random() * 8, 21 + Math.random() * 9, -34 + Math.random() * 64],
+      scale: 1.1 + Math.random() * 1.1,
+      speed: 0.35 + Math.random() * 0.4,
+      blobs: maakBlobs(4 + Math.floor(Math.random() * 3)),
+    }));
+  }, []);
+  const vogels = useMemo(() => (
+    [
+      { radius: 20, height: 13, speed: 0.18, phase: 0, color: "#3a3f48" },
+      { radius: 24, height: 15, speed: 0.15, phase: 2.1, color: "#4a4f58" },
+      { radius: 17, height: 12, speed: 0.22, phase: 4.0, color: "#33373f" },
+    ]
+  ), []);
+  return (
+    <group>
+      {wolken.map((w, i) => <Wolk key={i} data={w} />)}
+      {vogels.map((v, i) => <Vogel key={i} {...v} />)}
+    </group>
+  );
+}
+
 // Naambord-textuur: tekent de parknaam op een canvas → textuur voor het bord
 // boven de poort. Geen lettertype-afhankelijkheid, werkt offline.
 function maakNaambord(tekst) {
