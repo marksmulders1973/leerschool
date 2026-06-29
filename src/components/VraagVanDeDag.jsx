@@ -74,6 +74,11 @@ export default function VraagVanDeDag() {
         🎯 Doorstroomtoets-vraag van de dag
       </div>
 
+      {vraag.doelgroep && (
+        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700, marginBottom: 10 }}>
+          {vraag.doelgroep}
+        </div>
+      )}
       <div style={{ fontSize: 15.5, fontWeight: 600, lineHeight: 1.4, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
         {renderTekst(vraag.vraag)}
       </div>

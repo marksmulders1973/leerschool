@@ -117,6 +117,11 @@ function ProefVraagKaart({ onStart }) {
       <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
         🎯 Probeer meteen de vraag van de dag
       </div>
+      {vraag.doelgroep && (
+        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
+          {vraag.doelgroep}
+        </div>
+      )}
       <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
         {String(vraag.vraag || "").replace(/\*\*/g, "")}
       </div>

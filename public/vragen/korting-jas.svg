@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="Illustratie: een jas met een kortingslabel van 25 procent">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3fb"/>
+      <stop offset="1" stop-color="#dde8f7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.32" cy="0.30" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jas" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#3b6fd6"/>
+      <stop offset="1" stop-color="#244a9c"/>
+    </linearGradient>
+    <linearGradient id="jasLicht" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8af0"/>
+      <stop offset="1" stop-color="#3b6fd6"/>
+    </linearGradient>
+    <linearGradient id="label" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a59"/>
+      <stop offset="1" stop-color="#ff5252"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd66b"/>
+      <stop offset="1" stop-color="#ffb02e"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="8" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" rx="20" fill="url(#bg)"/>
+  <ellipse cx="150" cy="120" rx="180" ry="150" fill="url(#glow)"/>
+  <!-- zachte diepte-blobs -->
+  <circle cx="330" cy="60" r="46" fill="#ffffff" opacity="0.45"/>
+  <circle cx="60" cy="250" r="34" fill="#ffffff" opacity="0.4"/>
+
+  <!-- schaduw onder de jas -->
+  <ellipse cx="172" cy="262" rx="92" ry="16" fill="#1b2b4a" opacity="0.12"/>
+
+  <!-- JAS (gestileerd, met diepte) -->
+  <g filter="url(#soft)">
+    <!-- kraag -->
+    <path d="M150 78 q22 -16 44 0 l-22 22 z" fill="url(#jasLicht)"/>
+    <!-- romp -->
+    <path d="M128 96 q44 -30 88 0 l16 150 q-60 22 -120 0 z" fill="url(#jas)"/>
+    <!-- linkerpand-lijn -->
+    <path d="M172 100 l-4 142" stroke="#1c3a78" stroke-width="3" opacity="0.5" fill="none"/>
+    <!-- mouwen -->
+    <path d="M128 100 l-34 26 18 30 30 -22 z" fill="url(#jasLicht)"/>
+    <path d="M216 100 l34 26 -18 30 -30 -22 z" fill="url(#jasLicht)"/>
+    <!-- knopen -->
+    <circle cx="172" cy="134" r="4.2" fill="#cdd9f2"/>
+    <circle cx="172" cy="166" r="4.2" fill="#cdd9f2"/>
+    <circle cx="172" cy="198" r="4.2" fill="#cdd9f2"/>
+    <!-- highlight -->
+    <path d="M150 104 q12 -8 24 -8 l-2 130 q-12 2 -22 -2 z" fill="#ffffff" opacity="0.12"/>
+  </g>
+
+  <!-- PRIJSLABEL (zwaait aan een touwtje) -->
+  <g transform="rotate(-12 286 150)">
+    <line x1="286" y1="86" x2="286" y2="120" stroke="#9aa7c0" stroke-width="3"/>
+    <g filter="url(#soft)">
+      <path d="M252 120 h68 a14 14 0 0 1 14 14 v54 a14 14 0 0 1 -14 14 h-68 l-22 -41 z" fill="url(#label)"/>
+      <circle cx="244" cy="148" r="6.5" fill="#fff2ee"/>
+    </g>
+    <text x="290" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700" text-decoration="line-through" opacity="0.92">€80</text>
+    <text x="290" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="800">−25%</text>
+  </g>
+
+  <!-- badge / sprankel -->
+  <g filter="url(#soft)">
+    <circle cx="92" cy="92" r="26" fill="url(#badge)"/>
+    <text x="92" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#7a4a00">%</text>
+  </g>
+  <g fill="#ffce54">
+    <path d="M338 196 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/>
+    <circle cx="120" cy="232" r="4"/>
+  </g>
+</svg>

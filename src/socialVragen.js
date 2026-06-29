@@ -458,6 +458,7 @@ export const SOCIAL_VRAGEN = {
 
   "studie3": {
     vak: "studievaardigheden",
+    doelgroep: "🎒 Zit jij op de basisschool? (groep 7-8)",
     leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Grafieken lezen (groep 8)" },
     bronAfbeelding: { src: "/studievaardigheden/ijsjes-staafdiagram.svg", alt: "Staafdiagram van verkochte ijsjes per dag: maandag, dinsdag, woensdag en donderdag" },
     vraag: "Kijk goed naar het **staafdiagram**. **Op welke dag werden de meeste ijsjes verkocht?**",
@@ -478,6 +479,33 @@ export const SOCIAL_VRAGEN = {
         basis: "Meeste = grootste getal. Van 20, 35, 50, 15 is 50 het grootst: woensdag.",
         simpeler: "Zoek de hoogste staaf (= grootste getal). Dat is 50, op woensdag.",
         nogSimpeler: "Grootste getal = 50 = woensdag.",
+      },
+    },
+  },
+
+  "ouderkorting1": {
+    vak: "rekenen",
+    doelgroep: "👨‍👩‍👧 Ben je ouder of verzorger?",
+    leerpadLink: { id: "procenten-po", title: "Procenten & korting (groep 7-8)" },
+    bronAfbeelding: { src: "/vragen/korting-jas.svg", alt: "Een jas met een kortingslabel van 25 procent" },
+    vraag: "Reken je deze nog uit het hoofd? 😏 Een jas kost **€80**. Vandaag is er **25% korting**. **Hoeveel betaal je nu?**",
+    options: ["€60", "€55", "€65", "€20"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Je haalt 25% van €80 eraf, niet precies €25.",
+      "Korting maakt het goedkoper, niet duurder.",
+      "€20 is de korting zélf — niet wat je nog betaalt.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "25% van €80", tekst: "25% is een kwart. Een kwart van €80 is €80 ÷ 4 = €20 korting." },
+        { titel: "Wat betaal je", tekst: "€80 − €20 korting = €60." },
+      ],
+      niveaus: {
+        basis: "25% van €80 = €20 korting. €80 − €20 = €60.",
+        simpeler: "25% is een kwart. €80 ÷ 4 = €20 eraf. Blijft €60.",
+        nogSimpeler: "Een kwart van 80 = 20. 80 − 20 = 60. → €60.",
       },
     },
   },
