@@ -56,6 +56,30 @@ export const BUDDIES = [
     verdien: 30,
     flavor: "Stuiter je mee? 🫧",
   },
+  {
+    id: "ster",
+    naam: "Twinkel",
+    emoji: "🌟",
+    soort: "ster",
+    kleur: "#ffe14d",
+    kleur2: "#ffd23a",
+    accent: "#fff7c8",
+    karakter: "dromerig & kalm",
+    verdien: 42,
+    flavor: "Ik fonkel als jij leert! 🌟",
+  },
+  {
+    id: "fenix",
+    naam: "Gloed",
+    emoji: "🔥",
+    soort: "fenix",
+    kleur: "#ff7a3c",
+    kleur2: "#e8451e",
+    accent: "#ffd23a",
+    karakter: "warm & vrolijk",
+    verdien: 55,
+    flavor: "Samen vliegen we hoog! 🔥",
+  },
 ];
 
 export const BUDDY_BY_ID = Object.fromEntries(BUDDIES.map((b) => [b.id, b]));
@@ -163,6 +187,20 @@ export function buddyPraatje(soort, facts) {
       { e: "🧠", t: f.zwakVak ? `${cap(f.zwakVak)} oefen je het best in kleine stukjes.` : "Even pauze? Daarna onthoud je beter." },
       { e: "💡", t: `Slimme keuze om hier te zijn, ${hoi}.` },
     );
+  } else if (soort === "ster") {
+    o.push(
+      { e: "🌟", t: `Elke som die je leert, laat mij fonkelen, ${hoi}.` },
+      { e: "✨", t: "Rustig ademen… en dan de vraag. Jij kan dit." },
+      { e: "💫", t: f.zwakVak ? `${cap(f.zwakVak)}? Stapje voor stapje, als sterren tellen.` : "Wat wil je vandaag ontdekken?" },
+      { e: "🌙", t: `Fijn om met jou te zweven, ${hoi}.` },
+    );
+  } else if (soort === "fenix") {
+    o.push(
+      { e: "🔥", t: `Voel je de energie, ${hoi}? Op naar dat kwartier!` },
+      { e: "🪶", t: "Fout gemaakt? Een fenix staat altijd weer op. Wij ook!" },
+      { e: "☀️", t: f.zwakVak ? `${cap(f.zwakVak)} verbranden we samen!` : "Klaar om te vliegen?" },
+      { e: "✨", t: `Jij straalt vandaag, ${hoi}!` },
+    );
   } else { // bubbel
     o.push(
       { e: "🫧", t: `Boing boing! Race je met me naar de draaimolen, ${hoi}?` },
@@ -186,6 +224,8 @@ export function buddyAai(soort, facts) {
     eenhoorn: [{ e: "💗", t: `Aaah, wat lief ${hoi}!` }, { e: "✨", t: "Knuffel! Ik vind jou zo lief." }, { e: "🌈", t: "Jij maakt mij blij!" }],
     uil: [{ e: "🦉", t: "Hoehoe! Fijn dat je er bent." }, { e: "📚", t: "Zullen we iets slims leren?" }, { e: "💡", t: `Wijze keuze, ${hoi}.` }],
     bubbel: [{ e: "🫧", t: "Boing! Hihi, dat kietelt!" }, { e: "🤪", t: `Nog een keer, ${hoi}!` }, { e: "🎈", t: "Wheee! Ik stuiter van geluk!" }],
+    ster: [{ e: "🌟", t: "Twinkel twinkel — dankjewel!" }, { e: "✨", t: `Aai! Ik fonkel voor jou, ${hoi}.` }, { e: "💫", t: "Wat lief van je!" }],
+    fenix: [{ e: "🔥", t: "Whoosh! Ik gloei van blijdschap!" }, { e: "🪶", t: `Nog een aai, ${hoi}?` }, { e: "☀️", t: "Samen onverwoestbaar!" }],
   };
   const o = m[soort] || m.bubbel;
   return o[Math.floor(Math.random() * o.length)];

@@ -111,10 +111,57 @@ function Bubbel({ c, squashRef }) {
   );
 }
 
+function Ster({ c }) {
+  const punten = Array.from({ length: 5 }, (_, i) => (i / 5) * Math.PI * 2 + Math.PI / 2);
+  return (
+    <group>
+      {/* gloeiende kern */}
+      <mesh castShadow><icosahedronGeometry args={[0.28, 1]} /><meshStandardMaterial color={c.kleur} emissive={c.accent} emissiveIntensity={0.6} flatShading roughness={0.45} /></mesh>
+      {/* 5 punten, naar buiten wijzend */}
+      {punten.map((a, i) => (
+        <mesh key={i} position={[Math.cos(a) * 0.34, Math.sin(a) * 0.34, 0]} rotation={[0, 0, a - Math.PI / 2]}>
+          <coneGeometry args={[0.13, 0.34, 4]} /><meshStandardMaterial color={c.kleur} emissive={c.accent} emissiveIntensity={0.55} flatShading roughness={0.45} />
+        </mesh>
+      ))}
+      {/* oogjes */}
+      {[-0.1, 0.1].map((x, i) => <mesh key={i} position={[x, 0.02, 0.26]}><sphereGeometry args={[0.05, 8, 8]} /><meshStandardMaterial color="#5a3a00" roughness={0.4} /></mesh>)}
+      {/* lachje */}
+      <mesh position={[0, -0.1, 0.26]} rotation={[0, 0, Math.PI]}><torusGeometry args={[0.07, 0.015, 8, 12, Math.PI]} /><meshStandardMaterial color="#5a3a00" roughness={0.4} /></mesh>
+    </group>
+  );
+}
+
+function Fenix({ c, flapRef }) {
+  return (
+    <group>
+      {/* lijf */}
+      <mesh castShadow scale={[1, 1.1, 1]}><sphereGeometry args={[0.32, 16, 16]} /><meshStandardMaterial color={c.kleur} emissive="#ff5a1e" emissiveIntensity={0.28} flatShading roughness={0.65} /></mesh>
+      {/* kop */}
+      <mesh castShadow position={[0, 0.34, 0.12]}><sphereGeometry args={[0.2, 14, 14]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.65} /></mesh>
+      {/* vlam-kuif */}
+      {[-1, 0, 1].map((s, i) => <mesh key={i} position={[0, 0.5, 0.06]} rotation={[0.2, 0, s * 0.4]}><coneGeometry args={[0.06, 0.26, 4]} /><meshStandardMaterial color={c.accent} emissive="#ff8a3a" emissiveIntensity={0.5} flatShading roughness={0.5} /></mesh>)}
+      {/* snavel */}
+      <mesh position={[0, 0.32, 0.3]} rotation={[Math.PI / 2, 0, 0]}><coneGeometry args={[0.05, 0.13, 4]} /><meshStandardMaterial color="#ffd23a" flatShading roughness={0.5} /></mesh>
+      {/* oogjes */}
+      {[-0.08, 0.08].map((x, i) => <mesh key={i} position={[x, 0.36, 0.27]}><sphereGeometry args={[0.04, 8, 8]} /><meshStandardMaterial color="#3a1400" roughness={0.4} /></mesh>)}
+      {/* vleugels (klapperen) */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} ref={(el) => (flapRef.current[i] = el)} position={[s * 0.3, 0.05, 0]} rotation={[0, 0, s * 0.4]}>
+          <coneGeometry args={[0.14, 0.52, 4]} /><meshStandardMaterial color={c.accent} emissive="#ff6a1e" emissiveIntensity={0.35} flatShading roughness={0.6} side={2} />
+        </mesh>
+      ))}
+      {/* staart-vlammen */}
+      {[-1, 0, 1].map((s, i) => <mesh key={i} position={[s * 0.12, -0.18, -0.28]} rotation={[-0.8, 0, s * 0.3]}><coneGeometry args={[0.07, 0.42, 4]} /><meshStandardMaterial color={s === 0 ? c.kleur : c.accent} emissive="#ff5a1e" emissiveIntensity={0.42} flatShading roughness={0.6} /></mesh>)}
+    </group>
+  );
+}
+
 function Lijf({ soort, c, flapRef, squashRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
+  if (soort === "ster") return <Ster c={c} />;
+  if (soort === "fenix") return <Fenix c={c} flapRef={flapRef} />;
   return <Bubbel c={c} squashRef={squashRef} />;
 }
 
@@ -130,7 +177,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   const squashRef = useRef();
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
-  const zweef = kind === "draakje" || kind === "bubbel";
+  const zweef = kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix";
   const baseY = zweef ? 0.62 : 0.36;
   const doelGrootte = buddyGrootte(groei);
 
