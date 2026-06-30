@@ -2,11 +2,47 @@
 // toe een praatwolkje toont. Low-poly in de parkstijl. Het maatje trailt naast
 // de speler (vaste zij-offset, soepel ge-lerpt), hupt vrolijk en draait mee in
 // z'n looprichting. Praatjes komen uit buddies.js (sjablonen + echte feiten).
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Html } from "@react-three/drei";
-import { Vector3 } from "three";
+import { Html, useGLTF } from "@react-three/drei";
+import { Vector3, Box3 } from "three";
 import { buddyPraatje, buddyAai, buddyGrootte, BUDDY_BY_ID } from "./buddies";
+
+// Echte 3D-modellen per maatje (.glb in public/maatjes). Vervangen het
+// procedurele lijfje als ze bestaan. Vonk = via gratis image-to-3D (SF3D).
+const BUDDY_MODEL = {
+  draakje: "/maatjes/vonk.glb",
+};
+
+// Laadt een .glb-maatje, normaliseert het (schaal naar ~doelhoogte + voeten op
+// de grond) en zet schaduwen aan. Hergebruikt het patroon van ZooModel.
+function MaatjeModel({ url, doelhoogte = 0.95, draai = 0 }) {
+  const { scene } = useGLTF(url);
+  const cloned = useMemo(() => scene.clone(true), [scene]);
+  const { scale, yOffset } = useMemo(() => {
+    const box = new Box3().setFromObject(cloned);
+    const size = new Vector3();
+    box.getSize(size);
+    const h = size.y || 1;
+    const s = doelhoogte / h;
+    return { scale: s, yOffset: -box.min.y * s };
+  }, [cloned, doelhoogte]);
+  useEffect(() => {
+    cloned.traverse((o) => {
+      if (!o.isMesh) return;
+      o.castShadow = true; o.receiveShadow = true;
+      const m = o.material;
+      if (m && "roughness" in m) m.roughness = Math.max(0.55, m.roughness ?? 1);
+      if (m && "metalness" in m) m.metalness = 0;
+    });
+  }, [cloned]);
+  return (
+    <group position={[0, yOffset, 0]} rotation={[0, draai, 0]}>
+      <primitive object={cloned} scale={scale} />
+    </group>
+  );
+}
+useGLTF.preload("/maatjes/vonk.glb");
 
 // ── Procedurele lijfjes per soort ──────────────────────────────────────────
 function Draakje({ c, flapRef }) {
@@ -177,8 +213,9 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   const squashRef = useRef();
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
-  const zweef = kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix";
-  const baseY = zweef ? 0.62 : 0.36;
+  const model = BUDDY_MODEL[kind];
+  const zweef = !model && (kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix");
+  const baseY = model ? 0 : (zweef ? 0.62 : 0.36);
   const doelGrootte = buddyGrootte(groei);
 
   // Aaien/aantikken → blije reactie: sprongetje, knuffel-praatje en een hartje.
@@ -271,7 +308,9 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
         <mesh position={[0, -0.06, 0]} rotation={[0, 0, Math.PI]}><coneGeometry args={[0.14, 0.2, 4]} /><meshStandardMaterial color="#ff5a7a" emissive="#ff3a64" emissiveIntensity={0.4} roughness={0.5} /></mesh>
       </group>
       <group ref={lijf}>
-        <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} />
+        {model
+          ? <MaatjeModel url={model} />
+          : <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} />}
       </group>
     </group>
   );
