@@ -34,7 +34,10 @@ export const BUDDIES = [
     karakter: "trouw & vrolijk",
     verdien: 0,         // Charley = Mark's eigen hond → altijd kiesbaar voor iedereen
     flavor: "Woef! Samen leren is het allerleukst! 🐾",
-    model: "/maatjes/charley.glb",  // fotorealistisch 3D-model (gratis via SF3D uit Mark's foto)
+    // NB: een fotorealistisch model (/maatjes/charley.glb) bestaat, maar de bronfoto
+    // was een ZITTENDE hond → dat 3D-model heeft geen pootjes/loopt niet. Daarom
+    // gebruikt Charley het procedurele bokserlijf (4 pootjes + lopen + kwispelen +
+    // bewegende mond). Stuurt Mark ooit een STAANDE foto → dan kan de glb terug.
   },
   {
     id: "eenhoorn",
