@@ -31,6 +31,7 @@ import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
 import KwartierPauze from "./KwartierPauze.jsx";
 import BronTekstInteractief from "./BronTekstInteractief.jsx";
+import { actieveBuddyPersona } from "../zoo/buddies.js";
 
 const C = {
   bg: "#0f1729",
@@ -393,6 +394,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // AI-tutor drawer-state. Sluit niet automatisch bij stap-wissel; tutor leest
   // pathId+stepIdx zelf uit en herlaadt history.
   const [showTutor, setShowTutor] = useState(false);
+  // Buddy-tutor (Mark 2026-07-01): "Vraag hulp aan Vonk"-knop = het maatje dat
+  // de leerling koos (of Vonk) dat meedenkt. Oproepbaar, niet altijd meelopend.
+  const [tutorBuddy] = useState(() => actieveBuddyPersona());
   // Onthoud laatste fout-poging zodat de tutor weet wat er net mis ging.
   const [lastWrongAnswer, setLastWrongAnswer] = useState(null);
   // Pilot 2026-05-10: dynamisch uitleg-paneel per vraag (Mark blauwdruk economie).
@@ -1041,10 +1045,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 type="button"
                 onClick={() => setShowTutor(true)}
                 style={tutorButtonStyle()}
-                aria-label="Vraag aan de AI-leerbegeleider"
+                aria-label={`Vraag hulp aan ${tutorBuddy.naam}`}
               >
-                <span style={{ fontSize: 16 }}>💬</span>
-                Vraag aan de leerbegeleider
+                <span style={{ fontSize: 16 }}>{tutorBuddy.emoji}</span>
+                Vraag hulp aan {tutorBuddy.naam}
               </button>
             </div>
           </>
@@ -1537,7 +1541,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               onClick={() => setShowTutor(true)}
               style={{ ...btnSecondary(), marginTop: 8 }}
             >
-              💬 Vraag aan de leerbegeleider
+              {tutorBuddy.emoji} Vraag hulp aan {tutorBuddy.naam}
             </button>
             {/* Chrome-Claude V2 review 2026-05-15: twee primaire groene CTA's
                 concurreerden ("Hier is de uitleg" + "Probeer opnieuw"). Bij

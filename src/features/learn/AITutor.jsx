@@ -11,6 +11,8 @@ import { useState, useEffect, useRef } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
+import { actieveBuddyPersona } from "../zoo/buddies.js";
+import { track } from "../../utils.js";
 
 const STORAGE_PREFIX = "studiebol_tutor_chat_";
 
@@ -23,6 +25,26 @@ const SUGGESTIES = [
   "Geef een voorbeeld",
   "Waarom is dit belangrijk?",
 ];
+
+// Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
+// (zelfde aanpak als BuddyChat). Geen kosten, geen kinderdata verlaat het toestel.
+function speak(text) {
+  try {
+    if (!window.speechSynthesis) return;
+    const schoon = String(text).replace(/[*_#`>]/g, "");
+    const u = new SpeechSynthesisUtterance(schoon);
+    u.lang = "nl-NL";
+    const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
+    if (stem) u.voice = stem;
+    u.rate = 1.0; u.pitch = 1.3;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(u);
+  } catch { /* stem niet beschikbaar → stil */ }
+}
+
+function stopSpeak() {
+  try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ }
+}
 
 export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, stepIdx, stepExplanation, currentCheck, lastWrongAnswer }) {
   const [messages, setMessages] = useState(() => {
@@ -37,7 +59,21 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
+  const [geluid, setGeluid] = useState(true);
   const scrollRef = useRef(null);
+
+  // Persona = het maatje dat de leerling koos (of Vonk als vlaggenschip). Zo is
+  // het écht "Vonk helpt je", geen anonieme AI. Eén keer lezen bij open.
+  const [buddy] = useState(() => actieveBuddyPersona());
+  const naam = buddy.naam || "Vonk";
+  const emoji = buddy.emoji || "🐉";
+  const accent = buddy.kleur || "#5bbf5a";
+
+  // Stop met praten zodra het venster sluit.
+  useEffect(() => {
+    if (!open) stopSpeak();
+    return stopSpeak;
+  }, [open]);
 
   // Reload history bij wisseling van stap (component blijft mounted, alleen
   // pathId/stepIdx veranderen).
@@ -75,6 +111,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     setError(null);
     // Pro-meting (Mark 2026-06-06): elke échte AI-vraag = 1 gebruik.
     trackProUse("ai-tutor", { pathId });
+    // Buddy-tutor-meting (Mark 2026-07-01): hoe vaak roepen leerlingen Vonk op?
+    try { track("vonk_hulp_vraag", { pathId, buddy: buddy.id }); } catch { /* */ }
 
     // Audit fix 2026-05-14: correctOption NIET meer in payload. AI moet uit
     // uitleg + opties zelf afleiden welke optie correct is, anders kan een
@@ -104,6 +142,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       const after = [...next, { role: "assistant", content: data.reply }];
       setMessages(after);
       persist(after);
+      if (geluid) speak(data.reply);
     } catch (e) {
       setError(e.message);
     } finally {
@@ -116,7 +155,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   return (
     <div
       role="dialog"
-      aria-label="AI-leerbegeleider"
+      aria-label={`Hulp van ${naam}`}
       style={{
         position: "fixed",
         inset: 0,
@@ -154,14 +193,10 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           gap: 10,
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
-            <span style={{
-              width: 8, height: 8, borderRadius: "50%",
-              background: "#00C853",
-              boxShadow: "0 0 8px rgba(0,200,83,0.7)",
-            }} />
+            <span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
-                AI-leerbegeleider
+                {naam} helpt je
                 <ProBadge feature="ai-tutor" />
               </div>
               <div style={{
@@ -171,25 +206,43 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 overflow: "hidden",
                 textOverflow: "ellipsis",
               }}>
-                Helpt met: {stepTitle}
+                Bij: {stepTitle}
               </div>
             </div>
           </div>
-          <button
-            onClick={onClose}
-            aria-label="Sluit leerbegeleider"
-            style={{
-              background: "transparent",
-              border: "1px solid rgba(255,255,255,0.12)",
-              color: "rgba(255,255,255,0.7)",
-              borderRadius: 8,
-              padding: "4px 10px",
-              cursor: "pointer",
-              fontSize: 13,
-            }}
-          >
-            ✕
-          </button>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button
+              onClick={() => { setGeluid((g) => { if (g) stopSpeak(); return !g; }); }}
+              aria-label={geluid ? `${naam} stil zetten` : `${naam} hardop laten praten`}
+              title={geluid ? "Geluid uit" : "Geluid aan"}
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.12)",
+                color: "rgba(255,255,255,0.7)",
+                borderRadius: 8,
+                padding: "4px 10px",
+                cursor: "pointer",
+                fontSize: 15,
+              }}
+            >
+              {geluid ? "🔊" : "🔇"}
+            </button>
+            <button
+              onClick={onClose}
+              aria-label={`Sluit ${naam}`}
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.12)",
+                color: "rgba(255,255,255,0.7)",
+                borderRadius: 8,
+                padding: "4px 10px",
+                cursor: "pointer",
+                fontSize: 13,
+              }}
+            >
+              ✕
+            </button>
+          </div>
         </header>
 
         {/* Chat-bubbles */}
@@ -209,8 +262,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               padding: "8px 4px 4px",
               lineHeight: 1.55,
             }}>
-              Hoi! Ik weet over welke stap je bezig bent. Stel een vraag, of klik
-              op een suggestie hieronder.
+              {emoji} Hoi! Ik ben {naam} en ik weet aan welke vraag je werkt. Vertel
+              wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.
             </div>
           )}
           {messages.map((m, i) => (
@@ -242,7 +295,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               color: "rgba(255,255,255,0.55)",
               padding: "6px 12px",
             }}>
-              Leerbegeleider denkt na…
+              {naam} denkt na…
             </div>
           )}
           {error && (
@@ -310,7 +363,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 send();
               }
             }}
-            placeholder="Stel je vraag…"
+            placeholder={`Vraag ${naam} iets…`}
             rows={1}
             disabled={busy}
             style={{

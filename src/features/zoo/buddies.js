@@ -108,6 +108,23 @@ export function zetBuddyNaam(id, naam) {
 export function gekozenBuddy() {
   try { return localStorage.getItem(LS_KEUZE) || ""; } catch { return ""; }
 }
+
+// De buddy die de leerling als maatje koos — of Vonk (het vlaggenschip) als er
+// nog niets gekozen is. Gebruikt door de "Vraag hulp aan <maatje>"-tutorknop +
+// het tutor-venster, zodat het écht hún eigen maatje is dat meedenkt.
+export function actieveBuddyPersona() {
+  const id = gekozenBuddy() || "draakje";
+  const b = BUDDY_BY_ID[id] || BUDDY_BY_ID.draakje;
+  return {
+    id,
+    naam: buddyNaam(id, b.naam),
+    emoji: b.emoji,
+    kleur: b.kleur,
+    kleur2: b.kleur2,
+    accent: b.accent,
+    soort: b.soort,
+  };
+}
 export function bezitBuddies() {
   try { return JSON.parse(localStorage.getItem(LS_BEZIT) || "[]"); } catch { return []; }
 }
