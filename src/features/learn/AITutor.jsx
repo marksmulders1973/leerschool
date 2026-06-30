@@ -69,10 +69,17 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
 
-  // Stop met praten zodra het venster sluit.
+  // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
+  // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
+  // zodra het venster sluit.
   useEffect(() => {
-    if (!open) stopSpeak();
+    if (open) {
+      try { track("vonk_hulp_open", { pathId, buddy: buddy.id }); } catch { /* */ }
+    } else {
+      stopSpeak();
+    }
     return stopSpeak;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   // Reload history bij wisseling van stap (component blijft mounted, alleen
