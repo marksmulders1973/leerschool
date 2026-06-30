@@ -17,7 +17,8 @@ export const BUDDIES = [
     kleur2: "#3f8f3a",
     accent: "#ffd23a",
     karakter: "enthousiast & moedig",
-    verdien: 6,   // geleerde stappen nodig als dit NIET je gratis startkeuze is
+    verdien: 0,   // Vonk krijgt IEDEREEN altijd gratis (vlaggenschip-maatje); de
+                  // andere maatjes verdien je door te leren (zie 'verdien' hieronder)
     flavor: "Samen maken we er een vuurtje van! 🔥",
     model: "/maatjes/vonk.glb",   // echt 3D-figuur (park + keuze-kaartje)
     vliegt: true,                  // vliegt rondjes om de speler i.p.v. meelopen

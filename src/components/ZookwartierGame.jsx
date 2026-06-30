@@ -17,7 +17,7 @@ import { track } from "../utils.js";
 import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
 import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
-import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier } from "../features/zoo/unlocks";
+import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN } from "../features/zoo/unlocks";
 import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID } from "../features/zoo/buddies";
@@ -1183,7 +1183,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               })}
               {/* Vrijspeel-dieren (alleen in Dieren-tab): te verdienen door te leren,
                   niet te koop. Vergrendeld → tik = naar het leerpad (loop terug). */}
-              {shopCat === "dier" && VRIJSPEEL_DIEREN.map((v) => {
+              {/* Vrijspeel-dieren (Dieren-tab): vrijgespeelde tonen we als gouden
+                  kaart; van de grote dino's tonen we alléén de eerstvolgende te
+                  verdienen dino (geen muur van sloten) + het spaarvarken. */}
+              {shopCat === "dier" && VRIJSPEEL_DIEREN.filter((v) => {
+                if (unlockedDieren.includes(v.assetId)) return true;
+                if (typeof v.stappen === "number") {
+                  // alleen de laagste nog-niet-verdiende mijlpaal-dino
+                  return DINO_MIJLPALEN.find((d) => !unlockedDieren.includes(d.assetId))?.assetId === v.assetId;
+                }
+                return true; // spaarvarken (pad) als nog niet vrij
+              }).map((v) => {
                 const isUnlocked = unlockedDieren.includes(v.assetId);
                 const alGeplaatst = placedItems.some((it) => it.assetId === v.assetId);
                 if (isUnlocked) {
@@ -1194,10 +1204,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                     </button>
                   );
                 }
+                const isMijlpaal = typeof v.stappen === "number";
+                const rest = isMijlpaal ? Math.max(0, v.stappen - geleerdeStappen) : 0;
+                const sub = isMijlpaal
+                  ? (rest === 0 ? "bijna vrij — speel verder ✨" : `nog ${rest} leer-stap${rest === 1 ? "" : "pen"} ✨`)
+                  : "leer sparen → speel vrij";
                 return (
-                  <button key={v.assetId} onClick={() => { try { track("zoo_unlock_klik", { dier: v.assetId, pad: v.pad }); } catch { /* */ } if (onOpenLeerpad) onOpenLeerpad(v.pad); else if (onOpenLeerpaden) onOpenLeerpaden(); }} title={`Speel ${v.naam} vrij`} style={{ flex: "0 0 auto", border: "2px dashed #c9b06a", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: "#8a7a4a", background: "rgba(255,255,255,0.55)", boxShadow: "0 3px 10px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap", textAlign: "center" }}>
+                  <button key={v.assetId} onClick={() => { try { track("zoo_unlock_klik", { dier: v.assetId, pad: v.pad, stappen: v.stappen }); } catch { /* */ } if (v.pad && onOpenLeerpad) onOpenLeerpad(v.pad); else if (onOpenLeerpaden) onOpenLeerpaden(); else if (onOpenLeerpad) onOpenLeerpad(v.pad); }} title={`Speel ${v.naam} vrij door te leren`} style={{ flex: "0 0 auto", border: "2px dashed #c9b06a", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: "#8a7a4a", background: "rgba(255,255,255,0.55)", boxShadow: "0 3px 10px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap", textAlign: "center" }}>
                     <span style={{ fontSize: 18 }}>🔒</span> {v.naam}<br />
-                    <span style={{ fontSize: 10, opacity: 0.9 }}>leer sparen → speel vrij</span>
+                    <span style={{ fontSize: 10, opacity: 0.9 }}>{sub}</span>
                   </button>
                 );
               })}

@@ -173,7 +173,11 @@ export const ZOO_ASSETS = {
 };
 
 // Winkel-categorieën (volgorde = winkel-volgorde).
-export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
+// De GROTE dino's (triceratops, stegosaurus, parasaurolophus, trex, apatosaurus)
+// staan bewust NIET in de koop-winkel: die "speel je vrij" door te leren — zie
+// VRIJSPEEL_DIEREN in unlocks.js (Mark 2026-07-01: grootste dino's achterhouden).
+// De velociraptor blijft koopbaar als intro-dino zodat de dino-plek niet leeg is.
+export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];

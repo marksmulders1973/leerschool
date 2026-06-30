@@ -69,7 +69,10 @@ function bouwVoorbeeldPark() {
   verblijf(-17, 3, -11, 9, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor)
   verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter)
   verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);               // hertenkamp (rechts-voor)
-  verblijf(10, -11, 18, -3, 14, ["trex", "triceratops", "stegosaurus", "velociraptor"]); // dino's (rechts-achter) — ruimer hek, want de dino-modellen zijn groot
+  // Dino-plek (rechts-achter): start NIET vol (Mark 2026-07-01). Alleen de kleine
+  // velociraptor staat er — de grote dino's (T-Rex, Triceratops, …) "speel je
+  // vrij" door te leren (zie unlocks.js). Ruim, leeg hek = duidelijke groei-plek.
+  verblijf(10, -11, 18, -3, 14, ["velociraptor"]);
 
   // ── HUIZEN-DORPje helemaal achterin ──
   ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
