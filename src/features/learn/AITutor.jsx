@@ -7,12 +7,16 @@
 //
 // MVP scope: niet meer dan ~150 regels, geen dependencies buiten React.
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { track } from "../../utils.js";
+
+// Charley's geanimeerde kop (3D, bewegende mond) — lazy zodat three.js pas
+// laadt als Charley de gekozen tutor is.
+const CharleyHead = lazy(() => import("../zoo/CharleyHead.jsx"));
 
 const STORAGE_PREFIX = "studiebol_tutor_chat_";
 
@@ -28,18 +32,22 @@ const SUGGESTIES = [
 
 // Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
 // (zelfde aanpak als BuddyChat). Geen kosten, geen kinderdata verlaat het toestel.
-function speak(text) {
+// onStart/onEnd sturen de mond-animatie van Charley's kop aan.
+function speak(text, { onStart, onEnd } = {}) {
   try {
-    if (!window.speechSynthesis) return;
+    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
     const schoon = String(text).replace(/[*_#`>]/g, "");
     const u = new SpeechSynthesisUtterance(schoon);
     u.lang = "nl-NL";
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
     if (stem) u.voice = stem;
     u.rate = 1.0; u.pitch = 1.3;
+    u.onstart = () => onStart && onStart();
+    u.onend = () => onEnd && onEnd();
+    u.onerror = () => onEnd && onEnd();
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(u);
-  } catch { /* stem niet beschikbaar → stil */ }
+  } catch { onEnd && onEnd(); }
 }
 
 function stopSpeak() {
@@ -60,6 +68,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const [geluid, setGeluid] = useState(true);
+  const [praat, setPraat] = useState(false);   // Charley's mond beweegt terwijl hij voorleest
   const scrollRef = useRef(null);
 
   // Persona = het maatje dat de leerling koos (of Vonk als vlaggenschip). Zo is
@@ -68,6 +77,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const naam = buddy.naam || "Vonk";
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
+  const isCharley = buddy.id === "charley";
 
   // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
@@ -77,8 +87,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       try { track("vonk_hulp_open", { pathId, buddy: buddy.id }); } catch { /* */ }
     } else {
       stopSpeak();
+      setPraat(false);
     }
-    return stopSpeak;
+    return () => { stopSpeak(); setPraat(false); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
@@ -149,7 +160,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       const after = [...next, { role: "assistant", content: data.reply }];
       setMessages(after);
       persist(after);
-      if (geluid) speak(data.reply);
+      if (geluid) speak(data.reply, { onStart: () => setPraat(true), onEnd: () => setPraat(false) });
     } catch (e) {
       setError(e.message);
     } finally {
@@ -200,7 +211,15 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           gap: 10,
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
-            <span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>
+            {isCharley ? (
+              <div style={{ width: 56, height: 56, flexShrink: 0, marginTop: -2, marginBottom: -2 }}>
+                <Suspense fallback={<span style={{ fontSize: 24, lineHeight: "56px" }}>{emoji}</span>}>
+                  <CharleyHead size={56} praat={praat} />
+                </Suspense>
+              </div>
+            ) : (
+              <span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>
+            )}
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 {naam} helpt je
@@ -219,7 +238,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
-              onClick={() => { setGeluid((g) => { if (g) stopSpeak(); return !g; }); }}
+              onClick={() => { setGeluid((g) => { if (g) { stopSpeak(); setPraat(false); } return !g; }); }}
               aria-label={geluid ? `${naam} stil zetten` : `${naam} hardop laten praten`}
               title={geluid ? "Geluid uit" : "Geluid aan"}
               style={{
