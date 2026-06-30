@@ -166,7 +166,7 @@ function Lijf({ soort, c, flapRef, squashRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "" }) {
+export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat }) {
   const b = BUDDY_BY_ID[kind];
   const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
@@ -184,9 +184,10 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   // Aaien/aantikken → blije reactie: sprongetje, knuffel-praatje en een hartje.
   const aai = (e) => {
     if (e) e.stopPropagation();
+    st.current.pet = 0.9;            // blij sprongetje + hartje als feedback
+    if (onPraat) { onPraat(); return; }   // tik = praten openen
     setBubble(buddyAai(b?.soort, factsRef?.current));
     st.current.bt = 2.6;
-    st.current.pet = 0.9;
   };
 
   useFrame((s, dt) => {

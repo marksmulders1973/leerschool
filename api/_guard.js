@@ -85,6 +85,7 @@ export function guardRequest(req) {
 // gate). Beter functionerende app dan blokkade bij DB-down. Wel loggen.
 const DEFAULT_LIMITS = {
   "tutor-chat": 5000,
+  "buddy-chat": 3000,   // Haiku ~€0,005/call → max ~€15/dag (kindveilig park-maatje)
   "generate-questions": 500,
   "preview-topic": 1000,
 };

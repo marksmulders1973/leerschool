@@ -19,6 +19,7 @@ import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
 import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier } from "../features/zoo/unlocks";
 import BuddyPicker from "../features/zoo/BuddyPicker";
+import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID } from "../features/zoo/buddies";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
@@ -195,6 +196,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyId, setBuddyId] = useState(() => gekozenBuddy()); // 🐾 gekozen droom-maatje
   const [buddyNaamEff, setBuddyNaamEff] = useState(() => { const id = gekozenBuddy(); return id ? buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "") : ""; });
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
+  const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
   const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
@@ -980,6 +982,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyId={buddyId}
           buddyGroei={geleerdeStappen}
           buddyNaam={buddyNaamEff}
+          onBuddyPraat={() => setBuddyChatOpen(true)}
         />
       </Suspense>
 
@@ -992,6 +995,29 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         onChoose={(id) => { setBuddyId(id); setBuddyNaamEff(buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "")); try { track("buddy_gekozen", { id }); } catch { /* */ } }}
         onRename={(id, n) => { if (id === buddyId) setBuddyNaamEff(n); try { track("buddy_naam", { id }); } catch { /* */ } }}
       />
+
+      {/* 💬 Praten met je maatje (AI, kindveilig). Maatje is ook parkgids. */}
+      {buddyId && (
+        <BuddyChat
+          open={buddyChatOpen}
+          onClose={() => setBuddyChatOpen(false)}
+          buddyId={buddyId}
+          buddyNaam={buddyNaamEff}
+          facts={{ naam, zwakVak }}
+          park={(() => {
+            let dieren = 0, attracties = 0, gebouwen = 0, kraampjes = 0, bomen = 0;
+            placedItems.forEach((it) => {
+              const a = getAsset(it.assetId); if (!a) return;
+              if (a.voorziet) kraampjes++;
+              else if (a.kind === "animal") dieren++;
+              else if (a.kind === "attraction") attracties++;
+              else if (a.kind === "building") gebouwen++;
+              else if (["tree", "bush", "fern", "stump"].includes(a.procedural)) bomen++;
+            });
+            return { dieren, attracties, gebouwen, kraampjes, bomen, muntjes: coins };
+          })()}
+        />
+      )}
 
       {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren
           en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld). */}
