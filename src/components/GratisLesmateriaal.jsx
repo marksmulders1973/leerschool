@@ -167,11 +167,21 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
 
       {step === "email" && (
         <>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.5, marginBottom: 12 }}>
-            Laat je e-mail achter en ontvang elke week één gratis oefenvraag voor de
-            Doorstroomtoets — om samen met je kind te maken. Geen nieuwsbrief, gewoon één
-            goede vraag (of mini-test). Uitschrijven kan altijd.
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.72)", lineHeight: 1.5, marginBottom: 10 }}>
+            Laat je e-mail achter — om samen met je kind te oefenen voor de Doorstroomtoets.
           </div>
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 14px", display: "flex", flexDirection: "column", gap: 6 }}>
+            {[
+              onPrintPakket && <>Nu meteen: het <strong style={{ color: "#fff" }}>gratis oefenpakket</strong> (printbaar, met antwoorden)</>,
+              <>Elke week <strong style={{ color: "#fff" }}>één nieuwe oefenvraag</strong> mét uitleg in je mail</>,
+              <>Gratis, gemaakt door één vader — <strong style={{ color: "#fff" }}>geen spam</strong>, uitschrijven kan altijd</>,
+            ].filter(Boolean).map((t, i) => (
+              <li key={i} style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45, display: "flex", gap: 8 }}>
+                <span aria-hidden="true" style={{ color: "#69f0ae", fontWeight: 800 }}>✓</span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
 
           <form onSubmit={naarProfiel}>
             <input

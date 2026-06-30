@@ -191,7 +191,12 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
           de sterkste plek om de gratis-lesmateriaal-mail aan te bieden. */}
       {beantwoord && !emailAl && (
         <div style={{ marginBottom: 18 }}>
-          <GratisLesmateriaal source="deeplink-vraag" compact />
+          <GratisLesmateriaal
+            source="deeplink-vraag"
+            compact
+            title={<><span aria-hidden="true">📘</span> Gratis oefenpakket + elke week een oefenvraag</>}
+            onPrintPakket={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "oefenpakket" }); setPage && setPage("oefenpakket"); }}
+          />
         </div>
       )}
 
