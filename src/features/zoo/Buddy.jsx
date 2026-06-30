@@ -191,7 +191,7 @@ function Fenix({ c, flapRef }) {
 
 // Charley — een brindle bokser (Mark's eigen hond). Gedrongen lijf, donker
 // masker + hangoren, witte bles/befje/sokjes en z'n tongetje uit, in parkstijl.
-function Hond({ c }) {
+function Hond({ c, mouthRef }) {
   return (
     <group>
       {/* lijf — gedrongen bokser-bouw, gestroomd bruin */}
@@ -201,11 +201,18 @@ function Hond({ c }) {
       {/* kop — vierkant */}
       <mesh castShadow position={[0, 0.34, 0.36]} scale={[1, 0.95, 1]}><boxGeometry args={[0.42, 0.4, 0.42]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
       {/* donker boksermasker rond de snuit */}
-      <mesh position={[0, 0.27, 0.54]} scale={[0.95, 0.9, 0.7]}><boxGeometry args={[0.4, 0.34, 0.3]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
-      {/* stompe snuit */}
-      <mesh position={[0, 0.22, 0.68]}><boxGeometry args={[0.26, 0.2, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
-      {/* neus */}
-      <mesh position={[0, 0.26, 0.78]}><boxGeometry args={[0.12, 0.09, 0.08]} /><meshStandardMaterial color="#1a1410" roughness={0.5} /></mesh>
+      <mesh position={[0, 0.28, 0.54]} scale={[0.95, 0.85, 0.7]}><boxGeometry args={[0.4, 0.3, 0.3]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {/* bovenkaak/snuit (vast) */}
+      <mesh position={[0, 0.25, 0.68]}><boxGeometry args={[0.26, 0.13, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {/* neus (op de bovenkaak) */}
+      <mesh position={[0, 0.3, 0.78]}><boxGeometry args={[0.12, 0.09, 0.08]} /><meshStandardMaterial color="#1a1410" roughness={0.5} /></mesh>
+      {/* ── ONDERKAAK (scharniert open als Charley praat) ── hinge achter de snuit */}
+      <group ref={mouthRef} position={[0, 0.2, 0.58]}>
+        {/* onderkaak-blok */}
+        <mesh position={[0, -0.03, 0.08]}><boxGeometry args={[0.24, 0.08, 0.17]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+        {/* roze tongetje (beweegt mee met de kaak) */}
+        <mesh position={[0, -0.01, 0.15]} rotation={[0.35, 0, 0]}><boxGeometry args={[0.09, 0.02, 0.13]} /><meshStandardMaterial color="#e98697" roughness={0.6} /></mesh>
+      </group>
       {/* witte bles over snuit naar voorhoofd */}
       <mesh position={[0, 0.4, 0.62]}><boxGeometry args={[0.08, 0.34, 0.16]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
       {/* oogjes */}
@@ -216,8 +223,6 @@ function Hond({ c }) {
           <boxGeometry args={[0.1, 0.26, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} />
         </mesh>
       ))}
-      {/* roze tongetje uit (zoals op de foto) */}
-      <mesh position={[0, 0.14, 0.74]} rotation={[0.5, 0, 0]}><boxGeometry args={[0.08, 0.02, 0.13]} /><meshStandardMaterial color="#e98697" roughness={0.6} /></mesh>
       {/* 4 pootjes met witte sokjes */}
       {[[0.2, 0.34], [-0.2, 0.34], [0.2, -0.3], [-0.2, -0.3]].map(([x, z], i) => (
         <group key={i}>
@@ -231,9 +236,9 @@ function Hond({ c }) {
   );
 }
 
-function Lijf({ soort, c, flapRef, squashRef }) {
+function Lijf({ soort, c, flapRef, squashRef, mouthRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
-  if (soort === "hond") return <Hond c={c} />;
+  if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;
@@ -251,6 +256,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   const cur = useRef(new Vector3(2, 0, 12));
   const flapRef = useRef([]);
   const squashRef = useRef();
+  const mouthRef = useRef();   // onderkaak (Charley) — gaat open als hij praat
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
   const model = b?.model;
@@ -342,6 +348,13 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
     if (flapRef.current[0]) flapRef.current[0].rotation.z = 0.5 + flap;
     if (flapRef.current[1]) flapRef.current[1].rotation.z = -0.5 - flap;
     if (squashRef.current) { const q = 1 + Math.sin(s.clock.elapsedTime * 5) * 0.06; squashRef.current.scale.set(1 / q, q, 1 / q); }
+    // 🐶 Charley's bekkie: open/dicht-gekwebbel zolang er een praatwolkje staat
+    // (st.bt > 0 = hij praat), anders rustig dichtgeknepen.
+    if (mouthRef.current) {
+      const praat = st.current.bt > 0;
+      const doelOpen = praat ? 0.32 + Math.sin(s.clock.elapsedTime * 13) * 0.22 : 0;
+      mouthRef.current.rotation.x += (doelOpen - mouthRef.current.rotation.x) * Math.min(1, dt * 14);
+    }
 
     // praat-timer
     if (st.current.bt > 0) { st.current.bt -= dt; if (st.current.bt <= 0) setBubble(null); }
@@ -384,7 +397,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
       <group ref={lijf}>
         {model
           ? <MaatjeModel url={model} />
-          : <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} />}
+          : <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} mouthRef={mouthRef} />}
       </group>
     </group>
   );
