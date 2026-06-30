@@ -24,6 +24,18 @@ export const BUDDIES = [
     vliegt: true,                  // vliegt rondjes om de speler i.p.v. meelopen
   },
   {
+    id: "charley",
+    naam: "Charley",
+    emoji: "🐶",
+    soort: "hond",
+    kleur: "#7a5232",   // brindle (gestroomd) bruin
+    kleur2: "#2c2118",  // donker boksermasker + hangoren
+    accent: "#f1ece1",  // witte bles, befje en sokjes
+    karakter: "trouw & vrolijk",
+    verdien: 0,         // Charley = Mark's eigen hond → altijd kiesbaar voor iedereen
+    flavor: "Woef! Samen leren is het allerleukst! 🐾",
+  },
+  {
     id: "eenhoorn",
     naam: "Sterre",
     emoji: "🦄",
@@ -193,6 +205,13 @@ export function buddyPraatje(soort, facts) {
       { e: "🐉", t: f.zwakVak ? `Zullen we ${low(f.zwakVak)} verslaan vandaag?` : "Klaar voor een nieuw avontuur?" },
       { e: "⚡", t: `Jij bent sterker dan je denkt, ${hoi}!` },
     );
+  } else if (soort === "hond") {
+    o.push(
+      { e: "🐶", t: `Woef! Kom op ${hoi}, samen dat kwartier!` },
+      { e: "🦴", t: "Een foutje? Schud het af en probeer opnieuw — net als ik!" },
+      { e: "🐾", t: f.zwakVak ? `Zullen we ${low(f.zwakVak)} samen aanpakken?` : "Gaan we wat leuks leren?" },
+      { e: "❤️", t: `Ik blijf altijd bij je, ${hoi}.` },
+    );
   } else if (soort === "eenhoorn") {
     o.push(
       { e: "✨", t: `Rustig aan ${hoi}, je doet het super.` },
@@ -241,6 +260,7 @@ export function buddyAai(soort, facts) {
   const hoi = naam ? naam : "vriend";
   const m = {
     draakje: [{ e: "🔥", t: "Joehoe! Samen onverslaanbaar!" }, { e: "😄", t: `Aai! Jij bent de beste, ${hoi}!` }, { e: "💪", t: "Kom, we gaan knallen!" }],
+    hond: [{ e: "🐶", t: "Woef woef! Wat fijn!" }, { e: "🐾", t: `Aai! Ik kwispel helemaal voor jou, ${hoi}!` }, { e: "🦴", t: "Nog een keer? Ik vind je zó lief!" }],
     eenhoorn: [{ e: "💗", t: `Aaah, wat lief ${hoi}!` }, { e: "✨", t: "Knuffel! Ik vind jou zo lief." }, { e: "🌈", t: "Jij maakt mij blij!" }],
     uil: [{ e: "🦉", t: "Hoehoe! Fijn dat je er bent." }, { e: "📚", t: "Zullen we iets slims leren?" }, { e: "💡", t: `Wijze keuze, ${hoi}.` }],
     bubbel: [{ e: "🫧", t: "Boing! Hihi, dat kietelt!" }, { e: "🤪", t: `Nog een keer, ${hoi}!` }, { e: "🎈", t: "Wheee! Ik stuiter van geluk!" }],

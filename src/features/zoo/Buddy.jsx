@@ -189,8 +189,51 @@ function Fenix({ c, flapRef }) {
   );
 }
 
+// Charley — een brindle bokser (Mark's eigen hond). Gedrongen lijf, donker
+// masker + hangoren, witte bles/befje/sokjes en z'n tongetje uit, in parkstijl.
+function Hond({ c }) {
+  return (
+    <group>
+      {/* lijf — gedrongen bokser-bouw, gestroomd bruin */}
+      <mesh castShadow position={[0, 0.02, 0]} scale={[1, 0.92, 1.35]}><sphereGeometry args={[0.38, 16, 16]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      {/* wit befje/borst */}
+      <mesh position={[0, -0.1, 0.32]} scale={[0.66, 0.82, 0.55]}><sphereGeometry args={[0.3, 12, 12]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+      {/* kop — vierkant */}
+      <mesh castShadow position={[0, 0.34, 0.36]} scale={[1, 0.95, 1]}><boxGeometry args={[0.42, 0.4, 0.42]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      {/* donker boksermasker rond de snuit */}
+      <mesh position={[0, 0.27, 0.54]} scale={[0.95, 0.9, 0.7]}><boxGeometry args={[0.4, 0.34, 0.3]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {/* stompe snuit */}
+      <mesh position={[0, 0.22, 0.68]}><boxGeometry args={[0.26, 0.2, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {/* neus */}
+      <mesh position={[0, 0.26, 0.78]}><boxGeometry args={[0.12, 0.09, 0.08]} /><meshStandardMaterial color="#1a1410" roughness={0.5} /></mesh>
+      {/* witte bles over snuit naar voorhoofd */}
+      <mesh position={[0, 0.4, 0.62]}><boxGeometry args={[0.08, 0.34, 0.16]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+      {/* oogjes */}
+      {[-0.13, 0.13].map((x, i) => <mesh key={i} position={[x, 0.41, 0.58]}><sphereGeometry args={[0.05, 10, 10]} /><meshStandardMaterial color="#2a1c12" roughness={0.4} /></mesh>)}
+      {/* hangoren (donker, langs de kop) */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} castShadow position={[s * 0.26, 0.42, 0.3]} rotation={[0.2, 0, s * 0.25]}>
+          <boxGeometry args={[0.1, 0.26, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} />
+        </mesh>
+      ))}
+      {/* roze tongetje uit (zoals op de foto) */}
+      <mesh position={[0, 0.14, 0.74]} rotation={[0.5, 0, 0]}><boxGeometry args={[0.08, 0.02, 0.13]} /><meshStandardMaterial color="#e98697" roughness={0.6} /></mesh>
+      {/* 4 pootjes met witte sokjes */}
+      {[[0.2, 0.34], [-0.2, 0.34], [0.2, -0.3], [-0.2, -0.3]].map(([x, z], i) => (
+        <group key={i}>
+          <mesh castShadow position={[x, -0.28, z]}><cylinderGeometry args={[0.09, 0.08, 0.34, 8]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+          <mesh position={[x, -0.44, z]}><cylinderGeometry args={[0.085, 0.085, 0.1, 8]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+        </group>
+      ))}
+      {/* stompe staart omhoog */}
+      <mesh position={[0, 0.12, -0.42]} rotation={[-0.7, 0, 0]}><coneGeometry args={[0.07, 0.2, 6]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+    </group>
+  );
+}
+
 function Lijf({ soort, c, flapRef, squashRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
+  if (soort === "hond") return <Hond c={c} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;
