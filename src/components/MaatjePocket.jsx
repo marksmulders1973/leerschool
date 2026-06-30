@@ -123,7 +123,20 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
     track("maatje_gedeeld", { buddy: buddy.id, stadium: st.huidig.key });
     const tekst = `Kijk, dit is ${naam} ${buddy.emoji} — mijn maatje in Leerkwartier! Hij groeit als ik leer. Maak ook een maatje:`;
     const url = "https://leerkwartier.app/?utm_source=maatje&utm_medium=share";
+    const art = MAATJE_ART[buddy.id];
     try {
+      // Stuur de tekening mee, zodat je Vonk echt in WhatsApp ziet (op telefoon).
+      if (art && navigator.canShare) {
+        try {
+          const resp = await fetch(art);
+          const blob = await resp.blob();
+          const file = new File([blob], `${naam}.jpg`, { type: blob.type || "image/jpeg" });
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({ files: [file], text: `${tekst} ${url}` });
+            return;
+          }
+        } catch { /* val terug op tekst+link */ }
+      }
       if (navigator.share) { await navigator.share({ title: "Mijn maatje", text: tekst, url }); return; }
       await navigator.clipboard.writeText(`${tekst} ${url}`);
       alert("Linkje gekopieerd — plak 'm maar in WhatsApp! 💛");
