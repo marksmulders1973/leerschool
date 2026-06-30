@@ -2,8 +2,11 @@
 // gratis aan het begin; de rest "verdien" je door te leren (voltooide stappen).
 // Vergrendelde maatjes tonen hoeveel je nog moet leren. Keuze gaat naar
 // localStorage via buddies.js (geen Supabase-migratie nodig).
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { BUDDIES, BUDDY_BY_ID, buddyBeschikbaar, bezitBuddies, heeftGekozen, kiesBuddy, buddyNaam, zetBuddyNaam } from "./buddies";
+
+// Mini-3D-weergave (rondraaiend .glb) — lazy zodat three.js pas laadt als nodig.
+const MaatjeMini3D = lazy(() => import("./MaatjeMini3D"));
 
 export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, currentId = "", onChoose, onRename }) {
   const [naamInput, setNaamInput] = useState("");
@@ -65,7 +68,15 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
                 }}
               >
                 {actief && <span style={{ position: "absolute", top: 8, right: 8, font: "800 10px system-ui", color: "#fff", background: "#2e7d32", borderRadius: 999, padding: "2px 7px" }}>actief</span>}
-                <div style={{ fontSize: 44, lineHeight: 1, filter: beschikbaar ? "none" : "grayscale(1)" }}>{b.emoji}</div>
+                {b.model && beschikbaar ? (
+                  <div style={{ width: 70, height: 70, margin: "0 auto" }}>
+                    <Suspense fallback={<div style={{ fontSize: 44, lineHeight: "70px" }}>{b.emoji}</div>}>
+                      <MaatjeMini3D url={b.model} size={70} />
+                    </Suspense>
+                  </div>
+                ) : (
+                  <div style={{ fontSize: 44, lineHeight: 1, filter: beschikbaar ? "none" : "grayscale(1)" }}>{b.emoji}</div>
+                )}
                 <div style={{ font: "900 16px system-ui", color: "#234", marginTop: 6 }}>{b.naam}</div>
                 <div style={{ font: "600 11.5px system-ui", color: "#778", marginTop: 1 }}>{b.karakter}</div>
                 {beschikbaar ? (

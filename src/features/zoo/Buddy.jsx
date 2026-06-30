@@ -8,12 +8,9 @@ import { Html, useGLTF } from "@react-three/drei";
 import { Vector3, Box3 } from "three";
 import { buddyPraatje, buddyAai, buddyGrootte, BUDDY_BY_ID } from "./buddies";
 
-// Echte 3D-modellen per maatje (.glb in public/maatjes). Vervangen het
-// procedurele lijfje als ze bestaan. Vonk = via gratis image-to-3D (SF3D).
-const BUDDY_MODEL = {
-  draakje: "/maatjes/vonk.glb",
-};
-
+// Het 3D-model-pad per maatje staat in de roster (b.model). Vervangt het
+// procedurele lijfje als het bestaat. Vonk = via gratis image-to-3D (SF3D).
+//
 // Laadt een .glb-maatje, normaliseert het (schaal naar ~doelhoogte + voeten op
 // de grond) en zet schaduwen aan. Hergebruikt het patroon van ZooModel.
 function MaatjeModel({ url, doelhoogte = 0.95, draai = 0 }) {
@@ -213,7 +210,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   const squashRef = useRef();
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
-  const model = BUDDY_MODEL[kind];
+  const model = b?.model;
   const zweef = !model && (kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix");
   const baseY = model ? 0 : (zweef ? 0.62 : 0.36);
   const doelGrootte = buddyGrootte(groei);

@@ -19,6 +19,7 @@ export const BUDDIES = [
     karakter: "enthousiast & moedig",
     verdien: 6,   // geleerde stappen nodig als dit NIET je gratis startkeuze is
     flavor: "Samen maken we er een vuurtje van! 🔥",
+    model: "/maatjes/vonk.glb",   // echt 3D-figuur (park + keuze-kaartje)
   },
   {
     id: "eenhoorn",
