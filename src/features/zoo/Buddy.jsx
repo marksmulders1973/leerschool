@@ -199,7 +199,7 @@ function Lijf({ soort, c, flapRef, squashRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat }) {
+export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat, posOutRef, verborgen = false }) {
   const b = BUDDY_BY_ID[kind];
   const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
@@ -308,6 +308,9 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
       else { setBubble(buddyPraatje(b.soort, factsRef?.current)); st.current.bt = 3.8; }
       st.current.next = 9 + Math.random() * 8;
     }
+
+    // Buddy-positie doorgeven (voor de "door de ogen van je buddy"-camera).
+    if (posOutRef) posOutRef.current.copy(node.position);
   });
 
   if (!b) return null;
@@ -315,6 +318,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
     <group
       ref={g}
       position={[2, baseY, 12]}
+      visible={!verborgen}
       onPointerDown={aai}
       onPointerOver={(e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; }}
       onPointerOut={() => { document.body.style.cursor = "default"; }}

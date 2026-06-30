@@ -190,9 +190,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [brushColor, setBrushColor] = useState("#e2574c"); // gekozen verfkleur
   const [houseParts, setHouseParts] = useState(null);   // gevonden onderdelen (basiskleuren) van het gekozen huis
   const [activePart, setActivePart] = useState(0);      // welk onderdeel je nu kleurt
-  const [followCam, setFollowCam] = useState(false);    // camera volgt het poppetje
+  const [followCam, setFollowCam] = useState(false);    // vrij rondkijken (orbit + volgt poppetje)
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
+  const [buddyEye, setBuddyEye] = useState(false);      // 🐉 door de ogen van je buddy
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
+  // Standaard (alle uit) = derde-persoons achter de speler (poppetje + buddy in beeld).
   const [buddyId, setBuddyId] = useState(() => gekozenBuddy()); // 🐾 gekozen droom-maatje
   const [buddyNaamEff, setBuddyNaamEff] = useState(() => { const id = gekozenBuddy(); return id ? buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "") : ""; });
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
@@ -713,7 +715,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const aan = !firstPerson;
     setFirstPerson(aan);
     if (aan) {
-      setFollowCam(false); setPlacing(null); setSelectedIdx(null);
+      setFollowCam(false); setBuddyEye(false); setPlacing(null); setSelectedIdx(null);
       flits("👁️ Beweeg om rond te kijken · houd ingedrukt om te lopen");
     }
   };
@@ -798,8 +800,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14 }}>
           <div onClick={(e) => e.stopPropagation()} style={{ position: "absolute", top: 56, right: 12, width: "min(290px, 92vw)", maxHeight: "80vh", overflowY: "auto", background: "#fffef8", borderRadius: 16, boxShadow: "0 12px 36px rgba(0,0,0,.35)", padding: "12px 12px 14px", display: "flex", flexDirection: "column", gap: 6 }}>
             <div style={menuKop}>📷 Camera</div>
-            <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); })} style={menuRij(followCam)}>🎥 Camera volgt je poppetje</button>
+            <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); setBuddyEye(false); })} style={menuRij(followCam)}>🔄 Vrij rondkijken (slepen)</button>
             <button onClick={() => doeEnSluit(toggleFirstPerson)} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
+            {buddyId && <button onClick={() => doeEnSluit(() => { setBuddyEye((v) => !v); setFirstPerson(false); setFollowCam(false); })} style={menuRij(buddyEye)}>🐉 Door de ogen van je buddy</button>}
             {placedItems.some((it) => it.assetId === "rail") && (
               <button onClick={() => doeEnSluit(() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); })} style={menuRij(rideTrain)}>🚂 Meerijden met de trein</button>
             )}
@@ -984,6 +987,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyGroei={geleerdeStappen}
           buddyNaam={buddyNaamEff}
           onBuddyPraat={() => setBuddyChatOpen(true)}
+          buddyEye={buddyEye}
         />
       </Suspense>
 
@@ -1043,6 +1047,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* 🚂 Meerijden-modus: zichtbare stop-knop. */}
       {rideTrain && (
         <button onClick={() => setRideTrain(false)} title="Stop met meerijden" style={{ position: "absolute", right: 16, bottom: 92, zIndex: 8, pointerEvents: "auto", border: "none", borderRadius: 999, padding: "11px 16px", font: "800 14px system-ui", color: "#fff", background: "#c0392b", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>🚂 ✕ Stop meerijden</button>
+      )}
+
+      {/* 🐉 Buddy-blik-modus: zichtbare stop-knop. */}
+      {buddyEye && (
+        <button onClick={() => setBuddyEye(false)} title="Terug naar normaal beeld" style={{ position: "absolute", right: 16, bottom: 92, zIndex: 8, pointerEvents: "auto", border: "none", borderRadius: 999, padding: "11px 16px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>🐉 ✕ Normaal beeld</button>
       )}
 
       {/* Onderbalk: contextueel. */}

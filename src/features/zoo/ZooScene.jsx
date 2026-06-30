@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, ThirdPersonCamera, BuddyEyeCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -259,10 +259,12 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
+  const playerFace = useRef(new Vector3(0, 0, 1)); // kijkrichting speler (derde-persoons-cam)
+  const buddyPos = useRef(new Vector3());           // positie van het maatje (buddy-cam)
   const orbitRef = useRef();
   // Feiten over je park (naam, een pas geboren jong, hongerig dier, je lievelings-
   // dier, groot park, zwak vak) → bezoekers gebruiken dit voor persoonlijke praatjes.
@@ -410,11 +412,15 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <EntranceGate name={parkNaam} position={[0, heightAt(terrain, 0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
         {/* Vrolijke ballontros naast de ingang. */}
         <Balloons position={[5.4, heightAt(terrain, 5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
-        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} />
-        <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson} />
+        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} />
+        {/* Standaard: derde-persoons achter de speler (poppetje + buddy in beeld). */}
+        <ThirdPersonCamera posRef={playerPos} faceRef={playerFace} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
+        <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson && !buddyEye} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
-        {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons). */}
-        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} />}
+        <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
+        {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
+            in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
+        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
@@ -456,18 +462,19 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <ContactShadows position={[0, 0.012, 0]} opacity={0.4} scale={GRID_SIZE + 14} blur={2.8} far={8} resolution={1024} color="#274015" />
       </Suspense>
 
-      <OrbitControls
-        ref={orbitRef}
-        makeDefault
-        enabled={!firstPerson}
-        enableDamping
-        dampingFactor={0.08}
-        minDistance={6}
-        maxDistance={110}
-        maxPolarAngle={Math.PI / 2 - 0.05}
-        target={[0, 0.8, 0]}
-        enablePan={false}
-      />
+      {followCam && !firstPerson && !buddyEye && !rideTrain && (
+        <OrbitControls
+          ref={orbitRef}
+          makeDefault
+          enableDamping
+          dampingFactor={0.08}
+          minDistance={6}
+          maxDistance={110}
+          maxPolarAngle={Math.PI / 2 - 0.05}
+          target={[0, 0.8, 0]}
+          enablePan={false}
+        />
+      )}
     </Canvas>
   );
 }

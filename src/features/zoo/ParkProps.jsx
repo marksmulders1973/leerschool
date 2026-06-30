@@ -412,7 +412,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -472,6 +472,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
       // Mikpunt: vóór de speler; omhoog/omlaag met pitch (muis-/veeg-verticaal).
       if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.5 - 0.22 - pitch * 2.2, pos.current.z + fz * 4);
+      if (faceRef) faceRef.current.set(fx, 0, fz);
       return;
     }
     wasFP.current = false;
@@ -501,6 +502,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
     node.position.set(pos.current.x, ty, pos.current.z);
     if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
+    if (faceRef) faceRef.current.set(Math.sin(node.rotation.y), 0, Math.cos(node.rotation.y));
   });
 
   return (
@@ -521,6 +523,41 @@ export function FirstPersonCamera({ posRef, lookRef, active }) {
     const p = posRef.current;
     state.camera.position.set(p.x, p.y + 1.5, p.z); // ooghoogte ~1,5 m
     state.camera.lookAt(lookRef.current);
+  });
+  return null;
+}
+
+// Derde-persoons (standaard): camera zweeft áchter en bóven de speler en kijkt
+// naar 'm, zodat zowel je poppetje als je buddy lekker in beeld staan. Volgt de
+// kijkrichting van de speler (faceRef) en schuift soepel mee (lerp).
+export function ThirdPersonCamera({ posRef, faceRef, active, afstand = 5.4, hoogte = 2.7 }) {
+  const doel = useRef(new Vector3());
+  const mik = useRef(new Vector3());
+  const snapped = useRef(false);
+  useFrame((state) => {
+    if (!active || !posRef?.current) { snapped.current = false; return; }
+    const p = posRef.current;
+    const f = faceRef?.current;
+    const fx = f ? f.x : 0, fz = f ? f.z : 1;
+    doel.current.set(p.x - fx * afstand, (p.y || 0) + hoogte, p.z - fz * afstand);
+    if (!snapped.current) { state.camera.position.copy(doel.current); snapped.current = true; }
+    else state.camera.position.lerp(doel.current, 0.09);
+    mik.current.set(p.x, (p.y || 0) + 1.1, p.z);
+    state.camera.lookAt(mik.current);
+  });
+  return null;
+}
+
+// Door de ogen van je buddy: camera zit bij het maatje (dat om je heen vliegt)
+// en kijkt naar de speler — zo zie je jezelf vanuit je vliegende vriendje.
+export function BuddyEyeCamera({ buddyPosRef, playerPosRef, active }) {
+  const mik = useRef(new Vector3());
+  useFrame((state) => {
+    if (!active || !buddyPosRef?.current || !playerPosRef?.current) return;
+    const b = buddyPosRef.current, p = playerPosRef.current;
+    state.camera.position.lerp(b, 0.25);
+    mik.current.set(p.x, (p.y || 0) + 0.9, p.z);
+    state.camera.lookAt(mik.current);
   });
   return null;
 }
