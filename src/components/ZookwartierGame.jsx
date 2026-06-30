@@ -162,7 +162,7 @@ const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje }) {
   const naam = (userName || "").trim();
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
@@ -813,6 +813,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <button onClick={() => doeEnSluit(() => { setAutoBudget(coins); setPanel("autobouw"); })} style={menuRij(false)}>🏗️ Auto-bouw (muntjes inzetten)</button>
             <button onClick={() => doeEnSluit(() => setPanel("karakter"))} style={menuRij(false)}>👤 Mijn poppetje kiezen</button>
             <button onClick={() => doeEnSluit(openBuddyPicker)} style={menuRij(false)}>🐾 Kies je maatje</button>
+            {onOpenMaatje && <button onClick={() => doeEnSluit(onOpenMaatje)} style={menuRij(false)}>📱 Mijn maatje (altijd bij je)</button>}
             <button onClick={() => doeEnSluit(opslaan)} style={menuRij(false)}>💾 Park opslaan</button>
             <button onClick={() => doeEnSluit(openDelen)} style={menuRij(false)}>📤 Park delen met een vriend</button>
             <button onClick={() => doeEnSluit(() => setPanel("reset"))} style={menuRij(false)}>♻️ Opnieuw beginnen</button>
