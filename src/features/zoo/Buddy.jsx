@@ -211,6 +211,7 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
   const model = b?.model;
+  const vliegt = !!b?.vliegt;
   const zweef = !model && (kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix");
   const baseY = model ? 0 : (zweef ? 0.62 : 0.36);
   const doelGrootte = buddyGrootte(groei);
@@ -245,23 +246,52 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
     } else if (hart.current) hart.current.visible = false;
 
     if (p) {
-      // doel: een vaste zij-offset naast de speler (front-rechts)
-      const tx = p.x + 1.25, tz = p.z + 0.7;
-      const k = Math.min(1, dt * 3.2);
-      cur.current.x += (tx - cur.current.x) * k;
-      cur.current.z += (tz - cur.current.z) * k;
-      const dx = tx - cur.current.x, dz = tz - cur.current.z;
-      const ver = Math.hypot(dx, dz);
-      const beweegt = ver > 0.06;
       const gy = heightRef?.current ? heightRef.current(cur.current.x, cur.current.z) : 0;
-      const hop = Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
-      node.position.set(cur.current.x, gy + baseY + hop + petHop, cur.current.z);
-      if (beweegt) {
-        const doel = Math.atan2(dx, dz);
+      if (vliegt) {
+        // ✈️ vliegt rustig rondjes om de speler, op zachte op-en-neer-hoogte
+        st.current.orbit = (st.current.orbit || 0) + dt * 0.7;
+        const R = 1.85;
+        const tx = p.x + Math.cos(st.current.orbit) * R;
+        const tz = p.z + Math.sin(st.current.orbit) * R;
+        const k = Math.min(1, dt * 4);
+        cur.current.x += (tx - cur.current.x) * k;
+        cur.current.z += (tz - cur.current.z) * k;
+        const hoogte = 1.35 + Math.sin(s.clock.elapsedTime * 1.6) * 0.22;
+        cur.current.y += (hoogte - cur.current.y) * Math.min(1, dt * 3);
+        node.position.set(cur.current.x, gy + cur.current.y + petHop, cur.current.z);
+        // 👀 af en toe de speler aankijken; anders langs de vliegrichting kijken
+        if (st.current.aankijkWindow > 0) {
+          st.current.aankijkWindow -= dt;
+          if (st.current.aankijkWindow <= 0) st.current.aankijkT = 4 + Math.random() * 4;
+        } else {
+          st.current.aankijkT = (st.current.aankijkT ?? 3) - dt;
+          if (st.current.aankijkT <= 0) st.current.aankijkWindow = 1.4 + Math.random() * 0.9;
+        }
+        const doel = st.current.aankijkWindow > 0
+          ? Math.atan2(p.x - cur.current.x, p.z - cur.current.z)              // naar de speler kijken
+          : Math.atan2(-Math.sin(st.current.orbit), Math.cos(st.current.orbit)); // langs de vliegrichting
         let d = doel - node.rotation.y;
         while (d > Math.PI) d -= Math.PI * 2;
         while (d < -Math.PI) d += Math.PI * 2;
-        node.rotation.y += d * Math.min(1, dt * 8);
+        node.rotation.y += d * Math.min(1, dt * 5);
+      } else {
+        // 🚶 trailt naast de speler (front-rechts) — bestaand gedrag
+        const tx = p.x + 1.25, tz = p.z + 0.7;
+        const k = Math.min(1, dt * 3.2);
+        cur.current.x += (tx - cur.current.x) * k;
+        cur.current.z += (tz - cur.current.z) * k;
+        const dx = tx - cur.current.x, dz = tz - cur.current.z;
+        const ver = Math.hypot(dx, dz);
+        const beweegt = ver > 0.06;
+        const hop = Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
+        node.position.set(cur.current.x, gy + baseY + hop + petHop, cur.current.z);
+        if (beweegt) {
+          const doel = Math.atan2(dx, dz);
+          let d = doel - node.rotation.y;
+          while (d > Math.PI) d -= Math.PI * 2;
+          while (d < -Math.PI) d += Math.PI * 2;
+          node.rotation.y += d * Math.min(1, dt * 8);
+        }
       }
     }
     // vleugel-klap / bubbel-squash

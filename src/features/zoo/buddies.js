@@ -20,6 +20,7 @@ export const BUDDIES = [
     verdien: 6,   // geleerde stappen nodig als dit NIET je gratis startkeuze is
     flavor: "Samen maken we er een vuurtje van! 🔥",
     model: "/maatjes/vonk.glb",   // echt 3D-figuur (park + keuze-kaartje)
+    vliegt: true,                  // vliegt rondjes om de speler i.p.v. meelopen
   },
   {
     id: "eenhoorn",
