@@ -38,6 +38,11 @@ function stadiumVoor(stappen) {
 // Accessoire per stadium (eenvoudige v1-versiering; Grok-art komt later).
 const ACCESSOIRE = ["", "", "🎀", "👑", "🌟"];
 
+// Echte Grok-tekeningen per maatje (vervangen de emoji als ze bestaan).
+const MAATJE_ART = {
+  draakje: "/maatjes/vonk.jpg",
+};
+
 // Lieve, NIET-manipulatieve praatjes (geen schuldgevoel). Roteren zacht.
 const MOODS = [
   { e: "✨", t: "Als jij leert, word ik groter en mooier!", actie: "leren" },
@@ -221,11 +226,22 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
             <span key={i} style={{ position: "absolute", left: `${20 + i * 20}%`, bottom: 30, fontSize: 18,
               animation: `lkspark ${2.2 + i * 0.4}s ease-in-out ${i * 0.5}s infinite` }}>✨</span>
           ))}
-          {/* het maatje */}
-          <div style={{ fontSize: 128, lineHeight: 1, transform: `scale(${st.huidig.scale})`, animation: "lkbob 3s ease-in-out infinite", filter: magisch ? "drop-shadow(0 0 14px gold)" : "none", position: "relative" }}>
-            {buddy.emoji}
-            {ACCESSOIRE[st.idx] && <span style={{ position: "absolute", top: -6, left: "50%", transform: "translateX(-50%)", fontSize: 40 }}>{ACCESSOIRE[st.idx]}</span>}
-          </div>
+          {/* het maatje — echte tekening als die bestaat, anders de emoji */}
+          {MAATJE_ART[buddy.id] ? (
+            <img src={MAATJE_ART[buddy.id]} alt={naam}
+              style={{
+                width: 230, maxWidth: "64vw", height: "auto", position: "relative",
+                transform: `scale(${st.huidig.scale})`, animation: "lkbob 3s ease-in-out infinite",
+                WebkitMaskImage: "radial-gradient(circle at 50% 44%, #000 56%, transparent 76%)",
+                maskImage: "radial-gradient(circle at 50% 44%, #000 56%, transparent 76%)",
+                filter: magisch ? "drop-shadow(0 0 18px gold)" : "drop-shadow(0 8px 16px rgba(0,0,0,.45))",
+              }} />
+          ) : (
+            <div style={{ fontSize: 128, lineHeight: 1, transform: `scale(${st.huidig.scale})`, animation: "lkbob 3s ease-in-out infinite", filter: magisch ? "drop-shadow(0 0 14px gold)" : "none", position: "relative" }}>
+              {buddy.emoji}
+              {ACCESSOIRE[st.idx] && <span style={{ position: "absolute", top: -6, left: "50%", transform: "translateX(-50%)", fontSize: 40 }}>{ACCESSOIRE[st.idx]}</span>}
+            </div>
+          )}
         </div>
 
         <div style={{ color: "#fff", textAlign: "center", marginTop: 10 }}>
