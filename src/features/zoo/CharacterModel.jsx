@@ -66,7 +66,13 @@ export default function CharacterModel({ url, movingRef, targetHeight = 1.65 }) 
   // opnieuw start (action-instanties zijn nieuw, ook al heet de clip hetzelfde).
   useEffect(() => { cur.current = null; speel(clips.idle); /* eslint-disable-next-line */ }, [actions]);
   useFrame((s) => {
-    speel(movingRef?.current ? (clips.walk || clips.idle) : clips.idle);
+    const v = movingRef?.current; // boolean (bezoekers) of snelheid in m/s (speler)
+    speel(v ? (clips.walk || clips.idle) : clips.idle);
+    // Stap-tempo meeschalen met de echte loopsnelheid (geen glijdende voeten).
+    // Mixamo-walk stapt van nature ~2,2 m/s; booleans houden gewoon tempo 1.
+    if (v && clips.walk && actions[clips.walk]) {
+      actions[clips.walk].timeScale = typeof v === "number" ? Math.min(2, Math.max(0.75, v / 2.2)) : 1;
+    }
     // Fake-walk voor modellen ZONDER loop-animatie (bv. een eigen-getekend
     // SF3D-figuur heeft geen skelet): een op-en-neer-wiebel + lichte zwaai
     // terwijl je loopt, zodat het niet plat meeglijdt. (Mark 1 jul.)

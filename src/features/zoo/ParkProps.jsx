@@ -494,7 +494,9 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     }
     vel.current.lerp(doelV.current, 1 - Math.exp(-10 * dts)); // framerate-onafhankelijke demping
     const sp = vel.current.length();
-    moving.current = sp > 0.4;
+    // Snelheid (m/s) doorgeven i.p.v. alleen aan/uit: CharacterModel schaalt het
+    // stap-tempo mee, zodat de voeten niet over de grond glijden.
+    moving.current = sp > 0.4 ? sp : 0;
     if (moving.current) state.performance.regress(); // AdaptiveDpr: even lagere resolutie tijdens lopen
     if (sp > 0.05) verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
     if (mag > 0.12 && dir.current.lengthSq() > 0.0001) {
