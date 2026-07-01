@@ -1174,16 +1174,27 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <button key={c.key} onClick={() => setShopCat(c.key)} style={{ border: "none", borderRadius: 999, padding: "5px 11px", font: "800 12px system-ui", color: shopCat === c.key ? "#fff" : "#234", background: shopCat === c.key ? "#2e7d32" : "rgba(255,255,255,0.9)", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>{c.label}</button>
               ))}
             </div>
-            <div style={{ display: "flex", gap: 8, overflowX: "auto", maxWidth: "100%", padding: "2px 4px 4px", WebkitOverflowScrolling: "touch" }}>
-              {(SHOP_CATS.find((c) => c.key === shopCat)?.items || []).map((p) => {
-                const kan = coins >= p.price;
+            <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "center", flexWrap: "wrap", maxWidth: "100%", padding: "2px 4px 4px" }}>
+              {/* Compacte dropdown i.p.v. een lange rij kaartjes (Mark 1 jul:
+                  "kunnen al die dieren in een dropdown ofzo" → rustiger scherm). */}
+              {(() => {
+                const items = SHOP_CATS.find((c) => c.key === shopCat)?.items || [];
                 return (
-                  <button key={p.assetId} onClick={() => startKopen(p)} title={`${p.label} plaatsen`} style={{ flex: "0 0 auto", border: "none", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: kan ? "#234" : "#999", background: kan ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.5)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: kan ? "pointer" : "not-allowed", whiteSpace: "nowrap", textAlign: "center" }}>
-                    <span style={{ fontSize: 18 }}>{p.emoji}</span> {p.label}<br />
-                    <span style={{ fontSize: 11, opacity: 0.85 }}>{p.price} 🪙</span>
-                  </button>
+                  <select
+                    value=""
+                    onChange={(e) => { const it = items.find((i) => i.assetId === e.target.value); if (it) startKopen(it); e.currentTarget.value = ""; }}
+                    aria-label="Kies iets om te plaatsen"
+                    style={{ maxWidth: 280, border: "none", borderRadius: 12, padding: "11px 12px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.96)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}
+                  >
+                    <option value="" disabled>➕ Kies iets om te plaatsen…</option>
+                    {items.map((p) => (
+                      <option key={p.assetId} value={p.assetId} disabled={coins < p.price}>
+                        {p.emoji} {p.label} — {p.price} 🪙{coins < p.price ? "  (te duur)" : ""}
+                      </option>
+                    ))}
+                  </select>
                 );
-              })}
+              })()}
               {/* Vrijspeel-dieren (alleen in Dieren-tab): te verdienen door te leren,
                   niet te koop. Vergrendeld → tik = naar het leerpad (loop terug). */}
               {/* Vrijspeel-dieren (Dieren-tab): vrijgespeelde tonen we als gouden

@@ -347,7 +347,12 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
         const dx = tx - cur.current.x, dz = tz - cur.current.z;
         const ver = Math.hypot(dx, dz);
         const beweegt = ver > 0.06;
-        const hop = Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
+        // Foto-3D-model (Charley) heeft geen pootjes-animatie → rustig laten
+        // glijden met hooguit een héél klein bobje (Mark 1 jul: "hupt te
+        // nerveus"). Procedurele maatjes mogen wél vrolijk hoppen.
+        const hop = model
+          ? (beweegt ? Math.abs(Math.sin(s.clock.elapsedTime * 4)) * 0.03 : 0)
+          : Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
         node.position.set(cur.current.x, gy + baseY + hop + petHop, cur.current.z);
         if (beweegt) {
           const doel = Math.atan2(dx, dz);

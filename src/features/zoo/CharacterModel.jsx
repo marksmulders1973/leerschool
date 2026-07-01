@@ -65,7 +65,18 @@ export default function CharacterModel({ url, movingRef, targetHeight = 1.65 }) 
   // Nieuw model/nieuwe actions → state resetten zodat de nieuwe idle écht
   // opnieuw start (action-instanties zijn nieuw, ook al heet de clip hetzelfde).
   useEffect(() => { cur.current = null; speel(clips.idle); /* eslint-disable-next-line */ }, [actions]);
-  useFrame(() => { speel(movingRef?.current ? (clips.walk || clips.idle) : clips.idle); });
+  useFrame((s) => {
+    speel(movingRef?.current ? (clips.walk || clips.idle) : clips.idle);
+    // Fake-walk voor modellen ZONDER loop-animatie (bv. een eigen-getekend
+    // SF3D-figuur heeft geen skelet): een op-en-neer-wiebel + lichte zwaai
+    // terwijl je loopt, zodat het niet plat meeglijdt. (Mark 1 jul.)
+    if (group.current && !clips.walk) {
+      const moving = movingRef?.current;
+      const t = s.clock.elapsedTime;
+      group.current.position.y = moving ? Math.abs(Math.sin(t * 6)) * 0.035 : 0;
+      group.current.rotation.z = moving ? Math.sin(t * 6) * 0.03 : 0;
+    }
+  });
 
   return (
     <group ref={group}>
