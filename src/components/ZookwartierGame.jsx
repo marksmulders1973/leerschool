@@ -24,6 +24,10 @@ import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamV
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 
+// Vinger als aanwijzer (telefoon/tablet) → joystick tonen; met een muis (laptop/
+// desktop) niet: daar loop je met WASD/pijltjes en draai je de camera met slepen.
+const COARSE_POINTER = typeof window !== "undefined" && !!window.matchMedia?.("(pointer: coarse)")?.matches;
+
 // Touch-joystick (telefoon) om het poppetje te laten lopen. Schrijft naar
 // inputRef.current.joy (genormaliseerd -1..1). Werkt ook met de muis.
 function Joystick({ inputRef }) {
@@ -203,6 +207,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
   const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
+  const [besturingHint, setBesturingHint] = useState(!COARSE_POINTER); // korte WASD/sleep-hint op laptop
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
   const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
@@ -219,7 +224,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [groundType, setGroundType] = useState("zand");  // gekozen grondsoort
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
-  const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 }, look: { active: false, dx: 0, dy: 0 } }); // besturing poppetje
+  const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 }, look: { active: false, dx: 0, dy: 0 }, cam: { yaw: Math.PI, pitch: 0.32, dist: 5.4 } }); // besturing poppetje + camera
 
   // Bezoekers kopen bij je kraampjes → jij verdient de WINST (verkoop − inkoop) in
   // muntjes. Verkoop je te goedkoop (≤ inkoop), dan verdien je niets — zo leert het
@@ -308,6 +313,58 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     window.addEventListener("keyup", up);
     return () => { window.removeEventListener("keydown", down); window.removeEventListener("keyup", up); };
   }, []);
+
+  // Camera slepen (derde-persoons): 1 vinger of muis over het park = camera
+  // draaien (yaw + omhoog/omlaag), 2 vingers = knijp-zoom, scrollwiel = zoom.
+  // De vinger op de joystick (die z'n eigen pointer vangt) doet hier niet mee,
+  // dus lopen en rondkijken kan tegelijk. Uit in bouw-/boetseer-modi, zodat
+  // slepen daar gewoon boetseren/plaatsen blijft.
+  const camDrag = useRef({ ptrs: new Map(), enabled: true });
+  camDrag.current.enabled = !placing && !sculptMode && !waterMode && !groundMode && !firstPerson && !buddyEye && !rideTrain && !followCam;
+  const camDown = (e) => {
+    if (!camDrag.current.enabled) return;
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    camDrag.current.ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  };
+  const camWheel = (e) => {
+    if (!camDrag.current.enabled) return;
+    const cam = inputRef.current.cam;
+    cam.dist = Math.max(2.6, Math.min(12, cam.dist + e.deltaY * 0.008));
+  };
+  useEffect(() => {
+    const move = (e) => {
+      const s = camDrag.current;
+      const p = s.ptrs.get(e.pointerId);
+      if (!p) return;
+      const cam = inputRef.current.cam;
+      if (s.ptrs.size >= 2) {
+        // Knijp-zoom: afstand tussen de twee vingers vóór en na deze beweging.
+        const ander = [...s.ptrs.entries()].find(([id]) => id !== e.pointerId)?.[1];
+        if (ander) {
+          const voor = Math.hypot(p.x - ander.x, p.y - ander.y);
+          const na = Math.hypot(e.clientX - ander.x, e.clientY - ander.y);
+          if (voor > 12 && na > 12) cam.dist = Math.max(2.6, Math.min(12, cam.dist * (voor / na)));
+        }
+      } else {
+        const sens = e.pointerType === "touch" ? 0.0062 : 0.0042;
+        cam.yaw -= (e.clientX - p.x) * sens;
+        cam.pitch = Math.max(-0.12, Math.min(1.15, cam.pitch + (e.clientY - p.y) * sens));
+      }
+      p.x = e.clientX; p.y = e.clientY;
+    };
+    const stop = (e) => camDrag.current.ptrs.delete(e.pointerId);
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", stop);
+    window.addEventListener("pointercancel", stop);
+    return () => { window.removeEventListener("pointermove", move); window.removeEventListener("pointerup", stop); window.removeEventListener("pointercancel", stop); };
+  }, []);
+
+  // Besturing-hint verdwijnt vanzelf na een paar tellen.
+  useEffect(() => {
+    if (!besturingHint) return;
+    const t = setTimeout(() => setBesturingHint(false), 10000);
+    return () => clearTimeout(t);
+  }, [besturingHint]);
 
   const flits = (tekst) => {
     setMelding(tekst);
@@ -950,6 +1007,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
 
+      {/* Sleep-laag om de 3D-scene: registreert camera-drags (bubbelt vanaf de
+          canvas, blokkeert niets — tikken op dieren/bezoekers blijft werken). */}
+      <div style={{ position: "absolute", inset: 0 }} onPointerDown={camDown} onWheel={camWheel}>
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
           placingAsset={placing?.assetId || null}
@@ -993,6 +1053,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyEye={buddyEye}
         />
       </Suspense>
+      </div>
 
       {/* 🐾 Maatjes-kiezer (eerste keer automatisch; daarna via ⚙️-menu). */}
       <BuddyPicker
@@ -1027,9 +1088,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         />
       )}
 
-      {/* Touch-joystick om te lopen (verborgen tijdens plaatsen/selecteren/boetseren
-          en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld). */}
-      {!firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
+      {/* Touch-joystick om te lopen — alleen op aanraakschermen (op laptop/desktop
+          loop je met WASD/pijltjes). Verborgen tijdens plaatsen/selecteren/boetseren
+          en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld. */}
+      {COARSE_POINTER && !firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
+
+      {/* Korte besturing-hint voor laptop/desktop (verdwijnt vanzelf). */}
+      {!COARSE_POINTER && !firstPerson && !buddyEye && besturingHint && (
+        <div style={{ position: "absolute", left: "50%", bottom: 18, transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none", background: "rgba(20,30,20,0.62)", color: "#fff", borderRadius: 999, padding: "8px 16px", font: "700 12.5px system-ui", whiteSpace: "nowrap", maxWidth: "94%", overflow: "hidden", textOverflow: "ellipsis" }}>
+          🕹️ Lopen: WASD of pijltjes · 🖱️ Rondkijken: slepen · Zoomen: scrollen
+        </div>
+      )}
 
       {/* Eerstepersoons-besturing: richten + lopen over het hele beeld. */}
       {firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && (

@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, ThirdPersonCamera, BuddyEyeCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -382,6 +382,31 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     return vasteCellen.has(cellKey(gx, gz));
   }, [vasteCellen]);
 
+  // Voor de camera telt HOOGTE mee: over lage hekjes/bankjes kijkt de camera
+  // gewoon heen; alleen hoge dingen (gebouwen, attracties) duwen de arm korter.
+  // Bomen blokkeren de camera bewust niet — anders springt het beeld constant.
+  const vasteToppen = useMemo(() => {
+    const m = new Map();
+    placedItems.forEach((it) => {
+      if (!isVast(it.assetId)) return;
+      const a = getAsset(it.assetId);
+      const top = a.kind === "building" ? 3.4
+        : a.kind === "attraction" ? 3.6
+        : ["tree", "bush", "fern", "stump"].includes(a.procedural) ? 0
+        : 1.25;
+      if (!top) return;
+      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) {
+        const k = cellKey(cx, cz);
+        m.set(k, Math.max(m.get(k) || 0, top));
+      }
+    });
+    return m;
+  }, [placedItems]);
+  const camTopAt = useCallback((x, z) => {
+    const [gx, gz] = snapToCell(x, z, 1);
+    return vasteToppen.get(cellKey(gx, gz)) || 0;
+  }, [vasteToppen]);
+
   const handlePlace = (cell) => {
     if (!onPlace) return;
     if (!isPlaatsbaar(cell[0], cell[1], bezet, placingCells)) return;
@@ -413,8 +438,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* Vrolijke ballontros naast de ingang. */}
         <Balloons position={[5.4, heightAt(terrain, 5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
         <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} />
-        {/* Standaard: derde-persoons achter de speler (poppetje + buddy in beeld). */}
-        <ThirdPersonCamera posRef={playerPos} faceRef={playerFace} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
+        {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
+        <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson && !buddyEye} />
         <FirstPersonCamera posRef={playerPos} lookRef={playerLook} active={firstPerson} />
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
@@ -436,7 +461,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
-              onPointerDown={(e) => { if (placing || sculptMode || waterMode || groundMode) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
+              onPointerDown={(e) => { if (placing || sculptMode || waterMode || groundMode) return; e.stopPropagation(); }}
+              onClick={(e) => { if (placing || sculptMode || waterMode || groundMode) return; if (e.delta > 8) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
               <PlacedItem

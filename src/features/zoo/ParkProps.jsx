@@ -417,6 +417,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
+  const vel = useRef(new Vector3()), doelV = useRef(new Vector3()); // huidige + gewenste loopsnelheid
   // Beginrichting: kijk naar het parkmidden (0,0) i.p.v. met je rug ernaartoe.
   const startYaw = Math.atan2(-start[0], -start[2]);
   const yaw = useRef(startYaw); // kijkrichting (eerstepersoons)
@@ -477,8 +478,9 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     }
     wasFP.current = false;
 
+    // Lopen relatief aan de camera, met soepele versnelling/vertraging en
+    // draai-demping — geen abrupte snap meer, voelt vlot en natuurlijk.
     if (mag > 0.12) {
-      moving.current = true;
       state.camera.getWorldDirection(fwd.current);
       fwd.current.y = 0; fwd.current.normalize();
       right.current.set(-fwd.current.z, 0, fwd.current.x);
@@ -486,18 +488,19 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
-      const step = 3.4 * dts * Math.min(1, mag);
-      const nx = pos.current.x + dir.current.x * step;
-      const nz = pos.current.z + dir.current.z * step;
-      const solid = solidRef.current;
-      const vast = solid ? solid(pos.current.x, pos.current.z) : false;
-      if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
-      else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
-      const d = Math.hypot(pos.current.x, pos.current.z);
-      if (d > 38) { pos.current.x *= 38 / d; pos.current.z *= 38 / d; }
-      node.rotation.y = Math.atan2(dir.current.x, dir.current.z);
+      doelV.current.copy(dir.current).multiplyScalar(4.2 * Math.min(1, mag));
     } else {
-      moving.current = false;
+      doelV.current.set(0, 0, 0);
+    }
+    vel.current.lerp(doelV.current, 1 - Math.exp(-10 * dts)); // framerate-onafhankelijke demping
+    const sp = vel.current.length();
+    moving.current = sp > 0.4;
+    if (sp > 0.05) verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
+    if (mag > 0.12 && dir.current.lengthSq() > 0.0001) {
+      const doelHoek = Math.atan2(dir.current.x, dir.current.z);
+      let dh = doelHoek - node.rotation.y;
+      dh = Math.atan2(Math.sin(dh), Math.cos(dh)); // kortste draai-richting
+      node.rotation.y += dh * Math.min(1, 14 * dts);
     }
     const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
     node.position.set(pos.current.x, ty, pos.current.z);
@@ -544,6 +547,49 @@ export function ThirdPersonCamera({ posRef, faceRef, active, afstand = 5.4, hoog
     else state.camera.position.lerp(doel.current, 0.09);
     mik.current.set(p.x, (p.y || 0) + 1.1, p.z);
     state.camera.lookAt(mik.current);
+  });
+  return null;
+}
+
+// Spring-arm-camera (nieuwe standaard): hangt achter de speler en JIJ bepaalt de
+// kijkrichting — slepen op het scherm draait 'm (yaw+pitch), scrollen/knijpen
+// zoomt. Leest inputRef.current.cam = { yaw, pitch, dist }. Clippt nergens
+// doorheen: de arm stapt van speler naar gewenste camera-plek en wordt korter
+// zodra iets vasts of de grond in de weg zit; daarna veert hij rustig weer uit.
+export function SpringArmCamera({ posRef, inputRef, active, topAt, heightRef }) {
+  const focus = useRef(new Vector3());
+  const doelFocus = useRef(new Vector3());
+  const effDist = useRef(5.4);
+  const snapped = useRef(false);
+  useFrame((state, dt) => {
+    if (!active || !posRef?.current) { snapped.current = false; return; }
+    const dts = Math.min(dt, 0.05);
+    const cam = inputRef?.current?.cam || { yaw: Math.PI, pitch: 0.32, dist: 5.4 };
+    const p = posRef.current;
+    // Kijkpunt net boven het hoofd, soepel meebewegend met de speler.
+    doelFocus.current.set(p.x, (p.y || 0) + 1.35, p.z);
+    if (!snapped.current) focus.current.copy(doelFocus.current);
+    else focus.current.lerp(doelFocus.current, 1 - Math.exp(-12 * dts));
+    const cp = Math.cos(cam.pitch);
+    const dx = -Math.sin(cam.yaw) * cp, dy = Math.sin(cam.pitch), dz = -Math.cos(cam.yaw) * cp;
+    // Botsing: loop de arm af; blokkade → arm inkorten tot nét ervoor.
+    let maxD = cam.dist;
+    const hoogte = heightRef?.current;
+    for (let t = 0.6; t <= cam.dist; t += 0.35) {
+      const x = focus.current.x + dx * t, y = focus.current.y + dy * t, z = focus.current.z + dz * t;
+      const grond = hoogte ? hoogte(x, z) : 0;
+      const top = topAt ? topAt(x, z) : 0;
+      if ((top > 0 && y < grond + top) || y < grond + 0.35) { maxD = Math.max(1.1, t - 0.4); break; }
+    }
+    const rate = maxD < effDist.current ? 22 : 4; // inkorten vlot (niet clippen), uitveren rustig
+    if (!snapped.current) { effDist.current = maxD; snapped.current = true; }
+    else effDist.current += (maxD - effDist.current) * Math.min(1, rate * dts);
+    state.camera.position.set(
+      focus.current.x + dx * effDist.current,
+      focus.current.y + dy * effDist.current,
+      focus.current.z + dz * effDist.current
+    );
+    state.camera.lookAt(focus.current);
   });
   return null;
 }
@@ -831,7 +877,8 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   return (
     <group
       ref={g}
-      onPointerDown={onTap ? (e) => { e.stopPropagation(); onTap(); } : undefined}
+      onPointerDown={onTap ? (e) => e.stopPropagation() : undefined}
+      onClick={onTap ? (e) => { if (e.delta > 8) return; e.stopPropagation(); onTap(); } : undefined}
       onPointerOver={onTap ? (e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; } : undefined}
       onPointerOut={onTap ? () => { document.body.style.cursor = "default"; } : undefined}
     >
