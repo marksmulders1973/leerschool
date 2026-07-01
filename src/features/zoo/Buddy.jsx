@@ -250,7 +250,7 @@ function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat, posOutRef, verborgen = false }) {
+export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat, posOutRef, verborgen = false }) {
   const b = BUDDY_BY_ID[kind];
   const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
@@ -328,8 +328,19 @@ export default function Buddy({ kind, posRef, heightRef, factsRef, groei = 0, bu
         while (d < -Math.PI) d += Math.PI * 2;
         node.rotation.y += d * Math.min(1, dt * 5);
       } else {
-        // 🚶 trailt naast de speler (front-rechts) — bestaand gedrag
-        const tx = p.x + 1.25, tz = p.z + 0.7;
+        // 🚶 loopt NAAST + iets VÓÓR de speler (relatief aan z'n kijkrichting),
+        // zodat hij hoog en vrij in beeld staat en niet onderaan achter de
+        // winkel-balk valt (Mark 1 jul: "zoveel blokken dat je hem moeilijk ziet").
+        const f = faceRef?.current;
+        let tx, tz;
+        if (f) {
+          const rx = f.z, rz = -f.x;          // rechter-zijvector (loodrecht op kijkrichting)
+          const side = 1.55, ahead = 0.7;     // naast + iets de scene in (= hoger in beeld)
+          tx = p.x + rx * side + f.x * ahead;
+          tz = p.z + rz * side + f.z * ahead;
+        } else {
+          tx = p.x + 1.25; tz = p.z + 0.7;
+        }
         const k = Math.min(1, dt * 3.2);
         cur.current.x += (tx - cur.current.x) * k;
         cur.current.z += (tz - cur.current.z) * k;

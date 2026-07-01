@@ -420,7 +420,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
-        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
+        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
