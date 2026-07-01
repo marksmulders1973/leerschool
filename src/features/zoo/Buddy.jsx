@@ -40,6 +40,7 @@ function MaatjeModel({ url, doelhoogte = 0.95, draai = 0 }) {
   );
 }
 useGLTF.preload("/maatjes/vonk.glb");
+useGLTF.preload("/maatjes/charley.glb");
 
 // ── Procedurele lijfjes per soort ──────────────────────────────────────────
 function Draakje({ c, flapRef }) {
