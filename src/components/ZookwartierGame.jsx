@@ -206,7 +206,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
   const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
-  const [menuOpen, setMenuOpen] = useState(false);       // ⚙️-menu met alle extra functies (rustige header)
+  const [menuOpen, setMenuOpen] = useState(false);       // ☰-menu (fullscreen) met alle extra functies
+  const [bouwen, setBouwen] = useState(false);           // bouw-modus: winkelbalk in beeld (anders alleen park)
   const [besturingHint, setBesturingHint] = useState(!COARSE_POINTER); // korte WASD/sleep-hint op laptop
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
@@ -365,6 +366,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const t = setTimeout(() => setBesturingHint(false), 10000);
     return () => clearTimeout(t);
   }, [besturingHint]);
+
+  // Vers park → meteen in bouw-modus, zodat een nieuwe speler direct kan plaatsen
+  // (de welkomst-hint wijst naar de winkelbalk).
+  useEffect(() => {
+    if (loaded && placedItems.length <= STARTER_LAYOUT.length) setBouwen(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded]);
 
   const flits = (tekst) => {
     setMelding(tekst);
@@ -821,11 +829,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     }
   };
 
-  // ⚙️-menu: helpers. Bij het kiezen van een functie sluit het menu vanzelf.
+  // ☰-menu: helpers. Bij het kiezen van een functie sluit het menu vanzelf.
   const sluitMenu = () => setMenuOpen(false);
   const doeEnSluit = (fn) => { fn(); sluitMenu(); };
-  const menuRij = (actief) => ({ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, width: "100%", border: actief ? "2px solid #2e7d32" : "1px solid rgba(0,0,0,0.06)", borderRadius: 12, padding: "11px 12px", font: "800 14px system-ui", color: "#234", background: actief ? "#cdeccb" : "rgba(0,0,0,0.03)", cursor: "pointer", textAlign: "left" });
-  const menuKop = { font: "800 11px system-ui", color: "#8a939c", textTransform: "uppercase", letterSpacing: 0.5, margin: "6px 2px 2px" };
+  // Frosted-glass tegels op een donkere blur-achtergrond — rustig en modern.
+  const menuTegelStijl = (actief) => ({ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 7, padding: "14px 6px", borderRadius: 16, border: actief ? "2px solid #7ef0a2" : "1px solid rgba(255,255,255,0.16)", background: actief ? "rgba(46,125,50,0.55)" : "rgba(255,255,255,0.10)", color: "#fff", font: "800 12.5px system-ui", cursor: "pointer", textAlign: "center", lineHeight: 1.25 });
+  const MenuTegel = ({ emoji, label, fn, actief = false }) => (
+    <button onClick={() => doeEnSluit(fn)} style={menuTegelStijl(actief)}>
+      <span style={{ fontSize: 26, lineHeight: 1 }}>{emoji}</span>{label}
+    </button>
+  );
+  const menuKop = { font: "800 11.5px system-ui", color: "rgba(255,255,255,0.62)", textTransform: "uppercase", letterSpacing: 0.8, margin: "16px 2px 8px" };
+  const menuGrid = { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 };
   // Onboarding: een vers park (alleen het startpark, nog niets bijgekocht).
   const versPark = loaded && placedItems.length <= STARTER_LAYOUT.length;
 
@@ -833,63 +848,80 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
       {/* Header. */}
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8, padding: "10px 12px", background: "linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0))", pointerEvents: "none" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div style={{ color: "#fff", font: "800 18px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)" }}>🐾 {parkNaam}</div>
-          <span style={{ font: "800 11px system-ui", color: "#5b3d00", background: "#ffd54a", padding: "3px 9px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>🚧 In opbouw</span>
-        </div>
+        <div style={{ color: "#fff", font: "800 16px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "38vw" }}>🐾 {parkNaam}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {/* Voeren = de enige dagelijkse zorgactie → altijd zichtbaar, met hint bij honger. */}
           <button onClick={voerAlles} title="Dieren voeren" style={{ position: "relative", pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>
             🌾
             {hongerAantal > 0 && <span style={{ position: "absolute", top: -4, right: -4, minWidth: 18, height: 18, padding: "0 4px", borderRadius: 999, background: "#e23b3b", color: "#fff", font: "800 11px system-ui", display: "grid", placeItems: "center", boxShadow: "0 1px 3px rgba(0,0,0,.3)" }}>{hongerAantal}</span>}
           </button>
-          {/* Alle overige functies gebundeld in één menu → rustige balk voor een kind. */}
-          <button onClick={() => setMenuOpen((v) => !v)} title="Meer" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "700 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>⚙️</button>
-          {onPlayObliterator && (
-            <button onClick={onPlayObliterator} title="OBLITERATOR — extra spel" style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "0 13px", height: 38, font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3df0,#b13df0)", boxShadow: "0 2px 8px rgba(0,0,0,.22)", cursor: "pointer", whiteSpace: "nowrap" }}>🎮 Extra spel</button>
-          )}
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>
+          {/* Alle overige functies gebundeld in één ☰-menu → tijdens spelen bijna alleen park in beeld. */}
+          <button onClick={() => setMenuOpen((v) => !v)} title="Menu" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode || bouwen) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "800 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>☰</button>
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
         </div>
       </div>
 
-      {/* ⚙️-menu: alle extra functies, gegroepeerd. Tik buiten = sluiten. */}
+      {/* ☰-menu: volledig scherm, frosted-glass, alle extra functies gegroepeerd.
+          Tik buiten de inhoud of op ✕ = terug het park in. */}
       {menuOpen && (
-        <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14 }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ position: "absolute", top: 56, right: 12, width: "min(290px, 92vw)", maxHeight: "80vh", overflowY: "auto", background: "#fffef8", borderRadius: 16, boxShadow: "0 12px 36px rgba(0,0,0,.35)", padding: "12px 12px 14px", display: "flex", flexDirection: "column", gap: 6 }}>
-            <div style={menuKop}>📷 Camera</div>
-            <button onClick={() => doeEnSluit(() => { setFollowCam((v) => !v); setFirstPerson(false); setBuddyEye(false); })} style={menuRij(followCam)}>🔄 Vrij rondkijken (slepen)</button>
-            <button onClick={() => doeEnSluit(toggleFirstPerson)} style={menuRij(firstPerson)}>👁️ Door je eigen ogen kijken</button>
-            {buddyId && <button onClick={() => doeEnSluit(() => { setBuddyEye((v) => !v); setFirstPerson(false); setFollowCam(false); })} style={menuRij(buddyEye)}>🐉 Door de ogen van je buddy</button>}
-            {placedItems.some((it) => it.assetId === "rail") && (
-              <button onClick={() => doeEnSluit(() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); })} style={menuRij(rideTrain)}>🚂 Meerijden met de trein</button>
-            )}
+        <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14, background: "rgba(8,16,10,0.55)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", overflowY: "auto", animation: "zooMenuFade .18s ease-out" }}>
+          <style>{`@keyframes zooMenuFade{from{opacity:0}to{opacity:1}}@keyframes zooMenuIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}`}</style>
+          <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 620, margin: "0 auto", padding: "16px 16px calc(28px + env(safe-area-inset-bottom))", animation: "zooMenuIn .22s ease-out" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+              <div style={{ color: "#fff", font: "900 20px system-ui", textShadow: "0 1px 6px rgba(0,0,0,.4)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>🐾 {parkNaam}</div>
+              <button onClick={sluitMenu} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 40, height: 40, font: "800 16px system-ui", color: "#fff", background: "rgba(255,255,255,0.14)", cursor: "pointer" }}>✕</button>
+            </div>
+            <div style={{ color: "rgba(255,255,255,0.75)", font: "700 12.5px system-ui", margin: "6px 0 16px" }}>
+              🪙 {coins}{streak > 1 ? ` · 🔥 ${streak} dagen op rij` : ""} · 📈 je park verdient 🪙{inkomstenPerDag(placedItems, kindVan)} per dag
+            </div>
 
-            <div style={menuKop}>🛠️ Landschap bouwen</div>
-            <button onClick={() => doeEnSluit(() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(sculptMode)}>⛰️ Heuvels boetseren</button>
-            <button onClick={() => doeEnSluit(() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(waterMode)}>💧 Water / meertjes</button>
-            <button onClick={() => doeEnSluit(() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); })} style={menuRij(groundMode)}>🏖️ Grond schilderen</button>
+            {/* Bouwen = de grote actie bovenaan. */}
+            <button onClick={() => doeEnSluit(() => { setBouwen(true); setFirstPerson(false); setBuddyEye(false); setRideTrain(false); })} style={{ width: "100%", display: "flex", alignItems: "center", gap: 14, border: "none", borderRadius: 18, padding: "15px 18px", font: "900 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 6px 22px rgba(0,0,0,.32)", cursor: "pointer", textAlign: "left" }}>
+              <span style={{ fontSize: 28, lineHeight: 1 }}>🏗️</span>
+              <span>Bouwen<br /><span style={{ font: "700 12px system-ui", opacity: 0.9 }}>dieren, hekken, gebouwen en meer neerzetten</span></span>
+            </button>
+
+            <div style={menuKop}>📷 Camera</div>
+            <div style={menuGrid}>
+              <MenuTegel emoji="👁️" label="Door je eigen ogen" fn={toggleFirstPerson} actief={firstPerson} />
+              {buddyId && <MenuTegel emoji="🐉" label="Door de ogen van je buddy" fn={() => { setBuddyEye((v) => !v); setFirstPerson(false); setFollowCam(false); }} actief={buddyEye} />}
+              {placedItems.some((it) => it.assetId === "rail") && <MenuTegel emoji="🚂" label="Meerijden met de trein" fn={() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); }} actief={rideTrain} />}
+              <MenuTegel emoji="🗺️" label="Vogelvlucht (ver uitzoomen)" fn={() => { setFollowCam((v) => !v); setFirstPerson(false); setBuddyEye(false); }} actief={followCam} />
+            </div>
+
+            <div style={menuKop}>🛠️ Landschap</div>
+            <div style={menuGrid}>
+              <MenuTegel emoji="⛰️" label="Heuvels boetseren" fn={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={sculptMode} />
+              <MenuTegel emoji="💧" label="Water / meertjes" fn={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={waterMode} />
+              <MenuTegel emoji="🏖️" label="Grond schilderen" fn={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} actief={groundMode} />
+              <MenuTegel emoji="🏗️" label="Auto-bouw (muntjes inzetten)" fn={() => { setAutoBudget(coins); setPanel("autobouw"); }} />
+            </div>
 
             <div style={menuKop}>🏡 Mijn park</div>
-            <button onClick={() => doeEnSluit(() => { setAutoBudget(coins); setPanel("autobouw"); })} style={menuRij(false)}>🏗️ Auto-bouw (muntjes inzetten)</button>
-            <button onClick={() => doeEnSluit(() => setPanel("karakter"))} style={menuRij(false)}>👤 Mijn poppetje kiezen</button>
-            <button onClick={() => doeEnSluit(openBuddyPicker)} style={menuRij(false)}>🐾 Kies je maatje</button>
-            {onOpenMaatje && <button onClick={() => doeEnSluit(onOpenMaatje)} style={menuRij(false)}>📱 Mijn maatje (altijd bij je)</button>}
-            <button onClick={() => doeEnSluit(opslaan)} style={menuRij(false)}>💾 Park opslaan</button>
-            <button onClick={() => doeEnSluit(openDelen)} style={menuRij(false)}>📤 Park delen met een vriend</button>
-            <button onClick={() => doeEnSluit(() => setPanel("reset"))} style={menuRij(false)}>♻️ Opnieuw beginnen</button>
+            <div style={menuGrid}>
+              <MenuTegel emoji="👤" label="Mijn poppetje kiezen" fn={() => setPanel("karakter")} />
+              <MenuTegel emoji="🐾" label="Kies je maatje" fn={openBuddyPicker} />
+              {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
+              <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
+              <MenuTegel emoji="📤" label="Delen met een vriend" fn={openDelen} />
+              <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
+            </div>
 
-            <div style={menuKop}>❓ Hulp</div>
-            <button onClick={() => doeEnSluit(() => setPanel("uitleg"))} style={menuRij(false)}>ℹ️ Hoe werkt het?</button>
-            <button onClick={() => doeEnSluit(() => setPanel("gids"))} style={menuRij(false)}>📖 Diergids</button>
+            <div style={menuKop}>🎮 Extra</div>
+            <div style={menuGrid}>
+              {onPlayObliterator && <MenuTegel emoji="🎮" label="OBLITERATOR — extra spel" fn={onPlayObliterator} />}
+              <MenuTegel emoji="ℹ️" label="Hoe werkt het?" fn={() => setPanel("uitleg")} />
+              <MenuTegel emoji="📖" label="Diergids" fn={() => setPanel("gids")} />
+            </div>
           </div>
         </div>
       )}
 
       {/* Onboarding: vers park → wijs het kind naar de winkelbalk. */}
-      {versPark && !welkomWeg && !placing && !dialoog && !menuOpen && (
+      {versPark && !welkomWeg && bouwen && !placing && !dialoog && !menuOpen && (
         <div style={{ position: "absolute", left: "50%", bottom: 150, transform: "translateX(-50%)", zIndex: 9, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, pointerEvents: "none", maxWidth: "92%" }}>
           <div style={{ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, background: "#fffef8", color: "#234", borderRadius: 14, padding: "10px 12px 10px 14px", boxShadow: "0 6px 20px rgba(0,0,0,.28)", font: "800 13.5px system-ui" }}>
             <span style={{ fontSize: 20 }}>👋</span>
@@ -1127,6 +1159,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
 
       {/* Onderbalk: contextueel. */}
+      {/* Onderbalk: alléén in bouw-modus of een actieve doe-modus in beeld —
+          tijdens gewoon spelen is het hele scherm park. */}
+      {(bouwen || placing || sculptMode || waterMode || groundMode || selectedIdx != null) && (
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>
         {groundMode ? (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
@@ -1242,6 +1277,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               {SHOP_CATS.map((c) => (
                 <button key={c.key} onClick={() => setShopCat(c.key)} style={{ border: "none", borderRadius: 999, padding: "5px 11px", font: "800 12px system-ui", color: shopCat === c.key ? "#fff" : "#234", background: shopCat === c.key ? "#2e7d32" : "rgba(255,255,255,0.9)", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>{c.label}</button>
               ))}
+              <button onClick={() => { setBouwen(false); setPlacing(null); setSelectedIdx(null); }} style={{ border: "none", borderRadius: 999, padding: "5px 13px", font: "800 12px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>✓ Klaar met bouwen</button>
             </div>
             <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "center", flexWrap: "wrap", maxWidth: "100%", padding: "2px 4px 4px" }}>
               {/* Compacte dropdown i.p.v. een lange rij kaartjes (Mark 1 jul:
@@ -1303,6 +1339,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </div>
         )}
       </div>
+      )}
 
       {/* Praatje met een bezoeker → leidt terug naar leren ("ga oefenen"). */}
       {dialoog && (
