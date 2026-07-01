@@ -34,11 +34,12 @@ export const BUDDIES = [
     karakter: "trouw & vrolijk",
     verdien: 0,         // Charley = Mark's eigen hond → altijd kiesbaar voor iedereen
     flavor: "Woef! Samen leren is het allerleukst! 🐾",
-    // PARK = fotorealistisch, STAAND 3D-model met 4 poten. Gemaakt via Grok
-    // (complete staande hond uit Mark's foto's) → Stable Fast 3D → glb. Zie
-    // [[reference_image_to_3d_gratis]]. De pratende TUTOR gebruikt niet dit model
-    // maar een aparte geanimeerde kop (CharleyHead.jsx) met bewegende mond.
-    model: "/maatjes/charley.glb",
+    // Charley = het getekende bokserlijf (procedureel) zodat hij ECHT loopt met
+    // bewegende pootjes + kwispelstaart + mond (Mark 1 jul: "charley ook laten
+    // lopen"). Een foto-3D-model (glb) kan z'n poten niet bewegen. Het
+    // fotomodel /maatjes/charley.glb blijft bestaan; zet `model` weer aan als je
+    // liever het statische fotomodel wilt (dan loopt hij niet).
+    // model: "/maatjes/charley.glb",
   },
   {
     id: "eenhoorn",

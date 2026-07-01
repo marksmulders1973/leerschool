@@ -192,7 +192,7 @@ function Fenix({ c, flapRef }) {
 
 // Charley — een brindle bokser (Mark's eigen hond). Gedrongen lijf, donker
 // masker + hangoren, witte bles/befje/sokjes en z'n tongetje uit, in parkstijl.
-function Hond({ c, mouthRef, tailRef }) {
+function Hond({ c, mouthRef, tailRef, legsRef }) {
   return (
     <group>
       {/* lijf — gedrongen bokser-bouw, gestroomd bruin */}
@@ -224,11 +224,12 @@ function Hond({ c, mouthRef, tailRef }) {
           <boxGeometry args={[0.1, 0.26, 0.18]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} />
         </mesh>
       ))}
-      {/* 4 pootjes met witte sokjes */}
+      {/* 4 pootjes met witte sokjes — scharnieren vanaf de heup zodat ze echt
+          kunnen lopen (rotatie via legsRef, aangestuurd in Buddy's useFrame). */}
       {[[0.2, 0.34], [-0.2, 0.34], [0.2, -0.3], [-0.2, -0.3]].map(([x, z], i) => (
-        <group key={i}>
-          <mesh castShadow position={[x, -0.28, z]}><cylinderGeometry args={[0.09, 0.08, 0.34, 8]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
-          <mesh position={[x, -0.44, z]}><cylinderGeometry args={[0.085, 0.085, 0.1, 8]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.11, z]}>
+          <mesh castShadow position={[0, -0.17, 0]}><cylinderGeometry args={[0.09, 0.08, 0.34, 8]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, -0.33, 0]}><cylinderGeometry args={[0.085, 0.085, 0.1, 8]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
         </group>
       ))}
       {/* stompe staart die kwispelt (scharniert links-rechts vanaf het lijf) */}
@@ -239,9 +240,9 @@ function Hond({ c, mouthRef, tailRef }) {
   );
 }
 
-function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef }) {
+function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
-  if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} tailRef={tailRef} />;
+  if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} tailRef={tailRef} legsRef={legsRef} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;
@@ -261,6 +262,7 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
   const squashRef = useRef();
   const mouthRef = useRef();   // onderkaak (Charley) — gaat open als hij praat
   const tailRef = useRef();    // staart (Charley) — kwispelt
+  const legsRef = useRef([]);  // 4 pootjes (Charley) — lopen
   const [bubble, setBubble] = useState(null);
   const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
   const model = b?.model;
@@ -347,11 +349,19 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
         const dx = tx - cur.current.x, dz = tz - cur.current.z;
         const ver = Math.hypot(dx, dz);
         const beweegt = ver > 0.06;
-        // Foto-3D-model (Charley) heeft geen pootjes-animatie → rustig laten
-        // glijden met hooguit een héél klein bobje (Mark 1 jul: "hupt te
-        // nerveus"). Procedurele maatjes mogen wél vrolijk hoppen.
-        const hop = model
-          ? (beweegt ? Math.abs(Math.sin(s.clock.elapsedTime * 4)) * 0.03 : 0)
+        // Echte looppas voor de hond (Charley): 4 pootjes zwaaien in diagonale
+        // gang (draf). Dan hoeft het lijf niet te hoppen → rustig lopen i.p.v.
+        // nerveus huppelen (Mark 1 jul). Foto-3D-model (geen skelet) glijdt kalm.
+        const hond = legsRef.current && legsRef.current[0];
+        if (hond) {
+          const swing = beweegt ? Math.sin(s.clock.elapsedTime * 9) * 0.5 : 0;
+          if (legsRef.current[0]) legsRef.current[0].rotation.x = swing;   // voor-rechts
+          if (legsRef.current[3]) legsRef.current[3].rotation.x = swing;   // achter-links (diagonaal)
+          if (legsRef.current[1]) legsRef.current[1].rotation.x = -swing;  // voor-links
+          if (legsRef.current[2]) legsRef.current[2].rotation.x = -swing;  // achter-rechts
+        }
+        const hop = (hond || model)
+          ? 0                                                              // hond loopt op pootjes / model glijdt kalm
           : Math.abs(Math.sin(s.clock.elapsedTime * 6)) * (beweegt ? 0.18 : 0.05);
         node.position.set(cur.current.x, gy + baseY + hop + petHop, cur.current.z);
         if (beweegt) {
@@ -422,7 +432,7 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
       <group ref={lijf}>
         {model
           ? <MaatjeModel url={model} />
-          : <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} mouthRef={mouthRef} tailRef={tailRef} />}
+          : <Lijf soort={b.soort} c={b} flapRef={flapRef} squashRef={squashRef} mouthRef={mouthRef} tailRef={tailRef} legsRef={legsRef} />}
       </group>
     </group>
   );
