@@ -4,7 +4,7 @@
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, ContactShadows, Html } from "@react-three/drei";
+import { OrbitControls, ContactShadows, Html, AdaptiveDpr } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color } from "three";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
@@ -417,9 +417,13 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     <Canvas
       shadows
       dpr={[1, 2]}
+      performance={{ min: 0.55 }}
       camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 300 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
     >
+      {/* Tijdens lopen/camera-draaien tijdelijk lagere resolutie → hoge FPS op
+          zwakke hardware; staat de speler stil, dan weer scherp. */}
+      <AdaptiveDpr />
       <color attach="background" args={["#aaddff"]} />
       <fog attach="fog" args={["#aaddff", 110, 250]} />
 

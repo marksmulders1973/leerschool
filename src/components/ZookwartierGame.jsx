@@ -1162,7 +1162,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Onderbalk: alléén in bouw-modus of een actieve doe-modus in beeld —
           tijdens gewoon spelen is het hele scherm park. */}
       {(bouwen || placing || sculptMode || waterMode || groundMode || selectedIdx != null) && (
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap" }}>
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap", animation: "zooBalkIn .22s ease-out" }}>
+        <style>{`@keyframes zooBalkIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}`}</style>
         {groundMode ? (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>

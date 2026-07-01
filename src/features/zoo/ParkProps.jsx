@@ -495,6 +495,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     vel.current.lerp(doelV.current, 1 - Math.exp(-10 * dts)); // framerate-onafhankelijke demping
     const sp = vel.current.length();
     moving.current = sp > 0.4;
+    if (moving.current) state.performance.regress(); // AdaptiveDpr: even lagere resolutie tijdens lopen
     if (sp > 0.05) verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
     if (mag > 0.12 && dir.current.lengthSq() > 0.0001) {
       const doelHoek = Math.atan2(dir.current.x, dir.current.z);
@@ -561,10 +562,17 @@ export function SpringArmCamera({ posRef, inputRef, active, topAt, heightRef }) 
   const doelFocus = useRef(new Vector3());
   const effDist = useRef(5.4);
   const snapped = useRef(false);
+  const vorige = useRef({ yaw: 0, pitch: 0, dist: 0 });
   useFrame((state, dt) => {
     if (!active || !posRef?.current) { snapped.current = false; return; }
     const dts = Math.min(dt, 0.05);
     const cam = inputRef?.current?.cam || { yaw: Math.PI, pitch: 0.32, dist: 5.4 };
+    // AdaptiveDpr: tijdens draaien/zoomen even lagere resolutie → vloeiend beeld.
+    const v = vorige.current;
+    if (v.yaw !== cam.yaw || v.pitch !== cam.pitch || v.dist !== cam.dist) {
+      state.performance.regress();
+      v.yaw = cam.yaw; v.pitch = cam.pitch; v.dist = cam.dist;
+    }
     const p = posRef.current;
     // Kijkpunt net boven het hoofd, soepel meebewegend met de speler.
     doelFocus.current.set(p.x, (p.y || 0) + 1.35, p.z);
