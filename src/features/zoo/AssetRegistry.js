@@ -200,6 +200,9 @@ export function getAsset(id) {
 // Kiesbare speler-karakters (Quaternius "Animated Men/Women", CC0, gekleurde
 // materialen + loop-animatie). Niet in de winkel — kies je eigen poppetje.
 export const CHARACTERS = [
+  // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D.
+  // Statisch model (geen loop-animatie) → glijdt mee, geen walk-cyclus.
+  { id: "heldMj", name: "Held", emoji: "🎩", url: "/models/zoo/people/held-mj.glb" },
   { id: "girl1", name: "Meisje casual", emoji: "👧", url: "/models/zoo/people/girl1.glb" },
   { id: "girl2", name: "Meisje jurk", emoji: "👧", url: "/models/zoo/people/girl2.glb" },
   { id: "girl3", name: "Meisje tanktop", emoji: "👧", url: "/models/zoo/people/girl3.glb" },
@@ -210,7 +213,7 @@ export const CHARACTERS = [
   { id: "boy4", name: "Jongen pak", emoji: "👦", url: "/models/zoo/people/boy4.glb" },
 ];
 export const CHARACTER_BY_ID = Object.fromEntries(CHARACTERS.map((c) => [c.id, c]));
-export const DEFAULT_AVATAR = "girl1";
+export const DEFAULT_AVATAR = "heldMj";
 
 export function allModelUrls() {
   return [...new Set(Object.values(ZOO_ASSETS).map((a) => a.url))];
