@@ -195,8 +195,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyEye, setBuddyEye] = useState(false);      // 🐉 door de ogen van je buddy
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
   // Standaard (alle uit) = derde-persoons achter de speler (poppetje + buddy in beeld).
-  const [buddyId, setBuddyId] = useState(() => gekozenBuddy()); // 🐾 gekozen droom-maatje
-  const [buddyNaamEff, setBuddyNaamEff] = useState(() => { const id = gekozenBuddy(); return id ? buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "") : ""; });
+  // 🐾 maatje — Charley is het STANDAARD maatje (Mark 1 jul); wie zelf iets koos
+  // houdt z'n keuze.
+  const [buddyId, setBuddyId] = useState(() => gekozenBuddy() || "charley");
+  const [buddyNaamEff, setBuddyNaamEff] = useState(() => { const id = gekozenBuddy() || "charley"; return buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || ""); });
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
   const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
@@ -286,7 +288,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const n = await telGeleerdeStappen(naam);
       if (cancel) return;
       setGeleerdeStappen(n);
-      if (!heeftGekozen()) setBuddyPickerOpen(true);
+      // Geen auto-picker meer: Charley is het standaard maatje en loopt al mee.
+      // Zelf een ander maatje kiezen kan via het ⚙️-menu → "🐾 Kies je maatje".
     })();
     return () => { cancel = true; };
   }, [naam]);

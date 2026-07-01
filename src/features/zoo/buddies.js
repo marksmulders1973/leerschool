@@ -131,8 +131,8 @@ export function gekozenBuddy() {
 // nog niets gekozen is. Gebruikt door de "Vraag hulp aan <maatje>"-tutorknop +
 // het tutor-venster, zodat het écht hún eigen maatje is dat meedenkt.
 export function actieveBuddyPersona() {
-  const id = gekozenBuddy() || "draakje";
-  const b = BUDDY_BY_ID[id] || BUDDY_BY_ID.draakje;
+  const id = gekozenBuddy() || "charley";   // Charley = standaard maatje (Mark 1 jul)
+  const b = BUDDY_BY_ID[id] || BUDDY_BY_ID.charley;
   return {
     id,
     naam: buddyNaam(id, b.naam),
