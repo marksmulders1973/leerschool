@@ -23,6 +23,9 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID } from "../features/zoo/buddies";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
+// Maatje-hulp bij de reken-vragen (zelfde tutor als in de leerpaden — het
+// maatje dat in het park rondloopt, denkt óók mee). Lazy: laadt pas bij gebruik.
+const AITutor = lazy(() => import("../features/learn/AITutor.jsx"));
 
 // Vinger als aanwijzer (telefoon/tablet) → joystick tonen; met een muis (laptop/
 // desktop) niet: daar loop je met WASD/pijltjes en draai je de camera met slepen.
@@ -216,6 +219,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [dialoog, setDialoog] = useState(null);          // open praatje met een bezoeker { step, reply? }
   const [rekenVraag, setRekenVraag] = useState(null);    // open reken-vraag bij een kraam
   const [rekenUitslag, setRekenUitslag] = useState(null);// null | "goed" | "fout"
+  const [rekenFout, setRekenFout] = useState(null);      // laatst gekozen foute optie (context voor maatje-hulp)
+  const [rekenHulpOpen, setRekenHulpOpen] = useState(false); // 🐾 maatje denkt mee met de som
+  const rekenVraagNr = useRef(0);                         // telt sommen → eigen chat per som
   const rekenBonusRef = useRef(0);                        // session-cap op de muntjesbonus
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
@@ -813,6 +819,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (!selKraam) return;
     setRekenVraag(maakRekenVraag(selKraam));
     setRekenUitslag(null);
+    setRekenFout(null);
+    setRekenHulpOpen(false);
+    rekenVraagNr.current += 1; // nieuwe som → eigen (leeg) hulp-gesprek
     try { track("park_rekenvraag"); } catch { /* nooit laten breken */ }
   };
   const beantwoordReken = (optie) => {
@@ -826,6 +835,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       }
     } else {
       setRekenUitslag("fout");
+      setRekenFout(optie);
     }
   };
 
@@ -1404,7 +1414,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               })}
             </div>
             {rekenUitslag === "fout" && (
-              <p style={{ margin: "12px 0 0", font: "800 13.5px system-ui", color: "#c0392b", textAlign: "center" }}>Bijna! Probeer nog een keer 💪</p>
+              <div style={{ marginTop: 12, display: "flex", flexDirection: "column", alignItems: "center", gap: 9 }}>
+                <p style={{ margin: 0, font: "800 13.5px system-ui", color: "#c0392b", textAlign: "center" }}>Bijna! Probeer nog een keer 💪</p>
+                {/* Je parkmaatje denkt mee (Mark 2 jul): zelfde buddy-tutor als in
+                    de leerpaden — hints, nooit het antwoord. */}
+                <button
+                  onClick={() => setRekenHulpOpen(true)}
+                  style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 13.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}
+                >
+                  {BUDDY_BY_ID[buddyId]?.emoji || "🐾"} Vraag hulp aan {buddyNaamEff || "je maatje"}
+                </button>
+              </div>
             )}
             {rekenUitslag === "goed" && (
               <div style={{ marginTop: 12 }}>
@@ -1422,6 +1442,25 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             )}
           </div>
         </div>
+      )}
+
+      {/* 🐾 Maatje-hulp bij de reken-vraag: zelfde Socratische tutor als in de
+          leerpaden (hints in stapjes, nooit het antwoord), met de stem en het
+          gezicht van je eigen parkmaatje. */}
+      {rekenHulpOpen && rekenVraag && (
+        <Suspense fallback={null}>
+          <AITutor
+            open
+            onClose={() => setRekenHulpOpen(false)}
+            pathTitle="Rekenen in je park"
+            pathId="park-rekenvraag"
+            stepTitle="Reken-vraag bij je kraampje"
+            stepIdx={rekenVraagNr.current}
+            stepExplanation={`De leerling runt een kraampje in een dierentuin-spel en krijgt een reken-vraag over kopen en verkopen. Handige begrippen: winst per stuk = verkoopprijs min inkoopprijs; totale winst = aantal keer winst per stuk; omzet = aantal keer verkoopprijs. Help stap voor stap, in taal voor een kind van ~10.`}
+            currentCheck={{ q: rekenVraag.vraag, options: rekenVraag.opties.map((o) => `${o} muntjes`) }}
+            lastWrongAnswer={rekenFout != null ? `${rekenFout} muntjes` : undefined}
+          />
+        </Suspense>
       )}
 
       {/* Overlays: uitleg + diergids. */}
