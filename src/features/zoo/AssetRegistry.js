@@ -172,14 +172,14 @@ export const ZOO_ASSETS = {
   keien: { id: "keien", kind: "decor", name: "Keitjes", emoji: "🪨", procedural: "rock", variant: "group", cells: 1, price: 3 },
   // 🧱 Bouwblokken (Mark 2 jul): stapelbare blokken — bouw je eigen huis, hok
   // of toren. Tik op een blok terwijl je plaatst = erbovenop stapelen.
-  blokHout: { id: "blokHout", kind: "decor", name: "Houtblok", emoji: "🪵", procedural: "blok", blokKleur: "#a97e4e", cells: 1, price: 1 },
-  blokSteen: { id: "blokSteen", kind: "decor", name: "Steenblok", emoji: "🪨", procedural: "blok", blokKleur: "#a3a8ae", cells: 1, price: 1 },
-  blokBaksteen: { id: "blokBaksteen", kind: "decor", name: "Baksteenblok", emoji: "🧱", procedural: "blok", blokKleur: "#b5563f", cells: 1, price: 1 },
-  blokZand: { id: "blokZand", kind: "decor", name: "Zandblok", emoji: "🟨", procedural: "blok", blokKleur: "#e3cf94", cells: 1, price: 1 },
-  blokGras: { id: "blokGras", kind: "decor", name: "Grasblok", emoji: "🟩", procedural: "blok", blokKleur: "#7cbf5a", cells: 1, price: 1 },
-  blokSneeuw: { id: "blokSneeuw", kind: "decor", name: "Sneeuwblok", emoji: "⬜", procedural: "blok", blokKleur: "#eef2f4", cells: 1, price: 1 },
-  blokGlas: { id: "blokGlas", kind: "decor", name: "Glasblok", emoji: "🔷", procedural: "blok", blokKleur: "#bfe3f2", doorzichtig: true, cells: 1, price: 2 },
-  blokDak: { id: "blokDak", kind: "decor", name: "Dak-punt", emoji: "🔺", procedural: "blokdak", blokKleur: "#c0463c", cells: 1, price: 2 },
+  blokHout: { id: "blokHout", kind: "decor", name: "Houtblok", emoji: "🪵", procedural: "blok", blokKleur: "#a97e4e", cells: 1, price: 0 },
+  blokSteen: { id: "blokSteen", kind: "decor", name: "Steenblok", emoji: "🪨", procedural: "blok", blokKleur: "#a3a8ae", cells: 1, price: 0 },
+  blokBaksteen: { id: "blokBaksteen", kind: "decor", name: "Baksteenblok", emoji: "🧱", procedural: "blok", blokKleur: "#b5563f", cells: 1, price: 0 },
+  blokZand: { id: "blokZand", kind: "decor", name: "Zandblok", emoji: "🟨", procedural: "blok", blokKleur: "#e3cf94", cells: 1, price: 0 },
+  blokGras: { id: "blokGras", kind: "decor", name: "Grasblok", emoji: "🟩", procedural: "blok", blokKleur: "#7cbf5a", cells: 1, price: 0 },
+  blokSneeuw: { id: "blokSneeuw", kind: "decor", name: "Sneeuwblok", emoji: "⬜", procedural: "blok", blokKleur: "#eef2f4", cells: 1, price: 0 },
+  blokGlas: { id: "blokGlas", kind: "decor", name: "Glasblok", emoji: "🔷", procedural: "blok", blokKleur: "#bfe3f2", doorzichtig: true, cells: 1, price: 0 },
+  blokDak: { id: "blokDak", kind: "decor", name: "Dak-punt", emoji: "🔺", procedural: "blokdak", blokKleur: "#c0463c", cells: 1, price: 0 },
   // ✨ Fabelwezens (Mark 2 jul): niet te koop — alleen te SPAREN door te leren
   // (mijlpalen in unlocks.js). Draak/feniks vliegen echt rond, eenhoorn en elf
   // wandelen door je park.

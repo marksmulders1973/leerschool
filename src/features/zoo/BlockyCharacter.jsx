@@ -23,7 +23,17 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
     const zwaai = loopt ? Math.min(0.85, 0.3 + speed * 0.12) : 0;
     const idle = loopt ? 0 : Math.sin(t) * 0.05;
     if (la.current) la.current.rotation.x = Math.sin(t) * zwaai + idle;
-    if (ra.current) ra.current.rotation.x = bouwt ? -0.8 + Math.sin(t * 2.2) * 0.14 : -Math.sin(t) * zwaai - idle;
+    if (ra.current) {
+      if (bouwt) {
+        // Bouw-pose: arm schuin OPZIJ omhoog (niet naar voren — dan verdween de
+        // hamer achter de rug vanaf de standaard camera) + zachte hamer-zwaai.
+        ra.current.rotation.x = -0.35 + Math.sin(t * 2.2) * 0.12;
+        ra.current.rotation.z = -1.15;
+      } else {
+        ra.current.rotation.x = -Math.sin(t) * zwaai - idle;
+        ra.current.rotation.z = 0;
+      }
+    }
     if (ll.current) ll.current.rotation.x = -Math.sin(t) * zwaai;
     if (rl.current) rl.current.rotation.x = Math.sin(t) * zwaai;
     if (romp.current) romp.current.position.y = loopt ? Math.abs(Math.sin(t)) * 0.05 : Math.sin(t * 0.7) * 0.012;

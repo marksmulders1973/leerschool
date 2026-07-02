@@ -157,11 +157,13 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
 // nodig); de "Zet neer"-knop in de balk plaatst 'm daar.
 function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, cursorRef, kleur = "#ffffff" }) {
   const ref = useRef();
+  const pijl = useRef();
   useFrame((s) => {
-    const m = ref.current;
-    if (!m) return;
+    const m = ref.current, pj = pijl.current;
+    if (!m || !pj) return;
     if (!actief || !playerPos.current || !playerFace.current) {
       m.visible = false;
+      pj.visible = false;
       if (cursorRef) cursorRef.current = null;
       return;
     }
@@ -169,21 +171,32 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
     // Richt-afstand: 2 vakjes vóór je (Mark 2 jul: "mag iets verder weg") —
     // ver genoeg om vrij te bouwen, dichtbij genoeg om precies te blijven.
     const [gx, gz] = snapToCell(p.x + f.x * 4.4, p.z + f.z * 4.4, 1);
-    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; if (cursorRef) cursorRef.current = null; return; }
+    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; pj.visible = false; if (cursorRef) cursorRef.current = null; return; }
     const set = blokPerCel.get(cellKey(gx, gz));
     let h = 0;
     while (set && set.has(h)) h++;
     const [x, z] = cellToWorld(gx, gz);
-    m.position.set(x, heightFn(x, z) + h * BLOK_H + BLOK_H / 2, z);
+    const y = heightFn(x, z) + h * BLOK_H + BLOK_H / 2;
+    m.position.set(x, y, z);
     m.visible = h < 8;
     m.material.opacity = 0.38 + Math.sin(s.clock.elapsedTime * 4) * 0.14;
+    // Groene wijs-pijl die boven het richt-blok op-en-neer wipt — dáár bouw je.
+    pj.visible = m.visible;
+    pj.position.set(x, y + BLOK_H * 1.15 + Math.sin(s.clock.elapsedTime * 3.2) * 0.22, z);
+    pj.rotation.y = s.clock.elapsedTime * 1.5;
     if (cursorRef) cursorRef.current = m.visible ? { cell: [gx, gz], h } : null;
   });
   return (
-    <mesh ref={ref} visible={false}>
-      <boxGeometry args={[CELL, BLOK_H, CELL]} />
-      <meshStandardMaterial color={kleur} transparent opacity={0.4} depthWrite={false} />
-    </mesh>
+    <group>
+      <mesh ref={ref} visible={false}>
+        <boxGeometry args={[CELL, BLOK_H, CELL]} />
+        <meshStandardMaterial color={kleur} transparent opacity={0.4} depthWrite={false} />
+      </mesh>
+      <mesh ref={pijl} visible={false} rotation={[Math.PI, 0, 0]}>
+        <coneGeometry args={[0.42, 0.85, 4]} />
+        <meshStandardMaterial color="#00C853" emissive="#00C853" emissiveIntensity={0.45} roughness={0.4} />
+      </mesh>
+    </group>
   );
 }
 

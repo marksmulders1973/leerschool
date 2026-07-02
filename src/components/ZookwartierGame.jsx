@@ -1360,7 +1360,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {selKind === "animal" && <button onClick={() => voerDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: dierGevoerdVandaag(placedItems[selectedIdx]) ? "#cdeccb" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🌾 {dierGevoerdVandaag(placedItems[selectedIdx]) ? "Gevoerd ✓" : "Voeren"}</button>}
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             {selIsHuis && <button onClick={() => { setColorMode(true); setActivePart(0); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
-            <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen (+{placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)</button>
+            <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen{(placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)) > 0 ? ` (+${placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)` : ""}</button>
             <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
         ) : (
@@ -1389,7 +1389,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                     style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: actief ? "3px solid #fff" : "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "6px 8px", background: coins < p.price ? "rgba(120,120,120,0.5)" : (a?.blokKleur || "#a97e4e"), boxShadow: actief ? "0 0 0 3px #2e7d32, 0 3px 10px rgba(0,0,0,.3)" : "0 2px 8px rgba(0,0,0,.25)", cursor: coins < p.price ? "not-allowed" : "pointer", transform: actief ? "scale(1.1)" : "none" }}
                   >
                     <span style={{ fontSize: 20, lineHeight: 1, filter: "drop-shadow(0 1px 2px rgba(0,0,0,.4))" }}>{p.emoji}</span>
-                    <span style={{ font: "800 10.5px system-ui", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.55)", whiteSpace: "nowrap" }}>{p.label.replace("blok", "").replace("Blok", "").trim() || p.label} {p.price}🪙</span>
+                    <span style={{ font: "800 10.5px system-ui", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.55)", whiteSpace: "nowrap" }}>{p.label.replace("blok", "").replace("Blok", "").trim() || p.label}{p.price > 0 ? ` ${p.price}🪙` : ""}</span>
                   </button>
                 );
               })}
