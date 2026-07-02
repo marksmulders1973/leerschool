@@ -29,8 +29,37 @@ function renderTekst(s) {
   });
 }
 
-export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
-  const vraag = getSocialVraag(id);
+export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = false }) {
+  // 🗞️ /vandaag toont — als die er is — de actuele Jeugdjournaal-vraag i.p.v.
+  // de pool-vraag (Mark 2026-07-02: "altijd actueel overkomen"). De poolvraag
+  // rendert direct; we wisselen alleen zolang er nog niet geantwoord is.
+  const [actueel, setActueel] = useState(null);
+  const gekozenRef = useRef(false);
+  useEffect(() => {
+    if (!actueelEerst) return;
+    let weg = false;
+    fetch("/api/actuele-vraag")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (weg || gekozenRef.current || !d?.actueel?.vraag?.options) return;
+        const v = d.actueel.vraag;
+        setActueel({
+          id: v.id,
+          vraag: v.vraag,
+          options: v.options,
+          answer: v.answer,
+          emoji: v.emoji || "🗞️",
+          actueel: true,
+          bronTitel: d.actueel.bron_titel,
+          bronUrl: d.actueel.bron_url,
+          uitlegPad: { niveaus: { basis: v.uitleg, ...(v.simpeler ? { simpeler: v.simpeler } : {}) } },
+        });
+      })
+      .catch(() => {});
+    return () => { weg = true; };
+  }, [actueelEerst]);
+
+  const vraag = actueel || getSocialVraag(id);
   const [gekozen, setGekozen] = useState(null);
   const [niveau, setNiveau] = useState("basis");
   // Al aangemeld voor de gratis lesmateriaal-mail? Dan het opt-in-blok niet tonen.
@@ -77,6 +106,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
 
   const kies = (i) => {
     if (gekozen != null) return;
+    gekozenRef.current = true;
     setGekozen(i);
     track("deeplink_answer", { id: String(id).slice(0, 40), goed: i === vraag.answer });
   };
@@ -100,6 +130,11 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
         Geef hier je antwoord 👇
       </div>
 
+      {vraag.actueel && (
+        <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700, marginBottom: 10 }}>
+          {vraag.emoji} 🗞️ uit het nieuws van vandaag
+        </div>
+      )}
       {vraag.doelgroep && (
         <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
           {vraag.doelgroep}
@@ -238,7 +273,15 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
           })()}
           {/* Mond-tot-mond: deel-knop sluit de groei-bal (bezoek → nieuwe bezoeker). */}
           <div style={{ marginTop: 10 }}>
-            <DeelVraagKnop id={id} />
+            {!vraag.actueel && <DeelVraagKnop id={id} />}
+            {vraag.actueel && vraag.bronTitel && (
+              <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginTop: 10, lineHeight: 1.5 }}>
+                🗞️ Naar aanleiding van het Jeugdjournaal:{" "}
+                {vraag.bronUrl
+                  ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
+                  : <span>{vraag.bronTitel}</span>}
+              </div>
+            )}
           </div>
           <button type="button"
             onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "home" }); setPage && setPage("home"); }}

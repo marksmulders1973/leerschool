@@ -1018,6 +1018,7 @@ export default function App() {
           (deelbaar op social; rouleert per dag door de /v/-pool). */}
       {page === "vandaag" && (
         <DeepVraag
+          actueelEerst
           id={vraagVanVandaagId()}
           setPage={setPage}
           onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
