@@ -48,6 +48,16 @@ const _params =
   typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
 const bioPlaatId = _params.get("bioplaat");
 
+// Tijdelijk build-stempel (Mark 2 jul, tijdens de park-bouwfase): piepklein
+// datum/tijd-label rechtsboven zodat je ziet of je naar de laatste versie
+// kijkt. Weghalen = dit blokje + de __BUILD_STEMPEL__-define in vite.config.js.
+try {
+  const stempel = document.createElement("div");
+  stempel.textContent = "bouw " + __BUILD_STEMPEL__;
+  stempel.style.cssText = "position:fixed;top:1px;right:5px;z-index:99999;font:600 9px system-ui;color:rgba(30,40,50,0.5);pointer-events:none;text-shadow:0 0 3px rgba(255,255,255,0.9)";
+  document.body.appendChild(stempel);
+} catch { /* nooit de app laten breken om een label */ }
+
 if (bioPlaatId && BIO_PLATEN[bioPlaatId]) {
   ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>

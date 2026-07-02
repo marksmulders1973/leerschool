@@ -56,6 +56,14 @@ function injectSwVersion() {
 
 export default defineConfig({
   plugins: [react(), injectSwVersion()],
+  // Tijdelijk build-stempel (Mark 2 jul, tijdens de park-bouwfase): kleine
+  // datum/tijd rechtsboven in de app zodat je ziet of je naar de laatste
+  // versie kijkt. Weghalen = deze define + het blokje in main.jsx.
+  define: {
+    __BUILD_STEMPEL__: JSON.stringify(
+      new Date().toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })
+    ),
+  },
   // Dev-server: bestandsbewaking via polling. Op deze pc detecteert de
   // standaard fs-watcher wijzigingen niet (2026-06-27: HMR pakte edits niet op,
   // dev-server moest steeds handmatig herstart). Polling lost dat op zodat
