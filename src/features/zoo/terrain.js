@@ -15,7 +15,7 @@ export const MAX_H = 7;
 // Blok-wereld (Mark 2 jul): de vloer wordt in blok-lagen getoond (Minecraft-
 // look). Het boetseer-veld blijft glad; alleen weergave + neerzetten/lopen
 // klikken vast op deze stap, zodat heuvels mooie terrassen worden.
-export const BLOK_STAP = 1.1;
+export const BLOK_STAP = 1; // 1 m — zelfde maat als de bouwkubussen (2 jul)
 export function blokHoogte(h) {
   return Math.round(h / BLOK_STAP) * BLOK_STAP;
 }

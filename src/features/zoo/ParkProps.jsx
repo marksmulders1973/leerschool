@@ -1079,20 +1079,21 @@ export function FenceCorner({ position = [0, 0, 0], rotation = 0 }) {
 // Rotsen/keien (procedureel) — low-poly grijze stenen die bij de rotsige bergen
 // passen. `variant` "single" = één grotere kei, "group" = een clustertje keien.
 export function Rock({ position = [0, 0, 0], rotation = 0, variant = "single" }) {
+  // Blok-rotsen: grijze kubussen in de maat-taal van de bouwkubussen.
   const grijs = "#8f8c87", grijs2 = "#7b7874", grijs3 = "#9b9893";
   if (variant === "group") {
     return (
       <group position={position} rotation={[0, rotation, 0]}>
-        <mesh castShadow receiveShadow position={[-0.42, 0.28, 0.12]} rotation={[0.3, 0.5, 0.2]}><icosahedronGeometry args={[0.5, 0]} /><meshStandardMaterial color={grijs} flatShading roughness={1} metalness={0} /></mesh>
-        <mesh castShadow receiveShadow position={[0.46, 0.2, -0.22]} rotation={[0.5, 1.1, 0.1]}><icosahedronGeometry args={[0.38, 0]} /><meshStandardMaterial color={grijs2} flatShading roughness={1} metalness={0} /></mesh>
-        <mesh castShadow receiveShadow position={[0.12, 0.16, 0.5]} rotation={[0.2, 0.3, 0.45]}><icosahedronGeometry args={[0.3, 0]} /><meshStandardMaterial color={grijs3} flatShading roughness={1} metalness={0} /></mesh>
+        <mesh castShadow receiveShadow position={[-0.4, 0.3, 0.1]}><boxGeometry args={[0.7, 0.6, 0.7]} /><meshStandardMaterial color={grijs} roughness={1} /></mesh>
+        <mesh castShadow receiveShadow position={[0.4, 0.22, -0.2]}><boxGeometry args={[0.5, 0.45, 0.5]} /><meshStandardMaterial color={grijs2} roughness={1} /></mesh>
+        <mesh castShadow receiveShadow position={[0.15, 0.16, 0.45]}><boxGeometry args={[0.35, 0.32, 0.35]} /><meshStandardMaterial color={grijs3} roughness={1} /></mesh>
       </group>
     );
   }
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow receiveShadow position={[0, 0.52, 0]} rotation={[0.25, 0.6, 0.15]} scale={[1.15, 0.85, 1]}><icosahedronGeometry args={[0.9, 0]} /><meshStandardMaterial color={grijs} flatShading roughness={1} metalness={0} /></mesh>
-      <mesh castShadow receiveShadow position={[0.52, 0.22, 0.34]} rotation={[0.4, 0.2, 0.5]}><icosahedronGeometry args={[0.4, 0]} /><meshStandardMaterial color={grijs2} flatShading roughness={1} metalness={0} /></mesh>
+      <mesh castShadow receiveShadow position={[0, 0.5, 0]}><boxGeometry args={[1.3, 1, 1.3]} /><meshStandardMaterial color={grijs} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[0.75, 0.25, 0.3]}><boxGeometry args={[0.5, 0.5, 0.5]} /><meshStandardMaterial color={grijs2} roughness={1} /></mesh>
     </group>
   );
 }
@@ -1139,39 +1140,33 @@ export function DonationBox({ position = [0, 0, 0], rotation = 0 }) {
 
 // Struik (procedureel) — een clustertje low-poly groene bollen.
 export function Bush({ position = [0, 0, 0], rotation = 0 }) {
-  const g1 = "#4e8a3a", g2 = "#5fa047", g3 = "#6fb053";
+  // Blok-struik: bladerkubus + half kubusje (maat-taal van de bouwkubussen).
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow receiveShadow position={[-0.3, 0.36, 0.1]}><icosahedronGeometry args={[0.46, 0]} /><meshStandardMaterial color={g1} flatShading roughness={1} /></mesh>
-      <mesh castShadow position={[0.33, 0.3, -0.12]}><icosahedronGeometry args={[0.38, 0]} /><meshStandardMaterial color={g2} flatShading roughness={1} /></mesh>
-      <mesh castShadow position={[0.05, 0.46, 0.3]}><icosahedronGeometry args={[0.34, 0]} /><meshStandardMaterial color={g3} flatShading roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[-0.15, 0.45, 0]}><boxGeometry args={[0.95, 0.9, 0.95]} /><meshStandardMaterial color="#4e8a3a" roughness={1} /></mesh>
+      <mesh castShadow position={[0.45, 0.3, 0.2]}><boxGeometry args={[0.55, 0.6, 0.55]} /><meshStandardMaterial color="#6fb053" roughness={1} /></mesh>
     </group>
   );
 }
 
 // Varen/graspol (procedureel) — een paar smalle bladeren die naar buiten waaieren.
 export function Fern({ position = [0, 0, 0], rotation = 0 }) {
-  const groen = "#5a9c3f", groen2 = "#6fb24a";
-  const blades = [[0, 0, 0], [0.35, 0.25, 0.4], [-0.35, -0.2, -0.35], [0.2, 0.55, -0.3], [-0.25, 0.5, 0.35]];
+  // Blok-plantje: twee groene mini-kubussen.
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      {blades.map(([rx, rz, yaw], i) => (
-        <mesh key={i} castShadow position={[0, 0.45, 0]} rotation={[rx, yaw, rz]}>
-          <coneGeometry args={[0.09, 0.95, 5]} />
-          <meshStandardMaterial color={i % 2 ? groen2 : groen} flatShading roughness={1} />
-        </mesh>
-      ))}
+      <mesh castShadow position={[0, 0.3, 0]}><boxGeometry args={[0.55, 0.6, 0.55]} /><meshStandardMaterial color="#5a9c3f" roughness={1} /></mesh>
+      <mesh castShadow position={[0.05, 0.75, 0.05]}><boxGeometry args={[0.32, 0.35, 0.32]} /><meshStandardMaterial color="#6fb24a" roughness={1} /></mesh>
     </group>
   );
 }
 
 // Boomstronk (procedureel) — een afgezaagde stam met lichter hout op de snede.
 export function Stump({ position = [0, 0, 0], rotation = 0 }) {
-  const bast = "#6b4a2b", hout = "#b89160";
+  // Blok-stronk: bruin kubusje met licht houten bovenvlak.
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow receiveShadow position={[0, 0.3, 0]}><cylinderGeometry args={[0.4, 0.46, 0.6, 10]} /><meshStandardMaterial color={bast} flatShading roughness={1} /></mesh>
-      <mesh position={[0, 0.605, 0]}><cylinderGeometry args={[0.38, 0.38, 0.04, 10]} /><meshStandardMaterial color={hout} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[0, 0.3, 0]}><boxGeometry args={[0.8, 0.6, 0.8]} /><meshStandardMaterial color="#6b4a2b" roughness={1} /></mesh>
+      <mesh position={[0, 0.605, 0]}><boxGeometry args={[0.72, 0.05, 0.72]} /><meshStandardMaterial color="#b89160" roughness={1} /></mesh>
     </group>
   );
 }
@@ -1180,35 +1175,46 @@ export function Stump({ position = [0, 0, 0], rotation = 0 }) {
 // low-poly kroon met diepte — donkere blobs onderaan, lichtere bovenop — in
 // dezelfde flatShading-stijl als Bush/Fern. Varianten: round (standaard),
 // oak (groter + warmer groen), palm. Mooier én lichter dan een glTF-model.
+// Blok-stijl (Mark 2 jul, "Minecraft-idee heeft prio"): bomen in dezelfde
+// maat-taal als de 1 m-bouwkubussen — stam van blok-kolommen, kroon van
+// bladerkubussen. Varianten: round, oak (hoger/warmer), palm (blader-kruis).
 export function Tree({ position = [0, 0, 0], rotation = 0, variant = "round" }) {
-  if (variant === "palm") return <PalmTree position={position} rotation={rotation} />;
   const oak = variant === "oak";
-  const s = oak ? 1.16 : 1;
-  const donker = oak ? "#39692b" : "#3f7a32";
-  const mid = oak ? "#4d8736" : "#4e8a3a";
-  const licht = oak ? "#74b552" : "#6fb053";
-  // Kroon-blobs: [x, y, z, straal, kleur]. Onderaan donker, bovenop licht → diepte.
-  const blobs = [
-    [0, 1.62, 0, 0.86, donker],
-    [0.56, 1.54, 0.12, 0.6, mid],
-    [-0.52, 1.58, -0.16, 0.62, mid],
-    [0.24, 1.78, 0.46, 0.5, mid],
-    [-0.3, 1.82, -0.4, 0.5, mid],
-    [0.08, 2.0, 0.06, 0.64, licht],
-    [-0.18, 1.94, 0.3, 0.42, licht],
-  ];
+  const palm = variant === "palm";
+  const blad1 = palm ? "#418f34" : oak ? "#4d8736" : "#4e8a3a";
+  const blad2 = palm ? "#56a544" : oak ? "#74b552" : "#6fb053";
+  const stamKleur = palm ? "#9b7a45" : "#6b4a2b";
+  const stamH = palm ? 4 : oak ? 3 : 2;
   return (
-    <group position={position} rotation={[0, rotation, 0]} scale={s}>
-      <mesh castShadow receiveShadow position={[0, 0.6, 0]}>
-        <cylinderGeometry args={[0.15, 0.22, 1.2, 8]} />
-        <meshStandardMaterial color="#6b4a2b" flatShading roughness={1} />
-      </mesh>
-      {blobs.map(([x, y, z, r, c], i) => (
-        <mesh key={i} castShadow position={[x, y, z]}>
-          <icosahedronGeometry args={[r, 0]} />
-          <meshStandardMaterial color={c} flatShading roughness={1} />
+    <group position={position} rotation={[0, rotation, 0]}>
+      {[...Array(stamH)].map((_, i) => (
+        <mesh key={i} castShadow receiveShadow position={[0, i + 0.5, 0]}>
+          <boxGeometry args={[0.9, 1, 0.9]} />
+          <meshStandardMaterial color={stamKleur} roughness={1} />
         </mesh>
       ))}
+      {palm ? (
+        <>
+          {[[1.4, 0], [-1.4, 0], [0, 1.4], [0, -1.4]].map(([bx, bz], i) => (
+            <mesh key={i} castShadow position={[bx, stamH + 0.15, bz]}>
+              <boxGeometry args={[bx ? 1.9 : 0.95, 0.35, bz ? 1.9 : 0.95]} />
+              <meshStandardMaterial color={i % 2 ? blad2 : blad1} roughness={1} />
+            </mesh>
+          ))}
+          <mesh castShadow position={[0, stamH + 0.3, 0]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial color={blad1} roughness={1} /></mesh>
+        </>
+      ) : (
+        <>
+          <mesh castShadow position={[0, stamH + 1, 0]}>
+            <boxGeometry args={[2.9, 2, 2.9]} />
+            <meshStandardMaterial color={blad1} roughness={1} />
+          </mesh>
+          <mesh castShadow position={[0, stamH + 2.5, 0]}>
+            <boxGeometry args={[1.9, 1, 1.9]} />
+            <meshStandardMaterial color={blad2} roughness={1} />
+          </mesh>
+        </>
+      )}
     </group>
   );
 }

@@ -209,11 +209,29 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerKub, curso
   );
 }
 
+// ⛲ Blok-fontein (2 jul): vierkante steenbak met water — vervangt het ronde
+// glb-model dat vloekte met de kubussen-wereld.
+function BlokFontein({ x, y, z }) {
+  const rand = [];
+  for (let i = -2; i <= 2; i++) { rand.push([i, -2], [i, 2]); if (Math.abs(i) < 2) rand.push([-2, i], [2, i]); }
+  return (
+    <group position={[x, y, z]}>
+      {rand.map(([bx, bz], i) => (
+        <mesh key={i} castShadow receiveShadow position={[bx, 0.35, bz]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial color="#a3a8ae" roughness={1} /></mesh>
+      ))}
+      <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3, 3]} /><meshStandardMaterial color="#4fa8d8" transparent opacity={0.85} roughness={0.3} /></mesh>
+      <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.6, 1.1, 0.6]} /><meshStandardMaterial color="#8f959c" roughness={1} /></mesh>
+      <mesh position={[0, 1.55, 0]}><boxGeometry args={[0.35, 0.35, 0.35]} /><meshStandardMaterial color="#bfe3f2" transparent opacity={0.7} roughness={0.3} /></mesh>
+    </group>
+  );
+}
+
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
 function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0 }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
+  if (assetId === "fountain") return <BlokFontein x={x} y={y} z={z} />;
   if (a.kind === "fabel") return <FabelWezen soort={a.fabelSoort} position={[x, y, z]} />;
   if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
