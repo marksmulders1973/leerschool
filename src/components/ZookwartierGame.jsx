@@ -216,6 +216,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [menuOpen, setMenuOpen] = useState(false);       // ☰-menu (fullscreen) met alle extra functies
   const [bouwen, setBouwen] = useState(false);           // bouw-modus: winkelbalk in beeld (anders alleen park)
   const [besturingHint, setBesturingHint] = useState(!COARSE_POINTER); // korte WASD/sleep-hint op laptop
+  const [bouwTip, setBouwTip] = useState(false);         // eenmalige maatje-tip "je kunt zelf bouwen!"
+  const bouwCursorRef = useRef(null);                    // 🎯 waar het richt-blok nu staat {cell, h}
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
   const [oefenPad, setOefenPad] = useState(null);        // aanbevolen onderwerp om te oefenen { id, title, subject }
@@ -383,6 +385,23 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (loaded && placedItems.length <= STARTER_LAYOUT.length) setBouwen(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded]);
+
+  // 🐾 Eenmalige maatje-tip: wie nog nooit een blok bouwde krijgt na een halve
+  // minuut spelen een vriendelijk duwtje van z'n maatje (Mark 2 jul: "laat
+  // Charley tips geven"). "Laat zien" opent meteen de blokken-winkel.
+  useEffect(() => {
+    if (!loaded) return;
+    let gezien = false;
+    try { gezien = !!localStorage.getItem("lk_bouwtip_gezien"); } catch { /* */ }
+    if (gezien || placedItems.some((it) => isBlok(it.assetId))) return;
+    const t = setTimeout(() => setBouwTip(true), 30000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded]);
+  const sluitBouwTip = () => {
+    setBouwTip(false);
+    try { localStorage.setItem("lk_bouwtip_gezien", "1"); } catch { /* */ }
+  };
 
   const flits = (tekst) => {
     setMelding(tekst);
@@ -1100,6 +1119,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
+          bouwCursorRef={bouwCursorRef}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
@@ -1177,6 +1197,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           en in eerstepersoons — daar bestuur je met de muis/vinger over het beeld. */}
       {COARSE_POINTER && !firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
+      {/* 🐾 Eenmalige maatje-tip: "je kunt hier zélf bouwen!" met snelknop. */}
+      {bouwTip && !menuOpen && !placing && !dialoog && (
+        <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(420px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
+          <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
+            <b>{buddyNaamEff || "Je maatje"}</b>: "Hoi{naam ? ` ${naam}` : ""}! Wist je dat je hier zélf mag bouwen? Een huis, een hok, een toren — wat jij wilt! 🧱"
+          </div>
+          <button onClick={() => { sluitBouwTip(); setBouwen(true); setShopCat("blok"); setFirstPerson(false); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🧱 Laat zien</button>
+          <button onClick={sluitBouwTip} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
+
       {/* Korte besturing-hint voor laptop/desktop (verdwijnt vanzelf). */}
       {!COARSE_POINTER && !firstPerson && !buddyEye && besturingHint && (
         <div style={{ position: "absolute", left: "50%", bottom: 18, transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none", background: "rgba(20,30,20,0.62)", color: "#fff", borderRadius: 999, padding: "8px 16px", font: "700 12.5px system-ui", whiteSpace: "nowrap", maxWidth: "94%", overflow: "hidden", textOverflow: "ellipsis" }}>
@@ -1246,9 +1278,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </>
         ) : placing ? (
           <>
-            <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              {`Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
+            <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
+              {isBlok(placing.assetId)
+                ? "Loop ergens heen — het lichte blok wijst aan waar je bouwt. Tik op een blok = er tegenaan bouwen."
+                : `Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
             </div>
+            {isBlok(placing.assetId) && placing.moveIdx == null && (
+              <button
+                onClick={() => { if (bouwCursorRef.current) plaatsBlokOp(bouwCursorRef.current); }}
+                style={{ border: "none", borderRadius: 999, padding: "12px 22px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(46,158,79,.45)", cursor: "pointer" }}
+              >
+                🧱 Zet neer
+              </button>
+            )}
             <button onClick={draai} title="Draaien" style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↻ Draai</button>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
           </>

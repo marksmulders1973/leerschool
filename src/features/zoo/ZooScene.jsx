@@ -151,6 +151,40 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
   );
 }
 
+// 🎯 Bouw-cursor (Mark 2 jul): in blok-bouwmodus wijst je poppetje aan waar
+// het volgende blok komt — een zacht pulserend doorschijnend blok op het vakje
+// vóór je (op de laagste vrije laag). Werkt op telefoon én laptop (geen hover
+// nodig); de "Zet neer"-knop in de balk plaatst 'm daar.
+function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, cursorRef, kleur = "#ffffff" }) {
+  const ref = useRef();
+  useFrame((s) => {
+    const m = ref.current;
+    if (!m) return;
+    if (!actief || !playerPos.current || !playerFace.current) {
+      m.visible = false;
+      if (cursorRef) cursorRef.current = null;
+      return;
+    }
+    const p = playerPos.current, f = playerFace.current;
+    const [gx, gz] = snapToCell(p.x + f.x * 2.6, p.z + f.z * 2.6, 1);
+    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; if (cursorRef) cursorRef.current = null; return; }
+    const set = blokPerCel.get(cellKey(gx, gz));
+    let h = 0;
+    while (set && set.has(h)) h++;
+    const [x, z] = cellToWorld(gx, gz);
+    m.position.set(x, heightFn(x, z) + h * BLOK_H + BLOK_H / 2, z);
+    m.visible = h < 8;
+    m.material.opacity = 0.38 + Math.sin(s.clock.elapsedTime * 4) * 0.14;
+    if (cursorRef) cursorRef.current = m.visible ? { cell: [gx, gz], h } : null;
+  });
+  return (
+    <mesh ref={ref} visible={false}>
+      <boxGeometry args={[CELL, BLOK_H, CELL]} />
+      <meshStandardMaterial color={kleur} transparent opacity={0.4} depthWrite={false} />
+    </mesh>
+  );
+}
+
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
 function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0 }) {
   const a = getAsset(assetId);
@@ -410,7 +444,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, bouwCursorRef, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -566,6 +600,18 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     });
     return m;
   }, [placedItems]);
+  // Welke blok-lagen zijn per vakje bezet? (voor de bouw-cursor: laagste vrije laag)
+  const blokPerCel = useMemo(() => {
+    const m = new Map();
+    placedItems.forEach((it) => {
+      if (!isBlok(it.assetId)) return;
+      const k = cellKey(it.cell[0], it.cell[1]);
+      if (!m.has(k)) m.set(k, new Set());
+      m.get(k).add(it.h || 0);
+    });
+    return m;
+  }, [placedItems]);
+
   const camTopAt = useCallback((x, z) => {
     const [gx, gz] = snapToCell(x, z, 1);
     return vasteToppen.get(cellKey(gx, gz)) || 0;
@@ -632,6 +678,17 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
         )}
+
+        {/* 🎯 Richt-blok: wijst aan waar het volgende blok komt (vakje vóór je). */}
+        <BouwCursor
+          actief={plaatstBlok}
+          playerPos={playerPos}
+          playerFace={playerFace}
+          heightFn={heightFnRef.current}
+          blokPerCel={blokPerCel}
+          cursorRef={bouwCursorRef}
+          kleur={getAsset(placingAsset)?.blokKleur || "#ffffff"}
+        />
 
         {/* 🧱 Alle bouwblokken samen (instanced) + Minecraft-vlak-plaatsing. */}
         <BlokkenLaag
