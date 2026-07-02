@@ -17,6 +17,7 @@ import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
 import FabelWezen from "./FabelWezen";
+import { getBlokMaterial, grijsMaps } from "./blokTextures";
 import { useEffect } from "react";
 import {
   CELL, GRID_SIZE, GRID_DIV, HALF, KUB, snapToCell, cellToWorld, cellKey,
@@ -47,9 +48,8 @@ function BouwBlok({ a, x, y, z, h = 0, rotation = 0 }) {
     );
   }
   return (
-    <mesh position={[x, y + h * BLOK_H + BLOK_H / 2, z]} rotation={[0, rotation, 0]} castShadow receiveShadow>
+    <mesh position={[x, y + h * BLOK_H + BLOK_H / 2, z]} rotation={[0, rotation, 0]} castShadow receiveShadow material={getBlokMaterial(a)}>
       <boxGeometry args={[CELL, BLOK_H, CELL]} />
-      <meshStandardMaterial color={a.blokKleur} roughness={1} transparent={!!a.doorzichtig} opacity={a.doorzichtig ? 0.5 : 1} />
     </mesh>
   );
 }
@@ -59,49 +59,30 @@ function BouwBlok({ a, x, y, z, h = 0, rotation = 0 }) {
 // blok verschijnt aan díe kant (bovenop, opzij of eronder) → overhangende
 // daken, poorten en bruggen kunnen. Daken (kegels) blijven losse meshes.
 function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFacePlace, onHak }) {
-  const refVast = useRef(), refGlas = useRef();
   const hover = useRef(); // muis-aanwijs-randje (desktop): dít blokje raak je
-  // 🧊 Kubussen van 1×1×1 m (kx/kz/kh op het fijne KUB-raster).
-  const { vast, glas, daken } = useMemo(() => {
-    const vast = [], glas = [], daken = [];
+  // 🧊 Kubussen van 1×1×1 m (kx/kz/kh op het fijne KUB-raster), gegroepeerd
+  // per SOORT: elke bloksoort krijgt zijn eigen instanced mesh met eigen
+  // pixel-texture (gras met groene bovenkant, baksteen met voegen, ...).
+  const { perSoort, daken } = useMemo(() => {
+    const per = new Map(), daken = [];
     items.forEach((it, i) => {
       if (it.kx == null) return; // alleen kub-blokken (oude worden bij load gemigreerd)
       const a = getAsset(it.assetId);
       if (!a) return;
       if (a.procedural === "blokdak") daken.push({ it, i, a });
-      else if (a.procedural === "blok") (a.doorzichtig ? glas : vast).push({ it, i, a });
+      else if (a.procedural === "blok") {
+        let g = per.get(a.id);
+        if (!g) per.set(a.id, (g = { a, lijst: [] }));
+        g.lijst.push({ it, i, a });
+      }
     });
-    return { vast, glas, daken };
+    return { perSoort: [...per.values()], daken };
   }, [items]);
 
   const kubPos = (it) => {
     const x = it.kx * KUB + KUB / 2, z = it.kz * KUB + KUB / 2;
     return [x, heightFn(x, z) + (it.kh || 0) * KUB + KUB / 2, z];
   };
-
-  useEffect(() => {
-    const dummy = new Object3D();
-    const c = new Color();
-    const vul = (ref, lijst) => {
-      const m = ref.current;
-      if (!m) return;
-      lijst.forEach(({ it, a }, k) => {
-        const [x, y, z] = kubPos(it);
-        dummy.position.set(x, y, z);
-        dummy.rotation.y = 0;
-        dummy.updateMatrix();
-        m.setMatrixAt(k, dummy.matrix);
-        m.setColorAt(k, c.set(a.blokKleur || "#a97e4e"));
-      });
-      m.count = lijst.length;
-      m.instanceMatrix.needsUpdate = true;
-      if (m.instanceColor) m.instanceColor.needsUpdate = true;
-      m.computeBoundingSphere();
-    };
-    vul(refVast, vast);
-    vul(refGlas, glas);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vast, glas, terrain, heightFn]);
 
   // Minecraft-plaatsing: welk VLAK van de kubus raakte je? Daar komt de nieuwe.
   const faceDoel = (it, e) => {
@@ -145,18 +126,9 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
 
   return (
     <group>
-      {vast.length > 0 && (
-        <instancedMesh key={`v${vast.length}`} ref={refVast} args={[undefined, undefined, Math.max(1, vast.length)]} castShadow receiveShadow {...maakHandlers(vast, false)}>
-          <boxGeometry args={[KUB, KUB, KUB]} />
-          <meshStandardMaterial roughness={1} metalness={0} />
-        </instancedMesh>
-      )}
-      {glas.length > 0 && (
-        <instancedMesh key={`g${glas.length}`} ref={refGlas} args={[undefined, undefined, Math.max(1, glas.length)]} {...maakHandlers(glas, false)}>
-          <boxGeometry args={[KUB, KUB, KUB]} />
-          <meshStandardMaterial roughness={0.3} metalness={0} transparent opacity={0.5} />
-        </instancedMesh>
-      )}
+      {perSoort.map(({ a, lijst }) => (
+        <BlokSoortMesh key={a.id} a={a} lijst={lijst} kubPos={kubPos} terrain={terrain} handlers={maakHandlers(lijst, false)} />
+      ))}
       {daken.map((rec) => {
         const [x, y, z] = kubPos(rec.it);
         return (
@@ -172,6 +144,41 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
         <lineBasicMaterial color="#111111" />
       </lineSegments>
     </group>
+  );
+}
+
+// Eén instanced mesh voor alle kubussen van één bloksoort, met de
+// pixel-texture van die soort (blokTextures.js).
+function BlokSoortMesh({ a, lijst, kubPos, terrain, handlers }) {
+  const ref = useRef();
+  useEffect(() => {
+    const m = ref.current;
+    if (!m) return;
+    const dummy = new Object3D();
+    lijst.forEach(({ it }, k) => {
+      const [x, y, z] = kubPos(it);
+      dummy.position.set(x, y, z);
+      dummy.rotation.y = 0;
+      dummy.updateMatrix();
+      m.setMatrixAt(k, dummy.matrix);
+    });
+    m.count = lijst.length;
+    m.instanceMatrix.needsUpdate = true;
+    m.computeBoundingSphere();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lijst, terrain]);
+  return (
+    <instancedMesh
+      key={`${a.id}-${lijst.length}`}
+      ref={ref}
+      args={[undefined, undefined, Math.max(1, lijst.length)]}
+      material={getBlokMaterial(a)}
+      castShadow={!a.doorzichtig}
+      receiveShadow
+      {...handlers}
+    >
+      <boxGeometry args={[KUB, KUB, KUB]} />
+    </instancedMesh>
   );
 }
 
@@ -244,10 +251,10 @@ function BlokFontein({ x, y, z }) {
   return (
     <group position={[x, y, z]}>
       {rand.map(([bx, bz], i) => (
-        <mesh key={i} castShadow receiveShadow position={[bx, 0.35, bz]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial color="#a3a8ae" roughness={1} /></mesh>
+        <mesh key={i} castShadow receiveShadow position={[bx, 0.35, bz]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial map={grijsMaps.muur()} color="#a3a8ae" roughness={1} /></mesh>
       ))}
       <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3, 3]} /><meshStandardMaterial color="#4fa8d8" transparent opacity={0.85} roughness={0.3} /></mesh>
-      <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.6, 1.1, 0.6]} /><meshStandardMaterial color="#8f959c" roughness={1} /></mesh>
+      <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.6, 1.1, 0.6]} /><meshStandardMaterial map={grijsMaps.buiten()} color="#8f959c" roughness={1} /></mesh>
       <mesh position={[0, 1.55, 0]}><boxGeometry args={[0.35, 0.35, 0.35]} /><meshStandardMaterial color="#bfe3f2" transparent opacity={0.7} roughness={0.3} /></mesh>
     </group>
   );
@@ -276,16 +283,16 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
   return (
     <group position={[x, y, z]} rotation={[0, rotation, 0]}>
       {/* achtermuur + zijmuren (3 m hoog) */}
-      <mesh castShadow receiveShadow position={[0, 1.5, -2.75]} {...pak("muur")}><boxGeometry args={[6, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
-      <mesh castShadow receiveShadow position={[-2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
-      <mesh castShadow receiveShadow position={[2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[0, 1.5, -2.75]} {...pak("muur")}><boxGeometry args={[6, 3, W]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[-2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
       {/* voormuur: 2 segmenten + latei → deuropening van 2 m breed, 2 m hoog */}
-      <mesh castShadow receiveShadow position={[-2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
-      <mesh castShadow receiveShadow position={[2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
-      <mesh castShadow receiveShadow position={[0, 2.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 1, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[-2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[0, 2.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 1, W]} /><meshStandardMaterial map={grijsMaps.muur()} color={muur} roughness={1} /></mesh>
       {/* deurposten */}
-      <mesh position={[-1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial color={deur} roughness={1} /></mesh>
-      <mesh position={[1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial color={deur} roughness={1} /></mesh>
+      <mesh position={[-1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial map={grijsMaps.plank()} color={deur} roughness={1} /></mesh>
+      <mesh position={[1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial map={grijsMaps.plank()} color={deur} roughness={1} /></mesh>
       {/* glas-ramen op de zijmuren en achterkant */}
       {[[-2.78, 0, true], [2.78, 0, true], [0, -2.78, false]].map(([rx, rz, zij], i) => (
         <mesh key={i} position={zij ? [rx, 1.6, 0] : [rx, 1.6, rz]}>
@@ -294,9 +301,9 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
         </mesh>
       ))}
       {/* plat kubus-dek + zadeldak van blok-treden (Minecraft-stijl) */}
-      <mesh castShadow position={[0, 3.25, 0]} {...pak("dak")}><boxGeometry args={[6.6, 0.5, 6.6]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
-      <mesh castShadow position={[0, 3.95, 0]} {...pak("dak")}><boxGeometry args={[4.4, 0.9, 6.7]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
-      <mesh castShadow position={[0, 4.7, 0]} {...pak("dak")}><boxGeometry args={[2.2, 0.9, 6.8]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 3.25, 0]} {...pak("dak")}><boxGeometry args={[6.6, 0.5, 6.6]} /><meshStandardMaterial map={grijsMaps.dak()} color={dak} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 3.95, 0]} {...pak("dak")}><boxGeometry args={[4.4, 0.9, 6.7]} /><meshStandardMaterial map={grijsMaps.dak()} color={dak} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 4.7, 0]} {...pak("dak")}><boxGeometry args={[2.2, 0.9, 6.8]} /><meshStandardMaterial map={grijsMaps.dak()} color={dak} roughness={1} /></mesh>
     </group>
   );
 }
@@ -417,13 +424,15 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
   };
   return (
     <group>
+      {/* Pixel-ruis-maps (grijs) vermenigvuldigen met de instance-kleur:
+          gras-verf en hoogte-kleuren blijven werken, maar krijgen Minecraft-korrel. */}
       <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
         <boxGeometry args={[CELL, 0.4, CELL]} />
-        <meshStandardMaterial roughness={1} metalness={0} />
+        <meshStandardMaterial map={grijsMaps.terreinTop()} roughness={1} metalness={0} />
       </instancedMesh>
       <instancedMesh ref={refKol} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
         <boxGeometry args={[CELL, 1, CELL]} />
-        <meshStandardMaterial roughness={1} metalness={0} />
+        <meshStandardMaterial map={grijsMaps.terreinKolom()} roughness={1} metalness={0} />
       </instancedMesh>
     </group>
   );

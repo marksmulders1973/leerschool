@@ -7,6 +7,7 @@
 // (instancing → een handvol draw-calls) en deterministisch (vaste seed).
 import { useEffect, useMemo, useRef } from "react";
 import { Color, Object3D } from "three";
+import { grijsMaps } from "./blokTextures";
 
 // Klein deterministisch toevalletje (mulberry32) → de wereld ziet er elke
 // sessie hetzelfde uit en Math.random vervuilt geen re-renders.
@@ -43,7 +44,8 @@ function Blokken({ items, castShadow = false }) {
   return (
     <instancedMesh ref={ref} args={[undefined, undefined, items.length]} castShadow={castShadow}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial roughness={1} metalness={0} />
+      {/* grijze pixel-ruis × instance-kleur = zelfde Minecraft-korrel als het park */}
+      <meshStandardMaterial map={grijsMaps.buiten()} roughness={1} metalness={0} />
     </instancedMesh>
   );
 }
