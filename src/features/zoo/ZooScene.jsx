@@ -235,6 +235,9 @@ const HUIS_VARIANT = {
   houseC: { muur: "#f2e3c0", dak: "#3ba55d" }, houseD: { muur: "#e3cfa8", dak: "#8a5a3a" },
   houseE: { muur: "#d8c8e8", dak: "#7c3aed" }, houseF: { muur: "#f6d9c4", dak: "#e8892e" },
   houseG: { muur: "#cfe3d8", dak: "#1f7a8c" }, houseH: { muur: "#b5563f", dak: "#4a3320" },
+  // De gekleurde huisjes (huis-a.glb met tint) — nu óók blok-huizen.
+  huisRood: { muur: "#f3a89c", dak: "#c0463c" }, huisBlauw: { muur: "#a9cdf5", dak: "#3a6ad8" },
+  huisGroen: { muur: "#b3e09a", dak: "#2b7a44" }, huisGeel: { muur: "#f5dd8e", dak: "#e8892e" },
 };
 function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEditable = false, onPickPart }) {
   const v = HUIS_VARIANT[variant] || HUIS_VARIANT.houseA;
@@ -695,7 +698,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       if (!isVast(it.assetId)) return;
       // Blok-huizen zijn BEGAANBAAR: alleen de muur-rand blokkeert, en de
       // deur-cel (voorkant-midden, draait mee) blijft open → naar binnen lopen.
-      if (/^house[A-H]$/.test(it.assetId)) {
+      if (/^house[A-H]$/.test(it.assetId) || /^huis(Rood|Blauw|Groen|Geel)$/.test(it.assetId)) {
         const hoek = it.rotation || 0;
         const deurKey = cellKey(it.cell[0] + Math.round(Math.sin(hoek)), it.cell[1] + Math.round(Math.cos(hoek)));
         for (const [cx, cz] of footprint(it.cell[0], it.cell[1], 3)) {
