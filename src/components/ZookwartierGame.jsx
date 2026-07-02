@@ -760,6 +760,53 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     });
   };
 
+  // 🧱 Verbouwen (Mark 2 jul): een kant-en-klaar huis omzetten in de losse
+  // blokjes waaruit het is opgebouwd — muren 3 hoog, glazen ramen, houten
+  // zoldervloer en een dak-nok. Daarna is het écht Minecraft: per blokje
+  // weghakken, andere kleur terugzetten of bijbouwen.
+  const HUIS_MUURBLOK = {
+    houseA: "blokZand", houseB: "blokSneeuw", houseC: "blokZand", houseD: "blokHout",
+    houseE: "blokSneeuw", houseF: "blokZand", houseG: "blokSneeuw", houseH: "blokBaksteen",
+    huisRood: "blokBaksteen", huisBlauw: "blokSneeuw", huisGroen: "blokHout", huisGeel: "blokZand",
+  };
+  const verbouwHuis = () => {
+    if (selectedIdx == null) return;
+    const it = placedItems[selectedIdx];
+    if (!it?.cell) return;
+    const muur = HUIS_MUURBLOK[it.assetId] || "blokBaksteen";
+    const ax = it.cell[0] * CELL, az = it.cell[1] * CELL;
+    const hoek = it.rotation || 0;
+    const dirx = Math.round(Math.sin(hoek)), dirz = Math.round(Math.cos(hoek));
+    const b = [];
+    for (let x = -3; x <= 2; x++) {
+      for (let z = -3; z <= 2; z++) {
+        const rand = x === -3 || x === 2 || z === -3 || z === 2;
+        if (rand) {
+          const hoekblok = (x === -3 || x === 2) && (z === -3 || z === 2);
+          const deurKant = dirz === 1 ? z === 2 : dirz === -1 ? z === -3 : dirx === 1 ? x === 2 : x === -3;
+          const midden = dirx === 0 ? (x === -1 || x === 0) : (z === -1 || z === 0);
+          const deur = deurKant && midden && !hoekblok;
+          const raamPos = !hoekblok && ((z === -3 || z === 2) ? (x === -1 || x === 0) : (z === -1 || z === 0));
+          for (let h = 0; h <= 2; h++) {
+            if (deur && h <= 1) continue;
+            const raam = h === 1 && !deur && !deurKant && raamPos;
+            b.push({ assetId: raam ? "blokGlas" : muur, kx: ax + x, kz: az + z, kh: h, price: 0 });
+          }
+        }
+        b.push({ assetId: "blokHout", kx: ax + x, kz: az + z, kh: 3, price: 0 });
+      }
+    }
+    for (let x = -3; x <= 2; x++) { b.push({ assetId: "blokDak", kx: ax + x, kz: az - 1, kh: 4, price: 0 }, { assetId: "blokDak", kx: ax + x, kz: az, kh: 4, price: 0 }); }
+    // Plekken die al bezet zijn (iemand bouwde tegen het huis aan) overslaan.
+    const bezetKub = new Set(placedItems.filter((k) => isBlok(k.assetId)).map((k) => `${k.kx},${k.kz},${k.kh || 0}`));
+    const vrij = b.filter((k) => !bezetKub.has(`${k.kx},${k.kz},${k.kh}`));
+    if (placedItems.filter((k) => isBlok(k.assetId)).length + vrij.length > MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokjes in je park.`); return; }
+    const weg = selectedIdx;
+    setPlacedItems((items) => [...items.filter((_, i) => i !== weg), ...vrij]);
+    sluitSelectie();
+    flits("Verbouwd naar losse blokjes! Hak weg, zet een andere kleur terug of bouw bij. 🧱⛏️");
+  };
+
   const verplaatsGeselecteerde = () => {
     if (selectedIdx == null) return;
     const it = placedItems[selectedIdx];
@@ -859,7 +906,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
 
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
-  const selIsHuis = selKind === "building" && String(placedItems[selectedIdx]?.assetId || "").startsWith("house");
+  const selIsHuis = selKind === "building" && /^(house[A-H]|huis(Rood|Blauw|Groen|Geel))$/.test(String(placedItems[selectedIdx]?.assetId || ""));
   // Kraampje geselecteerd? Dan kies je het product + de verkoopprijs (reken-moment).
   const selVoorziet = selectedIdx != null ? getAsset(placedItems[selectedIdx]?.assetId)?.voorziet : null;
 
@@ -1582,6 +1629,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {selKind === "animal" && <button onClick={() => aaiDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🤗 Aaien</button>}
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             {selIsHuis && <button onClick={() => { setColorMode(true); setActivePart(0); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
+            {selIsHuis && <button onClick={verbouwHuis} title="Zet het huis om in losse blokjes die je per stuk kunt weghakken of vervangen" style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#8a5a3a,#6a4228)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧱 Verbouwen</button>}
             <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen{(placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)) > 0 ? ` (+${placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)` : ""}</button>
             <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
