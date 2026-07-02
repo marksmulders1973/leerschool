@@ -5,7 +5,7 @@
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr } from "@react-three/drei";
-import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D } from "three";
+import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry } from "three";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
@@ -158,12 +158,14 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
 function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, cursorRef, kleur = "#ffffff" }) {
   const ref = useRef();
   const pijl = useRef();
+  const hak = useRef();
   useFrame((s) => {
-    const m = ref.current, pj = pijl.current;
-    if (!m || !pj) return;
+    const m = ref.current, pj = pijl.current, hk = hak.current;
+    if (!m || !pj || !hk) return;
     if (!actief || !playerPos.current || !playerFace.current) {
       m.visible = false;
       pj.visible = false;
+      hk.visible = false;
       if (cursorRef) cursorRef.current = null;
       return;
     }
@@ -171,12 +173,13 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
     // Richt-afstand: 2 vakjes vóór je (Mark 2 jul: "mag iets verder weg") —
     // ver genoeg om vrij te bouwen, dichtbij genoeg om precies te blijven.
     const [gx, gz] = snapToCell(p.x + f.x * 4.4, p.z + f.z * 4.4, 1);
-    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; pj.visible = false; if (cursorRef) cursorRef.current = null; return; }
+    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; pj.visible = false; hk.visible = false; if (cursorRef) cursorRef.current = null; return; }
     const set = blokPerCel.get(cellKey(gx, gz));
     let h = 0;
     while (set && set.has(h)) h++;
     const [x, z] = cellToWorld(gx, gz);
-    const y = heightFn(x, z) + h * BLOK_H + BLOK_H / 2;
+    const grond = heightFn(x, z);
+    const y = grond + h * BLOK_H + BLOK_H / 2;
     m.position.set(x, y, z);
     m.visible = h < 8;
     m.material.opacity = 0.38 + Math.sin(s.clock.elapsedTime * 4) * 0.14;
@@ -184,7 +187,12 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
     pj.visible = m.visible;
     pj.position.set(x, y + BLOK_H * 1.15 + Math.sin(s.clock.elapsedTime * 3.2) * 0.22, z);
     pj.rotation.y = s.clock.elapsedTime * 1.5;
-    if (cursorRef) cursorRef.current = m.visible ? { cell: [gx, gz], h } : null;
+    // ⛏️ Hak-markering (Minecraft-stijl): zwarte rand om het BOVENSTE blok van
+    // de stapel waar je op richt — dát blokje hakt "Hak weg" weg.
+    const topH = h - 1;
+    hk.visible = topH >= 0;
+    if (hk.visible) hk.position.set(x, grond + topH * BLOK_H + BLOK_H / 2, z);
+    if (cursorRef) cursorRef.current = m.visible || hk.visible ? { cell: [gx, gz], h, hakH: topH >= 0 ? topH : null } : null;
   });
   return (
     <group>
@@ -196,6 +204,10 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
         <coneGeometry args={[0.42, 0.85, 4]} />
         <meshStandardMaterial color="#00C853" emissive="#00C853" emissiveIntensity={0.45} roughness={0.4} />
       </mesh>
+      <lineSegments ref={hak} visible={false}>
+        <edgesGeometry args={[new BoxGeometry(CELL + 0.06, BLOK_H + 0.06, CELL + 0.06)]} />
+        <lineBasicMaterial color="#1a1a1a" linewidth={2} />
+      </lineSegments>
     </group>
   );
 }
@@ -459,7 +471,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, bouwCursorRef, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, bouwCursorRef, bouwModus = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -677,7 +689,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
         {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
             rand — anders begint elke speler met 40 m niemandsland. */}
-        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok} />
+        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson && !buddyEye} />

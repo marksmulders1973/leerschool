@@ -690,6 +690,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setPlacedItems((items) => [...items, { assetId: placing.assetId, cell, rotation: placing.rot || 0, price: placing.price, h }]);
   };
 
+  // ⛏️ Weghakken (Minecraft-stijl): het blok met de zwarte markeer-rand
+  // (bovenste blok van de stapel waar je op richt) verdwijnt.
+  const hakWeg = () => {
+    const c = bouwCursorRef.current;
+    if (!c || c.hakH == null) { flits("Loop naar een blokje toe — de zwarte rand laat zien wat je weghakt."); return; }
+    setPlacedItems((items) => {
+      const idx = items.findIndex((it) => isBlok(it.assetId) && it.cell[0] === c.cell[0] && it.cell[1] === c.cell[1] && (it.h || 0) === c.hakH);
+      return idx < 0 ? items : items.filter((_, i) => i !== idx);
+    });
+  };
+
   const verplaatsGeselecteerde = () => {
     if (selectedIdx == null) return;
     const it = placedItems[selectedIdx];
@@ -1198,6 +1209,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
           bouwCursorRef={bouwCursorRef}
+          bouwModus={bouwen}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
@@ -1364,12 +1376,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   : `Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
             </div>
             {isBlok(placing.assetId) && placing.moveIdx == null && (
-              <button
-                onClick={() => { if (bouwCursorRef.current) plaatsBlokOp(bouwCursorRef.current); }}
-                style={{ border: "none", borderRadius: 999, padding: "12px 22px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(46,158,79,.45)", cursor: "pointer" }}
-              >
-                🧱 Zet neer
-              </button>
+              <>
+                <button
+                  onClick={() => { if (bouwCursorRef.current) plaatsBlokOp(bouwCursorRef.current); }}
+                  style={{ border: "none", borderRadius: 999, padding: "12px 22px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(46,158,79,.45)", cursor: "pointer" }}
+                >
+                  🧱 Zet neer
+                </button>
+                <button
+                  onClick={hakWeg}
+                  style={{ border: "none", borderRadius: 999, padding: "12px 20px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#8a5a3a,#6a4228)", boxShadow: "0 4px 14px rgba(0,0,0,.3)", cursor: "pointer" }}
+                >
+                  ⛏️ Hak weg
+                </button>
+              </>
             )}
             <button onClick={draai} title="Draaien" style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↻ Draai</button>
             <button onClick={() => setPlacing(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>✓ Klaar</button>
