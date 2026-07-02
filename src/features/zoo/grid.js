@@ -8,6 +8,11 @@ export const HALF = 40;       // vakjes vanaf het midden (-40..40 => 81×81 rast
 export const GRID_SIZE = HALF * 2 * CELL;
 export const GRID_DIV = HALF * 2;
 
+// 🧊 Bouw-kubussen (Mark 2 jul, "kleinere blokken"): kubussen van 1×1×1 m op
+// een eigen fijn raster — 2×2 kubussen per park-vakje, zoals Minecraft.
+// kub-coördinaat kx = Math.floor(wereldX / KUB); centrum = kx + 0.5.
+export const KUB = 1;
+
 export const DEFAULT_CELLS = 3;             // verblijf = 3×3 vakjes
 export const ENCLOSURE_CELLS = DEFAULT_CELLS;
 export const ENCLOSURE_SIZE = DEFAULT_CELLS * CELL;

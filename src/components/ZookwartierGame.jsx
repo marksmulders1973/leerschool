@@ -9,7 +9,7 @@ import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
-import { HALF, footprint, cellKey } from "../features/zoo/grid";
+import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
 import { GROUND_TYPES } from "../features/zoo/ground";
@@ -165,52 +165,71 @@ const SHOP_CATS = [
   { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
   { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
 ];
-const MAX_BLOKKEN = 900; // totaal-cap (instanced → 2 draw-calls, ook op telefoons vlot)
-const MAX_STAPEL = 8;    // max bouwhoogte in lagen
+const MAX_BLOKKEN = 2000; // totaal-cap (instanced → 2 draw-calls, ook op telefoons vlot)
+const MAX_STAPEL = 10;    // max bouwhoogte in kubus-lagen (10 m)
+
+// Migratie (2 jul, kleinere blokken): oude "grote" blokken (2×2 m plaat op
+// cel+h) worden bij het laden omgezet naar 4 kubussen van 1×1×1 m per laag —
+// alles blijft staan, maar nu fijn verbouwbaar.
+function migreerBlokken(layout) {
+  if (!Array.isArray(layout)) return layout;
+  return layout.flatMap((it) => {
+    if (!isBlok(it.assetId) || it.kx != null || !it.cell) return [it];
+    const [wx, wz] = cellToWorld(it.cell[0], it.cell[1]);
+    const kubs = [];
+    for (const dx of [-0.5, 0.5]) {
+      for (const dz of [-0.5, 0.5]) {
+        kubs.push({ assetId: it.assetId, kx: Math.floor(wx + dx), kz: Math.floor(wz + dz), kh: it.h || 0, price: 0 });
+      }
+    }
+    return kubs;
+  });
+}
 
 // 🏠 Bouwpakketten (Mark 2 jul): kant-en-klare blok-gebouwtjes als startpunt.
 // Elk pakket wordt neergezet als LOSSE blokken → kinderen kunnen er daarna
 // blokje voor blokje aan verbouwen (weghalen, ramen bijzetten, hoger maken).
 function blauwdruk(naam) {
+  // Maten in KUBUSSEN van 1×1×1 m (fijn raster) — dx/dz relatief, h = laag.
   const b = [];
   const zet = (dx, dz, h, id) => b.push({ dx, dz, h, id });
   if (naam === "huis") {
-    // 5×4 huisje: baksteen-muren 2 hoog, glas-ramen, deuropening, plat houten
-    // dak met een rij dak-punten als nok.
-    for (let x = -2; x <= 2; x++) {
-      for (let z = -1; z <= 2; z++) {
-        const rand = x === -2 || x === 2 || z === -1 || z === 2;
+    // 9×7 m huisje: baksteen-muren 3 hoog, ramen van 2 kubussen, deuropening
+    // van 2 hoog, houten plafond en een dak-nok van punt-kubussen.
+    for (let x = -4; x <= 4; x++) {
+      for (let z = -3; z <= 3; z++) {
+        const rand = x === -4 || x === 4 || z === -3 || z === 3;
         if (rand) {
-          const deur = x === 0 && z === 2;
-          const raam = (x === -2 || x === 2) && z === 0;
-          for (let h = 0; h <= 1; h++) {
-            if (deur) continue;
+          const deur = (x === 0 || x === 1) && z === 3;
+          const raam = (x === -4 || x === 4) ? Math.abs(z) === 1 : (z === -3 && Math.abs(x) === 2);
+          for (let h = 0; h <= 2; h++) {
+            if (deur && h <= 1) continue;
             zet(x, z, h, raam && h === 1 ? "blokGlas" : "blokBaksteen");
           }
         }
-        zet(x, z, 2, "blokHout");
+        zet(x, z, 3, "blokHout");
       }
     }
-    for (let x = -2; x <= 2; x++) zet(x, 0, 3, "blokDak");
+    for (let x = -4; x <= 4; x++) { zet(x, 0, 4, "blokHout"); zet(x, 0, 5, "blokDak"); }
   } else if (naam === "toren") {
-    // 3×3 kasteel-toren, 5 hoog, glas-kijkgaten bovenin, dak-punten erop.
-    for (let h = 0; h < 5; h++) {
-      for (let x = -1; x <= 1; x++) {
-        for (let z = -1; z <= 1; z++) {
-          if (Math.abs(x) !== 1 && Math.abs(z) !== 1) continue;
-          if (x === 0 && z === 1 && h <= 1) continue; // deuropening
-          const raam = h === 3 && (x === 0 || z === 0);
+    // 5×5 m kasteel-toren, 7 hoog, kijkgaten, kantelen + dak-punten.
+    for (let h = 0; h < 7; h++) {
+      for (let x = -2; x <= 2; x++) {
+        for (let z = -2; z <= 2; z++) {
+          if (Math.abs(x) !== 2 && Math.abs(z) !== 2) continue;
+          if (x === 0 && z === 2 && h <= 1) continue; // deuropening
+          const raam = h === 5 && (x === 0 || z === 0);
           zet(x, z, h, raam ? "blokGlas" : "blokSteen");
         }
       }
     }
-    for (let x = -1; x <= 1; x++) for (let z = -1; z <= 1; z++) zet(x, z, 5, "blokDak");
+    for (let x = -2; x <= 2; x += 2) for (let z = -2; z <= 2; z += 2) zet(x, z, 7, "blokDak");
   } else if (naam === "hok") {
-    // 5×3 open dierenhok: houten muurtje 1 hoog met een ingang.
-    for (let x = -2; x <= 2; x++) {
-      for (let z = -1; z <= 1; z++) {
-        const rand = Math.abs(x) === 2 || Math.abs(z) === 1;
-        if (rand && !(x === 0 && z === 1)) zet(x, z, 0, "blokHout");
+    // 7×5 m open dierenhok: houten muurtje 1 hoog met een brede ingang.
+    for (let x = -3; x <= 3; x++) {
+      for (let z = -2; z <= 2; z++) {
+        const rand = Math.abs(x) === 3 || Math.abs(z) === 2;
+        if (rand && !((x === 0 || x === 1) && z === 2)) zet(x, z, 0, "blokHout");
       }
     }
   }
@@ -475,7 +494,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const base = row
         ? { coins: row.coins, streak: row.streak, last_login: row.last_login, last_kwartier_date: row.last_kwartier_date, owned: ownedObj }
         : { coins: d.coins, streak: d.streak, last_login: d.last_login, last_kwartier_date: d.last_kwartier_date, owned: d.owned };
-      const layout = row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT;
+      const layout = migreerBlokken(row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT);
 
       const prevLogin = base.last_login;          // vóór de login-update
       const isNieuweDag = prevLogin !== vandaag();
@@ -597,56 +616,60 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const draai = () => setPlacing((p) => (p ? { ...p, rot: (p.rot || 0) + Math.PI / 2 } : p));
 
-  // Hoeveel blokken staan er al op dit vakje? (voor stapelen)
-  const blokkenOp = (cell, skipIdx = -1) => placedItems.filter((it, i) => i !== skipIdx && isBlok(it.assetId) && it.cell[0] === cell[0] && it.cell[1] === cell[1]).length;
+  // Laagste vrije kubus-laag op (kx,kz).
+  const vrijeKubLaag = (kx, kz) => {
+    const bezetH = new Set(placedItems.filter((it) => isBlok(it.assetId) && it.kx === kx && it.kz === kz).map((it) => it.kh || 0));
+    let kh = 0;
+    while (bezetH.has(kh)) kh++;
+    return kh;
+  };
+  // Valt deze kubus binnen een gebouw/hek/attractie? (paden/dieren zijn oké)
+  const kubBotstMetItem = (kx, kz) => placedItems.some((it) => {
+    if (isBlok(it.assetId)) return false;
+    const a = getAsset(it.assetId);
+    if (!a || a.procedural === "path" || a.kind === "animal") return false;
+    return footprint(it.cell[0], it.cell[1], cellsVan(it.assetId)).some(([cx, cz]) => {
+      const [wx, wz] = cellToWorld(cx, cz);
+      return kx >= Math.floor(wx) - 1 && kx <= Math.floor(wx) && kz >= Math.floor(wz) - 1 && kz <= Math.floor(wz);
+    });
+  });
 
-  const plaatsOpVakje = (cell) => {
+  const plaatsOpVakje = (cell, punt) => {
     if (!placing) return;
-    // 🏠 Bouwpakket: rol de hele blauwdruk uit rond het gekozen vakje.
+    const KLIM = HALF * CELL - 1;
+    // 🏠 Bouwpakket: rol de blauwdruk (in kubussen) uit rond het klikpunt.
     if (placing.pakket) {
+      const ax = punt ? Math.floor(punt.x) : cell[0] * CELL, az = punt ? Math.floor(punt.z) : cell[1] * CELL;
       const b = blauwdruk(placing.pakket);
-      const bezetBlok = new Set(placedItems.filter((it) => isBlok(it.assetId)).map((it) => `${it.cell[0]},${it.cell[1]},${it.h || 0}`));
-      const vasteCellen = new Set();
-      placedItems.forEach((it) => {
-        if (isBlok(it.assetId)) return;
-        const a = getAsset(it.assetId);
-        if (!a || a.procedural === "path" || a.kind === "animal") return;
-        footprint(it.cell[0], it.cell[1], cellsVan(it.assetId)).forEach(([cx, cz]) => vasteCellen.add(`${cx},${cz}`));
-      });
+      const bezetKub = new Set(placedItems.filter((it) => isBlok(it.assetId)).map((it) => `${it.kx},${it.kz},${it.kh || 0}`));
       const botst = b.some(({ dx, dz, h }) => {
-        const gx = cell[0] + dx, gz = cell[1] + dz;
-        return Math.abs(gx) > HALF || Math.abs(gz) > HALF || bezetBlok.has(`${gx},${gz},${h}`) || vasteCellen.has(`${gx},${gz}`);
+        const kx = ax + dx, kz = az + dz;
+        return Math.abs(kx) > KLIM || Math.abs(kz) > KLIM || bezetKub.has(`${kx},${kz},${h}`) || (h === 0 && kubBotstMetItem(kx, kz));
       });
       if (botst) { flits("Niet genoeg vrije ruimte — zoek een open plek."); return; }
       if (placedItems.filter((it) => isBlok(it.assetId)).length + b.length > MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
-      setPlacedItems((items) => [...items, ...b.map(({ dx, dz, h, id }) => ({ assetId: id, cell: [cell[0] + dx, cell[1] + dz], rotation: 0, price: 0, h }))]);
+      setPlacedItems((items) => [...items, ...b.map(({ dx, dz, h, id }) => ({ assetId: id, kx: ax + dx, kz: az + dz, kh: h, price: 0 }))]);
       setPlacing(null);
-      flits("Klaar! Verbouw het zoals jij wilt — blokjes weghalen of bijbouwen. 🧱");
+      flits("Klaar! Verbouw het zoals jij wilt — blokjes weghakken of bijbouwen. 🧱");
+      return;
+    }
+    // 🧊 Losse kubus op de grond: precies op de meter waar je klikte.
+    if (isBlok(placing.assetId)) {
+      if (!punt) return;
+      plaatsBlokOp({ kx: Math.floor(punt.x), kz: Math.floor(punt.z), kh: vrijeKubLaag(Math.floor(punt.x), Math.floor(punt.z)) });
       return;
     }
     const rot = placing.rot || 0;
     // Verplaatsen: bestaand item naar nieuw vakje (met huidige draaihoek).
-    // Een blok landt op de bovenkant van de stapel op het nieuwe vakje.
     if (placing.moveIdx != null) {
-      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell, rotation: rot, ...(isBlok(it.assetId) ? { h: blokkenOp(cell, placing.moveIdx) } : {}) } : it)));
+      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell, rotation: rot } : it)));
       setPlacing(null);
       return;
     }
     // Kopen + plaatsen.
     if (coins < placing.price) { flits("Niet genoeg muntjes."); setPlacing(null); return; }
-    // Bouwblokken (klik op de grond): op de laagste vrije laag van dat vakje.
-    let blokH;
-    if (isBlok(placing.assetId)) {
-      if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
-      const bezetH = new Set(placedItems.filter((it) => isBlok(it.assetId) && it.cell[0] === cell[0] && it.cell[1] === cell[1]).map((it) => it.h || 0));
-      blokH = 0;
-      while (bezetH.has(blokH)) blokH++;
-      if (blokH >= MAX_STAPEL) { flits(`Deze toren is op z'n hoogst (${MAX_STAPEL} blokken).`); return; }
-    }
-    setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
     // Nieuw dier start "gevoerd" (vandaag), zodat het niet meteen honger heeft.
     const nieuw = { assetId: placing.assetId, cell, rotation: rot, price: placing.price };
-    if (blokH != null) nieuw.h = blokH;
     const isAnimal = kindVan(placing.assetId) === "animal";
     if (isAnimal) nieuw.fed = vandaag();
     setPlacedItems((items) => [...items, nieuw]);
@@ -665,38 +688,34 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     else if (coins - placing.price < placing.price) setPlacing(null);
   };
 
-  // 🧱 Minecraft-plaatsing: blok tegen een blok-VLAK aan (van BlokkenLaag).
-  // Valideert plek + koopt; zwevende blokken mogen (overhangend dak, brug).
-  const plaatsBlokOp = ({ cell, h }) => {
+  // 🧊 Minecraft-plaatsing: kubus op het fijne raster (via richt-cursor of
+  // tegen een kubus-vlak aan). Zwevende kubussen mogen (overhang, brug).
+  const plaatsBlokOp = ({ kx, kz, kh, fx = 0, fz = 0 }) => {
     if (!placing) return;
-    if (placing.pakket) { plaatsOpVakje(cell); return; } // pakket op de richt-plek
+    if (placing.pakket) {
+      // Pakket-anker een gebouw-helft extra vooruit, zodat je er niet ín staat.
+      const schuif = { huis: 7, toren: 5, hok: 6 }[placing.pakket] || 6;
+      plaatsOpVakje(null, { x: kx + 0.5 + Math.round(fx * schuif), z: kz + 0.5 + Math.round(fz * schuif) });
+      return;
+    }
     if (!isBlok(placing.assetId)) return;
-    const [gx, gz] = cell;
-    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { flits("Dat is buiten je park."); return; }
-    if (h < 0) { flits("Onder de grond bouwen kan niet."); return; }
-    if (h >= MAX_STAPEL) { flits(`Niet hoger dan ${MAX_STAPEL} blokken.`); return; }
-    if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
-    if (placedItems.some((it) => isBlok(it.assetId) && it.cell[0] === gx && it.cell[1] === gz && (it.h || 0) === h)) return; // plek al bezet
-    // Niet ín een gebouw/attractie/hek bouwen (paden zijn oké).
-    const bots = placedItems.some((it) => {
-      if (isBlok(it.assetId)) return false;
-      const a = getAsset(it.assetId);
-      if (!a || a.procedural === "path" || a.kind === "animal") return false;
-      return footprint(it.cell[0], it.cell[1], cellsVan(it.assetId)).some(([cx, cz]) => cx === gx && cz === gz);
-    });
-    if (bots) { flits("Daar staat al iets."); return; }
-    if (coins < placing.price) { flits("Niet genoeg muntjes."); return; }
-    setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
-    setPlacedItems((items) => [...items, { assetId: placing.assetId, cell, rotation: placing.rot || 0, price: placing.price, h }]);
+    const KLIM = HALF * CELL - 1;
+    if (Math.abs(kx) > KLIM || Math.abs(kz) > KLIM) { flits("Dat is buiten je park."); return; }
+    if (kh < 0) { flits("Onder de grond bouwen kan niet."); return; }
+    if (kh >= MAX_STAPEL) { flits(`Niet hoger dan ${MAX_STAPEL} blokjes.`); return; }
+    if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokjes in je park.`); return; }
+    if (placedItems.some((it) => isBlok(it.assetId) && it.kx === kx && it.kz === kz && (it.kh || 0) === kh)) return; // plek al bezet
+    if (kubBotstMetItem(kx, kz)) { flits("Daar staat al iets."); return; }
+    setPlacedItems((items) => [...items, { assetId: placing.assetId, kx, kz, kh, price: 0 }]);
   };
 
-  // ⛏️ Weghakken (Minecraft-stijl): het blok met de zwarte markeer-rand
-  // (bovenste blok van de stapel waar je op richt) verdwijnt.
+  // ⛏️ Weghakken (Minecraft-stijl): de kubus met de zwarte markeer-rand
+  // (bovenste kubus van de stapel waar je op richt) verdwijnt.
   const hakWeg = () => {
     const c = bouwCursorRef.current;
     if (!c || c.hakH == null) { flits("Loop naar een blokje toe — de zwarte rand laat zien wat je weghakt."); return; }
     setPlacedItems((items) => {
-      const idx = items.findIndex((it) => isBlok(it.assetId) && it.cell[0] === c.cell[0] && it.cell[1] === c.cell[1] && (it.h || 0) === c.hakH);
+      const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === c.kx && it.kz === c.kz && (it.kh || 0) === c.hakH);
       return idx < 0 ? items : items.filter((_, i) => i !== idx);
     });
   };

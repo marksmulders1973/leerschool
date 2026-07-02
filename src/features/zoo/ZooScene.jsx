@@ -19,7 +19,7 @@ import Buitenwereld from "./Buitenwereld";
 import FabelWezen from "./FabelWezen";
 import { useEffect } from "react";
 import {
-  CELL, GRID_SIZE, GRID_DIV, HALF, snapToCell, cellToWorld, cellKey,
+  CELL, GRID_SIZE, GRID_DIV, HALF, KUB, snapToCell, cellToWorld, cellKey,
   footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
@@ -58,12 +58,13 @@ function BouwBlok({ a, x, y, z, h = 0, rotation = 0 }) {
 // honderden blokken) + Minecraft-plaatsing: tik op een blok-VLAK en het nieuwe
 // blok verschijnt aan díe kant (bovenop, opzij of eronder) → overhangende
 // daken, poorten en bruggen kunnen. Daken (kegels) blijven losse meshes.
-function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSelect, onFacePlace }) {
+function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFacePlace }) {
   const refVast = useRef(), refGlas = useRef();
-  // Per soort: [{ it, i }] met i = index in placedItems (voor selectie).
+  // 🧊 Kubussen van 1×1×1 m (kx/kz/kh op het fijne KUB-raster).
   const { vast, glas, daken } = useMemo(() => {
     const vast = [], glas = [], daken = [];
     items.forEach((it, i) => {
+      if (it.kx == null) return; // alleen kub-blokken (oude worden bij load gemigreerd)
       const a = getAsset(it.assetId);
       if (!a) return;
       if (a.procedural === "blokdak") daken.push({ it, i, a });
@@ -72,6 +73,11 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
     return { vast, glas, daken };
   }, [items]);
 
+  const kubPos = (it) => {
+    const x = it.kx * KUB + KUB / 2, z = it.kz * KUB + KUB / 2;
+    return [x, heightFn(x, z) + (it.kh || 0) * KUB + KUB / 2, z];
+  };
+
   useEffect(() => {
     const dummy = new Object3D();
     const c = new Color();
@@ -79,9 +85,9 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
       const m = ref.current;
       if (!m) return;
       lijst.forEach(({ it, a }, k) => {
-        const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
-        dummy.position.set(x, heightFn(x, z) + (it.h || 0) * BLOK_H + BLOK_H / 2, z);
-        dummy.rotation.y = it.rotation || 0;
+        const [x, y, z] = kubPos(it);
+        dummy.position.set(x, y, z);
+        dummy.rotation.y = 0;
         dummy.updateMatrix();
         m.setMatrixAt(k, dummy.matrix);
         m.setColorAt(k, c.set(a.blokKleur || "#a97e4e"));
@@ -93,18 +99,17 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
     };
     vul(refVast, vast);
     vul(refGlas, glas);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [vast, glas, terrain, heightFn]);
 
-  // Minecraft-plaatsing: bepaal uit het klikpunt welk VLAK van het blok je
-  // raakte (dominante as t.o.v. het blok-midden) → daar komt het nieuwe blok.
+  // Minecraft-plaatsing: welk VLAK van de kubus raakte je? Daar komt de nieuwe.
   const faceDoel = (it, e) => {
-    const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
-    const y = heightFn(x, z) + (it.h || 0) * BLOK_H + BLOK_H / 2;
+    const [x, y, z] = kubPos(it);
     const dx = e.point.x - x, dy = e.point.y - y, dz = e.point.z - z;
-    const ax = Math.abs(dx) / (CELL / 2), ay = Math.abs(dy) / (BLOK_H / 2), az = Math.abs(dz) / (CELL / 2);
-    if (ay >= ax && ay >= az) return { cell: it.cell, h: (it.h || 0) + (dy > 0 ? 1 : -1) };
-    if (ax >= az) return { cell: [it.cell[0] + Math.sign(dx), it.cell[1]], h: it.h || 0 };
-    return { cell: [it.cell[0], it.cell[1] + Math.sign(dz)], h: it.h || 0 };
+    const ax = Math.abs(dx), ay = Math.abs(dy), az = Math.abs(dz);
+    if (ay >= ax && ay >= az) return { kx: it.kx, kz: it.kz, kh: (it.kh || 0) + (dy > 0 ? 1 : -1) };
+    if (ax >= az) return { kx: it.kx + Math.sign(dx), kz: it.kz, kh: it.kh || 0 };
+    return { kx: it.kx, kz: it.kz + Math.sign(dz), kh: it.kh || 0 };
   };
   const maakHandlers = (lijst, perId) => ({
     onPointerDown: (e) => {
@@ -112,15 +117,7 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
       if (!rec) return;
       if (placingBlok) { e.stopPropagation(); onFacePlace(faceDoel(rec.it, e)); return; }
       if (modusBezig) return;
-      e.stopPropagation();
-    },
-    onClick: (e) => {
-      if (placingBlok || modusBezig) return;
-      if (e.delta > 8) return;
-      const rec = perId ? lijst : lijst[e.instanceId];
-      if (!rec) return;
-      e.stopPropagation();
-      onSelect(rec.i);
+      e.stopPropagation(); // kubussen selecteer je niet — weghalen = ⛏️ Hak weg
     },
   });
 
@@ -128,21 +125,21 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
     <group>
       {vast.length > 0 && (
         <instancedMesh key={`v${vast.length}`} ref={refVast} args={[undefined, undefined, Math.max(1, vast.length)]} castShadow receiveShadow {...maakHandlers(vast, false)}>
-          <boxGeometry args={[CELL, BLOK_H, CELL]} />
+          <boxGeometry args={[KUB, KUB, KUB]} />
           <meshStandardMaterial roughness={1} metalness={0} />
         </instancedMesh>
       )}
       {glas.length > 0 && (
         <instancedMesh key={`g${glas.length}`} ref={refGlas} args={[undefined, undefined, Math.max(1, glas.length)]} {...maakHandlers(glas, false)}>
-          <boxGeometry args={[CELL, BLOK_H, CELL]} />
+          <boxGeometry args={[KUB, KUB, KUB]} />
           <meshStandardMaterial roughness={0.3} metalness={0} transparent opacity={0.5} />
         </instancedMesh>
       )}
       {daken.map((rec) => {
-        const [x, z] = cellToWorld(rec.it.cell[0], rec.it.cell[1]);
+        const [x, y, z] = kubPos(rec.it);
         return (
-          <mesh key={rec.i} position={[x, heightFn(x, z) + (rec.it.h || 0) * BLOK_H + BLOK_H * 0.5, z]} rotation={[0, (rec.it.rotation || 0) + Math.PI / 4, 0]} castShadow {...maakHandlers(rec, true)}>
-            <coneGeometry args={[CELL * 0.75, BLOK_H, 4]} />
+          <mesh key={rec.i} position={[x, y - KUB * 0.05, z]} rotation={[0, Math.PI / 4, 0]} castShadow {...maakHandlers(rec, true)}>
+            <coneGeometry args={[KUB * 0.75, KUB, 4]} />
             <meshStandardMaterial color={rec.a.blokKleur} roughness={1} flatShading />
           </mesh>
         );
@@ -155,7 +152,7 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSele
 // het volgende blok komt — een zacht pulserend doorschijnend blok op het vakje
 // vóór je (op de laagste vrije laag). Werkt op telefoon én laptop (geen hover
 // nodig); de "Zet neer"-knop in de balk plaatst 'm daar.
-function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, cursorRef, kleur = "#ffffff" }) {
+function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerKub, cursorRef, kleur = "#ffffff" }) {
   const ref = useRef();
   const pijl = useRef();
   const hak = useRef();
@@ -170,42 +167,42 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
       return;
     }
     const p = playerPos.current, f = playerFace.current;
-    // Richt-afstand: 2 vakjes vóór je (Mark 2 jul: "mag iets verder weg") —
-    // ver genoeg om vrij te bouwen, dichtbij genoeg om precies te blijven.
-    const [gx, gz] = snapToCell(p.x + f.x * 4.4, p.z + f.z * 4.4, 1);
-    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; pj.visible = false; hk.visible = false; if (cursorRef) cursorRef.current = null; return; }
-    const set = blokPerCel.get(cellKey(gx, gz));
-    let h = 0;
-    while (set && set.has(h)) h++;
-    const [x, z] = cellToWorld(gx, gz);
+    // Richten op het fijne kub-raster: ~2,6 m vóór je.
+    const kx = Math.floor(p.x + f.x * 2.6), kz = Math.floor(p.z + f.z * 2.6);
+    const LIM = HALF * CELL - 1;
+    if (Math.abs(kx) > LIM || Math.abs(kz) > LIM) { m.visible = false; pj.visible = false; hk.visible = false; if (cursorRef) cursorRef.current = null; return; }
+    const set = blokPerKub.get(`${kx},${kz}`);
+    let kh = 0;
+    while (set && set.has(kh)) kh++;
+    const x = kx * KUB + KUB / 2, z = kz * KUB + KUB / 2;
     const grond = heightFn(x, z);
-    const y = grond + h * BLOK_H + BLOK_H / 2;
+    const y = grond + kh * KUB + KUB / 2;
     m.position.set(x, y, z);
-    m.visible = h < 8;
+    m.visible = kh < 10;
     m.material.opacity = 0.38 + Math.sin(s.clock.elapsedTime * 4) * 0.14;
-    // Groene wijs-pijl die boven het richt-blok op-en-neer wipt — dáár bouw je.
+    // Groene wijs-pijl die boven de richt-kubus op-en-neer wipt — dáár bouw je.
     pj.visible = m.visible;
-    pj.position.set(x, y + BLOK_H * 1.15 + Math.sin(s.clock.elapsedTime * 3.2) * 0.22, z);
+    pj.position.set(x, y + KUB * 1.1 + Math.sin(s.clock.elapsedTime * 3.2) * 0.18, z);
     pj.rotation.y = s.clock.elapsedTime * 1.5;
-    // ⛏️ Hak-markering (Minecraft-stijl): zwarte rand om het BOVENSTE blok van
-    // de stapel waar je op richt — dát blokje hakt "Hak weg" weg.
-    const topH = h - 1;
+    // ⛏️ Hak-markering (Minecraft-stijl): zwarte rand om de BOVENSTE kubus van
+    // de stapel waar je op richt — díe hakt "Hak weg" weg.
+    const topH = kh - 1;
     hk.visible = topH >= 0;
-    if (hk.visible) hk.position.set(x, grond + topH * BLOK_H + BLOK_H / 2, z);
-    if (cursorRef) cursorRef.current = m.visible || hk.visible ? { cell: [gx, gz], h, hakH: topH >= 0 ? topH : null } : null;
+    if (hk.visible) hk.position.set(x, grond + topH * KUB + KUB / 2, z);
+    if (cursorRef) cursorRef.current = m.visible || hk.visible ? { kx, kz, kh, hakH: topH >= 0 ? topH : null, fx: f.x, fz: f.z } : null;
   });
   return (
     <group>
       <mesh ref={ref} visible={false}>
-        <boxGeometry args={[CELL, BLOK_H, CELL]} />
+        <boxGeometry args={[KUB, KUB, KUB]} />
         <meshStandardMaterial color={kleur} transparent opacity={0.4} depthWrite={false} />
       </mesh>
       <mesh ref={pijl} visible={false} rotation={[Math.PI, 0, 0]}>
-        <coneGeometry args={[0.42, 0.85, 4]} />
+        <coneGeometry args={[0.3, 0.6, 4]} />
         <meshStandardMaterial color="#00C853" emissive="#00C853" emissiveIntensity={0.45} roughness={0.4} />
       </mesh>
       <lineSegments ref={hak} visible={false}>
-        <edgesGeometry args={[new BoxGeometry(CELL + 0.06, BLOK_H + 0.06, CELL + 0.06)]} />
+        <edgesGeometry args={[new BoxGeometry(KUB + 0.05, KUB + 0.05, KUB + 0.05)]} />
         <lineBasicMaterial color="#1a1a1a" linewidth={2} />
       </lineSegments>
     </group>
@@ -321,7 +318,7 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
   }, [field, ground]);
   const handlers = {
     onPointerMove: (e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); },
-    onPointerDown: (e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (water) onWater(snapToCell(e.point.x, e.point.z, 1)); else if (paintGround) onGround(snapToCell(e.point.x, e.point.z, 1)); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); },
+    onPointerDown: (e) => { e.stopPropagation(); if (sculpt) onSculpt(e.point.x, e.point.z); else if (water) onWater(snapToCell(e.point.x, e.point.z, 1)); else if (paintGround) onGround(snapToCell(e.point.x, e.point.z, 1)); else if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells), e.point); else onMissTap && onMissTap(); },
   };
   return (
     <group>
@@ -433,7 +430,7 @@ function GrasGrond({ placing, cells, onHover, onPlace, onMissTap }) {
       position={[0, 0, 0]}
       receiveShadow
       onPointerMove={(e) => { if (!placing) return; e.stopPropagation(); onHover(snapToCell(e.point.x, e.point.z, cells)); }}
-      onPointerDown={(e) => { e.stopPropagation(); if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells)); else onMissTap && onMissTap(); }}
+      onPointerDown={(e) => { e.stopPropagation(); if (placing) onPlace(snapToCell(e.point.x, e.point.z, cells), e.point); else onMissTap && onMissTap(); }}
     >
       <circleGeometry args={[34, 96]} />
       <meshStandardMaterial color="#86c05a" roughness={1} metalness={0} />
@@ -478,6 +475,42 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const playerFace = useRef(new Vector3(0, 0, 1)); // kijkrichting speler (derde-persoons-cam)
   const buddyPos = useRef(new Vector3());           // positie van het maatje (buddy-cam)
   const orbitRef = useRef();
+
+  // 🧊 Kub-hulpjes — bewust hélemaal bovenaan (worden door bezet/ghost/isSolid
+  // verderop gebruikt; const-volgorde telt).
+  // Welke kub-lagen zijn per (kx,kz) bezet? (bouw-cursor: laagste vrije laag)
+  const blokPerKub = useMemo(() => {
+    const m = new Map();
+    placedItems.forEach((it) => {
+      if (!isBlok(it.assetId) || it.kx == null) return;
+      const k = `${it.kx},${it.kz}`;
+      if (!m.has(k)) m.set(k, new Set());
+      m.get(k).add(it.kh || 0);
+    });
+    return m;
+  }, [placedItems]);
+  // Kubussen op loophoogte (laag 0-1) blokkeren de speler — per KUB-raster,
+  // zodat je door een deuropening van 1 m gewoon naar binnen kunt.
+  const kubVast = useMemo(() => {
+    const s = new Set();
+    placedItems.forEach((it) => {
+      if (!isBlok(it.assetId) || it.kx == null) return;
+      if ((it.kh || 0) <= 1) s.add(`${it.kx},${it.kz}`);
+    });
+    return s;
+  }, [placedItems]);
+  // Staat er ergens in deze cel(len) een kubus? (blokkeert gebouwen/hekken)
+  const celHeeftKub = useCallback((gx, gz, cells = 1) => {
+    for (const [cx, cz] of footprint(gx, gz, cells)) {
+      const [wx, wz] = cellToWorld(cx, cz);
+      for (const dx of [-1, 0]) {
+        for (const dz of [-1, 0]) {
+          if (blokPerKub.has(`${Math.floor(wx) + dx},${Math.floor(wz) + dz}`)) return true;
+        }
+      }
+    }
+    return false;
+  }, [blokPerKub]);
   // Feiten over je park (naam, een pas geboren jong, hongerig dier, je lievelings-
   // dier, groot park, zwak vak) → bezoekers gebruiken dit voor persoonlijke praatjes.
   const factsRef = useRef({});
@@ -512,12 +545,12 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
   // Paden blokkeren niet → je mag er planten/hekjes/bankjes op zetten.
-  // Blok-op-blok: tijdens het plaatsen van een bouwblok telt een bestaand blok
-  // niet als bezet → stapelen mag (de hoogte-laag komt uit plaatsOpVakje).
+  // Kubussen doen niet mee in het cel-raster (eigen fijne raster; celHeeftKub
+  // bewaakt dat gebouwen niet óp kubussen landen).
   const plaatstBlok = isBlok(placingAsset);
-  const blokkeert = (id) => getAsset(id)?.procedural !== "path" && !(plaatstBlok && isBlok(id));
+  const blokkeert = (id) => !isBlok(id) && getAsset(id)?.procedural !== "path";
   const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan, blokkeert);
-  const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells);
+  const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells) && !celHeeftKub(ghost[0], ghost[1], placingCells);
 
   // Aantal bezoekers schaalt mee met wat je park te bieden heeft.
   const trekpleisters = placedItems.filter((it) => {
@@ -575,6 +608,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const _routes = useMemo(() => {
     const paden = [], dieren = [], pret = [], bankjes = [];
     placedItems.forEach((it) => {
+      if (!it.cell) return; // kubussen (kx/kz-raster) doen hier niet mee
       const a = getAsset(it.assetId); if (!a) return;
       const [wx, wz] = cellToWorld(it.cell[0], it.cell[1]);
       if (a.procedural === "path") paden.push([wx, wz]);
@@ -593,18 +627,17 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const vasteCellen = useMemo(() => {
     const s = new Set();
     placedItems.forEach((it) => {
+      if (isBlok(it.assetId)) return; // kubussen blokkeren op hun eigen fijne raster (kubVast)
       if (!isVast(it.assetId)) return;
-      // Blokken blokkeren alleen op LOOPHOOGTE (laag 0-1): een deuropening in je
-      // muur = die cel vrijlaten → je loopt onder je eigen dak naar binnen.
-      if (isBlok(it.assetId) && (it.h || 0) > 1) return;
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
     });
     return s;
   }, [placedItems]);
   const isSolid = useCallback((x, z) => {
+    if (kubVast.has(`${Math.floor(x)},${Math.floor(z)}`)) return true;
     const [gx, gz] = snapToCell(x, z, 1);
     return vasteCellen.has(cellKey(gx, gz));
-  }, [vasteCellen]);
+  }, [vasteCellen, kubVast]);
 
   // Voor de camera telt HOOGTE mee: over lage hekjes/bankjes kijkt de camera
   // gewoon heen; alleen hoge dingen (gebouwen, attracties) duwen de arm korter.
@@ -612,12 +645,19 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   const vasteToppen = useMemo(() => {
     const m = new Map();
     placedItems.forEach((it) => {
+      // Kubussen: camera-hoogte per park-vakje waar de kubus in valt.
+      if (isBlok(it.assetId)) {
+        if (it.kx == null) return;
+        const [gx, gz] = snapToCell(it.kx * KUB + KUB / 2, it.kz * KUB + KUB / 2, 1);
+        const k = cellKey(gx, gz);
+        m.set(k, Math.max(m.get(k) || 0, ((it.kh || 0) + 1) * KUB + 0.2));
+        return;
+      }
       if (!isVast(it.assetId)) return;
       const a = getAsset(it.assetId);
       const top = a.kind === "building" ? 3.4
         : a.kind === "attraction" ? 3.6
         : ["tree", "bush", "fern", "stump"].includes(a.procedural) ? 0
-        : isBlok(it.assetId) ? ((it.h || 0) + 1) * 1.1 + 0.2
         : 1.25;
       if (!top) return;
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) {
@@ -627,27 +667,19 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     });
     return m;
   }, [placedItems]);
-  // Welke blok-lagen zijn per vakje bezet? (voor de bouw-cursor: laagste vrije laag)
-  const blokPerCel = useMemo(() => {
-    const m = new Map();
-    placedItems.forEach((it) => {
-      if (!isBlok(it.assetId)) return;
-      const k = cellKey(it.cell[0], it.cell[1]);
-      if (!m.has(k)) m.set(k, new Set());
-      m.get(k).add(it.h || 0);
-    });
-    return m;
-  }, [placedItems]);
-
   const camTopAt = useCallback((x, z) => {
     const [gx, gz] = snapToCell(x, z, 1);
     return vasteToppen.get(cellKey(gx, gz)) || 0;
   }, [vasteToppen]);
 
-  const handlePlace = (cell) => {
+  const handlePlace = (cell, punt) => {
     if (!onPlace) return;
+    // Kubussen: eigen fijne raster + eigen checks in de parent — geef het
+    // precieze klikpunt mee zodat de kubus op de juiste meter landt.
+    if (plaatstBlok) { onPlace(cell, punt); return; }
     if (!isPlaatsbaar(cell[0], cell[1], bezet, placingCells)) return;
-    onPlace(cell);
+    if (celHeeftKub(cell[0], cell[1], placingCells)) return;
+    onPlace(cell, punt);
   };
 
   return (
@@ -712,7 +744,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           playerPos={playerPos}
           playerFace={playerFace}
           heightFn={heightFnRef.current}
-          blokPerCel={blokPerCel}
+          blokPerKub={blokPerKub}
           cursorRef={bouwCursorRef}
           kleur={getAsset(placingAsset)?.blokKleur || "#ffffff"}
         />
@@ -730,10 +762,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
 
         {/* Geplaatste items — klikbaar om te selecteren. */}
         {placedItems.map((it, idx) => {
-          if (isBlok(it.assetId)) {
-            // Blok zelf zit in BlokkenLaag; alleen de selectie-ring hier.
-            return selectedIdx === idx ? <SelectieRing key={`ring${idx}`} cell={it.cell} cells={cellsVan(it.assetId)} /> : null;
-          }
+          if (isBlok(it.assetId)) return null; // kubussen: BlokkenLaag rendert, ⛏️ hakt
           const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
           const y = heightFnRef.current(x, z);
           return (
@@ -758,8 +787,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           );
         })}
 
-        {/* Ghost-preview tijdens plaatsen. */}
-        {placing && ghost && (
+        {/* Ghost-preview tijdens plaatsen (niet voor kubussen — daar is de cursor). */}
+        {placing && !plaatstBlok && ghost && (
           <>
             <FootprintMarker cell={ghost} valid={ghostValid} cells={placingCells} />
             <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightFnRef.current(cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} />
