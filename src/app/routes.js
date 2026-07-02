@@ -35,6 +35,9 @@ export const PAGE_TO_PATH = {
   "cito-leerpad-toets": "/doorstroomtoets-oefentoets",
   rondleiding: "/rondleiding",
   oefenpakket: "/oefenpakket",
+  // Leesladder — printbaar begrijpend-lezen-pakket dat klein begint (5 zinnen)
+  // en opbouwt naar toets-lengte (Mark 2026-07-02, idee via Brian).
+  leesladder: "/leesladder",
   tafels: "/tafels",
   redactiesommen: "/redactiesommen",
   spelling: "/spelling",

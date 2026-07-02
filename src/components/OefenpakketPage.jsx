@@ -434,6 +434,23 @@ export default function OefenpakketPage({ setPage } = {}) {
           “Opslaan als PDF”. Op iPhone/iPad: deel-knop → “Druk af” → knijp open
           om als PDF te bewaren.
         </p>
+
+        {/* Kruislink naar de Leesladder (2026-07-02): ouders die dit pakket
+            printen, hebben vaak óók een kind dat begrijpend-lezen-teksten te
+            lang vindt — dat is precies waar de Leesladder voor is. */}
+        <button
+          onClick={() => setPage && setPage("leesladder")}
+          style={{
+            marginTop: 6, padding: "12px 16px", borderRadius: 12, textAlign: "left",
+            border: "1.5px solid rgba(0,200,83,0.4)", background: "rgba(0,200,83,0.08)",
+            color: "var(--color-text, #e8edf5)", cursor: "pointer", fontSize: 14, lineHeight: 1.5,
+            display: "block", width: "100%",
+          }}
+        >
+          🪜 <strong>Nieuw: de Leesladder</strong> — begrijpend lezen oefenen in kleine
+          stapjes. Begint bij teksten van 5 zinnen, bouwt op naar toets-lengte. Ook
+          gratis printbaar →
+        </button>
       </div>
 
       {/* ── Het printbare werkboek (WYSIWYG witte vellen) ─────── */}

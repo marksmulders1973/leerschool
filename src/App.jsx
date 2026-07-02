@@ -66,6 +66,7 @@ const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
+const LeesladderPage = lazy(() => import("./components/LeesladderPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
@@ -2010,6 +2011,7 @@ export default function App() {
       )}
       {page === "rondleiding" && <RondleidingPage setPage={setPage} />}
       {page === "oefenpakket" && <OefenpakketPage setPage={setPage} />}
+      {page === "leesladder" && <LeesladderPage setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}
