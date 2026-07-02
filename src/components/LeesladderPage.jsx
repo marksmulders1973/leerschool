@@ -327,6 +327,11 @@ export default function LeesladderPage({ setPage } = {}) {
           </span>
           <span style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>· naar home</span>
         </button>
+        <div>
+          <button onClick={() => setPage && setPage("printen")} style={{ background: "transparent", border: "none", color: "var(--color-text-muted, #8899aa)", cursor: "pointer", fontSize: 14, padding: 0, marginBottom: 12 }}>
+            ← Alle printbare pakketten
+          </button>
+        </div>
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           🪜 De Leesladder — begrijpend lezen in kleine stapjes

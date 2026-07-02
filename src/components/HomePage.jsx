@@ -184,7 +184,7 @@ function ProefVraagKaart({ onStart }) {
   );
 }
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -399,6 +399,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   // ingang vanaf de homepage — 302 home-bezoekers zagen 'm niet. We zetten een
   // bron-vlag zodat we in upgrade_waitlist.source zien dat de lead via de
   // homepage-CTA kwam (i.p.v. social-bio/direct).
+  const handlePrintenClick = () => {
+    track("home_cta_printen");
+    if (onPrinten) { onPrinten(); return; }
+    onOefenpakket?.();
+  };
   const handleOefenpakketClick = () => {
     try { sessionStorage.setItem("lk_lead_src", "home_cta"); } catch {}
     track("home_cta_oefenpakket");
@@ -691,7 +696,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {step === "role" && (
           <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
             <button
-              onClick={handleOefenpakketClick}
+              onClick={handlePrintenClick}
               style={{
                 width: "100%", display: "flex", alignItems: "center", gap: 12,
                 textAlign: "left", cursor: "pointer",
@@ -700,13 +705,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 padding: "11px 14px",
               }}
             >
-              <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0 }}>📄</span>
+              <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0 }}>🖨️</span>
               <span style={{ flex: 1, minWidth: 0 }}>
                 <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, color: "#fff", marginBottom: 2 }}>
-                  Gratis Doorstroomtoets-oefenpakket
+                  Gratis printbaar oefenen
                 </span>
                 <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
-                  Print thuis een compleet oefenwerkboek voor groep 7 &amp; 8 — rekenen, taal &amp; studievaardigheden, mét antwoordsleutel.
+                  Doorstroomtoets-werkboek 📄 · Leesladder begrijpend lezen 🪜 · tafel-werkbladen + diploma ✖️ — print thuis, mét antwoordsleutels.
                 </span>
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
