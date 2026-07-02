@@ -182,6 +182,10 @@ export const BUDDY_VRAGEN = [
   { key: "eten", vraag: "Wat vind jij het állerlekkerste eten?", placeholder: "bijv. pizza" },
   { key: "kleur", vraag: "Wat is je lievelingskleur?", placeholder: "bijv. blauw" },
   { key: "dier", vraag: "En je lievelingsdier?", placeholder: "bijv. wolf" },
+  { key: "sport", vraag: "Welke sport of welk spel vind je het leukst?", placeholder: "bijv. voetbal" },
+  { key: "vak", vraag: "Welk vak op school vind je het leukst?", placeholder: "bijv. rekenen" },
+  { key: "hobby", vraag: "Wat doe je het liefst als je vrij bent?", placeholder: "bijv. tekenen" },
+  { key: "droom", vraag: "Wat wil je later worden?", placeholder: "bijv. dierenarts" },
 ];
 export function buddyWeetjes() {
   try { return JSON.parse(localStorage.getItem(LS_WEETJES) || "{}") || {}; } catch { return {}; }
@@ -201,6 +205,11 @@ export function beantwoordBuddyVraag(key, waarde) {
 }
 export function stelBuddyVraagUit() {
   try { localStorage.setItem(LS_VRAAG_DATUM, new Date().toDateString()); } catch { /* */ }
+}
+// "Vergeet alles": kind (of ouder) wist wat het maatje weet — inzage,
+// aanpassen en wissen in één (de vragen beginnen daarna gewoon opnieuw).
+export function wisBuddyWeetjes() {
+  try { localStorage.removeItem(LS_WEETJES); localStorage.removeItem(LS_VRAAG_DATUM); } catch { /* */ }
 }
 
 // De buddy die de leerling als maatje koos — of Vonk (het vlaggenschip) als er
@@ -239,7 +248,9 @@ export function kiesBuddy(id) {
 export function buddyBeschikbaar(b, geleerdeStappen = 0) {
   const bezit = new Set(bezitBuddies());
   if (bezit.has(b.id)) return true;
-  if (!heeftGekozen()) return true;          // de eerste keuze is gratis
+  // Eerste keuze is gratis, maar alleen uit de start-maatjes — anders is de
+  // hele verdien-ladder op dag 1 al omzeild (12-agent-review 2 jul).
+  if (!heeftGekozen() && (b.verdien || 0) <= 8) return true;
   return geleerdeStappen >= (b.verdien || 0);
 }
 
@@ -286,6 +297,10 @@ export function buddyPraatje(soort, facts) {
   if (w.dier) o.push({ e: "🐾", t: `Zullen we een ${low(w.dier)} voor je park zoeken, ${roep}?` });
   if (w.kleur) o.push({ e: "🎨", t: `Bouw eens iets met ${low(w.kleur)} blokjes — jouw kleur!` });
   if (w.leeftijd) o.push({ e: "🌟", t: `Voor iemand van ${w.leeftijd} bouw jij echt supermooi, ${roep}!` });
+  if (w.sport) o.push({ e: "⚽", t: `Eerst een kwartier leren, daarna ${low(w.sport)}?` });
+  if (w.vak) o.push({ e: "📚", t: `Zullen we iets met ${low(w.vak)} doen? Daar ben jij goed in!` });
+  if (w.hobby) o.push({ e: "🎨", t: `Na het leren lekker ${low(w.hobby)}, ${roep}?` });
+  if (w.droom) o.push({ e: "💭", t: `Een echte ${low(w.droom)} leert elke dag een beetje — jij dus ook!` });
 
   if (soort === "draakje") {
     o.push(
@@ -329,6 +344,27 @@ export function buddyPraatje(soort, facts) {
       { e: "☀️", t: f.zwakVak ? `${cap(f.zwakVak)} verbranden we samen!` : "Klaar om te vliegen?" },
       { e: "✨", t: `Jij straalt vandaag, ${hoi}!` },
     );
+  } else if (soort === "paard") {
+    o.push(
+      { e: "🐴", t: `Hinnik! Klim op mijn rug, ${hoi} — op naar dat kwartier!` },
+      { e: "🐎", t: "Rustig draven, niet rennen — zo leer je het langst." },
+      { e: "🌾", t: f.zwakVak ? `${cap(f.zwakVak)}? Wij galopperen er samen doorheen.` : "Zullen we een rondje door je park draven?" },
+      { e: "🍎", t: `Ik loop overal met je mee, ${hoi}. Altijd.` },
+    );
+  } else if (soort === "bever") {
+    o.push(
+      { e: "🦫", t: `Knaag knaag! Zullen we samen iets bouwen, ${hoi}?` },
+      { e: "🪵", t: "Een goede dam bouw je blokje voor blokje — leren ook!" },
+      { e: "🔨", t: f.zwakVak ? `${cap(f.zwakVak)}? Daar timmeren we samen aan!` : "Ik regel het hout, bouw jij mee?" },
+      { e: "💪", t: `Jij bent een echte bouwer, ${hoi}!` },
+    );
+  } else if (soort === "blokhond") {
+    o.push(
+      { e: "🧱", t: `Woef! Welk blokje bouwen we vandaag, ${hoi}?` },
+      { e: "🐶", t: "Hak, bouw, leer — dat is ons plan!" },
+      { e: "⛏️", t: f.zwakVak ? `${cap(f.zwakVak)} hakken we in kleine blokjes.` : "Race je mee naar de bouwplaats?" },
+      { e: "🟩", t: `Blokje voor blokje worden wij slimmer, ${hoi}!` },
+    );
   } else { // bubbel
     o.push(
       { e: "🫧", t: `Boing boing! Race je met me naar de draaimolen, ${hoi}?` },
@@ -339,7 +375,17 @@ export function buddyPraatje(soort, facts) {
   }
   if (f.honger) o.push({ e: "🌾", t: `${cap(f.honger)} heeft honger — geef je 'm wat?` });
 
-  return o[Math.floor(Math.random() * o.length)];
+  return kiesZonderHerhaling(o);
+}
+
+// Zelfde praatje twee keer achter elkaar voelt robotachtig — onthoud het
+// laatst getoonde en sla het over.
+let _laatstePraatje = "";
+function kiesZonderHerhaling(o) {
+  const anders = o.filter((p) => p.t !== _laatstePraatje);
+  const p = (anders.length ? anders : o)[Math.floor(Math.random() * (anders.length ? anders.length : o.length))];
+  _laatstePraatje = p.t;
+  return p;
 }
 
 // Blije reactie als je je maatje aait/aantikt — korter en uitbundiger.
@@ -355,6 +401,9 @@ export function buddyAai(soort, facts) {
     bubbel: [{ e: "🫧", t: "Boing! Hihi, dat kietelt!" }, { e: "🤪", t: `Nog een keer, ${hoi}!` }, { e: "🎈", t: "Wheee! Ik stuiter van geluk!" }],
     ster: [{ e: "🌟", t: "Twinkel twinkel — dankjewel!" }, { e: "✨", t: `Aai! Ik fonkel voor jou, ${hoi}.` }, { e: "💫", t: "Wat lief van je!" }],
     fenix: [{ e: "🔥", t: "Whoosh! Ik gloei van blijdschap!" }, { e: "🪶", t: `Nog een aai, ${hoi}?` }, { e: "☀️", t: "Samen onverwoestbaar!" }],
+    paard: [{ e: "🐴", t: "Brrr! Ik stamp blij met mijn hoef!" }, { e: "🐎", t: `Aai gerust nog eens, ${hoi}!` }, { e: "🍎", t: "Mmm, dat voelt fijn!" }],
+    bever: [{ e: "🦫", t: "Hihi! Mijn staart klettert van blijdschap!" }, { e: "🪵", t: `Jij bent mijn bouwmaatje, ${hoi}!` }, { e: "🔨", t: "Klop klop — dat is mijn blije staart!" }],
+    blokhond: [{ e: "🧱", t: "Woef! Mijn staart draait als een blokje rond!" }, { e: "🐶", t: `Aai! Jij bent top, ${hoi}!` }, { e: "⛏️", t: "Hihi, dat kietelt door mijn blokjes!" }],
   };
   const o = m[soort] || m.bubbel;
   return o[Math.floor(Math.random() * o.length)];

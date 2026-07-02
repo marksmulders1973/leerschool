@@ -106,7 +106,7 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
           <span style={{ fontSize: 26 }}>{b.emoji}</span>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ font: "900 16px system-ui", lineHeight: 1.1 }}>{naam}</div>
-            <div style={{ font: "600 11px system-ui", opacity: 0.9 }}>jouw maatje · {b.karakter}</div>
+            <div style={{ font: "600 11px system-ui", opacity: 0.9 }}>jouw computer-maatje · {b.karakter}</div>
           </div>
           <button onClick={() => setGeluid((g) => !g)} title={geluid ? "Geluid uit" : "Geluid aan"}
             style={{ border: "none", background: "rgba(255,255,255,0.22)", color: "#fff", width: 34, height: 34, borderRadius: 999, fontSize: 16, cursor: "pointer" }}>

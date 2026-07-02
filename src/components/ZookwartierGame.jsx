@@ -20,7 +20,7 @@ import { splitsBtw, btwTarief } from "../features/zoo/btw";
 import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN } from "../features/zoo/unlocks";
 import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
-import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, buddyWeetjes } from "../features/zoo/buddies";
+import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 // Maatje-hulp bij de reken-vragen (zelfde tutor als in de leerpaden — het
@@ -489,8 +489,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // apparaat en komen terug in praatjes + de leer-hulp.
   useEffect(() => {
     if (!loaded) return;
-    const t = setTimeout(() => { setBuddyVraag(volgendeBuddyVraag()); }, 12000);
+    const t = setTimeout(() => {
+      const v = volgendeBuddyVraag();
+      if (!v) return;
+      setBuddyVraag(v);
+      // Naam al bekend uit het account? Voor-invullen — het maatje "let op".
+      if (v.key === "naam" && naam) setBuddyAntwoord(naam);
+    }, 12000);
     return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded]);
   const stuurBuddyAntwoord = () => {
     if (!buddyVraag) return;
@@ -499,14 +506,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     beantwoordBuddyVraag(buddyVraag.key, antw);
     setBuddyVraag(null);
     setBuddyAntwoord("");
-    const w = buddyWeetjes();
-    flits(buddyVraag.key === "naam" ? `Aangenaam, ${w.naam}! Dat onthoud ik. 🐾` : "Leuk om te weten — dat onthoud ik! 🐾");
+    flits(buddyVraag.key === "naam" ? `Hoi ${antw.slice(0, 30)}! Wat een leuke naam — die onthoud ik! 🐾` : "Leuk om te weten — dat onthoud ik! 🐾");
   };
 
   const flits = (tekst) => {
     setMelding(tekst);
     clearTimeout(meldingTimer.current);
-    meldingTimer.current = setTimeout(() => setMelding(null), 2200);
+    // Langere teksten (dier-gedachten!) langer laten staan — een groep 5-lezer
+    // leest ~2 woorden per seconde.
+    meldingTimer.current = setTimeout(() => setMelding(null), Math.max(2200, 1200 + String(tekst).length * 55));
   };
 
   // Laden + dagbeloningen bij binnenkomst.
@@ -713,6 +721,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const isAnimal = kindVan(placing.assetId) === "animal";
     if (isAnimal) nieuw.fed = vandaag();
     setPlacedItems((items) => [...items, nieuw]);
+    // 12-agent-review 2 jul: deze aftrek sneuvelde bij de blok-refactor —
+    // kopen was even gratis (en weghalen betaalde wél terug).
+    if (placing.price > 0) setMeta((m) => (m ? { ...m, coins: m.coins - placing.price } : m));
     // Bonnetje: laat bij de éérste dier-aankoop (≥10 🪙) zien dat er btw in de
     // prijs zit. Hooguit 1× per parksessie — anders breekt het de speelflow.
     if (isAnimal && placing.price >= 10 && !inkoopBonGetoondRef.current) {
@@ -775,7 +786,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (!it?.cell) return;
     const muur = HUIS_MUURBLOK[it.assetId] || "blokBaksteen";
     const ax = it.cell[0] * CELL, az = it.cell[1] * CELL;
-    const hoek = it.rotation || 0;
+    // Rotatie snappen op 90° — bij een schuine hoek zouden deur-as en
+    // deur-cel (ZooScene) anders uit elkaar lopen.
+    const hoek = Math.round((it.rotation || 0) / (Math.PI / 2)) * (Math.PI / 2);
     const dirx = Math.round(Math.sin(hoek)), dirz = Math.round(Math.cos(hoek));
     const b = [];
     for (let x = -3; x <= 2; x++) {
@@ -796,10 +809,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         b.push({ assetId: "blokHout", kx: ax + x, kz: az + z, kh: 3, price: 0 });
       }
     }
-    for (let x = -3; x <= 2; x++) { b.push({ assetId: "blokDak", kx: ax + x, kz: az - 1, kh: 4, price: 0 }, { assetId: "blokDak", kx: ax + x, kz: az, kh: 4, price: 0 }); }
-    // Plekken die al bezet zijn (iemand bouwde tegen het huis aan) overslaan.
+    // Dak-nok loopt haaks op de deur-kant (zoals het echte BlokHuis-zadeldak).
+    if (dirz !== 0) { for (let z = -3; z <= 2; z++) { b.push({ assetId: "blokDak", kx: ax - 1, kz: az + z, kh: 4, price: 0 }, { assetId: "blokDak", kx: ax, kz: az + z, kh: 4, price: 0 }); } }
+    else { for (let x = -3; x <= 2; x++) { b.push({ assetId: "blokDak", kx: ax + x, kz: az - 1, kh: 4, price: 0 }, { assetId: "blokDak", kx: ax + x, kz: az, kh: 4, price: 0 }); } }
+    // Plekken die al bezet zijn (iemand bouwde tegen het huis aan) of buiten
+    // de parkgrens vallen (huis op de rand) overslaan.
+    const GRENS = HALF * CELL - 1;
     const bezetKub = new Set(placedItems.filter((k) => isBlok(k.assetId)).map((k) => `${k.kx},${k.kz},${k.kh || 0}`));
-    const vrij = b.filter((k) => !bezetKub.has(`${k.kx},${k.kz},${k.kh}`));
+    const vrij = b.filter((k) => !bezetKub.has(`${k.kx},${k.kz},${k.kh}`) && Math.abs(k.kx) <= GRENS && Math.abs(k.kz) <= GRENS);
     if (placedItems.filter((k) => isBlok(k.assetId)).length + vrij.length > MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokjes in je park.`); return; }
     const weg = selectedIdx;
     setPlacedItems((items) => [...items.filter((_, i) => i !== weg), ...vrij]);
@@ -1169,6 +1186,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={menuGrid}>
               <MenuTegel emoji="👤" label="Mijn poppetje kiezen" fn={() => setPanel("karakter")} />
               <MenuTegel emoji="🐾" label="Kies je maatje" fn={openBuddyPicker} />
+              <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
               <MenuTegel emoji="📤" label="Delen met een vriend" fn={openDelen} />
@@ -1314,7 +1332,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
-          onHakBlok={(i) => setPlacedItems((items) => items.filter((_, ix) => ix !== i))}
+          onHakBlok={(k) => setPlacedItems((items) => {
+            const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === k.kx && it.kz === k.kz && (it.kh || 0) === (k.kh || 0));
+            return idx < 0 ? items : items.filter((_, ix) => ix !== idx);
+          })}
           bouwCursorRef={bouwCursorRef}
           bouwModus={bouwen}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
@@ -1410,8 +1431,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 💬 Dagelijks kennismakings-vraagje: het maatje leert je écht kennen.
           Antwoord blijft lokaal op het apparaat (geen adres/school gevraagd). */}
-      {buddyVraag && !bouwTip && !menuOpen && !placing && !dialoog && (
-        <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+      {buddyVraag && !bouwTip && !menuOpen && !placing && !dialoog && !(versPark && !welkomWeg) && (
+        <div style={{ position: "absolute", left: "50%", ...(COARSE_POINTER ? { top: 66 } : { bottom: bouwen ? 170 : 24 }), transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: "1 1 140px", font: "700 13.5px/1.4 system-ui", color: "#234" }}>
             <b>{buddyNaamEff || "Je maatje"}</b>: "{buddyVraag.vraag}"
@@ -1425,7 +1446,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             style={{ flex: "1 1 130px", minWidth: 110, border: "2px solid #d8d2c0", borderRadius: 999, padding: "9px 14px", font: "600 13.5px system-ui", color: "#234", outline: "none", background: "#fff" }}
           />
           <button onClick={stuurBuddyAntwoord} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>Vertel!</button>
-          <button onClick={() => { stelBuddyVraagUit(); setBuddyVraag(null); }} title="Vandaag niet" style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+          <button onClick={() => { stelBuddyVraagUit(); setBuddyVraag(null); }} title="Vandaag niet" style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 40, height: 40, font: "700 14px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+          <div style={{ flex: "1 1 100%", font: "600 11px system-ui", color: "#8a8574", textAlign: "center" }}>Blijft op dit apparaat · wissen kan via ☰</div>
         </div>
       )}
 
@@ -1629,8 +1651,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {selKind === "animal" && <button onClick={() => aaiDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🤗 Aaien</button>}
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             {selIsHuis && <button onClick={() => { setColorMode(true); setActivePart(0); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
-            {selIsHuis && <button onClick={verbouwHuis} title="Zet het huis om in losse blokjes die je per stuk kunt weghakken of vervangen" style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#8a5a3a,#6a4228)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧱 Verbouwen</button>}
-            <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen{(placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)) > 0 ? ` (+${placedItems[selectedIdx]?.price ?? prijsVan(placedItems[selectedIdx]?.assetId)} 🪙)` : ""}</button>
+            {selIsHuis && <button onClick={verbouwHuis} title="Je huis wordt losse blokjes die je per stuk kunt weghakken of vervangen" style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#8a5a3a,#6a4228)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧱 Maak losse blokjes</button>}
+            <button onClick={weghaalGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "#d9534f", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🗑 Weghalen</button>
             <button onClick={sluitSelectie} style={{ border: "none", borderRadius: 999, padding: "10px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(255,255,255,0.7)", cursor: "pointer" }}>✕</button>
           </>
         ) : (

@@ -119,7 +119,9 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
       if (placingBlok) {
         e.stopPropagation();
         // Rechtermuisknop = weghakken, links/tik = ertegenaan bouwen (Minecraft).
-        if (e.nativeEvent && e.nativeEvent.button === 2) { onHak && onHak(rec.i); return; }
+        // Op coördinaten (niet array-index): twee snelle kliks vóór de
+        // re-render zouden anders het verkeerde item wissen.
+        if (e.nativeEvent && e.nativeEvent.button === 2) { onHak && onHak(rec.it); return; }
         onFacePlace(faceDoel(rec.it, e));
         return;
       }
@@ -872,7 +874,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           placingBlok={plaatstBlok}
           modusBezig={(!!placingAsset && !plaatstBlok) || sculptMode || waterMode || groundMode}
           onFacePlace={(doel) => { onPlaceBlok && onPlaceBlok(doel); }}
-          onHak={(i) => { onHakBlok && onHakBlok(i); }}
+          onHak={(k) => { onHakBlok && onHakBlok(k); }}
         />
 
         {/* Geplaatste items — klikbaar om te selecteren. */}
@@ -911,7 +913,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           </>
         )}
 
-        <ContactShadows position={[0, 0.012, 0]} opacity={0.4} scale={GRID_SIZE + 14} blur={2.8} far={8} resolution={1024} color="#274015" />
+        {/* frames={1}: één keer bakken i.p.v. elke frame een extra depth-pass
+            over alle meshes (12-agent-review: grootste GPU-kostenpost). */}
+        <ContactShadows frames={1} position={[0, 0.012, 0]} opacity={0.4} scale={GRID_SIZE + 14} blur={2.8} far={8} resolution={1024} color="#274015" />
       </Suspense>
 
       {followCam && !firstPerson && !buddyEye && !rideTrain && (

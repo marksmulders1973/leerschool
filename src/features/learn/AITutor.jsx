@@ -141,7 +141,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: next,
+          messages: next.slice(-12),
           context: {
             pathId,
             pathTitle,

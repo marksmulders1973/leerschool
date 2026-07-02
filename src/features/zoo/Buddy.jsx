@@ -472,7 +472,9 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
     if (st.current.next <= 0) {
       if (!st.current.introDone) { setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}! ${b.flavor}` }); st.current.introDone = true; st.current.bt = 4.5; }
       else { setBubble(buddyPraatje(b.soort, factsRef?.current)); st.current.bt = 3.8; }
-      st.current.next = 9 + Math.random() * 8;
+      // Niet te vaak kletsen (12-agent-review: elke ~12s voelt opdringerig,
+      // zeker voor oudere kinderen) — om de ~25-40s is genoeg.
+      st.current.next = 25 + Math.random() * 15;
     }
 
     // Buddy-positie doorgeven (voor de "door de ogen van je buddy"-camera).
