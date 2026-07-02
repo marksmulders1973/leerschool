@@ -86,6 +86,10 @@ function _campaignParams() {
 // Persistent in localStorage zodat de markering blijft staan voor die browser.
 export function isInternalVisit() {
   try {
+    // Dev-verkeer telt NOOIT mee: localhost is per definitie intern (2 jul —
+    // nachttests op de dev-server bliezen het dagrapport op omdat ze meetelden).
+    const host = location.hostname;
+    if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) return true;
     const v = new URLSearchParams(location.search).get("ic");
     if (v === "1") localStorage.setItem("lk_internal", "1");
     else if (v === "0") localStorage.removeItem("lk_internal");

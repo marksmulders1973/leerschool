@@ -92,30 +92,33 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
     <div style={wrap}>
       <Brand />
 
-      <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: GROEN_LICHT, margin: "18px 0 8px" }}>
+      {/* Compact boven de vouw (trechter-fix 2 jul): 27 van de 28 bezoekers
+          antwoordden niet — de foto van 360px duwde de antwoordknoppen op een
+          telefoon uit beeld. Alles strakker zodat vraag + A/B/C/D samen op één
+          scherm passen; de reveal-video (ná antwoord) mag wél groot. */}
+      <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: GROEN_LICHT, margin: "12px 0 6px" }}>
         Geef hier je antwoord 👇
       </div>
 
       {vraag.doelgroep && (
-        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700, marginBottom: 10 }}>
+        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
           {vraag.doelgroep}
         </div>
       )}
-      <div style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.35, color: "rgba(255,255,255,0.95)", marginBottom: 16 }}>
+      <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
         {renderTekst(vraag.vraag)}
       </div>
 
       {/* Bron-beeld (Mark 2026-06-14): stille foto bij de vraag; zodra je geantwoord
-          hebt (gekozen != null) speelt de reveal-video — bv. de auto van rechts.
-          Ontbrak eerder op de /v/-pagina terwijl de social-post 'm wél beloofde. */}
+          hebt (gekozen != null) speelt de reveal-video — bv. de auto van rechts. */}
       {vraag.bronAfbeelding?.src && (
-        <div style={{ marginBottom: 16, borderRadius: 12, overflow: "hidden", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }}>
+        <div style={{ marginBottom: 12, borderRadius: 12, overflow: "hidden", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }}>
           {vraag.bronVideo && gekozen != null ? (
             <video src={vraag.bronVideo} autoPlay muted playsInline loop
-              style={{ width: "100%", maxHeight: 360, objectFit: "contain", display: "block" }} />
+              style={{ width: "100%", maxHeight: 320, objectFit: "contain", display: "block" }} />
           ) : (
             <img src={vraag.bronAfbeelding.src} alt={vraag.bronAfbeelding.alt || ""} loading="lazy"
-              style={{ width: "100%", maxHeight: 360, objectFit: "contain", display: "block" }} />
+              style={{ width: "100%", maxHeight: 180, objectFit: "contain", display: "block" }} />
           )}
         </div>
       )}
@@ -132,9 +135,9 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
             <button key={i} type="button" onClick={() => kies(i)} disabled={gekozen != null}
               style={{
                 display: "flex", alignItems: "center", gap: 12, textAlign: "left",
-                padding: "14px 16px", borderRadius: 12, background: bg, border, color: kleur,
-                fontFamily: "var(--font-body, sans-serif)", fontSize: 16, fontWeight: 700,
-                cursor: gekozen == null ? "pointer" : "default", transition: "background 0.15s, border 0.15s", minHeight: 52,
+                padding: "12px 14px", borderRadius: 12, background: bg, border, color: kleur,
+                fontFamily: "var(--font-body, sans-serif)", fontSize: 15.5, fontWeight: 700,
+                cursor: gekozen == null ? "pointer" : "default", transition: "background 0.15s, border 0.15s", minHeight: 48,
               }}>
               <span style={{
                 flexShrink: 0, width: 26, height: 26, borderRadius: "50%",
