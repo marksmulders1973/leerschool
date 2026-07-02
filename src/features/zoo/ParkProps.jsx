@@ -418,6 +418,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   const pos = useRef(new Vector3(start[0], 0, start[2]));
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
   const vel = useRef(new Vector3()), doelV = useRef(new Vector3()); // huidige + gewenste loopsnelheid
+  const yGlad = useRef(null); // gedempte hoogte → zacht op/af blok-treden stappen
   // Beginrichting: kijk naar het parkmidden (0,0) i.p.v. met je rug ernaartoe.
   const startYaw = Math.atan2(-start[0], -start[2]);
   const yaw = useRef(startYaw); // kijkrichting (eerstepersoons)
@@ -468,7 +469,10 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
         verplaats(pos.current.x + fx * step, pos.current.z + fz * step);
       }
       node.rotation.y = yaw.current;
-      const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      const tyFP = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      if (yGlad.current == null) yGlad.current = tyFP;
+      yGlad.current += (tyFP - yGlad.current) * Math.min(1, 12 * dts);
+      const ty = yGlad.current;
       node.position.set(pos.current.x, ty, pos.current.z);
       if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
       // Mikpunt: vóór de speler; omhoog/omlaag met pitch (muis-/veeg-verticaal).
@@ -505,7 +509,10 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dh = Math.atan2(Math.sin(dh), Math.cos(dh)); // kortste draai-richting
       node.rotation.y += dh * Math.min(1, 14 * dts);
     }
-    const ty = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    const tyDoel = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    if (yGlad.current == null) yGlad.current = tyDoel;
+    yGlad.current += (tyDoel - yGlad.current) * Math.min(1, 12 * dts);
+    const ty = yGlad.current;
     node.position.set(pos.current.x, ty, pos.current.z);
     if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
     if (faceRef) faceRef.current.set(Math.sin(node.rotation.y), 0, Math.cos(node.rotation.y));

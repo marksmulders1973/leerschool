@@ -12,6 +12,14 @@ export const TER_SEG = TER_N - 1;    // 40 segmenten
 export const MIN_H = -3.5;
 export const MAX_H = 7;
 
+// Blok-wereld (Mark 2 jul): de vloer wordt in blok-lagen getoond (Minecraft-
+// look). Het boetseer-veld blijft glad; alleen weergave + neerzetten/lopen
+// klikken vast op deze stap, zodat heuvels mooie terrassen worden.
+export const BLOK_STAP = 1.1;
+export function blokHoogte(h) {
+  return Math.round(h / BLOK_STAP) * BLOK_STAP;
+}
+
 export function flatField() {
   return new Float32Array(TER_N * TER_N);
 }

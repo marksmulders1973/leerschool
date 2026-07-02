@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, footprint, cellKey } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -156,13 +156,17 @@ const BOUW_SHOP = PLAATSBARE_BOUWWERKEN.map(mkItem);
 const ATTRACTIE_SHOP = PLAATSBARE_ATTRACTIES.map(mkItem);
 const HEK_SHOP = PLAATSBARE_HEKKEN.map(mkItem);
 const NATUUR_SHOP = PLAATSBARE_NATUUR.map(mkItem);
+const BLOK_SHOP = PLAATSBARE_BLOKKEN.map(mkItem);
 const SHOP_CATS = [
   { key: "dier", label: "🦊 Dieren", items: DIEREN_SHOP },
+  { key: "blok", label: "🧱 Blokken", items: BLOK_SHOP },
   { key: "hek", label: "🚧 Hekken", items: HEK_SHOP },
   { key: "gebouw", label: "🏠 Gebouwen", items: BOUW_SHOP },
   { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
   { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
 ];
+const MAX_BLOKKEN = 300; // totaal-cap: houdt oudere telefoons vlot
+const MAX_STAPEL = 6;    // max blokken op elkaar
 // Stabiele lege grond-map (zelfde referentie) → terrein herberekent niet onnodig.
 const EMPTY_GROUND = {};
 const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
@@ -520,20 +524,32 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const draai = () => setPlacing((p) => (p ? { ...p, rot: (p.rot || 0) + Math.PI / 2 } : p));
 
+  // Hoeveel blokken staan er al op dit vakje? (voor stapelen)
+  const blokkenOp = (cell, skipIdx = -1) => placedItems.filter((it, i) => i !== skipIdx && isBlok(it.assetId) && it.cell[0] === cell[0] && it.cell[1] === cell[1]).length;
+
   const plaatsOpVakje = (cell) => {
     if (!placing) return;
     const rot = placing.rot || 0;
     // Verplaatsen: bestaand item naar nieuw vakje (met huidige draaihoek).
+    // Een blok landt op de bovenkant van de stapel op het nieuwe vakje.
     if (placing.moveIdx != null) {
-      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell, rotation: rot } : it)));
+      setPlacedItems((items) => items.map((it, i) => (i === placing.moveIdx ? { ...it, cell, rotation: rot, ...(isBlok(it.assetId) ? { h: blokkenOp(cell, placing.moveIdx) } : {}) } : it)));
       setPlacing(null);
       return;
     }
     // Kopen + plaatsen.
     if (coins < placing.price) { flits("Niet genoeg muntjes."); setPlacing(null); return; }
+    // Bouwblokken: stapelen + limieten.
+    let blokH;
+    if (isBlok(placing.assetId)) {
+      if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
+      blokH = blokkenOp(cell);
+      if (blokH >= MAX_STAPEL) { flits(`Deze toren is op z'n hoogst (${MAX_STAPEL} blokken).`); return; }
+    }
     setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
     // Nieuw dier start "gevoerd" (vandaag), zodat het niet meteen honger heeft.
     const nieuw = { assetId: placing.assetId, cell, rotation: rot, price: placing.price };
+    if (blokH != null) nieuw.h = blokH;
     const isAnimal = kindVan(placing.assetId) === "animal";
     if (isAnimal) nieuw.fed = vandaag();
     setPlacedItems((items) => [...items, nieuw]);
