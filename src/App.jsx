@@ -69,6 +69,8 @@ const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const LeesladderPage = lazy(() => import("./components/LeesladderPage.jsx"));
 const PrintHubPage = lazy(() => import("./components/PrintHubPage.jsx"));
 const TafelbladenPage = lazy(() => import("./components/TafelbladenPage.jsx"));
+const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.jsx"));
+const DicteesPage = lazy(() => import("./components/DicteesPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
@@ -2016,6 +2018,8 @@ export default function App() {
       {page === "leesladder" && <LeesladderPage setPage={setPage} />}
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
+      {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
+      {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}

@@ -33,6 +33,22 @@ const PAKKETTEN = [
     tekst: "Kies je tafels en print werkbladen (op volgorde, door elkaar, deelsommen), een mix-blad, een 5-minuten-tempo-toets en een invulbaar tafeldiploma. Elke keer verse sommen.",
     accent: "#ffb300",
   },
+  {
+    page: "redactiebladen",
+    emoji: "📝",
+    titel: "Redactiesommen-bundel",
+    groep: "groep 5-8",
+    tekst: "Verhaaltjessommen in Cito-stijl: van signaalwoorden herkennen tot twee-stap-sommen. Met kladruimte per som, ouder-stappenplan en antwoordsleutel met uitleg.",
+    accent: "#ab47bc",
+  },
+  {
+    page: "dictees",
+    emoji: "🔤",
+    titel: "Spelling-dictees",
+    groep: "groep 5-8",
+    tekst: "Zes voorlees-dictees per spellingregel (ei/ij, au/ou, d/t, bomen/bommen, verkleinwoorden, weetwoorden). Jij leest voor van het ouderblad, je kind schrijft op het invulblad.",
+    accent: "#ef5350",
+  },
 ];
 
 export default function PrintHubPage({ setPage } = {}) {
@@ -101,10 +117,9 @@ export default function PrintHubPage({ setPage } = {}) {
       </div>
 
       <div style={{ background: "rgba(0,200,83,0.07)", border: "1px solid rgba(0,200,83,0.3)", borderRadius: 14, padding: "14px 18px", marginBottom: 22 }}>
-        <div style={{ fontWeight: 800, fontSize: 14, color: "var(--color-text, #e8edf5)", marginBottom: 4 }}>🔜 Hier werken we aan</div>
+        <div style={{ fontWeight: 800, fontSize: 14, color: "var(--color-text, #e8edf5)", marginBottom: 4 }}>💚 Mis je iets?</div>
         <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, lineHeight: 1.6 }}>
-          Redactiesommen-bundel (verhaaltjessommen) en spelling-dictees. Iets anders op je
-          verlanglijstje? Zet het op het{" "}
+          Welk printbaar oefenmateriaal zou jou helpen? Zet het op het{" "}
           <a href="/tips" style={{ color: "#69f0ae" }}>wensenbord</a> — daar lezen we alles.
         </div>
       </div>

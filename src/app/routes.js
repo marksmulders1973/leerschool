@@ -41,6 +41,8 @@ export const PAGE_TO_PATH = {
   // Print-hub + tafel-werkbladen (Mark 2026-07-02: "maak duidelijk wat printbaar is")
   printen: "/printen",
   tafelbladen: "/tafelbladen",
+  redactiebladen: "/redactiebladen",
+  dictees: "/dictees",
   tafels: "/tafels",
   redactiesommen: "/redactiesommen",
   spelling: "/spelling",

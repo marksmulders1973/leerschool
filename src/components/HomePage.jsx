@@ -711,7 +711,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   Gratis printbaar oefenen
                 </span>
                 <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
-                  Doorstroomtoets-werkboek 📄 · Leesladder begrijpend lezen 🪜 · tafel-werkbladen + diploma ✖️ — print thuis, mét antwoordsleutels.
+                  Werkboek 📄 · Leesladder 🪜 · tafelbladen ✖️ · redactiesommen 📝 · dictees 🔤 — print thuis, mét antwoordsleutels.
                 </span>
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
