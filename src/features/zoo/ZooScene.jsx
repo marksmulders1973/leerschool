@@ -16,6 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
+import FabelWezen from "./FabelWezen";
 import { useEffect } from "react";
 import {
   CELL, GRID_SIZE, GRID_DIV, HALF, snapToCell, cellToWorld, cellKey,
@@ -155,6 +156,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
+  if (a.kind === "fabel") return <FabelWezen soort={a.fabelSoort} position={[x, y, z]} />;
   if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} />;

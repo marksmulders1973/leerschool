@@ -180,6 +180,13 @@ export const ZOO_ASSETS = {
   blokSneeuw: { id: "blokSneeuw", kind: "decor", name: "Sneeuwblok", emoji: "⬜", procedural: "blok", blokKleur: "#eef2f4", cells: 1, price: 1 },
   blokGlas: { id: "blokGlas", kind: "decor", name: "Glasblok", emoji: "🔷", procedural: "blok", blokKleur: "#bfe3f2", doorzichtig: true, cells: 1, price: 2 },
   blokDak: { id: "blokDak", kind: "decor", name: "Dak-punt", emoji: "🔺", procedural: "blokdak", blokKleur: "#c0463c", cells: 1, price: 2 },
+  // ✨ Fabelwezens (Mark 2 jul): niet te koop — alleen te SPAREN door te leren
+  // (mijlpalen in unlocks.js). Draak/feniks vliegen echt rond, eenhoorn en elf
+  // wandelen door je park.
+  fabelElf: { id: "fabelElf", kind: "fabel", name: "Elf", emoji: "🧝", procedural: "fabel", fabelSoort: "elf", cells: 1, price: 0 },
+  fabelEenhoorn: { id: "fabelEenhoorn", kind: "fabel", name: "Eenhoorn", emoji: "🦄", procedural: "fabel", fabelSoort: "eenhoorn", cells: 1, price: 0 },
+  fabelFeniks: { id: "fabelFeniks", kind: "fabel", name: "Feniks", emoji: "🔥", procedural: "fabel", fabelSoort: "fenix", cells: 1, price: 0 },
+  fabelDraak: { id: "fabelDraak", kind: "fabel", name: "Draak", emoji: "🐉", procedural: "fabel", fabelSoort: "draak", cells: 1, price: 0 },
 };
 
 // Is dit een stapelbaar bouwblok?

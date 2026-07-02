@@ -43,7 +43,7 @@ useGLTF.preload("/maatjes/vonk.glb");
 useGLTF.preload("/maatjes/charley.glb");
 
 // ── Procedurele lijfjes per soort ──────────────────────────────────────────
-function Draakje({ c, flapRef }) {
+export function Draakje({ c, flapRef }) {
   return (
     <group>
       {/* lijf */}
@@ -70,7 +70,7 @@ function Draakje({ c, flapRef }) {
   );
 }
 
-function Eenhoorn({ c }) {
+export function Eenhoorn({ c }) {
   return (
     <group>
       {/* lijf */}
@@ -165,7 +165,7 @@ function Ster({ c }) {
   );
 }
 
-function Fenix({ c, flapRef }) {
+export function Fenix({ c, flapRef }) {
   return (
     <group>
       {/* lijf */}

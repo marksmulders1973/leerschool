@@ -28,6 +28,12 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "parasaurolophus", emoji: "🦕", naam: "Parasaurus",   stappen: 28, waarom: "28 leer-stappen — knap volgehouden! De Parasaurus is je beloning. Alleen te verdienen door te leren." },
   { assetId: "trex",           emoji: "🦖", naam: "T-Rex",         stappen: 40, waarom: "40 leer-stappen! De machtige T-Rex brult in jouw dierentuin. De koning van de vrijspeel-dino's." },
   { assetId: "apatosaurus",    emoji: "🦕", naam: "Apatosaurus",   stappen: 55, waarom: "55 leer-stappen — wauw! De gigantische Apatosaurus is de allergrootste, alleen voor échte doorzetters." },
+  // ── FABELWEZENS (Mark 2 jul): de zeldzaamste beloningen, ná de dino's. De
+  // draak/feniks VLIEGEN echt rond boven je park; eenhoorn en elf wandelen.
+  { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 leer-stappen — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },
+  { assetId: "fabelEenhoorn", emoji: "🦄", naam: "Eenhoorn", stappen: 90,  waarom: "90 leer-stappen! De eenhoorn trippelt je park binnen — met gouden hoorn en regenboog-manen." },
+  { assetId: "fabelFeniks",   emoji: "🔥", naam: "Feniks",   stappen: 115, waarom: "115 leer-stappen! De vuurvogel cirkelt nu boven je park. Bijna niemand komt zó ver." },
+  { assetId: "fabelDraak",    emoji: "🐉", naam: "Draak",    stappen: 150, waarom: "150 leer-stappen — legendarisch! De draak, het zeldzaamste wezen van allemaal, vliegt boven jouw park. Dit heeft bijna niemand." },
 ];
 
 // De grote dino's, oplopend op mijlpaal — gebruikt voor de winkel-volgorde + de
