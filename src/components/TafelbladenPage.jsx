@@ -93,8 +93,16 @@ export default function TafelbladenPage({ setPage } = {}) {
     });
     const mixBron = [];
     gekozen.forEach((n) => ALLE_TAFELS.forEach((i) => mixBron.push({ a: i, b: n })));
-    const mix = shuffle(mixBron, rng).slice(0, 48);
-    const tempo = shuffle(mixBron, rng).slice(0, 60);
+    // Bij weinig gekozen tafels is de bron kleiner dan het blad — dan vullen
+    // we aan met herhaalde (opnieuw gehusselde) sommen; herhaling is bij
+    // tempo-oefenen juist prima.
+    const vul = (doel) => {
+      const uit = [];
+      while (uit.length < doel && mixBron.length) uit.push(...shuffle(mixBron, rng));
+      return uit.slice(0, doel);
+    };
+    const mix = vul(48);
+    const tempo = vul(60);
     return { perTafel, mix, tempo };
   }, [gekozen, seed]);
 
@@ -188,7 +196,7 @@ export default function TafelbladenPage({ setPage } = {}) {
       <div className="tafels-print">
         {bladen.perTafel.map(({ n, volgorde, hussel, delen }) => (
           <Sheet key={n}>
-            <BladKop titel={`De tafel van ${n}`} sub="op volgorde · door elkaar · deelsommen" />
+            <BladKop titel={`De tafel van ${n}`} sub={metDelen ? "op volgorde · door elkaar · deelsommen" : "op volgorde · door elkaar"} />
             <div style={{ display: "grid", gridTemplateColumns: metDelen ? "1fr 1fr 1fr" : "1fr 1fr", gap: "0 26px" }}>
               <div>
                 <KolomKop>Op volgorde</KolomKop>

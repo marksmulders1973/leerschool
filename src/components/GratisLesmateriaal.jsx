@@ -63,15 +63,23 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
     // optionele profiel-stap → iedereen die daar afhaakte ging verloren (0
     // aanmeldingen in 17 dagen). Het profiel verrijkt straks alleen nog deze rij.
     try {
-      const { data, error } = await supabase.from("upgrade_waitlist").insert({
+      // Bug-loop-fix 2026-07-02: .select("id") op de insert vereist een
+      // SELECT-policy die er (bewust) niet is → INSERT..RETURNING faalde als
+      // anon met 42501 en de HELE insert werd teruggedraaid. Daarom: id zelf
+      // genereren (uuid = capability-token voor de verrijking in stap 2) en
+      // een kale insert doen — die slaagt wél op de INSERT-policy.
+      let nieuwId = null;
+      try { nieuwId = crypto.randomUUID(); } catch { /* oude browser → stap-2-fallback vangt op */ }
+      const { error } = await supabase.from("upgrade_waitlist").insert({
+        ...(nieuwId ? { id: nieuwId } : {}),
         email: email.trim(),
         plan: "gratis-lesmateriaal",
         source,
         consent_at: new Date().toISOString(),
         ref: getIncomingRef(),
-      }).select("id").single();
-      if (!error && data?.id) {
-        setRowId(data.id);
+      });
+      if (!error) {
+        if (nieuwId) setRowId(nieuwId);
         try { localStorage.setItem(doneKey, "1"); } catch {}
         track("lesmateriaal_signup", { source, groep: "", vakken: 0, stap: "email" });
       }
@@ -93,11 +101,14 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
     // Stap 1 sloeg de lead al op. Hier verrijken we 'm alleen met het profiel.
     if (rowId) {
       try {
-        await supabase.from("upgrade_waitlist").update({
-          kind_voornaam: voornaam.trim() || null,
-          kind_groep: groep || null,
-          vakken: vakken.length ? vakken : null,
-        }).eq("id", rowId);
+        // update() als anon = stille no-op (geen UPDATE-policy). De RPC
+        // verrijk_waitlist (security definer) update alleen de eigen rij.
+        await supabase.rpc("verrijk_waitlist", {
+          p_id: rowId,
+          p_voornaam: voornaam.trim() || null,
+          p_groep: groep || null,
+          p_vakken: vakken.length ? vakken : null,
+        });
       } catch { /* lead is al binnen; profiel-verrijking is best-effort */ }
       track("lesmateriaal_profiel", { source, groep: groep || "", vakken: vakken.length });
       setStep("done");

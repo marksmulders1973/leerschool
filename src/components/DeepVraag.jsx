@@ -108,7 +108,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
     if (gekozen != null) return;
     gekozenRef.current = true;
     setGekozen(i);
-    track("deeplink_answer", { id: String(id).slice(0, 40), goed: i === vraag.answer });
+    track("deeplink_answer", { id: String(vraag.id || id).slice(0, 40), goed: i === vraag.answer, actueel: !!vraag.actueel });
   };
 
   const niveaus = vraag.uitlegPad?.niveaus || {};
@@ -233,7 +233,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
             source="deeplink-vraag"
             compact
             title={<><span aria-hidden="true">📘</span> Gratis oefenpakket + elke week een oefenvraag</>}
-            onPrintPakket={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "oefenpakket" }); setPage && setPage("oefenpakket"); }}
+            onPrintPakket={() => { track("deeplink_cta", { id: String(vraag.id || id).slice(0, 40), naar: "oefenpakket" }); setPage && setPage("oefenpakket"); }}
           />
         </div>
       )}
@@ -253,7 +253,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
             const goed = gekozen === vraag.answer;
             const leerpadBtn = (vraag.leerpadLink && onOpenLeerpad) ? (
               <button type="button" key="lp"
-                onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "leerpad", pad: vraag.leerpadLink.id }); onOpenLeerpad(vraag.leerpadLink.id); }}
+                onClick={() => { track("deeplink_cta", { id: String(vraag.id || id).slice(0, 40), naar: "leerpad", pad: vraag.leerpadLink.id }); onOpenLeerpad(vraag.leerpadLink.id); }}
                 style={{
                   display: "block", width: "100%", marginBottom: 10, padding: "13px 14px",
                   background: "rgba(0,200,83,0.10)", border: `1.5px solid ${GROEN}`, borderRadius: 12,
@@ -264,7 +264,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
             ) : null;
             const toetsBtn = (
               <div key="toets" style={{ marginBottom: 10 }}>
-                <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
+                <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(vraag.id || id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
                   Doe de gratis oefentoets →
                 </PrimaryCTA>
               </div>
@@ -284,7 +284,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
             )}
           </div>
           <button type="button"
-            onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "home" }); setPage && setPage("home"); }}
+            onClick={() => { track("deeplink_cta", { id: String(vraag.id || id).slice(0, 40), naar: "home" }); setPage && setPage("home"); }}
             style={{
               display: "block", width: "100%", marginTop: 10, padding: "10px",
               background: "transparent", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 12,

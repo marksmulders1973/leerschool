@@ -182,7 +182,7 @@ export default function OefenpakketPage({ setPage } = {}) {
     document.head.appendChild(style);
     window.scrollTo(0, 0);
     try {
-      if (localStorage.getItem(MAIL_DONE_KEY)) setMailStatus("done");
+      if ([MAIL_DONE_KEY, "lk_leesladder_mail", "lk_redactiebladen_mail"].some((k) => localStorage.getItem(k))) setMailStatus("done");
     } catch {}
     return () => {
       document.title = prevTitle;

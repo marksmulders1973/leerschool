@@ -126,10 +126,11 @@ export default function RedactiebladenPage({ setPage } = {}) {
     if (!adres.includes("@") || adres.length < 5) { setMailStatus("error"); return; }
     setMailStatus("busy");
     try {
-      const { error } = await supabase.from("upgrade_waitlist").insert({ email: adres, plan: "redactiebladen", source: leadSource() });
+      const source = leadSource();
+      const { error } = await supabase.from("upgrade_waitlist").insert({ email: adres, plan: "redactiebladen", source });
       if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
       try { localStorage.setItem(MAIL_DONE_KEY, "1"); } catch {}
-      track("redactiebladen_mail_signup");
+      track("redactiebladen_mail_signup", { source });
       setMailStatus("done");
     } catch { setMailStatus("error"); }
   }

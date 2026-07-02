@@ -111,7 +111,7 @@ export default function LeesladderPage({ setPage } = {}) {
     document.head.appendChild(style);
     window.scrollTo(0, 0);
     try {
-      if (localStorage.getItem(MAIL_DONE_KEY) || localStorage.getItem(OEFENPAKKET_MAIL_KEY)) setMailStatus("done");
+      if ([MAIL_DONE_KEY, "lk_oefenpakket_mail", "lk_redactiebladen_mail"].some((k) => localStorage.getItem(k))) setMailStatus("done");
     } catch {}
     track("leesladder_open", { source: leadSource() });
     return () => {
