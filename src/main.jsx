@@ -54,7 +54,7 @@ const bioPlaatId = _params.get("bioplaat");
 try {
   const stempel = document.createElement("div");
   stempel.textContent = "bouw " + __BUILD_STEMPEL__;
-  stempel.style.cssText = "position:fixed;top:1px;right:5px;z-index:99999;font:600 9px system-ui;color:rgba(30,40,50,0.5);pointer-events:none;text-shadow:0 0 3px rgba(255,255,255,0.9)";
+  stempel.style.cssText = "position:fixed;top:2px;right:4px;z-index:99999;font:700 10px system-ui;color:rgba(255,255,255,0.92);background:rgba(20,30,40,0.55);border-radius:999px;padding:2px 8px;pointer-events:none";
   document.body.appendChild(stempel);
 } catch { /* nooit de app laten breken om een label */ }
 

@@ -60,8 +60,13 @@ export default defineConfig({
   // datum/tijd rechtsboven in de app zodat je ziet of je naar de laatste
   // versie kijkt. Weghalen = deze define + het blokje in main.jsx.
   define: {
+    // Tijd eerst ("bouw 10:24 · 2 jul") — "bouw 2 jul" werd gelezen als
+    // versienummer "bouw 2" (Mark). De tijd is op een drukke bouwdag ook
+    // het onderscheidende deel.
     __BUILD_STEMPEL__: JSON.stringify(
-      new Date().toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })
+      new Date().toLocaleTimeString("nl-NL", { timeZone: "Europe/Amsterdam", hour: "2-digit", minute: "2-digit" })
+      + " · "
+      + new Date().toLocaleDateString("nl-NL", { timeZone: "Europe/Amsterdam", day: "numeric", month: "short" })
     ),
   },
   // Dev-server: bestandsbewaking via polling. Op deze pc detecteert de
