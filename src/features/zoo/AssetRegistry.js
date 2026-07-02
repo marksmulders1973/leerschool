@@ -217,8 +217,16 @@ export function getAsset(id) {
 // Kiesbare speler-karakters (Quaternius "Animated Men/Women", CC0, gekleurde
 // materialen + loop-animatie). Niet in de winkel — kies je eigen poppetje.
 export const CHARACTERS = [
-  // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D.
-  // Statisch model (geen loop-animatie) → glijdt mee, geen walk-cyclus.
+  // 🧱 Blok-poppetjes (Mark 2 jul, blok-wereld): 100% procedureel — passen bij
+  // de Minecraft-look. url "blocky:<id>" → CharacterModel rendert BlockyCharacter.
+  { id: "blokSem", name: "Sem (blok)", emoji: "🟥", url: "blocky:blokSem", blocky: { huid: "#f0c8a0", haar: "#1c1c1e", shirt: "#e2574c", broek: "#26292e", schoen: "#17181a", pet: true } },
+  { id: "blokMila", name: "Mila (blok)", emoji: "🟪", url: "blocky:blokMila", blocky: { huid: "#f2d2b0", haar: "#7a4a20", shirt: "#b06ad8", broek: "#37474f", schoen: "#3a2a25" } },
+  { id: "blokJoep", name: "Joep (blok)", emoji: "🟩", url: "blocky:blokJoep", blocky: { huid: "#e8bd93", haar: "#4a3320", shirt: "#3ba55d", broek: "#35485c", schoen: "#26292c" } },
+  { id: "blokNora", name: "Nora (blok)", emoji: "🟨", url: "blocky:blokNora", blocky: { huid: "#8d5a3a", haar: "#101418", shirt: "#f2b134", broek: "#3f3a55", schoen: "#2a2a2a" } },
+  { id: "blokKai", name: "Kai (blok)", emoji: "🟦", url: "blocky:blokKai", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#4a90d9", broek: "#2e3d33", schoen: "#1f2022" } },
+  { id: "blokLuna", name: "Luna (blok)", emoji: "🩵", url: "blocky:blokLuna", blocky: { huid: "#f5d9c4", haar: "#b8452c", shirt: "#3cb5a8", broek: "#57424e", schoen: "#332f2c" } },
+  // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D,
+  // gerigd via Mixamo (Walk + Idle).
   { id: "heldMj", name: "Held", emoji: "🎩", url: "/models/zoo/people/held-mj.glb" },
   { id: "girl1", name: "Meisje casual", emoji: "👧", url: "/models/zoo/people/girl1.glb" },
   { id: "girl2", name: "Meisje jurk", emoji: "👧", url: "/models/zoo/people/girl2.glb" },
@@ -230,7 +238,10 @@ export const CHARACTERS = [
   { id: "boy4", name: "Jongen pak", emoji: "👦", url: "/models/zoo/people/boy4.glb" },
 ];
 export const CHARACTER_BY_ID = Object.fromEntries(CHARACTERS.map((c) => [c.id, c]));
-export const DEFAULT_AVATAR = "heldMj";
+// Blok-Sem (rood shirt + pet, knipoog naar de held) = nieuwe standaard in de
+// blok-wereld; de held + Quaternius-poppetjes blijven gewoon kiesbaar.
+export const DEFAULT_AVATAR = "blokSem";
+export const BLOCKY_BY_ID = Object.fromEntries(CHARACTERS.filter((c) => c.blocky).map((c) => [c.id, c.blocky]));
 
 export function allModelUrls() {
   return [...new Set(Object.values(ZOO_ASSETS).map((a) => a.url))];

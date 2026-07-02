@@ -7,6 +7,8 @@ import { useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { Box3, Vector3, SRGBColorSpace } from "three";
 import { SkeletonUtils } from "three-stdlib";
+import BlockyCharacter from "./BlockyCharacter.jsx";
+import { BLOCKY_BY_ID } from "./AssetRegistry.js";
 
 // Clip op naam vinden (Quaternius: "HumanArmature|Man_Walk" etc.): exact, anders
 // eindigt-op-keyword.
@@ -20,7 +22,15 @@ function kies(names, ...voorkeur) {
   return null;
 }
 
+// Blok-poppetjes ("blocky:<id>") hebben geen model-bestand: puur procedureel.
+// Aparte tak vóór de GLTF-hooks (hook-regels), zelfde props-API.
 export default function CharacterModel({ url, movingRef, targetHeight = 1.65 }) {
+  const m = /^blocky:(.+)$/.exec(url || "");
+  if (m) return <BlockyCharacter palette={BLOCKY_BY_ID[m[1]]} movingRef={movingRef} targetHeight={targetHeight} />;
+  return <GltfCharacter url={url} movingRef={movingRef} targetHeight={targetHeight} />;
+}
+
+function GltfCharacter({ url, movingRef, targetHeight = 1.65 }) {
   const { scene, animations } = useGLTF(url);
   const cloned = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
