@@ -694,7 +694,9 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   const moving = useRef(false);
   const solidRef = useRef(isSolid);
   solidRef.current = isSolid;
-  const charUrl = CHARACTERS[seed % CHARACTERS.length].url;
+  // Bezoekers zijn altijd blok-figuren (Mark 2 jul: geen "echte" mensen meer).
+  const BLOK_FIGUREN = CHARACTERS.filter((c) => c.blocky);
+  const charUrl = BLOK_FIGUREN[seed % BLOK_FIGUREN.length].url;
   const [bubble, setBubble] = useState(null); // { e, t? }
   const st = useRef({
     x: ((seed % 7) - 3) * 5, z: (((seed * 3) % 7) - 3) * 5,

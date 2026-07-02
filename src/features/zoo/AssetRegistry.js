@@ -233,16 +233,10 @@ export const CHARACTERS = [
   { id: "blokKai", name: "Kai (blok)", emoji: "🟦", url: "blocky:blokKai", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#4a90d9", broek: "#2e3d33", schoen: "#1f2022" } },
   { id: "blokLuna", name: "Luna (blok)", emoji: "🩵", url: "blocky:blokLuna", blocky: { huid: "#f5d9c4", haar: "#b8452c", shirt: "#3cb5a8", broek: "#57424e", schoen: "#332f2c" } },
   // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D,
-  // gerigd via Mixamo (Walk + Idle).
+  // gerigd via Mixamo (Walk + Idle). Blijft — Mark's eigen creatie.
   { id: "heldMj", name: "Held", emoji: "🎩", url: "/models/zoo/people/held-mj.glb" },
-  { id: "girl1", name: "Meisje casual", emoji: "👧", url: "/models/zoo/people/girl1.glb" },
-  { id: "girl2", name: "Meisje jurk", emoji: "👧", url: "/models/zoo/people/girl2.glb" },
-  { id: "girl3", name: "Meisje tanktop", emoji: "👧", url: "/models/zoo/people/girl3.glb" },
-  { id: "girl4", name: "Meisje stoer", emoji: "👧", url: "/models/zoo/people/girl4.glb" },
-  { id: "boy1", name: "Jongen casual", emoji: "👦", url: "/models/zoo/people/boy1.glb" },
-  { id: "boy2", name: "Jongen shirt", emoji: "👦", url: "/models/zoo/people/boy2.glb" },
-  { id: "boy3", name: "Jongen trui", emoji: "👦", url: "/models/zoo/people/boy3.glb" },
-  { id: "boy4", name: "Jongen pak", emoji: "👦", url: "/models/zoo/people/boy4.glb" },
+  // De Quaternius "echte" mens-modellen (girl1-4/boy1-4) zijn 2 jul verwijderd
+  // (Mark: alles blok-stijl). Oude keuzes vallen automatisch terug op blok-Sem.
 ];
 export const CHARACTER_BY_ID = Object.fromEntries(CHARACTERS.map((c) => [c.id, c]));
 // Blok-Sem (rood shirt + pet, knipoog naar de held) = nieuwe standaard in de
