@@ -435,7 +435,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
     else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
     const d = Math.hypot(pos.current.x, pos.current.z);
-    if (d > 38) { pos.current.x *= 38 / d; pos.current.z *= 38 / d; }
+    if (d > 78) { pos.current.x *= 78 / d; pos.current.z *= 78 / d; }
   };
 
   useFrame((state, dt) => {

@@ -589,7 +589,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           zwakke hardware; staat de speler stil, dan weer scherp. */}
       <AdaptiveDpr />
       <color attach="background" args={["#aaddff"]} />
-      <fog attach="fog" args={["#aaddff", 110, 250]} />
+      <fog attach="fog" args={["#aaddff", 150, 290]} />
 
       {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
       <DayNight />
@@ -606,9 +606,17 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Buitenwereld />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightFnRef.current(0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
+        {/* Laan van de poort (nieuwe rand, z≈77) naar het starter-plein (z≈35):
+            statisch — werkt voor bestaande én nieuwe parken zonder migratie. */}
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 56]}>
+          <planeGeometry args={[6, 42]} />
+          <meshStandardMaterial color="#a8a49c" roughness={1} />
+        </mesh>
         {/* Vrolijke ballontros naast de ingang. */}
         <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
-        <Player inputRef={inputRef} start={[0, 0, GRID_SIZE / 2 - 5]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} />
+        {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
+            rand — anders begint elke speler met 40 m niemandsland. */}
+        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson && !buddyEye} />
