@@ -53,6 +53,103 @@ function BouwBlok({ a, x, y, z, h = 0, rotation = 0 }) {
   );
 }
 
+// 🧱 BlokkenLaag — alle bouwblokken in instanced meshes (2 draw-calls voor
+// honderden blokken) + Minecraft-plaatsing: tik op een blok-VLAK en het nieuwe
+// blok verschijnt aan díe kant (bovenop, opzij of eronder) → overhangende
+// daken, poorten en bruggen kunnen. Daken (kegels) blijven losse meshes.
+function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onSelect, onFacePlace }) {
+  const refVast = useRef(), refGlas = useRef();
+  // Per soort: [{ it, i }] met i = index in placedItems (voor selectie).
+  const { vast, glas, daken } = useMemo(() => {
+    const vast = [], glas = [], daken = [];
+    items.forEach((it, i) => {
+      const a = getAsset(it.assetId);
+      if (!a) return;
+      if (a.procedural === "blokdak") daken.push({ it, i, a });
+      else if (a.procedural === "blok") (a.doorzichtig ? glas : vast).push({ it, i, a });
+    });
+    return { vast, glas, daken };
+  }, [items]);
+
+  useEffect(() => {
+    const dummy = new Object3D();
+    const c = new Color();
+    const vul = (ref, lijst) => {
+      const m = ref.current;
+      if (!m) return;
+      lijst.forEach(({ it, a }, k) => {
+        const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+        dummy.position.set(x, heightFn(x, z) + (it.h || 0) * BLOK_H + BLOK_H / 2, z);
+        dummy.rotation.y = it.rotation || 0;
+        dummy.updateMatrix();
+        m.setMatrixAt(k, dummy.matrix);
+        m.setColorAt(k, c.set(a.blokKleur || "#a97e4e"));
+      });
+      m.count = lijst.length;
+      m.instanceMatrix.needsUpdate = true;
+      if (m.instanceColor) m.instanceColor.needsUpdate = true;
+      m.computeBoundingSphere();
+    };
+    vul(refVast, vast);
+    vul(refGlas, glas);
+  }, [vast, glas, terrain, heightFn]);
+
+  // Minecraft-plaatsing: bepaal uit het klikpunt welk VLAK van het blok je
+  // raakte (dominante as t.o.v. het blok-midden) → daar komt het nieuwe blok.
+  const faceDoel = (it, e) => {
+    const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+    const y = heightFn(x, z) + (it.h || 0) * BLOK_H + BLOK_H / 2;
+    const dx = e.point.x - x, dy = e.point.y - y, dz = e.point.z - z;
+    const ax = Math.abs(dx) / (CELL / 2), ay = Math.abs(dy) / (BLOK_H / 2), az = Math.abs(dz) / (CELL / 2);
+    if (ay >= ax && ay >= az) return { cell: it.cell, h: (it.h || 0) + (dy > 0 ? 1 : -1) };
+    if (ax >= az) return { cell: [it.cell[0] + Math.sign(dx), it.cell[1]], h: it.h || 0 };
+    return { cell: [it.cell[0], it.cell[1] + Math.sign(dz)], h: it.h || 0 };
+  };
+  const maakHandlers = (lijst, perId) => ({
+    onPointerDown: (e) => {
+      const rec = perId ? lijst : lijst[e.instanceId];
+      if (!rec) return;
+      if (placingBlok) { e.stopPropagation(); onFacePlace(faceDoel(rec.it, e)); return; }
+      if (modusBezig) return;
+      e.stopPropagation();
+    },
+    onClick: (e) => {
+      if (placingBlok || modusBezig) return;
+      if (e.delta > 8) return;
+      const rec = perId ? lijst : lijst[e.instanceId];
+      if (!rec) return;
+      e.stopPropagation();
+      onSelect(rec.i);
+    },
+  });
+
+  return (
+    <group>
+      {vast.length > 0 && (
+        <instancedMesh key={`v${vast.length}`} ref={refVast} args={[undefined, undefined, Math.max(1, vast.length)]} castShadow receiveShadow {...maakHandlers(vast, false)}>
+          <boxGeometry args={[CELL, BLOK_H, CELL]} />
+          <meshStandardMaterial roughness={1} metalness={0} />
+        </instancedMesh>
+      )}
+      {glas.length > 0 && (
+        <instancedMesh key={`g${glas.length}`} ref={refGlas} args={[undefined, undefined, Math.max(1, glas.length)]} {...maakHandlers(glas, false)}>
+          <boxGeometry args={[CELL, BLOK_H, CELL]} />
+          <meshStandardMaterial roughness={0.3} metalness={0} transparent opacity={0.5} />
+        </instancedMesh>
+      )}
+      {daken.map((rec) => {
+        const [x, z] = cellToWorld(rec.it.cell[0], rec.it.cell[1]);
+        return (
+          <mesh key={rec.i} position={[x, heightFn(x, z) + (rec.it.h || 0) * BLOK_H + BLOK_H * 0.5, z]} rotation={[0, (rec.it.rotation || 0) + Math.PI / 4, 0]} castShadow {...maakHandlers(rec, true)}>
+            <coneGeometry args={[CELL * 0.75, BLOK_H, 4]} />
+            <meshStandardMaterial color={rec.a.blokKleur} roughness={1} flatShading />
+          </mesh>
+        );
+      })}
+    </group>
+  );
+}
+
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
 function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0 }) {
   const a = getAsset(assetId);
@@ -311,7 +408,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -434,6 +531,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     const s = new Set();
     placedItems.forEach((it) => {
       if (!isVast(it.assetId)) return;
+      // Blokken blokkeren alleen op LOOPHOOGTE (laag 0-1): een deuropening in je
+      // muur = die cel vrijlaten → je loopt onder je eigen dak naar binnen.
+      if (isBlok(it.assetId) && (it.h || 0) > 1) return;
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
     });
     return s;
@@ -523,20 +623,30 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
         )}
 
+        {/* 🧱 Alle bouwblokken samen (instanced) + Minecraft-vlak-plaatsing. */}
+        <BlokkenLaag
+          items={placedItems}
+          terrain={terrain}
+          heightFn={heightFnRef.current}
+          placingBlok={plaatstBlok}
+          modusBezig={(!!placingAsset && !plaatstBlok) || sculptMode || waterMode || groundMode}
+          onSelect={(i) => { onSelectPlaced && onSelectPlaced(i); }}
+          onFacePlace={(doel) => { onPlaceBlok && onPlaceBlok(doel); }}
+        />
+
         {/* Geplaatste items — klikbaar om te selecteren. */}
         {placedItems.map((it, idx) => {
+          if (isBlok(it.assetId)) {
+            // Blok zelf zit in BlokkenLaag; alleen de selectie-ring hier.
+            return selectedIdx === idx ? <SelectieRing key={`ring${idx}`} cell={it.cell} cells={cellsVan(it.assetId)} /> : null;
+          }
           const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
           const y = heightFnRef.current(x, z);
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
               onPointerDown={(e) => {
-                if (placing || sculptMode || waterMode || groundMode) {
-                  // Blok-op-blok: tik op een bestaand blok terwijl je een blok
-                  // plaatst = er bovenop stapelen (Minecraft-gevoel).
-                  if (placing && plaatstBlok && isBlok(it.assetId)) { e.stopPropagation(); handlePlace(it.cell); }
-                  return;
-                }
+                if (placing || sculptMode || waterMode || groundMode) return;
                 e.stopPropagation();
               }}
               onClick={(e) => { if (placing || sculptMode || waterMode || groundMode) return; if (e.delta > 8) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}

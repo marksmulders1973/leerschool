@@ -165,8 +165,8 @@ const SHOP_CATS = [
   { key: "attractie", label: "🎠 Attracties", items: ATTRACTIE_SHOP },
   { key: "natuur", label: "🌳 Natuur & bouwen", items: NATUUR_SHOP },
 ];
-const MAX_BLOKKEN = 300; // totaal-cap: houdt oudere telefoons vlot
-const MAX_STAPEL = 6;    // max blokken op elkaar
+const MAX_BLOKKEN = 900; // totaal-cap (instanced → 2 draw-calls, ook op telefoons vlot)
+const MAX_STAPEL = 8;    // max bouwhoogte in lagen
 // Stabiele lege grond-map (zelfde referentie) → terrein herberekent niet onnodig.
 const EMPTY_GROUND = {};
 const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
@@ -539,11 +539,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     }
     // Kopen + plaatsen.
     if (coins < placing.price) { flits("Niet genoeg muntjes."); setPlacing(null); return; }
-    // Bouwblokken: stapelen + limieten.
+    // Bouwblokken (klik op de grond): op de laagste vrije laag van dat vakje.
     let blokH;
     if (isBlok(placing.assetId)) {
       if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
-      blokH = blokkenOp(cell);
+      const bezetH = new Set(placedItems.filter((it) => isBlok(it.assetId) && it.cell[0] === cell[0] && it.cell[1] === cell[1]).map((it) => it.h || 0));
+      blokH = 0;
+      while (bezetH.has(blokH)) blokH++;
       if (blokH >= MAX_STAPEL) { flits(`Deze toren is op z'n hoogst (${MAX_STAPEL} blokken).`); return; }
     }
     setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
@@ -566,6 +568,29 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     // blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
     if (vrijspeelDier(placing.assetId)) setPlacing(null);
     else if (coins - placing.price < placing.price) setPlacing(null);
+  };
+
+  // 🧱 Minecraft-plaatsing: blok tegen een blok-VLAK aan (van BlokkenLaag).
+  // Valideert plek + koopt; zwevende blokken mogen (overhangend dak, brug).
+  const plaatsBlokOp = ({ cell, h }) => {
+    if (!placing || !isBlok(placing.assetId)) return;
+    const [gx, gz] = cell;
+    if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { flits("Dat is buiten je park."); return; }
+    if (h < 0) { flits("Onder de grond bouwen kan niet."); return; }
+    if (h >= MAX_STAPEL) { flits(`Niet hoger dan ${MAX_STAPEL} blokken.`); return; }
+    if (placedItems.filter((it) => isBlok(it.assetId)).length >= MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
+    if (placedItems.some((it) => isBlok(it.assetId) && it.cell[0] === gx && it.cell[1] === gz && (it.h || 0) === h)) return; // plek al bezet
+    // Niet ín een gebouw/attractie/hek bouwen (paden zijn oké).
+    const bots = placedItems.some((it) => {
+      if (isBlok(it.assetId)) return false;
+      const a = getAsset(it.assetId);
+      if (!a || a.procedural === "path" || a.kind === "animal") return false;
+      return footprint(it.cell[0], it.cell[1], cellsVan(it.assetId)).some(([cx, cz]) => cx === gx && cz === gz);
+    });
+    if (bots) { flits("Daar staat al iets."); return; }
+    if (coins < placing.price) { flits("Niet genoeg muntjes."); return; }
+    setMeta((m) => ({ ...m, coins: m.coins - placing.price }));
+    setPlacedItems((items) => [...items, { assetId: placing.assetId, cell, rotation: placing.rot || 0, price: placing.price, h }]);
   };
 
   const verplaatsGeselecteerde = () => {
@@ -1074,6 +1099,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
+          onPlaceBlok={plaatsBlokOp}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
