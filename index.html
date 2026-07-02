@@ -668,9 +668,11 @@
             // — minder bandwidth, en visibility/focus dekt al het belangrijkste).
             setInterval(checkForUpdate, 60 * 60 * 1000);
 
-            // Markeer dat eerste-laad-window voorbij is na 5s — daarna geldt
-            // mid-session gedrag (banner) i.p.v. silent reload.
-            setTimeout(() => { initialLoad = false; }, 5000);
+            // Markeer dat eerste-laad-window voorbij is na 45s (was 5s — te
+            // krap: het precachen van de nieuwe SW duurt vaak langer, waardoor
+            // de reload in het "beleefde" wachtpad viel en de user de oude
+            // versie bleef zien; Mark/Edge 2 jul).
+            setTimeout(() => { initialLoad = false; }, 45000);
           }).catch(() => {});
 
           // App-resume triggers: bij PWA op telefoon is dit het moment dat
@@ -698,7 +700,10 @@
             if (initialLoad || document.hidden) { doReload(); return; }
             const onHide = () => { if (document.hidden) doReload(); };
             document.addEventListener("visibilitychange", onHide);
-            setTimeout(doReload, 5 * 60 * 1000);
+            // Vangnet 90s (was 5 min): snel genoeg om "hij pakt de nieuwe
+            // versie niet" te voorkomen, lang genoeg om een quiz-antwoord
+            // niet te onderbreken.
+            setTimeout(doReload, 90 * 1000);
           });
         });
       }
