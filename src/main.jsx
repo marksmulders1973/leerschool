@@ -6,6 +6,7 @@ import { BioPlaatPagina } from "./components/learn/bio/KlikbarePlaat.jsx";
 import { BIO_PLATEN } from "./data/bioPlaten.jsx";
 import ErrorBoundary, { isChunkLoadError, recoverFromChunkError } from "./app/ErrorBoundary.jsx";
 import { Analytics } from "@vercel/analytics/react";
+import { BOUW_VERSIE } from "./versie.js";
 import "./shared/tokens.css";
 
 // PWA chunk-load-error vangen voordat React 'm ziet. Bij async dynamic
@@ -50,10 +51,11 @@ const bioPlaatId = _params.get("bioplaat");
 
 // Tijdelijk build-stempel (Mark 2 jul, tijdens de park-bouwfase): piepklein
 // datum/tijd-label rechtsboven zodat je ziet of je naar de laatste versie
-// kijkt. Weghalen = dit blokje + de __BUILD_STEMPEL__-define in vite.config.js.
+// kijkt. Versienummer uit src/versie.js (Claude hoogt op bij elke push en
+// meldt het nummer in de chat). Weghalen = dit blokje + versie.js.
 try {
   const stempel = document.createElement("div");
-  stempel.textContent = "bouw " + __BUILD_STEMPEL__;
+  stempel.textContent = "versie " + BOUW_VERSIE;
   stempel.style.cssText = "position:fixed;top:2px;right:4px;z-index:99999;font:700 10px system-ui;color:rgba(255,255,255,0.92);background:rgba(20,30,40,0.55);border-radius:999px;padding:2px 8px;pointer-events:none";
   document.body.appendChild(stempel);
 } catch { /* nooit de app laten breken om een label */ }
