@@ -240,9 +240,35 @@ function Hond({ c, mouthRef, tailRef, legsRef }) {
   );
 }
 
+// 🧱 Blok-hondje (blok-wereld, Mark 2 jul): hoekige hond die bij de Minecraft-
+// look past. Zelfde scharnier-refs als Hond → pootjes lopen, staart kwispelt.
+function BlokHond({ c, tailRef, legsRef }) {
+  return (
+    <group>
+      <mesh castShadow position={[0, 0.05, 0]}><boxGeometry args={[0.5, 0.42, 0.78]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.95} /></mesh>
+      <mesh position={[0, 0, 0.34]}><boxGeometry args={[0.34, 0.3, 0.14]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+      <mesh castShadow position={[0, 0.42, 0.4]}><boxGeometry args={[0.44, 0.4, 0.4]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.33, 0.66]}><boxGeometry args={[0.24, 0.18, 0.16]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.38, 0.75]}><boxGeometry args={[0.1, 0.08, 0.05]} /><meshStandardMaterial color="#1a1410" roughness={0.5} /></mesh>
+      {[-0.12, 0.12].map((x, i) => <mesh key={i} position={[x, 0.48, 0.605]}><boxGeometry args={[0.08, 0.09, 0.02]} /><meshStandardMaterial color="#2a1c12" roughness={0.4} /></mesh>)}
+      {[-1, 1].map((s, i) => <mesh key={i} castShadow position={[s * 0.16, 0.68, 0.34]}><boxGeometry args={[0.12, 0.16, 0.1]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>)}
+      {[[0.17, 0.28], [-0.17, 0.28], [0.17, -0.28], [-0.17, -0.28]].map(([x, z], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.12, z]}>
+          <mesh castShadow position={[0, -0.16, 0]}><boxGeometry args={[0.14, 0.32, 0.14]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, -0.3, 0]}><boxGeometry args={[0.15, 0.08, 0.15]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+        </group>
+      ))}
+      <group ref={tailRef} position={[0, 0.2, -0.4]}>
+        <mesh position={[0, 0.06, -0.1]} rotation={[-0.6, 0, 0]}><boxGeometry args={[0.1, 0.26, 0.1]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      </group>
+    </group>
+  );
+}
+
 function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
   if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} tailRef={tailRef} legsRef={legsRef} />;
+  if (soort === "blokhond") return <BlokHond c={c} tailRef={tailRef} legsRef={legsRef} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;

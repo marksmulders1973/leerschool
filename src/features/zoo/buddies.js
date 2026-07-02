@@ -101,6 +101,20 @@ export const BUDDIES = [
     verdien: 55,
     flavor: "Samen vliegen we hoog! 🔥",
   },
+  {
+    // 🧱 Blok-maatje (Mark 2 jul, blok-wereld): past bij de Minecraft-look.
+    // Gratis (verdien 0) zodat iedereen 'm meteen kan kiezen.
+    id: "blokkie",
+    naam: "Blokkie",
+    emoji: "🟫",
+    soort: "blokhond",
+    kleur: "#c98d5f",
+    kleur2: "#8a6440",
+    accent: "#f2d49b",
+    karakter: "blokkig & bouwlustig",
+    verdien: 0,
+    flavor: "Woef! Bouwen we samen een huis? 🧱",
+  },
 ];
 
 export const BUDDY_BY_ID = Object.fromEntries(BUDDIES.map((b) => [b.id, b]));
