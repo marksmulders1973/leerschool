@@ -1227,6 +1227,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
+          onHakBlok={(i) => setPlacedItems((items) => items.filter((_, ix) => ix !== i))}
           bouwCursorRef={bouwCursorRef}
           bouwModus={bouwen}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
@@ -1391,7 +1392,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               {placing.pakket
                 ? `Loop naar een open plek en druk "Zet neer" — daar komt je ${placing.pakketLabel || "bouwwerk"} (bij de groene pijl).`
                 : isBlok(placing.assetId)
-                  ? "Loop ergens heen — het lichte blok wijst aan waar je bouwt. Tik op een blok = er tegenaan bouwen."
+                  ? "Wijs met de muis: klik op een blokje = ertegenaan bouwen, rechts-klik = weghakken. Of loop en gebruik de knoppen."
                   : `Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
             </div>
             {isBlok(placing.assetId) && placing.moveIdx == null && (

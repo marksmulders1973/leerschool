@@ -58,8 +58,9 @@ function BouwBlok({ a, x, y, z, h = 0, rotation = 0 }) {
 // honderden blokken) + Minecraft-plaatsing: tik op een blok-VLAK en het nieuwe
 // blok verschijnt aan díe kant (bovenop, opzij of eronder) → overhangende
 // daken, poorten en bruggen kunnen. Daken (kegels) blijven losse meshes.
-function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFacePlace }) {
+function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFacePlace, onHak }) {
   const refVast = useRef(), refGlas = useRef();
+  const hover = useRef(); // muis-aanwijs-randje (desktop): dít blokje raak je
   // 🧊 Kubussen van 1×1×1 m (kx/kz/kh op het fijne KUB-raster).
   const { vast, glas, daken } = useMemo(() => {
     const vast = [], glas = [], daken = [];
@@ -115,10 +116,29 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
     onPointerDown: (e) => {
       const rec = perId ? lijst : lijst[e.instanceId];
       if (!rec) return;
-      if (placingBlok) { e.stopPropagation(); onFacePlace(faceDoel(rec.it, e)); return; }
+      if (placingBlok) {
+        e.stopPropagation();
+        // Rechtermuisknop = weghakken, links/tik = ertegenaan bouwen (Minecraft).
+        if (e.nativeEvent && e.nativeEvent.button === 2) { onHak && onHak(rec.i); return; }
+        onFacePlace(faceDoel(rec.it, e));
+        return;
+      }
       if (modusBezig) return;
-      e.stopPropagation(); // kubussen selecteer je niet — weghalen = ⛏️ Hak weg
+      e.stopPropagation(); // kubussen selecteer je niet — weghalen = ⛏️/rechts-klik
     },
+    onContextMenu: (e) => {
+      // geen browser-menu op blokjes in bouw-modus
+      if (placingBlok && e.nativeEvent) e.nativeEvent.preventDefault();
+    },
+    onPointerMove: (e) => {
+      if (!placingBlok || !hover.current) return;
+      const rec = perId ? lijst : lijst[e.instanceId];
+      if (!rec) return;
+      const [x, y, z] = kubPos(rec.it);
+      hover.current.position.set(x, y, z);
+      hover.current.visible = true;
+    },
+    onPointerOut: () => { if (hover.current) hover.current.visible = false; },
   });
 
   return (
@@ -144,6 +164,11 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
           </mesh>
         );
       })}
+      {/* Aanwijs-randje: het blokje onder je muis (bouwen = links, hakken = rechts). */}
+      <lineSegments ref={hover} visible={false}>
+        <edgesGeometry args={[new BoxGeometry(KUB + 0.04, KUB + 0.04, KUB + 0.04)]} />
+        <lineBasicMaterial color="#111111" />
+      </lineSegments>
     </group>
   );
 }
@@ -535,7 +560,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, bouwCursorRef, bouwModus = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
   const [ghost, setGhost] = useState(null);
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -835,8 +860,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           heightFn={heightFnRef.current}
           placingBlok={plaatstBlok}
           modusBezig={(!!placingAsset && !plaatstBlok) || sculptMode || waterMode || groundMode}
-          onSelect={(i) => { onSelectPlaced && onSelectPlaced(i); }}
           onFacePlace={(doel) => { onPlaceBlok && onPlaceBlok(doel); }}
+          onHak={(i) => { onHakBlok && onHakBlok(i); }}
         />
 
         {/* Geplaatste items — klikbaar om te selecteren. */}
