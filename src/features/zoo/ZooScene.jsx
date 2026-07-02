@@ -826,7 +826,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
         {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
             rand — anders begint elke speler met 40 m niemandsland. */}
-        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} />
+        {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
+        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
@@ -840,7 +841,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
-        {buddyId && !firstPerson && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
+        {buddyId && !firstPerson && rideIdx == null && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />

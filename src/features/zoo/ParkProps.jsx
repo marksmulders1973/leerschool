@@ -423,7 +423,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -532,7 +532,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
   return (
     // In eerstepersoons zit de camera in het hoofd → eigen poppetje verbergen.
     // Begin gedraaid naar het parkmidden, zodat je meteen het park ziet.
-    <group ref={g} position={start} rotation={[0, startYaw, 0]} visible={!firstPerson}>
+    <group ref={g} position={start} rotation={[0, startYaw, 0]} visible={!firstPerson && !verborgen}>
       <CharacterModel key={url} url={url} movingRef={moving} bouwt={bouwt} />
     </group>
   );
