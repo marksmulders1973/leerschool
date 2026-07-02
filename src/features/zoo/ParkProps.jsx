@@ -96,7 +96,7 @@ function CarouselPaard({ color }) {
 // Draaimolen die echt ronddraait — een vrolijke kermis-carrousel met gestreept
 // tentdak, schulprand, op-en-neer wippende paardjes en een vlaggetje bovenop.
 const CARR_PAARD = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c"];
-export function Carousel({ position = [0, 0, 0] }) {
+export function Carousel({ position = [0, 0, 0], rideRef }) {
   const top = useRef();
   const paarden = useRef([]);
   const vlag = useRef();
@@ -112,6 +112,8 @@ export function Carousel({ position = [0, 0, 0] }) {
       if (m) m.position.y = 0.55 + Math.sin(t * 2.2 + i * 1.05) * 0.18;
     }
     if (vlag.current) vlag.current.rotation.y = Math.sin(t * 3) * 0.5;
+    // 🎠 Instappen: schrijf de wereldpositie van paardje 0 (voor de mee-rij-camera).
+    if (rideRef && paarden.current[0]) paarden.current[0].getWorldPosition(rideRef.current);
   });
   const plekken = Array.from({ length: N }, (_, i) => {
     const a = (i / N) * Math.PI * 2;
@@ -183,7 +185,7 @@ export function Carousel({ position = [0, 0, 0] }) {
 // elke frame op hun rim-positie gezet zonder mee te kantelen.
 const CABINE_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c", "#3cb5a8", "#e85aa0"];
 const LAMP_KLEUREN = ["#fff2a8", "#ff8f8f", "#9fd0ff", "#b6f5a0"];
-export function FerrisWheel({ position = [0, 0, 0] }) {
+export function FerrisWheel({ position = [0, 0, 0], rideRef }) {
   const wheel = useRef();
   const gond = useRef([]);
   const lampen = useRef();
@@ -198,6 +200,8 @@ export function FerrisWheel({ position = [0, 0, 0] }) {
       const a = t + (i / N) * Math.PI * 2;
       m.position.set(Math.cos(a) * R, hubY + Math.sin(a) * R, 0);
     }
+    // 🎡 Instappen: gondel 0 is jouw plekje.
+    if (rideRef && gond.current[0]) gond.current[0].getWorldPosition(rideRef.current);
     // lampjes laten "knipperen" met een lopend lichtje
     if (lampen.current) {
       const tt = s.clock.elapsedTime * 5;
@@ -269,9 +273,14 @@ export function FerrisWheel({ position = [0, 0, 0] }) {
 
 // Zweefmolen (procedureel) — een paal met een draaiend dak en stoeltjes aan
 // kettingen die naar buiten zweven.
-export function SwingRide({ position = [0, 0, 0] }) {
+export function SwingRide({ position = [0, 0, 0], rideRef }) {
   const top = useRef();
-  useFrame((_, dt) => { if (top.current) top.current.rotation.y += dt * 0.7; });
+  const zitje = useRef();
+  useFrame((_, dt) => {
+    if (top.current) top.current.rotation.y += dt * 0.7;
+    // 🪂 Instappen: onzichtbaar zitje aan de rand draait mee.
+    if (rideRef && zitje.current) zitje.current.getWorldPosition(rideRef.current);
+  });
   const N = 10, topY = 3.7, R = 1.8;
   const hoeken = Array.from({ length: N }, (_, i) => (i / N) * Math.PI * 2);
   const paal = "#f2b134";
@@ -286,6 +295,8 @@ export function SwingRide({ position = [0, 0, 0] }) {
         <mesh key={k} position={[0, y, 0]}><torusGeometry args={[0.25, 0.05, 8, 16]} /><meshStandardMaterial color="#ffd54a" roughness={0.5} metalness={0.3} /></mesh>
       ))}
       <group ref={top} position={[0, topY, 0]}>
+        {/* onzichtbaar mee-rij-zitje voor de instap-camera */}
+        <object3D ref={zitje} position={[R, -1.5, 0]} />
         {/* draaikop-schijf waar de kettingen aan hangen */}
         <mesh position={[0, -0.15, 0]}><cylinderGeometry args={[1.75, 1.75, 0.14, 20]} /><meshStandardMaterial color="#e7d6a8" flatShading roughness={0.85} /></mesh>
         {/* gestreept tentdak */}
@@ -1788,6 +1799,21 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 
 // Camera die meerijdt met de trein: zet de camera net achter+boven de kop en
 // kijkt vooruit. Actief zolang `rideRef.current` (de kop-positie) bestaat.
+// 🎠 Attractie-camera (Mark 2 jul, "instappen in alle attracties"): je zit op
+// een meedraaiend zitje en kijkt naar het hart van de attractie — draaimolen-
+// gevoel. `posRef` = wereldpositie van het zitje (geschreven door de attractie).
+export function AttractieCamera({ actief, posRef, centrum }) {
+  useFrame((state) => {
+    if (!actief || !posRef?.current || !centrum) return;
+    const p = posRef.current;
+    const rx = p.x - centrum[0], rz = p.z - centrum[2];
+    const rl = Math.hypot(rx, rz) || 1;
+    state.camera.position.set(p.x + (rx / rl) * 1.4, p.y + 1.5, p.z + (rz / rl) * 1.4);
+    state.camera.lookAt(centrum[0], p.y + 0.4, centrum[2]);
+  });
+  return null;
+}
+
 export function RideCamera({ headRef, active }) {
   const { camera } = useThree();
   useFrame(() => {

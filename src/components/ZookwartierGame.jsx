@@ -278,6 +278,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [firstPerson, setFirstPerson] = useState(false); // eerstepersoons (door de ogen van je poppetje)
   const [buddyEye, setBuddyEye] = useState(false);      // 🐉 door de ogen van je buddy
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
+  const [rideIdx, setRideIdx] = useState(null);         // 🎠 in welke attractie zit je? (index)
   // Standaard (alle uit) = derde-persoons achter de speler (poppetje + buddy in beeld).
   // 🐾 maatje — Charley is het STANDAARD maatje (Mark 1 jul); wie zelf iets koos
   // houdt z'n keuze.
@@ -406,7 +407,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // dus lopen en rondkijken kan tegelijk. Uit in bouw-/boetseer-modi, zodat
   // slepen daar gewoon boetseren/plaatsen blijft.
   const camDrag = useRef({ ptrs: new Map(), enabled: true });
-  camDrag.current.enabled = !placing && !sculptMode && !waterMode && !groundMode && !firstPerson && !buddyEye && !rideTrain && !followCam;
+  camDrag.current.enabled = !placing && !sculptMode && !waterMode && !groundMode && !firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null;
   const camDown = (e) => {
     if (!camDrag.current.enabled) return;
     if (e.pointerType === "mouse" && e.button !== 0) return;
@@ -1241,6 +1242,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           followCam={followCam}
           firstPerson={firstPerson}
           rideTrain={rideTrain}
+          rideIdx={rideIdx}
           spelerNaam={naam}
           goedeScore={goedeScore}
           zwakVak={zwakVak}
@@ -1317,6 +1319,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={() => { sluitBouwTip(); setBouwen(true); setShopCat("blok"); setFirstPerson(false); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🧱 Laat zien</button>
           <button onClick={sluitBouwTip} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
         </div>
+      )}
+
+      {/* 🎠 In een attractie: grote duidelijke uitstap-knop. */}
+      {rideIdx != null && (
+        <button
+          onClick={() => setRideIdx(null)}
+          style={{ position: "absolute", left: "50%", bottom: "calc(24px + env(safe-area-inset-bottom))", transform: "translateX(-50%)", zIndex: 13, border: "none", borderRadius: 999, padding: "13px 26px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#7c3aed,#5b21b6)", boxShadow: "0 6px 20px rgba(0,0,0,.35)", cursor: "pointer" }}
+        >
+          ✕ Uitstappen
+        </button>
       )}
 
       {/* Korte besturing-hint voor laptop/desktop (verdwijnt vanzelf). */}
@@ -1477,6 +1489,22 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
               {selKind === "animal" ? "🦊 Dier loopt vrij rond — bouw er zelf een hek omheen met 🚧 Hekken:" : "Gekozen:"}
             </span>
+            {/* 🎠 Instappen: in de draaimolen/reuzenrad/zweefmolen meedraaien;
+                bij de trein via het bestaande meerijden. */}
+            {selKind === "attraction" && (
+              <button
+                onClick={() => {
+                  const pr = getAsset(placedItems[selectedIdx]?.assetId)?.procedural;
+                  if (pr === "rail" || pr === "train") { setRideTrain(true); }
+                  else { setRideIdx(selectedIdx); }
+                  setFirstPerson(false); setBuddyEye(false); setFollowCam(false);
+                  sluitSelectie();
+                }}
+                style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#7c3aed,#5b21b6)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}
+              >
+                🎠 Instappen
+              </button>
+            )}
             {selKind === "animal" && <button onClick={() => voerDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: dierGevoerdVandaag(placedItems[selectedIdx]) ? "#cdeccb" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🌾 {dierGevoerdVandaag(placedItems[selectedIdx]) ? "Gevoerd ✓" : "Voeren"}</button>}
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
             {selIsHuis && <button onClick={() => { setColorMode(true); setActivePart(0); }} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🎨 Kleuren</button>}
