@@ -255,7 +255,7 @@ export default async function handler(req, res) {
   // geleden mail kreeg, en niet is uitgeschreven, en op de lesmateriaal-lijst staat.
   const drempel = new Date(Date.now() - DAGEN_TUSSEN * 86400000).toISOString();
   const filter =
-    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol)` +
+    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen)` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
     `&select=id,email,kind_voornaam,sent_count,unsubscribe_token,plan` +
@@ -279,8 +279,12 @@ export default async function handler(req, res) {
   let gelukt = 0;
   const fouten = [];
   const perPlan = {}; // uitsplitsing voor het dagrapport ("6× oefenpakket")
+  const gezien = new Set(); // zelfde adres met 2 pakketten → 1 mail per run
   for (const rij of rijen) {
     if (!rij.email || !String(rij.email).includes("@")) continue;
+    const adres = String(rij.email).toLowerCase();
+    if (gezien.has(adres)) continue;
+    gezien.add(adres);
     const welkom = !rij.sent_count;
     // Niveau-indicatie alleen in de week-mail (welkomstmail blijft schoon).
     const niveauSectie = welkom ? null : await haalNiveauSectie(rij.email, base, key);

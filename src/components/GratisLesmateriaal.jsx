@@ -78,10 +78,11 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
         consent_at: new Date().toISOString(),
         ref: getIncomingRef(),
       });
-      if (!error) {
-        if (nieuwId) setRowId(nieuwId);
+      const alBekend = error && /duplicate|unique/i.test(error.message || "");
+      if (!error || alBekend) {
+        if (!error && nieuwId) setRowId(nieuwId);
         try { localStorage.setItem(doneKey, "1"); } catch {}
-        track("lesmateriaal_signup", { source, groep: "", vakken: 0, stap: "email" });
+        if (!alBekend) track("lesmateriaal_signup", { source, groep: "", vakken: 0, stap: "email" });
       }
     } catch { /* niet blokkeren — stap 2 doet desnoods een fallback-insert */ }
     setStatus("idle");
@@ -127,7 +128,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
         vakken: vakken.length ? vakken : null,
         ref: getIncomingRef(),
       });
-      if (error) throw error;
+      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
       try { localStorage.setItem(doneKey, "1"); } catch {}
       track("lesmateriaal_signup", { source, groep: groep || "", vakken: vakken.length });
       setStep("done");

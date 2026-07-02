@@ -400,6 +400,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   // bron-vlag zodat we in upgrade_waitlist.source zien dat de lead via de
   // homepage-CTA kwam (i.p.v. social-bio/direct).
   const handlePrintenClick = () => {
+    try { sessionStorage.setItem("lk_lead_src", "home_cta"); } catch {}
     track("home_cta_printen");
     if (onPrinten) { onPrinten(); return; }
     onOefenpakket?.();

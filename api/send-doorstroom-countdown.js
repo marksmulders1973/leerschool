@@ -207,7 +207,7 @@ export default async function handler(req, res) {
 
   // Ontvangers: lesmateriaal-lijst, niet uitgeschreven, nog niet bij deze fase.
   const filter =
-    `plan=in.(gratis-lesmateriaal,oefenpakket)` +
+    `plan=in.(gratis-lesmateriaal,oefenpakket,leesladder,redactiebladen)` +
     `&unsubscribed_at=is.null` +
     `&doorstroom_step=lt.${fase}` +
     `&select=id,email,kind_voornaam,unsubscribe_token,doorstroom_step` +

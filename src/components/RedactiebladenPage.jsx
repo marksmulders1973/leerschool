@@ -85,6 +85,8 @@ function leadSource() {
     const p = new URLSearchParams(window.location.search);
     const utm = p.get("utm_source");
     if (utm) return `utm:${utm}${p.get("utm_campaign") ? "/" + p.get("utm_campaign") : ""}`.slice(0, 80);
+    const intern = sessionStorage.getItem("lk_lead_src");
+    if (intern) return intern.slice(0, 80);
     const ref = document.referrer;
     if (ref) {
       const h = new URL(ref).hostname.replace(/^www\./, "");
