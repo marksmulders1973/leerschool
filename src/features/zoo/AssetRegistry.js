@@ -232,6 +232,12 @@ export const CHARACTERS = [
   { id: "blokNora", name: "Nora (blok)", emoji: "🟨", url: "blocky:blokNora", blocky: { huid: "#8d5a3a", haar: "#101418", shirt: "#f2b134", broek: "#3f3a55", schoen: "#2a2a2a" } },
   { id: "blokKai", name: "Kai (blok)", emoji: "🟦", url: "blocky:blokKai", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#4a90d9", broek: "#2e3d33", schoen: "#1f2022" } },
   { id: "blokLuna", name: "Luna (blok)", emoji: "🩵", url: "blocky:blokLuna", blocky: { huid: "#f5d9c4", haar: "#b8452c", shirt: "#3cb5a8", broek: "#57424e", schoen: "#332f2c" } },
+  // Extra hoofdpersonen (Mark 2 jul): meer meiden + jongens zodat elk kind
+  // een poppetje vindt dat bij zich past.
+  { id: "blokFleur", name: "Fleur (blok)", emoji: "🌸", url: "blocky:blokFleur", blocky: { huid: "#f2d2b0", haar: "#e8b830", shirt: "#f06292", broek: "#4a3f6b", schoen: "#2a2a2e" } },
+  { id: "blokZoe", name: "Zoë (blok)", emoji: "🐚", url: "blocky:blokZoe", blocky: { huid: "#b07248", haar: "#3a2415", shirt: "#26c6da", broek: "#37474f", schoen: "#1f2022", pet: true } },
+  { id: "blokFinn", name: "Finn (blok)", emoji: "🦖", url: "blocky:blokFinn", blocky: { huid: "#e8bd93", haar: "#c2452d", shirt: "#66bb6a", broek: "#263238", schoen: "#17181a" } },
+  { id: "blokTess", name: "Tess (blok)", emoji: "🍀", url: "blocky:blokTess", blocky: { huid: "#f0c8a0", haar: "#6a4228", shirt: "#9575cd", broek: "#2e4638", schoen: "#3a2a25" } },
   // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D,
   // gerigd via Mixamo (Walk + Idle). Blijft — Mark's eigen creatie.
   { id: "heldMj", name: "Held", emoji: "🎩", url: "/models/zoo/people/held-mj.glb" },

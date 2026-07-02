@@ -734,6 +734,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         }
         return;
       }
+      // 🚪 Poorten zijn de DOORGANG naar de dieren (Mark 2 jul: "door de ingang
+      // van een hek naar de dieren") — nooit blokkeren.
+      if (it.assetId === "hekPoort" || it.assetId === "fenceGate") return;
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
     });
     return s;

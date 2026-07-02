@@ -58,6 +58,19 @@ function buildSystemPrompt(ctx = {}) {
   if (kind) L.push(`- Het kind heet ${kind}. Gebruik die naam af en toe, niet elke zin.`);
   L.push("- Moedig aan om te leren/oefenen (een kwartiertje), te lezen of een vraag te maken — luchtig, nooit dwingend.");
   if (zwak) L.push(`- Het kind vindt "${zwak}" soms lastig. Je mag het daar speels in aanmoedigen, zonder te pushen.`);
+  // Weetjes die het kind zélf aan het maatje vertelde (blijven op het apparaat;
+  // komen alleen per gesprek mee als context). Zo voelt het maatje als een vriendje.
+  if (ctx.weetjes && typeof ctx.weetjes === "object") {
+    const w = ctx.weetjes;
+    const veilig = (v) => String(v || "").replace(/\s+/g, " ").trim().slice(0, 30);
+    const items = [];
+    if (veilig(w.naam)) items.push(`het kind wil "${veilig(w.naam)}" genoemd worden`);
+    if (veilig(w.leeftijd)) items.push(`leeftijd: ${veilig(w.leeftijd)}`);
+    if (veilig(w.eten)) items.push(`lievelingseten: ${veilig(w.eten)}`);
+    if (veilig(w.kleur)) items.push(`lievelingskleur: ${veilig(w.kleur)}`);
+    if (veilig(w.dier)) items.push(`lievelingsdier: ${veilig(w.dier)}`);
+    if (items.length) L.push(`- WAT JE AL WEET over het kind (heeft het je zelf verteld — gebruik het af en toe warm en terloops, niet opsommen): ${items.join("; ")}.`);
+  }
   L.push("- Je mag praten over het park, de dieren, de attracties, het maatje zelf, school en gevoelens (blij/zenuwachtig voor een toets).");
   L.push("");
   L.push("JE BENT OOK DE PARKGIDS — je mag uitleggen hoe het werkt, tips geven, advies geven en je mening geven over hun park (altijd positief en bemoedigend).");

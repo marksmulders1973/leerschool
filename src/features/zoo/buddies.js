@@ -102,6 +102,32 @@ export const BUDDIES = [
     flavor: "Samen vliegen we hoog! 🔥",
   },
   {
+    // 🐴 Paard-maatje (Mark 2 jul: "de een wil een paard").
+    id: "paard",
+    naam: "Fjord",
+    emoji: "🐴",
+    soort: "paard",
+    kleur: "#b98b5e",
+    kleur2: "#8a6440",
+    accent: "#3a2a1a",
+    karakter: "trouw & rustig",
+    verdien: 8,
+    flavor: "Klim maar op, we gaan ervoor! 🐴",
+  },
+  {
+    // 🦫 Bever-maatje (Mark 2 jul: "of een bever") — past bij het bouwen!
+    id: "bever",
+    naam: "Bibber",
+    emoji: "🦫",
+    soort: "bever",
+    kleur: "#8a5a3a",
+    kleur2: "#6a4228",
+    accent: "#e8c9a0",
+    karakter: "bouwlustig & grappig",
+    verdien: 16,
+    flavor: "Bouwen? Daar ben ik góéd in! 🦫",
+  },
+  {
     // 🧱 Blok-maatje (Mark 2 jul, blok-wereld): past bij de Minecraft-look.
     // Gratis (verdien 0) zodat iedereen 'm meteen kan kiezen.
     id: "blokkie",
@@ -140,6 +166,41 @@ export function zetBuddyNaam(id, naam) {
 
 export function gekozenBuddy() {
   try { return localStorage.getItem(LS_KEUZE) || ""; } catch { return ""; }
+}
+
+// ── 💬 Buddy-weetjes (Mark 2 jul): het maatje leert je kennen ────────────────
+// Eén vraagje per dag (roepnaam, leeftijd, lievelingseten/-kleur/-dier) en die
+// weetjes komen terug in park-praatjes én in de "Vraag hulp"-tutor. ALLES
+// blijft in localStorage op het eigen apparaat — privacyvriendelijk, geen
+// adres/school/achternaam, niets naar de server behalve terloops in de
+// AI-hulpvraag-context (net als de spelernaam nu al).
+const LS_WEETJES = "lk_buddy_weetjes";
+const LS_VRAAG_DATUM = "lk_buddy_vraag_datum";
+export const BUDDY_VRAGEN = [
+  { key: "naam", vraag: "Hoe mag ik je noemen?", placeholder: "je naam of bijnaam" },
+  { key: "leeftijd", vraag: "Hoe oud ben je eigenlijk?", placeholder: "bijv. 10" },
+  { key: "eten", vraag: "Wat vind jij het állerlekkerste eten?", placeholder: "bijv. pizza" },
+  { key: "kleur", vraag: "Wat is je lievelingskleur?", placeholder: "bijv. blauw" },
+  { key: "dier", vraag: "En je lievelingsdier?", placeholder: "bijv. wolf" },
+];
+export function buddyWeetjes() {
+  try { return JSON.parse(localStorage.getItem(LS_WEETJES) || "{}") || {}; } catch { return {}; }
+}
+export function volgendeBuddyVraag() {
+  try { if (localStorage.getItem(LS_VRAAG_DATUM) === new Date().toDateString()) return null; } catch { /* */ }
+  const w = buddyWeetjes();
+  return BUDDY_VRAGEN.find((v) => !w[v.key]) || null;
+}
+export function beantwoordBuddyVraag(key, waarde) {
+  try {
+    const w = buddyWeetjes();
+    const schoon = String(waarde || "").replace(/\s+/g, " ").trim().slice(0, 30);
+    if (schoon) { w[key] = schoon; localStorage.setItem(LS_WEETJES, JSON.stringify(w)); }
+    localStorage.setItem(LS_VRAAG_DATUM, new Date().toDateString());
+  } catch { /* */ }
+}
+export function stelBuddyVraagUit() {
+  try { localStorage.setItem(LS_VRAAG_DATUM, new Date().toDateString()); } catch { /* */ }
 }
 
 // De buddy die de leerling als maatje koos — of Vonk (het vlaggenschip) als er
@@ -217,6 +278,14 @@ export function buddyPraatje(soort, facts) {
   }
   if (f.baby) o.push({ e: "🐣", t: `Een baby${low(f.baby)}! Wat lief, hè ${hoi}?` });
   if (f.veel) o.push({ e: "🎡", t: `Wat een groot park heb jij, ${hoi}!` });
+
+  // 💬 Weetjes die het kind zelf vertelde → het maatje kent je écht.
+  const w = buddyWeetjes();
+  const roep = w.naam || hoi;
+  if (w.eten) o.push({ e: "😋", t: `Zeg ${roep}, is ${low(w.eten)} nog steeds het lekkerst?` }, { e: "🍽️", t: `Na het bouwen lekker ${low(w.eten)} eten?` });
+  if (w.dier) o.push({ e: "🐾", t: `Zullen we een ${low(w.dier)} voor je park zoeken, ${roep}?` });
+  if (w.kleur) o.push({ e: "🎨", t: `Bouw eens iets met ${low(w.kleur)} blokjes — jouw kleur!` });
+  if (w.leeftijd) o.push({ e: "🌟", t: `Voor iemand van ${w.leeftijd} bouw jij echt supermooi, ${roep}!` });
 
   if (soort === "draakje") {
     o.push(

@@ -6,7 +6,7 @@
 // Veilig: gesprek wordt NIET opgeslagen (alleen in beeld), invoer is begrensd,
 // en de server doet het echte contentfilter + de kindveilige system-prompt.
 import { useState, useRef, useEffect } from "react";
-import { BUDDY_BY_ID } from "./buddies";
+import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
 
 const STARTERS = [
@@ -76,6 +76,7 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
             kindNaam: facts?.naam || "",
             zwakVak: facts?.zwakVak || "",
             park: park || undefined,
+            weetjes: buddyWeetjes(),
           },
         }),
       });

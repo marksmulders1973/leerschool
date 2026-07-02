@@ -121,6 +121,23 @@ function buildSystemPrompt(ctx = {}) {
   if (ctx.lastWrongAnswer) {
     lines.push(`De leerling koos zojuist fout: "${ctx.lastWrongAnswer}".`);
   }
+  // Park-weetjes (Mark 2 jul): het maatje uit het park kent het kind; de
+  // tutor gebruikt roepnaam + interesses warm en terloops (bv. een som met
+  // pizza's als pizza het lievelingseten is). Nooit uitvragen of opsommen.
+  if (ctx.weetjes && typeof ctx.weetjes === "object") {
+    const veilig = (v) => String(v || "").replace(/\s+/g, " ").trim().slice(0, 30);
+    const w = ctx.weetjes;
+    const items = [];
+    if (veilig(w.naam)) items.push(`roepnaam: ${veilig(w.naam)}`);
+    if (veilig(w.leeftijd)) items.push(`leeftijd: ${veilig(w.leeftijd)}`);
+    if (veilig(w.eten)) items.push(`lievelingseten: ${veilig(w.eten)}`);
+    if (veilig(w.kleur)) items.push(`lievelingskleur: ${veilig(w.kleur)}`);
+    if (veilig(w.dier)) items.push(`lievelingsdier: ${veilig(w.dier)}`);
+    if (items.length) {
+      lines.push("");
+      lines.push(`OVER DE LEERLING (zelf verteld aan het park-maatje — gebruik af en toe warm en terloops, bv. de roepnaam of een voorbeeld met het lievelingseten/-dier; niet opsommen, niet elke beurt): ${items.join("; ")}.`);
+    }
+  }
   return lines.join("\n");
 }
 

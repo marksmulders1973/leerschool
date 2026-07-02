@@ -265,10 +265,59 @@ function BlokHond({ c, tailRef, legsRef }) {
   );
 }
 
+// 🐴 Paard: de eenhoorn-bouw zonder hoorn/regenboog — bruin, met manen en bles.
+function Paard({ c, legsRef }) {
+  return (
+    <group>
+      <mesh castShadow position={[0, 0.05, 0]} scale={[1, 0.85, 1.25]}><sphereGeometry args={[0.4, 16, 16]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.85} /></mesh>
+      <mesh castShadow position={[0, 0.32, 0.4]}><sphereGeometry args={[0.27, 16, 16]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.85} /></mesh>
+      <mesh position={[0, 0.24, 0.62]} scale={[0.8, 0.8, 1]}><sphereGeometry args={[0.16, 12, 12]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.85} /></mesh>
+      {[0, 1, 2, 3].map((i) => (
+        <mesh key={i} position={[0, 0.5 - i * 0.09, 0.24 - i * 0.06]} rotation={[0.3, 0, 0]}><boxGeometry args={[0.14, 0.1, 0.08]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      ))}
+      {[-0.09, 0.09].map((x, i) => <mesh key={i} position={[x, 0.55, 0.32]}><coneGeometry args={[0.05, 0.14, 5]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>)}
+      {[-0.11, 0.11].map((x, i) => <mesh key={i} position={[x, 0.34, 0.58]}><sphereGeometry args={[0.05, 10, 10]} /><meshStandardMaterial color="#2a1c12" roughness={0.4} /></mesh>)}
+      {[[0.18, 0.28], [-0.18, 0.28], [0.18, -0.28], [-0.18, -0.28]].map(([x, z], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.1, z]}>
+          <mesh castShadow position={[0, -0.2, 0]}><cylinderGeometry args={[0.08, 0.07, 0.4, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.85} /></mesh>
+        </group>
+      ))}
+      <mesh position={[0, 0.1, -0.5]} rotation={[-0.5, 0, 0]}><boxGeometry args={[0.1, 0.34, 0.08]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.8} /></mesh>
+    </group>
+  );
+}
+
+// 🦫 Bever: rond bruin lijf, platte kwispel-staart, tandjes — de bouwer.
+function Bever({ c, tailRef, legsRef }) {
+  return (
+    <group>
+      <mesh castShadow position={[0, 0.05, 0]} scale={[1, 0.9, 1.1]}><sphereGeometry args={[0.42, 16, 16]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.95} /></mesh>
+      <mesh position={[0, -0.02, 0.3]} scale={[0.75, 0.75, 0.55]}><sphereGeometry args={[0.3, 12, 12]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.95} /></mesh>
+      <mesh castShadow position={[0, 0.38, 0.3]}><sphereGeometry args={[0.28, 16, 16]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      {/* snuit + twee grote tandjes */}
+      <mesh position={[0, 0.3, 0.52]} scale={[0.9, 0.75, 0.8]}><sphereGeometry args={[0.14, 12, 12]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {[-0.035, 0.035].map((x, i) => <mesh key={i} position={[x, 0.18, 0.58]}><boxGeometry args={[0.05, 0.09, 0.03]} /><meshStandardMaterial color="#fdfbf6" roughness={0.5} /></mesh>)}
+      {[-0.12, 0.12].map((x, i) => <mesh key={i} position={[x, 0.46, 0.48]}><sphereGeometry args={[0.05, 10, 10]} /><meshStandardMaterial color="#2a1c12" roughness={0.4} /></mesh>)}
+      {[-0.16, 0.16].map((x, i) => <mesh key={i} position={[x, 0.6, 0.22]}><sphereGeometry args={[0.07, 8, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.95} /></mesh>)}
+      {[[0.18, 0.24], [-0.18, 0.24], [0.18, -0.2], [-0.18, -0.2]].map(([x, z], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.16, z]}>
+          <mesh castShadow position={[0, -0.1, 0]}><cylinderGeometry args={[0.08, 0.09, 0.2, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+        </group>
+      ))}
+      {/* platte bever-staart — kwispelt via tailRef */}
+      <group ref={tailRef} position={[0, 0.02, -0.42]}>
+        <mesh position={[0, -0.04, -0.22]} rotation={[-0.15, 0, 0]}><boxGeometry args={[0.3, 0.07, 0.45]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={1} /></mesh>
+      </group>
+    </group>
+  );
+}
+
 function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
   if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} tailRef={tailRef} legsRef={legsRef} />;
   if (soort === "blokhond") return <BlokHond c={c} tailRef={tailRef} legsRef={legsRef} />;
+  if (soort === "paard") return <Paard c={c} legsRef={legsRef} />;
+  if (soort === "bever") return <Bever c={c} tailRef={tailRef} legsRef={legsRef} />;
   if (soort === "eenhoorn") return <Eenhoorn c={c} />;
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;

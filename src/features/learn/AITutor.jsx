@@ -11,7 +11,7 @@ import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
-import { actieveBuddyPersona } from "../zoo/buddies.js";
+import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
 import { track } from "../../utils.js";
 
 // Charley's geanimeerde kop (3D, bewegende mond) — lazy zodat three.js pas
@@ -150,6 +150,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             currentCheckQuestion: currentCheck?.q,
             checkOptions: currentCheck?.options,
             lastWrongAnswer,
+            // Park-weetjes (Mark 2 jul): het maatje kent het kind — de tutor
+            // spreekt met roepnaam en mag er warm op inhaken.
+            weetjes: buddyWeetjes(),
           },
         }),
       });
