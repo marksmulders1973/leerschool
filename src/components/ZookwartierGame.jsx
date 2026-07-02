@@ -279,6 +279,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyEye, setBuddyEye] = useState(false);      // 🐉 door de ogen van je buddy
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
   const [rideIdx, setRideIdx] = useState(null);         // 🎠 in welke attractie zit je? (index)
+  const [zweef, setZweef] = useState(false);            // 🪽 zweef-modus (Minecraft-fly): snel + over alles heen
   // Standaard (alle uit) = derde-persoons achter de speler (poppetje + buddy in beeld).
   // 🐾 maatje — Charley is het STANDAARD maatje (Mark 1 jul); wie zelf iets koos
   // houdt z'n keuze.
@@ -391,10 +392,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setBuddyPickerOpen(true);
   };
 
-  // Toetsenbord-besturing (laptop): pijltjes / WASD.
+  // Toetsenbord-besturing (laptop): pijltjes / WASD. Spatie = zweven aan/uit.
   useEffect(() => {
     const codes = new Set(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "KeyW", "KeyA", "KeyS", "KeyD"]);
-    const down = (e) => { if (codes.has(e.code)) { inputRef.current.keys[e.code] = true; if (e.code.startsWith("Arrow")) e.preventDefault(); } };
+    const down = (e) => {
+      if (e.code === "Space" && !/INPUT|TEXTAREA|SELECT/.test(e.target?.tagName || "")) { e.preventDefault(); setZweef((v) => !v); return; }
+      if (codes.has(e.code)) { inputRef.current.keys[e.code] = true; if (e.code.startsWith("Arrow")) e.preventDefault(); }
+    };
     const up = (e) => { if (codes.has(e.code)) inputRef.current.keys[e.code] = false; };
     window.addEventListener("keydown", down);
     window.addEventListener("keyup", up);
@@ -1243,6 +1247,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           firstPerson={firstPerson}
           rideTrain={rideTrain}
           rideIdx={rideIdx}
+          zweef={zweef}
           spelerNaam={naam}
           goedeScore={goedeScore}
           zwakVak={zwakVak}
@@ -1319,6 +1324,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={() => { sluitBouwTip(); setBouwen(true); setShopCat("blok"); setFirstPerson(false); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🧱 Laat zien</button>
           <button onClick={sluitBouwTip} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
         </div>
+      )}
+
+      {/* 🪽 Zweef-knop (Minecraft-fly): snel door je park, over alles heen.
+          Op laptop ook met de spatiebalk aan/uit. */}
+      {!firstPerson && rideIdx == null && !rideTrain && (
+        <button
+          onClick={() => setZweef((v) => !v)}
+          title={zweef ? "Weer lopen (of druk spatie)" : "Zweven — snel door je park (of druk spatie)"}
+          style={{ position: "absolute", right: 16, bottom: 150, zIndex: 12, border: zweef ? "3px solid #fff" : "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: zweef ? "linear-gradient(135deg,#38bdf8,#2563eb)" : "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer" }}
+        >
+          {zweef ? "🚶" : "🪽"}
+        </button>
       )}
 
       {/* 🎠 In een attractie: grote duidelijke uitstap-knop. */}

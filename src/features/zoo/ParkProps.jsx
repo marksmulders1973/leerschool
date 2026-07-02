@@ -423,7 +423,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -503,7 +503,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dir.current.addScaledVector(fwd.current, -my);
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
-      doelV.current.copy(dir.current).multiplyScalar(4.2 * Math.min(1, mag));
+      // 🪽 Zweven (Mark 2 jul, Minecraft-fly): 2× zo snel door het park.
+      doelV.current.copy(dir.current).multiplyScalar((zweef ? 9 : 4.2) * Math.min(1, mag));
     } else {
       doelV.current.set(0, 0, 0);
     }
@@ -513,14 +514,24 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     // stap-tempo mee, zodat de voeten niet over de grond glijden.
     moving.current = sp > 0.4 ? sp : 0;
     if (moving.current) state.performance.regress(); // AdaptiveDpr: even lagere resolutie tijdens lopen
-    if (sp > 0.05) verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
+    if (sp > 0.05) {
+      if (zweef) {
+        // Zwevend: geen botsing — je vliegt over hekken en gebouwen heen.
+        pos.current.x += vel.current.x * dts;
+        pos.current.z += vel.current.z * dts;
+        const zd = Math.hypot(pos.current.x, pos.current.z);
+        if (zd > 78) { pos.current.x *= 78 / zd; pos.current.z *= 78 / zd; }
+      } else {
+        verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
+      }
+    }
     if (mag > 0.12 && dir.current.lengthSq() > 0.0001) {
       const doelHoek = Math.atan2(dir.current.x, dir.current.z);
       let dh = doelHoek - node.rotation.y;
       dh = Math.atan2(Math.sin(dh), Math.cos(dh)); // kortste draai-richting
       node.rotation.y += dh * Math.min(1, 14 * dts);
     }
-    const tyDoel = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    const tyDoel = (heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0) + (zweef ? 4.5 : 0);
     if (yGlad.current == null) yGlad.current = tyDoel;
     yGlad.current += (tyDoel - yGlad.current) * Math.min(1, 12 * dts);
     const ty = yGlad.current;
@@ -1764,7 +1775,10 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
       const info = posOp(headS - i * WAGON_GAP);
       if (!info) continue;
       g.position.copy(info.p);
-      g.rotation.y = Math.atan2(info.dir.x, info.dir.z);
+      // +π: de wagon-modellen wezen met hun achterkant vooruit (Mark: "trein
+      // rijdt achteruit"); 1.6× groter zodat hij in verhouding is met de speler.
+      g.rotation.y = Math.atan2(info.dir.x, info.dir.z) + Math.PI;
+      g.scale.setScalar(1.6);
       if (i === 0 && headRef) { headRef.current = { p: info.p.clone(), dir: info.dir.clone() }; }
     }
   });
@@ -1805,11 +1819,13 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 export function AttractieCamera({ actief, posRef, centrum }) {
   useFrame((state) => {
     if (!actief || !posRef?.current || !centrum) return;
+    // Eerste-persoon (Mark 2 jul): je zít in het zitje en kijkt naar búíten
+    // over het park terwijl je meedraait — zoals echt in de draaimolen.
     const p = posRef.current;
     const rx = p.x - centrum[0], rz = p.z - centrum[2];
     const rl = Math.hypot(rx, rz) || 1;
-    state.camera.position.set(p.x + (rx / rl) * 1.4, p.y + 1.5, p.z + (rz / rl) * 1.4);
-    state.camera.lookAt(centrum[0], p.y + 0.4, centrum[2]);
+    state.camera.position.set(p.x, p.y + 0.75, p.z);
+    state.camera.lookAt(p.x + (rx / rl) * 10, p.y + 0.4, p.z + (rz / rl) * 10);
   });
   return null;
 }
@@ -1820,9 +1836,9 @@ export function RideCamera({ headRef, active }) {
     if (!active || !headRef || !headRef.current) return;
     const { p, dir } = headRef.current;
     if (!p || !dir) return;
-    const back = dir.clone().multiplyScalar(-3.2);
-    camera.position.set(p.x + back.x, p.y + 2.4, p.z + back.z);
-    camera.lookAt(p.x + dir.x * 2, p.y + 0.6, p.z + dir.z * 2);
+    // Eerste-persoon: je zit ín de locomotief en kijkt vooruit over het spoor.
+    camera.position.set(p.x, p.y + 1.6, p.z);
+    camera.lookAt(p.x + dir.x * 6, p.y + 1.1, p.z + dir.z * 6);
   });
   return null;
 }
