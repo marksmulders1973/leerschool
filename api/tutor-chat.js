@@ -62,7 +62,10 @@ function ageInstructie(ageGroup) {
 }
 
 function buildSystemPrompt(ctx = {}) {
-  const ageGroup = inferAgeGroup(ctx.pathId);
+  // Heeft het kind zijn leeftijd aan het park-maatje verteld? Dan weegt die
+  // zwaarder dan de pathId-gok voor het taalniveau.
+  const lft = parseInt(String(ctx.weetjes?.leeftijd || ""), 10);
+  const ageGroup = lft >= 4 && lft <= 12 ? "po" : inferAgeGroup(ctx.pathId);
   const lines = [];
   lines.push(
     "Je bent een vriendelijke leerbegeleider voor Leerkwartier, een Nederlandse " +

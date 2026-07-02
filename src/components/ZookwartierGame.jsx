@@ -294,6 +294,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [bouwTip, setBouwTip] = useState(false);         // eenmalige maatje-tip "je kunt zelf bouwen!"
   const [buddyVraag, setBuddyVraag] = useState(null);    // 💬 dagelijks kennismakings-vraagje van het maatje
   const [buddyAntwoord, setBuddyAntwoord] = useState("");
+  // 🎒 Blokjes-rugzak (12-agent-review): weghakken = verzamelen. Het aantal
+  // per bloksoort staat als badge op de blok-knop; terugplaatsen haalt het
+  // er weer uit. Puur verzamel-plezier (blokken kosten toch niks).
+  const [rugzak, setRugzak] = useState(() => { try { return JSON.parse(localStorage.getItem("lk_blok_rugzak") || "{}") || {}; } catch { return {}; } });
+  const zetRugzak = (fn) => setRugzak((r) => { const n = fn({ ...r }); try { localStorage.setItem("lk_blok_rugzak", JSON.stringify(n)); } catch { /* */ } return n; });
+  const pakIn = (id) => { if (isBlok(id)) zetRugzak((r) => { r[id] = (r[id] || 0) + 1; return r; }); };
+  const pakUit = (id) => zetRugzak((r) => { if (r[id] > 0) r[id] -= 1; if (!r[id]) delete r[id]; return r; });
   const bouwCursorRef = useRef(null);                    // 🎯 waar het richt-blok nu staat {cell, h}
   const [welkomWeg, setWelkomWeg] = useState(false);     // onboarding-hint weggeklikt?
   const [goedeScore, setGoedeScore] = useState(null);    // mooie Leerkwartier-score → bezoeker maakt er een compliment over
@@ -758,6 +765,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (placedItems.some((it) => isBlok(it.assetId) && it.kx === kx && it.kz === kz && (it.kh || 0) === kh)) return; // plek al bezet
     if (kubBotstMetItem(kx, kz)) { flits("Daar staat al iets."); return; }
     setPlacedItems((items) => [...items, { assetId: placing.assetId, kx, kz, kh, price: 0 }]);
+    pakUit(placing.assetId); // uit je rugzak, als je er nog had
   };
 
   // ⛏️ Weghakken (Minecraft-stijl): de kubus met de zwarte markeer-rand
@@ -765,6 +773,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const hakWeg = () => {
     const c = bouwCursorRef.current;
     if (!c || c.hakH == null) { flits("Loop naar een blokje toe — de zwarte rand laat zien wat je weghakt."); return; }
+    const geraakt = placedItems.find((it) => isBlok(it.assetId) && it.kx === c.kx && it.kz === c.kz && (it.kh || 0) === c.hakH);
+    if (geraakt) pakIn(geraakt.assetId);
     setPlacedItems((items) => {
       const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === c.kx && it.kz === c.kz && (it.kh || 0) === c.hakH);
       return idx < 0 ? items : items.filter((_, i) => i !== idx);
@@ -1332,10 +1342,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           placedItems={placedItems}
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
-          onHakBlok={(k) => setPlacedItems((items) => {
-            const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === k.kx && it.kz === k.kz && (it.kh || 0) === (k.kh || 0));
-            return idx < 0 ? items : items.filter((_, ix) => ix !== idx);
-          })}
+          onHakBlok={(k) => {
+            if (k.assetId) pakIn(k.assetId);
+            setPlacedItems((items) => {
+              const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === k.kx && it.kz === k.kz && (it.kh || 0) === (k.kh || 0));
+              return idx < 0 ? items : items.filter((_, ix) => ix !== idx);
+            });
+          }}
           bouwCursorRef={bouwCursorRef}
           bouwModus={bouwen}
           onSelectPlaced={(idx) => { setPlacing(null); setColorMode(false); setSelectedIdx(idx); }}
@@ -1387,6 +1400,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         currentId={buddyId}
         onChoose={(id) => { setBuddyId(id); setBuddyNaamEff(buddyNaamVan(id, BUDDY_BY_ID[id]?.naam || "")); try { track("buddy_gekozen", { id }); } catch { /* */ } }}
         onRename={(id, n) => { if (id === buddyId) setBuddyNaamEff(n); try { track("buddy_naam", { id }); } catch { /* */ } }}
+        onLeren={onOpenLeerpaden ? () => { setBuddyPickerOpen(false); onOpenLeerpaden(); } : undefined}
       />
 
       {/* 💬 Praten met je maatje (AI, kindveilig). Maatje is ook parkgids. */}
@@ -1684,14 +1698,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               {shopCat === "blok" && SHOP_CATS.find((c) => c.key === "blok").items.map((p) => {
                 const a = getAsset(p.assetId);
                 const actief = placing?.assetId === p.assetId;
+                // ✨ Verdien-blok nog niet vrijgespeeld → spaar-knop naar het leren.
+                if ((a?.verdienStappen || 0) > geleerdeStappen) {
+                  const rest = a.verdienStappen - geleerdeStappen;
+                  return (
+                    <button key={p.assetId} onClick={() => { if (onOpenLeerpaden) onOpenLeerpaden(); }} title={`Speel het ${p.label.toLowerCase()} vrij door te leren`} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: "2px dashed #c9b06a", borderRadius: 12, padding: "6px 8px", background: "rgba(255,255,255,0.55)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>
+                      <span style={{ fontSize: 20, lineHeight: 1 }}>🔒</span>
+                      <span style={{ font: "800 10px system-ui", color: "#8a7a4a", whiteSpace: "nowrap" }}>{p.emoji} nog {rest} st.</span>
+                    </button>
+                  );
+                }
+                const opZak = rugzak[p.assetId] || 0;
                 return (
                   <button
                     key={p.assetId}
                     onClick={() => startKopen(p)}
                     disabled={coins < p.price}
-                    title={`${p.label} — ${p.price} 🪙`}
-                    style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: actief ? "3px solid #fff" : "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "6px 8px", background: coins < p.price ? "rgba(120,120,120,0.5)" : (a?.blokKleur || "#a97e4e"), boxShadow: actief ? "0 0 0 3px #2e7d32, 0 3px 10px rgba(0,0,0,.3)" : "0 2px 8px rgba(0,0,0,.25)", cursor: coins < p.price ? "not-allowed" : "pointer", transform: actief ? "scale(1.1)" : "none" }}
+                    title={`${p.label}${opZak > 0 ? ` — ${opZak} in je rugzak` : ""}`}
+                    style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: actief ? "3px solid #fff" : "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "6px 8px", background: coins < p.price ? "rgba(120,120,120,0.5)" : (a?.blokKleur || "#a97e4e"), boxShadow: actief ? "0 0 0 3px #2e7d32, 0 3px 10px rgba(0,0,0,.3)" : "0 2px 8px rgba(0,0,0,.25)", cursor: coins < p.price ? "not-allowed" : "pointer", transform: actief ? "scale(1.1)" : "none" }}
                   >
+                    {opZak > 0 && <span style={{ position: "absolute", top: -6, right: -6, minWidth: 18, height: 18, padding: "0 4px", borderRadius: 999, background: "#fff", color: "#234", font: "800 10.5px/18px system-ui", boxShadow: "0 1px 4px rgba(0,0,0,.3)" }}>🎒{opZak > 99 ? "99+" : opZak}</span>}
                     <span style={{ fontSize: 20, lineHeight: 1, filter: "drop-shadow(0 1px 2px rgba(0,0,0,.4))" }}>{p.emoji}</span>
                     <span style={{ font: "800 10.5px system-ui", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.55)", whiteSpace: "nowrap" }}>{p.label.replace("blok", "").replace("Blok", "").trim() || p.label}{p.price > 0 ? ` ${p.price}🪙` : ""}</span>
                   </button>

@@ -8,7 +8,7 @@ import { BUDDIES, BUDDY_BY_ID, buddyBeschikbaar, bezitBuddies, heeftGekozen, kie
 // Mini-3D-weergave (rondraaiend .glb) — lazy zodat three.js pas laadt als nodig.
 const MaatjeMini3D = lazy(() => import("./MaatjeMini3D"));
 
-export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, currentId = "", onChoose, onRename }) {
+export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, currentId = "", onChoose, onRename, onLeren }) {
   const [naamInput, setNaamInput] = useState("");
   const [naamVoor, setNaamVoor] = useState("");
   if (!open) return null;
@@ -92,6 +92,14 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
             );
           })}
         </div>
+
+        {/* Vergrendelde maatjes zijn een leer-motivator — geef dan ook een
+            directe route naar het leren (12-agent-review: dead end zonder knop). */}
+        {onLeren && BUDDIES.some((b) => !buddyBeschikbaar(b, geleerdeStappen)) && (
+          <button onClick={onLeren} style={{ display: "block", width: "100%", marginTop: 12, border: "none", borderRadius: 999, padding: "12px 16px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 12px rgba(0,0,0,.2)", cursor: "pointer" }}>
+            📚 Ga leren en verdien ze
+          </button>
+        )}
 
         {actiefBuddy && (
           <div style={{ marginTop: 14, padding: "11px 12px", background: "#f6faf3", border: "1px solid #dcebd4", borderRadius: 14 }}>

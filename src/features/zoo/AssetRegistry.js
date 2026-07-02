@@ -180,6 +180,10 @@ export const ZOO_ASSETS = {
   blokSneeuw: { id: "blokSneeuw", kind: "decor", name: "Sneeuwblok", emoji: "⬜", procedural: "blok", blokKleur: "#eef2f4", cells: 1, price: 0 },
   blokGlas: { id: "blokGlas", kind: "decor", name: "Glasblok", emoji: "🔷", procedural: "blok", blokKleur: "#bfe3f2", doorzichtig: true, cells: 1, price: 0 },
   blokDak: { id: "blokDak", kind: "decor", name: "Dak-punt", emoji: "🔺", procedural: "blokdak", blokKleur: "#c0463c", cells: 1, price: 0 },
+  // ✨ Verdien-blokken (12-agent-review 2 jul): speciale blokken die je alleen
+  // vrijspeelt door te leren — bouwen wordt zo óók een leer-beloning.
+  blokGoud: { id: "blokGoud", kind: "decor", name: "Goudblok", emoji: "🟡", procedural: "blok", blokKleur: "#f2c14e", cells: 1, price: 0, verdienStappen: 60 },
+  blokDiamant: { id: "blokDiamant", kind: "decor", name: "Diamantblok", emoji: "💎", procedural: "blok", blokKleur: "#7fe3e0", cells: 1, price: 0, verdienStappen: 100 },
   // ✨ Fabelwezens (Mark 2 jul): niet te koop — alleen te SPAREN door te leren
   // (mijlpalen in unlocks.js). Draak/feniks vliegen echt rond, eenhoorn en elf
   // wandelen door je park.
@@ -204,7 +208,7 @@ export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "al
 export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
-export const PLAATSBARE_BLOKKEN = ["blokHout", "blokSteen", "blokBaksteen", "blokZand", "blokGras", "blokSneeuw", "blokGlas", "blokDak"];
+export const PLAATSBARE_BLOKKEN = ["blokHout", "blokSteen", "blokBaksteen", "blokZand", "blokGras", "blokSneeuw", "blokGlas", "blokDak", "blokGoud", "blokDiamant"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];
 
 // Footprint (aantal vakjes) van een item; klein decor = 1, dieren lopen vrij
