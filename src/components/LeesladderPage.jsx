@@ -199,6 +199,10 @@ const TREDEN = [
 // ── Print-stylesheet (zelfde truc als het oefenpakket) ──────────
 const PRINT_CSS = `
 @media print {
+  /* index.html zet html,body op overflow-x:hidden — dat laat Chrome het
+     printwerk afkappen op 1 pagina. In print alles vrijgeven. */
+  html, body { overflow: visible !important; height: auto !important; max-width: none !important; }
+  #root { min-height: 0 !important; }
   body * { visibility: hidden !important; }
   .leesladder-print, .leesladder-print * { visibility: visible !important; }
   .leesladder-print {

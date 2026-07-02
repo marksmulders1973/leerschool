@@ -105,6 +105,10 @@ function stripMd(t = "") {
 // het werkboek. Klassieke visibility-truc zodat alle layout-chrome wegvalt.
 const PRINT_CSS = `
 @media print {
+  /* index.html zet html,body op overflow-x:hidden — dat laat Chrome het
+     printwerk afkappen op 1 pagina. In print alles vrijgeven. */
+  html, body { overflow: visible !important; height: auto !important; max-width: none !important; }
+  #root { min-height: 0 !important; }
   body * { visibility: hidden !important; }
   .oefenpakket-print, .oefenpakket-print * { visibility: visible !important; }
   .oefenpakket-print {
