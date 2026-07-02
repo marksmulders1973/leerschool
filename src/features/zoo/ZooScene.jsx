@@ -226,12 +226,58 @@ function BlokFontein({ x, y, z }) {
   );
 }
 
+// 🏠 Blok-huis (Mark 2 jul: "vervang oude huizen door Minecraft-huizen waar
+// je in kunt"): 6×6 m huis in kubus-stijl met een échte deuropening (2 m) —
+// binnen is vrij (zie vasteCellen) dus je loopt gewoon naar binnen. Acht
+// kleurvarianten vervangen houseA-H; kleuren-verf werkt op dak/muur/deur.
+const HUIS_VARIANT = {
+  houseA: { muur: "#e8e0d2", dak: "#c0463c" }, houseB: { muur: "#dfe8ee", dak: "#3a6ad8" },
+  houseC: { muur: "#f2e3c0", dak: "#3ba55d" }, houseD: { muur: "#e3cfa8", dak: "#8a5a3a" },
+  houseE: { muur: "#d8c8e8", dak: "#7c3aed" }, houseF: { muur: "#f6d9c4", dak: "#e8892e" },
+  houseG: { muur: "#cfe3d8", dak: "#1f7a8c" }, houseH: { muur: "#b5563f", dak: "#4a3320" },
+};
+function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEditable = false, onPickPart }) {
+  const v = HUIS_VARIANT[variant] || HUIS_VARIANT.houseA;
+  const muur = colors?.muur || v.muur;
+  const dak = colors?.dak || v.dak;
+  const deur = colors?.deur || "#6b4a2b";
+  const pak = (grp) => (colorEditable && onPickPart ? { onPointerDown: (e) => { e.stopPropagation(); onPickPart(grp); } } : {});
+  const W = 0.5; // muurdikte
+  return (
+    <group position={[x, y, z]} rotation={[0, rotation, 0]}>
+      {/* achtermuur + zijmuren (3 m hoog) */}
+      <mesh castShadow receiveShadow position={[0, 1.5, -2.75]} {...pak("muur")}><boxGeometry args={[6, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[-2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[2.75, 1.5, 0]} {...pak("muur")}><boxGeometry args={[W, 3, 6]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      {/* voormuur: 2 segmenten + latei → deuropening van 2 m breed, 2 m hoog */}
+      <mesh castShadow receiveShadow position={[-2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[2, 1.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 3, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow position={[0, 2.5, 2.75]} {...pak("muur")}><boxGeometry args={[2, 1, W]} /><meshStandardMaterial color={muur} roughness={1} /></mesh>
+      {/* deurposten */}
+      <mesh position={[-1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial color={deur} roughness={1} /></mesh>
+      <mesh position={[1.05, 1, 2.78]} {...pak("deur")}><boxGeometry args={[0.16, 2, 0.6]} /><meshStandardMaterial color={deur} roughness={1} /></mesh>
+      {/* glas-ramen op de zijmuren en achterkant */}
+      {[[-2.78, 0, true], [2.78, 0, true], [0, -2.78, false]].map(([rx, rz, zij], i) => (
+        <mesh key={i} position={zij ? [rx, 1.6, 0] : [rx, 1.6, rz]}>
+          <boxGeometry args={zij ? [0.12, 1, 1.8] : [1.8, 1, 0.12]} />
+          <meshStandardMaterial color="#bfe3f2" transparent opacity={0.55} roughness={0.3} />
+        </mesh>
+      ))}
+      {/* plat kubus-dek + zadeldak van blok-treden (Minecraft-stijl) */}
+      <mesh castShadow position={[0, 3.25, 0]} {...pak("dak")}><boxGeometry args={[6.6, 0.5, 6.6]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 3.95, 0]} {...pak("dak")}><boxGeometry args={[4.4, 0.9, 6.7]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
+      <mesh castShadow position={[0, 4.7, 0]} {...pak("dak")}><boxGeometry args={[2.2, 0.9, 6.8]} /><meshStandardMaterial color={dak} roughness={1} /></mesh>
+    </group>
+  );
+}
+
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
 function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0 }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
   if (assetId === "fountain") return <BlokFontein x={x} y={y} z={z} />;
+  if (HUIS_VARIANT[assetId]) return <BlokHuis variant={assetId} x={x} y={y} z={z} rotation={rotation} colors={colors} colorEditable={colorEditable} onPickPart={onPickPart} />;
   if (a.kind === "fabel") return <FabelWezen soort={a.fabelSoort} position={[x, y, z]} />;
   if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} />;
@@ -647,6 +693,18 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     placedItems.forEach((it) => {
       if (isBlok(it.assetId)) return; // kubussen blokkeren op hun eigen fijne raster (kubVast)
       if (!isVast(it.assetId)) return;
+      // Blok-huizen zijn BEGAANBAAR: alleen de muur-rand blokkeert, en de
+      // deur-cel (voorkant-midden, draait mee) blijft open → naar binnen lopen.
+      if (/^house[A-H]$/.test(it.assetId)) {
+        const hoek = it.rotation || 0;
+        const deurKey = cellKey(it.cell[0] + Math.round(Math.sin(hoek)), it.cell[1] + Math.round(Math.cos(hoek)));
+        for (const [cx, cz] of footprint(it.cell[0], it.cell[1], 3)) {
+          if (cx === it.cell[0] && cz === it.cell[1]) continue; // binnen = vrij
+          const k = cellKey(cx, cz);
+          if (k !== deurKey) s.add(k);
+        }
+        return;
+      }
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
     });
     return s;
