@@ -22,7 +22,7 @@ const PAKKETTEN = [
     emoji: "🪜",
     titel: "De Leesladder — begrijpend lezen",
     groep: "groep 5-8",
-    tekst: "Begint bij teksten van 5 zinnen en bouwt in 4 treden op naar echte toets-lengte. 15 teksten, 46 vragen, antwoordsleutel die per vraag de lees-truc uitlegt.",
+    tekst: "Begint bij teksten van 5 zinnen en bouwt in 4 treden op naar echte toets-lengte. Drie versies met elk 15 teksten — na een fout oefen je met verse verhalen verder. Antwoordsleutel legt per vraag de lees-truc uit.",
     accent: "#00C853",
   },
   {
