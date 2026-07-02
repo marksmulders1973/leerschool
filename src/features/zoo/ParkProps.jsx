@@ -5,7 +5,7 @@
 import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3, Color, CanvasTexture } from "three";
+import { Vector3, Color, CanvasTexture, CatmullRomCurve3 } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
@@ -1816,16 +1816,97 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 // 🎠 Attractie-camera (Mark 2 jul, "instappen in alle attracties"): je zit op
 // een meedraaiend zitje en kijkt naar het hart van de attractie — draaimolen-
 // gevoel. `posRef` = wereldpositie van het zitje (geschreven door de attractie).
+// 🎢 Achtbaan (Mark 2 jul, naar zijn Roblox-screenshot): blauwe baan op witte
+// steunpilaren met een stationnetje — kettinglift omhoog, mega-drop naar
+// beneden, twee heuvels. Het karretje rijdt met échte zwaartekracht (versnelt
+// omlaag, remt omhoog) en is instapbaar in eerste persoon (rideRef).
+const _coasterAhead = new Vector3();
+export function Coaster({ position = [0, 0, 0], rotation = 0, rideRef }) {
+  const cart = useRef();
+  const st = useRef({ t: 0, v: 3 });
+  const { curve, len, supports } = useMemo(() => {
+    const pts = [
+      [-5.0, 0.55, 4.4], [-1.0, 0.55, 4.6], [2.8, 0.8, 4.3],   // station + vertrek
+      [5.6, 3.4, 2.2], [6.4, 8.2, -1.6],                        // kettinglift → top
+      [4.6, 2.2, -4.6], [1.4, 0.9, -5.2],                       // MEGA-drop → dal
+      [-1.8, 4.6, -4.6], [-4.8, 1.4, -2.6],                     // heuvel 2 → af
+      [-6.4, 2.8, 0.4], [-6.0, 0.9, 3.0],                       // bocht-heuveltje → aanloop
+    ].map(([x, y, z]) => new Vector3(x, y, z));
+    const curve = new CatmullRomCurve3(pts, true, "catmullrom", 0.75);
+    const len = curve.getLength();
+    // Witte steunpilaren onder de hoge stukken (zoals in het voorbeeld).
+    const supports = [];
+    for (let i = 0; i < 56; i++) {
+      const p = curve.getPointAt(i / 56);
+      if (p.y > 1.3) supports.push([p.x, p.y - 0.32, p.z]);
+    }
+    return { curve, len, supports };
+  }, []);
+  useFrame((_, rawDt) => {
+    const s = st.current;
+    const dt = Math.min(rawDt, 0.05);
+    const tan = curve.getTangentAt(s.t);
+    s.v += -tan.y * 7.5 * dt;                          // zwaartekracht
+    if (tan.y > 0.2 && s.v < 2.6) s.v = 2.6;           // kettinglift trekt je omhoog
+    if (s.t < 0.1 || s.t > 0.97) s.v = Math.min(s.v, 3); // rustig door het station
+    s.v = Math.max(1.8, Math.min(11, s.v - s.v * 0.045 * dt));
+    s.t = (s.t + (s.v * dt) / len) % 1;
+    if (!cart.current) return;
+    cart.current.position.copy(curve.getPointAt(s.t));
+    _coasterAhead.copy(curve.getPointAt((s.t + 0.012) % 1));
+    cart.current.parent.localToWorld(_coasterAhead);
+    cart.current.lookAt(_coasterAhead);
+    if (rideRef) cart.current.getWorldPosition(rideRef.current);
+  });
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* de baan: blauwe buis + stalen ruggengraat eronder */}
+      <mesh castShadow><tubeGeometry args={[curve, 200, 0.16, 8, true]} /><meshStandardMaterial color="#2b3f9e" roughness={0.55} /></mesh>
+      <mesh position={[0, -0.3, 0]}><tubeGeometry args={[curve, 120, 0.07, 6, true]} /><meshStandardMaterial color="#9aa3ad" roughness={0.7} /></mesh>
+      {supports.map(([x, y, z], i) => (
+        <mesh key={i} position={[x, y / 2, z]} castShadow><cylinderGeometry args={[0.09, 0.12, Math.max(0.1, y), 6]} /><meshStandardMaterial color="#e8ecf2" roughness={0.6} /></mesh>
+      ))}
+      {/* station: perron + palen + blauw afdak */}
+      <group position={[-1.5, 0, 5.6]}>
+        <mesh position={[0, 0.14, 0]} receiveShadow><boxGeometry args={[5.6, 0.28, 1.5]} /><meshStandardMaterial color="#cfd6de" roughness={0.9} /></mesh>
+        {[[-2.5, -0.5], [2.5, -0.5], [-2.5, 0.5], [2.5, 0.5]].map(([px, pz], i) => (
+          <mesh key={i} position={[px, 1.4, pz]} castShadow><cylinderGeometry args={[0.06, 0.06, 2.6, 6]} /><meshStandardMaterial color="#e8ecf2" /></mesh>
+        ))}
+        <mesh position={[0, 2.76, 0]} castShadow><boxGeometry args={[6.0, 0.14, 2.0]} /><meshStandardMaterial color="#2b3f9e" roughness={0.6} /></mesh>
+      </group>
+      {/* het karretje */}
+      <group ref={cart}>
+        <mesh castShadow position={[0, 0.26, 0]}><boxGeometry args={[0.82, 0.4, 1.5]} /><meshStandardMaterial color="#2b62d9" roughness={0.5} /></mesh>
+        <mesh position={[0, 0.5, -0.6]}><boxGeometry args={[0.82, 0.42, 0.16]} /><meshStandardMaterial color="#1d2c66" roughness={0.5} /></mesh>
+        <mesh position={[0, 0.42, 0.68]} rotation={[-0.5, 0, 0]}><boxGeometry args={[0.78, 0.3, 0.1]} /><meshStandardMaterial color="#bfe3f2" roughness={0.2} /></mesh>
+      </group>
+    </group>
+  );
+}
+
+const _attrDir = new Vector3();
 export function AttractieCamera({ actief, posRef, centrum }) {
-  useFrame((state) => {
-    if (!actief || !posRef?.current || !centrum) return;
-    // Eerste-persoon (Mark 2 jul): je zít in het zitje en kijkt naar búíten
-    // over het park terwijl je meedraait — zoals echt in de draaimolen.
+  const prev = useRef(new Vector3());
+  const dir = useRef(new Vector3(0, 0, 1));
+  const init = useRef(false);
+  useFrame((state, dt) => {
+    if (!actief || !posRef?.current || !centrum) { init.current = false; return; }
     const p = posRef.current;
-    const rx = p.x - centrum[0], rz = p.z - centrum[2];
-    const rl = Math.hypot(rx, rz) || 1;
+    if (!init.current) { prev.current.copy(p); init.current = true; return; }
+    // Eerste-persoon: beweeg je snel (achtbaan/trein)? Kijk in je rijrichting,
+    // óók omhoog/omlaag. Draai je rustig rond (draaimolen)? Kijk naar buiten.
+    const vx = p.x - prev.current.x, vy = p.y - prev.current.y, vz = p.z - prev.current.z;
+    const speed = dt > 0 ? Math.hypot(vx, vy, vz) / dt : 0;
+    if (speed > 2.2) {
+      dir.current.lerp(_attrDir.set(vx, vy, vz).normalize(), 0.35);
+    } else {
+      const rx = p.x - centrum[0], rz = p.z - centrum[2];
+      const rl = Math.hypot(rx, rz) || 1;
+      dir.current.lerp(_attrDir.set(rx / rl, 0, rz / rl), 0.15);
+    }
+    prev.current.copy(p);
     state.camera.position.set(p.x, p.y + 0.75, p.z);
-    state.camera.lookAt(p.x + (rx / rl) * 10, p.y + 0.4, p.z + (rz / rl) * 10);
+    state.camera.lookAt(p.x + dir.current.x * 10, p.y + 0.4 + dir.current.y * 8, p.z + dir.current.z * 10);
   });
   return null;
 }

@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -313,6 +313,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} rideRef={rideRef} />;
+  if (a.procedural === "coaster") return <Coaster position={[x, y, z]} rotation={rotation} rideRef={rideRef} />;
   if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
   if (a.procedural === "rail") return <RailTile position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "station") return <Station position={[x, y, z]} rotation={rotation} />;
