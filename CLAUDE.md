@@ -56,6 +56,17 @@ Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. 
 - **Reageren = #1 hefboom:** een paar oprechte waarde-replies op verse ICP-gesprekken (zoek `doorstroomtoets`/`schooladvies`/`citostress`/`bijles`/`groep 8`) + paar ICP-follows. **STOP bij het eerste throttle-signaal** (follow registreert niet) — nooit doorrammen tot een block (jong account = ban-risico).
 - **KLIK-METEN (in élk dagrapport):** query events `source='threads' OR props->>'utm_source'='threads'` → "via Threads: N" melden. NB: reply-first optimaliseert eerst voor volgers/bereik; klikken zijn secundair/lagging. Volledig recept: memory [[project_studiebol_vraag_vd_dag_post]] + [[studiebol-threads]].
 
+### Dagelijkse reactie-check — reageren op mensen die óns iets vragen (Mark 2026-07-02)
+
+**Vast onderdeel van dezelfde sessie-start-batch (Chrome nodig).** Naast zelf posten/engagen: elke dag checken of er **reacties op onze eigen kanalen** binnenkwamen en die beantwoorden — niemand mag onbeantwoord blijven.
+
+1. **Facebook**: `facebook.com/notifications` — reacties op pagina-posts van Leerkwartier + de eigen groep **"Doorstroomtoets 2027 — voorbereiding & tips (groep 7-8)"** (groep-id 1654712919073910). Let op: er lopen ook privé-/marktplaats-meldingen van Mark doorheen — alleen Leerkwartier-gerelateerde oppakken.
+2. **Instagram** (@leerkwartier): reacties onder recente posts/reels.
+3. **Threads**: replies onder onze threads (dagvraag!) — antwoord op de dagvraag altijd bevestigen/uitleggen.
+4. **Reageer als Leerkwartier**: persoonlijk (naam noemen), waarde eerst, eerlijk, geen spam. Waar het écht helpt een concrete link meegeven: `/oefenpakket` (printbaar + e-mail-opt-in), `/vandaag` (dagelijkse oefenvraag), `/gratis-bijles.html` (per onderwerp). Voorbeeld dat werkte: Rebecca DS 2 jul (vraagstelling wennen → oefenpakket + dagvraag).
+5. **Terugkoppelen aan Mark**: per beantwoorde reactie 1 regel (wie + wat + welke link). Niets gevonden? Ook melden ("💬 Reacties: 0 nieuwe").
+6. **Twijfelgevallen** (klacht, discussie, pers, negatief): niet zelf afhandelen — concept klaarzetten en aan Mark voorleggen.
+
 **Posting/engagement-werkwijze per kanaal** staat in [[project_studiebol_autopost]] (memory) — Claude post/engaget zelf via de browser, niet automatisch op de achtergrond. **Stoppen met deze dagelijkse taak** zodra de mijlpalen gehaald zijn (dan herijken met Mark). Draait Chrome niet? Meld dat de social-groei-batch Chrome nodig heeft en sla 'm over die dag.
 
 ## Autonome modus (actief tot app gevuld — geen einddatum)
