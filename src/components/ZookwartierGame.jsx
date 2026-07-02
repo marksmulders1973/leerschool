@@ -167,6 +167,60 @@ const SHOP_CATS = [
 ];
 const MAX_BLOKKEN = 900; // totaal-cap (instanced → 2 draw-calls, ook op telefoons vlot)
 const MAX_STAPEL = 8;    // max bouwhoogte in lagen
+
+// 🏠 Bouwpakketten (Mark 2 jul): kant-en-klare blok-gebouwtjes als startpunt.
+// Elk pakket wordt neergezet als LOSSE blokken → kinderen kunnen er daarna
+// blokje voor blokje aan verbouwen (weghalen, ramen bijzetten, hoger maken).
+function blauwdruk(naam) {
+  const b = [];
+  const zet = (dx, dz, h, id) => b.push({ dx, dz, h, id });
+  if (naam === "huis") {
+    // 5×4 huisje: baksteen-muren 2 hoog, glas-ramen, deuropening, plat houten
+    // dak met een rij dak-punten als nok.
+    for (let x = -2; x <= 2; x++) {
+      for (let z = -1; z <= 2; z++) {
+        const rand = x === -2 || x === 2 || z === -1 || z === 2;
+        if (rand) {
+          const deur = x === 0 && z === 2;
+          const raam = (x === -2 || x === 2) && z === 0;
+          for (let h = 0; h <= 1; h++) {
+            if (deur) continue;
+            zet(x, z, h, raam && h === 1 ? "blokGlas" : "blokBaksteen");
+          }
+        }
+        zet(x, z, 2, "blokHout");
+      }
+    }
+    for (let x = -2; x <= 2; x++) zet(x, 0, 3, "blokDak");
+  } else if (naam === "toren") {
+    // 3×3 kasteel-toren, 5 hoog, glas-kijkgaten bovenin, dak-punten erop.
+    for (let h = 0; h < 5; h++) {
+      for (let x = -1; x <= 1; x++) {
+        for (let z = -1; z <= 1; z++) {
+          if (Math.abs(x) !== 1 && Math.abs(z) !== 1) continue;
+          if (x === 0 && z === 1 && h <= 1) continue; // deuropening
+          const raam = h === 3 && (x === 0 || z === 0);
+          zet(x, z, h, raam ? "blokGlas" : "blokSteen");
+        }
+      }
+    }
+    for (let x = -1; x <= 1; x++) for (let z = -1; z <= 1; z++) zet(x, z, 5, "blokDak");
+  } else if (naam === "hok") {
+    // 5×3 open dierenhok: houten muurtje 1 hoog met een ingang.
+    for (let x = -2; x <= 2; x++) {
+      for (let z = -1; z <= 1; z++) {
+        const rand = Math.abs(x) === 2 || Math.abs(z) === 1;
+        if (rand && !(x === 0 && z === 1)) zet(x, z, 0, "blokHout");
+      }
+    }
+  }
+  return b;
+}
+const PAKKETTEN = [
+  { key: "huis", emoji: "🏠", label: "Huisje" },
+  { key: "toren", emoji: "🏰", label: "Toren" },
+  { key: "hok", emoji: "🐴", label: "Dierenhok" },
+];
 // Stabiele lege grond-map (zelfde referentie) → terrein herberekent niet onnodig.
 const EMPTY_GROUND = {};
 const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
@@ -538,7 +592,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const startKopen = (p) => {
     if (coins < p.price) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
     setSelectedIdx(null);
-    setPlacing({ assetId: p.assetId, price: p.price, rot: 0 });
+    setPlacing({ assetId: p.assetId, price: p.price, rot: 0, ...(p.pakket ? { pakket: p.pakket, pakketLabel: p.label } : {}) });
   };
 
   const draai = () => setPlacing((p) => (p ? { ...p, rot: (p.rot || 0) + Math.PI / 2 } : p));
@@ -548,6 +602,28 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const plaatsOpVakje = (cell) => {
     if (!placing) return;
+    // 🏠 Bouwpakket: rol de hele blauwdruk uit rond het gekozen vakje.
+    if (placing.pakket) {
+      const b = blauwdruk(placing.pakket);
+      const bezetBlok = new Set(placedItems.filter((it) => isBlok(it.assetId)).map((it) => `${it.cell[0]},${it.cell[1]},${it.h || 0}`));
+      const vasteCellen = new Set();
+      placedItems.forEach((it) => {
+        if (isBlok(it.assetId)) return;
+        const a = getAsset(it.assetId);
+        if (!a || a.procedural === "path" || a.kind === "animal") return;
+        footprint(it.cell[0], it.cell[1], cellsVan(it.assetId)).forEach(([cx, cz]) => vasteCellen.add(`${cx},${cz}`));
+      });
+      const botst = b.some(({ dx, dz, h }) => {
+        const gx = cell[0] + dx, gz = cell[1] + dz;
+        return Math.abs(gx) > HALF || Math.abs(gz) > HALF || bezetBlok.has(`${gx},${gz},${h}`) || vasteCellen.has(`${gx},${gz}`);
+      });
+      if (botst) { flits("Niet genoeg vrije ruimte — zoek een open plek."); return; }
+      if (placedItems.filter((it) => isBlok(it.assetId)).length + b.length > MAX_BLOKKEN) { flits(`Maximum bereikt: ${MAX_BLOKKEN} blokken in je park.`); return; }
+      setPlacedItems((items) => [...items, ...b.map(({ dx, dz, h, id }) => ({ assetId: id, cell: [cell[0] + dx, cell[1] + dz], rotation: 0, price: 0, h }))]);
+      setPlacing(null);
+      flits("Klaar! Verbouw het zoals jij wilt — blokjes weghalen of bijbouwen. 🧱");
+      return;
+    }
     const rot = placing.rot || 0;
     // Verplaatsen: bestaand item naar nieuw vakje (met huidige draaihoek).
     // Een blok landt op de bovenkant van de stapel op het nieuwe vakje.
@@ -592,7 +668,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // 🧱 Minecraft-plaatsing: blok tegen een blok-VLAK aan (van BlokkenLaag).
   // Valideert plek + koopt; zwevende blokken mogen (overhangend dak, brug).
   const plaatsBlokOp = ({ cell, h }) => {
-    if (!placing || !isBlok(placing.assetId)) return;
+    if (!placing) return;
+    if (placing.pakket) { plaatsOpVakje(cell); return; } // pakket op de richt-plek
+    if (!isBlok(placing.assetId)) return;
     const [gx, gz] = cell;
     if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { flits("Dat is buiten je park."); return; }
     if (h < 0) { flits("Onder de grond bouwen kan niet."); return; }
@@ -1279,9 +1357,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         ) : placing ? (
           <>
             <div style={{ color: "#fff", font: "700 14px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-              {isBlok(placing.assetId)
-                ? "Loop ergens heen — het lichte blok wijst aan waar je bouwt. Tik op een blok = er tegenaan bouwen."
-                : `Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
+              {placing.pakket
+                ? `Loop naar een open plek en druk "Zet neer" — daar komt je ${placing.pakketLabel || "bouwwerk"} (bij de groene pijl).`
+                : isBlok(placing.assetId)
+                  ? "Loop ergens heen — het lichte blok wijst aan waar je bouwt. Tik op een blok = er tegenaan bouwen."
+                  : `Tik op een groen vak om neer te ${placing.moveIdx != null ? "verplaatsen" : "zetten"}`}
             </div>
             {isBlok(placing.assetId) && placing.moveIdx == null && (
               <button
@@ -1375,8 +1455,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <button onClick={() => { setBouwen(false); setPlacing(null); setSelectedIdx(null); }} style={{ border: "none", borderRadius: 999, padding: "5px 13px", font: "800 12px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>✓ Klaar met bouwen</button>
             </div>
             <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "center", flexWrap: "wrap", maxWidth: "100%", padding: "2px 4px 4px" }}>
+              {/* 🏠 Bouwpakketten: kant-en-klare gebouwtjes als startpunt —
+                  daarna blokje voor blokje te verbouwen. */}
+              {shopCat === "blok" && PAKKETTEN.map((pk) => (
+                <button
+                  key={pk.key}
+                  onClick={() => startKopen({ assetId: "blokHout", price: 0, emoji: pk.emoji, label: pk.label, pakket: pk.key })}
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: placing?.pakket === pk.key ? "3px solid #fff" : "2px solid rgba(255,255,255,0.6)", borderRadius: 12, padding: "6px 10px", background: "linear-gradient(135deg,#5a7fd6,#3a5ab0)", boxShadow: "0 2px 8px rgba(0,0,0,.25)", cursor: "pointer", transform: placing?.pakket === pk.key ? "scale(1.1)" : "none" }}
+                >
+                  <span style={{ fontSize: 20, lineHeight: 1, filter: "drop-shadow(0 1px 2px rgba(0,0,0,.4))" }}>{pk.emoji}</span>
+                  <span style={{ font: "800 10.5px system-ui", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.55)", whiteSpace: "nowrap" }}>{pk.label}</span>
+                </button>
+              ))}
               {/* Blokken: direct zichtbare gekleurde knoppen — een dropdown was
-                  hier onvindbaar (Mark 2 jul: "ik weet niet hoe ik bouwen kan"). */}
+                  hier onvindbaar (Mark 2 jul: "ik weet niet hoe ik kan bouwen"). */}
               {shopCat === "blok" && SHOP_CATS.find((c) => c.key === "blok").items.map((p) => {
                 const a = getAsset(p.assetId);
                 const actief = placing?.assetId === p.assetId;
