@@ -313,7 +313,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} rideRef={rideRef} />;
-  if (a.procedural === "coaster") return <Coaster position={[x, y, z]} rotation={rotation} rideRef={rideRef} />;
+  if (a.procedural === "coaster") return <Coaster position={[x, y, z]} rotation={rotation} baan={a.baan} rideRef={rideRef} />;
   if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
   if (a.procedural === "rail") return <RailTile position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "station") return <Station position={[x, y, z]} rotation={rotation} />;

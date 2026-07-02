@@ -1821,27 +1821,64 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 // beneden, twee heuvels. Het karretje rijdt met échte zwaartekracht (versnelt
 // omlaag, remt omhoog) en is instapbaar in eerste persoon (rideRef).
 const _coasterAhead = new Vector3();
-export function Coaster({ position = [0, 0, 0], rotation = 0, rideRef }) {
-  const cart = useRef();
-  const st = useRef({ t: 0, v: 3 });
-  const { curve, len, supports } = useMemo(() => {
-    const pts = [
+// Drie vaste banen (Mark 2 jul: "bouw die paar vaste baan-varianten maar").
+// klein = compact ovaal voor een klein park; groot = lift + mega-drop + twee
+// heuvels; spiraal = extra hoge lift en dan twee volle draaien omlaag rond
+// een pilaren-toren (een échte looping zet de camera ondersteboven — de
+// spiraal geeft dezelfde sensatie zonder dat).
+const COASTER_BANEN = {
+  klein: {
+    station: { pos: [-1.0, 0, 4.0], breedte: 4.2 },
+    pts: [
+      [-3.4, 0.5, 3.0], [-0.6, 0.5, 3.2], [2.0, 0.7, 2.9],   // station + vertrek
+      [3.8, 2.6, 1.4], [4.4, 5.0, -1.2],                      // lift → top
+      [2.8, 1.4, -3.4], [0.4, 0.8, -3.8],                     // drop → dal
+      [-2.2, 2.8, -3.2], [-3.9, 1.0, -1.2], [-4.2, 1.8, 1.2], // heuvel → bochtje
+      [-3.8, 0.7, 2.4],
+    ],
+  },
+  groot: {
+    station: { pos: [-1.5, 0, 5.6], breedte: 5.6 },
+    pts: [
       [-5.0, 0.55, 4.4], [-1.0, 0.55, 4.6], [2.8, 0.8, 4.3],   // station + vertrek
       [5.6, 3.4, 2.2], [6.4, 8.2, -1.6],                        // kettinglift → top
       [4.6, 2.2, -4.6], [1.4, 0.9, -5.2],                       // MEGA-drop → dal
       [-1.8, 4.6, -4.6], [-4.8, 1.4, -2.6],                     // heuvel 2 → af
       [-6.4, 2.8, 0.4], [-6.0, 0.9, 3.0],                       // bocht-heuveltje → aanloop
-    ].map(([x, y, z]) => new Vector3(x, y, z));
+    ],
+  },
+  spiraal: {
+    station: { pos: [-1.5, 0, 5.6], breedte: 5.6 },
+    pts: [
+      [-5.0, 0.55, 4.4], [-1.0, 0.55, 4.6], [2.8, 0.8, 4.2],   // station + vertrek
+      [5.4, 3.6, 2.4], [6.2, 6.8, -0.4], [5.2, 9.3, -2.6],     // extra hoge lift
+      // twee volle draaien omlaag rond het midden (helix, straal 3.6 m)
+      [3.6, 8.4, -1.0], [0.0, 7.6, 2.6], [-3.6, 6.8, -1.0], [0.0, 6.0, -4.6],
+      [3.6, 5.2, -1.0], [0.0, 4.4, 2.6], [-3.6, 3.6, -1.0], [0.0, 2.8, -4.6],
+      [3.6, 2.0, -1.0],
+      [2.6, 0.9, -4.2], [-1.5, 0.7, -5.2], [-5.4, 0.8, -2.4],  // uitloop → dal
+      [-6.0, 1.6, 1.0], [-5.6, 0.8, 3.2],                       // hupje → aanloop
+    ],
+  },
+};
+export function Coaster({ position = [0, 0, 0], rotation = 0, baan = "groot", rideRef }) {
+  const cart = useRef();
+  const st = useRef({ t: 0, v: 3 });
+  const conf = COASTER_BANEN[baan] || COASTER_BANEN.groot;
+  const { curve, len, supports } = useMemo(() => {
+    const pts = conf.pts.map(([x, y, z]) => new Vector3(x, y, z));
     const curve = new CatmullRomCurve3(pts, true, "catmullrom", 0.75);
     const len = curve.getLength();
     // Witte steunpilaren onder de hoge stukken (zoals in het voorbeeld).
     const supports = [];
-    for (let i = 0; i < 56; i++) {
-      const p = curve.getPointAt(i / 56);
+    const n = Math.round(len / 1.4); // ± om de 1,4 m een pilaar-kandidaat
+    for (let i = 0; i < n; i++) {
+      const p = curve.getPointAt(i / n);
       if (p.y > 1.3) supports.push([p.x, p.y - 0.32, p.z]);
     }
     return { curve, len, supports };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [baan]);
   useFrame((_, rawDt) => {
     const s = st.current;
     const dt = Math.min(rawDt, 0.05);
@@ -1866,13 +1903,13 @@ export function Coaster({ position = [0, 0, 0], rotation = 0, rideRef }) {
       {supports.map(([x, y, z], i) => (
         <mesh key={i} position={[x, y / 2, z]} castShadow><cylinderGeometry args={[0.09, 0.12, Math.max(0.1, y), 6]} /><meshStandardMaterial color="#e8ecf2" roughness={0.6} /></mesh>
       ))}
-      {/* station: perron + palen + blauw afdak */}
-      <group position={[-1.5, 0, 5.6]}>
-        <mesh position={[0, 0.14, 0]} receiveShadow><boxGeometry args={[5.6, 0.28, 1.5]} /><meshStandardMaterial color="#cfd6de" roughness={0.9} /></mesh>
-        {[[-2.5, -0.5], [2.5, -0.5], [-2.5, 0.5], [2.5, 0.5]].map(([px, pz], i) => (
-          <mesh key={i} position={[px, 1.4, pz]} castShadow><cylinderGeometry args={[0.06, 0.06, 2.6, 6]} /><meshStandardMaterial color="#e8ecf2" /></mesh>
+      {/* station: perron + palen + blauw afdak (maat per baan-variant) */}
+      <group position={conf.station.pos}>
+        <mesh position={[0, 0.14, 0]} receiveShadow><boxGeometry args={[conf.station.breedte, 0.28, 1.5]} /><meshStandardMaterial color="#cfd6de" roughness={0.9} /></mesh>
+        {[[-1, -0.5], [1, -0.5], [-1, 0.5], [1, 0.5]].map(([sx, pz], i) => (
+          <mesh key={i} position={[sx * (conf.station.breedte / 2 - 0.3), 1.4, pz]} castShadow><cylinderGeometry args={[0.06, 0.06, 2.6, 6]} /><meshStandardMaterial color="#e8ecf2" /></mesh>
         ))}
-        <mesh position={[0, 2.76, 0]} castShadow><boxGeometry args={[6.0, 0.14, 2.0]} /><meshStandardMaterial color="#2b3f9e" roughness={0.6} /></mesh>
+        <mesh position={[0, 2.76, 0]} castShadow><boxGeometry args={[conf.station.breedte + 0.4, 0.14, 2.0]} /><meshStandardMaterial color="#2b3f9e" roughness={0.6} /></mesh>
       </group>
       {/* het karretje */}
       <group ref={cart}>
