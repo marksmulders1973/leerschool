@@ -166,7 +166,9 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerCel, curso
       return;
     }
     const p = playerPos.current, f = playerFace.current;
-    const [gx, gz] = snapToCell(p.x + f.x * 2.6, p.z + f.z * 2.6, 1);
+    // Richt-afstand: 2 vakjes vóór je (Mark 2 jul: "mag iets verder weg") —
+    // ver genoeg om vrij te bouwen, dichtbij genoeg om precies te blijven.
+    const [gx, gz] = snapToCell(p.x + f.x * 4.4, p.z + f.z * 4.4, 1);
     if (Math.abs(gx) > HALF || Math.abs(gz) > HALF) { m.visible = false; if (cursorRef) cursorRef.current = null; return; }
     const set = blokPerCel.get(cellKey(gx, gz));
     let h = 0;
