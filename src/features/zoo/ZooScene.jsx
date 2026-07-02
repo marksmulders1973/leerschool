@@ -664,7 +664,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
         {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
             rand — anders begint elke speler met 40 m niemandsland. */}
-        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} />
+        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam} />
         <CameraFollow posRef={playerPos} controlsRef={orbitRef} active={followCam && !firstPerson && !buddyEye} />

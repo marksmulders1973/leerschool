@@ -7,7 +7,9 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
-export default function BlockyCharacter({ palette = {}, movingRef, targetHeight = 1.65 }) {
+// `bouwt`: het poppetje houdt een bouwhamer vast (rechterarm geheven, zachte
+// hamer-zwaai) — zo zie je meteen dat je in bouw-modus bent (Mark 2 jul).
+export default function BlockyCharacter({ palette = {}, movingRef, targetHeight = 1.65, bouwt = false }) {
   const la = useRef(), ra = useRef(), ll = useRef(), rl = useRef(), romp = useRef();
   const P = { huid: "#f0c8a0", haar: "#3a2a1a", shirt: "#4a90d9", broek: "#35485c", schoen: "#26292c", ...palette };
   const fase = useRef(Math.random() * Math.PI * 2); // niet iedereen synchroon
@@ -21,7 +23,7 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
     const zwaai = loopt ? Math.min(0.85, 0.3 + speed * 0.12) : 0;
     const idle = loopt ? 0 : Math.sin(t) * 0.05;
     if (la.current) la.current.rotation.x = Math.sin(t) * zwaai + idle;
-    if (ra.current) ra.current.rotation.x = -Math.sin(t) * zwaai - idle;
+    if (ra.current) ra.current.rotation.x = bouwt ? -0.8 + Math.sin(t * 2.2) * 0.14 : -Math.sin(t) * zwaai - idle;
     if (ll.current) ll.current.rotation.x = -Math.sin(t) * zwaai;
     if (rl.current) rl.current.rotation.x = Math.sin(t) * zwaai;
     if (romp.current) romp.current.position.y = loopt ? Math.abs(Math.sin(t)) * 0.05 : Math.sin(t * 0.7) * 0.012;
@@ -33,10 +35,16 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
       <mesh position={[0, -0.69, 0.04]} castShadow><boxGeometry args={[0.24, 0.13, 0.34]} /><meshStandardMaterial color={P.schoen} roughness={1} /></mesh>
     </group>
   );
-  const Arm = ({ eigenRef, x }) => (
+  const Arm = ({ eigenRef, x, hamer = false }) => (
     <group ref={eigenRef} position={[x, 1.32, 0]}>
       <mesh position={[0, -0.26, 0]} castShadow><boxGeometry args={[0.17, 0.52, 0.21]} /><meshStandardMaterial color={P.shirt} roughness={1} /></mesh>
       <mesh position={[0, -0.59, 0]} castShadow><boxGeometry args={[0.17, 0.16, 0.21]} /><meshStandardMaterial color={P.huid} roughness={1} /></mesh>
+      {hamer && (
+        <group position={[0, -0.62, 0.14]} rotation={[Math.PI / 2.4, 0, 0]}>
+          <mesh castShadow><boxGeometry args={[0.07, 0.52, 0.07]} /><meshStandardMaterial color="#8a6a44" roughness={1} /></mesh>
+          <mesh position={[0, 0.29, 0]} castShadow><boxGeometry args={[0.32, 0.17, 0.17]} /><meshStandardMaterial color="#6f7d8a" roughness={0.7} /></mesh>
+        </group>
+      )}
     </group>
   );
 
@@ -49,7 +57,7 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
         <Been eigenRef={rl} x={0.13} />
         <mesh position={[0, 1.05, 0]} castShadow><boxGeometry args={[0.52, 0.66, 0.3]} /><meshStandardMaterial color={P.shirt} roughness={1} /></mesh>
         <Arm eigenRef={la} x={-0.35} />
-        <Arm eigenRef={ra} x={0.35} />
+        <Arm eigenRef={ra} x={0.35} hamer={bouwt} />
         {/* Hoofd: blok + haar of petje + gezicht op de +z-kant. */}
         <group position={[0, 1.64, 0]}>
           <mesh castShadow><boxGeometry args={[0.5, 0.48, 0.5]} /><meshStandardMaterial color={P.huid} roughness={1} /></mesh>

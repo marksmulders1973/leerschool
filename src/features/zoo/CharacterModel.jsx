@@ -24,9 +24,9 @@ function kies(names, ...voorkeur) {
 
 // Blok-poppetjes ("blocky:<id>") hebben geen model-bestand: puur procedureel.
 // Aparte tak vóór de GLTF-hooks (hook-regels), zelfde props-API.
-export default function CharacterModel({ url, movingRef, targetHeight = 1.65 }) {
+export default function CharacterModel({ url, movingRef, targetHeight = 1.65, bouwt = false }) {
   const m = /^blocky:(.+)$/.exec(url || "");
-  if (m) return <BlockyCharacter palette={BLOCKY_BY_ID[m[1]]} movingRef={movingRef} targetHeight={targetHeight} />;
+  if (m) return <BlockyCharacter palette={BLOCKY_BY_ID[m[1]]} movingRef={movingRef} targetHeight={targetHeight} bouwt={bouwt} />;
   return <GltfCharacter url={url} movingRef={movingRef} targetHeight={targetHeight} />;
 }
 

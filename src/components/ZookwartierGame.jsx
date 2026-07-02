@@ -1375,9 +1375,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <button onClick={() => { setBouwen(false); setPlacing(null); setSelectedIdx(null); }} style={{ border: "none", borderRadius: 999, padding: "5px 13px", font: "800 12px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>✓ Klaar met bouwen</button>
             </div>
             <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "center", flexWrap: "wrap", maxWidth: "100%", padding: "2px 4px 4px" }}>
-              {/* Compacte dropdown i.p.v. een lange rij kaartjes (Mark 1 jul:
-                  "kunnen al die dieren in een dropdown ofzo" → rustiger scherm). */}
-              {(() => {
+              {/* Blokken: direct zichtbare gekleurde knoppen — een dropdown was
+                  hier onvindbaar (Mark 2 jul: "ik weet niet hoe ik bouwen kan"). */}
+              {shopCat === "blok" && SHOP_CATS.find((c) => c.key === "blok").items.map((p) => {
+                const a = getAsset(p.assetId);
+                const actief = placing?.assetId === p.assetId;
+                return (
+                  <button
+                    key={p.assetId}
+                    onClick={() => startKopen(p)}
+                    disabled={coins < p.price}
+                    title={`${p.label} — ${p.price} 🪙`}
+                    style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: actief ? "3px solid #fff" : "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "6px 8px", background: coins < p.price ? "rgba(120,120,120,0.5)" : (a?.blokKleur || "#a97e4e"), boxShadow: actief ? "0 0 0 3px #2e7d32, 0 3px 10px rgba(0,0,0,.3)" : "0 2px 8px rgba(0,0,0,.25)", cursor: coins < p.price ? "not-allowed" : "pointer", transform: actief ? "scale(1.1)" : "none" }}
+                  >
+                    <span style={{ fontSize: 20, lineHeight: 1, filter: "drop-shadow(0 1px 2px rgba(0,0,0,.4))" }}>{p.emoji}</span>
+                    <span style={{ font: "800 10.5px system-ui", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.55)", whiteSpace: "nowrap" }}>{p.label.replace("blok", "").replace("Blok", "").trim() || p.label} {p.price}🪙</span>
+                  </button>
+                );
+              })}
+              {/* Overige tabs: compacte dropdown (Mark 1 jul: rustiger scherm). */}
+              {shopCat !== "blok" && (() => {
                 const items = SHOP_CATS.find((c) => c.key === shopCat)?.items || [];
                 return (
                   <select
