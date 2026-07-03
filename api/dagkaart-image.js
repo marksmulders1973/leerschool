@@ -8,11 +8,11 @@
 // look als de client-side /dagkaart, maar server-side zodat een cron 'm kan
 // gebruiken. Formaat via ?fmt=45 (1080x1350, default) of ?fmt=11 (1080x1080).
 //
-// Bron van de vraag: de actuele Jeugdjournaal-vraag (of, als die er niet is,
-// een nette generieke kaart). Standalone testbaar in de browser — geen Meta
-// of token nodig.
+// GEEN JSX (Vercel's builder transpileert die niet voor dit Vite-project) —
+// we bouwen de element-boom met React.createElement.
 
 import { ImageResponse } from "@vercel/og";
+import { createElement as h } from "react";
 
 export const config = { runtime: "edge" };
 
@@ -52,48 +52,43 @@ export default async function handler(req) {
   const ff = font ? "Fredoka" : "sans-serif";
   const opts = (vraag.options || []).slice(0, 4);
 
-  const kaart = (
-    <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "100%", padding: 72, color: "#fff", fontFamily: ff, backgroundImage: "linear-gradient(135deg,#16233f 0%,#1d3358 55%,#24406a 100%)" }}>
-      {/* Header: merkteken + naam */}
-      <div style={{ display: "flex", alignItems: "center", marginBottom: 10 }}>
-        <div style={{ display: "flex", width: 44, height: 44, marginRight: 14 }}>
-          <svg width="44" height="44" viewBox="0 0 100 100"><path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" /></svg>
-        </div>
-        <div style={{ fontSize: 46, fontWeight: 700 }}>Leerkwartier</div>
-      </div>
+  const header = h("div", { style: { display: "flex", alignItems: "center", marginBottom: 10 } },
+    h("div", { style: { display: "flex", width: 44, height: 44, marginRight: 14 } },
+      h("svg", { width: 44, height: 44, viewBox: "0 0 100 100" },
+        h("path", { d: "M50,8 A42,42 0 0,1 92,50 L50,50 Z", fill: "#00C853" }))),
+    h("div", { style: { fontSize: 46, fontWeight: 700 } }, "Leerkwartier"));
 
-      {/* Badge */}
-      <div style={{ display: "flex", alignSelf: "flex-start", fontSize: 28, fontWeight: 700, color: vraag.actueel ? "#a9d4fb" : "#c9b6f8", background: vraag.actueel ? "rgba(66,165,245,0.18)" : "rgba(124,58,237,0.20)", border: `2px solid ${vraag.actueel ? "rgba(66,165,245,0.6)" : "rgba(167,139,250,0.6)"}`, borderRadius: 40, padding: "10px 24px", marginBottom: 6 }}>
-        {vraag.actueel ? "🗞️  Vraag van de dag · uit het nieuws" : "🎯  Doorstroomtoets · vraag van de dag"}
-      </div>
+  const badge = h("div", {
+    style: {
+      display: "flex", alignSelf: "flex-start", fontSize: 28, fontWeight: 700,
+      color: vraag.actueel ? "#a9d4fb" : "#c9b6f8",
+      background: vraag.actueel ? "rgba(66,165,245,0.18)" : "rgba(124,58,237,0.20)",
+      border: `2px solid ${vraag.actueel ? "rgba(66,165,245,0.6)" : "rgba(167,139,250,0.6)"}`,
+      borderRadius: 40, padding: "10px 24px", marginBottom: 6,
+    },
+  }, vraag.actueel ? "🗞️  Vraag van de dag · uit het nieuws" : "🎯  Doorstroomtoets · vraag van de dag");
 
-      {/* Emoji-illustratie */}
-      <div style={{ display: "flex", justifyContent: "center", fontSize: fmt === "11" ? 130 : 160, marginTop: 8, marginBottom: 8 }}>{vraag.emoji}</div>
+  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 130 : 160, marginTop: 8, marginBottom: 8 } }, vraag.emoji);
 
-      {/* Vraag */}
-      <div style={{ display: "flex", fontSize: fmt === "11" ? 46 : 52, fontWeight: 700, lineHeight: 1.25 }}>{String(vraag.vraag || "").replace(/\*\*/g, "")}</div>
+  const vraagEl = h("div", { style: { display: "flex", fontSize: fmt === "11" ? 46 : 52, fontWeight: 700, lineHeight: 1.25 } }, String(vraag.vraag || "").replace(/\*\*/g, ""));
 
-      {/* Opties */}
-      <div style={{ display: "flex", flexDirection: "column", marginTop: 22 }}>
-        {opts.map((o, i) => (
-          <div key={i} style={{ display: "flex", alignItems: "center", background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "12px 16px", marginBottom: 12 }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 20, background: "#00C853", color: "#0b1a2e", fontSize: 26, fontWeight: 700, marginRight: 16 }}>{LETTERS[i]}</div>
-            <div style={{ display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" }}>{String(o).replace(/\*\*/g, "").slice(0, 42)}</div>
-          </div>
-        ))}
-      </div>
+  const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 22 } },
+    ...opts.map((o, i) => h("div", { key: i, style: { display: "flex", alignItems: "center", background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "12px 16px", marginBottom: 12 } },
+      h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 20, background: "#00C853", color: "#0b1a2e", fontSize: 26, fontWeight: 700, marginRight: 16 } }, LETTERS[i]),
+      h("div", { style: { display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" } }, String(o).replace(/\*\*/g, "").slice(0, 42)))));
 
-      {/* Footer: CTA + bron */}
-      <div style={{ display: "flex", flexDirection: "column", marginTop: "auto" }}>
-        <div style={{ display: "flex", alignSelf: "flex-start", background: "#00C853", color: "#0b1a2e", fontSize: fmt === "11" ? 30 : 34, fontWeight: 700, borderRadius: 34, padding: "14px 26px" }}>
-          Antwoord + uitleg op 3 niveaus → leerkwartier.app/vandaag
-        </div>
-        {vraag.actueel && vraag.bronTitel ? (
-          <div style={{ display: "flex", fontSize: 24, color: "rgba(255,255,255,0.55)", marginTop: 16 }}>{("Bron: NOS Jeugdjournaal — " + vraag.bronTitel).slice(0, 70)}</div>
-        ) : null}
-      </div>
-    </div>
-  );
+  const footerKinderen = [
+    h("div", { key: "cta", style: { display: "flex", alignSelf: "flex-start", background: "#00C853", color: "#0b1a2e", fontSize: fmt === "11" ? 30 : 34, fontWeight: 700, borderRadius: 34, padding: "14px 26px" } },
+      "Antwoord + uitleg op 3 niveaus → leerkwartier.app/vandaag"),
+  ];
+  if (vraag.actueel && vraag.bronTitel) {
+    footerKinderen.push(h("div", { key: "bron", style: { display: "flex", fontSize: 24, color: "rgba(255,255,255,0.55)", marginTop: 16 } }, ("Bron: NOS Jeugdjournaal — " + vraag.bronTitel).slice(0, 70)));
+  }
+  const footer = h("div", { style: { display: "flex", flexDirection: "column", marginTop: "auto" } }, ...footerKinderen);
+
+  const kaart = h("div", {
+    style: { display: "flex", flexDirection: "column", width: "100%", height: "100%", padding: 72, color: "#fff", fontFamily: ff, backgroundImage: "linear-gradient(135deg,#16233f 0%,#1d3358 55%,#24406a 100%)" },
+  }, header, badge, emoji, vraagEl, optiesEl, footer);
 
   return new ImageResponse(kaart, {
     width: W,
