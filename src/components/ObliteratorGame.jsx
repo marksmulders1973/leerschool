@@ -1442,6 +1442,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Dark-arena fade: paint zwarte overlay over wereld zodra bossActief.
     // Lerpt 0..1 in/uit bij start/eind van boss-fight voor smooth overgang.
     let bossArenaFade = 0;
+    // ── DRAAK-EINDBOSS (Universal Blocks — Brian 3 jul 2026) ──
+    // Speciale eind-boss voor een dragonBoss-level: een reuzendraak op de
+    // achtergrond die de diamant bewaakt. 3× vuur-lijn (-50 HP, hoog → NIET
+    // springen) + 3× vuurbal-salvo (-35 HP → wél springen/ontwijken). Overleef
+    // alle 6 → draak vliegt weg, jij pakt de diamant en verdient de Universal-
+    // skin + Universal-vibe.
+    let draakActief = false;
+    let draakVerslagen = false;
+    let draakIntroFrames = 0;
+    let draakTimer = 90;       // frames tot volgende aanval
+    let draakLijnGedaan = 0;   // aantal vuur-lijnen (max 3)
+    let draakBalGedaan = 0;    // aantal vuurbal-salvo's (max 3)
+    let draakLijn = null;      // {fase:'waarschuw'|'vuur', t, y, dikte}
+    const draakBallen = [];    // {x,y,vx,vy,r}
+    let draakWegAnim = 0;      // frames voor wegvliegen + diamant-beloning
+    let draakZweef = 0;        // animatie-fase
+    let draakHitCooldown = 0;  // i-frames na een draak-hit
     // Naam per boss-fight (hetzelfde aantal als bossEmojis).
     const BOSS_NAMES = [
       "BOLT-9000", "ZARGON", "NEBULA", "KRAKEN", "DE WAARNEMER", "OCTO-PRIME",
@@ -6577,6 +6594,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         // Einde: alle obstakels gespawnd én scroll voorbij level-lengte
         if (customSpawnIdx >= customSorted.length && customScrollX > (customLevel.lengte || 4000) + W) {
+          // 🐉 Draak-level? → start de eind-boss ipv meteen winnen.
+          if (customLevel.dragonBoss && !draakVerslagen) {
+            customLevelEinde = true;   // stop de scroll/spawn-loop
+            draakActief = true;
+            draakIntroFrames = 150;
+            draakTimer = 150;
+            draakZweef = 0;
+            piep(110, 0.3, "sawtooth", 0.16);
+            setTimeout(() => piep(90, 0.4, "sawtooth", 0.14), 200);
+            return;
+          }
           customLevelEinde = true;
           // Win-feedback + eindeSessie roept score-flow aan
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 30, "#ffd54f", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, glow: 22 });
@@ -7930,6 +7958,101 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // zwarte overlay voor "boss-fight in een aparte arena"-feel.
       if (bossActief && bossArenaFade < 1) bossArenaFade = Math.min(1, bossArenaFade + 1 / 60);
       if (!bossActief && bossArenaFade > 0) bossArenaFade = Math.max(0, bossArenaFade - 1 / 60);
+
+      // ───── DRAAK-EINDBOSS-FASE (Universal Blocks) ─────
+      if (draakActief) {
+        draakZweef += 0.05;
+        if (draakHitCooldown > 0) draakHitCooldown--;
+
+        if (draakIntroFrames > 0) {
+          // Intro: draak verschijnt, nog geen aanvallen.
+          draakIntroFrames--;
+        } else if (draakWegAnim > 0) {
+          // Draak vliegt weg → diamant-beloning → einde sessie.
+          draakWegAnim--;
+          if (draakWegAnim === 0) {
+            // 🎁 Universal-skin + Universal-vibe ontgrendelen.
+            try { setUnlockedSkins((prev) => prev.includes("universal") ? prev : [...prev, "universal"]); } catch {}
+            try { bankSpriteRef.current("universal", 3); } catch {}
+            try { grabbelBannerRef.current({ ...SPRITE_BY_ID["universal"], niveau: 3, gewonnen: true, isNew: true, maxed: false }); } catch {}
+            draakVerslagen = true;
+            draakActief = false;
+            eindeSessie();
+            return;
+          }
+        } else if (draakLijn) {
+          // Actieve VUUR-LIJN afhandelen (hoog → niet springen).
+          draakLijn.t--;
+          if (draakLijn.fase === "waarschuw" && draakLijn.t <= 0) {
+            draakLijn.fase = "vuur";
+            draakLijn.t = 70;
+            piep(70, 0.5, "sawtooth", 0.18);
+          } else if (draakLijn.fase === "vuur") {
+            const sb = spelerBots();
+            const inBaan = sb.y < draakLijn.y + draakLijn.dikte / 2 && sb.y + sb.hoogte > draakLijn.y - draakLijn.dikte / 2;
+            if (inBaan && vliegFrames === 0 && draakHitCooldown === 0) {
+              hp -= 50; hpFlashTeller = 90; shakeKracht = 18;
+              spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 20, "#ff5020", { spread: 9, opwaarts: 2, leven: 30, grootte: 4, zwaartekracht: 0.1, glow: 20 });
+              piep(200, 0.16, "sawtooth", 0.2);
+              draakHitCooldown = 45;
+              if (hp <= 0) { hp = HP_MAX; draakActief = false; draakLijn = null; draakBallen.length = 0; levenVerlies(); return; }
+            }
+            if (frameTeller % 2 === 0) particles.push(new Particle(Math.random() * W, draakLijn.y + (Math.random() - 0.5) * draakLijn.dikte, "#ffaa30", { spread: 2, opwaarts: 0, leven: 16, grootte: 3, zwaartekracht: 0, glow: 12 }));
+            if (draakLijn.t <= 0) { draakLijn = null; draakTimer = 60; }
+          }
+        } else if (draakBallen.length > 0) {
+          // Actieve VUURBALLEN (spring/ontwijk).
+          for (let i = draakBallen.length - 1; i >= 0; i--) {
+            const b = draakBallen[i];
+            b.x += b.vx; b.y += b.vy;
+            if (frameTeller % 2 === 0) particles.push(new Particle(b.x, b.y, "#ff7020", { spread: 1, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0, glow: 10 }));
+            const sb = spelerBots();
+            if (vliegFrames === 0 && draakHitCooldown === 0 && b.x > sb.x && b.x < sb.x + sb.breedte && b.y > sb.y && b.y < sb.y + sb.hoogte) {
+              draakBallen.splice(i, 1);
+              hp -= 35; hpFlashTeller = 90; shakeKracht = 14;
+              spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 16, "#ff8030", { spread: 8, opwaarts: 2, leven: 26, grootte: 4, zwaartekracht: 0.1, glow: 16 });
+              piep(230, 0.14, "sawtooth", 0.18);
+              draakHitCooldown = 40;
+              if (hp <= 0) { hp = HP_MAX; draakActief = false; draakLijn = null; draakBallen.length = 0; levenVerlies(); return; }
+              continue;
+            }
+            if (b.x < -30 || b.y < -30 || b.y > H + 30 || b.x > W + 30) draakBallen.splice(i, 1);
+          }
+          if (draakBallen.length === 0) draakTimer = 55;
+        } else {
+          // Geen actieve aanval → tel af naar de volgende.
+          draakTimer--;
+          if (draakTimer <= 0) {
+            if (draakLijnGedaan >= 3 && draakBalGedaan >= 3) {
+              // Alle 6 aanvallen overleefd → draak weg + diamant.
+              draakWegAnim = 150;
+              piep(880, 0.2, "sine", 0.16);
+              setTimeout(() => piep(1180, 0.25, "sine", 0.14), 180);
+              setTimeout(() => piep(1480, 0.3, "sine", 0.12), 380);
+            } else {
+              // Wissel af: vuur-lijn, dan vuurbal, dan vuur-lijn ... (elk 3×).
+              const doeLijn = (draakLijnGedaan <= draakBalGedaan && draakLijnGedaan < 3) || draakBalGedaan >= 3;
+              if (doeLijn) {
+                draakLijnGedaan++;
+                draakLijn = { fase: "waarschuw", t: 55, y: GROND_Y - 72 * SCHAAL, dikte: 46 * SCHAAL };
+                piep(300, 0.2, "square", 0.1);
+              } else {
+                draakBalGedaan++;
+                const dragX = W * 0.5, dragY = H * 0.24;
+                for (let k = 0; k < 3; k++) {
+                  const tgtX = speler.x + speler.breedte / 2 + (k - 1) * 42 * SCHAAL;
+                  const tgtY = speler.y + speler.hoogte / 2;
+                  const dx = tgtX - dragX, dy = tgtY - dragY;
+                  const len = Math.sqrt(dx * dx + dy * dy) || 1;
+                  const sp = 6.5 * SCHAAL;
+                  draakBallen.push({ x: dragX, y: dragY, vx: (dx / len) * sp, vy: (dy / len) * sp, r: 12 * SCHAAL });
+                }
+                piep(160, 0.18, "sawtooth", 0.14);
+              }
+            }
+          }
+        }
+      }
     }
     function tekenLevens() {
       ctx.save();
@@ -8276,6 +8399,131 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       );
 
       ctx.restore();
+    }
+    // 🐉 DRAAK-EINDBOSS render (Universal Blocks) — reuzendraak op de
+    // achtergrond + vuur-lijnen + vuurballen + intro/beloning-teksten.
+    function tekenDraak() {
+      const cx = W * 0.5;
+      const cy = H * 0.24;
+      const draakBreed = Math.min(W, H) * 0.9;
+      // Wegvliegen: schuif omhoog + fade uit.
+      let dy = 0, alpha = 1;
+      if (draakWegAnim > 0) {
+        const p = 1 - draakWegAnim / 150;
+        dy = -p * H * 0.7;
+        alpha = Math.max(0, 1 - p * 1.2);
+      }
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.translate(cx, cy + dy + Math.sin(draakZweef) * 10 * SCHAAL);
+      // Vleugels (klappen langzaam).
+      const vlekas = Math.sin(draakZweef * 2) * 0.25;
+      for (const zij of [-1, 1]) {
+        ctx.save();
+        ctx.scale(zij, 1);
+        ctx.rotate(vlekas * zij);
+        ctx.fillStyle = "rgba(90,30,140,0.8)";
+        ctx.shadowBlur = 26; ctx.shadowColor = "#b060ff";
+        ctx.beginPath();
+        ctx.moveTo(draakBreed * 0.14, -draakBreed * 0.02);
+        ctx.quadraticCurveTo(draakBreed * 0.52, -draakBreed * 0.30, draakBreed * 0.64, draakBreed * 0.02);
+        ctx.quadraticCurveTo(draakBreed * 0.5, draakBreed * 0.06, draakBreed * 0.42, draakBreed * 0.17);
+        ctx.quadraticCurveTo(draakBreed * 0.4, draakBreed * 0.05, draakBreed * 0.14, draakBreed * 0.04);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+      // Lijf/kop = grote draak-emoji met paars-magische gloed.
+      ctx.shadowBlur = 34; ctx.shadowColor = "#c060ff";
+      ctx.font = `${draakBreed * 0.5}px serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText("🐉", 0, 0);
+      ctx.restore();
+
+      // ── VUUR-LIJN ──
+      if (draakLijn) {
+        const y = draakLijn.y;
+        if (draakLijn.fase === "waarschuw") {
+          const fl = 0.35 + Math.abs(Math.sin(frameTeller * 0.5)) * 0.4;
+          ctx.save();
+          ctx.strokeStyle = `rgba(255,60,40,${fl})`;
+          ctx.lineWidth = 3; ctx.setLineDash([14, 9]);
+          ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+          ctx.setLineDash([]);
+          ctx.fillStyle = `rgba(255,80,60,${fl})`;
+          ctx.shadowBlur = 10; ctx.shadowColor = "#ff3020";
+          ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
+          ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+          ctx.fillText("⚠ NIET SPRINGEN!", W / 2, y - 6 * SCHAAL);
+          ctx.restore();
+        } else {
+          const d = draakLijn.dikte;
+          ctx.save();
+          const g = ctx.createLinearGradient(0, y - d / 2, 0, y + d / 2);
+          g.addColorStop(0, "rgba(255,180,40,0)");
+          g.addColorStop(0.5, "rgba(255,235,140,0.95)");
+          g.addColorStop(1, "rgba(255,110,20,0)");
+          ctx.fillStyle = g;
+          ctx.shadowBlur = 30; ctx.shadowColor = "#ff8020";
+          ctx.fillRect(0, y - d / 2, W, d);
+          ctx.fillStyle = "rgba(255,255,225,0.9)";
+          ctx.fillRect(0, y - d * 0.12, W, d * 0.24);
+          ctx.restore();
+        }
+      }
+      // ── VUURBALLEN ──
+      for (const b of draakBallen) {
+        ctx.save();
+        ctx.shadowBlur = 22; ctx.shadowColor = "#ff7020";
+        const g = ctx.createRadialGradient(b.x, b.y, 1, b.x, b.y, b.r);
+        g.addColorStop(0, "#fff6c0");
+        g.addColorStop(0.5, "#ff9020");
+        g.addColorStop(1, "rgba(255,60,0,0.1)");
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      }
+      // ── INTRO-tekst ──
+      if (draakIntroFrames > 0) {
+        const t = draakIntroFrames / 150;
+        const a = Math.max(0, Math.min(1, (1 - t) * 4, t * 6));
+        ctx.save();
+        ctx.globalAlpha = a;
+        ctx.fillStyle = "#ff5040"; ctx.shadowBlur = 30; ctx.shadowColor = "#ff3030";
+        ctx.font = `bold ${46 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🐉 DE DRAAK!", W / 2, H * 0.52);
+        ctx.font = `bold ${19 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = "#ffd54f"; ctx.shadowColor = "#ffd54f";
+        ctx.fillText("Hij bewaakt de diamant — overleef zijn vuur!", W / 2, H * 0.52 + 42 * SCHAAL);
+        ctx.restore();
+      }
+      // ── AANVAL-teller ──
+      if (draakIntroFrames === 0 && draakWegAnim === 0) {
+        ctx.save();
+        ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = "#ffd54f"; ctx.shadowBlur = 8; ctx.shadowColor = "#000";
+        ctx.textAlign = "center"; ctx.textBaseline = "top";
+        ctx.fillText(`Draak-aanvallen overleefd: ${Math.min(6, draakLijnGedaan + draakBalGedaan)}/6`, W / 2, 46 * SCHAAL);
+        ctx.restore();
+      }
+      // ── WEG + DIAMANT-beloning ──
+      if (draakWegAnim > 0) {
+        const p = 1 - draakWegAnim / 150;
+        ctx.save();
+        ctx.globalAlpha = Math.min(1, p * 3);
+        ctx.font = `${(42 + p * 26) * SCHAAL}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.shadowBlur = 30; ctx.shadowColor = "#7fdfff";
+        ctx.fillText("💎", W / 2, H * 0.34 + Math.sin(frameTeller * 0.15) * 6 * SCHAAL);
+        ctx.fillStyle = "#69f0ae"; ctx.shadowColor = "#69f0ae"; ctx.shadowBlur = 26;
+        ctx.font = `bold ${32 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("💎 DE DIAMANT IS VAN JOU!", W / 2, H * 0.52);
+        ctx.fillStyle = "#fff"; ctx.shadowColor = "#fff"; ctx.shadowBlur = 10;
+        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("Je verdient de Universal-skin + Universal-vibe! 🪐", W / 2, H * 0.52 + 34 * SCHAAL);
+        ctx.restore();
+      }
     }
     function teken() {
       // Cutscene? — overschrijft alles met de Oblivion-Pulse intro.
@@ -9133,6 +9381,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       ctx.restore();
+      if (draakActief) tekenDraak();
       tekenLevens();
       tekenLevelProgressie();
 
@@ -10835,6 +11084,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     maker_naam: preset.maker_naam,
                     bioom: preset.bioom,
                     intenseAmbiance: preset.intenseAmbiance,
+                    dragonBoss: preset.dragonBoss,
                   });
                   setFase("spelen");
                 }}
