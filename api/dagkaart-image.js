@@ -51,6 +51,10 @@ export default async function handler(req) {
   const font = await laadFont();
   const ff = font ? "Fredoka" : "sans-serif";
   const opts = (vraag.options || []).slice(0, 4);
+  const vraagTekst = String(vraag.vraag || "").replace(/\*\*/g, "");
+  // Lange vraag = kleiner lettertype zodat vraag + 4 opties + footer passen.
+  const vLen = vraagTekst.length;
+  const vFont = fmt === "11" ? (vLen > 120 ? 38 : 44) : (vLen > 150 ? 40 : vLen > 110 ? 44 : 50);
 
   const header = h("div", { style: { display: "flex", alignItems: "center", marginBottom: 10 } },
     h("div", { style: { display: "flex", width: 44, height: 44, marginRight: 14 } },
@@ -68,11 +72,11 @@ export default async function handler(req) {
     },
   }, vraag.actueel ? "🗞️  Vraag van de dag · uit het nieuws" : "🎯  Doorstroomtoets · vraag van de dag");
 
-  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 110 : 124, marginTop: 4, marginBottom: 6, flexShrink: 0 } }, vraag.emoji);
+  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 96 : 108, marginTop: 2, marginBottom: 4, flexShrink: 0 } }, vraag.emoji);
 
-  const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: fmt === "11" ? 44 : 48, fontWeight: 700, lineHeight: 1.3 } }, String(vraag.vraag || "").replace(/\*\*/g, ""));
+  const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: vFont, fontWeight: 700, lineHeight: 1.28, marginBottom: 12 } }, vraagTekst);
 
-  const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 28, flexShrink: 0 } },
+  const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 10, flexShrink: 0 } },
     ...opts.map((o, i) => h("div", { key: i, style: { display: "flex", alignItems: "center", flexShrink: 0, background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "11px 16px", marginBottom: 11 } },
       h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 20, background: "#00C853", color: "#0b1a2e", fontSize: 26, fontWeight: 700, marginRight: 16 } }, LETTERS[i]),
       h("div", { style: { display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" } }, String(o).replace(/\*\*/g, "").slice(0, 42)))));
