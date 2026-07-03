@@ -156,6 +156,9 @@ const SPRITE_POOL = [
   // ✦✦✦ SECRET — Moonwalker (Brian 2026-06-27): MJ-figuur, rood pak + krullend
   // haar, zingt + loopt heen en weer. Eigen gezicht (geen standaard-overlay).
   { id: "moonwalker", naam: "Michael Jackson", emoji: "🕺", rariteit: "secret", secret: true, michael: true, eigenGezicht: true, ability: "King of Pop — danst, zingt & blaast obstakels weg 🕺" },
+  // ✦✦✦ UNIVERSAL (Brian 3 jul 2026) — win 'm samen met de Universal skin door
+  // de draak in het speciale level "Universal Blocks" te verslaan.
+  { id: "universal", naam: "Universal", emoji: "🪐", rariteit: "secret", secret: true, ability: "Universele kracht — de allersterkste vibe uit het hele universum 🌌" },
 ];
 const SPRITE_BY_ID = SPRITE_POOL.reduce((m, s) => { m[s.id] = s; return m; }, {});
 
@@ -183,7 +186,7 @@ const SPRITE_EFFECT = {
   infinity:"schild", omega:"schild", voidking:"schild", prismatic:"score", godspark:"tempo",
   reality:"magneet", zenith:"munt", nova:"score", apex:"sprong", origin:"score",
   // secret
-  violetide:"schild", moonwalker:"score",
+  violetide:"schild", moonwalker:"score", universal:"score",
 };
 // Kid-vriendelijk labeltje per effect — getoond in de Spritevibes-kast.
 const SPRITE_EFFECT_LABEL = {

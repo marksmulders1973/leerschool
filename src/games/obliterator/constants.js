@@ -255,6 +255,9 @@ export const SKINS = [
   { id: "boss_slayer",  label: "Boss Slayer",  emoji: "⚔️", unlockLevel: null, unlockHint: "Versla je 1e boss",  rarity: "epic",      kracht: "schild" },
   { id: "woordmeester", label: "Woordmeester", emoji: "📚", unlockLevel: null, unlockHint: "Spel LEERKWART",     rarity: "rare",      kracht: "score" },
   { id: "vuurtje",      label: "Vuurtje",      emoji: "🔥", unlockLevel: null, unlockHint: "3 dagen op rij",     rarity: "legendary", kracht: "sprong" },
+  // ✦✦✦ UNIVERSAL (Brian 3 jul 2026) — de diamant die je van de draak wint in
+  // het speciale level "Universal Blocks". Mythisch + sterk startschild.
+  { id: "universal",    label: "Universal",    emoji: "💠", unlockLevel: null, unlockHint: "Versla de draak in Universal Blocks", rarity: "mythic", kracht: "schild" },
 ];
 export const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
 
