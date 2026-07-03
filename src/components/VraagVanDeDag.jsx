@@ -132,8 +132,20 @@ export default function VraagVanDeDag() {
       </div>
 
       {vraag.actueel ? (
-        <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700, marginBottom: 10 }}>
-          {vraag.emoji} uit het nieuws van vandaag
+        <div style={{ marginBottom: 10 }}>
+          <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700 }}>
+            {vraag.emoji} uit het nieuws van vandaag
+          </div>
+          {/* Bronvermelding altijd zichtbaar (Mark 3 jul) — eigen samenvatting +
+              nette bronlink; nieuwsfoto's nemen we niet over (auteursrecht). */}
+          {vraag.bronTitel && (
+            <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", marginTop: 6, lineHeight: 1.4 }}>
+              Bron: NOS Jeugdjournaal —{" "}
+              {vraag.bronUrl
+                ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
+                : <span>{vraag.bronTitel}</span>}
+            </div>
+          )}
         </div>
       ) : (
         vraag.doelgroep && (
@@ -199,16 +211,6 @@ export default function VraagVanDeDag() {
                 {NIV.find((n) => n.key === niveau)?.t}
               </div>
             </>
-          )}
-          {vraag.actueel && vraag.bronTitel && (
-            <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginTop: 10, lineHeight: 1.5 }}>
-              🗞️ Naar aanleiding van het Jeugdjournaal:{" "}
-              {vraag.bronUrl ? (
-                <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
-              ) : (
-                <span>{vraag.bronTitel}</span>
-              )}
-            </div>
           )}
           <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", marginTop: 10, marginBottom: 10 }}>
             ✅ Klaar voor vandaag — morgen staat er een nieuwe vraag klaar.
