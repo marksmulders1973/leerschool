@@ -1150,6 +1150,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <span style={{ font: "800 14px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "7px 12px", borderRadius: 999, boxShadow: "0 2px 6px rgba(0,0,0,.2)", whiteSpace: "nowrap" }}>
             🪙 {coins}{streak > 1 ? `  ·  🔥${streak}` : ""}
           </span>
+          {/* Altijd-zichtbare deur naar leren (Titan 3 jul): 276 park-opens → maar
+              1 keer "ga oefenen", want die knop zat verstopt achter een praatje.
+              Deze knop staat pal vast in de HUD en koppelt leren aan de munt-
+              economie die het kind al motiveert. */}
+          {(onOpenLeerpaden || onOpenLeerpad) && (
+            <button
+              onClick={() => { try { track("park_leren_knop"); track("park_naar_leren", { via: "hud_knop" }); } catch { /* */ } if (onOpenLeerpaden) onOpenLeerpaden(); else if (onOpenLeerpad) onOpenLeerpad(); }}
+              title="Leren verdient munten voor je park"
+              style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "7px 13px", font: "800 13.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 2px 8px rgba(46,158,79,.45)", cursor: "pointer", whiteSpace: "nowrap" }}
+            >
+              📚 Verdien 🪙
+            </button>
+          )}
           {/* Alle overige functies gebundeld in één ☰-menu → tijdens spelen bijna alleen park in beeld. */}
           <button onClick={() => setMenuOpen((v) => !v)} title="Menu" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode || bouwen) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "800 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>☰</button>
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
