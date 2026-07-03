@@ -46,7 +46,7 @@
     { "source": "/((?!api/)[^.]*)", "destination": "/" }
   ],
   "crons": [
-    { "path": "/api/post-daily-question", "schedule": "0 14 * * *" },
+    { "path": "/api/post-daily-question", "schedule": "0 7 * * *" },
     { "path": "/api/send-weekly-lesmateriaal", "schedule": "30 6 * * *" }
   ]
 }
