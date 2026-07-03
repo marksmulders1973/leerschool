@@ -68,12 +68,12 @@ export default async function handler(req) {
     },
   }, vraag.actueel ? "🗞️  Vraag van de dag · uit het nieuws" : "🎯  Doorstroomtoets · vraag van de dag");
 
-  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 130 : 160, marginTop: 8, marginBottom: 8 } }, vraag.emoji);
+  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 110 : 124, marginTop: 4, marginBottom: 6, flexShrink: 0 } }, vraag.emoji);
 
-  const vraagEl = h("div", { style: { display: "flex", fontSize: fmt === "11" ? 46 : 52, fontWeight: 700, lineHeight: 1.25 } }, String(vraag.vraag || "").replace(/\*\*/g, ""));
+  const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: fmt === "11" ? 44 : 48, fontWeight: 700, lineHeight: 1.3 } }, String(vraag.vraag || "").replace(/\*\*/g, ""));
 
-  const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 22 } },
-    ...opts.map((o, i) => h("div", { key: i, style: { display: "flex", alignItems: "center", background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "12px 16px", marginBottom: 12 } },
+  const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 28, flexShrink: 0 } },
+    ...opts.map((o, i) => h("div", { key: i, style: { display: "flex", alignItems: "center", flexShrink: 0, background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "11px 16px", marginBottom: 11 } },
       h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 20, background: "#00C853", color: "#0b1a2e", fontSize: 26, fontWeight: 700, marginRight: 16 } }, LETTERS[i]),
       h("div", { style: { display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" } }, String(o).replace(/\*\*/g, "").slice(0, 42)))));
 
@@ -87,7 +87,7 @@ export default async function handler(req) {
   const footer = h("div", { style: { display: "flex", flexDirection: "column", marginTop: "auto" } }, ...footerKinderen);
 
   const kaart = h("div", {
-    style: { display: "flex", flexDirection: "column", width: "100%", height: "100%", padding: 72, color: "#fff", fontFamily: ff, backgroundImage: "linear-gradient(135deg,#16233f 0%,#1d3358 55%,#24406a 100%)" },
+    style: { display: "flex", flexDirection: "column", width: "100%", height: "100%", padding: 60, color: "#fff", fontFamily: ff, backgroundImage: "linear-gradient(135deg,#16233f 0%,#1d3358 55%,#24406a 100%)" },
   }, header, badge, emoji, vraagEl, optiesEl, footer);
 
   return new ImageResponse(kaart, {
