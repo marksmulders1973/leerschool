@@ -1445,9 +1445,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       "VIROX", "METEORA", "SATURNAR", "VOLTAR", "ASTRA", "GALAXOR",
       "ORBITAR", "STING", "DRAGOR", "NEPTUNUS", "ECLIPSE", "COG", "REX",
     ];
-    // Boss-fight heeft eigen 3-levens: speler kan 3× geraakt worden voordat normale leven verloren gaat
-    const BOSS_LEVENS_MAX = 3;
-    let bossLevens = BOSS_LEVENS_MAX;
+    // Brian 3 jul 2026: boss gebruikt nu gewoon je HP (1 hartje / 100 HP) —
+    // geen aparte 3-levens meer.
     let bossHitInvincibility = 0; // frames waarin speler niet geraakt kan worden na hit
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
@@ -1632,7 +1631,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bossY = H * 0.42;
       bossInkomendLevel = naarLevel;
       bossAanvalTeller = 90;
-      bossLevens = BOSS_LEVENS_MAX;
+      hp = HP_MAX;          // Brian 3 jul 2026: fris met 100 HP de boss in
+      hpFlashTeller = 0;
       bossHitInvincibility = 0;
       bossLasers.length = 0;
       spelerLasers.length = 0;
@@ -7899,13 +7899,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               && bl.x >= sb.x && bl.x <= sb.x + sb.breedte
               && bl.y >= sb.y && bl.y <= sb.y + sb.hoogte) {
             bossLasers.splice(i, 1);
-            bossLevens--;
+            // Brian 3 jul 2026: boss doet nu HP-schade (1 hartje / 100 HP),
+            // net als de rest van het spel — geen 3 aparte boss-levens meer.
+            hp -= HP_PER_HIT;
+            hpFlashTeller = 90;
             // hit-effects
             shakeKracht = 16;
             spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 18, "#ff4040", { spread: 8, opwaarts: 2, leven: 30, grootte: 4, zwaartekracht: 0.1, glow: 18 });
             piep(220, 0.15, "sawtooth", 0.18);
-            if (bossLevens <= 0) {
-              // alle boss-levens op = leven kwijt, boss reset (kun je opnieuw proberen)
+            if (hp <= 0) {
+              // hp op = leven kwijt, boss reset (kun je opnieuw proberen)
+              hp = HP_MAX;
               levenVerlies();
               return;
             }
@@ -8591,17 +8595,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillText(`BOSS HP ${Math.max(0, Math.ceil(bossHp))} / ${bossMaxHpHuidig}`, bossX, hpBalkY + hpBalkH / 2);
         ctx.restore();
 
-        // BOSS-LEVENS hartjes (links bovenin, naast normale levens)
-        ctx.save();
-        ctx.font = `${20 * SCHAAL}px serif`;
-        ctx.textAlign = "left"; ctx.textBaseline = "top";
-        ctx.shadowBlur = 12; ctx.shadowColor = "#ff4040";
-        for (let i = 0; i < BOSS_LEVENS_MAX; i++) {
-          const heeft = i < bossLevens;
-          ctx.globalAlpha = heeft ? 1 : 0.25;
-          ctx.fillText(heeft ? "💚" : "🤍", 12 + i * 26 * SCHAAL, 108 * SCHAAL);
-        }
-        ctx.restore();
+        // (Brian 3 jul 2026: de 3 boss-hartjes zijn weg — bij de boss telt nu
+        //  gewoon je HP, net als in de rest van het spel: 1 hartje / 100 HP.)
 
         // SPELER lasers — dik cyaan-groen met witte kern voor maximale zichtbaarheid
         for (const l of spelerLasers) {
