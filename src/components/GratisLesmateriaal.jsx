@@ -128,9 +128,10 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
         vakken: vakken.length ? vakken : null,
         ref: getIncomingRef(),
       });
-      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
+      const alBekend = error && /duplicate|unique/i.test(error.message || "");
+      if (error && !alBekend) throw error;
       try { localStorage.setItem(doneKey, "1"); } catch {}
-      track("lesmateriaal_signup", { source, groep: groep || "", vakken: vakken.length });
+      if (!alBekend) track("lesmateriaal_signup", { source, groep: groep || "", vakken: vakken.length });
       setStep("done");
       onSubmitted?.();
     } catch {

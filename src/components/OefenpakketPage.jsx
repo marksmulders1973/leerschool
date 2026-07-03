@@ -416,7 +416,7 @@ export default function OefenpakketPage({ setPage } = {}) {
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <button
-            onClick={() => window.print()}
+            onClick={() => { track("oefenpakket_print", { omvang, source: leadSource() }); window.print(); }}
             disabled={totaal === 0}
             style={{
               padding: "14px 28px", borderRadius: 12, border: "none",

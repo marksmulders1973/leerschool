@@ -98,8 +98,25 @@ const ONBOARDING_STEPS = [
 // antwoord een nudge de gratis-trechter in. Rol/niveau + leeftijdscheck blijven
 // gewoon bestaan (gebeuren bij Start gratis / account).
 function ProefVraagKaart({ onStart }) {
-  const vraag = getSocialVraag(vraagVanVandaagId());
+  // 🗞️ Actuele Jeugdjournaal-vraag heeft voorrang (Mark 2026-07-03: home
+  // toonde de pool-vraag terwijl /vandaag al actueel was — verwarrend).
+  // Pool rendert direct; we wisselen alleen zolang er niet geantwoord is.
+  const [actueel, setActueel] = useState(null);
   const [chosen, setChosen] = useState(null);
+  const chosenRef = useRef(false);
+  useEffect(() => {
+    let weg = false;
+    fetch("/api/actuele-vraag")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (weg || chosenRef.current || !d?.actueel?.vraag?.options) return;
+        const v = d.actueel.vraag;
+        setActueel({ id: v.id, vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️" });
+      })
+      .catch(() => {});
+    return () => { weg = true; };
+  }, []);
+  const vraag = actueel || getSocialVraag(vraagVanVandaagId());
   // E-mail-capture op het hoogste-motivatie-moment (Mark 2026-06-20): ná het
   // beantwoorden van de proefvraag — veel meer bezoekers halen dit dan een
   // hele toets afronden. Optioneel: de "Ga verder"-knop blijft, dus geen gate.
@@ -115,7 +132,7 @@ function ProefVraagKaart({ onStart }) {
       borderRadius: 16, padding: "14px 16px",
     }}>
       <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
-        🎯 Probeer meteen de vraag van de dag
+        {vraag.actueel ? "🗞️ De vraag van de dag — uit het nieuws" : "🎯 Probeer meteen de vraag van de dag"}
       </div>
       {vraag.doelgroep && (
         <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
@@ -140,7 +157,7 @@ function ProefVraagKaart({ onStart }) {
           }
           return (
             <button key={i} type="button" disabled={chosen != null}
-              onClick={() => { setChosen(i); track("home_proefvraag_answered", { goed: i === vraag.answer }); }}
+              onClick={() => { chosenRef.current = true; setChosen(i); track("home_proefvraag_answered", { goed: i === vraag.answer, actueel: !!vraag.actueel }); }}
               style={{
                 textAlign: "left", padding: "10px 12px", borderRadius: 10,
                 background: bg, border, color: "#fff",

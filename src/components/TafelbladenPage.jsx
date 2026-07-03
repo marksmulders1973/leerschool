@@ -233,7 +233,7 @@ export default function TafelbladenPage({ setPage } = {}) {
 
         {metTempo && gekozen.length >= 1 && (
           <Sheet>
-            <BladKop titel="⏱️ Tempo-toets — 5 minuten" sub="zet een wekker · maak zoveel je kunt · fouten tellen dubbel niet, gewoon proberen!" />
+            <BladKop titel="⏱️ Tempo-toets — 5 minuten" sub="zet een wekker · maak zoveel je kunt · fouten tellen niet — gewoon proberen!" />
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: "0 20px" }}>
               {[0, 1, 2, 3].map((k) => (
                 <div key={k}>

@@ -149,7 +149,15 @@ export default async function handler(req, res) {
   //    dubbele generatie kost hooguit één extra AI-call, nooit dubbele rijen.
   try {
     const rss = await (await fetch(RSS_URL, { headers: { "user-agent": "leerkwartier-dagvraag" } })).text();
-    const items = parseRss(rss);
+    let items = parseRss(rss);
+    // Onderwerpen van de afgelopen dagen niet herhalen (het RSS houdt
+    // berichten meerdere dagen vast — anders 2× dezelfde giraffe).
+    try {
+      const r = await sb(`actuele_vraag?datum=gte.${new Date(Date.now() - 5 * 86400000).toISOString().slice(0, 10)}&select=bron_url`, {}, base, key);
+      const oud = new Set(((await r.json()) || []).map((x) => x.bron_url).filter(Boolean));
+      const vers = items.filter((it) => !oud.has(it.link));
+      if (vers.length) items = vers;
+    } catch { /* uitsluiten is best-effort */ }
     if (!items.length) return res.status(200).json({ actueel: null, reden: "rss-leeg" });
 
     const lijst = items.map((it, i) => `[${i}] ${it.titel} — ${it.beschrijving}`).join("\n");
