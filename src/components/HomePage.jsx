@@ -654,123 +654,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* Voorstel 3 (Mark 2026-06-14): nieuwe bezoeker doet meteen één
-            Doorstroomtoets-vraag i.p.v. een keuzescherm; daarna nudge de trechter in. */}
-        {step === "role" && (
-          <ProefVraagKaart onStart={() => handleFeatureClick("cito")} />
-        )}
-
-        {/* Zoekbalk verplaatst naar ONDER het oefenpakket (Robert-tip 18 jun:
-            rustiger eerste scherm). Stond hier direct onder de hero en concurreerde
-            met de hoofd-CTA + de "doe één vraag"-kaart. */}
-
-        {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
-            verhaal i.p.v. klacht-quotes over concurrenten. Vóór de oefenpakket-kaart
-            (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{
-            margin: "0 auto 18px", maxWidth: 520,
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
-            padding: "14px 18px", textAlign: "center",
-          }}>
-            <div style={{
-              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
-              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
-              marginBottom: 10,
-            }}>
-              {visitorCount != null && visitorCount > 0 && (
-                <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
-              )}
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> oefenvragen</span>
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
-            </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
-              Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
-              wél uitleg die werkt.
-            </div>
-          </div>
-        )}
-
-        {/* Gratis oefenpakket-CTA (Mark 2026-06-07): lead-magnet. Ná de bewijs-strip
-            geplaatst (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
-            <button
-              onClick={handlePrintenClick}
-              style={{
-                width: "100%", display: "flex", alignItems: "center", gap: 12,
-                textAlign: "left", cursor: "pointer",
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.16)", borderRadius: 14,
-                padding: "11px 14px",
-              }}
-            >
-              <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0 }}>🖨️</span>
-              <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, color: "#fff", marginBottom: 2 }}>
-                  Gratis printbaar oefenen
-                </span>
-                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
-                  Werkboek 📄 · Leesladder 🪜 · tafelbladen ✖️ · redactiesommen 📝 · dictees 🔤 — print thuis, mét antwoordsleutels.
-                </span>
-              </span>
-              <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
-            </button>
-          </div>
-        )}
-
-        {/* Zoekbalk — power-functie voor wie al weet wat hij zoekt. Bewust ONDER
-            de hero/oefenpakket (Robert-tip 18 jun: minder keuzes in het eerste scherm). */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
-            <div style={{
-              display: "flex", gap: 8, alignItems: "center",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.16)",
-              borderRadius: 999, padding: "6px 6px 6px 16px",
-            }}>
-              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
-              <input
-                type="search"
-                value={homeSearch}
-                onChange={(e) => setHomeSearch(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
-                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
-                aria-label="Zoek een onderwerp"
-                style={{
-                  flex: 1, minWidth: 0, border: "none", outline: "none",
-                  background: "transparent", color: "#fff",
-                  fontFamily: "var(--font-body)", fontSize: 14,
-                }}
-              />
-              <button
-                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
-                aria-label="Zoeken"
-                style={{
-                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
-                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
-                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
-                  padding: "9px 18px",
-                }}
-              >
-                Zoek
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
-            show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
-            nieuwe ouder binnen 30 sec ziet waarom dit beter is dan YouTube/ChatGPT.
-            Zelfstandig, geen backend, geen extra navigatie-knop. */}
-        {/* "Zo werkt Leerkwartier"-blok stond hier frontaal — Mark 2026-06-05:
-            te overdreven bovenaan. Verplaatst naar onderaan (boven de deel-rij). */}
-
-        {/* Hero-doelgroep-zin verwijderd 2026-05-20 (Mark): tegels + CTA-balken
-            verwijzen zelf al naar Doorstroomtoets/Cito + examens — een extra
-            tekst-balk maakt 3-4 ingangen naar hetzelfde, verwarrend. */}
-
+        {/* Herschikking 2026-07-03 (Mark: "app is gegroeid, home moet duidelijker"):
+            de rol-tegels — aantoonbaar dé actie op deze pagina (role_selected =
+            veruit het grootste event) — staan nu direct onder de hero i.p.v.
+            1,5 scherm diep. Direct eronder: een eigen ingang voor de OUDER
+            (primaire doelgroep), die eerst alleen als footer-linkje bestond. */}
         {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
             als blikvanger en 3 rol-tegels (Leerling / Student / Leerkracht).
             Bewust géén "Leren" / "Test" tegels: die concurreerden met de rol-
@@ -1331,6 +1219,149 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             )}
           </div>
         )}
+
+
+        {step === "role" && onOuderDashboard && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
+            <button
+              onClick={() => { track("home_cta_ouder"); onOuderDashboard(); }}
+              style={{
+                width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
+                background: "rgba(167,139,250,0.10)", border: "1.5px solid rgba(167,139,250,0.45)",
+                borderRadius: 14, padding: "12px 16px", cursor: "pointer",
+                color: "#c4b5fd", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
+              }}
+            >
+              👨‍👩‍👧 Ik ben ouder — zo help je thuis <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        )}
+
+        {/* Voorstel 3 (Mark 2026-06-14): nieuwe bezoeker doet meteen één
+            Doorstroomtoets-vraag i.p.v. een keuzescherm; daarna nudge de trechter in. */}
+        {step === "role" && (
+          <ProefVraagKaart onStart={() => handleFeatureClick("cito")} />
+        )}
+
+        {/* Zoekbalk verplaatst naar ONDER het oefenpakket (Robert-tip 18 jun:
+            rustiger eerste scherm). Stond hier direct onder de hero en concurreerde
+            met de hoofd-CTA + de "doe één vraag"-kaart. */}
+
+        {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
+            verhaal i.p.v. klacht-quotes over concurrenten. Vóór de oefenpakket-kaart
+            (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{
+            margin: "0 auto 18px", maxWidth: 520,
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
+            padding: "14px 18px", textAlign: "center",
+          }}>
+            <div style={{
+              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
+              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
+              marginBottom: 10,
+            }}>
+              {visitorCount != null && visitorCount > 0 && (
+                <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
+              )}
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> oefenvragen</span>
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
+              Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
+              wél uitleg die werkt.
+            </div>
+          </div>
+        )}
+
+        {/* "Dit vind je hier"-strip (herschikking 2026-07-03): de app is sinds
+            juni verdubbeld (park+maatjes, print-lijn, actuele dagvraag) maar de
+            home vertelde het oude verhaal. Eén compacte 2×2-strip vervangt de
+            losse print-kaart; oefenen + printen zijn klikbaar. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "rgba(255,255,255,0.85)", marginBottom: 8, textAlign: "center" }}>
+              Dit vind je allemaal bij {BRAND.name} — gratis
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              {[
+                { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
+                { emoji: "🖨️", titel: "5 printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
+                { emoji: "🗞️", titel: "Elke dag een nieuwe vraag", sub: "vandaag zelfs uit het Jeugdjournaal", klik: null },
+                { emoji: "🦊", titel: "Leren wordt beloond", sub: "bouw je eigen 3D-park met maatjes", klik: null },
+              ].map((it, i) => {
+                const inhoud = (
+                  <>
+                    <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>{it.emoji}</span>
+                    <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800, color: "#fff", margin: "6px 0 2px" }}>{it.titel}</span>
+                    <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.4 }}>{it.sub}</span>
+                  </>
+                );
+                const stijl = {
+                  background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.14)",
+                  borderRadius: 14, padding: "12px 12px", textAlign: "center", color: "#fff",
+                };
+                return it.klik ? (
+                  <button key={i} onClick={it.klik} style={{ ...stijl, cursor: "pointer" }}>{inhoud}</button>
+                ) : (
+                  <div key={i} style={stijl}>{inhoud}</div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Zoekbalk — power-functie voor wie al weet wat hij zoekt. Bewust ONDER
+            de hero/oefenpakket (Robert-tip 18 jun: minder keuzes in het eerste scherm). */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
+            <div style={{
+              display: "flex", gap: 8, alignItems: "center",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.16)",
+              borderRadius: 999, padding: "6px 6px 6px 16px",
+            }}>
+              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
+              <input
+                type="search"
+                value={homeSearch}
+                onChange={(e) => setHomeSearch(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
+                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
+                aria-label="Zoek een onderwerp"
+                style={{
+                  flex: 1, minWidth: 0, border: "none", outline: "none",
+                  background: "transparent", color: "#fff",
+                  fontFamily: "var(--font-body)", fontSize: 14,
+                }}
+              />
+              <button
+                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
+                aria-label="Zoeken"
+                style={{
+                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
+                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
+                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+                  padding: "9px 18px",
+                }}
+              >
+                Zoek
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
+            show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
+            nieuwe ouder binnen 30 sec ziet waarom dit beter is dan YouTube/ChatGPT.
+            Zelfstandig, geen backend, geen extra navigatie-knop. */}
+        {/* "Zo werkt Leerkwartier"-blok stond hier frontaal — Mark 2026-06-05:
+            te overdreven bovenaan. Verplaatst naar onderaan (boven de deel-rij). */}
+
+        {/* Hero-doelgroep-zin verwijderd 2026-05-20 (Mark): tegels + CTA-balken
+            verwijzen zelf al naar Doorstroomtoets/Cito + examens — een extra
+            tekst-balk maakt 3-4 ingangen naar hetzelfde, verwarrend. */}
 
         {/* "Zo werkt Leerkwartier" (UspDemo) verwijderd van de home (Mark 2026-06-14):
             de proefvraag bovenaan laat het al zien; component bewaard in UspDemo.jsx. */}
