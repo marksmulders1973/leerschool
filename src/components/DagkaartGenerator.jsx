@@ -97,14 +97,14 @@ function tekenKaart(canvas, vraag, fmt) {
 
   // ── Groot emoji als illustratie (veilig; geen nieuwsfoto) ──
   const emoji = vraag.emoji || (vraag.actueel ? "🗞️" : "🎯");
-  const emSize = fmt === "11" ? 118 : 160;
+  const emSize = fmt === "11" ? 104 : 132;
   ctx.font = `${emSize}px ${disp}`;
   ctx.textAlign = "center";
-  ctx.fillText(emoji, w / 2, by + 130 + emSize);
+  ctx.fillText(emoji, w / 2, by + 112 + emSize);
   ctx.textAlign = "left";
 
   // ── Vraagtekst (gewikkeld) ── (alles hierna stroomt mee → geen overlap)
-  let y = by + 130 + emSize + (fmt === "11" ? 60 : 80);
+  let y = by + 112 + emSize + (fmt === "11" ? 44 : 56);
   ctx.fillStyle = "#ffffff";
   const vraagFont = fmt === "11" ? 46 : 54;
   ctx.font = `800 ${vraagFont}px ${disp}`;
@@ -112,7 +112,7 @@ function tekenKaart(canvas, vraag, fmt) {
   const regels = wikkel(ctx, schoon, w - PAD * 2);
   for (const r of regels.slice(0, 5)) {
     ctx.fillText(r, PAD, y);
-    y += vraagFont + 14;
+    y += vraagFont + 10;
   }
 
   // ── Opties A–D ──
@@ -142,16 +142,16 @@ function tekenKaart(canvas, vraag, fmt) {
     while (ctx.measureText(t).width > maxT && t.length > 4) t = t.slice(0, -2);
     if (t !== String(opts[i]).replace(/\*\*/g, "")) t = t.replace(/…?$/, "…");
     ctx.fillText(t, PAD + 74, y + rowH / 2 + 11);
-    y += rowH + 14;
+    y += rowH + 12;
   }
 
   // ── Footer: CTA + bron — stromen ná de opties (nooit overlap) ──
   // Als er onderaan ruimte over is, duwen we CTA+bron naar beneden zodat de
   // kaart mooi gevuld oogt; anders staan ze direct onder de laatste optie.
   const bronH = vraag.actueel && vraag.bronTitel ? 44 : 0;
-  const naOpties = y + 6;
-  const onderMarge = h - PAD - 66 - bronH;
-  const cy2 = Math.min(Math.max(naOpties, onderMarge), h - PAD - 66 - bronH);
+  const naOpties = y + 8;                     // direct onder de laatste optie
+  const bodemPlek = h - PAD - 66 - bronH;     // netjes onderaan bij korte vragen
+  const cy2 = Math.max(naOpties, bodemPlek);  // nooit ómhoog → nooit overlap
   const cta = "Antwoord + uitleg op 3 niveaus  →  " + BRAND.domain + "/vandaag";
   ctx.font = `800 ${fmt === "11" ? 30 : 34}px ${disp}`;
   const cw = Math.min(ctx.measureText(cta).width + 56, w - PAD * 2);
