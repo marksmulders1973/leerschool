@@ -97,15 +97,16 @@ function tekenKaart(canvas, vraag, fmt) {
 
   // ── Groot emoji als illustratie (veilig; geen nieuwsfoto) ──
   const emoji = vraag.emoji || (vraag.actueel ? "🗞️" : "🎯");
-  ctx.font = `160px ${disp}`;
+  const emSize = fmt === "11" ? 118 : 160;
+  ctx.font = `${emSize}px ${disp}`;
   ctx.textAlign = "center";
-  ctx.fillText(emoji, w / 2, by + 240);
+  ctx.fillText(emoji, w / 2, by + 130 + emSize);
   ctx.textAlign = "left";
 
-  // ── Vraagtekst (gewikkeld) ──
-  let y = by + 320;
+  // ── Vraagtekst (gewikkeld) ── (alles hierna stroomt mee → geen overlap)
+  let y = by + 130 + emSize + (fmt === "11" ? 60 : 80);
   ctx.fillStyle = "#ffffff";
-  const vraagFont = fmt === "11" ? 50 : 54;
+  const vraagFont = fmt === "11" ? 46 : 54;
   ctx.font = `800 ${vraagFont}px ${disp}`;
   const schoon = String(vraag.vraag || "").replace(/\*\*/g, "");
   const regels = wikkel(ctx, schoon, w - PAD * 2);
@@ -117,10 +118,9 @@ function tekenKaart(canvas, vraag, fmt) {
   // ── Opties A–D ──
   y += 18;
   const opts = (vraag.options || []).slice(0, 4);
+  const rowH = fmt === "11" ? 60 : 68;
   ctx.font = `600 34px ${disp}`;
   for (let i = 0; i < opts.length; i++) {
-    const label = LETTERS[i] + "  " + String(opts[i]).replace(/\*\*/g, "");
-    const rowH = 68;
     ctx.fillStyle = "rgba(255,255,255,0.07)";
     roundRect(ctx, PAD, y, w - PAD * 2, rowH, 16);
     ctx.fill();
@@ -145,11 +145,16 @@ function tekenKaart(canvas, vraag, fmt) {
     y += rowH + 14;
   }
 
-  // ── Footer: CTA + bron ──
+  // ── Footer: CTA + bron — stromen ná de opties (nooit overlap) ──
+  // Als er onderaan ruimte over is, duwen we CTA+bron naar beneden zodat de
+  // kaart mooi gevuld oogt; anders staan ze direct onder de laatste optie.
+  const bronH = vraag.actueel && vraag.bronTitel ? 44 : 0;
+  const naOpties = y + 6;
+  const onderMarge = h - PAD - 66 - bronH;
+  const cy2 = Math.min(Math.max(naOpties, onderMarge), h - PAD - 66 - bronH);
   const cta = "Antwoord + uitleg op 3 niveaus  →  " + BRAND.domain + "/vandaag";
-  ctx.font = `800 34px ${disp}`;
+  ctx.font = `800 ${fmt === "11" ? 30 : 34}px ${disp}`;
   const cw = Math.min(ctx.measureText(cta).width + 56, w - PAD * 2);
-  const cy2 = h - PAD - (vraag.actueel && vraag.bronTitel ? 118 : 78);
   const grad = ctx.createLinearGradient(PAD, 0, PAD + cw, 0);
   grad.addColorStop(0, "#00C853");
   grad.addColorStop(1, "#00a846");
@@ -157,15 +162,15 @@ function tekenKaart(canvas, vraag, fmt) {
   roundRect(ctx, PAD, cy2, cw, 66, 33);
   ctx.fill();
   ctx.fillStyle = "#0b1a2e";
-  ctx.fillText(cta, PAD + 28, cy2 + 44);
+  ctx.fillText(cta, PAD + 28, cy2 + 43);
 
   // Bronvermelding (alleen bij nieuws) — foto niet, tekst-credit wel.
-  if (vraag.actueel && vraag.bronTitel) {
+  if (bronH) {
     ctx.fillStyle = "rgba(255,255,255,0.55)";
     ctx.font = `500 24px ${disp}`;
     let bron = "Bron: NOS Jeugdjournaal — " + vraag.bronTitel;
     while (ctx.measureText(bron).width > w - PAD * 2 && bron.length > 30) bron = bron.slice(0, -2);
-    ctx.fillText(bron, PAD, h - PAD - 22);
+    ctx.fillText(bron, PAD, cy2 + 66 + 32);
   }
 }
 
