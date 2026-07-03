@@ -43,6 +43,8 @@ export const PAGE_TO_PATH = {
   tafelbladen: "/tafelbladen",
   redactiebladen: "/redactiebladen",
   dictees: "/dictees",
+  // Branded dagkaart-generator voor social (Mark 3 jul)
+  dagkaart: "/dagkaart",
   tafels: "/tafels",
   redactiesommen: "/redactiesommen",
   spelling: "/spelling",
