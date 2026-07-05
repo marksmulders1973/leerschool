@@ -1423,6 +1423,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onClose={() => setBuddyChatOpen(false)}
           buddyId={buddyId}
           buddyNaam={buddyNaamEff}
+          onNaarLeren={() => {
+            setBuddyChatOpen(false);
+            // Trechter-meting: leren gestart vanuit het maatje-praatje (nieuwe brug 5 jul).
+            try { track("park_naar_leren", { via: "buddy_chat", pad: oefenPad?.id || null }); } catch { /* nooit laten breken */ }
+            if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+            else if (onOpenLeerpaden) onOpenLeerpaden();
+          }}
           facts={{ naam, zwakVak }}
           park={(() => {
             let dieren = 0, attracties = 0, gebouwen = 0, kraampjes = 0, bomen = 0;

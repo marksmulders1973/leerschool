@@ -32,7 +32,7 @@ function speak(text) {
   } catch { /* stem niet beschikbaar → stil */ }
 }
 
-export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null }) {
+export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null, onNaarLeren }) {
   const b = BUDDY_BY_ID[buddyId];
   const naam = (buddyNaam || b?.naam || "Maatje").trim();
   const [messages, setMessages] = useState([]);
@@ -154,6 +154,26 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
                 borderRadius: 999, padding: "7px 12px", font: "700 12.5px system-ui", cursor: "pointer",
               }}>{s}</button>
             ))}
+          </div>
+        )}
+
+        {/* Leren-nudge (Titan 2026-07-05): het maatje-praatje is de populairste plek
+            in het park (buddy_chat_open 31 vs park_praatje 2), maar leidde nog nooit
+            naar leren. Ná een echt gesprekje koppelt deze balk leren aan het munt-
+            motief dat het kind al drijft — leren = munten voor je maatje/park. */}
+        {onNaarLeren && messages.length >= 3 && !busy && (
+          <div style={{ padding: "10px 12px 0" }}>
+            <button
+              onClick={() => { try { track("buddy_naar_leren", { id: buddyId }); } catch { /* */ } onNaarLeren(); }}
+              style={{
+                width: "100%", border: "none", borderRadius: 14, padding: "11px 14px",
+                background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", color: "#fff",
+                font: "800 13.5px system-ui", cursor: "pointer", boxShadow: "0 3px 10px rgba(46,158,79,.35)",
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+              }}
+            >
+              <span style={{ fontSize: 16 }}>🪙</span> Verdien munten voor {naam} — start een leerkwartier ▶
+            </button>
           </div>
         )}
 
