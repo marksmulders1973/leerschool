@@ -136,6 +136,32 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     });
   }, [mode, questions, answers, playerName]);
 
+  // Drop-off-meting (Titan 2026-07-05): dagrapport toonde cito_toets_gestart 2 →
+  // afgerond 0, maar we waren blind op WAAR mensen afhaken (tab dicht / weg-
+  // navigeren midden in de toets gaf geen enkel signaal). Leg dat nu vast mét de
+  // vraag-index, zodat het volgende rapport laat zien op welke vraag men stopt.
+  const dropRef = useRef({ mode: "intro", idx: 0, total: 0, answered: 0 });
+  useEffect(() => {
+    dropRef.current = { mode, idx, total: questions.length, answered: answers.filter((a) => a != null).length };
+  });
+  const dropFiredRef = useRef(false);
+  useEffect(() => {
+    const flush = () => {
+      if (dropFiredRef.current) return;
+      const d = dropRef.current;
+      if (d.mode !== "running") return; // alleen echte afhakers (niet wie afrondt)
+      dropFiredRef.current = true;
+      try {
+        track("cito_toets_verlaten", {
+          simulatie: !!simulatieMode, vak: subjectFilter || "mix",
+          vraag: d.idx + 1, totaal: d.total, beantwoord: d.answered,
+        });
+      } catch { /* nooit laten breken */ }
+    };
+    window.addEventListener("pagehide", flush); // tab dicht / refresh
+    return () => { window.removeEventListener("pagehide", flush); flush(); }; // weg-navigeren
+  }, [simulatieMode, subjectFilter]);
+
   const pickAnswer = (a) => {
     setAnswers((prev) => {
       const next = prev.slice();
