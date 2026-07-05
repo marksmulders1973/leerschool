@@ -145,7 +145,7 @@ export default async function handler(req, res) {
   // 1. Bestaat de vraag van vandaag al? Dan direct teruggeven.
   if (!force) {
     try {
-      const r = await sb(`actuele_vraag?datum=eq.${vandaag}&select=datum,vraag,bron_titel,bron_url`, {}, base, key);
+      const r = await sb(`actuele_vraag?datum=eq.${vandaag}&select=datum,vraag,bron_titel,bron_url,created_at`, {}, base, key);
       const rows = await r.json();
       if (Array.isArray(rows) && rows.length) return res.status(200).json({ actueel: rows[0] });
     } catch (e) {
@@ -211,7 +211,7 @@ export default async function handler(req, res) {
     if (!ins.ok && ins.status !== 409) {
       console.warn("[actuele-vraag] insert faalde:", ins.status, await ins.text());
     }
-    return res.status(200).json({ actueel: { datum: vandaag, vraag: vraagJson, bron_titel: bron.titel, bron_url: bron.link } });
+    return res.status(200).json({ actueel: { datum: vandaag, vraag: vraagJson, bron_titel: bron.titel, bron_url: bron.link, created_at: new Date().toISOString() } });
   } catch (e) {
     console.warn("[actuele-vraag] generatie faalde:", e.message);
     return res.status(200).json({ actueel: null, reden: "generatie-fout" });

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { getSocialVraag } from "../socialVragen.js";
-import { track } from "../utils.js";
+import { track, bronDatumTijd } from "../utils.js";
 import { BRAND } from "../brand.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
@@ -54,6 +54,8 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
           actueel: true,
           bronTitel: d.actueel.bron_titel,
           bronUrl: d.actueel.bron_url,
+          bronDatum: d.actueel.datum,
+          bronCreated: d.actueel.created_at,
           uitlegPad: { niveaus: { basis: v.uitleg, ...(v.simpeler ? { simpeler: v.simpeler } : {}) } },
         });
       })
@@ -146,6 +148,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
               {vraag.bronUrl
                 ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
                 : <span>{vraag.bronTitel}</span>}
+              {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
             </div>
           )}
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
-import { track } from "../utils.js";
+import { track, bronDatumTijd } from "../utils.js";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
 
 // "Doorstroomtoets-vraag van de dag" — een dagelijkse, lichte reden om de app te
@@ -81,6 +81,8 @@ export default function VraagVanDeDag() {
         emoji: actueel.vraag.emoji || "🗞️",
         bronTitel: actueel.bron_titel,
         bronUrl: actueel.bron_url,
+        bronDatum: actueel.datum,
+        bronCreated: actueel.created_at,
       }
     : null;
 
@@ -146,6 +148,7 @@ export default function VraagVanDeDag() {
               {vraag.bronUrl
                 ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
                 : <span>{vraag.bronTitel}</span>}
+              {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
             </div>
           )}
         </div>

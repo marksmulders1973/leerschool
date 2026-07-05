@@ -7,7 +7,7 @@ import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
-import { track } from "../utils.js";
+import { track, bronDatumTijd } from "../utils.js";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import usePwaInstall from "../shared/usePwaInstall.js";
 
@@ -111,7 +111,7 @@ function ProefVraagKaart({ onStart }) {
       .then((d) => {
         if (weg || chosenRef.current || !d?.actueel?.vraag?.options) return;
         const v = d.actueel.vraag;
-        setActueel({ id: v.id, tekst: v.tekst || "", vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️" });
+        setActueel({ id: v.id, tekst: v.tekst || "", vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️", bronTitel: d.actueel.bron_titel, bronUrl: d.actueel.bron_url, bronDatum: d.actueel.datum, bronCreated: d.actueel.created_at });
       })
       .catch(() => {});
     return () => { weg = true; };
@@ -131,9 +131,20 @@ function ProefVraagKaart({ onStart }) {
       background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.16)",
       borderRadius: 16, padding: "14px 16px",
     }}>
-      <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: 8, letterSpacing: 0.3 }}>
+      <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: vraag.actueel ? 3 : 8, letterSpacing: 0.3 }}>
         {vraag.actueel ? "🗞️ De vraag van de dag — uit het nieuws" : "🎯 Probeer meteen de vraag van de dag"}
       </div>
+      {vraag.actueel && (
+        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 8, lineHeight: 1.4 }}>
+          Bron: NOS Jeugdjournaal
+          {vraag.bronTitel ? (
+            <> — {vraag.bronUrl
+              ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
+              : vraag.bronTitel}</>
+          ) : null}
+          {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
+        </div>
+      )}
       {vraag.doelgroep && (
         <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
           {vraag.doelgroep}

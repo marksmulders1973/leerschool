@@ -213,3 +213,24 @@ export const daysUntil = (d) => {
   const target = new Date(d);
   return Math.ceil((target - now) / (1000 * 60 * 60 * 24));
 };
+
+// Bronvermelding voor de actuele nieuwsvraag: "5 juli 2026 · 07:12".
+// createdAt (moment van genereren) heeft de voorkeur; anders alleen de datum.
+export const bronDatumTijd = (datum, createdAt) => {
+  try {
+    if (createdAt) {
+      const s = new Date(createdAt).toLocaleString("nl-NL", {
+        timeZone: "Europe/Amsterdam",
+        day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit",
+      });
+      // nl-NL geeft "5 juli 2026 om 07:12" of "5 juli 2026, 07:12" → normaliseren naar "·"
+      return s.replace(/\s+om\s+|,\s+/, " · ");
+    }
+    if (datum) {
+      return new Date(datum).toLocaleDateString("nl-NL", {
+        timeZone: "Europe/Amsterdam", day: "numeric", month: "long", year: "numeric",
+      });
+    }
+  } catch { /* val terug op leeg */ }
+  return "";
+};
