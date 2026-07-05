@@ -103,8 +103,26 @@ function tekenKaart(canvas, vraag, fmt) {
   ctx.fillText(emoji, w / 2, by + 112 + emSize);
   ctx.textAlign = "left";
 
-  // ── Vraagtekst (gewikkeld) ── (alles hierna stroomt mee → geen overlap)
   let y = by + 112 + emSize + (fmt === "11" ? 44 : 56);
+
+  // ── Leestekst (begrijpend lezen): het berichtje boven de vraag, in een
+  //    lichter kader zodat het duidelijk de "tekst" is en niet de vraag. ──
+  const leestekst = String(vraag.tekst || "").replace(/\*\*/g, "").trim();
+  if (leestekst) {
+    const ltFont = fmt === "11" ? 32 : 36;
+    ctx.font = `500 ${ltFont}px ${disp}`;
+    const ltRegels = wikkel(ctx, leestekst, w - PAD * 2 - 36).slice(0, 7);
+    const boxH = ltRegels.length * (ltFont + 8) + 28;
+    ctx.fillStyle = "rgba(255,255,255,0.07)";
+    roundRect(ctx, PAD, y - ltFont - 4, w - PAD * 2, boxH, 16);
+    ctx.fill();
+    ctx.fillStyle = "rgba(255,255,255,0.9)";
+    let ty = y + 6;
+    for (const r of ltRegels) { ctx.fillText(r, PAD + 18, ty); ty += ltFont + 8; }
+    y = y - ltFont - 4 + boxH + (fmt === "11" ? 40 : 48);
+  }
+
+  // ── Vraagtekst (gewikkeld) ── (alles hierna stroomt mee → geen overlap)
   ctx.fillStyle = "#ffffff";
   const vraagFont = fmt === "11" ? 46 : 54;
   ctx.font = `800 ${vraagFont}px ${disp}`;
@@ -201,16 +219,16 @@ export default function DagkaartGenerator({ setPage } = {}) {
         if (weg) return;
         if (d?.actueel?.vraag?.options) {
           const v = d.actueel.vraag;
-          setVraag({ vraag: v.vraag, options: v.options, answer: v.answer, emoji: v.emoji || "🗞️", actueel: true, bronTitel: d.actueel.bron_titel });
+          setVraag({ tekst: v.tekst || "", vraag: v.vraag, options: v.options, answer: v.answer, emoji: v.emoji || "🗞️", actueel: true, bronTitel: d.actueel.bron_titel });
         } else {
           const p = getSocialVraag(vraagVanVandaagId());
-          if (p) setVraag({ vraag: p.vraag, options: p.options, answer: p.answer, emoji: "🎯", actueel: false });
+          if (p) setVraag({ tekst: p.tekst || "", vraag: p.vraag, options: p.options, answer: p.answer, emoji: "🎯", actueel: false });
         }
         setStatus("klaar");
       })
       .catch(() => {
         const p = getSocialVraag(vraagVanVandaagId());
-        if (p) setVraag({ vraag: p.vraag, options: p.options, answer: p.answer, emoji: "🎯", actueel: false });
+        if (p) setVraag({ tekst: p.tekst || "", vraag: p.vraag, options: p.options, answer: p.answer, emoji: "🎯", actueel: false });
         setStatus("klaar");
       });
     return () => { weg = true; };

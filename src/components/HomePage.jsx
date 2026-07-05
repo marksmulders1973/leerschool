@@ -111,7 +111,7 @@ function ProefVraagKaart({ onStart }) {
       .then((d) => {
         if (weg || chosenRef.current || !d?.actueel?.vraag?.options) return;
         const v = d.actueel.vraag;
-        setActueel({ id: v.id, vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️" });
+        setActueel({ id: v.id, tekst: v.tekst || "", vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️" });
       })
       .catch(() => {});
     return () => { weg = true; };
@@ -137,6 +137,11 @@ function ProefVraagKaart({ onStart }) {
       {vraag.doelgroep && (
         <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
           {vraag.doelgroep}
+        </div>
+      )}
+      {vraag.tekst && (
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "rgba(255,255,255,0.9)", lineHeight: 1.55, marginBottom: 10, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 10, padding: "10px 12px", whiteSpace: "pre-line" }}>
+          {String(vraag.tekst).replace(/\*\*/g, "")}
         </div>
       )}
       <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>

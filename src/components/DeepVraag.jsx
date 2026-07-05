@@ -45,6 +45,8 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
         const v = d.actueel.vraag;
         setActueel({
           id: v.id,
+          tekst: v.tekst || "",
+          truc: v.truc || "",
           vraag: v.vraag,
           options: v.options,
           answer: v.answer,
@@ -153,6 +155,14 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
           {vraag.doelgroep}
         </div>
       )}
+      {/* Leestekst bij een begrijpend-lezen-vraag: eerst het (eigen-woorden)
+          berichtje lezen, dan de vraag erover. Het antwoord staat in de tekst. */}
+      {vraag.tekst && (
+        <div style={{ fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "11px 13px", marginBottom: 10, whiteSpace: "pre-line" }}>
+          {renderTekst(vraag.tekst)}
+        </div>
+      )}
+
       <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
         {renderTekst(vraag.vraag)}
       </div>
@@ -210,6 +220,13 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
       {isGoed && (
         <div style={{ fontSize: 14, color: GROEN_LICHT, background: "rgba(0,200,83,0.10)", border: `1px solid rgba(0,200,83,0.30)`, borderRadius: 10, padding: "10px 14px", marginBottom: 14 }}>
           🎉 Goed gedaan! En zo leggen we het uit voor wie twijfelde:
+        </div>
+      )}
+
+      {/* Lees-truc: benoemt de leesstrategie die je bij deze vraag oefent. */}
+      {beantwoord && vraag.truc && (
+        <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.4)", color: "#90caf9", borderRadius: 999, padding: "5px 13px", fontSize: 12.5, fontWeight: 700, marginBottom: 12 }}>
+          🔑 Lees-truc: {vraag.truc}
         </div>
       )}
 

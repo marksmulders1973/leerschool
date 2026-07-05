@@ -156,7 +156,9 @@ export const SOCIAL_VRAGEN = {
   "begrijpendlezen1": {
     vak: "begrijpend lezen",
     leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen (groep 8)" },
-    vraag: "Lees: _'Bij onweer zie je eerst de bliksem en hoor je pas later de donder. Dat komt doordat licht veel sneller gaat dan geluid.'_\n\n**Waarom hoor je de donder later dan je de bliksem ziet?**",
+    tekst: "Bij onweer zie je eerst de bliksem en hoor je pas later de donder. Dat komt doordat licht veel sneller gaat dan geluid.",
+    truc: "oorzaak & gevolg (signaalwoord)",
+    vraag: "Waarom hoor je de donder later dan je de bliksem ziet?",
     options: ["Omdat geluid langzamer is dan licht", "Omdat de donder verder weg is", "Omdat de bliksem feller is", "Omdat geluid niet door wolken kan"],
     answer: 0,
     wrongHints: [
@@ -309,7 +311,9 @@ export const SOCIAL_VRAGEN = {
   "begrijpendlezen2": {
     vak: "begrijpend lezen",
     leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen (groep 8)" },
-    vraag: "Lees: _'Bijen zijn heel belangrijk. Ze brengen stuifmeel van bloem naar bloem, waardoor planten vrucht kunnen maken. Zonder bijen zouden veel groenten en fruit verdwijnen. Daarom maken mensen zich zorgen nu er steeds minder bijen zijn.'_\n\n**Wat is de hoofdgedachte van deze tekst?**",
+    tekst: "Bijen zijn heel belangrijk. Ze brengen stuifmeel van bloem naar bloem, waardoor planten vrucht kunnen maken. Zonder bijen zouden veel groenten en fruit verdwijnen. Daarom maken mensen zich zorgen nu er steeds minder bijen zijn.",
+    truc: "hoofdgedachte",
+    vraag: "Wat is de hoofdgedachte van deze tekst?",
     options: ["Bijen maken honing", "Bijen zijn belangrijk voor planten en ons eten", "Er komen steeds meer bloemen bij", "Mensen houden van fruit"],
     answer: 1,
     wrongHints: [
@@ -334,7 +338,9 @@ export const SOCIAL_VRAGEN = {
   "begrijpendlezen3": {
     vak: "begrijpend lezen",
     leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen (groep 8)" },
-    vraag: "Lees: _'De oude brug was bouwvallig. Niemand durfde er nog overheen te lopen, bang dat hij zou instorten.'_\n\n**Wat betekent het woord 'bouwvallig'?**",
+    tekst: "De oude brug was bouwvallig. Niemand durfde er nog overheen te lopen, bang dat hij zou instorten.",
+    truc: "woord uit de zin halen",
+    vraag: "Wat betekent het woord 'bouwvallig'?",
     options: ["gloednieuw", "op instorten / vervallen", "heel breed", "gloeiend heet"],
     answer: 1,
     wrongHints: [
@@ -645,7 +651,9 @@ export const SOCIAL_VRAGEN = {
   "begrijpendlezen4": {
     vak: "begrijpend lezen",
     leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen — verbanden (groep 8)" },
-    vraag: "Lees: _'Tim had de hele week hard getraind. Op zaterdag won hij de wedstrijd.'_\n\n**Welk verband is er tussen de twee zinnen?**",
+    tekst: "Tim had de hele week hard getraind. Op zaterdag won hij de wedstrijd.",
+    truc: "oorzaak & gevolg",
+    vraag: "Welk verband is er tussen de twee zinnen?",
     options: ["Doordat hij hard trainde, won hij", "Hij won, dus daarna ging hij trainen", "Er is geen verband", "Hij verloor de wedstrijd"],
     answer: 0,
     wrongHints: [
@@ -772,6 +780,7 @@ export const SOCIAL_VRAGEN = {
   "begrijpendlezen5": {
     vak: "begrijpend lezen",
     leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Feit en mening (groep 8)" },
+    truc: "feit of mening",
     vraag: "Welke zin is een **mening** (en geen feit)?",
     options: ["Voetbal is de leukste sport die er is", "Een voetbalwedstrijd duurt 90 minuten", "Een voetbalteam bestaat uit 11 spelers", "Een voetbal is rond"],
     answer: 0,
