@@ -104,32 +104,31 @@ function parseJson(tekst) {
   return JSON.parse(schoon.slice(start, eind + 1));
 }
 
-const MAAK_SYSTEM = `Je maakt voor de Nederlandse leer-app Leerkwartier één "actuele vraag van de dag" voor kinderen van 9-12 jaar (groep 6-8), gebaseerd op een NOS Jeugdjournaal-bericht.
+const TRUCS = "hoofdgedachte, detail terugzoeken, verwijswoord, oorzaak & gevolg, signaalwoord, woord uit de zin halen, conclusie trekken, volgorde, feit of mening";
+
+const MAAK_SYSTEM = `Je maakt voor de Nederlandse leer-app Leerkwartier één "begrijpend-lezen-vraag van de dag" voor kinderen van 9-12 jaar (groep 6-8), gebaseerd op een NOS Jeugdjournaal-bericht. Dit oefent begrijpend lezen voor de Doorstroomtoets — GEEN weetjes-quiz.
+
+ZO WERKT HET: je schrijft eerst een kort nieuwsberichtje in JE EIGEN WOORDEN (3-4 zinnen), en daarna een leesbegrip-vraag DAAROVER. Het kind leest de tekst en moet het antwoord in díé tekst kunnen vinden of eruit kunnen afleiden.
 
 HARDE REGELS:
 - Kies UITSLUITEND een luchtig/positief bericht: natuur, dieren, sport, wetenschap, ruimte, techniek, cultuur, records, weer. NOOIT: oorlog, geweld, misdrijf, ongeluk, ziekte/overlijden, politiek-gevoelig, verdrietig nieuws. Is er geen geschikt bericht, geef dan {"geschikt": false}.
-- De vraag toetst BEGRIP of algemene kennis die aan het bericht raakt (rekenen mag ook, bv. met een getal uit het bericht) — geen mening, geen gok zonder houvast.
-- BEANTWOORDBAARHEIDS-EIS (belangrijkste regel): een kind dat ALLEEN dit bericht leest, moet het goede antwoord met zekerheid kunnen aanwijzen. Het antwoord staat letterlijk in het bericht of is vaststaande algemene kennis. Kan dat niet? Kies een ander bericht of geef {"geschikt": false}.
-- VERBODEN vraagsoorten:
-  • Enquête-/peiling-/percentage-vragen ("hoeveel procent van de mensen/kinderen vindt/zei/gaat...") — die kan een lezer niet weten.
-  • Meningen, voorspellingen, "wat denk jij", "wat zou jij doen".
-  • Zelf-verwijzende vragen: verwijs NOOIT naar "de app", "Leerkwartier", "kinderen die reageerden", "lezers" of welke groep dan ook die niet in het bericht staat. De vraag gaat puur over de INHOUD van het nieuwsbericht.
-  • Vragen over een exact getal/percentage dat niet duidelijk in het bericht staat.
-- Schrijf op taalniveau van een kind van 10. Geen moeilijke woorden zonder uitleg.
-- Verzin GEEN feiten die niet in het bericht staan of geen vaststaande algemene kennis zijn.
-- Precies 4 antwoordopties, 1 goed. De 3 foute opties zijn duidelijk fout (niet "ook een beetje waar"). Zet het goede antwoord op een willekeurige positie.
-- "uitleg" legt in 2-3 zinnen uit waaróm het antwoord klopt (kindvriendelijk); "simpeler" zegt hetzelfde nóg eenvoudiger in 1-2 zinnen.
+- "tekst": 3-4 korte, heldere zinnen in je eigen woorden op taalniveau van een kind van 10. Neem GEEN zinnen letterlijk over uit het bericht (auteursrecht). Verzin GEEN feiten die niet in het bronbericht staan.
+- BEANTWOORDBAARHEIDS-EIS (belangrijkste regel): het goede antwoord moet volgen uit JOUW "tekst" — staat er letterlijk in of is er logisch uit af te leiden. Een kind dat alleen "tekst" leest, wijst het juiste antwoord met zekerheid aan.
+- De vraag toetst een LEES-TRUC. Kies er één en zet die in "truc" (kies uit: ${TRUCS}). Voorbeelden: waar gaat de tekst vooral over (hoofdgedachte); waarom gebeurt iets (oorzaak & gevolg / signaalwoord 'omdat'/'daarom'); naar wie/wat verwijst 'hij/dat/zij' (verwijswoord); wat betekent een woord uit de zin.
+- VERBODEN: enquête-/peiling-/percentage-vragen over wat mensen vinden of gaan doen; meningen/voorspellingen ("wat denk jij"); verwijzen naar "de app"/"Leerkwartier"/"kinderen die reageerden"/"lezers"; vragen over een getal dat niet in "tekst" staat.
+- Precies 4 antwoordopties, 1 goed. De 3 foute opties zijn duidelijk fout, maar wel geloofwaardig (verzin geen onzin-opties). Zet het goede antwoord op een willekeurige positie.
+- "uitleg" legt in 2-3 zinnen uit waaróm het antwoord klopt EN benoemt de lees-truc (bv. "Het woord 'daarom' wijst de reden aan..."); "simpeler" zegt hetzelfde nóg eenvoudiger in 1-2 zinnen.
 
 Antwoord met ALLEEN dit JSON-object, niets eromheen:
-{"geschikt": true, "bronIndex": <nummer van het gekozen bericht>, "emoji": "<1 passende emoji>", "vraag": "<de vraag>", "options": ["...","...","...","..."], "answer": <index 0-3 van het goede antwoord>, "uitleg": "<waarom>", "simpeler": "<nog simpeler>"}`;
+{"geschikt": true, "bronIndex": <nummer van het gekozen bericht>, "emoji": "<1 passende emoji>", "tekst": "<nieuwsberichtje in eigen woorden, 3-4 zinnen>", "truc": "<één lees-truc>", "vraag": "<de leesbegrip-vraag>", "options": ["...","...","...","..."], "answer": <index 0-3 van het goede antwoord>, "uitleg": "<waarom + welke truc>", "simpeler": "<nog simpeler>"}`;
 
-const CHECK_SYSTEM = `Je bent een strenge feitencontroleur voor een kindervraag. Je krijgt een nieuwsbericht (titel + samenvatting) en een meerkeuzevraag met antwoord en uitleg. Keur AF (ok:false) zodra ook maar één punt niet klopt:
-1. Kan een kind dat ALLEEN dit bericht leest het goede antwoord met zekerheid aanwijzen? Staat het antwoord in het bericht of is het vaststaande algemene kennis? Zo nee → afkeuren.
-2. Klopt het aangewezen antwoord echt?
-3. Is precies één optie goed (geen tweede verdedigbare optie)?
-4. Is het GEEN enquête-/peiling-/percentage-vraag over wat mensen vinden/zeiden/gaan doen, en GEEN mening/voorspelling? Zulke vragen zijn niet te weten → afkeuren.
-5. Verwijst de vraag NIET naar "de app", "Leerkwartier", "kinderen/lezers die reageerden" of een groep die niet in het bericht staat? Zo'n zelf-verwijzing → afkeuren.
-6. Is het onderwerp geschikt voor kinderen van 9-12 (niets engs of verdrietigs)?
+const CHECK_SYSTEM = `Je bent een strenge controleur voor een begrijpend-lezen-vraag voor kinderen (9-12 jaar). Je krijgt het bronbericht, een korte LEESTEKST (eigen woorden), en een meerkeuzevraag over die leestekst. Keur AF (ok:false) zodra ook maar één punt niet klopt:
+1. Kan een kind dat ALLEEN de LEESTEKST leest het goede antwoord met zekerheid vinden of eruit afleiden? Zo nee → afkeuren.
+2. Klopt de leestekst met het bronbericht (geen verzonnen feiten)?
+3. Klopt het aangewezen antwoord echt, en is precies één optie goed (geen tweede verdedigbare optie)?
+4. Is het GEEN enquête-/peiling-/percentage-vraag over wat mensen vinden/gaan doen, en GEEN mening/voorspelling? → anders afkeuren.
+5. Verwijst de vraag NIET naar "de app", "Leerkwartier", "kinderen/lezers die reageerden" of een groep buiten de leestekst? → anders afkeuren.
+6. Is het onderwerp geschikt voor kinderen (niets engs of verdrietigs)?
 7. Klopt de uitleg met het antwoord?
 Bij twijfel: afkeuren. Antwoord met ALLEEN JSON: {"ok": true} of {"ok": false, "reden": "<kort>"}`;
 
@@ -176,14 +175,14 @@ export default async function handler(req, res) {
 
     const bron = items[v.bronIndex] || items[0];
     if (
-      !v.vraag || !Array.isArray(v.options) || v.options.length !== 4 ||
+      !v.tekst || v.tekst.length < 40 || !v.vraag || !Array.isArray(v.options) || v.options.length !== 4 ||
       !Number.isInteger(v.answer) || v.answer < 0 || v.answer > 3 || !v.uitleg
     ) return res.status(200).json({ actueel: null, reden: "ongeldig-formaat" });
 
     // 3. Feitencheck door een tweede call — bij twijfel niets opslaan.
     const check = await ai(
       CHECK_SYSTEM,
-      `BERICHT: ${bron.titel} — ${bron.beschrijving}\n\nVRAAG: ${v.vraag}\nOPTIES: ${v.options.map((o, i) => `${i}: ${o}`).join(" | ")}\nGOED ANTWOORD: ${v.answer} (${v.options[v.answer]})\nUITLEG: ${v.uitleg}`,
+      `BRONBERICHT: ${bron.titel} — ${bron.beschrijving}\n\nLEESTEKST: ${v.tekst}\n\nVRAAG: ${v.vraag}\nOPTIES: ${v.options.map((o, i) => `${i}: ${o}`).join(" | ")}\nGOED ANTWOORD: ${v.answer} (${v.options[v.answer]})\nUITLEG: ${v.uitleg}`,
       200
     );
     const oordeel = parseJson(check.tekst);
@@ -192,6 +191,8 @@ export default async function handler(req, res) {
     const vraagJson = {
       id: `actueel-${vandaag}`,
       emoji: v.emoji || "🗞️",
+      tekst: v.tekst,
+      truc: v.truc || "",
       vraag: v.vraag,
       options: v.options,
       answer: v.answer,

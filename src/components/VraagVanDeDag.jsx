@@ -66,6 +66,8 @@ export default function VraagVanDeDag() {
   const actueelVraag = actueel?.vraag
     ? {
         id: actueel.vraag.id,
+        tekst: actueel.vraag.tekst || "",
+        truc: actueel.vraag.truc || "",
         vraag: actueel.vraag.vraag,
         options: actueel.vraag.options,
         answer: actueel.vraag.answer,
@@ -154,6 +156,15 @@ export default function VraagVanDeDag() {
           </div>
         )
       )}
+      {/* Leestekst bij de actuele vraag: het kind leest eerst het (eigen-woorden)
+          nieuwsberichtje en beantwoordt daarna een begrijpend-lezen-vraag erover.
+          Het antwoord staat altijd in deze tekst → echt leesbegrip oefenen. */}
+      {vraag.tekst && (
+        <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "12px 14px", marginBottom: 12, whiteSpace: "pre-line" }}>
+          {vraag.tekst}
+        </div>
+      )}
+
       <div style={{ fontSize: 15.5, fontWeight: 600, lineHeight: 1.4, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
         {renderTekst(vraag.vraag)}
       </div>
@@ -194,6 +205,11 @@ export default function VraagVanDeDag() {
           <div style={{ fontSize: 13.5, color: isGoed ? GROEN_LICHT : "#ffcc80", marginBottom: 10 }}>
             {isGoed ? "🎉 Goed! En zo leg je het uit voor wie twijfelt:" : `💭 ${vraag.wrongHints?.[gekozen] || "Bijna! Kijk hieronder hoe het zit."}`}
           </div>
+          {vraag.truc && (
+            <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.4)", color: "#90caf9", borderRadius: 999, padding: "4px 12px", fontSize: 12, fontWeight: 700, marginBottom: 10 }}>
+              🔑 Lees-truc: {vraag.truc}
+            </div>
+          )}
           {NIV.length > 0 && (
             <>
               <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
