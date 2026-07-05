@@ -102,6 +102,7 @@ export default function LeesladderPage({ setPage } = {}) {
   const [email, setEmail] = useState("");
   const [mailStatus, setMailStatus] = useState("idle");
   const emailRef = useRef(null);
+  const antwoordRef = useRef(null);
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -144,6 +145,11 @@ export default function LeesladderPage({ setPage } = {}) {
       try { localStorage.setItem(MAIL_DONE_KEY, "1"); } catch {}
       track("leesladder_mail_signup", { source });
       setMailStatus("done");
+      // Direct laten zien dat de antwoorden nú vrij zijn: scroll er meteen
+      // naartoe zodat niemand op een mail zit te wachten (Mark 2026-07-05).
+      setTimeout(() => {
+        try { antwoordRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } catch {}
+      }, 150);
     } catch {
       setMailStatus("error");
     }
@@ -220,9 +226,18 @@ export default function LeesladderPage({ setPage } = {}) {
         <div style={{ border: "1.5px solid rgba(66,165,245,0.4)", background: "rgba(66,165,245,0.08)", borderRadius: 14, padding: "16px 18px", marginBottom: 20 }}>
           {mailStatus === "done" ? (
             <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, lineHeight: 1.5 }}>
-              ✓ <strong>Gelukt!</strong> De antwoordsleutel met uitleg staat nu achterin
-              het pakket. En je krijgt <strong>elke week 15 minuten gratis extra
-              oefenstof</strong> in je mail. Veel leesplezier samen! 💚
+              ✓ <strong>Ontgrendeld!</strong> De antwoordsleutel met uitleg staat nu
+              gewoon <strong>onderaan deze pagina</strong> (en print mee met het pakket) —
+              geen wachten op een mailtje.{" "}
+              <button
+                type="button"
+                onClick={() => { try { antwoordRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } catch {} }}
+                style={{ background: "none", border: "none", padding: 0, color: "var(--color-accent, #42a5f5)", fontWeight: 800, cursor: "pointer", fontSize: 15, textDecoration: "underline" }}
+              >
+                Spring naar de antwoorden →
+              </button>
+              <br />
+              Als bonus krijg je <strong>elke week een gratis oefenkwartiertje</strong> in je mail. Veel leesplezier samen! 💚
             </div>
           ) : (
             <form onSubmit={meldAan}>
@@ -231,9 +246,9 @@ export default function LeesladderPage({ setPage } = {}) {
               </div>
               <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, marginBottom: 12, lineHeight: 1.55 }}>
                 De hele Leesladder print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>gratis</strong>.
-                Vul je e-mail in en je krijgt er meteen bij: <strong style={{ color: "var(--color-text, #e8edf5)" }}>de
-                antwoordsleutel waarin elke vraag kort wordt uitgelegd</strong> — zodat jij het als
-                ouder óók kunt voordoen. Plus elke week een nieuw oefenkwartiertje.
+                Vul je e-mail in en de <strong style={{ color: "var(--color-text, #e8edf5)" }}>antwoordsleutel met uitleg
+                per vraag verschijnt <em>meteen</em> op deze pagina</strong> — geen wachten op een mailtje, zodat jij het
+                als ouder óók kunt voordoen. Als bonus krijg je elke week een nieuw oefenkwartiertje in je mail.
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <input
@@ -250,7 +265,7 @@ export default function LeesladderPage({ setPage } = {}) {
                   disabled={mailStatus === "busy"}
                   style={{ padding: "12px 22px", borderRadius: 10, border: "none", background: "var(--color-accent, #42a5f5)", color: "#0b1224", fontSize: 15, fontWeight: 800, cursor: mailStatus === "busy" ? "wait" : "pointer" }}
                 >
-                  {mailStatus === "busy" ? "Even bezig…" : "Stuur de antwoordsleutel →"}
+                  {mailStatus === "busy" ? "Even bezig…" : "🔓 Toon de antwoorden"}
                 </button>
               </div>
               {mailStatus === "error" && (
@@ -369,8 +384,8 @@ export default function LeesladderPage({ setPage } = {}) {
         </Sheet>
 
         {/* De vier treden */}
-        {treden.map((t) => (
-          <Sheet key={t.nr}>
+        {treden.map((t, tIdx) => (
+          <Sheet key={t.nr} innerRef={tIdx === 0 ? antwoordRef : undefined}>
             <SectieKop emoji={t.emoji} label={`Trede ${t.nr} — ${t.titel}`} />
             <p style={{ color: "#6b7785", fontSize: 13.5, marginTop: -8, marginBottom: 6 }}>{t.sub}</p>
             <p style={{ color: "#46546a", fontSize: 13.5, marginTop: 0, marginBottom: 18, background: "#f4f7fb", borderRadius: 8, padding: "8px 12px" }}>
@@ -396,6 +411,16 @@ export default function LeesladderPage({ setPage } = {}) {
                         </div>
                       ))}
                     </div>
+                    {/* Antwoord + uitleg direct onder de vraag zodra ontgrendeld
+                        (Mark 2026-07-05: geen aparte sleutel achterin meer). */}
+                    {mailStatus === "done" && (
+                      <div className="leesladder-antwoord" style={{ marginTop: 8, marginLeft: 18, background: "#eef7ee", border: "1px solid #cfe6cf", borderRadius: 7, padding: "8px 12px", fontSize: 13, color: "#274427", lineHeight: 1.55, breakInside: "avoid" }}>
+                        <strong>✓ Antwoord: {LETTERS[v.answer]}</strong>{" "}
+                        <span style={{ color: "#3a5a3a" }}>({v.options[v.answer]})</span>
+                        <span style={{ color: "#6a8a6a" }}> · truc: {v.type}</span>
+                        <div style={{ color: "#3a5540", marginTop: 2 }}>{v.uitleg}</div>
+                      </div>
+                    )}
                   </div>
                 ))}
                 <div style={{ fontSize: 12.5, color: "#8893a3", paddingLeft: 2 }}>
@@ -406,37 +431,23 @@ export default function LeesladderPage({ setPage } = {}) {
           </Sheet>
         ))}
 
-        {/* Antwoordsleutel — na e-mail */}
+        {/* Slotpagina — na e-mail. De antwoorden + uitleg staan nu direct
+            onder elke vraag (Mark 2026-07-05), dus hier alleen een korte
+            afsluiting i.p.v. een aparte antwoordsleutel. */}
         {mailStatus === "done" ? (
           <Sheet>
-            <SectieKop emoji="✅" label={`Antwoordsleutel & lees-trucs — versie ${versie}`} />
-            <p style={{ color: "#6b7785", fontSize: 13, marginTop: -8, marginBottom: 18 }}>
-              Voor ouders/begeleiders. Bespreek bij een fout eerst de uitleg
-              (mét de lees-truc), en laat je kind de vraag dan opnieuw proberen.
+            <SectieKop emoji="✅" label="Antwoorden ontgrendeld" />
+            <p style={{ color: "#3a4658", fontSize: 14.5, lineHeight: 1.6, marginTop: -4 }}>
+              De <strong>antwoorden met uitleg</strong> staan nu in het groene kadertje
+              direct onder elke vraag — inclusief de <strong>lees-truc</strong>. Zo kun je
+              samen nakijken zonder te bladeren.
             </p>
-            {treden.map((t) => (
-              <div key={t.nr} style={{ marginBottom: 14, breakInside: "avoid" }}>
-                <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 15, margin: "14px 0 8px", fontFamily: "Arial, sans-serif", borderBottom: "1px solid #dde3ec", paddingBottom: 4 }}>
-                  {t.emoji} Trede {t.nr} — {t.titel}
-                </div>
-                {t.teksten.map((tx, ti) => (
-                  <div key={ti} style={{ marginBottom: 10 }}>
-                    <div style={{ fontWeight: 700, color: "#46546a", fontSize: 13, margin: "6px 0 4px" }}>
-                      📖 {t.nr}.{ti + 1} {tx.titel}
-                    </div>
-                    {tx.vragen.map((v) => (
-                      <div key={v.nr} className="leesladder-vraag" style={{ marginBottom: 7, fontSize: 13, lineHeight: 1.5 }}>
-                        <span style={{ fontWeight: 700, color: "#1a2332" }}>{v.nr}. {LETTERS[v.answer]}</span>{" "}
-                        <span style={{ color: "#3a4658" }}>({v.options[v.answer]})</span>
-                        <span style={{ color: "#8893a3" }}> · truc: {v.type}</span>
-                        <span style={{ color: "#6b7785" }}> — {v.uitleg}</span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            ))}
-            <div style={{ marginTop: 28, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
+            <div style={{ marginTop: 16, background: "#eef7ee", border: "1px solid #cfe6cf", borderRadius: 10, padding: "14px 18px", fontSize: 13.5, color: "#274427", lineHeight: 1.6 }}>
+              <strong>Tip voor het nakijken:</strong> bespreek bij een fout eerst de uitleg
+              (mét de lees-truc), en laat je kind de vraag dan nog eens proberen. Het gaat
+              om het <em>begrip</em>, niet om het onthouden antwoord.
+            </div>
+            <div style={{ marginTop: 24, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
               <div style={{ color: "#46546a", fontSize: 14, fontWeight: 600 }}>
                 Klaar met de ladder? Online staat meer — met uitleg op 3 niveaus.
               </div>
@@ -447,11 +458,12 @@ export default function LeesladderPage({ setPage } = {}) {
           </Sheet>
         ) : (
           <Sheet>
-            <SectieKop emoji="🔒" label="Antwoordsleutel & lees-trucs (vergrendeld)" />
+            <SectieKop emoji="🔒" label="Antwoorden & lees-trucs (vergrendeld)" />
             <p style={{ color: "#6b7785", fontSize: 14, lineHeight: 1.6, marginTop: -4 }}>
-              De antwoordsleutel — met per vraag de goede letter, de <strong>lees-truc</strong> en
-              een korte uitleg — is <strong>vergrendeld</strong>. Vul je e-mailadres in om hem
-              gratis te ontgrendelen; daarna verschijnt hij hier en print hij gewoon mee.
+              De antwoorden — met per vraag de goede letter, de <strong>lees-truc</strong> en
+              een korte uitleg — zijn nog <strong>vergrendeld</strong>. Vul je e-mailadres in om ze
+              gratis te ontgrendelen; daarna verschijnen ze <strong>direct onder elke vraag</strong> en
+              printen ze gewoon mee.
             </p>
             <button
               type="button"
@@ -468,9 +480,10 @@ export default function LeesladderPage({ setPage } = {}) {
   );
 }
 
-function Sheet({ children }) {
+function Sheet({ children, innerRef }) {
   return (
     <div
+      ref={innerRef}
       className="leesladder-sheet"
       style={{ background: "#fff", color: "#1a2332", width: "100%", maxWidth: 740, margin: "0 auto 24px", padding: "40px 44px", borderRadius: 8, boxShadow: "0 6px 30px rgba(0,0,0,0.4)", fontFamily: "Georgia, 'Times New Roman', serif", boxSizing: "border-box" }}
     >
