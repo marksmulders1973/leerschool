@@ -43,6 +43,7 @@ const treden = VERSIES[versie].map((t, ti) => ({
   })),
 }));
 
+// ── De vragen (zonder antwoord — kind maakt eerst zelf) ──────────
 let body = "";
 for (const t of treden) {
   body += `<section class="sheet"><h2>${t.emoji} Trede ${t.nr} — ${esc(t.titel)}</h2><p class="sub">${esc(t.sub)}</p>`;
@@ -51,12 +52,29 @@ for (const t of treden) {
     for (const v of tx.vragen) {
       body += `<div class="vraag"><div class="q"><b>${v.nr}.</b> ${esc(v.q)}</div><div class="opts">`;
       v.options.forEach((opt, i) => { body += `<div><b>${LETTERS[i]}.</b> ${esc(opt)}</div>`; });
-      body += `</div><div class="antwoord"><b>✓ Antwoord: ${LETTERS[v.answer]}</b> (${esc(v.options[v.answer])}) · truc: ${esc(v.type)}<div class="uitleg">${esc(v.uitleg)}</div></div></div>`;
+      body += `</div></div>`;
     }
     body += `</div>`;
   });
   body += `</section>`;
 }
+
+// ── Antwoordblad — apart achteraan (voor de begeleider) ──────────
+let key = `<section class="sheet keysheet"><h2>✅ Antwoordblad & lees-trucs — versie ${versie}</h2>`;
+key += `<p class="sub">Voor de ouder/begeleider — pas nakijken nadat het kind alles zelf heeft gemaakt.</p>`;
+for (const t of treden) {
+  key += `<div class="keytrede"><b>${t.emoji} Trede ${t.nr} — ${esc(t.titel)}</b>`;
+  t.teksten.forEach((tx, ti) => {
+    key += `<div class="keytekst"><span class="keytitel">📖 ${t.nr}.${ti + 1} ${esc(tx.titel)}</span>`;
+    for (const v of tx.vragen) {
+      key += `<div class="keyrij"><b>${v.nr}. ${LETTERS[v.answer]}</b> (${esc(v.options[v.answer])}) · truc: ${esc(v.type)} — ${esc(v.uitleg)}</div>`;
+    }
+    key += `</div>`;
+  });
+  key += `</div>`;
+}
+key += `</section>`;
+body += key;
 
 const html = `<!doctype html><html lang="nl"><head><meta charset="utf-8">
 <title>Leesladder — versie ${versie} (met antwoorden)</title>
@@ -71,15 +89,18 @@ const html = `<!doctype html><html lang="nl"><head><meta charset="utf-8">
   .tekst{margin-bottom:22px}
   h3{font-size:15px;background:#eef2f8;border-radius:6px;padding:7px 12px;font-family:Arial,sans-serif;margin:0 0 8px}
   .verhaal{border:1px solid #dde3ec;border-radius:8px;padding:12px 16px;font-size:14.5px;white-space:pre-line;margin-bottom:10px}
-  .vraag{margin-bottom:14px;break-inside:avoid}
+  .vraag{margin-bottom:12px;break-inside:avoid}
   .q{font-size:15px;margin-bottom:6px}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px;padding-left:16px;font-size:14px;color:#3a4658}
-  .antwoord{margin:8px 0 0 16px;background:#eef7ee;border:1px solid #cfe6cf;border-radius:7px;padding:8px 12px;font-size:13px;color:#274427;break-inside:avoid}
-  .uitleg{color:#3a5540;margin-top:2px}
+  .keysheet{border-top:3px solid #1a2332}
+  .keytrede{margin-bottom:12px;break-inside:avoid}
+  .keytekst{display:block;margin:6px 0}
+  .keytitel{font-weight:700;color:#46546a;font-size:13px}
+  .keyrij{font-size:13px;color:#274427;margin:3px 0}
   @page{margin:16mm 14mm}
 </style></head><body>
 <h1>🪜 De Leesladder — versie ${versie}</h1>
-<p class="lead">Begrijpend lezen in kleine stapjes · ${teller} vragen · antwoord + uitleg staan onder elke vraag · Leerkwartier — leerkwartier.app</p>
+<p class="lead">Begrijpend lezen in kleine stapjes · ${teller} vragen · antwoordblad met uitleg staat achteraan (voor de begeleider) · Leerkwartier — leerkwartier.app</p>
 ${body}
 </body></html>`;
 

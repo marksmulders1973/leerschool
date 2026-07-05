@@ -384,8 +384,8 @@ export default function LeesladderPage({ setPage } = {}) {
         </Sheet>
 
         {/* De vier treden */}
-        {treden.map((t, tIdx) => (
-          <Sheet key={t.nr} innerRef={tIdx === 0 ? antwoordRef : undefined}>
+        {treden.map((t) => (
+          <Sheet key={t.nr}>
             <SectieKop emoji={t.emoji} label={`Trede ${t.nr} — ${t.titel}`} />
             <p style={{ color: "#6b7785", fontSize: 13.5, marginTop: -8, marginBottom: 6 }}>{t.sub}</p>
             <p style={{ color: "#46546a", fontSize: 13.5, marginTop: 0, marginBottom: 18, background: "#f4f7fb", borderRadius: 8, padding: "8px 12px" }}>
@@ -411,16 +411,6 @@ export default function LeesladderPage({ setPage } = {}) {
                         </div>
                       ))}
                     </div>
-                    {/* Antwoord + uitleg direct onder de vraag zodra ontgrendeld
-                        (Mark 2026-07-05: geen aparte sleutel achterin meer). */}
-                    {mailStatus === "done" && (
-                      <div className="leesladder-antwoord" style={{ marginTop: 8, marginLeft: 18, background: "#eef7ee", border: "1px solid #cfe6cf", borderRadius: 7, padding: "8px 12px", fontSize: 13, color: "#274427", lineHeight: 1.55, breakInside: "avoid" }}>
-                        <strong>✓ Antwoord: {LETTERS[v.answer]}</strong>{" "}
-                        <span style={{ color: "#3a5a3a" }}>({v.options[v.answer]})</span>
-                        <span style={{ color: "#6a8a6a" }}> · truc: {v.type}</span>
-                        <div style={{ color: "#3a5540", marginTop: 2 }}>{v.uitleg}</div>
-                      </div>
-                    )}
                   </div>
                 ))}
                 <div style={{ fontSize: 12.5, color: "#8893a3", paddingLeft: 2 }}>
@@ -431,23 +421,40 @@ export default function LeesladderPage({ setPage } = {}) {
           </Sheet>
         ))}
 
-        {/* Slotpagina — na e-mail. De antwoorden + uitleg staan nu direct
-            onder elke vraag (Mark 2026-07-05), dus hier alleen een korte
-            afsluiting i.p.v. een aparte antwoordsleutel. */}
+        {/* Antwoordblad — apart achteraan (na de laatste vraag), zodat het
+            kind eerst zelf oefent en je daarna samen nakijkt. Print op een
+            eigen pagina (Mark 2026-07-05: niet weggeven onder de vraag). */}
         {mailStatus === "done" ? (
-          <Sheet>
-            <SectieKop emoji="✅" label="Antwoorden ontgrendeld" />
-            <p style={{ color: "#3a4658", fontSize: 14.5, lineHeight: 1.6, marginTop: -4 }}>
-              De <strong>antwoorden met uitleg</strong> staan nu in het groene kadertje
-              direct onder elke vraag — inclusief de <strong>lees-truc</strong>. Zo kun je
-              samen nakijken zonder te bladeren.
+          <Sheet innerRef={antwoordRef}>
+            <SectieKop emoji="✅" label={`Antwoordblad & lees-trucs — versie ${versie}`} />
+            <p style={{ color: "#6b7785", fontSize: 13, marginTop: -8, marginBottom: 18 }}>
+              Dit blad is voor de ouder/begeleider — knip of vouw het weg tot na het maken.
+              Bespreek bij een fout eerst de uitleg (mét de lees-truc), en laat je kind de
+              vraag dan opnieuw proberen.
             </p>
-            <div style={{ marginTop: 16, background: "#eef7ee", border: "1px solid #cfe6cf", borderRadius: 10, padding: "14px 18px", fontSize: 13.5, color: "#274427", lineHeight: 1.6 }}>
-              <strong>Tip voor het nakijken:</strong> bespreek bij een fout eerst de uitleg
-              (mét de lees-truc), en laat je kind de vraag dan nog eens proberen. Het gaat
-              om het <em>begrip</em>, niet om het onthouden antwoord.
-            </div>
-            <div style={{ marginTop: 24, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
+            {treden.map((t) => (
+              <div key={t.nr} style={{ marginBottom: 14, breakInside: "avoid" }}>
+                <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 15, margin: "14px 0 8px", fontFamily: "Arial, sans-serif", borderBottom: "1px solid #dde3ec", paddingBottom: 4 }}>
+                  {t.emoji} Trede {t.nr} — {t.titel}
+                </div>
+                {t.teksten.map((tx, ti) => (
+                  <div key={ti} style={{ marginBottom: 10 }}>
+                    <div style={{ fontWeight: 700, color: "#46546a", fontSize: 13, margin: "6px 0 4px" }}>
+                      📖 {t.nr}.{ti + 1} {tx.titel}
+                    </div>
+                    {tx.vragen.map((v) => (
+                      <div key={v.nr} className="leesladder-vraag" style={{ marginBottom: 7, fontSize: 13, lineHeight: 1.5 }}>
+                        <span style={{ fontWeight: 700, color: "#1a2332" }}>{v.nr}. {LETTERS[v.answer]}</span>{" "}
+                        <span style={{ color: "#3a4658" }}>({v.options[v.answer]})</span>
+                        <span style={{ color: "#8893a3" }}> · truc: {v.type}</span>
+                        <span style={{ color: "#6b7785" }}> — {v.uitleg}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div style={{ marginTop: 28, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
               <div style={{ color: "#46546a", fontSize: 14, fontWeight: 600 }}>
                 Klaar met de ladder? Online staat meer — met uitleg op 3 niveaus.
               </div>
