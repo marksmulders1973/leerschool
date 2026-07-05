@@ -109,20 +109,29 @@ const MAAK_SYSTEM = `Je maakt voor de Nederlandse leer-app Leerkwartier één "a
 HARDE REGELS:
 - Kies UITSLUITEND een luchtig/positief bericht: natuur, dieren, sport, wetenschap, ruimte, techniek, cultuur, records, weer. NOOIT: oorlog, geweld, misdrijf, ongeluk, ziekte/overlijden, politiek-gevoelig, verdrietig nieuws. Is er geen geschikt bericht, geef dan {"geschikt": false}.
 - De vraag toetst BEGRIP of algemene kennis die aan het bericht raakt (rekenen mag ook, bv. met een getal uit het bericht) — geen mening, geen gok zonder houvast.
+- BEANTWOORDBAARHEIDS-EIS (belangrijkste regel): een kind dat ALLEEN dit bericht leest, moet het goede antwoord met zekerheid kunnen aanwijzen. Het antwoord staat letterlijk in het bericht of is vaststaande algemene kennis. Kan dat niet? Kies een ander bericht of geef {"geschikt": false}.
+- VERBODEN vraagsoorten:
+  • Enquête-/peiling-/percentage-vragen ("hoeveel procent van de mensen/kinderen vindt/zei/gaat...") — die kan een lezer niet weten.
+  • Meningen, voorspellingen, "wat denk jij", "wat zou jij doen".
+  • Zelf-verwijzende vragen: verwijs NOOIT naar "de app", "Leerkwartier", "kinderen die reageerden", "lezers" of welke groep dan ook die niet in het bericht staat. De vraag gaat puur over de INHOUD van het nieuwsbericht.
+  • Vragen over een exact getal/percentage dat niet duidelijk in het bericht staat.
 - Schrijf op taalniveau van een kind van 10. Geen moeilijke woorden zonder uitleg.
 - Verzin GEEN feiten die niet in het bericht staan of geen vaststaande algemene kennis zijn.
-- Precies 4 antwoordopties, 1 goed. Zet het goede antwoord op een willekeurige positie.
+- Precies 4 antwoordopties, 1 goed. De 3 foute opties zijn duidelijk fout (niet "ook een beetje waar"). Zet het goede antwoord op een willekeurige positie.
 - "uitleg" legt in 2-3 zinnen uit waaróm het antwoord klopt (kindvriendelijk); "simpeler" zegt hetzelfde nóg eenvoudiger in 1-2 zinnen.
 
 Antwoord met ALLEEN dit JSON-object, niets eromheen:
 {"geschikt": true, "bronIndex": <nummer van het gekozen bericht>, "emoji": "<1 passende emoji>", "vraag": "<de vraag>", "options": ["...","...","...","..."], "answer": <index 0-3 van het goede antwoord>, "uitleg": "<waarom>", "simpeler": "<nog simpeler>"}`;
 
-const CHECK_SYSTEM = `Je bent een strenge feitencontroleur voor een kindervraag. Je krijgt een nieuwsbericht (titel + samenvatting) en een meerkeuzevraag met antwoord en uitleg. Controleer:
-1. Klopt het aangewezen antwoord echt (op basis van het bericht en/of vaststaande algemene kennis)?
-2. Is precies één optie goed (geen tweede verdedigbare optie)?
-3. Is het onderwerp geschikt voor kinderen van 9-12 (niets engs of verdrietigs)?
-4. Klopt de uitleg met het antwoord?
-Antwoord met ALLEEN JSON: {"ok": true} of {"ok": false, "reden": "<kort>"}`;
+const CHECK_SYSTEM = `Je bent een strenge feitencontroleur voor een kindervraag. Je krijgt een nieuwsbericht (titel + samenvatting) en een meerkeuzevraag met antwoord en uitleg. Keur AF (ok:false) zodra ook maar één punt niet klopt:
+1. Kan een kind dat ALLEEN dit bericht leest het goede antwoord met zekerheid aanwijzen? Staat het antwoord in het bericht of is het vaststaande algemene kennis? Zo nee → afkeuren.
+2. Klopt het aangewezen antwoord echt?
+3. Is precies één optie goed (geen tweede verdedigbare optie)?
+4. Is het GEEN enquête-/peiling-/percentage-vraag over wat mensen vinden/zeiden/gaan doen, en GEEN mening/voorspelling? Zulke vragen zijn niet te weten → afkeuren.
+5. Verwijst de vraag NIET naar "de app", "Leerkwartier", "kinderen/lezers die reageerden" of een groep die niet in het bericht staat? Zo'n zelf-verwijzing → afkeuren.
+6. Is het onderwerp geschikt voor kinderen van 9-12 (niets engs of verdrietigs)?
+7. Klopt de uitleg met het antwoord?
+Bij twijfel: afkeuren. Antwoord met ALLEEN JSON: {"ok": true} of {"ok": false, "reden": "<kort>"}`;
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
