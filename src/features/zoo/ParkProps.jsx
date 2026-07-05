@@ -1728,18 +1728,29 @@ export function Station({ position = [0, 0, 0], rotation = 0 }) {
 export function RouteTrain({ route, headRef = null, wagons = 3 }) {
   const refs = useRef([]);
   const sRef = useRef(0);
+  // Vloeiende baan (Mark 5 jul: "bochten die netjes aansluiten"): een Catmull-
+  // Rom-curve door de rail-punten i.p.v. rechte segmenten met scherpe hoeken.
+  // Daarnaast twee evenwijdige stalen rails die dezelfde curve volgen — zo
+  // sluiten óók de rails vloeiend aan in de bochten.
   const data = useMemo(() => {
     if (!route || !route.pts || route.pts.length < 2) return null;
     const pts = route.pts.map((p) => new Vector3(p.x, p.y, p.z));
-    if (route.loop) pts.push(pts[0].clone());
-    const seg = [];
-    let total = 0;
-    for (let i = 0; i < pts.length - 1; i++) {
-      const len = pts[i].distanceTo(pts[i + 1]);
-      seg.push({ a: pts[i], b: pts[i + 1], len, acc: total });
-      total += len;
+    const curve = new CatmullRomCurve3(pts, !!route.loop, "catmullrom", 0.5);
+    const total = curve.getLength();
+    const N = Math.max(32, Math.round(total * 3));
+    const up = new Vector3(0, 1, 0), n = new Vector3();
+    const links = [], rechts = [];
+    for (let i = 0; i <= N; i++) {
+      const u = i / N;
+      const p = curve.getPointAt(u), t = curve.getTangentAt(u);
+      n.crossVectors(t, up).normalize().multiplyScalar(0.34); // spoorbreedte
+      links.push(p.clone().add(n)); rechts.push(p.clone().sub(n));
     }
-    return { pts, seg, total, loop: !!route.loop };
+    return {
+      curve, total, loop: !!route.loop,
+      railL: new CatmullRomCurve3(links, !!route.loop),
+      railR: new CatmullRomCurve3(rechts, !!route.loop),
+    };
   }, [route]);
 
   const SNELHEID = 2.6; // wereld-units per sec
@@ -1747,27 +1758,15 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 
   const posOp = (s) => {
     if (!data || data.total <= 0) return null;
-    let d = data.loop ? ((s % data.total) + data.total) % data.total : Math.max(0, Math.min(data.total, s));
-    for (const sg of data.seg) {
-      if (d <= sg.acc + sg.len || sg === data.seg[data.seg.length - 1]) {
-        const t = sg.len > 0 ? (d - sg.acc) / sg.len : 0;
-        const p = sg.a.clone().lerp(sg.b, Math.max(0, Math.min(1, t)));
-        const dir = sg.b.clone().sub(sg.a).normalize();
-        return { p, dir };
-      }
-    }
-    return null;
+    const d = data.loop ? ((s % data.total) + data.total) % data.total : Math.max(0, Math.min(data.total, s));
+    const u = d / data.total;
+    return { p: data.curve.getPointAt(u), dir: data.curve.getTangentAt(u) };
   };
 
   useFrame((_, dt) => {
     if (!data) return;
     sRef.current += dt * SNELHEID;
-    if (!data.loop && (sRef.current > data.total || sRef.current < 0)) {
-      // heen-en-weer bij een open lijn
-      sRef.current = Math.max(0, Math.min(data.total, sRef.current));
-      // keer om door snelheid te spiegelen via een richtingsvlag op de ref
-      headRef && (headRef._omkeer = !headRef._omkeer);
-    }
+    if (!data.loop) sRef.current = Math.max(0, Math.min(data.total, sRef.current));
     const headS = sRef.current;
     for (let i = 0; i < refs.current.length; i++) {
       const g = refs.current[i];
@@ -1785,8 +1784,13 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
 
   if (!data) return null;
   const carts = [{ loco: true }, ...Array.from({ length: wagons }, () => ({ loco: false }))];
+  const railSeg = Math.max(48, Math.round(data.total * 4));
   return (
     <group>
+      {/* Vloeiend gebogen rails (twee stalen buizen) langs de hele route, zodat
+          de bochten netjes aansluiten — geen blokkerige hoeken meer. */}
+      <mesh castShadow><tubeGeometry args={[data.railL, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
+      <mesh castShadow><tubeGeometry args={[data.railR, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
       {carts.map((c, i) => (
         <group key={i} ref={(el) => (refs.current[i] = el)}>
           {c.loco ? (

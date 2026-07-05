@@ -58,7 +58,16 @@ function bouwVoorbeeldPark() {
   // ── ATTRACTIES achterin ──
   add("ferris", 0, -12);
   add("swing", -8, -12);
-  add("trein", 8, -12);
+  // 🚂 Trein-rondje door het hele park (Mark 5 jul): één grote lus met rails die
+  // tussen het centrum en de dier-verblijven doorloopt. De trein rijdt hier
+  // vloeiend overheen (Catmull-Rom-bochten). Ring x[-9..9] × z[-5..5] — bewust
+  // net binnen de verblijven en langs de bomenrijen (z±6) langs, niet erdoorheen.
+  const railRing = (x1, z1, x2, z2) => {
+    for (let x = x1; x <= x2; x++) { add("rail", x, z1, 0); add("rail", x, z2, 0); }
+    for (let z = z1 + 1; z < z2; z++) { add("rail", x1, z, Math.PI / 2); add("rail", x2, z, Math.PI / 2); }
+  };
+  railRing(-9, -5, 9, 5);
+  add("station", 0, -7);
   // 🎢 Kleine achtbaan standaard in het park (Mark 5 jul): blikvanger in de open
   // strook op de rechter-flank, tussen het hertenkamp (z3..9) en de dino-plek
   // (z-11..-3). Footprint 5×5 rond (14,0) → geen overlap met de hekken.
