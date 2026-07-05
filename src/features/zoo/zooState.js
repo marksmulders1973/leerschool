@@ -59,6 +59,10 @@ function bouwVoorbeeldPark() {
   add("ferris", 0, -12);
   add("swing", -8, -12);
   add("trein", 8, -12);
+  // 🎢 Kleine achtbaan standaard in het park (Mark 5 jul): blikvanger in de open
+  // strook op de rechter-flank, tussen het hertenkamp (z3..9) en de dino-plek
+  // (z-11..-3). Footprint 5×5 rond (14,0) → geen overlap met de hekken.
+  add("achtbaanKlein", 14, 0);
 
   // ── ETEN bij de ingang (kraampjes, 3×3) ──
   add("patatkraam", -7, 12); add("drankkraam", 7, 12);
