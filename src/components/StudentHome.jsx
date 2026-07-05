@@ -13,6 +13,7 @@ import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
 import NieuwTopografieBanner from "./NieuwTopografieBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import VraagVanDeDag from "./VraagVanDeDag.jsx";
+import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
@@ -120,6 +121,19 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // Kwartier-pauze resume: bij mount lezen of gebruiker is gestopt na 15 min.
   const [kwartierResume, setKwartierResume] = useState(() => loadResume(userName));
   useEffect(() => { setKwartierResume(loadResume(userName)); }, [userName]);
+
+  // E-mailcapture bij "leerkwartier behaald" (Titan 2026-07-05): dagrapport toonde
+  // dat de ~15 kids/wk die hun kwartier halen (= meest betrokken) zonder contact
+  // verdwijnen én de ouder-funnel leeg is. Op het trots-moment vragen we, niet-
+  // blokkerend, of de ouder de voortgang mag volgen. Verbergen zodra men al is
+  // aangemeld of vandaag "niet nu" koos (mag een andere dag zacht terugkomen).
+  const [kwMailHide, setKwMailHide] = useState(() => {
+    try {
+      const vandaag = new Date().toISOString().slice(0, 10);
+      return localStorage.getItem("lk_lesmateriaal_aangemeld") === "1"
+        || localStorage.getItem("lk_kwartier_mail_dismissed") === vandaag;
+    } catch { return false; }
+  });
 
   // Als er een pendingCode is, direct joinen
   useEffect(() => {
@@ -349,6 +363,27 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                 >
                   ▶ Start je leerkwartier
                 </button>
+              )}
+              {/* Trots-moment → ouder-funnel + e-maillijst. Niet-blokkerend. */}
+              {completed && !kwMailHide && (
+                <div style={{ marginTop: 12 }}>
+                  <GratisLesmateriaal
+                    source="kwartier-behaald"
+                    compact
+                    title={<><span aria-hidden="true">📩</span> Laat je ouder je voortgang volgen</>}
+                    onSubmitted={() => setKwMailHide(true)}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      try { localStorage.setItem("lk_kwartier_mail_dismissed", new Date().toISOString().slice(0, 10)); } catch { /* private mode */ }
+                      setKwMailHide(true);
+                    }}
+                    style={{ display: "block", margin: "8px auto 0", background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-body)", fontSize: 12, cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Niet nu
+                  </button>
+                </div>
               )}
             </div>
           );
