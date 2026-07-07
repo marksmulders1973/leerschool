@@ -973,7 +973,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     const v = e.target.value;
                     setGroepSelect(v);
                     setKlasSelect("");
-                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep4","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
                   }}
                 >

@@ -123,7 +123,43 @@ export const SAMPLE_QUESTIONS = {
       { q: "Hoeveel bloemen zie je?", options: ["4", "2", "1", "3"], answer: 2, explanation: "Er is maar 1 bloem.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90"><text x="25" y="78" font-size="70">🌻</text></svg>' },
       { q: "Hoeveel harten zie je?", options: ["7", "4", "5", "6"], answer: 2, explanation: "Tel de harten: 1, 2, 3, 4, 5. Dat zijn er 5.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90"><text x="5" y="75" font-size="58">❤️</text><text x="58" y="75" font-size="58">❤️</text><text x="111" y="75" font-size="58">❤️</text><text x="164" y="75" font-size="58">❤️</text><text x="217" y="75" font-size="58">❤️</text></svg>' },
     ],
+    // B3.3 (7-bots-review): groep 3 en 4 deelden één bucket met tafels en
+    // sommen als 53+29 — veel te moeilijk voor een beginnende rekenaar.
+    // groep3 = nu écht groep-3-stof (t/m 20, splitsen, dubbelen, getalrij);
+    // de oude gedeelde set heet voortaan groep4 (tafels 2/5/10, +/- t/m 100).
     groep3: [
+      { q: "Hoeveel is 8 + 5?", options: ["12", "13", "14", "11"], answer: 1, explanation: "8 + 5 = 13. Eerst naar de 10: 8 + 2 = 10, dan nog 3 erbij." },
+      { q: "Hoeveel is 14 - 6?", options: ["8", "7", "9", "6"], answer: 0, explanation: "14 - 6 = 8. Eerst naar de 10: 14 - 4 = 10, dan nog 2 eraf." },
+      { q: "Hoeveel is 9 + 7?", options: ["15", "17", "16", "14"], answer: 2, explanation: "9 + 7 = 16. Eerst naar de 10: 9 + 1 = 10, dan nog 6 erbij." },
+      { q: "Hoeveel is 12 - 5?", options: ["6", "8", "5", "7"], answer: 3, explanation: "12 - 5 = 7. Eerst naar de 10: 12 - 2 = 10, dan nog 3 eraf." },
+      { q: "Wat is het dubbele van 6?", options: ["10", "12", "14", "11"], answer: 1, explanation: "Het dubbele van 6 is 6 + 6 = 12." },
+      { q: "Wat is de helft van 10?", options: ["4", "6", "5", "2"], answer: 2, explanation: "De helft van 10 is 5, want 5 + 5 = 10." },
+      { q: "Hoe kun je 8 splitsen?", options: ["5 en 3", "4 en 3", "6 en 3", "5 en 2"], answer: 0, explanation: "5 + 3 = 8, dus 8 kun je splitsen in 5 en 3." },
+      { q: "Hoe kun je 10 splitsen?", options: ["6 en 3", "7 en 3", "8 en 3", "5 en 4"], answer: 1, explanation: "7 + 3 = 10, dus 10 kun je splitsen in 7 en 3." },
+      { q: "Welk getal ontbreekt: 12, 14, __, 18?", options: ["15", "17", "16", "13"], answer: 2, explanation: "De rij telt steeds 2 erbij op: 16." },
+      { q: "Welk getal ontbreekt: 20, 18, 16, __?", options: ["14", "15", "12", "13"], answer: 0, explanation: "De rij telt steeds 2 eraf: 14." },
+      { q: "Welk getal komt ná 39?", options: ["38", "41", "30", "40"], answer: 3, explanation: "Na 39 komt 40." },
+      { q: "Welk getal komt vóór 30?", options: ["31", "29", "28", "20"], answer: 1, explanation: "Vóór 30 komt 29." },
+      { q: "Hoeveel is 10 + 7?", options: ["17", "18", "16", "70"], answer: 0, explanation: "10 + 7 = 17. Een tiental en 7 losse." },
+      { q: "Hoeveel is 15 - 15?", options: ["1", "15", "0", "5"], answer: 2, explanation: "15 - 15 = 0. Als je alles eraf haalt, blijft er niets over." },
+      { q: "Hoeveel is 7 + 7?", options: ["13", "15", "16", "14"], answer: 3, explanation: "7 + 7 = 14. Dat is het dubbele van 7." },
+      { q: "Hoeveel is 16 - 8?", options: ["8", "7", "9", "6"], answer: 0, explanation: "16 - 8 = 8. De helft van 16 is 8." },
+      { q: "Welk getal is groter: 34 of 43?", options: ["34", "43", "Ze zijn gelijk", "Weet je niet"], answer: 1, explanation: "43 heeft 4 tientallen, 34 heeft er 3. Dus 43 is groter." },
+      { q: "Hoeveel tientallen zitten er in 30?", options: ["10", "30", "13", "3"], answer: 3, explanation: "30 = 3 tientallen (10 + 10 + 10)." },
+      { q: "Hoeveel is 6 + 8?", options: ["14", "12", "15", "13"], answer: 0, explanation: "6 + 8 = 14. Eerst naar de 10: 8 + 2 = 10, dan nog 4 erbij." },
+      { q: "Hoeveel is 11 - 4?", options: ["8", "6", "7", "5"], answer: 2, explanation: "11 - 4 = 7. Eerst naar de 10: 11 - 1 = 10, dan nog 3 eraf." },
+      { q: "Wat is het dubbele van 9?", options: ["19", "16", "17", "18"], answer: 3, explanation: "Het dubbele van 9 is 9 + 9 = 18." },
+      { q: "Wat is de helft van 16?", options: ["8", "6", "7", "9"], answer: 0, explanation: "De helft van 16 is 8, want 8 + 8 = 16." },
+      { q: "Welk getal ontbreekt: 5, 10, 15, __?", options: ["25", "16", "20", "18"], answer: 2, explanation: "De rij telt steeds 5 erbij op: 20." },
+      { q: "Het is 3 uur. Waar staat de kleine wijzer?", options: ["Op de 12", "Op de 3", "Op de 6", "Op de 9"], answer: 1, explanation: "De kleine wijzer wijst het uur aan: bij 3 uur staat hij op de 3." },
+      { q: "Hoeveel is 13 + 6?", options: ["19", "18", "20", "17"], answer: 0, explanation: "13 + 6 = 19. De losse erbij: 3 + 6 = 9, dus 19." },
+      { q: "Hoeveel is 18 - 9?", options: ["8", "10", "9", "7"], answer: 2, explanation: "18 - 9 = 9. De helft van 18 is 9." },
+      { q: "Je hebt 5 knikkers en krijgt er 9 bij. Hoeveel heb je nu?", options: ["13", "15", "14", "12"], answer: 2, explanation: "5 + 9 = 14 knikkers." },
+      { q: "Er zitten 12 vogels in een boom. Er vliegen er 3 weg. Hoeveel blijven er over?", options: ["9", "8", "10", "15"], answer: 0, explanation: "12 - 3 = 9 vogels." },
+      { q: "Welk getal is even?", options: ["7", "13", "16", "9"], answer: 2, explanation: "16 kun je eerlijk in tweeën delen (8 en 8), dus even." },
+      { q: "Hoeveel is 4 + 4 + 4?", options: ["8", "12", "16", "10"], answer: 1, explanation: "4 + 4 = 8, en 8 + 4 = 12." },
+    ],
+    groep4: [
       { q: "Hoeveel is 24 + 13?", options: ["37", "38", "39", "36"], answer: 0, explanation: "24 + 13 = 37." },
       { q: "Hoeveel is 50 - 18?", options: ["28", "34", "30", "32"], answer: 3, explanation: "50 - 18 = 32." },
       { q: "Wat is 5 × 2?", options: ["10", "8", "12", "7"], answer: 0, explanation: "5 × 2 = 10 (tafel van 2)." },
@@ -3899,3 +3935,12 @@ export const SAMPLE_QUESTIONS = {
     ],
   },
 };
+
+// B3.3: alleen rekenen heeft een eigen groep4-set (de oude gedeelde bucket).
+// Voor alle andere vakken deelt groep 4 de groep3-vragen zoals voorheen —
+// deze alias houdt dat gedrag intact nu de niveau-keuze g4 → "groep4" stuurt.
+for (const vak of Object.values(SAMPLE_QUESTIONS)) {
+  if (vak && typeof vak === "object" && !Array.isArray(vak) && vak.groep3 && !vak.groep4) {
+    vak.groep4 = vak.groep3;
+  }
+}

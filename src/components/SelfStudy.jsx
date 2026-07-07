@@ -5,7 +5,7 @@ import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 
 export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole, initialSubject }) {
-  const groepBuckets = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"};
+  const groepBuckets = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep4","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"};
   const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"};
   const initGroep = userRole === "leerling" && userLevel ? `g${userLevel}` : "";
   const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
@@ -87,7 +87,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                     const v = e.target.value;
                     setGroepSelect(v);
                     setKlasSelect("");
-                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep4","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
                   }}
                 >

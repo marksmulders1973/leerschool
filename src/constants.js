@@ -45,7 +45,10 @@ export const SUBJECTS = [
 
 export const LEVELS = [
   { id: "groep12", label: "Groep 1-2", desc: "Kleuters", icon: "🌱" },
-  { id: "groep3",  label: "Groep 3-4", desc: "Onderbouw basisschool", icon: "📗" },
+  // B3.3: groep 3 en 4 gesplitst — een beginnende rekenaar (groep 3) kreeg
+  // tafels en sommen als 53+29 uit de gedeelde 3-4-bucket.
+  { id: "groep3",  label: "Groep 3",   desc: "Start basisschool — leren lezen en rekenen", icon: "📗" },
+  { id: "groep4",  label: "Groep 4",   desc: "Onderbouw basisschool", icon: "📘" },
   { id: "groep5",  label: "Groep 5-6", desc: "Bovenbouw basis", icon: "🎒" },
   { id: "groep7",  label: "Groep 7-8", desc: "Bovenbouw verdieping", icon: "📚" },
   { id: "klas1",   label: "Klas 1-2",  desc: "Brugklas", icon: "🎓" },
@@ -58,6 +61,7 @@ export const LEVELS = [
 export const SUBJECT_FOR_LEVEL = {
   groep12: ["rekenen", "taal"],
   groep3:  ["rekenen", "taal", "natuur"],
+  groep4:  ["rekenen", "taal", "natuur"],
   groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen"],
   groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen", "verkeer", "cito"],
   klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "mens-maatschappij", "levensbeschouwing"],

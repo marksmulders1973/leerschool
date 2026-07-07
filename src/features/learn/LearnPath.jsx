@@ -1124,7 +1124,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 ) : (
                   <img
                     src={currentCheck.bronAfbeelding.src}
-                    alt={currentCheck.bronAfbeelding.alt || ""}
+                    alt={currentCheck.bronAfbeelding.alt || currentCheck.bronAfbeelding.caption || "Afbeelding bij de vraag"}
                     loading="lazy"
                     style={{
                       width: "100%",

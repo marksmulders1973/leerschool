@@ -41,6 +41,7 @@
   --color-text-strong:          #FFFFFF;
   --color-text:                 #E6EBF5;
   --color-text-muted:           #9AA8C0;
+  --color-text-soft:            #9AA8C0;       /* alias van muted — werd op 4 plekken gebruikt zonder te bestaan (B5.6) */
   --color-text-subtle:          #828FAC;       /* WCAG AA: was #5E6B85 (~3.5:1), nu ~4.7:1 op elevated bg (audit 2026-06-02) */
 
   /* ─── Border ────────────────────────────────────────────────────── */
