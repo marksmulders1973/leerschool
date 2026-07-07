@@ -247,6 +247,11 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             jaar erna. Toon rustig-motiverend (kwartier-belofte), geen stress. */}
         {(() => {
           const nu = new Date();
+          // Herverificatie 7/7: via een deeplink kan `groep` ook "6" (of anders)
+          // zijn — de jaar-logica hieronder klopt alleen voor groep 7/8, dus
+          // dan geen countdown tonen (2 jaar te vroeg aftellen is erger dan
+          // geen banner).
+          if (groep !== "7" && groep !== "8") return null;
           // Doorstroomtoets = eerste twee weken van februari; anker op 1 feb.
           // Peer-review 7/7: op schooljaar-basis rekenen. De eerstvolgende
           // 1-feb is het toets-moment van de HUIDIGE groep 8. Een groep-7-kind

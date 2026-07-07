@@ -7,7 +7,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
-import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO } from "../features/zoo/zooEconomy";
+import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
@@ -315,6 +315,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [rekenHulpOpen, setRekenHulpOpen] = useState(false); // 🐾 maatje denkt mee met de som
   const rekenVraagNr = useRef(0);                         // telt sommen → eigen chat per som
   const rekenBonusRef = useRef(0);                        // session-cap op de muntjesbonus
+  const [rekenBonusGegeven, setRekenBonusGegeven] = useState(true); // kreeg dit antwoord echt de bonus? (cap-eerlijkheid)
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -852,10 +853,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
 
   const weghaalGeselecteerde = () => {
-    if (selectedIdx == null) return;
+    // Bug-jacht 7/7: op een trage verbinding is het park al bespeelbaar terwijl
+    // meta nog null is — weghalen crashte dan de hele app (m.coins op null).
+    if (selectedIdx == null || !meta) return;
     const it = placedItems[selectedIdx];
     const terug = it.price ?? prijsVan(it.assetId);
-    setMeta((m) => ({ ...m, coins: m.coins + terug }));
+    setMeta((m) => (m ? { ...m, coins: m.coins + terug } : m));
     setPlacedItems((items) => items.filter((_, i) => i !== selectedIdx));
     setSelectedIdx(null);
     if (terug > 0) flits(`Weggehaald — +${terug} 🪙 terug`);
@@ -884,7 +887,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const blokkeert = (id) => { const a = getAsset(id); return !(a && a.procedural === "path"); };
     const bezet = new Set();
     placedItems.forEach((it) => {
-      if (!blokkeert(it.assetId)) return;
+      // Bug-jacht 7/7: bouwkubussen hebben kx/kz/kh en GEEN .cell — die lieten
+      // autoBouw crashen zodra er één blokje in het park stond. Kubs zijn
+      // loopbaar/overbouwbaar, dus overslaan is ook inhoudelijk juist.
+      if (!it.cell || !blokkeert(it.assetId)) return;
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) bezet.add(cellKey(cx, cz));
     });
     const blokVrij = (x0, z0) => {
@@ -1121,9 +1127,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (optie === rekenVraag.antwoord) {
       setRekenUitslag("goed");
       try { track("park_rekenvraag_goed"); } catch { /* niet laten breken */ }
+      // Bug-jacht 7/7: vastleggen óf de bonus is uitgekeerd — de succes-tekst
+      // beloofde anders "+2 🪙" terwijl de cap al bereikt was.
       if (rekenBonusRef.current < REKEN_BONUS_CAP) {
         rekenBonusRef.current += 1;
+        setRekenBonusGegeven(true);
         setMeta((m) => (m ? { ...m, coins: m.coins + REKEN_BONUS } : m));
+      } else {
+        setRekenBonusGegeven(false);
       }
     } else {
       setRekenUitslag("fout");
@@ -1223,7 +1234,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={menuGrid}>
               <MenuTegel emoji="👁️" label="Door je eigen ogen" fn={toggleFirstPerson} actief={firstPerson} />
               {buddyId && <MenuTegel emoji="🐉" label="Door de ogen van je buddy" fn={() => { setBuddyEye((v) => !v); setFirstPerson(false); setFollowCam(false); }} actief={buddyEye} />}
-              {placedItems.some((it) => it.assetId === "rail") && <MenuTegel emoji="🚂" label="Meerijden met de trein" fn={() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); }} actief={rideTrain} />}
+              {/* ≥2 rails: pas dan bestaat er een rijdbare route (ZooScene railRoute) — bug-jacht 7/7. */}
+              {placedItems.filter((it) => it.assetId === "rail").length >= 2 && <MenuTegel emoji="🚂" label="Meerijden met de trein" fn={() => { setRideTrain((v) => !v); setFirstPerson(false); setFollowCam(false); }} actief={rideTrain} />}
               <MenuTegel emoji="🗺️" label="Vogelvlucht (ver uitzoomen)" fn={() => { setFollowCam((v) => !v); setFirstPerson(false); setBuddyEye(false); }} actief={followCam} />
             </div>
 
@@ -1701,7 +1713,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <button
                 onClick={() => {
                   const pr = getAsset(placedItems[selectedIdx]?.assetId)?.procedural;
-                  if (pr === "rail" || pr === "train") { setRideTrain(true); }
+                  if (pr === "rail" || pr === "train") {
+                    // Bug-jacht 7/7: zonder rijdbare route (≥2 rails) bevroor de
+                    // camera en verdween de speler — eerst rails, dan instappen.
+                    const rails = placedItems.filter((x) => x.assetId === "rail").length;
+                    if (rails < 2) { flits("Leg eerst een paar rails neer — dan kan het treintje rijden 🛤️"); return; }
+                    setRideTrain(true);
+                  }
                   else { setRideIdx(selectedIdx); }
                   setFirstPerson(false); setBuddyEye(false); setFollowCam(false);
                   sluitSelectie();
@@ -1909,7 +1927,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             )}
             {rekenUitslag === "goed" && (
               <div style={{ marginTop: 12 }}>
-                <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusRef.current <= REKEN_BONUS_CAP ? `+${REKEN_BONUS} 🪙` : ""} 🎉</p>
+                <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusGegeven ? `+${REKEN_BONUS} 🪙` : "(muntjes-maximum van vandaag bereikt — knap dat je dóórrekent!)"} 🎉</p>
                 {/* Park→leren-brug (Titan 2026-06-29): koppel leren aan de munt-economie
                     die het kind al motiveert. Leren 15 min geeft echt extra munten
                     (kwartier_reached → zooEconomy). Zo voedt het park het leren i.p.v.
@@ -1967,7 +1985,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <p><b>🪙 Muntjes verdien je zo:</b></p>
                 <ul style={{ paddingLeft: 20, margin: "6px 0" }}>
                   <li>Elke dag <b>inloggen</b> (+5, met streak-bonus 🔥 die oploopt).</li>
-                  <li>Elke dag je <b>kwartier leren</b> afronden (+8).</li>
+                  {/* Bug-jacht 7/7: was hardcoded "+8" terwijl de echte beloning
+                      2 jul naar 25 ging — nu altijd synchroon met zooEconomy. */}
+                  <li>Elke dag je <b>kwartier leren</b> afronden (+{KWARTIER_REWARD}).</li>
                   <li>Je <b>park zelf</b> levert muntjes op: hoe meer verblijven en jonkies, hoe meer per dag.</li>
                   <li><b>Kraampjes</b> 🍟🥤🍦🍿: bezoekers krijgen honger, dorst of zin in iets lekkers. Zet een <b>patat-</b>, <b>drank-</b>, <b>ijsco-</b> of <b>popcornkraam</b> neer en kies de prijs — elke verkoop levert muntjes op. Bezoekers verlangen naar wat jij aanbiedt; te duur? Dan haken ze af, dus zoek de juiste prijs!</li>
                 </ul>
