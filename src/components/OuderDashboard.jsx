@@ -93,9 +93,11 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     }
     setScoresLoading(true);
     supabase.from("leaderboard")
-      .select("subject, level, score, total, percentage, time_taken, created_at")
+      // Bug-fix 2026-07-07: leaderboard heeft completed_at, geen created_at —
+      // deze query gaf 400 en het dashboard bleef leeg voor élke ouder.
+      .select("subject, level, score, total, percentage, time_taken, completed_at")
       .eq("player_name", selectedChild)
-      .order("created_at", { ascending: false })
+      .order("completed_at", { ascending: false })
       .limit(50)
       .then(({ data }) => {
         setChildScores(data || []);
@@ -110,10 +112,10 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       return;
     }
     supabase.from("leaderboard")
-      .select("subject, level, percentage, created_at")
+      .select("subject, level, percentage, completed_at")
       .eq("player_name", selectedChild)
       .eq("subject", "cito")
-      .order("created_at", { ascending: false })
+      .order("completed_at", { ascending: false })
       .then(({ data }) => setCitoScores(data || []));
   }, [selectedChild, selectedChildVerified]);
 
@@ -573,7 +575,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                     {citoScores.slice(0, 5).map((s, i) => (
                       <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
                         <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>
-                          {s.level} — {new Date(s.created_at).toLocaleDateString("nl-NL", { day: "numeric", month: "short" })}
+                          {s.level} — {new Date(s.completed_at).toLocaleDateString("nl-NL", { day: "numeric", month: "short" })}
                         </span>
                         <ScoreBadge pct={s.percentage} />
                       </div>
@@ -593,7 +595,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                           {SUBJECT_LABELS[s.subject] || s.subject} · {s.level}
                         </div>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>
-                          {new Date(s.created_at).toLocaleDateString("nl-NL", { weekday: "short", day: "numeric", month: "short" })}
+                          {new Date(s.completed_at).toLocaleDateString("nl-NL", { weekday: "short", day: "numeric", month: "short" })}
                           {s.time_taken ? ` · ⏱ ${s.time_taken < 60 ? `${s.time_taken}s` : `${Math.floor(s.time_taken / 60)}m ${s.time_taken % 60}s`}` : ""}
                         </div>
                       </div>

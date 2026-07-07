@@ -168,11 +168,12 @@ Cadens: ~elke 6-8 weken of vóór elke product-mijlpaal (Cito-piek nov-feb, payw
 
 > 📌 **Volgende sessie (2026-05-20): Kwartierplan-sessie 1.** Mark akkoord 2026-05-19. P0 bundle-splitsing klaar; "Kwartierplan" als naam vastgepind.
 
-- [ ] **Sessie 1 — Foundation + doel + startfoto** (~3-4 uur)
-  - Supabase migrations: `learning_goals`, `diagnostic_assessments`, `daily_plans`, `daily_completions` (+ RLS)
-  - Ouder/lk-dashboard: "Doel zetten"-modal (niveau + datum-doel)
-  - Startfoto-component: 8-12 stratified random vragen op streefniveau, anti-spoof timing
-  - Rapport-scherm: per-pijler scores + 3-5 aanbevolen paden
+- [x] ✓7/7 **Sessie 1 — Foundation + doel + startfoto** (commit f9ba9f5)
+  - ✅ Supabase migrations: 4 tabellen + RLS (parent_user_id + child_name, conform parent_child_links; kind-writes in sessie 2 via security-definer-RPC). Toegepast op prod + in `supabase/migrations/20260707_kwartierplan_sessie1.sql`.
+  - ✅ `KwartierplanSectie` in OuderDashboard (boven de scores) met doel-modal (niveau/doel-moment/datum/groep + disclaimers).
+  - ✅ `Startfoto.jsx`: 12 vragen (4 per pijler uit doorstroomtoets-G8-pools), geen uitleg tussendoor, momentum-berichten, tijd-per-vraag → snel-geklikt-kanttekening.
+  - ✅ Rapport: per-pijler balken + 3-5 aanbevolen paden (runtime tegen pathManifest) + baseline-opslag. 2 nieuwe tests.
+  - NB: Brian is als geverifieerd kind aan Mark's account gekoppeld (parent_child_links) zodat het dashboard direct werkt.
 
 - [ ] **Sessie 2 — Stappenplan-generator + kind-zicht** (~3-4 uur)
   - Rule-based plan-volgorde uit diagnose + doel
@@ -408,6 +409,7 @@ Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
 
 Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 
+- 2026-07-07 (2e) — **Kwartierplan sessie 1 LIVE.** Doel + startfoto + rapport in OuderDashboard, 4 tabellen + RLS, 12-vraag gestratificeerde diagnose uit doorstroomtoets-G8-pools, baseline-opslag, Brian gekoppeld aan Mark's account. Commit f9ba9f5. Volgende: sessie 2 (plan-generator + kind-strip + voltooiings-RPC).
 - 2026-07-07 — **UX/a11y/doelgroep-batch (7-bots-review-restanten).** B3.3 groep 3/4-splitsing (echte groep-3-rekenset), B3.4 VO ziet examens eerst, B6.3 Doorstroomtoets-countdown op CitoPage, B5.3 focus-traps op 3 modals, B5.4 Verder-knop i.p.v. auto-advance, B5.5 tap-targets 44px, B5.6 text-soft-token + alt-fallback. B6.1 bleek al klaar (3/7). Sahasra's "wat is een supporter"-vraag beantwoord op /tips. 2 peer-review-agents gedraaid. Commits 6a5d654 + 0f54cbe.
 
 - 2026-06-28 — **Project Titan-start (KPI 1000 actieve gebruikers) — groei + kwaliteit** (laatste push 0e749e6). Nulmeting: verkeer vlak, e-maillijst 17 dagen op 0, park>>leren. **(1) Conversie-killer gefixt** — `GratisLesmateriaal` schreef de lead pas ná de optionele profielstap → afhakers verloren; nu insert direct na stap 1 (verklaart de dode lijst). **(2) SEO-cluster** — nieuwe pagina's spelling/woordenschat/studievaardigheden + groep-7 (+ sitemap/llms.txt/interlinks). **(3) Homepage-declutter** — redundante "Meer dan een toets"-grid weg (3/4 knoppen dupliceerden rol-tegels+bottom-nav); browser-geverifieerd. **(4) Viral deel-loop** — `DeelTrotsKnop` in kwartier-felicitatie (ouder deelt mijlpaal, ref-code, event `kwartier_gedeeld`); end-to-end getest. **(5) A11y B5.6** alt/labels op vraag-bronafbeeldingen. **(6) B2.3** 21 lazy-hints in 9 Cito-kern paden → richting-hints. **(7)** Sahasra Engels-bug + 2 wrongHints-leaks. Memory: `project_studiebol_titan`. **Meten:** upgrade_waitlist-groei, `kwartier_gedeeld`, `utm_source=trots`, SEO-verkeer pijler-pagina's. **Open (niet-blind):** social-batch (Chrome, wacht op go), homepage-verdere-declutter via live-loop, resterende Pattern-A in P4-vakken.
