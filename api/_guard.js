@@ -50,6 +50,16 @@ export function guardRequest(req) {
 
   const ip = getClientIp(req);
   const t = now();
+  // Geheugen-cap: verlopen entries opruimen zodra de map groot wordt —
+  // anders groeit hij onbegrensd mee met unieke IP's (scraper-botnet).
+  if (rateMap.size > 5000) {
+    for (const [k, v] of rateMap) {
+      if (t > v.resetAt) rateMap.delete(k);
+    }
+    // Nog steeds vol na opruimen (allemaal actieve IP's)? Dan hard resetten —
+    // een korte rate-limit-amnestie is beter dan een out-of-memory.
+    if (rateMap.size > 5000) rateMap.clear();
+  }
   const entry = rateMap.get(ip) || { count: 0, resetAt: t + RATE_WINDOW_MS };
   if (t > entry.resetAt) {
     entry.count = 0;

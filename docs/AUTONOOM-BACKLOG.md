@@ -61,8 +61,8 @@ Geverifieerd via Supabase + 2 review-agents. Kerncijfers 7d: 126 sessies (~19 é
 ### B3 — Doelgroep-fit
 - [x] ✓13/6 **B3.1 "Seksuele voorlichting" + "Roken & drugs"-chips zichtbaar voor élke leeftijd** (SelfStudy.jsx:200). Filter op groep ≥7/VO.
 - [x] ✓15/6 **B3.2 PO-groep-filter** toegevoegd. In de vak-detail van de hub verschijnt voor PO-leerlingen een groep-chiprij (alleen als het vak >1 groep dekt), default = eigen groep uit naam-invoer ("✦ Groep X — jouw groep") + "Alle groepen". Paden worden gefilterd op hun groep-range (`poGroupRange` parse't "groep4-7"), met fallback naar alles als de eigen groep in dat vak niets heeft (geen lege staat). Data-check: groep 3→2 paden … groep 8→103 — dus filteren helpt juist de jonge leerling. typecheck + 211 tests + build groen.
-- [ ] **B3.3 g3+g4 delen één vragen-bucket** met "53+29" voor beginnende rekenaars (SelfStudy.jsx:8 + sampleQuestions.js:142-156). Splitsen.
-- [ ] **B3.4 VO'er moet langs Doorstroomtoets-blokken scrollen** vóór examen-balken (StudentHome.jsx:429-912, isVoLevel bestaat al). Herordenen bij VO.
+- [x] ✓7/7 **B3.3 g3+g4 delen één vragen-bucket** — gesplitst: nieuwe echte groep-3-rekenset (t/m 20, splitsen, dubbelen), oude set → `groep4`; andere vakken via alias ongewijzigd. LEVELS + SUBJECT_FOR_LEVEL + 4 bucket-maps bijgewerkt (commit 0f54cbe).
+- [x] ✓7/7 **B3.4 VO'er moet langs Doorstroomtoets-blokken scrollen** — blok-volgorde wisselt nu per vakModus: VO ziet examen-balken eerst, PO de Doorstroomtoets-blokken; niets verborgen (commit 6a5d654).
 - [ ] **B3.5 E-mail-muur op fouten-overzicht** (ResultsPage.jsx:23-28) — 15-jarige én klas-leerling haken af op hét leermoment; AVG-vraagteken bij minderjarigen in klasverband. Vrijgeven voor examen/klas-toetsen.
 - [ ] **B3.6 Groep-6 toon in examen-context** ("Zeg het 3× hardop", confetti, "Knap gedaan!") — zakelijke variant bij examen-flows.
 
@@ -76,15 +76,15 @@ Geverifieerd via Supabase + 2 review-agents. Kerncijfers 7d: 126 sessies (~19 é
 ### B5 — Toegankelijkheid (kinderen met leerproblemen = kern-doelgroep)
 - [x] ✓13/6 **B5.1 btnPrimary wit-op-groen ≈ 2,2:1 contrast** (LearnPath.jsx:2102-2117) — hoofdknop hele leerflow. Donkere tekst (patroon bestaat al op :973).
 - [x] ✓13/6 **B5.2 Goed/fout-banners zonder aria-live** in LearnPath (1306-1338, 1373-1380) — blind kind hoort niks; PlayQuiz-patroon kopiëren.
-- [ ] **B5.3 3 modals zonder focus-trap/Escape** (AITutor, KwartierPauze, Tips-modal) — useFocusTrap-hook bestaat al.
-- [ ] **B5.4 Auto-advance zonder pauze**: CorrectEvidenceCard 2800ms + advance 1100ms — trage lezer verliest uitleg. "Verder ▶"-knop.
-- [ ] **B5.5 Touch targets < 44px** op ~8 plekken (iconBtn 30×34, markeer-voltooid 23px hoog, groep-knoppen 38×38) — token --tap-target-min bestaat, toepassen.
-- [ ] **B5.6 Klein grut**: alt verplicht op bronAfbeelding, stap-status alleen emoji/kleur, ticker zonder pauze, --color-text-soft token bestaat niet (VraagUitlegPad.jsx:78).
+- [x] ✓7/7 **B5.3 3 modals zonder focus-trap/Escape** — AITutor (Esc=sluiten), KwartierPauze (Esc=5-min-snooze), Tip-modal (Esc=sluiten) + aria-modal (commit 6a5d654).
+- [x] ✓7/7 **B5.4 Auto-advance zonder pauze** — CorrectEvidenceCard auto-advance verwijderd, nu "Verder ▶"-knop met autoFocus (commit 6a5d654). NB: de 1100ms advance-delay na gewone goed-antwoorden staat er nog (bewust — korte bevestigings-flits, geen uitleg die verloren gaat).
+- [~] **B5.5 Touch targets < 44px** — ✓7/7 iconBtn (LearnPath+MiniQuiz), markeer-voltooid, groep-keuzeknoppen HomePage naar 44px (commits 6a5d654+0f54cbe). OPEN: restant-scan op overige kleine knoppen.
+- [~] **B5.6 Klein grut** — ✓7/7 `--color-text-soft`-token toegevoegd (werd 4× gebruikt zonder te bestaan) + bronAfbeelding alt-fallback naar caption (commit 0f54cbe). OPEN: stap-status alleen emoji/kleur, ticker zonder pauze.
 
 ### B6 — Ouder-funnel (conversie)
-- [ ] **B6.1 Ouder-ingang = mini-footerknop onder de fold** (HomePage.jsx:1312) terwijl ouder=koper. Regel onder hero-CTA: "Ouder? Volg de voortgang →".
+- [x] **B6.1 Ouder-ingang boven de vouw** — al gedaan bij home-herschikking 3/7: "👨‍👩‍👧 Ik ben ouder — zo help je thuis →" direct onder de rol-tegels (was stale in deze lijst).
 - [ ] **B6.2 Dashboard toont momentopname, geen trend** — trend-pijl per vak + oefenminuten/week.
-- [ ] **B6.3 Geen toets-plan**: countdown naar feb 2027 + 12-weken-schema op CitoPage (Kwartierplan-idee).
+- [~] **B6.3 Geen toets-plan** — ✓7/7 countdown-banner op CitoPage ("Nog X weken tot de Doorstroomtoets", groep 7/8-bewust, commit 6a5d654). OPEN: 12-weken-schema (= Kwartierplan-traject, wacht op Mark's go).
 - [ ] **B6.4 Kapotte link /voor-ouders.html** (abonnement.html:196) + AVG-contact = privé-Gmail (privacy.html:41) → info@leerkwartier.app.
 - [ ] **B6.5 "één vader, geen marketingmachine" + lage live-teller** kunnen hobby-gevoel versterken — teller boven drempel + 1-2 echte ouder-quotes.
 
@@ -407,6 +407,8 @@ Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
 ## Sessie-log
 
 Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
+
+- 2026-07-07 — **UX/a11y/doelgroep-batch (7-bots-review-restanten).** B3.3 groep 3/4-splitsing (echte groep-3-rekenset), B3.4 VO ziet examens eerst, B6.3 Doorstroomtoets-countdown op CitoPage, B5.3 focus-traps op 3 modals, B5.4 Verder-knop i.p.v. auto-advance, B5.5 tap-targets 44px, B5.6 text-soft-token + alt-fallback. B6.1 bleek al klaar (3/7). Sahasra's "wat is een supporter"-vraag beantwoord op /tips. 2 peer-review-agents gedraaid. Commits 6a5d654 + 0f54cbe.
 
 - 2026-06-28 — **Project Titan-start (KPI 1000 actieve gebruikers) — groei + kwaliteit** (laatste push 0e749e6). Nulmeting: verkeer vlak, e-maillijst 17 dagen op 0, park>>leren. **(1) Conversie-killer gefixt** — `GratisLesmateriaal` schreef de lead pas ná de optionele profielstap → afhakers verloren; nu insert direct na stap 1 (verklaart de dode lijst). **(2) SEO-cluster** — nieuwe pagina's spelling/woordenschat/studievaardigheden + groep-7 (+ sitemap/llms.txt/interlinks). **(3) Homepage-declutter** — redundante "Meer dan een toets"-grid weg (3/4 knoppen dupliceerden rol-tegels+bottom-nav); browser-geverifieerd. **(4) Viral deel-loop** — `DeelTrotsKnop` in kwartier-felicitatie (ouder deelt mijlpaal, ref-code, event `kwartier_gedeeld`); end-to-end getest. **(5) A11y B5.6** alt/labels op vraag-bronafbeeldingen. **(6) B2.3** 21 lazy-hints in 9 Cito-kern paden → richting-hints. **(7)** Sahasra Engels-bug + 2 wrongHints-leaks. Memory: `project_studiebol_titan`. **Meten:** upgrade_waitlist-groei, `kwartier_gedeeld`, `utm_source=trots`, SEO-verkeer pijler-pagina's. **Open (niet-blind):** social-batch (Chrome, wacht op go), homepage-verdere-declutter via live-loop, resterende Pattern-A in P4-vakken.
 - 2026-06-15 (3e) — **B2.6 + B3.2.** B2.6: niveau-uitleg (met antwoord) niet meer opzoekbaar vóór de eerste poging — VraagUitlegPad `verbergNiveaus` bij attempts===1. B3.2: PO-groep-filter in de hub-vakdetail (default = eigen groep, "Alle groepen"-uitweg, fallback bij lege staat). typecheck + 211 tests + build groen.
