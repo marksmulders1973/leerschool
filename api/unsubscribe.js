@@ -38,8 +38,29 @@ export default async function handler(req, res) {
   if (!base || !key) return res.status(500).send(pagina("Even niet gelukt", "Er ging iets mis. Probeer het later nog eens."));
 
   try {
+    // Bug-jacht 7/7: elke rij heeft een EIGEN token en één adres kan meerdere
+    // rijen hebben (één per pakket: oefenpakket, leesladder, ...). Alleen de
+    // token-rij afmelden brak de belofte "je ontvangt geen mails meer" — de
+    // andere rijen bleven mailen. Nu: e-mail bij de token opzoeken en ALLE
+    // rijen van dat adres afmelden. Ook: onbekende token = nette foutpagina
+    // i.p.v. een vals "je bent uitgeschreven ✅".
+    const zoek = await sb(
+      `upgrade_waitlist?unsubscribe_token=eq.${encodeURIComponent(token)}&select=email&limit=1`,
+      { method: "GET" },
+      base, key
+    );
+    const rijen = zoek.ok ? await zoek.json() : [];
+    const email = Array.isArray(rijen) && rijen[0]?.email;
+    if (!email) {
+      return res.status(404).send(pagina("Link niet gevonden", "Deze uitschrijf-link is niet (meer) geldig. Open de link direct vanuit de nieuwste e-mail, of mail ons via de site."));
+    }
+    // ILIKE-wildcards (%/_) escapen — een underscore in een e-mailadres mag
+    // niet als joker matchen op andermans adres.
+    const patroon = String(email).replace(/[\\%_]/g, "\\$&");
     const r = await sb(
-      `upgrade_waitlist?unsubscribe_token=eq.${encodeURIComponent(token)}`,
+      // PostgREST: ilike zonder joker = case-insensitive gelijk (matcht de
+      // unique index op lower(email)).
+      `upgrade_waitlist?email=ilike.${encodeURIComponent(patroon)}`,
       {
         method: "PATCH",
         headers: { Prefer: "return=minimal" },

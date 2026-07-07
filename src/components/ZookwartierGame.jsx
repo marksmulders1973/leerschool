@@ -256,6 +256,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [placing, setPlacing] = useState(null); // { assetId, price, moveIdx? }
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [laadFout, setLaadFout] = useState(false); // park kon niet laden — nooit overschrijven (bug-jacht 7/7)
+  const [laadPoging, setLaadPoging] = useState(0); // opnieuw-proberen-teller
   const [reward, setReward] = useState(null);
   const [loonstrook, setLoonstrook] = useState(null); // {netto, niveau} — opt-in loonstrookje na kwartier
   const [inkoopBon, setInkoopBon] = useState(null); // bonnetje (btw zichtbaar) bij het kopen van een dier
@@ -528,7 +530,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   useEffect(() => {
     let cancel = false;
     (async () => {
-      const row = await loadZooState(userId);
+      const { row, loadError } = await loadZooState(userId);
+      if (cancel) return;
+      // Bug-jacht 7/7 (HOOG): bij een laad-fout NIET doorgaan — anders zou een
+      // bestaand park met het starter-park overschreven worden (autosave blijft
+      // ook uit doordat `loaded` false blijft). Kind kan het opnieuw proberen.
+      if (loadError) {
+        setLaadFout(true);
+        return;
+      }
       const d = defaultState();
       // owned (jsonb) bewaart de kraampjes-prijzen als object; oude rijen hadden
       // hier een lege array → val terug op de standaardprijzen.
@@ -579,7 +589,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       if (userId) saveZooState(userId, { ...finalMeta, layout: finalLayout });
     })();
     return () => { cancel = true; clearTimeout(rewardTimer.current); clearTimeout(meldingTimer.current); };
-  }, [userId]);
+  }, [userId, laadPoging]);
 
   // Debounced opslaan na wijzigingen (incl. het geboetseerde terrein).
   useEffect(() => {
@@ -1138,6 +1148,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
+      {/* Laad-fout: park kon niet uit de database komen. NIETS tonen dat op een
+          leeg/nieuw park lijkt (en niets opslaan) — alleen opnieuw proberen.
+          Zo kan een netwerk-blip nooit meer een bestaand park overschrijven. */}
+      {laadFout && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(20,35,55,0.85)" }}>
+          <div style={{ background: "#fff", borderRadius: 18, padding: "26px 28px", maxWidth: 340, textAlign: "center", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
+            <div style={{ fontSize: 40, marginBottom: 8 }}>📡</div>
+            <div style={{ font: "800 18px system-ui", color: "#234", marginBottom: 6 }}>Je park kon niet laden</div>
+            <div style={{ font: "400 13.5px system-ui", color: "#567", lineHeight: 1.5, marginBottom: 16 }}>
+              Geen zorgen — je park is veilig opgeslagen. Controleer je internet en probeer het opnieuw.
+            </div>
+            <button
+              onClick={() => { setLaadFout(false); setLaadPoging((p) => p + 1); }}
+              style={{ border: "none", borderRadius: 999, padding: "12px 26px", font: "800 15px system-ui", color: "#fff", background: "#2e7d32", cursor: "pointer", minHeight: 44 }}
+            >
+              🔄 Opnieuw proberen
+            </button>
+          </div>
+        </div>
+      )}
       {/* Header. */}
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8, padding: "10px 12px", background: "linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0))", pointerEvents: "none" }}>
         <div style={{ color: "#fff", font: "800 16px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "38vw" }}>🐾 {parkNaam}</div>

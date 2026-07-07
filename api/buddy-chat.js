@@ -19,14 +19,22 @@ const json = (data, status = 200) =>
 
 // Streng filter — publiek is 8-12. Bij een hit géén AI-call, maar een
 // vriendelijke in-karakter afleiding.
+//
+// Bug-jacht 7/7: de oude implementatie had náást de woordgrens-match ook een
+// rauwe substring-match over de hele tekst — daardoor matchte "hoera" op
+// 'hoer', "skills" op 'kill' en "ik gun je" op 'gun', en kreeg een juichend
+// kind (én het maatje zelf via veiligReply) de canned afleidingszin.
+// Nu: match op woordgrens in de genormaliseerde tekst. Een entry die op *
+// eindigt matcht ook afleidingen ("moord*" → moorden/moordenaar); entries
+// zonder * matchen alleen het losse woord (dus "hoera" ≠ "hoer").
 const BLOCKED = [
-  "porno", "porn", "xxx", "fuck", "shit", "kanker", "neuk", "sex", "seks",
-  "kut", "hoer", "klootzak", "tering", "tyfus", "piemel", "pijpen", "bloot", "borsten", "verkracht",
-  "wachtwoord", "password", "creditcard", "credit card", "pincode",
-  "adres", "telefoonnummer", "06 ", "waar woon", "welke school", "waar zit je op school",
-  "wat is je snap", "je snapchat", "je whatsapp", "je insta",
-  "hack", "exploit", "kill", "murder", "moord", "wapen", "gun", " mes ",
-  "naked", "nude", "drugs", "wiet", "alcohol", "zuipen", "vape", "vapen", "sigaret",
+  "porno*", "porn", "xxx", "fuck*", "shit", "kanker*", "neuk*", "sex*", "seks*",
+  "kut*", "hoer", "hoeren", "klootzak*", "tering", "tyfus", "piemel*", "pijpen", "bloot", "borsten", "verkracht*",
+  "wachtwoord*", "password*", "creditcard*", "credit card", "pincode*",
+  "adres", "telefoonnummer*", "06", "waar woon*", "welke school", "waar zit je op school",
+  "wat is je snap*", "je snapchat", "je whatsapp", "je insta*",
+  "hack*", "exploit*", "kill", "murder*", "moord*", "wapen*", "gun", "mes",
+  "naked", "nude", "drugs*", "wiet", "alcohol*", "zuipen", "vape*", "sigaret*",
 ];
 // Normaliseren vóór het matchen: leestekens weg, zodat "s.e.x" of "mes?" niet
 // langs het filter glipt.
@@ -34,7 +42,11 @@ const normalize = (t) => ` ${String(t).toLowerCase().replace(/[^a-z0-9]+/g, " ")
 function isClean(text) {
   if (!text) return true;
   const genorm = normalize(text);
-  return !BLOCKED.some((w) => genorm.includes(w.trim().includes(" ") ? w.trim() : ` ${w.trim()} `) || String(text).toLowerCase().includes(w));
+  return !BLOCKED.some((w) => {
+    const prefix = w.endsWith("*");
+    const kern = (prefix ? w.slice(0, -1) : w).trim();
+    return genorm.includes(prefix ? ` ${kern}` : ` ${kern} `);
+  });
 }
 
 // ZORG-signalen krijgen GEEN vrolijke afleiding maar een warm, serieus
@@ -46,6 +58,10 @@ function isZorg(text) {
 }
 
 // Korte karakter-omschrijving per soort maatje.
+// Bug-jacht 7/7: hond/paard/bever/blokhond ontbraken — Charley (het
+// STANDAARD-maatje) en de gratis Blokkie praatten daardoor als anoniem
+// "fantasie-maatje" en konden karakter-brekend antwoorden op "ben jij een
+// hondje?". Bij een nieuw maatje in buddies.js: hier ook toevoegen.
 const SOORT = {
   draakje: "een klein, vriendelijk en moedig draakje",
   eenhoorn: "een lieve, zachte eenhoorn die altijd aanmoedigt",
@@ -53,6 +69,10 @@ const SOORT = {
   bubbel: "een speels, grappig stuiter-bubbelwezen",
   ster: "een dromerig, kalm sterrenwezen dat fonkelt",
   fenix: "een warme, vrolijke kleine vuurvogel (fenix)",
+  hond: "een trouwe, vrolijke hond (boxer) die soms 'Woef!' zegt",
+  paard: "een nuchter, sterk paard uit het noorden dat van draven houdt",
+  bever: "een ijverige, knutselige bever die graag bouwt",
+  blokhond: "een vrolijk blokjes-hondje uit de blokkenwereld dat soms 'Woef!' zegt",
 };
 
 // Context-velden komen uit de client en kunnen alles bevatten — schonen vóór

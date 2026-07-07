@@ -44,11 +44,17 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
 
   // Eerste begroeting (lokaal, geen AI nodig) + tracking bij openen.
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      // Bug-jacht 7/7: stem stopte niet bij het sluiten van het venster — het
+      // maatje praatte door over het park heen (AITutor deed dit al goed).
+      try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ }
+      return;
+    }
     const hoi = facts?.naam ? `Hoi ${String(facts.naam).trim()}! ` : "Hoi! ";
     setMessages([{ role: "assistant", content: `${hoi}Ik ben ${naam}. Vraag me iets over het park, of vertel me gewoon iets! ${b?.emoji || "🐾"}` }]);
     try { track("buddy_chat_open", { id: buddyId }); } catch { /* */ }
     setTimeout(() => { try { inputRef.current?.focus(); } catch {} }, 60);
+    return () => { try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ } };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, buddyId]);
 
@@ -108,7 +114,7 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
             <div style={{ font: "900 16px system-ui", lineHeight: 1.1 }}>{naam}</div>
             <div style={{ font: "600 11px system-ui", opacity: 0.9 }}>jouw computer-maatje · {b.karakter}</div>
           </div>
-          <button onClick={() => setGeluid((g) => !g)} title={geluid ? "Geluid uit" : "Geluid aan"}
+          <button onClick={() => setGeluid((g) => { if (g) { try { window.speechSynthesis?.cancel(); } catch { /* */ } } return !g; })} title={geluid ? "Geluid uit" : "Geluid aan"}
             style={{ border: "none", background: "rgba(255,255,255,0.22)", color: "#fff", width: 34, height: 34, borderRadius: 999, fontSize: 16, cursor: "pointer" }}>
             {geluid ? "🔊" : "🔇"}
           </button>

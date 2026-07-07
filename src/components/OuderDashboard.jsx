@@ -217,7 +217,11 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   const strongSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) >= 80).map(([, v]) => v.label);
   const weakSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) < 60 && v.scores.length >= 2).map(([, v]) => v.label);
 
-  if (!authUser) {
+  // Bug-jacht 7/7: anonieme park-sessies tellen óók als authUser, waardoor een
+  // ouder koppelingen/doelen aan een wegwerp-anon-account kon hangen die na
+  // een echte Google-login onbereikbaar zijn. Ouder-dashboard = altijd met
+  // echt account.
+  if (!authUser || authUser.is_anonymous) {
     return (
       <div style={{ minHeight: "100dvh", background: "#0a0f1e" }}>
         <Header title="Ouder Dashboard 👨‍👩‍👧" onBack={onBack} onHome={onHome} />

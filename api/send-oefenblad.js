@@ -112,13 +112,39 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
   return { onderwerp, html, text };
 }
 
+// Bug-jacht 7/7: dit endpoint stuurt e-mail naar een door de klant opgegeven
+// adres én registreert consent — de oude ongeankerde origin-check (matchte ook
+// leerkwartier.app.evil.com en liet lege origins door) maakte het een open
+// spam-kanaal. Nu: exacte allowlist + rate-limit per IP (browsers sturen bij
+// een POST altijd een Origin-header mee, ook same-origin/PWA).
+const OEFENBLAD_ORIGINS = new Set([
+  "https://leerkwartier.app", "https://www.leerkwartier.app",
+  "http://localhost:5173", "http://localhost:4173", "http://127.0.0.1:5173",
+]);
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX = 3; // 3 oefenblad-mails per IP per 10 min is ruim voor echt gebruik
+const rateMap = new Map();
+function rateLimited(ip) {
+  const t = Date.now();
+  if (rateMap.size > 5000) {
+    for (const [k, v] of rateMap) { if (t > v.resetAt) rateMap.delete(k); }
+    if (rateMap.size > 5000) rateMap.clear();
+  }
+  const e = rateMap.get(ip) || { count: 0, resetAt: t + RATE_WINDOW_MS };
+  if (t > e.resetAt) { e.count = 0; e.resetAt = t + RATE_WINDOW_MS; }
+  e.count++;
+  rateMap.set(ip, e);
+  return e.count > RATE_MAX;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method" });
-  // Lichte origin-rem tegen misbruik (best-effort; lege origin = server/app = toegestaan).
   const origin = req.headers["origin"] || "";
-  if (origin && !/leerkwartier\.app/.test(origin) && !/localhost|127\.0\.0\.1/.test(origin)) {
+  if (!OEFENBLAD_ORIGINS.has(origin)) {
     return res.status(403).json({ error: "origin" });
   }
+  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "onbekend";
+  if (rateLimited(ip)) return res.status(429).json({ error: "te-vaak" });
 
   let body = req.body;
   if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }

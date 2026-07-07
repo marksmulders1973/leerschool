@@ -143,15 +143,34 @@ export default async function handler(req, res) {
   const force = (req.query?.force || "") === "1" && (req.query?.key || "") === process.env.CRON_SECRET;
 
   // 1. Bestaat de vraag van vandaag al? Dan direct teruggeven.
+  // Bug-jacht 7/7: een "afgekeurd/geen-geschikt"-dag sloeg vroeger níéts op,
+  // waardoor élk bezoek die dag opnieuw RSS + 1-2 AI-calls deed (CDN-cache is
+  // per URL en trivially te busten) — onbegrensde AI-kosten. Nu schrijven de
+  // faal-paden een marker-rij (vraag=null) zodat generatie max 1× per dag
+  // draait; alleen ?force=1&key=CRON_SECRET probeert het opnieuw.
   if (!force) {
     try {
       const r = await sb(`actuele_vraag?datum=eq.${vandaag}&select=datum,vraag,bron_titel,bron_url,created_at`, {}, base, key);
       const rows = await r.json();
-      if (Array.isArray(rows) && rows.length) return res.status(200).json({ actueel: rows[0] });
+      if (Array.isArray(rows) && rows.length) {
+        if (!rows[0].vraag) return res.status(200).json({ actueel: null, reden: "geen-geschikte-vraag-vandaag" });
+        return res.status(200).json({ actueel: rows[0] });
+      }
     } catch (e) {
       return res.status(500).json({ error: "db-read", detail: e.message });
     }
   }
+
+  // Marker-rij voor een dag zonder bruikbare vraag (zie comment hierboven).
+  const zetMarker = async (reden) => {
+    try {
+      await sb(`actuele_vraag`, {
+        method: "POST",
+        headers: { Prefer: "resolution=ignore-duplicates" },
+        body: JSON.stringify({ datum: vandaag, vraag: null, bron_titel: `marker: ${String(reden).slice(0, 70)}` }),
+      }, base, key);
+    } catch { /* best-effort */ }
+  };
 
   // 2. Genereren. Race-veilig: de insert heeft datum als primary key —
   //    dubbele generatie kost hooguit één extra AI-call, nooit dubbele rijen.
@@ -171,13 +190,13 @@ export default async function handler(req, res) {
     const lijst = items.map((it, i) => `[${i}] ${it.titel} — ${it.beschrijving}`).join("\n");
     const gen = await ai(MAAK_SYSTEM, `Berichten van vandaag:\n${lijst}\n\nMaak de vraag (of {"geschikt": false}).`);
     const v = parseJson(gen.tekst);
-    if (!v.geschikt) return res.status(200).json({ actueel: null, reden: "geen-geschikt-bericht" });
+    if (!v.geschikt) { await zetMarker("geen-geschikt-bericht"); return res.status(200).json({ actueel: null, reden: "geen-geschikt-bericht" }); }
 
     const bron = items[v.bronIndex] || items[0];
     if (
       !v.tekst || v.tekst.length < 40 || !v.vraag || !Array.isArray(v.options) || v.options.length !== 4 ||
       !Number.isInteger(v.answer) || v.answer < 0 || v.answer > 3 || !v.uitleg
-    ) return res.status(200).json({ actueel: null, reden: "ongeldig-formaat" });
+    ) { await zetMarker("ongeldig-formaat"); return res.status(200).json({ actueel: null, reden: "ongeldig-formaat" }); }
 
     // 3. Feitencheck door een tweede call — bij twijfel niets opslaan.
     const check = await ai(
@@ -186,7 +205,7 @@ export default async function handler(req, res) {
       200
     );
     const oordeel = parseJson(check.tekst);
-    if (!oordeel.ok) return res.status(200).json({ actueel: null, reden: `afgekeurd: ${oordeel.reden || "?"}` });
+    if (!oordeel.ok) { await zetMarker(`afgekeurd: ${oordeel.reden || "?"}`); return res.status(200).json({ actueel: null, reden: `afgekeurd: ${oordeel.reden || "?"}` }); }
 
     const vraagJson = {
       id: `actueel-${vandaag}`,

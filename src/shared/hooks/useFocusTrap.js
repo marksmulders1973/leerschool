@@ -24,6 +24,14 @@ const FOCUSABLE = [
 export default function useFocusTrap(active, { onEsc } = {}) {
   const containerRef = useRef(null);
   const restoreRef = useRef(null);
+  // Bug-jacht 7/7: onEsc is bij aanroepers vrijwel altijd een inline arrow →
+  // nieuwe identiteit per render. Met onEsc in de effect-deps her-draaide het
+  // effect bij ELKE render en werd de focus telkens teruggekaapt naar het
+  // eerste element — typen in een textarea binnen de modal was onmogelijk
+  // (elke toetsaanslag = re-render = focus weg). Nu: onEsc in een ref, effect
+  // draait alleen bij open/dicht.
+  const onEscRef = useRef(onEsc);
+  onEscRef.current = onEsc;
 
   useEffect(() => {
     if (!active) return;
@@ -40,9 +48,9 @@ export default function useFocusTrap(active, { onEsc } = {}) {
     (autoEl || list[0])?.focus();
 
     const onKey = (e) => {
-      if (e.key === "Escape" && typeof onEsc === "function") {
+      if (e.key === "Escape" && typeof onEscRef.current === "function") {
         e.stopPropagation();
-        onEsc();
+        onEscRef.current();
         return;
       }
       if (e.key !== "Tab") return;
@@ -68,7 +76,7 @@ export default function useFocusTrap(active, { onEsc } = {}) {
       // Herstel focus naar opener.
       try { restoreRef.current?.focus?.(); } catch {}
     };
-  }, [active, onEsc]);
+  }, [active]);
 
   return containerRef;
 }

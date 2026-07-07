@@ -115,7 +115,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
 
   const persist = (next) => {
     try {
-      localStorage.setItem(storageKey(pathId, stepIdx), JSON.stringify(next));
+      // Bug-jacht 7/7: cap per gesprek — de volledige history groeide anders
+      // onbegrensd mee in localStorage (key per pad × stap, nooit opgeschoond).
+      localStorage.setItem(storageKey(pathId, stepIdx), JSON.stringify(next.slice(-30)));
     } catch {}
   };
 
@@ -154,6 +156,10 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             // Park-weetjes (Mark 2 jul): het maatje kent het kind — de tutor
             // spreekt met roepnaam en mag er warm op inhaken.
             weetjes: buddyWeetjes(),
+            // Bug-jacht 7/7: de UI zegt "{naam} helpt je" maar de AI wist zelf
+            // niet wie hij was — persona meesturen zodat "ben jij Vonk?" klopt.
+            buddyNaam: naam,
+            buddySoort: buddy.soort,
           },
         }),
       });

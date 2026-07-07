@@ -179,9 +179,16 @@ export default async function handler(req, res) {
     } catch {}
     rijen = [{ id: null, email: ADMIN_EMAIL, unsubscribe_token: token }];
   } else {
+    // Bug-jacht 7/7: geen verzonden-marker + geen volgorde = herhaald vuren
+    // pakte dezelfde eerste 90 rijen (dubbele mails) en kwam nooit voorbij
+    // rij 90. Nu: alleen rijen die recent (48u) nog géén mail kregen, oudste
+    // eerst — herhaald vuren pagineert dan veilig door de hele lijst.
+    const drempel = new Date(Date.now() - 48 * 3600000).toISOString();
     const filter =
       `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen)` +
       `&unsubscribed_at=is.null` +
+      `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
+      `&order=created_at.asc` +
       `&select=id,email,unsubscribe_token,plan&limit=${BATCH}`;
     try {
       const q = await sb(`upgrade_waitlist?${filter}`, { method: "GET" }, base, key);

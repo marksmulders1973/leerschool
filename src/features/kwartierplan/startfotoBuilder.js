@@ -71,7 +71,10 @@ function padenVoorPijler(pijlerId, n) {
 
 export function aanbevolenPaden(perPijlerScores) {
   const volgorde = Object.entries(perPijlerScores)
-    .map(([id, s]) => ({ id, pct: s.total ? s.correct / s.total : 0 }))
+    // Pijler zonder afgenomen vragen (pad laadde niet) is geen "zwakste
+    // pijler" — die weten we simpelweg niet; niet op aanbevelen.
+    .filter(([, s]) => s && s.total > 0)
+    .map(([id, s]) => ({ id, pct: s.correct / s.total }))
     .sort((a, b) => a.pct - b.pct);
   const paden = [];
   if (volgorde[0]) paden.push(...padenVoorPijler(volgorde[0].id, 3));

@@ -5,7 +5,7 @@
 // dag-plan (sessie 2, teaser onderaan). Positieve toon, verplichte
 // realiteits-disclaimers (geen "je haalt het wel/niet" — ontwerp-doc).
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { loadKwartierplan, saveGoal } from "./kwartierplanRepo.js";
 import { PIJLERS } from "./startfotoBuilder.js";
@@ -126,16 +126,22 @@ export default function KwartierplanSectie({ authUser, childName }) {
   const [toonDoelModal, setToonDoelModal] = useState(false);
   const [toonStartfoto, setToonStartfoto] = useState(false);
 
+  // Race-guard (bug-jacht 7/7): bij snel kind-wisselen mag een trage response
+  // van het vórige kind de state van het nieuwe kind niet overschrijven.
+  const laadVoorRef = useRef(null);
   const herlaad = () => {
     if (!authUser || !childName) return;
+    const voor = `${authUser.id}:${childName}`;
+    laadVoorRef.current = voor;
     loadKwartierplan(authUser.id, childName).then(({ goal: g, laatsteFoto: f }) => {
+      if (laadVoorRef.current !== voor) return; // verouderde response
       setGoal(g);
       setLaatsteFoto(f);
       setGeladen(true);
     });
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => { setGeladen(false); herlaad(); }, [authUser?.id, childName]);
+  useEffect(() => { setGeladen(false); setGoal(null); setLaatsteFoto(null); herlaad(); }, [authUser?.id, childName]);
 
   if (!authUser || !childName) return null;
 

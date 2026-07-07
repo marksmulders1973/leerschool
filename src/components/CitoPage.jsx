@@ -255,6 +255,28 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           // zijne (het wordt in september groep 8). Vanaf augustus telt de
           // groep-keuze als het nieuwe schooljaar.
           const maand = nu.getMonth(); // 0 = jan
+          // Groep 8 zit 1-14 feb midden in de toets-periode: geen aftellen
+          // naar volgend jaar, maar een aanmoediging voor nú.
+          if (groep === "8" && maand === 1 && nu.getDate() <= 14) {
+            return (
+              <div style={{
+                display: "flex", alignItems: "center", gap: 12,
+                borderRadius: 14, padding: "12px 16px",
+                border: "1.5px solid rgba(255,213,79,0.40)",
+                background: "linear-gradient(135deg, rgba(255,213,79,0.12), rgba(255,160,0,0.05))",
+              }}>
+                <span style={{ fontSize: 24 }} aria-hidden="true">💪</span>
+                <div style={{ flex: 1, fontFamily: "var(--font-body)" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffd54f" }}>
+                    Het is Doorstroomtoets-tijd — zet 'm op!
+                  </div>
+                  <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", marginTop: 2, lineHeight: 1.45 }}>
+                    Rustig lezen, eerst zelf denken — je hebt hier het hele jaar voor geoefend.
+                  </div>
+                </div>
+              </div>
+            );
+          }
           let jaar = maand >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
           if (groep === "7" && (maand >= 7 || maand === 0)) jaar += 1;
           const toets = new Date(jaar, 1, 1);

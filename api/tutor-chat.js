@@ -67,9 +67,22 @@ function buildSystemPrompt(ctx = {}) {
   const lft = parseInt(String(ctx.weetjes?.leeftijd || ""), 10);
   const ageGroup = lft >= 4 && lft <= 12 ? "po" : inferAgeGroup(ctx.pathId);
   const lines = [];
+  // Bug-jacht 7/7: de UI presenteert de tutor als het gekozen park-maatje
+  // ("Vonk helpt je"), maar de AI wist zelf niet wie hij was — bij "ben jij
+  // Vonk?" brak de persona. Nu opent de prompt mét het maatje als afzender.
+  const buddyNaam = String(ctx.buddyNaam || "").replace(/["\n\r]/g, " ").replace(/\s+/g, " ").trim().slice(0, 20);
+  const BUDDY_SOORT = {
+    draakje: "een klein, vriendelijk draakje", eenhoorn: "een lieve eenhoorn",
+    uil: "een wijze uil", bubbel: "een speels bubbelwezen", ster: "een kalm sterrenwezen",
+    fenix: "een warme kleine vuurvogel", hond: "een trouwe, vrolijke hond",
+    paard: "een nuchter, sterk paard", bever: "een ijverige bever", blokhond: "een vrolijk blokjes-hondje",
+  };
+  const buddySoort = BUDDY_SOORT[ctx.buddySoort] || "een vrolijk fantasie-maatje";
   lines.push(
-    "Je bent een vriendelijke leerbegeleider voor Leerkwartier, een Nederlandse " +
-      "leerapp. De leerling werkt aan een specifieke uitleg-stap. Help met BEGRIP " +
+    (buddyNaam
+      ? `Je bent ${buddyNaam}, ${buddySoort} uit het park van de leerling, en je helpt nu als leerbegeleider. Blijf licht in karakter (warm, speels), maar de leerstof gaat voor. `
+      : "Je bent een vriendelijke leerbegeleider voor Leerkwartier, een Nederlandse leerapp. ") +
+      "De leerling werkt aan een specifieke uitleg-stap. Help met BEGRIP " +
       "— NOOIT door het antwoord weg te geven."
   );
   lines.push("");
@@ -260,7 +273,11 @@ export default async function handler(req) {
   }
   // Anthropic vereist dat het gesprek met een user-bericht begint — een
   // leidende begroeting (assistant) zou élke call naar de fallback duwen.
-  const trimmed = messages.slice(-12);
+  // Bug-jacht 7/7: user-berichten in de history ook door isClean — de client
+  // bewaart een eerder geblokkeerd bericht gewoon in localStorage en zou het
+  // bij de volgende beurt alsnog naar het model sturen (buddy-chat had deze
+  // fix al, tutor-chat nog niet).
+  const trimmed = messages.slice(-12).filter((m) => m.role !== "user" || isClean(m.content));
   while (trimmed.length && trimmed[0].role !== "user") trimmed.shift();
   if (!trimmed.length) return json({ error: "Geen berichten" }, 400);
 

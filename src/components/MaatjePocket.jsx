@@ -100,6 +100,13 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [kind]);
 
+  // Bug-jacht 7/7: stem stoppen bij chat-dicht en bij het verlaten van de
+  // pagina — anders praat het maatje door over het volgende scherm heen.
+  useEffect(() => {
+    if (!chatOpen) { try { window.speechSynthesis?.cancel(); } catch { /* */ } }
+    return () => { try { window.speechSynthesis?.cancel(); } catch { /* */ } };
+  }, [chatOpen]);
+
   // Mood zacht laten roteren.
   useEffect(() => {
     const id = setInterval(() => setMoodIdx((i) => (i + 1) % MOODS.length), 9000);
@@ -219,7 +226,7 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
           <div style={{ font: "900 17px system-ui" }}>{naam} {buddy.emoji}</div>
           <div style={{ font: "700 11px system-ui", opacity: .8 }}>{st.huidig.label}{ACCESSOIRE[st.idx] ? ` · ${ACCESSOIRE[st.idx]}` : ""}</div>
         </div>
-        <button onClick={() => setGeluid((g) => !g)} title="Geluid" style={hdrBtn}>{geluid ? "🔊" : "🔇"}</button>
+        <button onClick={() => setGeluid((g) => { if (g) { try { window.speechSynthesis?.cancel(); } catch { /* */ } } return !g; })} title="Geluid" style={hdrBtn}>{geluid ? "🔊" : "🔇"}</button>
       </div>
 
       {/* maatje-podium */}

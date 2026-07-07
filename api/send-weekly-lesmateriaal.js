@@ -283,7 +283,20 @@ export default async function handler(req, res) {
   for (const rij of rijen) {
     if (!rij.email || !String(rij.email).includes("@")) continue;
     const adres = String(rij.email).toLowerCase();
-    if (gezien.has(adres)) continue;
+    if (gezien.has(adres)) {
+      // Bug-jacht 7/7: de geskipte duplicaat-rij bleef "due" en werd de
+      // volgende run alsnog gemaild — hetzelfde adres kreeg zo structureel
+      // 2 weekmails per week (één per pakket-rij). Sync daarom óók de
+      // duplicaat-rij naar dezelfde 7-daagse cyclus.
+      try {
+        await sb(
+          `upgrade_waitlist?id=eq.${rij.id}`,
+          { method: "PATCH", headers: { Prefer: "return=minimal" }, body: JSON.stringify({ last_sent_at: new Date().toISOString() }) },
+          base, key
+        );
+      } catch { /* niet fataal — volgende run opnieuw */ }
+      continue;
+    }
     gezien.add(adres);
     const welkom = !rij.sent_count;
     // Niveau-indicatie alleen in de week-mail (welkomstmail blijft schoon).

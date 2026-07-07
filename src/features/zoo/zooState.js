@@ -115,24 +115,30 @@ export function defaultState() {
   };
 }
 
-// Haalt de rij op. Geeft null als er nog geen park bestaat (nieuw kind).
+// Haalt de rij op. Bug-jacht 7/7 (HOOG): een laad-FOUT (netwerk-blip, 5xx,
+// verlopen token) gaf hetzelfde `null` terug als "geen rij" (nieuw kind),
+// waarna de game het echte park overschreef met het starter-park →
+// onomkeerbaar data-verlies. Nu: intern 3× proberen met backoff, en de
+// uitkomst maakt expliciet onderscheid: { row, loadError }.
+//   - row=null + loadError=false → écht een nieuw kind, starter-park mag.
+//   - loadError=true             → NIETS initialiseren of wegschrijven.
 export async function loadZooState(userId) {
-  if (!userId) return null;
-  try {
-    const { data, error } = await supabase
-      .from("zoo_state")
-      .select("coins, streak, last_login, last_kwartier_date, layout, owned, terrain")
-      .eq("user_id", userId)
-      .maybeSingle();
-    if (error) {
-      console.warn("[zoo] laden mislukt:", error.message);
-      return null;
+  if (!userId) return { row: null, loadError: false };
+  for (let poging = 0; poging < 3; poging++) {
+    try {
+      const { data, error } = await supabase
+        .from("zoo_state")
+        .select("coins, streak, last_login, last_kwartier_date, layout, owned, terrain")
+        .eq("user_id", userId)
+        .maybeSingle();
+      if (!error) return { row: data || null, loadError: false };
+      console.warn(`[zoo] laden mislukt (poging ${poging + 1}):`, error.message);
+    } catch (e) {
+      console.warn(`[zoo] laden exception (poging ${poging + 1}):`, e?.message);
     }
-    return data || null;
-  } catch (e) {
-    console.warn("[zoo] laden exception:", e?.message);
-    return null;
+    await new Promise((r) => setTimeout(r, 500 + poging * 1000));
   }
+  return { row: null, loadError: true };
 }
 
 // Onraadbare deel-code (8 tekens). Per park, zodat je je park read-only kunt
