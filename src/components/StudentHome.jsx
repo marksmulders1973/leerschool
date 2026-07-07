@@ -785,7 +785,24 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             ziet de examen-balken eerst, de PO'er de Doorstroomtoets-blokken.
             Zelfde blokken, niets verborgen. */}
         {(() => {
+          // Peer-review 7/7: een groep 3-5-kind kreeg zonder waarschuwing
+          // Doorstroomtoets-vragen (groep 6-8-stof). Blokken blijven zichtbaar
+          // (Mark-regel), maar jonge leerlingen zien nu eerst een eerlijke
+          // niveau-hint zodat ze weten dat hun eigen vakken hierboven staan.
+          const groepNum = parseInt(String(userLevel || "").replace(/\D/g, ""), 10);
+          const jongePo = vakModus === "po" && groepNum >= 1 && groepNum <= 5;
           const citoBlokken = (<>
+        {onCitoOefenenSubject && jongePo && (
+          <div style={{
+            fontFamily: "var(--font-body)", fontSize: 11.5, lineHeight: 1.5,
+            color: "rgba(255,255,255,0.60)", margin: "0 0 8px",
+            padding: "8px 12px", borderRadius: 10,
+            background: "rgba(255,213,79,0.07)", border: "1px dashed rgba(255,213,79,0.30)",
+          }}>
+            💡 De Doorstroomtoets is stof voor <strong style={{ color: "#ffd54f" }}>groep 6 t/m 8</strong>.
+            Alvast proeven mag natuurlijk — jouw eigen oefeningen voor groep {groepNum} staan hierboven bij de vakken.
+          </div>
+        )}
         {onCitoOefenenSubject && (
           <button
             onClick={() => {

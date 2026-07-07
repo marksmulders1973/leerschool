@@ -248,8 +248,15 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
         {(() => {
           const nu = new Date();
           // Doorstroomtoets = eerste twee weken van februari; anker op 1 feb.
-          let jaar = nu.getMonth() >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
-          if (groep === "7") jaar += 1;
+          // Peer-review 7/7: op schooljaar-basis rekenen. De eerstvolgende
+          // 1-feb is het toets-moment van de HUIDIGE groep 8. Een groep-7-kind
+          // doet de toets een jaar later — behálve in feb-jul: dan zit het
+          // kind aan het eind van groep 7 en is de eerstvolgende feb al de
+          // zijne (het wordt in september groep 8). Vanaf augustus telt de
+          // groep-keuze als het nieuwe schooljaar.
+          const maand = nu.getMonth(); // 0 = jan
+          let jaar = maand >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
+          if (groep === "7" && (maand >= 7 || maand === 0)) jaar += 1;
           const toets = new Date(jaar, 1, 1);
           const dagen = Math.max(0, Math.ceil((toets - nu) / 86400000));
           const weken = Math.round(dagen / 7);
