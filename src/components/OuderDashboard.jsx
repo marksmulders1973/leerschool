@@ -7,6 +7,7 @@ import { clearAll as clearAdaptive } from "../shared/adaptiveStore.js";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import ProBadge from "../subscription/ProBadge.jsx";
 import { trackProUse } from "../subscription/proPlan.js";
+import KwartierplanSectie from "../features/kwartierplan/KwartierplanSectie.jsx";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -492,6 +493,10 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         )}
         {selectedChild && selectedChildVerified && (
           <>
+            {/* Kwartierplan (sessie 1, 2026-07-07): doel + startfoto. Bewust
+                BOVEN de scores — juist bij een vers gekoppeld kind zonder
+                scores is dit de logische eerste actie voor de ouder. */}
+            <KwartierplanSectie authUser={authUser} childName={selectedChild} />
             {scoresLoading ? (
               <div style={{ textAlign: "center", padding: 24, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-display)" }}>Laden...</div>
             ) : childScores.length === 0 ? (
