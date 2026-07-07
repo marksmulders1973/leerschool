@@ -227,29 +227,10 @@ function SvgFigure({ svg }) {
   );
 }
 
-// Tussen-scherm na correct antwoord met evidence: auto-advance na ~2.8s
-// (flow behouden voor 10-jarige in ritme), skip-knop voor wie sneller wil.
-// Visuele progress-bar laat zien dat 't kort is.
+// Tussen-scherm na correct antwoord met evidence. B5.4 (7-bots-review a11y):
+// geen auto-advance meer — de trage lezer verloor de aanwijzing halverwege.
+// De leerling klikt zelf door zodra hij de quote gelezen heeft.
 function CorrectEvidenceCard({ evidence, isLast, onAdvance }) {
-  const AUTO_MS = 2800;
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const start = Date.now();
-    let raf;
-    const tick = () => {
-      const elapsed = Date.now() - start;
-      const p = Math.min(100, (elapsed / AUTO_MS) * 100);
-      setProgress(p);
-      if (elapsed >= AUTO_MS) {
-        onAdvance();
-        return;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
     <div style={cardStyle(C.good)}>
       <div style={{ fontSize: 18, fontWeight: 700, color: C.good, marginBottom: 8 }}>
@@ -260,16 +241,8 @@ function CorrectEvidenceCard({ evidence, isLast, onAdvance }) {
       </div>
       <EvidenceQuote text={evidence} label="📍 Hier vond je het" />
       <div style={{ marginTop: 14 }}>
-        <div style={{ height: 4, background: "rgba(0,200,83,0.18)", borderRadius: 2, overflow: "hidden", marginBottom: 8 }}>
-          <div style={{
-            width: `${progress}%`,
-            height: "100%",
-            background: C.good,
-            transition: "width 60ms linear",
-          }} />
-        </div>
-        <button onClick={onAdvance} style={btnSecondary()}>
-          {isLast ? "Klaar met deze stap ✓" : "Sneller door ▶"}
+        <button onClick={onAdvance} autoFocus style={btnSecondary()}>
+          {isLast ? "Klaar met deze stap ✓" : "Verder ▶"}
         </button>
       </div>
     </div>
@@ -852,7 +825,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 fontFamily: "var(--font-body)",
                 fontSize: 11,
                 fontWeight: 600,
-                padding: "4px 10px",
+                padding: "4px 12px",
+                // B5.5 (7-bots-review a11y): was 23px hoog — te klein tap-target.
+                minHeight: "var(--tap-target-min, 44px)",
                 borderRadius: 999,
                 cursor: "pointer",
                 whiteSpace: "nowrap",
@@ -2285,9 +2260,13 @@ function iconBtn() {
     fontSize: 18,
     cursor: "pointer",
     padding: "6px 8px",
+    // B5.5 (7-bots-review a11y): tap-target minimaal 44px voor kinderhanden.
+    minWidth: "var(--tap-target-min, 44px)",
+    minHeight: "var(--tap-target-min, 44px)",
     fontFamily: "var(--font-body)",
     display: "inline-flex",
     alignItems: "center",
+    justifyContent: "center",
   };
 }
 

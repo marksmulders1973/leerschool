@@ -242,6 +242,38 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           </div>
         </div>
 
+        {/* B6.3 (7-bots-review, ouder-funnel): countdown naar de echte toets.
+            Groep 8 telt af naar de eerstvolgende februari; groep 7 naar het
+            jaar erna. Toon rustig-motiverend (kwartier-belofte), geen stress. */}
+        {(() => {
+          const nu = new Date();
+          // Doorstroomtoets = eerste twee weken van februari; anker op 1 feb.
+          let jaar = nu.getMonth() >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
+          if (groep === "7") jaar += 1;
+          const toets = new Date(jaar, 1, 1);
+          const dagen = Math.max(0, Math.ceil((toets - nu) / 86400000));
+          const weken = Math.round(dagen / 7);
+          return (
+            <div style={{
+              display: "flex", alignItems: "center", gap: 12,
+              borderRadius: 14, padding: "12px 16px",
+              border: "1.5px solid rgba(255,213,79,0.40)",
+              background: "linear-gradient(135deg, rgba(255,213,79,0.12), rgba(255,160,0,0.05))",
+            }}>
+              <span style={{ fontSize: 24 }} aria-hidden="true">🗓️</span>
+              <div style={{ flex: 1, fontFamily: "var(--font-body)" }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffd54f" }}>
+                  Nog {weken >= 3 ? `${weken} weken` : `${dagen} dagen`} tot de Doorstroomtoets
+                </div>
+                <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", marginTop: 2, lineHeight: 1.45 }}>
+                  Begin februari {jaar}{groep === "7" ? " (jij zit dan in groep 8)" : ""} — met een kwartier
+                  per dag ben je ruim op tijd klaar.
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Doorstroomtoets-vraag van de dag — instant actie + dagelijkse haak
             (2026-06-06). Hergebruikt de /v/-pool, kost niets. */}
         <VraagVanDeDag />

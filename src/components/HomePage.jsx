@@ -10,6 +10,7 @@ import supabase from "../supabase.js";
 import { track, bronDatumTijd } from "../utils.js";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import usePwaInstall from "../shared/usePwaInstall.js";
+import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
@@ -314,6 +315,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     verwijderImage();
     setFeedbackText(""); setFeedbackError(""); setFeedbackSent(false); setShowFeedback(false);
   };
+  // B5.3 (7-bots-review a11y): focus-trap + Escape sluit de tip-modal.
+  const feedbackTrapRef = useFocusTrap(showFeedback, { onEsc: sluitFeedback });
   const verstuurFeedback = async () => {
     const tekst = feedbackText.trim();
     if (tekst.length < 15) { setFeedbackError("Schrijf even iets meer (minimaal 15 tekens)."); return; }
@@ -1151,7 +1154,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {levelOptions[pendingRole].map(n => (
                     <button key={n} onClick={() => setLevel(String(n))} style={{
-                      width: 38, height: 38, borderRadius: 10,
+                      // B5.5 (7-bots-review a11y): 38px was te klein als tap-target.
+                      width: "var(--tap-target-min, 44px)", height: "var(--tap-target-min, 44px)", borderRadius: 10,
                       border: level === String(n) ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.15)",
                       background: level === String(n) ? "rgba(0,212,255,0.15)" : "rgba(255,255,255,0.05)",
                       color: level === String(n) ? "#00d4ff" : "rgba(255,255,255,0.6)",
@@ -1554,6 +1558,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {showFeedback && (
           <div
+            ref={feedbackTrapRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Tip aan de maker"
             onClick={(e) => { if (e.target === e.currentTarget) sluitFeedback(); }}
             style={{
               position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", zIndex: 10000,

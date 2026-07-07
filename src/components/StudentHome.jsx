@@ -780,7 +780,12 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         {/* Mark wens 2026-05-10: rol-specifieke direct-ingang.
             BEIDE balken altijd tonen — leerling kan zelf kiezen.
             (Eerdere vakModus-conditie verborg examens-balk in PO-modus,
-            wat Mark niet wilde.) */}
+            wat Mark niet wilde.)
+            B3.4 (7-bots-review): volgorde wisselt per vakModus — een VO'er
+            ziet de examen-balken eerst, de PO'er de Doorstroomtoets-blokken.
+            Zelfde blokken, niets verborgen. */}
+        {(() => {
+          const citoBlokken = (<>
         {onCitoOefenenSubject && (
           <button
             onClick={() => {
@@ -876,6 +881,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             </div>
           </>
         )}
+          </>);
+          const examenBlokken = (<>
         {/* Twee examen-balken (Mark feedback 2026-05-11):
             (1) USP — interactief oefenen mét uitleg waarom (examen-leerpaden).
             (2) Bibliotheek — hele PDF-examens inzien (overal beschikbaar, maar
@@ -945,6 +952,11 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 16, color: "rgba(167,139,250,0.75)" }} aria-hidden="true">›</span>
           </button>
         )}
+          </>);
+          return vakModus === "vo"
+            ? <>{examenBlokken}{citoBlokken}</>
+            : <>{citoBlokken}{examenBlokken}</>;
+        })()}
 
         {/* 15-min sessie-indicator — koppeling met "Een kwartier per dag"
             slogan. Vult zich realtime; bij overschrijden van target geeft

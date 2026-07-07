@@ -7,6 +7,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { getDayStreak } from "../../shared/dailyGoal.js";
+import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 
 const KWARTIER_MS = 15 * 60 * 1000;
 const SNOOZE_MS = 5 * 60 * 1000;
@@ -63,6 +64,12 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
     return () => clearInterval(id);
   }, [hidden]);
 
+  // B5.3 (7-bots-review a11y): focus-trap + Escape = "5 min later" (veiligste
+  // keuze — stopt niet en verbergt de prompt niet permanent).
+  const trapRef = useFocusTrap(show, {
+    onEsc: () => { snoozeRef.current = Date.now() + SNOOZE_MS; setShow(false); },
+  });
+
   if (!show) return null;
 
   const streak = getDayStreak();
@@ -84,7 +91,9 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
 
   return (
     <div
+      ref={trapRef}
       role="dialog"
+      aria-modal="true"
       aria-label="Kwartier gehaald"
       style={{
         position: "fixed",

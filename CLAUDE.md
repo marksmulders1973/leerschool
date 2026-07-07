@@ -374,7 +374,8 @@ Status 2026-05-13: paywall-infrastructuur is gebouwd maar `PAYWALL_ACTIVE = fals
 
 - **Supabase project-ID**: zie `reference_studiebol_resources` in memory.
 - **GitHub repo**: `marksmulders1973/leerschool`.
-- **Hosting**: Vercel Hobby (kostenstrategie: zo lang mogelijk free tier).
+- **Hosting**: Vercel Hobby (kostenstrategie: zo lang mogelijk free tier). Vercel-project = **`leerschoolnew`** (scope `smulsoft`), deploy alleen vanuit deze map (`Desktop\Studiebol\leerschool`).
+- ⚠️ **Projectscheiding**: Leerkwartier (`leerschoolnew`) en Rempahuis (`rempahuis`, Deianera's receptensite in `Desktop\Deianera`) staan onder hetzelfde Vercel-team. **Nooit** Leerkwartier deployen vanuit de Rempahuis-map of andersom. Op 2026-07-07 ging dit één keer mis. Een bewaker-hook (`~/.claude/vercel-project-guard.ps1`) blokkeert nu een `vercel` deploy/domein-actie als de map niet aan het juiste project gelinkt is.
 - **AI**: Claude API + Gemini fallback (kostenstrategie: pay-per-use, niet vaste subscriptions).
 - **Examenblad.nl URL-patroon**: zie `reference_examenblad_urls` in memory.
 

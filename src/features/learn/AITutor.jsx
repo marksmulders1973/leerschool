@@ -8,6 +8,7 @@
 // MVP scope: niet meer dan ~150 regels, geen dependencies buiten React.
 
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
@@ -171,11 +172,16 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     }
   };
 
+  // B5.3 (7-bots-review a11y): focus-trap + Escape sluit de drawer.
+  const trapRef = useFocusTrap(open, { onEsc: onClose });
+
   if (!open) return null;
 
   return (
     <div
+      ref={trapRef}
       role="dialog"
+      aria-modal="true"
       aria-label={`Hulp van ${naam}`}
       style={{
         position: "fixed",

@@ -313,8 +313,9 @@ const iconBtnStyle = {
   fontSize: 18,
   cursor: "pointer",
   padding: 4,
-  width: 32,
-  height: 32,
+  // B5.5 (7-bots-review a11y): tap-target minimaal 44px voor kinderhanden.
+  width: "var(--tap-target-min, 44px)",
+  height: "var(--tap-target-min, 44px)",
   borderRadius: "var(--radius-pill)",
 };
 
