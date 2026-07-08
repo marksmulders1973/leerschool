@@ -7,9 +7,22 @@ import { Suspense, lazy } from "react";
 
 const CharleyHead = lazy(() => import("./CharleyHead.jsx"));
 const VonkHead = lazy(() => import("./VonkHead.jsx"));
+const BlokkieHead = lazy(() => import("./MaatjeKoppen.jsx").then((m) => ({ default: m.BlokkieHead })));
+const SterreHead = lazy(() => import("./MaatjeKoppen.jsx").then((m) => ({ default: m.SterreHead })));
+const BliepHead = lazy(() => import("./MaatjeKoppen.jsx").then((m) => ({ default: m.BliepHead })));
+const ElfiHead = lazy(() => import("./MaatjeKoppen.jsx").then((m) => ({ default: m.ElfiHead })));
+const KnoestHead = lazy(() => import("./MaatjeKoppen.jsx").then((m) => ({ default: m.KnoestHead })));
 
 // Maatjes met een eigen geanimeerde 3D-kop; de rest valt terug op hun emoji.
-const KOPPEN = { charley: CharleyHead, draakje: VonkHead };
+const KOPPEN = {
+  charley: CharleyHead,
+  draakje: VonkHead,
+  blokkie: BlokkieHead,
+  eenhoorn: SterreHead,
+  robot: BliepHead,
+  elf: ElfiHead,
+  trol: KnoestHead,
+};
 
 export default function BuddyKop({ buddy, size = 84, praat = false }) {
   const ring = buddy?.kleur || "#5bbf5a";

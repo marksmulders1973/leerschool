@@ -141,6 +141,45 @@ export const BUDDIES = [
     verdien: 0,
     flavor: "Woef! Bouwen we samen een huis? 🧱",
   },
+  {
+    // 🤖 Robot-maatje (Mark 8 jul: "een robot, elf, trol etc").
+    id: "robot",
+    naam: "Bliep",
+    emoji: "🤖",
+    soort: "robot",
+    kleur: "#8fa8c8",   // staalblauw-grijs
+    kleur2: "#5a7396",  // donker paneel-blauw
+    accent: "#4ec9e0",  // cyaan lampjes
+    karakter: "slim & precies",
+    verdien: 10,
+    flavor: "Bliep-bloep! Samen rekenen we alles uit! 🤖",
+  },
+  {
+    // 🧝 Elf-maatje (Mark 8 jul).
+    id: "elf",
+    naam: "Elfi",
+    emoji: "🧝",
+    soort: "elf",
+    kleur: "#f2c9a0",   // zachte huid
+    kleur2: "#3f9e5a",  // bosgroen mutsje/kraag
+    accent: "#ffd23a",  // gouden belletje
+    karakter: "vrolijk & vindingrijk",
+    verdien: 24,
+    flavor: "Elfjes weten overal een slimmigheidje voor! ✨",
+  },
+  {
+    // 🧌 Trol-maatje (Mark 8 jul) — lief-sterke knuffeltrol, niet eng.
+    id: "trol",
+    naam: "Knoest",
+    emoji: "🧌",
+    soort: "trol",
+    kleur: "#9aa86e",   // mosgroen
+    kleur2: "#6e7a4a",  // donker mos
+    accent: "#e8b56a",  // hoorntjes/haardot oker
+    karakter: "sterk & zachtaardig",
+    verdien: 36,
+    flavor: "Ik til je zorgen op — hup, leren maar! 🧌",
+  },
 ];
 
 export const BUDDY_BY_ID = Object.fromEntries(BUDDIES.map((b) => [b.id, b]));
@@ -365,6 +404,27 @@ export function buddyPraatje(soort, facts) {
       { e: "⛏️", t: f.zwakVak ? `${cap(f.zwakVak)} hakken we in kleine blokjes.` : "Race je mee naar de bouwplaats?" },
       { e: "🟩", t: `Blokje voor blokje worden wij slimmer, ${hoi}!` },
     );
+  } else if (soort === "robot") {
+    o.push(
+      { e: "🤖", t: `Bliep-bloep! Systeem klaar voor een leerkwartier, ${hoi}!` },
+      { e: "🔋", t: "Fout antwoord = data. Data = slimmer worden. Herberekenen maar!" },
+      { e: "⚙️", t: f.zwakVak ? `${cap(f.zwakVak)}? Ik zet mijn reken-chip op maximaal!` : "Welke opdracht laden we vandaag?" },
+      { e: "💡", t: `Mijn sensoren zeggen: ${hoi} kan dit. Betrouwbaarheid: 100%.` },
+    );
+  } else if (soort === "elf") {
+    o.push(
+      { e: "✨", t: `Psst ${hoi}, elfjes kennen een geheim: elke dag een beetje is toveren.` },
+      { e: "🍀", t: "Een foutje? Daar strooi ik gewoon wat elfenstof overheen — opnieuw!" },
+      { e: "🧝", t: f.zwakVak ? `${cap(f.zwakVak)}? Daar weet ik een slimmigheidje voor.` : "Zullen we iets slims verzinnen?" },
+      { e: "🔔", t: `Mijn belletje rinkelt als jij iets goed hebt, ${hoi}!` },
+    );
+  } else if (soort === "trol") {
+    o.push(
+      { e: "🧌", t: `Hmpf! Knoest draagt de zware dingen — jij hoeft alleen te leren, ${hoi}.` },
+      { e: "💪", t: "Moeilijke vraag? Die tillen we samen op. Eén, twee... hup!" },
+      { e: "🪨", t: f.zwakVak ? `${cap(f.zwakVak)} is een rotsblok? Ik maak er kiezelsteentjes van.` : "Waar gaan we vandaag aan sjouwen?" },
+      { e: "🌿", t: `Onder mijn brug is het gezellig, maar leren met jou is leuker, ${hoi}.` },
+    );
   } else { // bubbel
     o.push(
       { e: "🫧", t: `Boing boing! Race je met me naar de draaimolen, ${hoi}?` },
@@ -404,6 +464,9 @@ export function buddyAai(soort, facts) {
     paard: [{ e: "🐴", t: "Brrr! Ik stamp blij met mijn hoef!" }, { e: "🐎", t: `Aai gerust nog eens, ${hoi}!` }, { e: "🍎", t: "Mmm, dat voelt fijn!" }],
     bever: [{ e: "🦫", t: "Hihi! Mijn staart klettert van blijdschap!" }, { e: "🪵", t: `Jij bent mijn bouwmaatje, ${hoi}!` }, { e: "🔨", t: "Klop klop — dat is mijn blije staart!" }],
     blokhond: [{ e: "🧱", t: "Woef! Mijn staart draait als een blokje rond!" }, { e: "🐶", t: `Aai! Jij bent top, ${hoi}!` }, { e: "⛏️", t: "Hihi, dat kietelt door mijn blokjes!" }],
+    robot: [{ e: "🤖", t: "Bliep! Aai-sensor geactiveerd — blijheid 100%!" }, { e: "⚡", t: `Zzzt! Mijn lampjes knipperen voor jou, ${hoi}!` }, { e: "🔧", t: "Systeembericht: nog een aai gewenst." }],
+    elf: [{ e: "✨", t: "Hihi! Er dwarrelt elfenstof van blijdschap!" }, { e: "🔔", t: `Mijn belletje rinkelt — dankjewel, ${hoi}!` }, { e: "🍀", t: "Dat brengt geluk, wist je dat?" }],
+    trol: [{ e: "🧌", t: "Hmpf-hihi! Trollen blozen niet. Echt niet." }, { e: "💚", t: `Jij mag altijd over mijn brug, ${hoi}.` }, { e: "🪨", t: "Zo'n aai voelt als zonnetje op mijn mos!" }],
   };
   const o = m[soort] || m.bubbel;
   return o[Math.floor(Math.random() * o.length)];

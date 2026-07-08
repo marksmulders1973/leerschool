@@ -27,7 +27,9 @@ function HeadMesh({ praatRef }) {
   const eyeR = useRef();
   const st = useRef({ blink: 2.5 + Math.random() * 3, blinkT: 0 });
 
-  useFrame((s, dt) => {
+  useFrame((s, rawDt) => {
+    // dt clampen tegen rAF-throttling (achtergrond-tab) — zie MaatjeKoppen.
+    const dt = Math.min(rawDt, 0.05);
     const t = s.clock.elapsedTime;
     // zacht meebewegen (levendig, niet stijf) — draakjes zweven, dus iets
     // meer op-en-neer dan Charley

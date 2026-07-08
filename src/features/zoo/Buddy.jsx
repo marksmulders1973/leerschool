@@ -312,6 +312,118 @@ function Bever({ c, tailRef, legsRef }) {
   );
 }
 
+// 🤖 Robot Bliep: hoekig blik-mannetje met antenne en cyaan lampjes-ogen.
+// Twee benen — de loop-animatie (legsRef 0/1) laat ze om-en-om zwaaien.
+function Robot({ c, legsRef }) {
+  return (
+    <group>
+      {/* romp */}
+      <mesh castShadow position={[0, 0.06, 0]}><boxGeometry args={[0.46, 0.5, 0.34]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.6} metalness={0.35} /></mesh>
+      {/* borst-paneel met lampjes */}
+      <mesh position={[0, 0.08, 0.18]}><boxGeometry args={[0.3, 0.3, 0.03]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.7} /></mesh>
+      {[-0.08, 0, 0.08].map((x, i) => (
+        <mesh key={i} position={[x, 0.16, 0.2]}><sphereGeometry args={[0.025, 8, 8]} /><meshStandardMaterial color={c.accent} emissive={c.accent} emissiveIntensity={0.8} roughness={0.4} /></mesh>
+      ))}
+      {/* kop */}
+      <mesh castShadow position={[0, 0.52, 0]}><boxGeometry args={[0.38, 0.32, 0.32]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.6} metalness={0.35} /></mesh>
+      {/* lampjes-ogen */}
+      {[-0.1, 0.1].map((x, i) => (
+        <mesh key={i} position={[x, 0.55, 0.17]}><sphereGeometry args={[0.05, 10, 10]} /><meshStandardMaterial color={c.accent} emissive={c.accent} emissiveIntensity={0.9} roughness={0.3} /></mesh>
+      ))}
+      {/* mond-roostertje */}
+      {[-0.05, 0, 0.05].map((x, i) => (
+        <mesh key={i} position={[x, 0.44, 0.17]}><boxGeometry args={[0.03, 0.05, 0.02]} /><meshStandardMaterial color={c.kleur2} roughness={0.6} /></mesh>
+      ))}
+      {/* antenne met bolletje */}
+      <mesh position={[0, 0.74, 0]}><cylinderGeometry args={[0.015, 0.015, 0.14, 6]} /><meshStandardMaterial color={c.kleur2} roughness={0.6} /></mesh>
+      <mesh position={[0, 0.83, 0]}><sphereGeometry args={[0.04, 8, 8]} /><meshStandardMaterial color={c.accent} emissive={c.accent} emissiveIntensity={0.9} roughness={0.4} /></mesh>
+      {/* armpjes */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} castShadow position={[s * 0.3, 0.08, 0]} rotation={[0, 0, s * 0.12]}><boxGeometry args={[0.1, 0.36, 0.12]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.65} metalness={0.3} /></mesh>
+      ))}
+      {/* 2 benen (lopen via legsRef 0/1) */}
+      {[[0.12], [-0.12]].map(([x], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.2, 0]}>
+          <mesh castShadow position={[0, -0.12, 0]}><boxGeometry args={[0.13, 0.26, 0.15]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.65} metalness={0.3} /></mesh>
+          <mesh position={[0, -0.25, 0.03]}><boxGeometry args={[0.15, 0.07, 0.2]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.6} /></mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
+// 🧝 Elf Elfi: klein bos-elfje met puntmuts + gouden belletje en puntoortjes.
+function Elf({ c, legsRef }) {
+  return (
+    <group>
+      {/* tuniek (kegel) */}
+      <mesh castShadow position={[0, 0.02, 0]}><coneGeometry args={[0.32, 0.55, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      {/* riempje */}
+      <mesh position={[0, -0.08, 0]}><cylinderGeometry args={[0.245, 0.26, 0.05, 8]} /><meshStandardMaterial color={c.accent} flatShading roughness={0.7} /></mesh>
+      {/* hoofd */}
+      <mesh castShadow position={[0, 0.42, 0]}><sphereGeometry args={[0.22, 14, 14]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      {/* puntoortjes */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} position={[s * 0.22, 0.45, 0]} rotation={[0, 0, s * -1.25]}><coneGeometry args={[0.05, 0.16, 4]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+      ))}
+      {/* puntmuts (scheef) met belletje */}
+      <group position={[0, 0.58, 0]} rotation={[0, 0, -0.22]}>
+        <mesh castShadow><coneGeometry args={[0.2, 0.36, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+        <mesh position={[0.07, 0.2, 0]}><sphereGeometry args={[0.05, 8, 8]} /><meshStandardMaterial color={c.accent} roughness={0.35} metalness={0.4} /></mesh>
+      </group>
+      {/* oogjes + lachje */}
+      {[-0.08, 0.08].map((x, i) => <mesh key={i} position={[x, 0.45, 0.19]}><sphereGeometry args={[0.035, 8, 8]} /><meshStandardMaterial color="#2f3b2a" roughness={0.4} /></mesh>)}
+      <mesh position={[0, 0.37, 0.2]} rotation={[0, 0, Math.PI]}><torusGeometry args={[0.05, 0.012, 8, 12, Math.PI]} /><meshStandardMaterial color="#2f3b2a" roughness={0.4} /></mesh>
+      {/* armpjes */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} position={[s * 0.26, 0.14, 0]} rotation={[0, 0, s * 0.5]}><cylinderGeometry args={[0.045, 0.045, 0.24, 6]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.9} /></mesh>
+      ))}
+      {/* 2 beentjes (lopen via legsRef 0/1) */}
+      {[[0.1], [-0.1]].map(([x], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.22, 0]}>
+          <mesh castShadow position={[0, -0.1, 0]}><cylinderGeometry args={[0.05, 0.05, 0.2, 6]} /><meshStandardMaterial color={c.kleur} flatShading roughness={0.9} /></mesh>
+          {/* krul-schoentje */}
+          <mesh position={[0, -0.2, 0.05]}><sphereGeometry args={[0.06, 8, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.85} /></mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
+// 🧌 Trol Knoest: lief-sterke knuffeltrol — rond mos-lijf, grote neus,
+// onderbeet-tandjes en een plukje haar. Niet eng, wel sterk.
+function Trol({ c, legsRef }) {
+  return (
+    <group>
+      {/* rond lijf + kop in één (gedrongen) */}
+      <mesh castShadow position={[0, 0.1, 0]} scale={[1, 1.08, 0.95]}><icosahedronGeometry args={[0.42, 1]} /><meshStandardMaterial color={c.kleur} flatShading roughness={1} /></mesh>
+      {/* lichte buik */}
+      <mesh position={[0, -0.04, 0.3]} scale={[0.7, 0.8, 0.5]}><sphereGeometry args={[0.3, 12, 12]} /><meshStandardMaterial color={c.accent} flatShading roughness={1} /></mesh>
+      {/* grote zachte neus */}
+      <mesh position={[0, 0.24, 0.4]} scale={[1, 0.85, 0.9]}><sphereGeometry args={[0.11, 10, 10]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={0.95} /></mesh>
+      {/* oogjes vlak boven de neus */}
+      {[-0.13, 0.13].map((x, i) => <mesh key={i} position={[x, 0.34, 0.34]}><sphereGeometry args={[0.05, 10, 10]} /><meshStandardMaterial color="#2f3226" roughness={0.4} /></mesh>)}
+      {/* onderbeet-tandjes (lief) */}
+      {[-0.07, 0.07].map((x, i) => <mesh key={i} position={[x, 0.12, 0.4]}><boxGeometry args={[0.05, 0.08, 0.03]} /><meshStandardMaterial color="#fdfbf6" roughness={0.5} /></mesh>)}
+      {/* haardot */}
+      <mesh position={[0, 0.56, 0]} rotation={[0.15, 0, 0.1]}><coneGeometry args={[0.09, 0.2, 5]} /><meshStandardMaterial color={c.accent} flatShading roughness={1} /></mesh>
+      {/* ronde oortjes */}
+      {[-1, 1].map((s, i) => <mesh key={i} position={[s * 0.4, 0.32, 0]} scale={[0.5, 1, 0.8]}><sphereGeometry args={[0.09, 8, 8]} /><meshStandardMaterial color={c.kleur} flatShading roughness={1} /></mesh>)}
+      {/* sterke armen */}
+      {[-1, 1].map((s, i) => (
+        <mesh key={i} castShadow position={[s * 0.38, 0.02, 0.06]} rotation={[0, 0, s * 0.35]}><cylinderGeometry args={[0.08, 0.1, 0.32, 8]} /><meshStandardMaterial color={c.kleur} flatShading roughness={1} /></mesh>
+      ))}
+      {/* 2 stevige beentjes (lopen via legsRef 0/1) */}
+      {[[0.15], [-0.15]].map(([x], i) => (
+        <group key={i} ref={(el) => { if (legsRef) legsRef.current[i] = el; }} position={[x, -0.28, 0]}>
+          <mesh castShadow position={[0, -0.08, 0]}><cylinderGeometry args={[0.09, 0.1, 0.18, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={1} /></mesh>
+          <mesh position={[0, -0.17, 0.04]} scale={[1, 0.6, 1.3]}><sphereGeometry args={[0.09, 8, 8]} /><meshStandardMaterial color={c.kleur2} flatShading roughness={1} /></mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
 function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
   if (soort === "draakje") return <Draakje c={c} flapRef={flapRef} />;
   if (soort === "hond") return <Hond c={c} mouthRef={mouthRef} tailRef={tailRef} legsRef={legsRef} />;
@@ -322,6 +434,9 @@ function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
   if (soort === "uil") return <Uil c={c} flapRef={flapRef} />;
   if (soort === "ster") return <Ster c={c} />;
   if (soort === "fenix") return <Fenix c={c} flapRef={flapRef} />;
+  if (soort === "robot") return <Robot c={c} legsRef={legsRef} />;
+  if (soort === "elf") return <Elf c={c} legsRef={legsRef} />;
+  if (soort === "trol") return <Trol c={c} legsRef={legsRef} />;
   return <Bubbel c={c} squashRef={squashRef} />;
 }
 
