@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
@@ -10,6 +10,10 @@ import { checkOpenAnswer } from "./openAnswerCheck.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
+import AITutor from "../learn/AITutor.jsx";
+import { actieveBuddyPersona } from "../zoo/buddies.js";
+
+const CharleyHead = lazy(() => import("../zoo/CharleyHead.jsx"));
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
@@ -63,6 +67,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   // achter 'Meer uitleg ▼'-toggle. 10jr-leerling-feedback: 6+ vakken muur was
   // te overweldigend, leerling klikte gewoon door zonder te lezen.
   const [showMoreExplanation, setShowMoreExplanation] = useState(false);
+  // Buddy in de fout-uitleg (Mark 8 jul): het eigen maatje staat boven
+  // "Waarom had ik dit niet goed?" (i.p.v. 😕) en is aanklikbaar voor gerichte
+  // hulp — zelfde patroon als de toets-nabespreking in CitoLeerpadToets.
+  const [tutorOpen, setTutorOpen] = useState(false);
+  const [tutorBuddy] = useState(() => actieveBuddyPersona());
   // G3a focus-trap refs voor wrong-overlay + quit-confirm modals
   const wrongOverlayRef = useFocusTrap(showWrongOverlay, {
     onEsc: () => { setShowWrongOverlay(false); }
@@ -746,9 +755,35 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         >
           <div style={{ maxWidth: 480, width: "100%" }}>
 
-            {/* Emoji + titel */}
+            {/* Maatje + titel — het eigen maatje (i.p.v. 😕) is aanklikbaar
+                en opent de buddy-tutor met deze vraag als context. */}
             <div style={{ textAlign: "center", marginBottom: 22 }}>
-              <div style={{ fontSize: 56, marginBottom: 6 }} aria-hidden="true">😕</div>
+              <button
+                onClick={() => setTutorOpen(true)}
+                aria-label={`Vraag hulp aan ${tutorBuddy.naam}`}
+                style={{
+                  background: "transparent", border: "none", cursor: "pointer",
+                  padding: 0, marginBottom: 6, display: "inline-flex",
+                  flexDirection: "column", alignItems: "center", gap: 4,
+                }}
+              >
+                {tutorBuddy.id === "charley" ? (
+                  <Suspense fallback={<span style={{ fontSize: 56 }} aria-hidden="true">{tutorBuddy.emoji}</span>}>
+                    <CharleyHead size={72} />
+                  </Suspense>
+                ) : (
+                  <span style={{ fontSize: 56 }} aria-hidden="true">{tutorBuddy.emoji}</span>
+                )}
+                <span style={{
+                  fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                  color: tutorBuddy.accent || tutorBuddy.kleur || "#5bbf5a",
+                  background: "rgba(255,255,255,0.07)",
+                  border: `1px solid ${tutorBuddy.kleur || "#5bbf5a"}66`,
+                  borderRadius: 999, padding: "4px 12px",
+                }}>
+                  💬 Vraag hulp aan {tutorBuddy.naam}
+                </span>
+              </button>
               <h2 id="wrong-overlay-title" style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "#ff8a65", margin: 0 }}>
                 Waarom had ik dit niet goed?
               </h2>
@@ -990,6 +1025,21 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           />
         </div>
       )}
+
+      {/* Buddy-tutor-drawer (Mark 8 jul): geopend via het maatje boven
+          "Waarom had ik dit niet goed?". Krijgt de vraag + het gegeven (foute)
+          antwoord als context — zelfde patroon als CitoLeerpadToets. */}
+      <AITutor
+        open={tutorOpen}
+        onClose={() => setTutorOpen(false)}
+        pathTitle={gameState.quiz?.title || gameState.quiz?.topic || "Oefenen"}
+        pathId={gameState.quiz?.topicPathId || gameState.quiz?.id || "quiz"}
+        stepTitle={gameState.quiz?.topic || gameState.quiz?.title || ""}
+        stepIdx={gameState.currentQ}
+        stepExplanation={question?.explanation || ""}
+        currentCheck={question || null}
+        lastWrongAnswer={selected != null && selected >= 0 && question?.options ? question.options[selected] : null}
+      />
     </div>
   );
 }
