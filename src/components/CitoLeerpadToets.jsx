@@ -8,6 +8,8 @@ import MdInline from "../shared/ui/MdInline.jsx";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
 import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
 import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
+import AITutor from "../features/learn/AITutor.jsx";
+import { actieveBuddyPersona } from "../features/zoo/buddies.js";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -58,6 +60,11 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   // dan het volledige uitlegPad opent (consistent met LearnPath-flow).
   const [expandedWrong, setExpandedWrong] = useState(() => new Set());
   const [showUitlegFor, setShowUitlegFor] = useState(() => new Set());
+  // Buddy-tutor bij de nabespreking (Mark 2026-07-08): per foute vraag kan de
+  // leerling het eigen maatje oproepen — zelfde patroon als LearnPath/park.
+  // Tijdens de toets zelf bewust GEEN buddy (zelf doen, zoals de echte toets).
+  const [tutorVraag, setTutorVraag] = useState(null); // { q, given }
+  const [tutorBuddy] = useState(() => actieveBuddyPersona());
   const toggleSet = (setter, id) => setter((prev) => {
     const next = new Set(prev);
     if (next.has(id)) next.delete(id); else next.add(id);
@@ -524,6 +531,26 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                           onClose={() => toggleSet(setShowUitlegFor, q.id)}
                         />
                       )}
+                      <button
+                        onClick={() => setTutorVraag({ q, given: givenLabel })}
+                        style={{
+                          background: `${tutorBuddy.kleur || "#5bbf5a"}18`,
+                          border: `1px solid ${tutorBuddy.kleur || "#5bbf5a"}66`,
+                          color: tutorBuddy.kleur || "#5bbf5a",
+                          fontFamily: "var(--font-display)",
+                          fontWeight: 700,
+                          fontSize: 13,
+                          cursor: "pointer",
+                          padding: "10px 14px",
+                          borderRadius: 10,
+                          minHeight: 44,
+                          width: "100%",
+                          marginBottom: 8,
+                          textAlign: "left",
+                        }}
+                      >
+                        {tutorBuddy.emoji} Vraag hulp aan {tutorBuddy.naam}
+                      </button>
                       {onPickPath && (
                         <button
                           onClick={() => onPickPath(q.pathId, q.stepIdx)}
@@ -561,6 +588,21 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               🏠 Naar home
             </button>
           </div>
+
+          {/* Buddy-tutor-drawer: krijgt de vraag + gegeven (foute) antwoord als
+              context, zodat het maatje gericht kan nabespreken. AITutor leest
+              currentCheck.q — citoMix-vragen heten .question, dus mappen. */}
+          <AITutor
+            open={!!tutorVraag}
+            onClose={() => setTutorVraag(null)}
+            pathTitle={tutorVraag?.q?.pathTitle || "Oefen-Doorstroomtoets"}
+            pathId={tutorVraag?.q?.pathId || "cito-toets"}
+            stepTitle={tutorVraag?.q?.stepTitle || ""}
+            stepIdx={tutorVraag?.q?.stepIdx ?? 0}
+            stepExplanation={tutorVraag?.q?.explanation || ""}
+            currentCheck={tutorVraag ? { ...tutorVraag.q, q: tutorVraag.q.question } : null}
+            lastWrongAnswer={tutorVraag?.given || null}
+          />
         </div>
       </div>
     );
