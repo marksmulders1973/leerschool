@@ -38,6 +38,9 @@ export function shuffleOptiesSeeded(q, seedString) {
 
 export function shuffleOpties(q, rng = Math.random) {
   if (!q || !Array.isArray(q.options) || typeof q.answer !== "number") return q;
+  // Authentieke examenvragen houden hun officiële optie-volgorde — die
+  // volgorde is onderdeel van de bron (beleid: zie buildExamenMix/citoMix).
+  if (q.examenBron) return q;
   if (q.options.some((o) => typeof o === "string" && POSITIE_VAST.test(o))) return q;
 
   const volgorde = q.options.map((_, i) => i);

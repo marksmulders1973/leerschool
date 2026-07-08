@@ -9,6 +9,7 @@
 // Pattern volgt buildProefToets, hergebruikt PlayQuiz rendering.
 
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
+import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -40,7 +41,11 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   const ordered = shuffleQuestions ? shuffle(valide) : valide;
   const selectie = aantal != null ? ordered.slice(0, Math.min(aantal, ordered.length)) : ordered;
   // Behoud uitlegPad (oefen-modus is didactisch — geen strip).
-  const questions = selectie.map((c) => ({ ...c }));
+  // Opties per vraag schudden: in de pad-data staat het juiste antwoord
+  // vrijwel altijd op index 0 — zonder shuffle is "altijd A" bijna 100% goed.
+  // shuffleOpties bewaakt examenBron (officiële volgorde) + positie-vaste
+  // opties en stript letter-shorthand uit uitlegPad-niveaus (fix 2026-07-08).
+  const questions = selectie.map((c) => shuffleOpties({ ...c }));
   const quiz = {
     id: `topic-${pathId}`,
     subject: pad.subject || "topic",

@@ -20,6 +20,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
 import rekenenPad from "../learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../learnPaths/doorstroomtoetsStudievaardighedenG8.js";
@@ -73,15 +74,24 @@ function werkboekUitPad(pad, perHoofdstuk) {
     const ch = chapters.find((c) => i >= c.from && i <= c.to);
     const titel = schoonHoofdstuk(ch?.title || step.title || `Deel ${i + 1}`);
     const emoji = ch?.emoji || "•";
+    // Opties SEEDED schudden (fix 2026-07-08): in de pad-data staat het juiste
+    // antwoord vrijwel altijd op index 0 — de geprinte antwoordsleutel was
+    // daardoor bijna overal "A". Seeded (niet random) omdat de sleutel pas
+    // later ontgrendelt (e-mail) — een werkboek van gisteren moet matchen met
+    // een sleutel die vandaag geprint wordt.
     const vragen = (step.checks || [])
-      .filter(isGeldig)
+      .map((c, ci) => ({ c, ci }))
+      .filter(({ c }) => isGeldig(c))
       .slice(0, perHoofdstuk)
-      .map((c) => ({
-        q: c.q,
-        options: c.options,
-        answer: c.answer,
-        uitleg: korteUitleg(c),
-      }));
+      .map(({ c, ci }) => {
+        const g = shuffleOptiesSeeded(c, `${pad.id}::${i}::${ci}`);
+        return {
+          q: g.q,
+          options: g.options,
+          answer: g.answer,
+          uitleg: korteUitleg(g),
+        };
+      });
     if (vragen.length) hoofdstukken.push({ titel, emoji, vragen });
   });
   return hoofdstukken;

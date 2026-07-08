@@ -5,7 +5,6 @@ import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import { recordRefAnswer } from "../features/mastery/mastery.js";
 import { track } from "../utils.js";
 import MdInline from "../shared/ui/MdInline.jsx";
-import { shuffleOptions } from "../shared/shuffleOptions.js";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
 import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
 import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
@@ -91,8 +90,10 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
       // belanden. Chrome-Claude review 2026-05-15.
       // Mark P0 STAP 2 (2026-05-19): sampleCitoMix is nu async — laadt
       // alleen relevante PO-paden lazy ipv hele bundel eager.
-      const qs = await sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
-      const shuffled = qs.map((q) => shuffleOptions(q));
+      // sampleCitoMix schudt de opties al (met guards: examenBron behoudt
+      // officiële volgorde, positie-vaste opties blijven staan). Een tweede
+      // shuffle hier ongedaan-maakte die guards — verwijderd 2026-07-08.
+      const shuffled = await sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
       setQuestions(shuffled);
       setAnswers(new Array(shuffled.length).fill(null));
       setIdx(0);

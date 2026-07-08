@@ -6,6 +6,7 @@ import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
 import ProBadge from "../../subscription/ProBadge.jsx";
+import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
@@ -64,9 +65,14 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
     const levelDisplayLabel = level?.label
       ? `${level.label}${schoolTypePart ? ` · ${schoolTypeNames[schoolTypePart] || schoolTypePart.toUpperCase()}` : ""}`
       : q.level || "";
-    const questions = (q.preGeneratedQuestions?.length > 0)
+    // Opties per vraag schudden (fix 2026-07-08): opgeslagen/sample-vragen
+    // hebben het juiste antwoord vaak op index 0 — zonder hussel printte de
+    // antwoordsleutel bijna overal "A". Leerling-blad en sleutel komen uit
+    // dezelfde array, dus blijven consistent.
+    const questions = ((q.preGeneratedQuestions?.length > 0)
       ? q.preGeneratedQuestions.slice(0, q.questionCount || 10)
-      : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10);
+      : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10)
+    ).map((v) => shuffleOpties(v));
 
     if (questions.length === 0) {
       alert("Geen vragen beschikbaar voor deze toets.");

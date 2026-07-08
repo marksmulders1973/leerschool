@@ -11,6 +11,7 @@ import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import redactiePad from "../learnPaths/redactiesommen.js";
+import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
@@ -72,9 +73,14 @@ function bouwHoofdstukken() {
   const out = [];
   (redactiePad.steps || []).forEach((step, i) => {
     const ch = chapters.find((c) => i >= c.from && i <= c.to);
-    const vragen = (step.checks || []).filter(isGeldig).map((c) => ({
-      q: c.q, options: c.options, answer: c.answer, uitleg: korteUitleg(c),
-    }));
+    // Seeded optie-hussel (fix 2026-07-08): juiste antwoord staat in de data
+    // vrijwel altijd op index 0 → geprinte sleutel was bijna overal "A".
+    // Seeded zodat een eerder geprint blad blijft matchen met een later
+    // ontgrendelde antwoordsleutel.
+    const vragen = (step.checks || []).map((c, ci) => ({ c, ci })).filter(({ c }) => isGeldig(c)).map(({ c, ci }) => {
+      const g = shuffleOptiesSeeded(c, `${redactiePad.id}::${i}::${ci}`);
+      return { q: g.q, options: g.options, answer: g.answer, uitleg: korteUitleg(g) };
+    });
     if (vragen.length) out.push({ titel: schoonTitel(ch?.title || step.title), emoji: ch?.emoji || "➕", vragen });
   });
   return out;
