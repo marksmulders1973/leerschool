@@ -180,7 +180,11 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     ${vraagBlok.html}
     <a href="${vandaag}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:12px;">🎯 Doe de vraag van vandaag →</a>
     <a href="${toets}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:24px;">📝 Of de gratis oefentoets →</a>
-    ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : ""}
+    ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : `
+    <div style="background:rgba(105,240,174,0.07);border:1px dashed rgba(105,240,174,0.4);border-radius:12px;padding:14px 16px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:4px;">📊 Nieuw: gratis wekelijks ouder-rapport</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
+    </div>`}
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app. In 2026 is alles gratis &amp; onbeperkt.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
@@ -251,6 +255,20 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true, sent: 0, reason: "resend-uit (zet RESEND_API_KEY in Vercel)" });
   }
 
+  // 📊 A8.1 (2026-07-08): op maandag lift het wekelijkse OUDER-RAPPORT mee op
+  // deze dagelijkse cron — Vercel Hobby staat maar 2 crons toe, dus geen eigen
+  // slot. Dubbel-versturen vangt stuurOuderRapporten af via admin_meta-stempel.
+  let ouderRapport = null;
+  try {
+    const weekdag = new Date().toLocaleDateString("nl-NL", { weekday: "long", timeZone: "Europe/Amsterdam" });
+    if (weekdag === "maandag") {
+      const { stuurOuderRapporten } = await import("./send-ouder-rapport.js");
+      ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM });
+    }
+  } catch (e) {
+    ouderRapport = { sent: 0, reden: "ouder-rapport-fout: " + String(e).slice(0, 80) };
+  }
+
   // Drempel: alleen wie nog nooit (last_sent_at null) of >DAGEN_TUSSEN dagen
   // geleden mail kreeg, en niet is uitgeschreven, en op de lesmateriaal-lijst staat.
   const drempel = new Date(Date.now() - DAGEN_TUSSEN * 86400000).toISOString();
@@ -267,12 +285,13 @@ export default async function handler(req, res) {
     rijen = await q.json();
     if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
   } catch (e) {
-    await stuurDagrapport(RESEND, FROM, { sent: 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) });
-    return res.status(500).json({ error: "lijst-lezen-fout", detail: String(e).slice(0, 200) });
+    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) });
+    return res.status(500).json({ error: "lijst-lezen-fout", ouderRapport, detail: String(e).slice(0, 200) });
   }
   if (rijen.length === 0) {
-    await stuurDagrapport(RESEND, FROM, { sent: 0, kandidaten: 0, fouten: [], reden: "niemand-due" });
-    return res.status(200).json({ ok: true, sent: 0, reason: "niemand-due" });
+    const rapportPlan = ouderRapport?.sent > 0 ? { "📊 ouder-rapport": ouderRapport.sent } : {};
+    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : ""), perPlan: rapportPlan });
+    return res.status(200).json({ ok: true, sent: 0, ouderRapport, reason: "niemand-due" });
   }
 
   const oefenvraag = kiesOefenvraag();
@@ -326,6 +345,17 @@ export default async function handler(req, res) {
     }
   }
 
-  await stuurDagrapport(RESEND, FROM, { sent: gelukt, kandidaten: rijen.length, fouten, perPlan });
-  return res.status(200).json({ ok: true, sent: gelukt, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  // Ouder-rapport-cijfers mee in het dagrapport naar Mark (uitsplitsing + fouten).
+  if (ouderRapport) {
+    if (ouderRapport.sent > 0) perPlan["📊 ouder-rapport"] = ouderRapport.sent;
+    if (Array.isArray(ouderRapport.fouten)) fouten.push(...ouderRapport.fouten.map((f) => "rapport:" + f));
+  }
+  await stuurDagrapport(RESEND, FROM, {
+    sent: gelukt + (ouderRapport?.sent || 0),
+    kandidaten: rijen.length,
+    fouten,
+    perPlan,
+    reden: ouderRapport?.reden ? `ouder-rapport: ${ouderRapport.reden}` : undefined,
+  });
+  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }

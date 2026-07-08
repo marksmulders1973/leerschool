@@ -14,6 +14,20 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
+
+> Uit 2-agent-audit (concurrentie-onderzoek + frisse-ogen product-audit, 8 jul).
+> Verdict: product 7, bereik 3. Didactische kern beter dan Squla; brandstofleiding
+> naar 1000 gebruikers ontbreekt. Volgorde = impact ÷ moeite.
+
+- [ ] **A8.1 Wekelijks ouder-rapport per e-mail** — dé Squla-feature (maandag-weekmail) gratis geven. Resend + cron-infra bestaat (api/send-weekly-lesmateriaal.js); template op score-query uit OuderDashboard + maandag-cron. Let op: parent_child_links is nog leeg → rapport moet ook de koppel-funnel aanjagen (CTA in bestaande mails + in-app).
+- [ ] **A8.2 Begrijpend lezen 3 → ~15 paden** — grootste content-gat op het zwaarst wegende Doorstroomtoets-onderdeel. Leesladder-opbouw (kort → toets-lengte) als leidraad; 1 pad per tekstsoort per groep.
+- [ ] **A8.3 Streak + dagdoel naar Supabase** — retentie woont nu in localStorage (src/shared/dailyGoal.js) en verdampt per apparaat. Kolommen aan profiel + sync in addSeconds().
+- [ ] **A8.4 🟡 MARK: A12 web push live zetten** — code af sinds mei; ~30 min handwerk: VAPID-keys + Vercel env + Supabase secrets + migration + deploy + cron (zie memory project_studiebol_a12_webpush_todo).
+- [ ] **A8.5 Wiskunde-chunk (4,4 MB) splitsen** — data-learnpaths-wiskunde ondermijnt mobiele belofte; per-pad dynamic import voor de 2 grootste chunks (wiskunde 4,4 MB + po 2,4 MB).
+
+---
+
 ## 📥 Inbox — nieuwe wensen / ideeën
 
 ### 📊 Dagrapport-analyse 2026-06-20 (data sinds 4 jun, 16 dagen — betrouwbaarheid LAAG)
