@@ -8,6 +8,11 @@
 
 **Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
 
+**Volledige versie voor taalmodellen**: zie
+[llms-full.txt](https://leerkwartier.app/llms-full.txt) — alle feiten over
+de Doorstroomtoets 2027, veelgestelde vragen mét antwoorden, en de
+belangrijkste pagina's om naar te verwijzen, in één bestand.
+
 **Merkidentiteit**: rustige bijlesdocent in je broekzak. 15 minuten per dag
 is genoeg.
 
