@@ -84,7 +84,19 @@ async function haalKindActiviteit(childName, base, key) {
       { method: "GET" }, base, key
     );
     const rows = await r.json();
-    return Array.isArray(rows) ? rows : [];
+    if (!Array.isArray(rows)) return [];
+    // Dedupliceer per pad: 'Brian' en 'brian' zijn aparte rijen (UNIQUE op
+    // player_name+path_id is hoofdlettergevoelig) — samenvoegen, anders staat
+    // hetzelfde onderwerp twee keer in de mail.
+    const perPad = new Map();
+    for (const row of rows) {
+      const oud = perPad.get(row.path_id);
+      if (!oud) { perPad.set(row.path_id, { ...row }); continue; }
+      oud.attempts = (oud.attempts || 0) + (row.attempts || 0);
+      oud.correct = (oud.correct || 0) + (row.correct || 0);
+      if (row.last_seen && (!oud.last_seen || row.last_seen > oud.last_seen)) oud.last_seen = row.last_seen;
+    }
+    return [...perPad.values()].sort((a, b) => String(b.last_seen).localeCompare(String(a.last_seen)));
   } catch {
     return [];
   }
