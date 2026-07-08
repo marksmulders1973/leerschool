@@ -54,7 +54,7 @@ function KopCanvas({ size, children }) {
       camera={{ position: [0, -0.1, 2.55], fov: 30 }}
       dpr={[1, 2]}
       gl={{ alpha: true, antialias: true }}
-      style={{ width: size, height: size, display: "block", pointerEvents: "none" }}
+      style={{ width: size, height: size, display: "block", pointerEvents: "none", flexShrink: 0 }}
     >
       <ambientLight intensity={1.05} />
       <directionalLight position={[2.5, 3, 2.5]} intensity={1.15} />

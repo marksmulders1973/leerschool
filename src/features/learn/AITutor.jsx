@@ -226,7 +226,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
             <Suspense fallback={<span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>}>
-              <BuddyKop buddy={buddy} size={52} praat={praat} />
+              <BuddyKop buddy={buddy} size={60} praat={praat} />
             </Suspense>
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
