@@ -15,9 +15,9 @@ import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
 import { track } from "../../utils.js";
 
-// Charley's geanimeerde kop (3D, bewegende mond) — lazy zodat three.js pas
-// laadt als Charley de gekozen tutor is.
-const CharleyHead = lazy(() => import("../zoo/CharleyHead.jsx"));
+// Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
+// three.js pas laadt als het venster opent.
+const BuddyKop = lazy(() => import("../zoo/BuddyKop.jsx"));
 
 const STORAGE_PREFIX = "studiebol_tutor_chat_";
 
@@ -78,7 +78,6 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const naam = buddy.naam || "Vonk";
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
-  const isCharley = buddy.id === "charley";
 
   // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
@@ -226,15 +225,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           gap: 10,
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
-            {isCharley ? (
-              <div style={{ width: 56, height: 56, flexShrink: 0, marginTop: -2, marginBottom: -2 }}>
-                <Suspense fallback={<span style={{ fontSize: 24, lineHeight: "56px" }}>{emoji}</span>}>
-                  <CharleyHead size={56} praat={praat} />
-                </Suspense>
-              </div>
-            ) : (
-              <span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>
-            )}
+            <Suspense fallback={<span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>}>
+              <BuddyKop buddy={buddy} size={52} praat={praat} />
+            </Suspense>
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 {naam} helpt je

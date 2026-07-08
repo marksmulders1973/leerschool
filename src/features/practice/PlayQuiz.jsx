@@ -13,7 +13,7 @@ import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import AITutor from "../learn/AITutor.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
 
-const CharleyHead = lazy(() => import("../zoo/CharleyHead.jsx"));
+const BuddyKop = lazy(() => import("../zoo/BuddyKop.jsx"));
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
@@ -767,13 +767,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                   flexDirection: "column", alignItems: "center", gap: 4,
                 }}
               >
-                {tutorBuddy.id === "charley" ? (
-                  <Suspense fallback={<span style={{ fontSize: 56 }} aria-hidden="true">{tutorBuddy.emoji}</span>}>
-                    <CharleyHead size={72} />
-                  </Suspense>
-                ) : (
-                  <span style={{ fontSize: 56 }} aria-hidden="true">{tutorBuddy.emoji}</span>
-                )}
+                <Suspense fallback={<span style={{ fontSize: 56 }} aria-hidden="true">{tutorBuddy.emoji}</span>}>
+                  <BuddyKop buddy={tutorBuddy} size={88} />
+                </Suspense>
                 <span style={{
                   fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
                   color: tutorBuddy.accent || tutorBuddy.kleur || "#5bbf5a",

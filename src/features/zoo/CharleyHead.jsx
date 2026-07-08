@@ -100,14 +100,14 @@ export default function CharleyHead({ size = 64, praat = false }) {
   praatRef.current = praat;
   return (
     <Canvas
-      camera={{ position: [0, 0, 2.5], fov: 30 }}
+      camera={{ position: [0, -0.1, 2.55], fov: 30 }}
       dpr={[1, 2]}
       gl={{ alpha: true, antialias: true }}
       style={{ width: size, height: size, display: "block", pointerEvents: "none" }}
     >
-      <ambientLight intensity={0.95} />
-      <directionalLight position={[2.5, 3, 2.5]} intensity={1.2} />
-      <directionalLight position={[-2, 1, -2]} intensity={0.4} />
+      <ambientLight intensity={1.05} />
+      <directionalLight position={[2.5, 3, 2.5]} intensity={1.15} />
+      <directionalLight position={[-2.5, 1.5, 2]} intensity={0.55} color="#ffe9c9" />
       <Suspense fallback={null}>
         <HeadMesh praatRef={praatRef} />
       </Suspense>
