@@ -28,7 +28,11 @@ export default function BuddyKop({ buddy, size = 84, praat = false }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        // overflow:hidden + border-radius knipt een WebGL-canvas niet altijd
+        // (Chrome composited layer) → de 3D-kop stak buiten de cirkel (Mark
+        // 8 jul: "oude hond weer terug"). clip-path knipt wél betrouwbaar.
         overflow: "hidden",
+        clipPath: "circle(50%)",
         flexShrink: 0,
       }}
     >
