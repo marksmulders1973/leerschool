@@ -5,6 +5,7 @@ import { SoundEngine, track } from "../../utils.js";
 import { findLearnPathForQuestion } from "../../learnPaths/utils.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery/mastery.js";
+import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
@@ -294,6 +295,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
   const handleAnswer = (idx) => {
     if (showResult) return;
+    // 🤝 Vrienden-werven: beantwoord vraagje telt mee voor vriend-activatie.
+    telAntwoordVoorVriend();
     // Anti-game: blokkeer handmatige antwoorden binnen MIN_READ_MS, maar
     // laat timeout-antwoorden (idx === -1) wel door.
     if (!canAnswer && idx !== -1) return;

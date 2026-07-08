@@ -8,6 +8,7 @@ import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import ProBadge from "../subscription/ProBadge.jsx";
 import { trackProUse } from "../subscription/proPlan.js";
 import KwartierplanSectie from "../features/kwartierplan/KwartierplanSectie.jsx";
+import VriendenWerven from "../features/referral/VriendenWerven.jsx";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -497,6 +498,11 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             </div>
           </div>
         )}
+        {/* 🤝 Vrienden werven (Mark 8 jul): volwassenen-programma — 5 geworven
+            gezinnen = 6 maanden Pro. Bewust hier (ouder-context) en nergens
+            in kinder-schermen. */}
+        <VriendenWerven authUser={authUser} />
+
         {selectedChild && selectedChildVerified && (
           <>
             {/* Kwartierplan (sessie 1, 2026-07-07): doel + startfoto. Bewust

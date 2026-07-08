@@ -15,6 +15,7 @@ import { isTakenlijst } from "./data/takenlijst.js";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
 import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
+import { vangVriendCode } from "./features/referral/referral.js";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
@@ -401,6 +402,10 @@ export default function App() {
   const [showKwartierToast, setShowKwartierToast] = useState(false);
   // Al 15 min gehaald vandaag? Dan niet opnieuw vuren/toasten bij een reload.
   const milestoneShownRef = useRef(leesLeertijdVandaag() >= KWARTIER_TARGET_MIN * 60);
+  // 🤝 Vrienden-werven: kwam deze bezoeker via een ?vriend=CODE-deellink?
+  // Eén keer vangen bij app-start; activatie volgt na 3 beantwoorde vragen.
+  useEffect(() => { vangVriendCode(); }, []);
+
   useEffect(() => {
     pruneOudeLeertijd();
     let visible = !document.hidden;

@@ -10,6 +10,7 @@ import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
 import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
 import AITutor from "../features/learn/AITutor.jsx";
 import { actieveBuddyPersona } from "../features/zoo/buddies.js";
+import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -171,6 +172,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   }, [simulatieMode, subjectFilter]);
 
   const pickAnswer = (a) => {
+    // 🤝 Vrienden-werven: beantwoord vraagje telt mee voor vriend-activatie.
+    telAntwoordVoorVriend();
     setAnswers((prev) => {
       const next = prev.slice();
       next[idx] = a;

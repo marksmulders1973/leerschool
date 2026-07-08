@@ -6,6 +6,7 @@ import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
+import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import supabase from "../supabase.js";
 import { track, bronDatumTijd } from "../utils.js";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
@@ -174,7 +175,7 @@ function ProefVraagKaart({ onStart }) {
           }
           return (
             <button key={i} type="button" disabled={chosen != null}
-              onClick={() => { chosenRef.current = true; setChosen(i); track("home_proefvraag_answered", { goed: i === vraag.answer, actueel: !!vraag.actueel }); }}
+              onClick={() => { chosenRef.current = true; setChosen(i); telAntwoordVoorVriend(); track("home_proefvraag_answered", { goed: i === vraag.answer, actueel: !!vraag.actueel }); }}
               style={{
                 textAlign: "left", padding: "10px 12px", borderRadius: 10,
                 background: bg, border, color: "#fff",

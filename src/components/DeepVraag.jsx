@@ -4,6 +4,7 @@ import { track, bronDatumTijd } from "../utils.js";
 import { BRAND } from "../brand.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
+import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 
 /**
  * DeepVraag — landingspagina voor de social-deep-link /v/<id>.
@@ -112,6 +113,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
     if (gekozen != null) return;
     gekozenRef.current = true;
     setGekozen(i);
+    telAntwoordVoorVriend(); // 🤝 telt mee voor vriend-activatie (?vriend=CODE)
     track("deeplink_answer", { id: String(vraag.id || id).slice(0, 40), goed: i === vraag.answer, actueel: !!vraag.actueel });
   };
 

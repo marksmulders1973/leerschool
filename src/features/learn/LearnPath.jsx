@@ -21,6 +21,7 @@ import {
   peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
 import { recordRefAnswer } from "../mastery/mastery.js";
+import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
@@ -528,6 +529,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const handlePick = (i) => {
     if (mode !== "checking") return;
     setSelected(i);
+    // 🤝 Vrienden-werven: elk echt beantwoord vraagje telt mee voor de
+    // activatie van een via ?vriend=CODE binnengekomen bezoeker.
+    telAntwoordVoorVriend();
     // B0.6 (7-bots-review): tel eerste pogingen van DEZE sessie voor de
     // AllDone-score. De oude berekening (totaal − persistente fout-set uit
     // adaptiveStore) telde fouten van vorige weken mee → "6 van de 10 meteen
