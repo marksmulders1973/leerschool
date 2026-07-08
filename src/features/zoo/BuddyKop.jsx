@@ -6,6 +6,10 @@
 import { Suspense, lazy } from "react";
 
 const CharleyHead = lazy(() => import("./CharleyHead.jsx"));
+const VonkHead = lazy(() => import("./VonkHead.jsx"));
+
+// Maatjes met een eigen geanimeerde 3D-kop; de rest valt terug op hun emoji.
+const KOPPEN = { charley: CharleyHead, draakje: VonkHead };
 
 export default function BuddyKop({ buddy, size = 84, praat = false }) {
   const ring = buddy?.kleur || "#5bbf5a";
@@ -28,10 +32,10 @@ export default function BuddyKop({ buddy, size = 84, praat = false }) {
         flexShrink: 0,
       }}
     >
-      {buddy?.id === "charley" ? (
+      {KOPPEN[buddy?.id] ? (
         <Suspense fallback={<span style={{ fontSize: size * 0.5, lineHeight: 1 }}>{buddy.emoji}</span>}>
           {/* Iets groter dan het medaillon + ronde crop = portret-effect. */}
-          <CharleyHead size={size * 1.08} praat={praat} />
+          {(() => { const Kop = KOPPEN[buddy.id]; return <Kop size={size * 1.08} praat={praat} />; })()}
         </Suspense>
       ) : (
         <span style={{ fontSize: size * 0.52, lineHeight: 1, transform: "translateY(1px)" }}>
