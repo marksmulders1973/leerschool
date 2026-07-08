@@ -953,6 +953,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "conclusies-trekken-po",
+    "file": "./conclusiesTrekkenPo.js",
+    "title": "Conclusies trekken — lezen tussen de regels",
+    "subject": "begrijpend-lezen",
+    "level": "groep7-8",
+    "emoji": "🕵️",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — afleiden en concluderen (inferentie)",
+    "triggerKeywords": [
+      "conclusies trekken",
+      "conclusie",
+      "afleiden",
+      "inferentie",
+      "tussen de regels lezen",
+      "aanwijzingen",
+      "onderbouwen",
+      "gevoelens afleiden",
+      "hoe voelt zich",
+      "waarom waarschijnlijk",
+      "begrijpend lezen",
+      "doorstroomtoets begrijpend lezen"
+    ],
+    "intro": "De moeilijkste vragen op de Doorstroomtoets zijn afleid-vragen: het antwoord staat nérgens letterlijk. In dit deel leer je aanwijzingen verzamelen, ze combineren met wat je al weet, en het verschil zi",
+    "stepCount": 4,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "conditionals-engels",
     "file": "./conditionalsEngels.js",
     "title": "Conditionals (if-zinnen) Engels (klas 3)",
@@ -7179,6 +7208,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "tekstdoel-schrijversdoel-po",
+    "file": "./tekstdoelSchrijversdoelPo.js",
+    "title": "Tekstdoel — waarom schreef de schrijver dit?",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "🎯",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — schrijversdoel en doelgroep herkennen",
+    "triggerKeywords": [
+      "tekstdoel",
+      "schrijversdoel",
+      "doel van de tekst",
+      "doel van de schrijver",
+      "doelgroep",
+      "voor wie is de tekst",
+      "waarom geschreven",
+      "informeren",
+      "overtuigen",
+      "amuseren",
+      "instrueren",
+      "reclame herkennen"
+    ],
+    "intro": "Op de Doorstroomtoets krijg je vragen als 'Waarom heeft de schrijver deze tekst geschreven?' en 'Voor wie is deze tekst bedoeld?'. In dit deel leer je de vier schrijversdoelen herkennen, de doelgroep ",
+    "stepCount": 4,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "tijd-snelheid-afstand-po",
     "file": "./tijdSnelheidAfstandPo.js",
     "title": "Tijd + Snelheid + Afstand (Cito groep 7-8)",
@@ -7684,6 +7742,35 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "verwijswoorden-begrijpend-lezen-po",
+    "file": "./verwijswoordenBegrijpendLezenPo.js",
+    "title": "Verwijswoorden — naar wie of wat verwijst het?",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "🔗",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — verwijsrelaties in teksten",
+    "triggerKeywords": [
+      "verwijswoorden",
+      "verwijswoord",
+      "naar wie verwijst",
+      "naar wat verwijst",
+      "die dat deze",
+      "hij zij het",
+      "daar er",
+      "hierdoor daardoor",
+      "terugverwijzen",
+      "verwijsrelaties",
+      "begrijpend lezen",
+      "doorstroomtoets lezen"
+    ],
+    "intro": "\"Naar wie of wat verwijst het woord 'die'?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer de vaste strategie: verwijswoord vinden, terugzoeken in de tekst en controleren of je ",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "verwijswoorden-po",
@@ -8385,6 +8472,35 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "woordbetekenis-context-po",
+    "file": "./woordbetekenisContextPo.js",
+    "title": "Woordbetekenis — raden uit de tekst",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "🔍",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — woordbetekenis afleiden uit context",
+    "triggerKeywords": [
+      "woordbetekenis",
+      "wat betekent",
+      "moeilijke woorden",
+      "betekenis raden",
+      "context",
+      "begrijpend lezen",
+      "woordenschat",
+      "signaalwoorden",
+      "tegenstelling",
+      "samenstelling",
+      "voorvoegsel",
+      "meerdere betekenissen"
+    ],
+    "intro": "Op de Doorstroomtoets komt hij gegarandeerd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit he",
+    "stepCount": 4,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "woordenschat-engels",
