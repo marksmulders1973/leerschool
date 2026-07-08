@@ -246,6 +246,60 @@ const isDier = (assetId) => getAsset(assetId)?.kind === "animal";
 const kindVan = (assetId) => getAsset(assetId)?.kind;
 const prijsVan = (assetId) => getAsset(assetId)?.price ?? 0;
 
+// 🏗️ Bouwplannen voor auto-bouw (Mark 8 jul): niet meer N× exact hetzelfde
+// huisje ("saai"), maar kiezen — "van jouw munten kan ik dit voor je bouwen:
+// A, B of C — welke zal ik bouwen?". Elke keuze = één themaverblijf. Binnen
+// een plan wisselen huisje, dieren, bomen en bloemen per keer, zodat twee
+// keer hetzelfde plan er tóch anders uitziet.
+// kiesUit onthoudt per groep de vorige keuze: twee keer achter elkaar bouwen
+// geeft dan nooit exact hetzelfde huisje/dier (dat was juist de klacht).
+const abVorigeKeuze = {};
+const kiesUit = (arr, groep) => {
+  let x = arr[Math.floor(Math.random() * arr.length)];
+  if (groep && arr.length > 1 && x === abVorigeKeuze[groep]) x = arr[(arr.indexOf(x) + 1) % arr.length];
+  if (groep) abVorigeKeuze[groep] = x;
+  return x;
+};
+const AB_HUISJES = ["houseA", "houseB", "houseC", "houseD", "houseF", "houseG", "huisRood", "huisBlauw", "huisGroen", "huisGeel"];
+const AB_BOERDERIJ = ["cow", "sheep", "pig", "alpaca", "donkey", "horse"];
+const AB_WILD = ["wolf", "zebra", "deer", "stag", "fox", "husky"];
+const AB_DINOS = ["velociraptor", "triceratops", "stegosaurus", "trex"];
+const AB_BLOEMEN = ["flowerRed", "flowerYellow", "flowerPurple"];
+const AB_BOMEN = ["tree", "treeOak", "treePalm"];
+
+// Slots zijn posities bínnen het 6×5-verblijf (rand = hek). [2,2] is de
+// huisje-plek die de oude auto-bouw ook gebruikte; de rest is losse 1-vaks-spul.
+function maakBouwplannen() {
+  const wild = [...AB_WILD].sort(() => Math.random() - 0.5).slice(0, 3);
+  const plannen = [
+    { key: "boerderij", emoji: "🐄", naam: "Boerderij-verblijf", hek: true, vulling: [
+      { id: kiesUit(AB_HUISJES, "huis"), slot: [2, 2] }, { id: kiesUit(AB_BOERDERIJ, "boerderijdier"), slot: [4, 1] },
+      { id: kiesUit(AB_BLOEMEN), slot: [4, 2] }, { id: kiesUit(AB_BOMEN), slot: [4, 3] },
+    ] },
+    { key: "wild", emoji: "🦌", naam: "Wilde-dieren-verblijf", hek: true, vulling: [
+      { id: wild[0], slot: [1, 1] }, { id: wild[1], slot: [2, 2] }, { id: wild[2], slot: [3, 1] },
+      { id: "boomstronk", slot: [4, 2] }, { id: kiesUit(AB_BOMEN), slot: [4, 3] },
+    ] },
+    { key: "dino", emoji: "🦖", naam: "Dino-verblijf", hek: true, vulling: [
+      { id: kiesUit(AB_DINOS, "dino"), slot: [2, 2] }, { id: kiesUit(AB_BOMEN), slot: [4, 1] },
+      { id: kiesUit(AB_BOMEN), slot: [1, 3] }, { id: "boomstronk", slot: [4, 3] },
+    ] },
+    { key: "tuin", emoji: "🌳", naam: "Bloementuin", hek: false, vulling: [
+      { id: kiesUit(AB_BOMEN), slot: [1, 1] }, { id: kiesUit(AB_BOMEN), slot: [3, 3] }, { id: kiesUit(AB_BOMEN), slot: [4, 1] },
+      { id: kiesUit(AB_BLOEMEN), slot: [2, 1] }, { id: kiesUit(AB_BLOEMEN), slot: [2, 2] },
+      { id: kiesUit(AB_BLOEMEN), slot: [3, 2] }, { id: kiesUit(AB_BLOEMEN), slot: [2, 3] },
+      { id: "boomstronk", slot: [4, 3] },
+    ] },
+  ];
+  // Hek-kosten: exact de geometrie van de bouwer — 4 hoeken + 13 panelen + 1 poort.
+  const hekKosten = 4 * prijsVan("hekHoek") + 13 * prijsVan("hekPaneel") + prijsVan("hekPoort");
+  return plannen.map((p) => ({
+    ...p,
+    prijs: (p.hek ? hekKosten : 0) + p.vulling.reduce((s, v) => s + prijsVan(v.id), 0),
+    inhoud: p.vulling.map((v) => getAsset(v.id)?.emoji || "").join(" ") + (p.hek ? " + hek met poort" : ""),
+  }));
+}
+
 export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje }) {
   const naam = (userName || "").trim();
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
@@ -268,7 +322,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
-  const [autoBudget, setAutoBudget] = useState(0); // 🏗️ muntjes-inzet voor auto-bouw
+  const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
   const [shareUrl, setShareUrl] = useState(null);
   const [shareCopied, setShareCopied] = useState(false);
   const [shopCat, setShopCat] = useState("dier");
@@ -864,25 +918,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (terug > 0) flits(`Weggehaald — +${terug} 🪙 terug`);
   };
 
-  // 🏗️ AUTO-BOUW (Mark 2026-06-27): zet muntjes in en laat het park zelf nette
-  // verblijven bouwen — een hek met een poort, een huisje erin en een dier. Het
-  // bouwt zoveel mogelijk complete verblijven tot het budget op is of er geen
-  // plek meer is. Varieert het dier per verblijf zodat het levendig blijft.
-  const autoBouw = (budget) => {
-    if (!meta) return;
-    budget = Math.min(Math.floor(budget || 0), coins);
+  // 🏗️ AUTO-BOUW v2 (Mark 2026-07-08): niet meer N× hetzelfde recept, maar
+  // een gekozen bouwplan (boerderij/wild/dino/tuin) uitvoeren. Bouwt precies
+  // één themaverblijf; het paneel blijft open zodat je meteen het volgende
+  // kunt kiezen (met verse variatie + bijgewerkte muntjes).
+  const autoBouw = (plan) => {
+    if (!meta || !plan) return;
+    if (plan.prijs > coins) { flits(`Nog ${plan.prijs - coins} muntjes sparen voor ${plan.naam} 🪙`); return; }
     const PLOT_W = 6, PLOT_H = 5;
-    const HEK_PANEEL = getAsset("hekPaneel")?.price ?? 4;
-    const HEK_POORT = getAsset("hekPoort")?.price ?? 6;
-    const HUIS = getAsset("houseA")?.price ?? 60;
-    const BOOM = getAsset("tree")?.price ?? 8;
-    const BLOEM = getAsset("flowerRed")?.price ?? 2;
-    const dierVoorraad = ["cow", "sheep", "pig", "alpaca", "donkey", "horse", "deer", "husky", "wolf", "zebra"];
-    // 17 panelen + 1 poort + huis + dier (gem. ~15) + boom + bloem
-    const dierKost = 15;
-    const VOL_PLOT = 17 * HEK_PANEEL + HEK_POORT + HUIS + dierKost + BOOM + BLOEM;
-    const MINI_PLOT = 17 * HEK_PANEEL + HEK_POORT + dierKost + BOOM; // zonder huis
-    if (budget < MINI_PLOT) { flits(`Zet wat meer muntjes in (min. ${MINI_PLOT}) 🪙`); return; }
 
     const blokkeert = (id) => { const a = getAsset(id); return !(a && a.procedural === "path"); };
     const bezet = new Set();
@@ -908,20 +951,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       return null;
     };
 
+    const spot = zoekBlok();
+    if (!spot) { flits("Geen vrije plek meer voor een verblijf 🐾"); return; }
+    const [x0, z0] = spot;
+    const x1 = x0, z1 = z0, x2 = x0 + PLOT_W - 1, z2 = z0 + PLOT_H - 1;
+
     const nieuwe = [];
-    let kosten = 0, gebouwd = 0, dierIdx = 0;
+    let kosten = 0;
     const mk = (id, x, z, rotation = 0) => { const p = prijsVan(id); const it = { assetId: id, cell: [x, z], rotation, price: p }; if (kindVan(id) === "animal") it.fed = vandaag(); nieuwe.push(it); kosten += p; };
 
-    while (true) {
-      const rest = budget - kosten;
-      if (rest < MINI_PLOT) break;
-      const metHuis = rest >= VOL_PLOT;
-      const spot = zoekBlok();
-      if (!spot) break;
-      const [x0, z0] = spot;
-      const x1 = x0, z1 = z0, x2 = x0 + PLOT_W - 1, z2 = z0 + PLOT_H - 1;
-      // reserveer het hele blok zodat het volgende verblijf niet overlapt
-      for (let dx = 0; dx < PLOT_W; dx++) for (let dz = 0; dz < PLOT_H; dz++) bezet.add(cellKey(x0 + dx, z0 + dz));
+    if (plan.hek) {
       // hek-rand die netjes aansluit: hoeken + panelen (Z-wand 90° gedraaid), poort midden-voor
       const poortX = Math.round((x1 + x2) / 2);
       mk("hekHoek", x1, z1, 0);
@@ -930,22 +969,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       mk("hekHoek", x2, z2, Math.PI);
       for (let x = x1 + 1; x < x2; x++) { mk("hekPaneel", x, z1, 0); mk(x === poortX ? "hekPoort" : "hekPaneel", x, z2, 0); }
       for (let z = z1 + 1; z < z2; z++) { mk("hekPaneel", x1, z, Math.PI / 2); mk("hekPaneel", x2, z, Math.PI / 2); }
-      // huisje (3×3) in het verblijf
-      if (metHuis) mk("houseA", x1 + 2, z1 + 2);
-      // dier + boom + bloem in de vrije rechterkolom
-      mk(dierVoorraad[dierIdx % dierVoorraad.length], x2 - 1, z1 + 1);
-      dierIdx++;
-      mk("tree", x2 - 1, z1 + 3);
-      mk("flowerRed", x2 - 1, z1 + 2);
-      gebouwd++;
-      if (gebouwd >= 12) break; // veiligheidslimiet
     }
+    plan.vulling.forEach((v) => mk(v.id, x0 + v.slot[0], z0 + v.slot[1]));
 
-    if (gebouwd === 0) { flits("Geen vrije plek meer voor een verblijf 🐾"); return; }
     setMeta((m) => ({ ...m, coins: m.coins - kosten }));
     setPlacedItems((items) => [...items, ...nieuwe]);
-    setPanel(null);
-    flits(`🏗️ ${gebouwd} verblijf${gebouwd > 1 ? "en" : ""} gebouwd voor ${kosten} 🪙!`);
+    // Paneel blijft open: verse plannen (nieuwe variatie) voor de volgende keuze.
+    setBouwPlannen(maakBouwplannen());
+    try { track("park_autobouw", { plan: plan.key, kosten }); } catch { /* */ }
+    flits(`🏗️ ${plan.emoji} ${plan.naam} gebouwd voor ${kosten} 🪙!`);
   };
 
   const selKind = selectedIdx != null ? kindVan(placedItems[selectedIdx]?.assetId) : null;
@@ -1244,7 +1276,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <MenuTegel emoji="⛰️" label="Heuvels boetseren" fn={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={sculptMode} />
               <MenuTegel emoji="💧" label="Water / meertjes" fn={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={waterMode} />
               <MenuTegel emoji="🏖️" label="Grond schilderen" fn={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} actief={groundMode} />
-              <MenuTegel emoji="🏗️" label="Auto-bouw (muntjes inzetten)" fn={() => { setAutoBudget(coins); setPanel("autobouw"); }} />
+              <MenuTegel emoji="🏗️" label="Auto-bouw (kies een bouwplan)" fn={() => { setBouwPlannen(maakBouwplannen()); setPanel("autobouw"); }} />
             </div>
 
             <div style={menuKop}>🏡 Mijn park</div>
@@ -2076,24 +2108,38 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Reset-modal: park terug naar het standaard begin-park (met bevestiging). */}
       {panel === "autobouw" && (
         <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(420px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(440px, 96vw)", maxHeight: "86vh", overflowY: "auto", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
               <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>🏗️ Auto-bouw</h2>
               <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
             </div>
-            <p style={{ font: "500 14px/1.5 system-ui", color: "#333", marginTop: 0 }}>Zet muntjes in en het park bouwt zelf nette verblijven — een <b>hek met een poort</b>, een <b>huisje</b> en een <b>dier</b>. Hoe meer muntjes, hoe meer verblijven.</p>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", font: "800 15px system-ui", color: "#234", marginBottom: 4 }}>
-              <span>Inzet</span>
-              <span style={{ color: "#5b3d00", background: "#ffe08a", padding: "4px 12px", borderRadius: 999 }}>🪙 {autoBudget}</span>
-            </div>
-            <input type="range" min={0} max={coins} step={5} value={autoBudget} onChange={(e) => setAutoBudget(parseInt(e.target.value, 10) || 0)} style={{ width: "100%", accentColor: "#2e7d32" }} />
-            <div style={{ display: "flex", justifyContent: "space-between", font: "600 11px system-ui", color: "#777", marginTop: 2 }}>
-              <span>0</span><span>je hebt 🪙 {coins}</span>
-            </div>
-            <p style={{ font: "600 12px/1.4 system-ui", color: "#777", margin: "8px 0 0" }}>≈ {Math.max(0, Math.floor(autoBudget / 157))} compleet verblijf{Math.floor(autoBudget / 157) === 1 ? "" : "en"} (huis + hek + dier). Ongebruikte muntjes blijven van jou.</p>
-            <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 14 }}>
-              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "#eee", cursor: "pointer" }}>Annuleer</button>
-              <button onClick={() => autoBouw(autoBudget)} disabled={autoBudget < 1} style={{ border: "none", borderRadius: 999, padding: "10px 20px", font: "800 14px system-ui", color: "#fff", background: autoBudget < 1 ? "#9bbf9b" : "linear-gradient(135deg,#00C853,#00a846)", boxShadow: "0 3px 10px rgba(0,0,0,.2)", cursor: autoBudget < 1 ? "default" : "pointer" }}>🏗️ Bouw!</button>
+            {/* Het maatje doet het aanbod — "welke zal ik voor je bouwen?" (Mark 8 jul) */}
+            <p style={{ font: "500 14px/1.5 system-ui", color: "#333", marginTop: 0, background: "#eef7ee", border: "1px solid #cfe7cf", borderRadius: 12, padding: "10px 12px" }}>
+              {BUDDY_BY_ID[buddyId]?.emoji || "🐾"} <b>{buddyNaamEff || "Je maatje"}</b>: "Van jouw <b style={{ color: "#5b3d00", background: "#ffe08a", padding: "1px 8px", borderRadius: 999 }}>🪙 {coins}</b> kan ik dit voor je bouwen — welke zal ik bouwen?"
+            </p>
+            {(bouwPlannen || []).map((p, i) => {
+              const kanNiet = p.prijs > coins;
+              return (
+                <button
+                  key={p.key}
+                  onClick={() => autoBouw(p)}
+                  disabled={kanNiet}
+                  style={{ display: "flex", alignItems: "center", gap: 12, width: "100%", textAlign: "left", border: kanNiet ? "1.5px solid #ddd" : "1.5px solid #bfe0bf", borderRadius: 14, padding: "10px 12px", marginBottom: 8, background: kanNiet ? "#f6f6f2" : "#fff", opacity: kanNiet ? 0.6 : 1, cursor: kanNiet ? "default" : "pointer" }}
+                >
+                  <span style={{ font: "800 15px system-ui", color: "#2e7d32", width: 20 }}>{String.fromCharCode(65 + i)}.</span>
+                  <span style={{ fontSize: 26 }}>{p.emoji}</span>
+                  <span style={{ flex: 1, minWidth: 0 }}>
+                    <span style={{ display: "block", font: "800 14.5px system-ui", color: "#234" }}>{p.naam}</span>
+                    <span style={{ display: "block", font: "600 12px/1.4 system-ui", color: "#777" }}>{p.inhoud}</span>
+                    {kanNiet && <span style={{ display: "block", font: "700 11.5px system-ui", color: "#b26a00" }}>nog {p.prijs - coins} muntjes sparen 💪</span>}
+                  </span>
+                  <span style={{ font: "800 13.5px system-ui", color: "#5b3d00", background: "#ffe08a", padding: "4px 10px", borderRadius: 999, whiteSpace: "nowrap" }}>🪙 {p.prijs}</span>
+                </button>
+              );
+            })}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 10 }}>
+              <button onClick={() => setBouwPlannen(maakBouwplannen())} title="Andere huisjes, dieren en kleuren" style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "#eaf3ea", cursor: "pointer" }}>🎲 Verras me met andere</button>
+              <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "#eee", cursor: "pointer" }}>Klaar</button>
             </div>
           </div>
         </div>
