@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import { track, bronDatumTijd } from "../utils.js";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
+import DeelDagUitslag from "./DeelDagUitslag.jsx";
 
 // "Doorstroomtoets-vraag van de dag" — een dagelijkse, lichte reden om de app te
 // openen. Twee bronnen (Mark 2026-07-02):
@@ -234,9 +235,12 @@ export default function VraagVanDeDag() {
           <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", marginTop: 10, marginBottom: 10 }}>
             ✅ Klaar voor vandaag — morgen staat er een nieuwe vraag klaar.
           </div>
+          {/* Wordle-blokje: spoiler-vrij resultaat voor de groepsapp — iedereen
+              krijgt vandaag dezelfde vraag, dus "kun jij 'm?" werkt altijd. */}
+          <DeelDagUitslag goed={isGoed} actueel={!!vraag.actueel} />
           {/* Mond-tot-mond: alleen bij pool-vragen (de /v/<id>-deellink bestaat
               niet voor actuele nieuws-vragen). */}
-          {!vraag.actueel && <DeelVraagKnop id={vraag.id} />}
+          {!vraag.actueel && <DeelVraagKnop id={vraag.id} variant="outline" />}
         </div>
       )}
     </div>
