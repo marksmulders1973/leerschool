@@ -4,6 +4,7 @@ import { track, bronDatumTijd } from "../utils.js";
 import { BRAND } from "../brand.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
+import DeelDagUitslag from "./DeelDagUitslag.jsx";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 
 /**
@@ -306,9 +307,12 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
             );
             return goed ? [toetsBtn, leerpadBtn] : [leerpadBtn, toetsBtn].filter(Boolean);
           })()}
-          {/* Mond-tot-mond: deel-knop sluit de groei-bal (bezoek → nieuwe bezoeker). */}
+          {/* Mond-tot-mond: deel-knop sluit de groei-bal (bezoek → nieuwe bezoeker).
+              Op /vandaag: het Wordle-blokje (spoiler-vrij dagresultaat) — iedereen
+              krijgt vandaag dezelfde vraag, dus "kun jij 'm?" klopt altijd. */}
           <div style={{ marginTop: 10 }}>
-            {!vraag.actueel && <DeelVraagKnop id={id} />}
+            {actueelEerst && <DeelDagUitslag goed={isGoed} actueel={!!vraag.actueel} />}
+            {!actueelEerst && !vraag.actueel && <DeelVraagKnop id={id} />}
           </div>
           <button type="button"
             onClick={() => { track("deeplink_cta", { id: String(vraag.id || id).slice(0, 40), naar: "home" }); setPage && setPage("home"); }}
