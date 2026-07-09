@@ -73,11 +73,11 @@ leerkwartier.app · marksmulders1973@gmail.com
 | Leergeld West-Brabant Oost | info@leergeldwbo.nl | 2026-07-09 | | |
 | Leergeld Zuid-Holland Midden | info@leergeldzhm.nl | 2026-07-09 | | |
 
-## Batch 2 — 48 concepten klaargezet 2026-07-09 (nog door Mark te verzenden)
+## Batch 2 — 48 stichtingen VERSTUURD 2026-07-09
 
-Alle adressen geverifieerd via de eigen contactpagina van de stichting.
+Alle adressen geverifieerd via de eigen contactpagina van de stichting. Mark verstuurde alle 48 concepten op 2026-07-09.
 
-| Stichting | Adres | Concept klaar | Reactie | Opgenomen? |
+| Stichting | Adres | Gemaild | Reactie | Opgenomen? |
 |---|---|---|---|---|
 | Leergeld Haarlem en Zandvoort | info@leergeldhaarlemzandvoort.nl | 2026-07-09 | | |
 | Leergeld Haarlemmermeer | info@meerleergeld.nl | 2026-07-09 | | |
