@@ -8,6 +8,7 @@
 
 import { useEffect, useState } from "react";
 import { BRAND } from "../brand.js";
+import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 
@@ -292,6 +293,7 @@ function Sheet({ children }) {
   return (
     <div className="dictee-sheet" style={{ background: "#fff", color: "#1a2332", width: "100%", maxWidth: 740, margin: "0 auto 24px", padding: "40px 44px", borderRadius: 8, boxShadow: "0 6px 30px rgba(0,0,0,0.4)", fontFamily: "Georgia, 'Times New Roman', serif", boxSizing: "border-box" }}>
       {children}
+      <PrintFooter />
     </div>
   );
 }

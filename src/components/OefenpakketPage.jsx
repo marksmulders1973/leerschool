@@ -18,6 +18,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BRAND } from "../brand.js";
+import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
@@ -648,6 +649,7 @@ function Sheet({ children }) {
       }}
     >
       {children}
+      <PrintFooter />
     </div>
   );
 }

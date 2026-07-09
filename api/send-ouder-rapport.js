@@ -175,9 +175,10 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie) {
     ${kindSecties.map((s) => s.html).join("")}
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
+    <p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Verwijder de koppeling in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> — direct geregeld.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever geen rapport meer? Verwijder de koppeling in het ouder-dashboard.`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nKen je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app\n\nLiever geen rapport meer? Verwijder de koppeling in het ouder-dashboard.`;
   return { onderwerp, html, text };
 }
 
