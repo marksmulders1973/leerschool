@@ -17,10 +17,10 @@ dorpsvestigingen met gedeelde/formulier-only mailboxen (lagere kwaliteit).
 triggeren + afzenderreputatie schaden (limiet ~500/dag). Advies: versturen in
 dagelijkse batches van ~30-40.
 
-## BATCH 1 — 51 concepten klaargezet 2026-07-09 (grote steden)
-Alle adressen geverifieerd via de eigen contactpagina van de bibliotheek.
+## BATCH 1 — 51 stichtingen VERSTUURD 2026-07-09 (grote steden)
+Alle adressen geverifieerd via de eigen contactpagina van de bibliotheek. Mark verstuurde alle 51 op 2026-07-09.
 
-| Bibliotheek (plaats/regio) | Adres | Concept | Reactie | Opgenomen? |
+| Bibliotheek (plaats/regio) | Adres | Gemaild | Reactie | Opgenomen? |
 |---|---|---|---|---|
 | OBA (Amsterdam) | klantenservice@oba.nl | 2026-07-09 | | |
 | Bibliotheek Zuid-Kennemerland (Haarlem) | klantenservice@bibliotheekzuidkennemerland.nl | 2026-07-09 | | |
