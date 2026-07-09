@@ -48,7 +48,7 @@ function useKopAnimatie(praatRef, { earBase = 0.28, earAmp = 0.07, zweef = false
   return { head, jaw, earL, earR, eyeL, eyeR };
 }
 
-function KopCanvas({ size, children }) {
+function KopCanvas({ size, rim, children }) {
   return (
     <Canvas
       camera={{ position: [0, -0.1, 2.55], fov: 30 }}
@@ -56,9 +56,11 @@ function KopCanvas({ size, children }) {
       gl={{ alpha: true, antialias: true }}
       style={{ width: size, height: size, display: "block", pointerEvents: "none", flexShrink: 0 }}
     >
-      <ambientLight intensity={1.05} />
-      <directionalLight position={[2.5, 3, 2.5]} intensity={1.15} />
-      <directionalLight position={[-2.5, 1.5, 2]} intensity={0.55} color="#ffe9c9" />
+      <ambientLight intensity={0.95} />
+      <directionalLight position={[2.5, 3, 2.5]} intensity={1.2} />
+      <directionalLight position={[-2.5, 1.5, 2]} intensity={0.5} color="#ffe9c9" />
+      {/* rim-licht in de maatje-kleur: lichte silhouetrand = diepte in het medaillon */}
+      <directionalLight position={[0, 2.2, -3]} intensity={1.7} color={rim || "#9fd8ff"} />
       <Suspense fallback={null}>{children}</Suspense>
     </Canvas>
   );
@@ -253,11 +255,11 @@ function KnoestMesh({ praatRef }) {
 
 /* ── exports: één component per maatje, zelfde API als CharleyHead ─────────── */
 function maakKop(Mesh) {
-  return function Kop({ size = 64, praat = false }) {
+  return function Kop({ size = 64, praat = false, rim }) {
     const praatRef = useRef(praat);
     praatRef.current = praat;
     return (
-      <KopCanvas size={size}>
+      <KopCanvas size={size} rim={rim}>
         <Mesh praatRef={praatRef} />
       </KopCanvas>
     );
