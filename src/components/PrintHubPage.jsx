@@ -49,6 +49,14 @@ const PAKKETTEN = [
     tekst: "Zes voorlees-dictees per spellingregel (ei/ij, au/ou, d/t, bomen/bommen, verkleinwoorden, weetwoorden). Jij leest voor van het ouderblad, je kind schrijft op het invulblad.",
     accent: "#ef5350",
   },
+  {
+    page: "brugklas",
+    emoji: "🎒",
+    titel: "Brugklas-oefenbundel",
+    groep: "klas 1 havo/vwo",
+    tekst: "Toetsweek in de brugklas? Oefenvragen wiskunde, Nederlands en Engels op klas 1-niveau — met kladruimte per vraag en een antwoordsleutel die per vraag de regel uitlegt.",
+    accent: "#26c6da",
+  },
 ];
 
 export default function PrintHubPage({ setPage } = {}) {

@@ -43,6 +43,8 @@ export const PAGE_TO_PATH = {
   tafelbladen: "/tafelbladen",
   redactiebladen: "/redactiebladen",
   dictees: "/dictees",
+  // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
+  brugklas: "/brugklas",
   // Branded dagkaart-generator voor social (Mark 3 jul)
   dagkaart: "/dagkaart",
   tafels: "/tafels",

@@ -71,6 +71,7 @@ const LeesladderPage = lazy(() => import("./components/LeesladderPage.jsx"));
 const PrintHubPage = lazy(() => import("./components/PrintHubPage.jsx"));
 const TafelbladenPage = lazy(() => import("./components/TafelbladenPage.jsx"));
 const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.jsx"));
+const BrugklasPage = lazy(() => import("./components/BrugklasPage.jsx"));
 const DicteesPage = lazy(() => import("./components/DicteesPage.jsx"));
 const DagkaartGenerator = lazy(() => import("./components/DagkaartGenerator.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
@@ -2026,6 +2027,7 @@ export default function App() {
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
       {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
+      {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}
       {page === "admin-feedback" && (
