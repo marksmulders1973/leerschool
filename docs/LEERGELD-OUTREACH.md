@@ -72,3 +72,60 @@ leerkwartier.app · marksmulders1973@gmail.com
 | Leergeld Groningen | info@leergeldgroningen.nl | 2026-07-09 | | |
 | Leergeld West-Brabant Oost | info@leergeldwbo.nl | 2026-07-09 | | |
 | Leergeld Zuid-Holland Midden | info@leergeldzhm.nl | 2026-07-09 | | |
+
+## Batch 2 — 48 concepten klaargezet 2026-07-09 (nog door Mark te verzenden)
+
+Alle adressen geverifieerd via de eigen contactpagina van de stichting.
+
+| Stichting | Adres | Concept klaar | Reactie | Opgenomen? |
+|---|---|---|---|---|
+| Leergeld Haarlem en Zandvoort | info@leergeldhaarlemzandvoort.nl | 2026-07-09 | | |
+| Leergeld Haarlemmermeer | info@meerleergeld.nl | 2026-07-09 | | |
+| Leergeld Zaanstad | leergeldzaanstad@gmail.com | 2026-07-09 | | |
+| Leergeld Alkmaar | info@leergeldalkmaar.nl | 2026-07-09 | | |
+| Leergeld West-Friesland | info@leergeldwestfriesland.nl | 2026-07-09 | | |
+| Leergeld Den Helder | info@leergelddenhelder.nl | 2026-07-09 | | |
+| Leergeld Hilversum-Wijdemeren | coordinator@leergeldhilversumwijdemeren.nl | 2026-07-09 | | |
+| Leergeld Lelystad | info@leergeld-lelystad.nl | 2026-07-09 | | |
+| Leergeld Den Haag | info@leergelddenhaag.nl | 2026-07-09 | | |
+| Leergeld Leiden en Omstreken | info@leergeldleidenenomstreken.nl | 2026-07-09 | | |
+| Leergeld Drechtsteden | info@leergelddrechtsteden.nl | 2026-07-09 | | |
+| Leergeld Hollandsche IJssel | info@leergeldijssel.nl | 2026-07-09 | | |
+| Leergeld Leidschendam-Voorburg | info@leergeldleidschendam-voorburg.nl | 2026-07-09 | | |
+| Leergeld Waddinxveen | info@leergeldwaddinxveen.nl | 2026-07-09 | | |
+| Leergeld Alblasserwaard Vijfheerenlanden | info@leergeldav.nl | 2026-07-09 | | |
+| Leergeld Eindhoven | info@leergeldeindhoven.nl | 2026-07-09 | | |
+| Leergeld Helmond | info@leergeld-helmond.nl | 2026-07-09 | | |
+| Leergeld Oss Bernheze | info@leergeldossbernheze.nl | 2026-07-09 | | |
+| Leergeld Roosendaal | leergeld.rsd@kpnmail.nl | 2026-07-09 | | |
+| Leergeld De Brabantse Wal | leergeld.brabantsewal@hotmail.com | 2026-07-09 | | |
+| Leergeld Waalwijk | info@leergeldwaalwijk.nl | 2026-07-09 | | |
+| Leergeld Maashorst | info@leergeldmaashorst.nl | 2026-07-09 | | |
+| Leergeld Noord-West Brabant | info@leergeldnoordwestbrabant.nl | 2026-07-09 | | |
+| Leergeld Walcheren | leergeldwalcheren@planet.nl | 2026-07-09 | | |
+| Leergeld Zeeuws-Vlaanderen | info@leergeldzvl.nl | 2026-07-09 | | |
+| Leergeld Oosterschelderegio | info@leergeldoosterschelderegio.nl | 2026-07-09 | | |
+| Leergeld Arnhem | info@leergeldarnhem.nl | 2026-07-09 | | |
+| Leergeld Apeldoorn-Voorst | info@leergeldapeldoornvoorst.nl | 2026-07-09 | | |
+| Leergeld Amersfoort | info@leergeldamersfoort.nl | 2026-07-09 | | |
+| Leergeld Zutphen | info@leergeldzutphen.nl | 2026-07-09 | | |
+| Leergeld Noord-Veluwe | info@leergeldnoordveluwe.nl | 2026-07-09 | | |
+| Leergeld Randmeren | info@leergeldrandmeren.nl | 2026-07-09 | | |
+| Leergeld Nijkerk | stichting@leergeldnijkerk.nl | 2026-07-09 | | |
+| Leergeld West Betuwe | leergeldwestbetuwe@gmail.com | 2026-07-09 | | |
+| Leergeld Veenendaal en Renswoude | coordinator@leergeldveenendaal.nl | 2026-07-09 | | |
+| Leergeld Friesland Oost | info@leergeldfrieslandoost.nl | 2026-07-09 | | |
+| Leergeld Heerenveen | info@leergeldheerenveen.nl | 2026-07-09 | | |
+| Leergeld Zuidwest Friesland | info@leergeldzwf.nl | 2026-07-09 | | |
+| Leergeld Noord Drenthe | assen@leergeldnoorddrenthe.nl | 2026-07-09 | | |
+| Leergeld Emmen | info@leergeldemmen.nl | 2026-07-09 | | |
+| Leergeld Hoogeveen | info@stichtingleergeldhoogeveen.nl | 2026-07-09 | | |
+| Leergeld Meppel | coordinator@leergeldmeppel.nl | 2026-07-09 | | |
+| Leergeld Maastricht en Heuvelland | info@maastrichtenheuvelland.leergeld.nl | 2026-07-09 | | |
+| Leergeld Parkstad | info@leergeldparkstad.nl | 2026-07-09 | | |
+| Leergeld Westelijke Mijnstreek | stichting-leergeldwm@planet.nl | 2026-07-09 | | |
+| Leergeld Roermond en omstreken | info@leergeldroermondeo.nl | 2026-07-09 | | |
+| Leergeld Weert | info@leergeldweert.nl | 2026-07-09 | | |
+| Leergeld Venray | info@leergeldvenray.nl | 2026-07-09 | | |
+
+**Afgekeurd/weggelaten** (geen eigen Leergeld-adres bevestigd — route via Sam&/gemeente of ander fonds): Almelo (= Jeugdfonds), Rotterdam, Almere, Zwolle, Kampen, Ede, Westland, Hengelo, Doetinchem.
