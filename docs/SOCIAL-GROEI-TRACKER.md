@@ -46,11 +46,29 @@ Engagement + Reels zijn de hefbomen.
 
 ---
 
+## 🖨️ Printables-promo — vast ritueel (±1×/week, onderdeel van de dagelijkse check)
+> Toegevoegd 2026-07-09 (Mark). Naast de dagvraag periodiek de **gratis printables**
+> promoten — met name de **brugklas-oefenbundel** (`leerkwartier.app/printen`), ontstaan
+> uit Sahasra's wensenbord-verzoek. Doel: e-maillijst voeden (antwoordsleutel = e-mail-poort)
+> — dat is de bewezen zwakke plek uit het dagrapport.
+
+**Recept:**
+1. **Haak = échte vraag** uit de bundel, **wisselend vak per keer** (roteer: Engels → wiskunde → Nederlands), met "antwoord in de reacties". Zet het juiste antwoord klaar als eerste reactie.
+2. **Visual:** branded kaart. Bewerkbaar sjabloon staat in `Desktop\Leerkwartier-social\brugklas-post.html` — pas de vraag/opties aan, serveer lokaal (`python -m http.server`) en maak een viewport-screenshot 1080×1350 → JPEG. (file:// is geblokkeerd in Playwright, dus via localhost.)
+3. **Alle 3 kanalen:**
+   - **Threads:** hoofdpost = vraag + kaart + één topic-tag (`brugklas`), GÉÉN link; dan **"Add to thread"** met de link `leerkwartier.app/printen?utm_source=threads` en **verwijder de auto-preview-kaart** (link blijft klikbaar in tekst).
+   - **Facebook + Instagram:** via Business Suite-composer (beide tegelijk); caption met `leerkwartier.app/printen` (klikbaar op FB, "link in bio"-logica op IG).
+4. **Meten:** `?utm_source=threads` op de Threads-link; FB/IG-klikken via de `leerkwartier.app`-bron in het dagrapport.
+5. **Tempo:** ±1×/week, niet vaker (anders concurreert het met de dagvraag en voelt het pusherig). Bij nieuwe printables (bv. later biologie/aardrijkskunde-bundel) idem.
+
+---
+
 ## 📊 Dagelijks logboek
 > Vul elke dag: datum | Threads (volgers / acties) | Instagram (volgers / acties) | Facebook (volgers / acties) | opmerking.
 
 | Datum | Threads | Instagram | Facebook | Opmerking |
 |---|---|---|---|---|
+| 2026-07-09 (printables-promo) | ✅ thread live (post DalhvKADrLh): brugklas-vraag (Engels) + kaart + #brugklas + gekoppelde link-post `leerkwartier.app/printen?utm_source=threads` (preview verwijderd) | ✅ feed-post live (kaart + caption, "link in bio") via Business Suite | ✅ paginapost live (kaart + caption + klikbare link) via Business Suite | **Eerste printables-promo** — nieuwe brugklas-oefenbundel (`/printen`). Haak = échte Engels-vraag ("Look! He ___ very fast." → C: is running). Visual-sjabloon: `Desktop\Leerkwartier-social\brugklas-post.html`. Volgende keer: wiskunde-vraag als haak. |
 | 2026-06-07 | 3 volgers · 1 reactie (14K-views-thread) + 6 follows (lifeisacatwalk1, jufan1983, ninkey84, imaraveira, natascha_ngwebdesign, semke1981) | 66 volgers · niveaus-reclame gepost + 1 like/reactie/follow (@vriendenboeken, groep-8) | 32 volgers · niveaus-reclame gepost | Start tracker. Niveaus-reclame live op alle 3. IG-baseline 66. **FB-engagement via pagina = beperkt** (kan niet als pagina reageren op posts van personen/groepen) → FB-groei = Mark's handwerk (zie ⚠️ onder). |
 | 2026-06-07 (midday re-check) | 3 volgers (ongewijzigd) | 66 volgers (ongewijzigd; following 184→185) | niet hergemeten | Midday-meting op Mark's verzoek. **Nog geen volger-groei**: follows/reacties van vanmorgen moeten nog converteren (1-3 dagen normaal). Prime ICP-targets (lifeisacatwalk1-thread, @vriendenboeken) al vanmorgen gedaan → niet dubbel geëngageerd (anti-spam). Threads juni = laagseizoen (toets in feb): verse ICP-posts op #doorstroomtoets/#brugklas schaars. 1 nieuwe IG-DM open (niet geopend). |
 | 2026-06-09 | **4 volgers** (+1) · examenvraag-van-de-dag gepost (biologie, klikbare link) + **3 ICP-follows** via #doorstroomtoets-zoek (@meesterjesper 800K-onderwijs-account, @peter_vd_bosch, @barbaraploeger) | **85 volgers** (+19 sinds 7/6!) · examenvraag gepost + **2 nieuwe ICP-scholen geëngageerd**: cbs_de_regenboog (basisschool Lopik — follow + like + reactie op groep-8-BBQ) & basisschoolj.p.waale (like + reactie op zomerschool-post) | **32 volgers** (gelijk) · examenvraag gepost (geverifieerd in Business Suite "Gepubliceerd") | Examenvraag dag 9/10 alle 3 kanalen live. IG bijna op mijlpaal (85/100). Engagement = kwaliteit (echte basisscholen/leerkrachten), account-veilig tempo. FB-groei blijft Mark's handwerk (vrienden uitnodigen + groepen). |
