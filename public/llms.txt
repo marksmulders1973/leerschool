@@ -119,6 +119,10 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Printhoek — al het printbare materiaal](https://leerkwartier.app/printen):
   overzicht van alles wat gratis printbaar is: oefenpakket, Leesladder,
   tafel-werkbladen + tafeldiploma, redactiesommen-bundel en spelling-dictees.
+- [Leermaatje — hulp als je kind vastloopt](https://leerkwartier.app/leermaatje.html):
+  je kind kiest een eigen maatje dat bij elke uitleg en oefenvraag helpt
+  ("leg het anders uit", "geef een voorbeeld"), hardop terugpraat, maar het
+  antwoord nooit voorzegt — en tijdens toetsen bewust uit staat.
 - [Gratis Doorstroomtoets-oefentoets (in-app)](https://leerkwartier.app/doorstroomtoets-oefentoets):
   een complete oefentoets in de stijl van de Doorstroomtoets — rekenen, taal
   en studievaardigheden door elkaar, met directe uitleg op 3 niveaus na elke
