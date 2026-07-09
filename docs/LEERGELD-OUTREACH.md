@@ -1,8 +1,11 @@
 # Leergeld-outreach — gratis aanbod aanmelden bij ~70 lokale stichtingen
 
-> Masterplan quick-win 1.3 / top-4. Status: **flyer + mailtekst klaar,
-> WACHT OP MARK'S GO voordat er ook maar één mail uitgaat.**
+> Masterplan quick-win 1.3 / top-4. Status: **BATCH 1 (12 stichtingen)
+> VERSTUURD 2026-07-09.** Afzender = marksmulders1973@gmail.com (Mark's Gmail).
 > Flyer: https://leerkwartier.app/leergeld-flyer.html (printbaar, noindex).
+> NB: "~70" = totaal aantal lokale Leergeld-stichtingen in NL (doel-dekking),
+> NIET een kant-en-klare adreslijst. Elk e-mailadres wordt per stichting
+> geverifieerd via de eigen contactpagina (geen giswerk → geen bounces).
 
 ## Waarom dit werkt
 
@@ -51,10 +54,21 @@ Teksten op maat voor uw nieuwsbrief of site maak ik graag — ook gratis.
 
 Hartelijke groet,
 Mark Smulders
-leerkwartier.app · info@smulsoft.nl
+leerkwartier.app · marksmulders1973@gmail.com
 
 ## Status-tabel
 
-| Stichting | Gemaild | Reactie | Opgenomen? |
-|---|---|---|---|
-| — nog geen (wacht op go) | | | |
+| Stichting | Adres | Gemaild | Reactie | Opgenomen? |
+|---|---|---|---|---|
+| Leergeld Amsterdam | info@leergeldamsterdam.nl | 2026-07-09 | | |
+| Leergeld Utrecht | info@leergeldutrecht.nl | 2026-07-09 | | |
+| Leergeld Den Bosch | info@leergelddenbosch.nl | 2026-07-09 | | |
+| Leergeld Nijmegen | info@leergeldnijmegen.nl | 2026-07-09 | | |
+| Leergeld Tilburg | info@leergeldtilburg.nl | 2026-07-09 | | |
+| Leergeld Breda | info@leergeldbreda.nl | 2026-07-09 | | |
+| Leergeld Enschede | info@leergeldenschede.nl | 2026-07-09 | | |
+| Leergeld Leeuwarden | info@leergeldleeuwarden.nl | 2026-07-09 | | |
+| Leergeld Deventer | info@leergelddeventer.nl | 2026-07-09 | | |
+| Leergeld Groningen | info@leergeldgroningen.nl | 2026-07-09 | | |
+| Leergeld West-Brabant Oost | info@leergeldwbo.nl | 2026-07-09 | | |
+| Leergeld Zuid-Holland Midden | info@leergeldzhm.nl | 2026-07-09 | | |
