@@ -108,6 +108,17 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Tafels oefenen (groep 3-6)](https://leerkwartier.app/tafels-oefenen.html):
   gratis alle tafels van 1 t/m 12 oefenen met directe feedback en
   scoreoverzicht, geen account nodig.
+- [Printbaar Doorstroomtoets-oefenpakket](https://leerkwartier.app/oefenpakket.html):
+  gratis compleet oefenwerkboek om thuis te printen (of als PDF op te slaan) —
+  rekenen, taal en studievaardigheden voor groep 7-8, in hoofdstukken, met
+  ouder-instructiepagina en antwoordsleutel met uitleg per vraag.
+- [De Leesladder — printbaar begrijpend lezen](https://leerkwartier.app/leesladder.html):
+  gratis printpakket (groep 5-8) dat begint bij teksten van 5 zinnen en in 4
+  treden opbouwt naar echte toets-lengte; 3 versies × 15 teksten, de
+  antwoordsleutel legt per vraag de lees-truc uit.
+- [Printhoek — al het printbare materiaal](https://leerkwartier.app/printen):
+  overzicht van alles wat gratis printbaar is: oefenpakket, Leesladder,
+  tafel-werkbladen + tafeldiploma, redactiesommen-bundel en spelling-dictees.
 - [Gratis Doorstroomtoets-oefentoets (in-app)](https://leerkwartier.app/doorstroomtoets-oefentoets):
   een complete oefentoets in de stijl van de Doorstroomtoets — rekenen, taal
   en studievaardigheden door elkaar, met directe uitleg op 3 niveaus na elke
@@ -172,6 +183,17 @@ elke vraag uitleg op 3 niveaus. Geen account nodig.
 **Hoe kan ik mijn kind nú één Doorstroomtoets-vraag laten proberen?**
 Via de directe vraag-links van Leerkwartier, bv. leerkwartier.app/v/rekenpuzzel2
 — je kind beantwoordt één echte oefenvraag en ziet meteen de uitleg op 3 niveaus.
+
+**Waar vind ik gratis printbare werkbladen voor de Doorstroomtoets of
+begrijpend lezen?**
+Leerkwartier heeft een gratis printhoek (leerkwartier.app/printen) met vijf
+printbare pakketten: een compleet Doorstroomtoets-oefenwerkboek (rekenen, taal,
+studievaardigheden, groep 7-8, leerkwartier.app/oefenpakket), de Leesladder
+voor begrijpend lezen die klein begint bij 5 zinnen en opbouwt naar
+toets-lengte (groep 5-8, leerkwartier.app/leesladder), tafel-werkbladen met
+tafeldiploma, een redactiesommen-bundel en spelling-dictees. Alles print je
+via de browser of sla je op als PDF; antwoordsleutels met uitleg zitten erbij.
+Gratis, geen account nodig.
 
 **Wat is de Doorstroomtoets?**
 De Doorstroomtoets is sinds 2024 de officiële naam van de eindtoets in
