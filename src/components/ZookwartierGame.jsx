@@ -21,6 +21,8 @@ import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN 
 import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
+import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
+import BuddyKop from "../features/zoo/BuddyKop";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 // Maatje-hulp bij de reken-vragen (zelfde tutor als in de leerpaden — het
@@ -1131,6 +1133,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     // Trechter-meting (park → leren): praatje geopend.
     try { track("park_praatje"); } catch { /* nooit laten breken */ }
   };
+
+  // 🧙 Uitvinders-kabouters: tik op een tafereel → buddy vertelt + leer-link.
+  const [tafereel, setTafereel] = useState(null);
+  const openTafereel = (id) => {
+    if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
+    const t = TAFEREEL_BY_ID[id];
+    if (!t) return;
+    setTafereel(t);
+    try { track("park_tafereel", { id }); } catch { /* nooit laten breken */ }
+  };
+  const tafereelNaarLeren = () => {
+    if (!tafereel) return;
+    try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId }); track("park_naar_leren", { via: "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
+    const padId = tafereel.leerpadId;
+    setTafereel(null);
+    if (padId && onOpenLeerpad) onOpenLeerpad(padId);
+    else if (onOpenLeerpaden) onOpenLeerpaden();
+  };
   // Vak waar het praatje over gaat: aanbevolen oefenpad, anders je beste vak.
   const praatVak = oefenPad?.subject || oefenPad?.title || goedeScore?.vak || "rekenen";
   const gaOefenen = () => {
@@ -1455,6 +1475,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           goedeScore={goedeScore}
           zwakVak={zwakVak}
           onTapBezoeker={tapBezoeker}
+          onTafereel={openTafereel}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}
@@ -1971,6 +1992,39 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* 🧙 Uitvinders-tafereel: je maatje vertelt wat de kabouters aan het
+          doen zijn (zwaartekracht/piramide/Faraday) + één klik naar de les. */}
+      {tafereel && (
+        <div onClick={() => setTafereel(null)} style={{ position: "absolute", inset: 0, zIndex: 23, background: "rgba(10,20,10,0.5)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 18px 16px" }}>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12, paddingTop: 14 }}>
+              {buddyId ? (
+                <BuddyKop buddy={BUDDY_BY_ID[buddyId]} size={64} />
+              ) : (
+                <span style={{ fontSize: 40, lineHeight: 1 }}>{tafereel.emoji}</span>
+              )}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ font: "800 16px system-ui", color: "#234", marginBottom: 2 }}>{tafereel.emoji} {tafereel.titel}</div>
+                <p style={{ margin: 0, font: "600 14px/1.5 system-ui", color: "#345" }}>
+                  {buddyId ? <b style={{ color: "#1f5a2e" }}>{buddyNaamEff || "Je maatje"}: </b> : null}
+                  {tafereel.praatje}
+                </p>
+              </div>
+              <button onClick={() => setTafereel(null)} style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "700 15px system-ui", background: "#eee", cursor: "pointer", flex: "0 0 auto" }}>✕</button>
+            </div>
+            <div style={{ margin: "12px 0 0", background: "#f2f7ee", borderRadius: 12, padding: "10px 13px", font: "600 12.5px/1.5 system-ui", color: "#4a5d3a" }}>
+              💡 <b>Wist je dat?</b> {tafereel.weetje}
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, justifyContent: "flex-end" }}>
+              <button onClick={() => setTafereel(null)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Verder spelen</button>
+              <button onClick={tafereelNaarLeren} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
+                ▶ Leer er meer over: {tafereel.leerLabel}
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -16,6 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
+import UitvindersTaferelen from "./UitvindersKabouters";
 import FabelWezen from "./FabelWezen";
 import { getBlokMaterial, grijsMaps } from "./blokTextures";
 import { useEffect } from "react";
@@ -572,7 +573,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -829,6 +830,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* De wereld buiten het hek: grasvlakte, blok-heuvels, bos, bergen,
             meertje en het weggetje met bushalte — geen "einde van de wereld". */}
         <Buitenwereld />
+        {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
+            (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
+        <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
         {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
         <EntranceGate name={parkNaam} position={[0, heightFnRef.current(0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
         {/* Laan van de poort (nieuwe rand, z≈77) naar het starter-plein (z≈35):
