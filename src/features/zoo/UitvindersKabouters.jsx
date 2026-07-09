@@ -245,6 +245,54 @@ function TafereelTesla() {
 
 const TAFEREEL_MESH = { newton: TafereelNewton, piramide: TafereelPiramide, tesla: TafereelTesla };
 
+/* ── souvenirs: mini-monumenten op een sokkel (vrijspelen via leerpad) ───── */
+// Geplaatst via het gewone plaats-systeem (PlacedItem → procedural "souvenir").
+// Klein (~1 m), statisch (geen useFrame) — een souvenir mag niets kosten.
+export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 0 }) {
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* sokkel met gouden randje */}
+      <mesh position={[0, 0.09, 0]} castShadow receiveShadow><cylinderGeometry args={[0.52, 0.6, 0.18, 10]} /><meshStandardMaterial color="#b9b6ab" flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.19, 0]}><cylinderGeometry args={[0.46, 0.52, 0.05, 10]} /><meshStandardMaterial color="#e8b400" flatShading metalness={0.3} roughness={0.5} /></mesh>
+      {soort === "piramide" && (
+        <group position={[0, 0.22, 0]}>
+          {[{ n: 3, y: 0.14 }, { n: 2, y: 0.42 }, { n: 1, y: 0.7 }].map((l, li) => (
+            <group key={li} position={[0, l.y, 0]}>
+              {Array.from({ length: l.n }, (_, i) => i - (l.n - 1) / 2).map((ix) =>
+                Array.from({ length: l.n }, (_, j) => j - (l.n - 1) / 2).map((jz) => (
+                  <mesh key={`${ix}-${jz}`} position={[ix * 0.28, 0, jz * 0.28]} castShadow><boxGeometry args={[0.27, 0.27, 0.27]} /><meshStandardMaterial color={(Math.round(ix + jz) % 2 + 2) % 2 ? "#d9c18a" : "#c4a86e"} flatShading roughness={1} /></mesh>
+                ))
+              )}
+            </group>
+          ))}
+        </group>
+      )}
+      {soort === "newton" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.34, 0]} castShadow><cylinderGeometry args={[0.06, 0.09, 0.68, 8]} /><meshStandardMaterial color="#6a4a2a" flatShading roughness={1} /></mesh>
+          <mesh position={[0, 0.82, 0]} castShadow><sphereGeometry args={[0.36, 10, 10]} /><meshStandardMaterial color="#3f8f3a" flatShading roughness={1} /></mesh>
+          {[[0.18, 0.95, 0.2], [-0.2, 0.8, 0.22], [0.05, 0.72, -0.3]].map((p, i) => (
+            <mesh key={i} position={p}><sphereGeometry args={[0.06, 8, 8]} /><meshStandardMaterial color="#d33b2f" flatShading /></mesh>
+          ))}
+          {/* de beroemde gevallen appel aan de voet */}
+          <mesh position={[0.28, 0.06, 0.18]}><sphereGeometry args={[0.07, 8, 8]} /><meshStandardMaterial color="#d33b2f" flatShading /></mesh>
+        </group>
+      )}
+      {soort === "tesla" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.1, 0]} castShadow><cylinderGeometry args={[0.24, 0.3, 0.2, 10]} /><meshStandardMaterial color="#5a7396" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.5, 0]} castShadow><cylinderGeometry args={[0.09, 0.13, 0.6, 10]} /><meshStandardMaterial color="#8a5a3a" flatShading roughness={0.9} /></mesh>
+          {[0.32, 0.46].map((y, i) => (
+            <mesh key={i} position={[0, y, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.14, 0.02, 8, 14]} /><meshStandardMaterial color="#c9862e" flatShading metalness={0.4} roughness={0.5} /></mesh>
+          ))}
+          <mesh position={[0, 0.9, 0]} castShadow><sphereGeometry args={[0.18, 10, 10]} /><meshStandardMaterial color="#bfd4e8" flatShading metalness={0.6} roughness={0.3} /></mesh>
+          <mesh position={[0.14, 1.02, 0]} rotation={[0.4, 0, 0.8]}><boxGeometry args={[0.02, 0.28, 0.02]} /><meshStandardMaterial color="#dff3ff" emissive="#7fd8ff" emissiveIntensity={1.6} /></mesh>
+        </group>
+      )}
+    </group>
+  );
+}
+
 /* ── plaatsing + interactie ────────────────────────────────────────────── */
 export default function UitvindersTaferelen({ heightRef, onTafereel, actief = true }) {
   return (

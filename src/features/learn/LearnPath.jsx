@@ -33,6 +33,8 @@ import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
 import KwartierPauze from "./KwartierPauze.jsx";
 import BronTekstInteractief from "./BronTekstInteractief.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
+import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
+import { track } from "../../utils.js";
 
 const C = {
   bg: "#0f1729",
@@ -2030,6 +2032,32 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
           </span>
         </div>
       )}
+      {/* P1 cirkel-is-rond (Mark 10 jul): dit onderwerp staat als kabouter-
+          tafereel in het park — de vraag→spel-richting. Alleen op AllDone
+          (nooit midden in een leersessie) en met souvenir-belofte. */}
+      {TAFEREEL_BY_LEERPAD[path.id] && (() => {
+        const t = TAFEREEL_BY_LEERPAD[path.id];
+        return (
+          <button
+            onClick={() => {
+              try { track("leren_naar_park", { scene: t.id, pad: path.id }); } catch { /* */ }
+              window.location.href = `/dierentuin?scene=${t.id}`;
+            }}
+            style={{
+              width: "100%", marginBottom: 10, padding: "13px 16px", cursor: "pointer",
+              background: "rgba(126,240,162,0.10)", border: "1.5px solid rgba(126,240,162,0.45)",
+              borderRadius: 12, color: "var(--color-text-strong)", textAlign: "left",
+            }}
+          >
+            <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15 }}>
+              🏞️ {t.emoji} Dit staat in jouw park — ga kijken!
+            </span>
+            <span style={{ display: "block", fontSize: 12.5, marginTop: 3, color: "var(--color-text-soft, #cdd6e2)" }}>
+              De kabouters hebben een souvenir voor je: {t.souvenirNaam} ✨
+            </span>
+          </button>
+        );
+      })()}
       {nextPath && onPickPath && (
         <button
           onClick={() => onPickPath(nextPath.id)}

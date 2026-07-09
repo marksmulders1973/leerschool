@@ -12,6 +12,8 @@ export const TAFERELEN = [
     weetje: "Het verhaal gaat dat Isaac Newton de zwaartekracht begreep toen hij een appel uit een boom zag vallen — ruim 300 jaar geleden.",
     leerpadId: "krachten-natuurkunde",
     leerLabel: "Krachten en bewegen",
+    souvenirAssetId: "souvenirBoom",
+    souvenirNaam: "Newtons boompje",
   },
   {
     id: "piramide",
@@ -23,6 +25,8 @@ export const TAFERELEN = [
     weetje: "De grote piramide van Cheops is zo'n 4500 jaar oud en was 146 meter hoog — gebouwd uit meer dan 2 miljoen blokken steen.",
     leerpadId: "verhoudingen-po",
     leerLabel: "Verhoudingen",
+    souvenirAssetId: "souvenirPiramide",
+    souvenirNaam: "Mini-piramide",
   },
   {
     id: "tesla",
@@ -34,7 +38,12 @@ export const TAFERELEN = [
     weetje: "Een vliegtuig wordt gemiddeld één keer per jaar door de bliksem geraakt — en iedereen aan boord merkt er bijna niets van, dankzij hetzelfde trucje.",
     leerpadId: "elektriciteit-natuurkunde",
     leerLabel: "Elektriciteit",
+    souvenirAssetId: "souvenirTesla",
+    souvenirNaam: "Mini-bliksemtoren",
   },
 ];
 
 export const TAFEREEL_BY_ID = Object.fromEntries(TAFERELEN.map((t) => [t.id, t]));
+// Reverse-lookup voor de vraag→spel-richting ("dit wil ik in het spel bekijken"):
+// leerpad-id → tafereel. Gebruikt door het AllDone-scherm van het leerpad.
+export const TAFEREEL_BY_LEERPAD = Object.fromEntries(TAFERELEN.map((t) => [t.leerpadId, t]));

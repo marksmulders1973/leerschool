@@ -28,6 +28,12 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "parasaurolophus", emoji: "🦕", naam: "Parasaurus",   stappen: 28, waarom: "28 leer-stappen — knap volgehouden! De Parasaurus is je beloning. Alleen te verdienen door te leren." },
   { assetId: "trex",           emoji: "🦖", naam: "T-Rex",         stappen: 40, waarom: "40 leer-stappen! De machtige T-Rex brult in jouw dierentuin. De koning van de vrijspeel-dino's." },
   { assetId: "apatosaurus",    emoji: "🦕", naam: "Apatosaurus",   stappen: 55, waarom: "55 leer-stappen — wauw! De gigantische Apatosaurus is de allergrootste, alleen voor échte doorzetters." },
+  // ── SOUVENIRS van de uitvinders-kabouters (P1 cirkel-is-rond, Mark 10 jul):
+  // rond het gekoppelde leerpad af en de kabouters "bouwen" een mini-monument
+  // voor in je eigen park. Zelfde pad-mechanisme als het spaarvarken.
+  { assetId: "souvenirPiramide", emoji: "🔺", naam: "Mini-piramide", pad: "verhoudingen-po", padTitel: "Verhoudingen", waarom: "Je hebt het verhoudingen-pad uitgespeeld! De piramide-kabouters bouwden dit mini-monument speciaal voor jouw park." },
+  { assetId: "souvenirBoom", emoji: "🍎", naam: "Newtons boompje", pad: "krachten-natuurkunde", padTitel: "Krachten en bewegen", waarom: "Krachten en bewegen — helemaal af! Professor Isaac plantte zijn beroemde appelboompje in jouw park." },
+  { assetId: "souvenirTesla", emoji: "⚡", naam: "Mini-bliksemtoren", pad: "elektriciteit-natuurkunde", padTitel: "Elektriciteit", waarom: "Elektriciteit uitgespeeld! Meester Nikola zette een kleine bliksemtoren in jouw park — veilig, beloofd." },
   // ── FABELWEZENS (Mark 2 jul): de zeldzaamste beloningen, ná de dino's. De
   // draak/feniks VLIEGEN echt rond boven je park; eenhoorn en elf wandelen.
   { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 leer-stappen — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },

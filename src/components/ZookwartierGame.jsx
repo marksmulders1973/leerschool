@@ -1136,6 +1136,30 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   // 🧙 Uitvinders-kabouters: tik op een tafereel → buddy vertelt + leer-link.
   const [tafereel, setTafereel] = useState(null);
+  // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
+  // vlak vóór het tafereel en opent het praatje. Param één keer lezen bij mount.
+  const [deeplinkScene] = useState(() => {
+    try {
+      const id = new URLSearchParams(window.location.search).get("scene");
+      return TAFEREEL_BY_ID[id] ? id : null;
+    } catch { return null; }
+  });
+  const deeplinkSpawn = deeplinkScene
+    ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
+    : null;
+  const deeplinkKlaar = useRef(false);
+  useEffect(() => {
+    if (!deeplinkScene || !loaded || deeplinkKlaar.current) return;
+    deeplinkKlaar.current = true;
+    setTafereel(TAFEREEL_BY_ID[deeplinkScene]);
+    try { track("park_deeplink_open", { scene: deeplinkScene }); } catch { /* nooit laten breken */ }
+    // Param strippen zodat verversen/deel-link niet opnieuw teleporteert.
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.delete("scene");
+      window.history.replaceState({}, "", u.pathname + (u.searchParams.toString() ? "?" + u.searchParams.toString() : ""));
+    } catch { /* */ }
+  }, [deeplinkScene, loaded]);
   const openTafereel = (id) => {
     if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
     const t = TAFEREEL_BY_ID[id];
@@ -1476,6 +1500,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           zwakVak={zwakVak}
           onTapBezoeker={tapBezoeker}
           onTafereel={openTafereel}
+          spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
           sculptMode={sculptMode}
@@ -2019,6 +2044,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={{ margin: "12px 0 0", background: "#f2f7ee", borderRadius: 12, padding: "10px 13px", font: "600 12.5px/1.5 system-ui", color: "#4a5d3a" }}>
               💡 <b>Wist je dat?</b> {tafereel.weetje}
             </div>
+            {/* Souvenir-lijn (P1): vrijgespeeld → wijs naar plaatsen; anders belofte. */}
+            {tafereel.souvenirAssetId && (
+              <div style={{ margin: "8px 0 0", background: unlockedDieren.includes(tafereel.souvenirAssetId) ? "rgba(246,200,76,0.18)" : "rgba(0,0,0,0.045)", borderRadius: 12, padding: "9px 13px", font: "700 12.5px/1.5 system-ui", color: unlockedDieren.includes(tafereel.souvenirAssetId) ? "#7a5b00" : "#567" }}>
+                {unlockedDieren.includes(tafereel.souvenirAssetId)
+                  ? <>🎁 Je souvenir <b>{TAFEREEL_BY_ID[tafereel.id].souvenirNaam}</b> is vrijgespeeld — zet 'm neer via Bouwen → Dieren ✨</>
+                  : <>🎁 Rond <b>{tafereel.leerLabel}</b> helemaal af en de kabouters bouwen een <b>{tafereel.souvenirNaam}</b> voor jouw eigen park.</>}
+              </div>
+            )}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, justifyContent: "flex-end" }}>
               <button onClick={() => setTafereel(null)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Verder spelen</button>
               <button onClick={tafereelNaarLeren} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>

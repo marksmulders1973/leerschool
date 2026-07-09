@@ -70,6 +70,11 @@ export const ZOO_ASSETS = {
   // Vrijspeel-dier (niet te koop, prijs 0): verdien je door het spaar-leerpad
   // 100% af te ronden. Gouden tint maakt 'm bijzonder. Zie features/zoo/unlocks.js.
   spaarvarken: { id: "spaarvarken", kind: "animal", name: "Spaarvarken", emoji: "🐷", url: "/models/zoo/animals/Pig.glb", targetHeight: 0.95, tint: "#f6c84c", price: 0, unlock: "financiele-vorming-po" },
+  // Souvenirs van de uitvinders-kabouters (P1 cirkel-is-rond): mini-monumenten
+  // op een sokkel, vrijspelen door het gekoppelde leerpad af te ronden.
+  souvenirPiramide: { id: "souvenirPiramide", kind: "decor", name: "Mini-piramide", emoji: "🔺", procedural: "souvenir", souvenir: "piramide", cells: 1, price: 0, unlock: "verhoudingen-po" },
+  souvenirBoom: { id: "souvenirBoom", kind: "decor", name: "Newtons boompje", emoji: "🍎", procedural: "souvenir", souvenir: "newton", cells: 1, price: 0, unlock: "krachten-natuurkunde" },
+  souvenirTesla: { id: "souvenirTesla", kind: "decor", name: "Mini-bliksemtoren", emoji: "⚡", procedural: "souvenir", souvenir: "tesla", cells: 1, price: 0, unlock: "elektriciteit-natuurkunde" },
   sheep: { id: "sheep", kind: "animal", name: "Schaap", emoji: "🐑", url: "/models/zoo/animals/Sheep.glb", targetHeight: 1.0, price: 14 },
   zebra: { id: "zebra", kind: "animal", name: "Zebra", emoji: "🦓", url: "/models/zoo/animals/Zebra.glb", targetHeight: 1.6, price: 22 },
   pug: { id: "pug", kind: "animal", name: "Hondje", emoji: "🐶", url: "/models/zoo/animals/Pug.glb", targetHeight: 0.6, price: 12 },

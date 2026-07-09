@@ -16,7 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import UitvindersTaferelen from "./UitvindersKabouters";
+import UitvindersTaferelen, { Souvenir } from "./UitvindersKabouters";
 import FabelWezen from "./FabelWezen";
 import { getBlokMaterial, grijsMaps } from "./blokTextures";
 import { useEffect } from "react";
@@ -328,6 +328,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
+  if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;
@@ -573,7 +574,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, spawn = null }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -846,7 +847,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
             rand — anders begint elke speler met 40 m niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
-        <Player inputRef={inputRef} start={[0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} />
+        <Player inputRef={inputRef} start={spawn || [0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
