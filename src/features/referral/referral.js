@@ -10,6 +10,7 @@
 
 import supabase from "../../supabase.js";
 import { track } from "../../utils.js";
+import { telAntwoordVoorPartner } from "./partnerCode.js";
 
 const KEY_CODE = "lk_vriend_code";
 const KEY_TELLER = "lk_vriend_antwoorden";
@@ -51,6 +52,9 @@ export function vangVriendCode() {
 // Bij elk beantwoord oefen-vraagje aanroepen. Na ACTIVATIE_DREMPEL antwoorden
 // telt deze bezoeker als geworven vriend (eenmalig).
 export function telAntwoordVoorVriend() {
+  // 🤲 Partner-codes liften mee op dezelfde aanroep-punten (alle oefen-flows
+  // roepen deze functie al aan) — zie partnerCode.js.
+  telAntwoordVoorPartner();
   try {
     const code = ls.get(KEY_CODE);
     if (!code || ls.get(KEY_KLAAR)) return;

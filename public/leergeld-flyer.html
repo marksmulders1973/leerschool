@@ -26,6 +26,13 @@
     .url{display:block;text-align:center;background:#0a7d43;color:#fff;font-size:22px;font-weight:800;padding:14px;border-radius:12px;margin:22px 0 6px;letter-spacing:0.3px;text-decoration:none}
     .url-sub{text-align:center;font-size:12.5px;color:#5a6775;margin-bottom:18px}
     .voet{margin-top:26px;padding-top:12px;border-top:1px solid #e3e8ee;font-size:11.5px;color:#8893a3;line-height:1.6}
+    .qr-blok{display:none;gap:20px;align-items:center;background:#fff8e6;border:1.5px solid #f0d489;border-radius:12px;padding:16px 20px;margin:18px 0}
+    .qr-blok.aan{display:flex}
+    .qr-blok img{width:120px;height:120px;flex-shrink:0}
+    .qr-blok h2{margin:0 0 6px;color:#8a6400}
+    .qr-blok p{margin-bottom:6px;font-size:13.5px}
+    .qr-code-badge{display:inline-block;background:#8a6400;color:#fff;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:8px;font-size:14px}
+    .qr-url{font-size:11.5px;color:#8893a3;word-break:break-all}
     @media print{
       body{background:#fff;padding:0}
       .vel{box-shadow:none;border-radius:0;max-width:none;padding:14mm 16mm}
@@ -45,7 +52,20 @@
     <p>Oefenboeken kosten €27 tot €40. Bijles kost €37 per uur. Onderzoeksjournalistiek liet zien dat betaalde toetstraining de kansenongelijkheid rond de Doorstroomtoets vergroot. <strong>Leerkwartier is het gratis alternatief:</strong> een Nederlandse leer-app waar kinderen uit groep 6, 7 en 8 élke dag kunnen oefenen voor de Doorstroomtoets — zonder kosten, zonder account, zonder reclame.</p>
 
     <div class="kader">
-      <strong>Voor de gezinnen van Stichting Leergeld betekent dat:</strong> volwaardige toetsvoorbereiding zonder dat er iets aangevraagd, betaald of verantwoord hoeft te worden. Het werkt direct, op elke telefoon, tablet of (bibliotheek)computer.
+      <strong id="kader-kop">Voor de gezinnen van Stichting Leergeld betekent dat:</strong> volwaardige toetsvoorbereiding zonder dat er iets aangevraagd, betaald of verantwoord hoeft te worden. Het werkt direct, op elke telefoon, tablet of (bibliotheek)computer.
+    </div>
+
+    <!-- 🤲 Partner-QR: verschijnt alleen op flyers met ?partner=CODE in de URL.
+         De QR (public/qr/<CODE>.png, maak met scripts/maak-partner-qr.mjs)
+         opent de app mét code → scan is traceerbaar per partner en het gezin
+         houdt ook in 2027 gratis toegang. -->
+    <div class="qr-blok" id="qr-blok">
+      <img id="qr-img" src="" alt="QR-code naar leerkwartier.app" />
+      <div>
+        <h2>🎁 Cadeau bij deze flyer</h2>
+        <p><strong>Scan de QR-code met de camera van uw telefoon</strong> — de app opent direct, er hoeft niets geïnstalleerd te worden. Uw code <span class="qr-code-badge" id="qr-code-tekst"></span> wordt automatisch geactiveerd: daarmee blijft Leerkwartier voor uw gezin <strong>óók heel 2027 gratis</strong>, tot en met de Doorstroomtoets.</p>
+        <p class="qr-url">Scannen lukt niet? Typ dan in de browser: <span id="qr-url-tekst"></span></p>
+      </div>
     </div>
 
     <div class="twee">
@@ -85,5 +105,20 @@
       Vragen van uw stichting beantwoord ik persoonlijk. Materiaal (flyers, teksten voor nieuwsbrief of site) lever ik graag op maat aan — ook dat kost niets.
     </div>
   </div>
+  <script>
+    // Zelfde code-regels als src/features/referral/partnerCode.js.
+    (function () {
+      var p = new URLSearchParams(location.search).get("partner");
+      var code = (p || "").trim().toUpperCase();
+      if (!code || !/^[A-Z0-9-]{3,20}$/.test(code)) return;
+      var url = "leerkwartier.app/?partner=" + code;
+      document.getElementById("qr-img").src = "/qr/" + code + ".png";
+      document.getElementById("qr-code-tekst").textContent = code;
+      document.getElementById("qr-url-tekst").textContent = url;
+      document.getElementById("qr-blok").classList.add("aan");
+      // Flyer gaat ook naar voedselbanken en bibliotheken — kop neutraal maken.
+      document.getElementById("kader-kop").textContent = "Voor de gezinnen die deze flyer krijgen betekent dat:";
+    })();
+  </script>
 </body>
 </html>

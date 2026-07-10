@@ -16,6 +16,7 @@ import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
 import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
 import { vangVriendCode } from "./features/referral/referral.js";
+import { vangPartnerCode } from "./features/referral/partnerCode.js";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
@@ -404,8 +405,9 @@ export default function App() {
   // Al 15 min gehaald vandaag? Dan niet opnieuw vuren/toasten bij een reload.
   const milestoneShownRef = useRef(leesLeertijdVandaag() >= KWARTIER_TARGET_MIN * 60);
   // 🤝 Vrienden-werven: kwam deze bezoeker via een ?vriend=CODE-deellink?
+  // 🤲 Partner-codes: of via een ?partner=CODE QR-flyer (voedselbank/Leergeld)?
   // Eén keer vangen bij app-start; activatie volgt na 3 beantwoorde vragen.
-  useEffect(() => { vangVriendCode(); }, []);
+  useEffect(() => { vangVriendCode(); vangPartnerCode(); }, []);
 
   useEffect(() => {
     pruneOudeLeertijd();
