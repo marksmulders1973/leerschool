@@ -277,7 +277,8 @@ export default function TafelbladenPage({ setPage } = {}) {
             <div key={n} style={{ marginBottom: 12 }}>
               <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 14, marginBottom: 3, fontFamily: "Arial, sans-serif" }}>Tafel van {n}</div>
               <div style={{ fontSize: 12.5, color: "#3a4658", lineHeight: 1.7 }}>
-                <em>Door elkaar:</em> {hussel.map((s) => `${s.a}×${s.b}=${s.a * s.b}`).join(" · ")}
+                <em>Op volgorde:</em> {ALLE_TAFELS.map((i) => `${i}×${n}=${i * n}`).join(" · ")}
+                <br /><em>Door elkaar:</em> {hussel.map((s) => `${s.a}×${s.b}=${s.a * s.b}`).join(" · ")}
                 {metDelen && (<><br /><em>Delen:</em> {delen.map((s) => `${s.p}:${s.d}=${s.q}`).join(" · ")}</>)}
               </div>
             </div>
