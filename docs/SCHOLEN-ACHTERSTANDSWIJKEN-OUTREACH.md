@@ -30,10 +30,10 @@ OBS Overvecht directie.overvecht@spoutrecht.nl · Op Dreef (Overvecht) directie@
 ### Tilburg / Eindhoven / Den Bosch / Heerlen / Groningen / Leeuwarden (12)
 BS Stelaertshoeve (Stokhasselt, Tilburg) info.stelaertshoeve@mondiaen.nl · De Regenboog (Stokhasselt) info.regenboog@mondiaen.nl · De Lochtenbergh (Stokhasselt) info.lochtenbergh@mondiaen.nl · KC De Boog (Doornakkers, Eindhoven) deboog@skpo.nl · SALTO 't Karregat (Tongelre) info@bs-karregat.nl · BS Boon (Graafsewijk, Den Bosch) directie@bsboon.nl · KC Boschveld (Den Bosch) info@kcboschveld.nl · St. Paulus (Heerlen-Noord) info.paulus@innovo.nl · St. Franciscus (Korrewegwijk, Groningen) info@sint-franciscus.nl · IKC Dom Helder Camara (Beijum) ikcdomheldercamara@vcog.nl · IKC Plataan (Heechterp, Leeuwarden) directie.plataan@proloog.nl · IKC Prins Maurits (Bilgaard) ikcprinsmaurits@pcboleeuwarden.nl
 
-## Verzend-log (gespreid, ~30/dag)
-- 2026-07-09: eerste **30 verstuurd** (Rotterdam-Zuid/Delfshaven 20 + Amsterdam eerste 10). Resterend ~60 volgen de komende dagen.
+## Verzend-log
+- 2026-07-09: **alle 90 verstuurd** (Mark bevestigde 10 jul dat hij ze gisteren allemaal heeft verzonden, niet gespreid).
 
 ## Openstaand
-- ~60 scholen nog te verzenden (Amsterdam-rest, Den Haag, Utrecht/Arnhem/Nijmegen, Brabant/Noord) — gespreid ~30/dag.
+- Reacties monitoren (ochtend-routine 8:30); vakantie-automaten gezien → echte school-reacties verwacht v.a. half/eind augustus. Einsteinschool = opgeheven (adres schrappen bij batch 2).
 - 3 oudere school-concepten los in Gmail (CBS Herwijnen, obs De Schatkist, CBS Het Kompas) — buiten deze batch.
 - Uitbreiding mogelijk: meer wijken/steden (Zaanstad, Almere, Lelystad, Zwolle, Enschede, Deventer achterstandswijken).
