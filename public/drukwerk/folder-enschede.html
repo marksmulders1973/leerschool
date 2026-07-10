@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<title>Leerkwartier — drukklare A5-folder Voedselbank Enschede-Haaksbergen</title>
+<!--
+  DRUKKLAAR BRONBESTAND (10 jul 2026) — niet voor de website.
+  Formaat: A5 (148×210 mm) + 3 mm afloop rondom = pagina 154×216 mm.
+  PDF maken: chrome --headless=new --no-pdf-header-footer --print-to-pdf=out.pdf <dit bestand>
+  Drukkers snijden op 148×210; alles binnen 10 mm van de snijrand is veilig.
+  Nieuwe partner? Kopieer dit bestand en vervang code + QR + organisatienaam.
+-->
+<style>
+  @page { size: 154mm 216mm; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 154mm; }
+  body { font-family: "Segoe UI", -apple-system, Arial, sans-serif; color: #1a2332; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 154mm; height: 216mm; position: relative; overflow: hidden; page-break-after: always; background: #ffffff; }
+  .page:last-child { page-break-after: auto; }
+
+  /* ── VOORKANT ─────────────────────────────────────────── */
+  .kop-panel { background: #0a7d43; color: #fff; padding: 11mm 13mm 6.5mm; }
+  .naam { font-size: 25pt; font-weight: 800; letter-spacing: -0.5pt; }
+  .payoff { font-size: 9.5pt; opacity: 0.92; margin-top: 1.5mm; }
+  .titel { padding: 6.5mm 13mm 0; }
+  .titel h1 { font-size: 18pt; line-height: 1.18; color: #0a7d43; }
+  .titel p { font-size: 10pt; color: #3a4658; margin-top: 2.5mm; line-height: 1.45; }
+  .qr-kaart { margin: 5.5mm 13mm 0; border: 0.6mm solid #bfe3cd; border-radius: 5mm; padding: 5.5mm; display: flex; align-items: center; gap: 6mm; background: #f2f8f4; }
+  .qr-kaart img { width: 35mm; height: 35mm; display: block; background: #fff; border-radius: 2mm; }
+  .qr-kaart .scan-kop { font-size: 12pt; font-weight: 800; color: #0a7d43; }
+  .qr-kaart p { font-size: 9.5pt; color: #3a4658; line-height: 1.45; margin-top: 2mm; }
+  .cadeau { margin: 4.5mm 13mm 0; background: #fff8e6; border: 0.6mm solid #f0d489; border-radius: 5mm; padding: 4.5mm 6mm; }
+  .cadeau .c-kop { font-size: 11pt; font-weight: 800; color: #8a6400; }
+  .cadeau p { font-size: 9pt; color: #3a4658; line-height: 1.5; margin-top: 1.5mm; }
+  .code-badge { display: inline-block; background: #8a6400; color: #fff; font-weight: 800; letter-spacing: 0.5pt; padding: 0.8mm 3mm; border-radius: 2mm; font-size: 10pt; }
+  .voet-panel { position: absolute; left: 0; right: 0; bottom: 0; background: #0a7d43; color: #fff; text-align: center; padding: 5mm 13mm 8mm; }
+  .voet-panel .url { font-size: 18pt; font-weight: 800; letter-spacing: 0.3pt; }
+  .voet-panel .url-sub { font-size: 8.5pt; opacity: 0.92; margin-top: 1mm; }
+
+  /* ── ACHTERKANT ───────────────────────────────────────── */
+  .achter { padding: 12mm 13mm 0; }
+  .achter h2 { font-size: 13pt; color: #0a7d43; margin-bottom: 2.5mm; }
+  .achter h2.later { margin-top: 5mm; }
+  ul { list-style: none; }
+  ul li { font-size: 9.5pt; color: #3a4658; padding: 1.3mm 0 1.3mm 6.5mm; position: relative; line-height: 1.4; }
+  ul li::before { content: "✓"; position: absolute; left: 0; color: #00a852; font-weight: 700; }
+  .via-kader { margin-top: 5mm; background: #f2f8f4; border: 0.6mm solid #bfe3cd; border-radius: 5mm; padding: 4mm 6mm; font-size: 9pt; color: #3a4658; line-height: 1.5; }
+  .via-kader strong { color: #0a7d43; }
+  .achter-qr { margin-top: 5mm; display: flex; align-items: center; gap: 6mm; }
+  .achter-qr img { width: 23mm; height: 23mm; }
+  .achter-qr div { font-size: 9pt; color: #3a4658; line-height: 1.55; }
+  .achter-qr .u { font-weight: 800; color: #0a7d43; font-size: 10.5pt; }
+  .contact-voet { position: absolute; left: 0; right: 0; bottom: 0; border-top: 0.3mm solid #e3e8ee; margin: 0 13mm; padding: 3mm 0 7mm; font-size: 8pt; color: #8893a3; line-height: 1.6; background: #fff; }
+</style>
+</head>
+<body>
+
+  <!-- VOORKANT -->
+  <div class="page">
+    <div class="kop-panel">
+      <div class="naam">Leerkwartier</div>
+      <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    </div>
+    <div class="titel">
+      <h1>Gratis oefenen voor de Doorstroomtoets</h1>
+      <p>Voor kinderen uit groep 6, 7 en 8. Oefenboeken kosten al snel €30 en bijles is duur — met Leerkwartier oefent uw kind élke dag gratis. Met uitleg als iets nog niet lukt.</p>
+    </div>
+    <div class="qr-kaart">
+      <img src="../qr/ENSCHEDE2027.png" alt="QR-code" />
+      <div>
+        <div class="scan-kop">Scan en begin vandaag nog</div>
+        <p>Richt de camera van uw telefoon op de QR-code. De app opent direct — niets installeren, geen account, geen betaalgegevens.</p>
+      </div>
+    </div>
+    <div class="cadeau">
+      <div class="c-kop">🎁 Cadeau bij deze folder</div>
+      <p>Uw code <span class="code-badge">ENSCHEDE2027</span> wordt bij het scannen automatisch geactiveerd. Daarmee blijft Leerkwartier voor uw gezin <strong>óók heel 2027 gratis</strong>, tot en met de Doorstroomtoets. Geldig voor de eerste 50 gezinnen — wees er snel bij.</p>
+    </div>
+    <div class="voet-panel">
+      <div class="url">leerkwartier.app</div>
+      <div class="url-sub">Werkt op elke telefoon, tablet of computer</div>
+    </div>
+  </div>
+
+  <!-- ACHTERKANT -->
+  <div class="page">
+    <div class="achter">
+      <h2>Wat krijgt uw kind?</h2>
+      <ul>
+        <li>Een complete gratis <strong>oefen-Doorstroomtoets</strong>: rekenen, taal en studievaardigheden</li>
+        <li>Elke dag een gratis <strong>vraag van de dag</strong> met uitleg</li>
+        <li>Bij elke fout: <strong>uitleg op 3 niveaus</strong> — basis, simpeler, nóg simpeler</li>
+        <li>Een <strong>leermaatje</strong> dat helpt als uw kind vastloopt, zonder het antwoord voor te zeggen</li>
+        <li>Ook voor de bovenbouw: <strong>echte VMBO-examenvragen</strong> met uitleg</li>
+      </ul>
+      <h2 class="later">Ook zonder goed internet</h2>
+      <ul>
+        <li><strong>Printbare werkboeken</strong> met antwoordsleutel — vraag ernaar bij uw bibliotheek of print via leerkwartier.app/printen</li>
+        <li>De <strong>Leesladder</strong>: begrijpend lezen dat klein begint en rustig opbouwt</li>
+      </ul>
+      <h2 class="later">Eerlijk en veilig</h2>
+      <ul>
+        <li>100% gratis in 2026 — geen proefperiode, geen abonnement</li>
+        <li>Geen reclame en geen doorverkoop van gegevens</li>
+        <li>Gemaakt door één vader uit Nederland, niet door een marketingmachine</li>
+      </ul>
+      <div class="via-kader">
+        Deze folder kreeg u via <strong>Voedselbank Enschede-Haaksbergen</strong>. Ieder kind verdient dezelfde kans op een goede toetsvoorbereiding — daarom is Leerkwartier gratis.
+      </div>
+      <div class="achter-qr">
+        <img src="../qr/ENSCHEDE2027.png" alt="QR-code" />
+        <div>
+          <div class="u">leerkwartier.app</div>
+          Scannen lukt niet? Typ in de browser:<br />leerkwartier.app/?partner=ENSCHEDE2027
+        </div>
+      </div>
+    </div>
+    <div class="contact-voet">
+      Vragen? Mail gerust: marksmulders1973@gmail.com · Mark Smulders, maker van Leerkwartier · leerkwartier.app
+    </div>
+  </div>
+
+</body>
+</html>
