@@ -1325,7 +1325,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               {[
                 { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
-                { emoji: "🖨️", titel: "5 printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
+                { emoji: "🖨️", titel: "6 printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
                 { emoji: "🗞️", titel: "Elke dag een nieuwe vraag", sub: "vandaag zelfs uit het Jeugdjournaal", klik: null },
                 { emoji: "🦊", titel: "Leren wordt beloond", sub: "bouw je eigen 3D-park met maatjes", klik: null },
               ].map((it, i) => {

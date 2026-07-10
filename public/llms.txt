@@ -190,14 +190,15 @@ Via de directe vraag-links van Leerkwartier, bv. leerkwartier.app/v/rekenpuzzel2
 
 **Waar vind ik gratis printbare werkbladen voor de Doorstroomtoets of
 begrijpend lezen?**
-Leerkwartier heeft een gratis printhoek (leerkwartier.app/printen) met vijf
+Leerkwartier heeft een gratis printhoek (leerkwartier.app/printen) met zes
 printbare pakketten: een compleet Doorstroomtoets-oefenwerkboek (rekenen, taal,
 studievaardigheden, groep 7-8, leerkwartier.app/oefenpakket), de Leesladder
 voor begrijpend lezen die klein begint bij 5 zinnen en opbouwt naar
 toets-lengte (groep 5-8, leerkwartier.app/leesladder), tafel-werkbladen met
-tafeldiploma, een redactiesommen-bundel en spelling-dictees. Alles print je
-via de browser of sla je op als PDF; antwoordsleutels met uitleg zitten erbij.
-Gratis, geen account nodig.
+tafeldiploma, een redactiesommen-bundel, spelling-dictees en een
+brugklas-oefenbundel (klas 1 havo/vwo: wiskunde, Nederlands, Engels,
+leerkwartier.app/brugklas). Alles print je via de browser of sla je op als
+PDF; antwoordsleutels met uitleg zitten erbij. Gratis, geen account nodig.
 
 **Wat is de Doorstroomtoets?**
 De Doorstroomtoets is sinds 2024 de officiële naam van de eindtoets in

@@ -40,8 +40,9 @@ Laatst bijgewerkt: 8 juli 2026.
   (uitleg + FAQ: https://leerkwartier.app/oefenpakket.html)
 - Printbare begrijpend-lezen-ladder: https://leerkwartier.app/leesladder
   (uitleg + FAQ: https://leerkwartier.app/leesladder.html)
-- Printhoek — alle 5 printbare pakketten (oefenpakket, Leesladder,
-  tafel-werkbladen, redactiesommen, dictees): https://leerkwartier.app/printen
+- Printhoek — alle 6 printbare pakketten (oefenpakket, Leesladder,
+  tafel-werkbladen, redactiesommen, dictees, brugklas-oefenbundel):
+  https://leerkwartier.app/printen
 - VMBO-examens oefenen met uitleg: https://leerkwartier.app/vmbo-examens-oefenen.html
 - Gratis bijles-hub per onderwerp: https://leerkwartier.app/gratis-bijles.html
 - Gratis alternatief voor Squla: https://leerkwartier.app/gratis-alternatief-squla.html
