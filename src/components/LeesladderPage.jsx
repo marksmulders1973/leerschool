@@ -18,6 +18,19 @@ import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { VERSIES } from "./leesladderData.js";
+import { splitsOpWoorden, gebruikteWoorden } from "./leesladderWoorden.js";
+
+// Tekst met stippellijntjes onder de moeilijke woorden — die staan achterin
+// in de Woordenlijst (Brian-verzoek 2026-07-10: "stuifmeel" kende hij niet).
+function TekstMetWoordhulp({ tekst }) {
+  return splitsOpWoorden(tekst).map((deel, i) =>
+    typeof deel === "string" ? (
+      deel
+    ) : (
+      <span key={i} style={{ borderBottom: "2px dotted #7d94b5" }}>{deel.woord}</span>
+    )
+  );
+}
 
 const LETTERS = ["A", "B", "C", "D"];
 
@@ -167,6 +180,10 @@ export default function LeesladderPage({ setPage } = {}) {
     })),
   }));
   const totaal = teller;
+
+  // 🔍 Alle stippellijn-woorden die in de teksten van déze versie voorkomen,
+  // alfabetisch — voor de Woordenlijst achterin.
+  const woordenlijst = gebruikteWoorden(treden.flatMap((t) => t.teksten.map((tx) => tx.tekst)));
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -332,6 +349,13 @@ export default function LeesladderPage({ setPage } = {}) {
               <p style={{ margin: 0 }}><strong>Ik ben nu op trede:</strong> 1 · 2 · 3 · 4</p>
             </div>
 
+            <div style={{ marginTop: 20, background: "#fff8e6", border: "1px solid #ecd9a0", borderRadius: 10, padding: "12px 16px", fontSize: 13.5, color: "#5a4a1a", lineHeight: 1.6 }}>
+              🔍 <strong>Woord met een stippellijntje eronder?</strong> Probeer éérst te
+              raden wat het betekent door de zin eromheen te lezen — dat is precies wat
+              een goede lezer doet. Kom je er niet uit? Achterin staat de{" "}
+              <strong>Woordenlijst</strong> (op alfabet) met alle stippellijn-woorden.
+            </div>
+
             <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12, lineHeight: 1.5 }}>
               © {BRAND.publisher} · {BRAND.domain} · Alle teksten zijn eigen oefenteksten.
             </div>
@@ -394,7 +418,7 @@ export default function LeesladderPage({ setPage } = {}) {
                   📖 Tekst {t.nr}.{ti + 1} — {tx.titel}
                 </h4>
                 <div style={{ border: "1px solid #dde3ec", borderRadius: 8, padding: "14px 18px", fontSize: 14.5, lineHeight: 1.75, color: "#1a2332", marginBottom: 12, whiteSpace: "pre-line" }}>
-                  {tx.tekst}
+                  <TekstMetWoordhulp tekst={tx.tekst} />
                 </div>
                 {tx.vragen.map((v) => (
                   <div key={v.nr} className="leesladder-vraag" style={{ marginBottom: 14, breakInside: "avoid" }}>
@@ -479,6 +503,27 @@ export default function LeesladderPage({ setPage } = {}) {
             </button>
           </Sheet>
         )}
+
+        {/* 🔍 Woordenlijst — helemaal achterin, ná de antwoorden (Mark
+            2026-07-10, na Brian & "stuifmeel"): eerst raden uit de zin,
+            opzoeken als het echt nodig is. Alfabetisch = meteen ook
+            opzoek-training. De lijst bevat alleen woorden die in de
+            teksten van déze versie voorkomen. */}
+        <Sheet>
+          <SectieKop emoji="🔍" label="Woordenlijst — de stippellijn-woorden" />
+          <p style={{ color: "#6b7785", fontSize: 13, marginTop: -8, marginBottom: 16 }}>
+            Alle woorden met een stippellijntje uit dit pakket, op alfabet. Eerst zelf
+            raden uit de zin — hier opzoeken mag altijd. Tip voor de ouder: laat je kind
+            het woord zélf opzoeken; op alfabet zoeken is óók oefenen.
+          </p>
+          <div style={{ columnCount: 2, columnGap: 26 }}>
+            {woordenlijst.map(([woord, uitleg]) => (
+              <div key={woord} style={{ fontSize: 13, color: "#3a4658", lineHeight: 1.55, marginBottom: 8, breakInside: "avoid" }}>
+                <strong style={{ color: "#1a2332", fontFamily: "Arial, sans-serif" }}>{woord}</strong> — {uitleg}
+              </div>
+            ))}
+          </div>
+        </Sheet>
       </div>
     </div>
   );
