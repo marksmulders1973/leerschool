@@ -6,6 +6,7 @@
 // groep 5-8. Geen e-mail-slot (de ouder hééft de antwoorden al — dat is het
 // voorleesblad); wel het GratisLesmateriaal-opt-in-blok op het scherm.
 
+import PrintKnoppen from "../shared/ui/PrintKnoppen.jsx";
 import { useEffect, useState } from "react";
 import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
@@ -198,10 +199,7 @@ export default function DicteesPage({ setPage } = {}) {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <button onClick={() => { track("dictees_print", { dictees: gekozen.join(",") }); window.print(); }} disabled={actief.length === 0}
-            style={{ padding: "14px 28px", borderRadius: 12, border: "none", background: actief.length === 0 ? "rgba(255,255,255,0.1)" : "var(--color-accent, #42a5f5)", color: actief.length === 0 ? "#888" : "#0b1224", fontSize: 17, fontWeight: 700, cursor: actief.length === 0 ? "not-allowed" : "pointer", boxShadow: actief.length === 0 ? "none" : "0 4px 16px rgba(66,165,245,0.35)" }}>
-            🖨️ Opslaan als PDF / Printen
-          </button>
+          <PrintKnoppen trackPrefix="dictees" trackProps={{ dictees: gekozen.join(",") }} disabled={actief.length === 0} />
           <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>
             {actief.length === 0 ? "Kies eerst een dictee" : `${actief.length} dictees · ${actief.length * 10} woorden`}
           </span>

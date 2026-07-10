@@ -16,6 +16,7 @@
 // (copyright-policy). Externe link naar Cito's gratis voorbeeldboekje voor
 // echte voorbeelden.
 
+import PrintKnoppen from "../shared/ui/PrintKnoppen.jsx";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
@@ -426,19 +427,7 @@ export default function OefenpakketPage({ setPage } = {}) {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <button
-            onClick={() => { track("oefenpakket_print", { omvang, source: leadSource() }); window.print(); }}
-            disabled={totaal === 0}
-            style={{
-              padding: "14px 28px", borderRadius: 12, border: "none",
-              background: totaal === 0 ? "rgba(255,255,255,0.1)" : "var(--color-accent, #42a5f5)",
-              color: totaal === 0 ? "#888" : "#0b1224",
-              fontSize: 17, fontWeight: 700, cursor: totaal === 0 ? "not-allowed" : "pointer",
-              boxShadow: totaal === 0 ? "none" : "0 4px 16px rgba(66,165,245,0.35)",
-            }}
-          >
-            🖨️ Opslaan als PDF / Printen
-          </button>
+          <PrintKnoppen trackPrefix="oefenpakket" trackProps={{ omvang, source: leadSource() }} disabled={totaal === 0} />
           <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>
             {totaal} {totaal === 1 ? "vraag" : "vragen"} · ± {geschatteMin} min oefenen
           </span>

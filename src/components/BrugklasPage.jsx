@@ -8,6 +8,7 @@
 // leerpad/curriculum. De onderbouw-VO blijft lagere prio dan de Doorstroomtoets-
 // kern; dit is een gebruiker-gedreven printable, geen scope-uitbreiding.
 
+import PrintKnoppen from "../shared/ui/PrintKnoppen.jsx";
 import { useEffect, useRef, useState } from "react";
 import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
@@ -175,10 +176,7 @@ export default function BrugklasPage({ setPage } = {}) {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <button onClick={() => { track("brugklas_print"); window.print(); }}
-            style={{ padding: "14px 28px", borderRadius: 12, border: "none", background: "var(--color-accent, #42a5f5)", color: "#0b1224", fontSize: 17, fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 16px rgba(66,165,245,0.35)" }}>
-            🖨️ Opslaan als PDF / Printen
-          </button>
+          <PrintKnoppen trackPrefix="brugklas" />
           <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>{totaal} vragen · {hoofdstukken.length} vakken</span>
         </div>
       </div>

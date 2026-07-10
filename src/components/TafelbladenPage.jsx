@@ -6,6 +6,7 @@
 // dus eindeloos herprintbaar. Antwoordbladen zitten er gewoon bij (geen slot —
 // tafel-antwoorden kent elke ouder); e-mail-opt-in via GratisLesmateriaal.
 
+import PrintKnoppen from "../shared/ui/PrintKnoppen.jsx";
 import { useEffect, useMemo, useState } from "react";
 import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
@@ -170,19 +171,7 @@ export default function TafelbladenPage({ setPage } = {}) {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <button
-            onClick={() => { track("tafelbladen_print", { tafels: gekozen.join(",") }); window.print(); }}
-            disabled={gekozen.length === 0}
-            style={{
-              padding: "14px 28px", borderRadius: 12, border: "none",
-              background: gekozen.length === 0 ? "rgba(255,255,255,0.1)" : "var(--color-accent, #42a5f5)",
-              color: gekozen.length === 0 ? "#888" : "#0b1224", fontSize: 17, fontWeight: 700,
-              cursor: gekozen.length === 0 ? "not-allowed" : "pointer",
-              boxShadow: gekozen.length === 0 ? "none" : "0 4px 16px rgba(66,165,245,0.35)",
-            }}
-          >
-            🖨️ Opslaan als PDF / Printen
-          </button>
+          <PrintKnoppen trackPrefix="tafelbladen" trackProps={{ tafels: gekozen.join(",") }} disabled={gekozen.length === 0} />
           <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>
             {gekozen.length === 0 ? "Kies eerst een tafel" : `± ${aantalBladen + 1} pagina's incl. diploma & antwoorden`}
           </span>
