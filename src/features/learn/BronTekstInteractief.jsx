@@ -12,10 +12,26 @@
 //    Click op markering = verwijderen. State per check, reset bij wissel.
 
 import { useMemo, useState, useRef, useEffect } from "react";
+import { WOORDHULP } from "../../components/leesladderWoorden.js";
+import { actieveBuddyPersona } from "../zoo/buddies.js";
+import { track } from "../../utils.js";
 
 // Escape voor regex
 function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// 2026-07-11 (Mark + Brian, "stuifmeel"): de centrale Woordenlijst van de
+// Leesladder doet nu ook in de app mee als vangnet. Eigen woorden van de
+// check (uitlegPad.woorden) winnen altijd; WOORDHULP vult aan wat ontbreekt.
+// Het maatje legt uit in twee stappen: eerst zelf raden uit de zin (dé
+// Doorstroomtoets-vaardigheid), dan pas de uitleg.
+function metWoordhulp(woorden) {
+  const eigen = new Set((woorden || []).map((w) => (w.woord || "").toLowerCase()));
+  const extra = Object.entries(WOORDHULP)
+    .filter(([w]) => !eigen.has(w))
+    .map(([woord, uitleg]) => ({ woord, uitleg }));
+  return [...(woorden || []), ...extra];
 }
 
 // Splits tekst in segments: { type: 'tekst' | 'woord', value, woordIdx? }
@@ -65,7 +81,9 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
     // Kleur-keuze bewaren — voorkeur volgt de leerling
   }, [resetKey]);
 
-  const segments = useMemo(() => splitOpWoorden(body || "", woorden), [body, woorden]);
+  const alleWoorden = useMemo(() => metWoordhulp(woorden), [woorden]);
+  const segments = useMemo(() => splitOpWoorden(body || "", alleWoorden), [body, alleWoorden]);
+  const buddy = useMemo(() => { try { return actieveBuddyPersona(); } catch { return { naam: "je maatje", emoji: "🐾", kleur: "#ffd54f" }; } }, []);
 
   // Geel-marker logic: bij onMouseUp/onTouchEnd zoek selection range binnen container.
   // Range mapper-functie: van DOM range naar character offset in body.
@@ -133,7 +151,8 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
       const contRect = containerRef.current?.getBoundingClientRect();
       const x = rect.left + rect.width / 2 - (contRect?.left || 0);
       const y = rect.bottom - (contRect?.top || 0) + 6;
-      setActief({ woordIdx: seg.woordIdx, x, y });
+      setActief({ woordIdx: seg.woordIdx, x, y, fase: "raad" });
+      try { track("woordhulp_open", { woord: seg.value.toLowerCase().slice(0, 30) }); } catch {}
     };
 
     if (overlappend.length === 0) {
@@ -198,7 +217,7 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
     return r;
   });
 
-  const activeWoord = actief != null && woorden ? woorden[actief.woordIdx] : null;
+  const activeWoord = actief != null && alleWoorden ? alleWoorden[actief.woordIdx] : null;
 
   const activeKleurDef = MARKER_KLEUREN.find(k => k.id === activeKleur) || MARKER_KLEUREN[0];
 
@@ -293,10 +312,46 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
             animation: "slideUp 160ms ease-out",
           }}
         >
-          <div style={{ fontSize: 16, fontWeight: 800, color: "#ffd54f", marginBottom: 4 }}>
-            {activeWoord.woord}
+          {/* Het maatje als woordenjuf — eerst raden, dan pas uitleg
+              (Mark 2026-07-11; zelfde filosofie als wrongHints). */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+            <span style={{ fontSize: 22 }}>{buddy.emoji}</span>
+            <div>
+              <div style={{ fontSize: 16, fontWeight: 800, color: "#ffd54f", lineHeight: 1.1 }}>
+                {activeWoord.woord}
+              </div>
+              <div style={{ fontSize: 10.5, opacity: 0.65 }}>{buddy.naam} helpt</div>
+            </div>
           </div>
-          <div>{activeWoord.uitleg}</div>
+          {actief.fase === "raad" ? (
+            <div>
+              <div style={{ marginBottom: 10 }}>
+                Kijk eens goed naar de zin eromheen… wat zou <strong>{activeWoord.woord}</strong>{" "}
+                betekenen? Goede lezers raden eerst! 🕵️
+              </div>
+              <div style={{ display: "flex", gap: 6 }}>
+                <button
+                  onClick={() => setActief((a) => ({ ...a, fase: "uitleg" }))}
+                  style={{ flex: 1, padding: "8px 6px", borderRadius: 8, border: "none", background: "#ffd54f", color: "#1a1a1a", fontWeight: 800, fontSize: 12, cursor: "pointer" }}
+                >
+                  💡 Ik heb een idee — check!
+                </button>
+                <button
+                  onClick={() => setActief((a) => ({ ...a, fase: "uitleg" }))}
+                  style={{ flex: 1, padding: "8px 6px", borderRadius: 8, border: "1px solid rgba(255,213,79,0.5)", background: "transparent", color: "#ffd54f", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                >
+                  🤷 Vertel maar
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div>{activeWoord.uitleg}</div>
+              <div style={{ marginTop: 8, fontSize: 11, opacity: 0.6 }}>
+                Slim dat je het even checkte — zo groeit je woordenschat! 💪
+              </div>
+            </div>
+          )}
           <button
             onClick={() => setActief(null)}
             style={{
