@@ -88,7 +88,9 @@ export default function MeeBezig({
             {subjectLabel || subjectId}
           </span>
         ) : `${subjectIcon || "📚"} ${subjectLabel || subjectId}`}
-        subtitle="Voor dit vak werken we aan de leerpaden — start nu met toets oefenen"
+        subtitle={relatedHubCount > 0
+          ? "Dit onderwerp is in de maak — andere onderwerpen staan al klaar"
+          : "Voor dit vak werken we aan de leerpaden — start nu met toets oefenen"}
         onBack={onBack}
         onHome={onHome}
       />
@@ -125,7 +127,14 @@ export default function MeeBezig({
               lineHeight: "var(--line-height-normal)",
             }}
           >
-            Voor <strong>{subjectLabel || subjectId}</strong> bouwen we op dit moment de leerpaden — van begin tot eind, met uitleg per stap.
+            {relatedHubCount > 0 ? (
+              <>Voor <strong>dit onderwerp</strong> bouwen we nog aan het leerpad — van begin
+              tot eind, met uitleg per stap. Voor {subjectLabel || subjectId} staan er
+              al {relatedHubCount} andere leerpaden klaar (zie hieronder).</>
+            ) : (
+              <>Voor <strong>{subjectLabel || subjectId}</strong> bouwen we op dit moment de
+              leerpaden — van begin tot eind, met uitleg per stap.</>
+            )}
           </p>
         </Card>
 

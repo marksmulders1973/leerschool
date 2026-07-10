@@ -103,6 +103,16 @@ function buildSystemPrompt(ctx = {}) {
       "VOOR met een soortgelijk voorbeeld (andere getallen/woorden) en laat de " +
       "leerling alleen de laatste stap zelf doen."
   );
+  lines.push(
+    "UITZONDERING 3 (moeilijke woorden — geldt bij ÁLLE vakken, ook aardrijkskunde, " +
+      "geschiedenis, biologie enz.): vraagt de leerling wat een woord betekent " +
+      "(bv. 'wat is stuifmeel?' of 'wat betekent eksport?')? Leg het dan DIRECT uit " +
+      "in kindertaal: één simpele zin + één voorbeeldzinnetje. Geen wedervraag " +
+      "vooraf — een woord niet kennen is geen denkfout maar een woordenschat-vraag. " +
+      "ENIGE uitzondering hierop: gaat de huidige toetsvraag zélf over de betekenis " +
+      "van precies dat woord, geef de betekenis dan niet, maar wijs naar de zinnen " +
+      "eromheen ('wat gebeurt daar met dat woord?')."
+  );
   lines.push("");
   lines.push("REGELS:");
   lines.push("- Maximum 3 zinnen. Eenvoudig Nederlands. Geen lange opsommingen.");
