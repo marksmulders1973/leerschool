@@ -26,6 +26,7 @@ import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
+import WoordHulpSheet, { TekstMetWoordHulp, vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
@@ -370,6 +371,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // AI-tutor drawer-state. Sluit niet automatisch bij stap-wissel; tutor leest
   // pathId+stepIdx zelf uit en herlaadt history.
   const [showTutor, setShowTutor] = useState(false);
+  // WoordHulp (Mark 11 jul): tik op een moeilijk woord → hulp-kaartje met
+  // uitleg + buddy-knop + eventuele les over dat woord.
+  const [woordHulp, setWoordHulp] = useState(null);
+  const [tutorStartVraag, setTutorStartVraag] = useState(null);
+  const openWoordHulp = useCallback((w) => {
+    try { track("woordhulp_open", { woord: w?.woord, pathId }); } catch { /* */ }
+    setWoordHulp(w);
+  }, [pathId]);
   // Buddy-tutor (Mark 2026-07-01): "Vraag hulp aan Vonk"-knop = het maatje dat
   // de leerling koos (of Vonk) dat meedenkt. Oproepbaar, niet altijd meelopend.
   const [tutorBuddy] = useState(() => actieveBuddyPersona());
@@ -1277,6 +1286,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                     onClose={() => setShowUitlegPad(false)}
                     verbergNiveaus={attempts === 1}
+                    onWoordHulp={openWoordHulp}
                   />
                 )}
                 {showUitlegPad && !currentCheck.uitlegPad && currentCheck.leerpadLink && (
@@ -1347,9 +1357,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                         display: "inline-flex", alignItems: "center", justifyContent: "center",
                         fontFamily: "var(--font-display)",
                       }}>{letter}</span>
-                      <span style={{ flex: 1 }}>{opt}</span>
+                      <span style={{ flex: 1 }}>
+                        <TekstMetWoordHulp tekst={opt} woorden={currentCheck.uitlegPad?.woorden} onWoord={openWoordHulp} />
+                      </span>
                     </span>
-                  ) : opt}
+                  ) : (
+                    <TekstMetWoordHulp tekst={opt} woorden={currentCheck.uitlegPad?.woorden} onWoord={openWoordHulp} />
+                  )}
                 </button>
               );
             })}
@@ -1513,6 +1527,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 uitlegPad={currentCheck.uitlegPad}
                 vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                 onClose={() => setShowUitlegPad(false)}
+                onWoordHulp={openWoordHulp}
               />
             )}
             <button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
@@ -1638,7 +1653,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         <AITutor
           open={showTutor}
-          onClose={() => setShowTutor(false)}
+          onClose={() => { setShowTutor(false); setTutorStartVraag(null); }}
           pathTitle={path.title}
           pathId={pathId}
           stepTitle={step.title}
@@ -1646,7 +1661,24 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           stepExplanation={step.explanation}
           currentCheck={currentCheck}
           lastWrongAnswer={lastWrongAnswer}
+          startVraag={tutorStartVraag}
         />
+
+        {/* WoordHulp-kaartje: uitleg van het getikte woord + buddy + les. */}
+        {woordHulp && (
+          <WoordHulpSheet
+            item={woordHulp}
+            les={vindLesVoorWoord(woordHulp.woord, pathId)}
+            buddy={tutorBuddy}
+            onClose={() => setWoordHulp(null)}
+            onLes={onPickPath ? ((les) => { setWoordHulp(null); onPickPath(les.id); }) : null}
+            onBuddy={(w) => {
+              setWoordHulp(null);
+              setTutorStartVraag(`Wat betekent "${w.woord}"?`);
+              setShowTutor(true);
+            }}
+          />
+        )}
 
         {mode === "stepDone" && showMiniQuiz && (
           <div style={cardStyle(C.good)}>

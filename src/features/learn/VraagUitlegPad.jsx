@@ -38,7 +38,7 @@ export function bumpVraagFouten(vraagId) {
   }
 }
 
-export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false }) {
+export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false, onWoordHulp = null }) {
   if (!uitlegPad) return null;
 
   const fouten = useMemo(() => (vraagId ? getVraagFouten(vraagId) : 0), [vraagId]);
@@ -160,14 +160,26 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         </Section>
       )}
 
-      {/* MOEILIJKE WOORDEN */}
+      {/* MOEILIJKE WOORDEN. Met onWoordHulp (Mark 11 jul) is elk woord tikbaar
+          → hulp-kaartje met buddy-knop + eventuele les over dat woord. */}
       {uitlegPad.woorden?.length > 0 && (
         <Section title="🔤 Moeilijke woorden">
           <dl style={{ margin: 0, lineHeight: 1.55 }}>
             {uitlegPad.woorden.map((w, i) => (
               <div key={i} style={{ marginBottom: 8 }}>
                 <dt style={{ fontWeight: 700, color: "var(--color-text-strong)", display: "inline" }}>
-                  {w.woord}:
+                  {onWoordHulp ? (
+                    <button
+                      onClick={() => onWoordHulp(w)}
+                      style={{
+                        background: "none", border: 0, padding: 0, cursor: "pointer",
+                        font: "inherit", fontWeight: 700, color: "#5db3ff",
+                        textDecoration: "underline dotted", textUnderlineOffset: 3,
+                      }}
+                    >
+                      {w.woord}
+                    </button>
+                  ) : w.woord}:
                 </dt>
                 <dd style={{ display: "inline", margin: "0 0 0 6px" }}>{w.uitleg}</dd>
               </div>

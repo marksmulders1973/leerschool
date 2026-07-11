@@ -55,7 +55,7 @@ function stopSpeak() {
   try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ }
 }
 
-export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, stepIdx, stepExplanation, currentCheck, lastWrongAnswer }) {
+export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, stepIdx, stepExplanation, currentCheck, lastWrongAnswer, startVraag = null }) {
   const [messages, setMessages] = useState(() => {
     if (typeof window === "undefined") return [];
     try {
@@ -92,6 +92,14 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     return () => { stopSpeak(); setPraat(false); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
+
+  // WoordHulp (Mark 11 jul): geopend via een tik op een moeilijk woord →
+  // vraag vooringevuld ("Wat betekent kernfusie?"). Kind drukt zelf op
+  // versturen — bewuste AI-call, geen automatische kosten.
+  useEffect(() => {
+    if (open && startVraag) setInput(startVraag);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, startVraag]);
 
   // Reload history bij wisseling van stap (component blijft mounted, alleen
   // pathId/stepIdx veranderen).
