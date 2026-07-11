@@ -32,8 +32,11 @@ function injectSwVersion() {
           const unique = Array.from(new Set(matches))
           // Whitelist: alleen entry-bundles + react/router-vendors. data-* en
           // ObliteratorGame + vendor-three + vendor-supabase NIET pre-cachen.
+          // De Rollup-entry heet 'main' (zie build.rollupOptions.input) — dus
+          // op main- matchen; index- blijft erbij voor als de entry ooit
+          // terug-hernoemd wordt.
           assets = unique.filter((p) =>
-            /\/assets\/index-/.test(p) ||
+            /\/assets\/(?:main|index)-/.test(p) ||
             /\/assets\/vendor-react(?:-router)?-/.test(p)
           )
         } catch (e) {

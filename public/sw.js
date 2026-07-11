@@ -108,7 +108,11 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // HTML / navigation: network-first
+  // HTML / navigation: network-first. Offline-fallback: eerst de exacte URL,
+  // anders de "/"-shell — het is een SPA, dus /vandaag en /leren serveren
+  // dezelfde index.html (vercel.json rewrite't alles naar /). Zonder deze
+  // fallback kreeg een offline deep-link de browser-foutpagina terwijl de
+  // shell gewoon in de cache stond.
   e.respondWith(
     fetch(e.request)
       .then((response) => {
@@ -118,7 +122,9 @@ self.addEventListener("fetch", (e) => {
         }
         return response;
       })
-      .catch(() => caches.match(e.request))
+      .catch(() =>
+        caches.match(e.request).then((r) => r || caches.match("/"))
+      )
   );
 });
 

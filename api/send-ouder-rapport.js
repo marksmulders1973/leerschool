@@ -75,16 +75,25 @@ async function haalNiveauSectie(email, base, key) {
   }
 }
 
-// Alle mastery-rijen van één kind (op naam, zoals de RPC ook matcht).
-async function haalKindActiviteit(childName, base, key) {
+// Alle mastery-rijen van één kind. Scoping (bug-jacht 11 jul): als de
+// koppeling een child_user_id heeft (kind was ingelogd bij het inwisselen van
+// de koppelcode) filteren we dáárop — anders mengen naamgenoten uit andere
+// gezinnen ('Sophie', 'Tom') hun data in dit rapport. Legacy-koppelingen
+// zonder user_id houden naam-match.
+// Foutpad: null = "ophalen mislukt" (rapport moet dat eerlijk zeggen),
+// [] = "echt geen activiteit". Voorheen werd elke storing stilletjes
+// 'deze week niet geoefend' — actief onjuiste info naar de ouder.
+async function haalKindActiviteit(childName, childUserId, base, key) {
   try {
     const naam = encodeURIComponent(String(childName).trim());
+    const userFilter = childUserId ? `&user_id=eq.${encodeURIComponent(childUserId)}` : "";
     const r = await sb(
-      `topic_mastery?player_name=ilike.${naam}&select=path_id,attempts,correct,streak,last_seen&order=last_seen.desc&limit=300`,
+      `topic_mastery?player_name=ilike.${naam}${userFilter}&select=path_id,attempts,correct,streak,last_seen&order=last_seen.desc&limit=300`,
       { method: "GET" }, base, key
     );
+    if (!r.ok) return null;
     const rows = await r.json();
-    if (!Array.isArray(rows)) return [];
+    if (!Array.isArray(rows)) return null;
     // Dedupliceer per pad: 'Brian' en 'brian' zijn aparte rijen (UNIQUE op
     // player_name+path_id is hoofdlettergevoelig) — samenvoegen, anders staat
     // hetzelfde onderwerp twee keer in de mail.
@@ -98,7 +107,7 @@ async function haalKindActiviteit(childName, base, key) {
     }
     return [...perPad.values()].sort((a, b) => String(b.last_seen).localeCompare(String(a.last_seen)));
   } catch {
-    return [];
+    return null;
   }
 }
 
@@ -110,8 +119,22 @@ function balkKleur(pct) {
 }
 
 // Eén kind-sectie (HTML + tekst) uit de mastery-rijen.
+// rows === null betekent: ophalen mislukt → eerlijk melden, niet doen alsof
+// het kind niets deed (data-eerlijkheid, zie header).
 function maakKindSectie(childName, rows) {
   const naam = esc(childName);
+
+  if (rows === null) {
+    const html = `
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px;margin:0 0 18px;">
+        <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">👤 ${naam}</div>
+        <p style="font-size:14px;line-height:1.6;color:#cdd6e5;margin:0 0 12px;">We konden de oefen-gegevens op dit moment niet ophalen (tijdelijke storing bij ons). De actuele stand vind je altijd in het ouder-dashboard:</p>
+        <a href="${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;">📈 Bekijk de actuele stand →</a>
+      </div>`;
+    const text = `${childName}\nWe konden de oefen-gegevens nu niet ophalen (tijdelijke storing). Actuele stand: ${SITE}/ouder\n`;
+    return { html, text };
+  }
+
   const sinds = Date.now() - WEEK_MS;
   const dezeWeek = rows.filter((r) => r.last_seen && new Date(r.last_seen).getTime() >= sinds);
 
@@ -207,13 +230,16 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
   }
   if (paren.length === 0) return { sent: 0, kandidaten: 0, reden: "geen-geverifieerde-koppelingen" };
 
-  // Groepeer kinderen per ouder-adres → één mail per ouder.
+  // Groepeer kinderen per ouder-adres → één mail per ouder. Per kind ook het
+  // child_user_id meenemen (naam → uid); staat de naam er dubbel in, dan wint
+  // de rij mét uid (strakst gescopet).
   const perOuder = new Map();
   for (const p of paren) {
     if (!p.parent_email || !p.child_name) continue;
     const adres = String(p.parent_email).toLowerCase();
-    if (!perOuder.has(adres)) perOuder.set(adres, new Set());
-    perOuder.get(adres).add(p.child_name);
+    if (!perOuder.has(adres)) perOuder.set(adres, new Map());
+    const kinderen = perOuder.get(adres);
+    if (!kinderen.has(p.child_name) || p.child_user_id) kinderen.set(p.child_name, p.child_user_id || null);
   }
 
   let gelukt = 0;
@@ -221,8 +247,9 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
   for (const [adres, kinderen] of perOuder) {
     try {
       const secties = [];
-      for (const kind of kinderen) {
-        const rows = await haalKindActiviteit(kind, base, key);
+      for (const [kind, kindUid] of kinderen) {
+        const rows = await haalKindActiviteit(kind, kindUid, base, key);
+        if (rows === null) fouten.push(adres.slice(0, 6) + ":activiteit-fetch-mislukt");
         secties.push(maakKindSectie(kind, rows));
       }
       const niveauSectie = await haalNiveauSectie(adres, base, key);
