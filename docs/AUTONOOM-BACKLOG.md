@@ -599,3 +599,4 @@ Beide negatief op verschillende dingen. Mark koos **B = strategie-shift**:
 **Open uit Agent B-plan** (vereisen Mark-go):
 - Ouder-dashboard v1 (nieuwe component + Supabase-schema)
 - Open-vragen wiskunde/aardrijkskunde VMBO-examens (PlayQuiz/LearnPath-refactor)
+- 2026-07-12: Park-leermomenten F1 live (Mark: 'alles benoembaar, wereld=leerschool') — stoomtrein met rookpluim, tik op trein → leermoment-paneel → leerpad industriële revolutie; registry parkLeermomenten.js; F2-kandidaten: boom (hout), achtbaan (hellingsgraad+ijzer), reuzenrad (cirkel), station. Commit 632e7e1.
