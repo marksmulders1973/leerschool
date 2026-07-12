@@ -337,10 +337,45 @@ export function SwingRide({ position = [0, 0, 0], rideRef }) {
   );
 }
 
+// ☁️ Stoompluim — maakt van de trein een STOOMTREIN (Mark 12 jul: "alles in het
+// park is benoembaar, begin met de trein"). Drie witte wolkjes die uit de
+// schoorsteen omhoog kringelen, groeien en vervagen — licht (3 low-poly bollen,
+// meshBasicMaterial, geen schaduw) zodat AdaptiveDpr er geen last van heeft.
+// `drift` = lokale richting waarin de rook wegwaait (naar achteren t.o.v. rijden).
+export function StoomPluim({ top = [0, 1.1, 0], drift = [0.8, 0, 0], scale = 1 }) {
+  const refs = useRef([]);
+  useFrame((s) => {
+    const t = s.clock.elapsedTime;
+    for (let i = 0; i < refs.current.length; i++) {
+      const m = refs.current[i];
+      if (!m) continue;
+      const ph = (t * 0.5 + i / 3) % 1; // 0→1: net uit de pijp → opgelost
+      m.position.set(
+        top[0] + drift[0] * ph * scale,
+        top[1] + (0.15 + ph * 1.3) * scale,
+        top[2] + drift[2] * ph * scale
+      );
+      m.scale.setScalar((0.1 + ph * 0.28) * scale);
+      m.material.opacity = 0.55 * (1 - ph);
+    }
+  });
+  return (
+    <group>
+      {[0, 1, 2].map((i) => (
+        <mesh key={i} ref={(el) => (refs.current[i] = el)}>
+          <sphereGeometry args={[1, 8, 8]} />
+          <meshBasicMaterial color="#f4f6f8" transparent opacity={0.5} depthWrite={false} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 // Treintje (procedureel) — een locomotief + 2 wagonnetjes die rondjes rijden
 // over een rond spoor. De hele trein-groep draait om het midden; elke wagon
 // staat op zijn hoek met de neus in de rij-richting (raaklijn).
-export function TrainRide({ position = [0, 0, 0] }) {
+// `onLeermoment` (Mark 12 jul): tik op de trein → stoomtrein-leermoment.
+export function TrainRide({ position = [0, 0, 0], onLeermoment = null }) {
   const train = useRef();
   useFrame((_, dt) => { if (train.current) train.current.rotation.y += dt * 0.5; });
   const R = 2.0;
@@ -351,7 +386,7 @@ export function TrainRide({ position = [0, 0, 0] }) {
   ];
   const hout = "#7a6f63", staal = "#555";
   return (
-    <group position={position}>
+    <group position={position} onClick={onLeermoment ? (e) => { e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
       {/* rond spoor */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0]} receiveShadow>
         <ringGeometry args={[R - 0.2, R + 0.2, 44]} />
@@ -368,6 +403,8 @@ export function TrainRide({ position = [0, 0, 0] }) {
                   <mesh castShadow position={[0, 0.32, 0]}><boxGeometry args={[0.5, 0.4, 0.9]} /><meshStandardMaterial color={w.color} flatShading roughness={0.9} /></mesh>
                   <mesh castShadow position={[0, 0.66, -0.18]}><boxGeometry args={[0.5, 0.36, 0.42]} /><meshStandardMaterial color={w.color} flatShading roughness={0.9} /></mesh>
                   <mesh position={[0, 0.72, 0.32]}><cylinderGeometry args={[0.08, 0.1, 0.34, 10]} /><meshStandardMaterial color={staal} roughness={0.7} /></mesh>
+                  {/* stoom uit de schoorsteen — pijp zit vooraan (+z), rook waait naar achteren */}
+                  <StoomPluim top={[0, 0.95, 0.32]} drift={[0, 0, -0.7]} scale={0.7} />
                 </>
               ) : (
                 <>
@@ -1725,7 +1762,8 @@ export function Station({ position = [0, 0, 0], rotation = 0 }) {
 // = { pts:[{x,y,z}...], loop:bool }. We lopen met een afstand `s` over de poly-
 // lijn; elke wagon zit een vaste afstand achter de vorige. `headRef` krijgt de
 // kop-positie + rijrichting zodat de camera mee kan rijden.
-export function RouteTrain({ route, headRef = null, wagons = 3 }) {
+// `onLeermoment` (Mark 12 jul): tik op de rijdende trein → stoomtrein-leermoment.
+export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = null }) {
   const refs = useRef([]);
   const sRef = useRef(0);
   // Vloeiende baan (Mark 5 jul: "bochten die netjes aansluiten"): een Catmull-
@@ -1792,12 +1830,15 @@ export function RouteTrain({ route, headRef = null, wagons = 3 }) {
       <mesh castShadow><tubeGeometry args={[data.railL, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
       <mesh castShadow><tubeGeometry args={[data.railR, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
       {carts.map((c, i) => (
-        <group key={i} ref={(el) => (refs.current[i] = el)}>
+        <group key={i} ref={(el) => (refs.current[i] = el)} onClick={onLeermoment ? (e) => { e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
           {c.loco ? (
             <group>
               <mesh position={[0, 0.45, 0]} castShadow><boxGeometry args={[1.5, 0.7, 0.9]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.7} /></mesh>
               <mesh position={[0.5, 0.95, 0]} castShadow><boxGeometry args={[0.5, 0.55, 0.8]} /><meshStandardMaterial color="#922b21" flatShading roughness={0.7} /></mesh>
               <mesh position={[-0.55, 0.85, 0]} castShadow><cylinderGeometry args={[0.12, 0.16, 0.4, 10]} /><meshStandardMaterial color="#34495e" roughness={0.8} /></mesh>
+              {/* stoom uit de schoorsteen (schoorsteen op -x = voorkant; cabine op +x) —
+                  de pluim waait naar de cabine toe, dus met de rijrichting mee naar achteren */}
+              <StoomPluim top={[-0.55, 1.05, 0]} drift={[0.9, 0, 0]} />
               <mesh position={[0, 0.18, 0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
               <mesh position={[0, 0.18, -0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
             </group>

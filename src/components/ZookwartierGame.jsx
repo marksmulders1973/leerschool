@@ -22,6 +22,7 @@ import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
+import { PARK_LEERMOMENTEN } from "../features/zoo/parkLeermomenten";
 import BuddyKop from "../features/zoo/BuddyKop";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
@@ -1167,6 +1168,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setTafereel(t);
     try { track("park_tafereel", { id }); } catch { /* nooit laten breken */ }
   };
+  // 🌍 "Alles is benoembaar" (Mark 12 jul): tik op een park-object (stoomtrein,
+  // later boom/achtbaan/…) → zelfde paneel als de taferelen: wat is het, hoe
+  // werkt het, één klik naar het leerpad. Registry: parkLeermomenten.js.
+  const openLeermoment = (id) => {
+    if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
+    const m = PARK_LEERMOMENTEN[id];
+    if (!m) return;
+    setTafereel(m);
+    try { track("park_leermoment", { id }); } catch { /* nooit laten breken */ }
+  };
   const tafereelNaarLeren = () => {
     if (!tafereel) return;
     try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId }); track("park_naar_leren", { via: "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
@@ -1500,6 +1511,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           zwakVak={zwakVak}
           onTapBezoeker={tapBezoeker}
           onTafereel={openTafereel}
+          onLeermoment={openLeermoment}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}

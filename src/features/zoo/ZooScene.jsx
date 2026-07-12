@@ -310,7 +310,7 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, onLeermoment }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
@@ -322,7 +322,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "coaster") return <Coaster position={[x, y, z]} rotation={rotation} baan={a.baan} rideRef={rideRef} />;
-  if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
+  if (a.procedural === "train") return <TrainRide position={[x, y, z]} onLeermoment={onLeermoment} />;
   if (a.procedural === "rail") return <RailTile position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "station") return <Station position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
@@ -574,7 +574,7 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, spawn = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, spawn = null }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -862,7 +862,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
         {buddyId && !firstPerson && rideIdx == null && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
-        {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} />}
+        {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} onLeermoment={onLeermoment} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
@@ -915,6 +915,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 onParts={onHouseParts}
                 mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
                 kraam={kramen[getAsset(it.assetId)?.voorziet]}
+                onLeermoment={onLeermoment}
               />
             </group>
           );
