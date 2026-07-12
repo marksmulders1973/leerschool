@@ -26,7 +26,7 @@ import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
-import WoordHulpSheet, { TekstMetWoordHulp, vindLesVoorWoord } from "./WoordHulp.jsx";
+import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
@@ -379,6 +379,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     try { track("woordhulp_open", { woord: w?.woord, pathId }); } catch { /* */ }
     setWoordHulp(w);
   }, [pathId]);
+  // Woord-hulp-kaartje sluit automatisch bij stap-/checkwissel of modewissel
+  // (kindertest 12 jul: bleef anders onderin het scherm plakken tijdens het
+  // doorlopen van de checks en op het klaar-scherm).
+  useEffect(() => { setWoordHulp(null); }, [stepIdx, checkIdx, mode]);
   // Buddy-tutor (Mark 2026-07-01): "Vraag hulp aan Vonk"-knop = het maatje dat
   // de leerling koos (of Vonk) dat meedenkt. Oproepbaar, niet altijd meelopend.
   const [tutorBuddy] = useState(() => actieveBuddyPersona());
@@ -663,11 +667,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       attempts,
     };
     const opts = { onConflict: "player_name,learn_path_id,step_idx" };
+    // Kindertest 12 jul: bij een verlopen sessie had de app nog een gecachte
+    // authUser.id, maar het DB-verzoek was anoniem → RLS weigerde (403, want
+    // user_id ≠ null bij auth.uid()=null). Los op door bij een RLS-/permissie-
+    // fout terug te vallen op user_id=null (legacy naamloos) zodat de voortgang
+    // tóch bewaard wordt in plaats van geruisloos te verdwijnen.
+    const isRlsError = (e) => e && (e.code === "42501" || /row-level security|permission denied/i.test(e.message || ""));
     try {
       const { error } = await supabase.from("learn_progress").upsert(row, opts);
       if (error) {
+        const fallbackRow = isRlsError(error) && row.user_id != null ? { ...row, user_id: null } : row;
         await new Promise((r) => setTimeout(r, 1500));
-        const { error: retryError } = await supabase.from("learn_progress").upsert(row, opts);
+        const { error: retryError } = await supabase.from("learn_progress").upsert(fallbackRow, opts);
         if (retryError) console.warn("[LearnPath] voortgang NIET opgeslagen:", retryError.message);
       }
     } catch (e) {
@@ -1358,11 +1369,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                         fontFamily: "var(--font-display)",
                       }}>{letter}</span>
                       <span style={{ flex: 1 }}>
-                        <TekstMetWoordHulp tekst={opt} woorden={currentCheck.uitlegPad?.woorden} onWoord={openWoordHulp} />
+                        <MdInline text={opt} />
                       </span>
                     </span>
                   ) : (
-                    <TekstMetWoordHulp tekst={opt} woorden={currentCheck.uitlegPad?.woorden} onWoord={openWoordHulp} />
+                    // Antwoordoptie = platte tekst: de HELE knop kiest het antwoord.
+                    // Woord-hulp zit alleen in de vraagtekst (kindertest 12 jul:
+                    // klikbaar woord ín de knop kaapte de antwoordkeuze — "knop-
+                    // in-knop"). MdInline houdt **vet**/formules heel.
+                    <MdInline text={opt} />
                   )}
                 </button>
               );

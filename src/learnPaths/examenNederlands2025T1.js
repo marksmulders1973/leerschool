@@ -284,7 +284,7 @@ const steps = [
 
 const path = {
   id: "examen-nederlands-2025-t1",
-  subject: "nederlands",
+  subject: "taal",
   title: "Examen Nederlands 2025 — tijdvak 1 (VMBO-GL/TL)",
   shortTitle: "Examen Nederlands 2025-T1",
   description: "6 echte examenvragen Nederlands VMBO-GL/TL 2025 tijdvak 1, met didactische uitleg + leerpad-link bij elke fout.",

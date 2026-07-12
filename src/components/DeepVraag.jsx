@@ -245,11 +245,12 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
               return (
                 <button key={n.key} type="button" onClick={() => setNiveau(n.key)}
                   style={{
-                    padding: "5px 12px", borderRadius: 999,
+                    // Tap-target ≥44px voor kindervingers (kindertest 12 jul: was 30px).
+                    padding: "11px 16px", minHeight: 44, borderRadius: 999,
                     border: actief ? `1.5px solid ${GROEN}` : "1px solid rgba(255,255,255,0.16)",
                     background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.04)",
                     color: actief ? GROEN_LICHT : "rgba(255,255,255,0.7)",
-                    fontFamily: "var(--font-body, sans-serif)", fontSize: 12.5, fontWeight: 700, cursor: "pointer",
+                    fontFamily: "var(--font-body, sans-serif)", fontSize: 13.5, fontWeight: 700, cursor: "pointer",
                   }}>{n.label}</button>
               );
             })}

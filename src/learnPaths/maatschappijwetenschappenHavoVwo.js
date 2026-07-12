@@ -333,7 +333,7 @@ const maatschappijwetenschappenHavoVwo = {
   title: "Maatschappijwetenschappen kernconcepten (HAVO/VWO)",
   emoji: "🏛️",
   level: "havo4-5-vwo",
-  subject: "maatschappij",
+  subject: "maatschappijleer",
   referentieNiveau: "havo-vwo-CSE-MAW",
   sloThema: "MAW HAVO/VWO — kernconcepten politiek/binding/vorming/verhouding eindexamen",
   prerequisites: [

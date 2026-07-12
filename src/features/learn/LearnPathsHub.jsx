@@ -386,23 +386,38 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     const niveauBuckets = hasNiveau ? new Set(NIVEAU_BUCKETS[niveauFilter].buckets) : null;
     // Synoniemen: zoekterm → vak-keys, zodat "nederlands" ook 'taal'-paden vindt.
     const synonymSubjects = hasSearch ? subjectsForQuery(qRaw) : null;
-    const matchesFilter = (p) => {
+    const passesBase = (p) => {
       if (hasPijler && !pijlerSubjects.has(p.subject || "wiskunde")) return false;
       if (hasNiveau && !niveauBuckets.has(parseLevel(p.level).bucketKey)) return false;
+      return true;
+    };
+    const hayMatch = (p) => {
+      const hay = [
+        p.title,
+        p.intro,
+        p.subject,
+        p.sloThema,
+        ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
+      ].filter(Boolean).join(" ").toLowerCase();
+      return hay.includes(qRaw);
+    };
+    const matchesFilter = (p) => {
+      if (!passesBase(p)) return false;
       if (hasSearch) {
-        const hay = [
-          p.title,
-          p.intro,
-          p.subject,
-          p.sloThema,
-          ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
-        ].filter(Boolean).join(" ").toLowerCase();
         const subjMatch = synonymSubjects && synonymSubjects.has(p.subject || "wiskunde");
-        if (!hay.includes(qRaw) && !subjMatch) return false;
+        if (!hayMatch(p) && !subjMatch) return false;
       }
       return true;
     };
-    const filteredPaths = filterActief ? allPaths.filter(matchesFilter) : [];
+    // Kindertest 12 jul: een specifieke zoekterm ("breuk") expandeerde via de
+    // vak-synoniemen naar het HELE vak (33 wiskunde-resultaten). Fix: heeft de
+    // zoekterm échte tekst-treffers (titel/trefwoord), toon dan ALLEEN die; val
+    // pas terug op vak-brede synoniem-expansie als er geen enkele tekst-treffer
+    // is (bv. een kale vaknaam als "nederlands" die nergens in een titel staat).
+    const textPaths = (filterActief && hasSearch) ? allPaths.filter((p) => passesBase(p) && hayMatch(p)) : [];
+    const filteredPaths = filterActief
+      ? ((hasSearch && textPaths.length > 0) ? textPaths : allPaths.filter(matchesFilter))
+      : [];
     // Rol-filter (PO/VO) kan resultaten verbergen. Tel hoeveel matches er in het
     // ándere niveau zijn, zodat we "er is meer" kunnen melden i.p.v. kaal lijken.
     const roleHidesResults = (effectivePo || effectiveVo) && !showAllLevels;

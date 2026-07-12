@@ -12,11 +12,14 @@ import supabase from "../../supabase.js";
 export async function getStreakInfo(userId) {
   if (!userId) return null;
   try {
+    // maybeSingle i.p.v. single (kindertest 12 jul): bij een nog-niet-bestaand
+    // of door RLS-onzichtbaar profiel gaf .single() een 406 Not Acceptable in
+    // de console. maybeSingle geeft netjes null terug zonder foutmelding.
     const { data } = await supabase
       .from("profiles")
       .select("streak_days, last_played_date")
       .eq("id", userId)
-      .single();
+      .maybeSingle();
     return data || null;
   } catch {
     return null;

@@ -753,10 +753,15 @@ export default function App() {
     questions = questions.map((q) => {
       if (!q.options || q.options.length < 2) return q;
       const correctText = q.options[q.answer];
-      // Verwijder duplicaten (behoud correct antwoord altijd)
+      // Verwijder duplicaten (behoud correct antwoord altijd).
+      // HOOFDLETTERGEVOELIG (fix kindertest 12 jul): bij spelling-/hoofdletter-/
+      // leesteken-vragen verschillen de opties ALLEEN in schrijfwijze (bv. "mijn…"
+      // vs "Mijn…"). Een lowercase-dedup sloeg die plat tot 1 optie en markeerde
+      // het foute antwoord als juist. Alleen exact-identieke opties (na trim)
+      // gelden nu als duplicaat.
       const seen = new Set();
       const deduped = q.options.filter((opt) => {
-        const key = String(opt).trim().toLowerCase();
+        const key = String(opt).trim();
         if (seen.has(key)) return false;
         seen.add(key);
         return true;
@@ -765,7 +770,7 @@ export default function App() {
       // Detecteer + log; we kunnen er weinig aan doen behalve oorspronkelijke
       // volgorde behouden zodat de vraag tenminste consistent blijft.
       const correctStillThere = deduped.some(
-        (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+        (opt) => String(opt).trim() === String(correctText).trim()
       );
       if (!correctStillThere) {
         // eslint-disable-next-line no-console
@@ -776,7 +781,7 @@ export default function App() {
       const heeftPositieReferentie = deduped.some((opt) => REFERS_TO_POSITION.test(String(opt)));
       if (heeftPositieReferentie) {
         return { ...q, options: deduped, answer: deduped.findIndex(
-          (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+          (opt) => String(opt).trim() === String(correctText).trim()
         ) };
       }
       const shuffled = [...deduped];
@@ -785,7 +790,7 @@ export default function App() {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return { ...q, options: shuffled, answer: shuffled.findIndex(
-        (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+        (opt) => String(opt).trim() === String(correctText).trim()
       ) };
     });
     const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);

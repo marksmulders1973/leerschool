@@ -279,7 +279,7 @@ const steps = [
 
 const path = {
   id: "examen-nederlands-2022-t2",
-  subject: "nederlands",
+  subject: "taal",
   title: "Examen Nederlands 2022 — tijdvak 2 (VMBO-GL/TL)",
   shortTitle: "Examen Nederlands 2022-T2",
   description: "6 echte examenvragen Nederlands VMBO-GL/TL 2022 tijdvak 2, met didactische uitleg + leerpad-link bij elke fout.",

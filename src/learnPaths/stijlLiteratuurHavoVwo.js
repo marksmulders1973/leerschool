@@ -397,7 +397,7 @@ const stijlLiteratuurHavoVwo = {
   title: "Stijlfiguren + Literatuur (HAVO/VWO Nederlands)",
   emoji: "📜",
   level: "havo-vwo-4-5",
-  subject: "nederlands",
+  subject: "taal",
   referentieNiveau: "havo-3F / vwo-3S",
   sloThema: "Nederlands — Stijlfiguren + Literatuur (CSE-onderwerp)",
   prerequisites: [

@@ -328,7 +328,7 @@ const maatschappijleerHavoVwo = {
   title: "Maatschappijleer (HAVO/VWO klas 4 verplicht)",
   emoji: "🏛️",
   level: "havo4-5-vwo",
-  subject: "maatschappij",
+  subject: "maatschappijleer",
   referentieNiveau: "havo-vwo-SE-maatschappijleer",
   sloThema: "Maatschappijleer HAVO/VWO — verplicht SE klas 4",
   prerequisites: [
