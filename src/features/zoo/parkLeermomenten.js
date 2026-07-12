@@ -27,6 +27,66 @@ export const PARK_LEERMOMENTEN = {
     leerpadId: "industriele-revolutie-po",
     leerLabel: "De industriële revolutie",
   },
+  boom: {
+    id: "boom",
+    emoji: "🌳",
+    titel: "De boom",
+    praatje:
+      "Zie je deze boom? Hij maakt zijn eigen eten! Met zonlicht, water en lucht maakt hij suiker in zijn bladeren — dat heet fotosynthese. En van de stam maken wij planken, papier en zelfs de bankjes hier in het park.",
+    weetje:
+      "Een grote boom maakt per dag genoeg zuurstof voor ongeveer twee mensen. Zonder bomen konden wij niet ademen!",
+    leerpadId: "fotosynthese-biologie",
+    leerLabel: "Fotosynthese — hoe planten eten maken",
+  },
+  achtbaan: {
+    id: "achtbaan",
+    emoji: "🎢",
+    titel: "De achtbaan",
+    praatje:
+      "De kettinglift trekt het karretje langzaam omhoog — en daarna doet de zwaartekracht al het werk! Hoe steiler de helling, hoe harder je naar beneden zoeft. En de baan zelf is van staal: dat maak je door ijzer uit de grond te smelten in een gloeiend hete oven.",
+    weetje:
+      "IJzer zit als erts in stenen diep in de grond. In een hoogoven van bijna 2000 graden smelt het eruit — zo ontstaat staal, sterk genoeg voor een achtbaan vol lussen.",
+    leerpadId: "krachten-natuurkunde",
+    leerLabel: "Krachten en zwaartekracht",
+  },
+  reuzenrad: {
+    id: "reuzenrad",
+    emoji: "🎡",
+    titel: "Het reuzenrad",
+    praatje:
+      "Een reuzenrad is één grote cirkel. Hoe ver reis jij in één rondje? Precies de omtrek: de afstand helemaal rondom de cirkel. Hoe groter het rad, hoe langer jouw rondje — en dat kun je uitrekenen!",
+    weetje:
+      "De omtrek van élke cirkel is altijd iets meer dan 3 keer de doorsnede (ongeveer 3,14 keer — dat getal heet pi). Dat geldt voor een fietswiel én voor dit reuzenrad.",
+    leerpadId: "oppervlakte-omtrek-po",
+    leerLabel: "Omtrek en oppervlakte",
+  },
+  draaimolen: {
+    id: "draaimolen",
+    emoji: "🎠",
+    titel: "De draaimolen",
+    praatje:
+      "Kijk goed: de paardjes aan de buitenkant gaan sneller dan die in het midden! Ze draaien allebei één rondje in dezelfde tijd, maar de buitenste legt een langere weg af. Grotere afstand in dezelfde tijd — dat is een hogere snelheid.",
+    weetje:
+      "Daarom start een hardloper in de buitenste baan van een atletiekbaan een stukje vóór de rest — anders zou hij verder moeten rennen voor hetzelfde rondje.",
+    leerpadId: "tijd-snelheid-afstand-po",
+    leerLabel: "Tijd, snelheid en afstand",
+  },
 };
 
 export const LEERMOMENT_BY_ID = PARK_LEERMOMENTEN;
+
+// Welk geplaatst object hoort bij welk leermoment? (assetId → leermoment-id)
+// Gebruikt door de rondloop-gids in ZooScene: kom je bij zo'n object in de
+// buurt en blijf je even, dan vertelt je maatje er ongevraagd (hardop) over.
+export const LEERMOMENT_BY_ASSET = {
+  trein: "stoomtrein",
+  station: "stoomtrein",
+  tree: "boom",
+  treeOak: "boom",
+  treePalm: "boom",
+  achtbaan: "achtbaan",
+  achtbaanKlein: "achtbaan",
+  achtbaanSpiraal: "achtbaan",
+  ferris: "reuzenrad",
+  carousel: "draaimolen",
+};

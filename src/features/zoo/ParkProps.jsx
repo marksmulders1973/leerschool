@@ -374,8 +374,10 @@ export function StoomPluim({ top = [0, 1.1, 0], drift = [0.8, 0, 0], scale = 1 }
 // Treintje (procedureel) — een locomotief + 2 wagonnetjes die rondjes rijden
 // over een rond spoor. De hele trein-groep draait om het midden; elke wagon
 // staat op zijn hoek met de neus in de rij-richting (raaklijn).
-// `onLeermoment` (Mark 12 jul): tik op de trein → stoomtrein-leermoment.
-export function TrainRide({ position = [0, 0, 0], onLeermoment = null }) {
+// Leermoment van het treintje loopt via het selectie-menu ("💡 Hoe werkt dit?")
+// zodat tikken = selecteren blijft (verplaatsen/instappen). De rondloop-gids
+// praat er sowieso ongevraagd over (GidsWatcher).
+export function TrainRide({ position = [0, 0, 0] }) {
   const train = useRef();
   useFrame((_, dt) => { if (train.current) train.current.rotation.y += dt * 0.5; });
   const R = 2.0;
@@ -386,7 +388,7 @@ export function TrainRide({ position = [0, 0, 0], onLeermoment = null }) {
   ];
   const hout = "#7a6f63", staal = "#555";
   return (
-    <group position={position} onClick={onLeermoment ? (e) => { e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
+    <group position={position}>
       {/* rond spoor */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0]} receiveShadow>
         <ringGeometry args={[R - 0.2, R + 0.2, 44]} />

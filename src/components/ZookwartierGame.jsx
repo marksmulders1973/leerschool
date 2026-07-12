@@ -22,7 +22,8 @@ import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
-import { PARK_LEERMOMENTEN } from "../features/zoo/parkLeermomenten";
+import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET } from "../features/zoo/parkLeermomenten";
+import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
@@ -1166,6 +1167,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const t = TAFEREEL_BY_ID[id];
     if (!t) return;
     setTafereel(t);
+    spreek(`${t.titel}. ${t.praatje} Wist je dat? ${t.weetje}`);
     try { track("park_tafereel", { id }); } catch { /* nooit laten breken */ }
   };
   // 🌍 "Alles is benoembaar" (Mark 12 jul): tik op een park-object (stoomtrein,
@@ -1176,8 +1178,36 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const m = PARK_LEERMOMENTEN[id];
     if (!m) return;
     setTafereel(m);
+    // Ook hardop voorlezen (tenzij de gids op stil staat) — "je hoort hoe alles werkt".
+    spreek(`${m.titel}. ${m.praatje} Wist je dat? ${m.weetje}`);
     try { track("park_leermoment", { id }); } catch { /* nooit laten breken */ }
   };
+  // 🔊 Rondloop-gids (Mark 12 jul): het maatje praat ONGEVRAAGD — hardop via de
+  // luidspreker (Web Speech, gratis/lokaal) — wanneer je ~2 s bij een benoembaar
+  // object blijft kijken (GidsWatcher in ZooScene). Stil-knop (🔇 in de HUD)
+  // zet 'm helemaal uit; keuze blijft bewaard op dit apparaat.
+  const [gidsStil, setGidsStilUI] = useState(() => gidsIsStil());
+  const [gidsMoment, setGidsMoment] = useState(null);
+  const gidsTimer = useRef(null);
+  const toggleGidsStil = () => {
+    const nieuw = !gidsStil;
+    zetGidsStil(nieuw);
+    setGidsStilUI(nieuw);
+    if (nieuw) { setGidsMoment(null); }
+    try { track("park_gids_stil", { stil: nieuw }); } catch { /* */ }
+  };
+  const onGidsMoment = (id) => {
+    if (gidsStil || tafereel || dialoog || menuOpen || panel || rekenVraag) return;
+    const m = PARK_LEERMOMENTEN[id];
+    if (!m) return;
+    setGidsMoment(m);
+    spreek(`${m.titel}. ${m.praatje}`);
+    try { track("park_gids_praat", { id }); } catch { /* */ }
+    clearTimeout(gidsTimer.current);
+    gidsTimer.current = setTimeout(() => setGidsMoment(null), 16000);
+  };
+  // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
+  useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
   const tafereelNaarLeren = () => {
     if (!tafereel) return;
     try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId }); track("park_naar_leren", { via: "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
@@ -1291,6 +1321,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               📚 Verdien 🪙
             </button>
           )}
+          {/* 🔊 Parkgids aan/uit: praat hardop over wat je in het park ziet. */}
+          <button onClick={toggleGidsStil} title={gidsStil ? "Parkgids weer laten praten" : "Parkgids stil zetten"} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "800 15px system-ui", color: "#234", background: gidsStil ? "rgba(255,255,255,0.65)" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer", opacity: gidsStil ? 0.8 : 1 }}>{gidsStil ? "🔇" : "🔊"}</button>
           {/* Alle overige functies gebundeld in één ☰-menu → tijdens spelen bijna alleen park in beeld. */}
           <button onClick={() => setMenuOpen((v) => !v)} title="Menu" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode || bouwen) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "800 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>☰</button>
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
@@ -1512,6 +1544,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onTapBezoeker={tapBezoeker}
           onTafereel={openTafereel}
           onLeermoment={openLeermoment}
+          onGidsMoment={onGidsMoment}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
@@ -1819,6 +1852,23 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 🎠 Instappen
               </button>
             )}
+            {/* 💡 Benoembaar object (Mark 12 jul): leg uit wat het is + hoe het
+                werkt + leerpad-link — het maatje leest het ook hardop voor. */}
+            {LEERMOMENT_BY_ASSET[placedItems[selectedIdx]?.assetId] && (
+              <button
+                onClick={() => {
+                  const m = PARK_LEERMOMENTEN[LEERMOMENT_BY_ASSET[placedItems[selectedIdx]?.assetId]];
+                  if (!m) return;
+                  sluitSelectie();
+                  setTafereel(m);
+                  spreek(`${m.titel}. ${m.praatje} Wist je dat? ${m.weetje}`);
+                  try { track("park_leermoment", { id: m.id, via: "selectie" }); } catch { /* */ }
+                }}
+                style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}
+              >
+                💡 Hoe werkt dit?
+              </button>
+            )}
             {selKind === "animal" && <button onClick={() => voerDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: dierGevoerdVandaag(placedItems[selectedIdx]) ? "#cdeccb" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🌾 {dierGevoerdVandaag(placedItems[selectedIdx]) ? "Gevoerd ✓" : "Voeren"}</button>}
             {selKind === "animal" && <button onClick={() => aaiDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🤗 Aaien</button>}
             <button onClick={verplaatsGeselecteerde} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>↔ Verplaatsen</button>
@@ -2029,6 +2079,29 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* 🔊 Gids-bubbel: het maatje vertelt ongevraagd (hardop) over het object
+          waar je naar staat te kijken. Klein en onderin — loopt niet in de weg.
+          "Leer er meer over" opent het volledige paneel met de leerpad-knop. */}
+      {gidsMoment && !tafereel && (
+        <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: 84, zIndex: 12, width: "min(430px, 94vw)", pointerEvents: "auto" }}>
+          <div style={{ background: "rgba(255,254,248,0.97)", borderRadius: 16, boxShadow: "0 8px 28px rgba(0,0,0,.3)", padding: "10px 12px", display: "flex", gap: 10, alignItems: "flex-start" }}>
+            {buddyId ? <BuddyKop buddy={BUDDY_BY_ID[buddyId]} size={44} /> : <span style={{ fontSize: 28, lineHeight: 1 }}>{gidsMoment.emoji}</span>}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ font: "800 13px system-ui", color: "#234" }}>{gidsMoment.emoji} {gidsMoment.titel}</div>
+              <p style={{ margin: "2px 0 0", font: "600 12.5px/1.45 system-ui", color: "#345" }}>
+                {buddyId ? <b style={{ color: "#1f5a2e" }}>{buddyNaamEff || "Je maatje"}: </b> : null}
+                {gidsMoment.praatje}
+              </p>
+              <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
+                <button onClick={() => { const m = gidsMoment; setGidsMoment(null); setTafereel(m); try { track("park_leermoment", { id: m.id, via: "gids" }); } catch { /* */ } }} style={{ border: "none", borderRadius: 999, padding: "7px 12px", font: "800 12.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>▶ Leer er meer over</button>
+                <button onClick={toggleGidsStil} title="Gids helemaal stil zetten" style={{ border: "none", borderRadius: 999, padding: "7px 10px", font: "700 12.5px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔇 Stil</button>
+                <button onClick={() => { stopSpreken(); setGidsMoment(null); }} style={{ border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>✕</button>
+              </div>
+            </div>
           </div>
         </div>
       )}

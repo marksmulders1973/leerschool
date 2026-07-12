@@ -18,6 +18,7 @@ import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
 import UitvindersTaferelen, { Souvenir } from "./UitvindersKabouters";
 import FabelWezen from "./FabelWezen";
+import { LEERMOMENT_BY_ASSET } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps } from "./blokTextures";
 import { useEffect } from "react";
 import {
@@ -310,7 +311,7 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, onLeermoment }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef }) {
   const a = getAsset(assetId);
   if (!a) return null;
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
@@ -322,7 +323,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "coaster") return <Coaster position={[x, y, z]} rotation={rotation} baan={a.baan} rideRef={rideRef} />;
-  if (a.procedural === "train") return <TrainRide position={[x, y, z]} onLeermoment={onLeermoment} />;
+  if (a.procedural === "train") return <TrainRide position={[x, y, z]} />;
   if (a.procedural === "rail") return <RailTile position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "station") return <Station position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "path") return <PathTile position={[x, y, z]} color={a.color} />;
@@ -574,7 +575,64 @@ function Laden() {
   );
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, spawn = null }) {
+// 🔊 Gids-watcher (Mark 12 jul: "Charley praat ongevraagd als je ergens langer
+// naar kijkt"): kijkt elke kwart seconde welk benoembaar object (leermoment)
+// het dichtst bij de speler is. Sta je er ~2 s bij stil terwijl je er ongeveer
+// naar kijkt, dan vuurt `onGids(leermomentId)` — ZookwartierGame laat het
+// maatje dan hardop vertellen. Remmen tegen gezeur: per object 4 min stilte,
+// en na élk praatje 25 s globale pauze. Puur rekenwerk op refs — geen state,
+// geen re-renders, dus gratis voor de framerate.
+function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief, onGids }) {
+  const dwell = useRef({ id: null, t: 0 });
+  const perObject = useRef(new Map()); // leermoment-id → laatste spreek-tijd
+  const lastGlobal = useRef(-999);
+  const acc = useRef(0);
+  useFrame((s, dt) => {
+    if (!actief || !onGids) { dwell.current.t = 0; return; }
+    acc.current += dt;
+    if (acc.current < 0.25) return;
+    const stap = acc.current;
+    acc.current = 0;
+    const nu = s.clock.elapsedTime;
+    if (nu - lastGlobal.current < 25) return;
+    const p = playerPos?.current;
+    if (!p) return;
+    // Dichtstbijzijnde benoembare object binnen ~7 m zoeken.
+    let best = null, bestD2 = 49, bx = 0, bz = 0;
+    for (const it of placedItems) {
+      const lm = LEERMOMENT_BY_ASSET[it.assetId];
+      if (!lm || !it.cell) continue;
+      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
+      if (d2 < bestD2) { bestD2 = d2; best = lm; bx = x; bz = z; }
+    }
+    const kop = trainHeadRef?.current;
+    if (kop?.p) {
+      const d2 = (kop.p.x - p.x) * (kop.p.x - p.x) + (kop.p.z - p.z) * (kop.p.z - p.z);
+      if (d2 < bestD2) { bestD2 = d2; best = "stoomtrein"; bx = kop.p.x; bz = kop.p.z; }
+    }
+    if (!best || nu - (perObject.current.get(best) ?? -999) < 240) { dwell.current = { id: null, t: 0 }; return; }
+    // "Ernaar kijken": kijkrichting moet grofweg richting het object wijzen —
+    // behalve als je er al bovenop staat (dan telt dichtbij zijn als kijken).
+    if (bestD2 > 9 && playerFace?.current) {
+      const dx = bx - p.x, dz = bz - p.z;
+      const len = Math.sqrt(dx * dx + dz * dz) || 1;
+      const dot = (playerFace.current.x * dx + playerFace.current.z * dz) / len;
+      if (dot < 0.2) { dwell.current = { id: null, t: 0 }; return; }
+    }
+    if (dwell.current.id === best) dwell.current.t += stap;
+    else dwell.current = { id: best, t: 0 };
+    if (dwell.current.t >= 2) {
+      dwell.current = { id: null, t: 0 };
+      perObject.current.set(best, nu);
+      lastGlobal.current = nu;
+      onGids(best);
+    }
+  });
+  return null;
+}
+
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -864,6 +922,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {buddyId && !firstPerson && rideIdx == null && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} onLeermoment={onLeermoment} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
+        {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
+            het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
+        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (
@@ -915,7 +976,6 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                 onParts={onHouseParts}
                 mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
                 kraam={kramen[getAsset(it.assetId)?.voorziet]}
-                onLeermoment={onLeermoment}
               />
             </group>
           );
