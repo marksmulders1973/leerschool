@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Leerkwartier — gratis oefenen voor de Doorstroomtoets (flyer voor Stichting Leergeld)</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#e8ecf1;color:#1a2332;padding:24px}
+    .vel{background:#fff;max-width:760px;margin:0 auto;padding:48px 52px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.15)}
+    .kop{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+    .kop .logo{font-size:34px}
+    .kop .naam{font-size:28px;font-weight:800;color:#0a7d43;letter-spacing:-0.5px}
+    .payoff{font-size:14px;color:#5a6775;margin-bottom:26px}
+    h1{font-size:26px;line-height:1.25;margin-bottom:14px}
+    p{font-size:14.5px;line-height:1.65;color:#3a4658;margin-bottom:12px}
+    h2{font-size:16px;color:#0a7d43;margin:22px 0 8px}
+    ul{list-style:none;margin-bottom:12px}
+    ul li{font-size:14px;color:#3a4658;padding:4px 0 4px 24px;position:relative;line-height:1.5}
+    ul li::before{content:"✓";position:absolute;left:0;color:#00a852;font-weight:700}
+    .twee{display:flex;gap:24px}
+    .twee>div{flex:1}
+    .kader{background:#f2f8f4;border:1.5px solid #bfe3cd;border-radius:12px;padding:16px 20px;margin:18px 0}
+    .kader strong{color:#0a7d43}
+    .url{display:block;text-align:center;background:#0a7d43;color:#fff;font-size:22px;font-weight:800;padding:14px;border-radius:12px;margin:22px 0 6px;letter-spacing:0.3px;text-decoration:none}
+    .url-sub{text-align:center;font-size:12.5px;color:#5a6775;margin-bottom:18px}
+    .voet{margin-top:26px;padding-top:12px;border-top:1px solid #e3e8ee;font-size:11.5px;color:#8893a3;line-height:1.6}
+    .qr-blok{display:none;gap:20px;align-items:center;background:#fff8e6;border:1.5px solid #f0d489;border-radius:12px;padding:16px 20px;margin:18px 0}
+    .qr-blok.aan{display:flex}
+    .qr-blok img{width:120px;height:120px;flex-shrink:0}
+    .qr-blok h2{margin:0 0 6px;color:#8a6400}
+    .qr-blok p{margin-bottom:6px;font-size:13.5px}
+    .qr-code-badge{display:inline-block;background:#8a6400;color:#fff;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:8px;font-size:14px}
+    .qr-url{font-size:11.5px;color:#8893a3;word-break:break-all}
+    @media print{
+      body{background:#fff;padding:0}
+      .vel{box-shadow:none;border-radius:0;max-width:none;padding:14mm 16mm}
+      .print-knop{display:none!important}
+    }
+    .print-knop{display:block;max-width:760px;margin:0 auto 16px;text-align:right}
+    .print-knop button{padding:10px 22px;border:none;border-radius:10px;background:#0a7d43;color:#fff;font-size:14px;font-weight:700;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="vel">
+    <div class="kop"><span class="logo">🎓</span><span class="naam">Leerkwartier</span></div>
+    <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+
+    <h1>Gratis oefenen voor de Doorstroomtoets — voor élk gezin</h1>
+    <p>Oefenboeken kosten €27 tot €40. Bijles kost €37 per uur. Onderzoeksjournalistiek liet zien dat betaalde toetstraining de kansenongelijkheid rond de Doorstroomtoets vergroot. <strong>Leerkwartier is het gratis alternatief:</strong> een Nederlandse leer-app waar kinderen uit groep 6, 7 en 8 élke dag kunnen oefenen voor de Doorstroomtoets — zonder kosten, zonder account, zonder reclame.</p>
+
+    <div class="kader">
+      <strong id="kader-kop">Voor de Rotterdamse gezinnen met een Rotterdampas betekent dat:</strong> volwaardige toetsvoorbereiding zonder dat er iets aangevraagd, betaald of verantwoord hoeft te worden. Het werkt direct, op elke telefoon, tablet of (bibliotheek)computer.
+    </div>
+
+    <!-- 🤲 Partner-QR: verschijnt alleen op flyers met ?partner=CODE in de URL.
+         De QR (public/qr/<CODE>.png, maak met scripts/maak-partner-qr.mjs)
+         opent de app mét code → scan is traceerbaar per partner en het gezin
+         houdt ook in 2027 gratis toegang. -->
+    <div class="qr-blok aan" id="qr-blok">
+      <img id="qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAYAAAC+ZpjcAAAAAklEQVR4AewaftIAABOUSURBVO3BUaoER4AkSPfg3f/KPgLBMgz9k9VBbqkws+4fAQDgmhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqhMAAK46AQDgqr+8qG1437Y81TbfbFueaptvti1vaZuntuUtbfPUtnyibZ7alqfa5i3b8pa2eWpb3tI2b9iWp9qG923LG04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqL/8B20LSNvyrbZ7alqfa5i1t85ZteaptntqWt7TNW9rmm7XNW7blqbZ5alvesi3fbFtI2uabnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABX/eVHtc032xY+ty1v2JZv1jZv2Zan2uYt2/KJtnnDtnyibd6wLZ9omze0DZ9rm2+2Lb/mBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqBACAq04AALjqL/A/2JZv1jZPbctTbfOWbXlqW97SNk9ty7fblje0zSe25am2+Wbb8pa2eaptntoW+L+dAABw1QkAAFedAABw1QkAAFedAABw1QkAAFedAABw1QkAAFedAABw1QkAAFedAABw1QkAAFedAABw1V/gf9A2b9iWb7Yt36xt3rItT7XNt9uWp9rmm23LW7blDW3ziW15qm3gf+sEAICrTgAAuOoEAICrTgAAuOoEAICrTgAAuOoEAICrTgAAuOoEAICrTgAAuOoEAICrTgAAuOovP2pb+Ny2vKFt3tI2T23LW9rmm7XNW7blm23LU23zibZ5w7a8pW2e2pZPtM1T2/JrtoV3nQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABXnQAAcNUJAABX/eU/oG14V9s8tS1v2Zan2uYtbfPUtjzVNp/Ylqfa5qlt+UTbPLUtn2ibp7blLdvyVNu8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" alt="QR-code naar leerkwartier.app" />
+      <div>
+        <h2>🎁 Cadeau bij deze flyer</h2>
+        <p><strong>Scan de QR-code met de camera van uw telefoon</strong> — de app opent direct, er hoeft niets geïnstalleerd te worden. Uw code <span class="qr-code-badge" id="qr-code-tekst">ROTTERDAMPAS2027</span> wordt automatisch geactiveerd: daarmee blijft Leerkwartier voor uw gezin <strong>óók heel 2027 gratis</strong>, tot en met de Doorstroomtoets. Geldig voor de eerste 50 gezinnen via deze organisatie — wees er dus snel bij.</p>
+        <p class="qr-url">Scannen lukt niet? Typ dan in de browser: <span id="qr-url-tekst">leerkwartier.app/?partner=ROTTERDAMPAS2027</span></p>
+      </div>
+    </div>
+
+    <div class="twee">
+      <div>
+        <h2>Wat zit erin?</h2>
+        <ul>
+          <li>Complete gratis <strong>oefen-Doorstroomtoets</strong> (rekenen, taal, studievaardigheden)</li>
+          <li>Elke dag een gratis <strong>vraag van de dag</strong> met uitleg</li>
+          <li>Bij elke fout: <strong>uitleg op 3 niveaus</strong> (basis / simpeler / nog simpeler)</li>
+          <li>Een <strong>leermaatje</strong> dat helpt als je kind vastloopt — zonder het antwoord voor te zeggen</li>
+          <li>Ook voor de bovenbouw: <strong>echte VMBO-examenvragen</strong> met uitleg</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Ook zonder goed internet</h2>
+        <ul>
+          <li><strong>Printbare werkboeken</strong>: compleet Doorstroomtoets-oefenpakket met antwoordsleutel</li>
+          <li>De <strong>Leesladder</strong>: begrijpend lezen dat klein begint (5 zinnen) en opbouwt</li>
+          <li>Tafel-werkbladen mét tafeldiploma</li>
+          <li>Alles printbaar via leerkwartier.app/printen</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Eerlijk en veilig</h2>
+    <ul>
+      <li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>
+      <li>Geen reclame, geen doorverkoop van gegevens (AVG-vriendelijk)</li>
+      <li>Gemaakt door één vader uit Nederland, niet door een marketingmachine</li>
+    </ul>
+
+    <a class="url" href="https://leerkwartier.app">leerkwartier.app</a>
+    <div class="url-sub">Direct te gebruiken — geen inlog nodig. Deel deze link gerust met gezinnen, in de nieuwsbrief of op de website.</div>
+
+    <div class="voet">
+      Contact: Mark Smulders · info@smulsoft.nl · leerkwartier.app<br />
+      Vragen van uw stichting beantwoord ik persoonlijk. Materiaal (flyers, teksten voor nieuwsbrief of site) lever ik graag op maat aan — ook dat kost niets.
+    </div>
+  </div>
+  </body>
+</html>

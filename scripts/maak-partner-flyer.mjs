@@ -21,6 +21,9 @@ const ORGS = [
   { code: "SAM2027",  kaderKop: "Voor de gezinnen die u en uw partners helpen betekent dat:" },
   { code: "JINC2027", kaderKop: "Voor de kinderen in uw programma's betekent dat:" },
   { code: "IMC2027",  kaderKop: "Voor uw leerlingen betekent dat:" },
+  { code: "HUMANITAS2027",    kaderKop: "Voor de gezinnen die uw vrijwilligers begeleiden betekent dat:" },
+  { code: "OOIEVAAR2027",     kaderKop: "Voor de Haagse gezinnen met een Ooievaarspas betekent dat:" },
+  { code: "ROTTERDAMPAS2027", kaderKop: "Voor de Rotterdamse gezinnen met een Rotterdampas betekent dat:" },
 ];
 
 for (const { code, kaderKop } of ORGS) {
