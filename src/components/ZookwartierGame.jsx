@@ -329,7 +329,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
   const [shareUrl, setShareUrl] = useState(null);
   const [shareCopied, setShareCopied] = useState(false);
-  const [shopCat, setShopCat] = useState("dier");
+  // null = nog geen categorie gekozen → de bouwbalk toont alléén de
+  // categorie-rij (Mark 14 jul: max 1 regel tegelijk op mobiel).
+  const [shopCat, setShopCat] = useState(null);
   const [colorMode, setColorMode] = useState(false);   // huis-onderdelen inkleuren
   const [brushColor, setBrushColor] = useState("#e2574c"); // gekozen verfkleur
   const [houseParts, setHouseParts] = useState(null);   // gevonden onderdelen (basiskleuren) van het gekozen huis
@@ -1344,7 +1346,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             </div>
 
             {/* Bouwen = de grote actie bovenaan. */}
-            <button onClick={() => doeEnSluit(() => { setBouwen(true); setFirstPerson(false); setBuddyEye(false); setRideTrain(false); })} style={{ width: "100%", display: "flex", alignItems: "center", gap: 14, border: "none", borderRadius: 18, padding: "15px 18px", font: "900 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 6px 22px rgba(0,0,0,.32)", cursor: "pointer", textAlign: "left" }}>
+            <button onClick={() => doeEnSluit(() => { setBouwen(true); setShopCat(null); setFirstPerson(false); setBuddyEye(false); setRideTrain(false); flits(`📈 Je park verdient 🪙${inkomstenPerDag(placedItems, kindVan)} per dag — kies hieronder wat je wilt bouwen`); })} style={{ width: "100%", display: "flex", alignItems: "center", gap: 14, border: "none", borderRadius: 18, padding: "15px 18px", font: "900 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 6px 22px rgba(0,0,0,.32)", cursor: "pointer", textAlign: "left" }}>
               <span style={{ fontSize: 28, lineHeight: 1 }}>🏗️</span>
               <span>Bouwen<br /><span style={{ font: "700 12px system-ui", opacity: 0.9 }}>dieren, hekken, gebouwen en meer neerzetten</span></span>
             </button>
@@ -1388,11 +1390,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
 
       {/* Onboarding: vers park → wijs het kind naar de winkelbalk. */}
-      {versPark && !welkomWeg && bouwen && !placing && !dialoog && !menuOpen && (
+      {versPark && !welkomWeg && bouwen && !shopCat && !placing && !dialoog && !menuOpen && (
         <div style={{ position: "absolute", left: "50%", bottom: 150, transform: "translateX(-50%)", zIndex: 9, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, pointerEvents: "none", maxWidth: "92%" }}>
           <div style={{ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, background: "#fffef8", color: "#234", borderRadius: 14, padding: "10px 12px 10px 14px", boxShadow: "0 6px 20px rgba(0,0,0,.28)", font: "800 13.5px system-ui" }}>
             <span style={{ fontSize: 20 }}>👋</span>
-            <span>Welkom{naam ? ` ${naam}` : ""}! Kies hieronder een dier en zet het in je park 🦊</span>
+            <span>Welkom{naam ? ` ${naam}` : ""}! Tik hieronder op 🦊 Dieren en zet een dier in je park</span>
             <button onClick={() => setWelkomWeg(true)} style={{ border: "none", borderRadius: 999, width: 26, height: 26, font: "700 13px system-ui", background: "#eee", cursor: "pointer", flex: "0 0 auto" }}>✕</button>
           </div>
           <span style={{ fontSize: 22, lineHeight: 1, filter: "drop-shadow(0 2px 3px rgba(0,0,0,.3))" }}>⬇️</span>
@@ -1879,16 +1881,22 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </>
         ) : (
           <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 5 }}>
-            <span style={{ color: "#fff", font: "700 12px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)" }}>
-              📈 Je park verdient 🪙{inkomstenPerDag(placedItems, kindVan)} per dag · kies iets en zet het neer · tik iets aan om te verplaatsen of weg te halen
-            </span>
-            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "center" }}>
+            {/* 📱 Max 1 rij tegelijk (Mark 14 jul, telefoon-test): stap 1 =
+                alleen categorieën, stap 2 = alleen de items van die categorie
+                in één horizontaal scrollbare rij. De oude status-regel
+                ("verdient X/dag · kies iets…") is vervangen door een korte
+                eenmalige flits bij het openen van de bouw-modus. */}
+            {!shopCat && (
+            <div style={{ display: "flex", gap: 6, flexWrap: "nowrap", overflowX: "auto", WebkitOverflowScrolling: "touch", maxWidth: "100%", padding: "2px 4px" }}>
               {SHOP_CATS.map((c) => (
-                <button key={c.key} onClick={() => setShopCat(c.key)} style={{ border: "none", borderRadius: 999, padding: "5px 11px", font: "800 12px system-ui", color: shopCat === c.key ? "#fff" : "#234", background: shopCat === c.key ? "#2e7d32" : "rgba(255,255,255,0.9)", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>{c.label}</button>
+                <button key={c.key} onClick={() => setShopCat(c.key)} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "8px 13px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.9)", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>{c.label}</button>
               ))}
-              <button onClick={() => { setBouwen(false); setPlacing(null); setSelectedIdx(null); }} style={{ border: "none", borderRadius: 999, padding: "5px 13px", font: "800 12px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>✓ Klaar met bouwen</button>
+              <button onClick={() => { setBouwen(false); setPlacing(null); setSelectedIdx(null); setShopCat(null); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "8px 13px", font: "800 13px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>✓ Klaar</button>
             </div>
-            <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "center", flexWrap: "wrap", maxWidth: "100%", padding: "2px 4px 4px" }}>
+            )}
+            {shopCat && (
+            <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "flex-start", flexWrap: "nowrap", overflowX: "auto", WebkitOverflowScrolling: "touch", maxWidth: "100%", padding: "2px 4px 4px" }}>
+              <button onClick={() => { setShopCat(null); setPlacing(null); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "8px 13px", font: "800 13px system-ui", color: "#fff", background: "#2e7d32", boxShadow: "0 2px 6px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap" }}>← {SHOP_CATS.find((c) => c.key === shopCat)?.label || "Terug"}</button>
               {/* 🏠 Bouwpakketten: kant-en-klare gebouwtjes als startpunt —
                   daarna blokje voor blokje te verbouwen. */}
               {shopCat === "blok" && PAKKETTEN.map((pk) => (
@@ -1986,6 +1994,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 );
               })}
             </div>
+            )}
           </div>
         )}
       </div>
