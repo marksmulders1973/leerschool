@@ -64,6 +64,18 @@ function findHints(content) {
         startLine = i + 1;
         const after = line.slice(m.index + m[0].length);
         if (after.trim()) buffer.push({ ln: i + 1, txt: after });
+        // BUG-FIX 14 jul 2026: haken op de openingsregel zélf ook meetellen.
+        // Zonder dit bleef een éénregelige wrongHints-array "open" en las de
+        // parser door tot in het uitlegPad → false positives (de uitleg MAG
+        // het antwoord geven, dat is z'n taak).
+        for (const ch of after) {
+          if (ch === "[") depth++;
+          else if (ch === "]") depth--;
+        }
+        if (depth <= 0) {
+          hits.push({ startLine, lines: buffer });
+          inWrongHints = false;
+        }
       }
       continue;
     }

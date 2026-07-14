@@ -30,6 +30,8 @@ Cito + examens versterken. Drie type werk:
 
 ## 📥 Inbox — nieuwe wensen / ideeën
 
+- [ ] **wrongHints-kwaliteitssprint — ECHTE cijfers na linter-fix 14 jul** — de parser van `lint-wronghints.mjs` sloot éénregelige arrays niet (gefixt 14 jul) waardoor oude tellingen onzin waren. Werkelijke stand: **158× pattern-A** (alle foute hints identiek → eliminatie-lek), **144× pattern-D** (correct antwoord letterlijk in hint — deels false positives zoals "wat is de stam van krijgen?"), **72× "Klopt"-hint op foute positie** (ernstigst: kind kiest fout, leest "Klopt"; maar let op false positives als "Klopt zeker niet"). Aanpak: géén bulk-rewrite (didactische schade); gefaseerd per bestand met menselijke blik, start bij Cito-kern (doorstroomtoetsRekenenG8 46, oppervlakteOmtrekPo 30, delenPo 26). Voorbeeld-patroon gefixt 14 jul in alfabetWoordenboekPo (2×): herschrijf naar vergelijkende denkprikkel in vraagvorm. Tools: `lint-wronghints-eliminatie.mjs` (pattern A+D, antwoord-bewust) + `lint-wronghints-klopt.mjs`.
+
 ### 📊 Dagrapport-analyse 2026-06-20 (data sinds 4 jun, 16 dagen — betrouwbaarheid LAAG)
 Geverifieerd via Supabase + 2 review-agents. Kerncijfers 7d: 126 sessies (~19 écht extern: chatgpt 7 / fb 6 / google 5), 795 events.
 - [x] ✅ **Kapotte footer-link `/voor-ouders.html`** (B6.4-deel) → `doorstroomtoets-2027-gids.html` (commit ec39672). Brede scan: enige kapotte interne link.

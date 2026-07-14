@@ -66,7 +66,7 @@ const steps = [
         q: "Welk woord komt het laatst in het alfabet: zon, maan of ster?",
         options: ["zon", "ster", "maan", "ze zijn gelijk"],
         answer: 0,
-        wrongHints: [null, "Klopt — z is de laatste letter.", "S komt vóór z.", "M komt nog eerder."],
+        wrongHints: [null, "Kijk naar de beginletters: s, m en z — welke komt het laatst in het alfabet?", "S komt vóór z.", "M komt nog eerder."],
         uitlegPad: {
           stappen: [{ titel: "z is de laatste letter", tekst: "Eerste letters: m, s, z. Z komt het laatst in het alfabet, dus 'zon' komt het laatst." }],
           niveaus: {
@@ -259,7 +259,7 @@ const steps = [
         q: "Welk woord komt het laatst: tafel, tijger, toren?",
         options: ["toren", "tafel", "tijger", "ze zijn gelijk"],
         answer: 0,
-        wrongHints: [null, "Klopt — tweede letter o komt het laatst.", "a komt juist het eerst.", "i komt vóór o."],
+        wrongHints: [null, "Alle drie beginnen met t — vergelijk dus de twééde letters: a, i en o. Komt de a dan het laatst?", "a komt juist het eerst.", "i komt vóór o."],
         uitlegPad: {
           stappen: [{ titel: "t gelijk, dan a < i < o", tekst: "Alle drie beginnen met t. Tweede letters: a, i, o. O komt het laatst, dus 'toren' het laatst." }],
           niveaus: {
