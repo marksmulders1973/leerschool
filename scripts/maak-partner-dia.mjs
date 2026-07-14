@@ -24,7 +24,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = join(root, "public", "drukwerk");
 mkdirSync(outDir, { recursive: true });
 
-const logo64 = readFileSync(join(root, "public", "logo-doorstroomtoets.png")).toString("base64");
+// Leerkwartier-app-logo (Mark 14 jul: het Leerkwartier-logo, niet het
+// Doorstroomtoets-logo) — donkerblauwe tegel met groen kwartier + naam.
+const logo64 = readFileSync(join(root, "public", "icons", "icon-512.png")).toString("base64");
 
 for (const code of codes) {
   if (!/^[A-Z0-9-]{3,20}$/.test(code)) {
@@ -47,7 +49,7 @@ for (const code of codes) {
        display:flex;align-items:center;padding:0 90px;gap:80px}
   .tekst{flex:1.4;min-width:0}
   .kop{display:flex;align-items:center;gap:26px;margin-bottom:14px}
-  .kop img{width:110px;height:110px;border-radius:24px;background:#fff;padding:8px}
+  .kop img{width:110px;height:110px;border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,0.3)}
   .kop .naam{font-size:64px;font-weight:800;letter-spacing:-1px}
   .payoff{font-size:30px;color:#cfe9db;margin-bottom:44px}
   .pill{display:inline-block;background:#f7c948;color:#5c4300;font-size:32px;font-weight:800;
@@ -72,7 +74,7 @@ for (const code of codes) {
 <body>
   <div class="tekst">
     <div class="kop">
-      <img src="data:image/png;base64,${logo64}" alt="Doorstroomtoets-logo" />
+      <img src="data:image/png;base64,${logo64}" alt="Leerkwartier-logo" />
       <span class="naam">Leerkwartier</span>
     </div>
     <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
