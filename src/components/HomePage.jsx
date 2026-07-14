@@ -1303,7 +1303,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {visitorCount != null && visitorCount > 0 && (
                 <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen</span>
               )}
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>640</strong> oefenvragen</span>
+              {/* 14 jul 2026: "640" was alleen het Doorstroomtoets-trio
+                  (rekenen 216 + taal 213 + studievaardigheden 210) — de app
+                  telt ruim 7.200 q:-velden in de leerpaden. Herteld met:
+                  grep -rEo '^\s*q:' src/learnPaths | wc -l */}
+              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>7.000+</strong> oefenvragen</span>
               <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>21</strong> echte examens</span>
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
