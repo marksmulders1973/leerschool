@@ -155,7 +155,12 @@ export default defineConfig({
             }
             if (fname.startsWith('examen')) return 'data-learnpaths-examens';
             if (fname.startsWith('pincode')) return 'data-learnpaths-pincode';
-            if (/Po\.js$/.test(fname)) return 'data-learnpaths-po';
+            // A8.5 (14 jul 2026): PO- en wiskunde/algemeen-paden NIET meer
+            // samenbundelen. Niets importeert learnPaths/index.js nog (alleen
+            // pathLoaders' import.meta.glob), dus zonder bucket krijgt elk pad
+            // z'n eigen chunkje en downloadt een leerling alleen het gekozen
+            // pad i.p.v. 4,4 MB (wiskunde) of 2,4 MB (po) in één keer.
+            if (/Po\.js$/.test(fname)) return undefined;
             if (/(Engels|Frans|Duits)\.js$/.test(fname)) return 'data-learnpaths-talen';
             if (/(Geschiedenis|Aardrijkskunde)\.js$/.test(fname)) return 'data-learnpaths-wereld';
             if (/(Biologie|Natuurkunde|Scheikunde|Economie|Beco)\.js$/.test(fname)) return 'data-learnpaths-nask';
@@ -163,8 +168,8 @@ export default defineConfig({
             if (/(^spelling|^woordsoorten|^zinsontleding|^werkwoord|^argument|^tekstanalyse|^schrijfvaardigheid|^literatuur|^begrijpend|^onregelmatigeWerkwoorden|^presentTenses|^pastTenses|woordenschatEngels|naamvallen|passeCompose)/.test(fname)) {
               return 'data-learnpaths-nederlands';
             }
-            // Rest = wiskunde/algebra + algemene paden (vakken VO bovenbouw)
-            return 'data-learnpaths-wiskunde';
+            // Rest = wiskunde/algebra + algemene paden: per-pad chunk (A8.5)
+            return undefined;
           }
           if (id.includes('src/curricula/')) return 'data-curricula';
         },
