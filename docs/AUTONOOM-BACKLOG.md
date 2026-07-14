@@ -24,7 +24,7 @@ Cito + examens versterken. Drie type werk:
 - [~] **A8.2 Begrijpend lezen 3 → ~15 paden** — ✓8/7 batch 1 (4 paden, commits 1a589be..5a54942): verwijswoorden / woordbetekenis-context / conclusies-trekken / tekstdoel-schrijversdoel. Nu 7 v/d ~15. **Batch 2 (volgende):** feiten-details-opzoeken, tekstverbanden-oorzaak-gevolg (leesbril, niet taal-bril), alinea-functies + tussenkopjes, nieuwsbericht-lezen (wie/wat/waar/wanneer/waarom). **Batch 3:** brief/e-mail-lezen, schema+tekst-combi, lange toets-teksten g8 (2 teksten ~350 w), poëzie/verhaal-diepte g7-8. Werkwijze: 4 parallelle schrijf-agents met template begrijpendLezenTekstenPo.js + harde eisen (≤18 checks, eigen teksten, hint-regels), daarna manifest+lint+gate+build+commit-per-pad.
 - [ ] **A8.3 Streak + dagdoel naar Supabase** — retentie woont nu in localStorage (src/shared/dailyGoal.js) en verdampt per apparaat. Kolommen aan profiel + sync in addSeconds().
 - [ ] **A8.4 🟡 MARK: A12 web push live zetten** — code af sinds mei; ~30 min handwerk: VAPID-keys + Vercel env + Supabase secrets + migration + deploy + cron (zie memory project_studiebol_a12_webpush_todo).
-- [ ] **A8.5 Wiskunde-chunk (4,4 MB) splitsen** — data-learnpaths-wiskunde ondermijnt mobiele belofte; per-pad dynamic import voor de 2 grootste chunks (wiskunde 4,4 MB + po 2,4 MB).
+- [x] **A8.5 Wiskunde-chunk (4,4 MB) splitsen** ✅ 14 jul: manualChunks-bucket losgelaten (niets importeert index.js meer) → per-pad chunks, grootste chunk nu 0,93 MB (vendor-three); smoke-test home+/leren OK — data-learnpaths-wiskunde ondermijnt mobiele belofte; per-pad dynamic import voor de 2 grootste chunks (wiskunde 4,4 MB + po 2,4 MB).
 
 ---
 
