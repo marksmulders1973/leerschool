@@ -3,17 +3,18 @@
 // (MeeleesTekst): het woord dat de stem uitspreekt licht op. Bedoeld voor
 // uitleg-stappen en leesteksten — extra steun voor zwakkere lezers.
 // Geen browser-stem beschikbaar? Dan alleen de gewone tekst, geen knop.
-import { useEffect, useState } from "react";
-import { maakMeeleesPlan, koppelMeelezen } from "../spraakTekst.js";
+import { useEffect, useRef, useState } from "react";
+import { spreekMetMeelezen } from "../spraakTekst.js";
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
 export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
   const [leest, setLeest] = useState(false);
   const [woord, setWoord] = useState(-1);
+  const stopRef = useRef(null);
   const kan = typeof window !== "undefined" && !!window.speechSynthesis;
 
   const stop = () => {
-    try { window.speechSynthesis?.cancel(); } catch { /* */ }
+    if (stopRef.current) { stopRef.current(); stopRef.current = null; }
     setLeest(false);
     setWoord(-1);
   };
@@ -24,23 +25,14 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
   useEffect(() => { if (leest) stop(); }, [tekst]);
 
   const start = () => {
-    try {
-      const plan = maakMeeleesPlan(tekst);
-      if (!plan.gesproken) return;
-      const u = new SpeechSynthesisUtterance(plan.gesproken);
-      u.lang = "nl-NL";
-      const v = window.speechSynthesis.getVoices().find((x) => (x.lang || "").toLowerCase().startsWith("nl"));
-      if (v) u.voice = v;
-      u.rate = 0.95; // rustig voorleestempo — kind leest mee
-      u.pitch = 1.05;
-      koppelMeelezen(u, plan, setWoord);
-      u.onend = stop;
-      u.onerror = stop;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-      setLeest(true);
-      setWoord(-1);
-    } catch { stop(); }
+    setLeest(true);
+    setWoord(-1);
+    stopRef.current = spreekMetMeelezen(tekst, {
+      rate: 0.95, // rustig voorleestempo — kind leest mee
+      pitch: 1.05,
+      onWoord: setWoord,
+      onEnd: () => { stopRef.current = null; setLeest(false); setWoord(-1); },
+    });
   };
 
   if (!kan) return children ?? null;

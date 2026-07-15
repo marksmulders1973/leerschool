@@ -13,7 +13,7 @@ import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
-import { maakMeeleesPlan, koppelMeelezen } from "../../shared/spraakTekst.js";
+import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 import { track } from "../../utils.js";
 
@@ -36,25 +36,8 @@ const SUGGESTIES = [
 // Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
 // (zelfde aanpak als BuddyChat). Geen kosten, geen kinderdata verlaat het toestel.
 // onStart/onEnd sturen de mond-animatie van Charley's kop aan.
-function speak(text, { onStart, onEnd, onWoord } = {}) {
-  try {
-    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
-    // Meelezen (Mark 15 jul): het plan koppelt de gesproken tekst (zonder
-    // emoji's/markdown) terug aan de getoonde woord-indexen.
-    const plan = maakMeeleesPlan(text);
-    if (!plan.gesproken) { onEnd && onEnd(); return; }
-    const u = new SpeechSynthesisUtterance(plan.gesproken);
-    u.lang = "nl-NL";
-    const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
-    if (stem) u.voice = stem;
-    u.rate = 1.0; u.pitch = 1.3;
-    koppelMeelezen(u, plan, onWoord);
-    u.onstart = () => onStart && onStart();
-    u.onend = () => onEnd && onEnd();
-    u.onerror = () => onEnd && onEnd();
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(u);
-  } catch { onEnd && onEnd(); }
+function speak(text, callbacks = {}) {
+  spreekMetMeelezen(text, { rate: 1.0, pitch: 1.3, ...callbacks });
 }
 
 function stopSpeak() {

@@ -24,43 +24,108 @@ export function maakMeeleesPlan(tekst) {
   return { gesproken, grenzen };
 }
 
-// Koppel meelezen aan een utterance: boundary-events sturen per woord de
-// highlight; stemmen zonder boundary-events krijgen na 1,2s een tempo-
-// schatter. Gebruikt addEventListener zodat bestaande onstart/onend-handlers
-// van de beller blijven werken. Geeft een stop-functie terug.
-export function koppelMeelezen(u, plan, onWoord) {
-  if (!onWoord || !plan || !plan.grenzen.length || !u.addEventListener) return () => {};
-  let boundaryGezien = false;
-  let timer = null;
-  const stop = () => { if (timer) { clearTimeout(timer); timer = null; } };
-  u.addEventListener("boundary", (e) => {
-    boundaryGezien = true;
-    stop();
-    onWoord(woordIndexBijChar(plan, e.charIndex || 0));
-  });
-  u.addEventListener("start", () => {
-    // Tempo-schatter start DIRECT (Mark 15 jul: highlight liep achter door de
-    // oude 1,2s-wachttijd). Vuurt de stem alsnog boundary-events, dan nemen
-    // die het meteen over — de eerste komt vrijwel direct na start.
-    if (boundaryGezien) return;
-    let g = 0;
-    const tempo = u.rate || 1;
-    const stap = () => {
-      if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis?.speaking) return;
-      const grens = plan.grenzen[g];
-      onWoord(grens.woordIdx);
-      const woord = plan.gesproken.slice(grens.start, grens.eind);
-      // ~geschat spreektempo: basis + per teken, plus adempauze bij leestekens
-      let ms = 90 + 62 * woord.length;
-      if (/[.!?…]$/.test(woord)) ms += 320;
-      else if (/[,;:]$/.test(woord)) ms += 150;
-      timer = setTimeout(() => { g += 1; stap(); }, ms / tempo);
+// ── Voorlezen mét meelezen — dé centrale spreekfunctie (v3, 15 jul) ──
+// Sync-aanpak na Mark's feedback ("loopt achter"):
+// 1. PER ZIN een eigen utterance → de highlight reset gegarandeerd bij elke
+//    zin-start (utterance-onstart is overal betrouwbaar), dus de schatter
+//    kan nooit ver wegdrijven. Omzeilt ook de Chrome-bug waarbij lange
+//    utterances na ~15s stilvallen.
+// 2. ZELF-KALIBRATIE: na elke zin meten we hoe lang de stem er écht over
+//    deed en stellen het tempo (ms per teken) bij voor de volgende zin.
+// 3. Lokale NL-stem krijgt voorrang (die stuurt wél échte woord-seintjes;
+//    boundary-events nemen de schatter direct over).
+// Geeft een stop-functie terug.
+export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, onWoord } = {}) {
+  try {
+    if (typeof window === "undefined" || !window.speechSynthesis) { onEnd && onEnd(); return () => {}; }
+    const plan = maakMeeleesPlan(tekst);
+    if (!plan.gesproken) { onEnd && onEnd(); return () => {}; }
+
+    // knip de woord-grenzen op in zinnen
+    const zinnen = [];
+    let huidige = [];
+    for (const g of plan.grenzen) {
+      huidige.push(g);
+      const w = plan.gesproken.slice(g.start, g.eind);
+      if (/[.!?…]["')]?$/.test(w)) { zinnen.push(huidige); huidige = []; }
+    }
+    if (huidige.length) zinnen.push(huidige);
+
+    const stem = window.speechSynthesis.getVoices()
+      .filter((v) => (v.lang || "").toLowerCase().startsWith("nl"))
+      .sort((a, b) => (b.localService === true) - (a.localService === true))[0] || null;
+
+    let gestopt = false;
+    let gestart = false;
+    let timer = null;
+    let klaarGeteld = 0;
+    let msPerTeken = 62 / rate; // startschatting; wordt per zin bijgesteld
+    const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
+    const klaar = () => { if (gestopt) return; gestopt = true; stopTimer(); onEnd && onEnd(); };
+    const uts = []; // referenties vasthouden (Chrome-GC laat anders events vallen)
+
+    window.speechSynthesis.cancel();
+
+    zinnen.forEach((grenzen) => {
+      const van = grenzen[0].start;
+      const tot = grenzen[grenzen.length - 1].eind;
+      const zinTekst = plan.gesproken.slice(van, tot);
+      const u = new SpeechSynthesisUtterance(zinTekst);
+      u.lang = "nl-NL"; u.rate = rate; u.pitch = pitch;
+      if (stem) u.voice = stem;
+      let boundaryGezien = false;
+      let tStart = 0;
+      u.onstart = () => {
+        if (gestopt) return;
+        if (!gestart) { gestart = true; onStart && onStart(); }
+        tStart = performance.now();
+        stopTimer();
+        if (!onWoord) return;
+        let i = 0;
+        const stap = () => {
+          if (gestopt || boundaryGezien || i >= grenzen.length) return;
+          onWoord(grenzen[i].woordIdx);
+          const w = plan.gesproken.slice(grenzen[i].start, grenzen[i].eind);
+          let ms = (w.length + 1) * msPerTeken;
+          if (/[,;:]$/.test(w)) ms += 180; // adempauze midden in de zin
+          timer = setTimeout(() => { i += 1; stap(); }, ms);
+        };
+        stap();
+      };
+      if (onWoord) {
+        u.onboundary = (e) => {
+          if (gestopt) return;
+          boundaryGezien = true;
+          stopTimer();
+          const rel = e.charIndex || 0;
+          let idx = grenzen[0].woordIdx;
+          for (const g of grenzen) { if (rel >= g.start - van) idx = g.woordIdx; else break; }
+          onWoord(idx);
+        };
+      }
+      const zinKlaar = () => {
+        if (gestopt) return;
+        stopTimer();
+        if (tStart && zinTekst.length > 4) {
+          const gemeten = (performance.now() - tStart) / zinTekst.length;
+          if (gemeten > 15 && gemeten < 400) msPerTeken = 0.5 * msPerTeken + 0.5 * gemeten;
+        }
+        klaarGeteld += 1;
+        if (klaarGeteld >= zinnen.length) klaar();
+      };
+      u.onend = zinKlaar;
+      u.onerror = zinKlaar;
+      uts.push(u);
+      window.speechSynthesis.speak(u);
+    });
+
+    return () => {
+      gestopt = true;
+      stopTimer();
+      uts.length = 0;
+      try { window.speechSynthesis.cancel(); } catch { /* */ }
     };
-    stap();
-  });
-  u.addEventListener("end", stop);
-  u.addEventListener("error", stop);
-  return stop;
+  } catch { onEnd && onEnd(); return () => {}; }
 }
 
 // Welk getoond woord hoort bij deze tekenpositie in de gesproken tekst?

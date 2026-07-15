@@ -13,7 +13,7 @@
 import { useState, useEffect, useRef } from "react";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
-import { maakMeeleesPlan, koppelMeelezen } from "../shared/spraakTekst.js";
+import { spreekMetMeelezen } from "../shared/spraakTekst.js";
 import MeeleesTekst from "../shared/ui/MeeleesTekst.jsx";
 
 const VANDAAG = () => new Date().toISOString().slice(0, 10);
@@ -54,20 +54,8 @@ const MOODS = [
   { e: "😄", t: "Wat leuk dat je er bent!", actie: null },
 ];
 
-function speak(text, { onWoord, onEnd } = {}) {
-  try {
-    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
-    const plan = maakMeeleesPlan(text);
-    if (!plan.gesproken) { onEnd && onEnd(); return; }
-    const u = new SpeechSynthesisUtterance(plan.gesproken);
-    u.lang = "nl-NL"; u.rate = 1.0; u.pitch = 1.2;
-    const v = window.speechSynthesis.getVoices().find((x) => (x.lang || "").toLowerCase().startsWith("nl"));
-    if (v) u.voice = v;
-    koppelMeelezen(u, plan, onWoord);
-    u.onend = () => onEnd && onEnd();
-    u.onerror = () => onEnd && onEnd();
-    window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
-  } catch { onEnd && onEnd(); /* stil */ }
+function speak(text, callbacks = {}) {
+  spreekMetMeelezen(text, { rate: 1.0, pitch: 1.2, ...callbacks });
 }
 
 export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName = "" }) {

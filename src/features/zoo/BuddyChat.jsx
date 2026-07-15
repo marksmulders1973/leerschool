@@ -8,7 +8,7 @@
 import { useState, useRef, useEffect } from "react";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
-import { maakMeeleesPlan, koppelMeelezen } from "../../shared/spraakTekst.js";
+import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 
 const STARTERS = [
@@ -21,22 +21,8 @@ const STARTERS = [
 
 // Hardop laten praten met de gratis browserstem (Nederlands), iets hoger =
 // liever. Met meelezen: onWoord krijgt per uitgesproken woord de index.
-function speak(text, { onWoord, onEnd } = {}) {
-  try {
-    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
-    const plan = maakMeeleesPlan(text);
-    if (!plan.gesproken) { onEnd && onEnd(); return; }
-    const u = new SpeechSynthesisUtterance(plan.gesproken);
-    u.lang = "nl-NL";
-    const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
-    if (stem) u.voice = stem;
-    u.rate = 1.0; u.pitch = 1.2;
-    koppelMeelezen(u, plan, onWoord);
-    u.onend = () => onEnd && onEnd();
-    u.onerror = () => onEnd && onEnd();
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(u);
-  } catch { onEnd && onEnd(); /* stem niet beschikbaar → stil */ }
+function speak(text, callbacks = {}) {
+  spreekMetMeelezen(text, { rate: 1.0, pitch: 1.2, ...callbacks });
 }
 
 export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null, onNaarLeren }) {
