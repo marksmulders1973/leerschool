@@ -300,7 +300,7 @@ const steps = [
         q: "Welke is een **NoSQL-database**?",
         options: ["MongoDB","PostgreSQL","MySQL","Oracle"],
         answer: 0,
-        wrongHints: [null, "Relationeel.", "Relationeel.", "Relationeel."],
+        wrongHints: [null, "De naam eindigt op SQL — is dat dan Nó-SQL? Denk aan tabellen vs documenten.", "Ook deze draait op tabellen met SQL — welke uit het rijtje slaat documenten op?", null],
         uitlegPad: {
           stappen: [{ titel: "Document-database", tekst: "**MongoDB** = NoSQL document-database (JSON-achtige documenten). **PostgreSQL, MySQL, Oracle, SQL Server** = relationele SQL-databases. NoSQL-typen ook: Redis (key-value), Cassandra (column), Neo4j (graph). Gebruikt voor schaalbare web-apps + flexibele schema's." }],
           niveaus: { basis: "MongoDB.", simpeler: "NoSQL = MongoDB", nogSimpeler: "A." },
