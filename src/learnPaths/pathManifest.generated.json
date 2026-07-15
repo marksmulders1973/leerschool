@@ -809,6 +809,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "brief-email-lezen-po",
+    "file": "./briefEmailLezenPo.js",
+    "title": "Een brief of e-mail lezen — wie, waarom en wat moet jij doen?",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "✉️",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — zakelijke teksten: brieven en e-mails",
+    "triggerKeywords": [
+      "brief lezen",
+      "e-mail lezen",
+      "email lezen",
+      "zakelijke brief",
+      "zakelijke tekst",
+      "afzender",
+      "ontvanger",
+      "aanhef",
+      "afsluiting",
+      "ondertekening",
+      "onderwerpregel",
+      "doel van de tekst"
+    ],
+    "intro": "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er altijd vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "brugklas-orientatie",
     "file": "./brugklasOrientatie.js",
     "title": "Brugklas-tips — overgang naar middelbare school (groep 8 → klas 1)",
@@ -4556,6 +4585,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "lange-toets-teksten-g8-po",
+    "file": "./langeToetsTekstenG8Po.js",
+    "title": "Lange teksten op de toets — volhouden en slim werken",
+    "subject": "begrijpend-lezen",
+    "level": "groep8",
+    "emoji": "🏋️",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — lange informatieve en verhalende teksten begrijpen",
+    "triggerKeywords": [
+      "lange teksten",
+      "lange tekst lezen",
+      "doorstroomtoets lezen",
+      "cito begrijpend lezen",
+      "toetstekst",
+      "leestoets",
+      "volhouden lezen",
+      "uithoudingsvermogen lezen",
+      "tijdverdeling toets",
+      "toets aanpak",
+      "begrijpend lezen groep 8",
+      "hoofdgedachte"
+    ],
+    "intro": "Op de echte Doorstroomtoets zijn de leesteksten lang: 300 tot 400 woorden met 4 tot 6 vragen per tekst. Hier train je het uithoudingsvermogen én de slimme aanpak: eerst globaal lezen, per vraag terugz",
+    "stepCount": 4,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "latijn-vwo",
     "file": "./latijnVwo.js",
     "title": "Latijn basis (VWO Gymnasium)",
@@ -6676,6 +6734,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "schema-tekst-combi-po",
+    "file": "./schemaTekstCombiPo.js",
+    "title": "Tekst + tabel combineren — zoek het antwoord in allebei",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "📊",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — informatie uit tekst en schema combineren",
+    "triggerKeywords": [
+      "tabel lezen",
+      "schema lezen",
+      "tabel en tekst",
+      "prijslijst",
+      "dienstregeling",
+      "rooster lezen",
+      "informatie combineren",
+      "kruispunt lezen",
+      "rijen en kolommen",
+      "studievaardigheden",
+      "informatiebronnen",
+      "begrijpend lezen"
+    ],
+    "intro": "Op de Doorstroomtoets staat vaak een tekst mét een prijslijst, rooster of dienstregeling — en het antwoord vind je alleen door béíde te gebruiken. Leer kruispunt-lezen (zoek de rij, zoek het gegeven),",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "schemas-stappenplannen-po",
     "file": "./schemasStappenplannenPo.js",
     "title": "Schema's en stappenplannen — Cito groep 5-8",
@@ -7752,6 +7839,35 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "verhaal-diepte-lezen-po",
+    "file": "./verhaalDiepteLezenPo.js",
+    "title": "Verhalen en gedichten dieper lezen",
+    "subject": "begrijpend-lezen",
+    "level": "groep7-8",
+    "emoji": "🎭",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — interpreteren van verhalen en gedichten (fictie)",
+    "triggerKeywords": [
+      "verhaal begrijpen",
+      "verhalen lezen",
+      "gedicht",
+      "gedichten",
+      "poëzie",
+      "beeldspraak",
+      "vergelijking",
+      "figuurlijk",
+      "letterlijk en figuurlijk",
+      "perspectief",
+      "ik-verhaal",
+      "verteller"
+    ],
+    "intro": "\"Hoe voelt Ties zich?\" — terwijl dat nergens staat. Op de Doorstroomtoets krijg je vragen over verhalen en gedichten waarbij het antwoord tussen de regels zit. Leer gevoelens afleiden uit gedrag, ontd",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "verhoudingen",
