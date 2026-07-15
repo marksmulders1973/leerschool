@@ -10,6 +10,7 @@
 // instelbaar zodat ouders/leerkrachten het later anders kunnen zetten.
 
 import { track } from "../utils.js";
+import supabase from "../supabase.js";
 
 const KEY = "lk_daily_goal_v1";
 const STREAK_KEY = "lk_day_streak_v1";
@@ -68,8 +69,10 @@ export function addSeconds(deltaSeconds) {
   if (!Number.isFinite(deltaSeconds) || deltaSeconds <= 0) return getDailyGoal();
   const cur = getDailyGoal();
   cur.seconds = (cur.seconds || 0) + deltaSeconds;
+  let netVoltooid = false;
   if (!cur.completed && cur.seconds >= cur.target) {
     cur.completed = true;
+    netVoltooid = true;
     // 2026-05-18 (12-agent-audit A3 #1): cross-day streak bumpen op moment
     // dat het kwartier voor vandaag echt voltooid is. Eénmalig per dag
     // dankzij de completed-flag-guard.
@@ -82,6 +85,8 @@ export function addSeconds(deltaSeconds) {
     try { track("kwartier_reached", { min: Math.floor(cur.seconds / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
   }
   write(cur);
+  // A8.3: naar Supabase (bij voltooien direct, anders max 1×/minuut)
+  pushCloud(netVoltooid);
   return cur;
 }
 
@@ -211,4 +216,96 @@ export function stopTracking() {
     clearInterval(tickTimer);
     tickTimer = null;
   }
+}
+
+// ── ☁️ Cross-device sync (A8.3, 2026-07-15) ────────────────────────
+// De kwartier-streak + het dagdoel leefden alleen in localStorage en
+// verdampten dus per apparaat (telefoon ≠ laptop). Nu: bij login mergen
+// met de kolommen op `profiles` (kwartier_streak/_best/_last_day,
+// goal_day/goal_seconds) en daarna terugschrijven. Anoniem = alles
+// blijft zoals het was, puur lokaal.
+let cloudUserId = null;
+let lastPushAt = 0;
+const PUSH_MIN_INTERVAL_MS = 60_000;
+
+function cloudRij() {
+  const g = getDailyGoal();
+  const s = readStreak();
+  return {
+    goal_day: g.date,
+    goal_seconds: g.seconds || 0,
+    kwartier_streak: s.current || 0,
+    kwartier_streak_best: s.best || 0,
+    kwartier_last_day: s.lastCompletedDate || null,
+  };
+}
+
+function pushCloud(force = false) {
+  if (!cloudUserId) return;
+  const now = Date.now();
+  if (!force && now - lastPushAt < PUSH_MIN_INTERVAL_MS) return;
+  lastPushAt = now;
+  try {
+    supabase.from("profiles").update(cloudRij()).eq("id", cloudUserId)
+      .then(() => {}, () => {});
+  } catch { /* sync mag nooit het leren breken */ }
+}
+
+// Pure merge-regels (exported voor tests). Kiest per onderdeel de beste
+// stand van twee apparaten:
+// - dagdoel: zelfde dag → hoogste seconden wint; alleen vandaag telt.
+// - streak: de recentste `lastCompletedDate` wint; zelfde dag → hoogste
+//   teller; best = altijd het maximum van beide.
+export function mergeDailyGoalStates(local, cloud, today) {
+  const merged = {
+    goal: { ...local.goal },
+    streak: { ...local.streak },
+  };
+  if (cloud) {
+    if (cloud.goal_day === today) {
+      const cloudSec = cloud.goal_seconds || 0;
+      if (local.goal.date !== today || cloudSec > (local.goal.seconds || 0)) {
+        merged.goal = {
+          date: today,
+          seconds: Math.max(cloudSec, local.goal.date === today ? local.goal.seconds || 0 : 0),
+          target: local.goal.target || DEFAULT_TARGET_SECONDS,
+          completed: false,
+          celebratedAt: local.goal.date === today ? local.goal.celebratedAt || null : null,
+        };
+        merged.goal.completed = merged.goal.seconds >= merged.goal.target;
+      }
+    }
+    const cd = cloud.kwartier_last_day || null;
+    const ld = local.streak.lastCompletedDate || null;
+    if (cd && (!ld || cd > ld)) {
+      merged.streak.lastCompletedDate = cd;
+      merged.streak.current = cloud.kwartier_streak || 0;
+    } else if (cd && ld && cd === ld) {
+      merged.streak.current = Math.max(local.streak.current || 0, cloud.kwartier_streak || 0);
+    }
+    merged.streak.best = Math.max(
+      local.streak.best || 0,
+      cloud.kwartier_streak_best || 0,
+      merged.streak.current || 0
+    );
+  }
+  return merged;
+}
+
+// Aanroepen bij login (useAuth heeft het profiel al opgehaald — geen
+// extra roundtrip). Merged de cloud-stand in localStorage en zet de
+// gebruiker klaar voor pushes; schrijft de merged stand direct terug.
+export function initDailyGoalSync(userId, profileRow) {
+  if (!userId) return;
+  cloudUserId = userId;
+  try {
+    const merged = mergeDailyGoalStates(
+      { goal: getDailyGoal(), streak: readStreak() },
+      profileRow || null,
+      todayStr()
+    );
+    write(merged.goal);
+    writeStreak(merged.streak);
+  } catch { /* lokaal blijft leidend bij gekke data */ }
+  pushCloud(true);
 }

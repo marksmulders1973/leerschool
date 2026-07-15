@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { ensureSession } from "../auth.js";
 import { signInWithGoogleIdToken } from "./googleSignIn.js";
+import { initDailyGoalSync } from "../shared/dailyGoal.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -53,6 +54,9 @@ export function useAuth() {
           .eq("id", u.id)
           .maybeSingle()
           .then(({ data }) => {
+            // A8.3: kwartier-streak + dagdoel cross-device mergen (het
+            // profiel is hier tóch al opgehaald — geen extra roundtrip).
+            initDailyGoalSync(u.id, data);
             if (data?.display_name) setUserName(data.display_name);
             if (data?.level) setUserLevel(data.level);
             if (data?.school_type) setUserSchoolType(data.school_type);
