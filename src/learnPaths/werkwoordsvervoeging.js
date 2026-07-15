@@ -34,7 +34,7 @@ const steps = [
   // ─── A. Werkwoord & stam ──────────────────────────────
   {
     title: "Wat is een werkwoord?",
-    explanation: "Een **werkwoord** is een woord dat zegt **wat iemand of iets doet** — of **is** of **wordt**.\n\n**Voorbeelden** (de werkwoorden zijn dik gedrukt):\n• Ik **fiets** naar school.\n• Sara **leest** een boek.\n• De hond **slaapt**.\n• Wij **zijn** thuis.\n• Het **wordt** koud.\n\nWerkwoorden veranderen van vorm — afhankelijk van **wie** iets doet en **wanneer** het gebeurt. Daarom moeten we ze leren **vervoegen**.\n\nDe **hele werkwoord** (de naam ervan) eindigt meestal op **-en**: lopen, fietsen, lezen, slapen, koken.",
+    explanation: "Een **werkwoord** is een woord dat zegt **wat iemand of iets doet** — of **is** of **wordt**.\n\n**Voorbeelden** (de werkwoorden zijn dik gedrukt):\n• Ik **fiets** naar school.\n• Sara **leest** een boek.\n• De hond **slaapt**.\n• Wij **zijn** thuis.\n• Het **wordt** koud.\n\nWerkwoorden veranderen van vorm — afhankelijk van **wie** iets doet en **wanneer** het gebeurt. Daarom moeten we ze leren **vervoegen**.\n\nHet **hele werkwoord** (de naam ervan) eindigt meestal op **-en**: lopen, fietsen, lezen, slapen, koken.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="260" height="40" rx="8" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="40" y="65" fill="${COLORS.text}" font-size="14" font-family="Arial">Sara</text>
