@@ -13,7 +13,7 @@ import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
-import { schoonVoorSpraak } from "../../shared/spraakTekst.js";
+import { maakMeeleesPlan, woordIndexBijChar } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
@@ -35,18 +35,49 @@ const SUGGESTIES = [
 // Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
 // (zelfde aanpak als BuddyChat). Geen kosten, geen kinderdata verlaat het toestel.
 // onStart/onEnd sturen de mond-animatie van Charley's kop aan.
-function speak(text, { onStart, onEnd } = {}) {
+function speak(text, { onStart, onEnd, onWoord } = {}) {
   try {
     if (!window.speechSynthesis) { onEnd && onEnd(); return; }
-    const schoon = schoonVoorSpraak(text);
-    const u = new SpeechSynthesisUtterance(schoon);
+    // Meelezen (Mark 15 jul): het plan koppelt de gesproken tekst (zonder
+    // emoji's/markdown) terug aan de getoonde woord-indexen.
+    const plan = maakMeeleesPlan(text);
+    if (!plan.gesproken) { onEnd && onEnd(); return; }
+    const u = new SpeechSynthesisUtterance(plan.gesproken);
     u.lang = "nl-NL";
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
     if (stem) u.voice = stem;
     u.rate = 1.0; u.pitch = 1.3;
-    u.onstart = () => onStart && onStart();
-    u.onend = () => onEnd && onEnd();
-    u.onerror = () => onEnd && onEnd();
+    // onboundary vuurt per uitgesproken woord — maar niet elke stem doet dat
+    // (sommige online stemmen zwijgen). Dan neemt na 1,2s een tempo-schatter
+    // het over zodat het meelezen tóch meeloopt.
+    let boundaryGezien = false;
+    let timer = null;
+    const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
+    if (onWoord) {
+      u.onboundary = (e) => {
+        boundaryGezien = true;
+        stopTimer();
+        onWoord(woordIndexBijChar(plan, e.charIndex || 0));
+      };
+    }
+    u.onstart = () => {
+      onStart && onStart();
+      if (!onWoord || !plan.grenzen.length) return;
+      setTimeout(() => {
+        if (boundaryGezien || !window.speechSynthesis.speaking) return;
+        let g = 0;
+        const stap = () => {
+          if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis.speaking) return;
+          const grens = plan.grenzen[g];
+          onWoord(grens.woordIdx);
+          timer = setTimeout(() => { g += 1; stap(); }, 190 + 55 * (grens.eind - grens.start));
+        };
+        stap();
+      }, 1200);
+    };
+    const klaar = () => { stopTimer(); onEnd && onEnd(); };
+    u.onend = klaar;
+    u.onerror = klaar;
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(u);
   } catch { onEnd && onEnd(); }
@@ -54,6 +85,48 @@ function speak(text, { onStart, onEnd } = {}) {
 
 function stopSpeak() {
   try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ }
+}
+
+// Meelees-weergave (Mark 15 jul): tijdens het voorlezen licht het woord op dat
+// de stem nú uitspreekt — karaoke-stijl. Rendert alleen **vet** (meer markdown
+// gebruikt de tutor zelden); zodra het voorlezen klaar is neemt MdInline het
+// weer over. Woord-telling MOET gelijk lopen met maakMeeleesPlan: beide tellen
+// elk niet-witruimte-token.
+function MeeleesTekst({ tekst, actief, accent }) {
+  const stukken = String(tekst ?? "").split(/(\s+)/);
+  let woordIdx = -1;
+  let vet = false;
+  return (
+    <>
+      {stukken.map((stuk, i) => {
+        if (!stuk) return null;
+        if (/^\s+$/.test(stuk)) return stuk; // pre-wrap bewaart enters
+        woordIdx += 1;
+        const dit = woordIdx;
+        const delen = stuk.split("**");
+        const inhoud = delen.map((d, j) => {
+          const stijl = vet ? { fontWeight: 700 } : undefined;
+          if (j < delen.length - 1) vet = !vet;
+          return d ? <span key={j} style={stijl}>{d}</span> : null;
+        });
+        return (
+          <span
+            key={i}
+            style={dit === actief ? {
+              background: accent,
+              color: "#04121f",
+              borderRadius: 4,
+              padding: "0 3px",
+              margin: "0 -3px",
+              transition: "background 0.1s",
+            } : undefined}
+          >
+            {inhoud}
+          </span>
+        );
+      })}
+    </>
+  );
 }
 
 export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, stepIdx, stepExplanation, currentCheck, lastWrongAnswer, startVraag = null }) {
@@ -71,6 +144,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const [error, setError] = useState(null);
   const [geluid, setGeluid] = useState(true);
   const [praat, setPraat] = useState(false);   // Charley's mond beweegt terwijl hij voorleest
+  const [leesMsg, setLeesMsg] = useState(-1);  // welke bubble wordt voorgelezen (meelezen)
+  const [leesWoord, setLeesWoord] = useState(-1); // welk woord de stem nú uitspreekt
   const scrollRef = useRef(null);
 
   // Persona = het maatje dat de leerling koos (of Vonk als vlaggenschip). Zo is
@@ -89,6 +164,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     } else {
       stopSpeak();
       setPraat(false);
+      setLeesMsg(-1); setLeesWoord(-1);
     }
     return () => { stopSpeak(); setPraat(false); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -178,7 +254,16 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       const after = [...next, { role: "assistant", content: data.reply }];
       setMessages(after);
       persist(after);
-      if (geluid) speak(data.reply, { onStart: () => setPraat(true), onEnd: () => setPraat(false) });
+      if (geluid) {
+        const msgIdx = after.length - 1;
+        setLeesMsg(msgIdx);
+        setLeesWoord(-1);
+        speak(data.reply, {
+          onStart: () => setPraat(true),
+          onWoord: (w) => setLeesWoord(w),
+          onEnd: () => { setPraat(false); setLeesMsg(-1); setLeesWoord(-1); },
+        });
+      }
     } catch (e) {
       setError(e.message);
     } finally {
@@ -255,7 +340,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
-              onClick={() => { setGeluid((g) => { if (g) { stopSpeak(); setPraat(false); } return !g; }); }}
+              onClick={() => { setGeluid((g) => { if (g) { stopSpeak(); setPraat(false); setLeesMsg(-1); setLeesWoord(-1); } return !g; }); }}
               aria-label={geluid ? `${naam} stil zetten` : `${naam} hardop laten praten`}
               title={geluid ? "Geluid uit" : "Geluid aan"}
               style={{
@@ -328,7 +413,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 wordBreak: "break-word",
               }}
             >
-              <MdInline text={m.content} />
+              {m.role === "assistant" && i === leesMsg
+                ? <MeeleesTekst tekst={m.content} actief={leesWoord} accent={accent} />
+                : <MdInline text={m.content} />}
             </div>
           ))}
           {busy && (
