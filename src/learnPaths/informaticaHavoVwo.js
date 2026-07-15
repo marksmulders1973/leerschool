@@ -74,7 +74,7 @@ const steps = [
         q: "**DRY** programming-principe:",
         options: ["Don't Repeat Yourself","Do React Yourself","Dynamic Resource Yielding","Draft Ready Yes"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "DRY waarschuwt tegen kopiëren-en-plakken van dezelfde code — wat zou je dan níét moeten doen?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Hergebruik", tekst: "**DRY = Don't Repeat Yourself**: maak van herhaalde code een **functie/klasse** om duplicatie te vermijden. Voordeel: één plek aanpassen → effect overal. Tegenovergesteld: WET (Write Everything Twice — slecht). Onderhoudbaarheid groot verschil." }],
           niveaus: { basis: "Don't Repeat Yourself.", simpeler: "DRY = niet herhalen", nogSimpeler: "A." },
@@ -133,7 +133,7 @@ const steps = [
         q: "**AVG / GDPR** is:",
         options: ["EU-privacy-wet sinds 2018","NL-belastingwet","Beveiliging-standaard","Verkeers-regel"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — wet niet standaard.", "Niet relevant."],
+        wrongHints: [null, "Geen belastingwet — over welk recht van burgers gaat de AVG?", "Het is een wét van de EU, geen technische beveiligings-standaard.", null],
         uitlegPad: {
           stappen: [{ titel: "GDPR/AVG", tekst: "**AVG** (Algemene Verordening Gegevensbescherming) = NL-naam. **GDPR** (General Data Protection Regulation) = EU. Sinds 25 mei 2018. Bescherming persoonsgegevens van EU-burgers. Rechten: inzage, correctie, **vergetelheid** ('right to be forgotten'), dataportabiliteit. **Datalek** moet binnen 72u gemeld worden bij Autoriteit Persoonsgegevens. Boetes tot 4% wereldwijde omzet of €20 mln (hoogste van twee)." }],
           niveaus: { basis: "EU-privacy-wet.", simpeler: "AVG = privacy", nogSimpeler: "A." },
@@ -152,7 +152,7 @@ const steps = [
         q: "**Primaire sleutel** in DB-tabel is:",
         options: ["Uniek ID per rij","Wachtwoord","Buitenste tabel","SQL-commando"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Deze 'sleutel' opent niets — hij wijst iets aan. Wat moet je per rij kunnen aanwijzen?", null, "Het is een eigenschap ván een tabel, geen commando dat je uitvoert."],
         uitlegPad: {
           stappen: [{ titel: "Identificeert rij uniek", tekst: "**Primary key**: uniek identificatie per rij. Vaak auto-incrementing ID (1, 2, 3, ...). Garandeert geen duplicates. Andere tabellen kunnen verwijzen via **foreign key**. Voorbeeld: Leerling-ID 1 verschilt van Leerling-ID 2 zelfs als beide 'Anna' heten." }],
           niveaus: { basis: "Uniek ID.", simpeler: "PK = uniek", nogSimpeler: "A." },
@@ -162,7 +162,7 @@ const steps = [
         q: "Welke SQL-query selecteert alle leerlingen uit klas 4A?",
         options: ["SELECT * FROM Leerlingen WHERE klas = '4A'","GET Leerlingen FROM 4A","SHOW LEERLING klas=4A","FIND Leerlingen.klas:4A"],
         answer: 0,
-        wrongHints: [null, "Geen SQL.", "Geen SQL.", "Geen SQL."],
+        wrongHints: [null, "GET komt uit HTTP, niet uit SQL — met welk sleutelwoord haalt SQL rijen op?", "Hiermee filter je geen rijen op een voorwaarde — hoe schrijf je een échte selectie met voorwaarde?", null],
         uitlegPad: {
           stappen: [{ titel: "SELECT-syntax", tekst: "**SQL SELECT**: `SELECT [kolommen] FROM [tabel] WHERE [conditie];`\n\n`SELECT * FROM Leerlingen WHERE klas = '4A';` selecteert alle kolommen voor rijen waar klas '4A' is. **\\*** = alle kolommen. **WHERE** = filter. **String-waarden in quotes**." }],
           niveaus: { basis: "SELECT...WHERE.", simpeler: "SQL = SELECT FROM WHERE", nogSimpeler: "A." },
@@ -182,7 +182,7 @@ const steps = [
         q: "**1NF (eerste normaalvorm)** vereist:",
         options: ["Atomaire waarden (geen lijsten in cel)","Indexering","Versleuteling","JSON-formaat"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Indexen maken zoeken sneller — maar normaalvormen gaan over de índeling van je data. Wat mag er niet in één cel?", "Versleuteling is beveiliging — normaalvormen gaan over structuur.", null],
         uitlegPad: {
           stappen: [{ titel: "1NF = elke cel één waarde", tekst: "**1e Normaalvorm (1NF)**: elke cel bevat **één enkele atomaire waarde**, geen lijsten of geneste structuren. **Foute** cel: 'Wiskunde, Engels, Frans' in één cel. **Goede** oplossing: aparte rijen per vak in vakken-tabel.\n\nHogere normaalvormen (2NF, 3NF) elimineren verdere redundantie + afhankelijkheid-anomalieën." }],
           niveaus: { basis: "Atomair.", simpeler: "1NF = 1 waarde per cel", nogSimpeler: "A." },
@@ -192,7 +192,7 @@ const steps = [
         q: "**Big Data 4 V's**:",
         options: ["Volume + Velocity + Variety + Veracity","Vier kleuren","Vier vakken","Verkoop"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, null, null, "De 4 V's beschrijven de áárd van de data (hoeveel, hoe snel, hoe divers, hoe betrouwbaar) — niet wat je ermee verdient."],
         uitlegPad: {
           stappen: [{ titel: "4 V-kenmerken", tekst: "**Big Data 4 V's**:\n• **Volume**: groot (terabytes/petabytes).\n• **Velocity**: snelheid van data-stroom (real-time IoT, social media).\n• **Variety**: verschillende formaten (tekst, video, log, sensor).\n• **Veracity**: betrouwbaarheid + accuratheid (data kan vies, onzeker zijn).\n\nSoms 5e V: Value (waarde). Klassiek voorbeeld: Twitter-feed = volume + velocity + variety + veracity-uitdagingen tegelijk." }],
           niveaus: { basis: "Vol/Vel/Var/Ver.", simpeler: "4V", nogSimpeler: "A." },
@@ -211,7 +211,7 @@ const steps = [
         q: "**Turing-test** test:",
         options: ["Of machine onderscheidbaar is van mens","Computerkracht","Internetsnelheid","Programma-correctheid"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Kracht meet je met een benchmark — de Turing-test is een gesprekstest. Wat probeert de ondervrager te ontdekken?", null, "Of code correct werkt test je met unit-tests — waar gaat dit beroemde gedachte-experiment over?"],
         uitlegPad: {
           stappen: [{ titel: "1950 Turing", tekst: "**Alan Turing** stelde 1950 voor: machine is 'intelligent' als mens in tekst-conversatie niet kan onderscheiden of antwoord van mens of machine komt. **Turing-test**. Beperkt criterium (geen begrip-vereiste), maar invloedrijk. ChatGPT slaagt vaak — definitie 'intelligent' nu omstreden." }],
           niveaus: { basis: "Mens vs machine onderscheiden.", simpeler: "Turing = mens-of-machine", nogSimpeler: "A." },
@@ -221,7 +221,7 @@ const steps = [
         q: "**LLM** staat voor:",
         options: ["Large Language Model","Long Linked Memory","Latin Letters Model","Last Logic Module"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Denk aan wat zo'n model vooral doet: tekst begrijpen en maken. Welke woorden passen daarbij?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Voorspel volgend woord", tekst: "**LLM = Large Language Model**: model getraind op enorme tekst-corpus dat 'volgend woord' voorspelt op basis context. Voorbeelden: **ChatGPT** (OpenAI), **Claude** (Anthropic), **Gemini** (Google), **LLaMA** (Meta open source). Onderscheid: niet **denken** — herkennen patronen op grote schaal." }],
           niveaus: { basis: "LLM.", simpeler: "LLM = taalmodel", nogSimpeler: "A." },
@@ -231,7 +231,7 @@ const steps = [
         q: "Wat is **AI-hallucinatie**?",
         options: ["AI produceert plausibel-klinkende onzin","AI-storing","Visuele AI","Geluidsverwerking"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Het is geen defect — het model doet gewoon zijn werk. Wat klopt er dan niet aan de úítkomst?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Verzonnen feiten", tekst: "**Hallucinatie**: LLM produceert antwoord dat **plausibel klinkt** maar **onjuist** is. Bv. verzint feiten, bronnen, citaten. Komt door: LLM is patroon-voorspeller, niet feit-checker. **Gevolg**: niet blind vertrouwen, altijd verifiëren. Modellen worden beter (RAG = Retrieval Augmented Generation hangt feiten erbij) maar probleem blijft." }],
           niveaus: { basis: "Plausibele onzin.", simpeler: "Hallucinatie = verzinnen", nogSimpeler: "A." },
@@ -251,7 +251,7 @@ const steps = [
         q: "**EU AI Act** (2024) reguleert AI op basis van:",
         options: ["Risico-niveau","Land van oorsprong","Prijs","Gebruikers-aantal"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De wet kijkt niet naar wáár de AI vandaan komt, maar naar wat er mis kan gaan — hoe noem je dat?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Risicogebaseerd", tekst: "**EU AI Act** (eerste grote AI-wet wereldwijd, 2024): **risico-niveau-aanpak**:\n• **Onaanvaardbaar** (verboden): social scoring (China-stijl), realtime biometrie publieke ruimte, manipulatie.\n• **Hoog risico**: medisch, kritieke infra, HR, onderwijs-AI — strenge regels.\n• **Beperkt risico** (transparantie): chatbots, deepfakes moeten gemarkeerd.\n• **Minimaal**: vrije gebruik (zoals spamfilter).\n\nBoetes tot 7% wereldwijde omzet. NL implementeert via aanvullende wet 2025." }],
           niveaus: { basis: "Risico-niveau.", simpeler: "AI Act = risico-tiers", nogSimpeler: "A." },
