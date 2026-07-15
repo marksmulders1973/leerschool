@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is **brutowinst**?",
         options: ["Omzet − inkoopwaarde","Omzet − alle kosten","Eigen vermogen","Belastingaftrek"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is nettowinst.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — dat is nettowinst.", "Dat is een balans-begrip, geen winst-berekening.", null],
         uitlegPad: {
           stappen: [{ titel: "Verschil verkoop-inkoop", tekst: "**Brutowinst** = omzet − inkoopwaarde van verkochte producten. Bv: kocht voor €300k, verkocht voor €500k → brutowinst €200k. Daarvan moeten nog lonen, huur, afschrijvingen, rente, belasting af → nettowinst." }],
           niveaus: { basis: "Omzet − inkoop.", simpeler: "Bruto = O − I", nogSimpeler: "A." },
@@ -64,7 +64,7 @@ const steps = [
         q: "**Afschrijving** is:",
         options: ["Waardevermindering vaste activa over tijd","Belastingaangifte","Loonbetaling","Voorraad-aankoop"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Afschrijven heeft niets met de fiscus te maken — wat gebeurt er met de waarde van een machine na jaren gebruik?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Spread van kosten", tekst: "**Afschrijving** = jaarlijkse waardevermindering vaste activa (gebouw, machine, auto). Lineair: (aanschaf − restwaarde) / levensduur. Bv. machine €50k, restwaarde €5k, levensduur 10 jaar → €4500/jaar afschrijving. Spread van kosten over gebruiksperiode." }],
           niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "A." },
@@ -152,7 +152,7 @@ const steps = [
         q: "Wat is **eigen vermogen** financieren?",
         options: ["Geld eigenaren + ingehouden winst","Bank-lening","Hypotheek","Obligaties"],
         answer: 0,
-        wrongHints: [null, "Vreemd vermogen.", "Vreemd vermogen.", "Vreemd vermogen."],
+        wrongHints: [null, "Geld van de bank — is dat geld ván het bedrijf zelf, of van een buitenstaander die het terug wil?", "Ook geleend geld (met het pand als onderpand) — van wie ís dit vermogen eigenlijk?", "Wie koopt obligaties: de eigenaren zelf, of beleggers van buiten?"],
         uitlegPad: {
           stappen: [{ titel: "EV-bronnen", tekst: "**Eigen vermogen** (EV) = geld eigenaren (bij oprichting + ingehouden winst + aandelen). Geen rente, geen aflossing. **Vreemd vermogen** (VV) = geleend (bank, obligaties, leveranciers) — heeft rente + aflossings-plicht. EV is duurder (verdunning) maar veiliger." }],
           niveaus: { basis: "Eigenaars + winst.", simpeler: "EV = eigenaars-geld", nogSimpeler: "A." },
@@ -212,7 +212,7 @@ const steps = [
         q: "**4 P's** van marketing zijn:",
         options: ["Product, Prijs, Plaats, Promotie","Pre, Post, Push, Pull","Person, Place, Past, Possible","Profit, Power, People, Planet"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Wel populair (3P's MVO) maar niet originele 4P's."],
+        wrongHints: [null, "Push en pull zijn distributie-begrippen — niet dé vier P's van de marketing-mix.", null, "Wel populair (3P's MVO) maar niet originele 4P's."],
         uitlegPad: {
           stappen: [{ titel: "McCarthy 1960", tekst: "**4 P's** (Jerome McCarthy 1960): **Product, Prijs, Plaats, Promotie**. Marketing-mix-basis. Moderne uitbreidingen: People, Process, Physical evidence (vooral diensten)." }],
           niveaus: { basis: "Prod/Prijs/Plaats/Promotie.", simpeler: "4P", nogSimpeler: "A." },
@@ -222,7 +222,7 @@ const steps = [
         q: "Wat is **psychologische prijs**?",
         options: ["€9,99 voelt veel lager dan €10","Geheime prijs","Tijdelijke prijs","Prijs voor psychologen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Het gaat niet om geheimhouding — het gaat om hoe de prijs op de klant óverkomt.", "Een tijdelijke prijs is een aanbieding — hier verandert niet de prijs maar de beleving.", null],
         uitlegPad: {
           stappen: [{ titel: "Linksomafronding", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Werkt bewezen — €9,99-prijs verkoopt 20-30% beter dan €10. Ook €99 vs €100, €499 vs €500." }],
           niveaus: { basis: "9,99 voelt lager.", simpeler: "Psy prijs", nogSimpeler: "9,99" },
@@ -232,7 +232,7 @@ const steps = [
         q: "**Porter's 5 Forces** is voor:",
         options: ["Concurrentie-analyse","Marketing-mix","Boekhouding","HR"],
         answer: 0,
-        wrongHints: [null, "Niet — andere theorie.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — andere theorie.", "Boekhouden is registreren wat er gebeurde — Porter analyseert de markt óm je heen.", null],
         uitlegPad: {
           stappen: [{ titel: "Michael Porter 1979", tekst: "**5 Forces** (Porter): analyse-framework concurrentie sector.\n1. Concurrentie binnen sector.\n2. Macht leveranciers.\n3. Macht klanten.\n4. Dreiging nieuwe toetreders.\n5. Substituten.\n\nBedrijven analyseren hun positie via deze 5 invalshoeken." }],
           niveaus: { basis: "Concurrentie.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "A." },
@@ -242,7 +242,7 @@ const steps = [
         q: "**Just-in-time** (JIT) is een methode voor:",
         options: ["Voorraad minimaliseren — geleverd wanneer nodig","Snel-bedrijfsstart","Klantkorting","Personeel"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "JIT gaat niet over starten — het gaat over het magazijn. Wat wil je daar zo mín mogelijk hebben liggen?", "Geen korting — het draait om wannéér spullen geleverd worden.", null],
         uitlegPad: {
           stappen: [{ titel: "Toyota-methode", tekst: "**Just-in-time**: voorraad zo minimaal mogelijk; producten + onderdelen worden geleverd **op het moment dat ze nodig zijn**. Spaart opslagkosten + werkkapitaal. **Toyota pionier** vanaf jaren '50. Zwakte: kwetsbaar bij verstoring keten (COVID-19 + chiptekort 2020-22 toonde dit)." }],
           theorie: "Cito-actueel: discussie 'just-in-case' (meer voorraad voor zekerheid) als reactie op kwetsbaarheid JIT.",
@@ -253,7 +253,7 @@ const steps = [
         q: "Wat is **MVO** (CSR)?",
         options: ["Maatschappelijk Verantwoord Ondernemen","Marketing Vereniging Online","Maandelijkse Verkoop Overzicht","Markttoezicht"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "MVO gaat niet over marketing — het gaat over hoe een bedrijf omgaat met mens en milieu. Welke woorden passen daarbij?", null, "Dat zou een toezichthouder zijn — MVO is iets wat een bedrijf zélf doet."],
         uitlegPad: {
           stappen: [{ titel: "Triple bottom line", tekst: "**MVO** = Maatschappelijk Verantwoord Ondernemen (Engels CSR = Corporate Social Responsibility). Bedrijven hebben verantwoordelijkheid voor **People, Planet, Profit** (triple bottom line). Voorbeelden NL: Tony's Chocolonely (slavernij-vrij chocolade), Triodos Bank, Patagonia. EU verplicht rapportage via CSRD sinds 2024 voor grote bedrijven." }],
           niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "A." },
@@ -292,7 +292,7 @@ const steps = [
         q: "**Solvabiliteit van 60%** betekent:",
         options: ["60% van vermogen is eigen vermogen","60% schuld","60% winst","60% liquide"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet — andere ratio."],
+        wrongHints: [null, "Tegenovergesteld.", null, "Niet — andere ratio."],
         uitlegPad: {
           stappen: [{ titel: "EV-aandeel", tekst: "**Solvabiliteit 60%** = EV / Totaal vermogen = 60%. Dus 60% gefinancierd met eigen geld, 40% met schuld. Sterk solvabel, banken zullen graag lenen. Vuistregel: ≥25-30% redelijk." }],
           niveaus: { basis: "60% EV.", simpeler: "Solv 60% = 60% EV", nogSimpeler: "A." },
@@ -312,7 +312,7 @@ const steps = [
         q: "Welke is **vraag-stimulerend** (geen prijs-strategie)?",
         options: ["Reclame-campagne (promotie)","Penetratie","Skimming","Cost-plus"],
         answer: 0,
-        wrongHints: [null, "Wel prijs.", "Wel prijs.", "Wel prijs."],
+        wrongHints: [null, "Penetratie = laag ínstappen met je prijs — de vraag zoekt juist iets dat géén prijs-strategie is.", "Skimming = afromen met een hoge príjs — dus wél een prijs-strategie.", "Cost-plus = kostprijs plus winstmarge — ook een prijs-methode. Wat stimuleert vraag zónder aan de prijs te zitten?"],
         uitlegPad: {
           stappen: [{ titel: "Promotie ≠ prijs", tekst: "**Reclame** zit in 4e P (Promotie), niet 2e (Prijs). Stimuleert vraag zonder per se prijs aan te passen. Andere genoemde opties zijn allemaal prijs-strategieën." }],
           niveaus: { basis: "Reclame = promotie.", simpeler: "Reclame ≠ prijs", nogSimpeler: "A." },
