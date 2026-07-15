@@ -13,6 +13,7 @@
 import { useState, useEffect, useRef } from "react";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
+import { schoonVoorSpraak } from "../shared/spraakTekst.js";
 
 const VANDAAG = () => new Date().toISOString().slice(0, 10);
 
@@ -55,7 +56,7 @@ const MOODS = [
 function speak(text) {
   try {
     if (!window.speechSynthesis) return;
-    const u = new SpeechSynthesisUtterance(String(text).replace(/[*_#`>]/g, ""));
+    const u = new SpeechSynthesisUtterance(schoonVoorSpraak(text));
     u.lang = "nl-NL"; u.rate = 1.0; u.pitch = 1.2;
     const v = window.speechSynthesis.getVoices().find((x) => (x.lang || "").toLowerCase().startsWith("nl"));
     if (v) u.voice = v;

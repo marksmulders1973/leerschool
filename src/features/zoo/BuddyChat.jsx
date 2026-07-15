@@ -8,6 +8,7 @@
 import { useState, useRef, useEffect } from "react";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
+import { schoonVoorSpraak } from "../../shared/spraakTekst.js";
 
 const STARTERS = [
   "Hoe verdien ik muntjes?",
@@ -21,7 +22,7 @@ const STARTERS = [
 function speak(text) {
   try {
     if (!window.speechSynthesis) return;
-    const schoon = String(text).replace(/[*_#`>]/g, "");
+    const schoon = schoonVoorSpraak(text);
     const u = new SpeechSynthesisUtterance(schoon);
     u.lang = "nl-NL";
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));

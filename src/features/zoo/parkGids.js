@@ -8,6 +8,8 @@
 // géén ongevraagde praatjes en géén voorlezen; tikken op objecten blijft werken
 // (dan alleen tekst).
 
+import { schoonVoorSpraak } from "../../shared/spraakTekst.js";
+
 const KEY_STIL = "lk_park_gids_stil";
 
 export function gidsIsStil() {
@@ -48,8 +50,10 @@ export function spreek(tekst, onKlaar = null) {
   try {
     if (gidsIsStil()) return false;
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return false;
+    const schoon = schoonVoorSpraak(tekst);
+    if (!schoon) return false;
     window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(String(tekst));
+    const u = new SpeechSynthesisUtterance(schoon);
     u.lang = "nl-NL";
     const stem = kiesStem();
     if (stem) u.voice = stem;

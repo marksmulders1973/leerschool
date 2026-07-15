@@ -13,6 +13,7 @@ import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
+import { schoonVoorSpraak } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
@@ -37,7 +38,7 @@ const SUGGESTIES = [
 function speak(text, { onStart, onEnd } = {}) {
   try {
     if (!window.speechSynthesis) { onEnd && onEnd(); return; }
-    const schoon = String(text).replace(/[*_#`>]/g, "");
+    const schoon = schoonVoorSpraak(text);
     const u = new SpeechSynthesisUtterance(schoon);
     u.lang = "nl-NL";
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
