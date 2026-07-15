@@ -39,17 +39,24 @@ export function koppelMeelezen(u, plan, onWoord) {
     onWoord(woordIndexBijChar(plan, e.charIndex || 0));
   });
   u.addEventListener("start", () => {
-    setTimeout(() => {
-      if (boundaryGezien || !window.speechSynthesis?.speaking) return;
-      let g = 0;
-      const stap = () => {
-        if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis?.speaking) return;
-        const grens = plan.grenzen[g];
-        onWoord(grens.woordIdx);
-        timer = setTimeout(() => { g += 1; stap(); }, 190 + 55 * (grens.eind - grens.start));
-      };
-      stap();
-    }, 1200);
+    // Tempo-schatter start DIRECT (Mark 15 jul: highlight liep achter door de
+    // oude 1,2s-wachttijd). Vuurt de stem alsnog boundary-events, dan nemen
+    // die het meteen over — de eerste komt vrijwel direct na start.
+    if (boundaryGezien) return;
+    let g = 0;
+    const tempo = u.rate || 1;
+    const stap = () => {
+      if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis?.speaking) return;
+      const grens = plan.grenzen[g];
+      onWoord(grens.woordIdx);
+      const woord = plan.gesproken.slice(grens.start, grens.eind);
+      // ~geschat spreektempo: basis + per teken, plus adempauze bij leestekens
+      let ms = 90 + 62 * woord.length;
+      if (/[.!?…]$/.test(woord)) ms += 320;
+      else if (/[,;:]$/.test(woord)) ms += 150;
+      timer = setTimeout(() => { g += 1; stap(); }, ms / tempo);
+    };
+    stap();
   });
   u.addEventListener("end", stop);
   u.addEventListener("error", stop);
