@@ -8,7 +8,8 @@
 import { useState, useRef, useEffect } from "react";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
-import { schoonVoorSpraak } from "../../shared/spraakTekst.js";
+import { maakMeeleesPlan, koppelMeelezen } from "../../shared/spraakTekst.js";
+import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 
 const STARTERS = [
   "Hoe verdien ik muntjes?",
@@ -18,19 +19,24 @@ const STARTERS = [
   "Ik ben zenuwachtig voor de toets",
 ];
 
-// Hardop laten praten met de gratis browserstem (Nederlands), iets hoger = liever.
-function speak(text) {
+// Hardop laten praten met de gratis browserstem (Nederlands), iets hoger =
+// liever. Met meelezen: onWoord krijgt per uitgesproken woord de index.
+function speak(text, { onWoord, onEnd } = {}) {
   try {
-    if (!window.speechSynthesis) return;
-    const schoon = schoonVoorSpraak(text);
-    const u = new SpeechSynthesisUtterance(schoon);
+    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
+    const plan = maakMeeleesPlan(text);
+    if (!plan.gesproken) { onEnd && onEnd(); return; }
+    const u = new SpeechSynthesisUtterance(plan.gesproken);
     u.lang = "nl-NL";
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
     if (stem) u.voice = stem;
     u.rate = 1.0; u.pitch = 1.2;
+    koppelMeelezen(u, plan, onWoord);
+    u.onend = () => onEnd && onEnd();
+    u.onerror = () => onEnd && onEnd();
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(u);
-  } catch { /* stem niet beschikbaar → stil */ }
+  } catch { onEnd && onEnd(); /* stem niet beschikbaar → stil */ }
 }
 
 export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null, onNaarLeren }) {
@@ -40,6 +46,8 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
   const [invoer, setInvoer] = useState("");
   const [busy, setBusy] = useState(false);
   const [geluid, setGeluid] = useState(true);
+  const [leesWoord, setLeesWoord] = useState(-1); // meelezen: welk woord klinkt nu
+  const [leest, setLeest] = useState(false);
   const lijstRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -90,7 +98,13 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
       const data = await res.json().catch(() => ({}));
       const reply = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks in het park doen? 🌟";
       setMessages((m) => [...m, { role: "assistant", content: reply }]);
-      if (geluid) speak(reply);
+      if (geluid) {
+        setLeest(true); setLeesWoord(-1);
+        speak(reply, {
+          onWoord: setLeesWoord,
+          onEnd: () => { setLeest(false); setLeesWoord(-1); },
+        });
+      }
     } catch {
       setMessages((m) => [...m, { role: "assistant", content: "Oeps, ik kan even niet praten. Probeer het zo nog eens! 🙏" }]);
     } finally {
@@ -127,7 +141,11 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
 
         {/* berichten */}
         <div ref={lijstRef} style={{ flex: 1, overflowY: "auto", padding: "14px", display: "flex", flexDirection: "column", gap: 9, background: "#f7f9f4" }}>
-          {messages.map((m, i) => {
+          {(() => {
+            // meelezen: alleen de nieuwste maatje-bubble wordt voorgelezen
+            let laatsteAi = -1;
+            messages.forEach((m, i) => { if (m.role === "assistant") laatsteAi = i; });
+            return messages.map((m, i) => {
             const ai = m.role === "assistant";
             return (
               <div key={i} style={{ display: "flex", justifyContent: ai ? "flex-start" : "flex-end" }}>
@@ -138,11 +156,15 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
                   color: ai ? "#243" : "#fff", font: "600 14px/1.4 system-ui",
                   boxShadow: "0 1px 4px rgba(0,0,0,.1)", whiteSpace: "pre-wrap",
                 }}>
-                  {ai && <span style={{ marginRight: 5 }}>{b.emoji}</span>}{m.content}
+                  {ai && <span style={{ marginRight: 5 }}>{b.emoji}</span>}
+                  {ai && leest && i === laatsteAi
+                    ? <MeeleesTekst tekst={m.content} actief={leesWoord} accent={b.kleur} />
+                    : m.content}
                 </div>
               </div>
             );
-          })}
+          });
+          })()}
           {busy && (
             <div style={{ display: "flex", justifyContent: "flex-start" }}>
               <div style={{ padding: "9px 14px", borderRadius: 16, background: "#fff", color: "#8a93a0", font: "600 14px system-ui", boxShadow: "0 1px 4px rgba(0,0,0,.1)" }}>

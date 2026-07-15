@@ -13,7 +13,8 @@
 import { useState, useEffect, useRef } from "react";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
-import { schoonVoorSpraak } from "../shared/spraakTekst.js";
+import { maakMeeleesPlan, koppelMeelezen } from "../shared/spraakTekst.js";
+import MeeleesTekst from "../shared/ui/MeeleesTekst.jsx";
 
 const VANDAAG = () => new Date().toISOString().slice(0, 10);
 
@@ -53,15 +54,20 @@ const MOODS = [
   { e: "😄", t: "Wat leuk dat je er bent!", actie: null },
 ];
 
-function speak(text) {
+function speak(text, { onWoord, onEnd } = {}) {
   try {
-    if (!window.speechSynthesis) return;
-    const u = new SpeechSynthesisUtterance(schoonVoorSpraak(text));
+    if (!window.speechSynthesis) { onEnd && onEnd(); return; }
+    const plan = maakMeeleesPlan(text);
+    if (!plan.gesproken) { onEnd && onEnd(); return; }
+    const u = new SpeechSynthesisUtterance(plan.gesproken);
     u.lang = "nl-NL"; u.rate = 1.0; u.pitch = 1.2;
     const v = window.speechSynthesis.getVoices().find((x) => (x.lang || "").toLowerCase().startsWith("nl"));
     if (v) u.voice = v;
+    koppelMeelezen(u, plan, onWoord);
+    u.onend = () => onEnd && onEnd();
+    u.onerror = () => onEnd && onEnd();
     window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
-  } catch { /* stil */ }
+  } catch { onEnd && onEnd(); /* stil */ }
 }
 
 export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName = "" }) {
@@ -71,7 +77,14 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
   const [stappen, setStappen] = useState(0);
   const [vandaagGeleerd, setVandaagGeleerd] = useState(0);
   const [geluid, setGeluid] = useState(true);
+  const [leest, setLeest] = useState(false);      // meelezen: wordt er voorgelezen?
+  const [leesWoord, setLeesWoord] = useState(-1); // welk woord klinkt nu
   const [moodIdx, setMoodIdx] = useState(0);
+  // voorlezen mét meelezen — gebruikt bij elk gesproken maatje-antwoord
+  const spreekVoor = (tekst) => {
+    setLeest(true); setLeesWoord(-1);
+    speak(tekst, { onWoord: setLeesWoord, onEnd: () => { setLeest(false); setLeesWoord(-1); } });
+  };
   const [chatOpen, setChatOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [invoer, setInvoer] = useState("");
@@ -183,10 +196,10 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
     setMessages(next); setInvoer("");
 
     const lok = lokaalAntwoord(t);
-    if (lok) { setMessages((m) => [...m, { role: "assistant", content: lok }].slice(-30)); if (geluid) speak(lok); return; }
+    if (lok) { setMessages((m) => [...m, { role: "assistant", content: lok }].slice(-30)); if (geluid) spreekVoor(lok); return; }
     if (aiCapBereikt()) {
       const canned = "Wat leuk dat je met me praat! Zullen we samen een kwartiertje leren? Dan word ik groter. 🌟";
-      setMessages((m) => [...m, { role: "assistant", content: canned }].slice(-30)); if (geluid) speak(canned); return;
+      setMessages((m) => [...m, { role: "assistant", content: canned }].slice(-30)); if (geluid) spreekVoor(canned); return;
     }
     setBusy(true); track("maatje_chat", { buddy: buddy.id });
     try {
@@ -201,7 +214,7 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
       const data = await res.json().catch(() => ({}));
       const reply = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks doen? 🌟";
       setMessages((m) => [...m, { role: "assistant", content: reply }].slice(-30));
-      if (geluid) speak(reply);
+      if (geluid) spreekVoor(reply);
     } catch {
       setMessages((m) => [...m, { role: "assistant", content: "Oeps, ik kan even niet praten. Probeer zo nog eens! 🙏" }].slice(-30));
     } finally { setBusy(false); }
@@ -312,16 +325,24 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
             </div>
             <div ref={lijstRef} style={{ flex: 1, overflowY: "auto", padding: 13, display: "flex", flexDirection: "column", gap: 8, background: "#f7f9f4" }}>
               {messages.length === 0 && <div style={{ color: "#8a93a0", font: "600 13.5px system-ui", textAlign: "center", marginTop: 16 }}>Zeg eens hoi tegen {naam}! 👋</div>}
-              {messages.map((m, i) => {
+              {(() => {
+                // meelezen: alleen de nieuwste maatje-bubble wordt voorgelezen
+                let laatsteAi = -1;
+                messages.forEach((m, i) => { if (m.role === "assistant") laatsteAi = i; });
+                return messages.map((m, i) => {
                 const ai = m.role === "assistant";
                 return (
                   <div key={i} style={{ display: "flex", justifyContent: ai ? "flex-start" : "flex-end" }}>
                     <div style={{ maxWidth: "80%", padding: "9px 13px", borderRadius: 15, background: ai ? "#fff" : `linear-gradient(135deg,${buddy.kleur},${accent})`, color: ai ? "#243" : "#fff", font: "600 14px/1.4 system-ui", boxShadow: "0 1px 4px rgba(0,0,0,.1)", whiteSpace: "pre-wrap" }}>
-                      {ai && <span style={{ marginRight: 5 }}>{buddy.emoji}</span>}{m.content}
+                      {ai && <span style={{ marginRight: 5 }}>{buddy.emoji}</span>}
+                      {ai && leest && i === laatsteAi
+                        ? <MeeleesTekst tekst={m.content} actief={leesWoord} accent={buddy.kleur} />
+                        : m.content}
                     </div>
                   </div>
                 );
-              })}
+                });
+              })()}
               {busy && <div style={{ color: "#8a93a0", font: "600 14px system-ui" }}>{buddy.emoji} <span style={{ letterSpacing: 2 }}>···</span></div>}
             </div>
             <form onSubmit={(e) => { e.preventDefault(); stuur(invoer); }} style={{ display: "flex", gap: 8, padding: "10px 12px calc(10px + env(safe-area-inset-bottom))", borderTop: "1px solid #ececec" }}>

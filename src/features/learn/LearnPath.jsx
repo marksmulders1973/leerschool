@@ -29,6 +29,7 @@ import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
+import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
 import KwartierPauze from "./KwartierPauze.jsx";
@@ -1039,7 +1040,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {step.illustrationComponent
               ? <step.illustrationComponent />
               : <SvgFigure svg={step.svg} />}
-            <Explanation text={step.explanation} />
+            {/* Voorlezen mét meelezen (Mark 15 jul): extra steun voor
+                zwakkere lezers — het gesproken woord licht op. */}
+            <VoorleesBlok tekst={step.explanation} accent="#00C853">
+              <Explanation text={step.explanation} />
+            </VoorleesBlok>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
               <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
               <button

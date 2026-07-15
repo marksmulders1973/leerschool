@@ -13,7 +13,8 @@ import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
-import { maakMeeleesPlan, woordIndexBijChar } from "../../shared/spraakTekst.js";
+import { maakMeeleesPlan, koppelMeelezen } from "../../shared/spraakTekst.js";
+import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 import { track } from "../../utils.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
@@ -47,37 +48,10 @@ function speak(text, { onStart, onEnd, onWoord } = {}) {
     const stem = window.speechSynthesis.getVoices().find((v) => (v.lang || "").toLowerCase().startsWith("nl"));
     if (stem) u.voice = stem;
     u.rate = 1.0; u.pitch = 1.3;
-    // onboundary vuurt per uitgesproken woord — maar niet elke stem doet dat
-    // (sommige online stemmen zwijgen). Dan neemt na 1,2s een tempo-schatter
-    // het over zodat het meelezen tóch meeloopt.
-    let boundaryGezien = false;
-    let timer = null;
-    const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
-    if (onWoord) {
-      u.onboundary = (e) => {
-        boundaryGezien = true;
-        stopTimer();
-        onWoord(woordIndexBijChar(plan, e.charIndex || 0));
-      };
-    }
-    u.onstart = () => {
-      onStart && onStart();
-      if (!onWoord || !plan.grenzen.length) return;
-      setTimeout(() => {
-        if (boundaryGezien || !window.speechSynthesis.speaking) return;
-        let g = 0;
-        const stap = () => {
-          if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis.speaking) return;
-          const grens = plan.grenzen[g];
-          onWoord(grens.woordIdx);
-          timer = setTimeout(() => { g += 1; stap(); }, 190 + 55 * (grens.eind - grens.start));
-        };
-        stap();
-      }, 1200);
-    };
-    const klaar = () => { stopTimer(); onEnd && onEnd(); };
-    u.onend = klaar;
-    u.onerror = klaar;
+    koppelMeelezen(u, plan, onWoord);
+    u.onstart = () => onStart && onStart();
+    u.onend = () => onEnd && onEnd();
+    u.onerror = () => onEnd && onEnd();
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(u);
   } catch { onEnd && onEnd(); }
@@ -85,48 +59,6 @@ function speak(text, { onStart, onEnd, onWoord } = {}) {
 
 function stopSpeak() {
   try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ }
-}
-
-// Meelees-weergave (Mark 15 jul): tijdens het voorlezen licht het woord op dat
-// de stem nú uitspreekt — karaoke-stijl. Rendert alleen **vet** (meer markdown
-// gebruikt de tutor zelden); zodra het voorlezen klaar is neemt MdInline het
-// weer over. Woord-telling MOET gelijk lopen met maakMeeleesPlan: beide tellen
-// elk niet-witruimte-token.
-function MeeleesTekst({ tekst, actief, accent }) {
-  const stukken = String(tekst ?? "").split(/(\s+)/);
-  let woordIdx = -1;
-  let vet = false;
-  return (
-    <>
-      {stukken.map((stuk, i) => {
-        if (!stuk) return null;
-        if (/^\s+$/.test(stuk)) return stuk; // pre-wrap bewaart enters
-        woordIdx += 1;
-        const dit = woordIdx;
-        const delen = stuk.split("**");
-        const inhoud = delen.map((d, j) => {
-          const stijl = vet ? { fontWeight: 700 } : undefined;
-          if (j < delen.length - 1) vet = !vet;
-          return d ? <span key={j} style={stijl}>{d}</span> : null;
-        });
-        return (
-          <span
-            key={i}
-            style={dit === actief ? {
-              background: accent,
-              color: "#04121f",
-              borderRadius: 4,
-              padding: "0 3px",
-              margin: "0 -3px",
-              transition: "background 0.1s",
-            } : undefined}
-          >
-            {inhoud}
-          </span>
-        );
-      })}
-    </>
-  );
 }
 
 export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, stepIdx, stepExplanation, currentCheck, lastWrongAnswer, startVraag = null }) {

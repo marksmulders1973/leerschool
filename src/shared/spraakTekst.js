@@ -24,6 +24,38 @@ export function maakMeeleesPlan(tekst) {
   return { gesproken, grenzen };
 }
 
+// Koppel meelezen aan een utterance: boundary-events sturen per woord de
+// highlight; stemmen zonder boundary-events krijgen na 1,2s een tempo-
+// schatter. Gebruikt addEventListener zodat bestaande onstart/onend-handlers
+// van de beller blijven werken. Geeft een stop-functie terug.
+export function koppelMeelezen(u, plan, onWoord) {
+  if (!onWoord || !plan || !plan.grenzen.length || !u.addEventListener) return () => {};
+  let boundaryGezien = false;
+  let timer = null;
+  const stop = () => { if (timer) { clearTimeout(timer); timer = null; } };
+  u.addEventListener("boundary", (e) => {
+    boundaryGezien = true;
+    stop();
+    onWoord(woordIndexBijChar(plan, e.charIndex || 0));
+  });
+  u.addEventListener("start", () => {
+    setTimeout(() => {
+      if (boundaryGezien || !window.speechSynthesis?.speaking) return;
+      let g = 0;
+      const stap = () => {
+        if (boundaryGezien || g >= plan.grenzen.length || !window.speechSynthesis?.speaking) return;
+        const grens = plan.grenzen[g];
+        onWoord(grens.woordIdx);
+        timer = setTimeout(() => { g += 1; stap(); }, 190 + 55 * (grens.eind - grens.start));
+      };
+      stap();
+    }, 1200);
+  });
+  u.addEventListener("end", stop);
+  u.addEventListener("error", stop);
+  return stop;
+}
+
 // Welk getoond woord hoort bij deze tekenpositie in de gesproken tekst?
 // (onboundary geeft charIndex terug in de utterance-tekst.)
 export function woordIndexBijChar(plan, charIndex) {
