@@ -161,6 +161,35 @@
     "estimatedMinutes": 10
   },
   {
+    "id": "alinea-functies-tussenkopjes-po",
+    "file": "./alineaFunctiesTussenkopjesPo.js",
+    "title": "Alinea's en tussenkopjes — welk kopje past erboven?",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "📑",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — tekststructuur: alinea's, kernzinnen en tussenkopjes",
+    "triggerKeywords": [
+      "alinea",
+      "alinea's",
+      "tussenkopje",
+      "tussenkopjes",
+      "kopje kiezen",
+      "welk kopje past",
+      "kernzin",
+      "belangrijkste zin",
+      "deelonderwerp",
+      "functie alinea",
+      "tekststructuur",
+      "tekstopbouw"
+    ],
+    "intro": "\"Welk tussenkopje past het best boven alinea 3?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer wat een alinea is, hoe je de kernzin vindt (vaak vooraan!), welke taak een alinea",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "argumentatieleer",
     "file": "./argumentatieleer.js",
     "title": "Argumentatieleer",
@@ -1524,10 +1553,10 @@
       "dia"
     ],
     "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
-    "stepCount": 4,
-    "checkCount": 216,
+    "stepCount": 6,
+    "checkCount": 264,
     "chapterCount": 4,
-    "estimatedMinutes": 90
+    "estimatedMinutes": 120
   },
   {
     "id": "doorstroomtoets-studievaardigheden-g8",
@@ -1552,11 +1581,11 @@
       "alfabet",
       "schema"
     ],
-    "intro": "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~100 min totaal (5× ~2",
-    "stepCount": 5,
-    "checkCount": 210,
-    "chapterCount": 5,
-    "estimatedMinutes": 90
+    "intro": "Doorstroomtoets-pilot voor studievaardigheden — kaart + legenda + schaal, tabellen + dienstregelingen, woordenboek + atlas + naslag, bronnen + internet, schema's + samenvatten. 300+ eigen oefenvragen ",
+    "stepCount": 10,
+    "checkCount": 330,
+    "chapterCount": 10,
+    "estimatedMinutes": 150
   },
   {
     "id": "doorstroomtoets-taal-g8",
@@ -1581,10 +1610,10 @@
       "kofschip"
     ],
     "intro": "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorb",
-    "stepCount": 4,
-    "checkCount": 213,
+    "stepCount": 5,
+    "checkCount": 237,
     "chapterCount": 4,
-    "estimatedMinutes": 90
+    "estimatedMinutes": 105
   },
   {
     "id": "duits-cse-havo-vwo",
@@ -3186,6 +3215,35 @@
     "checkCount": 16,
     "chapterCount": 4,
     "estimatedMinutes": 10
+  },
+  {
+    "id": "feiten-details-opzoeken-po",
+    "file": "./feitenDetailsOpzoekenPo.js",
+    "title": "Feiten en details opzoeken — vind het antwoord in de tekst",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "🔎",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — informatie opzoeken in teksten",
+    "triggerKeywords": [
+      "feiten en details",
+      "opzoeken",
+      "zoekend lezen",
+      "scannen",
+      "scanned lezen",
+      "informatie opzoeken",
+      "zoekwoord",
+      "letterlijk in de tekst",
+      "detailvragen",
+      "begrijpend lezen",
+      "doorstroomtoets lezen",
+      "cito begrijpend lezen"
+    ],
+    "intro": "\"Zoek het antwoord op in de tekst\" — dé vaardigheid voor de Doorstroomtoets begrijpend lezen. Leer de vaste zoekstrategie: eerst de vraag lezen en het zoekwoord onderstrepen, dan de tekst scannen, de ",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "filosofie-havo-vwo",
@@ -5389,6 +5447,35 @@
     "estimatedMinutes": 10
   },
   {
+    "id": "nieuwsbericht-lezen-po",
+    "file": "./nieuwsberichtLezenPo.js",
+    "title": "Een nieuwsbericht lezen — wie, wat, waar, wanneer, waarom en hoe",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "📰",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — informatieve teksten: nieuwsberichten, feit en mening",
+    "triggerKeywords": [
+      "nieuwsbericht",
+      "krantenartikel",
+      "krant lezen",
+      "nieuws lezen",
+      "5 w's",
+      "wie wat waar",
+      "wie wat waar wanneer waarom hoe",
+      "feit en mening",
+      "feit of mening",
+      "kop van een artikel",
+      "informatieve tekst",
+      "begrijpend lezen"
+    ],
+    "intro": "Kop, eerste alinea, details — een nieuwsbericht zit altijd hetzelfde in elkaar. Leer de zes gouden vragen (wie, wat, waar, wanneer, waarom en hoe) als vragenbril, prik door overdrijvende koppen heen e",
+    "stepCount": 4,
+    "checkCount": 17,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "olympische-spelen-po",
     "file": "./olympischeSpelenPo.js",
     "title": "Olympische Spelen + sport (Cito groep 6-8)",
@@ -7233,6 +7320,35 @@
     "intro": "Op de Doorstroomtoets krijg je vragen als 'Waarom heeft de schrijver deze tekst geschreven?' en 'Voor wie is deze tekst bedoeld?'. In dit deel leer je de vier schrijversdoelen herkennen, de doelgroep ",
     "stepCount": 4,
     "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
+    "id": "tekstverbanden-oorzaak-gevolg-po",
+    "file": "./tekstverbandenOorzaakGevolgPo.js",
+    "title": "Oorzaak en gevolg — waardoor gebeurt het?",
+    "subject": "begrijpend-lezen",
+    "level": "groep6-8",
+    "emoji": "🔀",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Lezen — tekstverbanden: oorzaak en gevolg",
+    "triggerKeywords": [
+      "oorzaak gevolg",
+      "oorzaak en gevolg",
+      "waardoor kwam het",
+      "tekstverbanden",
+      "signaalwoorden",
+      "omdat doordat",
+      "daardoor waardoor",
+      "dus daarom zodat",
+      "verbanden in teksten",
+      "begrijpend lezen",
+      "doorstroomtoets lezen",
+      "cito begrijpend lezen"
+    ],
+    "intro": "\"Waardoor kwam het dat...?\" — een vaste vraagvorm op de Doorstroomtoets begrijpend lezen. Leer met je leesbril op wat oorzaak en gevolg zijn, herken signaalwoorden als omdat, daardoor en dus, en prik ",
+    "stepCount": 4,
+    "checkCount": 16,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
