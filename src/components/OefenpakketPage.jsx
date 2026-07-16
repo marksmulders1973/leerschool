@@ -307,9 +307,16 @@ export default function OefenpakketPage({ setPage } = {}) {
           (Cito/IEP), gemaakt door {BRAND.publisher}.
         </p>
 
-        {/* Onderdelen */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+        {/* Onderdelen — Mark-test 16 jul: hij drukte op "Rekenen" om rekenen te
+            kiezen en zette 'm daarmee juist UIT (alles staat standaard aan).
+            Fix: (1) hint-regel die uitlegt dat het schakelaars zijn, (2) AAN =
+            merk-groen met vinkje, UIT = grijs met ➕ — zo is de stand in één
+            oogopslag te lezen. */}
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 4 }}>
           Onderdelen
+        </div>
+        <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+          Alles staat aan — tik op een onderdeel om het uit of weer aan te zetten.
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 18 }}>
           {ONDERWERPEN.map((o) => {
@@ -318,15 +325,16 @@ export default function OefenpakketPage({ setPage } = {}) {
               <button
                 key={o.id}
                 onClick={() => toggle(o.id)}
+                aria-pressed={aan}
                 style={{
                   padding: "10px 16px", borderRadius: 999,
-                  border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : "1.5px solid rgba(255,255,255,0.15)",
-                  background: aan ? "rgba(66,165,245,0.15)" : "transparent",
+                  border: aan ? "1.5px solid #00C853" : "1.5px dashed rgba(255,255,255,0.25)",
+                  background: aan ? "rgba(0,200,83,0.18)" : "transparent",
                   color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
                   cursor: "pointer", fontSize: 15, fontWeight: 600,
                 }}
               >
-                {aan ? "✓ " : ""}{o.emoji} {o.label}
+                {aan ? "✓ " : "➕ "}{o.emoji} {o.label}
               </button>
             );
           })}
@@ -343,10 +351,11 @@ export default function OefenpakketPage({ setPage } = {}) {
               <button
                 key={key}
                 onClick={() => setOmvang(key)}
+                aria-pressed={aan}
                 style={{
                   padding: "8px 16px", borderRadius: 12, textAlign: "left",
-                  border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : "1.5px solid rgba(255,255,255,0.15)",
-                  background: aan ? "rgba(66,165,245,0.15)" : "transparent",
+                  border: aan ? "1.5px solid #00C853" : "1.5px solid rgba(255,255,255,0.15)",
+                  background: aan ? "rgba(0,200,83,0.18)" : "transparent",
                   color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
                   cursor: "pointer", fontSize: 14, fontWeight: 600,
                 }}
