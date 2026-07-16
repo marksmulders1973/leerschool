@@ -24,6 +24,9 @@ const ORGS = [
   { code: "HUMANITAS2027",    kaderKop: "Voor de gezinnen die uw vrijwilligers begeleiden betekent dat:" },
   { code: "OOIEVAAR2027",     kaderKop: "Voor de Haagse gezinnen met een Ooievaarspas betekent dat:" },
   { code: "ROTTERDAMPAS2027", kaderKop: "Voor de Rotterdamse gezinnen met een Rotterdampas betekent dat:" },
+  // 16 jul 2026: Voedselbank Breda vroeg zelf om de flyer per mail ("u mag
+  // altijd de flyer naar ons mailen") — digitale flyer met eigen code.
+  { code: "BREDA2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
 ];
 
 for (const { code, kaderKop } of ORGS) {
