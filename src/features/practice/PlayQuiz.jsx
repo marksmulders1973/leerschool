@@ -35,6 +35,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Deploy-bescherming (audit 16-07): zolang een quiz open staat mag de
+  // silent PWA-update in index.html niet herladen (state is in-memory).
+  useEffect(() => {
+    window.__toetsActief = true;
+    return () => { window.__toetsActief = false; };
+  }, []);
+
   // beforeunload: track als user wegnavigeert tijdens quiz
   useEffect(() => {
     const onUnload = () => {

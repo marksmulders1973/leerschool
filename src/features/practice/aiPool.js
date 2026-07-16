@@ -34,37 +34,11 @@ export const fetchPoolQuestions = async (subject, level, topic, textbookKey, cou
   }
 };
 
-export const saveQuestionsToPool = (qs, subject, level, topic, textbookKey) => {
-  if (!qs?.length) return;
-  const rows = qs
-    .filter(
-      (q) =>
-        q &&
-        q.q &&
-        Array.isArray(q.options) &&
-        q.options.length >= 2 &&
-        typeof q.answer === "number"
-    )
-    .map((q) => ({
-      subject,
-      level,
-      topic: topic || null,
-      textbook_key: textbookKey,
-      question: q.q,
-      options: q.options,
-      answer: q.answer,
-      explanation: q.explanation || null,
-      svg: q.svg || null,
-      youtube_url: q.youtubeUrl || null,
-      q_hash: computeQHash(q.q, subject, level),
-    }));
-  if (!rows.length) return;
-  supabase
-    .from("ai_question_pool")
-    .upsert(rows, { onConflict: "q_hash", ignoreDuplicates: true })
-    .then(() => {})
-    .catch(() => {});
-};
+// saveQuestionsToPool VERWIJDERD (audit 16-07): de pool wordt server-side
+// gevuld in api/generate-questions.js (service role). Het anon INSERT-recht
+// op ai_question_pool is ingetrokken — iedereen kon vragen met een bewust
+// foute answer-index in de gedeelde bank schuiven, waarna kinderen bij het
+// nakijken een fout antwoord goed gerekend kregen (data-poisoning).
 
 export const poolRowToQuestion = (r) => ({
   q: r.question,

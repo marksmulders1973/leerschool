@@ -291,6 +291,53 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
     return a;
   };
 
+  // Audit 16-07: de pool wordt voortaan SERVER-side gevuld (service role) —
+  // het anon INSERT-recht op ai_question_pool is ingetrokken. Iedereen kon
+  // vragen met een bewust foute answer-index in de gedeelde bank schuiven,
+  // waarna kinderen bij het nakijken een fout antwoord goed gerekend kregen.
+  // Spiegelt de row-shape + q_hash van src/features/practice/aiPool.js.
+  const savePoolServerSide = async (qs) => {
+    try {
+      const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+      const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+      if (!base || !key || !qs?.length) return;
+      const normalize = (s) => String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
+      const textbookKey = textbook?.bookName
+        ? [textbook.bookName, textbook.chapter || "", textbook.paragraph || textbook.topic || ""]
+            .map((s) => String(s || "").trim()).join("|").slice(0, 240)
+        : null;
+      const rows = qs
+        .filter((q) => q && q.q && Array.isArray(q.options) && q.options.length >= 2
+          && typeof q.answer === "number" && q.answer >= 0 && q.answer < q.options.length)
+        .map((q) => ({
+          subject,
+          level,
+          topic: topic || null,
+          textbook_key: textbookKey,
+          question: q.q,
+          options: q.options,
+          answer: q.answer,
+          explanation: q.explanation || null,
+          svg: q.svg || null,
+          youtube_url: q.youtubeUrl || null,
+          q_hash: `${subject}|${level}|${normalize(q.q)}`.slice(0, 240),
+        }));
+      if (!rows.length) return;
+      await fetch(`${base}/rest/v1/ai_question_pool?on_conflict=q_hash`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: key,
+          Authorization: `Bearer ${key}`,
+          Prefer: "resolution=ignore-duplicates",
+        },
+        body: JSON.stringify(rows),
+      });
+    } catch (e) {
+      console.warn("Pool-save (server) faalde:", e?.message);
+    }
+  };
+
   try {
     let data;
     try {
@@ -316,6 +363,9 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
         q.answer = q.options.indexOf(correct);
       }
     }
+
+    // Vóór de response awaiten: edge-functies stoppen direct na return.
+    await savePoolServerSide(questions);
 
     return json({ questions });
   } catch (error) {

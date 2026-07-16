@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { recordAnswerForPath } from "../mastery/mastery.js";
+import { fetchPoolQuestions, poolRowToQuestion } from "./aiPool.js";
 import Button from "../../shared/ui/Button.jsx";
 
 // Drempel voor "voldoende beheersing" — 2/3 of meer → mag verder.
@@ -38,13 +39,31 @@ export default function MiniQuiz({
   useEffect(() => {
     let cancelled = false;
     (async () => {
+      const subj = subject || "wiskunde";
+      const lvl = level || "klas1-vwo";
       try {
+        // Spaar-cascade (audit 16-07): eerst de gedeelde vragenpool proberen.
+        // Voorheen was élke MiniQuiz-klik een verse betaalde AI-call — terwijl
+        // identieke pad+stap-vragen dagelijks opnieuw gegenereerd werden én
+        // meetelden in de gedeelde dagcap (503 voor iedereen als die op is).
+        // Zelfde patroon als de quiz-start in App.jsx: pool → AI → terug de pool in.
+        const pool = await fetchPoolQuestions(subj, lvl, topicLabel, null, count);
+        if (cancelled) return;
+        if (pool.length >= count) {
+          const picked = pool
+            .slice()
+            .sort(() => Math.random() - 0.5)
+            .slice(0, count)
+            .map(poolRowToQuestion);
+          setQuestions(picked);
+          return;
+        }
         const res = await fetch("/api/generate-questions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            subject: subject || "wiskunde",
-            level: level || "klas1-vwo",
+            subject: subj,
+            level: lvl,
             topic: topicLabel,
             count,
           }),
@@ -53,6 +72,7 @@ export default function MiniQuiz({
         if (cancelled) return;
         if (data?.questions && Array.isArray(data.questions) && data.questions.length > 0) {
           setQuestions(data.questions);
+          // Pool-opslag gebeurt server-side in api/generate-questions.js.
         } else {
           setError(data?.error || "Geen vragen ontvangen");
         }

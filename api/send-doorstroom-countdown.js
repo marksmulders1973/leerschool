@@ -173,7 +173,10 @@ export default async function handler(req, res) {
   const secret = process.env.CRON_SECRET;
   const auth = req.headers["authorization"] || "";
   const keyParam = (req.query && req.query.key) || "";
-  if (secret && auth !== `Bearer ${secret}` && keyParam !== secret) {
+  // Fail-closed (audit 16-07): ontbreekt CRON_SECRET, dan is het endpoint DICHT
+  // — voorheen viel de hele check weg en kon iedereen mass-mails triggeren.
+  if (!secret) return res.status(500).json({ error: "cron_secret_missing" });
+  if (auth !== `Bearer ${secret}` && keyParam !== secret) {
     return res.status(401).json({ error: "unauthorized" });
   }
 

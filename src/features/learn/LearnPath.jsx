@@ -332,17 +332,24 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // ALL_LEARN_PATHS-import meer. Pad-data komt uit lazy chunk (~50 kB)
   // ipv 5,8 MB bundle. First paint toont 'Laden…'-state (paar honderd ms).
   const [path, setPath] = useState(null);
+  // Audit 16-07: faalde de lazy chunk-import (offline, of 404 op een oude
+  // chunk-hash na een deploy) dan bleef het scherm voor altijd op "Onderwerp
+  // laden…" staan — zonder melding, retry of terug-knop.
+  const [pathLoadError, setPathLoadError] = useState(false);
+  const [pathLoadPoging, setPathLoadPoging] = useState(0);
   useEffect(() => {
     let cancelled = false;
     if (!pathId) return;
     setPath(null); // reset zodat bij pathId-switch oude pad verdwijnt
+    setPathLoadError(false);
     lazyGetLearnPath(pathId).then((loaded) => {
       if (!cancelled) setPath(loaded);
     }).catch((err) => {
       console.warn(`[LearnPath] kon ${pathId} niet laden:`, err.message);
+      if (!cancelled) setPathLoadError(true);
     });
     return () => { cancelled = true; };
-  }, [pathId]);
+  }, [pathId, pathLoadPoging]);
   const player = (userName || "Speler").trim() || "Speler";
 
   // Als initialStepIdx meegegeven is (vanuit toets-vraag), spring direct naar die stap.
@@ -494,6 +501,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // Onderscheid loading (pad bestaat, nog niet geladen) van niet-gevonden.
     const existsInManifest = pathManifest.some((p) => p.id === pathId);
     if (existsInManifest) {
+      if (pathLoadError) {
+        return (
+          <div style={{ padding: 24, color: C.text, textAlign: "center" }}>
+            <p style={{ fontSize: 40, margin: "0 0 8px" }}>📡</p>
+            <p>Dit onderwerp kan nu even niet laden. Check je internet en probeer het opnieuw.</p>
+            <div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 12 }}>
+              <button onClick={() => setPathLoadPoging((p) => p + 1)} style={btnPrimary()}>🔄 Opnieuw proberen</button>
+              <button onClick={onHome} style={btnSecondary()}>Terug naar home</button>
+            </div>
+          </div>
+        );
+      }
       return (
         <div style={{ padding: 24, color: C.text, textAlign: "center" }}>
           <p style={{ opacity: 0.7 }}>Onderwerp laden…</p>

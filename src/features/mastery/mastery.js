@@ -255,7 +255,10 @@ async function safeUpsertMastery(row) {
 const REF_ONDERDELEN = ["rekenen", "lezen", "taalverzorging"];
 const REF_NIVEAUS = ["1F", "S"];
 
-export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, userId = null }) {
+// attemptsDelta/correctDelta: één geaggregeerde call per (onderdeel, ref) in
+// plaats van 20 parallelle read-modify-writes die elkaars telling overschrijven
+// (lost-update race — de ouder-mail-indicatie telde daardoor bijna niets).
+export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, userId = null, attemptsDelta = 1, correctDelta = null }) {
   const player = (playerName || "").trim();
   if (!player || !REF_ONDERDELEN.includes(onderdeel) || !REF_NIVEAUS.includes(ref)) return null;
 
@@ -274,8 +277,8 @@ export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, u
       player_name: player,
       onderdeel,
       ref,
-      attempts: (existing?.attempts || 0) + 1,
-      correct: (existing?.correct || 0) + (isCorrect ? 1 : 0),
+      attempts: (existing?.attempts || 0) + attemptsDelta,
+      correct: (existing?.correct || 0) + (correctDelta != null ? correctDelta : (isCorrect ? 1 : 0)),
       last_seen: new Date().toISOString(),
     };
     if (resolvedUserId) row.user_id = resolvedUserId;

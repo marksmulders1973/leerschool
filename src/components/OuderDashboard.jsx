@@ -28,7 +28,13 @@ function ScoreBadge({ pct }) {
 }
 
 function generateCode() {
-  return Math.random().toString(36).substring(2, 8).toUpperCase();
+  // Audit 16-07: crypto-random i.p.v. Math.random — koppelcodes zijn een
+  // beveiligingsmiddel (toegang tot kind-voortgang), geen visueel gimmickje.
+  // Alfabet zonder verwarrende tekens (0/O, 1/I/L) voor overtypen vanaf WhatsApp.
+  const alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  const bytes = new Uint8Array(6);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
 
 export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin, onRondleiding }) {
@@ -93,11 +99,17 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       return;
     }
     setScoresLoading(true);
-    supabase.from("leaderboard")
+    // Naamgenoten-lek (audit 16-07): alleen op voornaam matchen mengt scores
+    // van élke "Sophie" in het land. Zelfde fix als de ouder-mail (migratie
+    // 20260711): scope op child_user_id waar de koppeling die heeft;
+    // legacy-links zonder uid houden naam-match.
+    let scoresQuery = supabase.from("leaderboard")
       // Bug-fix 2026-07-07: leaderboard heeft completed_at, geen created_at —
       // deze query gaf 400 en het dashboard bleef leeg voor élke ouder.
       .select("subject, level, score, total, percentage, time_taken, completed_at")
-      .eq("player_name", selectedChild)
+      .eq("player_name", selectedChild);
+    if (selectedChildVerified?.child_user_id) scoresQuery = scoresQuery.eq("user_id", selectedChildVerified.child_user_id);
+    scoresQuery
       .order("completed_at", { ascending: false })
       .limit(50)
       .then(({ data }) => {
@@ -112,10 +124,12 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       setCitoScores([]);
       return;
     }
-    supabase.from("leaderboard")
+    let citoQuery = supabase.from("leaderboard")
       .select("subject, level, percentage, completed_at")
       .eq("player_name", selectedChild)
-      .eq("subject", "cito")
+      .eq("subject", "cito");
+    if (selectedChildVerified?.child_user_id) citoQuery = citoQuery.eq("user_id", selectedChildVerified.child_user_id);
+    citoQuery
       .order("completed_at", { ascending: false })
       .then(({ data }) => setCitoScores(data || []));
   }, [selectedChild, selectedChildVerified]);
@@ -144,28 +158,17 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       "Doorgaan?"
     )) return;
     setDeletingMyData(true);
-    const uid = authUser.id;
-    // Bestaande tabellen volgens schema; ontbreken stillzwijgend negeren.
-    const tables = [
-      "parent_child_links", "link_codes", "school_parent_links",
-      "progress", "leaderboard", "hall_of_fame",
-      "topic_mastery", "learn_progress",
-      "obliterator_scores", "obliterator_levels", "obliterator_user_levels",
-      "obliterator_bonus_events", "oblivion_events",
-      "share_events", "kudos", "feedback", "subscriptions",
-      // Audit-2 v2 (2026-05-08): aangevuld op privacy-agent feedback —
-      // dekking voor "verwijder al mijn data"-belofte.
-      "profiles", "quizzes", "upgrade_waitlist", "learn_path_waitlist",
-    ];
-    for (const t of tables) {
-      try {
-        // Probeer eerst user_id, val terug op parent_user_id
-        await supabase.from(t).delete().eq("user_id", uid);
-      } catch {}
-    }
-    // parent_user_id-kolom-tabellen apart
-    for (const t of ["parent_child_links", "link_codes", "school_parent_links"]) {
-      try { await supabase.from(t).delete().eq("parent_user_id", uid); } catch {}
+    // Audit 16-07: de oude client-side deletes verwijderden door ontbrekende
+    // DELETE-policies stilletjes 0 rijen (RLS), maar toonden wél "✅ Verwijderd".
+    // Nu via de server-side RPC delete_my_data() die als eigenaar écht
+    // verwijdert (incl. e-maillijst op accountadres) en tellingen teruggeeft.
+    const { data, error } = await supabase.rpc("delete_my_data");
+    if (error || !data?.ok) {
+      // eslint-disable-next-line no-console
+      console.error("[OuderDashboard] delete_my_data faalde:", error?.message || data?.error);
+      alert("Het verwijderen is niet gelukt. Probeer het later opnieuw, of mail ons — dan doen wij het handmatig.");
+      setDeletingMyData(false);
+      return;
     }
     // Adaptieve leer-state (per-vraag fout-tracker, browser-only).
     try { clearAdaptive(); } catch {}

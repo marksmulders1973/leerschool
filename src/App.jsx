@@ -101,7 +101,6 @@ import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 import {
   buildTextbookKey,
   fetchPoolQuestions,
-  saveQuestionsToPool,
   poolRowToQuestion,
 } from "./features/practice/aiPool.js";
 import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
@@ -657,7 +656,10 @@ export default function App() {
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
       const hasSubjectTopicQuestions = !hasTopic && (TOPIC_QUESTIONS[quiz.subject?.toLowerCase()] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
-      const playCount = parseInt(localStorage.getItem(playedKey) || "0", 10);
+      // Audit 16-07: geblokkeerde storage (school-Chromebook-policy, webview)
+      // gooide hier een exception waardoor de quiz stil nooit startte.
+      let playCount = 0;
+      try { playCount = parseInt(localStorage.getItem(playedKey) || "0", 10); } catch {}
       const questionsPerRound = quiz.questionCount || 10;
       const standardPoolSize = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length;
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
@@ -708,8 +710,9 @@ export default function App() {
           setLoadingMode(hasTextbook ? "textbook" : "self");
           try {
             questions = await fetchAIQuestions(quiz.subject, quiz.level, poolCount, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
-            // Stap 3: sla verse AI-vragen op in de pool zodat de vragenbank groeit
-            if (questions?.length) saveQuestionsToPool(questions, quiz.subject, quiz.level, topicKey, textbookKey);
+            // Stap 3 (gewijzigd audit 16-07): de pool wordt server-side gevuld
+            // in api/generate-questions.js — client-schrijfrecht is ingetrokken
+            // (data-poisoning: iedereen kon foute answer-indexen inschieten).
           } catch (err) {
             setLoading(false);
             if (abortControllerRef.current?.signal.aborted) return;
@@ -793,8 +796,12 @@ export default function App() {
         (opt) => String(opt).trim() === String(correctText).trim()
       ) };
     });
-    const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
-    localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
+    // Audit 16-07: QuotaExceeded/geblokkeerde storage mag de quiz-start nooit
+    // tegenhouden — de teller is optioneel comfort, geen vereiste.
+    try {
+      const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
+      localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
+    } catch {}
     track("quiz_started", { subject: quiz.subject, level: quiz.level, mode, questions_count: questions.length, has_topic: !!(quiz.topic), has_textbook: !!(quiz.textbook?.bookName) });
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");

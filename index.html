@@ -699,13 +699,21 @@
             if (reloaded) return;
             reloaded = true;
             const doReload = () => { try { window.location.reload(); } catch (e) {} };
-            if (initialLoad || document.hidden) { doReload(); return; }
-            const onHide = () => { if (document.hidden) doReload(); };
+            // NOOIT herladen tijdens een lopende toets/quiz (audit 16-07): de
+            // toets-state is in-memory — een deploy tijdens de 60-min
+            // Doorstroomtoets-simulatie gooide anders de hele toets weg.
+            // CitoLeerpadToets/PlayQuiz zetten window.__toetsActief.
+            const safeReload = () => {
+              if (window.__toetsActief) { setTimeout(safeReload, 60 * 1000); return; }
+              doReload();
+            };
+            if (initialLoad || (document.hidden && !window.__toetsActief)) { doReload(); return; }
+            const onHide = () => { if (document.hidden && !window.__toetsActief) doReload(); };
             document.addEventListener("visibilitychange", onHide);
             // Vangnet 90s (was 5 min): snel genoeg om "hij pakt de nieuwe
             // versie niet" te voorkomen, lang genoeg om een quiz-antwoord
-            // niet te onderbreken.
-            setTimeout(doReload, 90 * 1000);
+            // niet te onderbreken; bij een actieve toets telkens 60s uitstel.
+            setTimeout(safeReload, 90 * 1000);
           });
         });
       }

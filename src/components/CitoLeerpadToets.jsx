@@ -72,6 +72,13 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return next;
   });
 
+  // Deploy-bescherming (audit 16-07): zolang de toets loopt mag de silent
+  // PWA-update in index.html de pagina NIET herladen (state is in-memory).
+  useEffect(() => {
+    window.__toetsActief = mode === "running";
+    return () => { window.__toetsActief = false; };
+  }, [mode]);
+
   // Countdown
   useEffect(() => {
     if (mode !== "running") return;
@@ -102,6 +109,12 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
       // officiële volgorde, positie-vaste opties blijven staan). Een tweede
       // shuffle hier ongedaan-maakte die guards — verwijderd 2026-07-08.
       const shuffled = await sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
+      // Reset per-run vlaggen: zonder deze reset werd een 2e toets in dezelfde
+      // sessie ("🔄 Nieuwe oefen-Doorstroomtoets") nooit geregistreerd — geen
+      // afgerond-event, geen ref_mastery — terwijl we zelf "doe minstens 3
+      // simulaties" adviseren.
+      refRecorded.current = false;
+      dropFiredRef.current = false;
       setQuestions(shuffled);
       setAnswers(new Array(shuffled.length).fill(null));
       setIdx(0);
@@ -138,10 +151,22 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     });
     const player = (playerName || "").trim();
     if (!player) return;
+    // Aggregeer per (onderdeel, ref) en schrijf één keer per combinatie.
+    // Voorheen: 20 parallelle fire-and-forget calls op dezelfde rij lazen
+    // allemaal dezelfde oude stand → laatste write won → attempts steeg met
+    // ~1 i.p.v. 20 en de niveau-indicatie in de ouder-mail was zwaar onderteld.
+    const perRef = new Map();
     questions.forEach((q, i) => {
       if (!q?.ref || !q?.refOnderdeel || q.refOnderdeel === "geen") return;
       if (answers[i] == null) return;
-      recordRefAnswer({ playerName: player, onderdeel: q.refOnderdeel, ref: q.ref, isCorrect: answers[i] === q.answer }).catch(() => {});
+      const key = q.refOnderdeel + "|" + q.ref;
+      const agg = perRef.get(key) || { onderdeel: q.refOnderdeel, ref: q.ref, attempts: 0, correct: 0 };
+      agg.attempts += 1;
+      if (answers[i] === q.answer) agg.correct += 1;
+      perRef.set(key, agg);
+    });
+    perRef.forEach((agg) => {
+      recordRefAnswer({ playerName: player, onderdeel: agg.onderdeel, ref: agg.ref, attemptsDelta: agg.attempts, correctDelta: agg.correct }).catch(() => {});
     });
   }, [mode, questions, answers, playerName]);
 
@@ -172,8 +197,10 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   }, [simulatieMode, subjectFilter]);
 
   const pickAnswer = (a) => {
-    // 🤝 Vrienden-werven: beantwoord vraagje telt mee voor vriend-activatie.
-    telAntwoordVoorVriend();
+    // 🤝 Vrienden-werven: alleen het EERSTE antwoord op een vraag telt voor
+    // vriend-activatie — 3× klikken/wisselen op dezelfde vraag was genoeg om
+    // de "3 échte antwoorden"-drempel (met Pro-beloning) te halen.
+    if (answers[idx] == null) telAntwoordVoorVriend();
     setAnswers((prev) => {
       const next = prev.slice();
       next[idx] = a;
