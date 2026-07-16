@@ -1538,6 +1538,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 )}
               </button>
             )}
+            {/* Bedank-pagina (Mark 16 jul 2026): organisaties die gezinnen op
+                Leerkwartier wijzen — eerste vermelding (VB Rotterdam) live,
+                dus nu vindbaar vanaf de home. Statische pagina → gewone <a>. */}
+            <a
+              href="/bedankt.html"
+              style={{ color: "#34d399", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5, textDecoration: "none" }}
+            >
+              <span>🤝</span>
+              Zij helpen mee
+            </a>
             {isAdmin && onAdminFeedback && (
               <button
                 type="button"
