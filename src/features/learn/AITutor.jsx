@@ -237,6 +237,19 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             <Suspense fallback={<span style={{ fontSize: 24, lineHeight: 1 }}>{emoji}</span>}>
               <BuddyKop buddy={buddy} size={60} praat={praat} />
             </Suspense>
+            {/* Mark 16 jul: Charley is gebaseerd op onze échte hond — de foto
+                ernaast maakt het maatje geloofwaardig en persoonlijk ("dit
+                hondje bestaat echt"). Alleen bij Charley, 18KB thumb. */}
+            {buddy.id === "charley" && (
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2, flexShrink: 0 }}>
+                <img
+                  src="/maatjes/charley-echt.jpg"
+                  alt="De echte hond Charley, waar dit hulphondje op gebaseerd is"
+                  style={{ width: 42, height: 42, borderRadius: "50%", objectFit: "cover", border: "2px solid #00C853" }}
+                />
+                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.65)", whiteSpace: "nowrap" }}>in het écht 🐾</span>
+              </div>
+            )}
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 {naam} helpt je
