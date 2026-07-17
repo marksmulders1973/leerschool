@@ -43,7 +43,7 @@ export const PARK_LEERMOMENTEN = {
     emoji: "🎢",
     titel: "De achtbaan",
     praatje:
-      "De kettinglift trekt het karretje langzaam omhoog — en daarna doet de zwaartekracht al het werk! Hoe steiler de helling, hoe harder je naar beneden zoeft. En de baan zelf is van staal: dat maak je door ijzer uit de grond te smelten in een gloeiend hete oven.",
+      "De kettinglift trekt het karretje langzaam omhoog — en daarna doet de zwaartekracht al het werk! Hoe hóger de top, hoe harder je beneden gaat: al die hoogte wordt vaart. En de baan zelf is van staal: dat maak je door ijzer uit de grond te smelten in een gloeiend hete oven.",
     weetje:
       "IJzer zit als erts in stenen diep in de grond. In een hoogoven van bijna 2000 graden smelt het eruit — zo ontstaat staal, sterk genoeg voor een achtbaan vol lussen.",
     leerpadId: "krachten-natuurkunde",
@@ -59,6 +59,39 @@ export const PARK_LEERMOMENTEN = {
       "De omtrek van élke cirkel is altijd iets meer dan 3 keer de doorsnede (ongeveer 3,14 keer — dat getal heet pi). Dat geldt voor een fietswiel én voor dit reuzenrad.",
     leerpadId: "oppervlakte-omtrek-po",
     leerLabel: "Omtrek en oppervlakte",
+  },
+  station: {
+    id: "station",
+    emoji: "🕐",
+    titel: "Het station",
+    praatje:
+      "Op een écht station hangt een bord met vertrektijden: de trein gaat bijvoorbeeld om :05, :20 en :35. Ben je om tien over, dan moet je dus 10 minuten wachten op die van :20. Zo'n rooster lezen is een superkracht — op school, bij de bushalte én op de Doorstroomtoets!",
+    weetje:
+      "Vroeger had elke stad in Nederland zijn éígen tijd (in Amsterdam was het een paar minuten later dan in Enschede). Pas door de trein kregen we één klok voor het hele land — anders klopte geen enkele dienstregeling.",
+    leerpadId: "dienstregeling-roosters-po",
+    leerLabel: "Roosters en dienstregelingen lezen",
+  },
+  zweefmolen: {
+    id: "zweefmolen",
+    emoji: "🪁",
+    titel: "De zweefmolen",
+    praatje:
+      "Kijk eens goed: hoe sneller de zweefmolen draait, hoe verder de stoeltjes naar búíten zwieren. Je lichaam wil eigenlijk rechtdoor, maar de kettingen trekken je steeds de bocht in — dat trekken voel je als 'naar buiten geduwd worden'. Dezelfde kracht voel je in de auto als die een scherpe bocht neemt!",
+    weetje:
+      "Zwaai maar eens een emmertje water rond aan je arm: draai je snel genoeg, dan valt er niets uit — zelfs ondersteboven niet. Precies dezelfde truc als de zweefmolen.",
+    leerpadId: "krachten-natuurkunde",
+    leerLabel: "Krachten en bewegen",
+  },
+  fontein: {
+    id: "fontein",
+    emoji: "⛲",
+    titel: "De fontein",
+    praatje:
+      "Het water van deze fontein spuit omhoog, valt terug en wordt opnieuw rondgepompt — het is dus steeds hetzelfde water. Buiten het park doet de natuur precies hetzelfde, maar dan reuze-groot: de zon laat zeewater verdampen, er ontstaan wolken, en de regen brengt het water weer terug. Dat rondje heet de waterkringloop.",
+    weetje:
+      "Het water dat jij vandaag drinkt is óók al miljoenen jaren onderweg in die kringloop — misschien heeft een dino er ooit in gezwommen!",
+    leerpadId: "waterkringloop-po",
+    leerLabel: "De waterkringloop",
   },
   draaimolen: {
     id: "draaimolen",
@@ -80,7 +113,9 @@ export const LEERMOMENT_BY_ID = PARK_LEERMOMENTEN;
 // buurt en blijf je even, dan vertelt je maatje er ongevraagd (hardop) over.
 export const LEERMOMENT_BY_ASSET = {
   trein: "stoomtrein",
-  station: "stoomtrein",
+  // Station heeft nu een eigen leermoment (roosters lezen = Cito-studievaardig-
+  // heden); de rijdende trein zelf blijft het stoomtrein-verhaal vertellen.
+  station: "station",
   tree: "boom",
   treeOak: "boom",
   treePalm: "boom",
@@ -89,4 +124,6 @@ export const LEERMOMENT_BY_ASSET = {
   achtbaanSpiraal: "achtbaan",
   ferris: "reuzenrad",
   carousel: "draaimolen",
+  swing: "zweefmolen",
+  fountain: "fontein",
 };
