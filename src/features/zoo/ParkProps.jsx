@@ -5,7 +5,7 @@
 import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3, Color, CanvasTexture, CatmullRomCurve3 } from "three";
+import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
@@ -1762,6 +1762,116 @@ export function RailTile({ position = [0, 0, 0], rotation = 0 }) {
       <mesh position={[0, 0.11, 0.34]}><boxGeometry args={[2, 0.06, 0.06]} /><meshStandardMaterial color={staal} metalness={0.6} roughness={0.4} /></mesh>
       <mesh position={[0, 0.11, -0.34]}><boxGeometry args={[2, 0.06, 0.06]} /><meshStandardMaterial color={staal} metalness={0.6} roughness={0.4} /></mesh>
     </group>
+  );
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// 🚄 GEÏNSTANCEERDE PROPS-LAAG (review 17 jul): rails (8 meshes/tegel), hek-
+// panelen (7/paneel) en padtegels waren de draw-call-moordenaar — een normaal
+// park kwam op 1.500-2.000 draw calls. Deze laag rendert ze ALLEMAAL samen in
+// 6 instanced meshes (ballast, dwarsliggers, stalen rails, hekpalen, hek-
+// planken, padtegels met per-instance kleur). Zelfde patroon als BlokkenLaag.
+// Selectie/klikken blijft werken via onzichtbare hitboxen in PlacedItem
+// (three's Raycaster raakt visible=false meshes gewoon).
+// ──────────────────────────────────────────────────────────────────────────
+const IP_DUMMY = new Object3D();
+const IP_EULER = new Euler();
+const IP_KLEUR = new Color();
+const IP_GEO = {
+  ballast: new PlaneGeometry(2, 1.3),
+  biels: new BoxGeometry(0.13, 0.07, 1.0),
+  staal: new BoxGeometry(2, 0.06, 0.06),
+  paal: new BoxGeometry(0.1, 0.7, 0.1),
+  plank: new BoxGeometry(2, 0.08, 0.08),
+  pad: new PlaneGeometry(2.02, 2.02),
+};
+const IP_MAT = {
+  ballast: new MeshStandardMaterial({ color: "#b8a06a", roughness: 1 }),
+  biels: new MeshStandardMaterial({ color: "#6b4a2b", flatShading: true, roughness: 1 }),
+  staal: new MeshStandardMaterial({ color: "#aab0b6", metalness: 0.6, roughness: 0.4 }),
+  hout: new MeshStandardMaterial({ color: "#8a5a2b", flatShading: true, roughness: 1 }),
+  pad: new MeshStandardMaterial({ color: "#ffffff", roughness: 1 }),
+};
+const BIELS_OFFSETS = [-0.7, -0.35, 0, 0.35, 0.7];
+const PAAL_OFFSETS = [-1, -0.5, 0, 0.5, 1];
+
+// Eén instanced sub-mesh: `plaatsen` = array van {x,y,z,ry,rx} wereld-transforms.
+function InstancedDeel({ geo, mat, plaatsen, castShadow = false, receiveShadow = false, kleuren = null }) {
+  const ref = useRef();
+  useEffect(() => {
+    const m = ref.current;
+    if (!m) return;
+    for (let i = 0; i < plaatsen.length; i++) {
+      const p = plaatsen[i];
+      IP_DUMMY.position.set(p.x, p.y, p.z);
+      // 'YXZ': eerst plat leggen (rx), dan om de wereld-Y draaien (ry).
+      IP_DUMMY.setRotationFromEuler(IP_EULER.set(p.rx || 0, p.ry || 0, 0, "YXZ"));
+      IP_DUMMY.scale.set(1, 1, 1);
+      IP_DUMMY.updateMatrix();
+      m.setMatrixAt(i, IP_DUMMY.matrix);
+      if (kleuren) m.setColorAt(i, IP_KLEUR.set(kleuren[i] || "#dcc48f"));
+    }
+    m.count = plaatsen.length;
+    m.instanceMatrix.needsUpdate = true;
+    if (kleuren && m.instanceColor) m.instanceColor.needsUpdate = true;
+  }, [plaatsen, kleuren]);
+  if (!plaatsen.length) return null;
+  return <instancedMesh key={plaatsen.length} ref={ref} args={[geo, mat, plaatsen.length]} castShadow={castShadow} receiveShadow={receiveShadow} />;
+}
+
+// Draai een lokale offset om de Y-as van het item mee.
+const roteerX = (dx, ry) => [dx * Math.cos(ry), -dx * Math.sin(ry)];
+const roteerZ = (dz, ry) => [dz * Math.sin(ry), dz * Math.cos(ry)];
+
+export function GeinstanceerdeParkProps({ rails = [], hekken = [], paden = [] }) {
+  const delen = useMemo(() => {
+    const ballast = [], biels = [], staal = [], palen = [], planken = [], pad = [], padKleur = [];
+    for (const r of rails) {
+      ballast.push({ x: r.x, y: r.y + 0.02, z: r.z, rx: -Math.PI / 2, ry: r.rot });
+      for (const dx of BIELS_OFFSETS) {
+        const [ox, oz] = roteerX(dx, r.rot);
+        biels.push({ x: r.x + ox, y: r.y + 0.06, z: r.z + oz, ry: r.rot });
+      }
+      for (const dz of [0.34, -0.34]) {
+        const [ox, oz] = roteerZ(dz, r.rot);
+        staal.push({ x: r.x + ox, y: r.y + 0.11, z: r.z + oz, ry: r.rot });
+      }
+    }
+    for (const h of hekken) {
+      for (const dx of PAAL_OFFSETS) {
+        const [ox, oz] = roteerX(dx, h.rot);
+        palen.push({ x: h.x + ox, y: h.y + 0.35, z: h.z + oz, ry: h.rot });
+      }
+      planken.push({ x: h.x, y: h.y + 0.55, z: h.z, ry: h.rot });
+      planken.push({ x: h.x, y: h.y + 0.3, z: h.z, ry: h.rot });
+    }
+    for (const p of paden) {
+      pad.push({ x: p.x, y: p.y + 0.025, z: p.z, rx: -Math.PI / 2 });
+      padKleur.push(p.color);
+    }
+    return { ballast, biels, staal, palen, planken, pad, padKleur };
+  }, [rails, hekken, paden]);
+  return (
+    <group>
+      <InstancedDeel geo={IP_GEO.ballast} mat={IP_MAT.ballast} plaatsen={delen.ballast} receiveShadow />
+      <InstancedDeel geo={IP_GEO.biels} mat={IP_MAT.biels} plaatsen={delen.biels} castShadow />
+      <InstancedDeel geo={IP_GEO.staal} mat={IP_MAT.staal} plaatsen={delen.staal} />
+      <InstancedDeel geo={IP_GEO.paal} mat={IP_MAT.hout} plaatsen={delen.palen} castShadow />
+      <InstancedDeel geo={IP_GEO.plank} mat={IP_MAT.hout} plaatsen={delen.planken} castShadow />
+      <InstancedDeel geo={IP_GEO.pad} mat={IP_MAT.pad} plaatsen={delen.pad} kleuren={delen.padKleur} receiveShadow />
+    </group>
+  );
+}
+
+// Onzichtbare klik-hitbox voor items die visueel in de instanced laag zitten.
+// three's Raycaster raakt visible=false meshes gewoon → selecteren/weghalen
+// blijft werken zonder ook maar één draw call.
+export function PropHitbox({ position = [0, 0, 0], rotation = 0, maat = [2, 0.4, 1.3], hoogte = 0.2 }) {
+  return (
+    <mesh visible={false} position={[position[0], position[1] + hoogte, position[2]]} rotation={[0, rotation, 0]}>
+      <boxGeometry args={maat} />
+      <meshBasicMaterial />
+    </mesh>
   );
 }
 

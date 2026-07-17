@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -317,9 +317,18 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef }) {
+function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false }) {
   const a = getAsset(assetId);
   if (!a) return null;
+  // Rails/hekpanelen/padtegels zitten visueel in GeinstanceerdeParkProps
+  // (review 17 jul: 8/7/1 losse meshes per stuk = draw-call-explosie). Hier
+  // alleen een onzichtbare hitbox zodat selecteren/weghalen blijft werken.
+  // `visueel` (ghost-preview bij plaatsen) toont wél het echte model.
+  if (!visueel) {
+    if (a.procedural === "rail") return <PropHitbox position={[x, y, z]} rotation={rotation} maat={[2, 0.3, 1.3]} hoogte={0.15} />;
+    if (a.procedural === "fencePanel") return <PropHitbox position={[x, y, z]} rotation={rotation} maat={[2, 0.9, 0.3]} hoogte={0.45} />;
+    if (a.procedural === "path") return <PropHitbox position={[x, y, z]} maat={[2.02, 0.12, 2.02]} hoogte={0.06} />;
+  }
   if (a.procedural === "blok" || a.procedural === "blokdak") return <BouwBlok a={a} x={x} y={y} z={z} h={h} rotation={rotation} />;
   if (assetId === "fountain") return <BlokFontein x={x} y={y} z={z} />;
   if (HUIS_VARIANT[assetId]) return <BlokHuis variant={assetId} x={x} y={y} z={z} rotation={rotation} colors={colors} colorEditable={colorEditable} onPickPart={onPickPart} />;
@@ -767,6 +776,24 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     return { pts, loop };
   }, [placedItems, terrain]);
 
+  // 🚄 Verzamel rails/hekpanelen/padtegels voor de geïnstanceerde laag
+  // (review 17 jul: van ~1.200 losse meshes naar 6 draw calls).
+  const instancedProps = useMemo(() => {
+    const rails = [], hekken = [], paden = [];
+    for (const it of placedItems) {
+      if (!it.cell || isBlok(it.assetId)) continue;
+      const a = getAsset(it.assetId);
+      if (!a) continue;
+      if (a.procedural !== "rail" && a.procedural !== "fencePanel" && a.procedural !== "path") continue;
+      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      const y = heightFnRef.current(x, z);
+      if (a.procedural === "rail") rails.push({ x, y, z, rot: it.rotation || 0 });
+      else if (a.procedural === "fencePanel") hekken.push({ x, y, z, rot: it.rotation || 0 });
+      else paden.push({ x, y, z, color: a.color });
+    }
+    return { rails, hekken, paden };
+  }, [placedItems, terrain]);
+
   // Kraampjes-locaties (wereldcoördinaten) per soort behoefte: patat = food,
   // drank = drink. Bezoekers lopen naar het dichtstbijzijnde passende kraampje.
   const standsRef = useRef({});
@@ -986,6 +1013,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           onHak={(k) => { onHakBlok && onHakBlok(k); }}
         />
 
+        {/* 🚄 Alle rails + hekpanelen + padtegels in 6 instanced draw calls. */}
+        <GeinstanceerdeParkProps rails={instancedProps.rails} hekken={instancedProps.hekken} paden={instancedProps.paden} />
+
         {/* Geplaatste items — klikbaar om te selecteren. */}
         {placedItems.map((it, idx) => {
           if (isBlok(it.assetId)) return null; // kubussen: BlokkenLaag rendert, ⛏️ hakt
@@ -1025,7 +1055,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
           <>
             <FootprintMarker cell={ghost} valid={ghostValid} cells={placingCells} />
             <Suspense fallback={null}>
-              <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightFnRef.current(cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} />
+              <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightFnRef.current(cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} visueel />
             </Suspense>
           </>
         )}
