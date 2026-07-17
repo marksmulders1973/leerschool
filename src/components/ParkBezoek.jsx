@@ -5,6 +5,7 @@
 // RPC get_shared_park, die enkel de park-indeling teruggeeft.
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { loadSharedPark } from "../features/zoo/zooState";
+import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
 import { deserialize as deserTerrain } from "../features/zoo/terrain";
 import { track } from "../utils.js";
 
@@ -108,6 +109,7 @@ export default function ParkBezoek({ code, onHome }) {
         </span>
       </div>
 
+      <ParkErrorBoundary onHome={terug}>
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
           placingAsset={null}
@@ -129,6 +131,7 @@ export default function ParkBezoek({ code, onHome }) {
           parkNaam="Dierenpark"
         />
       </Suspense>
+      </ParkErrorBoundary>
 
       {state === "ok" && <Joystick inputRef={inputRef} />}
     </div>

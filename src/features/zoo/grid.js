@@ -2,6 +2,15 @@
 // een dier-verblijf is 3×3 (DEFAULT_CELLS), een pad of los hek is 1×1. Alles
 // snapt op het raster en mag niet overlappen of in de draaimolen-zone vallen.
 
+// 🐢 Low-end-detectie (park-zwerm 17 jul): op zwakke toestellen gaan
+// schaduwen uit en dpr naar 1 — de doelgroep speelt op goedkope Androids.
+// Hier (en niet in ZooScene) zodat ParkProps 'm zonder import-cyclus kan lezen.
+export const LOW_END = (() => {
+  try {
+    return (navigator.deviceMemory || 8) <= 4 || (navigator.hardwareConcurrency || 8) <= 4;
+  } catch { return false; }
+})();
+
 export const CELL = 2;        // celgrootte in wereld-units (≈ meter)
 export const HALF = 40;       // vakjes vanaf het midden (-40..40 => 81×81 raster).
                               // 4× zo groot sinds 2 jul (Mark); vloer loopt mee tot ±80.

@@ -9,6 +9,7 @@ import { Vector3, Color, CanvasTexture, CatmullRomCurve3 } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
+import { LOW_END } from "./grid";
 
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
@@ -48,18 +49,22 @@ export function DayNight() {
     <>
       <ambientLight ref={amb} intensity={0.6} />
       <hemisphereLight args={["#eaf6ff", "#6f9a4a", 0.5]} />
+      {/* Park-zwerm 17 jul: schaduwbox was ±20 terwijl het park ±80 is — het
+          standaard-park (verblijven op ±34, spawn op z=35) stond dus grotendeels
+          plat zonder slagschaduw. Box naar ±55; op low-end kleinere map (en
+          shadows staan daar sowieso uit via Canvas). */}
       <directionalLight
         ref={sun}
         castShadow
         position={[12, 16, 9]}
         intensity={1.2}
-        shadow-mapSize={[2048, 2048]}
+        shadow-mapSize={LOW_END ? [1024, 1024] : [2048, 2048]}
         shadow-camera-near={1}
-        shadow-camera-far={64}
-        shadow-camera-left={-20}
-        shadow-camera-right={20}
-        shadow-camera-top={20}
-        shadow-camera-bottom={-20}
+        shadow-camera-far={140}
+        shadow-camera-left={-55}
+        shadow-camera-right={55}
+        shadow-camera-top={55}
+        shadow-camera-bottom={-55}
         shadow-bias={-0.0004}
       />
     </>
@@ -1831,8 +1836,11 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
           de bochten netjes aansluiten — geen blokkerige hoeken meer. */}
       <mesh castShadow><tubeGeometry args={[data.railL, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
       <mesh castShadow><tubeGeometry args={[data.railR, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
+      {/* delta-guard op de trein-klik (park-zwerm 17 jul): zonder deze check
+          opende een camera-sleep die toevallig op de rijdende trein eindigde
+          ongewild het leermoment + hardop-spraak. Zelfde patroon als bezoekers. */}
       {carts.map((c, i) => (
-        <group key={i} ref={(el) => (refs.current[i] = el)} onClick={onLeermoment ? (e) => { e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
+        <group key={i} ref={(el) => (refs.current[i] = el)} onClick={onLeermoment ? (e) => { if (e.delta > 8) return; e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
           {c.loco ? (
             <group>
               <mesh position={[0, 0.45, 0]} castShadow><boxGeometry args={[1.5, 0.7, 0.9]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.7} /></mesh>

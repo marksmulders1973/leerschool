@@ -25,6 +25,8 @@ import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET } from "../features/zoo/parkLeermomenten";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
+import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
+import { useGLTF } from "@react-three/drei";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 // Maatje-hulp bij de reken-vragen (zelfde tutor als in de leerpaden — het
@@ -325,6 +327,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
+  const [sceneKey, setSceneKey] = useState(0); // bump = verse mount van de 3D-scene (retry na park-fout)
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
   const [shareUrl, setShareUrl] = useState(null);
@@ -737,6 +740,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const startKopen = (p) => {
     if (coins < p.price) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
     setSelectedIdx(null);
+    // Park-zwerm 17 jul: het GLB-model alvast binnenhalen terwijl het kind een
+    // plek zoekt — anders hapert de ghost-preview op de eerste aankoop.
+    // Guard: procedurele assets (bankjes, blokken) hebben geen url.
+    try { const url = getAsset(p.assetId)?.url; if (url) useGLTF.preload(url); } catch { /* preload is comfort, geen vereiste */ }
     setPlacing({ assetId: p.assetId, price: p.price, rot: 0, ...(p.pakket ? { pakket: p.pakket, pakketLabel: p.label } : {}) });
   };
 
@@ -1210,10 +1217,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
   useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
+  // Park-zwerm 17 jul: bij het VERLATEN van het park (🏠 of leermoment-deeplink)
+  // praatte de gids-stem gewoon door over het volgende scherm heen, en de
+  // 16s-timer vuurde setState op een unmounted component. Unmount-cleanup:
+  useEffect(() => () => { stopSpreken(); clearTimeout(gidsTimer.current); }, []);
   const tafereelNaarLeren = () => {
     if (!tafereel) return;
-    try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId }); track("park_naar_leren", { via: "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
+    // type-veld (park-zwerm): leermomenten en kabouter-taferelen delen dit
+    // paneel — zonder label kon het dagrapport niet zien wélke ingang de
+    // leer-conversie leverde. Event-naam blijft gelijk (queries breken niet).
+    const isLeermoment = !!PARK_LEERMOMENTEN[tafereel.id];
+    try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId, type: isLeermoment ? "leermoment" : "tafereel" }); track("park_naar_leren", { via: isLeermoment ? "leermoment" : "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
     const padId = tafereel.leerpadId;
+    stopSpreken();
     setTafereel(null);
     if (padId && onOpenLeerpad) onOpenLeerpad(padId);
     else if (onOpenLeerpaden) onOpenLeerpaden();
@@ -1511,8 +1527,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Sleep-laag om de 3D-scene: registreert camera-drags (bubbelt vanaf de
           canvas, blokkeert niets — tikken op dieren/bezoekers blijft werken). */}
       <div style={{ position: "absolute", inset: 0 }} onPointerDown={camDown} onWheel={camWheel}>
+      {/* ParkErrorBoundary (park-zwerm 17 jul): één GLB-/WebGL-fout mag nooit
+          meer de hele app omgooien — kindvriendelijke fallback + retry via
+          key-bump (verse mount van de scene). */}
+      <ParkErrorBoundary onRetry={() => setSceneKey((k) => k + 1)} onHome={onHome}>
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
+          key={sceneKey}
           placingAsset={placing?.assetId || null}
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
@@ -1568,8 +1589,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyNaam={buddyNaamEff}
           onBuddyPraat={() => setBuddyChatOpen(true)}
           buddyEye={buddyEye}
+          onContextLost={() => flits("Het park viel even stil — tik op 🔄 als het beeld bevriest")}
         />
       </Suspense>
+      </ParkErrorBoundary>
       </div>
 
       {/* 🐾 Maatjes-kiezer (eerste keer automatisch; daarna via ⚙️-menu). */}

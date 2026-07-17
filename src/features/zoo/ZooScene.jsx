@@ -4,7 +4,7 @@
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
 import { Suspense, useState, useMemo, useCallback, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, ContactShadows, Html, AdaptiveDpr } from "@react-three/drei";
+import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry } from "three";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons } from "./ParkProps";
 import ZooModel from "./ZooModel";
@@ -22,7 +22,7 @@ import { LEERMOMENT_BY_ASSET } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps } from "./blokTextures";
 import { useEffect } from "react";
 import {
-  CELL, GRID_SIZE, GRID_DIV, HALF, KUB, snapToCell, cellToWorld, cellKey,
+  CELL, GRID_SIZE, GRID_DIV, HALF, KUB, LOW_END, snapToCell, cellToWorld, cellKey,
   footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
@@ -567,10 +567,20 @@ function SelectieRing({ cell, cells }) {
   );
 }
 
+// Vrolijk laadscherm mét voortgang (park-zwerm 17 jul): het eerste bezoek
+// downloadt flink wat dieren-modellen — een kaal "Park laden…" zonder
+// voortgang voelde als hangen. useProgress geeft het echte percentage.
 function Laden() {
+  const { progress } = useProgress();
   return (
     <Html center>
-      <div style={{ color: "#3a5a2a", font: "600 14px system-ui", whiteSpace: "nowrap" }}>Park laden…</div>
+      <div style={{ textAlign: "center", fontFamily: "system-ui", whiteSpace: "nowrap" }}>
+        <div style={{ fontSize: 34, marginBottom: 6 }}>🦊</div>
+        <div style={{ color: "#3a5a2a", font: "700 15px system-ui" }}>Je park wordt gebouwd… {Math.round(progress)}%</div>
+        <div style={{ marginTop: 8, width: 160, height: 8, borderRadius: 999, background: "rgba(0,0,0,0.12)", overflow: "hidden", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: `${Math.max(4, progress)}%`, height: "100%", borderRadius: 999, background: "#00C853", transition: "width 0.3s" }} />
+        </div>
+      </div>
     </Html>
   );
 }
@@ -632,7 +642,7 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
   return null;
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -722,7 +732,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
     const k = getAsset(it.assetId)?.kind;
     return k === "animal" || k === "building" || k === "attraction";
   }).length;
-  const bezoekers = Math.max(2, Math.min(7, Math.round(trekpleisters * 0.8) + 2));
+  // Park-zwerm 17 jul: cap was 7 → het standaard-park zat al aan de cap en
+  // bijbouwen leverde nooit méér publiek op. Nu groeit het publiek voelbaar
+  // mee tot ~20 trekpleisters; op touch/low-end iets lager voor de framerate.
+  const bezoekerCap = LOW_END ? 9 : 12;
+  const bezoekers = Math.max(2, Math.min(bezoekerCap, Math.round(trekpleisters * 0.5) + 2));
 
   // 🚂 Trein-route: orden de losse rail-tegels tot een aaneengesloten pad zodat de
   // trein er overheen rijdt. We lopen van buur naar buur (raster-aangrenzend).
@@ -864,11 +878,20 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
 
   return (
     <Canvas
-      shadows
-      dpr={[1, 2]}
+      shadows={!LOW_END}
+      dpr={LOW_END ? 1 : [1, 2]}
       performance={{ min: 0.55 }}
       camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 300 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
+      onCreated={({ gl }) => {
+        // Context-loss (veel op goedkope Androids onder geheugendruk): zonder
+        // handler bevriest het canvas stil zwart. preventDefault + melding →
+        // ZookwartierGame biedt een nette herlaad-knop aan.
+        gl.domElement.addEventListener("webglcontextlost", (e) => {
+          e.preventDefault();
+          try { onContextLost && onContextLost(); } catch { /* nooit de render breken */ }
+        });
+      }}
     >
       {/* Tijdens lopen/camera-draaien tijdelijk lagere resolutie → hoge FPS op
           zwakke hardware; staat de speler stil, dan weer scherp. */}
@@ -919,7 +942,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
-        {buddyId && !firstPerson && rideIdx == null && <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />}
+        {buddyId && !firstPerson && rideIdx == null && (
+          <Suspense fallback={null}>
+            <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} />
+          </Suspense>
+        )}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} onLeermoment={onLeermoment} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
@@ -968,15 +995,21 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               onClick={(e) => { if (placing || sculptMode || waterMode || groundMode) return; if (e.delta > 8) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
               {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
-              <PlacedItem
-                assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0}
-                rideRef={idx === rideIdx ? attractieZitje : undefined}
-                colors={it.colors} colorEditable={colorEditIdx === idx}
-                onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
-                onParts={onHouseParts}
-                mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
-                kraam={kramen[getAsset(it.assetId)?.voorziet]}
-              />
+              {/* Eigen Suspense per item (park-zwerm 17 jul): één suspendend
+                  GLB-dier klapte anders de HELE scene terug naar het laad-
+                  scherm — precies bij de eerste dier-aankoop (React 18).
+                  Nu poppen items los in en blijft het park altijd staan. */}
+              <Suspense fallback={null}>
+                <PlacedItem
+                  assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0}
+                  rideRef={idx === rideIdx ? attractieZitje : undefined}
+                  colors={it.colors} colorEditable={colorEditIdx === idx}
+                  onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
+                  onParts={onHouseParts}
+                  mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
+                  kraam={kramen[getAsset(it.assetId)?.voorziet]}
+                />
+              </Suspense>
             </group>
           );
         })}
@@ -985,7 +1018,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {placing && !plaatstBlok && ghost && (
           <>
             <FootprintMarker cell={ghost} valid={ghostValid} cells={placingCells} />
-            <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightFnRef.current(cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} />
+            <Suspense fallback={null}>
+              <PlacedItem assetId={placingAsset} x={cellToWorld(ghost[0], ghost[1])[0]} z={cellToWorld(ghost[0], ghost[1])[1]} y={heightFnRef.current(cellToWorld(ghost[0], ghost[1])[0], cellToWorld(ghost[0], ghost[1])[1])} rotation={placingRot} />
+            </Suspense>
           </>
         )}
 
