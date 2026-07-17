@@ -1976,8 +1976,28 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   </button>
                 );
               })}
+              {/* Dieren-tab: kleurige knoppen i.p.v. dropdown (review 17 jul: de
+                  onboarding wijst een nieuw kind naar déze tab — een kale
+                  <select> was daar het eerste wat het zag, terwijl de blokken
+                  al knoppen kregen omdat "een dropdown onvindbaar" bleek). */}
+              {shopCat === "dier" && (SHOP_CATS.find((c) => c.key === "dier")?.items || []).map((p) => {
+                const actiefDier = placing && placing.assetId === p.assetId && placing.moveIdx == null;
+                const teDuur = coins < p.price;
+                return (
+                  <button
+                    key={p.assetId}
+                    onClick={() => startKopen(p)}
+                    disabled={teDuur}
+                    title={teDuur ? `${p.label} — nog ${p.price - coins} 🪙 sparen` : `${p.label} kopen`}
+                    style={{ flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: actiefDier ? "3px solid #2e7d32" : "2px solid rgba(255,255,255,0.7)", borderRadius: 12, padding: "6px 10px", background: teDuur ? "rgba(200,200,200,0.75)" : "rgba(255,255,255,0.96)", boxShadow: actiefDier ? "0 0 0 3px rgba(46,125,50,0.35), 0 3px 10px rgba(0,0,0,.3)" : "0 2px 8px rgba(0,0,0,.22)", cursor: teDuur ? "not-allowed" : "pointer", transform: actiefDier ? "scale(1.08)" : "none", opacity: teDuur ? 0.75 : 1 }}
+                  >
+                    <span style={{ fontSize: 22, lineHeight: 1, filter: teDuur ? "grayscale(1)" : "none" }}>{p.emoji}</span>
+                    <span style={{ font: "800 10.5px system-ui", color: "#234", whiteSpace: "nowrap" }}>{p.label} {p.price}🪙</span>
+                  </button>
+                );
+              })}
               {/* Overige tabs: compacte dropdown (Mark 1 jul: rustiger scherm). */}
-              {shopCat !== "blok" && (() => {
+              {shopCat !== "blok" && shopCat !== "dier" && (() => {
                 const items = SHOP_CATS.find((c) => c.key === shopCat)?.items || [];
                 return (
                   <select
