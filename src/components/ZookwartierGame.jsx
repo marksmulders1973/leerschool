@@ -358,6 +358,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [rekenUitslag, setRekenUitslag] = useState(null);// null | "goed" | "fout"
   const [rekenFout, setRekenFout] = useState(null);      // laatst gekozen foute optie (context voor maatje-hulp)
   const [rekenHulpOpen, setRekenHulpOpen] = useState(false); // 🐾 maatje denkt mee met de som
+  const [rekenPogingen, setRekenPogingen] = useState(0); // foute pogingen op déze som (anti-gok, review 17 jul)
   const rekenVraagNr = useRef(0);                         // telt sommen → eigen chat per som
   const rekenBonusRef = useRef(0);                        // session-cap op de muntjesbonus
   const [rekenBonusGegeven, setRekenBonusGegeven] = useState(true); // kreeg dit antwoord echt de bonus? (cap-eerlijkheid)
@@ -1264,6 +1265,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setRekenUitslag(null);
     setRekenFout(null);
     setRekenHulpOpen(false);
+    setRekenPogingen(0);
     rekenVraagNr.current += 1; // nieuwe som → eigen (leeg) hulp-gesprek
     try { track("park_rekenvraag"); } catch { /* nooit laten breken */ }
   };
@@ -1274,7 +1276,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       try { track("park_rekenvraag_goed"); } catch { /* niet laten breken */ }
       // Bug-jacht 7/7: vastleggen óf de bonus is uitgekeerd — de succes-tekst
       // beloofde anders "+2 🪙" terwijl de cap al bereikt was.
-      if (rekenBonusRef.current < REKEN_BONUS_CAP) {
+      // Anti-gok (review 17 jul): met 3 opties en onbeperkt proberen loonde
+      // elimineren — bonus daarom alléén bij goed-in-één (PARK-VISIE regel 5:
+      // geen munten voor raden in het park zelf).
+      if (rekenPogingen === 0 && rekenBonusRef.current < REKEN_BONUS_CAP) {
         rekenBonusRef.current += 1;
         setRekenBonusGegeven(true);
         setMeta((m) => (m ? { ...m, coins: m.coins + REKEN_BONUS } : m));
@@ -1284,6 +1289,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     } else {
       setRekenUitslag("fout");
       setRekenFout(optie);
+      setRekenPogingen((p) => p + 1);
     }
   };
 
@@ -2106,12 +2112,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {rekenVraag.opties.map((opt) => {
                 const goedGekozen = rekenUitslag === "goed" && opt === rekenVraag.antwoord;
+                // Anti-gok: na 2 foute tikken eerst het maatje om hulp vragen —
+                // anders is het derde antwoord gratis te vinden door eliminatie.
+                const opSlot = rekenUitslag !== "goed" && rekenPogingen >= 2 && !rekenHulpOpen;
+                const dicht = rekenUitslag === "goed" || opSlot;
                 return (
                   <button
                     key={opt}
                     onClick={() => beantwoordReken(opt)}
-                    disabled={rekenUitslag === "goed"}
-                    style={{ flex: "1 1 28%", border: "none", borderRadius: 14, padding: "14px 8px", font: "900 18px system-ui", color: goedGekozen ? "#fff" : "#234", background: goedGekozen ? "#2e9e4f" : "rgba(0,0,0,0.05)", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: rekenUitslag === "goed" ? "default" : "pointer" }}
+                    disabled={dicht}
+                    style={{ flex: "1 1 28%", border: "none", borderRadius: 14, padding: "14px 8px", font: "900 18px system-ui", color: goedGekozen ? "#fff" : "#234", background: goedGekozen ? "#2e9e4f" : "rgba(0,0,0,0.05)", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: dicht ? "default" : "pointer", opacity: opSlot ? 0.55 : 1 }}
                   >
                     {opt} 🪙
                   </button>
@@ -2120,7 +2130,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             </div>
             {rekenUitslag === "fout" && (
               <div style={{ marginTop: 12, display: "flex", flexDirection: "column", alignItems: "center", gap: 9 }}>
-                <p style={{ margin: 0, font: "800 13.5px system-ui", color: "#c0392b", textAlign: "center" }}>Bijna! Probeer nog een keer 💪</p>
+                <p style={{ margin: 0, font: "800 13.5px system-ui", color: "#c0392b", textAlign: "center" }}>
+                  {rekenPogingen >= 2 && !rekenHulpOpen
+                    ? "Vraag eerst even hulp aan je maatje — samen kom je eruit 💪"
+                    : "Bijna! Probeer nog een keer 💪"}
+                </p>
                 {/* Je parkmaatje denkt mee (Mark 2 jul): zelfde buddy-tutor als in
                     de leerpaden — hints, nooit het antwoord. */}
                 <button
@@ -2133,7 +2147,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             )}
             {rekenUitslag === "goed" && (
               <div style={{ marginTop: 12 }}>
-                <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusGegeven ? `+${REKEN_BONUS} 🪙` : "(muntjes-maximum van vandaag bereikt — knap dat je dóórrekent!)"} 🎉</p>
+                <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusGegeven ? `+${REKEN_BONUS} 🪙` : (rekenPogingen > 0 ? "(muntjes verdien je als het in één keer goed is — die pak je bij de volgende som!)" : "(muntjes-maximum van vandaag bereikt — knap dat je dóórrekent!)")} 🎉</p>
                 {/* Park→leren-brug (Titan 2026-06-29): koppel leren aan de munt-economie
                     die het kind al motiveert. Leren 15 min geeft echt extra munten
                     (kwartier_reached → zooEconomy). Zo voedt het park het leren i.p.v.

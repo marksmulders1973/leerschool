@@ -2,7 +2,7 @@
 // grasgrond, orbit-besturing + het bestuurbare poppetje. Álles in het park
 // (draaimolen, paden, hekken, gebouwen, dier-verblijven) is een plaatsbaar/
 // weghaalbaar item dat op het raster snapt. Footprint per item (decor 1×1).
-import { Suspense, useState, useMemo, useCallback, useRef } from "react";
+import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry } from "three";
@@ -317,7 +317,10 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 }
 
 // Eén geplaatst item, gerenderd op basis van zijn soort. y = terreinhoogte.
-function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false }) {
+// React.memo (review 17 jul): ZookwartierGame heeft ~50 useState; elke HUD-tik
+// re-renderde anders álle geplaatste items mee. Props zijn primitief/stabiel
+// (behalve kraam bij de 4 kraampjes — acceptabel).
+const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false }) {
   const a = getAsset(assetId);
   if (!a) return null;
   // Rails/hekpanelen/padtegels zitten visueel in GeinstanceerdeParkProps
@@ -369,7 +372,7 @@ function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, co
     );
   }
   return <ZooModel assetId={assetId} position={[x, y, z]} rotation={rotation} />;
-}
+});
 
 // Hoogte → kleur: gras onderaan, rots op de hellingen, grijze (besneeuwde-ogende)
 // toppen op de bergen. Geeft de bergen een rotsachtige look.
@@ -738,15 +741,20 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
   // Kubussen doen niet mee in het cel-raster (eigen fijne raster; celHeeftKub
   // bewaakt dat gebouwen niet óp kubussen landen).
   const plaatstBlok = isBlok(placingAsset);
-  const blokkeert = (id) => !isBlok(id) && getAsset(id)?.procedural !== "path";
-  const bezet = bezetteCellenVan(placedItems, moveIdx, cellsVan, blokkeert);
+  // useMemo (review 17 jul): deze twee liepen bij ÉLKE render van de game-HUD
+  // opnieuw over alle items — met ~50 useState in ZookwartierGame is dat elke
+  // menu-tik en praatwolk.
+  const bezet = useMemo(() => {
+    const blokkeert = (id) => !isBlok(id) && getAsset(id)?.procedural !== "path";
+    return bezetteCellenVan(placedItems, moveIdx, cellsVan, blokkeert);
+  }, [placedItems, moveIdx]);
   const ghostValid = ghost && isPlaatsbaar(ghost[0], ghost[1], bezet, placingCells) && !celHeeftKub(ghost[0], ghost[1], placingCells);
 
   // Aantal bezoekers schaalt mee met wat je park te bieden heeft.
-  const trekpleisters = placedItems.filter((it) => {
+  const trekpleisters = useMemo(() => placedItems.filter((it) => {
     const k = getAsset(it.assetId)?.kind;
     return k === "animal" || k === "building" || k === "attraction";
-  }).length;
+  }).length, [placedItems]);
   // Park-zwerm 17 jul: cap was 7 → het standaard-park zat al aan de cap en
   // bijbouwen leverde nooit méér publiek op. Nu groeit het publiek voelbaar
   // mee tot ~20 trekpleisters; op touch/low-end iets lager voor de framerate.
@@ -1040,8 +1048,10 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                   assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0}
                   rideRef={idx === rideIdx ? attractieZitje : undefined}
                   colors={it.colors} colorEditable={colorEditIdx === idx}
-                  onPickPart={(grp) => onPickPart && onPickPart(idx, grp)}
-                  onParts={onHouseParts}
+                  // Alleen doorgeven bij het item dat écht bewerkt wordt — een
+                  // verse inline-functie voor álle items zou React.memo breken.
+                  onPickPart={colorEditIdx === idx && onPickPart ? (grp) => onPickPart(idx, grp) : undefined}
+                  onParts={colorEditIdx === idx ? onHouseParts : undefined}
                   mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
                   kraam={kramen[getAsset(it.assetId)?.voorziet]}
                 />
