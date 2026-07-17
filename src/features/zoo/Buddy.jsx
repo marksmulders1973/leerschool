@@ -445,6 +445,10 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
   const b = BUDDY_BY_ID[kind];
   const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
+  // Cursor-reset bij unmount (review 17 jul): unmount tijdens hover (bv.
+  // buddy-wissel of wissel naar eerstepersoons) liet de hele app anders met
+  // een pointer-cursor achter — onPointerOut vuurt dan nooit meer.
+  useEffect(() => () => { document.body.style.cursor = "default"; }, []);
   const lijf = useRef();      // het lijf apart, zodat we het kunnen laten "meegroeien"
   const hart = useRef();      // zwevend hartje bij een aai
   const cur = useRef(new Vector3(2, 0, 12));
@@ -581,10 +585,12 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
       tailRef.current.rotation.y = Math.sin(s.clock.elapsedTime * wag) * 0.5;
     }
 
-    // praat-timer
+    // praat-timer — niet kletsen terwijl de buddy verborgen is (review 17 jul:
+    // drei-<Html> volgt parent-visible niet, dus in buddy-oog-cam zweefden er
+    // anders tekstballonnen midden in beeld zonder buddy).
     if (st.current.bt > 0) { st.current.bt -= dt; if (st.current.bt <= 0) setBubble(null); }
     st.current.next -= dt;
-    if (st.current.next <= 0) {
+    if (st.current.next <= 0 && !verborgen) {
       if (!st.current.introDone) { setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}! ${b.flavor}` }); st.current.introDone = true; st.current.bt = 4.5; }
       else { setBubble(buddyPraatje(b.soort, factsRef?.current)); st.current.bt = 3.8; }
       // Niet te vaak kletsen (12-agent-review: elke ~12s voelt opdringerig,
@@ -606,7 +612,7 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
       onPointerOver={(e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; }}
       onPointerOut={() => { document.body.style.cursor = "default"; }}
     >
-      {bubble && (
+      {bubble && !verborgen && (
         <Html position={[0, 1.05, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
           <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
             <span style={{ fontSize: 18 }}>{bubble.e}</span>

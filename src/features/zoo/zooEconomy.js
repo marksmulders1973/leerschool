@@ -106,14 +106,15 @@ export function groeiBabies(items, isDier = () => true) {
 // aantal weggelopen dieren.
 export function verwaarloosCheck(items, isDier = () => true) {
   let weggelopen = 0;
+  const weggelopenIds = []; // wíé er wegliep (review 17 jul: melding kon geen naam noemen)
   const layout = (items || []).filter((it) => {
     if (!isDier(it.assetId)) return true;
     if ((it.price || 0) <= 0) return true; // starter-dier → blijft
     const dagen = it.fed ? dagenVerschil(it.fed) : 999;
-    if (dagen >= VERWAARLOOS_DAGEN) { weggelopen++; return false; }
+    if (dagen >= VERWAARLOOS_DAGEN) { weggelopen++; weggelopenIds.push(it.assetId); return false; }
     return true;
   });
-  return { layout, weggelopen };
+  return { layout, weggelopen, weggelopenIds };
 }
 
 function isYesterday(dateStr, today = todayStr()) {

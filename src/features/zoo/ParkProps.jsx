@@ -22,10 +22,21 @@ const ZON_DAG = new Color("#fff4e0");
 const ZON_HORIZON = new Color("#ff9a5a");
 
 export function DayNight() {
-  const { scene } = useThree();
+  const { scene, gl } = useThree();
   const sun = useRef();
   const amb = useRef();
   const tmp = useRef(new Color());
+  // Schaduw-throttle (review 17 jul): de zon bewoog elke frame → three rendert
+  // dan élke frame een volledige shadow-pass over alle meshes. Nu: shadow map
+  // alleen op ons eigen ritme verversen (~7×/s). Genoeg voor lopende figuren,
+  // scheelt ~85% van het schaduw-werk per frame op zwakke telefoons.
+  const laatsteSchaduw = useRef(-1);
+  useEffect(() => {
+    const vorige = gl.shadowMap.autoUpdate;
+    gl.shadowMap.autoUpdate = false;
+    gl.shadowMap.needsUpdate = true;
+    return () => { gl.shadowMap.autoUpdate = vorige; };
+  }, [gl]);
   useFrame((state) => {
     const phase = (state.clock.elapsedTime % CYCLE) / CYCLE; // 0..1
     const e = Math.sin(phase * Math.PI * 2);                 // zon-hoogte -1..1 (0.25=middag)
@@ -39,9 +50,13 @@ export function DayNight() {
     if (scene.fog) scene.fog.color.copy(sky);
 
     if (sun.current) {
-      sun.current.position.set(Math.cos(phase * Math.PI * 2) * 18, Math.max(-4, e * 22 + 3), 9);
       sun.current.intensity = 0.12 + daglicht * 1.25;
       sun.current.color.copy(ZON_DAG).lerp(ZON_HORIZON, horizon);
+      if (state.clock.elapsedTime - laatsteSchaduw.current >= 0.15) {
+        laatsteSchaduw.current = state.clock.elapsedTime;
+        sun.current.position.set(Math.cos(phase * Math.PI * 2) * 18, Math.max(-4, e * 22 + 3), 9);
+        gl.shadowMap.needsUpdate = true;
+      }
     }
     if (amb.current) amb.current.intensity = 0.42 + daglicht * 0.32; // 's nachts niet te donker (kind moet park blijven zien)
   });
@@ -52,13 +67,15 @@ export function DayNight() {
       {/* Park-zwerm 17 jul: schaduwbox was ±20 terwijl het park ±80 is — het
           standaard-park (verblijven op ±34, spawn op z=35) stond dus grotendeels
           plat zonder slagschaduw. Box naar ±55; op low-end kleinere map (en
-          shadows staan daar sowieso uit via Canvas). */}
+          shadows staan daar sowieso uit via Canvas). mapSize 1024 ook op
+          niet-low-end (review 17 jul): 2048² was de grootste GPU-post en het
+          visuele verschil op een telefoonscherm is nihil. */}
       <directionalLight
         ref={sun}
         castShadow
         position={[12, 16, 9]}
         intensity={1.2}
-        shadow-mapSize={LOW_END ? [1024, 1024] : [2048, 2048]}
+        shadow-mapSize={LOW_END ? [768, 768] : [1024, 1024]}
         shadow-camera-near={1}
         shadow-camera-far={140}
         shadow-camera-left={-55}
@@ -760,6 +777,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   const moving = useRef(false);
   const solidRef = useRef(isSolid);
   solidRef.current = isSolid;
+  // Cursor-reset bij unmount (review 17 jul): een bezoeker die tijdens hover
+  // verdwijnt (aantal daalt na weghalen van een trekpleister) liet de app
+  // anders met een pointer-cursor achter.
+  useEffect(() => () => { document.body.style.cursor = "default"; }, []);
   // Bezoekers zijn altijd blok-figuren (Mark 2 jul: geen "echte" mensen meer).
   const BLOK_FIGUREN = CHARACTERS.filter((c) => c.blocky);
   const charUrl = BLOK_FIGUREN[seed % BLOK_FIGUREN.length].url;

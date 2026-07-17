@@ -26,6 +26,12 @@ import {
   footprint, isPlaatsbaar, bezetteCellenVan,
 } from "./grid";
 
+// Gedeelde randjes-geometrieën voor de bouw/hak-aanwijzers (review 17 jul):
+// inline `new BoxGeometry(...)` in JSX-args gaf bij elke re-render een nieuwe
+// geometrie (args-identiteit wijzigt → r3f bouwt de edgesGeometry opnieuw).
+const HOVER_RAND_GEO = new BoxGeometry(KUB + 0.04, KUB + 0.04, KUB + 0.04);
+const HAK_RAND_GEO = new BoxGeometry(KUB + 0.05, KUB + 0.05, KUB + 0.05);
+
 // Welke items zijn "vast" (kan het poppetje niet doorheen lopen)? Paden en
 // kleine bloemen/paddenstoel zijn beloopbaar; de rest (verblijven, gebouwen,
 // attracties, hekken, bomen) houdt tegen.
@@ -142,7 +148,7 @@ function BlokkenLaag({ items, terrain, heightFn, placingBlok, modusBezig, onFace
       })}
       {/* Aanwijs-randje: het blokje onder je muis (bouwen = links, hakken = rechts). */}
       <lineSegments ref={hover} visible={false}>
-        <edgesGeometry args={[new BoxGeometry(KUB + 0.04, KUB + 0.04, KUB + 0.04)]} />
+        <edgesGeometry args={[HOVER_RAND_GEO]} />
         <lineBasicMaterial color="#111111" />
       </lineSegments>
     </group>
@@ -238,7 +244,7 @@ function BouwCursor({ actief, playerPos, playerFace, heightFn, blokPerKub, curso
         <meshStandardMaterial color="#00C853" emissive="#00C853" emissiveIntensity={0.45} roughness={0.4} />
       </mesh>
       <lineSegments ref={hak} visible={false}>
-        <edgesGeometry args={[new BoxGeometry(KUB + 0.05, KUB + 0.05, KUB + 0.05)]} />
+        <edgesGeometry args={[HAK_RAND_GEO]} />
         <lineBasicMaterial color="#1a1a1a" linewidth={2} />
       </lineSegments>
     </group>

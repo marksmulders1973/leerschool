@@ -43,8 +43,8 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
           <h2 style={{ font: "900 21px system-ui", color: "#234", margin: "4px 0 2px" }}>{eerste ? "Kies je droom-maatje" : "Jouw maatjes"}</h2>
           <p style={{ font: "600 13px/1.45 system-ui", color: "#667", margin: "0 6px" }}>
             {eerste
-              ? "Eentje mag je gratis uitkiezen. Hij loopt met je mee door het park en praat met je. De andere maatjes verdien je door te leren!"
-              : "Tik op een maatje om hem mee te nemen. Vergrendelde maatjes verdien je door meer te leren."}
+              ? "Eentje mag je gratis uitkiezen. Je maatje loopt met je mee door het park en praat met je. De andere maatjes verdien je door te leren!"
+              : "Tik op een maatje om het mee te nemen. Wisselen kan altijd — je maatjes blijven van jou. Vergrendelde maatjes verdien je door meer te leren."}
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
                   </div>
                 ) : (
                   <div style={{ marginTop: 8, font: "800 11.5px system-ui", color: "#a06a00", background: "#fff3d6", borderRadius: 999, padding: "4px 8px", display: "inline-block" }}>
-                    🔒 nog {nogNodig} {nogNodig === 1 ? "stap" : "stappen"} leren
+                    🔒 nog {nogNodig} {nogNodig === 1 ? "lesje" : "lesjes"} leren
                   </div>
                 )}
               </button>
@@ -120,7 +120,7 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
         )}
 
         <div style={{ textAlign: "center", marginTop: 14 }}>
-          <div style={{ font: "700 12px system-ui", color: "#8a93a0", marginBottom: 10 }}>📚 Jij hebt al <b>{geleerdeStappen}</b> {geleerdeStappen === 1 ? "stap" : "stappen"} geleerd</div>
+          <div style={{ font: "700 12px system-ui", color: "#8a93a0", marginBottom: 10 }}>📚 Jij hebt al <b>{geleerdeStappen}</b> {geleerdeStappen === 1 ? "lesje" : "lesjes"} geleerd</div>
           <button onClick={onClose} style={{ border: "none", borderRadius: 999, padding: "9px 20px", font: "800 13px system-ui", color: "#33404f", background: "#eef1f5", cursor: "pointer" }}>Sluiten</button>
         </div>
       </div>

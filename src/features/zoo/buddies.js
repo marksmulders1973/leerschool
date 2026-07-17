@@ -268,7 +268,12 @@ export function actieveBuddyPersona() {
   };
 }
 export function bezitBuddies() {
-  try { return JSON.parse(localStorage.getItem(LS_BEZIT) || "[]"); } catch { return []; }
+  // Array.isArray-guard (review 17 jul): geldige-maar-verkeerde JSON (bv. "5")
+  // passeerde de try/catch en liet `new Set(5)` verderop crashen in de render.
+  try {
+    const v = JSON.parse(localStorage.getItem(LS_BEZIT) || "[]");
+    return Array.isArray(v) ? v : [];
+  } catch { return []; }
 }
 export function heeftGekozen() {
   return !!gekozenBuddy();

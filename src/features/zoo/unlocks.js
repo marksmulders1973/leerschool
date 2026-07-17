@@ -23,11 +23,11 @@ export const VRIJSPEEL_DIEREN = [
   // beloning — je "speelt ze vrij" door te leren. Niet aan één pad gekoppeld
   // maar aan een mijlpaal: hoe meer leer-stappen je af hebt, hoe groter de dino
   // die je ontgrendelt. `stappen` = aantal unieke voltooide leer-stappen nodig.
-  { assetId: "triceratops",    emoji: "🦕", naam: "Triceratops",   stappen: 10, waarom: "Je hebt al 10 leer-stappen af — de Triceratops is van jou! Deze dino kun je niet kopen, alleen vrij spelen door te leren." },
-  { assetId: "stegosaurus",    emoji: "🦕", naam: "Stegosaurus",   stappen: 18, waarom: "18 leer-stappen! De Stegosaurus stampt je park binnen. Vrijgespeeld door te leren — niet te koop." },
-  { assetId: "parasaurolophus", emoji: "🦕", naam: "Parasaurus",   stappen: 28, waarom: "28 leer-stappen — knap volgehouden! De Parasaurus is je beloning. Alleen te verdienen door te leren." },
-  { assetId: "trex",           emoji: "🦖", naam: "T-Rex",         stappen: 40, waarom: "40 leer-stappen! De machtige T-Rex brult in jouw dierentuin. De koning van de vrijspeel-dino's." },
-  { assetId: "apatosaurus",    emoji: "🦕", naam: "Apatosaurus",   stappen: 55, waarom: "55 leer-stappen — wauw! De gigantische Apatosaurus is de allergrootste, alleen voor échte doorzetters." },
+  { assetId: "triceratops",    emoji: "🦕", naam: "Triceratops",   stappen: 10, waarom: "Je hebt al 10 lesjes af — de Triceratops is van jou! Deze dino kun je niet kopen, alleen vrij spelen door te leren." },
+  { assetId: "stegosaurus",    emoji: "🦕", naam: "Stegosaurus",   stappen: 18, waarom: "18 lesjes geleerd! De Stegosaurus stampt je park binnen. Vrijgespeeld door te leren — niet te koop." },
+  { assetId: "parasaurolophus", emoji: "🦕", naam: "Parasaurus",   stappen: 28, waarom: "28 lesjes — knap volgehouden! De Parasaurus is je beloning. Alleen te verdienen door te leren." },
+  { assetId: "trex",           emoji: "🦖", naam: "T-Rex",         stappen: 40, waarom: "40 lesjes geleerd! De machtige T-Rex brult in jouw dierentuin. De koning van de vrijspeel-dino's." },
+  { assetId: "apatosaurus",    emoji: "🦕", naam: "Apatosaurus",   stappen: 55, waarom: "55 lesjes — wauw! De gigantische Apatosaurus is de allergrootste, alleen voor échte doorzetters." },
   // ── SOUVENIRS van de uitvinders-kabouters (P1 cirkel-is-rond, Mark 10 jul):
   // rond het gekoppelde leerpad af en de kabouters "bouwen" een mini-monument
   // voor in je eigen park. Zelfde pad-mechanisme als het spaarvarken.
@@ -36,10 +36,10 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "souvenirTesla", emoji: "⚡", naam: "Mini-bliksemtoren", pad: "elektriciteit-natuurkunde", padTitel: "Elektriciteit", waarom: "Elektriciteit uitgespeeld! Meester Nikola zette een kleine bliksemtoren in jouw park — veilig, beloofd." },
   // ── FABELWEZENS (Mark 2 jul): de zeldzaamste beloningen, ná de dino's. De
   // draak/feniks VLIEGEN echt rond boven je park; eenhoorn en elf wandelen.
-  { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 leer-stappen — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },
-  { assetId: "fabelEenhoorn", emoji: "🦄", naam: "Eenhoorn", stappen: 90,  waarom: "90 leer-stappen! De eenhoorn trippelt je park binnen — met gouden hoorn en regenboog-manen." },
-  { assetId: "fabelFeniks",   emoji: "🔥", naam: "Feniks",   stappen: 115, waarom: "115 leer-stappen! De vuurvogel cirkelt nu boven je park. Bijna niemand komt zó ver." },
-  { assetId: "fabelDraak",    emoji: "🐉", naam: "Draak",    stappen: 150, waarom: "150 leer-stappen — legendarisch! De draak, het zeldzaamste wezen van allemaal, vliegt boven jouw park. Dit heeft bijna niemand." },
+  { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 lesjes — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },
+  { assetId: "fabelEenhoorn", emoji: "🦄", naam: "Eenhoorn", stappen: 90,  waarom: "90 lesjes geleerd! De eenhoorn trippelt je park binnen — met gouden hoorn en regenboog-manen." },
+  { assetId: "fabelFeniks",   emoji: "🔥", naam: "Feniks",   stappen: 115, waarom: "115 lesjes geleerd! De vuurvogel cirkelt nu boven je park. Bijna niemand komt zó ver." },
+  { assetId: "fabelDraak",    emoji: "🐉", naam: "Draak",    stappen: 150, waarom: "150 lesjes — legendarisch! De draak, het zeldzaamste wezen van allemaal, vliegt boven jouw park. Dit heeft bijna niemand." },
 ];
 
 // De grote dino's, oplopend op mijlpaal — gebruikt voor de winkel-volgorde + de

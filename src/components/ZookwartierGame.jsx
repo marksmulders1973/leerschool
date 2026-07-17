@@ -600,7 +600,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
       let finalMeta = kw.state;
       let finalLayout = layout;
-      let parkGain = 0, births = 0, weggelopen = 0, loon = 0;
+      let parkGain = 0, births = 0, weggelopen = 0, loon = 0, weggelopenNamen = [], goedVerzorgd = false;
 
       // Park-groei: op een nieuwe dag levert je park muntjes op. Verzorging is PER
       // DIER (it.fed): recent gevoerd → eerder jonkies; een gekocht dier dat >= 3
@@ -618,6 +618,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         const v = verwaarloosCheck(finalLayout, isDier);
         finalLayout = v.layout;
         weggelopen = v.weggelopen;
+        weggelopenNamen = (v.weggelopenIds || []).map((id) => getAsset(id)?.name || "een dier");
+        // "Goed verzorgd"-compliment (review 17 jul: stond in de UI maar werd
+        // nooit gezet): alle gekochte dieren gisteren of vandaag gevoerd.
+        const gekocht = finalLayout.filter((it) => isDier(it.assetId) && (it.price || 0) > 0);
+        goedVerzorgd = weggelopen === 0 && gekocht.length > 0 && gekocht.every((it) => it.fed && dagenVerschil(it.fed) <= 1);
         finalMeta = { ...finalMeta, coins: finalMeta.coins + parkGain + births * BABY_BONUS };
       }
       const gained = login.gained + kw.gained + parkGain + births * BABY_BONUS;
@@ -628,9 +633,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
       if (gained > 0 || weggelopen > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, weggelopen });
+        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, weggelopen, weggelopenNamen, goedVerzorgd });
         clearTimeout(rewardTimer.current);
-        rewardTimer.current = setTimeout(() => setReward(null), 6000);
+        // Een weggelopen dier is een hard moment — die melding mag langer blijven
+        // staan dan een muntjes-jubel (review 17 jul: 6s was te kort om te lezen).
+        rewardTimer.current = setTimeout(() => setReward(null), weggelopen > 0 ? 12000 : 6000);
       }
       if (userId) saveZooState(userId, { ...finalMeta, layout: finalLayout });
     })();
@@ -638,11 +645,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   }, [userId, laadPoging]);
 
   // Debounced opslaan na wijzigingen (incl. het geboetseerde terrein).
+  // Flush bij unmount (review 17 jul): wie <2s na een plaatsing op 🏠 tikte,
+  // verloor die plaatsing — de pending save werd alleen geannuleerd. De ref
+  // houdt de nieuwste save vast; de losse unmount-effect voert hem alsnog uit.
+  const pendingSaveRef = useRef(null);
   useEffect(() => {
     if (!loaded || !userId || !meta) return;
-    const t = setTimeout(() => saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }), 2000);
+    const bewaar = () => { pendingSaveRef.current = null; saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }); };
+    pendingSaveRef.current = bewaar;
+    const t = setTimeout(bewaar, 2000);
     return () => clearTimeout(t);
   }, [placedItems, meta, terrain, loaded, userId]);
+  useEffect(() => () => { pendingSaveRef.current?.(); }, []);
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
@@ -720,7 +734,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
 
   const startKopen = (p) => {
-    if (coins < p.price) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
+    if (coins < p.price) {
+      // Eerlijke tekst (review 17 jul): is het kwartier vandaag al uitbetaald,
+      // dan is "leer een kwartier om te sparen" een loze belofte — dat voelt
+      // als bedrog en beschadigt precies de park→leren-brug.
+      const kwartierAlGehad = meta?.last_kwartier_date === vandaag();
+      flits(kwartierAlGehad
+        ? "Niet genoeg muntjes — morgen verdient je leerkwartier weer muntjes! Tip: blokken bouwen is gratis."
+        : "Niet genoeg muntjes — leer een kwartier om te sparen!");
+      return;
+    }
     setSelectedIdx(null);
     // Park-zwerm 17 jul: het GLB-model alvast binnenhalen terwijl het kind een
     // plek zoekt — anders hapert de ghost-preview op de eerste aankoop.
@@ -802,8 +825,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     }
     // Vrijspeel-dier: precies één per park → meteen uit koop-modus. Anders:
     // blijf in koop-modus zolang er muntjes zijn (handig om er meerdere te zetten).
-    if (vrijspeelDier(placing.assetId)) setPlacing(null);
-    else if (coins - placing.price < placing.price) setPlacing(null);
+    // Bevestigings-flits (review 17 jul): zonder melding kocht een kind dat nog
+    // wat rondtikte ongemerkt 2-3 dieren extra — weghalen meldde wél netjes.
+    const aGeplaatst = getAsset(placing.assetId);
+    const naamGeplaatst = `${aGeplaatst?.emoji || "✨"} ${aGeplaatst?.name || "Gezet"}`;
+    if (vrijspeelDier(placing.assetId)) { setPlacing(null); flits(`${naamGeplaatst} geplaatst! ✨`); }
+    else if (coins - placing.price < placing.price) { setPlacing(null); flits(placing.price > 0 ? `${naamGeplaatst} geplaatst! −${placing.price} 🪙` : `${naamGeplaatst} geplaatst!`); }
+    else flits(placing.price > 0 ? `${naamGeplaatst} geplaatst! −${placing.price} 🪙 · tik nog een vak of druk ✓ Klaar` : `${naamGeplaatst} geplaatst! Tik nog een vak of druk ✓ Klaar`);
   };
 
   // 🧊 Minecraft-plaatsing: kubus op het fijne raster (via richt-cursor of
@@ -1422,7 +1450,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             </button>
           )}
           {reward.weggelopen > 0 && (
-            <div style={{ font: "700 12px system-ui", color: "#c0392b", marginTop: 4 }}>🐾 Een dier liep weg — het kreeg te lang geen hooi. Geef ze elke dag 🌾!</div>
+            <div style={{ font: "700 12px system-ui", color: "#c0392b", marginTop: 4 }}>
+              {reward.weggelopenNamen?.length
+                ? `🐾 ${reward.weggelopenNamen.join(" en ")} ${reward.weggelopen > 1 ? "liepen" : "liep"} weg — ${reward.weggelopen > 1 ? "ze kregen" : "het kreeg"} te lang geen hooi. Geef je dieren elke dag 🌾!`
+                : "🐾 Een dier liep weg — het kreeg te lang geen hooi. Geef ze elke dag 🌾!"}
+            </div>
           )}
         </div>
       )}
@@ -1477,16 +1509,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <div onClick={() => setKraamOverzicht(null)} style={{ position: "absolute", inset: 0, zIndex: 32, background: "rgba(8,14,28,0.5)", display: "grid", placeItems: "center", padding: 16 }}>
             <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 380, background: "#fff", borderRadius: 18, boxShadow: "0 14px 44px rgba(0,0,0,.38)", overflow: "hidden", font: "system-ui" }}>
               <div style={{ background: "linear-gradient(135deg,#0a9d4a,#0a7d3c)", color: "#fff", padding: "14px 18px" }}>
-                <div style={{ font: "900 16px system-ui" }}>📊 {KRAAM_SOORTEN[kraamOverzicht]?.label} — dagoverzicht</div>
+                <div style={{ font: "900 16px system-ui" }}>📊 {KRAAM_SOORTEN[kraamOverzicht]?.label} — kassa-overzicht</div>
                 <div style={{ font: "700 12px system-ui", opacity: 0.92, marginTop: 3 }}>📋 In de aanbieding: {kr.emoji} {kr.label} voor {kr.verkoop} 🪙</div>
               </div>
               <div style={{ padding: "10px 18px 4px" }}>
-                <Rij label="Verkocht" sub="(deze parksessie)" waarde={`${st.count} stuks`} />
+                <Rij label="Verkocht" sub="(sinds je het park opende)" waarde={`${st.count} stuks`} />
                 <Rij label="Opbrengst" sub="(alles wat binnenkwam)" waarde={`${st.opbrengst} 🪙`} kleur="#0a7d3c" />
                 <Rij label={`Inkoopkosten`} sub={`(${st.count} × ${kr.inkoop} 🪙)`} waarde={`− ${st.inkoopkosten} 🪙`} kleur="#c0392b" />
                 <Rij label="Brutowinst" waarde={`${brutowinst} 🪙`} sterk kleur={brutowinst >= 0 ? "#0a7d3c" : "#c0392b"} />
                 <Rij label="🧑 Verkopers-loon" sub="(vaste kost / dag)" waarde={`− ${VERKOPER_LOON} 🪙`} kleur="#c0392b" />
-                <Rij label="Nettowinst vandaag" waarde={`${netto} 🪙`} sterk kleur={netto >= 0 ? "#0a7d3c" : "#c0392b"} />
+                <Rij label="Nettowinst" waarde={`${netto} 🪙`} sterk kleur={netto >= 0 ? "#0a7d3c" : "#c0392b"} />
               </div>
               <div style={{ margin: "8px 18px 0", padding: "9px 12px", background: "#fff8e6", border: "1px solid #f3e0a8", borderRadius: 12, font: "600 12px system-ui", color: "#7a5b00", lineHeight: 1.45 }}>
                 💶 In het echt kost een verkoper ongeveer <b>€{VERKOPER_LOON_EURO} per dag</b>. Je betaalt 'm élke dag — ook als er weinig verkocht wordt. Daarom moet je genoeg verkopen om je verkoper te kunnen betalen.
@@ -1571,7 +1603,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyNaam={buddyNaamEff}
           onBuddyPraat={() => setBuddyChatOpen(true)}
           buddyEye={buddyEye}
-          onContextLost={() => flits("Het park viel even stil — tik op 🔄 als het beeld bevriest")}
+          onContextLost={() => flits("Het park viel even stil — blijft het beeld bevroren? Doe de pagina dan opnieuw (veeg omlaag of druk F5), je park is veilig opgeslagen.")}
         />
       </Suspense>
       </ParkErrorBoundary>
@@ -1925,7 +1957,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   return (
                     <button key={p.assetId} onClick={() => { if (onOpenLeerpaden) onOpenLeerpaden(); }} title={`Speel het ${p.label.toLowerCase()} vrij door te leren`} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, border: "2px dashed #c9b06a", borderRadius: 12, padding: "6px 8px", background: "rgba(255,255,255,0.55)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>
                       <span style={{ fontSize: 20, lineHeight: 1 }}>🔒</span>
-                      <span style={{ font: "800 10px system-ui", color: "#8a7a4a", whiteSpace: "nowrap" }}>{p.emoji} nog {rest} st.</span>
+                      <span style={{ font: "800 10px system-ui", color: "#8a7a4a", whiteSpace: "nowrap" }}>{p.emoji} nog {rest} lesje{rest === 1 ? "" : "s"}</span>
                     </button>
                   );
                 }
@@ -1989,7 +2021,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 const isMijlpaal = typeof v.stappen === "number";
                 const rest = isMijlpaal ? Math.max(0, v.stappen - geleerdeStappen) : 0;
                 const sub = isMijlpaal
-                  ? (rest === 0 ? "bijna vrij — speel verder ✨" : `nog ${rest} leer-stap${rest === 1 ? "" : "pen"} ✨`)
+                  ? (rest === 0 ? "bijna vrij — speel verder ✨" : `nog ${rest} lesje${rest === 1 ? "" : "s"} leren ✨`)
                   : "leer sparen → speel vrij";
                 return (
                   <button key={v.assetId} onClick={() => { try { track("zoo_unlock_klik", { dier: v.assetId, pad: v.pad, stappen: v.stappen }); } catch { /* */ } if (v.pad && onOpenLeerpad) onOpenLeerpad(v.pad); else if (onOpenLeerpaden) onOpenLeerpaden(); else if (onOpenLeerpad) onOpenLeerpad(v.pad); }} title={`Speel ${v.naam} vrij door te leren`} style={{ flex: "0 0 auto", border: "2px dashed #c9b06a", borderRadius: 14, padding: "8px 12px", font: "800 13px system-ui", color: "#8a7a4a", background: "rgba(255,255,255,0.55)", boxShadow: "0 3px 10px rgba(0,0,0,.18)", cursor: "pointer", whiteSpace: "nowrap", textAlign: "center" }}>
@@ -2214,9 +2246,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <p><b>🐣 Jonkies:</b> dieren kunnen er met de tijd een jonkie bij krijgen — dat levert extra muntjes op.</p>
                 <p><b>🕹️ Rondkijken:</b> sleep om te draaien, scroll of knijp om in/uit te zoomen.</p>
                 <p style={{ color: "#777", fontSize: 12.5 }}>Het park is nog volop in opbouw 🚧 — er komt steeds meer bij (attracties, paden en meer).</p>
-                <p><b>⛰️ Bergen & dalen:</b> tik op de <b>⛰️-knop</b> bovenin, kies <b>omhoog</b> of <b>omlaag</b> en tik dan op de grond om heuvels te maken of kuilen te graven.</p>
-                <p><b>💧 Water:</b> tik op de <b>💧-knop</b> en zet een waterbron neer — het water stroomt vanzelf naar beneden en vult dalen.</p>
-                <p><b>♻️ Opnieuw beginnen:</b> met de <b>♻️-knop</b> bovenin zet je je park terug naar het begin.</p>
+                <p><b>⛰️ Bergen & dalen:</b> open het <b>☰-menu</b> en kies <b>⛰️ Heuvels boetseren</b>, kies <b>omhoog</b> of <b>omlaag</b> en tik dan op de grond om heuvels te maken of kuilen te graven.</p>
+                <p><b>💧 Water:</b> open het <b>☰-menu</b>, kies <b>💧 Water / meertjes</b> en zet een waterbron neer — het water stroomt vanzelf naar beneden en vult dalen.</p>
+                <p><b>♻️ Opnieuw beginnen:</b> in het <b>☰-menu</b> onder <b>🏡 Mijn park</b> zet je je park terug naar het begin.</p>
               </div>
             ) : (
               <div>
