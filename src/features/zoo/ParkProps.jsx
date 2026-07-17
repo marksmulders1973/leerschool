@@ -1860,7 +1860,8 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
       g.scale.setScalar(1.6);
       if (i === 0 && headRef) {
         // Stabiel object muteren i.p.v. elke frame een nieuw {p, dir} + clones.
-        if (!headRef.current) headRef.current = { p: new Vector3(), dir: new Vector3() };
+        // NB: de ref start als {} (truthy!) — dus op .p checken, niet op .current.
+        if (!headRef.current?.p) headRef.current = { p: new Vector3(), dir: new Vector3() };
         headRef.current.p.copy(info.p);
         headRef.current.dir.copy(info.dir).multiplyScalar(richtingRef.current);
       }
