@@ -26,6 +26,7 @@ export const PARK_LEERMOMENTEN = {
       "De allereerste trein van Nederland reed in 1839 van Amsterdam naar Haarlem. Sommige mensen waren bang dat je lichaam kapot zou gaan als je sneller ging dan een galopperend paard. Viel gelukkig mee!",
     leerpadId: "industriele-revolutie-po",
     leerLabel: "De industriële revolutie",
+    souvenirNaam: "een mini-stoomloc 🚂",
   },
   boom: {
     id: "boom",
@@ -37,6 +38,7 @@ export const PARK_LEERMOMENTEN = {
       "Een grote boom maakt per dag genoeg zuurstof voor ongeveer twee mensen. Zonder bomen konden wij niet ademen!",
     leerpadId: "fotosynthese-biologie",
     leerLabel: "Fotosynthese — hoe planten eten maken",
+    souvenirNaam: "een gouden boompje 🌳",
   },
   achtbaan: {
     id: "achtbaan",
@@ -59,6 +61,7 @@ export const PARK_LEERMOMENTEN = {
       "De omtrek van élke cirkel is altijd iets meer dan 3 keer de doorsnede (ongeveer 3,14 keer — dat getal heet pi). Dat geldt voor een fietswiel én voor dit reuzenrad.",
     leerpadId: "oppervlakte-omtrek-po",
     leerLabel: "Omtrek en oppervlakte",
+    souvenirNaam: "een mini-reuzenrad 🎡",
   },
   station: {
     id: "station",
@@ -70,6 +73,7 @@ export const PARK_LEERMOMENTEN = {
       "Vroeger had elke stad in Nederland zijn éígen tijd (in Amsterdam was het een paar minuten later dan in Enschede). Pas door de trein kregen we één klok voor het hele land — anders klopte geen enkele dienstregeling.",
     leerpadId: "dienstregeling-roosters-po",
     leerLabel: "Roosters en dienstregelingen lezen",
+    souvenirNaam: "een stationsklok 🕐",
   },
   zweefmolen: {
     id: "zweefmolen",
@@ -92,6 +96,7 @@ export const PARK_LEERMOMENTEN = {
       "Het water dat jij vandaag drinkt is óók al miljoenen jaren onderweg in die kringloop — misschien heeft een dino er ooit in gezwommen!",
     leerpadId: "waterkringloop-po",
     leerLabel: "De waterkringloop",
+    souvenirNaam: "een wens-fonteintje ⛲",
   },
   draaimolen: {
     id: "draaimolen",
@@ -103,10 +108,21 @@ export const PARK_LEERMOMENTEN = {
       "Daarom start een hardloper in de buitenste baan van een atletiekbaan een stukje vóór de rest — anders zou hij verder moeten rennen voor hetzelfde rondje.",
     leerpadId: "tijd-snelheid-afstand-po",
     leerLabel: "Tijd, snelheid en afstand",
+    souvenirNaam: "een mini-draaimolen 🎠",
   },
 };
 
 export const LEERMOMENT_BY_ID = PARK_LEERMOMENTEN;
+
+// Reverse-map leerpadId → leermoment (cirkel-is-rond fase 2, 17 jul): rond je
+// een leerpad af dat óók als park-object bestaat, dan toont het klaar-scherm
+// een terugkaart naar het park + het verdiende souvenir. Alleen leermomenten
+// mét eigen souvenir (achtbaan/zweefmolen delen krachten-natuurkunde — dat pad
+// heeft al Newtons boompje via het uitvinders-tafereel).
+export const LEERMOMENT_BY_LEERPAD = {};
+for (const m of Object.values(PARK_LEERMOMENTEN)) {
+  if (m.souvenirNaam && !LEERMOMENT_BY_LEERPAD[m.leerpadId]) LEERMOMENT_BY_LEERPAD[m.leerpadId] = m;
+}
 
 // Welk geplaatst object hoort bij welk leermoment? (assetId → leermoment-id)
 // Gebruikt door de rondloop-gids in ZooScene: kom je bij zo'n object in de

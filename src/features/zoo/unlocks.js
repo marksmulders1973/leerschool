@@ -34,6 +34,16 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "souvenirPiramide", emoji: "🔺", naam: "Mini-piramide", pad: "verhoudingen-po", padTitel: "Verhoudingen", waarom: "Je hebt het verhoudingen-pad uitgespeeld! De piramide-kabouters bouwden dit mini-monument speciaal voor jouw park." },
   { assetId: "souvenirBoom", emoji: "🍎", naam: "Newtons boompje", pad: "krachten-natuurkunde", padTitel: "Krachten en bewegen", waarom: "Krachten en bewegen — helemaal af! Professor Isaac plantte zijn beroemde appelboompje in jouw park." },
   { assetId: "souvenirTesla", emoji: "⚡", naam: "Mini-bliksemtoren", pad: "elektriciteit-natuurkunde", padTitel: "Elektriciteit", waarom: "Elektriciteit uitgespeeld! Meester Nikola zette een kleine bliksemtoren in jouw park — veilig, beloofd." },
+  // ── SOUVENIRS van de PARK-leermomenten (cirkel-is-rond fase 2, 17 jul): elk
+  // park-object met een leermoment geeft óók een souvenir terug bij het afronden
+  // van zijn leerpad. (Achtbaan + zweefmolen delen het krachten-pad → dat heeft
+  // al Newtons boompje.)
+  { assetId: "souvenirLoc", emoji: "🚂", naam: "Mini-stoomloc", pad: "industriele-revolutie-po", padTitel: "De industriële revolutie", waarom: "De industriële revolutie uitgespeeld! Er staat nu een glimmende mini-stoomloc in jouw park — net als de echte die alles veranderde." },
+  { assetId: "souvenirGoudboom", emoji: "🌳", naam: "Gouden boompje", pad: "fotosynthese-biologie", padTitel: "Fotosynthese", waarom: "Fotosynthese uitgespeeld! Dit gouden boompje maakt zijn eigen goud van zonlicht — nou ja, bijna. Voor in jouw park." },
+  { assetId: "souvenirRad", emoji: "🎡", naam: "Mini-reuzenrad", pad: "oppervlakte-omtrek-po", padTitel: "Omtrek en oppervlakte", waarom: "Omtrek en oppervlakte uitgespeeld! Een mini-reuzenrad voor jouw park — reken maar uit hoe klein dit rondje is." },
+  { assetId: "souvenirMolen", emoji: "🎠", naam: "Mini-draaimolen", pad: "tijd-snelheid-afstand-po", padTitel: "Tijd, snelheid en afstand", waarom: "Tijd, snelheid en afstand uitgespeeld! Dit mini-draaimolentje draait voortaan rondjes in jouw park." },
+  { assetId: "souvenirKlok", emoji: "🕐", naam: "Stationsklok", pad: "dienstregeling-roosters-po", padTitel: "Roosters en dienstregelingen", waarom: "Roosters lezen uitgespeeld! Deze stationsklok staat voortaan in jouw park — jij weet nu precies hoelang wachten duurt." },
+  { assetId: "souvenirFontein", emoji: "⛲", naam: "Wens-fonteintje", pad: "waterkringloop-po", padTitel: "De waterkringloop", waarom: "De waterkringloop uitgespeeld! Dit wens-fonteintje laat hetzelfde water eindeloos rondgaan — precies zoals de echte kringloop." },
   // ── FABELWEZENS (Mark 2 jul): de zeldzaamste beloningen, ná de dino's. De
   // draak/feniks VLIEGEN echt rond boven je park; eenhoorn en elf wandelen.
   { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 lesjes — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },

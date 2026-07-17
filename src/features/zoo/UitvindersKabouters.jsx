@@ -289,6 +289,76 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
           <mesh position={[0.14, 1.02, 0]} rotation={[0.4, 0, 0.8]}><boxGeometry args={[0.02, 0.28, 0.02]} /><meshStandardMaterial color="#dff3ff" emissive="#7fd8ff" emissiveIntensity={1.6} /></mesh>
         </group>
       )}
+      {/* ── Souvenirs van de PARK-leermomenten (cirkel-is-rond fase 2, 17 jul):
+          zelfde sokkel, één mini-monument per leerpad dat een park-object heeft. */}
+      {soort === "stoomloc" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0.02, 0.3, 0]} rotation={[0, 0, Math.PI / 2]} castShadow><cylinderGeometry args={[0.16, 0.16, 0.62, 10]} /><meshStandardMaterial color="#2f6d3a" flatShading roughness={0.8} /></mesh>
+          <mesh position={[-0.32, 0.38, 0]} castShadow><boxGeometry args={[0.26, 0.36, 0.3]} /><meshStandardMaterial color="#274f8a" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0.22, 0.52, 0]} castShadow><cylinderGeometry args={[0.05, 0.07, 0.2, 8]} /><meshStandardMaterial color="#333333" flatShading roughness={1} /></mesh>
+          <mesh position={[0.22, 0.68, 0]}><sphereGeometry args={[0.07, 8, 8]} /><meshStandardMaterial color="#e8e8e8" flatShading roughness={1} /></mesh>
+          {[[-0.18], [0.02], [0.22]].map(([px], i) => (
+            <mesh key={i} position={[px, 0.12, 0.14]} rotation={[Math.PI / 2, 0, 0]} castShadow><cylinderGeometry args={[0.09, 0.09, 0.05, 10]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.8} /></mesh>
+          ))}
+        </group>
+      )}
+      {soort === "goudboom" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.3, 0]} castShadow><cylinderGeometry args={[0.06, 0.1, 0.6, 8]} /><meshStandardMaterial color="#6a4a2a" flatShading roughness={1} /></mesh>
+          <mesh position={[0, 0.78, 0]} castShadow><sphereGeometry args={[0.34, 10, 10]} /><meshStandardMaterial color="#e0b428" flatShading metalness={0.45} roughness={0.35} /></mesh>
+          <mesh position={[0.2, 0.62, 0.14]} castShadow><sphereGeometry args={[0.16, 8, 8]} /><meshStandardMaterial color="#f0ce56" flatShading metalness={0.45} roughness={0.35} /></mesh>
+          <mesh position={[-0.2, 0.66, -0.1]} castShadow><sphereGeometry args={[0.14, 8, 8]} /><meshStandardMaterial color="#f0ce56" flatShading metalness={0.45} roughness={0.35} /></mesh>
+        </group>
+      )}
+      {soort === "reuzenrad" && (
+        <group position={[0, 0.22, 0]}>
+          {[-0.12, 0.12].map((sx, i) => (
+            <mesh key={i} position={[sx, 0.28, 0]} rotation={[0, 0, 0.42 * (i ? -1 : 1)]} castShadow><boxGeometry args={[0.05, 0.62, 0.05]} /><meshStandardMaterial color="#8a5a3a" flatShading roughness={1} /></mesh>
+          ))}
+          <mesh position={[0, 0.56, 0]} castShadow><torusGeometry args={[0.34, 0.035, 8, 18]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.8} /></mesh>
+          {[0, 1, 2].map((i) => (
+            <mesh key={`s${i}`} position={[0, 0.56, 0]} rotation={[0, 0, (i * Math.PI) / 3]}><boxGeometry args={[0.66, 0.025, 0.025]} /><meshStandardMaterial color="#e8b400" flatShading metalness={0.3} roughness={0.6} /></mesh>
+          ))}
+          {[0, 1, 2, 3, 4, 5].map((i) => {
+            const a = (i * Math.PI) / 3;
+            return <mesh key={`g${i}`} position={[Math.cos(a) * 0.34, 0.56 + Math.sin(a) * 0.34, 0]} castShadow><boxGeometry args={[0.09, 0.09, 0.09]} /><meshStandardMaterial color={["#4a90d9", "#f2b134", "#7bbf5a"][i % 3]} flatShading roughness={0.9} /></mesh>;
+          })}
+        </group>
+      )}
+      {soort === "draaimolen" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.06, 0]} castShadow><cylinderGeometry args={[0.4, 0.44, 0.12, 12]} /><meshStandardMaterial color="#b8478a" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.36, 0]} castShadow><cylinderGeometry args={[0.05, 0.05, 0.5, 8]} /><meshStandardMaterial color="#e8b400" flatShading metalness={0.3} roughness={0.6} /></mesh>
+          {[0, 1, 2, 3].map((i) => {
+            const a = (i * Math.PI) / 2;
+            return <mesh key={i} position={[Math.cos(a) * 0.26, 0.28, Math.sin(a) * 0.26]} castShadow><boxGeometry args={[0.09, 0.14, 0.09]} /><meshStandardMaterial color={["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a"][i]} flatShading roughness={0.9} /></mesh>;
+          })}
+          <mesh position={[0, 0.66, 0]} castShadow><coneGeometry args={[0.48, 0.28, 12]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.84, 0]}><sphereGeometry args={[0.05, 8, 8]} /><meshStandardMaterial color="#e8b400" flatShading metalness={0.4} roughness={0.5} /></mesh>
+        </group>
+      )}
+      {soort === "klok" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.4, 0]} castShadow><cylinderGeometry args={[0.045, 0.06, 0.8, 8]} /><meshStandardMaterial color="#3a4a5a" flatShading roughness={0.8} /></mesh>
+          <mesh position={[0, 0.88, 0]} rotation={[Math.PI / 2, 0, 0]} castShadow><cylinderGeometry args={[0.24, 0.24, 0.08, 14]} /><meshStandardMaterial color="#2c3e50" flatShading roughness={0.7} /></mesh>
+          {[0.05, -0.05].map((z, i) => (
+            <mesh key={i} position={[0, 0.88, z]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.2, 0.2, 0.012, 14]} /><meshStandardMaterial color="#f7f3e8" roughness={0.9} /></mesh>
+          ))}
+          <mesh position={[0, 0.94, 0.062]}><boxGeometry args={[0.02, 0.13, 0.01]} /><meshStandardMaterial color="#222222" /></mesh>
+          <mesh position={[0.045, 0.9, 0.062]} rotation={[0, 0, Math.PI / 2.6]}><boxGeometry args={[0.02, 0.1, 0.01]} /><meshStandardMaterial color="#222222" /></mesh>
+        </group>
+      )}
+      {soort === "fontein" && (
+        <group position={[0, 0.22, 0]}>
+          <mesh position={[0, 0.08, 0]} castShadow><cylinderGeometry args={[0.34, 0.38, 0.16, 12]} /><meshStandardMaterial color="#9aa4ad" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.17, 0]}><cylinderGeometry args={[0.28, 0.28, 0.04, 12]} /><meshStandardMaterial color="#5ab0e0" transparent opacity={0.85} roughness={0.3} /></mesh>
+          <mesh position={[0, 0.3, 0]} castShadow><cylinderGeometry args={[0.05, 0.07, 0.26, 8]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
+          <mesh position={[0, 0.52, 0]}><sphereGeometry args={[0.09, 8, 8]} /><meshStandardMaterial color="#9fd4f2" transparent opacity={0.85} roughness={0.3} /></mesh>
+          {[[0.14, 0.42, 0.06], [-0.13, 0.4, -0.08], [0.02, 0.46, -0.13]].map((p, i) => (
+            <mesh key={i} position={p}><sphereGeometry args={[0.035, 6, 6]} /><meshStandardMaterial color="#bfe4f7" transparent opacity={0.8} roughness={0.3} /></mesh>
+          ))}
+        </group>
+      )}
     </group>
   );
 }

@@ -1163,17 +1163,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [deeplinkScene] = useState(() => {
     try {
       const id = new URLSearchParams(window.location.search).get("scene");
-      return TAFEREEL_BY_ID[id] ? id : null;
+      // Ook park-leermomenten (cirkel fase 2): die hebben geen vaste positie
+      // (het object staat waar het kind het zette), dus zonder teleport —
+      // alleen het paneel openen.
+      return (TAFEREEL_BY_ID[id] || PARK_LEERMOMENTEN[id]) ? id : null;
     } catch { return null; }
   });
-  const deeplinkSpawn = deeplinkScene
+  const deeplinkSpawn = deeplinkScene && TAFEREEL_BY_ID[deeplinkScene]
     ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
     : null;
   const deeplinkKlaar = useRef(false);
   useEffect(() => {
     if (!deeplinkScene || !loaded || deeplinkKlaar.current) return;
     deeplinkKlaar.current = true;
-    setTafereel(TAFEREEL_BY_ID[deeplinkScene]);
+    setTafereel(TAFEREEL_BY_ID[deeplinkScene] || PARK_LEERMOMENTEN[deeplinkScene]);
     try { track("park_deeplink_open", { scene: deeplinkScene }); } catch { /* nooit laten breken */ }
     // Param strippen zodat verversen/deel-link niet opnieuw teleporteert.
     try {
@@ -2032,7 +2035,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   // alleen de laagste nog-niet-verdiende mijlpaal-dino
                   return DINO_MIJLPALEN.find((d) => !unlockedDieren.includes(d.assetId))?.assetId === v.assetId;
                 }
-                return true; // spaarvarken (pad) als nog niet vrij
+                // Souvenirs (nu 9) ontdek je via het klaar-scherm van hun leerpad —
+                // hier alleen tonen als ze verdiend zijn, anders wordt de dieren-
+                // balk een muur van sloten (17 jul).
+                return getAsset(v.assetId)?.procedural !== "souvenir";
               }).map((v) => {
                 const isUnlocked = unlockedDieren.includes(v.assetId);
                 const alGeplaatst = placedItems.some((it) => it.assetId === v.assetId);

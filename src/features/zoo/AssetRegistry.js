@@ -75,6 +75,14 @@ export const ZOO_ASSETS = {
   souvenirPiramide: { id: "souvenirPiramide", kind: "decor", name: "Mini-piramide", emoji: "🔺", procedural: "souvenir", souvenir: "piramide", cells: 1, price: 0, unlock: "verhoudingen-po" },
   souvenirBoom: { id: "souvenirBoom", kind: "decor", name: "Newtons boompje", emoji: "🍎", procedural: "souvenir", souvenir: "newton", cells: 1, price: 0, unlock: "krachten-natuurkunde" },
   souvenirTesla: { id: "souvenirTesla", kind: "decor", name: "Mini-bliksemtoren", emoji: "⚡", procedural: "souvenir", souvenir: "tesla", cells: 1, price: 0, unlock: "elektriciteit-natuurkunde" },
+  // Souvenirs van de PARK-leermomenten (cirkel-is-rond fase 2, 17 jul): rond het
+  // leerpad af dat bij een park-object hoort → mini-monument voor in je park.
+  souvenirLoc: { id: "souvenirLoc", kind: "decor", name: "Mini-stoomloc", emoji: "🚂", procedural: "souvenir", souvenir: "stoomloc", cells: 1, price: 0, unlock: "industriele-revolutie-po" },
+  souvenirGoudboom: { id: "souvenirGoudboom", kind: "decor", name: "Gouden boompje", emoji: "🌳", procedural: "souvenir", souvenir: "goudboom", cells: 1, price: 0, unlock: "fotosynthese-biologie" },
+  souvenirRad: { id: "souvenirRad", kind: "decor", name: "Mini-reuzenrad", emoji: "🎡", procedural: "souvenir", souvenir: "reuzenrad", cells: 1, price: 0, unlock: "oppervlakte-omtrek-po" },
+  souvenirMolen: { id: "souvenirMolen", kind: "decor", name: "Mini-draaimolen", emoji: "🎠", procedural: "souvenir", souvenir: "draaimolen", cells: 1, price: 0, unlock: "tijd-snelheid-afstand-po" },
+  souvenirKlok: { id: "souvenirKlok", kind: "decor", name: "Stationsklok", emoji: "🕐", procedural: "souvenir", souvenir: "klok", cells: 1, price: 0, unlock: "dienstregeling-roosters-po" },
+  souvenirFontein: { id: "souvenirFontein", kind: "decor", name: "Wens-fonteintje", emoji: "⛲", procedural: "souvenir", souvenir: "fontein", cells: 1, price: 0, unlock: "waterkringloop-po" },
   sheep: { id: "sheep", kind: "animal", name: "Schaap", emoji: "🐑", url: "/models/zoo/animals/Sheep.glb", targetHeight: 1.0, price: 14 },
   zebra: { id: "zebra", kind: "animal", name: "Zebra", emoji: "🦓", url: "/models/zoo/animals/Zebra.glb", targetHeight: 1.6, price: 22 },
   pug: { id: "pug", kind: "animal", name: "Hondje", emoji: "🐶", url: "/models/zoo/animals/Pug.glb", targetHeight: 0.6, price: 12 },
