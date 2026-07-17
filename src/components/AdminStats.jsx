@@ -65,7 +65,8 @@ export default function AdminStats({ onBack, onHome }) {
             <div style={{ ...card, borderColor: "rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.06)" }}>
               <div style={{ fontFamily: "'Fredoka',sans-serif", fontWeight: 700, color: C.goud, marginBottom: 6 }}>📋 Dagrapport — {vandaagNL()}</div>
               <div style={{ fontSize: 14, lineHeight: 1.7, color: "rgba(231,237,246,0.9)" }}>
-                👥 <strong>{b.vandaag ?? 0}</strong> bezoekers vandaag (week: {b.week ?? 0}) ·
+                👥 <strong>{b.vandaag ?? 0}</strong> bezoekers vandaag (week: {b.week ?? 0}, maand: {b.maand ?? 0}) ·
+                🎓 <strong>{stats.accounts_echt ?? "—"}</strong> echte leerlingen ·
                 ⏱️ gem. sessie <strong>{fmtDuur(stats.gem_duur_sec)}</strong> ·
                 📈 beste bron <strong>{topBron ? `${topBron.bron} (${topBron.sessies})` : "—"}</strong><br />
                 💬 <strong>{stats.wishes_pending}</strong> nieuwe suggesties (wachtrij) ·
@@ -84,7 +85,11 @@ export default function AdminStats({ onBack, onHome }) {
                 <Stat label="Totaal" val={b.totaal} />
               </Grid>
               <div style={{ marginTop: 10, display: "flex", gap: 18, flexWrap: "wrap" }}>
-                <Stat label="Accounts (leerlingen)" val={stats.accounts} klein />
+                {/* Eerlijke splitsing (17 jul): "echt" = zonder eigen huishouden/
+                    test-accounts (household_accounts) — gebruik DAT getal naar
+                    buiten toe, nooit het ruwe totaal. */}
+                <Stat label="Echte leerlingen" val={stats.accounts_echt} klein />
+                <Stat label="Accounts totaal (incl. eigen/test)" val={stats.accounts} klein />
                 <Stat label="Events totaal" val={stats.events_totaal} klein />
                 <Stat label="Gem. sessieduur" val={fmtDuur(stats.gem_duur_sec)} klein />
                 <Stat label="15-min behaald" val={stats.kwartier_behaald_totaal} klein />

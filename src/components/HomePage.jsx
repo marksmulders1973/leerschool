@@ -684,8 +684,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             }}>
               ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
               <br />
+              {/* Sociale bewijskracht (Mark 17 jul): bewust "bezoekers per maand"
+                  — eerlijk en verifieerbaar (Vercel ~600/30d); géén opgeblazen
+                  "leerlingen"-claim. Getal ~kwartaalgewijs bijwerken. */}
               <span style={{ color: "rgba(255,255,255,0.55)" }}>
-                Ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
+                Elke maand ruim 500 bezoekers · ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
               </span>
             </div>
           </div>
