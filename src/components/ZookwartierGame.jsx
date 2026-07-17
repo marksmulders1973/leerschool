@@ -6,7 +6,7 @@
 // De zware three.js-scene laadt lazy, zodat de leer-app snel blijft.
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { getDailyGoal } from "../shared/dailyGoal";
-import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode } from "../features/zoo/zooState";
+import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
@@ -173,24 +173,6 @@ const SHOP_CATS = [
 ];
 const MAX_BLOKKEN = 2000; // totaal-cap (instanced → 2 draw-calls, ook op telefoons vlot)
 const MAX_STAPEL = 10;    // max bouwhoogte in kubus-lagen (10 m)
-
-// Migratie (2 jul, kleinere blokken): oude "grote" blokken (2×2 m plaat op
-// cel+h) worden bij het laden omgezet naar 4 kubussen van 1×1×1 m per laag —
-// alles blijft staan, maar nu fijn verbouwbaar.
-function migreerBlokken(layout) {
-  if (!Array.isArray(layout)) return layout;
-  return layout.flatMap((it) => {
-    if (!isBlok(it.assetId) || it.kx != null || !it.cell) return [it];
-    const [wx, wz] = cellToWorld(it.cell[0], it.cell[1]);
-    const kubs = [];
-    for (const dx of [-0.5, 0.5]) {
-      for (const dz of [-0.5, 0.5]) {
-        kubs.push({ assetId: it.assetId, kx: Math.floor(wx + dx), kz: Math.floor(wz + dz), kh: it.h || 0, price: 0 });
-      }
-    }
-    return kubs;
-  });
-}
 
 // 🏠 Bouwpakketten (Mark 2 jul): kant-en-klare blok-gebouwtjes als startpunt.
 // Elk pakket wordt neergezet als LOSSE blokken → kinderen kunnen er daarna
@@ -610,7 +592,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const base = row
         ? { coins: row.coins, streak: row.streak, last_login: row.last_login, last_kwartier_date: row.last_kwartier_date, owned: ownedObj }
         : { coins: d.coins, streak: d.streak, last_login: d.last_login, last_kwartier_date: d.last_kwartier_date, owned: d.owned };
-      const layout = migreerBlokken(row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT);
+      const layout = saneerLayout(row && Array.isArray(row.layout) && row.layout.length ? row.layout : STARTER_LAYOUT);
 
       const prevLogin = base.last_login;          // vóór de login-update
       const isNieuweDag = prevLogin !== vandaag();

@@ -3,6 +3,8 @@
 // owned = bezit dat nog niet geplaatst is (voor de winkel in stap 4).
 import supabase from "../../supabase";
 import { START_COINS } from "./zooEconomy";
+import { isBlok, getAsset } from "./AssetRegistry";
+import { cellToWorld } from "./grid";
 
 // 🎨 Voorbeeld-park (Mark 2026-06-27): een mooi, symmetrisch ingericht park dat
 // nieuwe spelers als voorbeeld krijgen én dat je kunt delen. Opgebouwd met kleine
@@ -101,6 +103,35 @@ function bouwVoorbeeldPark() {
 }
 
 export const STARTER_LAYOUT = bouwVoorbeeldPark();
+
+// Migratie (2 jul, kleinere blokken): oude "grote" blokken (2×2 m plaat op
+// cel+h) worden bij het laden omgezet naar 4 kubussen van 1×1×1 m per laag —
+// alles blijft staan, maar nu fijn verbouwbaar. Gedeeld met ParkBezoek zodat
+// ook het park van een vriend zijn oude blokken toont.
+export function migreerBlokken(layout) {
+  if (!Array.isArray(layout)) return layout;
+  return layout.flatMap((it) => {
+    if (!isBlok(it.assetId) || it.kx != null || !it.cell) return [it];
+    const [wx, wz] = cellToWorld(it.cell[0], it.cell[1]);
+    const kubs = [];
+    for (const dx of [-0.5, 0.5]) {
+      for (const dz of [-0.5, 0.5]) {
+        kubs.push({ assetId: it.assetId, kx: Math.floor(wx + dx), kz: Math.floor(wz + dz), kh: it.h || 0, price: 0 });
+      }
+    }
+    return kubs;
+  });
+}
+
+// Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
+// corrupte items eruit. Eén item zonder bekende asset of zonder positie (geen
+// cell én geen kx) gooide anders een TypeError in de render → ErrorBoundary,
+// en "Opnieuw proberen" crashte opnieuw omdat de data blijft staan.
+export function saneerLayout(layout) {
+  const gemigreerd = migreerBlokken(layout);
+  if (!Array.isArray(gemigreerd)) return [];
+  return gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
+}
 
 export function defaultState() {
   return {

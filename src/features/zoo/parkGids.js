@@ -29,6 +29,24 @@ try {
   }
 } catch { /* */ }
 
+// iOS Safari negeert speak() dat niet uit een tik komt — precies wat de
+// ongevraagde rondloop-praatjes zijn (review 17 jul: gids stil op iPhone/iPad).
+// Bekende workaround: bij de EERSTE tik ergens in de app een lege utterance
+// uitspreken; daarna accepteert iOS ook programmatische speak()-aanroepen.
+try {
+  if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    const ontgrendel = () => {
+      try {
+        const u = new SpeechSynthesisUtterance(" ");
+        u.volume = 0;
+        window.speechSynthesis.speak(u);
+      } catch { /* */ }
+      window.removeEventListener("pointerdown", ontgrendel);
+    };
+    window.addEventListener("pointerdown", ontgrendel, { once: true, passive: true });
+  }
+} catch { /* */ }
+
 function kiesStem() {
   try {
     const alle = window.speechSynthesis.getVoices() || [];
@@ -46,6 +64,10 @@ function kiesStem() {
 
 // Spreek een tekst uit (breekt een eventueel lopend praatje af). Geeft true
 // terug als er echt gesproken wordt — de beller weet dan dat audio loopt.
+// PER ZIN een eigen utterance (review 17 jul): Chrome laat lange utterances
+// met een netwerk-stem (Google NL — juist onze voorkeursstem) na ~15 s
+// stilvallen; spraakTekst.js omzeilde dat al zo, de gids nog niet. Trigger was
+// het stoomtrein-praatje (~30 s) dat halverwege stopte.
 export function spreek(tekst, onKlaar = null) {
   try {
     if (gidsIsStil()) return false;
@@ -53,14 +75,24 @@ export function spreek(tekst, onKlaar = null) {
     const schoon = schoonVoorSpraak(tekst);
     if (!schoon) return false;
     window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(schoon);
-    u.lang = "nl-NL";
+    const zinnen = schoon.match(/[^.!?…]+[.!?…]+["')]?|[^.!?…]+$/g) || [schoon];
     const stem = kiesStem();
-    if (stem) u.voice = stem;
-    u.rate = 0.95;  // ietsje rustiger — kind van ~10 luistert mee
-    u.pitch = 1.05;
-    if (onKlaar) { u.onend = onKlaar; u.onerror = onKlaar; }
-    window.speechSynthesis.speak(u);
+    let klaarGeteld = 0;
+    for (const zin of zinnen) {
+      const z = zin.trim();
+      if (!z) { klaarGeteld += 1; continue; }
+      const u = new SpeechSynthesisUtterance(z);
+      u.lang = "nl-NL";
+      if (stem) u.voice = stem;
+      u.rate = 0.95;  // ietsje rustiger — kind van ~10 luistert mee
+      u.pitch = 1.05;
+      if (onKlaar) {
+        const zinKlaar = () => { klaarGeteld += 1; if (klaarGeteld >= zinnen.length) onKlaar(); };
+        u.onend = zinKlaar;
+        u.onerror = zinKlaar;
+      }
+      window.speechSynthesis.speak(u);
+    }
     return true;
   } catch { return false; }
 }

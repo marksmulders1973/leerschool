@@ -4,12 +4,16 @@
 // veilig voor kinderen (AVG: minimaal kinderdata). De data komt via de veilige
 // RPC get_shared_park, die enkel de park-indeling teruggeeft.
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
-import { loadSharedPark } from "../features/zoo/zooState";
+import { loadSharedPark, saneerLayout } from "../features/zoo/zooState";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
 import { deserialize as deserTerrain } from "../features/zoo/terrain";
 import { track } from "../utils.js";
 
 const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
+
+// Vinger als aanwijzer (telefoon/tablet) → joystick tonen; met een muis niet:
+// daar loop je met WASD/pijltjes (zelfde regel als in het eigen park).
+const COARSE_POINTER = typeof window !== "undefined" && !!window.matchMedia?.("(pointer: coarse)")?.matches;
 
 // Touch-joystick om rond te lopen (zelfde gedrag als in het eigen park).
 function Joystick({ inputRef }) {
@@ -66,7 +70,9 @@ export default function ParkBezoek({ code, onHome }) {
       const row = await loadSharedPark(code);
       if (cancel) return;
       if (row && Array.isArray(row.layout)) {
-        setPlacedItems(row.layout);
+        // saneerLayout: blok-migratie (anders mist het park van een vriend zijn
+        // zelfgebouwde huizen in oud formaat) + corrupte items eruit.
+        setPlacedItems(saneerLayout(row.layout));
         setTerrain(deserTerrain(row.terrain));
         setState("ok");
       } else {
@@ -120,7 +126,7 @@ export default function ParkBezoek({ code, onHome }) {
           onClearSelection={noop}
           onBuy={noop}
           prices={{ food: 5, drink: 4, ice: 4, popcorn: 4 }}
-          followCam={false}
+          followCam={true}
           terrain={terrain}
           onTerrainChange={noop}
           sculptMode={false}
@@ -133,7 +139,7 @@ export default function ParkBezoek({ code, onHome }) {
       </Suspense>
       </ParkErrorBoundary>
 
-      {state === "ok" && <Joystick inputRef={inputRef} />}
+      {state === "ok" && COARSE_POINTER && <Joystick inputRef={inputRef} />}
     </div>
   );
 }

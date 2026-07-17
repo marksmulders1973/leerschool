@@ -1800,30 +1800,49 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
 
   const SNELHEID = 2.6; // wereld-units per sec
   const WAGON_GAP = 1.7;
+  // Richting van de rit: bij een niet-gesloten spoor pendelt de trein heen en
+  // weer (review 17 jul: hij klemde vast op het eindpunt en stond dan voorgoed
+  // stil — juist bij het eerste rechte spoor dat een kind legt).
+  const richtingRef = useRef(1);
+  // Hergebruik-vectoren: getPointAt/getTangentAt zonder target alloceren 2
+  // Vector3's per wagon per frame → GC-druk op goedkope telefoons.
+  const tmpP = useMemo(() => new Vector3(), []);
+  const tmpD = useMemo(() => new Vector3(), []);
 
   const posOp = (s) => {
     if (!data || data.total <= 0) return null;
     const d = data.loop ? ((s % data.total) + data.total) % data.total : Math.max(0, Math.min(data.total, s));
     const u = d / data.total;
-    return { p: data.curve.getPointAt(u), dir: data.curve.getTangentAt(u) };
+    return { p: data.curve.getPointAt(u, tmpP), dir: data.curve.getTangentAt(u, tmpD) };
   };
 
   useFrame((_, dt) => {
     if (!data) return;
-    sRef.current += dt * SNELHEID;
-    if (!data.loop) sRef.current = Math.max(0, Math.min(data.total, sRef.current));
+    sRef.current += dt * SNELHEID * richtingRef.current;
+    if (!data.loop) {
+      if (sRef.current >= data.total) { sRef.current = data.total; richtingRef.current = -1; }
+      else if (sRef.current <= 0) { sRef.current = 0; richtingRef.current = 1; }
+    }
     const headS = sRef.current;
+    const terug = richtingRef.current < 0;
     for (let i = 0; i < refs.current.length; i++) {
       const g = refs.current[i];
       if (!g) continue;
-      const info = posOp(headS - i * WAGON_GAP);
+      // Wagons hangen áchter de kop, gezien in de rijrichting.
+      const info = posOp(headS - i * WAGON_GAP * richtingRef.current);
       if (!info) continue;
       g.position.copy(info.p);
       // +π: de wagon-modellen wezen met hun achterkant vooruit (Mark: "trein
       // rijdt achteruit"); 1.6× groter zodat hij in verhouding is met de speler.
-      g.rotation.y = Math.atan2(info.dir.x, info.dir.z) + Math.PI;
+      // Bij terugrijden nóg eens π zodat de neus in de rijrichting wijst.
+      g.rotation.y = Math.atan2(info.dir.x, info.dir.z) + Math.PI + (terug ? Math.PI : 0);
       g.scale.setScalar(1.6);
-      if (i === 0 && headRef) { headRef.current = { p: info.p.clone(), dir: info.dir.clone() }; }
+      if (i === 0 && headRef) {
+        // Stabiel object muteren i.p.v. elke frame een nieuw {p, dir} + clones.
+        if (!headRef.current) headRef.current = { p: new Vector3(), dir: new Vector3() };
+        headRef.current.p.copy(info.p);
+        headRef.current.dir.copy(info.dir).multiplyScalar(richtingRef.current);
+      }
     }
   });
 
