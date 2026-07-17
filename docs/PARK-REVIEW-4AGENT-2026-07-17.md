@@ -62,3 +62,8 @@ Vier review-agents (2 rondes van 2) hebben het 3D-parkspel doorgelicht: bugs, pe
 - Rekenbonus in het park = munten voor antwoorden → botst met PARK-VISIE regel 5 (klein bedrag).
 - Dieren die weglopen na 3 dagen = verlies-druk richting jonge kinderen (zachte dark pattern; waarschuwing vooraf zou het eerlijker maken).
 - ?bezoek=-deellink: binnen de regels (geen scores/vergelijking), maar privé-beloning-principe blijven bewaken.
+
+---
+## ✅ STATUS FIXES (zelfde dag, v56-v60)
+GEDAAN: vriend-bezoek (camera+migratie+filter+joystick) · trein pendelt · gids per-zin + iOS-ontgrendeling · buddy-chat hintregel · schaduw-throttle + mapSize 1024 · GLB's 28,1->7,0 MB (meshopt/webp, visueel geverifieerd) · autosave-flush · weggelopen-dier met naam + goedVerzorgd werkt · koop-flits + eerlijke kwartier-tekst · "lesjes" i.p.v. stappen-jargon · hulp-teksten naar echt menu · kassa-overzicht-copy · bevries-melding · BuddyPicker-copy · bezitBuddies-guard · cursor-resets · bubble-verborgen-guard · gedeelde cursor-geo · 3 nieuwe leermomenten (station/zweefmolen/fontein) + achtbaan-feitfix · dieren-knoppenrij.
+NOG OPEN (grote posten): instancing rails/hekken/padtegels (draw calls) · React.memo/useMemo re-render-storm · souvenir+terugkaart voor de 5 park-leermomenten (LEERMOMENT_BY_LEERPAD) · rekenvraag anti-gok · dagelijks gids-nieuwtje · bubble-setState-frequentie · WaterPools instancing · LOW_END-detectie/dpr-cap · materialen delen in ParkProps.
