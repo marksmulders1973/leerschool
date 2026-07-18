@@ -59,17 +59,21 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
     let gestart = false;
     let timer = null;
     let klaarGeteld = 0;
+    let ronde = 0; // herkansings-ronde; events van een oude (gecancelde) ronde tellen niet mee
     let msPerTeken = 62 / rate; // startschatting; wordt per zin bijgesteld
     const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
-    const klaar = () => { if (gestopt) return; gestopt = true; stopTimer(); stopWachters(); onEnd && onEnd(); };
+    const klaar = (gelukt = true) => { if (gestopt) return; gestopt = true; stopTimer(); stopWachters(); onEnd && onEnd(gelukt); };
     const uts = []; // referenties vasthouden (Chrome-GC laat anders events vallen)
-    // Android-vangnet (bug Deianera 18 jul: "voorlezen start niet" op telefoon):
-    // wachters = losse timeouts voor start-vertraging, stemmen-wachttijd en watchdog.
+    // Android-vangnet (bug Deianera 18 jul): wachters = timeouts voor herkansing + watchdog.
     let wachters = [];
     const stopWachters = () => { wachters.forEach(clearTimeout); wachters = []; };
 
     const spreek = (stem) => {
       if (gestopt) return;
+      ronde += 1;
+      const mijnRonde = ronde;
+      klaarGeteld = 0;
+      uts.length = 0;
       zinnen.forEach((grenzen) => {
       const van = grenzen[0].start;
       const tot = grenzen[grenzen.length - 1].eind;
@@ -80,7 +84,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       let boundaryGezien = false;
       let tStart = 0;
       u.onstart = () => {
-        if (gestopt) return;
+        if (gestopt || mijnRonde !== ronde) return;
         if (!gestart) { gestart = true; onStart && onStart(); }
         tStart = performance.now();
         stopTimer();
@@ -98,7 +102,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       };
       if (onWoord) {
         u.onboundary = (e) => {
-          if (gestopt) return;
+          if (gestopt || mijnRonde !== ronde) return;
           boundaryGezien = true;
           stopTimer();
           const rel = e.charIndex || 0;
@@ -107,53 +111,51 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
           onWoord(idx);
         };
       }
-      const zinKlaar = () => {
-        if (gestopt) return;
-        gestart = true; // onstart is op sommige Android-browsers onbetrouwbaar; onend telt ook als levensteken
+      const zinKlaar = (gelukt) => {
+        if (gestopt || mijnRonde !== ronde) return;
+        if (gelukt) gestart = true; // onstart is niet overal betrouwbaar; een echt afgespeelde zin telt ook
         stopTimer();
         if (tStart && zinTekst.length > 4) {
           const gemeten = (performance.now() - tStart) / zinTekst.length;
           if (gemeten > 15 && gemeten < 400) msPerTeken = 0.5 * msPerTeken + 0.5 * gemeten;
         }
         klaarGeteld += 1;
-        if (klaarGeteld >= zinnen.length) klaar();
+        // Alles geweigerd zónder dat er ooit geluid was (Android "not-allowed"):
+        // NIET meteen afsluiten — de herkansing + watchdog handelen dat af.
+        if (klaarGeteld >= zinnen.length && gestart) klaar(true);
       };
-      u.onend = zinKlaar;
-      u.onerror = zinKlaar;
+      u.onend = () => zinKlaar(true);
+      u.onerror = () => zinKlaar(false);
       uts.push(u);
       window.speechSynthesis.speak(u);
       });
 
       // Android laat de engine soms in "paused"-stand achter → los duwtje.
       try { window.speechSynthesis.resume(); } catch { /* */ }
-      wachters.push(setTimeout(() => {
-        if (!gestopt && !gestart && !window.speechSynthesis.speaking) {
-          try { window.speechSynthesis.resume(); } catch { /* */ }
-        }
-      }, 700));
-      // Watchdog: komt er binnen 3,5s géén geluid op gang, geef dan netjes op
-      // zodat de knop niet in de ⏹-stand blijft hangen zonder geluid.
-      wachters.push(setTimeout(() => {
-        if (!gestopt && !gestart && !window.speechSynthesis.speaking) klaar();
-      }, 3500));
     };
 
+    // BELANGRIJK (les v65→v66, Deianera): speak() MOET synchroon binnen de
+    // klik gebeuren — een setTimeout ervoor breekt op Android de koppeling
+    // met het tik-gebaar en dan weigert de browser het spreken (not-allowed).
     window.speechSynthesis.cancel();
-    // Android-bug: speak() dírect na cancel() faalt stil — korte adempauze,
-    // en wacht daarna zonodig op de asynchrone stemmenlijst (voiceschanged).
+    spreek(kiesStem(window.speechSynthesis.getVoices()));
+
+    // Herkansing ~450ms: kwam er niets op gang (Android slikt speak-na-cancel
+    // soms in, of de stemmenlijst was nog leeg)? Opnieuw — nog ruim binnen het
+    // ±5s user-activation-venster, dus toegestaan.
     wachters.push(setTimeout(() => {
-      if (gestopt) return;
-      const nu = window.speechSynthesis.getVoices();
-      if (nu.length) { spreek(kiesStem(nu)); return; }
-      let gedaan = false;
-      const alsnog = () => {
-        if (gedaan || gestopt) return;
-        gedaan = true;
+      if (gestopt || gestart || window.speechSynthesis.speaking) return;
+      try { window.speechSynthesis.cancel(); } catch { /* */ }
+      wachters.push(setTimeout(() => {
+        if (gestopt || gestart || window.speechSynthesis.speaking) return;
         spreek(kiesStem(window.speechSynthesis.getVoices()));
-      };
-      try { window.speechSynthesis.addEventListener("voiceschanged", alsnog, { once: true }); } catch { /* */ }
-      wachters.push(setTimeout(alsnog, 400));
-    }, 80));
+      }, 150));
+    }, 450));
+    // Watchdog: na 4s nog steeds geen geluid → netjes opgeven met gelukt=false,
+    // zodat de knop terugspringt en de UI kan melden dat voorlezen hier niet kan.
+    wachters.push(setTimeout(() => {
+      if (!gestopt && !gestart && !window.speechSynthesis.speaking) klaar(false);
+    }, 4000));
 
     return () => {
       gestopt = true;
