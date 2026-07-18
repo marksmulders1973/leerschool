@@ -51,7 +51,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
     }
     if (huidige.length) zinnen.push(huidige);
 
-    const stem = window.speechSynthesis.getVoices()
+    const kiesStem = (stemmen) => (stemmen || [])
       .filter((v) => (v.lang || "").toLowerCase().startsWith("nl"))
       .sort((a, b) => (b.localService === true) - (a.localService === true))[0] || null;
 
@@ -61,12 +61,16 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
     let klaarGeteld = 0;
     let msPerTeken = 62 / rate; // startschatting; wordt per zin bijgesteld
     const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
-    const klaar = () => { if (gestopt) return; gestopt = true; stopTimer(); onEnd && onEnd(); };
+    const klaar = () => { if (gestopt) return; gestopt = true; stopTimer(); stopWachters(); onEnd && onEnd(); };
     const uts = []; // referenties vasthouden (Chrome-GC laat anders events vallen)
+    // Android-vangnet (bug Deianera 18 jul: "voorlezen start niet" op telefoon):
+    // wachters = losse timeouts voor start-vertraging, stemmen-wachttijd en watchdog.
+    let wachters = [];
+    const stopWachters = () => { wachters.forEach(clearTimeout); wachters = []; };
 
-    window.speechSynthesis.cancel();
-
-    zinnen.forEach((grenzen) => {
+    const spreek = (stem) => {
+      if (gestopt) return;
+      zinnen.forEach((grenzen) => {
       const van = grenzen[0].start;
       const tot = grenzen[grenzen.length - 1].eind;
       const zinTekst = plan.gesproken.slice(van, tot);
@@ -105,6 +109,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       }
       const zinKlaar = () => {
         if (gestopt) return;
+        gestart = true; // onstart is op sommige Android-browsers onbetrouwbaar; onend telt ook als levensteken
         stopTimer();
         if (tStart && zinTekst.length > 4) {
           const gemeten = (performance.now() - tStart) / zinTekst.length;
@@ -117,11 +122,43 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       u.onerror = zinKlaar;
       uts.push(u);
       window.speechSynthesis.speak(u);
-    });
+      });
+
+      // Android laat de engine soms in "paused"-stand achter → los duwtje.
+      try { window.speechSynthesis.resume(); } catch { /* */ }
+      wachters.push(setTimeout(() => {
+        if (!gestopt && !gestart && !window.speechSynthesis.speaking) {
+          try { window.speechSynthesis.resume(); } catch { /* */ }
+        }
+      }, 700));
+      // Watchdog: komt er binnen 3,5s géén geluid op gang, geef dan netjes op
+      // zodat de knop niet in de ⏹-stand blijft hangen zonder geluid.
+      wachters.push(setTimeout(() => {
+        if (!gestopt && !gestart && !window.speechSynthesis.speaking) klaar();
+      }, 3500));
+    };
+
+    window.speechSynthesis.cancel();
+    // Android-bug: speak() dírect na cancel() faalt stil — korte adempauze,
+    // en wacht daarna zonodig op de asynchrone stemmenlijst (voiceschanged).
+    wachters.push(setTimeout(() => {
+      if (gestopt) return;
+      const nu = window.speechSynthesis.getVoices();
+      if (nu.length) { spreek(kiesStem(nu)); return; }
+      let gedaan = false;
+      const alsnog = () => {
+        if (gedaan || gestopt) return;
+        gedaan = true;
+        spreek(kiesStem(window.speechSynthesis.getVoices()));
+      };
+      try { window.speechSynthesis.addEventListener("voiceschanged", alsnog, { once: true }); } catch { /* */ }
+      wachters.push(setTimeout(alsnog, 400));
+    }, 80));
 
     return () => {
       gestopt = true;
       stopTimer();
+      stopWachters();
       uts.length = 0;
       try { window.speechSynthesis.cancel(); } catch { /* */ }
     };
