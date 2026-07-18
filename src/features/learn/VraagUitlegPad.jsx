@@ -13,6 +13,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 
 const STORE_KEY = "lk_vraag_fouten_v1";
 
@@ -129,9 +130,11 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
           en zou de leerling van denken weghouden. Audit 2026-05-13 QW1. */}
       {!verbergNiveaus && niveauTekst && (
         <Section title="💡 Korte uitleg" defaultOpen={false}>
-          <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
-            <MdInline text={niveauTekst} />
-          </div>
+          <VoorleesBlok tekst={niveauTekst}>
+            <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
+              <MdInline text={niveauTekst} />
+            </div>
+          </VoorleesBlok>
           <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
             {niveau !== "basis" && uitlegPad.niveaus?.basis && (
               <NiveauKnop label="📖 Standaard" actief={niveau === "basis"} onClick={() => setNiveau("basis")} />

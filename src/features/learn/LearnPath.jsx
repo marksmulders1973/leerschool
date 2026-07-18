@@ -1243,11 +1243,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   </div>
                 )}
                 {currentCheck.bronTekst.body && (
-                  <BronTekstInteractief
-                    body={currentCheck.bronTekst.body}
-                    woorden={currentCheck.uitlegPad?.woorden || []}
-                    resetKey={`${stepIdx}-${checkIdx}`}
-                  />
+                  <VoorleesBlok tekst={currentCheck.bronTekst.body} accent="#ff8c5a">
+                    <BronTekstInteractief
+                      body={currentCheck.bronTekst.body}
+                      woorden={currentCheck.uitlegPad?.woorden || []}
+                      resetKey={`${stepIdx}-${checkIdx}`}
+                    />
+                  </VoorleesBlok>
                 )}
               </div>
             )}
@@ -1758,13 +1760,18 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
 
       <div style={{ padding: "16px 18px 8px" }}>
         {/* Mark feedback 2026-05-12: pad-intro bij examen-paden moet
-            'gele-markeerstift-look' krijgen. Detecteer aan id-prefix. */}
-        {path.id && path.id.startsWith("examen-") ? (
-          <ExamenPadBanner intro={path.intro} padTitle={path.title} />
-        ) : (
-          <p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
-            {path.intro}
-          </p>
+            'gele-markeerstift-look' krijgen. Detecteer aan id-prefix.
+            Mark 18 jul: overal met veel tekst een voorlees-knop → ook hier. */}
+        {path.intro && (
+          <VoorleesBlok tekst={path.intro}>
+            {path.id && path.id.startsWith("examen-") ? (
+              <ExamenPadBanner intro={path.intro} padTitle={path.title} />
+            ) : (
+              <p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
+                {path.intro}
+              </p>
+            )}
+          </VoorleesBlok>
         )}
 
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
