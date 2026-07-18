@@ -60,6 +60,8 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
     let timer = null;
     let klaarGeteld = 0;
     let ronde = 0; // herkansings-ronde; events van een oude (gecancelde) ronde tellen niet mee
+    let tBegin = 0; // start van de huidige spreek-ronde (voor nep-klaar-detectie)
+    let kaalGeprobeerd = false; // herkansing zónder expliciete stem al gedaan?
     let msPerTeken = 62 / rate; // startschatting; wordt per zin bijgesteld
     const stopTimer = () => { if (timer) { clearTimeout(timer); timer = null; } };
     const klaar = (gelukt = true) => { if (gestopt) return; gestopt = true; stopTimer(); stopWachters(); onEnd && onEnd(gelukt); };
@@ -74,6 +76,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       const mijnRonde = ronde;
       klaarGeteld = 0;
       uts.length = 0;
+      tBegin = performance.now();
       zinnen.forEach((grenzen) => {
       const van = grenzen[0].start;
       const tot = grenzen[grenzen.length - 1].eind;
@@ -122,7 +125,27 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
         klaarGeteld += 1;
         // Alles geweigerd zónder dat er ooit geluid was (Android "not-allowed"):
         // NIET meteen afsluiten — de herkansing + watchdog handelen dat af.
-        if (klaarGeteld >= zinnen.length && gestart) klaar(true);
+        if (klaarGeteld >= zinnen.length && gestart) {
+          // Nep-klaar-detectie (bug Deianera 18 jul, ronde 2): sommige engines
+          // (Samsung/WebView, of Google-TTS zonder NL-spraakdata) melden alle
+          // zinnen direct "klaar" zonder ook maar iets uit te spreken. Is de
+          // hele tekst sneller "voorgelezen" dan fysiek kan → één kale
+          // herkansing zonder stem-keuze, daarna eerlijk falen (foutmelding).
+          const duur = performance.now() - tBegin;
+          const minimaal = Math.min(2500, plan.gesproken.length * 20);
+          if (duur < minimaal) {
+            if (!kaalGeprobeerd) {
+              kaalGeprobeerd = true;
+              gestart = false;
+              try { window.speechSynthesis.cancel(); } catch { /* */ }
+              spreek(null); // engine kiest zelf een stem o.b.v. u.lang
+              return;
+            }
+            klaar(false);
+            return;
+          }
+          klaar(true);
+        }
       };
       u.onend = () => zinKlaar(true);
       u.onerror = () => zinKlaar(false);
