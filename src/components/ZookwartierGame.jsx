@@ -339,6 +339,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [bouwen, setBouwen] = useState(false);           // bouw-modus: winkelbalk in beeld (anders alleen park)
   const [besturingHint, setBesturingHint] = useState(!COARSE_POINTER); // korte WASD/sleep-hint op laptop
   const [bouwTip, setBouwTip] = useState(false);         // eenmalige maatje-tip "je kunt zelf bouwen!"
+  const [leerTip, setLeerTip] = useState(false);         // 📚 gids-invite "zullen we hier een les van maken?" (P1 18 jul)
   const [buddyVraag, setBuddyVraag] = useState(null);    // 💬 dagelijks kennismakings-vraagje van het maatje
   const [buddyAntwoord, setBuddyAntwoord] = useState("");
   // 🎒 Blokjes-rugzak (12-agent-review): weghakken = verzamelen. Het aantal
@@ -539,6 +540,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setBouwTip(false);
     try { localStorage.setItem("lk_bouwtip_gezien", "1"); } catch { /* */ }
   };
+
+  // 📚 Leer-invite (P1 dagrapport 18 jul): park→leren lekte hard (16 opens →
+  // 1 doorklik in 7d). Eén keer per sessie nodigt het maatje ~45s na
+  // binnenkomst actief uit om te gaan oefenen — gekoppeld aan het
+  // muntjes-motief dat het kind al drijft.
+  useEffect(() => {
+    if (!loaded) return;
+    let gezien = false;
+    try { gezien = sessionStorage.getItem("lk_leertip_sessie") === "1"; } catch { /* */ }
+    if (gezien) return;
+    const t = setTimeout(() => {
+      setLeerTip(true);
+      try { sessionStorage.setItem("lk_leertip_sessie", "1"); } catch { /* */ }
+      try { track("park_leer_invite"); } catch { /* */ }
+    }, 45000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded]);
 
   // 💬 Buddy leert je kennen (Mark 2 jul): max 1 vraagje per dag (naam,
   // leeftijd, lievelingseten/-kleur/-dier). Antwoorden blijven op dit
@@ -1673,6 +1692,27 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </div>
           <button onClick={() => { sluitBouwTip(); setBouwen(true); setShopCat("blok"); setFirstPerson(false); }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🧱 Laat zien</button>
           <button onClick={sluitBouwTip} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
+
+      {/* 📚 Leer-invite: het maatje maakt van het park actief een brug naar
+          leren — met muntjes-beloning als motief (P1 dagrapport 18 jul). */}
+      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && (
+        <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
+          <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
+            <b>{buddyNaamEff || "Je maatje"}</b>: "{oefenPad?.title ? `Zullen we samen met ${oefenPad.title} oefenen? Dan verdien je munten voor je park! 🪙` : "Zullen we samen iets gaan oefenen? Dan verdien je munten voor je park! 🪙"}"
+          </div>
+          <button
+            onClick={() => {
+              setLeerTip(false);
+              try { track("park_naar_leren", { via: "gids_invite", pad: oefenPad?.id || null }); } catch { /* */ }
+              if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+              else if (onOpenLeerpaden) onOpenLeerpaden();
+            }}
+            style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}
+          >📚 Ga oefenen</button>
+          <button onClick={() => setLeerTip(false)} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 28, height: 28, font: "700 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
         </div>
       )}
 

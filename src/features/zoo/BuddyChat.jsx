@@ -175,8 +175,11 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
         {/* Leren-nudge (Titan 2026-07-05): het maatje-praatje is de populairste plek
             in het park (buddy_chat_open 31 vs park_praatje 2), maar leidde nog nooit
             naar leren. Ná een echt gesprekje koppelt deze balk leren aan het munt-
-            motief dat het kind al drijft — leren = munten voor je maatje/park. */}
-        {onNaarLeren && messages.length >= 3 && !busy && (
+            motief dat het kind al drijft — leren = munten voor je maatje/park.
+            P1 dagrapport 18 jul: drempel 3→1 bericht — de meeste kinderen halen
+            nooit 3 berichten (10× chat open, 7 berichten in 7d), dus de knop
+            werd vrijwel nooit gezien. */}
+        {onNaarLeren && messages.length >= 1 && !busy && (
           <div style={{ padding: "10px 12px 0" }}>
             <button
               onClick={() => { try { track("buddy_naar_leren", { id: buddyId }); } catch { /* */ } onNaarLeren(); }}
