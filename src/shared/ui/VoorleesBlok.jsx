@@ -122,7 +122,9 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
             <option value="">Automatisch (beste stem)</option>
             {stemmen.map((v) => (
               <option key={v.name} value={v.name}>
-                {v.name}{v.localService ? "" : " (online)"}
+                {v.name}
+                {(v.lang || "").toLowerCase().startsWith("nl-be") ? " (Vlaams)" : ""}
+                {v.localService ? "" : " (online)"}
               </option>
             ))}
           </select>

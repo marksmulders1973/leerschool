@@ -80,7 +80,11 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       const tot = grenzen[grenzen.length - 1].eind;
       const zinTekst = plan.gesproken.slice(van, tot);
       const u = new SpeechSynthesisUtterance(zinTekst);
-      u.lang = "nl-NL"; u.rate = rate; u.pitch = pitch;
+      // Taal van de GEKOZEN stem gebruiken (Mark 18 jul: stem-kiezer deed
+      // niets) — mobiele engines kiezen de stem vooral op u.lang en negeren
+      // u.voice; met hard "nl-NL" won altijd dezelfde standaardstem.
+      u.lang = (stem && stem.lang) || "nl-NL";
+      u.rate = rate; u.pitch = pitch;
       if (stem) u.voice = stem;
       let boundaryGezien = false;
       let tStart = 0;
