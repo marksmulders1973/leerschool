@@ -1,0 +1,158 @@
+# Outreach-voorraad — wat kunnen we nog mailen na de zomervakantie?
+
+> Onderzoek 18 jul 2026 (4 parallelle research-agents). Vraag van Mark: "kunnen er
+> nog 50 mensen gemaild worden of 500?" **Antwoord: ~1.700–2.400 adressen totaal,
+> waarvan ~1.100–1.400 met hoge fit.** Al verstuurd t/m 13 jul: ~355.
+> Timing: scholen/organisaties reageren pas v.a. eind aug (zomervakantie).
+> Zusterdocs: LEERGELD-OUTREACH.md, BIBLIOTHEKEN-OUTREACH.md,
+> SCHOLEN-ACHTERSTANDSWIJKEN-OUTREACH.md.
+
+## Samenvatting per categorie
+
+| Categorie | Nog mailbaar | Fit | Adressen verzamelen | Status |
+|---|---|---|---|---|
+| **Leergeld-stichtingen (rest)** | **55** | Hoog | ✅ KLAAR — lijst hieronder | Direct verzendklaar |
+| Voedselbanken (aangesloten, rest) | ~47 | Hoog | Laag (locatiezoeker voedselbankennederland.nl, afvinken tegen 134-verzendlijst) | 1 sessie werk |
+| SUN-noodhulpbureaus + lokale voedselhulp | ~45–60 | Hoog | Middel | sunnederland.nl/vind-een-sun-noodhulpbureau |
+| Bibliotheken (rest, incl. 5 ex-"formulier-only") | ~75–80 | Middel-hoog | Laag-middel — deels hieronder | Deels verzameld |
+| Scholen achterstandswijken **batch 2** | 120–150 (pool ~210) | Hoog | Middel (CBS-achterstandsscore-Excel als selectie) | Clusters hieronder |
+| Scholen batch 3 (rest top-20%) | 250–400 | Hoog | Middel | Na batch 2 |
+| LOWAN-nieuwkomersscholen (taalklassen/AZC) | ~250–350 | **Hoog** (taal-oefening hard nodig) | Laag (openbare database lowan.nl/po/scholen) | Grootste nieuwe vijver |
+| Humanitas-afdelingen | 78 | Hoog | Laag (humanitas.nl/afdelingen) | |
+| Jeugdfonds Sport & Cultuur (lokale fondsen) | 24 | Hoog | Laag | jeugdfondssportencultuur.nl/fonds-in-de-buurt |
+| Landelijke kinderarmoede-fondsen (Kinderhulp, Jarige Job, Kinderzwerfboek, LINDA.foundation, Armoedefonds…) | ~10–15 | Hoog | Laag | |
+| Speelgoedbanken (~40) + kledingbanken (~110–160) | ~150–200 | Hoog | Middel (versnipperd) | minimasite.nl + kledingbank.nl |
+| Buurtgezinnen-coördinatoren | ~150 | Hoog | Laag (buurtgezinnen.nl/waar) | |
+| VoorleesExpress-locaties | ~100 | Hoog | Laag-middel | |
+| Taalhuizen (coördinerende orgs, minus bieb-overlap) | ~90–120 | Hoog | Middel | |
+| Weekend-/zomerscholen (IMC Basis ~32 + lokaal) | ~40–60 | Hoog | Middel | |
+| Gelijke Kansen Alliantie-gemeenten | ~100 | Hoog | Middel | gelijke-kansen.nl |
+| Welzijnsorganisaties met jeugdwerk (Sociaal Werk NL) | ~300–500 | Middel-hoog | Middel | Volume-optie voor later |
+| Stadspassen/kindpakketten (Rotterdampas, Stadspas A'dam, U-pas…) | ~30–40 pas-orgs | Middel | Hoog (traag/formeel) | Alleen de grote passen doen |
+| Ouderorganisaties (Ouders & Onderwijs, VOO, Balans…) | ~6–10 | Middel | Laag | |
+| BSO-/kinderopvangketens (top-100) | ~50–100 | Laag-middel | Laag | Laagste prio |
+
+**Totaal: ~1.700–2.400.** Deliverability-regel blijft: max ~30–40/dag vanaf Mark's Gmail (limiet 500/dag; reputatie sparen).
+
+## Aanbevolen volgorde na de vakantie
+
+1. **Leergeld rest (55)** — adressen staan klaar (hieronder), hoogste fit, warme referenties (Apeldoorn okt-nieuwsbrief, Salland-tip van Voedselbank Raalte 17 jul). Versturen laatste vakantieweek.
+2. **Humanitas (78) + Jeugdfonds S&C (24) + landelijke fondsen (~12)** = ~115, twee bron-sites, snel verzameld.
+3. **LOWAN-nieuwkomersscholen (~300)** — week 1 na de vakantie (nieuwe instroom taalklassen).
+4. **Scholen batch 2 (120–150)** — selecteren op CBS-achterstandsscore-Excel ("Achterstandsscores basisscholen 2025, herijkte methode"); versturen eerste schoolweek. Sterkste verhaal: Almere ("alarmfase 1"-onderwijsregio).
+5. **Voedselbanken rest (47) + SUN (35)**, **bibliotheken rest (~75)**, **Buurtgezinnen (150) + VoorleesExpress (100)** — daarna in batches van ~30–40/dag.
+
+## 1. Leergeld — 55 resterende stichtingen (VERZENDKLAAR)
+
+Totaal 115 lokale stichtingen in de postcode-zoekdata van leergeld.nl; 60 gemaild
+op 9 jul → 55 rest. Na deze ronde: 115/115 gedekt. (A) = adres uit Wayback-archief
+(recentste jan 2026) omdat hun gezamenlijke platform alle geautomatiseerde toegang
+blokkeert (403) — bounces apart bijhouden, evt. handmatig in gewone browser checken.
+
+| Stichting | Plaats/regio | E-mail |
+|---|---|---|
+| **Leergeld Salland ⭐ warme tip (Voedselbank Raalte 17 jul)** (A) | Raalte e.o. | info@leergeldsalland.nl |
+| Jeugdfonds Almelo (uitvoerder Leergeld; eerder onterecht afgekeurd) | Almelo | jeugdfonds@jeugdfondsalmelo.nl |
+| Meedoen in Rotterdam (lid Leergeld NL; eerder onterecht afgekeurd) | Rotterdam | info@meedoeninrotterdam.nl |
+| Leergeld 2stromenland | Maas en Waal (Druten e.o.) | info@leergeld2stromenland.nl |
+| Leergeld Asten-Someren | Asten/Someren | info@leergeld-asten-someren.nl |
+| Leergeld Beesel | Beesel/Reuver | info@leergeldbeesel.nl |
+| Leergeld Best e.o. | Best | contact.leergeld@gmail.com |
+| Leergeld Bommelerwaard e.o. | Zaltbommel | info@leergeldbommelerwaard.nl |
+| Leergeld Boxtel | Boxtel | info@leergeldboxtel.nl |
+| Leergeld De Bilt | De Bilt/Bilthoven | leergelddebilt@gmail.com |
+| Leergeld De Ronde Venen | Mijdrecht e.o. | info@leergeldderondevenen.nl |
+| Leergeld De Stuwwal | Berg en Dal/Mook | info@leergelddestuwwal.nl |
+| Leergeld Deurne | Deurne | info@leergelddeurne.nl |
+| Leergeld Dinkelland | Denekamp e.o. | info@leergelddinkelland.nl |
+| Leergeld Eemsdelta | Delfzijl/Appingedam | info@leergeldeemsdelta.nl |
+| Leergeld Geldrop-Mierlo en Heeze-Leende | Geldrop | info@leergeldgeldrop.nl |
+| Leergeld Gemert e.o. | Gemert-Bakel | contact@gemert-bakel.leergeld.nl |
+| Leergeld Goirle en Riel | Goirle | info@leergeld-goirle-riel.nl |
+| Leergeld Groene Hart | Alphen a/d Rijn e.o. | info@leergeldgroenehart.nl |
+| Leergeld Haaksbergen | Haaksbergen | info@leergeldhaaksbergen.nl |
+| Leergeld Het Hoogeland | Noord-Groningen | coordinator@leergeldhoogeland.nl |
+| Leergeld Heusden | Drunen/Vlijmen | info@leergeldheusden.nl |
+| Leergeld Hilvarenbeek | Hilvarenbeek | info@leergeldhilvarenbeek.nl |
+| Leergeld Horst aan de Maas | Horst | info@leergeldhorstaandemaas.nl |
+| Leergeld Houten | Houten | info@leergeldhouten.nl |
+| Leergeld IJssel & Vecht (dekt óók Kampen) | Kampen/Hardenberg/Ommen e.o. | info@samenoverijssel.nl |
+| Leergeld IJsselstein | IJsselstein | info@leergeldijsselstein.nl |
+| Leergeld Land van Cuijk | Cuijk/Boxmeer | info@leergeldlandvancuijk.nl |
+| Leergeld Leudal-Maasgouw | Heythuysen e.o. | stichtingleergeldlm@gmail.com |
+| Leergeld Liemers-Doesburg | Zevenaar/Doesburg | info@leergelddeliemers.nl (Doesburg: info@leergelddoesburg.nl) |
+| Leergeld Lochem | Lochem | leergeldlochem@gmail.com |
+| Leergeld Losser | Losser | info@leergeldlosser.nl |
+| Leergeld Midden Drenthe (A) | Beilen e.o. | info@leergeldmiddendrenthe.nl |
+| Leergeld Midden-Groningen (A) | Hoogezand-Sappemeer | leergeld.hs@gmail.com |
+| Leergeld Nieuwegein (A) | Nieuwegein | info@leergeldnieuwegein.nl |
+| Leergeld Noordoostpolder (A) | Emmeloord | info@leergeldnoordoostpolder.nl |
+| Leergeld Nuenen | Nuenen | leergeld@onsnet.nu |
+| Leergeld Oisterwijk (A) | Oisterwijk | info@leergeldoisterwijk.nl |
+| Leergeld Oldenzaal (A) | Oldenzaal | info@leergeldoldenzaal.nl |
+| Leergeld Oost Achterhoek | Winterswijk e.o. | info-leergeldachterhoek@lgoa.nl |
+| Leergeld Oost Betuwe (A) | Elst e.o. | info@lgob.nl |
+| Leergeld Peel en Maas (A) | Panningen | info@leergeldpeelenmaas.nl |
+| Leergeld Soest-Baarn (A) | Soest/Baarn | coordinator@leergeld-sb.nl |
+| Leergeld Stichtse Vecht (A) | Maarssen e.o. | info@leergeldstichtsevecht.nl |
+| Leergeld Tubbergen (A) | Tubbergen | info@leergeldtubbergen.nl |
+| Leergeld Twenterand | Vriezenveen e.o. | info@leergeldtwenterand.nl |
+| Leergeld Valkenswaard en Omstreken | Valkenswaard/Waalre | info@leergeldvalkenswaard-waalre.nl |
+| Leergeld Veldhoven en De Kempen (A) | Veldhoven | info@leergeldvdk.nl |
+| Leergeld Venlo (A) | Venlo | info@leergeldvenlo.nl |
+| Leergeld Vianen | Vianen | coordinator@leergeldvianen.nl |
+| Leergeld Voorschoten (A) | Voorschoten | info@leergeld-voorschoten.nl |
+| Leergeld Vught (A) | Vught | info@leergeldvught.nl |
+| Leergeld Wassenaar (A) | Wassenaar | info@leergeldwassenaar.nl |
+| Leergeld Westerkwartier-Noordenveld (A) | Leek/Roden | info@wn.leergeld.nl |
+| Leergeld Zuid-Oost Groningen (A) | Stadskanaal/Veendam/Winschoten | info@leergeldzuidoostgroningen.nl |
+
+Definitief géén lokale Leergeld-dekking (route = samenvoorallekinderen.nl):
+Zwolle-stad, Almere, Ede, Westland, Hengelo, Doetinchem.
+
+## 2. Voedselbanken — rest
+
+- Voedselbanken Nederland telt **181** aangesloten voedselbanken (juli 2026); wij mailden er 134 → **~47 rest**. Elke bank heeft `<plaats>.voedselbankennederland.nl` met info-adres; afvinken tegen de verzendlijst van 10 jul via de locatiezoeker.
+- Extra: **35 SUN-noodhulpbureaus** (professionele coördinatoren, perfecte armoede-fit) via sunnederland.nl + ~10–25 lokale initiatieven (BuurtBuik 22 locaties, Boodschappenkast Zuidplas, Rode Kruis Voedselhulp-districten). Kwaliteit lokale gmail-adressen wisselend.
+
+## 3. Bibliotheken — rest (~75–80)
+
+- NL telt **131** bibliotheekorganisaties (Bnetwerk/KB 2024); 51 gemaild → ~80 rest.
+- **Ex-"formulier-only", nu tóch e-mail gevonden:** Stadkamer Zwolle hallo@stadkamer.nl · Rozet Arnhem info@rozet.nl · Bibliotheek Deventer klantenservice@bibliotheekdeventer.nl · SCHUNCK Heerlen info@schunck.nl · DNK Assen (adres op dnk.nl/info-contact). Enschede blijft formulier-only.
+- **Nieuwe met adres:** Theek 5 (Oosterhout) info@theek5.nl · Bibliocenter (Weert) info@bibliocenter.nl · BiblioNu (Venray/Horst) info@biblionu.nl · De Kempen info@bibliotheekdekempen.nl · Oosterschelde secretariaat@bibliotheekoosterschelde.nl · Biblionet Drenthe (9 gemeenten!) klantenservice@biblionetdrenthe.nl · Mar en Fean info@bibliothekenmarenfean.nl · Zuidoost Fryslân m.dejong@bzof.nl · Noord Fryslân p.schreuder@bnfrl.nl · Bollenstreek lisse@bibliotheekbollenstreek.nl · Veluwezoom info@dezoomerij.nl · Oost-Achterhoek ton.mengerink@oostachterhoek.nl · Oostland pijnacker@bibliotheekoostland.nl · aan de Vliet jdiemel@bibliotheekaandevliet.nl · Groene Hart jantine@regiobibliotheekhetgroenehart.nl · Lek & IJssel annemariedoesburg@bibliotheeklekijssel.nl · Z-O-U-T rtiemstra@rbzout.nl. (Persoonlijke adressen = matig-onzeker; bij bounce → info-patroon/formulier.)
+- **Nog te verifiëren** (patroon meestal `info@bibliotheek<naam>.nl`, ~1 min/stuk): Angstel Vecht en Venen, Voorschoten-Wassenaar, De Groene Venen, Hoeksche Waard, Krimpenerwaard, IJmond Noord, Heiloo, Nijkerk, Barneveld, Brummen|Voorst, CultuurSpoor Best, Dommeldal, De Lage Beemden, De Meierij, Altena, Heuvellandbibliotheken, Kerkrade, Landgraaf, Brunssum, Maas en Peel + Overijssels cluster (Rijssen-Holten, Hof van Twente, Wierden, Twenterand, Hellendoorn, Salland, Dalfsen, Ommen, Hardenberg, Steenwijkerland, Zwartewaterland, Staphorst, Oldenzaal, Losser, Dinkelland, Tubbergen, Haaksbergen, Borne).
+
+## 4. Scholen achterstandswijken — batch 2 (120–150) + batch 3
+
+Landelijk: 5.986 basisscholen; top-10% achterstandsscore ≈ **600 scholen**, top-20% ≈ 1.200.
+Batch 1 (90) dekte ~15% van de top-10%. **Selectietip: CBS-Excel "Achterstandsscores
+basisscholen 2025 (herijkte methode)" — per BRIN-vestiging exacte score.**
+
+Batch-2-clusters (pool ~185–235; kies de scherpste 120–150):
+- **Flevoland/Zaanstreek/NH-kop** (batch 1 miste dit volledig): Zaanstad Poelenburg/Peldersveld (5–7), **Almere (8–10, "alarmfase 1"-onderwijsregio = sterkste verhaal)**, Lelystad (4–6), Purmerend, Hoorn, Alkmaar Overdie, Den Helder (3–4), IJmuiden/Beverwijk, Haarlem Schalkwijk (5–6).
+- **Oost**: Enschede Wesselerbrink/Velve (8–10), Almelo (4–6), Hengelo, Zwolle Holtenbroek (4–5), Deventer (4–5), Apeldoorn Zevenhuizen (4–5, sluit aan op warme lead Leergeld Apeldoorn), Amersfoort (4–6), Ede Veldhuizen.
+- **Noord (kansarmste regio buiten Randstad)**: Veendam+Pekela (5–6), Stadskanaal, Winschoten, Eemsdelta/Appingedam, Emmen Angelslo/Emmerhout (4–5), Hoogeveen, Assen, Drachten/Sneek/Harlingen.
+- **Zuid**: Kerkrade (4–5, Movare), Brunssum+Landgraaf, Sittard-Geleen (4–5), Maastricht (5–6), Venlo Vastenavondkamp, Roermond Donderberg, Weert, Helmond, Oss, Breda Hoge Vucht (5–6), Tilburg-rest, Bergen op Zoom, Vlissingen/Terneuzen/Goes.
+- **Randstad-rest**: Dordrecht Wielwijk/Crabbehof (5–6), Rotterdam Oude Noorden/Crooswijk/Schiebroek-Zuid (8–10), Amsterdam Indische Buurt/Kolenkit-rest (4–6), Spijkenisse, Capelle, Zoetermeer, Rijswijk/Leidschendam, Gouda, Leiden-Noord, Delft Buitenhof, Nieuwegein, Tiel/Culemborg.
+
+Batch 3 daarna: rest-pool grofweg **250–400** relevante scholen.
+Herinnering batch 1: Einsteinschool = opgeheven, schrappen.
+
+## 5. Nieuwe categorieën — details
+
+- **LOWAN-nieuwkomersscholen (~250–350)**: openbare filterbare database lowan.nl/po/scholen. Hoogste fit van alle nieuwe vijvers. Mailen week 1 na vakantie. Aparte mailtekst nodig (taal-insteek, ouders spreken vaak geen NL — flyer met QR + beeld).
+- **Humanitas (78 afdelingen)**: humanitas.nl/afdelingen — deel heeft huiswerk-/taalprojecten.
+- **Jeugdfonds Sport & Cultuur (24 fondsen)**: bevestigd in jaarverslag 2025.
+- **Landelijke fondsen (~12)**: Kinderhulp, Jarige Job, Kinderzwerfboek, Stichting Babyspullen, Kinderen van de Voedselbank, LINDA.foundation, Armoedefonds, Vakantiebank. Lijst: zorgwelzijn.nl "18 fondsen".
+- **Speelgoedbanken ~40 / kledingbanken ~110–160**: minimasite.nl + kledingbank.nl; kunnen flyer meegeven zoals voedselbanken.
+- **Buurtgezinnen (~150 coördinatoren)**: buurtgezinnen.nl/waar — alle coördinatoren op één site.
+- **VoorleesExpress (~100 locaties)**: taalondersteuning thuis bij minima-gezinnen.
+- **Taalhuizen (~90–120 na bieb-overlap)**: ouders leren taal, kinderen liften mee.
+- **Weekend-/zomerscholen (~40–60)**: IMC Basis ~32 locaties (via deelnemende scholen), Weekend College, lokale clubs.
+- **GKA-gemeenten (~100)**: gelijke-kansen.nl — gemeenten met kansengelijkheid-agenda.
+- **Sociaal Werk NL-leden (~300–500)**: volume-optie; ledenkaart afwerken.
+- **Stadspassen (~30–40)**: alleen de grote (Rotterdampas, Stadspas A'dam, U-pas, Ooievaarspas, Stadjerspas) — formeel/traag, maar nieuwsbrieven naar exact onze doelgroep.
+- **Ouderorganisaties (~8)** en **BSO-ketens (top-100)**: laagste prio.
+
+## Verzend-log
+- (nog niets verstuurd uit dit doc — wacht op go van Mark na de vakantie)
