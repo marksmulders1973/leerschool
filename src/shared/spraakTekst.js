@@ -256,6 +256,10 @@ export function schoonVoorSpraak(tekst) {
     // "vs"/"vs." klinkt als gebrabbel → spreek uit als "of" (reis vs rijst).
     // Alleen kleine letters: hoofdletter-VS = Verenigde Staten, die blijft.
     .replace(/\bvs\b\.?/g, "of")
+    // pijlen leest de stem letterlijk voor ("naar rechts wijzende pijl",
+    // bug Mark 18 jul) — overslaan; op het scherm blijven ze gewoon staan.
+    // Let op: ≤ en ≥ juist NIET strippen, die horen bij rekenles.
+    .replace(/<->|->|=>|<-|[→←↑↓⇒⇐⇔↔⟶⟵▶◀►◄➔➜]/g, " ")
     // emoji's en pictogrammen (dekt 🐕 😄 ✨ 🎡 enz.)
     .replace(/\p{Extended_Pictographic}/gu, "")
     // restjes: vlag-letters, huidskleur-tonen, keycap, variatie-selector, joiner
