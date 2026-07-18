@@ -1082,14 +1082,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         {mode === "reading" && (
           <button onClick={startCheck} style={btnPrimary()}>
-            {checks.length > 0 ? "Naar de check ▶" : "Volgend deel ▶"}
+            {checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
           </button>
         )}
 
         {mode === "checking" && step.interactiveComponent && interactive3DEnabled() && (
           <div style={cardStyle()}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
-              Interactieve check {attempts > 1 ? `· poging ${attempts}` : ""}
+              Interactieve vraag {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <step.interactiveComponent onAnswer={handleInteractiveAnswer} />
           </div>
