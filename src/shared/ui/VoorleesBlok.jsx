@@ -4,15 +4,27 @@
 // uitleg-stappen en leesteksten — extra steun voor zwakkere lezers.
 // Geen browser-stem beschikbaar? Dan alleen de gewone tekst, geen knop.
 import { useEffect, useRef, useState } from "react";
-import { spreekMetMeelezen } from "../spraakTekst.js";
+import { spreekMetMeelezen, nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
 export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
   const [leest, setLeest] = useState(false);
   const [woord, setWoord] = useState(-1);
   const [faalt, setFaalt] = useState(false); // speech-engine weigert (bv. browser zonder voorleesstem)
+  const [kiesOpen, setKiesOpen] = useState(false); // stem-kiezer uitgeklapt?
+  const [stemmen, setStemmen] = useState([]);
+  const [stemNaam, setStemNaam] = useState(gekozenStemNaam());
   const stopRef = useRef(null);
   const kan = typeof window !== "undefined" && !!window.speechSynthesis;
+
+  // Stemmenlijst laden (komt op Android pas na 'voiceschanged' beschikbaar).
+  useEffect(() => {
+    if (!kan) return undefined;
+    const laad = () => setStemmen(nlStemmen());
+    laad();
+    try { window.speechSynthesis.addEventListener("voiceschanged", laad); } catch { /* */ }
+    return () => { try { window.speechSynthesis.removeEventListener("voiceschanged", laad); } catch { /* */ } };
+  }, [kan]);
 
   const stop = () => {
     if (stopRef.current) { stopRef.current(); stopRef.current = null; }
@@ -63,6 +75,59 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
       >
         {leest ? "⏹ Stop" : "🔊 Lees voor"}
       </button>
+      {/* Stem-kiezer (Mark 18 jul: standaardstem klinkt robotachtig).
+          Alleen tonen bij ≥2 NL-stemmen; keuze geldt app-breed (localStorage). */}
+      {!leest && stemmen.length > 1 && (
+        <button
+          type="button"
+          onClick={() => setKiesOpen((v) => !v)}
+          aria-label="Kies een andere voorleesstem"
+          style={{
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.14)",
+            color: "rgba(230,235,245,0.7)",
+            borderRadius: 999,
+            padding: "5px 10px",
+            fontSize: 12,
+            cursor: "pointer",
+            marginLeft: 6,
+            marginBottom: 10,
+            fontFamily: "var(--font-body)",
+          }}
+        >
+          🎙️ Stem
+        </button>
+      )}
+      {kiesOpen && !leest && (
+        <div style={{ marginBottom: 10 }}>
+          <select
+            value={stemNaam}
+            onChange={(e) => {
+              setStemNaam(e.target.value);
+              zetGekozenStem(e.target.value);
+              setKiesOpen(false);
+            }}
+            aria-label="Voorleesstem"
+            style={{
+              background: "#13203a",
+              color: "rgba(230,235,245,0.9)",
+              border: "1px solid rgba(255,255,255,0.18)",
+              borderRadius: 8,
+              padding: "6px 8px",
+              fontSize: 12.5,
+              maxWidth: "100%",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            <option value="">Automatisch (beste stem)</option>
+            {stemmen.map((v) => (
+              <option key={v.name} value={v.name}>
+                {v.name}{v.localService ? "" : " (online)"}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       {faalt && !leest && (
         <div style={{ fontSize: 12, color: "rgba(230,235,245,0.65)", marginBottom: 10 }}>
           Voorlezen lukt niet op deze telefoon of browser. Probeer het in Chrome,

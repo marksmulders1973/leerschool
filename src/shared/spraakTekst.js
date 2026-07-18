@@ -51,9 +51,7 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
     }
     if (huidige.length) zinnen.push(huidige);
 
-    const kiesStem = (stemmen) => (stemmen || [])
-      .filter((v) => (v.lang || "").toLowerCase().startsWith("nl"))
-      .sort((a, b) => (b.localService === true) - (a.localService === true))[0] || null;
+    const kiesStem = besteNlStem;
 
     let gestopt = false;
     let gestart = false;
@@ -188,6 +186,52 @@ export function spreekMetMeelezen(tekst, { rate = 1, pitch = 1, onStart, onEnd, 
       try { window.speechSynthesis.cancel(); } catch { /* */ }
     };
   } catch { onEnd && onEnd(); return () => {}; }
+}
+
+// ── Stem-keuze (Mark 18 jul: "klinkt erg robotachtig, andere stem?") ──
+// De lokale Android/Windows-stem is vaak de robot; netwerk-stemmen (Google,
+// "natural/neural") klinken veel natuurlijker. Die krijgen nu voorrang.
+// Karaoke-sync blijft werken: netwerk-stemmen sturen geen woord-seintjes,
+// maar de zelf-kalibrerende schatter in spreekMetMeelezen vangt dat op.
+// De gebruiker kan daarnaast zélf een stem kiezen (VoorleesBlok) — die
+// keuze staat in localStorage en wint altijd van de automatische keuze.
+const STEM_KEY = "lk_voorlees_stem_v1";
+
+export function nlStemmen() {
+  try {
+    return (window.speechSynthesis?.getVoices() || [])
+      .filter((v) => (v.lang || "").toLowerCase().startsWith("nl"));
+  } catch { return []; }
+}
+
+export function gekozenStemNaam() {
+  try { return localStorage.getItem(STEM_KEY) || ""; } catch { return ""; }
+}
+
+export function zetGekozenStem(naam) {
+  try { naam ? localStorage.setItem(STEM_KEY, naam) : localStorage.removeItem(STEM_KEY); } catch { /* */ }
+}
+
+function scoreStem(v) {
+  const n = (v.name || "").toLowerCase();
+  let s = 0;
+  if (/natural|neural|premium|enhanced|wavenet|online/.test(n)) s += 100;
+  if (n.includes("google")) s += 40;
+  if (!v.localService) s += 30; // netwerk-stem ≈ natuurlijker dan lokale robot
+  if ((v.lang || "").toLowerCase() === "nl-nl") s += 10;
+  if (v.default) s += 1;
+  return s;
+}
+
+export function besteNlStem(stemmen) {
+  const nl = (stemmen || []).filter((v) => (v.lang || "").toLowerCase().startsWith("nl"));
+  if (!nl.length) return null;
+  const wens = gekozenStemNaam();
+  if (wens) {
+    const zelf = nl.find((v) => v.name === wens);
+    if (zelf) return zelf;
+  }
+  return [...nl].sort((a, b) => scoreStem(b) - scoreStem(a))[0];
 }
 
 // Welk getoond woord hoort bij deze tekenpositie in de gesproken tekst?
