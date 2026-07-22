@@ -66,6 +66,18 @@ function fmt(iso) {
   try { return new Date(iso).toLocaleDateString("nl-NL", { day: "numeric", month: "short" }); } catch { return ""; }
 }
 
+// Naam-label. Zonder naam toonde het bord "anoniem" in dezelfde groene stijl
+// als echte namen — kinderen dachten dat "anoniem" een persoon was (of stiekem
+// de maker; wensen 20-22 jul). Nu: grijs + cursief "bezoeker zonder naam",
+// zodat duidelijk is dat er gewoon geen naam is ingevuld.
+function NaamLabel({ naam }) {
+  return naam ? (
+    <strong style={{ color: "#9be069" }}>{naam}</strong>
+  ) : (
+    <span style={{ color: "rgba(231,237,246,0.55)", fontStyle: "italic" }}>👤 bezoeker zonder naam</span>
+  );
+}
+
 export default function WishesBoard({ authUser, userName, onBack, onHome }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === ADMIN_EMAIL;
 
@@ -189,6 +201,20 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
           zetten 'm vast in onze vragenbank. Zie je iets fouts? Meld het hier — <strong style={{ color: "#69f0ae" }}>bedankt dat je meedenkt!</strong> 🙏
         </div>
 
+        {/* Wie is wie? — kinderen dachten dat "anoniem" de maker was (wensen 20-22 jul) */}
+        <div style={{
+          ...card, marginBottom: 16, borderColor: "rgba(255,213,79,0.3)",
+          background: "rgba(255,213,79,0.06)", fontSize: 13, lineHeight: 1.55,
+          color: "rgba(231,237,246,0.85)",
+        }}>
+          🕵️ <strong>Wie is wie?</strong> Tips en reacties komen van bezoekers zoals jij.
+          Staat er <em>👤 bezoeker zonder naam</em>? Dan heeft iemand geen naam ingevuld — dat mag, maar het is <strong>niet</strong> de maker.
+          De maker (Mark, die deze app bouwt) herken je altijd aan het gele blok{" "}
+          <strong style={{ color: "#ffd54f" }}>💛 Dank van de maker</strong> met het{" "}
+          <span style={{ fontSize: 10, fontWeight: 800, color: "#0a0e1a", background: "#ffd54f", borderRadius: 999, padding: "1px 6px", whiteSpace: "nowrap" }}>✔ maker</span>-vinkje.
+          De maker doet nooit stiekem mee als bezoeker.
+        </div>
+
         {/* ── Inzendformulier ── */}
         {sent ? (
           <div style={{ ...card, borderColor: "rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.08)", marginBottom: 22 }}>
@@ -232,7 +258,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                 ))}
               </div>
             </div>
-            <input value={naam} onChange={(e) => setNaam(e.target.value)} placeholder="Je naam (optioneel)" maxLength={40}
+            <input value={naam} onChange={(e) => setNaam(e.target.value)} placeholder="Je naam (laat je 'm leeg, dan staat er 'bezoeker zonder naam')" maxLength={40}
               style={{ width: "100%", boxSizing: "border-box", borderRadius: 10, padding: "9px 12px", marginBottom: 8,
                 background: "rgba(0,0,0,0.25)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", fontSize: 14, fontFamily: "inherit" }} />
             {warn && <div style={{ color: "#ffab40", fontSize: 13, marginBottom: 8 }}>{warn}</div>}
@@ -253,7 +279,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
               {pending.map((w) => (
                 <div key={w.id} style={{ ...card, borderColor: "rgba(255,204,64,0.3)", background: "rgba(255,204,64,0.06)" }}>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>
-                    {w.parent_id ? "↳ reactie · " : ""}{w.display_name || "anoniem"} · {fmt(w.created_at)} {w.rating ? `· ${sterren(w.rating)}` : ""}
+                    {w.parent_id ? "↳ reactie · " : ""}<NaamLabel naam={w.display_name} /> · {fmt(w.created_at)} {w.rating ? `· ${sterren(w.rating)}` : ""}
                   </div>
                   <div style={{ fontSize: 14, marginBottom: 8, whiteSpace: "pre-wrap" }}><Linkify text={w.message} /></div>
                   <div style={{ display: "flex", gap: 8 }}>
@@ -281,7 +307,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
               return (
                 <div key={w.id} style={card}>
                   <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: "rgba(231,237,246,0.55)", marginBottom: 6 }}>
-                    <strong style={{ color: "#9be069" }}>{w.display_name || "anoniem"}</strong>
+                    <NaamLabel naam={w.display_name} />
                     <span>{w.rating ? <span style={{ color: "#ffd54f" }}>{sterren(w.rating)}</span> : null} · {fmt(w.created_at)}</span>
                   </div>
                   <div style={{ fontSize: 15, lineHeight: 1.45, whiteSpace: "pre-wrap", marginBottom: 10 }}><Linkify text={w.message} /></div>
@@ -332,7 +358,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                           </div>
                         ) : (
                           <div key={r.id} style={{ fontSize: 13.5 }}>
-                            <strong style={{ color: "#9be069" }}>{r.display_name || "anoniem"}</strong>
+                            <NaamLabel naam={r.display_name} />
                             <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}> · {fmt(r.created_at)}</span>
                             <div style={{ whiteSpace: "pre-wrap", color: "rgba(231,237,246,0.85)" }}><Linkify text={r.message} /></div>
                           </div>
