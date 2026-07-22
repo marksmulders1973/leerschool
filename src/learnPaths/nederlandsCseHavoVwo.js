@@ -152,7 +152,7 @@ const steps = [
         q: "**Ad hominem** is:",
         options: ["Persoonlijke aanval ipv argument","Vergelijking","Voorbeeld","Statistiek"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Een vergelijking is een gewoon redeneermiddel — 'ad hominem' = Latijn voor 'op de mens'. Wat gebeurt er dan?", "Een voorbeeld onderbouwt juist — bij ad hominem speel je niet op de bál maar op de…?", "Cijfers zijn een onderbouwing — ad hominem richt zich niet op het argument maar op wíé het zegt."],
         uitlegPad: {
           stappen: [{ titel: "Aanval op persoon", tekst: "**Ad hominem** (Latijn 'aan de persoon'): aanval op tegenstander zelf ipv op zijn argument. **Drogreden**. Voorbeeld: 'Hij is een rechtse zelot, dus argument is fout.' De persoon's eigenschappen zeggen niets over kracht van argument." }],
           niveaus: { basis: "Persoonlijke aanval.", simpeler: "Ad hominem = persoon", nogSimpeler: "A." },
@@ -192,7 +192,7 @@ const steps = [
         q: "**Cirkelredenering**:",
         options: ["Conclusie als argument gebruiken","Vergelijking","Generalisatie","Vals dilemma"],
         answer: 0,
-        wrongHints: [null, "Andere drogreden.", "Andere drogreden.", "Andere drogreden."],
+        wrongHints: [null, "Een vergelijking hoeft geen drogreden te zijn — bij een církel eindig je waar je begon. Hoe klinkt dat in een redenering?", "Generaliseren = van één geval naar 'iedereen' — hier draait de redenering juist in een rondje.", "Een vals dilemma doet alsof er maar 2 opties zijn — een cirkelredenering bewijst zichzelf mét zichzelf."],
         uitlegPad: {
           stappen: [{ titel: "Begging the question", tekst: "**Cirkelredenering**: conclusie als argument gebruiken — verwijst naar zichzelf. **Voorbeeld**: 'God bestaat omdat de Bijbel zegt dat God bestaat. De Bijbel is waar omdat God dat zegt.' Geen externe basis — circle. Subtiel: vaak verkapt in lange teksten." }],
           niveaus: { basis: "Conclusie = argument.", simpeler: "Cirkel = circulair", nogSimpeler: "A." },
@@ -231,7 +231,7 @@ const steps = [
         q: "Wat hoort **niet** in samenvatting?",
         options: ["Eigen mening over standpunt auteur","Hoofdgedachte","Hoofdargumenten","Conclusie tekst"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Wel.", "Wel."],
+        wrongHints: [null, "De hoofdgedachte is juist de kérn van elke samenvatting — wat hoort er níét in?", "De hoofdargumenten geef je juist weer — wat voeg je NIET zelf toe?", "De conclusie van de auteur hoort erbij — maar wiens oordeel laat je wég?"],
         uitlegPad: {
           stappen: [{ titel: "Objectief weergeven", tekst: "**Samenvatting** = objectieve weergave standpunt auteur. **Geen eigen mening** ('Ik vind dat...' verboden). Ook geen eigen waardering ('De auteur heeft gelijk omdat...'). Alleen: 'De auteur betoogt dat...'." }],
           niveaus: { basis: "Eigen mening.", simpeler: "Niet je eigen mening", nogSimpeler: "A." },

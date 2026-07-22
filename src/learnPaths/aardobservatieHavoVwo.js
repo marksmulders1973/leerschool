@@ -138,7 +138,7 @@ const steps = [
         q: "Wat is **El Niño**?",
         options: ["Verwarmend Pacific-water → mondiale weers-effecten","Spaanse vulkaan","Hurricane-naam","Klimaatmodel"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "'El Niño' is wel Spaans, maar geen berg — denk aan de oceaan.", "Orkanen krijgen persoonsnamen, maar dit verschijnsel keert elke paar jaar terug — wat gebeurt er dan met het zeewater?", "Geen rekenmodel — het is een écht natuurverschijnsel in de Grote Oceaan."],
         uitlegPad: {
           stappen: [{ titel: "ENSO-cyclus", tekst: "**El Niño** = periodiek (2-7 jaar) opwarming oostelijke Stille Oceaan → minder regen Indonesië/Australië (droogte/brand) + meer regen Z-Amerika kust + minder visstand Peru. **La Niña** = tegenovergesteld. Beïnvloedt wereld-weer voor 1-2 jaar." }],
           theorie: "Cito-actueel: 2023-24 was sterk El Niño-jaar → extreme bosbranden Canada/Amazone, hittegolven.",
@@ -240,7 +240,7 @@ const steps = [
         q: "Welke is een **nature-based solution**?",
         options: ["Mangrove-bossen planten tegen kust-erosie","Hoge betonnen dijk","Diepe pomp-systemen","Stormvloedkering"],
         answer: 0,
-        wrongHints: [null, "Niet — harde-techniek.", "Niet — harde-techniek.", "Niet — harde-techniek."],
+        wrongHints: [null, "Beton is harde techniek — wat zou de natúúr zelf kunnen doen tegen golven?", "Pompen zijn machines — 'nature-based' betekent: de natuur doet het werk. Welke optie past?", "Indrukwekkende techniek, maar door mensen gebouwd — welke oplossing groeit vanzelf?"],
         uitlegPad: {
           stappen: [{ titel: "Natuur helpt zelf", tekst: "**Nature-based solutions** = oplossingen die natuur inschakelen: mangroves (golven dempen), wadlanden (bufferen vloed), bomen (hitte verminderen), meanders herstellen. Vaak goedkoper + bio-divers + duurzaam dan beton-bouw." }],
           theorie: "Voorbeeld: Vietnam plant mangroves langs kust — kost veel minder dan zee-wering bouwen + biedt ook visserij.",
@@ -292,7 +292,7 @@ const steps = [
         q: "Wat is een **Day Zero**-scenario?",
         options: ["Stad zonder drinkwater (Kaapstad 2018)","Eerste dag warming","Begin oorlog","Aardbeving"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "'Day Zero' telt af naar de dag dat iets óp is — wat raakt er op in een droge stad?", "Geen militaire term — denk aan de kranen in Kaapstad in 2018.", "Geen plotselinge ramp — het is een dag waar je maandenlang naartoe telt. Wat raakt op?"],
         uitlegPad: {
           stappen: [{ titel: "Water op", tekst: "**Kaapstad 2018**: na 3 jaar droogte dreigde stad-reservoirs leeg op een 'Day Zero' → 4 mln mensen zonder kraanwater. Met rantsoenering (50 L per dag per persoon) net vermeden. Toekomst: meer steden risico (Mexico City, Lima)." }],
           theorie: "Cito-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",

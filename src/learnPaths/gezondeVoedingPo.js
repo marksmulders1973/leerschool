@@ -77,7 +77,7 @@ const steps = [
         q: "Wat heeft **vezels**?",
         options: ["Volkoren + groente", "Snoep", "Frisdrank", "Boter"],
         answer: 0,
-        wrongHints: [null, "Geen.", "Geen.", "Geen."],
+        wrongHints: [null, "Snoep is vooral suiker — vezels zitten in dingen die uit planten komen.", "Frisdrank is water met suiker — waar zitten de 'draadjes' van de plant in?", "Boter is vet — vezels komen uit graan en planten. Welke optie past?"],
       },
       {
         q: "Welke vitamine vooral uit **zon**?",
@@ -243,7 +243,7 @@ const steps = [
     title: "Eind-toets — voeding mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Vlees geeft vooral eiwit en ijzer — vitamine C komt uit iets vers en plantaardigs.", "Boter is vooral vet — denk aan fruit en verse groente.", "Suiker geeft alleen energie, geen vitamines — wat eet je vers?"] },
       { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te weinig."] },
       { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klein.", "Buiten schijf.", "Buiten schijf."] },
       { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Niet bestaand"], answer: 0, wrongHints: [null, "Vegetariër.", "Tegenovergesteld.", "Wel."] },
@@ -331,7 +331,7 @@ const steps = [
       { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren (groente/fruit)","Bruin alleen","Wit alleen","Alles geel"], answer: 0, wrongHints: [null, "Vezelarm.", "Vezelarm.", "Niet."] },
       { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)","Verzadigd (chips)","Geen vet eten","Friet"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Niet — wel iets nodig.", "Niet."] },
       { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen","Energie","Stollen","Zien"], answer: 0, wrongHints: [null, "Koolhydraten.", "Bloedplaatjes.", "Vitamine A."] },
-      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null, "Chips is vooral zout en vet — calcium is voor je bótten. Wat drink je daarvoor?", "Cola bevat juist stoffen die calcium tegenwerken — wat komt er van de koe?", "Snoep is suiker — welk voedsel maakt je botten sterk?"] },
       { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika","Brood","Patat","Vlees"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet primair."] },
       { q: "Hoeveel **fruit** per dag (Schijf van Vijf)?", options: ["2 stuks","1 stuk","5 stuks","10 stuks"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
       { q: "**Vegetarisch** eten betekent?", options: ["Geen vlees + vis","Geen suiker","Niets","Alleen plantaardig"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel iets.", "Veganistisch."] },

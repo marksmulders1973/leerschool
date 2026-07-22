@@ -121,7 +121,7 @@ const steps = [
         q: "Heeft Latijn **lidwoorden** (de/het)?",
         options: ["Nee","Ja, 2","Ja, 3","Alleen onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — geen.", "Niet — geen.", "Niet — geen."],
+        wrongHints: [null, "Vertaal 'puella': is dat 'het meisje', 'een meisje' of allebei? Wat zegt dat?", "Ook geen drie — hoe weet je in het Latijn óf iets bepaald is? Alleen uit de context.", "Zelfs dat niet — Romaanse talen ontwikkelden lidwoorden pas láter uit het Latijn."],
         uitlegPad: {
           stappen: [{ titel: "Geen artikelen", tekst: "**Latijn heeft geen lidwoorden** — geen 'de/het/een/het'. Context bepaalt. **Italiaans, Spaans, Frans** ontwikkelden lidwoorden later uit demonstratiefiva (illa/illud → la/le)." }],
           niveaus: { basis: "Nee.", simpeler: "Geen lidwoord", nogSimpeler: "A." },
@@ -279,7 +279,7 @@ const steps = [
         q: "**SPQR** staat voor:",
         options: ["Senatus Populusque Romanus","Roma Senatus Pax Quirinus","Romeinse Politie Quartier","Stad Quirinus"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Kijk naar de letter-volgorde: S-P-Q-R — begint jouw optie wel met een S-woord?", "SPQR is Latijn, geen Nederlands — en 'politie' bestond niet in Rome.", "Te kort — het motto noemt twéé groepen: wie bestuurden Rome samen?"],
         uitlegPad: {
           stappen: [{ titel: "Republiek-motto", tekst: "**SPQR** = *Senatus Populusque Romanus* = 'De Senaat + het Volk van Rome'. Symboolt **Romeinse Republiek** (509-27 v.Chr.). Stond op standaarden, gebouwen. Vandaag: nog steeds in gebruik door gemeente Rome (op deksels van rioolputten, gebouwen)." }],
           niveaus: { basis: "Senatus Populusque Romanus.", simpeler: "SPQR = Senaat+Volk", nogSimpeler: "A." },
@@ -309,7 +309,7 @@ const steps = [
         q: "**Idus van maart** (15 maart 44 v.Chr.) is bekend om:",
         options: ["Caesar-moord","Augustus-troon","Rome-stichting","Vesuvius"],
         answer: 0,
-        wrongHints: [null, "Anders datum.", "Anders datum.", "Anders datum."],
+        wrongHints: [null, "Augustus kwam pas ná 44 v.Chr. aan de macht — wie stierf er juist in dat jaar?", "Rome werd volgens de legende in 753 v.Chr. gesticht — dit is eeuwen later. Wat gebeurde er in de senaat?", "De Vesuvius barstte uit in 79 ná Christus — dit is 44 vóór Christus. Denk aan 'Beware the Ides of March'."],
         uitlegPad: {
           stappen: [{ titel: "Idus Martiae", tekst: "**15 maart 44 v.Chr.** = **Idus van Maart**: Caesar vermoord in Senaat door samenzweerders (Cassius, Brutus, ~60 senatoren). Hadden gewaarschuwd door waarzegger 'Hoed u voor de Idus van Maart' (volgens Shakespeare). Caesar's laatste woorden: 'Et tu, Brute?' Brutus was Caesar's vroegere gunsteling." }],
           theorie: "Cito-favoriet datum onthouden. Beroemd ook door Shakespeare's *Julius Caesar* (1599).",

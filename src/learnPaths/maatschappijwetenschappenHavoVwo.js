@@ -34,7 +34,7 @@ const steps = [
         q: "Max Weber's **drie soorten gezag** zijn:",
         options: ["Traditioneel / charismatisch / rationeel-legaal","Goed / slecht / neutraal","Wettelijk / illegaal","Mannelijk / vrouwelijk / divers"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Weber oordeelt niet over goed of slecht — hij vraagt: waaróm accepteren mensen gezag?", "Dat is maar één as (wet) — Weber onderscheidt ook gewoonte en persoonlijke uitstraling.", "Gaat niet over gender — denk aan: erfelijke koning, meeslepende leider, gekozen bestuurder."],
         uitlegPad: {
           stappen: [{ titel: "Weber 1922", tekst: "**Max Weber**: drie types gezag.\n• **Traditioneel** (koning erft).\n• **Charismatisch** (uitstraling).\n• **Rationeel-legaal** (regels).\n\nModerne staat = vooral rationeel-legaal." }],
           niveaus: { basis: "Trad/char/rat.", simpeler: "Weber-3", nogSimpeler: "A." },
@@ -235,7 +235,7 @@ const steps = [
         q: "Welk recht is **privaat recht**?",
         options: ["Koopcontract tussen burgers","Strafrecht","Belastingrecht","Vreemdelingenrecht"],
         answer: 0,
-        wrongHints: [null, "Niet — publiek.", "Niet — publiek.", "Niet — publiek."],
+        wrongHints: [null, "Bij strafrecht staat de stáát tegenover de verdachte — waar staan burgers tegenover elkáár?", "Belasting betaal je aan de overheid — dat is publiek. Waar is geen overheid bij betrokken?", "De IND is een overheidsdienst — zoek de relatie tussen twee gewone burgers."],
         uitlegPad: {
           stappen: [{ titel: "Burgers onderling", tekst: "**Privaat (civiel) recht**: regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huur, huwelijk, schadevergoeding. Conflict → civiele rechter (kantonrechter, rechtbank). **Publiek recht**: staat ↔ burger: strafrecht (overheid vervolgt), bestuursrecht (vergunning), staatsrecht (grondwet), belastingrecht." }],
           niveaus: { basis: "Koopcontract.", simpeler: "Privaat = burger-burger", nogSimpeler: "A." },
@@ -295,7 +295,7 @@ const steps = [
         q: "**Anomie** (Durkheim) is:",
         options: ["Normloosheid bij snelle maatschappelijke verandering","Een tropische ziekte","Een woord-grap","Belastingvorm"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Geen ziekte — al voelt het wel als een 'kwaal' van de samenleving. Wat valt er weg?", "Durkheim was bloedserieus — 'a-nomie' = zonder 'nomos' (wet/norm). Wat betekent dat?", "Niets met geld — het gaat over regels en houvast die verdwijnen."],
         uitlegPad: {
           stappen: [{ titel: "Ontworteling", tekst: "**Anomie** (Durkheim): gebrek aan duidelijke normen + waarden, vaak bij snelle maatschappelijke verandering (industrialisatie, oorlog, COVID). Mensen voelen zich ontworteld → angst + zelfdoding-risico (Durkheim toonde aan met zelfdoding-statistieken)." }],
           niveaus: { basis: "Normloosheid.", simpeler: "Anomie = normloos", nogSimpeler: "A." },

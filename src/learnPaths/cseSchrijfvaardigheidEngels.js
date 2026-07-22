@@ -160,7 +160,7 @@ const steps = [
         q: "Welk **synoniem** voor 'big'?",
         options: ["significant", "good", "fast", "old"],
         answer: 0,
-        wrongHints: [null, "Andere betekenis.", "Andere betekenis.", "Andere betekenis."],
+        wrongHints: [null, "'Good' zegt iets over kwaliteit — 'big' over omvang of belang.", "'Fast' gaat over snelheid — welk woord gaat over grootte of gewicht?", "'Old' gaat over leeftijd — zoek een woord voor 'groot/belangrijk'."],
       },
       {
         q: "Wat **WEL meenemen** in samenvatting?",
@@ -256,7 +256,7 @@ const steps = [
         q: "Welk voorzetsel? *'I am good ___ swimming.'*",
         options: ["at", "in", "on", "with"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "'Good in' is de letterlijke NL-vertaling ('goed in') — Engels gebruikt een ander voorzetsel.", "'Good on' bestaat niet in deze betekenis — denk aan 'She's brilliant ___ maths.'", "'Good with' gebruik je bij mensen of dingen ('good with kids') — niet bij een vaardigheid."],
       },
       {
         q: "*'Yesterday I ___ to the cinema.'* Welke tijd?",
@@ -277,7 +277,7 @@ const steps = [
         q: "Aanhef voor **formele brief** (naam onbekend)?",
         options: ["Dear Sir or Madam,", "Hi!", "Dear friend,", "Hello!"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Informeel.", "Informeel."],
+        wrongHints: [null, "'Hi!' schrijf je aan een vriend — hoe begin je een brief aan een onbekende instantie?", "'Dear friend' klinkt vriendelijk, maar je ként deze persoon niet — wat is de vaste formule dan?", "'Hello!' is spreektaal — welke aanhef is de standaard als je geen naam weet?"],
       },
       {
         q: "Sign-off bij **'Dear Mrs Brown'**?",
