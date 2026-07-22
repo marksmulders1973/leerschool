@@ -24,7 +24,7 @@ Alle adressen geverifieerd via de eigen contactpagina van de bibliotheek. Mark v
 |---|---|---|---|---|
 | OBA (Amsterdam) | klantenservice@oba.nl | 2026-07-09 | | |
 | Bibliotheek Zuid-Kennemerland (Haarlem) | klantenservice@bibliotheekzuidkennemerland.nl | 2026-07-09 | | |
-| De Nieuwe Bibliotheek (Almere) | info@denieuwebibliotheek.nl | 2026-07-09 | | |
+| De Nieuwe Bibliotheek (Almere) | info@denieuwebibliotheek.nl | 2026-07-09 | 09-07 doorgestuurd naar Communicatie/Educatie; 22-07 afwijzing ("mooi initiatief, geen ruimte op onze platformen") | ❌ Nee |
 | Bibliotheek Amstelland (Amstelveen) | servicedesk@debibliotheekamstelland.nl | 2026-07-09 | | |
 | Bibliotheek Gooi en Meer (Hilversum) | helpdesk@bibliotheekgooiplus.nl | 2026-07-09 | | |
 | Bibliotheek Kennemerwaard (Alkmaar) | klantenservice@bknw.nl | 2026-07-09 | | |
