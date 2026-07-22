@@ -226,7 +226,7 @@ const steps = [
         q: "Welke Nederlandse **administratie** komt van Napoleon?",
         options: ["Burgerlijke staat + achternamen + kadaster", "Belasting", "Politie", "Brandweer"],
         answer: 0,
-        wrongHints: [null, "Bestond al.", "Bestond al.", "Bestond al."],
+        wrongHints: [null, "Heersers hieven al eeuwen vóór Napoleon belasting — is dat echt iets wat híj als nieuwe administratie invoerde?", "Ordehandhaving bestond al lang voor 1800 in steden — kwam dat pas met Napoleon?", "Mensen blusten al eeuwenlang samen branden — is dat een Napoleontische vernieuwing van het bestuur?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is bijzonder", tekst: "Napoleon dwong administratie-vernieuwingen door die nog steeds in NL bestaan." },

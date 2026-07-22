@@ -477,7 +477,7 @@ const steps = [
       { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null, "Niet — 5−4=1 niet 5.", "Niet.", "Komma vergeten."] },
       { q: "Voordeligst: 3 × €4 OF 1× €11?", options: ["1× €11","3× €4","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — duurder.", "Niet — verschil €1.", "Wel — vergelijken."] },
       { q: "10% korting op €40 = nieuwe prijs?", options: ["€36","€30","€4","€39"], answer: 0, wrongHints: [null, "Niet — 10% niet 25%.", "Dat is korting.", "Niet — 10% niet 2,5%."] },
-      { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null, "Tel de centen los op: 50 + 25 cent, hoeveel is dat samen? Klopt jouw uitkomst dan nog?", "Heb je de hele euro's meegeteld? 8 + 1 euro erbij, en dan pas de centen.", "Dat lijkt naar boven afgerond. Reken de centen precies: 50 + 25 cent."] },
       { q: "Welke is **goedkoper** per stuk: 3×€6 OF 5×€8?", options: ["3×€6 (€2/stuk)","5×€8 (€1,60/stuk)","Gelijk","Niet te zeggen"], answer: 1, wrongHints: ["€2 per stuk — dat is juist duurder dan €1,60.",null,"Niet gelijk — €2 vs €1,60 scheelt €0,40 per stuk.","Wél te zeggen — reken de prijs per stuk (8 ÷ 5)."] },
       { q: "**€25 ÷ 5** = ?", options: ["€5","€20","€30","€125"], answer: 0, wrongHints: [null, "Niet — −, niet ÷.", "Niet.", "Niet."] },
       { q: "Je hebt €100. Koopt boek €18 + spel €25. Over?", options: ["€57","€43","€73","€67"], answer: 0, wrongHints: [null, "Dat is uitgaven.", "Niet.", "Niet."] },

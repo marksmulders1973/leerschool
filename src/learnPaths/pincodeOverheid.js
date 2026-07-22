@@ -504,7 +504,7 @@ const steps = [
         q: "Tijdens **hoogconjunctuur**:",
         options: ["Hoge groei + lage werkloosheid + lonen stijgen", "Recessie", "Krimp van BBP", "Veel werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Tegendeel.", "Tegendeel."],
+        wrongHints: [null, "Een recessie is juist een dip in de economie — past dat bij het woorddeel 'hoog' in hoogconjunctuur?", "Als het BBP krimpt, draait de economie terug — hoort dat bij de topfase of bij de dalfase?", "Veel werklozen hoort bij slechte tijden; in een bloeiende economie hebben juist veel mensen werk."],
         uitlegPad: {
           stappen: [{ titel: "Boom-fase", tekst: "Hoogconjunctuur = goede tijden. BBP groeit snel, bedrijven hebben veel orders, weinig werkloosheid, lonen onder druk → stijgen. Risico: oververhitting + inflatie." }],
           woorden: [{ woord: "hoogconjunctuur", uitleg: "Bovenkant van de economische cyclus. Hoge groei + lage werkloosheid." }, { woord: "oververhitting", uitleg: "Economie groeit te snel → grondstoffen-tekort + inflatie." }],

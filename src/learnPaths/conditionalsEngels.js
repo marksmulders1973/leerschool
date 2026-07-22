@@ -65,7 +65,7 @@ const steps = [
         q: "Welke 2 **delen** heeft een conditional?",
         options: ["If-clause + main clause", "Subject + object", "Verb + adverb", "Adjective + noun"],
         answer: 0,
-        wrongHints: [null, "Ander concept.", "Ander concept.", "Ander concept."],
+        wrongHints: [null, "Subject en object zitten in bijna élke zin — maar een conditional draait juist om een vóórwaarde. Welk woordje verwacht je dan?", "Werkwoord en bijwoord zeggen iets over de actie — maar een conditional gaat over een 'áls...dan'-situatie. Welk deel hoort daarbij?", "Bijvoeglijk + zelfstandig naamwoord vormen een omschrijving, zoals 'a big house' — heeft dat met een voorwaarde te maken?"],
       },
       {
         q: "**'If I had a car, I would drive.'** Welk type?",

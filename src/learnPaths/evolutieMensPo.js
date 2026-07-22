@@ -145,7 +145,7 @@ const steps = [
         q: "Wie was **Lucy**?",
         options: ["Australopithecus-skelet uit Ethiopië 1974", "Eerste mens op maan", "Schilderij", "Auto"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Lucy hoort bij het verhaal van de mens miljoenen jaren geleden — bestond ruimtevaart toen al?", "Lucy is iets wat wetenschappers hebben opgegraven — hang je zoiets aan de muur?", "Deze naam hoort bij onderzoek naar waar de mens vandaan komt — heeft een auto daarmee te maken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Lucy?", tekst: "**Lucy** is de bijnaam van een beroemd **3,2 miljoen jaar oud skelet** van een **Australopithecus afarensis** — een vroege mens-voorouder. Gevonden in **Ethiopië** in **1974**." },
@@ -324,7 +324,7 @@ const steps = [
       },
       { q: "Wie bedacht de **evolutie-theorie**?", options: ["Charles Darwin","Isaac Newton","Albert Einstein","Galileo"], answer: 0, wrongHints: [null, "Zwaartekracht.", "Relativiteit.", "Astronomie."] },
       { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepaste dieren overleven en krijgen meer nakomelingen","Toeval","Hard werken","Geluk"], answer: 0, wrongHints: [null, "Niet — patroon, geen toeval.", "Dieren werken niet.", "Wel maar systematisch."] },
-      { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null, "Hawaï ligt midden in de Grote Oceaan bij Amerika — maar Darwin voer met de Beagle langs de kust van Zuid-Amerika. Klopt dat?", "IJsland ligt koud in het hoge noorden — passen kleine zangvogeltjes bij zo'n ijzige plek?", "Cuba ligt in de Caraïbische Zee — maar Darwins eilanden liggen vlak bij de evenaar aan de westkant van Zuid-Amerika. Welke groep is dat?"] },
       { q: "Wie was **Lucy**?", options: ["Een 3,2 mln jaar oud fossiel mens-voorouder","Een schilder","Een wetenschapper","Een schip"], answer: 0, wrongHints: [null, "Niet.", "Niet — een fossiel met bijnaam.", "Niet."] },
       { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier","Steen","Levend organisme","Niet relevant"], answer: 0, wrongHints: [null, "Te algemeen.", "Niet — overblijfsel.", "Wel."] },
       { q: "Wie is onze **dichtste verwant** in het dierenrijk?", options: ["Chimpansees","Honden","Katten","Krokodillen"], answer: 0, wrongHints: [null, "Verder weg.", "Verder weg.", "Veel verder."] },

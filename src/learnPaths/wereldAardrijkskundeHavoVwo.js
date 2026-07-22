@@ -73,7 +73,7 @@ const steps = [
         q: "Welk **antiglobalisering**-fenomeen?",
         options: ["Re-shoring (bedrijven terug naar westen)","Containerschepen","Internet","Vliegreis"],
         answer: 0,
-        wrongHints: [null, "Globaliseringsfactor.", "Globaliseringsfactor.", "Globaliseringsfactor."],
+        wrongHints: [null, "Containerschepen brengen juist goedkope goederen de hele wereld over — versterkt dat globalisering of remt het die?", "Het internet verbindt de wereld en maakt handel over grenzen makkelijker — past dat bij ánti-globalisering?", "Vliegreizen brengen landen en mensen dichter bij elkaar — wijst dat op méér of minder globalisering?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenbeweging", tekst: "**Re-shoring** = productie terugbrengen naar thuisland. Reden: COVID-19 + Suezkanaal-blokkade 2021 + VS-China-spanningen + chip-tekorten. Voorbeelden: **Intel** fabriek Magdeburg DE (€30 mld), **TSMC** Arizona VS. Trend van deglobalisering / 'friend-shoring' (alleen bij vrienden). Voorbeeld trade war: Trump 2018-tarieven + Biden's CHIPS Act 2022." }],
           niveaus: { basis: "Re-shoring.", simpeler: "Re-shoring = anti-glob", nogSimpeler: "A." },
@@ -192,7 +192,7 @@ const steps = [
         q: "Welke is **success-story Sub-Sahara** sinds 1994?",
         options: ["Rwanda (post-genocide wederopbouw)","Sudan (oorlog)","DRC (instabiel)","Centraal-Afrika"],
         answer: 0,
-        wrongHints: [null, "Conflict-zone.", "Conflict-zone.", "Conflict-zone."],
+        wrongHints: [null, "Een land dat in oorlog verkeert, is lastig een succesverhaal te noemen — past 'oorlog' bij wederopbouw en groei?", "'Instabiel' betekent onrust en wisselende macht — kan zo'n land een voorbeeld van geslaagd herstel zijn?", "De Centraal-Afrikaanse Republiek kampt zelf met conflict en armoede — staat dat land bekend om succesvolle wederopbouw?"],
         uitlegPad: {
           stappen: [{ titel: "Kigali = Singapore Afrika", tekst: "**Rwanda**: na 1994-genocide (~800.000 Tutsi's vermoord in 100 dagen) snelle wederopbouw onder Kagame. Tech-hub Kigali, schoonste stad Afrika, weinig corruptie. Schaduw: autoritair regime + persvrijheid beperkt. Cito-favoriet succes-voorbeeld in 'ontwikkelingslanden'." }],
           theorie: "Andere succes: Botswana (diamant + stabiele democratie), Ghana (democratie), Mauritius (toerisme + diensten).",

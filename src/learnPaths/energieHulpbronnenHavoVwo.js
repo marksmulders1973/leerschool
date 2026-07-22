@@ -246,7 +246,7 @@ const steps = [
           "VS minder gas-export"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Sancties en dichtgedraaide gaskranen raakten een EU die ~40% van zijn gas uit Rusland haalde — kun je dan echt van 'geen impact' spreken?", "Als het grootste importblok plots op zoek moet naar dure alternatieven (LNG), gaan schaarse energieprijzen dan omhoog of omlaag?", "De VS werd juist een belangrijke LNG-leverancier voor Europa in 2022 — klopt 'minder export' dan wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Wake-up call afhankelijkheid", tekst: "EU was ~40% afhankelijk van Russisch gas (DE bijna 60%). Sancties tegen Rusland + Russen draaiden gas dicht → prijzen 10× hoger zomer 2022. EU haastte: LNG uit VS/Qatar, hernieuwbaar versnellen, energiebesparing. Pijnlijk maar leerzaam: energie-onafhankelijkheid is strategisch belang." },

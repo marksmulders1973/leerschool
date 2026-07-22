@@ -39,7 +39,7 @@ const steps = [
         q: "Wat is **clair-obscur**?",
         options: ["Licht-donker contrast", "Soort kleur", "Naam schilder", "Penseel"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Clair-obscur draait niet om één kleur — denk juist aan het verschil tussen fel licht en diepe schaduw.", "Het is geen persoon maar een schildertechniek — wat doet die techniek met licht en donker?", "Een penseel is gereedschap; clair-obscur is het effect dat je ermee máákt met licht en donker."],
       },
     ],
   },

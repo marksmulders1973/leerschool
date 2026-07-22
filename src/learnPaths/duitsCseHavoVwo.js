@@ -226,7 +226,7 @@ const steps = [
         q: "Wat is **Bundestag**?",
         options: ["Federale parlement Duitsland","Munt","Krant","Dier"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De euro is de Duitse munt — zou een land zijn geld 'Bundestag' noemen?", "Een krant heeft een titel als Bild of FAZ — klinkt '-tag' (vergadering) daar als een krant?", "Bundestag is een plek waar politici besluiten nemen — past dat bij een dier?"],
         uitlegPad: {
           stappen: [{ titel: "Politiek Duits", tekst: "**Bundestag** = federale parlement Duitsland in Berlin (Reichstag-gebouw). Verkozen leden + Bondskanselier daar gekozen. Daarnaast **Bundesrat** = vertegenwoordiging van 16 deelstaten." }],
           niveaus: { basis: "Federale parlement.", simpeler: "Bundestag = parlement", nogSimpeler: "A." },
@@ -258,7 +258,7 @@ const steps = [
         q: "**Energiewende** verwijst naar:",
         options: ["Overgang van fossiel/kern naar hernieuwbare energie","Stoom-revolutie 19e eeuw","Oost-uitbreiding EU","Vrouwen-emancipatie"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Energiewende is een actueel beleid, geen historische omwenteling — past de stoommachine van 200 jaar terug daarbij?", "Dit gaat over landsgrenzen en de EU — heeft het woorddeel 'Energie' daar iets mee te maken?", "Emancipatie draait om mensen en rechten — waar wijst 'Energie' juist naartoe?"],
         uitlegPad: {
           stappen: [{ titel: "Energie-omslag", tekst: "**Energiewende** = Duitse beleid sinds 2000: overstap van fossiel + kernenergie naar **hernieuwbaar** (zon, wind, biomassa). Versneld na Fukushima 2011. **Kernuitstap 2023** voltooid: laatste 3 kerncentrales gesloten. Hot topic: kost veel, leverde nog niet alles op." }],
           theorie: "Vergelijking: FR zet juist op kern (~70%), DE op hernieuwbaar. Politiek omstreden in DACH.",

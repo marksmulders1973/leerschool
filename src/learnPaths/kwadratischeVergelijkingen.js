@@ -504,7 +504,7 @@ const steps = [
       },
       { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8","x = 256"], answer: 0, wrongHints: [null, "Niet — vergeet niet de negatieve.", "Te hoog.", "x² niet kwadrateren."] },
       { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Niet — vergeet negatieve.", "Niet — kwadraat al weg.", "Niet."] },
-      { q: "Wat is **factoriseren**?", options: ["x²+bx schrijven als x(x+b)","Optellen","Aftrekken","Delen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is **factoriseren**?", options: ["x²+bx schrijven als x(x+b)","Optellen","Aftrekken","Delen"], answer: 0, wrongHints: [null, "Optellen is gewoon + doen — maar bij factoriseren splits je een uitdrukking juist op in stukjes die je vermenigvuldigt.", "Aftrekken is − doen; factoriseren gaat niet over wegnemen maar over herschrijven als een product.", "Delen is één losse bewerking; bij factoriseren zoek je een gemeenschappelijke factor om buiten haakjes te halen."] },
       { q: "Factor 'x' uit x² + 5x: =?", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
       { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "Niet — beide.", "Niet — beide.", "Niet — andersom teken."] },
       { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Niet — min.", "Niet.", "Niet."] },

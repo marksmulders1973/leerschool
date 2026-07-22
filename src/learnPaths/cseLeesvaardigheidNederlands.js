@@ -229,7 +229,7 @@ const steps = [
         q: "Een **column** met humor + mening — bedoeling?",
         options: ["Amuseren + overtuigen", "Alleen informeren", "Alleen activeren", "Alleen beschrijven"],
         answer: 0,
-        wrongHints: [null, "Te beperkt.", "Te beperkt.", "Te beperkt."],
+        wrongHints: [null, "Alleen informeren = puur feiten geven. Maar deze schrijver laat óók zijn mening horen en maakt het grappig — is 'alleen' dan genoeg?", "Activeren = de lezer tot actie aanzetten. Roept een humoristische mening-column je echt op om iets te dóén?", "Beschrijven = neutraal weergeven zonder oordeel. Past dat bij een tekst vol humor én een eigen mening?"],
       },
       {
         q: "*'Iedereen zou vegetarier moeten worden, omdat ...'* Welke bedoeling?",

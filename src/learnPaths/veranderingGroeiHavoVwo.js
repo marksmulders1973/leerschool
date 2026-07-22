@@ -210,7 +210,7 @@ const steps = [
         q: "Welke schaal is **logaritmisch**?",
         options: ["pH (zuurgraad)","Lengte in cm","Tijd in seconden","Massa in kg"],
         answer: 0,
-        wrongHints: [null, "Lineair.", "Lineair.", "Lineair."],
+        wrongHints: [null, "Bij cm is elke stap even groot: 2 cm is precies 2× 1 cm. Een log-schaal springt per stap juist keer 10 — geldt dat hier?", "Seconden lopen gelijkmatig op; bij een log-schaal betekent elke stap een factor méér. Past dat bij tijd?", "Kilo's tel je gewoon op (2 kg = 2× 1 kg) — dat is lineair, niet logaritmisch."],
         uitlegPad: {
           stappen: [{ titel: "pH = −log[H₃O⁺]", tekst: "**pH** is logaritmisch: pH 3 is 10× zuurder dan pH 4, 100× zuurder dan pH 5. Andere log-schalen: **Richter** (aardbeving), **decibel** (geluid), **magnitude** (sterren). Reden: schaal-bereik te groot voor lineair (10⁻¹⁴ tot 10⁰ M voor H⁺)." }],
           niveaus: { basis: "pH.", simpeler: "pH = log", nogSimpeler: "pH" },

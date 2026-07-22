@@ -515,7 +515,7 @@ const steps = [
       { q: "**P.P. van 'voir'** (zien) — onregelmatig?", options: ["vu","vé","voyé","voir"], answer: 0, wrongHints: [null,"-er-vorm.","Niet bestaand.","Infinitief."] },
       { q: "**P.P. van 'être'** zelf?", options: ["été","êté","étu","étri"], answer: 0, wrongHints: [null,"Geen accent op eerste e.","Niet.","Niet."] },
       { q: "**Bij être-ww** komt overeenkomst met onderwerp. Welke -e/-s/-es?", options: ["Vrouw +e, meervoud +s, vrouw-mv +es","Geen verandering","Altijd +s","Alleen +e"], answer: 0, wrongHints: [null,"Wel.","Niet altijd.","Onvolledig."] },
-      { q: "Welke is een **être-werkwoord**?", options: ["partir (vertrekken)","manger","parler","finir"], answer: 0, wrongHints: [null,"Avoir.","Avoir.","Avoir."] },
+      { q: "Welke is een **être-werkwoord**?", options: ["partir (vertrekken)","manger","parler","finir"], answer: 0, wrongHints: [null,"Manger (eten) brengt je nergens naartoe — être hoort bij beweging of verandering van plaats. Past eten daarbij?","Parler (praten) is geen verplaatsing; de être-lijst gaat over komen, gaan en vallen.","Finir (eindigen) beschrijft geen beweging — welk werkwoord in het rijtje gaat wél over verplaatsen?"] },
       { q: "**Open vraag**: vorm de p.p. van 'parler' (spreken).", kind: "open", acceptedAnswers: ["parlé"], explanation: "-er-ww → vervang -er door -é: parlé." },
       { q: "**Open vraag**: vul aan: 'Hier, j'ai ___ un livre.' (acheter — kopen).", kind: "open", acceptedAnswers: ["acheté"], explanation: "acheter → p.p. = acheté." },
     ],

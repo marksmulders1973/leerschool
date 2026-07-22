@@ -387,7 +387,7 @@ const steps = [
           "Sport"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Onzin."],
+        wrongHints: [null, "De naam komt van de donut-vórm van het model, niet van het gebak zelf — waar staat die ronde vorm voor?", "Het gaat niet om een mond maar om een ronde ring-vorm die een economisch idee weergeeft.", "Donut-economy heeft niets met sport te maken — het is een model over de grenzen aan economische groei."],
         uitlegPad: {
           stappen: [
             { titel: "Kate Raworth 2017", tekst: "Donut-vorm: binnenste cirkel = sociale ondergrens (geen mens zonder onderdak, eten, gezondheid, etc.). Buitenste = planetaire grens (klimaat, biodiversiteit). Economie moet TUSSEN beide rings opereren. Amsterdam eerste stad die dit officieel omarmde (2020) als beleidskader." },

@@ -57,7 +57,7 @@ const steps = [
         q: "Welke is een **formele aanhef**?",
         options: ["Geachte heer Jansen,", "Hoi Tom!", "Hey daar,", "Lieve Anna,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Informeel.", "Informeel."],
+        wrongHints: [null, "'Hoi' met een voornaam en een uitroepteken — gebruik je dat in een brief aan een bedrijf of juist tegen een vriend?", "'Hey daar' klinkt losjes en spreektalig — past dat in een nette brief aan een instantie?", "'Lieve' gebruik je voor iemand die je goed kent — hoort dat bij een zakelijke, afstandelijke brief?"],
       },
       {
         q: "**Zeer formele** ondertekening?",
@@ -282,7 +282,7 @@ const steps = [
         q: "**Hoogachtend** — hoe formeel?",
         options: ["Zeer formeel", "Informeel", "Persoonlijk", "Slang"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "'Hoogachtend' klinkt plechtig en afstandelijk — is dat losse, informele taal?", "Zou je 'Hoogachtend' onder een briefje aan je beste vriend zetten? Voelt dat warm en persoonlijk?", "Slang is straattaal onder vrienden — past het deftige woord 'Hoogachtend' daarbij?"],
       },
       {
         q: "Welk signaalwoord = **conclusie**?",

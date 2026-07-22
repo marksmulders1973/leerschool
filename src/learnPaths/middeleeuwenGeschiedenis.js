@@ -217,7 +217,7 @@ const steps = [
         q: "Wat **droeg** de pest over op mensen?",
         options: ["Vlooien op ratten", "Vogels", "Wind", "Eten"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "De pest kwam niet uit de lucht gevlogen — denk aan kleine beestjes die op knaagdieren in de vieze steden zaten.", "Wind verspreidt geen builenpest — er zat een klein diertje tussen dat de zieke bacterie meedroeg en mensen beet.", "Bedorven eten geeft buikpijn, maar de builenpest kreeg je door een beet, niet via je maaltijd."],
       },
       {
         q: "Wie vond de **boekdrukkunst** uit?",

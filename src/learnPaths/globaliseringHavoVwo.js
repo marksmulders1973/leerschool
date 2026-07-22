@@ -94,7 +94,7 @@ const steps = [
           "Vrije handel"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Hyperglobalisering betekent grenzen nóg verder openstellen — deed het VK dat met Brexit, of juist het omgekeerde?", "Politieke integratie betekent dichter naar elkaar toe groeien — stapte het VK naar de EU toe, of eruit?", "Vrije handel maakt grenzen juist makkelijker — leverde het verlaten van de EU minder of méér handelsdrempels op?"],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar nationaal", tekst: "VK verliet EU → terug naar zelfstandige handel/regels. Symbolisch voor wereldwijde anti-globalisering-beweging: Trump (VS), Brexit (UK), Le Pen (FR), Modi-protectionisme (India). Reactie op verliezers van globalisering + verlies nationale identiteit." },
@@ -404,7 +404,7 @@ const steps = [
           "WO2-akkoorden"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Onzin."],
+        wrongHints: [null, "De SDG's gaan over armoede, klimaat en gezondheid — hebben Olympische idealen over sport daar iets mee te maken?", "De SDG's zijn wereldwijd afgesproken door alle VN-landen — passen richtlijnen van alléén de EU daarbij?", "WO2-akkoorden dateren van rond 1945 — de doelen die de SDG's vervingen liepen juist rond 2000-2015. Klopt die tijd?"],
         uitlegPad: {
           stappen: [
             { titel: "MDG → SDG", tekst: "MDGs (2000-2015): 8 doelen, vooral armoede + gezondheid in arme landen. Resultaten gemengd (sommige gehaald, andere niet). Vervangen 2015 door 17 SDGs: breder + voor ALLE landen (ook rijke moeten klimaat + ongelijkheid aanpakken)." },

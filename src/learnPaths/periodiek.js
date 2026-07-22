@@ -696,7 +696,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
       { q: "Bij y = sin(x) + 5 — wat is **evenwichtslijn**?", options: ["y = 5","y = 0","y = 1","x = 5"], answer: 0, wrongHints: [null, "Dat is bij gewone sin(x).", "Niet.", "Niet — y-waarde."] },
       { q: "**Sin(90°)** = ?", options: ["1","0","−1","½"], answer: 0, wrongHints: [null,"sin(0°).","sin(270°).","sin(30°)."] },
       { q: "**Cos(90°)** = ?", options: ["0","1","−1","½"], answer: 0, wrongHints: [null,"cos(0°).","cos(180°).","cos(60°)."] },
-      { q: "**Frequentie** is het omgekeerde van?", options: ["Periode","Amplitude","Faseverschuiving","Evenwichtslijn"], answer: 0, wrongHints: [null,"Niet.","Niet.","Niet."] },
+      { q: "**Frequentie** is het omgekeerde van?", options: ["Periode","Amplitude","Faseverschuiving","Evenwichtslijn"], answer: 0, wrongHints: [null,"Amplitude gaat over hoe hóóg de golf uitslaat, niet over hoe vaak hij herhaalt — heeft frequentie daarmee te maken?","Faseverschuiving vertelt waar de golf horizontaal begint, niet hoe vaak per seconde hij trilt.","De evenwichtslijn is de middenhoogte van de golf — frequentie is 1 gedeeld door de tijd van één trilling. Welke grootheid is die tijd?"] },
       { q: "Een **golf met periode 4** heeft welke frequentie?", options: ["¼ (0,25)","4","16","2"], answer: 0, wrongHints: [null,"Dat is periode.","Niet.","Halve periode."] },
       { q: "**Amplitude** = ?", options: ["Maximale uitwijking vanaf evenwichtslijn","Periode","Frequentie","Hoek"], answer: 0, wrongHints: [null,"Andere grootheid.","Andere grootheid.","Niet."] },
       { q: "Bij y = 2sin(x): wat is **amplitude**?", options: ["2","1","4","½"], answer: 0, wrongHints: [null,"Standaard sin.","Verdubbeld.","Halveerd."] },

@@ -44,7 +44,7 @@ const steps = [
         q: "**Empirist** John Locke gebruikt term *tabula rasa* voor:",
         options: ["Geest als leeg schrijfblok bij geboorte","Belastingbrief","Stoel","Kunstwerk"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Locke gebruikt de term in zijn kennisleer over de menselijke geest, niet over administratie — waar zou een empirist het dan over hebben?", "Tabula rasa is een beeldspraak over hoe kennis ontstaat, geen meubelstuk — welk 'iets' begint volgens Locke leeg?", "Het gaat om een filosofisch beeld van de geest bij geboorte, niet om een fysiek voorwerp — wat wordt er volgens Locke pas later 'ingevuld'?"],
         uitlegPad: {
           stappen: [{ titel: "Tabula rasa = leeg blad", tekst: "**Locke** stelde: bij geboorte is geest een **tabula rasa** (leeg schrijfblok). Alle kennis ontstaat via ervaring (zintuigen + reflectie). Tegen rationalisten die zeiden dat we aangeboren kennis hebben (Plato: anamnese, Descartes: ideeën van God)." }],
           niveaus: { basis: "Leeg blad.", simpeler: "Tabula rasa = leeg", nogSimpeler: "Leeg" },

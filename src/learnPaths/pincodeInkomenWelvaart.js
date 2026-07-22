@@ -416,7 +416,7 @@ const steps = [
         q: "Welke maatregel **vermindert inkomensongelijkheid**?",
         options: ["Progressieve belasting + toeslagen voor lage inkomens", "Belasting verlagen voor rijken", "Minimumloon afschaffen", "Geen toeslagen meer"],
         answer: 0,
-        wrongHints: [null, "Vergroot ongelijkheid.", "Vergroot ongelijkheid.", "Vergroot ongelijkheid."],
+        wrongHints: [null, "Als juist de rijkste mensen minder belasting betalen, wordt het verschil met de armen dan kleiner of groter?", "Zonder minimumloon kunnen de laagste lonen verder zakken — helpt dat om de kloof te verkleinen?", "Toeslagen geven lage inkomens juist een steuntje; wat gebeurt er met de ongelijkheid als je die weghaalt?"],
         uitlegPad: {
           stappen: [{ titel: "Wat verkleint verschil?", tekst: "Progressieve belasting = rijken betalen MEER % belasting. Toeslagen = lagen krijgen iets extra. Beide trekken de uitersten naar elkaar toe → ongelijkheid daalt." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt mee met het inkomen — hoe meer je verdient, hoe hoger % belasting." }, { woord: "nivellering", uitleg: "Inkomensverschillen KLEINER maken." }],

@@ -179,7 +179,7 @@ const steps = [
         q: "Wie won **Nobelprijs voor denkfouten-onderzoek**?",
         options: ["Daniel Kahneman (2002)", "Einstein", "Darwin", "Newton"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Einstein kreeg zijn Nobelprijs voor natuurkunde (over licht), niet voor onderzoek naar hoe mensen denkfouten maken — past hij?", "Darwin is beroemd om de evolutietheorie en kreeg trouwens nooit een Nobelprijs — kan hij het zijn?", "Newton onderzocht zwaartekracht en beweging, ver vóór er Nobelprijzen bestonden — hoort hij hier?"],
       },
     ],
   },

@@ -94,7 +94,7 @@ const steps = [
         q: "**Femke Bol** is sterk in?",
         options: ["400m horden / 4x400m", "Zwemmen", "Schaatsen", "Tennis"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Femke Bol traint niet in het zwembad — zij presteert juist op de atletiekbaan.", "Denk je aan het ijs? Femke Bol is een atlete van de loopbaan, niet van het schaatsen.", "Femke Bol slaat geen ballen; ze rent hard rondjes met hindernissen — bij welke sport past dat?"],
       },
       {
         q: "**Oranje** komt van?",

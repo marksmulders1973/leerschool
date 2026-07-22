@@ -108,7 +108,7 @@ const steps = [
     title: "Eind-toets — muziek mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Welke componist werd **doof**?", options: ["Beethoven", "Mozart", "Bach", "Vivaldi"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke componist werd **doof**?", options: ["Beethoven", "Mozart", "Bach", "Vivaldi"], answer: 0, wrongHints: [null, "Mozart stierf al jong, op 35 jaar, en kon tot het einde goed horen — past 'doof' bij hem?", "Bach kreeg aan het eind juist problemen met zijn ogen, niet met zijn oren — klopt doofheid dan?", "Vivaldi is beroemd om zijn vioolmuziek; van doofheid is bij hem niets bekend — is hij het?"] },
       { q: "Wie schreef **De Vier Jaargetijden**?", options: ["Vivaldi", "Mozart", "Bach", "Schubert"], answer: 0, wrongHints: [null, "Mozart schreef opera + serenades.", "Bach schreef vooral kerk- + orgelwerken.", "Schubert is bekend om liederen + Onvoltooide Symfonie."] },
       { q: "Wat is **allegro**?", options: ["Snel tempo", "Langzaam", "Stil", "Hard"], answer: 0, wrongHints: [null, "Adagio.", "Piano.", "Forte."] },
       { q: "Hoeveel **strijkers** in symfonieorkest?", options: ["~50-60", "5", "200", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },

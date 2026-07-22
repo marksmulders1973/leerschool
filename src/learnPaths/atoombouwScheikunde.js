@@ -87,7 +87,7 @@ const steps = [
         q: "Een atoom heeft 6 protonen. Welk element is het?",
         options: ["Koolstof (C)", "Zuurstof (O)", "Waterstof (H)", "IJzer (Fe)"],
         answer: 0,
-        wrongHints: [null, "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen."],
+        wrongHints: [null, "Zuurstof staat op plek 8 in het periodiek systeem en heeft dus 8 protonen — klopt dat met 6?", "Waterstof is het allereerste, lichtste element met maar 1 proton — past dat bij 6?", "IJzer is een zwaar metaal met atoomnummer 26 — heeft dat er maar 6?"],
         uitlegPad: {
           stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6" }],
           woorden: [{ woord: "atoomnummer Z", uitleg: "= aantal protonen" }],
@@ -321,7 +321,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Welk element is een **niet-metaal**?",
         options: ["Zuurstof (O)", "IJzer (Fe)", "Koper (Cu)", "Goud (Au)"],
         answer: 0,
-        wrongHints: [null, "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?", "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?", "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?"],
+        wrongHints: [null, "IJzer is hard, glanst en geleidt stroom — hoort zoiets bij de metalen of bij de niet-metalen?", "Koper zit in stroomdraden juist omdat het elektriciteit goed geleidt — is dat typisch voor een niet-metaal?", "Goud is glimmend, buigzaam en geleidt stroom — die eigenschappen horen bij welke groep?"],
         uitlegPad: {
           stappen: [{ titel: "O = niet-metaal", tekst: "Zuurstof is gas, geen metaal." }],
           woorden: [{ woord: "niet-metaal", uitleg: "rechts in tabel, vaak gas" }],

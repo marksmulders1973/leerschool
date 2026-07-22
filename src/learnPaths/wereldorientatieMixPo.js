@@ -230,7 +230,7 @@ const steps = [
         q: "Welke is **NIET een planeet**?",
         options: ["Pluto","Mercurius","Saturnus","Neptunus"],
         answer: 0,
-        wrongHints: [null, "Echte planeet.", "Echte planeet.", "Echte planeet."],
+        wrongHints: [null, "Mercurius draait als kleinste planeet het dichtst om de zon — is dat een echte planeet of niet?", "Saturnus met zijn beroemde ringen is een van de acht grote planeten — hoort die bij de uitzondering?", "Neptunus is de verste grote planeet van de zon — dat is juist wél een echte planeet."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2006 dwergplaneet", tekst: "**Pluto** was van 1930-2006 9e planeet. Sinds 2006 'gedegradeerd' door **Internationale Astronomische Unie (IAU)** tot **dwergplaneet** — te klein + niet 'baan-vrij'. Echte 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Pluto vandaag samen met Eris, Makemake, Haumea = dwergplaneten." }],
           niveaus: { basis: "Pluto.", simpeler: "Pluto = geen planeet", nogSimpeler: "A." },

@@ -744,7 +744,7 @@ const steps = [
       { q: "**f'(x) = 0** wijst op?", options: ["Extreme waarde (max of min)","Snijpunt y-as","Asymptoot","Geen relevant"], answer: 0, wrongHints: [null,"Niet primair.","Niet relevant.","Wel relevant."] },
       { q: "Wat is de **afgeleide** van een **constante** (bv 7)?", options: ["0","7","1","x"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet.","Niet."] },
       { q: "Afgeleide van f(x) = 2x⁵?", options: ["10x⁴","2x⁴","10x⁵","5x⁴"], answer: 0, wrongHints: [null,"Coëfficiënt fout.","Niet — exponent ↓.","Coëfficiënt fout."] },
-      { q: "**Tangent** aan grafiek in punt heeft welke helling?", options: ["f'(x) in dat punt","y-waarde","x²","Constant"], answer: 0, wrongHints: [null,"Niet.","Niet.","Niet."] },
+      { q: "**Tangent** aan grafiek in punt heeft welke helling?", options: ["f'(x) in dat punt","y-waarde","x²","Constant"], answer: 0, wrongHints: [null,"De y-waarde is de hoogte van het punt, niet hoe steil de grafiek daar loopt. Welk begrip beschrijft de steilheid?","x² is de functie zelf, niet de steilheid ervan. Wat vertelt je juist iets over de helling in één punt?","Bij een kromme verandert de steilheid per punt — is de helling van een raaklijn dan wel overal hetzelfde?"] },
       { q: "**Open vraag**: bereken f'(2) als f(x) = x². Typ alleen getal.", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "f'(x) = 2x → f'(2) = 4." },
       { q: "**Open vraag**: wat is afgeleide van f(x) = 6x? Typ alleen getal.", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Afgeleide van ax is a. Hier a=6." },
     ],

@@ -93,7 +93,7 @@ const steps = [
           "Maagsap"
         ],
         answer: 0,
-        wrongHints: [null, "Wel barrière.", "Wel barrière.", "Wel barrière."],
+        wrongHints: [null, "De huid is de eerste fysieke muur die indringers aan de buitenkant tegenhoudt — is dat een externe barrière of niet?", "Slijmvliezen in neus en keel vangen ziekteverwekkers af aan de buitengrens van het lichaam — hoort dat bij de externe of de interne afweer?", "Maagzuur doodt bacteriën in het spijsverteringskanaal nog vóór ze het weefsel bereiken — telt dat als eerste-lijns barrière?"],
         uitlegPad: {
           stappen: [{ titel: "T-cellen zijn intern", tekst: "T-lymfocyten zijn witte bloedcellen → SPECIFIEKE INTERNE afweer (lymfeknopen, bloed). Huid/slijmvliezen/maagsap/traanvocht zijn externe barrières (eerste-lijn aspecifiek)." }],
           niveaus: { basis: "T-cellen niet extern.", simpeler: "T-cel = intern specifiek.", nogSimpeler: "T" },

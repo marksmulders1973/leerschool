@@ -589,7 +589,7 @@ const steps = [
       },
       { q: "Punt (3, 5) ligt in welk **kwadrant**?", options: ["I (rechtsboven)","II (linksboven)","III (linksonder)","IV (rechtsonder)"], answer: 0, wrongHints: [null, "Niet — x is +.", "Niet — beide +.", "Niet — y is +."] },
       { q: "Welk punt ligt op de **x-as**?", options: ["(4, 0)","(0, 4)","(4, 4)","(−1, 2)"], answer: 0, wrongHints: [null, "Dat is y-as.", "Niet — beide niet 0.", "Niet — geen 0."] },
-      { q: "Welk punt is de **oorsprong**?", options: ["(0, 0)","(1, 1)","(0, 1)","(−1, 0)"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welk punt is de **oorsprong**?", options: ["(0, 0)","(1, 1)","(0, 1)","(−1, 0)"], answer: 0, wrongHints: [null, "(1, 1) ligt 1 stap naar rechts én 1 omhoog — de oorsprong ligt op het kruispunt zelf, hoeveel stappen is dat?", "(0, 1) ligt 1 stap omhoog op de y-as. Staat het kruispunt hoger dan de x-as?", "(−1, 0) ligt 1 stap naar links op de x-as. Ligt het kruispunt links van de y-as?"] },
       { q: "Punt (−2, −3) ligt in welk kwadrant?", options: ["III (linksonder)","I","II","IV"], answer: 0, wrongHints: [null, "Niet — beide +.", "Niet — y negatief.", "Niet — x negatief."] },
       { q: "Welk punt ligt op de **y-as**?", options: ["(0, 7)","(7, 0)","(7, 7)","(1, 2)"], answer: 0, wrongHints: [null, "X-as.", "Niet.", "Niet."] },
       { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Niet — invullen y=2×2=4.", "Niet — andersom.", "Niet — y moet 2."] },

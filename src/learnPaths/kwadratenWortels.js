@@ -700,7 +700,7 @@ const steps = [
         },
       },
       { q: "Bereken: 6² = ?", options: ["36","12","18","30"], answer: 0, wrongHints: [null, "Niet — niet 2×6.", "Niet — niet 3×6.", "Niet."] },
-      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "8 × 8 = 64, niet 81 — welk getal maal zichzelf geeft precies 81?", "7 × 7 = 49, dat zit er nog verder vanaf — probeer een iets groter getal.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet het dubbele van iets."] },
       { q: "Bereken: √144 = ?", options: ["12","11","14","72"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Wat is **√2** ongeveer?", options: ["1,41","1,5","2","1"], answer: 0, wrongHints: [null, "Te hoog.", "Wortel ≠ getal.", "Te laag."] },
       { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null, "Niet — π is irrationaal.", "Niet.", "Niet."] },

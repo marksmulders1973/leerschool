@@ -129,7 +129,7 @@ const steps = [
         q: "Bij **rekensom met haakjes**: wat doe je **eerst**?",
         options: ["Wat tussen de haakjes staat", "Vermenigvuldigen", "Delen", "Optellen"],
         answer: 0,
-        wrongHints: [null, "Pas later.", "Pas later.", "Pas later."],
+        wrongHints: [null, "Vermenigvuldigen gaat vóór optellen — maar krijgt iets anders in de som niet áltijd de allerhoogste voorrang?", "Delen doe je tegelijk met vermenigvuldigen — maar er is iets dat nog eerder aan de beurt is. Wat springt eruit?", "Optellen komt juist als laatste in de rekenvolgorde — is dat echt het éérste wat je doet?"],
       },
       {
         q: "**Open vraag**: hoeveel is **(3 + 4) × 2**? Typ alleen het getal.",
@@ -151,7 +151,7 @@ const steps = [
         q: "Wanneer is **rekenmachine NIET nodig**?",
         options: ["Eenvoudige tafel zoals 7×8", "Lange getallen", "Wortels", "Goniometrie"],
         answer: 0,
-        wrongHints: [null, "Wel nodig.", "Wel nodig.", "Wel nodig."],
+        wrongHints: [null, "Getallen met veel cijfers zijn lastig uit het hoofd — helpt een rekenmachine daar juist niet bij?", "Een wortel zoals √324 krijg je bijna niet uit je hoofd — heb je daar geen rekenmachine voor nodig?", "Sinus, cosinus en tangens reken je niet zomaar in je hoofd uit — komt de rekenmachine daar juist niet van pas?"],
       },
       {
         q: "Veiligste manier om **25% van X** te rekenen?",

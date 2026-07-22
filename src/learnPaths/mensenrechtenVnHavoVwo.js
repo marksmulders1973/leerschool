@@ -84,7 +84,7 @@ const steps = [
           "Recht op onderwijs"
         ],
         answer: 0,
-        wrongHints: [null, "Wel.", "Wel.", "Wel."],
+        wrongHints: [null, "Bescherming van je leven is juist het meest fundamentele mensenrecht — zou dát nou net níét in de UDHR staan?", "Mag jij vrij je mening uiten? Dat is een klassiek grondrecht dat de UDHR uitdrukkelijk beschermt — dit is dus geen uitzondering.", "De verklaring noemt onderwijs voor iedereen expliciet als recht — welke optie hoort dan niet in dit rijtje thuis?"],
         uitlegPad: {
           stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar specifiek 'auto' niet." }],
           niveaus: { basis: "Auto niet.", simpeler: "Geen recht op auto.", nogSimpeler: "Auto" },

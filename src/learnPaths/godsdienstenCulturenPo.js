@@ -126,7 +126,7 @@ const steps = [
         q: "**Diwali** is welk feest?",
         options: ["Hindoe lichtfeest", "Boeddhistisch", "Islam", "Joods"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Boeddhisten vieren vooral Vesak, rond het leven van Boeddha. Past dit feest met olielampjes en de god Rama daarbij?", "Moslims vieren het Suikerfeest en het Offerfeest. Hoort een feest met olielampjes en de god Rama daartussen?", "Joodse feesten zijn bijvoorbeeld Chanoeka en Pesach. Is dit feest met de god Rama daar één van?"],
       },
       {
         q: "Wat is **nirvana** in boeddhisme?",

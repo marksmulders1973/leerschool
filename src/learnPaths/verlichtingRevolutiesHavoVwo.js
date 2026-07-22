@@ -234,7 +234,7 @@ const steps = [
         q: "Wat is **Code Napoléon (1804)**?",
         options: ["Burgerlijk wetboek met gelijkheid voor wet","Kledingcode leger","Recept","Wapen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "'Code' betekent hier geen kledingvoorschrift maar een verzameling regels — waar zou een keizer regels voor opstellen?", "Het is geen kookrecept; denk aan iets juridisch dat Napoleon in heel Europa invoerde.", "De Code Napoléon is geen wapen maar iets op papier dat de rechten van burgers vastlegde."],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijk recht", tekst: "**Code Napoléon (1804)** = burgerlijk wetboek. Verspreidde Verlichtings-principes: **gelijkheid voor de wet**, vrijheid van religie, eigendom, scheiding kerk-staat, burgerlijk huwelijk. Invloed in NL, BE, IT, DE, Latijns-Amerika. NL-BW 1838 daarop gebaseerd." }],
           niveaus: { basis: "Burgerlijk wetboek.", simpeler: "Code Napol = BW", nogSimpeler: "BW" },

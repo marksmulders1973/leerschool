@@ -101,7 +101,7 @@ const steps = [
         q: "Wie waren de **2 consuls** in de Republiek?",
         options: ["Hoogste leiders, gekozen voor 1 jaar", "Lijfwachten", "Slaven", "Boeren"],
         answer: 0,
-        wrongHints: [null, "Geen consuls.", "Geen consuls.", "Geen consuls."],
+        wrongHints: [null, "Lijfwachten bewaken iemand, maar consuls stónden juist aan het hóófd van de Republiek — wie had de macht?", "Slaven hadden in Rome geen enkele macht; consuls hadden juist de hoogste positie.", "Boeren bewerkten het land; de consuls bestuurden de hele Republiek — een heel andere rol."],
       },
       {
         q: "Wie veroverde **Gallië** *(huidige Frankrijk)*?",

@@ -655,7 +655,7 @@ const steps = [
       { q: "½ + ¼ = ?", options: ["¾","⅙","⅔","¼"], answer: 0, wrongHints: [null, "Niet — gelijknamig maken.", "Niet.", "Niet."] },
       { q: "⅔ × ¾ = ?", options: ["½","¹⁄₂₄","¹²⁄₁₂","⅚"], answer: 0, wrongHints: [null, "Niet — niet plus.", "Niet zo gerekend.", "Niet."] },
       { q: "⅓ + ⅙ = ?", options: ["½","⅔","⅙","⅕"], answer: 0, wrongHints: [null, "Te hoog.", "Niet.", "Niet."] },
-      { q: "Vereenvoudig: ⁶⁄₈ = ?", options: ["¾","⅓","⅛","½"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Vereenvoudig: ⁶⁄₈ = ?", options: ["¾","⅓","⅛","½"], answer: 0, wrongHints: [null, "Door welk getal kun je 6 én 8 allebei delen? Kom je dan echt op een derde uit?", "⅛ is maar één stukje van de acht — maar je hebt er 6 van de 8. Is dat zo weinig?", "De helft van 8 is 4 — maar de teller is 6, dus méér dan de helft. Klopt ½ dan?"] },
       { q: "¾ ÷ ½ = ?", options: ["1½","⅜","¼","2"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet.", "Niet."] },
       { q: "3/4 als decimaal?", options: ["0,75","0,34","0,43","0,8"], answer: 0, wrongHints: [null, "Niet — alleen cijfers gehusseld.", "Niet.", "Niet."] },
       { q: "¼ + ⅛ = ?", options: ["⅜","½","⅙","⅔"], answer: 0, wrongHints: [null, "Te hoog.", "Niet.", "Niet."] },

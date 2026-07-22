@@ -170,7 +170,7 @@ const steps = [
         q: "**Augment** ἐ- voor werkwoord-stam markeert:",
         options: ["Verleden tijd","Toekomst","Conjunctief","Onzijdig"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Een augment plakt vóór de stam en verwijst terug in de tijd, niet vooruit — past 'toekomst' daar wel bij?", "De conjunctief is een wijs (wens/mogelijkheid), geen aanduiding van tijd. Markeert een augment een wijs of juist een tijd?", "Onzijdig is een geslacht van naamwoorden, niet iets van werkwoorden. Hoort dat bij een werkwoord-stam?"],
         uitlegPad: {
           stappen: [{ titel: "Verleden-marker", tekst: "**Augment** (Grieks ἐ-) staat vóór stam voor **verleden tijden** (imperfectum, aoristus, plusquamperfectum).\n\n• Praesens: λύω.\n• Imperfectum: **ἔ**λυον = ik was los aan het maken.\n• Aoristus: **ἔ**λυσα = ik maakte los.\n\nLijkt op augment in Sanskriet — beide Indo-Europees." }],
           niveaus: { basis: "Verleden tijd.", simpeler: "ἐ- = verleden", nogSimpeler: "A." },

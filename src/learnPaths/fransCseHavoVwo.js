@@ -297,7 +297,7 @@ const steps = [
         q: "**Annie Ernaux** is:",
         options: ["Frans schrijfster, Nobelprijs 2022","Politica","Zangeres","Sportster"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Ernaux werd wereldberoemd met werk dat je leest, niet met een zetel in het parlement — welk vak hoort daarbij?", "Ze staat bekend om wat ze op papier zette, niet om liedjes — past 'zangeres' daarbij?", "Haar bekendste prijs gaat over taal en teksten, niet over een sportprestatie — welk beroep past dan?"],
         uitlegPad: {
           stappen: [{ titel: "Recent Nobel", tekst: "**Annie Ernaux** (geb. 1940) won **Nobelprijs Literatuur 2022**. Autobiografische romans over werkende klasse, vrouwelijke ervaring. Bekendste werken: *La Place*, *Les Années*, *L'Événement*. Vaak in CSE-teksten over hedendaagse Franse literatuur." }],
           niveaus: { basis: "Schrijfster Nobel.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "A." },
@@ -307,7 +307,7 @@ const steps = [
         q: "Tijdens **CSE** mag je:",
         options: ["Beide woordenboeken + papier-aantekeningen niet","Telefoon","Vertaal-app","Internet"],
         answer: 0,
-        wrongHints: [null, "Verboden.", "Verboden.", "Verboden."],
+        wrongHints: [null, "Een telefoon kan online en foto's opslaan — zou dat eerlijk zijn bij een examen dat jóuw kennis toetst?", "Een vertaal-app doet het denkwerk voor je — mag zoiets dan bij een táálexamen?", "Met internet kun je alles opzoeken — blijft een examen dan nog een eerlijke test?"],
         uitlegPad: {
           stappen: [{ titel: "Alleen woordenboeken", tekst: "**Toegestaan**: papieren woordenboeken (eentalig + tweetalig). **Verboden**: telefoon, smartwatch, tablet, internet, vertaal-app, eigen aantekeningen, andere boeken. Bij overtreding: examen ongeldig." }],
           niveaus: { basis: "Beide woordenboeken.", simpeler: "Alleen woordenboeken", nogSimpeler: "A." },

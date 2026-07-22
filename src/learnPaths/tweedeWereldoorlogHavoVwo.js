@@ -122,7 +122,7 @@ const steps = [
           "Sovjet-stad zonder strijd"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Stalingrad staat juist bekend als een zware nederlaag voor Duitsland — wie hield uiteindelijk stand?", "Een slag met ~2 miljoen slachtoffers was allesbehalve onbelangrijk — waarom noemen historici dit een keerpunt?", "Er werd juist maandenlang huis-voor-huis gevochten in de stad — 'zonder strijd' klopt hier zeker niet."],
         uitlegPad: {
           stappen: [
             { titel: "Hitler-megalomanie", tekst: "Hitler wilde Stalingrad (naar Stalin genoemd) ten koste van alles. Sovjets vochten om elke straat. Winter 1942-43: 6e Leger DE omsingeld, geen ontsnapping toegestaan. Februari 1943 capitulatie. ~800 000 DE verliezen + ~1,2 mln Sovjet. Daarna USSR op offensief. Keerpunt aan oostfront." },

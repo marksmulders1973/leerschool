@@ -295,7 +295,7 @@ const steps = [
           "Grafisch (lijnen tekenen)"
         ],
         answer: 0,
-        wrongHints: [null, "Wel methode.", "Wel methode.", "Wel methode."],
+        wrongHints: [null, "Bij substitutie vul je de ene vergelijking in de andere in — is dat niet juist een manier om stelsels op te lossen?", "Bij eliminatie tel je vergelijkingen op om een onbekende weg te strepen — is dat geen echte oplosmanier?", "Twee lijnen tekenen en het snijpunt aflezen geeft de oplossing — telt dat niet als een methode?"],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras voor driehoek", tekst: "Pythagoras (a² + b² = c²) is voor rechthoekige driehoek-zijden, NIET voor stelsels. Drie methodes voor stelsels: substitutie, eliminatie, grafisch." }],
           niveaus: { basis: "Pythagoras niet.", simpeler: "Pyth = driehoek.", nogSimpeler: "Pyth" },

@@ -259,7 +259,7 @@ const steps = [
         q: "**PageRank** (Google) gebruikt:",
         options: ["Eigenvector van web-graf-matrix","Random aantallen","SQL-database","HTML-tags"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "PageRank rangschikt pagina's niet willekeurig — het rekent met de link-structuur van het web. Welk lineair-algebra-begrip hoort daarbij?", "Een database bewaart gegevens, maar berekent niet welke pagina belangrijker is — daar is een wiskundige berekening voor nodig.", "HTML-tags bepalen hoe een pagina eruitziet, niet hoe hoog hij scoort — PageRank kijkt naar de links tússen pagina's."],
         uitlegPad: {
           stappen: [{ titel: "Larry Page 1996", tekst: "**PageRank** (Google-algoritme, Larry Page + Sergey Brin 1996): pagina's geranked op basis van **eigenvector** van matrix die links tussen pagina's representeert. Pagina populair als veel populaire pagina's ernaar linken (recursief). Eigenvector met eigenwaarde 1 = stabiele oplossing. Toonde kracht van lineaire algebra voor web-zoeken — basis Google-success." }],
           niveaus: { basis: "Eigenvector.", simpeler: "PageRank = eig vec", nogSimpeler: "A." },

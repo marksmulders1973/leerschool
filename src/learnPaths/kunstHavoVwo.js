@@ -221,7 +221,7 @@ const steps = [
         q: "**Banksy** is bekend om:",
         options: ["Anonieme politieke street art","Renaissance-schilderijen","Klassieke beeldhouwwerken","Architectuur"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De Renaissance was eeuwen geleden (Da Vinci, Rafaël) — maakt een nog levende, anonieme kunstenaar zulke schilderijen?", "Banksy werkt met spuitbus op muren in de openbare ruimte, niet met marmer of brons — past beeldhouwen bij hem?", "Architecten ontwerpen gebouwen; deze kunstenaar zet zijn werk juist óp bestaande muren — is dat hetzelfde?"],
         uitlegPad: {
           stappen: [{ titel: "Anonieme provocateur", tekst: "**Banksy** (anoniem UK-kunstenaar, vermoedelijk geboren ~1974): **politieke pochoir-stencils** op muren wereldwijd. Onderwerpen: oorlog, kapitalisme, klimaat, migratie. Bekend: **Girl with Balloon** (verkocht 2018 voor £1mln, zelfvernietigde via interne shredder tijdens veiling — werd waardevoller). Identiteit nog onbekend (theorieën genoeg). Documentaire *Exit Through the Gift Shop* (2010)." }],
           niveaus: { basis: "Street art.", simpeler: "Banksy = street", nogSimpeler: "A." },

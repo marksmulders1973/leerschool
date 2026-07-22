@@ -149,7 +149,7 @@ const steps = [
         q: "Wat heeft een plant **NIET nodig**?",
         options: ["Eigen voedsel van buitenaf", "Zonlicht", "Water", "CO₂"],
         answer: 0,
-        wrongHints: [null, "Wel nodig.", "Wel nodig.", "Wel nodig."],
+        wrongHints: [null, "Een plant vangt met zijn bladeren zonlicht om zijn eigen eten te maken. Zou hij zonder licht dan wel kunnen groeien?", "Denk aan wat je een plant elke week geeft zodat hij niet verwelkt. Kan hij dat missen?", "Planten nemen dit gas uit de lucht op om suiker van te maken. De vraag is wat een plant NIET nodig heeft — hoort dit daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "Plant = producent", tekst: "Planten maken hun eigen voedsel uit zonlicht + water + CO₂. Geen externe voedingsbron nodig." },

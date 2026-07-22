@@ -144,7 +144,7 @@ const steps = [
           "Bloedstolling"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — apart.", "Niet — apart.", "Niet — apart."],
+        wrongHints: [null, "Een verzwakte, uitpuilende vaatwand heet een aneurysma — maar 'sclerose' betekent juist verhárding. Klopt 'zwakte' dan?", "Een ritmestoornis zit in het elektrische systeem van het hart — maar 'athero-sclerose' wijst op de wánd van een bloedvat. Wat gebeurt daar?", "Een stolsel is bloed dat samenklontert — maar hier gaat het om wat zich in de vaatwand zelf ophoopt en die verhardt. Wat zou dat zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Slagaderverkalking", tekst: "Cholesterol + andere stoffen vormen plak in slagaderwand. Vernauwt opening + maakt wand stijf → hogere bloeddruk. Plak kan breken → stolsel → blokkeert vat → hartinfarct of beroerte. Risicofactoren: roken, dieet rijk in verzadigd vet, weinig sport, diabetes, hoge bloeddruk, genetisch." },
@@ -397,7 +397,7 @@ const steps = [
           "Anti-Drugs"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Een AED gebruik je als iemands hárt stilstaat — draait de afkorting dan echt om ademhaling?", "Denk aan waarvoor zo'n kastje aan de muur hangt: een levensbedreigende noodsituatie — heeft dat met een dieet te maken?", "Een AED is er voor spoedgevallen met het hart — past 'anti-drugs' bij dat doel?"],
         uitlegPad: {
           stappen: [
             { titel: "Levens-redder", tekst: "Bij hartstilstand: hart fibrilleert (chaotische beweging, geen pomp). AED detecteert + geeft elektrische schok om ritme te herstellen. ~80 000 AEDs in NL openbaar beschikbaar (HartslagNu.nl-app toont nabij). Gebruik vereist geen medisch diploma. Combineer met reanimatie." },
