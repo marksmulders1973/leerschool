@@ -130,7 +130,7 @@ const steps = [
         q: "Wat is **ijzel**?",
         options: ["Regen die bevriest bij contact", "Sneeuw", "Hagel", "Mist"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Sneeuw valt als zachte vlokken — ijzel maakt de weg spekglad. Hoe komt dat?", "Hagel valt als harde bolletjes uit de lucht — ijzel wordt pas ijs als het de grónd raakt.", "Mist is een wolk aan de grond, er valt niets — bij ijzel valt er wél iets. Wat?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is ijzel?", tekst: "IJzel is regen die WEL vloeibaar uit de wolk valt, MAAR meteen bevriest zodra het de grond, bomen of auto's raakt." },
@@ -244,7 +244,7 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Verdamping** = ?", options: ["Vloeibaar → damp", "Damp → vloeibaar", "Bevriezen", "Smelten"], answer: 0, wrongHints: [null, "Condensatie.", "Niet.", "Niet."] },
-      { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Geen onweer.", "Geen onweer.", "Geen onweer."] },
+      { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Cirrus zijn dunne ijsveertjes hoog in de lucht — zoek de torenhoge stapelwolk.", "Stratus is een grijze, saaie laag — onweer komt uit een wolk die omhoog tórent.", "Middelhoge schapenwolkjes — welke wolk groeit uit tot een reusachtige toren?"] },
       { q: "Hoeveel **zoet water** op aarde?", options: ["~3%", "50%", "100%", "97%"], answer: 0, wrongHints: [null, "Niet.", "Wel water maar zout.", "Zout."] },
       { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "Wanneer **Afsluitdijk**?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Watersnood.", "Te vroeg.", "Wel."] },

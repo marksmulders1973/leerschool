@@ -237,7 +237,7 @@ const steps = [
         q: "Wat berecht **het Internationaal Strafhof** (Den Haag)?",
         options: ["Oorlogsmisdadigers", "Belastingontduikers", "Verkeersovertreders", "Sportzaken"],
         answer: 0,
-        wrongHints: [null, "Niet hun taak.", "Niet hun taak.", "Niet hun taak."],
+        wrongHints: [null, "Belastingzaken doet de nationale rechter — voor welke állerzwaarste misdaden is een wereldhof nodig?", "Een boete regelt je eigen land — waarom zou de hele wéreld een hof nodig hebben?", "Sport heeft eigen tuchtcolleges — denk aan genocide en misdaden tegen de menselijkheid."],
       },
       {
         q: "Wat is de **Toeslagenaffaire**?",
@@ -321,7 +321,7 @@ const steps = [
         q: "Wat is **ICC**?",
         options: ["Internationaal Strafhof (Den Haag)", "Internationale Cao Coalitie", "Inkomstenbelasting Code", "VS-presidentskandidaat"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Cao's gaan over arbeidsvoorwaarden — de C in ICC staat voor 'Criminal'. Wat berecht het?", "Niets met belasting — ICC is Engels: International Criminal … wat?", "Geen persoon — het is een instituut, en het zetelt nota bene in Nederland."],
       },
       {
         q: "Op welke **datum** is Internationale Dag van de Mensenrechten?",

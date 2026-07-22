@@ -58,13 +58,13 @@ const steps = [
         q: "Wat staat **BBP** voor?",
         options: ["Bruto Binnenlands Product", "Belasting Bedrijf Particulieren", "Bank Bestuur Persoon", "Begin Buiten Politiek"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Belasting is iets anders — BBP meet wat een land in een jaar máákt. Welke woorden passen daarbij?", "Geen bank-term — de eerste B staat voor 'bruto'. Wat meet het?", "Niets met politiek — het meet de totale productie ín een land."],
       },
       {
         q: "Wat wordt **NIET** in BBP gerekend?",
         options: ["Huishoudelijk werk + vrijwilligers", "Auto-fabricage", "Restaurant-bezoek", "Knipbeurt bij kapper"],
         answer: 0,
-        wrongHints: [null, "Wel — betaald.", "Wel — betaald.", "Wel — betaald."],
+        wrongHints: [null, "Voor auto's wordt betááld — welk werk gebeurt zonder rekening of loonstrook?", "Je rekent er af — het BBP telt betaalde diensten mee. Wat wordt níét betaald?", "De kapper stuurt een rekening — welk werk kent geen prijskaartje?"],
       },
       {
         q: "Wat is **reëel** BBP?",
@@ -236,7 +236,7 @@ const steps = [
         q: "BBP staat voor?",
         options: ["Bruto Binnenlands Product", "Bedrijfs Beleid Plan", "Begroting Boek Politie", "Bank Bank Product"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Geen bedrijfsterm — het gaat over een heel lánd. Wat produceert een land?", "Niets met politie — denk aan 'binnenlands': alles wat binnen de grenzen gemaakt wordt.", "Twee keer 'bank' zou vreemd zijn — de middelste B staat voor 'binnenlands'."],
       },
       {
         q: "Welke is een **conjunctuurfase**?",

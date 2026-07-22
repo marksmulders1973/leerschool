@@ -185,7 +185,7 @@ const steps = [
         q: "Wat is **dichtheid**?",
         options: ["Massa per volume (g/cm³)", "Hoogte van stof", "Kleur", "Smeltpunt"],
         answer: 0,
-        wrongHints: [null, "Niet dichtheid.", "Niet dichtheid.", "Niet dichtheid."],
+        wrongHints: [null, "Hoogte zegt niets over de stof zelf — waarom zinkt lood en drijft kurk?", "Kleur zie je met je ogen — dichtheid vóél je: wat is zwaarder, een blokje lood of een blokje kurk van dezelfde grootte?", "Smeltpunt gaat over temperatuur — dichtheid over hoeveel massa er in een bepaalde ruimte zit."],
       },
       {
         q: "Dichtheid water = ?",
@@ -203,7 +203,7 @@ const steps = [
         q: "Welke is een **chemische** eigenschap?",
         options: ["Brandbaarheid", "Dichtheid", "Smeltpunt", "Kleur"],
         answer: 0,
-        wrongHints: [null, "Fysisch.", "Fysisch.", "Fysisch."],
+        wrongHints: [null, "Dichtheid meet je zonder de stof te veranderen — bij welke eigenschap ontstaat een níéuwe stof?", "Na smelten is het nog dezelfde stof (ijs → water) — bij welke eigenschap verandert de stof zelf?", "Kleur zie je zonder iets te doen — chemisch = de stof verandert erbij. Wat gebeurt er bij verbranden?"],
       },
     ],
   },
