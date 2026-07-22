@@ -22,7 +22,7 @@ const steps = [
         q: "Wat is een **gedicht**?",
         options: ["Korte tekst in regels met rijm/ritme", "Lang verhaal", "Krantenartikel", "Brief"],
         answer: 0,
-        wrongHints: [null, "Proza.", "Proza.", "Proza."],
+        wrongHints: [null, "Een verhaal loopt door in lange zinnen — hoe staat een gedicht op de pagina?", "Een artikel geeft nieuws en feiten — waar speelt een gedicht juist mee?", "Een brief schrijf je aan iemand — welke tekstvorm speelt met klank en ritme?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat maakt het een gedicht?", tekst: "Een **gedicht** (ook wel **poëzie**) is een tekst waarbij:\n• De **woorden in regels** staan (geen doorlopende zinnen).\n• Er vaak **rijm** of **ritme** is.\n• Veel **beeldspraak** wordt gebruikt.\n• Het meestal **kort** is en een **gevoel** of **gedachte** uitdrukt." },
@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is **personificatie**?",
         options: ["Dood ding doet als mens", "Synoniem", "Rijm", "Tegenovergesteld"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Een synoniem is een ander woord met dezelfde betekenis — kijk: 'persoon' zit in het woord.", "Rijm gaat over klank — denk bij personificatie aan 'de wind fluit'. Wat gebeurt daar?", "Dat zou een tegenstelling zijn — 'persoon' zit in het woord. Wat doet het ding?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is personificatie?", tekst: "**Personificatie** = je laat een **levenloos ding** of **dier** doen alsof het een MENS is. Het krijgt menselijke eigenschappen (denken, voelen, praten, lachen, huilen)." },
@@ -301,7 +301,7 @@ const steps = [
       { q: "**Refrein** in een gedicht/lied is?", options: ["Herhalend stukje tussen coupletten","Eerste regel","Laatste woord","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet.", "Wel."] },
       { q: "*'Ik zag, ik zag, wat jij niet zag.'* — welk effect door herhaling?", options: ["Versterkt + ritme","Vermoeit","Onzin","Niet relevant"], answer: 0, wrongHints: [null, "Soms — primair effect ritme.", "Wel zin.", "Wel."] },
       { q: "Wat is een **couplet**?", options: ["Groepje van 2+ versregels samen","Eén woord","Lied","Niet relevant"], answer: 0, wrongHints: [null, "Te klein.", "Te groot.", "Wel."] },
-      { q: "Welk **rijmpaar** is acceptabel?", options: ["maan/baan","kat/tafel","huis/koud","stoel/groen"], answer: 0, wrongHints: [null, "Andere klank.", "Andere klank.", "Andere klank."] },
+      { q: "Welk **rijmpaar** is acceptabel?", options: ["maan/baan","kat/tafel","huis/koud","stoel/groen"], answer: 0, wrongHints: [null, "Zeg ze hardop: klinken de eindklanken van 'kat' en 'tafel' hetzelfde?", "-uis en -oud — hoor je dezelfde eindklank?", "-oel en -oen lijken op elkaar maar eindigen nét anders — luister naar de laatste klank."] },
     ],
   },
 ];

@@ -23,7 +23,7 @@ const steps = [
         q: "In welk **land** begon de Industriële Revolutie?",
         options: ["Engeland", "Nederland", "Frankrijk", "Duitsland"],
         answer: 0,
-        wrongHints: [null, "Volgde later.", "Volgde later.", "Volgde later."],
+        wrongHints: [null, "Nederland volgde pas later — waar stonden de eerste stoomfabrieken en kolenmijnen?", "Frankrijk had rond die tijd een revolutie van een héél ander soort — welk land had kolen én uitvinders?", "Duitsland werd pas laat één land — waar begon het met stoom en textielfabrieken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Industriële Revolutie?", tekst: "Een grote omwenteling rond 1750-1900: van handwerk thuis naar machines in fabrieken. Veranderde hoe mensen werken en leven." },
@@ -132,7 +132,7 @@ const steps = [
         q: "Eerste **NL spoorlijn**?",
         options: ["Amsterdam-Haarlem (1839)", "Utrecht-Rotterdam", "Maastricht-Amsterdam", "Den Haag-Schiphol"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Andere route — denk aan een kort proefstukje vanaf de hoofdstad.", "Dat zou meteen een enorme afstand zijn — de eerste lijn was juist kort.", "Schiphol als vliegveld bestond in 1839 nog lang niet!"],
       },
       {
         q: "Wie maakte **gloeilamp**?",
@@ -261,7 +261,7 @@ const steps = [
         q: "Wie schreef '**Het Kapitaal**'?",
         options: ["Karl Marx", "James Watt", "Napoleon", "Edison"],
         answer: 0,
-        wrongHints: [null, "Verkeerd vakgebied.", "Verkeerd vakgebied.", "Verkeerd vakgebied."],
+        wrongHints: [null, "Watt was de uitvinder van de stoommachine — wie schreef juist óver arbeiders en kapitaal?", "Napoleon was veldheer en keizer (overleden 1821) — zoek een denker over de arbeidersklasse.", "Edison was de uitvinder van de gloeilamp — zoek een filosoof/econoom."],
       },
       {
         q: "Wanneer **vrouwenkiesrecht** in NL (actief)?",

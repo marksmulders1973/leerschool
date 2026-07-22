@@ -93,7 +93,7 @@ const steps = [
         q: "Welke app voor schoolinfo in NL?",
         options: ["Magister of SOMtoday", "TikTok", "WhatsApp", "Spotify"],
         answer: 0,
-        wrongHints: [null, "Niet voor school.", "Niet voor school.", "Niet voor school."],
+        wrongHints: [null, "Filmpjes kijken — zie je dáár je rooster en cijfers?", "Handig om te appen met klasgenoten, maar waar zet school zélf je huiswerk in?", "Muziek luisteren — welke app toont rooster, huiswerk en cijfers?"],
       },
       {
         q: "**Pomodoro**-techniek = ?",
@@ -130,7 +130,7 @@ const steps = [
         q: "Welke is **niet** effectief?",
         options: ["Multitasking met tel + muziek + huiswerk", "Mindmap maken", "Vragen aan jezelf", "Spaced repetition"],
         answer: 0,
-        wrongHints: [null, "Wel effectief.", "Wel effectief.", "Wel effectief."],
+        wrongHints: [null, "Een mindmap helpt juist om verbanden te zien — wat verdéélt je aandacht?", "Jezelf overhoren werkt juist bewezen goed — waarbij doe je drie dingen tegelijk?", "Gespreid herhalen is juist een top-techniek — wat leidt je af?"],
       },
       {
         q: "Beste **slaap voor toets**?",
@@ -255,7 +255,7 @@ const steps = [
       { q: "Het **N&T-profiel** heeft veel?", options: ["Natuurkunde + wiskunde","Talen","Geschiedenis","Tekenen"], answer: 0, wrongHints: [null, "Dat is C&M.", "Dat is E&M.", "Niet hoofdvak."] },
       { q: "Welke afkorting staat voor 'middelbare school'?", options: ["VO","PO","HO","MBO"], answer: 0, wrongHints: [null, "Basisschool.", "Universiteit.", "Mbo komt erna."] },
       { q: "Wat is een **mentor**?", options: ["Vaste leraar die je begeleidt","Beste vriend","Een vak","Boekenkast"], answer: 0, wrongHints: [null, "Niet schoolse rol.", "Niet persoon.", "Niet."] },
-      { q: "Wat is een **rapportvergadering**?", options: ["Docenten bespreken cijfers van leerling","Klas-feest","Toets","Vakantie"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is een **rapportvergadering**?", options: ["Docenten bespreken cijfers van leerling","Klas-feest","Toets","Vakantie"], answer: 0, wrongHints: [null, "Geen feest — het woord 'rapport' zit erin. Wat gebeurt daarmee?", "Je maakt er zelf niets — het gaat óver jouw resultaten. Wie zitten er aan tafel?", "Helaas geen vrije dag — docenten zijn juist aan het werk. Waarmee?"] },
       { q: "Bij **'leren leren'** wat is de belangrijkste tip?", options: ["Begrijp eerst, dan onthouden","Stampen zonder begrip","Alleen samenvattingen","Plaatjes kijken"], answer: 0, wrongHints: [null, "Werkt slecht.", "Te kort.", "Niet hoofdmethode."] },
     ],
   },
