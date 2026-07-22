@@ -63,10 +63,10 @@ const steps = [
         q: "Welke is **fout** Engels (NL-fout)?",
         options: ["'I have 16 years'","I am 16 years old","I was born in 2008","I study Spanish"],
         answer: 0,
-        wrongHints: [null, "Correct.", "Correct.", "Correct."],
+        wrongHints: [null, "Deze zin is prima Engels — zoek de zin die het Nederlandse 'ik héb 16 jaar' woord-voor-woord vertaalt.", "Prima Engels — welke zin gebruikt 'have' waar het niet hoort?", "Correct Engels — welke optie is een letterlijke vertaling uit het Nederlands?"],
         uitlegPad: {
           stappen: [{ titel: "Be + age, niet have", tekst: "**'I have 16 years' = WRONG**. NL letterlijk vertaalt 'ik heb 16 jaar' (zoals FR + ES). Engels: **'I am 16 (years old)'**. Met 'be' + leeftijd, niet 'have'.\n\nAndere klassieke NL-fouten:\n• 'I am born in' → 'I was born in'.\n• 'Become' (worden) vaak verward met 'krijgen' (= get).\n• 'Eventually' = uiteindelijk, niet 'eventueel'." }],
-          niveaus: { basis: "I have 16 years.", simpeler: "Have age = fout", nogSimpeler: "A." },
+          niveaus: { basis: "I have 16 years.", simpeler: "Have age = fout", nogSimpeler: "'have' + leeftijd = fout" },
         },
       },
       {
@@ -171,7 +171,7 @@ const steps = [
         q: "Wat moet je **vermijden** in formele essay?",
         options: ["Contractions (don't, I'm)","Topic sentences","Connector-zinnen","Voorbeelden"],
         answer: 0,
-        wrongHints: [null, "Niet — wel gebruiken.", "Niet — wel gebruiken.", "Niet — wel gebruiken."],
+        wrongHints: [null, "Die wil je juist wél: elke alinea één kernzin. Wat is te informeel?", "Verbindingswoorden maken een essay juist sterker — wat hoort bij spreektaal?", "Voorbeelden onderbouwen je punt juist — welke optie past niet bij formeel schrijven?"],
         uitlegPad: {
           stappen: [{ titel: "Formele stijl", tekst: "**Contractions** (samentrekkingen 'don't, I'm, won't, it's') zijn **informeel** — vermijden in academische essays. Gebruik volledig: 'do not, I am, will not, it is'. Ook vermijden: spreektaal ('kids, a lot of, stuff'), persoonlijke uitspraken ('I think' in argumentative — laat argument spreken), retorische vragen (sparingly)." }],
           niveaus: { basis: "Contractions.", simpeler: "don't = vermijden", nogSimpeler: "A." },
@@ -220,7 +220,7 @@ const steps = [
         q: "Welke is **fout** Engels?",
         options: ["'I have seen her yesterday'","I saw her yesterday","I have seen her","I will see her tomorrow"],
         answer: 0,
-        wrongHints: [null, "Correct.", "Correct.", "Correct."],
+        wrongHints: [null, "'Yesterday' + verleden tijd klopt juist — zoek de zin waar de tijdsvorm bótst met het tijdstip.", "Present perfect zónder tijdstip is prima — waar gaat het mis mét een tijdstip erbij?", "Toekomst + 'tomorrow' klopt — welke zin mengt voltooide tijd met een verleden tijdstip?"],
         uitlegPad: {
           stappen: [{ titel: "Past simple bij specifieke tijd", tekst: "**Fout**: 'I have seen her yesterday'. Reden: **'yesterday' is specifieke tijd in verleden** → vereist past simple, niet present perfect. Correct: **'I saw her yesterday'**.\n\nRegel: present perfect bij **onbepaalde tijd** ('I have seen her') of voor doorgaand effect. Past simple bij **specifieke tijd**. Cito-klassieker — NL'ers verwarren vaak." }],
           niveaus: { basis: "Have seen yesterday.", simpeler: "PP+yesterday=fout", nogSimpeler: "A." },
@@ -240,7 +240,7 @@ const steps = [
         q: "Wat moet je **vermijden** in spreek-examen?",
         options: ["Uit hoofd leren tekst","Speech-fillers","Vragen stellen","Voorbeelden"],
         answer: 0,
-        wrongHints: [null, "Wel doen.", "Wel doen.", "Wel doen."],
+        wrongHints: [null, "Een natuurlijk 'well…' of 'let me think' mag juist — wat maakt je verhaal robotachtig?", "Interactie met de examinator is juist goed — wat klinkt opgedreund?", "Voorbeelden maken je antwoord sterker — wat moet je juist níét met je tekst doen?"],
         uitlegPad: {
           stappen: [{ titel: "Examinator merkt het", tekst: "**Niet** uit hoofd leren tekst. Examinator merkt aan: vlotte vloed zonder pauze + onnatuurlijke stijl + vastlopen als zijweg ontstaat. **Wel doen**:\n• Structuur + outline voorbereiden.\n• Key vocabulary leren.\n• Voorbeelden + verhalen achter de hand.\n• Speech-fillers oefenen.\n• Hardop oefenen tegen jezelf of vriend.\n\nDoel: **natuurlijk klinkende, doordachte gesproken Engels**." }],
           niveaus: { basis: "Uit hoofd.", simpeler: "Niet uit hoofd", nogSimpeler: "A." },

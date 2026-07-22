@@ -76,7 +76,7 @@ const steps = [
         q: "Wat is **testosteron**?",
         options: ["Hormoon vooral bij jongens", "Voedsel", "Ziekte", "Bot"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Je eet het niet — je lichaam maakt het zélf. Wat voor stof is dat?", "Het hoort juist bij gezond opgroeien — wat stuurt de puberteit aan?", "Botten groeien erdóór, maar het is zelf geen lichaamsdeel."],
       },
       {
         q: "Hoeveel kun je **per jaar groeien** in piek?",
@@ -166,7 +166,7 @@ const steps = [
         q: "Wat is **LHBTQ+**?",
         options: ["Mensen niet 'standaard hetero'", "Ziekte", "Sport", "Tehuis"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Zeker geen ziekte — het zegt iets over op wie je verliefd kunt worden.", "Geen sport — het is een afkorting van woorden over liefde en identiteit.", "Geen plek of gebouw — het beschrijft groepen mensen. Welke?"],
       },
     ],
   },
@@ -175,7 +175,7 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Puberteit** begint bij meisjes gem.?", options: ["~11 jaar", "5", "18", "Niet bij meisjes"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."] },
-      { q: "Wat is een **hormoon**?", options: ["Stof die signaal geeft in lichaam", "Spier", "Voedsel", "Bot"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is een **hormoon**?", options: ["Stof die signaal geeft in lichaam", "Spier", "Voedsel", "Bot"], answer: 0, wrongHints: [null, "Een spier kun je aanspannen — een hormoon reist door je bloed. Wat doet het daar?", "Het komt niet van je bord — je lichaam maakt het zelf. Waarvoor?", "Geen hard lichaamsdeel — het is een stof die door je bloed reist. Met welk doel?"] },
       { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
       { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Niet.", "Te zelden.", "Wel."] },
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Niet."] },

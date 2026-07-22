@@ -32,7 +32,7 @@ const steps = [
         q: "Bij **geboorte baby** eet je?",
         options: ["Beschuit met muisjes", "Stamppot", "Friet", "Pizza"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Stevige winterkost — past dat bij een feestelijk kraambezoek?", "Snackbar-eten — hoort daar een geboortetraditie bij?", "Italiaans — zoek juist een échte Nederlandse traditie."],
       },
       {
         q: "Hoeveel **kaas per persoon NL** per jaar?",
@@ -63,7 +63,7 @@ const steps = [
         q: "Wat is **vla**?",
         options: ["Zoete-pap NL-uitvinding", "Vis", "Soort brood", "Kaas"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Vla eet je met een lepel als toetje — komt het uit de zee?", "Kun je vla snijden of smeren, zoals brood?", "Kaas is hartig en stevig — vla juist niet. Wat is het dan wel?"],
       },
       {
         q: "Wat is **hagelslag**?",
@@ -109,11 +109,11 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "Welke is **typisch Hollands**?", options: ["Stamppot + haring", "Sushi", "Pizza", "Tajine"], answer: 0, wrongHints: [null, "Japans.", "Italiaans.", "Marokkaans."] },
-      { q: "Wat is **hagelslag**?", options: ["Chocolade-hagel op brood (NL)", "Vis", "Vlees", "Kaas"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is **hagelslag**?", options: ["Chocolade-hagel op brood (NL)", "Vis", "Vlees", "Kaas"], answer: 0, wrongHints: [null, "Komt niet uit de zee — je strooit het op je boterham. Wat is het?", "Geen dierlijk beleg — denk aan iets zoets om te strooien.", "Kaas snijd je in plakken — hagelslag strooi je. Waarvan is het gemaakt?"] },
       { q: "Welke is **Indonesisch**?", options: ["Saté", "Roti", "Tajine", "Pizza"], answer: 0, wrongHints: [null, "Surinaams.", "Marokkaans.", "Italiaans."] },
       { q: "**Goudse kaas** komt uit?", options: ["Gouda (NL)", "Italië", "Frankrijk", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Brie wel.", "Wel."] },
       { q: "**Vis** aanbevolen aantal per week?", options: ["1 keer (omega-3)", "Dagelijks", "Nooit", "Maandelijks"], answer: 0, wrongHints: [null, "Te veel.", "Wel.", "Te weinig."] },
-      { q: "**Stroopwafel** uit?", options: ["Gouda (1810)", "Amsterdam", "Frankrijk", "Indonesië"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Stroopwafel** uit?", options: ["Gouda (1810)", "Amsterdam", "Frankrijk", "Indonesië"], answer: 0, wrongHints: [null, "In de hoofdstad kwamen ze pas later — waar stond de éérste stroopwafelbakker?", "Oer-Hollandse uitvinding — zit je wel in het goede land?", "Denk aan een Hollandse bakkersstad, niet aan Azië."] },
       { q: "Welk NL-gerecht eet je vaak op **5 december (Sinterklaas)**?", options: ["Pepernoten", "Pizza", "Sushi", "Curry"], answer: 0, wrongHints: [null, "Italiaans.", "Japans.", "Aziatisch."] },
       { q: "**Boerenkool** wordt vaak gemengd met aardappel tot ___?", options: ["Stamppot", "Soep", "Salade", "Brood"], answer: 0, wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet primair."] },
       { q: "Welke **drank** drinken NL-kinderen vaak bij ontbijt?", options: ["Melk of jus d'orange", "Bier", "Koffie zwart", "Wijn"], answer: 0, wrongHints: [null, "Geen kinderdrank!", "Niet voor kinderen.", "Geen kinderdrank!"] },

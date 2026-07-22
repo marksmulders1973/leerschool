@@ -80,7 +80,7 @@ const steps = [
         q: "Welke regio heette **'Balkan-kruidvat'**?",
         options: ["Zuidoost-Europa (Servië, Bulgarije, etc.)", "Noord-Europa", "Spanje", "Engeland"],
         answer: 0,
-        wrongHints: [null, "Geen kruidvat.", "Geen kruidvat.", "Geen kruidvat."],
+        wrongHints: [null, "Daar bleef het juist rustig — in welk deel van Europa werd Franz Ferdinand vermoord?", "Spanje bleef in WO1 zelfs neutraal — zoek de regio vol spanningen tussen jonge staten.", "Engeland ligt geïsoleerd op een eiland — welk gebied had rivaliserende volken dicht op elkaar?"],
       },
     ],
   },
@@ -149,7 +149,7 @@ const steps = [
         q: "Welk **nieuw wapen** werd in WO1 voor het eerst gebruikt?",
         options: ["Tank (1916)", "Pistool", "Kanon", "Zwaard"],
         answer: 0,
-        wrongHints: [null, "Bestond al lang.", "Bestond al lang.", "Bestond al lang."],
+        wrongHints: [null, "Pistolen bestonden al eeuwen — wat was er in 1916 splinternieuw?", "Kanonnen stonden er al in de tijd van Napoleon — welk wapen moest de loopgraven-impasse breken?", "Zwaarden zijn middeleeuws — denk aan gloednieuwe techniek uit 1916."],
       },
       {
         q: "Welk **gif** werd eerst gebruikt **bij Ieper (1915)**?",
@@ -188,7 +188,7 @@ const steps = [
         q: "Welk **oproer** brak uit in juli 1917?",
         options: ["Aardappeloproer Amsterdam", "Bietoproer", "Brood oproer Rotterdam", "Kolen oproer Den Haag"],
         answer: 0,
-        wrongHints: [null, "Niet zo bekend.", "Niet zo bekend.", "Niet zo bekend."],
+        wrongHints: [null, "Denk aan hét dagelijkse volksvoedsel van arme gezinnen — wat lag er elke dag op tafel?", "Het draaide om een ander basisvoedsel, en niet in de havenstad.", "Geen brandstof maar voedsel — en in een andere stad."],
       },
       {
         q: "Wie vluchtte na verlies oorlog naar **Doorn (NL)**?",

@@ -271,7 +271,7 @@ const steps = [
         q: "Wat is een **filterbubbel**?",
         options: ["Online ecosphere waar je alleen eigen mening tegenkomt","Filter wasmachine","Soort bubbeltjes","Internet-protocol"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Denk aan internet en algoritmes, niet aan huishoudelijke apparaten.", "Het is beeldspraak — waar zou de 'bubbel' bij sociale media voor staan?", "Geen techniek-term — het gaat over wat algoritmes je wél en níét laten zien."],
         uitlegPad: {
           stappen: [{ titel: "Eli Pariser 2011", tekst: "**Filterbubbel**: algoritmes (Facebook, YouTube, etc.) tonen je vooral content die je waarschijnlijk leuk vindt → je komt alleen eigen mening tegen → polarisatie versterkt. **Echokamer**: vergelijkbaar maar specifieker over gemeenschap (vrienden) die dezelfde opvattingen versterkt. Term door Eli Pariser (*The Filter Bubble*, 2011).\n\nOplossing: actief diverse bronnen zoeken, niet alleen aanbevolen content." }],
           niveaus: { basis: "Eigen mening.", simpeler: "Filter = eigen mening", nogSimpeler: "A." },
@@ -291,7 +291,7 @@ const steps = [
         q: "Wat is **bronbescherming** voor journalisten?",
         options: ["Recht om bron niet te onthullen","Verzekering tegen geweld","Vrije parkeerplaats","Goedkope koffie"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Het gaat niet om geld of schade — wat heeft een anonieme tipgever nodig om veilig te praten?", "Denk serieus: wat moet een klokkenluider kunnen vertrouwen bij een journalist?", "Grapje-optie — denk aan de anonieme informant van een journalist."],
         uitlegPad: {
           stappen: [{ titel: "Wet 2019", tekst: "**Bronbescherming**: journalisten hoeven hun **bron niet te onthullen**, ook niet aan rechter of politie (behalve uitzonderlijke gevallen, bv. terrorisme). Wet Bronbescherming 2019 NL. Cruciaal voor **persvrijheid** — zonder bronbescherming durven mensen geen info te geven. Beschermd ook door EVRM art 10 (vrijheid van meningsuiting + ontvangen)." }],
           niveaus: { basis: "Bron geheim.", simpeler: "Bronbescherming", nogSimpeler: "A." },
@@ -301,7 +301,7 @@ const steps = [
         q: "**Vierde macht** is een ander woord voor:",
         options: ["Onafhankelijke media (waakhond democratie)","Politie","Leger","EU"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De politie hoort bij de uitvoerende macht — wie contróleert de macht zonder zelf te regeren?", "Het leger voert uit — wie houdt politici kritisch in de gaten en onthult schandalen?", "Geen instantie of verbond — denk aan wie misstanden openbaar maakt."],
         uitlegPad: {
           stappen: [{ titel: "Edmund Burke", tekst: "**Vierde macht** (fourth estate): onafhankelijke media als controlerend orgaan naast trias politica (wetgevend/uitvoerend/rechterlijk). Term uit Britse parlement. **Waakhond democratie** — onthullen schandalen, controleren machthebbers (Watergate, Panama Papers, MeToo, Toeslagenaffaire-onthullingen door Trouw + RTL). Vandaag onder druk door commercialisering + sociale media + populisme." }],
           niveaus: { basis: "Media.", simpeler: "4e macht = media", nogSimpeler: "A." },
@@ -311,7 +311,7 @@ const steps = [
         q: "Onderzoeker **Jonathan Haidt** waarschuwt voor:",
         options: ["Mentale gezondheid jongeren door sociale media","Klimaatverandering","Inflatie","Migratie"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Dat is het terrein van klimaatwetenschappers — Haidt is sociaal-psycholoog.", "Economen-onderwerp — waar kijkt een psycholoog naar?", "Politiek thema — denk aan zijn boek over 'de angstige generatie': welke groep en welk probleem?"],
         uitlegPad: {
           stappen: [{ titel: "The Anxious Generation 2024", tekst: "**Jonathan Haidt** (NYU psycholoog) — *The Anxious Generation* (2024): stelt dat **smartphones + sociale media** sinds ~2010 mentale gezondheid jongeren beschadigen (depressie + angst + zelfdoding gestegen). Aanbevelingen: **geen smartphone vóór 14**, **geen sociale media vóór 16**, **smartphone-vrije scholen**. Internationaal debat — diverse landen overwegen wetgeving (Australië verbiedt sociale media <16 jaar 2025)." }],
           niveaus: { basis: "Mentale gezondheid jongeren.", simpeler: "Haidt = mental health", nogSimpeler: "A." },
