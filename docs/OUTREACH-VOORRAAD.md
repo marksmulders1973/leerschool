@@ -156,3 +156,32 @@ Herinnering batch 1: Einsteinschool = opgeheven, schrappen.
 
 ## Verzend-log
 - (nog niets verstuurd uit dit doc — wacht op go van Mark na de vakantie)
+
+## ⭐ 3-partner-regel: bedank-pagina als sociale bewijslast (Mark 23 jul 2026)
+
+**Regel:** zodra er **3 of meer partners met toestemming** op leerkwartier.app/bedankt.html
+staan, gaat in ÉLKE outreach-mail (nieuw én reply) standaard deze alinea mee — direct
+na het "geen addertje onder het gras"-blok:
+
+> **Kant-en-klare alinea (invoegen zodra teller ≥ 3):**
+>
+> "U bent trouwens niet de eerste: onder andere [PARTNER 1], [PARTNER 2] en
+> [PARTNER 3] wijzen hun gezinnen al op Leerkwartier. Wie er allemaal meedoen
+> ziet u op leerkwartier.app/bedankt.html."
+>
+> (Namen invullen met de 2-3 bekendste/meest relevante voor de ontvanger:
+> voor een voedselbank eerst voedselbanken noemen, voor een Leergeld-stichting
+> eerst Leergeld-partners, enz. Altijd alleen partners die publiek op de
+> bedank-pagina staan — dus mét toestemming.)
+
+**Teller (bijwerken bij elke wijziging van bedankt.html):**
+- ✅ 1. Voedselbank Rotterdam (live sinds 16 jul)
+- ⏳ Studiezalen Amsterdam — blok staat klaar, wacht op toestemming Seyda
+- ⏳ Voedselbank Alkmaar — toestemming gevraagd 18 jul (Teresa)
+- ⏳ Leergeld Haarlemmermeer — vragen zodra Spark Fest-samenwerking rond is
+- **Stand: 1/3 → alinea nog NIET gebruiken**
+
+Waarom dit werkt: sector-organisaties (Leergeld-stichtingen, voedselbanken,
+bibliotheken) kennen en volgen elkaar — "die en die doet al mee" verlaagt de
+drempel meer dan welk argument ook. Zie memory `project_studiebol_bedankt_pagina`
+(staande opdracht naamsbekendheid-spiraal).
