@@ -34,6 +34,12 @@
 
 **Totaal: ~1.700–2.400.** Deliverability-regel blijft: max ~30–40/dag vanaf Mark's Gmail (limiet 500/dag; reputatie sparen).
 
+## 🎯 Warme-tip-ingangen scholenstichtingen (verzamelen zodra genoemd)
+
+- **o2g2** (Openbaar Onderwijs Groep Groningen), **Ommeriek** en **Kentalis** — tip van
+  Eline Doesburg-Aalfs (Forum Groningen, educatie, 24 jul). Opener voor de mail:
+  "Forum Groningen raadde me aan contact met u op te nemen." Meesturen met scholen-batch 2 (eind aug).
+
 ## Aanbevolen volgorde na de vakantie
 
 1. **Leergeld rest (55)** — adressen staan klaar (hieronder), hoogste fit, warme referenties (Apeldoorn okt-nieuwsbrief, Salland-tip van Voedselbank Raalte 17 jul). Versturen laatste vakantieweek.
