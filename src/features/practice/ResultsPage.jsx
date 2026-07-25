@@ -3,11 +3,9 @@ import styles from "../../styles.js";
 import { SUBJECTS, LEVELS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { SoundEngine, track, getMyRefCode } from "../../utils.js";
-import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import supabase from "../../supabase.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
-import { gameVisibleForUser, urlHasGameDeepLink } from "../../shared/featureFlags.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel, onOpenLeerpad }) {
   const latest = results[results.length - 1];
@@ -16,7 +14,6 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const grade = latest.percentage >= 90 ? "🏆 Fantastisch!" : latest.percentage >= 70 ? "🌟 Goed gedaan!" : latest.percentage >= 50 ? "💪 Ga zo door!" : "📚 Blijven oefenen!";
   const emoji = latest.percentage >= 90 ? "🎉" : latest.percentage >= 70 ? "😊" : latest.percentage >= 50 ? "🙂" : "💪";
   const [sent, setSent] = useState(false);
-  const [showGame, setShowGame] = useState(false);
   const [showIosInstall, setShowIosInstall] = useState(false);
   const [installed, setInstalled] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -174,7 +171,6 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   return (
     <div style={styles.page}>
-      {showGame && <ObliteratorGame userName={userName} authUser={authUser} wrongQuestions={wrongQuestions} onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>
@@ -546,66 +542,10 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
-        <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
-          {!gameVisibleForUser(authUser, urlHasGameDeepLink()) ? (
-            // S1: niet-ingelogd + flag aan → game-CTA verbergen voor Cito-ouder-ICP.
-            // Toon login-prompt in plaats daarvan zodat speler kan opt-in.
-            onLogin && (
-              <button
-                onClick={onLogin}
-                style={{
-                  width: "100%", padding: "12px 16px", borderRadius: 14,
-                  border: "1px solid rgba(255,150,40,0.4)",
-                  background: "rgba(255,150,40,0.08)",
-                  color: "#ffcc40", fontFamily: "var(--font-display)",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer",
-                }}
-              >
-                🔓 Log in om mini-game te spelen
-              </button>
-            )
-          ) : latest.percentage >= 50 ? (
-            <>
-              <button
-                onClick={() => setShowGame(true)}
-                style={{
-                  width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
-                  background: "linear-gradient(135deg, #ff5030, #ffcc40)",
-                  color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
-                  fontSize: 20, letterSpacing: 3, fontWeight: 700, cursor: "pointer",
-                  boxShadow: "0 4px 20px rgba(255,80,40,0.5)",
-                  // pulse-animatie weggehaald (audit-3 M2): trok te veel
-                  // aandacht weg van het primaire pad ("verder leren").
-                }}
-              >
-                👽 SPEEL OBLITERATOR 🛸
-              </button>
-              <p style={{ textAlign: "center", fontSize: 12, color: "var(--color-text-muted)", marginTop: 6 }}>
-                {latest.percentage >= 80
-                  ? "Jij hebt het verdiend — kraak de high score!"
-                  : "Mooie score! Speel OBLITERATOR als beloning."}
-              </p>
-            </>
-          ) : (
-            <div style={{
-              padding: "14px 16px", borderRadius: 14,
-              background: "linear-gradient(135deg, rgba(255,150,40,0.10), rgba(255,80,40,0.05))",
-              border: "1px solid rgba(255,150,40,0.35)",
-              textAlign: "center",
-            }}>
-              <div style={{ fontSize: 28, marginBottom: 4 }}>🔒</div>
-              <p style={{
-                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 15, letterSpacing: 1,
-                color: "#ffcc40", marginBottom: 4
-              }}>
-                OBLITERATOR — score nog niet voldoende
-              </p>
-              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
-                Haal <strong style={{ color: "var(--color-brand-primary-100)" }}>50% of hoger</strong> bij een toets om het mini-spel te verdienen!
-              </p>
-            </div>
-          )}
-        </div>
+        {/* OBLITERATOR-CTA verwijderd (Mark 2026-07-25): het spel past niet
+            meer bij de app en is een easter egg geworden — 7× tikken op de
+            parknaam in het park-menu, of de deeplink /obliterator. De
+            beloning na een toets is nu het park (park tokens). */}
 
         {/* Cito smart aanbeveling */}
         {quiz?.citoId && (() => {

@@ -293,6 +293,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
 
+  // Easter egg (Mark 2026-07-25): OBLITERATOR is overal uit het zicht — wie
+  // 7× snel op de parknaam in het menu tikt (of /obliterator kent) vindt het
+  // geheime spel alsnog.
+  const eggTaps = useRef(0);
+  const eggTimer = useRef(null);
+  const geheimeTik = () => {
+    if (!onPlayObliterator) return;
+    eggTaps.current += 1;
+    clearTimeout(eggTimer.current);
+    eggTimer.current = setTimeout(() => { eggTaps.current = 0; }, 1500);
+    if (eggTaps.current >= 7) { eggTaps.current = 0; onPlayObliterator(); }
+  };
+
   const [meta, setMeta] = useState(null);
   const [placedItems, setPlacedItems] = useState(STARTER_LAYOUT);
   const [placing, setPlacing] = useState(null); // { assetId, price, moveIdx? }
@@ -1392,7 +1405,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <style>{`@keyframes zooMenuFade{from{opacity:0}to{opacity:1}}@keyframes zooMenuIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}`}</style>
           <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 620, margin: "0 auto", padding: "16px 16px calc(28px + env(safe-area-inset-bottom))", animation: "zooMenuIn .22s ease-out" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-              <div style={{ color: "#fff", font: "900 20px system-ui", textShadow: "0 1px 6px rgba(0,0,0,.4)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>🐾 {parkNaam}</div>
+              <div onClick={geheimeTik} style={{ color: "#fff", font: "900 20px system-ui", textShadow: "0 1px 6px rgba(0,0,0,.4)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", userSelect: "none" }}>🐾 {parkNaam}</div>
               <button onClick={sluitMenu} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 40, height: 40, font: "800 16px system-ui", color: "#fff", background: "rgba(255,255,255,0.14)", cursor: "pointer" }}>✕</button>
             </div>
             <div style={{ color: "rgba(255,255,255,0.75)", font: "700 12.5px system-ui", margin: "6px 0 16px" }}>
@@ -1435,7 +1448,6 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
             <div style={menuKop}>🎮 Extra</div>
             <div style={menuGrid}>
-              {onPlayObliterator && <MenuTegel emoji="🎮" label="OBLITERATOR — extra spel" fn={onPlayObliterator} />}
               <MenuTegel emoji="ℹ️" label="Hoe werkt het?" fn={() => setPanel("uitleg")} />
               <MenuTegel emoji="📖" label="Diergids" fn={() => setPanel("gids")} />
             </div>
