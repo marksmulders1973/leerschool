@@ -1,6 +1,6 @@
 // 🤝 Vrienden-werven-kaart in het ouder-dashboard (Mark 8 jul 2026).
-// Persoonlijke deel-link + teller: 5 geworven vrienden = 6 maanden Pro
-// klaargezet voor de Pro-lancering (jan 2027). Een vriend telt pas na écht
+// Persoonlijke deel-link + teller: 5 geworven vrienden = 6 maanden Familie
+// klaargezet voor de betaal-lancering (jan 2027). Een vriend telt pas na écht
 // oefenen (3 beantwoorde vragen) — deel-kliks tellen niet. Alleen voor
 // volwassenen: dit blok staat bewust NIET in kinder-schermen (STOPLIST).
 
@@ -58,11 +58,11 @@ export default function VriendenWerven({ authUser }) {
   return (
     <div style={{ borderRadius: 14, border: "1px solid rgba(105,240,174,0.25)", background: "rgba(105,240,174,0.05)", padding: "16px 18px" }}>
       <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "var(--color-brand-primary-100)", marginBottom: 4 }}>
-        🤝 Vrienden werven — verdien 6 maanden Pro
+        🤝 Vrienden werven — verdien 6 maanden Familie
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.55, color: "rgba(255,255,255,0.65)", marginBottom: 12 }}>
         Deel je persoonlijke link met andere ouders. Zodra {doel} nieuwe gezinnen via jouw link écht oefenen
-        (minstens 3 vragen), staat er 6 maanden Pro voor je klaar bij de Pro-lancering (januari 2027).
+        (minstens 3 vragen), staat er 6 maanden Leerkwartier Familie voor je klaar bij de lancering (januari 2027).
         Klikken telt niet — oefenen wel.
       </div>
 
@@ -70,7 +70,7 @@ export default function VriendenWerven({ authUser }) {
 
       {!laden && stand?.pro_verdiend && (
         <div style={{ borderRadius: 10, background: "rgba(105,240,174,0.12)", border: "1px solid rgba(105,240,174,0.4)", padding: "10px 12px", marginBottom: 10, fontFamily: "var(--font-body)", fontSize: 13, color: "var(--color-brand-primary-100)", fontWeight: 700 }}>
-          🎉 Gelukt! Je hebt {doel} vrienden geworven — 6 maanden Pro staat voor je klaar.
+          🎉 Gelukt! Je hebt {doel} vrienden geworven — 6 maanden Familie staat voor je klaar.
         </div>
       )}
 

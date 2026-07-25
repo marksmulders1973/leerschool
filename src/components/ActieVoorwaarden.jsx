@@ -5,7 +5,7 @@ import { track, getMyRefCode } from "../utils.js";
 // "Deel & win"-actiepagina (/actie). Mark-go 2026-06-05.
 // Deel een oefenvraag met je eigen ref-link; voor elke vriend die zich
 // aanmeldt voor de gratis-lesmateriaal-mail maak je kans op een gratis
-// Pro-jaar 2027. Wettelijk conform de Gedragscode Promotionele Kansspelen:
+// Familie-jaar 2027. Wettelijk conform de Gedragscode Promotionele Kansspelen:
 // gratis deelname, duidelijke actieperiode, loting, voorwaarden zichtbaar,
 // organisator vermeld, prijswaarde < €449 (geen kansspelbelasting).
 //
@@ -68,13 +68,13 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         >← Terug</button>
 
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 800, margin: "0 0 6px", lineHeight: 1.15 }}>
-          📣 Deel &amp; win een gratis Pro-jaar 2027
+          📣 Deel &amp; win een gratis Familie-jaar 2027
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
           Leerkwartier is en blijft gratis. Help je het verder verspreiden? Deel je
           persoonlijke link. Voor <strong>elke vriend of ouder die zich via jouw link
           aanmeldt</strong> voor de gratis wekelijkse oefenmail, maak je kans op een
-          <strong> gratis Pro-jaar in 2027</strong>. Hoe meer je deelt, hoe groter je kans. 🎉
+          <strong> gratis Familie-jaar in 2027</strong> (mét extra AI-bijles-tegoed). Hoe meer je deelt, hoe groter je kans. 🎉
         </p>
 
         <div style={card}>
@@ -127,7 +127,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
             <li><strong>Deelname is gratis</strong> en zonder aankoopverplichting.</li>
             <li><strong>Hoe meedoen:</strong> deel je persoonlijke link. Elke nieuwe aanmelding voor de gratis oefenmail via jouw link = één lot.</li>
             <li><strong>Actieperiode:</strong> tot en met 31 december 2026.</li>
-            <li><strong>Prijs:</strong> één gratis Pro-jaar 2027 (waarde onder € 449).</li>
+            <li><strong>Prijs:</strong> één gratis Leerkwartier Familie-jaar 2027 + 10 uur AI-bijles-kwartier-tegoed (totale waarde onder € 100).</li>
             <li><strong>Trekking:</strong> de winnaar wordt na afloop willekeurig geloot uit alle loten en persoonlijk via e-mail bericht.</li>
             <li><strong>Privacy:</strong> we bewaren alleen een anonieme deel-code en de aanmeldingen — geen extra persoonsgegevens van wie deelt.</li>
             <li>Deelname betekent akkoord met deze voorwaarden. Vragen? Via de tips-pagina in de app.</li>

@@ -11,7 +11,7 @@
 // trackProUse() uit proPlan.js (bv. als iemand echt een AI-vraag stelt).
 
 import { useState, useEffect, useRef } from "react";
-import { getProFeature, PRO_MODEL, trackProSeen, trackProUse } from "./proPlan.js";
+import { getProFeature, getLaag, PRO_MODEL, trackProSeen, trackProUse } from "./proPlan.js";
 
 export default function ProBadge({ feature, showFree = true, size = "sm", onInfo, style }) {
   const f = getProFeature(feature);
@@ -29,6 +29,11 @@ export default function ProBadge({ feature, showFree = true, size = "sm", onInfo
 
   if (!f) return null;
 
+  // De laag bepaalt wat de badge zegt: Familie (ouders), Pro (leerkrachten)
+  // of Kwartier-tegoed (losse extra's). Fallback op "Pro" voor oude features.
+  const laag = getLaag(f.laag);
+  const laagNaam = laag ? laag.naam : "Pro";
+
   const pad = size === "md" ? "4px 10px" : "2px 8px";
   const fontSize = size === "md" ? 12 : 10.5;
 
@@ -37,8 +42,8 @@ export default function ProBadge({ feature, showFree = true, size = "sm", onInfo
       <button
         type="button"
         onClick={() => { setOpen((o) => !o); if (!open) trackProUse(feature, { via: "badge_klik" }); }}
-        title={`${f.label} — Pro-extra · ${PRO_MODEL.kort}`}
-        aria-label={`${f.label} is een Pro-extra. ${PRO_MODEL.uitleg}`}
+        title={`${f.label} — ${laagNaam}-extra · ${PRO_MODEL.kort}`}
+        aria-label={`${f.label} is straks een ${laagNaam}-extra. ${PRO_MODEL.uitleg}`}
         style={{
           display: "inline-flex", alignItems: "center", gap: 5, padding: pad, borderRadius: 20,
           border: "1px solid rgba(255,183,77,0.5)",
@@ -47,7 +52,7 @@ export default function ProBadge({ feature, showFree = true, size = "sm", onInfo
           cursor: "pointer", whiteSpace: "nowrap", lineHeight: 1.4,
         }}
       >
-        <span aria-hidden="true">✨</span> Pro
+        <span aria-hidden="true">✨</span> {laagNaam}
       </button>
       {showFree && (
         <span style={{ fontFamily: "var(--font-body)", fontSize: fontSize - 0.5, fontWeight: 700, color: "#69f0ae", whiteSpace: "nowrap" }}>
@@ -84,7 +89,7 @@ export default function ProBadge({ feature, showFree = true, size = "sm", onInfo
               onClick={() => { setOpen(false); onInfo(); }}
               style={{ background: "none", border: "none", padding: 0, color: "#ffce80", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800, cursor: "pointer", textDecoration: "underline" }}
             >
-              Bekijk alle Pro-extra's →
+              Bekijk alle extra's →
             </button>
           )}
         </span>

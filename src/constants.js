@@ -6,7 +6,7 @@
 export const LAUNCH_PROMO_END = new Date("2027-01-01T00:00:00");
 export const isLaunchPromoActive = () => Date.now() < LAUNCH_PROMO_END.getTime();
 export const LAUNCH_PROMO_SHORT = "🎉 Dit jaar gratis wegens lancering";
-export const LAUNCH_PROMO_LONG = "Alle Pro-functies gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
+export const LAUNCH_PROMO_LONG = "Alle extra's (Familie én Pro) gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
 
 // ─── Subjects & Levels ──────────────────────────────────────────
 export const SUBJECTS = [

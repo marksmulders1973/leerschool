@@ -5,7 +5,7 @@ import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
-import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL } from "../subscription/proPlan.js";
+import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN } from "../subscription/proPlan.js";
 
 const PLANS = [
   {
@@ -153,21 +153,22 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
 
   return (
     <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg, #08101e 0%, #0d1a2e 60%, #120820 100%)" }}>
-      <Header title={`${BRAND.name} Pro ✨`} subtitle="Wat je nu gratis hebt — en straks per kwartier" onBack={onBack} onHome={onHome} />
+      <Header title={`${BRAND.name} extra's ✨`} subtitle="Wat je nu gratis hebt — en wat er vanaf 2027 bij komt" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 60px", maxWidth: 500, margin: "0 auto" }}>
 
-        {/* Hero banner — per-kwartier-model (Mark 2026-06-06) */}
+        {/* Hero banner — drie-lagen-model (Mark akkoord 2026-07-25, zie docs/PRIJSPLAN.md) */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
           <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: "rgba(0,200,83,0.15)", border: "1px solid rgba(0,200,83,0.3)", fontFamily: "var(--font-body)", fontSize: 12, color: "var(--color-brand-primary-100)", fontWeight: 700, marginBottom: 10 }}>
             🎉 Nu gratis &amp; onbeperkt — t/m 2026
           </div>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "var(--color-text-strong)", lineHeight: 1.2, marginBottom: 6 }}>
-            Alles is nu gratis.<br />Dit zijn de Pro-extra's.
+            Alles is nu gratis.<br />Dit komt er vanaf 2027 bij.
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
-            Vanaf 2027 blijft de basis gratis. Pro-extra's koop je dan <strong style={{ color: "#ffce80" }}>per kwartier</strong> bij —
-            geen abonnement, geen automatische verlenging. Je betaalt alléén voor wat je écht gebruikt.
+            De basis blijft gratis. Daarnaast komen er drie extra's: <strong style={{ color: "#ffce80" }}>Familie</strong> (één
+            klein bedrag per gezín), <strong style={{ color: "#ffce80" }}>Pro</strong> voor leerkrachten, en los{" "}
+            <strong style={{ color: "#ffce80" }}>kwartier-tegoed</strong> voor extra AI-bijles — zonder abonnement.
           </div>
         </div>
 
@@ -185,33 +186,39 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
         </div>
 
-        {/* Pro-extra's — wat je straks "wint" (nu gratis preview) */}
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffce80", marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
-          ✨ Pro-extra's
-          <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>nu nog gratis</span>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
-          {Object.values(PRO_FEATURES).map((f) => (
-            <div key={f.id} style={{ borderRadius: 14, border: "1px solid rgba(255,183,77,0.22)", background: "rgba(255,183,77,0.05)", padding: "12px 14px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-                <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
-                <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{f.label}</span>
-                <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 10.5, fontWeight: 700, color: f.status === "live" ? "#69f0ae" : "rgba(255,255,255,0.4)" }}>
-                  {f.status === "live" ? "✓ nu gratis" : "binnenkort"}
-                </span>
-              </div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>{f.blurb}</div>
+        {/* De extra's, gegroepeerd per laag (Familie / Pro / Kwartier-tegoed) */}
+        {Object.values(LAGEN).map((laag) => (
+          <div key={laag.id} style={{ marginBottom: 16 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffce80", marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>
+              {laag.icon} {laag.naam}
+              <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>{laag.wie}</span>
+              <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>nu nog gratis</span>
             </div>
-          ))}
-        </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>{laag.prijs}</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {Object.values(PRO_FEATURES).filter((f) => f.laag === laag.id).map((f) => (
+                <div key={f.id} style={{ borderRadius: 14, border: "1px solid rgba(255,183,77,0.22)", background: "rgba(255,183,77,0.05)", padding: "12px 14px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                    <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{f.label}</span>
+                    <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 10.5, fontWeight: 700, color: f.status === "live" ? "#69f0ae" : "rgba(255,255,255,0.4)" }}>
+                      {f.status === "live" ? "✓ nu gratis" : "binnenkort"}
+                    </span>
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>{f.blurb}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
 
-        {/* Per-kwartier-model uitgelegd */}
+        {/* Kwartier-tegoed uitgelegd */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,206,128,0.3)", background: "rgba(255,183,77,0.07)", padding: "16px 18px", marginBottom: 20 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ffce80", marginBottom: 8 }}>
-            ⏱️ Hoe werkt "per kwartier"?
+            ⏱️ Hoe werkt het kwartier-tegoed?
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 10 }}>
-            Vanaf 2027 koop je losse kwartiertjes (bv. een bundel van 10). Zolang je saldo loopt, gebruik je de Pro-extra's. Is het op? Dan stopt het gewoon — jij beslist zelf of je bijkoopt.
+            Vanaf 2027 koop je losse kwartiertjes extra AI-bijles (bv. een bundel van 10). Zolang je saldo loopt, praat de AI-bijles onbeperkt mee. Is het op? Dan stopt het gewoon — jij beslist zelf of je bijkoopt. Ook leuk om cadeau te geven.
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {["Je saldo staat altijd in beeld — geen verrassingen", "Nooit een automatische verlenging of stilzwijgend abonnement", "Je betaalt alléén voor wat je écht gebruikt"].map((t, i) => (

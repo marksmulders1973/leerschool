@@ -47,15 +47,15 @@ export const FREE_QUOTA = {
   examModePerWeek: 0,
 };
 
-// ⚠️ VEROUDERD (B1.1, 7-bots-review 2026-06-13): deze abonnement-bedragen
-// stammen van vóór de prijsmodel-wissel naar per-kwartier-bijkopen (Mark
-// 2026-06-06, zie proPlan.js). NIET in UI tonen — proPlan.js is de bron van
-// waarheid voor alle gebruiker-facing prijs-copy. Dit blok blijft alleen
-// staan tot de Stripe-koppeling in jan 2027 definitieve kwartier-prijzen
-// krijgt; dan herijken of verwijderen.
+// Richtprijzen drie-lagen-model (Mark akkoord 2026-07-25, zie docs/PRIJSPLAN.md).
+// Definitief vaststellen vóór de Stripe-koppeling jan 2027. NIET hard in UI
+// tonen — proPlan.js (LAGEN) is de bron van waarheid voor prijs-copy.
+// Mapping op TIERS: familie = parent_pro, leerkracht (Pro) = teacher_pro.
 export const PRICING = {
-  parent_monthly: { price: 5.99, currency: "EUR", interval: "maand", label: "Maandabonnement" },
-  parent_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Jaarabonnement (save 45%)" },
-  parent_exam_period: { price: 19.95, currency: "EUR", interval: "examenperiode", label: "Examenperiode jan-mei" },
+  familie_monthly: { price: 4.95, currency: "EUR", interval: "maand", label: "Familie — per gezin/maand" },
+  familie_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Familie — per gezin/jaar" },
+  teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "Pro (leerkracht) — per maand" },
+  teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "Pro (leerkracht) — per jaar" },
   teacher_school: { price: 99, currency: "EUR", interval: "klas/jaar", label: "Schoollicentie" },
+  kwartier_tegoed: { price: null, currency: "EUR", interval: "los", label: "Kwartier-tegoed — prijs per kwartier vóór lancering bekend" },
 };

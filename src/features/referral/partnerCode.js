@@ -1,7 +1,8 @@
 // 🤲 Partner-codes (Mark 10 jul 2026): voedselbanken, Stichtingen Leergeld en
 // bibliotheken delen een flyer met QR-code → leerkwartier.app/?partner=CODE.
-// De code geeft het gezin de garantie "gratis Pro tot en met de Doorstroomtoets
-// 2027" (vlag lokaal; wordt ingelost bij de Pro-lancering jan 2027) en maakt
+// De code geeft het gezin de garantie "gratis Familie-niveau tot en met de
+// Doorstroomtoets 2027" (vlag lokaal; ingelost bij de lancering jan 2027 —
+// prijsplan-besluit Mark 2026-07-25: partner-code = Familie gratis) en maakt
 // per partner meetbaar of de flyer werkt:
 //   - event `partner_bezoek` = iemand landde via de QR/link (met de code)
 //   - event `partner_actief` = diegene is écht gaan oefenen (na 3 antwoorden)
@@ -21,7 +22,8 @@ const KEY_ACTIEF = "lk_partner_actief";
 const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol'
 export const PARTNER_ACTIVATIE_DREMPEL = 3;
 // Waar de code recht op geeft — getoond in UI en straks gehonoreerd door de
-// paywall (useSubscription): gratis Pro tot na de Doorstroomtoets van 2027.
+// paywall (useSubscription): gratis Familie tot na de Doorstroomtoets van 2027.
+// (Sleutelwaarde 'pro2027' blijft technisch ongewijzigd voor bestaande apparaten.)
 export const PARTNER_PRO_TOT = "2027-08-01";
 
 const ls = {
