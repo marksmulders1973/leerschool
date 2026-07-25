@@ -8,6 +8,7 @@ import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import AITutor from "../learn/AITutor.jsx";
@@ -113,6 +114,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
+  // Voorlees-steun (Mark 25 jul, laaggeletterde gezinnen via voedselbank/
+  // Leergeld): het oortje leest de vraag én de antwoordopties voor. Geeft
+  // niets weg — alles staat al op het scherm.
+  const voorleesVraag = [
+    question?.q,
+    ...(question?.kind === "open" ? [] : (question?.options || []).map((opt, i) => `${String.fromCharCode(65 + i)}. ${opt}`)),
+  ].filter(Boolean).join("\n");
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
   // Cito-eindtoets-simulatie: 50 vragen op cito-flow → 60 min countdown.
@@ -498,7 +506,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               borderTop: "1px dashed rgba(255,107,53,0.25)",
               paddingTop: 10,
             }}>
-              {question.bronTekst.body}
+              <VoorleesBlok tekst={question.bronTekst.body} accent="#ff8c5a">
+                {question.bronTekst.body}
+              </VoorleesBlok>
             </div>
           )}
         </div>
@@ -507,7 +517,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
           <div style={{ flex: 1 }}>
-            <h2 style={{ ...styles.questionText, margin: 0 }}><MdInline text={question.q} /></h2>
+            <VoorleesBlok tekst={voorleesVraag} accent="#00C853">
+              <h2 style={{ ...styles.questionText, margin: 0 }}><MdInline text={question.q} /></h2>
+            </VoorleesBlok>
             {/* Mark wens 2026-05-20: in 'oefen alle door elkaar'-mix tijdvak +
                 vraagnummer in kleine gele letters onder vraag tonen. quiz
                 .examenMixSource wordt gezet door buildExamenMix. */}

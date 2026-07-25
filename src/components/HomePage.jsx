@@ -3,6 +3,7 @@ import { Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
+import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
@@ -659,12 +660,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             }}>
               {BRAND.slogan}
             </div>
+            {/* Voorlees-oortje (Mark 25 jul): ook de ouder die moeite heeft met
+                lezen (voedselbank-/Leergeld-gezinnen) moet de belofte kunnen
+                hóren in plaats van lezen. */}
             <div style={{
               fontFamily: "var(--font-body)", fontSize: 14.5, lineHeight: 1.55,
               color: "rgba(255,255,255,0.85)", marginBottom: 18,
             }}>
-              Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en{" "}
-              <strong style={{ color: "#fff" }}>VMBO-examens</strong> — met uitleg op drie niveaus, tot je kind het écht snapt.
+              <VoorleesBlok tekst={`${BRAND.slogan}. Gratis oefenen voor de Doorstroomtoets, groep 6 tot en met 8, en voor de VMBO-examens. Snapt je kind het niet? Dan leggen we het makkelijker uit. Je hebt geen account nodig. Druk op de gele knop om te beginnen.`} accent="#ffd54f">
+                Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en{" "}
+                <strong style={{ color: "#fff" }}>VMBO-examens</strong> — met uitleg op drie niveaus, tot je kind het écht snapt.
+              </VoorleesBlok>
             </div>
             <button
               onClick={() => handleFeatureClick("cito")}
