@@ -13,6 +13,10 @@
 //    geen abonnement, ook als cadeaukaart.
 //  - De leer-basis blijft gratis (merkbelofte); partner-codes (Leergeld,
 //    Ooievaarspas, voedselbanken) geven het Familie-niveau gratis.
+//    ⚖️ Ooievaarspas = BLIJVEND gratis Familie, zonder plekken-limiet —
+//    schriftelijk toegezegd aan gemeente Den Haag (getekend formulier
+//    26 jul 2026). Pro (leerkracht) valt buiten die toezegging.
+//    Zie partnerCode.js (partnerFamilieTot) + useSubscription.js (partnerGrant).
 //
 // Nu (2026) staat ALLES gratis open. We labelen de betaalde extra's alvast met
 // een <ProBadge> zodat (a) gebruikers zien wat ze straks "winnen" en (b) wij

@@ -21,10 +21,26 @@ const KEY_TELLER = "lk_partner_antwoorden";
 const KEY_ACTIEF = "lk_partner_actief";
 const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol'
 export const PARTNER_ACTIVATIE_DREMPEL = 3;
-// Waar de code recht op geeft — getoond in UI en straks gehonoreerd door de
-// paywall (useSubscription): gratis Familie tot na de Doorstroomtoets van 2027.
+// Waar de code recht op geeft — getoond in UI en gehonoreerd door de paywall
+// (useSubscription): gratis Familie tot na de Doorstroomtoets van 2027.
 // (Sleutelwaarde 'pro2027' blijft technisch ongewijzigd voor bestaande apparaten.)
 export const PARTNER_PRO_TOT = "2027-08-01";
+
+// ⚖️ BLIJVENDE codes — hard toegezegd in het getekende "Aanvraagformulier
+// vriend OP" aan de gemeente Den Haag (26 jul 2026): Ooievaarspashouders
+// krijgen het Familie-abonnement BLIJVEND gratis, zonder einddatum en zonder
+// plekken-limiet (max_uses in de DB staat op 1.000.000). Pro (leerkracht-tier)
+// valt hier nadrukkelijk buiten. NIET inkorten zonder nieuwe afspraak met
+// bureau Ooievaarspas.
+const BLIJVENDE_CODE_PREFIX = "OOIEVAAR";
+
+// Tot wanneer geeft de actieve partner-code gratis Familie?
+// null = blijvend (geen einddatum); anders een ISO-datum.
+export function partnerFamilieTot() {
+  const code = ls.get(KEY_CODE) || "";
+  if (code.startsWith(BLIJVENDE_CODE_PREFIX)) return null;
+  return PARTNER_PRO_TOT;
+}
 
 const ls = {
   get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },

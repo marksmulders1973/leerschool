@@ -55,10 +55,21 @@ leren" — mooi voor de decemberpiek (kerstpakketten-spoor).
 AI-kosten per kwartier gebruik — zie pro_feature_used-events).
 
 ### 5. Partner-codes = Familie-niveau gratis
-Leergeld-, Ooievaarspas-, voedselbank- en bibliotheek-gezinnen krijgen via hun
-partner-code het Familie-niveau gratis t/m de Doorstroomtoets 2027
-(`partnerCode.js`, status 'pro2027' — technische sleutelwaarde ongewijzigd).
+Leergeld-, voedselbank- en bibliotheek-gezinnen krijgen via hun partner-code
+het Familie-niveau gratis t/m de Doorstroomtoets 2027 (`partnerCode.js`,
+status 'pro2027' — technische sleutelwaarde ongewijzigd).
 Dit beantwoordt de open vraag "paywall-honorering partner-codes".
+
+**⚖️ Uitzondering Ooievaarspas (bindend, 26 jul 2026):** in het getekende
+"vriend van de Ooievaarspas"-formulier is aan de gemeente Den Haag toegezegd
+dat pashouders het Familie-abonnement **blijvend** gratis krijgen — geen
+einddatum, geen plekken-limiet (`partner_codes.max_uses` voor OOIEVAAR2027
+staat op 1.000.000). `partnerFamilieTot()` in `partnerCode.js` geeft voor
+OOIEVAAR*-codes `null` (blijvend) terug; `partnerGrant()` in
+`useSubscription.js` honoreert dat bij een actieve paywall. **Pro
+(leerkracht-tier) valt nadrukkelijk buiten deze toezegging** — alleen het
+Familie-niveau is gratis. Niet inkorten zonder nieuwe afspraak met bureau
+Ooievaarspas.
 
 ## Naamgebruik
 
@@ -83,6 +94,7 @@ Dit beantwoordt de open vraag "paywall-honorering partner-codes".
 
 - [ ] Definitieve prijzen vaststellen (incl. prijs per kwartier o.b.v. AI-kostenmeting).
 - [ ] Stripe-koppeling: producten per laag + tegoed-bundels (zie CLAUDE.md paywall-stappen).
-- [ ] `useSubscription`: partner-status 'pro2027' → Familie-tier honoreren.
+- [x] `useSubscription`: partner-status 'pro2027' → Familie-tier honoreren
+  (gedaan 2026-07-26 via `partnerGrant()`, incl. blijvend-regel Ooievaarspas).
 - [ ] Cadeaukaart-flow (kwartier-tegoed) — mikken op december-campagne.
 - [ ] Wachtlijst mailen (upgrade_waitlist) met 30-dagen-gratis-aanbod.
