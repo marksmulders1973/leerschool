@@ -35,5 +35,5 @@
 
 ## ⏳ Waar we op wachten
 - Ooievaarspas: beoordeling + vriend-overeenkomst → daarna stadspassen-batch naar andere gemeenten.
-- Spark Fest: fysieke flyers aanleveren.
+- Spark Fest: wachten op antwoord van Inez met bezorgadres + deadline (JA-mail 23 jul) → dan drukken (A5, ±1.050 st.) en opsturen.
 - Outreach-reacties vanaf eind augustus.
