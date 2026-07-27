@@ -38,6 +38,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -763,6 +764,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             onPickPath={onPickPath}
             examRefs={examRefs}
           />
+          <GratisLesmateriaal source={`leerpad-klaar-${path.subject || "leerpad"}`} compact />
         </div>
       </div>
     );
