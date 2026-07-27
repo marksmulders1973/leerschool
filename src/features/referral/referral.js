@@ -65,7 +65,17 @@ export function telAntwoordVoorVriend() {
     const visitor = uid();
     if (!visitor) return;
     supabase.rpc("activeer_vriend", { p_code: code, p_visitor: visitor })
-      .then(() => { try { track("vriend_geworven", { code }); } catch { /* */ } })
+      .then(() => {
+        try { track("vriend_geworven", { code }); } catch { /* */ }
+        // Deel-actie 2027: receiver krijgt ook Familie gratis (max 50 plekken).
+        return supabase.rpc("claim_partner_plek", { p_code: "DEELACTIE2027", p_visitor: visitor });
+      })
+      .then(({ data } = {}) => {
+        if (data === "geclaimd" || data === "al_geclaimd") {
+          ls.set("lk_partner_status", "pro2027");
+          try { track("deel_actie_ontvangen", {}); } catch { /* */ }
+        }
+      })
       .catch(() => { ls.set(KEY_KLAAR, ""); /* volgende antwoord probeert opnieuw */ });
   } catch { /* nooit de leerflow breken */ }
 }
