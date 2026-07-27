@@ -5,7 +5,7 @@
 ## 🔴 Prio 1 — actie zodra antwoord binnenkomt
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
-| **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | ✅ 27 jul: flyer GOEDGEKEURD door Inez ("past goed bij onze goodybag!"). Nu wachten op: bezorgadres (postbus of pakket-adres?) + uiterste datum — vraag-reply verstuurd 27 jul | 27 jul | Zodra adres binnen is: Mark bestelt Drukwerkdeal (A5, 1.050 st., ±€75). **Stil t/m ~31 jul → vriendelijke reminder** (zij werkt ma-do). Weetje: Spark Fest = 20-jarig jubileum Leergeld Haarlemmermeer, sparkfest.nl |
+| **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | ✅ 27 jul: flyer GOEDGEKEURD door Inez ("past goed bij onze goodybag!"). Nu wachten op: bezorgadres (postbus of pakket-adres?) + uiterste datum — vraag-reply verstuurd 27 jul; Mark bestelt direct zodra het adres binnen is | 27 jul | **Bestel-spiekbriefje Drukwerkdeal:** flyers A5, **1.050 stuks**, dubbelzijdig full colour, 135 grams glans (zelfde lijn als vorige order 15635719), PDF = `leerkwartier.app/drukwerk/flyer-HAARLEMMERMEER2027.pdf`, bezorgadres = wat Inez doorgeeft, ±€75. Geen tijdsdruk (festival 18 okt; uiterlijk begin okt drukken = ruim op tijd). Stil t/m ~31 jul → vriendelijke reminder (zij werkt ma-do). Weetje: Spark Fest = 20-jarig jubileum Leergeld Haarlemmermeer, sparkfest.nl |
 | **Ooievaarspas Den Haag (vriend-status)** | ✅ 27 jul: Rob bevestigt "formulier goed binnengekomen"; **accountmanager Esther doet de beoordeling, "komen er z.s.m. op terug"** | 27 jul | Zij sturen vriend-overeenkomst via ValidSign (tekenen!) → plaatsing in OP-aanbod → stadspassen-batch naar andere gemeenten + /ooievaarspas.html-tekst omzetten naar "vriend van". |
 
 ## 🟠 Prio 2 — loopt, geduld
