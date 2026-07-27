@@ -3,12 +3,13 @@
 *Wat er al gelukt is. Bijgewerkt: 26 juli 2026. Aanvullen mag altijd — dit is de trots-lijst.*
 
 ## 🏪 Zichtbaar in de echte wereld
-- **Op 3 schermen in supermarkten** draait Leerkwartier-reclame.
-- **Spark Fest zei JA**: flyers gaan in de goodybags voor **1000 kinderen** (23 jul).
+- **Op 3 schermen in supermarkten**: de sociale supermarkten van de Voedselbank Rotterdam (Crooswijk, Rotterdam-Zuid, Spangen) + hun distributiecentrum draaien sinds 16 jul onze dia ("perfect" — Amber, MarCom). Code VBROTTERDAM2027.
+- **Spark Fest zei JA** (23 jul): kinderfestival in Hoofddorp, zo 18 okt, ~1.000 kinderen (2-17 jr) uit gezinnen met weinig geld, met Leergeld Haarlemmermeer — onze flyer gaat in alle **1000 goodybags** (grootste fysieke bereik tot nu toe).
 - **25 partner-codes** live met QR-flyers (o.a. Alkmaar-patroon in B1-taal), flyers in sets van 50.
 - Flyer-mails verstuurd naar partners (13 jul), goedgekeurd flyer-sjabloon met echt logo.
 
 ## 🏛️ Gemeente Den Haag — Ooievaarspas
+- **Waarom dit groot is:** de Ooievaarspas is dé kortingspas voor lage inkomens in Den Haag, Leidschendam-Voorburg en Rijswijk — **ruim 53.000 gezinnen** gebruiken hem (bron: ooievaarspas.nl). Vriend-status = plaatsing in het officiële gemeente-aanbod = eerste gemeente die Leerkwartier opneemt + deur-opener voor stadspassen elders.
 - Aanvraag "vriend van de Ooievaarspas" ingediend, KvK-drempel weggepraat (bleek niet verplicht).
 - **Formulier getekend en voltooid 26 jul** via ValidSign — bevestigd: "Ondertekening is voltooid".
 - Bureau Ooievaarspas scande onze QR-code al 8×: ze kijken actief mee.
