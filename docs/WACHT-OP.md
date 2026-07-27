@@ -15,6 +15,8 @@
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 
 ## 🟡 Mark-acties (open)
+- 👥 **Lid worden van je eigen FB-groep** Doorstroomtoets 2027 ("Lid worden"-knop, 1 tik) — je posts als persoon belanden nu in de spamfilter van de groep (ontdekt 27 jul; je dagvraag van 17 jul zat er 10 dagen in, is nu gepubliceerd).
+- 👥 FB-groepen joinen (1 tik per stuk, uit 16 jul): Ouder zoekt kindercoach · Leerling in beeld - doorstroomtoets · Ouders met pubers (12-18).
 - 🔔 Zelf abonneren op web-push (knop in de app).
 - QR-flyer-flow zelf testen op telefoon.
 - SQL `claim_link_code` draaien (audit 4 P1).
