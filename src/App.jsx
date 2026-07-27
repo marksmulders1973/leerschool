@@ -91,6 +91,7 @@ const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
 const Curriculum = lazy(() => import("./features/learn/Curriculum.jsx"));
 const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
+const KwartiercheckPage = lazy(() => import("./features/kwartiercheck/KwartiercheckPage.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { levelsCompatible } from "./learnPaths/utils.js";
@@ -2046,6 +2047,12 @@ export default function App() {
         <MetDankAan
           authUser={authUser}
           onBack={() => setPage("home")}
+          onHome={goHome}
+        />
+      )}
+      {page === "kwartiercheck" && (
+        <KwartiercheckPage
+          emailVanIntro={null}
           onHome={goHome}
         />
       )}

@@ -18,6 +18,7 @@ export const GO_PARAM_TO_PAGE = {
   schoolboeken: "textbook",
   leerkracht: "teacher-home",
   scorebord: "leaderboard",
+  kwartiercheck: "kwartiercheck",
 };
 
 export function parsePvpJoinCode(pathname) {
