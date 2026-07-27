@@ -68,6 +68,11 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
   const vraag = actueel || getSocialVraag(id);
   const [gekozen, setGekozen] = useState(null);
   const [niveau, setNiveau] = useState("basis");
+  // Trechter-fix 27 jul: 91% haakte af vóór het eerste antwoord. De leestekst
+  // was de zwaarste eerste stap — nu standaard ingeklapt (preview + 1 tik),
+  // zodat vraag + antwoordknoppen meteen samen in beeld staan. Bij een fout
+  // antwoord klapt de tekst automatisch open om terug te lezen.
+  const [tekstOpen, setTekstOpen] = useState(false);
   // Al aangemeld voor de gratis lesmateriaal-mail? Dan het opt-in-blok niet tonen.
   const [emailAl] = useState(() => {
     try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
@@ -114,6 +119,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
     if (gekozen != null) return;
     gekozenRef.current = true;
     setGekozen(i);
+    if (i !== vraag.answer) setTekstOpen(true); // fout? → berichtje openklappen om terug te lezen
     telAntwoordVoorVriend(); // 🤝 telt mee voor vriend-activatie (?vriend=CODE)
     track("deeplink_answer", { id: String(vraag.id || id).slice(0, 40), goed: i === vraag.answer, actueel: !!vraag.actueel });
   };
@@ -137,41 +143,48 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
         Geef hier je antwoord 👇
       </div>
 
-      {vraag.actueel && (
-        <div style={{ marginBottom: 10 }}>
-          <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700 }}>
-            {vraag.emoji} 🗞️ uit het nieuws van vandaag
-          </div>
-          {/* Bronvermelding altijd zichtbaar (Mark 3 jul): we vertellen het
-              nieuwsfeit na met eigen woorden en linken netjes naar de bron.
-              Nieuwsfoto's nemen we NIET over (auteursrecht). */}
-          {vraag.bronTitel && (
-            <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", marginTop: 6, lineHeight: 1.4 }}>
-              Bron: NOS Jeugdjournaal —{" "}
-              {vraag.bronUrl
-                ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
-                : <span>{vraag.bronTitel}</span>}
-              {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
-            </div>
+      {/* Compacte badge-regel: 1 regel, duwt de vraag niet naar beneden. */}
+      {(vraag.actueel || vraag.doelgroep) && (
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
+          {vraag.actueel && (
+            <span style={{ background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "4px 12px", fontSize: 12.5, fontWeight: 700 }}>
+              {vraag.emoji} 🗞️ uit het nieuws
+            </span>
+          )}
+          {vraag.doelgroep && (
+            <span style={{ background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontSize: 12.5, fontWeight: 700 }}>
+              {vraag.doelgroep}
+            </span>
           )}
         </div>
       )}
-      {vraag.doelgroep && (
-        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
-          {vraag.doelgroep}
-        </div>
-      )}
-      {/* Leestekst bij een begrijpend-lezen-vraag: eerst het (eigen-woorden)
-          berichtje lezen, dan de vraag erover. Het antwoord staat in de tekst. */}
-      {vraag.tekst && (
-        <div style={{ fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "11px 13px", marginBottom: 10, whiteSpace: "pre-line" }}>
-          {renderTekst(vraag.tekst)}
-        </div>
-      )}
 
-      <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
+      <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.35, color: "rgba(255,255,255,0.95)", marginBottom: 10 }}>
         {renderTekst(vraag.vraag)}
       </div>
+
+      {/* Leestekst bij een begrijpend-lezen-vraag — standaard INGEKLAPT
+          (trechter-fix 27 jul): de vraag + antwoordknoppen staan meteen in
+          beeld, het berichtje is één tik weg. Korte teksten tonen we gewoon. */}
+      {vraag.tekst && (
+        (tekstOpen || vraag.tekst.length <= 140) ? (
+          <div style={{ fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "11px 13px", marginBottom: 10, whiteSpace: "pre-line" }}>
+            {renderTekst(vraag.tekst)}
+          </div>
+        ) : (
+          <button type="button" onClick={() => setTekstOpen(true)}
+            style={{
+              display: "block", width: "100%", textAlign: "left", cursor: "pointer",
+              fontSize: 14.5, lineHeight: 1.5, color: "rgba(255,255,255,0.85)",
+              background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
+              borderRadius: 12, padding: "10px 13px", marginBottom: 10,
+              fontFamily: "var(--font-body, sans-serif)",
+            }}>
+            {String(vraag.tekst).replace(/\*\*/g, "").slice(0, 90)}…{" "}
+            <span style={{ color: GROEN_LICHT, fontWeight: 800, whiteSpace: "nowrap" }}>📖 lees verder</span>
+          </button>
+        )
+      )}
 
       {/* Bron-beeld (Mark 2026-06-14): stille foto bij de vraag; zodra je geantwoord
           hebt (gekozen != null) speelt de reveal-video — bv. de auto van rechts. */}
@@ -216,6 +229,19 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
           );
         })}
       </div>
+
+      {/* Bronvermelding altijd zichtbaar (Mark 3 jul): we vertellen het
+          nieuwsfeit na met eigen woorden en linken netjes naar de bron.
+          Sinds 27 jul direct ónder de antwoordknoppen (compacter boven de vouw). */}
+      {vraag.actueel && vraag.bronTitel && (
+        <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: "8px 0 12px", lineHeight: 1.4 }}>
+          Bron: NOS Jeugdjournaal —{" "}
+          {vraag.bronUrl
+            ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
+            : <span>{vraag.bronTitel}</span>}
+          {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
+        </div>
+      )}
 
       {/* Denkprikkel of felicitatie */}
       {isFout && (
