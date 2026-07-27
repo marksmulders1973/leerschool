@@ -5,7 +5,7 @@
 ## 🔴 Prio 1 — actie zodra antwoord binnenkomt
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
-| **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | Antwoord Inez (Leergeld Haarlemmermeer): bezorgadres + deadline | 23 jul (JA-mail verstuurd) | Mark bestelt Drukwerkdeal: A5, 1.050 st., ±€75; drukken uiterlijk begin okt. **Stil t/m ~6 aug → vriendelijke reminder sturen.** |
+| **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | ✅ 27 jul: flyer GOEDGEKEURD door Inez ("past goed bij onze goodybag!"). Nu wachten op: bezorgadres (postbus of pakket-adres?) + uiterste datum — vraag-reply verstuurd 27 jul | 27 jul | Zodra adres binnen is: Mark bestelt Drukwerkdeal (A5, 1.050 st., ±€75). **Stil t/m ~31 jul → vriendelijke reminder** (zij werkt ma-do). Weetje: Spark Fest = 20-jarig jubileum Leergeld Haarlemmermeer, sparkfest.nl |
 | **Ooievaarspas Den Haag (vriend-status)** | Beoordeling Bureau Ooievaarspas; formulier getekend + voltooid 26 jul | 26 jul | Zij sturen vriend-overeenkomst via ValidSign (tekenen!) → plaatsing in OP-aanbod → stadspassen-batch naar andere gemeenten + /ooievaarspas.html-tekst omzetten naar "vriend van". |
 
 ## 🟠 Prio 2 — loopt, geduld
