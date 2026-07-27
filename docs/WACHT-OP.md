@@ -15,6 +15,9 @@
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 
 ## 🟡 Mark-acties (open)
+- ⚠️ **MoonPay-mail checken** ("Welcome to MoonPay via Pump.fun", 26 jul 22:51): heb jij dat account zelf aangemaakt? Zo niet: negeren en nergens op klikken (iemand gebruikte dan jouw mailadres). Claude navigeert niet naar financiële sites (vaste regel).
+- 💼 **7 open LinkedIn-connectieverzoeken** accepteren/weigeren (jouw handwerk): Peter (Stichting Asha — mogelijk warme lead!), Mike, Ties, Leon, Harry, Daan, Henriëtte. Bij accepteren geldt de kruis-regel: nieuwe connectie → FB-uitnodiging (behalve Sonac).
+- 🖨️ **Drukwerkdeal-order Spark Fest** (A5, 1.050 st., ±€75) — kan zodra Inez het bezorgadres doorgeeft (vraag ligt bij haar sinds 27 jul).
 - 👥 **Lid worden van je eigen FB-groep** Doorstroomtoets 2027 ("Lid worden"-knop, 1 tik) — je posts als persoon belanden nu in de spamfilter van de groep (ontdekt 27 jul; je dagvraag van 17 jul zat er 10 dagen in, is nu gepubliceerd).
 - 👥 FB-groepen joinen (1 tik per stuk, uit 16 jul): Ouder zoekt kindercoach · Leerling in beeld - doorstroomtoets · Ouders met pubers (12-18).
 - 🔔 Zelf abonneren op web-push (knop in de app).
