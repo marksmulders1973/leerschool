@@ -13,8 +13,10 @@
 |---|---|---|---|
 | Outreach-reacties (~355 mails: Leergeld, scholen, voedselbanken, huiswerkclubs, bibliotheken) | Zomervakantie voorbij | jul | Reacties verwacht v.a. eind aug; warme reacties → warme-leads-lijst + reply |
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
+| Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
 
 ## 🟡 Mark-acties (open)
+- ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
 - ⚠️ **MoonPay-mail checken** ("Welcome to MoonPay via Pump.fun", 26 jul 22:51): heb jij dat account zelf aangemaakt? Zo niet: negeren en nergens op klikken (iemand gebruikte dan jouw mailadres). Claude navigeert niet naar financiële sites (vaste regel).
 - 💼 **7 open LinkedIn-connectieverzoeken** accepteren/weigeren (jouw handwerk): Peter (Stichting Asha — mogelijk warme lead!), Mike, Ties, Leon, Harry, Daan, Henriëtte. Bij accepteren geldt de kruis-regel: nieuwe connectie → FB-uitnodiging (behalve Sonac).
 - 🖨️ **Drukwerkdeal-order Spark Fest** (A5, 1.050 st., ±€75) — kan zodra Inez het bezorgadres doorgeeft (vraag ligt bij haar sinds 27 jul).
