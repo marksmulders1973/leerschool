@@ -33,6 +33,18 @@ Cito + examens versterken. Drie type werk:
 
 - [ ] **C1 E-mailcapture op /cito + /leren/pad** — oefenpakket-prompt op de 2 drukste pagina's (conversielek: <1% van bezoekers laat e-mail achter). Verkenning 23 jul: hergebruik `upgrade_waitlist`-insertpatroon uit `OefenpakketPage.jsx`/`GratisLesmateriaal.jsx`; doelcomponenten `CitoPage.jsx` + leerpad-speler (route /leren/pad in App.jsx ~r239). Compact bouwen: 1 herbruikbaar `<EmailCapture bron="..."/>`-blok, niet opdringerig (onder de content), event loggen, lijst-groei verschijnt al in dagrapport.
 - [ ] **C2 Noord-ster-metric in dagrapport** — "gezinnen/apparaten die afgelopen 7 dagen op ≥2 dagen oefenden" als vast kopcijfer. LET OP verkenning 23 jul: `events` heeft géén user-id (session = per-tab) → eerst mini-fix: anoniem willekeurig **apparaat-kenmerk** meesturen in track() (géén naam/e-mail; privacy.html-alinea aanpassen: "willekeurig apparaat-kenmerk" i.p.v. alleen sessie-kenmerk) → daarna SQL in dagrapport-ritueel + CLAUDE.md.
+- [ ] **C3 Gratis Kwartiercheck — diagnostische lead-magnet** *(Mark 28 jul: "echt diagnostisch", prio na C1)*
+  **Concept:** ouder vraagt een persoonlijk leerplan aan. Kind doet een adaptieve diagnostische toets (~1 kwartier). Ouder ontvangt per mail een scorekaart + gap-analyse + weekschema met deeplinks naar leerpaden. Magneet voor e-mailadressen; ook retentie-haak voor bestaande gebruikers als nulmeting.
+  **Wat "echt diagnostisch" betekent:** niet "4/10 rekenen" maar per concept: beheerst / gedeeltelijk / nog niet. Per vak 4-5 concepten, elk 2-3 vragen op oplopende moeilijkheid. Systeem stopt per concept zodra er genoeg info is (fout op niveau 2 → geen niveau 3 meer nodig). Resultaat: "jouw kind snapt vermenigvuldigen, heeft moeite met breuken, begrijpt procenten nog niet."
+  **Bouwstappen:**
+  1. `public/kwartiercheck.html` — landingspagina: naam kind + groep (6/7/8) + e-mailadres, dan start-knop → React-route `/kwartiercheck`
+  2. Concept-vragenset: per vak (rekenen / taal / begrijpend lezen) 4-5 concepten × 3 moeilijkheidsniveaus → ~45 vragen totaal; gebruik bestaande `sampleQuestions`-pool waar mogelijk, tag elke vraag met `concept` + `niveau` (1-3)
+  3. Adaptieve quiz-engine in `src/features/kwartiercheck/KwartierchecK.jsx`: per concept 2-3 vragen → fout op niveau 1 = concept "nog niet"; fout op niveau 2 = "gedeeltelijk"; goed op niveau 2 = "beheerst"; stop als oordeel zeker is
+  4. Scoring → plan-mapping: per concept-oordeel → aanbevolen leerpad-id (koppeling in `src/features/kwartiercheck/conceptMapping.js`)
+  5. `api/kwartiercheck-mail.js` (Resend): scorekaart HTML-mail met per-concept-oordeel + deeplinks + 4-weekse weekschema (zwakste concepten eerst); opslaan in nieuwe tabel `kwartiercheck_results (id, email, naam_kind, groep, scores_json, created_at)`
+  6. Supabase-migratie: tabel `kwartiercheck_results` + RLS (insert voor anon, select voor admin)
+  **Promotie-haakje:** "Vraag gratis een Kwartiercheck aan voor jouw kind" → flyer-URL, social post, e-mailhandtekening. Deel-actie-mail kan hier ook naar verwijzen.
+  **Niet bouwen:** adaptieve IRT-modellen, login-vereiste, score opslaan aan een account — v1 is volledig anoniem (alleen e-mail als identifier).
 - [x] **A8.5 Wiskunde-chunk (4,4 MB) splitsen** ✅ 14 jul: manualChunks-bucket losgelaten (niets importeert index.js meer) → per-pad chunks, grootste chunk nu 0,93 MB (vendor-three); smoke-test home+/leren OK — data-learnpaths-wiskunde ondermijnt mobiele belofte; per-pad dynamic import voor de 2 grootste chunks (wiskunde 4,4 MB + po 2,4 MB).
 
 ---
