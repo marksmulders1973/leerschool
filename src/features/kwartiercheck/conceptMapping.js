@@ -89,7 +89,7 @@ export const CONCEPTEN = [
     id: "oorzaakgevolg",
     label: "Oorzaak en gevolg herkennen",
     vak: "begrijpend-lezen",
-    leerpadId: "begrijpend-lezen-oorzaak-gevolg",
+    leerpadId: "tekstverbanden-oorzaak-gevolg-po",
     leerpadTitel: "Oorzaak en gevolg",
   },
 ];

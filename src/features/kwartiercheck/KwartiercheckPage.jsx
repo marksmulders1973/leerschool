@@ -31,11 +31,17 @@ function bepaalOordeel(antwoorden) {
 //           → bij fout N1: stop (nogniet)
 // We sturen altijd max 2 vragen (N1+N2). N3 pas als N2 goed is én we meer info willen — NIET in v1.
 function volgendeVraagIdx(vragen, antwoorden) {
-  if (antwoorden.length === 0) return 0; // begin met N1
+  // Selecteer op níveau, niet op array-index: de vragenlijst bevat per
+  // concept meerdere niveau-1-vragen (1a/1b), dus index 1 is NIET niveau 2.
+  if (antwoorden.length === 0) {
+    const i = vragen.findIndex((v) => v.niveau === 1);
+    return i === -1 ? null : i;
+  }
   const laatste = antwoorden[antwoorden.length - 1];
   if (!laatste.goed) return null;       // fout → oordeel vastgesteld, klaar
-  if (antwoorden.length >= 2) return null; // 2 vragen beantwoord → klaar
-  return antwoorden.length;              // ga naar volgende vraag (N2)
+  if (antwoorden.some((a) => a.niveau === 2)) return null; // N2 beantwoord → klaar
+  const i = vragen.findIndex((v) => v.niveau === 2);
+  return i === -1 ? null : i;
 }
 
 // ── Stijlen ──────────────────────────────────────────────────────

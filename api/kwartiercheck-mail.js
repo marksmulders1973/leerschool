@@ -22,7 +22,7 @@ const CONCEPTEN = [
   { id: "woordenschat",    label: "Woordenschat & betekenis",  vak: "Taal",    leerpadId: "woordenschat-po" },
   { id: "hoofdgedachte",   label: "Hoofdgedachte & samenvatten", vak: "Begrijpend Lezen", leerpadId: "samenvatten-hoofdgedachte-po" },
   { id: "tekstbegrip",     label: "Informatie opzoeken",       vak: "Begrijpend Lezen", leerpadId: "begrijpend-lezen-strategie" },
-  { id: "oorzaakgevolg",   label: "Oorzaak en gevolg",         vak: "Begrijpend Lezen", leerpadId: "begrijpend-lezen-oorzaak-gevolg" },
+  { id: "oorzaakgevolg",   label: "Oorzaak en gevolg",         vak: "Begrijpend Lezen", leerpadId: "tekstverbanden-oorzaak-gevolg-po" },
 ];
 
 function esc(s) {
@@ -143,16 +143,50 @@ async function saveToDB(data) {
   });
 }
 
+// Zelfde bescherming als send-oefenblad.js: dit endpoint mailt naar een door
+// de bezoeker opgegeven adres — zonder origin-allowlist + rate-limit is het
+// een open spam-kanaal (en een risico voor de Resend-domeinreputatie).
+const MAIL_ORIGINS = new Set([
+  "https://leerkwartier.app", "https://www.leerkwartier.app",
+  "http://localhost:5173", "http://localhost:4173", "http://127.0.0.1:5173",
+]);
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX = 3; // 3 kwartiercheck-mails per IP per 10 min is ruim voor echt gebruik
+const rateMap = new Map();
+function rateLimited(ip) {
+  const t = Date.now();
+  if (rateMap.size > 5000) {
+    for (const [k, v] of rateMap) { if (t > v.resetAt) rateMap.delete(k); }
+    if (rateMap.size > 5000) rateMap.clear();
+  }
+  const e = rateMap.get(ip) || { count: 0, resetAt: t + RATE_WINDOW_MS };
+  if (t > e.resetAt) { e.count = 0; e.resetAt = t + RATE_WINDOW_MS; }
+  e.count++;
+  rateMap.set(ip, e);
+  return e.count > RATE_MAX;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method" });
+  const origin = req.headers["origin"] || "";
+  if (!MAIL_ORIGINS.has(origin)) return res.status(403).json({ error: "origin" });
+  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "onbekend";
+  if (rateLimited(ip)) return res.status(429).json({ error: "te-vaak" });
 
   const key = process.env.RESEND_API_KEY;
   if (!key) return res.status(503).json({ error: "mail niet geconfigureerd" });
 
-  const { email, naam_kind, groep, scores } = req.body || {};
-  if (!email || !naam_kind || !groep || !scores) {
+  let body = req.body;
+  if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
+  const email = String(body?.email || "").trim().slice(0, 120);
+  const naam_kind = String(body?.naam_kind || "").trim().slice(0, 60);
+  const groep = String(body?.groep || "").trim().slice(0, 2);
+  const scores = body?.scores;
+  if (!email || !naam_kind || !groep || !scores || typeof scores !== "object") {
     return res.status(400).json({ error: "ontbrekende velden" });
   }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ error: "email" });
+  if (!["6", "7", "8"].includes(groep)) return res.status(400).json({ error: "groep" });
 
   const html = bouwMailHtml(naam_kind, groep, scores);
   const htmlMetEmail = html.replace("PLACEHOLDER_EMAIL", encodeURIComponent(email));

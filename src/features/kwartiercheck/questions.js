@@ -64,9 +64,9 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "breuken-3a", concept: "breuken", niveau: 3,
-    vraag: "Van een lak van 2/3 meter wordt 1/4 afgeknipt. Hoeveel blijft er over?",
+    vraag: "Van een lat van 2/3 meter wordt 1/4 meter afgeknipt. Hoeveel meter blijft er over?",
     opties: ["5/12", "7/12", "1/3", "1/2"],
-    correct: 1,
+    correct: 0,
   },
 
   // ─── PROCENTEN ─────────────────────────────────────────────────
@@ -124,7 +124,7 @@ export const KWARTIERCHECK_VRAGEN = [
     id: "maten-2b", concept: "maten", niveau: 2,
     vraag: "550 cm + 3,5 m = ? m",
     opties: ["4 m", "9 m", "9,5 m", "8,5 m"],
-    correct: 3,
+    correct: 1,
   },
   {
     id: "maten-3a", concept: "maten", niveau: 3,
@@ -191,9 +191,9 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "spelling-2b", concept: "spelling", niveau: 2,
-    vraag: "Wat is de juiste spelling? 'Ze ... (werken) hard.'",
-    opties: ["werken", "werkten", "werkten", "werkt"],
-    correct: 0,
+    vraag: "Wat is de juiste spelling? 'Hij ... (worden) morgen tien jaar.'",
+    opties: ["word", "wordt", "wort", "worden"],
+    correct: 1,
   },
   {
     id: "spelling-3a", concept: "spelling", niveau: 3,
@@ -222,7 +222,7 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "woordsoorten-2a", concept: "woordsoorten", niveau: 2,
-    vraag: "In de zin 'Lisa _rent_ snel naar de bus' — wat is het onderstreepte werkwoord?",
+    vraag: "In de zin 'Lisa _rent_ snel naar de bus' — wat voor woordsoort is het onderstreepte woord?",
     opties: ["Bijvoeglijk naamwoord", "Bijwoord", "Werkwoord", "Voegwoord"],
     correct: 2,
   },

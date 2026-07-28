@@ -148,23 +148,25 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - **Secundair**: leerlingen op VMBO/HAVO/VWO die voor examens oefenen.
 - **Leerkrachten**: kunnen quizzen maken voor hun klas.
 - **Kansarme gezinnen**: gezinnen met een laag inkomen, bijstandsontvangers,
-  Leergeld-klanten, voedselbank-klanten en houders van een gemeentelijke
-  stadspas (zoals de Ooievaarspas in Den Haag) kunnen kosteloos het
+  Leergeld-klanten en voedselbank-klanten kunnen kosteloos het
   Familie-niveau gebruiken via een partner-code. Geen abonnement, geen
-  betaalgegevens, geen account nodig.
+  betaalgegevens, geen account nodig. Voor houders van een gemeentelijke
+  stadspas (zoals de Ooievaarspas in Den Haag) loopt een aanvraag.
 
 ## Sociaal-maatschappelijke missie
 
 Leerkwartier werkt actief samen met organisaties die gezinnen helpen:
 
-- **Leergeld-afdelingen** (heel Nederland): gezinnen die Leergeld-steun
-  ontvangen kunnen gratis Doorstroomtoets-oefening krijgen via een
-  partner-code.
-- **Voedselbanken** (heel Nederland): klanten van voedselbanken met
-  schoolgaande kinderen in groep 6-8 kunnen de app gratis gebruiken.
+- **Leergeld-afdelingen** (o.a. Haarlemmermeer en Apeldoorn-Voorst):
+  gezinnen die Leergeld-steun ontvangen kunnen gratis
+  Doorstroomtoets-oefening krijgen via een partner-code.
+- **Voedselbanken** (o.a. Rotterdam, waar Leerkwartier op de schermen in
+  de supermarkten staat): klanten van voedselbanken met schoolgaande
+  kinderen in groep 6-8 kunnen de app gratis gebruiken.
 - **Gemeentelijke stadspassen**: Leerkwartier heeft een aanvraag ingediend
   als "vriend van de Ooievaarspas" bij de gemeente Den Haag (in behandeling
-  per juli 2026). Houders van een stadspas krijgen gratis Familie-toegang.
+  per juli 2026). Zodra die rond is, krijgen pashouders gratis
+  Familie-toegang.
 - **Huiswerkclubs en sociale wijkteams**: meerdere organisaties in
   achterstandswijken verwijzen gezinnen door naar Leerkwartier.
 
