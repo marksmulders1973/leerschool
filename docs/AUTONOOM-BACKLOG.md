@@ -52,7 +52,7 @@ Cito + examens versterken. Drie type werk:
 ## 📥 Inbox — nieuwe wensen / ideeën
 
 - [ ] **Kwartiercheck v1.1 — restpunten uit Fable-review 28 jul** (v111 fixte de 5 bugs: adaptieve niveau-selectie, dode mail-link, 2 foute antwoorden, dubbele optie; + spam-guard op de API; + stadspas-claims eerlijk). Nog open, op volgorde van impact:
-  1. **Vindbaarheid**: Kwartiercheck is intern nergens gelinkt (alleen kwartiercheck.html + sitemap) — kaart op home/oudersectie + links vanaf /gratis en /voor-organisaties.
+  1. ~~Vindbaarheid~~ ✅ 28/7 v112+v113: oranje kaart op home onder "Ik ben ouder"-knop (track `home_cta_kwartiercheck`), links op /gratis + /voor-organisaties, klik-flow op productie geverifieerd; bijvangst: intro-copy gefixt (spatie-bug, "krijg je per e-mail", concept→onderwerp).
   2. **Mail-CTA hoger** op resultaatscherm (staat nu onder 12 scorekaart-rijen); compacte samenvatting bovenaan.
   3. **Tussenstand bewaren** (sessionStorage) + bevestiging bij ← tijdens quiz (nu: 24 antwoorden weg zonder waarschuwing).
   4. **B1-taal**: "concept"/"beheerst" → "onderwerp"/"snapt het al" (doelgroep laaggeletterde ouders).
