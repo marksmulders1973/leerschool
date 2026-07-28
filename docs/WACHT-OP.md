@@ -12,6 +12,7 @@
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
 | Outreach-reacties (~355 mails: Leergeld, scholen, voedselbanken, huiswerkclubs, bibliotheken) | Zomervakantie voorbij | jul | Reacties verwacht v.a. eind aug; warme reacties → warme-leads-lijst + reply |
+| **Voedselbank Lelystad** (voorzitter Theo Grootjen + heel bestuur in cc) vroeg 28 jul wat de band met Stichting Leergeld is | Besluit bestuur na onze uitleg (reply verstuurd 28 jul: geen formele band, wel samenwerkingen — eerlijk uitgelegd) | 28 jul | Bij "ja" → code LELYSTAD2027 aanmaken + flyer-aanbod |
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 | Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
 
