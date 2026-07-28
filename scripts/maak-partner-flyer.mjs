@@ -46,7 +46,7 @@ for (const { code, kaderKop } of ORGS) {
     .replace('<span id="qr-url-tekst"></span>',
       `<span id="qr-url-tekst">${url}</span>`)
     // kader-kop neutraal per organisatie
-    .replace('<strong id="kader-kop">Voor de gezinnen van Stichting Leergeld betekent dat:</strong>',
+    .replace('<strong id="kader-kop">Voor gezinnen voor wie oefenboeken of bijles te duur zijn, betekent dat:</strong>',
       `<strong id="kader-kop">${kaderKop}</strong>`)
     // print-knop weg (statische flyer) + runtime-script weg
     .replace(/<div class="print-knop">[\s\S]*?<\/div>\s*/, "")
