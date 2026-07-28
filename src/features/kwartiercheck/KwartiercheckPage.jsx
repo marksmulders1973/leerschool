@@ -95,9 +95,9 @@ function IntroScherm({ email, naam, groep, onStart }) {
           Gratis Kwartiercheck
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, margin: 0 }}>
-          Ontdek in ~15 minuten per concept of jouw kind het <em>beheerst</em>,
+          Ontdek in ~15 minuten per onderwerp of jouw kind het <em>beheerst</em>,{" "}
           <em>bijna snapt</em> of nog <em>extra oefening</em> nodig heeft.
-          Daarna krijgt je e-mail een persoonlijk weekschema.
+          Daarna krijg je per e-mail een persoonlijk weekschema.
         </p>
       </div>
 
@@ -160,7 +160,7 @@ function IntroScherm({ email, naam, groep, onStart }) {
       </div>
 
       <p style={{ textAlign: "center", fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
-        ~12 concepten · max 2 vragen per concept · geen account nodig
+        12 onderwerpen · max 2 vragen per onderwerp · geen account nodig
       </p>
     </div>
   );
@@ -397,7 +397,7 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
             📬 Stuur het weekschema naar je mail
           </div>
           <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", margin: "0 0 12px", lineHeight: 1.5 }}>
-            Ontvang een persoonlijk 4-weekse weekschema op basis van deze check — met directe oefenlinks per concept.
+            Ontvang een persoonlijk weekschema op basis van deze check — met directe oefenlinks per onderwerp.
           </p>
           <input
             type="email"
