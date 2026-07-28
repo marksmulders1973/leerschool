@@ -1296,6 +1296,7 @@ export default function App() {
           onAdminStats={() => setPage("admin-stats")}
           onActie={() => setPage("actie")}
           onOefenpakket={() => setPage("oefenpakket")} onPrinten={() => setPage("printen")}
+          onKwartiercheck={() => setPage("kwartiercheck")}
           onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}

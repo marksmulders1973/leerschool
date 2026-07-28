@@ -220,7 +220,7 @@ function ProefVraagKaart({ onStart }) {
   );
 }
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -1280,6 +1280,34 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               }}
             >
               👨‍👩‍👧 Ik ben ouder — zo help je thuis <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        )}
+
+        {/* Kwartiercheck-kaart (Fable-review 28 jul, restpunt 1): de check was
+            alleen via directe URL vindbaar — grootste conversielek van de
+            lead-magnet. Direct onder de ouder-knop: dit is een ouder-actie. */}
+        {step === "role" && onKwartiercheck && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
+            <button
+              onClick={() => { track("home_cta_kwartiercheck"); onKwartiercheck(); }}
+              style={{
+                width: "100%", textAlign: "left", cursor: "pointer",
+                background: "rgba(255,107,53,0.10)", border: "1.5px solid rgba(255,107,53,0.45)",
+                borderRadius: 14, padding: "14px 16px",
+                display: "flex", alignItems: "center", gap: 12,
+              }}
+            >
+              <span aria-hidden="true" style={{ fontSize: 26, lineHeight: 1 }}>🧭</span>
+              <span style={{ flex: 1 }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ff8c42" }}>
+                  Gratis Kwartiercheck — waar staat jouw kind?
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", marginTop: 3, lineHeight: 1.45 }}>
+                  Korte check van rekenen, taal en lezen (± 1 kwartier). Je krijgt gratis het overzicht + een weekplan in je mail.
+                </span>
+              </span>
+              <span aria-hidden="true" style={{ color: "#ff8c42", fontWeight: 800 }}>→</span>
             </button>
           </div>
         )}
