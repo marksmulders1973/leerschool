@@ -129,9 +129,13 @@ function bouwMailHtml(naam, groep, scores) {
 }
 
 async function saveToDB(data) {
-  const base = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!base || !key) return;
+  const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+  // RLS op kwartiercheck_results staat anon-insert toe → anon key is een geldig vangnet.
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+  if (!base || !key) {
+    console.error("kwartiercheck-mail: geen Supabase env — resultaat niet opgeslagen");
+    return;
+  }
   await fetch(`${base}/rest/v1/kwartiercheck_results`, {
     method: "POST",
     headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=minimal" },
