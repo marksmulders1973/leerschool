@@ -51,7 +51,7 @@ Cito + examens versterken. Drie type werk:
 
 ## 📥 Inbox — nieuwe wensen / ideeën
 
-- [ ] **Kwartiercheck v1.1 — restpunten uit Fable-review 28 jul** (v111 fixte de 5 bugs: adaptieve niveau-selectie, dode mail-link, 2 foute antwoorden, dubbele optie; + spam-guard op de API; + stadspas-claims eerlijk). Nog open, op volgorde van impact:
+- [ ] **Kwartiercheck v1.1 — restpunten uit Fable-review 28 jul** (v111 fixte de 5 bugs: adaptieve niveau-selectie, dode mail-link, 2 foute antwoorden, dubbele optie; + spam-guard op de API; + stadspas-claims eerlijk). ✅ 28/7 v114 EXTRA (Mark-keuze "wekelijks"): vervolgreeks gebouwd — na de resultaat-mail elke maandag 1 week uit het plan (max 3 mails), zwakste onderwerpen eerst, toets-countdown + zelfprint-tips per onderwerp; lift op de dagelijkse cron (maandag-blok); afmeld-token nu écht werkend (oude ?email=-link was dood) en afmelden stopt beide tabellen. EERSTE ECHTE RUN: maandag 3 aug 06:30 — check het dagrapport op "🧭 kwartiercheck-week". Later (jan 2027, eindsprint): opt-in dagelijkse oefenmail laatste 4-6 wkn vóór de toets. Nog open, op volgorde van impact:
   1. ~~Vindbaarheid~~ ✅ 28/7 v112+v113: oranje kaart op home onder "Ik ben ouder"-knop (track `home_cta_kwartiercheck`), links op /gratis + /voor-organisaties, klik-flow op productie geverifieerd; bijvangst: intro-copy gefixt (spatie-bug, "krijg je per e-mail", concept→onderwerp).
   2. **Mail-CTA hoger** op resultaatscherm (staat nu onder 12 scorekaart-rijen); compacte samenvatting bovenaan.
   3. **Tussenstand bewaren** (sessionStorage) + bevestiging bij ← tijdens quiz (nu: 24 antwoorden weg zonder waarschuwing).
