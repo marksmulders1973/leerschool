@@ -427,7 +427,7 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
             {bezig ? "Versturen..." : "Stuur weekschema →"}
           </button>
           <p style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", margin: "8px 0 0", textAlign: "center" }}>
-            Geen spam. Één mail. Je kunt je altijd afmelden.
+            Geen spam. Je krijgt het overzicht + daarna elke maandag één week uit het plan (max 4 mails totaal). Afmelden kan altijd.
           </p>
         </div>
       ) : (

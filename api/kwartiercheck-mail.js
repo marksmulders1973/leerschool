@@ -10,7 +10,8 @@ const OORDEEL_LABELS = {
   nogniet:      { emoji: "❌", tekst: "Nog niet",   kleur: "#ff5252" },
 };
 
-const CONCEPTEN = [
+// Ook gebruikt door send-kwartiercheck-week.js (de wekelijkse vervolgreeks).
+export const CONCEPTEN = [
   { id: "tafels",          label: "Tafels & vermenigvuldigen", vak: "Rekenen", leerpadId: "tafels-po" },
   { id: "breuken",         label: "Breuken begrijpen",         vak: "Rekenen", leerpadId: "breuken-po" },
   { id: "procenten",       label: "Procenten & kortingen",     vak: "Rekenen", leerpadId: "procenten-po" },
@@ -49,7 +50,14 @@ function bouwWeekschema(gaps) {
   return weken.join("");
 }
 
-function bouwMailHtml(naam, groep, scores) {
+// Gedeeld met send-kwartiercheck-week.js: zwakste onderwerpen eerst.
+export function bepaalGaps(scores) {
+  return CONCEPTEN
+    .filter((c) => (scores[c.id]?.oordeel || "nogniet") === "nogniet")
+    .concat(CONCEPTEN.filter((c) => (scores[c.id]?.oordeel || "nogniet") === "gedeeltelijk"));
+}
+
+function bouwMailHtml(naam, groep, scores, unsubToken) {
   const conceptRows = CONCEPTEN.map((c) => {
     const o = scores[c.id]?.oordeel || "nogniet";
     const lbl = OORDEEL_LABELS[o] || OORDEEL_LABELS.nogniet;
@@ -60,13 +68,19 @@ function bouwMailHtml(naam, groep, scores) {
     </tr>`;
   }).join("");
 
-  const gaps = CONCEPTEN
-    .filter((c) => (scores[c.id]?.oordeel || "nogniet") === "nogniet")
-    .concat(CONCEPTEN.filter((c) => (scores[c.id]?.oordeel || "nogniet") === "gedeeltelijk"));
+  const gaps = bepaalGaps(scores);
 
   const weekschema = bouwWeekschema(gaps);
   const ctoUrl = `${SITE}/cito?utm_source=kwartiercheck&utm_medium=email`;
-  const unsubUrl = `${SITE}/api/unsubscribe?email=PLACEHOLDER_EMAIL&utm_source=kwartiercheck`;
+  const unsubUrl = unsubToken
+    ? `${SITE}/api/unsubscribe?token=${encodeURIComponent(unsubToken)}`
+    : "mailto:info@smulsoft.nl?subject=Afmelden%20Kwartiercheck";
+  // Eerlijke aankondiging van de vervolgreeks (Mark 28 jul): max 3 maandag-mails.
+  const reeksUitleg = gaps.length > 2
+    ? `<p style='font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 0;line-height:1.5'>
+        📅 Zo blijft het behapbaar: elke maandag krijg je één week uit dit plan in je mail,
+        tot het plan klaar is (maximaal 3 extra mails). Afmelden kan altijd onderaan.</p>`
+    : "";
 
   return `<!doctype html><html lang='nl'><head><meta charset='utf-8'></head>
 <body style='margin:0;padding:0;background:#0a0f1e;font-family:system-ui,-apple-system,sans-serif'>
@@ -106,6 +120,7 @@ function bouwMailHtml(naam, groep, scores) {
     <div style='background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:12px;padding:18px 20px'>
       <div style='font-size:14px;font-weight:700;color:#ff8c42;margin-bottom:12px'>📅 Weekschema — de eerste stappen</div>
       ${weekschema}
+      ${reeksUitleg}
     </div>
   </div>
 
@@ -128,19 +143,30 @@ function bouwMailHtml(naam, groep, scores) {
 </body></html>`;
 }
 
+// Slaat het resultaat op en geeft het afmeld-token terug (nodig voor de
+// unsubscribe-link in de mail + de wekelijkse vervolgreeks).
 async function saveToDB(data) {
   const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   // RLS op kwartiercheck_results staat anon-insert toe → anon key is een geldig vangnet.
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
   if (!base || !key) {
     console.error("kwartiercheck-mail: geen Supabase env — resultaat niet opgeslagen");
-    return;
+    return null;
   }
-  await fetch(`${base}/rest/v1/kwartiercheck_results`, {
-    method: "POST",
-    headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=minimal" },
-    body: JSON.stringify(data),
-  });
+  try {
+    const r = await fetch(`${base}/rest/v1/kwartiercheck_results`, {
+      method: "POST",
+      headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=representation" },
+      body: JSON.stringify(data),
+    });
+    if (!r.ok) return null;
+    // Anon-key-vangnet heeft geen select-recht → representation kan leeg zijn;
+    // dan valt de mail terug op de mailto-afmeldlink.
+    const rows = await r.json().catch(() => null);
+    return Array.isArray(rows) ? rows[0]?.unsubscribe_token || null : null;
+  } catch {
+    return null;
+  }
 }
 
 // Zelfde bescherming als send-oefenblad.js: dit endpoint mailt naar een door
@@ -188,10 +214,12 @@ export default async function handler(req, res) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ error: "email" });
   if (!["6", "7", "8"].includes(groep)) return res.status(400).json({ error: "groep" });
 
-  const html = bouwMailHtml(naam_kind, groep, scores);
-  const htmlMetEmail = html.replace("PLACEHOLDER_EMAIL", encodeURIComponent(email));
-
   try {
+    // Eerst opslaan: zo krijgt de mail een werkend afmeld-token en start de
+    // wekelijkse vervolgreeks (send-kwartiercheck-week.js) vanaf deze rij.
+    const unsubToken = await saveToDB({ email, naam_kind, groep, scores_json: scores });
+    const html = bouwMailHtml(naam_kind, groep, scores, unsubToken);
+
     const r = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
@@ -199,7 +227,7 @@ export default async function handler(req, res) {
         from: process.env.EMAIL_FROM || "Leerkwartier <noreply@leerkwartier.app>",
         to: [email],
         subject: `Kwartiercheck ${naam_kind} (groep ${groep}) — jouw weekschema staat klaar`,
-        html: htmlMetEmail,
+        html,
       }),
     });
     if (!r.ok) {
@@ -207,7 +235,6 @@ export default async function handler(req, res) {
       console.error("Resend fout:", err);
       return res.status(502).json({ error: "mail versturen mislukt" });
     }
-    await saveToDB({ email, naam_kind, groep, scores_json: scores });
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error("kwartiercheck-mail:", e);

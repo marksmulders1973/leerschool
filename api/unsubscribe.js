@@ -44,31 +44,50 @@ export default async function handler(req, res) {
     // andere rijen bleven mailen. Nu: e-mail bij de token opzoeken en ALLE
     // rijen van dat adres afmelden. Ook: onbekende token = nette foutpagina
     // i.p.v. een vals "je bent uitgeschreven ✅".
+    // Token kan uit de lesmateriaal-lijst óf uit de Kwartiercheck-reeks komen
+    // (28 jul): beide tabellen doorzoeken, en bij een match ALLE mails van dat
+    // adres stoppen — in beide tabellen. "Geen mail meer" = echt geen mail meer.
+    let email = null;
     const zoek = await sb(
       `upgrade_waitlist?unsubscribe_token=eq.${encodeURIComponent(token)}&select=email&limit=1`,
       { method: "GET" },
       base, key
     );
     const rijen = zoek.ok ? await zoek.json() : [];
-    const email = Array.isArray(rijen) && rijen[0]?.email;
+    email = Array.isArray(rijen) && rijen[0]?.email;
+    if (!email) {
+      const zoekKc = await sb(
+        `kwartiercheck_results?unsubscribe_token=eq.${encodeURIComponent(token)}&select=email&limit=1`,
+        { method: "GET" },
+        base, key
+      );
+      const rijenKc = zoekKc.ok ? await zoekKc.json() : [];
+      email = Array.isArray(rijenKc) && rijenKc[0]?.email;
+    }
     if (!email) {
       return res.status(404).send(pagina("Link niet gevonden", "Deze uitschrijf-link is niet (meer) geldig. Open de link direct vanuit de nieuwste e-mail, of mail ons via de site."));
     }
     // ILIKE-wildcards (%/_) escapen — een underscore in een e-mailadres mag
     // niet als joker matchen op andermans adres.
     const patroon = String(email).replace(/[\\%_]/g, "\\$&");
+    const stempel = JSON.stringify({ unsubscribed_at: new Date().toISOString() });
     const r = await sb(
       // PostgREST: ilike zonder joker = case-insensitive gelijk (matcht de
       // unique index op lower(email)).
       `upgrade_waitlist?email=ilike.${encodeURIComponent(patroon)}`,
-      {
-        method: "PATCH",
-        headers: { Prefer: "return=minimal" },
-        body: JSON.stringify({ unsubscribed_at: new Date().toISOString() }),
-      },
+      { method: "PATCH", headers: { Prefer: "return=minimal" }, body: stempel },
       base, key
     );
     if (!r.ok) throw new Error("patch-fout " + r.status);
+    // Kwartiercheck-rijen van hetzelfde adres ook stoppen — mag stil falen als
+    // het adres daar niet voorkomt (PATCH op 0 rijen is gewoon ok).
+    try {
+      await sb(
+        `kwartiercheck_results?email=ilike.${encodeURIComponent(patroon)}`,
+        { method: "PATCH", headers: { Prefer: "return=minimal" }, body: stempel },
+        base, key
+      );
+    } catch { /* niet fataal */ }
   } catch (e) {
     return res.status(500).send(pagina("Even niet gelukt", "We konden je uitschrijving niet verwerken. Probeer het later nog eens."));
   }

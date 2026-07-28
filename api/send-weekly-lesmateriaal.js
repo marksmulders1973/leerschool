@@ -262,11 +262,22 @@ export default async function handler(req, res) {
   // deze dagelijkse cron — Vercel Hobby staat maar 2 crons toe, dus geen eigen
   // slot. Dubbel-versturen vangt stuurOuderRapporten af via admin_meta-stempel.
   let ouderRapport = null;
+  let kwartiercheckWeek = null;
   try {
     const weekdag = new Date().toLocaleDateString("nl-NL", { weekday: "long", timeZone: "Europe/Amsterdam" });
     if (weekdag === "maandag") {
       const { stuurOuderRapporten } = await import("./send-ouder-rapport.js");
       ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM });
+    }
+    // 🧭 Kwartiercheck-vervolgreeks (Mark 28 jul): ook op maandag — week 2-4
+    // van het persoonlijke oefenplan, zwakste onderwerpen eerst.
+    if (weekdag === "maandag") {
+      try {
+        const { stuurKwartiercheckWeekmails } = await import("./send-kwartiercheck-week.js");
+        kwartiercheckWeek = await stuurKwartiercheckWeekmails({ base, key, RESEND, FROM });
+      } catch (e) {
+        kwartiercheckWeek = { sent: 0, fouten: [], reden: "kwartiercheck-week-fout: " + String(e).slice(0, 80) };
+      }
     }
   } catch (e) {
     ouderRapport = { sent: 0, reden: "ouder-rapport-fout: " + String(e).slice(0, 80) };
@@ -293,8 +304,10 @@ export default async function handler(req, res) {
   }
   if (rijen.length === 0) {
     const rapportPlan = ouderRapport?.sent > 0 ? { "📊 ouder-rapport": ouderRapport.sent } : {};
-    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : ""), perPlan: rapportPlan });
-    return res.status(200).json({ ok: true, sent: 0, ouderRapport, reason: "niemand-due" });
+    if (kwartiercheckWeek?.sent > 0) rapportPlan["🧭 kwartiercheck-week"] = kwartiercheckWeek.sent;
+    const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0);
+    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: kwartiercheckWeek?.fouten || [], reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : ""), perPlan: rapportPlan });
+    return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, reason: "niemand-due" });
   }
 
   const oefenvraag = kiesOefenvraag();
@@ -348,17 +361,25 @@ export default async function handler(req, res) {
     }
   }
 
-  // Ouder-rapport-cijfers mee in het dagrapport naar Mark (uitsplitsing + fouten).
+  // Ouder-rapport- + kwartiercheck-cijfers mee in het dagrapport naar Mark.
   if (ouderRapport) {
     if (ouderRapport.sent > 0) perPlan["📊 ouder-rapport"] = ouderRapport.sent;
     if (Array.isArray(ouderRapport.fouten)) fouten.push(...ouderRapport.fouten.map((f) => "rapport:" + f));
   }
+  if (kwartiercheckWeek) {
+    if (kwartiercheckWeek.sent > 0) perPlan["🧭 kwartiercheck-week"] = kwartiercheckWeek.sent;
+    if (Array.isArray(kwartiercheckWeek.fouten)) fouten.push(...kwartiercheckWeek.fouten);
+  }
+  const redenDelen = [
+    ouderRapport?.reden ? `ouder-rapport: ${ouderRapport.reden}` : null,
+    kwartiercheckWeek?.reden || null,
+  ].filter(Boolean);
   await stuurDagrapport(RESEND, FROM, {
-    sent: gelukt + (ouderRapport?.sent || 0),
+    sent: gelukt + (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0),
     kandidaten: rijen.length,
     fouten,
     perPlan,
-    reden: ouderRapport?.reden ? `ouder-rapport: ${ouderRapport.reden}` : undefined,
+    reden: redenDelen.length ? redenDelen.join(" · ") : undefined,
   });
-  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
