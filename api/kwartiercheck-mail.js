@@ -137,7 +137,7 @@ function bouwMailHtml(naam, groep, scores, unsubToken) {
       <div style='font-size:13px;font-weight:700;color:#69f0ae;margin-bottom:6px'>🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
       <p style='font-size:12.5px;color:#cdd5e0;margin:0;line-height:1.55'>
         Deel jouw persoonlijke link met een ouder uit de klas: zodra iemand via jouw link oefent,
-        krijgen jullie allebei Leerkwartier Familie gratis tot augustus 2027.
+        krijgen jullie allebei <a href='${SITE}/abonnement.html#familie' style='color:#ffd54f'>Leerkwartier Familie</a> gratis tot augustus 2027 (straks ± € 39 per jaar).
         <a href='${SITE}/ouder?utm_source=kwartiercheck&utm_medium=email&utm_campaign=deel-actie' style='color:#69f0ae;font-weight:700'>Haal je link op in het ouder-dashboard →</a>
       </p>
     </div>

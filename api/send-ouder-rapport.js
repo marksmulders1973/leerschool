@@ -215,7 +215,7 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
   const deelHtml = deelLink
     ? `<div style="background:rgba(0,200,83,0.07);border:1px solid rgba(0,200,83,0.35);border-radius:12px;padding:14px 16px;margin:0 0 22px;">
         <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
-        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ouder uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> Leerkwartier Familie gratis tot augustus 2027.</p>
+        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ouder uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> <a href="${SITE}/abonnement.html#familie" style="color:#ffd54f;">Leerkwartier Familie</a> gratis tot augustus 2027 (straks ± € 39 per jaar).</p>
         <a href="${deelLink}&utm_source=email&utm_campaign=ouder-rapport-deel" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px;border-radius:10px;word-break:break-all;">${esc(deelLink)}</a>
       </div>`
     : `<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;

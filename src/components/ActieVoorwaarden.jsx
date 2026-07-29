@@ -77,8 +77,8 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
           Leerkwartier is en blijft gratis. Help je het verder verspreiden? Delen wordt
-          dubbel beloond: jullie krijgen <strong>allebei Familie gratis tot 2027</strong> (zie hieronder),
-          én je loot mee voor een <strong>gratis Familie-jaar 2027 met 10 uur AI-bijles-tegoed</strong>.
+          dubbel beloond: jullie krijgen <strong>allebei <a href="/abonnement.html#familie" style={{ color: "#ffd54f", textDecorationColor: "rgba(255,213,79,0.5)" }}>Familie</a> gratis tot 2027</strong> (straks
+          ± € 39 per jaar), én je loot mee voor een <strong>gratis Familie-jaar 2027 met 10 uur AI-bijles-tegoed</strong>.
         </p>
 
         {/* 🤝 Weggeef-actie: beide gezinnen Familie gratis tot aug 2027 */}
@@ -95,6 +95,11 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
             via die link écht oefent (3 vragen), krijgen <strong style={{ color: "#fff" }}>jullie allebei</strong> Leerkwartier
             Familie gratis tot augustus 2027.{" "}
             <a href="/ouder" style={{ color: "#69f0ae", fontWeight: 700 }}>Haal je gezins-link op in het ouder-dashboard →</a>
+          </p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.6)", margin: "10px 0 0" }}>
+            Familie is de gezins-laag bovenop gratis: ouder-dashboard, weekrapport per mail,
+            examen-simulatie en het Kwartierplan.{" "}
+            <a href="/abonnement.html#familie" style={{ color: "#ffd54f", fontWeight: 700 }}>Bekijk alle verschillen met gratis →</a>
           </p>
         </div>
 

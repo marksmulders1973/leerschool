@@ -94,7 +94,8 @@ export default function VriendenWerven({ authUser }) {
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.55, color: "rgba(255,255,255,0.65)", marginBottom: 12 }}>
         Deel jouw link met een ouder. Zodra iemand via jouw link écht oefent (3 vragen), krijgen
-        <strong style={{ color: "rgba(255,255,255,0.85)" }}> jullie beiden</strong> Leerkwartier Familie gratis tot augustus 2027.
+        <strong style={{ color: "rgba(255,255,255,0.85)" }}> jullie beiden</strong> Leerkwartier Familie gratis tot augustus 2027 (straks ± € 39 per jaar).{" "}
+        <a href="/abonnement.html#familie" style={{ color: "#ffd54f", fontWeight: 700, textDecorationColor: "rgba(255,213,79,0.5)" }}>Wat is Familie? →</a>
       </div>
 
       {/* Teller */}
