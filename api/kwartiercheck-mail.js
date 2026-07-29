@@ -131,6 +131,18 @@ function bouwMailHtml(naam, groep, scores, unsubToken) {
     </a>
   </div>
 
+  <!-- Deel-actie 2027 (Mark 29 jul 2026): ouder-gericht, dus STOPLIST-veilig -->
+  <div style='padding:0 28px 20px;background:#0f1729'>
+    <div style='background:rgba(0,200,83,0.06);border:1px solid rgba(0,200,83,0.25);border-radius:12px;padding:14px 16px'>
+      <div style='font-size:13px;font-weight:700;color:#69f0ae;margin-bottom:6px'>🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
+      <p style='font-size:12.5px;color:#cdd5e0;margin:0;line-height:1.55'>
+        Deel jouw persoonlijke link met een ouder uit de klas: zodra iemand via jouw link oefent,
+        krijgen jullie allebei Leerkwartier Familie gratis tot augustus 2027.
+        <a href='${SITE}/ouder?utm_source=kwartiercheck&utm_medium=email&utm_campaign=deel-actie' style='color:#69f0ae;font-weight:700'>Haal je link op in het ouder-dashboard →</a>
+      </p>
+    </div>
+  </div>
+
   <!-- Footer -->
   <div style='padding:16px 28px 0;border-top:1px solid rgba(255,255,255,0.07);background:#0a0f1e;text-align:center'>
     <p style='font-size:11px;color:rgba(255,255,255,0.3);margin:0'>

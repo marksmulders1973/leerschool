@@ -75,6 +75,24 @@ async function haalNiveauSectie(email, base, key) {
   }
 }
 
+// 🤝 Deel-actie 2027: persoonlijke vriendencode van deze ouder ophalen (of
+// aanmaken) — service-only RPC vriendencode_voor_email. Geen account of
+// storing → null, de mail valt terug op de generieke doorstuur-regel.
+async function haalVriendencode(email, base, key) {
+  try {
+    const r = await sb(
+      "rpc/vriendencode_voor_email",
+      { method: "POST", body: JSON.stringify({ p_email: email }) },
+      base, key
+    );
+    if (!r.ok) return null;
+    const code = await r.json();
+    return typeof code === "string" && code.length >= 4 ? code : null;
+  } catch {
+    return null;
+  }
+}
+
 // Alle mastery-rijen van één kind. Scoping (bug-jacht 11 jul): als de
 // koppeling een child_user_id heeft (kind was ingelogd bij het inwisselen van
 // de koppelcode) filteren we dáárop — anders mengen naamgenoten uit andere
@@ -187,9 +205,23 @@ function maakKindSectie(childName, rows) {
   return { html, text };
 }
 
-function maakRapportMail(parentEmail, kindSecties, niveauSectie) {
+function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
   const dashboard = `${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport`;
   const onderwerp = "📊 Weekrapport: zo ging het leren deze week";
+
+  // 🤝 Deel-actie 2027 — vast blok in elke weekmail (Mark 29 jul 2026).
+  // Mét persoonlijke link als de ouder een account/code heeft; anders generiek.
+  const deelLink = vriendCode ? `${SITE}/?vriend=${vriendCode}` : null;
+  const deelHtml = deelLink
+    ? `<div style="background:rgba(0,200,83,0.07);border:1px solid rgba(0,200,83,0.35);border-radius:12px;padding:14px 16px;margin:0 0 22px;">
+        <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
+        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ouder uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> Leerkwartier Familie gratis tot augustus 2027.</p>
+        <a href="${deelLink}&utm_source=email&utm_campaign=ouder-rapport-deel" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px;border-radius:10px;word-break:break-all;">${esc(deelLink)}</a>
+      </div>`
+    : `<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;
+  const deelText = deelLink
+    ? `Geef een ander gezin Familie gratis — en krijg het zelf ook. Deel jouw persoonlijke link; zodra iemand via jouw link oefent, krijgen jullie allebei Familie gratis tot augustus 2027: ${deelLink}`
+    : `Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app`;
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
@@ -198,10 +230,10 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie) {
     ${kindSecties.map((s) => s.html).join("")}
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
-    <p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>
+    ${deelHtml}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Verwijder de koppeling in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> — direct geregeld.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nKen je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app\n\nLiever geen rapport meer? Verwijder de koppeling in het ouder-dashboard.`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\n${deelText}\n\nLiever geen rapport meer? Verwijder de koppeling in het ouder-dashboard.`;
   return { onderwerp, html, text };
 }
 
@@ -253,7 +285,8 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
         secties.push(maakKindSectie(kind, rows));
       }
       const niveauSectie = await haalNiveauSectie(adres, base, key);
-      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie);
+      const vriendCode = await haalVriendencode(adres, base, key);
+      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode);
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
