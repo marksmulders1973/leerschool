@@ -40,6 +40,48 @@
   Eline Doesburg-Aalfs (Forum Groningen, educatie, 24 jul). Opener voor de mail:
   "Forum Groningen raadde me aan contact met u op te nemen." Meesturen met scholen-batch 2 (eind aug).
 
+## ✉️ MAIL-SJABLOON 2.0 (29 jul — met bewijs-alinea, actief sinds ≥3 partners)
+
+> Vervangt de zomer-versie. Regels: framing "operator + vrije tijd" (nooit dagdelen),
+> gekwalificeerd gratis, B1-achtig kort, bewijs vóór de vraag, kleine concrete vraag.
+> Personaliseer [BLOKHAKEN] per categorie; bewijs-alinea NIET inkorten — dat is de motor.
+
+**Onderwerp:** Gratis Doorstroomtoets-oefenen voor de gezinnen die u helpt
+
+Beste [team van ORGANISATIE / naam],
+
+Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren, en in mijn vrije
+tijd bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7
+en 8 elke dag kunnen oefenen voor de Doorstroomtoets — met uitleg die simpeler
+wordt zolang het kwartje nog niet valt. Oefenboeken kosten €30 en bijles €37 per
+uur; juist de gezinnen die u helpt, verdienen dezelfde voorbereiding als ieder ander.
+
+Dit doen andere organisaties al:
+- Voedselbank Rotterdam toont Leerkwartier op de schermen in hun drie sociale supermarkten
+- Leergeld Haarlemmermeer stopt dit najaar 1.000 Leerkwartier-flyers in de goodybags van hun jubileumfestival
+- Leergeld Apeldoorn-Voorst zet Leerkwartier in hun oktober-nieuwsbrief
+- Voedselbank Alkmaar maakte samen met ons een flyer in eenvoudige taal
+
+Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen —
+in een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat,
+ook met uw logo. [CATEGORIE-ZIN, bv. LOWAN: "Voor kinderen die Nederlands nog
+leren is er uitleg in korte, eenvoudige zinnen en een voorleesknop."]
+
+Er zit geen addertje onder het gras: gratis in 2026, geen account nodig, geen
+reclame, en gezinnen die via uw organisatie komen houden ook 2027 gratis toegang
+via een eigen code. Nieuw: met de gratis Kwartiercheck ziet een ouder in één
+kwartier waar hun kind staat — leerkwartier.app/kwartiercheck.
+
+Meer over ons: leerkwartier.app/voor-organisaties.html · linkedin.com/company/leerkwartier
+
+Hartelijke groet,
+Mark Smulders — leerkwartier.app
+
+**Waarom deze opbouw:** bewijs vóór de vraag (sociale bewijskracht is sinds juli
+ons sterkste wapen), de LinkedIn-bedrijfspagina als vertrouwens-anker (mét logo en
+missie-post), de Kwartiercheck als concreet cadeau i.p.v. abstracte app-belofte,
+en /voor-organisaties.html als landingspagina die al hun vragen beantwoordt.
+
 ## Aanbevolen volgorde na de vakantie
 
 1. **Leergeld rest (55)** — adressen staan klaar (hieronder), hoogste fit, warme referenties (Apeldoorn okt-nieuwsbrief, Salland-tip van Voedselbank Raalte 17 jul). Versturen laatste vakantieweek.
