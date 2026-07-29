@@ -101,6 +101,10 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
             examen-simulatie en het Kwartierplan.{" "}
             <a href="/abonnement.html#familie" style={{ color: "#ffd54f", fontWeight: 700 }}>Bekijk alle verschillen met gratis →</a>
           </p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.6)", margin: "8px 0 0" }}>
+            Kom je via een organisatie (stadspas, Leergeld, voedselbank)? Dan heb je geen plek
+            nodig — met hun partner-code is Familie sowieso gratis, zonder limiet.
+          </p>
         </div>
 
         <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.75)", marginTop: 0 }}>
