@@ -14,6 +14,8 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
   const [code] = useState(getMyRefCode);
   const [aantal, setAantal] = useState(null);
   const [gekopieerd, setGekopieerd] = useState(false);
+  // 🤝 Deel-actie 2027 (Mark 29 jul): resterende weggeef-plekken live tonen.
+  const [plekken, setPlekken] = useState(null);
 
   const deelLink = `https://leerkwartier.app/?ref=${code}`;
   const deelTekst = `Ik oefen met Leerkwartier voor de Doorstroomtoets — gratis, met uitleg op 3 niveaus. Probeer het ook: ${deelLink}`;
@@ -23,6 +25,9 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
     let actief = true;
     supabase.rpc("get_ref_count", { code }).then(({ data }) => {
       if (actief && typeof data === "number") setAantal(data);
+    }).catch(() => {});
+    supabase.rpc("deel_actie_stand").then(({ data }) => {
+      if (actief && typeof data === "number") setPlekken(data);
     }).catch(() => {});
     return () => { actief = false; };
   }, [code]);
@@ -68,13 +73,34 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         >← Terug</button>
 
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 800, margin: "0 0 6px", lineHeight: 1.15 }}>
-          📣 Deel &amp; win een gratis Familie-jaar 2027
+          🤝 Deel Leerkwartier — geef Familie gratis weg
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
-          Leerkwartier is en blijft gratis. Help je het verder verspreiden? Deel je
-          persoonlijke link. Voor <strong>elke vriend of ouder die zich via jouw link
-          aanmeldt</strong> voor de gratis wekelijkse oefenmail, maak je kans op een
-          <strong> gratis Familie-jaar in 2027</strong> (mét extra AI-bijles-tegoed). Hoe meer je deelt, hoe groter je kans. 🎉
+          Leerkwartier is en blijft gratis. Help je het verder verspreiden? Delen wordt
+          dubbel beloond: je geeft een ander gezin iets, én je maakt zelf kans op een prijs.
+        </p>
+
+        {/* 🤝 Weggeef-actie: beide gezinnen Familie gratis tot aug 2027 */}
+        <div style={{ ...card, border: "1px solid rgba(0,200,83,0.35)", background: "rgba(0,200,83,0.07)" }}>
+          <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, marginBottom: 6, color: "#69f0ae" }}>
+            {plekken !== null && plekken > 0
+              ? `Nog ${plekken} van 50 plekken: Familie gratis tot 2027`
+              : plekken !== null
+                ? "Alle 50 weggeef-plekken zijn vergeven"
+                : "50 plekken: Familie gratis tot 2027"}
+          </div>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.8)", margin: 0 }}>
+            Ben je ingelogd als ouder? Dan heb je een persoonlijke gezins-link. Zodra iemand
+            via die link écht oefent (3 vragen), krijgen <strong style={{ color: "#fff" }}>jullie allebei</strong> Leerkwartier
+            Familie gratis tot augustus 2027.{" "}
+            <a href="/ouder" style={{ color: "#69f0ae", fontWeight: 700 }}>Haal je gezins-link op in het ouder-dashboard →</a>
+          </p>
+        </div>
+
+        <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.75)", marginTop: 0 }}>
+          📣 <strong>Ook zonder account meedoen?</strong> Deel de link hieronder. Voor elke vriend of
+          ouder die zich via jouw link aanmeldt voor de gratis wekelijkse oefenmail, maak je kans op
+          een <strong>gratis Familie-jaar in 2027</strong> (mét extra AI-bijles-tegoed).
         </p>
 
         <div style={card}>
