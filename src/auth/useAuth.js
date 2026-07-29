@@ -58,6 +58,16 @@ export function useAuth() {
             // profiel is hier tóch al opgehaald — geen extra roundtrip).
             initDailyGoalSync(u.id, data);
             if (data?.display_name) setUserName(data.display_name);
+            // Huishoud-apparaat zelf markeren (29 jul): het dagrapport telt via
+            // de view events_echt — zonder deze markering vervuilen eigen
+            // gezins-sessies de Noord-ster-metric. Markeert alléén de eigen uid.
+            try {
+              const naam = (data?.display_name || "").trim().toLowerCase();
+              if (/^(mark|brian|deianera|olivia)$|^test|tester$/.test(naam)) {
+                const uid = localStorage.getItem("lk_uid");
+                if (uid) supabase.rpc("mark_household_uid", { p_uid: uid, p_label: naam }).then(() => {}).catch(() => {});
+              }
+            } catch { /* markering is een extraatje */ }
             if (data?.level) setUserLevel(data.level);
             if (data?.school_type) setUserSchoolType(data.school_type);
             if (data?.streak_days) setStreak(data.streak_days);
