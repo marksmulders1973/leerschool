@@ -9,6 +9,12 @@
 
 ## Samenvatting per categorie
 
+> ✅ **VERZAMELD 29 jul** (3 agents, zie `docs/outreach/`): Humanitas 77/78 mét
+> geverifieerde e-mail (10× ⭐ jeugdprogramma's) · fondsen 27 (16 JFSC + 11
+> landelijk) · LOWAN 326 voorzieningen (naam/plaats/website; ~10 e-mails als
+> patroontest — rest aanvullen via scholenopdekaart.nl vóór ~1 sep).
+> Golf 2 (±25 aug, ~104 adressen) is hiermee VERZENDKLAAR.
+
 | Categorie | Nog mailbaar | Fit | Adressen verzamelen | Status |
 |---|---|---|---|---|
 | **Leergeld-stichtingen (rest)** | **55** | Hoog | ✅ KLAAR — lijst hieronder | Direct verzendklaar |
