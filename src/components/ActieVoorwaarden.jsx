@@ -77,7 +77,8 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
           Leerkwartier is en blijft gratis. Help je het verder verspreiden? Delen wordt
-          dubbel beloond: je geeft een ander gezin iets, én je maakt zelf kans op een prijs.
+          dubbel beloond: jullie krijgen <strong>allebei Familie gratis tot 2027</strong> (zie hieronder),
+          én je loot mee voor een <strong>gratis Familie-jaar 2027 met 10 uur AI-bijles-tegoed</strong>.
         </p>
 
         {/* 🤝 Weggeef-actie: beide gezinnen Familie gratis tot aug 2027 */}
