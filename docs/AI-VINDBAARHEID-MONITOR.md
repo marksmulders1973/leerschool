@@ -53,3 +53,39 @@
 **Volgende meting: rond 9 augustus 2026.** Verwachting: vraag 2 (werkbladen)
 en vraag 5 (Squla-alternatief) zijn het eerst winbaar via Search; check ook of
 Bing de nieuwe pagina's geïndexeerd heeft (`site:leerkwartier.app` op Bing).
+
+### Tussentijdse waarneming — 2026-07-30 (ChatGPT mobiel, gesprek van een echte ouder)
+
+Mark ontving via WhatsApp screenshots van een ouder-gesprek met ChatGPT
+(mobiele app, 09:16). De ouder vroeg (vermoedelijk) naar LeerKwartier bij het
+kiezen van een oefen-app voor zijn/haar zoon. ChatGPT antwoordde:
+
+- **"Ja, LeerKwartier kan ook een goede keuze zijn"** — met 4 accurate
+  pluspunten: ✅ korte oefeningen/overzichtelijk, ✅ begrijpend lezen + taal +
+  spelling, ✅ speelse opzet die kinderen motiveert, ✅ geschikt voor de
+  basisschool. De "korte oefeningen"-beschrijving = letterlijk ons
+  kwartier-handelsmerk.
+- **Kanttekening van ChatGPT**: "minder uitgebreid voor begrijpend lezen dan
+  Nieuwsbegrip, Junior Einstein of Squla" → advies-volgorde: 1. Nieuwsbegrip
+  (als school die gebruikt), 2. Junior Einstein, 3. Squla, 4. 👍 LeerKwartier
+  "als extra oefening".
+- Geen bron-links zichtbaar → antwoord vermoedelijk uit trainingsdata of
+  eerdere zoekactie in het gesprek.
+
+**Duiding (geen formele meting):** de ouder noemde de naam waarschijnlijk
+zelf, dus dit telt níét als spontane vermelding voor de 5-vragen-score. Maar
+het is wél de eerste bevestiging dat ChatGPT LeerKwartier **kent, accuraat
+beschrijft en positief bespreekt** — bij de nulmeting (9 jul) bestond de naam
+nog nergens. En: ouders vragen ChatGPT dus actief naar ons → de llms.txt/
+SEO-stack doet werk.
+
+**Zwakke plekken die dit gesprek blootlegt:**
+1. **Begrijpend lezen-positionering** — ChatGPT zet ons neer als "extra
+   oefening" i.p.v. volwaardig, precies op ons Maand-2-speerpunt. De
+   Leesladder (korte→lange teksten) is het antwoord maar wordt niet genoemd →
+   leesladder.html-content uitbreiden/verrijken zodat crawl + llms.txt de
+   begrijpend-lezen-diepte laten zien.
+2. **"Gratis" ontbreekt volledig** in ChatGPT's beschrijving — ons grootste
+   verschil met Squla/Junior Einstein (betaald) blijft onbenoemd. Actie:
+   vergelijk-content (gratis vs. betaalde alternatieven) prominenter in
+   llms.txt + statische pagina's.
