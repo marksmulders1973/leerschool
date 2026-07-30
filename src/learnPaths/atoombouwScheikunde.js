@@ -120,10 +120,12 @@ const steps = [
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="12" font-family="Arial" font-weight="bold">¹²C en ¹⁴C — beide koolstof</text>
 <circle cx="80" cy="100" r="35" fill="${COLORS.paper}" stroke="${COLORS.text}" stroke-width="1"/>
 <g>
-${[0, 1, 2, 3, 4, 5].map(i => {
-  const angle = (i * 60) * Math.PI / 180;
-  const x = 80 + 12 * Math.cos(angle);
-  const y = 100 + 12 * Math.sin(angle);
+${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(i => {
+  const inner = i < 4;
+  const radius = inner ? 8 : 18;
+  const angle = (inner ? i * 90 + 45 : (i - 4) * 45) * Math.PI / 180;
+  const x = 80 + radius * Math.cos(angle);
+  const y = 100 + radius * Math.sin(angle);
   return `<circle cx="${x}" cy="${y}" r="5" fill="${i % 2 === 0 ? COLORS.proton : COLORS.neutron}"/>`;
 }).join("")}
 </g>

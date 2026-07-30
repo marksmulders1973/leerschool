@@ -169,7 +169,7 @@ const steps = [
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bezittelijk: mein / meine</text>
 <rect x="20" y="40" width="120" height="60" rx="6" fill="${COLORS.mas}" opacity="0.20"/>
 <text x="80" y="65" text-anchor="middle" fill="${COLORS.mas}" font-size="13" font-family="Arial" font-weight="bold">mein</text>
-<text x="80" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">m + o + meervoud-min...</text>
+<text x="80" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">mannelijk + onzijdig</text>
 <rect x="160" y="40" width="120" height="60" rx="6" fill="${COLORS.fem}" opacity="0.20"/>
 <text x="220" y="65" text-anchor="middle" fill="${COLORS.fem}" font-size="13" font-family="Arial" font-weight="bold">meine</text>
 <text x="220" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">vrouwelijk + meervoud</text>

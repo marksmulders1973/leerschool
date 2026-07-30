@@ -334,6 +334,10 @@ export default function App() {
   const [examenInitialMode, setExamenInitialMode] = useState("leren");
   // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
+  // Bug 31 jul (Mark): vak-tegel op StudentHome telt paden per PO/VO-toggle,
+  // maar de Hub filterde op rol — rol "student" + PO-tegel gaf 0 paden. De
+  // tegel geeft nu zijn niveau mee zodat de Hub hetzelfde filtert als de teller.
+  const [learnNiveauOverride, setLearnNiveauOverride] = useState(null);
   // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
   const [meeBezigCategory, setMeeBezigCategory] = useState(null);
   // PvP duel state — fase 'lobby' = match maken/joinen, 'play' = spel draait
@@ -1079,6 +1083,7 @@ export default function App() {
               : userLevel
           }
           filterSubject={learnFilterSubject}
+          niveauOverride={learnNiveauOverride}
           initialSearch={learnInitialSearch}
           onOpenTextbook={(subject, bookId) => { setPendingTextbookSubject(subject); setPendingTextbookBook(bookId || null); setPage("textbook"); }}
           onPickPath={(id) => {
@@ -1505,9 +1510,17 @@ export default function App() {
             if (subjectId) setPendingTextbookSubject(subjectId);
             setPage("textbook");
           }}
-          onPickPathsForSubject={(subjectId) => {
-            // M2 audit 2: vakkenkeuze → LearnPathsHub gefilterd op vak
+          onPickPathsForSubject={(subjectId, niveau) => {
+            // M2 audit 2: vakkenkeuze → LearnPathsHub gefilterd op vak.
+            // niveau ("po"/"vo" of level-string) komt van de tegel mee zodat de
+            // Hub-telling klopt met wat de tegel beloofde.
             setLearnFilterSubject(subjectId);
+            const n = String(niveau || "").toLowerCase();
+            setLearnNiveauOverride(
+              /^(groep|po)/.test(n) ? "po"
+                : /^(klas|vmbo|mavo|havo|vwo|bovenbouw|vo)/.test(n) ? "vo"
+                : null
+            );
             setPage("learn-paths-hub");
           }}
           onResumeLearnPath={(pathId, stepIdx) => {

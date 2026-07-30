@@ -99,15 +99,15 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <rect x="80" y="20" width="140" height="36" rx="8" fill="rgba(255,213,79,0.20)" stroke="${COLORS.warm}" stroke-width="2"/>
 <text x="150" y="43" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">STANDPUNT</text>
-<line x1="100" y1="58" x2="80" y2="92" stroke="${COLORS.muted}" stroke-width="1"/>
+<line x1="100" y1="58" x2="52" y2="92" stroke="${COLORS.muted}" stroke-width="1"/>
 <line x1="150" y1="58" x2="150" y2="92" stroke="${COLORS.muted}" stroke-width="1"/>
-<line x1="200" y1="58" x2="220" y2="92" stroke="${COLORS.muted}" stroke-width="1"/>
-<rect x="30" y="95" width="100" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="80" y="115" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">argument 1</text>
-<rect x="100" y="95" width="100" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2" transform="translate(0 0)"/>
+<line x1="200" y1="58" x2="248" y2="92" stroke="${COLORS.muted}" stroke-width="1"/>
+<rect x="8" y="95" width="88" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
+<text x="52" y="115" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">argument 1</text>
+<rect x="106" y="95" width="88" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="150" y="115" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">argument 2</text>
-<rect x="170" y="95" width="100" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="220" y="115" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">argument 3</text>
+<rect x="204" y="95" width="88" height="32" rx="6" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
+<text x="248" y="115" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">argument 3</text>
 <text x="150" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">argument = waarom?</text>
 <text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">signaalwoord: omdat, want, doordat</text>
 </svg>`,

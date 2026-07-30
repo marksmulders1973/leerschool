@@ -53,8 +53,8 @@ const chapters = [
 function hormoonstelselSvg(highlight = null) {
   const isHL = (k) => highlight === k;
   const opa = (k) => highlight && !isHL(k) ? 0.3 : 1;
-  return `<svg viewBox="0 0 200 280">
-<rect x="0" y="0" width="200" height="280" fill="${COLORS.paper}"/>
+  return `<svg viewBox="0 0 248 280">
+<rect x="0" y="0" width="248" height="280" fill="${COLORS.paper}"/>
 <text x="100" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">De belangrijkste hormoonklieren</text>
 
 <!-- Lichaam-silhouet (stilistisch) -->
@@ -96,6 +96,10 @@ function hormoonstelselSvg(highlight = null) {
 <circle cx="108" cy="245" r="4" fill="${COLORS.testes}" opacity="${opa("testes")}" stroke="${isHL("testes") ? "#fff" : "transparent"}" stroke-width="2"/>
 <line x1="112" y1="245" x2="160" y2="245" stroke="${COLORS.muted}" stroke-width="0.5"/>
 <text x="162" y="248" fill="${COLORS.text}" font-size="9" font-family="Arial">teelballen (♂)</text>
+
+<!-- Duidelijk maken: eierstokken bij meisjes, teelballen bij jongens (niet samen) -->
+<text x="100" y="268" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">♀ eierstokken = bij meisjes</text>
+<text x="100" y="278" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">♂ teelballen = bij jongens</text>
 </svg>`;
 }
 
@@ -183,26 +187,26 @@ ${[1, 7, 14, 21, 28].map((d) => {
 <!-- Fase 1: Menstruatie (dag 1-5) -->
 <rect x="20" y="40" width="40" height="75" fill="${COLORS.bijnier}" opacity="0.5" rx="2"/>
 <text x="40" y="32" text-anchor="middle" fill="${COLORS.bijnier}" font-size="9" font-family="Arial" font-weight="bold">menstruatie</text>
-<text x="40" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">slijmvlies</text>
-<text x="40" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">verlaten</text>
+<text x="40" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies</text>
+<text x="40" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">verlaten</text>
 
 <!-- Fase 2: Folliculaire fase (dag 6-13) -->
 <rect x="60" y="60" width="80" height="55" fill="${COLORS.cyclus_a}" opacity="0.4" rx="2"/>
 <text x="100" y="50" text-anchor="middle" fill="${COLORS.cyclus_a}" font-size="9" font-family="Arial" font-weight="bold">opbouwfase</text>
-<text x="100" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">eicel rijpt</text>
-<text x="100" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">slijmvlies groeit</text>
+<text x="100" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">eicel rijpt</text>
+<text x="100" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies groeit</text>
 
 <!-- Fase 3: Ovulatie (dag 14) -->
 <circle cx="155" cy="80" r="8" fill="${COLORS.warm}" opacity="0.85"/>
 <text x="155" y="50" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">ovulatie</text>
-<text x="155" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">eicel</text>
-<text x="155" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">vrijgegeven</text>
+<text x="155" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">eicel</text>
+<text x="155" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vrijgegeven</text>
 
 <!-- Fase 4: Luteale fase (dag 15-28) -->
 <rect x="170" y="55" width="130" height="60" fill="${COLORS.cyclus_b}" opacity="0.4" rx="2"/>
 <text x="235" y="48" text-anchor="middle" fill="${COLORS.good}" font-size="9" font-family="Arial" font-weight="bold">wachtfase</text>
-<text x="235" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">slijmvlies klaar</text>
-<text x="235" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="8" font-family="Arial">voor evt. innesteling</text>
+<text x="235" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies klaar</text>
+<text x="235" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">voor evt. innesteling</text>
 
 <!-- As-uitleg onderaan -->
 <text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">→ als geen bevruchting plaatsvindt, begint cyclus opnieuw</text>

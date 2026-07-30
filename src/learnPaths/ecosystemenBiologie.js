@@ -34,15 +34,15 @@ function piramideSvg() {
 <!-- top: toproofdier -->
 <polygon points="140,40 180,40 165,65 155,65" fill="${COLORS.cons2}" stroke="${COLORS.curve}" stroke-width="1"/>
 <text x="160" y="58" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">toproofdier</text>
-<text x="220" y="55" fill="${COLORS.text}" font-size="10" font-family="Arial">~0,1%</text>
+<text x="220" y="55" fill="${COLORS.text}" font-size="10" font-family="Arial">~0,01%</text>
 <!-- niveau 3 -->
 <polygon points="120,70 200,70 185,95 135,95" fill="${COLORS.cons2}" opacity="0.7" stroke="${COLORS.curve}" stroke-width="1"/>
 <text x="160" y="88" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">3e consument (vlees)</text>
-<text x="220" y="85" fill="${COLORS.text}" font-size="10" font-family="Arial">~1%</text>
+<text x="220" y="85" fill="${COLORS.text}" font-size="10" font-family="Arial">~0,1%</text>
 <!-- niveau 2 -->
 <polygon points="100,100 220,100 205,125 115,125" fill="${COLORS.cons1}" stroke="${COLORS.curve}" stroke-width="1"/>
 <text x="160" y="118" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">2e consument</text>
-<text x="240" y="115" fill="${COLORS.text}" font-size="10" font-family="Arial">~10%</text>
+<text x="240" y="115" fill="${COLORS.text}" font-size="10" font-family="Arial">~1%</text>
 <!-- niveau 1: herbivoren -->
 <polygon points="80,130 240,130 225,155 95,155" fill="${COLORS.cons1}" opacity="0.7" stroke="${COLORS.curve}" stroke-width="1"/>
 <text x="160" y="148" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">1e consument (herbivoor)</text>

@@ -41,11 +41,11 @@ function tijdslijnSvg() {
 <text x="180" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">1916</text>
 <text x="180" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Verdun + Somme</text>
 <circle cx="240" cy="85" r="6" fill="${COLORS.blauw}"/>
-<text x="240" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">apr 1917</text>
-<text x="240" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">VS meedoen</text>
+<text x="240" y="70" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">apr 1917</text>
+<text x="240" y="58" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">VS meedoen</text>
 <circle cx="290" cy="85" r="6" fill="${COLORS.curve}"/>
-<text x="290" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">11 nov 1918</text>
-<text x="290" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Wapenstilstand</text>
+<text x="300" y="105" text-anchor="end" fill="${COLORS.text}" font-size="10" font-family="Arial">11 nov 1918</text>
+<text x="300" y="118" text-anchor="end" fill="${COLORS.muted}" font-size="9" font-family="Arial">Wapenstilstand</text>
 <text x="160" y="148" text-anchor="middle" fill="${COLORS.highlight}" font-size="11" font-family="Arial" font-style="italic">~4 jaar oorlog, ~17 miljoen doden</text>
 </svg>`;
 }

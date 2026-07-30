@@ -32,27 +32,32 @@ const chapters = [
 // SVG: maten-trapje voor lengte (km↔mm), gewicht (ton↔mg) of inhoud (L↔mL).
 function trapjeSvg(eenheden, kleur, titel) {
   const stappen = eenheden.length;
-  const breedte = 60;
-  const totaalBreedte = stappen * breedte + 60;
-  const totaalHoogte = 180;
-  const startY = 40;
+  const groot = stappen >= 8; // veel treden → compacter raster + iets grotere fonts (anders piepklein)
+  const breedte = groot ? 52 : 60;
   const stapHoogte = 22;
+  const startY = groot ? 46 : 40;
+  const totaalBreedte = stappen * breedte + 60;
+  const totaalHoogte = startY + stappen * stapHoogte + 44; // treden + ruimte voor ×10-label + voetregel
+  const fsTrede = groot ? 13 : 11;
+  const fsMaal = groot ? 11 : 9;
+  const fsTitel = groot ? 16 : 13;
+  const fsVoet = groot ? 12 : 10;
 
   let svg = `<svg viewBox="0 0 ${totaalBreedte} ${totaalHoogte}">
 <rect x="0" y="0" width="${totaalBreedte}" height="${totaalHoogte}" fill="${COLORS.paper}"/>
-<text x="${totaalBreedte / 2}" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">${titel}</text>`;
+<text x="${totaalBreedte / 2}" y="${groot ? 28 : 20}" text-anchor="middle" fill="${COLORS.warm}" font-size="${fsTitel}" font-family="Arial" font-weight="bold">${titel}</text>`;
 
   // Tekent een trapje van groot naar klein
   for (let i = 0; i < stappen; i++) {
     const x = 30 + i * breedte;
     const y = startY + i * stapHoogte;
     svg += `<rect x="${x}" y="${y}" width="${breedte - 8}" height="${stapHoogte}" fill="${kleur}" opacity="0.55" stroke="${kleur}" stroke-width="1"/>`;
-    svg += `<text x="${x + (breedte - 8) / 2}" y="${y + 14}" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">${eenheden[i]}</text>`;
+    svg += `<text x="${x + (breedte - 8) / 2}" y="${y + 15}" text-anchor="middle" fill="${COLORS.text}" font-size="${fsTrede}" font-family="Arial" font-weight="bold">${eenheden[i]}</text>`;
     if (i < stappen - 1) {
-      svg += `<text x="${x + breedte}" y="${y + stapHoogte + 14}" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">×10</text>`;
+      svg += `<text x="${x + breedte}" y="${y + stapHoogte + 14}" text-anchor="middle" fill="${COLORS.muted}" font-size="${fsMaal}" font-family="Arial">×10</text>`;
     }
   }
-  svg += `<text x="${totaalBreedte / 2}" y="${totaalHoogte - 8}" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Per stapje × 10 (of ÷ 10 omhoog)</text>`;
+  svg += `<text x="${totaalBreedte / 2}" y="${totaalHoogte - 10}" text-anchor="middle" fill="${COLORS.muted}" font-size="${fsVoet}" font-family="Arial" font-style="italic">Per stapje × 10 (of ÷ 10 omhoog)</text>`;
   svg += `</svg>`;
   return svg;
 }

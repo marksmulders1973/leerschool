@@ -28,13 +28,13 @@ const chapters = [
 function staafDiagram(data, titel, eenheid) {
   const max = Math.max(...data.map((d) => d.v));
   const breedte = 320, hoogte = 180;
-  const startX = 50, startY = 30, plotH = 120;
+  const startX = 50, startY = 40, plotH = 120;
   const balkenBreedte = (breedte - startX - 30) / data.length - 8;
   const kleuren = [COLORS.bar1, COLORS.bar2, COLORS.bar3, COLORS.bar4, COLORS.point, COLORS.curve, COLORS.bar1, COLORS.bar2];
 
   let svg = `<svg viewBox="0 0 ${breedte} ${hoogte}">
 <rect x="0" y="0" width="${breedte}" height="${hoogte}" fill="${COLORS.paper}"/>
-<text x="${breedte / 2}" y="20" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">${titel}</text>
+<text x="${breedte / 2}" y="14" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">${titel}</text>
 <line x1="${startX}" y1="${startY + plotH}" x2="${breedte - 15}" y2="${startY + plotH}" stroke="${COLORS.muted}" stroke-width="1"/>
 <line x1="${startX}" y1="${startY}" x2="${startX}" y2="${startY + plotH}" stroke="${COLORS.muted}" stroke-width="1"/>`;
 
@@ -81,7 +81,7 @@ function tabelSvg(rijen, headers, titel) {
 
 function lijnGrafiek(punten, titel) {
   const breedte = 320, hoogte = 180;
-  const startX = 50, startY = 30, plotW = breedte - startX - 30, plotH = 120;
+  const startX = 50, startY = 40, plotW = breedte - startX - 30, plotH = 120;
   const max = Math.max(...punten.map((p) => p.v));
   const stap = plotW / (punten.length - 1);
   const coords = punten.map((p, i) => ({
@@ -92,7 +92,7 @@ function lijnGrafiek(punten, titel) {
 
   let svg = `<svg viewBox="0 0 ${breedte} ${hoogte}">
 <rect x="0" y="0" width="${breedte}" height="${hoogte}" fill="${COLORS.paper}"/>
-<text x="${breedte / 2}" y="20" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">${titel}</text>
+<text x="${breedte / 2}" y="14" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">${titel}</text>
 <line x1="${startX}" y1="${startY + plotH}" x2="${breedte - 15}" y2="${startY + plotH}" stroke="${COLORS.muted}"/>
 <line x1="${startX}" y1="${startY}" x2="${startX}" y2="${startY + plotH}" stroke="${COLORS.muted}"/>
 <path d="${path}" stroke="${COLORS.bar1}" stroke-width="2.5" fill="none"/>`;

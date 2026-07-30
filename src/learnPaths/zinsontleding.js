@@ -50,7 +50,7 @@ const steps = [
 <text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">3. getal veranderen (pv verandert)</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="162" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">heeft</tspan> het boek <tspan fill="${COLORS.muted}">gelezen</tspan>."</text>
-<text x="35" y="180" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">heeft = pv · gelezen = werkwoordelijk restdeel</text>
+<text x="35" y="195" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">heeft = pv · gelezen = werkwoordelijk restdeel</text>
 </svg>`,
     checks: [
       {
@@ -161,7 +161,7 @@ const steps = [
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="144" fill="${COLORS.text}" font-size="11" font-family="Arial">"Een groep leerlingen <tspan fill="${COLORS.good}" font-weight="bold">gaat</tspan>..."</text>
 <text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ groep is enkelvoud (al staat er 'leerlingen')</text>
-<text x="150" y="182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel d/t-fouten ontstaan hier: verkeerde koppeling</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel d/t-fouten ontstaan hier: verkeerde koppeling</text>
 </svg>`,
     checks: [
       {
@@ -245,7 +245,7 @@ const steps = [
 <line x1="30" y1="120" x2="270" y2="120" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="140" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.warm}" font-weight="bold">moe</tspan>." (naamwoordelijk)</text>
 <text x="35" y="158" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.muted}" font-weight="bold">gevallen</tspan>." (werkwoordelijk)</text>
-<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">na koppelww: bijv. naamw. of zelfst. naamw. = naamw. gezegde</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">na koppelww: bijv. naamw. of zelfst. naamw. = naamw. gezegde</text>
 </svg>`,
     checks: [
       {
@@ -335,7 +335,7 @@ const steps = [
 <text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: vraag "wie/wat + onderw + pv?"</text>
 <text x="35" y="146" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: zin in lijdende vorm zetten</text>
 <text x="35" y="166" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ "een boek wordt door Sara gelezen"</text>
-<text x="150" y="184" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">niet elke zin heeft een lv (rennen/slapen niet)</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">niet elke zin heeft een lv (rennen/slapen niet)</text>
 </svg>`,
     checks: [
       {
@@ -401,7 +401,7 @@ const steps = [
 <line x1="30" y1="132" x2="270" y2="132" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="152" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: 'aan/voor + persoon' is mv-vorm</text>
 <text x="35" y="170" fill="${COLORS.text}" font-size="11" font-family="Arial">"Ik geef een cadeau aan mijn zus."</text>
-<text x="150" y="188" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">mv staat vaak vóór lv in NL</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">mv staat vaak vóór lv in NL</text>
 </svg>`,
     checks: [
       {
@@ -443,7 +443,7 @@ const steps = [
 <text x="35" y="128" fill="${COLORS.text}" font-size="10" font-family="Arial">"aan wie?" of "voor wie?"</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="160" fill="${COLORS.text}" font-size="10" font-family="Arial">volgorde: onderw — pv — mv — lv — bep</text>
-<text x="150" y="182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">"De juf vertelt ons een verhaal."</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">"De juf vertelt ons een verhaal."</text>
 </svg>`,
     checks: [
       {
@@ -789,7 +789,7 @@ const steps = [
     explanation: "Laatste set van vier vragen. Combineert alles uit het hele leerpad: pv, onderwerp, gezegde-type, lv, mv, bepalingen, woordsoorten.\n\n**Klaar?** Dan kun je zinsontleding op onderbouw-niveau!\n\n**Volgende stap**: gebruik dit bij Nederlands-toetsen, schrijfopdrachten (helpt bij correcte zinnen), en bij grammatica-vragen op CITO-toetsen.\n\nVeel succes! 🏆",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(160,96,255,0.15)" stroke="${COLORS.paars}" stroke-width="3"/>
-<text x="150" y="80" text-anchor="middle" fill="${COLORS.paars}" font-size="28" font-family="Arial" font-weight="bold">onder-</text>
+<text x="150" y="80" text-anchor="middle" fill="${COLORS.paars}" font-size="28" font-family="Arial" font-weight="bold">ont-</text>
 <text x="150" y="108" text-anchor="middle" fill="${COLORS.paars}" font-size="22" font-family="Arial" font-weight="bold">leden</text>
 <text x="150" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">je kunt het nu 🎓</text>
 </svg>`,

@@ -412,12 +412,12 @@ const steps = [
 <text x="35" y="110" fill="${COLORS.good}" font-size="11" font-family="monospace">10⁹ = 1.000.000.000</text>
 <text x="180" y="110" fill="${COLORS.muted}" font-size="11" font-family="Arial">(giga)</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y="144" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻³ = 0,001</text>
-<text x="155" y="144" fill="${COLORS.muted}" font-size="11" font-family="Arial">(milli)</text>
-<text x="35" y="162" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁶ = 0,000001</text>
-<text x="170" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">(micro)</text>
-<text x="35" y="180" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁹</text>
-<text x="100" y="180" fill="${COLORS.muted}" font-size="11" font-family="Arial">(nano)</text>
+<text x="35" y="140" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻³ = 0,001</text>
+<text x="155" y="140" fill="${COLORS.muted}" font-size="11" font-family="Arial">(milli)</text>
+<text x="35" y="156" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁶ = 0,000001</text>
+<text x="170" y="156" fill="${COLORS.muted}" font-size="11" font-family="Arial">(micro)</text>
+<text x="35" y="172" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁹ = 0,000000001</text>
+<text x="200" y="172" fill="${COLORS.muted}" font-size="11" font-family="Arial">(nano)</text>
 </svg>`,
     checks: [
       {

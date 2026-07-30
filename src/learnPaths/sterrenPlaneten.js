@@ -33,7 +33,7 @@ const chapters = [
 ];
 
 // Zonnestelsel-overzicht (alle 8 planeten in een rij, niet op echte schaal).
-function zonnestelselSvg(highlight = null) {
+function zonnestelselSvg(highlight = null, showPluto = false) {
   const planeten = [
     { naam: "Mercurius", x: 35, r: 4, kleur: COLORS.mercurius },
     { naam: "Venus", x: 60, r: 7, kleur: COLORS.venus },
@@ -57,14 +57,23 @@ ${[[40,30],[80,20],[120,40],[180,15],[220,30],[270,25],[300,45],[15,80],[45,160]
 </circle>
 
 <!-- Planeten -->
-${planeten.map(p => {
+${planeten.map((p, idx) => {
   const isHL = highlight === p.naam.toLowerCase();
   const opa = highlight && !isHL ? 0.4 : 1;
+  // Alterneer labels boven/onder de rij zodat dichte planeten (Mercurius/Venus, Uranus/Neptunus) niet overlappen.
+  const below = idx % 2 === 0;
+  const labelY = below ? 100 + p.r + 14 : 100 - p.r - 6;
   return `
 <circle cx="${p.x}" cy="100" r="${p.r}" fill="${p.kleur}" opacity="${opa}" stroke="${isHL ? '#fff' : 'transparent'}" stroke-width="2"/>
 ${p.naam === 'Saturnus' ? `<ellipse cx="${p.x}" cy="100" rx="${p.r + 8}" ry="3" fill="none" stroke="${p.kleur}" stroke-width="1.5" opacity="${opa}"/>` : ''}
-<text x="${p.x}" y="${100 + p.r + 14}" text-anchor="middle" fill="${isHL ? '#fff' : COLORS.muted}" font-size="9" font-family="Arial" font-weight="${isHL ? 'bold' : 'normal'}">${p.naam}</text>`;
+<text x="${p.x}" y="${labelY}" text-anchor="middle" fill="${isHL ? '#fff' : COLORS.muted}" font-size="9" font-family="Arial" font-weight="${isHL ? 'bold' : 'normal'}">${p.naam}</text>`;
 }).join('')}
+
+${showPluto ? `
+<!-- Pluto — dwergplaneet, achter Neptunus, gestippelde baan -->
+<ellipse cx="305" cy="100" rx="9" ry="5" fill="none" stroke="${COLORS.muted}" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+<circle cx="305" cy="100" r="2.5" fill="${COLORS.maan}"/>
+<text x="317" y="122" text-anchor="end" fill="${COLORS.muted}" font-size="8" font-family="Arial">Pluto — dwergplaneet</text>` : ''}
 
 <text x="160" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Niet op schaal — werkelijke afstanden zijn gigantisch</text>
 </svg>`;
@@ -444,7 +453,7 @@ const steps = [
   {
     title: "Andere objecten — Pluto, asteroïden, kometen",
     explanation: "Behalve planeten en hun manen zijn er **veel andere objecten** in ons zonnestelsel:\n\n**Dwergplaneten** *(klein, geen 'echte' planeet)*\n• **Pluto** — vroeger #9 planeet, sinds **2006 dwergplaneet**. Te klein, deelt baan met andere objecten.\n• **Eris**, **Makemake**, **Haumea**, **Ceres** — andere dwergplaneten.\n• Ceres ligt in de **asteroïdengordel** (zie verder).\n\n**Asteroïden**\n• **Rotsbrokken** — meeste in **asteroïdengordel** tussen Mars en Jupiter.\n• Variërend van enkele meters tot ~1.000 km (Ceres is grootste).\n• Vermoedelijk **bouwmateriaal** dat nooit een planeet werd, mogelijk door zwaartekracht van Jupiter.\n• Soms botst er een tegen Aarde — de **Yucatán-meteoriet** ~66 miljoen jaar geleden veroorzaakte uitsterven van dinosaurussen.\n\n**Kometen** *(de 'vuile sneeuwballen')*\n• Bestaan vooral uit **ijs + stof + gas**.\n• Komen van **ver weg** — Oort-wolk of Kuiper-gordel.\n• Bij nadering van de zon **smelt** het ijs → vormt een **lange staart** van gas.\n• Beroemd: **Halley's komeet** — komt elke ~76 jaar langs (volgende keer 2061).\n• De staart wijst altijd **weg van de zon** door zonnewind.\n\n**Meteorieten + meteoren**\n• **Meteoroïde** = klein steentje in de ruimte.\n• **Meteor** = vallend ster — gloeiend stuk dat de aardatmosfeer raakt en verbrandt.\n• **Meteoriet** = wat overblijft op aarde-oppervlak.\n• **Meteorenregens**: jaarlijks komt aarde door 'staart' van een komeet → veel vallende sterren in 1 nacht.\n\n**Kuiper-gordel** *(achter Neptunus)*\n• Ringvormig gebied vol bevroren objecten + dwergplaneten.\n• Pluto + Eris staan hier.\n• Ontdekt in 1992.\n\n**Oort-wolk** *(héél ver weg)*\n• Bolvormige wolk van miljarden bevroren objecten.\n• Tot ~1 lichtjaar weg.\n• Bron van langeperiode-kometen.\n\n**Universum-feiten voor schaal**\n• Aarde: 1 stipje.\n• Zonnestelsel: enorm.\n• Melkweg: 200 miljard sterren.\n• Heelal: triljoenen sterrenstelsels.\n• Wij zijn **klein**.",
-    svg: zonnestelselSvg(),
+    svg: zonnestelselSvg(null, true),
     checks: [
       {
         q: "Waarom is **Pluto geen planeet meer** sinds 2006?",

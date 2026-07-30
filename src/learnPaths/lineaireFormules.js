@@ -475,13 +475,15 @@ ${baseAxes}
     explanation: "**Praktisch**. Een taxi rekent **€ 2,50 instaptarief** plus **€ 1,80 per kilometer**.\n\nDe **lineaire formule** voor de kosten:\n\n**y = 1,80x + 2,50**\n\nWaarbij y = totaal in euro, x = aantal km.\n\nTwee vragen:\n\n**A**: Hoeveel kost 5 km?\n• y = 1,80·5 + 2,50 = 9 + 2,50 = **€ 11,50**\n\n**B**: Voor welke afstand betaal je € 20?\n• 20 = 1,80x + 2,50\n• 17,50 = 1,80x\n• x = 17,50 / 1,80 ≈ **9,7 km**\n\nDit is een typische lineaire-formule-toepassing: **vaste kosten** (b) + **variabele kosten** (a per eenheid).",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
-<line x1="50" y1="135" x2="250" y2="35" stroke="${COLORS.curve}" stroke-width="2.5"/>
-<circle cx="150" cy="85" r="5" fill="${COLORS.point}"/>
-<text x="160" y="83" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">5 km, €11,50</text>
-<text x="50" y="155" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">€ 2,50 instap (b)</text>
-<text x="200" y="55" fill="${COLORS.curve}" font-size="11" font-family="Arial">y = 1,80x + 2,50</text>
-<line x1="155" y1="135" x2="155" y2="155" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<polygon points="150,150 155,158 160,150" fill="${COLORS.curveAlt}"/>
+<line x1="150" y1="90" x2="250" y2="18" stroke="${COLORS.curve}" stroke-width="2.5"/>
+<line x1="200" y1="54" x2="200" y2="100" stroke="${COLORS.point}" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+<line x1="150" y1="54" x2="200" y2="54" stroke="${COLORS.point}" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+<circle cx="200" cy="54" r="5" fill="${COLORS.point}"/>
+<text x="208" y="50" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">5 km, €11,50</text>
+<circle cx="150" cy="90" r="3.5" fill="${COLORS.curveAlt}"/>
+<line x1="110" y1="126" x2="146" y2="93" stroke="${COLORS.curveAlt}" stroke-width="1"/>
+<text x="25" y="138" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">€ 2,50 instap (b)</text>
+<text x="40" y="45" fill="${COLORS.curve}" font-size="11" font-family="Arial">y = 1,80x + 2,50</text>
 <text x="50" y="190" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">snijpunt y-as = startbedrag · helling = prijs per km</text>
 </svg>`,
     checks: [

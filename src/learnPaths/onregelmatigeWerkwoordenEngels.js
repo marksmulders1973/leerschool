@@ -43,11 +43,13 @@ function tableSvg(rows, opts = {}) {
   const rowH = 22;
   const startY = 36;
   const totalH = startY + rows.length * rowH + 14;
-  const colX = [20, 110, 200];
-  const colW = 80;
-  return `<svg viewBox="0 0 300 ${totalH}">
+  // Bredere viewBox + verder uit elkaar liggende kolommen, anders plakt de
+  // "V3 — past participle"-kop tegen de "V2 — past simple"-kolom.
+  const colX = [15, 125, 235];
+  const colW = 100;
+  return `<svg viewBox="0 0 340 ${totalH}">
   ${headers.map((h, i) => `<rect x="${colX[i]}" y="10" width="${colW}" height="20" rx="4" fill="${colors[i]}" opacity="0.25"/>
-  <text x="${colX[i] + colW / 2}" y="24" text-anchor="middle" fill="${colors[i]}" font-size="10" font-family="Arial" font-weight="bold">${h}</text>`).join("\n")}
+  <text x="${colX[i] + colW / 2}" y="24" text-anchor="middle" fill="${colors[i]}" font-size="9" font-family="Arial" font-weight="bold">${h}</text>`).join("\n")}
   ${rows.map((r, ri) => {
     const y = startY + ri * rowH;
     return r.map((cell, ci) => `<text x="${colX[ci] + colW / 2}" y="${y + 14}" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">${cell}</text>`).join("\n");

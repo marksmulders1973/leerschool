@@ -55,15 +55,40 @@ function tijdlijnSvg(activeYear = null) {
     { y: 1609, label: "Bestand" },
     { y: 1648, label: "Vrede Münster" },
   ];
+  // De vroege jaren (1566-1581) liggen zo dicht opeen dat de labels overlappen.
+  // Oplossing: labels om-en-om boven/onder de lijn en zijwaarts uit elkaar
+  // schuiven, met een dun verbindingslijntje naar de juiste stip.
+  const declutter = (idxs, minGap) => {
+    const pos = {};
+    let prev = -Infinity;
+    idxs.forEach((i) => {
+      const lx = Math.max(xFor(events[i].y), prev + minGap);
+      pos[i] = lx;
+      prev = lx;
+    });
+    return pos;
+  };
+  const aboveIdx = events.map((_, i) => i).filter((i) => i % 2 === 0);
+  const belowIdx = events.map((_, i) => i).filter((i) => i % 2 === 1);
+  const labelX = { ...declutter(aboveIdx, 60), ...declutter(belowIdx, 62) };
   return `<svg viewBox="0 0 320 110">
 <line x1="20" y1="60" x2="300" y2="60" stroke="${COLORS.muted}" stroke-width="1"/>
-${events.map((e) => {
+${events.map((e, i) => {
     const x = xFor(e.y);
+    const lx = Math.min(Math.max(labelX[i], 8), 312);
+    const above = i % 2 === 0;
     const active = activeYear === e.y;
+    const col = active ? "#fff" : COLORS.muted;
+    const anchor = lx > 280 ? "end" : lx < 40 ? "start" : "middle";
+    const yearY = above ? 40 : 76;
+    const labelY = above ? 29 : 88;
+    const connFrom = above ? 56 : 64;
+    const connTo = above ? 44 : 72;
     return `
+<line x1="${x}" y1="${connFrom}" x2="${lx}" y2="${connTo}" stroke="${COLORS.muted}" stroke-width="0.5" opacity="0.6"/>
 <circle cx="${x}" cy="60" r="${active ? 6 : 4}" fill="${active ? COLORS.warm : COLORS.republiek}" stroke="${active ? "#fff" : "transparent"}" stroke-width="2"/>
-<text x="${x}" y="44" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
-<text x="${x}" y="80" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="8" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
+<text x="${lx}" y="${yearY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
+<text x="${lx}" y="${labelY}" text-anchor="${anchor}" fill="${col}" font-size="8" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
   }).join("")}
 <text x="160" y="103" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Tachtigjarige Oorlog: 1568 — 1648</text>
 </svg>`;
@@ -93,8 +118,8 @@ ${isAfterUnion ? `
 ` : `
 <!-- Voor splitsing: heel gebied onder Spanje -->
 <polygon points="60,30 220,30 240,80 230,140 200,180 100,190 50,160 40,90" fill="${COLORS.spanje}" opacity="0.45"/>
-<text x="140" y="100" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">17 Provinciën</text>
-<text x="140" y="115" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">(onder Spanje)</text>
+<text x="150" y="92" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">17 Provinciën</text>
+<text x="150" y="105" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">(onder Spanje)</text>
 `}
 
 <!-- Steden -->
@@ -102,10 +127,10 @@ ${isAfterUnion ? `
 <text x="105" y="62" fill="#fff" font-size="9" font-family="Arial">Amsterdam</text>
 <circle cx="135" cy="80" r="3" fill="#fff"/>
 <text x="142" y="79" fill="#fff" font-size="9" font-family="Arial">Leiden</text>
-<circle cx="120" cy="50" r="3" fill="${COLORS.warm}"/>
-<text x="83" y="42" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">Den Briel</text>
-<circle cx="120" cy="120" r="3" fill="#fff"/>
-<text x="125" y="118" fill="#fff" font-size="9" font-family="Arial">Antwerpen</text>
+<circle cx="70" cy="95" r="3" fill="${COLORS.warm}"/>
+<text x="10" y="98" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">Den Briel</text>
+<circle cx="135" cy="140" r="3" fill="#fff"/>
+<text x="140" y="143" fill="#fff" font-size="9" font-family="Arial">Antwerpen</text>
 <circle cx="80" cy="160" r="3" fill="#fff"/>
 <text x="40" y="158" fill="#fff" font-size="9" font-family="Arial">Brussel</text>
 </svg>`;

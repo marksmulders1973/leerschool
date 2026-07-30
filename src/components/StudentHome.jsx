@@ -664,7 +664,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                       enabled: heeftPaden && !!onPickPathsForSubject,
                       label: "📚 Leren",
                       sub: heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "binnenkort",
-                      onClick: () => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id); } },
+                      onClick: () => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id, vakModus); } },
                       colorOn: "#00e676",
                       bgOn: "rgba(0,200,83,0.18)",
                       bgPrimary: "rgba(0,200,83,0.30)",

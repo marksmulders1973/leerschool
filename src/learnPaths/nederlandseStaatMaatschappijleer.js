@@ -172,7 +172,8 @@ ${Array.from({ length: 30 }, (_, i) => {
   return `<rect x="${30 + col * 24}" y="${50 + row * 22}" width="20" height="18" rx="3" fill="${COLORS.parlement}" opacity="${0.4 + (col * 0.05)}"/>`;
 }).join("")}
 </g>
-<text x="150" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Binnenhof, Den Haag</text>
+<text x="150" y="124" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">schematisch — elk blokje = 5 zetels</text>
+<text x="150" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Binnenhof, Den Haag</text>
 <text x="150" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">verkiezingen elke 4 jaar</text>
 <text x="150" y="180" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">maakt wetten + controleert regering</text>
 </svg>`,
@@ -219,7 +220,7 @@ ${Array.from({ length: 30 }, (_, i) => {
 <text x="220" y="62" text-anchor="middle" fill="${COLORS.regering}" font-size="11" font-family="Arial" font-weight="bold">REGERING</text>
 <text x="220" y="80" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">premier + ministers</text>
 <text x="220" y="94" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">+ koning</text>
-<text x="150" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">samen vormen ze de uitvoerende macht</text>
+<text x="150" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Kamer toetst wetten · regering voert uit</text>
 <text x="150" y="170" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">formatie → regeerakkoord → kabinet</text>
 </svg>`,
     checks: [

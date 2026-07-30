@@ -586,8 +586,8 @@ const steps = [
 <text x="35" y="108" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ verkeer<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>licht</text>
 <text x="35" y="126" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ liefde<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verklaring</text>
 <text x="35" y="144" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ mening<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verschil</text>
-<text x="160" y="108" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ school+feest = schoolfeest</text>
-<text x="160" y="126" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ zomer+avond = zomeravond</text>
+<text x="150" y="108" fill="${COLORS.alt}" font-size="10" font-family="Arial">✗ schoolfeest (geen s)</text>
+<text x="150" y="126" fill="${COLORS.alt}" font-size="10" font-family="Arial">✗ zomeravond (geen s)</text>
 <text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geen vaste regel — woordbeeld + uitspraak</text>
 </svg>`,
     checks: [

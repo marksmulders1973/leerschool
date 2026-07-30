@@ -462,16 +462,16 @@ const steps = [
     explanation: "**Welvaart** = in hoeverre kun je behoeften vervullen.\n• **Welvaart in enge zin**: alleen materiële zaken (geld, spullen)\n• **Welvaart in ruime zin**: ook gezondheid, milieu, vrije tijd, veiligheid, geluk\n\n**Inflatie** = prijzen stijgen gemiddeld. Het CBS meet dit met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht** = hoeveel je kunt kopen voor je inkomen.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** ~2%\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** ~3%\n\n**Reële vs nominale loonstijging**:\n• Nominaal = wat in euro's op je strookje verandert (bv. +3%)\n• Reëel = je echte koopkracht (bv. nominaal +3% min inflatie 2% = +1% reëel)\n\n**Voorbeelden CPI per consumptiepost**:\n• Energie steeg in 2022 met +50% → grote impact op huishoudens\n• Voedsel: ~10% in 2023\n• Diensten (kapper, restaurant): ~5%/jaar gemiddeld\n\n**Waarom inflatie?**\n• Energieprijzen (gas, olie) stijgen\n• Te veel geld in omloop\n• Krapte arbeidsmarkt → hogere lonen → hogere prijzen\n• Verstoring aanbod (oorlog, pandemie)\n\n**Deflatie** = prijzen dalen. Klinkt goed, maar mensen stellen aankopen uit (wachten tot het goedkoper is) → economie krimpt.\n\n**ECB-doel**: inflatie ~2% per jaar (gezond niveau).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PRIJS BROOD DOOR DE TIJD</text>
-<rect x="50" y="40" width="40" height="100" fill="${COLORS.geld}" opacity="0.5"/>
+<rect x="50" y="86" width="40" height="54" fill="${COLORS.geld}" opacity="0.5"/>
 <text x="70" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2010</text>
 <text x="70" y="170" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">€1,50</text>
-<rect x="120" y="55" width="40" height="85" fill="${COLORS.warm}" opacity="0.5"/>
+<rect x="120" y="69" width="40" height="71" fill="${COLORS.warm}" opacity="0.5"/>
 <text x="140" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2018</text>
 <text x="140" y="170" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">€2,00</text>
-<rect x="190" y="65" width="40" height="75" fill="${COLORS.oranje}" opacity="0.5"/>
+<rect x="190" y="51" width="40" height="89" fill="${COLORS.oranje}" opacity="0.5"/>
 <text x="210" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2023</text>
 <text x="210" y="170" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">€2,50</text>
-<rect x="260" y="55" width="40" height="85" fill="${COLORS.aanbod}" opacity="0.6"/>
+<rect x="260" y="40" width="40" height="100" fill="${COLORS.aanbod}" opacity="0.6"/>
 <text x="280" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2026</text>
 <text x="280" y="170" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">€2,80</text>
 <text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">+87% in 16 jaar = inflatie</text>

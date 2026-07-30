@@ -40,7 +40,7 @@ const chapters = [
 ];
 
 // Mendel-kruisings-tabel (Punnett square).
-function punnettSvg(parent1 = "Aa", parent2 = "Aa", domLabel = "A", recLabel = "a") {
+function punnettSvg(parent1 = "Aa", parent2 = "Aa", domLabel = "A", recLabel = "a", geslacht = false) {
   const p1 = [parent1[0], parent1[1]];
   const p2 = [parent2[0], parent2[1]];
   const cells = [
@@ -70,14 +70,15 @@ ${cells.map((c, i) => {
     const isHomDom = c === domLabel + domLabel;
     const isHomRec = c === recLabel + recLabel;
     const isHet = !isHomDom && !isHomRec;
-    const fill = isHomDom ? COLORS.domA : isHomRec ? COLORS.recA : COLORS.domA_b;
+    const fill = geslacht ? (isHomDom ? COLORS.recA : COLORS.domA) : (isHomDom ? COLORS.domA : isHomRec ? COLORS.recA : COLORS.domA_b);
+    const subLabel = geslacht ? (isHomDom ? "meisje" : "jongen") : (isHomDom ? "homozygoot dom." : isHomRec ? "homozygoot rec." : "heterozygoot");
     return `
 <rect x="${x}" y="${y}" width="60" height="60" fill="${fill}" opacity="0.55" stroke="#fff" stroke-width="1"/>
-<text x="${x + 30}" y="${y + 32}" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="bold">${c[0] === recLabel && c[1] === domLabel ? domLabel + recLabel : c}</text>
-<text x="${x + 30}" y="${y + 48}" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">${isHomDom ? "homozygoot dom." : isHomRec ? "homozygoot rec." : "heterozygoot"}</text>`;
+<text x="${x + 30}" y="${y + 32}" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="bold">${!geslacht && c[0] === recLabel && c[1] === domLabel ? domLabel + recLabel : c}</text>
+<text x="${x + 30}" y="${y + 48}" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">${subLabel}</text>`;
   }).join("")}
 
-<text x="140" y="215" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial">Verhouding ${domLabel}_ : ${recLabel}${recLabel} = 3 : 1 (bij Aa × Aa)</text>
+<text x="140" y="215" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial">${geslacht ? "Verhouding meisje (XX) : jongen (XY) = 1 : 1 (50% / 50%)" : `Verhouding ${domLabel}_ : ${recLabel}${recLabel} = 3 : 1 (bij Aa × Aa)`}</text>
 </svg>`;
 }
 
@@ -362,7 +363,7 @@ const steps = [
   {
     title: "Geslachtsbepaling — X en Y chromosomen",
     explanation: "**Eén** van de 23 chromosoomparen bepaalt het **geslacht** (man of vrouw). Dat zijn de **geslachtschromosomen X en Y**.\n\n**Vrouw**: XX (twee X-chromosomen)\n**Man**: XY (één X, één Y)\n\n**Hoe wordt het geslacht bepaald?**\n• De **moeder** geeft altijd een **X** door (zij heeft alleen X's).\n• De **vader** geeft een **X of Y** door (hij heeft beide).\n• Dus: **de vader bepaalt het geslacht** van het kind.\n\n```\n       Vader (XY)\n     X         Y\n   ┌────┬────┐\nX  │ XX │ XY │\nM  │ ♀  │ ♂  │\no  ├────┼────┤\ne  │ XX │ XY │\nd  │ ♀  │ ♂  │\ne  └────┴────┘\nr (XX)\n```\n\nKans: **50% XX (meisje) + 50% XY (jongen)**. Voor elk kind is het opnieuw 50/50.\n\n**Geslachtsgebonden eigenschappen**\nSommige genen zitten op het **X-chromosoom**. Omdat mannen maar **één X** hebben, krijgen ze sneller te maken met X-gebonden ziektes.\n\n**Voorbeelden van X-gebonden ziektes**:\n• **Hemofilie** (bloed stolt niet — komt vooral bij mannen voor).\n• **Kleurenblindheid** (vooral bij mannen).\n• **Spierziekte van Duchenne**.\n\n**Waarom vaker bij mannen?**\nVrouwen hebben twee X-chromosomen. Als één een 'kapotte' versie heeft, kan de andere X dat compenseren (dragen ze het wel maar zijn geen patiënt).\n\nMannen hebben maar één X. Geen back-up. Als die X een ziekte-allel heeft, zijn ze ziek.\n\n**Voorbeeld stamboom hemofilie**:\n• Moeder is draagster (X^h X) — niet ziek zelf.\n• Vader gezond (XY).\n• Zonen: 50% kans op hemofilie (X^h Y).\n• Dochters: 50% kans op draagster (X^h X), 50% normaal (XX).",
-    svg: punnettSvg("XX", "XY", "X", "Y"),
+    svg: punnettSvg("XX", "XY", "X", "Y", true),
     checks: [
       {
         q: "Wie bepaalt het geslacht van het kind?",

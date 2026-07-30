@@ -152,7 +152,7 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
 // (subjectsForQuery), zodat de vakken-grid-zoekbalk én de "Wat wil je
 // leren?"-zoekbalk (LeerpadBot) identiek reageren op vak-namen.
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, niveauOverride = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null }) {
   const player = (userName || "Speler").trim() || "Speler";
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
@@ -172,8 +172,13 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     } catch { /* localStorage geblokt — gebruik default */ }
     return "po"; // ICP-default
   });
-  const effectivePo = isPoUser || (!isVoUser && implicitNiveau === "po");
-  const effectiveVo = isVoUser || (!isPoUser && implicitNiveau === "vo");
+  // Bug 31 jul (Mark): als een vak-tegel (StudentHome) een niveau meegeeft,
+  // is dát leidend — de tegel-telling en deze lijst moeten hetzelfde filteren,
+  // anders belooft de tegel "14 paden" en toont de lijst er 0. Alleen actief
+  // zolang het vak-filter van die tegel actief is.
+  const ovr = filterSubject != null ? niveauOverride : null;
+  const effectivePo = ovr ? ovr === "po" : (isPoUser || (!isVoUser && implicitNiveau === "po"));
+  const effectiveVo = ovr ? ovr === "vo" : (isVoUser || (!isPoUser && implicitNiveau === "vo"));
   const showNiveauToggle = !isPoUser && !isVoUser;
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
@@ -292,9 +297,15 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   const filterArr = effectiveFilter == null
     ? null
     : Array.isArray(effectiveFilter) ? effectiveFilter : [effectiveFilter];
-  const paths = filterArr
+  let paths = filterArr
     ? allPaths.filter((p) => filterArr.includes(p.subject || "wiskunde"))
     : allPaths;
+  // Vangnet (Mark 31 jul: "een vak moet altijd aanklikbaar zijn"): levert het
+  // niveau-filter voor dit vak 0 paden op terwijl het vak ze op een ander
+  // niveau wél heeft, toon dan alle niveaus in plaats van een lege lijst.
+  if (filterArr && paths.length === 0) {
+    paths = ALL_PATHS_MANIFEST.filter((p) => filterArr.includes(p.subject || "wiskunde"));
+  }
 
   // Groepeer per vak
   const grouped = {};

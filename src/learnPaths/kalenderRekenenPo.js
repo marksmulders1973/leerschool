@@ -31,14 +31,14 @@ function kalenderSvg() {
   const days = ["ma", "di", "wo", "do", "vr", "za", "zo"];
   let cells = "";
   let dagen = "";
-  // Voorbeeld kalender van maart: begin op maandag voor demo
+  // Kalender van maart 2026 — klopt met de echte kalender (1 maart 2026 = zondag)
   const datums = [
-    [null, null, null, null, null, 1, 2],
-    [3, 4, 5, 6, 7, 8, 9],
-    [10, 11, 12, 13, 14, 15, 16],
-    [17, 18, 19, 20, 21, 22, 23],
-    [24, 25, 26, 27, 28, 29, 30],
-    [31, null, null, null, null, null, null],
+    [null, null, null, null, null, null, 1],
+    [2, 3, 4, 5, 6, 7, 8],
+    [9, 10, 11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20, 21, 22],
+    [23, 24, 25, 26, 27, 28, 29],
+    [30, 31, null, null, null, null, null],
   ];
   days.forEach((d, i) => {
     const x = startX + i * cellW;
@@ -128,7 +128,7 @@ const steps = [
   {
     title: "Dagen tellen — vooruit en achteruit",
     explanation:
-      "Cito vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **vrijdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Vrijdag 5 maart + 1 week = vrijdag 12 maart.\n• 12 maart + 3 dagen = za 13, zo 14, **ma 15 maart**.\n• Antwoord: **maandag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: '14 dagen geleden was woensdag 20 mei. Welke dag is **vandaag** = wat als jij toen al wist het is 'vandaag 14 dagen later'?'* Beter: 'Wat is 14 dagen NA woensdag 20 mei?'\n• 14 dagen = 2 weken.\n• Datum + 14 = 3 juni. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 3 juni.\n\n**Cito-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
+      "Cito vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Vrijdag 5 maart + 1 week = vrijdag 12 maart.\n• 12 maart + 3 dagen = za 13, zo 14, **ma 15 maart**.\n• Antwoord: **maandag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: '14 dagen geleden was woensdag 20 mei. Welke dag is **vandaag** = wat als jij toen al wist het is 'vandaag 14 dagen later'?'* Beter: 'Wat is 14 dagen NA woensdag 20 mei?'\n• 14 dagen = 2 weken.\n• Datum + 14 = 3 juni. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 3 juni.\n\n**Cito-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
     checks: [
       {
         q: "**7 dagen na maandag** is welke dag?",

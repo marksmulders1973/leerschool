@@ -26,8 +26,10 @@ const chapters = [
 ];
 
 function tafelRijSvg(getallen, tafel) {
-  const w = 320, h = 90;
   const cellW = 30, startX = 30;
+  // Breedte meelaten groeien met het aantal cellen, anders valt het laatste
+  // getal (bv. 100) half buiten de viewBox.
+  const w = Math.max(320, startX + getallen.length * cellW + 12), h = 90;
   let cells = "";
   getallen.forEach((g, i) => {
     const x = startX + i * cellW;

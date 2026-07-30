@@ -56,7 +56,7 @@ const steps = [
 <text x="240" y="92" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">uitleggen</text>
 <text x="150" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">vuistregel: kijk naar het doel</text>
 <text x="150" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">subjectief vs neutraal vs informatief</text>
-<text x="150" y="182" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-style="italic">examenvraag: welke tekstsoort?</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-style="italic">examenvraag: welke tekstsoort?</text>
 </svg>`,
     checks: [
       {
@@ -269,7 +269,7 @@ const steps = [
 <text x="150" y="136" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial">weerlegging tegenargument</text>
 <rect x="35" y="148" width="230" height="22" rx="4" fill="rgba(255,112,67,0.15)" stroke="${COLORS.alt}" stroke-width="1.5"/>
 <text x="150" y="164" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">slot + advies</text>
-<text x="150" y="186" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">★ sterkste argument als laatste</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">★ sterkste argument als laatste</text>
 </svg>`,
     checks: [
       {
@@ -340,7 +340,7 @@ const steps = [
 <text x="150" y="130" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">chronologisch · thematisch · oorzaak-gevolg</text>
 <rect x="35" y="146" width="230" height="22" rx="4" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="1.5"/>
 <text x="150" y="162" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">samenvatting</text>
-<text x="150" y="186" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">toon: Wikipedia-achtig — geen "ik vind"</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">toon: Wikipedia-achtig — geen "ik vind"</text>
 </svg>`,
     checks: [
       {
@@ -463,7 +463,7 @@ const steps = [
 <text x="150" y="118" text-anchor="middle" fill="${COLORS.warm}" font-size="12" font-family="Arial" font-weight="bold">2. alinea (topic + uitwerking)</text>
 <rect x="35" y="134" width="230" height="30" rx="6" fill="rgba(255,112,67,0.12)" stroke="${COLORS.alt}" stroke-width="1.5"/>
 <text x="150" y="154" text-anchor="middle" fill="${COLORS.alt}" font-size="12" font-family="Arial" font-weight="bold">3. zin (concreet, geen fouten)</text>
-<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">truc: lees achterstevoren · plan 10 min op examen</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">truc: lees achterstevoren · plan 10 min op examen</text>
 </svg>`,
     checks: [
       {

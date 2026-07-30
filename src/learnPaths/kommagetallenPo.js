@@ -39,7 +39,7 @@ function plaatswaardenSvg() {
   let svg = `<svg viewBox="0 0 ${w} ${h}">
 <rect x="0" y="0" width="${w}" height="${h}" fill="${COLORS.paper}"/>
 <text x="${w / 2}" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">Plaats van elk cijfer: 123,45</text>`;
-  cells.forEach((c) => {
+  cells.forEach((c, i) => {
     const fill = c.special ? "transparent" : COLORS.paper;
     const txtFill = c.special ? COLORS.komma : COLORS.digit;
     const labelFill = c.special ? COLORS.komma : COLORS.muted;
@@ -47,7 +47,9 @@ function plaatswaardenSvg() {
       svg += `<rect x="${c.x}" y="50" width="${cellW - 4}" height="36" fill="${fill}" stroke="${COLORS.curve}" stroke-width="1.2"/>`;
     }
     svg += `<text x="${c.x + cellW / 2 - 2}" y="76" text-anchor="middle" fill="${txtFill}" font-size="20" font-family="Arial" font-weight="bold">${c.d}</text>`;
-    svg += `<text x="${c.x + cellW / 2 - 2}" y="115" text-anchor="middle" fill="${labelFill}" font-size="10" font-family="Arial">${c.l}</text>`;
+    // Labels om-en-om op twee hoogtes, anders overlappen ze elkaar (cellen zijn smaller dan de woorden)
+    const labelY = i % 2 === 0 ? 104 : 122;
+    svg += `<text x="${c.x + cellW / 2 - 2}" y="${labelY}" text-anchor="middle" fill="${labelFill}" font-size="10" font-family="Arial">${c.l}</text>`;
   });
   svg += `<text x="${w / 2}" y="148" text-anchor="middle" fill="${COLORS.highlight}" font-size="11" font-family="Arial" font-style="italic">vóór de komma = hele getallen · ná de komma = stukjes van 1</text>`;
   svg += `</svg>`;

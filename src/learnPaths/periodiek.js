@@ -41,8 +41,10 @@ const baseAxesPeriodic = (xMin = 0, xMax = 360) => {
   let ticks = "";
   for (let x = xMin; x <= xMax; x += 90) {
     const px = -xMin * sx + (x - xMin) * sx;
+    // Anker het eerste/laatste label naar binnen zodat het binnen de viewBox blijft
+    const anchor = px <= 5 ? "start" : px >= 195 ? "end" : "middle";
     ticks += `<line x1="${px}" y1="${oy - 3}" x2="${px}" y2="${oy + 3}" stroke="${COLORS.axis}"/>`;
-    ticks += `<text x="${px}" y="${oy + 14}" fill="${COLORS.muted}" font-size="9" font-family="Arial" text-anchor="middle">${x}°</text>`;
+    ticks += `<text x="${px}" y="${oy + 14}" fill="${COLORS.muted}" font-size="9" font-family="Arial" text-anchor="${anchor}">${x}°</text>`;
   }
   return `
     <line x1="0" y1="${oy}" x2="200" y2="${oy}" stroke="${COLORS.axis}" stroke-width="1.2"/>
@@ -219,9 +221,9 @@ ${baseAxesPeriodic()}
 ${sinusGraph({ a: 0.6, b: 1, c: 0, color: COLORS.good })}
 ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.warm })}
 <line x1="170" y1="60" x2="170" y2="100" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="175" y="80" fill="${COLORS.warm}" font-size="9" font-family="Arial">a=1</text>
-<line x1="180" y1="76" x2="180" y2="100" stroke="${COLORS.good}" stroke-width="1.5"/>
-<text x="185" y="92" fill="${COLORS.good}" font-size="9" font-family="Arial">a=0.6</text>
+<text x="170" y="56" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial">a=1</text>
+<line x1="185" y1="76" x2="185" y2="100" stroke="${COLORS.good}" stroke-width="1.5"/>
+<text x="185" y="71" text-anchor="middle" fill="${COLORS.good}" font-size="9" font-family="Arial">a=0.6</text>
 <text x="100" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">amplitude = uitslag vanaf evenwicht</text>
 </svg>`,
     checks: [

@@ -62,18 +62,42 @@ function tijdlijnSvg(activeYear = null) {
     { y: 1945, label: "Bevrijding" },
   ];
   const periodFill = (y) => (y < 1939 ? COLORS.pre : y < 1945 ? COLORS.war : COLORS.post);
+  // 1939/1940 en 1944/1945 liggen dicht opeen → labels om-en-om boven/onder
+  // de balk zetten en zijwaarts uit elkaar schuiven, met verbindingslijntje.
+  const declutter = (idxs, minGap) => {
+    const pos = {};
+    let prev = -Infinity;
+    idxs.forEach((i) => {
+      const lx = Math.max(xFor(events[i].y), prev + minGap);
+      pos[i] = lx;
+      prev = lx;
+    });
+    return pos;
+  };
+  const aboveIdx = events.map((_, i) => i).filter((i) => i % 2 === 0);
+  const belowIdx = events.map((_, i) => i).filter((i) => i % 2 === 1);
+  const labelX = { ...declutter(aboveIdx, 54), ...declutter(belowIdx, 46) };
   return `<svg viewBox="0 0 310 110">
 <rect x="20" y="44" width="${xFor(1939) - 20}" height="14" fill="${COLORS.pre}" opacity="0.55"/>
 <rect x="${xFor(1939)}" y="44" width="${xFor(1945) - xFor(1939)}" height="14" fill="${COLORS.war}" opacity="0.65"/>
 <rect x="${xFor(1945)}" y="44" width="${xFor(endYear) - xFor(1945)}" height="14" fill="${COLORS.post}" opacity="0.55"/>
-${events.map((e) => {
+${events.map((e, i) => {
   const x = xFor(e.y);
+  const lx = Math.min(Math.max(labelX[i], 8), 302);
+  const above = i % 2 === 0;
   const active = activeYear === e.y;
   const r = active ? 6 : 4;
+  const col = active ? "#fff" : COLORS.muted;
+  const anchor = lx > 250 ? "end" : lx < 40 ? "start" : "middle";
+  const yearY = above ? 34 : 72;
+  const labelY = above ? 24 : 82;
+  const connFrom = above ? 47 : 55;
+  const connTo = above ? 37 : 65;
   return `
+<line x1="${x}" y1="${connFrom}" x2="${lx}" y2="${connTo}" stroke="${COLORS.muted}" stroke-width="0.5" opacity="0.6"/>
 <circle cx="${x}" cy="51" r="${r}" fill="${active ? "#fff" : periodFill(e.y)}" stroke="${active ? periodFill(e.y) : "#fff"}" stroke-width="2"/>
-<text x="${x}" y="36" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
-<text x="${x}" y="76" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
+<text x="${lx}" y="${yearY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
+<text x="${lx}" y="${labelY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
 }).join("")}
 <text x="20" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">Aanloop</text>
 <text x="${xFor(1942) - 12}" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">Oorlog</text>

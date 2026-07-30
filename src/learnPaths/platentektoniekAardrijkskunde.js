@@ -126,8 +126,8 @@ function plaatgrenzenSvg(activeType = null) {
 
 // Vulkaan-doorsnede met magmakamer, schoorsteen, krater en lava.
 function vulkaanSvg() {
-  return `<svg viewBox="0 0 320 220">
-<rect x="0" y="0" width="320" height="220" fill="${COLORS.paper}"/>
+  return `<svg viewBox="-45 0 410 220">
+<rect x="-45" y="0" width="410" height="220" fill="${COLORS.paper}"/>
 
 <!-- Bergvorm -->
 <polygon points="60,180 110,80 145,90 180,75 220,180" fill="${COLORS.korst}" opacity="0.8"/>

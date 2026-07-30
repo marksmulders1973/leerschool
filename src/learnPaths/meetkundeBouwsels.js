@@ -31,7 +31,7 @@ function kubusSvg(zijde, label) {
   // 2D-projectie: voorkant (vierkant), achterkant verschoven 30 naar rechtsboven.
   const size = 110;
   const offset = 30;
-  const x0 = 70, y0 = 90; // linksonder voorkant
+  const x0 = 70, y0 = 185; // linksonder voorkant (laag genoeg zodat de kubus niet door de titel loopt)
   const x1 = x0 + size, y1 = y0;
   const x2 = x0 + size, y2 = y0 - size;
   const x3 = x0, y3 = y0 - size;

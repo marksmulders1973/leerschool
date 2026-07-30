@@ -66,12 +66,12 @@ const steps = [
 <polygon points="135,150 200,150 167,90" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="146" y1="125" x2="153" y2="115" stroke="${COLORS.point}" stroke-width="2"/>
 <line x1="181" y1="115" x2="188" y2="125" stroke="${COLORS.point}" stroke-width="2"/>
-<text x="167" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">streepjes = even lang</text>
+<text x="167" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">streepjes = even lang</text>
 <line x1="225" y1="105" x2="290" y2="105" stroke="${COLORS.curve2}" stroke-width="2"/>
 <line x1="225" y1="140" x2="290" y2="140" stroke="${COLORS.curve2}" stroke-width="2"/>
 <polygon points="252,101 260,105 252,109" fill="${COLORS.curve2}"/>
 <polygon points="252,136 260,140 252,144" fill="${COLORS.curve2}"/>
-<text x="257" y="178" text-anchor="middle" fill="${COLORS.curve2}" font-size="10" font-family="Arial" font-weight="bold">pijltjes = evenwijdig</text>
+<text x="242" y="178" text-anchor="middle" fill="${COLORS.curve2}" font-size="10" font-family="Arial" font-weight="bold">pijltjes = evenwijdig</text>
 </svg>`,
     checks: [
       {

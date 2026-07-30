@@ -811,8 +811,8 @@ ${gridSvg}
 <text x="243" y="111" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">18</text>
 <rect x="40" y="200" width="10" height="6" fill="${COLORS.curve}" opacity="0.85"/>
 <text x="55" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x²</text>
-<rect x="160" y="200" width="10" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
-<text x="175" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = ½x²  (telkens half zo hoog)</text>
+<rect x="115" y="200" width="10" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="130" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = ½x² (telkens half zo hoog)</text>
 </svg>`,
     checks: [
       {
@@ -1411,15 +1411,13 @@ ${gridSvg}
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
-<path d="M 30 -50 Q 90 240 150 100 Q 210 -40 270 100" stroke="${COLORS.curve}" stroke-width="2" fill="none" opacity="0.3"/>
-<path d="M 60 -10 Q 90 200 150 100" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
-<path d="M 90 200 Q 90 200 90 200" />
+<path d="M 20 74 Q 90 270 160 74" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
 <circle cx="150" cy="100" r="4" fill="${COLORS.point}"/>
 <text x="155" y="92" fill="${COLORS.point}" font-size="10" font-family="Arial">(0, 0)</text>
 <circle cx="30" cy="100" r="4" fill="${COLORS.point}"/>
 <text x="35" y="92" fill="${COLORS.point}" font-size="10" font-family="Arial">(-6, 0)</text>
-<circle cx="90" cy="217" r="5" fill="${COLORS.curveAlt}"/>
-<text x="100" y="222" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">top (-3, -9)</text>
+<circle cx="90" cy="172" r="5" fill="${COLORS.curveAlt}"/>
+<text x="90" y="192" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">top (-3, -9)</text>
 </svg>`,
     checks: [
       {

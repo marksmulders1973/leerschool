@@ -68,12 +68,12 @@ const steps = [
 <polygon points="30,95 20,100 30,105" fill="${COLORS.text}"/>
 <line x1="50" y1="95" x2="50" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="50" y="120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−5</text>
-<line x1="100" y1="95" x2="100" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="100" y="120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−2</text>
+<line x1="110" y1="95" x2="110" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
+<text x="110" y="120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−2</text>
 <line x1="150" y1="95" x2="150" y2="105" stroke="${COLORS.text}" stroke-width="3"/>
 <text x="150" y="125" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">0</text>
-<line x1="200" y1="95" x2="200" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="200" y="120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">2</text>
+<line x1="190" y1="95" x2="190" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
+<text x="190" y="120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">2</text>
 <line x1="250" y1="95" x2="250" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="250" y="120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5</text>
 <text x="60" y="70" fill="${COLORS.curve}" font-size="11" font-family="Arial">← kleiner</text>

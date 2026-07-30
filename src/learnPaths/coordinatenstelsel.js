@@ -158,13 +158,14 @@ const steps = [
         { x: 2, y: 3, label: "A (2, 3)", color: COLORS.point },
         { x: -3, y: 1, label: "B (-3, 1)", color: COLORS.goodSoft },
         { x: 0, y: -2, label: "C (0, -2)", color: COLORS.warm },
-        { x: 4, y: -1, label: "D (4, -1)", color: COLORS.alt },
+        { x: 4, y: -1, label: "D (4, -1)", color: COLORS.alt, labelLinks: true },
       ];
       let pts = "";
       for (const p of points) {
         const px = toX(p.x), py = toY(p.y);
         pts += `<circle cx="${px}" cy="${py}" r="4" fill="${p.color}" stroke="#000" stroke-width="0.5"/>`;
-        pts += `<text x="${px + 6}" y="${py - 4}" fill="${p.color}" font-size="8" font-family="Arial" font-weight="bold">${p.label}</text>`;
+        // labelLinks: label links van het punt (voorkomt afkappen bij de rechterrand)
+        pts += `<text x="${px + (p.labelLinks ? -6 : 6)}" y="${py - 4}" fill="${p.color}" font-size="8" font-family="Arial" font-weight="bold"${p.labelLinks ? ' text-anchor="end"' : ""}>${p.label}</text>`;
       }
       return `<svg viewBox="0 0 200 200">${grid}${axes}${pts}</svg>`;
     })(),
@@ -222,12 +223,12 @@ const steps = [
   },
   {
     title: "Een punt met negatieve coördinaten plotten",
-    explanation: "Negatieve coördinaten geven aan dat je in de **andere richting** moet vanaf de oorsprong:\n\n• **Negatieve x**: naar **links**.\n• **Negatieve y**: naar **omlaag**.\n\n**Voorbeelden**:\n• (-4, -3) → 4 links en 3 omlaag\n• (-2, 5) → 2 links en 5 omhoog\n• (3, -1) → 3 rechts en 1 omlaag\n\n**Punten op de assen**:\n• (5, 0) → 5 rechts, helemaal **op** de x-as (geen omhoog/omlaag).\n• (0, -3) → recht onder de oorsprong, op de y-as.\n• (0, 0) → de oorsprong zelf.\n\n**Vergeet niet**: vier mogelijke combinaties van tekens:\n• **(+ , +)** → rechtsboven\n• **(- , +)** → linksboven\n• **(- , -)** → linksonder\n• **(+ , -)** → rechtsonder\n\nDie vier 'gebieden' heten **kwadranten** — daar gaan we het volgende hoofdstuk over hebben.",
+    explanation: "Negatieve coördinaten geven aan dat je in de **andere richting** moet vanaf de oorsprong:\n\n• **Negatieve x**: naar **links**.\n• **Negatieve y**: naar **omlaag**.\n\n**Voorbeelden**:\n• (-4, -3) → 4 links en 3 omlaag\n• (-2, 4) → 2 links en 4 omhoog\n• (3, -1) → 3 rechts en 1 omlaag\n\n**Punten op de assen**:\n• (5, 0) → 5 rechts, helemaal **op** de x-as (geen omhoog/omlaag).\n• (0, -3) → recht onder de oorsprong, op de y-as.\n• (0, 0) → de oorsprong zelf.\n\n**Vergeet niet**: vier mogelijke combinaties van tekens:\n• **(+ , +)** → rechtsboven\n• **(- , +)** → linksboven\n• **(- , -)** → linksonder\n• **(+ , -)** → rechtsonder\n\nDie vier 'gebieden' heten **kwadranten** — daar gaan we het volgende hoofdstuk over hebben.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       const points = [
         { x: -4, y: -3, label: "(-4,-3)", color: COLORS.alt },
-        { x: -2, y: 5, label: "(-2,5)", color: COLORS.goodSoft },
+        { x: -2, y: 4, label: "(-2,4)", color: COLORS.goodSoft },
         { x: 3, y: -1, label: "(3,-1)", color: COLORS.point },
       ];
       let pts = "";

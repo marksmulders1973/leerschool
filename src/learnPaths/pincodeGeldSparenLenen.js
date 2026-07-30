@@ -590,16 +590,16 @@ const steps = [
     explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PRIJS VAN EEN BROOD</text>
-<rect x="50" y="40" width="40" height="100" fill="${COLORS.geld}" opacity="0.5"/>
+<rect x="50" y="86" width="40" height="54" fill="${COLORS.geld}" opacity="0.5"/>
 <text x="70" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2010</text>
 <text x="70" y="170" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">€1,50</text>
-<rect x="120" y="55" width="40" height="85" fill="${COLORS.warm}" opacity="0.5"/>
+<rect x="120" y="69" width="40" height="71" fill="${COLORS.warm}" opacity="0.5"/>
 <text x="140" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2018</text>
 <text x="140" y="170" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">€2,00</text>
-<rect x="190" y="65" width="40" height="75" fill="${COLORS.oranje}" opacity="0.5"/>
+<rect x="190" y="51" width="40" height="89" fill="${COLORS.oranje}" opacity="0.5"/>
 <text x="210" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2023</text>
 <text x="210" y="170" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">€2,50</text>
-<rect x="260" y="55" width="40" height="85" fill="${COLORS.aanbod}" opacity="0.6"/>
+<rect x="260" y="40" width="40" height="100" fill="${COLORS.aanbod}" opacity="0.6"/>
 <text x="280" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2026</text>
 <text x="280" y="170" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">€2,80</text>
 <text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">+87% in 16 jaar — dat is inflatie</text>

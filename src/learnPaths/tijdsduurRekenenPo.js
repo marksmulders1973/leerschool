@@ -73,8 +73,8 @@ function tijdsverschilSvg() {
 <text x="30" y="105" fill="${COLORS.text}" font-size="14" font-family="Courier New, monospace">12:00</text>
 <text x="80" y="105" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ tot 12:20 = </text>
 <text x="180" y="105" fill="${COLORS.highlight}" font-size="14" font-family="Courier New, monospace" font-weight="bold">20 min</text>
-<text x="240" y="80" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">SOM:</text>
-<text x="240" y="100" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">1u 35min</text>
+<text x="280" y="80" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">SOM:</text>
+<text x="280" y="100" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">1u 35min</text>
 </svg>`;
 }
 

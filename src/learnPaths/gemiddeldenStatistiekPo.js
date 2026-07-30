@@ -27,7 +27,7 @@ const chapters = [
 ];
 
 function getalRijSvg(getallen, gemiddelde, label) {
-  const w = 320, h = 130, padL = 30, padR = 30;
+  const w = 320, h = 130, padL = 30, padR = 42; // padR ruim genoeg voor het "gem N"-label rechts
   const max = Math.max(...getallen);
   const stepX = (w - padL - padR) / getallen.length;
   let dots = "";

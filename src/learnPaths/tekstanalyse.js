@@ -147,7 +147,7 @@ const steps = [
 <line x1="30" y1="128" x2="270" y2="128" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="148" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">onderwerp = waar over</text>
 <text x="35" y="166" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">hoofdgedachte = wat de schrijver stelt</text>
-<text x="150" y="186" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">examen vraagt altijd om een volzin</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">examen vraagt altijd om een volzin</text>
 </svg>`,
     checks: [
       {
@@ -237,7 +237,7 @@ const steps = [
 <text x="240" y="104" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial">deelvraag 3</text>
 <text x="35" y="138" fill="${COLORS.text}" font-size="11" font-family="Arial">→ elke alinea beantwoordt 1 deelvraag</text>
 <text x="35" y="158" fill="${COLORS.text}" font-size="11" font-family="Arial">→ samen vormen ze het hele antwoord</text>
-<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vorm uit topic sentences of tussenkoppen</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vorm uit topic sentences of tussenkoppen</text>
 </svg>`,
     checks: [
       {
@@ -280,7 +280,7 @@ const steps = [
 <text x="150" y="125" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bulk · uitwerking · 60-80%</text>
 <rect x="35" y="142" width="230" height="22" rx="4" fill="rgba(255,213,79,0.18)" stroke="${COLORS.warm}" stroke-width="1.5"/>
 <text x="150" y="158" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">slot (laatste alinea)</text>
-<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ook: probleem-oplossing, chronologisch, voor/nadelen</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ook: probleem-oplossing, chronologisch, voor/nadelen</text>
 </svg>`,
     checks: [
       {

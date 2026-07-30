@@ -51,7 +51,7 @@ function fotosyntheseSvg() {
 <!-- INPUT 1: Zonlicht pijl van zon naar blad -->
 <line x1="270" y1="80" x2="${bladX + 25}" y2="${bladY - 6}" stroke="${COLORS.zon}" stroke-width="2.5"/>
 <polygon points="${bladX + 22},${bladY - 12} ${bladX + 30},${bladY - 6} ${bladX + 18},${bladY - 4}" fill="${COLORS.zon}"/>
-<text x="245" y="105" text-anchor="end" fill="${COLORS.zon}" font-size="11" font-family="Arial" font-weight="bold">zonlicht →</text>
+<text x="248" y="97" text-anchor="end" fill="${COLORS.zon}" font-size="11" font-family="Arial" font-weight="bold">zonlicht →</text>
 
 <!-- INPUT 2: CO2 pijl van rechts naar blad -->
 <line x1="305" y1="${bladY}" x2="${bladX + 28}" y2="${bladY}" stroke="${COLORS.co2}" stroke-width="2.5"/>
@@ -76,7 +76,7 @@ function fotosyntheseSvg() {
 
 <!-- Grond -->
 <rect x="100" y="200" width="160" height="28" fill="#5d4037" opacity="0.5"/>
-<text x="180" y="219" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">grond</text>
+<text x="128" y="219" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">grond</text>
 
 <!-- INPUT 3: Water pijl OMHOOG door wortel/stam naar blad -->
 <line x1="${bladX}" y1="225" x2="${bladX}" y2="${bladY + 12}" stroke="${COLORS.water}" stroke-width="3"/>

@@ -250,8 +250,8 @@ const steps = [
 <line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
 <text x="20" y="90" fill="${COLORS.text}" font-size="11" font-family="Arial">loon</text>
 <text x="240" y="175" fill="${COLORS.text}" font-size="11" font-family="Arial">aantal</text>
-<line x1="60" y1="50" x2="280" y2="155" stroke="${COLORS.aanbod}" stroke-width="2.5"/>
-<line x1="60" y1="155" x2="280" y2="50" stroke="${COLORS.vraag}" stroke-width="2.5"/>
+<line x1="60" y1="50" x2="280" y2="155" stroke="${COLORS.vraag}" stroke-width="2.5"/>
+<line x1="60" y1="155" x2="280" y2="50" stroke="${COLORS.aanbod}" stroke-width="2.5"/>
 <text x="240" y="58" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">aanbod</text>
 <text x="240" y="135" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">vraag</text>
 <circle cx="170" cy="100" r="5" fill="${COLORS.geld}"/>
@@ -355,8 +355,8 @@ const steps = [
 <line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
 <text x="20" y="90" fill="${COLORS.text}" font-size="11" font-family="Arial">loon</text>
 <text x="240" y="175" fill="${COLORS.text}" font-size="11" font-family="Arial">aantal</text>
-<line x1="60" y1="50" x2="280" y2="155" stroke="${COLORS.aanbod}" stroke-width="2.5"/>
-<line x1="60" y1="155" x2="280" y2="50" stroke="${COLORS.vraag}" stroke-width="2.5"/>
+<line x1="60" y1="50" x2="280" y2="155" stroke="${COLORS.vraag}" stroke-width="2.5"/>
+<line x1="60" y1="155" x2="280" y2="50" stroke="${COLORS.aanbod}" stroke-width="2.5"/>
 <text x="240" y="58" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">aanbod</text>
 <text x="240" y="135" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">vraag</text>
 <circle cx="170" cy="100" r="5" fill="${COLORS.geld}"/>
