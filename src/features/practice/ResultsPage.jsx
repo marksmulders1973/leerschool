@@ -284,7 +284,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                     {uitleg}
                   </div>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,200,77,0.85)", lineHeight: 1.45, padding: "8px 10px", borderRadius: 8, background: "rgba(255,200,77,0.06)", border: "1px solid rgba(255,200,77,0.20)", marginBottom: 8 }}>
-                    ⚠ <strong>Dit is geen advies — het is één oefenscore.</strong> Doe minstens 3 simulaties verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan zomaar 20% verschil maken.
+                    ⚠ <strong>Dit is geen advies — het is één oefenscore.</strong> Doe deze toets minstens 3 keer verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan zomaar 20% verschil maken.
                   </div>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
                     Het officiële schooladvies krijg je van je leerkracht; de echte Doorstroomtoets bepaalt of je advies omhoog kan.

@@ -331,7 +331,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(124,77,255,0.85)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Stap 1</div>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#a78bfa" }}>Leer eerst de aanpak</div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-              7 korte uitleg-stappen: pacing, eliminatie, skim&scan — ~15 min
+              7 korte stappen: slim omgaan met tijd, antwoorden wegstrepen, snel lezen — ~15 min
             </div>
           </div>
           <span style={{ fontSize: 20, color: "rgba(124,77,255,0.6)" }}>›</span>
@@ -350,9 +350,9 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           <span style={{ fontSize: 34 }}>⏱️</span>
           <div style={{ flex: 1 }}>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,107,53,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Stap 3</div>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ff8c42" }}>Eindtoets-simulatie</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ff8c42" }}>Hele Doorstroomtoets oefenen</div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-              50 vragen alles gemengd · 60 minuten countdown · advies-indicatie
+              50 vragen door elkaar · 60 minuten met de klok mee · je ziet welk niveau erbij past
             </div>
           </div>
           <span style={{ fontSize: 20, color: "rgba(255,107,53,0.6)" }}>›</span>
@@ -372,9 +372,9 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             <span style={{ fontSize: 34 }}>✨</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,213,79,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Bonus</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ffd54f" }}>Mini-eindtoets uit leerpaden</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ffd54f" }}>Korte oefentoets uit je leerpaden</div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                30 vragen uit Leerkwartier-paden · countdown · score per onderdeel
+                30 vragen uit je leerpaden · met de klok mee · score per onderdeel
               </div>
             </div>
             <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>

@@ -226,8 +226,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return (
       <div style={pageStyle()}>
         <Header
-          title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>{simulatieMode ? "Doorstroomtoets-simulatie" : subjectFilter ? `Doorstroomtoets ${subjectLabel || subjectFilter}` : "Oefen-Doorstroomtoets"} <DoorstroomtoetsLogo size={22} /></span>}
-          subtitle={simulatieMode ? "Volledige test van 50 vragen + niveau-indicatie" : `${config.count} vragen uit Leerkwartier-paden`}
+          title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>{simulatieMode ? "Hele Doorstroomtoets" : subjectFilter ? `Doorstroomtoets ${subjectLabel || subjectFilter}` : "Oefen-Doorstroomtoets"} <DoorstroomtoetsLogo size={22} /></span>}
+          subtitle={simulatieMode ? "Hele test van 50 vragen · je ziet welk niveau erbij past" : `${config.count} vragen uit je leerpaden`}
           onBack={onBack}
           onHome={onHome}
         />
@@ -323,7 +323,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           )}
 
           <button onClick={start} disabled={loading} style={{ ...btnPrimary(), opacity: loading ? 0.6 : 1, cursor: loading ? "wait" : "pointer" }}>
-            {loading ? "⏳ Vragen laden…" : (simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : `🚀 Start — ${config.count} ${config.count === 1 ? "vraag" : "vragen"}${config.count <= 5 ? " · ~2 min" : ""}`)}
+            {loading ? "⏳ Vragen laden…" : (simulatieMode ? "🚀 Start — 50 vragen · 60 min" : `🚀 Start — ${config.count} ${config.count === 1 ? "vraag" : "vragen"}${config.count <= 5 ? " · ~2 min" : ""}`)}
           </button>
         </div>
       </div>
@@ -387,7 +387,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                   {uitleg}
                 </div>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,200,77,0.85)", lineHeight: 1.5, padding: "9px 11px", borderRadius: 8, background: "rgba(255,200,77,0.06)", border: "1px solid rgba(255,200,77,0.20)", marginBottom: 8 }}>
-                  ⚠ <strong>Geen echt advies — dit is één oefen-score.</strong> Doe minstens 3 simulaties verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan 20% verschil maken.
+                  ⚠ <strong>Geen echt advies — dit is één oefen-score.</strong> Doe deze toets minstens 3 keer verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan 20% verschil maken.
                 </div>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
                   Het officiële schooladvies krijg je van je leerkracht; de echte Doorstroomtoets in februari bepaalt of je advies omhoog kan.

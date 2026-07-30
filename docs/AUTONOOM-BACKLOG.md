@@ -44,6 +44,29 @@ Cito + examens versterken. Drie type werk:
 - [ ] **V4** Visuals-sweep opnemen in de vaste review-cadans (elke 6-8 wkn) + bij elk nieuw pad met SVG's het vel renderen vóór commit.
 - [ ] **V5** Overige schetskaartjes (Europa/buurlanden e.d.) omzetten naar echte vormen via het scripts/geo-provincies-naar-svg.mjs-patroon (zoals de NL-kaart, v130).
 
+## 🧭 SPRINT — "Dode knoppen & moeilijke woorden"-jacht (Mark 31 jul: "ga later zoeken met agents op dit soort fouten")
+
+> Aanleiding: Mark vond 3 losse bugs door de app zelf te gebruiken die geen enkele agent had gevangen:
+> (1) vak-tegel → 0 paden (rol/niveau-mismatch, ✅ v131-132), (2) topografie-banner-tegels Nederland/Europa/
+> Wereld niet klikbaar (relatieve ?pad= werkt alleen vanaf root /, ✅ v133), (3) "Eindtoets-simulatie" te
+> moeilijk woord → "Hele Doorstroomtoets oefenen" (✅ v134). Rode draad: klik-doodlopers + te moeilijke/
+> Engelse woorden zijn onzichtbaar in statische reviews én in de visuals-sweep. Vraagt een eigen agent-jacht.
+
+- [ ] **DK1 — Dode-knoppen-agent** *(prio)*: agent die ELKE interactieve knop/link/tegel in de app-flow aanklikt
+  (StudentHome PO+VO, /leren-hub alle vakken, /cito, banners, examens, park-nav) via Playwright en meldt welke
+  géén navigatie/effect geven, op een leeg scherm eindigen, of een deeplink produceren die op het huidige pad
+  niet werkt. Zoek specifiek naar: relatieve `?pad=`/`?...`-links (werken alleen vanaf root), rol/niveau-filters
+  die een niet-lege telling toch leeg tonen, disabled-knoppen zonder uitleg. Bewijs = screenshot vóór/na klik.
+- [ ] **DK2 — Moeilijke-woorden-agent**: agent die alle user-facing copy (src/components, src/features, banners,
+  leerpad-titels/subtitels, proPlan.js, statische HTML) scant op woorden die een ouder/kind van 10 niet kent:
+  Engelse leenwoorden (pacing, countdown, skim&scan, simulatie, indicatie), dev-jargon (module, component,
+  database, uitlegPad, trackId), en vaktermen zonder uitleg. Levert een gerangschikte vervang-lijst met
+  kindvriendelijke alternatieven. NB: "simulatie/indicatie/pacing/countdown/skim&scan" 31 jul al gefixt in
+  CitoPage/CitoLeerpadToets/PlayQuiz/ResultsPage/proPlan — gebruik als voorbeeld-patroon, zoek de rest.
+- [ ] **DK3 — Deeplink-robuustheid**: overweeg `?pad=`/`?id=`/`?go=` van élk pad te laten werken (nu alleen root /);
+  nu is de banner-fix een pleister (`/?pad=`). Router-sync bij niet-root pathname mag de deeplink-page niet
+  overschrijven. Raakt kern-routing (App.jsx ~230-282) → zorgvuldig testen.
+
 ## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
 
 > Uit 2-agent-audit (concurrentie-onderzoek + frisse-ogen product-audit, 8 jul).

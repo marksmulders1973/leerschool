@@ -67,7 +67,7 @@ export const PRO_MODEL = {
   uitleg:
     "De basis (oefenen + uitleg op 3 niveaus) blijft gratis. " +
     "Vanaf 2027 zijn er drie extra's: Familie (één klein bedrag per gezín — " +
-    "voortgang volgen, weekrapport, examen-simulatie), Pro voor leerkrachten " +
+    "voortgang volgen, weekrapport, hele toets oefenen met de klok), Pro voor leerkrachten " +
     "(eigen logo op toetsen + klasrapportage) en los kwartier-tegoed voor " +
     "extra AI-bijles — dat laatste zonder abonnement: je betaalt alleen " +
     "voor wat je écht gebruikt.",
@@ -114,7 +114,7 @@ export const PRO_FEATURES = {
   "exam-mode": {
     id: "exam-mode",
     icon: "⏱️",
-    label: "Examen-simulatie",
+    label: "Hele toets oefenen met de klok",
     laag: "familie",
     blurb:
       "Oefen een examen onder echte omstandigheden — met tijdklok en een " +
