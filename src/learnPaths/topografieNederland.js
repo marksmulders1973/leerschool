@@ -2,6 +2,8 @@
 // 10 stappen in 5 hoofdstukken (A t/m E).
 // Doelgroep: groep 6-8 basisschool. Cito-relevant.
 
+import { PROV_PATHS, PROV_LABELS, KAART_PUNTEN } from "./nederlandKaartPaths.js";
+
 const COLORS = {
   axis: "#e0e6f0",
   good: "#00c853",
@@ -26,149 +28,103 @@ const chapters = [
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 8, to: 9 },
 ];
 
-// SVG-kaartje: 12 provincies in vereenvoudigde vorm + hoofdsteden als puntjes
-function nederlandKaartSvg(highlight = null) {
+// SVG-kaart: 12 provincies met échte (vereenvoudigde) omtrekken uit open
+// CBS/Kadaster-data (zie nederlandKaartPaths.js). Labels met donkere halo.
+const LABEL_KORT = { "Noord-Holland": "N-Holland", "Zuid-Holland": "Z-Holland", "Noord-Brabant": "N-Brabant" };
+// Handmatige nudges [dx, dy] waar het zwaartepunt net verkeerd valt voor tekst.
+const LABEL_NUDGE = {
+  Friesland: [-2, 4], "Noord-Holland": [-6, 2], Flevoland: [0, 3],
+  Utrecht: [0, 2], Zeeland: [-4, -2], Limburg: [3, 0], Groningen: [0, 3],
+};
+const HALO = `paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6" stroke-linejoin="round"`;
+
+function provLaag(highlight = null) {
   const isHL = (p) => highlight === p;
-  const opa = (p) => highlight && !isHL(p) ? 0.45 : 1;
+  const opa = (p) => (highlight && !isHL(p) ? 0.45 : 1);
+  return Object.keys(PROV_PATHS)
+    .map((p) => {
+      const [cx, cy] = PROV_LABELS[p];
+      const [dx, dy] = LABEL_NUDGE[p] || [0, 0];
+      const fs = p === "Flevoland" ? 6.5 : p === "Utrecht" || p === "Overijssel" ? 7.5 : 8;
+      return `<path d="${PROV_PATHS[p]}" fill="${isHL(p) ? COLORS.highlight : COLORS.prov}" opacity="${opa(p)}" stroke="#0d1b2e" stroke-width="0.8" stroke-linejoin="round"/>
+<text x="${cx + dx}" y="${cy + dy}" text-anchor="middle" fill="#fff" ${HALO} font-size="${fs}" font-family="Arial" font-weight="${isHL(p) ? "bold" : "normal"}">${LABEL_KORT[p] || p}</text>`;
+    })
+    .join("\n");
+}
+
+function nederlandKaartSvg(highlight = null) {
   return `<svg viewBox="0 0 280 320">
 <rect x="0" y="0" width="280" height="320" fill="${COLORS.paper}"/>
 <text x="140" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">12 provincies van Nederland</text>
-
-<!-- Wadeneilanden (kleine streep boven Friesland) -->
-<rect x="80" y="34" width="60" height="4" fill="${COLORS.prov}" opacity="0.4"/>
-
-<!-- Friesland -->
-<polygon points="100,40 145,40 150,75 110,82 90,68" fill="${COLORS.prov}" opacity="${opa('Friesland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="120" y="60" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Friesland')?'bold':'normal'}">Friesland</text>
-
-<!-- Groningen -->
-<polygon points="148,40 195,40 200,70 152,75" fill="${COLORS.prov}" opacity="${opa('Groningen')}" stroke="#fff" stroke-width="0.5"/>
-<text x="170" y="58" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Groningen')?'bold':'normal'}">Groningen</text>
-
-<!-- Drenthe -->
-<polygon points="155,78 200,73 195,115 150,110" fill="${COLORS.prov}" opacity="${opa('Drenthe')}" stroke="#fff" stroke-width="0.5"/>
-<text x="175" y="95" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Drenthe')?'bold':'normal'}">Drenthe</text>
-
-<!-- Overijssel -->
-<polygon points="120,90 152,85 195,118 145,135 115,120" fill="${COLORS.prov}" opacity="${opa('Overijssel')}" stroke="#fff" stroke-width="0.5"/>
-<text x="150" y="113" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial" font-weight="${isHL('Overijssel')?'bold':'normal'}">Overijssel</text>
-
-<!-- Flevoland -->
-<polygon points="105,90 120,85 122,125 95,128" fill="${COLORS.prov}" opacity="${opa('Flevoland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="110" y="110" text-anchor="middle" fill="#fff" font-size="7" font-family="Arial" font-weight="${isHL('Flevoland')?'bold':'normal'}">Flevoland</text>
-
-<!-- Gelderland -->
-<polygon points="118,128 195,125 195,180 130,180 115,160" fill="${COLORS.prov}" opacity="${opa('Gelderland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="155" y="158" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Gelderland')?'bold':'normal'}">Gelderland</text>
-
-<!-- Utrecht -->
-<polygon points="92,135 115,128 120,170 90,170" fill="${COLORS.prov}" opacity="${opa('Utrecht')}" stroke="#fff" stroke-width="0.5"/>
-<text x="105" y="155" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial" font-weight="${isHL('Utrecht')?'bold':'normal'}">Utrecht</text>
-
-<!-- Noord-Holland -->
-<polygon points="60,55 100,55 105,140 65,135 50,90" fill="${COLORS.prov}" opacity="${opa('Noord-Holland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="80" y="100" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial" font-weight="${isHL('Noord-Holland')?'bold':'normal'}">N-Holland</text>
-
-<!-- Zuid-Holland -->
-<polygon points="55,140 90,140 90,180 50,185" fill="${COLORS.prov}" opacity="${opa('Zuid-Holland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="73" y="165" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial" font-weight="${isHL('Zuid-Holland')?'bold':'normal'}">Z-Holland</text>
-
-<!-- Zeeland -->
-<polygon points="40,195 90,190 90,225 35,225" fill="${COLORS.prov}" opacity="${opa('Zeeland')}" stroke="#fff" stroke-width="0.5"/>
-<text x="65" y="212" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Zeeland')?'bold':'normal'}">Zeeland</text>
-
-<!-- Noord-Brabant -->
-<polygon points="92,185 195,185 200,235 100,235" fill="${COLORS.prov}" opacity="${opa('Noord-Brabant')}" stroke="#fff" stroke-width="0.5"/>
-<text x="145" y="215" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Noord-Brabant')?'bold':'normal'}">N-Brabant</text>
-
-<!-- Limburg -->
-<polygon points="160,185 200,180 215,260 170,265 165,230" fill="${COLORS.prov}" opacity="${opa('Limburg')}" stroke="#fff" stroke-width="0.5"/>
-<text x="185" y="225" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial" font-weight="${isHL('Limburg')?'bold':'normal'}">Limburg</text>
-
-<!-- Water (Noordzee + IJsselmeer) -->
-<text x="30" y="100" fill="${COLORS.water}" font-size="9" font-family="Arial" font-style="italic">Noordzee</text>
-<text x="115" y="78" fill="${COLORS.water}" font-size="7" font-family="Arial" font-style="italic">IJsselmeer</text>
-
-<text x="140" y="305" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Schematisch — niet exact op schaal</text>
+${provLaag(highlight)}
+<text x="36" y="150" fill="${COLORS.water}" font-size="9" font-family="Arial" font-style="italic">Noordzee</text>
+<text x="144" y="96" text-anchor="middle" fill="${COLORS.water}" font-size="6.5" font-family="Arial" font-style="italic" ${HALO}>IJsselmeer</text>
+<text x="150" y="42" text-anchor="middle" fill="${COLORS.water}" font-size="6.5" font-family="Arial" font-style="italic">Waddenzee</text>
+<text x="140" y="305" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">Vereenvoudigde kaart · data CBS/Kadaster (CC-BY)</text>
 </svg>`;
 }
 
+function silhouet(opacity = 0.2) {
+  return Object.values(PROV_PATHS)
+    .map((d) => `<path d="${d}" fill="rgba(93,156,236,${opacity})"/>`)
+    .join("");
+}
+
 function steden5Svg() {
+  const stad = (nr, punt, r, labelX, labelY, anchor = "start") => {
+    const [x, y] = KAART_PUNTEN[punt];
+    return `<circle cx="${x}" cy="${y}" r="${r}" fill="${COLORS.city}" stroke="#fff" stroke-width="1"/>
+<text x="${labelX}" y="${labelY}" text-anchor="${anchor}" fill="#fff" ${HALO} font-size="8.5" font-family="Arial" font-weight="bold">${nr}</text>`;
+  };
   return `<svg viewBox="0 0 280 320">
 <rect x="0" y="0" width="280" height="320" fill="${COLORS.paper}"/>
 <text x="140" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">5 grootste steden van Nederland</text>
-
-<!-- Vereenvoudigd kaartje van NL -->
-<polygon points="60,55 195,55 215,260 35,225" fill="rgba(93,156,236,0.20)" stroke="${COLORS.muted}" stroke-width="1"/>
-
-<!-- Amsterdam (1) -->
-<circle cx="80" cy="115" r="6" fill="${COLORS.city}"/>
-<text x="92" y="115" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">1. Amsterdam</text>
-<text x="92" y="128" fill="${COLORS.muted}" font-size="9" font-family="Arial">~880.000 inwoners</text>
-
-<!-- Rotterdam (2) -->
-<circle cx="73" cy="160" r="6" fill="${COLORS.city}"/>
-<text x="92" y="158" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">2. Rotterdam</text>
-<text x="92" y="171" fill="${COLORS.muted}" font-size="9" font-family="Arial">~660.000 — grote haven</text>
-
-<!-- Den Haag (3) -->
-<circle cx="63" cy="148" r="5" fill="${COLORS.city}"/>
-<text x="92" y="200" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">3. Den Haag</text>
-<text x="92" y="213" fill="${COLORS.muted}" font-size="9" font-family="Arial">~560.000 — regering</text>
-
-<!-- Utrecht (4) -->
-<circle cx="105" cy="148" r="5" fill="${COLORS.city}"/>
-<text x="92" y="245" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">4. Utrecht</text>
-<text x="92" y="258" fill="${COLORS.muted}" font-size="9" font-family="Arial">~365.000 — centraal</text>
-
-<!-- Eindhoven (5) -->
-<circle cx="155" cy="220" r="5" fill="${COLORS.city}"/>
-<text x="92" y="290" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">5. Eindhoven</text>
-<text x="92" y="303" fill="${COLORS.muted}" font-size="9" font-family="Arial">~240.000 — Brabant</text>
+${silhouet(0.22)}
+${stad("1. Amsterdam", "Amsterdam", 5.5, 108, 132, "end")}
+${stad("2. Rotterdam", "Rotterdam", 5.5, 84, 192, "end")}
+${stad("3. Den Haag", "DenHaag", 4.5, 74, 161, "end")}
+${stad("4. Utrecht", "Utrecht", 4.5, 139, 161)}
+${stad("5. Eindhoven", "Eindhoven", 4.5, 159, 229)}
+<text x="16" y="252" fill="#fff" font-size="9" font-family="Arial" font-weight="bold">Top 5 (inwoners):</text>
+<text x="16" y="266" fill="${COLORS.muted}" font-size="8" font-family="Arial">1. Amsterdam ~880.000 · 2. Rotterdam ~660.000 (haven)</text>
+<text x="16" y="278" fill="${COLORS.muted}" font-size="8" font-family="Arial">3. Den Haag ~560.000 (regering) · 4. Utrecht ~365.000</text>
+<text x="16" y="290" fill="${COLORS.muted}" font-size="8" font-family="Arial">5. Eindhoven ~240.000 (techniek)</text>
 </svg>`;
 }
 
 function rivierenSvg() {
+  // Rivierlopen door échte ankerpunten (Lobith, Arnhem, Den Bosch, Venlo …).
+  const P = KAART_PUNTEN;
   return `<svg viewBox="0 0 280 320">
 <rect x="0" y="0" width="280" height="320" fill="${COLORS.paper}"/>
 <text x="140" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Belangrijke wateren in Nederland</text>
+${silhouet(0.13)}
+<text x="30" y="150" fill="${COLORS.water}" font-size="10" font-family="Arial" font-weight="bold" font-style="italic">Noordzee</text>
+<text x="150" y="42" text-anchor="middle" fill="${COLORS.water}" font-size="7.5" font-family="Arial" font-style="italic">Waddenzee</text>
 
-<!-- NL omtrek -->
-<polygon points="60,55 195,55 215,260 35,225" fill="rgba(93,156,236,0.10)" stroke="${COLORS.muted}" stroke-width="1"/>
+<!-- IJsselmeer (tussen N-Holland, Friesland en Flevoland) -->
+<path d="M136 76 L162 75 L169 87 L159 101 L153 114 L146 115 L139 99 L135 84 Z" fill="${COLORS.water}" opacity="0.5"/>
+<text x="150" y="94" text-anchor="middle" fill="#fff" ${HALO} font-size="6.5" font-family="Arial">IJsselmeer</text>
 
-<!-- Noordzee -->
-<rect x="0" y="50" width="40" height="180" fill="${COLORS.water}" opacity="0.3"/>
-<text x="20" y="140" text-anchor="middle" fill="${COLORS.water}" font-size="10" font-family="Arial" font-weight="bold">Noord-</text>
-<text x="20" y="152" text-anchor="middle" fill="${COLORS.water}" font-size="10" font-family="Arial" font-weight="bold">zee</text>
+<!-- Rijn: binnenkomst bij Lobith, splitst in Waal (hoofdstroom) en IJssel -->
+<path d="M${P.Lobith[0] + 8} ${P.Lobith[1] + 2} L${P.Lobith[0]} ${P.Lobith[1]}" stroke="${COLORS.water}" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M${P.Lobith[0]} ${P.Lobith[1]} C ${P.Nijmegen[0]} ${P.Nijmegen[1] + 3}, 150 194, ${P.DenBosch[0]} ${P.DenBosch[1] - 6} C 118 192, 100 187, ${P.MaasMond[0]} ${P.MaasMond[1]}" stroke="${COLORS.water}" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M${P.IJsselKop[0]} ${P.IJsselKop[1]} C 184 156, 181 138, ${P.IJsselMond[0]} ${P.IJsselMond[1]}" stroke="${COLORS.water}" stroke-width="2" fill="none" stroke-linecap="round"/>
 
-<!-- IJsselmeer -->
-<polygon points="105,75 130,80 130,128 105,130" fill="${COLORS.water}" opacity="0.55"/>
-<text x="118" y="105" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">IJssel-</text>
-<text x="118" y="115" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">meer</text>
+<!-- Maas: vanuit Zuid-Limburg via Venlo en Den Bosch naar zee -->
+<path d="M${P.MaasZuid[0]} ${P.MaasZuid[1]} C 176 268, ${P.Venlo[0]} ${P.Venlo[1] + 10}, ${P.Venlo[0] - 2} ${P.Venlo[1]} C 188 214, 165 206, ${P.DenBosch[0]} ${P.DenBosch[1]} C 120 199, 102 192, ${P.MaasMond[0]} ${P.MaasMond[1] + 3}" stroke="${COLORS.water}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
 
-<!-- Waddenzee -->
-<polygon points="80,40 195,40 195,50 80,52" fill="${COLORS.water}" opacity="0.55"/>
-<text x="135" y="48" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">Waddenzee</text>
+<!-- Westerschelde (zeearm in Zeeland) -->
+<path d="M${P.WesterscheldeWest[0]} ${P.WesterscheldeWest[1]} C 48 227, 64 229, ${P.WesterscheldeOost[0]} ${P.WesterscheldeOost[1]}" stroke="${COLORS.water}" stroke-width="3.5" fill="none" opacity="0.75" stroke-linecap="round"/>
 
-<!-- Rijn (komt uit Duitsland, splitst) -->
-<path d="M 215 180 Q 180 175 140 165 Q 100 160 70 165" stroke="${COLORS.water}" stroke-width="3" fill="none"/>
-<text x="160" y="155" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">Rijn</text>
+<text x="${P.Lobith[0] - 3}" y="${P.Lobith[1] - 6}" fill="${COLORS.warm}" ${HALO} font-size="8" font-family="Arial" font-weight="bold">Rijn</text>
+<text x="146" y="204" fill="${COLORS.warm}" ${HALO} font-size="8" font-family="Arial" font-weight="bold">Waal</text>
+<text x="${P.IJsselMond[0] + 8}" y="${P.IJsselMond[1] + 22}" fill="${COLORS.warm}" ${HALO} font-size="8" font-family="Arial" font-weight="bold">IJssel</text>
+<text x="${P.Venlo[0] + 4}" y="${P.Venlo[1] - 4}" fill="${COLORS.warm}" ${HALO} font-size="8" font-family="Arial" font-weight="bold">Maas</text>
+<text x="44" y="240" fill="${COLORS.warm}" ${HALO} font-size="8" font-family="Arial" font-weight="bold">Schelde</text>
 
-<!-- Maas -->
-<path d="M 195 235 Q 170 215 140 195 Q 100 180 65 175" stroke="${COLORS.water}" stroke-width="2.5" fill="none"/>
-<text x="180" y="222" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">Maas</text>
-
-<!-- IJssel -->
-<path d="M 130 130 Q 140 145 142 165" stroke="${COLORS.water}" stroke-width="2" fill="none"/>
-<text x="145" y="142" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">IJssel</text>
-
-<!-- Schelde -->
-<path d="M 38 215 Q 60 220 90 220" stroke="${COLORS.water}" stroke-width="2" fill="none"/>
-<text x="60" y="232" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">Schelde</text>
-
-<!-- Onderaan: legenda -->
-<text x="140" y="285" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">3 belangrijkste rivieren: Rijn · Maas · Waal</text>
-<text x="140" y="300" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">(Waal is een aftakking van de Rijn)</text>
+<text x="140" y="303" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">3 belangrijkste rivieren: Rijn · Maas · Waal</text>
+<text x="140" y="314" text-anchor="middle" fill="${COLORS.muted}" font-size="7.5" font-family="Arial">(Waal is de grootste aftakking van de Rijn)</text>
 </svg>`;
 }
 
