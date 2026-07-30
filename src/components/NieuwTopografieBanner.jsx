@@ -3,9 +3,14 @@ import { SoundEngine } from "../utils.js";
 
 // Aankondigings-banner: drie nieuwe interactieve topografie-leerpaden.
 // Mark 2026-06-07: "maak Update klikbaar zodat iedereen de verbetering kan
-// vinden." Elke knop is een ?pad=<id>-deeplink — werkt in-app (reload opent het
+// vinden." Elke knop is een /?pad=<id>-deeplink — werkt in-app (reload opent het
 // pad via getInitialLeerpadId) én is deelbaar als losse link. Dismissible via
 // localStorage zodat de banner na wegklikken niet terugkomt.
+// BUG-FIX 31 jul (Mark: "kan niet drukken op Nederland/Europa"): de link was
+// relatief (`?pad=`), dus op /leerling werd het /leerling?pad=x — en de
+// ?pad-deeplink-afhandeling werkt alléén vanaf de root / (op /leerling
+// overschrijft de router-sync de pagina meteen terug naar student-home). Nu
+// absoluut `/?pad=` zodat het pad vanaf élk scherm opent.
 
 const DISMISS_KEY = "lk_nieuw_topografie_v1_dismissed";
 
@@ -73,7 +78,7 @@ export default function NieuwTopografieBanner() {
         {PADEN.map((p) => (
           <a
             key={p.id}
-            href={`?pad=${p.id}`}
+            href={`/?pad=${p.id}`}
             onClick={() => SoundEngine.play("click")}
             style={{
               display: "flex",
