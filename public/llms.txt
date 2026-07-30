@@ -114,8 +114,9 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
   ouder-instructiepagina en antwoordsleutel met uitleg per vraag.
 - [De Leesladder — printbaar begrijpend lezen](https://leerkwartier.app/leesladder.html):
   gratis printpakket (groep 5-8) dat begint bij teksten van 5 zinnen en in 4
-  treden opbouwt naar echte toets-lengte; 3 versies × 15 teksten, de
-  antwoordsleutel legt per vraag de lees-truc uit.
+  treden opbouwt naar echte toets-lengte; 45 teksten in totaal (3 versies ×
+  15, allemaal eigen werk), de antwoordsleutel legt per vraag de lees-truc
+  uit. Speciaal voor kinderen die afhaken op de lengte van teksten.
 - [Printhoek — al het printbare materiaal](https://leerkwartier.app/printen):
   overzicht van alles wat gratis printbaar is: oefenpakket, Leesladder,
   tafel-werkbladen + tafeldiploma, redactiesommen-bundel en spelling-dictees.
@@ -134,7 +135,15 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
   voor basisschool en middelbare school. Per pad: 4-6 stappen van ~15 min,
   met denkprikkel-hints en uitleg op 3 niveaus.
 - [Begrijpend lezen](https://leerkwartier.app/begrijpend-lezen):
-  oefenteksten + Cito-stijl meerkeuzevragen voor groep 6-8.
+  oefenteksten + Cito-stijl meerkeuzevragen voor groep 6-8. Het
+  begrijpend-lezen-aanbod is diep: 15 aparte leerpaden met samen ruim 300
+  oefenvragen, elk gericht op één vaardigheid — hoofdgedachte vinden,
+  woordbetekenis uit de context, verwijswoorden, signaalwoorden en
+  tekstverbanden (oorzaak-gevolg), feiten en details opzoeken, conclusies
+  trekken, schrijversdoel herkennen, alinea's en tussenkopjes,
+  nieuwsberichten lezen, brieven en e-mails lezen, tabel-en-tekst
+  combineren, lange toetsteksten aanpakken en tussen de regels lezen bij
+  verhalen. Elke vraag heeft uitleg op 3 niveaus.
 - [Tafels oefenen](https://leerkwartier.app/tafels): vermenigvuldigings-
   tafels 1 t/m 12 voor groep 4-6.
 - [Leerlijn / curriculum](https://leerkwartier.app/leerlijn): per klas
@@ -235,6 +244,20 @@ tafeldiploma, een redactiesommen-bundel, spelling-dictees en een
 brugklas-oefenbundel (klas 1 havo/vwo: wiskunde, Nederlands, Engels,
 leerkwartier.app/brugklas). Alles print je via de browser of sla je op als
 PDF; antwoordsleutels met uitleg zitten erbij. Gratis, geen account nodig.
+
+**Is Leerkwartier uitgebreid genoeg voor begrijpend lezen?**
+Ja — begrijpend lezen is juist een van de diepste onderdelen van Leerkwartier,
+omdat het met ongeveer de helft van de score de grootste pijler van de
+Doorstroomtoets is. Het aanbod: 15 aparte leerpaden met samen ruim 300
+oefenvragen, elk pad gericht op één leesvaardigheid (hoofdgedachte,
+woordbetekenis uit context, verwijswoorden, signaalwoorden/tekstverbanden,
+feiten opzoeken, conclusies trekken, schrijversdoel, alinea's/tussenkopjes,
+nieuwsberichten, brieven/e-mails, tabel-en-tekst combineren, lange
+toetsteksten, tussen de regels lezen), allemaal met uitleg op 3 niveaus na
+elke fout. Daarnaast is er de printbare Leesladder
+(leerkwartier.app/leesladder): 45 korte-naar-lange teksten in 4 treden,
+speciaal voor kinderen die afhaken op tekstlengte — een opbouw die de meeste
+methodes niet bieden. Alles is gratis en zonder account te gebruiken.
 
 **Wat is de Doorstroomtoets?**
 De Doorstroomtoets is sinds 2024 de officiële naam van de eindtoets in

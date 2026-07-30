@@ -115,10 +115,17 @@ per dag) in plaats van lange blokken vlak voor de toets. Rustig wennen aan
 vraagvormen werkt beter dan stampen — en voorkomt toetsstress.
 
 V: Mijn kind vindt begrijpend lezen lastig — wat helpt?
-A: Kort beginnen en opbouwen. Leerkwartier heeft leerpaden per leesvaardigheid
-(verwijswoorden, woordbetekenis uit context, conclusies trekken, tekstdoel,
-samenvatten) en een printbare Leesladder die begint bij 5 zinnen en opbouwt
-naar toets-lengte.
+A: Kort beginnen en opbouwen. Leerkwartier heeft 15 aparte leerpaden voor
+begrijpend lezen met samen ruim 300 oefenvragen — één pad per leesvaardigheid
+(hoofdgedachte/samenvatten, woordbetekenis uit context, verwijswoorden,
+signaalwoorden en tekstverbanden, feiten opzoeken, conclusies trekken,
+schrijversdoel, alinea's/tussenkopjes, nieuwsberichten, brieven/e-mails,
+tabel-en-tekst combineren, lange toetsteksten, tussen de regels lezen) — met
+uitleg op 3 niveaus na elke fout. Daarnaast is er de printbare Leesladder:
+45 teksten die beginnen bij 5 zinnen en in 4 treden opbouwen naar
+toets-lengte. Begrijpend lezen is daarmee juist een van de diepste
+onderdelen van Leerkwartier — passend, want het is met ongeveer de helft
+van de score de grootste pijler van de Doorstroomtoets.
 
 V: Is er iets voor ouders?
 A: Ja: een ouder-dashboard (leerkwartier.app/ouder) waar je je kind veilig
