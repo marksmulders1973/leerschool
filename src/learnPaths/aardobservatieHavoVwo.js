@@ -230,7 +230,7 @@ const steps = [
         q: "Wat is een **mitigatie-maatregel** bij overstroming-risico?",
         options: ["Dijken bouwen","Burgers waarschuwen","Schade vergoeden","Mensen opvangen"],
         answer: 0,
-        wrongHints: [null, "Dat is voorbereiding.", "Dat is herstel.", "Dat is respons."],
+        wrongHints: [null, "Dat is voorbereiding — verklein je hiermee het risico zelf?", "Gebeurt dit vóór de overstroming, of los je iets op achteraf?", "Doe je dit om de ramp te voorkómen, of tijdens/na de ramp?"],
         uitlegPad: {
           stappen: [{ titel: "Mitigatie = voorkomen", tekst: "**Mitigatie** = maatregelen die het risico zelf verkleinen. **Dijken bouwen, water-vlaktes vrij houden, hoge gebouw-eisen**. Tegenover: voorbereiding (waarschuwen, plannen), respons (evacueren), herstel (heropbouwen)." }],
           niveaus: { basis: "Dijken.", simpeler: "Mitigatie = preventie", nogSimpeler: "Dijken" },

@@ -175,7 +175,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         {/* Gratis-basis */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(105,240,174,0.2)", background: "rgba(105,240,174,0.04)", padding: "14px 16px", marginBottom: 16 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 10 }}>
-            🆓 Altijd gratis — de basis
+            🆓 De basis — gratis
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {PRO_GRATIS_BASIS.map((f, i) => (

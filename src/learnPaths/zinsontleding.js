@@ -829,9 +829,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "'Een spannend boek' is het lv. Welke zin heeft GEEN lv?",
-          "'Pasta' is het lv. Welke zin heeft GEEN lv?",
-          "'Een cadeau' is het lv. Welke zin heeft GEEN lv?",
+          "Vraag: wat + las + de jongen? Krijg je een antwoord? Dan is er wél een lijdend voorwerp.",
+          "Vraag: wat + eten + wij? Krijg je een antwoord? Dan heeft die zin wél een lijdend voorwerp.",
+          "Vraag: wat + geeft + Tom? Krijg je een antwoord? Dan is er wél een lijdend voorwerp.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Schijnen = geen lv", tekst: "De zon schijnt op het water — wat schijnt? niets. Op het water = bep. plaats." }],

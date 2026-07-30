@@ -32,7 +32,7 @@ const steps = [
         q: "Welke eis hoort NIET bij een goed algoritme?",
         options: ["Het mag eindeloos doorgaan", "Elke stap is eenduidig", "Het is eindig", "Elke stap is uitvoerbaar"],
         answer: 0,
-        wrongHints: [null, "Dit is juist wél een eis — geen verkeerde.", "Dit is wél een eis.", "Dit is wél een eis."],
+        wrongHints: [null, "Als een stap voor twee uitleg vatbaar is, kan de computer 'm dan goed uitvoeren?", "Wat gebeurt er als een algoritme nooit stopt — is dat handig?", "Als een stap niet uit te voeren is, heb je dan iets aan het algoritme?"],
         uitlegPad: {
           stappen: [{ titel: "Een algoritme moet stoppen", tekst: "Een goed algoritme is **eindig** (het stopt een keer), **eenduidig**, **uitvoerbaar** en **correct**. 'Eindeloos doorgaan' hoort er dus juist NIET bij — een algoritme dat nooit stopt, is fout (een 'oneindige lus')." }],
           niveaus: { basis: "Eindeloos = fout.", simpeler: "Mag niet eindeloos", nogSimpeler: "A." },

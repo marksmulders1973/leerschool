@@ -65,7 +65,7 @@ export const PRO_MODEL = {
   later: "Vanaf 2027 een betaalde extra",
   kort: "Nu gratis · vanaf 2027 betaald",
   uitleg:
-    "De basis (oefenen + uitleg op 3 niveaus) blijft altijd gratis. " +
+    "De basis (oefenen + uitleg op 3 niveaus) blijft gratis. " +
     "Vanaf 2027 zijn er drie extra's: Familie (één klein bedrag per gezín — " +
     "voortgang volgen, weekrapport, examen-simulatie), Pro voor leerkrachten " +
     "(eigen logo op toetsen + klasrapportage) en los kwartier-tegoed voor " +

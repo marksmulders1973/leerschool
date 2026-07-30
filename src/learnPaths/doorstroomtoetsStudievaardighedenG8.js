@@ -1575,7 +1575,7 @@ const steps = [
           ],
           woorden: [{ woord: "Ctrl+F", uitleg: "Sneltoets voor 'Find' (zoek)." }],
           theorie: "Cito-tip: bij digitaal zoeken in lange tekst, gebruik Ctrl+F om snel een woord te vinden in plaats van scrollen.",
-          voorbeelden: [{ type: "stap", tekst: "In digitale Cito-toets met lange tekst: Ctrl+F → typ 'kerncentrale' → ga direct naar die plek." }],
+          voorbeelden: [{ type: "stap", tekst: "In een digitale Doorstroomtoets met lange tekst: Ctrl+F → typ 'kerncentrale' → ga direct naar die plek." }],
           basiskennis: [{ onderwerp: "Andere sneltoetsen", uitleg: "Ctrl+C = kopiëren. Ctrl+V = plakken. Ctrl+S = opslaan. Ctrl+P = print." }],
           niveaus: {
             basis: "Zoekfunctie.",

@@ -273,7 +273,7 @@ export default async function handler(req, res) {
     // van het persoonlijke oefenplan, zwakste onderwerpen eerst.
     if (weekdag === "maandag") {
       try {
-        const { stuurKwartiercheckWeekmails } = await import("./send-kwartiercheck-week.js");
+        const { stuurKwartiercheckWeekmails } = await import("./_lib/send-kwartiercheck-week.js");
         kwartiercheckWeek = await stuurKwartiercheckWeekmails({ base, key, RESEND, FROM });
       } catch (e) {
         kwartiercheckWeek = { sent: 0, fouten: [], reden: "kwartiercheck-week-fout: " + String(e).slice(0, 80) };

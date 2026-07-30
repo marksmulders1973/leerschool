@@ -36,11 +36,15 @@ function getClientIp(req) {
 export function guardRequest(req) {
   const origin = req.headers.get?.("origin") || "";
   const referer = req.headers.get?.("referer") || "";
-  // Origin is leidend; referer alleen als fallback wanneer er géén origin
-  // meegestuurd is (een mismatchende origin mag niet via referer alsnog door).
+  const method = req.method || "GET";
+  // Origin is leidend. Referer-fallback alléén voor GET: browsers sturen bij
+  // POST altijd een Origin mee, dus een POST zonder Origin is per definitie
+  // geen browser (curl/scraper met vervalste Referer) en gaat eruit.
   const isAllowed = origin
     ? ALLOWED_ORIGINS.includes(origin)
-    : ALLOWED_ORIGINS.some((o) => referer.startsWith(o + "/"));
+    : method === "GET"
+      ? ALLOWED_ORIGINS.some((o) => referer.startsWith(o + "/"))
+      : false;
   if (!isAllowed) {
     return new Response(JSON.stringify({ error: "Forbidden origin" }), {
       status: 403,

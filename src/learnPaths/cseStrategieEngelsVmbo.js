@@ -45,7 +45,7 @@ const steps = [
         q: "Hoe begin je een **leesvaardigheid-CSE-vraag**?",
         options: ["Lees eerst de vragen, dan skim de tekst","Lees hele tekst zorgvuldig vooraf","Vermijd de tekst","Schrijf direct antwoord op"],
         answer: 0,
-        wrongHints: [null, "Te langzaam — kost teveel tijd.", "Niet — je hebt de tekst wel nodig.", "Niet — niet te raden."],
+        wrongHints: [null, "Te langzaam — kost te veel tijd.", "Niet — je hebt de tekst wel nodig.", "Niet — niet te raden."],
         uitlegPad: {
           stappen: [{ titel: "Vraag eerst = focused lezen", tekst: "Door **eerst de vragen** te lezen weet je wélke informatie te zoeken in de tekst. Skim daarna voor overzicht (1 min). Dan per vraag terug. Bespaart 30-50% tijd vs hele tekst eerst doorlezen." }],
           theorie: "Werkt vooral bij **mc-vragen** (Cito-stijl). Bij open vragen ook OK, maar dan minder evident.",

@@ -91,7 +91,7 @@ const steps = [
           "Hersenstam = onbewuste functies (ademen, hartslag) — geen bewegings-coördinatie.",
           "Ruggenmerg = signaal-doorgifte + reflexen — coördinatie is hogerop.",
         ],
-        explanation: "De KLEINE HERSENEN (cerebellum, achter onder in de schedel) zijn verantwoordelijk voor coördinatie van bewegingen + balans. Alcohol verstoort die werking — daarom waggelt iemand die teveel gedronken heeft. Politie's loopproeven (rechte lijn lopen, ogen dicht) testen de kleine hersenen.",
+        explanation: "De KLEINE HERSENEN (cerebellum, achter onder in de schedel) zijn verantwoordelijk voor coördinatie van bewegingen + balans. Alcohol verstoort die werking — daarom waggelt iemand die te veel gedronken heeft. Politie's loopproeven (rechte lijn lopen, ogen dicht) testen de kleine hersenen.",
         examenBron: BRON_LABEL(43),
         bronLink: PDF_LINK,
         leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },

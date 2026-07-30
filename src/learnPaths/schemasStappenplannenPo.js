@@ -236,7 +236,7 @@ const steps = [
           stappen: [
             { titel: "Stappenplan = volgorde", tekst: "Een stappenplan helpt je iets **systematisch + zonder fout** te doen. Vooral handig bij:\n• Redactiesommen (lange verhaal-vragen)\n• Examen-opgaven\n• Practicum biologie/scheikunde\n• Een recept\n\nEerste stap is bijna ALTIJD: **lees rustig, begrijp wat er gevraagd wordt** — niet meteen aan rekenen!" },
             { titel: "Cito-tip: 5-stappen-rekenen", tekst: "**Officieel stappenplan rekenen** (uit veel rekenboeken):\n1. **Lees + begrijp** vraag\n2. **Onderstreep** getallen + sleutelwoorden\n3. **Schets** (als handig)\n4. **Reken** uit\n5. **Controleer** antwoord (klopt eenheid? Past schatting?)\n\nVeelgemaakte fout: stap 4 meteen doen zonder 1+2. Dan reken je iets anders dan gevraagd." },
-            { titel: "Studievaardigheid voor Cito", tekst: "Doorstroomtoets (groep 8) test ook **studievaardigheid** — slim leren + werken. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nKinderen die stappenplan-aanpak gebruiken scoren 10-15% hoger gemiddeld op Cito-toetsen." },
+            { titel: "Studievaardigheid voor Cito", tekst: "Doorstroomtoets (groep 8) test ook **studievaardigheid** — slim leren + werken. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nKinderen die stappenplan-aanpak gebruiken scoren gemiddeld 10-15% hoger op toetsen zoals de Doorstroomtoets." },
           ],
           woorden: [
             { woord: "stappenplan", uitleg: "Lijst van stappen in vaste volgorde voor een taak." },

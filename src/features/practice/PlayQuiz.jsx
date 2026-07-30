@@ -885,7 +885,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                     const heeftUitleg = question.explanation && String(question.explanation).trim() !== "";
                     const s = gameState.quiz.subject;
                     if (!heeftUitleg) {
-                      return <>Bij deze vraag staat (nog) geen uitleg in de database. Bekijk de <strong>YouTube-knop</strong> hieronder voor een korte uitleg, of meld de vraag via <strong>Fout melden</strong> zodat we 'm beter kunnen maken.</>;
+                      return <>Bij deze vraag hoort (nog) geen uitleg. Bekijk de <strong>YouTube-knop</strong> hieronder voor een korte uitleg, of meld de vraag via <strong>Fout melden</strong> zodat we 'm beter kunnen maken.</>;
                     }
                     if (s === "rekenen" || s === "wiskunde")
                       return <>Schrijf de som nog een keer op en los hem stap voor stap op — kijk pas aan het einde of je er uitkomt.</>;

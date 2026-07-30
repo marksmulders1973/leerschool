@@ -116,7 +116,7 @@ const steps = [
           theorie: "Cito-feit if-statement: hoort bij de **3 hoofdbouwstenen** van programmeren:\n1. **Variabele** = onthouden (doosje met info)\n2. **If** = beslissen (als-dan)\n3. **Loop** = herhalen (zolang...).\nElk programma gebruikt deze 3.",
           voorbeelden: [
             { type: "stap", tekst: "Verkeerslicht-software: ALS auto wacht > 30 sec DAN groen licht." },
-            { type: "stap", tekst: "Cito-toets: ALS goed antwoord DAN +1 punt ANDERS 0 punten. Computer scoort automatisch." },
+            { type: "stap", tekst: "Doorstroomtoets: ALS goed antwoord DAN +1 punt ANDERS 0 punten. Computer scoort automatisch." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "If = ALS = beslissing. Loop = HERHALEN. Variabele = ONTHOUDEN. Drie bouwstenen waarmee elk programma werkt." }],
           niveaus: {
@@ -159,7 +159,7 @@ const steps = [
         q: "Wie was **Ada Lovelace**?",
         options: ["Eerste programmeur (1840s, mathematicus)", "Eerste president", "Schilder", "Astronaut"],
         answer: 0,
-        wrongHints: [null, "Geen politicus — een wetenschapper.", "Geen kunstenaar — een mathematicus.", "Geen ruimtevaart — leefde in 1815-1852."],
+        wrongHints: [null, "Ada werkte niet in de politiek.", "Ada maakte geen kunst.", "Ada leefde in 1815-1852 — lang vóór de ruimtevaart."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Ada Lovelace?", tekst: "**Ada Lovelace** (1815-1852) was een **Engelse wiskundige**. Ze wordt **wereldwijd erkend als de eerste programmeur ooit** — al in de jaren **1840s**, lang voor er computers bestonden zoals wij ze kennen." },
@@ -247,7 +247,7 @@ const steps = [
       { q: "Welke is **drag-and-drop** taal?", options: ["Scratch", "Python", "C++", "JavaScript"], answer: 0, wrongHints: [null, "Schrijf-taal voor data + AI.", "Schrijf-taal voor games + apps.", "Schrijf-taal voor websites."] },
       { q: "Wat doet **loop**?", options: ["Iets herhalen", "Conditie", "Variabele", "Functie"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet primair."] },
       { q: "Wie was **eerste programmeur**?", options: ["Ada Lovelace (1840s)", "Gates", "Jobs", "Berners-Lee"], answer: 0, wrongHints: [null, "Veel later.", "Niet primair.", "Niet primair."] },
-      { q: "**Linux** door?", options: ["Linus Torvalds (1991)", "Microsoft", "Apple", "Google"], answer: 0, wrongHints: [null, "Maakt Windows — concurrent.", "Maakt macOS — concurrent.", "Maakt Android, niet Linux zelf."] },
+      { q: "**Linux** door?", options: ["Linus Torvalds (1991)", "Microsoft", "Apple", "Google"], answer: 0, wrongHints: [null, "Denk aan één persoon, niet een groot bedrijf.", "Nee — geen bedrijf.", "Google gebruikt Linux wel (in Android), maar bedacht het niet."] },
       { q: "**NL-informaticus** die kortste-pad-algoritme bedacht?", options: ["Edsger Dijkstra", "Cruijff", "Slat", "Tim Berners-Lee"], answer: 0, wrongHints: [null, "Voetbal.", "Niet primair.", "Niet NL."] },
       {
         q: "Een **if-else**-instructie betekent?",

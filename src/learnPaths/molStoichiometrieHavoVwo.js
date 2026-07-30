@@ -197,7 +197,7 @@ const steps = [
           stappen: [
             { titel: "Verhouding 2:1, gegeven 2:3", tekst: "Voor 2 mol H₂ heb je 1 mol O₂ nodig. Je hebt 3 mol O₂ = overmaat. **H₂ is limiterend** — het loopt eerder op. Resultaat: 2 mol H₂O + 2 mol O₂ over." },
           ],
-          niveaus: { basis: "H₂ limiterend.", simpeler: "Veel teveel O₂; H₂ raakt eerst op.", nogSimpeler: "H₂" },
+          niveaus: { basis: "H₂ limiterend.", simpeler: "Veel te veel O₂; H₂ raakt eerst op.", nogSimpeler: "H₂" },
         },
       },
       {

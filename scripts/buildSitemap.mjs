@@ -40,7 +40,13 @@ for (const file of all) {
   const rel = relative(PUBLIC, file).split(sep).join("/");
   if (!rel.includes("/") && EXCLUDE_TOPLEVEL.has(rel)) continue; // top-level uitsluiten
   const isExamen = rel.startsWith("examen/");
-  // examen-index-pagina's iets hoger, losse vragen 0.6, landing 0.8
+  // Set-indexpagina's (examen/<vak>/<set>/index.html) als map-URL met trailing slash
+  // (canonical is de map-URL; zie scripts/build-examen-set-indexes.mjs).
+  if (isExamen && rel.endsWith("/index.html")) {
+    urls.push({ loc: `${BASE}/${rel.slice(0, -"index.html".length)}`, priority: "0.7" });
+    continue;
+  }
+  // examen-index-pagina's iets hoger (0.7), losse vragen 0.6, landing 0.8
   const priority = isExamen ? "0.6" : "0.8";
   urls.push({ loc: `${BASE}/${rel}`, priority });
 }

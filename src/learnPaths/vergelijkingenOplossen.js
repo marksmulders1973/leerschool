@@ -412,7 +412,7 @@ const steps = [
           woorden: [{ woord: "noemer wegwerken", uitleg: "Vermenigvuldig met de noemer om breuk weg te halen." }],
           theorie: "Patroon x/a = b: x = b·a. Werkt altijd.",
           voorbeelden: [{ type: "andere", tekst: "x/3=2 → x=6. x/10=4 → x=40. x/2=11 → x=22." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "13 = optellen fout. 1.6 = omgekeerd delen. 3 = teveel afgetrokken." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "13 = optellen fout. 1.6 = omgekeerd delen. 3 = te veel afgetrokken." }],
           niveaus: { basis: "40.", simpeler: "x/5=8 → x=8·5=40.", nogSimpeler: "40" },
         },
       },

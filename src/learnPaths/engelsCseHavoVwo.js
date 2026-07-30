@@ -207,7 +207,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — wel risico maar minder dan eind-haasten.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
         uitlegPad: {
-          stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt teveel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
+          stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt te veel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
           theorie: "Cito-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
           niveaus: { basis: "Eind-haasten.", simpeler: "Eind-haasten = punten missen", nogSimpeler: "Eind-haasten" },
         },

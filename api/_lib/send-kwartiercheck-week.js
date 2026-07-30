@@ -4,7 +4,7 @@
 // verwijzing naar de zelfprint-pakketten. Lift mee op de dagelijkse
 // send-weekly-lesmateriaal-cron (maandag-blok), net als het ouder-rapport.
 
-import { CONCEPTEN, bepaalGaps } from "./kwartiercheck-mail.js";
+import { CONCEPTEN, bepaalGaps } from "../kwartiercheck-mail.js";
 
 const SITE = "https://leerkwartier.app";
 const BATCH = 40;

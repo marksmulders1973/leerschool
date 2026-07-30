@@ -240,7 +240,7 @@ const steps = [
           ],
           theorie: "**De hoofdgedachte vinden — 3 vragen:**\n\n1. Waar gaat ELKE alinea over? Schrijf in 1 woord per alinea.\n2. Wat zit er in ALLE alinea's? Dat is de rode draad.\n3. De hoofdgedachte is meestal een ZIN die de hele rode draad samenvat.\n\n**Trucs van Cito-makers:**\n- Vaak zijn er 4 antwoorden waarvan 3 echt KLOPPEN (komen voor in de tekst), maar als DETAIL.\n- Het juiste antwoord is meestal het ALGEMEENSTE — niet een specifiek feit.",
           voorbeelden: [
-            { type: "fiets-tekst", tekst: "4 alinea's = 4 momenten in tijd (1817 → 1900). Rode draad = VERANDERING door 200 jaar. Hoofdgedachte" },
+            { type: "fiets-tekst", tekst: "4 alinea's = 4 momenten in tijd (1817 → 1900). Rode draad = VERANDERING door 200 jaar. Hoofdgedachte = 'de fiets is in 200 jaar steeds veranderd'." },
             { type: "andere", tekst: "Tekst over koffie. Alinea 1 Ethiopië, Alinea 2 Arabië, Alinea 3 Europa, Alinea 4 wereldwijd. Rode draad: VERSPREIDING. Hoofdgedachte = 'koffie heeft zich verspreid over de wereld'." },
           ],
           basiskennis: [
@@ -290,14 +290,14 @@ const steps = [
           ],
           theorie: "**Bij instructieve teksten staat het antwoord vaak in een opsomming** (een lijstje na een dubbele punt). Zoek naar:\n- 'Je hebt nodig:'\n- 'Wat je gebruikt:'\n- 'Materialen:'\nWat erna komt, is meestal het antwoord.\n\nValstrikken: andere opties zien er plausibel uit (naald, garen) maar staan NIET in deze tekst.",
           voorbeelden: [
-            { type: "vinden", tekst: "Tekst: 'Je hebt nodig: 20 paperclips, touw, schaar.' = letterlijke kopie in" },
+            { type: "vinden", tekst: "Tekst: 'Je hebt nodig: 20 paperclips, touw, schaar.' = letterlijke kopie in antwoord A." },
           ],
           basiskennis: [
             { onderwerp: "Antwoord = wat in tekst staat", uitleg: "Bij begrijpend lezen mag je NIETS zelf bedenken. Het antwoord moet in de tekst staan of erop gebaseerd zijn." },
           ],
           niveaus: {
             basis: "Tekst: '20 paperclips + touw + schaar'. Optie A is 1-op-1 = juist.",
-            simpeler: "Zoek de zin met 'je hebt nodig'. Lees wat erachter komt: 20 paperclips, touw, schaar. Dat staat letterlijk in",
+            simpeler: "Zoek de zin met 'je hebt nodig'. Lees wat erachter komt: 20 paperclips, touw, schaar. Dat staat letterlijk in antwoord A.",
             nogSimpeler: "Lijstje uit tekst",
           },
         },
@@ -309,7 +309,7 @@ const steps = [
           "Omdat de paperclips anders uit elkaar gaan",
           "Omdat je vingers anders zeer doen",
           "Omdat het meer dan een uur duurt",
-          "Omdat je anders teveel paperclips gebruikt",
+          "Omdat je anders te veel paperclips gebruikt",
         ],
         answer: 0,
         evidence: "Werk rustig — als je gehaast bent, gaan de clips uit elkaar.",
@@ -330,7 +330,7 @@ const steps = [
           ],
           theorie: "**Bij 'waarom?'-vragen** zoek je het 'omdat' of de uitleg ERNA in de tekst.\n\nFormules om naar te zoeken:\n- 'omdat...'\n- 'als ... dan ...'\n- 'door...'\n- 'daarom...'\n\nValstrikken: andere opties klinken aannemelijk (zere vingers? klinkt logisch) maar staan NIET in deze specifieke tekst.",
           voorbeelden: [
-            { type: "match", tekst: "Tekst: 'als je gehaast bent gaan de clips uit elkaar' = direct gekoppeld aan" },
+            { type: "match", tekst: "Tekst: 'als je gehaast bent gaan de clips uit elkaar' = direct gekoppeld aan antwoord A: de paperclips gaan uit elkaar." },
           ],
           basiskennis: [
             { onderwerp: "Begrijpend lezen vs algemene kennis", uitleg: "Het antwoord moet uit DEZE tekst komen — niet uit wat jij denkt of weet. Soms ligt iets voor de hand maar staat het er niet." },
@@ -363,8 +363,8 @@ const steps = [
           stappen: [
             { titel: "Welk type?", tekst: "Een 'volgorde-vraag': je moet de stappen in de juiste volgorde hebben. Niet alleen wat, maar WANNEER." },
             { titel: "Zoek de sluiting-stap", tekst: "Tekst zegt: 'Maak nu de sluiting. Knip een stukje touw...' = sluiting is na het meten." },
-            { titel: "Wat staat ER VOOR?", tekst: "Vlak voor 'maak nu de sluiting' staat: 'Meet het door de keten om je pols te leggen.' =" },
-            { titel: "Toets andere opties", tekst: "Verven = stap VOORDAT je begint (alinea 1). Knoop = AT de sluiting zelf, niet ervoor. Schaar knippen = nergens." },
+            { titel: "Wat staat ER VOOR?", tekst: "Vlak voor 'maak nu de sluiting' staat: 'Meet het door de keten om je pols te leggen.' = dat is het antwoord: meten of de keten past." },
+            { titel: "Toets andere opties", tekst: "Verven = stap VOORDAT je begint (alinea 1). Knoop = BIJ de sluiting zelf, niet ervoor. Schaar knippen = nergens." },
           ],
           woorden: [
             { woord: "vlak voor", uitleg: "Direct ervoor — de stap die meteen daaraan voorafgaat. Niet eerder." },
@@ -404,7 +404,7 @@ const steps = [
           stappen: [
             { titel: "Wat zoeken we?", tekst: "Het DOEL van de tekst — waarom heeft de schrijver deze tekst gemaakt?" },
             { titel: "4 hoofd-doelen herkennen", tekst: "Informeren (uitleggen wat iets is) / Instrueren (hoe doe je iets) / Overtuigen (mening) / Vermaken (verhaal)." },
-            { titel: "Welk doel past hier?", tekst: "Tekst geeft STAPPEN ('begin met de eerste paperclip', 'doe nu', 'maak nu de sluiting'). Dat is INSTRUEREN =" },
+            { titel: "Welk doel past hier?", tekst: "Tekst geeft STAPPEN ('begin met de eerste paperclip', 'doe nu', 'maak nu de sluiting'). Dat is INSTRUEREN = uitleggen hoe je iets doet." },
             { titel: "Toets andere opties", tekst: "Geschiedenis paperclips: nergens. Vergelijking met andere armbanden: nergens. Verhaal met personage (Sara, Tom): nergens. Alleen instructies." },
           ],
           woorden: [
@@ -679,7 +679,7 @@ const steps = [
           ],
           theorie: "**Bij verhalen gebruikt schrijver vaak figuurlijk taalgebruik om gevoelens uit te drukken.**\n\nVoorbeelden:\n- 'schaapachtig' = verlegen / beschaamd\n- 'rood worden' = zich schamen\n- 'in de wolken' = heel blij\n- 'op zijn hondjes' = slecht gestemd\n\nLees de zin in CONTEXT — wat past bij wat de personage net heeft meegemaakt?",
           voorbeelden: [
-            { type: "context", tekst: "Sara had geen brood, Tom vroeg of ze geen brood had. Ze wilde dat liever niet toegeven. Schaamtegevoel =" },
+            { type: "context", tekst: "Sara had geen brood, Tom vroeg of ze geen brood had. Ze wilde dat liever niet toegeven. Schaamtegevoel = daarom keek ze 'schaapachtig'." },
           ],
           basiskennis: [
             { onderwerp: "Letterlijk vs figuurlijk", uitleg: "Bij verhalen mag je niet alle woorden letterlijk nemen. 'In tranen uitbarsten' = niet echt exploderen." },
