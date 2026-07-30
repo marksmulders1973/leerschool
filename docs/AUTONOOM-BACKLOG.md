@@ -32,6 +32,18 @@ Cito + examens versterken. Drie type werk:
 
 **Informatief (geen actie):** kennisgraaf gezond — 0 kapotte leerpadLinks bij 264 verwijzingen, onafhankelijk gecross-checkt tegen pathManifest (336 ids).
 
+## 🖼️ SPRINT — Visuals-sweep 30/31 jul (812 SVG's beoordeeld, ~60 problemen, ronde 1 gefixt)
+
+> Tool: `scripts/visuals-sweep.mjs` (rendert alle leerpad-SVG's op vellen) + screenshots + 3 beoordeel-agents
+> op rubriek FOUT/KAPOT/LELIJK, fixes na code-verificatie. Ronde 1: 39 bestanden gefixt (commit fba5f2b, v131),
+> incl. alle gemelde feitelijke fouten. Óók gefixt: vak-tegel→Hub niveau-mismatch ("14 paden"→0-paden-bug, Mark 31 jul).
+
+- [ ] **V1** Her-verificatie vellen 15-21: de fixer-agent voor bio/geschiedenis/taal sneuvelde op de sessielimiet vóór zijn eindrapport (alle 19 doelbestanden wél gewijzigd, build groen, vel 12 visueel gecheckt). Volgende sessie: vellen 15-21 opnieuw renderen + 1 beoordeel-agent laten bevestigen dat tijdlijnen (WO1/WO2/80-jarige), "klijn", "onder-leden", Den Briel, Pluto, hormonen-labels en de voetregel-doorstreep-bug echt opgelost zijn.
+- [ ] **V2** Eurozone 20→21 (Bulgarije per 1-1-2026) mogelijk nog in ~11 andere leerpad-bestanden — grep 'eurozone|eurolanden' over src/learnPaths/ en bijwerken.
+- [ ] **V3** LELIJK-restjes na V1 inventariseren (o.a. fotosynthese-pijlen, planeet-labels als die niet meegenomen zijn).
+- [ ] **V4** Visuals-sweep opnemen in de vaste review-cadans (elke 6-8 wkn) + bij elk nieuw pad met SVG's het vel renderen vóór commit.
+- [ ] **V5** Overige schetskaartjes (Europa/buurlanden e.d.) omzetten naar echte vormen via het scripts/geo-provincies-naar-svg.mjs-patroon (zoals de NL-kaart, v130).
+
 ## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
 
 > Uit 2-agent-audit (concurrentie-onderzoek + frisse-ogen product-audit, 8 jul).
