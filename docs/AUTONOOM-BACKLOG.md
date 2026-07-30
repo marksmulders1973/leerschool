@@ -14,6 +14,24 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🧪 SPRINT — QA-sweep 30 jul 2026 (7 finders + skeptische verificatie; 7×P1 bevestigd, 0 vals alarm, 33×P2/P3)
+
+> Multi-agent sweep over links/SEO/huisregels/taal/leerpad-data/API-PWA/live-flows.
+> Alle P0/P1-vondsten door aparte verificatie-agents hergecheckt. Volgorde = impact ÷ moeite.
+
+- [ ] **Q1 (P1, 1 min)** index.html:432 — FAQ-kop mist "Wat": `Is het verschil tussen Cito-eindtoets en Doorstroomtoets?` → "Wat is het verschil tussen de Cito-eindtoets en de Doorstroomtoets?" (prio-#1-zoekcluster!)
+- [ ] **Q2 (P1, 5 min)** public/abonnement.html — r216 "echte begrip"→"écht begrip"; r83 "engels"→"Engels"; r203/219 "Auto-renewal"/"paraphrase"→"automatische verlenging"/"parafrase".
+- [ ] **Q3 (P1, 15 min)** src/learnPaths/begrijpendLezenStrategie.js — 6 kind-zichtbare taalfouten: r127 "accept"→"accepteer", r271 "De eindslot", r287 "middenste"→"middelste", r358 "de hoofdpunt"→"het hoofdpunt", r367 "hele"→"helemaal", r666 kapotte vraagzin herformuleren. Nota bene hét begrijpend-lezen-pad.
+- [ ] **Q4 (P1)** Gratis-claim flyers: `_template-flyer-b1.html:94` + ALKMAAR2027 + HAARLEMMERMEER2027(-DRUK) zeggen "Helemaal gratis. Geen kosten achteraf." (kaal, tegen eigen regel). Sjabloon + bestanden herformuleren ("gratis voor uw gezin t/m de Doorstroomtoets 2027" o.i.d.). ⚠️ HAARLEMMERMEER-DRUK is 29 jul al bij de drukker besteld — checken of nog aanpasbaar; zo niet: geen ramp (r78 kwalificeert wél), maar sjabloon fixen vóór volgende order. Ook "goodybag"→"goodiebag" in dezelfde flyers + bedankt.html + voor-organisaties.html.
+- [ ] **Q5 (P1)** 238 examen-vraagpagina's hebben kruimelpad-links naar 40 niet-bestaande set-overzichten (/examen/<vak>/<set>/ → SPA-home). Fix: per set een index.html genereren (uitbreiding buildPadLandingsPaginas.mjs-patroon) óf kruimel tijdelijk naar /vmbo-examens-oefenen.html.
+- [ ] **Q6 (P1)** Translate-balk kapot: eigen CSP (vercel.json:34) blokkeert translate.google.com voor niet-NL-bezoekers → dropdown laadt nooit. Domeinen aan CSP toevoegen óf widget verwijderen (index.html:528-580).
+- [ ] **Q7 (P2, groot)** 773 antwoord-verklappende wrongHints in 97 files (lint-wronghints exit 1). Gefaseerd, start doorstroomtoetsRekenenG8.js (52, ICP-kern); ook 4 eliminatie-lekken uit steekproef (algoritmenPseudocodeInformatica:35, zinsontleding:830, aardobservatieHavoVwo:230, algoritmenProgrammerenPo:162+250).
+- [ ] **Q8 (P2, klein-batch copy)** "Altijd gratis" in ProPage.jsx:178 + proPlan.js:68 (tegen eigen regel in zelfde bestand!); dev-jargon "uitlegPad" in index.html:439 + doorstroomtoets-oefenen.html; "database" in PlayQuiz.jsx:888; "Cito-toets" als toetsnaam in 3 leerpaden; "teveel"→"te veel" projectbreed; "Quizzes"→"Quizzen" (index.html:403); afgebroken zinnen + "AT" in begrijpendLezenTekstenPo.js (r243-367); vak-labels /leren ("wereldorientatie"→"Wereldoriëntatie", losse categorie "wereld" samenvoegen); kwartiercheck.html "Volledig gratis" kwalificeren.
+- [ ] **Q9 (P2 tech)** (a) /leren continue layout-shift (Playwright-clicks >5s instabiel — CLS-risico); (b) dubbele Supabase-calls per pageload (subscriptions/profiles 2×GET + 2×PATCH); (c) origin-guard: ontbrekende Origin valt terug op vervalsbare Referer (api/_guard.js:37); (d) soft-404 (routes.js:134 fallback home → nette 404-pagina + noindex); (e) 2 tegenstrijdige WebApplication-JSON-LD-blokken op home (index.html:84-133, featureList bevat ook niet-live claims — eerlijke-getallen-regel); (f) api/send-kwartiercheck-week.js (helper) wordt als publieke 500-endpoint gedeployed → naar api/_lib/.
+- [ ] **Q10 (P3 klein)** leesladder-title 92 tekens inkorten; 6 lange meta-descriptions; twitter:card+og:site_name op leesladder/oefenpakket/begrijpend-lezen-oefenen; og:url-slash home; manifest screenshot-maat + maskable-iconen; audit-scripts: jaartal-false-positives audit-units.mjs + 4 helpers in SKIP_FILES auditKennisgraaf.mjs.
+
+**Informatief (geen actie):** kennisgraaf gezond — 0 kapotte leerpadLinks bij 264 verwijzingen, onafhankelijk gecross-checkt tegen pathManifest (336 ids).
+
 ## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
 
 > Uit 2-agent-audit (concurrentie-onderzoek + frisse-ogen product-audit, 8 jul).
