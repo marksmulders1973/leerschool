@@ -76,10 +76,18 @@ export default async function handler(req) {
 
   const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: vFont, fontWeight: 700, lineHeight: 1.28, marginBottom: 12 } }, vraagTekst);
 
+  // Lange optie: afbreken op een woordgrens + "…" — nooit midden in een woord.
+  const optTekst = (o) => {
+    const s = String(o).replace(/\*\*/g, "");
+    if (s.length <= 42) return s;
+    const kort = s.slice(0, 41);
+    const spatie = kort.lastIndexOf(" ");
+    return (spatie > 20 ? kort.slice(0, spatie) : kort) + "…";
+  };
   const optiesEl = h("div", { style: { display: "flex", flexDirection: "column", marginTop: 10, flexShrink: 0 } },
     ...opts.map((o, i) => h("div", { key: i, style: { display: "flex", alignItems: "center", flexShrink: 0, background: "rgba(255,255,255,0.07)", borderRadius: 16, padding: "11px 16px", marginBottom: 11 } },
       h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, borderRadius: 20, background: "#00C853", color: "#0b1a2e", fontSize: 26, fontWeight: 700, marginRight: 16 } }, LETTERS[i]),
-      h("div", { style: { display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" } }, String(o).replace(/\*\*/g, "").slice(0, 42)))));
+      h("div", { style: { display: "flex", fontSize: 32, color: "rgba(255,255,255,0.95)" } }, optTekst(o)))));
 
   const footerKinderen = [
     h("div", { key: "cta", style: { display: "flex", alignSelf: "flex-start", background: "#00C853", color: "#0b1a2e", fontSize: fmt === "11" ? 30 : 34, fontWeight: 700, borderRadius: 34, padding: "14px 26px" } },
