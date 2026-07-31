@@ -14,6 +14,7 @@ import NieuwTopografieBanner from "./NieuwTopografieBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import VraagVanDeDag from "./VraagVanDeDag.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import PakketUitleg from "./PakketUitleg.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
@@ -73,6 +74,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // Niveau achteraf kunnen wijzigen (feedback Sarah/Sahasra 2026-06-05:
   // "ik weet niet waar ik mijn niveau kies"). Badge → heropent de wizard.
   const [wijzigNiveau, setWijzigNiveau] = useState(false);
+  // "Wat is gratis?"-blok (Mark 31 jul): pakket-uitleg-modal.
+  const [showPakket, setShowPakket] = useState(false);
   const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
   // Tel paden per subject voor het juiste niveau.
   // PO = level start met "groep".
@@ -1144,7 +1147,14 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               <span style={{ fontWeight: 700, fontSize: 13 }}>Tips aan maker</span>
             </button>
           )}
+          {/* Mark 31 jul: kraakhelder maken dat de basis gratis is/blijft. */}
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #0b6b39)" }} onClick={() => { SoundEngine.play("click"); setShowPakket(true); }}>
+            <span style={{ fontSize: 24 }}>✅</span>
+            <span style={{ fontWeight: 700, fontSize: 13 }}>Wat is gratis?</span>
+          </button>
         </div>
+
+        <PakketUitleg open={showPakket} onClose={() => setShowPakket(false)} />
 
         {/* Urgente deadline banner */}
         {quizzes.filter((q) => q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 1 && !progress.some((p) => p.quizId === q.id)).map((q) => {
