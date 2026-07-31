@@ -72,8 +72,11 @@ const LeesladderPage = lazy(() => import("./components/LeesladderPage.jsx"));
 const PrintHubPage = lazy(() => import("./components/PrintHubPage.jsx"));
 const TafelbladenPage = lazy(() => import("./components/TafelbladenPage.jsx"));
 const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.jsx"));
-// Oefenboekje op maat — PROTOTYPE, geheim tot Mark+Claude tevreden (31 jul).
+// Familie-abonnement — GEHEIME preview-laag (Mark 31 jul). Alles achter
+// familiePreviewVisible(): hub + paraatheidsmeter + oefenboekje op maat.
 const OefenboekjePagina = lazy(() => import("./features/oefenboekje/OefenboekjePagina.jsx"));
+const FamilieHub = lazy(() => import("./features/familie/FamilieHub.jsx"));
+const Paraatheidsmeter = lazy(() => import("./features/familie/Paraatheidsmeter.jsx"));
 const BrugklasPage = lazy(() => import("./components/BrugklasPage.jsx"));
 const DicteesPage = lazy(() => import("./components/DicteesPage.jsx"));
 const DagkaartGenerator = lazy(() => import("./components/DagkaartGenerator.jsx"));
@@ -98,7 +101,7 @@ const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { levelsCompatible } from "./learnPaths/utils.js";
 import pathManifest from "./learnPaths/pathManifest.generated.json";
-import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser, oefenboekjePreviewVisible } from "./shared/featureFlags.js";
+import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser, oefenboekjePreviewVisible, familiePreviewVisible } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 import {
@@ -2037,7 +2040,9 @@ export default function App() {
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
       {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
-      {/* Oefenboekje-prototype: alleen zichtbaar achter de geheime preview-poort. */}
+      {/* Familie-preview (geheim): hub + paraatheidsmeter + oefenboekje. */}
+      {page === "familie" && familiePreviewVisible(authUser) && <FamilieHub setPage={setPage} />}
+      {page === "paraatheid" && familiePreviewVisible(authUser) && <Paraatheidsmeter setPage={setPage} />}
       {page === "oefenboekje" && oefenboekjePreviewVisible(authUser) && <OefenboekjePagina setPage={setPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}

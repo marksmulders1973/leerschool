@@ -109,18 +109,40 @@ export function interactive3DEnabled() {
  * @returns {boolean}
  */
 export function oefenboekjePreviewVisible(authUser) {
+  // Oefenboekje valt onder de bredere Familie-preview-poort (?familie=1) én
+  // blijft los ontsluitbaar via de oude ?boekje=1.
+  return familiePreviewVisible(authUser);
+}
+
+/**
+ * Mag de gebruiker de (nog geheime) Familie-abonnement-preview zien — de hele
+ * in-ontwikkeling premium-laag (paraatheidsmeter, oefenboekje op maat,
+ * weekschema, diploma, …)? Blijft GEHEIM voor echte gebruikers tot Mark +
+ * Claude tevreden zijn.
+ *
+ * Zichtbaar als: admin (Mark) · óf een geheime URL `?familie=1` (of de oudere
+ * `?boekje=1`) — blijft daarna plakken via localStorage zodat in-app navigeren
+ * werkt · óf env-flag VITE_FAMILIE_PREVIEW. Anders: onzichtbaar.
+ *
+ * @param {object|null} authUser
+ * @returns {boolean}
+ */
+export function familiePreviewVisible(authUser) {
   if (authUser?.email?.toLowerCase() === "mark-smulders@hotmail.com") return true;
   try {
     if (typeof window !== "undefined") {
       const sp = new URLSearchParams(window.location.search || "");
-      if (sp.get("boekje") === "1") {
-        try { localStorage.setItem("lk_boekje_preview", "1"); } catch { /* */ }
+      if (sp.get("familie") === "1" || sp.get("boekje") === "1") {
+        try { localStorage.setItem("lk_familie_preview", "1"); } catch { /* */ }
         return true;
       }
-      if (localStorage.getItem("lk_boekje_preview") === "1") return true;
+      if (
+        localStorage.getItem("lk_familie_preview") === "1" ||
+        localStorage.getItem("lk_boekje_preview") === "1"
+      ) return true;
     }
   } catch { /* */ }
-  return readBoolEnv("VITE_OEFENBOEKJE_PREVIEW", false);
+  return readBoolEnv("VITE_FAMILIE_PREVIEW", false) || readBoolEnv("VITE_OEFENBOEKJE_PREVIEW", false);
 }
 
 function readBoolEnv(key, fallback) {

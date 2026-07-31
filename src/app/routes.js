@@ -43,7 +43,10 @@ export const PAGE_TO_PATH = {
   tafelbladen: "/tafelbladen",
   redactiebladen: "/redactiebladen",
   dictees: "/dictees",
-  // Oefenboekje op maat — PROTOTYPE, geheim (alleen via ?boekje=1 of admin).
+  // Familie-abonnement — GEHEIME preview (alleen via ?familie=1 of admin).
+  familie: "/familie",
+  paraatheid: "/familie/paraatheid",
+  // Oefenboekje op maat — PROTOTYPE, geheim (alleen via ?boekje=1/?familie=1 of admin).
   oefenboekje: "/oefenboekje",
   // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
   brugklas: "/brugklas",
