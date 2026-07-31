@@ -11,6 +11,7 @@
 // EMAIL_FROM, SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY).
 
 import { TOPO_VRAGEN, bouwOefenbladVragen } from "../src/data/topografieVragen.js";
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
 const SITE = "https://leerkwartier.app";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -97,7 +98,8 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
       ${antwoordHtml}
     </div>
     <a href="${esc(opnieuw)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:14px;">🌍 Doe de check volgende week opnieuw →</a>
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt elke week een nieuwe oefenset. In 2026 is Leerkwartier helemaal gratis.</p>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt elke week een nieuwe oefenset.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${esc(uit)}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 

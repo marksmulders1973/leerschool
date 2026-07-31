@@ -21,6 +21,7 @@
 // Resend-gratis-tier = ~100 mails/dag. We versturen daarom max BATCH per run.
 
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 import rekenenPad from "../src/learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../src/learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../src/learnPaths/doorstroomtoetsStudievaardighedenG8.js";
@@ -186,7 +187,8 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
       <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
     </div>`}
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app. In 2026 is alles gratis &amp; onbeperkt.</p>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 

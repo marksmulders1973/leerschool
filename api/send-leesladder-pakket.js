@@ -13,6 +13,7 @@
 //   Blast   : GET /api/send-leesladder-pakket?key=SECRET
 
 import { VERSIES } from "../src/components/leesladderData.js";
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
 const SITE = "https://leerkwartier.app";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -128,7 +129,8 @@ function pakketHtml(token) {
       ${sleutel}
     </div>
 
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app. In 2026 is alles gratis &amp; onbeperkt.</p>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${esc(uit)}" style="color:#5a6b86;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 

@@ -18,6 +18,7 @@
 
 import { createRequire } from "module";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
 // JSON via createRequire: een kale ESM-JSON-import vereist import-attributes
 // in nieuwere Node-versies en breekt dan pas op runtime in de Vercel-functie.
@@ -231,6 +232,7 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
     ${deelHtml}
+    ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Verwijder de koppeling in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> — direct geregeld.</p>
   </div></body></html>`;
   const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\n${deelText}\n\nLiever geen rapport meer? Verwijder de koppeling in het ouder-dashboard.`;

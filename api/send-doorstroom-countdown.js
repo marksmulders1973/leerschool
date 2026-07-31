@@ -15,6 +15,8 @@
 // renderingscheck. Auto-run via dagelijkse cron volgt vóór september (Hobby = max
 // 2 crons, nu al vol).
 
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+
 const SITE = "https://leerkwartier.app";
 
 // De 6 fases. `from` = [maand, dag]: niet vóór deze datum versturen (jaar-agnostisch).
@@ -150,7 +152,8 @@ function maakMail(rij, fase) {
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 16px;">${esc(fase.intro)}</p>
     <ul style="font-size:15px;line-height:1.5;color:#cdd6e5;padding-left:20px;margin:0 0 22px;">${puntenHtml}</ul>
     <a href="${link}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:24px;">${esc(fase.cta)} →</a>
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app. In 2026 is alles gratis &amp; onbeperkt.</p>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 

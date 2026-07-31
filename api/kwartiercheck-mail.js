@@ -2,6 +2,8 @@
 // POST { email, naam_kind, groep, scores }
 // scores = { [conceptId]: { oordeel: "beheerst" | "gedeeltelijk" | "nogniet" } }
 
+import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+
 const SITE = "https://leerkwartier.app";
 
 const OORDEEL_LABELS = {
@@ -145,6 +147,7 @@ function bouwMailHtml(naam, groep, scores, unsubToken) {
 
   <!-- Footer -->
   <div style='padding:16px 28px 0;border-top:1px solid rgba(255,255,255,0.07);background:#0a0f1e;text-align:center'>
+    ${mailTaglineHtml({ kleur: "rgba(255,255,255,0.4)", link: "#69b2ff" })}
     <p style='font-size:11px;color:rgba(255,255,255,0.3);margin:0'>
       <a href='https://leerkwartier.app' style='color:#69b2ff'>Leerkwartier</a> · Kwartiercheck ·
       <a href='${unsubUrl}' style='color:rgba(255,255,255,0.3)'>afmelden</a>

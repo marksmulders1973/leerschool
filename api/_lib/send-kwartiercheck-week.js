@@ -5,6 +5,7 @@
 // send-weekly-lesmateriaal-cron (maandag-blok), net als het ouder-rapport.
 
 import { CONCEPTEN, bepaalGaps } from "../kwartiercheck-mail.js";
+import { mailTaglineHtml } from "./mail-tagline.js";
 
 const SITE = "https://leerkwartier.app";
 const BATCH = 40;
@@ -94,6 +95,7 @@ function bouwWeekmail(rij, weekNr, items) {
     ${blokken}
   </div>
   <div style='padding:14px 26px 0;border-top:1px solid rgba(255,255,255,0.07);background:#0a0f1e;text-align:center'>
+    ${mailTaglineHtml({ kleur: "rgba(255,255,255,0.4)", link: "#69b2ff" })}
     <p style='font-size:11px;color:rgba(255,255,255,0.3);margin:0'>
       <a href='https://leerkwartier.app' style='color:#69b2ff'>Leerkwartier</a> · week ${weekNr} van maximaal 4 ·
       <a href='${uit}' style='color:rgba(255,255,255,0.3)'>afmelden</a>
