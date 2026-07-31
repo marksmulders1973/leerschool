@@ -14,6 +14,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
+import { shuffleOptiesSeeded } from "../../shared/shuffleOpties.js";
 
 // Presets = een handvol veelvoorkomende struikelonderwerpen zodat Mark kan
 // spelen zonder pad-id's te kennen. De trigger (later) deeplinkt met ?pad=<id>.
@@ -45,8 +46,15 @@ function bouwItems(path, max = 12) {
     const checks = step.checks || (step.check ? [step.check] : []);
     for (const c of checks) {
       if (!c || !c.q || !Array.isArray(c.options)) continue;
-      const ans = typeof c.answer === "number" ? c.answer : c.options.indexOf(c.answer);
-      if (ans < 0 || ans >= c.options.length) continue;
+      // Opties schudden zoals de app zelf doet — anders is het juiste antwoord
+      // altijd "A" (bron-checks hebben answer:0) en ziet een kind het patroon.
+      // Seeded = deterministisch (zelfde boekje bij herprinten).
+      const q = shuffleOptiesSeeded(
+        { ...c, answer: typeof c.answer === "number" ? c.answer : c.options.indexOf(c.answer) },
+        `${path.id || "boekje"}::${items.length}`
+      );
+      const ans = q.answer;
+      if (ans < 0 || ans >= q.options.length) continue;
       const uitleg = schoon(
         c.uitlegPad?.niveaus?.basis ||
           (Array.isArray(c.uitlegPad?.stappen) ? c.uitlegPad.stappen[0]?.tekst : "") ||
@@ -55,9 +63,9 @@ function bouwItems(path, max = 12) {
       );
       items.push({
         vraag: schoon(c.q),
-        opties: c.options.map((o) => schoon(o)),
+        opties: q.options.map((o) => schoon(o)),
         goedIdx: ans,
-        goedTekst: schoon(c.options[ans]),
+        goedTekst: schoon(q.options[ans]),
         uitleg,
       });
       if (items.length >= max) return items;
