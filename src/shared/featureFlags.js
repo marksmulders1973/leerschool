@@ -93,6 +93,36 @@ export function interactive3DEnabled() {
   return !hide;
 }
 
+/**
+ * Mag de gebruiker het (nog geheime) "Oefenboekje op maat"-prototype zien?
+ *
+ * Premium Familie-laag in ontwikkeling (Mark 31 jul 2026): bij herhaalde fouten
+ * op een concept een op-maat printbaar oefenboekje aanbieden. Blijft GEHEIM voor
+ * echte gebruikers tot Mark + Claude tevreden zijn — dus NIET alleen achter de
+ * (uit-staande) paywall, maar achter deze aparte preview-poort.
+ *
+ * Zichtbaar als: admin (Mark) · óf de geheime URL `?boekje=1` (blijft daarna
+ * plakken via localStorage zodat in-app navigeren werkt) · óf env-flag
+ * VITE_OEFENBOEKJE_PREVIEW. Anders: onzichtbaar.
+ *
+ * @param {object|null} authUser
+ * @returns {boolean}
+ */
+export function oefenboekjePreviewVisible(authUser) {
+  if (authUser?.email?.toLowerCase() === "mark-smulders@hotmail.com") return true;
+  try {
+    if (typeof window !== "undefined") {
+      const sp = new URLSearchParams(window.location.search || "");
+      if (sp.get("boekje") === "1") {
+        try { localStorage.setItem("lk_boekje_preview", "1"); } catch { /* */ }
+        return true;
+      }
+      if (localStorage.getItem("lk_boekje_preview") === "1") return true;
+    }
+  } catch { /* */ }
+  return readBoolEnv("VITE_OEFENBOEKJE_PREVIEW", false);
+}
+
 function readBoolEnv(key, fallback) {
   try {
     const v = (import.meta.env?.[key] ?? "").toString().toLowerCase().trim();
