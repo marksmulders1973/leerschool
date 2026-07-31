@@ -15,6 +15,8 @@ import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import VraagVanDeDag from "./VraagVanDeDag.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import PakketUitleg from "./PakketUitleg.jsx";
+import { useSubscription } from "../subscription/useSubscription.js";
+import { TIERS } from "../subscription/config.js";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
@@ -76,6 +78,20 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const [wijzigNiveau, setWijzigNiveau] = useState(false);
   // "Wat is gratis?"-blok (Mark 31 jul): pakket-uitleg-modal.
   const [showPakket, setShowPakket] = useState(false);
+  // Pakket-badge naast de naam (P2, Mark 31 jul: "je hebt nu tot bv pro/familie").
+  // Spiegelt PakketUitleg: zolang de paywall UIT staat heeft iedereen alles
+  // gratis → toon "Gratis". Zodra de muur live gaat mapt het echte tier naar
+  // een mensen-label. ("Beiden" = later, als iemand Familie én Pro heeft.)
+  const sub = useSubscription();
+  const pakketLabel = !sub.paywallActive
+    ? "Gratis"
+    : sub.tier === TIERS.TEACHER_PRO
+    ? "Pro"
+    : sub.tier === TIERS.PARENT_PRO
+    ? "Familie"
+    : "Gratis";
+  const pakketIsGratis = pakketLabel === "Gratis";
+  const pakketKleur = pakketIsGratis ? "#00c853" : "#ffc107";
   const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
   // Tel paden per subject voor het juiste niveau.
   // PO = level start met "groep".
@@ -260,6 +276,25 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
       <Header title={`Hoi ${userName}`} subtitle="Welk kwartier wordt het vandaag?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {/* Pakket-pill (P2): toont je huidige pakket + opent de uitleg-modal.
+            Staat direct onder "Hoi <naam>" — kraakhelder dat de basis gratis is. */}
+        <button
+          type="button"
+          onClick={() => setShowPakket(true)}
+          title="Bekijk wat gratis is en wat de pakketten kosten"
+          style={{
+            display: "inline-flex", alignItems: "center", gap: 7,
+            background: `${pakketKleur}1f`, border: `1px solid ${pakketKleur}66`,
+            borderRadius: 999, padding: "5px 13px",
+            marginBottom: 10, alignSelf: "flex-start",
+            cursor: "pointer", fontFamily: "var(--font-display)",
+          }}
+        >
+          <span style={{ fontSize: 13 }} aria-hidden="true">{pakketIsGratis ? "✅" : "💛"}</span>
+          <span style={{ fontSize: 12.5, color: "rgba(255,255,255,0.6)" }}>Jouw pakket:</span>
+          <span style={{ fontSize: 13, fontWeight: 800, color: pakketKleur }}>{pakketLabel}</span>
+          <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>· wat is dit?</span>
+        </button>
         <KoppelcodeBanner userName={userName} />
         <NieuwTopografieBanner />
         {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen
