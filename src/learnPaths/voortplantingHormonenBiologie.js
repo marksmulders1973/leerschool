@@ -168,48 +168,99 @@ function manOrganenSvg() {
 </svg>`;
 }
 
-// Menstruatiecyclus — 28-daagse tijdlijn met vier fasen.
+// Menstruatiecyclus — ronde 28-dagen-klok (B3, 31 jul). Dag 1 bovenaan, met de
+// klok mee. Vier fase-bogen op de ring + ovulatie-punt + dag-markers + legenda.
 function cyclusSvg() {
-  return `<svg viewBox="0 0 320 200">
-<rect x="0" y="0" width="320" height="200" fill="${COLORS.paper}"/>
-<text x="160" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">De menstruatiecyclus — 28 dagen, 4 fasen</text>
+  const cx = 115, cy = 125, R = 80, sw = 18;
+  // Punt op de ring bij fractie f (0 = dag 1 bovenaan, met de klok mee).
+  const P = (f, r = R) => {
+    const a = (-90 + f * 360) * Math.PI / 180;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+  };
+  // Gekleurde boog van fractie f0 → f1.
+  const boog = (f0, f1, kleur) => {
+    const [x0, y0] = P(f0), [x1, y1] = P(f1);
+    const groot = (f1 - f0) > 0.5 ? 1 : 0;
+    return `<path d="M ${x0.toFixed(1)} ${y0.toFixed(1)} A ${R} ${R} 0 ${groot} 1 ${x1.toFixed(1)} ${y1.toFixed(1)}" fill="none" stroke="${kleur}" stroke-width="${sw}" stroke-linecap="butt"/>`;
+  };
+  // Dag-nummer buiten de ring.
+  const dag = (d) => {
+    const [x, y] = P((d - 0.5) / 28, R + 18);
+    return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">${d}</text>`;
+  };
+  const [ovx, ovy] = P(13.5 / 28); // ovulatie ≈ dag 14, onderaan
+  const legenda = [
+    [COLORS.bijnier, "Menstruatie", "dag 1–5"],
+    [COLORS.cyclus_a, "Opbouwfase", "dag 6–13"],
+    [COLORS.warm, "Ovulatie", "dag 14"],
+    [COLORS.cyclus_b, "Wachtfase", "dag 15–28"],
+  ].map(([k, naam, dgn], i) => {
+    const y = 74 + i * 30;
+    return `<rect x="232" y="${y}" width="13" height="13" rx="3" fill="${k}"/>
+<text x="252" y="${y + 7}" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">${naam}</text>
+<text x="252" y="${y + 19}" fill="${COLORS.muted}" font-size="9.5" font-family="Arial">${dgn}</text>`;
+  }).join("\n");
+  return `<svg viewBox="0 0 360 250">
+<rect x="0" y="0" width="360" height="250" fill="${COLORS.paper}"/>
+<text x="180" y="16" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">De menstruatiecyclus — 28 dagen, met de klok mee</text>
 
-<!-- As-lijn -->
-<line x1="20" y1="120" x2="300" y2="120" stroke="${COLORS.muted}" stroke-width="1"/>
+<!-- Fase-bogen op de ring -->
+${boog(0, 5 / 28, COLORS.bijnier)}
+${boog(5 / 28, 13 / 28, COLORS.cyclus_a)}
+${boog(13 / 28, 14 / 28, COLORS.warm)}
+${boog(14 / 28, 1, COLORS.cyclus_b)}
 
-<!-- Dag-markers -->
-${[1, 7, 14, 21, 28].map((d) => {
-  const x = 20 + ((d - 1) / 27) * 280;
-  return `<line x1="${x}" y1="118" x2="${x}" y2="124" stroke="${COLORS.muted}" stroke-width="0.5"/>
-<text x="${x}" y="138" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">dag ${d}</text>`;
-}).join("")}
+<!-- Dag-markers (14 = ovulatie, apart gemarkeerd) -->
+${[1, 7, 21, 28].map(dag).join("\n")}
 
-<!-- Fase 1: Menstruatie (dag 1-5) -->
-<rect x="20" y="40" width="40" height="75" fill="${COLORS.bijnier}" opacity="0.5" rx="2"/>
-<text x="40" y="32" text-anchor="middle" fill="${COLORS.bijnier}" font-size="9" font-family="Arial" font-weight="bold">menstruatie</text>
-<text x="40" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies</text>
-<text x="40" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">verlaten</text>
+<!-- Ovulatie-punt bij dag 14 -->
+<circle cx="${ovx.toFixed(1)}" cy="${ovy.toFixed(1)}" r="7" fill="${COLORS.warm}" stroke="#fff" stroke-width="1.5"/>
+<text x="${cx}" y="228" text-anchor="middle" fill="${COLORS.warm}" font-size="9.5" font-family="Arial" font-weight="bold">ovulatie · dag 14</text>
 
-<!-- Fase 2: Folliculaire fase (dag 6-13) -->
-<rect x="60" y="60" width="80" height="55" fill="${COLORS.cyclus_a}" opacity="0.4" rx="2"/>
-<text x="100" y="50" text-anchor="middle" fill="${COLORS.cyclus_a}" font-size="9" font-family="Arial" font-weight="bold">opbouwfase</text>
-<text x="100" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">eicel rijpt</text>
-<text x="100" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies groeit</text>
+<!-- Midden: kernboodschap -->
+<text x="${cx}" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="26" font-family="Arial" font-weight="bold">28</text>
+<text x="${cx}" y="138" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">dagen</text>
 
-<!-- Fase 3: Ovulatie (dag 14) -->
-<circle cx="155" cy="80" r="8" fill="${COLORS.warm}" opacity="0.85"/>
-<text x="155" y="50" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">ovulatie</text>
-<text x="155" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">eicel</text>
-<text x="155" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vrijgegeven</text>
+<!-- Legenda -->
+${legenda}
+<text x="232" y="205" fill="${COLORS.muted}" font-size="9" font-family="Arial">↻ na dag 28 begint dag 1 opnieuw</text>
+</svg>`;
+}
 
-<!-- Fase 4: Luteale fase (dag 15-28) -->
-<rect x="170" y="55" width="130" height="60" fill="${COLORS.cyclus_b}" opacity="0.4" rx="2"/>
-<text x="235" y="48" text-anchor="middle" fill="${COLORS.good}" font-size="9" font-family="Arial" font-weight="bold">wachtfase</text>
-<text x="235" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">slijmvlies klaar</text>
-<text x="235" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">voor evt. innesteling</text>
+// Hormoon-route: klier → bloedbaan → doelorgaan (B3, 31 jul). De kern van "wat
+// doet een hormoon": in de klier gemaakt, via het bloed vervoerd, alleen het
+// orgaan met de juiste receptor reageert (sleutel-slot).
+function hormoonRouteSvg() {
+  // Hormoon-moleculen (kleine gele bolletjes) langs de bloedbaan.
+  const mol = (x, y) => `<circle cx="${x}" cy="${y}" r="4" fill="${COLORS.warm}" stroke="#fff" stroke-width="0.75"/>`;
+  return `<svg viewBox="0 0 360 180">
+<rect x="0" y="0" width="360" height="180" fill="${COLORS.paper}"/>
+<text x="180" y="16" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Hoe een hormoon werkt: klier → bloedbaan → doelorgaan</text>
 
-<!-- As-uitleg onderaan -->
-<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">→ als geen bevruchting plaatsvindt, begint cyclus opnieuw</text>
+<!-- Bloedbaan (rood buis) van klier naar doelorgaan -->
+<rect x="70" y="72" width="215" height="16" rx="8" fill="${COLORS.bijnier}" opacity="0.25"/>
+<polygon points="285,64 305,80 285,96" fill="${COLORS.bijnier}" opacity="0.5"/>
+
+<!-- 1. Klier -->
+<ellipse cx="52" cy="80" rx="28" ry="24" fill="${COLORS.hypofyse}" opacity="0.85"/>
+<text x="52" y="76" text-anchor="middle" fill="#fff" font-size="10" font-family="Arial" font-weight="bold">klier</text>
+<text x="52" y="88" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">maakt hormoon</text>
+
+<!-- 2. Hormoon-moleculen die door het bloed reizen -->
+${mol(96, 80)}${mol(130, 76)}${mol(164, 84)}${mol(198, 78)}${mol(232, 82)}
+
+<!-- 3. Doelorgaan met receptor (sleutel-slot) -->
+<rect x="300" y="52" width="52" height="56" rx="14" fill="${COLORS.schildklier}" opacity="0.3" stroke="${COLORS.schildklier}" stroke-width="1.5"/>
+<text x="326" y="46" text-anchor="middle" fill="${COLORS.schildklier}" font-size="9" font-family="Arial" font-weight="bold">doelorgaan</text>
+<!-- receptor-inkeping + aangedokt hormoon -->
+<path d="M 300 74 h 10 v 12 h -10" fill="none" stroke="${COLORS.schildklier}" stroke-width="1.5"/>
+<circle cx="306" cy="80" r="4" fill="${COLORS.warm}" stroke="#fff" stroke-width="0.75"/>
+
+<!-- Genummerde stappen onderaan -->
+<text x="52"  y="132" text-anchor="middle" fill="${COLORS.text}" font-size="9.5" font-family="Arial" font-weight="bold">1. klier geeft af</text>
+<text x="178" y="132" text-anchor="middle" fill="${COLORS.text}" font-size="9.5" font-family="Arial" font-weight="bold">2. bloed vervoert</text>
+<text x="326" y="132" text-anchor="middle" fill="${COLORS.text}" font-size="9.5" font-family="Arial" font-weight="bold">3. orgaan reageert</text>
+<text x="180" y="160" text-anchor="middle" fill="${COLORS.muted}" font-size="8.5" font-family="Arial">Alleen het orgaan met de juiste receptor (sleutel-slot) reageert op het hormoon.</text>
 </svg>`;
 }
 
@@ -218,7 +269,7 @@ const steps = [
   {
     title: "Wat zijn hormonen?",
     explanation: "**Hormonen** zijn **chemische boodschappers** in je lichaam. Ze worden gemaakt in **hormoonklieren** en reizen via je **bloed** naar plaatsen in je lichaam waar ze hun werk doen.\n\n**Vergelijking met communicatie**:\n• **Zenuwstelsel** = telefoon-systeem (snel, direct, één-op-één)\n• **Hormoonstelsel** = brief in de post (langzaam, veel ontvangers tegelijk)\n\n**Wat doen hormonen?**\nElk hormoon heeft één of meerdere taken. Voorbeelden:\n• **Insuline** regelt je suikerspiegel (bloedsuiker).\n• **Adrenaline** maakt je hart sneller bij schrik of opwinding.\n• **Oestrogeen** + **testosteron** sturen de puberteit.\n• **Schildklierhormoon** regelt hoe snel je lichaam energie verbrandt.\n• **Melatonine** regelt je slaap-waakritme.\n\n**Drie kenmerken van hormonen**:\n1. Worden gemaakt in **klieren** (geen gangen — gewoon een orgaantje dat afgeeft).\n2. Reizen via **bloed** door het hele lichaam.\n3. Werken alleen op specifieke **doelorganen** met de juiste 'sleutel-receptor'.\n\n**Klein beetje hormonaal verschil = groot effect**\nHormonen werken in **mini-hoeveelheden**. Een paar moleculen kunnen het verschil maken tussen rust en paniek, tussen kind en volwassene, tussen gezond en ziek.\n\n**Het hormoonstelsel is langzaam maar lang werkend**: hormonen werken in seconden tot minuten — en hun effect houdt vaak uren tot dagen aan. Dat is anders dan zenuwprikkels (milliseconden).",
-    svg: hormoonstelselSvg(),
+    svg: hormoonRouteSvg(),
     checks: [
       {
         q: "Wat zijn hormonen?",
