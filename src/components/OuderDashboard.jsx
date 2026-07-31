@@ -18,13 +18,23 @@ const SUBJECT_LABELS = {
 };
 
 function ScoreBadge({ pct }) {
-  const color = pct >= 80 ? "var(--color-brand-primary-100)" : pct >= 60 ? "#ffb74d" : "#ff7043";
-  const bg = pct >= 80 ? "rgba(105,240,174,0.12)" : pct >= 60 ? "rgba(255,183,77,0.12)" : "rgba(255,112,67,0.12)";
+  // Robuust bij een nullable/corrupte scorebord-rij: toon "—" i.p.v. "null%".
+  const n = Number(pct);
+  const geldig = Number.isFinite(n);
+  const color = !geldig ? "rgba(255,255,255,0.4)" : n >= 80 ? "var(--color-brand-primary-100)" : n >= 60 ? "#ffb74d" : "#ff7043";
+  const bg = !geldig ? "rgba(255,255,255,0.06)" : n >= 80 ? "rgba(105,240,174,0.12)" : n >= 60 ? "rgba(255,183,77,0.12)" : "rgba(255,112,67,0.12)";
   return (
     <span style={{ padding: "2px 8px", borderRadius: 8, background: bg, color, fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700 }}>
-      {pct}%
+      {geldig ? `${n}%` : "—"}
     </span>
   );
+}
+
+// Datum-helper: nullable/ongeldige completed_at gaf "Invalid Date" in de UI.
+function fmtDatum(x, opts) {
+  if (!x) return "";
+  const d = new Date(x);
+  return isNaN(d.getTime()) ? "" : d.toLocaleDateString("nl-NL", opts);
 }
 
 function generateCode() {
@@ -208,16 +218,19 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     setInviteSent(true);
   };
 
-  // Statistieken berekenen
-  const subjectStats = childScores.reduce((acc, r) => {
+  // Statistieken berekenen. Alleen rijen met een geldig (eindig) percentage
+  // tellen mee: één nullable/corrupte scorebord-rij maakte de som anders NaN,
+  // waardoor de ouder "gem. NaN%" te zien kreeg (bug-jacht 2026-07-31).
+  const geldigeScores = childScores.filter((r) => Number.isFinite(Number(r.percentage)));
+  const subjectStats = geldigeScores.reduce((acc, r) => {
     const key = r.subject;
     if (!acc[key]) acc[key] = { scores: [], label: SUBJECT_LABELS[key] || key };
-    acc[key].scores.push(r.percentage);
+    acc[key].scores.push(Number(r.percentage));
     return acc;
   }, {});
 
   const recentScores = childScores.slice(0, 10);
-  const avgScore = childScores.length ? Math.round(childScores.reduce((s, r) => s + r.percentage, 0) / childScores.length) : null;
+  const avgScore = geldigeScores.length ? Math.round(geldigeScores.reduce((s, r) => s + Number(r.percentage), 0) / geldigeScores.length) : null;
   const strongSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) >= 80).map(([, v]) => v.label);
   const weakSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) < 60 && v.scores.length >= 2).map(([, v]) => v.label);
 
@@ -400,7 +413,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   </span>
                 )}
               </span>
-              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
+              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
             </div>
           ))}
 
@@ -588,7 +601,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                     {citoScores.slice(0, 5).map((s, i) => (
                       <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
                         <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>
-                          {s.level} — {new Date(s.completed_at).toLocaleDateString("nl-NL", { day: "numeric", month: "short" })}
+                          {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
                         </span>
                         <ScoreBadge pct={s.percentage} />
                       </div>
@@ -608,7 +621,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                           {SUBJECT_LABELS[s.subject] || s.subject} · {s.level}
                         </div>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>
-                          {new Date(s.completed_at).toLocaleDateString("nl-NL", { weekday: "short", day: "numeric", month: "short" })}
+                          {fmtDatum(s.completed_at, { weekday: "short", day: "numeric", month: "short" })}
                           {s.time_taken ? ` · ⏱ ${s.time_taken < 60 ? `${s.time_taken}s` : `${Math.floor(s.time_taken / 60)}m ${s.time_taken % 60}s`}` : ""}
                         </div>
                       </div>

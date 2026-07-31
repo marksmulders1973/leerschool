@@ -130,6 +130,10 @@ export const VAK_LABELS = {
   aardrijkskunde: { label: "Aardrijkskunde", icon: "🌍", color: "#2bbd7e" },
   economie: { label: "Economie", icon: "📈", color: "#f59e0b" },
   maatschappijleer: { label: "Maatschappijleer", icon: "⚖️", color: "#06b6d4" },
+  // ExamensPage normaliseert de examen-pad-id-prefix "maatschappijkunde" als
+  // eigen vak-key; zonder dit label toonde de filter-pill de kale dev-key
+  // "maatschappijkunde" i.p.v. "Maatschappijleer" (bug-jacht 2026-07-31).
+  maatschappijkunde: { label: "Maatschappijleer", icon: "⚖️", color: "#06b6d4" },
 };
 
 export const NIVEAU_LABELS = {

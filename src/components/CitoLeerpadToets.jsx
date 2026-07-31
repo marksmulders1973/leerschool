@@ -109,6 +109,14 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
       // officiële volgorde, positie-vaste opties blijven staan). Een tweede
       // shuffle hier ongedaan-maakte die guards — verwijderd 2026-07-08.
       const shuffled = await sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
+      // Lege pool = geen crash: als de lazy-geladen paden-pool niets oplevert
+      // (bv. een subjectFilter die niets matcht of falende dynamic-imports),
+      // dan gaf setMode("running") met 0 vragen een crash op q.subject in de
+      // running-view. Nette melding i.p.v. wit scherm. (bug-jacht 2026-07-31)
+      if (!shuffled.length) {
+        alert("Kon de vragen niet laden. Probeer het opnieuw.");
+        return;
+      }
       // Reset per-run vlaggen: zonder deze reset werd een 2e toets in dezelfde
       // sessie ("🔄 Nieuwe oefen-Doorstroomtoets") nooit geregistreerd — geen
       // afgerond-event, geen ref_mastery — terwijl we zelf "doe minstens 3

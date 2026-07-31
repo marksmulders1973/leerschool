@@ -24,7 +24,9 @@ export default async function handler(req) {
     return json({ error: 'API key not configured' }, 500);
   }
 
-  const { subject, level, count: rawCount = 5, textbook, topic } = await req.json();
+  let body;
+  try { body = await req.json(); } catch { return json({ error: 'Ongeldige JSON', questions: [] }, 400); }
+  const { subject, level, count: rawCount = 5, textbook, topic } = body;
   // Server-side clamp: voorkomt dat een client een gigantische count meestuurt (kostenbom).
   const count = Math.min(Math.max(parseInt(rawCount, 10) || 5, 1), 20);
 

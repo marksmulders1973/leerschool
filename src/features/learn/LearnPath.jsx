@@ -1322,6 +1322,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 )}
                 {showUitlegPad && currentCheck.uitlegPad && (
                   <VraagUitlegPad
+                    key={`${pathId}__${stepIdx}__${realCheckIdx}`}
                     uitlegPad={currentCheck.uitlegPad}
                     vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                     onClose={() => setShowUitlegPad(false)}
@@ -1568,6 +1569,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             {currentCheck.uitlegPad && showUitlegPad && (
               <VraagUitlegPad
+                key={`${pathId}__${stepIdx}__${realCheckIdx}`}
                 uitlegPad={currentCheck.uitlegPad}
                 vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                 onClose={() => setShowUitlegPad(false)}

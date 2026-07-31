@@ -589,9 +589,9 @@ export default function OefenpakketPage({ setPage } = {}) {
                   {h.vragen.map((v) => (
                     <div key={v.nr} className="oefenpakket-vraag" style={{ marginBottom: 6, fontSize: 13, lineHeight: 1.45 }}>
                       <span style={{ fontWeight: 700, color: "#1a2332" }}>
-                        {v.nr}. {LETTERS[v.answer]}
+                        {v.nr}. {LETTERS[v.answer] ?? "?"}
                       </span>{" "}
-                      <span style={{ color: "#3a4658" }}>({stripMd(v.options[v.answer])})</span>
+                      <span style={{ color: "#3a4658" }}>({v.options?.[v.answer] != null ? stripMd(v.options[v.answer]) : "—"})</span>
                       {v.uitleg && <span style={{ color: "#6b7785" }}> — {stripMd(v.uitleg)}</span>}
                     </div>
                   ))}

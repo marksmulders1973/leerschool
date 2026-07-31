@@ -104,13 +104,18 @@ export default async function handler(req, res) {
     if (!create.ok || !cj.id) throw new Error("container-fout: " + JSON.stringify(cj).slice(0, 300));
 
     // 2. Korte status-poll (foto's zijn meestal direct FINISHED)
+    let finished = false;
     for (let i = 0; i < 6; i++) {
       const s = await fetch(`${GRAPH}/${cj.id}?fields=status_code&access_token=${TOKEN}`);
       const sj = await s.json();
-      if (sj.status_code === "FINISHED") break;
+      if (sj.status_code === "FINISHED") { finished = true; break; }
       if (sj.status_code === "ERROR") throw new Error("container-status ERROR");
       await new Promise((r) => setTimeout(r, 1500));
     }
+    // Zonder deze check ging de code óók publiceren als de container na ~9s nog
+    // IN_PROGRESS was (trage render) → Meta weigerde met een cryptische fout.
+    // Nu een duidelijke reden i.p.v. een misleidende publish-fout. (bug-jacht 2026-07-31)
+    if (!finished) throw new Error("container niet FINISHED na 6 pogingen (trage render) — publiceren afgebroken");
 
     // 3. Publiceren op Instagram
     const pub = await fetch(`${GRAPH}/${IG_USER_ID}/media_publish`, {

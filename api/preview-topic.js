@@ -20,7 +20,9 @@ export default async function handler(req) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return json({ error: 'API key not configured' }, 500);
 
-  const { topic } = await req.json();
+  let body;
+  try { body = await req.json(); } catch { return json({ error: 'Ongeldige JSON' }, 400); }
+  const { topic } = body;
   if (!topic || !topic.trim()) return json({ error: 'Geen onderwerp opgegeven' }, 400);
 
   try {
