@@ -326,7 +326,9 @@ const wereldorientatieMixPo = {
   title: "Wereldoriëntatie mix (groep 7-8 Cito-stijl)",
   emoji: "🌍",
   level: "groep7-8",
-  subject: "wereld",
+  // Was "wereld" → verscheen als losse "wereld · 1 onderwerp"-tegel naast
+  // "Wereldoriëntatie". Samengevoegd in de juiste categorie. (bug-jacht 2026-07-31)
+  subject: "wereldorientatie",
   referentieNiveau: "po-doorstroomtoets-wereldorientatie",
   sloThema: "Wereldoriëntatie groep 7-8 — Cito-stijl gemixed eindtoets",
   prerequisites: [

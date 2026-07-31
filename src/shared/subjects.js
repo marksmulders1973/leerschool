@@ -41,6 +41,13 @@ export const SUBJECTS = {
   rekenen: { title: "Rekenen", emoji: "🔢" },
   "begrijpend-lezen": { title: "Begrijpend Lezen", emoji: "📚" },
   cito: { title: "Doorstroomtoets", emoji: "🎯" },
+  // PO-subject-keys die eerder als kale slug in de Leren-hub verschenen
+  // ("spelling", "studievaardigheden", "wereldorientatie", "verkeer") — dev-
+  // jargon in de UI. Nette labels + eigen icoon. (bug-jacht 2026-07-31)
+  spelling: { title: "Spelling", emoji: "✏️" },
+  studievaardigheden: { title: "Studievaardigheden", emoji: "🔎" },
+  wereldorientatie: { title: "Wereldoriëntatie", emoji: "🌐" },
+  verkeer: { title: "Verkeer", emoji: "🚦" },
 };
 
 /**
