@@ -32,6 +32,17 @@ Cito + examens versterken. Drie type werk:
 
 **Informatief (geen actie):** kennisgraaf gezond — 0 kapotte leerpadLinks bij 264 verwijzingen, onafhankelijk gecross-checkt tegen pathManifest (336 ids).
 
+## 💶 SPRINT — Pakket-/prijs-communicatie (Mark 31 jul, "erg belangrijk", 5-agent-panel)
+
+> Doel: kraakhelder + eerlijk dat de BASIS gratis is/blijft, én klaar voor toekomstige winst. Besluiten (Mark delegeerde "kies jij"):
+> naam **Pro** (niet Premium — niveaus op doelgroep: Gratis/Familie/Pro); géén kale "altijd gratis" maar **"gratis — en dat blijft zo"** (gebonden aan de basis, eerlijk); groot verschil-wapen = "geen creditcard, geen proefperiode die stiekem doorloopt" (anti-Squla).
+
+- [x] ✓31/7 **"Wat is gratis?"-knop + pakket-uitleg-modal** (v140, live geverifieerd): `src/components/PakketUitleg.jsx` — grote groene Gratis-kaart bovenaan (BLIJFT GRATIS-badge, geen account/creditcard), Familie + Pro als optionele extra's, eerlijke voetregel, "Jouw pakket nu"-badge. Knop naast Tips op home.
+- [ ] **P1 — E-mail-tagline** (Mark: "voortaal mee met elke mail"): voetregel onder ELKE uitgaande mail (api/ e-mailtemplates: welkom, weekmail, ouder-rapport, kwartiercheck, outreach): *"De basis van Leerkwartier is en blijft gratis — leerkwartier.app"* (of 2-delig: "Oefenen blijft gratis. Familie & Pro voegen inzicht en overzicht toe."). Alle templates langslopen.
+- [ ] **P2 — "Jouw pakket"-badge óók bij de naam** (Mark-wens): nu alleen in de modal; evt. klein pill in de StudentHome-header naast de naam. Koppelen aan useSubscription zodra paywall live (nu = "Gratis" voor iedereen; ondersteun "Familie"/"Pro"/"beiden" voor later).
+- [ ] **P3 — Verdienmodel-verfijning** (verdienmodel-agent): AI-bijles = grootste kostenpost → NIET onbeperkt gratis; klein gratis-maandplafond + rest achter Kwartier-tegoed/Familie. Nu al FREE_QUOTA 0 AI-calls; overweeg kleine gratis-proeverij. Voor paywall-launch.
+- [ ] **P4 — Factuur bij Pro/Familie-aankoop** (Mark 31 jul): op paywall-launch-checklist. Stripe stuurt automatisch factuur-/betaalbewijs-mails; NL-factuur met KvK/BTW erbij. Geen bouwwerk tot Stripe live (~jan 2027).
+
 ## 🖼️ SPRINT — Visuals-sweep 30/31 jul (812 SVG's beoordeeld, ~60 problemen, ronde 1 gefixt)
 
 > Tool: `scripts/visuals-sweep.mjs` (rendert alle leerpad-SVG's op vellen) + screenshots + 3 beoordeel-agents
