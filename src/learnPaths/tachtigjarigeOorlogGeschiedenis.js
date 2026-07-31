@@ -41,10 +41,10 @@ const chapters = [
 
 // Tijdlijn 1568-1648 met sleuteljaren.
 function tijdlijnSvg(activeYear = null) {
-  const startY = 1565;
-  const endY = 1650;
-  const span = endY - startY;
-  const xFor = (y) => 20 + ((y - startY) / span) * 280;
+  // Gebeurtenissen staan NIET op echte jaar-schaal maar met GELIJKE
+  // horizontale afstand — anders plakken de vroege jaren (1566-1581)
+  // op elkaar en overlappen hun labels. Zo houdt elk label ruimte.
+  // Jaartal bij de stip, gebeurtenis-tekst eronder/erboven, om-en-om.
   const events = [
     { y: 1566, label: "Beeldenstorm" },
     { y: 1568, label: "Begin oorlog" },
@@ -55,42 +55,25 @@ function tijdlijnSvg(activeYear = null) {
     { y: 1609, label: "Bestand" },
     { y: 1648, label: "Vrede Münster" },
   ];
-  // De vroege jaren (1566-1581) liggen zo dicht opeen dat de labels overlappen.
-  // Oplossing: labels om-en-om boven/onder de lijn en zijwaarts uit elkaar
-  // schuiven, met een dun verbindingslijntje naar de juiste stip.
-  const declutter = (idxs, minGap) => {
-    const pos = {};
-    let prev = -Infinity;
-    idxs.forEach((i) => {
-      const lx = Math.max(xFor(events[i].y), prev + minGap);
-      pos[i] = lx;
-      prev = lx;
-    });
-    return pos;
-  };
-  const aboveIdx = events.map((_, i) => i).filter((i) => i % 2 === 0);
-  const belowIdx = events.map((_, i) => i).filter((i) => i % 2 === 1);
-  const labelX = { ...declutter(aboveIdx, 60), ...declutter(belowIdx, 62) };
-  return `<svg viewBox="0 0 320 110">
-<line x1="20" y1="60" x2="300" y2="60" stroke="${COLORS.muted}" stroke-width="1"/>
+  const x0 = 30;
+  const x1 = 390;
+  const n = events.length;
+  const xFor = (i) => x0 + (i / (n - 1)) * (x1 - x0);
+  return `<svg viewBox="0 0 420 130">
+<line x1="${x0}" y1="65" x2="${x1}" y2="65" stroke="${COLORS.muted}" stroke-width="1.5"/>
 ${events.map((e, i) => {
-    const x = xFor(e.y);
-    const lx = Math.min(Math.max(labelX[i], 8), 312);
+    const x = xFor(i);
     const above = i % 2 === 0;
     const active = activeYear === e.y;
-    const col = active ? "#fff" : COLORS.muted;
-    const anchor = lx > 280 ? "end" : lx < 40 ? "start" : "middle";
-    const yearY = above ? 40 : 76;
-    const labelY = above ? 29 : 88;
-    const connFrom = above ? 56 : 64;
-    const connTo = above ? 44 : 72;
+    const col = active ? "#fff" : COLORS.text;
+    const yearY = above ? 44 : 84;
+    const labelY = above ? 33 : 96;
     return `
-<line x1="${x}" y1="${connFrom}" x2="${lx}" y2="${connTo}" stroke="${COLORS.muted}" stroke-width="0.5" opacity="0.6"/>
-<circle cx="${x}" cy="60" r="${active ? 6 : 4}" fill="${active ? COLORS.warm : COLORS.republiek}" stroke="${active ? "#fff" : "transparent"}" stroke-width="2"/>
-<text x="${lx}" y="${yearY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
-<text x="${lx}" y="${labelY}" text-anchor="${anchor}" fill="${col}" font-size="8" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
+<circle cx="${x}" cy="65" r="${active ? 6 : 4.5}" fill="${active ? COLORS.warm : COLORS.republiek}" stroke="${active ? "#fff" : "#0d1b2e"}" stroke-width="${active ? 2 : 1.2}"/>
+<text x="${x}" y="${yearY}" text-anchor="middle" fill="${col}" font-size="10" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">${e.y}</text>
+<text x="${x}" y="${labelY}" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="8.5" font-family="Arial" font-weight="${active ? "bold" : "normal"}" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">${e.label}</text>`;
   }).join("")}
-<text x="160" y="103" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Tachtigjarige Oorlog: 1568 — 1648</text>
+<text x="210" y="120" text-anchor="middle" fill="${COLORS.goud}" font-size="10" font-family="Arial" font-weight="bold">Tachtigjarige Oorlog: 1568 — 1648</text>
 </svg>`;
 }
 

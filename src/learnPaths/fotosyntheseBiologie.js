@@ -28,61 +28,83 @@ const chapters = [
 ];
 
 function fotosyntheseSvg() {
-  // ICP groep 6-8 / klas 1-2: duidelijk onderscheid IN-de-plant vs UIT-de-plant.
-  // Mark feedback 2026-05-12: oude SVG had verwarrende pijl-richtingen.
-  // - Pijlen die NAAR het blad wijzen = INPUT (zonlicht, CO2 uit lucht).
-  // - Pijl OMHOOG uit grond = INPUT (water via wortels).
-  // - Pijl die WEG van het blad wijst = OUTPUT (O2 naar de lucht).
-  // - Suiker blijft in de plant — geen pijl naar buiten, label binnen plant.
-  // Plus labels boven en onder de plant: "ERIN" en "ERUIT".
-  const bladX = 170, bladY = 115;
-  return `<svg viewBox="0 0 340 240">
-<rect x="0" y="0" width="340" height="240" fill="${COLORS.paper}"/>
-<text x="170" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">Fotosynthese — wat gaat erin, wat komt eruit?</text>
+  // Heldere in/uit-cyclus rond de plant in het midden (herzien 2026-07-31).
+  // RECHTS = INVOER (pijlen NAAR de plant): zonlicht (boven), CO₂ (midden), water (onder, uit grond).
+  // LINKS  = UITVOER (pijlen WEG van de plant): O₂ zuurstof (boven), glucose/suiker (onder).
+  // Alle labels + vormen binnen viewBox 460×320; geen overlap, ruime witruimte.
+  // Labels boven drukke zones krijgen een donkere rand voor leesbaarheid.
+  const bg = "#0d1b2e", groen = "#00c853", blauw = "#1976d2", geel = "#ffd54f";
+  const txt = "#e0e6f0", gedempt = "#8899aa";
+  // Donkere rand-set voor labels boven drukke gebieden.
+  const rand = `paint-order="stroke" stroke="${bg}" stroke-width="2.6" stroke-linejoin="round"`;
+  const cx = 230, cy = 150; // hart van de plant (blad-kruin)
+  return `<svg viewBox="-58 0 578 320">
+<rect x="-58" y="0" width="578" height="320" fill="${bg}"/>
+<text x="230" y="26" text-anchor="middle" fill="${groen}" font-size="16" font-family="Arial" font-weight="bold">Fotosynthese — erin en eruit</text>
 
-<!-- KOPJES boven -->
-<text x="70" y="42" text-anchor="middle" fill="${COLORS.o2}" font-size="11" font-family="Arial" font-weight="bold">↑ ERUIT</text>
-<text x="270" y="42" text-anchor="middle" fill="${COLORS.curve2}" font-size="11" font-family="Arial" font-weight="bold">↓ ERIN</text>
+<!-- Kolomkopjes -->
+<text x="105" y="52" text-anchor="middle" fill="${gedempt}" font-size="12" font-family="Arial" font-weight="bold">← ERUIT</text>
+<text x="355" y="52" text-anchor="middle" fill="${gedempt}" font-size="12" font-family="Arial" font-weight="bold">ERIN →</text>
 
-<!-- Zon (rechts boven, voor INPUT) -->
-<circle cx="285" cy="68" r="18" fill="${COLORS.zon}"/>
-<text x="285" y="72" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">zon</text>
+<!-- ===== PLANT IN HET MIDDEN ===== -->
+<!-- grond -->
+<rect x="176" y="270" width="108" height="30" rx="4" fill="#3e2f26"/>
+<text x="230" y="290" text-anchor="middle" fill="${gedempt}" font-size="11" font-family="Arial">grond</text>
+<!-- stam -->
+<rect x="226" y="150" width="8" height="122" fill="#5d4037"/>
+<!-- wortels -->
+<path d="M230 272 L214 300 M230 272 L246 300 M230 278 L230 300" stroke="#5d4037" stroke-width="3" fill="none" stroke-linecap="round"/>
+<!-- bladeren / kruin -->
+<ellipse cx="${cx}" cy="${cy}" rx="52" ry="30" fill="${groen}"/>
+<ellipse cx="${cx - 40}" cy="${cy + 8}" rx="26" ry="16" fill="#00a844"/>
+<ellipse cx="${cx + 40}" cy="${cy + 8}" rx="26" ry="16" fill="#00a844"/>
+<text x="${cx}" y="${cy + 5}" text-anchor="middle" fill="#08351a" font-size="13" font-family="Arial" font-weight="bold">plant</text>
 
-<!-- INPUT 1: Zonlicht pijl van zon naar blad -->
-<line x1="270" y1="80" x2="${bladX + 25}" y2="${bladY - 6}" stroke="${COLORS.zon}" stroke-width="2.5"/>
-<polygon points="${bladX + 22},${bladY - 12} ${bladX + 30},${bladY - 6} ${bladX + 18},${bladY - 4}" fill="${COLORS.zon}"/>
-<text x="248" y="97" text-anchor="end" fill="${COLORS.zon}" font-size="11" font-family="Arial" font-weight="bold">zonlicht →</text>
+<!-- ===== INVOER (rechts, pijlen NAAR de plant) ===== -->
+<!-- Zon boven rechts (getekend, geen emoji — rendert overal betrouwbaar) -->
+<g stroke="${geel}" stroke-width="2.5" stroke-linecap="round">
+<line x1="410" y1="56" x2="410" y2="64"/><line x1="410" y1="112" x2="410" y2="120"/>
+<line x1="378" y1="88" x2="386" y2="88"/><line x1="434" y1="88" x2="442" y2="88"/>
+<line x1="388" y1="66" x2="393" y2="71"/><line x1="427" y1="105" x2="432" y2="110"/>
+<line x1="432" y1="66" x2="427" y2="71"/><line x1="393" y1="105" x2="388" y2="110"/>
+</g>
+<circle cx="410" cy="88" r="20" fill="${geel}"/>
+<!-- Invoer 1: zonlicht (van boven rechts naar kruin) -->
+<line x1="390" y1="104" x2="300" y2="128" stroke="${geel}" stroke-width="3"/>
+<polygon points="300,128 314,122 314,134" fill="${geel}"/>
+<text x="392" y="128" text-anchor="end" fill="${geel}" font-size="14" font-family="Arial" font-weight="bold" ${rand}>zonlicht</text>
 
-<!-- INPUT 2: CO2 pijl van rechts naar blad -->
-<line x1="305" y1="${bladY}" x2="${bladX + 28}" y2="${bladY}" stroke="${COLORS.co2}" stroke-width="2.5"/>
-<polygon points="${bladX + 30},${bladY - 5} ${bladX + 22},${bladY} ${bladX + 30},${bladY + 5}" fill="${COLORS.co2}"/>
-<text x="310" y="${bladY - 4}" fill="${COLORS.co2}" font-size="12" font-family="Arial" font-weight="bold">CO₂</text>
-<text x="310" y="${bladY + 12}" fill="${COLORS.muted}" font-size="9" font-family="Arial">uit lucht</text>
+<!-- Invoer 2: CO₂ uit de lucht (recht naar de kruin) -->
+<line x1="392" y1="168" x2="292" y2="158" stroke="${gedempt}" stroke-width="3"/>
+<polygon points="292,158 306,151 305,164" fill="${gedempt}"/>
+<text x="398" y="164" fill="${txt}" font-size="14" font-family="Arial" font-weight="bold">CO₂</text>
+<text x="398" y="180" fill="${gedempt}" font-size="11" font-family="Arial">koolstofdioxide</text>
+<text x="398" y="194" fill="${gedempt}" font-size="11" font-family="Arial">uit de lucht</text>
 
-<!-- Plant: stam + blad in midden -->
-<rect x="${bladX - 3}" y="${bladY + 10}" width="6" height="65" fill="#5d4037"/>
-<ellipse cx="${bladX}" cy="${bladY}" rx="32" ry="14" fill="${COLORS.blad}"/>
-<text x="${bladX}" y="${bladY + 4}" text-anchor="middle" fill="#0e1014" font-size="11" font-family="Arial" font-weight="bold">blad</text>
+<!-- Invoer 3: water via de wortels (van rechtsonder naar de stam, omhoog) -->
+<line x1="392" y1="256" x2="292" y2="256" stroke="${blauw}" stroke-width="3"/>
+<polygon points="292,256 306,249 306,263" fill="${blauw}"/>
+<text x="398" y="252" fill="${blauw}" font-size="14" font-family="Arial" font-weight="bold">Water</text>
+<text x="398" y="268" fill="${gedempt}" font-size="11" font-family="Arial">via de wortels</text>
+<!-- water stroomt de stam in omhoog -->
+<line x1="248" y1="256" x2="248" y2="190" stroke="${blauw}" stroke-width="2.5" stroke-dasharray="4 4"/>
+<polygon points="248,186 243,198 253,198" fill="${blauw}"/>
 
-<!-- OUTPUT: O2 pijl van blad naar links omhoog (weg) -->
-<line x1="${bladX - 28}" y1="${bladY - 3}" x2="50" y2="${bladY - 25}" stroke="${COLORS.o2}" stroke-width="2.5"/>
-<polygon points="55,${bladY - 30} 45,${bladY - 27} 53,${bladY - 19}" fill="${COLORS.o2}"/>
-<text x="30" y="${bladY - 32}" fill="${COLORS.o2}" font-size="12" font-family="Arial" font-weight="bold">O₂ →</text>
-<text x="30" y="${bladY - 18}" fill="${COLORS.muted}" font-size="9" font-family="Arial">zuurstof</text>
+<!-- ===== UITVOER (links, pijlen WEG van de plant) ===== -->
+<!-- Uitvoer 1: O₂ zuurstof (van kruin naar linksboven weg) -->
+<line x1="182" y1="132" x2="86" y2="96" stroke="${groen}" stroke-width="3"/>
+<polygon points="86,96 100,96 94,108" fill="${groen}"/>
+<text x="78" y="92" text-anchor="end" fill="${groen}" font-size="14" font-family="Arial" font-weight="bold" ${rand}>O₂ zuurstof</text>
+<text x="78" y="108" text-anchor="end" fill="${gedempt}" font-size="11" font-family="Arial" ${rand}>de lucht in</text>
 
-<!-- Suiker (BLIJFT in plant — geen pijl) -->
-<text x="${bladX}" y="${bladY + 26}" text-anchor="middle" fill="${COLORS.highlight}" font-size="11" font-family="Arial" font-weight="bold">+ suiker</text>
-<text x="${bladX}" y="${bladY + 38}" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">(blijft in plant — voor groei)</text>
+<!-- Uitvoer 2: glucose / suiker (van plant naar links weg) -->
+<line x1="182" y1="176" x2="86" y2="210" stroke="${geel}" stroke-width="3"/>
+<polygon points="86,210 100,204 100,216" fill="${geel}"/>
+<text x="78" y="200" text-anchor="end" fill="${geel}" font-size="14" font-family="Arial" font-weight="bold" ${rand}>Glucose (suiker)</text>
+<text x="78" y="216" text-anchor="end" fill="${gedempt}" font-size="11" font-family="Arial" ${rand}>= voedsel voor de plant</text>
 
-<!-- Grond -->
-<rect x="100" y="200" width="160" height="28" fill="#5d4037" opacity="0.5"/>
-<text x="128" y="219" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">grond</text>
-
-<!-- INPUT 3: Water pijl OMHOOG door wortel/stam naar blad -->
-<line x1="${bladX}" y1="225" x2="${bladX}" y2="${bladY + 12}" stroke="${COLORS.water}" stroke-width="3"/>
-<polygon points="${bladX - 5},${bladY + 14} ${bladX + 5},${bladY + 14} ${bladX},${bladY + 6}" fill="${COLORS.water}"/>
-<text x="${bladX + 18}" y="218" fill="${COLORS.water}" font-size="11" font-family="Arial" font-weight="bold">↑ water</text>
-<text x="${bladX + 18}" y="230" fill="${COLORS.muted}" font-size="9" font-family="Arial">uit grond</text>
+<!-- Korte formule onderaan -->
+<text x="230" y="316" text-anchor="middle" fill="${txt}" font-size="12" font-family="Arial">zonlicht + water + CO₂ → suiker + zuurstof</text>
 </svg>`;
 }
 

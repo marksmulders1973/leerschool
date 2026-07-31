@@ -48,10 +48,9 @@ const chapters = [
 // Tijdlijn-SVG: 1919-1950, met markers voor sleuteljaren.
 // `activeYear` = jaar dat opgelicht moet worden (of null voor alleen overzicht).
 function tijdlijnSvg(activeYear = null) {
-  const startYear = 1919;
-  const endYear = 1950;
-  const span = endYear - startYear;
-  const xFor = (y) => 20 + ((y - startYear) / span) * 270;
+  // Gebeurtenissen staan met GELIJKE horizontale afstand (niet op echte
+  // jaar-schaal) — anders plakken 1939/1940 en 1944/1945 met hun labels
+  // ("NL bezet"/"Bevrijding") op elkaar. Zo houdt elk label ruimte.
   const events = [
     { y: 1919, label: "Versailles" },
     { y: 1929, label: "Crisis" },
@@ -61,47 +60,35 @@ function tijdlijnSvg(activeYear = null) {
     { y: 1944, label: "D-Day" },
     { y: 1945, label: "Bevrijding" },
   ];
+  const x0 = 30;
+  const x1 = 390;
+  const n = events.length;
+  const xFor = (i) => x0 + (i / (n - 1)) * (x1 - x0);
   const periodFill = (y) => (y < 1939 ? COLORS.pre : y < 1945 ? COLORS.war : COLORS.post);
-  // 1939/1940 en 1944/1945 liggen dicht opeen → labels om-en-om boven/onder
-  // de balk zetten en zijwaarts uit elkaar schuiven, met verbindingslijntje.
-  const declutter = (idxs, minGap) => {
-    const pos = {};
-    let prev = -Infinity;
-    idxs.forEach((i) => {
-      const lx = Math.max(xFor(events[i].y), prev + minGap);
-      pos[i] = lx;
-      prev = lx;
-    });
-    return pos;
-  };
-  const aboveIdx = events.map((_, i) => i).filter((i) => i % 2 === 0);
-  const belowIdx = events.map((_, i) => i).filter((i) => i % 2 === 1);
-  const labelX = { ...declutter(aboveIdx, 54), ...declutter(belowIdx, 46) };
-  return `<svg viewBox="0 0 310 110">
-<rect x="20" y="44" width="${xFor(1939) - 20}" height="14" fill="${COLORS.pre}" opacity="0.55"/>
-<rect x="${xFor(1939)}" y="44" width="${xFor(1945) - xFor(1939)}" height="14" fill="${COLORS.war}" opacity="0.65"/>
-<rect x="${xFor(1945)}" y="44" width="${xFor(endYear) - xFor(1945)}" height="14" fill="${COLORS.post}" opacity="0.55"/>
+  // Fase-grenzen op event-posities: Oorlog begint bij WO2 (index 3),
+  // Gevolgen bij Bevrijding (index 6). Balk half tussen de stippen breken.
+  const warStart = (xFor(2) + xFor(3)) / 2;
+  const postStart = (xFor(5) + xFor(6)) / 2;
+  return `<svg viewBox="0 0 420 130">
+<rect x="${x0}" y="59" width="${warStart - x0}" height="14" fill="${COLORS.pre}" opacity="0.55"/>
+<rect x="${warStart}" y="59" width="${postStart - warStart}" height="14" fill="${COLORS.war}" opacity="0.65"/>
+<rect x="${postStart}" y="59" width="${x1 - postStart}" height="14" fill="${COLORS.post}" opacity="0.55"/>
 ${events.map((e, i) => {
-  const x = xFor(e.y);
-  const lx = Math.min(Math.max(labelX[i], 8), 302);
+  const x = xFor(i);
   const above = i % 2 === 0;
   const active = activeYear === e.y;
-  const r = active ? 6 : 4;
-  const col = active ? "#fff" : COLORS.muted;
-  const anchor = lx > 250 ? "end" : lx < 40 ? "start" : "middle";
-  const yearY = above ? 34 : 72;
-  const labelY = above ? 24 : 82;
-  const connFrom = above ? 47 : 55;
-  const connTo = above ? 37 : 65;
+  const r = active ? 6 : 4.5;
+  const col = active ? "#fff" : COLORS.text;
+  const yearY = above ? 48 : 88;
+  const labelY = above ? 37 : 100;
   return `
-<line x1="${x}" y1="${connFrom}" x2="${lx}" y2="${connTo}" stroke="${COLORS.muted}" stroke-width="0.5" opacity="0.6"/>
-<circle cx="${x}" cy="51" r="${r}" fill="${active ? "#fff" : periodFill(e.y)}" stroke="${active ? periodFill(e.y) : "#fff"}" stroke-width="2"/>
-<text x="${lx}" y="${yearY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.y}</text>
-<text x="${lx}" y="${labelY}" text-anchor="${anchor}" fill="${col}" font-size="9" font-family="Arial" font-weight="${active ? "bold" : "normal"}">${e.label}</text>`;
+<circle cx="${x}" cy="66" r="${r}" fill="${active ? "#fff" : periodFill(e.y)}" stroke="${active ? periodFill(e.y) : "#0d1b2e"}" stroke-width="${active ? 2 : 1.2}"/>
+<text x="${x}" y="${yearY}" text-anchor="middle" fill="${col}" font-size="10" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">${e.y}</text>
+<text x="${x}" y="${labelY}" text-anchor="middle" fill="${active ? "#fff" : COLORS.muted}" font-size="8.5" font-family="Arial" font-weight="${active ? "bold" : "normal"}" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">${e.label}</text>`;
 }).join("")}
-<text x="20" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">Aanloop</text>
-<text x="${xFor(1942) - 12}" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">Oorlog</text>
-<text x="${xFor(1948) - 12}" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">Gevolgen</text>
+<text x="${(x0 + warStart) / 2}" y="124" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Aanloop</text>
+<text x="${(warStart + postStart) / 2}" y="124" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Oorlog</text>
+<text x="${(postStart + x1) / 2}" y="124" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Gevolgen</text>
 </svg>`;
 }
 
