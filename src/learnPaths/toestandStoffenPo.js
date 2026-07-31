@@ -26,44 +26,90 @@ const chapters = [
 ];
 
 function toestandSvg() {
-  return `<svg viewBox="0 0 320 180">
-<rect x="0" y="0" width="320" height="180" fill="${COLORS.paper}"/>
-<text x="160" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">3 toestanden van een stof</text>
+  const bg = "#0d1b2e";
+  const kop = "#e0e6f0";
+  const dimmed = "#8899aa";
+  const bol = "#5d9cec";
+  const accent = "#ffd54f";
+  const boxStroke = "rgba(93,156,236,0.35)";
+  const boxFill = "rgba(93,156,236,0.06)";
 
-<!-- Vast -->
-<rect x="20" y="45" width="80" height="80" rx="6" fill="rgba(128,203,196,0.18)" stroke="${COLORS.vast}" stroke-width="1.5"/>
-<text x="60" y="65" text-anchor="middle" fill="${COLORS.vast}" font-size="12" font-family="Arial" font-weight="bold">VAST</text>
-<!-- molecules dicht op elkaar -->
-${[0, 1, 2, 3].map((i) => {
-    const x = 35 + (i % 2) * 25;
-    const y = 75 + Math.floor(i / 2) * 25;
-    return `<circle cx="${x}" cy="${y}" r="6" fill="${COLORS.vast}"/>`;
-  }).join("")}
-<text x="60" y="142" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">vorm + volume vast</text>
+  // Paneel-geometrie: 3 vakken naast elkaar binnen viewBox 360x210.
+  const panelY = 62;
+  const panelH = 96;
+  const panelW = 104;
+  const panelXs = [12, 128, 244]; // ruime tussenruimte, alles binnen 360
+  const cx0 = (px) => px + panelW / 2; // midden van een paneel
 
-<!-- Vloeibaar -->
-<rect x="115" y="45" width="80" height="80" rx="6" fill="rgba(66,165,245,0.18)" stroke="${COLORS.vloeibaar}" stroke-width="1.5"/>
-<text x="155" y="65" text-anchor="middle" fill="${COLORS.vloeibaar}" font-size="12" font-family="Arial" font-weight="bold">VLOEIBAAR</text>
-<!-- molecules verspreid -->
-${[0, 1, 2, 3, 4, 5].map((i) => {
-    const x = 125 + (i % 3) * 22;
-    const y = 80 + Math.floor(i / 3) * 22;
-    return `<circle cx="${x}" cy="${y}" r="5" fill="${COLORS.vloeibaar}"/>`;
-  }).join("")}
-<text x="155" y="142" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">vorm los, volume vast</text>
+  // VAST — strak rooster 4x4, dicht opeen en netjes.
+  const vastCircles = [];
+  const vRows = 4;
+  const vCols = 4;
+  const vGap = 20;
+  const vStartX = panelXs[0] + panelW / 2 - ((vCols - 1) * vGap) / 2;
+  const vStartY = panelY + 26;
+  for (let r = 0; r < vRows; r++) {
+    for (let c = 0; c < vCols; c++) {
+      vastCircles.push(
+        `<circle cx="${vStartX + c * vGap}" cy="${vStartY + r * vGap}" r="7" fill="${bol}"/>`
+      );
+    }
+  }
 
-<!-- Gas -->
-<rect x="210" y="45" width="80" height="80" rx="6" fill="rgba(255,213,79,0.18)" stroke="${COLORS.gas}" stroke-width="1.5"/>
-<text x="250" y="65" text-anchor="middle" fill="${COLORS.gas}" font-size="12" font-family="Arial" font-weight="bold">GAS</text>
-<!-- molecules ver uit elkaar -->
-${[0, 1, 2, 3, 4].map((i) => {
-    const x = 220 + (i * 14) % 60;
-    const y = 78 + ((i * 17) % 40);
-    return `<circle cx="${x}" cy="${y}" r="3" fill="${COLORS.gas}"/>`;
-  }).join("")}
-<text x="250" y="142" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">vult de hele ruimte</text>
+  // VLOEIBAAR — dicht bij elkaar maar ongeordend (vaste jitter-set, geen overlap-clash).
+  const vloOffsets = [
+    [16, 18], [40, 12], [64, 20], [86, 14],
+    [10, 42], [34, 38], [58, 44], [82, 40],
+    [22, 64], [48, 60], [70, 68], [90, 62],
+    [14, 84], [40, 82], [66, 86],
+  ];
+  const vloCircles = vloOffsets
+    .map(([ox, oy]) => `<circle cx="${panelXs[1] + ox}" cy="${panelY + 8 + oy}" r="6.5" fill="${bol}"/>`)
+    .join("");
 
-<text x="160" y="167" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Bv. water = ijs (vast) → water (vloeibaar) → stoom (gas)</text>
+  // GAS — weinig bolletjes, ver uit elkaar, willekeurig verspreid.
+  const gasOffsets = [
+    [20, 20], [74, 14], [50, 46], [16, 70], [82, 66], [46, 82],
+  ];
+  const gasCircles = gasOffsets
+    .map(([ox, oy]) => `<circle cx="${panelXs[2] + ox}" cy="${panelY + 8 + oy}" r="5.5" fill="${bol}"/>`)
+    .join("");
+
+  const panel = (px) =>
+    `<rect x="${px}" y="${panelY}" width="${panelW}" height="${panelH}" rx="8" fill="${boxFill}" stroke="${boxStroke}" stroke-width="1.5"/>`;
+
+  const kopLabel = (px, txt) =>
+    `<text x="${cx0(px)}" y="${panelY - 10}" text-anchor="middle" fill="${kop}" font-size="15" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="${bg}" stroke-width="2.6">${txt}</text>`;
+
+  const onderLabel = (px, txt) =>
+    `<text x="${cx0(px)}" y="${panelY + panelH + 20}" text-anchor="middle" fill="${dimmed}" font-size="11" font-family="Arial">${txt}</text>`;
+
+  const stofLabel = (px, txt) =>
+    `<text x="${cx0(px)}" y="${panelY + panelH + 38}" text-anchor="middle" fill="${accent}" font-size="11.5" font-family="Arial" font-weight="bold">${txt}</text>`;
+
+  return `<svg viewBox="0 0 360 210">
+<rect x="0" y="0" width="360" height="210" fill="${bg}"/>
+<text x="180" y="18" text-anchor="middle" fill="${kop}" font-size="13" font-family="Arial" font-weight="bold">De 3 toestanden — kleine deeltjes</text>
+
+${panel(panelXs[0])}
+${panel(panelXs[1])}
+${panel(panelXs[2])}
+
+${kopLabel(panelXs[0], "VAST")}
+${kopLabel(panelXs[1], "VLOEIBAAR")}
+${kopLabel(panelXs[2], "GAS")}
+
+${vastCircles.join("")}
+${vloCircles}
+${gasCircles}
+
+${onderLabel(panelXs[0], "vaste vorm")}
+${onderLabel(panelXs[1], "neemt vorm aan")}
+${onderLabel(panelXs[2], "vult de ruimte")}
+
+${stofLabel(panelXs[0], "ijs")}
+${stofLabel(panelXs[1], "water")}
+${stofLabel(panelXs[2], "stoom / damp")}
 </svg>`;
 }
 

@@ -44,24 +44,54 @@ ${cells}
 </svg>`;
 }
 
-function gridSvg(rijen, kolommen, label) {
-  const w = 320, h = 160;
-  const cellW = 22;
-  const startX = (w - kolommen * cellW) / 2;
-  const startY = 45;
-  let cells = "";
-  for (let r = 0; r < rijen; r++) {
-    for (let c = 0; c < kolommen; c++) {
-      const x = startX + c * cellW;
-      const y = startY + r * cellW;
-      cells += `<rect x="${x}" y="${y}" width="${cellW - 2}" height="${cellW - 2}" fill="rgba(105,240,174,0.4)" stroke="${COLORS.curve}" stroke-width="0.5"/>`;
+// Rijen-model: teken één keers -som als rijen stippen (bolletjes), elke rij een
+// eigen kleur zodat "N groepjes van M" zichtbaar is. Rekent zelf uit.
+// blokX = linker-x van dit blokje binnen de gedeelde viewBox.
+function groepjesBlok(rijen, kolommen, blokX, topY, kleuren) {
+  const r = 7;            // straal van een stip
+  const gap = 22;         // hart-op-hart afstand tussen stippen
+  const startX = blokX + r + 4;
+  let dots = "";
+  for (let ri = 0; ri < rijen; ri++) {
+    const cy = topY + ri * gap;
+    const kleur = kleuren[ri % kleuren.length];
+    // lichte "groepje"-band achter elke rij, zodat de rij herkenbaar is
+    dots += `<rect x="${startX - r - 3}" y="${cy - r - 2}" width="${(kolommen - 1) * gap + 2 * r + 6}" height="${2 * r + 4}" rx="${r + 2}" fill="${kleur}" opacity="0.13"/>`;
+    for (let ci = 0; ci < kolommen; ci++) {
+      const cx = startX + ci * gap;
+      dots += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${kleur}"/>`;
     }
   }
+  return dots;
+}
+
+// Twee heldere voorbeelden naast elkaar: 3 × 4 en 5 × 2, als stippen-rijen.
+function groepjesSvg() {
+  const w = 340, h = 230;
+  const kleuren = [COLORS.highlight, COLORS.curve, "#5d9cec", "#ff8a65", "#69f0ae"];
+  const topY = 60; // eerste rij stippen
+
+  // Voorbeeld 1: 3 × 4 = 12  → 3 rijen van 4, linkerhelft
+  const v1 = groepjesBlok(3, 4, 22, topY, kleuren);
+  // Voorbeeld 2: 5 × 2 = 10  → 5 rijen van 2, rechterhelft
+  const v2 = groepjesBlok(5, 2, 232, topY, kleuren);
+
   return `<svg viewBox="0 0 ${w} ${h}">
 <rect x="0" y="0" width="${w}" height="${h}" fill="${COLORS.paper}"/>
-<text x="${w / 2}" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">${label}</text>
-${cells}
-<text x="${w / 2}" y="${h - 5}" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">${rijen} rijen × ${kolommen} kolommen = ${rijen * kolommen} vakjes</text>
+<text x="${w / 2}" y="24" text-anchor="middle" fill="${COLORS.curve2}" font-size="14" font-family="Arial" font-weight="bold">Keersom = groepjes tellen</text>
+<text x="${w / 2}" y="41" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">elke kleur is één groepje</text>
+
+<text x="90" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">3 × 4 = 12</text>
+${v1}
+<text x="90" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">3 groepjes van 4</text>
+
+<line x1="170" y1="52" x2="170" y2="205" stroke="${COLORS.muted}" stroke-width="0.6" opacity="0.4"/>
+
+<text x="258" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">5 × 2 = 10</text>
+${v2}
+<text x="258" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">5 groepjes van 2</text>
+
+<text x="${w / 2}" y="223" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tel de stippen: dat is het antwoord</text>
 </svg>`;
 }
 
@@ -71,7 +101,7 @@ const steps = [
     title: "Wat is een tafel (vermenigvuldigen)?",
     explanation:
       "Een **tafel** is een **rijtje vermenigvuldigingen** met hetzelfde getal.\n\n**Voorbeeld — tafel van 3**:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• ...tot 10 × 3 = 30.\n\nElk antwoord is **3 meer** dan de vorige *(stappen van 3)*.\n\n**Wat betekent 'keer'?**\n• **3 × 4** = **3 keer 4** = 4 + 4 + 4 = 12.\n• **5 × 2** = 5 keer 2 = 2 + 2 + 2 + 2 + 2 = 10.\n\nDus 'keer' is **hetzelfde optellen, maar korter**.\n\n**Waarom tafels leren?**\nBij **redactiesommen** *(verhaaltjes-sommen)* en **rekenen op grote getallen** heb je tafels nodig:\n• 4 zakjes met 6 koekjes = 4 × 6 = 24 koekjes.\n• 1 boek kost €7, 5 boeken kosten 5 × €7 = €35.\n\n**Belangrijke regel**:\nDe volgorde **maakt niet uit**:\n• 3 × 4 = 12.\n• 4 × 3 = 12.\nDit heet de **wisselregel** (of 'commutatief').\n\n**Cito-truc — 'rooster' tekenen**:\nBij 4 × 6 stel je voor: 4 rijen van 6 vakjes. Totaal = 4 × 6 = 24 vakjes. Helpt om 'keer' te visualiseren.",
-    svg: gridSvg(4, 6, "4 × 6 = 24 vakjes"),
+    svg: groepjesSvg(),
     checks: [
       {
         q: "Wat is **3 × 4**?",

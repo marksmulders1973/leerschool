@@ -38,18 +38,33 @@ const steps = [
   {
     title: "Open en gesloten lettergrepen",
     explanation: "Een **lettergreep** is een stukje van een woord dat je in één 'hap' kunt uitspreken.\n\n**maan** = 1 lettergreep   ·   **ma-nen** = 2 lettergrepen   ·   **op-tel-len** = 3 lettergrepen\n\n**Open lettergreep** = eindigt op een **klinker** (a, e, i, o, u).\n• ma-nen → \"ma-\" eindigt op a → open\n• ho-pen → \"ho-\" eindigt op o → open\n\n**Gesloten lettergreep** = eindigt op een **medeklinker** (b, c, d, ... behalve a/e/i/o/u).\n• man-nen → \"man-\" eindigt op n → gesloten\n• hop-pen → \"hop-\" eindigt op p → gesloten\n\n**Waarom belangrijk?** De spelregels voor klinkers hangen ervan af:\n• In een **open** lettergreep is één klinker al lang: \"ma-nen\" (= aa-klank), \"ho-pen\" (= oo-klank).\n• In een **gesloten** lettergreep is één klinker kort: \"man-nen\" (a-klank), \"hop-pen\" (o-klank).\n\n**Truc om woorden in lettergrepen te splitsen**:\n1. Klap mee op je hand bij elke klinker-klank: ma-nen → 2 keer klappen.\n2. Of: zeg het langzaam — waar je adem hapt = nieuwe lettergreep.",
-    svg: `<svg viewBox="0 0 300 200">
-<rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
-<rect x="35" y="60" width="105" height="64" rx="8" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="87" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">OPEN</text>
-<text x="87" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">eindigt op klinker</text>
-<text x="87" y="116" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">ma-nen</text>
-<rect x="160" y="60" width="105" height="64" rx="8" fill="rgba(255,112,67,0.15)" stroke="${COLORS.alt}" stroke-width="2"/>
-<text x="212" y="82" text-anchor="middle" fill="${COLORS.alt}" font-size="13" font-family="Arial" font-weight="bold">GESLOTEN</text>
-<text x="212" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">eindigt op medekl.</text>
-<text x="212" y="116" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">man-nen</text>
-<text x="150" y="148" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">truc: klap mee bij elke klinker</text>
-<text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">open = klinker is lang · gesloten = klinker is kort</text>
+    svg: `<svg viewBox="0 0 300 210">
+<rect x="12" y="10" width="276" height="190" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
+<text x="150" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">Knip het woord in lettergrepen</text>
+
+<!-- Woord 1: ta - fel  (open + gesloten) -->
+<rect x="46" y="44" width="88" height="42" rx="8" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="2"/>
+<text x="90" y="72" text-anchor="middle" fill="${COLORS.text}" font-size="19" font-family="Arial" font-weight="bold">ta</text>
+<text x="145" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="18" font-family="Arial">-</text>
+<rect x="156" y="44" width="88" height="42" rx="8" fill="rgba(255,112,67,0.18)" stroke="${COLORS.alt}" stroke-width="2"/>
+<text x="200" y="72" text-anchor="middle" fill="${COLORS.text}" font-size="19" font-family="Arial" font-weight="bold">fel</text>
+<text x="90" y="99" text-anchor="middle" fill="${COLORS.good}" font-size="9.5" font-family="Arial" font-weight="bold">open (op a)</text>
+<text x="200" y="99" text-anchor="middle" fill="${COLORS.alt}" font-size="9.5" font-family="Arial" font-weight="bold">gesloten (op l)</text>
+
+<!-- Woord 2: man - nen  (gesloten + gesloten) -->
+<rect x="46" y="112" width="88" height="42" rx="8" fill="rgba(255,112,67,0.18)" stroke="${COLORS.alt}" stroke-width="2"/>
+<text x="90" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="19" font-family="Arial" font-weight="bold">man</text>
+<text x="145" y="140" text-anchor="middle" fill="${COLORS.muted}" font-size="18" font-family="Arial">-</text>
+<rect x="156" y="112" width="88" height="42" rx="8" fill="rgba(255,112,67,0.18)" stroke="${COLORS.alt}" stroke-width="2"/>
+<text x="200" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="19" font-family="Arial" font-weight="bold">nen</text>
+<text x="90" y="167" text-anchor="middle" fill="${COLORS.alt}" font-size="9.5" font-family="Arial" font-weight="bold">gesloten (op n)</text>
+<text x="200" y="167" text-anchor="middle" fill="${COLORS.alt}" font-size="9.5" font-family="Arial" font-weight="bold">gesloten (op n)</text>
+
+<!-- Legenda -->
+<rect x="46" y="180" width="12" height="12" rx="3" fill="rgba(0,200,83,0.18)" stroke="${COLORS.good}" stroke-width="1.5"/>
+<text x="63" y="190" fill="${COLORS.good}" font-size="9.5" font-family="Arial">open = lange klank</text>
+<rect x="168" y="180" width="12" height="12" rx="3" fill="rgba(255,112,67,0.18)" stroke="${COLORS.alt}" stroke-width="1.5"/>
+<text x="185" y="190" fill="${COLORS.alt}" font-size="9.5" font-family="Arial">gesloten = korte klank</text>
 </svg>`,
     checks: [
       {
