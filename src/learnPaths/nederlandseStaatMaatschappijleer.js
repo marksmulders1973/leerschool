@@ -19,6 +19,71 @@ const chapters = [
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 10, to: 10 },
 ];
 
+// Tweede Kamer als halve-cirkel-zaal (B4, 31 jul) — 150 zetels in een boog,
+// de linkerwig van 76 gekleurd = "zoveel heb je nodig voor een meerderheid".
+function tweedeKamerSvg() {
+  const cx = 150, cy = 150;
+  const rijen = [
+    { r: 46, n: 14 }, { r: 60, n: 18 }, { r: 74, n: 22 },
+    { r: 88, n: 27 }, { r: 102, n: 31 }, { r: 116, n: 38 },
+  ]; // samen 150 zetels
+  const zetels = [];
+  for (const { r, n } of rijen) {
+    for (let k = 0; k < n; k++) {
+      const ang = Math.PI - (k / (n - 1)) * Math.PI; // π (links) → 0 (rechts)
+      zetels.push({ x: cx + r * Math.cos(ang), y: cy - r * Math.sin(ang), ang });
+    }
+  }
+  zetels.sort((a, b) => b.ang - a.ang); // van links naar rechts
+  const stippen = zetels.map((z, i) =>
+    `<circle cx="${z.x.toFixed(1)}" cy="${z.y.toFixed(1)}" r="3.1" fill="${i < 76 ? COLORS.warm : COLORS.parlement}" opacity="0.9"/>`
+  ).join("");
+  return `<svg viewBox="0 0 300 205">
+<text x="150" y="18" text-anchor="middle" fill="${COLORS.parlement}" font-size="13" font-family="Arial" font-weight="bold">Tweede Kamer — 150 zetels</text>
+${stippen}
+<line x1="34" y1="150" x2="266" y2="150" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="150" y="168" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial" font-weight="bold">gekleurd = 76 zetels = meerderheid</text>
+<text x="150" y="183" text-anchor="middle" fill="${COLORS.text}" font-size="10.5" font-family="Arial">Binnenhof, Den Haag · elke 4 jaar</text>
+<text x="150" y="199" text-anchor="middle" fill="${COLORS.text}" font-size="10.5" font-family="Arial">maakt wetten + controleert de regering</text>
+</svg>`;
+}
+
+// Trias Politica met iconen (B4, 31 jul): boek (wetgevend) · vuist (uitvoerend)
+// · weegschaal (rechtsprekend). Iconen maken de drie machten herkenbaar.
+function triasPoliticaSvg() {
+  const boek = (cx, y, c) =>
+    `<polygon points="${cx},${y + 3} ${cx - 15},${y - 1} ${cx - 15},${y + 15} ${cx},${y + 18}" fill="${c}" opacity="0.22" stroke="${c}" stroke-width="1.5"/>
+<polygon points="${cx},${y + 3} ${cx + 15},${y - 1} ${cx + 15},${y + 15} ${cx},${y + 18}" fill="${c}" opacity="0.22" stroke="${c}" stroke-width="1.5"/>
+<line x1="${cx}" y1="${y + 3}" x2="${cx}" y2="${y + 18}" stroke="${c}" stroke-width="1.5"/>`;
+  const vuist = (cx, y, c) =>
+    `<rect x="${cx - 12}" y="${y + 5}" width="24" height="14" rx="4" fill="${c}" opacity="0.22" stroke="${c}" stroke-width="1.5"/>
+${[-8, -2.5, 3, 8.5].map((dx) => `<circle cx="${cx + dx}" cy="${y + 5}" r="3" fill="${c}" opacity="0.4" stroke="${c}" stroke-width="1"/>`).join("")}
+<ellipse cx="${cx - 13}" cy="${y + 13}" rx="3" ry="4" fill="${c}" opacity="0.4" stroke="${c}" stroke-width="1"/>`;
+  const weeg = (cx, y, c) =>
+    `<line x1="${cx}" y1="${y + 2}" x2="${cx}" y2="${y + 20}" stroke="${c}" stroke-width="1.5"/>
+<line x1="${cx - 15}" y1="${y + 5}" x2="${cx + 15}" y2="${y + 5}" stroke="${c}" stroke-width="1.5"/>
+<circle cx="${cx}" cy="${y + 3}" r="2" fill="${c}"/>
+<line x1="${cx - 15}" y1="${y + 5}" x2="${cx - 15}" y2="${y + 11}" stroke="${c}" stroke-width="1"/>
+<line x1="${cx + 15}" y1="${y + 5}" x2="${cx + 15}" y2="${y + 11}" stroke="${c}" stroke-width="1"/>
+<path d="M ${cx - 21} ${y + 11} A 6 6 0 0 0 ${cx - 9} ${y + 11}" fill="none" stroke="${c}" stroke-width="1.5"/>
+<path d="M ${cx + 9} ${y + 11} A 6 6 0 0 0 ${cx + 21} ${y + 11}" fill="none" stroke="${c}" stroke-width="1.5"/>
+<polygon points="${cx - 6},${y + 22} ${cx + 6},${y + 22} ${cx},${y + 16}" fill="${c}" opacity="0.4"/>`;
+  const vak = (x, cx, c, kop, r1, r2, desc, icoon) =>
+    `<rect x="${x}" y="40" width="80" height="122" rx="8" fill="${c}" opacity="0.14" stroke="${c}" stroke-width="1.5"/>
+${icoon(cx, 48, c)}
+<text x="${cx}" y="90" text-anchor="middle" fill="${c}" font-size="10.5" font-family="Arial" font-weight="bold">${kop}</text>
+<text x="${cx}" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">${r1}</text>
+<text x="${cx}" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">${r2}</text>
+<text x="${cx}" y="146" text-anchor="middle" fill="${COLORS.muted}" font-size="9.5" font-family="Arial">${desc}</text>`;
+  return `<svg viewBox="0 0 300 200">
+<text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Trias Politica — drie machten</text>
+${vak(20, 60, COLORS.parlement, "WETGEVEND", "Kamer +", "regering", "maakt wetten", boek)}
+${vak(110, 150, COLORS.regering, "UITVOEREND", "regering", "+ politie", "voert uit", vuist)}
+${vak(200, 240, COLORS.recht, "RECHTSPREKEND", "rechters", "(onafhankelijk)", "oordeelt", weeg)}
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">de drie controleren elkaar</text>
+</svg>`;
+}
+
 const steps = [
   {
     title: "Wat is een democratie?",
@@ -110,25 +175,7 @@ const steps = [
   {
     title: "Trias Politica — drie machten gescheiden",
     explanation: "Een goede democratie heeft **drie gescheiden machten** (Trias Politica, bedacht door **Montesquieu**, 1748):\n\n**1. Wetgevende macht** — maakt wetten.\n• In NL: **Tweede Kamer + Eerste Kamer + regering**.\n\n**2. Uitvoerende macht** — voert wetten uit.\n• In NL: **regering** (kabinet) + ministeries + politie.\n\n**3. Rechtsprekende macht** — oordeelt of wetten zijn overtreden.\n• In NL: **rechters** (onafhankelijk!).\n\n**Waarom scheiden?**\nAls dezelfde persoon wetten maakt, uitvoert én rechtspreekt → kan hij die misbruiken. Door drie aparte machten **controleren ze elkaar**. Dat heet **checks and balances**.\n\n**Voorbeeld**:\n• Tweede Kamer maakt een wet → regering voert hem uit → een rechter beoordeelt of iemand de wet heeft overtreden.\n• Geen van de drie kan in zijn eentje doen wat hij wil.",
-    svg: `<svg viewBox="0 0 300 200">
-<text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Trias Politica</text>
-<rect x="20" y="40" width="80" height="120" rx="8" fill="${COLORS.parlement}" opacity="0.20" stroke="${COLORS.parlement}" stroke-width="2"/>
-<text x="60" y="62" text-anchor="middle" fill="${COLORS.parlement}" font-size="11" font-family="Arial" font-weight="bold">WETGEVEND</text>
-<text x="60" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">Kamer +</text>
-<text x="60" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">regering</text>
-<text x="60" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">maakt wetten</text>
-<rect x="110" y="40" width="80" height="120" rx="8" fill="${COLORS.regering}" opacity="0.20" stroke="${COLORS.regering}" stroke-width="2"/>
-<text x="150" y="62" text-anchor="middle" fill="${COLORS.regering}" font-size="11" font-family="Arial" font-weight="bold">UITVOEREND</text>
-<text x="150" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">regering</text>
-<text x="150" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">+ politie</text>
-<text x="150" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">voert uit</text>
-<rect x="200" y="40" width="80" height="120" rx="8" fill="${COLORS.recht}" opacity="0.20" stroke="${COLORS.recht}" stroke-width="2"/>
-<text x="240" y="62" text-anchor="middle" fill="${COLORS.recht}" font-size="11" font-family="Arial" font-weight="bold">RECHT-</text>
-<text x="240" y="76" text-anchor="middle" fill="${COLORS.recht}" font-size="11" font-family="Arial" font-weight="bold">SPREKEND</text>
-<text x="240" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">rechters</text>
-<text x="240" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">oordeelt</text>
-<text x="150" y="190" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">de drie controleren elkaar</text>
-</svg>`,
+    svg: triasPoliticaSvg(),
     checks: [
       {
         q: "Wie bedacht de **Trias Politica**?",
@@ -163,20 +210,7 @@ const steps = [
   {
     title: "Tweede Kamer — het parlement",
     explanation: "De **Tweede Kamer** is het belangrijkste orgaan van de Nederlandse democratie. Hier worden wetten gemaakt en de regering gecontroleerd.\n\n**Feiten**:\n• **150 zetels** (kamerleden).\n• Gekozen door het volk, **om de 4 jaar**.\n• Vergadert in Den Haag, **Binnenhof**.\n• Voorzitter: de **Kamervoorzitter**.\n\n**Wat doet de Tweede Kamer?**\n• **Wetten maken**: voorstel → debat → stemmen.\n• **Regering controleren**: vragen stellen aan ministers.\n• **Begroting goedkeuren**: hoe geeft Nederland geld uit?\n\n**Politieke partijen** in 2025-2026 (~15 partijen): VVD, D66, PVV, GL-PvdA, CDA, SP, ChristenUnie, SGP, FvD, BBB, NSC, Volt, etc.\n\n**Coalitie**: meestal vormen meerdere partijen samen een meerderheid (>75 zetels) en regeren samen. Dat wordt vastgelegd in een **regeerakkoord**.\n\n**Oppositie**: partijen die niet meeregeren — zij controleren extra streng.",
-    svg: `<svg viewBox="0 0 300 200">
-<text x="150" y="22" text-anchor="middle" fill="${COLORS.parlement}" font-size="13" font-family="Arial" font-weight="bold">Tweede Kamer — 150 zetels</text>
-<g>
-${Array.from({ length: 30 }, (_, i) => {
-  const row = Math.floor(i / 10);
-  const col = i % 10;
-  return `<rect x="${30 + col * 24}" y="${50 + row * 22}" width="20" height="18" rx="3" fill="${COLORS.parlement}" opacity="${0.4 + (col * 0.05)}"/>`;
-}).join("")}
-</g>
-<text x="150" y="124" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">schematisch — elk blokje = 5 zetels</text>
-<text x="150" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Binnenhof, Den Haag</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">verkiezingen elke 4 jaar</text>
-<text x="150" y="180" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">maakt wetten + controleert regering</text>
-</svg>`,
+    svg: tweedeKamerSvg(),
     checks: [
       {
         q: "Hoeveel zetels heeft de Tweede Kamer?",

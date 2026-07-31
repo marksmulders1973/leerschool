@@ -65,62 +65,51 @@ function aardlagenSvg(highlight = null) {
 </svg>`;
 }
 
-// Drie types plaatgrenzen schematisch.
+// Drie typen plaatgrenzen als échte dwarsdoorsneden (B4, 31 jul): twee bruine
+// platen-slabs op een oranje mantel-band, met bewegingspijlen en het landschap
+// dat ontstaat. `activeType` dimt de andere twee.
 function plaatgrenzenSvg(activeType = null) {
-  const opacity = (t) => activeType === null || activeType === t ? 1 : 0.35;
-  return `<svg viewBox="0 0 320 220">
-<rect x="0" y="0" width="320" height="220" fill="${COLORS.paper}"/>
-<text x="160" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Drie typen plaatgrenzen</text>
-
-<!-- Type 1: divergent (uit elkaar) -->
-<g opacity="${opacity("divergent")}">
-  <text x="55" y="36" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial" font-weight="bold">Uit elkaar</text>
-  <rect x="10" y="50" width="40" height="20" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <rect x="62" y="50" width="40" height="20" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <path d="M 50 60 L 62 60" stroke="${COLORS.lava}" stroke-width="2" fill="none"/>
-  <text x="20" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">←</text>
-  <text x="92" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">→</text>
-  <text x="55" y="105" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">Atlantische Oceaan</text>
-  <text x="55" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">midoceanische rug</text>
-</g>
-
-<!-- Type 2: convergent (tegen elkaar) -->
-<g opacity="${opacity("convergent")}">
-  <text x="160" y="36" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial" font-weight="bold">Tegen elkaar</text>
-  <polygon points="115,70 165,55 165,70" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <rect x="167" y="50" width="40" height="20" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <text x="125" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">→</text>
-  <text x="195" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">←</text>
-  <text x="160" y="105" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">Himalaya</text>
-  <text x="160" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">bergvorming + subductie</text>
-</g>
-
-<!-- Type 3: transform (langs elkaar) -->
-<g opacity="${opacity("transform")}">
-  <text x="265" y="36" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial" font-weight="bold">Langs elkaar</text>
-  <rect x="222" y="50" width="40" height="20" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <rect x="265" y="50" width="40" height="20" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
-  <line x1="262" y1="48" x2="262" y2="72" stroke="${COLORS.warm}" stroke-width="1" stroke-dasharray="2,2"/>
-  <text x="232" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">↑</text>
-  <text x="295" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">↓</text>
-  <text x="265" y="105" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">San Andreas</text>
-  <text x="265" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">aardbevingen</text>
-</g>
-
-<!-- Resultaten-rij -->
-<g>
-  <text x="55" y="145" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold" opacity="${opacity("divergent")}">→ nieuwe oceaan</text>
-  <text x="160" y="145" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold" opacity="${opacity("convergent")}">→ bergketen</text>
-  <text x="265" y="145" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold" opacity="${opacity("transform")}">→ aardbevingen</text>
-</g>
-
-<!-- Wereldkaart-strook met drie iconen -->
-<g>
-  <text x="160" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Voorbeelden op aarde</text>
-  <text x="55" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">🌊 IJsland</text>
-  <text x="160" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">⛰ Himalaya</text>
-  <text x="265" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">⚡ Californië</text>
-</g>
+  const opacity = (t) => activeType === null || activeType === t ? 1 : 0.3;
+  // Eén paneel: mantel-band + twee platen + inhoud, gecentreerd op cx.
+  const paneel = (cx, titel, inhoud, kleur, resultaat, voorbeeld) => {
+    const x0 = cx - 48, w = 96;
+    return `<g opacity="${opacity(kleur)}">
+  <text x="${cx}" y="34" text-anchor="middle" fill="${COLORS.text}" font-size="9.5" font-family="Arial" font-weight="bold">${titel}</text>
+  <!-- mantel-band -->
+  <rect x="${x0}" y="92" width="${w}" height="18" rx="2" fill="${COLORS.mantel}" opacity="0.85"/>
+  <text x="${cx}" y="105" text-anchor="middle" fill="#000" font-size="7.5" font-family="Arial">mantel (magma)</text>
+  ${inhoud(cx)}
+  <text x="${cx}" y="132" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">${resultaat}</text>
+  <text x="${cx}" y="148" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">${voorbeeld}</text>
+</g>`;
+  };
+  // Divergent — platen uit elkaar, magma stijgt in de spleet (rug).
+  const divergent = (cx) => `
+  <rect x="${cx - 46}" y="72" width="38" height="18" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <rect x="${cx + 8}" y="72" width="38" height="18" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <polygon points="${cx},72 ${cx - 6},92 ${cx + 6},92" fill="${COLORS.lava}"/>
+  <text x="${cx - 34}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">←</text>
+  <text x="${cx + 34}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">→</text>`;
+  // Convergent — linkerplaat duikt onder de rechter (subductie), berg erbovenop.
+  const convergent = (cx) => `
+  <polygon points="${cx - 46},72 ${cx + 2},72 ${cx + 8},90 ${cx - 40},90" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <polygon points="${cx + 2},72 ${cx + 46},72 ${cx + 46},90 ${cx + 12},90" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <polygon points="${cx + 14},72 ${cx + 24},56 ${cx + 34},72" fill="${COLORS.korst}"/>
+  <text x="${cx - 30}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">→</text>
+  <text x="${cx + 40}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">←</text>`;
+  // Transform — platen schuiven langs elkaar (breuklijn), tegengestelde richting.
+  const transform = (cx) => `
+  <rect x="${cx - 46}" y="72" width="44" height="18" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <rect x="${cx + 2}" y="72" width="44" height="18" fill="${COLORS.plaat}" stroke="${COLORS.muted}" stroke-width="0.5"/>
+  <line x1="${cx}" y1="70" x2="${cx}" y2="92" stroke="${COLORS.warm}" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="${cx - 24}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">→</text>
+  <text x="${cx + 24}" y="66" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">←</text>`;
+  return `<svg viewBox="0 0 320 160">
+<rect x="0" y="0" width="320" height="160" fill="${COLORS.paper}"/>
+<text x="160" y="14" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Drie typen plaatgrenzen — dwarsdoorsnede</text>
+${paneel(56, "Uit elkaar", divergent, "divergent", "→ nieuwe oceaan", "IJsland · mid-oceanische rug")}
+${paneel(160, "Tegen elkaar", convergent, "convergent", "→ bergketen", "Himalaya · subductie")}
+${paneel(264, "Langs elkaar", transform, "transform", "→ aardbevingen", "San Andreas, Californië")}
 </svg>`;
 }
 
