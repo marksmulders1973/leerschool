@@ -69,6 +69,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const naam = buddy.naam || "Vonk";
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
+  const groet = `Hoi! Ik ben ${naam} en ik weet aan welke vraag je werkt. Vertel wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.`;
 
   // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
@@ -118,6 +119,25 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       // onbegrensd mee in localStorage (key per pad × stap, nooit opgeschoond).
       localStorage.setItem(storageKey(pathId, stepIdx), JSON.stringify(next.slice(-30)));
     } catch {}
+  };
+
+  // "Lees voor"-knop (Mark 31 jul): een tik op de luidspreker leest DIE bubble
+  // hardop voor. De speak() zit synchroon in de tik → werkt op mobiel én
+  // ontgrendelt de spraak op de iPhone (het automatische voorlezen ná een
+  // antwoord werd daar anders geblokkeerd omdat het buiten een tik viel).
+  // msgIdx = -2 is het welkomstzinnetje; nogmaals tikken = stoppen.
+  const leesVoor = (tekst, msgIdx) => {
+    if (leesMsg === msgIdx) {
+      stopSpeak(); setPraat(false); setLeesMsg(-1); setLeesWoord(-1);
+      return;
+    }
+    stopSpeak();
+    setLeesMsg(msgIdx); setLeesWoord(-1);
+    speak(tekst, {
+      onStart: () => setPraat(true),
+      onWoord: (w) => setLeesWoord(w),
+      onEnd: () => { setPraat(false); setLeesMsg(-1); setLeesWoord(-1); },
+    });
   };
 
   const send = async (text) => {
@@ -269,8 +289,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
               onClick={() => { setGeluid((g) => { if (g) { stopSpeak(); setPraat(false); setLeesMsg(-1); setLeesWoord(-1); } return !g; }); }}
-              aria-label={geluid ? `${naam} stil zetten` : `${naam} hardop laten praten`}
-              title={geluid ? "Geluid uit" : "Geluid aan"}
+              aria-label={geluid ? "Antwoorden automatisch voorlezen: aan" : "Antwoorden automatisch voorlezen: uit"}
+              title={geluid ? "Antwoorden worden automatisch voorgelezen (tik = uit)" : "Automatisch voorlezen staat uit (tik = aan)"}
               style={{
                 background: "transparent",
                 border: "1px solid rgba(255,255,255,0.12)",
@@ -318,8 +338,23 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               padding: "8px 4px 4px",
               lineHeight: 1.55,
             }}>
-              {emoji} Hoi! Ik ben {naam} en ik weet aan welke vraag je werkt. Vertel
-              wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.
+              <div style={{ marginBottom: 8 }}>
+                {emoji} {groet}
+              </div>
+              <button
+                onClick={() => leesVoor(groet, -2)}
+                aria-label={leesMsg === -2 ? "Stop met voorlezen" : `${naam} dit laten voorlezen`}
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 6,
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.16)",
+                  color: "rgba(255,255,255,0.85)", borderRadius: 999,
+                  padding: "5px 13px", cursor: "pointer", fontSize: 12.5,
+                  fontFamily: "inherit",
+                }}
+              >
+                {leesMsg === -2 ? "⏹ Stop" : "🔊 Lees voor"}
+              </button>
             </div>
           )}
           {messages.map((m, i) => (
@@ -344,6 +379,21 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               {m.role === "assistant" && i === leesMsg
                 ? <MeeleesTekst tekst={m.content} actief={leesWoord} accent={accent} />
                 : <MdInline text={m.content} />}
+              {m.role === "assistant" && (
+                <button
+                  onClick={() => leesVoor(m.content, i)}
+                  aria-label={leesMsg === i ? "Stop met voorlezen" : "Lees dit voor"}
+                  title={leesMsg === i ? "Stop" : "Lees voor"}
+                  style={{
+                    display: "block", marginTop: 6, padding: 0, lineHeight: 1,
+                    background: "transparent", border: "none",
+                    color: leesMsg === i ? accent : "rgba(255,255,255,0.55)",
+                    cursor: "pointer", fontSize: 15,
+                  }}
+                >
+                  {leesMsg === i ? "⏹" : "🔊"}
+                </button>
+              )}
             </div>
           ))}
           {busy && (
