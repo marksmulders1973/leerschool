@@ -151,6 +151,11 @@ function maakRekenVraag(kraam) {
     const cand = antwoord + (delta === 0 ? 3 : delta);
     if (cand > 0 && cand !== antwoord) set.add(cand);
   }
+  // Vangnet: bij een klein antwoord (bv. 1 of 2) verwierp de lus bijna alle
+  // kandidaten (≤0) → soms maar 2 opties = 50/50 gokken i.p.v. 3 keuzes. Vul
+  // altijd aan tot 3 met positieve, unieke waarden. (bug-jacht 2026-07-31)
+  let extra = 1;
+  while (set.size < 3) { const cand = antwoord + extra; if (cand > 0) set.add(cand); extra++; }
   const opties = [...set].sort(() => Math.random() - 0.5);
   return { vraag, antwoord, opties, emoji: kraam?.emoji || "🧮" };
 }
@@ -672,7 +677,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         // staan dan een muntjes-jubel (review 17 jul: 6s was te kort om te lezen).
         rewardTimer.current = setTimeout(() => setReward(null), weggelopen > 0 ? 12000 : 6000);
       }
-      if (userId) saveZooState(userId, { ...finalMeta, layout: finalLayout });
+      // Alleen opslaan als er echt iets veranderde: een nieuwe dag (last_login +
+      // login-/park-beloning moet bewaard blijven), een verdiende kwartier-reward,
+      // park-winst, geboortes of een weggelopen dier. Een same-day-remount zonder
+      // wijziging schreef eerder onnodig én kon de debounced autosave van de eerste
+      // ~2s aan acties overschrijven (dataverlies-race). (bug-jacht 2026-07-31)
+      if (userId && (isNieuweDag || gained > 0 || weggelopen > 0)) {
+        saveZooState(userId, { ...finalMeta, layout: finalLayout });
+      }
     })();
     return () => { cancel = true; clearTimeout(rewardTimer.current); clearTimeout(meldingTimer.current); };
   }, [userId, laadPoging]);
