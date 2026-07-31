@@ -24,14 +24,28 @@ const steps = [
     title: "Negatieve getallen in het echte leven",
     explanation: "Tot nu had je vooral te maken met **positieve** getallen (1, 2, 3, ...). Maar in het echt zie je vaak ook **negatieve** getallen.\n\n**Voorbeelden**:\n• **Temperatuur**: −5°C is 5 graden onder nul (vriespunt). Heel koud!\n• **Geld**: een schuld van €20 schrijven we als −€20. Je bent dat geld kwijt.\n• **Hoogte**: een duiker is op −15 meter (15 meter onder zeeniveau).\n• **Liftknop**: −1 of −2 voor parkeerverdiepingen onder de begane grond.\n\nEen negatief getal heeft een **min-teken** (−) ervoor. Het betekent: **lager dan nul**.\n\nNul (**0**) is het **midden**: niet positief, niet negatief.",
     svg: `<svg viewBox="0 0 300 200">
-<rect x="50" y="40" width="40" height="120" fill="rgba(0,168,200,0.15)" stroke="${COLORS.curve}" stroke-width="2"/>
-<line x1="50" y1="100" x2="90" y2="100" stroke="${COLORS.point}" stroke-width="2"/>
-<text x="100" y="104" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0°C</text>
-<line x1="50" y1="60" x2="90" y2="60" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
-<text x="100" y="64" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial">+30°C ☀️</text>
-<line x1="50" y1="140" x2="90" y2="140" stroke="${COLORS.curve}" stroke-width="1.5"/>
-<text x="100" y="144" fill="${COLORS.curve}" font-size="12" font-family="Arial">−10°C ❄️</text>
-<text x="150" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">negatieve getallen: lager dan nul</text>
+<text x="150" y="15" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">De thermometer</text>
+<!-- buis -->
+<rect x="60" y="34" width="16" height="130" rx="8" fill="#0d1b2e" stroke="#b0bec5" stroke-width="2"/>
+<!-- kwikkolom (rood) tot ~+8°C -->
+<rect x="64" y="101" width="8" height="69" fill="#e53935"/>
+<!-- bol onderaan -->
+<circle cx="68" cy="170" r="16" fill="#e53935" stroke="#b0bec5" stroke-width="2"/>
+<!-- schaalstreepjes + labels -->
+<line x1="76" y1="42" x2="88" y2="42" stroke="${COLORS.curveAlt}" stroke-width="2"/>
+<text x="94" y="46" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial" font-weight="bold">+30°C</text>
+<line x1="76" y1="96" x2="86" y2="96" stroke="${COLORS.muted}" stroke-width="1.5"/>
+<text x="92" y="100" fill="${COLORS.muted}" font-size="11" font-family="Arial">+10°C</text>
+<line x1="76" y1="123" x2="90" y2="123" stroke="${COLORS.point}" stroke-width="2.5"/>
+<text x="96" y="127" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0°C — het midden</text>
+<line x1="76" y1="150" x2="88" y2="150" stroke="${COLORS.curve}" stroke-width="2"/>
+<text x="94" y="154" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">−10°C</text>
+<!-- zone-hints rechts -->
+<text x="252" y="58" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">boven 0:</text>
+<text x="252" y="72" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial" font-weight="bold">positief (+)</text>
+<text x="252" y="146" text-anchor="middle" fill="${COLORS.curve}" font-size="11" font-family="Arial">onder 0:</text>
+<text x="252" y="160" text-anchor="middle" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">negatief (−)</text>
+<text x="150" y="194" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">0 is het midden — eronder negatief, erboven positief</text>
 </svg>`,
     checks: [
       {
@@ -355,15 +369,27 @@ const steps = [
     title: "Toepassing: temperatuur",
     explanation: "Een typisch toepassingsvraagstuk: **temperatuur**.\n\n**Vraag**: 's morgens is het −8°C. Tegen de middag is het 13°C warmer. Wat is de temperatuur dan?\n\n**Reken**:\n• −8 + 13 = **5°C**\n\n**Vraag 2**: het was eerst 5°C. Dan daalt de temperatuur met 12°C. Hoe koud is het nu?\n• 5 − 12 = **−7°C**\n\n**Vraag 3**: gisteren −10°C, vandaag −3°C. Hoeveel warmer is het?\n• Verschil: −3 − (−10) = −3 + 10 = **7°C** warmer.\n\n**Tip**: bij temperatuur of hoogte werk je altijd met negatieve getallen. Optellen voor 'warmer' of 'omhoog', aftrekken voor 'kouder' of 'omlaag'.",
     svg: `<svg viewBox="0 0 300 200">
-<rect x="100" y="40" width="40" height="120" fill="rgba(0,168,200,0.15)" stroke="${COLORS.curve}" stroke-width="2"/>
-<line x1="100" y1="80" x2="140" y2="80" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<text x="150" y="84" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5°C ← middag</text>
-<line x1="100" y1="140" x2="140" y2="140" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="150" y="144" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−8°C ← ochtend</text>
-<line x1="80" y1="80" x2="80" y2="140" stroke="${COLORS.point}" stroke-width="2"/>
-<polygon points="75,85 80,75 85,85" fill="${COLORS.point}"/>
-<text x="55" y="115" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">+13</text>
-<text x="150" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">−8 + 13 = 5°C</text>
+<text x="150" y="15" text-anchor="middle" fill="${COLORS.text}" font-size="12.5" font-family="Arial" font-weight="bold">'s Morgens −8°C, dan 13° warmer</text>
+<!-- buis -->
+<rect x="60" y="34" width="16" height="130" rx="8" fill="#0d1b2e" stroke="#b0bec5" stroke-width="2"/>
+<!-- kwikkolom tot +5°C (middag) -->
+<rect x="64" y="110" width="8" height="60" fill="#e53935"/>
+<!-- bol onderaan -->
+<circle cx="68" cy="170" r="16" fill="#e53935" stroke="#b0bec5" stroke-width="2"/>
+<!-- 0-lijn -->
+<line x1="76" y1="123" x2="86" y2="123" stroke="${COLORS.point}" stroke-width="2"/>
+<text x="90" y="127" fill="${COLORS.point}" font-size="11" font-family="Arial">0°C</text>
+<!-- middag +5 -->
+<line x1="76" y1="110" x2="92" y2="110" stroke="${COLORS.curveAlt}" stroke-width="2.5"/>
+<text x="98" y="114" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">+5°C  middag</text>
+<!-- ochtend −8 -->
+<line x1="76" y1="145" x2="92" y2="145" stroke="${COLORS.curve}" stroke-width="2.5"/>
+<text x="98" y="149" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−8°C  ochtend</text>
+<!-- +13 pijl omhoog -->
+<line x1="212" y1="145" x2="212" y2="114" stroke="${COLORS.point}" stroke-width="2.5"/>
+<polygon points="207,118 212,108 217,118" fill="${COLORS.point}"/>
+<text x="220" y="133" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">+13°</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">−8 + 13 = 5°C</text>
 </svg>`,
     checks: [
       {
