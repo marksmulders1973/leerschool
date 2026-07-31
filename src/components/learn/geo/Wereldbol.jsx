@@ -617,6 +617,10 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
           cancelAnimationFrame(raf);
           if (globe.material.map) globe.material.map.dispose();
           globe.geometry.dispose(); globe.material.dispose();
+          // glow + marker werden eerder niet gedisposed → kleine GPU-leak
+          // (sphere-geometry + materials) bij herhaald openen. (bug-jacht 2026-07-31)
+          glow.geometry.dispose(); glow.material.dispose();
+          marker.geometry.dispose(); marker.material.dispose();
           renderer.dispose();
           if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
         };
@@ -667,12 +671,15 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
       setFb(null);
       bezigRef.current = false;
       if (goed) {
-        setOpdrachtI((i) => {
-          const next = i + 1;
-          if (next >= opdrachtenRef.current.length) setKlaar(true);
-          else opdrachtIRef.current = next;
-          return next;
-        });
+        // Bron = de REF, niet de state-closure: beoordeel wordt aangeroepen vanuit
+        // één-keer-toegevoegde handlers, dus opdrachtI in de closure is stale (0).
+        // opdrachtIRef.current blijft wél actueel via de effect op [opdrachtI].
+        // Eerder zat de ref-mutatie + setKlaar ín de setState-updater (side-effect,
+        // dubbel in StrictMode). Nu puur en op basis van de betrouwbare ref.
+        // (bug-jacht 2026-07-31)
+        const next = opdrachtIRef.current + 1;
+        setOpdrachtI(next);
+        if (next >= opdrachtenRef.current.length) setKlaar(true);
       }
     }, goed ? 1300 : 1100);
   }
@@ -784,7 +791,7 @@ export default function Wereldbol({ onAnswer, modus = "werelddeel" }) {
             ✅ GOED!
             {volgendeNaam()
               ? <span style={{ color: "#fff", fontWeight: 700 }}> — zoek nu {volgendeNaam()} 👇</span>
-              : <span style={{ color: "#ffd54f", fontWeight: 700 }}> 🎉 Alle werelddelen gehad!</span>}
+              : <span style={{ color: "#ffd54f", fontWeight: 700 }}> 🎉 Alle {verbWoord === "hoofdstad" ? "hoofdsteden" : verbWoord === "land" ? "landen" : "werelddelen"} gehad!</span>}
           </span>
         )}
         {status === "klaar" && stand === "oefenen" && !klaar && fb === "fout" && (

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL } from "../constants.js";
 import { SoundEngine } from "../utils.js";
@@ -31,6 +31,9 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
+  // Wint-de-nieuwste-fetch-guard: bij snel typen + Enter kon een tragere oude
+  // preview-fetch een nieuwere overschrijven → verkeerde AI-achtergrondcontext.
+  const previewReqId = useRef(0);
 
   // Direct starten als subject + level al bekend zijn via feature card
   useEffect(() => {
@@ -48,6 +51,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
 
   const fetchTopicPreview = async () => {
     if (!topic.trim()) return;
+    const myReq = ++previewReqId.current;
     setPreviewLoading(true);
     setTopicPreview(null);
     setPreviewConfirmed(false);
@@ -59,11 +63,13 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
         body: JSON.stringify({ topic: topic.trim() }),
       });
       const d = await resp.json();
+      if (myReq !== previewReqId.current) return; // een nieuwere fetch is bezig → deze uitkomst negeren
       setTopicPreview(d.found ? { found: true, title: d.title, description: d.description } : { found: false });
     } catch {
+      if (myReq !== previewReqId.current) return;
       setTopicPreview({ found: false });
     }
-    setPreviewLoading(false);
+    if (myReq === previewReqId.current) setPreviewLoading(false);
   };
 
   const topicForAI = previewConfirmed && topicPreview?.found && topicPreview.description

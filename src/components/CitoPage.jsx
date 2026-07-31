@@ -159,8 +159,12 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
 
   const getBestScore = (id) => {
     const matches = citoProgress.filter((r) => r.citoId === id && r.citoGroep === groep);
-    if (!matches.length) return null;
-    return Math.max(...matches.map((r) => r.percentage));
+    // Alleen geldige percentages: een afgebroken toets-registratie zonder
+    // percentage gaf anders Math.max(...[undefined]) → "NaN%"-badge op de
+    // conversie-pagina. (bug-jacht 2026-07-31)
+    const pcts = matches.map((r) => r.percentage).filter((n) => Number.isFinite(n));
+    if (!pcts.length) return null;
+    return Math.max(...pcts);
   };
 
   const toggleOnderdeel = (id) => {

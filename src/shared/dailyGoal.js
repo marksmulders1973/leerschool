@@ -309,3 +309,13 @@ export function initDailyGoalSync(userId, profileRow) {
   } catch { /* lokaal blijft leidend bij gekke data */ }
   pushCloud(true);
 }
+
+// Aanroepen bij uitloggen / account-wissel. Zonder dit bleef `cloudUserId` op
+// de vórige gebruiker staan, waardoor de 30s-heartbeat de dagteller/streak van
+// de nieuwe (of anonieme) sessie naar het profiel van de vorige gebruiker bleef
+// schrijven — cross-device-corruptie op gedeelde huishoud-apparaten. Zonder
+// login hoort de sync puur lokaal te blijven. (bug-jacht 2026-07-31)
+export function stopDailyGoalSync() {
+  cloudUserId = null;
+  lastPushAt = 0;
+}

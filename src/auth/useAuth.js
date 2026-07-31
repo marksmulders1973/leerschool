@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { ensureSession } from "../auth.js";
 import { signInWithGoogleIdToken } from "./googleSignIn.js";
-import { initDailyGoalSync } from "../shared/dailyGoal.js";
+import { initDailyGoalSync, stopDailyGoalSync } from "../shared/dailyGoal.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -38,6 +38,22 @@ export function useAuth() {
     const sub = supabase.auth?.onAuthStateChange?.((_event, session) => {
       const u = session?.user ?? null;
       setAuthUser(u);
+      if (!u) {
+        // SIGNED_OUT / verlopen token / account-wissel in ander tabblad: zonder
+        // deze reset bleef naam/level/streak/subscription van de vórige
+        // gebruiker staan — zichtbaar op gedeelde huishoud-apparaten (kind B
+        // zag data van kind A). Ook de cloud-sync stoppen zodat de heartbeat
+        // niet naar het oude profiel blijft schrijven. (bug-jacht 2026-07-31)
+        setUserName("");
+        setUserLevel("");
+        setUserSchoolType("");
+        setRole(null);
+        setStreak(0);
+        setSubscription({ tier: "free" });
+        setSchoolLogoUrl("");
+        stopDailyGoalSync();
+        return;
+      }
       if (u) {
         supabase
           .from("subscriptions")
@@ -131,6 +147,12 @@ export function useAuth() {
     setUserLevel("");
     setUserSchoolType("");
     setRole(null);
+    // Volledige reset (streak/subscription/schoolLogo misten eerder → bleven
+    // van de vorige gebruiker hangen) + cloud-sync stoppen. (bug-jacht 2026-07-31)
+    setStreak(0);
+    setSubscription({ tier: "free" });
+    setSchoolLogoUrl("");
+    stopDailyGoalSync();
   };
 
   return {
