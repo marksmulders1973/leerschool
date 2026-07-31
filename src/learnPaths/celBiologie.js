@@ -169,12 +169,24 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
     title: "Celkern — het hoofdkantoor",
     explanation: "Bijna elke cel heeft een **celkern** *(nucleus)*. Daarin zit het **DNA** — het erfelijk materiaal dat alle informatie bevat over hoe de cel moet werken.\n\n**Functies van de kern**:\n• Bewaart het DNA veilig\n• Geeft instructies door (welke eiwitten moet de cel maken?)\n• Controleert celdeling\n\nDe kern is meestal een ronde of ovale 'bal' middenin de cel, omgeven door een eigen membraan (de **kernmembraan**).\n\nUitzondering: **bacteriecellen** hebben géén kern. Hun DNA zweeft los in de cel. Dit verschil is groot: cellen *met* kern noemen we **eukaryoot**, cellen *zonder* kern **prokaryoot**.",
     svg: `<svg viewBox="0 0 300 200">
-<ellipse cx="150" cy="100" rx="120" ry="80" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="3"/>
-<circle cx="150" cy="100" r="32" fill="${COLORS.nucleus}" opacity="0.55" stroke="${COLORS.nucleus}" stroke-width="2"/>
-<text x="150" y="98" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">kern</text>
-<text x="150" y="112" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">(DNA)</text>
-<text x="35" y="35" fill="${COLORS.membrane}" font-size="11" font-family="Arial">celmembraan</text>
-<text x="55" y="180" fill="${COLORS.warm}" font-size="11" font-family="Arial">cytoplasma</text>
+<ellipse cx="150" cy="102" rx="120" ry="76" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="3"/>
+<!-- celkern met kernmembraan (dubbele rand) + kernlichaampje -->
+<circle cx="150" cy="102" r="38" fill="${COLORS.nucleus}" opacity="0.28" stroke="${COLORS.nucleus}" stroke-width="3"/>
+<circle cx="150" cy="102" r="32" fill="none" stroke="${COLORS.nucleus}" stroke-width="1.2" opacity="0.8"/>
+<circle cx="162" cy="94" r="8" fill="${COLORS.nucleus}" opacity="0.85"/>
+<!-- wat DNA-draadjes in de kern -->
+<path d="M 132 110 q 8 -10 16 0 q 8 10 16 -2" stroke="${COLORS.nucleus}" stroke-width="1.4" fill="none" opacity="0.7"/>
+<path d="M 130 118 q 10 -6 20 2" stroke="${COLORS.nucleus}" stroke-width="1.4" fill="none" opacity="0.7"/>
+<!-- labels met aanwijslijntjes -->
+<line x1="150" y1="64" x2="150" y2="34" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="150" y="26" text-anchor="middle" fill="${COLORS.nucleus}" font-size="12" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celkern (DNA)</text>
+<line x1="170" y1="88" x2="238" y2="56" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="296" y="52" text-anchor="end" fill="${COLORS.text}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">kernlichaampje</text>
+<line x1="118" y1="84" x2="70" y2="60" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="6" y="56" text-anchor="start" fill="${COLORS.nucleus}" font-size="9.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">kernmembraan</text>
+<line x1="52" y1="140" x2="34" y2="176" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="30" y="188" text-anchor="start" fill="${COLORS.membrane}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celmembraan</text>
+<text x="230" y="150" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">cytoplasma</text>
 </svg>`,
     checks: [
       {
@@ -225,14 +237,28 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
     title: "Cytoplasma & celmembraan",
     explanation: "**Cytoplasma** is de **gel-achtige vloeistof** binnenin de cel. Hierin zweven alle celdelen (organellen). Het cytoplasma vervoert stoffen en is de plek waar veel reacties gebeuren.\n\n**Celmembraan** *(plasmamembraan)* is het **buitenste vliesje** dat de cel bij elkaar houdt. Het is heel **selectief**: het laat sommige stoffen doorlaten (zuurstof, water, glucose) en houdt andere tegen (afval, vergif).\n\nEen handig beeld: \n• Cytoplasma = de soep binnenin\n• Celmembraan = de huid eromheen\n• Organellen = de stukjes groente in de soep\n\n**Plantcel-bonus**: planten hebben naast het celmembraan ook nog een stevige **celwand** (van cellulose) eromheen. Dat geeft de plant zijn vorm en stevigheid.",
     svg: `<svg viewBox="0 0 300 200">
-<ellipse cx="150" cy="100" rx="115" ry="78" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="4"/>
-<text x="150" y="32" text-anchor="middle" fill="${COLORS.membrane}" font-size="12" font-family="Arial" font-weight="bold">celmembraan</text>
-<text x="245" y="58" fill="${COLORS.membrane}" font-size="10" font-family="Arial">↘</text>
-<text x="150" y="190" text-anchor="middle" fill="${COLORS.warm}" font-size="12" font-family="Arial" font-weight="bold">cytoplasma (vloeistof)</text>
-<circle cx="105" cy="92" r="14" fill="${COLORS.nucleus}" opacity="0.5"/>
-<ellipse cx="180" cy="80" rx="14" ry="7" fill="${COLORS.mito}" opacity="0.6"/>
-<ellipse cx="195" cy="125" rx="14" ry="7" fill="${COLORS.mito}" opacity="0.6"/>
-<text x="106" y="96" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">kern</text>
+<ellipse cx="150" cy="104" rx="116" ry="74" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="4"/>
+<!-- celkern -->
+<circle cx="108" cy="96" r="20" fill="${COLORS.nucleus}" opacity="0.30" stroke="${COLORS.nucleus}" stroke-width="2"/>
+<circle cx="115" cy="90" r="5" fill="${COLORS.nucleus}" opacity="0.8"/>
+<!-- mitochondrion als boon met cristae -->
+<path d="M 168 74 C 160 66 184 60 200 66 C 214 71 214 86 200 90 C 188 93 178 86 172 88 C 164 90 162 80 168 74 Z" fill="${COLORS.mito}" opacity="0.30" stroke="${COLORS.mito}" stroke-width="2"/>
+<path d="M 180 66 q -4 10 -2 20" stroke="${COLORS.mito}" stroke-width="1.2" fill="none" opacity="0.85"/>
+<path d="M 192 65 q -3 11 0 22" stroke="${COLORS.mito}" stroke-width="1.2" fill="none" opacity="0.85"/>
+<!-- ribosomen als kleine stippen-clusters -->
+<g fill="${COLORS.goodSoft}" opacity="0.9">
+<circle cx="178" cy="126" r="2.4"/><circle cx="185" cy="123" r="2.4"/><circle cx="183" cy="131" r="2.4"/><circle cx="191" cy="129" r="2.4"/><circle cx="176" cy="133" r="2.4"/>
+</g>
+<!-- labels + aanwijslijntjes -->
+<line x1="150" y1="30" x2="150" y2="42" stroke="${COLORS.membrane}" stroke-width="1"/>
+<text x="150" y="24" text-anchor="middle" fill="${COLORS.membrane}" font-size="12" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celmembraan</text>
+<line x1="108" y1="116" x2="70" y2="150" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="66" y="162" text-anchor="middle" fill="${COLORS.nucleus}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celkern</text>
+<line x1="196" y1="80" x2="238" y2="58" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="296" y="54" text-anchor="end" fill="${COLORS.mito}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">mitochondrium</text>
+<line x1="184" y1="128" x2="230" y2="146" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="234" y="150" text-anchor="start" fill="${COLORS.goodSoft}" font-size="10" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">ribosomen</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">cytoplasma = vloeistof binnenin</text>
 </svg>`,
     checks: [
       {
@@ -289,16 +315,22 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
     title: "Mitochondriën — energiefabriekjes",
     explanation: "**Mitochondriën** *(mitos = draad, chondros = korrel — \"draadkorrels\")* zijn de **energiefabriekjes** van de cel. Ze verbranden glucose (suiker) met behulp van zuurstof, en daar komt **energie** uit waarmee de cel werkt.\n\n**Reactie**: glucose + zuurstof → energie + koolstofdioxide + water.\n\n**Hoe meer energie een cel nodig heeft, hoe meer mitochondriën hij heeft**:\n• Spiercellen → veel mitochondriën\n• Hartspiercellen → héél veel mitochondriën\n• Botcellen → minder\n\nMitochondriën hebben hun eigen kleine ringvormige DNA — een van de bewijzen dat ze ooit zelfstandige bacteriën waren die in andere cellen zijn gaan samenleven (de **endosymbiose-theorie**).\n\nVorm: ovale structuren met dubbele wand en plooien binnenin (zodat er meer oppervlak is voor de energiereacties).",
     svg: `<svg viewBox="0 0 300 200">
-<ellipse cx="150" cy="100" rx="120" ry="80" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="2"/>
-<g>
-<ellipse cx="100" cy="80" rx="20" ry="10" fill="${COLORS.mito}" opacity="0.5" stroke="${COLORS.mito}" stroke-width="1.5"/>
-<path d="M 85 80 Q 92 75 100 80 Q 108 85 115 80" stroke="${COLORS.mito}" stroke-width="0.7" fill="none"/>
-<ellipse cx="195" cy="120" rx="20" ry="10" fill="${COLORS.mito}" opacity="0.5" stroke="${COLORS.mito}" stroke-width="1.5"/>
-<path d="M 180 120 Q 187 115 195 120 Q 203 125 210 120" stroke="${COLORS.mito}" stroke-width="0.7" fill="none"/>
-<ellipse cx="155" cy="60" rx="18" ry="9" fill="${COLORS.mito}" opacity="0.5" stroke="${COLORS.mito}" stroke-width="1.5"/>
-</g>
-<circle cx="155" cy="120" r="14" fill="${COLORS.nucleus}" opacity="0.4"/>
-<text x="155" y="190" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">mitochondriën = energie 🔋</text>
+<text x="150" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">mitochondrium = energiefabriek</text>
+<!-- grote boon-vorm: buitenmembraan -->
+<path d="M 70 118 C 55 92 78 62 118 60 C 168 57 205 74 218 100 C 228 120 214 142 182 146 C 150 150 128 138 112 140 C 90 143 80 138 70 118 Z" fill="${COLORS.mito}" opacity="0.30" stroke="${COLORS.mito}" stroke-width="2.5"/>
+<!-- binnenmembraan (dubbele wand) -->
+<path d="M 80 116 C 68 96 88 74 120 72 C 164 69 196 84 207 105 C 215 121 203 133 178 136 C 150 139 130 128 114 130 C 96 132 88 130 80 116 Z" fill="none" stroke="${COLORS.mito}" stroke-width="1.4" opacity="0.9"/>
+<!-- cristae (binnenplooien) -->
+<path d="M 104 74 C 96 86 100 100 92 112" stroke="${COLORS.mito}" stroke-width="1.6" fill="none" opacity="0.85"/>
+<path d="M 128 71 C 120 85 124 104 116 122" stroke="${COLORS.mito}" stroke-width="1.6" fill="none" opacity="0.85"/>
+<path d="M 152 72 C 146 88 150 106 144 124" stroke="${COLORS.mito}" stroke-width="1.6" fill="none" opacity="0.85"/>
+<path d="M 176 76 C 172 90 176 104 172 118" stroke="${COLORS.mito}" stroke-width="1.6" fill="none" opacity="0.85"/>
+<path d="M 197 88 C 195 98 197 108 194 116" stroke="${COLORS.mito}" stroke-width="1.6" fill="none" opacity="0.85"/>
+<!-- aanwijslijntjes + labels -->
+<line x1="104" y1="112" x2="70" y2="176" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="66" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="10.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">cristae (plooien)</text>
+<line x1="216" y1="102" x2="252" y2="70" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="255" y="66" text-anchor="end" fill="${COLORS.mito}" font-size="10.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">dubbele wand</text>
 </svg>`,
     checks: [
       {
@@ -350,20 +382,35 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
     title: "Chloroplasten — alleen in plantcellen",
     explanation: "**Chloroplasten** zijn de **groene fabriekjes** van plantcellen. Hierin gebeurt **fotosynthese**: zonlicht wordt gebruikt om water + koolstofdioxide om te zetten in **glucose** (suiker) en **zuurstof**.\n\n**Reactie fotosynthese**:\n• water + CO₂ + zonlicht → glucose + O₂\n\nChloroplasten bevatten **bladgroen** *(chlorofyl)* — dat is de stof die zonlicht opvangt en planten hun groene kleur geeft.\n\n**Belangrijk**:\n• Alleen **plantcellen** en algen hebben chloroplasten.\n• Dieren (en mensen) krijgen hun energie uit voedsel — wij hebben geen chloroplasten.\n• De zuurstof die wij inademen, is grotendeels door chloroplasten gemaakt.\n\nNet als mitochondriën hebben chloroplasten eigen DNA en zijn ze waarschijnlijk ooit zelfstandige bacteriën geweest.",
     svg: `<svg viewBox="0 0 300 200">
-<ellipse cx="150" cy="100" rx="120" ry="80" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="2"/>
-<rect x="60" y="20" width="180" height="160" rx="20" fill="none" stroke="${COLORS.wall}" stroke-width="3" opacity="0.4"/>
+<text x="150" y="17" text-anchor="middle" fill="${COLORS.chloro}" font-size="13" font-family="Arial" font-weight="bold">plantcel — chloroplasten doen fotosynthese</text>
+<!-- dikke, hoekige CELWAND -->
+<rect x="30" y="26" width="240" height="150" rx="8" fill="#2e7d32" opacity="0.22" stroke="#00c853" stroke-width="5"/>
+<!-- celmembraan net binnen de wand -->
+<rect x="38" y="34" width="224" height="134" rx="5" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="1.6"/>
+<!-- grote VACUOLE (neemt veel ruimte) -->
+<rect x="96" y="52" width="140" height="98" rx="22" fill="${COLORS.vacuole}" opacity="0.28" stroke="${COLORS.vacuole}" stroke-width="1.6"/>
+<text x="166" y="105" text-anchor="middle" fill="${COLORS.vacuole}" font-size="11" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">vacuole</text>
+<!-- celkern met kernlichaampje -->
+<circle cx="66" cy="72" r="16" fill="${COLORS.nucleus}" opacity="0.32" stroke="${COLORS.nucleus}" stroke-width="2"/>
+<circle cx="71" cy="68" r="4" fill="${COLORS.nucleus}" opacity="0.85"/>
+<!-- chloroplasten: groene korrels met grana-stipjes -->
 <g>
-<ellipse cx="100" cy="80" rx="22" ry="11" fill="${COLORS.chloro}" opacity="0.55" stroke="${COLORS.chloro}" stroke-width="1.5"/>
-<circle cx="92" cy="80" r="2.5" fill="#1b5e20"/>
-<circle cx="100" cy="78" r="2.5" fill="#1b5e20"/>
-<circle cx="108" cy="80" r="2.5" fill="#1b5e20"/>
-<ellipse cx="195" cy="120" rx="22" ry="11" fill="${COLORS.chloro}" opacity="0.55" stroke="${COLORS.chloro}" stroke-width="1.5"/>
-<circle cx="187" cy="120" r="2.5" fill="#1b5e20"/>
-<circle cx="195" cy="118" r="2.5" fill="#1b5e20"/>
-<circle cx="203" cy="120" r="2.5" fill="#1b5e20"/>
+<ellipse cx="70" cy="130" rx="20" ry="10" fill="${COLORS.chloro}" opacity="0.55" stroke="#2e7d32" stroke-width="1.5"/>
+<circle cx="62" cy="130" r="2.4" fill="#1b5e20"/><circle cx="70" cy="128" r="2.4" fill="#1b5e20"/><circle cx="78" cy="131" r="2.4" fill="#1b5e20"/>
+<ellipse cx="200" cy="152" rx="20" ry="10" fill="${COLORS.chloro}" opacity="0.55" stroke="#2e7d32" stroke-width="1.5"/>
+<circle cx="192" cy="152" r="2.4" fill="#1b5e20"/><circle cx="200" cy="150" r="2.4" fill="#1b5e20"/><circle cx="208" cy="153" r="2.4" fill="#1b5e20"/>
 </g>
-<circle cx="155" cy="100" r="16" fill="${COLORS.nucleus}" opacity="0.4"/>
-<text x="155" y="195" text-anchor="middle" fill="${COLORS.chloro}" font-size="11" font-family="Arial" font-weight="bold">chloroplasten = fotosynthese ☀️</text>
+<!-- mitochondrion (boontje) -->
+<path d="M 232 62 C 226 56 244 54 252 60 C 258 65 252 74 244 72 C 238 71 236 66 232 62 Z" fill="${COLORS.mito}" opacity="0.4" stroke="${COLORS.mito}" stroke-width="1.4"/>
+<!-- labels + aanwijslijntjes -->
+<line x1="30" y1="40" x2="14" y2="26" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="12" y="22" text-anchor="start" fill="#00c853" font-size="9.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celwand</text>
+<line x1="66" y1="88" x2="40" y2="182" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="34" y="194" text-anchor="start" fill="${COLORS.nucleus}" font-size="9.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celkern</text>
+<line x1="90" y1="130" x2="130" y2="182" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="134" y="194" text-anchor="middle" fill="${COLORS.chloro}" font-size="9.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">chloroplasten</text>
+<line x1="248" y1="66" x2="272" y2="182" stroke="${COLORS.muted}" stroke-width="1"/>
+<text x="266" y="194" text-anchor="end" fill="${COLORS.mito}" font-size="9.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">mitochondrium</text>
 </svg>`,
     checks: [
       {
@@ -417,19 +464,37 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
     title: "Plantcel vs dierlijke cel — drie verschillen",
     explanation: "Plant- en dierlijke cellen lijken erg op elkaar (beide hebben kern, mitochondriën, cytoplasma, celmembraan), maar er zijn **drie grote verschillen**:\n\n| | Plantcel | Dierlijke cel |\n|---|---|---|\n| Celwand (cellulose) | ✅ | ❌ |\n| Chloroplasten | ✅ | ❌ |\n| Grote vacuole | ✅ (één grote) | ❌ (kleine of geen) |\n\n**Celwand** = stevige buitenwand van cellulose. Geeft de plant zijn vorm — daarom kan een boomstam staan. Dieren bewegen, dus zij hebben een flexibel celmembraan zonder stevige wand.\n\n**Chloroplasten** = plantcellen maken hun eigen voedsel via fotosynthese. Dieren eten andere organismen, dus hebben dat niet nodig.\n\n**Vacuole** = grote vloeistofzak in de plantcel die het cytoplasma 'opspant' tegen de celwand (zodat de plant rechtop staat). Wanneer een plant verlept, is de vacuole leeg.\n\n**Geheugentruc**: \"PCV is plant\" — Plantcel = Celwand + Chloroplasten + Vacuole.",
     svg: `<svg viewBox="0 0 320 200">
-<text x="80" y="20" text-anchor="middle" fill="${COLORS.chloro}" font-size="12" font-family="Arial" font-weight="bold">plantcel</text>
-<rect x="20" y="30" width="120" height="150" rx="6" fill="none" stroke="${COLORS.wall}" stroke-width="3"/>
-<rect x="24" y="34" width="112" height="142" rx="3" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="1.5"/>
-<rect x="34" y="80" width="92" height="60" rx="6" fill="${COLORS.vacuole}" opacity="0.35" stroke="${COLORS.vacuole}" stroke-width="1"/>
-<text x="80" y="115" text-anchor="middle" fill="${COLORS.vacuole}" font-size="10" font-family="Arial">vacuole</text>
-<circle cx="60" cy="55" r="10" fill="${COLORS.nucleus}" opacity="0.55"/>
-<ellipse cx="106" cy="55" rx="13" ry="6" fill="${COLORS.chloro}" opacity="0.55"/>
-<ellipse cx="65" cy="160" rx="13" ry="6" fill="${COLORS.chloro}" opacity="0.55"/>
-<text x="240" y="20" text-anchor="middle" fill="${COLORS.altSoft}" font-size="12" font-family="Arial" font-weight="bold">dierlijke cel</text>
-<ellipse cx="240" cy="105" rx="60" ry="68" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="2"/>
-<circle cx="225" cy="90" r="13" fill="${COLORS.nucleus}" opacity="0.55"/>
-<ellipse cx="265" cy="120" rx="13" ry="6" fill="${COLORS.mito}" opacity="0.55"/>
-<ellipse cx="225" cy="135" rx="13" ry="6" fill="${COLORS.mito}" opacity="0.55"/>
+<!-- ===== PLANTCEL: hoekig, dikke celwand ===== -->
+<text x="78" y="18" text-anchor="middle" fill="${COLORS.chloro}" font-size="12" font-family="Arial" font-weight="bold">plantcel</text>
+<rect x="16" y="28" width="126" height="150" rx="7" fill="#2e7d32" opacity="0.20" stroke="#00c853" stroke-width="5"/>
+<rect x="24" y="36" width="110" height="134" rx="4" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="1.4"/>
+<!-- grote vacuole -->
+<rect x="40" y="70" width="86" height="86" rx="16" fill="${COLORS.vacuole}" opacity="0.28" stroke="${COLORS.vacuole}" stroke-width="1.4"/>
+<text x="83" y="116" text-anchor="middle" fill="${COLORS.vacuole}" font-size="9" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">grote vacuole</text>
+<!-- kern -->
+<circle cx="50" cy="56" r="11" fill="${COLORS.nucleus}" opacity="0.35" stroke="${COLORS.nucleus}" stroke-width="1.6"/>
+<circle cx="54" cy="53" r="3" fill="${COLORS.nucleus}" opacity="0.85"/>
+<!-- chloroplasten met stipjes -->
+<ellipse cx="104" cy="56" rx="14" ry="7" fill="${COLORS.chloro}" opacity="0.55" stroke="#2e7d32" stroke-width="1.2"/>
+<circle cx="98" cy="56" r="1.8" fill="#1b5e20"/><circle cx="104" cy="55" r="1.8" fill="#1b5e20"/><circle cx="110" cy="57" r="1.8" fill="#1b5e20"/>
+<ellipse cx="56" cy="160" rx="14" ry="7" fill="${COLORS.chloro}" opacity="0.55" stroke="#2e7d32" stroke-width="1.2"/>
+<circle cx="50" cy="160" r="1.8" fill="#1b5e20"/><circle cx="56" cy="159" r="1.8" fill="#1b5e20"/><circle cx="62" cy="161" r="1.8" fill="#1b5e20"/>
+<!-- verschil-markers plantcel -->
+<line x1="16" y1="42" x2="6" y2="30" stroke="${COLORS.good}" stroke-width="1"/>
+<text x="4" y="26" text-anchor="start" fill="#00c853" font-size="8.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">celwand</text>
+<text x="83" y="192" text-anchor="middle" fill="${COLORS.chloro}" font-size="8.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">wand + chloroplast + vacuole</text>
+
+<!-- ===== DIERLIJKE CEL: rond, geen wand ===== -->
+<text x="240" y="18" text-anchor="middle" fill="${COLORS.altSoft}" font-size="12" font-family="Arial" font-weight="bold">dierlijke cel</text>
+<ellipse cx="240" cy="102" rx="62" ry="66" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="2.4"/>
+<!-- kern -->
+<circle cx="228" cy="86" r="15" fill="${COLORS.nucleus}" opacity="0.35" stroke="${COLORS.nucleus}" stroke-width="1.6"/>
+<circle cx="233" cy="82" r="4" fill="${COLORS.nucleus}" opacity="0.85"/>
+<!-- mitochondriën (boontjes) -->
+<path d="M 258 118 C 252 112 270 110 277 116 C 283 121 277 129 269 127 C 263 126 261 122 258 118 Z" fill="${COLORS.mito}" opacity="0.4" stroke="${COLORS.mito}" stroke-width="1.3"/>
+<path d="M 216 130 C 210 125 226 123 232 128 C 237 132 232 139 225 138 C 220 137 218 133 216 130 Z" fill="${COLORS.mito}" opacity="0.4" stroke="${COLORS.mito}" stroke-width="1.3"/>
+<!-- verschil-marker dierlijke cel -->
+<text x="240" y="192" text-anchor="middle" fill="${COLORS.altSoft}" font-size="8.5" font-family="Arial" paint-order="stroke" stroke="#0d1b2e" stroke-width="2.6">geen wand, geen chloroplast</text>
 </svg>`,
     checks: [
       {

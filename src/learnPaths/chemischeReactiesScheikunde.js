@@ -37,36 +37,98 @@ const chapters = [
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 8, to: 8 },
 ];
 
-// Reactie-vergelijking visueel met links + rechts.
-function reactieSvg(reactants = "2 H₂ + O₂", products = "2 H₂O", balanced = true) {
-  return `<svg viewBox="0 0 320 140">
-<rect x="0" y="0" width="320" height="140" fill="${COLORS.paper}"/>
-<text x="160" y="20" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Een chemische reactie</text>
+// ── Atoom-kleuren (realistisch, CPK-stijl) ──
+const ATOM = {
+  H: { fill: "#eef2f7", stroke: "#b8c2cf", text: "#33404f", r: 7 },  // waterstof: licht/wit, klein
+  O: { fill: "#e53935", stroke: "#a02722", text: "#ffffff", r: 12 }, // zuurstof: rood, groter
+  C: { fill: "#455a64", stroke: "#2b3840", text: "#ffffff", r: 12 }, // koolstof: donkergrijs
+};
 
-<!-- Links: reactanten -->
-<rect x="20" y="40" width="120" height="50" rx="6" fill="${COLORS.reactant}" opacity="0.55"/>
-<text x="80" y="60" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">REACTANTEN</text>
-<text x="80" y="80" text-anchor="middle" fill="#fff" font-size="13" font-family="Arial" font-weight="bold">${reactants}</text>
+// Eén atoom-bolletje met elementletter erin.
+function atoom(cx, cy, sym) {
+  const a = ATOM[sym];
+  return `<circle cx="${cx}" cy="${cy}" r="${a.r}" fill="${a.fill}" stroke="${a.stroke}" stroke-width="1.2"/>` +
+    `<text x="${cx}" y="${cy + a.r * 0.35}" text-anchor="middle" fill="${a.text}" font-size="${a.r + 1}" font-family="Arial" font-weight="bold">${sym}</text>`;
+}
+// Staafje (binding) tussen twee atomen — teken vóór de bollen zodat het eronder valt.
+function staaf(x1, y1, x2, y2) {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#b8c2cf" stroke-width="3" stroke-linecap="round" opacity="0.85"/>`;
+}
+
+// Watervormings-reactie als bol-en-staaf-moleculen: 2 H₂ + O₂ → 2 H₂O.
+function waterReactieSvg() {
+  // H₂-molecuul (twee H'tjes met staafje), gecentreerd op (cx,cy).
+  const h2 = (cx, cy) => staaf(cx - 8, cy, cx + 8, cy) + atoom(cx - 8, cy, "H") + atoom(cx + 8, cy, "H");
+  // O₂-molecuul (dubbele binding O=O).
+  const o2 = (cx, cy) =>
+    `<line x1="${cx - 12}" y1="${cy - 2.5}" x2="${cx + 12}" y2="${cy - 2.5}" stroke="#b8c2cf" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>` +
+    `<line x1="${cx - 12}" y1="${cy + 2.5}" x2="${cx + 12}" y2="${cy + 2.5}" stroke="#b8c2cf" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>` +
+    atoom(cx - 12, cy, "O") + atoom(cx + 12, cy, "O");
+  // H₂O-molecuul: O in het midden, twee H'tjes in een hoek eronder.
+  const h2o = (cx, cy) =>
+    staaf(cx, cy, cx - 13, cy + 12) + staaf(cx, cy, cx + 13, cy + 12) +
+    atoom(cx - 13, cy + 12, "H") + atoom(cx + 13, cy + 12, "H") + atoom(cx, cy, "O");
+
+  return `<svg viewBox="0 0 320 180">
+<rect x="0" y="0" width="320" height="180" fill="#0d1b2e"/>
+<text x="160" y="18" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Moleculen bij een reactie — de atomen schuiven opnieuw</text>
+
+<!-- Links: reactanten (2 H₂ + O₂) -->
+<text x="72" y="38" text-anchor="middle" fill="${COLORS.reactant}" font-size="9" font-family="Arial" font-weight="bold">REACTANTEN</text>
+${h2(50, 62)}
+${h2(96, 62)}
+<text x="73" y="66" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">+</text>
+${o2(72, 100)}
 
 <!-- Pijl -->
-<line x1="148" y1="65" x2="180" y2="65" stroke="${COLORS.arrow}" stroke-width="2.5"/>
-<polygon points="180,60 188,65 180,70" fill="${COLORS.arrow}"/>
-<text x="164" y="55" text-anchor="middle" fill="${COLORS.arrow}" font-size="9" font-family="Arial">→</text>
+<line x1="132" y1="82" x2="176" y2="82" stroke="${COLORS.arrow}" stroke-width="2.5"/>
+<polygon points="176,77 186,82 176,87" fill="${COLORS.arrow}"/>
+<text x="159" y="72" text-anchor="middle" fill="${COLORS.arrow}" font-size="9" font-family="Arial">reactie</text>
+
+<!-- Rechts: producten (2 H₂O) -->
+<text x="248" y="38" text-anchor="middle" fill="${COLORS.product}" font-size="9" font-family="Arial" font-weight="bold">PRODUCTEN</text>
+${h2o(222, 62)}
+<text x="248" y="70" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">+</text>
+${h2o(276, 62)}
+<text x="248" y="112" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">twee watermoleculen</text>
+
+<!-- Labels onderaan -->
+<text x="160" y="150" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">waterstof + zuurstof → water</text>
+<text x="160" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">2 H₂ + O₂ → 2 H₂O</text>
+</svg>`;
+}
+
+// Reactie-vergelijking visueel. Water → bol-en-staaf-moleculen; overige → nette formule-kaart.
+function reactieSvg(reactants = "2 H₂ + O₂", products = "2 H₂O", balanced = true) {
+  // De watervorming (gebalanceerd of nog niet) tonen we als échte moleculen.
+  if (reactants.replace(/\s/g, "").includes("H₂+O₂") && products.includes("H₂O")) {
+    return waterReactieSvg();
+  }
+  return `<svg viewBox="0 0 320 140">
+<rect x="0" y="0" width="320" height="140" fill="#0d1b2e"/>
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Een chemische reactie — reactanten gaan over in producten</text>
+
+<!-- Links: reactanten -->
+<text x="80" y="52" text-anchor="middle" fill="${COLORS.reactant}" font-size="9" font-family="Arial" font-weight="bold">REACTANTEN</text>
+<text x="80" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">${reactants}</text>
+
+<!-- Pijl -->
+<line x1="150" y1="70" x2="180" y2="70" stroke="${COLORS.arrow}" stroke-width="2.5"/>
+<polygon points="180,65 188,70 180,75" fill="${COLORS.arrow}"/>
 
 <!-- Rechts: producten -->
-<rect x="195" y="40" width="105" height="50" rx="6" fill="${COLORS.product}" opacity="0.55"/>
-<text x="247" y="60" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">PRODUCTEN</text>
-<text x="247" y="80" text-anchor="middle" fill="#fff" font-size="13" font-family="Arial" font-weight="bold">${products}</text>
+<text x="247" y="52" text-anchor="middle" fill="${COLORS.product}" font-size="9" font-family="Arial" font-weight="bold">PRODUCTEN</text>
+<text x="247" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">${products}</text>
 
 <!-- Status onderaan -->
-<text x="160" y="115" text-anchor="middle" fill="${balanced ? COLORS.good : COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">${balanced ? "✓ Aantal atomen klopt links = rechts" : "✗ Aantal atomen klopt nog NIET — moet kloppend gemaakt"}</text>
+<text x="160" y="118" text-anchor="middle" fill="${balanced ? COLORS.good : COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">${balanced ? "✓ Aantal atomen klopt: links = rechts" : "✗ Klopt nog NIET — moet kloppend gemaakt"}</text>
 </svg>`;
 }
 
 // Atoomtelling-tabel.
 function atoomtellingSvg(left, right, balanced) {
   return `<svg viewBox="0 0 320 200">
-<rect x="0" y="0" width="320" height="200" fill="${COLORS.paper}"/>
+<rect x="0" y="0" width="320" height="200" fill="#0d1b2e"/>
 <text x="160" y="18" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">Tellen van atomen — links vs rechts</text>
 
 <!-- Header -->
