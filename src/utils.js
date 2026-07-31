@@ -203,6 +203,8 @@ export const shuffle = (arr) => {
 
 export const formatDate = (d) => {
   const date = new Date(d);
+  // Ongeldige/ontbrekende datum → "" i.p.v. "undefined NaN undefined". (bug-jacht 2026-07-31)
+  if (isNaN(date.getTime())) return "";
   const days = ["zo", "ma", "di", "wo", "do", "vr", "za"];
   const months = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
   return `${days[date.getDay()]} ${date.getDate()} ${months[date.getMonth()]}`;

@@ -62,6 +62,10 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const [leesMsg, setLeesMsg] = useState(-1);  // welke bubble wordt voorgelezen (meelezen)
   const [leesWoord, setLeesWoord] = useState(-1); // welk woord de stem nú uitspreekt
   const scrollRef = useRef(null);
+  // Spiegelt `open` zodat een laat binnenkomend AI-antwoord niet begint voor te
+  // lezen nadat het kind het venster al sloot (Vonk praat anders door over het
+  // volgende scherm heen). (bug-jacht 2026-07-31)
+  const openRef = useRef(open);
 
   // Persona = het maatje dat de leerling koos (of Vonk als vlaggenschip). Zo is
   // het écht "Vonk helpt je", geen anonieme AI. Eén keer lezen bij open.
@@ -75,6 +79,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
   // zodra het venster sluit.
   useEffect(() => {
+    openRef.current = open;
     if (open) {
       try { track("vonk_hulp_open", { pathId, buddy: buddy.id }); } catch { /* */ }
     } else {
@@ -182,18 +187,23 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           },
         }),
       });
-      const data = await resp.json();
+      const data = await resp.json().catch(() => ({}));
       if (!resp.ok || data.error) {
         throw new Error(data.error || `HTTP ${resp.status}`);
       }
-      const after = [...next, { role: "assistant", content: data.reply }];
+      // Vangnet: een 200 zonder `reply` (leeg model-antwoord of iets ander schema)
+      // gaf een lege bubble + speak(undefined). Zelfde guard als BuddyChat/Maatje.
+      // (bug-jacht 2026-07-31)
+      const reply = data?.reply || "Sorry, ik kon even geen goed antwoord bedenken. Probeer je vraag nog eens? 🙂";
+      const after = [...next, { role: "assistant", content: reply }];
       setMessages(after);
       persist(after);
-      if (geluid) {
+      // Niet voorlezen als het venster intussen gesloten is (late-antwoord-race).
+      if (geluid && openRef.current) {
         const msgIdx = after.length - 1;
         setLeesMsg(msgIdx);
         setLeesWoord(-1);
-        speak(data.reply, {
+        speak(reply, {
           onStart: () => setPraat(true),
           onWoord: (w) => setLeesWoord(w),
           onEnd: () => { setPraat(false); setLeesMsg(-1); setLeesWoord(-1); },
