@@ -21,10 +21,20 @@ toegang. Eén betaalvorm dekt niet alles.
 
 ### 1. Gratis (iedereen — de kern, verandert niet)
 Oefenen, leerpaden, uitleg op 3 niveaus, echte examenvragen mét uitleg, park,
-basis-AI-buddy, vraag van de dag. Merkbelofte: "gratis oefenen blijft gratis"
-(gekwalificeerd, nooit "altijd alles gratis"). Dit is de acquisitiemotor.
+basis-AI-buddy, vraag van de dag. **Óók gratis (expliciet, Mark-vraag 31 jul
+"alles moet ergens onder vallen"):** echte VMBO-examens *inzien én downloaden
+als PDF* (publiek examenblad.nl-materiaal — daar kún je geen geld voor vragen)
+en de *printbare oefenbladen* (oefenpakket, leesladder, tafelbladen, dictees,
+redactiebladen). Dat is bewust: het ís oefenen (alleen op papier) én het zijn
+lead-magnets die e-mailadressen opleveren. Enige print-uitzondering: je eigen
+(school)logo op die oefenbladen = Pro. Merkbelofte: "gratis oefenen blijft
+gratis" (gekwalificeerd, nooit "altijd alles gratis"). Dit is de acquisitiemotor.
 Leerkrachten: leerpaden klaarzetten via deelcode blijft óók gratis (juf = ons
 goedkoopste acquisitiekanaal).
+
+> **Subtiel verschil om te bewaken:** examens *oefenen/inzien* = gratis; de
+> examen-*simulatie mét klok + eindrapport* = Familie. Gewoon leren blijft altijd
+> gratis; je betaalt alleen voor het inzicht/rapport eromheen.
 
 ### 2. Leerkwartier Familie — abonnement per gezín (niet per kind)
 **Voor:** de bezorgde Doorstroomtoets-ouder (primaire ICP-koper).

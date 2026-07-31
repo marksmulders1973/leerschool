@@ -99,7 +99,7 @@ export default function PakketUitleg({ open, onClose }) {
             <span style={{ marginLeft: "auto", background: G, color: "#06211a", fontWeight: 800, fontSize: 11, letterSpacing: 0.5, borderRadius: 999, padding: "3px 10px" }}>BLIJFT GRATIS</span>
           </div>
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-            {["Oefenen met alle onderwerpen", "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid", "Geen account nodig, geen creditcard"].map((t) => (
+            {["Oefenen met alle onderwerpen", "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid", "Echte examens oefenen én inzien als PDF", "Printbare oefenbladen mee naar huis", "Geen account nodig, geen creditcard"].map((t) => (
               <li key={t} style={{ fontSize: 13.5, color: "rgba(255,255,255,0.88)", padding: "3px 0 3px 20px", position: "relative", lineHeight: 1.45 }}>
                 <span style={{ position: "absolute", left: 0, color: G }}>✓</span>{t}
               </li>

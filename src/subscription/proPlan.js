@@ -151,6 +151,8 @@ export const PRO_GRATIS_BASIS = [
   "Uitleg op 3 niveaus (basis / simpeler / nog simpeler)",
   "De gratis Doorstroomtoets-oefentoets + je score",
   "Echte examenvragen oefenen mét uitleg",
+  "Echte VMBO-examens inzien én downloaden als PDF",
+  "Printbare oefenbladen mee naar huis (oefenpakket, leesladder, tafels, dictees)",
   "Vraag van de dag & het scorebord",
   "Leerkrachten: leerpaden klaarzetten voor je klas via een deelcode",
 ];
