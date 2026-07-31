@@ -1587,6 +1587,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span>👩‍🏫</span>
               Voor leerkrachten
             </button>
+            {/* Prijs-ingang op de home (Mark 31 jul): eerlijk + vindbaar dat de
+                basis gratis is en wat de optionele extra's kosten. Opent ProPage. */}
+            {onPro && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "#00c853", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+                onClick={() => { track("home_cta_prijzen"); onPro(); }}
+              >
+                <span aria-hidden="true">💶</span>
+                Wat kost het?
+              </button>
+            )}
             {/* 2026-06-20: oude spellen vervangen door "Mijn Park" (3D-dierentuin,
                 in opbouw). Ingang op home zodat het zichtbaar meegroeit. */}
             {onPlayObliterator && (
