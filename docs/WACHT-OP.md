@@ -28,9 +28,9 @@
 | 4 · Weekmail 2.0 ✉️ | ✅ klaar (v163) — "Focus deze week"-to-do in de maandag-mail | (in de e-mail) |
 | 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) | `/weekschema` |
 | 6 · Trots-momenten 🎉 | ✅ klaar (v162) — in-flow + preview | `/trots` |
-| 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ⏳ te bouwen | — |
+| 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ✅ klaar (v168) — cap + "wij oefenen samen" in ouder-dashboard | `/ouder` |
 
-**Stand: 8 van 9 klaar.** Alleen nog **7 · gezin max 3 kinderen** (multi-child account, `parent_child_links` — datamodel-integratie, aparte sessie + Mark-input). De rest live.
+**Stand: 9 van 9 klaar — de hele Familie-laag is bèta-live.** 🎉 Volgende slag: coherentie/bijschaven in één Fable-pass (styling + toon op elkaar afstemmen).
 
 ## 🟡 Mark-acties (open)
 - ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
