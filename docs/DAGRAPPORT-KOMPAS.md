@@ -43,6 +43,27 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 5. **🤖 Wat ik uit mezelf doe** — proactieve zet(ten) van vandaag (elke dag anders).
 6. **📊 Cijfers** — alleen wat beweegt; rest in één regel.
 
+## 🛠️ Lopend werk (autonoom, 1 aug)
+- **Oefenboekje op maat — feature 3 "Printbaar op maat" AF ✅** (v177-178, gepusht):
+  - Part A (v177): **aanbod-kaart** op het klaar-scherm van een leerpad bij ≥3 fout → `/oefenboekje?pad=<id>` (OefenboekjeTrigger; geen examen-paden).
+  - Part B (v178): boekje **samengesteld uit de fout-historie** (`kiesZwakkeConcepten` uit mastery-records → gemengd boekje van de zwakste onderwerpen; 6 unit-tests groen). Bereik via `?bron=historie` + de "Oefenboekje op maat"-knop in de Paraatheidsmeter.
+  - Open (klein): live browsertest zodra dev-server meewerkt; later coherentie-pass in de Fable-styling-slag.
+
+## 💡 Ideeën-tracker (brainstorm 7 jul — Mark: "hou me op de hoogte")
+| # | Idee | Status |
+|---|------|--------|
+| 2 | Gratis mini-doorstroomtoets → e-mail (leadmagnet) | ✅ = **Kwartiercheck** (C3, live) |
+| 4 | Wekelijks ouder-rapport (Squla-benchmark) | ✅ **live** (A8.1, maandag-mail) |
+| 5 | A12 Web Push afronden | ✅ **live** (29 jul) |
+| 3 | Referral via park (deel-code → beloning) | 🟢 grotendeels — deel-actie live 29 jul + `referral.js` |
+| 1 | Programmatic SEO-landingspagina's per leerpad | 🟡 deels — statische landings + schema/sitemap live; per-leerpad-pagina's nog niet volledig |
+| 8 | Buddy-tutor: toets-nabespreking + STT stap 2 | 🟡 deels — buddy live; STT stap 2 open |
+| 6 | Parkmaatjes account-sync (localStorage → Supabase) | 🔴 open |
+| 7 | Echte-telefoon-test park | 🔴 open (Mark-handwerk) |
+| 9 | Leerkracht-takenlijst fase 3 (échte juf laten testen) | 🔴 open (warme juf nodig) |
+
+**Stand: 3 volledig af (2/4/5), 3 deels (1/3/8), 3 open (6/7/9 — deels Mark/extern).**
+
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
