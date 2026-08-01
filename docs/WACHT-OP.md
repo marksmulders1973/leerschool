@@ -24,13 +24,13 @@
 | 1 · Paraatheidsmeter 🚦 | ✅ klaar (v154) | `/familie/paraatheid?familie=1` |
 | 3 · Printbaar op maat 📄 | ✅ oefenboekje (v153) + **ouderkaart "zo leg je 't uit" (v157)**; open: aanbod-kaart klaar-scherm + concept uit fout-historie | `/oefenboekje?boekje=1&pad=<id>` · `/ouderkaart?familie=1&kaart=<id>` |
 | 8 · Printbaar diploma 🏅 | ✅ klaar (1 aug, v156); open: auto-prefill vanuit afgerond pad | `/diploma?familie=1&naam=<x>&onderwerp=<y>` |
-| 2 · Vonk onbeperkt 🐉 | ⏳ te bouwen (framing/gating; AI zelf al gebouwd) | — |
+| 2 · Vonk onbeperkt 🐉 | ✅ klaar (v164) — framing-pagina | `/vonk` |
 | 4 · Weekmail 2.0 ✉️ | ✅ klaar (v163) — "Focus deze week"-to-do in de maandag-mail | (in de e-mail) |
 | 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) | `/weekschema` |
 | 6 · Trots-momenten 🎉 | ✅ klaar (v162) — in-flow + preview | `/trots` |
 | 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ⏳ te bouwen | — |
 
-**Stand: 7 van 9 klaar** (diploma · oefenboekje · kaart voor thuis · paraatheid · weekschema · trots-momenten · weekmail 2.0). Nog te bouwen: 2 (Vonk onbeperkt-framing) · 7 (gezin max 3 kinderen).
+**Stand: 8 van 9 klaar.** Alleen nog **7 · gezin max 3 kinderen** (multi-child account, `parent_child_links` — datamodel-integratie, aparte sessie + Mark-input). De rest live.
 
 ## 🟡 Mark-acties (open)
 - ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
