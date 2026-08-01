@@ -11,6 +11,7 @@
 const FEATURES = [
   { nr: 1, emoji: "🚦", titel: "Doorstroomtoets-paraatheid", tekst: "In één blik groen/oranje/rood per onderdeel — komt het goed?", status: "klaar", page: "paraatheid" },
   { nr: 3, emoji: "📄", titel: "Oefenboekje op maat", tekst: "Printbaar boekje met precies dat waar je kind moeite mee heeft.", status: "klaar", page: "oefenboekje" },
+  { nr: 3.1, emoji: "👪", titel: "Ouderkaart — zo leg je 't uit", tekst: "Een spiekbriefje voor jóu: hoe je een onderwerp in gewone woorden uitlegt aan je kind.", status: "klaar", page: "ouderkaart" },
   { nr: 2, emoji: "🐉", titel: "Vonk onbeperkt", tekst: "De AI-bijlesdocent altijd beschikbaar — €37/uur bijles vs €39/jaar.", status: "bouw" },
   { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Niet '50% op breuken' maar 'focus deze week op breuken — hier is het boekje'.", status: "bouw" },
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema, automatisch uit de zwakke plekken gebouwd.", status: "bouw" },
