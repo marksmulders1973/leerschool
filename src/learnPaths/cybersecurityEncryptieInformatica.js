@@ -48,6 +48,26 @@ const steps = [
           niveaus: { basis: "De mens.", simpeler: "Social engineering = mens misleiden", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Wat is het verschil tussen een **virus** en een **worm**?",
+        options: ["Een worm verspreidt zichzelf over netwerken; een virus heeft een gastbestand nodig", "Ze zijn precies hetzelfde", "Een virus is ongevaarlijk, een worm niet", "Een worm is antivirussoftware"],
+        answer: 0,
+        wrongHints: [null, "Er is wél verschil in hóé ze zich verspreiden.", "Beide kunnen schade doen — het gaat om de verspreiding.", "Een worm is juist malware, geen bescherming."],
+        uitlegPad: {
+          stappen: [{ titel: "Zelf verspreiden of niet", tekst: "Een **virus** verstopt zich in een bestand/programma en verspreidt zich pas als jij het **uitvoert**. Een **worm** verspreidt **zichzelf** over netwerken, zonder dat je iets hoeft te doen — daardoor gaat een worm vaak veel sneller rond." }],
+          niveaus: { basis: "Worm verspreidt zichzelf.", simpeler: "Worm = zelfverspreidend", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Een **trojaans paard** herken je aan…",
+        options: ["Het doet zich voor als iets nuttigs, maar doet stiekem iets kwaads", "Het versleutelt je bestanden en eist losgeld", "Het is altijd een mail van je bank", "Het is een sterk wachtwoord"],
+        answer: 0,
+        wrongHints: [null, "Dat is ransomware.", "Dat lijkt meer op phishing.", "Een trojan is malware, geen wachtwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Nuttig verkleed", tekst: "Een **trojaans paard (trojan)** lijkt iets nuttigs (een gratis spelletje, een 'update'), maar doet stiekem iets kwaads op de achtergrond. Net als het houten paard van Troje: van buiten een cadeau, van binnen de vijand." }],
+          niveaus: { basis: "Nuttig lijken, kwaad doen.", simpeler: "Trojan = nep-nuttig", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -85,6 +105,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hashing", tekst: "Een goede site bewaart een **hash**: een **onomkeerbare** versleuteling. Dezelfde invoer → dezelfde hash, maar je kunt het wachtwoord er niet uit terugrekenen. Lekt de database, dan zien hackers alleen hashes. Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen laten resetten." }],
           niveaus: { basis: "Als hash.", simpeler: "Wachtwoord = als hash bewaren", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom is **hetzelfde wachtwoord op meerdere sites** gebruiken gevaarlijk?",
+        options: ["Lekt één site, dan kunnen aanvallers er meteen je andere accounts mee proberen", "Het is juist het veiligst", "Websites worden er trager van", "Je onthoudt het dan slechter"],
+        answer: 0,
+        wrongHints: [null, "Het tegendeel: het is juist het gevaarlijkst.", "Snelheid heeft er niets mee te maken.", "Onthouden is makkelijker, veiligheid juist slechter."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén lek = alles open", tekst: "Als je overal hetzelfde wachtwoord gebruikt en één site wordt gehackt, proberen aanvallers datzelfde wachtwoord automatisch op je mail, socials en bank (dat heet **credential stuffing**). Daarom: **uniek per site**, het liefst via een wachtwoordmanager." }],
+          niveaus: { basis: "Eén lek opent alles.", simpeler: "Hergebruik = risico", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat doet een **wachtwoordmanager**?",
+        options: ["Onthoudt sterke, unieke wachtwoorden achter één hoofdwachtwoord", "Zet je wachtwoorden openbaar op internet", "Maakt je wachtwoorden korter", "Deelt je wachtwoorden met je vrienden"],
+        answer: 0,
+        wrongHints: [null, "Hij bewaart ze juist versleuteld, niet openbaar.", "Hij maakt ze juist langer/sterker.", "Delen is precies wat je níét wilt."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén sleutelbos", tekst: "Een **wachtwoordmanager** verzint en onthoudt voor elke site een **sterk, uniek** wachtwoord. Jij onthoudt alleen nog één sterk **hoofdwachtwoord**. Zo hoef je niet te kiezen tussen 'veilig' en 'te onthouden'." }],
+          niveaus: { basis: "Onthoudt sterke wachtwoorden.", simpeler: "Manager = kluis", nogSimpeler: "A." },
         },
       },
     ],
@@ -126,6 +166,26 @@ const steps = [
           niveaus: { basis: "Verkeer afschermen.", simpeler: "🔒 = verkeer versleuteld", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Wat is het lastige aan **symmetrische encryptie** (één gedeelde sleutel)?",
+        options: ["Je moet die ene geheime sleutel veilig bij de ander zien te krijgen", "Er zijn altijd te veel sleutels", "Versleutelde data is nooit meer te lezen", "Het werkt alleen zonder internet"],
+        answer: 0,
+        wrongHints: [null, "Er is juist maar één sleutel — dat is het punt.", "Met de sleutel kun je het wél terug lezen.", "Het werkt ook prima online."],
+        uitlegPad: {
+          stappen: [{ titel: "Het sleutelprobleem", tekst: "Bij **symmetrische encryptie** gebruiken zender en ontvanger **dezelfde** geheime sleutel. Snel — maar hoe geef je die sleutel veilig door zonder dat iemand onderweg 'm onderschept? Dat 'sleuteldeel-probleem' lost **asymmetrische** encryptie op." }],
+          niveaus: { basis: "Sleutel veilig delen.", simpeler: "Symmetrisch = deelprobleem", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom is het slotje **🔒 (HTTPS)** juist op **openbare wifi** belangrijk?",
+        options: ["Anderen op hetzelfde netwerk kunnen onversleuteld verkeer meelezen", "Openbare wifi is dan sneller", "Het bespaart stroom", "Het maakt de site gratis"],
+        answer: 0,
+        wrongHints: [null, "Snelheid verandert er niet door.", "Het gaat om veiligheid, niet om stroom.", "HTTPS zegt niets over de prijs."],
+        uitlegPad: {
+          stappen: [{ titel: "Meelezen voorkomen", tekst: "Op openbare wifi zit je op hetzelfde netwerk als vreemden. Zonder **HTTPS** kan iemand je verkeer (wachtwoorden, berichten) meelezen. Met het **slotje** is alles versleuteld, dus onleesbaar voor meelezers. Check dus altijd het slotje bij inloggen of betalen." }],
+          niveaus: { basis: "Anderen kunnen meelezen.", simpeler: "🔒 stopt meelezen", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -163,6 +223,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Europese privacywet", tekst: "De **AVG** (Algemene Verordening Gegevensbescherming) regelt hoe organisaties met **persoonsgegevens** mogen omgaan: dataminimalisatie (alleen wat nodig is), doelbinding, toestemming, en je recht op **inzage, correctie en verwijdering** — plus veilig bewaren." }],
           niveaus: { basis: "Omgaan met persoonsgegevens.", simpeler: "AVG = privacywet", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat is het verschil tussen een **firewall** en **antivirus**?",
+        options: ["Een firewall filtert netwerkverkeer; antivirus spoort malware op je apparaat op", "Ze doen precies hetzelfde", "Een firewall is zelf een virus", "Antivirus versnelt je wifi"],
+        answer: 0,
+        wrongHints: [null, "Ze vullen elkaar aan, maar doen iets anders.", "Een firewall beschermt juist.", "Antivirus gaat over malware, niet snelheid."],
+        uitlegPad: {
+          stappen: [{ titel: "Poortwachter vs. speurhond", tekst: "Een **firewall** is de poortwachter: hij bepaalt welk **netwerkverkeer** binnen/buiten mag. **Antivirus** is de speurhond op je apparaat zelf: hij spoort **malware** op en ruimt die op. Samen dekken ze verschillende risico's af." }],
+          niveaus: { basis: "Firewall = verkeer, antivirus = malware.", simpeler: "Poort vs. speurhond", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Volgens de **AVG** mag een organisatie…",
+        options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn (dataminimalisatie)", "Alle gegevens verzamelen die ze maar wil", "Je gegevens nooit laten inzien", "Je gegevens altijd doorverkopen"],
+        answer: 0,
+        wrongHints: [null, "Juist niet — alleen wat nodig is.", "Je hebt recht op inzage.", "Doorverkopen mag niet zomaar."],
+        uitlegPad: {
+          stappen: [{ titel: "Zo min mogelijk, met een doel", tekst: "De **AVG** eist **dataminimalisatie**: verzamel alleen wat je echt nodig hebt, en gebruik het alleen voor het doel waarvoor je het kreeg (**doelbinding**). Jij hebt recht op **inzage, correctie en verwijdering** van je gegevens." }],
+          niveaus: { basis: "Alleen wat nodig is.", simpeler: "AVG = zuinig met data", nogSimpeler: "A." },
         },
       },
     ],

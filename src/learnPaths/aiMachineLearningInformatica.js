@@ -48,6 +48,26 @@ const steps = [
           niveaus: { basis: "Aanbevelingen.", simpeler: "YouTube-tips = AI", nogSimpeler: "A." },
         },
       },
+      {
+        q: "**Algemene AI (AGI)** — die net als een mens álles zou kunnen leren —…",
+        options: ["bestaat op dit moment nog niet", "zit in elke smartphone", "is hetzelfde als een rekenmachine", "is bij wet verboden"],
+        answer: 0,
+        wrongHints: [null, "In je telefoon zit smalle AI, geen AGI.", "Een rekenmachine leert helemaal niets.", "Het gaat niet om een verbod, maar of het al bestaat."],
+        uitlegPad: {
+          stappen: [{ titel: "Nog science fiction", tekst: "**Algemene AI (AGI)** zou, net als een mens, om het even welke taak kunnen leren. Die bestaat **nog niet** — alle AI van nu is **smal** (goed in één taak). AGI is voorlopig science fiction." }],
+          niveaus: { basis: "Bestaat nog niet.", simpeler: "AGI = bestaat nog niet", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat betekent het als een AI **'hallucineert'**?",
+        options: ["Het geeft zelfverzekerd een antwoord dat feitelijk onjuist is", "De computer wordt te warm", "Het beeldscherm flikkert", "De AI valt in slaap"],
+        answer: 0,
+        wrongHints: [null, "Het gaat over foute antwoorden, niet over warmte.", "Niet het scherm — het antwoord klopt niet.", "AI 'slaapt' niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Zeker klinken, toch fout", tekst: "**Hallucineren** betekent dat AI een antwoord **verzint** dat vloeiend en zeker klinkt, maar feitelijk **niet klopt**. Omdat het model woord-voor-woord het waarschijnlijkste vervolg kiest, kan het overtuigend naast de waarheid zitten. Controleer belangrijke feiten dus zelf." }],
+          niveaus: { basis: "Zelfverzekerd fout.", simpeler: "Hallucineren = verzinnen", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -85,6 +105,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Data bepaalt de kwaliteit", tekst: "**'Garbage in, garbage out'**: leert een model van **slechte of eenzijdige** voorbeelden, dan worden de voorspellingen ook slecht of scheef. **Meer en betere data → beter model.** De data is dus minstens zo belangrijk als het algoritme." }],
           niveaus: { basis: "Slechte data = slecht model.", simpeler: "Slechte data → slecht", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom test je een ML-model op **nieuwe** data die het tijdens het trainen niet zag?",
+        options: ["Om te checken of het ook op onbekende gevallen goed werkt", "Om de computer sneller te maken", "Om stroom te besparen", "Dat hoeft eigenlijk nooit"],
+        answer: 0,
+        wrongHints: [null, "Testen gaat niet over snelheid.", "Het doel is betrouwbaarheid, niet stroom.", "Testen is juist essentieel."],
+        uitlegPad: {
+          stappen: [{ titel: "Werkt het ook 'in het echt'?", tekst: "Een model kan de **trainingsdata** uit z'n hoofd leren en tóch falen op nieuwe gevallen. Door te **testen op onbekende data** controleer je of het echt **generaliseert** — of het ook werkt op wat het nog nooit zag." }],
+          niveaus: { basis: "Checken op onbekende data.", simpeler: "Testen = werkt het echt?", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Een kat-herkenner is getraind op duizenden foto's. Wat kan hij daarna?",
+        options: ["Katten herkennen op nieuwe foto's die hij nog nooit zag", "Alleen exact dezelfde foto's herkennen", "Zelf een echte kat verzorgen", "Niets nieuws"],
+        answer: 0,
+        wrongHints: [null, "Dan zou hij niets geleerd hebben — het gaat om nieuwe foto's.", "Een model doet geen fysieke taken.", "Juist wél iets nieuws: generaliseren."],
+        uitlegPad: {
+          stappen: [{ titel: "Generaliseren", tekst: "Een goed getraind model leert de **kenmerken** van een kat, niet de exacte foto's. Daardoor herkent het katten op **nieuwe** beelden die het nog nooit zag. Dat 'toepassen op onbekende gevallen' heet **generaliseren** — precies waar het om draait." }],
+          niveaus: { basis: "Nieuwe foto's herkennen.", simpeler: "Model = generaliseert", nogSimpeler: "A." },
         },
       },
     ],
@@ -126,6 +166,26 @@ const steps = [
           niveaus: { basis: "Maakt nieuwe content.", simpeler: "Generatief = maakt nieuw", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Bij **reinforcement learning** (versterkend leren) leert een AI door…",
+        options: ["Belonen en straffen: proberen, feedback krijgen, en beter worden", "Een boek uit het hoofd te leren", "Gelabelde foto's te bekijken", "Helemaal niets te doen"],
+        answer: 0,
+        wrongHints: [null, "Uit het hoofd leren is het niet.", "Gelabelde data → dat is supervised.", "Het leert juist actief door te proberen."],
+        uitlegPad: {
+          stappen: [{ titel: "Leren met beloning", tekst: "**Reinforcement learning** leert door **proberen** en **beloning/straf**: goede acties leveren punten op, foute niet. Zo leert een AI bijvoorbeeld zelf een game spelen — steeds een beetje beter. **Supervised** leert van labels, **unsupervised** zoekt zelf groepen." }],
+          niveaus: { basis: "Belonen en straffen.", simpeler: "Reinforcement = belonen", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat is een **neuraal netwerk**?",
+        options: ["Lagen van rekenknopen, losjes geïnspireerd op hersencellen", "Een echt menselijk brein in de computer", "Een sociaal netwerk zoals Instagram", "Een soort internetkabel"],
+        answer: 0,
+        wrongHints: [null, "Het is geïnspireerd op het brein, maar het ís er geen.", "Het is geen sociaal medium.", "Geen kabel — een rekenmodel."],
+        uitlegPad: {
+          stappen: [{ titel: "Lagen rekenknopen", tekst: "Een **neuraal netwerk** bestaat uit **lagen rekenknopen** die signalen doorgeven, losjes geïnspireerd op hersencellen. Met veel lagen heet het **deep learning** — sterk in beeld, spraak en taal. Het is wiskunde, geen echt brein." }],
+          niveaus: { basis: "Lagen rekenknopen.", simpeler: "Neuraal net = rekenlagen", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -163,6 +223,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hulpmiddel, geen orakel", tekst: "Gebruik AI als **hulpmiddel**, maar blijf **kritisch**: het kan zelfverzekerd klinken en er tóch naast zitten. **Controleer** belangrijke feiten zelf, en let op **privacy** (deel niet zomaar persoonsgegevens) en **eerlijkheid** (bias)." }],
           niveaus: { basis: "Hulpmiddel + kritisch controleren.", simpeler: "AI = hulpmiddel, blijf kritisch", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat betekent het dat een complex AI-model een **'black box'** is?",
+        options: ["Het is soms onduidelijk wáárom het model een bepaalde beslissing neemt", "Het staat letterlijk in een zwarte doos", "Het werkt alleen 's nachts", "Het is een soort computervirus"],
+        answer: 0,
+        wrongHints: [null, "Het gaat om onduidelijkheid, niet om een echte doos.", "Tijd van de dag speelt geen rol.", "Het heeft niets met malware te maken."],
+        uitlegPad: {
+          stappen: [{ titel: "Uitkomst zonder uitleg", tekst: "Bij een **black box** zie je wel de **uitkomst**, maar is onduidelijk **waaróm** het model die koos. Dat is een probleem bij belangrijke beslissingen — bv. een afgewezen lening of sollicitatie: je kunt de reden niet goed controleren of aanvechten." }],
+          niveaus: { basis: "Onduidelijk waarom.", simpeler: "Black box = geen uitleg", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom botst machine learning vaak met **privacy** (AVG)?",
+        options: ["ML heeft veel data nodig, vaak persoonsgegevens", "ML gebruikt nooit data", "Privacy heeft niets met data te maken", "ML werkt alleen op papier"],
+        answer: 0,
+        wrongHints: [null, "ML draait juist op grote hoeveelheden data.", "Privacy gaat nu net over persoonsgegevens.", "ML draait op data, niet op papier."],
+        uitlegPad: {
+          stappen: [{ titel: "Honger naar data", tekst: "ML wordt beter met **meer data** — en die data zijn vaak **persoonsgegevens**. Dat botst met de **AVG**: verzamel alleen wat nodig is (dataminimalisatie), met toestemming en een duidelijk doel, en bewaar het veilig. Meer data is niet zomaar toegestaan." }],
+          niveaus: { basis: "Veel data = privacyrisico.", simpeler: "ML wil data, AVG remt", nogSimpeler: "A." },
         },
       },
     ],
