@@ -91,11 +91,14 @@ const BUCKET_ORDER = ["po", "klas-1", "klas-2", "klas-3", "klas-4", "bovenbouw"]
 // valt onder "rekenen"-pijler, "wiskunde" ook (basis-wiskunde groep 6-8
 // hoort bij rekenen-pijler). "geschiedenis"/"biologie"/"aardrijkskunde" valt
 // onder "wereld" (wereldoriëntatie).
+// 2026-08-01 (Q8): "spelling" mee onder Taal, en de losse PO-subjects
+// "wereldorientatie" + "verkeer" mee onder Wereldoriëntatie — anders vielen
+// die paden buiten élke pijler-filter (kwamen los te staan op /leren).
 const CITO_PIJLERS = {
-  taal: { label: "Taal", emoji: "📝", subjects: ["taal", "engels", "duits", "frans"] },
+  taal: { label: "Taal", emoji: "📝", subjects: ["taal", "spelling", "engels", "duits", "frans"] },
   rekenen: { label: "Rekenen", emoji: "🔢", subjects: ["rekenen", "wiskunde"] },
   lezen: { label: "Lezen", emoji: "📖", subjects: ["begrijpend-lezen"] },
-  wereld: { label: "Wereldoriëntatie", emoji: "🌍", subjects: ["aardrijkskunde", "geschiedenis", "biologie", "natuur", "maatschappijleer", "natuurkunde", "scheikunde", "economie", "beco"] },
+  wereld: { label: "Wereldoriëntatie", emoji: "🌍", subjects: ["wereldorientatie", "aardrijkskunde", "geschiedenis", "biologie", "natuur", "maatschappijleer", "natuurkunde", "scheikunde", "economie", "beco", "verkeer"] },
 };
 
 // Niveau-buckets voor entry-screen-filter. Labels in ouder-taal (geen
