@@ -127,7 +127,7 @@ export default function Paraatheidsmeter({ setPage, playerName = null, userId = 
             {/* Actie */}
             <div style={{ marginTop: 20, display: "flex", gap: 10, flexWrap: "wrap" }}>
               <button onClick={() => setPage && setPage("learn-paths-hub")} style={primaryBtn}>📚 Ga oefenen</button>
-              <button onClick={() => setPage && setPage("oefenboekje")} style={secondaryBtn}>📄 Maak een oefenboekje</button>
+              <button onClick={() => { try { window.location.href = "/oefenboekje?bron=historie"; } catch { setPage && setPage("oefenboekje"); } }} style={secondaryBtn}>📄 Oefenboekje op maat</button>
             </div>
 
             <div style={{ marginTop: 18, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
