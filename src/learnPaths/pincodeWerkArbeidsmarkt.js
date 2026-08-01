@@ -502,7 +502,7 @@ const steps = [
         q: "**100.000 werklozen**, beroepsbevolking **5.000.000**. Werkloosheidspercentage?",
         options: ["2%", "20%", "0,2%", "5%"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog.", "Te laag.", "Reken: 100.000/5.000.000 = 0,02."],
+        wrongHints: [null, "Veel te hoog.", "Te laag.", "Deel de werklozen door de totale beroepsbevolking en zet het om naar een percentage."],
         uitlegPad: {
           stappen: [{ titel: "Formule toepassen", tekst: "Werkloosheidspercentage = werklozen / beroepsbevolking × 100%. 100.000 / 5.000.000 = 0,02 = 2%." }],
           woorden: [{ woord: "werkloosheidspercentage", uitleg: "Werklozen als % van beroepsbevolking. CBS-cijfer." }],

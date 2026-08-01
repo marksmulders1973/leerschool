@@ -242,7 +242,7 @@ const steps = [
         q: "Hoeveel zetels heeft de **Tweede Kamer**?",
         options: ["150","75","100","225"],
         answer: 0,
-        wrongHints: [null, "75 = Eerste Kamer.", "Niet — historisch ook 150.", "Tweede + Eerste samen = 150+75=225, maar niet alleen Tweede."],
+        wrongHints: [null, "Dat getal hoort bij de Eerste Kamer, niet de Tweede.", "Niet — dat getal klopt niet met de huidige samenstelling.", "Dat is de som van beide Kamers samen, niet alleen de Tweede Kamer."],
         uitlegPad: {
           stappen: [{ titel: "150 = Tweede Kamer", tekst: "Sinds 1956 heeft de Tweede Kamer **150 leden** (eerder 100). Een partij heeft meerderheid bij **76 of meer** zetels. Geen enkele partij heeft dat alleen → coalitie." }],
           theorie: "Examen-feit: Tweede Kamer 150, Eerste Kamer 75. Onthoud: 'Tweede' is groter (150) dan 'Eerste' (75) — tegenintuïtief maar zo is het.",

@@ -34,7 +34,7 @@ const steps = [
         q: "**(x + 4)²** = ?",
         options: ["x² + 8x + 16", "x² + 16", "x² + 4x + 16", "x² + 8x + 8"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet middenterm 2ab.", "Niet — coëfficiënt is 2ab=8.", "Niet — laatste term is 4²=16."],
+        wrongHints: [null, "Niet — de formule (a+b)² geeft drie termen, niet twee. Welke middenterm ontbreekt?", "Niet — de coëfficiënt van de middenterm klopt niet. Denk aan 2·a·b.", "Niet — de constante term is het kwadraat van het getal in de haakjes."],
         uitlegPad: {
           stappen: [
             { titel: "(a+b)² = a² + 2ab + b²", tekst: "(x+4)² = x² + 2·x·4 + 4² = **x² + 8x + 16**.\n\n*Veelgemaakte fout*: x² + 16 (vergeten 2ab-term). Test: (1+4)² = 25 ≠ 1+16. Maar 1 + 8 + 16 = 25 ✓." },
@@ -70,7 +70,7 @@ const steps = [
         q: "**√50** vereenvoudig:",
         options: ["5√2", "√50 (kan niet)", "25√2", "10"],
         answer: 0,
-        wrongHints: [null, "Wel — 50 heeft kwadraat-factor.", "Niet — onmogelijk.", "Niet — √100 = 10."],
+        wrongHints: [null, "Wel — kijk of 50 een kwadraat-factor heeft die je eruit kunt halen.", "Niet — vereenvoudigen is hier wel mogelijk.", "Niet — controleer: wat is de vierkantswortel van jouw antwoord?"],
         uitlegPad: {
           stappen: [
             { titel: "Kwadraat-factor afsplitsen", tekst: "50 = 25 × 2. √50 = √25 · √2 = **5√2** ≈ 7,07. Vorm onder wortel zo klein mogelijk schrijven." },
@@ -215,7 +215,7 @@ const steps = [
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Idem.", "Wel oplossing — D=49."],
+        wrongHints: [null, "Niet — controleer je uitwerking.", "Idem.", "Er is wel een oplossing — bereken de discriminant en kijk of die positief is."],
         uitlegPad: {
           stappen: [
             { titel: "ABC stap-voor-stap", tekst: "a=2, b=−3, c=−5. D = 9 + 40 = 49 → √49 = 7.\nx = (3 ± 7) / 4.\nx = 10/4 = 2,5 OF x = −4/4 = −1.\n→ **x = 2,5 of x = −1**.\nCheck: 2(2,5)² − 3(2,5) − 5 = 12,5 − 7,5 − 5 = 0 ✓." },
@@ -370,7 +370,7 @@ const steps = [
         q: "Voor welke a heeft **x² + 2x + a = 0** GEEN reële oplossing?",
         options: ["a > 1", "a < 1", "a = 1", "Alle a"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel grens-geval (D=0, één oplossing).", "Onjuist."],
+        wrongHints: [null, "Tegenovergesteld — kijk wanneer de discriminant negatief wordt.", "Dat is het grens-geval, niet het geval zonder oplossingen.", "Onjuist — niet voor alle waarden van a heeft de vergelijking geen oplossing."],
         uitlegPad: {
           stappen: [
             { titel: "D < 0 vereist", tekst: "D = 4 − 4a. Voor geen reële oplossing: D < 0 → 4 − 4a < 0 → a > 1. Dus **a > 1**. Test a=2: D = −4 → geen reële wortel. Test a=0: D=4 → twee oplossingen ✓." },

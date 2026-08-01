@@ -300,7 +300,7 @@ const steps = [
           null,
           "Dat is 1 H₂O — er zijn er 3.",
           "Dat is het aantal moleculen, geen atomen.",
-          "Te veel — 3 × 2 = 6, niet 9.",
+          "Te veel — tel hoeveel H-atomen er per molecuul zijn, vermenigvuldig dan met het aantal moleculen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Coëfficiënt × index", tekst: "3 H₂O: 3 moleculen × 2 H = 6 waterstof-atomen." }],

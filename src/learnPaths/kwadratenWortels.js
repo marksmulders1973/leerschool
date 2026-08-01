@@ -216,7 +216,7 @@ const steps = [
         q: "Wat is √64?",
         options: ["8", "32", "16", "4096"],
         answer: 0,
-        wrongHints: [null, "32 = 64 ÷ 2. Maar wortel werkt anders: welk getal · zichzelf = 64?", "Je hebt half-half gedaan. Probeer: welk getal kwadraat geeft 64? 8 · 8 = ?", "4096 = 64². Dat is kwadraat, niet wortel."],
+        wrongHints: [null, "Dat is 64 gedeeld door twee. Maar wortel is iets anders — welk getal maal zichzelf geeft 64?", "Je hebt half-half gedaan. Probeer: welk getal kwadraat geeft 64?", "Dat is 64 in het kwadraat. Je zoekt juist het omgekeerde — wortel, niet kwadraat."],
         uitlegPad: {
           stappen: [{ titel: "8 × 8 = 64", tekst: "Welk getal² = 64? 8. Dus √64 = 8. Direct uit tabel." }],
           woorden: [{ woord: "wortelpaar", uitleg: "64 ↔ 8. Onthoud kwadraat-wortel-paren tot 10²." }],
@@ -250,7 +250,7 @@ const steps = [
         q: "Welke wortel is een 'mooi' rond getal?",
         options: ["√81", "√7", "√50", "√99"],
         answer: 0,
-        wrongHints: [null, "7 staat niet in de kwadratentabel — er is geen geheel getal dat in het kwadraat 7 geeft.", "50 staat niet in de tabel. Dichtstbijzijnde: 49 (=7²) en 64 (=8²).", "99 staat niet in de tabel. Dichtstbijzijnde: 81 (=9²) en 100 (=10²)."],
+        wrongHints: [null, "7 staat niet in de kwadratentabel — welk geheel getal kwadraat geeft precies 7?", "50 staat niet in de tabel — kijk welke twee kwadraten het dichtst bij 50 zitten.", "99 staat niet in de tabel — kijk welke twee kwadraten het dichtst bij 99 zitten."],
         uitlegPad: {
           stappen: [{ titel: "81 in tabel = 9²", tekst: "√81 = 9 (mooi rond). Andere opties: √7, √50, √99 staan NIET in kwadratentabel → komen oneindige decimalen uit. Vandaar deze is enige 'mooie'." }],
           woorden: [{ woord: "perfect kwadraat", uitleg: "Getal dat kwadraat van geheel is. 81=9² perfect. 50 niet." }],
@@ -319,7 +319,7 @@ const steps = [
         q: "Wat is √3 × √12?",
         options: ["6", "√15", "12", "36"],
         answer: 0,
-        wrongHints: [null, "Bij √a × √b mag je optellen onder de wortel? Nee — je vermenigvuldigt: √(3·12) = √36.", "12 = 3 · 4 — dat is alleen het tweede getal × iets. Reken: √(3·12) = √? = ?", "Je hebt 3 · 12 gedaan zonder de wortel. Maar √36 = ? (denk aan de tabel)"],
+        wrongHints: [null, "Mag je wortels optellen? Nee — je vermenigvuldigt de getallen onder de wortels en neemt dan pas de wortel.", "Je hebt alleen het product berekend maar de wortel nog niet genomen — welk getal staat er dan nog onder de wortelstreep?", "Je hebt het product berekend zonder de wortel te trekken. Welk getal staat er onder de wortelstreep, en wat is de wortel daarvan?"],
         uitlegPad: {
           stappen: [
             { titel: "Regel: √a × √b = √(ab)", tekst: "Wortels vermenigvuldigen: getallen onder wortels combineren. √3 × √12 = √(3×12) = √36." },
@@ -355,7 +355,7 @@ const steps = [
         q: "Wat is √72 / √8?",
         options: ["3", "9", "√64", "√9"],
         answer: 0,
-        wrongHints: [null, "Je hebt √72 / √8 = 9 gedaan? Reken: √(72/8) = √9 = ?", "√64 zou betekenen 72 + 8 of zoiets. Maar de regel is delen: √(72/8).", "Je bent gestopt bij √9. Werk nog 1 stap verder: √9 = ?"],
+        wrongHints: [null, "Heb je de deling onder de wortel gedaan? Bereken eerst 72 gedeeld door 8, dan de wortel van het resultaat.", "Optellen geeft een ander getal onder de wortel — de regel voor deling van wortels is √a / √b = √(a/b).", "Je bent al bijna klaar. Er staat nog een wortel voor een getal — trek die ook."],
         uitlegPad: {
           stappen: [
             { titel: "Regel: √a/√b = √(a/b)", tekst: "Wortels delen: √72/√8 = √(72/8) = √9." },
@@ -394,7 +394,7 @@ const steps = [
         q: "Vereenvoudig √20.",
         options: ["2√5", "4√5", "√20 (kan niet)", "10"],
         answer: 0,
-        wrongHints: [null, "Je hebt 20 = 4 · 5 (klopt), maar √4 is 2 — niet 4. Vergeet niet de wortel te nemen.", "Probeer 20 = 4 · 5. Dan √20 = √4 · √5 = ?", "10 zou √100 zijn. Maar we hebben √20. Splits: 20 = 4 · 5."],
+        wrongHints: [null, "Je splitsing klopt, maar vergeet dan de wortel te nemen van het perfecte kwadraat-deel.", "Splits 20 als product van een perfect kwadraat en iets anders. Welk getal maal zichzelf deelt 20?", "Dat is de wortel van honderd. Maar hier staat iets kleiner onder de wortel — splits het in twee factoren."],
         uitlegPad: {
           stappen: [
             { titel: "Splits in factoren", tekst: "20 = 4 × 5. Waarom 4? Omdat 4 perfect kwadraat is. √20 = √(4×5) = √4 × √5 = 2 × √5 = 2√5." },
@@ -428,7 +428,7 @@ const steps = [
         q: "Los op: 2x = 14.",
         options: ["x = 7", "x = 12", "x = 28", "x = 16"],
         answer: 0,
-        wrongHints: [null, "Je hebt 14 − 2 = 12 gedaan. Maar 2x betekent 2 keer x — dus delen: 14 / 2.", "Je hebt 14 + 14 of 2 · 14 gedaan. We zoeken het omgekeerde: x · 2 = 14, dus x = 14 / 2.", "14 + 2 = 16. Maar de vergelijking heeft geen plus — er staat 2x = 14, dus x = ?"],
+        wrongHints: [null, "Heb je afgetrokken in plaats van gedeeld? Bedenk: als 2 keer x gelijk is aan 14, hoe vind je dan x?", "Heb je vermenigvuldigd in plaats van gedeeld? We zoeken het omgekeerde van vermenigvuldigen.", "Heb je opgeteld in plaats van gedeeld? Er staat twee keer x gelijk aan 14 — welke bewerking lost x op?"],
         uitlegPad: {
           stappen: [{ titel: "Beide kanten ÷ 2", tekst: "2x = 14. Om x alleen te krijgen: deel beide kanten door 2. x = 14/2 = 7." }],
           woorden: [{ woord: "vergelijking oplossen", uitleg: "Stappen om x alleen te krijgen aan ene kant. Beide kanten dezelfde bewerking." }],
@@ -461,7 +461,7 @@ const steps = [
         q: "Los op: x² = 25.",
         options: ["x = ±5", "x = 5", "x = 12,5", "x = ±25"],
         answer: 0,
-        wrongHints: [null, "5 is één oplossing, maar er is ook een **negatieve**: (−5)² = 25 ook. Dus er zijn twee.", "Je hebt 25 / 2 gedaan. Maar bij x² = 25 zoek je √25, niet 25/2.", "Je hebt het kwadraat over genomen. Maar je moet juist √ doen. √25 = 5, en min 5 ook."],
+        wrongHints: [null, "Dat is één oplossing — maar als je een negatief getal kwadrateert, kan dat ook kloppen. Hoeveel oplossingen zijn er?", "Gedeeld door twee geeft niet de wortel. Welke bewerking doet het omgekeerde van kwadraat?", "Je hebt het getal zelf overgenomen. Pas de omgekeerde bewerking toe — welke is dat?"],
         uitlegPad: {
           stappen: [{ titel: "x² = c → x = ±√c", tekst: "x² = 25 → x = ±√25 = ±5. Twee oplossingen: x = 5 OF x = −5. Beide² geven 25." }],
           woorden: [{ woord: "±", uitleg: "Plus of min. Twee oplossingen tegelijk aanduiden." }],
@@ -475,7 +475,7 @@ const steps = [
         q: "Los op: x² = 64.",
         options: ["x = ±8", "x = ±32", "x = 64", "x = ±64"],
         answer: 0,
-        wrongHints: [null, "32 = 64 / 2. Maar je zoekt √64 — welk getal kwadraat is 64?", "64 = 8², maar je zoekt x, niet x². Pas √ toe.", "Je hebt 64 zelf overgenomen. √64 = 8 (en −8). Pas √ toe."],
+        wrongHints: [null, "Dat is 64 gedeeld door twee. Je zoekt echter de wortel — welk getal maal zichzelf geeft 64?", "Je noemt het getal dat al gegeven is. Je zoekt x, niet x² — pas de wortel toe.", "Je hebt het getal zelf overgenomen in plaats van de wortel te trekken. Welke twee getallen zijn elkaars kwadraat hier?"],
         uitlegPad: {
           stappen: [{ titel: "√64 = 8", tekst: "x² = 64 → x = ±√64 = ±8. Twee oplossingen: 8 of −8." }],
           woorden: [{ woord: "kwadratentabel-gebruik", uitleg: "Snel: 8²=64 uit tabel kennen. Dan direct ±8." }],
@@ -510,7 +510,7 @@ const steps = [
         q: "Hoeveel oplossingen heeft x² = −9?",
         options: ["0", "1", "2", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "1 zou kloppen als c = 0. Hier is c negatief — dat geeft 0 oplossingen.", "2 oplossingen krijg je alleen bij positieve c. Bij negatief is er **geen** x die werkt.", "Een vergelijking heeft hooguit een paar oplossingen, niet oneindig veel."],
+        wrongHints: [null, "Eén oplossing krijg je als het rechterlid nul is. Kijk wat hier aan de rechterkant staat.", "Twee oplossingen krijg je alleen als het rechterlid positief is. Wat is het hier?", "Een vergelijking met x² heeft hooguit twee oplossingen — kan een kwadraat dit getal opleveren?"],
         uitlegPad: {
           stappen: [{ titel: "Kwadraat nooit negatief", tekst: "x² = −9 → onmogelijk. Want x² is ALTIJD ≥ 0 (kwadraat van elk reëel getal is positief of 0). Geen reëele x voldoet. 0 oplossingen." }],
           woorden: [{ woord: "reëel getal", uitleg: "Standaard getallen (positief, negatief, breuken, decimalen). Excludeert 'imaginaire' getallen." }],
@@ -586,7 +586,7 @@ const steps = [
         q: "Welk getal is **rationaal**?",
         options: ["⅖", "√2", "π", "Geen van deze"],
         answer: 0,
-        wrongHints: [null, "√2 = 1,414... is een oneindige niet-herhalende decimaal — niet rationaal.", "π = 3,14159... is ook oneindig en niet-herhalend — niet rationaal.", "⅖ is gewoon een breuk (2/5 = 0,4). Dat is per definitie rationaal."],
+        wrongHints: [null, "Kan je √2 als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Kan je π als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Is ⅖ al geschreven als een breuk? Wat zegt de definitie van rationaal over breuken?"],
         uitlegPad: {
           stappen: [{ titel: "⅖ = breuk = rationaal", tekst: "Rationaal = te schrijven als breuk a/b. ⅖ = 2/5 al een breuk → rationaal. √2 + π = oneindige niet-herhalende decimalen → irrationaal." }],
           woorden: [{ woord: "ℚ rationaal", uitleg: "Te schrijven als breuk teller/noemer." }, { woord: "irrationaal", uitleg: "NIET als breuk te schrijven. Oneindig + niet-herhalend." }],
@@ -619,7 +619,7 @@ const steps = [
         q: "Welk getal is **irrationaal**?",
         options: ["√7", "0,5", "−3", "1/4"],
         answer: 0,
-        wrongHints: [null, "0,5 = 1/2 — dat is een breuk, dus rationaal.", "−3 is een geheel getal, dus ook rationaal.", "1/4 is letterlijk al een breuk — rationaal per definitie."],
+        wrongHints: [null, "Kan je 0,5 als breuk schrijven? Is het dan rationaal of irrationaal?", "Is −3 een geheel getal? En zijn gehele getallen rationaal?", "Is 1/4 al een breuk? En zijn breuken rationaal?"],
         uitlegPad: {
           stappen: [{ titel: "√7 = oneindig", tekst: "√7 ≈ 2,6457513... oneindige decimaal zonder herhaling = irrationaal. Geen perfect kwadraat is 7. Andere opties (0,5 = ½, −3, 1/4) zijn allemaal rationaal (te schrijven als breuk)." }],
           woorden: [{ woord: "√(niet-perfect kwadraat)", uitleg: "Wortel uit getal niet in kwadratentabel → irrationaal. √2, √3, √5, √7, √8, ... allemaal." }],
@@ -657,7 +657,7 @@ const steps = [
         q: "Een vierkante kamer heeft oppervlakte 81 m². Hoe lang zijn de zijden?",
         options: ["9 m", "40,5 m", "81 m", "8 m"],
         answer: 0,
-        wrongHints: [null, "40,5 = 81 / 2. Maar voor zijden van een vierkant: zijde = √oppervlakte = √81.", "81 zou de oppervlakte zelf zijn. De zijde is √81 = ?", "8² = 64 — niet 81. Probeer 9² = ?"],
+        wrongHints: [null, "Dat is de oppervlakte gedeeld door twee. Maar de formule voor de zijde is: zijde = wortel van de oppervlakte.", "Dat is de oppervlakte zelf, niet de zijde. Welke bewerking geeft je de zijde vanuit de oppervlakte?", "Dat kwadraat geeft niet de gegeven oppervlakte. Probeer een getal hoger."],
         uitlegPad: {
           stappen: [{ titel: "zijde = √opp", tekst: "Vierkant: opp = zijde². Andersom: zijde = √opp. Hier: zijde = √81 = 9 m." }],
           woorden: [{ woord: "vierkant", uitleg: "Alle 4 zijden gelijk. Opp = zijde × zijde = zijde²." }],
@@ -689,7 +689,7 @@ const steps = [
         q: "Los op: x² = 100.",
         options: ["x = ±10", "x = ±50", "x = 10", "x = ±100"],
         answer: 0,
-        wrongHints: [null, "50 = 100 / 2. Maar bij x² = c zoek je √c, niet c/2.", "10 is één oplossing, maar er is ook een **negatieve**: (−10)² = 100.", "Je hebt 100 zelf overgenomen. Pas √ toe: √100 = 10."],
+        wrongHints: [null, "Dat is honderd gedeeld door twee. Bij x² = c zoek je de wortel van c, niet de helft.", "Dat is één oplossing — maar denk ook aan negatieve getallen. Hoeveel oplossingen zijn er?", "Je hebt het getal zelf overgenomen. Pas de wortelbewerking toe om x te vinden."],
         uitlegPad: {
           stappen: [{ titel: "√100 = 10", tekst: "x² = 100 → x = ±√100 = ±10. Twee oplossingen: 10 of −10. Beide² geven 100." }],
           woorden: [{ woord: "perfect kwadraat", uitleg: "100 = 10² (perfect kwadraat). Wortel direct uit tabel." }],
@@ -700,14 +700,14 @@ const steps = [
         },
       },
       { q: "Bereken: 6² = ?", options: ["36","12","18","30"], answer: 0, wrongHints: [null, "Niet — niet 2×6.", "Niet — niet 3×6.", "Niet."] },
-      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "8 × 8 = 64, niet 81 — welk getal maal zichzelf geeft precies 81?", "7 × 7 = 49, dat zit er nog verder vanaf — probeer een iets groter getal.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet het dubbele van iets."] },
+      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Dat kwadraat geeft 64, niet 81 — probeer het volgende getal.", "Dat kwadraat geeft 49, nog verder ervan — probeer een getal dichter bij tien.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet een verdubbeling."] },
       { q: "Bereken: √144 = ?", options: ["12","11","14","72"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Wat is **√2** ongeveer?", options: ["1,41","1,5","2","1"], answer: 0, wrongHints: [null, "Te hoog.", "Wortel ≠ getal.", "Te laag."] },
       { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null, "Niet — π is irrationaal.", "Niet.", "Niet."] },
       { q: "Bereken **5² + 12²**", options: ["169","144","25","60"], answer: 0, wrongHints: [null,"Alleen 12².","Alleen 5².","Niet."] },
       { q: "Hoeveel is **(−4)²**?", options: ["16","−16","−8","8"], answer: 0, wrongHints: [null,"Minus × minus = plus.","Verkeerd.","Verkeerd."] },
       { q: "Wat is **√0**?", options: ["0","1","Bestaat niet","∞"], answer: 0, wrongHints: [null,"√1 = 1.","Wel bestaat.","Niet relevant."] },
-      { q: "Wat is **√(25 × 4)**?", options: ["10","20","100","5"], answer: 0, wrongHints: [null,"√(25×4) = √25 × √4 = 5×2 = 10.","Niet — eerst worteltrekken.","Niet."] },
+      { q: "Wat is **√(25 × 4)**?", options: ["10","20","100","5"], answer: 0, wrongHints: [null,"Dat is het product zelf, zonder de wortel te trekken. Splits de wortel en trek hem van elke factor.","Niet — eerst worteltrekken.","Niet."] },
       { q: "**Kwadraat** van een breuk **(½)²** = ?", options: ["¼","½","¾","1"], answer: 0, wrongHints: [null,"Niet — kwadraat verkleint.","Niet primair.","Veel te groot."] },
       { q: "Welke getallen zijn **perfecte kwadraten**?", options: ["1, 4, 9, 16, 25...","Alle even getallen","Alle oneven","Alle priemgetallen"], answer: 0, wrongHints: [null,"Niet alle even (6 is geen kwadraat).","Niet alle oneven (3 is geen kwadraat).","Niet."] },
       { q: "**a² × b²** = ?", options: ["(a × b)²","a × b","a² + b²","Te beoordelen"], answer: 0, wrongHints: [null,"Te simpel.","Tegen-bewerking.","Geen relevant."] },

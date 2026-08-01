@@ -173,7 +173,7 @@ const steps = [
         q: "Hoeveel oplossingen heeft x² + 9 = 0?",
         options: ["0", "1", "2", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "1 oplossing zou betekenen x² = 0. Hier is x² = −9 — onmogelijk.", "2 oplossingen krijg je bij x² = positief getal. Hier is het negatief.", "Vergelijkingen hebben hooguit een paar oplossingen, niet eindeloos."],
+        wrongHints: [null, "Eén oplossing hoort bij x² gelijk aan nul — maar hier is x² iets anders. Kan een kwadraat die waarde aannemen?", "Twee oplossingen krijg je bij x² gelijk aan een positief getal. Kijk wat x² hier moet zijn.", "Vergelijkingen hebben hooguit een paar oplossingen, niet eindeloos."],
         uitlegPad: {
           stappen: [
             { titel: "Isoleer x²", tekst: "x² + 9 = 0 → x² = −9." },
@@ -247,7 +247,7 @@ const steps = [
         q: "Los op: x · (x − 7) = 0.",
         options: ["x = 0 of x = 7", "x = 7", "x = 0", "x = −7"],
         answer: 0,
-        wrongHints: [null, "7 is één oplossing. Maar er is ook x = 0 (dan is de eerste factor 0).", "0 is één oplossing. Maar er is ook x = 7 (dan is x − 7 = 0).", "−7 zou kloppen bij x · (x + 7) = 0. Hier staat x − 7 = 0, dus x = 7."],
+        wrongHints: [null, "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?", "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 7 gelijk aan nul?", "Let op het teken in de tweede factor: staat er plus of min? Welk teken heeft x dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Product = 0 regel", tekst: "Als A · B = 0, dan A = 0 OF B = 0. Hier: x = 0 OF x − 7 = 0." },
@@ -281,7 +281,7 @@ const steps = [
         q: "Los op: x² + 6x = 0.",
         options: ["x = 0 of x = −6","x = 0 of x = 6","x = ±6","x = −6"],
         answer: 0,
-        wrongHints: [null, "Bijna! x(x+6) = 0 geeft x = 0 of x+6 = 0, dus x = **−6** (let op het minteken).", "x² = c regel is voor zonder x-term. Hier is een +6x — gebruik factoriseren.", "Eén oplossing vergeten: ook x = 0 hoort erbij."],
+        wrongHints: [null, "Bijna! Haal x buiten haakjes en los elke factor op — let op het teken bij de tweede oplossing.", "x² = c regel is voor vergelijkingen zonder x-term. Hier is een +6x — gebruik factoriseren.", "Eén oplossing vergeten — kijk ook naar de eerste factor van het product."],
         uitlegPad: {
           stappen: [
             { titel: "Factoriseer", tekst: "x² + 6x = 0 → x(x + 6) = 0." },
@@ -317,7 +317,7 @@ const steps = [
         q: "Wat zijn de nulpunten van y = x² + 5x?",
         options: ["x = 0 en x = −5","x = 0 en x = 5","x = ±5","Geen nulpunten"],
         answer: 0,
-        wrongHints: [null, "Bijna! Stel y = 0: x² + 5x = 0 → x(x+5) = 0 → x = 0 of x = **−5** (niet +5).", "Bij x² + 5x is er geen − teken — dus geen ±-vorm. Gebruik factoriseren: x(x+5).", "Er zijn wel nulpunten: x = 0 is altijd een nulpunt als c = 0."],
+        wrongHints: [null, "Bijna! Haal x buiten haakjes en stel elke factor gelijk aan nul — let op het teken van de tweede oplossing.", "Bij x² + 5x is er geen los getal (c). Gebruik factoriseren door x buiten haakjes te halen.", "Er zijn wel nulpunten — een factor bestaat altijd uit x zelf, en x gelijk aan nul is altijd een oplossing."],
         uitlegPad: {
           stappen: [
             { titel: "Nulpunt = y = 0", tekst: "Nulpunten zijn x-waarden waar parabool de x-as snijdt, dus waar y = 0. Stel: x² + 5x = 0." },
@@ -349,7 +349,7 @@ const steps = [
         q: "Welk paar getallen geeft som 5 én product 6?",
         options: ["2 en 3", "5 en 1", "−2 en 3", "1 en 5"],
         answer: 0,
-        wrongHints: [null, "5+1 = 6, niet 5. En 5·1 = 5, niet 6. Beide kloppen niet.", "−2+3 = 1, niet 5. Klopt niet.", "1+5 = 6, niet 5. En 1·5 = 5, niet 6."],
+        wrongHints: [null, "Controleer beide voorwaarden: klopt de som én het product? Probeer te rekenen.", "Klopt de som voor dit paar? Bereken som en product apart en vergelijk.", "Controleer beide voorwaarden: klopt de som én het product? Probeer te rekenen."],
         uitlegPad: {
           stappen: [
             { titel: "Zoek 2 voorwaarden", tekst: "Som = a + b = 5. Product = a · b = 6. Welk paar past op beide? 2+3=5 ✓ en 2·3=6 ✓. Antwoord: 2 en 3." },
@@ -383,7 +383,7 @@ const steps = [
         q: "Los op: x² − 8x = 0.",
         options: ["x = 0 of x = 8","x = 8","x = 0","x = ±8"],
         answer: 0,
-        wrongHints: [null, "8 is één oplossing maar je vergeet x = 0 (dan is x · (x − 8) ook 0).", "0 is één oplossing maar je vergeet x = 8 (dan is x − 8 = 0).", "x² = c regel is alleen zonder x-term. Hier wel een x-term — factoriseren werkt."],
+        wrongHints: [null, "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?", "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 8 gelijk aan nul?", "x² = c regel is alleen voor vergelijkingen zonder x-term. Hier is wel een x-term — gebruik factoriseren."],
         uitlegPad: {
           stappen: [
             { titel: "Factoriseer", tekst: "x² − 8x = x(x − 8) = 0." },
@@ -418,7 +418,7 @@ const steps = [
         q: "Los op: x² + 9x = 0.",
         options: ["x = 0 of x = −9","x = 0 of x = 9","x = ±9","x = −9"],
         answer: 0,
-        wrongHints: [null, "Bijna! Bij x(x + 9) = 0 → x + 9 = 0 → x = **−9** (let op: minteken).", "x² = c regel is voor zonder x-term. Hier wél een x-term — gebruik factoriseren.", "Vergeet x = 0 niet als oplossing."],
+        wrongHints: [null, "Bijna! Haal x buiten haakjes en stel de tweede factor gelijk aan nul — let op het teken van die oplossing.", "x² = c regel is voor vergelijkingen zonder x-term. Hier is wel een x-term — gebruik factoriseren.", "Er zijn twee oplossingen — kijk ook naar de eerste factor van het gefactoriseerde product."],
         uitlegPad: {
           stappen: [
             { titel: "Factoriseer", tekst: "x² + 9x = x(x + 9) = 0." },
@@ -455,7 +455,7 @@ const steps = [
         q: "Wanneer is de bal **weer op de grond** (h = 0)?",
         options: ["Bij t = 4 sec", "Bij t = 5 sec", "Bij t = 20 sec", "Nooit"],
         answer: 0,
-        wrongHints: [null, "Bijna — wat geldt er voor h als de bal de grond raakt? Stel h = 0 en factoriseer.", "Veel te laat — denk na: hoe lang duurt zo'n worp ongeveer in seconden?", "Wat omhoog gaat komt naar beneden. Stel h = 0 en zoek t."],
+        wrongHints: [null, "Bijna — welke hoogte heeft de bal als hij de grond raakt? Stel h gelijk aan dat en factoriseer.", "Dat is veel te lang voor zo'n worp. Bedenk een realistischer tijdsduur.", "Wat omhoog gaat komt naar beneden — stel h gelijk aan de grondwaarde en zoek t."],
         uitlegPad: {
           stappen: [
             { titel: "h = 0 invullen", tekst: "Bal op grond = hoogte 0. Dus: −5t² + 20t = 0." },
@@ -472,7 +472,7 @@ const steps = [
         q: "Op welke tijden is de bal **op 15 m hoogte**?",
         options: ["Bij t = 1 én t = 3 sec", "Alleen bij t = 1 sec", "Alleen bij t = 3 sec", "Bij t = 0 én t = 4 sec"],
         answer: 0,
-        wrongHints: [null, "De bal komt twee keer langs 15 m: omhoog (t=1) én omlaag (t=3).", "Idem — twee keer.", "Dat zijn t-waarden voor h = 0 (start en eind), niet voor 15 m."],
+        wrongHints: [null, "De bal passeert dezelfde hoogte twee keer: eenmaal omhoog en eenmaal omlaag. Beide tijden zijn het antwoord.", "Er zijn twee tijden — de bal gaat ook weer naar beneden.", "Die t-waarden horen bij de grond, niet bij een tussenhoogte. Stel h gelijk aan de gevraagde hoogte."],
         uitlegPad: {
           stappen: [
             { titel: "Stel h = 15", tekst: "−5t² + 20t = 15 → −5t² + 20t − 15 = 0. Deel door −5: t² − 4t + 3 = 0." },
@@ -489,7 +489,7 @@ const steps = [
         q: "Wat is de **maximum-hoogte** van de bal?",
         options: ["20 m", "15 m", "5 m", "40 m"],
         answer: 0,
-        wrongHints: [null, "Niet — 15 m is een gegeven hoogte uit de vorige vraag.", "Te laag. Vul t = 2 in: h = −5·4 + 20·2 = 20.", "Te hoog. h(2) = −5·4 + 40 = −20 + 40 = 20."],
+        wrongHints: [null, "Dat is een hoogte die in de vorige vraag voorkwam, niet de maximum-hoogte.", "Te laag — vul het t-moment van het maximum in de formule in en bereken h.", "Te hoog — vul het t-moment van het maximum in de formule in en bereken h stap voor stap."],
         uitlegPad: {
           stappen: [
             { titel: "Top tussen nulpunten", tekst: "Parabool symmetrie: top midden tussen 2 nulpunten. Nulpunten t=0 en t=4. Midden: t = 2." },

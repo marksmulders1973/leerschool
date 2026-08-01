@@ -211,7 +211,7 @@ const steps = [
         q: "Welke is goed? — *Sarah ___ a film at the moment.*",
         options: ["is watching", "watches", "watch", "watching"],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'at the moment'.", "Sarah → 3e persoon.", "-ing zonder be werkt niet."],
+        wrongHints: [null, "Simple past niet bij 'at the moment'.", "Welk werkwoord hoort bij 'she/he/it' in de tegenwoordige tijd?", "-ing zonder be werkt niet."],
       },
     ],
   },

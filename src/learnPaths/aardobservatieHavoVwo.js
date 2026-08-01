@@ -44,7 +44,7 @@ const steps = [
         q: "**Richter-schaal** is **logaritmisch** — Magnitude 7 is hoeveel sterker dan 5?",
         options: ["100×","2×","10×","1000×"],
         answer: 0,
-        wrongHints: [null, "Niet — niet lineair.", "Niet — 1 stap = 10×, 2 stappen = 100×.", "Niet correct."],
+        wrongHints: [null, "Niet — de schaal is logaritmisch, niet lineair.", "Niet — hoeveel stappen verschil is er, en wat betekent elke stap op een logaritmische schaal?", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "10× per stap", tekst: "Richter is logaritmisch: **elke stap = 10× sterker amplitude**. M5 → M7 = 2 stappen = **10² = 100×** sterker (amplitude). Energie ~32× per stap → 32² = ~1000× meer energie.\n\nDaarom: M9 verwoest hele kuststreken, M6 voelbaar maar beperkt." }],
           niveaus: { basis: "100×.", simpeler: "2 stappen = 10²=100×", nogSimpeler: "100" },

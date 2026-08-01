@@ -177,7 +177,7 @@ const steps = [
         q: "**Verhouding 2 : 5**. Bij **40** voor de eerste — hoeveel voor de tweede?",
         options: ["100","20","8","16"],
         answer: 0,
-        wrongHints: [null,"Te weinig — denk: 2 → 40 is × 20. Dus 5 × 20.","Te weinig — dat is alleen voor 1 deel.","Te weinig — ander deel rekening."],
+        wrongHints: [null,"Te weinig — bereken eerst met welke factor 2 naar 40 gaat, dan pas je die factor op 5 toe.","Te weinig — dat is alleen voor 1 deel.","Te weinig — ander deel rekening."],
         uitlegPad: {
           stappen: [{ titel: "Factor + ander", tekst: "Eerste: 2 → 40 = ×20. Tweede: 5 × 20 = 100." }],
           woorden: [{ woord: "schaal-factor", uitleg: "Met welk getal vermenigvuldigd: 40÷2=20." }],
@@ -212,7 +212,7 @@ const steps = [
         q: "Recept voor **4 personen** gebruikt **300 g pasta**. Voor **6 personen**?",
         options: ["450 g","400 g","500 g","600 g"],
         answer: 0,
-        wrongHints: [null,"Te weinig — ga via 1 persoon: 300 ÷ 4 = 75 per persoon.","Te veel — heb je gewoon × 2 gedaan?","Veel te veel — dat zou voor 8 zijn."],
+        wrongHints: [null,"Te weinig — ga via 1 persoon: deel 300 door 4, dan vermenigvuldig met 6.","Te veel — heb je gewoon × 2 gedaan?","Veel te veel — dat zou voor 8 zijn."],
         uitlegPad: {
           stappen: [{ titel: "Via 1 persoon", tekst: "1 persoon: 300÷4 = 75g. 6 personen: 6×75 = 450g." }],
           woorden: [{ woord: "per-persoon-truc", uitleg: "Totaal ÷ aantal personen = per-persoon hoeveelheid." }],
@@ -226,7 +226,7 @@ const steps = [
         q: "Limonade voor **8 mensen** = **1 L water**. Voor **3 mensen**?",
         options: ["375 mL","300 mL","250 mL","500 mL"],
         answer: 0,
-        wrongHints: [null,"Te weinig — denk: 1 L ÷ 8 = 125 mL per persoon. × 3.","Te weinig — dat is voor 2 personen.","Te veel — dat is voor 4 personen."],
+        wrongHints: [null,"Te weinig — ga via 1 persoon: hoeveel mL is dat? Vermenigvuldig daarna met 3.","Te weinig — dat is voor 2 personen.","Te veel — dat is voor 4 personen."],
         uitlegPad: {
           stappen: [{ titel: "Via 1 persoon", tekst: "1L=1000mL. Per persoon: 1000÷8=125mL. 3 personen: 3×125=375mL." }],
           woorden: [{ woord: "per-persoon", uitleg: "Eerste stap: deel door aantal personen." }],
@@ -261,7 +261,7 @@ const steps = [
         q: "Schaal **1 : 100.000**. Op kaart **3 cm** — werkelijk?",
         options: ["3 km","30 km","300 m","30 m"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je per ongeluk × 1 miljoen gedaan?","Te weinig — bij 1:100.000 is 1 cm = 1 km.","Veel te weinig."],
+        wrongHints: [null,"Te veel — heb je per ongeluk × 1 miljoen gedaan?","Te weinig — zoek op hoeveel km 1 cm op een 1:100.000-kaart vertegenwoordigt.","Veel te weinig."],
         uitlegPad: {
           stappen: [{ titel: "1 cm = 1 km", tekst: "Bij 1:100.000 geldt: 1 cm op kaart = 1 km werkelijk. Dus 3 cm = 3 km." }],
           woorden: [{ woord: "1:100.000", uitleg: "Standaard kaart-schaal. 100.000 cm = 1000 m = 1 km." }],
@@ -275,7 +275,7 @@ const steps = [
         q: "Een tuin is **15 m breed**. Op een schaal **1 : 100** kaart — hoeveel **cm**?",
         options: ["15 cm","1,5 cm","150 cm","1500 cm"],
         answer: 0,
-        wrongHints: [null,"Te weinig — bij 1:100 is 1 m = 1 cm. Dus 15 m = 15 cm.","Te veel — dat is werkelijk 150 m.","Veel te veel."],
+        wrongHints: [null,"Te weinig — bij 1:100 stelt 1 cm werkelijk 100 cm voor. Hoeveel cm op de kaart is 15 m?","Te veel — dat is werkelijk 150 m.","Veel te veel."],
         uitlegPad: {
           stappen: [{ titel: "1 m = 1 cm", tekst: "Bij 1:100 is 100 cm werkelijk = 1 cm op kaart = 1 m = 1 cm. Dus 15 m = 15 cm." }],
           woorden: [{ woord: "1:100", uitleg: "Plattegrond-schaal. 100 cm = 1 m. Dus 1 m werkelijk = 1 cm op kaart." }],
@@ -310,7 +310,7 @@ const steps = [
         q: "Een fles van **750 mL** kost **€ 3,75**. Wat is de **prijs per 100 mL**?",
         options: ["€ 0,50","€ 5,00","€ 0,75","€ 0,30"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je × 100 ipv ÷ gedaan?","Te veel — dat is meer dan de hele fles.","Te weinig — denk: 750 mL = 7,5 × 100 mL."],
+        wrongHints: [null,"Te veel — heb je × 100 ipv ÷ gedaan?","Te veel — dat is meer dan de hele fles.","Te weinig — hoeveel keer past 100 mL in 750 mL? Deel de prijs door dat aantal."],
         uitlegPad: {
           stappen: [{ titel: "Per mL → per 100", tekst: "€3,75 ÷ 750 = €0,005 per mL. Per 100 mL = €0,005 × 100 = €0,50." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per eenheid. Hier: per mL of per 100 mL." }],
@@ -324,7 +324,7 @@ const steps = [
         q: "Verhouding **3 : 5 (rood : blauw)**. **24 rode** ballonnen — hoeveel **blauwe**?",
         options: ["40","16","30","8"],
         answer: 0,
-        wrongHints: [null,"Te weinig — denk: 3 → 24 is × 8. Dus 5 × 8.","Te weinig — heb je verhouding goed?","Te weinig — dat is niet 5 × 8."],
+        wrongHints: [null,"Te weinig — bereken eerst met welke factor 3 naar 24 gaat, dan pas je die factor op 5 toe.","Te weinig — heb je verhouding goed?","Te weinig — klopt jouw berekening van 5 × die factor?"],
         uitlegPad: {
           stappen: [{ titel: "Factor + ander", tekst: "Rood: 3 → 24 = ×8. Blauw: 5 × 8 = 40." }],
           woorden: [{ woord: "schaal-factor", uitleg: "Met welk getal vermenigvuldigd: 24÷3 = 8." }],
@@ -366,7 +366,7 @@ const steps = [
         q: "**Klas A: 12 jongens, 16 meisjes. Klas B: 9 jongens, 12 meisjes**. Welke klas heeft **dezelfde verhouding** jongens:meisjes?",
         options: ["Beide hetzelfde (3:4)","Klas A heeft meer jongens","Klas B heeft meer jongens","Niet te zeggen"],
         answer: 0,
-        wrongHints: [null,"Vereenvoudig beide: 12:16 = 3:4 en 9:12 = ?","Vereenvoudig beide tot dezelfde-noemer-vorm.","Wel te zeggen — vereenvoudig de verhoudingen."],
+        wrongHints: [null,"Vereenvoudig beide verhoudingen door ze te delen door hun GGD — zijn ze dan gelijk?","Vereenvoudig beide tot dezelfde-noemer-vorm.","Wel te zeggen — vereenvoudig de verhoudingen."],
         uitlegPad: {
           stappen: [{ titel: "Vereenvoudig beide", tekst: "Klas A: 12:16 ÷4 = 3:4. Klas B: 9:12 ÷3 = 3:4. Zelfde verhouding!" }],
           woorden: [{ woord: "vergelijken", uitleg: "Vereenvoudig beide naar simpelste vorm en vergelijk." }],
@@ -380,7 +380,7 @@ const steps = [
         q: "**Recept** voor 4 pannenkoeken: 200 g meel, 1 ei, 300 ml melk. Hoeveel **meel** voor **12 pannenkoeken**?",
         options: ["600 g","300 g","800 g","200 g"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer factor (12÷4=3, geen 1,5).", "Te veel — geen × 4 nodig.", "Onveranderd — heb je vermenigvuldigen overgeslagen?"],
+        wrongHints: [null, "Te weinig — hoe vaak past recept van 4 in 12 pannenkoeken? Gebruik die factor voor het meel.", "Te veel — geen × 4 nodig.", "Onveranderd — heb je vermenigvuldigen overgeslagen?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: vergrotings­factor", tekst: "Hoeveel keer GROTER is recept B? 12 pannenkoeken ÷ 4 pannenkoeken = **3 keer groter**. Alle ingrediënten moeten dus × 3." },
@@ -404,7 +404,7 @@ const steps = [
         q: "Op een **kaart 1:25.000** is een weg **8 cm**. Hoe **lang** is de weg in werkelijkheid?",
         options: ["2 km","200 m","20 km","2 m"],
         answer: 0,
-        wrongHints: [null, "Te kort — heb je 100 ipv 25.000 gedaan?", "Te lang — 8 × 25.000 = 200.000 cm = 2 km, niet 20.", "Veel te kort — eenheid omrekenen vergeten?"],
+        wrongHints: [null, "Te kort — heb je wel het juiste schaal-getal gebruikt?", "Te lang — reken de cm om naar km: hoeveel meter is 8 × 25.000 cm?", "Veel te kort — eenheid omrekenen vergeten?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is schaal 1:25.000?", tekst: "**Schaal 1:25.000** = **1 cm op kaart komt overeen met 25.000 cm werkelijk**. Of: kaart is 25.000× kleiner dan werkelijkheid." },

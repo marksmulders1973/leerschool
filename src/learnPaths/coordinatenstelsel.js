@@ -467,7 +467,7 @@ const steps = [
         q: "*Je hebt punten (0,0), (1,3), (2,6), (3,9). Liggen die op een rechte lijn?*",
         options: ["Ja — y stijgt elke stap met 3 (constant)","Nee — y stijgt onregelmatig","Nee — ze liggen op een parabool","Niet genoeg informatie"],
         answer: 0,
-        wrongHints: [null, "Tel de y-waardes: 0, 3, 6, 9. Verschil = 3, 3, 3 — wat zegt dat?", "Een parabool heeft niet-constante verschillen. Hier zijn ze juist constant.", "De gegevens zijn voldoende om dit te bepalen — kijk naar het patroon."],
+        wrongHints: [null, "Bekijk de y-waardes achter elkaar — is de stap van de ene naar de andere altijd even groot?", "Een parabool heeft niet-constante verschillen. Kijk of dat hier zo is.", "De gegevens zijn voldoende om dit te bepalen — kijk naar het patroon."],
         uitlegPad: {
           stappen: [
             { titel: "Verschillen tellen", tekst: "Y-waardes: 0, 3, 6, 9. Verschillen: 3-0=3, 6-3=3, 9-6=3. Allemaal +3 per stap. CONSTANT." },
@@ -561,7 +561,7 @@ const steps = [
         q: "*Een punt heeft coördinaten (4, 0). Waar ligt het?*",
         options: ["Op de x-as, 4 rechts van de oorsprong","In kwadrant I","Op de y-as","In de oorsprong"],
         answer: 0,
-        wrongHints: [null, "Kwadrant I vereist y > 0. Hier is y = 0 → het punt ligt op de x-as zelf.", "Op de y-as zou x = 0 moeten zijn. Hier is x = 4.", "De oorsprong is (0, 0). Hier is x = 4."],
+        wrongHints: [null, "Kwadrant I vereist dat y groter is dan nul — wat is y bij dit punt?", "Op de y-as moet x nul zijn — klopt dat hier?", "De oorsprong heeft beide coördinaten gelijk aan nul — klopt dat hier?"],
         uitlegPad: {
           stappen: [{ titel: "y=0 → op x-as", tekst: "(4, 0): x = 4 (vier stappen rechts), y = 0 (geen omhoog/omlaag). Punt ligt OP de x-as (waar y = 0)." }],
           woorden: [{ woord: "op de x-as", uitleg: "Alle punten met y=0. Grens tussen kwadranten I+IV (boven) en II+III (onder)." }],
@@ -575,7 +575,7 @@ const steps = [
         q: "*Drie punten: (0,0), (2,4), (4,8). Liggen ze op een rechte lijn?*",
         options: ["Ja — y stijgt elke stap met 4 (constant)","Nee — onregelmatige stappen","Nee — ze vormen een driehoek","Niet te bepalen"],
         answer: 0,
-        wrongHints: [null, "Tel de y-waardes: 0, 4, 8. Verschil = 4, 4. Constant of niet?", "Drie punten vormen alleen een driehoek als ze NIET op één lijn liggen. Wat denk je hier?", "Wel — als je weet hoe je naar verschillen moet kijken, kun je dit afleiden."],
+        wrongHints: [null, "Kijk naar de y-waardes — is de toename van de ene naar de andere steeds gelijk?", "Drie punten vormen alleen een driehoek als ze NIET op één lijn liggen. Wat denk je hier?", "Wel — als je weet hoe je naar de stappen in y moet kijken, kun je dit bepalen."],
         uitlegPad: {
           stappen: [
             { titel: "Y-verschillen", tekst: "Y-waardes: 0, 4, 8. Verschillen: 4-0=4, 8-4=4. Constant: +4 per x-stap (van 2)." },
@@ -593,7 +593,7 @@ const steps = [
       { q: "Welk punt is de **oorsprong**?", options: ["(0, 0)","(1, 1)","(0, 1)","(−1, 0)"], answer: 0, wrongHints: [null, "(1, 1) ligt 1 stap naar rechts én 1 omhoog — de oorsprong ligt op het kruispunt zelf, hoeveel stappen is dat?", "(0, 1) ligt 1 stap omhoog op de y-as. Staat het kruispunt hoger dan de x-as?", "(−1, 0) ligt 1 stap naar links op de x-as. Ligt het kruispunt links van de y-as?"] },
       { q: "Punt (−2, −3) ligt in welk kwadrant?", options: ["III (linksonder)","I","II","IV"], answer: 0, wrongHints: [null, "Niet — beide +.", "Niet — y negatief.", "Niet — x negatief."] },
       { q: "Welk punt ligt op de **y-as**?", options: ["(0, 7)","(7, 0)","(7, 7)","(1, 2)"], answer: 0, wrongHints: [null, "X-as.", "Niet.", "Niet."] },
-      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Niet — invullen y=2×2=4.", "Niet — andersom.", "Niet — y moet 2."] },
+      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Niet — vul de x-waarde in de formule in en kijk of y klopt.", "Niet — andersom.", "Niet — controleer of y twee keer de x-waarde is."] },
       { q: "**Helling** = verandering in y per verandering in x. Van (0,1) naar (3,7) is helling?", options: ["2","1/2","3","6"], answer: 0, wrongHints: [null, "Andersom.", "Verschil x.", "Verschil y."] },
       { q: "Welke as is **horizontaal**?", options: ["x-as","y-as","z-as","Geen"], answer: 0, wrongHints: [null,"Verticaal.","3D.","Wel."] },
       { q: "Welke coördinaat staat **eerst** in (3, 5)?", options: ["x = 3","y = 3","x = 5","y = 5"], answer: 0, wrongHints: [null,"Niet — x is eerst.","Tweede.","Tweede."] },

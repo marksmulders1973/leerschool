@@ -189,9 +189,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij log(1000) = 3. Maar 0.001 = 10⁻³, dus log(0.001) = -3.",
+          "Verwar 1000 niet met 0.001 — schrijf 0.001 als macht van 10 en kijk wat de exponent is.",
           "Geen logische uitkomst.",
-          "Bij log(1) = 0. Maar 0.001 ≠ 1.",
+          "Denk aan log van 1 — dat is nul. Is 0.001 gelijk aan 1?",
         ],
         uitlegPad: {
           stappen: [{ titel: "10⁻³ = 0.001", tekst: "0.001 = 1/1000 = 10⁻³, dus log(0.001) = -3." }],
@@ -228,9 +228,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij log_3(27) = 3. Hier 9 = 3².",
+          "Dat is de log van 27. Maar 9 is een kleinere macht van 3 — welke?",
           "9 is het argument, niet het antwoord.",
-          "log_3(3) = 1, maar log_3(9) = 2.",
+          "Dat zou de log van 3 zelf zijn, niet van 9. Hoe schrijf je 9 als macht van 3?",
         ],
         uitlegPad: {
           stappen: [{ titel: "3² = 9", tekst: "9 = 3·3 = 3², dus log₃(9) = 2." }],
@@ -308,7 +308,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "log(10) = 1. Maar log(1) = 0.",
+          "Dat zou log van 10 zijn — maar het argument hier is 1. Zijn 1 en 10 hetzelfde?",
           "10 is het grondtal, niet de uitkomst.",
           "log(1) is wel bepaald — namelijk 0. Onbepaald geldt voor log(0).",
         ],
@@ -328,8 +328,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is het grondtal. Maar de log van a^n in basis a is gewoon n.",
-          "18 = 2 · 9 (vermenigvuldigen). Maar de regel zegt: log_a(a^n) = n.",
-          "11 = 2 + 9 (optellen). Maar log_a(a^n) = n zonder rekening houden met het grondtal.",
+          "Vermenigvuldigen is niet de juiste bewerking. Welke regel geeft de log van a^n?",
+          "Optellen is niet de juiste bewerking. Welke regel geeft de log van a^n?",
         ],
         uitlegPad: {
           stappen: [{ titel: "log_a(a^n) = n", tekst: "log₂(2⁹) = 9 — de exponent valt eruit." }],
@@ -412,9 +412,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken in argument werkt niet zo. Regel: verschil van logs = log van deling. 64/8 = 8.",
-          "Optellen klopt ook niet. log_a − log_b = log(a/b), niet log(a + b).",
-          "log_2(64) - log_2(8) = 6 - 3 = 3. Maar het antwoord vraagt om de uitdrukking — log_2(8) = 3.",
+          "Aftrekken in het argument werkt niet — welke regelzegt wat je met een verschil van logs doet?",
+          "Optellen klopt ook niet. Wat wordt het argument bij het verschil van twee logs?",
+          "Je kunt ook de losse log-waarden uitrekenen en dan aftrekken — is het antwoord dan precies gelijk aan de uitdrukking?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Verschil = log van deling", tekst: "log₂(64) − log₂(8) = log₂(64/8) = log₂(8) = 3." }],
@@ -455,7 +455,7 @@ const steps = [
         wrongHints: [
           null,
           "log(8) = log(2³), niet log(2⁴) = log(16).",
-          "2·log(4) = 2·log(2²) = 2·2·log(2) = 4·log(2). Toevallig gelijk! Maar de directe formule is 4·log(2).",
+          "Die uitdrukking kan je verder uitschrijven met een andere regel — is het dan identiek aan de directe formule?",
           "Geen geldige eigenschap. log(a^n) = n·log(a), geen vermenigvuldiging van logs.",
         ],
         uitlegPad: {
@@ -498,8 +498,8 @@ const steps = [
         wrongHints: [
           null,
           "Delen werkt niet — x staat in de exponent. Gebruik log: x = log(100)/log(5).",
-          "95 = 100 - 5, geen logische berekening voor exponent.",
-          "5⁵ = 3125, niet 100. Te groot.",
+          "Aftrekken werkt niet voor een exponent — welke methode zet je 5^x gelijk aan 100?",
+          "Te groot — hoeveel maal 5 moet je vermenigvuldigen om in de buurt van 100 te komen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "log van beide kanten", tekst: "5^x = 100 → x·log(5) = log(100) → x = log(100)/log(5) ≈ 2.86." }],
@@ -539,7 +539,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is het percentage zelf. Regel van 70: T = 70 / r%.",
+          "Dat is het percentage, niet de tijd — hoe deel je 70 door het percentage?",
           "Dat is de regel-constante zelf, niet de uitkomst.",
           "Te lang. Bij 7% groei verdubbelt het binnen ~10 jaar.",
         ],
@@ -572,9 +572,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "27 = 3³. Maar 81 = 3⁴.",
-          "log_3(3) = 1. Hier hebben we 81.",
-          "81 is het argument, niet de uitkomst. log_3(81) = 4.",
+          "Dat is log₃(27), niet log₃(81). Hoe schrijf je 81 als macht van 3?",
+          "Dat zou de log van 3 zelf zijn, niet van 81. Hoe schrijf je 81 als macht van 3?",
+          "81 is het argument, niet de uitkomst — welke macht van 3 geeft 81?",
         ],
         uitlegPad: {
           stappen: [{ titel: "3⁴ = 81", tekst: "81 = 3·3·3·3 = 3⁴, dus log₃(81) = 4." }],
@@ -596,7 +596,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken in argument werkt niet zo. Regel: verschil van logs = log van deling. 50/5 = 10.",
+          "Aftrekken in het argument werkt niet — welke regel zegt wat je met een verschil van logs doet?",
           "Optellen werkt niet. log(a) - log(b) = log(a/b).",
           "Geen logische bewerking.",
         ],
@@ -615,8 +615,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "16 = 32/2 (delen). x staat in exponent — gebruik log of herken: 32 = 2⁵.",
-          "30 = 32 - 2 (aftrekken). Geen exponent-berekening.",
+          "Delen werkt niet — x staat in de exponent. Kun je 32 schrijven als een macht van 2?",
+          "Aftrekken werkt niet hier — kun je 32 schrijven als een macht van 2?",
           "0.5 zou 2^0.5 = √2 ≈ 1.4 zijn, niet 32.",
         ],
         uitlegPad: {
@@ -677,7 +677,7 @@ const steps = [
           null,
           "Verkeerde berekening. 2·log(3) = log(9), dan + log(5) = log(9·5) = log(45).",
           "Dat zou 1·log(3) + log(5) = log(15) zijn. Hier hebben we 2·log(3) = log(9).",
-          "Verkeerde berekening — log(35) = log(5·7), maar hier rekenen we 9·5 = 45.",
+          "Verkeerde berekening — welk getal geeft 2·log(3) als macht, en hoe combineer je dat met log(5)?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Combinatie 2 regels", tekst: "2·log(3) = log(3²) = log(9). Dan log(9) + log(5) = log(9·5) = log(45)." }],
@@ -718,9 +718,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "log_2(4) = 2, want 4 = 2². Maar 0.25 = 1/4 = 2⁻².",
+          "Dat is log van een getal groter dan 1. Maar 0.25 is kleiner dan 1 — schrijf het als breuk en dan als negatieve macht.",
           "0.25 is het argument, niet het antwoord.",
-          "log_2(1/16) = -4, niet 1/4.",
+          "Dat is de log van 1/16, niet van 0.25. Schrijf 0.25 als breuk — is dat 1/4 of 1/16?",
         ],
         uitlegPad: {
           stappen: [{ titel: "0.25 = 2⁻²", tekst: "0.25 = 1/4 = 1/2² = 2⁻², dus log₂(0.25) = -2." }],
@@ -778,9 +778,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Te kort. Na 8 uur (= 2 halveringstijden) is er nog 25% over, niet 10%.",
+          "Te kort — na twee halveringstijden is er nog meer dan 10% over. Hoeveel halveringstijden heb je nodig?",
           "Veel te lang.",
-          "Na 16 uur (= 4 halveringstijden) is er nog 6.25% over. Te weinig — 10% komt eerder.",
+          "Na vier halveringstijden is er minder dan 10% over. Wanneer is er precies 10% over — eerder of later?",
         ],
         uitlegPad: {
           stappen: [{ titel: "0.5^(t/4) = 0.1", tekst: "t/4 = log(0.1)/log(0.5) ≈ 3.32. Dus t ≈ 13.3 uur." }],
@@ -791,7 +791,7 @@ const steps = [
           niveaus: { basis: "t = 4 · log(0.1)/log(0.5) ≈ 13.3.", simpeler: "Tussen 8 en 16 uur.", nogSimpeler: "≈ 13 uur." },
         },
       },
-      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — dat is 10²=100.", "Dat is argument.", "Dat is basis."] },
+      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — hoeveel nullen heeft 1000, en wat is de exponent van 10 daarvoor?", "Dat is argument.", "Dat is basis."] },
       { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Niet.", "Andere eigenschap.", "Andere eigenschap."] },
       { q: "**log(10)** = ? (basis 10)", options: ["1","10","0","100"], answer: 0, wrongHints: [null,"Argument.","Dat is log(1).","Niet."] },
       { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","∞","Niet bepaald"], answer: 0, wrongHints: [null,"Niet — log(basis).","Niet — log groeit logaritmisch.","Wel."] },

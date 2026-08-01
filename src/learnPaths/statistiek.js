@@ -286,7 +286,7 @@ const steps = [
         q: "Bereken het bereik van 15, 22, 8, 30, 18.",
         options: ["22", "8", "30", "12"],
         answer: 0,
-        wrongHints: [null, "Te klein. Bereik = grootste − kleinste = 30 − 8 = 22.", "8 is de kleinste, niet het bereik.", "30 is de grootste, niet het bereik. Reken: 30 − 8 = 22."],
+        wrongHints: [null, "Te klein. Bereik = grootste − kleinste — welke zijn dat hier?", "8 is de kleinste, niet het bereik.", "30 is de grootste, niet het bereik — trek de kleinste ervan af."],
         uitlegPad: {
           stappen: [
             { titel: "Min + max vinden", tekst: "Grootste = 30. Kleinste = 8." },
@@ -363,7 +363,7 @@ const steps = [
         q: "5 cijfers met gem 6. Som = ?",
         options: ["30", "11", "1,2", "5"],
         answer: 0,
-        wrongHints: [null, "Te klein. Som = aantal × gemiddelde = 5 × 6 = 30.", "Te klein. Reken: 5 × 6 = 30.", "Dat is geen 'som'. Reken: 5 × 6 = 30."],
+        wrongHints: [null, "Te klein. Hoe bereken je de som als je het gemiddelde en het aantal weet?", "Te klein. Wat is de formule voor som als gemiddelde en aantal gegeven zijn?", "Dat is geen 'som' — de formule is: som = aantal × gemiddelde."],
         uitlegPad: {
           stappen: [{ titel: "Formule omdraaien", tekst: "Gemiddelde = som ÷ aantal. Dus: SOM = aantal × gemiddelde. 5 × 6 = 30. Klassiek voor 'wat moet ik nog halen?'-vragen op examen." }],
           woorden: [{ woord: "som", uitleg: "Totaal van alle waarden bij elkaar opgeteld." }],
@@ -396,7 +396,7 @@ const steps = [
         q: "Cijfers 5, 7, 7, 8, 9. Wat is het gemiddelde?",
         options: ["7,2", "7", "36", "5"],
         answer: 0,
-        wrongHints: [null, "Te laag. Som = 36, ÷ 5 = 7,2.", "36 is de som. Deel nog door 5.", "5 is de kleinste, niet gemiddelde."],
+        wrongHints: [null, "Te laag. Tel alle cijfers op en deel door hoeveel er zijn.", "Dat is de som — deel die nog door het aantal.", "5 is de kleinste, niet gemiddelde."],
         uitlegPad: {
           stappen: [
             { titel: "Som", tekst: "5 + 7 + 7 + 8 + 9 = 36." },
@@ -448,7 +448,7 @@ const steps = [
         q: "Wat is het **gemiddelde cijfer**?",
         options: ["6,6", "6,5", "7,0", "5,5"],
         answer: 0,
-        wrongHints: [null, "Bijna. Reken zorgvuldig: som = 132, ÷ 20 = 6,6.", "Dat is de modus, niet het gemiddelde.", "Te laag. Reken: 132 / 20 = 6,6."],
+        wrongHints: [null, "Bijna — reken de som zorgvuldig en deel door het aantal leerlingen.", "Dat is de modus, niet het gemiddelde.", "Te laag — tel de som via de frequentietabel en deel door 20."],
         uitlegPad: {
           stappen: [
             { titel: "Som via frequenties", tekst: "Niet alle 20 cijfers los optellen. Gebruik formule: som = Σ(cijfer × aantal). Tabel: 4·1 + 5·3 + 6·5 + 7·6 + 8·4 + 9·1 = 4 + 15 + 30 + 42 + 32 + 9 = 132." },
@@ -465,7 +465,7 @@ const steps = [
         q: "Wat is de **modus**?",
         options: ["7", "6", "8", "5"],
         answer: 0,
-        wrongHints: [null, "Modus is de cijfer met de hoogste frequentie. 6 heeft 5 leerlingen, 7 heeft 6 leerlingen → 7 is hoger.", "Slechts 4 leerlingen hadden een 8.", "Slechts 3 leerlingen hadden een 5."],
+        wrongHints: [null, "Vergelijk de frequenties van 6 en 7 in de tabel — welke heeft er meer leerlingen?", "Slechts 4 leerlingen hadden een 8.", "Slechts 3 leerlingen hadden een 5."],
         uitlegPad: {
           stappen: [{ titel: "Hoogste frequentie zoeken", tekst: "Tabel: 4(1) 5(3) 6(5) 7(6) 8(4) 9(1). Hoogste frequentie = 6 leerlingen bij cijfer 7. Dus modus = 7." }],
           woorden: [{ woord: "frequentie", uitleg: "Aantal keer dat waarde voorkomt." }],

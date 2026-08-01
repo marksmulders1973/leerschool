@@ -145,7 +145,7 @@ const steps = [
       wrongHints: [
         "Samenvatting = ALLE punten kort herhalen. Alinea 1 noemt 1 issue.",
         "Conclusie = eindoordeel na redenering. Alinea 1 staat AAN HET BEGIN, niet na.",
-        "Voorbeeld = 1 concreet geval. Alinea 1 noemt landen + probleem, geen 1 uitgewerkt voorbeeld.",
+        "Een voorbeeld werkt één concreet geval uit. Alinea 1 noemt landen en een probleem, maar werkt dat niet uit als voorbeeld.",
         null,
       ],
       explanation: "Alinea 1 noemt: 'overal ter wereld dramatische achteruitgang van insecten' + 'ook kunstlicht is oorzaak'. Dat IS het centrale probleem dat de hele tekst behandelt.",

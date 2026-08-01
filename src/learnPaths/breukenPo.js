@@ -390,7 +390,7 @@ const steps = [
         q: "**1/2 + 1/3** = ?",
         options: ["5/6","2/5","2/6","1/5"],
         answer: 0,
-        wrongHints: [null,"Niet noemers ook optellen — eerst gelijknamig: 1/2 = 3/6 en 1/3 = 2/6.","Niet vereenvoudigd of ongelijk gemaakt.","Niet optellen — alleen tellers samen, na gelijk maken."],
+        wrongHints: [null,"Je hebt de noemers ook opgeteld — mogen noemers veranderen bij optellen?","Controleer of de noemer klopt: heb je de breuken gelijknamig gemaakt?","Je mag tellers pas optellen als de noemers gelijk zijn — is dat hier gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "Gelijke noemer 6", tekst: "1/2 = 3/6. 1/3 = 2/6. Optellen: 3/6 + 2/6 = 5/6." }],
           woorden: [{ woord: "gemeenschappelijke noemer", uitleg: "Kleinste getal waar beide noemers in passen. 2 en 3 → 6." }],
@@ -442,7 +442,7 @@ const steps = [
           niveaus: { basis: "5/8.", simpeler: "Op = 5 (boven). Totaal = 8 (onder). → 5/8 opgegeten.", nogSimpeler: "5/8" },
         },
       },
-      { q: "½ + ¼ = ?", options: ["¾","⅙","⅔","¼"], answer: 0, wrongHints: [null, "Maak eerst gelijknamig: ½ = 2/4. Tel dan de kwarten op.", "Reken in kwarten — ½ is hoeveel kwarten?", "Je begint met ¼ en telt er ½ bij, dan wordt het méér."] },
+      { q: "½ + ¼ = ?", options: ["¾","⅙","⅔","¼"], answer: 0, wrongHints: [null, "Maak eerst gelijknamig — hoeveel kwarten is een half?", "Reken in kwarten — hoeveel kwarten is een halve?", "Je begint met ¼ en telt er ½ bij, dan wordt het méér dan je nu hebt."] },
       { q: "1 − ⅓ = ?", options: ["⅔","¼","½","⅓"], answer: 0, wrongHints: [null, "Schrijf 1 als ³⁄₃ en haal ⅓ eraf.", "Heel = ³⁄₃ — hoeveel derden hou je over na het weghalen van ⅓?", "Dat is wat je weghaalt."] },
       { q: "Welke breuk is groter: ½ of ⅓?", options: ["½","⅓","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Denk aan een taart: is een hálve groter of kleiner dan een derde?", "½ en ⅓ zijn niet gelijk — verdeel dezelfde taart in 2 of in 3 stukken.", "Het is wél te bepalen: hoe groter de noemer, hoe kleiner elk stuk."] },
       { q: "Vereenvoudig: ⁴⁄₈ = ?", options: ["½","⅓","¼","⅔"], answer: 0, wrongHints: [null, "Deel teller én noemer door hetzelfde getal — 4 en 8 allebei door 4.", "Hoe vaak past 4 in 8? Dat bepaalt de nieuwe noemer.", "Vereenvoudigen maakt de breuk niet groter — 4 is de helft van 8."] },

@@ -179,9 +179,9 @@ const steps = [
         options: ["⁴⁄₁₂", "⅔", "²⁄₆", "Beide ²⁄₆ en ⁴⁄₁₂"],
         answer: 3,
         wrongHints: [
-          "⁴⁄₁₂ = ⅓ is correct. Maar er staat nóg een gelijke breuk in de lijst — kijk goed naar ²⁄₆.",
+          "⁴⁄₁₂ klopt als gelijkwaardige breuk — maar is er nog een andere breuk in de lijst die ook gelijk is aan ⅓?",
           "⅔ is twee derde, niet één derde.",
-          "²⁄₆ = ⅓ is correct. Maar er staat nóg een gelijke breuk in de lijst — kijk goed naar ⁴⁄₁₂.",
+          "²⁄₆ klopt als gelijkwaardige breuk — maar is er nog een andere breuk in de lijst die ook gelijk is aan ⅓?",
           null,
         ],
         uitlegPad: {
@@ -383,9 +383,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "⁴⁄₆ klopt als tussenstap, maar je kunt nog vereenvoudigen: ⁴⁄₆ = ²⁄₃... hm, en ²⁄₃ ≠ ½. Reken nog: ⅚ − ²⁄₆ = ³⁄₆ = ½.",
-          "Je hebt iets verkeerd berekend. ⅓ = ²⁄₆. Dus ⅚ − ²⁄₆ = ³⁄₆ = ½.",
-          "²⁄₃ = ⁴⁄₆. Maar we krijgen ⅚ − ²⁄₆ = ³⁄₆ = ½. Iets anders dus.",
+          "⁴⁄₆ is geen vereenvoudigde breuk — maar klopt het ook inhoudelijk? Zet ⅓ eerst gelijknamig en reken dan ⅚ − dat getal.",
+          "Controleer: hoeveel is ⅓ als breuk met noemer 6? Trek dat vervolgens van ⅚ af.",
+          "²⁄₃ = ⁴⁄₆ — maar hoeveel is ⅓ als breuk met noemer 6? Dat is niet hetzelfde als ²⁄₃.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gelijknamig + aftrekken", tekst: "⅓ = ²⁄₆. ⅚ − ²⁄₆ = ³⁄₆ = ½." }],
@@ -426,7 +426,7 @@ const steps = [
         wrongHints: [
           "¼ is het vereenvoudigde antwoord. Maar de directe uitkomst van 3·1 boven en 4·3 onder staat óók in de lijst — kijk naar ³⁄₁₂.",
           "³⁄₁₂ is de directe uitkomst. Maar dat is hetzelfde als ¼ — die staat óók in de lijst.",
-          "²⁄₇ = (3+ −)/(4+3)? Nee — bij vermenigvuldigen tel je niet op. Boven·boven en onder·onder: 3·1=3 en 4·3=12.",
+          "Bij breuken vermenigvuldigen tel je de tellers en noemers niet op — hoe reken je het dan wél uit?",
           null,
         ],
         uitlegPad: {
@@ -467,9 +467,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt vermenigvuldigd ipv gedeeld. Bij delen: tweede breuk omdraaien (¼ → ⁴⁄₁ = 4), dan ½ × 4 = 2.",
-          "Hoe past ¼ in ½? Twee keer (½ = ²⁄₄ = 2 × ¼). Dus 2.",
-          "Reken: ½ ÷ ¼ = ½ × ⁴⁄₁ = ⁴⁄₂ = 2.",
+          "Je hebt vermenigvuldigd in plaats van gedeeld — bij delen draai je de tweede breuk om en vermenigvuldig je dan.",
+          "Bedenk: hoe vaak past ¼ in ½? Tel ¼ stap voor stap op.",
+          "Draai de tweede breuk om en vermenigvuldig — wat krijg je dan?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Omkeren + vermenigvuldigen", tekst: "½ ÷ ¼ = ½ × ⁴⁄₁ = ⁴⁄₂ = 2." }],
@@ -511,9 +511,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt eerst opgeteld (⅓+½) en daarna keer ⅖. Maar volgens volgorde: eerst ½ × ⅖ = ⅕. Dan ⅓ + ⅕ = ⁸⁄₁₅.",
-          "²⁄₅ is alleen ½ × ⅖. Je vergeet de + ⅓.",
-          "Niet ¾. Reken stap voor stap: eerst ½ × ⅖ = ⅕, dan ⅓ + ⅕ = ⁵⁄₁₅ + ³⁄₁₅ = ⁸⁄₁₅.",
+          "Je hebt eerst opgeteld in plaats van vermenigvuldigd — welke bewerking heeft voorrang bij volgorde van bewerkingen?",
+          "²⁄₅ is alleen het resultaat van ½ × ⅖ — maar je vergeet de + ⅓ nog te verwerken.",
+          "Reken stap voor stap: welke bewerking doe je eerst, en wat is het resultaat van die stap?",
         ],
         uitlegPad: {
           stappen: [{ titel: "× voor +", tekst: "Eerst ½ × ⅖ = ⅕. Dan ⅓ + ⅕ = ⁵⁄₁₅ + ³⁄₁₅ = ⁸⁄₁₅." }],
@@ -552,9 +552,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "20 = 60 ÷ 3. Maar dat is ⅓ van 60, niet ¾. Bij ¾: deel door 4, keer 3.",
-          "180 = 60 × 3. Maar het is ¾ van — niet 3 keer.",
-          "15 = ¼ van 60. Maar je zoekt ¾ (drie kwarten): 3 × 15 = 45.",
+          "Je hebt gedeeld door 3 — dat is ⅓ van 60. Maar de noemer van ¾ is 4, niet 3.",
+          "60 keer 3 is optellen — niet de breuk berekenen. Hoe bereken je een breuk van een getal?",
+          "15 is één kwart van 60 — maar je zoekt drie kwart. Wat doe je dan met 15?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Door noemer, keer teller", tekst: "¾ van 60: 60÷4 = 15. Dan 3×15 = 45." }],
@@ -594,7 +594,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "⅗ = ⁹⁄₁₅, ⅔ = ¹⁰⁄₁₅. Dus ⅔ is groter.",
+          "Maak beide breuken gelijknamig (noemer 15) en vergelijk dan de tellers.",
           "Niet even groot. ⅗ ≈ 0,6 en ⅔ ≈ 0,67 — net iets verschillend.",
           "Breuken zijn altijd vergelijkbaar — maak gelijknamig en vergelijk tellers.",
         ],
@@ -662,7 +662,7 @@ const steps = [
       { q: "2½ + 1¼ = ?", options: ["3¾","3¼","4","4½"], answer: 0, wrongHints: [null, "Niet.", "Niet — niet rond.", "Te veel."] },
       { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet — verschillend.", "Wel — andersom dan PO."] },
       { q: "1 − ⅖ = ?", options: ["⅗","⅖","⅘","½"], answer: 0, wrongHints: [null, "Andersom.", "Niet.", "Niet."] },
-      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Niet zomaar cijfers.", "Niet — vergelijk met ½=50%.", "Niet."] },
+      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Niet zomaar cijfers.", "Niet — denk na: hoeveel procent is een halve, en hoe verhoudt een kwart zich daartoe?", "Niet."] },
       { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Niet primair.", "Helft."] },
       { q: "½ × 4 = ?", options: ["2","½","¼","4½"], answer: 0, wrongHints: [null, "Niet — vermenigvuldig met heel.", "Niet — kleiner dan heel.", "Niet."] },
       { q: "Welke breuk = ½?", options: ["²⁄₄","⅔","⅓","¾"], answer: 0, wrongHints: [null, "Te groot.", "Te klein.", "Te groot."] },

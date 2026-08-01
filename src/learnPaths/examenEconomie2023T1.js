@@ -213,7 +213,7 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Monopolie = 1 aanbieder. Hier zijn er veel.",
+          "Bij een monopolie is er maar één aanbieder — hoeveel aanbieders zijn er hier?",
           null,
           "Oligopolie = enkele grote spelers. Hier zijn er veel.",
           "Volkomen concurrentie = veel aanbieders + HOMOGeen product. Hier zijn de producten heterogeen (verschillend).",

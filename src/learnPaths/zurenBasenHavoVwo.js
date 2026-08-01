@@ -105,7 +105,7 @@ const steps = [
         q: "0,01 M **HCl** in water. pH?",
         options: ["2","12","1","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH-achtig.", "Niet — 0,1 M zou pH=1 zijn.", "Niet — wel zuur."],
+        wrongHints: [null, "Niet — dat getal hoort bij een basische situatie, niet bij een sterk zuur.", "Niet — die concentratie is tien keer zo hoog als de gegeven concentratie; reken met de juiste waarde.", "Niet — HCl is een zuur, dus de pH ligt onder de 7."],
         uitlegPad: {
           stappen: [{ titel: "Sterk zuur = volledige dissoc.", tekst: "HCl is sterk → 0,01 M HCl geeft [H₃O⁺] = 0,01 = 10⁻². **pH = −log(10⁻²) = 2**. Zuur." }],
           niveaus: { basis: "2.", simpeler: "0,01M HCl → pH=2", nogSimpeler: "2" },
@@ -115,7 +115,7 @@ const steps = [
         q: "Welke relatie geldt **altijd** in water (25°C)?",
         options: ["pH + pOH = 14","pH × pOH = 14","pH − pOH = 14","pH = pOH"],
         answer: 0,
-        wrongHints: [null, "Niet — wel som.", "Niet — som.", "Alleen bij neutraal (beide = 7)."],
+        wrongHints: [null, "Niet — het gaat om een som, niet om een product.", "Niet — het is ook een som, maar dan min in plaats van plus.", "Alleen bij neutrale oplossing zijn pH en pOH gelijk aan elkaar."],
         uitlegPad: {
           stappen: [{ titel: "Kw = 10⁻¹⁴", tekst: "Waterconstante: [H₃O⁺][OH⁻] = **10⁻¹⁴**. Log-versie: **pH + pOH = 14** (bij 25°C). Bij neutraal: pH = pOH = 7." }],
           niveaus: { basis: "pH + pOH = 14.", simpeler: "Som = 14", nogSimpeler: "14" },

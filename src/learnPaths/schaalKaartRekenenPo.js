@@ -192,7 +192,7 @@ const steps = [
         q: "Schaal 1 : 100.000. De afstand tussen twee dorpen is 5 km. Hoe lang op de kaart?",
         options: ["5 cm", "50 cm", "0,5 cm", "500 cm"],
         answer: 0,
-        wrongHints: [null, "Bij deze schaal is 1 km = 1 cm.", "Te groot.", "Te klein."],
+        wrongHints: [null, "Reken: hoeveel cm zijn 5 km bij deze schaal? Begin met 1 km.", "Te groot — kijk goed naar de schaalverhouding.", "Te klein — je mist een factor."],
         uitlegPad: {
           stappen: [{ titel: "1 km = 1 cm", tekst: "Bij schaal 1 : 100.000 is 1 km = 1 cm op de kaart. Dus 5 km = 5 cm." }],
           niveaus: {
@@ -233,7 +233,7 @@ const steps = [
         q: "Op een kaart (schaal 1 : 100.000) is de route 7 cm. Hoeveel km moet je echt fietsen?",
         options: ["7 km", "70 km", "0,7 km", "700 m"],
         answer: 0,
-        wrongHints: [null, "Te veel — bij deze schaal is 1 cm = 1 km.", "Te weinig.", "Te weinig — het zijn meerdere kilometers."],
+        wrongHints: [null, "Te veel — reken eerst hoeveel kilometer één cm op de kaart voorstelt.", "Te weinig — zet de schaal om: hoeveel kilometer hoort bij één cm?", "Te weinig — het zijn meerdere kilometers."],
         uitlegPad: {
           stappen: [{ titel: "1 cm = 1 km", tekst: "Bij 1 : 100.000 is 1 cm = 1 km. Dus 7 cm = 7 km." }],
           niveaus: {
@@ -275,7 +275,7 @@ const steps = [
         q: "Twee steden liggen 3 km uit elkaar. Op een kaart staan ze 6 cm uit elkaar. Welke schaal heeft de kaart?",
         options: ["1 : 50.000", "1 : 100.000", "1 : 5.000", "1 : 500.000"],
         answer: 0,
-        wrongHints: [null, "Reken: 3 km = 300.000 cm, gedeeld door 6 cm.", "Dan zou 6 cm 6 km zijn.", "Veel te klein."],
+        wrongHints: [null, "Reken: hoeveel cm is 3 km? Deel dat door het aantal cm op de kaart.", "Dan zou 6 cm een andere werkelijke afstand vertegenwoordigen — klopt dat met de gegeven steden?", "Veel te klein — hoe groot wordt het tweede getal als je deelt?"],
         uitlegPad: {
           stappen: [{ titel: "Echt (cm) ÷ kaart (cm)", tekst: "3 km = 300.000 cm. 300.000 ÷ 6 = 50.000. De schaal is 1 : 50.000." }],
           niveaus: {

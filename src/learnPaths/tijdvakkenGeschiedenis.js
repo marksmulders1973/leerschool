@@ -422,7 +422,7 @@ const steps = [
         q: "Wat gebeurde er in 1989?",
         options: ["De Berlijnse Muur viel", "WO2 begon", "Nederland werd onafhankelijk", "De boekdrukkunst werd uitgevonden"],
         answer: 0,
-        wrongHints: [null, "WO2 begon in 1939.", "Nederlandse onafhankelijkheid = 1648 (Vrede van Münster).", "Boekdrukkunst = ~1450."],
+        wrongHints: [null, "WO2 begon in 1939.", "De Nederlandse onafhankelijkheid werd bezegeld door de Vrede van Münster — maar dat was al ver vóór 1989.", "De boekdrukkunst (Gutenberg) dateert al van de 15e eeuw — veel eerder."],
         uitlegPad: {
           stappen: [{ titel: "9 november 1989 — Muur valt", tekst: "De Berlijnse Muur (gebouwd 1961) scheidde Oost- en West-Berlijn 28 jaar lang. Op 9 november 1989 mocht het Oost-Duitse volk plots vrij naar het westen. Mensen sloegen de muur eigenhandig kapot. Symbool van het einde Koude Oorlog." }],
           woorden: [{ woord: "Berlijnse Muur", uitleg: "Betonnen muur 1961-1989 die Berlijn in tweeën deelde. Symbool IJzeren Gordijn." }, { woord: "IJzeren Gordijn", uitleg: "Term Churchill: scheidslijn tussen democratisch West-Europa en communistisch Oost-Europa." }],
@@ -459,7 +459,7 @@ const steps = [
         q: "In welk tijdvak hoort de **Tachtigjarige Oorlog** (1568-1648)?",
         options: ["Tijdvak 5 + 6", "Tijdvak 3", "Tijdvak 8", "Tijdvak 9"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 3 = vroege middeleeuwen, veel eerder.", "Tijdvak 8 = 19e eeuw, te laat.", "Tijdvak 9 = WO1+WO2, veel te laat."],
+        wrongHints: [null, "Tijdvak 3 = vroege middeleeuwen, veel eerder.", "Tijdvak 8 hoort bij de 19e eeuw — klopt dat met de periode 1568-1648?", "Tijdvak 9 gaat over WO1+WO2 — was de Tachtigjarige Oorlog echt zo recent?"],
         uitlegPad: {
           stappen: [{ titel: "1568-1648 = tijdvak 5 + 6", tekst: "Tachtigjarige Oorlog liep van 1568 tot 1648 (80 jaar). 1568 viel in tijdvak 5 (Ontdekkers+hervormers, 1500-1600). 1648 viel in tijdvak 6 (Regenten+vorsten, 1600-1700). De oorlog overspant dus beide tijdvakken." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL-opstand tegen Spanje. Begin door Willem van Oranje. Einde Vrede van Münster." }],
@@ -473,7 +473,7 @@ const steps = [
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
         options: ["Tijdvak 5 — Ontdekkers", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 6 begint pas in 1600.", "Tijdvak 4 eindigt rond 1500 — 1492 is op de grens, maar 'ontdekkingsreizen' is het kenmerk van tijdvak 5.", "Tijdvak 7 = 1700-1800, veel te laat."],
+        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 eindigt rond 1500. Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
           woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op Bahamas." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],
@@ -487,7 +487,7 @@ const steps = [
         q: "In welk tijdvak hoort **Anne Frank**?",
         options: ["Tijdvak 9 — Wereldoorlogen", "Tijdvak 8", "Tijdvak 10", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 8 = 19e eeuw — te vroeg.", "Tijdvak 10 begint na WO2 — Anne Frank werd vermoord in 1945.", "Tijdvak 7 = 18e eeuw — te vroeg."],
+        wrongHints: [null, "Tijdvak 8 hoort bij de 19e eeuw — Anne Frank leefde in de 20e eeuw.", "Tijdvak 10 begint ná WO2. Anne Frank overleed tijdens de oorlog — in welk tijdvak valt WO2?", "Tijdvak 7 gaat over de 18e eeuw — dat is lang vóór Anne Franks tijd."],
         uitlegPad: {
           stappen: [{ titel: "1929-1945 = tijdvak 9", tekst: "Anne Frank werd geboren 1929 in Frankfurt, verhuisde naar Amsterdam (1933), dook onder Prinsengracht 263 (1942-1944), werd opgepakt + naar Auschwitz/Bergen-Belsen, stierf februari 1945. Haar leven viel volledig binnen tijdvak 9 (Wereldoorlogen, 1900-1950)." }],
           woorden: [{ woord: "Anne Frank", uitleg: "Joods meisje (1929-1945). Schreef beroemde dagboek tijdens onderduik." }, { woord: "onderduik", uitleg: "Joden verstopten zich tijdens Duitse bezetting NL (1940-1945) om niet gedeporteerd te worden." }],
@@ -501,7 +501,7 @@ const steps = [
         q: "In welk tijdvak hoort **de val van de Berlijnse Muur** (1989)?",
         options: ["Tijdvak 10", "Tijdvak 9", "Tijdvak 8", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 9 eindigt in 1950 — te vroeg.", "Tijdvak 8 = 19e eeuw.", "Tijdvak 7 = 18e eeuw."],
+        wrongHints: [null, "Tijdvak 9 eindigt in 1950 — is 1989 voor of na 1950?", "Tijdvak 8 hoort bij de 19e eeuw — dat klopt niet met 1989.", "Tijdvak 7 hoort bij de 18e eeuw — veel te vroeg."],
         uitlegPad: {
           stappen: [{ titel: "1989 = midden tijdvak 10", tekst: "Tijdvak 10 (Televisie+computer, 1950-nu). 1989 valt daar precies midden in. Val Berlijnse Muur = einde Koude Oorlog = sleutelmoment tijdvak 10. Vaak gevraagd op examens." }],
           woorden: [{ woord: "Berlijnse Muur viel", uitleg: "9 november 1989. Oost-Duitse regering opende grens. Mensen sloegen muur kapot." }, { woord: "tijdvak 10", uitleg: "1950 tot nu. Kenmerken: televisie, computer, Koude Oorlog, EU, internet, sociale media." }],

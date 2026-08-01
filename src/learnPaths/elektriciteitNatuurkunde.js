@@ -600,7 +600,7 @@ const steps = [
           null,
           "Veel te veel — controleer P = U × I.",
           "Te veel — dat zou een waterkoker zijn.",
-          "Te veel — dan zou P = 230 × 10 = 2.300 W.",
+          "Te veel — bij zo'n hoge stroomsterkte zou het vermogen enorm zijn. Kijk of die waarde logisch is voor een gloeilamp.",
         ],
         uitlegPad: {
           stappen: [{ titel: "I = P / U = 100/230 ≈ 0,43 A", tekst: "P = U × I, dus I = P / U. Met P = 100 W en U = 230 V: I = 100/230 ≈ 0,43 A." }],
@@ -705,7 +705,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Veel te veel — controleer: 2.000 × 0,5 uur = 1.000 Wh = 1 kWh.",
+          "Veel te veel — vergeet niet 30 minuten om te rekenen naar uren, en daarna Wh naar kWh.",
           "Te veel — dan zou de waterkoker 2u draaien.",
           "Te weinig — controleer met 2.000 × 0,5.",
         ],
@@ -733,7 +733,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Veel te veel — controleer: I = U/R = 230/200.",
+          "Veel te veel — gebruik de wet van Ohm: welke formule geeft de stroom bij bekende spanning en weerstand?",
           "Te weinig — controleer.",
           "Te veel.",
         ],
@@ -752,7 +752,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Te veel — denk in kW: 1,5 kW × 4 uur = 6 kWh.",
+          "Te veel — zet het vermogen eerst om naar kW en reken dan pas met de tijd.",
           "Te weinig — controleer eenheden.",
           "Te veel.",
         ],

@@ -74,7 +74,7 @@ const steps = [
         q: "Welke munten samen maken **€ 1,75**?",
         options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 25c","1 × €1 + 7 × 10c"],
         answer: 0,
-        wrongHints: [null, "Geen 25-cent-munt in Nederland.", "Geen 25-cent-munt in Nederland.", "7 × 10c = 70c, geen 75c."],
+        wrongHints: [null, "Geen 25-cent-munt in Nederland.", "Geen 25-cent-munt in Nederland.", "Tel: 7 × 10c — kom je dan op 75c?"],
         uitlegPad: {
           stappen: [
             { titel: "NL-munten kennen", tekst: "In Nederland bestaan deze munten: 1c, 2c, 5c, 10c, 20c, 50c, €1, €2. Géén 25-cent." },
@@ -104,7 +104,7 @@ const steps = [
         q: "**€ 3,40 + € 1,75** = ?",
         options: ["€ 5,15","€ 5,05","€ 4,95","€ 5,25"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer cent-deel: 40+75=115 = 1 euro 15.","Veel te weinig — heb je het euro-deel correct?","Te veel."],
+        wrongHints: [null,"Te weinig — tel de cent-delen apart op: 40 + 75 = ? cent.","Veel te weinig — heb je het euro-deel correct?","Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Cent + cent", tekst: "Cent: 40+75=115 cent = €1,15. Plus euro's: 3+1+1=5. Totaal €5,15." },
@@ -137,7 +137,7 @@ const steps = [
         q: "Mam koopt **brood € 2,15**, **kaas € 4,80**, **fruit € 3,55**. Totaal?",
         options: ["€ 10,50","€ 9,50","€ 11,50","€ 10,40"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je een product overgeslagen?","Te veel — controleer met schatting (2+5+4=11).","Te weinig — controleer cent-totaal."],
+        wrongHints: [null,"Te weinig — heb je een product overgeslagen?","Te veel — schat 2 + 5 + 4: past dat bij jouw antwoord?","Te weinig — controleer cent-totaal."],
         uitlegPad: {
           stappen: [
             { titel: "Tel op", tekst: "Cent: 15+80+55=150 (=€1,50). Euro: 2+4+3+1(onthoud)=10. Totaal €10,50." },
@@ -153,7 +153,7 @@ const steps = [
         q: "**€ 2,99 + € 4,99** = ?",
         options: ["€ 7,98","€ 6,98","€ 7,99","€ 8,98"],
         answer: 0,
-        wrongHints: [null, "Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8.", "Verkeerd afgerond. Cent: 99+99=198 → €1,98 → +6 = €7,98.", "Te veel — schatten: 3+5=8. Antwoord net daaronder."],
+        wrongHints: [null, "Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8 — maar hoeveel cent er net af?", "Verkeerd afgerond. Tel de centen op: 99 + 99 = ? cent, en reken dan verder.", "Te veel — schat 3 + 5: het antwoord moet net onder die schatting liggen."],
         uitlegPad: {
           stappen: [
             { titel: "Cito-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
@@ -217,7 +217,7 @@ const steps = [
         q: "Een speelgoed van **€ 17,40** met **2 × € 10-biljetten**. Wisselgeld?",
         options: ["€ 2,60","€ 2,40","€ 3,60","€ 7,60"],
         answer: 0,
-        wrongHints: [null,"Te weinig — vooruit-tellen: van 17,40 naar 18 = 0,60. Van 18 naar 20 = 2,00. Totaal 2,60.","Te veel — fout met cent-deel.","Te veel — heb je 1 biljet ipv 2 gerekend?"],
+        wrongHints: [null,"Te weinig — tel vooruit vanaf 17,40: hoeveel naar 18, hoeveel van 18 naar 20?","Te veel — fout met cent-deel.","Te veel — heb je 1 biljet ipv 2 gerekend?"],
         uitlegPad: {
           stappen: [
             { titel: "Betaald", tekst: "2 × €10 = €20." },
@@ -358,7 +358,7 @@ const steps = [
         q: "Een tas van **€ 35**, **15% korting**. Wat **betaal** je?",
         options: ["€ 29,75","€ 30","€ 5,25","€ 31,75"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer korting (15% van 35 = 5,25).","Klopt niet — dat is wat je BESPAART, niet betaalt.","Te veel."],
+        wrongHints: [null,"Te veel — reken eerst de korting (15% van 35) en trek die pas af.","Klopt niet — dat is wat je BESPAART, niet betaalt.","Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Korting berekenen", tekst: "15% van €35 = 35 × 0,15 = €5,25." },
@@ -409,7 +409,7 @@ const steps = [
         q: "**12 stickers van € 0,15** — totaal?",
         options: ["€ 1,80","€ 1,50","€ 1,20","€ 2,00"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 12 × 15 cent = 180 cent.","Veel te weinig.","Te veel."],
+        wrongHints: [null,"Te weinig — reken: 12 × 15 cent = hoeveel cent? Zet dat om naar euro's.","Veel te weinig.","Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldigen", tekst: "12 × €0,15 = 12 × 15 cent = 180 cent = €1,80." },
@@ -474,7 +474,7 @@ const steps = [
       { q: "Je krijgt €5 zakgeld + €2 verjaardag. Totaal?", options: ["€7","€3","€10","€5"], answer: 0, wrongHints: [null, "Niet — optellen.", "Te veel.", "Geen verjaardag-bonus?"] },
       { q: "1 sticker kost €0,20. 10 stickers?", options: ["€2,00","€0,20","€20,00","€10"], answer: 0, wrongHints: [null, "Per stuk.", "Komma fout.", "Aantal."] },
       { q: "Hoeveel cent zit in **€1,75**?", options: ["175","75","17,5","1,75"], answer: 0, wrongHints: [null, "Vergeet 100.", "Niet zo.", "In €."] },
-      { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null, "Niet — 5−4=1 niet 5.", "Niet.", "Komma vergeten."] },
+      { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null, "Niet — kijk goed naar het cent-deel bij de aftrekking.", "Niet.", "Komma vergeten."] },
       { q: "Voordeligst: 3 × €4 OF 1× €11?", options: ["1× €11","3× €4","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — duurder.", "Niet — verschil €1.", "Wel — vergelijken."] },
       { q: "10% korting op €40 = nieuwe prijs?", options: ["€36","€30","€4","€39"], answer: 0, wrongHints: [null, "Niet — 10% niet 25%.", "Dat is korting.", "Niet — 10% niet 2,5%."] },
       { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null, "Tel de centen los op: 50 + 25 cent, hoeveel is dat samen? Klopt jouw uitkomst dan nog?", "Heb je de hele euro's meegeteld? 8 + 1 euro erbij, en dan pas de centen.", "Dat lijkt naar boven afgerond. Reken de centen precies: 50 + 25 cent."] },

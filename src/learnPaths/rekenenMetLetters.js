@@ -261,9 +261,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 8 + 6 gedaan ipv 8 − 6. Reken: 2(x+4) = 2x+8, 3(x−2) = 3x−6. Samen: 5x + 2.",
-          "−2 zou kloppen als 2(x+4) iets anders gaf. Reken: 2x+8 + 3x−6 = 5x+2.",
-          "6x = 2 + 4. Maar 2(x+4) = 2x+8, niet (2+4)x. Vermenigvuldig wél de coëfficiënt met de x.",
+          "Je hebt de constanten opgeteld in plaats van afgetrokken — let op het minteken vóór de 6.",
+          "−2 zou kloppen als de haakjes anders uitpakten. Werk 3(x−2) eerst helemaal uit — wat geeft dat als constante?",
+          "De x-term is fout — 2(x+4) betekent dat je de 2 met de x vermenigvuldigt, niet met 2 en 4 apart optelt.",
         ],
         uitlegPad: {
           stappen: [
@@ -305,9 +305,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de middelste term vergeten. (a+b)² = a² + **2ab** + b². Hier 2·x·4 = 8x.",
-          "Middelste term klopt niet. 2·x·4 = 8x, niet 4x.",
-          "Bij b = 4 is b² = 16, niet 4. Reken b² als laatste term.",
+          "Je bent de middelste term vergeten. De formule (a+b)² geeft drie termen — welke ontbreekt er?",
+          "De middelste term klopt niet — hoe bereken je 2ab als je weet wat a en b zijn?",
+          "De laatste term is het kwadraat van b, niet b zelf. Wat is het kwadraat van de tweede term in de haakjes?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(a+b)²-formule", tekst: "(x+4)² = x² + 2·x·4 + 4² = x² + 8x + 16. Drie termen!" }],
@@ -343,7 +343,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Middelste term vergeten. (a−b)² = a² − **2ab** + b². 2·x·5 = 10x.",
+          "Middelste term vergeten — de formule (a−b)² geeft drie termen. Hoe bereken je de middelste?",
           "Dat zou (x²)·(−5) of zoiets zijn. (x−5)² geeft een uitdrukking met **drie** termen.",
           "Het eindterm b² is altijd positief, ook als de oorspronkelijke b negatief was. (−5)² = +25.",
         ],
@@ -415,8 +415,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 4 · 3 = 12 gedaan. Maar de regel is **optellen** van exponenten.",
-          "Niet de cijfers naast elkaar zetten. 4 + 3 = 7.",
+          "Je hebt vermenigvuldigd in plaats van opgeteld — wat doet de regel bij machten met dezelfde basis?",
+          "Zet de cijfers niet naast elkaar — tel de exponenten op. Wat is de som van de twee exponenten?",
           "Geen 2 ervoor. Bij vermenigvuldigen van machten verdubbel je niet — exponenten optellen, basis blijft.",
         ],
         uitlegPad: {
@@ -450,9 +450,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 8 · 3 = 24 gedaan. Maar bij delen: **aftrekken** van exponenten.",
-          "Je hebt opgeteld (8+3=11). Bij delen: aftrekken (8−3=5).",
-          "Bij delen reken je teller − noemer = 8 − 3 = 5.",
+          "Je hebt de exponenten vermenigvuldigd, maar bij delen is de regel anders — welke bewerking gebruik je?",
+          "Je hebt de exponenten opgeteld — dat is de regel voor vermenigvuldigen. Bij delen doe je iets anders.",
+          "Bij delen trek je de exponent van de noemer af van de teller. Wat is het verschil tussen de twee exponenten?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Delen → aftrekken", tekst: "x⁸ / x³ = x^(8−3) = x⁵." }],
@@ -487,9 +487,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 3 + 4 = 7 gedaan (regel voor vermenigvuldigen van machten). Maar dit is macht **van** macht: 3 · 4 = 12.",
-          "81 = 3⁴, maar dat geldt voor de exponent zelf in een rekenfeit. De regel is: exponenten **vermenigvuldigen**.",
-          "27 = 3³. Nee, hier is x basis en (3)·(4) = 12 de nieuwe exponent.",
+          "Je hebt de exponenten opgeteld — dat is de regel voor gewoon vermenigvuldigen. Maar dit is macht ván macht. Welke bewerking hoort daarbij?",
+          "Dat getal is een kwadraat-resultaat voor de exponent zelf, niet de regel die je nodig hebt. Hoe combineer je twee exponenten bij macht van macht?",
+          "De basis blijft x — de nieuwe exponent bereken je door de twee exponenten te combineren. Welke bewerking geeft de juiste exponent?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Macht van macht → vermenigvuldigen", tekst: "(x³)⁴ = x^(3·4) = x¹². Exponenten vermenigvuldigen." }],
@@ -528,9 +528,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Reken eerst 3x · 2x = 6x², dan 4x² + 6x² = 10x². Niet 9x².",
+          "Werk eerst de vermenigvuldiging 3x · 2x volledig uit (coëfficiënten én exponenten), voeg daarna soortgelijke termen samen.",
           "x² + x² = x², niet x⁴. Bij optellen blijft de macht gelijk (alleen coëfficiënten optellen).",
-          "Reken: 3x · 2x = 6x² (niet 10x²). Dus 4x² + 6x² = 10x² (niet 14x²).",
+          "De vermenigvuldiging 3x · 2x geeft een andere x²-term dan je denkt — herbereken die stap apart.",
         ],
         uitlegPad: {
           stappen: [
@@ -571,9 +571,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Reken: 3(x+2) = 3x+6. −2(x−1) = −2x+2. Samen: x + 8 (constanten 6+2 = 8).",
-          "Coëfficiënten van x kloppen niet. 3 − 2 = 1, dus 1·x = x. Niet 5x.",
-          "−4 zou kloppen als je de mintekens verkeerd verwerkte. Reken: 6 + 2 = 8, niet −4.",
+          "Werk beide haakjes volledig uit — let bij −2(x−1) op wat het minteken doet met het min-teken binnen de haakjes.",
+          "Hoeveel x-termen heb je na het wegwerken van de haakjes? Trek die samen — wat is 3 min 2?",
+          "−4 zou kloppen als de constanten niet dezelfde tekens hadden. Controleer het teken van elk los getal na het wegwerken van de haakjes.",
         ],
         uitlegPad: {
           stappen: [
@@ -614,8 +614,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "(x+2)² = x² + 4x + 4. (x+2)(x−2) = x² − 4. Samen: 2x² + 4x + 0 = 2x² + 4x.",
-          "Constanten heffen elkaar op: +4 (uit eerste) + (−4) (uit tweede) = 0. Geen +4 over.",
+          "Werk beide uitdrukkingen apart uit, tel daarna alles bij elkaar op — kijk goed wat de constanten samen geven.",
+          "Wat geeft de constante van het eerste deel bij de constante van het tweede deel? Heffen ze elkaar op?",
           "Je hebt alleen één van de twee uitgewerkt. Combineer beide: 2x² ipv x² (twee x²-termen).",
         ],
         uitlegPad: {

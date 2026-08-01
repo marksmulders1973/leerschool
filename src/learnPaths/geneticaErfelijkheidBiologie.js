@@ -181,7 +181,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is het aantal paren — totaal is 2 × 23 = 46.",
+          "Dat is het aantal paren, niet het totale aantal chromosomen — elk paar bestaat uit twee losse chromosomen.",
           "Te veel — verdubbel paren zou 46 zijn.",
           "Te veel.",
         ],
@@ -672,7 +672,7 @@ const steps = [
           niveaus: { basis: "23.", simpeler: "Helft van 46.", nogSimpeler: "Twee-twee opgesteld." },
         },
       },
-      { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — Punnett: AA + 2× Aa + aa = 3 van 4 dominant.","Te laag — alleen aa is recessief (1 van 4).","Wel — alleen aa toont recessief."] },
+      { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — maak een Punnett-vierkant en tel hoeveel uitkomsten dominant fenotype geven.","Te laag — hoeveel van de vier Punnett-vakjes tonen een recessief fenotype?","Niet — zelfs met twee dominante allelen is er één combinatie recessief; tel goed."] },
       { q: "**Cystische fibrose** is een recessieve aandoening. Beide ouders Aa. Kans op ziek kind?", options: ["25%","50%","75%","100%"], answer: 0, wrongHints: [null,"Niet — alleen aa is ziek, 1 van 4.","Niet — 3 van 4 zijn gezond.","Niet — gezonde dragers mogelijk."] },
       { q: "Wat is het verschil tussen **genotype** en **fenotype**?", options: ["Genotype = DNA-code; fenotype = zichtbaar kenmerk","Andersom","Hetzelfde","Geen van beide"], answer: 0, wrongHints: [null,"Andersom — denk: gen = letter, fen = uiterlijk.","Wel verschil — kenmerk zichtbaar vs erfelijke code.","Wel — leer de twee uit elkaar."] },
       { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)","Kleine letter (a)","Cijfer","Geen symbool"], answer: 0, wrongHints: [null,"Recessief.","Niet relevant.","Wel symbool."] },

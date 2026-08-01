@@ -117,7 +117,7 @@ const steps = [
         q: "Oppervlakte tussen **f(x)=x²** (onder) en **g(x)=2x** (boven) op interval waar ze elkaar omsluiten:\n\nSnijpunten?",
         options: ["x = 0 en x = 2","x = 1 en x = 2","x = 0 en x = 4","Alleen x = 1"],
         answer: 0,
-        wrongHints: [null, "Niet — los x² = 2x op.", "Niet — andere oplossing.", "Niet — twee snijpunten."],
+        wrongHints: [null, "Niet — stel de twee functies gelijk aan elkaar en los op.", "Niet — er is een andere oplossing; check de vergelijking nogmaals.", "Niet — er zijn twee snijpunten."],
         uitlegPad: {
           stappen: [{ titel: "Snijpunten = vergelijk", tekst: "x² = 2x → x² − 2x = 0 → **x(x−2) = 0** → x=0 of x=2. Dit zijn de grenzen van het ingesloten gebied." }],
           niveaus: { basis: "x=0 en x=2.", simpeler: "x²=2x → x=0,2", nogSimpeler: "0,2" },
@@ -138,7 +138,7 @@ const steps = [
         q: "∫[2 tot 2] f(x) dx = ?",
         options: ["0","f(2)","f(2)−f(2)","Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — geen evaluatie nodig.", "Wel = 0 maar via andere reden.", "Wel bepaald, 0."],
+        wrongHints: [null, "Niet — je hoeft de functie niet te evalueren; kijk naar de grenzen.", "Klopt dat de uitkomst nul is, maar om de goede reden: kijk naar de grenzen van de integraal.", "Wel bepaald — de definitie van een bepaalde integraal met gelijke grenzen geeft een eenduidig resultaat."],
         uitlegPad: {
           stappen: [{ titel: "Gelijke grenzen", tekst: "**∫[a tot a] f(x) dx = 0**. Geen interval = geen oppervlakte = 0. Eigenschap bepaalde integraal." }],
           niveaus: { basis: "0.", simpeler: "Gelijke grenzen = 0", nogSimpeler: "0" },

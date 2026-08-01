@@ -26,7 +26,7 @@ const steps = [
         q: "Wat is 17 ÷ 5?",
         options: ["3 rest 2", "4 rest 0", "2 rest 7", "3 rest 5"],
         answer: 0,
-        wrongHints: [null, "4 × 5 = 20, dat is te veel.", "De rest moet kleiner zijn dan de deler (5).", "De rest kan niet gelijk zijn aan de deler."],
+        wrongHints: [null, "Dat getal keer de deler gaat over 17 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler (5).", "De rest kan niet gelijk zijn aan de deler."],
         uitlegPad: {
           stappen: [{ titel: "Hoe vaak past 5 in 17?", tekst: "3 × 5 = 15. Er blijft 17 − 15 = 2 over. Dus 3 rest 2." }],
           niveaus: {
@@ -40,7 +40,7 @@ const steps = [
         q: "Wat is 23 ÷ 4?",
         options: ["5 rest 3", "6 rest 1", "5 rest 4", "4 rest 7"],
         answer: 0,
-        wrongHints: [null, "6 × 4 = 24, dat is te veel.", "De rest moet kleiner zijn dan 4.", "De rest mag niet groter zijn dan de deler."],
+        wrongHints: [null, "Dat getal keer de deler gaat over 23 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler.", "De rest mag niet groter zijn dan de deler."],
         uitlegPad: {
           stappen: [{ titel: "Hoe vaak past 4 in 23?", tekst: "5 × 4 = 20. Rest: 23 − 20 = 3. Dus 5 rest 3." }],
           niveaus: {
@@ -68,7 +68,7 @@ const steps = [
         q: "Wat is 30 ÷ 6?",
         options: ["5 rest 0", "5 rest 6", "6 rest 0", "4 rest 6"],
         answer: 0,
-        wrongHints: [null, "Een rest van 6 kan niet — dat is een hele 6 erbij.", "6 × 6 = 36, te veel.", "4 × 6 = 24, dan blijft er 6 over (= nog een keer)."],
+        wrongHints: [null, "Een rest kan nooit gelijk zijn aan de deler — dat zou betekenen dat je nog een keer had kunnen delen.", "Dat getal keer de deler gaat over 30 heen.", "Als er nog een keer de deler overblijft, kun je nog één keer verdelen — probeer dat."],
         uitlegPad: {
           stappen: [{ titel: "Komt precies uit", tekst: "6 × 5 = 30, precies. Er blijft niets over: 5 rest 0." }],
           niveaus: {

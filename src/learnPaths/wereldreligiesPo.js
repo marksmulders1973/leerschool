@@ -53,7 +53,7 @@ const steps = [
         q: "Welke religie is **de oudste van de 5 wereldreligies**?",
         options: ["Christendom", "Islam", "Hindoeïsme", "Boeddhisme"],
         answer: 2,
-        wrongHints: ["Christendom = 1e eeuw n.Chr. (~2000 jaar oud).", "Islam = 7e eeuw n.Chr. (~1400 jaar oud) — jongste van de 4.", null, "Boeddhisme = 6e eeuw v.Chr. (~2500 jaar oud), maar nog steeds jonger dan hindoeïsme."],
+        wrongHints: ["Christendom is relatief jong — het ontstond in de eerste eeuw na Christus.", "Islam is juist de jongste van de grote wereldreligies — bekijk wanneer het is ontstaan.", null, "Boeddhisme is oud, maar is het ouder dan alle andere genoemde religies?"],
         explanation: "**Hindoeïsme** is de oudste — >3000 jaar oud (~1500 v.Chr.). Geen één 'stichter'. Boeddhisme volgt (6e eeuw v.Chr.), dan christendom (1e eeuw), islam (7e eeuw). Jodendom is ook heel oud (~1800 v.Chr.) maar 'jonger' dan oudste hindoe-teksten.",
         uitlegPad: compact(
           "Tijdlijn: HINDOEÏSME >3000 jr (oudst, ~1500 vChr). JODENDOM ~1800 vChr (Abraham). BOEDDHISME 6e eeuw vChr. CHRISTENDOM 1e eeuw nChr. ISLAM 7e eeuw nChr (jongst).",
@@ -261,7 +261,7 @@ const steps = [
         q: "Welk land heeft het hindoeïsme als grootste religie?",
         options: ["Saudi-Arabië", "Israël", "India", "Thailand"],
         answer: 2,
-        wrongHints: ["Saudi-Arabië = 100% islam.", "Israël = vooral jodendom.", null, "Thailand = ~95% boeddhist."],
+        wrongHints: ["In Saudi-Arabië is vrijwel de hele bevolking moslim — klopt dat met hindoeïsme?", "Israël is het land van het jodendom, niet het hindoeïsme.", null, "Thailand is een overwegend boeddhistisch land."],
         explanation: "**India** = ~80% hindoe (~1 miljard mensen). Daarnaast ~15% moslim (~200 mln). Vandaar dat India veruit grootste hindoe-bevolking heeft.",
         uitlegPad: compact(
           "Hindoeïsme = India (bakermat + grootste bevolking). Boeddhisme = Thailand/Sri Lanka/Tibet. Islam = Saudi-Arabië/Iran. Jodendom = Israël/VS.",

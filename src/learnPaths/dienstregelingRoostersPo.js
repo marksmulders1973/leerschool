@@ -333,7 +333,7 @@ const steps = [
         q: "De bieb sluit om 17:00. De bus erheen duurt 20 minuten en vertrekt om 16:30, 16:50 en 17:10. Welke bus moet je uiterlijk nemen om de bieb nog open te treffen?",
         options: ["die van 16:30", "die van 16:50", "die van 17:10", "het lukt niet meer"],
         answer: 0,
-        wrongHints: [null, "16:50 + 20 min = 17:10 — dan is de bieb net dicht.", "17:10 + 20 min = 17:30, ruim te laat.", "Met de bus van 16:30 ben je op tijd."],
+        wrongHints: [null, "Tel bij die vertrektijd 20 minuten op — hoe laat kom je aan, en is de bieb dan nog open?", "Tel bij die vertrektijd 20 minuten op — kom je dan nog vóór sluitingstijd aan?", "Met de vroegste bus kom je nog op tijd — maar check het ook voor de andere bussen."],
         uitlegPad: {
           stappen: [{ titel: "Vertrek + reistijd = aankomst", tekst: "16:30 + 20 = 16:50 (op tijd). 16:50 + 20 = 17:10 (net dicht). Dus uiterlijk de bus van 16:30." }],
           niveaus: {

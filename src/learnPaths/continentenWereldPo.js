@@ -49,7 +49,7 @@ const steps = [
         q: "Hoeveel **continenten** zijn er?",
         options: ["7", "5", "6", "8"],
         answer: 0,
-        wrongHints: [null, "Soms wordt 5 gezegd, maar standaard is 7.", "Soms 6, maar Cito-standaard = 7.", "Niet 8."],
+        wrongHints: [null, "Soms wordt 5 gezegd, maar controleer welk aantal standaard gehanteerd wordt in de geografie.", "Sommige landen tellen anders, maar wat zegt de standaard-indeling in de Nederlandse schoolgeografie?", "Niet 8."],
         uitlegPad: {
           stappen: [
             { titel: "De 7 continenten — op de Nederlandse school", tekst: "In Nederland leer je dat er **7 continenten** zijn. Die hebben we hier voor de Doorstroomtoets nodig: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },

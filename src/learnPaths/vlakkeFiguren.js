@@ -606,7 +606,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de **½** vergeten. Oppervlakte ruit = ½ × d₁ × d₂.",
+          "Controleer de formule voor de ruit — er ontbreekt een stap vóór de vermenigvuldiging.",
           "Je hebt 10 + 6 gedaan. Maar het is vermenigvuldigen, niet optellen — én × ½.",
           "Het getal klopt, maar oppervlakte heeft eenheid cm² (niet cm).",
         ],
@@ -742,9 +742,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de ½ vergeten. ½ × (8 + 12) × 5 = ½ × 20 × 5 = ½ × 100 = 50.",
+          "Heb je de ½ uit de formule meegenomen? Kijk nog eens naar de stappen van ½ × (a + b) × h.",
           "Je hebt 12 × 5 gedaan. Maar je moet eerst de twee evenwijdige zijden optellen, dan × hoogte, dan × ½.",
-          "20 = 8 + 12. Maar je moet nog × hoogte (5) en × ½ doen.",
+          "Je hebt de twee zijden opgeteld, maar de berekening is nog niet klaar — wat moet er nog na het optellen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "½ × (a+b) × h", tekst: "½ × (8+12) × 5 = ½ × 20 × 5 = 50 cm²." }],
@@ -780,8 +780,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is alleen de omtrek-helft (12 + 8). Oppervlakte = lengte × breedte.",
-          "Je hebt door 2 gedeeld of zoiets. Reken: 12 × 8 = 96.",
-          "Niet — 12 × 8 = 96, niet 120.",
+          "Heb je de juiste berekening gebruikt? Oppervlakte rechthoek = lengte × breedte.",
+          "Controleer je vermenigvuldiging — heb je de goede getallen gebruikt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Rechthoek = l × b", tekst: "12 × 8 = 96 m²." }],
@@ -804,7 +804,7 @@ const steps = [
           null,
           "Dat is een hele cirkel (π × r²). Voor halfrond moet je nog ÷ 2.",
           "Je hebt waarschijnlijk de diameter ipv straal gebruikt, of × ½ vergeten.",
-          "Dichtbij. Reken: r = 3, dus ½ × π × 9 ≈ 14,1 m². 18,8 lijkt op 6π — waar komt dat vandaan?",
+          "Je bent dichtbij, maar ergens zit een fout. Heb je de straal correct berekend vanuit de diameter, en de ½ voor halfrond meegenomen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "½ × π × r²", tekst: "r = 6÷2 = 3. ½ × 3,14 × 9 ≈ 14,1 m²." }],

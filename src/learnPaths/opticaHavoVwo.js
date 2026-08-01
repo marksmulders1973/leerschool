@@ -25,7 +25,7 @@ const steps = [
         q: "Een lichtstraal valt **loodrecht** op een glasplaat. Wat gebeurt er met de richting?",
         options: ["Recht doorlopen — geen breking", "30° breken naar normaal", "Totaal weerkaatsen", "Splitsen in kleuren"],
         answer: 0,
-        wrongHints: [null, "Niet — bij loodrecht is θ=0 → ook θ₂=0.", "Niet — geen totale reflectie loodrecht.", "Niet — geen dispersie zonder schuine invalshoek."],
+        wrongHints: [null, "Niet — wat is de invalshoek als de straal loodrecht valt? Wat zegt de brekingswet dan?", "Niet — geen totale reflectie loodrecht.", "Niet — geen dispersie zonder schuine invalshoek."],
         uitlegPad: {
           stappen: [{ titel: "sin(0)=0 → geen breking", tekst: "Bij loodrechte inval: invalshoek θ₁=0°. Snellius: 1·sin(0) = n₂·sin(θ₂) → sin(θ₂)=0 → θ₂=0. Geen knik. Licht loopt door, alleen langzamer in glas." }],
           niveaus: { basis: "Loodrecht = geen breking.", simpeler: "Recht in = recht door.", nogSimpeler: "Doorlopen" },

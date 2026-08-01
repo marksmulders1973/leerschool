@@ -111,7 +111,7 @@ const steps = [
         q: "**1 liter** is hetzelfde als ... ?",
         options: ["1000 mL", "100 mL", "10 mL", "10.000 mL"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 dL = 100 mL, niet 1 L.", "Te weinig — dat is 1 cl.", "Te veel — dat zou 10 liter zijn."],
+        wrongHints: [null, "Te weinig — hoeveel mL zit er in 1 dL? Dat is niet hetzelfde als in 1 L.", "Te weinig — dat is 1 cl.", "Te veel — dat zou 10 liter zijn."],
       },
       {
         q: "**1 m³** is hetzelfde als ... liter?",
@@ -215,7 +215,7 @@ const steps = [
         q: "Schoenendoos: **30 cm × 15 cm × 10 cm**. Volume?",
         options: ["4500 cm³", "55 cm³", "450 cm³", "300 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 30 + 15 + 10. Volume is keer.", "Te weinig — komma 1 plek verkeerd. Reken nog eens 30 × 15 = 450, en dan × 10.", "Te weinig — alleen 30 × 10 gedaan."],
+        wrongHints: [null, "Te weinig — dat is 30 + 15 + 10. Volume is keer.", "Te weinig — komma 1 plek verkeerd. Hoeveel is 30 × 15, en daarna × 10?", "Te weinig — alleen 30 × 10 gedaan."],
       },
       {
         q: "Aquarium: **40 cm × 20 cm × 25 cm**. Volume?",
@@ -227,7 +227,7 @@ const steps = [
         q: "Doos cornflakes: **20 cm × 8 cm × 30 cm**. Volume?",
         options: ["4800 cm³", "58 cm³", "480 cm³", "60 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 20 + 8 + 30. Volume is keer.", "Te weinig — komma 1 plek verkeerd. Reken 20 × 8 = 160 en dan × 30.", "Te weinig — heb je alleen 20 × 30 / 10 gedaan?"],
+        wrongHints: [null, "Te weinig — dat is 20 + 8 + 30. Volume is keer.", "Te weinig — komma 1 plek verkeerd. Hoeveel is 20 × 8, en daarna × 30?", "Te weinig — heb je alleen 20 × 30 / 10 gedaan?"],
       },
     ],
   },
@@ -242,13 +242,13 @@ const steps = [
         q: "**2 liter** = ... mL?",
         options: ["2000 mL", "200 mL", "20 mL", "20.000 mL"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 L = 1000 mL.", "Te weinig — dat zou 0,02 L zijn.", "Te veel — controleer 2 × 1000."],
+        wrongHints: [null, "Te weinig — hoeveel mL zit in 1 liter? Vermenigvuldig dat met 2.", "Te weinig — dat zou 0,02 L zijn.", "Te veel — hoeveel keer 1000 is dat?"],
       },
       {
         q: "**3 dm³** = ... liter?",
         options: ["3 liter", "30 liter", "300 liter", "0,3 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel — 1 dm³ = 1 L (precies gelijk!).", "Te veel — 1 dm³ = 1 L, geen 100.", "Te weinig — 1 dm³ is precies 1 liter."],
+        wrongHints: [null, "Te veel — hoeveel liter is 1 dm³ precies? Dat is niet 10.", "Te veel — je hebt met 100 vermenigvuldigd, maar dm³ en liter zijn gelijkwaardig.", "Te weinig — 1 dm³ is precies 1 liter."],
         uitlegPad: {
           stappen: [
             { titel: "Vaste regel", tekst: "1 dm³ = 1 liter. Dus 3 dm³ = 3 liter. Geen vermenigvuldiging nodig." },
@@ -268,13 +268,13 @@ const steps = [
         q: "**5000 cm³** = ... liter?",
         options: ["5 liter", "50 liter", "500 liter", "0,5 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel — 1 liter = 1000 cm³, dus deel door 1000, niet door 100.", "Te veel — heb je überhaupt gedeeld?", "Te weinig — controleer 5000 ÷ 1000."],
+        wrongHints: [null, "Te veel — hoeveel cm³ zit er in 1 liter? Deel daardoor, niet door 100.", "Te veel — heb je überhaupt gedeeld?", "Te weinig — controleer: hoeveel cm³ is 1 liter?"],
       },
       {
         q: "**4 m³** = ... liter?",
         options: ["4000 liter", "400 liter", "40 liter", "4 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 m³ = 1000 L. Dus 4 m³ = 4 × 1000.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — m³ is een grote eenheid; reken nog eens."],
+        wrongHints: [null, "Te weinig — hoeveel liter past in 1 m³? Vermenigvuldig dat met 4.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — m³ is een grote eenheid; reken nog eens."],
       },
     ],
   },
@@ -363,7 +363,7 @@ const steps = [
         q: "**8000 cm³** = ... **liter**?",
         options: ["8 liter", "80 liter", "0,8 liter", "800 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel — 1 L = 1000 cm³. Deel door 1000.", "Te weinig — controleer 8000 ÷ 1000.", "Te veel — komma 1 plek verkeerd."],
+        wrongHints: [null, "Te veel — hoeveel cm³ zit er in 1 liter? Deel 8000 daardoor.", "Te weinig — kijk of je echt door 1000 gedeeld hebt.", "Te veel — komma 1 plek verkeerd."],
       },
       {
         q: "Een **kamer** is **5 m × 4 m × 3 m**. Hoeveel **m³** lucht?",
@@ -375,13 +375,13 @@ const steps = [
         q: "**2,5 liter** = ... **mL**?",
         options: ["2500 mL", "250 mL", "25 mL", "25.000 mL"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 L = 1000 mL. Doe 2,5 × 1000.", "Te weinig — dat is 0,25 L.", "Te veel — komma 1 plek verkeerd."],
+        wrongHints: [null, "Te weinig — hoeveel mL zit in 1 liter? Vermenigvuldig dat met 2,5.", "Te weinig — dat is 0,25 L.", "Te veel — komma 1 plek verkeerd."],
       },
       {
         q: "Een **doos** van **20 cm × 10 cm × 5 cm**. Hoeveel **mL** water past erin?",
         options: ["1000 mL", "35 mL", "100 mL", "200 mL"],
         answer: 0,
-        wrongHints: [null, "Te weinig — eerst volume in cm³: 20 × 10 × 5 = 1000. En 1 cm³ = 1 mL.", "Te weinig — alleen 20 × 10 gedaan / 2.", "Te weinig — alleen 20 × 5 gedaan."],
+        wrongHints: [null, "Te weinig — bereken eerst het volume in cm³ door alle afmetingen te vermenigvuldigen. Dan: hoeveel mL is 1 cm³?", "Te weinig — alleen 20 × 10 gedaan / 2.", "Te weinig — alleen 20 × 5 gedaan."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst cm³", tekst: "20 × 10 × 5 = 1000 cm³." },

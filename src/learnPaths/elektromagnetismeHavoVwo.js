@@ -318,7 +318,7 @@ const steps = [
         q: "Een **rechte stroomdraad** in B-veld is **parallel** aan B. Lorentzkracht?",
         options: ["Nul — F=BIL·sin(0)=0", "BIL", "Maximaal", "Loodrecht op draad"],
         answer: 0,
-        wrongHints: [null, "Niet — sin(0)=0.", "Niet — geen veld-loodrechte component.", "Niet — geen kracht hier."],
+        wrongHints: [null, "Niet — wat levert de formule F=BIL·sin(θ) op als de draad parallel aan het veld staat?", "Niet — geen veld-loodrechte component.", "Niet — geen kracht hier."],
         uitlegPad: {
           stappen: [{ titel: "sin(0°) = 0", tekst: "F = B·I·L·sin(α). Bij parallel: α=0, sin(0)=0, dus F=0. Alleen het LOODRECHTE deel van B telt." }],
           niveaus: { basis: "Parallel = geen kracht.", simpeler: "Veld en stroom in dezelfde richting → geen kracht.", nogSimpeler: "Nul" },

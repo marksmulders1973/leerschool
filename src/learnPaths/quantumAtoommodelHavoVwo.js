@@ -173,7 +173,7 @@ const steps = [
           "+1,89 eV"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bij absorberen stijgt E (positief).", "Niet — dat is n=1 → n=2.", "Niet — dat is n=3 → n=2."],
+        wrongHints: [null, "Niet — bij absorberen stijgt E: hoe moet het teken dan zijn?", "Niet — dit energieverschil hoort bij een kleinere sprong dan gevraagd wordt.", "Niet — dit energieverschil hoort bij een andere overgang dan gevraagd."],
         uitlegPad: {
           stappen: [
             { titel: "ΔE = E_3 − E_1", tekst: "E_3 = −13,6/9 = −1,51 eV. E_1 = −13,6 eV.\nΔE = −1,51 − (−13,6) = **+12,09 eV**. Bij absorptie stijgt E. UV-foton (87 nm) nodig." },
@@ -185,7 +185,7 @@ const steps = [
         q: "Ionisatie-energie van H-atoom (vanuit grondtoestand)?",
         options: ["13,6 eV", "3,4 eV", "1,51 eV", "0 eV"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is n=2-energie absolute.", "Niet — n=3.", "Niet — vrij heeft 0 eV, dus afstand vanaf −13,6 is 13,6."],
+        wrongHints: [null, "Niet — dat is de absolute energiewaarde van een ander niveau, niet de ionisatie-energie.", "Niet — dat hoort bij een hoger niveau dan de grondtoestand.", "Niet — denk: hoeveel energie is nodig om het elektron helemaal weg te halen van het atoom?"],
         uitlegPad: {
           stappen: [{ titel: "Van n=1 naar n=∞", tekst: "Energie om elektron volledig vrij te maken = 0 − (−13,6) = **13,6 eV**. Beroemde Rydberg-energie. Goed te onthouden." }],
           theorie: "Helium: 24,6 eV. Argon: 15,8 eV. Hoge ionisatie-energie betekent kern houdt elektron stevig vast — typisch voor edelgassen (vol elektron-omhulsel).",

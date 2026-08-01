@@ -283,7 +283,7 @@ const steps = [
         q: "Welke is het grootst: 0,7 of 65% of ¾?",
         options: ["¾", "0,7", "65%", "ze zijn gelijk"],
         answer: 0,
-        wrongHints: [null, "Reken alles om naar procent en vergelijk.", "0,7 = 70%, maar er is iets groters.", "65% is de kleinste."],
+        wrongHints: [null, "Reken alles om naar hetzelfde soort getal en vergelijk.", "Zet ook de breuk om naar procent — is dat meer of minder?", "65% is de kleinste."],
         uitlegPad: {
           stappen: [{ titel: "Alles naar procent", tekst: "0,7 = 70%, 65% = 65%, ¾ = 75%. De grootste is 75%, dus ¾." }],
           niveaus: {

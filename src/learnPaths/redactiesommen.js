@@ -171,7 +171,7 @@ const steps = [
         q: "*'Een fles 1,5 L kost € 2,10. Hoe duur per glas van 250 mL?'*",
         options: ["€ 0,35","€ 0,30","€ 0,40","€ 1,40"],
         answer: 0,
-        wrongHints: [null,"Te weinig — eerst aantal glazen: 1500 ml ÷ 250 ml = 6 glazen. Dan €2,10 ÷ 6.","Te veel — controleer aantal glazen.","Veel te veel — heb je per liter gerekend?"],
+        wrongHints: [null,"Te weinig — hoeveel glazen passen er in de fles? Deel daarna de prijs door dat aantal.","Te veel — controleer aantal glazen.","Veel te veel — heb je per liter gerekend?"],
       },
       {
         q: "*'Een klas heeft € 200. Ze kopen 12 boeken van € 14,50. Hoeveel over?'*",

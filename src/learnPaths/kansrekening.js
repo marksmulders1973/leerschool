@@ -215,7 +215,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "5/6 zou kleiner dan 6 zijn (= 1, 2, 3, 4, 5). Maar de vraag is kleiner dan 5 (= 1, 2, 3, 4).",
+          "5/6 zou kloppen als de vraag 'kleiner dan 6' was — maar wat is er anders bij 'kleiner dan 5'?",
           "1/5 — 1 op 5? Maar er zijn 6 vlakken op de dobbelsteen, niet 5.",
           "5/12 is geen logische dobbelsteen-kans (12 is geen vlak-aantal).",
         ],
@@ -253,7 +253,7 @@ const steps = [
           null,
           "1/8 zou betekenen één specifieke combinatie. Maar precies 2× kop kan op 3 manieren: KKM, KMK, MKK.",
           "1/3 is geen logische kans bij munten (deler 8).",
-          "2/8 = 1/4. Maar er zijn 3 manieren om precies 2× kop te krijgen, niet 2.",
+          "Tel hoeveel manieren je precies 2× kop kunt gooien bij 3 worpen — is dat 2 of meer?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Tel paden", tekst: "Precies 2×K bij 3 worpen: KKM, KMK, MKK = 3 paden. 3/8." }],
@@ -375,7 +375,7 @@ const steps = [
           null,
           "1/2 is kans op kop bij ÉÉN worp. Bij twee: vermenigvuldig.",
           "1/8 zou bij 3 worpen zijn (1/2)³.",
-          "2/2 = 1 = zekerheid. Maar 2× kop is niet zeker.",
+          "Een kans van 1 betekent zekerheid — is 2× kop bij 2 munten echt zeker?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1/2 × 1/2", tekst: "Eerste worp 1/2 × tweede worp 1/2 = 1/4." }],
@@ -392,7 +392,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1/12 = 1/(6+6). Maar voor product moet je 6·6 = 36 hebben.",
+          "Let op: bij twee onafhankelijke worpen tel je de uitkomsten niet op — wat doe je dan wel?",
           "2/6 = optellen — maar voor en-kans vermenigvuldig je: 1/6 · 1/6.",
           "1/6 zou kans op één getal bij één dobbelsteen zijn.",
         ],
@@ -430,8 +430,8 @@ const steps = [
         wrongHints: [
           null,
           "1/16 = één specifieke combinatie. Maar 'precies 1× kop' kan op 4 manieren (KMMM, MKMM, MMKM, MMMK).",
-          "Toevallig wel 1/4, maar via berekening: 4 paden · (1/2)⁴ = 4/16.",
-          "4/4 = 1 = zeker. Maar precies 1× kop is niet zeker.",
+          "Niet zomaar raden — tel hoeveel paden precies 1× kop geven bij 4 worpen, en reken dan de kans.",
+          "Een kans van 1 betekent zekerheid — is precies 1× kop bij 4 worpen écht zeker?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Tel paden", tekst: "1×K bij 4 worpen: KMMM, MKMM, MMKM, MMMK = 4 paden. 4/16 = 1/4." }],
@@ -470,7 +470,7 @@ const steps = [
           null,
           "1/6 zou kans op één getal zijn. Hier zijn er drie uitsluitende uitkomsten.",
           "2/6 = twee uitkomsten. Hier zijn er drie (2, 4, 6).",
-          "3/3 = 1 = zeker. Maar 'precies één van 2/4/6' is niet zeker.",
+          "Een kans van 1 betekent zekerheid — is een getal 2, 4 of 6 gooien bij een dobbelsteen écht zeker?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Uitsluitend optellen", tekst: "1/6 + 1/6 + 1/6 = 3/6 = 1/2." }],
@@ -558,8 +558,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is kans op één rode. Voor twee: vermenigvuldig.",
-          "8/100 = 2 · 4/100 (optellen). Maar voor en-kans: 4/10 · 4/10 = 16/100.",
-          "1/25 zou (1/5)² zijn — maar 4/10 = 2/5, niet 1/5.",
+          "Optellen werkt hier niet — bij twee onafhankelijke trekkingen gebruik je vermenigvuldigen, niet optellen.",
+          "Controleer de kans op één rode knikker eerst goed — is die echt 1/5?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Met terugleggen: vast", tekst: "4/10 × 4/10 = 16/100 = 4/25." }],
@@ -577,8 +577,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is één pad (zoals KMM). Maar 1× kop kan op 3 manieren: KMM, MKM, MMK.",
-          "1/3 = 33% — geen logische munt-kans (deler 8).",
-          "Te grof. Reken: 3 paden · (1/2)³ = 3/8 = 37.5%.",
+          "Bij munt-worpen zijn er altijd een macht van 2 mogelijkheden — klopt 1/3 dan als noemer?",
+          "1/2 is de kans bij één worp — maar hoeveel paden geven precies 1× kop bij 3 worpen? Tel ze op.",
         ],
         uitlegPad: {
           stappen: [{ titel: "3 paden × 1/8", tekst: "1× K bij 3 worpen: KMM, MKM, MMK = 3. 3/8." }],
@@ -596,8 +596,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is kans OP 1. Het complement is 1 − 1/6.",
-          "5/5 = 1 = zekerheid. Maar 'niet 1' is niet zeker.",
-          "P = 0 zou onmogelijk betekenen. Maar 'niet 1' kan wel — namelijk 2, 3, 4, 5 of 6.",
+          "Een kans van 1 betekent zekerheid — is 'niet 1' gooien bij een dobbelsteen écht zeker?",
+          "Een kans van 0 betekent onmogelijk — kan 'niet 1' bij een dobbelsteen echt nooit voorkomen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(1)", tekst: "P(niet 1) = 1 − 1/6 = 5/6." }],
@@ -680,8 +680,8 @@ const steps = [
         wrongHints: [
           null,
           "1/2 is een ruwe schatting maar niet exact — bereken via complement.",
-          "1/4 zou kans op precies 2 zijn (= 6/16). Maar 'minstens 2' = 6/16 + 4/16 + 1/16 = 11/16.",
-          "5/16 = P(precies 1 K). Maar 'minstens 2' is 1 − P(0 of 1) = 11/16.",
+          "1/4 zou de kans op precies 2 keer kop zijn — maar 'minstens 2' betekent ook 3 of 4 keer kop.",
+          "Dat is de kans op precies 1 keer kop. 'Minstens 2' betekent 2 óf meer — gebruik het complement.",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(0) − P(1)", tekst: "1 − 1/16 − 4/16 = 11/16." }],
@@ -716,7 +716,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is kans op 3× zes — heel klein.",
-          "Optellen werkt niet bij overlappende gebeurtenissen. Gebruik complement: 1 − P(0× zes) = 1 − (5/6)³.",
+          "Optellen werkt hier niet — gebruik het complement: bereken eerst de kans dat je géén zes gooit in alle 3 worpen.",
           "1/6 is kans bij één worp. Bij 3 worpen verandert het.",
         ],
         uitlegPad: {
@@ -739,7 +739,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerd berekend complement — 1 − 12/30 = 18/30, niet 12/30.",
+          "Niet helemaal goed — bereken eens wat er overblijft als je 12/30 van het geheel aftrekt.",
           "Dat is een ratio — kans = gunstig/totaal. Tel meisjes en deel door totaal.",
           "Onlogisch — kans kan nooit > 1.",
         ],
@@ -824,7 +824,7 @@ const steps = [
         options: ["15/28", "30/56", "Allebei (gelijk)", "3/28"],
         answer: 2,
         wrongHints: [
-          "Klopt qua getal, maar 30/56 = 15/28 — vereenvoudig altijd.",
+          "Dit klopt qua waarde, maar kun je deze breuk nog verder vereenvoudigen?",
           "Klopt qua waarde maar nog te vereenvoudigen.",
           null,
           "Dat is P(beide rood). Voor 'precies één' tel je P(R,B) + P(B,R) op.",

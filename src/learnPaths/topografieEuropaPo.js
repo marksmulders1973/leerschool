@@ -138,7 +138,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Griekenland**?",
         options: ["Sparta", "Athene", "Olympia", "Thessaloniki"],
         answer: 1,
-        wrongHints: ["Sparta = oude stadstaat (rivaal van Athene in oudheid) — geen hoofdstad nu.", null, "Olympia = plek van oude Olympische Spelen — geen hoofdstad.", "Thessaloniki = 2e stad Griekenland — niet hoofdstad."],
+        wrongHints: ["Sparta is een oude stadstaat uit de oudheid — denk aan welke stad nu de rol van hoofdstad vervult.", null, "Olympia is beroemd door de Olympische Spelen in de oudheid, maar is dat ook de bestuurlijke hoofdstad?", "Thessaloniki is de tweede stad van Griekenland — maar welke stad is de eerste én de hoofdstad?"],
         explanation: "**Athene** = hoofdstad Griekenland. Een van oudste steden ter wereld (3500 jaar). Bekend om de Akropolis + Parthenon — 'wieg van de democratie'.",
         uitlegPad: compact(
           "Athene = Griekenland-hoofdstad. Oudste continu bewoonde stad van Europa.",

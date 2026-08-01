@@ -112,13 +112,13 @@ const steps = [
         q: "Welk kommagetal is **gelijk aan ¼**?",
         options: ["0,25", "0,4", "0,5", "0,75"],
         answer: 0,
-        wrongHints: [null, "0,4 is 4 tienden = 2/5, niet ¼.", "0,5 is de helft (½), niet ¼.", "0,75 is ¾, niet ¼."],
+        wrongHints: [null, "0,4 zijn 4 tienden — is dat hetzelfde als ¼? Hoeveel tienden heeft een kwart?", "0,5 is de helft (½), niet een kwart.", "0,75 is ¾, niet ¼."],
       },
       {
         q: "Welk getal is **groter**: 0,9 of 0,12?",
         options: ["0,9", "0,12", "Even groot", "Kan je niet zeggen"],
         answer: 0,
-        wrongHints: [null, "Lijkt groter omdat er meer cijfers staan, maar 0,12 = 12 honderdsten = nog geen 2 tienden. 0,9 = 9 tienden — veel meer!", "Niet hetzelfde — vergelijk per plek.", "Wél te zeggen: zet 0,9 als 0,90 → meer dan 0,12."],
+        wrongHints: [null, "Meer cijfers betekent niet automatisch groter — vergelijk tientallen-positie na de komma.", "Niet hetzelfde — vergelijk per plek.", "Wél te zeggen: zet beide getallen op gelijk aantal decimalen en vergelijk."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk per plek", tekst: "Schrijf gelijk aantal cijfers: 0,90 vs 0,12. Eerste plek: 9 > 1. Dus 0,9 > 0,12." },
@@ -148,7 +148,7 @@ const steps = [
         q: "**3,5 + 2,4** = ?",
         options: ["5,9", "5,11", "59", "0,59"],
         answer: 0,
-        wrongHints: [null, "Te veel — heb je tienden gemixt met losse cijfers? 5 + 4 = 9, geen 11.", "Komma vergeten.", "Komma te ver naar links."],
+        wrongHints: [null, "Te veel — let op de komma; zijn tienden en eenheden niet door elkaar gehaald?", "Komma vergeten.", "Komma te ver naar links."],
       },
       {
         q: "**7,80 − 3,25** = ?",
@@ -201,7 +201,7 @@ const steps = [
         q: "**3,2 × 5** = ?",
         options: ["16", "1,6", "8,2", "1,5"],
         answer: 0,
-        wrongHints: [null, "Komma te ver — 3,2 × 5 = 16,0 = 16.", "Te weinig — controleer 32 × 5 = 160, dan 1 plaats = 16,0.", "Optelling. We zoeken vermenigvuldiging."],
+        wrongHints: [null, "Komma te ver — tel hoeveel decimalen er in totaal zijn en zet de komma op de juiste plek.", "Te weinig — reken eerst 32 × 5 en bedenk dan hoeveel decimalen het antwoord moet hebben.", "Optelling. We zoeken vermenigvuldiging."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig zonder komma", tekst: "Doe 32 × 5 = 160." },
@@ -324,13 +324,13 @@ const steps = [
         q: "**1,5 kg** suiker = **... gram**?",
         options: ["1500 gram", "150 gram", "15 gram", "15.000 gram"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 kg = 1000 g, dus reken 1,5 × 1000.", "Veel te weinig — kijk naar de komma.", "Te veel — komma 1 plaats te ver."],
+        wrongHints: [null, "Te weinig — hoeveel gram zit er in 1 kg? Vermenigvuldig dat met 1,5.", "Veel te weinig — kijk naar de komma.", "Te veel — komma 1 plaats te ver."],
       },
       {
         q: "**4 kinderen** delen **2,8 kg snoep** gelijk. **Per kind**?",
         options: ["0,7 kg per kind", "7 kg per kind", "11,2 kg per kind", "0,07 kg per kind"],
         answer: 0,
-        wrongHints: [null, "Te veel — verdeel je 2,8 kg over 4 kinderen, dan krijgt iedereen minder dan 2,8 kg.", "Te veel — heb je gedeeld of juist vermenigvuldigd? 2,8 × 4 = 11,2.", "Komma 1 plaats verkeerd."],
+        wrongHints: [null, "Te veel — verdeel je 2,8 kg over 4 kinderen, dan krijgt iedereen minder dan 2,8 kg.", "Te veel — heb je gedeeld of juist vermenigvuldigd?", "Komma 1 plaats verkeerd."],
       },
     ],
   },
@@ -357,7 +357,7 @@ const steps = [
         q: "**0,6 × 0,4** = ?",
         options: ["0,24", "2,4", "0,024", "0,1"],
         answer: 0,
-        wrongHints: [null, "Komma te ver naar rechts — tel de decimalen (1 + 1 = 2).", "Komma 1 plaats te ver naar links.", "Veel te weinig — reken eerst 6 × 4, dan de komma."],
+        wrongHints: [null, "Komma te ver naar rechts — tel hoeveel decimalen beide getallen samen hebben.", "Komma 1 plaats te ver naar links.", "Veel te weinig — reken eerst 6 × 4, dan de komma."],
       },
       {
         q: "**8,4 ÷ 0,7** = ?",

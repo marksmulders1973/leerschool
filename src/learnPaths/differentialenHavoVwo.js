@@ -276,7 +276,7 @@ const steps = [
         q: "**Helling raaklijn** aan y = sin(x) op x = π/2?",
         options: ["0 (top sinus)", "1", "−1", "π/2"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is helling op x=0.", "Niet — andere kant.", "Niet — een hoek."],
+        wrongHints: [null, "Niet — controleer op welk punt je de afgeleide berekent.", "Niet — andere kant.", "Niet — een hoek."],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = cos(x)", tekst: "f(x) = sin x → f'(x) = cos x. f'(π/2) = cos(π/2) = **0**. Top van sinus → horizontale raaklijn." }],
           niveaus: { basis: "0.", simpeler: "Cos(π/2) = 0.", nogSimpeler: "0" },

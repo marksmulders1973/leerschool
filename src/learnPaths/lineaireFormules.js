@@ -221,7 +221,7 @@ ${baseAxes}
         q: "Welke formule **daalt**?",
         options: ["y = -3x + 1","y = 3x + 1","y = x − 1","y = 5"],
         answer: 0,
-        wrongHints: [null, "Positieve a = stijging. Voor dalen heb je een negatieve helling nodig.", "Positieve a (=1) = stijging. De −1 is de b, niet de helling.", "a = 0 betekent horizontaal — niet dalen, niet stijgen."],
+        wrongHints: [null, "Positieve a = stijging. Voor dalen heb je een negatieve helling nodig.", "Kijk goed: welk getal is de helling (a) en welk getal is de constante (b)?", "Als a gelijk aan nul is, is de lijn horizontaal — dan stijgt of daalt hij niet."],
         uitlegPad: {
           stappen: [{ titel: "Negatieve a = dalend", tekst: "Lijn daalt als a < 0. y = -3x+1: a=−3 (negatief) → lijn DAALT. Hoe groter |a|, hoe sneller dalend." }],
           woorden: [{ woord: "dalend", uitleg: "y wordt kleiner als x groter wordt. Lijn naar rechtsonder." }],
@@ -250,7 +250,7 @@ ${baseAxes}
         q: "Bij y = 2x + 7, waar snijdt de lijn de y-as?",
         options: ["(0, 7)", "(7, 0)", "(0, 2)", "(2, 7)"],
         answer: 0,
-        wrongHints: [null, "(7, 0) is op de x-as, niet de y-as. b is de y-coördinaat van het snijpunt met de y-as.", "(0, 2) zou betekenen b = 2. Maar de b in y = 2x + **7** is 7.", "(2, 7) is gewoon een willekeurig punt. Het snijpunt y-as heeft altijd x = 0."],
+        wrongHints: [null, "(7, 0) is op de x-as, niet de y-as. Op de y-as is de x-coördinaat altijd nul.", "Je hebt de helling als b-waarde genomen. Welk getal in de formule is het losse getal?", "Dat is een willekeurig punt op de lijn. Op het snijpunt met de y-as is x altijd nul."],
         uitlegPad: {
           stappen: [{ titel: "Y-as: x=0", tekst: "Op y-as is x=0 (altijd). Invullen: y = 2·0 + 7 = 7. Snijpunt = (0, 7). Snel: b is altijd de y-waarde op snijpunt y-as." }],
           woorden: [{ woord: "snijpunt y-as", uitleg: "Punt waar lijn de y-as raakt. Altijd (0, b)." }],
@@ -282,7 +282,7 @@ ${baseAxes}
         q: "Bij y = 3x − 2, welk punt ligt op de lijn?",
         options: ["(2, 4)", "(2, 6)", "(2, -6)", "(0, 2)"],
         answer: 0,
-        wrongHints: [null, "Bij x = 2: y = 3·2 − 2 = 6 − 2 = **4**, niet 6. Vergeet de −2 niet.", "Je hebt de + 2 of een ander teken vergeten. Reken opnieuw: 3·2 − 2.", "(0, 2) zou betekenen b = 2. Maar in y = 3x − 2 is b = −2, dus (0, -2) is op de lijn."],
+        wrongHints: [null, "Je bent de −2 vergeten mee te nemen. Vul het gegeven getal voor x in en reken stap voor stap uit.", "Controleer het teken: staat er een plus of een min achter 3x?", "Kijk wat b is in deze formule — heeft het snijpunt met de y-as een positieve of negatieve y-waarde?"],
         uitlegPad: {
           stappen: [{ titel: "Invullen + checken", tekst: "Welk punt (x,y) ligt op y=3x−2? Test (2,4): 3·2−2 = 6−2 = 4. Komt overeen met y=4. Dus (2,4) ligt op lijn." }],
           woorden: [{ woord: "op de lijn", uitleg: "Punt (x,y) ligt op lijn als invullen klopt." }],
@@ -316,7 +316,7 @@ ${baseAxes}
         q: "Helling van de lijn door (2, 5) en (5, 11)?",
         options: ["2", "3", "6", "1/2"],
         answer: 0,
-        wrongHints: [null, "Je hebt het verschil in x of y verkeerd berekend. Δy = 11−5 = 6, Δx = 5−2 = 3, dus 6/3 = 2.", "6 is alleen Δy. Je moet nog delen door Δx (=3).", "Je hebt Δx / Δy gedaan. Andersom: Δy / Δx = 6 / 3 = 2."],
+        wrongHints: [null, "Controleer je berekening: bereken het verschil in y-waarden en het verschil in x-waarden afzonderlijk, dan delen.", "Dat is slechts het verschil in één richting. De helling is een verhouding — wat moet je nog meer doen?", "Je hebt teller en noemer omgewisseld. De helling is altijd y-verschil gedeeld door x-verschil, niet andersom."],
         uitlegPad: {
           stappen: [
             { titel: "Δy en Δx", tekst: "Δy = 11 − 5 = 6. Δx = 5 − 2 = 3." },
@@ -349,7 +349,7 @@ ${baseAxes}
         q: "Formule opstellen: helling 3, snijpunt y-as op (0, -5).",
         options: ["y = 3x − 5", "y = -5x + 3", "y = 3x + 5", "y = -3x + 5"],
         answer: 0,
-        wrongHints: [null, "Je hebt a en b verwisseld. a is de helling (3), b is het snijpunt (-5).", "Het snijpunt is op (0, -5), dus b = **−5** (niet +5).", "De helling is +3 (niet -3). Lijn stijgt, dus a is positief."],
+        wrongHints: [null, "Je hebt a en b verwisseld. Welk getal is de helling en welk getal is het snijpunt?", "Kijk goed naar het snijpunt — staat er een min-teken? Welke kant van de y-as is dat?", "De helling is opgegeven als positief getal. Stijgt of daalt de lijn?"],
         uitlegPad: {
           stappen: [{ titel: "Vul a en b in", tekst: "Standaardvorm: y = ax + b. Helling 3 → a=3. Snijpunt (0,−5) → b=−5. Dus y = 3x + (−5) = y = 3x − 5." }],
           woorden: [{ woord: "snijpunt y-as", uitleg: "Punt (0,b). y-waarde is b." }],
@@ -385,7 +385,7 @@ ${baseAxes}
         q: "Los op: 2x + 3 = 11.",
         options: ["x = 4", "x = 7", "x = 14", "x = 11/2"],
         answer: 0,
-        wrongHints: [null, "Je hebt 11 − 3 = 8 gedaan, maar dan ben je vergeten te delen door 2. 8/2 = 4.", "Je hebt 11 + 3 = 14 gedaan. Maar je moet de +3 wegwerken door **af** te trekken: 11 − 3 = 8.", "Je hebt 11/2 gedaan zonder de 3 weg te werken. Eerst: 2x = 11 − 3 = 8, dan x = 8/2 = 4."],
+        wrongHints: [null, "Je bent halverwege gestopt. Na het wegwerken van de 3, moet je x nog alleen krijgen — welke stap ontbreekt er?", "Je hebt de verkeerde kant opgewerkt. Om de +3 weg te krijgen, doe je het tegenovergestelde.", "Je hebt te vroeg gedeeld. Werk eerst de 3 weg, daarna pas delen."],
         uitlegPad: {
           stappen: [
             { titel: "Min 3", tekst: "2x + 3 = 11. Beide kanten −3: 2x = 8." },
@@ -419,7 +419,7 @@ ${baseAxes}
         q: "Los op: 7x − 4 = 3x + 8.",
         options: ["x = 3", "x = 4", "x = 1", "x = 12"],
         answer: 0,
-        wrongHints: [null, "Bijna! Breng de x'en naar één kant: −3x van beide → 4x − 4 = 8. Werk nu verder.", "Je hebt + 4 gedaan. Je komt uit op 4x = 12 — wat is dan x?", "12 = 4x klopt. Maar je bent er nog niet: deel nog door 4."],
+        wrongHints: [null, "Breng eerst alle x-termen naar één kant en werk dan verder stap voor stap.", "Je hebt de −4 aan de verkeerde kant opgelost. Welk getal was je aan het wegwerken?", "Je hebt de vergelijking goed vereenvoudigd, maar je bent halverwege gestopt — x staat nog niet alleen."],
         uitlegPad: {
           stappen: [
             { titel: "−3x van beide", tekst: "7x − 4 = 3x + 8 → 4x − 4 = 8." },
@@ -453,7 +453,7 @@ ${baseAxes}
         q: "Los op: 3(x − 2) = 9.",
         options: ["x = 5", "x = 3", "x = 7", "x = 11"],
         answer: 0,
-        wrongHints: [null, "Werk eerst de haakjes weg: 3(x−2) = 3x − 6. Dan: 3x − 6 = 9. Los nu op.", "Je rekent ergens verkeerd. Probeer: 3x − 6 = 9, dan +6 → 3x = 15. Deel nu door 3.", "11 = 9 + 2. Maar je moet de hele balans-methode toepassen, niet getallen optellen."],
+        wrongHints: [null, "Werk eerst de haakjes weg — vermenigvuldig 3 met elk deel binnen de haakjes. Wat krijg je dan?", "Controleer je stappen: heb je de haakjes correct weggewerkt en daarna de balans bewaard?", "Je telt losse getallen op — maar de vergelijking vraagt om de balansmethode. Welke stap is de eerste?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes wegwerken", tekst: "3(x − 2) = 3x − 6. Vermenigvuldig 3 met elk deel binnen haakje." },
@@ -522,7 +522,7 @@ ${baseAxes}
         q: "Een plant is 12 cm en groeit 3 cm per week. Lengte na 5 weken?",
         options: ["27 cm", "60 cm", "15 cm", "12 cm"],
         answer: 0,
-        wrongHints: [null, "Je hebt 12 · 5 gedaan. Maar de groei is 3 cm/week. Reken: eerst 3·5, dan + 12.", "Je hebt alleen de groei (3·5=15) of alleen de start (12). Je moet beide optellen.", "12 is de start, maar er groeit ook bij: 3·5 = 15 erbij. Tel die twee op."],
+        wrongHints: [null, "Je vermenigvuldigt de startlengte, maar de startlengte groeit niet — hoeveel centimeter groeit de plant in 5 weken?", "Je bent iets vergeten — heeft de plant ook nog een startlengte voordat hij begint te groeien?", "De startlengte telt ook mee — hoeveel groeit de plant en waar begint hij?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule", tekst: "Start 12, groei 3/week. y = 3x + 12 (y=lengte, x=weken)." },
@@ -555,7 +555,7 @@ ${baseAxes}
         q: "Los op: 5x − 3 = 2x + 9.",
         options: ["x = 4", "x = 6", "x = 12", "x = 2"],
         answer: 0,
-        wrongHints: [null, "Reken: −2x → 3x − 3 = 9, dan +3 → 3x = 12. Deel nu door 3.", "Je hebt niet beide kanten 'op orde' gebracht. Probeer stap-voor-stap balans.", "Zonder de balansmethode kom je hier niet uit. Volg de stappen."],
+        wrongHints: [null, "Breng eerst alle x-termen naar één kant, dan de getallen, dan x alleen maken — welke stap doe je als eerste?", "Je hebt niet beide kanten 'op orde' gebracht. Probeer stap-voor-stap balans.", "Zonder de balansmethode kom je hier niet uit. Volg de stappen."],
         uitlegPad: {
           stappen: [
             { titel: "−2x van beide", tekst: "5x − 3 = 2x + 9 → 3x − 3 = 9." },
@@ -588,7 +588,7 @@ ${baseAxes}
         q: "Lijn door (0, 2) en (4, 14). Wat is de formule?",
         options: ["y = 3x + 2", "y = 2x + 3", "y = 3x − 2", "y = 4x + 2"],
         answer: 0,
-        wrongHints: [null, "Je hebt a en b verwisseld. a = (14−2)/(4−0) = 12/4 = 3. b = 2 (het y-coord bij x=0).", "−2 zou kloppen als (0, -2). Maar het eerste punt is (0, **2**), dus b = 2.", "4 is Δx, niet de helling. Helling = Δy/Δx = 12/4 = 3."],
+        wrongHints: [null, "Je hebt a en b verwisseld. Welk getal is de helling (verschil in y gedeeld door verschil in x) en welk getal lees je direct af bij x=0?", "Kijk goed naar het eerste punt — heeft dat een positieve of negatieve y-waarde? Dat is b.", "Dat is het verschil in x, niet de helling. De helling is het y-verschil gedeeld door het x-verschil."],
         uitlegPad: {
           stappen: [
             { titel: "Helling", tekst: "a = (14−2)/(4−0) = 12/4 = 3." },
@@ -624,7 +624,7 @@ ${baseAxes}
         q: "Welke **formule** hoort bij dit taxi-tarief (€4 start + €1,80 per km)?",
         options: ["p = 1,80k + 4","p = 4k + 1,80","p = 1,80 + 4k","p = 5,80k"],
         answer: 0,
-        wrongHints: [null, "Je hebt a en b verwisseld. Het start-bedrag is €4 (vast = b), per km is €1,80 (a).", "Verwarrend genoteerd — feitelijk is dit p = 4k + 1,80, en dat klopt niet (4 is geen tarief per km).", "Je hebt 4 + 1,80 opgeteld — niet doen, het zijn verschillende rollen."],
+        wrongHints: [null, "Je hebt a en b verwisseld. Welk bedrag is de vaste kosten en welk bedrag hangt af van de afstand?", "Kijk of het vaste bedrag of het km-tarief bij de variabele k staat.", "Je hebt de twee bedragen bij elkaar opgeteld als één getal — maar het startbedrag en het km-tarief spelen een andere rol."],
         uitlegPad: {
           stappen: [{ titel: "€4 vast, €1,80/km", tekst: "Start €4 = vaste kosten (b=4). €1,80/km = tarief per eenheid (a=1,80). Variabele = km (x=k). Formule: p = 1,80k + 4." }],
           woorden: [{ woord: "k", uitleg: "Kilometers. Variabele (zoals x)." }],
@@ -638,7 +638,7 @@ ${baseAxes}
         q: "Wat kost een rit van **12 km**?",
         options: ["€25,60", "€21,60", "€69,60", "€16,00"],
         answer: 0,
-        wrongHints: [null, "Je bent het startbedrag (€4) vergeten op te tellen. 1,80 × 12 = 21,60, plus 4 = 25,60.", "Je hebt 5,80 × 12 gedaan (a en b opgeteld). Niet — gebruik de formule.", "Je hebt 12 + 4 = 16. Maar 1,80 × 12 ≠ 12."],
+        wrongHints: [null, "Je bent iets vergeten op te tellen — de taxi rekent ook een vast bedrag bovenop het km-tarief.", "Je hebt a en b bij elkaar opgeteld voor je vermenigvuldigde — gebruik de formule zoals hij staat.", "Je hebt het km-tarief niet gebruikt — hoeveel kost 12 km aan rijtarief, en wat komt daar nog bij?"],
         uitlegPad: {
           stappen: [
             { titel: "Invullen", tekst: "p = 1,80·k + 4. k=12: p = 1,80·12 + 4." },
@@ -677,7 +677,7 @@ ${baseAxes}
       { q: "Bij y = ax + b: **b > 0** betekent?", options: ["Lijn snijdt y-as BOVEN oorsprong","Onder oorsprong","Door oorsprong","Niet relevant"], answer: 0, wrongHints: [null,"Dat is b<0.","Dat is b=0.","Wel relevant."] },
       { q: "Punten (1, 5) en (3, 11) — wat is **helling**?", options: ["3","2","6","½"], answer: 0, wrongHints: [null,"x-verschil.","y-verschil totaal.","Andersom."] },
       { q: "**Lineaire functies** hebben in een grafiek altijd?", options: ["Rechte lijn","Parabool","Cirkel","Knik"], answer: 0, wrongHints: [null,"Kwadratisch.","Geen functie.","Geen lineair."] },
-      { q: "**y = 4** is een ___?", options: ["Horizontale lijn","Verticale lijn","Parabool","Punt"], answer: 0, wrongHints: [null,"x=4 is verticaal.","Niet.","Lijn, niet punt."] },
+      { q: "**y = 4** is een ___?", options: ["Horizontale lijn","Verticale lijn","Parabool","Punt"], answer: 0, wrongHints: [null,"Een verticale lijn heeft een vergelijking zonder y — welke variabele ontbreekt in y=4?","Niet.","Lijn, niet punt."] },
       { q: "**Stelsel** van 2 lineaire vergelijkingen heeft meestal?", options: ["1 snijpunt","Geen snijpunt","Oneindig veel","Niet bepaald"], answer: 0, wrongHints: [null,"Bij evenwijdige.","Bij identieke.","Wel bepaald."] },
       { q: "**Open vraag**: bereken y bij x=10 voor y=2x+5. Typ getal.", kind: "open", acceptedAnswers: ["25"], numericTolerance: 0, explanation: "y = 2·10 + 5 = 25." },
       { q: "**Open vraag**: helling van lijn door (0,0) en (4,8) — typ getal.", kind: "open", acceptedAnswers: ["2"], numericTolerance: 0, explanation: "(8−0)/(4−0) = 8/4 = 2." },

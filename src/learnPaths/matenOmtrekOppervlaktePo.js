@@ -293,7 +293,7 @@ const steps = [
         q: "Een muur is **3 m hoog en 5 m breed**. Eén verfblik dekt **6 m²**. Hoeveel blikken?",
         options: ["3 blikken", "2 blikken", "1 blik", "15 blikken"],
         answer: 0,
-        wrongHints: [null, "Niet — 15/6 = 2,5, dus 3 nodig (afronden boven).", "Te weinig.", "Niet — onmogelijk."],
+        wrongHints: [null, "Niet — bereken de oppervlakte van de muur, deel door wat een blik dekt, en denk aan afronden.", "Te weinig.", "Niet — onmogelijk."],
         uitlegPad: {
           stappen: [
             { titel: "Altijd naar boven afronden", tekst: "Muur: 3 × 5 = 15 m². Blikken: 15 / 6 = 2,5 → afronden naar **3 blikken** (anders deel-muur ongedekt)." },

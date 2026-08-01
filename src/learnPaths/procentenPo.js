@@ -116,7 +116,7 @@ const steps = [
         q: "**100%** — wat betekent dat?",
         options: ["Alles","De helft","Honderd dingen","Niets"],
         answer: 0,
-        wrongHints: [null, "Half = 50%, niet 100%.", "Niet 'honderd dingen' — het hangt af van waarvan je 100% hebt. 100% van 5 is bijvoorbeeld 5.", "Niets = 0%, niet 100%."],
+        wrongHints: [null, "De helft is niet hetzelfde als alles — welk percentage hoort bij de helft?", "Niet 'honderd dingen' — het hangt af van waarvan je 100% hebt. 100% van 5 is bijvoorbeeld 5.", "Niets is het tegenovergestelde van alles — welk percentage hoort daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "100% = het hele ding", tekst: "**100%** betekent **ALLES** — het hele geheel waar je het over hebt. Het is niet altijd 100 dingen!" },
@@ -161,7 +161,7 @@ const steps = [
         q: "**75%** = ?",
         options: ["¾","½","⅓","⅖"],
         answer: 0,
-        wrongHints: [null,"½ = 50%. 75% is meer dan de helft.","⅓ ≈ 33%. Te weinig.","Past niet bij de standaard-percentages."],
+        wrongHints: [null,"De helft is minder dan 75% — welke breuk staat voor meer dan de helft?","Een derde is kleiner dan de helft — maar 75% is juist groter dan de helft.","Past niet bij de standaard-percentages."],
         uitlegPad: {
           stappen: [
             { titel: "% omzetten naar breuk", tekst: "75% = 75 per 100 = breuk 75/100. Vereenvoudig: deel teller en noemer door 25. 75÷25 = 3, 100÷25 = 4. Dus 75/100 = **3/4** = ¾." },
@@ -189,7 +189,7 @@ const steps = [
         q: "**0,25** als percentage?",
         options: ["25%","2,5%","250%","0,25%"],
         answer: 0,
-        wrongHints: [null,"Komma 1 plek verkeerd geschoven. Maal 100 = 2 plaatsen naar rechts.","Veel te veel — 250% zou méér dan alles zijn.","Helemaal geen plaatsen verschoven — je moet × 100 doen."],
+        wrongHints: [null,"Je hebt de komma maar 1 plek verschoven — keer 100 betekent 2 plaatsen naar rechts.","Veel te veel — dat zou meer dan het geheel zijn.","Je moet de komma nog verschuiven: keer 100 = hoeveel plaatsen?"],
       },
       {
         q: "**60%** als kommagetal?",
@@ -379,7 +379,7 @@ const steps = [
         q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is melk-chocolade**. Hoeveel zijn dat?",
         options: ["12","30","10","8"],
         answer: 0,
-        wrongHints: [null,"Niet het percentage — dat is de vraag-input. Reken het uit.","Te weinig — 30% van 40 is meer dan een tiende.","Te weinig — denk: 10% van 40 = 4, dus 30% = 3 × 4."],
+        wrongHints: [null,"Dat is het percentage zelf — je moet het toepassen op het aantal koekjes.","Te weinig — 30% is flink meer dan een tiende.","Te weinig — bereken eerst 10% en gebruik dat als stapje."],
       },
     ],
   },
@@ -393,7 +393,7 @@ const steps = [
         q: "**40% van 90** = ?",
         options: ["36","32","45","30"],
         answer: 0,
-        wrongHints: [null,"Te weinig — denk: 10% van 90 = 9, dus 40% = 4 × 9.","Te veel — dat is 50%.","Te weinig — heb je 30% gerekend?"],
+        wrongHints: [null,"Te weinig — bereken eerst 10% en vermenigvuldig dat dan met het juiste getal.","Te veel — dat is meer dan 40%.","Te weinig — heb je het juiste percentage gebruikt?"],
       },
       {
         q: "Een trui kost **€ 50**, **20% korting**. Wat **betaal** je?",

@@ -227,7 +227,7 @@ const steps = [
         q: "**90 minuten** is hoeveel uur?",
         options: ["1,5 uur", "1,3 uur", "9 uur", "0,9 uur"],
         answer: 0,
-        wrongHints: [null, "90 min = 1 uur + 30 min. Hoe schrijf je een half uur als kommagetal?", null, null],
+        wrongHints: [null, "Hoeveel minuten zitten er in een heel uur? Wat blijft er over, en hoe schrijf je dat deel als kommagetal?", null, null],
         uitlegPad: {
           stappen: [{ titel: "60 + 30", tekst: "90 min = 60 min (1 uur) + 30 min (half uur). Een half uur is 0,5 uur, dus samen 1,5 uur." }],
           niveaus: {

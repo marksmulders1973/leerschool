@@ -162,8 +162,8 @@ ${sinusGraph({ a: 1, b: 1, c: 0, d: -90, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Sin(0°) = 0. Maar cos begint op een max-waarde.",
-          "cos(180°) = -1. Maar cos(0°) = 1.",
+          "Dat is sin(0°). Begint cos ook op nul, of ergens anders?",
+          "cos(180°) is niet hetzelfde als cos(0°). Welk punt op de eenheidscirkel hoort bij 0°?",
           "Cos geeft een getal tussen -1 en 1.",
         ],
         uitlegPad: {
@@ -198,9 +198,9 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.good, xMin: 0, xMax: 720 })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de periode van sin(x). Bij sin(2x): T = 360°/2 = 180°.",
-          "Dat zou bij sin(½x) zijn (T = 360°/0.5 = 720°).",
-          "Te kort. Reken: T = 360°/b, met b = 2.",
+          "Dat is de periode van sin(x). Hoe verandert de periode als b groter wordt?",
+          "Dat zou bij sin(½x) zijn — halveer je de b, wat doet dat met de periode?",
+          "Te kort — welke waarde heeft b hier? Deel 360° door b om T te vinden.",
         ],
         uitlegPad: {
           stappen: [{ titel: "T = 360° / b", tekst: "Voor y = sin(2x): b = 2, dus T = 360°/2 = 180°. De grafiek herhaalt zich twee keer zo snel als sin(x)." }],
@@ -233,8 +233,8 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.warm })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is max - min = 4 - (-4) = 8 (de totale uitslag), niet de amplitude.",
-          "2 zou bij y = 2·sin(x) zijn.",
+          "Dat is de totale uitslag (max - min). Maar amplitude is de halve uitslag — deel dat door 2.",
+          "Dat geldt als de coëfficiënt twee is. Kijk naar de coëfficiënt in deze functie — is die anders?",
           "1 is de amplitude van y = sin(x). Hier vermenigvuldigen we met 4.",
         ],
         uitlegPad: {
@@ -265,9 +265,9 @@ ${sinusGraph({ a: 1, b: 1, c: 0.5, color: COLORS.good })}
         answer: 0,
         wrongHints: [
           null,
-          "0 zou alleen kloppen als max en min symmetrisch zijn rond 0. Hier: (8 + -2)/2 = 3.",
-          "Verschil/2 = (8 - (-2))/2 = 5 — dat is de amplitude, niet evenwicht.",
-          "5 = amplitude, niet evenwicht. Evenwicht = gemiddelde = (max + min)/2 = 3.",
+          "Nul klopt alleen als max en min spiegelbeeldig rond 0 liggen — is dat hier zo?",
+          "Je hebt het verschil gedeeld — maar evenwicht is het gemiddelde, niet de halve afstand. Probeer (max + min)/2.",
+          "Dat is de amplitude (halve afstand). Evenwicht = gemiddelde van max en min: tel ze op en deel door 2.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Evenwicht = (max + min)/2", tekst: "Max = 8, min = -2. Gemiddelde: (8 + (-2))/2 = 6/2 = 3. Evenwichtslijn ligt op y = 3." }],
@@ -297,7 +297,7 @@ ${sinusGraph({ a: 0.5, b: 2, c: 0.3, color: COLORS.good })}
         answer: 0,
         wrongHints: [
           null,
-          "b bepaalt de periode (T = 360°/b).",
+          "b is niet de amplitude — b bepaalt de periode (deel 360° door b). Welke letter staat voor uitslag?",
           "c bepaalt de evenwichtslijn (verticale verschuiving).",
           "x is de variabele, geen parameter.",
         ],
@@ -330,8 +330,8 @@ ${sinusGraph({ a: 0.6, b: 2, c: 0, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "60 is de periode, niet b. Reken: b = 360°/T.",
-          "1/6 zou bij periode 2160° horen. Hier: b = 360/60 = 6.",
+          "60 is de periode, niet b — hoe bereken je b uit de periode?",
+          "1/6 zou bij een veel langere periode horen — welke formule geeft b vanuit T?",
           "180 is geen logische b-waarde.",
         ],
         uitlegPad: {
@@ -362,7 +362,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0.4, color: COLORS.good })}
         answer: 0,
         wrongHints: [
           null,
-          "4 is de amplitude (= (max-min)/2). Maar evenwicht = (max+min)/2 = 5.",
+          "Dat is de amplitude (halve afstand tussen top en dal). Maar evenwicht = gemiddelde — probeer (max+min)/2.",
           "8 = max - 1 of min + 7 — geen logische berekening.",
           "9 is de max-waarde, niet het evenwicht.",
         ],
@@ -444,8 +444,8 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "60 is per minuut. Periode = tijd voor 1 slag = 1/60 minuut = 1 seconde.",
-          "0.5 seconde = 120 BPM, niet 60.",
+          "60 is het aantal slagen per minuut, niet de periode. Hoe lang duurt dan één slag in seconden?",
+          "Dat zou overeenkomen met 120 slagen per minuut — is dat hier het geval?",
           "30 seconden zou 2 slagen per minuut zijn — heel traag.",
         ],
         uitlegPad: {
@@ -477,9 +477,9 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is alleen de amplitude. Max = c + a = 2 + 5 = 7.",
-          "10 zou 2·5 zijn, geen logische berekening.",
-          "2 is de evenwichtslijn. Max = 2 + 5 = 7.",
+          "Dat is alleen de amplitude. Max = evenwicht + amplitude — tel c en a bij elkaar op.",
+          "2·5 heeft geen vaste betekenis hier. Hoe bereken je de maximumwaarde uit c en a?",
+          "2 is de evenwichtslijn, niet de max. Hoe hoog komt de grafiek boven de evenwichtslijn uit?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Max = c + a", tekst: "y = 5·sin(x) + 2: a = 5 (amplitude), c = 2 (evenwicht). Max = c + a = 2 + 5 = 7." }],
@@ -496,9 +496,9 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is bij b = 1. Hier b = 4: T = 360°/4 = 90°.",
-          "Dat zou bij b = 2 zijn. Hier b = 4 → T = 90°.",
-          "1440° = 4 · 360°. Maar de regel is T = 360°/b, niet T = b·360°.",
+          "Dat is bij b gelijk aan één. Welke waarde heeft b hier? Deel 360° door b.",
+          "Dat zou bij b gelijk aan twee zijn. Maar hier staat een andere coëfficiënt voor x — wat is die?",
+          "Pas op: je deelt 360° door b, niet andersom. Welke kant deel je op?",
         ],
         uitlegPad: {
           stappen: [{ titel: "T = 360°/b", tekst: "Bij y = 3·sin(4x): b = 4 (coëfficiënt vóór x). T = 360°/4 = 90°. De 3 is amplitude, telt niet voor periode." }],
@@ -515,9 +515,9 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "10 = max - min = totale uitslag. Amplitude = (max - min)/2 = 5.",
-          "1 = (max + min)/2 = evenwicht, niet amplitude.",
-          "6 = max-waarde. Amplitude is uitslag vanaf evenwicht: (6 - (-4))/2 = 5.",
+          "Dat is de totale uitslag (max - min). Amplitude = halve uitslag — deel je antwoord door 2.",
+          "Dat is de evenwichtslijn (gemiddelde van max en min), niet de amplitude.",
+          "Dat is de max-waarde zelf. Amplitude = uitslag vanaf het midden — hoever reikt de grafiek boven de evenwichtslijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Amplitude = (max − min)/2", tekst: "Max = 6, min = -4. Verschil: 6 − (-4) = 10. Amplitude = 10/2 = 5." }],
@@ -570,9 +570,9 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerd berekend. T = 360°/b = 360/15 = 24.",
-          "Veel te lang. Reken: T = 360/b waar b = 15°/uur → T = 24.",
-          "5 is de amplitude. Periode = 24.",
+          "Verkeerd berekend — welke formule geeft T vanuit b, en welke waarde heeft b hier?",
+          "Veel te lang — welke waarde heeft b? Deel 360° door b om de periode te vinden.",
+          "5 is de amplitude, niet de periode. Welke parameter geeft de periode?",
         ],
         uitlegPad: {
           stappen: [{ titel: "T = 360°/b = 360/15 = 24", tekst: "b = 15° per uur. T = 360°/b = 360/15 = 24 uur. Logisch: de temperatuur cycelt 24 uur (dag-nacht)." }],
@@ -594,7 +594,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "360 is de coëfficiënt b (graden per seconde). Frequentie = 1/T = b/360 = 1 Hz.",
+          "Dat is de coëfficiënt b, niet de frequentie. Deel 360° door b voor de periode; frequentie is dan 1 gedeeld door die periode.",
           "2 is de amplitude (luidheid).",
           "0.001 zou de periode in milliseconden zijn (verkeerd geconverteerd).",
         ],
@@ -654,8 +654,8 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerd geplaatst. Amplitude = a = 4, evenwicht = c = 7. Periode 180° → b = 360/180 = 2.",
-          "Bij T = 360° (= b = 1). Hier T = 180° dus b = 2.",
+          "Amplitude en evenwicht zijn verwisseld — welke letter staat voor uitslag en welke voor hoogte?",
+          "Dat geldt bij T gelijk aan 360°. Hier is de periode korter — deel 360° door de gegeven T voor b.",
           "a en b verwisseld.",
         ],
         uitlegPad: {
@@ -678,9 +678,9 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "2 is de periode, niet b. Reken: b = 360°/T = 360/2 = 180.",
-          "Bij T = 1 sec is b = 360. Maar T = 2 → b = 180.",
-          "0.5 = 1/T = frequentie in Hz, niet b in graden/sec.",
+          "De periode is twee seconden, niet b — deel 360° door de periode om b te vinden.",
+          "Dat geldt bij T gelijk aan één seconde. Hier is de periode anders — pas de formule aan.",
+          "Dat is de frequentie (1/T) in Hz, niet b in graden per seconde.",
         ],
         uitlegPad: {
           stappen: [{ titel: "b = 360°/T = 360/2 = 180", tekst: "Slinger heeft periode T = 2 sec. Formule b = 360°/T → b = 360/2 = 180 graden per seconde." }],

@@ -307,7 +307,7 @@ const steps = [
         q: "**pH = 4** vs **pH = 7** — hoeveel **zuurder**?",
         options: ["1000× zuurder", "3× zuurder", "100× zuurder", "Half zo zuur"],
         answer: 0,
-        wrongHints: [null, "Niet — log-schaal.", "Niet — drie stappen = 1000.", "Niet — andersom."],
+        wrongHints: [null, "Niet — de pH-schaal is logaritmisch: elke stap staat voor een factor tien, niet voor een gelijk verschil.", "Niet — hoeveel pH-eenheden verschil is er? Reken uit hoe groot de factor dan is op een log-schaal.", "Niet — pH 4 is zuurder dan pH 7, niet het andere."],
         uitlegPad: {
           stappen: [
             { titel: "log10-schaal", tekst: "pH = −log[H⁺]. Verschil 3 → 10³ = **1000× meer H⁺**. Maag-zuur ~ pH 2 = miljoen-keer zuurder dan zuiver water." },
@@ -324,7 +324,7 @@ const steps = [
           "Logistische groei"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — R<1 = uitsterving.", "Niet — pas bij R=1.", "Niet — R<1 betekent geen groei."],
+        wrongHints: [null, "Niet — als R kleiner is dan 1, neemt elke generatie af. Welke soort verloop hoort daarbij?", "Niet — stabiel getal tussen generaties treedt op bij een andere waarde van R.", "Niet — R kleiner dan 1 is juist geen groei maar iets anders; wat beschrijft dat?"],
         uitlegPad: {
           stappen: [{ titel: "R<1 = krimp", tekst: "Bij R<1: elke generatie kleiner dan vorige → exponentieel verval. Voor pandemie cruciaal: 'platdrukken' = R<1 bereiken via maatregelen + immuniteit + vaccinatie." }],
           niveaus: { basis: "Verval.", simpeler: "R<1 = krimp.", nogSimpeler: "Verval" },

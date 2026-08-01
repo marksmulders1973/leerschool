@@ -137,7 +137,7 @@ const steps = [
         q: "**De Moivre**: (1+i)⁴ = ?",
         options: ["−4","4","16","2i"],
         answer: 0,
-        wrongHints: [null, "Niet — niet 4.", "Mod = 4, niet z.", "Niet correct."],
+        wrongHints: [null, "Niet — bereken (1+i)² eerst en pas dan nogmaals de kwadraat toe.", "De modulus van het resultaat is inderdaad 4, maar dat is niet hetzelfde als het complexe getal zelf.", "Niet correct — werk stap voor stap uit."],
         uitlegPad: {
           stappen: [
             { titel: "Polair (1+i) = √2 e^(iπ/4)", tekst: "|1+i| = √2, arg = π/4." },

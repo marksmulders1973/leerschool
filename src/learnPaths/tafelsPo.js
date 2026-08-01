@@ -119,7 +119,7 @@ const steps = [
         q: "**3 × 4** = **4 × 3** — klopt dat?",
         options: ["Ja, wisselregel", "Nee", "Soms", "Hangt af"],
         answer: 0,
-        wrongHints: [null, "Wel waar — controleer: beide = 12.", "Altijd, niet soms.", "Eenduidig — altijd."],
+        wrongHints: [null, "Wel waar — reken 3 × 4 én 4 × 3 en vergelijk.", "Altijd, niet soms.", "Eenduidig — altijd."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zegt de wisselregel?", tekst: "Bij **vermenigvuldigen** (keer) maakt de **volgorde niet uit**. 3 × 4 geeft hetzelfde antwoord als 4 × 3. Dit heet de **wisselregel**." },
@@ -163,7 +163,7 @@ const steps = [
         q: "**7 × 10** = ?",
         options: ["70", "17", "100", "7"],
         answer: 0,
-        wrongHints: [null, "17 = 7 + 10 (optelling, niet keer).", "100 = 10 × 10, één 7 te veel.", "7 is gewoon één keer 7, niet 7 keer 10."],
+        wrongHints: [null, "Je hebt opgeteld in plaats van vermenigvuldigd.", "Te veel stapjes — tel eens hoeveel keer 10 je optelt.", "7 is gewoon één keer 7, niet 7 keer 10."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 10 = 0 erbij", tekst: "Elke keer 10 betekent: het andere getal + een **0** erachter. **7 × 10 = 70**." },
@@ -185,7 +185,7 @@ const steps = [
         q: "**6 × 5** = ?",
         options: ["30", "25", "11", "35"],
         answer: 0,
-        wrongHints: [null, "25 = 5 × 5 (één 5 te weinig).", "11 = 6 + 5 (optelling, niet keer).", "35 = 7 × 5 (één 5 te veel)."],
+        wrongHints: [null, "Één stap te weinig — tel eens hoe vaak 5 je optelt.", "Je hebt opgeteld in plaats van vermenigvuldigd.", "Één stap te veel — tel eens hoe vaak 5 je optelt."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 5 — telstap", tekst: "Tel in stappen van 5: 5, 10, 15, 20, 25, **30**. Dat was 6 stapjes — dus 6 × 5 = **30**." },
@@ -207,7 +207,7 @@ const steps = [
         q: "**9 × 2** = ?",
         options: ["18", "11", "20", "16"],
         answer: 0,
-        wrongHints: [null, "11 = 9 + 2 (optelling).", "20 = 10 × 2, één 2 te veel.", "16 = 8 × 2, één 2 te weinig."],
+        wrongHints: [null, "Je hebt opgeteld in plaats van vermenigvuldigd.", "Één stap te veel — tel eens hoe vaak 2 je optelt.", "Één stap te weinig — tel eens hoe vaak 2 je optelt."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 2 = verdubbelen", tekst: "Elke × 2 = het andere getal **dubbel**. **9 × 2 = 9 + 9 = 18**." },

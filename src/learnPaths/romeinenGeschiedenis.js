@@ -254,7 +254,7 @@ const steps = [
         q: "Wat is **MMXXVI** in Romeinse cijfers?",
         options: ["2026", "1926", "2126", "2226"],
         answer: 0,
-        wrongHints: [null, "MMXXVI = 2026, niet 1926.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Kijk goed naar de M's en X's — welk jaar representeren ze samen?", "Te veel.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Splits in delen", tekst: "MM = 1000 + 1000 = 2000. XX = 10 + 10 = 20. VI = 5 + 1 = 6." },

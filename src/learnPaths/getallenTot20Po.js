@@ -76,7 +76,7 @@ const steps = [
         q: "Wat is **20** = 10 + ?",
         options: ["10","8","5","12"],
         answer: 0,
-        wrongHints: [null, "10 + 8 = 18, niet 20.", "10 + 5 = 15.", "10 + 12 = 22."],
+        wrongHints: [null, "Tel het na: is 10 + 8 echt gelijk aan 20?", "Tel het na: is 10 + 5 echt gelijk aan 20?", "Te veel — 10 + 12 gaat al voorbij 20."],
         uitlegPad: {
           stappen: [{ titel: "Tientallen + eenheden", tekst: "20 = 2 tientallen = 10 + 10. Twee tientallen samen = 20." }],
           theorie: "Cito-onthouden: 20 is bijzonder = 2 keer 10.",
@@ -117,7 +117,7 @@ const steps = [
         q: "Welke twee getallen zijn samen **10**?",
         options: ["6 + 4","5 + 4","7 + 4","3 + 6"],
         answer: 0,
-        wrongHints: [null, "5 + 4 = 9, niet 10.", "7 + 4 = 11.", "3 + 6 = 9."],
+        wrongHints: [null, "Tel het na: is 5 + 4 echt gelijk aan 10?", "Te veel — 7 + 4 gaat al voorbij 10.", "Tel het na: is 3 + 6 echt gelijk aan 10?"],
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "6 + 4 = 10. Onthoud: 10 = 6+4 (buurman-paar), 7+3, 8+2, 9+1, 5+5. Allemaal samen 10." }],
           theorie: "Cito-truc: 'Welke maakt 10?' kennis = essentieel voor groep 3-4. Oefen lijstje 'tientallen-paren'.",
@@ -170,7 +170,7 @@ const steps = [
         q: "**10 - 7** = ?",
         options: ["3","4","2","5"],
         answer: 0,
-        wrongHints: [null, "Te veel — 10 = 6+4, dus 10-7 ≠ 4.", "Te weinig — dat is 10-8.", "Te veel — dat is 10-5."],
+        wrongHints: [null, "Te veel — hoeveel moet je bij 7 optellen om 10 te krijgen?", "Te weinig — dat is 10-8.", "Te veel — dat is 10-5."],
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "10 - 7 = 3 (want 7 + 3 = 10, dus 10 - 7 = 3). **Familie-som**." }],
           theorie: "Cito-truc: '10 min iets' is **buurman van dat iets** dat samen 10 maakt.",
@@ -202,7 +202,7 @@ const steps = [
         q: "Vul in: **7 - ?** = 3",
         options: ["4","10","3","2"],
         answer: 0,
-        wrongHints: [null, "Te veel — 7 - 10 zou negatief.", "Niet — dat is 7 - 4 = 3.", "Te weinig — 7 - 2 = 5."],
+        wrongHints: [null, "Te veel — kan 7 - 10 nog een positief getal zijn?", "Niet — controleer: is dit getal echt de ontbrekende stap voor 7 - ? = 3?", "Te weinig — controleer: wat krijg je als je 7 - 2 uitrekent?"],
         uitlegPad: {
           stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3 → wat moet er weg om 3 over te houden? 7 - **4** = 3. Familie: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
           niveaus: { basis: "4.", simpeler: "7 - 4 = 3", nogSimpeler: "4" },
@@ -221,7 +221,7 @@ const steps = [
         q: "**8 + 5** = ?",
         options: ["13","12","14","15"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 8+4=12, niet 8+5.", "Te veel — dat is 8+6.", "Te veel — dat is 8+7."],
+        wrongHints: [null, "Te weinig — je hebt niet 4 maar 5 bij 8 opgeteld.", "Te veel — dat is 8+6.", "Te veel — dat is 8+7."],
         uitlegPad: {
           stappen: [{ titel: "Maak eerst 10", tekst: "8 + 5 → splits 5 in 2 + 3. 8 + 2 = 10. 10 + 3 = **13**." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "8 + 5 = 8 + 2 + 3 = 10 + 3 = 13 ✓." }],
@@ -232,7 +232,7 @@ const steps = [
         q: "**15 - 7** = ?",
         options: ["8","9","7","6"],
         answer: 0,
-        wrongHints: [null, "Te veel — 15-6=9.", "Te weinig — 15-8=7.", "Te weinig — 15-9=6."],
+        wrongHints: [null, "Te veel — je hebt 6 afgetrokken in plaats van 7.", "Te weinig — je hebt 8 afgetrokken in plaats van 7.", "Te weinig — je hebt 9 afgetrokken in plaats van 7."],
         uitlegPad: {
           stappen: [{ titel: "Eerst naar 10", tekst: "15 - 7 → splits 7 in 5 + 2. 15 - 5 = 10. 10 - 2 = **8**." }],
           niveaus: { basis: "15-7 = 8.", simpeler: "15-5=10, 10-2=8.", nogSimpeler: "8" },
@@ -242,7 +242,7 @@ const steps = [
         q: "**14 + 5** = ?",
         options: ["19","20","18","13"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig — 14+4=18.", "Niet — dat is 14-1."],
+        wrongHints: [null, "Te veel — je hebt er te veel bij opgeteld.", "Te weinig — je hebt 4 opgeteld, maar de som vraagt om 5.", "Niet — dat is 14-1."],
         uitlegPad: {
           stappen: [{ titel: "Splits 14", tekst: "14 = 10 + 4. Dus 14 + 5 = 10 + 4 + 5 = 10 + 9 = **19**." }],
           theorie: "Of: 4 + 5 = 9, en dan 10 + 9 = 19. Hetzelfde resultaat.",
@@ -253,7 +253,7 @@ const steps = [
         q: "Tom heeft 9 stickers. Krijgt 4 erbij. Hoeveel nu?",
         options: ["13","12","14","5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 9+3=12.", "Te veel — 9+5=14.", "Niet — dat is 9-4."],
+        wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Niet — dat is 9-4."],
         uitlegPad: {
           stappen: [{ titel: "Redactiesom = plus", tekst: "Krijgt 4 erbij → plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
           theorie: "Cito-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
@@ -283,7 +283,7 @@ const steps = [
         q: "**6 + 7** = ?",
         options: ["13","12","14","11"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 6+6=12.", "Te veel — 6+8=14.", "Te weinig — 6+5=11."],
+        wrongHints: [null, "Te weinig — je hebt 6 bij 6 opgeteld, maar de som vraagt om 7.", "Te veel — je hebt 8 bij 6 opgeteld, maar de som vraagt om 7.", "Te weinig — je hebt 5 bij 6 opgeteld, maar de som vraagt om 7."],
         uitlegPad: {
           stappen: [{ titel: "Maak 10", tekst: "6 + 7 = 6 + 4 + 3 = 10 + 3 = **13**." }],
           niveaus: { basis: "13.", simpeler: "6+7=13.", nogSimpeler: "13" },
@@ -293,7 +293,7 @@ const steps = [
         q: "**17 - 9** = ?",
         options: ["8","9","7","10"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Te veel — 17-7=10."],
+        wrongHints: [null, "Te veel — je hebt te weinig afgetrokken.", "Te weinig — je hebt te veel afgetrokken.", "Te veel — controleer: is 17-7 gelijk aan 9?"],
         uitlegPad: {
           stappen: [{ titel: "Familie-som", tekst: "17 - 9 = **8** (want 9 + 8 = 17). Of: 17 - 7 = 10, 10 - 2 = 8." }],
           niveaus: { basis: "8.", simpeler: "17-9 = 8.", nogSimpeler: "8" },
@@ -313,7 +313,7 @@ const steps = [
         q: "Anna heeft 12 snoepjes. Eet er 4 op. Hoeveel over?",
         options: ["8","6","9","10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel — 12-3=9.", "Te veel — 12-2=10."],
+        wrongHints: [null, "Te weinig — je hebt te veel afgetrokken.", "Te veel — je hebt 3 afgetrokken in plaats van 4.", "Te veel — je hebt 2 afgetrokken in plaats van 4."],
         uitlegPad: {
           stappen: [{ titel: "Eten op = min", tekst: "'Eet op' → min-som. 12 - 4 = 12 - 2 - 2 = 10 - 2 = **8**." }],
           niveaus: { basis: "12-4 = 8.", simpeler: "12-4 = 8 snoepjes over.", nogSimpeler: "8" },

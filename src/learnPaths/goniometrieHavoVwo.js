@@ -106,7 +106,7 @@ const steps = [
         q: "Op eenheidscirkel bij hoek α = 90°, wat is de y-coördinaat (= sin α)?",
         options: ["1", "0", "0,5", "−1"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is x = cos 90° = 0.", "Niet — sin 30°.", "Niet — dat is sin 270°."],
+        wrongHints: [null, "Niet — dat is de x-coördinaat (cosinus) bij 90°, niet de y-coördinaat.", "Niet — dat hoort bij een andere hoek, niet bij 90°.", "Niet — dat is de y-coördinaat aan de onderkant van de cirkel."],
         uitlegPad: {
           stappen: [{ titel: "Top van cirkel = (0,1)", tekst: "Bij 90° staat punt aan top van eenheidscirkel: x = 0, y = 1. sin 90° = **1** (max), cos 90° = 0." }],
           niveaus: { basis: "1.", simpeler: "Top: y=1.", nogSimpeler: "1" },
@@ -232,7 +232,7 @@ const steps = [
         q: "Voor welke x heeft tan x **asymptoot** (= niet gedefinieerd)?",
         options: ["x = π/2 + kπ", "x = 0", "x = π", "Bij elke x"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is tan = 0.", "Idem nulpunt.", "Onjuist."],
+        wrongHints: [null, "Niet — daar is tan gedefinieerd en gelijk aan nul; de asymptoot ligt ergens anders.", "Idem — ook een nulpunt.", "Onjuist — tan bestaat voor alle x."],
         uitlegPad: {
           stappen: [
             { titel: "tan = sin/cos → asymp waar cos=0", tekst: "cos x = 0 bij x = π/2, 3π/2, 5π/2, ... (= π/2 + k·π). Daar wordt tan x = sin x / 0 → ±∞ → verticale asymptoot." },
@@ -320,7 +320,7 @@ const steps = [
         q: "**arctan(1)** in radialen?",
         options: ["π/4", "π/2", "1", "π"],
         answer: 0,
-        wrongHints: [null, "Niet — tan π/2 is ∞.", "Niet — antwoord in radialen.", "Niet — tan π = 0."],
+        wrongHints: [null, "Niet — bij dat getal is de tangens ongedefinieerd, dus kan het geen antwoord zijn.", "Niet — het antwoord is in radialen, niet als getal 1.", "Niet — bij dat getal is de tangens nul, maar arctan(1) vraagt waar tangens gelijk is aan 1."],
         uitlegPad: {
           stappen: [{ titel: "tan 45° = 1", tekst: "tan(π/4) = 1 → arctan(1) = **π/4** = 45°. Klassiek geheugen-feit." }],
           niveaus: { basis: "π/4.", simpeler: "tan=1 bij 45° = π/4 rad.", nogSimpeler: "π/4" },

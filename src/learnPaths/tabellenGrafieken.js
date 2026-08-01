@@ -270,7 +270,7 @@ const steps = [
         q: "**Hoeveel kinderen kozen NIET voor voetbal of zwemmen**?",
         options: ["35","57","85","43"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is voetbal+zwemmen.","Het hele totaal — niet wat de vraag stelt.","Tel: tennis+hockey+judo = 15+12+8."],
+        wrongHints: [null,"Te veel — dat is voetbal+zwemmen, maar de vraag vraagt juist de anderen.","Dat is het totaal van alle sporten — maar de vraag vraagt alleen die zonder voetbal of zwemmen.","Tel de sporten op die NIET voetbal of zwemmen zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Andere balken optellen", tekst: "NIET voetbal/zwemmen = tennis + hockey + judo. 15 + 12 + 8 = 35." },
@@ -340,7 +340,7 @@ const steps = [
         q: "**Op welke dagen daalde de temperatuur** ten opzichte van de dag ervoor?",
         options: ["Donderdag en zondag","Maandag en dinsdag","Geen enkele dag","Alle dagen"],
         answer: 0,
-        wrongHints: [null,"Op die dagen STEEG juist — andersom.","Niet correct — donderdag (22→18) en zondag (27→23) daalden.","Niet alle — kijk naar lijn-richtingen."],
+        wrongHints: [null,"Op die dagen steeg de temperatuur juist — kijk goed naar de lijn-richting.","Niet correct — zoek de dagen waarop de lijn omlaag gaat ten opzichte van de dag ervoor.","Niet alle — kijk per dag of de lijn omhoog of omlaag gaat."],
         uitlegPad: {
           stappen: [
             { titel: "Lijn-richtingen bekijken", tekst: "Tussen elke 2 punten: ging lijn omhoog (stijging) of omlaag (daling)? Loop punt voor punt: ma→di: 16→19 (stijg). di→wo: 19→22 (stijg). wo→do: 22→18 (DAAL!). do→vr: 18→24 (stijg). vr→za: 24→27 (stijg). za→zo: 27→23 (DAAL!)." },
@@ -446,7 +446,7 @@ const steps = [
         q: "Lijngrafiek temperatuur over 5 dagen: 14, 16, 19, 17, 20. **Op welke 2 opeenvolgende dagen daalde 't**?",
         options: ["Dag 3 → 4","Dag 1 → 2","Dag 2 → 3","Geen"],
         answer: 0,
-        wrongHints: [null,"Daar steeg 't (14→16).","Daar steeg 't (16→19).","Wel — kijk naar 19 → 17."],
+        wrongHints: [null,"Daar steeg de temperatuur juist — was het tweede getal groter of kleiner?","Daar steeg de temperatuur ook — controleer of de tweede dag warmer of kouder was.","Er is wel een daling — zoek het paar waarbij de tweede dag kouder is dan de eerste."],
         uitlegPad: {
           stappen: [{ titel: "Vergelijk paren", tekst: "Dag 1→2: 14→16 STIJG. Dag 2→3: 16→19 STIJG. Dag 3→4: 19→17 DAAL! Dag 4→5: 17→20 STIJG. Alleen dag 3→4 daalt." }],
           woorden: [{ woord: "opeenvolgend", uitleg: "Twee dagen direct achter elkaar (niet dag 1 en 5, maar dag 1 en 2)." }, { woord: "daling", uitleg: "Tweede getal kleiner dan eerste." }],
@@ -553,7 +553,7 @@ const steps = [
         q: "Lijngrafiek temperatuur: ma 18, di 22, wo 25, do 21, vr 19. **Verschil tussen warmste en koudste dag**?",
         options: ["7","11","6","4"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer: 25 (warmste) − 18 (koudste) = 7.","Te weinig — controleer warmste.","Te weinig — heb je niet ALLE dagen vergeleken?"],
+        wrongHints: [null,"Te veel — zoek de warmste en de koudste dag en bereken dan het verschil.","Te weinig — heb je de echt warmste dag gevonden?","Te weinig — heb je alle dagen vergeleken om de koudste te vinden?"],
         uitlegPad: {
           stappen: [
             { titel: "Warmste + koudste vinden", tekst: "Alle dagen: 18, 22, 25, 21, 19. Hoogste = 25 (woensdag). Laagste = 18 (maandag)." },

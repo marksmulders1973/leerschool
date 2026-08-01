@@ -24,7 +24,7 @@ const steps = [
         q: "Een snaar trilt **20 keer per seconde**. Wat is de **periode T**?",
         options: ["0,05 s", "20 s", "0,5 s", "0,2 s"],
         answer: 0,
-        wrongHints: [null, "Niet — 20 s zou heel traag zijn.", "Niet — dat zou f = 2 Hz betekenen.", "Niet — dat is 1/5, niet 1/20."],
+        wrongHints: [null, "Niet — 20 s zou heel traag zijn voor een snaar.", "Niet — welke frequentie hoort bij deze periode? Gebruik de omgekeerde van T.", "Niet — welke frequentie hoort bij dit getal? Controleer met de omgekeerde verhouding."],
         uitlegPad: {
           stappen: [
             { titel: "T = 1/f", tekst: "Frequentie f = 20 Hz. Periode T = 1/f = 1/20 = 0,05 s. Dus elke trilling duurt 0,05 s = 50 ms." },
@@ -63,7 +63,7 @@ const steps = [
         q: "Een massa aan een veer trilt met **T = 0,4 s**. Wat is **ω** (hoekfrequentie)?",
         options: ["5π rad/s", "0,4 rad/s", "2π rad/s", "2,5 rad/s"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is T, niet ω.", "Niet — dat zou T = 1 s zijn.", "Niet — vergeet de 2π niet."],
+        wrongHints: [null, "Niet — dat is T zelf, niet ω. Welke formule verbindt T met ω?", "Niet — welke periode hoort bij dit getal? Controleer via de hoekfrequentie-formule.", "Niet — vergeet de factor 2π bij de formule voor ω."],
         uitlegPad: {
           stappen: [{ titel: "ω = 2π/T", tekst: "ω = 2π/T = 2π/0,4 = **5π rad/s** ≈ 15,7 rad/s. ω vertelt hoe snel de fase verandert (radialen per seconde)." }],
           niveaus: {
@@ -293,7 +293,7 @@ const steps = [
         q: "Je verdubbelt de afstand tot een geluidsbron. Intensiteit wordt:",
         options: ["4× kleiner (−6 dB)", "2× kleiner (−3 dB)", "8× kleiner", "Onveranderd"],
         answer: 0,
-        wrongHints: [null, "Niet — energie verspreidt over oppervlak ~r² → 1/r²-wet.", "Niet — dat is een 3D-energie-volume-fout.", "Niet — geluid wordt wel zwakker."],
+        wrongHints: [null, "Niet — denk aan hoe het oppervlak van een bol groeit als de afstand verdubbelt.", "Niet — geluid verspreidt zich over een boloppervlak, niet over een volume.", "Niet — geluid wordt wel zwakker bij grotere afstand."],
         uitlegPad: {
           stappen: [
             { titel: "1/r²-wet", tekst: "Punt-bron straalt energie uit over een **bol** met oppervlak 4π·r². Verdubbel r → oppervlak ×4 → intensiteit ÷4. In dB: 10·log(1/4) ≈ −6 dB." },

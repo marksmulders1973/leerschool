@@ -164,7 +164,7 @@ const steps = [
           null,
           "Dat is de y-waarde, niet de helling. Welke formule geeft de helling?",
           "Dat is de x-waarde — vul die nog in de hellings-formule in.",
-          "Helling = 0 alleen op de top — kijk naar de x-coördinaat van dit punt.",
+          "Een helling van nul hoort bij de top — maar dit is niet de top. Welke formule geeft de helling in dit punt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Helling-formule 2x", tekst: "Bij y = x² is helling = 2x. In (3, 9): 2·3 = 6." }],
@@ -205,7 +205,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is f(4) — de y-waarde — niet de helling.",
-          "Dat is alleen de x-waarde. Vul x = 4 in de afgeleide-formule in.",
+          "Dat is alleen de x-waarde zelf. Schrijf eerst f'(x) op en vul dan x in.",
           "Geen logische uitkomst — schrijf eerst f'(x) op, dan x = 4 invullen.",
         ],
         uitlegPad: {
@@ -245,7 +245,7 @@ const steps = [
           null,
           "Verkeerd om — exponent moet **lager**, niet hoger. Regel: x^n → n·x^(n-1).",
           "Vergeet de coëfficiënt niet — de oude exponent (5) komt vooraan.",
-          "Verlaag de exponent. x⁵ → 5x⁴.",
+          "Verlaag de exponent én zet de oude exponent als coëfficiënt vooraan — beide stappen zijn nodig.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hoofdregel n·x^(n-1)", tekst: "x⁵ → 5·x⁴. Exponent voor, dan -1." }],
@@ -262,8 +262,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "f(x) = 12 is een constante (rechte lijn op hoogte 12). Helling van een vlakke lijn = 0.",
-          "12x heeft helling 12. Maar f(x) = 12 is een vlakke lijn, helling 0.",
+          "f(x) staat op een vaste hoogte (constante) — dat is een vlakke lijn. Wat is de helling van een vlakke lijn?",
+          "12x heeft een bepaalde helling. Maar f(x) is hier een constante zonder x — wat is de helling van zo'n vlakke lijn?",
           "1 zou de afgeleide zijn van x. Hier is f een constante.",
         ],
         uitlegPad: {
@@ -298,9 +298,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "10 = 6 + 4 (optellen). Maar je moet vermenigvuldigen: 6·4 = 24.",
+          "Je hebt opgeteld (6 + 4), maar de coëfficiënt en de exponent moeten vermenigvuldigd worden.",
           "De coëfficiënt 6 blijft, maar je vermenigvuldigt 'm met de exponent (4): 6·4 = 24.",
-          "Verlaag de exponent (4-1=3), niet verhoog.",
+          "Verlaag de exponent (niet verhogen) — de regel zegt x^n → n·x^(n-1).",
         ],
         uitlegPad: {
           stappen: [{ titel: "a·n·x^(n-1)", tekst: "6x⁴ → 6·4·x³ = 24x³." }],
@@ -381,7 +381,7 @@ const steps = [
         wrongHints: [
           null,
           "De constante (7) verdwijnt bij differentiëren — die heeft helling 0.",
-          "Verlaag de exponent (3-1=2), niet ze hetzelfde houden.",
+          "Verlaag de exponent met 1 (niet gelijk houden) — de regel is x^n → n·x^(n-1).",
           "Vergeet de coëfficiënt 3 en 2 niet vermenigvuldigen met de exponent.",
         ],
         uitlegPad: {
@@ -418,7 +418,7 @@ const steps = [
           null,
           "Welke regel gebruik je voor x²? En welke voor 3x? Schrijf eerst f'(x) op vóór je x = 1 invult.",
           "Dat is x zelf, niet de helling in dat punt. Bereken eerst f'(x).",
-          "Heb je de hele afgeleide ingevuld of alleen de constante? Vul x = 1 in álle termen in.",
+          "Heb je de hele afgeleide ingevuld of alleen één term? Vul x in álle termen van f'(x) in.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f'(x) opstellen, dan invullen", tekst: "f'(x) = 2x + 3. f'(1) = 2 + 3 = 5." }],
@@ -493,7 +493,7 @@ const steps = [
         wrongHints: [
           null,
           "Bijna goed — vergeet de b niet. f'(1) = 2, en door (1,1): 1 = 2·1 + b → b = -1.",
-          "Helling klopt (a=2 of a=1)? f'(1) = 2·1 = 2, niet 1. Plus de b ontbreekt.",
+          "Controleer de helling: is f'(1) gelijk aan 2 of 1? En vergeet de b niet — die bepaal je via het punt.",
           "Een raaklijn is een rechte lijn (y = ax + b), geen kromme.",
         ],
         uitlegPad: {
@@ -532,7 +532,7 @@ const steps = [
           null,
           "Vergeet de afgeleide van 2x niet — die is 2.",
           "Verlaag de exponenten (n-1), niet houden.",
-          "Vergeet coëfficiënten niet — 4·3 = 12 (niet 4), 6·2 = 12 (niet 6).",
+          "Vergeet de coëfficiënten niet — vermenigvuldig de coëfficiënt met de exponent bij elke term.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "4x³ → 12x². -6x² → -12x. 2x → 2. Antwoord: 12x² − 12x + 2." }],
@@ -549,9 +549,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "f'(x) = 3x² + 1. f'(2) = 3·4 + 1 = 13, niet 9.",
+          "Vergeet de +1 niet — wat is de afgeleide van de losse x-term?",
           "Vergeet de +1 niet (afgeleide van x).",
-          "f'(x) = 3x² + 1, niet 3x² + 0.",
+          "Wat is de afgeleide van de term x alleen? Dat is niet 0.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = 3x² + 1", tekst: "f'(2) = 3·4 + 1 = 13." }],
@@ -592,7 +592,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vergeet de b niet — door (3, 9): 9 = 6·3 + b → b = -9.",
+          "Vergeet de b niet — vul het raakpunt in de lijn-vergelijking y = ax + b in om b te bepalen.",
           "Helling klopt niet — f'(3) = 6, niet 3.",
           "Een raaklijn is een rechte lijn (y = ax + b), geen parabool.",
         ],
@@ -623,9 +623,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "W'(x) = -4x + 40 = 0 → x = 10, niet 5.",
-          "Bij x = 20: W' = -40, ver van 0. Voor max: W' = 0.",
-          "x = 40 zou W' = -120 geven. Te ver van max.",
+          "Schrijf eerst W'(x) op en stel die gelijk aan 0. Welk x geeft dan W' = 0?",
+          "Bij dit x is W' ver van 0 — je zoekt het punt waar de helling precies 0 is.",
+          "Dit x geeft een grote negatieve afgeleide — het maximum ligt dichter bij een lagere waarde.",
         ],
         uitlegPad: {
           stappen: [{ titel: "W'(x) = 0", tekst: "W'(x) = -4x + 40 = 0 → x = 10." }],
@@ -642,9 +642,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "h'(t) = -10t + 20 = 0 → t = 2, niet 4.",
-          "Bij t = 5: h' = -30. Hoogste punt is bij h' = 0.",
-          "Bij t = 0 stijgt de bal nog (h' = 20). Hoogste punt = waar h' = 0.",
+          "Schrijf h'(t) op en stel gelijk aan 0 — welk t geeft h' = 0?",
+          "Bij dit t is de snelheid al negatief — de bal daalt al. Het hoogste punt ligt eerder.",
+          "Bij het afvuren stijgt de bal nog — het hoogste punt ligt later. Waar is h'(t) precies nul?",
         ],
         uitlegPad: {
           stappen: [{ titel: "h'(t) = 0", tekst: "h'(t) = -10t + 20 = 0 → t = 2." }],
@@ -666,9 +666,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verlaag exponent: -2 → -3, niet -1.",
-          "Coëfficiënt: 5·(-2) = -10 (negatief vanwege de -2). Hier hoort een minteken.",
-          "Vergeet de coëfficiënt 5 niet — 5·(-2) = -10.",
+          "Verlaag de exponent: bij negatieve exponenten gaat -2 naar lager, niet naar -1.",
+          "De coëfficiënt wordt negatief omdat je 5 vermenigvuldigt met een negatief getal. Welk teken krijgt het resultaat?",
+          "Vergeet de coëfficiënt 5 niet — vermenigvuldig die met de exponent.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Negatieve exponent", tekst: "5x⁻² → 5·(-2)·x⁻³ = -10x⁻³." }],
@@ -702,7 +702,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "f'(x) = 6x² - 24x + 18 = 0 → x² - 4x + 3 = 0 → (x-1)(x-3) = 0 → x=1 of x=3.",
+          "Bereken f'(x), stel gelijk aan 0, en factoriseer de kwadratische vergelijking die je krijgt.",
           "Onjuiste oplossing van de afgeleide.",
           "Een derdegraads functie heeft meestal twee extrema (een max en een min).",
         ],
@@ -721,9 +721,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "f'(x) = -6x + 12. f'(1) = -6 + 12 = 6, niet 4.",
-          "Dat is f(1), niet f'(1).",
-          "12 is de constante in f'(x), maar je moet -6x + 12 = -6·1 + 12 = 6 berekenen.",
+          "Je hebt f(1) uitgerekend, niet f'(1). Schrijf eerst de afgeleide op, vul dan x = 1 in.",
+          "Dat is de functiewaarde f(1), niet de helling. Bereken eerst f'(x), dan pas invullen.",
+          "Je hebt alleen de constante in f'(x) genomen, maar je moet ook de -6x-term invullen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = -6x + 12", tekst: "f'(1) = -6 + 12 = 6." }],

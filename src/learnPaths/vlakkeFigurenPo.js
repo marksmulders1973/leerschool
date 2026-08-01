@@ -85,7 +85,7 @@ const steps = [
         q: "Vierkant met **omtrek 20 cm** — wat is de **zijde**?",
         options: ["5 cm","10 cm","4 cm","20 cm"],
         answer: 0,
-        wrongHints: [null,"Te veel — denk: 4 × zijde = 20.","Te weinig — controleer 4 × 4 = 16, niet 20.","Dat is omtrek zelf."],
+        wrongHints: [null,"Te veel — een vierkant heeft vier gelijke zijden. Deel de omtrek door vier.","Te weinig — controleer of vier keer dit getal inderdaad twintig geeft.","Dat is omtrek zelf."],
         uitlegPad: {
           stappen: [{ titel: "Omtrek ÷ 4", tekst: "Vierkant: 4 zijden. Omtrek÷4 = zijde. 20÷4 = 5 cm." }],
           woorden: [{ woord: "andersom rekenen", uitleg: "Wanneer omtrek bekend, gebruik formule omgekeerd: zijde = omtrek÷4." }],
@@ -205,7 +205,7 @@ const steps = [
         q: "Een tuin **15 × 12 m**. Hek kost **€ 10/m**. Hekkosten?",
         options: ["€ 540","€ 1800","€ 270","€ 600"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je oppervlakte ipv omtrek?","Te weinig — controleer omtrek = 2(15+12).","Te veel — controleer formule."],
+        wrongHints: [null,"Te veel — voor een hek heb je de omtrek nodig, niet de oppervlakte.","Te weinig — tel alle zijden bij elkaar op (omtrek-formule voor rechthoek).","Te veel — controleer de formule."],
         uitlegPad: {
           stappen: [{ titel: "Omtrek + prijs", tekst: "Hek = omtrek = 2×(15+12) = 54 m. Kost = 54×€10 = €540." }],
           woorden: [{ woord: "hekkosten", uitleg: "Lengte hek (m) × prijs per meter." }],
@@ -219,7 +219,7 @@ const steps = [
         q: "Een vloer **8 × 6 m** wordt betegeld. **€ 12 per m²**. Kosten?",
         options: ["€ 576","€ 168","€ 96","€ 720"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je omtrek ipv oppervlakte?","Niet correct — controleer 8×6=48 → ×12.","Te veel."],
+        wrongHints: [null,"Te weinig — voor tegels heb je de oppervlakte nodig, niet de omtrek.","Niet correct — bereken eerst de oppervlakte, dan pas vermenigvuldig je met de prijs.","Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte + prijs", tekst: "Vloer = oppervlakte = 8×6 = 48 m². Kost = 48×€12 = €576." }],
           woorden: [{ woord: "tegelkosten", uitleg: "Vloer (m²) × prijs per m²." }],
@@ -233,7 +233,7 @@ const steps = [
         q: "Een driehoekige tuin **basis 10 m, hoogte 4 m**. Gras kost **€ 6/m²**. Kosten?",
         options: ["€ 120","€ 60","€ 240","€ 84"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer oppervlakte (10×4÷2=20). Dan × 6.","Te veel — heb je ÷ 2 vergeten?","Klopt niet."],
+        wrongHints: [null,"Te weinig — bereken eerst de oppervlakte van de driehoek (vergeet niet te delen door 2).","Te veel — heb je ÷ 2 vergeten?","Klopt niet."],
         uitlegPad: {
           stappen: [{ titel: "Driehoek + prijs", tekst: "Oppervlakte = (10×4)÷2 = 20 m². Kost = 20×€6 = €120." }],
           woorden: [{ woord: "graskosten", uitleg: "Oppervlakte (m²) × prijs per m²." }],

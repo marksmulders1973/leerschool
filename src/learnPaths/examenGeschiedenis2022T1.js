@@ -142,7 +142,7 @@ const steps = [
         "de oproep tot de Spoorwegstaking",
       ],
       answer: 3,
-      wrongHints: ["Distributiesysteem (bonnenstelsel) bestond al sinds begin van de oorlog — verklaarde de honger niet alleen.", "Persoonsbewijs (1941) was voor identificatie — geen voedsel-impact.", "Februaristaking = 1941, niet 1944-1945. Geen verband met Hongerwinter.", null],
+      wrongHints: ["Distributiesysteem (bonnenstelsel) bestond al sinds begin van de oorlog — verklaarde de honger niet alleen.", "Persoonsbewijs was voor identificatie — geen voedsel-impact.", "De Februaristaking was een protest vroeg in de oorlog — viel dat samen met de Hongerwinter?", null],
       explanation: "**Spoorwegstaking** (sept 1944) = NL-spoormannen staakten op verzoek van regering-in-Londen om Duitse troepenverplaatsingen te dwarsbomen rondom operatie Market Garden. Als represaille blokkeerden de Duitsers de voedseltransporten naar west-NL → **Hongerwinter** met 20.000+ doden van honger en kou.",
       examenBron: BRON_LABEL(30),
       bronLink: BRON_LINK,

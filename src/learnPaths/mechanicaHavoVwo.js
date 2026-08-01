@@ -285,7 +285,7 @@ const steps = [
         q: "Object eenparig versneld start v=0, na 4 s heeft v=20 m/s. **Verplaatsing**?",
         options: ["40 m","80 m","20 m","100 m"],
         answer: 0,
-        wrongHints: [null, "Niet — opp. v-t = 80/2.", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "Niet — bereken de oppervlakte onder de v-t-grafiek (driehoek). Welke formule gebruik je daarvoor?", "Niet correct.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t-driehoek", tekst: "Op v-t-diagram is dit driehoek met basis 4 + hoogte 20. **Opp = ½·4·20 = 40 m** = verplaatsing. (Of via x=½·a·t² met a=5: ½·5·16=40 m. ✓)" }],
           niveaus: { basis: "40 m.", simpeler: "½·4·20=40", nogSimpeler: "40" },

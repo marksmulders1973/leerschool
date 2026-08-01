@@ -339,7 +339,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Bij (5, 5) is x = 5 en y = 5. De regel zegt: y moet gelijk zijn aan x. Geldt dat?",
+          "Vul de x- en y-waarde van dit punt in de regel y = x in — klopt die vergelijking dan?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Punt invullen in regel", tekst: "Test: bij regel y = x ligt punt (5, 5) op de lijn? Vul x = 5 in → y = 5. Punt heeft y = 5. Klopt! Ja, ligt op de lijn." }],
@@ -426,7 +426,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Heb je x = 0 meegeteld? De oorsprong is ook een punt.",
+          "Heb je de nul ook meegeteld? De oorsprong is ook een geldige x-waarde.",
           "Schrijf ze allemaal op: -3, -2, -1, 0, 1, 2, 3 — en tel.",
           "Heb je alleen de positieve gepakt? De negatieve tellen óók mee.",
         ],
@@ -564,7 +564,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Bijna! Het minteken vóór x² geeft uiteindelijk een **negatief** getal als x² positief is. 3·3 = 9, en dan dat -1 keer.",
+          "Bijna! Het minteken vóór x² maakt het eindresultaat negatief. Bereken eerst x², pas daarna het minteken toe.",
           "Je hebt 3·-2 of zoiets gedaan. Reken: -1 · (3 · 3).",
           "Alleen het minteken pakken is niet genoeg — je moet ook nog 3·3 doen.",
         ],
@@ -667,7 +667,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Als a = 0 zou er helemaal geen x² over zijn (0 keer iets is 0). De parabool zou dan verdwijnen.",
+          "Als a nul zou zijn, verdwijnt het x²-deel helemaal — er blijft dan geen parabool meer over.",
           "x is het doosje voor de invoer. De a is een ander doosje — voor het getal vóór x².",
           "2 is de macht (het kleine 2-tje). De a is iets anders.",
         ],
@@ -719,9 +719,9 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de stap vergeten. Eerst 4² = 16. Maar dan moet je nog **maal 2**.",
+          "Je hebt alleen x² uitgerekend maar de tweede stap vergeten — wat moet je daarna nog doen met de a?",
           "Je hebt 4·2 gedaan. Maar de regel zegt 2 maal x², dus eerst x² uitrekenen.",
-          "Hoe kom je aan 64? Reken: x = 4 → 4·4 = 16 → 16·2 = ?",
+          "Dat krijg je als je de twee stappen verwisselt. Bereken eerst x², dan pas vermenigvuldigen met a.",
         ],
         uitlegPad: {
           stappen: [{ titel: "y = 2x²: 2 stappen", tekst: "Stap 1: 4² = 16. Stap 2: vermenigvuldig met 2 → 16 × 2 = 32. Eerst kwadrateren, dan maal a." }],
@@ -773,7 +773,7 @@ ${gridSvg}
         wrongHints: [
           null,
           "y = x² is de standaard. Welk getal in de lijst is **kleiner** dan 1?",
-          "y = 2x² is steiler dan y = x², dus juist smaller.",
+          "Vergelijk de a-waarden: grotere a geeft een steilere, smallere parabool. Wat heeft dan de kleinste a?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Kleine a = breed", tekst: "Hoe kleiner a (mits positief), hoe breder. ⅓ < 1 < 2 → y = ⅓x² is het breedst." }],
@@ -821,7 +821,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de tweede stap vergeten. Eerst 8² = 64. Maar dan nog **delen door 2**.",
+          "Je hebt alleen x² uitgerekend maar daarna niets meer gedaan — wat doet de ½ in de formule?",
           "Je hebt 8 · 2 gedaan. De regel is anders: eerst kwadrateren, dan halveren.",
           "Je hebt 8 / 2 gedaan. Maar de regel zegt: eerst **kwadrateren**, dan halveren.",
         ],
@@ -863,7 +863,7 @@ ${gridSvg}
           null,
           "Je hebt alleen x² uitgerekend. Maar er staat **+ 5** achter — dat moet je ook nog optellen.",
           "Je hebt 5² gedaan. Maar het 2-tje hoort bij **x**, niet bij de 5.",
-          "Hoe kom je aan 10? Reken: 0² = 0, en dan +5 = ?",
+          "Dat is een optelfout — bereken stap voor stap: eerst x², dan het losse getal erbij optellen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "y = x² + 5 met x=0", tekst: "0² = 0. Dan +5 → y = 5. Begin altijd met kwadraat, dan toevoegingen." }],
@@ -899,7 +899,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Het minteken vergeten? Reken: 0² = 0, en dan **min** 4.",
+          "Het minteken vergeten? Bereken stap voor stap: eerst x² uitrekenen, dan het minteken-getal aftrekken.",
           "Je hebt alleen x² uitgerekend. Maar er staat ook nog **− 4** achter.",
           "Je hebt 4² of 16 gepakt. Maar de 4 is geen kwadraat — het is de waarde die je aftrekt.",
         ],
@@ -1036,7 +1036,7 @@ ${gridSvg}
           null,
           "Het min-teken vergeten? -8 is iets anders dan +8.",
           "(-8, 0) is 8 naar links. Maar de c verschuift verticaal, niet horizontaal.",
-          "(0, 0) is de top als c = 0. Maar hier staat -8 — dus de top is verschoven.",
+          "(0, 0) is de top zonder verschuiving. Maar hier is er een c-waarde — in welke richting verschuift de top dan?",
         ],
         uitlegPad: {
           stappen: [{ titel: "y = x² − 8: top (0, -8)", tekst: "c = -8. Top altijd op (0, c) → (0, -8). De parabool zit 8 omlaag, ten opzichte van y = x²." }],
@@ -1132,8 +1132,8 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Vergeet het minteken vóór de formule niet: x_top = **−**b/(2a). b = 6, dus −b = −6.",
-          "Je bent vergeten te delen door 2a. b = 6, 2a = 2, dus x_top = −6/2 = ?",
+          "Vergeet het minteken vóór de formule niet: x_top = **−**b/(2a). Wat is −b als b positief is?",
+          "Je bent vergeten te delen door 2a. Pas de hele formule toe: −b gedeeld door 2a.",
           "6 is alleen b zelf. Pas eerst de hele formule toe: −b / (2a).",
         ],
         uitlegPad: {
@@ -1225,9 +1225,9 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "x² = 16 vraagt: welk getal kwadraat is 16? Probeer: 16 · 16 = 256, te veel. Welk kleiner getal?",
-          "Het zijn er twee: positief én negatief. Want zowel 4·4 als −4·−4 geeft 16.",
-          "y = x² − 16 = 0 betekent x² = 16. Heeft dat een oplossing? Ja, zelfs twee.",
+          "Stel y gelijk aan nul — welk getal geeft x² dan? Welk getal, vermenigvuldigd met zichzelf, levert dat op?",
+          "Er zijn altijd twee oplossingen: één positieve en één negatieve. Denk aan beide richtingen op de getallenlijn.",
+          "Stel y gelijk aan nul en herleid — heeft x² dan een oplossing? Kijk welk getal past.",
         ],
         uitlegPad: {
           stappen: [{ titel: "x² = 16 → x = ±4", tekst: "Stel y = 0: x² − 16 = 0 → x² = 16. Welk getal kwadraat = 16? Zowel 4·4 als (-4)·(-4). Dus x = 4 of x = -4." }],
@@ -1257,7 +1257,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "x² + 1 = 0 betekent x² = -1. Kan een kwadraat negatief zijn?",
+          "Stel y gelijk aan nul — wat betekent dat voor x²? Kan een kwadraat die waarde aannemen?",
           "2 nulpunten heb je bij y = x² **−** een getal. Hier staat een **plus**.",
           "Een parabool snijdt een lijn (x-as) hooguit een paar keer, niet eindeloos.",
         ],
@@ -1392,7 +1392,7 @@ ${gridSvg}
           null,
           "Soort klopt niet: er staat geen min vóór x², dus geen berg.",
           "Top klopt niet: bij −4 schuift de top **omlaag**, niet omhoog.",
-          "Geen nulpunten klopt niet: bij y = x² − iets zijn er altijd 2 nulpunten. Reken: x² = 4 → ?",
+          "Geen nulpunten klopt niet: bij y = x² minus een positief getal zijn er altijd nulpunten. Stel y gelijk aan nul en herleid.",
         ],
         uitlegPad: {
           stappen: [{ titel: "y = x² − 4: dal + top (0,-4) + ±2", tekst: "1) Geen min vóór x² = dal. 2) c = -4 → top (0, -4). 3) x² = 4 → x = ±2 (nulpunten)." }],
@@ -1426,8 +1426,8 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Pas op met het minteken in x_top = **−**b/(2a). b = 6, dus −b = -6. Wat geeft -6/2?",
-          "x_top klopt zou (-3) moeten zijn. Voor y_top vul x = -3 in: (-3)² + 6·(-3). Wat is dat?",
+          "Pas op met het minteken in x_top = **−**b/(2a). Wat is −b als b positief is? Welk teken krijg je dan?",
+          "Controleer x_top met de formule. Vul die x daarna in de formule y = x² + 6x in om y_top te berekenen.",
           "6 is alleen b. De top vind je via de hele formule: x_top = -b/(2a) = ?",
         ],
         uitlegPad: {
@@ -1450,9 +1450,9 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Bijna! Haal x buiten haakjes: x(x + 6) = 0. Dit is 0 als x = 0 of x + 6 = 0. Wat is x in dat tweede geval?",
+          "Bijna! Haal x buiten haakjes zodat je twee factoren krijgt. Wanneer is een product van twee factoren gelijk aan nul?",
           "-3 is x_top, niet een nulpunt. De top zit niet op de x-as bij deze parabool.",
-          "Er zijn wel nulpunten: probeer y = 0 in te vullen. Bij x = 0 wordt y = 0 + 0 = 0 — dus x = 0 is al één nulpunt!",
+          "Er zijn wel nulpunten — vul y gelijk aan nul in en probeer een eenvoudige x die de vergelijking klopt maakt.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Buiten haakjes: x(x+6) = 0", tekst: "y = x² + 6x = 0 → haal x buiten haakjes: x · (x + 6) = 0. Dit is 0 als x = 0 OF x + 6 = 0 → x = -6. Nulpunten: 0 en -6." }],

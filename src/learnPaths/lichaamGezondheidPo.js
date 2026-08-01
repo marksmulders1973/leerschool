@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is het **grootste bot**?",
         options: ["Dijbeen", "Schedel", "Wervelkolom", "Sleutelbeen"],
         answer: 0,
-        wrongHints: [null, "Schedel = 22 samengegroeide botten — geen 1 bot.", "Wervelkolom = ketting van 33 wervels (niet 1 bot).", "Sleutelbeen is veel kleiner — bij je schouder."],
+        wrongHints: [null, "De schedel bestaat uit meerdere samengegroeide botten — tel je hem als 1 bot?", "Wervelkolom = ketting van wervels (niet 1 bot).", "Sleutelbeen is veel kleiner — bij je schouder."],
         uitlegPad: {
           stappen: [
             { titel: "Dijbeen = grootste", tekst: "Het **dijbeen** (de bovenkant van je been, tussen heup en knie) is het grootste, langste en sterkste bot in je lichaam — ongeveer **46 cm** bij een volwassene." },

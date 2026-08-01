@@ -848,7 +848,7 @@ const steps = [
         q: "Tabel verkoop koekjes ma-vr: 5, 7, 9, 11, 13. **Patroon**?",
         options: ["Elke dag 2 meer", "Elke dag 3 meer", "Het neemt af", "Wisselt willekeurig"],
         answer: 0,
-        wrongHints: [null, "Te veel — kijk: 5→7 is +2, 7→9 is +2, etc. Controleer.", "Het stijgt juist, niet daalt.", "Er zit een vast verschil — kijk goed."],
+        wrongHints: [null, "Te veel — trek twee opeenvolgende dagen van elkaar af en kijk of dat steeds hetzelfde getal is.", "Het stijgt juist, niet daalt.", "Er zit een vast verschil — kijk goed."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil per stap", tekst: "Ma → di: 7 − 5 = 2. Di → wo: 9 − 7 = 2. Telkens +2." },

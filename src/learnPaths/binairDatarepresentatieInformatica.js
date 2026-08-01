@@ -81,7 +81,7 @@ const steps = [
         q: "Hoeveel **bits** stelt één hexadecimaal teken voor?",
         options: ["4", "1", "8", "16"],
         answer: 0,
-        wrongHints: [null, "Dat is een bit zelf, niet wat één hex-teken dekt.", "8 bits = 2 hex-tekens (1 byte).", "16 is het aantal mogelijke waarden, niet het aantal bits."],
+        wrongHints: [null, "Dat is een bit zelf, niet wat één hex-teken dekt.", "Denk aan hoeveel hex-tekens een byte (8 bits) vertegenwoordigt — draai de redenering om.", "16 is het aantal mogelijke waarden, niet het aantal bits."],
         uitlegPad: {
           stappen: [{ titel: "Een nibble", tekst: "Met 4 bits maak je 2⁴ = 16 waarden — precies genoeg voor de 16 hex-tekens (0-F). Dus **1 hex-teken = 4 bits** (een 'nibble'), en **2 hex-tekens = 1 byte**. Daarom is hex zo handig: het sluit netjes aan op bytes." }],
           niveaus: { basis: "4 bits.", simpeler: "1 hex = 4 bits", nogSimpeler: "A." },

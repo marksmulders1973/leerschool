@@ -88,7 +88,7 @@ const steps = [
         q: "Hoeveel **landen** gebruiken de euro?",
         options: ["20 (eurozone)", "5", "27 (alle EU = Europese Unie)", "50"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "EU = 27 landen, eurozone = 20 met euro.", "Veel te veel."],
+        wrongHints: [null, "Te weinig.", "Niet alle EU-landen gebruiken de euro — de eurozone is kleiner dan de EU zelf.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende dingen", tekst: "Let op: EU (Europese Unie) en eurozone zijn NIET hetzelfde." },

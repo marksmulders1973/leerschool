@@ -408,7 +408,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Machine kost €20.000, geen restwaarde, gaat 4 jaar mee. Afschrijving per jaar?",
         options: ["€5.000", "€20.000", "€4.000", "€80.000"],
         answer: 0,
-        wrongHints: [null, "Dat is in 1 jaar — verkeerd, je moet spreiden.", "Verkeerd. (20.000 − 0) / 4 = 5.000.", "Vermenigvuldigd i.p.v. gedeeld."],
+        wrongHints: [null, "Dat is de totale waarde — je moet die spreiden over de gebruiksduur.", "Verkeerd — deel de aanschafwaarde (minus restwaarde) door het aantal jaren.", "Vermenigvuldigd i.p.v. gedeeld."],
         uitlegPad: {
           stappen: [{ titel: "Afschrijving = (aanschaf − rest) / jaren", tekst: "Lineaire afschrijving: (20.000 − 0) / 4 = €5.000 per jaar. Verspreid de kosten over de gebruiksduur." }],
           woorden: [{ woord: "lineair", uitleg: "elk jaar zelfde bedrag" }],

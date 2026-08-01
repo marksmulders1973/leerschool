@@ -448,7 +448,7 @@ const steps = [
       { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },
       { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Niet — boven.", "Niet — onder.", "Niet — tussen."] },
       { q: "Een **legenda** is?", options: ["Uitleg van symbolen op de kaart","De titel","Lijst landen","Aantal pagina's"], answer: 0, wrongHints: [null, "Dat is titel.", "Niet inhoud legenda.", "Niet."] },
-      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["1.000 cm in werkelijkheid (=10 m)","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — 100 cm = 1 m.", "Te veel.", "Dat is 1:100."] },
+      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["1.000 cm in werkelijkheid (=10 m)","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — hoeveel centimeter is één meter? Gebruik dat om de schaalverhouding te begrijpen.", "Te veel.", "Dat getal hoort bij een andere schaalverhouding."] },
       { q: "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Niet — bereken nogmaals.", "Te veel.", "Niet."] },
       { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Dat is berg/driehoek.", "Dat is water/golf.", "Niet."] },
       { q: "Tussen N en O ligt?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "Niet — W links van N.", "Niet — onder.", "Niet."] },
@@ -459,7 +459,7 @@ const steps = [
       { q: "Hoe verkort je **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Draai beide helften om: zuid→noord én oost→west.", "De zuid/noord-helft draait wél, maar de oost/west-helft ook.", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
       { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Tellen"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Niet relevant."] },
-      { q: "Tegen welke schaal is een atlas-NL-kaart meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "1:10 = 10 cm echt per cm kaart — heel Nederland past zo nooit.", "Bij 1:100 past een land niet op één kaart — denk veel groter.", "Hoe groter het tweede getal, hoe meer er op de kaart past."] },
+      { q: "Tegen welke schaal is een atlas-NL-kaart meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },
     ],
   },
 ];

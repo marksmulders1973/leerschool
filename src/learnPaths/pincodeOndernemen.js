@@ -444,7 +444,7 @@ const steps = [
         q: "Sam verkoopt friet voor €5. Variabele kosten **€1,50** per friet. Vaste kosten **€140** per dag. **Hoeveel friet moet hij verkopen om break-even** te draaien?",
         options: ["40 friet", "28 friet", "94 friet", "100 friet"],
         answer: 0,
-        wrongHints: [null, "Te weinig — €5-€1,50 = €3,50 dekking per friet, dus €140/€3,50.", "Te veel — controleer de berekening.", "Te veel — €140/€3,50 = 40."],
+        wrongHints: [null, "Te weinig — bereken eerst de dekking per friet (verkoopprijs min variabele kosten), deel daarna de vaste kosten door die dekking.", "Te veel — controleer de berekening.", "Te veel — controleer je deling."],
         uitlegPad: {
           stappen: [{ titel: "Bereken in 2 stappen", tekst: "(1) Dekkingsbijdrage per friet: €5 − €1,50 = €3,50. (2) BEP: vaste kosten / dekkingsbijdrage = €140 / €3,50 = 40 frieten." }],
           woorden: [{ woord: "dekkingsbijdrage", uitleg: "Wat elke verkochte eenheid bijdraagt aan dekken van vaste kosten." }],

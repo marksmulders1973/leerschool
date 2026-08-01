@@ -147,7 +147,7 @@ ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].slice(0, 14).map((_, i) => {
         q: "Een atoom heeft Z = 8 en A = 16. Hoeveel neutronen?",
         options: ["8", "16", "24", "0"],
         answer: 0,
-        wrongHints: [null, "Dat is het massagetal A, je moet er Z van aftrekken.", "Optellen i.p.v. aftrekken.", "Niet 0 — A = p + n, dus n = A − Z = 16−8."],
+        wrongHints: [null, "Dat is het massagetal A — maar je zoekt het aantal neutronen, niet A zelf.", "Je hebt opgeteld in plaats van afgetrokken — welke twee grootheden staan in de formule?", "Niet nul — gebruik de formule die massagetal, protonen en neutronen verbindt."],
         uitlegPad: {
           stappen: [{ titel: "n = A − Z", tekst: "16 − 8 = 8 neutronen." }],
           woorden: [{ woord: "massagetal A", uitleg: "= p + n" }],
@@ -537,7 +537,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Hoeveel atomen telt het molecuul C₆H₁₂O₆ (glucose)?",
         options: ["24", "6", "12", "18"],
         answer: 0,
-        wrongHints: [null, "Dat is alleen de C of de O.", "Dat is alleen de H.", "Optellen: 6 + 12 + 6 = 24."],
+        wrongHints: [null, "Dat is het aantal van slechts één soort atoom — tel alle soorten bij elkaar op.", "Dat is alleen de H-atomen — vergeet de C en O niet.", "Tel de aantallen achter elk element op om het totaal te vinden."],
         uitlegPad: {
           stappen: [{ titel: "C₆H₁₂O₆ = 6+12+6 = 24", tekst: "Tel atomen op: 6 C + 12 H + 6 O = 24 atomen totaal." }],
           woorden: [{ woord: "glucose", uitleg: "suikermolecuul" }],

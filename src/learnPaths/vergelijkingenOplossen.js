@@ -265,7 +265,7 @@ const steps = [
         q: "*Los op: 6x = 2x + 16.*",
         options: ["x = 4", "x = 8", "x = 2", "x = 16"],
         answer: 0,
-        wrongHints: [null, "Check: 6·8 = 48, en 2·8+16 = 32. Niet gelijk.", "Check: 6·2 = 12, en 2·2+16 = 20. Niet gelijk.", "Check: 6·16 = 96, en 2·16+16 = 48. Niet gelijk."],
+        wrongHints: [null, "Vul 8 in bij beide kanten — komen ze gelijk uit?", "Vul 2 in bij beide kanten — komen ze gelijk uit?", "Vul 16 in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "−2x", tekst: "6x = 2x + 16 → −2x → 4x = 16." },
@@ -302,7 +302,7 @@ const steps = [
         q: "*Los op: 5x + 4 = 2x + 19.*",
         options: ["x = 5", "x = 4", "x = 7", "x = 3"],
         answer: 0,
-        wrongHints: [null, "Check: 5·4+4 = 24, 2·4+19 = 27. Niet gelijk.", "Check: 5·7+4 = 39, 2·7+19 = 33. Niet gelijk.", "Check: 5·3+4 = 19, 2·3+19 = 25. Niet gelijk."],
+        wrongHints: [null, "Vul 4 in bij beide kanten — komen ze gelijk uit?", "Vul 7 in bij beide kanten — komen ze gelijk uit?", "Vul 3 in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "−2x", tekst: "5x+4 = 2x+19 → −2x → 3x+4 = 19." },
@@ -370,7 +370,7 @@ const steps = [
         q: "*Los op: 3(x + 4) = 21.*",
         options: ["x = 3", "x = 7", "x = 6", "x = 17"],
         answer: 0,
-        wrongHints: [null, "Check: 3(7+4) = 33, niet 21.", "Check: 3(6+4) = 30, niet 21.", "Check: 3(17+4) = 63, niet 21."],
+        wrongHints: [null, "Open de haakjes met 7 — klopt de uitkomst?", "Open de haakjes met 6 — klopt de uitkomst?", "Open de haakjes met 17 — klopt de uitkomst?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes open", tekst: "3(x+4) = 3x+12. Dus 3x+12 = 21." },
@@ -406,7 +406,7 @@ const steps = [
         q: "*Los op: x/5 = 8.*",
         options: ["x = 40", "x = 13", "x = 1.6", "x = 3"],
         answer: 0,
-        wrongHints: [null, "13 = 8 + 5 (optellen). Hier moet je vermenigvuldigen: x = 8 · 5.", "1.6 = 8/5 (verkeerd om). Vermenigvuldig 8 met 5, niet andersom.", "Check: 3/5 = 0.6, niet 8."],
+        wrongHints: [null, "Tel je hier x en 5 bij elkaar op, of doe je een andere bewerking?", "Deelde je soms 8 door 5 in plaats van anders? Denk aan welke kant de 5 staat.", "Vul 3 in: hoeveel is dan 3 gedeeld door 5? Is dat 8?"],
         uitlegPad: {
           stappen: [{ titel: "×5", tekst: "x/5 = 8 → ×5 → x = 40. Check: 40/5 = 8 ✓." }],
           woorden: [{ woord: "noemer wegwerken", uitleg: "Vermenigvuldig met de noemer om breuk weg te halen." }],
@@ -451,7 +451,7 @@ const steps = [
         q: "*Los op: \"3 keer een getal min 4 = 11.\"*",
         options: ["x = 5", "x = 7", "x = 4", "x = 15"],
         answer: 0,
-        wrongHints: [null, "Check: 3·7 - 4 = 17, niet 11.", "Check: 3·4 - 4 = 8, niet 11.", "Check: 3·15 - 4 = 41, niet 11."],
+        wrongHints: [null, "Vul 7 in — geeft 3 keer 7 min 4 precies 11?", "Vul 4 in — geeft 3 keer 4 min 4 precies 11?", "Vul 15 in — geeft 3 keer 15 min 4 precies 11?"],
         uitlegPad: {
           stappen: [
             { titel: "Vertalen", tekst: "'3 keer getal' = 3x. 'min 4' = −4. 'is 11' = =11. Dus 3x − 4 = 11." },
@@ -496,7 +496,7 @@ const steps = [
         q: "*Los op: 4x + 7 = 2x + 13.*",
         options: ["x = 3", "x = 5", "x = 10", "x = 6"],
         answer: 0,
-        wrongHints: [null, "Check: 4·5+7 = 27, 2·5+13 = 23. Niet gelijk.", "Check: 4·10+7 = 47, 2·10+13 = 33. Niet gelijk.", "Check: 4·6+7 = 31, 2·6+13 = 25. Niet gelijk."],
+        wrongHints: [null, "Vul 5 in bij beide kanten — komen ze gelijk uit?", "Vul 10 in bij beide kanten — komen ze gelijk uit?", "Vul 6 in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "−2x dan −7", tekst: "4x+7=2x+13 → −2x → 2x+7=13 → −7 → 2x=6 → ÷2 → x=3." },
@@ -512,7 +512,7 @@ const steps = [
         q: "*Los op: 2(x − 3) = 8.*",
         options: ["x = 7", "x = 5", "x = 4", "x = 11"],
         answer: 0,
-        wrongHints: [null, "Check: 2(5-3) = 4, niet 8.", "Check: 2(4-3) = 2, niet 8.", "Check: 2(11-3) = 16, niet 8."],
+        wrongHints: [null, "Open de haakjes met 5 — klopt de uitkomst?", "Open de haakjes met 4 — klopt de uitkomst?", "Open de haakjes met 11 — klopt de uitkomst?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes open", tekst: "2(x−3) = 2x−6. Dus 2x−6=8." },
@@ -529,7 +529,7 @@ const steps = [
         q: "*\"Een getal verdubbeld + 6 is gelijk aan 20.\" Welk getal?*",
         options: ["7", "10", "13", "26"],
         answer: 0,
-        wrongHints: [null, "Check: 2·10 + 6 = 26, niet 20.", "Check: 2·13 + 6 = 32, niet 20.", "Check: 2·26 + 6 = 58, niet 20. Te groot."],
+        wrongHints: [null, "Vul 10 in: geeft twee keer 10 plus 6 precies 20?", "Vul 13 in: geeft twee keer 13 plus 6 precies 20?", "Vul 26 in: geeft twee keer 26 plus 6 precies 20?"],
         uitlegPad: {
           stappen: [
             { titel: "Vertalen", tekst: "'Verdubbeld' = 2x. '+6' = +6. 'is gelijk aan 20' = =20. Dus 2x+6=20." },
@@ -558,7 +558,7 @@ const steps = [
         q: "*Los op: 5(x + 2) − 3 = 2x + 19.*",
         options: ["x = 4", "x = 5", "x = 6", "x = 3"],
         answer: 0,
-        wrongHints: [null, "Check: 5(5+2)-3 = 32, 2·5+19 = 29. Niet gelijk.", "Check: 5(6+2)-3 = 37, 2·6+19 = 31. Niet gelijk.", "Check: 5(3+2)-3 = 22, 2·3+19 = 25. Niet gelijk."],
+        wrongHints: [null, "Open de haakjes met 5 en vul in bij beide kanten — komen ze gelijk uit?", "Open de haakjes met 6 en vul in bij beide kanten — komen ze gelijk uit?", "Open de haakjes met 3 en vul in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes open", tekst: "5(x+2)−3 = 5x+10−3 = 5x+7. Dus 5x+7 = 2x+19." },
@@ -575,7 +575,7 @@ const steps = [
         q: "*Los op: x/3 + 5 = x/2 + 1.*",
         options: ["x = 24", "x = 6", "x = 12", "x = 8"],
         answer: 0,
-        wrongHints: [null, "Check: 6/3+5 = 7, 6/2+1 = 4. Niet gelijk.", "Check: 12/3+5 = 9, 12/2+1 = 7. Niet gelijk.", "Check: 8/3+5 ≈ 7.67, 8/2+1 = 5. Niet gelijk."],
+        wrongHints: [null, "Vul 6 in bij beide kanten — komen ze gelijk uit?", "Vul 12 in bij beide kanten — komen ze gelijk uit?", "Vul 8 in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "Beide kanten ×6", tekst: "x/3+5=x/2+1. ×6 (KGV 2,3) → 2x+30=3x+6." },
@@ -592,7 +592,7 @@ const steps = [
         q: "*Een fietsenmaker rekent 25 euro voor inspectie + 8 euro per uur werk. Voor de hele klus betaalde je 65 euro. Hoeveel uur werk?*",
         options: ["5 uur (25 + 8u = 65)","8 uur","3 uur","10 uur"],
         answer: 0,
-        wrongHints: [null, "Check: 25 + 8·8 = 89, niet 65.", "Check: 25 + 8·3 = 49, niet 65.", "Check: 25 + 8·10 = 105, niet 65."],
+        wrongHints: [null, "Vul 8 uur in de formule — geeft het totaal dan precies 65 euro?", "Vul 3 uur in de formule — geeft het totaal dan precies 65 euro?", "Vul 10 uur in de formule — geeft het totaal dan precies 65 euro?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule", tekst: "Totaal = 25 + 8·u (u=uren). 65 = 25 + 8u." },
@@ -609,7 +609,7 @@ const steps = [
         q: "*Los op: 2(3x − 1) = 4x + 6.*",
         options: ["x = 4", "x = 2", "x = 3", "x = 8"],
         answer: 0,
-        wrongHints: [null, "Check: 2(3·2-1) = 10, 4·2+6 = 14. Niet gelijk.", "Check: 2(3·3-1) = 16, 4·3+6 = 18. Niet gelijk.", "Check: 2(3·8-1) = 46, 4·8+6 = 38. Niet gelijk."],
+        wrongHints: [null, "Open de haakjes met 2 en vul in bij beide kanten — komen ze gelijk uit?", "Open de haakjes met 3 en vul in bij beide kanten — komen ze gelijk uit?", "Open de haakjes met 8 en vul in bij beide kanten — komen ze gelijk uit?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes open", tekst: "2(3x−1) = 6x−2. Dus 6x−2 = 4x+6." },

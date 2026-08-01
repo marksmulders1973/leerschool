@@ -214,7 +214,7 @@ const steps = [
         q: "Temperatuur is **+5 °C**, daalt **8 graden**. **Nieuwe temperatuur**?",
         options: ["−3 °C","+3 °C","−13 °C","+13 °C"],
         answer: 0,
-        wrongHints: [null,"Andersom — daalt naar onder nul.","Te ver — 5 − 8 = −3, niet −13.","Andersom — daalt, niet stijgt."],
+        wrongHints: [null,"Andersom — daalt naar onder nul, niet erboven.","Te ver — dalen met 8 graden vanaf 5 gaat minder ver dan je denkt.","Andersom — de temperatuur daalt, gaat omlaag, niet omhoog."],
         uitlegPad: {
           stappen: [{ titel: "5 − 8 = −3", tekst: "Dalen = aftrekken. 5 − 8 = −3 (3 onder nul)." }],
           woorden: [{ woord: "dalen", uitleg: "Temperatuur omlaag = aftrekken." }],
@@ -228,7 +228,7 @@ const steps = [
         q: "Verschil tussen **+12 °C en −5 °C**?",
         options: ["17","7","−17","−7"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 12 − (−5) = 12 + 5 = 17.","Andersom — verschil is altijd positief.","Andersom."],
+        wrongHints: [null,"Te weinig — min een negatief getal wordt optellen. Tel het positieve deel én het negatieve deel apart.","Andersom — verschil is altijd positief.","Andersom."],
         uitlegPad: {
           stappen: [{ titel: "Tel beide stukken", tekst: "+12 → 0 = 12 graden. 0 → −5 = 5 graden. Totaal 12+5 = 17." }],
           woorden: [{ woord: "verschil", uitleg: "Hoeveel graden tussen twee waarden. Altijd positief." }],
@@ -277,7 +277,7 @@ const steps = [
         q: "Temperatuur **−4 °C**, stijgt **9 graden**. Nieuwe temperatuur?",
         options: ["+5 °C","+13 °C","−5 °C","−13 °C"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer: −4 + 9 = 5.","Andersom — gaat omhoog, niet omlaag.","Veel te laag."],
+        wrongHints: [null,"Te veel — hoeveel stappen gaan er omhoog vóór je nul passeert, en hoeveel erna?","Andersom — stijgen betekent optellen, de temperatuur gaat omhóóg.","Veel te laag — stijgen gaat richting hogere getallen."],
         uitlegPad: {
           stappen: [{ titel: "Stijgen vanaf −4", tekst: "−4 + 9: 4 omhoog naar 0, dan nog 5 = +5." }],
           woorden: [{ woord: "stijgen", uitleg: "Temperatuur omhoog = optellen." }],

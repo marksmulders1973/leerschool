@@ -363,7 +363,7 @@ const steps = [
         q: "Hoeveel is **fifteen**?",
         options: ["15", "5", "50", "500"],
         answer: 0,
-        wrongHints: [null, "Five = 5.", "Fifty = 50.", "Five hundred = 500."],
+        wrongHints: [null, "Five is het getal vijf — hoe klinkt vijftien in Engels anders?", "Fifty heeft -ty, niet -teen.", "Five hundred is drieletterwoord — vijftien is dat niet."],
         uitlegPad: {
           stappen: [{ titel: "fifteen = 15", tekst: "-teen achtervoegsel = tussen 13 en 19. Fif-teen = 15. Fif komt van five." }],
           woorden: [{ woord: "fifteen", uitleg: "15. Five (5) + teen-suffix = 15." }],
@@ -391,7 +391,7 @@ const steps = [
         q: "Wat is **a quarter past three**?",
         options: ["3:15", "3:45", "2:45", "3:30"],
         answer: 0,
-        wrongHints: [null, "Quarter to = 15 min vóór.", "Quarter to vóór een ander uur.", "Half past = 30 min."],
+        wrongHints: [null, "Quarter to betekent: kijk welke richting — vóór of ná het uur?", "Quarter to hoort bij een ander uur, niet bij dit tijdstip.", "Half past betekent halverwege het uur, niet een kwart."],
         uitlegPad: {
           stappen: [{ titel: "quarter past = kwart na", tekst: "Quarter (kwart=15 min) + past (na) + three (3) = 15 minuten na 3 = 3:15." }],
           woorden: [{ woord: "quarter", uitleg: "Kwart (1/4 = 15 minuten van 60)." }, { woord: "past", uitleg: "Na, voorbij." }],

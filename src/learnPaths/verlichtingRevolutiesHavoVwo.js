@@ -154,7 +154,7 @@ const steps = [
         q: "Wat staat **14 juli 1789** voor?",
         options: ["Bestorming Bastille","Onafhankelijkheidsverklaring VS","Begin WO1","Slag bij Waterloo"],
         answer: 0,
-        wrongHints: [null, "Niet — VS = 4 juli 1776.", "Niet — 1914.", "Niet — 1815."],
+        wrongHints: [null, "Niet — de Amerikaanse Onafhankelijkheidsverklaring vond al eerder plaats; denk aan de volgorde.", "Niet — dat jaartal hoort bij het begin van de Eerste Wereldoorlog.", "Niet — dat hoort bij een veldslag in de Napoleontische periode."],
         uitlegPad: {
           stappen: [{ titel: "Symbool revolutie", tekst: "**14 juli 1789** = bestorming Bastille (staatsgevangenis) in Parijs. Symbolisch begin Franse Revolutie. Nu nationale feestdag Frankrijk: *fête nationale*. Soms 'Quatorze Juillet' genoemd." }],
           niveaus: { basis: "Bestorming Bastille.", simpeler: "14-7-1789 = Bastille", nogSimpeler: "A." },

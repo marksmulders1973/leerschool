@@ -314,7 +314,7 @@ const steps = [
         q: "Een gas wordt **isotherm** uitgezet. ΔU?",
         options: ["0 (isotherm = T constant)", "Maximaal", "−Q", "+W"],
         answer: 0,
-        wrongHints: [null, "Niet — isotherm betekent ΔU=0.", "Niet — dat is fout teken.", "Niet — eerste hoofdwet zegt ΔU=Q−W."],
+        wrongHints: [null, "Niet — isotherm betekent constante temperatuur; wat zegt dat over de inwendige energie?", "Niet — let op het teken: bij uitzetten doet het gas arbeid, maar wat is ΔU bij constante temperatuur?", "Niet — de eerste hoofdwet verbindt ΔU, Q en W; welk van de drie is nul bij een isotherme verandering?"],
         uitlegPad: {
           stappen: [{ titel: "ΔU hangt alleen af van T", tekst: "Inwendige energie U van ideaal gas is functie van T. ΔT=0 → ΔU=0. Dan Q = W: alle binnenkomende warmte wordt arbeid (gas duwt zuiger weg). Klassieke 'warmte → arbeid'-stap." }],
           niveaus: { basis: "ΔU=0 bij isotherm.", simpeler: "Geen T-verandering = geen U-verandering.", nogSimpeler: "0" },

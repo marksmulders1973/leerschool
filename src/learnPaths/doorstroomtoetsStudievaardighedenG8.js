@@ -564,7 +564,7 @@ const steps = [
         q: "Je meet op een kaart (schaal 1 : 25.000) een afstand van **4 cm**. Hoeveel meter is dat in het echt?",
         options: ["1.000 m", "100 m", "10.000 m", "250 m"],
         answer: 0,
-        wrongHints: [null, "4 × 25.000 = 100.000 cm — hoeveel meter is dat?", "Eén nul vergeten bij het omrekenen van cm naar m.", "Je hebt de 4 cm niet meegerekend."],
+        wrongHints: [null, "Vermenigvuldig de kaart-cm met de schaal en vergeet daarna niet om cm naar m om te zetten.", "Eén nul vergeten bij het omrekenen van cm naar m.", "Je hebt de 4 cm niet meegerekend."],
         explanation: "4 × 25.000 = 100.000 cm = **1.000 m** (= 1 km).",
       },
       {
@@ -1069,7 +1069,7 @@ const steps = [
         q: "**Cirkeldiagram**: appels=50%, peren=30%, rest=druiven. Druiven is ___?",
         options: ["20%", "10%", "30%", "100%"],
         answer: 0,
-        wrongHints: [null, "Niet — alle samen = 100. 100-50-30 = 20.", "Niet — dat zou geen rest zijn.", "Niet — kan niet groter dan rest."],
+        wrongHints: [null, "Alle stukken van een cirkeldiagram tellen op tot 100 — trek de bekende percentages er maar van af.", "Dat zou geen rest zijn — kijk of dat klopt als je alle percentages optelt.", "Niet — kan niet groter dan de rest."],
         uitlegPad: {
           stappen: [
             { titel: "Som cirkel = 100%", tekst: "Alle stukken samen vormen één hele cirkel = 100%." },
@@ -1120,7 +1120,7 @@ const steps = [
         q: "Bij **'10 t/m 20'** op een grafiek-as: hoeveel **stappen van 1**?",
         options: ["11", "10", "20", "21"],
         answer: 0,
-        wrongHints: [null, "Niet — tel inclusief: 10, 11, 12, ..., 20 = 11 getallen.", "Niet de begin/eind.", "Niet."],
+        wrongHints: [null, "'t/m' betekent dat zowel het begin als het einde meetellen — tel eens op je vingers van 10 tot en met 20.", "Niet de begin/eind.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Tellen 'tot en met'", tekst: "Bij '10 t/m 20' zijn beide grenzen INCLUSIEF. Tel: 10, 11, 12, ..., 20 → dat zijn 11 getallen." },
@@ -2369,7 +2369,7 @@ const steps = [
         q: "**Bustabel + kaart combineren:** de bus doet 12 minuten over 6 km. Hoeveel minuten over **2 km** (zelfde snelheid)?",
         options: ["4 minuten", "6 minuten", "2 minuten", "8 minuten"],
         answer: 0,
-        wrongHints: [null, "Dat zou voor 3 km zijn — 2 km is een derde van 6 km.", "12 ÷ 6 = 2 minuten per km — en het zijn 2 km.", "Dat zou voor 4 km zijn."],
+        wrongHints: [null, "Dat zou voor 3 km zijn — maar de vraag is over 2 km.", "Bereken eerst hoe lang de bus per km doet en vermenigvuldig dat dan met het gevraagde aantal km.", "Dat zou voor 4 km zijn — maar de vraag gaat over 2 km."],
         explanation: "12 min ÷ 6 km = 2 min per km → 2 km = **4 minuten**.",
       },
       {
@@ -2390,14 +2390,14 @@ const steps = [
         q: "**Grafiek + rekenen:** de lijngrafiek toont 8 zwemmers om 9:00 en 24 om 11:00. Hoeveel keer zo druk werd het?",
         options: ["3 keer", "2 keer", "16 keer", "4 keer"],
         answer: 0,
-        wrongHints: [null, "24 ÷ 8 — reken het quotiënt.", "16 is het verschíl (24 − 8), niet hoeveel keer.", "4 × 8 = 32 — te veel."],
+        wrongHints: [null, "Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?", "Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.", "Dat is te veel — controleer je berekening."],
         explanation: "24 ÷ 8 = **3 keer** zo druk. 'Hoeveel keer' = delen; 'hoeveel meer' = aftrekken.",
       },
       {
         q: "Op de kaart staat de camping in vak **D3**, het strand in vak **D5**. De vakken zijn 2 km breed. Hoe ver is het strand minstens?",
         options: ["4 km", "2 km", "8 km", "10 km"],
         answer: 0,
-        wrongHints: [null, "D3 → D4 is al 2 km, en je moet verder.", "Tel: D3 → D4 → D5 = 2 stappen van 2 km.", "Dat zou 5 vakken zijn."],
+        wrongHints: [null, "D3 → D4 is al één stap — maar je moet nog verder tot D5.", "Hoeveel stappen ga je van D3 naar D5, en hoe ver is elke stap?", "Dat zou 5 vakken zijn — tel de stappen op de kaart nog eens."],
         explanation: "D3 → D5 = 2 vakken × 2 km = **4 km**.",
       },
       {

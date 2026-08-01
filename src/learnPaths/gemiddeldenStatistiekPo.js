@@ -343,7 +343,7 @@ const steps = [
         q: "**Mediaan** van: 12, 5, 8, 3, 10, 7, 9 (7 getallen)?",
         options: ["8", "7", "9", "5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — sorteer en pak middelste. 3, 5, 7, 8, 9, 10, 12 → middelste = 8.", "Te veel — controleer sortering.", "Te weinig."],
+        wrongHints: [null, "Te weinig — vergeet niet eerst te sorteren en daarna het middelste getal te pakken.", "Te veel — controleer je sortering.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Sorteer eerst", tekst: "3, 5, 7, **8**, 9, 10, 12 (op volgorde van klein naar groot)." },
@@ -430,19 +430,19 @@ const steps = [
         q: "Temperaturen 4 dagen: 18, 20, 22, 20 °C. **Gemiddelde temperatuur**?",
         options: ["20 °C", "18 °C", "80 °C", "22 °C"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer (18+20+22+20) ÷ 4 = 80 ÷ 4 = 20.", "Dat is de som — nog ÷ 4.", "Dat is de hoogste."],
+        wrongHints: [null, "Te weinig — tel alle temperaturen bij elkaar op en deel dan door het aantal dagen.", "Dat is de som — je moet nog door het aantal metingen delen.", "Dat is de hoogste."],
       },
       {
         q: "Klas-test: 6, 6, 6, 7, 8. **Modus** EN **mediaan** zijn allebei ... ?",
         options: ["6", "7", "8", "Ze verschillen — modus=6, mediaan=7"],
         answer: 0,
-        wrongHints: [null, "Niet beide 7 — modus is 6 (komt 3× voor). Mediaan na sortering = middelste van 5 = positie 3 = 6.", "Niet beide 8 — 8 komt maar 1× voor.", "Toch wél hetzelfde hier: modus = 6 (3× voor) en mediaan na sortering = middelste = 6."],
+        wrongHints: [null, "Controleer welk getal het vaakst voorkomt (modus) en welk getal in het midden staat na sortering (mediaan).", "Niet beide 8 — 8 komt maar 1× voor.", "Ze zijn hier toch gelijk — bereken modus (meest voorkomend) en mediaan (midden na sortering) nog eens."],
       },
       {
         q: "**Wanneer kan een gemiddelde geen geheel getal zijn**?",
         options: ["Vrijwel altijd kan dat — bv. cijfers 6 en 7 → gem 6,5", "Nooit", "Alleen bij negatieve getallen", "Alleen bij heel veel getallen"],
         answer: 0,
-        wrongHints: [null, "Wél — 2 cijfers (6+7)/2 = 6,5 is een normaal gemiddelde.", "Dat is niet de regel — gemiddeldes met decimalen komen super vaak voor.", "Ook bij weinig getallen kan een gemiddelde decimaal zijn."],
+        wrongHints: [null, "Wél — probeer twee cijfers bij elkaar op te tellen en te delen, kan het uitkomen op een kommagetal?", "Dat is niet de regel — gemiddeldes met decimalen komen super vaak voor.", "Ook bij weinig getallen kan een gemiddelde decimaal zijn."],
       },
       { q: "Gem van 3, 5, 7?", options: ["5","15","3","7"], answer: 0, wrongHints: [null, "Dat is som.", "Min.", "Max."] },
       { q: "Modus van 4, 7, 4, 9, 4, 7, 2?", options: ["4","7","9","2"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },

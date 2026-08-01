@@ -39,7 +39,7 @@ const steps = [
           "¹H en ⁴He"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — N heeft Z=7, C heeft Z=6, dus ander element.", "Niet — verschillende Z = verschillende element.", "Niet — totaal andere elementen."],
+        wrongHints: [null, "Niet — N en C zijn verschillende elementen (ander atoomnummer), geen isotopen.", "Niet — als Z verschilt, zijn het andere elementen, geen isotopen.", "Niet — totaal andere elementen."],
         uitlegPad: {
           stappen: [{ titel: "Isotopen = zelfde Z", tekst: "¹²C en ¹⁴C hebben beide Z = 6 (zelfde element koolstof), maar verschillende A (12 vs 14). Andere stof heeft andere Z dus is een ander element." }],
           niveaus: { basis: "Zelfde Z = isotopen.", simpeler: "Beide koolstof (Z=6), ander massagetal.", nogSimpeler: "C-12 + C-14" },
@@ -100,7 +100,7 @@ const steps = [
         q: "²²⁶Ra (Z=88) doet **α-verval**. Wat is de dochterkern?",
         options: ["²²²Rn (Z=86)", "²²⁶Ac (Z=89)", "²²²Ac (Z=89)", "²²⁶Rn (Z=86)"],
         answer: 0,
-        wrongHints: [null, "Niet — bij α gaat Z OMLAAG.", "Niet — Z=89 zou β-verval zijn.", "Niet — A moet met 4 dalen."],
+        wrongHints: [null, "Niet — bij α-verval daalt Z, niet stijgt.", "Niet — dat atoomnummer hoort bij een ander soort verval.", "Niet — kijk goed hoeveel A verandert bij α-verval."],
         uitlegPad: {
           stappen: [{ titel: "α: Z−2, A−4", tekst: "Ra-226 (Z=88, A=226) stuurt α (Z=2, A=4) uit. Dochter: Z=88−2=86 (radon), A=226−4=222 → ²²²Rn. Klassiek voorbeeld: radon-gas uit graniet/aardlagen." }],
           niveaus: { basis: "α: 88-2=86, 226-4=222.", simpeler: "Twee protonen en twee neutronen weg → Rn-222.", nogSimpeler: "Rn-222" },
@@ -149,7 +149,7 @@ const steps = [
         q: "²³⁸U vervalt via α + 2β⁻ naar:",
         options: ["²³⁴U (Z=92, A=234)", "²³⁴Th (Z=90)", "²³⁰Pa", "²³⁸Pu"],
         answer: 0,
-        wrongHints: [null, "Niet — 2 β-jes verhogen Z weer met 2.", "Niet — A moet kloppen.", "Niet — Pu (Z=94) > U."],
+        wrongHints: [null, "Niet — de twee β-vervallen verhogen Z ook nog — tel alles samen op.", "Niet — controleer of A klopt na alle vervallen.", "Niet — Pu heeft een hoger atoomnummer dan U, dat kan niet het gevolg zijn van verval."],
         uitlegPad: {
           stappen: [
             { titel: "Som van veranderingen", tekst: "α: Z−2, A−4. β⁻: Z+1, A=0 (per stuk). Twee β⁻: Z+2.\n\nStart: U-238 (Z=92, A=238).\nNa α: Z=90, A=234 (Th-234).\nNa 1 β: Z=91, A=234 (Pa-234).\nNa 2 β: Z=92, A=234 (U-234).\n\nEindkern: **U-234** — isotoop van het oorspronkelijke uranium maar lichter." },
@@ -183,7 +183,7 @@ const steps = [
         q: "Een stof heeft halveringstijd 4 jaar. Activiteit nu: 1000 Bq. Over **12 jaar**?",
         options: ["125 Bq", "250 Bq", "500 Bq", "0 Bq"],
         answer: 0,
-        wrongHints: [null, "Niet — 12 jaar = 3 halveringen.", "Niet — dat is na 2 halveringen.", "Niet — verval gaat nooit naar nul in eindige tijd."],
+        wrongHints: [null, "Niet — hoeveel keer past de halveringstijd in 12 jaar? Pas die halvering dan toe.", "Niet — je hebt te weinig halveringen toegepast.", "Niet — verval gaat nooit naar nul in eindige tijd."],
         uitlegPad: {
           stappen: [
             { titel: "12/4=3 halveringen", tekst: "Activiteit halveert net als aantal kernen: 1000 → 500 → 250 → **125 Bq** na 3× t½." },

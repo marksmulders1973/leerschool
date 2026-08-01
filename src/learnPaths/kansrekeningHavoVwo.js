@@ -200,7 +200,7 @@ const steps = [
         q: "Wat is **0!**?",
         options: ["1","0","Onmogelijk","Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — 0! = 1 definitie.", "Wel mogelijk — definitie 1.", "Niet."],
+        wrongHints: [null, "Niet — er is voor 0! een vaste wiskundige definitie zodat formules als C(n,0) kloppen.", "Wel mogelijk — dit is een vaste wiskundige definitie.", "Niet — 0! is heel groot noch ongedefinieerd."],
         uitlegPad: {
           stappen: [{ titel: "0! = 1 (definitie)", tekst: "**0! = 1**. Wiskundige conventie zodat formules werken: C(n,0) = 1 (één manier om niets te kiezen), C(n,n) = 1. Zou breken als 0! ≠ 1." }],
           niveaus: { basis: "1.", simpeler: "0! = 1", nogSimpeler: "1" },
@@ -324,7 +324,7 @@ const steps = [
         q: "Wanneer is **P(A en B) = P(A) × P(B)**?",
         options: ["Bij onafhankelijke gebeurtenissen","Altijd","Bij disjuncte","Bij volle kans 1"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen onafhankelijk.", "Niet — disjunct = 0.", "Niet relevant."],
+        wrongHints: [null, "Niet — de vermenigvuldigingsregel geldt alleen onder een bepaalde voorwaarde; welke?", "Niet — disjuncte gebeurtenissen kunnen niet tegelijk optreden, waardoor de kans op 'en' nul is.", "Niet relevant — volle kans geldt voor 'of alle uitkomsten samen', niet voor de productregel."],
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijkheid", tekst: "**Onafhankelijk** = A beïnvloedt B niet. Dan P(A∩B) = P(A)·P(B). Bij afhankelijk: P(A∩B) = P(A)·P(B|A)." }],
           niveaus: { basis: "Onafhankelijk.", simpeler: "Onafhankelijk → vermenigvuldigen", nogSimpeler: "Onafhankelijk" },

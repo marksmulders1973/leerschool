@@ -309,8 +309,8 @@ const steps = [
         wrongHints: [
           null,
           "Min × min = **plus**. Twee minnen heffen elkaar op.",
-          "Je hebt opgeteld of zoiets. Vermenigvuldigen: 6 × 4 = 24, en min × min = plus, dus +24.",
-          "Niet aftrekken. Reken: 6 × 4 = 24, en de twee minnen worden plus.",
+          "Je hebt opgeteld of zoiets. Vermenigvuldig 6 × 4 en kijk dan wat twee minnen samen geven.",
+          "Niet aftrekken — denk: min × min = welk teken?",
         ],
         uitlegPad: {
           stappen: [{ titel: "− × − = +", tekst: "(−6) × (−4) = +24." }],
@@ -346,9 +346,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Min ÷ min = plus. 20 ÷ 5 = 4, met min/min wordt het +4.",
-          "Je hebt opgeteld of vermenigvuldigd. Reken delen: 20 ÷ 5 = 4.",
-          "Niet vermenigvuldigen. 20 ÷ 5 = 4, en min/min wordt plus.",
+          "Min ÷ min = plus — klopt jouw teken bij je antwoord?",
+          "Je hebt opgeteld of vermenigvuldigd. Denk: hoeveel is 20 ÷ 5, en welk teken geeft min ÷ min?",
+          "Niet vermenigvuldigen — denk aan de deelregel en het teken.",
         ],
         uitlegPad: {
           stappen: [{ titel: "− ÷ − = +", tekst: "(−20) ÷ (−5) = +4." }],
@@ -398,9 +398,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt afgetrokken in plaats van opgeteld. 'Warmer' = +. −12 + 8 = −4.",
-          "Te warm. Reken: −12 + 8 = −4 (nog onder nul, maar minder koud).",
-          "+4 zou kloppen als startpunt 0 was. Maar −12 + 8 = −4.",
+          "Je hebt afgetrokken in plaats van opgeteld. Wat betekent 'warmer' voor de bewerking?",
+          "Te warm — begin bij −12 en ga 8 stappen omhoog. Ben je dan al boven nul?",
+          "+4 zou kloppen als het startpunt 0 was — maar het is geen 0. Probeer opnieuw.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Warmer = optellen", tekst: "−12 + 8 = −4. Begin onder nul, 8 erbij = nog onder nul." }],
@@ -439,9 +439,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt opgeteld in plaats van afgetrokken. (−3)×(−4) = 12, daarna − 5 = 7.",
-          "12 is de tussenstap. Vergeet niet de − 5 op het einde.",
-          "Je hebt − op de tussenstap gezet. (−3)×(−4) = +12 (min × min). Dan 12 − 5 = 7.",
+          "Je hebt opgeteld in plaats van afgetrokken. Bereken eerst de keer-som, trek dan pas 5 af.",
+          "Dat is alleen de tussenstap — je bent er bijna, maar welke stap ontbreekt nog?",
+          "Je hebt het teken van de keer-som onjuist bepaald — denk: min × min = welk teken?",
         ],
         uitlegPad: {
           stappen: [{ titel: "× voor −", tekst: "Eerst (−3)×(−4) = +12. Dan 12 − 5 = 7." }],

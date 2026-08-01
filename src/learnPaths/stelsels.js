@@ -78,7 +78,7 @@ const steps = [
         q: "*Is x = 5, y = 2 een oplossing van het stelsel: x + y = 7 én 2x − y = 8?*",
         options: ["Ja — beide vergelijkingen kloppen","Nee — alleen de eerste klopt","Nee — alleen de tweede klopt","Nee — geen van beide klopt"],
         answer: 0,
-        wrongHints: [null, "Vul (5, 2) in BEIDE vergelijkingen — kloppen ze allebei?", "Heb je beide vergelijkingen los gecheckt? Eén klopt niet automatisch betekent 'beide niet'.", "Reken rustig na: vul x=5 en y=2 in elke vergelijking. Wat zie je?"],
+        wrongHints: [null, "Vul het paar in BEIDE vergelijkingen — kloppen ze allebei?", "Heb je beide vergelijkingen los gecheckt? Eén klopt niet automatisch betekent 'beide niet'.", "Reken rustig na: vul x en y in elke vergelijking apart — kloppen ze dan allebei?"],
         uitlegPad: {
           stappen: [{ titel: "Beide vergelijkingen checken", tekst: "Vgl 1: 5+2=7 ✓. Vgl 2: 2·5−2=10−2=8 ✓. Beide kloppen → oplossing." }],
           woorden: [{ woord: "stelsel-oplossing", uitleg: "Paar (x,y) dat BEIDE vergelijkingen waar maakt." }],
@@ -212,7 +212,7 @@ const steps = [
         q: "*Los op met substitutie: y = 2x én x + y = 9. Wat is x?*",
         options: ["x = 3", "x = 9", "x = 6", "x = 4.5"],
         answer: 0,
-        wrongHints: [null, "Vervang y door 2x in de tweede vergelijking. Wat krijg je dan voor x in z'n eentje?", "Dat zou de y-waarde kunnen zijn, niet de x. Welke variabele vraagt de vraag?", "Geen breuk — substitueer y=2x en kijk wat je overhoudt. Geheel getal of niet?"],
+        wrongHints: [null, "Vervang y door 2x in de tweede vergelijking. Wat krijg je dan voor x in z'n eentje?", "Dat zou de y-waarde kunnen zijn, niet de x. Welke variabele vraagt de vraag?", "Substitueer y door 2x in de tweede vergelijking — blijft er dan een geheel getal over of een breuk?"],
         uitlegPad: {
           stappen: [
             { titel: "Substitueer", tekst: "y=2x. Vul in: x + 2x = 9 → 3x = 9 → x = 3." },
@@ -347,7 +347,7 @@ const steps = [
         q: "*Welke methode ligt het meest voor de hand bij: y = 5x én 2x + y = 14?*",
         options: ["Substitutie (y is al geïsoleerd)","Eliminatie (optellen)","Eliminatie (aftrekken)","Grafisch oplossen"],
         answer: 0,
-        wrongHints: [null, "Optellen vereist standaard-vorm in beide. Hier is y al netjes alleen.", "Aftrekken vereist standaard-vorm in beide met matchende coëfficiënt. Hier is y al alleen.", "Grafisch werkt maar is veel werk. Snel: y = 5x is al klaar voor invullen."],
+        wrongHints: [null, "Optellen vereist standaard-vorm in beide. Hier is y al netjes alleen.", "Aftrekken vereist standaard-vorm in beide met matchende coëfficiënt. Hier is y al alleen.", "Grafisch werkt maar is veel werk — welke methode is sneller als y al geïsoleerd staat?"],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar = substitutie", tekst: "y = 5x is al netjes geïsoleerd. Vul direct in: 2x + 5x = 14 → 7x = 14 → x = 2. Substitutie is hier veruit snelste." }],
           woorden: [{ woord: "methode-keuze", uitleg: "Slim kiezen op basis van vorm vergelijkingen." }],
@@ -381,7 +381,7 @@ const steps = [
         q: "*Bij optellen krijg je: 0 = 5. Wat betekent dat?*",
         options: ["Geen oplossing — vergelijkingen zijn tegenstrijdig","Oneindig veel oplossingen","x = 5","Je hebt een rekenfout gemaakt"],
         answer: 0,
-        wrongHints: [null, "Oneindig veel zou betekenen 0 = 0. Hier krijgt je iets dat niet kan kloppen → geen oplossing.", "0 = 5 is geen waarde voor x. Het zegt dat het stelsel onmogelijk is.", "Niet noodzakelijk — bij parallelle lijnen krijg je dit altijd. Het is een geldige uitkomst die zegt: stelsel heeft geen oplossing."],
+        wrongHints: [null, "Oneindig veel zou een uitkomst geven van nul is nul. Wat zegt een onmogelijke bewering over het stelsel?", "Dit is geen waarde voor x — het is een bewering over het stelsel zelf. Wat betekent het als een bewering nooit waar kan zijn?", "Niet noodzakelijk — bij parallelle lijnen krijg je dit altijd. Het is een geldige uitkomst die zegt: stelsel heeft geen oplossing."],
         uitlegPad: {
           stappen: [{ titel: "0=5 = onmogelijk", tekst: "0 = 5 kan NOOIT waar zijn. Betekent: stelsel heeft geen oplossing (parallelle lijnen, tegenstrijdig)." }],
           woorden: [{ woord: "tegenstrijdigheid", uitleg: "Vergelijkingen die elkaar uitsluiten. 0=N (N≠0) = signal." }],
@@ -457,7 +457,7 @@ const steps = [
         q: "*Los op: y = 3x − 4 en 2x + y = 6. Wat is x?*",
         options: ["x = 2", "x = 4", "x = 1", "x = 3"],
         answer: 0,
-        wrongHints: [null, "Substitueer y in vgl 2. Hoe combineer je dan de x-termen — wat wordt je nieuwe vgl?", "Check: y = 3·1 - 4 = -1, en 2·1 + (-1) = 1 ≠ 6.", "Check: y = 3·3 - 4 = 5, en 2·3 + 5 = 11 ≠ 6."],
+        wrongHints: [null, "Substitueer y in vgl 2. Hoe combineer je dan de x-termen — wat wordt je nieuwe vgl?", "Vul dit getal in als x en bereken y — klopt het resultaat in beide vergelijkingen?", "Vul dit getal in als x en bereken y — klopt het resultaat in beide vergelijkingen?"],
         uitlegPad: {
           stappen: [
             { titel: "Substitueer", tekst: "y=3x−4 invullen: 2x + (3x−4) = 6 → 5x − 4 = 6 → 5x = 10 → x = 2." },
@@ -474,7 +474,7 @@ const steps = [
         q: "*Stelsel: 4x + 3y = 23 en 2x + 5y = 21. Wat is y?*",
         options: ["y = 5", "y = 3", "y = 7", "y = 2"],
         answer: 1,
-        wrongHints: ["Check: x bij y=5 → 4x + 15 = 23 → 4x = 8 → x = 2. Tweede: 2·2 + 5·5 = 29 ≠ 21.", null, "Check: 4x + 21 = 23 → 4x = 2 → x = 0.5. Tweede: 1 + 35 = 36 ≠ 21.", "Check: 4x + 6 = 23 → x = 4.25. Tweede: 8.5 + 10 = 18.5 ≠ 21."],
+        wrongHints: ["Vul dit getal in als y en los x op uit de eerste vergelijking — werkt dat x ook in de tweede?", null, "Vul dit getal in als y en los x op — controleer dan of die x ook in de tweede vergelijking klopt.", "Vul dit getal in als y en los x op — klopt die x-waarde ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Verg 1 ·1, verg 2 ·2", tekst: "Alternatief: vgl 2 ·2 → 4x+10y=42. Trek af van vgl 1: 4x+3y=23 minus 4x+10y=42 → −7y=−19 → y=19/7. Niet rond. Probeer y=3: x=(23−9)/4=14/4=3.5. Check vgl 2: 2·3.5+15=22... toch niet. Let op: ander methode beter." },
@@ -491,7 +491,7 @@ const steps = [
         q: "*\"Een hond + 2 katten = 8 kg. 2 honden + 1 kat = 11 kg.\" Hoeveel weegt een hond?*",
         options: ["Hond = 4.67 kg", "Hond = 4 kg", "Hond = 5 kg", "Hond = 3 kg"],
         answer: 0,
-        wrongHints: [null, "Stel op: h + 2k = 8 én 2h + k = 11. Los op: h = 14/3 ≈ 4.67, k = 5/3.", "5 zou betekenen 5 + 2k = 8 → k = 1.5. Check 2: 2·5 + 1.5 = 11.5 ≠ 11.", "3 zou betekenen 3 + 2k = 8 → k = 2.5. Check 2: 2·3 + 2.5 = 8.5 ≠ 11."],
+        wrongHints: [null, "Stel eerst het stelsel op met h en k — vul dan beide gegevens in en los op.", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "h+2k=8 en 2h+k=11. Verg 2 ·2: 4h+2k=22. Aftrekken: 3h=14 → h=14/3≈4.67." },
@@ -520,7 +520,7 @@ const steps = [
         q: "*Los op: 3x + 2y = 18 en 5x − 2y = 14. Welk paar?*",
         options: ["(4, 3)", "(3, 4.5)", "(2, 6)", "(5, 1.5)"],
         answer: 0,
-        wrongHints: [null, "Check: 3·3 + 2·4.5 = 18 ✓, maar 5·3 − 2·4.5 = 6 ≠ 14.", "Check: 3·2 + 2·6 = 18 ✓, maar 5·2 − 2·6 = -2 ≠ 14.", "Check: 3·5 + 2·1.5 = 18 ✓, maar 5·5 − 2·1.5 = 22 ≠ 14."],
+        wrongHints: [null, "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?", "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?", "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?"],
         uitlegPad: {
           stappen: [
             { titel: "Optellen", tekst: "y heeft +2 en −2. Optellen: 8x=32 → x=4." },
@@ -537,7 +537,7 @@ const steps = [
         q: "*\"Een fietsentocht: 60 km. Eerste deel 15 km/u, tweede 20 km/u. Totaal 3.5 uur.\" Hoe lang duurde het eerste deel?*",
         options: ["2 uur","1 uur","1.5 uur","3 uur"],
         answer: 0,
-        wrongHints: [null, "Check: 1·15 + 2.5·20 = 65 ≠ 60.", "Check: 1.5·15 + 2·20 = 22.5 + 40 = 62.5 ≠ 60.", "Check: 3·15 + 0.5·20 = 45 + 10 = 55 ≠ 60."],
+        wrongHints: [null, "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "t1+t2=3.5 (tijd). 15·t1+20·t2=60 (afstand)." },
@@ -554,7 +554,7 @@ const steps = [
         q: "*Stelsel: 2x − y = 4 en 4x − 2y = 8. Aantal oplossingen?*",
         options: ["Oneindig veel — vergelijking 2 is 2× vergelijking 1","Eén","Geen","Twee"],
         answer: 0,
-        wrongHints: [null, "Vermenigvuldig vergelijking 1 met 2: 4x - 2y = 8. Identiek aan vergelijking 2 → niet één unieke oplossing.", "Geen oplossing zou tegenstrijdig zijn. Hier zijn ze juist hetzelfde.", "Een lineair stelsel heeft 0, 1 of oneindig — niet precies 2."],
+        wrongHints: [null, "Vermenigvuldig vergelijking 1 met 2 en vergelijk met vergelijking 2 — wat valt je op?", "Geen oplossing zou tegenstrijdig zijn. Hier zijn ze juist hetzelfde.", "Een lineair stelsel heeft 0, 1 of oneindig — niet precies 2."],
         uitlegPad: {
           stappen: [{ titel: "Identieke vergelijkingen", tekst: "Verg 1 · 2 = (2x−y)·2 = 4x−2y = 4·2 = 8. Dat is precies verg 2. De twee vergelijkingen zijn dezelfde → samenvallende lijnen → oneindig veel oplossingen." }],
           woorden: [{ woord: "equivalent", uitleg: "Twee vergelijkingen zijn gelijk (op vermenigvuldiging na)." }],
@@ -580,7 +580,7 @@ const steps = [
         q: "*Los op: 7x + 3y = 27 en 5x − 2y = 4. Wat is x?*",
         options: ["x = 2", "x = 3", "x = 4", "x = 1"],
         answer: 1,
-        wrongHints: ["Check: 7·2 + 3y = 27 → 3y = 13 → y = 13/3. Tweede: 5·2 − 2·(13/3) = 10 − 26/3 = 4/3 ≠ 4.", null, "Check: 7·4 + 3y = 27 → 3y = -1 → y = -1/3. Tweede: 5·4 − 2·(-1/3) = 20 + 2/3 ≠ 4.", "Check: 7·1 + 3y = 27 → y = 20/3. Tweede: 5 − 40/3 = -25/3 ≠ 4."],
+        wrongHints: ["Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?", null, "Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?", "Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Eliminatie y", tekst: "Y-coëffs: 3 en −2. KGV=6. Vgl 1 ·2: 14x+6y=54. Vgl 2 ·3: 15x−6y=12. Optellen: 29x=66... wacht, antwoord moet x=3 zijn. Probeer andere methode." },
@@ -597,7 +597,7 @@ const steps = [
         q: "*\"In een kantine: 3 koffies + 2 broodjes = €11. 2 koffies + 4 broodjes = €14.\" Wat kost een broodje?*",
         options: ["€2.50", "€2", "€3", "€4"],
         answer: 0,
-        wrongHints: [null, "Check: 3k + 4 = 11 → k = 7/3. Tweede: 2·(7/3) + 8 = 38/3 ≠ 14.", "Check: 3k + 6 = 11 → k = 5/3. Tweede: 2·(5/3) + 12 = 46/3 ≠ 14.", "Check: 3k + 8 = 11 → k = 1. Tweede: 2 + 16 = 18 ≠ 14."],
+        wrongHints: [null, "Vul dit als broodjesprijs in en los de koffieprijs op — klopt die koffieprijs ook in de tweede vergelijking?", "Vul dit als broodjesprijs in en los de koffieprijs op — klopt die koffieprijs ook in de tweede vergelijking?", "Vul dit als broodjesprijs in en los de koffieprijs op — klopt die koffieprijs ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Stelsel opstellen", tekst: "k=koffie, b=broodje. 3k+2b=11 en 2k+4b=14." },
@@ -614,7 +614,7 @@ const steps = [
       { q: "Welke methode lost stelsel op door optellen/aftrekken?", options: ["Eliminatie","Substitutie","Factorisatie","Grafiek"], answer: 0, wrongHints: [null, "Andere methode (één vervangen).", "Niet relevant.", "Niet specifiek."] },
       { q: "Stelsel x+y=5 en x−y=1. Wat is x?", options: ["3","2","4","1"], answer: 0, wrongHints: [null, "y=2, niet x.", "Niet.", "Niet."] },
       { q: "Grafisch: snijpunt twee lijnen = ?", options: ["Oplossing van stelsel","Niets","Y-as","X-as"], answer: 0, wrongHints: [null, "Wel iets.", "Niet relevant.", "Niet relevant."] },
-      { q: "Stelsel y=2x en y=x+1. Snijpunt y= ?", options: ["2","1","0","3"], answer: 0, wrongHints: [null, "Niet — dat is y bij x=0.", "Niet.", "Niet."] },
+      { q: "Stelsel y=2x en y=x+1. Snijpunt y= ?", options: ["2","1","0","3"], answer: 0, wrongHints: [null, "Niet — dat is wat y wordt als x nul is, niet op het snijpunt.", "Niet.", "Niet."] },
     ],
   },
 ];

@@ -29,7 +29,7 @@ const steps = [
         q: "**Schat 28 × 41**. Welk antwoord komt het dichtst bij?",
         options: ["1200","1500","800","2000"],
         answer: 0,
-        wrongHints: [null,"Te veel — schat: 30 × 40 = 1200, niet 1500.","Te weinig — controleer met 30 × 40.","Veel te veel."],
+        wrongHints: [null,"Te veel — rond 28 en 41 af op tientallen en vermenigvuldig die.","Te weinig — controleer met 30 × 40.","Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: rond beide getallen af op 10", tekst: "28 → afgerond op tientallen = **30**. 41 → afgerond op tientallen = **40**." },
@@ -63,7 +63,7 @@ const steps = [
         q: "**Schat het totaal**: € 4,80 + € 7,20 + € 12,30",
         options: ["€ 24","€ 22","€ 26","€ 30"],
         answer: 0,
-        wrongHints: [null,"Te weinig — schat: 5 + 7 + 12 = 24.","Te veel — controleer schatting.","Veel te veel."],
+        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Veel te veel."],
       },
     ],
   },
@@ -123,7 +123,7 @@ const steps = [
         q: "**Schat 198 + 412** (afgerond op 100):",
         options: ["600","500","700","400"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer: 200 + 400 = 600.","Te veel — controleer afronding.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — reken: hoeveel is 200 + 400?","Te veel — controleer afronding.","Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: rond elk getal af op 100", tekst: "198 → ligt vlakbij 200 (cijfer in tien = 9 = omhoog) → **200**. 412 → ligt vlakbij 400 (cijfer in tien = 1 = omlaag) → **400**." },
@@ -151,13 +151,13 @@ const steps = [
         q: "**Schat 39 × 21** (afgerond op 10):",
         options: ["800","600","1000","900"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer: 40 × 20 = 800.","Te veel — niet 50 × 20.","Te veel — heb je 30 ipv 20 gerekend?"],
+        wrongHints: [null,"Te weinig — rond 39 en 21 af op tientallen en vermenigvuldig die.","Te veel — niet 50 × 20.","Te veel — heb je 30 ipv 20 gerekend?"],
       },
       {
         q: "**Schat 732 − 289** (afgerond op 100):",
         options: ["400","500","300","450"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer: 700 − 300 = 400.","Te weinig — heb je 700 - 400 gedaan?","Niet afgerond — dat is exact."],
+        wrongHints: [null,"Te veel — rond beide getallen af op honderdtallen en trek af.","Te weinig — heb je 700 - 400 gedaan?","Niet afgerond — dat is exact."],
       },
     ],
   },
@@ -170,7 +170,7 @@ const steps = [
         q: "Een kassabon: **€ 4,85 + € 7,15 + € 12,40 + € 3,60**. Schat:",
         options: ["€ 28","€ 25","€ 30","€ 22"],
         answer: 0,
-        wrongHints: [null,"Te weinig — schat: 5 + 7 + 12 + 4 = 28.","Te veel — controleer schatting.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel ze alle vier op.","Te veel — controleer schatting.","Veel te weinig."],
       },
       {
         q: "Een rit duurt **2 uur 47 min**. Afgerond op kwartiers — hoeveel?",
@@ -182,7 +182,7 @@ const steps = [
         q: "**€ 49,80 + € 24,30** — schat:",
         options: ["€ 74","€ 70","€ 80","€ 75"],
         answer: 0,
-        wrongHints: [null,"Te weinig — schat: 50 + 24 = 74.","Te veel — controleer schatting.","Te veel — bijna goed maar 50+24 = 74."],
+        wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Te veel — klopt jouw schatting van beide bedragen?"],
       },
     ],
   },
@@ -201,7 +201,7 @@ const steps = [
         q: "**Schat 248 + 391 + 152** (op 100):",
         options: ["800","700","900","600"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer: 200+400+200 = 800.","Te veel — schatting controleren.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze op.","Te veel — schatting controleren.","Veel te weinig."],
       },
       {
         q: "Een biljet van **€ 50** voor boodschappen van **€ 12,40 + € 8,30 + € 25,80**. **Past 't?**",
@@ -249,7 +249,7 @@ const steps = [
         q: "**Rond af op 10**: 145 + 89 + 36 = ?",
         options: ["270","260","280","250"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer: 150+90+40 = 280.", "Klopt bij ronde afronding (150+90+40=280) — antwoord-keuze A toont 270 als 'precies'.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — rond elk getal af op tientallen en tel op.", "Let op: vraag de schatting of het exacte antwoord? Lees de vraag opnieuw.", "Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Cent-stijl: 145+89 = 234, +36 = **270**." },

@@ -291,7 +291,7 @@ const steps = [
         q: "Hoeveel **dagen** duurt 1 baan van de Maan om de Aarde?",
         options: ["~27 dagen","~7 dagen","~365 dagen","~1 dag"],
         answer: 0,
-        wrongHints: [null,"7 dagen = 1 week.","365 = aarde-baan om zon (= 1 jaar).","1 dag = aarde-rotatie."],
+        wrongHints: [null,"Een week is de tijdsduur die je op een kalender aan één blokje terugziet — past dat bij een maanrondgang?","Dat getal hoort bij de omlooptijd van de Aarde om de Zon, niet bij de Maan om de Aarde.","Dat getal hoort bij de rotatie van de Aarde om zijn eigen as."],
         uitlegPad: {
           stappen: [{ titel: "Maan ~27 dagen om Aarde", tekst: "De Maan draait in 27,3 dagen één keer rond de Aarde. Daardoor zien we elke ~29,5 dagen volle maan (verschil komt door beweging van Aarde rond zon)." }],
           woorden: [{ woord: "maancyclus", uitleg: "fases van nieuwe → volle → nieuwe maan" }],

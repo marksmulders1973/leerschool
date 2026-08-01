@@ -149,7 +149,7 @@ const steps = [
         q: "Welke organisatie startte de **Indonesische nationalistische beweging** in 1908?",
         options: ["Boedi Oetomo","PNI","VOC","KNIL"],
         answer: 0,
-        wrongHints: [null, "PNI = 1927, later. Soekarno-partij.", "VOC bestond toen al 109 jaar niet meer.", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
+        wrongHints: [null, "PNI werd pas later opgericht — dit is niet de allereerste beweging.", "VOC was de handelskompagnie van de Nederlanders — die was er al lang niet meer in 1908.", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
         uitlegPad: {
           stappen: [{ titel: "Boedi Oetomo 1908", tekst: "**Boedi Oetomo** ('Verheven Streven') = eerste moderne Indonesische nationalistische beweging, opgericht 20 mei 1908 door studenten. Vredig, gericht op zelfontplooiing. Datum 20 mei = **Hari Kebangkitan Nasional** (Dag van het Nationaal Ontwaken)." }],
           theorie: "Volgorde: Boedi Oetomo 1908 → Sarekat Islam 1912 → PNI 1927 (Soekarno) → Onafhankelijkheid 1945.",
@@ -330,7 +330,7 @@ const steps = [
         q: "*Max Havelaar* (1860) was een **aanklacht** tegen welke koloniale praktijk?",
         options: ["Cultuurstelsel","Politionele acties","Japanse romusha","Slavenhandel"],
         answer: 0,
-        wrongHints: [null, "Politionele acties = 1947-49, ~90 jaar later.", "Japan = 1942-45, ~80 jaar later.", "Slavenhandel = West-Indië, niet Java-context."],
+        wrongHints: [null, "De politionele acties vonden pas decennia later plaats — Max Havelaar is van 1860.", "De Japanse bezetting was ook tientallen jaren later — niet de context van dit boek.", "Slavenhandel hoort bij West-Indië, niet bij de Java-context van dit boek."],
         uitlegPad: {
           stappen: [{ titel: "Multatuli vs Cultuurstelsel", tekst: "*Max Havelaar* (1860) door Multatuli was geschreven om de **misbruiken van het Cultuurstelsel** (1830-1870) aan de kaak te stellen. Hielp om Cultuurstelsel langzaam af te schaffen ('Agrarische Wet' 1870)." }],
           niveaus: { basis: "Cultuurstelsel — A.", simpeler: "Max Havelaar 1860 = tegen Cultuurstelsel", nogSimpeler: "Cultuurstelsel" },
@@ -340,7 +340,7 @@ const steps = [
         q: "Welke beweging begon de **moderne Indonesische nationalisme** in 1908?",
         options: ["Boedi Oetomo","PNI","KNIL","VOC"],
         answer: 0,
-        wrongHints: [null, "PNI = 1927 (Soekarno).", "KNIL = NL-leger, juist onderdrukker.", "VOC was toen al 109 jaar dood."],
+        wrongHints: [null, "PNI werd pas later opgericht door Soekarno — welke beweging was er eerder?", "KNIL was het Nederlandse koloniale leger — eerder onderdrukker dan nationalisten.", "De VOC was al meer dan een eeuw geleden opgeheven."],
         uitlegPad: {
           stappen: [{ titel: "1908 = start nationalisme", tekst: "**Boedi Oetomo** opgericht 20 mei 1908 — eerste vredevolle nationalistische beweging. Vanuit medische studenten. Inspireerde latere bewegingen tot Soekarno's PNI in 1927." }],
           niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 nationalisme = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },

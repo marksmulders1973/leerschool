@@ -206,10 +206,10 @@ const steps = [
         options: ["de Blokkade van Berlijn", "de Cubacrisis", "de Praagse Lente", "de stichting van de DDR"],
         answer: 1,
         wrongHints: [
-          "Blokkade van Berlijn = 1948-49. Te vroeg voor de hotline.",
+          "De Blokkade van Berlijn speelde zich al in de jaren veertig af — was de hotline er toen al?",
           null,
-          "Praagse Lente = 1968. Na de hotline.",
-          "Stichting DDR = 1949. Te vroeg.",
+          "De Praagse Lente vond later plaats dan de aanleg van de hotline — denk aan de volgorde.",
+          "De DDR werd gesticht nog vóór de Cubacrisis — pas op de tijdlijn.",
         ],
         explanation: "Tijdens de **Cubacrisis** (oktober 1962) waren VS en USSR ongeveer 13 dagen lang op de rand van een kernoorlog. Het gebrek aan directe communicatie maakte misverstanden gevaarlijk. Daarom werd in 1963 de 'hotline' (eerst een teletype-verbinding) opgezet — direct contact tussen Kremlin en Witte Huis.",
         examenBron: BRON(38),

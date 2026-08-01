@@ -45,7 +45,7 @@ const steps = [
         q: "Tabel: x: 1,2,3,4 | y: 7, 11, 15, 19. **Formule**?",
         options: ["y = 3 + 4x","y = 7 + 4x","y = 7 + 11x","y = 4 + 3x"],
         answer: 0,
-        wrongHints: [null, "Niet — y(1)=11 dan, ≠ 7.", "Onmogelijk.", "Niet — y(1)=7 niet correct."],
+        wrongHints: [null, "Vul de eerste x-waarde in en kijk of de y-uitkomst met de tabel overeenkomt.", "Onmogelijk.", "Vul de eerste x-waarde in en vergelijk de uitkomst met de tabelwaarde — klopt het?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschillen", tekst: "Verschillen: 11-7=4, 15-11=4, 19-15=4. Constant 4 → lineair met **b=4**." },
@@ -210,7 +210,7 @@ const steps = [
         q: "Welke schaal is **logaritmisch**?",
         options: ["pH (zuurgraad)","Lengte in cm","Tijd in seconden","Massa in kg"],
         answer: 0,
-        wrongHints: [null, "Bij cm is elke stap even groot: 2 cm is precies 2× 1 cm. Een log-schaal springt per stap juist keer 10 — geldt dat hier?", "Seconden lopen gelijkmatig op; bij een log-schaal betekent elke stap een factor méér. Past dat bij tijd?", "Kilo's tel je gewoon op (2 kg = 2× 1 kg) — dat is lineair, niet logaritmisch."],
+        wrongHints: [null, "Bij cm is elke stap even groot — een log-schaal springt per stap juist keer tien. Geldt dat hier?", "Seconden lopen gelijkmatig op; bij een log-schaal betekent elke stap een factor méér. Past dat bij tijd?", "Kilo's tel je gewoon op: het dubbele gewicht is ook precies het dubbele getal — dat is lineair, niet logaritmisch."],
         uitlegPad: {
           stappen: [{ titel: "pH = −log[H₃O⁺]", tekst: "**pH** is logaritmisch: pH 3 is 10× zuurder dan pH 4, 100× zuurder dan pH 5. Andere log-schalen: **Richter** (aardbeving), **decibel** (geluid), **magnitude** (sterren). Reden: schaal-bereik te groot voor lineair (10⁻¹⁴ tot 10⁰ M voor H⁺)." }],
           niveaus: { basis: "pH.", simpeler: "pH = log", nogSimpeler: "pH" },

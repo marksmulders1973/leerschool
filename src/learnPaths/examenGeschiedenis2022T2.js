@@ -93,7 +93,7 @@ const steps = [
         "de invoering van het Verdrag van Versailles",
       ],
       answer: 0,
-      wrongHints: [null, "Ruhrbezetting was juist 1923 (vóór herstel begon). Niet 1929.", "Inflatie was 1923 hyperinflatie. In 1929 was DM juist stabiel.", "Versailles = 1919, vóór herstel. Niet de breukmoment in 1929."],
+      wrongHints: [null, "Ruhrbezetting was juist een crisis in 1923 — wat was de situatie daarna en wat veranderde er later?", "Inflatie was 1923 hyperinflatie — wat was de economische situatie in Duitsland in 1929 zelf?", "Versailles was juist het startpunt — is dit de aanleiding voor de crisis later?"],
       explanation: "**Beurskrach 24 oktober 1929** in New York = Great Depression begint. VS-banken eisten leningen aan Duitsland terug → Duitse banken vielen om → werkloosheid explodeert → Hitler kon stemmen winnen (NSDAP 1932 grootste partij).",
       examenBron: BRON_LABEL(15),
       bronLink: BRON_LINK,

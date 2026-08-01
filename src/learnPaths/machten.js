@@ -161,7 +161,7 @@ const steps = [
         q: "*Wat is (3 + 1)² · 2?*",
         options: ["32", "10", "17", "16"],
         answer: 0,
-        wrongHints: [null, "10 = 4 · 2 + 2 (verkeerde berekening). Doe (3+1)² = 16, dan · 2.", "Onjuist — eerst haakjes, dan macht, dan ·.", "16 = (3+1)² zonder de · 2 te doen. Vergeet niet de · 2."],
+        wrongHints: [null, "Niet juist — wat is (3+1)² eerst, en wat doe je daarna nog?", "Onjuist — eerst haakjes, dan macht, dan ·.", "Bijna — je hebt de macht al uitgerekend, maar welke stap ontbreekt er nog?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes", tekst: "(3+1)² · 2. Haakjes: 3+1=4. Macht: 4²=16. Vermenigvuldigen: 16·2=32." },
@@ -339,7 +339,7 @@ const steps = [
         q: "*Versimpel: (3/4)².*",
         options: ["9/16", "6/8", "3/16", "9/4"],
         answer: 0,
-        wrongHints: [null, "6/8 = 3/4 · 2/2 = niet goed. Bereken 3² / 4² = 9 / 16.", "3/16 = 3 / 4² (alleen noemer gekwadrateerd). De teller wordt ook gekwadrateerd.", "9/4 = 3² / 4 (alleen teller gekwadrateerd). De noemer wordt ook gekwadrateerd."],
+        wrongHints: [null, "Niet juist — kwadrateren is niet hetzelfde als verdubbelen. Wat is 3² en wat is 4²?", "Alleen de noemer gekwadrateerd — wat moet er met de teller gebeuren?", "Alleen de teller gekwadrateerd — wat moet er met de noemer gebeuren?"],
         uitlegPad: {
           stappen: [{ titel: "Teller² / noemer²", tekst: "(3/4)² = 3² / 4² = 9 / 16. Macht op zowel teller als noemer." }],
           woorden: [{ woord: "(a/b)^n", uitleg: "= a^n / b^n. Macht over breuk." }],
@@ -370,7 +370,7 @@ const steps = [
         q: "*Wat is 4⁻¹?*",
         options: ["1/4", "-4", "0", "-1/4"],
         answer: 0,
-        wrongHints: [null, "Een negatieve exponent maakt het getal niet negatief, maar een breuk: 1/aⁿ.", "4⁰ = 1, niet 0. En 4⁻¹ ≠ 0.", "Geen minteken voor de breuk. 4⁻¹ = +1/4."],
+        wrongHints: [null, "Een negatieve exponent maakt het getal niet negatief, maar een breuk. Welke breuk hoort bij 4⁻¹?", "Een getal tot de nul-macht is één, niet nul. En een negatieve exponent geeft een breuk.", "Geen minteken voor de breuk — de negatieve exponent zit in de exponent, niet voor het getal."],
         uitlegPad: {
           stappen: [{ titel: "Negatieve exp = breuk", tekst: "4⁻¹ = 1/4¹ = 1/4. Negatieve exponent → omkeren naar breuk." }],
           woorden: [{ woord: "a⁻ⁿ", uitleg: "= 1/aⁿ. Reciproke." }],
@@ -384,7 +384,7 @@ const steps = [
         q: "*Versimpel: x³ · x⁻⁵.*",
         options: ["x⁻²", "x⁻¹⁵", "x⁸", "x²"],
         answer: 0,
-        wrongHints: [null, "Dat is regel 3 (vermenigvuldigen exponenten). Hier is regel 1 (optellen): 3 + (-5) = -2.", "x⁸ = x³ · x⁵ (zonder minteken). Maar het minteken hoort erbij.", "Bij vermenigvuldigen tellen we exponenten op (3 + (-5) = -2), niet absolute waarde."],
+        wrongHints: [null, "Dat is de regel voor machten van een macht, niet voor vermenigvuldigen. Welke regel gebruik je hier?", "Het minteken in de exponent hoort erbij — wat geeft optellen van de twee exponenten?", "Bij vermenigvuldigen tellen we exponenten op inclusief het teken — wat is de som?"],
         uitlegPad: {
           stappen: [{ titel: "Regel 1 met negatieve", tekst: "x³ · x⁻⁵ = x^(3+(-5)) = x⁻². Tellen exponenten OP, inclusief teken." }],
           woorden: [{ woord: "exp. met tekens", uitleg: "Min-teken hoort bij exponent. Bij + ook gewoon meedoen." }],
@@ -424,7 +424,7 @@ const steps = [
         q: "*Hoeveel is 10⁵?*",
         options: ["100.000", "10.000", "1.000.000", "50"],
         answer: 0,
-        wrongHints: [null, "10.000 = 10⁴. Maar 10⁵ heeft 5 nullen.", "1.000.000 = 10⁶. Eén nul te veel.", "50 = 10 · 5 (vermenigvuldigen). Maar 10⁵ = 10 · 10 · 10 · 10 · 10."],
+        wrongHints: [null, "Één nul te weinig — hoeveel nullen heeft 10^5?", "Één nul te veel — hoeveel nullen heeft 10^5?", "Vermenigvuldigen met 5 is iets anders dan een macht van 10. Hoeveel keer zet je een 10 neer bij 10^5?"],
         uitlegPad: {
           stappen: [{ titel: "5 nullen achter de 1", tekst: "10⁵ = 10·10·10·10·10 = 100.000. Vuistregel: 10^n = 1 met n nullen. 10⁵ = 1 + 5 nullen." }],
           woorden: [{ woord: "10^n", uitleg: "10 tot de n-de macht. Snel: 1 + n nullen." }],
@@ -456,7 +456,7 @@ const steps = [
         q: "*Schrijf 45.000 in wetenschappelijke notatie.*",
         options: ["4,5 · 10⁴", "45 · 10³", "4,5 · 10³", "4500 · 10¹"],
         answer: 0,
-        wrongHints: [null, "Bij wet. notatie staat 1 cijfer vóór de komma (1-9). 45 heeft 2 cijfers.", "Te kleine exponent. 4,5 · 10³ = 4500, niet 45.000. Verschuif komma 4 plekken.", "Bij wet. notatie staat 1 cijfer vóór de komma. 4500 heeft 4 cijfers."],
+        wrongHints: [null, "Bij wet. notatie staat precies 1 cijfer vóór de komma — hoeveel staan er hier vóór de komma?", "Te kleine exponent — hoeveel plekken moet je de komma verschuiven om van 45.000 naar één cijfer vóór de komma te gaan?", "Bij wet. notatie staat precies 1 cijfer vóór de komma — hoeveel staan er hier vóór de komma?"],
         uitlegPad: {
           stappen: [{ titel: "Komma verschuiven", tekst: "45.000 = 45000,0. Verschuif komma 4 plekken naar links → 4,5. Exponent = +4 (omdat links → groot getal). Antwoord: 4,5 · 10⁴." }],
           woorden: [{ woord: "wet. notatie", uitleg: "a · 10^n waarbij 1 ≤ a < 10." }],
@@ -484,7 +484,7 @@ const steps = [
         q: "*Versimpel: a⁵ · a² / a³.*",
         options: ["a⁴", "a¹⁰", "a⁰", "a²"],
         answer: 0,
-        wrongHints: [null, "a¹⁰ = (a⁵ · a²)² (verkeerde regel). Hier: 5 + 2 - 3 = 4.", "a⁰ = 1 — alleen als alle exponenten elkaar opheffen. Hier: 5 + 2 - 3 = 4.", "Reken: 5 + 2 = 7, dan 7 - 3 = 4. Niet 2."],
+        wrongHints: [null, "Verkeerde regel — je vermenigvuldigt de exponenten in plaats van ze op te tellen en af te trekken.", "Dat klopt alleen als alle exponenten elkaar precies opheffen — tel ze maar na.", "Tel de exponenten stap voor stap op en trek de deler-exponent af — wat kom je uit?"],
         uitlegPad: {
           stappen: [{ titel: "Combineer × en ÷", tekst: "a⁵·a²/a³. Eerst regel 1: a⁵·a²=a⁷. Dan regel 2: a⁷/a³=a⁴. Of direct: 5+2−3=4." }],
           woorden: [{ woord: "regels combineren", uitleg: "Mix × → +, ÷ → −. Volg algebra-regels." }],
@@ -498,7 +498,7 @@ const steps = [
         q: "*Versimpel: (2x²)³.*",
         options: ["8x⁶", "6x⁵", "8x⁵", "2x⁶"],
         answer: 0,
-        wrongHints: [null, "6x⁵ = 2·3 · x²⁺³ — verkeerde berekening. (2x²)³ = 2³ · (x²)³.", "8x⁵ = 2³ · x²⁺³ — combineert verkeerd. Bij (a^m)^n vermenigvuldig je: 2·3 = 6.", "2x⁶ = (haakjes vergeten op 2). De 2 wordt ook gekubbeerd: 2³ = 8."],
+        wrongHints: [null, "Verkeerde berekening — wat is 2³, en wat doe je met de exponent van x bij een macht-van-macht?", "Combineer de regels stap voor stap — tel of vermenigvuldig je de exponent van x?", "De 2 wordt ook tot de derde macht verheven — wat geeft dat?"],
         uitlegPad: {
           stappen: [{ titel: "Beide gekubd", tekst: "(2x²)³ = 2³ · (x²)³ = 8 · x⁶ = 8x⁶. Macht verdelen + ²·³=⁶." }],
           woorden: [{ woord: "combo product+machtsmacht", uitleg: "(ab)^n = a^n·b^n. (x^m)^n = x^(mn)." }],
@@ -512,7 +512,7 @@ const steps = [
         q: "*Wat is 3⁻²?*",
         options: ["1/9", "-9", "-1/9", "-6"],
         answer: 0,
-        wrongHints: [null, "Negatieve exponent maakt geen negatief getal — wel een breuk.", "Negatief teken hoort niet voor de breuk. 3⁻² = +1/9.", "-6 = -3 · 2 (vermenigvuldigen). Onjuist gebruik van macht-notatie."],
+        wrongHints: [null, "Negatieve exponent maakt geen negatief getal — wat doet een negatieve exponent wel?", "Negatief teken hoort niet voor de breuk — de negatieve exponent zit alleen in de exponent.", "Vermenigvuldigen is niet hetzelfde als een macht. Wat betekent 3⁻²?"],
         uitlegPad: {
           stappen: [{ titel: "1/3²", tekst: "3⁻² = 1/3² = 1/9. Positief getal blijft positief — negatieve exp maakt breuk." }],
           woorden: [{ woord: "a⁻ⁿ regel", uitleg: "1/aⁿ. Resultaat positief." }],
@@ -526,7 +526,7 @@ const steps = [
         q: "*Schrijf in wetenschappelijke notatie: 0,00067.*",
         options: ["6,7 · 10⁻⁴", "67 · 10⁻⁵", "6,7 · 10⁻⁵", "0,67 · 10⁻³"],
         answer: 0,
-        wrongHints: [null, "67 heeft 2 cijfers vóór de komma. Wet. notatie eist 1 cijfer (1-9).", "6,7 · 10⁻⁵ = 0,000067 (één 0 te veel). Tel komma-plekken: 0,00067 → 6,7 = 4 plekken.", "0,67 heeft 0 vóór de komma — moet 1-9 zijn."],
+        wrongHints: [null, "Wet. notatie eist precies 1 cijfer vóór de komma — hoeveel staan er hier vóór de komma?", "Tel hoeveel plekken je de komma verschuift om van 0,00067 naar één cijfer vóór de komma te gaan.", "Vóór de komma staat een getal kleiner dan 1 — de wetenschappelijke notatie vraagt om één cijfer tussen 1 en 9."],
         uitlegPad: {
           stappen: [{ titel: "Komma 4× rechts", tekst: "0,00067 → 6,7 (komma 4 plekken naar rechts). Rechts = negatieve exp. Antwoord: 6,7 · 10⁻⁴." }],
           woorden: [{ woord: "klein getal in wet. not.", uitleg: "Decimaal < 1 → negatieve exponent." }],
@@ -552,7 +552,7 @@ const steps = [
         q: "*Versimpel: (3x⁴)² / (3x²)³.*",
         options: ["x²/3", "9x²", "3x²", "x⁵"],
         answer: 0,
-        wrongHints: [null, "Reken eerst (3x⁴)² = 9x⁸, dan (3x²)³ = 27x⁶. Dan delen: 9/27 = 1/3, en x⁸/x⁶ = x². Antwoord: x²/3.", "Kijk naar de 9/27. Dat versimpelt tot 1/3, niet 3.", "Geen 5 als exponent. Reken systematisch: (3x⁴)² = 9x⁸, (3x²)³ = 27x⁶. Dan delen."],
+        wrongHints: [null, "Werk teller en noemer apart uit, dan pas delen — wat wordt de teller, wat de noemer?", "Versimpel de getalsverhouding — hoe ver deelt 9 in 27?", "Geen 5 als exponent — werk teller en noemer apart uit met de juiste regels."],
         uitlegPad: {
           stappen: [
             { titel: "Teller", tekst: "(3x⁴)² = 9x⁸." },
@@ -570,7 +570,7 @@ const steps = [
         q: "*Wat is (2 · 10³) · (4 · 10⁵)?*",
         options: ["8 · 10⁸", "8 · 10¹⁵", "6 · 10⁸", "8 · 10⁻²"],
         answer: 0,
-        wrongHints: [null, "10³ · 10⁵ = 10^(3+5) = 10⁸, niet 10¹⁵.", "2 · 4 = 8, niet 6. (Optellen ipv vermenigvuldigen).", "Bij vermenigvuldigen tellen we exponenten op (positief blijft positief)."],
+        wrongHints: [null, "Machten van 10 vermenigvuldig je door exponenten op te tellen, niet te vermenigvuldigen.", "Wat is 2 keer 4? Optellen en vermenigvuldigen geven niet hetzelfde antwoord.", "Bij vermenigvuldigen tellen we exponenten op — het teken blijft hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Getallen + machten apart", tekst: "(2·10³)·(4·10⁵) = (2·4)·(10³·10⁵) = 8·10⁸." }],
           woorden: [{ woord: "associatief", uitleg: "Mag herschikken bij vermenigvuldiging." }],
@@ -584,7 +584,7 @@ const steps = [
         q: "*Schrijf 1/16 als macht van 2.*",
         options: ["2⁻⁴", "-2⁴", "2⁻²", "2¹⁶"],
         answer: 0,
-        wrongHints: [null, "Een negatief teken vóór 2 maakt het getal -16, niet 1/16.", "2⁻² = 1/4, niet 1/16.", "2¹⁶ = 65536, niet 1/16. We zoeken een negatieve exponent."],
+        wrongHints: [null, "Een negatief teken vóór het getal maakt het negatief, niet een breuk. Hoe schrijf je 1/16 als macht van 2?", "Schrijf 4 als macht van 2 — en wat betekent dat dan voor 1/4?", "Veel te groot — welke macht van 2 geeft 16, en hoe gebruik je dat om 1/16 te schrijven?"],
         uitlegPad: {
           stappen: [{ titel: "16 = 2⁴", tekst: "16 = 2⁴ (kennis kwadratentabel). Dus 1/16 = 1/2⁴ = 2⁻⁴." }],
           woorden: [{ woord: "1/a^n = a^-n", uitleg: "Reciproke = negatieve exp." }],

@@ -425,7 +425,7 @@ const steps = [
         answer: 3,
         wrongHints: [
           "BV = juist NIET privé aansprakelijk (eigenaars beschermd).",
-          "Eenmanszaak = 1 eigenaar, hier zijn meerdere leerlingen vennoten.",
+          "Een eenmanszaak heeft maar één eigenaar — hoeveel leerlingen doen er mee?",
           "NV = juist NIET privé aansprakelijk + grote organisatie.",
           null,
         ],

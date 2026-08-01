@@ -228,7 +228,7 @@ const steps = [
         q: "Wat zegt **correlatiecoëfficiënt r = 0,9**?",
         options: ["Sterke positieve samenhang","Sterk negatief","Geen verband","Onmogelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — positief is +, negatief is −.", "Niet — |r|=0,9 = sterk.", "Wel mogelijk, r tussen -1 en +1."],
+        wrongHints: [null, "Niet — positief verband heeft een pluswaarde, negatief verband een minwaarde.", "Niet — een waarde dicht bij 1 of -1 betekent een sterk verband, niet geen verband.", "Wel mogelijk — r ligt altijd tussen -1 en +1."],
         uitlegPad: {
           stappen: [{ titel: "r-interpretatie", tekst: "r = 0,9 → bijna +1 → **zeer sterke positieve** samenhang. Als x stijgt, stijgt y mee. Punten liggen dichtbij stijgende lijn." }],
           theorie: "Schaal: |r|>0,7 sterk, 0,3-0,7 matig, <0,3 zwak. Teken (+/-) bepaalt richting.",
@@ -251,7 +251,7 @@ const steps = [
         q: "Regressielijn **y = 2x + 5**. Wat is y als **x = 10**?",
         options: ["25","20","15","30"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeten +5 op te tellen.", "Niet — alleen +5 zonder 2x.", "Te veel — 2·12 + 5 = 29."],
+        wrongHints: [null, "Niet — je hebt de +5 vergeten. Vul x in en voer beide termen uit.", "Niet — je hebt alleen +5 gebruikt zonder de 2x-term.", "Te veel — welke x is er ingevuld? Controleer de berekening stap voor stap."],
         uitlegPad: {
           stappen: [{ titel: "Substitueren", tekst: "y = 2·10 + 5 = 20 + 5 = **25**." }],
           theorie: "Lineaire vergelijking: y = ax + b. a = helling, b = y-snijpunt.",

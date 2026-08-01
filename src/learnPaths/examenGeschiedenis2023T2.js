@@ -128,7 +128,7 @@ const steps = [
         "het Verdrag van Versailles",
       ],
       answer: 0,
-      wrongHints: [null, "Kristallnacht = nov 1938, jodenvervolging-pogrom in Duitsland. Niet over Britse appeasement of Tsjechië.", "Weimar Republiek = 1919, gesticht na WO1. Te vroeg + niet over Hitler-Brittannië.", "Verdrag van Versailles = 1919 na WO1. Niet over Tsjechië 1938."],
+      wrongHints: [null, "De Kristallnacht was een antisemitische actie in Duitsland zelf — dit gaat over een diplomatieke bijeenkomst met Brittannië en Tsjechië.", "De Weimar Republiek werd vlak na de Eerste Wereldoorlog opgericht — dat is een andere tijd en context dan Tsjechië 1938.", "Het Verdrag van Versailles werd gesloten na de Eerste Wereldoorlog — wat is het verband met de Britse politiek ten opzichte van Hitler?"],
       explanation: "**Conferentie van München** (sept 1938): Chamberlain (UK) + Daladier (FR) + Hitler + Mussolini. Britten en Fransen stonden Hitler toe Sudetenland (Tsjechië) te annexeren — appeasement = toegeven om oorlog te voorkomen. Achteraf desastreus (Hitler annexeerde rest Tsjechië 1939). De spotprent toont de Britse 'tamme leeuw' die toegeeft aan Hitler-de-kapper.",
       examenBron: BRON_LABEL(21),
       bronLink: BRON_LINK,
