@@ -36,7 +36,7 @@ bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
-          De premium-laag voor ouders en verzorgers — in aanbouw. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
+          De premium-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>
@@ -44,7 +44,7 @@ bèta
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {FEATURES.map((f) => {
+          {[...FEATURES].sort((a, b) => a.nr - b.nr).map((f) => {
             const klaar = f.status === "klaar";
             const clickable = klaar && !!f.page;
             return (

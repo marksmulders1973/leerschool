@@ -15,6 +15,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
 import { shuffleOptiesSeeded } from "../../shared/shuffleOpties.js";
+import { FamilieMeer } from "../familie/familieUi.jsx";
 
 // Presets = een handvol veelvoorkomende struikelonderwerpen zodat Mark kan
 // spelen zonder pad-id's te kennen. De trigger (later) deeplinkt met ?pad=<id>.
@@ -137,7 +138,7 @@ export default function OefenboekjePagina({ setPage }) {
 
       {/* ── Bediening (niet mee-printen) ── */}
       <div className="boekje-noprint" style={{ maxWidth: 760, margin: "0 auto", padding: "18px 16px 8px" }}>
-        <button onClick={() => setPage && setPage("home")} style={linkBtn}>← terug</button>
+        <button onClick={() => setPage && setPage("familie")} style={linkBtn}>← terug</button>
         <div style={{ marginTop: 8, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
             📘 Oefenboekje op maat
@@ -261,6 +262,7 @@ bèta
           </div>
         </div>
       )}
+      <FamilieMeer setPage={setPage} huidig="oefenboekje" />
     </div>
   );
 }

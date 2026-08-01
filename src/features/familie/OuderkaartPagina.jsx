@@ -15,6 +15,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
+import { FamilieMeer } from "./familieUi.jsx";
 
 // Concepten die ouders het lastigst vinden om zélf uit te leggen.
 const PRESETS = [
@@ -265,6 +266,7 @@ bèta
           </div>
         </div>
       )}
+      <FamilieMeer setPage={setPage} huidig="ouderkaart" />
     </div>
   );
 }

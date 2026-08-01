@@ -6,6 +6,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { loadMasteryForPlayer } from "../mastery/mastery.js";
 import { berekenParaatheid, STATUS, DEMO_RECORDS } from "./paraatheid.js";
+import { FamilieMeer } from "./familieUi.jsx";
 
 function huidigeSpeler() {
   try {
@@ -136,6 +137,7 @@ export default function Paraatheidsmeter({ setPage, playerName = null, userId = 
           </>
         )}
       </div>
+      <FamilieMeer setPage={setPage} huidig="paraatheid" />
     </div>
   );
 }

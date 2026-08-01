@@ -7,22 +7,17 @@
 // Rustige, geruststellende toon (concurrenten maken bang — wij stellen gerust).
 // GEEN AI-plumbing hier; puur uitleg. Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
+import { FamilieKop, FamilieMeer } from "./familieUi.jsx";
+
 export default function VonkPagina({ setPage }) {
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-bg, #0b1020)", color: "var(--color-text, #e8edf5)" }}>
       <div style={{ maxWidth: 680, margin: "0 auto", padding: "18px 16px 60px" }}>
-        <button onClick={() => setPage && setPage("familie")} style={linkBtn}>← terug</button>
-
-        <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 900, margin: 0 }}>🐉 Vonk — de bijlesdocent in je broekzak</h1>
-          <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>bèta</span>
-        </div>
-
-        <p style={{ color: "var(--color-text-muted, #cbd3e6)", fontSize: 15, lineHeight: 1.65, marginTop: 10 }}>
-          Vonk is de rustige AI-bijlesdocent van je kind. Loopt je kind vast op een som of een tekst, dan vraagt het
-          gewoon <i>"ik snap het niet"</i> — en Vonk legt het stap voor stap uit, op het niveau van je kind. Precies
-          op het moment dat het vastloopt, zonder oordeel.
-        </p>
+        <FamilieKop
+          setPage={setPage}
+          titel="🐉 Vonk — de bijlesdocent in je broekzak"
+          intro={<>Vonk is de rustige AI-bijlesdocent van je kind. Loopt je kind vast op een som of een tekst, dan vraagt het gewoon <i>"ik snap het niet"</i> — en Vonk legt het stap voor stap uit, op het niveau van je kind. Precies op het moment dat het vastloopt, zonder oordeel.</>}
+        />
 
         {/* Prijs-anker */}
         <div style={{ background: "rgba(105,240,174,0.07)", border: "1px solid rgba(105,240,174,0.4)", borderRadius: 12, padding: "14px 16px", margin: "18px 0" }}>
@@ -57,8 +52,7 @@ export default function VonkPagina({ setPage }) {
           het Familie-abonnement; een klein gratis-tegoed blijft voor iedereen.
         </div>
       </div>
+      <FamilieMeer setPage={setPage} huidig="vonk" />
     </div>
   );
 }
-
-const linkBtn = { background: "none", border: "none", color: "var(--color-accent, #42a5f5)", cursor: "pointer", fontSize: 14, fontWeight: 700, padding: 0 };

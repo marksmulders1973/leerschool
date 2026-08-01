@@ -13,6 +13,7 @@
 // ══════════════════════════════════════════════════════════════════════
 import { useState, useMemo } from "react";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
+import { FamilieMeer } from "./familieUi.jsx";
 
 const VAKKEN = {
   rekenen: { emoji: "🔢", label: "Rekenen", onderwerpen: ["Breuken", "Procenten", "Verhoudingen", "Meten & schaal", "Kommagetallen", "Tafels"] },
@@ -154,6 +155,7 @@ export default function WeekschemaPagina({ setPage }) {
           </div>
         </div>
       </div>
+      <FamilieMeer setPage={setPage} huidig="weekschema" />
     </div>
   );
 }

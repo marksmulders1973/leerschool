@@ -15,6 +15,7 @@
 // ══════════════════════════════════════════════════════════════════════
 import { useState } from "react";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
+import { FamilieMeer } from "./familieUi.jsx";
 
 // Snel-kiezers zodat Mark kan spelen zonder te typen. De chip-tekst (zonder
 // emoji) wordt het onderwerp op het diploma. De echte trigger stuurt ?onderwerp=.
@@ -193,6 +194,7 @@ bèta
           </div>
         </div>
       </div>
+      <FamilieMeer setPage={setPage} huidig="diploma" />
     </div>
   );
 }
