@@ -52,6 +52,8 @@ export const PAGE_TO_PATH = {
   diploma: "/diploma",
   // Ouderkaart "zo leg je 't uit" — feature 3, geheim (alleen via ?familie=1 of admin).
   ouderkaart: "/ouderkaart",
+  // Koelkast-weekschema — feature 5, bèta-live.
+  weekschema: "/weekschema",
   // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
   brugklas: "/brugklas",
   // Branded dagkaart-generator voor social (Mark 3 jul)

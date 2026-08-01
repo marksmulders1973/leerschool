@@ -14,7 +14,7 @@ const FEATURES = [
   { nr: 3.1, emoji: "👪", titel: "Kaart voor thuis — zo leg je 't uit", tekst: "Een spiekbriefje voor de ouder of verzorger: hoe je een onderwerp in gewone woorden uitlegt aan je kind.", status: "klaar", page: "ouderkaart" },
   { nr: 2, emoji: "🐉", titel: "Vonk onbeperkt", tekst: "De AI-bijlesdocent altijd beschikbaar — €37/uur bijles vs €39/jaar.", status: "bouw" },
   { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Niet '50% op breuken' maar 'focus deze week op breuken — hier is het boekje'.", status: "bouw" },
-  { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema, automatisch uit de zwakke plekken gebouwd.", status: "bouw" },
+  { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema van een kwartier per dag — print en hang op de koelkast.", status: "klaar", page: "weekschema" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen (7 dagen op rij, onderwerp gehaald).", status: "bouw" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Per-kind-dashboard + gezinsoverzicht op één abonnement.", status: "bouw" },
   { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, en jij trots.", status: "klaar", page: "diploma" },
