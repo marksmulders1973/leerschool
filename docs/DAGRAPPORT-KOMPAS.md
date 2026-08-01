@@ -10,7 +10,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 
 | # | Pijler | Af | Trend | Wat er nog moet |
 |---|--------|-----|-------|-----------------|
-| 1 | **Doorstroomtoets oefenen** — rekenen/taal/studievaardigheden g6-8 (de reden dat we bestaan) | **90%** | ↑ | wrongHints net schoon (v155); enkele concept-paden nog dun; examenpaden niet elk vak compleet |
+| 1 | **Doorstroomtoets oefenen** — rekenen/taal/studievaardigheden g6-8 (de reden dat we bestaan) | **99%** | ↑ | 1 aug: **alle 28 dunne Cito-kern-paden gevuld naar ≥26 checks** (rekenen/taal/begrijpend-lezen/studievaardigheden, v179-186; ~270 nieuwe checks via 7 agents + wrongHints-lint 0 + build groen). Resteert: examenpaden niet elk vak compleet (= pijler 4, wacht op authentieke bronnen) |
 | 2 | **Didactische USP-loop** — examenvraag → "begrijp je dit?" → uitlegPad (3 niveaus) → leerpad → terug | **85%** | = | voorkennisKeten-UI (fase 2/3) niet overal uitgerold |
 | 3 | **App werkt & concurreert** — geen kapotte flows, onboarding, kindtaal | **80%** | ↑ | DK1-DK3 dode-knoppen/moeilijke-woorden-jacht; /leren layout-shift; soft-404 |
 | 4 | **Authentieke examens + PDF-archief** (USP-banner) | **80%** | = | gaten: wiskunde/Duits-examens; per-vak dekking ongelijk |

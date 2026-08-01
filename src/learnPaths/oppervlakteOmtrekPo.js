@@ -64,7 +64,7 @@ const steps = [
         q: "Je wilt een **tuin omheinen**. De tuin is **10 m lang** en **4 m breed**. Hoeveel meter hek heb je nodig?",
         options: ["28 m", "14 m", "40 m", "40 m²"],
         answer: 0,
-        wrongHints: [null, "Je telt maar 2 zijden op — een tuin heeft 4 zijden.", "40 = 10 × 4 = oppervlakte, niet de rand. Hek gaat langs de rand.", "Hek meet je in meters, niet m²."],
+        wrongHints: [null, "Je telt maar 2 zijden op — een tuin heeft 4 zijden.", "Dat is de oppervlakte (lengte × breedte), niet de rand. Een hek gaat rondom.", "Hek meet je in meters, niet m²."],
         uitlegPad: compact(
           "Hek = omtrek = 2×(L+B) = 2×(10+4) = 2×14 = 28 m.",
           { basis: "Omtrek 2(10+4) = 28 m.", simpeler: "10+4+10+4 = 28 m hek.", nogSimpeler: "28 m" },
@@ -75,7 +75,7 @@ const steps = [
         q: "Je legt **gras** in een rechthoekig veldje van **5 m × 3 m**. Hoeveel m² gras heb je nodig?",
         options: ["15 m²", "8 m²", "16 m²", "15 m"],
         answer: 0,
-        wrongHints: [null, "Optellen geeft de omtrek — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (2×(5+3)=16 m) — maar voor gras tel je het vlak.", "Eenheid moet m² zijn."],
+        wrongHints: [null, "Optellen geeft de omtrek — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (de rand) — maar voor gras heb je het vlak binnenin nodig.", "Eenheid moet m² zijn."],
         uitlegPad: compact(
           "Gras = oppervlakte = L×B = 5×3 = 15 m².",
           { basis: "5 × 3 = 15 m².", simpeler: "Gras = vlak = 5×3.", nogSimpeler: "15" },
@@ -129,7 +129,7 @@ const steps = [
         q: "Een rechthoek heeft een omtrek van **40 cm** en een lengte van **12 cm**. Hoe lang is de **breedte**?",
         options: ["8 cm", "16 cm", "28 cm", "4 cm"],
         answer: 0,
-        wrongHints: [null, "Controleer: 2×(12+16)=56, niet 40.", "40 − 12 = 28 klopt niet want je trekt maar 1 zijde af van de hele omtrek.", "Probeer de formule O = 2(L+B) en reken B terug."],
+        wrongHints: [null, "Reken de omtrek na met twee keer (lengte + breedte).", "Je trekt maar één zijde af van de héle omtrek — klopt dat wel?", "Gebruik de omtrek-formule (twee keer lengte plus breedte) en reken de breedte terug."],
         explanation: "O = 2(L+B) → 40 = 2(12+B) → 20 = 12+B → B = **8 cm**. Check: 2(12+8)=40 ✓.",
         uitlegPad: compact(
           "O=2(L+B) → 40=2(12+B) → 20=12+B → B=8 cm.",
@@ -196,7 +196,7 @@ const steps = [
         q: "Een vierkant heeft een oppervlakte van **64 cm²**. Hoe lang is **één zijde**?",
         options: ["8 cm", "16 cm", "32 cm", "4 cm"],
         answer: 0,
-        wrongHints: [null, "Dat is de halve omtrek — welke formule geeft oppervlakte van een vierkant?", "Te groot: 32² = 1024, niet 64.", "4² = 16, niet 64."],
+        wrongHints: [null, "Dat is de halve omtrek — welke formule geeft oppervlakte van een vierkant?", "Dat is veel te groot — je moet juist terugrekenen naar de zijde, niet nog eens kwadrateren.", "Dat is te klein — zoek het getal dat maal zichzelf de oppervlakte geeft."],
         explanation: "Vierkant opp. = z². Zijde = √64 = **8 cm**. Check: 8×8 = 64 ✓.",
         uitlegPad: compact(
           "Opp=z². 64=z². z=√64=8 cm.",
@@ -208,7 +208,7 @@ const steps = [
         q: "Een rechthoek heeft een oppervlakte van **48 m²** en een breedte van **6 m**. Hoe lang is de **lengte**?",
         options: ["8 m", "42 m", "4 m", "288 m"],
         answer: 0,
-        wrongHints: [null, "Dat is 48 − 6 — voor oppervlakte geldt een andere bewerking.", "Controleer: 4×6=24, niet 48.", "Dat is 48×6 — je deelt juist, niet vermenigvuldigt."],
+        wrongHints: [null, "Dat is 48 − 6 — voor oppervlakte geldt een andere bewerking.", "Let op: bij een driehoek deel je (basis × hoogte) nog door 2.", "Dat is 48×6 — je deelt juist, niet vermenigvuldigt."],
         explanation: "Opp = L × B → L = Opp ÷ B = 48 ÷ 6 = **8 m**. Check: 8×6=48 ✓.",
         uitlegPad: compact(
           "L = Opp ÷ B = 48 ÷ 6 = 8 m.",

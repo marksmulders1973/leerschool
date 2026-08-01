@@ -105,7 +105,7 @@ const steps = [
         q: "Hoeveel **ons** is **1 kg**?",
         options: ["10 ons", "100 ons", "2 ons", "1000 ons"],
         answer: 0,
-        wrongHints: [null, "100 ons zou 10 kg zijn (100 × 100 g).", "2 ons = 200 g — te weinig voor 1 kg.", "1000 ons = 100 kg — veel te zwaar."],
+        wrongHints: [null, "100 ons zou 10 kg zijn (100 × 100 g).", "Eén ons is 100 gram. Hoeveel ons passen er dan in 1 kilo?", "Dat is veel te zwaar — reken nog eens hoeveel ons in één kilo gaan."],
         uitlegPad: {
           stappen: [{ titel: "1 kg = 10 ons", tekst: "1 ons = 100 g, en 1 kg = 1000 g. Dus 1000 ÷ 100 = 10 ons." }],
           niveaus: {
@@ -339,7 +339,7 @@ const steps = [
         q: "Hoeveel seconden is **3 minuten**?",
         options: ["180 s", "30 s", "300 s", "63 s"],
         answer: 0,
-        wrongHints: [null, "Dat is te weinig — 1 minuut is al 60 seconden.", "Dat zou 5 minuten zijn (5 × 60 = 300).", "3 minuten en 3 seconden optellen klopt niet."],
+        wrongHints: [null, "Dat is te weinig — 1 minuut is al 60 seconden.", "Dat hoort bij een ander aantal minuten — reken terug met 60 seconden per minuut.", "3 minuten en 3 seconden optellen klopt niet."],
         uitlegPad: {
           stappen: [{ titel: "× 60", tekst: "1 min = 60 s. 3 min = 3 × 60 = 180 s." }],
           niveaus: {
@@ -440,7 +440,7 @@ const steps = [
         q: "Een school begint om **8:30** en duurt tot **14:15**. Hoeveel uur en minuten is dat?",
         options: ["5 uur 45 min", "5 uur 15 min", "6 uur 45 min", "5 uur 55 min"],
         answer: 0,
-        wrongHints: [null, "Kijk nog eens naar de minuten: 15 − 30 gaat niet zomaar — je moet het uur erbij halen.", "Dat zou tot 15:15 zijn, niet 14:15.", "Check de minuten: 15 − 30 = −15, dus een uur eraf lenen."],
+        wrongHints: [null, "Kijk nog eens naar de minuten: 15 − 30 gaat niet zomaar — je moet het uur erbij halen.", "Dat zou tot 15:15 zijn, niet 14:15.", "De minuten komen te kort — leen dan een heel uur (60 minuten) om verder te rekenen."],
         uitlegPad: {
           stappen: [
             { titel: "Minuten eerst", tekst: "Van 8:30 naar 9:00 = 30 min. Van 9:00 naar 14:15 = 5 uur 15 min. Samen: 5 uur 45 min." },

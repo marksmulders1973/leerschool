@@ -185,7 +185,7 @@ const steps = [
         q: "Wat is 0,07 in procent?",
         options: ["7%", "70%", "0,7%", "700%"],
         answer: 0,
-        wrongHints: [null, "Schuif de komma 2 plaatsen naar rechts: 0,07 → 7, niet 70.", "Veel te klein.", "Dat is meer dan het geheel."],
+        wrongHints: [null, "Schuif de komma twee plaatsen naar rechts en let goed op de nul.", "Veel te klein.", "Dat is meer dan het geheel."],
         uitlegPad: {
           stappen: [{ titel: "× 100", tekst: "0,07 × 100 = 7%. De komma 2 naar rechts: 0,07 → 7." }],
           niveaus: {
@@ -395,7 +395,7 @@ const steps = [
         q: "Op een school doet 0,6 van de leerlingen aan sport. Hoeveel procent is dat?",
         options: ["60%", "6%", "0,6%", "600%"],
         answer: 0,
-        wrongHints: [null, "Schuif de komma 2 naar rechts: 0,6 → 60.", "Veel te klein — komma 2 naar rechts.", "Dat is meer dan het geheel."],
+        wrongHints: [null, "Van kommagetal naar procent: schuif de komma twee plaatsen naar rechts.", "Veel te klein — komma 2 naar rechts.", "Dat is meer dan het geheel."],
         uitlegPad: {
           stappen: [{ titel: "× 100", tekst: "0,6 × 100 = 60%." }],
           niveaus: {
@@ -423,7 +423,7 @@ const steps = [
         q: "Rangschik van klein naar groot: 0,2 — ¼ — 15%",
         options: ["15% — 0,2 — ¼", "0,2 — 15% — ¼", "¼ — 0,2 — 15%", "ze zijn allemaal gelijk"],
         answer: 0,
-        wrongHints: [null, "Reken alle drie om naar procent en vergelijk de getallen.", "Zet alles om naar procent en bekijk de volgorde opnieuw.", "Reken: 0,2 = 20%, ¼ = 25%, 15% = 15%. Zijn die gelijk?"],
+        wrongHints: [null, "Reken alle drie om naar procent en vergelijk de getallen.", "Zet alles om naar procent en bekijk de volgorde opnieuw.", "Zet ze eerst allemaal om naar procenten en vergelijk ze dan."],
         uitlegPad: {
           stappen: [{ titel: "Alles naar procent", tekst: "0,2 = 20%, ¼ = 25%, 15% = 15%. Van klein naar groot: 15% — 20% — 25%." }],
           niveaus: {

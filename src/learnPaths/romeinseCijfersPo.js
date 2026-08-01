@@ -395,7 +395,7 @@ const steps = [
         q: "Op een gebouw staat **MCMXCIX**. Dat is het bouwjaar. Welk jaar is dat?",
         options: ["1999", "1899", "2009", "1909"],
         answer: 0,
-        wrongHints: [null, "Kijk goed: M staat voor 1000, dan CM = 900, dan XC = 90, dan IX = 9.", "Reken de stukjes één voor één uit.", "CM is 900, niet 800."],
+        wrongHints: [null, "Splits het van links naar rechts op. Let op: een kleiner teken vóór een groter teken betekent aftrekken (zoals CM en IX).", "Reken de stukjes één voor één uit.", "CM is 900, niet 800."],
         uitlegPad: {
           stappen: [{ titel: "Stukje voor stukje", tekst: "M (1000) + CM (900) + XC (90) + IX (9) = 1.999." }],
           niveaus: {
