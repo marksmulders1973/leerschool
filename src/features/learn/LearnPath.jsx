@@ -30,6 +30,7 @@ import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import OuderkaartTrigger from "../familie/OuderkaartTrigger.jsx";
 import OefenboekjeTrigger from "../oefenboekje/OefenboekjeTrigger.jsx";
+import LegUit from "../familie/LegUit.jsx";
 import TrotsMoment, { trotsVoorResultaat } from "../familie/TrotsMoment.jsx";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
@@ -805,6 +806,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             nextPath={nextPath}
             onPickPath={onPickPath}
             examRefs={examRefs}
+            authUser={authUser}
           />
           {/* Familie (bèta): trots-moment bij een mijlpaal (foutloos in één keer). */}
           {(() => {
@@ -823,6 +825,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             conceptTitel={path.title}
             fouten={sess.tries > 0 ? sess.tries - sess.correct : 0}
           />
+          {/* Familie (bèta): "Leg het uit" — Feynman (typen + milde AI-check). Niet bij examens. */}
+          {!(path.id || "").startsWith("examen-") && (
+            <LegUit
+              conceptTitel={path.title}
+              kernpunten={(path.chapters || []).map((c) => c.title).filter(Boolean).join(", ") || path.title}
+              authUser={authUser}
+            />
+          )}
           <GratisLesmateriaal source={`leerpad-klaar-${path.subject || "leerpad"}`} compact />
         </div>
       </div>
@@ -2152,7 +2162,7 @@ function ConfettiBurst() {
   );
 }
 
-function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs }) {
+function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs, authUser = null }) {
   // A6: toon score + suggestie volgend examen-/leerpad.
   const pct = score?.total > 0 ? Math.round((score.correct / score.total) * 100) : null;
   const isExamen = (path.id || "").startsWith("examen-");

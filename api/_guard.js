@@ -102,6 +102,7 @@ const DEFAULT_LIMITS = {
   "buddy-chat": 3000,   // Haiku ~€0,005/call → max ~€15/dag (kindveilig park-maatje)
   "generate-questions": 500,
   "preview-topic": 1000,
+  "leg-uit": 2000,      // Haiku ~€0,005/call → max ~€10/dag ("leg het uit"-Feynman)
 };
 
 export async function dailyQuotaCheck(endpoint) {
