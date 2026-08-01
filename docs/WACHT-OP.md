@@ -16,8 +16,8 @@
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 | Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
 
-## 🔒 Geheim bouwproject — Familie-abonnement (elke sessie 1 dagrapport-regel)
-*Mark 31 jul: bouw de 8 Familie-haken geheim af (~1 mnd), meld voortgang in élk dagrapport. Achter `familiePreviewVisible()` — `?familie=1` of admin. Bron-memory: `project_studiebol_familie_tier_features` + `idea_studiebol_premium_printbare_hulp`.*
+## ✨ Familie-abonnement — BÈTA-LIVE (elke sessie 1 dagrapport-regel)
+*Mark 1 aug: niet meer geheim. **Deel voor deel bouwen; per feature bij ~80% LIVE** (bèta-badge); grote coherentie-slag later in één Fable-pass. Vindbaar in de app via "✨ Familie-extra's (bèta)" op home + StudentHome (geen `?familie=1` meer nodig). Onafgemaakte features = "binnenkort"-tegels met beschrijving. Bron-memory: `project_studiebol_familie_tier_features` + `idea_studiebol_premium_printbare_hulp`.*
 
 | Feature | Status | Geheime URL |
 |---|---|---|
