@@ -29,6 +29,7 @@ import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import OuderkaartTrigger from "../familie/OuderkaartTrigger.jsx";
+import OefenboekjeTrigger from "../oefenboekje/OefenboekjeTrigger.jsx";
 import TrotsMoment, { trotsVoorResultaat } from "../familie/TrotsMoment.jsx";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
@@ -812,6 +813,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           })()}
           {/* Familie (bèta): zo-help-je-thuis-kaart bij ≥2 fout. */}
           <OuderkaartTrigger
+            conceptId={path.id}
+            conceptTitel={path.title}
+            fouten={sess.tries > 0 ? sess.tries - sess.correct : 0}
+          />
+          {/* Familie (bèta): printbaar oefenboekje op maat bij ≥3 fout (escalatie). */}
+          <OefenboekjeTrigger
             conceptId={path.id}
             conceptTitel={path.title}
             fouten={sess.tries > 0 ? sess.tries - sess.correct : 0}
