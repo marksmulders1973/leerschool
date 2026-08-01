@@ -9,7 +9,10 @@ import { join, relative, sep } from "node:path";
 
 const BASE = "https://leerkwartier.app";
 const PUBLIC = new URL("../public/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
-const TODAY = "2026-06-04"; // lastmod; handmatig bijwerken bij grote contentronde
+// lastmod = builddatum (dynamisch). Zo ziet Google altijd verse content i.p.v.
+// een bevroren datum die stagnatie suggereert. Overschrijf met SITEMAP_DATE
+// (YYYY-MM-DD) als je een vaste datum wilt forceren.
+const TODAY = process.env.SITEMAP_DATE || new Date().toISOString().slice(0, 10);
 
 // Top-level bestanden die GEEN vindbare contentpagina zijn → uitsluiten.
 const EXCLUDE_TOPLEVEL = new Set([

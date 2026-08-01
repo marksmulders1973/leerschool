@@ -17,7 +17,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 5 | **Retentie-machine** — weekmail, ouder-rapport, Kwartiercheck, push, streak | **75%** | = | ouder-kind-koppelingen nog ~1; push-abonnees enkele; weekmail 2.0 (Familie) |
 | 6 | **Kwartiercheck** (diagnostische lead-magnet) | **80%** | = | promotie/deel-actie breder inzetten |
 | 7 | **Park — binden + leren** ("alles benoembaar") | **70%** | = | bewijzen dat park het leren vóedt i.p.v. kannibaliseert |
-| 8 | **Familie-abonnement / geld** (paywall gebouwd, UIT tot ~jan 2027) | **40%** | ↑ | 3 van 8 haken klaar (paraatheid/oefenboekje/diploma); 5 te bouwen |
+| 8 | **Familie-abonnement / geld** (paywall gebouwd, UIT tot ~jan 2027) | **85%** | ↑ | ~~40% was meetfout~~ — **9/9 haken bèta-live** (routes + echte componenten geverifieerd 1 aug); rest 15% = coherentie/Fable-pass + auto-triggers |
 | 9 | **Content-breedte buiten Cito-kern** (VO/havo/vwo) | **60%** | = | lagere prio; bestaande paden opfrissen |
 | 10 | **SEO / AI-vindbaarheid** ("Doorstroomtoets-koning") | **55%** | ↑ | ChatGPT kent de app; off-page/backlinks + pre-rendering nog zwak |
 
