@@ -114,6 +114,35 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         },
       },
       {
+        q: "Op welke dag is de bibliotheek op maandagavond open tot 20.00 uur?",
+        options: [
+          "Op geen enkele dag — op maandag is de bibliotheek alleen open tot 17.00 uur",
+          "Maandag",
+          "Vrijdag",
+          "Zaterdag",
+        ],
+        answer: 0,
+        evidence: "Maandag: 13.00 – 17.00 uur",
+        wrongHints: [
+          null,
+          "Kijk precies op de maandag-regel: tot hoe laat is de bibliotheek dan open?",
+          "Vrijdag is inderdaad tot 20.00 uur open — maar de vraag gaat over maandagavond.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de maandag-regel", tekst: "De maandag-regel in de lijst: '13.00 – 17.00 uur'. Op maandag sluit de bibliotheek dus om 17.00 uur." },
+            { titel: "Vergelijk met de vraag", tekst: "De vraag vraagt of de bibliotheek op maandagavond tot 20.00 uur open is. 17.00 uur is niet 20.00 uur." },
+            { titel: "Conclusie", tekst: "Op maandag is de bibliotheek gesloten voor 20.00 uur — die tijd geldt voor vrijdag. Niet voor maandag." },
+          ],
+          niveaus: {
+            basis: "Kijk op de maandag-regel: sluit die om 17.00 of om 20.00 uur?",
+            simpeler: "Op welke dag staat er '20.00 uur' na het streepje? Is dat maandag?",
+            nogSimpeler: "Zoek de maandag-regel en lees de sluitingstijd. Is dat 17.00 of 20.00 uur?",
+          },
+        },
+      },
+      {
         q: "Nina wil op zaterdagmiddag om 14.00 uur een boek halen. Kan dat?",
         options: [
           "Nee, op zaterdag is de bibliotheek 's middags al dicht",
@@ -149,6 +178,34 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
             basis: "Kijk op de zaterdag-regel: tot hoe laat is de bibliotheek open? Is dat vóór of ná 14.00 uur?",
             simpeler: "Zoek de regel van zaterdag. De tijd ná het streepje is de sluitingstijd. Komt Nina daarvóór of daarna?",
             nogSimpeler: "Lees alleen de zaterdag-regel. Is de bibliotheek om 14.00 uur ('s middags om 2 uur) daar nog open?",
+          },
+        },
+      },
+      {
+        q: "Je zoekt de regel over eet-openingstijden van een restaurant in een lijst. Welke stap is altijd de eerste bij kruispunt-lezen?",
+        options: [
+          "Zoek de rij die bij jouw vraag hoort",
+          "Lees de hele lijst van boven naar beneden",
+          "Kijk eerst in de tekst boven de lijst",
+          "Pak het eerste getal dat je ziet",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zo verlies je tijd. Je hebt maar één hokje nodig — hoe vind je dat het snelst?",
+          "De tekst lees je ook, maar de eerste stap bij een tabel is gericht zoeken in de tabel zelf.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Denk aan het stappenplan", tekst: "Kruispunt-lezen: stap 1 = zoek de goede rij. Stap 2 = zoek het goede gegeven. Stap 3 = lees het kruispunt." },
+            { titel: "Waarom eerst de rij?", tekst: "De rij vertelt je wáár in de tabel je moet zijn. Zonder de goede rij lees je misschien de verkeerde dag, het verkeerde kaartje of het verkeerde uur." },
+            { titel: "Dan pas lezen", tekst: "Heb je de rij? Dan lees je alleen het stukje dat je nodig hebt — niet de hele tabel." },
+          ],
+          niveaus: {
+            basis: "Denk aan de bibliotheek-oefening: wat deed je als allereerste voordat je de openingstijd aflas?",
+            simpeler: "Je hebt maar één hokje nodig. Hoe zorg je dat je meteen het juiste hokje pakt?",
+            nogSimpeler: "Bij het zoeken in een tabel: begin je bij de goede rij of bij een willekeurig getal?",
           },
         },
       },
@@ -190,6 +247,54 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
             basis: "Een prijs is een precies getal. Welk onderdeel is gemaakt om precieze getallen overzichtelijk te tonen?",
             simpeler: "Denk aan de taakverdeling: de tekst vertelt regels, de lijst toont getallen. Een prijs is een getal — waar kijk je dan?",
             nogSimpeler: "Waar staan bedragen netjes onder elkaar: in de lopende zinnen of in het overzicht met streepjes?",
+          },
+        },
+      },
+      {
+        q: "Kijk naar de openingstijden van Bibliotheek De Boekenberg. Hoe laat sluit de bibliotheek op vrijdag?",
+        options: ["Om 20.00 uur", "Om 13.00 uur", "Om 10.00 uur", "Om 17.00 uur"],
+        answer: 0,
+        evidence: "Vrijdag: 13.00 – 20.00 uur",
+        wrongHints: [
+          null,
+          "Dat is de openingstijd op vrijdag, niet de sluitingstijd. Kijk naar het getal ná het streepje.",
+          "Om 10.00 uur is de openingstijd van een andere dag. Zoek eerst de vrijdag-regel.",
+          "17.00 uur is de sluitingstijd van een andere dag — zoek precies de vrijdag-regel.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de rij", tekst: "De vraag gaat over vrijdag. Zoek in de lijst de vrijdag-regel." },
+            { titel: "Sluitingstijd staat ná het streepje", tekst: "Op de vrijdag-regel staat: '13.00 – 20.00 uur'. Vóór het streepje staat de openingstijd, ná het streepje de sluitingstijd." },
+            { titel: "Lees het antwoord", tekst: "Het getal ná het streepje op de vrijdag-regel is 20.00 uur. Dat is de sluitingstijd." },
+          ],
+          niveaus: {
+            basis: "Kijk op de vrijdag-regel: het getal ná het streepje is de sluitingstijd.",
+            simpeler: "Vrijdag: 13.00 – 20.00 uur. Wat staat er ná het streepje?",
+            nogSimpeler: "Op welke tijd gaat de bibliotheek op vrijdag dicht: het eerste of het tweede getal?",
+          },
+        },
+      },
+      {
+        q: "Op welke dag is de bibliotheek het langst open?",
+        options: ["Vrijdag (7 uur open)", "Woensdag (7 uur open)", "Maandag (4 uur open)", "Zaterdag (3 uur open)"],
+        answer: 0,
+        evidence: "Vrijdag: 13.00 – 20.00 uur",
+        wrongHints: [
+          null,
+          "Woensdag is ook lang open — maar is het even lang als vrijdag? Bereken het voor beide.",
+          null,
+          "Zaterdag heeft de kortste openingstijd. Kijk naar de langste tijdspanne.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bereken de openingsduur per dag", tekst: "Trek de openingstijd af van de sluitingstijd: Maandag: 17−13=4 uur. Woensdag: 17−10=7 uur. Vrijdag: 20−13=7 uur. Zaterdag: 13−10=3 uur." },
+            { titel: "Vergelijk", tekst: "Vrijdag en woensdag zijn allebei 7 uur open. Maar de vraag zegt dat vrijdag 7 uur open is — en vrijdag is de langste, samen met woensdag." },
+            { titel: "Kies het antwoord", tekst: "Vrijdag is het antwoord, want 20.00−13.00 = 7 uur, en dat is gelijk aan woensdag. Beide zijn het langst." },
+          ],
+          niveaus: {
+            basis: "Bereken per dag: sluitingstijd min openingstijd. Welke dag heeft het grootste verschil?",
+            simpeler: "Trek bij elke dag de openingstijd af van de sluitingstijd. Welke dag geeft het hoogste getal?",
+            nogSimpeler: "Kijk welke dag de vroegste openingstijd heeft én de laatste sluitingstijd.",
           },
         },
       },
@@ -356,6 +461,54 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         },
       },
       {
+        q: "Tim is 11 jaar en gaat op zaterdag zwemmen. Wat kost zijn kaartje?",
+        options: ["€ 4,50", "€ 6,50", "Gratis", "€ 18,00"],
+        answer: 0,
+        evidence: "Kind (4 t/m 11 jaar): € 4,50",
+        wrongHints: [
+          null,
+          "Dat is het volwassenen-tarief. Kijk goed hoe oud Tim is en welke leeftijdsgroep daarbij hoort.",
+          null,
+          "De gezinskaart is voor een heel gezin, niet voor één persoon.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de rij", tekst: "Tim is 11 jaar. Zoek in de prijslijst welke regel past bij 11 jaar. Let op het woord 't/m'." },
+            { titel: "Controleer de grens", tekst: "'4 t/m 11 jaar' — 11 valt er nog net in (t/m = tot en met). Dus Tim valt nog in de kind-categorie." },
+            { titel: "Lees de prijs", tekst: "Achter de kind-regel staat de prijs. Op zaterdag gelden geen kortingen — gewone prijs." },
+          ],
+          niveaus: {
+            basis: "Is 11 jaar in de kind-groep of de volwassenen-groep? Kijk goed naar 't/m'.",
+            simpeler: "De kind-regel geldt 't/m 11 jaar'. Hoort Tim daar nog bij?",
+            nogSimpeler: "Zoek de regel met '11' erin. Is Tim nog kind of al volwassene?",
+          },
+        },
+      },
+      {
+        q: "Een kind van 3 jaar gaat op woensdagmiddag zwemmen. Hoeveel betaalt het kind?",
+        options: ["Niets, voor peuters is het altijd gratis", "€ 2,25", "€ 4,50", "€ 1,00"],
+        answer: 0,
+        evidence: "Peuter (t/m 3 jaar): gratis — Op woensdagmiddag is het Spetterdag. Dan betalen kinderen maar de helft van de gewone prijs.",
+        wrongHints: [
+          null,
+          "Spetterdag geeft korting op de kinderprijs. Maar het kind is 3 jaar — in welke rij valt dat?",
+          "Dat is het kind-tarief voor 4 t/m 11 jaar. Een kind van 3 valt in een andere rij.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de goede rij", tekst: "Het kind is 3 jaar. In de prijslijst geldt 't/m 3 jaar: gratis'. Dat is de peuter-rij." },
+            { titel: "Geldt de Spetterdag-korting?", tekst: "Spetterdag geeft kinderen de halve prijs. Maar de halve prijs van gratis is ook gratis. De korting verandert niets aan gratis." },
+            { titel: "Conclusie", tekst: "Voor een peuter is het altijd gratis — ook op Spetterdag. De rij-regel wint." },
+          ],
+          niveaus: {
+            basis: "Zoek de rij voor een kind van 3 jaar. Staat er een prijs of een woord achter die rij?",
+            simpeler: "De helft van gratis is nog steeds gratis. Welke rij hoort bij 3 jaar?",
+            nogSimpeler: "Zoek het woord 'peuter' in de lijst. Wat staat er achter?",
+          },
+        },
+      },
+      {
         q: "Vader, moeder, Milan (9) en Sara (10) gaan op zaterdag samen zwemmen. Wat is voor hen de goedkoopste keuze?",
         options: [
           "De gezinskaart",
@@ -518,6 +671,30 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
             basis: "Kijk tussen de haakjes op de speurtocht-regel: geldt het bedrag per kind of per groepje?",
             simpeler: "De vier vriendinnen zijn samen één groepje. Hoe vaak betaal je dan het speurtocht-bedrag?",
             nogSimpeler: "De tekst zegt: één keer betalen per groepje. Dit is één groepje — wat betekent dat voor het totaal?",
+          },
+        },
+      },
+      {
+        q: "Drie kinderen doen samen één ponyles bij 't Hoefje. Wat betalen ze per kind?",
+        options: ["€ 7,50 per kind (de les is per persoon)", "€ 2,50 per kind", "€ 7,50 in totaal", "€ 10,00 in totaal"],
+        answer: 0,
+        evidence: "Ponyles (30 minuten): € 7,50",
+        wrongHints: [
+          null,
+          "Kijk naar wat er op de ponyles-regel staat: is er een eenheid zoals 'per groepje' of staat er niets speciaals?",
+          "Vergelijk de ponyles-regel met de speurtocht-regel: staat er ook 'per groepje' bij de ponyles?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de juiste rij", tekst: "Het gaat om een ponyLÉS, niet een ponyRÍTJE. Zoek de les-regel: '€ 7,50'." },
+            { titel: "Check de eenheid", tekst: "Bij de ponyles staat geen 'per groepje'. Bij de speurtocht stond dat er wél. Dus de ponyles is per persoon." },
+            { titel: "Reken per kind", tekst: "Drie kinderen × € 7,50 = € 22,50 samen. Per kind: € 7,50." },
+          ],
+          niveaus: {
+            basis: "De ponyles heeft geen groepjes-prijs. Wat kost de les per persoon?",
+            simpeler: "Vergelijk ponyles en speurtocht: bij welke staat er 'per groepje' en bij welke niet?",
+            nogSimpeler: "Lees de ponyles-regel precies. Is er een groepjeskorting, of betaalt ieder kind apart?",
           },
         },
       },
@@ -717,6 +894,59 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
             basis: "Roan heeft drie muntjes nodig. Lees in de tekst hoeveel muntjes een kind gratis krijgt, en reken uit hoeveel hij er nog moet kopen.",
             simpeler: "Drie muntjes nodig, één krijgt hij bij de ingang cadeau. Hoeveel muntjes koopt hij bij, en wat kost één extra muntje?",
             nogSimpeler: "Tel: hoeveel muntjes moet Roan nog kopen als hij er al één gratis heeft? Reken dan € 1,00 per gekocht muntje.",
+          },
+        },
+      },
+      {
+        q: "Hoe laat eindigt het buurtfeest?",
+        options: ["Om 16.00 uur", "Om 15.00 uur", "Om 13.30 uur", "Om 17.00 uur"],
+        answer: 0,
+        evidence: "16.00 uur: einde van het feest",
+        wrongHints: [
+          null,
+          "Om die tijd begint er nog iets. Zoek de laatste regel van het programma.",
+          null,
+          "17.00 uur staat niet in het programma. Kijk naar de laatste tijdsvermelding.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de laatste regel", tekst: "Een programma loopt op tijdsvolgorde. De laatste regel geeft het einde aan." },
+            { titel: "Lees de laatste regel", tekst: "'16.00 uur: einde van het feest.' Dat is de officiële eindtijd." },
+            { titel: "Check", tekst: "15.00 uur is de ballonnenwedstrijd — die is er nog vóór het einde. Logisch: het einde komt na de laatste activiteit." },
+          ],
+          niveaus: {
+            basis: "Zoek de allerlaatste regel van het programma. Wat staat daar?",
+            simpeler: "Een programma eindigt met het woordje 'einde'. Zoek die regel en lees de tijd ervoor.",
+            nogSimpeler: "Zoek het woord 'einde' in het programma en kijk welke tijd erbij staat.",
+          },
+        },
+      },
+      {
+        q: "Wil je meedoen aan de ballonnenwedstrijd? Wat moet je meenemen?",
+        options: [
+          "Een naamkaartje aan het touwtje van je ballon",
+          "Geld voor extra muntjes",
+          "Een opgaveformulier van meneer Baris",
+          "Een eigen ballon van thuis",
+        ],
+        answer: 0,
+        evidence: "Vergeet dus niet je naamkaartje aan het touwtje te hangen!",
+        wrongHints: [
+          null,
+          "Geld voor muntjes is nodig voor pannenkoeken, niet voor de ballonnenwedstrijd.",
+          "Opgeven bij meneer Baris geldt voor de talentenjacht, niet voor de ballonnenwedstrijd.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de ballonnenwedstrijd-informatie", tekst: "In de tekst staat een zin die begint met 'De ballonnenwedstrijd is voor alle kinderen.'" },
+            { titel: "Lees de rest van het stukje", tekst: "De tekst zegt: 'Vergeet dus niet je naamkaartje aan het touwtje te hangen!' Dat is wat je mee moet nemen." },
+            { titel: "Waarom?", tekst: "De ballon die het verst komt, wint een prijs. Zonder naamkaartje weet niemand van wie de ballon is." },
+          ],
+          niveaus: {
+            basis: "Zoek in de tekst de zin over de ballonnenwedstrijd. Wat moet er aan het touwtje?",
+            simpeler: "Als jouw ballon wint, hoe weet de organisatie dan dat het jouw ballon is?",
+            nogSimpeler: "Zoek het woord 'naamkaartje' in de tekst — wat staat er dat je moet doen?",
           },
         },
       },

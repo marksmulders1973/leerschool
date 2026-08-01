@@ -142,6 +142,57 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         },
       },
       {
+        q: "*\"'Dat lukt jou toch nooit,' zei haar zus lachend.\"* — Welk woord verandert de betekenis van wat de zus zegt?",
+        options: [
+          "'Lachend' — ze zegt het als grap, niet om te kwetsen",
+          "'Nooit' — het is een absolute uitspraak",
+          "'Toch' — dat klinkt zeker",
+          "'Jou' — ze bedoelt het persoonlijk",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "'Nooit' zegt iets over de kans — maar 'lachend' bepaalt de toon. Wat voelt anders als iemand lacht bij wat ze zegt?",
+          null,
+          "Wie ze aanspreekt zegt iets over het doelwit, niet over de bedoeling. Kijk hoe het gezegd wordt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoe wordt het gezegd?", tekst: "'Lachend' is een manier-woord: het vertelt hoe de zin wordt uitgesproken. Lachend = vrolijk, niet kwaad." },
+            { titel: "Vergelijk: zacht vs hard", tekst: "Zonder 'lachend': 'dat lukt jou toch nooit' klinkt gemeen. Mét 'lachend' klinkt het als een plagend grapje tussen zussen." },
+            { titel: "Conclusie", tekst: "Het woordje 'lachend' verandert de sfeer van de zin — van aanval naar pesterij die niet echt kwetst." },
+          ],
+          niveaus: {
+            basis: "Hoe kun je iets zeggen dat gemeen lijkt maar eigenlijk niet zo bedoeld is? Wat verandert het als iemand lacht?",
+            simpeler: "Stel je voor: je zus zegt datzelfde terwijl ze heel serieus kijkt. Voelt dat anders dan wanneer ze lacht?",
+            nogSimpeler: "Als iemand lacht terwijl ze iets zegt, is het dan een echte aanval of meer een grap?",
+          },
+        },
+      },
+      {
+        q: "*\"Lotte keek naar haar schrift en begon opnieuw. Ze gooide het papier in de prullenbak.\"* — Hoe voelt Lotte zich?",
+        options: ["Gefrustreerd", "Blij", "Slaperig", "Verlegen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Iemand die blij is, gooit dingen niet in de prullenbak. Wat zeggen opnieuw beginnen en weggooien over Lotte?",
+          null,
+          "Verlegen gedrag zie je in gezelschap — Lotte is hier in haar eentje aan het werk. Kijk naar haar acties.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek het gedrag", tekst: "Lotte begint opnieuw én gooit haar papier weg. Dat zijn twee stukjes gedrag die samen iets vertellen." },
+            { titel: "Vergelijk met jezelf", tekst: "Wanneer begin jij opnieuw en gooi je je werk weg? Als het niet goed genoeg is, en je er baal van." },
+            { titel: "Kies het gevoels-woord", tekst: "Niet tevreden, steeds opnieuw — dat past bij frustration: je wil iets maar het lukt niet." },
+          ],
+          niveaus: {
+            basis: "Twee keer opnieuw beginnen én weggooien — wanneer doe jij dat bij je schoolwerk?",
+            simpeler: "Als iets niet lukt en je gooit het weg — voel je je dan blij of juist niet tevreden?",
+            nogSimpeler: "Hoe voelt het als je iets steeds opnieuw moet doen en het lukt maar niet?",
+          },
+        },
+      },
+      {
         q: "In een verhaal staat nergens hoe een personage zich voelt. Hoe kom je er dan tóch achter?",
         options: [
           "Kijk goed naar wat het personage doet en zegt",
@@ -178,6 +229,57 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
             basis: "Denk aan Rik en de deur: er stond nérgens een gevoels-woord, en tóch wist je hoe hij zich voelde. Hoe kwam je daarachter?",
             simpeler: "Een schrijver láát gevoelens zien in plaats van ze op te schrijven. Waar kun je als lezer dan naar speuren?",
             nogSimpeler: "Denk terug aan Saar en haar tas: waardoor wist jij hoe zij zich voelde?",
+          },
+        },
+      },
+      {
+        q: "*\"Hij liep extra langzaam en hield de doos met twee handen vast, alsof er een baby'tje in zat.\"* — Waarom loopt Ties zo langzaam?",
+        options: [
+          "Hij wil de vaas beschermen en niets laten vallen",
+          "Hij is moe van het lopen",
+          "Hij wil te laat op school aankomen",
+          "De doos is te zwaar om snel te dragen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er iets over vermoeidheid? Kijk naar wat er in de doos zit en hoe waardevol dat is.",
+          null,
+          "De doos wordt vergeleken met een baby'tje — is een baby zwaar, of eerder kwetsbaar?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de vergelijking", tekst: "'Alsof er een baby'tje in zat' — baby'tjes zijn kwetsbaar. Je loopt langzaam en voorzichtig om ze niet te laten vallen." },
+            { titel: "Koppel aan de situatie", tekst: "In de doos zit de vaas: het cadeau waarvoor de hele klas gespaard heeft. Als die breekt, is het voor niets geweest." },
+            { titel: "Conclusie", tekst: "Ties loopt langzaam om de vaas veilig te houden — zorgzaam, niet moe of te laat." },
+          ],
+          niveaus: {
+            basis: "Waarom loop je langzaam als je iets kwetsbaars draagt — om te rusten of om het te beschermen?",
+            simpeler: "De vergelijking met een baby'tje zegt iets over hoe voorzichtig Ties is. Waarvoor is hij zo voorzichtig?",
+            nogSimpeler: "Wat zou er kunnen gebeuren als Ties te hard loopt met de doos?",
+          },
+        },
+      },
+      {
+        q: "*\"Kai hield de envelop al een kwartier vast zonder hem open te maken.\"* — Hoe voelt Kai zich waarschijnlijk?",
+        options: ["Zenuwachtig", "Vrolijk", "Hongerig", "Boos"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een blij iemand scheurt zo'n envelop open. Waarom maakt Kai hem niet open?",
+          null,
+          "Er is geen aanwijzing voor boosheid — Kai doet gewoon niets. Waaróm doe je dat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek het gedrag", tekst: "Kai wacht een kwartier lang — hij durft de envelop niet open te maken. Dat is het spoor." },
+            { titel: "Vergelijk met jezelf", tekst: "Wanneer maak jij iets niet open? Als je bang bent voor wat er in zit." },
+            { titel: "Conclusie", tekst: "Lang wachten + niet durven = spanning van binnen. Dat heet zenuwachtig zijn." },
+          ],
+          niveaus: {
+            basis: "Kai maakt de envelop al een kwartier niet open. Wanneer doe jij dat bij iets belangrijks?",
+            simpeler: "Denk aan een rapport of een toets-uitslag: wat doe je als je bang bent voor het resultaat?",
+            nogSimpeler: "Als je ergens bang voor bent, pak je het dan meteen op of wacht je lang?",
           },
         },
       },
@@ -275,6 +377,29 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         },
       },
       {
+        q: "Welk woordje in de zin *\"Milan hangt lui over de rand, alsof het niks is\"* verklapt dat Noa raadt?",
+        options: ["Alsof", "Lui", "Over", "Niks"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "'Lui' beschrijft de houding van Milan zoals Noa die ziet — dat is een observatie, geen gok-woordje.",
+          null,
+          "'Niks' is wat er gesuggereerd wordt. Welk woordje maakt het duidelijk dat het een veronderstelling is?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat doet 'alsof'?", tekst: "'Alsof' betekent: het lijkt erop, maar het is misschien niet echt zo. Noa gokket dat het voor Milan niks is — ze weet het niet zeker." },
+            { titel: "In een ik-verhaal", tekst: "In een ik-verhaal kent de verteller alleen zijn eigen hoofd. Van anderen weet hij alleen wat hij ziet. 'Alsof' is het teken van een gok." },
+            { titel: "Conclusie", tekst: "'Alsof' verraadt: dit is de mening van Noa, geen feit. De lezer weet net zo weinig als Noa." },
+          ],
+          niveaus: {
+            basis: "Welk woord geeft aan dat Noa iets veronderstelt in plaats van zeker weet?",
+            simpeler: "Als jij 'alsof' zegt, weet je het dan zeker, of denk je het alleen maar?",
+            nogSimpeler: "Kan Noa in het hoofd van Milan kijken? Welk woordje laat zien dat ze raadt?",
+          },
+        },
+      },
+      {
         q: "Wat weet de lezer in dit verhaal NIET?",
         options: [
           "Wat Milan écht denkt en voelt",
@@ -349,6 +474,34 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
             basis: "Noa staat hoog boven het water en durft bijna niet. Wat gebeurt er op zo'n moment soms met je handen?",
             simpeler: "Er staat 'niet door het zwembad' — het vocht komt dus uit Noa zelf. Wanneer krijg jij natte handen zonder water aan te raken?",
             nogSimpeler: "Denk aan een moment dat je iets heel eng vond — wat voelde je toen in je handen?",
+          },
+        },
+      },
+      {
+        q: "*\"Je hoeft niet, hoor!\" roept Milan nu. Maar dat is niet waar.\"* — Wat weet de lezer hierdoor over Noa?",
+        options: [
+          "Noa voelt een sterke innerlijke drang om te springen",
+          "Noa is bang voor Milan",
+          "Noa denkt dat de badmeester het zegt",
+          "Noa wil het zwembad verlaten",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is er enig bewijs dat Noa bang is voor Milan? Wat zegt de tekst over haar eigen motivatie?",
+          null,
+          "Lees de zinnen erna goed: Noa wil iets bewíjzen. Aan wie, en wat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees wat Noa zegt", tekst: "Noa zegt: 'Ik moet wél. Niet van hem, niet van de badmeester — van mezelf.' Ze pusht zichzelf." },
+            { titel: "Koppel aan de context", tekst: "Noa heeft de hele week aan iedereen verteld dat ze vandaag gaat springen. Ze kan niet meer terug zonder gezichtsverlies." },
+            { titel: "Leid de drang af", tekst: "Die combinatie — eigen belofte + trots — geeft een sterke innerlijke drang. Dat is meer dan angst of druk van buiten." },
+          ],
+          niveaus: {
+            basis: "Noa zegt 'ik moet wél — van mezelf'. Wat zegt dat over wat ze van zichzelf verwacht?",
+            simpeler: "Noa heeft het aan iedereen beloofd. Hoe voel jij je dan als je bijna terugkrabbelt?",
+            nogSimpeler: "Van wie 'moet' Noa springen: van Milan, of van zichzelf?",
           },
         },
       },
@@ -532,6 +685,62 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
             basis: "Sfeer proef je aan de woorden. Verzamel er een paar uit het gedicht ('langzaam', 'stil', 'deken'...) en vraag je af: welk gevoel geven die samen?",
             simpeler: "Stel je het gedicht voor als een filmpje: de zon zakt, een deur gaat dicht, de schaduw komt. Welke muziek past daarbij — harde drums of een zacht slaapliedje?",
             nogSimpeler: "Hoe voelt een tuin 's avonds laat, als iedereen naar binnen is?",
+          },
+        },
+      },
+      {
+        q: "*\"Het gras houdt zijn adem in en wacht.\"* — Wat betekent dit?",
+        options: [
+          "Het is volkomen stil in de tuin",
+          "Het gras heeft last van de warmte",
+          "Er waait een sterke wind",
+          "Het gras groeit snel",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er iets over warmte in dit deel van het gedicht? Kijk wat 'adem inhouden' betekent.",
+          "Wie adem inhoudt, beweegt niet. Past dat bij wind?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken de personificatie", tekst: "Gras kan niet ademen — dit is beeldspraak: de dichter doet alsof het gras een levend wezen is." },
+            { titel: "Wat betekent 'adem inhouden'?", tekst: "Als jij je adem inhoudt, beweeg je niet, maak je geen geluid en wacht je op iets. Vertaal dat naar het gras." },
+            { titel: "Koppel aan de sfeer", tekst: "Het hele gedicht gaat over de avond, stilte, slapen. Gras dat 'zijn adem inhoudt' = gras dat roerloos stilstaat — doodstil." },
+          ],
+          niveaus: {
+            basis: "Wat doe jij als je je adem inhoudt: beweeg je, of sta je heel stil?",
+            simpeler: "Vertaal het naar de tuin: als het gras 'zijn adem inhoudt', beweegt het dan veel of weinig?",
+            nogSimpeler: "Hoe ziet de tuin eruit op een stille avond zonder wind?",
+          },
+        },
+      },
+      {
+        q: "*\"Ergens gaapt een deur, dan wordt het stil.\"* — Wat is de betekenis van 'een deur gaapt'?",
+        options: [
+          "Een deur gaat langzaam piepend open of dicht",
+          "Een deur is erg groot en breed",
+          "Iemand gooit een deur dicht",
+          "Een deur is kapot",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De dichter vergelijkt de beweging van de deur met gapen. Wat heeft gapen met bewegen te maken?",
+          "Iemand die zijn deur keihard dichtgooit gaapt niet. Gapen is langzaam en sloom.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken de personificatie", tekst: "Een deur kan niet echt gapen — de dichter doet alsof de deur een mens is die geeuwt." },
+            { titel: "Wat heeft gapen gemeen met een deur?", tekst: "Gapen: mond gaat langzaam wijd open en valt daarna dicht. Een deur die langzaam openzwaait of dichtvalt, doet precies hetzelfde." },
+            { titel: "Past het bij de sfeer?", tekst: "Gapen hoort bij slaperigheid, einde van de dag. Perfect bij dit gedicht over een avondtuin die tot rust komt." },
+          ],
+          niveaus: {
+            basis: "Wat doet je mond als je gaapt — gaat die snel of langzaam open? Vertaal dat naar een deur.",
+            simpeler: "Denk aan iemand die slaperig gaapt: langzaam en groot. Wat doet een deur die hetzelfde 'doet'?",
+            nogSimpeler: "Hoe klinkt een deur die langzaam, piepend opengaat op een stille avond?",
           },
         },
       },
@@ -751,6 +960,34 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
             basis: "Kijk naar hóé juf het zegt ('zacht') en wat ze daarna doet (lachen naar Ties). Wat wil ze dat Ties gaat voelen?",
             simpeler: "Ties staart naar de grond en baalt vreselijk. Dan maakt juf van de scherven iets moois. Waarom zou ze dat doen, denk je?",
             nogSimpeler: "Wat zeg jij tegen een vriend die per ongeluk iets kapotmaakte en heel verdrietig kijkt?",
+          },
+        },
+      },
+      {
+        q: "*\"Op de laatste schooldag mocht Ties de vaas naar school brengen.\"* — Wat zegt het woord 'mocht' over hoe de klas dit besliste?",
+        options: [
+          "De klas koos Ties speciaal uit voor die taak",
+          "Ties dwong de klas om hem de vaas te laten brengen",
+          "Ties kocht de vaas zelf",
+          "Ties had de vaas per ongeluk mee",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er iets over dwingen in de tekst? Kijk ook naar het woord 'mocht' — geeft dat dwang aan?",
+          null,
+          "De klas had wekenlang gespaard voor de vaas — die was van alle kinderen samen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op het woordje 'mocht'", tekst: "'Mocht' betekent: hij kreeg toestemming. Iemand anders koos hem uit. Het was niet vanzelfsprekend — het was een gunst." },
+            { titel: "Welke conclusie kun je trekken?", tekst: "De klas besliste wie de vaas mocht brengen. Ze kozen Ties — dat is een soort eer." },
+            { titel: "Check met de context", tekst: "Ties loopt extra langzaam en voorzichtig. Hij voelt dat hij iets belangrijks te dragen heeft. Dat past bij iemand die speciaal gekozen is." },
+          ],
+          niveaus: {
+            basis: "Wat betekent 'mogen' in de zin — krijg je dan toestemming, of doe je het zomaar?",
+            simpeler: "Als jij iets 'mag' doen, wie besliste dat dan? Wat zegt dat over Ties?",
+            nogSimpeler: "Wie koos er wie de vaas mee mocht nemen — Ties zelf of de klas?",
           },
         },
       },

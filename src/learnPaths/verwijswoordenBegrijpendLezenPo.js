@@ -131,6 +131,29 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
         },
       },
       {
+        q: "*\"De hond blafte hard. Hij rende naar de deur.\"* — Naar wie of wat verwijst 'hij'?",
+        options: ["De hond", "De deur", "De buurman", "Het geluid"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan een deur ergens naartoe rennen? Zoek wie of wat er in de zin ervóór wordt genoemd.",
+          "Er wordt geen buurman genoemd. Zoek terug in de zin ervoor.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "De zin ervoor noemt één ding: de hond. Dat is de enige kandidaat voor 'hij'." },
+            { titel: "Controleer", tekst: "Vul in: 'De hond rende naar de deur.' Logisch — een hond rende hard en wil dan weten wie er aan de deur is." },
+            { titel: "Check het verwijswoord", tekst: "'Hij' past bij een mannelijk ding of wezen. Een hond kan 'hij' zijn." },
+          ],
+          niveaus: {
+            basis: "Kijk in de zin ervoor: wat wordt daar als enige genoemd?",
+            simpeler: "Er staat maar één dier in de zin ervoor. Wie rende er naar de deur?",
+            nogSimpeler: "Welk dier blafte er vlak voor 'hij rende'?",
+          },
+        },
+      },
+      {
         q: "Wat doet een verwijswoord in een tekst?",
         options: [
           "Het wijst naar iemand of iets dat (meestal eerder) in de tekst genoemd is",
@@ -166,6 +189,29 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
             basis: "Denk aan 'de fiets... hij is rood': wat deed 'hij' daar?",
             simpeler: "Een verwijswoord is als een pijltje in de tekst. Waar wijst het pijltje naartoe: naar iets nieuws, of naar iets dat al genoemd was?",
             nogSimpeler: "Denk aan het pijltje: wijst het vooruit naar niets, of terug naar iets bekends?",
+          },
+        },
+      },
+      {
+        q: "*\"Mijn fiets stond voor de deur. Die was leeg.\"* — Naar wat verwijst 'die'?",
+        options: ["De fiets (de band was leeg)", "De deur", "Mijn", "De straat"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan een deur 'leeg' zijn? Zoek iets dat leeg kan zijn vlak vóór 'die'.",
+          "'Mijn' is geen zelfstandig ding dat leeg kan zijn. Zoek het dichtstbijzijnde woord dat past.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "Vlak voor 'die' staat 'de deur' en daarvoor 'fiets'. Twee kandidaten." },
+            { titel: "Controleer betekenis", tekst: "Vul in: 'De deur was leeg' — een deur kan niet leeg zijn. 'De fiets was leeg' — een band kan leeg zijn! Dus 'die' wijst naar de fiets (de band ervan)." },
+            { titel: "Let op", tekst: "Soms staat het dichtstbijzijnde woord er bewust als valstrik. De betekenis beslist." },
+          ],
+          niveaus: {
+            basis: "Wat kan er leeg zijn: een fiets(band) of een deur? Dat bepaalt waarnaar 'die' wijst.",
+            simpeler: "Vul beide kandidaten in: 'de fiets was leeg' of 'de deur was leeg'. Welke zin klopt?",
+            nogSimpeler: "Wat van een fiets kan leeg zijn? Zou dat hier bedoeld worden?",
           },
         },
       },
@@ -324,6 +370,29 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         },
       },
       {
+        q: "*\"De dierenarts gaf Fenna's vader een doosje pilletjes mee, verstopt in een brokje moest Snuffel er elke dag één innemen.\"* — Naar wat verwijst 'er'?",
+        options: ["In het brokje (de plek waar het pilletje in gaat)", "De dierenarts", "Het doosje", "Fenna's vader"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De dierenarts is een persoon, geen plek. 'Er' wijst naar een plek. Welke plek staat er vlak voor?",
+          null,
+          "Fenna's vader is ook een persoon. 'Er' is hier een plek-verwijswoord — zoek de plek.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Er' = plek-verwijswoord", tekst: "Net als 'daar' wijst 'er' vaak naar een plek. 'Verstopt in een brokje moest Snuffel er één innemen' — het 'er' staat voor 'in het brokje'." },
+            { titel: "Controleer", tekst: "Vul in: 'Verstopt in een brokje moest Snuffel in het brokje één innemen.' Bijna hetzelfde — 'er' vervangt 'in het brokje' zodat je het niet hoeft te herhalen." },
+            { titel: "Gebruik de context", tekst: "Je kunt een pilletje verstoppen in een stukje voedsel. De vorige zin noemt een brokje — dat is de plek waar het pilletje in gaat." },
+          ],
+          niveaus: {
+            basis: "'Er' wijst naar een plek. Welke plek wordt er vlak ervoor in de zin genoemd?",
+            simpeler: "Waar verstop je het pilletje — in de dierenarts, of in iets wat Snuffel opeet?",
+            nogSimpeler: "Zoek het woordje 'brokje' in de zin. Dáár gaat het pilletje in — dat is waarnaar 'er' wijst.",
+          },
+        },
+      },
+      {
         q: "*\"Elke ochtend springt Snuffel op het bed van Fenna. Daar wacht ze geduldig...\"* — Naar welke plek verwijst 'daar'?",
         options: ["Het bed van Fenna", "De mand van Snuffel", "De keuken", "De dierenarts"],
         answer: 0,
@@ -378,6 +447,29 @@ Meestal zoek je terug, maar niet altijd! *"Voordat hij de klas binnenkwam, klopt
 De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), en controleer of je antwoord logisch klinkt.`,
     checks: [
       {
+        q: "*\"Lena ging naar het park. Ze vond er een egel.\"* — Naar welke plek verwijst 'er'?",
+        options: ["Het park", "Lena's huis", "De egel", "De straat"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lena's huis staat niet in de tekst. Zoek de plek in de zin ervoor.",
+          "De egel is een dier, geen plek. 'Er' wijst naar een plaats.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Er' = plek", tekst: "'Ze vond er een egel' — het woordje 'er' staat voor een plek. Welke plek werd er vlak ervoor genoemd?" },
+            { titel: "Zoek terug", tekst: "De zin ervoor: 'Lena ging naar het park.' De plek is het park." },
+            { titel: "Controleer", tekst: "Vul in: 'Ze vond in het park een egel.' Logisch — egels leven in parken." },
+          ],
+          niveaus: {
+            basis: "'Er' wijst naar een plek. Welke plek werd er net vóór 'er' genoemd?",
+            simpeler: "Waar ging Lena naartoe? Op díé plek vond ze de egel.",
+            nogSimpeler: "Zoek de plek die vlak voor 'er' wordt beschreven.",
+          },
+        },
+      },
+      {
         q: "*\"Mees vergat zijn gymtas. Dat gebeurt hem wel vaker.\"* — Naar wat verwijst 'dat'?",
         options: [
           "Dat Mees zijn gymtas vergat (de hele gebeurtenis)",
@@ -413,6 +505,29 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
             basis: "Geen los woord past bij 'gebeurt wel vaker'. Wat kun je dan nog meer invullen?",
             simpeler: "Wat kan er 'wel vaker gebeuren': een tas, een jongen — of iets dat iemand dóét, zoals iets vergeten?",
             nogSimpeler: "Vul de hele eerste zin in op de plek van 'dat' en luister of het klopt.",
+          },
+        },
+      },
+      {
+        q: "*\"De merel zong in de tuin. Ik hoorde hem al vroeg in de ochtend.\"* — Naar wie of wat verwijst 'hem'?",
+        options: ["De merel", "De tuin", "Ik", "De ochtend"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een tuin kun je niet horen — je hoort een geluid. Welk geluid veroorzaakte de merel?",
+          "'Ik' is degene die hoort, niet de merel die gehoord wordt. Wie maakte het geluid?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "De zin ervoor noemt de merel. 'Hem' wijst naar dat mannetjesvogeltje." },
+            { titel: "Controleer", tekst: "Vul in: 'Ik hoorde de merel al vroeg in de ochtend.' Logisch — een merel zingt vroeg." },
+            { titel: "Let op", tekst: "'Hem' past bij een mannelijk wezen of ding. Een merel (mannetje) past daarbij." },
+          ],
+          niveaus: {
+            basis: "Wie of wat zong er vlak vóór 'hem'? Wat hoorde jij?",
+            simpeler: "Wat kon je horen in die tuin — een merel of een tuin zelf?",
+            nogSimpeler: "Welk dier zong er en wordt daarna 'hem' genoemd?",
           },
         },
       },
@@ -480,6 +595,52 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
             basis: "Zoek de plek in de eerste zin — waar fietsten ze naartoe?",
             simpeler: "Op welke plek kan het 'veel te druk' zijn: op een plek waar veel mensen komen. Welke plek uit de zin past daarbij?",
             nogSimpeler: "Zoek de plek waar de fietstocht naartoe ging, vlak vóór 'daar'.",
+          },
+        },
+      },
+      {
+        q: "*\"Bo deed haar rugzak op. Daarna liep ze de school in.\"* — Naar wie verwijst 'ze'?",
+        options: ["Bo", "De school", "De rugzak", "De leraar"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan een school ergens in lopen? 'Ze' wijst naar een persoon die zelf kan lopen.",
+          "Een rugzak kan niet lopen. Zoek de persoon vlak voor 'ze'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "De zin ervoor noemt Bo en haar rugzak. Twee kandidaten — maar alleen een persoon kan 'lopen'." },
+            { titel: "Betekenis-check", tekst: "Vul in: 'Bo liep de school in' → logisch. 'De rugzak liep de school in' → een rugzak loopt niet." },
+            { titel: "Conclusie", tekst: "'Ze' wijst naar Bo." },
+          ],
+          niveaus: {
+            basis: "Wie of wat kan er in een school lopen — een rugzak of een meisje?",
+            simpeler: "Vul Bo en rugzak in op de plek van 'ze'. Welke zin klinkt logisch?",
+            nogSimpeler: "Wie is er van de twee in staat om de school in te lopen?",
+          },
+        },
+      },
+      {
+        q: "*\"Tom kocht een boek. Hij las het meteen uit.\"* — Naar wat verwijst 'het'?",
+        options: ["Het boek", "Tom", "De winkel", "Het geld"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tom is een persoon, geen ding. 'Het' wijst naar een onzijdig ding.",
+          "Er wordt geen winkel genoemd in de zinnen. Zoek terug.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "De zin ervoor noemt Tom en een boek. 'Het' past bij het-woorden." },
+            { titel: "Controleer", tekst: "Vul in: 'Hij las het boek meteen uit' → logisch. Je leest een boek uit." },
+            { titel: "Klein woordje, grote rol", tekst: "'Het' verwijst hier naar het boek — het onzijdig ding dat net gekocht werd." },
+          ],
+          niveaus: {
+            basis: "'Het' past bij een onzijdig ding. Welk ding werd er vlak voor 'het' gekocht?",
+            simpeler: "Wat kocht Tom, en wat kan je daarna meteen uitlezen?",
+            nogSimpeler: "Wat las Tom meteen uit — Tom zelf, of het ding dat hij kocht?",
           },
         },
       },
@@ -673,6 +834,59 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
             basis: "'Dit' wijst hier naar iets dat de kinderen mochten dóén. Wat mochten ze aan het einde van de middag doen?",
             simpeler: "Vul de hele vorige zin in: '... vonden ze het allerleukst.' Gaat het om de dieren als voorwerp, of om wat de kinderen ermee mochten doen?",
             nogSimpeler: "Zoek de activiteit die vlak vóór 'dit' beschreven wordt.",
+          },
+        },
+      },
+      {
+        q: "*\"Meester Ruben was tevreden. Volgend jaar wil hij weer zo'n uitje plannen.\"* — Naar wie verwijst 'hij'?",
+        options: ["Meester Ruben", "Boerin Els", "Sem", "Balthasar de ezel"],
+        answer: 0,
+        evidence: "Meester Ruben was tevreden. Volgend jaar wil hij weer zo'n uitje plannen",
+        wrongHints: [
+          null,
+          "Boerin Els is een vrouw — past 'hij' daarbij?",
+          "Sem wordt niet in de laatste alinea genoemd. Zoek wie er wél vlak vóór 'hij' staat.",
+          "Balthasar is de ezel — kan een ezel een uitje plannen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek terug", tekst: "De zin ervoor noemt alleen Meester Ruben. Dat is de enige kandidaat." },
+            { titel: "Controleer persoon", tekst: "'Hij' past bij een man. Meester Ruben is een man — klopt." },
+            { titel: "Controleer betekenis", tekst: "Wie regelde het uitje? Meester Ruben, want dat staat in de eerste alinea. Logisch dat híj het volgend jaar weer wil plannen." },
+          ],
+          niveaus: {
+            basis: "Lees de zin ervóór: wie wordt daar als enige genoemd?",
+            simpeler: "'Hij' past bij een man. Welke man staat vlak voor 'hij' in dezelfde alinea?",
+            nogSimpeler: "Wie regelde het uitje aan het begin van het verhaal? En wie wil het volgend jaar weer doen?",
+          },
+        },
+      },
+      {
+        q: "*\"In de bus terug werd er nog lang over nagepraat.\"* — Naar wat verwijst 'er' (in 'over nagepraat')?",
+        options: [
+          "De hele dag op de kinderboerderij",
+          "De bus zelf",
+          "De chauffeur van de bus",
+          "De reis heen",
+        ],
+        answer: 0,
+        evidence: "Aan het einde van de middag mochten de kinderen de konijnen voeren. Dit vonden ze het allerleukst van de hele dag. In de bus terug werd er nog lang over nagepraat.",
+        wrongHints: [
+          null,
+          "Wordt er over de bus nagepraat? Of over wat er die dag beleefd werd?",
+          null,
+          "'Er over napraten' — over de dag die ze hadden, niet over de heenreis. Wat beleefden ze die dag?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Er over napraten' = over een onderwerp praten", tekst: "'Er' verwijst hier naar de inhoud van het gesprek — het onderwerp. In de context: wat hebben ze die dag gedaan?" },
+            { titel: "Zoek het onderwerp", tekst: "De zinnen ervoor gaan over het konijnen voeren en de hele dag op de boerderij. Dáár praatten ze over in de bus." },
+            { titel: "Controleer", tekst: "'Ze praatten erover' = ze praatten over de dag op de kinderboerderij. Logisch: na een leuk uitje vertel je er thuis over." },
+          ],
+          niveaus: {
+            basis: "Waar praatten de kinderen in de bus over? Wat hadden ze zojuist beleefd?",
+            simpeler: "Lees de zinnen vlak vóór 'er werd lang over nagepraat'. Waar ging die dag over?",
+            nogSimpeler: "Na een uitje praat je in de bus over… de dag die je net had. Wat deden de kinderen die dag?",
           },
         },
       },
