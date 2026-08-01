@@ -56,6 +56,8 @@ export const PAGE_TO_PATH = {
   weekschema: "/weekschema",
   // Trots-momenten — feature 6, bèta-live (hub-preview; echte momenten in-flow).
   trots: "/trots",
+  // Vonk onbeperkt — feature 2, bèta-live (framing-pagina).
+  vonk: "/vonk",
   // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
   brugklas: "/brugklas",
   // Branded dagkaart-generator voor social (Mark 3 jul)
