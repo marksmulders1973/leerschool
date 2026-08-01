@@ -55,25 +55,70 @@ function kiesValkuil(basiskennis) {
   return fout || basiskennis[0];
 }
 
+// Verbreed: aggregeer over ALLE checks met een uitlegPad zodat de kaart het hele
+// concept dekt (i.p.v. één losse check). Stappen komen uit meerdere sub-vaardig-
+// heden, gededupliceerd; valkuil/voorbeeld/begrippen uit het beste materiaal.
 function bouwOuderkaart(path) {
   if (!path || !Array.isArray(path.steps)) return null;
-  let best = null, bestScore = -1;
+  const uitlegs = [];
   for (const step of path.steps) {
     const checks = step.checks || (step.check ? [step.check] : []);
-    for (const c of checks) {
-      const sc = scoreUitleg(c?.uitlegPad);
-      if (sc > bestScore) { bestScore = sc; best = c.uitlegPad; }
-    }
+    for (const c of checks) if (c?.uitlegPad) uitlegs.push(c.uitlegPad);
   }
-  if (!best) return null;
-  const valkuil = kiesValkuil(best.basiskennis);
+  if (!uitlegs.length) return null;
+  uitlegs.sort((a, b) => scoreUitleg(b) - scoreUitleg(a)); // rijkste eerst
+
+  const intro = schoon(
+    (uitlegs.find((u) => u.theorie)?.theorie) ||
+      (uitlegs.find((u) => u.niveaus?.basis)?.niveaus?.basis) ||
+      ""
+  );
+
+  // "Zo leg je het uit": eerste stap van meerdere checks, gededupliceerd, max 5.
+  const stappen = [];
+  const seen = new Set();
+  for (const u of uitlegs) {
+    const s = Array.isArray(u.stappen) ? u.stappen[0] : null;
+    const tekst = schoon(s?.tekst);
+    if (!tekst) continue;
+    const key = tekst.slice(0, 45).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    stappen.push({ titel: schoon(s.titel), tekst });
+    if (stappen.length >= 5) break;
+  }
+
+  const zegDit =
+    uitlegs.map((u) => schoon(u.niveaus?.simpeler || "")).find((t) => t.length > 15 && t.length < 170) || "";
+
+  const alleBasis = uitlegs.flatMap((u) => (Array.isArray(u.basiskennis) ? u.basiskennis : []));
+  const valkuil = kiesValkuil(alleBasis);
+
+  const voorbeeld = schoon(
+    uitlegs.map((u) => (Array.isArray(u.voorbeelden) && u.voorbeelden[0] ? u.voorbeelden[0].tekst : "")).find(Boolean) || ""
+  );
+
+  // Unieke begrippen over het hele pad, max 3.
+  const woorden = [];
+  const seenW = new Set();
+  for (const u of uitlegs) {
+    for (const w of u.woorden || []) {
+      const woord = schoon(w.woord);
+      if (!woord || seenW.has(woord.toLowerCase())) continue;
+      seenW.add(woord.toLowerCase());
+      woorden.push({ woord, uitleg: schoon(w.uitleg) });
+      if (woorden.length >= 3) break;
+    }
+    if (woorden.length >= 3) break;
+  }
+
   return {
-    intro: schoon(best.theorie || best.niveaus?.basis || ""),
-    stappen: (best.stappen || []).map((s) => ({ titel: schoon(s.titel), tekst: schoon(s.tekst) })).filter((s) => s.tekst),
-    zegDit: schoon(best.niveaus?.simpeler || ""),
-    woorden: (best.woorden || []).slice(0, 2).map((w) => ({ woord: schoon(w.woord), uitleg: schoon(w.uitleg) })),
+    intro,
+    stappen,
+    zegDit,
+    woorden,
     valkuil: valkuil ? schoon(valkuil.uitleg || valkuil.onderwerp) : "",
-    voorbeeld: schoon(Array.isArray(best.voorbeelden) && best.voorbeelden[0] ? best.voorbeelden[0].tekst : ""),
+    voorbeeld,
   };
 }
 

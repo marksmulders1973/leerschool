@@ -28,6 +28,7 @@ import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
+import OuderkaartTrigger from "../familie/OuderkaartTrigger.jsx";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
@@ -763,6 +764,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             nextPath={nextPath}
             onPickPath={onPickPath}
             examRefs={examRefs}
+          />
+          {/* Geheime Familie-preview: zo-help-je-thuis-kaart bij ≥2 fout (self-gating). */}
+          <OuderkaartTrigger
+            conceptId={path.id}
+            conceptTitel={path.title}
+            fouten={sess.tries > 0 ? sess.tries - sess.correct : 0}
           />
           <GratisLesmateriaal source={`leerpad-klaar-${path.subject || "leerpad"}`} compact />
         </div>
