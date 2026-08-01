@@ -17,6 +17,12 @@ const SUBJECT_LABELS = {
   cito: "Doorstroomtoets", wiskunde: "Wiskunde", biologie: "Biologie",
 };
 
+// Familie feature 7 (Mark 1 aug): een gezin koppelt tot 3 kinderen op één
+// account. Datamodel (parent_child_links) ondersteunt al meerdere; deze cap +
+// het "wij oefenen samen"-gevoel maken het een Familie-troef zonder broer/zus-
+// vergelijking (ongezond). Geen schema-wijziging.
+const MAX_KINDEREN = 3;
+
 function ScoreBadge({ pct }) {
   // Robuust bij een nullable/corrupte scorebord-rij: toon "—" i.p.v. "null%".
   const n = Number(pct);
@@ -190,6 +196,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
   const generateInvite = async () => {
     if (!authUser) return;
+    if (children.length >= MAX_KINDEREN) return; // cap: max 3 kinderen per gezin
     const childName = inviteChildName.trim();
     if (!childName) return;
     setLoading(true);
@@ -394,7 +401,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         {/* Kinderen koppelen */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)", marginBottom: 12 }}>
-            👶 Mijn kinderen
+            👶 Mijn kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}
           </div>
 
           {/* Bestaande kinderen */}
@@ -417,6 +424,14 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             </div>
           ))}
 
+          {/* Gezins-gevoel (feature 7): warm "wij oefenen samen" bij ≥2 kinderen,
+              bewust ZONDER scores naast elkaar (geen broer/zus-vergelijking). */}
+          {children.length >= 2 && (
+            <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.25)", background: "rgba(0,176,255,0.06)", padding: "11px 13px", marginTop: 4, marginBottom: 8, fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>
+              👨‍👩‍👧 <strong style={{ color: "#00b0ff" }}>Jullie oefenen samen</strong> — {children.map((c) => c.child_name).join(", ")}. Elk in z'n eigen tempo; geen wedstrijdje tussen broers of zussen.
+            </div>
+          )}
+
           {/* Koppel je kind — alléén de veilige WhatsApp-koppelcode-route.
               De oude "naam invullen"-route is verwijderd: door de RLS-policy
               (auth.uid() = parent_user_id) kon het kind die koppeling nooit
@@ -435,7 +450,11 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
           {/* WhatsApp-koppelcode-flow (de enige route) */}
           <div style={{ marginTop: children.length ? 10 : 0 }}>
-              {!inviteCode ? (
+              {children.length >= MAX_KINDEREN ? (
+                <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+                  👨‍👩‍👧 Je hebt het maximum van {MAX_KINDEREN} kinderen gekoppeld — genoeg voor de meeste gezinnen. Meer nodig? Laat het ons weten via <em>Tips aan maker</em>.
+                </div>
+              ) : !inviteCode ? (
                 <>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10, lineHeight: 1.5 }}>
                     Je kind opent de app op zijn/haar telefoon en voert de code in. Je ontvangt daarna automatisch de voortgang.

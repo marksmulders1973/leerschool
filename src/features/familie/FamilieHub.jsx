@@ -16,7 +16,7 @@ const FEATURES = [
   { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Zit nu in je maandag-weekmail: van cijfer naar to-do — 'focus deze week op breuken, hier is de kaart voor thuis'.", status: "klaar" },
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema van een kwartier per dag — print en hang op de koelkast.", status: "klaar", page: "weekschema" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen — verschijnt vanzelf tijdens het oefenen.", status: "klaar", page: "trots" },
-  { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Per-kind-dashboard + gezinsoverzicht op één abonnement.", status: "bouw" },
+  { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Koppel tot 3 kinderen op één account — elk een eigen overzicht, samen oefenen.", status: "klaar", page: "ouder-dashboard" },
   { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, en jij trots.", status: "klaar", page: "diploma" },
 ];
 
@@ -40,7 +40,7 @@ bèta
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>
-          {klaar} van {FEATURES.length} onderdelen klaar om te bekijken. De rest komt binnenkort.
+          {klaar} van {FEATURES.length} onderdelen klaar.{klaar < FEATURES.length ? " De rest komt binnenkort." : " Alles staat live om uit te proberen."}
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
