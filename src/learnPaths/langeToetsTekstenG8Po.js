@@ -106,6 +106,62 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         },
       },
       {
+        q: "Je hebt een tekst globaal gelezen. Wat weet je daarna?",
+        options: [
+          "Waar elk onderwerp ongeveer in de tekst staat",
+          "Alle details en getallen uit je hoofd",
+          "De hele tekst woord voor woord",
+          "Het antwoord op elke vraag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Details onthouden is niet het doel van globaal lezen — wat bouw je dan op?",
+          "Dan zou globaal lezen hetzelfde zijn als alles uit je hoofd leren. Wat kost minder moeite?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is globaal lezen?", tekst: "Globaal lezen = een keer rustig doorlezen om te weten waar elk stuk over gaat. Je onthoud geen details — je maakt een plattegrond." },
+            { titel: "Wat heb je dan?", tekst: "Je weet: alinea 1 gaat over X, alinea 2 over Y. Dat is genoeg om bij elke vraag snel de goede alinea te vinden." },
+            { titel: "Geen fotografie", tekst: "Je hoeft de tekst niet te fotograferen met je hersens. Details zoek je op — dat spaart energie voor het begrijpen." },
+          ],
+          niveaus: {
+            basis: "Na globaal lezen heb je een plattegrond. Wat staat er op een plattegrond?",
+            simpeler: "Wat is makkelijker: weten in welke la een sok zit, of alle laden uit je hoofd kennen?",
+            nogSimpeler: "Zoek het antwoord dat zegt wáár dingen staan — niet wát er precies staat.",
+          },
+        },
+      },
+      {
+        q: "Waarom is het handig om bij een leestoets terug te bladeren naar de tekst?",
+        options: [
+          "Omdat de tekst het bewijs bevat voor het juiste antwoord",
+          "Omdat terugbladeren meer punten oplevert dan uit je hoofd antwoorden",
+          "Omdat je zo de tekst uit je hoofd leert",
+          "Omdat de toets dit verplicht stelt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Alle antwoorden leveren evenveel punten op. Wat maakt terugbladeren wél slim?",
+          "Dat is niet het doel — je leest terug om één ding te vinden, niet om alles te onthouden.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zit er in de tekst?", tekst: "De tekst bevat alle informatie die je nodig hebt. Toetsenmakers zetten valstrik-opties ertussen die bijna kloppen maar net niet." },
+            { titel: "Terugbladeren = controleren", tekst: "Door de zin in de tekst terug te zoeken, zie je of je antwoord echt woordelijk klopt. Dat voorkomt de 'bijna-goed'-fout." },
+            { titel: "Gebruik je plattegrond", tekst: "Je hoeft niet de hele tekst opnieuw te lezen — alleen het stukje waar de vraag over gaat. Dat is snel dankzij je plattegrond." },
+          ],
+          niveaus: {
+            basis: "De tekst is je bewijs. Wat levert terugbladeren je op?",
+            simpeler: "Liever gokken of zekerheid halen uit de tekst? Wat kost je minder fouten?",
+            nogSimpeler: "Waarom kijk je in de tekst als je twijfelt?",
+          },
+        },
+      },
+      {
         q: "Vraag 3 is heel lastig; je zit er al drie minuten op te puzzelen. Wat is de slimste keuze?",
         options: [
           "De vraag overslaan en er aan het einde op terugkomen",
@@ -422,6 +478,33 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           },
         },
       },
+      {
+        q: "In de tekst staat: *'Adopteer een zeehond en help mee aan hun herstel.'* Welk tekstdoel heeft deze zin?",
+        options: [
+          "Overtuigen — de lezer aanzetten om iets te doen",
+          "Informeren — uitleggen hoe adoptie werkt",
+          "Amuseren — de lezer een grappig idee geven",
+          "Instrueren — een stappenplan geven",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staat niet uit hoe adoptie werkt — er staat een oproep. Gaat dat over informatie geven of over de lezer bewegen?",
+          "Is er iets grappigs aan deze zin? Of probeert de schrijver de lezer ergens van te overtuigen?",
+          "Staat er een stappenplan met 1-2-3? Of is het één directe oproep?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken de oproep", tekst: "'Help mee' is een directe oproep — de schrijver wil dat je iets doet. Dat is overtuigen." },
+            { titel: "Contrast met informeren", tekst: "De rest van de tekst legt uit hoe de opvang werkt (informeren). Deze zin probeert je te bewegen (overtuigen). Eén tekst kan meerdere doelen hebben." },
+          ],
+          niveaus: {
+            basis: "Begint de zin met een oproep of met een feit? Wat wil de schrijver dat jij gaat doen?",
+            simpeler: "Als iemand zegt 'help mee!' — informeert hij je dan, of probeert hij je te overtuigen iets te gaan doen?",
+            nogSimpeler: "Wil de schrijver dat je iets gaat doen, of wil hij je iets uitleggen?",
+          },
+        },
+      },
     ],
   },
 
@@ -705,6 +788,33 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
           },
         },
       },
+      {
+        q: "In het verhaal staat: *'Sanne stond op en deed het raam open, de kilte van de nacht naar binnen latend.'* Wat kun je hieruit het beste afleiden?",
+        options: [
+          "Sanne wilde de sterren beter kunnen zien of horen",
+          "Sanne wilde de kamer verwarmen",
+          "Sanne was bang voor het donker",
+          "Sanne had het te warm en wilde afkoelen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De koude nachtlucht binnenlaten warm je niet op — wat is dan de reden dat Sanne het raam opent?",
+          "Staat er iets in de tekst over dat Sanne bang is? Kijk naar waar ze aan het begin van het verhaal mee bezig is.",
+          "De tekst noemt kilte, maar dat betekent niet dat ze het te warm heeft. Waarmee was Sanne aan het begin bezig?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Gebruik de context", tekst: "Aan het begin kijkt Sanne naar de meteoorshower. Raam opendoen = buiten dichterbij brengen. Wat wilde ze dan beter zien of beleven?" },
+            { titel: "Te-ver-test", tekst: "'Bang voor het donker' staat nergens in de tekst. 'Te warm' wordt niet gesuggereerd. Blijf bij aanwijzingen die de tekst geeft." },
+          ],
+          niveaus: {
+            basis: "Waar kijkt Sanne de hele tijd naar in het verhaal? En waarom doet ze het raam open?",
+            simpeler: "Als je buiten een mooi vuurwerk wilt zien, zou jij dan je raam opendoen — of dichtlaten?",
+            nogSimpeler: "Wat deed Sanne vlak voordat ze het raam opende? Wat was ze aan het doen?",
+          },
+        },
+      },
     ],
   },
 
@@ -763,6 +873,90 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
         },
       },
       {
+        q: "Je hebt bij een vraag teruggebladerd en twee opties lijken allebei te kloppen. Wat doe je?",
+        options: [
+          "Lees de bewuste zin in de tekst nog één keer heel precies",
+          "Kies de langste optie",
+          "Kies de kortste optie",
+          "Sla de vraag permanent over",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een lang antwoord is niet automatisch het juiste. Wat helpt je écht kiezen?",
+          "Lengte zegt niets over inhoud. Wat heeft de tekst je te vertellen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee opties, beide plausibel", tekst: "Dat is de toetsmaker's fijnste truc: twee opties die allebei klinken als ze kloppen. Alleen wie de tekst heel precies leest, ziet het verschil." },
+            { titel: "Precies lezen", tekst: "Lees de zin met de aanwijzing woord voor woord. Staat er 'altijd', 'nooit', 'soms', 'sommige'? Die kleine woordjes maken het verschil." },
+            { titel: "Check beide opties", tekst: "Vul elke optie in op de plek van de vraag en lees de zin terug. Welke klinkt exact zoals de tekst zegt?" },
+          ],
+          niveaus: {
+            basis: "Twee opties lijken goed. Wat los je op door de tekst nóg preciezer te lezen?",
+            simpeler: "Soms is het verschil maar één woordje. Lees alles letter voor letter — welke optie zegt precies hetzelfde als de zin in de tekst?",
+            nogSimpeler: "Lees de zin in de tekst heel langzaam en vergelijk die dan met elke optie.",
+          },
+        },
+      },
+      {
+        q: "Wat is het verschil tussen een feitenvraag en een conclusievraag bij een leestekst?",
+        options: [
+          "Bij een feitenvraag zoek je op; bij een conclusievraag denk je één stapje verder",
+          "Feitenvragen zijn moeilijker dan conclusievragen",
+          "Bij een conclusievraag moet je de tekst niet meer lezen",
+          "Er is geen verschil — je antwoordt bij beide altijd vanuit je hoofd",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welke klinkt als meer werk: opzoeken of redeneren? Wat maakt conclusies anders?",
+          "Ook bij conclusies heb je de tekst nodig — als bewijs. Wat doe je er dan méér mee?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Feitenvraag", tekst: "Het antwoord staat woord voor woord in de tekst. Jij zoekt het op — je hoeft niets extra te bedenken." },
+            { titel: "Conclusievraag", tekst: "Je neemt feiten uit de tekst en combineert ze tot iets wat er niet letterlijk staat. Één stapje denken extra." },
+            { titel: "Waarom maakt dat uit?", tekst: "Bij een feitenvraag scan je naar het zoekwoord. Bij een conclusievraag lees je een alinea en redeneert je. Weet je welke soort het is, dan kies je de juiste aanpak." },
+          ],
+          niveaus: {
+            basis: "Feit = opzoeken. Conclusie = feiten + één redeneersstap. Welke optie zegt dit?",
+            simpeler: "Hoe vaak staan de tekst en hoeveel moeten jij zelf denken — hangt dat af van wat voor vraag het is?",
+            nogSimpeler: "Bij welk type vraag moet je zelf iets uitrekenen of bedenken?",
+          },
+        },
+      },
+      {
+        q: "Sanne kijkt in het verhaal 'de nacht van de vallende sterren' naar de hemel. Wat voor vraag is 'Hoe laat klopte opa op de deur'?",
+        options: [
+          "Een opzoekvraag — het tijdstip staat letterlijk in de tekst",
+          "Een conclusievraag — je moet het tijdstip zelf berekenen",
+          "Een hoofdgedachte-vraag",
+          "Een verwijswoord-vraag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken je hier iets uit, of zoek je gewoon een getal in de tekst?",
+          "Gaat de vraag over het thema van het hele verhaal, of om één moment?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken het vraagtype", tekst: "Een tijdstip vragen = zoek een getal in de tekst. Dat is de definitie van een opzoekvraag." },
+            { titel: "Aanpak", tekst: "Gebruik je plattegrond: het kloppen op de deur is aan het begin. Scan de eerste alinea's op een tijdstip." },
+            { titel: "Pas op voor afleidende getallen", tekst: "De tekst heeft meer getallen (honderd sterren per uur, ver na middernacht). Koppel elk getal aan de juiste gebeurtenis." },
+          ],
+          niveaus: {
+            basis: "Het tijdstip staat letterlijk in de tekst — wat voor vraag is dit dan?",
+            simpeler: "Zoek je het antwoord op, of reken je het uit?",
+            nogSimpeler: "Staat het antwoord woordelijk in de tekst?",
+          },
+        },
+      },
+      {
         q: "Waarom lees je de tekst eerst één keer rustig door, ook al onthoud je niet alles?",
         options: [
           "Zo weet je waar alles ongeveer staat en kun je per vraag snel terugzoeken",
@@ -798,6 +992,34 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
             basis: "Wat lever(t) die eerste leesbeurt je op bij elke vraag daarna?",
             simpeler: "Je hoeft niets te onthouden bij het eerste lezen. Wat weet je daarna dan wél over de tekst?",
             nogSimpeler: "Denk aan de gymschoen in de gang: waarom vind je iets sneller als je weet in welke kamer het ligt?",
+          },
+        },
+      },
+      {
+        q: "Je hebt nog 5 minuten en 3 vragen over. Je weet het antwoord op vraag 15 en 17, maar vraag 16 is heel moeilijk. Wat doe je het SLIMST?",
+        options: [
+          "Vraag 15 en 17 eerst beantwoorden, dan met de resterende tijd vraag 16 proberen",
+          "Eerst alles op vraag 16 inzetten, ook al duurt het lang",
+          "Alle drie overslaan — het is toch te laat",
+          "Drie keer dezelfde optie invullen en dan stoppen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Als je alle 5 minuten besteedt aan vraag 16, wat gebeurt er dan met de zekere punten voor 15 en 17?",
+          "Je hebt nog 5 minuten — en 2 vragen die je kunt beantwoorden. Is weggooien dan slim?",
+          "Drie willekeurige antwoorden kosten dezelfde tijd als drie echte pogingen — maar leveren veel minder op.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zekere punten eerst", tekst: "Vraag 15 en 17 zijn te maken. Doe ze eerst — dat zijn zekere punten. Laat die nooit liggen voor één moeilijke vraag." },
+            { titel: "Dan de moeilijke vraag", tekst: "Na 15 en 17 heb je nog wat minuten. Gebruik die voor een rustige poging op 16. Misschien zie je het alsnog — nu met frisse ogen." },
+            { titel: "De tijdstrategie-regel", tekst: "Verdeel je punten nooit ongelijk: één moeilijke vraag mag nooit ten koste gaan van twee makkelijke. Twee zekere punten zijn meer waard dan de kleine kans op één moeilijke." },
+          ],
+          niveaus: {
+            basis: "Welke vragen leveren je zeker punten op? Doe die eerst — dan mis je ze sowieso niet.",
+            simpeler: "Stel: je kunt 2 euro zeker pakken, of 1 euro proberen te verdienen met een moeilijk spelletje. Wat kies je als je weinig tijd hebt?",
+            nogSimpeler: "Als je twee gemakkelijke sommen kunt oplossen én één heel moeilijke, welke begin je dan mee?",
           },
         },
       },

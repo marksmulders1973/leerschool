@@ -225,6 +225,63 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           },
         },
       },
+      {
+        q: "Lees: *\"De bergbeklimmer had urenlang geklommen en was totaal uitgeput.\"* — Welke truc gebruik je voor 'uitgeput'?",
+        options: [
+          "Haal het woord uit elkaar: uit + geput",
+          "Zoek een opsomming na het woord",
+          "Let op een tegenstelling (maar/juist)",
+          "Zoek een dubbele punt na het woord",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er een rijtje na 'uitgeput'? Kijk of er 'zoals' of 'bijvoorbeeld' in de zin staat.",
+          "Zie je een woord als 'maar' of 'juist' in de zin?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Scan de zin", tekst: "Geen dubbele punt, geen opsomming, geen tegenstelling. Het woord zelf is het aanknopingspunt." },
+            { titel: "Haal het uit elkaar", tekst: "'Uit' + 'geput'. 'Putten' betekent: (krachten) halen uit iets. 'Uit' als voorvoegsel betekent: helemaal op, leeg. Dus: leeg van kracht." },
+            { titel: "Check met de zin", tekst: "Urenlang klimmen + uitgeput = geen energie meer over. Klopt perfect." },
+          ],
+          niveaus: {
+            basis: "Geen dubbele punt, geen 'maar', geen 'zoals'. Welke truc blijft er over?",
+            simpeler: "Zie je 'uit' en 'geput' in het woord? 'Geput' hoort bij putten = krachten halen. Wat betekent 'uit' dan in dit geval?",
+            nogSimpeler: "Wat voel je nadat je uren lang hebt geklommen?",
+          },
+        },
+      },
+      {
+        q: "Lees: *\"Roos had al weken geoefend, maar liep toch op het podium te trillen van de zenuwen.\"* — Wat betekent 'zenuwen' hier?",
+        options: [
+          "Spanning en angst voor wat er kan misgaan",
+          "Pijn in de benen van het oefenen",
+          "Woede op het publiek",
+          "Vermoeidheid van het wachten",
+        ],
+        answer: 0,
+        evidence: "maar liep toch op het podium te trillen van de zenuwen",
+        wrongHints: [
+          null,
+          "De tekst noemt haar benen niet. Wat veroorzaakt trillen op een podium voor een publiek?",
+          "Staat er iets over het publiek dat haar boos maakt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Gebruik de tegenstelling", tekst: "'Maar' zegt: ondanks al het oefenen was er tóch iets onaangenaams. Wat kan er dan nog mis zijn als je goed geoefend hebt?" },
+            { titel: "Kijk naar de situatie", tekst: "Podium = voor publiek staan. Trillen = lichamelijk teken van opwinding of angst. Samen: ze was bang of gespannen voor het optreden." },
+            { titel: "Kies het beste antwoord", tekst: "Spanning + angst voor wat er kan misgaan = zenuwen. De situatie (podium) en de truc (tegenstelling) wijzen dezelfde kant op." },
+          ],
+          niveaus: {
+            basis: "Ze oefende veel, maar trilde tóch op het podium. Wat vertelt 'maar' je over haar gevoel?",
+            simpeler: "Wanneer tril jij — als je rustig bent of als je ergens van zenuwachtig bent?",
+            nogSimpeler: "Wat voel jij voor een spreekbeurt die je al honderd keer hebt geoefend?",
+          },
+        },
+      },
     ],
   },
 
@@ -430,6 +487,63 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           },
         },
       },
+      {
+        q: "Wat betekent *'onherbergzaam'* in de zin: *\"De diepzee is een onherbergzame wereld: er is geen licht, de temperatuur is bijna nul en de druk is enorm.\"*?",
+        options: [
+          "Heel moeilijk om in te leven",
+          "Erg stil en rustig",
+          "Gevaarlijk door giftige stoffen",
+          "Ver van de bewoonde wereld",
+        ],
+        answer: 0,
+        evidence: "er is geen licht, de temperatuur is bijna nul en de druk is enorm",
+        wrongHints: [
+          null,
+          "Zegt de tekst iets over stilte of lawaai? Kijk naar de drie dingen die de schrijver noemt.",
+          "De tekst noemt geen giftige stoffen. Welke drie problemen noemt de schrijver wél?",
+          "Ver weg zijn is een feit, maar 'onherbergzaam' gaat over de omstandigheden om te leven. Kijk naar de drie genoemde problemen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de dubbele punt", tekst: "Na 'onherbergzame wereld' staat een dubbele punt, gevolgd door drie dingen: geen licht, bijna nul graden, enorme druk. Dat is de uitleg van het woord." },
+            { titel: "Wat hebben die drie dingen gemeen?", tekst: "Geen licht + ijskoud + enorme druk = het is er heel moeilijk om te overleven. Dat is wat 'onherbergzaam' betekent: je kunt er nauwelijks leven." },
+            { titel: "Haal het woord uit elkaar", tekst: "'On-herberg-zaam'. Een herberg is een plek om te overnachten, een thuis. 'On-' maakt het tegenovergestelde. 'Onherbergzaam' = geen goede plek om te verblijven." },
+          ],
+          niveaus: {
+            basis: "Na de dubbele punt staan drie problemen. Wat zeggen die drie samen over de diepzee?",
+            simpeler: "Geen licht, bijna nul graden, enorme druk — zou jij daar willen wonen? 'Onherbergzaam' beschrijft die drie problemen samen.",
+            nogSimpeler: "Een herberg is een plek om te slapen en te eten. 'On-herbergzaam' betekent dan: ...",
+          },
+        },
+      },
+      {
+        q: "Wat betekent *'lokaas'* in de zin: *\"De hengelvis gebruikt zijn lichtgevende aanhangsel als lokaas: kleine diepzeediertjes denken dat het plankton is en zwemmen er naartoe — recht in de bek van de vis.\"*?",
+        options: [
+          "Iets waarmee je een prooi naar je toe lokt",
+          "Een giftige stof die dieren verlamt",
+          "Het aanhangsel op de kop van de vis",
+          "De manier waarop de vis in het donker ziet",
+        ],
+        answer: 0,
+        evidence: "kleine diepzeediertjes denken dat het plankton is en zwemmen er naartoe — recht in de bek van de vis",
+        wrongHints: [
+          null,
+          "Er staat niets over gif. Wat doen de kleine diertjes als ze het lichtje zien?",
+          "Het aanhangsel ís het lokaas, maar ze zijn niet hetzelfde. Wat doet het lokaas?",
+          "De vis ziet niets — hij lokket anderen. Wat doet het lichtje met de kleine diertjes?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees wat er ná de dubbele punt staat", tekst: "'kleine diertjes denken dat het plankton is en zwemmen er naartoe.' Het lichtje trekt ze aan — dat is de uitleg van 'lokaas'." },
+            { titel: "Wat is het effect?", tekst: "Ze zwemmen er naartoe en belanden in de bek. Het lokaas lijkt iets lekkers, maar het is een val. Lokaas = iets waarmee je iemand naar je toe trekt." },
+          ],
+          niveaus: {
+            basis: "De dubbele punt legt het uit: de diertjes zwemmen naar het lichtje. Wat doet het lichtje dan met hen?",
+            simpeler: "Stel je voor dat je met snoep iemand naar je toe probeert te trekken. Dat snoep is dan het lokaas. Wat doet de hengelvis met zijn lichtje?",
+            nogSimpeler: "De kleine diertjes zien het lichtje en zwemmen erheen — recht de bek in. Wat deed het lichtje met hen?",
+          },
+        },
+      },
     ],
   },
 
@@ -605,6 +719,63 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
             basis: "De buurwoorden zijn 'krantenartikel', 'dikke letters' en 'boven'. Welke betekenis hoort daarbij?",
             simpeler: "Pak in gedachten een krant. Wat staat er in grote dikke letters bóven elk bericht?",
             nogSimpeler: "Wat staat er altijd bovenaan een krantenbericht?",
+          },
+        },
+      },
+      {
+        q: "Lees: *\"De schaatser gleed over het blad en maakte een prachtige pirouette.\"* — Wat betekent 'blad' in deze zin?",
+        options: [
+          "Het vlakke ijsoppervlak van de schaatsbaan",
+          "Een blad van een boom",
+          "Een pagina uit een boek",
+          "Een mes of bijl",
+        ],
+        answer: 0,
+        evidence: "De schaatser gleed over het blad",
+        wrongHints: [
+          null,
+          "Rijdt er een schaatser over een boom? Kijk naar wie of wat er in de zin staat.",
+          "Je bladert door een boek, maar glijdt niet over een boekpagina. Denk aan wat een schaatsbaan heeft.",
+          "Een mes-blad bestaat, maar schaatst iemand over een mes? Kijk wie de hoofdpersoon is.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bedenk de betekenissen", tekst: "'Blad' kan zijn: een boomblad, een boekpagina, een mes-blad, of het vlakke deel van een schaatsbaan. Allemaal bestaand." },
+            { titel: "Vul ze in de zin in", tekst: "'Gleed over het boomblad'? 'Gleed over de boekpagina'? Dat klinkt raar. 'Gleed over het ijsvlak'? Een schaatser kan over ijs glijden — dat klopt." },
+            { titel: "Buurwoord: 'schaatser' en 'gleed'", tekst: "Glijen + schaatser = ijs nodig. 'Blad' heeft hier zijn schaatsbaan-betekenis: het vlakke ijsoppervlak." },
+          ],
+          niveaus: {
+            basis: "Vul elke betekenis in: bij welke klinkt 'gleed over het ...' logisch als je aan een schaatser denkt?",
+            simpeler: "Over welk soort oppervlak kan een schaatser glijden?",
+            nogSimpeler: "Wat heeft een schaatsbaan dat de schaatser over heen glijdt?",
+          },
+        },
+      },
+      {
+        q: "Lees: *\"'Dat lukt me nooit,' zuchtte Tim. 'Je moet meer vertrouwen in jezelf hebben,' zei zijn coach.\"* — Wat betekent 'vertrouwen' in deze zin?",
+        options: [
+          "Geloven dat je iets kunt",
+          "Op een goede plek bewaren",
+          "Iemand anders om hulp vragen",
+          "Oefenen tot je het kunt",
+        ],
+        answer: 0,
+        evidence: "Dat lukt me nooit — Je moet meer vertrouwen in jezelf hebben",
+        wrongHints: [
+          null,
+          "Je kunt iets aan iemand toevertrouwen (bewaren), maar 'vertrouwen IN jezelf' gaat over jezelf — niet over bewaren.",
+          "De coach zegt 'vertrouwen in JEZElf' — dat betekent dat Tim zelf iets moet doen of denken, niet anderen vragen.",
+          "Oefenen is goed, maar dat zegt de coach niet. Wat ZEI de coach precies?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op de tegenstelling", tekst: "Tim denkt: 'dat lukt me nooit.' De coach zegt: 'geloof meer in jezelf.' Die twee zinnen staan tegenover elkaar — dat helpt je de betekenis te begrijpen." },
+            { titel: "'Vertrouwen in jezelf' = ...?", tekst: "Tim denkt negatief over zijn eigen kunnen. De coach wil dat hij positief denkt. 'Vertrouwen in jezelf' = geloven dat je iets kunt." },
+          ],
+          niveaus: {
+            basis: "Tim zegt 'dat lukt me nooit'. De coach zegt 'meer vertrouwen in jezelf'. Wat is het tegenovergestelde van 'dat lukt me nooit'?",
+            simpeler: "Als iemand zegt 'ik geloof dat ik het kan' — heeft die dan vertrouwen in zichzelf?",
+            nogSimpeler: "Denk aan iets wat jij kunt. Geloofde je dat van tevoren ook, of twijfelde je eerst?",
           },
         },
       },
@@ -810,6 +981,62 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
             basis: "Knip het woord: on + voorspel + baar. En lees de zin ervoor: wat weten de wetenschappers nooit helemaal?",
             simpeler: "De weerman voorspelt het weer, maar heeft het weleens mis. Bij vulkanen is dat nog sterker: meten kan, maar zeker weten wat er komt...",
             nogSimpeler: "Wat betekent 'on-' aan het begin van een woord ook alweer?",
+          },
+        },
+      },
+      {
+        q: "Wat betekent *'bedolven'* in de zin: *\"Dorpen in de buurt kunnen bedolven worden onder een dikke laag as en modder.\"*?",
+        options: [
+          "Helemaal bedekt en begraven",
+          "Vernield door vuur",
+          "Weggespoten door water",
+          "Beschadigd maar nog zichtbaar",
+        ],
+        answer: 0,
+        evidence: "bedolven worden onder een dikke laag as en modder",
+        wrongHints: [
+          null,
+          "Er staat niets over vuur in deze zin. Wat doet een dikke laag as en modder met een dorp?",
+          "Water staat niet in deze zin. Denk aan een dikke laag as die erover heen valt.",
+          "Als er een dikke laag over een dorp valt — zie je het dan nog?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar de buurwoorden", tekst: "'bedolven ONDER een dikke laag as en modder.' 'Onder' + 'dikke laag' = er wordt iets volledig van boven naar beneden bedekt." },
+            { titel: "Stel je het voor", tekst: "Een dorp dat verdwijnt onder de as — alles begraven, niet meer te zien. Dat is 'bedolven'." },
+          ],
+          niveaus: {
+            basis: "Wat doet een dikke laag as als die over een dorp valt — kun je het dorp dan nog zien?",
+            simpeler: "Stel: er valt zo veel sneeuw op je auto dat je hem niet meer ziet. Dan is je auto... (onder de sneeuw...)",
+            nogSimpeler: "Iets dat begraven is onder de grond — kun je het nog zien?",
+          },
+        },
+      },
+      {
+        q: "Wat betekent *'vruchtbare'* grond in de zin: *\"De as maakt de grond rondom de vulkaan juist heel vruchtbaar: boeren halen er grote oogsten vandaan.\"*?",
+        options: [
+          "Grond waarop heel veel goed groeit",
+          "Grond die er bruinrood uitziet van de as",
+          "Grond die gevaarlijk is om op te werken",
+          "Grond die nat is door het regenseizoen",
+        ],
+        answer: 0,
+        evidence: "boeren halen er grote oogsten vandaan",
+        wrongHints: [
+          null,
+          "Over de kleur staat niets in de tekst. Kijk wat de boeren halen.",
+          "Er staat niets over gevaar voor de boeren hier. Wat doet die grond voor de gewassen?",
+          "Regen wordt niet genoemd in deze zin.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Gebruik het woordje 'juist'", tekst: "'Juist heel vruchtbaar' staat tegenover de verwoesting eerder. 'Juist' signaleert een verrassing — iets positiefs na iets negatiefs." },
+            { titel: "Lees de uitleg na de dubbele punt", tekst: "'boeren halen er grote oogsten vandaan.' Grote oogsten = veel gewassen groeien. 'Vruchtbaar' beschrijft grond die goed is voor het groeien van planten." },
+          ],
+          niveaus: {
+            basis: "Na de dubbele punt staat dat boeren er grote oogsten halen. Wat zegt dat over hoe goed de grond is voor planten?",
+            simpeler: "Als een boom elke herfst heel veel appels geeft, zeggen we dat hij 'vruchtbaar' is. Wat betekent dat dan voor die vulkaangrond?",
+            nogSimpeler: "Als de boeren heel veel van hun land kunnen oogsten, is die grond dan goed of slecht voor planten?",
           },
         },
       },

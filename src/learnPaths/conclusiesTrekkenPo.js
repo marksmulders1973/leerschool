@@ -183,6 +183,35 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
         },
       },
       {
+        q: "Lisa pakt haar paraplu, trekt haar regenjas aan en kijkt bezorgd naar buiten. Welke conclusie kun je trekken?",
+        options: [
+          "Het regent of Lisa verwacht regen",
+          "Lisa gaat naar het zwembad",
+          "Lisa heeft het koud in huis",
+          "Lisa oefent met een toneelstuk",
+        ],
+        answer: 0,
+        evidence: "Paraplu + regenjas + bezorgd naar buiten kijken.",
+        wrongHints: [
+          null,
+          "Bij een zwembad heb je geen paraplu nodig — of juist wél? En wat doet een regenjas bij een zwembad?",
+          "Welke aanwijzing wijst op kou binnenshuis? Kijk naar wáár ze naartoe kijkt.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verzamel de aanwijzingen", tekst: "Paraplu = bescherming tegen regen. Regenjas = bescherming tegen regen. Bezorgd naar buiten kijken = ze ziet of verwacht iets buiten. Alle drie gaan over hetzelfde." },
+            { titel: "Combineer ze", tekst: "Alle drie de aanwijzingen hebben te maken met beschermen tegen regen. Er is maar één logische conclusie die bij alle drie past." },
+            { titel: "Kies voorzichtig", tekst: "Je weet dat ze regen verwacht — maar je weet niet zeker of het al regent. Kies het antwoord dat beide mogelijkheden dekt." },
+          ],
+          niveaus: {
+            basis: "Paraplu + regenjas + naar buiten kijken: voor welk weer beschermen mensen zichzelf zo?",
+            simpeler: "Wanneer pak jij een paraplu? En voor welk weer heb je een regenjas nodig?",
+            nogSimpeler: "Waarvoor is een paraplu?",
+          },
+        },
+      },
+      {
         q: "Aanwijzing 1: de hond staat kwispelend bij de voordeur. Aanwijzing 2: hij heeft zijn riem in zijn bek. Wat is de beste conclusie?",
         options: [
           "De hond wil naar buiten voor een wandeling",
@@ -348,6 +377,64 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
             basis: "Papa is al de hele dag extra vrolijk terwijl Noor stil is. Wat wil hij daarmee bereiken?",
             simpeler: "Je vriendin is verdrietig en jij begint extra gekke, vrolijke dingen te doen. Waarom doe je dat? Papa doet hetzelfde.",
             nogSimpeler: "Wat probeer jij als iemand naast je stilletjes verdrietig is?",
+          },
+        },
+      },
+      {
+        q: "Noor pakt het kiezelsteentje van de vensterbank en stopt het 'diep' in haar jaszak. Waarom benadrukt de schrijver het woord 'diep'?",
+        options: [
+          "Om te laten zien dat Noor het steentje goed wil bewaren en niet wil verliezen",
+          "Omdat haar jaszak bijzonder diep is",
+          "Om duidelijk te maken dat het steentje zwaar is",
+          "Omdat papa gezegd had dat ze de vensterbank leeg moest maken",
+        ],
+        answer: 0,
+        evidence: "stopte het diep in haar jaszak",
+        wrongHints: [
+          null,
+          "Gaat het om de maat van de zak — of om wat Noor met het steentje wil?",
+          "Staat er iets over het gewicht van het steentje? Zoek een aanwijzing over haar gevoel voor het steentje.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar het woord 'diep'", tekst: "Schrijvers kiezen woorden niet zomaar. 'Diep' wegstoppen is anders dan gewoon in je zak doen — het zegt iets over hoe voorzichtig en zuinig Noor ermee omgaat." },
+            { titel: "Combineer met de context", tekst: "Het steentje herinnert haar aan Sara en haar oude huis. Ze verlaat alles voor altijd. 'Diep' wegstoppen betekent: ze wil het niet kwijtraken." },
+            { titel: "Trek de conclusie", tekst: "Diep wegstoppen = zo veilig mogelijk bewaren = ze hecht er veel waarde aan. De schrijver gebruikt dat ene woordje om een groot gevoel te laten zien." },
+          ],
+          niveaus: {
+            basis: "Waarom stop je iets 'diep' weg in plaats van gewoon in je zak?",
+            simpeler: "Stel je hebt iets heel kostbaars bij je. Hoe zorg je dat je het niet verliest?",
+            nogSimpeler: "Als je iets niet wilt kwijtraken, hoe stop je het dan weg?",
+          },
+        },
+      },
+      {
+        q: "Noor geeft geen antwoord als papa vrolijk roept dat ze een grotere kamer krijgt. Wat kun je hieruit afleiden?",
+        options: [
+          "De grootte van de nieuwe kamer troost Noor nu niet",
+          "Noor heeft papa niet gehoord",
+          "Noor is boos op papa",
+          "Noor vindt de nieuwe kamer te klein",
+        ],
+        answer: 0,
+        evidence: "Noor gaf geen antwoord.",
+        wrongHints: [
+          null,
+          "Ze stond erbij toen papa riep — maar ze zei niets terug. Wat betekent stilzwijgen hier?",
+          "Past boosheid bij slikken en over de vensterbank strijken? Kijk naar alle aanwijzingen samen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat vertelt 'geen antwoord'?", tekst: "Geen antwoord geven is zelf een keuze of een gevoel. Als papa enthousiast is en Noor zegt niets, dan raakt zijn enthousiasme haar niet." },
+            { titel: "Waarom niet?", tekst: "Ze is verdrietig om haar oude huis. Een grotere kamer helpt haar op dit moment niet — haar verdriet is nu groter dan het vooruitzicht van iets nieuws." },
+            { titel: "Voorzichtige conclusie", tekst: "Ze is niet noodzakelijk boos — ze is eerder verdrietig. De troost werkt nu niet. Dat is het voorzichtigste en best-onderbouwde antwoord." },
+          ],
+          niveaus: {
+            basis: "Papa biedt troost aan door over de nieuwe kamer te praten. Waarom werkt dat nu niet voor Noor?",
+            simpeler: "Stel je hebt net afscheid genomen van iets liefs. Je vriendin zegt: 'maar je krijgt iets nieuws!'. Voel jij je dan meteen beter?",
+            nogSimpeler: "Helpt een belofte van iets leuks altijd als je verdrietig bent?",
           },
         },
       },
@@ -569,6 +656,35 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             basis: "Drie opties blijven bij 'er was iets met die knie'. Eén optie verzint een oorzaak, een dag én een fiets.",
             simpeler: "Onderstreep in elk antwoord de dingen die je uit de tekst kunt bewijzen. Bij welk antwoord kun je bijna niets onderstrepen?",
             nogSimpeler: "In welke optie staan dingen die nérgens in de zin over Sem staan?",
+          },
+        },
+      },
+      {
+        q: "In een verhaal staat: 'Ze had hem al drie keer gebeld, maar hij nam niet op.' Wat kun je onderbouwd concluderen?",
+        options: [
+          "Ze probeert hem te bereiken en hij reageert niet",
+          "Ze is boos op hem",
+          "Hij heeft zijn telefoon verloren",
+          "Er is een storing bij het telefoonbedrijf",
+        ],
+        answer: 0,
+        evidence: "Ze had hem al drie keer gebeld, maar hij nam niet op.",
+        wrongHints: [
+          null,
+          "Zie je ergens het woord 'boos' of een aanwijzing voor boosheid? Kijk wat er letterlijk staat.",
+          "Zou dat kloppen met 'maar hij nam niet op'? Welke verklaring ga je te ver voor?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat staat er letterlijk?", tekst: "Ze belde drie keer — dat laat zien dat ze contact wil. Hij nam niet op — hij reageert niet. Dat zijn de enige twee feiten." },
+            { titel: "Doe de te-ver-test", tekst: "Boos zijn zou méér informatie nodig hebben. Telefoon kwijt en storing zijn verklaringen die ergens op steunen — maar er staat niets over in de zin." },
+            { titel: "Voorzichtigste conclusie", tekst: "Het enige wat je zeker weet: ze probeert hem te bereiken en hij pakt niet op. Meer kun je niet concluderen." },
+          ],
+          niveaus: {
+            basis: "Wat weet je zeker uit deze ene zin — en wat verzin je er bij?",
+            simpeler: "Als je drie keer iemand belt en hij neemt niet op, wéét je dan zeker waaróm niet?",
+            nogSimpeler: "Wat doe je als je iemand wilt spreken die de telefoon niet opneemt?",
           },
         },
       },
@@ -818,6 +934,122 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             basis: "Zoek het woord 'daarom' in de laatste alinea en lees wat er vlak vóór dat stuk over de daken stond.",
             simpeler: "Wat mist een mus in Zonnehof volgens alinea 2? En wat geeft een nestkast een mus precies? Leg die twee naast elkaar.",
             nogSimpeler: "Wat geef je een vogel die nergens een plekje voor haar nest vindt?",
+          },
+        },
+      },
+      {
+        q: "Teller Ruud Blom deelt gratis nestkasten uit én geeft tips voor groenere tuinen. Wat kun je hieruit concluderen?",
+        options: [
+          "Ruud Blom gelooft dat bewoners kunnen helpen de mus te redden",
+          "Ruud Blom wil nestkasten verkopen voor zijn werk",
+          "Ruud Blom denkt dat de mus al uitgestorven is",
+          "Ruud Blom vindt Zonnehof een lelijke wijk",
+        ],
+        answer: 0,
+        evidence: "De vogelwerkgroep deelt daarom gratis nestkasten uit in Zonnehof en geeft tips voor groenere tuinen.",
+        wrongHints: [
+          null,
+          "De nestkasten zijn gratis — wat zegt dat over een handelsmotief? Zoek de aanwijzing voor wát hij hoopt.",
+          "Hij zegt 'we hopen dat bewoners meedoen' — hoopvol klinkt dat niet als je denkt dat het te laat is.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar wat hij doet", tekst: "Gratis nestkasten uitdelen en tips geven kost tijd en moeite. Waarom zou iemand dat doen?" },
+            { titel: "Combineer met wat hij zegt", tekst: "'We hopen dat de bewoners meedoen.' Hopen = geloven dat het kan helpen. Actie ondernemen = geloven dat die actie zin heeft." },
+            { titel: "Trek de conclusie", tekst: "Gratis geven + hopen + tips geven = hij denkt dat bewoners het verschil kunnen maken. Dat is de conclusie die de tekst steunt." },
+          ],
+          niveaus: {
+            basis: "Hij deelt gratis uit en geeft tips. Doe je dat als je denkt dat het toch niet helpt?",
+            simpeler: "Wanneer geef jij iemand gratis hulp? Alleen als je denkt dat het nut heeft — of ook als je denkt dat het hopeloos is?",
+            nogSimpeler: "Waarom zou iemand tijd en moeite steken in iets waarvan hij denkt dat het toch niet werkt?",
+          },
+        },
+      },
+      {
+        q: "In de tekst staat dat de tellers 'dit voorjaar' drie mussen telden in Zonnehof. Welke conclusie is ONDERBOUWD?",
+        options: [
+          "Op het moment van tellen waren er drie mussen in Zonnehof",
+          "Er zullen nooit meer mussen in Zonnehof komen",
+          "De tellers hebben slecht geteld",
+          "Alle mussen zijn vorig jaar gestorven",
+        ],
+        answer: 0,
+        evidence: "Tellers van een vogelwerkgroep noteerden dit voorjaar in de nieuwbouwwijk Zonnehof maar drie mussen.",
+        wrongHints: [
+          null,
+          "De tekst beschrijft één voorjaar — weet je dan wat er ná dat moment gaat gebeuren? Kijk hoe ver je concludeert.",
+          "Staat er iets in de tekst over hoe nauwkeurig de tellers werkten? Zoek een aanwijzing.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat staat er letterlijk?", tekst: "Dit voorjaar = op dit ene moment. Drie mussen geteld = drie werden er gezien. Dat zijn de feiten." },
+            { titel: "Doe de te-ver-test", tekst: "'Nooit meer mussen' — dat gaat over de toekomst. De tekst gaat over één meting in het heden. Toekomst-claims gaan altijd te ver als je alleen een momentopname hebt." },
+            { titel: "Kies de voorzichtige conclusie", tekst: "Op dit moment, op die dag, telden ze er drie. Dat is alles wat je zeker weet. Voorzichtige conclusie wint." },
+          ],
+          niveaus: {
+            basis: "De tellers deden één meting in één voorjaar. Wat weet je zeker — en wat weet je niet?",
+            simpeler: "Jij telt op maandag drie kikkers in de vijver. Weet je dan zeker hoeveel er dinsdag zijn?",
+            nogSimpeler: "Eén meting op één dag — kan je dan zeggen wat er altijd of nooit is?",
+          },
+        },
+      },
+      {
+        q: "Ruud Blom zegt: 'Anders vrees ik dat we hier over vijf jaar helemaal geen mussen meer tellen.' Wat kun je hieruit het BESTE afleiden?",
+        options: [
+          "Ruud Blom maakt zich zorgen over de toekomst van de mus in Zonnehof",
+          "Ruud Blom weet zeker dat er over vijf jaar geen mussen meer zijn",
+          "Ruud Blom vindt vijf jaar een te korte tijd om iets te veranderen",
+          "Ruud Blom wil stoppen met tellen na vijf jaar",
+        ],
+        answer: 0,
+        evidence: "Anders vrees ik dat we hier over vijf jaar helemaal geen mussen meer tellen.",
+        wrongHints: [
+          null,
+          "'Vrees' betekent dat je iets angstig verwacht — niet dat je het zeker weet. Is dat hetzelfde als 'zeker weten'?",
+          "Hij geeft juist tips en deelt nestkasten uit — dat is handelen in vijf jaar. Klinkt dat als 'te kort'?",
+          "Lees de zin nog eens: hij spreekt over mussen tellen, niet over stoppen met tellen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op het woord 'vrees'", tekst: "'Vrees' betekent: ik ben bang dat het zo gaat. Dat is een gevoel van bezorgdheid — geen zekerheid." },
+            { titel: "Combineer met zijn acties", tekst: "Hij deelt nestkasten uit en geeft tips. Doe je dat als je nergens meer om geeft? Nee — hij handelt omdat hij het nog wíl veranderen." },
+            { titel: "Trek de juiste conclusie", tekst: "Bezorgd zijn over iets + actie ondernemen = hij maakt zich zorgen en hoopt dat het beter wordt. Dat is de conclusie die de tekst steunt." },
+          ],
+          niveaus: {
+            basis: "'Vrees' en 'weet zeker' zijn niet hetzelfde. Welk gevoel drukt 'vrees' uit?",
+            simpeler: "Als je zegt 'ik vrees dat het regent morgen' — weet je het dan zeker of ben je het bang?",
+            nogSimpeler: "Wanneer vrees je iets — als je zeker weet dat het gaat gebeuren, of als je bang bent dat het misschien kan?",
+          },
+        },
+      },
+      {
+        q: "In Zonnehof telden ze 3 mussen; in de oude wijk ernaast 46. Welke conclusie is ONDERBOUWD door de tekst?",
+        options: [
+          "De omgeving bepaalt mede hoeveel mussen er leven",
+          "Mussen leven liever in nieuwe huizen dan in oude",
+          "Bewoners van Zonnehof houden minder van dieren",
+          "De tellers telden de mussen in Zonnehof niet goed",
+        ],
+        answer: 0,
+        evidence: "In Zonnehof: strakke tuinen met tegels, daken zitten potdicht. In de oude wijk: overgroeide heggen, losse dakpannen, oud brood.",
+        wrongHints: [
+          null,
+          "De tekst zegt dat mussen meer leven in de OUDE wijk. Welke soort huizen staan er in die wijk?",
+          "Staat er iets in de tekst over de gevoelens van de bewoners voor dieren? Zoek een aanwijzing.",
+          "Er staat niets over hoe nauwkeurig de tellers werkten. Gebruik alleen wat er in de tekst staat.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vergelijk de twee wijken", tekst: "Zonnehof: tegels, potdichte daken, hoge schuttingen → weinig mussen. Oude wijk: heggen, losse dakpannen, brood → veel mussen. Twee verschillende omgevingen, twee verschillende aantallen." },
+            { titel: "Wat wijzen die gegevens samen?", tekst: "Meer groene ruimte en nestplekken = meer mussen. Minder groen = minder mussen. De omgeving maakt het verschil — dat is wat de tekst laat zien." },
+            { titel: "Controleer: is de conclusie te ver?", tekst: "De conclusie is: de omgeving telt mee. Dat steunt de tekst volledig. Andere opties gaan over dingen (gevoel van bewoners, slechte telmethode) die nergens in de tekst staan." },
+          ],
+          niveaus: {
+            basis: "Wat is het verschil tussen de twee wijken? En wat is het verschil in het aantal mussen?",
+            simpeler: "In de groene wijk leven meer mussen dan in de tegels-wijk. Wat zegt dat over de rol van de omgeving?",
+            nogSimpeler: "Zou jij liever wonen in een huis met een tuin of in een beton-straat? Mussen denken daar ook zo over.",
           },
         },
       },

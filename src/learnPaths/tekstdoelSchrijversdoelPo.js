@@ -194,6 +194,52 @@ const steps = [
         },
       },
       {
+        q: "*\"Knip het papier langs de stippellijn. Vouw daarna langs de streepjeslijn. Plak de twee randen op elkaar.\"* — Welk doel heeft deze tekst?",
+        options: ["Instrueren", "Informeren", "Amuseren", "Overtuigen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staan geen feiten over hoe papier werkt — wat moet JIJ doen?",
+          "Is er een verhaal of een grap? Kijk naar de werkwoorden vooraan de zinnen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar de werkwoorden", tekst: "'Knip', 'vouw', 'plak' — drie opdrachten, elk aan het begin van een zin. Die werkwoorden vertellen jou wat je moet doen." },
+            { titel: "Kijk naar de volgorde", tekst: "'Daarna', 'dan' — de stappen staan op volgorde. Dat is typisch voor een handleiding of bouwinstructie." },
+            { titel: "Welk doel?", tekst: "Stappen geven in een vaste volgorde zodat jij iets kunt maken = instrueren." },
+          ],
+          niveaus: {
+            basis: "'Knip', 'vouw', 'plak': wat moet jij doen? Welk doel hoort bij stap-voor-stap-opdrachten?",
+            simpeler: "Volg je hier een verhaal, leer je iets, of moet je zelf iets knippen en vouwen?",
+            nogSimpeler: "Denk aan de stappen bij het opbouwen van speelgoed. Hoe heet een tekst die zulke stappen geeft?",
+          },
+        },
+      },
+      {
+        q: "*\"De leeuw is de grootste kat van Afrika. Alleen de tijger is groter. Een leeuw kan wel 250 kilo wegen.\"* — Wat wil de schrijver?",
+        options: ["Informeren", "Overtuigen", "Amuseren", "Instrueren"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er een mening of een aansporing om iets te doen?",
+          "Is er een verhaal met personages, spanning of een grap?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat staat er?", tekst: "Feiten: de leeuw is de grootste Afrikaanse kat, de tijger is groter, hij weegt 250 kilo. Alleen feiten, geen mening, geen verhaal, geen opdracht." },
+            { titel: "Wat wil de schrijver?", tekst: "Na het lezen weet jij iets nieuws over leeuwen. De schrijver wil dat je iets leert." },
+            { titel: "Doel", tekst: "Feiten geven zodat de lezer iets leert = informeren." },
+          ],
+          niveaus: {
+            basis: "Drie feiten over de leeuw — geen mening, geen opdracht, geen grap. Welk doel past?",
+            simpeler: "Wat doe jij na het lezen — weet je iets nieuws, moet je iets kopen, of lach je?",
+            nogSimpeler: "De schrijver wil dat je na het lezen iets wéét over leeuwen. Welk woord hoort daarbij?",
+          },
+        },
+      },
+      {
         q: "Op de Doorstroomtoets staat: *\"Waarom heeft de schrijver deze tekst geschreven?\"* Waar let je dan het BEST op?",
         options: [
           "Op wat de schrijver bij de lezer wil bereiken",
@@ -351,6 +397,52 @@ const steps = [
             basis: "Geen 'jij' of 'u', gewone woorden, onderwerp voor jong en oud — wat zegt dat over de doelgroep?",
             simpeler: "Wie wil er weten of het morgen gaat regenen? Je opa, je juf, jijzelf, de buurvrouw... De tekst sluit niemand uit.",
             nogSimpeler: "Als een tekst voor je opa én je kleine zusje nuttig is, hoe noem je de doelgroep dan?",
+          },
+        },
+      },
+      {
+        q: "*\"Beste ouders, wij nodigen u uit voor de ouderavond op 15 september. Graag uw aanmelding vóór 10 september.\"* — Voor wie is dit bedoeld?",
+        options: ["Ouders", "Kinderen", "Leraren", "Iedereen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wie nodigt de school op een ouderavond uit — de leerlingen, of degenen die voor hen zorgen?",
+          "Leraren zouden intern een mail krijgen — voor wie is dit bericht bedoeld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Check de aanspreekvorm", tekst: "'Beste ouders' + 'u' — dit zijn drie aanwijzingen in één: de schrijver noemt de doelgroep zelfs bij naam." },
+            { titel: "Check het onderwerp", tekst: "Een ouderavond is een avond waarvoor ouders of verzorgers worden uitgenodigd, niet leerlingen." },
+            { titel: "Conclusie", tekst: "Aangesproken als 'ouders' + u-vorm + ouderavond → doelgroep is ouders." },
+          ],
+          niveaus: {
+            basis: "De doelgroep wordt letterlijk bij naam genoemd. Wie?",
+            simpeler: "Wie gaat er op een ouderavond — jij of je vader/moeder/verzorger?",
+            nogSimpeler: "Lees de eerste twee woorden: voor wie schrijft de school dit?",
+          },
+        },
+      },
+      {
+        q: "*\"Heb jij weleens zin in iets lekkers maar wil je geen suiker? Probeer dan eens een stuk fruit. Een appel of een peer geeft je ook energie!\"* — Voor wie is dit bedoeld?",
+        options: ["Kinderen of jongeren", "Ouders", "Tandartsen", "Boeren"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De aanspreekvorm 'jij' en 'jou' past bij welke groep?",
+          "Gaat het over tanden of over een beroep? Kijk naar wat de lezer móét doen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Aanspreekvorm", tekst: "'Heb JIJ weleens zin...' — jij-vorm. Dat past bij jonge lezers." },
+            { titel: "Woordkeus", tekst: "Korte zinnen, makkelijke woorden, uitroepteken. Uitleg van een appel als energiebron — voor wie heeft dat nut?" },
+            { titel: "Onderwerp + doelgroep", tekst: "Snacken en energie zijn relevant voor alle leeftijden. Maar de jij-vorm en de speelse toon wijzen op kinderen of jongeren." },
+          ],
+          niveaus: {
+            basis: "De schrijver gebruikt 'jij'. Voor welke leeftijdsgroep past die toon het best?",
+            simpeler: "Vergelijk met de ouderavond-tekst: wat is anders in de aanspreekvorm?",
+            nogSimpeler: "Wie wordt aangesproken met 'jij' — een volwassene of iemand van jouw leeftijd?",
           },
         },
       },
@@ -527,6 +619,34 @@ const steps = [
             basis: "Een folder vol geschreeuw geloof je niet; een folder met een onderzoek wel. Wat schiet de maker daarmee op?",
             simpeler: "Vergelijk: 'KOOP DIT!' tegenover 'Onderzoekers zeggen dat ontbijt belangrijk is... koop dit.' Welke van de twee klinkt geloofwaardiger — en wie profiteert daarvan?",
             nogSimpeler: "De feiten zijn het vriendelijke gezicht van de folder. Wat verstopt zich erachter?",
+          },
+        },
+      },
+      {
+        q: "Waarom is de zin 'Ochtendkracht bevat zes verschillende granen' in een reclame-folder opgenomen?",
+        options: [
+          "Om de folder betrouwbaarder te laten klinken zodat je het product eerder koopt",
+          "Omdat de schrijver kinderen iets over granen wil leren",
+          "Omdat de wet verplicht dit op verpakkingen te zetten",
+          "Omdat de schrijver per ongeluk te veel informatie gaf",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een schoolboek leert je over granen — maar wat wil een reclame-folder bereiken?",
+          "Verpakkingstekst en een folder zijn verschillende dingen. Kijk naar het doel van de folder.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie maakte de folder?", tekst: "Een supermarkt die het product verkoopt. Elk stukje informatie staat er om je richting de koop te sturen." },
+            { titel: "Waarom granen noemen?", tekst: "Zes granen klinkt indrukwekkend en gezond. Het doel: jij denkt 'dat is een goed product', en koopt het eerder." },
+            { titel: "Feit in dienst van verkoop", tekst: "Het feit klopt misschien — maar het is niet neutraal. Het staat er om te overtuigen, niet om je te onderwijzen." },
+          ],
+          niveaus: {
+            basis: "De folder wil je laten kopen. Welk doel heeft dit feit dan — leren of overtuigen?",
+            simpeler: "Stel je bent de maker van de folder. Zet jij informatie erin om de lezer slimmer te maken, of om hem te laten kopen?",
+            nogSimpeler: "In een reclame staat informatie om jou te laten ... wat?",
           },
         },
       },
@@ -736,6 +856,88 @@ const steps = [
             basis: "Drie opties gaan over de buitenkant of alleen het onderwerp. Eén optie gaat over de taal van de schrijver — dat is het sterkste bewijs.",
             simpeler: "Vraag bij elke optie: bewijst dit écht iets? Dieren-onderwerp: nee, kranten doen dat ook. Alinea's: nee. Titel: nee. Wat blijft er over als sterkste bewijs?",
             nogSimpeler: "Hoe de schrijver tégen je praat, verraadt voor wie hij schrijft. Welke optie gaat daarover?",
+          },
+        },
+      },
+      {
+        q: "Stel: de egel-tekst eindigt zo: *'Wil je meer lezen over egels? Kijk op egelbeschermers.nl!'* Verandert dat het hoofddoel van de tekst?",
+        options: [
+          "Nee — drie alinea's informeren blijven het zwaarste deel",
+          "Ja — de tekst wordt nu een reclametekst",
+          "Ja — het doel wordt instrueren",
+          "Nee — dan is er helemaal geen doel meer",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Eén oproep maakt nog geen reclametekst. Wordt er iets verkocht? Kijk hoeveel alinea's informeren.",
+          "Is er een stappenplan in deze slotzin?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel de alinea's", tekst: "Drie alinea's gaan over feiten over de egel. Eén slotzin stuurt naar een website. Welk deel is groter?" },
+            { titel: "Hoofddoel vs bijdoel", tekst: "Het hoofddoel is het deel dat het zwaarst weegt. Een kleine oproep aan het slot verandert het hoofddoel niet." },
+            { titel: "Is dit reclame?", tekst: "Er wordt niets verkocht — er is geen product, geen prijs. Informeren blijft het hoofddoel." },
+          ],
+          niveaus: {
+            basis: "Drie alinea's informeren + één slotzin met een link: welk doel weegt het zwaarst?",
+            simpeler: "Vergelijk hoeveel er informeert en hoeveel er doorstuurt. Wat is meer?",
+            nogSimpeler: "Als er drie stukken feiten zijn en één stukje oproep, wat is dan het MEESTE?",
+          },
+        },
+      },
+      {
+        q: "Een schoolkrant publiceert dit stukje: *\"Vorige week won onze klas de spellingscompetitie. We mochten van de meester kiezen: pizza of patat. We kozen pizza — en die was heerlijk!\"* Wat is het tekstdoel?",
+        options: [
+          "Amuseren — een leuk verhaal vertellen",
+          "Informeren — feiten geven over spellen",
+          "Overtuigen — pizza is beter dan patat",
+          "Instrueren — uitleggen hoe je snel spelt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staan feiten in (wie won, wat kozen ze), maar het doel is niet om dingen uit te leggen — het is om het leuk te maken om te lezen.",
+          "Het is geen reclame voor pizza. Wat doet dit stukje met de lezer — informeren of laten lachen/genieten?",
+          "Staan er stappen of instructies in? Of gaat het over wat er is gebeurd?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke gevoelens roept de tekst op?", tekst: "Het stukje is grappig en luchtig. 'We kozen pizza — en die was heerlijk!' — dat is niet om je iets te leren, maar om je te laten genieten." },
+            { titel: "Is er een boodschap of oproep?", tekst: "Niemand hoeft iets te gaan doen. Er wordt niets verkocht. Er worden geen feiten uitgelegd om je slim te maken. Dus: het hoofddoel is amuseren." },
+          ],
+          niveaus: {
+            basis: "Wil je na dit stukje iets doen, iets kopen, of vond je het gewoon een leuk verhaal?",
+            simpeler: "Als een tekst je laat lachen of glimlachen zonder dat je iets hoeft te doen, wat is dan het doel?",
+            nogSimpeler: "Vertel jij een grappig verhaal om iemand wijzer te maken, of omdat het leuk is?",
+          },
+        },
+      },
+      {
+        q: "Welk tekstdoel hoort bij de zin: *\"Schrijf de datum rechtsboven op je toets en je naam linksboven.\"*?",
+        options: [
+          "Instrueren — stap voor stap uitleggen wat je moet doen",
+          "Informeren — feiten geven over toetsen",
+          "Overtuigen — je ervan overtuigen dat datum schrijven goed is",
+          "Amuseren — een grappige situatie schetsen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je leert hier geen nieuwe feiten. Je krijgt een opdracht. Welk tekstdoel hoort bij opdrachten en stappen?",
+          "Er is geen mening of argument. Je hoeft niets te geloven — je moet iets uitvoeren.",
+          "Grappig is het niet. Welk doel past bij 'doe dit en dan dat'?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken de opdrachtvorm", tekst: "'Schrijf ... rechtsboven' en 'schrijf ... linksboven' zijn opdrachten — werkwoorden die jou aan het werk zetten." },
+            { titel: "Koppel aan het tekstdoel", tekst: "Opdrachten en stappenplannen horen bij instrueren. Dat is precies wat deze zin doet: precies vertellen wat jij moet doen en hoe." },
+          ],
+          niveaus: {
+            basis: "Staat er een opdracht in de zin die jij moet uitvoeren? Welk doel hoort daarbij?",
+            simpeler: "Als een zin begint met een opdracht-werkwoord ('schrijf', 'plak', 'doe'), wat wil de schrijver dan — dat je iets doet of iets gelooft?",
+            nogSimpeler: "Een gebruiksaanwijzing zegt: 'druk op de knop'. Wat is het doel van zo'n aanwijzing?",
           },
         },
       },

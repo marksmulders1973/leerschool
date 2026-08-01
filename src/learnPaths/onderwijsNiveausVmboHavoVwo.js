@@ -98,6 +98,18 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wat zegt je schoenmaat over hoe je leert? Zoek iets dat je kénnis meet.", "Een kleur zegt niets over rekenen of lezen — welke tóéts doe je in groep 8?", null],
       },
+      {
+        q: "Hoeveel jaar duurt **havo**?",
+        options: ["5 jaar", "4 jaar", "6 jaar", "3 jaar"],
+        answer: 0,
+        wrongHints: [null, "Dat is vmbo.", "Dat is vwo.", "Te kort."],
+      },
+      {
+        q: "Naar welke vervolgopleiding gaan vmbo-leerlingen **meestal**?",
+        options: ["Het mbo", "De universiteit", "Het hbo", "Havo"],
+        answer: 0,
+        wrongHints: [null, "Dat is de route via vwo.", "Dat gaat via havo.", "Dat is zijdelings mogelijk via vmbo-tl, maar niet de meest gekozen route na het vmbo als geheel."],
+      },
     ],
   },
   {
@@ -129,6 +141,18 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet waar.", "Niet waar.", "Niet waar — mbo komt erna."],
       },
+      {
+        q: "Welke vmbo-leerweg heeft **het meest praktijk** van de vier?",
+        options: ["Basisberoepsgerichte leerweg (bb)", "Theoretische leerweg (tl)", "Gemengde leerweg (gl)", "Kaderberoepsgerichte leerweg (kb)"],
+        answer: 0,
+        wrongHints: [null, "Juist de meeste theorie.", "Mix — maar niet de meeste praktijk van alle vier.", "Ook veel praktijk, maar net iets minder dan bb."],
+      },
+      {
+        q: "Welke vmbo-afdeling noem je ook wel **mavo**?",
+        options: ["Theoretische leerweg (tl)", "Basisberoepsgerichte leerweg (bb)", "Gemengde leerweg (gl)", "Kaderberoepsgerichte leerweg (kb)"],
+        answer: 0,
+        wrongHints: [null, "De bijnaam 'mavo' hoort bij de leerweg met de meeste theorie.", "Niet de gemengde variant.", "Niet de kader-variant."],
+      },
     ],
   },
   {
@@ -159,6 +183,18 @@ const steps = [
         options: ["6 jaar", "5 jaar", "4 jaar", "3 jaar"],
         answer: 0,
         wrongHints: [null, "Dat is havo.", "Dat is vmbo.", "Te kort."],
+      },
+      {
+        q: "Welk profiel kies je als je later **arts of bioloog** wil worden?",
+        options: ["Natuur & Gezondheid (N&G)", "Cultuur & Maatschappij (C&M)", "Economie & Maatschappij (E&M)", "Natuur & Techniek (N&T)"],
+        answer: 0,
+        wrongHints: [null, "C&M gaat over talen en kunst — minder wis- en scheikunde.", "E&M gaat over economie en maatschappij — niet over biologie of geneeskunde.", "N&T is meer gericht op techniek en wiskunde; N&G heeft als extra de nadruk op biologie en gezondheid."],
+      },
+      {
+        q: "Hoe noem je de twee smaken **vwo**?",
+        options: ["Atheneum en gymnasium", "Havo en mavo", "Bb en tl", "N&T en C&M"],
+        answer: 0,
+        wrongHints: [null, "Havo is een apart niveau; mavo is de bijnaam voor vmbo-tl.", "Dat zijn vmbo-leerwegen.", "Dat zijn profielen, geen smaken van vwo."],
       },
     ],
   },
