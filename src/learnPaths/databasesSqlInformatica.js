@@ -48,6 +48,26 @@ const steps = [
           niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "A." },
         },
       },
+      {
+        q: "In een tabel: wat is een **veld**?",
+        options: ["Eén kolom — één eigenschap (bv. naam of groep)", "Eén rij/exemplaar", "De hele tabel", "Een foutmelding"],
+        answer: 0,
+        wrongHints: [null, "Eén rij is juist een record.", "De tabel bevat velden én records — het is niet één veld.", "Een veld is data, geen fout."],
+        uitlegPad: {
+          stappen: [{ titel: "Kolom = veld", tekst: "Een **veld** is één **kolom** in de tabel = één **eigenschap** (naam, groep, geboortejaar). Een **record** is een rij (één exemplaar). Elke record heeft dezelfde velden, maar met eigen waarden." }],
+          niveaus: { basis: "Een kolom.", simpeler: "Veld = kolom", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat is een **DBMS** (zoals MySQL of PostgreSQL)?",
+        options: ["Een programma dat databases beheert", "Een programmeertaal voor games", "Een soort virus", "Een netwerkkabel"],
+        answer: 0,
+        wrongHints: [null, "Het beheert data; het is geen game-taal.", "Het heeft niets met malware te maken.", "Dat is hardware."],
+        uitlegPad: {
+          stappen: [{ titel: "De databasebeheerder", tekst: "Een **DBMS** (DataBase Management System) is de **software die de database beheert**: opslaan, opvragen, beveiligen, back-uppen. Bekende voorbeelden: MySQL, PostgreSQL, SQLite. Jij praat ermee via **SQL**." }],
+          niveaus: { basis: "Databasebeheer-software.", simpeler: "DBMS = beheert database", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -85,6 +105,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eén keer opschrijven", tekst: "Door op te splitsen (normaliseren) schrijf je elk gegeven **maar één keer** op (de naam 'Sara' staat alleen in Leerlingen). Verandert er iets? Eén plek aanpassen. Dat voorkomt **dubbele gegevens** en fouten." }],
           niveaus: { basis: "Geen dubbele data.", simpeler: "Opsplitsen = geen dubbel", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Het netjes opsplitsen van gegevens over tabellen (om dubbele data te voorkomen) heet:",
+        options: ["Normaliseren", "Versleutelen", "Sorteren", "Back-uppen"],
+        answer: 0,
+        wrongHints: [null, "Versleutelen gaat over geheimhouding.", "Sorteren zet op volgorde, splitst niet op.", "Een back-up is een kopie, geen opsplitsing."],
+        uitlegPad: {
+          stappen: [{ titel: "Opsplitsen zonder dubbels", tekst: "**Normaliseren** is het slim **opsplitsen** van gegevens over meerdere gekoppelde tabellen, zodat je elk gegeven maar één keer opslaat. Dat voorkomt **redundantie** (dubbele data) en de fouten die daaruit ontstaan." }],
+          niveaus: { basis: "Slim opsplitsen.", simpeler: "Normaliseren = geen dubbels", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
+        options: ["Via hun unieke primaire sleutel (id)", "Dat kan de database niet", "Via de kleur van de rij", "Via hun wachtwoord"],
+        answer: 0,
+        wrongHints: [null, "Juist hiervoor bestaat de primaire sleutel.", "Rijen hebben geen kleur als kenmerk.", "Een wachtwoord is geen record-identificatie."],
+        uitlegPad: {
+          stappen: [{ titel: "Dezelfde naam, ander id", tekst: "Namen kunnen dubbel voorkomen, maar de **primaire sleutel (id)** is **uniek**. Sara #1 en Sara #2 hebben een verschillend id, dus de database (en foreign keys) verwijzen altijd naar precies de juiste leerling." }],
+          niveaus: { basis: "Uniek id.", simpeler: "Id houdt ze uit elkaar", nogSimpeler: "A." },
         },
       },
     ],
@@ -126,6 +166,26 @@ const steps = [
           niveaus: { basis: "SELECT * ... WHERE groep=7.", simpeler: "Alles ophalen = SELECT *", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Wat doet **`ORDER BY cijfer DESC`** in een query?",
+        options: ["Sorteert op cijfer, hoogste bovenaan", "Verwijdert lage cijfers", "Telt de cijfers", "Filtert op cijfer 6"],
+        answer: 0,
+        wrongHints: [null, "ORDER BY wijzigt/verwijdert niets.", "Tellen doet COUNT.", "Filteren doet WHERE."],
+        uitlegPad: {
+          stappen: [{ titel: "Sorteren, aflopend", tekst: "**ORDER BY** sorteert de resultaten. **DESC** = aflopend (hoogste bovenaan), **ASC** = oplopend. `ORDER BY cijfer DESC` zet dus de hoogste cijfers vooraan. Het verandert de data niet, alleen de volgorde van het resultaat." }],
+          niveaus: { basis: "Sorteren, hoogste eerst.", simpeler: "ORDER BY = sorteren", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Welk SQL-woord bepaalt **uit welke tabel** je gegevens haalt?",
+        options: ["FROM", "SELECT", "WHERE", "VALUES"],
+        answer: 0,
+        wrongHints: [null, "SELECT kiest de kolommen.", "WHERE is de filter.", "VALUES hoort bij INSERT (toevoegen)."],
+        uitlegPad: {
+          stappen: [{ titel: "FROM = welke tabel", tekst: "**FROM** geeft de **tabel** aan waaruit je haalt: `SELECT naam FROM Leerlingen`. SELECT = kolommen, FROM = tabel, WHERE = filter. Samen vormen ze de basis van bijna elke query." }],
+          niveaus: { basis: "FROM.", simpeler: "Tabel kiezen = FROM", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -163,6 +223,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aggregatie", tekst: "**COUNT(*)** telt het aantal records: `SELECT COUNT(*) FROM Leerlingen;`. Andere samenvat-functies: **AVG** (gemiddelde), **SUM** (totaal), **MAX/MIN** (hoogste/laagste). Handig om snel iets over een hele tabel te weten." }],
           niveaus: { basis: "COUNT(*).", simpeler: "Aantal tellen = COUNT", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Welk SQL-commando **voegt een nieuw record toe**?",
+        options: ["INSERT", "DELETE", "SELECT", "UPDATE"],
+        answer: 0,
+        wrongHints: [null, "DELETE verwijdert juist.", "SELECT haalt alleen op.", "UPDATE wijzigt een bestaand record."],
+        uitlegPad: {
+          stappen: [{ titel: "INSERT = toevoegen", tekst: "**INSERT** voegt een nieuw record toe: `INSERT INTO Leerlingen (naam, groep) VALUES ('Lina', 7);`. SELECT haalt op, UPDATE wijzigt, DELETE verwijdert — INSERT maakt er eentje bij." }],
+          niveaus: { basis: "INSERT.", simpeler: "Toevoegen = INSERT", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Welke functie geeft het **gemiddelde** cijfer van een tabel?",
+        options: ["AVG", "COUNT(*)", "MAX", "DELETE"],
+        answer: 0,
+        wrongHints: [null, "COUNT telt het aantal, niet het gemiddelde.", "MAX geeft het hoogste, niet het gemiddelde.", "DELETE verwijdert."],
+        uitlegPad: {
+          stappen: [{ titel: "AVG = gemiddelde", tekst: "**AVG** berekent het **gemiddelde**: `SELECT AVG(cijfer) FROM Toetsen;`. Verwante samenvat-functies: **COUNT** (aantal), **SUM** (totaal), **MAX/MIN** (hoogste/laagste). Zo krijg je in één query een overzicht van een hele tabel." }],
+          niveaus: { basis: "AVG.", simpeler: "Gemiddelde = AVG", nogSimpeler: "A." },
         },
       },
     ],

@@ -48,6 +48,26 @@ const steps = [
           niveaus: { basis: "SSD sneller, geen bewegende delen.", simpeler: "SSD = sneller", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Waarvoor is de **GPU** (grafische kaart) vooral sterk?",
+        options: ["Beeld/video en veel parallelle berekeningen (games, AI)", "Het blijvend bewaren van bestanden", "Het leveren van stroom", "Het typen van tekst"],
+        answer: 0,
+        wrongHints: [null, "Bewaren doet de opslag (SSD/HDD).", "Stroom komt van de voeding.", "Typen is input, geen GPU-taak."],
+        uitlegPad: {
+          stappen: [{ titel: "Veel tegelijk rekenen", tekst: "De **GPU** (grafische kaart) is gebouwd om **heel veel berekeningen tegelijk (parallel)** te doen. Perfect voor **beeld/video** in games, maar ook voor **AI** (die veel parallelle rekensommen vraagt). De CPU is juist sterk in losse, complexe taken." }],
+          niveaus: { basis: "Beeld + parallel rekenen.", simpeler: "GPU = veel tegelijk", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat doet het **moederbord**?",
+        options: ["Verbindt alle onderdelen met elkaar", "Rekent alle instructies uit", "Bewaart bestanden blijvend", "Toont het beeld"],
+        answer: 0,
+        wrongHints: [null, "Rekenen doet de CPU.", "Bewaren doet de opslag.", "Beeld toont het scherm/de GPU."],
+        uitlegPad: {
+          stappen: [{ titel: "De verbinder", tekst: "Het **moederbord** is de grote printplaat die **alle onderdelen** (CPU, RAM, opslag, GPU, randapparaten) met elkaar **verbindt**, zodat ze kunnen samenwerken en data kunnen uitwisselen. Het rekent niet zelf — het verbindt." }],
+          niveaus: { basis: "Verbindt onderdelen.", simpeler: "Moederbord = verbinder", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -85,6 +105,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Snel & klein vs traag & groot", tekst: "Hoe **dichter bij de CPU**, hoe **sneller maar kleiner**: registers/cache (in de CPU) → RAM → opslag (SSD/HDD). Data reist van opslag naar RAM naar de CPU. De cache is supersnel maar piepklein; opslag is groot maar traag." }],
           niveaus: { basis: "Dichterbij = sneller, kleiner.", simpeler: "Bij CPU = sneller+kleiner", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat betekent de **kloksnelheid** (in GHz) van een CPU?",
+        options: ["Hoeveel cycli (bewerkingen) hij ongeveer per seconde doet", "Hoeveel bestanden erop passen", "Hoe groot het scherm is", "Hoeveel stroom hij levert"],
+        answer: 0,
+        wrongHints: [null, "Opslagruimte is iets anders.", "Schermgrootte staat los van de CPU.", "De CPU levert geen stroom."],
+        uitlegPad: {
+          stappen: [{ titel: "Cycli per seconde", tekst: "De **kloksnelheid** (GHz = miljarden per seconde) zegt hoeveel **cycli** de CPU per seconde doorloopt — dus hoe vaak hij de fetch-decode-execute-cyclus herhaalt. Hoger betekent (grofweg) sneller, al telt het aantal **cores** ook mee." }],
+          niveaus: { basis: "Cycli per seconde.", simpeler: "GHz = snelheid", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat is het voordeel van meerdere **cores** in een CPU?",
+        options: ["Meerdere instructies tegelijk (parallel) uitvoeren", "Meer opslagruimte", "Een groter scherm", "Gegarandeerd minder stroomverbruik"],
+        answer: 0,
+        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Schermgrootte staat los.", "Meer cores kunnen juist méér verbruiken."],
+        uitlegPad: {
+          stappen: [{ titel: "Meer handen", tekst: "Elke **core** is als een aparte rekenkern. Met meerdere cores kan de CPU **meerdere instructies tegelijk (parallel)** uitvoeren — handig als je veel programma's tegelijk draait of zware taken splitst. Meer cores ≈ meer werk tegelijk." }],
+          niveaus: { basis: "Meer tegelijk rekenen.", simpeler: "Cores = parallel", nogSimpeler: "A." },
         },
       },
     ],
@@ -126,6 +166,26 @@ const steps = [
           niveaus: { basis: "Linux.", simpeler: "Open source = Linux", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Wat is een **driver**?",
+        options: ["Software waarmee het OS met een apparaat (printer, GPU) kan praten", "Iemand die de computer bestuurt", "Een bestand met foto's", "Het werkgeheugen"],
+        answer: 0,
+        wrongHints: [null, "Het is software, geen persoon.", "Het is geen fotobestand.", "RAM is iets heel anders."],
+        uitlegPad: {
+          stappen: [{ titel: "Vertaler naar hardware", tekst: "Een **driver** is een stukje software dat het **OS leert praten met een specifiek apparaat** (printer, grafische kaart, webcam). Zonder de juiste driver herkent of gebruikt het besturingssysteem het apparaat niet goed." }],
+          niveaus: { basis: "Software voor een apparaat.", simpeler: "Driver = hardware-vertaler", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Windows en macOS zijn **gesloten (closed source)**. Dat betekent:",
+        options: ["De broncode is eigendom van het bedrijf en niet openbaar", "Ze werken niet zonder internet", "Ze zijn altijd gratis", "Iedereen mag de code vrij aanpassen"],
+        answer: 0,
+        wrongHints: [null, "Internet staat los van open/closed source.", "Ze zijn meestal juist betaald.", "Vrij aanpassen is juist open source."],
+        uitlegPad: {
+          stappen: [{ titel: "Code niet openbaar", tekst: "Bij **closed source** houdt het bedrijf de **broncode geheim** — je mag hem niet inzien of aanpassen (Windows, macOS). Bij **open source** (Linux, Android) is de code juist **openbaar** en mag iedereen meekijken en verbeteren." }],
+          niveaus: { basis: "Code is van het bedrijf.", simpeler: "Closed = code geheim", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -163,6 +223,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Een pad door de boom", tekst: "Een **pad** beschrijft de route door de **boomstructuur** van mappen naar het bestand, bv. `Documenten/School/verslag.docx`. Mappen kunnen in mappen zitten; het pad zegt precies waar het bestand staat." }],
           niveaus: { basis: "Een pad.", simpeler: "Locatie = pad", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Je hernoemt `foto.jpg` naar `foto.txt`. Wat gebeurt er met de inhoud?",
+        options: ["De echte inhoud blijft hetzelfde — alleen de naam verandert", "Het wordt automatisch een tekstbestand", "Het bestand wordt gewist", "Het wordt kleiner"],
+        answer: 0,
+        wrongHints: [null, "De extensie hernoemen verandert de data niet.", "Hernoemen wist niets.", "De grootte blijft gelijk."],
+        uitlegPad: {
+          stappen: [{ titel: "Naam ≠ inhoud", tekst: "De **extensie** is maar een **label**. Hernoem je `foto.jpg` naar `foto.txt`, dan blijven de bytes exact hetzelfde — het is nog steeds een afbeelding. Alleen opent je computer het nu met het verkeerde programma, waardoor het als 'onzin' oogt." }],
+          niveaus: { basis: "Inhoud blijft gelijk.", simpeler: "Naam wijzigen ≠ inhoud", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wat is een goede **back-up-regel**?",
+        options: ["Belangrijke bestanden op meer dan één plek bewaren", "Eén kopie is altijd genoeg", "Nooit een kopie maken", "Alles alleen in het RAM zetten"],
+        answer: 0,
+        wrongHints: [null, "Ook die ene kopie kun je kwijtraken.", "Zonder kopie ben je bij een crash alles kwijt.", "RAM is vluchtig — daar ben je het meteen kwijt."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén kopie is geen kopie", tekst: "Bewaar belangrijke bestanden op **meer dan één plek** (bv. lokaal + cloud). Raakt de ene plek beschadigd (crash, ransomware, diefstal), dan heb je nog de andere. 'Eén kopie is geen kopie' — echte veiligheid begint bij twee." }],
+          niveaus: { basis: "Meerdere plekken.", simpeler: "Back-up = meer plekken", nogSimpeler: "A." },
         },
       },
     ],

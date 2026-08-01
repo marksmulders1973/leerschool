@@ -48,6 +48,26 @@ const steps = [
           niveaus: { basis: "Plan vs code.", simpeler: "Algoritme = plan, programma = code", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Welke van deze is een **algoritme** uit het dagelijks leven?",
+        options: ["Een recept om thee te zetten (stap voor stap)", "Een willekeurige stapel papier", "De kleur van een kopje", "Een leeg vel"],
+        answer: 0,
+        wrongHints: [null, "Zonder volgorde/stappen is het geen algoritme.", "Een eigenschap is geen stappenplan.", "Zonder stappen valt er niets uit te voeren."],
+        uitlegPad: {
+          stappen: [{ titel: "Stappen in volgorde", tekst: "Een **recept** is een algoritme: duidelijke **stappen in volgorde** die altijd tot hetzelfde resultaat leiden. Een stapel papier of een kleur is dat niet — daar zit geen uitvoerbaar stappenplan in." }],
+          niveaus: { basis: "Recept = algoritme.", simpeler: "Stappenplan = algoritme", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Een stap in een algoritme moet **eenduidig** zijn. Dat betekent:",
+        options: ["Er is maar één manier om de stap op te vatten", "Je mag de stap overslaan", "De stap moet lang duren", "De stap is geheim"],
+        answer: 0,
+        wrongHints: [null, "Overslaan zou het resultaat veranderen.", "Duur heeft er niets mee te maken.", "Geheimhouding is niet het punt."],
+        uitlegPad: {
+          stappen: [{ titel: "Geen twijfel", tekst: "**Eenduidig** betekent dat er over een stap **geen twijfel** kan bestaan — precies één manier om 'm op te vatten. Een computer kan een stap alleen goed uitvoeren als die glashelder is; 'doe wat lekker voelt' kan een computer niet." }],
+          niveaus: { basis: "Eén betekenis.", simpeler: "Eenduidig = geen twijfel", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -85,6 +105,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Drie is genoeg", tekst: "Met **sequentie** (volgorde), **selectie** (keuze) en **herhaling** (loop) kun je elk algoritme opbouwen. Dit heet 'gestructureerd programmeren'. Functies/variabelen maken het overzichtelijker, maar de basis blijft deze drie." }],
           niveaus: { basis: "3 bouwstenen.", simpeler: "Sequentie/selectie/herhaling = 3", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Stappen die gewoon **na elkaar** worden uitgevoerd, heten:",
+        options: ["Sequentie", "Selectie", "Herhaling", "Een beslissing"],
+        answer: 0,
+        wrongHints: [null, "Selectie is een keuze (ALS/ANDERS).", "Herhaling doet iets meerdere keren.", "Een beslissing is juist een keuze."],
+        uitlegPad: {
+          stappen: [{ titel: "Gewoon op volgorde", tekst: "**Sequentie** is de simpelste bouwsteen: stappen die **van boven naar beneden**, één voor één, worden uitgevoerd — zonder keuze of herhaling. Zet water op → wacht → giet in." }],
+          niveaus: { basis: "Na elkaar = sequentie.", simpeler: "Volgorde = sequentie", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Wanneer ontstaat een **oneindige lus**?",
+        options: ["Als de voorwaarde van een 'zolang'-lus nooit onwaar wordt", "Als een programma precies één keer draait", "Als je een variabele gebruikt", "Als de lijst gesorteerd is"],
+        answer: 0,
+        wrongHints: [null, "Eén keer draaien is juist netjes eindig.", "Variabelen veroorzaken op zich geen lus.", "Sorteren heeft er niets mee te maken."],
+        uitlegPad: {
+          stappen: [{ titel: "De rem die nooit knijpt", tekst: "Een **'zolang'-lus** herhaalt tot z'n voorwaarde **onwaar** wordt. Als dat nooit gebeurt (je vergeet bv. de teller op te hogen), stopt het programma nooit → een **oneindige lus**, een bekende bug." }],
+          niveaus: { basis: "Voorwaarde stopt nooit.", simpeler: "Nooit stoppen = oneindige lus", nogSimpeler: "A." },
         },
       },
     ],
@@ -126,6 +166,26 @@ const steps = [
           niveaus: { basis: "Fouten eerder vinden.", simpeler: "Eerst plan = fouten eerder", nogSimpeler: "A." },
         },
       },
+      {
+        q: "Welk stroomdiagram-symbool betekent **start of stop**?",
+        options: ["Het ovaal", "De ruit", "De rechthoek", "De pijl"],
+        answer: 0,
+        wrongHints: [null, "De ruit is een beslissing (ja/nee).", "De rechthoek is een gewone bewerking.", "De pijl geeft alleen de richting aan."],
+        uitlegPad: {
+          stappen: [{ titel: "Begin en eind", tekst: "In een stroomdiagram markeert het **ovaal** het **start**- of **stop**punt. Rechthoek = bewerking, **ruit** = beslissing, pijl = volgorde. Elk diagram begint en eindigt dus met een ovaal." }],
+          niveaus: { basis: "Ovaal = start/stop.", simpeler: "Start/stop = ovaal", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom is pseudocode **taal-onafhankelijk** handig?",
+        options: ["Dezelfde opzet kun je later in Python óf Java uitwerken", "Het draait vanzelf op elke computer", "Het is korter dan één woord", "De computer voert het meteen uit"],
+        answer: 0,
+        wrongHints: [null, "Pseudocode draait juist nergens.", "Lengte is niet het punt.", "De computer voert het níét uit — het is voor mensen."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén plan, meerdere talen", tekst: "Omdat **pseudocode** niet aan een taal vastzit, kun je hetzelfde plan daarna uitwerken in **Python, Java of wat dan ook**. Je bedenkt de logica één keer en hoeft je nog niet druk te maken over de exacte schrijfwijze van een taal." }],
+          niveaus: { basis: "Werkt in elke taal.", simpeler: "Taal-onafhankelijk = flexibel", nogSimpeler: "A." },
+        },
+      },
     ],
   },
 
@@ -163,6 +223,26 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "n maakt het verschil", tekst: "Bij een paar items maakt het niet uit, maar bij **miljoenen** items is het verschil tussen een slim en een traag algoritme enorm (seconden vs uren). Daarom tellen informatici het aantal **stappen** in verhouding tot de grootte n. Hetzelfde resultaat, maar veel sneller bereikt." }],
           niveaus: { basis: "Veel data = tijd telt.", simpeler: "Grote data → efficiëntie telt", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Bij **bubble sort** gebeurt wat?",
+        options: ["Buren worden vergeleken en verwisseld tot de lijst gesorteerd is", "De lijst wordt steeds in het midden gedeeld", "Alles wordt gewist", "Er wordt niets gesorteerd"],
+        answer: 0,
+        wrongHints: [null, "In het midden delen hoort bij binair zoeken.", "Sorteren wist niets.", "Bubble sort sorteert juist wél."],
+        uitlegPad: {
+          stappen: [{ titel: "Grootste borrelt naar achteren", tekst: "**Bubble sort** vergelijkt telkens twee **buren**; staat de grootste links, dan verwisselt hij ze. Zo 'borrelt' het grootste getal naar het einde. Herhaal tot er niets meer verwisseld wordt — dan is de lijst gesorteerd. Simpel, maar traag bij grote lijsten." }],
+          niveaus: { basis: "Buren verwisselen.", simpeler: "Bubble sort = buren ruilen", nogSimpeler: "A." },
+        },
+      },
+      {
+        q: "Waarom is **binair zoeken** sneller dan lineair zoeken?",
+        options: ["Het gooit bij elke stap de helft van de lijst weg", "Het bekijkt elk item apart", "Het gebruikt meer geheugen", "Het werkt zonder de lijst te bekijken"],
+        answer: 0,
+        wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Snelheid komt niet door meer geheugen.", "Het kijkt wel, maar slim: halveren."],
+        uitlegPad: {
+          stappen: [{ titel: "Halveren = supersnel", tekst: "**Binair zoeken** kijkt in het midden en **gooit de helft weg** die het niet kan zijn — steeds opnieuw. Daardoor kost het maar ~log₂(n) stappen i.p.v. n. Zo vind je een naam in een telefoonboek zonder elke pagina te lezen. (Voorwaarde: de lijst is gesorteerd.)" }],
+          niveaus: { basis: "Steeds halveren.", simpeler: "Binair = halveren", nogSimpeler: "A." },
         },
       },
     ],
