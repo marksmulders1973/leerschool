@@ -165,14 +165,14 @@ export default function OuderkaartPagina({ setPage }) {
         <button onClick={() => setPage && setPage("familie")} style={linkBtn}>← terug</button>
         <div style={{ marginTop: 8, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
-            👪 Ouderkaart — zo leg je 't uit
+            👪 Zo leg je 't uit — kaart voor thuis
           </h1>
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
             prototype · geheim
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.55, marginTop: 6 }}>
-          Een spiekbriefje voor jóu als ouder: hoe je dit onderwerp in gewone woorden uitlegt aan je kind.
+          Een spiekbriefje voor jou als ouder of verzorger: hoe je dit onderwerp in gewone woorden uitlegt aan je kind.
           Print het of hang het op de koelkast.
         </p>
 
@@ -211,7 +211,7 @@ export default function OuderkaartPagina({ setPage }) {
       {kaart && kaart.stappen.length > 0 && (
         <div className="kaart-print" style={{ maxWidth: 720, margin: "0 auto", padding: "0 16px 40px" }}>
           <div style={{ background: "#fffdf6", color: "#1a1206", border: "2px solid #c9a227", borderRadius: 12, padding: "28px 32px", boxShadow: "0 3px 14px rgba(0,0,0,0.22)" }}>
-            <div style={{ fontSize: 12, letterSpacing: 2, fontWeight: 700, color: "#c8102e" }}>OUDERKAART · LEERKWARTIER</div>
+            <div style={{ fontSize: 12, letterSpacing: 2, fontWeight: 700, color: "#c8102e" }}>VOOR THUIS · LEERKWARTIER</div>
             <h2 style={{ fontSize: 26, fontWeight: 900, margin: "4px 0 2px", color: "#111" }}>
               {conceptEmoji} Zo leg je <span style={{ color: "#c8102e" }}>{titelKort.toLowerCase()}</span> uit
             </h2>

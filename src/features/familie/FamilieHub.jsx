@@ -11,13 +11,13 @@
 const FEATURES = [
   { nr: 1, emoji: "🚦", titel: "Doorstroomtoets-paraatheid", tekst: "In één blik groen/oranje/rood per onderdeel — komt het goed?", status: "klaar", page: "paraatheid" },
   { nr: 3, emoji: "📄", titel: "Oefenboekje op maat", tekst: "Printbaar boekje met precies dat waar je kind moeite mee heeft.", status: "klaar", page: "oefenboekje" },
-  { nr: 3.1, emoji: "👪", titel: "Ouderkaart — zo leg je 't uit", tekst: "Een spiekbriefje voor jóu: hoe je een onderwerp in gewone woorden uitlegt aan je kind.", status: "klaar", page: "ouderkaart" },
+  { nr: 3.1, emoji: "👪", titel: "Kaart voor thuis — zo leg je 't uit", tekst: "Een spiekbriefje voor de ouder of verzorger: hoe je een onderwerp in gewone woorden uitlegt aan je kind.", status: "klaar", page: "ouderkaart" },
   { nr: 2, emoji: "🐉", titel: "Vonk onbeperkt", tekst: "De AI-bijlesdocent altijd beschikbaar — €37/uur bijles vs €39/jaar.", status: "bouw" },
   { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Niet '50% op breuken' maar 'focus deze week op breuken — hier is het boekje'.", status: "bouw" },
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema, automatisch uit de zwakke plekken gebouwd.", status: "bouw" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen (7 dagen op rij, onderwerp gehaald).", status: "bouw" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Per-kind-dashboard + gezinsoverzicht op één abonnement.", status: "bouw" },
-  { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, ouder trots.", status: "klaar", page: "diploma" },
+  { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, en jij trots.", status: "klaar", page: "diploma" },
 ];
 
 export default function FamilieHub({ setPage }) {
@@ -36,7 +36,7 @@ export default function FamilieHub({ setPage }) {
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
-          De premium-laag voor ouders — in aanbouw. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
+          De premium-laag voor ouders en verzorgers — in aanbouw. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>

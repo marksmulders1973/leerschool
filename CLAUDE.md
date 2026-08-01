@@ -342,6 +342,7 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 
 ### Copy / UI
 - **Geen dev-jargon in user-facing copy**: "leerpad", "stap", "module", "trackId" e.d. nooit in UI. Gebruik woorden die ouders/leerlingen kennen.
+- **Nooit alléén "ouder" in user-facing copy** *(Mark 2026-08-01)*: veel kinderen wonen bij een voogd, pleegouder, opa/oma of andere verzorger — "ouder" kan pijnlijk uitsluiten. Gebruik **"ouder of verzorger"**, of neutraal **"voor thuis" / "thuis"**. Code-identifiers (route/var/tracking zoals `ouderkaart`) mogen blijven; het gaat om zichtbare tekst. Zie memory `feedback_ouder_of_verzorger`.
 - **Afkortingen voluit bij eerste gebruik** *(toegevoegd 2026-05-12 na review)*: kinderen van 10 kennen MBO/HBO/WO/CAO/AOW/ZZP/NAVO/USSR/AVG/HTTPS/EU/VS/UK niet automatisch. Patroon: `**NAVO** (Noord-Atlantische Verdragsorganisatie — westers leger-bondgenootschap)` bij eerste vermelding, daarna afkorting OK. Geldt ook voor "VO" → al eerder vervangen door "middelbare school".
 - **Geen AI-poster-art bij Doorstroomtoets-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
 - **Naming Cito vs Doorstroomtoets**: in copy/UI gebruik "Doorstroomtoets" (schoolrealiteit sinds 2024). Filenames + zoek-keywords blijven "cito" voor SEO. Zie `feedback_doorstroomtoets_naming` in memory.

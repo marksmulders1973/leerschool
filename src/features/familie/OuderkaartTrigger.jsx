@@ -34,7 +34,7 @@ export default function OuderkaartTrigger({ conceptId, conceptTitel, fouten = 0 
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ fontSize: 26, lineHeight: 1 }}>👪</div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 800, fontSize: 15 }}>Voor de ouder — zo help je thuis</div>
+          <div style={{ fontWeight: 800, fontSize: 15 }}>Voor thuis — zo help je</div>
           <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5, marginTop: 2 }}>
             Merk je dat <b>{titel.toLowerCase()}</b> nog niet vlot gaat? Wij maakten een kaart die je laat zien hoe je
             het in gewone woorden uitlegt.
