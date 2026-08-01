@@ -44,6 +44,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 6. **📊 Cijfers** — alleen wat beweegt; rest in één regel.
 
 ## 🛠️ Lopend werk (autonoom, 1 aug)
+- **Ideeën-dossier #6 "Leg het uit" (Feynman) — bèta ✅** (v187): op het klaar-scherm van een leerpad legt het kind het concept in eigen woorden uit (typen); een milde AI (`api/leg-uit`, Haiku, dag-quota) benoemt wat knap is + hooguit 1 tip, nooit streng/cijfer. Achter de Familie-poort (AI-kosten). Open: STT-spraakvariant later + live browsertest.
 - **Oefenboekje op maat — feature 3 "Printbaar op maat" AF ✅** (v177-178, gepusht):
   - Part A (v177): **aanbod-kaart** op het klaar-scherm van een leerpad bij ≥3 fout → `/oefenboekje?pad=<id>` (OefenboekjeTrigger; geen examen-paden).
   - Part B (v178): boekje **samengesteld uit de fout-historie** (`kiesZwakkeConcepten` uit mastery-records → gemengd boekje van de zwakste onderwerpen; 6 unit-tests groen). Bereik via `?bron=historie` + de "Oefenboekje op maat"-knop in de Paraatheidsmeter.
@@ -57,7 +58,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 5 | A12 Web Push afronden | ✅ **live** (29 jul) |
 | 3 | Referral via park (deel-code → beloning) | 🟢 grotendeels — deel-actie live 29 jul + `referral.js` |
 | 1 | Programmatic SEO-landingspagina's per leerpad | 🟡 deels — statische landings + schema/sitemap live; per-leerpad-pagina's nog niet volledig |
-| 8 | Buddy-tutor: toets-nabespreking + STT stap 2 | 🟡 deels — buddy live; STT stap 2 open |
+| 8 | Buddy-tutor: toets-nabespreking + STT stap 2 | 🟢 vooruit — buddy live + **"Leg het uit"-Feynman (typen) bèta-live** (dossier #6, v187); STT-spraak open |
 | 6 | Parkmaatjes account-sync (localStorage → Supabase) | 🔴 open |
 | 7 | Echte-telefoon-test park | 🔴 open (Mark-handwerk) |
 | 9 | Leerkracht-takenlijst fase 3 (échte juf laten testen) | 🔴 open (warme juf nodig) |
