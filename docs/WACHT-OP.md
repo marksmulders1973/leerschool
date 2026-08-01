@@ -27,10 +27,10 @@
 | 2 · Vonk onbeperkt 🐉 | ⏳ te bouwen (framing/gating; AI zelf al gebouwd) | — |
 | 4 · Weekmail 2.0 ✉️ | ⏳ te bouwen (hergebruik send-ouder-rapport) | — |
 | 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) | `/weekschema` |
-| 6 · Trots-momenten 🎉 | ⏳ te bouwen | — |
+| 6 · Trots-momenten 🎉 | ✅ klaar (v162) — in-flow + preview | `/trots` |
 | 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ⏳ te bouwen | — |
 
-**Stand: 5 van 9 klaar** (diploma · oefenboekje · kaart voor thuis · paraatheid · weekschema). Volgende: feature 6 (trots-momenten) of 2 (Vonk onbeperkt-framing) of 7 (gezin max 3).
+**Stand: 6 van 9 klaar** (diploma · oefenboekje · kaart voor thuis · paraatheid · weekschema · trots-momenten). Nog te bouwen: 2 (Vonk onbeperkt-framing) · 4 (weekmail 2.0) · 7 (gezin max 3 kinderen).
 
 ## 🟡 Mark-acties (open)
 - ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
