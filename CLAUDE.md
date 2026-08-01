@@ -35,6 +35,8 @@
 
 **ALTIJD feedback terug geven (Mark-regel 2026-06-05) — sluit de lus.** Elke melding die we oppakken (of bewust níét doen) krijgt een reactie terug naar de melder op het wensenbord: een **"💛 Dank van de maker"**-reactie die bedankt + vertelt wat we ermee doen ("opgepakt", "staat live", of "waarom niet"). Kwam de melding via het feedback-formulier (geen reactie-kanaal)? Zet 'm dan als tip op het bord met de naam van de melder + maker-bedankje (zoals bij Sahasra/Sarah/Sonac). **Nooit een melding stilletjes afhandelen** — de melder moet altijd horen dat er iets mee is gebeurd. Dit geldt ook bij latere updates (bv. "fase 1 gestart" → later "fase 3 ook live").
 
+**🧭 KOMPAS-OPENING (Mark-wens 2026-08-01).** Open elk dagrapport met het **Kompas** uit `docs/DAGRAPPORT-KOMPAS.md`: (a) Noord-ster + 1 regel gezondheid, (b) de **kernpijler-ranglijst met %-af + trend**, (c) de **groei-motoren met kracht + trend**. Werk de %'s, trends en de trend-log in dat bestand elke sessie bij (alléén Leerkwartier, nooit Rempahuis). Sluit af met **"🤖 Wat ik uit mezelf doe"** (proactieve zet van die dag). De onderstaande volgorde blijft daaronder gelden.
+
 **🔝 DAGRAPPORT-VOLGORDE (Mark-wens 2026-07-29 — "eerst zien wat het belangrijkst is").** Het dagrapport heeft een VASTE volgorde, belangrijkste bovenaan. Nooit openen met cijfers; openen met wat Mark moet DOEN:
 1. **✅ Jouw acties vandaag** — max 5, concreet + tijdsinschatting ("LinkedIn-tabs afklikken, 2 min"). Bovenaan wat het meest oplevert.
 2. **🔥 Nieuw binnen** — reacties/antwoorden van échte mensen: mail-antwoorden, LinkedIn-reacties (persoonlijk én bedrijfspagina), FB/IG/Threads-reacties, nieuwe volgers/connecties. Wie + wat + voorgestelde reactie, 1 regel per item. Niets binnen = één regel.
