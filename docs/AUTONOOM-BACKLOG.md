@@ -86,6 +86,15 @@ Cito + examens versterken. Drie type werk:
   nu is de banner-fix een pleister (`/?pad=`). Router-sync bij niet-root pathname mag de deeplink-page niet
   overschrijven. Raakt kern-routing (App.jsx ~230-282) → zorgvuldig testen.
 
+## ⏸ SPRINT — Stop & hervat exact (Mark 1 aug: "kind moet altijd kunnen stoppen en exact terugkomen")
+
+> Volledig bouwplan + scope-keuzes in memory `idea_studiebol_stop_en_hervat_exact`. Kern: resume wordt nu
+> alléén bij de kwartier-pauze bewaard en herstelt op stap-niveau — moet altijd + op vraag-niveau.
+
+- [ ] **SH1** `saveResume` uitbreiden (`{pathId, stepIdx, checkIdx, savedAt}`) + autosave in LearnPath op elk overgangsmoment + `visibilitychange`-vangnet.
+- [ ] **SH2** "⏸ Even stoppen"-knop in de leerpad-speler (kindtaal-bevestiging "Je plek is bewaard 👍") + track-event.
+- [ ] **SH3** Exact hervatten: `onResumeLearnPath(pathId, stepIdx, checkIdx)` + `initialCheckIdx` in LearnPath; StudentHome-kaart toont "deel N · vraag M (gisteren)"; resume >14 dagen negeren. v1 alléén leerpaden (toetsen bewust niet mid-toets hervatbaar).
+
 ## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
 
 > Uit 2-agent-audit (concurrentie-onderzoek + frisse-ogen product-audit, 8 jul).
