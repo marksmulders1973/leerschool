@@ -16,7 +16,7 @@ const FEATURES = [
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema, automatisch uit de zwakke plekken gebouwd.", status: "bouw" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen (7 dagen op rij, onderwerp gehaald).", status: "bouw" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Per-kind-dashboard + gezinsoverzicht op één abonnement.", status: "bouw" },
-  { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, ouder trots.", status: "bouw" },
+  { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, ouder trots.", status: "klaar", page: "diploma" },
 ];
 
 export default function FamilieHub({ setPage }) {

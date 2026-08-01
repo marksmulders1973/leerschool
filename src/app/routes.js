@@ -48,6 +48,8 @@ export const PAGE_TO_PATH = {
   paraatheid: "/familie/paraatheid",
   // Oefenboekje op maat — PROTOTYPE, geheim (alleen via ?boekje=1/?familie=1 of admin).
   oefenboekje: "/oefenboekje",
+  // Printbaar diploma — feature 8, geheim (alleen via ?familie=1 of admin).
+  diploma: "/diploma",
   // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
   brugklas: "/brugklas",
   // Branded dagkaart-generator voor social (Mark 3 jul)

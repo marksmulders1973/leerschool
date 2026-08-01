@@ -16,6 +16,22 @@
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 | Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
 
+## 🔒 Geheim bouwproject — Familie-abonnement (elke sessie 1 dagrapport-regel)
+*Mark 31 jul: bouw de 8 Familie-haken geheim af (~1 mnd), meld voortgang in élk dagrapport. Achter `familiePreviewVisible()` — `?familie=1` of admin. Bron-memory: `project_studiebol_familie_tier_features` + `idea_studiebol_premium_printbare_hulp`.*
+
+| Feature | Status | Geheime URL |
+|---|---|---|
+| 1 · Paraatheidsmeter 🚦 | ✅ klaar (v154) | `/familie/paraatheid?familie=1` |
+| 3 · Oefenboekje op maat 📄 | ✅ core klaar (v153); open: aanbod-kaart klaar-scherm + concept uit fout-historie | `/oefenboekje?boekje=1&pad=<id>` |
+| 8 · Printbaar diploma 🏅 | ✅ klaar (1 aug, v156); open: auto-prefill vanuit afgerond pad | `/diploma?familie=1&naam=<x>&onderwerp=<y>` |
+| 2 · Vonk onbeperkt 🐉 | ⏳ te bouwen (framing/gating; AI zelf al gebouwd) | — |
+| 4 · Weekmail 2.0 ✉️ | ⏳ te bouwen (hergebruik send-ouder-rapport) | — |
+| 5 · Koelkast-weekschema 📅 | ⏳ te bouwen | — |
+| 6 · Trots-momenten 🎉 | ⏳ te bouwen | — |
+| 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ⏳ te bouwen | — |
+
+**Stand: 3 van 8 klaar.** Volgende voorstel: feature 5 (koelkast-weekschema, combineert met oefenboekje + paraatheid) of feature 6 (trots-momenten).
+
 ## 🟡 Mark-acties (open)
 - ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
 - ⚠️ **MoonPay-mail checken** ("Welcome to MoonPay via Pump.fun", 26 jul 22:51): heb jij dat account zelf aangemaakt? Zo niet: negeren en nergens op klikken (iemand gebruikte dan jouw mailadres). Claude navigeert niet naar financiële sites (vaste regel).

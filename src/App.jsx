@@ -77,6 +77,7 @@ const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.js
 const OefenboekjePagina = lazy(() => import("./features/oefenboekje/OefenboekjePagina.jsx"));
 const FamilieHub = lazy(() => import("./features/familie/FamilieHub.jsx"));
 const Paraatheidsmeter = lazy(() => import("./features/familie/Paraatheidsmeter.jsx"));
+const DiplomaPagina = lazy(() => import("./features/familie/DiplomaPagina.jsx"));
 const BrugklasPage = lazy(() => import("./components/BrugklasPage.jsx"));
 const DicteesPage = lazy(() => import("./components/DicteesPage.jsx"));
 const DagkaartGenerator = lazy(() => import("./components/DagkaartGenerator.jsx"));
@@ -2044,6 +2045,7 @@ export default function App() {
       {page === "familie" && familiePreviewVisible(authUser) && <FamilieHub setPage={setPage} />}
       {page === "paraatheid" && familiePreviewVisible(authUser) && <Paraatheidsmeter setPage={setPage} />}
       {page === "oefenboekje" && oefenboekjePreviewVisible(authUser) && <OefenboekjePagina setPage={setPage} />}
+      {page === "diploma" && familiePreviewVisible(authUser) && <DiplomaPagina setPage={setPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}
