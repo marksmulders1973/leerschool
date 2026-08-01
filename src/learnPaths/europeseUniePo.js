@@ -12,7 +12,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc EU: onthouden 27 lidstaten, 20 euro-landen, 12 sterren op vlag. Instellingen: Commissie initieert, Parlement controleert, Raad besluit.",
+  theorie: "Cito-truc EU: onthouden 27 lidstaten, 21 euro-landen, 12 sterren op vlag. Instellingen: Commissie initieert, Parlement controleert, Raad besluit.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -193,19 +193,19 @@ const steps = [
   },
   {
     title: "Stap 5 — De euro + euro-landen",
-    explanation: "**€uro** is de gemeenschappelijke munt van de EU — maar **niet alle 27 EU-landen** gebruiken de euro!\n\n**Welke landen gebruiken de euro?** (20 sinds 2023)\nNederland, België, Duitsland, Frankrijk, Italië, Spanje, Portugal, Ierland, Oostenrijk, Finland, Griekenland, Luxemburg, Slovenië, Cyprus, Malta, Slowakije, Estland, Letland, Litouwen, **Kroatië** (jongste, sinds 2023).\n\n**Welke EU-landen hebben hun eigen munt?** (7)\n- Zweden (kroon), Denemarken (kroon), Polen (zloty), Tsjechië (kroon), Hongarije (forint), Roemenië (leu), Bulgarije (lev).\n\n**Belangrijke feiten over de euro**:\n- Ingevoerd als rekenmunt: **1 januari 1999**.\n- Als briefjes + munten: **1 januari 2002**.\n- Bewaakt door **Europese Centrale Bank** (ECB) in Frankfurt (Duitsland). President: Christine Lagarde (Frans).\n- 1 euro = 100 cent.\n\n**Niet-EU-landen die wel euro gebruiken**: Andorra, Monaco, San Marino, Vaticaanstad (mini-staten — afspraak met EU). Plus Kosovo + Montenegro (gebruiken het zonder officiële afspraak).",
+    explanation: "**€uro** is de gemeenschappelijke munt van de EU — maar **niet alle 27 EU-landen** gebruiken de euro!\n\n**Welke landen gebruiken de euro?** (21 sinds 2026)\nNederland, België, Duitsland, Frankrijk, Italië, Spanje, Portugal, Ierland, Oostenrijk, Finland, Griekenland, Luxemburg, Slovenië, Cyprus, Malta, Slowakije, Estland, Letland, Litouwen, Kroatië (sinds 2023), **Bulgarije** (jongste, sinds 1 januari 2026).\n\n**Welke EU-landen hebben hun eigen munt?** (6)\n- Zweden (kroon), Denemarken (kroon), Polen (zloty), Tsjechië (kroon), Hongarije (forint), Roemenië (leu).\n\n**Belangrijke feiten over de euro**:\n- Ingevoerd als rekenmunt: **1 januari 1999**.\n- Als briefjes + munten: **1 januari 2002**.\n- Bewaakt door **Europese Centrale Bank** (ECB) in Frankfurt (Duitsland). President: Christine Lagarde (Frans).\n- 1 euro = 100 cent.\n\n**Niet-EU-landen die wel euro gebruiken**: Andorra, Monaco, San Marino, Vaticaanstad (mini-staten — afspraak met EU). Plus Kosovo + Montenegro (gebruiken het zonder officiële afspraak).",
     emoji: "💶",
     checks: [
       {
-        q: "Hoeveel EU-landen gebruiken de **euro** als munt (in 2025)?",
-        options: ["15 landen", "20 landen", "25 landen", "27 landen"],
+        q: "Hoeveel EU-landen gebruiken de **euro** als munt (in 2026)?",
+        options: ["15 landen", "21 landen", "25 landen", "27 landen"],
         answer: 1,
         wrongHints: ["Hoger — meer landen zijn euro-land.", null, "Te hoog. Niet alle EU-landen hebben euro.", "Tegenovergesteld — niet alle EU-landen hebben euro. Sommigen weigeren bewust."],
-        explanation: "**20 landen** in de **eurozone** (sinds Kroatië in 2023). 7 EU-landen hebben eigen munt: Polen, Zweden, Denemarken, Tsjechië, Hongarije, Roemenië, Bulgarije.",
+        explanation: "**21 landen** in de **eurozone** (sinds Bulgarije op 1 januari 2026 de euro invoerde; daarvóór Kroatië in 2023). 6 EU-landen hebben nog een eigen munt: Polen, Zweden, Denemarken, Tsjechië, Hongarije, Roemenië.",
         uitlegPad: compact(
-          "Eurozone = 20 landen (sinds 1 jan 2023). Kroatië als jongste lid.",
-          { basis: "20 euro-landen.", simpeler: "Niet alle EU = euro. 20 wel, 7 niet.", nogSimpeler: "20" },
-          [{ woord: "eurozone", uitleg: "Landen die de euro gebruiken (20 van de 27 EU-lidstaten)." }],
+          "Eurozone = 21 landen (sinds 1 jan 2026). Bulgarije als jongste lid.",
+          { basis: "21 euro-landen.", simpeler: "Niet alle EU = euro. 21 wel, 6 niet.", nogSimpeler: "21" },
+          [{ woord: "eurozone", uitleg: "Landen die de euro gebruiken (21 van de 27 EU-lidstaten)." }],
         ),
       },
       {

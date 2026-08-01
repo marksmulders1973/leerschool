@@ -472,7 +472,7 @@ const steps = [
   // D
   {
     title: "Nederland in de wereld",
-    explanation: "Nederland is geen eiland — we werken samen met andere landen.\n\n**Europese Unie (EU)**:\n• 27 landen, sinds 1957 (begon met 6).\n• NL is **medeoprichter**.\n• **Vrij verkeer** van personen, goederen, diensten en kapitaal binnen EU.\n• Gemeenschappelijke regels (bv. AVG-privacywet).\n• **Euro** is de munt sinds 2002 (in 20 EU-landen).\n• **Europees Parlement** kiest NL elke 5 jaar (29 NL-zetels van 720).\n\n**Verenigde Naties (VN)**:\n• 193 landen (bijna alle).\n• Opgericht 1945, na WO2.\n• Doel: vrede, mensenrechten, ontwikkeling.\n• **Veiligheidsraad** mag sancties opleggen.\n• Bekende organisaties: WHO (gezondheid), UNICEF (kinderen), UNESCO (cultuur).\n\n**NAVO**:\n• Militaire bondgenootschap, 32 landen.\n• \"Aanval op één = aanval op allen\" (artikel 5).\n• NL hoort bij sinds oprichting (1949).\n\n**Andere belangrijke organisaties**:\n• **WTO** (handel)\n• **IMF** (financiën)\n• **Internationaal Strafhof** (Den Haag!) — berecht oorlogsmisdaden.",
+    explanation: "Nederland is geen eiland — we werken samen met andere landen.\n\n**Europese Unie (EU)**:\n• 27 landen, sinds 1957 (begon met 6).\n• NL is **medeoprichter**.\n• **Vrij verkeer** van personen, goederen, diensten en kapitaal binnen EU.\n• Gemeenschappelijke regels (bv. AVG-privacywet).\n• **Euro** is de munt sinds 2002 (in 21 EU-landen).\n• **Europees Parlement** kiest NL elke 5 jaar (29 NL-zetels van 720).\n\n**Verenigde Naties (VN)**:\n• 193 landen (bijna alle).\n• Opgericht 1945, na WO2.\n• Doel: vrede, mensenrechten, ontwikkeling.\n• **Veiligheidsraad** mag sancties opleggen.\n• Bekende organisaties: WHO (gezondheid), UNICEF (kinderen), UNESCO (cultuur).\n\n**NAVO**:\n• Militaire bondgenootschap, 32 landen.\n• \"Aanval op één = aanval op allen\" (artikel 5).\n• NL hoort bij sinds oprichting (1949).\n\n**Andere belangrijke organisaties**:\n• **WTO** (handel)\n• **IMF** (financiën)\n• **Internationaal Strafhof** (Den Haag!) — berecht oorlogsmisdaden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">NL in de wereld</text>
 <rect x="20" y="40" width="80" height="60" rx="6" fill="#003399" opacity="0.30" stroke="#003399" stroke-width="2"/>
@@ -581,12 +581,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet alleen NL.", "Geen plaats.", "Geen partij."],
         uitlegPad: {
-          stappen: [{ titel: "Euro — 20 landen", tekst: "Euro (€) is de gemeenschappelijke munt van 20 EU-landen (in 2026): NL, DE, FR, IT, ES, PT, BE, LU, IE, FI, AT, GR, MT, CY, EE, LV, LT, SI, SK, HR. Ingevoerd: 1999 (giraal), 2002 (briefjes+munten). 7 EU-landen behouden eigen munt (vb. Denemarken kroon, Zweden kroon, Polen zloty)." }],
+          stappen: [{ titel: "Euro — 21 landen", tekst: "Euro (€) is de gemeenschappelijke munt van 21 EU-landen (in 2026): NL, DE, FR, IT, ES, PT, BE, LU, IE, FI, AT, GR, MT, CY, EE, LV, LT, SI, SK, HR, BG (Bulgarije sinds 1 jan 2026). Ingevoerd: 1999 (giraal), 2002 (briefjes+munten). 6 EU-landen behouden eigen munt (vb. Denemarken kroon, Zweden kroon, Polen zloty)." }],
           woorden: [{ woord: "euro", uitleg: "Gemeenschappelijke EU-munt. Symbool €." }, { woord: "Eurozone", uitleg: "EU-landen die euro hebben. Bestuurd door ECB (Europese Centrale Bank) Frankfurt." }, { woord: "ECB", uitleg: "Europese Centrale Bank. Bepaalt euro-rente + monetair beleid." }],
           theorie: "Vóór 2002 had NL gulden (ƒ). 1 euro = 2,20371 gulden. Euro maakte handel binnen EU makkelijker (geen wisselen). Mark Rutte (toen kandidaat) was ervoor. Geert Wilders (later) tegen.",
           voorbeelden: [{ type: "wisselen", tekst: "Reis naar UK: pond nodig. Reis naar DE/FR/IT/ES: euro (zelfde als NL). Reis naar Zweden: kroon. Polen: zloty." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet alleen NL (20 landen). Geen stad. Geen partij." }],
-          niveaus: { basis: "Munt 20 EU-landen.", simpeler: "Euro = munt van 20 EU-landen, incl. NL sinds 2002.", nogSimpeler: "EU-munt" },
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet alleen NL (21 landen). Geen stad. Geen partij." }],
+          niveaus: { basis: "Munt 21 EU-landen.", simpeler: "Euro = munt van 21 EU-landen, incl. NL sinds 2002.", nogSimpeler: "EU-munt" },
         },
       },
       { q: "Wat is de **NAVO** (Noord-Atlantische Verdragsorganisatie)?", options: ["Militair bondgenootschap (westerse landen)","Een EU-instituut","Een Nederlandse politieke partij","Een sportbond"], answer: 0, wrongHints: [null, "Niet — losstaand van EU.", "Niet.", "Niet."] },

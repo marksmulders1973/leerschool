@@ -53,7 +53,7 @@ const steps = [
   {
     title: "Wat is geld + waarom?",
     explanation:
-      "**Geld** is iets dat we gebruiken om dingen te kopen of te verkopen.\n\n**Drie functies van geld** *(uit het hoofd!)*:\n\n**1. Ruilmiddel** 🔄\n• Vroeger ruilden mensen direct *(boer ruilt 1 koe voor 10 zakken graan)*.\n• Probleem: wat als boer geen graan wil maar wel schoenen?\n• Geld lost dit op: alles heeft een **prijs in geld**, en met geld koop je wat je wil.\n\n**2. Rekeneenheid** 📏\n• Met geld kun je **prijzen vergelijken**.\n• 'Deze fiets kost €200, die andere €150 — verschil €50.'\n• Zonder geld moeilijk vergelijken.\n\n**3. Spaarmiddel** 🏦\n• Geld kun je **bewaren** voor later.\n• Een koe kan vandaag €1000 waard zijn, maar geeft je geen rente en kan ziek worden.\n• Geld op spaarrekening krijg je rente over.\n\n**Soorten geld in Nederland**:\n\n**1. Munten** 🪙\n• 1 cent, 2 cent (zelden), 5 cent, 10 cent, 20 cent, 50 cent.\n• 1 euro, 2 euro.\n• In NL worden 1+2 cent vrijwel niet gebruikt → afronden op 5 cent.\n\n**2. Biljetten** 💵\n• €5, €10, €20, €50, €100, €200, €500.\n• €500 wordt steeds minder uitgegeven *(witwas-risico)*.\n\n**3. Digitaal geld** 📱\n• Op bankrekening *(saldo, niet munten/biljetten)*.\n• Pinpas / creditcard.\n• Smartphone (Tikkie, Apple Pay).\n• 95% van geld in NL is digitaal.\n\n**4. Crypto-valuta** 🪙\n• Bitcoin, Ethereum.\n• **Niet erkend** als officiële munt in NL.\n• Heel volatiele waarde — kan in dag 20% stijgen of dalen.\n• Geen jaar-niveau geld voor kinderen aanbevolen.\n\n**Euro — waar betaal je mee?**\nDe **euro** is munt in **20 landen** in EU *(eurozone)*:\nNederland, België, Duitsland, Frankrijk, Italië, Spanje, Portugal, Oostenrijk, Ierland, Finland, Letland, Litouwen, Estland, Slowakije, Slovenië, Malta, Cyprus, Griekenland, Luxemburg, Kroatië *(sinds 2023)*.\n\n**Niet-euro EU**: Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije.\n**Buiten EU**: Pond *(UK)*, Dollar *(VS)*, Yen *(Japan)*, etc.\n\n**Wisselkoersen** *(als je naar buitenland gaat)*:\n• €1 ≈ $1,08 *(varieert)*.\n• €1 ≈ £0,85.\n• €100 → ongeveer $108 of £85.\n\n**Cito-feitje**:\nVóór de euro had Nederland de **gulden** (1814-2002). 1 euro = 2,20371 gulden.\n\n**Cito-vragen**:\n*'Wat is een ruilmiddel?'* → iets om mee te ruilen, zoals geld.\n*'Welke landen gebruiken euro?'* → 20 landen in eurozone.\n*'Wat is digitaal geld?'* → geld op bank, pinpas, telefoon.",
+      "**Geld** is iets dat we gebruiken om dingen te kopen of te verkopen.\n\n**Drie functies van geld** *(uit het hoofd!)*:\n\n**1. Ruilmiddel** 🔄\n• Vroeger ruilden mensen direct *(boer ruilt 1 koe voor 10 zakken graan)*.\n• Probleem: wat als boer geen graan wil maar wel schoenen?\n• Geld lost dit op: alles heeft een **prijs in geld**, en met geld koop je wat je wil.\n\n**2. Rekeneenheid** 📏\n• Met geld kun je **prijzen vergelijken**.\n• 'Deze fiets kost €200, die andere €150 — verschil €50.'\n• Zonder geld moeilijk vergelijken.\n\n**3. Spaarmiddel** 🏦\n• Geld kun je **bewaren** voor later.\n• Een koe kan vandaag €1000 waard zijn, maar geeft je geen rente en kan ziek worden.\n• Geld op spaarrekening krijg je rente over.\n\n**Soorten geld in Nederland**:\n\n**1. Munten** 🪙\n• 1 cent, 2 cent (zelden), 5 cent, 10 cent, 20 cent, 50 cent.\n• 1 euro, 2 euro.\n• In NL worden 1+2 cent vrijwel niet gebruikt → afronden op 5 cent.\n\n**2. Biljetten** 💵\n• €5, €10, €20, €50, €100, €200, €500.\n• €500 wordt steeds minder uitgegeven *(witwas-risico)*.\n\n**3. Digitaal geld** 📱\n• Op bankrekening *(saldo, niet munten/biljetten)*.\n• Pinpas / creditcard.\n• Smartphone (Tikkie, Apple Pay).\n• 95% van geld in NL is digitaal.\n\n**4. Crypto-valuta** 🪙\n• Bitcoin, Ethereum.\n• **Niet erkend** als officiële munt in NL.\n• Heel volatiele waarde — kan in dag 20% stijgen of dalen.\n• Geen jaar-niveau geld voor kinderen aanbevolen.\n\n**Euro — waar betaal je mee?**\nDe **euro** is munt in **21 landen** in EU *(eurozone)*:\nNederland, België, Duitsland, Frankrijk, Italië, Spanje, Portugal, Oostenrijk, Ierland, Finland, Letland, Litouwen, Estland, Slowakije, Slovenië, Malta, Cyprus, Griekenland, Luxemburg, Kroatië *(sinds 2023)*, Bulgarije *(sinds 2026)*.\n\n**Niet-euro EU**: Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië.\n**Buiten EU**: Pond *(UK)*, Dollar *(VS)*, Yen *(Japan)*, etc.\n\n**Wisselkoersen** *(als je naar buitenland gaat)*:\n• €1 ≈ $1,08 *(varieert)*.\n• €1 ≈ £0,85.\n• €100 → ongeveer $108 of £85.\n\n**Cito-feitje**:\nVóór de euro had Nederland de **gulden** (1814-2002). 1 euro = 2,20371 gulden.\n\n**Cito-vragen**:\n*'Wat is een ruilmiddel?'* → iets om mee te ruilen, zoals geld.\n*'Welke landen gebruiken euro?'* → 21 landen in eurozone.\n*'Wat is digitaal geld?'* → geld op bank, pinpas, telefoon.",
     checks: [
       {
         q: "Wat zijn de **3 functies** van geld?",
@@ -86,29 +86,29 @@ const steps = [
       },
       {
         q: "Hoeveel **landen** gebruiken de euro?",
-        options: ["20 (eurozone)", "5", "27 (alle EU = Europese Unie)", "50"],
+        options: ["21 (eurozone)", "5", "27 (alle EU = Europese Unie)", "50"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Niet alle EU-landen gebruiken de euro — de eurozone is kleiner dan de EU zelf.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende dingen", tekst: "Let op: EU (Europese Unie) en eurozone zijn NIET hetzelfde." },
             { titel: "EU = 27 landen", tekst: "De EU is een samenwerking van **27 landen** in Europa. Daar horen ze allemaal bij." },
-            { titel: "Eurozone = 20 landen met euro", tekst: "Van die 27 EU-landen gebruiken **20** ook de euro als geld. De andere 7 (Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije) hebben nog eigen munt." },
+            { titel: "Eurozone = 21 landen met euro", tekst: "Van die 27 EU-landen gebruiken **21** ook de euro als geld. De andere 6 (Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië) hebben nog eigen munt." },
           ],
           woorden: [
             { woord: "EU", uitleg: "Europese Unie — 27 landen die samenwerken." },
-            { woord: "eurozone", uitleg: "20 landen in EU die de euro gebruiken." },
+            { woord: "eurozone", uitleg: "21 landen in EU die de euro gebruiken." },
           ],
-          theorie: "Cito-truc: EU = 27 LANDEN (politiek). Eurozone = 20 met EURO (geld). Verschillende dingen. Sinds 2023: Kroatië is laatste die euro invoerde.",
+          theorie: "Cito-truc: EU = 27 LANDEN (politiek). Eurozone = 21 met EURO (geld). Verschillende dingen. Sinds 1 jan 2026: Bulgarije is de nieuwste die de euro invoerde (daarvóór Kroatië in 2023).",
           voorbeelden: [
             { type: "stap", tekst: "Zweden: WEL in EU, NIET in eurozone (gebruikt Zweedse kroon)." },
             { type: "stap", tekst: "Frankrijk: WEL in EU, WEL in eurozone (gebruikt euro)." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eurozone is een KLEINERE groep BINNEN de EU." }],
           niveaus: {
-            basis: "20 landen gebruiken euro (eurozone).",
-            simpeler: "EU heeft 27 landen. Maar slechts 20 daarvan gebruiken euro.",
-            nogSimpeler: "20 met euro!",
+            basis: "21 landen gebruiken euro (eurozone).",
+            simpeler: "EU heeft 27 landen. Maar slechts 21 daarvan gebruiken euro.",
+            nogSimpeler: "21 met euro!",
           },
         },
       },
