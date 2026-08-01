@@ -137,6 +137,10 @@ function balkKleur(pct) {
   return pct >= 75 ? "#00C853" : pct >= 50 ? "#ffd54f" : "#ff8a65";
 }
 
+// Weekmail 2.0 (Mark 1 aug 2026): van cijfer → to-do. Blok-link-stijl voor de
+// "focus deze week"-acties die naar de live Familie-tools deeplinken.
+const focusLink = "display:block;text-align:center;background:rgba(0,200,83,0.10);border:1px solid rgba(0,200,83,0.30);color:#69f0ae;text-decoration:none;font-weight:700;font-size:13px;padding:9px;border-radius:9px;margin-top:6px;";
+
 // Eén kind-sectie (HTML + tekst) uit de mastery-rijen.
 // rows === null betekent: ophalen mislukt → eerlijk melden, niet doen alsof
 // het kind niets deed (data-eerlijkheid, zie header).
@@ -188,8 +192,18 @@ function maakKindSectie(childName, rows) {
   const sterkHtml = sterkste
     ? `<p style="font-size:14px;line-height:1.6;color:#cdd6e5;margin:12px 0 0;">💪 <strong style="color:#69f0ae;">Sterkste:</strong> ${esc(padLabel(sterkste.path_id))} (${pctVan(sterkste)}% goed)</p>`
     : "";
-  const zwakHtml = zwakste && zwakste.path_id !== sterkste?.path_id
-    ? `<p style="font-size:14px;line-height:1.6;color:#cdd6e5;margin:4px 0 0;">🎯 <strong style="color:#ffd54f;">Aandachtspunt:</strong> ${esc(padLabel(zwakste.path_id))} (${pctVan(zwakste)}% goed) — <a href="${SITE}/leren?utm_source=email&utm_campaign=ouder-rapport" style="color:#69f0ae;font-weight:700;text-decoration:none;">oefen dit samen →</a></p>`
+  // Weekmail 2.0: het aandachtspunt wordt een concrete "focus deze week" met
+  // acties (kaart voor thuis · samen oefenen · weekschema), i.p.v. alleen een %.
+  const focusId = zwakste && zwakste.path_id !== sterkste?.path_id ? zwakste.path_id : null;
+  const focusEnc = focusId ? encodeURIComponent(focusId) : "";
+  const zwakHtml = focusId
+    ? `<div style="background:rgba(255,213,79,0.07);border:1px solid rgba(255,213,79,0.40);border-radius:12px;padding:14px 16px;margin:12px 0 0;">
+        <div style="font-size:14px;font-weight:800;color:#ffd54f;margin-bottom:4px;">🎯 Focus deze week: ${esc(padLabel(focusId))}</div>
+        <p style="font-size:13px;line-height:1.55;color:#cdd6e5;margin:0 0 8px;">Niet alleen een cijfer — dit kun je deze week samen doen (${pctVan(zwakste)}% goed tot nu toe):</p>
+        <a href="${SITE}/ouderkaart?kaart=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">📄 Zo leg je 't uit — kaart voor thuis →</a>
+        <a href="${SITE}/?pad=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">✏️ Oefen dit onderwerp samen →</a>
+        <a href="${SITE}/weekschema?utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">📅 Zet een weekschema klaar →</a>
+      </div>`
     : "";
 
   const html = `
@@ -202,7 +216,10 @@ function maakKindSectie(childName, rows) {
     </div>`;
 
   const textRijen = dezeWeek.slice(0, 5).map((r) => `  - ${padLabel(r.path_id).replace(/[^\x20-\x7EÀ-ÿ]/g, "").trim()}: ${pctVan(r)}%`).join("\n");
-  const text = `${childName} — deze week ${dezeWeek.length} onderwerp(en) geoefend:\n${textRijen}${sterkste ? `\n  Sterkste: ${pctVan(sterkste)}%` : ""}${zwakste ? ` · Aandachtspunt: ${pctVan(zwakste)}%` : ""}\n`;
+  const focusText = focusId
+    ? `\n  Focus deze week: ${padLabel(focusId).replace(/[^\x20-\x7EÀ-ÿ]/g, "").trim()} — zo leg je 't uit: ${SITE}/ouderkaart?kaart=${focusEnc} · oefen samen: ${SITE}/?pad=${focusEnc} · weekschema: ${SITE}/weekschema`
+    : "";
+  const text = `${childName} — deze week ${dezeWeek.length} onderwerp(en) geoefend:\n${textRijen}${sterkste ? `\n  Sterkste: ${pctVan(sterkste)}%` : ""}${focusText}\n`;
   return { html, text };
 }
 

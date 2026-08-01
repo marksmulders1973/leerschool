@@ -13,7 +13,7 @@ const FEATURES = [
   { nr: 3, emoji: "📄", titel: "Oefenboekje op maat", tekst: "Printbaar boekje met precies dat waar je kind moeite mee heeft.", status: "klaar", page: "oefenboekje" },
   { nr: 3.1, emoji: "👪", titel: "Kaart voor thuis — zo leg je 't uit", tekst: "Een spiekbriefje voor de ouder of verzorger: hoe je een onderwerp in gewone woorden uitlegt aan je kind.", status: "klaar", page: "ouderkaart" },
   { nr: 2, emoji: "🐉", titel: "Vonk onbeperkt", tekst: "De AI-bijlesdocent altijd beschikbaar — €37/uur bijles vs €39/jaar.", status: "bouw" },
-  { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Niet '50% op breuken' maar 'focus deze week op breuken — hier is het boekje'.", status: "bouw" },
+  { nr: 4, emoji: "✉️", titel: "Weekmail 2.0", tekst: "Zit nu in je maandag-weekmail: van cijfer naar to-do — 'focus deze week op breuken, hier is de kaart voor thuis'.", status: "klaar" },
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema van een kwartier per dag — print en hang op de koelkast.", status: "klaar", page: "weekschema" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen — verschijnt vanzelf tijdens het oefenen.", status: "klaar", page: "trots" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Per-kind-dashboard + gezinsoverzicht op één abonnement.", status: "bouw" },
@@ -46,11 +46,12 @@ bèta
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {FEATURES.map((f) => {
             const klaar = f.status === "klaar";
+            const clickable = klaar && !!f.page;
             return (
               <button
                 key={f.nr}
-                onClick={() => klaar && f.page && setPage && setPage(f.page)}
-                disabled={!klaar}
+                onClick={() => clickable && setPage && setPage(f.page)}
+                disabled={!clickable}
                 style={{
                   textAlign: "left", cursor: klaar ? "pointer" : "default",
                   padding: "14px 16px", borderRadius: 14,
@@ -66,7 +67,7 @@ bèta
                   <span style={{ fontSize: 11.5, fontWeight: 800, padding: "3px 9px", borderRadius: 20, whiteSpace: "nowrap",
                     background: klaar ? "rgba(105,240,174,0.16)" : "rgba(255,255,255,0.07)",
                     color: klaar ? "#69f0ae" : "#8899aa" }}>
-                    {klaar ? "▶ bekijk" : "binnenkort"}
+                    {clickable ? "▶ bekijk" : klaar ? "✓ actief" : "binnenkort"}
                   </span>
                 </div>
                 <div style={{ marginTop: 4, fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5 }}>{f.tekst}</div>
