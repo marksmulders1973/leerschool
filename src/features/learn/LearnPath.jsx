@@ -34,7 +34,7 @@ import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
-import KwartierPauze from "./KwartierPauze.jsx";
+import KwartierPauze, { saveResume, loadResume, clearResume } from "./KwartierPauze.jsx";
 import BronTekstInteractief from "./BronTekstInteractief.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
@@ -423,6 +423,45 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   }, []);
   useEffect(() => clearPendingTimers, [clearPendingTimers]);
 
+  // ── Stop & hervat exact (SH1-SH3, Mark 1 aug 2026) ──────────────────
+  // SH1 — altijd autosaven: bij élke overgang (stap, vraag, modus) wordt de
+  // plek bewaard. Weggaan is dus altijd veilig, ook zonder de stop-knop.
+  useEffect(() => {
+    if (!path || mode === "overview" || mode === "allDone") return;
+    saveResume(player, pathId, stepIdx, checkIdx);
+  }, [path, player, pathId, stepIdx, checkIdx, mode]);
+  // Pad afgerond → bewaarplek opruimen (anders wijst "verder waar je was"
+  // naar een al voltooid pad).
+  useEffect(() => {
+    if (mode === "allDone") clearResume(player);
+  }, [mode, player]);
+  // SH3 — exact hervatten: kom je binnen op dezelfde plek (zelfde pad + stap),
+  // zet dan de bewaarde vraag-positie terug zodra het pad geladen is. Alleen
+  // binnen bereik — content kan gewijzigd zijn. NB de checks-volgorde is
+  // adaptief (fout-eerst) maar wordt uit dezelfde persistente fout-map
+  // afgeleid, dus de index wijst vrijwel altijd naar dezelfde vraag.
+  const resumeAppliedRef = useRef(false);
+  useEffect(() => {
+    if (!path || resumeAppliedRef.current) return;
+    resumeAppliedRef.current = true;
+    try {
+      const r = loadResume(player);
+      if (r && r.pathId === pathId && r.stepIdx === stepIdx && typeof r.checkIdx === "number") {
+        const checks = path.steps?.[stepIdx]?.checks || [];
+        if (r.checkIdx > 0 && r.checkIdx < checks.length) setCheckIdx(r.checkIdx);
+      }
+    } catch { /* */ }
+  }, [path, player, pathId, stepIdx]);
+  // SH2 — "even stoppen"-knop: plek is al bewaard; dit is vooral de
+  // geruststelling in kindtaal + een nette afsluiting naar home.
+  const [stopBevestigd, setStopBevestigd] = useState(false);
+  const stopEnBewaar = useCallback(() => {
+    try { saveResume(player, pathId, stepIdx, checkIdx); } catch { /* */ }
+    try { track("leerpad_stop_bewaard", { pathId, stepIdx, checkIdx }); } catch { /* */ }
+    setStopBevestigd(true);
+    schedule(() => { if (onHome) onHome(); }, 1200);
+  }, [player, pathId, stepIdx, checkIdx, schedule, onHome]);
+
   // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval, 2026-05-16):
   // bij entry van een latere stap, peek of er een check uit een vorige stap
   // klaar staat voor herhaling. Als ja, banner + modal-flow zichtbaar.
@@ -793,6 +832,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       />
       <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
 
+      {/* SH2 — bevestiging na "even stoppen": geruststelling in kindtaal. */}
+      {stopBevestigd && (
+        <div style={{ position: "fixed", inset: 0, zIndex: 9500, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.55)" }}>
+          <div style={{ background: "linear-gradient(135deg, #1a2744, #0f1729)", border: "1px solid rgba(0,200,83,0.4)", borderRadius: 16, padding: "22px 28px", textAlign: "center", color: "#e0e6f0" }}>
+            <div style={{ fontSize: 36, lineHeight: 1 }}>👍</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: "#00e676", marginTop: 8 }}>Je plek is bewaard!</div>
+            <div style={{ fontSize: 13.5, color: "#cdd6e2", marginTop: 4 }}>Tot straks — je gaat verder waar je nu bent.</div>
+          </div>
+        </div>
+      )}
+
       {/* Mini-info: stap nummer + voortgangsbalk + prev/next-navigatie */}
       <div style={{ padding: "12px 18px 6px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
@@ -802,7 +852,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               ≈ {Math.max(1, Math.round(0.7 + (path.steps[stepIdx]?.checks?.length || 1) * 0.5))} min
             </span>
           </span>
-          <span>{progressPct}% voltooid</span>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+            {progressPct}% voltooid
+            <button
+              type="button"
+              onClick={stopEnBewaar}
+              title="Even stoppen — je plek wordt bewaard"
+              aria-label="Even stoppen, je plek wordt bewaard"
+              style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.2)", color: C.muted, borderRadius: 8, padding: "3px 9px", fontSize: 12, fontWeight: 700, cursor: "pointer" }}
+            >
+              ⏸ stop
+            </button>
+          </span>
         </div>
         <div style={{ height: 8, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
           <div

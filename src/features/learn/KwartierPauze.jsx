@@ -17,10 +17,13 @@ function resumeKey(player) {
   return `leerkwartier:resume:${(player || "Speler").trim() || "Speler"}`;
 }
 
-export function saveResume(player, pathId, stepIdx) {
+// SH1 (Mark 1 aug 2026): ook checkIdx (de vraag binnen de stap) bewaren zodat
+// "verder waar je was" exact terugkomt. checkIdx optioneel = backwards compat.
+export function saveResume(player, pathId, stepIdx, checkIdx) {
   try {
     localStorage.setItem(resumeKey(player), JSON.stringify({
       pathId, stepIdx,
+      ...(typeof checkIdx === "number" ? { checkIdx } : {}),
       ts: Date.now(),
     }));
   } catch {}
@@ -31,8 +34,8 @@ export function loadResume(player) {
     const raw = localStorage.getItem(resumeKey(player));
     if (!raw) return null;
     const obj = JSON.parse(raw);
-    // Resume verloopt na 7 dagen (anders blijft hij eindeloos staan).
-    if (Date.now() - (obj.ts || 0) > 7 * 24 * 60 * 60 * 1000) return null;
+    // Resume verloopt na 14 dagen (anders blijft hij eindeloos staan).
+    if (Date.now() - (obj.ts || 0) > 14 * 24 * 60 * 60 * 1000) return null;
     return obj;
   } catch {
     return null;

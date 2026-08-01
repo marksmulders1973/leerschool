@@ -478,7 +478,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                 Verder waar je was
               </span>
               <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
-                {pathManifestById[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}
+                {pathManifestById[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}{typeof kwartierResume.checkIdx === "number" && kwartierResume.checkIdx > 0 ? ` · vraag ${kwartierResume.checkIdx + 1}` : ""}
               </span>
             </span>
             <span
