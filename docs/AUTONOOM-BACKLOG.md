@@ -91,9 +91,9 @@ Cito + examens versterken. Drie type werk:
 > Volledig bouwplan + scope-keuzes in memory `idea_studiebol_stop_en_hervat_exact`. Kern: resume wordt nu
 > alléén bij de kwartier-pauze bewaard en herstelt op stap-niveau — moet altijd + op vraag-niveau.
 
-- [ ] **SH1** `saveResume` uitbreiden (`{pathId, stepIdx, checkIdx, savedAt}`) + autosave in LearnPath op elk overgangsmoment + `visibilitychange`-vangnet.
-- [ ] **SH2** "⏸ Even stoppen"-knop in de leerpad-speler (kindtaal-bevestiging "Je plek is bewaard 👍") + track-event.
-- [ ] **SH3** Exact hervatten: `onResumeLearnPath(pathId, stepIdx, checkIdx)` + `initialCheckIdx` in LearnPath; StudentHome-kaart toont "deel N · vraag M (gisteren)"; resume >14 dagen negeren. v1 alléén leerpaden (toetsen bewust niet mid-toets hervatbaar).
+- [x] ✓1/8 **SH1** (v170) autosave-effect in LearnPath op élke overgang (stap/vraag/modus) — `visibilitychange`-vangnet bleek onnodig, het effect dekt alles; record bevat nu checkIdx; verval 7→14d; pad afgerond → record opgeruimd.
+- [x] ✓1/8 **SH2** (v170) "⏸ stop"-knop naast de voortgang + bevestiging "Je plek is bewaard! Tot straks" → home; event `leerpad_stop_bewaard`.
+- [x] ✓1/8 **SH3** (v170) exact hervatten zónder App.jsx-wijziging: LearnPath leest zelf het resume-record terug bij binnenkomst op dezelfde plek (clamped op checks-lengte); StudentHome-kaart toont "· vraag M". Live getest: openen→autosave direct aanwezig, stop→home, kaart correct. Toetsen bewust niet mid-toets hervatbaar.
 
 ## 🎯 SPRINT — Concurrentie-audit 8 jul 2026 (Mark: "sla op en begin eraan")
 
