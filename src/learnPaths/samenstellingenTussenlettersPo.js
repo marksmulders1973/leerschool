@@ -83,6 +83,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Uit welke twee woorden bestaat 'speelgoedwinkel'?",
+        options: ["speelgoed + winkel", "speel + goedwinkel", "speelgoedwink + el", "speel + goed + winkel"],
+        answer: 0,
+        wrongHints: [null, "'goedwinkel' is geen zelfstandig woord.", "'el' is geen woord.", "Een samenstelling bestaat uit twee stukken — kijk of allebei echte woorden zijn."],
+        uitlegPad: {
+          stappen: [{ titel: "Twee echte woorden", tekst: "Speelgoedwinkel = speelgoed + winkel. Allebei zijn het echte woorden." }],
+          niveaus: {
+            basis: "speelgoed + winkel = speelgoedwinkel.",
+            simpeler: "Welke twee échte woorden zitten erin?",
+            nogSimpeler: "Speelgoed en … winkel?",
+          },
+        },
+      },
+      {
+        q: "Welk woord is GEEN samenstelling?",
+        options: ["bloemen", "bloemenveld", "bloemenvaas", "bloemenkweker"],
+        answer: 0,
+        wrongHints: [null, "bloemen + veld = bloemenveld — dat is wél een samenstelling.", "bloemen + vaas = bloemenvaas — ook een samenstelling.", "bloemen + kweker = bloemenkweker — ook een samenstelling."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén woord is geen samenstelling", tekst: "'Bloemen' is het meervoud van bloem — één woord, geen twee samengevoegde woorden." }],
+          niveaus: {
+            basis: "'Bloemen' is één woord, geen twee woorden samengevoegd.",
+            simpeler: "Kun je 'bloemen' in twee echte woorden knippen? Nee.",
+            nogSimpeler: "Bij welk woord kun je geen twee losse woorden vinden?",
+          },
+        },
+      },
     ],
   },
 
@@ -157,6 +185,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoe schrijf je: de tafel in de keuken?",
+        options: ["keukentafel", "keukentabellen", "keuktafel", "keukenetafel"],
+        answer: 0,
+        wrongHints: [null, "Dat is het meervoud van 'tafel'.", "Keuken → keuken, dus het -en- zit er al in het eerste woord.", "Het is -en-, niet een extra -e-."],
+        uitlegPad: {
+          stappen: [{ titel: "keuken + tafel = keukentafel", tekst: "Het meervoud van 'keuken' is 'keukens' (op -s), maar het woord zelf eindigt al op -en. Daarom: keukentafel, met het -en- van het eerste woord." }],
+          niveaus: {
+            basis: "keuken + tafel = keukentafel.",
+            simpeler: "Zet de twee woorden aan elkaar: keuken en tafel.",
+            nogSimpeler: "keuken + tafel = ?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel lettergrepen heeft het woord 'bloemenwinkel'?",
+        options: ["4", "3", "5", "2"],
+        answer: 0,
+        wrongHints: [null, "Klap mee: bloe-men-win-kel, dat zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan twee."],
+        uitlegPad: {
+          stappen: [{ titel: "bloe-men-win-kel", tekst: "Bloe (1), men (2), win (3), kel (4): vier klappen, dus 4 lettergrepen." }],
+          niveaus: {
+            basis: "bloe-men-win-kel = 4 lettergrepen.",
+            simpeler: "Klap mee bij 'bloemenwinkel'.",
+            nogSimpeler: "bloe — men — win — kel: hoeveel klappen?",
+          },
+        },
+      },
     ],
   },
 
@@ -226,6 +282,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoe schrijf je: de markt in een stad?",
+        options: ["stadsmarkt", "stadmarkt", "stadenmarkt", "stademarkt"],
+        answer: 0,
+        wrongHints: [null, "Spreek het uit — hoor je een -s- tussen stad en markt?", "Hier hoor je geen -en-.", "Het is alleen een -s-, geen -e-."],
+        uitlegPad: {
+          stappen: [{ titel: "stad + s + markt = stadsmarkt", tekst: "Zeg 'stad...markt': je hoort een s ertussen. Dus stadsmarkt, met tussen-s." }],
+          niveaus: {
+            basis: "Je hoort een -s-: stadsmarkt.",
+            simpeler: "Hoor je een s tussen stad en markt?",
+            nogSimpeler: "stads + markt = ?",
+          },
+        },
+      },
+      {
+        q: "Welk woord heeft een tussen-s?",
+        options: ["landschap", "pannenkoek", "boekenkast", "krantenwijk"],
+        answer: 0,
+        wrongHints: [null, "Pannenkoek heeft een tussen-n (pan → pannen).", "Boekenkast heeft een tussen-n (boek → boeken).", "Krantenwijk heeft een tussen-n (krant → kranten)."],
+        uitlegPad: {
+          stappen: [{ titel: "lands-chap", tekst: "Bij 'landschap' hoor je een -s- tussen land enschap. De andere woorden hebben een -en-." }],
+          niveaus: {
+            basis: "'landschap' heeft een tussen-s.",
+            simpeler: "Hoor je bij welk woord een -s- ertussen?",
+            nogSimpeler: "Bij welk woord hoor je 'lands' (met s) ertussen?",
+          },
+        },
+      },
     ],
   },
 
@@ -291,6 +375,62 @@ const steps = [
             basis: "fiets + pad = fietspad, zonder tussenletter.",
             simpeler: "Hoor je een -en- tussen fiets en pad? Nee.",
             nogSimpeler: "fiets + pad = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je: een winkel waar je schoenen koopt?",
+        options: ["schoenenwinkel", "schoenwinkel", "schoeneswinkel", "schoenenswinkels"],
+        answer: 0,
+        wrongHints: [null, "Schoen → schoenen, dus met tussen-n.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
+        uitlegPad: {
+          stappen: [{ titel: "schoen → schoenen → schoenenwinkel", tekst: "Het meervoud van 'schoen' is 'schoenen'. Daarom schoenenwinkel, met tussen-n." }],
+          niveaus: {
+            basis: "schoen → schoenen, dus schoenenwinkel.",
+            simpeler: "Meervoud van 'schoen'? Dat -en- komt erin.",
+            nogSimpeler: "schoenen + winkel = ?",
+          },
+        },
+      },
+      {
+        q: "Welke twee woorden maken samen 'woordenboek'?",
+        options: ["woorden + boek", "woord + enboek", "woordenboek is niet opgesplitst", "woor + denboek"],
+        answer: 0,
+        wrongHints: [null, "'enboek' is geen woord.", "Je kunt het wel opsplitsen in twee woorden.", "'denboek' is geen woord."],
+        uitlegPad: {
+          stappen: [{ titel: "woorden + boek", tekst: "Woordenboek = woord + boek, met -en- ertussen (woord → woorden). Dus woorden + boek." }],
+          niveaus: {
+            basis: "woord → woorden + boek = woordenboek.",
+            simpeler: "Meervoud van 'woord'? Dat -en- zit ertussen.",
+            nogSimpeler: "woorden + boek = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je: een centrum voor sport in een stad?",
+        options: ["sportcentrum", "sportencentrum", "sportscentrum", "sport centrum"],
+        answer: 0,
+        wrongHints: [null, "Sport → sporten gaat niet als meervoud — geen tussen-n.", "Je hoort hier geen -s-.", "Een samenstelling schrijf je aan elkaar."],
+        uitlegPad: {
+          stappen: [{ titel: "Geen tussenletter", tekst: "Bij 'sportcentrum' hoor je geen extra -en- of -s-: gewoon sport + centrum aan elkaar." }],
+          niveaus: {
+            basis: "sport + centrum = sportcentrum, zonder tussenletter.",
+            simpeler: "Hoor je een extra letter tussen sport en centrum? Nee.",
+            nogSimpeler: "sport + centrum = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je: de rand van een stad?",
+        options: ["stadsrand", "stadrand", "stadenrand", "stadsranden"],
+        answer: 0,
+        wrongHints: [null, "Spreek het uit — hoor je een -s- tussen stad en rand?", "Hier hoor je geen -en-.", "Dat is het meervoud."],
+        uitlegPad: {
+          stappen: [{ titel: "stad + s + rand = stadsrand", tekst: "Zeg 'stad...rand': je hoort een s. Dus stadsrand, met tussen-s." }],
+          niveaus: {
+            basis: "Je hoort een -s-: stadsrand.",
+            simpeler: "Hoor je een s tussen stad en rand?",
+            nogSimpeler: "stads + rand = ?",
           },
         },
       },

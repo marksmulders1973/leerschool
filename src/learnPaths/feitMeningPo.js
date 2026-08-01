@@ -88,6 +88,39 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke zin is een feit?",
+        options: [
+          "De aarde draait om de zon.",
+          "De aarde is een prachtige planeet.",
+          "Ruimtereizen zijn veel te duur.",
+          "Iedereen zou naar de sterren moeten kijken.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'Prachtig' is een oordeel — mening.", "'Te duur' is wat iemand vindt.", "'Zou moeten' is een mening."],
+        uitlegPad: {
+          stappen: [{ titel: "Wetenschappelijk te controleren", tekst: "Dat de aarde om de zon draait kun je opzoeken en is voor iedereen waar. De rest zijn meningen." }],
+          niveaus: {
+            basis: "Wetenschappelijk vastgesteld = feit. Oordelen zijn meningen.",
+            simpeler: "Welke zin kun je in een boek of encyclopedie nakijken?",
+            nogSimpeler: "Welke zin is voor iedereen waar, ook als je er niets van vindt?",
+          },
+        },
+      },
+      {
+        q: "Feit of mening? *De fiets is uitgevonden in de negentiende eeuw.*",
+        options: ["feit", "mening", "geen van beide", "allebei"],
+        answer: 0,
+        wrongHints: [null, "Dit kun je opzoeken in een geschiedenisboek.", "Het is te controleren — dus het is feit of mening, niet geen van beide.", "Een zin is óf feit óf mening."],
+        uitlegPad: {
+          stappen: [{ titel: "Opzoekbaar in de geschiedenis", tekst: "Wanneer de fiets is uitgevonden staat in boeken. Dat is te controleren, dus een feit." }],
+          niveaus: {
+            basis: "Historische feiten kun je opzoeken → feit.",
+            simpeler: "Kun je de uitvinding van de fiets nakijken? Ja → feit.",
+            nogSimpeler: "Is het voor iedereen hetzelfde wanneer de fiets is uitgevonden?",
+          },
+        },
+      },
     ],
   },
 
@@ -165,6 +198,44 @@ const steps = [
             basis: "Mensen denken hier verschillend over → mening.",
             simpeler: "Kun je dit nameten? Nee. Dan is het een mening.",
             nogSimpeler: "Vindt iedereen honden liever? Nee — dus mening.",
+          },
+        },
+      },
+      {
+        q: "Welke zin is een mening?",
+        options: [
+          "Basketbal is veel spannender dan zwemmen.",
+          "Een basketbalring hangt op een hoogte van 3,05 meter.",
+          "Het WK basketbal wordt om de vier jaar gespeeld.",
+          "Basketbal is een balspel.",
+        ],
+        answer: 0,
+        wrongHints: [null, "De hoogte kun je meten — feit.", "Het speelschema kun je opzoeken — feit.", "Dat kun je controleren — feit."],
+        uitlegPad: {
+          stappen: [{ titel: "'Spannender' = oordeel", tekst: "Of basketbal spannender is dan zwemmen, vindt niet iedereen. 'Spannender' is een vergelijkend oordeel — dat maakt het een mening." }],
+          niveaus: {
+            basis: "'Spannender' is een oordeel → mening. De rest is te controleren.",
+            simpeler: "Welke zin zegt wat iemand van een sport vindt?",
+            nogSimpeler: "Welke zin vergelijkt wat iemand leuker vindt?",
+          },
+        },
+      },
+      {
+        q: "Waarom is *'Kaas is het lekkerste broodbeleg'* een mening?",
+        options: [
+          "omdat niet iedereen dat vindt",
+          "omdat kaas een echt product is",
+          "omdat je kaas kunt kopen",
+          "omdat het in een reclamefolder staat",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat kaas een product is, klopt — maar dat maakt de zin nog geen feit.", "Dat kaas te koop is kun je controleren, maar 'lekkerste' is een oordeel.", "Waar iets staat doet er niet toe."],
+        uitlegPad: {
+          stappen: [{ titel: "Oordeel = mening", tekst: "De een vindt kaas lekker, de ander pindakaas. Omdat mensen er anders over denken, is het een mening." }],
+          niveaus: {
+            basis: "'Lekkerste' is wat iemand vindt — niet voor iedereen hetzelfde → mening.",
+            simpeler: "Kan een ander er anders over denken? Ja → mening.",
+            nogSimpeler: "Vindt iedereen kaas het lekkerst? Nee — mening.",
           },
         },
       },
@@ -248,6 +319,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk woord in de zin *'Wiskunde is een supermoeilijk vak'* verraadt dat het een mening is?",
+        options: ["supermoeilijk", "wiskunde", "een", "vak"],
+        answer: 0,
+        wrongHints: [null, "Wiskunde is gewoon de naam van het vak — geen oordeel.", "'Een' is een lidwoord — zegt niets over mening of feit.", "'Vak' is een gewoon woord."],
+        uitlegPad: {
+          stappen: [{ titel: "'Supermoeilijk' = oordeel", tekst: "'Supermoeilijk' zegt wat iemand van wiskunde vindt. Dat vinden niet alle kinderen — het is een mening." }],
+          niveaus: {
+            basis: "'Supermoeilijk' is een oordeel → signaalwoord voor mening.",
+            simpeler: "Welk woord zegt hoe iemand wiskunde beleeft?",
+            nogSimpeler: "Welk woord laat zien wat iemand van wiskunde vindt?",
+          },
+        },
+      },
+      {
+        q: "Waarschijnlijk wordt het morgen mooi weer. — Welk woord wijst op een mening?",
+        options: ["Waarschijnlijk", "morgen", "mooi", "weer"],
+        answer: 0,
+        wrongHints: [null, "'Morgen' is een tijdaanduiding — feit.", "Dat het mooi is kun je zien, maar 'waarschijnlijk' maakt de hele zin onzeker.", "'Weer' is gewoon het onderwerp."],
+        uitlegPad: {
+          stappen: [{ titel: "'Waarschijnlijk' = onzekerheid/mening", tekst: "'Waarschijnlijk' geeft aan dat iemand dit denkt maar niet zeker weet. Dat is een mening-signaalwoord." }],
+          niveaus: {
+            basis: "'Waarschijnlijk' zegt dat iemand iets denkt, niet dat het zeker is → mening.",
+            simpeler: "Welk woord zegt dat iemand het niet zeker weet?",
+            nogSimpeler: "Welk woord betekent 'ik denk van wel, maar weet het niet zeker'?",
+          },
+        },
+      },
     ],
   },
 
@@ -323,6 +422,72 @@ const steps = [
             basis: "Niet iedereen vindt voetbal saai → mening.",
             simpeler: "Kunnen mensen het hier oneens over zijn? Ja → mening.",
             nogSimpeler: "Vindt iedereen voetbal saai? Nee — dus mening.",
+          },
+        },
+      },
+      {
+        q: "In een tekst staat: *'Nederland heeft 17 miljoen inwoners. Het is het drukste land van Europa.'* Welk deel is een feit?",
+        options: [
+          "Nederland heeft 17 miljoen inwoners.",
+          "Het is het drukste land van Europa.",
+          "Allebei zijn feiten.",
+          "Allebei zijn meningen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'Drukste' is een oordeel — dat is geen feit.", "Eén van de twee is een mening.", "Het inwoneraantal is te tellen — dat is geen mening."],
+        uitlegPad: {
+          stappen: [{ titel: "Tellen vs. oordelen", tekst: "17 miljoen inwoners kun je tellen (feit). 'Het drukste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
+          niveaus: {
+            basis: "Inwoneraantal = feit; 'drukste' = mening.",
+            simpeler: "Welk deel is te controleren?",
+            nogSimpeler: "Welke zin heeft een getal erin dat je kunt tellen?",
+          },
+        },
+      },
+      {
+        q: "Feit of mening? *De Tweede Wereldoorlog eindigde in 1945.*",
+        options: ["feit", "mening", "geen van beide", "allebei"],
+        answer: 0,
+        wrongHints: [null, "Dit is te controleren in een geschiedenisboek.", "Het is duidelijk waar of niet waar.", "Een zin is óf feit óf mening."],
+        uitlegPad: {
+          stappen: [{ titel: "Datum is te controleren", tekst: "Wanneer de oorlog eindigde staat in boeken. Dat is voor iedereen hetzelfde — een feit." }],
+          niveaus: {
+            basis: "Een historische datum kun je nakijken → feit.",
+            simpeler: "Kun je het jaar opzoeken in een boek? Ja → feit.",
+            nogSimpeler: "Is het voor iedereen waar dat de oorlog in 1945 eindigde?",
+          },
+        },
+      },
+      {
+        q: "Feit of mening? *Dit boek is veel te moeilijk voor groep 7.*",
+        options: ["mening", "feit", "geen van beide", "allebei"],
+        answer: 0,
+        wrongHints: [null, "Of een boek 'te moeilijk' is, kan een leerkracht anders beoordelen dan een leerling.", "Het is wel een oordeel — dus het is feit of mening.", "Een zin is óf feit óf mening."],
+        uitlegPad: {
+          stappen: [{ titel: "'Te moeilijk' = oordeel", tekst: "Of een boek te moeilijk is, vindt niet iedereen hetzelfde. 'Te moeilijk' is een beoordeling — dat is een mening." }],
+          niveaus: {
+            basis: "'Te moeilijk' is een oordeel → mening.",
+            simpeler: "Kunnen twee mensen hier anders over denken? Ja → mening.",
+            nogSimpeler: "Welk woord laat zien dat iemand iets vindt?",
+          },
+        },
+      },
+      {
+        q: "Welke zin is een feit?",
+        options: [
+          "Een mens heeft twee ogen.",
+          "Bruine ogen zijn mooier dan blauwe.",
+          "Grote ogen staan beter.",
+          "Iedereen kijkt graag naar blauwe ogen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'Mooier' is een oordeel — mening.", "'Beter staan' is een mening.", "Niet iedereen vindt dat — mening."],
+        uitlegPad: {
+          stappen: [{ titel: "Te tellen = feit", tekst: "Dat een mens twee ogen heeft kun je tellen en controleren. De andere zinnen zijn oordelen — meningen." }],
+          niveaus: {
+            basis: "Te tellen en voor iedereen waar → feit.",
+            simpeler: "Welke zin kun je nameten of controleren?",
+            nogSimpeler: "Welke zin is voor iedereen waar?",
           },
         },
       },

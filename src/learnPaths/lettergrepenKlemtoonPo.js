@@ -82,6 +82,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoeveel lettergrepen heeft 'chocola' (cho-co-la)?",
+        options: ["3", "2", "4", "1"],
+        answer: 0,
+        wrongHints: [null, "Klap mee: cho-co-la, er zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        uitlegPad: {
+          stappen: [{ titel: "cho-co-la", tekst: "Cho (1), co (2), la (3): drie klappen, dus 3 lettergrepen." }],
+          niveaus: {
+            basis: "cho-co-la = 3 lettergrepen.",
+            simpeler: "Klap mee bij 'chocola': hoeveel stukjes?",
+            nogSimpeler: "cho — co — la: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Wat heeft elke lettergreep minimaal één van?",
+        options: ["een klinker (a, e, i, o, u)", "een medeklinker", "een hoofdletter", "een leesteken"],
+        answer: 0,
+        wrongHints: [null, "Een medeklinker is niet verplicht — 'a' is zelf al een lettergreep.", "Hoofdletters hebben er niets mee te maken.", "Leestekens horen bij zinnen, niet bij lettergrepen."],
+        uitlegPad: {
+          stappen: [{ titel: "Klinker = kern van een lettergreep", tekst: "Elke lettergreep heeft minstens één klinker (a, e, i, o, u). Zonder klinker kun je een stukje niet uitspreken als klap." }],
+          niveaus: {
+            basis: "Elke lettergreep heeft minstens één klinker.",
+            simpeler: "Hoe tel je lettergrepen? Teel de klinkers in een stukje.",
+            nogSimpeler: "Heeft elke lettergreep een a, e, i, o of u erin?",
+          },
+        },
+      },
     ],
   },
 
@@ -150,6 +178,34 @@ const steps = [
             basis: "com-pu-ter = 3 lettergrepen.",
             simpeler: "Klap mee bij 'computer'.",
             nogSimpeler: "com — pu — ter: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Verdeel 'winter' in lettergrepen.",
+        options: ["win-ter", "wi-nter", "wint-er", "w-inter"],
+        answer: 0,
+        wrongHints: [null, "'nter' is geen nette lettergreep om mee te beginnen.", "Dat knipt midden in een lettergreep.", "Een losse w mag niet."],
+        uitlegPad: {
+          stappen: [{ titel: "win-ter", tekst: "Twee medeklinkers (nt) tussen klinkers → splits ertussen: win-ter." }],
+          niveaus: {
+            basis: "win-ter: twee medeklinkers ertussen → deel ertussen.",
+            simpeler: "Klap mee: win — ter.",
+            nogSimpeler: "Waar valt de tweede klap in 'winter'?",
+          },
+        },
+      },
+      {
+        q: "Verdeel 'muziek' in lettergrepen.",
+        options: ["mu-ziek", "muz-iek", "m-uziek", "muzi-ek"],
+        answer: 0,
+        wrongHints: [null, "Eén medeklinker (z) gaat naar de volgende lettergreep.", "Een losse m is geen lettergreep.", "Dat knipt midden in de klank 'iek'."],
+        uitlegPad: {
+          stappen: [{ titel: "mu-ziek", tekst: "Eén medeklinker (z) tussen twee klinkers gaat naar de volgende lettergreep: mu-ziek." }],
+          niveaus: {
+            basis: "mu-ziek: de z gaat mee naar de tweede klap.",
+            simpeler: "Klap mee: mu — ziek.",
+            nogSimpeler: "Waar valt de tweede klap in 'muziek'?",
           },
         },
       },
@@ -225,6 +281,39 @@ const steps = [
             basis: "va-kantie breekt af op een lettergreepgrens.",
             simpeler: "Spreek uit: va — kan — tie. Breek op zo'n grens af.",
             nogSimpeler: "Welke begint met de hele lettergreep 'va-'?",
+          },
+        },
+      },
+      {
+        q: "Mag je het woord 'zon' afbreken aan het eind van een regel?",
+        options: [
+          "nee, het heeft maar één lettergreep",
+          "ja, als zo-n",
+          "ja, als z-on",
+          "ja, overal",
+        ],
+        answer: 0,
+        wrongHints: [null, "Eén lettergreep split je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "Afbreken kan alleen tussen lettergrepen."],
+        uitlegPad: {
+          stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Zon' is één klap (1 lettergreep). Je kunt het niet afbreken." }],
+          niveaus: {
+            basis: "Een woord met 1 lettergreep breek je nooit af.",
+            simpeler: "Hoeveel klappen heeft 'zon'? Eén — niet afbreken.",
+            nogSimpeler: "Kun je 'zon' in twee stukjes knippen? Nee.",
+          },
+        },
+      },
+      {
+        q: "Welke afbreking van 'bibliotheek' (bi-blio-theek) is goed?",
+        options: ["bi-bliotheek", "bib-liothek", "biblio-teek", "bibliothe-ek"],
+        answer: 0,
+        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('blio').", "Dat knipt de tweede lettergreep doormidden.", "Dat knipt midden in de klank 'theek'."],
+        uitlegPad: {
+          stappen: [{ titel: "bi-bliotheek", tekst: "Bibliotheek = bi-blio-theek. Je mag afbreken na de eerste lettergreep: bi-bliotheek." }],
+          niveaus: {
+            basis: "bi-blio-theek: breek af na 'bi' of na 'biblio'.",
+            simpeler: "Klap mee: bi — blio — theek. Je breekt af op zo'n grens.",
+            nogSimpeler: "Welke knipt af na de eerste lettergreep 'bi-'?",
           },
         },
       },
@@ -304,6 +393,62 @@ const steps = [
             basis: "De klemtoon-lettergreep klinkt harder en langer.",
             simpeler: "Hoe valt de nadruk op: door harder te spreken.",
             nogSimpeler: "Klinkt de klemtoon zachter of harder?",
+          },
+        },
+      },
+      {
+        q: "Waar ligt de klemtoon in 'tafel' (ta-fel)?",
+        options: ["op 'ta' (de eerste)", "op 'fel' (de tweede)", "op allebei evenveel", "er is geen klemtoon"],
+        answer: 0,
+        wrongHints: [null, "Spreek uit: TÁ-fel, de nadruk valt vooraan.", "Luister goed — de ene klap klinkt sterker.", "Elk woord met meer lettergrepen heeft een klemtoon."],
+        uitlegPad: {
+          stappen: [{ titel: "TÁ-fel", tekst: "Je zegt 'TÁfel', met de nadruk op 'ta'. Daar ligt de klemtoon." }],
+          niveaus: {
+            basis: "De klemtoon ligt op 'ta' (de eerste lettergreep).",
+            simpeler: "Welk stukje klinkt harder: ta of fel?",
+            nogSimpeler: "Zeg 'tafel' — welk stukje springt eruit?",
+          },
+        },
+      },
+      {
+        q: "In 'computer' (com-pu-ter), waar ligt de klemtoon?",
+        options: ["op 'pu' (de tweede)", "op 'com' (de eerste)", "op 'ter' (de derde)", "op allebei de laatste twee"],
+        answer: 0,
+        wrongHints: [null, "Spreek uit: com-PU-ter.", "Spreek uit: com-PU-ter — de nadruk valt niet vooraan.", "Er is maar één klemtoon."],
+        uitlegPad: {
+          stappen: [{ titel: "com-PU-ter", tekst: "Je zegt 'comPUter', met de nadruk op 'pu'. Dat is de tweede lettergreep." }],
+          niveaus: {
+            basis: "De klemtoon ligt op 'pu' (de tweede lettergreep).",
+            simpeler: "Welk stukje klinkt harder: com, pu of ter?",
+            nogSimpeler: "Zeg 'computer' — welk stukje springt eruit?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel lettergrepen heeft 'ziekenhuis' (zie-ken-huis)?",
+        options: ["3", "2", "4", "1"],
+        answer: 0,
+        wrongHints: [null, "Klap mee: zie-ken-huis, er zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        uitlegPad: {
+          stappen: [{ titel: "zie-ken-huis", tekst: "Zie (1), ken (2), huis (3): drie klappen, dus 3 lettergrepen." }],
+          niveaus: {
+            basis: "zie-ken-huis = 3 lettergrepen.",
+            simpeler: "Klap mee bij 'ziekenhuis'.",
+            nogSimpeler: "zie — ken — huis: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Waar ligt de klemtoon in 'vakantie' (va-kan-tie)?",
+        options: ["op 'kan' (de tweede)", "op 'va' (de eerste)", "op 'tie' (de derde)", "op allebei de buitenste lettergrepen"],
+        answer: 0,
+        wrongHints: [null, "Spreek uit: va-KÁN-tie — de nadruk valt niet vooraan.", "Spreek uit: va-KÁN-tie.", "Er is maar één klemtoon."],
+        uitlegPad: {
+          stappen: [{ titel: "va-KÁN-tie", tekst: "Je zegt 'vaKÁNtie', met de nadruk op 'kan'. Dat is de tweede lettergreep." }],
+          niveaus: {
+            basis: "De klemtoon ligt op 'kan' (de tweede lettergreep).",
+            simpeler: "Welk stukje klinkt harder: va, kan of tie?",
+            nogSimpeler: "Zeg 'vakantie' — welk stukje springt eruit?",
           },
         },
       },

@@ -103,6 +103,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke zin is goed geschreven?",
+        options: [
+          "Mijn oom woont in Duitsland.",
+          "Mijn Oom woont in Duitsland.",
+          "mijn oom woont in duitsland.",
+          "Mijn oom woont in duitsland.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'Oom' is een familierelatie, geen naam — geen hoofdletter.", "Hoe begint een zin?", "Een land is een naam en hoort groot."],
+        uitlegPad: {
+          stappen: [{ titel: "Land groot, relatie klein", tekst: "De zin begint groot (Mijn). Een land is een naam, dus Duitsland groot. 'Oom' is een gewoon woord — klein." }],
+          niveaus: {
+            basis: "Landen zijn namen → hoofdletter. Familierelaties zijn gewone woorden → klein.",
+            simpeler: "Loop de woorden langs: zinsbegin? Naam/land? Zo niet, klein.",
+            nogSimpeler: "Welke zin heeft het land groot maar 'oom' klein?",
+          },
+        },
+      },
+      {
+        q: "In welke zin klopt het gebruik van hoofdletters?",
+        options: [
+          "Op maandag spreken we Duits.",
+          "Op Maandag spreken we duits.",
+          "Op maandag Spreken we Duits.",
+          "op maandag spreken we Duits.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Maandag is een dag — geen hoofdletter in het Nederlands.", "Werkwoorden krijgen geen hoofdletter in het midden van een zin.", "Hoe begint een zin?"],
+        uitlegPad: {
+          stappen: [{ titel: "Dag klein, taal groot", tekst: "Dagen schrijf je klein (maandag). Een taal is een naam → groot (Duits). De zin begint met een hoofdletter (Op)." }],
+          niveaus: {
+            basis: "Talen zijn namen → hoofdletter. Dagen zijn gewone woorden → klein.",
+            simpeler: "Is 'maandag' een naam? Nee, een dag. Dus klein. Is 'Duits' een naam? Ja, een taal. Groot.",
+            nogSimpeler: "Welke zin begint groot en heeft de taal groot maar de dag klein?",
+          },
+        },
+      },
     ],
   },
 
@@ -180,6 +218,39 @@ const steps = [
             basis: "Een waarschuwing roep je met nadruk → uitroepteken. Zinsbegin met hoofdletter.",
             simpeler: "Welke zin heeft én een hoofdletter aan het begin én een uitroepteken?",
             nogSimpeler: "Een waarschuwing klinkt fel. Welk teken past en welke begint goed?",
+          },
+        },
+      },
+      {
+        q: "Welk leesteken hoort hier? *Hoe laat begint de film___*",
+        options: ["?", ".", "!", ","],
+        answer: 0,
+        wrongHints: [null, "Er wordt iets gevraagd — het is geen mededeling.", "Het is geen uitroep.", "Een komma sluit geen zin af."],
+        uitlegPad: {
+          stappen: [{ titel: "Vraagwoord = vraagteken", tekst: "'Hoe laat' is een vraagwoord. De zin is een vraag, dus eindigt op een vraagteken." }],
+          niveaus: {
+            basis: "Begint de zin met wie/wat/waar/wanneer/hoe/waarom? Dan is het een vraag → vraagteken.",
+            simpeler: "Iemand wil iets weten (hoe laat). Welk teken hoort bij een vraag?",
+            nogSimpeler: "Wat zet je achter een vraag?",
+          },
+        },
+      },
+      {
+        q: "Welke zin heeft het goede eindteken?",
+        options: [
+          "Ik ga morgen naar school.",
+          "Ik ga morgen naar school?",
+          "Ik ga morgen naar school!",
+          "Ik ga morgen naar school,",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het is geen vraag — er wordt niets gevraagd.", "Het is geen uitroep met nadruk.", "Een komma sluit geen zin af."],
+        uitlegPad: {
+          stappen: [{ titel: "Mededeling = punt", tekst: "Dit is een gewone mededeling zonder vraag of uitroep. Een gewone mededeling eindigt op een punt." }],
+          niveaus: {
+            basis: "Een gewone mededeling eindigt op een punt.",
+            simpeler: "Wordt er iets gevraagd? Nee. Wordt er iets uitgeroepen? Nee. Dan: punt.",
+            nogSimpeler: "Is het een rustige mededeling? Dan eindigt de zin op een punt.",
           },
         },
       },
@@ -273,6 +344,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke zin gebruikt de komma goed in een opsomming?",
+        options: [
+          "Ze kocht melk, brood en boter.",
+          "Ze kocht melk brood en boter.",
+          "Ze kocht, melk, brood, en boter.",
+          "Ze kocht melk, brood, en, boter.",
+        ],
+        answer: 0,
+        wrongHints: [null, "In een rijtje van drie of meer hoor je pauzes — die worden komma's.", "Na het eerste woord van de zin pauzeer je niet.", "Vlak vóór 'en' hoef je geen komma te zetten."],
+        uitlegPad: {
+          stappen: [{ titel: "Komma's in een opsomming", tekst: "Tussen de dingen in het rijtje (melk, brood) komt een komma. Vlak vóór 'en' laat je de komma meestal weg." }],
+          niveaus: {
+            basis: "Opsomming: komma's tussen de dingen, behalve vlak voor 'en'.",
+            simpeler: "Lees hardop: na welke woorden pauzeer je?",
+            nogSimpeler: "Welke zin heeft een komma na 'melk' maar geen komma vlak voor 'en'?",
+          },
+        },
+      },
+      {
+        q: "Welke zin gebruikt de komma goed bij aanspreken?",
+        options: [
+          "Kom je morgen mee, Emma?",
+          "Kom je morgen mee Emma?",
+          "Kom, je morgen mee Emma?",
+          "Kom je morgen, mee Emma?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Als je iemand bij naam aanspreekt, hoort er een komma vóór die naam.", "Daar pauzeer je niet.", "Dat is de verkeerde plek."],
+        uitlegPad: {
+          stappen: [{ titel: "Komma vóór de naam", tekst: "Je spreekt Emma aan. Vóór de naam van wie je aanspreekt, staat een komma: *Kom je morgen mee, Emma?*" }],
+          niveaus: {
+            basis: "Spreek je iemand bij naam aan? Zet een komma vóór de naam.",
+            simpeler: "Emma staat aan het eind — er komt een komma vlak vóór haar naam.",
+            nogSimpeler: "Welke zin heeft een komma net vóór 'Emma'?",
+          },
+        },
+      },
     ],
   },
 
@@ -362,6 +471,77 @@ const steps = [
             basis: "Controleer: dubbele punt, aanhalingstekens, hoofdletter binnenin, en het leesteken binnen de \" \".",
             simpeler: "Welke zin heeft álles goed: : en \" \" en een hoofdletter bij 'Het'?",
             nogSimpeler: "Zoek de zin waar 'Het' een hoofdletter heeft en de \" \" eromheen staan.",
+          },
+        },
+      },
+      {
+        q: "Welke zin met directe rede klopt?",
+        options: [
+          "Lena zei: \"Ik ga morgen zwemmen.\"",
+          "Lena zei: \"ik ga morgen zwemmen.\"",
+          "Lena zei \"Ik ga morgen zwemmen.\"",
+          "Lena zei: Ik ga morgen zwemmen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het eerste woord na de aanhalingstekens hoort een hoofdletter.", "De dubbele punt vóór de woorden mist.", "De aanhalingstekens missen."],
+        uitlegPad: {
+          stappen: [{ titel: "Dubbele punt + aanhalingstekens + hoofdletter", tekst: "Na 'Lena zei' komt een dubbele punt. Dan de woorden tussen aanhalingstekens, met een hoofdletter aan het begin: *\"Ik ga morgen zwemmen.\"*" }],
+          niveaus: {
+            basis: "Wie het zegt → dubbele punt → \" \" met hoofdletter binnenin.",
+            simpeler: "Drie dingen moeten kloppen: de :, de \" \" en de hoofdletter bij 'Ik'.",
+            nogSimpeler: "Welke zin heeft : én \" \" én een hoofdletter bij 'Ik'?",
+          },
+        },
+      },
+      {
+        q: "Waar hoort de dubbele punt? *Ik heb drie huisdieren een kat een hond en een vis.*",
+        options: [
+          "na 'huisdieren': Ik heb drie huisdieren: een kat, een hond en een vis.",
+          "na 'drie': Ik heb drie: huisdieren een kat een hond en een vis.",
+          "na 'hond': Ik heb drie huisdieren een kat een hond: en een vis.",
+          "er hoort helemaal geen dubbele punt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Na 'drie' is de opsomming nog niet begonnen.", "Daar is de opsomming al gedeeltelijk voorbij.", "Er komt juist een opsomming — daar hoort een dubbele punt bij."],
+        uitlegPad: {
+          stappen: [{ titel: "Dubbele punt vóór de opsomming", tekst: "Na de aankondiging ('Ik heb drie huisdieren') komt de dubbele punt, dan de opsomming: een kat, een hond en een vis." }],
+          niveaus: {
+            basis: "De dubbele punt staat na de aankondiging, vlak vóór het rijtje.",
+            simpeler: "Eerst zeg je dát je gaat opsommen, dan : , dan het rijtje.",
+            nogSimpeler: "Waar stopt de aankondiging en begint het rijtje?",
+          },
+        },
+      },
+      {
+        q: "Welke zin is goed geschreven met directe rede?",
+        options: [
+          "Pap riep: \"Kom eten!\"",
+          "Pap riep: \"kom eten!\"",
+          "Pap riep \"Kom eten!\"",
+          "Pap riep: Kom eten!",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het eerste woord in de aanhalingstekens hoort een hoofdletter.", "De dubbele punt vóór de woorden mist.", "De aanhalingstekens missen."],
+        uitlegPad: {
+          stappen: [{ titel: "Dubbele punt + aanhalingstekens + hoofdletter", tekst: "Na 'Pap riep' komt een dubbele punt, dan de woorden tussen aanhalingstekens met een hoofdletter: *\"Kom eten!\"*" }],
+          niveaus: {
+            basis: "Wie het zegt → : → \" \" met een hoofdletter binnenin.",
+            simpeler: "Klopt alles? Controleer de : , de \" \" en de hoofdletter bij 'Kom'.",
+            nogSimpeler: "Welke zin heeft : én \" \" én een hoofdletter bij 'Kom'?",
+          },
+        },
+      },
+      {
+        q: "Welk leesteken hoort hier? *Stop, dit is gevaarlijk___*",
+        options: ["!", ".", "?", ","],
+        answer: 0,
+        wrongHints: [null, "Het is een dringende waarschuwing, geen rustige mededeling.", "Er wordt niets gevraagd.", "Een komma sluit geen zin af."],
+        uitlegPad: {
+          stappen: [{ titel: "Waarschuwing = uitroepteken", tekst: "'Stop, dit is gevaarlijk!' is een dringende waarschuwing met nadruk. Dat eindigt op een uitroepteken." }],
+          niveaus: {
+            basis: "Een waarschuwing of uitroep eindigt op een uitroepteken.",
+            simpeler: "Is het een rustige mededeling of een dringende uitroep?",
+            nogSimpeler: "Wordt er iets geroepen met nadruk? Dan een uitroepteken.",
           },
         },
       },
