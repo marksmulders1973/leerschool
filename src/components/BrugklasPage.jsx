@@ -209,7 +209,7 @@ export default function BrugklasPage({ setPage } = {}) {
         </Sheet>
 
         <Sheet>
-          <SectieKop emoji="👪" label="Voor de ouder — zo oefen je slim voor een toetsweek" />
+          <SectieKop emoji="👪" label="Voor thuis — zo oefen je slim voor een toetsweek" />
           <Alinea titel="Kort maar vaak">
             Drie keer een kwartier verspreid over de week blijft beter hangen dan één
             lange sessie de avond ervoor. Laat je kind de vragen met de pen maken —

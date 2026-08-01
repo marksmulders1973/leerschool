@@ -214,7 +214,7 @@ export default function DicteesPage({ setPage } = {}) {
       <div className="dictee-print">
         {/* Ouderpagina */}
         <Sheet>
-          <SectieKop emoji="👪" label="Voor de ouder — zo geef je een dictee" />
+          <SectieKop emoji="👪" label="Voor thuis — zo geef je een dictee" />
           <Alinea titel="Het ritueel (5 minuten per dictee)">
             Geef je kind het invulblad (achterin). Lees per woord voor:
             eerst het <strong>woord</strong>, dan de <strong>zin</strong>, dan het woord

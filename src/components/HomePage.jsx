@@ -1316,7 +1316,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 color: "#c4b5fd", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
               }}
             >
-              👨‍👩‍👧 Ik ben ouder — zo help je thuis <span aria-hidden="true">→</span>
+              👨‍👩‍👧 Ik ben ouder of verzorger — zo help je thuis <span aria-hidden="true">→</span>
             </button>
           </div>
         )}
@@ -1576,7 +1576,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 onClick={onOuderDashboard}
               >
                 <span>👨‍👩‍👧</span>
-                Voor ouders
+                Voor ouders &amp; verzorgers
               </button>
             )}
             <button

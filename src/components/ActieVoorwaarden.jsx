@@ -91,7 +91,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
                 : "50 plekken: Familie gratis tot 2027"}
           </div>
           <p style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.8)", margin: 0 }}>
-            Ben je ingelogd als ouder? Dan heb je een persoonlijke gezins-link. Zodra iemand
+            Ben je ingelogd als ouder of verzorger? Dan heb je een persoonlijke gezins-link. Zodra iemand
             via die link écht oefent (3 vragen), krijgen <strong style={{ color: "#fff" }}>jullie allebei</strong> Leerkwartier
             Familie gratis tot augustus 2027.{" "}
             <a href="/ouder" style={{ color: "#69f0ae", fontWeight: 700 }}>Haal je gezins-link op in het ouder-dashboard →</a>
