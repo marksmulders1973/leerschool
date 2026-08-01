@@ -11,15 +11,14 @@
 // niets tot de laag live gaat. Gebruikt een gewone link naar /ouderkaart zodat
 // het niet afhangt van de navigatie-internals van de leerpad-speler.
 // ══════════════════════════════════════════════════════════════════════
-import { familiePreviewVisible } from "../../shared/featureFlags.js";
 import { track } from "../../utils.js";
 
 export default function OuderkaartTrigger({ conceptId, conceptTitel, fouten = 0 }) {
-  if (!familiePreviewVisible()) return null;
+  // Bèta-live (Mark 1 aug): toont bij ≥2 fout op dit concept, voor iedereen.
   if (!conceptId || fouten < 2) return null;
 
   const titel = String(conceptTitel || "dit onderwerp").split(/\s[—·]\s/)[0].trim() || "dit onderwerp";
-  const href = `/ouderkaart?familie=1&kaart=${encodeURIComponent(conceptId)}`;
+  const href = `/ouderkaart?kaart=${encodeURIComponent(conceptId)}`;
 
   return (
     <a

@@ -62,7 +62,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes, onFamilie }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -1187,6 +1187,14 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 24 }}>✅</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Wat is gratis?</span>
           </button>
+          {/* Familie-extra's (bèta) — vindbare ingang naar de Familie-hub
+              (Mark 1 aug: deel-voor-deel live, niet meer geheim). */}
+          {onFamilie && (
+            <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #ffb300, #b26a00)" }} onClick={() => { SoundEngine.play("click"); onFamilie(); }}>
+              <span style={{ fontSize: 24 }}>✨</span>
+              <span style={{ fontWeight: 700, fontSize: 13 }}>Familie-extra's (bèta)</span>
+            </button>
+          )}
         </div>
 
         <PakketUitleg open={showPakket} onClose={() => setShowPakket(false)} />

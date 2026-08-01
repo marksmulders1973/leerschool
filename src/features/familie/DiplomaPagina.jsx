@@ -62,7 +62,7 @@ export default function DiplomaPagina({ setPage }) {
             🏅 Printbaar diploma
           </h1>
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
-            prototype · geheim
+bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.55, marginTop: 6 }}>

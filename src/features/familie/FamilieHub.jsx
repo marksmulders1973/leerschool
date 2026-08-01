@@ -32,7 +32,7 @@ export default function FamilieHub({ setPage }) {
             👨‍👩‍👧 Familie-abonnement
           </h1>
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
-            geheime preview
+bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
@@ -40,7 +40,7 @@ export default function FamilieHub({ setPage }) {
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>
-          {klaar} van {FEATURES.length} onderdelen te bekijken. De rest is in aanbouw.
+          {klaar} van {FEATURES.length} onderdelen klaar om te bekijken. De rest komt binnenkort.
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -66,7 +66,7 @@ export default function FamilieHub({ setPage }) {
                   <span style={{ fontSize: 11.5, fontWeight: 800, padding: "3px 9px", borderRadius: 20, whiteSpace: "nowrap",
                     background: klaar ? "rgba(105,240,174,0.16)" : "rgba(255,255,255,0.07)",
                     color: klaar ? "#69f0ae" : "#8899aa" }}>
-                    {klaar ? "▶ bekijk" : "in aanbouw"}
+                    {klaar ? "▶ bekijk" : "binnenkort"}
                   </span>
                 </div>
                 <div style={{ marginTop: 4, fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5 }}>{f.tekst}</div>
@@ -76,7 +76,7 @@ export default function FamilieHub({ setPage }) {
         </div>
 
         <div style={{ marginTop: 20, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-          🔒 Alleen zichtbaar via de geheime link (?familie=1) of jouw admin-account. Gewone bezoekers zien hier niets.
+          ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-abonnement.
         </div>
       </div>
     </div>

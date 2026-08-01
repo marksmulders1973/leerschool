@@ -1311,6 +1311,7 @@ export default function App() {
           onKwartiercheck={() => setPage("kwartiercheck")}
           onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
+          onFamilie={() => setPage("familie")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => { setLearnInitialSearch(""); setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onSearchPaths={(q) => { setLearnFilterSubject(null); setLearnInitialSearch(q); setEntryContext("leren"); setPage("learn-paths-hub"); }}
@@ -1491,6 +1492,7 @@ export default function App() {
           userSchoolType={userSchoolType}
           onSetLevel={setUserLevel}
           onSetSchoolType={setUserSchoolType}
+          onFamilie={() => setPage("familie")}
           quizzes={quizzes}
           sessionMin={sessionMin}
           kwartierTarget={KWARTIER_TARGET_MIN}
@@ -2043,11 +2045,12 @@ export default function App() {
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
       {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
       {/* Familie-preview (geheim): hub + paraatheidsmeter + oefenboekje. */}
-      {page === "familie" && familiePreviewVisible(authUser) && <FamilieHub setPage={setPage} />}
-      {page === "paraatheid" && familiePreviewVisible(authUser) && <Paraatheidsmeter setPage={setPage} />}
-      {page === "oefenboekje" && oefenboekjePreviewVisible(authUser) && <OefenboekjePagina setPage={setPage} />}
-      {page === "diploma" && familiePreviewVisible(authUser) && <DiplomaPagina setPage={setPage} />}
-      {page === "ouderkaart" && familiePreviewVisible(authUser) && <OuderkaartPagina setPage={setPage} />}
+      {/* Familie-extra's — bèta-live (Mark 1 aug: deel-voor-deel, niet meer geheim). */}
+      {page === "familie" && <FamilieHub setPage={setPage} />}
+      {page === "paraatheid" && <Paraatheidsmeter setPage={setPage} />}
+      {page === "oefenboekje" && <OefenboekjePagina setPage={setPage} />}
+      {page === "diploma" && <DiplomaPagina setPage={setPage} />}
+      {page === "ouderkaart" && <OuderkaartPagina setPage={setPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}

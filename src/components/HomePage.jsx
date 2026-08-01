@@ -257,7 +257,7 @@ function DeelActieKnop({ onClick }) {
   );
 }
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -1597,6 +1597,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               >
                 <span aria-hidden="true">💶</span>
                 Wat kost het?
+              </button>
+            )}
+            {/* Familie-extra's (bèta) — vindbare ingang naar de Familie-hub
+                (Mark 1 aug: deel-voor-deel live, niet meer geheim). */}
+            {onFamilie && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "#ffb300", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+                onClick={() => { track("home_cta_familie"); onFamilie(); }}
+              >
+                <span aria-hidden="true">✨</span>
+                Familie-extra's (bèta)
               </button>
             )}
             {/* 2026-06-20: oude spellen vervangen door "Mijn Park" (3D-dierentuin,
