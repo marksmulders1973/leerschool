@@ -101,6 +101,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoeveel **ons** is **1 kg**?",
+        options: ["10 ons", "100 ons", "2 ons", "1000 ons"],
+        answer: 0,
+        wrongHints: [null, "100 ons zou 10 kg zijn (100 × 100 g).", "2 ons = 200 g — te weinig voor 1 kg.", "1000 ons = 100 kg — veel te zwaar."],
+        uitlegPad: {
+          stappen: [{ titel: "1 kg = 10 ons", tekst: "1 ons = 100 g, en 1 kg = 1000 g. Dus 1000 ÷ 100 = 10 ons." }],
+          niveaus: {
+            basis: "1 kg = 1000 g. 1 ons = 100 g. Hoeveel ons past in 1 kg?",
+            simpeler: "1000 ÷ 100 = 10 ons.",
+            nogSimpeler: "10 ons",
+          },
+        },
+      },
+      {
+        q: "Een pak rijst weegt **2 pond**. Hoeveel gram is dat?",
+        options: ["1000 g", "200 g", "2000 g", "500 g"],
+        answer: 0,
+        wrongHints: [null, "Dat is 2 ons. Wat weegt een pond?", "Dat zou 4 pond zijn.", "Dat is 1 pond, maar je hebt 2 pond."],
+        uitlegPad: {
+          stappen: [{ titel: "2 pond naar gram", tekst: "1 pond = 500 g. Dus 2 pond = 2 × 500 = 1000 g = precies 1 kg." }],
+          niveaus: {
+            basis: "1 pond = 500 g. 2 pond = 2 × 500 = 1000 g.",
+            simpeler: "Twee pond is twee keer een half kilo: 500 + 500 = 1000 g.",
+            nogSimpeler: "1000 g",
+          },
+        },
+      },
     ],
   },
 
@@ -188,6 +216,34 @@ const steps = [
             basis: "Maak 3 dl eerst ml: 1 dl = 100 ml, dus 3 dl = 300 ml. Tel dan 200 ml erbij.",
             simpeler: "300 ml water + 200 ml melk samen optellen.",
             nogSimpeler: "300 + 200 = ?",
+          },
+        },
+      },
+      {
+        q: "Een blikje limonade bevat **33 cl**. Hoeveel milliliter is dat?",
+        options: ["330 ml", "33 ml", "3300 ml", "3,3 ml"],
+        answer: 0,
+        wrongHints: [null, "Dat is de waarde in cl, niet in ml — hoeveel ml is 1 cl?", "Te veel: dat zou meer dan 3 liter zijn.", "Naar ml ga je naar een kleinere eenheid, dus een groter getal."],
+        uitlegPad: {
+          stappen: [{ titel: "1 cl = 10 ml", tekst: "33 cl × 10 = 330 ml." }],
+          niveaus: {
+            basis: "1 cl = 10 ml. 33 cl = 33 × 10 = 330 ml.",
+            simpeler: "Keer 10: 33 → 330.",
+            nogSimpeler: "330 ml",
+          },
+        },
+      },
+      {
+        q: "Hoeveel liter is **750 ml**?",
+        options: ["0,75 l", "7,5 l", "75 l", "0,075 l"],
+        answer: 0,
+        wrongHints: [null, "Dat zou 7500 ml zijn — veel te veel.", "750 ml is geen 75 liter.", "De komma gaat 3 plaatsen naar links, niet 4."],
+        uitlegPad: {
+          stappen: [{ titel: "÷ 1000", tekst: "750 ml ÷ 1000 = 0,75 l. Dat is driekwart liter." }],
+          niveaus: {
+            basis: "Deel door 1000: 750 ÷ 1000 = 0,75 l.",
+            simpeler: "1000 ml = 1 l. 750 ml is driekwart liter: 0,75 l.",
+            nogSimpeler: "0,75 l",
           },
         },
       },
@@ -279,6 +335,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoeveel seconden is **3 minuten**?",
+        options: ["180 s", "30 s", "300 s", "63 s"],
+        answer: 0,
+        wrongHints: [null, "Dat is te weinig — 1 minuut is al 60 seconden.", "Dat zou 5 minuten zijn (5 × 60 = 300).", "3 minuten en 3 seconden optellen klopt niet."],
+        uitlegPad: {
+          stappen: [{ titel: "× 60", tekst: "1 min = 60 s. 3 min = 3 × 60 = 180 s." }],
+          niveaus: {
+            basis: "Elke minuut is 60 seconden. 3 × 60 = 180.",
+            simpeler: "60 + 60 + 60 = 180 s.",
+            nogSimpeler: "180 s",
+          },
+        },
+      },
+      {
+        q: "Een wedstrijd duurt **1,5 uur**. Hoeveel minuten is dat?",
+        options: ["90 min", "150 min", "60 min", "100 min"],
+        answer: 0,
+        wrongHints: [null, "Let op: 1,5 is niet hetzelfde als 1 uur en 50 minuten.", "Dat is maar 1 uur — de halve uur telt nog mee.", "Tijd rekent met 60, niet met 100."],
+        uitlegPad: {
+          stappen: [{ titel: "1,5 uur in minuten", tekst: "1 uur = 60 min, 0,5 uur = 30 min. Samen: 60 + 30 = 90 min." }],
+          niveaus: {
+            basis: "1,5 uur = 1 uur en een half uur = 60 + 30 = 90 min.",
+            simpeler: "Een half uur is 30 minuten. 60 + 30 = 90.",
+            nogSimpeler: "90 min",
+          },
+        },
+      },
     ],
   },
 
@@ -349,6 +433,23 @@ const steps = [
             basis: "Tel de uren (2 + 1 = 3) en de minuten (15 + 50 = 65) apart. 65 min is 1 uur en 5 min, dus 3 + 1 = 4 uur en 5 min.",
             simpeler: "Minuten samen: 15 + 50 = 65. Dat is meer dan 60, dus een uur erbij en 5 min over.",
             nogSimpeler: "3 uur, plus 65 minuten. 60 van die minuten maken nog een uur (4 uur), met 5 min over.",
+          },
+        },
+      },
+      {
+        q: "Een school begint om **8:30** en duurt tot **14:15**. Hoeveel uur en minuten is dat?",
+        options: ["5 uur 45 min", "5 uur 15 min", "6 uur 45 min", "5 uur 55 min"],
+        answer: 0,
+        wrongHints: [null, "Kijk nog eens naar de minuten: 15 − 30 gaat niet zomaar — je moet het uur erbij halen.", "Dat zou tot 15:15 zijn, niet 14:15.", "Check de minuten: 15 − 30 = −15, dus een uur eraf lenen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Minuten eerst", tekst: "Van 8:30 naar 9:00 = 30 min. Van 9:00 naar 14:15 = 5 uur 15 min. Samen: 5 uur 45 min." },
+            { titel: "Of: uren en minuten apart", tekst: "Uren: 14 − 8 = 6. Minuten: 15 − 30 = −15, leen een uur: 6−1=5 uur en 60−30+15=45 min. Antwoord: 5 uur 45 min." },
+          ],
+          niveaus: {
+            basis: "Van 8:30 tot 9:00 is 30 min. Van 9:00 tot 14:15 is 5 uur 15 min. Samen 5 uur 45 min.",
+            simpeler: "Stap naar heel uur: 8:30 → 9:00 (30 min). Dan 9:00 → 14:15 (5 uur 15 min). 30 + 315 = 345 min = 5 uur 45 min.",
+            nogSimpeler: "5 uur 45 min",
           },
         },
       },

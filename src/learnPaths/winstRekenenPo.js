@@ -147,6 +147,57 @@ const steps = [
           },
         },
       },
+      {
+        q: "Je koopt een boek in voor **€9** en verkoopt het voor **€9**. Wat is je winst?",
+        options: ["€0 — je bent quitte", "€9 winst", "€18 winst", "€9 verlies"],
+        answer: 0,
+        wrongHints: [null, "Dat zou alleen kloppen als de inkoop niets had gekost.", "Optellen klopt niet — winst is het verschil.", "Verlies maak je als de verkoop lager is dan de inkoop."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Reken de winst", tekst: "Winst = verkoop − inkoop = €9 − €9 = €0." },
+            { titel: "Quitte", tekst: "Een winst van €0 betekent dat je precies terugkrijgt wat het jou kostte. Je bent 'quitte' — geen winst, geen verlies." },
+          ],
+          niveaus: {
+            basis: "Winst = €9 − €9 = €0. Je bent quitte.",
+            simpeler: "Verkoop en inkoop zijn gelijk, dus je verdient niets extra's.",
+            nogSimpeler: "€0 — quitte.",
+          },
+        },
+      },
+      {
+        q: "Je hebt **€15** voor een artikel betaald (inkoop). Je wilt minstens **€3 winst**. Wat is de laagste verkoopprijs die dat haalt?",
+        options: ["€18", "€12", "€15", "€3"],
+        answer: 0,
+        wrongHints: [null, "Dan verkoop je goedkoper dan de inkoop — dat is verlies.", "Dan is de winst €0 — niet de gewenste €3.", "Dat is alleen de winst, de inkoop moet er ook in."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke som?", tekst: "Verkoopprijs = inkoopprijs + gewenste winst = €15 + €3." },
+            { titel: "Reken uit", tekst: "€15 + €3 = **€18**. Check: €18 − €15 = €3 winst. Klopt!" },
+          ],
+          niveaus: {
+            basis: "€18 (€15 + €3).",
+            simpeler: "Inkoop + winst die je wilt = verkoopprijs: €15 + €3 = €18.",
+            nogSimpeler: "€18",
+          },
+        },
+      },
+      {
+        q: "Wat heet het als je iets verkoopt **voor precies de inkoopprijs**?",
+        options: ["Quitte — geen winst, geen verlies", "Grote winst", "Verlies", "Opbrengst"],
+        answer: 0,
+        wrongHints: [null, "Voor winst moet de verkoopprijs hoger zijn dan de inkoop.", "Voor verlies moet de verkoopprijs lager zijn — hier zijn ze gelijk.", "Opbrengst is al het geld dat binnenkomt, niet de eindstand."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verkoop = inkoop", tekst: "Als je verkoopt voor precies de inkoopprijs, is het verschil €0." },
+            { titel: "Quitte", tekst: "€0 winst én €0 verlies heet 'quitte'. Je hebt niets verdiend maar ook niets verloren." },
+          ],
+          niveaus: {
+            basis: "Quitte: verkoop = inkoop, winst = €0.",
+            simpeler: "Je krijgt terug precies wat het je kostte — niets over, niets kwijt.",
+            nogSimpeler: "Quitte.",
+          },
+        },
+      },
     ],
   },
 
@@ -266,6 +317,57 @@ const steps = [
           },
         },
       },
+      {
+        q: "Je koopt **8 stickers** in voor **€0,25** per stuk en verkoopt ze voor **€0,50** per stuk. Wat is de **totale winst**?",
+        options: ["€2", "€4", "€0,25", "€0,50"],
+        answer: 0,
+        wrongHints: [null, "Dat is de totale opbrengst, niet de winst — de inkoop moet er nog af.", "Dat is de winst per sticker, niet de totale winst.", "Dat is de verkoopprijs van één sticker."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Winst per sticker", tekst: "Winst per stuk = €0,50 − €0,25 = €0,25." },
+            { titel: "Totale winst", tekst: "Totale winst = €0,25 × 8 = **€2**." },
+          ],
+          niveaus: {
+            basis: "€2 (winst per stuk €0,25 × 8).",
+            simpeler: "Elke sticker levert 25 cent op. 8 × 25 cent = 200 cent = €2.",
+            nogSimpeler: "€2",
+          },
+        },
+      },
+      {
+        q: "Je verkoopt **10 koekjes** voor **€0,40** per stuk. De inkoop was **€0,15** per koekje. Wat is de **totale winst**?",
+        options: ["€2,50", "€4", "€1,50", "€0,25"],
+        answer: 0,
+        wrongHints: [null, "Dat is de totale opbrengst (10 × €0,40) — trek de totale inkoop er nog af.", "Reken de winst per koekje en vermenigvuldig dan met 10.", "Dat is de winst per koekje, niet de totale winst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Winst per koekje", tekst: "€0,40 − €0,15 = €0,25 per koekje." },
+            { titel: "Totale winst", tekst: "€0,25 × 10 = **€2,50** totale winst." },
+          ],
+          niveaus: {
+            basis: "€2,50 (winst per koekje €0,25 × 10).",
+            simpeler: "Elke koekje levert 25 cent op. 10 × 25 cent = 250 cent = €2,50.",
+            nogSimpeler: "€2,50",
+          },
+        },
+      },
+      {
+        q: "Je wilt **€6 totale winst** maken door **12 boekenleggers** te verkopen. Hoeveel winst heb je nodig **per stuk**?",
+        options: ["€0,50", "€6", "€2", "€72"],
+        answer: 0,
+        wrongHints: [null, "Dat is de totale winst — je zoekt de winst per stuk.", "Controleer: €2 × 12 = €24, niet €6.", "Dat is €6 × 12 — je deelt juist, niet vermenigvuldigt."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Winst per stuk = totale winst ÷ aantal", tekst: "€6 ÷ 12 = €0,50 per boekenlegger." },
+            { titel: "Check", tekst: "€0,50 × 12 = €6 totale winst. Klopt!" },
+          ],
+          niveaus: {
+            basis: "€0,50 (€6 ÷ 12).",
+            simpeler: "Deel de totale winst door het aantal: €6 ÷ 12 = €0,50.",
+            nogSimpeler: "€0,50",
+          },
+        },
+      },
     ],
   },
 
@@ -322,6 +424,72 @@ const steps = [
         options: ["€0,60", "€1,40", "€0,40", "€1,00"],
         answer: 0,
         wrongHints: [null, "Niet optellen — winst is het verschil.", "Dat is je inkoop.", "Daar zit de inkoop nog in."],
+      },
+      {
+        q: "Je verkoopt **7 notitieboekjes** met **€1,50 winst per stuk**. Hoeveel **totale winst**?",
+        options: ["€10,50", "€8,50", "€1,50", "€7"],
+        answer: 0,
+        wrongHints: [null, "Optellen klopt niet — gebruik vermenigvuldigen voor 'per stuk × aantal'.", "Dat is de winst per stuk, niet de totale winst.", "Dat is het aantal, niet de winst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Totale winst", tekst: "Winst per stuk × aantal = €1,50 × 7 = **€10,50**." },
+          ],
+          niveaus: {
+            basis: "€10,50 (€1,50 × 7).",
+            simpeler: "Elke 7 stuks levert €1,50 op. 7 × 1,50 = 10,50.",
+            nogSimpeler: "€10,50",
+          },
+        },
+      },
+      {
+        q: "Inkoop **€3,50**, verkoop **€5,00**. Wat is de **winst per stuk**?",
+        options: ["€1,50", "€8,50", "€3,50", "€5,00"],
+        answer: 0,
+        wrongHints: [null, "Niet optellen — winst is het verschil.", "Dat is je inkoop.", "Daar zit de inkoop nog in."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Winst per stuk", tekst: "Winst = verkoop − inkoop = €5,00 − €3,50 = **€1,50**." },
+          ],
+          niveaus: {
+            basis: "€1,50 (€5,00 − €3,50).",
+            simpeler: "500 cent − 350 cent = 150 cent = €1,50.",
+            nogSimpeler: "€1,50",
+          },
+        },
+      },
+      {
+        q: "Inkoop **€12**, gewenste winst **€8**. Hoeveel **verkoopprijs**?",
+        options: ["€20", "€4", "€12", "€8"],
+        answer: 0,
+        wrongHints: [null, "Dan verkoop je voor minder dan de inkoop — verlies!", "Dat is de inkoopprijs zonder winst.", "Dat is alleen de gewenste winst, de inkoop moet erbij."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verkoopprijs = inkoop + winst", tekst: "€12 + €8 = **€20**." },
+            { titel: "Check", tekst: "€20 − €12 = €8 winst. Klopt!" },
+          ],
+          niveaus: {
+            basis: "€20 (€12 + €8).",
+            simpeler: "Tel inkoop en gewenste winst op: €12 + €8 = €20.",
+            nogSimpeler: "€20",
+          },
+        },
+      },
+      {
+        q: "Je koopt **5 pakken kaarten** in voor **€2** per pak en verkoopt elk pak voor **€3**. Wat is de **totale winst**?",
+        options: ["€5", "€15", "€10", "€2"],
+        answer: 0,
+        wrongHints: [null, "Dat is de totale opbrengst (5 × €3) — de inkoop moet er nog af.", "Dat is de totale inkoop (5 × €2), niet de winst.", "Dat is de winst per pak, niet de totale winst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Winst per pak", tekst: "€3 − €2 = €1 per pak." },
+            { titel: "Totale winst", tekst: "€1 × 5 = **€5** totale winst." },
+          ],
+          niveaus: {
+            basis: "€5 (€1 winst per pak × 5 pakken).",
+            simpeler: "Elk pak levert €1 op. 5 pakken = €5 totaal.",
+            nogSimpeler: "€5",
+          },
+        },
       },
     ],
   },

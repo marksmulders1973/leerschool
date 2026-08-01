@@ -111,6 +111,38 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Leeftijd bepaalt niet hoeveel je verdient.", "Waar je woont verandert je loon niet.", "Lengte heeft niets met geld te maken."],
       },
+      {
+        q: "Welke van deze dingen wordt **niet** van belasting betaald?",
+        options: ["Je eigen ijsje", "De brandweer", "Wegen en fietspaden", "Scholen"],
+        answer: 0,
+        wrongHints: [null, "De brandweer wordt juist wél van belasting betaald.", "Wegen worden wél van belasting betaald.", "Scholen worden wél van belasting betaald."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Belasting = samen betalen", tekst: "Belasting gaat naar dingen die iedereen gebruikt: scholen, wegen, ziekenhuizen, brandweer. Een ijsje koop je voor jezelf — dat betaal je uit eigen zak." },
+          ],
+          niveaus: {
+            basis: "Belasting dekt gezamenlijke voorzieningen, niet persoonlijke aankopen.",
+            simpeler: "Scholen, wegen en de brandweer zijn voor iedereen. Een ijsje is voor jou alleen.",
+            nogSimpeler: "Je eigen ijsje.",
+          },
+        },
+      },
+      {
+        q: "Betaal je belasting **alleen** als je werkt?",
+        options: ["Nee, ook als je iets koopt (btw)", "Ja, alleen wie werkt betaalt belasting", "Nee, belasting bestaat niet in Nederland", "Ja, maar alleen voor volwassenen"],
+        answer: 0,
+        wrongHints: [null, "Denk aan de prijs in de winkel — zit daar ook belasting in?", "Belasting bestaat wel degelijk — van wegen tot scholen.", "Kinderen betalen btw mee als ze iets kopen in de winkel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee soorten", tekst: "Loonbelasting betaal je als je werkt. Btw betaal je als je iets koopt — al van jongs af aan." },
+          ],
+          niveaus: {
+            basis: "Er zijn meerdere soorten belasting: loonbelasting (als je werkt) en btw (als je iets koopt).",
+            simpeler: "Als je snoep koopt zit er al btw in de prijs. Dat is ook belasting.",
+            nogSimpeler: "Nee, ook bij aankopen.",
+          },
+        },
+      },
     ],
   },
 
@@ -209,6 +241,38 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Handig toch, dat het al voor je geregeld is?", "Bij de kassa betaal je btw, niet de belasting over je loon.", "Er gaat juist wél iets af voor je het krijgt."],
       },
+      {
+        q: "Brutoloon **€200**, belasting **€50**. Hoeveel is het **nettoloon**?",
+        options: ["€150", "€250", "€50", "€200"],
+        answer: 0,
+        wrongHints: [null, "Belasting komt er niet bij — die gaat er juist áf.", "Dat is alleen de belasting, niet het nettoloon.", "Bij bruto is er nog niets afgehaald — trek de belasting eraf."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Netto = bruto − belasting", tekst: "€200 − €50 = **€150** netto." },
+          ],
+          niveaus: {
+            basis: "€150 (€200 − €50).",
+            simpeler: "Trek de belasting van het brutoloon af: €200 − €50 = €150.",
+            nogSimpeler: "€150",
+          },
+        },
+      },
+      {
+        q: "Hoeveel is **10%** belasting van een brutoloon van **€300**?",
+        options: ["€30", "€3", "€30,00", "€300"],
+        answer: 0,
+        wrongHints: [null, "Dat is 10% van €30, niet van €300.", "Dat is juist ook €30 — maar kijk of je optie 0 al correct is.", "Dat is het hele brutoloon, niet de belasting erover."],
+        uitlegPad: {
+          stappen: [
+            { titel: "10% van €300", tekst: "10% = een tiende. €300 ÷ 10 = **€30**." },
+          ],
+          niveaus: {
+            basis: "€30 (10% van €300 = €300 ÷ 10).",
+            simpeler: "Streep één nul weg: 300 → 30.",
+            nogSimpeler: "€30",
+          },
+        },
+      },
     ],
   },
 
@@ -284,6 +348,39 @@ const steps = [
         options: ["Een beetje btw", "Helemaal geen belasting", "Korting", "Rente"],
         answer: 0,
         wrongHints: [null, "Toch wel — bij bijna elke aankoop betaal je btw mee.", "Korting is een prijs die lager wordt, geen belasting.", "Rente krijg je bij sparen, niet bij kopen."],
+      },
+      {
+        q: "Op een **stuk fruit** dat €1,50 kost zit **9% btw**. Wat geldt voor het btw-tarief op fruit?",
+        options: ["Laag tarief van 9% — op eten", "Hoog tarief van 21% — op alles", "Geen btw — eten is vrijgesteld", "21% — speciaal tarief voor groente en fruit"],
+        answer: 0,
+        wrongHints: [null, "21% is het hoge tarief voor de meeste andere spullen, niet voor eten.", "Er zit wél btw op eten, maar dan het lage tarief.", "Fruit valt gewoon onder het normale lage tarief van 9% op eten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee btw-tarieven", tekst: "9% (laag) op eten, drinken en dieren. 21% (hoog) op bijna al het andere." },
+            { titel: "Fruit = eten", tekst: "Fruit is eten, dus het lage tarief van 9% geldt." },
+          ],
+          niveaus: {
+            basis: "Eten: 9% btw (laag tarief). Al het andere: 21% (hoog).",
+            simpeler: "Fruit is eten → 9%.",
+            nogSimpeler: "9%",
+          },
+        },
+      },
+      {
+        q: "Een speelgoeddoos kost **€25** inclusief btw. Daarvan is **€4,34** btw. Hoeveel kost het speelgoed **zelf**?",
+        options: ["€20,66", "€29,34", "€4,34", "€25"],
+        answer: 0,
+        wrongHints: [null, "Je telt de btw erbij op — maar die zit er al in. Trek hem eraf.", "Dat is de btw, niet de prijs van het speelgoed.", "Daar zit de btw nog in; haal die er eerst af."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Prijs zelf = totaal − btw", tekst: "€25 − €4,34 = **€20,66** voor het speelgoed zelf." },
+          ],
+          niveaus: {
+            basis: "€20,66 (€25 − €4,34).",
+            simpeler: "Trek de btw van de totaalprijs: 25 − 4,34 = 20,66.",
+            nogSimpeler: "€20,66",
+          },
+        },
       },
     ],
   },
