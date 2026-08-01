@@ -80,6 +80,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat is de persoonsvorm? *De leraar schrijft iets op het bord.*",
+        options: ["schrijft", "leraar", "bord", "iets"],
+        answer: 0,
+        wrongHints: [null, "Dat is degene die iets doet, niet de handeling zelf.", "Dat is het voorwerp, geen werkwoord.", "Dat is een onbepaald voornaamwoord, geen werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Maak een vraag", tekst: "Vraag: 'Schrijft de leraar iets op het bord?' → 'schrijft' springt vooraan. Dat is de persoonsvorm." }],
+          niveaus: {
+            basis: "'schrijft' is het werkwoord dat met de tijd verandert (schreef).",
+            simpeler: "Wat doet de leraar? Dat woord is de persoonsvorm.",
+            nogSimpeler: "Welk woord beschrijft de handeling?",
+          },
+        },
+      },
+      {
+        q: "Wat is de persoonsvorm? *Wij fietsen elke dag naar school.*",
+        options: ["fietsen", "Wij", "school", "dag"],
+        answer: 0,
+        wrongHints: [null, "Dat is het onderwerp, niet de persoonsvorm.", "Dat is de bestemming.", "Dat is wanneer, geen werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Verleden tijd: fietsten", tekst: "Zet in de verleden tijd: 'Wij fietsten elke dag.' 'Fietsen' wordt 'fietsten' — dat verandert, dus het is de persoonsvorm." }],
+          niveaus: {
+            basis: "'fietsen' verandert met de tijd (fietsten) → persoonsvorm.",
+            simpeler: "Welk woord beschrijft wat wij doen?",
+            nogSimpeler: "Wat doen wij elke dag? Dat woord is de persoonsvorm.",
+          },
+        },
+      },
+      {
+        q: "Wat is de persoonsvorm? *Gaat jullie morgen mee?*",
+        options: ["Gaat", "jullie", "morgen", "mee"],
+        answer: 0,
+        wrongHints: [null, "Dat is het onderwerp.", "Dat zegt wanneer.", "Dat zegt waarheen, geen werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Vraagzin: pv staat vooraan", tekst: "In een vraagzin staat de persoonsvorm altijd vooraan. 'Gaat' staat vooraan → persoonsvorm." }],
+          niveaus: {
+            basis: "In een vraagzin staat de persoonsvorm als eerste woord.",
+            simpeler: "Welk woord staat helemaal vooraan in deze vraag?",
+            nogSimpeler: "Gaat staat vooraan: is dat het werkwoord?",
+          },
+        },
+      },
     ],
   },
 
@@ -147,6 +189,53 @@ const steps = [
             basis: "Vraag bij 'hebben': wie hebben er gewonnen? Wij.",
             simpeler: "Wie wonnen er?",
             nogSimpeler: "Wie hebben gewonnen? …",
+          },
+        },
+      },
+      {
+        q: "Wat is het onderwerp? *De kat slaapt op de bank.*",
+        options: ["De kat", "de bank", "slaapt", "op"],
+        answer: 0,
+        wrongHints: [null, "Dat is de plek, niet wie de handeling doet.", "Dat is de persoonsvorm.", "Dat is een voorzetsel."],
+        uitlegPad: {
+          stappen: [{ titel: "Wie of wat slaapt?", tekst: "Persoonsvorm = 'slaapt'. Vraag: wie of wat slaapt? Antwoord: 'de kat' = onderwerp." }],
+          niveaus: {
+            basis: "Vraag bij 'slaapt': wie slaapt er? De kat.",
+            simpeler: "Wie is er aan het slapen?",
+            nogSimpeler: "Wie slaapt er? De …",
+          },
+        },
+      },
+      {
+        q: "Wat is het onderwerp? *Naast de school staat een oude boom.*",
+        options: ["een oude boom", "de school", "staat", "Naast"],
+        answer: 0,
+        wrongHints: [null, "Dat is de plek wáár de boom staat.", "Dat is de persoonsvorm.", "Dat is een voorzetsel."],
+        uitlegPad: {
+          stappen: [{ titel: "Wat staat er?", tekst: "Persoonsvorm = 'staat'. Vraag: wat staat er? Antwoord: 'een oude boom' — ook al staat het achteraan in de zin." }],
+          niveaus: {
+            basis: "Vraag bij 'staat': wat staat er naast de school? Een oude boom.",
+            simpeler: "Wat staat er? Het onderwerp hoeft niet vooraan.",
+            nogSimpeler: "Wat staat er naast de school? Een …",
+          },
+        },
+      },
+      {
+        q: "Hoe zoek je het onderwerp?",
+        options: [
+          "Stel de vraag: wie of wat + persoonsvorm?",
+          "Zoek het eerste zelfstandig naamwoord.",
+          "Zoek het langste woord in de zin.",
+          "Zoek het werkwoord met -en erachter.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het eerste zelfstandig naamwoord is niet altijd het onderwerp.", "De lengte van een woord zegt niets over de zinsdelen.", "Dat is de manier om een werkwoord te herkennen, niet het onderwerp."],
+        uitlegPad: {
+          stappen: [{ titel: "Wie of wat + persoonsvorm?", tekst: "Stap 1: zoek de persoonsvorm. Stap 2: stel de vraag 'wie of wat + persoonsvorm?' Het antwoord is het onderwerp." }],
+          niveaus: {
+            basis: "Zoek persoonsvorm → vraag: wie of wat … ? → dat is het onderwerp.",
+            simpeler: "Welke vraag gebruik je om het onderwerp te vinden?",
+            nogSimpeler: "Wie of wat doet de handeling?",
           },
         },
       },
@@ -229,6 +318,58 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke zin is goed? (enkelvoud/meervoud)",
+        options: [
+          "De vogel zingt een liedje.",
+          "De vogels zingt een liedje.",
+          "De vogel zingen een liedje.",
+          "De vogels zingend een liedje.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Meervoud onderwerp ('vogels') past niet bij 'zingt' (enkelvoud).", "Enkelvoud onderwerp ('vogel') past niet bij 'zingen' (meervoud).", "Dat is geen persoonsvorm."],
+        uitlegPad: {
+          stappen: [{ titel: "Enkelvoud → enkelvoudswerkwoord", tekst: "'De vogel' is enkelvoud → 'zingt' (enkelvoud). Dat klopt." }],
+          niveaus: {
+            basis: "Eén vogel → 'zingt'. Onderwerp en werkwoord passen bij elkaar.",
+            simpeler: "Is het één vogel of meerdere? Check dan het werkwoord.",
+            nogSimpeler: "Één vogel: de vogel … (enkelvoud van zingen).",
+          },
+        },
+      },
+      {
+        q: "Vul goed in: *Mijn broer en ik ___ elke avond samen tv.* (kijken)",
+        options: ["kijken", "kijkt", "kijkend", "keek"],
+        answer: 0,
+        wrongHints: [null, "Mijn broer én ik zijn samen twee personen → meervoud.", "Dat is geen persoonsvorm.", "Dat is de verleden tijd; de zin is in de tegenwoordige tijd."],
+        uitlegPad: {
+          stappen: [{ titel: "'A en ik' = meervoud", tekst: "'Mijn broer en ik' zijn samen twee personen → meervoud → 'kijken' (niet 'kijkt')." }],
+          niveaus: {
+            basis: "Twee personen met 'en' tellen mee als meervoud → 'kijken'.",
+            simpeler: "Hoeveel mensen kijken er? Tel ze.",
+            nogSimpeler: "Broer + ik = meer dan één → kijken.",
+          },
+        },
+      },
+      {
+        q: "Wat is het onderwerp én de persoonsvorm? *De kinderen spelen in de regen.*",
+        options: [
+          "onderwerp: De kinderen — persoonsvorm: spelen",
+          "onderwerp: de regen — persoonsvorm: spelen",
+          "onderwerp: De kinderen — persoonsvorm: regen",
+          "onderwerp: spelen — persoonsvorm: De kinderen",
+        ],
+        answer: 0,
+        wrongHints: [null, "De regen doet niets — wie spelen er?", "'regen' is geen werkwoord.", "Onderwerp en persoonsvorm zijn hier omgewisseld."],
+        uitlegPad: {
+          stappen: [{ titel: "Pv = spelen; ow = de kinderen", tekst: "Persoonsvorm = 'spelen' (verandert: speelden). Wie spelen? 'De kinderen' = onderwerp." }],
+          niveaus: {
+            basis: "Persoonsvorm 'spelen'; vraag wie spelen → de kinderen.",
+            simpeler: "Welk woord is het werkwoord, en wie doet dat?",
+            nogSimpeler: "Wie spelen er? En welk woord is 'spelen'?",
+          },
+        },
+      },
     ],
   },
 
@@ -300,6 +441,53 @@ const steps = [
             basis: "In een ja/nee-vraag is de persoonsvorm het eerste werkwoord: heeft.",
             simpeler: "Welk woord wordt 'had' in de verleden tijd?",
             nogSimpeler: "Welk werkwoord staat helemaal vooraan in de vraag?",
+          },
+        },
+      },
+      {
+        q: "Wat is de persoonsvorm? *Vroeger woonde onze familie in Utrecht.*",
+        options: ["woonde", "Vroeger", "familie", "Utrecht"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt wannéér, geen werkwoord.", "Dat is een zelfstandig naamwoord.", "Dat is een plaatsnaam, geen werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Welk werkwoord verandert?", tekst: "Tegenwoordige tijd: 'woont'. 'woonde/woont' verandert met de tijd → persoonsvorm." }],
+          niveaus: {
+            basis: "'woonde' verandert met de tijd (woont) → persoonsvorm.",
+            simpeler: "Welk woord vertelt wat de familie deed?",
+            nogSimpeler: "Wat deed de familie? Dat werkwoord is de persoonsvorm.",
+          },
+        },
+      },
+      {
+        q: "Wat is het onderwerp? *Vanochtend belden drie vrienden tegelijk.*",
+        options: ["drie vrienden", "Vanochtend", "belden", "tegelijk"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt wannéér.", "Dat is de persoonsvorm.", "Dat zegt hóé, geen onderwerp."],
+        uitlegPad: {
+          stappen: [{ titel: "Wie belden?", tekst: "Persoonsvorm = 'belden'. Vraag: wie belden er? Antwoord: 'drie vrienden' — ook al staat het niet vooraan." }],
+          niveaus: {
+            basis: "Vraag bij 'belden': wie belden er? Drie vrienden.",
+            simpeler: "Wie deden er iets in deze zin?",
+            nogSimpeler: "Wie belden er tegelijk?",
+          },
+        },
+      },
+      {
+        q: "Welke zin heeft een fout in de congruentie?",
+        options: [
+          "De honden blaft luid.",
+          "De honden blaffen luid.",
+          "De hond blaft luid.",
+          "De hond en de kat blaffen luid.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Meervoud onderwerp + meervoud werkwoord — dat klopt.", "Enkelvoud onderwerp + enkelvoud werkwoord — dat klopt.", "Twee dieren met 'en' = meervoud + meervoud werkwoord — dat klopt."],
+        uitlegPad: {
+          stappen: [{ titel: "Meervoud vraagt meervoud werkwoord", tekst: "'De honden' is meervoud, maar 'blaft' is enkelvoud. Dat is een fout. Het moet zijn: 'De honden blaffen luid'." }],
+          niveaus: {
+            basis: "Meerdere honden → 'blaffen' (niet 'blaft').",
+            simpeler: "Is het onderwerp meervoud? Dan moet het werkwoord ook meervoud zijn.",
+            nogSimpeler: "Meer dan één hond: de honden … (meervoud van blaffen).",
           },
         },
       },

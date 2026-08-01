@@ -78,6 +78,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke rij klopt helemaal? (stellend – vergrotend – overtreffend)",
+        options: ["koud – kouder – koudst", "koud – koudst – kouder", "kouder – koud – koudst", "koud – koude – koudste"],
+        answer: 0,
+        wrongHints: [null, "De vergrotende (-er) komt altijd vóór de overtreffende (-st).", "De stellende trap is de gewone basisvorm.", "Dat zijn geen trappen van vergelijking — dat zijn vormen met een buigings-e."],
+        uitlegPad: {
+          stappen: [{ titel: "Gewoon – meer – meest", tekst: "De volgorde is altijd: stellend (koud), vergrotend (kouder, -er), overtreffend (koudst, -st)." }],
+          niveaus: {
+            basis: "koud → kouder → koudst (gewoon, dan -er, dan -st).",
+            simpeler: "Welke rij gaat van gewoon naar meer naar het meest?",
+            nogSimpeler: "koud, dan koud-er, dan koud-st.",
+          },
+        },
+      },
+      {
+        q: "Hoeveel trappen van vergelijking zijn er?",
+        options: ["drie", "twee", "vier", "vijf"],
+        answer: 0,
+        wrongHints: [null, "Er is er eentje meer dan twee: stellend, vergrotend én overtreffend.", "Dat zijn er te veel.", "Dat zijn er te veel."],
+        uitlegPad: {
+          stappen: [{ titel: "Altijd drie trappen", tekst: "Er zijn altijd drie trappen: stellend (de gewone vorm), vergrotend (-er) en overtreffend (-st)." }],
+          niveaus: {
+            basis: "Drie trappen: stellend, vergrotend, overtreffend.",
+            simpeler: "Tel ze: gewoon, meer, het meest. Dat zijn er …?",
+            nogSimpeler: "Snel, sneller, snelst — hoeveel woorden?",
+          },
+        },
+      },
+      {
+        q: "Wat is de vergrotende trap van 'slim'?",
+        options: ["slimmer", "slimst", "slim", "slimste"],
+        answer: 0,
+        wrongHints: [null, "Dat is de overtreffende trap.", "Dat is de stellende trap.", "Dat is 'slim' met een buigings-e, geen trap."],
+        uitlegPad: {
+          stappen: [{ titel: "slim + -mer", tekst: "De vergrotende trap van 'slim' is 'slimmer'. De m verdubbelt omdat de klank kort is." }],
+          niveaus: {
+            basis: "slim + -mer = slimmer (dubbele m door korte klank).",
+            simpeler: "Welke vorm betekent 'slimmer dan iemand anders'?",
+            nogSimpeler: "slim + mer = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -151,6 +193,53 @@ const steps = [
             basis: "'duurder dan' is juist (-er + dan).",
             simpeler: "Welke heeft de -er-vorm én het woordje 'dan'?",
             nogSimpeler: "Welke zin zegt 'duurder dan'?",
+          },
+        },
+      },
+      {
+        q: "De vergrotende trap van 'weinig' is...",
+        options: ["minder", "minst", "weinigst", "weinigger"],
+        answer: 0,
+        wrongHints: [null, "Dat is de overtreffende trap.", "'Weinigst' bestaat niet — dit woord is onregelmatig.", "'Weinigger' bestaat niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Onregelmatig: weinig → minder", tekst: "'Weinig' is onregelmatig. De vergrotende trap is 'minder', niet 'weiniger'." }],
+          niveaus: {
+            basis: "weinig → minder (vergrotend) → minst (overtreffend).",
+            simpeler: "Zeg je 'weiniger' of 'minder'?",
+            nogSimpeler: "Beter is de vergroting van goed; minder is de vergroting van …?",
+          },
+        },
+      },
+      {
+        q: "Welke zin klopt?",
+        options: [
+          "Mijn rugzak is zwaarder dan die van jou.",
+          "Mijn rugzak is zwaarder als die van jou.",
+          "Mijn rugzak is zwaarst dan die van jou.",
+          "Mijn rugzak is meer zwaar dan die van jou.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Bij de vergrotende trap gebruik je 'dan', niet 'als'.", "Dat is de overtreffende trap; bij twee dingen vergelijken hoort -er.", "In het Nederlands zeg je 'zwaarder', niet 'meer zwaar'."],
+        uitlegPad: {
+          stappen: [{ titel: "Vergrotend + dan", tekst: "Twee rugzakken vergelijken: 'zwaarder' (-er) + 'dan'. Dat is de juiste combinatie." }],
+          niveaus: {
+            basis: "zwaarder dan = vergrotende trap + juiste vergelijkingswoord.",
+            simpeler: "Welke vorm vergelijkt twee dingen met 'dan'?",
+            nogSimpeler: "zwaar + er = zwaarder. En dan welk woordje?",
+          },
+        },
+      },
+      {
+        q: "De vergrotende trap van 'veel' is...",
+        options: ["meer", "meest", "veelst", "veeler"],
+        answer: 0,
+        wrongHints: [null, "Dat is de overtreffende trap.", "'Veelst' bestaat niet — dit woord is onregelmatig.", "'Veeler' bestaat niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Onregelmatig: veel → meer", tekst: "'Veel' is onregelmatig. De vergrotende trap is 'meer', niet 'veeler'." }],
+          niveaus: {
+            basis: "veel → meer (vergrotend) → meest (overtreffend).",
+            simpeler: "Zeg je 'veeler appels' of 'meer appels'?",
+            nogSimpeler: "Welke vorm gebruik je als je twee hoeveelheden vergelijkt?",
           },
         },
       },
@@ -230,6 +319,53 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke is de **overtreffende** trap van 'goed'?",
+        options: ["best", "beter", "goedst", "goeder"],
+        answer: 0,
+        wrongHints: [null, "Dat is de vergrotende trap.", "'Goedst' bestaat niet — dit woord is onregelmatig.", "'Goeder' bestaat niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Onregelmatig: goed → beter → best", tekst: "'Goed' is onregelmatig. De overtreffende trap is 'best' (niet 'goedst')." }],
+          niveaus: {
+            basis: "goed → beter → best. Uit je hoofd leren.",
+            simpeler: "Wat zeg je: 'goedst' of 'best'?",
+            nogSimpeler: "Best is de overtreffing van …?",
+          },
+        },
+      },
+      {
+        q: "Vul in: *Van alle renners is hij het ___.* (snel)",
+        options: ["snelst", "sneller", "snel", "snelste"],
+        answer: 0,
+        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "Bij 'het …' zonder lidwoord schrijf je 'snelst'."],
+        uitlegPad: {
+          stappen: [{ titel: "'het …st van alle'", tekst: "'Van alle renners' = hij is de allersnelste → overtreffende trap: het snelst." }],
+          niveaus: {
+            basis: "het snelst van alle = overtreffende trap.",
+            simpeler: "Wie is het allerbeste? Zoek de overtreffende trap.",
+            nogSimpeler: "snel + st = ?",
+          },
+        },
+      },
+      {
+        q: "Bij welke zin hoort de overtreffende trap?",
+        options: [
+          "Dit is de langste straat van de stad.",
+          "De Keizersgracht is langer dan de Prinsengracht.",
+          "De straat is lang.",
+          "Die straat is bijna even lang.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat is een vergelijking van twee dingen → vergrotende trap.", "Dat is de stellende trap.", "Dat is geen trap van vergelijking."],
+        uitlegPad: {
+          stappen: [{ titel: "'de …ste van' = overtreffend", tekst: "'De langste straat van de stad' — dat is het meeste van allemaal → overtreffende trap." }],
+          niveaus: {
+            basis: "De …ste van … = overtreffende trap.",
+            simpeler: "Welke zin vergelijkt iets met alles van de stad?",
+            nogSimpeler: "Welke zin zegt 'de langste'?",
+          },
+        },
+      },
     ],
   },
 
@@ -295,6 +431,53 @@ const steps = [
             basis: "'het snelst' = overtreffende trap.",
             simpeler: "Welke vorm betekent 'het allersnelst'?",
             nogSimpeler: "snel + st = ?",
+          },
+        },
+      },
+      {
+        q: "De vergrotende trap van 'nat' is...",
+        options: ["natter", "nater", "natst", "natte"],
+        answer: 0,
+        wrongHints: [null, "Bij de korte klank verdubbel je de t: nat → natter.", "Dat is de overtreffende trap.", "Dat is 'nat' met een -e."],
+        uitlegPad: {
+          stappen: [{ titel: "Korte klank → dubbele letter", tekst: "'Nat' heeft een korte a-klank, dus de t verdubbelt: nat → natter." }],
+          niveaus: {
+            basis: "nat + -ter (dubbele t) = natter.",
+            simpeler: "Schrijf je 'nater' of 'natter'? De korte klank vraagt dubbel.",
+            nogSimpeler: "nat + ter = ?",
+          },
+        },
+      },
+      {
+        q: "Welke zin is fout?",
+        options: [
+          "Hij is de sterkste als iedereen.",
+          "Hij is sterker dan iedereen.",
+          "Hij is de sterkste van iedereen.",
+          "Hij is het sterkst van allemaal.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Sterker + dan is de juiste vergrotende trap.", "De sterkste + van is de juiste overtreffende trap.", "Het sterkst + van is ook juist."],
+        uitlegPad: {
+          stappen: [{ titel: "'Als' klopt niet bij de overtreffende trap", tekst: "'De sterkste als iedereen' is fout: bij de overtreffende trap gebruik je 'van', niet 'als'. 'Als' hoort ook niet bij 'dan'. Zeg: 'de sterkste van iedereen'." }],
+          niveaus: {
+            basis: "Bij de overtreffende trap gebruik je 'van', niet 'als'.",
+            simpeler: "Welke zin heeft een fout woordje bij de overtreffende trap?",
+            nogSimpeler: "De sterkste … iedereen. Welk woordje klopt hier niet?",
+          },
+        },
+      },
+      {
+        q: "Maak de rij af: goed – beter – ___",
+        options: ["best", "goedst", "beters", "bester"],
+        answer: 0,
+        wrongHints: [null, "'Goedst' bestaat niet — dit is een onregelmatig woord.", "'Beters' bestaat niet.", "'Bester' bestaat niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Onregelmatig: goed → beter → best", tekst: "'Goed' is onregelmatig. De rij is: goed (stellend), beter (vergrotend), best (overtreffend)." }],
+          niveaus: {
+            basis: "goed → beter → best. Uit je hoofd leren.",
+            simpeler: "Na 'beter' komt …?",
+            nogSimpeler: "goed, beter, …?",
           },
         },
       },

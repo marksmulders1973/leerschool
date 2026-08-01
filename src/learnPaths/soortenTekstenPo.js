@@ -81,6 +81,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Een schoolboek-tekst over hoe de aarde om de zon draait is een...",
+        options: ["informatieve tekst", "betogende tekst", "verhalende tekst", "instructieve tekst"],
+        answer: 0,
+        wrongHints: [null, "Er staat geen mening in — alleen feiten.", "Het is geen verhaal met personages.", "Er zijn geen stappen om zelf iets te doen."],
+        uitlegPad: {
+          stappen: [{ titel: "Feiten over de natuur = informatief", tekst: "Een schoolboek-tekst legt uit hoe de wereld werkt. Je leert er iets van → informatieve tekst." }],
+          niveaus: {
+            basis: "Uitleg over de natuur (feiten) = informatieve tekst.",
+            simpeler: "Leer je hier iets nieuws over de ruimte?",
+            nogSimpeler: "Geeft de tekst je kennis, of vermaak?",
+          },
+        },
+      },
+      {
+        q: "Welk kenmerk past NIET bij een informatieve tekst?",
+        options: ["een mening van de schrijver", "feiten en uitleg", "het antwoord op 'hoe werkt dat?'", "informatie opzoeken"],
+        answer: 0,
+        wrongHints: [null, "Feiten zijn juist typisch voor informatieve teksten.", "Informatieve teksten beantwoorden precies die vraag.", "Je leest een informatieve tekst juist om iets op te zoeken."],
+        uitlegPad: {
+          stappen: [{ titel: "Informeren ≠ mening", tekst: "Een informatieve tekst geeft alleen feiten en uitleg — géén mening. Een mening hoort bij een betogende tekst." }],
+          niveaus: {
+            basis: "Informatief = feiten, géén mening.",
+            simpeler: "Zegt de schrijver wat jij zou moeten vinden? Dan is het geen informatieve tekst.",
+            nogSimpeler: "Is een mening een feit?",
+          },
+        },
+      },
+      {
+        q: "Een encyclopedie-artikel over de Tweede Wereldoorlog geeft je...",
+        options: ["informatie (feiten en uitleg)", "instructies (stappen om iets te doen)", "een verhaal om van te genieten", "argumenten om je te overtuigen"],
+        answer: 0,
+        wrongHints: [null, "Er staan geen stappen die jij moet uitvoeren.", "Het is geen verzonnen of naverteld verhaal.", "Het geeft geen mening of argumenten."],
+        uitlegPad: {
+          stappen: [{ titel: "Encyclopedie = informatief", tekst: "Een encyclopedie geeft feiten en uitleg over een onderwerp. Doel: je iets laten weten → informatief." }],
+          niveaus: {
+            basis: "Encyclopedie-artikel = informatieve tekst (feiten).",
+            simpeler: "Leer je er iets van, of moet je iets doen?",
+            nogSimpeler: "Geeft het je kennis over de oorlog?",
+          },
+        },
+      },
     ],
   },
 
@@ -153,6 +195,48 @@ const steps = [
             basis: "Spelregels zeggen wat je moet doen → instructief.",
             simpeler: "Leg je spelregels uit om te spelen (doen) of om te weten?",
             nogSimpeler: "Vertel je met spelregels hoe je iets dóét?",
+          },
+        },
+      },
+      {
+        q: "Hoe herken je een instructieve tekst aan het taalgebruik?",
+        options: ["werkwoorden als 'pak', 'vouw', 'druk op' — opdrachten", "zinnen zoals 'er was eens...'", "woorden als 'want' en 'daarom moet je'", "vragen zoals 'wist je dat...'"],
+        answer: 0,
+        wrongHints: [null, "Dat hoor je in verhalen.", "Die horen bij een betogende tekst.", "Dat hoort eerder bij een informatieve tekst."],
+        uitlegPad: {
+          stappen: [{ titel: "Opdracht-werkwoorden = instructief", tekst: "In een instructieve tekst staan werkwoorden die een opdracht geven: pak, vouw, meng, druk op. Dat zijn signaalwoorden voor instructief." }],
+          niveaus: {
+            basis: "Opdracht-werkwoorden (pak, meng) = kenmerk van instructieve tekst.",
+            simpeler: "Zegt de tekst wat jij moet dóén met opdracht-woorden?",
+            nogSimpeler: "Staat er 'pak' of 'vouw' in? Dan is het een opdracht.",
+          },
+        },
+      },
+      {
+        q: "Een veiligheidskaart in het vliegtuig (hoe je het reddingsvest aandoet) is een...",
+        options: ["instructieve tekst", "informatieve tekst", "verhalende tekst", "betogende tekst"],
+        answer: 0,
+        wrongHints: [null, "Je moet zelf iets dóén met die informatie.", "Het is geen verhaal.", "Het wil je niet van een mening overtuigen."],
+        uitlegPad: {
+          stappen: [{ titel: "Stap-voor-stap aanwijzingen = instructief", tekst: "De veiligheidskaart laat in stappen zien hoe je iets doet → instructief." }],
+          niveaus: {
+            basis: "Aanwijzingen die je uitvoert → instructieve tekst.",
+            simpeler: "Moet je iets dóén terwijl je de kaart leest?",
+            nogSimpeler: "Legt het uit hóé je iets doet?",
+          },
+        },
+      },
+      {
+        q: "Wat is het doel van een instructieve tekst?",
+        options: ["de lezer leren hoe iets gedaan wordt", "de lezer amuseren met een verhaal", "de lezer overtuigen van een mening", "de lezer feiten bijbrengen"],
+        answer: 0,
+        wrongHints: [null, "Amuseren is het doel van een verhalende tekst.", "Overtuigen is het doel van een betogende tekst.", "Feiten geven is het doel van een informatieve tekst."],
+        uitlegPad: {
+          stappen: [{ titel: "Instructie = leren HOE", tekst: "Een instructieve tekst heeft als doel te laten zien hoe iets gedaan wordt, stap voor stap." }],
+          niveaus: {
+            basis: "Doel van instructief = uitleggen hoe je iets dóét.",
+            simpeler: "Lees je het om iets te doen of om iets te weten?",
+            nogSimpeler: "Wat doet een instructie?",
           },
         },
       },
@@ -229,6 +313,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat is het kenmerk van een betogende tekst?",
+        options: ["een mening met argumenten ('want', 'daarom')", "stappen die je moet uitvoeren", "personages in een verzonnen verhaal", "feiten over de wereld"],
+        answer: 0,
+        wrongHints: [null, "Stappen horen bij een instructieve tekst.", "Personages in een verhaal horen bij een verhalende tekst.", "Feiten horen bij een informatieve tekst."],
+        uitlegPad: {
+          stappen: [{ titel: "Mening + argumenten = betogend", tekst: "Een betogende tekst heeft altijd een mening plus argumenten (woorden als 'want', 'omdat', 'daarom moet je')." }],
+          niveaus: {
+            basis: "Mening + argumenten = kenmerk van betogende tekst.",
+            simpeler: "Probeert de tekst je ergens van te overtuigen?",
+            nogSimpeler: "Staat er 'jij moet..., want...' in?",
+          },
+        },
+      },
+      {
+        q: "Een strip-verhaal over twee kinderen die op avontuur gaan is een...",
+        options: ["verhalende tekst", "betogende tekst", "instructieve tekst", "informatieve tekst"],
+        answer: 0,
+        wrongHints: [null, "Er is geen mening of argument in.", "Er zijn geen stappen.", "Het geeft geen feiten om te leren."],
+        uitlegPad: {
+          stappen: [{ titel: "Strip = verhalend", tekst: "Een strip vertelt een verzonnen verhaal met personages → verhalende tekst." }],
+          niveaus: {
+            basis: "Een strip met personages en avontuur = verhalende tekst.",
+            simpeler: "Zijn er personages die iets meemaken?",
+            nogSimpeler: "Is het een verhaal?",
+          },
+        },
+      },
+      {
+        q: "Welk woord hoort bij een betogende tekst?",
+        options: ["overtuigen", "informeren", "vermaken", "instrueren"],
+        answer: 0,
+        wrongHints: [null, "Informeren hoort bij informatieve teksten.", "Vermaken hoort bij verhalende teksten.", "Instrueren hoort bij instructieve teksten."],
+        uitlegPad: {
+          stappen: [{ titel: "Betogen = overtuigen", tekst: "De vier soorten teksten hebben elk een doel. Betogend → overtuigen. Informatief → informeren. Verhalend → vermaken. Instructief → instrueren." }],
+          niveaus: {
+            basis: "Betogende tekst = overtuigen van een mening.",
+            simpeler: "Wat probeert een betogende tekst te doen?",
+            nogSimpeler: "Welk woord lijkt op 'betogen' (overtuigen)?",
+          },
+        },
+      },
     ],
   },
 
@@ -301,6 +427,48 @@ const steps = [
             basis: "Stap-voor-stap wat je moet doen → instructief.",
             simpeler: "Welk kenmerk hoort bij instructie: stappen of een mening?",
             nogSimpeler: "Wat staat er in een recept: stappen of nieuws?",
+          },
+        },
+      },
+      {
+        q: "Een ingezonden brief in de krant met de mening 'Er moeten meer fietspaden komen' is een...",
+        options: ["betogende tekst", "informatieve tekst", "instructieve tekst", "verhalende tekst"],
+        answer: 0,
+        wrongHints: [null, "Een informatieve tekst geeft alleen feiten, geen mening.", "Er staan geen stappen in.", "Het is geen verhaal met personages."],
+        uitlegPad: {
+          stappen: [{ titel: "Mening in de krant = betogend", tekst: "Een ingezonden brief geeft de mening van de schrijver en wil de lezer overtuigen → betogende tekst." }],
+          niveaus: {
+            basis: "Mening van de schrijver + bedoeld om te overtuigen = betogende tekst.",
+            simpeler: "Wil de schrijver dat jij zijn mening deelt?",
+            nogSimpeler: "Probeert de brief je van iets te overtuigen?",
+          },
+        },
+      },
+      {
+        q: "Je leest: 'Koop nu onze nieuwe smoothie — gezond, lekker en goedkoop!' Welk soort tekst?",
+        options: ["betogend (overtuigen)", "informatief (laten weten)", "verhalend (vermaken)", "instructief (laten doen)"],
+        answer: 0,
+        wrongHints: [null, "Er staan nauwelijks feiten in, alleen een aanprijzing.", "Het is geen verhaal.", "Er staan geen stappen in."],
+        uitlegPad: {
+          stappen: [{ titel: "Reclame = betogend", tekst: "Reclame wil je overtuigen iets te kopen → betogende tekst. 'Koop nu' is een aanprijzing, geen feit of stap." }],
+          niveaus: {
+            basis: "Reclame die je aanzet tot kopen = betogende tekst.",
+            simpeler: "Wil de tekst dat jij iets gaat kopen?",
+            nogSimpeler: "Is 'koop nu' een feit of een overtuigingspoging?",
+          },
+        },
+      },
+      {
+        q: "Welke vraag helpt je om het soort tekst te bepalen?",
+        options: ["Waarom is deze tekst geschreven?", "Hoe lang is de tekst?", "Wie heeft de tekst geschreven?", "Wanneer is de tekst geschreven?"],
+        answer: 0,
+        wrongHints: [null, "De lengte zegt niets over het soort tekst.", "De schrijver bepaalt niet automatisch het soort tekst.", "De datum zegt niets over het doel."],
+        uitlegPad: {
+          stappen: [{ titel: "Vraag: waarom?", tekst: "Stel jezelf altijd de vraag: 'Waarom is deze tekst geschreven?' Het antwoord verraadt het soort tekst: om te weten, om te doen, om te vermaken of om te overtuigen." }],
+          niveaus: {
+            basis: "De waarom-vraag geeft het doel van de tekst → het soort tekst.",
+            simpeler: "Vraag: is de tekst er om je te informeren, te laten doen, te vermaken of te overtuigen?",
+            nogSimpeler: "Waarom schreef iemand dit?",
           },
         },
       },
