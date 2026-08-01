@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 8 juli 2026.
+Laatst bijgewerkt: 1 augustus 2026.
 
 ## Wat is Leerkwartier?
 

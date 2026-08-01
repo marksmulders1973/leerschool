@@ -19,7 +19,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 7 | **Park — binden + leren** ("alles benoembaar") | **70%** | = | bewijzen dat park het leren vóedt i.p.v. kannibaliseert |
 | 8 | **Familie-abonnement / geld** (paywall gebouwd, UIT tot ~jan 2027) | **85%** | ↑ | ~~40% was meetfout~~ — **9/9 haken bèta-live** (routes + echte componenten geverifieerd 1 aug); rest 15% = coherentie/Fable-pass + auto-triggers |
 | 9 | **Content-breedte buiten Cito-kern** (VO/havo/vwo) | **70%** | ↑ | 1 aug: alle 7 informatica-paden 12→20 checks (AI, cybersecurity, algoritmen, databases, hardware, netwerken, programmeren); volgende breedte-gaten: economie-VO + kunst dun |
-| 10 | **SEO / AI-vindbaarheid** ("Doorstroomtoets-koning") | **68%** | ↑ | 1 aug: breadcrumbs op alle landingspagina's + Article-schema + verse sitemap (380 URLs); resteert: pre-rendering React-routes + backlinks (extern) |
+| 10 | **SEO / AI-vindbaarheid** ("Doorstroomtoets-koning") | **71%** | ↑ | 1 aug: breadcrumbs + Article-schema + verse sitemap (380 URLs) + AI-vindbaarheid (sameAs-entiteitkoppeling social/LinkedIn, llms.txt ververst, vraag-vormige FAQ); groot plafond resteert: pre-rendering React-routes (architectuur) + backlinks (extern) |
 
 ## 📡 Groei-motoren — hoe mensen binnenkomen (op rang van hefboom)
 

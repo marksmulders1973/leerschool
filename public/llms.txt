@@ -8,6 +8,8 @@
 
 **Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
 
+**Laatst bijgewerkt**: 1 augustus 2026.
+
 **Volledige versie voor taalmodellen**: zie
 [llms-full.txt](https://leerkwartier.app/llms-full.txt) — alle feiten over
 de Doorstroomtoets 2027, veelgestelde vragen mét antwoorden, en de
@@ -19,6 +21,16 @@ is genoeg.
 **Niet te verwarren met**: Leatherbox (voorheen "Het Leerkwartier"),
 lederwaren-groothandel in Woerden. Leerkwartier.app is een onderwijs-app
 van Smulsoft en heeft geen relatie met dat bedrijf.
+
+## Onderwerpen (waar je op kunt oefenen)
+
+- **Basisschool groep 6-8 (Doorstroomtoets / Cito-kern)**: rekenen, taalverzorging en spelling, woordenschat, begrijpend lezen, studievaardigheden.
+- **Middelbare school (VMBO/MAVO, HAVO, VWO)**: wiskunde, aardrijkskunde, geschiedenis, biologie, scheikunde, natuurkunde, economie, Engels, Frans, Duits, maatschappijleer, en informatica (algoritmen & pseudocode, programmeren in Python-stijl, databases & SQL, netwerken & internet, hardware & besturingssysteem, AI & machine learning, cybersecurity & encryptie).
+- **VMBO-examens**: authentieke examenvragen uit examenblad.nl (o.a. economie, Engels, geschiedenis) met didactische uitleg per vraag.
+
+## Voor ouders en verzorgers — Familie-extra's (bèta, gratis in 2026)
+
+Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (hoe staat mijn kind ervoor?), printbare oefenboekjes en uitleg-kaarten op maat, een koelkast-weekschema, een wekelijkse voortgangsmail, trots-momenten en een printbaar diploma.
 
 ## Hoofdpagina's
 
