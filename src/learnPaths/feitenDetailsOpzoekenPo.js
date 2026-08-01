@@ -173,6 +173,85 @@ Oefen de strategie met de vragen hieronder.`,
         },
       },
       {
+        q: "Je wilt snel een antwoord opzoeken in een lange tekst. Wat is de SLIMSTE eerste actie?",
+        options: [
+          "De vraag lezen en het zoekwoord bepalen vóórdat je naar de tekst kijkt",
+          "De tekst van begin tot eind lezen en daarna de vraag lezen",
+          "Gokken op basis van de kop van de tekst",
+          "Alle getallen in de tekst opschrijven en daarna de vraag lezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Als je eerst de tekst leest, vergeet je de vraag soms halverwege. Wat doe je beter vóór het lezen?",
+          null,
+          "Niet alle vragen gaan over getallen. Wat helpt je écht om gericht te zoeken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom vraag eerst?", tekst: "Als je het zoekwoord weet vóórdat je de tekst induikt, weet je waar je op let. Zo hoef je niet alles te lezen." },
+            { titel: "Vergelijk", tekst: "Eerst tekst, dan vraag = je leest alles en zoekt dan nog een keer. Eerst vraag, dan tekst = je zoekt meteen gericht. De tweede manier bespaart tijd." },
+            { titel: "Vaste volgorde", tekst: "1. Vraag lezen + zoekwoord. 2. Scannen. 3. Precies lezen. 4. Controleren. Stap 1 is altijd de eerste." },
+          ],
+          niveaus: {
+            basis: "Als je weet wat je zoekt, kun je dan gericht scannen. Wat doe je daarvoor als eerste?",
+            simpeler: "Een speurder weet ééérst wat hij zoekt, dan gaat hij zoeken. Welke actie hoort bij 'weten wat je zoekt'?",
+            nogSimpeler: "Zoek de actie die begint bij de vraag, niet bij de tekst.",
+          },
+        },
+      },
+      {
+        q: "Je hebt je zoekwoord gevonden in de tekst. Wat is de VOLGENDE stap in de zoekstrategie?",
+        options: [
+          "De zin met het zoekwoord — en de zin ervoor en erna — precies lezen",
+          "De rest van de tekst ook helemaal lezen",
+          "Meteen het antwoord opschrijven zonder verder te lezen",
+          "Een nieuw zoekwoord kiezen en opnieuw beginnen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat kost veel tijd. Je hebt al de goede plek gevonden — wat doe je op die plek?",
+          null,
+          "Je hebt het zoekwoord al gevonden! Waarom zou je opnieuw beginnen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee standen", tekst: "De zoekstrategie heeft twee standen: eerst snel scannen over de hele tekst, daarna precies lezen op de goede plek." },
+            { titel: "Waarom ook de zinnen eromheen?", tekst: "Soms staat het antwoord niet in diezélfde zin als het zoekwoord, maar in de zin ervoor of erna. Lees ze allebei mee om zeker te zijn." },
+            { titel: "Controleer altijd", tekst: "Na het precies lezen stel je jezelf de vraag: geeft dit antwoord op de vraag? Neem getallen en namen exact over." },
+          ],
+          niveaus: {
+            basis: "Je hebt het zoekwoord gevonden. Ga je dan snel door, of lees je die plek heel precies?",
+            simpeler: "Scannen is de eerste stap. Wat is de volgende stap als je het goede stukje gevonden hebt?",
+            nogSimpeler: "Zoek de stap waarbij je langzaam en nauwkeurig leest.",
+          },
+        },
+      },
+      {
+        q: "*\"Een neushoorn kan 2.300 kilo wegen. Een nijlpaard kan 3.200 kilo wegen.\"* — Hoeveel kilo weegt een nijlpaard?",
+        options: ["3.200 kilo", "2.300 kilo", "5.500 kilo", "320 kilo"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat in de zin over het ándere dier. Scan op 'nijlpaard' en lees alleen díé zin.",
+          "Je hebt de twee getallen bij elkaar opgeteld. De vraag gaat over één dier — welk getal staat bij de naam 'nijlpaard'?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over de nijlpaard. Zoekwoord = 'nijlpaard'. Scan de twee zinnen op dat woord." },
+            { titel: "Precies lezen", tekst: "De zin met 'nijlpaard' zegt: 3.200 kilo. Dat is je antwoord." },
+            { titel: "Controleer de valkuil", tekst: "Het andere getal (2.300) hoort bij de neushoorn. Neem alleen het getal over uit de zin over het dier dat de vraag noemt." },
+          ],
+          niveaus: {
+            basis: "Welk getal staat in de zin over het nijlpaard? Lees alleen díé zin.",
+            simpeler: "Twee dieren, twee getallen. Zoek 'nijlpaard' en neem het getal uit diezelfde zin.",
+            nogSimpeler: "Scan op het woord 'nijlpaard' en lees het getal erna.",
+          },
+        },
+      },
+      {
         q: "Vraag: *\"Op welke dag is de bibliotheek gesloten?\"* — Welk woord uit de vraag is het beste zoekwoord om mee te scannen?",
         options: ["gesloten", "de", "welke", "is"],
         answer: 0,
@@ -328,6 +407,57 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
             basis: "Scan op het woord 'geld' en lees de hele zin waarin het staat.",
             simpeler: "In de derde alinea staat een zin die begint met 'Van het geld kocht de school...'. Wat staat er achter?",
             nogSimpeler: "Zoek de zin over het geld en lees precies wat de school ermee kocht.",
+          },
+        },
+      },
+      {
+        q: "Welke groep leerlingen zaaide de bloemenstrook op het schoolplein?",
+        options: ["Groep zeven", "Groep zes", "Groep acht", "Groep vijf"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Die groep wordt in de tekst niet bij de bloemenstrook genoemd. Scan op het woord 'bloemenstrook' of 'gezaaid'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord kiezen", tekst: "De vraag gaat over wie de bloemenstrook zaaide. Goede zoekwoorden: 'bloemenstrook', 'gezaaid' of 'groep'." },
+            { titel: "Precies lezen", tekst: "Je vindt in de tweede alinea: 'De kinderen van groep zeven helpen mee. Zij hebben op het schoolplein een bloemenstrook gezaaid.' Groep zeven is het antwoord." },
+            { titel: "Controleer het getal", tekst: "In de tekst staat ook het getal 'dertigduizend' (bijen) en 'twee' (kasten). Neem alleen het getal over dat bij jouw vraag hoort: het groepsnummer." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'bloemenstrook'. In welke alinea en welke zin staat het — en welke groep wordt daar genoemd?",
+            simpeler: "In de tweede alinea staat een zin die begint met 'De kinderen van groep...'. Welk groepsnummer staat erin?",
+            nogSimpeler: "Zoek het woord 'gezaaid' in de tekst en lees het getal in diezelfde zin.",
+          },
+        },
+      },
+      {
+        q: "Wat staat er op het bord aan de rand van het schoolplein?",
+        options: [
+          "Informatie over het bijenproject",
+          "De regels van het schoolplein",
+          "Een foto van de bijen",
+          "De naam van de school",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Een foto van de bijen stond op de posters bij Joost — maar staat er ook iets op het bord? Scan op 'bord'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over een bord. Scan de tekst op het woord 'bord'." },
+            { titel: "Precies lezen", tekst: "Je vindt in de tweede alinea: 'Aan de rand van het plein staat een bord met informatie over het project.' Dat is je antwoord." },
+            { titel: "Logisch-maar-fout", tekst: "Schoolregels of de naam van de school klinken logisch bij een schoolplein, maar staan er niet. Alleen wat letterlijk in de tekst staat, is het antwoord." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'bord'. Lees de zin met dat woord heel precies.",
+            simpeler: "Er staat één zin over het bord aan de rand van het plein. Wat vertelt die zin over de inhoud van het bord?",
+            nogSimpeler: "Zoek 'bord' in de tekst en lees wat er achter 'met' staat.",
           },
         },
       },
@@ -499,6 +629,57 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
             basis: "Het antwoord staat er vaak wél, maar met een ander woord. Welke aanpak past daarbij?",
             simpeler: "Denk aan kaartje en toegangsbewijs: twee woorden, één ding. Wat deed je toen om het antwoord toch te vinden?",
             nogSimpeler: "Welke optie laat je vérder zoeken in plaats van opgeven of gokken?",
+          },
+        },
+      },
+      {
+        q: "*\"De bibliotheek is van maandag tot en met vrijdag open van negen tot zes.\"* — Vraag: 'Op welke dag is de bibliotheek dicht?' Welk antwoord is juist?",
+        options: [
+          "Zaterdag en zondag",
+          "Maandag",
+          "Vrijdag",
+          "Woensdag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Maandag staat in het rijtje open dagen. Lees de zin nog eens: van welke dag tot welke dag is de bibliotheek open?",
+          "Vrijdag staat ook in het rijtje. Kijk eens welke dagen er niet worden genoemd in 'maandag tot en met vrijdag'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees precies wat er staat", tekst: "'Van maandag tot en met vrijdag' = maandag, dinsdag, woensdag, donderdag en vrijdag zijn open. Welke dagen mist er?" },
+            { titel: "Redeneer", tekst: "Een week heeft zeven dagen. Vijf zijn open. Dan zijn er twee over: zaterdag en zondag. Die worden nergens als openingsdag genoemd." },
+            { titel: "Betrouwbaarheidscheck", tekst: "Dit is een kleine redeneer-stap bovenop het opzoeken. Op de toets wordt dat ook gevraagd: de tekst geeft de open dagen, jij trekt zelf de conclusie over de dichte." },
+          ],
+          niveaus: {
+            basis: "Welke dagen noemt de zin als open dagen? Welke weekdagen horen daar dan niet bij?",
+            simpeler: "Twaalf zeven dagen in een week op: ma, di, wo, do, vr, za, zo. Welke staan niet in het rijtje 'maandag tot en met vrijdag'?",
+            nogSimpeler: "Als de bibliotheek van maandag tot vrijdag open is, is ze in het weekend dan open of dicht?",
+          },
+        },
+      },
+      {
+        q: "*\"De bus vertrekt om 10:15 uur. De trein vertrekt om 10:51 uur.\"* — Hoe laat vertrekt de trein?",
+        options: ["10:51 uur", "10:15 uur", "10:05 uur", "11:15 uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de vertrektijd van de bus. Scan op 'trein' en lees die zin.",
+          "Let op de volgorde van de cijfers: heb je de uren en minuten misschien omgedraaid?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over de trein. Zoekwoord = 'trein'. Scan de twee zinnen op dat woord." },
+            { titel: "Cijfer voor cijfer", tekst: "De trein-zin noemt: 10:51. Lees het tijdstip cijfer voor cijfer: tien uur eenenvijftig. Let op: 10:15 en 10:51 lijken op elkaar maar zijn heel anders." },
+            { titel: "Vergelijk nauwkeurig", tekst: "Leg de tijd uit de tekst naast de opties en vergelijk cijfer voor cijfer. Bijna goed is fout." },
+          ],
+          niveaus: {
+            basis: "Welk tijdstip staat er in de zin over de trein? Lees het getal uur voor uur en minuut voor minuut.",
+            simpeler: "Er staan twee tijden. De bus-tijd begint met 10:1... en de trein-tijd met 10:5... Lees de trein-zin precies.",
+            nogSimpeler: "Zoek het woord 'trein' en lees het tijdstip in diezélfde zin.",
           },
         },
       },
@@ -683,6 +864,62 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
             basis: "Scan op het woord 'proefjes' en lees met welke plek die zin begint.",
             simpeler: "Kijk onder 'Wat is er te doen?'. Drie plekken, drie activiteiten. Bij welke plek horen de proefjes en het Ontdeklab?",
             nogSimpeler: "Zoek het woord 'proefjes' in de folder en lees de plek die in diezelfde zin staat.",
+          },
+        },
+      },
+      {
+        q: "Wat vind je op de begane grond van het Uilenfort?",
+        options: [
+          "Hoe het fort vroeger werd verdedigd",
+          "De uilenzaal met opgezette uilen",
+          "Het Ontdeklab op zolder",
+          "De schatkist in de kelder",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De uilenzaal is op de eerste verdieping. Scan op 'begane grond'.",
+          "Het Ontdeklab is op de zólder. Zoek de zin over de begane grond.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over de begane grond. Scan de tekst op 'begane grond' — dat staat onder het kopje 'Wat is er te doen?'." },
+            { titel: "Precies lezen", tekst: "De zin luidt: 'Op de begane grond ontdek je hoe het fort vroeger werd verdedigd.' Dat is je antwoord." },
+            { titel: "Controleer de andere plekken", tekst: "Elke verdieping heeft een eigen activiteit. Zorg dat je de goede plek koppelt aan de goede activiteit, anders geef je het antwoord van een andere verdieping." },
+          ],
+          niveaus: {
+            basis: "Kijk onder 'Wat is er te doen?' en zoek de zin die begint met 'Op de begane grond'. Wat staat er achter?",
+            simpeler: "Er zijn vier plekken: begane grond, eerste verdieping, zolder, kelder. Zoek welke activiteit bij de begane grond hoort.",
+            nogSimpeler: "Zoek 'begane grond' in de folder en lees wat je daar kunt ontdekken.",
+          },
+        },
+      },
+      {
+        q: "Hoe oud moet je minimaal zijn om naar het Uilenfort te gaan zonder gratis toegang?",
+        options: [
+          "Vier jaar",
+          "Zes jaar",
+          "Twaalf jaar",
+          "Achttien jaar",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de minimumleeftijd voor het museum zelf. Maar de vraag gaat over de grens voor gráátis toegang. Lees de prijzen-zin nog eens.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over gratis toegang. Scan op 'gratis' onder het kopje 'Prijzen'." },
+            { titel: "Precies lezen", tekst: "De zin luidt: 'Kinderen tot vier jaar mogen gratis naar binnen.' De grens voor gratis is dus: jonger dan vier. Wie vier jaar óf ouder is, betaalt." },
+            { titel: "Begrijp 'tot'", tekst: "'Tot vier jaar' = jonger dan vier. Op de verjaardag dat je vier wordt, is de gratis-periode voorbij. Dat is de leeftijdsgrens die de vraag bedoelt." },
+          ],
+          niveaus: {
+            basis: "Kijk bij het kopje 'Prijzen'. Lees de zin over gratis. Welke leeftijdsgrens noemt die zin?",
+            simpeler: "'Tot vier jaar' — op welke leeftijd begin je dan wel te betalen?",
+            nogSimpeler: "Zoek het woord 'gratis' in de folder en lees welk getal ernaast staat.",
           },
         },
       },

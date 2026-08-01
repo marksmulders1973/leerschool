@@ -194,6 +194,90 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         },
       },
       {
+        q: "In welke volgorde staan de vaste onderdelen van een brief?",
+        options: [
+          "Datum → aanhef → kern → afsluiting → ondertekening",
+          "Ondertekening → datum → kern → aanhef → afsluiting",
+          "Kern → aanhef → datum → afsluiting → ondertekening",
+          "Aanhef → datum → kern → ondertekening → afsluiting",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een brief begint niet met de naam van de schrijver. Wat staat er helemaal bovenaan?",
+          null,
+          "De datum staat bovenaan, vóór de aanhef. Staat de datum hier op de juiste plek?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Van boven naar beneden", tekst: "Bovenaan staat de datum. Dan de aanhef ('Beste...'). Dan de kern (het verhaal). Dan de afsluiting ('Met vriendelijke groet,'). Dan de ondertekening (naam)." },
+            { titel: "Onthoud de randen", tekst: "De randen geven structuur: datum en aanhef staan bovenaan, afsluiting en ondertekening staan onderaan. De kern zit in het midden." },
+            { titel: "Gebruik dit bij de toets", tekst: "Als je de volgorde kent, kun je elk onderdeel van een brief razendsnel terugvinden." },
+          ],
+          niveaus: {
+            basis: "Beschrijf een brief van boven naar beneden: datum, dan... dan... dan... dan...",
+            simpeler: "Wat staat er alléreerst in een brief? En als laatste vóór de naam?",
+            nogSimpeler: "Zoek het antwoord dat begint met 'Datum' en eindigt met 'ondertekening'.",
+          },
+        },
+      },
+      {
+        q: "Welk onderdeel van een brief vertelt voor WIE de brief bedoeld is?",
+        options: [
+          "De aanhef",
+          "De ondertekening",
+          "De datum",
+          "De kern",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De ondertekening vertelt wíé de brief schreef. Zoek het onderdeel dat de lezer begroet.",
+          "De datum vertelt wannéér de brief geschreven is. Welk onderdeel begroet de ontvanger?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar staat de ontvanger?", tekst: "De brief begint met 'Beste ouders en verzorgers,' — dat is de aanhef. Daarin staat precies aan wie de brief gericht is: de ouders en verzorgers." },
+            { titel: "Wat verklapt de aanhef nog meer?", tekst: "Naast de ontvanger verraadt de aanhef ook de toon: 'Geachte' = deftig, 'Beste' = netjes-gewoon, 'Lieve' = persoonlijk." },
+            { titel: "De randen van de brief", tekst: "Aanhef staat bovenaan (na de datum), ondertekening staat onderaan. Samen vertellen ze van wíé naar wíé." },
+          ],
+          niveaus: {
+            basis: "De brief begint met 'Beste ouders en verzorgers,'. Hoe heet die begroeting?",
+            simpeler: "Welk onderdeel staat aan het begín van de brief en noemt de naam of groep van de lezer?",
+            nogSimpeler: "Zoek het onderdeel dat de brief opent en de lezer begroet.",
+          },
+        },
+      },
+      {
+        q: "Wat is een verschil tussen een e-mail en een papieren brief?",
+        options: [
+          "Een e-mail heeft bovenaan vaste regels 'Van:', 'Aan:', 'Datum:' en 'Onderwerp:'",
+          "Een e-mail heeft geen aanhef",
+          "Een papieren brief heeft geen datum",
+          "Een e-mail heeft geen ondertekening",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een e-mail begint ook gewoon met 'Beste...'. Kijk eens naar de structuur boven de aanhef.",
+          "Een papieren brief heeft een datum helemaal bovenaan, naast de plaatsnaam. Welk verschil is er dan wél?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar de bovenkant", tekst: "Een e-mail heeft vier extra regels helemaal bovenaan: Van:, Aan:, Datum: en Onderwerp:. Die hebben papieren brieven niet." },
+            { titel: "Wat is er hetzelfde?", tekst: "Beide hebben een aanhef, een kern, een afsluiting en een ondertekening. Die onderdelen zijn bij papieren brieven én e-mails gelijk." },
+            { titel: "Waarom handig?", tekst: "De vier bovenste regels van een e-mail geven razendsnel antwoord op: wie stuurt het, voor wie is het, wanneer en waarover. Nuttig op de toets!" },
+          ],
+          niveaus: {
+            basis: "Kijk naar de e-mail van de zwemclub: welke vier regels staan er alléén bij een e-mail, niet bij een papieren brief?",
+            simpeler: "Een papieren brief begint meteen met de datum en de aanhef. Wat staat er bij een e-mail daarbóven nog meer?",
+            nogSimpeler: "Zoek het antwoord dat vier vaste regels noemt die je alleen bij een e-mail ziet.",
+          },
+        },
+      },
+      {
         q: "*\"Met vriendelijke groet,\"* — hoe heet dit onderdeel?",
         options: ["De afsluiting", "De aanhef", "Het onderwerp", "De datum"],
         answer: 0,
@@ -366,6 +450,57 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
         },
       },
       {
+        q: "Hoe laat begint de sportdag?",
+        options: ["Om 9 uur", "Om 14 uur", "Om 13 mei", "Om 4 mei"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "14 uur is de tijd van de prijs-uitreiking, niet de start. Zoek de zin met het woord 'beginnen'.",
+          null,
+          "Een datum is geen tijdstip. Scan op het woord 'beginnen' in de brief.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord: 'beginnen'", tekst: "De vraag gaat over de starttijd. Scan de brief op het woord 'beginnen' of 'uur'." },
+            { titel: "Precies lezen", tekst: "Je vindt: 'We beginnen om 9 uur en om 14 uur is de prijsuitreiking.' Er staan twee tijden in één zin — neem de starttijd, niet het eindtijdstip." },
+            { titel: "Controleer de vraag", tekst: "De vraag gaat over het begín. '9 uur' staat bij 'beginnen'. '14 uur' staat bij de prijsuitreiking. Lees de vraag nauwkeurig en kies de juiste tijd." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'beginnen'. Welk tijdstip staat er in diezelfde zin?",
+            simpeler: "Er zijn twee tijden in één zin: een voor het begin en een voor de prijsuitreiking. Welke van de twee hoort bij het begin?",
+            nogSimpeler: "Zoek 'beginnen' in de brief en lees het getal dat erachter staat.",
+          },
+        },
+      },
+      {
+        q: "Waarom is het invullen van het strookje zo belangrijk volgens de brief?",
+        options: [
+          "Zonder genoeg hulpouders kan de sportdag niet doorgaan",
+          "Omdat het strookje ook geld bevat voor de sportdag",
+          "Omdat het strookje de toegangskaart voor de sportdag is",
+          "Anders weet de juf niet of het kind meedoet",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Over geld staat niets in de brief. Wat zegt de brief over de gevolgen als er geen hulpouders zijn?",
+          "Het strookje is geen toegangskaart — alle kinderen van de groepen doen al mee. Wat vraagt de school aan de ouders?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de reden", tekst: "De brief geeft zelf de reden: 'Zonder genoeg hulpouders kan de sportdag helaas niet doorgaan.' Dat is een directe waarschuwing." },
+            { titel: "Dit is een 'waarom'-vraag", tekst: "Signaalwoord 'zonder' wijst op een voorwaarde: als die niet gehaald wordt, gaat er iets mis. De sportdag heeft hulpouders nodig om door te kunnen gaan." },
+            { titel: "Niet bedenken, opzoeken", tekst: "Geld, toegangskaart — dat klinkt logisch, maar staat er niet. Alleen wat in de brief staat, telt als antwoord." },
+          ],
+          niveaus: {
+            basis: "Zoek de zin die begint met 'Zonder genoeg hulpouders'. Wat zegt die zin?",
+            simpeler: "Waarom smeekt de brief ouders het strookje in te vullen? Wat gebeurt er als er te weinig helpers zijn?",
+            nogSimpeler: "Lees de laatste zin van de paragraaf over het strookje. Wat kan er dan helaas niet doorgaan?",
+          },
+        },
+      },
+      {
         q: "Op welke dag is de sportdag?",
         options: ["Vrijdag 22 mei", "Woensdag 13 mei", "4 mei", "Dat staat niet in de brief"],
         answer: 0,
@@ -532,6 +667,62 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
             basis: "De burgemeester is belangrijk én een vreemde voor jou. Kies je dan een deftige of een gezellige begroeting?",
             simpeler: "Hoe begroet je iemand die je nog nooit hebt ontmoet en die je met 'u' aanspreekt?",
             nogSimpeler: "Streep eerst de begroetingen weg die je alleen tegen vrienden of familie zou zeggen.",
+          },
+        },
+      },
+      {
+        q: "Iemand schrijft: *\"Beste buren, helaas moeten wij mededelen dat onze kat Poes is weggelopen. Wij zijn al drie dagen aan het zoeken. Wilt u ons bellen als u haar ergens ziet?\"* — Wat is het doel van dit briefje?",
+        options: [
+          "Informeren over de situatie én hulp vragen",
+          "Klagen over de kat",
+          "Bedanken voor eerder hulp zoeken",
+          "Uitnodigen voor een zoekactie",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is de schrijver boos? Of wil hij de buren laten weten wat er is en wat ze kunnen doen?",
+          "Staat er ergens 'dank u' of 'bedankt'? Lees de brief nog eens.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee dingen tegelijk", tekst: "Het briefje doet twee dingen: het vertelt dat de kat weg is (informeren) én het vraagt om te bellen als de buren haar zien (een verzoek)." },
+            { titel: "Doel = wat wil de schrijver bereiken?", tekst: "De schrijver wil dat de buren het weten én hem bellen. De beste omschrijving dekt allebei." },
+            { titel: "Pas op voor half-goede antwoorden", tekst: "Alleen informeren is niet genoeg: er staat ook een verzoek. Alleen vragen ook niet: het briefje vertelt ook de situatie. Kies het antwoord dat beide noemt." },
+          ],
+          niveaus: {
+            basis: "Wat doet het briefje: vertelt het iets, vraagt het iets, of beide?",
+            simpeler: "Zoek de zin met 'Wilt u...'. Wat wil de schrijver dat de buren doen? En wat meldt de rest van het briefje?",
+            nogSimpeler: "Is de schrijver boos (klagen), dankbaar (bedanken) of wil hij iets vertellen én vragen?",
+          },
+        },
+      },
+      {
+        q: "Een brief begint met *\"Geachte directeur Patel,\"*. Wat verraadt dit over de schrijver en de directeur?",
+        options: [
+          "Ze kennen elkaar niet goed; de schrijver gebruikt een formele toon",
+          "Ze zijn goede vrienden; de schrijver schrijft deftig voor de lol",
+          "De directeur is de afzender van de brief",
+          "De brief is voor alle leerlingen van de school",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zou je 'Geachte' aan een goede vriend schrijven? Wat kies je dan normaal?",
+          null,
+          "'Geachte directeur Patel' is de begroeting van één persoon. Lees de aanhef nog eens: wie staat er?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken de toon", tekst: "'Geachte' + achternaam = formeel (deftig). Je gebruikt dit als je iemand niet goed kent of respect wilt tonen voor diens functie." },
+            { titel: "Wat zegt de aanhef over de relatie?", tekst: "Een vriend zou je begroeten met 'Beste' of 'Hoi'. De keuze voor 'Geachte' vertelt dat de schrijver de directeur niet persoonlijk kent, of hem zakelijk aanspreekt." },
+            { titel: "Let op wie de ontvanger is", tekst: "'Geachte directeur Patel' — de brief is gericht ÁÁN de directeur. Dat maakt de directeur de ontvanger, niet de afzender." },
+          ],
+          niveaus: {
+            basis: "Zou je 'Geachte' schrijven aan je beste vriend of aan iemand die je niet zo goed kent?",
+            simpeler: "Formeel of informeel — welke aanhef past bij mensen die elkaar niet goed kennen?",
+            nogSimpeler: "Kijk naar de aanhef: is 'Geachte' deftig of gezellig?",
           },
         },
       },
@@ -741,6 +932,57 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
             basis: "Zoek de zin die begint met 'Wil je meedoen?' — wat moet je dan doen, en vóór welke dag?",
             simpeler: "Er staan twee manieren in de e-mail om je op de lijst te krijgen. Welke zijn dat, en wanneer moet dat gebeurd zijn?",
             nogSimpeler: "Zoek het woord 'aanmelden' in de e-mail en lees die zinnen heel precies.",
+          },
+        },
+      },
+      {
+        q: "Wat is de uiterste dag om je aan te melden voor de Zwemvierdaagse?",
+        options: ["Vrijdag 12 juni", "Maandag 22 juni", "Dinsdag 2 juni", "Donderdag 25 juni"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Op die dag begint het zwemmen zelf. Zoek de zin met het woord 'aanmelden' en let op de deadline.",
+          "Die datum staat bij 'Datum:' bovenaan — dat is de verstuurdag van de e-mail. Zoek de aanmeld-deadline.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over de aanmelddeadline. Scan op 'aanmelden' of 'vóór'." },
+            { titel: "Precies lezen", tekst: "Je vindt: 'Meld je dan aan vóór vrijdag 12 juni.' De deadline is vrijdag 12 juni — niet een van de zwemavonden." },
+            { titel: "Vier datums, vier rollen", tekst: "2 juni = verstuurdag. 12 juni = aanmelddeadline. 22 juni = eerste zwemavond. 25 juni = laatste avond + medaille. Elke datum heeft zijn eigen rol." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'aanmelden'. Welke datum staat er in de zin daarna?",
+            simpeler: "Eén datum is de grens voor aanmelden. Zoek de zin die begint met 'Wil je meedoen?' — welke datum staat erin?",
+            nogSimpeler: "Lees de zin met het woord 'vóór' en het woord 'aanmelden'. Welke dag noemt die zin?",
+          },
+        },
+      },
+      {
+        q: "Waar betaal je de € 3,50 voor de Zwemvierdaagse?",
+        options: [
+          "Op de eerste avond bij de kassa van het zwembad",
+          "Nu al, door geld over te maken",
+          "Bij de balie van de zwemclub",
+          "Via de website bij het aanmelden",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de zin over het geld nog eens: staat er 'nu niets overmaken' of juist wel?",
+          "De balie is de plek voor het aanmeldformulier, niet voor de betaling. Zoek de zin over de kassa.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over de betaling. Scan op 'kassa' of 'betaal'." },
+            { titel: "Precies lezen", tekst: "Je vindt: 'Dat bedrag betaal je op de eerste avond bij de kassa van het zwembad, dus je hoeft nu nog niets over te maken.' Twee dingen tegelijk: wáár (kassa zwembad) en wannéér (eerste avond)." },
+            { titel: "Let op het 'nu'", tekst: "De zin zegt uitdrukkelijk 'je hoeft nú nog niets over te maken'. Dus geld overmaken vóór de eerste avond is fout." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'kassa'. Lees die zin heel precies: wanneer en waar betaal je?",
+            simpeler: "De e-mail zegt 'je hoeft nu nog niets over te maken'. Wanneer betaal je dan wél — en waar?",
+            nogSimpeler: "Zoek de zin over de € 3,50 en lees waar het geld heen gaat.",
           },
         },
       },

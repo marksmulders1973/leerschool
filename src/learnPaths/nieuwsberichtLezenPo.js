@@ -180,6 +180,90 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         },
       },
       {
+        q: "Hoe noem je de zes vragen die een journalist probeert te beantwoorden in een nieuwsbericht?",
+        options: [
+          "De zes gouden vragen: wie, wat, waar, wanneer, waarom en hoe",
+          "De vijf W's: wie, wat, waar, wanneer en waarom (zonder hoe)",
+          "De drie H's: hoe, hoeveel en hoelang",
+          "De vier W's: wat, waar, wanneer en wie (zonder waarom en hoe)",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er is ook een zesde vraag die begint met een andere letter. Welke is dat?",
+          null,
+          "Er zijn zes vragen, niet vier. Welke twee ontbreken hier?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom zes?", tekst: "Een goed nieuwsbericht beantwoordt altijd alle zes: wie handelde, wat er gebeurde, waar het was, wanneer het plaatsvond, waarom het gebeurde en hoe het in zijn werk ging." },
+            { titel: "De H erbij", tekst: "De bekende 'vijf W's' zijn populair, maar journalisten voegen altijd de H (hoe) toe. Dat maakt het bericht compleet." },
+            { titel: "Gebruik bij de toets", tekst: "Bepaal bij elke toetsvraag welke gouden vraag erbij hoort. Dan weet je wat voor soort antwoord je zoekt en waar je moet kijken." },
+          ],
+          niveaus: {
+            basis: "Hoeveel gouden vragen zijn er — en welke letters beginnen ze?",
+            simpeler: "De vijf W's ken je misschien al. Welke extra vraag hoort er ook bij?",
+            nogSimpeler: "Zoek het antwoord dat zes vragen noemt en ook 'hoe' erbij heeft.",
+          },
+        },
+      },
+      {
+        q: "*\"De elfjarige Noa uit Vissersdam won gisteren het NK schaken voor kinderen.\"* — Op welke twee gouden vragen geeft deze ene zin antwoord?",
+        options: [
+          "Wie en wat",
+          "Waar en waarom",
+          "Hoe en wanneer",
+          "Waarom en wie",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er een plek of een reden in de zin? Kijk wat de zin inhoudelijk zegt.",
+          null,
+          "Er staat geen reden ('omdat') in de zin. Maar je kunt wél twee andere vragen beantwoorden.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de zin analyse", tekst: "'De elfjarige Noa' — dat is een persoon = wie. 'Won het NK schaken' — dat is de gebeurtenis = wat. Twee gouden vragen in één zin." },
+            { titel: "Wat staat er niet in?", tekst: "De plek (Vissersdam staat erbij als herkomst, niet als locatie van de wedstrijd), de reden en de manier ontbreken. Die staan verderop in het bericht." },
+            { titel: "Gebruik dit bij de toets", tekst: "Weet je welke gouden vraag de toets stelt? Kijk dan of het antwoord in de eerste zin staat of dat je verder moet zoeken." },
+          ],
+          niveaus: {
+            basis: "Zoek in de zin: wie is de persoon, en wat deed die persoon? Welke twee vragen kun je daarmee beantwoorden?",
+            simpeler: "Een 'wie'-antwoord is een naam. Een 'wat'-antwoord is een gebeurtenis. Zitten die allebei in de zin?",
+            nogSimpeler: "Beantwoord met de zin: over wie gaat het? En wat deed hij of zij?",
+          },
+        },
+      },
+      {
+        q: "Wat is het verschil tussen een kop en de eerste alinea van een nieuwsbericht?",
+        options: [
+          "De kop maakt je nieuwsgierig; de eerste alinea geeft het belangrijkste nieuws",
+          "De kop geeft details; de eerste alinea geeft alleen de mening van de journalist",
+          "De kop is altijd waar; de eerste alinea mag overdrijven",
+          "Ze bevatten precies dezelfde informatie, maar in een andere volgorde",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De details staan juist verderop, niet in de kop. En meningen horen niet in een nieuwsbericht thuis.",
+          null,
+          "Een kop is maar een paar woorden en de eerste alinea is al een stuk langer. Ze kunnen onmogelijk dezelfde informatie bevatten.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "De kop is een lokkertje", tekst: "De kop is kort en pakkend — hij trekt je aandacht maar vertelt nog niet alles. Hij maakt je nieuwsgierig." },
+            { titel: "De eerste alinea is de kern", tekst: "In de eerste alinea staat het echte nieuws: wie, wat, waar en wanneer. Dit is de minimale informatie die elke lezer moet krijgen." },
+            { titel: "Samen werken ze", tekst: "Kop trekt je naar het bericht toe; eerste alinea geeft je het hoofdnieuws. De details die je nieuwsgierig maken komen daarna." },
+          ],
+          niveaus: {
+            basis: "Wat doet de kop met jou als lezer? En wat leer je dan uit de eerste alinea?",
+            simpeler: "Als de kop alleen nieuwsgierig maakt, waar staat het echte nieuws dan?",
+            nogSimpeler: "Zoek het antwoord dat zegt: kop = nieuwsgierig maken, eerste alinea = het nieuws.",
+          },
+        },
+      },
+      {
         q: "In welke volgorde staat de informatie in een nieuwsbericht?",
         options: [
           "Het belangrijkste eerst, kleine details later",
@@ -350,6 +434,57 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
             basis: "Zoek in de tweede alinea de zin met het woordje 'omdat'. Wat staat daar over de oude toren?",
             simpeler: "Wat was er mis met de oude toren, waardoor spelen erop niet meer veilig was?",
             nogSimpeler: "Lees de eerste zin van de tweede alinea: wat gebeurde er met het hout?",
+          },
+        },
+      },
+      {
+        q: "Wanneer is de speeltoren geopend?",
+        options: ["Afgelopen zaterdag", "In maart", "Vorig jaar", "Op een woensdag"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "In maart vond iets anders plaats. Zoek de zin die zegt wanneer de openingsceremonie was.",
+          "Vorig jaar werd de oud toren afgekeurd — maar wanneer werd de nieuwe geopend?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Dit is een wanneer-vraag", tekst: "Je zoekt het moment van de opening. De vraag legt het bij de handeling: 'geopend'." },
+            { titel: "Zoekwoord", tekst: "Scan op 'geopend' of 'zaterdag'. Je vindt in de eerste alinea: 'Afgelopen zaterdag werd op het schoolplein een gloednieuwe speeltoren geopend.'" },
+            { titel: "Pas op voor de andere tijden", tekst: "In het bericht staan ook 'in maart' (sponsorloop) en 'vorig jaar' (oude toren afgekeurd). Neem de tijd die bij dé opening hoort." },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'geopend' en lees wanneer dat was.",
+            simpeler: "De eerste alinea vertelt wanneer de toren is geopend. Zoek het tijdwoord in die zin.",
+            nogSimpeler: "Lees de tweede zin van de eerste alinea: welke dag wordt daarin genoemd?",
+          },
+        },
+      },
+      {
+        q: "Wat zei Milan vanaf het uitkijkpunt?",
+        options: [
+          "\"Dit is de mooiste toren van heel Nederland.\"",
+          "\"Dank je wel, juf Karin.\"",
+          "\"Ik ben de eerste die naar boven klimt.\"",
+          "\"Onze school heeft hard gespaard.\"",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Milan spreekt niet tot juf Karin in de tekst. Scan op de naam 'Milan' en lees zijn citaat.",
+          "Dat staat inderdaad in de tekst — maar is dat wat hij zégt? Zoek zijn letterlijke woorden tussen aanhalingstekens.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord: naam", tekst: "Namen zijn goede zoekwoorden: ze beginnen met een hoofdletter. Scan op 'Milan'." },
+            { titel: "Zoek het citaat", tekst: "Aanhalingstekens (\") geven de letterlijke woorden. Je vindt: '\"Dit is de mooiste toren van heel Nederland\", zegt hij trots.' Dat is het antwoord." },
+            { titel: "Pas op voor parafrase", tekst: "Optie 3 ('ik ben de eerste die naar boven klimt') is iets dat de tekst beschrijft, maar het zijn niet Milans letterlijke woorden. Citaat = exact overnemen." },
+          ],
+          niveaus: {
+            basis: "Scan op de naam 'Milan'. Zoek daarna de aanhalingstekens die zijn woorden omringen.",
+            simpeler: "Milans woorden staan tussen aanhalingstekens in de derde alinea. Welke woorden zijn dat precies?",
+            nogSimpeler: "Zoek 'Milan' in de tekst en lees de zin met zijn uitspraak tussen de aanhalingstekens.",
           },
         },
       },
@@ -530,6 +665,57 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
             basis: "Doe bij elke zin de controleer-test: welke bevat iets wat je kunt natellen?",
             simpeler: "Streep alle zinnen weg met vind-woorden zoals 'leukste', 'geweldig' en 'prachtig'. Welke zin blijft over?",
             nogSimpeler: "Zoek de zin met een getal erin dat je zou kunnen natellen.",
+          },
+        },
+      },
+      {
+        q: "In een nieuwsbericht staat: *\"Gisteren werden 85 bomen geplant in het park.\"* Het bericht is van woensdag. Op welke dag werden de bomen geplant?",
+        options: ["Dinsdag", "Woensdag", "Maandag", "Donderdag"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de dag waarop het bericht geschreven is. De bomen werden gísteren geplant — wat is een dag eerder dan woensdag?",
+          null,
+          "Dat is de dag ná de schrijfdag. 'Gisteren' is een dag vóór de schrijfdag.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee tijden", tekst: "Het bericht is van woensdag (schrijfdag). 'Gisteren' reken je één dag terug: dat is dinsdag." },
+            { titel: "Doe de rekensom", tekst: "Schrijfdag = woensdag. 'Gisteren' = dag ervoor. Woensdag min één dag = dinsdag." },
+            { titel: "Let op de valkuilen", tekst: "Woensdag is fout: dat is de schrijfdag, niet de dag van de planting. Maandag is twee dagen eerder dan woensdag — te ver terug." },
+          ],
+          niveaus: {
+            basis: "Het bericht is van woensdag. 'Gisteren' is één dag eerder. Welke dag is dat?",
+            simpeler: "Tellen: woensdag, dan één dag terug... welke dag is dat?",
+            nogSimpeler: "Welke dag komt er vóór woensdag in de week?",
+          },
+        },
+      },
+      {
+        q: "Welke zin uit een nieuwsbericht is een **mening**?",
+        options: [
+          "\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.",
+          "Vorig jaar bezochten 1.200 kinderen het park.",
+          "Het park is open van 8 tot 21 uur.",
+          "Er zijn drie nieuwe bankjes geplaatst bij de ingang.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal kun je natellen. Is het dan een mening of een feit?",
+          "Openingstijden kun je nakijken — feit of mening?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Doe de controleer-test", tekst: "Kun je nameten of de speeltuin 'het mooiste project van dit jaar' is? Nee — 'mooiste' is een vind-woord. Niet controleerbaar." },
+            { titel: "Citaat = verpakte mening", tekst: "Het staat in een citaat ('zegt Kim'). Het zijn haar woorden en haar oordeel. Dat maakt het een mening, ook al staat het in een nieuwsbericht." },
+            { titel: "De andere opties zijn feiten", tekst: "Aantallen (1.200 kinderen), tijden (8 tot 21 uur) en meetbare dingen (drie bankjes) kun je natellen of nakijken. Dat zijn feiten." },
+          ],
+          niveaus: {
+            basis: "Doe de controleer-test bij elke zin: welke zin bevat iets dat je niet kunt nameten?",
+            simpeler: "Streep de zinnen met een getal of tijd weg — die zijn feiten. Welke zin blijft over?",
+            nogSimpeler: "Zoek de zin met het woord 'mooiste'. Kun je 'het mooiste' nameten?",
           },
         },
       },
@@ -725,6 +911,62 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
             basis: "Doe de controleer-test: kun je nameten of dit écht het spannendste ooit in het dorp was?",
             simpeler: "Kijk naar het woord 'spannendste': is dat te tellen of te meten — of is dat iets wat je kunt vínden?",
             nogSimpeler: "Zou een andere buur dit misschien helemaal niet spannend gevonden kunnen hebben? Wat zegt dat over de uitspraak?",
+          },
+        },
+      },
+      {
+        q: "Wie vond Berry terug?",
+        options: [
+          "Twee kinderen die aan het voetballen waren",
+          "Boer Teun zelf",
+          "De dierenarts",
+          "De familie Vos",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Boer Teun zocht heel veel, maar vond hem niet. Wie hoorde het geritsel in de moestuin?",
+          "De dierenarts onderzocht Berry achteraf, maar vond hem niet. Wie was er eerder?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Dit is een wie-vraag", tekst: "Je zoekt wie Berry terugvond. Scan op 'teruggevonden' of 'vonden'." },
+            { titel: "Precies lezen", tekst: "Je vindt in de derde alinea: 'twee kinderen die op straat aan het voetballen waren, hoorden geritsel in de moestuin van de familie Vos. Daar stond Berry.' Die twee kinderen vonden hem dus." },
+            { titel: "Familie Vos is een plek-aanwijzing", tekst: "De moestuin is van de familie Vos, maar die vond Berry niet zelf — de voetballende kinderen deden dat. Plek ≠ vinder." },
+          ],
+          niveaus: {
+            basis: "Zoek de zin die beschrijft wie het geritsel hoorde en Berry vond. Wie waren dat?",
+            simpeler: "Lees de derde alinea: wie hoorden het geritsel in de moestuin?",
+            nogSimpeler: "Scan op het woord 'geritsel'. Wie staat er in dezelfde zin?",
+          },
+        },
+      },
+      {
+        q: "Hoe maakten buurtbewoners de vermissing van Berry bekend?",
+        options: [
+          "Ze hingen posters op met een foto van Berry",
+          "Ze belden de politie",
+          "Ze stuurden een e-mail rond",
+          "Ze zochten alleen zelf in het dorp",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staat niets over de politie in het bericht. Zoek wat de buurtbewoners letterlijk deden.",
+          "E-mail wordt nergens in de tekst genoemd. Scan op 'buurtbewoners' of 'posters'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoekwoord", tekst: "De vraag gaat over wat buurtbewoners deden. Zoekwoord = 'buurtbewoners' of 'posters'." },
+            { titel: "Precies lezen", tekst: "Je vindt in de derde alinea: 'Buurtbewoners hielpen mee en hingen posters op met een foto van Berry.'" },
+            { titel: "Logisch-maar-fout", tekst: "Bellen naar de politie klinkt logisch bij een vermissing — maar staat er niet. Alleen wat in de tekst staat, telt." },
+          ],
+          niveaus: {
+            basis: "Scan op 'buurtbewoners'. Wat staat er in die zin dat ze deden?",
+            simpeler: "Lees de derde alinea: hoe maakten de buurtbewoners de vermissing van Berry bekend?",
+            nogSimpeler: "Zoek het woord 'posters' in de tekst en lees de zin ervoor.",
           },
         },
       },

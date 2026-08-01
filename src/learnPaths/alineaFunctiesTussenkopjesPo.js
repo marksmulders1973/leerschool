@@ -175,6 +175,85 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         },
       },
       {
+        q: "*\"Katten slapen gemiddeld vijftien uur per dag. Dat is meer dan de helft van een etmaal. Overdag dommelen ze het liefst op een warm plekje. 's Nachts zijn ze juist actief.\"* — Welke zin is de kernzin van deze alinea?",
+        options: [
+          "Katten slapen gemiddeld vijftien uur per dag.",
+          "Dat is meer dan de helft van een etmaal.",
+          "Overdag dommelen ze het liefst op een warm plekje.",
+          "'s Nachts zijn ze juist actief.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die zin legt de eerste zin alleen maar uit. Welke zin heeft de andere drie zinnen als 'uitleg' nodig?",
+          "Dit is een detail over overdag. Welke zin dekt ook de nacht en het getal van vijftien uur?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Doe de paraplu-test", tekst: "Zin 1 noemt het gemiddelde: vijftien uur slapen. Zinnen 2, 3 en 4 leggen dat gegeven uit of geven extra details. Ze passen allemaal onder zin 1." },
+            { titel: "Check zin voor zin", tekst: "Als je zin 2 als paraplu neemt ('meer dan de helft'), valt de informatie over vijftien uur er nog net onder — maar het dag/nacht-ritme niet. Zin 1 dekt echt alles." },
+            { titel: "Gebruik de plek", tekst: "De kernzin staat hier vooraan: de schrijver zegt meteen het belangrijkste en legt het daarna uit. De klassieke volgorde." },
+          ],
+          niveaus: {
+            basis: "Zinnen 2, 3 en 4 leggen iets uit. Welke zin leggen ze uit?",
+            simpeler: "Doe de paraplu-test: onder welke zin passen het getal vijftien, het dag-dommelen én het nacht-actief zijn allemaal?",
+            nogSimpeler: "Welke zin bevat een getal dat voor de hele alinea geldt?",
+          },
+        },
+      },
+      {
+        q: "*\"De fiets is uitgevonden in de negentiende eeuw. Sindsdien is het vervoermiddel steeds verbeterd. Tegenwoordig zijn er elektrische fietsen en racemodellen. Het wiel blijft hetzelfde.\"* — Hoeveel zinnen heeft deze alinea?",
+        options: ["Vier", "Drie", "Twee", "Vijf"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de zinnen opnieuw — kijk naar elk punt en elke volgende hoofdletter.",
+          null,
+          "Zijn er meer zinnen dan je telde? Lees het stukje nog eens zin voor zin.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel de punten", tekst: "Na elk punt begint een nieuwe zin. Tel: 1e punt na 'eeuwde', 2e punt na 'verbeterd', 3e punt na 'racemodellen', 4e punt na 'hetzelfde'. Vier punten = vier zinnen." },
+            { titel: "Waarom is dit handig?", tekst: "Als je het aantal zinnen weet, kun je beter zien welke zin de paraplu-zin is en welke zinnen de details zijn." },
+            { titel: "Onthoud", tekst: "Één zin eindigt met een punt. Eén alinea heeft meerdere zinnen. Eén tekst heeft meerdere alinea's." },
+          ],
+          niveaus: {
+            basis: "Zoek alle punten in de alinea en tel de zinnen die ze scheiden.",
+            simpeler: "Lees de alinea en zeg bij elk punt hardop 'één, twee, drie...'.",
+            nogSimpeler: "Hoeveel keer begint er een nieuwe zin met een hoofdletter na een punt?",
+          },
+        },
+      },
+      {
+        q: "Waarom staat de kernzin van een alinea zo vaak als EERSTE zin?",
+        options: [
+          "De schrijver zegt eerst het belangrijkste en legt het daarna uit",
+          "Omdat de eerste zin altijd de kortste is",
+          "Zodat de lezer die zin makkelijk kan overslaan",
+          "Omdat titels verboden zijn boven alinea's",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is de eerste zin bij alle alinea's in de egel-tekst de kortste? Kijk nog eens.",
+          "Je wilt juist de kernzin lezen, niet overslaan. Waarom helpt het dat hij vooraan staat?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Denk als een schrijver", tekst: "Als je iemand iets uitlegt, begin je met het hoofdpunt: 'Een egel is nuttig.' Daarna pas het bewijs en de voorbeelden. Zo werkt een alinea ook." },
+            { titel: "Handig voor de lezer", tekst: "Een lezer die haast heeft, leest de eerste zin en weet al waar de alinea over gaat. De rest is uitleg, die kan hij snel scannen." },
+            { titel: "Maar niet altijd!", tekst: "Soms begint een alinea met een lokzin of pakkende vraag. Dan staat de kernzin op de tweede plek. Gebruik altijd de paraplu-test om zeker te zijn." },
+          ],
+          niveaus: {
+            basis: "Hoe werkt het als je een verhaal vertelt: zeg je eerst de conclusie of werk je er langzaam naartoe?",
+            simpeler: "Als de kernzin vooraan staat, weet je na één zin al waar de alinea over gaat. Is dat handig of niet?",
+            nogSimpeler: "Zoek de reden waarvoor 'eerst het belangrijkste' logisch is.",
+          },
+        },
+      },
+      {
         q: "*\"Wist je dat een olifant wel tweehonderd kilo eten per dag op kan? Olifanten zijn dan ook bijna de hele dag bezig met eten zoeken. Ze eten gras, bladeren en takken. Zelfs boomschors staat op het menu.\"* — Welke zin is de kernzin?",
         options: [
           "Olifanten zijn dan ook bijna de hele dag bezig met eten zoeken.",
@@ -351,6 +430,62 @@ Beantwoord nu de vier vragen over de egel-tekst hierboven.`,
             basis: "In de alinea staat het woordje 'doordat'. Wat doet een schrijver die vertelt hoe het één door het ander komt?",
             simpeler: "Na deze alinea snap je hóé de egel de tuin helpt. Wat heeft de schrijver dan gedaan?",
             nogSimpeler: "Welke taak past bij een alinea die antwoord geeft op de vraag 'waarom is een egel nuttig?'",
+          },
+        },
+      },
+      {
+        q: "Een alinea begint zo: *\"Zo zie je maar: wie een egel in de tuin heeft, is een geluksvogel.\"* Welke functie heeft deze alinea het meest waarschijnlijk?",
+        options: [
+          "Een mening geven",
+          "Uitleggen hoe iets werkt",
+          "Een voorbeeld geven met een naam",
+          "De lezer nieuwsgierig maken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "'Zo zie je maar' legt niets uit. Wat geeft de schrijver hiermee aan over egels?",
+          "Zie je een naam of een echte tuin in deze zin?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Herken het signaalwoord", tekst: "'Zo zie je maar' vat iets samen en geeft de indruk van de schrijver: dit is zijn conclusie over het onderwerp." },
+            { titel: "Is het een feit of een mening?", tekst: "'Geluksvogel' kun je niet nameten. Dat is wat de schrijver vindt van mensen met een egel. Dat is een mening." },
+            { titel: "Welke taak hoort daarbij?", tekst: "Een alinea die samenvatting en oordeel combineert hoort bij het doel 'mening geven'. Vaak in het slot van de tekst." },
+          ],
+          niveaus: {
+            basis: "Zegt de schrijver hier een feit dat je kunt nakijken, of iets wat hij ervan vindt?",
+            simpeler: "Kun je bewijzen of iemand een 'geluksvogel' is? Welke functie hoort bij een oordeel van de schrijver?",
+            nogSimpeler: "De schrijver vindt iets. Welke taak past daarbij: uitleggen, voorbeeld of mening geven?",
+          },
+        },
+      },
+      {
+        q: "Welke signaalzin hoort bij de functie **'voorbeeld geven'**?",
+        options: [
+          "Kijk maar naar wat er bij de buren gebeurde.",
+          "Doordat egels insecten eten, blijven planten gezond.",
+          "In deze tekst lees je waarom egels nuttig zijn.",
+          "Kortom: een egel is een cadeautje voor de tuin.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een oorzaak-gevolg-zin. Welke taak hoort bij 'doordat'?",
+          null,
+          "'Kortom' is een samenvat-woord. Welke taak hoort daarbij?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk naar de signaalwoorden", tekst: "'Kijk maar naar...' gevolgd door een concrete situatie bij de buren — dat is het klassieke teken van een voorbeeldalinea." },
+            { titel: "Vergelijk met de andere opties", tekst: "'Doordat' = uitleg. 'In deze tekst lees je' = inleiding. 'Kortom' = slot of mening. Elk signaalwoord wijst naar een andere functie." },
+            { titel: "Onthoud het rijtje", tekst: "Voorbeeld: 'Kijk maar naar', 'Neem nou', 'Zo ging het bij'. Uitleg: 'Doordat', 'Daardoor', 'Want'. Inleiding: 'In deze tekst'. Slot: 'Kortom', 'Dus', 'Daarom'." },
+          ],
+          niveaus: {
+            basis: "Welke zin laat zien dat er een echt geval uit de buurt wordt verteld?",
+            simpeler: "Streep de signaalwoorden voor uitleg, inleiding en slot weg. Welke zin blijft over?",
+            nogSimpeler: "Zoek de zin die begint met 'Kijk maar naar...'.",
           },
         },
       },
@@ -532,6 +667,62 @@ Oefen nu met vier vragen. Let goed op de te-smalle en te-brede instinkers!`,
         },
       },
       {
+        q: "Waarom mag een tussenkopje NIET te breed zijn?",
+        options: [
+          "Dan past het boven veel meer alinea's dan alleen deze ene",
+          "Dan is het kopje te lang om snel te lezen",
+          "Dan staan er te veel moeilijke woorden in",
+          "Dan is de alinea zelf ook te lang",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een te breed kopje is vaak juist heel kort. Wat is er mis met een kopje als 'Dieren' boven een alinea over de vacht van de ijsbeer?",
+          null,
+          "De lengte van de alinea heeft niets te maken met het probleem. Wat doet een wegwijzer die je overal heen stuurt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Denk aan de huissleutel", tekst: "Een goed kopje past op precies één deur. Een te breed kopje past op honderd deuren — dan werkt hij niet als wegwijzer." },
+            { titel: "Toets-gevolg", tekst: "Op de toets klinken te-brede kopjes vaak niet fout. Maar vergelijk: past het kopje ook boven een heel andere alinea in een heel andere tekst? Dan is het te breed." },
+            { titel: "De sleutel-test", tekst: "Vraag jezelf: als ik dit kopje boven een willekeurige andere alinea zet, past het dan ook? Ja? Dan moet je een preciezer kopje zoeken." },
+          ],
+          niveaus: {
+            basis: "Stel, het kopje is 'Natuur'. Zou dat boven een tekst over vissen kunnen staan, maar ook over planten en ook over insecten? Is het dan een goede wegwijzer?",
+            simpeler: "Een kopje hoort op precies één alinea te passen. Wat is er mis als het boven tien alinea's past?",
+            nogSimpeler: "Zoek de reden die gaat over 'past boven te veel dingen'.",
+          },
+        },
+      },
+      {
+        q: "*\"Vlinders beginnen als ei. Daarna worden ze een rups, dan een pop en uiteindelijk een vlinder. Elke stap duurt anders lang. Het hele proces heet metamorfose.\"* — Welk tussenkopje past het best?",
+        options: [
+          "De levenscyclus van de vlinder",
+          "Het ei",
+          "Leven in de natuur",
+          "Hoe snel vlinders vliegen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het ei is alleen de eerste stap. Past dat kopje ook bij de rups, de pop en de metamorfose?",
+          null,
+          "Over vliegen staat niets in de alinea. Zoek het kopje dat alle stappen dekt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vind de kernzin", tekst: "De slotzin vat alles samen: 'het hele proces heet metamorfose'. Samen met de eerste zin ('beginnen als ei') dekt dat het hele onderwerp: alle stadia van ei tot vlinder." },
+            { titel: "Doe de pas-test", tekst: "'De levenscyclus van de vlinder' dekt ei, rups, pop én vlinder. Alle vier de zinnen passen eronder." },
+            { titel: "Streep de instinkers weg", tekst: "Ei = te smal. Leven in de natuur = te breed. Hoe snel ze vliegen = verkeerd onderwerp." },
+          ],
+          niveaus: {
+            basis: "De alinea gaat door alle stadia van het leven van een vlinder. Welk kopje noemt dat geheel?",
+            simpeler: "Streep weg: welk kopje gaat maar over één stap? Welk kopje past boven elke dieren-alinea? Welk kopje gaat over iets dat niet eens in de alinea staat?",
+            nogSimpeler: "Lees de laatste zin van de alinea: welk woord in die zin vat alles samen?",
+          },
+        },
+      },
+      {
         q: "Boven een alinea staat het tussenkopje **'Eten voor de winter'**. Welke alinea past daar het best onder?",
         options: [
           "De eekhoorn verstopt in de herfst overal nootjes. Zo heeft hij in de koude maanden altijd iets te eten. Soms vergeet hij een verstopplek — daar groeit dan een nieuw boompje.",
@@ -705,6 +896,62 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
             basis: "De alinea begint met 'Tegenwoordig'. Welk kopje laat zien dat dit stukje over deze tijd gaat én over de vuurtoren?",
             simpeler: "Twee instinkers zijn te klein (één zinnetje) of te groot (past overal). Eén hoort bij de vroeger-alinea. Wat blijft over?",
             nogSimpeler: "Alinea 3 ging over vroeger. Waar gaat alinea 4 dan over? Zoek het kopje dat dat zegt.",
+          },
+        },
+      },
+      {
+        q: "Wat is de functie van **alinea 2** van de vuurtoren-tekst?",
+        options: [
+          "De schrijver legt uit hoe het licht van een vuurtoren werkt",
+          "De schrijver geeft een voorbeeld met de naam van één schipper",
+          "De schrijver maakt de lezer nieuwsgierig met een vraag",
+          "De schrijver vat de tekst samen en geeft zijn mening",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er een naam van een schipper in alinea 2? Gaat de alinea over één concreet geval?",
+          null,
+          "'Kortom' staat nergens in alinea 2. Wat doet het woordje 'daardoor' in de tweede zin?",
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de kernzin", tekst: "Alinea 2 begint met: 'Het licht van een vuurtoren werkt slim.' Daarna volgen zinnen die uitleggen hóé het werkt: de draaiende lamp, het flits-ritme, het herkennen." },
+            { titel: "Herken het signaalwoord", tekst: "'Daardoor lijkt het licht steeds aan en uit te gaan.' Daardoor = oorzaak-gevolg. Dat is een uitleg-signaal." },
+            { titel: "Algemeen of specifiek?", tekst: "De alinea gaat over álle vuurtorens ('elke vuurtoren heeft zijn eigen ritme') — geen naam, geen losse tuin. Algemeen + oorzaak-gevolg = uitleg." },
+          ],
+          niveaus: {
+            basis: "Zoek het woordje 'daardoor' in alinea 2. Welke taak hoort bij dat signaalwoord?",
+            simpeler: "De alinea vertelt hoe het licht van vuurtorens werkt. Leg je iets uit als je dat doet?",
+            nogSimpeler: "Na het lezen van alinea 2 snap je hoe het licht werkt. Wat heeft de schrijver dan gedaan?",
+          },
+        },
+      },
+      {
+        q: "Boven welke alinea van de vuurtoren-tekst past het kopje **'Licht als reservelijn'**?",
+        options: [
+          "Boven alinea 4",
+          "Boven alinea 1",
+          "Boven alinea 2",
+          "Boven alinea 3",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Alinea 1 maakt je kennis met vuurtorens in het algemeen. Is een reservelicht daar het hoofdonderwerp?",
+          "Alinea 2 gaat over hoe het licht werkt. Past 'reservelijn' daarboven?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek het woord 'reservelicht'", tekst: "Scan de tekst op het woord 'reservelicht'. Je vindt het in alinea 4: 'Ze zijn een reservelicht voor als de techniek uitvalt.'" },
+            { titel: "Check de rest van alinea 4", tekst: "Alinea 4 gaat over de situatie van nu: computers, satellieten, en vuurtorens als reservelicht. Het kopje 'Licht als reservelijn' dekt het hoofd-idee van die alinea." },
+            { titel: "Pas-test", tekst: "Zou dit kopje boven alinea 1, 2 of 3 passen? Nee: bij alinea 1 gaat het over het algemene nut, bij 2 over het flits-mechanisme, bij 3 over de wachter. Alleen alinea 4 gaat over de reserverol." },
+          ],
+          niveaus: {
+            basis: "Zoek het woord 'reservelicht' in de tekst. In welke alinea staat het?",
+            simpeler: "Een 'reservelijn' spring je in als het échte systeem uitvalt. Welke alinea gaat over de rol van de vuurtoren nu satellieten bestaan?",
+            nogSimpeler: "Lees alinea 4 nog eens. Welk kopje past bij 'computers bedienen de lamp' én 'reservelicht als de techniek uitvalt'?",
           },
         },
       },
