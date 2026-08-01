@@ -26,11 +26,11 @@
 | 8 · Printbaar diploma 🏅 | ✅ klaar (1 aug, v156); open: auto-prefill vanuit afgerond pad | `/diploma?familie=1&naam=<x>&onderwerp=<y>` |
 | 2 · Vonk onbeperkt 🐉 | ⏳ te bouwen (framing/gating; AI zelf al gebouwd) | — |
 | 4 · Weekmail 2.0 ✉️ | ⏳ te bouwen (hergebruik send-ouder-rapport) | — |
-| 5 · Koelkast-weekschema 📅 | ⏳ te bouwen | — |
+| 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) | `/weekschema` |
 | 6 · Trots-momenten 🎉 | ⏳ te bouwen | — |
 | 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ⏳ te bouwen | — |
 
-**Stand: 3 van 8 klaar.** Volgende voorstel: feature 5 (koelkast-weekschema, combineert met oefenboekje + paraatheid) of feature 6 (trots-momenten).
+**Stand: 5 van 9 klaar** (diploma · oefenboekje · kaart voor thuis · paraatheid · weekschema). Volgende: feature 6 (trots-momenten) of 2 (Vonk onbeperkt-framing) of 7 (gezin max 3).
 
 ## 🟡 Mark-acties (open)
 - ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
