@@ -83,6 +83,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat is 1/5 als kommagetal?",
+        options: ["0,2", "0,5", "0,15", "1,5"],
+        answer: 0,
+        wrongHints: [null, "Dat is de helft (½), niet een vijfde.", "Reken: 1 ÷ 5.", "Dat is meer dan 1 — een vijfde is kleiner dan 1."],
+        uitlegPad: {
+          stappen: [{ titel: "1 ÷ 5", tekst: "1/5 = 1 gedeeld door 5 = 0,2." }],
+          niveaus: {
+            basis: "1/5 = 0,2 (één vijfde).",
+            simpeler: "Vijf stappen op een lijn van 0 tot 1: elk stukje is 0,2.",
+            nogSimpeler: "1 ÷ 5 = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is 0,75 als breuk (zo eenvoudig mogelijk)?",
+        options: ["¾", "7/5", "75/10", "3/10"],
+        answer: 0,
+        wrongHints: [null, "Dat is meer dan 1.", "Dat klopt niet vereenvoudigd — denk aan kwarten.", "Dat is 0,3, niet 0,75."],
+        uitlegPad: {
+          stappen: [{ titel: "Drie kwart", tekst: "0,75 = 75/100. Vereenvoudigd: deel teller en noemer door 25 → 3/4 = ¾." }],
+          niveaus: {
+            basis: "0,75 = drie kwart = ¾.",
+            simpeler: "0,25 is een kwart. Hoeveel kwarten is 0,75?",
+            nogSimpeler: "0,25 + 0,25 + 0,25 = 0,75 = … kwart?",
+          },
+        },
+      },
     ],
   },
 
@@ -150,6 +178,34 @@ const steps = [
             basis: "Kommagetal × 100 = procent.",
             simpeler: "0,3 wordt 30%. Wat deed je: × 100 of ÷ 100?",
             nogSimpeler: "Wordt het getal groter of kleiner als je naar procent gaat?",
+          },
+        },
+      },
+      {
+        q: "Wat is 0,07 in procent?",
+        options: ["7%", "70%", "0,7%", "700%"],
+        answer: 0,
+        wrongHints: [null, "Schuif de komma 2 plaatsen naar rechts: 0,07 → 7, niet 70.", "Veel te klein.", "Dat is meer dan het geheel."],
+        uitlegPad: {
+          stappen: [{ titel: "× 100", tekst: "0,07 × 100 = 7%. De komma 2 naar rechts: 0,07 → 7." }],
+          niveaus: {
+            basis: "0,07 × 100 = 7%.",
+            simpeler: "Komma 2 naar rechts: 0,07 → 07 → 7.",
+            nogSimpeler: "Zijn dat twee nullen achter de komma?",
+          },
+        },
+      },
+      {
+        q: "Wat is 40% als kommagetal?",
+        options: ["0,4", "4,0", "0,04", "40"],
+        answer: 0,
+        wrongHints: [null, "Dat is veel te groot — deel door 100.", "Je schoof 3 plaatsen in plaats van 2.", "Dat is het getal zonder komma."],
+        uitlegPad: {
+          stappen: [{ titel: "÷ 100", tekst: "40% = 40 ÷ 100 = 0,4. Komma 2 naar links." }],
+          niveaus: {
+            basis: "40 ÷ 100 = 0,4.",
+            simpeler: "Komma 2 naar links: 40 → 0,40 = 0,4.",
+            nogSimpeler: "Is 40% meer of minder dan 1?",
           },
         },
       },
@@ -225,6 +281,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat is 10% als breuk (zo eenvoudig mogelijk)?",
+        options: ["1/10", "10/1", "1/100", "1/5"],
+        answer: 0,
+        wrongHints: [null, "Dat is 10, niet een tiende.", "Dat is 1%, niet 10%.", "Dat is 20%."],
+        uitlegPad: {
+          stappen: [{ titel: "10 van de 100", tekst: "10% = 10/100. Vereenvoudigd: deel teller en noemer door 10 → 1/10." }],
+          niveaus: {
+            basis: "10% = 1/10.",
+            simpeler: "10 van de 100 → 10/100 → vereenvoudigd?",
+            nogSimpeler: "10 ÷ 10 = 1 en 100 ÷ 10 = 10 → welke breuk?",
+          },
+        },
+      },
+      {
+        q: "Wat is 75% als breuk (zo eenvoudig mogelijk)?",
+        options: ["¾", "7/5", "3/5", "½"],
+        answer: 0,
+        wrongHints: [null, "Dat is meer dan 1.", "Dat is 60%.", "Dat is de helft, 50%."],
+        uitlegPad: {
+          stappen: [{ titel: "75 van de 100", tekst: "75% = 75/100. Deel teller en noemer door 25 → 3/4 = ¾." }],
+          niveaus: {
+            basis: "75% = ¾ (drie kwart).",
+            simpeler: "¼ = 25%. Hoeveel kwarten zijn 75%?",
+            nogSimpeler: "25 + 25 + 25 = 75 → hoeveel kwarten?",
+          },
+        },
+      },
     ],
   },
 
@@ -290,6 +374,62 @@ const steps = [
             basis: "0,7 = 70%, ¾ = 75%. ¾ is het grootst.",
             simpeler: "Maak alles procent: 70%, 65%, 75%. Welke is het hoogst?",
             nogSimpeler: "Welk getal is het grootst: 70, 65 of 75?",
+          },
+        },
+      },
+      {
+        q: "Is 0,3 groter of kleiner dan ¼?",
+        options: ["groter", "kleiner", "even groot", "dat kun je niet vergelijken"],
+        answer: 0,
+        wrongHints: [null, "Reken ¼ om naar een kommagetal — dan zie je welke groter is.", "0,3 en 0,25 zijn niet gelijk.", "Breuken en kommagetallen kun je wel vergelijken: zet ze om naar dezelfde soort."],
+        uitlegPad: {
+          stappen: [{ titel: "Maak ze gelijk", tekst: "¼ = 0,25. Vergelijk: 0,3 > 0,25, dus 0,3 is groter." }],
+          niveaus: {
+            basis: "0,3 en ¼ = 0,25. 0,3 is groter.",
+            simpeler: "Schrijf ¼ als kommagetal (0,25) en vergelijk met 0,3.",
+            nogSimpeler: "Is 0,3 groter of kleiner dan 0,25?",
+          },
+        },
+      },
+      {
+        q: "Op een school doet 0,6 van de leerlingen aan sport. Hoeveel procent is dat?",
+        options: ["60%", "6%", "0,6%", "600%"],
+        answer: 0,
+        wrongHints: [null, "Schuif de komma 2 naar rechts: 0,6 → 60.", "Veel te klein — komma 2 naar rechts.", "Dat is meer dan het geheel."],
+        uitlegPad: {
+          stappen: [{ titel: "× 100", tekst: "0,6 × 100 = 60%." }],
+          niveaus: {
+            basis: "0,6 × 100 = 60%.",
+            simpeler: "Komma 2 naar rechts: 0,6 → 60.",
+            nogSimpeler: "De helft (0,5) is 50%. Is 0,6 meer of minder dan 0,5?",
+          },
+        },
+      },
+      {
+        q: "Welk antwoord klopt? 30% is groter dan …",
+        options: ["¼ (= 25%)", "½ (= 50%)", "0,4 (= 40%)", "¾ (= 75%)"],
+        answer: 0,
+        wrongHints: [null, "50% > 30%, dus 30% is niet groter dan ½.", "40% > 30%, dus 30% is niet groter dan 0,4.", "75% > 30%, dus 30% is niet groter dan ¾."],
+        uitlegPad: {
+          stappen: [{ titel: "30% vs 25%", tekst: "¼ = 25%. En 30% > 25%, dus 30% is groter dan ¼." }],
+          niveaus: {
+            basis: "30% > 25% (= ¼), dus 30% is groter dan ¼.",
+            simpeler: "Zet ¼ om naar procent en vergelijk met 30%.",
+            nogSimpeler: "Is 30 groter of kleiner dan 25?",
+          },
+        },
+      },
+      {
+        q: "Rangschik van klein naar groot: 0,2 — ¼ — 15%",
+        options: ["15% — 0,2 — ¼", "0,2 — 15% — ¼", "¼ — 0,2 — 15%", "ze zijn allemaal gelijk"],
+        answer: 0,
+        wrongHints: [null, "Reken alle drie om naar procent en vergelijk de getallen.", "Zet alles om naar procent en bekijk de volgorde opnieuw.", "Reken: 0,2 = 20%, ¼ = 25%, 15% = 15%. Zijn die gelijk?"],
+        uitlegPad: {
+          stappen: [{ titel: "Alles naar procent", tekst: "0,2 = 20%, ¼ = 25%, 15% = 15%. Van klein naar groot: 15% — 20% — 25%." }],
+          niveaus: {
+            basis: "15% < 20% (0,2) < 25% (¼).",
+            simpeler: "Zet alles om naar procent: 15%, 20%, 25%. Welke is het kleinst?",
+            nogSimpeler: "Welk getal is het kleinst: 15, 20 of 25?",
           },
         },
       },

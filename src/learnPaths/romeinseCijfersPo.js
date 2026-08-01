@@ -84,6 +84,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk getal is **M**?",
+        options: ["1000", "500", "100", "2000"],
+        answer: 0,
+        wrongHints: [null, "Dat is D.", "Dat is C.", "Dat zouden twee M'en zijn: MM."],
+        uitlegPad: {
+          stappen: [{ titel: "M = 1000", tekst: "De letter M (van 'mille', duizend) staat voor 1.000." }],
+          niveaus: {
+            basis: "M is het symbool voor 1.000.",
+            simpeler: "Denk aan 'millennium': 1.000 jaar. M = 1.000.",
+            nogSimpeler: "Welke waarde hoort bij M?",
+          },
+        },
+      },
+      {
+        q: "Welk symbool is **500**?",
+        options: ["D", "M", "C", "L"],
+        answer: 0,
+        wrongHints: [null, "Dat is 1.000.", "Dat is 100.", "Dat is 50."],
+        uitlegPad: {
+          stappen: [{ titel: "D = 500", tekst: "De letter D staat voor 500." }],
+          niveaus: {
+            basis: "500 schrijf je als D.",
+            simpeler: "Tussen C (100) en M (1.000) zit D (500).",
+            nogSimpeler: "Welke letter hoort bij 500?",
+          },
+        },
+      },
+      {
+        q: "Welk getal is **I**?",
+        options: ["1", "10", "5", "100"],
+        answer: 0,
+        wrongHints: [null, "Dat is X.", "Dat is V.", "Dat is C."],
+        uitlegPad: {
+          stappen: [{ titel: "I = 1", tekst: "De letter I staat voor 1. Net als een streepje op een krijtbord." }],
+          niveaus: {
+            basis: "I is het symbool voor 1.",
+            simpeler: "I is de eerste in de rij I-V-X: 1, 5, 10.",
+            nogSimpeler: "Welke waarde hoort bij I?",
+          },
+        },
+      },
     ],
   },
 
@@ -151,6 +193,34 @@ const steps = [
             basis: "L = 50, X = 10, samen 60.",
             simpeler: "De X staat achter de L → optellen.",
             nogSimpeler: "50 + 10 = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is **VIII**?",
+        options: ["8", "9", "3", "7"],
+        answer: 0,
+        wrongHints: [null, "Dat zou IX zijn.", "Dat zijn drie I'tjes alleen.", "Reken: 5 + 1 + 1 + 1."],
+        uitlegPad: {
+          stappen: [{ titel: "5 + 3", tekst: "V = 5, III = 3. V staat links van de I's, dus optellen: 5 + 3 = 8." }],
+          niveaus: {
+            basis: "VIII = V (5) + III (3) = 8.",
+            simpeler: "Tel: 5 + 1 + 1 + 1 = ?",
+            nogSimpeler: "5 + 3 = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **25** in Romeinse cijfers?",
+        options: ["XXV", "XXVII", "VXX", "XVXX"],
+        answer: 0,
+        wrongHints: [null, "Dat is 27.", "V staat nooit vóór X als je optelt — gebruik X'en voor de tientallen.", "Dat is geen geldig Romeins getal."],
+        uitlegPad: {
+          stappen: [{ titel: "20 + 5", tekst: "25 = 20 + 5 = XX (20) + V (5) = XXV." }],
+          niveaus: {
+            basis: "25 = XX (20) + V (5) = XXV.",
+            simpeler: "Eerst twee X'en (20), dan een V (5).",
+            nogSimpeler: "Welke begint met XX en dan een V?",
           },
         },
       },
@@ -224,6 +294,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Hoe schrijf je **9** in Romeinse cijfers?",
+        options: ["IX", "VIIII", "XI", "IIX"],
+        answer: 0,
+        wrongHints: [null, "Vier I'tjes achter elkaar mag niet — gebruik aftrekken.", "Dat is 11 (X + I).", "Zo werkt aftrekken niet — I staat voor X, niet vóór een grotere letter dan X."],
+        uitlegPad: {
+          stappen: [{ titel: "10 − 1", tekst: "9 = 10 − 1 = I vóór X = IX." }],
+          niveaus: {
+            basis: "9 = IX (I vóór X = 10 − 1).",
+            simpeler: "Zet de kleine I links van de X om af te trekken.",
+            nogSimpeler: "Welke heeft I vóór X?",
+          },
+        },
+      },
+      {
+        q: "Wat is **CD**?",
+        options: ["400", "600", "100", "440"],
+        answer: 0,
+        wrongHints: [null, "Dat zou DC zijn (optellen: 500 + 100).", "Dat is alleen een C.", "Reken: 500 − 100."],
+        uitlegPad: {
+          stappen: [{ titel: "500 − 100", tekst: "C staat vóór D (C is kleiner dan D), dus aftrekken: 500 − 100 = 400." }],
+          niveaus: {
+            basis: "C vóór D betekent 500 − 100 = 400.",
+            simpeler: "Kleine C links van de D → eraf halen.",
+            nogSimpeler: "500 − 100 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -290,6 +388,48 @@ const steps = [
             basis: "21 = XXI (twee keer X = 20, plus I = 1).",
             simpeler: "Eerst 20 (XX), dan 1 (I) erbij.",
             nogSimpeler: "Welke is XX gevolgd door I?",
+          },
+        },
+      },
+      {
+        q: "Op een gebouw staat **MCMXCIX**. Dat is het bouwjaar. Welk jaar is dat?",
+        options: ["1999", "1899", "2009", "1909"],
+        answer: 0,
+        wrongHints: [null, "Kijk goed: M staat voor 1000, dan CM = 900, dan XC = 90, dan IX = 9.", "Reken de stukjes één voor één uit.", "CM is 900, niet 800."],
+        uitlegPad: {
+          stappen: [{ titel: "Stukje voor stukje", tekst: "M (1000) + CM (900) + XC (90) + IX (9) = 1.999." }],
+          niveaus: {
+            basis: "1000 + 900 + 90 + 9 = 1999.",
+            simpeler: "CM = 900, XC = 90, IX = 9. Tel op bij M (1000).",
+            nogSimpeler: "1000 + 900 + 90 + 9 = ?",
+          },
+        },
+      },
+      {
+        q: "Welk getal wordt geschreven als **XLVII**?",
+        options: ["47", "57", "37", "97"],
+        answer: 0,
+        wrongHints: [null, "XL is 40, niet 50.", "X is 10, niet 30.", "XC zou 90 zijn, niet XL."],
+        uitlegPad: {
+          stappen: [{ titel: "Stukje voor stukje", tekst: "XL (40) + V (5) + II (2) = 47." }],
+          niveaus: {
+            basis: "XL = 40, VII = 7. Samen 47.",
+            simpeler: "XL = 40 (aftrekken). Dan V (5) en II (2) optellen.",
+            nogSimpeler: "40 + 5 + 2 = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **2024** in Romeinse cijfers?",
+        options: ["MMXXIV", "MMXXIIII", "MCMXXIV", "MMXIV"],
+        answer: 0,
+        wrongHints: [null, "Vier I'tjes achter elkaar mag niet — gebruik IV voor 4.", "MCMXXIV is 1924, niet 2024.", "MMXIV is 2014, niet 2024."],
+        uitlegPad: {
+          stappen: [{ titel: "2000 + 20 + 4", tekst: "2024 = MM (2000) + XX (20) + IV (4) = MMXXIV." }],
+          niveaus: {
+            basis: "MM = 2000, XX = 20, IV = 4. Samen MMXXIV.",
+            simpeler: "Splits: 2000 (MM), 20 (XX), 4 (IV). Plak aan elkaar.",
+            nogSimpeler: "Wat zijn de Romeinse symbolen voor 2000, 20 en 4?",
           },
         },
       },

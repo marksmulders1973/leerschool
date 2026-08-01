@@ -78,6 +78,48 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat is 41 ÷ 7?",
+        options: ["5 rest 6", "6 rest 1", "5 rest 7", "4 rest 9"],
+        answer: 0,
+        wrongHints: [null, "Dat getal keer de deler gaat over 41 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler (7).", "De rest mag niet groter zijn dan de deler."],
+        uitlegPad: {
+          stappen: [{ titel: "Hoe vaak past 7 in 41?", tekst: "5 × 7 = 35. Rest: 41 − 35 = 6. Dus 5 rest 6." }],
+          niveaus: {
+            basis: "7 past 5 keer in 41 (35), met 6 over.",
+            simpeler: "Tel met 7: 7, 14, 21, 28, 35 — dat is 5 keer. Wat blijft er over tot 41?",
+            nogSimpeler: "5 × 7 = 35. 41 − 35 = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is 50 ÷ 8?",
+        options: ["6 rest 2", "7 rest 1", "5 rest 10", "6 rest 8"],
+        answer: 0,
+        wrongHints: [null, "Dat getal keer de deler gaat over 50 heen.", "De rest mag nooit groter zijn dan de deler.", "De rest kan niet gelijk zijn aan de deler."],
+        uitlegPad: {
+          stappen: [{ titel: "Hoe vaak past 8 in 50?", tekst: "6 × 8 = 48. Rest: 50 − 48 = 2. Dus 6 rest 2." }],
+          niveaus: {
+            basis: "8 past 6 keer in 50 (48), met 2 over.",
+            simpeler: "Tel met 8: 8, 16, 24, 32, 40, 48 — dat is 6 keer. Hoeveel mist er nog tot 50?",
+            nogSimpeler: "6 × 8 = 48. 50 − 48 = ?",
+          },
+        },
+      },
+      {
+        q: "Mag de rest bij 19 ÷ 4 gelijk zijn aan 4?",
+        options: ["Nee, de rest moet kleiner zijn dan 4", "Ja, dat mag", "De rest mag gelijk zijn aan de deler", "Dat hangt af van de som"],
+        answer: 0,
+        wrongHints: [null, "Kijk eens: als er nog 4 overblijven, kun je nog één keer verdelen.", "Als de rest gelijk is aan de deler, kun je nog een keer verdelen — dan is je antwoord fout.", "De rest is altijd kleiner dan de deler."],
+        uitlegPad: {
+          stappen: [{ titel: "Rest < deler", tekst: "De rest moet altijd kleiner zijn dan de deler. Overblijft er nog één keer de deler? Dan kun je nog een keer verdelen." }],
+          niveaus: {
+            basis: "De rest is altijd kleiner dan de deler.",
+            simpeler: "Als er nog 4 overblijven en je deelt door 4, kun je nog eens delen.",
+            nogSimpeler: "Is 4 rest 4 een goed antwoord bij ÷ 4?",
+          },
+        },
+      },
     ],
   },
 
@@ -147,6 +189,34 @@ const steps = [
             basis: "7 weken = €35 (te weinig), 8 weken = €40 (genoeg).",
             simpeler: "Heb je na 7 weken (€35) genoeg voor €38? Nee, dus eentje erbij.",
             nogSimpeler: "Is €35 genoeg voor €38? Hoeveel weken dan wel?",
+          },
+        },
+      },
+      {
+        q: "In een minibus passen 9 personen. Er moeten 33 mensen vervoerd worden. Hoeveel ritten heeft de minibus nodig?",
+        options: ["4 ritten", "3 ritten", "5 ritten", "3 rest 6"],
+        answer: 0,
+        wrongHints: [null, "In 3 ritten kunnen maar 27 mensen — er blijven er 6 staan.", "Te veel, dat zijn meer ritten dan nodig.", "Een aantal ritten is een heel getal."],
+        uitlegPad: {
+          stappen: [{ titel: "Rest = extra rit", tekst: "33 ÷ 9 = 3 rest 6. De 6 overgebleven mensen hebben ook een rit nodig → 4 ritten." }],
+          niveaus: {
+            basis: "3 volle ritten (27 mensen), 6 over → nog 1 rit = 4.",
+            simpeler: "Passen alle 33 mensen in 3 ritten van 9? Nee, er blijven er 6 over.",
+            nogSimpeler: "27 mensen in 3 ritten, en die laatste 6?",
+          },
+        },
+      },
+      {
+        q: "Dozen met 6 boeken. Je wilt 45 boeken verzenden. Hoeveel dozen heb je nodig?",
+        options: ["8 dozen", "7 dozen", "7 rest 3", "9 dozen"],
+        answer: 0,
+        wrongHints: [null, "In 7 dozen passen maar 42 boeken — 3 blijven over.", "Een aantal dozen is een heel getal.", "Te veel."],
+        uitlegPad: {
+          stappen: [{ titel: "Rest = extra doos", tekst: "45 ÷ 6 = 7 rest 3. De 3 overgebleven boeken hebben ook een doos nodig → 8 dozen." }],
+          niveaus: {
+            basis: "7 volle dozen (42), 3 over → nog 1 doos = 8.",
+            simpeler: "Passen 45 boeken in 7 dozen (42)? Nee, dus eentje extra.",
+            nogSimpeler: "42 boeken in 7 dozen, en die laatste 3?",
           },
         },
       },
@@ -222,6 +292,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Je hebt 58 kleurpotloden. In een bakje passen 10. Hoeveel volle bakjes kun je vullen?",
+        options: ["5", "6", "5 rest 8", "10"],
+        answer: 0,
+        wrongHints: [null, "Een 6e bakje heeft maar 8 potloden — niet vol.", "Dat is de rest, geen aantal bakjes.", "Dat is het aantal per bakje."],
+        uitlegPad: {
+          stappen: [{ titel: "Volle bakjes = naar beneden", tekst: "58 ÷ 10 = 5 rest 8. Er zijn 5 volle bakjes; de 8 overige potloden vullen geen heel bakje." }],
+          niveaus: {
+            basis: "5 volle bakjes (50 potloden), 8 over die geen vol bakje zijn.",
+            simpeler: "Hoe vaak past 10 helemaal in 58?",
+            nogSimpeler: "5 × 10 = 50. Is er een 6e vol bakje? Nee.",
+          },
+        },
+      },
+      {
+        q: "Je hebt 38 foto's. Per pagina passen er 4. Hoeveel volle pagina's heb je?",
+        options: ["9", "10", "9 rest 2", "4"],
+        answer: 0,
+        wrongHints: [null, "De 10e pagina zou maar 2 foto's hebben — niet vol.", "Dat is de rest, geen aantal pagina's.", "Dat is het aantal per pagina."],
+        uitlegPad: {
+          stappen: [{ titel: "Volle pagina's = naar beneden", tekst: "38 ÷ 4 = 9 rest 2. Er zijn 9 volle pagina's; de 2 overige foto's vullen geen hele pagina." }],
+          niveaus: {
+            basis: "9 volle pagina's (36 foto's), 2 over.",
+            simpeler: "Hoe vaak past 4 helemaal in 38?",
+            nogSimpeler: "9 × 4 = 36. Is er een 10e volle pagina?",
+          },
+        },
+      },
     ],
   },
 
@@ -292,6 +390,48 @@ const steps = [
             basis: "'Hoeveel volle' → naar beneden. 'Nodig/genoeg' → naar boven.",
             simpeler: "Welke vraag gaat over hoeveel er compleet/vol zijn?",
             nogSimpeler: "Welke vraag heeft het woord 'volle'?",
+          },
+        },
+      },
+      {
+        q: "75 leerlingen moeten naar het zwembad. Een touringcar heeft 25 plaatsen. Hoeveel bussen zijn er nodig?",
+        options: ["3", "2", "4", "2 rest 25"],
+        answer: 0,
+        wrongHints: [null, "In 2 bussen passen maar 50 leerlingen — te weinig.", "Reken nog eens: 75 ÷ 25.", "Een aantal bussen is een heel getal."],
+        uitlegPad: {
+          stappen: [{ titel: "75 ÷ 25", tekst: "75 ÷ 25 = 3 rest 0. Het komt precies uit: 3 bussen zijn genoeg voor iedereen." }],
+          niveaus: {
+            basis: "75 ÷ 25 = 3 precies → 3 bussen.",
+            simpeler: "25, 50, 75 — hoe vaak past 25 in 75?",
+            nogSimpeler: "3 × 25 = ?",
+          },
+        },
+      },
+      {
+        q: "Een klas van 29 leerlingen maakt duo's. Hoeveel duo's zijn er, en hoeveel leerlingen blijven over?",
+        options: ["14 duo's, 1 over", "14 duo's, 0 over", "15 duo's, 0 over", "13 duo's, 3 over"],
+        answer: 0,
+        wrongHints: [null, "29 is een oneven getal — er blijft er altijd één over.", "15 duo's zijn 30 leerlingen — te veel.", "Reken 29 ÷ 2 nog eens."],
+        uitlegPad: {
+          stappen: [{ titel: "29 ÷ 2", tekst: "29 ÷ 2 = 14 rest 1. Er zijn 14 duo's en 1 leerling blijft over." }],
+          niveaus: {
+            basis: "14 × 2 = 28, plus 1 = 29. Dus 14 duo's en 1 over.",
+            simpeler: "Hoe vaak past 2 helemaal in 29?",
+            nogSimpeler: "14 × 2 = 28. 29 − 28 = ?",
+          },
+        },
+      },
+      {
+        q: "Bij een wedstrijd mogen teams van 3 meedoen. Er zijn 22 spelers. Hoeveel volledige teams zijn er?",
+        options: ["7", "8", "7 rest 1", "6"],
+        answer: 0,
+        wrongHints: [null, "Een 8e team zou maar 1 speler hebben — niet vol.", "Dat is de rest, geen aantal teams.", "Reken 22 ÷ 3 nog eens."],
+        uitlegPad: {
+          stappen: [{ titel: "22 ÷ 3 = naar beneden", tekst: "22 ÷ 3 = 7 rest 1. Er zijn 7 volledige teams; 1 speler blijft over." }],
+          niveaus: {
+            basis: "7 × 3 = 21, plus 1 = 22. Dus 7 volledige teams.",
+            simpeler: "Hoe vaak past 3 helemaal in 22?",
+            nogSimpeler: "7 × 3 = 21. Is er een 8e vol team?",
           },
         },
       },

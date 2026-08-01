@@ -78,6 +78,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Schaal 1 : 200 betekent dat 1 cm op de kaart … cm in het echt is.",
+        options: ["200 cm", "2 cm", "20 cm", "2.000 cm"],
+        answer: 0,
+        wrongHints: [null, "Kijk naar het schaalgetal — het is groter dan 2.", "Te weinig — kijk naar het getal na de dubbele punt.", "Dat hoort bij schaal 1 : 2.000."],
+        uitlegPad: {
+          stappen: [{ titel: "Het schaalgetal lezen", tekst: "Bij 1 : 200 is 1 cm op de kaart gelijk aan 200 cm in het echt." }],
+          niveaus: {
+            basis: "Het getal na de dubbele punt (200) is de echte lengte in cm bij 1 cm op de kaart.",
+            simpeler: "1 cm op de kaart = ? cm echt. Kijk naar het getal achter de '1 :'.",
+            nogSimpeler: "Wat staat er na de '1 :' in schaal 1 : 200?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 10.000 — 1 cm op de kaart is hoeveel meter in het echt?",
+        options: ["100 m", "10 m", "1.000 m", "10.000 m"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — 10.000 cm is meer dan 10 m.", "Te veel — deel 10.000 door 100 om naar meters te gaan.", "Dat zijn centimeters, niet meters."],
+        uitlegPad: {
+          stappen: [{ titel: "Eerst cm, dan m", tekst: "1 cm = 10.000 cm echt. En 10.000 cm ÷ 100 = 100 m." }],
+          niveaus: {
+            basis: "10.000 cm = 100 m (100 cm = 1 m).",
+            simpeler: "1 cm = 10.000 cm. Hoeveel meter is 10.000 cm?",
+            nogSimpeler: "10.000 ÷ 100 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -145,6 +173,34 @@ const steps = [
             basis: "2 × 50.000 = 100.000 cm = 1 km.",
             simpeler: "1 cm = 50.000 cm = 0,5 km. Dus 2 cm = 1 km.",
             nogSimpeler: "0,5 km + 0,5 km = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 25.000. Op de kaart 8 cm. Hoeveel km is dat in het echt?",
+        options: ["2 km", "8 km", "0,2 km", "20 km"],
+        answer: 0,
+        wrongHints: [null, "Reken: 8 × 25.000 cm en zet om naar km.", "Te weinig — reken de cm goed om.", "Te veel — controleer hoeveel km bij 1 cm hoort."],
+        uitlegPad: {
+          stappen: [{ titel: "× 25.000 dan naar km", tekst: "8 × 25.000 = 200.000 cm. En 200.000 ÷ 100.000 = 2 km." }],
+          niveaus: {
+            basis: "8 × 25.000 = 200.000 cm = 2 km.",
+            simpeler: "1 cm = 25.000 cm = 0,25 km. Dus 8 cm = 8 × 0,25 = 2 km.",
+            nogSimpeler: "200.000 ÷ 100.000 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 100. Op de kaart staat een weg van 12 cm. Hoe lang is de weg in het echt in meter?",
+        options: ["12 m", "1,2 m", "120 m", "1.200 m"],
+        answer: 0,
+        wrongHints: [null, "Reken 12 × 100 cm en zet om naar meter.", "Reken 12 × 100 eerst in cm.", "Controleer de omrekening van cm naar m."],
+        uitlegPad: {
+          stappen: [{ titel: "× 100 dan naar m", tekst: "12 × 100 = 1.200 cm. En 1.200 cm ÷ 100 = 12 m." }],
+          niveaus: {
+            basis: "12 × 100 = 1.200 cm = 12 m.",
+            simpeler: "Reken de cm uit (1.200), dan deel door 100 voor meters.",
+            nogSimpeler: "1.200 ÷ 100 = ?",
           },
         },
       },
@@ -216,6 +272,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Schaal 1 : 200. Een schutting is in het echt 600 cm. Hoe lang is hij op de kaart?",
+        options: ["3 cm", "30 cm", "120 cm", "0,3 cm"],
+        answer: 0,
+        wrongHints: [null, "Deel door 200, niet door 20.", "Vergeet niet door de schaal te delen.", "Te klein — deel door 200, niet door 2.000."],
+        uitlegPad: {
+          stappen: [{ titel: "÷ schaalgetal", tekst: "600 cm ÷ 200 = 3 cm op de kaart." }],
+          niveaus: {
+            basis: "600 ÷ 200 = 3 cm.",
+            simpeler: "Deel de echte lengte door 200.",
+            nogSimpeler: "600 ÷ 200 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 50.000. Twee dorpen liggen 10 km uit elkaar. Hoe ver is dat op de kaart?",
+        options: ["20 cm", "10 cm", "2 cm", "100 cm"],
+        answer: 0,
+        wrongHints: [null, "Reken: 10 km = hoeveel cm? Deel dat door 50.000.", "Te klein — hoeveel cm zijn 10 km?", "Veel te veel."],
+        uitlegPad: {
+          stappen: [{ titel: "km → cm, dan ÷ schaal", tekst: "10 km = 1.000.000 cm. Dan 1.000.000 ÷ 50.000 = 20 cm op de kaart." }],
+          niveaus: {
+            basis: "10 km = 1.000.000 cm; 1.000.000 ÷ 50.000 = 20 cm.",
+            simpeler: "Bij 1 : 50.000 is 1 cm op de kaart 0,5 km. Dus 10 km is 10 ÷ 0,5 = 20 cm.",
+            nogSimpeler: "1 cm = 0,5 km, hoeveel cm is dan 10 km?",
+          },
+        },
+      },
     ],
   },
 
@@ -282,6 +366,67 @@ const steps = [
             basis: "300.000 cm echt ÷ 6 cm kaart = 50.000 → schaal 1 : 50.000.",
             simpeler: "Hoeveel cm echt hoort bij 1 cm kaart? 300.000 ÷ 6.",
             nogSimpeler: "300.000 ÷ 6 = ?",
+          },
+        },
+      },
+      {
+        q: "Op een kaart (schaal 1 : 100.000) is een rivier 3,5 cm lang. Hoe lang is de rivier echt?",
+        options: ["3,5 km", "35 km", "0,35 km", "350 km"],
+        answer: 0,
+        wrongHints: [null, "Reken: 3,5 × 100.000 cm en zet dat om naar km.", "Te weinig — reken de schaalfactor goed.", "Veel te veel."],
+        uitlegPad: {
+          stappen: [{ titel: "1 cm = 1 km bij deze schaal", tekst: "Bij 1 : 100.000 is 1 cm = 1 km. Dus 3,5 cm = 3,5 km." }],
+          niveaus: {
+            basis: "1 : 100.000 → 1 cm = 1 km. 3,5 cm = 3,5 km.",
+            simpeler: "Hoeveel km hoort bij 1 cm? En bij 3,5 cm?",
+            nogSimpeler: "1 cm = 1 km, 3,5 cm = … km?",
+          },
+        },
+      },
+      {
+        q: "Een tuin is in het echt 15 m breed. Op de bouwtekening (schaal 1 : 500) is hij op de kaart … breed.",
+        options: ["3 cm", "30 cm", "0,3 cm", "15 cm"],
+        answer: 0,
+        wrongHints: [null, "Reken 15 m naar cm (1.500), dan ÷ 500.", "Te klein — deel door 500, niet door 5.000.", "Dat is de echte breedte in meter, niet de kaart-breedte."],
+        uitlegPad: {
+          stappen: [{ titel: "m → cm, dan ÷ schaal", tekst: "15 m = 1.500 cm. Dan 1.500 ÷ 500 = 3 cm op de kaart." }],
+          niveaus: {
+            basis: "15 m = 1.500 cm; 1.500 ÷ 500 = 3 cm.",
+            simpeler: "Maak van 15 m eerst cm (1.500), deel dan door 500.",
+            nogSimpeler: "1.500 ÷ 500 = ?",
+          },
+        },
+      },
+      {
+        q: "Welke stap doe je ALTIJD als eerste bij een schaalvraag?",
+        options: [
+          "Bepaal de richting: van kaart naar echt (×) of van echt naar kaart (÷)?",
+          "Zet het antwoord direct om naar km",
+          "Deel altijd door het schaalgetal",
+          "Vermenigvuldig altijd met het schaalgetal",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat is stap 3 — eerst de richting bepalen.", "Delen is alleen voor echt → kaart.", "Vermenigvuldigen is alleen voor kaart → echt."],
+        uitlegPad: {
+          stappen: [{ titel: "Richting bepalen = stap 1", tekst: "Check altijd eerst: ga je van de kaart naar het echt (× schaalgetal) of van het echt naar de kaart (÷ schaalgetal)?" }],
+          niveaus: {
+            basis: "Richting: kaart → echt = ×; echt → kaart = ÷.",
+            simpeler: "Lees de vraag: wil je de echte afstand of de kaart-afstand weten?",
+            nogSimpeler: "Maak je het kleiner (kaart) of groter (echt)?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 10. Een maquette van een huis is 30 cm breed. Hoe breed is het echte huis?",
+        options: ["3 m", "30 m", "0,3 m", "300 m"],
+        answer: 0,
+        wrongHints: [null, "Reken 30 × 10 cm en zet dan om naar meter.", "Te klein — vergeet niet te vermenigvuldigen met 10.", "Veel te groot."],
+        uitlegPad: {
+          stappen: [{ titel: "× 10, dan naar m", tekst: "30 cm × 10 = 300 cm echt. En 300 cm = 3 m." }],
+          niveaus: {
+            basis: "30 × 10 = 300 cm = 3 m.",
+            simpeler: "Vermenigvuldig de maquette-maat met 10 en reken cm naar m.",
+            nogSimpeler: "300 ÷ 100 = ?",
           },
         },
       },
