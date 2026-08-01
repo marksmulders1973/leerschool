@@ -80,6 +80,7 @@ const Paraatheidsmeter = lazy(() => import("./features/familie/Paraatheidsmeter.
 const DiplomaPagina = lazy(() => import("./features/familie/DiplomaPagina.jsx"));
 const OuderkaartPagina = lazy(() => import("./features/familie/OuderkaartPagina.jsx"));
 const WeekschemaPagina = lazy(() => import("./features/familie/WeekschemaPagina.jsx"));
+const TrotsMomentPagina = lazy(() => import("./features/familie/TrotsMomentPagina.jsx"));
 const BrugklasPage = lazy(() => import("./components/BrugklasPage.jsx"));
 const DicteesPage = lazy(() => import("./components/DicteesPage.jsx"));
 const DagkaartGenerator = lazy(() => import("./components/DagkaartGenerator.jsx"));
@@ -2053,6 +2054,7 @@ export default function App() {
       {page === "diploma" && <DiplomaPagina setPage={setPage} />}
       {page === "ouderkaart" && <OuderkaartPagina setPage={setPage} />}
       {page === "weekschema" && <WeekschemaPagina setPage={setPage} />}
+      {page === "trots" && <TrotsMomentPagina setPage={setPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}

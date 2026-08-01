@@ -54,6 +54,8 @@ export const PAGE_TO_PATH = {
   ouderkaart: "/ouderkaart",
   // Koelkast-weekschema — feature 5, bèta-live.
   weekschema: "/weekschema",
+  // Trots-momenten — feature 6, bèta-live (hub-preview; echte momenten in-flow).
+  trots: "/trots",
   // Brugklas-oefenbundel (klas 1 havo/vwo) — uit wensenbord-verzoek Sahasra 9 jul.
   brugklas: "/brugklas",
   // Branded dagkaart-generator voor social (Mark 3 jul)

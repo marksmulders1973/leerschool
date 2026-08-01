@@ -29,6 +29,7 @@ import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import OuderkaartTrigger from "../familie/OuderkaartTrigger.jsx";
+import TrotsMoment, { trotsVoorResultaat } from "../familie/TrotsMoment.jsx";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
@@ -765,7 +766,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             onPickPath={onPickPath}
             examRefs={examRefs}
           />
-          {/* Geheime Familie-preview: zo-help-je-thuis-kaart bij ≥2 fout (self-gating). */}
+          {/* Familie (bèta): trots-moment bij een mijlpaal (foutloos in één keer). */}
+          {(() => {
+            const trots = trotsVoorResultaat({ naam: player, padTitel: path.title, correct: sess.correct, tries: sess.tries });
+            return trots ? <TrotsMoment titel={trots.titel} tekst={trots.tekst} emoji={trots.emoji} /> : null;
+          })()}
+          {/* Familie (bèta): zo-help-je-thuis-kaart bij ≥2 fout. */}
           <OuderkaartTrigger
             conceptId={path.id}
             conceptTitel={path.title}
