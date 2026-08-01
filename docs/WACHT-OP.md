@@ -22,7 +22,7 @@
 | Feature | Status | Geheime URL |
 |---|---|---|
 | 1 · Paraatheidsmeter 🚦 | ✅ klaar (v154) | `/familie/paraatheid?familie=1` |
-| 3 · Oefenboekje op maat 📄 | ✅ core klaar (v153); open: aanbod-kaart klaar-scherm + concept uit fout-historie | `/oefenboekje?boekje=1&pad=<id>` |
+| 3 · Printbaar op maat 📄 | ✅ oefenboekje (v153) + **ouderkaart "zo leg je 't uit" (v157)**; open: aanbod-kaart klaar-scherm + concept uit fout-historie | `/oefenboekje?boekje=1&pad=<id>` · `/ouderkaart?familie=1&kaart=<id>` |
 | 8 · Printbaar diploma 🏅 | ✅ klaar (1 aug, v156); open: auto-prefill vanuit afgerond pad | `/diploma?familie=1&naam=<x>&onderwerp=<y>` |
 | 2 · Vonk onbeperkt 🐉 | ⏳ te bouwen (framing/gating; AI zelf al gebouwd) | — |
 | 4 · Weekmail 2.0 ✉️ | ⏳ te bouwen (hergebruik send-ouder-rapport) | — |
