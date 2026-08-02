@@ -63,11 +63,12 @@
 > Voedselbank Rotterdam, Leergeld Haarlemmermeer (Spark Fest) en Voedselbank Alkmaar =
 > kant-en-klare pilot-kanalen.
 
-**Begroting** → overnemen uit SIDN-PIONIERSAANVRAAG-CONCEPT.md §9 (totaal €9.900):
-AI-kosten €4.800 (Claude+Gemini €3.000 · Grok €600 · schaal-buffer €1.200) · laptop €1.200
-(⚠️ evt. schrappen) · cloud-infra pilot €500 · impact-meting €1.300 · toegankelijk materiaal
-€1.000 · openbaar maken €700 · onvoorzien €400. Eigen onbetaalde bouwuren = in-kind cofinanciering.
-🔴 Onderbouw AI-bedragen met je actuele verbruik (Claude ≈ €90/mnd + Grok) × pilot-schaal.
+**Begroting** → overnemen uit SIDN-PIONIERSAANVRAAG-CONCEPT.md §9 (**totaal €7.150**, laptop eruit):
+AI-tekstinferentie €2.000 (onderbouwd: ~€0,02/interactie × ~30.000 + groei-headroom) · Grok €300 ·
+flyers druk+porto €650 · cloud-infra pilot €500 · impact-meting €1.300 · toegankelijk materiaal €1.000 ·
+openbaar maken €700 · onvoorzien €700. Eigen onbetaalde bouwuren = in-kind cofinanciering.
+NB: het €90/mnd Claude-dev-abonnement telt NIET mee (organisatiekost). Porto ~€4,40/envelop van 50 →
+bundelen/partners-laten-uitdelen om te drukken.
 
 ## 🎥 Videopitch-script (~75 sec, voorlezen kan)
 > "Hoi, ik ben Mark Smulders. Overdag werk ik als operator, en in mijn vrije tijd bouwde ik

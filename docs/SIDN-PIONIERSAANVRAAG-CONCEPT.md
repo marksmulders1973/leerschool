@@ -76,38 +76,48 @@ initiatieven ze kunnen hergebruiken.
 
 | Post | Bedrag | Toelichting |
 |---|---|---|
-| **AI-kosten pilot (zwaartepunt — de kern van de innovatie)** | **€4.800** | Onderverdeeld ↓ |
-| ↳ Claude + Gemini-fallback (adaptieve uitleg- + "Leg het uit"-Feynman-motor, ~6 mnd) | €3.000 | Tekst-uitleg-engine. SIDN-eis: project binnen 6 mnd afgerond → pilot op 6 mnd scopen. |
-| ↳ Grok (beeld-/visuele uitleggeneratie: illustraties, sommen, uitlegplaten) | €600 | Visuele laag van de uitleg. |
-| ↳ **Schaal-buffer bij groei** — inferentie schaalt lineair met gebruik; een geslaagde pilot dríjft gebruik op, dus meer kinderen = meer AI-calls | €1.200 | Eerlijke onderbouwing: gebruik = kosten. Dekt de pilot-gedreven gebruiksstijging. |
-| **Ontwikkel-/testlaptop** | €1.200 | ⚠️ Zie risico-noot: framen als project-specifieke ontwikkelhardware, of schrappen als het de aanvraag verzwakt. |
-| Cloud-infra tijdens pilot (hosting + database-upgrade voor pilot-load) | €500 | Alleen de pilot-meerkost, niet de reguliere basiskosten. |
+| **AI-tekstinferentie** (Claude + Gemini-fallback: adaptieve uitleg- + "Leg het uit"-Feynman-motor), incl. groei-headroom | **€2.000** | Zie onderbouwing ↓. Schaalt met gebruik; headroom dekt Mark's "als de app veel gebruikt wordt"-scenario. |
+| **Grok** (beeld-/visuele uitleggeneratie: illustraties, sommen, uitlegplaten) | €300 | ~€0,02-0,05/beeld × pilot-set + iteratie. |
+| **Flyers printen + verzenden** (pilot-distributie via partners) | €650 | Druk €0,073/flyer + **porto ~€4,40 per envelop van 50** (les 18 jul: €22 voor 5 pakketten). Porto schaalt met aantal ADRESSEN, niet aantal flyers → zie noot. |
+| Cloud-infra tijdens pilot (hosting + database-meerkost voor pilot-load) | €500 | Alleen de pilot-meerkost, niet de reguliere basis. |
 | Impact-meting & evaluatie (meetinstrument opzetten, analyse, open rapportage) | €1.300 | |
 | Toegankelijk pilot-materiaal nieuwkomers (taal-eenvoudige uitleg + voorleesfunctie + opmaak) | €1.000 | |
 | Openbaar maken methodiek (documentatie + publicatie learnings) | €700 | Voldoet aan SIDN's deel-eis. |
-| Onvoorzien | €400 | |
-| **Totaal** | **€9.900** | Onder het €10.000-plafond. |
+| Onvoorzien (~10%) | €700 | |
+| **Totaal** | **€7.150** | Bewust ónder het €10.000-plafond — zie kader. |
 
-> **Waarom de AI-post het grootst mag zijn:** het is de directe, project-gebonden kern
-> van de innovatie én het schaalt met impact. Bij een SIDN-beoordelaar is "AI-inferentie
-> voor de uitlegmotor" veruit de sterkst verdedigbare uitgave — sterker naarmate je 'm
-> koppelt aan de gemeten pilot-groei. Onderbouw de bedragen met je actuele verbruik
-> (Claude ≈ €90/mnd nu; Grok apart; memory `reference_leerkwartier_kosten`) × verwachte
-> pilot-schaal.
+> **Porto-realiteit (Mark, 2 aug):** verzenden kost veel — ~€4,40 per envelop van 50
+> flyers, en het schaalt met het aantal adressen. 30 partnerlocaties = 30 enveloppen ≈
+> €130-250 porto alleen. **Drie manieren om dit te drukken:** (1) grótere pakketten naar
+> minder adressen (bundelen); (2) partners de flyers zélf laten uitdelen i.p.v. per gezin
+> versturen (zoals Leergeld ze in goodybags stopt); (3) waar mogelijk digitaal delen
+> (QR/link) i.p.v. papier. Het €650-budget dekt ~2.500 flyers + porto naar ~25-30 partners.
+
+> **Onderbouwing AI-post (dit is de "harde" berekening):**
+> Actueel app-inferentie ≈ **€0,005/gesprek** (Haiku; memory `reference_leerkwartier_kosten`).
+> Voor kwaliteits-uitleg deels een sterker model → blended **~€0,02/interactie**.
+> Pilot-aanname: **~750 kinderen × ~40 AI-interacties over 6 mnd = ~30.000 interacties**
+> → 30.000 × €0,02 ≈ **€600 basis**. Met sterker model + de pilot-gedreven gebruiksgroei
+> (Mark's punt: meer gebruik = lineair meer kosten) rekt dit naar **~€2.000 met headroom**.
+> ⚠️ **NB:** het €90/mnd Claude-dev-abonnement zit hier BEWUST NIET in — dat is Mark's
+> eigen bouwgereedschap (organisatiekost), en SIDN financiert geen organisatiekosten.
+> Alléén de echte app-inferentie (de API-calls van kinderen) telt mee.
+
+> **Waarom bewust géén €10k vragen:** een gegronde €7.000-aanvraag is bij een SIDN-
+> beoordelaar sterker dan een tot het plafond opgepompt bedrag. De AI-inferentie is bij
+> de huidige prijzen simpelweg goedkoop; dat eerlijk laten zien wekt vertrouwen. Liever
+> een realistisch bedrag dat je kunt verantwoorden dan een maximaal bedrag dat vragen oproept.
 
 **Cofinanciering / eigen inzet (in-kind, versterkt de aanvraag):** Mark's eigen
 ontwikkeluren in vrije tijd zijn onbetaald — te vermelden als eigen bijdrage. SIDN
 waardeert meerdere bronnen/partnerbijdragen.
 
 ### ⚠️ Risico-noten bij de begroting (eerlijk)
-- **Laptop:** SIDN financiert géén "algemene organisatiekosten". Een laptop kan als
-  algemene uitrusting worden gezien. Twee opties: (a) expliciet framen als project-
-  specifieke ontwikkel-/testhardware die nodig is om de pilot te bouwen/testen, óf
-  (b) weglaten als de beoordelaar er kritisch op is — het is de zwakste post.
-- **AI-kosten (Claude + Gemini + Grok):** sterk verdedigbaar — directe, project-gebonden
-  kern van de innovatie, schaalt met impact. Sterkste post. De schaal-buffer is eerlijk:
-  meer gebruik = meer inferentiekosten (lineair). Onderbouwen met actueel verbruik × pilot-schaal.
-- **Reguliere doorloopkosten** (bestaande hosting, Claude-abonnement dat toch al loopt)
+- ✅ **Laptop: ERUIT** (Mark, 2 aug) — was de zwakste post (algemene-kosten-risico). Weg = schonere aanvraag.
+- **AI-kosten (Claude + Gemini + Grok):** sterkste post — directe, project-gebonden kern
+  van de innovatie, schaalt met impact. Onderbouwd met actueel verbruik × pilot-schaal (zie kader).
+- **Flyers:** verdedigbaar als pilot-distributie naar de doelgroep (materiaalkost), niet als reclame.
+- **Reguliere doorloopkosten** (bestaande hosting, het €90/mnd Claude-dev-abonnement)
   NIET opvoeren — dat leest als "organisatiekosten dekken". Alleen de pilot-meerkost.
 
 ## 10. Aansluiting op SIDN-missie
@@ -117,8 +127,6 @@ Tech for Good (AI voor kansengelijkheid) + Empowerment (kind leert zelfstandig b
 ---
 
 ## Volgende stappen voor Mark (niets verplicht nu)
-1. Bevestig of je de laptop-post erin wilt (met risico) of eruit.
-2. Ik kan dit concept omzetten naar de exacte velden van het SIDN-aanvraagformulier
-   (sidnfonds.nl/aanvragen/pioniers) zodra je wilt indienen.
-3. Bedragen zijn eerste schattingen — voor de echte aanvraag de AI-kosten onderbouwen met
-   je actuele API-verbruik (memory `reference_leerkwartier_kosten`: Claude ≈ €90/mnd nu).
+1. ✅ Laptop eruit · ✅ AI-post onderbouwd · ✅ flyers erin — begroting staat op **€7.000**.
+2. Invulteksten + videopitch-script staan klaar in **docs/SIDN-INDIENEN.md**.
+3. Indienen = Mark: FundPro-account + videopitch opnemen + verzenden (doorlopend open, geen deadline).
