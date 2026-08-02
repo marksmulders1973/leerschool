@@ -42,7 +42,8 @@
 - 🔔 Zelf abonneren op web-push (knop in de app).
 - QR-flyer-flow zelf testen op telefoon.
 - SQL `claim_link_code` draaien (audit 4 P1).
-- Eind aug: LinkedIn-lanceringspost + go voor scholen-batch 2 + Leergeld-rest (55).
+- **Leergeld-rest-55 (~18 aug)**: mail Squla-proof + verzendklaar in `OUTREACH-VOORRAAD.md` (§ Leergeld-rest-55 PREP). **Gate: wacht op Inez/Haarlemmermeer-bevestiging** → dan de afgeronde Spark Fest-levering als bewijsregel activeren (komt beter over). Go van Mark nodig om te versturen.
+- Eind aug: LinkedIn-lanceringspost + go voor scholen-batch 2.
 - Later overwegen: extra Leerkwartier-domeinen kopen (zie todo-memory).
 
 ## ✅ Recent afgerond (ter herinnering)

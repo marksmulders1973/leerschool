@@ -96,6 +96,71 @@ en /voor-organisaties.html als landingspagina die al hun vragen beantwoordt.
 4. **Scholen batch 2 (120–150)** — selecteren op CBS-achterstandsscore-Excel ("Achterstandsscores basisscholen 2025, herijkte methode"); versturen eerste schoolweek. Sterkste verhaal: Almere ("alarmfase 1"-onderwijsregio).
 5. **Voedselbanken rest (47) + SUN (35)**, **bibliotheken rest (~75)**, **Buurtgezinnen (150) + VoorleesExpress (100)** — daarna in batches van ~30–40/dag.
 
+## 🗓️ Leergeld-rest-55 — PREP voor ~18 aug (Squla-proof + Spark Fest-bewijs)
+
+> Voorbereid 2 aug op verzoek van Mark. **NIET versturen tot Haarlemmermeer bevestigd is.**
+> Verzendknop hangt aan Inez: zodra zij bevestigt dat het flyer-pakket goed is
+> aangekomen (check-in-mail 1 aug, nudge ~di 5 aug), kunnen we de Spark Fest-levering
+> als **afgeronde** bewijsregel meesturen — dat komt beter over dan een plan.
+> Doel-verzenddatum ~18 aug (laatste vakantieweek), ~30-40/dag vanaf Mark's Gmail.
+
+**Waarom Squla-proof (Mark-gedachte 2 aug):** een deel van Leergeld biedt gezinnen
+al een Squla-abonnement (landelijke Leergeld/Sam&-partner, 25+ afdelingen; Den Bosch
+zei dit 13 jul letterlijk). Segmenteren op "wie heeft geen Squla" is onbetrouwbaar
+(geen publieke lijst; afwezigheid op de site ≠ hebben ze niet). Betere zet: de mail
+zó framen dat Squla-status niet meer uitmaakt. **Squla NIET bij naam noemen** (dat
+triggert de "we hebben Squla al"-reflex) — wél impliciet ondervangen met: gratis /
+geen budget / aanvullend naast wat u al doet / voor álle gezinnen (ook buiten een
+regeling) / de uitleg-op-3-niveaus die een quizprogramma niet heeft. Gevolg: de
+kostbare per-afdeling-Squla-check is grotendeels overbodig; alle 55 krijgen dezelfde
+reframe. (Wil Mark toch sorteren: afdelingen die Squla zichtbaar pushen onderaan —
+maar dat is ~55 site-lookups voor marginale winst.)
+
+**Mailtekst — Leergeld-rest (Squla-proof; [BEVESTIG]-regel pas ná Inez' ok):**
+
+**Onderwerp:** Gratis Doorstroomtoets-oefenen voor uw gezinnen — zonder kosten, naast wat u al doet
+
+Beste team van Leergeld [plaats],
+
+Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren, en in mijn vrije tijd
+bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7 en 8 elke
+dag kunnen oefenen voor de Doorstroomtoets — met uitleg die simpeler wordt zolang het
+kwartje nog niet valt. Oefenboeken kosten €30 en bijles €37 per uur; juist de gezinnen
+die u helpt, verdienen dezelfde voorbereiding als ieder ander.
+
+Veel stichtingen ondersteunen gezinnen al met een oefenprogramma — Leerkwartier is
+daar geen vervanging van, maar een gratis aanvulling die u zónder kosten en zónder
+aanmelding aan álle gezinnen kunt doorgeven, ook de gezinnen die (nog) buiten een
+regeling vallen. Het verschil zit in de uitleg: bij een fout krijgt het kind niet
+'fout, volgende', maar dezelfde som in drie steeds eenvoudiger stappen uitgelegd.
+
+Dit doen andere organisaties al:
+- Voedselbank Rotterdam toont Leerkwartier op de schermen in hun drie sociale supermarkten
+- Voor het jubileumfestival van Leergeld Haarlemmermeer leverden wij 1.000 Leerkwartier-flyers voor de goodybags (festival oktober) — [BEVESTIG: activeren zodra Inez de ontvangst bevestigt]
+- Leergeld Apeldoorn-Voorst zet Leerkwartier in hun oktober-nieuwsbrief
+- Voedselbank Alkmaar maakte samen met ons een flyer in eenvoudige taal
+
+Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen — in
+een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat, ook met
+uw logo.
+
+Er zit geen addertje onder het gras: gratis in 2026, geen account nodig, geen reclame,
+en gezinnen die via uw organisatie komen houden ook 2027 gratis toegang via een eigen
+code. Nieuw: met de gratis Kwartiercheck ziet een ouder in één kwartier waar hun kind
+staat — leerkwartier.app/kwartiercheck.
+
+Meer over ons: leerkwartier.app/voor-organisaties.html · linkedin.com/company/leerkwartier
+
+Hartelijke groet,
+Mark Smulders — leerkwartier.app
+
+**Checklist vóór verzenden (~18 aug):**
+1. ☐ Inez/Haarlemmermeer heeft ontvangst bevestigd → [BEVESTIG]-regel definitief maken.
+2. ☐ 3-partner-teller checken: bij ≥3 partners mét toestemming op bedankt.html gaat óók
+   de "onder andere X, Y, Z doen al mee"-alinea mee (nu 1/3 → nog niet).
+3. ☐ (A)-adressen uit Wayback = bounce-risico: apart bijhouden, evt. handmatig checken.
+4. ☐ Per mail [plaats] personaliseren; ~30-40/dag; verzend-log onderaan bijwerken.
+
 ## 1. Leergeld — 55 resterende stichtingen (VERZENDKLAAR)
 
 Totaal 115 lokale stichtingen in de postcode-zoekdata van leergeld.nl; 60 gemaild
