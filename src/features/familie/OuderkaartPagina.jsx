@@ -16,14 +16,19 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
 import { FamilieMeer } from "./familieUi.jsx";
+import { getOuderkaart } from "./ouderkaartContent.js";
 
-// Concepten die ouders het lastigst vinden om zélf uit te leggen.
+// Concepten die ouders het lastigst vinden om zélf uit te leggen. De eerste drie
+// zijn handgeschreven preview-kaarten (Mark 2 aug: breuken · staartdeling ·
+// werkwoordspelling); de rest heeft ook gecureerde inhoud (zie ouderkaartContent).
 const PRESETS = [
-  { id: "breuken-po", label: "🍕 Breuken" },
-  { id: "delen-po", label: "➗ Delen" },
-  { id: "tafels-po", label: "✖️ Tafels" },
-  { id: "spelling-ei-ij-au-ou", label: "📝 Spelling ei/ij" },
-  { id: "kommagetallen-po", label: "🔢 Kommagetallen" },
+  { id: "breuken", label: "🍕 Breuken" },
+  { id: "staartdeling", label: "➗ Staartdeling" },
+  { id: "werkwoordspelling", label: "✍️ Werkwoordspelling" },
+  { id: "delen", label: "🍬 Delen" },
+  { id: "tafels", label: "✖️ Tafels" },
+  { id: "spelling-ei-ij", label: "📝 Spelling ei/ij" },
+  { id: "kommagetallen", label: "🔢 Kommagetallen" },
 ];
 
 function schoon(s) {
@@ -127,27 +132,31 @@ export default function OuderkaartPagina({ setPage }) {
   const initId = (() => {
     // Eigen param 'kaart' i.p.v. 'pad' — '?pad=' botst met de globale
     // leerpad-deeplink en zou naar /leren/pad springen.
-    try { return new URLSearchParams(window.location.search || "").get("kaart") || "breuken-po"; }
-    catch { return "breuken-po"; }
+    try { return new URLSearchParams(window.location.search || "").get("kaart") || "breuken"; }
+    catch { return "breuken"; }
   })();
   const [pathId, setPathId] = useState(initId);
   const [path, setPath] = useState(null);
   const [laadFout, setLaadFout] = useState(false);
   const reqRef = useRef(0);
 
+  // Handgeschreven kaart voor dit concept? Dan die gebruiken (geen leerpad laden).
+  const curated = useMemo(() => getOuderkaart(pathId), [pathId]);
+
   useEffect(() => {
+    if (curated) { setPath(null); setLaadFout(false); return; }
     const my = ++reqRef.current;
     setPath(null); setLaadFout(false);
     getLearnPath(pathId)
       .then((p) => { if (my !== reqRef.current) return; if (!p) setLaadFout(true); else setPath(p); })
       .catch(() => { if (my === reqRef.current) setLaadFout(true); });
-  }, [pathId]);
+  }, [pathId, curated]);
 
-  const kaart = useMemo(() => bouwOuderkaart(path), [path]);
-  const conceptTitel = path?.title ? schoon(path.title) : "";
+  const kaart = useMemo(() => (curated ? curated.kaart : bouwOuderkaart(path)), [curated, path]);
+  const conceptTitel = curated ? curated.titel : (path?.title ? schoon(path.title) : "");
   // Kort de titel in tot alleen het onderwerp ("Breuken — cito groep 5-8" → "Breuken").
   const titelKort = conceptTitel.split(/\s[—·]\s/)[0].trim() || conceptTitel;
-  const conceptEmoji = path?.emoji || "👪";
+  const conceptEmoji = curated ? curated.emoji : (path?.emoji || "👪");
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-bg, #0b1020)", color: "var(--color-text, #e8edf5)" }}>
