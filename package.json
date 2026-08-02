@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs && node scripts/check-path-duration.mjs --gate",
+    "prebuild": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs && node scripts/buildUitlegThuis.mjs && node scripts/check-path-duration.mjs --gate",
     "build": "vite build",
     "duration": "node scripts/check-path-duration.mjs",
     "manifest": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs",

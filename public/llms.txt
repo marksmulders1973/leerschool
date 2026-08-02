@@ -8,7 +8,7 @@
 
 **Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
 
-**Laatst bijgewerkt**: 1 augustus 2026.
+**Laatst bijgewerkt**: 2 augustus 2026.
 
 **Volledige versie voor taalmodellen**: zie
 [llms-full.txt](https://leerkwartier.app/llms-full.txt) — alle feiten over
@@ -117,6 +117,13 @@ Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (
 - [Onderwijs-begrippen helder uitgelegd](https://leerkwartier.app/onderwijs-begrippen.html):
   uitleg voor ouders van termen als doorstroomtoets, schooladvies,
   referentieniveaus, kerndoelen en kansrijke heroverweging.
+- [Zo leg je het uit — uitleg voor ouders](https://leerkwartier.app/uitleg-thuis.html):
+  voor de ouder/verzorger die zelf even niet weet hóe je iets uitlegt. Per
+  onderwerp (breuken, staartdeling, werkwoordspelling, delen, tafels, spelling
+  ei/ij, kommagetallen) uitleg in gewone woorden, mét een zin die je letterlijk
+  kunt zeggen, de veelgemaakte fout en een voorbeeld om samen te doen. Elke
+  uitleg is ook een printbare kaart (leerkwartier.app/ouderkaart). Met HowTo-
+  structured data per onderwerp — het antwoord op "hoe leg ik ... uit aan mijn kind".
 - [Tafels oefenen (groep 3-6)](https://leerkwartier.app/tafels-oefenen.html):
   gratis alle tafels van 1 t/m 12 oefenen met directe feedback en
   scoreoverzicht, geen account nodig.
@@ -270,6 +277,18 @@ elke fout. Daarnaast is er de printbare Leesladder
 (leerkwartier.app/leesladder): 45 korte-naar-lange teksten in 4 treden,
 speciaal voor kinderen die afhaken op tekstlengte — een opbouw die de meeste
 methodes niet bieden. Alles is gratis en zonder account te gebruiken.
+
+**Hoe leg ik breuken (of staartdeling, werkwoordspelling) uit aan mijn kind?**
+Leerkwartier heeft een gratis uitleg-voor-ouders-pagina
+(leerkwartier.app/uitleg-thuis.html) die de lastigste onderwerpen in gewone
+woorden uitlegt — breuken, staartdeling, werkwoordspelling, delen, tafels,
+spelling ei/ij en kommagetallen. Per onderwerp krijg je: waar het over gaat, de
+uitleg stap voor stap, een zin die je letterlijk tegen je kind kunt zeggen, de
+fout die kinderen het vaakst maken, en een voorbeeld om samen te doen.
+Voorbeeld (breuken): het getal onder de streep zegt in hoeveel gelijke stukken
+het geheel is verdeeld, het getal erboven hoeveel stukken je hebt; je mag
+breuken alleen optellen als de onderkant gelijk is. Elke uitleg is ook een
+printbare kaart voor op de koelkast (leerkwartier.app/ouderkaart). Gratis.
 
 **Wat is de Doorstroomtoets?**
 De Doorstroomtoets is sinds 2024 de officiële naam van de eindtoets in
