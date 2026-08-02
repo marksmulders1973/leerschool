@@ -8,6 +8,19 @@
 | **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | 📦✅ **BEZORGD 31 jul 14:25 — bij de BUREN op Saskerstraat 225** (Inez woont op 227; PostNL T&T 3SDLTJ101142281, 4,18 kg, order 15653885, €43,56). 4 dagen eerder dan verwacht (di 4 aug). **Heads-up-mail naar Inez verstuurd 31 jul** (thread, incl. T&T-code) zodat ze weet dat ze bij de buren moet aanbellen. A5, 1.000 st., dubbelzijdig, 135 g/m² glans. Druk-PDF: `flyer-HAARLEMMERMEER2027-DRUK.pdf` (generator `scripts/maak-drukpdf-haarlemmermeer.mjs`) | 29 jul | (1) Wachten op Inez' bevestiging dat ze het pakket bij de buren heeft opgehaald — **check-in-mail gestuurd 1 aug** (in-thread: "is alles goed aangekomen?"); reageert ze niet, nudge ~di 5 aug (zij werkt ma-do); (2) **toestemming bedankt-pagina gevraagd ✅ 29 jul** — bij "ja" het klaarstaande Spark Fest-blok in `bedankt.html` activeren (uitgecommentarieerd onder Leergeld-sectie, evt. logo erbij); (3) LinkedIn-concept `Desktop\linkedin-sparkfest-post.md` POST 1 kan live — Mark plakt zelf; (4) september: Inez maakt tasjes, festival zo 18 okt → daarna scan-teller volgen (≥25 scans = goodybag-model uitrollen) |
 | **Ooievaarspas Den Haag (vriend-status)** | ✅ 27 jul: Rob bevestigt "formulier goed binnengekomen"; **accountmanager Esther doet de beoordeling, "komen er z.s.m. op terug"** | 27 jul | Zij sturen vriend-overeenkomst via ValidSign (tekenen!) → plaatsing in OP-aanbod → stadspassen-batch naar andere gemeenten + /ooievaarspas.html-tekst omzetten naar "vriend van". |
 
+## 🎯 SIDN-subsidie (pionier, ≤€10k) — JOUW STAPPEN (elke dag in dagrapport tot ingediend)
+*Concept + begroting klaar (€7.150, laptop eruit, flyers+porto erin). Aanvraag als privépersoon —
+géén stichting nodig voor deze stap. Doorlopend open, géén deadline. Volledig pakket:
+`docs/SIDN-INDIENEN.md` + `docs/SIDN-PIONIERSAANVRAAG-CONCEPT.md`. Toon dit blok in elk
+dagrapport tot alles is afgevinkt.*
+
+- [ ] **1. Quickscan** doen op sidnfonds.nl/aanvragen/pioniers (paar min).
+- [ ] **2. FundPro-account** aanmaken (naam, adres, IBAN voor uitbetaling).
+- [ ] **3. Videopitch opnemen** (~75 sec; script ligt klaar in SIDN-INDIENEN.md — voorlezen kan).
+- [ ] **4. Invulteksten nalopen** + persoonlijk maken (liggen klaar, kopiëren-plakken).
+- [ ] **5. Begroting €7.150 nalopen** (AI-kosten onderbouwd; laptop eruit; flyers+porto erin).
+- [ ] **6. Verzenden** → beslissing binnen 6 weken.
+
 ## 🟠 Prio 2 — loopt, geduld
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
