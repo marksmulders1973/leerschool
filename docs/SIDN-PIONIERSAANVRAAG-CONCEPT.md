@@ -76,14 +76,24 @@ initiatieven ze kunnen hergebruiken.
 
 | Post | Bedrag | Toelichting |
 |---|---|---|
-| **AI-inferentiekosten pilot** (Claude + Gemini-fallback voor de adaptieve uitleg- en "Leg het uit"-motor, ~6-9 mnd pilot) | **€3.000** | Directe projectkost — het hart van de innovatie. |
-| **Ontwikkel-/testlaptop** | **€1.200** | ⚠️ Zie risico-noot: framen als project-specifieke ontwikkelhardware, of schrappen als het de aanvraag verzwakt. |
-| Cloud-infra tijdens pilot (hosting + database-upgrade voor pilot-load) | €600 | Alleen de pilot-meerkost, niet de reguliere basiskosten. |
-| Impact-meting & evaluatie (meetinstrument opzetten, analyse, open rapportage) | €1.500 | |
-| Toegankelijk pilot-materiaal nieuwkomers (taal-eenvoudige uitleg + voorleesfunctie + opmaak) | €1.200 | |
-| Openbaar maken methodiek (documentatie + publicatie learnings) | €800 | Voldoet aan SIDN's deel-eis. |
-| Onvoorzien (~10%) | €900 | |
-| **Totaal** | **€9.200** | Onder het €10.000-plafond. |
+| **AI-kosten pilot (zwaartepunt — de kern van de innovatie)** | **€4.800** | Onderverdeeld ↓ |
+| ↳ Claude + Gemini-fallback (adaptieve uitleg- + "Leg het uit"-Feynman-motor, ~6-9 mnd) | €3.000 | Tekst-uitleg-engine. |
+| ↳ Grok (beeld-/visuele uitleggeneratie: illustraties, sommen, uitlegplaten) | €600 | Visuele laag van de uitleg. |
+| ↳ **Schaal-buffer bij groei** — inferentie schaalt lineair met gebruik; een geslaagde pilot dríjft gebruik op, dus meer kinderen = meer AI-calls | €1.200 | Eerlijke onderbouwing: gebruik = kosten. Dekt de pilot-gedreven gebruiksstijging. |
+| **Ontwikkel-/testlaptop** | €1.200 | ⚠️ Zie risico-noot: framen als project-specifieke ontwikkelhardware, of schrappen als het de aanvraag verzwakt. |
+| Cloud-infra tijdens pilot (hosting + database-upgrade voor pilot-load) | €500 | Alleen de pilot-meerkost, niet de reguliere basiskosten. |
+| Impact-meting & evaluatie (meetinstrument opzetten, analyse, open rapportage) | €1.300 | |
+| Toegankelijk pilot-materiaal nieuwkomers (taal-eenvoudige uitleg + voorleesfunctie + opmaak) | €1.000 | |
+| Openbaar maken methodiek (documentatie + publicatie learnings) | €700 | Voldoet aan SIDN's deel-eis. |
+| Onvoorzien | €400 | |
+| **Totaal** | **€9.900** | Onder het €10.000-plafond. |
+
+> **Waarom de AI-post het grootst mag zijn:** het is de directe, project-gebonden kern
+> van de innovatie én het schaalt met impact. Bij een SIDN-beoordelaar is "AI-inferentie
+> voor de uitlegmotor" veruit de sterkst verdedigbare uitgave — sterker naarmate je 'm
+> koppelt aan de gemeten pilot-groei. Onderbouw de bedragen met je actuele verbruik
+> (Claude ≈ €90/mnd nu; Grok apart; memory `reference_leerkwartier_kosten`) × verwachte
+> pilot-schaal.
 
 **Cofinanciering / eigen inzet (in-kind, versterkt de aanvraag):** Mark's eigen
 ontwikkeluren in vrije tijd zijn onbetaald — te vermelden als eigen bijdrage. SIDN
@@ -94,8 +104,9 @@ waardeert meerdere bronnen/partnerbijdragen.
   algemene uitrusting worden gezien. Twee opties: (a) expliciet framen als project-
   specifieke ontwikkel-/testhardware die nodig is om de pilot te bouwen/testen, óf
   (b) weglaten als de beoordelaar er kritisch op is — het is de zwakste post.
-- **AI-kosten:** sterk verdedigbaar — het is de directe, project-gebonden kern van de
-  innovatie. Sterkste post.
+- **AI-kosten (Claude + Gemini + Grok):** sterk verdedigbaar — directe, project-gebonden
+  kern van de innovatie, schaalt met impact. Sterkste post. De schaal-buffer is eerlijk:
+  meer gebruik = meer inferentiekosten (lineair). Onderbouwen met actueel verbruik × pilot-schaal.
 - **Reguliere doorloopkosten** (bestaande hosting, Claude-abonnement dat toch al loopt)
   NIET opvoeren — dat leest als "organisatiekosten dekken". Alleen de pilot-meerkost.
 
