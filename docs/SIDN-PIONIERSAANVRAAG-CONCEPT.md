@@ -77,7 +77,7 @@ initiatieven ze kunnen hergebruiken.
 | Post | Bedrag | Toelichting |
 |---|---|---|
 | **AI-kosten pilot (zwaartepunt — de kern van de innovatie)** | **€4.800** | Onderverdeeld ↓ |
-| ↳ Claude + Gemini-fallback (adaptieve uitleg- + "Leg het uit"-Feynman-motor, ~6-9 mnd) | €3.000 | Tekst-uitleg-engine. |
+| ↳ Claude + Gemini-fallback (adaptieve uitleg- + "Leg het uit"-Feynman-motor, ~6 mnd) | €3.000 | Tekst-uitleg-engine. SIDN-eis: project binnen 6 mnd afgerond → pilot op 6 mnd scopen. |
 | ↳ Grok (beeld-/visuele uitleggeneratie: illustraties, sommen, uitlegplaten) | €600 | Visuele laag van de uitleg. |
 | ↳ **Schaal-buffer bij groei** — inferentie schaalt lineair met gebruik; een geslaagde pilot dríjft gebruik op, dus meer kinderen = meer AI-calls | €1.200 | Eerlijke onderbouwing: gebruik = kosten. Dekt de pilot-gedreven gebruiksstijging. |
 | **Ontwikkel-/testlaptop** | €1.200 | ⚠️ Zie risico-noot: framen als project-specifieke ontwikkelhardware, of schrappen als het de aanvraag verzwakt. |
