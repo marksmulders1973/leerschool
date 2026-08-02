@@ -53,9 +53,9 @@
     ],
     "intro": "Wat is AI nou écht? Je leert het verschil tussen smalle en algemene AI, hoe machine learning uit data leert (i.p.v. geprogrammeerde regels), de soorten ML + generatieve AI (hoe een chatbot/LLM woord-v",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "alfabet-woordenboek-po",
@@ -156,9 +156,9 @@
     ],
     "intro": "De kern van informatica: algoritmisch denken. Je leert wat een algoritme is (en het verschil met een programma), de 3 bouwstenen (sequentie, selectie, herhaling), hoe je het opschrijft in pseudocode e",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "alinea-functies-tussenkopjes-po",
@@ -185,7 +185,7 @@
     ],
     "intro": "\"Welk tussenkopje past het best boven alinea 3?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer wat een alinea is, hoe je de kernzin vindt (vaak vooraan!), welke taak een alinea",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -589,7 +589,7 @@
     ],
     "intro": "Belasting voor groep 6-8 — waarom we samen betalen voor wegen, scholen en ziekenhuizen, belasting op je loon (bruto → belasting eraf → netto) en btw die in de winkelprijs zit (9% / 21%). Met echte red",
     "stepCount": 4,
-    "checkCount": 20,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -833,7 +833,7 @@
     ],
     "intro": "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er altijd vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -1035,7 +1035,7 @@
     ],
     "intro": "De moeilijkste vragen op de Doorstroomtoets zijn afleid-vragen: het antwoord staat nérgens letterlijk. In dit deel leer je aanwijzingen verzamelen, ze combineren met wat je al weet, en het verschil zi",
     "stepCount": 4,
-    "checkCount": 18,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -1295,9 +1295,9 @@
     ],
     "intro": "Hoe blijf je veilig online? Je leert de bedreigingen (malware: virus/ransomware, phishing, social engineering), hoe je je accounts beschermt (sterke wachtwoorden, 2FA, hashing), wat encryptie is (symm",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "databases-sql-informatica",
@@ -1324,9 +1324,9 @@
     ],
     "intro": "Hoe slaan apps hun gegevens op? Je leert wat een database is (tabellen, records, velden), het relationele model (primaire sleutel, foreign key, waarom opsplitsen), en SQL: gegevens opvragen met SELECT",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "deelsommen-met-rest-po",
@@ -1340,9 +1340,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "delen-po",
@@ -3241,9 +3241,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "feiten-details-opzoeken-po",
@@ -3270,7 +3270,7 @@
     ],
     "intro": "\"Zoek het antwoord op in de tekst\" — dé vaardigheid voor de Doorstroomtoets begrijpend lezen. Leer de vaste zoekstrategie: eerst de vraag lezen en het zoekwoord onderstrepen, dan de tekst scannen, de ",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -3855,9 +3855,9 @@
     ],
     "intro": "Wat zit er ín een computer en hoe werkt het samen? Je leert de onderdelen (CPU, RAM, SSD/HDD, GPU), hoe de CPU rekent (fetch-decode-execute) en de geheugenhiërarchie (vluchtig vs niet-vluchtig), wat e",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "hart-bloed-ademhaling-havo-vwo",
@@ -4609,9 +4609,9 @@
     ],
     "intro": "Op de echte Doorstroomtoets zijn de leesteksten lang: 300 tot 400 woorden met 4 tot 6 vragen per tekst. Hier train je het uithoudingsvermogen én de slimme aanpak: eerst globaal lezen, per vraag terugz",
     "stepCount": 4,
-    "checkCount": 18,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "latijn-vwo",
@@ -4654,9 +4654,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "lettergrepen-klemtoon-po",
@@ -4670,9 +4670,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "lichaam-gezondheid-po",
@@ -5203,9 +5203,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 19,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "middeleeuwen-geschiedenis",
@@ -5500,9 +5500,9 @@
     ],
     "intro": "Hoe werkt internet écht? Je leert wat een netwerk is (LAN/WAN, internet vs web, client–server), IP-adressen + DNS (het 'telefoonboek'), hoe data in pakketjes via routers reist met TCP/IP, en hoe het w",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "nieuwsbericht-lezen-po",
@@ -5529,7 +5529,7 @@
     ],
     "intro": "Kop, eerste alinea, details — een nieuwsbericht zit altijd hetzelfde in elkaar. Leer de zes gouden vragen (wie, wat, waar, wanneer, waarom en hoe) als vragenbril, prik door overdrijvende koppen heen e",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -5574,9 +5574,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "onderwijs-niveaus-vmbo-havo-vwo",
@@ -5603,9 +5603,9 @@
     ],
     "intro": "Wat zijn vmbo, havo en vwo precies — en wat kun je er later mee? Uitleg voor groep 6-8 die nadenkt over de keuze na de Doorstroomtoets: de drie niveaus, de vier vmbo-leerwegen, profielen op havo/vwo, ",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 26,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "onregelmatige-werkwoorden-engels",
@@ -5713,7 +5713,7 @@
     ],
     "intro": "18 vragen Cito-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plinte",
     "stepCount": 6,
-    "checkCount": 18,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -6325,9 +6325,9 @@
     ],
     "intro": "Echt leren programmeren (in Python-stijl). Je leert variabelen & datatypes (int/float/string/boolean), condities (if/elif/else + en/of), herhaling (for & while + de gevreesde oneindige lus) en functie",
     "stepCount": 4,
-    "checkCount": 12,
+    "checkCount": 20,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "pubertijd-groei-po",
@@ -6588,9 +6588,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "ruimtemeetkunde",
@@ -6661,9 +6661,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "samenvatten-hoofdgedachte-po",
@@ -6704,9 +6704,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "schatten-afronden",
@@ -6758,7 +6758,7 @@
     ],
     "intro": "Op de Doorstroomtoets staat vaak een tekst mét een prijslijst, rooster of dienstregeling — en het antwoord vind je alleen door béíde te gebruiken. Leer kruispunt-lezen (zoek de rij, zoek het gegeven),",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -6903,9 +6903,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "spelling",
@@ -7406,7 +7406,7 @@
     ],
     "intro": "Op de Doorstroomtoets krijg je vragen als 'Waarom heeft de schrijver deze tekst geschreven?' en 'Voor wie is deze tekst bedoeld?'. In dit deel leer je de vier schrijversdoelen herkennen, de doelgroep ",
     "stepCount": 4,
-    "checkCount": 18,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -7435,7 +7435,7 @@
     ],
     "intro": "\"Waardoor kwam het dat...?\" — een vaste vraagvorm op de Doorstroomtoets begrijpend lezen. Leer met je leesbril op wat oorzaak en gevolg zijn, herken signaalwoorden als omdat, daardoor en dus, en prik ",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -7695,9 +7695,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "trillingen-golven-havo-vwo",
@@ -7865,7 +7865,7 @@
     ],
     "intro": "\"Hoe voelt Ties zich?\" — terwijl dat nergens staat. Op de Doorstroomtoets krijg je vragen over verhalen en gedichten waarbij het antwoord tussen de regels zit. Leer gevoelens afleiden uit gedrag, ontd",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -8000,7 +8000,7 @@
     ],
     "intro": "\"Naar wie of wat verwijst het woord 'die'?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer de vaste strategie: verwijswoord vinden, terugzoeken in de tekst en controleren of je ",
     "stepCount": 4,
-    "checkCount": 17,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -8457,7 +8457,7 @@
     "id": "wereldorientatie-mix-po",
     "file": "./wereldorientatieMixPo.js",
     "title": "Wereldoriëntatie mix (groep 7-8 Cito-stijl)",
-    "subject": "wereld",
+    "subject": "wereldorientatie",
     "level": "groep7-8",
     "emoji": "🌍",
     "referentieNiveau": "po-doorstroomtoets-wereldorientatie",
@@ -8672,9 +8672,9 @@
     ],
     "intro": "Winst rekenen voor groep 6-8 — inkoop, verkoop en winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs en het verschil tussen opbrengst en winst. Met echte kraam- en pa",
     "stepCount": 3,
-    "checkCount": 16,
+    "checkCount": 26,
     "chapterCount": 3,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "wiskunde-d-vwo",
@@ -8730,7 +8730,7 @@
     ],
     "intro": "Op de Doorstroomtoets komt hij gegarandeerd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit he",
     "stepCount": 4,
-    "checkCount": 18,
+    "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -8942,9 +8942,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "zuren-basen-havo-vwo",
