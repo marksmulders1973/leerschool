@@ -65,7 +65,9 @@ vertrouwen bij fondsen). Dit is de échte drempel — de rest is gewoon werk.
 | **Kansengelijkheid Onderwijs (overheid)** | school+gemeente+partner | uit €13,5 mln | ronde — verifiëren | ⭐ (via consortium) |
 
 ## Nog te verifiëren (niet gokken)
-- Exacte SIDN-aanvraagrondes/deadlines 2026 (site of bellen).
+- ✅ **SIDN-pionier (≤€10k) = DOORLOPEND OPEN, geen deadline** (bevestigd 2 aug via
+  sidnfonds.nl/aanvragen). Projecten >€10k = thema-calls 1-2×/jaar (voor later, ná stichting).
+  Concept-pioniersaanvraag klaar: **docs/SIDN-PIONIERSAANVRAAG-CONCEPT.md**.
 - Kansenfonds/Kinderpostzegels: actuele deadlines + of er thema-calls open staan.
 - Of ANBI direct nodig is of pas later (per fonds verschillend).
 
