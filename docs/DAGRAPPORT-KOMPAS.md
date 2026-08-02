@@ -68,4 +68,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
+| 2 aug 2026 | **1 (↓−2)** | — | events_echt 460/7d · **0/24u** | +0 / 16 | — |
 | 1 aug 2026 | 3 (=) | 86 (−16%) | 619 (−6%) | +1 / 16 | 268 · 1 klik |
+
+*2 aug-notitie: Noord-ster daalde 3→1 en 0 events in 24u (zomerdip + mail-stilte + geen acquisitie). Quizzes 7d = 1, profielen 7d = 4. Zie proactief spijt-later-signaal in Meesterplan: e-maillijst nú vullen vóór de Doorstroomtoets-2027-piek (afname 25 jan–12 feb 2027).*
