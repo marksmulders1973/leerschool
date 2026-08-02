@@ -271,9 +271,57 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     ? `${niveauWoord} ${userLevel}`
     : schoolTypeLabel || null;
 
+  // "Verder waar je was"-kaart — bovenaan de home zodat je 'm meteen ziet als er
+  // een lopend leerpad is (Mark 2 aug). Motor = Stop&Hervat (SH1, LearnPath.jsx):
+  // het resume-punt wordt continu bewaard tijdens het leren, dus de kaart komt
+  // vanzelf terug — niet alleen na een kwartier-stop.
+  const resumeCard = (kwartierResume && onResumeLearnPath && pathManifestById[kwartierResume.pathId]) ? (
+    <button
+      onClick={() => {
+        onResumeLearnPath(kwartierResume.pathId, kwartierResume.stepIdx);
+        setKwartierResume(null);
+      }}
+      style={{
+        width: "100%",
+        padding: "15px 16px",
+        borderRadius: 14,
+        border: "1px solid rgba(0,200,83,0.45)",
+        background: "linear-gradient(135deg, rgba(0,200,83,0.20), rgba(0,200,83,0.07))",
+        color: "#cdd6e2",
+        textAlign: "left",
+        cursor: "pointer",
+        marginBottom: 14,
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        fontFamily: "var(--font-body)",
+      }}
+    >
+      <span style={{ fontSize: 26 }}>▶️</span>
+      <span style={{ flex: 1, minWidth: 0 }}>
+        <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#00e676" }}>
+          Verder waar je was
+        </span>
+        <span style={{ display: "block", fontSize: 12.5, color: "rgba(255,255,255,0.78)", marginTop: 2 }}>
+          {pathManifestById[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}{typeof kwartierResume.checkIdx === "number" && kwartierResume.checkIdx > 0 ? ` · vraag ${kwartierResume.checkIdx + 1}` : ""}
+        </span>
+      </span>
+      <span
+        role="button"
+        tabIndex={0}
+        onClick={(e) => { e.stopPropagation(); clearResume(userName); setKwartierResume(null); }}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); clearResume(userName); setKwartierResume(null); } }}
+        aria-label="Resume wissen"
+        style={{ fontSize: 18, color: "rgba(255,255,255,0.55)", padding: "4px 8px", cursor: "pointer" }}
+      >×</span>
+    </button>
+  ) : null;
+
   return (
     <div style={styles.page}>
-      <Header title={`Hoi ${userName}`} subtitle="Welk kwartier wordt het vandaag?" onBack={onBack} onHome={onHome} />
+      {/* Geen terug-pijl: dit ís de home (Mark 2 aug — een ← maakte het als
+          subpagina voelen). Het 🏠-icoon blijft als expliciete "naar startpagina". */}
+      <Header title={`Hoi ${userName}`} subtitle="Welk kwartier wordt het vandaag?" onHome={onHome} />
 
       <div style={styles.content}>
         {/* Pakket-pill (P2): toont je huidige pakket + opent de uitleg-modal.
@@ -295,6 +343,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           <span style={{ fontSize: 13, fontWeight: 800, color: pakketKleur }}>{pakketLabel}</span>
           <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>· wat is dit?</span>
         </button>
+        {/* Bovenaan: verder waar je was (als er iets te hervatten is) */}
+        {resumeCard}
         <KoppelcodeBanner userName={userName} />
         <NieuwTopografieBanner />
         {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen
@@ -448,54 +498,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           </button>
         )}
 
-        {/* Kwartier-pauze resume — als gebruiker gisteren stopte na 15 min,
-            spring direct terug naar pad+stap waar hij gebleven was. */}
-        {kwartierResume && onResumeLearnPath && pathManifestById[kwartierResume.pathId] && (
-          <button
-            onClick={() => {
-              onResumeLearnPath(kwartierResume.pathId, kwartierResume.stepIdx);
-              setKwartierResume(null);
-            }}
-            style={{
-              width: "100%",
-              padding: "14px 16px",
-              borderRadius: 14,
-              border: "1px solid rgba(0,200,83,0.45)",
-              background: "linear-gradient(135deg, rgba(0,200,83,0.18), rgba(0,200,83,0.06))",
-              color: "#cdd6e2",
-              textAlign: "left",
-              cursor: "pointer",
-              marginBottom: 12,
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              fontFamily: "var(--font-body)",
-            }}
-          >
-            <span style={{ fontSize: 24 }}>▶️</span>
-            <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00e676" }}>
-                Verder waar je was
-              </span>
-              <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
-                {pathManifestById[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}{typeof kwartierResume.checkIdx === "number" && kwartierResume.checkIdx > 0 ? ` · vraag ${kwartierResume.checkIdx + 1}` : ""}
-              </span>
-            </span>
-            <span
-              role="button"
-              tabIndex={0}
-              onClick={(e) => { e.stopPropagation(); clearResume(userName); setKwartierResume(null); }}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); clearResume(userName); setKwartierResume(null); } }}
-              aria-label="Resume wissen"
-              style={{
-                fontSize: 18,
-                color: "rgba(255,255,255,0.55)",
-                padding: "4px 8px",
-                cursor: "pointer",
-              }}
-            >×</span>
-          </button>
-        )}
+        {/* Kwartier-pauze resume-kaart staat nu bovenaan de content (Mark 2 aug):
+            zie {resumeCard} direct onder de pakket-pill. */}
 
         {/* Doorstroomtoets-vraag van de dag — dagelijkse terugkom-haak (retentie,
             Mark 2026-06-05). Hergebruikt de /v/-vragenpool, kost niets. */}
