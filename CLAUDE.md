@@ -370,6 +370,19 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - Payoff: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg."
 - Configuratie in `src/brand.js`.
 
+## AI-vindbaarheid — STANDAARD bij elke verbetering (Mark-wens 2026-08-02)
+
+**Mark: "maak dit altijd de standaard — AI-vindbaarheid altijd verhogen met elke nieuwe verbetering."** Bij élke nieuwe gebruikersgerichte feature, pagina of inhoudsverbetering hoort standaard de vraag: *kan een AI (ChatGPT/Claude/Perplexity/Gemini) dit vinden en citeren?* Zo niet → dat erbij maken. Concreet checklijstje per verbetering:
+
+1. **Crawlbaar maken.** Nieuwe waarde die alleen in een SPA-route leeft (client-gerenderd, achter een query-param of vlag) is onzichtbaar voor crawlers. Maak er een **statische, crawlbare representatie** van in `public/*.html` (zoals de andere landingspagina's). Voorkeur: **genereer die statische pagina uit dezelfde databron** via een `scripts/build*.mjs` in de `prebuild` (zie `scripts/buildUitlegThuis.mjs` → `public/uitleg-thuis.html`), zodat het nooit uit sync loopt.
+2. **Structured data (JSON-LD).** Kies het passende schema: **HowTo** (stap-voor-stap "hoe doe je X"), **FAQPage** (met de échte vraag zoals een ouder 'm typt: "hoe leg ik ... uit aan mijn kind?"), **Article**, **LearningResource**, **BreadcrumbList**. LLM's en Google citeren deze het liefst.
+3. **`public/sitemap.xml`** — nieuwe crawlbare pagina toevoegen.
+4. **`public/llms.txt`** — een hoofdpagina-verwijzing + waar zinvol een AI-citaat-vriendelijke FAQ (vraag + kort, feitelijk antwoord mét de leerkwartier.app-URL). Datum "Laatst bijgewerkt" ophogen. `public/llms-full.txt` idem waar relevant.
+5. **`robots.txt`** laat AI-crawlers al toe (GPTBot/ClaudeBot/PerplexityBot/OAI-SearchBot etc.) — niet blokkeren.
+6. **Meet** het effect in het dagrapport (SEO/AI-vindbaarheid-pijler #10) en zie memory [[project_studiebol_seo_status]] + idee #7 "LLM-SEO als aparte pijler".
+
+Dit is géén losse taak meer maar een vast onderdeel van "af": een verbetering is pas af als de vindbaarheid-kant ook geregeld is (of expliciet is afgewogen waarom niet, bv. bewust premium/privé achter de Familie-poort — dan alleen de gratis "voordeur"-variant crawlbaar maken).
+
 ## Niet doen
 
 - Geen banking/financiële sites openen (bank, betaal, crypto-wallet, broker) bij desktop- of browser-controle.
