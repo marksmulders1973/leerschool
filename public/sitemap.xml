@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leerkwartier.app/aftelweken.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leerkwartier.app/bedankt.html</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
