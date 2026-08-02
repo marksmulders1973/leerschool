@@ -285,6 +285,18 @@ export default async function handler(req, res) {
     ouderRapport = { sent: 0, reden: "ouder-rapport-fout: " + String(e).slice(0, 80) };
   }
 
+  // 🎓 Doorstroomtoets-aftelreeks lift DAGELIJKS mee op deze cron (Vercel Hobby =
+  // max 2 crons, geen eigen slot). No-op buiten het seizoen (sep–feb); houdt zelf
+  // via doorstroom_step bij wie welke fase-mail al had, dus dagelijks aanroepen
+  // is veilig en idempotent.
+  let doorstroomCountdown = null;
+  try {
+    const { stuurDoorstroomCountdown } = await import("./send-doorstroom-countdown.js");
+    doorstroomCountdown = await stuurDoorstroomCountdown({ base, key, RESEND, FROM });
+  } catch (e) {
+    doorstroomCountdown = { sent: 0, reden: "doorstroom-countdown-fout: " + String(e).slice(0, 80) };
+  }
+
   // Drempel: alleen wie nog nooit (last_sent_at null) of >DAGEN_TUSSEN dagen
   // geleden mail kreeg, en niet is uitgeschreven, en op de lesmateriaal-lijst staat.
   const drempel = new Date(Date.now() - DAGEN_TUSSEN * 86400000).toISOString();
@@ -307,9 +319,11 @@ export default async function handler(req, res) {
   if (rijen.length === 0) {
     const rapportPlan = ouderRapport?.sent > 0 ? { "📊 ouder-rapport": ouderRapport.sent } : {};
     if (kwartiercheckWeek?.sent > 0) rapportPlan["🧭 kwartiercheck-week"] = kwartiercheckWeek.sent;
-    const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0);
-    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: kwartiercheckWeek?.fouten || [], reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : ""), perPlan: rapportPlan });
-    return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, reason: "niemand-due" });
+    if (doorstroomCountdown?.sent > 0) rapportPlan[`🎓 aftelreeks (fase ${doorstroomCountdown.fase})`] = doorstroomCountdown.sent;
+    const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0) + (doorstroomCountdown?.sent || 0);
+    const extraFouten = [...(kwartiercheckWeek?.fouten || []), ...(doorstroomCountdown?.fouten || [])];
+    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan });
+    return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, doorstroomCountdown, reason: "niemand-due" });
   }
 
   const oefenvraag = kiesOefenvraag();
@@ -372,16 +386,21 @@ export default async function handler(req, res) {
     if (kwartiercheckWeek.sent > 0) perPlan["🧭 kwartiercheck-week"] = kwartiercheckWeek.sent;
     if (Array.isArray(kwartiercheckWeek.fouten)) fouten.push(...kwartiercheckWeek.fouten);
   }
+  if (doorstroomCountdown) {
+    if (doorstroomCountdown.sent > 0) perPlan[`🎓 aftelreeks (fase ${doorstroomCountdown.fase})`] = doorstroomCountdown.sent;
+    if (Array.isArray(doorstroomCountdown.fouten)) fouten.push(...doorstroomCountdown.fouten);
+  }
   const redenDelen = [
     ouderRapport?.reden ? `ouder-rapport: ${ouderRapport.reden}` : null,
     kwartiercheckWeek?.reden || null,
+    doorstroomCountdown?.reden ? `aftelreeks: ${doorstroomCountdown.reden}` : null,
   ].filter(Boolean);
   await stuurDagrapport(RESEND, FROM, {
-    sent: gelukt + (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0),
+    sent: gelukt + (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0) + (doorstroomCountdown?.sent || 0),
     kandidaten: rijen.length,
     fouten,
     perPlan,
     reden: redenDelen.length ? redenDelen.join(" · ") : undefined,
   });
-  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }

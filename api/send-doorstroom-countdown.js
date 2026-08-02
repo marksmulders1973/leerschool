@@ -172,6 +172,60 @@ async function verstuur(rij, fase, RESEND, FROM) {
   return r.ok;
 }
 
+// Herbruikbare kern: stuurt de huidige-fase-mail naar wie 'm nog niet had.
+// Aangeroepen door (a) de losse handler hieronder en (b) de dagelijkse
+// weekmail-cron (send-weekly-lesmateriaal.js), zodat er geen eigen cron-slot
+// nodig is (Vercel Hobby = max 2 crons). No-op buiten seizoen (sep–feb).
+export async function stuurDoorstroomCountdown({ base, key, RESEND, FROM }) {
+  if (!RESEND) return { sent: 0, reden: "resend-uit" };
+  const today = new Date();
+  const fase = huidigeFase(today);
+  if (fase === 0) return { sent: 0, fase: 0, reden: "buiten-seizoen" };
+  const faseDef = FASES[fase - 1];
+
+  // Ontvangers: lesmateriaal-lijst, niet uitgeschreven, nog niet bij deze fase.
+  const filter =
+    `plan=in.(gratis-lesmateriaal,oefenpakket,leesladder,redactiebladen)` +
+    `&unsubscribed_at=is.null` +
+    `&doorstroom_step=lt.${fase}` +
+    `&select=id,email,kind_voornaam,unsubscribe_token,doorstroom_step` +
+    `&order=doorstroom_step.asc&limit=90`;
+
+  let rijen;
+  try {
+    const q = await sb(`upgrade_waitlist?${filter}`, { method: "GET" }, base, key);
+    rijen = await q.json();
+    if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
+  } catch (e) {
+    return { sent: 0, fase, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) };
+  }
+  if (rijen.length === 0) return { sent: 0, fase, kandidaten: 0, reden: "niemand-due" };
+
+  let gelukt = 0;
+  const fouten = [];
+  for (const rij of rijen) {
+    if (!rij.email || !String(rij.email).includes("@")) continue;
+    try {
+      const ok = await verstuur(rij, faseDef, RESEND, FROM);
+      if (!ok) { fouten.push(String(rij.id).slice(0, 8)); continue; }
+      await sb(
+        `upgrade_waitlist?id=eq.${rij.id}`,
+        {
+          method: "PATCH",
+          headers: { Prefer: "return=minimal" },
+          body: JSON.stringify({ doorstroom_step: fase, doorstroom_last_at: new Date().toISOString() }),
+        },
+        base, key
+      );
+      gelukt++;
+    } catch (e) {
+      fouten.push(String(rij.id).slice(0, 8) + ":" + String(e).slice(0, 50));
+    }
+  }
+
+  return { sent: gelukt, fase, kandidaten: rijen.length, fouten };
+}
+
 export default async function handler(req, res) {
   const secret = process.env.CRON_SECRET;
   const auth = req.headers["authorization"] || "";
@@ -204,52 +258,7 @@ export default async function handler(req, res) {
     }
   }
 
-  const today = new Date();
-  const fase = huidigeFase(today);
-  if (fase === 0) {
-    return res.status(200).json({ ok: true, sent: 0, reason: "buiten-seizoen" });
-  }
-  const faseDef = FASES[fase - 1];
-
-  // Ontvangers: lesmateriaal-lijst, niet uitgeschreven, nog niet bij deze fase.
-  const filter =
-    `plan=in.(gratis-lesmateriaal,oefenpakket,leesladder,redactiebladen)` +
-    `&unsubscribed_at=is.null` +
-    `&doorstroom_step=lt.${fase}` +
-    `&select=id,email,kind_voornaam,unsubscribe_token,doorstroom_step` +
-    `&order=doorstroom_step.asc&limit=90`;
-
-  let rijen;
-  try {
-    const q = await sb(`upgrade_waitlist?${filter}`, { method: "GET" }, base, key);
-    rijen = await q.json();
-    if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
-  } catch (e) {
-    return res.status(500).json({ error: "lijst-lezen-fout", detail: String(e).slice(0, 200) });
-  }
-  if (rijen.length === 0) return res.status(200).json({ ok: true, sent: 0, fase, reason: "niemand-due" });
-
-  let gelukt = 0;
-  const fouten = [];
-  for (const rij of rijen) {
-    if (!rij.email || !String(rij.email).includes("@")) continue;
-    try {
-      const ok = await verstuur(rij, faseDef, RESEND, FROM);
-      if (!ok) { fouten.push(String(rij.id).slice(0, 8)); continue; }
-      await sb(
-        `upgrade_waitlist?id=eq.${rij.id}`,
-        {
-          method: "PATCH",
-          headers: { Prefer: "return=minimal" },
-          body: JSON.stringify({ doorstroom_step: fase, doorstroom_last_at: new Date().toISOString() }),
-        },
-        base, key
-      );
-      gelukt++;
-    } catch (e) {
-      fouten.push(String(rij.id).slice(0, 8) + ":" + String(e).slice(0, 50));
-    }
-  }
-
-  return res.status(200).json({ ok: true, sent: gelukt, fase, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  const result = await stuurDoorstroomCountdown({ base, key, RESEND, FROM });
+  if (Array.isArray(result.fouten)) result.fouten = result.fouten.slice(0, 10);
+  return res.status(200).json({ ok: true, ...result });
 }
