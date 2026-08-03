@@ -26,12 +26,14 @@ export const PARTNER_ACTIVATIE_DREMPEL = 3;
 // (Sleutelwaarde 'pro2027' blijft technisch ongewijzigd voor bestaande apparaten.)
 export const PARTNER_PRO_TOT = "2027-08-01";
 
-// ⚖️ BLIJVENDE codes — hard toegezegd in het getekende "Aanvraagformulier
-// vriend OP" aan de gemeente Den Haag (26 jul 2026): Ooievaarspashouders
-// krijgen het Familie-abonnement BLIJVEND gratis, zonder einddatum en zonder
-// plekken-limiet (max_uses in de DB staat op 1.000.000). Pro (leerkracht-tier)
-// valt hier nadrukkelijk buiten. NIET inkorten zonder nieuwe afspraak met
-// bureau Ooievaarspas.
+// ⚖️ BLIJVENDE codes — CONTRACTUEEL vastgelegd, niet zomaar wijzigen.
+// Hard toegezegd in het getekende "Aanvraagformulier vriend OP" aan de gemeente
+// Den Haag (26 jul 2026) + bevestigd per mail aan Esther Versluis (3 aug 2026):
+// Ooievaarspashouders krijgen het Familie-abonnement BLIJVEND gratis, zonder
+// einddatum en zonder plekken-limiet (max_uses in de DB staat op 1.000.000).
+// Pro (leerkracht-tier) én los kwartier-tegoed vallen hier nadrukkelijk buiten.
+// NIET inkorten/limiteren/van einddatum voorzien zonder een nieuwe schriftelijke
+// afspraak met bureau Ooievaarspas. Volledige afspraak: docs/AFSPRAKEN-OOIEVAARSPAS.md.
 const BLIJVENDE_CODE_PREFIX = "OOIEVAAR";
 
 // Tot wanneer geeft de actieve partner-code gratis Familie?
