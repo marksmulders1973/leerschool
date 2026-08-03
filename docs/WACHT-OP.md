@@ -16,7 +16,7 @@ dagrapport tot alles is afgevinkt.*
 
 - [ ] **1. Quickscan** doen op sidnfonds.nl/aanvragen/pioniers (paar min).
 - [ ] **2. FundPro-account** aanmaken (naam, adres, IBAN voor uitbetaling).
-- [ ] **3. Videopitch opnemen** (~75 sec; script ligt klaar in SIDN-INDIENEN.md — voorlezen kan).
+- [x] **3. Videopitch opnemen** ✅ 3 aug — `Desktop\SIDN-aanvraag\Leerkwartier-videopitch.mp4` (3:14; check FundPro-maxlengte, korte 75-sec versie als back-up in START-HIER).
 - [ ] **4. Invulteksten nalopen** + persoonlijk maken (liggen klaar, kopiëren-plakken).
 - [ ] **5. Begroting €7.150 nalopen** (AI-kosten onderbouwd; laptop eruit; flyers+porto erin).
 - [ ] **6. Verzenden** → beslissing binnen 6 weken.
