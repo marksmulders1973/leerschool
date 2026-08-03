@@ -68,6 +68,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
+| 3 aug 2026 | **1 (=)** | — | events_echt 762/7d (waarvan 2 aug 531 = 1 test-apparaat, ~40/dag reëel) | RLS-afgeschermd (anon) | — |
 | 2 aug 2026 | **1 (↓−2)** | — | events_echt 460/7d · **0/24u** | +0 / 16 | — |
 | 1 aug 2026 | 3 (=) | 86 (−16%) | 619 (−6%) | +1 / 16 | 268 · 1 klik |
 

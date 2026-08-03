@@ -178,8 +178,7 @@ Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (
 - **Kansarme gezinnen**: gezinnen met een laag inkomen, bijstandsontvangers,
   Leergeld-klanten en voedselbank-klanten kunnen kosteloos het
   Familie-niveau gebruiken via een partner-code. Geen abonnement, geen
-  betaalgegevens, geen account nodig. Voor houders van een gemeentelijke
-  stadspas (zoals de Ooievaarspas in Den Haag) loopt een aanvraag.
+  betaalgegevens, geen account nodig.
 
 ## Sociaal-maatschappelijke missie
 
@@ -194,10 +193,6 @@ Leerkwartier werkt actief samen met organisaties die gezinnen helpen:
 - **Voedselbanken** (o.a. Rotterdam, waar Leerkwartier op de schermen in
   de supermarkten staat): klanten van voedselbanken met schoolgaande
   kinderen in groep 6-8 kunnen de app gratis gebruiken.
-- **Gemeentelijke stadspassen**: Leerkwartier heeft een aanvraag ingediend
-  als "vriend van de Ooievaarspas" bij de gemeente Den Haag (in behandeling
-  per juli 2026). Zodra die rond is, krijgen pashouders gratis
-  Familie-toegang.
 - **Huiswerkclubs en sociale wijkteams**: meerdere organisaties in
   achterstandswijken verwijzen gezinnen door naar Leerkwartier.
 
