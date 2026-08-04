@@ -43,6 +43,7 @@ import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
+import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -833,7 +834,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               authUser={authUser}
             />
           )}
-          <GratisLesmateriaal source={`leerpad-klaar-${path.subject || "leerpad"}`} compact />
+          {/* Punt-1 bereik (4 aug): max één capture-kaart op het klaar-scherm.
+              E-mail nog onbekend → e-mailkaart; e-mail al binnen → push-aanbod. */}
+          {(() => {
+            let mailBekend = false;
+            try { mailBekend = localStorage.getItem("lk_lesmateriaal_aangemeld") === "1"; } catch {}
+            return mailBekend
+              ? <PushAanbodKaart playerName={player} plek="leerpad-klaar" />
+              : <GratisLesmateriaal source={`leerpad-klaar-${path.subject || "leerpad"}`} compact />;
+          })()}
         </div>
       </div>
     );
