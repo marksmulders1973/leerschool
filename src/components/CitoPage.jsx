@@ -316,7 +316,9 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             (2026-06-06). Hergebruikt de /v/-pool, kost niets. */}
         <VraagVanDeDag />
 
-        {/* ── Stap 1 + Stap 3 + Bonus banners ───────────────────────── */}
+        {/* ── Stap 1 ── (Stap 3 + Bonus + Papier staan sinds 4 aug ONDER
+            Stap 2 — koude-ouder-test: de pagina toonde Stap 1 → Stap 3 →
+            Stap 2 en dat leest als een fout voor een nieuwe ouder.) */}
         <button
           onClick={startStrategie}
           disabled={!onPickPath}
@@ -340,73 +342,6 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           </div>
           <span style={{ fontSize: 20, color: "rgba(124,77,255,0.6)" }}>›</span>
         </button>
-
-        <button
-          onClick={startSimulatie}
-          style={{
-            textAlign: "left", borderRadius: 18,
-            border: "2px solid rgba(255,107,53,0.4)",
-            background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.08))",
-            padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
-            display: "flex", alignItems: "center", gap: 16,
-          }}
-        >
-          <span style={{ fontSize: 34 }}>⏱️</span>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,107,53,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Stap 3</div>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ff8c42" }}>Hele Doorstroomtoets oefenen</div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-              50 vragen door elkaar · 60 minuten met de klok mee · je ziet welk niveau erbij past
-            </div>
-          </div>
-          <span style={{ fontSize: 20, color: "rgba(255,107,53,0.6)" }}>›</span>
-        </button>
-
-        {onStartLeerpadToets && (
-          <button
-            onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(true); }}
-            style={{
-              textAlign: "left", borderRadius: 18,
-              border: "2px solid rgba(255,213,79,0.4)",
-              background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,179,0,0.06))",
-              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
-              display: "flex", alignItems: "center", gap: 16,
-            }}
-          >
-            <span style={{ fontSize: 34 }}>✨</span>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,213,79,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Bonus</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ffd54f" }}>Korte oefentoets uit je leerpaden</div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                30 vragen uit je leerpaden · met de klok mee · score per onderdeel
-              </div>
-            </div>
-            <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
-          </button>
-        )}
-
-        {onPrintPakket && (
-          <button
-            onClick={() => { SoundEngine.play("click"); onPrintPakket(); }}
-            style={{
-              textAlign: "left", borderRadius: 18,
-              border: "2px solid rgba(0,176,255,0.4)",
-              background: "linear-gradient(135deg, rgba(0,176,255,0.15), rgba(0,176,255,0.05))",
-              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
-              display: "flex", alignItems: "center", gap: 16,
-            }}
-          >
-            <span style={{ fontSize: 34 }}>📄</span>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(0,176,255,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Op papier</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#4fc3f7" }}>Print een oefenpakket (PDF)</div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                Oefenvragen + antwoordsleutel met uitleg · thuis printen of opslaan als PDF
-              </div>
-            </div>
-            <span style={{ fontSize: 20, color: "rgba(0,176,255,0.7)" }}>›</span>
-          </button>
-        )}
 
         {/* ── Stap 2: Per onderdeel — dual-view (📚 Leren | 🎯 Oefenen) ─── */}
         <div style={{ marginTop: 4 }}>
@@ -661,6 +596,75 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             );
           })}
         </div>
+
+        {/* ── Stap 3 + Bonus + Op papier ── (verplaatst tot ná Stap 2 op
+            4 aug — de stap-nummers volgen nu ook visueel 1 → 2 → 3). */}
+        <button
+          onClick={startSimulatie}
+          style={{
+            textAlign: "left", borderRadius: 18,
+            border: "2px solid rgba(255,107,53,0.4)",
+            background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.08))",
+            padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
+            display: "flex", alignItems: "center", gap: 16,
+          }}
+        >
+          <span style={{ fontSize: 34 }}>⏱️</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,107,53,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Stap 3</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ff8c42" }}>Hele Doorstroomtoets oefenen</div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+              50 vragen door elkaar · 60 minuten met de klok mee · je ziet welk niveau erbij past
+            </div>
+          </div>
+          <span style={{ fontSize: 20, color: "rgba(255,107,53,0.6)" }}>›</span>
+        </button>
+
+        {onStartLeerpadToets && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(true); }}
+            style={{
+              textAlign: "left", borderRadius: 18,
+              border: "2px solid rgba(255,213,79,0.4)",
+              background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,179,0,0.06))",
+              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
+              display: "flex", alignItems: "center", gap: 16,
+            }}
+          >
+            <span style={{ fontSize: 34 }}>✨</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,213,79,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Bonus</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ffd54f" }}>Korte oefentoets uit je leerpaden</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                30 vragen uit je leerpaden · met de klok mee · score per onderdeel
+              </div>
+            </div>
+            <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
+          </button>
+        )}
+
+        {onPrintPakket && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onPrintPakket(); }}
+            style={{
+              textAlign: "left", borderRadius: 18,
+              border: "2px solid rgba(0,176,255,0.4)",
+              background: "linear-gradient(135deg, rgba(0,176,255,0.15), rgba(0,176,255,0.05))",
+              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
+              display: "flex", alignItems: "center", gap: 16,
+            }}
+          >
+            <span style={{ fontSize: 34 }}>📄</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(0,176,255,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Op papier</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#4fc3f7" }}>Print een oefenpakket (PDF)</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                Oefenvragen + antwoordsleutel met uitleg · thuis printen of opslaan als PDF
+              </div>
+            </div>
+            <span style={{ fontSize: 20, color: "rgba(0,176,255,0.7)" }}>›</span>
+          </button>
+        )}
 
         {/* OBLITERATOR-koppeling (Mark wens 2026-05-17): discrete knop voor
             beloning-spel — bereikbaar als pauze tussen oefenen door. */}
