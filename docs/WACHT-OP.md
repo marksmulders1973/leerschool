@@ -8,23 +8,18 @@
 | **Spark Fest flyers (1.000 goodybags, festival zo 18 okt)** | 📦✅ **BEZORGD 31 jul 14:25 — bij de BUREN op Saskerstraat 225** (Inez woont op 227; PostNL T&T 3SDLTJ101142281, 4,18 kg, order 15653885, €43,56). 4 dagen eerder dan verwacht (di 4 aug). **Heads-up-mail naar Inez verstuurd 31 jul** (thread, incl. T&T-code) zodat ze weet dat ze bij de buren moet aanbellen. A5, 1.000 st., dubbelzijdig, 135 g/m² glans. Druk-PDF: `flyer-HAARLEMMERMEER2027-DRUK.pdf` (generator `scripts/maak-drukpdf-haarlemmermeer.mjs`) | 29 jul | (1) **2 aug: Inez reageerde (via LinkedIn) dat ze MORGEN (3 aug) inhoudelijk antwoordt — Mark gaf 👍.** Voorgeschiedenis: check-in-mail 1 aug + LinkedIn-bericht van Claude 2 aug ("is alles goed aangekomen?"). Wacht nu op haar inhoudelijke antwoord ~3 aug; alleen nudgen als er do 4-vr 5 aug nog niets is (zij werkt ma-do); (2) **toestemming bedankt-pagina gevraagd ✅ 29 jul** — bij "ja" het klaarstaande Spark Fest-blok in `bedankt.html` activeren (uitgecommentarieerd onder Leergeld-sectie, evt. logo erbij); (3) LinkedIn-concept `Desktop\linkedin-sparkfest-post.md` POST 1 kan live — Mark plakt zelf; (4) september: Inez maakt tasjes, festival zo 18 okt → daarna scan-teller volgen (≥25 scans = goodybag-model uitrollen) |
 | **Ooievaarspas Den Haag (vriend-status)** | **3 aug: Esther Versluis reageerde** (aanvullende vragen). ✅ OP-info van site gehaald + **8 vragen beantwoord/verstuurd 3 aug**. Nu wachten op haar **beoordeling** van de aanvraag. | 3 aug | ⚖️ Voorwaarde Esther: vriendschap gaat **pas in bij paywall-lancering (~begin 2027)** + pas dán vermelding. Afspraken vastgelegd in `docs/AFSPRAKEN-OOIEVAARSPAS.md`. Bij akkoord: vriend-overeenkomst via ValidSign → (pas in 2027) plaatsing in OP-aanbod + stadspassen-batch + welkomstpagina opnieuw bouwen. |
 
-## 🎯 SIDN-subsidie (pionier, ≤€10k) — JOUW STAPPEN (elke dag in dagrapport tot ingediend)
-*Concept + begroting klaar (€7.150, laptop eruit, flyers+porto erin). Aanvraag als privépersoon —
-géén stichting nodig voor deze stap. Doorlopend open, géén deadline. Volledig pakket:
-`docs/SIDN-INDIENEN.md` + `docs/SIDN-PIONIERSAANVRAAG-CONCEPT.md`. Toon dit blok in elk
-dagrapport tot alles is afgevinkt.*
-
-- [ ] **1. Quickscan** doen op sidnfonds.nl/aanvragen/pioniers (paar min).
-- [ ] **2. FundPro-account** aanmaken (naam, adres, IBAN voor uitbetaling).
-- [x] **3. Videopitch opnemen** ✅ 3 aug — `Desktop\SIDN-aanvraag\Leerkwartier-videopitch.mp4` (3:14; check FundPro-maxlengte, korte 75-sec versie als back-up in START-HIER).
-- [ ] **4. Invulteksten nalopen** + persoonlijk maken (liggen klaar, kopiëren-plakken).
-- [ ] **5. Begroting €7.150 nalopen** (AI-kosten onderbouwd; laptop eruit; flyers+porto erin).
-- [ ] **6. Verzenden** → beslissing binnen 6 weken.
+## 🎯 SIDN-subsidie — ✅ INGEDIEND 4 aug 2026 (€7.150, aanvraag-nr 140670)
+*Alle stappen afgerond (samen met Claude via FundPro): quickscan groen, account aangemaakt
+(login: `Desktop\SIDN-aanvraag\inloggegevens-fundpro.txt`), 15 projectvragen, projectplan +
+begroting als PDF-bijlagen, videopitch ingekort naar 2:58 (limiet 3:00) en geüpload,
+budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitslag
+± half september** (dagrapport-regel: "⏳ wachten op SIDN"; vanaf ~15 sep gmail checken).*
 
 ## 🟠 Prio 2 — loopt, geduld
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
 | Outreach-reacties (~355 mails: Leergeld, scholen, voedselbanken, huiswerkclubs, bibliotheken) | Zomervakantie voorbij | jul | Reacties verwacht v.a. eind aug; warme reacties → warme-leads-lijst + reply |
+| **Flyer-ontvangstchecks 18-jul-zendingen** (geen van drie bevestigde ontvangst per mail; Enschede indirect bewezen via 1e code-claim 27 jul) | Drachten: check-mail **verstuurd 4 aug** (Zapier). Purmerend + Enschede: **concepten klaar in Mark's Gmail-Concepten** (Zapier-tegoed was op) — Mark drukt 2× op Verzenden | 4 aug | Bevestiging binnen → regel afvoeren; geen reactie na ~2 wkn → 1 vriendelijke reminder |
 | **Voedselbank Lelystad** (voorzitter Theo Grootjen + heel bestuur in cc) vroeg 28 jul wat de band met Stichting Leergeld is | Besluit bestuur na onze uitleg (reply verstuurd 28 jul: geen formele band, wel samenwerkingen — eerlijk uitgelegd) | 28 jul | Bij "ja" → code LELYSTAD2027 aanmaken + flyer-aanbod |
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 | Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
