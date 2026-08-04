@@ -76,15 +76,16 @@ Cito + examens versterken. Drie type werk:
   géén navigatie/effect geven, op een leeg scherm eindigen, of een deeplink produceren die op het huidige pad
   niet werkt. Zoek specifiek naar: relatieve `?pad=`/`?...`-links (werken alleen vanaf root), rol/niveau-filters
   die een niet-lege telling toch leeg tonen, disabled-knoppen zonder uitleg. Bewijs = screenshot vóór/na klik.
-- [ ] **DK2 — Moeilijke-woorden-agent**: agent die alle user-facing copy (src/components, src/features, banners,
-  leerpad-titels/subtitels, proPlan.js, statische HTML) scant op woorden die een ouder/kind van 10 niet kent:
-  Engelse leenwoorden (pacing, countdown, skim&scan, simulatie, indicatie), dev-jargon (module, component,
-  database, uitlegPad, trackId), en vaktermen zonder uitleg. Levert een gerangschikte vervang-lijst met
-  kindvriendelijke alternatieven. NB: "simulatie/indicatie/pacing/countdown/skim&scan" 31 jul al gefixt in
-  CitoPage/CitoLeerpadToets/PlayQuiz/ResultsPage/proPlan — gebruik als voorbeeld-patroon, zoek de rest.
-- [ ] **DK3 — Deeplink-robuustheid**: overweeg `?pad=`/`?id=`/`?go=` van élk pad te laten werken (nu alleen root /);
-  nu is de banner-fix een pleister (`/?pad=`). Router-sync bij niet-root pathname mag de deeplink-page niet
-  overschrijven. Raakt kern-routing (App.jsx ~230-282) → zorgvuldig testen.
+- [x] **DK2 — Moeilijke-woorden-agent** ✅ 4 aug (v198): agent-scan over alle user-facing copy → 5 echte
+  vondsten gefixt: "Ouder-zicht"→"Meekijken" (MyMastery), "een ouder"/"ouder-account"→"ouder of verzorger"
+  (KindAcceptBanner 2×), "topic"→"onderwerp" (TopicPicker), "(AVG art. 8)"→"(Dit vraagt de privacywet.)"
+  (AgeGate), "optioneel Pro-pakket"→kindtaal zonder "optioneel" (RondleidingPage), "Taalverzorging"+uitleg
+  (cito-toets-oefenen.html). 30+ overige teksten door de agent goedgekeurd.
+- [ ] **DK3 — Deeplink-robuustheid** *(analyse ✅ 4 aug, bouw open — architectuur, eerst Mark-go)*: agent-analyse
+  bevestigt: alle bestaande links zijn al veilig (absoluut `/?pad=`, mails gebruiken `${SITE}/?pad=`), "kritieke"
+  banner-vondst was vals alarm. Structurele fix voorgesteld (~3-4 uur): centrale `src/app/queryParams.js`-helper
+  (getQueryParam + buildDeepLink + validators), router-sync query-param-bewust maken (App.jsx ~230-282),
+  feature-flags centraliseren. Voorkomt de hele bug-klasse van 31 jul. Raakt kern-routing → aparte sessie.
 
 ## ⏸ SPRINT — Stop & hervat exact (Mark 1 aug: "kind moet altijd kunnen stoppen en exact terugkomen")
 

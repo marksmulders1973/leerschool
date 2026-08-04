@@ -112,7 +112,7 @@ export default function KindAcceptBanner({ userName }) {
                   lineHeight: 1.3,
                 }}
               >
-                Een ouder wil je voortgang volgen
+                Een ouder of verzorger wil je voortgang volgen
               </div>
               <div
                 style={{
@@ -123,7 +123,7 @@ export default function KindAcceptBanner({ userName }) {
                   marginTop: 4,
                 }}
               >
-                Iemand heeft jouw naam ingevoerd in een ouder-account. Wil je
+                Iemand heeft jouw naam ingevoerd in het account van een ouder of verzorger. Wil je
                 dat hij of zij je oefenscores in Leerkwartier kan zien?
                 Je kunt dit later altijd weer intrekken.
               </div>

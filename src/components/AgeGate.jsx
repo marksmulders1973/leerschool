@@ -151,7 +151,7 @@ export default function AgeGate({ open = false, onConsent, onClose }) {
               lineHeight: 1.5,
             }}>
               <strong style={{ color: "#ffb74d" }}>Onder de 16?</strong> Vraag dan
-              een ouder/voogd om hier akkoord te geven. (AVG art. 8)
+              een ouder of verzorger om hier akkoord te geven. (Dit vraagt de privacywet.)
             </div>
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0 0 8px" }}>
               <strong>E-mail van ouder</strong> (optioneel — helpt ons later contact te zoeken)

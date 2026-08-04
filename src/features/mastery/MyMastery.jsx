@@ -76,7 +76,7 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
               textAlign: "center",
             }}
           >
-            👀 <strong>Ouder-zicht</strong> — alleen lezen, je kunt zelf geen oefening starten.
+            👀 <strong>Meekijken</strong> — alleen lezen, je kunt hier zelf geen oefening starten.
           </Card>
         )}
 

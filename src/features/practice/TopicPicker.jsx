@@ -67,7 +67,7 @@ export default function TopicPicker({ categoryId, onBack, onHome, onPickTopic })
     <div style={styles.page}>
       <Header
         title={`${titel} — kies een onderwerp 🔍`}
-        subtitle="Klik op een topic om er direct over te oefenen"
+        subtitle="Klik op een onderwerp om er direct over te oefenen"
         onBack={onBack}
         onHome={onHome}
       />

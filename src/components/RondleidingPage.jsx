@@ -20,7 +20,7 @@ const FAQ = [
   },
   {
     q: "Kost het iets?",
-    a: "Nee. De kern is gratis te gebruiken — alle leerpaden, oefenen, examenvragen. Géén reclame, géén abonnement-verplichting. Later (vanaf 2027) komt er optioneel een Pro-pakket met extra AI-uitleg.",
+    a: "Nee. De kern is gratis te gebruiken — alle leerpaden, oefenen, examenvragen. Géén reclame, géén abonnement-verplichting. Wie wil, kan er later (vanaf 2027) betaalde extra's bij nemen — maar dat hoeft niet, de leer-kern blijft gratis.",
   },
   {
     q: "Werkt het echt?",
