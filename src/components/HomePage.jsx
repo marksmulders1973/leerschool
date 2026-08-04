@@ -11,6 +11,7 @@ import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import supabase from "../supabase.js";
 import { track, bronDatumTijd } from "../utils.js";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
+import { OUDER_QUOTES } from "../data/ouderQuotes.js";
 import usePwaInstall from "../shared/usePwaInstall.js";
 import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 
@@ -1382,6 +1383,35 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
               wél uitleg die werkt.
             </div>
+          </div>
+        )}
+
+        {/* 💬 Echte-quotes-strip (Mark 4 aug 2026, sociaal-bewijs-plan): rendert
+            pas zodra er quotes MET schriftelijke toestemming in
+            src/data/ouderQuotes.js staan. Nooit verzonnen quotes — een
+            onzichtbare sectie is beter dan een nep-quote. */}
+        {step === "role" && OUDER_QUOTES.length > 0 && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, display: "grid", gap: 10 }}>
+            {OUDER_QUOTES.map((q, i) => (
+              <figure key={i} style={{
+                margin: 0, background: "rgba(255,213,79,0.07)",
+                border: "1px solid rgba(255,213,79,0.30)", borderRadius: 16,
+                padding: "14px 18px",
+              }}>
+                <blockquote style={{
+                  margin: 0, fontFamily: "var(--font-body)", fontSize: 13.5,
+                  color: "rgba(255,255,255,0.9)", lineHeight: 1.55, fontStyle: "italic",
+                }}>
+                  “{q.tekst}”
+                </blockquote>
+                <figcaption style={{
+                  marginTop: 8, fontFamily: "var(--font-display)", fontSize: 12,
+                  fontWeight: 700, color: "#ffd54f",
+                }}>
+                  — {q.naam}{q.rol ? <span style={{ color: "rgba(255,255,255,0.6)", fontWeight: 500 }}> · {q.rol}</span> : null}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         )}
 

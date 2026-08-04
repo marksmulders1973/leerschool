@@ -7,6 +7,7 @@ import { BIO_PLATEN } from "./data/bioPlaten.jsx";
 import ErrorBoundary, { isChunkLoadError, recoverFromChunkError } from "./app/ErrorBoundary.jsx";
 import { Analytics } from "@vercel/analytics/react";
 import { BOUW_VERSIE } from "./versie.js";
+import { vangBron } from "./features/tracking/bron.js";
 import "./shared/tokens.css";
 
 // PWA chunk-load-error vangen voordat React 'm ziet. Bij async dynamic
@@ -48,6 +49,11 @@ if (typeof window !== "undefined") {
 const _params =
   typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
 const bioPlaatId = _params.get("bioplaat");
+
+// 🧭 Bron van dit apparaat vastleggen (first touch) vóórdat de app rendert —
+// zie src/features/tracking/bron.js. Moet vóór React zodat de referrer en
+// query-params nog ongemoeid zijn.
+if (typeof window !== "undefined") vangBron();
 
 // Tijdelijk build-stempel (Mark 2 jul, tijdens de park-bouwfase): piepklein
 // datum/tijd-label rechtsboven zodat je ziet of je naar de laatste versie

@@ -3,6 +3,7 @@
 // Geëxtraheerd uit App.jsx op 2026-05-06 (P3b deel 3).
 
 import supabase from "../../supabase.js";
+import { getBron } from "../../features/tracking/bron.js";
 
 /**
  * Lees streak + last-played-date van het profiel zodat de juiste
@@ -47,13 +48,31 @@ export async function updateStreak({ userId, streak, date }) {
 export async function upsertProfile({ userId, displayName, level, role, schoolType }) {
   if (!userId) return;
   try {
-    await supabase.from("profiles").upsert({
+    const row = {
       id: userId,
       display_name: displayName,
       level,
       role,
       school_type: schoolType || "",
-    });
+    };
+    // Bron-stempel (4 aug 2026): waar kwam dit account vandaan? Eenmalig —
+    // alleen zetten als het profiel nog geen bron heeft, zodat een later
+    // herhaalbezoek de oorspronkelijke bron nooit overschrijft.
+    try {
+      const bron = getBron();
+      if (bron?.bron) {
+        const { data } = await supabase
+          .from("profiles")
+          .select("signup_bron")
+          .eq("id", userId)
+          .maybeSingle();
+        if (!data?.signup_bron) {
+          row.signup_bron = bron.bron;
+          row.signup_bron_meta = { landing: bron.landing, referrer: bron.referrer, ts: bron.ts };
+        }
+      }
+    } catch { /* bron-stempel mag het profiel-opslaan nooit blokkeren */ }
+    await supabase.from("profiles").upsert(row);
   } catch {}
 }
 
