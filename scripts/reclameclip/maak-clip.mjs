@@ -37,14 +37,15 @@ const STANDAARD_SCENES = [
   { type: "app", duur: 3, caption: "4 × 4 × 4 = 64", url: "https://leerkwartier.app/kubus.html?z=4&ref=6", wachtMs: 9000 },
   { type: "app", duur: 4, caption: "6 × 6 × 6 = 216 — wiskunde die je kunt zíén", url: "https://leerkwartier.app/kubus.html?z=6&ref=6", wachtMs: 9000 },
   { type: "titel", duur: 4, kop: "De Doorstroomtoets komt eraan.", sub: "Veel kinderen oefenen — maar begrijpen het niet écht." },
-  { type: "app", duur: 4, caption: "Elke dag één vraag van de dag", url: "https://leerkwartier.app/vandaag", wachtMs: 6000 },
+  { type: "app", duur: 4, caption: "Elke dag een vraag van de dag — in Doorstroomtoets-stijl", url: "https://leerkwartier.app/vandaag", wachtMs: 6000 },
   { type: "app", duur: 5, caption: "Fout antwoord? Geen 'helaas!' …", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord"] },
   { type: "app", duur: 6, caption: "… maar uitleg die simpeler wordt tot het kwartje valt", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord", { zoekTekst: "impeler" }] },
+  { type: "app", duur: 5, caption: "Oefen de échte Doorstroomtoets-onderdelen: rekenen, taal en lezen", url: "https://leerkwartier.app/doorstroomtoets-oefentoets", wachtMs: 7000 },
   { type: "app", duur: 4, caption: "Honderden oefenpaden — van breuken tot begrijpend lezen", url: "https://leerkwartier.app/leren", wachtMs: 7000 },
   { type: "titel", duur: 4, kop: "Deze week: de vraag van de dag over de ooievaars 🦅", sub: "Elke dag een nieuwe vraag, uit het echte nieuws." },
   { type: "app", duur: 5, caption: "Leren wordt beloond in je eigen park", url: "https://leerkwartier.app/dierentuin", wachtMs: 14000 },
-  { type: "titel", duur: 4, kop: "Voor ouders en verzorgers", sub: "Volg de voortgang — een kwartier per dag is genoeg." },
-  { type: "cta", duur: 6, kop: "Gratis oefenen — geen account nodig", sub: "leerkwartier.app" },
+  { type: "titel", duur: 4, kop: "Voor ouders en verzorgers", sub: "Volg de voortgang richting de Doorstroomtoets — een kwartier per dag is genoeg." },
+  { type: "cta", duur: 6, kop: "Klaar voor de Doorstroomtoets — gratis oefenen, geen account nodig", sub: "leerkwartier.app" },
 ];
 
 const configPad = process.argv[2];
