@@ -21,6 +21,8 @@ import { shuffleOptiesSeeded } from "../../shared/shuffleOpties.js";
 import { generateCode, track } from "../../utils.js";
 import { saveQuiz } from "../../data/repos/quizzesRepo.js";
 import { TAKENLIJST_TYPE } from "../../data/takenlijst.js";
+import PaywallGate from "../../subscription/PaywallGate.jsx";
+import { PRO_MODEL } from "../../subscription/proPlan.js";
 
 // Snelkeuzes = de tien Cito-kern-struikelonderwerpen uit het bouwplan, zodat
 // een leerkracht in één tik klaar is zonder te hoeven zoeken.
@@ -83,7 +85,7 @@ function bouwItems(path, max = MAX_OPGAVEN) {
   return items;
 }
 
-export default function WerkbladPagina({ onClose, userId }) {
+export default function WerkbladPagina({ onClose, userId, authUser = null }) {
   const params = (() => {
     try { return new URLSearchParams(window.location.search || ""); } catch { return new URLSearchParams(); }
   })();
@@ -271,7 +273,14 @@ export default function WerkbladPagina({ onClose, userId }) {
 
         {pathId && (
           items.length > 0 ? (
-            <PrintKnoppen trackPrefix="werkblad" trackProps={{ pad: pathId }} />
+            // Printen = straks Pro (leerkracht); digitaal oefenen via de
+            // deelcode hieronder blijft altijd gratis.
+            <PaywallGate feature="werkblad-print" authUser={authUser}>
+              <PrintKnoppen trackPrefix="werkblad" trackProps={{ pad: pathId }} />
+              <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
+                {PRO_MODEL.kort} (Pro voor leerkrachten) · de deelcode hieronder blijft altijd gratis
+              </div>
+            </PaywallGate>
           ) : (
             <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>
               {laadFout ? "Dit onderwerp kon niet geladen worden." : "Werkblad wordt samengesteld…"}

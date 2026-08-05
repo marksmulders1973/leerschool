@@ -1605,7 +1605,7 @@ export default function App() {
       )}
       {page === "werkblad" && (
         <Suspense fallback={<PageLoader />}>
-          <WerkbladPagina onClose={() => setPage("teacher-home")} userId={authUser?.id} />
+          <WerkbladPagina onClose={() => setPage("teacher-home")} userId={authUser?.id} authUser={authUser} />
         </Suspense>
       )}
       {page === "self-study" && (

@@ -38,6 +38,9 @@ export const FEATURE_GATES = {
   "parent-dashboard": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "school-dashboard": [TIERS.TEACHER_PRO],
   "generate-questions": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  // Werkbladen printen = Pro (leerkracht); digitaal oefenen via deelcode/QR
+  // blijft altijd gratis (docs/LEERKRACHT-WERKBLAD-PLAN.md Fase 3).
+  "werkblad-print": [TIERS.TEACHER_PRO],
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).

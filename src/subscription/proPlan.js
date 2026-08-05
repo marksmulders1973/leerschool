@@ -139,8 +139,10 @@ export const PRO_FEATURES = {
     laag: "leerkracht",
     blurb:
       "Je eigen (school)logo op toetsen en oefenbladen, onbeperkt toetsen " +
-      "maken, voortgang per leerling inzien en resultaten exporteren — voor " +
-      "je hele klas. Leerpaden klaarzetten blijft gratis.",
+      "maken, onbeperkt werkbladen printen (12 opgaven + antwoordblad, met " +
+      "QR om thuis verder te oefenen), voortgang per leerling inzien en " +
+      "resultaten exporteren — voor je hele klas. Leerpaden klaarzetten " +
+      "blijft gratis.",
     status: "live",
   },
 };

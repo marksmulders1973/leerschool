@@ -57,6 +57,7 @@ const FEATURE_LABELS = {
   "parent-dashboard": "Ouder-dashboard",
   "school-dashboard": "Docent-dashboard",
   "generate-questions": "AI-vragen-generator",
+  "werkblad-print": "Werkbladen printen",
 };
 
 export default function PaywallGate({ feature, authUser = null, children, fallback = null }) {
