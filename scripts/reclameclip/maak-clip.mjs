@@ -32,10 +32,9 @@ mkdirSync(WERK, { recursive: true });
 // bewust een fout antwoord (zodat de uitleg-flow in beeld komt).
 const STANDAARD_SCENES = [
   { type: "titel", duur: 3, kop: "Leerkwartier", sub: "Een kwartier per dag — écht begrijpen wat je leert." },
-  // 3D-kubus-opening (Mark 5 aug): drie maten die zichtbaar groeien — wiskunde die je kunt zíén.
-  { type: "app", duur: 3, caption: "Zie het vóór je: 2 × 2 × 2 = 8", url: "https://leerkwartier.app/kubus.html?z=2&ref=6", wachtMs: 9000 },
-  { type: "app", duur: 3, caption: "4 × 4 × 4 = 64", url: "https://leerkwartier.app/kubus.html?z=4&ref=6", wachtMs: 9000 },
-  { type: "app", duur: 4, caption: "6 × 6 × 6 = 216 — wiskunde die je kunt zíén", url: "https://leerkwartier.app/kubus.html?z=6&ref=6", wachtMs: 9000 },
+  // 3D-kubus-opening (Mark 5 aug): de kubus als bewegend clipje — echte animatie
+  // opgenomen van /kubus.html (groeit 1→2→3→4 en krimpt terug).
+  { type: "kubusvideo", duur: 9, caption: "Zie het vóór je: 2×2×2 → 3×3×3 → 4×4×4" },
   { type: "titel", duur: 4, kop: "De Doorstroomtoets komt eraan.", sub: "Veel kinderen oefenen — maar begrijpen het niet écht." },
   { type: "app", duur: 4, caption: "Elke dag een vraag van de dag — in Doorstroomtoets-stijl", url: "https://leerkwartier.app/vandaag", wachtMs: 6000 },
   { type: "app", duur: 5, caption: "Fout antwoord? Geen 'helaas!' …", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord"] },
@@ -96,6 +95,22 @@ for (let i = 0; i < SCENES.length; i++) {
 }
 await telefoon.close();
 
+// ── Stap 1b: kubus-animatie opnemen (voor de video-scène) ──
+let kubusWebm = null;
+if (SCENES.some((s) => s.type === "kubusvideo")) {
+  const opnameCtx = await browser.newContext({
+    viewport: { width: 460, height: 640 },
+    recordVideo: { dir: WERK, size: { width: 460, height: 640 } },
+  });
+  const opnamePage = await opnameCtx.newPage();
+  await opnamePage.goto("https://leerkwartier.app/kubus.html", { waitUntil: "domcontentloaded", timeout: 45000 });
+  await opnamePage.waitForTimeout(4000 + 14000); // laden + ruim 2 groei-cycli
+  const vid = opnamePage.video();
+  await opnameCtx.close();
+  kubusWebm = await vid.path();
+  console.log("✓ kubus-animatie opgenomen");
+}
+
 // ── Stap 2: dia's bouwen (1080×1920) en fotograferen ──
 const qrData = await QRCode.toDataURL("https://leerkwartier.app/?utm_source=clip", { margin: 1, width: 300 });
 
@@ -119,6 +134,9 @@ function diaHtml(s) {
   </style></head><body><div class="logo">Leerkwartier</div>`;
   if (s.type === "titel") return `${basis}<div class="kop">${s.kop}</div>${s.sub ? `<div class="sub">${s.sub}</div>` : ""}<div class="voet">leerkwartier.app</div></body></html>`;
   if (s.type === "cta") return `${basis}<div class="kop">${s.kop}</div><div class="cta-site">${s.sub}</div><img class="qr" src="${qrData}"><div class="voet">Doorstroomtoets · groep 6, 7 en 8</div></body></html>`;
+  // Achtergrond-dia voor de kubus-video: caption bovenin, midden leeg — de
+  // opgenomen animatie wordt daar met ffmpeg overheen gelegd.
+  if (s.type === "kubusvideo") return `${basis}<div class="caption" style="position:absolute;top:190px;left:70px;right:70px;">${s.caption}</div><div class="voet">leerkwartier.app — gratis oefenen</div></body></html>`;
   return `${basis}<div class="caption">${s.caption}</div><img class="tel" src="${pathToFileURL(s.schot)}"><div class="voet">leerkwartier.app — gratis oefenen</div></body></html>`;
 }
 
@@ -137,30 +155,42 @@ for (let i = 0; i < SCENES.length; i++) {
 }
 await browser.close();
 
-// ── Stap 3: ffmpeg — dia's + lichte inzoom + jingle → mp4 ──
+// ── Stap 3: ffmpeg — per scène een videosegment, dan aan elkaar + jingle ──
+// Dia-scènes krijgen een lichte inzoom; de kubus-scène krijgt de opgenomen
+// animatie als échte video over de achtergrond-dia heen.
 const totaal = diaPaden.reduce((a, d) => a + d.duur, 0);
-const inputs = [];
-const filters = [];
-diaPaden.forEach((d, i) => {
-  inputs.push("-loop", "1", "-t", String(d.duur), "-i", d.pad);
-  filters.push(
-    `[${i}:v]scale=1080:1920,zoompan=z='min(1+0.0009*on,1.07)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25,format=yuv420p[v${i}]`
-  );
-});
-const concat = diaPaden.map((_, i) => `[v${i}]`).join("") + `concat=n=${diaPaden.length}:v=1:a=0[vout]`;
-const audioIdx = diaPaden.length;
 const uitPad = `${UIT_DIR}\\clip-${DATUM}.mp4`;
-const args = [
-  "-y", ...inputs,
+const basisEnc = ["-r", "25", "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-an", "-pix_fmt", "yuv420p"];
+const segmenten = [];
+console.log("ffmpeg: segmenten bouwen…");
+diaPaden.forEach((d, i) => {
+  const seg = `${WERK}\\seg-${String(i).padStart(2, "0")}.mp4`;
+  if (SCENES[i].type === "kubusvideo" && kubusWebm) {
+    execFileSync("ffmpeg", [
+      "-y", "-loop", "1", "-t", String(d.duur), "-i", d.pad,
+      "-ss", "6", "-t", String(d.duur), "-i", kubusWebm,
+      "-filter_complex", "[1:v]scale=840:-2[k];[0:v][k]overlay=(W-w)/2:(H-h)/2+60",
+      "-t", String(d.duur), ...basisEnc, seg,
+    ], { stdio: ["ignore", "ignore", "pipe"] });
+  } else {
+    execFileSync("ffmpeg", [
+      "-y", "-loop", "1", "-t", String(d.duur), "-i", d.pad,
+      "-vf", "scale=1080:1920,zoompan=z='min(1+0.0009*on,1.07)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=25",
+      "-t", String(d.duur), ...basisEnc, seg,
+    ], { stdio: ["ignore", "ignore", "pipe"] });
+  }
+  segmenten.push(seg);
+});
+const lijstPad = `${WERK}\\segmenten.txt`;
+writeFileSync(lijstPad, segmenten.map((s) => `file '${s.replace(/\\/g, "/")}'`).join("\n"));
+const eindArgs = [
+  "-y", "-f", "concat", "-safe", "0", "-i", lijstPad,
   ...(existsSync(JINGLE) ? ["-stream_loop", "-1", "-i", JINGLE] : []),
-  "-filter_complex", filters.join(";") + ";" + concat +
-    (existsSync(JINGLE) ? `;[${audioIdx}:a]atrim=0:${totaal},afade=t=out:st=${totaal - 2}:d=2[aout]` : ""),
-  "-map", "[vout]",
-  ...(existsSync(JINGLE) ? ["-map", "[aout]"] : []),
-  "-t", String(totaal), "-r", "25", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
-  ...(existsSync(JINGLE) ? ["-c:a", "aac", "-b:a", "128k"] : []),
-  uitPad,
+  ...(existsSync(JINGLE)
+    ? ["-filter_complex", `[1:a]atrim=0:${totaal},afade=t=out:st=${totaal - 2}:d=2[aout]`, "-map", "0:v", "-map", "[aout]", "-c:a", "aac", "-b:a", "128k"]
+    : ["-map", "0:v"]),
+  "-c:v", "copy", "-t", String(totaal), uitPad,
 ];
-console.log("ffmpeg draait…");
-execFileSync("ffmpeg", args, { stdio: ["ignore", "ignore", "inherit"] });
-console.log(`\n🎬 KLAAR: ${uitPad} (${totaal}s, ${diaPaden.length} dia's)`);
+console.log("ffmpeg: samenvoegen…");
+execFileSync("ffmpeg", eindArgs, { stdio: ["ignore", "ignore", "pipe"] });
+console.log(`\n🎬 KLAAR: ${uitPad} (${totaal}s, ${diaPaden.length} scènes, kubus als video)`);
