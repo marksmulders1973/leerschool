@@ -82,6 +82,9 @@ export const PAGE_TO_PATH = {
   // door te leren, en altijd een link terug naar de leer-app (2026-06-30).
   maatje: "/maatje",
   // Leerkracht
+  // Werkblad voor de klas — printbaar A4 uit een oefenpad + QR naar huis
+  // (leerkracht-kanaal Fase 1, docs/LEERKRACHT-WERKBLAD-PLAN.md).
+  werkblad: "/leerkracht/werkblad",
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",
   "class-manager": "/leerkracht/klassen",

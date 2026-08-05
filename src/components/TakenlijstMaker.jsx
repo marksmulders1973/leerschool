@@ -10,7 +10,7 @@ import { TAKENLIJST_TYPE } from "../data/takenlijst.js";
 // "takenlijst"), zodat de leerling-flow (TakenlijstView) 'm via de code opent.
 //
 // Props: onClose() — terug naar het leerkracht-dashboard. userId? — created_by.
-export default function TakenlijstMaker({ onClose, userId }) {
+export default function TakenlijstMaker({ onClose, userId, onWerkblad }) {
   const [title, setTitle] = useState("");
   const [intro, setIntro] = useState("");
   const [zoek, setZoek] = useState("");
@@ -87,6 +87,11 @@ export default function TakenlijstMaker({ onClose, userId }) {
             <button onClick={() => { try { navigator.clipboard?.writeText(opgeslagen.code); } catch {} }} style={{ ...inputStyle, width: "auto", cursor: "pointer", fontWeight: 700 }}>📋 Kopieer code</button>
             <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(deelTekst)}`, "_blank", "noopener")} style={{ background: "#25D366", color: "#06281a", border: "none", borderRadius: 10, padding: "11px 16px", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>Deel via WhatsApp</button>
           </div>
+          {onWerkblad && (
+            <button onClick={onWerkblad} style={{ marginTop: 14, background: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.25)", color: "#fff", borderRadius: 10, padding: "11px 16px", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>
+              🖨️ Print er een werkblad bij
+            </button>
+          )}
           <button onClick={onClose} style={{ marginTop: 22, background: "none", border: "none", color: "rgba(255,255,255,0.6)", fontSize: 14, cursor: "pointer", textDecoration: "underline" }}>← Terug naar dashboard</button>
         </div>
       </div>

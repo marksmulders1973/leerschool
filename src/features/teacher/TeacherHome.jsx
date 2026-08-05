@@ -8,7 +8,7 @@ import supabase from "../../supabase.js";
 import ProBadge from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
   // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
@@ -361,9 +361,17 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
         {/* Takenlijst (Brian's idee 2026-06-28): zet een lijstje leerpaden klaar
             voor de klas i.p.v. alleen een toets. */}
         {onCreateTakenlijst && (
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #7b1fa2, #9c27b0)", width: "100%", marginBottom: 16 }} onClick={onCreateTakenlijst}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #7b1fa2, #9c27b0)", width: "100%", marginBottom: 12 }} onClick={onCreateTakenlijst}>
             <span style={{ fontSize: 28 }}>📋</span>
             <span style={{ fontWeight: 700 }}>Nieuwe Takenlijst</span>
+          </button>
+        )}
+        {/* Werkblad (leerkracht-kanaal Fase 1, 5 aug 2026): printbaar A4 uit een
+            oefenpad + QR waarmee leerlingen thuis gratis verder oefenen. */}
+        {onMaakWerkblad && (
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #c62828, #e53935)", width: "100%", marginBottom: 16 }} onClick={onMaakWerkblad}>
+            <span style={{ fontSize: 28 }}>🖨️</span>
+            <span style={{ fontWeight: 700 }}>Werkblad printen</span>
           </button>
         )}
 
