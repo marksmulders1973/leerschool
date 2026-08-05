@@ -25,7 +25,6 @@
 
 | Wanneer | Wat | Wie |
 |---|---|---|
-| ~15 aug | ~100 flyers naar **Drachten** (De Giek 22-A, t.a.v. Schaake) — toegezegd "rond 15 aug"; stickervel SMALLINGERLAND2027 door Claude | Mark verstuurt |
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
 | 18 aug | **Leergeld-golf-55** versturen (na go) | Mark-go → Claude |
@@ -47,6 +46,12 @@
 - **Quote-toestemming**: Inez + Teresa om één citaat vragen voor de site
   (concepten liggen klaar zodra Mark go geeft — idee #9).
 - **Echte-telefoon-test park** (open sinds UX-overhaul juli).
+
+## ✅ Recent afgevoerd (ter naslag)
+
+- ~~Drachten ~100 flyers "rond 15 aug"~~ — **al verstuurd op 18 jul** (in de
+  5-enveloppen-zending met Purmerend + Enschede; Schaake per reply geïnformeerd).
+  Stond onterecht nog als 15-aug-actie; Mark zag het zelf (5 aug).
 
 ## ⏸️ Wachten — geen actie, alleen onthouden
 
