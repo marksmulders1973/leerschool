@@ -18,6 +18,9 @@ import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
 import { shuffleOptiesSeeded } from "../../shared/shuffleOpties.js";
+import { generateCode, track } from "../../utils.js";
+import { saveQuiz } from "../../data/repos/quizzesRepo.js";
+import { TAKENLIJST_TYPE } from "../../data/takenlijst.js";
 
 // Snelkeuzes = de tien Cito-kern-struikelonderwerpen uit het bouwplan, zodat
 // een leerkracht in één tik klaar is zonder te hoeven zoeken.
@@ -80,7 +83,7 @@ function bouwItems(path, max = MAX_OPGAVEN) {
   return items;
 }
 
-export default function WerkbladPagina({ onClose }) {
+export default function WerkbladPagina({ onClose, userId }) {
   const params = (() => {
     try { return new URLSearchParams(window.location.search || ""); } catch { return new URLSearchParams(); }
   })();
@@ -90,6 +93,12 @@ export default function WerkbladPagina({ onClose }) {
   const [laadFout, setLaadFout] = useState(false);
   const [metAntwoordblad, setMetAntwoordblad] = useState(true);
   const [qrUrl, setQrUrl] = useState("");
+  // Digitale uitgang: deelcode voor de klas (1-taak-takenlijst in quizzes,
+  // zelfde patroon als TakenlijstMaker — leerlingen vullen de code in).
+  const [deelcode, setDeelcode] = useState(null);
+  const [codeQr, setCodeQr] = useState("");
+  const [codeBezig, setCodeBezig] = useState(false);
+  const [codeFout, setCodeFout] = useState("");
   const reqRef = useRef(0);
 
   // Alle paden uit het manifest, zonder examen-paden.
@@ -112,6 +121,9 @@ export default function WerkbladPagina({ onClose }) {
     const my = ++reqRef.current;
     setPath(null);
     setLaadFout(false);
+    setDeelcode(null);
+    setCodeQr("");
+    setCodeFout("");
     getLearnPath(pathId)
       .then((p) => {
         if (my !== reqRef.current) return;
@@ -137,9 +149,44 @@ export default function WerkbladPagina({ onClose }) {
     return () => { alive = false; };
   }, [pathId, thuisLink]);
 
+  // QR van de deelcode — leerlingen scannen of typen de code.
+  useEffect(() => {
+    let alive = true;
+    setCodeQr("");
+    if (!deelcode) return;
+    import("qrcode")
+      .then((QR) => QR.toDataURL(`https://leerkwartier.app/?code=${deelcode.code}`, { margin: 1, width: 160, color: { dark: "#111111", light: "#ffffff" } }))
+      .then((url) => { if (alive) setCodeQr(url); })
+      .catch(() => { /* code als tekst blijft werken */ });
+    return () => { alive = false; };
+  }, [deelcode]);
+
   const items = useMemo(() => bouwItems(path), [path]);
   const titel = path?.title ? schoon(path.title) : "";
   const emoji = path?.emoji || "📝";
+
+  async function maakDeelcode() {
+    if (!path || codeBezig) return;
+    setCodeBezig(true);
+    setCodeFout("");
+    const code = generateCode();
+    const manifest = paden.find((p) => p.id === pathId);
+    const obj = {
+      type: TAKENLIJST_TYPE,
+      id: "taken-" + Date.now(),
+      code,
+      title: titel,
+      intro: null,
+      created_by: userId || null,
+      created_at: new Date().toISOString(),
+      taken: [{ id: "t0", title: titel, pathId, stepCount: manifest?.stepCount || 0 }],
+    };
+    const { error } = await saveQuiz({ id: obj.id, code, quiz: obj, userId });
+    setCodeBezig(false);
+    if (error) { setCodeFout("Deelcode maken lukte niet. Probeer het zo nog eens."); return; }
+    try { track("werkblad_deelcode", { pad: pathId }); } catch { /* */ }
+    setDeelcode({ code });
+  }
 
   const voet = (
     <div style={{ display: "flex", alignItems: "center", gap: 14, borderTop: "2px solid #c8102e", marginTop: 22, paddingTop: 12 }}>
@@ -231,6 +278,38 @@ export default function WerkbladPagina({ onClose }) {
             </div>
           )
         )}
+
+        {/* Digitale uitgang: hetzelfde onderwerp als klas-opdracht met deelcode. */}
+        {items.length > 0 && (
+          <div style={{ marginTop: 16, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "14px 16px" }}>
+            <div style={{ fontSize: 14, fontWeight: 800, marginBottom: 4 }}>💻 Liever digitaal met je klas?</div>
+            {!deelcode ? (
+              <>
+                <div style={{ fontSize: 13, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.55, marginBottom: 10 }}>
+                  Maak een deelcode: leerlingen vullen 'm in op leerkwartier.app en oefenen dit onderwerp
+                  online — met uitleg bij elke fout, zonder account.
+                </div>
+                <button onClick={maakDeelcode} disabled={codeBezig} style={{ padding: "11px 18px", borderRadius: 10, border: "none", background: "linear-gradient(135deg,#00c853,#00e676)", color: "#06211a", fontSize: 14, fontWeight: 800, cursor: "pointer", opacity: codeBezig ? 0.7 : 1 }}>
+                  {codeBezig ? "Bezig…" : "🔢 Maak deelcode voor je klas"}
+                </button>
+                {codeFout && <div style={{ color: "#ff8a80", fontSize: 13, marginTop: 8 }}>{codeFout}</div>}
+              </>
+            ) : (
+              <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+                {codeQr && <img src={codeQr} alt={`QR-code voor deelcode ${deelcode.code}`} style={{ width: 96, height: 96, borderRadius: 8, background: "#fff", padding: 4 }} />}
+                <div style={{ flex: 1, minWidth: 200 }}>
+                  <div style={{ fontSize: 12, color: "var(--color-text-muted, #9aa4c7)" }}>Deelcode — zet op het bord of in de klas-app</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 800, letterSpacing: 3, color: "#69f0ae" }}>{deelcode.code}</div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 6 }}>
+                    <button onClick={() => { try { navigator.clipboard?.writeText(deelcode.code); } catch { /* */ } }} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.06)", color: "inherit", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>📋 Kopieer code</button>
+                    <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(`Oefenen in Leerkwartier: vul code ${deelcode.code} in op leerkwartier.app, of open: https://leerkwartier.app/?code=${deelcode.code}`)}`, "_blank", "noopener")} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "#25D366", color: "#06281a", fontSize: 13, fontWeight: 800, cursor: "pointer" }}>Deel via WhatsApp</button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
         {items.length > 0 && (
           <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginTop: 14 }}>
             👇 Hieronder zie je hoe het werkblad eruitziet. Klik op <b>Printen</b> of <b>Opslaan als PDF</b>.

@@ -8,7 +8,7 @@
 
 **Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
 
-**Laatst bijgewerkt**: 2 augustus 2026.
+**Laatst bijgewerkt**: 5 augustus 2026.
 
 **Volledige versie voor taalmodellen**: zie
 [llms-full.txt](https://leerkwartier.app/llms-full.txt) — alle feiten over
@@ -110,7 +110,9 @@ Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (
   een leerkracht zet in 3 stappen een oefen-lijstje klaar voor de klas (kies
   onderwerpen → deel een code → leerlingen oefenen + vinken af, met uitleg op 3
   niveaus). Gratis, geen leerling-account nodig. Distributie-wig voor het
-  klas-kanaal.
+  klas-kanaal. Nieuw (5 aug 2026): op dezelfde pagina ook een printbaar
+  A4-werkblad per onderwerp (12 opgaven + antwoordblad) met een QR-code
+  waarmee leerlingen thuis gratis verder oefenen.
 - [Gratis bijles-alternatief voor de Doorstroomtoets](https://leerkwartier.app/gratis-bijles.html):
   voor ouders die bijles te duur vinden — het kind oefent zelf met uitleg op
   3 niveaus, een kwartier per dag, zonder de kosten van een docent.
