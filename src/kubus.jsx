@@ -7,10 +7,15 @@ import KubusGroeiAnimatie from "./components/learn/3d/KubusGroeiAnimatie.jsx";
 
 const APP_URL = "https://leerkwartier.app/";
 
+// ?z=N zet de kubus stil op maat N (2/4/6…) — voor reclame-stills; ?ref=M
+// bepaalt de camera-referentie zodat een reeks (2→4→6) zichtbaar groeit.
 function KubusLanding() {
+  const params = new URLSearchParams(window.location.search);
+  const vastZ = Number(params.get("z")) || null;
+  const cameraRef = vastZ ? Number(params.get("ref")) || Math.max(vastZ, 4) : null;
   return (
     <>
-      <KubusGroeiAnimatie height={320} linkHref={APP_URL} />
+      <KubusGroeiAnimatie height={320} linkHref={APP_URL} vastZ={vastZ} cameraRef={cameraRef} />
       <p className="lk-intro">
         Een kwartier per dag — écht begrijpen wat je leert.{" "}
         <a href={APP_URL}>Leerkwartier.app →</a>

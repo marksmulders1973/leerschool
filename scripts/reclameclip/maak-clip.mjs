@@ -32,6 +32,10 @@ mkdirSync(WERK, { recursive: true });
 // bewust een fout antwoord (zodat de uitleg-flow in beeld komt).
 const STANDAARD_SCENES = [
   { type: "titel", duur: 3, kop: "Leerkwartier", sub: "Een kwartier per dag — écht begrijpen wat je leert." },
+  // 3D-kubus-opening (Mark 5 aug): drie maten die zichtbaar groeien — wiskunde die je kunt zíén.
+  { type: "app", duur: 3, caption: "Zie het vóór je: 2 × 2 × 2 = 8", url: "https://leerkwartier.app/kubus.html?z=2&ref=6", wachtMs: 9000 },
+  { type: "app", duur: 3, caption: "4 × 4 × 4 = 64", url: "https://leerkwartier.app/kubus.html?z=4&ref=6", wachtMs: 9000 },
+  { type: "app", duur: 4, caption: "6 × 6 × 6 = 216 — wiskunde die je kunt zíén", url: "https://leerkwartier.app/kubus.html?z=6&ref=6", wachtMs: 9000 },
   { type: "titel", duur: 4, kop: "De Doorstroomtoets komt eraan.", sub: "Veel kinderen oefenen — maar begrijpen het niet écht." },
   { type: "app", duur: 4, caption: "Elke dag één vraag van de dag", url: "https://leerkwartier.app/vandaag", wachtMs: 6000 },
   { type: "app", duur: 5, caption: "Fout antwoord? Geen 'helaas!' …", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord"] },

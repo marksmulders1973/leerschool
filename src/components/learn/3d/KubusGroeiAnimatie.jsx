@@ -22,7 +22,10 @@ const Z_SEQUENCE = [1, 2, 3, 4, 3, 2];
 const STAP_MS = 950;          // hoe lang elke maat in beeld blijft
 const MAX_Z = 4;              // vaste camera-referentie zodat z=4 het scherm vult
 
-export default function KubusGroeiAnimatie({ onCTA, height = 320, linkHref = null }) {
+// vastZ: zet de kubus stil op één maat (bv. 2/4/6 — voor reclame-stills via
+// /kubus.html?z=N); cameraRef bepaalt dan t.o.v. welke maat de camera staat,
+// zodat een reeks stills (2→4→6) écht zichtbaar groeit.
+export default function KubusGroeiAnimatie({ onCTA, height = 320, linkHref = null, vastZ = null, cameraRef = null }) {
   // Promo-modus: tik op de kubus → direct door naar Leerkwartier (originele
   // 3D-kubus op de homepage). Gebruikt op de deelbare hook-pagina /kubus.html.
   // Zonder linkHref = oefen-modus: tik → tel de blokjes.
@@ -30,7 +33,7 @@ export default function KubusGroeiAnimatie({ onCTA, height = 320, linkHref = nul
   const shape3dRef = useRef(null);
   const idxRef = useRef(0);
 
-  const [z, setZ] = useState(1);
+  const [z, setZ] = useState(vastZ || 1);
   const [groeit, setGroeit] = useState(true);   // auto-animatie aan/uit
   const [telModus, setTelModus] = useState(false);
   const [teller, setTeller] = useState(0);
@@ -41,7 +44,7 @@ export default function KubusGroeiAnimatie({ onCTA, height = 320, linkHref = nul
 
   // ── Auto groei/krimp ──────────────────────────────────────────────────────
   useEffect(() => {
-    if (!groeit || telModus) return undefined;
+    if (vastZ || !groeit || telModus) return undefined;
     const id = window.setInterval(() => {
       idxRef.current = (idxRef.current + 1) % Z_SEQUENCE.length;
       setZ(Z_SEQUENCE[idxRef.current]);
@@ -88,7 +91,7 @@ export default function KubusGroeiAnimatie({ onCTA, height = 320, linkHref = nul
           dimensions={{ zijde: z }}
           labels={[{ text: `${z} cm`, axis: "x" }]}
           height={height}
-          cameraReferenceDim={MAX_Z}
+          cameraReferenceDim={cameraRef || MAX_Z}
           cameraDistanceFactor={2.4}
           showUnitCubes
           unitCubeColorBy="layer-y"
