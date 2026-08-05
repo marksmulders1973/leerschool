@@ -109,6 +109,25 @@ Criteria: Cito-kern groep 6-8, veel checks, herkenbare juf-zoekwoorden.
 (Generator werkt generiek op elk pad; deze 10 krijgen de kwaliteits-check met de hand:
 kloppen de opgaven op papier, geen plaatje-afhankelijke vragen zonder plaatje.)
 
+### Fase 5 — Persoonlijke QR (Mark 5 aug, na Fase 2)
+Omdat er geen login/naam nodig is, kan een QR de rol van "wie ben ik" overnemen.
+Kern: een kort willekeurig token (nooit de naam), alléén oefenvoortgang erachter,
+intrekbaar (nieuwe QR = oude vervalt).
+- **5a — Ouder-koppel-QR (eerst):** kind toont QR, ouder/verzorger scant →
+  `parent_child_links`-koppeling gelegd. Lost de ~1-koppeling-bottleneck van het
+  maandag-weekrapport op en voedt de Familie-tier.
+- **5b — QR in elke mail (Mark 5 aug: "dan raken ze 't niet kwijt"):** vast blok
+  bovenaan élke Resend-mail (welkom, weekmail, weekrapport): QR + code als tekst +
+  link. Technisch: QR-plaatje via eigen endpoint (`api/qr/<token>.png`) — base64
+  in mail toont Gmail niet; tekst-code = fallback bij geblokkeerde afbeeldingen.
+  Elke mail wordt zo een terugkeer-knop: scan = direct in de app, geen inlog.
+  Veiligheid = magic-link-niveau: doorgestuurde mail geeft toegang tot voortgang;
+  token intrekbaar houden.
+- **5c — Meeneem-QR:** voortgang naar een ander apparaat verhuizen (scan op de
+  tablet → verder waar je was); lost ook parkmaatjes-account-sync op. Vervaltijd
+  op het token.
+- **5d — Deel-QR** (vrienden-actie, kleinste hefboom; kan meeliften op referral.js).
+
 ## Bewust NIET (bewaking)
 
 - Geen nieuwe Supabase-tabellen — deelcode blijft in `quizzes` (takenlijst-patroon).
