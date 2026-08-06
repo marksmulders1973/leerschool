@@ -30,7 +30,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 3 | **Partners/stadspassen** (Ooievaarspas, Spark Fest goodiebags, supermarkt-schermen) | 🟢 warm | ↑ | hoogste-waarde warme leads |
 | 4 | **E-maillijst / waitlist** | 🟠 klein maar echt | → | 16 totaal; groeit traag |
 | 5 | **LinkedIn** (Mark persoonlijk + bedrijfspagina) | 🟡 pril | ↑ | pagina live; connecties groeien |
-| 6 | **Socials FB/IG/Threads** | 🟡 pril | ↑ | 561 weergaven/28d (+54%); **reel 5 aug (Jeugdjournaal-haakje) = 308 weergaven in één avond** vs 3 per foto-post → reels zijn het format |
+| 6 | **Socials FB/IG/Threads** | 🟡 pril | ↑ | 561 weergaven/28d (+54%); **reel 5 aug = 308 bereik** vs 3 per foto → reels zijn het format. ⚠️ 24u-analyse 6 aug: gem. kijktijd ~1 sec, 0 interacties/kliks/volgers → hook moet in seconde 1 + clip naar 10-15 sec; IG-reel flopte (9) door ontbrekende caption; dagvraag-foto's = dood gewicht (3-8 bereik) |
 
 ---
 
@@ -68,6 +68,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
+| 6 aug avond | **3 (=)** | — (Vercel uitgelogd) | events_echt 1.471/7d · 37/24u | +0 / 16 (7d: +1) | reel-analyse: 308 bereik, ~1s kijktijd, 0 interactie; IG-reel 9 (geen caption); foto's 3-8; Threads 1 like; **3× quote-JA → live v205** |
 | 6 aug 2026 | **3 (↑+2)** | — (Vercel uitgelogd in Claude-Chrome) | events_echt 1.472/7d · 53/24u (question_answered 790, quiz_started 87 — echte oefen-activiteit) | +0 / 16 | **561 (+54%)** · reel 5 aug = 308 |
 | 3 aug 2026 | **1 (=)** | — | events_echt 762/7d (waarvan 2 aug 531 = 1 test-apparaat, ~40/dag reëel) | RLS-afgeschermd (anon) | — |
 | 2 aug 2026 | **1 (↓−2)** | — | events_echt 460/7d · **0/24u** | +0 / 16 | — |
