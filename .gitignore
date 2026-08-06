@@ -11,3 +11,4 @@ fix_answers.py
 fix_antwoord_lengte.py
 fix_definitie_vragen.py
 replace-groep7.*
+tmp-*.mjs
