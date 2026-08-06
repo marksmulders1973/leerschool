@@ -16,5 +16,27 @@
 // doorstroomtoets-landingspagina's (public/*.html) + Review/JSON-LD.
 //
 // Formaat: { tekst: "…", naam: "Voornaam", rol: "moeder, groep 8" }
+//
+// Toestemmingen 6 aug 2026 (schriftelijk per mail, exact deze formuleringen
+// + naamsvermeldingen — niet herformuleren zonder nieuwe toestemming):
+// - Inez de Ruiter 10:07 "Dat mag, hoor."
+// - R. Schaake 11:18 "Prima om op de website te zetten!"
+// - Amber van Leeuwen (VB Rotterdam) 11:33 "Tuurlijk mag je die zin gebruiken."
 
-export const OUDER_QUOTES = [];
+export const OUDER_QUOTES = [
+  {
+    tekst: "Wat fijn dat je hiermee gezinnen helpt die dat goed kunnen gebruiken.",
+    naam: "Inez",
+    rol: "Stichting Leergeld Haarlemmermeer",
+  },
+  {
+    tekst: "Een mooi initiatief! Onze focus is voedsel, maar mooie initiatieven willen wij wel steunen.",
+    naam: "R. Schaake",
+    rol: "Voedselbank Smallingerland",
+  },
+  {
+    tekst: "Wat een leuk initiatief! We zien er zeker een meerwaarde in om de app te promoten.",
+    naam: "Voedselbank Rotterdam",
+    rol: "",
+  },
+];
