@@ -56,7 +56,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 7²?",
+        q: "Hoeveel is 7²?",
         options: ["49", "14", "9", "77"],
         answer: 0,
         wrongHints: [null, "Niet optellen — bij kwadraat **vermenigvuldig** je het getal met zichzelf.", "Welke bewerking zit er in een kwadraat? Doe je + of ×?", "Niet de cijfers naast elkaar plakken — een kwadraat is geen samenstelling. Wat is de bewerking?"],
@@ -92,7 +92,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 8²?",
+        q: "Hoeveel is 8²?",
         options: ["64", "16", "82", "48"],
         answer: 0,
         wrongHints: [null, "Niet optellen — een kwadraat is een vermenigvuldiging met zichzelf.", "Niet samenstellen — een kwadraat is geen nieuw getal opbouwen, het is een bewerking.", "Welke bewerking zit er in een kwadraat? Doe je + of ×, en met welk ander getal?"],

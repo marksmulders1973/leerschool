@@ -8,13 +8,13 @@ export const KWARTIERCHECK_VRAGEN = [
   // ─── TAFELS ────────────────────────────────────────────────────
   {
     id: "tafels-1a", concept: "tafels", niveau: 1,
-    vraag: "Wat is 6 × 7?",
+    vraag: "Hoeveel is 6 × 7?",
     opties: ["36", "42", "48", "56"],
     correct: 1,
   },
   {
     id: "tafels-1b", concept: "tafels", niveau: 1,
-    vraag: "Wat is 8 × 9?",
+    vraag: "Hoeveel is 8 × 9?",
     opties: ["63", "72", "81", "64"],
     correct: 1,
   },
@@ -78,7 +78,7 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "procenten-1b", concept: "procenten", niveau: 1,
-    vraag: "Wat is 50% van 40?",
+    vraag: "Hoeveel is 50% van 40?",
     opties: ["10", "20", "25", "30"],
     correct: 1,
   },

@@ -125,7 +125,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 10% van 240?",
+        q: "Hoeveel is 10% van 240?",
         options: ["24", "2400", "10", "120"],
         answer: 0,
         wrongHints: [
@@ -154,7 +154,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 30% van 80?",
+        q: "Hoeveel is 30% van 80?",
         options: ["24", "240", "300", "2,4"],
         answer: 0,
         wrongHints: [
@@ -181,7 +181,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 15% van 60? (uit het hoofd)",
+        q: "Hoeveel is 15% van 60? (uit het hoofd)",
         options: ["9", "12", "10", "15"],
         answer: 0,
         wrongHints: [
@@ -207,7 +207,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is 22% van 350?",
+        q: "Hoeveel is 22% van 350?",
         options: ["77", "722", "7,7", "1,57"],
         answer: 0,
         wrongHints: [
@@ -370,7 +370,7 @@ const steps = [
         ],
       },
       {
-        q: "Wat is 35% van 80?",
+        q: "Hoeveel is 35% van 80?",
         options: ["28", "35", "115", "2,28"],
         answer: 0,
         wrongHints: [
@@ -460,7 +460,7 @@ const steps = [
           "100 is alleen het basisjaar. De prijs is gestegen — moet de index dan boven of onder 100 liggen?",
         ],
       },
-      { q: "Wat is 25% van 80?", options: ["20","25","40","2"], answer: 0, wrongHints: [null, "Dat is het percentage zelf.", "Te veel.", "Te weinig."] },
+      { q: "Hoeveel is 25% van 80?", options: ["20","25","40","2"], answer: 0, wrongHints: [null, "Dat is het percentage zelf.", "Te veel.", "Te weinig."] },
       { q: "Een trui van €40 met 30% korting kost?", options: ["€28","€12","€30","€10"], answer: 0, wrongHints: [null, "Dat is de korting zelf, niet wat je betaalt.", "Je betaalt het grootste deel nog — reken het deel dat overblijft.", "Te laag — trek de korting van €40 af."] },
       { q: "Stijging van 50 naar 75 = welk percentage?", options: ["50%","25%","20%","75%"], answer: 0, wrongHints: [null, "Dat is de toename in getallen, niet in procenten.", "Vergelijk de toename met waar je begon (50).", "Dat is het eindgetal, niet de stijging."] },
       { q: "**BTW** in NL standaard?", options: ["21%","9%","19%","25%"], answer: 0, wrongHints: [null, "Dat is het lage tarief (o.a. eten).", "Dat tarief bestaat hier niet.", "Net niet — geen Nederlands tarief."] },

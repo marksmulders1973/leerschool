@@ -15,7 +15,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "ruimtemeetkunde",
     "stepIdx": 4
   },
-  "Wat is 15% van 240?": {
+  "Hoeveel is 15% van 240?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -67,7 +67,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten",
     "stepIdx": 6
   },
-  "Wat is 75% van 200?": {
+  "Hoeveel is 75% van 200?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -83,7 +83,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "statistiek",
     "stepIdx": 3
   },
-  "Wat is 120% van 50?": {
+  "Hoeveel is 120% van 50?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -119,7 +119,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "ruimtemeetkunde",
     "stepIdx": 5
   },
-  "Wat is 5% van 1200?": {
+  "Hoeveel is 5% van 1200?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -2583,7 +2583,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "statistiek",
     "stepIdx": 5
   },
-  "Wat is 10% van 350?": {
+  "Hoeveel is 10% van 350?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -2663,7 +2663,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kwadraten-wortels",
     "stepIdx": 17
   },
-  "Wat is 40% van 250?": {
+  "Hoeveel is 40% van 250?": {
     "pathId": "procenten",
     "stepIdx": 0
   },
@@ -5763,7 +5763,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "breuken",
     "stepIdx": 0
   },
-  "Wat is 0,3 × 0,4?": {
+  "Hoeveel is 0,3 × 0,4?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },

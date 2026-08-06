@@ -51,7 +51,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Wat is 4³?*",
+        q: "*Hoeveel is 4³?*",
         options: ["64", "12", "81", "16"],
         answer: 0,
         wrongHints: [null, "Niet vermenigvuldigen — een macht is herhaald vermenigvuldigen. Hoe vaak schrijf je 4 op?", "Heb je grondtal en exponent verwisseld? Welk getal staat onder en welk boven?", "Bijna — bij 4³ heb je één extra factor 4. Hoeveel keer 4 vermenigvuldig je?"],
@@ -98,7 +98,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Wat is 7⁰?*",
+        q: "*Hoeveel is 7⁰?*",
         options: ["1", "0", "7", "Onbepaald"],
         answer: 0,
         wrongHints: [null, "Iets tot de macht 0 — wat is de regel daarvoor (behalve 0⁰)?", "7¹ heeft een andere exponent. Welke regel geldt voor exponent 0?", "0⁰ is een uitzondering. Voor andere getallen geldt een vaste regel bij exponent 0."],
@@ -144,7 +144,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Wat is 2 + 3²?*",
+        q: "*Hoeveel is 2 + 3²?*",
         options: ["11", "25", "13", "10"],
         answer: 0,
         wrongHints: [null, "Je hebt eerst opgeteld, daarna gekwadrateerd — maar zonder haakjes is de volgorde anders.", "Bijna — welke bewerking gaat eerst, kwadraat of optellen? (Volgorde-regel).", "Welke volgorde geldt zonder haakjes — kwadraat of plus eerst?"],
@@ -339,7 +339,7 @@ const steps = [
         q: "*Versimpel: (3/4)².*",
         options: ["9/16", "6/8", "3/16", "9/4"],
         answer: 0,
-        wrongHints: [null, "Niet juist — kwadrateren is niet hetzelfde als verdubbelen. Wat is 3² en wat is 4²?", "Alleen de noemer gekwadrateerd — wat moet er met de teller gebeuren?", "Alleen de teller gekwadrateerd — wat moet er met de noemer gebeuren?"],
+        wrongHints: [null, "Niet juist — kwadrateren is niet hetzelfde als verdubbelen. Hoeveel is 3² en hoeveel is 4²?", "Alleen de noemer gekwadrateerd — wat moet er met de teller gebeuren?", "Alleen de teller gekwadrateerd — wat moet er met de noemer gebeuren?"],
         uitlegPad: {
           stappen: [{ titel: "Teller² / noemer²", tekst: "(3/4)² = 3² / 4² = 9 / 16. Macht op zowel teller als noemer." }],
           woorden: [{ woord: "(a/b)^n", uitleg: "= a^n / b^n. Macht over breuk." }],
@@ -367,7 +367,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Wat is 4⁻¹?*",
+        q: "*Hoeveel is 4⁻¹?*",
         options: ["1/4", "-4", "0", "-1/4"],
         answer: 0,
         wrongHints: [null, "Een negatieve exponent maakt het getal niet negatief, maar een breuk. Welke breuk hoort bij 4⁻¹?", "Een getal tot de nul-macht is één, niet nul. En een negatieve exponent geeft een breuk.", "Geen minteken voor de breuk — de negatieve exponent zit in de exponent, niet voor het getal."],
@@ -509,7 +509,7 @@ const steps = [
         },
       },
       {
-        q: "*Wat is 3⁻²?*",
+        q: "*Hoeveel is 3⁻²?*",
         options: ["1/9", "-9", "-1/9", "-6"],
         answer: 0,
         wrongHints: [null, "Negatieve exponent maakt geen negatief getal — wat doet een negatieve exponent wel?", "Negatief teken hoort niet voor de breuk — de negatieve exponent zit alleen in de exponent.", "Vermenigvuldigen is niet hetzelfde als een macht. Wat betekent 3⁻²?"],
@@ -570,7 +570,7 @@ const steps = [
         q: "*Wat is (2 · 10³) · (4 · 10⁵)?*",
         options: ["8 · 10⁸", "8 · 10¹⁵", "6 · 10⁸", "8 · 10⁻²"],
         answer: 0,
-        wrongHints: [null, "Machten van 10 vermenigvuldig je door exponenten op te tellen, niet te vermenigvuldigen.", "Wat is 2 keer 4? Optellen en vermenigvuldigen geven niet hetzelfde antwoord.", "Bij vermenigvuldigen tellen we exponenten op — het teken blijft hetzelfde."],
+        wrongHints: [null, "Machten van 10 vermenigvuldig je door exponenten op te tellen, niet te vermenigvuldigen.", "Hoeveel is 2 keer 4? Optellen en vermenigvuldigen geven niet hetzelfde antwoord.", "Bij vermenigvuldigen tellen we exponenten op — het teken blijft hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Getallen + machten apart", tekst: "(2·10³)·(4·10⁵) = (2·4)·(10³·10⁵) = 8·10⁸." }],
           woorden: [{ woord: "associatief", uitleg: "Mag herschikken bij vermenigvuldiging." }],

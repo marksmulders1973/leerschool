@@ -31,7 +31,7 @@ const steps = [
         },
       },
       {
-        q: "**Wat is 5⁰**?",
+        q: "**Hoeveel is 5⁰**?",
         options: ["1", "0", "5", "Onbepaald"],
         answer: 0,
         wrongHints: [null, "Niet — alleen 0⁰ is onbepaald.", "Niet — dat is 5¹.", "Niet — voor 5≠0 is bepaald."],

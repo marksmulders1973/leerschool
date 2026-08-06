@@ -29,25 +29,25 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       // Optellen en aftrekken
-      { q: "Wat is 235 + 467?", options: ["702", "692", "712", "602"], answer: 0, explanation: "235 + 467: 5+7=12 (2 schrijven, 1 onthouden), 3+6+1=10 (0 schrijven, 1 onthouden), 2+4+1=7. Antwoord: 702." },
-      { q: "Wat is 1000 - 348?", options: ["652", "748", "662", "752"], answer: 0, explanation: "1000 - 348: 1000-300=700, 700-48=652. Of cijferend: 0-8 → leen, → 10-8=2; 9-4=5; 9-3=6. Antwoord: 652." },
+      { q: "Hoeveel is 235 + 467?", options: ["702", "692", "712", "602"], answer: 0, explanation: "235 + 467: 5+7=12 (2 schrijven, 1 onthouden), 3+6+1=10 (0 schrijven, 1 onthouden), 2+4+1=7. Antwoord: 702." },
+      { q: "Hoeveel is 1000 - 348?", options: ["652", "748", "662", "752"], answer: 0, explanation: "1000 - 348: 1000-300=700, 700-48=652. Of cijferend: 0-8 → leen, → 10-8=2; 9-4=5; 9-3=6. Antwoord: 652." },
       { q: "Sara heeft €25,50 en Bram heeft €18,75. Hoeveel hebben ze samen?", options: ["€44,25", "€43,25", "€44,75", "€43,75"], answer: 0, explanation: "25,50 + 18,75: tel eerst de euro's (25+18=43), dan de centen (50+75=125 = 1 euro 25 cent). 43+1 = 44 euro, plus 25 cent = €44,25." },
       { q: "Welke som klopt?", options: ["456 + 89 = 545", "456 + 89 = 535", "456 + 89 = 555", "456 + 89 = 525"], answer: 0, explanation: "456 + 89: 456 + 90 = 546 (handig met 90 ipv 89), - 1 = 545." },
       { q: "Een fles bevat 1500 ml water. Je drinkt 750 ml. Hoeveel blijft er over?", options: ["750 ml", "850 ml", "650 ml", "950 ml"], answer: 0, explanation: "1500 - 750 = 750. Half van 1500 = 750." },
     ],
     2: [
       // Vermenigvuldigen
-      { q: "Wat is 8 × 7?", options: ["56", "54", "63", "48"], answer: 0, explanation: "Tafel van 8: 8, 16, 24, 32, 40, 48, 56. 8 × 7 = 56." },
-      { q: "Wat is 25 × 4?", options: ["100", "120", "75", "150"], answer: 0, explanation: "25 × 4: dat zijn 4 kwartjes — 4 × 25 cent = 1 euro = 100 cent. Dus 100." },
+      { q: "Hoeveel is 8 × 7?", options: ["56", "54", "63", "48"], answer: 0, explanation: "Tafel van 8: 8, 16, 24, 32, 40, 48, 56. 8 × 7 = 56." },
+      { q: "Hoeveel is 25 × 4?", options: ["100", "120", "75", "150"], answer: 0, explanation: "25 × 4: dat zijn 4 kwartjes — 4 × 25 cent = 1 euro = 100 cent. Dus 100." },
       { q: "Een doos bevat 12 koeken. Hoeveel koeken in 9 dozen?", options: ["108", "112", "98", "118"], answer: 0, explanation: "12 × 9: handig is 12 × 10 = 120, dan -12 = 108." },
-      { q: "Wat is 6 × 0?", options: ["0", "6", "60", "1"], answer: 0, explanation: "Alles maal nul = nul. 6 keer 'niets' is nog steeds niets." },
+      { q: "Hoeveel is 6 × 0?", options: ["0", "6", "60", "1"], answer: 0, explanation: "Alles maal nul = nul. 6 keer 'niets' is nog steeds niets." },
       { q: "Een week heeft 7 dagen. Hoeveel dagen in 8 weken?", options: ["56", "54", "64", "49"], answer: 0, explanation: "7 × 8 = 56 dagen. Tafel van 7: 7, 14, 21, 28, 35, 42, 49, 56." },
     ],
     3: [
       // Delen
-      { q: "Wat is 56 : 8?", options: ["7", "6", "8", "9"], answer: 0, explanation: "Vraag jezelf: hoeveel keer past 8 in 56? Tafel van 8: 8 × 7 = 56. Antwoord: 7." },
+      { q: "Hoeveel is 56 : 8?", options: ["7", "6", "8", "9"], answer: 0, explanation: "Vraag jezelf: hoeveel keer past 8 in 56? Tafel van 8: 8 × 7 = 56. Antwoord: 7." },
       { q: "Verdeel 24 snoepjes eerlijk over 6 kinderen. Hoeveel krijgt elk kind?", options: ["4", "3", "5", "6"], answer: 0, explanation: "24 : 6 = 4. Elk kind krijgt 4 snoepjes." },
-      { q: "Wat is 100 : 4?", options: ["25", "20", "30", "40"], answer: 0, explanation: "100 : 4 — denk aan 4 kwartjes maken samen 1 euro (100 cent). 1 kwartje = 25 cent. Of: 4 × 25 = 100." },
+      { q: "Hoeveel is 100 : 4?", options: ["25", "20", "30", "40"], answer: 0, explanation: "100 : 4 — denk aan 4 kwartjes maken samen 1 euro (100 cent). 1 kwartje = 25 cent. Of: 4 × 25 = 100." },
       { q: "Welke deelsom klopt NIET?", options: ["72 : 9 = 8", "72 : 8 = 9", "72 : 6 = 13", "72 : 4 = 18"], answer: 2, explanation: "72 : 6 = 12 (niet 13). Tafel van 6: 6 × 12 = 72." },
       { q: "Een bus heeft 45 stoelen. Er passen 5 leerlingen op een rij. Hoeveel rijen zijn er?", options: ["9", "8", "10", "7"], answer: 0, explanation: "45 : 5 = 9. Tafel van 5: 5 × 9 = 45." },
     ],
@@ -100,29 +100,29 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk getal hoort op de plek van het vraagteken? 9000, 8500, 8000, ?, 7000", options: ["7500", "7800", "8100", "7250"], answer: 0, explanation: "De rij gaat met sprongen van 500 naar beneden. Na 8000 komt 7500." },
     ],
     1: [
-      { q: "Wat is 678 + 234?", options: ["912", "812", "902", "922"], answer: 0, explanation: "678 + 234: 8+4=12 (2 schrijven, 1 onthouden), 7+3+1=11 (1 schrijven, 1 onthouden), 6+2+1=9. Antwoord: 912." },
-      { q: "Wat is 5000 - 1234?", options: ["3766", "3866", "4866", "3776"], answer: 0, explanation: "5000 - 1234: 5000 - 1000 = 4000, 4000 - 200 = 3800, 3800 - 34 = 3766." },
+      { q: "Hoeveel is 678 + 234?", options: ["912", "812", "902", "922"], answer: 0, explanation: "678 + 234: 8+4=12 (2 schrijven, 1 onthouden), 7+3+1=11 (1 schrijven, 1 onthouden), 6+2+1=9. Antwoord: 912." },
+      { q: "Hoeveel is 5000 - 1234?", options: ["3766", "3866", "4866", "3776"], answer: 0, explanation: "5000 - 1234: 5000 - 1000 = 4000, 4000 - 200 = 3800, 3800 - 34 = 3766." },
       { q: "Een winkel heeft €1850 omzet op zaterdag en €1275 op zondag. Wat is het totaal?", options: ["€3125", "€3025", "€3225", "€3115"], answer: 0, explanation: "1850 + 1275: 1800+1200=3000, 50+75=125. Totaal: 3125." },
       { q: "Welke som heeft het GROOTSTE antwoord?", options: ["599 + 401", "350 + 599", "450 + 549", "300 + 600"], answer: 0, explanation: "599+401=1000, 350+599=949, 450+549=999, 300+600=900. Grootste: 1000." },
       { q: "Tel: 25 + 75 + 125 = ?", options: ["225", "215", "205", "235"], answer: 0, explanation: "Slim groeperen: 25+75=100, dan 100+125=225." },
     ],
     2: [
-      { q: "Wat is 9 × 6?", options: ["54", "56", "63", "48"], answer: 0, explanation: "Tafel van 9: 9, 18, 27, 36, 45, 54. Of: 10×6=60, 60-6=54." },
-      { q: "Wat is 50 × 8?", options: ["400", "450", "350", "500"], answer: 0, explanation: "50 × 8: denk 5 × 8 = 40, dan ×10 want 50 is 5 met een nul → 400." },
+      { q: "Hoeveel is 9 × 6?", options: ["54", "56", "63", "48"], answer: 0, explanation: "Tafel van 9: 9, 18, 27, 36, 45, 54. Of: 10×6=60, 60-6=54." },
+      { q: "Hoeveel is 50 × 8?", options: ["400", "450", "350", "500"], answer: 0, explanation: "50 × 8: denk 5 × 8 = 40, dan ×10 want 50 is 5 met een nul → 400." },
       { q: "Een doos pennen kost €3,50. Wat kosten 6 dozen?", options: ["€21,00", "€20,50", "€18,00", "€21,50"], answer: 0, explanation: "6 × 3,50 = 6 × 3 + 6 × 0,50 = 18 + 3 = 21,00." },
-      { q: "Wat is 12 × 12?", options: ["144", "124", "120", "132"], answer: 0, explanation: "12 × 12 = 144 (kwadraat-tafel). Of: 12 × 10 = 120, 120 + 24 = 144." },
+      { q: "Hoeveel is 12 × 12?", options: ["144", "124", "120", "132"], answer: 0, explanation: "12 × 12 = 144 (kwadraat-tafel). Of: 12 × 10 = 120, 120 + 24 = 144." },
       { q: "Welke som geeft 100?", options: ["25 × 4", "20 × 6", "10 × 9", "30 × 3"], answer: 0, explanation: "25 × 4 = 100. De andere: 120, 90, 90." },
     ],
     3: [
-      { q: "Wat is 84 : 7?", options: ["12", "11", "13", "14"], answer: 0, explanation: "Hoeveel keer past 7 in 84? Tafel van 7: 7×12=84. Antwoord: 12." },
+      { q: "Hoeveel is 84 : 7?", options: ["12", "11", "13", "14"], answer: 0, explanation: "Hoeveel keer past 7 in 84? Tafel van 7: 7×12=84. Antwoord: 12." },
       { q: "Verdeel 96 stickers eerlijk over 8 kinderen.", options: ["12", "11", "13", "10"], answer: 0, explanation: "96 : 8 = 12. Tafel van 8: 8 × 12 = 96." },
-      { q: "Wat is 200 : 25?", options: ["8", "7", "9", "10"], answer: 0, explanation: "Hoeveel kwartjes (25) zijn 200? 4 kwartjes maken 100, dus 8 kwartjes maken 200." },
+      { q: "Hoeveel is 200 : 25?", options: ["8", "7", "9", "10"], answer: 0, explanation: "Hoeveel kwartjes (25) zijn 200? 4 kwartjes maken 100, dus 8 kwartjes maken 200." },
       { q: "Hoeveel groepjes van 6 maak je van 60 leerlingen?", options: ["10", "8", "12", "9"], answer: 0, explanation: "60 : 6 = 10. Tafel van 6: 6 × 10 = 60." },
       { q: "Welke deling geeft een rest?", options: ["50 : 7", "48 : 6", "45 : 9", "63 : 7"], answer: 0, explanation: "50 : 7 = 7 rest 1 (7×7=49, +1=50). Andere: 48:6=8 (geen rest), 45:9=5, 63:7=9." },
     ],
     4: [
       { q: "Welke breuk is gelijk aan 0,25?", options: ["¼", "½", "¾", "⅕"], answer: 0, explanation: "0,25 = 25 honderdsten = 25/100 = 1/4 (vereenvoudigd). Een kwart." },
-      { q: "Wat is 3,5 + 2,75?", options: ["6,25", "5,25", "6,75", "5,75"], answer: 0, explanation: "Decimalen onder elkaar zetten: 3,50 + 2,75. 0+5=5, 5+7=12 (1 onthouden), 3+2+1=6. Dus 6,25." },
+      { q: "Hoeveel is 3,5 + 2,75?", options: ["6,25", "5,25", "6,75", "5,75"], answer: 0, explanation: "Decimalen onder elkaar zetten: 3,50 + 2,75. 0+5=5, 5+7=12 (1 onthouden), 3+2+1=6. Dus 6,25." },
       { q: "Wat is ⅖ van 50?", options: ["20", "25", "10", "15"], answer: 0, explanation: "⅕ van 50 = 10. ⅖ = 2 × 10 = 20." },
       { q: "Welk getal is groter: 0,7 of 0,65?", options: ["0,7", "0,65", "Ze zijn gelijk", "Kan niet vergelijken"], answer: 0, explanation: "0,7 = 0,70. Vergelijk 0,70 met 0,65 → 70 > 65 → 0,7 is groter." },
       { q: "¾ + ¼ = ?", options: ["1", "½", "¼", "⅔"], answer: 0, explanation: "Bij dezelfde noemer (4) tel je tellers op: 3+1=4. Dus 4/4 = 1 hele." },
@@ -271,27 +271,27 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke is correct: 6300 = ___ × 100?", options: ["63", "630", "6", "60"], answer: 0, explanation: "6300 / 100 = 63. Want 63 × 100 = 6300." },
     ],
     1: [
-      { q: "Wat is 487 + 263?", options: ["750", "640", "740", "850"], answer: 0, explanation: "487 + 263: 7+3=10, 8+6+1=15, 4+2+1=7. Antwoord: 750." },
-      { q: "Wat is 832 − 359?", options: ["473", "483", "563", "463"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
+      { q: "Hoeveel is 487 + 263?", options: ["750", "640", "740", "850"], answer: 0, explanation: "487 + 263: 7+3=10, 8+6+1=15, 4+2+1=7. Antwoord: 750." },
+      { q: "Hoeveel is 832 − 359?", options: ["473", "483", "563", "463"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
       { q: "Een schoolreis kost €18,50 per leerling. Voor 10 leerlingen?", options: ["€185", "€185,50", "€18,50", "€1850"], answer: 0, explanation: "10 × 18,50 = 185. Vermenigvuldigen met 10 = decimaal-punt 1 plek naar rechts." },
-      { q: "Wat is 3000 − 1750 + 250?", options: ["1500", "1000", "2000", "1250"], answer: 0, explanation: "3000 − 1750 = 1250. 1250 + 250 = 1500." },
+      { q: "Hoeveel is 3000 − 1750 + 250?", options: ["1500", "1000", "2000", "1250"], answer: 0, explanation: "3000 − 1750 = 1250. 1250 + 250 = 1500." },
     ],
     2: [
-      { q: "Wat is 7 × 8?", options: ["56", "54", "64", "48"], answer: 0, explanation: "Tafel van 7: 56. Of tafel van 8: 8×7=56." },
-      { q: "Wat is 35 × 10?", options: ["350", "305", "3500", "35"], answer: 0, explanation: "× 10 → één nul erachter. 35 → 350." },
+      { q: "Hoeveel is 7 × 8?", options: ["56", "54", "64", "48"], answer: 0, explanation: "Tafel van 7: 56. Of tafel van 8: 8×7=56." },
+      { q: "Hoeveel is 35 × 10?", options: ["350", "305", "3500", "35"], answer: 0, explanation: "× 10 → één nul erachter. 35 → 350." },
       { q: "Een cd kost €11. Hoeveel kosten 7 cd's?", options: ["€77", "€70", "€84", "€72"], answer: 0, explanation: "7 × 11: 7×10=70, +7=77." },
-      { q: "Wat is 25 × 12?", options: ["300", "320", "275", "325"], answer: 0, explanation: "Slim: 25 × 12 = 25 × 4 × 3 = 100 × 3 = 300." },
+      { q: "Hoeveel is 25 × 12?", options: ["300", "320", "275", "325"], answer: 0, explanation: "Slim: 25 × 12 = 25 × 4 × 3 = 100 × 3 = 300." },
     ],
     3: [
-      { q: "Wat is 81 : 9?", options: ["9", "8", "10", "7"], answer: 0, explanation: "Tafel van 9: 9 × 9 = 81. Dus 81 : 9 = 9." },
+      { q: "Hoeveel is 81 : 9?", options: ["9", "8", "10", "7"], answer: 0, explanation: "Tafel van 9: 9 × 9 = 81. Dus 81 : 9 = 9." },
       { q: "Verdeel 60 koekjes over 12 zakjes — hoeveel per zakje?", options: ["5", "4", "6", "8"], answer: 0, explanation: "60 : 12 = 5 (12 × 5 = 60)." },
-      { q: "Wat is 144 : 12?", options: ["12", "11", "13", "14"], answer: 0, explanation: "12 × 12 = 144. Dus 144 : 12 = 12." },
+      { q: "Hoeveel is 144 : 12?", options: ["12", "11", "13", "14"], answer: 0, explanation: "12 × 12 = 144. Dus 144 : 12 = 12." },
       { q: "Welke deelsom geeft een rest van 2?", options: ["20 : 6", "20 : 5", "20 : 4", "20 : 10"], answer: 0, explanation: "20 : 6 = 3 rest 2 (3×6=18, 20-18=2). 20:5=4, 20:4=5, 20:10=2 (alle zonder rest)." },
     ],
     4: [
-      { q: "Wat is 1/3 van 90?", options: ["30", "33", "27", "20"], answer: 0, explanation: "90 : 3 = 30. Of: 1/3 van 90 → deel door noemer." },
+      { q: "Hoeveel is 1/3 van 90?", options: ["30", "33", "27", "20"], answer: 0, explanation: "90 : 3 = 30. Of: 1/3 van 90 → deel door noemer." },
       { q: "Welke breuk is gelijk aan 2/4?", options: ["1/2", "1/4", "2/8", "3/4"], answer: 0, explanation: "2/4 vereenvoudig: deel boven en onder door 2 → 1/2." },
-      { q: "Wat is 2/5 + 1/5?", options: ["3/5", "3/10", "2/10", "1/5"], answer: 0, explanation: "Bij dezelfde noemer (5) tel je tellers op: 2+1=3. → 3/5." },
+      { q: "Hoeveel is 2/5 + 1/5?", options: ["3/5", "3/10", "2/10", "1/5"], answer: 0, explanation: "Bij dezelfde noemer (5) tel je tellers op: 2+1=3. → 3/5." },
       { q: "Welke breuk is groter: 3/4 of 2/3?", options: ["3/4", "2/3", "Ze zijn gelijk", "Kan niet vergelijken"], answer: 0, explanation: "Maak gelijke noemer: 3/4 = 9/12, 2/3 = 8/12. 9/12 > 8/12 → 3/4 is groter." },
     ],
     5: [
@@ -319,21 +319,21 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk getal is groter: 5004 of 5040?", options: ["5040", "5004", "Gelijk", "Niet vergelijkbaar"], answer: 0, explanation: "5004 < 5040 (5040 heeft 4 op tientallen-plek, 5004 heeft 0)." },
     ],
     1: [
-      { q: "Wat is 1234 + 567?", options: ["1801", "1791", "1811", "1701"], answer: 0, explanation: "1234 + 567: 4+7=11, 3+6+1=10, 2+5+1=8, 1. → 1801." },
-      { q: "Wat is 9000 − 4321?", options: ["4679", "4789", "5679", "4669"], answer: 0, explanation: "9000 − 4321: 9000−4000=5000, 5000−321=4679." },
+      { q: "Hoeveel is 1234 + 567?", options: ["1801", "1791", "1811", "1701"], answer: 0, explanation: "1234 + 567: 4+7=11, 3+6+1=10, 2+5+1=8, 1. → 1801." },
+      { q: "Hoeveel is 9000 − 4321?", options: ["4679", "4789", "5679", "4669"], answer: 0, explanation: "9000 − 4321: 9000−4000=5000, 5000−321=4679." },
       { q: "Sara had 250 punten, won 175 en verloor 80. Hoeveel nu?", options: ["345", "425", "265", "505"], answer: 0, explanation: "250 + 175 = 425. 425 − 80 = 345." },
       { q: "Welke som geeft 1000?", options: ["456 + 544", "423 + 678", "501 + 500", "789 + 200"], answer: 0, explanation: "456+544=1000. Andere: 1101, 1001, 989." },
     ],
     2: [
-      { q: "Wat is 16 × 5?", options: ["80", "75", "85", "65"], answer: 0, explanation: "16 × 5: 10×5=50, 6×5=30, 50+30=80. Of: 8×5=40, dubbel=80." },
-      { q: "Wat is 120 : 8?", options: ["15", "12", "16", "14"], answer: 0, explanation: "8 × 15 = 120 (8×10=80, 8×5=40, 80+40=120)." },
+      { q: "Hoeveel is 16 × 5?", options: ["80", "75", "85", "65"], answer: 0, explanation: "16 × 5: 10×5=50, 6×5=30, 50+30=80. Of: 8×5=40, dubbel=80." },
+      { q: "Hoeveel is 120 : 8?", options: ["15", "12", "16", "14"], answer: 0, explanation: "8 × 15 = 120 (8×10=80, 8×5=40, 80+40=120)." },
       { q: "Een lift kan 8 mensen tegelijk vervoeren. Hoeveel ritten voor 56 mensen?", options: ["7", "6", "8", "9"], answer: 0, explanation: "56 : 8 = 7 ritten (alle vol)." },
-      { q: "Wat is 99 × 4?", options: ["396", "404", "386", "400"], answer: 0, explanation: "Slim: 100 × 4 = 400, − 4 = 396." },
+      { q: "Hoeveel is 99 × 4?", options: ["396", "404", "386", "400"], answer: 0, explanation: "Slim: 100 × 4 = 400, − 4 = 396." },
     ],
     3: [
-      { q: "Wat is 1/2 van 18?", options: ["9", "10", "8", "6"], answer: 0, explanation: "Helft van 18: 18 / 2 = 9." },
+      { q: "Hoeveel is 1/2 van 18?", options: ["9", "10", "8", "6"], answer: 0, explanation: "Helft van 18: 18 / 2 = 9." },
       { q: "Welke breuk is kleiner: 1/4 of 1/8?", options: ["1/8", "1/4", "Gelijk", "Niet bepaalbaar"], answer: 0, explanation: "Hoe groter de noemer (8 > 4), hoe kleiner de breuk: het stuk taart is in meer stukjes verdeeld. 1/8 < 1/4." },
-      { q: "Wat is 3/8 + 2/8?", options: ["5/8", "5/16", "1/8", "6/8"], answer: 0, explanation: "Dezelfde noemer (8) → tel tellers op: 3+2=5. → 5/8." },
+      { q: "Hoeveel is 3/8 + 2/8?", options: ["5/8", "5/16", "1/8", "6/8"], answer: 0, explanation: "Dezelfde noemer (8) → tel tellers op: 3+2=5. → 5/8." },
       { q: "Welk getal is 0,5 als breuk?", options: ["1/2", "1/5", "5/10 (zonder vereenvoudiging) — beide juist", "5/100"], answer: 0, explanation: "0,5 = 5/10 = 1/2 (vereenvoudigd). De simpelste vorm: 1/2." },
     ],
     4: [
@@ -360,17 +360,17 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk getal is afgerond op tientallen GROOTSTE?", options: ["189 → 190", "184 → 180", "175 → 180", "172 → 170"], answer: 0, explanation: "Afgerond: 190, 180, 180, 170. Grootste: 190." },
     ],
     1: [
-      { q: "Wat is 999 + 1?", options: ["1000", "1001", "9991", "100"], answer: 0, explanation: "999 + 1 = 1000. Drie negens worden drie nullen + 1 erbij." },
-      { q: "Wat is 763 − 248?", options: ["515", "525", "405", "535"], answer: 0, explanation: "763 − 248: 763−200=563, 563−48=515." },
+      { q: "Hoeveel is 999 + 1?", options: ["1000", "1001", "9991", "100"], answer: 0, explanation: "999 + 1 = 1000. Drie negens worden drie nullen + 1 erbij." },
+      { q: "Hoeveel is 763 − 248?", options: ["515", "525", "405", "535"], answer: 0, explanation: "763 − 248: 763−200=563, 563−48=515." },
       { q: "Som: 50 + 50 + 50 + 50 = ?", options: ["200", "150", "250", "100"], answer: 0, explanation: "4 × 50 = 200. Of: 50+50=100, 100+100=200." },
     ],
     2: [
-      { q: "Wat is 11 × 11?", options: ["121", "111", "131", "141"], answer: 0, explanation: "11 × 11 = 121. Een kwadraat-feit (11²)." },
+      { q: "Hoeveel is 11 × 11?", options: ["121", "111", "131", "141"], answer: 0, explanation: "11 × 11 = 121. Een kwadraat-feit (11²)." },
       { q: "Hoeveel is 4 × 9?", options: ["36", "32", "45", "40"], answer: 0, explanation: "Tafel van 4: 4, 8, 12, 16, 20, 24, 28, 32, 36. 4 × 9 = 36." },
-      { q: "Wat is 7 × 100?", options: ["700", "70", "7000", "70000"], answer: 0, explanation: "× 100 → twee nullen erachter. 7 → 700." },
+      { q: "Hoeveel is 7 × 100?", options: ["700", "70", "7000", "70000"], answer: 0, explanation: "× 100 → twee nullen erachter. 7 → 700." },
     ],
     3: [
-      { q: "Wat is 90 : 6?", options: ["15", "14", "16", "13"], answer: 0, explanation: "90 : 6: tafel van 6 → 6 × 15 = 90." },
+      { q: "Hoeveel is 90 : 6?", options: ["15", "14", "16", "13"], answer: 0, explanation: "90 : 6: tafel van 6 → 6 × 15 = 90." },
       { q: "Verdeel 35 stuiters over 5 vrienden.", options: ["7", "6", "8", "5"], answer: 0, explanation: "35 : 5 = 7. Tafel van 5: 5 × 7 = 35." },
       { q: "Welke geeft een rest? 24 : ?", options: ["24 : 5", "24 : 6", "24 : 4", "24 : 8"], answer: 0, explanation: "24:5 = 4 rest 4 (5×4=20, 24-20=4). De andere zijn exact deelbaar." },
     ],
@@ -623,7 +623,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Hoeveel symmetrie-assen heeft een gelijkzijdige driehoek?", options: ["3", "1", "2", "6"], answer: 0, explanation: "3 spiegel-assen: één per hoekpunt naar het midden van de overstaande zijde." },
     ],
     4: [
-      { q: "Wat is 25 % van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25 % = ¼. Eén vierde van 80 = 20." },
+      { q: "Hoeveel is 25 % van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25 % = ¼. Eén vierde van 80 = 20." },
       { q: "Wat is 0,25 als breuk?", options: ["¼", "¾", "½", "⅕"], answer: 0, explanation: "0,25 = 25/100 = 1/4 (vereenvoudigd)." },
       { q: "Reken uit: 12,5 + 7,75", options: ["20,25", "19,25", "20,75", "20"], answer: 0, explanation: "12,50 + 7,75 = 20,25 (decimaal kommas onder elkaar)." },
       { q: "Een trui kost €40 met 20% korting. Wat betaal je?", options: ["€32", "€20", "€8", "€48"], answer: 0, explanation: "20% van 40 = 8. Korting = 8. Prijs: 40 − 8 = €32." },
@@ -638,12 +638,12 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       { q: "Reken: 7 × 8 + 4", options: ["60", "84", "56", "108"], answer: 0, explanation: "Eerst ×: 56. + 4 = 60." },
       { q: "Schrijf 3/4 als decimaal getal.", options: ["0,75", "0,34", "0,43", "1,33"], answer: 0, explanation: "3 / 4 = 0,75. Of: 3/4 × 100 = 75 → 0,75." },
-      { q: "Wat is 2³?", options: ["8", "6", "9", "5"], answer: 0, explanation: "2³ = 2 × 2 × 2 = 8." },
+      { q: "Hoeveel is 2³?", options: ["8", "6", "9", "5"], answer: 0, explanation: "2³ = 2 × 2 × 2 = 8." },
       { q: "30% van 200 = ?", options: ["60", "30", "200", "70"], answer: 0, explanation: "30/100 × 200 = 60. Of: 0,3 × 200 = 60." },
     ],
     1: [
       { q: "Wat is −5 + 8?", options: ["3", "−3", "13", "−13"], answer: 0, explanation: "−5 + 8 = 3 (8 stappen omhoog vanaf −5)." },
-      { q: "Wat is 4 − 7?", options: ["−3", "3", "−11", "11"], answer: 0, explanation: "4 − 7: ga 7 naar links vanaf 4 → −3." },
+      { q: "Hoeveel is 4 − 7?", options: ["−3", "3", "−11", "11"], answer: 0, explanation: "4 − 7: ga 7 naar links vanaf 4 → −3." },
       { q: "Wat is −3 × 4?", options: ["−12", "12", "−7", "7"], answer: 0, explanation: "negatief × positief = negatief. 3 × 4 = 12 → −12." },
       { q: "Wat is −6 × −2?", options: ["12", "−12", "8", "−8"], answer: 0, explanation: "negatief × negatief = positief. 6 × 2 = 12 → +12." },
     ],
@@ -1326,8 +1326,8 @@ export const TEXTBOOK_QUESTIONS = {
   // ── KERN Wiskunde Havo/vwo 1A — alt GR HV1 ──────────────────────────
   "kern-wis-hv1a": {
     0: [
-      { q: "Wat is 24 + 36?", options: ["60", "50", "70", "54"], answer: 0, explanation: "24 + 36 = 60. Of: 25 + 35 = 60 (slim verschuiven)." },
-      { q: "Wat is 100 - 37?", options: ["63", "73", "53", "67"], answer: 0, explanation: "100 - 37: 100 - 40 + 3 = 60 + 3 = 63." },
+      { q: "Hoeveel is 24 + 36?", options: ["60", "50", "70", "54"], answer: 0, explanation: "24 + 36 = 60. Of: 25 + 35 = 60 (slim verschuiven)." },
+      { q: "Hoeveel is 100 - 37?", options: ["63", "73", "53", "67"], answer: 0, explanation: "100 - 37: 100 - 40 + 3 = 60 + 3 = 63." },
     ],
     1: [
       { q: "5 appels kosten €2,50. Wat kost 1 appel?", options: ["€0,50", "€1,25", "€2,50", "€5"], answer: 0, explanation: "Verhouding 5:€2,50 → 1:€0,50. Deel beide door 5." },
@@ -1430,7 +1430,7 @@ export const TEXTBOOK_QUESTIONS = {
   "gr-hv2": {
     0: [
       { q: "Vereenvoudig: 5a + 3a − 2a", options: ["6a", "10a", "8a", "30a"], answer: 0, explanation: "5+3−2 = 6, dus 6a. Optellen + aftrekken van gelijksoortige termen." },
-      { q: "Wat is 7 × 8 + 6?", options: ["62", "98", "70", "56"], answer: 0, explanation: "Eerst ×: 7×8=56. + 6 = 62. Volgorde: ×÷ vóór +−." },
+      { q: "Hoeveel is 7 × 8 + 6?", options: ["62", "98", "70", "56"], answer: 0, explanation: "Eerst ×: 7×8=56. + 6 = 62. Volgorde: ×÷ vóór +−." },
     ],
     1: [
       { q: "Oppervlakte vierkant met zijde 9 cm?", options: ["81 cm²", "36 cm²", "18 cm²", "27 cm²"], answer: 0, explanation: "A = z² = 9 × 9 = 81 cm²." },
@@ -1441,11 +1441,11 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Los op: 2x + 5 = 17", options: ["x = 6", "x = 11", "x = 8", "x = 12"], answer: 0, explanation: "2x = 17 − 5 = 12. x = 12 / 2 = 6." },
     ],
     3: [
-      { q: "Wat is 25% van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25% = ¼. 80 / 4 = 20." },
+      { q: "Hoeveel is 25% van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25% = ¼. 80 / 4 = 20." },
       { q: "Een trui is van €60 → €45. Hoeveel % korting?", options: ["25%", "15%", "75%", "30%"], answer: 0, explanation: "Verschil = 15. Korting% = 15/60 × 100 = 25%." },
     ],
     4: [
-      { q: "Wat is 8²?", options: ["64", "16", "256", "32"], answer: 0, explanation: "8² = 8 × 8 = 64. Notatie: 'twee' boven (kwadraat)." },
+      { q: "Hoeveel is 8²?", options: ["64", "16", "256", "32"], answer: 0, explanation: "8² = 8 × 8 = 64. Notatie: 'twee' boven (kwadraat)." },
       { q: "Wat is √49?", options: ["7", "8", "6", "49"], answer: 0, explanation: "Wortel van 49: welk getal × zichzelf = 49? 7 × 7 = 49." },
     ],
     5: [

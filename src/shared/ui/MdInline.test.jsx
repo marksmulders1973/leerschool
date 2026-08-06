@@ -4,8 +4,8 @@ import MdInline from "./MdInline.jsx";
 
 describe("MdInline", () => {
   it("rendert plain text zonder markup ongewijzigd", () => {
-    const { container } = render(<MdInline text="Wat is 2 + 2?" />);
-    expect(container.textContent).toBe("Wat is 2 + 2?");
+    const { container } = render(<MdInline text="Hoeveel is 2 + 2?" />);
+    expect(container.textContent).toBe("Hoeveel is 2 + 2?");
     expect(container.querySelector("strong")).toBeNull();
   });
 

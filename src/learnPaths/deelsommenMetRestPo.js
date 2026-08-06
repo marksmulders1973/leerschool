@@ -23,7 +23,7 @@ const steps = [
       "Komt het precies uit (rest 0)? Dan is de deling 'op'. Voorbeeld: 30 ÷ 6 = 5 rest 0.",
     checks: [
       {
-        q: "Wat is 17 ÷ 5?",
+        q: "Hoeveel is 17 ÷ 5?",
         options: ["3 rest 2", "4 rest 0", "2 rest 7", "3 rest 5"],
         answer: 0,
         wrongHints: [null, "Dat getal keer de deler gaat over 17 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler (5).", "De rest kan niet gelijk zijn aan de deler."],
@@ -37,7 +37,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is 23 ÷ 4?",
+        q: "Hoeveel is 23 ÷ 4?",
         options: ["5 rest 3", "6 rest 1", "5 rest 4", "4 rest 7"],
         answer: 0,
         wrongHints: [null, "Dat getal keer de deler gaat over 23 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler.", "De rest mag niet groter zijn dan de deler."],
@@ -65,7 +65,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is 30 ÷ 6?",
+        q: "Hoeveel is 30 ÷ 6?",
         options: ["5 rest 0", "5 rest 6", "6 rest 0", "4 rest 6"],
         answer: 0,
         wrongHints: [null, "Een rest kan nooit gelijk zijn aan de deler — dat zou betekenen dat je nog een keer had kunnen delen.", "Dat getal keer de deler gaat over 30 heen.", "Als er nog een keer de deler overblijft, kun je nog één keer verdelen — probeer dat."],
@@ -79,7 +79,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is 41 ÷ 7?",
+        q: "Hoeveel is 41 ÷ 7?",
         options: ["5 rest 6", "6 rest 1", "5 rest 7", "4 rest 9"],
         answer: 0,
         wrongHints: [null, "Dat getal keer de deler gaat over 41 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler (7).", "De rest mag niet groter zijn dan de deler."],
@@ -93,7 +93,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is 50 ÷ 8?",
+        q: "Hoeveel is 50 ÷ 8?",
         options: ["6 rest 2", "7 rest 1", "5 rest 10", "6 rest 8"],
         answer: 0,
         wrongHints: [null, "Dat getal keer de deler gaat over 50 heen.", "De rest mag nooit groter zijn dan de deler.", "De rest kan niet gelijk zijn aan de deler."],

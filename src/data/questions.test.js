@@ -37,7 +37,7 @@ describe("fetchQuestions", () => {
   it("returnt rijen uit Supabase als die er zijn", async () => {
     const fakeRows = [
       {
-        q: "Wat is 1+1?",
+        q: "Hoeveel is 1+1?",
         options: ["1", "2", "3", "4"],
         answer: 1,
         explanation: "Twee.",
@@ -53,7 +53,7 @@ describe("fetchQuestions", () => {
     const result = await fetchQuestions({ subject: "wiskunde", level: "klas1", limit: 5 });
     expect(result).toHaveLength(1);
     expect(result[0]).toMatchObject({
-      q: "Wat is 1+1?",
+      q: "Hoeveel is 1+1?",
       answer: 1,
       explanation: "Twee.",
     });

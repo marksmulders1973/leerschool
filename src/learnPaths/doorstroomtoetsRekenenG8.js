@@ -804,7 +804,7 @@ const steps = [
         wrongHints: [null, "Dat is 1 deel.", "Dezelfde aantal als blauw — niet.", "Verkeerd berekend."],
       },
       {
-        q: "**Wat is 50% van 1/2**?",
+        q: "**Hoeveel is 50% van 1/2**?",
         options: ["1/4", "1/2", "1", "0"],
         answer: 0,
         wrongHints: [null, "Niet halveert.", "Dat is dubbel.", "Niet nul."],
@@ -1043,7 +1043,7 @@ const steps = [
         },
       },
       {
-        q: "**Wat is 1% van €500**?",
+        q: "**Hoeveel is 1% van €500**?",
         options: ["€5", "€50", "€10", "€0,50"],
         answer: 0,
         wrongHints: [null, "Dat is 10%.", "Niet zomaar deel 100.", "Te weinig."],

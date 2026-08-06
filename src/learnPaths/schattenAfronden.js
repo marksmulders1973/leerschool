@@ -333,7 +333,7 @@ const steps = [
       { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Niet.", "Te ver.", "Te ver."] },
       { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null, "Niet — 2 < 5.", "Te ver.", "Niet afgerond."] },
       { q: "Schat: 19 × 21 ≈ ?", options: ["~400","~200","~600","~40"], answer: 0, wrongHints: [null, "Rond beide af naar 20 — wat is 20 × 20?", "Te hoog gegokt — rond 19 én 21 allebei af naar 20 en reken opnieuw.", "Dat lijkt op 19 + 21 — maar er staat kéér, niet plus!"] },
-      { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null, "Dat lijkt op ongeveer 4 + 5 — er staat kéér. Rond beide af naar 5.", "Dat is 4,9 + 5,1 — maar er staat kéér, niet plus! Wat is 5 × 5?", "Te hoog — rond allebei af naar 5 en reken 5 × 5."] },
+      { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null, "Dat lijkt op ongeveer 4 + 5 — er staat kéér. Rond beide af naar 5.", "Dat is 4,9 + 5,1 — maar er staat kéér, niet plus! Hoeveel is 5 × 5?", "Te hoog — rond allebei af naar 5 en reken 5 × 5."] },
       { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Niet — 5 ≥ 5.", "Honderdtal-niveau.", "Te ver."] },
       { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Schat hoogte mens 1,72 m", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Geen schatting.", "Te laag."] },

@@ -161,7 +161,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
 }
 
 // Simpele parser voor plakken-modus. Verwacht patterns zoals:
-//   1. Wat is 2+2?
+//   1. Hoeveel is 2+2?
 //   A. 3
 //   B. 4 *
 //   C. 5

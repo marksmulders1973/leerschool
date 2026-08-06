@@ -2,7 +2,7 @@
 //
 // Format:
 //   {
-//     q: "Wat is 4 + 4?",
+//     q: "Hoeveel is 4 + 4?",
 //     kind: "open",
 //     acceptedAnswers: ["8", "acht"],
 //     caseSensitive: false,    // default false

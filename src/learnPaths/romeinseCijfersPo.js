@@ -373,7 +373,7 @@ const steps = [
           niveaus: {
             basis: "IV = 4, dus 4 uur.",
             simpeler: "Kleine I links van V → 5 − 1.",
-            nogSimpeler: "Wat is 5 − 1?",
+            nogSimpeler: "Hoeveel is 5 − 1?",
           },
         },
       },
