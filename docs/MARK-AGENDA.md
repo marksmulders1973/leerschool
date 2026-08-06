@@ -56,6 +56,7 @@
 ## ⏸️ Wachten — geen actie, alleen onthouden
 
 - Ooievaarspas Den Haag: vriend-status (getekend 21 jul).
-- Besturen: VB Emmen (agenda), VB Lelystad, ThuisOnderwijsMaatjes-vrijwilligers,
-  Studiezalen-teambespreking.
+- Besturen: VB Lelystad, ThuisOnderwijsMaatjes-vrijwilligers,
+  Studiezalen-teambespreking. (VB Emmen ✅ beslist 6 aug: zelf niet, wél warme
+  doorverwijzing naar Leergeld Emmen — 2 concepten klaargezet in Gmail.)
 - Outreach-reacties (~355 mails) komen v.a. eind aug binnen.
