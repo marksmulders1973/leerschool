@@ -58,5 +58,6 @@
 - Ooievaarspas Den Haag: vriend-status (getekend 21 jul).
 - Besturen: VB Lelystad, ThuisOnderwijsMaatjes-vrijwilligers,
   Studiezalen-teambespreking. (VB Emmen ✅ beslist 6 aug: zelf niet, wél warme
-  doorverwijzing naar Leergeld Emmen — 2 concepten klaargezet in Gmail.)
+  doorverwijzing naar Leergeld Emmen — bedank-reply aan Paul + opvolg-mail
+  Leergeld Emmen beide verstuurd 6 aug ±18:05; wachten op antwoord.)
 - Outreach-reacties (~355 mails) komen v.a. eind aug binnen.

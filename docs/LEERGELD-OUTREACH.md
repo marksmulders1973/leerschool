@@ -118,7 +118,7 @@ Alle adressen geverifieerd via de eigen contactpagina van de stichting. Mark ver
 | Leergeld Heerenveen | info@leergeldheerenveen.nl | 2026-07-09 | | |
 | Leergeld Zuidwest Friesland | info@leergeldzwf.nl | 2026-07-09 | | |
 | Leergeld Noord Drenthe | assen@leergeldnoorddrenthe.nl | 2026-07-09 | | |
-| Leergeld Emmen | info@leergeldemmen.nl | 2026-07-09 | | 6 aug: warme doorverwijzing van Paul van Olffen (VB Zuidoost-Drenthe); opvolg-concept met referral staat in Gmail |
+| Leergeld Emmen | info@leergeldemmen.nl | 2026-07-09 + opvolger 2026-08-06 | | warme doorverwijzing van Paul van Olffen (VB Zuidoost-Drenthe); opvolger mét referral + Haarlemmermeer/Apeldoorn-bewijs verstuurd 6 aug |
 | Leergeld Hoogeveen | info@stichtingleergeldhoogeveen.nl | 2026-07-09 | | |
 | Leergeld Meppel | coordinator@leergeldmeppel.nl | 2026-07-09 | | |
 | Leergeld Maastricht en Heuvelland | info@maastrichtenheuvelland.leergeld.nl | 2026-07-09 | | |
