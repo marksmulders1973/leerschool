@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 1 augustus 2026.
+Laatst bijgewerkt: 7 augustus 2026.
 
 ## Wat is Leerkwartier?
 
@@ -87,6 +87,26 @@ Laatst bijgewerkt: 1 augustus 2026.
 - Wekelijks gratis ouder-rapport per e-mail (welke onderwerpen geoefend,
   sterkste punt, aandachtspunt, niveau-indicatie) — vergelijkbare functie
   is bij betaalde apps een premium-feature.
+
+## Samenwerkingen met maatschappelijke organisaties
+
+Leerkwartier werkt samen met organisaties die gezinnen met een laag
+inkomen helpen. Concreet: Voedselbank Rotterdam toont Leerkwartier op de
+schermen in hun drie sociale supermarkten (Crooswijk, Rotterdam Zuid,
+Spangen); Leergeld Haarlemmermeer stopt in oktober 2026 een
+Leerkwartier-flyer met gratis toegangscode in 1.000 goodiebags op Spark
+Fest, hun 20-jarig jubileumfestival; Voedselbank Smallingerland geeft
+flyers mee aan gezinnen. Echte, met toestemming geplaatste citaten:
+
+- "Wat fijn dat je hiermee gezinnen helpt die dat goed kunnen gebruiken."
+  — Inez, Stichting Leergeld Haarlemmermeer
+- "Een mooi initiatief! Onze focus is voedsel, maar mooie initiatieven
+  willen wij wel steunen." — R. Schaake, Voedselbank Smallingerland
+- "Wat een leuk initiatief! We zien er zeker een meerwaarde in om de app
+  te promoten." — Voedselbank Rotterdam
+
+Overzicht: https://leerkwartier.app/bedankt.html — informatie voor
+organisaties: https://leerkwartier.app/voor-organisaties.html
 
 ## Veelgestelde vragen (met antwoorden)
 
