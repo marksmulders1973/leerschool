@@ -88,7 +88,7 @@ export default function KoppelcodeBanner({ userName }) {
         }}
       >
         <span style={{ fontSize: 18 }}>🔐</span>
-        <span style={{ flex: 1 }}>Heb je een koppelcode van je ouder?</span>
+        <span style={{ flex: 1 }}>Heb je een koppelcode van thuis gekregen?</span>
         <span aria-hidden="true">▼</span>
       </button>
     );

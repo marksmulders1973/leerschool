@@ -215,7 +215,12 @@ export default function App() {
     const p = getInitialPage();
     if (p === "home" && typeof window !== "undefined" && window.location.pathname !== "/") {
       const byPath = pageForPath(window.location.pathname);
-      if (byPath && byPath !== "home") return byPath;
+      // Mark 7 aug 2026: iedereen start altijd op dezélfde home. Een koude
+      // load op /leerling (adresbalk-suggestie, bookmark of SW-update-reload)
+      // opende het leerling-dashboard i.p.v. de homepage — bezoekers dachten
+      // dat dát de site was en zagen geen weg terug. Cold load → altijd
+      // HomePage; bínnen de app blijft /leerling gewoon bereikbaar.
+      if (byPath && byPath !== "home" && byPath !== "student-home") return byPath;
     }
     return p;
   })();
@@ -239,6 +244,13 @@ export default function App() {
       // DeepVraag de id uit de URL kan lezen.
       if (location.pathname.match(/^\/v\//i)) return;
       const fromUrl = pageForPath(location.pathname);
+      // Cold load op /leerling → altijd de echte homepage (Mark 7 aug 2026,
+      // zie initialPage hierboven). URL meteen gelijktrekken naar "/".
+      if (fromUrl === "student-home") {
+        navigate("/", { replace: true });
+        if (page !== "home") setPage("home");
+        return;
+      }
       if (fromUrl !== page) {
         // Bij /?go=tafels (of ?play=obliterator) is `page` al door
         // getInitialPage() uit search-params gezet. fromUrl is dan "home"
@@ -1544,6 +1556,7 @@ export default function App() {
             setPage("learn-path");
           }}
           onBack={() => setPage("home")}
+          onHome={goHome}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
           onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}

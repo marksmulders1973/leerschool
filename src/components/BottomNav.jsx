@@ -42,7 +42,10 @@ function maakTabs(isTeacher) {
 }
 
 function bepaalActieveTab(page) {
-  if (page === "home" || page === "student-home") return "home";
+  // student-home telt NIET als "Home" (Mark 7 aug 2026): de Home-tab lichtte
+  // daar op alsof je al op de homepage stond — niemand tikte er dus nog op
+  // en er leek geen weg naar de echte home. Nu is de tab daar gewoon tikbaar.
+  if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
