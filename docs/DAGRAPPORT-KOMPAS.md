@@ -68,6 +68,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
+| 7 aug 2026 | **3 (=)** | — (Vercel uitgelogd, dag 2) | events_echt 1.442/7d · **7/24u (stilste dag; agent: nacht-events = 1 apparaat/crawler zonder opslag)** | +0 / 16 | 562 (+35%) · FB-reel uitgewerkt op 311 (~48u testvenster) · IG-reel 9→16 · **agent: quiz_completed-tracking-bug bevestigd (25 starts/197 vragen/0 completions, quiz_id=null) → P0-fix** · Emmen → doorverwijzing Leergeld Emmen (5e warme tip) |
 | 6 aug avond | **3 (=)** | — (Vercel uitgelogd) | events_echt 1.471/7d · 37/24u | +0 / 16 (7d: +1) | reel-analyse: 308 bereik, ~1s kijktijd, 0 interactie; IG-reel 9 (geen caption); foto's 3-8; Threads 1 like; **3× quote-JA → live v205** |
 | 6 aug 2026 | **3 (↑+2)** | — (Vercel uitgelogd in Claude-Chrome) | events_echt 1.472/7d · 53/24u (question_answered 790, quiz_started 87 — echte oefen-activiteit) | +0 / 16 | **561 (+54%)** · reel 5 aug = 308 |
 | 3 aug 2026 | **1 (=)** | — | events_echt 762/7d (waarvan 2 aug 531 = 1 test-apparaat, ~40/dag reëel) | RLS-afgeschermd (anon) | — |

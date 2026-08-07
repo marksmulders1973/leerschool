@@ -11,7 +11,7 @@
 ## 🔥 KB-route (Mark 6 aug: "dit gaan we eerst doen") — één KB-"ja" = álle bibliotheken
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
-| **KB-aanspreekpunt via OBA** | Antwoord van Lenneke Briët (OBA marcom, werkdagen ma-wo + do/vr-ochtend) op Marks vraag naar het KB-contactpunt — **reply verstuurd 6 aug** | 6 aug | KB-dossier (1 A4) af laten maken door Claude; eind aug warme bibliotheken (Utrecht/Westfries/Amstelland/R'dam/Rijn en Venen) vragen om AVEC-voordracht; details memory `project_studiebol_kb_route` |
+| **KB-route zonder OBA-ingang** | ~~Lenneke Briët~~ **6 aug 10:08 beantwoord: zij heeft zélf geen KB-contacten/ingang** → OBA-lus dicht. Route loopt nu via eigen KB-dossier + warme bibliotheken | 6 aug | KB-dossier (1 A4) af laten maken door Claude; eind aug warme bibliotheken (Utrecht/Westfries/Amstelland/R'dam/Rijn en Venen) vragen om AVEC-voordracht; details memory `project_studiebol_kb_route` |
 
 ## 🎯 SIDN-subsidie — ✅ INGEDIEND 4 aug 2026 (€7.150, aanvraag-nr 140670)
 *Alle stappen afgerond (samen met Claude via FundPro): quickscan groen, account aangemaakt
@@ -26,6 +26,7 @@ budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitsl
 | Outreach-reacties (~355 mails: Leergeld, scholen, voedselbanken, huiswerkclubs, bibliotheken) | Zomervakantie voorbij | jul | Reacties verwacht v.a. eind aug; warme reacties → warme-leads-lijst + reply |
 | **Flyer-ontvangstchecks 18-jul-zendingen** (geen van drie bevestigde ontvangst per mail; Enschede indirect bewezen via 1e code-claim 27 jul) | Drachten: check-mail **verstuurd 4 aug** (Zapier). Purmerend + Enschede: **✅ verstuurd 6 aug** (Mark, vanuit Gmail-Concepten) | 4-6 aug | Bevestiging binnen → regel afvoeren; geen reactie na ~2 wkn → 1 vriendelijke reminder |
 | **Voedselbank Lelystad** (voorzitter Theo Grootjen + heel bestuur in cc) vroeg 28 jul wat de band met Stichting Leergeld is | Besluit bestuur na onze uitleg (reply verstuurd 28 jul: geen formele band, wel samenwerkingen — eerlijk uitgelegd) | 28 jul | Bij "ja" → code LELYSTAD2027 aanmaken + flyer-aanbod |
+| **Leergeld Emmen eo** — warme doorverwijzing van Paul van Olffen (VB Zuidoost-Drenthe, 6 aug: bestuur doet zelf niet mee maar verwees actief door) | Antwoord op outreach-mail **verstuurd 6 aug 18:05** naar info@leergeldemmen.nl (mét doorverwijs-vermelding) | 6 aug | Bij "ja" → code EMMEN2027 + flyer-aanbod; combineert met Leergeld-golf-55 ~18 aug |
 | Leergeld Haarlemmermeer team-overleg over breder inzetten aanbod | Inez' team | 21 jul | Meenemen in Spark Fest-thread |
 | Anthropic DPA/ZDR-addendum (privacy-fundament, o.a. voor OP-beoordeling) | Antwoord van Anthropic (sales@ + cc privacy@) | 27 jul | ZDR-addendum tekenen → DPIA §3 + privacy.html bijwerken; ~1-2 wkn |
 
