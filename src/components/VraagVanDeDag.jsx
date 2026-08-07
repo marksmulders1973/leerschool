@@ -3,6 +3,7 @@ import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import { track, bronDatumTijd } from "../utils.js";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
 import DeelDagUitslag from "./DeelDagUitslag.jsx";
+import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 
 // "Doorstroomtoets-vraag van de dag" — een dagelijkse, lichte reden om de app te
 // openen. Twee bronnen (Mark 2026-07-02):
@@ -119,6 +120,12 @@ export default function VraagVanDeDag() {
     track("vraag_vd_dag_answered", { id: vraag.id, goed: i === vraag.answer, actueel: !!vraag.actueel });
   };
 
+  // Voorleestekst: vraag + opties, zonder **-markering (die is alleen visueel).
+  const voorleesVraag = [
+    String(vraag.vraag || "").replace(/\*\*/g, ""),
+    ...(vraag.options || []).map((opt, i) => `${LETTERS[i]}. ${opt}`),
+  ].filter(Boolean).join("\n");
+
   const niveaus = vraag.uitlegPad?.niveaus || {};
   const NIV = [
     { key: "basis", label: "Basis", t: niveaus.basis },
@@ -165,12 +172,18 @@ export default function VraagVanDeDag() {
           Het antwoord staat altijd in deze tekst → echt leesbegrip oefenen. */}
       {vraag.tekst && (
         <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "12px 14px", marginBottom: 12, whiteSpace: "pre-line" }}>
-          {vraag.tekst}
+          <VoorleesBlok tekst={vraag.tekst} accent={GROEN}>
+            {vraag.tekst}
+          </VoorleesBlok>
         </div>
       )}
 
+      {/* Voorlees-steun (Mark 7 aug, zelfde patroon als PlayQuiz 25 jul):
+          vraag + antwoordopties — geeft niets weg, alles staat al op het scherm. */}
       <div style={{ fontSize: 15.5, fontWeight: 600, lineHeight: 1.4, color: "rgba(255,255,255,0.95)", marginBottom: 12 }}>
-        {renderTekst(vraag.vraag)}
+        <VoorleesBlok tekst={voorleesVraag} accent={GROEN}>
+          {renderTekst(vraag.vraag)}
+        </VoorleesBlok>
       </div>
 
       {vraag.bronAfbeelding?.src && (
@@ -228,7 +241,9 @@ export default function VraagVanDeDag() {
                 ))}
               </div>
               <div style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,0.92)", background: "rgba(0,0,0,0.18)", borderRadius: 10, padding: "11px 13px", borderLeft: `3px solid ${GROEN}` }}>
-                {NIV.find((n) => n.key === niveau)?.t}
+                <VoorleesBlok tekst={NIV.find((n) => n.key === niveau)?.t || ""} accent={GROEN}>
+                  {NIV.find((n) => n.key === niveau)?.t}
+                </VoorleesBlok>
               </div>
             </>
           )}
