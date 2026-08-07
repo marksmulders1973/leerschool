@@ -35,13 +35,17 @@ export const LAGEN = {
     prijs: "richtprijs € 4,95 p/mnd of € 39 p/jaar — per gezín, niet per kind",
     kort: "Volg en help al je kinderen — één prijs per gezin",
   },
+  // School-first (Mark 7 aug 2026, zie docs/PRIJSPLAN.md §3): een leerkracht
+  // in loondienst koopt niet privé — de school is de koper (licentie, factuur,
+  // verwerkersovereenkomst); alleen de zzp-bijlesdocent koopt individueel.
+  // Voor de juf zelf blijft alles wat zij met haar klas doet gratis.
   leerkracht: {
     id: "leerkracht",
     naam: "Pro",
     icon: "🏫",
-    wie: "voor leerkrachten & bijlesdocenten",
-    prijs: "richtprijs € 6,95 p/mnd of € 59 p/jaar",
-    kort: "Eigen logo op toetsen + rapportage voor je hele klas",
+    wie: "voor scholen & bijlesdocenten",
+    prijs: "school € 99 per klas p/jaar · bijlesdocent richtprijs € 6,95 p/mnd of € 59 p/jaar",
+    kort: "Schooldashboard, eigen logo op toetsen en rapportage — voor leerkrachten blijft lesgeven met Leerkwartier gratis",
   },
   tegoed: {
     id: "tegoed",
@@ -65,10 +69,12 @@ export const PRO_MODEL = {
   later: "Vanaf 2027 een betaalde extra",
   kort: "Nu gratis · vanaf 2027 betaald",
   uitleg:
-    "De basis (oefenen + uitleg op 3 niveaus) blijft gratis. " +
+    "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — ook voor " +
+    "leerkrachten die met hun klas oefenen. " +
     "Vanaf 2027 zijn er drie extra's: Familie (één klein bedrag per gezín — " +
-    "voortgang volgen, weekrapport, hele toets oefenen met de klok), Pro voor leerkrachten " +
-    "(eigen logo op toetsen + klasrapportage) en los kwartier-tegoed voor " +
+    "voortgang volgen, weekrapport, hele toets oefenen met de klok), Pro voor scholen " +
+    "en bijlesdocenten (schooldashboard, eigen logo op toetsen, klasrapportage) " +
+    "en los kwartier-tegoed voor " +
     "extra AI-bijles — dat laatste zonder abonnement: je betaalt alleen " +
     "voor wat je écht gebruikt.",
 };

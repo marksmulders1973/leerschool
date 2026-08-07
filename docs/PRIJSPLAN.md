@@ -47,12 +47,40 @@ stappenplan), onbeperkt oefenen.
 schuurt met het toegankelijkheids-merk (Leergeld, voedselbanken, Ooievaarspas).
 "Familie" is warm, duidelijk, en draagt de per-gezin-USP in de naam.
 
-### 3. Leerkwartier Pro — abonnement voor leerkrachten & bijlesdocenten
-**Voor:** professionals — dáár is "Pro" de juiste taal (onderzoek 25 jul:
-Pro werkt in professionele context, niet bij gezinnen).
-**Richtprijs:** € 6,95/mnd of € 59/jaar; schoollicentie € 99/klas/jaar.
-**Inhoud:** eigen (school)logo op toetsen en oefenbladen, onbeperkt toetsen
-maken, klasrapportage + export. Leerpaden klaarzetten blijft gratis.
+### 3. Leerkwartier Pro — de school is de koper (herijkt 7 aug 2026)
+**Mark-inzicht 7 aug:** een leerkracht in loondienst koopt vrijwel nooit privé
+een abonnement voor het werk — zo werkt de hele NL-edtech-markt (Gynzy,
+Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
+**school-first**, met de zzp-bijlesdocent als enige individuele koper.
+
+**Drie rollen:**
+1. **Leerkracht (loondienst) = gratis, voor altijd** — bewust, want de juf is
+   ons acquisitiekanaal (1 juf = 25 gezinnen). Eigen account, leerpaden
+   klaarzetten, deelcode, klas laten oefenen: gratis. Elke drempel voor een
+   juf kost gezinnen.
+2. **School = de Pro-koper.** Schoollicentie € 99/klas/jaar. Wat de school
+   koopt (en de gratis juf mist): schooldashboard over álle groepen
+   (directie/IB'er), meerdere leerkrachten onder één beheer (continuïteit —
+   niet afhankelijk van één enthousiaste juf), school-logo op toetsen en
+   oefenbladen, onbeperkt toetsen, klasrapportage + export, én de formele
+   kant: **verwerkersovereenkomst (DPA), factuur-betaling en support**. NB:
+   zodra een school leerlinggegevens structureel via ons laat lopen is een
+   DPA wettelijk verplicht — de licentie is dus geen extraatje maar de
+   voorwaarde om het als school te mógen gebruiken.
+3. **Bijlesdocent/zzp = individueel Pro** — € 6,95/mnd of € 59/jaar. Die
+   betaalt wél privé (aftrekbaar, verdient zichzelf in één lesuur terug).
+   Framing in copy: "voor bijlesdocenten", niet "voor leerkrachten".
+
+**Vuistregel gratis↔betaald (bewaken bij elke nieuwe feature):** helpt het
+één juf met één klas → gratis; helpt het de organisatie (overzicht over
+klassen heen, beheer, compliance) → schoollicentie.
+
+**Verkoop-route + kalender:** juf gebruikt gratis → juf-A4 "vraag het je
+directeur" → school koopt op factuur. Scholen kopen in twee golven:
+schooljaarstart (aug-okt) en voorjaar (voor het volgende schooljaar). Paywall
+gaat ~jan 2027 aan → najaar 2026 = **gratis pilot-scholen** werven (kost
+niets, levert gezinnen + referenties), voorjaar 2027 = eerste betaalde
+licenties voor schooljaar 2027-2028. Eerste school-omzet realistisch: sep 2027.
 
 ### 4. Kwartier-tegoed — los, geen abonnement
 **Voor:** verbruik: extra AI-bijles-tijd bovenop de gratis basis. Ook voor
@@ -104,6 +132,14 @@ Ooievaarspas.
 
 - [ ] Definitieve prijzen vaststellen (incl. prijs per kwartier o.b.v. AI-kostenmeting).
 - [ ] Stripe-koppeling: producten per laag + tegoed-bundels (zie CLAUDE.md paywall-stappen).
+- [ ] **Rechtsvorm/BTW vóór de eerste betaling regelen (deadline ~nov 2026):**
+  abonnementen verkopen vraagt KVK/BTW-afhandeling (of via de Stichting
+  Leerkwartier), Stripe-bedrijfsgegevens, algemene voorwaarden +
+  herroepingsrecht. Niet in december pas starten.
+- [ ] **School-koop-route bouwen:** betalen op factuur (scholen hebben geen
+  creditcard), verwerkersovereenkomst-sjabloon (DPA — staat op de
+  privacy-todo), juf-A4 "vraag het je directeur".
+- [ ] Najaar 2026: 2-3 gratis pilot-scholen werven (referenties voor voorjaar 2027).
 - [x] `useSubscription`: partner-status 'pro2027' → Familie-tier honoreren
   (gedaan 2026-07-26 via `partnerGrant()`, incl. blijvend-regel Ooievaarspas).
 - [ ] Cadeaukaart-flow (kwartier-tegoed) — mikken op december-campagne.
