@@ -45,6 +45,22 @@
 - **o2g2** (Openbaar Onderwijs Groep Groningen), **Ommeriek** en **Kentalis** — tip van
   Eline Doesburg-Aalfs (Forum Groningen, educatie, 24 jul). Opener voor de mail:
   "Forum Groningen raadde me aan contact met u op te nemen." Meesturen met scholen-batch 2 (eind aug).
+- **Stichting Leergeld Emmen eo** — tip van Paul van Olffen (VB Zuidoost-Drenthe, 6 aug,
+  na bestuursoverleg). Outreach-mail met doorverwijs-opening al verstuurd 6 aug.
+
+### 🤝 De warme-tip-vraag (standaard sinds 7 aug — dagrapport-idee #13)
+
+Vijf van onze beste ingangen kwamen uit een spontane doorverwijzing bij een "nee"
+of twijfel (Sam& → Leergeld landelijk + JEF, Barendrecht → VluchtelingenWerk,
+Forum Groningen → 3 scholenstichtingen, OBA → KB-route, Emmen → Leergeld Emmen).
+Daarom in élke afsluitende reply — óók bij een afwijzing, ná het bedankje — deze
+zin opnemen (mag licht variëren, toon vriendelijk en vrijblijvend):
+
+> "Mag ik u tot slot één kleine vraag stellen: kent u één organisatie in uw regio
+> waar dit wél goed zou passen? Een naam is al genoeg — dan neem ik zelf contact op."
+
+Binnengekomen tips hierboven bij "Warme-tip-ingangen" zetten mét bron ("op advies
+van …" als opener) — doorverwijzingen openen deuren die koude mails niet openen.
 
 ## ✉️ MAIL-SJABLOON 2.0 (29 jul — met bewijs-alinea, actief sinds ≥3 partners)
 

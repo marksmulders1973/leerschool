@@ -343,7 +343,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     }
     setShowExplanation(true);
 
-    track("question_answered", { subject: gameState.quiz.subject, level: gameState.quiz.level, question_nr: gameState.currentQ + 1, is_correct: isCorrect, timed_out: idx === -1 });
+    track("question_answered", { quiz_id: gameState.quiz.id, subject: gameState.quiz.subject, level: gameState.quiz.level, question_nr: gameState.currentQ + 1, questions_count: gameState.questions.length, is_correct: isCorrect, timed_out: idx === -1 });
 
     // Schrijf prestatie weg in topic_mastery — fire-and-forget.
     if (userName && idx !== -1) {
