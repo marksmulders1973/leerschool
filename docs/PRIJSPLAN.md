@@ -47,6 +47,53 @@ stappenplan), onbeperkt oefenen.
 schuurt met het toegankelijkheids-merk (Leergeld, voedselbanken, Ooievaarspas).
 "Familie" is warm, duidelijk, en draagt de per-gezin-USP in de naam.
 
+### 2b. 🎟️ Seizoenspas — PLAN (8 aug 2026, uitwerken na Mark's keuzes)
+
+**Het probleem dat dit oplost:** de koopbehoefte van de Familie-ouder leeft
+van ~november tot de Doorstroomtoets (feb) en verdwijnt daarna (kind naar de
+middelbare school). Een jaar-abo van €39 is in november onlogisch ("ik heb
+maar 4 maanden nodig"), een maand-abo wordt na de toets opgezegd (~€15-20
+omzet). De betaalvorm moet matchen met wat de ouder écht koopt: *dit
+toetsjaar goed doorkomen.*
+
+**Het voorstel — één vast bedrag, betaal één keer, stopt vanzelf:**
+
+| Variant | Loopt tot | Richtprijs | Afweging |
+|---|---|---|---|
+| A "tot de toets" | t/m 12 feb 2027 | € 19,95 | goedkoopst, maar stopt abrupt midden in het schooljaar |
+| **B "het hele toetsjaar"** ⭐ | t/m 31 juli 2027 | € 24,95 | aanrader: niet abrupt, ruimte voor broertje/zusje, mooiere belofte |
+
+**Waarom dit bij het merk past (de stiekeme superkracht):** geen
+auto-verlenging — de pas stopt gewoon vanzelf. Dat is precies het
+tegenovergestelde van Squla-achtige abonnementen die stiekem doorlopen, en
+sluit naadloos aan op de eerlijkheids-belofte (geen creditcard-valkuil).
+Marketing-zin: *"Eén keer betalen, het hele toetsjaar geholpen — en hij
+stopt vanzelf. Geen abonnement, geen kleine lettertjes."*
+
+**Plek op de prijzenpagina (anker-opbouw, drie smaken Familie):**
+1. Maand € 4,95 — flexibel, opzegbaar
+2. **Seizoenspas — "meest gekozen"** (het anker in het midden)
+3. Jaar € 39 — voor gezinnen met meerdere/jongere kinderen (goedkoopst op
+   lange termijn; blijft bestaan als retentie-optie)
+
+**Retentie na de pas (het churn-antwoord):** einde-pas-flow in maart/juli →
+aanbod voor broertje/zusje (zit al in Familie: max 3 kinderen) en early-bird
+voor groep-7-ouders ("volgend jaar is het jouw beurt — nu alvast rustig
+beginnen"). Zo wordt seizoens-churn een jaarlijkse verkoop-kalender i.p.v.
+verlies. NB: break-even-som (11-28 gezinnen) gaat dan uit van jaarlijkse
+werving — e-maillijst is de motor.
+
+**Nog te kiezen door Mark (uitwerken ná die keuzes):**
+- [ ] Naam: "Seizoenspas" / "Toetsjaar-pas" / "Doorstroompas" / anders (B1, warm, geen dev-jargon)
+- [ ] Variant A of B + definitieve prijs
+- [ ] Jaar-tier houden als derde smaak of vereenvoudigen naar maand + pas
+
+**⚠️ Kwartier-tegoed — twijfel (Mark 8 aug: "waarschijnlijk een slecht idee"):**
+de AI-bijles wordt gratis al nauwelijks gebruikt (0 calls sinds 3 aug) — er
+is geen bewezen vraag voor een verbruiks-product. Besluit-gate: **niet
+bouwen in de Stripe-scope van jan 2027**; alleen heroverwegen als de
+najaar-meting échte vraag laat zien. Cadeaukaart-flow idem on-hold.
+
 ### 3. Leerkwartier Pro — de school is de koper (herijkt 7 aug 2026)
 **Mark-inzicht 7 aug:** een leerkracht in loondienst koopt vrijwel nooit privé
 een abonnement voor het werk — zo werkt de hele NL-edtech-markt (Gynzy,
@@ -142,5 +189,6 @@ Ooievaarspas.
 - [ ] Najaar 2026: 2-3 gratis pilot-scholen werven (referenties voor voorjaar 2027).
 - [x] `useSubscription`: partner-status 'pro2027' → Familie-tier honoreren
   (gedaan 2026-07-26 via `partnerGrant()`, incl. blijvend-regel Ooievaarspas).
-- [ ] Cadeaukaart-flow (kwartier-tegoed) — mikken op december-campagne.
+- [ ] ~~Cadeaukaart-flow (kwartier-tegoed)~~ **ON-HOLD 8 aug** (tegoed-twijfel, zie §2b) — alleen terug bij bewezen vraag.
+- [ ] **Seizoenspas-keuzes door Mark** (naam / variant A-B / prijs — zie §2b), daarna uitwerken in proPlan.js + abonnement.html.
 - [ ] Wachtlijst mailen (upgrade_waitlist) met 30-dagen-gratis-aanbod.
