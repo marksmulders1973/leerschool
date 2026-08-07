@@ -233,6 +233,7 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const isFirstRouterRender = useRef(true);
+  const isFirstLocationSync = useRef(true);
   // page → URL
   useEffect(() => {
     if (isFirstRouterRender.current) {
@@ -289,7 +290,14 @@ export default function App() {
   }, [page]);
   // browser back/forward: URL → page
   useEffect(() => {
-    if (isFirstRouterRender.current) return;
+    // Eigen eerste-render-vlag (Mark-bug 7 aug 2026): het page→URL-effect
+    // hierboven zet isFirstRouterRender al op false vóórdat dit effect zijn
+    // mount-run doet — de oude guard was dus dood. Gevolg: bij cold load op
+    // /leerling las dit effect de nog-niet-bijgewerkte URL en zette de net
+    // omgeleide homepage direct terug naar student-home ("flits en spring").
+    // Bij mount is de URL al afgehandeld door het effect hierboven; de
+    // mount-run hier hoort altijd overgeslagen te worden.
+    if (isFirstLocationSync.current) { isFirstLocationSync.current = false; return; }
     // /duel/:code → PvP-lobby (anders mappen naar "home" en verliezen we de match)
     if (location.pathname.match(/^\/duel\//i)) {
       if (page !== "pvp-lobby" && page !== "pvp-play") setPage("pvp-lobby");
