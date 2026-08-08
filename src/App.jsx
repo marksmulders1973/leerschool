@@ -10,6 +10,7 @@ import LoadingOverlay from "./components/LoadingOverlay.jsx";
 import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import DeelTrotsKnop from "./components/DeelTrotsKnop.jsx";
+import KwartierVangnet from "./components/KwartierVangnet.jsx";
 import TakenlijstView from "./components/TakenlijstView.jsx";
 import { isTakenlijst } from "./data/takenlijst.js";
 import UpdateBanner from "./components/UpdateBanner.jsx";
@@ -437,6 +438,9 @@ export default function App() {
   // Init uit localStorage: leertijd telt door over reloads heen binnen de dag.
   const [sessionSec, setSessionSec] = useState(leesLeertijdVandaag);
   const [showKwartierToast, setShowKwartierToast] = useState(false);
+  // KwartierVangnet (idee #16, 2026-08-08): timestamp van het laatste
+  // "score kon niet op het scorebord wegens geen naam"-moment.
+  const [vangnetTrigger, setVangnetTrigger] = useState(0);
   // Al 15 min gehaald vandaag? Dan niet opnieuw vuren/toasten bij een reload.
   const milestoneShownRef = useRef(leesLeertijdVandaag() >= KWARTIER_TARGET_MIN * 60);
   // 🤝 Vrienden-werven: kwam deze bezoeker via een ?vriend=CODE-deellink?
@@ -987,6 +991,9 @@ export default function App() {
       });
     } else {
       track("leaderboard_skipped_no_name", { subject: result.subject, level: result.level });
+      // Warmste vang-moment (idee #16): score kon niet op het scorebord →
+      // KwartierVangnet-kaart mag op de results-pagina om een naam vragen.
+      setVangnetTrigger(Date.now());
     }
 
     // Streak + voortgang opslaan
@@ -2246,6 +2253,41 @@ export default function App() {
           <DeelTrotsKnop />
         </div>
       </div>
+    )}
+    {/* KwartierVangnet (idee #16, 2026-08-08): vangt anonieme oefenaars op
+        het warmste moment — kwartier gehaald of score-zonder-naam — met een
+        naam-vraag + optioneel ouder/verzorger-mail. Niet tonen zolang de
+        kwartier-toast hierboven open staat (die krijgt voorrang). */}
+    {!showKwartierToast && (
+      <KwartierVangnet
+        page={page}
+        trigger={vangnetTrigger}
+        userName={userName}
+        authUser={authUser}
+        onNaamOpgeslagen={(naam) => {
+          setUserName(naam);
+          // De zojuist afgeronde quiz alsnog op het scorebord zetten — de
+          // insert werd bij quiz-einde overgeslagen omdat de naam ontbrak.
+          const laatste = results[results.length - 1];
+          if (laatste && vangnetTrigger && Date.now() - vangnetTrigger < 10 * 60_000) {
+            insertLeaderboardEntry({
+              player_name: naam,
+              user_id: authUser?.id || null,
+              subject: laatste.subject,
+              level: laatste.level,
+              topic: laatste.topic || null,
+              title: laatste.title || null,
+              score: laatste.score,
+              total: laatste.total,
+              percentage: laatste.percentage,
+              quiz_id: laatste.quizId || null,
+              time_taken: laatste.timeTaken,
+              cito_id: laatste.citoId || null,
+              cito_groep: laatste.citoGroep || null,
+            });
+          }
+        }}
+      />
     )}
     </div>
   );
