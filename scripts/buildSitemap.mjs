@@ -4,7 +4,7 @@
 // Doel: alle 240 examenpagina's vindbaar maken voor Google (stonden er maar 61 in).
 //
 // Draaien:  node scripts/buildSitemap.mjs
-import { readdirSync, statSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const BASE = "https://leerkwartier.app";
@@ -39,9 +39,19 @@ const urls = [];
 // Homepage
 urls.push({ loc: `${BASE}/`, priority: "1.0" });
 
+// Pagina's met een noindex-robots-tag (drukwerk/flyers/dia's/stickervellen)
+// horen NIET in de sitemap: GSC meldt anders "uitgesloten door tag noindex"
+// als fout (gebeurde 7 aug 2026).
+function isNoindex(file) {
+  const head = readFileSync(file, "utf8").slice(0, 2000);
+  return /<meta[^>]+name=["']robots["'][^>]+noindex/i.test(head);
+}
+
+let skippedNoindex = 0;
 for (const file of all) {
   const rel = relative(PUBLIC, file).split(sep).join("/");
   if (!rel.includes("/") && EXCLUDE_TOPLEVEL.has(rel)) continue; // top-level uitsluiten
+  if (isNoindex(file)) { skippedNoindex++; continue; }
   const isExamen = rel.startsWith("examen/");
   // Set-indexpagina's (examen/<vak>/<set>/index.html) als map-URL met trailing slash
   // (canonical is de map-URL; zie scripts/build-examen-set-indexes.mjs).
@@ -70,4 +80,4 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.s
 
 writeFileSync(join(PUBLIC, "sitemap.xml"), xml, "utf8");
 const examenCount = uniq.filter((u) => u.loc.includes("/examen/")).length;
-console.log(`sitemap.xml geschreven: ${uniq.length} URLs (waarvan ${examenCount} examenpagina's).`);
+console.log(`sitemap.xml geschreven: ${uniq.length} URLs (waarvan ${examenCount} examenpagina's; ${skippedNoindex} noindex-pagina's overgeslagen).`);
