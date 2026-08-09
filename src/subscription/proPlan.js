@@ -66,6 +66,18 @@ export function getLaag(id) {
   return LAGEN[id] || null;
 }
 
+// Tier-kleuren (Mark 9 aug 2026: "met stippen of een kleurtje aangeven wat
+// onder gratis valt en wat je mist zonder Familie"). Altijd kleur MÉT het
+// woord erbij tonen — kleurenblinde ouders en kinderen van 10 moeten het
+// zonder de kleur ook snappen. gratis = groen, familie = goud, leerkracht
+// (Pro/school) = blauw, tegoed = paars.
+export const LAAG_KLEUREN = {
+  gratis: { dot: "#69f0ae", tekst: "#69f0ae", rand: "rgba(105,240,174,0.45)", vlak: "rgba(105,240,174,0.10)" },
+  familie: { dot: "#ffd54f", tekst: "#ffce80", rand: "rgba(255,183,77,0.5)", vlak: "rgba(255,183,77,0.14)" },
+  leerkracht: { dot: "#64b5f6", tekst: "#8ec9ff", rand: "rgba(66,165,245,0.5)", vlak: "rgba(66,165,245,0.12)" },
+  tegoed: { dot: "#ce93d8", tekst: "#e1bee7", rand: "rgba(171,71,188,0.5)", vlak: "rgba(171,71,188,0.12)" },
+};
+
 // Het model in copy — hergebruik overal zodat de belofte consistent blijft
 // (conform feedback_gratis_belofte_gekwalificeerd: nooit "altijd gratis").
 export const PRO_MODEL = {
@@ -143,6 +155,16 @@ export const PRO_FEATURES = {
       "Een persoonlijk stappenplan: we kijken waar je staat, maken een " +
       "weekplan van kwartiertjes en houden bij hoe het gaat.",
     status: "binnenkort",
+  },
+  "werkblad-print": {
+    id: "werkblad-print",
+    icon: "🖨️",
+    label: "Werkbladen printen",
+    laag: "leerkracht",
+    blurb:
+      "Print het werkblad (12 opgaven + antwoordblad) met je eigen " +
+      "(school)logo erop. Digitaal oefenen via de deelcode blijft gratis.",
+    status: "live",
   },
   "teacher-tools": {
     id: "teacher-tools",

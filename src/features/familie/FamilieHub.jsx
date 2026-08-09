@@ -7,6 +7,8 @@
 // gebruikers. Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
+import { PRO_GRATIS_BASIS } from "../../subscription/proPlan.js";
+
 // De 8 gekozen Familie-haken (Mark 31 jul). status: 'klaar' | 'bouw'.
 const FEATURES = [
   { nr: 1, emoji: "🚦", titel: "Doorstroomtoets-paraatheid", tekst: "In één blik groen/oranje/rood per onderdeel — komt het goed?", status: "klaar", page: "paraatheid" },
@@ -74,6 +76,19 @@ bèta
               </button>
             );
           })}
+        </div>
+
+        {/* Contrast-blok (Mark 9 aug 2026): je ziet pas wat Familie waard is
+            als je óók ziet wat er sowieso gratis blijft. Groen = gratis,
+            goud = Familie — zelfde kleurtaal als de tier-badges. */}
+        <div style={{ marginTop: 18, padding: "14px 16px", borderRadius: 14, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.05)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 7, fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#69f0ae", marginBottom: 8 }}>
+            <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#69f0ae" }} />
+            En dit blijft gewoon gratis — ook zonder Familie
+          </div>
+          <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, lineHeight: 1.7, color: "var(--color-text-muted, #9aa4c7)" }}>
+            {PRO_GRATIS_BASIS.map((r) => <li key={r}>{r}</li>)}
+          </ul>
         </div>
 
         <div style={{ marginTop: 20, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>

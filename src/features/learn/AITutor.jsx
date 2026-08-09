@@ -283,7 +283,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             <div style={{ minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 {naam} helpt je
-                <ProBadge feature="ai-tutor" />
+                {/* kind-modus: dit scherm is van het kind — geen prijzen/koopdruk */}
+                <ProBadge feature="ai-tutor" kind />
               </div>
               <div style={{
                 fontSize: 11,
