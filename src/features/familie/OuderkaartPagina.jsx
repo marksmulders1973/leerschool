@@ -1,5 +1,5 @@
 // ══════════════════════════════════════════════════════════════════════
-// Ouderkaart "Zo leg je 't uit" — Familie-feature 3 (Mark 1 aug 2026), GEHEIM.
+// Ouderkaart "Zo leg je 't uit" — Familie-feature 3 (Mark 1 aug 2026), publieke bèta.
 //
 // De ouder is de kóper én vaak de blokkade ("ik snap breuken zelf niet meer").
 // Deze kaart geeft de ouder in 1 pagina: waar het over gaat · zó leg je het uit
@@ -7,8 +7,8 @@
 // voorbeeld om samen te doen. Bron = het bestaande uitlegPad van een leerpad —
 // dus €0, geen AI. Printbaar + deelbaar (window.print). Deelbaar = gratis bereik.
 //
-// Zichtbaarheid: achter familiePreviewVisible() (?familie=1 of admin). Later
-// achter PaywallGate (Familie). Prefill via ?pad=<id> voor de latere trigger
+// Zichtbaarheid: publiek sinds 1 aug (bèta-label; route ongegate in App.jsx).
+// Later achter PaywallGate (Familie). Prefill via ?pad=<id> voor de latere trigger
 // (bij 2x fout op een concept → "zo help je thuis"). Zie memory
 // idea_studiebol_premium_printbare_hulp + project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════

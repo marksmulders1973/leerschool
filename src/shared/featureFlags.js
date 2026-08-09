@@ -115,14 +115,16 @@ export function oefenboekjePreviewVisible(authUser) {
 }
 
 /**
- * Mag de gebruiker de (nog geheime) Familie-abonnement-preview zien — de hele
- * in-ontwikkeling premium-laag (paraatheidsmeter, oefenboekje op maat,
- * weekschema, diploma, …)? Blijft GEHEIM voor echte gebruikers tot Mark +
- * Claude tevreden zijn.
+ * Kosten-poort voor Familie-onderdelen die per gebruik geld kosten.
  *
- * Zichtbaar als: admin (Mark) · óf een geheime URL `?familie=1` (of de oudere
- * `?boekje=1`) — blijft daarna plakken via localStorage zodat in-app navigeren
- * werkt · óf env-flag VITE_FAMILIE_PREVIEW. Anders: onzichtbaar.
+ * LET OP (stand 9 aug 2026): de Familie-hub + alle 8 tool-pagina's zijn
+ * sinds 1 aug PUBLIEK (bèta-label, ingang op HomePage + StudentHome; routes
+ * ongegate in App.jsx). Deze flag gate alleen nog "Leg het uit" (LegUit.jsx)
+ * — dat kost een AI-call per beurt. Open zetten = Mark-beslissing (kosten).
+ *
+ * Zichtbaar als: admin (Mark) · óf URL `?familie=1` (of de oudere `?boekje=1`)
+ * — blijft daarna plakken via localStorage zodat in-app navigeren werkt · óf
+ * env-flag VITE_FAMILIE_PREVIEW. Anders: onzichtbaar.
  *
  * @param {object|null} authUser
  * @returns {boolean}

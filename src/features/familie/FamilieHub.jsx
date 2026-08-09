@@ -1,10 +1,12 @@
 // ══════════════════════════════════════════════════════════════════════
-// Familie-abonnement — GEHEIME preview-hub (Mark 31 jul 2026).
+// Familie-abonnement — publieke bèta-hub (Mark 31 jul 2026; open sinds
+// 1 aug: "niet meer geheim, deel-voor-deel live met bèta-label").
 //
-// Eén plek waar de hele in-ontwikkeling Familie-laag samenkomt, zodat Mark
-// alles op één scherm kan bekijken en de voortgang ziet. Zichtbaar achter
-// familiePreviewVisible() (?familie=1 of admin) — onzichtbaar voor echte
-// gebruikers. Zie memory project_studiebol_familie_tier_features.
+// Eén plek waar de hele Familie-laag samenkomt. Bereikbaar voor iedereen
+// via "✨ Familie-extra's (bèta)" op HomePage + StudentHome. Alleen het
+// "Leg het uit"-blok (LegUit.jsx) zit nog achter familiePreviewVisible()
+// als kosten-poort (AI-call per beurt). Zie memory
+// project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
 import { PRO_GRATIS_BASIS } from "../../subscription/proPlan.js";

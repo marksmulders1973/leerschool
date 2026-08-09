@@ -1,13 +1,13 @@
 // ══════════════════════════════════════════════════════════════════════
-// Printbaar diploma — Familie-feature 8 (Mark 1 aug 2026), nog GEHEIM.
+// Printbaar diploma — Familie-feature 8 (Mark 1 aug 2026), publieke bèta.
 //
 // Bij het afronden van een onderwerp krijgt het kind een certificaat om te
 // printen/op te hangen — kind blij, ouder trots, en de ouder deelt het (gratis
 // marketing met het Leerkwartier-logo erop). Kosten €0: printen/PDF via de
 // browser (window.print), geen server, geen AI. Liggend A4.
 //
-// Zichtbaarheid: achter familiePreviewVisible() (geheime ?familie=1-URL of
-// admin). Later — zodra de paywall live gaat — achter PaywallGate (Familie).
+// Zichtbaarheid: publiek sinds 1 aug (bèta-label; route ongegate in App.jsx).
+// Later — zodra de paywall live gaat — achter PaywallGate (Familie).
 //
 // Prefill via URL zodat de latere trigger (klaar-scherm van een pad) kan
 // deeplinken: /diploma?naam=Sophie&onderwerp=Breuken  (beide optioneel).
