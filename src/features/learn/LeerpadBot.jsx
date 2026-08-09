@@ -1,5 +1,8 @@
 import { useMemo, useState, useEffect } from "react";
 import { subjectsForQuery } from "./subjectSynonyms.js";
+import AITutor from "./AITutor.jsx";
+import { actieveBuddyPersona } from "../zoo/buddies.js";
+import { track } from "../../utils.js";
 
 // Leerpad-zoeker / "bot" — Mark idee 2026-05-09.
 // Olivia (10jr+) typt iets in zoals "rood staan" of "BTW berekenen", en de
@@ -80,6 +83,12 @@ function logMiss(query) {
 export default function LeerpadBot({ paths, onPickPath, subject = null, levelFilter = null, compact = false }) {
   const [query, setQuery] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
+  // Vonk-vangnet (Mark 9 aug 2026): een kind dat iets zoekt waar geen pad
+  // voor bestaat, mag niet op een dood spoor eindigen — de AI-buddy mag het
+  // wél kort uitleggen (geen lesstof-belofte, gewoon een helpende hand).
+  const [aiOpen, setAiOpen] = useState(false);
+  const [buddy] = useState(() => actieveBuddyPersona());
+  const buddyNaam = buddy?.naam || "Vonk";
 
   // Lijst van paden om te doorzoeken. Filter optioneel op 1 of meer vakken,
   // én op niveau (2026-06-16): een basisschool-kind hoort geen HAVO/VWO-paden
@@ -238,7 +247,33 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, levelFil
         }}>
           Geen direct pad gevonden voor <strong style={{ color: C.warm }}>"{query.trim()}"</strong>.
           Probeer andere of kortere woorden — bv. een vak-term of begrip uit de les.
+          <div style={{ marginTop: 8, color: C.text }}>
+            Dit is geen lesstof van Leerkwartier — maar misschien kan <strong>{buddyNaam}</strong> je verder helpen.
+          </div>
+          <button
+            onClick={() => { track("leerpadbot_buddy_open", { query: query.trim().slice(0, 60) }); setAiOpen(true); }}
+            style={{
+              marginTop: 8, display: "inline-flex", alignItems: "center", gap: 7,
+              padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer",
+              background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#04210f",
+              fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+            }}
+          >
+            <span aria-hidden="true">{buddy?.emoji || "🐉"}</span> Vraag het aan {buddyNaam}
+          </button>
         </div>
+      )}
+
+      {aiOpen && (
+        <AITutor
+          open={aiOpen}
+          onClose={() => setAiOpen(false)}
+          pathTitle="Jouw zoekvraag"
+          pathId="zoekvraag"
+          stepTitle={query.trim()}
+          stepIdx={query.trim().toLowerCase().slice(0, 40)}
+          stepExplanation={`Het kind zocht in de leerpaden naar "${query.trim()}", maar daar bestaat geen les over. Beantwoord de vraag van het kind hierover kort, eerlijk en op basisschool-niveau. Zeg er niet bij dat er geen les bestaat, help gewoon.`}
+        />
       )}
     </div>
   );
