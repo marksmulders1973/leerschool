@@ -117,10 +117,11 @@ export function oefenboekjePreviewVisible(authUser) {
 /**
  * Kosten-poort voor Familie-onderdelen die per gebruik geld kosten.
  *
- * LET OP (stand 9 aug 2026): de Familie-hub + alle 8 tool-pagina's zijn
- * sinds 1 aug PUBLIEK (bèta-label, ingang op HomePage + StudentHome; routes
- * ongegate in App.jsx). Deze flag gate alleen nog "Leg het uit" (LegUit.jsx)
- * — dat kost een AI-call per beurt. Open zetten = Mark-beslissing (kosten).
+ * LET OP (stand 9 aug 2026): de hele Familie-laag is PUBLIEK — hub + 8
+ * tool-pagina's sinds 1 aug, en "Leg het uit" (LegUit.jsx) sinds 9 aug
+ * (Mark-go; kosten begrensd door dag-quota in api/_guard.js). Deze flag
+ * gate momenteel dus NIETS meer; hij blijft bestaan voor toekomstige
+ * previews van nieuwe Familie-onderdelen.
  *
  * Zichtbaar als: admin (Mark) · óf URL `?familie=1` (of de oudere `?boekje=1`)
  * — blijft daarna plakken via localStorage zodat in-app navigeren werkt · óf

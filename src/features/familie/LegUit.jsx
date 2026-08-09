@@ -8,17 +8,14 @@
 // je het echt" — de diepste vorm van begrijpen.
 //
 // Typen-only (spraak/STT komt later, sluit aan op de Buddy-tutor-STT-stap).
-// Achter de Familie-preview-poort omdat elke beurt een (goedkope) AI-call kost;
-// het endpoint heeft daarbovenop een dag-quota. Zichtbaar voor preview/admin.
+// PUBLIEK sinds 9 aug 2026 (Mark: "zet Leg-het-uit open") — de kosten blijven
+// begrensd door het dag-quota op api/leg-uit (2000/dag, _guard.js).
 // ══════════════════════════════════════════════════════════════════════
 import { useState } from "react";
-import { familiePreviewVisible } from "../../shared/featureFlags.js";
 import { track } from "../../utils.js";
 
 export default function LegUit({ conceptTitel, kernpunten = "", authUser = null }) {
-  // Kosten-poort: alleen achter de Familie-preview (of admin/env). Echte
-  // gebruikers zien dit pas als de laag live gaat.
-  if (!conceptTitel || !familiePreviewVisible(authUser)) return null;
+  if (!conceptTitel) return null;
   return <LegUitInner conceptTitel={conceptTitel} kernpunten={kernpunten} />;
 }
 
