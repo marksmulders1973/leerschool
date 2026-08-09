@@ -13,7 +13,7 @@
 // ══════════════════════════════════════════════════════════════════════
 import { useState, useMemo } from "react";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
-import { FamilieMeer } from "./familieUi.jsx";
+import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
 
 const VAKKEN = {
   rekenen: { emoji: "🔢", label: "Rekenen", onderwerpen: ["Breuken", "Procenten", "Verhoudingen", "Meten & schaal", "Kommagetallen", "Tafels"] },
@@ -78,6 +78,7 @@ export default function WeekschemaPagina({ setPage }) {
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
             📅 Koelkast-weekschema
           </h1>
+          <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
             bèta
           </span>

@@ -8,13 +8,34 @@
 // losse eilandjes te zijn. Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
-// Kop van elke Familie-pagina: ← terug (naar de hub) · titel · bèta-badge · intro.
+// Tier-stip (Mark 9 aug: overal de juiste stip): goud = Familie, met de
+// eerlijke "nu gratis"-toevoeging. Zelfde kleurtaal als ProBadge/LAAG_KLEUREN.
+export function FamiliePill({ style }) {
+  return (
+    <span
+      title="Hoort straks bij het Familie-pakket · nu gratis om uit te proberen"
+      style={{
+        display: "inline-flex", alignItems: "center", gap: 5, padding: "2px 9px", borderRadius: 20,
+        border: "1px solid rgba(255,183,77,0.5)", background: "rgba(255,183,77,0.14)", color: "#ffce80",
+        fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 800, whiteSpace: "nowrap",
+        verticalAlign: "middle", ...style,
+      }}
+    >
+      <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffd54f" }} />
+      Familie
+      <span style={{ fontWeight: 700, color: "#69f0ae" }}>· nu gratis</span>
+    </span>
+  );
+}
+
+// Kop van elke Familie-pagina: ← terug (naar de hub) · titel · Familie-stip · bèta-badge · intro.
 export function FamilieKop({ setPage, titel, intro, terug = "familie" }) {
   return (
     <>
       <button onClick={() => setPage && setPage(terug)} style={familieLinkBtn}>← terug</button>
       <div style={{ marginTop: 8, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>{titel}</h1>
+        <FamiliePill />
         <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>bèta</span>
       </div>
       {intro && (

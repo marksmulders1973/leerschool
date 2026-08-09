@@ -12,6 +12,7 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { GratisBadge } from "../subscription/ProBadge.jsx";
 import redactiePad from "../learnPaths/redactiesommen.js";
 import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
 
@@ -168,6 +169,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           📝 Redactiesommen-bundel — verhaaltjessommen op papier
+          <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Verhaaltjessommen zijn hét struikelblok bij rekenen: het rekenen lukt wel, het

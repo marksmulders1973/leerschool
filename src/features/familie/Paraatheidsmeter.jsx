@@ -6,7 +6,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { loadMasteryForPlayer } from "../mastery/mastery.js";
 import { berekenParaatheid, STATUS, DEMO_RECORDS } from "./paraatheid.js";
-import { FamilieMeer } from "./familieUi.jsx";
+import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
 
 function huidigeSpeler() {
   try {
@@ -66,6 +66,7 @@ export default function Paraatheidsmeter({ setPage, playerName = null, userId = 
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
             🚦 Doorstroomtoets-paraatheid
           </h1>
+          <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
             bèta
           </span>

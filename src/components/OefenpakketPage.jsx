@@ -22,6 +22,7 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { GratisBadge } from "../subscription/ProBadge.jsx";
 import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
 import rekenenPad from "../learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../learnPaths/doorstroomtoetsTaalG8.js";
@@ -298,6 +299,7 @@ export default function OefenpakketPage({ setPage } = {}) {
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           📄 Gratis Doorstroomtoets-oefenpakket
+          <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Print thuis een compleet oefenwerkboek voor groep 7/8 — per onderdeel

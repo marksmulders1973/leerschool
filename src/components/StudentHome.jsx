@@ -1196,7 +1196,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           {onFamilie && (
             <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #ffb300, #b26a00)" }} onClick={() => { SoundEngine.play("click"); onFamilie(); }}>
               <span style={{ fontSize: 24 }}>✨</span>
-              <span style={{ fontWeight: 700, fontSize: 13 }}>Familie-extra's (bèta)</span>
+              <span style={{ fontWeight: 700, fontSize: 13, display: "inline-flex", alignItems: "center", gap: 5 }}>
+                <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffd54f", display: "inline-block", flexShrink: 0 }} />
+                Familie-extra's (bèta)
+              </span>
             </button>
           )}
         </div>

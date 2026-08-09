@@ -15,7 +15,7 @@
 // ══════════════════════════════════════════════════════════════════════
 import { useState } from "react";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
-import { FamilieMeer } from "./familieUi.jsx";
+import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
 
 // Snel-kiezers zodat Mark kan spelen zonder te typen. De chip-tekst (zonder
 // emoji) wordt het onderwerp op het diploma. De echte trigger stuurt ?onderwerp=.
@@ -62,6 +62,7 @@ export default function DiplomaPagina({ setPage }) {
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
             🏅 Printbaar diploma
           </h1>
+          <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
 bèta
           </span>

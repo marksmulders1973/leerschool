@@ -3,6 +3,7 @@ import supabase from "../../supabase";
 import { CONCEPTEN, VAK_VOLGORDE, VAK_LABELS } from "./conceptMapping.js";
 import { getVragenVoorConcept } from "./questions.js";
 import { track } from "../../utils.js";
+import { GratisBadge } from "../../subscription/ProBadge.jsx";
 
 // ── Constanten ────────────────────────────────────────────────────
 const OORDELEN = { beheerst: "beheerst", gedeeltelijk: "gedeeltelijk", nogniet: "nogniet" };
@@ -93,6 +94,7 @@ function IntroScherm({ email, naam, groep, onStart }) {
         <div style={{ fontSize: 40, marginBottom: 10 }}>🔍</div>
         <h1 style={{ fontFamily: "var(--font-display, system-ui)", fontSize: 24, color: "#fff", margin: "0 0 8px" }}>
           Gratis Kwartiercheck
+          <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, margin: 0 }}>
           Ontdek in ~15 minuten per onderwerp of jouw kind het <em>beheerst</em>,{" "}

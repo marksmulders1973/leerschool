@@ -15,7 +15,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
-import { FamilieMeer } from "./familieUi.jsx";
+import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
 import { getOuderkaart } from "./ouderkaartContent.js";
 
 // Concepten die ouders het lastigst vinden om zélf uit te leggen. De eerste drie
@@ -177,6 +177,7 @@ export default function OuderkaartPagina({ setPage }) {
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 900, margin: 0 }}>
             👪 Zo leg je 't uit — kaart voor thuis
           </h1>
+          <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
 bèta
           </span>

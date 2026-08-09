@@ -1637,7 +1637,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 style={{ background: "none", border: "none", color: "#ffb300", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
                 onClick={() => { track("home_cta_familie"); onFamilie(); }}
               >
-                <span aria-hidden="true">✨</span>
+                <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffd54f", display: "inline-block", flexShrink: 0 }} />
                 Familie-extra's (bèta)
               </button>
             )}

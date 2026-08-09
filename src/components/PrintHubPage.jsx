@@ -7,6 +7,7 @@
 import { useEffect } from "react";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
+import { GratisBadge } from "../subscription/ProBadge.jsx";
 
 const PAKKETTEN = [
   {
@@ -84,6 +85,7 @@ export default function PrintHubPage({ setPage } = {}) {
 
       <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
         🖨️ Printbaar oefenen — allemaal gratis
+        <GratisBadge size="md" style={{ marginLeft: 10 }} />
       </h1>
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 22px", lineHeight: 1.55 }}>
         Soms werkt papier gewoon beter: geen scherm, net als op school, en jij kijkt
