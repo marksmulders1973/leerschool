@@ -717,6 +717,16 @@ export function BuddyEyeCamera({ buddyPosRef, playerPosRef, active }) {
 const BEZOEKER_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad8", "#e88a3c", "#3cb5a8"];
 // Blije gedachten van bezoekers over het park.
 const BEZOEKER_BLIJ = [{ e: "😍", t: "Wat een mooi park!" }, { e: "😊", t: "Leuk hier!" }, { e: "👍", t: "Top dierentuin!" }, { e: "🎉", t: "Wat gezellig!" }];
+// 💬 Kletspraatjes tussen twee bezoekers die elkaar tegenkomen (Mark 9 aug:
+// "de bots gedragen zich simpel") — de één begint, de ander antwoordt.
+const KLETS_START = [
+  { e: "👋", t: "Hoi!" }, { e: "💬", t: "Mooi park hè?" },
+  { e: "🍦", t: "Heb jij al een ijsje op?" }, { e: "🦊", t: "Welk dier vind jij het leukst?" },
+];
+const KLETS_ANTWOORD = [
+  { e: "😊", t: "Ja, super mooi!" }, { e: "😄", t: "Haha, ja!" },
+  { e: "🐾", t: "Ik ga zo naar de dieren!" }, { e: "❤️", t: "De vos is mijn favoriet!" },
+];
 
 // Persoonlijke begroeting van een bezoeker aan de speler: spreekt je bij naam aan
 // en reageert op iets ECHTS in je park (een pas geboren jong, een hongerig dier,
@@ -771,7 +781,7 @@ function koopKans(prijs, fair) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, crowdRef, idx }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -793,9 +803,22 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // + een zachte 'rondkijk'-draairichting tijdens pauzes.
     speedF: 0.82 + ((seed * 7) % 42) / 100,            // ~0.82..1.23
     idleTurn: ((seed % 2) ? 1 : -1) * (0.25 + (seed % 4) * 0.12),
+    // 🤝 sociaal gedrag (Mark 9 aug 2026: "bots gedragen zich simpel"):
+    // kletsen met elkaar, iemand/iets aankijken, en af en toe bij een dier
+    // blijven kijken. chatCd start gespreid zodat niet iedereen tegelijk klets.
+    chatT: 0, chatCd: 6 + (seed % 12), chatFace: null, chatPing: null, chatScan: 0.3,
+    face: null, faceT: 0, glanceT: 5 + (seed % 7),
   });
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
   const toon = (b, dur) => { setBubble(b); st.current.bt = dur; };
+
+  // Registreer dit poppetje in de gedeelde menigte-lijst zodat bezoekers
+  // elkaar kunnen zien (ontwijken + kletsen). Max ~12 stuks → goedkoop.
+  useEffect(() => {
+    if (!crowdRef) return undefined;
+    crowdRef.current[idx] = st.current;
+    return () => { crowdRef.current[idx] = null; };
+  }, [crowdRef, idx]);
 
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
@@ -804,6 +827,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
 
     // Denkwolkje vanzelf laten verdwijnen.
     if (s.bt > 0) { s.bt -= dt; if (s.bt <= 0) setBubble(null); }
+    // Klets-afkoeltijd + antwoord op een buurman die een praatje begon
+    // (die zet chatPing op óns state-object via de menigte-lijst).
+    if (s.chatCd > 0) s.chatCd -= dt;
+    if (s.chatPing) { const p = s.chatPing; s.chatPing = null; toon(p, 2.6); }
 
     // Behoefte opwekken — voornamelijk bij bezoekers die vlak langs jouw poppetje
     // lopen (binnen DENK_STRAAL). Zo "denkt" niet het hele park tegelijk; je wekt
@@ -818,6 +845,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         if (dichtbij && Math.random() < 0.5) {
           toon(maakBegroeting(factsRef?.current), 3.6);
           s.needT = 5 + Math.random() * 5;
+          // Even stoppen en je áánkijken tijdens de begroeting — niet
+          // doorlopen alsof je lucht bent (Mark 9 aug).
+          s.resting = true; s.rest = Math.max(s.rest || 0, 2.6);
+          s.face = [pp.x, pp.z]; s.faceT = 2.6;
         } else if (beschikbaar.length && Math.random() < 0.6) {
           // Er zijn kraampjes → ga vaak iets kopen (zo zijn je kramen ook echt druk).
           const kind = beschikbaar[Math.floor(Math.random() * beschikbaar.length)];
@@ -846,8 +877,30 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // Wandelen / aankomen.
     if (s.resting) {
       s.rest -= dt;
-      // langzaam rondkijken tijdens de pauze i.p.v. bevroren staren
-      node.rotation.y += s.idleTurn * dt * 0.6;
+      if (s.chatT > 0) {
+        // 💬 In gesprek met een andere bezoeker: naar elkaar toe draaien.
+        s.chatT -= dt;
+        if (s.chatFace) {
+          const wil = Math.atan2(s.chatFace[0] - s.x, s.chatFace[1] - s.z);
+          let df = wil - node.rotation.y;
+          while (df > Math.PI) df -= Math.PI * 2;
+          while (df < -Math.PI) df += Math.PI * 2;
+          node.rotation.y += df * Math.min(1, dt * 6);
+        }
+        if (s.chatT <= 0) { s.chatFace = null; s.rest = Math.min(s.rest, 0.6); }
+      } else if (s.faceT > 0 && s.face) {
+        // 👀 iemand of iets aankijken (speler-begroeting, dier-blik).
+        s.faceT -= dt;
+        const wil = Math.atan2(s.face[0] - s.x, s.face[1] - s.z);
+        let df = wil - node.rotation.y;
+        while (df > Math.PI) df -= Math.PI * 2;
+        while (df < -Math.PI) df += Math.PI * 2;
+        node.rotation.y += df * Math.min(1, dt * 6);
+        if (s.faceT <= 0) s.face = null;
+      } else {
+        // langzaam rondkijken tijdens de pauze i.p.v. bevroren staren
+        node.rotation.y += s.idleTurn * dt * 0.6;
+      }
       if (s.rest <= 0) {
         // 🎯 kies een bezigheid: meestal over de paden slenteren, soms een dier
         // aaien of een foto maken. (Kopen verloopt via het 'need'-blok hierboven.)
@@ -915,9 +968,57 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           : klaarMet === "sit" ? 4.5 + Math.random() * 3.5
           : 1 + Math.random() * 2.5;
       } else {
+        // 🤝 Sociaal onderweg (Mark 9 aug): praatje met een passerende bezoeker
+        // of even blijven kijken bij een dier. Gescand met een lage tik (4×/s).
+        s.chatScan -= dt;
+        if (s.chatScan <= 0) {
+          s.chatScan = 0.25;
+          if (!s.acting && s.chatCd <= 0 && crowdRef?.current) {
+            for (const o of crowdRef.current) {
+              if (!o || o === s || o.acting || o.need || o.chatT > 0 || o.chatCd > 0) continue;
+              if (Math.hypot(o.x - s.x, o.z - s.z) > 1.15) continue;
+              // Praatje! Beiden stoppen, draaien naar elkaar; de ander antwoordt.
+              const duur = 2.4 + Math.random() * 1.4;
+              s.chatT = duur; s.chatFace = [o.x, o.z]; s.resting = true; s.rest = duur + 0.4;
+              o.chatT = duur; o.chatFace = [s.x, s.z]; o.resting = true; o.rest = duur + 0.4;
+              s.chatCd = 28 + Math.random() * 24; o.chatCd = 28 + Math.random() * 24;
+              toon(KLETS_START[Math.floor(Math.random() * KLETS_START.length)], 2.4);
+              o.chatPing = KLETS_ANTWOORD[Math.floor(Math.random() * KLETS_ANTWOORD.length)];
+              return;
+            }
+          }
+          if (!s.acting && s.intent === "stroll") {
+            s.glanceT -= 0.25;
+            if (s.glanceT <= 0) {
+              s.glanceT = 7 + Math.random() * 7;
+              const dieren = dierenRef?.current || [];
+              for (const a of dieren) {
+                if (Math.hypot(a[0] - s.x, a[1] - s.z) < 3.2) {
+                  // 👀 even stilstaan en naar het dier kijken dat je passeert.
+                  s.resting = true; s.rest = 1.5; s.face = [a[0], a[1]]; s.faceT = 1.5;
+                  if (Math.random() < 0.4) toon({ e: "😍" }, 1.6);
+                  return;
+                }
+              }
+            }
+          }
+        }
         const speed = (s.acting ? 2.2 : 1.7) * s.speedF;
         const step = Math.min(d, dt * speed);
-        const nx = s.x + (dx / d) * step, nz = s.z + (dz / d) * step;
+        let nx = s.x + (dx / d) * step, nz = s.z + (dz / d) * step;
+        // Elkaar zachtjes ontwijken: niet dwars door een andere bezoeker
+        // heen lopen maar er licht omheen sturen.
+        if (crowdRef?.current) {
+          for (const o of crowdRef.current) {
+            if (!o || o === s) continue;
+            const ox = nx - o.x, oz = nz - o.z;
+            const od = Math.hypot(ox, oz);
+            if (od > 0.001 && od < 0.7) {
+              const duw = (0.7 - od) * dt * 2.2;
+              nx += (ox / od) * duw; nz += (oz / od) * duw;
+            }
+          }
+        }
         // "Ontsnap-modus": opgesloten in een verblijf → tijdelijk dwars door het
         // hek naar buiten lopen (anders blijft-ie er eeuwig in rondjes lopen).
         const escaping = (s.escape || 0) > 0;
@@ -1007,9 +1108,12 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
 }
 
 export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef }) {
+  // Gedeelde menigte-lijst: elk poppetje registreert z'n state-object zodat
+  // bezoekers elkaar kunnen ontwijken en met elkaar kunnen kletsen.
+  const crowdRef = useRef([]);
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} idx={i} crowdRef={crowdRef} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />)}
     </group>
   );
 }
