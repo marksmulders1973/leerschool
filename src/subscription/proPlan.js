@@ -104,16 +104,31 @@ export const PRO_MODEL = {
 // iets BETER te BEGRIJPEN blijft gratis. Betaald = extra's eromheen (AI-bijles-
 // tegoed, ouder-inzicht, rapporten, examen-simulatie, leerkracht-tools).
 export const PRO_FEATURES = {
+  // T3-besluit (Claude namens Mark, 9 aug 2026): gratis = kleine basis-portie
+  // per dag · Familie = onbeperkt · Kwartier-tegoed = extra los bijkopen
+  // bovenop gratis (ook als cadeautje). ai-tutor hoort dus bij FAMILIE
+  // (sluit aan op FEATURE_GATES + VonkPagina/FamilieHub "Vonk onbeperkt");
+  // het losse tegoed is een eigen entry hieronder.
   "ai-tutor": {
     id: "ai-tutor",
     icon: "🤖",
-    label: "AI-bijles",
+    label: "AI-bijles (Vonk)",
+    laag: "familie",
+    blurb:
+      "De rustige AI-bijlesdocent die de stof op jouw manier uitlegt. Gratis " +
+      "krijg je elke dag een kleine basis-portie; met Familie is Vonk " +
+      "onbeperkt. Losse kwartieren bijkopen kan straks ook.",
+    status: "live",
+  },
+  "extra-kwartieren": {
+    id: "extra-kwartieren",
+    icon: "⏱️",
+    label: "Losse kwartieren AI-bijles",
     laag: "tegoed",
     blurb:
-      "Een slimme bijles-helper die je vraag beantwoordt en de stof op jouw " +
-      "manier uitlegt. Een basis-portie blijft gratis; extra tijd koop je " +
-      "straks los bij per kwartier.",
-    status: "live",
+      "Extra AI-bijles-tijd zonder abonnement — koop losse kwartieren " +
+      "wanneer je ze nodig hebt, ook leuk als cadeautje.",
+    status: "binnenkort",
   },
   "parent-dashboard": {
     id: "parent-dashboard",

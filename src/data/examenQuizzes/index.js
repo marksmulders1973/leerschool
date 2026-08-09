@@ -65,6 +65,13 @@ export function getExamenQuiz(examenId) {
   return EXAMEN_QUIZZES[examenId] || null;
 }
 
+// Vragen die naar beeldmateriaal verwijzen ("In de afbeelding zie je…") zijn
+// zonder die afbeelding niet te beantwoorden — wij nemen de examen-afbeeldingen
+// niet over (rechten + PDF-extractie). Mark-melding 9 aug 2026: biologie-2025-T1
+// vraag 1 toonde "kijk naar de afbeelding" zonder afbeelding. 29 zulke vragen
+// over alle examens; elk examen houdt er genoeg over.
+const BEELD_REF = /afbeelding|figuur|diagram|op de foto|tekening|grafiek|kaartje|spotprent|\bprent\b|cartoon/i;
+
 // Bouw vragen-array klaar voor PlayQuiz: koppel bron-tekst direct in
 // elke vraag via 'bronTekst' (alleen als de vraag een tekstNr heeft).
 // PlayQuiz toont die als collapsable card boven de vraag.
@@ -75,6 +82,7 @@ export function prepareExamenQuestions(examenId) {
   if (!quiz) return null;
   return quiz.questions
     .filter((q) => q.tekstNr == null || quiz.teksten?.[q.tekstNr])
+    .filter((q) => !BEELD_REF.test(q.q || ""))
     .map((q) => {
       if (q.tekstNr == null) return q;
       const tekst = quiz.teksten[q.tekstNr];

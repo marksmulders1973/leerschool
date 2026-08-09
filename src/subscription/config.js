@@ -51,7 +51,10 @@ export const FEATURE_GATES = {
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).
 export const FREE_QUOTA = {
   pathsPerDay: 3,
-  aiTutorCallsPerDay: 0, // 0 = geen toegang
+  // T3-besluit 9 aug 2026: gratis = kleine basis-portie AI-bijles per dag
+  // (was 0 — botste met de "basis-portie blijft gratis"-belofte);
+  // Familie = onbeperkt; Kwartier-tegoed = extra los bovenop.
+  aiTutorCallsPerDay: 3,
   examModePerWeek: 0,
 };
 
