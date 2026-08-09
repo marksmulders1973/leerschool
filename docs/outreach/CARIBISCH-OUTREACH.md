@@ -318,6 +318,44 @@ tegen die tijd ten minste één positieve reactie heeft — anders weglaten, eer
 > Kind regards,
 > Mark Smulders — leerkwartier.app
 
+## 📘 Facebook-spoor Suriname (toegevoegd 9 aug — Mark's observatie klopt)
+
+> **Feiten (gecheckt 9 aug 2026):** Facebook = **83% van al het social-verkeer** in
+> Suriname (Statcounter jul 2026) en **71% van de hele bevolking** heeft een
+> FB-account (438.900 gebruikers, NapoleonCat jul 2026); Messenger 64%. Instagram
+> maar 22% bevolking / 5,5% verkeer. Dat verklaart ook wat we bij het verzamelen
+> zagen: verlopen domeinen, yahoo/gmail-adressen, maar wél levende FB-pagina's.
+> **Conclusie: in Suriname is de FB-pagina vaak het échte kanaal; e-mail is er
+> tweederangs.** Mail alleen = risico dat batch 2 daar onbeantwoord blijft.
+
+**Plan (uitvoeren op/na vr 21 aug, zelfde dag als de Suriname-mails):**
+1. Mail via Variant S blijft de formele hoofdroute (ministerie wil mail).
+2. **Zelfde dag een kort FB-bericht** sturen als Leerkwartier-pagina (Business
+   Suite / Messenger-als-pagina) naar organisaties mét FB-pagina: "we stuurden u
+   net een mailtje" + kernzin + link. Verhoogt de kans dat de mail gelezen wordt.
+3. **FB-only-organisaties** (geen werkende mail) kunnen alléén zo: Rotary Club
+   Paramaribo (FB RotaryClubOfParamaribo); fallback-pagina's RKBO (rkbosuriname)
+   en Arya Dewaker ("Arya Diwaker Suriname") als de mail bounct.
+4. Pagina's van de overige C-organisaties (SOEBGS, SDMS, CCS, Boekenportaal,
+   Projekta, Kansrijk Suriname, Villa Zapakara, SchoolTV.sr) op de verzenddag even
+   opzoeken — wie actief is krijgt ook het FB-bericht.
+5. Kan een pagina geen berichten ontvangen → vriendelijke publieke reactie onder
+   een recente post ("we mailden u zojuist over onze gratis leer-app") of overslaan.
+
+**FB-berichttekst (kort — Messenger is geen brief):**
+
+> Dag [organisatie]! Ik ben Mark, ik bouwde in mijn vrije tijd Leerkwartier: een
+> gratis Nederlandstalige oefen-app (rekenen, taal, begrijpend lezen) voor kinderen
+> van ±9-12 jaar. Werkt in de browser zonder account en is licht qua data. Ik heb
+> u er net een mailtje over gestuurd [/ Uw mailadres kon ik niet vinden, daarom
+> hier]. Zou u leerkwartier.app willen noemen richting de gezinnen die u helpt?
+> Alles is gratis, zonder addertje. → leerkwartier.app
+
+**Later (ná batch 2, alleen met Mark-go):** Surinaamse ouder-/onderwijs-FB-groepen
+als organisch kanaal — zelfde persoonlijke waarde-eerst-werkwijze als de NL
+bijles-outreach, geen linkspam. Grootste hefboom als een bestuur/NGO eerst zelf
+over ons post.
+
 ## Niet gevonden / niet bruikbaar (voor de volledigheid)
 
 - Golden Rock RC School + Bethel Methodist School (Statia): oude mailadressen op
@@ -343,6 +381,9 @@ tegen die tijd ten minste één positieve reactie heeft — anders weglaten, eer
   verzendplanning per dag
 - [ ] **Batch 2 versturen: do 20 + vr 21 aug, na Mark's go** (~41 mails over 2 dagen;
   past tussen Leergeld-55 op 18-19 aug en golf 2 op 25 aug)
+- [ ] **FB-spoor Suriname op vr 21 aug** (zelfde dag als de S-mails): korte
+  FB-berichten via de Leerkwartier-pagina — zie sectie "📘 Facebook-spoor Suriname"
+  (FB = 83% van social-verkeer daar; Rotary alléén via FB bereikbaar)
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
 
 Suriname niet gevonden: Philipsbibliotheek (bestaat vermoedelijk niet meer),
