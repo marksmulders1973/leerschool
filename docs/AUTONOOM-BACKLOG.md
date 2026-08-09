@@ -20,11 +20,29 @@ Cito + examens versterken. Drie type werk:
 
 - [ ] **T1 (P1, vóór paywall-flip)** ProPage.jsx dormant PLANS-blok (r.~10-108 + 235-357, achter PAYWALL_ACTIVE): oude prijzen €5,99/€9,95/School S-M-L €29-79 botsen met config.PRICING (€4,95/€6,95/€99 per klas/jr + Seizoenspas); teacher-kleur oranje, school paars. Sync'en met PRICING/LAGEN + LAAG_KLEUREN vóórdat Mark de paywall aanzet. Ook FREE_FEATURES "5 AI-quizzes/dag" vs FREE_QUOTA 0 gelijktrekken.
 - [ ] **T2 (P2)** public/abonnement.html: .lk-tier default cyan → per kaart tier-kleur (groen/goud/blauw/paars) + stip-spans; featured-rand oranje → goud.
-- [ ] **T3 (P2, Mark-besluit nodig)** Vonk-tegenspraak: ai-tutor = tegoed (paars, "basis-portie gratis") vs VonkPagina/FamilieHub "onbeperkt in Familie" (goud) vs FREE_QUOTA aiTutorCallsPerDay:0 vs abonnement.html "Geen AI-leerassistent" bij gratis. Eén besluit vastleggen (voorstel: gratis basis-portie + Familie=onbeperkt + tegoed=extra bovenop) en 4 plekken gelijktrekken.
+- [x] ✓9/8 (v226, Mark: "maak jij een keuze") **T3** Vonk-besluit: **gratis = basis-portie 3/dag · Familie = onbeperkt · tegoed = extra los bovenop (ook cadeau)**. Doorgevoerd: ai-tutor→laag familie (blurb vertelt het drie-lagen-verhaal), nieuwe entry extra-kwartieren (tegoed), FREE_QUOTA aiTutorCallsPerDay 0→3, abonnement.html gratis-kaart "basis-portie per dag".
 - [ ] **T4 (P2)** Weekmail (api/send-ouder-rapport.js): klein goud "● Familie · nu gratis"-label boven het "Focus deze week"-blok.
 - [ ] **T5 (P2)** TopografieCheck.jsx intro (r.~86): woord "gratis" ontbreekt in de hele ouder-check-flow → 1 zin/badge toevoegen.
 - [ ] **T6 (P3)** BuddyChat.jsx + MaatjePocket.jsx (park): geen tegoed-markering bij AI-chat — afhankelijk van T3-besluit kleine kind-stip toevoegen.
 - [ ] **T7 (P3)** FamilieHub kaart-accenten zijn groen (status "klaar") binnen de goud-etalage — overwegen: status-groen behouden maar kaart-rand goud.
+
+## 🎓 SPRINT — Examens naar minimum 12 vragen (Mark 9 aug: "9 is te weinig")
+
+> Werkwijze bewezen in pilot biologie-2025-T1 (9→13, v227): beeld-/tabel-vragen herstellen
+> met een **eigen schematische svg** in de examen-JSON (`"svg": "<svg…>"`, PlayQuiz rendert
+> automatisch; filter in examenQuizzes/index.js laat vragen mét svg door). Regels: vraag +
+> officieel antwoord blijven authentiek; tekening = eigen werk mét bijschrift "eigen tekening
+> Leerkwartier"; GEEN deel-namen labelen die het antwoord verklappen; tabel-data reconstrueren
+> zodat het officiële antwoord klopt. Meteen PDF-rommel in q/explanation opruimen (voorbeelden
+> in bio-2025: samengeplakte intro's, "bacteri'n", explanation "1", dubbele opties).
+
+- [x] ✓9/8 **E0 pilot** biologie-2025-T1: 9→13 (4 tekeningen + 1 tabel + 5 rommel-fixes, v227)
+- [ ] **E1** biologie-2023-T1: 6→13 (7 beeld-vragen) — grootste gat
+- [ ] **E2** economie-2025-T2: 7→? · economie-2023-T1: 7→9 · economie-2025-T1: 9→11 (grafiek/tabel-svg's)
+- [ ] **E3** geschiedenis-2024-T2: 7→8 · 2024-T1: 9→10 · 2025-T1: 9→10 (bron/spotprent — LET OP: spotprenten niet natekenen, die vragen skippen)
+- [ ] **E4** bio-2024-T1: 11→12/13 · economie-2024-T1/T2: 10→11 · eco-2023-T2: 11→12
+- [ ] **E5** daarna: vragen-teller op de "▶ Speel in app"-knop (ExamensPage) zodat de verwachting klopt
+- [ ] **E6 (check)** nederlands-2025-T1 staat op 2 speelbaar maar NIET in SPEELBARE_EXAMENS ✓; maatschappijkunde/wiskunde-JSONs zijn sowieso PDF-only — kloppen die bewust?
 
 ## 🧪 SPRINT — QA-sweep 30 jul 2026 (7 finders + skeptische verificatie; 7×P1 bevestigd, 0 vals alarm, 33×P2/P3)
 
