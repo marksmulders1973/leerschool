@@ -37,6 +37,8 @@
 | ≤ begin okt | 🎄 **Kerstpakket-inlegvellen**: voedselbanken/Leergeld benaderen voor december-actie — timing dwingt, uiterlijk oktober! | Claude concept, Mark-go |
 | okt | Check **Leergeld Apeldoorn-Voorst**: staat Leerkwartier op hun site + in de okt-nieuwsbrief? (toezegging Edith) | Claude |
 | zo 18 okt | **Spark Fest** (Hoofddorp, 1.000 goodybags) → daarna: napost (klaar in Desktop\Leerkwartier-social) + HAARLEMMERMEER2027-claims volgen | Mark post |
+| voorjaar 2027 | ⏰ **Partner-verleng-besluit**: alle gewone partner-codes lopen af op 1 aug 2027 — per partner kiezen: verlengen we de gezinnen een jaar? (Ooievaarspas = blijvend, valt hierbuiten) | Mark beslist |
+| ~1 jul 2027 | ⏰ **Afloop-mail naar alle partners** (25+ codes, een maand vóór 1 aug): hoe beviel het, willen jullie door, verlenging aanbieden — natuurlijk contactmoment; waarde-zin: partner-gezinnen kregen feitelijk een gratis Seizoenspas (€24,95) | Claude concept, Mark-go |
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
