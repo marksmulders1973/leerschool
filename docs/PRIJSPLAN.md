@@ -198,10 +198,15 @@ Ooievaarspas.
 
 - [ ] Definitieve prijzen vaststellen (incl. prijs per kwartier o.b.v. AI-kostenmeting).
 - [ ] Stripe-koppeling: producten per laag + tegoed-bundels (zie CLAUDE.md paywall-stappen).
-- [ ] **Rechtsvorm/BTW vóór de eerste betaling regelen (deadline ~nov 2026):**
-  abonnementen verkopen vraagt KVK/BTW-afhandeling (of via de Stichting
-  Leerkwartier), Stripe-bedrijfsgegevens, algemene voorwaarden +
-  herroepingsrecht. Niet in december pas starten.
+- [ ] **Rechtsvorm = EENMANSZAAK (besloten Mark 9 aug 2026 — "ik wil er zelf
+  aan verdienen"; vervangt de stichting-optie voor de betaalde kant).** Kalender:
+  **okt** KvK-inschrijving (±€80) + KOR aanvragen (<€20k → geen btw; scholen
+  feitelijk 21% goedkoper) + zakelijke rekening · **nov** algemene voorwaarden +
+  herroepingsrecht (digitale levering: instemming directe levering in de
+  bestel-flow) + factuur-sjabloon (KvK-nr, KOR-vermelding, nummering) · **dec**
+  Stripe test-mode · **jan 2027** live. Niet in december pas starten. NB: grote
+  charitatieve fondsen gaan hiermee op slot (bewust geaccepteerd, zie
+  SUBSIDIE-PLAN); Esther (OP) t.z.t. informeren over het KvK-nummer.
 - [ ] **School-koop-route bouwen:** betalen op factuur (scholen hebben geen
   creditcard), verwerkersovereenkomst-sjabloon (DPA — staat op de
   privacy-todo), juf-A4 "vraag het je directeur".
