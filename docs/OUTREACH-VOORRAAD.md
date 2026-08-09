@@ -291,7 +291,8 @@ Herinnering batch 1: Einsteinschool = opgeheven, schrappen.
 - **Ouderorganisaties (~8)** en **BSO-ketens (top-100)**: laagste prio.
 
 ## Verzend-log
-- (nog niets verstuurd uit dit doc — wacht op go van Mark na de vakantie)
+- **9 aug 2026 — 🏝️ Caribische batch 1 (10 mails, door Mark zelf verstuurd via Gmail-concepten):** RCN-OCW (BES) · RKCS · DOS · VPCO (Curaçao) · Colegio Arubano · SKOA · SPCOA (Aruba) · SVOBE+MPC · SKOS (Sint Maarten) · OOB (Bonaire). Details + rest van de lijst: `docs/outreach/CARIBISCH-OUTREACH.md`; open lus in WACHT-OP.md Prio 2.
+- (NL-golven: nog niets verstuurd — kalender: Leergeld-55 ~18 aug → golf 2 ~25 aug → LOWAN ~1 sep, per golf na go van Mark)
 
 ## ⭐ 3-partner-regel: bedank-pagina als sociale bewijslast (Mark 23 jul 2026)
 

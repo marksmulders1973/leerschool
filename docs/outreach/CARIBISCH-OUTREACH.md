@@ -168,10 +168,10 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
 - [x] Zin op site + llms.txt + llms-full.txt (v219, 9 aug)
 - [x] Adressen verzameld (9 aug)
 - [x] Mail-tekst golf 4 NL (sjabloon 2.0-variant, 2 smaken: examen-haak VO / groep 6-8-haak PO)
-- [x] **9 aug: eerste 10 als GMAIL-CONCEPT klaargezet** (Mark drukt zelf op verzenden —
-  Zapier-verzending faalde met "insufficient tasks on account", task-tegoed op):
-  RCN-OCW · RKCS · DOS · VPCO · Colegio Arubano · SKOA · SPCOA · SVOBE+MPC (cc) · SKOS · OOB
-- [ ] Na verzending: regels → verzend-log + WACHT-OP.md
+- [x] **✅ 9 aug VERSTUURD door Mark (batch 1, 10 mails)**: RCN-OCW · RKCS · DOS ·
+  VPCO · Colegio Arubano · SKOA · SPCOA · SVOBE+MPC (cc) · SKOS · OOB — teksten
+  waren de gecorrigeerde versies (geen "dezelfde examens"-claim). In WACHT-OP.md
+  onder Prio 2. (Verzendroute was Gmail-concepten; Zapier-tegoed was op.)
 - [ ] Rest van de lijst (bibliotheken, EOZ's, NGO's, losse scholen) — vervolg-batch;
   Engelse variant voor Saba/Statia/SXM-scholen nog schrijven
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
