@@ -334,11 +334,22 @@ tegen die tijd ten minste één positieve reactie heeft — anders weglaten, eer
    Suite / Messenger-als-pagina) naar organisaties mét FB-pagina: "we stuurden u
    net een mailtje" + kernzin + link. Verhoogt de kans dat de mail gelezen wordt.
 3. **FB-only-organisaties** (geen werkende mail) kunnen alléén zo: Rotary Club
-   Paramaribo (FB RotaryClubOfParamaribo); fallback-pagina's RKBO (rkbosuriname)
-   en Arya Dewaker ("Arya Diwaker Suriname") als de mail bounct.
-4. Pagina's van de overige C-organisaties (SOEBGS, SDMS, CCS, Boekenportaal,
-   Projekta, Kansrijk Suriname, Villa Zapakara, SchoolTV.sr) op de verzenddag even
-   opzoeken — wie actief is krijgt ook het FB-bericht.
+   Paramaribo — **✅ GEDAAN 9 aug 18:16** (bericht verstuurd vanaf Mark's profiel +
+   pagina gevolgd; pagina is actief: 10k volgers, dagelijkse posts).
+4. **Pagina's opgezocht 9 aug (Mark-opdracht "zoek alvast op"):**
+
+   | Organisatie | FB-pagina | Status |
+   |---|---|---|
+   | Rotary Club Paramaribo | facebook.com/RotaryClubOfParamaribo | ✅ bericht verstuurd 9 aug (FB-only) |
+   | RKBO | facebook.com/rkbosuriname | bevestigd → FB-bericht 21 aug naast mail |
+   | Arya Diwaker (nieuwe spelling sinds 2022) | facebook.com/p/Arya-Diwaker-Suriname-100067050818365 | bevestigd → 21 aug; éérste keus als mail bounct |
+   | Sanatan Dharm Maha Sabha | facebook.com/SanatanDharmMahaSabhaSuriname | actief (1,3k likes) → 21 aug |
+   | Villa Zapakara | facebook.com/villazapakara | actief (8,2k likes) → 21 aug |
+   | Boekenportaal Suriname | facebook.com/people/Stichting-Boekenportaal-Suriname/61570914441083 | bevestigd → 21 aug |
+   | Projekta | facebook.com/ProjektaSR | bevestigd → 21 aug (NB: site noemt ook info@projekta.sr als mail) |
+   | CCS bibliotheek | profile.php?id=100066879128378 (onbevestigd) | op verzenddag checken |
+   | SOEBGS · Kansrijk Suriname · SchoolTV.sr | geen eigen pagina gevonden | alleen mail (ntrschooltv = Nederlandse NTR, niet SR!) |
+
 5. Kan een pagina geen berichten ontvangen → vriendelijke publieke reactie onder
    een recente post ("we mailden u zojuist over onze gratis leer-app") of overslaan.
 
