@@ -9,6 +9,7 @@
 //    eruit gefilterd vóór opslaan.
 //  • geen IP-kolom (slaan we niet op).
 import supabase from "./supabase.js";
+import { BOUW_VERSIE } from "./versie.js";
 
 function _sessionId() {
   try {
@@ -109,6 +110,10 @@ export function track(event, params = {}) {
     const cleaned = _cleanProps({ ..._campaignParams(), ...params }) || {};
     const uid = _deviceId();
     if (uid) cleaned.uid = uid;
+    // Bundle-versie op élk event (9 aug): oude gecachte PWA-tabbladen sturen
+    // events uit verouderde code (het quiz_id-raadsel van 7 aug) — met dit
+    // stempel is "welke bundle stuurde dit?" voortaan één query.
+    cleaned.app_v = BOUW_VERSIE;
     supabase.from("events").insert({
       name: String(event).slice(0, 60),
       props: Object.keys(cleaned).length ? cleaned : null,
