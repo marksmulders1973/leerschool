@@ -11,6 +11,7 @@ import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
 import AITutor from "../features/learn/AITutor.jsx";
 import { actieveBuddyPersona } from "../features/zoo/buddies.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
+import ProBadge from "../subscription/ProBadge.jsx";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -248,8 +249,12 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.08))",
               border: `1px solid ${C.accent}`,
             }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: C.accent, marginBottom: 6 }}>
-                🎯 Wat krijg je?
+              <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: C.accent }}>
+                  🎯 Wat krijg je?
+                </span>
+                {/* Simulatie = Familie-extra "exam-mode"; kind-scherm → kind-modus zonder prijzen */}
+                <ProBadge feature="exam-mode" kind />
               </div>
               <ul style={{ margin: "0 0 8px 0", paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
                 <li><strong>50 vragen</strong> — mix van rekenen + taal + studievaardigheden</li>

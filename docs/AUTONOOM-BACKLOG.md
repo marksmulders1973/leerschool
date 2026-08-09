@@ -14,6 +14,18 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🎨 SPRINT — Tier-stippen-restjes (9 aug 2026, na 3-agent-audit; hoofdronde ✓ v225)
+
+> Kleurtaal: groen=Gratis · goud=Familie · blauw=Pro · paars=Kwartier-tegoed (LAAG_KLEUREN, proPlan.js).
+
+- [ ] **T1 (P1, vóór paywall-flip)** ProPage.jsx dormant PLANS-blok (r.~10-108 + 235-357, achter PAYWALL_ACTIVE): oude prijzen €5,99/€9,95/School S-M-L €29-79 botsen met config.PRICING (€4,95/€6,95/€99 per klas/jr + Seizoenspas); teacher-kleur oranje, school paars. Sync'en met PRICING/LAGEN + LAAG_KLEUREN vóórdat Mark de paywall aanzet. Ook FREE_FEATURES "5 AI-quizzes/dag" vs FREE_QUOTA 0 gelijktrekken.
+- [ ] **T2 (P2)** public/abonnement.html: .lk-tier default cyan → per kaart tier-kleur (groen/goud/blauw/paars) + stip-spans; featured-rand oranje → goud.
+- [ ] **T3 (P2, Mark-besluit nodig)** Vonk-tegenspraak: ai-tutor = tegoed (paars, "basis-portie gratis") vs VonkPagina/FamilieHub "onbeperkt in Familie" (goud) vs FREE_QUOTA aiTutorCallsPerDay:0 vs abonnement.html "Geen AI-leerassistent" bij gratis. Eén besluit vastleggen (voorstel: gratis basis-portie + Familie=onbeperkt + tegoed=extra bovenop) en 4 plekken gelijktrekken.
+- [ ] **T4 (P2)** Weekmail (api/send-ouder-rapport.js): klein goud "● Familie · nu gratis"-label boven het "Focus deze week"-blok.
+- [ ] **T5 (P2)** TopografieCheck.jsx intro (r.~86): woord "gratis" ontbreekt in de hele ouder-check-flow → 1 zin/badge toevoegen.
+- [ ] **T6 (P3)** BuddyChat.jsx + MaatjePocket.jsx (park): geen tegoed-markering bij AI-chat — afhankelijk van T3-besluit kleine kind-stip toevoegen.
+- [ ] **T7 (P3)** FamilieHub kaart-accenten zijn groen (status "klaar") binnen de goud-etalage — overwegen: status-groen behouden maar kaart-rand goud.
+
 ## 🧪 SPRINT — QA-sweep 30 jul 2026 (7 finders + skeptische verificatie; 7×P1 bevestigd, 0 vals alarm, 33×P2/P3)
 
 > Multi-agent sweep over links/SEO/huisregels/taal/leerpad-data/API-PWA/live-flows.

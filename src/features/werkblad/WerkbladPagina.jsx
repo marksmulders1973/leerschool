@@ -22,6 +22,7 @@ import { generateCode, track } from "../../utils.js";
 import { saveQuiz } from "../../data/repos/quizzesRepo.js";
 import { TAKENLIJST_TYPE } from "../../data/takenlijst.js";
 import PaywallGate from "../../subscription/PaywallGate.jsx";
+import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { PRO_MODEL } from "../../subscription/proPlan.js";
 
 // Snelkeuzes = de tien Cito-kern-struikelonderwerpen uit het bouwplan, zodat
@@ -291,7 +292,10 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
         {/* Digitale uitgang: hetzelfde onderwerp als klas-opdracht met deelcode. */}
         {items.length > 0 && (
           <div style={{ marginTop: 16, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, padding: "14px 16px" }}>
-            <div style={{ fontSize: 14, fontWeight: 800, marginBottom: 4 }}>💻 Liever digitaal met je klas?</div>
+            <div style={{ fontSize: 14, fontWeight: 800, marginBottom: 4, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+              💻 Liever digitaal met je klas?
+              <GratisBadge />
+            </div>
             {!deelcode ? (
               <>
                 <div style={{ fontSize: 13, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.55, marginBottom: 10 }}>

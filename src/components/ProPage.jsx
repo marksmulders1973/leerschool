@@ -5,7 +5,7 @@ import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
-import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN } from "../subscription/proPlan.js";
+import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN, LAAG_KLEUREN } from "../subscription/proPlan.js";
 
 const PLANS = [
   {
@@ -166,9 +166,10 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             Alles is nu gratis.<br />Dit komt er vanaf 2027 bij.
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
-            De basis blijft gratis. Daarnaast komen er drie extra's: <strong style={{ color: "#ffce80" }}>Familie</strong> (één
-            klein bedrag per gezín), <strong style={{ color: "#ffce80" }}>Pro</strong> voor leerkrachten, en los{" "}
-            <strong style={{ color: "#ffce80" }}>kwartier-tegoed</strong> voor extra AI-bijles — zonder abonnement.
+            {/* Elk laag-woord in z'n eigen tier-kleur — hier leert de bezoeker de kleurtaal */}
+            De basis blijft gratis. Daarnaast komen er drie extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
+            klein bedrag per gezín), <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>Pro</strong> voor leerkrachten, en los{" "}
+            <strong style={{ color: LAAG_KLEUREN.tegoed.tekst }}>kwartier-tegoed</strong> voor extra AI-bijles — zonder abonnement.
           </div>
         </div>
 
@@ -186,10 +187,12 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
         </div>
 
-        {/* De extra's, gegroepeerd per laag (Familie / Pro / Kwartier-tegoed) */}
-        {Object.values(LAGEN).map((laag) => (
+        {/* De extra's, gegroepeerd per laag (Familie / Pro / Kwartier-tegoed) —
+            elke laag in z'n eigen tier-kleur + stip (goud/blauw/paars, 9 aug). */}
+        {Object.values(LAGEN).map((laag) => { const kleur = LAAG_KLEUREN[laag.id] || LAAG_KLEUREN.familie; return (
           <div key={laag.id} style={{ marginBottom: 16 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffce80", marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: kleur.tekst, marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>
+              <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: kleur.dot, display: "inline-block", flexShrink: 0 }} />
               {laag.icon} {laag.naam}
               <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>{laag.wie}</span>
               <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>nu nog gratis</span>
@@ -197,7 +200,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>{laag.prijs}</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {Object.values(PRO_FEATURES).filter((f) => f.laag === laag.id).map((f) => (
-                <div key={f.id} style={{ borderRadius: 14, border: "1px solid rgba(255,183,77,0.22)", background: "rgba(255,183,77,0.05)", padding: "12px 14px" }}>
+                <div key={f.id} style={{ borderRadius: 14, border: `1px solid ${kleur.rand}`, background: kleur.vlak, padding: "12px 14px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
                     <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
                     <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{f.label}</span>
@@ -210,7 +213,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               ))}
             </div>
           </div>
-        ))}
+        ); })}
 
         {/* Kwartier-tegoed uitgelegd */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,206,128,0.3)", background: "rgba(255,183,77,0.07)", padding: "16px 18px", marginBottom: 20 }}>

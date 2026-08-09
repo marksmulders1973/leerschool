@@ -1,4 +1,5 @@
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
+import { LAAG_KLEUREN } from "../subscription/proPlan.js";
 
 // Pakket-uitleg (Mark 31 jul, na 5-agent-panel): kraakhelder + eerlijk laten
 // zien wat gratis is en wat de betaalde extra's zijn. Kernbesluiten:
@@ -14,16 +15,17 @@ import { PAYWALL_ACTIVE } from "../subscription/config.js";
 
 const G = "#00c853"; // gratis-groen — in dit blok exclusief voor de basis
 
-function TierKaart({ emoji, naam, voorWie, prijs, items, huidig }) {
+function TierKaart({ emoji, naam, voorWie, prijs, items, huidig, kleur }) {
   return (
     <div style={{
-      flex: "1 1 200px", background: "rgba(255,255,255,0.03)",
-      border: `1px solid ${huidig ? "rgba(0,200,83,0.45)" : "rgba(255,255,255,0.10)"}`,
+      flex: "1 1 200px", background: kleur ? kleur.vlak : "rgba(255,255,255,0.03)",
+      border: `1px solid ${huidig ? "rgba(0,200,83,0.45)" : kleur ? kleur.rand : "rgba(255,255,255,0.10)"}`,
       borderRadius: 14, padding: "14px 16px",
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+        {kleur && <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: kleur.dot, display: "inline-block", flexShrink: 0 }} />}
         <span style={{ fontSize: 18 }} aria-hidden="true">{emoji}</span>
-        <span style={{ fontWeight: 800, fontSize: 15, color: "var(--color-text-strong)" }}>{naam}</span>
+        <span style={{ fontWeight: 800, fontSize: 15, color: kleur ? kleur.tekst : "var(--color-text-strong)" }}>{naam}</span>
         <span style={{ fontSize: 12, color: "rgba(255,255,255,0.55)" }}>· {voorWie}</span>
       </div>
       <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>{prijs}</div>
@@ -115,10 +117,12 @@ export default function PakketUitleg({ open, onClose }) {
           <TierKaart
             emoji="💛" naam="Familie" voorWie="voor thuis" prijs="± € 4,95 per maand, per gezin"
             items={["Ouder-overzicht", "Weekrapport", "Hele toets oefenen met de klok", "Je eigen Kwartierplan"]}
+            kleur={LAAG_KLEUREN.familie}
           />
           <TierKaart
             emoji="🏫" naam="Pro" voorWie="voor de juf of meester" prijs="± € 6,95 per maand"
             items={["Onbeperkt toetsen", "Je eigen logo op de toets", "Overzicht per klas"]}
+            kleur={LAAG_KLEUREN.leerkracht}
           />
         </div>
         <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 14 }}>

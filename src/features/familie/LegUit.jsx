@@ -58,20 +58,28 @@ function LegUitInner({ conceptTitel, kernpunten }) {
       <button
         onClick={() => { setOpen(true); try { track("leg_uit_open", { concept: titel }); } catch { /* */ } }}
         style={{
+          // Goud = Familie-kleurtaal (9 aug; was gratis-groen — verkeerde tier-signaal).
           display: "block", width: "100%", textAlign: "left", cursor: "pointer", marginTop: 12,
-          background: "rgba(126,240,162,0.09)", border: "1px solid rgba(126,240,162,0.42)",
+          background: "rgba(255,183,77,0.08)", border: "1px solid rgba(255,183,77,0.45)",
           borderRadius: 14, padding: "14px 16px", color: "inherit",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div style={{ fontSize: 26, lineHeight: 1 }}>🧠</div>
           <div style={{ flex: 1 }}>
-            <div style={{ fontWeight: 800, fontSize: 15 }}>Snap je 't écht? Leg het uit!</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+              <span style={{ fontWeight: 800, fontSize: 15 }}>Snap je 't écht? Leg het uit!</span>
+              {/* kind-scherm: alleen de stip + het woord, geen prijstaal */}
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10.5, fontWeight: 800, color: "#ffce80" }}>
+                <span aria-hidden="true" style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffd54f", display: "inline-block" }} />
+                Familie
+              </span>
+            </div>
             <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5, marginTop: 2 }}>
               Kun jij <b>{titel.toLowerCase()}</b> in je eigen woorden uitleggen? Als je iets kunt uitleggen, snap je het pas echt.
             </div>
           </div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: "#69f0ae", whiteSpace: "nowrap" }}>Probeer →</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: "#ffce80", whiteSpace: "nowrap" }}>Probeer →</div>
         </div>
       </button>
     );
@@ -79,7 +87,7 @@ function LegUitInner({ conceptTitel, kernpunten }) {
 
   return (
     <div style={{
-      marginTop: 12, background: "rgba(126,240,162,0.07)", border: "1px solid rgba(126,240,162,0.42)",
+      marginTop: 12, background: "rgba(255,183,77,0.06)", border: "1px solid rgba(255,183,77,0.45)",
       borderRadius: 14, padding: "16px 16px 14px", color: "inherit",
     }}>
       <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>🧠 Leg <span style={{ color: "#69f0ae" }}>{titel.toLowerCase()}</span> uit in je eigen woorden</div>

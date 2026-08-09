@@ -3,13 +3,13 @@
 // 1 aug: "niet meer geheim, deel-voor-deel live met bèta-label").
 //
 // Eén plek waar de hele Familie-laag samenkomt. Bereikbaar voor iedereen
-// via "✨ Familie-extra's (bèta)" op HomePage + StudentHome. Alleen het
-// "Leg het uit"-blok (LegUit.jsx) zit nog achter familiePreviewVisible()
-// als kosten-poort (AI-call per beurt). Zie memory
-// project_studiebol_familie_tier_features.
+// via "✨ Familie-extra's (bèta)" op HomePage + StudentHome. Ook "Leg het
+// uit" (LegUit.jsx) is publiek sinds 9 aug (kosten begrensd door dag-quota).
+// Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
 import { PRO_GRATIS_BASIS } from "../../subscription/proPlan.js";
+import { FamiliePill } from "./familieUi.jsx";
 
 // De 8 gekozen Familie-haken (Mark 31 jul). status: 'klaar' | 'bouw'.
 const FEATURES = [
@@ -35,12 +35,13 @@ export default function FamilieHub({ setPage }) {
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 900, margin: 0 }}>
             👨‍👩‍👧 Familie-abonnement
           </h1>
+          <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
 bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
-          De premium-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
+          De Familie-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>

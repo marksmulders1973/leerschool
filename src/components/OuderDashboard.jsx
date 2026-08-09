@@ -273,12 +273,13 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
       <div style={{ padding: "16px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
 
-        {/* Pro-label (Mark 2026-06-06): ouder-inzicht is straks een Pro-extra,
-            nu nog gratis. Badge laat de waarde zien + meet het gebruik. */}
+        {/* Familie-label (Mark 2026-06-06; laag-naam rechtgezet 9 aug — de badge
+            zei Familie maar de tekst zei Pro): ouder-inzicht hoort straks bij het
+            Familie-pakket, nu nog gratis. Badge laat de waarde zien + meet gebruik. */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", padding: "10px 14px", borderRadius: 12, background: "rgba(255,183,77,0.06)", border: "1px solid rgba(255,183,77,0.22)" }}>
           <ProBadge feature="parent-dashboard" size="md" onInfo={onUpgrade} />
           <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
-            Dit ouder-inzicht is straks een Pro-extra — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
+            Dit ouder-inzicht hoort straks bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
           </span>
         </div>
 
@@ -379,20 +380,19 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
           )}
         </div>
 
-        {/* Pro gate */}
+        {/* Familie-gate (9 aug: was "Ouder Pro" in blauw — verkeerde laag én
+            verkeerde kleur; ouder-inzicht = Familie = goud, zie proPlan LAGEN). */}
         {!isPro && (
-          <div style={{ borderRadius: 16, border: "2px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.08)", padding: "16px 18px" }}>
-            {/* B1.1 (7-bots-review): hier stond "€1,95/maand" — een abonnement,
-                in tegenspraak met het per-kwartier-model dat overal elders
-                beloofd wordt. Eén bron van waarheid: proPlan.js. */}
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#00b0ff", marginBottom: 4 }}>
-              ✨ Ouder Pro — nu gratis · vanaf 2027 per kwartier
+          <div style={{ borderRadius: 16, border: "2px solid rgba(255,183,77,0.45)", background: "rgba(255,183,77,0.08)", padding: "16px 18px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#ffce80", marginBottom: 4, display: "flex", alignItems: "center", gap: 7 }}>
+              <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#ffd54f", display: "inline-block" }} />
+              Familie — nu gratis · vanaf 2027 een betaalde extra
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
               Volg de voortgang van je kind, zie scores per vak en bereid de Doorstroomtoets voor.
-              Geen abonnement — niks op te zeggen.
+              Eén prijs per gezín, niet per kind — of een Seizoenspas die vanzelf stopt.
             </div>
-            <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#00b0ff", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+            <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#ffd54f", color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               Meer info & aanmelden →
             </button>
           </div>

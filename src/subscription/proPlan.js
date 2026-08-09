@@ -156,6 +156,40 @@ export const PRO_FEATURES = {
       "weekplan van kwartiertjes en houden bij hoe het gaat.",
     status: "binnenkort",
   },
+  // ── Gate-only ids (config.js FEATURE_GATES) — entries hier zorgen dat de
+  //    LockedPreview straks de júiste laag-kleur toont (9 aug id-sync). ──
+  "unlimited-paths": {
+    id: "unlimited-paths",
+    icon: "🛤️",
+    label: "Onbeperkt oefenen per dag",
+    laag: "familie",
+    blurb: "Zoveel onderwerpen per dag oefenen als je wilt — zonder daglimiet.",
+    status: "binnenkort",
+  },
+  "voorkennis-keten": {
+    id: "voorkennis-keten",
+    icon: "🔗",
+    label: "Voorkennis-keten",
+    laag: "familie",
+    blurb: "Zie per examenvraag welke basiskennis eronder ligt — en oefen precies de zwakste schakel eerst.",
+    status: "binnenkort",
+  },
+  "school-dashboard": {
+    id: "school-dashboard",
+    icon: "🏫",
+    label: "Schooldashboard",
+    laag: "leerkracht",
+    blurb: "Voortgang van je hele klas in één overzicht, met export voor het rapportgesprek.",
+    status: "binnenkort",
+  },
+  "generate-questions": {
+    id: "generate-questions",
+    icon: "✏️",
+    label: "AI-vragen-generator",
+    laag: "leerkracht",
+    blurb: "Laat de AI extra oefenvragen maken bij jouw onderwerp — voor toetsen en werkbladen.",
+    status: "live",
+  },
   "werkblad-print": {
     id: "werkblad-print",
     icon: "🖨️",

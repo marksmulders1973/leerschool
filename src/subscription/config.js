@@ -41,6 +41,11 @@ export const FEATURE_GATES = {
   // Werkbladen printen = Pro (leerkracht); digitaal oefenen via deelcode/QR
   // blijft altijd gratis (docs/LEERKRACHT-WERKBLAD-PLAN.md Fase 3).
   "werkblad-print": [TIERS.TEACHER_PRO],
+  // 9 aug id-sync met proPlan PRO_FEATURES: zonder gate laat useSubscription
+  // een feature bij live paywall gewoon door ("niet-gegate = vrij").
+  "teacher-tools": [TIERS.TEACHER_PRO],
+  "weekrapport": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "kwartierplan": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).

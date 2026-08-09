@@ -33,7 +33,14 @@ export default function OuderkaartTrigger({ conceptId, conceptTitel, fouten = 0 
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ fontSize: 26, lineHeight: 1 }}>👪</div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 800, fontSize: 15 }}>Voor thuis — zo help je</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            <span style={{ fontWeight: 800, fontSize: 15 }}>Voor thuis — zo help je</span>
+            {/* kind-scherm: alleen de stip + het woord, geen prijstaal */}
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10.5, fontWeight: 800, color: "#ffce80" }}>
+              <span aria-hidden="true" style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffd54f", display: "inline-block" }} />
+              Familie
+            </span>
+          </div>
           <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5, marginTop: 2 }}>
             Merk je dat <b>{titel.toLowerCase()}</b> nog niet vlot gaat? Wij maakten een kaart die je laat zien hoe je
             het in gewone woorden uitlegt.

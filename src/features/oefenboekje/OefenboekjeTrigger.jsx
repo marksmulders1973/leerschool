@@ -31,21 +31,29 @@ export default function OefenboekjeTrigger({ conceptId, conceptTitel, fouten = 0
       href={href}
       onClick={() => { try { track("oefenboekje_trigger_klik", { concept: conceptId, fouten }); } catch { /* */ } }}
       style={{
+        // Goud = Familie-kleurtaal (9 aug; was gratis-groen — verkeerde tier-signaal).
         display: "block", textDecoration: "none", marginTop: 12,
-        background: "rgba(126,240,162,0.09)", border: "1px solid rgba(126,240,162,0.42)",
+        background: "rgba(255,183,77,0.08)", border: "1px solid rgba(255,183,77,0.45)",
         borderRadius: 14, padding: "14px 16px", color: "inherit",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ fontSize: 26, lineHeight: 1 }}>📘</div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 800, fontSize: 15 }}>Extra oefenen op papier</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            <span style={{ fontWeight: 800, fontSize: 15 }}>Extra oefenen op papier</span>
+            {/* kind-scherm: alleen de stip + het woord, geen prijstaal */}
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10.5, fontWeight: 800, color: "#ffce80" }}>
+              <span aria-hidden="true" style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffd54f", display: "inline-block" }} />
+              Familie
+            </span>
+          </div>
           <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5, marginTop: 2 }}>
             <b>{titel.toLowerCase()}</b> ging nog niet vlot. Print een oefenboekje op maat — extra opgaven met een
             uitgewerkt voorbeeld en een antwoordblad voor thuis.
           </div>
         </div>
-        <div style={{ fontSize: 13, fontWeight: 800, color: "#69f0ae", whiteSpace: "nowrap" }}>Maak →</div>
+        <div style={{ fontSize: 13, fontWeight: 800, color: "#ffce80", whiteSpace: "nowrap" }}>Maak →</div>
       </div>
     </a>
   );

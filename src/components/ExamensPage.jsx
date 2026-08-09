@@ -12,6 +12,7 @@ import {
 import { isExamenSpeelbaar } from "../data/examenQuizzes/speelbaar.js";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { countExamenMixVragen } from "../features/practice/buildExamenMix.js";
+import { GratisBadge } from "../subscription/ProBadge.jsx";
 
 // Examens-pagina (Mark idee 2026-05-08, herzien 2026-05-11, samengevoegd 2026-05-16):
 // ÉÉN GECOMBINEERDE VIEW per vak — Mark wens "wat je kunt: echte examens
@@ -223,8 +224,10 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
           color: C.muted,
           lineHeight: 1.5,
         }}>
-          <div style={{ marginBottom: 6, color: C.text, fontWeight: 700, fontSize: 14 }}>
+          <div style={{ marginBottom: 6, color: C.text, fontWeight: 700, fontSize: 14, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             🎓 Eindexamens VMBO GL/TL — twee manieren om te leren
+            {/* beide modi = gratis leer-basis; concurrenten rekenen hier juist geld voor */}
+            <GratisBadge />
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 8 }}>
             {/* Mark UX 2026-05-18: beide modi nu klikbare knoppen die naar

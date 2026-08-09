@@ -5,7 +5,7 @@ import { BRAND } from "../../brand.js";
 import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
-import ProBadge from "../../subscription/ProBadge.jsx";
+import ProBadge, { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
@@ -289,7 +289,8 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
               </span>
               {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Onbeperkt toetsen is straks Pro — nu gratis tot {quizLimit}</div>}
             </div>
-            <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#ff6b35" : "rgba(255,107,53,0.2)", color: quizLimitReached ? "var(--color-text-strong)" : "#ff8c42", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+            {/* Pro = blauw in de tier-kleurtaal (9 aug; was oranje) */}
+            <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#1e88e5" : "rgba(66,165,245,0.2)", color: quizLimitReached ? "#fff" : "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
               {quizLimitReached ? "Upgrade →" : "Pro: onbeperkt"}
             </button>
           </div>
@@ -308,28 +309,29 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
           </div>
         )}
         {isTeacherPro && (trialDaysLeft === null || trialDaysLeft === 0) && (
-          <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(255,107,53,0.08)", border: "1px solid rgba(255,107,53,0.2)", display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#ff8c42", fontWeight: 700 }}>✨ Pro — onbeperkt toetsen</span>
+          <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(66,165,245,0.08)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 8 }}>
+            <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#8ec9ff", fontWeight: 700 }}>Pro — onbeperkt toetsen</span>
           </div>
         )}
 
         {/* Schoollogo blok */}
         {isTeacherPro ? (
-          <div style={{ marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(168,85,247,0.07)", border: "1px solid rgba(168,85,247,0.25)", display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(66,165,245,0.07)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 12 }}>
             {schoolLogoUrl ? (
               <img src={schoolLogoUrl} alt="Schoollogo" style={{ height: 44, maxWidth: 100, objectFit: "contain", borderRadius: 6, background: "var(--color-text-strong)", padding: 4 }} />
             ) : (
-              <div style={{ width: 48, height: 44, borderRadius: 8, background: "rgba(168,85,247,0.15)", border: "1.5px dashed rgba(168,85,247,0.4)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>🏫</div>
+              <div style={{ width: 48, height: 44, borderRadius: 8, background: "rgba(66,165,245,0.15)", border: "1.5px dashed rgba(66,165,245,0.4)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>🏫</div>
             )}
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#c084fc", marginBottom: 2 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#8ec9ff", marginBottom: 2 }}>
                 {schoolLogoUrl ? "Schoollogo actief" : "Nog geen schoollogo"}
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)" }}>
                 {schoolLogoUrl ? "Verschijnt op toetsen en in de app" : "Upload een logo — verschijnt op alle toetsen"}
               </div>
             </div>
-            <label style={{ padding: "7px 12px", borderRadius: 10, background: "rgba(168,85,247,0.2)", border: "1px solid rgba(168,85,247,0.4)", color: "#c084fc", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+            <label style={{ padding: "7px 12px", borderRadius: 10, background: "rgba(66,165,245,0.2)", border: "1px solid rgba(66,165,245,0.4)", color: "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
               {schoolLogoUrl ? "Wijzig" : "Upload"}
               <input type="file" accept="image/*" onChange={handleLogoUpload} style={{ display: "none" }} />
             </label>
@@ -338,9 +340,12 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
             )}
           </div>
         ) : (
-          <div style={{ marginBottom: 16, padding: "10px 14px", borderRadius: 12, background: "rgba(168,85,247,0.05)", border: "1px dashed rgba(168,85,247,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-            <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.35)" }}>🏫 Eigen schoollogo op toetsen — Pro</span>
-            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(168,85,247,0.2)", color: "#c084fc", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Upgrade →</button>
+          <div style={{ marginBottom: 16, padding: "10px 14px", borderRadius: 12, background: "rgba(66,165,245,0.05)", border: "1px dashed rgba(66,165,245,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+            <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.35)", display: "inline-flex", alignItems: "center", gap: 6 }}>
+              <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block", flexShrink: 0 }} />
+              🏫 Eigen schoollogo op toetsen — Pro
+            </span>
+            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(66,165,245,0.2)", color: "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Upgrade →</button>
           </div>
         )}
 
@@ -363,7 +368,11 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
         {onCreateTakenlijst && (
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #7b1fa2, #9c27b0)", width: "100%", marginBottom: 12 }} onClick={onCreateTakenlijst}>
             <span style={{ fontSize: 28 }}>📋</span>
-            <span style={{ fontWeight: 700 }}>Nieuwe Takenlijst</span>
+            <span style={{ fontWeight: 700, display: "inline-flex", alignItems: "center", gap: 8 }}>
+              Nieuwe Takenlijst
+              {/* leerpaden klaarzetten blijft gratis — hét contrast naast de Pro-features */}
+              <GratisBadge />
+            </span>
           </button>
         )}
         {/* Werkblad (leerkracht-kanaal Fase 1, 5 aug 2026): printbaar A4 uit een

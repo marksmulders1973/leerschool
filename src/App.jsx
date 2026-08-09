@@ -64,7 +64,6 @@ const Leaderboard = lazy(() =>
 const Kampioenen = lazy(() =>
   import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.Kampioenen }))
 );
-const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
