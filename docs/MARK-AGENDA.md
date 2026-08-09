@@ -8,11 +8,6 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **🎟️ Seizoenspas-keuzes maken (Mark vroeg 8 aug om deze herinnering):**
-  plan staat klaar in `docs/PRIJSPLAN.md` §2b — drie keuzes: (1) naam
-  (Seizoenspas / Toetsjaar-pas / Doorstroompas), (2) variant A "tot de toets"
-  €19,95 of B "hele toetsjaar" €24,95 (Claude-aanrader: B), (3) jaar-tier
-  houden als derde smaak? Daarna werkt Claude het uit. ~5 min lezen.
 - **LinkedIn (2 min):** Spark Fest-POST 1 persoonlijk reposten + kort bedankje
   aan Inez (pakket is 4 aug geleverd — natuurlijk moment).
 - **Rondleiding Voedselbank Alkmaar inplannen** — Teresa Hwan bood een
