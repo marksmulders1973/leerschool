@@ -5,12 +5,24 @@
 > daadwerkelijk aangetroffen op een officiële site — niets geconstrueerd. Waar geen
 > mail vindbaar was staat het contactformulier/telefoonnummer als kanaal.
 >
-> **De haak:** leerlingen op Curaçao, Aruba en Sint Maarten doen de échte Nederlandse
-> VMBO/HAVO/VWO-eindexamens (CvTE maakt Caribische varianten) → onze authentieke
-> examen-oefening is daar 1-op-1 bruikbaar, nul concurrentie. De BES-eilanden
-> (Bonaire, Statia, Saba) zijn Nederlandse gemeenten met NL-curriculum. Extra haak:
-> Nederlands is er schooltaal maar vaak niet thuistaal (Papiamento/Engels) → onze
-> uitleg-op-3-niveaus + voorleesknop zijn precies daar een antwoord op.
+> **De haak — GECORRIGEERD 9 aug na feitcheck (concurrentie-agent):** ⚠️ de aanname
+> "zelfde examens" klopte maar half. De feiten:
+> - **Bonaire** = NL-onderwijssysteem onder NL Onderwijsinspectie → app werkt 1-op-1
+>   (sterkste fit).
+> - **Curaçao/Sint Maarten** = eigen centrale examens (VSBO/HAVO/VWO) via **ETE
+>   Curaçao**; **Aruba** eveneens eigen stelsel. Wel op Nederlandse leest geschoeid →
+>   framing in mails: "vakstof sluit nauw aan, extra oefenstof naast uw eigen
+>   examens" — NOOIT "dezelfde examens".
+> - **Saba/Sint Eustatius** = Engelstalig CXC-systeem → lage prio; alleen haak =
+>   hulp bij het vak Nederlands.
+> - Extra haak overal: Nederlands is schooltaal maar vaak niet thuistaal
+>   (Papiamento/Engels) → uitleg-op-3-niveaus + voorleesknop.
+>
+> **Concurrentie (check 9 aug):** Squla is er NIET (geen spoor; "gratis in de klas"
+> werkt alleen op NL-schooltijden = nacht daar). Enige echte speler: **Prowise Learn**
+> (Rekentuin/Taalzee) — gratis schoollicenties Aruba/Bonaire/Curaçao/Suriname via
+> Stichting TienTotZestien, máár alleen via school, geen thuis/gezins-aanbod, geen
+> uitleg-leerpaden, geen examentraining. Thuismarkt + examentraining-met-uitleg = leeg.
 > De zin "werkt overal waar Nederlands wordt geleerd" staat live op
 > voor-organisaties.html + llms.txt + llms-full.txt (v219, 9 aug).
 >
