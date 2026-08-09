@@ -28,15 +28,23 @@ Cito + examens versterken. Drie type werk:
 
 ## 🎓 SPRINT — Examens naar minimum 12 vragen (Mark 9 aug: "9 is te weinig")
 
-> Werkwijze bewezen in pilot biologie-2025-T1 (9→13, v227): beeld-/tabel-vragen herstellen
+> Werkwijze bewezen in pilot biologie-2025-T1 (9→12, v227/v228): beeld-/tabel-vragen herstellen
 > met een **eigen schematische svg** in de examen-JSON (`"svg": "<svg…>"`, PlayQuiz rendert
 > automatisch; filter in examenQuizzes/index.js laat vragen mét svg door). Regels: vraag +
 > officieel antwoord blijven authentiek; tekening = eigen werk mét bijschrift "eigen tekening
 > Leerkwartier"; GEEN deel-namen labelen die het antwoord verklappen; tabel-data reconstrueren
 > zodat het officiële antwoord klopt. Meteen PDF-rommel in q/explanation opruimen (voorbeelden
 > in bio-2025: samengeplakte intro's, "bacteri'n", explanation "1", dubbele opties).
+> ⛔ **Mark-regel 9 aug (definitief, na foetus-incident):** GEEN plaatjes zelf maken/tekenen
+> en GEEN AI-gegenereerde afbeeldingen (Grok tekende een mens i.p.v. een konijn) — "perfectie
+> niet gegarandeerd". Twee toegestane routes per beeld-vraag: (1) een **rechtenvrije afbeelding
+> van internet** (Wikimedia Commons publiek domein of CC — licentie checken, naamsvermelding in
+> het bijschrift, letters als overlay eroverheen, checken dat labels het antwoord niet verklappen)
+> of (2) de vraag **weglaten**. Uitzondering: een TABEL als svg mag (data-reconstructie passend
+> bij het officiële antwoord, geen tekenwerk) — zo staat bio-2025 v39 er nog in.
+> Eigen tekeningen van v4/v7/v18 zijn in v228 weer verwijderd; die vragen wachten op route 1.
 
-- [x] ✓9/8 **E0 pilot** biologie-2025-T1: 9→13 (4 tekeningen + 1 tabel + 5 rommel-fixes, v227)
+- [~] **E0 pilot** biologie-2025-T1: rommel opgeruimd + tabel-vraag hersteld (v227); eigen tekeningen weer verwijderd op Mark-regel (v228) → staat op 9; naar 12 via rechtenvrije afbeeldingen (v4 blad-doorsnede, v7 boon, v18 luizen-cyclus op Wikimedia zoeken)
 - [ ] **E1** biologie-2023-T1: 6→13 (7 beeld-vragen) — grootste gat
 - [ ] **E2** economie-2025-T2: 7→? · economie-2023-T1: 7→9 · economie-2025-T1: 9→11 (grafiek/tabel-svg's)
 - [ ] **E3** geschiedenis-2024-T2: 7→8 · 2024-T1: 9→10 · 2025-T1: 9→10 (bron/spotprent — LET OP: spotprenten niet natekenen, die vragen skippen)
