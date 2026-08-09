@@ -155,6 +155,11 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
 
 - [x] Zin op site + llms.txt + llms-full.txt (v219, 9 aug)
 - [x] Adressen verzameld (9 aug)
-- [ ] Mail-tekst golf 4 (sjabloon 2.0-variant + Engelse versie voor Saba/Statia/SXM)
-- [ ] Versturen ~1 sep — **na Mark's go** (deliverability: max ~30-40/dag)
+- [x] Mail-tekst golf 4 NL (sjabloon 2.0-variant, 2 smaken: examen-haak VO / groep 6-8-haak PO)
+- [x] **9 aug: eerste 10 als GMAIL-CONCEPT klaargezet** (Mark drukt zelf op verzenden —
+  Zapier-verzending faalde met "insufficient tasks on account", task-tegoed op):
+  RCN-OCW · RKCS · DOS · VPCO · Colegio Arubano · SKOA · SPCOA · SVOBE+MPC (cc) · SKOS · OOB
+- [ ] Na verzending: regels → verzend-log + WACHT-OP.md
+- [ ] Rest van de lijst (bibliotheken, EOZ's, NGO's, losse scholen) — vervolg-batch;
+  Engelse variant voor Saba/Statia/SXM-scholen nog schrijven
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
