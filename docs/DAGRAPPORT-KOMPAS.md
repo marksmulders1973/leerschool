@@ -17,7 +17,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 5 | **Retentie-machine** — weekmail, ouder-rapport, Kwartiercheck, push, streak | **75%** | = | ouder-kind-koppelingen nog ~1; push-abonnees enkele; weekmail 2.0 (Familie) |
 | 6 | **Kwartiercheck** (diagnostische lead-magnet) | **80%** | = | promotie/deel-actie breder inzetten |
 | 7 | **Park — binden + leren** ("alles benoembaar") | **70%** | = | bewijzen dat park het leren vóedt i.p.v. kannibaliseert |
-| 8 | **Familie-abonnement / geld** (paywall gebouwd, UIT tot ~jan 2027) | **85%** | ↑ | ~~40% was meetfout~~ — **9/9 haken bèta-live** (routes + echte componenten geverifieerd 1 aug); rest 15% = coherentie/Fable-pass + auto-triggers |
+| 8 | **Familie-abonnement / geld** (paywall gebouwd, UIT tot ~jan 2027) | **88%** | ↑ | 9 aug: **prijsmodel AF — Seizoenspas €24,95 hele toetsjaar besloten + live in copy (v217)**; churn ingebouwd → e-maillijst = draagconstructie. Rest: coherentie/Fable-pass, Stripe (jan 2027), einde-pas-flow |
 | 9 | **Content-breedte buiten Cito-kern** (VO/havo/vwo) | **70%** | ↑ | 1 aug: alle 7 informatica-paden 12→20 checks (AI, cybersecurity, algoritmen, databases, hardware, netwerken, programmeren); volgende breedte-gaten: economie-VO + kunst dun |
 | 10 | **SEO / AI-vindbaarheid** ("Doorstroomtoets-koning") | **71%** | ↑ | 1 aug: breadcrumbs + Article-schema + verse sitemap (380 URLs) + AI-vindbaarheid (sameAs-entiteitkoppeling social/LinkedIn, llms.txt ververst, vraag-vormige FAQ); groot plafond resteert: pre-rendering React-routes (architectuur) + backlinks (extern) |
 
@@ -68,6 +68,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 ## 📈 Trend-log (nieuwste boven)
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
+| 9 aug 2026 | **3 (=; agent: reëel 2-3, 1 middernacht-artefact)** | — (Playwright niet aan ingelogde Chrome — bat + Claude-herstart nodig) | events_echt ~1.700/7d · 14/24u (0 oefenvragen, zondag) · 2e dag deel:seo-instroom (3×) | +0 / 16 (9 dgn stil) | — · **🎟️ Seizoenspas BESLOTEN €24,95 + uitgewerkt (v217)**; mail-kalender bevestigd (golf 1 = 18 aug); quiz-bug herbevestigd (111 starts/11 compl., 97% quiz_id null → P0); GSC-noindex-fix (v214) geverifieerd schoon |
 | 7 aug 2026 | **3 (=)** | — (Vercel uitgelogd, dag 2) | events_echt 1.442/7d · **7/24u (stilste dag; agent: nacht-events = 1 apparaat/crawler zonder opslag)** | +0 / 16 | 562 (+35%) · FB-reel uitgewerkt op 311 (~48u testvenster) · IG-reel 9→16 · **agent: quiz_completed-tracking-bug bevestigd (25 starts/197 vragen/0 completions, quiz_id=null) → P0-fix** · Emmen → doorverwijzing Leergeld Emmen (5e warme tip) |
 | 6 aug avond | **3 (=)** | — (Vercel uitgelogd) | events_echt 1.471/7d · 37/24u | +0 / 16 (7d: +1) | reel-analyse: 308 bereik, ~1s kijktijd, 0 interactie; IG-reel 9 (geen caption); foto's 3-8; Threads 1 like; **3× quote-JA → live v205** |
 | 6 aug 2026 | **3 (↑+2)** | — (Vercel uitgelogd in Claude-Chrome) | events_echt 1.472/7d · 53/24u (question_answered 790, quiz_started 87 — echte oefen-activiteit) | +0 / 16 | **561 (+54%)** · reel 5 aug = 308 |
