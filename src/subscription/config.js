@@ -56,6 +56,11 @@ export const FREE_QUOTA = {
 // Mapping op TIERS: familie = parent_pro, leerkracht (Pro) = teacher_pro.
 export const PRICING = {
   familie_monthly: { price: 4.95, currency: "EUR", interval: "maand", label: "Familie — per gezin/maand" },
+  // Seizoenspas (Mark 9 aug 2026, PRIJSPLAN §2b): eenmalige betaling, geldig
+  // t/m validUntil, GEEN automatische verlenging (merkbelofte "stopt vanzelf").
+  // Stripe straks: mode "payment" + subscriptions.valid_until = validUntil;
+  // elk schooljaar de nieuwe einddatum instellen.
+  familie_seizoenspas: { price: 24.95, currency: "EUR", interval: "eenmalig", validUntil: "2027-07-31", label: "Familie Seizoenspas — het hele toetsjaar, stopt vanzelf" },
   familie_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Familie — per gezin/jaar" },
   teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "Pro (leerkracht) — per maand" },
   teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "Pro (leerkracht) — per jaar" },

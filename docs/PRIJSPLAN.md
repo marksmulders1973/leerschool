@@ -38,7 +38,8 @@ goedkoopste acquisitiekanaal).
 
 ### 2. Leerkwartier Familie — abonnement per gezín (niet per kind)
 **Voor:** de bezorgde Doorstroomtoets-ouder (primaire ICP-koper).
-**Richtprijs:** € 4,95/mnd of € 39/jaar per gezin. USP tegenover Squla
+**Richtprijs (drie smaken, per gezin):** € 4,95/mnd · 🎟️ Seizoenspas € 24,95
+éénmalig (t/m 31 juli 2027, zie §2b) · € 39/jaar. USP tegenover Squla
 (~€ 11/mnd per kínd): één prijs voor het hele gezin.
 **Inhoud:** ouder-dashboard (voortgang alle kinderen), weekrapport per mail,
 examen-simulatie (tijdklok + eindrapport), Kwartierplan (diagnose →
@@ -47,7 +48,25 @@ stappenplan), onbeperkt oefenen.
 schuurt met het toegankelijkheids-merk (Leergeld, voedselbanken, Ooievaarspas).
 "Familie" is warm, duidelijk, en draagt de per-gezin-USP in de naam.
 
-### 2b. 🎟️ Seizoenspas — PLAN (8 aug 2026, uitwerken na Mark's keuzes)
+### 2b. 🎟️ Seizoenspas — BESLOTEN (Mark, 9 aug 2026)
+
+> **Keuzes 9 aug (na impact-overleg):** naam = **Seizoenspas** · variant
+> **B € 24,95 "het hele toetsjaar"** (t/m 31 juli 2027) · **jaar-tier € 39
+> blijft** als derde smaak.
+> **Den Haag-check (9 aug): geen conflict.** In de mail aan Esther (3 aug)
+> staan geen euro-bedragen; het getekende formulier vermeldt "€ 39/jaar" en
+> juist dáárom blijft de jaar-tier bestaan — het formulier blijft kloppen,
+> geen correctie naar de gemeente nodig. Pashouders houden blijvend gratis
+> Familie (méér dan elke betaalde variant).
+> **Bewust geaccepteerde consequenties:** (1) break-even verschuift van
+> 11-28 naar grofweg 17-43 gezinnen/jaar als iedereen de pas kiest i.p.v.
+> jaar — naar verwachting goedgemaakt door betere conversie (betaalvorm
+> matcht koopbehoefte); (2) churn is ingebouwd (alle passen verlopen 31 juli)
+> → e-maillijst + jaarlijkse verkoopkalender zijn draagconstructie; (3)
+> "stopt vanzelf" is merkbelofte — nóóit stille verlenging bouwen. Stripe
+> straks: eenmalige betaling + `subscriptions.valid_until = 2027-07-31`;
+> elk schooljaar de nieuwe einddatum instellen.
+> Uitgewerkt 9 aug in `proPlan.js`, `config.js` (PRICING) + `abonnement.html`.
 
 **Het probleem dat dit oplost:** de koopbehoefte van de Familie-ouder leeft
 van ~november tot de Doorstroomtoets (feb) en verdwijnt daarna (kind naar de
@@ -83,10 +102,10 @@ beginnen"). Zo wordt seizoens-churn een jaarlijkse verkoop-kalender i.p.v.
 verlies. NB: break-even-som (11-28 gezinnen) gaat dan uit van jaarlijkse
 werving — e-maillijst is de motor.
 
-**Nog te kiezen door Mark (uitwerken ná die keuzes):**
-- [ ] Naam: "Seizoenspas" / "Toetsjaar-pas" / "Doorstroompas" / anders (B1, warm, geen dev-jargon)
-- [ ] Variant A of B + definitieve prijs
-- [ ] Jaar-tier houden als derde smaak of vereenvoudigen naar maand + pas
+**Keuzes Mark (9 aug 2026):**
+- [x] Naam: **Seizoenspas** (ondertitel vangt de duur: "geldig het hele toetsjaar, t/m 31 juli 2027 — stopt vanzelf")
+- [x] Variant **B** — richtprijs € 24,95, t/m 31 juli 2027
+- [x] Jaar-tier € 39 **blijft** als derde smaak (matcht ook het getekende Ooievaarspas-formulier)
 
 **⚠️ Kwartier-tegoed — twijfel (Mark 8 aug: "waarschijnlijk een slecht idee"):**
 de AI-bijles wordt gratis al nauwelijks gebruikt (0 calls sinds 3 aug) — er
@@ -190,5 +209,6 @@ Ooievaarspas.
 - [x] `useSubscription`: partner-status 'pro2027' → Familie-tier honoreren
   (gedaan 2026-07-26 via `partnerGrant()`, incl. blijvend-regel Ooievaarspas).
 - [ ] ~~Cadeaukaart-flow (kwartier-tegoed)~~ **ON-HOLD 8 aug** (tegoed-twijfel, zie §2b) — alleen terug bij bewezen vraag.
-- [ ] **Seizoenspas-keuzes door Mark** (naam / variant A-B / prijs — zie §2b), daarna uitwerken in proPlan.js + abonnement.html.
+- [x] **Seizoenspas-keuzes door Mark** (9 aug: Seizoenspas / B € 24,95 / jaar-tier blijft — zie §2b); uitgewerkt in proPlan.js + config.js + abonnement.html.
+- [ ] Seizoenspas einde-pas-flow (maart/juli 2027: broertje/zusje + groep-7 early-bird) — bouwen richting lancering.
 - [ ] Wachtlijst mailen (upgrade_waitlist) met 30-dagen-gratis-aanbod.
