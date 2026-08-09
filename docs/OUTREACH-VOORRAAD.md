@@ -111,6 +111,7 @@ en /voor-organisaties.html als landingspagina die al hun vragen beantwoordt.
 3. **LOWAN-nieuwkomersscholen (~300)** — week 1 na de vakantie (nieuwe instroom taalklassen).
 4. **Scholen batch 2 (120–150)** — selecteren op CBS-achterstandsscore-Excel ("Achterstandsscores basisscholen 2025, herijkte methode"); versturen eerste schoolweek. Sterkste verhaal: Almere ("alarmfase 1"-onderwijsregio).
 5. **Voedselbanken rest (47) + SUN (35)**, **bibliotheken rest (~75)**, **Buurtgezinnen (150) + VoorleesExpress (100)** — daarna in batches van ~30–40/dag.
+6. **🏝️ Caribisch NL + Curaçao/Aruba/Sint Maarten (golf 4, ~1 sep — Mark-akkoord 9 aug)** — adressen verzameld in `docs/outreach/CARIBISCH-OUTREACH.md`. Unieke haak: Curaçao/Aruba/SXM doen de échte NL VMBO/HAVO/VWO-examens (CvTE-Caribische varianten) → examen-USP 1-op-1, nul concurrentie; BES = NL-gemeenten. Zin "werkt overal waar Nederlands wordt geleerd" staat live op voor-organisaties.html + llms.txt (v219). **⏳ Op dagrapport houden tot verstuurd.** Weinig adressen, veel hefboom (schoolbesturen dekken tientallen scholen); Caribische scholen starten ~half aug weer.
 
 ## 🗓️ Leergeld-rest-55 — PREP voor ~18 aug (Squla-proof + Spark Fest-bewijs)
 
