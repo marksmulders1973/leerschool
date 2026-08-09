@@ -1,4 +1,4 @@
-# 🏝️ Caribisch-outreach — golf 4 (~1 sep, versturen na Mark's go)
+# 🏝️ Caribisch + Suriname-outreach — golf 4 (batch 1 ✅ 9 aug; batch 2 ~25 aug na go)
 
 > Verzameld 9 aug 2026 (2 research-agents). Mark-akkoord: zin op site + adressen
 > verzamelen; **op het dagrapport houden tot verstuurd**. Alle e-mailadressen zijn
@@ -154,6 +154,57 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
 
 ---
 
+## C. Suriname (batch 2 — verzameld 9 aug, Mark-akkoord)
+
+> **De haak (anders dan de eilanden!):** géén examen-verhaal (Suriname heeft eigen
+> GLO/MULO-toetsen) en géén "Doorstroomtoets"-jargon. Wél: gratis rekenen/taal/
+> begrijpend lezen mét uitleg op 3 niveaus, Nederlands = instructietaal, en expliciet
+> benoemen: werkt zonder account en is licht qua data (mobiel/duur internet daar).
+> Gratis-laag-markt: gebruikers + missie, geen omzet. Concurrentie thuis: leeg
+> (Prowise Learn alleen via scholen; school.sr is betaald — concurrent, niet mailen).
+> Betrouwbaarheid: ✅ = mail op eigen site gezien · ⚠️ = uit directory, bounce mogelijk.
+
+### C1. Ministerie (MinOWC) — officiële contactpagina gov.sr
+
+| Wie | E-mail | Waarom |
+|---|---|---|
+| Secretariaat Minister ✅ | minister@minowc.sr | Formele ingang; openbaar onderwijs valt onder ministerie |
+| Directeur Algemeen Vormend Onderwijs ✅ | directeur-avo@minowc.sr | Inhoudelijk: GLO/VO-curriculum |
+| Onderdirecteur Ontwikkelingsdienst ✅ | onderdirecteur-ods@minowc.sr | Curriculum-/leermiddelenontwikkeling |
+
+### C2. Schoolbesturen
+
+| Organisatie | E-mail / kanaal | Website | Waarom |
+|---|---|---|---|
+| RKBO (Rooms-Katholiek Bijzonder Onderwijs) ✅ | secretariaat@rkbo.sr | bisdomparamaribo.org · FB rkbosuriname | Groot bijzonder-onderwijsbestuur, heel Suriname (eigen domein rkbo.education is verlopen) |
+| SOEBGS (Broedergemeente) ✅ | info@soebgs.sr | soebgs.sr | ±68 scholen, ~13.000 leerlingen — grootste protestants bestuur |
+| Sanatan Dharm Maha Sabha ✅ | sanatandharmsurinamehb@gmail.com | sdms.sr | Hindoe-schoolbestuur via hoofdbestuur |
+| Arya Dewaker scholengemeenschap ✅⚠️ | stg.scholengem.aryadewaker@gmail.com (via webarchief, site offline — bounce mogelijk; fallback FB "Arya Diwaker Suriname") | aryadewaker.com | 12 scholen (5 GLO, 4 LBGO, 3 MULO) |
+| SIS (Islamitische Gemeenten) ⚠️ | sis.secretariaat@yahoo.com | — (islammessage.org-listing) | Beheert ook scholen |
+
+### C3. Bibliotheken / leesbevordering
+
+| Organisatie | E-mail | Website | Waarom |
+|---|---|---|---|
+| CCS — Algemene Openbare Bibliotheek ⚠️ | stgcss@yahoo.com | ccsnieuws.blogspot.com | Grootste openbare bibliotheek + 5 filialen (dekt districten) |
+| Stg. Boekenportaal Suriname ✅ | info@boekenportaal.sr | boekenportaal.sr | Leesbevordering + buurtbibliotheken-netwerk + sectie gratis digitale leermiddelen — ideale doorverwijzer |
+
+### C4. NGO's / kansengelijkheid
+
+| Organisatie | E-mail / kanaal | Website | Waarom |
+|---|---|---|---|
+| Stichting Projekta ✅ | projekta@sr.net | projekta-suriname.blogspot.com | Bekendste maatschappelijke NGO, sterk netwerk |
+| Kansrijk Suriname ✅ | secretaris.ks@gmail.com | kansrijksuriname.org | Betaalt schoolgeld/internetkosten kansarme kinderen — directe match |
+| Villa Zapakara (kindermuseum + naschools) ✅ | info@villazapakara.com | villazapakara.com | Educatief + naschoolse opvang, precies doelgroep 9-12 |
+| Rotary Club Paramaribo | geen mail → FB RotaryClubOfParamaribo | portal.clubrunner.ca/7135 | Onderwijsprojecten (o.a. met SOEBGS) |
+
+### C5. Media / warme ingangen
+
+| Organisatie | E-mail / kanaal | Waarom |
+|---|---|---|
+| SchoolTV.sr (Dragon1) ✅ | education@dragon1.com | Gratis leerplatform GLO/VO — partner/doorverwijzer, zelfde missie |
+| Nederlandse Ambassade Paramaribo | contactform nederlandwereldwijd.nl (officieel géén mail gepubliceerd) | Warme ingang cultuur/onderwijs |
+
 ## Niet gevonden / niet bruikbaar (voor de volledigheid)
 
 - Golden Rock RC School + Bethel Methodist School (Statia): oude mailadressen op
@@ -172,6 +223,14 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
   VPCO · Colegio Arubano · SKOA · SPCOA · SVOBE+MPC (cc) · SKOS · OOB — teksten
   waren de gecorrigeerde versies (geen "dezelfde examens"-claim). In WACHT-OP.md
   onder Prio 2. (Verzendroute was Gmail-concepten; Zapier-tegoed was op.)
-- [ ] Rest van de lijst (bibliotheken, EOZ's, NGO's, losse scholen) — vervolg-batch;
-  Engelse variant voor Saba/Statia/SXM-scholen nog schrijven
+- [x] **Suriname-adressen verzameld (9 aug, Mark-akkoord "zet klaar voor batch 2")**:
+  15 organisaties, 12 met geverifieerde mail — sectie C hierboven
+- [ ] **Batch 2 (~25 aug, na go):** eilanden-rest (bibliotheken, EOZ's, NGO's, losse
+  scholen) + Suriname (sectie C, eigen mailtekst: geen examen/Doorstroomtoets-jargon,
+  wél "zonder account + licht qua data"); Engelse variant voor Saba/Statia/SXM-scholen
+  nog schrijven
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
+
+Suriname niet gevonden: Philipsbibliotheek (bestaat vermoedelijk niet meer),
+districtsbibliotheken apart (lopen via CCS), Rotary-mail (alleen FB), ambassade-mail
+(alleen contactform officieel). school.sr = betaald platform → concurrent, niet mailen.
