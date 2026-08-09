@@ -28,6 +28,7 @@
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
 | 18 aug | **Leergeld-golf-55** versturen (na go) | Mark-go → Claude |
+| do 20 + vr 21 aug | 🏝️ **Batch 2 Caribisch + Suriname** (~41 mails: eilanden-rest NL + Engelstalig + Suriname) — teksten + planning liggen klaar in `docs/outreach/CARIBISCH-OUTREACH.md`; alleen "go" zeggen | Mark-go → Claude |
 | wk 18 aug | School's cool Nijmegen komt zélf terug (niet pingen, wel opletten) | — |
 | 18 aug–1 sep | **Schoolstart = Fase 4 leerkracht-kanaal**: juf-A4-flyer + 10 groep-8-leraren benaderen | Claude materiaal, Mark verstuurt |
 | ~25 aug | Outreach **golf 2** (na go) | Mark-go → Claude |

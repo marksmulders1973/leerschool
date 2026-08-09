@@ -205,6 +205,119 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
 | SchoolTV.sr (Dragon1) ✅ | education@dragon1.com | Gratis leerplatform GLO/VO — partner/doorverwijzer, zelfde missie |
 | Nederlandse Ambassade Paramaribo | contactform nederlandwereldwijd.nl (officieel géén mail gepubliceerd) | Warme ingang cultuur/onderwijs |
 
+## ✉️ Mailteksten batch 2 — KLAAR (voorbereid 9 aug, verzenden do 20 + vr 21 aug na go)
+
+### Verzendplanning (past in de kalender: 18-19 aug Leergeld-55 · 25 aug golf 2 · 1 sep LOWAN)
+
+| Dag | Wie | Aantal | Tekst |
+|---|---|---|---|
+| **do 20 aug** | Eilanden-rest NL: bibliotheken (Bonaire, Curaçao, Aruba, SXM-Jubilee), EOZ Bonaire, Jong Bonaire, Kid's College, losse Bonaire-basisscholen (De Pelikaan, Aquamarin, Birgen Maria-IKC's, OOB-scholen), ministeries OWCS + DEA | ~18 | Variant E |
+| **do 20 aug** | Engelstalig: Saba (Sacred Heart, Saba Comprehensive, EC2, QWL-bibliotheek), Statia (GvP, Governor de Graaff, bibliotheek), SXM (St. Maarten Academy, SMDF) | ~9 | Variant EN |
+| **vr 21 aug** | Suriname (sectie C): MinOWC ×3, besturen ×5, bibliotheken ×2, NGO's ×3, SchoolTV.sr | ~14 | Variant S |
+
+Route: Zapier proberen (tegoed reset mogelijk per nieuwe maand — anders Gmail-concepten
+zoals batch 1). Contactform-only-organisaties (SGB Bonaire, Bon Intenshon, FPNC,
+ambassade) doet Claude via de browser of slaat ze over naar batch 3.
+
+### Variant E — eilanden-rest NL (bibliotheken/EOZ/huiswerk/NGO's/ministeries)
+
+**Onderwerp:** Gratis Nederlandse oefen-app voor de kinderen die u helpt
+
+> Beste team van [ORGANISATIE],
+>
+> Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren (Nederland), en in
+> mijn vrije tijd bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen (±9-12
+> jaar) elke dag een kwartier oefenen met rekenen, taal en begrijpend lezen — met
+> uitleg die simpeler wordt zolang het kwartje nog niet valt.
+>
+> Voor kinderen bij wie Nederlands wél de schooltaal maar niet de thuistaal is, is de
+> app juist gebouwd: uitleg op drie niveaus (basis, simpeler, nog simpeler), korte
+> zinnen en een voorleesknop. De app werkt zonder account, is licht qua data, en er
+> zijn printbare werkbladen voor gezinnen met beperkt internet.
+>
+> [BEWIJS-ALINEA — vast blok uit sjabloon 2.0: Rotterdam / Spark Fest / Apeldoorn / Alkmaar]
+>
+> Mijn vraag is klein: zou u leerkwartier.app willen noemen richting de gezinnen en
+> kinderen die u helpt — in een nieuwsbrief, op een poster of gewoon mondeling? Ik
+> maak alles kosteloos op maat, ook met uw logo. [BIBLIOTHEEK-ZIN: "Voor bibliotheken
+> maak ik graag een A4 met QR-code voor bij de jeugdafdeling."] [NGO-ZIN: "Organisaties
+> die met gezinnen werken kunnen bovendien een eigen partner-code krijgen waarmee die
+> gezinnen ook de extra's gratis houden."]
+>
+> Er zit geen addertje onder het gras: gratis in 2026, geen account nodig, geen reclame.
+>
+> Meer over ons: leerkwartier.app/voor-organisaties.html · linkedin.com/company/leerkwartier
+>
+> Hartelijke groet,
+> Mark Smulders — leerkwartier.app
+
+### Variant S — Suriname (géén examen/Doorstroomtoets-jargon)
+
+**Onderwerp:** Gratis Nederlandstalige oefen-app voor rekenen, taal en lezen
+
+> Beste [team van ORGANISATIE],
+>
+> Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren (Nederland), en in
+> mijn vrije tijd bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen van
+> ongeveer 9 tot 12 jaar elke dag een kwartier oefenen met rekenen, taal en begrijpend
+> lezen — in het Nederlands, met uitleg die simpeler wordt zolang het kwartje nog
+> niet valt (drie niveaus: basis, simpeler, nog simpeler), en een voorleesknop.
+>
+> Belangrijk voor Suriname: de app werkt in de browser zónder account, is bewust
+> licht gehouden (weinig data nodig, ook op een eenvoudige telefoon) en er zijn
+> gratis printbare werkbladen voor kinderen zonder goed internet thuis.
+>
+> [BEWIJS-ALINEA — vast blok, met toevoeging:] Sinds deze maand wijzen ook
+> organisaties in het Caribisch gebied hun leerlingen op de app.
+>
+> Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw
+> [scholen/lezers/gezinnen] — in een nieuwsbrief, een oudergroep of op een poster?
+> Leerkrachten kunnen er bovendien gratis oefen-lijstjes mee klaarzetten voor hun
+> klas (leerkwartier.app/leerkracht-takenlijst.html). Ik maak alles kosteloos op
+> maat, ook met uw logo.
+>
+> Er zit geen addertje onder het gras: gratis in 2026, geen account nodig, geen
+> reclame, geen verkooppraatje erachter.
+>
+> Meer over ons: leerkwartier.app/voor-organisaties.html · linkedin.com/company/leerkwartier
+>
+> Hartelijke groet,
+> Mark Smulders — leerkwartier.app
+
+*(NB: de zin "Sinds deze maand… Caribisch gebied" alleen gebruiken als batch 1
+tegen die tijd ten minste één positieve reactie heeft — anders weglaten, eerlijk blijven.)*
+
+### Variant EN — Engelstalige scholen/organisaties Saba, Statia, SXM
+
+**Subject:** Free Dutch-language practice app for your students
+
+> Dear team of [ORGANISATION],
+>
+> My name is Mark Smulders. I work as an operator at a factory in the Netherlands,
+> and in my free time I built Leerkwartier ("Quarter-hour of learning"): a free
+> Dutch-language practice app where children practise maths, Dutch language and
+> reading comprehension for fifteen minutes a day — with explanations that get
+> simpler until the penny drops (three levels), plus a read-aloud button.
+>
+> For your students, the app can be especially useful for the subject of Dutch:
+> short sentences, simple Dutch, and audio support for children who don't speak
+> Dutch at home. It runs in the browser without an account, uses little data, and
+> free printable worksheets are available.
+>
+> In the Netherlands, food banks and children's charities already point families
+> to the app (see leerkwartier.app/bedankt.html).
+>
+> My question is a small one: would you consider mentioning leerkwartier.app to
+> your teachers, students or families — in a newsletter or a short message? I'll
+> gladly make a one-page flyer with your logo, free of charge.
+>
+> No strings attached: free in 2026, no account needed, no ads.
+>
+> More about us: leerkwartier.app/voor-organisaties.html · linkedin.com/company/leerkwartier
+>
+> Kind regards,
+> Mark Smulders — leerkwartier.app
+
 ## Niet gevonden / niet bruikbaar (voor de volledigheid)
 
 - Golden Rock RC School + Bethel Methodist School (Statia): oude mailadressen op
@@ -225,10 +338,11 @@ Bron Bonaire-mails: bonairegov.com/inwoners/onderwijs/scholen-basis-onderwijs.
   onder Prio 2. (Verzendroute was Gmail-concepten; Zapier-tegoed was op.)
 - [x] **Suriname-adressen verzameld (9 aug, Mark-akkoord "zet klaar voor batch 2")**:
   15 organisaties, 12 met geverifieerde mail — sectie C hierboven
-- [ ] **Batch 2 (~25 aug, na go):** eilanden-rest (bibliotheken, EOZ's, NGO's, losse
-  scholen) + Suriname (sectie C, eigen mailtekst: geen examen/Doorstroomtoets-jargon,
-  wél "zonder account + licht qua data"); Engelse variant voor Saba/Statia/SXM-scholen
-  nog schrijven
+- [x] **Mailteksten batch 2 geschreven (9 aug):** Variant E (eilanden-NL), Variant S
+  (Suriname, geen examen-jargon) en Variant EN (Engelstalig) — zie hierboven, incl.
+  verzendplanning per dag
+- [ ] **Batch 2 versturen: do 20 + vr 21 aug, na Mark's go** (~41 mails over 2 dagen;
+  past tussen Leergeld-55 op 18-19 aug en golf 2 op 25 aug)
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
 
 Suriname niet gevonden: Philipsbibliotheek (bestaat vermoedelijk niet meer),
