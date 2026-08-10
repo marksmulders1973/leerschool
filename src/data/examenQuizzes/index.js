@@ -86,6 +86,10 @@ export function prepareExamenQuestions(examenId) {
   return quiz.questions
     .filter((q) => q.tekstNr == null || quiz.teksten?.[q.tekstNr])
     .filter((q) => q.svg || !BEELD_REF.test(q.q || ""))
+    // Vangnet voor beeld-vragen die het woordfilter missen (bv. "welke letter
+    // geeft een bloedvat aan" zonder het woord 'afbeelding'): expliciete vlag
+    // in de JSON tot er een rechtenvrije afbeelding voor is (10 aug 2026).
+    .filter((q) => !q.beeldOntbreekt)
     .map((q) => {
       if (q.tekstNr == null) return q;
       const tekst = quiz.teksten[q.tekstNr];
