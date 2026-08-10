@@ -175,6 +175,63 @@ OOIEVAAR*-codes `null` (blijvend) terug; `partnerGrant()` in
 Familie-niveau is gratis. Niet inkorten zonder nieuwe afspraak met bureau
 Ooievaarspas.
 
+## 6. Toegangs-keten na betaling + gezinscode (bouwplan, toegevoegd 10 aug 2026)
+
+> Mark-vraag 10 aug: "hoe krijgen betalende gezinnen toegang tot waar ze recht
+> op hebben?" Antwoord in één zin: **betaling → webhook schrijft één rij in
+> `subscriptions` → `useSubscription` leest die rij → alle Familie-poortjes
+> gaan open.** Het slot bestaat al (PaywallGate + FEATURE_GATES); dit is de
+> betaal-schakel die het opendraait. Bouwen in de december-Stripe-scope.
+
+### De keten (stap voor stap)
+
+1. **Afrekenen = ingelogd.** Gratis oefenen blijft zonder account; kopen kan
+   alleen met login (Google of e-mail). De betaling moet ergens aan vast
+   kunnen — en het geeft de koper apparaat-onafhankelijkheid: nieuwe telefoon
+   → inloggen → alles terug.
+2. **Betaalknop → Stripe Checkout** (`api/checkout-session.js`, nu stub).
+   Seizoenspas = mode `payment` (eenmalig, geen verlenging — merkbelofte);
+   maand/jaar = mode `subscription`. `user_id` gaat mee als
+   `client_reference_id`.
+3. **Webhook = het moment van toegang** (`api/stripe-webhook.js`, te bouwen).
+   Bij `checkout.session.completed`: upsert in `subscriptions` →
+   (user_id, tier `parent_pro`, valid_until: Seizoenspas 2027-07-31 / jaar +1
+   jaar / maand +1 mnd). Bij `customer.subscription.deleted` of refund: rij
+   weg/aflopen. Geen handwerk.
+4. **De app ziet het vanzelf:** `useSubscription` leest de rij bij login
+   (cache 10 min). Success-pagina na Checkout ("het staat aan — zo koppel je
+   je kinderen") + bevestigings-/factuurmail via de bestaande Resend-machine.
+5. **Aflopen regelt zichzelf:** valid_until verstreken → poortjes dicht
+   (zit al in de hook) → einde-pas-flow (maart/juli, zie §2b).
+
+### Gezinscode — kinderen liften mee (de open ontwerp-keuze, nu vastgelegd)
+
+Familie geldt per gezín (max 3 kinderen), maar kinderen oefenen vaak als gast
+op een eigen tablet. Oplossing = **zelfde mechaniek als de bewezen
+partner-code-flow** (`partnerCode.js`), maar dan gekoppeld aan het
+ouder-abonnement:
+
+- Na betaling toont het ouder-dashboard een **gezinscode** (kort, bv. 6
+  tekens, + QR). Kind voert 'm één keer in (of scant) → dat apparaat lift mee
+  op het abonnement.
+- **DB:** tabel `family_devices` (owner_user_id, device_uid, naam, created_at)
+  + RPC `claim_family_plek(code, uid)` naar het model van
+  `claim_partner_plek` — claimt atomisch, cap **3 kind-apparaten** per
+  abonnement. Ouder kan in het dashboard een apparaat loskoppelen (wissel bij
+  nieuwe tablet).
+- **Geldigheid volgt de eigenaar:** de RPC geeft de valid_until van de
+  owner-rij terug; het kind-apparaat checkt dat (cache zoals partner-flow).
+  Abonnement afgelopen of terugbetaald → kind-apparaten vallen automatisch
+  terug op gratis. Geen aparte einddatum-administratie.
+- **Meting:** events `family_code_toon` / `family_code_claim` / `family_vol`.
+- **Copy-regel:** "gezinscode" in de UI (geen dev-jargon), uitleg in B1 op de
+  success-pagina: "Geef deze code aan je kind — dan telt zijn oefenwerk mee
+  in jouw overzicht."
+
+Bijvangst: dezelfde koppeling voedt het ouder-dashboard/weekrapport
+(`parent_child_links` — koppeling ontstaat op het natuurlijke moment i.p.v.
+als losse vraag).
+
 ## Naamgebruik
 
 - **Gratis / Familie / Pro / Kwartier-tegoed** — geen "Premium" in de hele app.
@@ -198,6 +255,8 @@ Ooievaarspas.
 
 - [ ] Definitieve prijzen vaststellen (incl. prijs per kwartier o.b.v. AI-kostenmeting).
 - [ ] Stripe-koppeling: producten per laag + tegoed-bundels (zie CLAUDE.md paywall-stappen).
+- [ ] **Toegangs-keten (§6, dec):** echte checkout + `api/stripe-webhook.js` + success-pagina + bevestigingsmail (Resend).
+- [ ] **Gezinscode-flow (§6, dec):** `family_devices` + RPC `claim_family_plek` + code/QR in ouder-dashboard (cap 3 kind-apparaten).
 - [ ] **Rechtsvorm = EENMANSZAAK (besloten Mark 9 aug 2026 — "ik wil er zelf
   aan verdienen"; vervangt de stichting-optie voor de betaalde kant).** Kalender:
   **okt** KvK-inschrijving (±€80) + KOR aanvragen (<€20k → geen btw; scholen
