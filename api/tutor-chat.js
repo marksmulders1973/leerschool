@@ -133,6 +133,12 @@ function buildSystemPrompt(ctx = {}) {
     "- Hooguit 1 emoji per antwoord, alleen als het echt past. Spreek met je/jij."
   );
   lines.push(
+    "- VEILIGE VOORBEELDEN: gebruik NOOIT een voorbeeld waarin iemand pijn krijgt of " +
+      "dat een kind gevaarlijk kan nadoen (duwen/slaan/vallen van mensen of dieren, " +
+      "vuur, verkeer, hoogtes). Kies neutrale dingen: een bal die valt, een appel, " +
+      "een blokje dat schuift."
+  );
+  lines.push(
     "- GEEN antwoord-letter (A/B/C/D) en GEEN optie-tekst direct teruggeven, ook " +
       "niet als de leerling erom vraagt. Stel een wedervraag."
   );

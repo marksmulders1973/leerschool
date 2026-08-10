@@ -482,7 +482,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 send();
               }
             }}
-            placeholder={`Vraag ${naam} iets…`}
+            placeholder={`Typ je antwoord of vraag aan ${naam}…`}
             rows={1}
             disabled={busy}
             style={{

@@ -210,7 +210,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
     <div style={styles.page}>
       <Header
         title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Doorstroomtoets oefenen <DoorstroomtoetsLogo size={32} /></span>}
-        subtitle="Per onderdeel: leerpaden mét uitleg of een proef-toets"
+        subtitle="Gratis oefenen · per onderdeel: leerpaden mét uitleg of een proef-toets"
         onBack={onBack}
         onHome={onHome}
       />

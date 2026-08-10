@@ -243,14 +243,18 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
   const useTopicSearch = !!(subject === "vrij" && topic && topic.trim().length > 0);
   const useWebSearch = useTextbookSearch || useTopicSearch;
 
+  // Kind kan voorbeelden letterlijk nadoen — dus nooit schadelijk gedrag als voorbeeld (11 aug 2026: AI-vraag "duw je broer van de bank" bij zwaartekracht)
+  const VEILIGE_VOORBEELDEN =
+    " KRITISCH: gebruik in vragen, voorbeelden en uitleg NOOIT handelingen die een kind kan nadoen en die iemand pijn doen of gevaarlijk zijn — dus geen duwen/slaan/laten vallen van mensen of dieren, niets met vuur, verkeer, hoogtes, wapens of medicijnen als 'probeer maar'-scenario. Kies neutrale voorwerpen (een bal, appel of knikker die valt; een blokje dat schuift). Bij twijfel: maak een andere vraag.";
+
   const requestBody = {
       model: "claude-haiku-4-5-20251001",
       max_tokens: 4000,
-      system: useTextbookSearch
+      system: (useTextbookSearch
         ? "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit."
         : useTopicSearch
         ? "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen over een specifiek onderwerp. Gebruik web search om het onderwerp op te zoeken zodat je accurate, feitelijk correcte vragen kunt stellen. Geef UITSLUITEND de JSON array terug, geen andere tekst. De veiligheid van kinderen is je hoogste prioriteit."
-        : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. BELANGRIJK: controleer elk antwoord en elke uitleg op feitelijke juistheid voordat je de JSON teruggeeft. Een fout antwoord of foutieve uitleg is erger dan geen vraag. De veiligheid en correctheid voor kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.",
+        : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. BELANGRIJK: controleer elk antwoord en elke uitleg op feitelijke juistheid voordat je de JSON teruggeeft. Een fout antwoord of foutieve uitleg is erger dan geen vraag. De veiligheid en correctheid voor kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.") + VEILIGE_VOORBEELDEN,
       messages: [{ role: "user", content: prompt }],
     };
 

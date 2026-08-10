@@ -152,10 +152,10 @@ const steps = [
         wrongHints: [null, "Dat is water.", "Dat is stoom.", "Wel een toestand."],
       },
       {
-        q: "Een **vloeistof** heeft welke vorm?",
-        options: ["Vorm van de bak/glas", "Vaste vorm", "Geen vorm", "Wisselt steeds"],
+        q: "Je giet water in een glas. Welke vorm neemt het **water** aan?",
+        options: ["De vorm van het glas", "Het houdt altijd zijn eigen vorm", "Het vult de hele kamer", "Het wordt meteen vast"],
         answer: 0,
-        wrongHints: [null, "Dat is vast.", "Wel een vorm, namelijk van waar het in zit.", "Klopt niet — neemt de vorm aan en houdt die."],
+        wrongHints: [null, "Denk aan wat je ziet als je uit een fles in een glas schenkt.", "Dat doet een gas, geen vloeistof.", "Daar is kou voor nodig — wat gebeurt er bij gewoon gieten?"],
       },
       {
         q: "**Lucht** is welke toestand?",

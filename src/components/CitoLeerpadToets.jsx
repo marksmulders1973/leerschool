@@ -205,7 +205,16 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return () => { window.removeEventListener("pagehide", flush); flush(); }; // weg-navigeren
   }, [simulatieMode, subjectFilter]);
 
+  // Mark-feedback 10 aug: "wat ik ook ingeef, het antwoord geeft steeds groen —
+  // pas aan het einde zie ik de fouten". Oefen-modus toont daarom direct
+  // rood/groen + leermoment; simulatie blijft als de echte toets (neutrale
+  // selectie, fouten pas in het eind-overzicht) — zie examen/oefen-split.
+  const directeFeedback = !simulatieMode;
+
   const pickAnswer = (a) => {
+    // In oefen-modus ligt het antwoord vast zodra je kiest (anders kun je na
+    // het rood zien gewoon doorklikken tot het groen wordt).
+    if (directeFeedback && answers[idx] != null) return;
     // 🤝 Vrienden-werven: alleen het EERSTE antwoord op een vraag telt voor
     // vriend-activatie — 3× klikken/wisselen op dezelfde vraag was genoeg om
     // de "3 échte antwoorden"-drempel (met Pro-beloning) te halen.
@@ -721,6 +730,13 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
 
         {q.options.map((opt, i) => {
           const isSelected = answered === i;
+          const locked = directeFeedback && answered != null;
+          // Oefen-modus na antwoord: goed = groen, jouw foute keuze = rood.
+          // Simulatie: selectie is neutraal blauw — groen suggereerde "goed"
+          // terwijl de toets dat nog helemaal niet wist (Mark-feedback 10 aug).
+          const toonGoed = locked && i === q.answer;
+          const toonFout = locked && isSelected && answered !== q.answer;
+          const selKleur = toonGoed ? C.good : toonFout ? C.bad : "#5db3ff";
           return (
             <button
               key={i}
@@ -731,23 +747,65 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                 textAlign: "left",
                 padding: "14px 16px",
                 marginBottom: 10,
-                background: isSelected ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.04)",
-                border: `2px solid ${isSelected ? C.good : C.border}`,
+                background: toonGoed
+                  ? "rgba(0,200,83,0.18)"
+                  : toonFout
+                  ? "rgba(255,82,82,0.16)"
+                  : isSelected && !locked
+                  ? "rgba(93,179,255,0.14)"
+                  : "rgba(255,255,255,0.04)",
+                border: `2px solid ${toonGoed || toonFout || (isSelected && !locked) ? selKleur : C.border}`,
                 borderRadius: 12,
                 color: C.text,
+                opacity: locked && !toonGoed && !toonFout ? 0.55 : 1,
                 fontFamily: "var(--font-body)",
                 fontSize: 15,
-                cursor: "pointer",
+                cursor: locked ? "default" : "pointer",
                 transition: "all 0.15s",
               }}
             >
-              <span style={{ fontWeight: 700, color: isSelected ? C.good : C.muted, marginRight: 10 }}>
-                {String.fromCharCode(65 + i)}.
+              <span style={{ fontWeight: 700, color: toonGoed || toonFout || (isSelected && !locked) ? selKleur : C.muted, marginRight: 10 }}>
+                {toonGoed ? "✔" : toonFout ? "✘" : String.fromCharCode(65 + i)}{toonGoed || toonFout ? " " : "."}
               </span>
               <MdInline text={opt} />
             </button>
           );
         })}
+
+        {/* Leermoment direct na een fout antwoord (alleen oefen-modus) */}
+        {directeFeedback && answered != null && answered !== q.answer && (
+          <div
+            style={{
+              marginTop: 4,
+              padding: "12px 14px",
+              borderRadius: 12,
+              background: "rgba(255,82,82,0.08)",
+              border: "1px solid rgba(255,82,82,0.35)",
+              fontSize: 14,
+              lineHeight: 1.5,
+            }}
+          >
+            <div style={{ fontWeight: 800, color: C.bad, marginBottom: 4 }}>Nog niet goed</div>
+            {q.wrongHints?.[answered] && (
+              <div style={{ marginBottom: q.explanation ? 6 : 0 }}>
+                💡 <MdInline text={q.wrongHints[answered]} />
+              </div>
+            )}
+            {q.explanation && (
+              <div style={{ color: "rgba(255,255,255,0.85)" }}>
+                <MdInline text={q.explanation} />
+              </div>
+            )}
+            {!q.wrongHints?.[answered] && !q.explanation && (
+              <div>Kijk nog eens goed naar het groene antwoord — daar zit het verschil.</div>
+            )}
+          </div>
+        )}
+        {directeFeedback && answered != null && answered === q.answer && (
+          <div style={{ marginTop: 4, fontWeight: 800, color: C.good, fontSize: 15 }}>
+            ✔ Goed!
+          </div>
+        )}
       </div>
 
       <div
