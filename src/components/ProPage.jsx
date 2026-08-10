@@ -7,113 +7,76 @@ import { track } from "../utils.js";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN, LAAG_KLEUREN } from "../subscription/proPlan.js";
 
+// T1-sync 10 aug 2026: dit (dormant, achter PAYWALL_ACTIVE) blok toonde nog
+// het oude model (Ouder €5,99 / Leerkracht €9,95 / School S-M-L €29-79 met
+// eigen oranje/paarse kleuren). Nu gelijk aan het besloten model — bron van
+// waarheid: config.PRICING + proPlan LAGEN/LAAG_KLEUREN (familie = goud,
+// Pro/school = blauw). Richtprijzen — definitief vóór Stripe jan 2027.
+// `tier` = de waarde voor subscriptions.tier (school valt onder teacher_pro).
 const PLANS = [
   {
     id: "parent_pro",
+    tier: "parent_pro",
     icon: "👨‍👩‍👧",
-    label: "Ouder",
-    price: "€5,99",
-    period: "/maand",
-    color: "#00b0ff",
-    bg: "rgba(0,176,255,0.12)",
-    border: "rgba(0,176,255,0.35)",
-    tag: null,
+    label: "Familie",
+    price: "v.a. €4,95",
+    period: "per gezín",
+    color: LAAG_KLEUREN.familie.dot,
+    bg: LAAG_KLEUREN.familie.vlak,
+    border: LAAG_KLEUREN.familie.rand,
+    tag: "Voor thuis",
+    smaken: [
+      { label: "Per maand", prijs: "€ 4,95", sub: "flexibel, elk moment opzegbaar" },
+      { label: "🎟️ Seizoenspas", prijs: "€ 24,95", sub: "één keer betalen · het hele toetsjaar (t/m 31 juli 2027) · stopt vanzelf", tag: "Meest gekozen" },
+      { label: "Per jaar", prijs: "€ 39", sub: "goedkoopst op lange termijn — ook voor jongere kinderen" },
+    ],
     features: [
-      { text: "Kind koppelen via veilige code", pro: true },
-      { text: "Scores & voortgang per vak", pro: true },
-      { text: "Doorstroomtoets-verwachting op basis van scores", pro: true },
-      { text: "Wekelijks rapport per e-mail", pro: true },
-      { text: "Meerdere kinderen volgen", pro: true },
-      { text: "AI-vragen onbeperkt", pro: true },
+      { text: "Eén prijs voor het hele gezin (max 3 kinderen) — niet per kind" },
+      { text: "Ouder-dashboard: scores en voortgang per vak" },
+      { text: "Wekelijks rapport per e-mail" },
+      { text: "Hele toets oefenen met de klok + eindrapport" },
+      { text: "Kwartierplan: diagnose → stappenplan" },
+      { text: "AI-bijles onbeperkt" },
     ],
   },
   {
     id: "teacher_pro",
+    tier: "teacher_pro",
+    icon: "🧑‍🏫",
+    label: "Pro",
+    price: "€6,95",
+    period: "/maand · €59/jaar",
+    color: LAAG_KLEUREN.leerkracht.dot,
+    bg: LAAG_KLEUREN.leerkracht.vlak,
+    border: LAAG_KLEUREN.leerkracht.rand,
+    tag: "Bijlesdocent",
+    features: [
+      { text: "Eigen logo op toetsen en oefenbladen" },
+      { text: "Onbeperkt toetsen aanmaken" },
+      { text: "Voortgang per leerling + rapportage" },
+      { text: "Resultaten exporteren" },
+      { text: "Verdient zichzelf in één lesuur terug — aftrekbaar" },
+    ],
+  },
+  {
+    id: "school",
+    tier: "teacher_pro",
     icon: "🏫",
-    label: "Leerkracht",
-    price: "€9,95",
-    period: "/maand",
-    color: "#ff6b35",
-    bg: "rgba(255,107,53,0.12)",
-    border: "rgba(255,107,53,0.35)",
-    tag: "Populair",
+    label: "School",
+    price: "€99",
+    period: "per klas /jaar",
+    color: LAAG_KLEUREN.leerkracht.dot,
+    bg: LAAG_KLEUREN.leerkracht.vlak,
+    border: LAAG_KLEUREN.leerkracht.rand,
+    tag: "Op factuur",
     features: [
-      { text: "Onbeperkt toetsen aanmaken", pro: true },
-      { text: "Voortgang per leerling inzien", pro: true },
-      { text: "Resultaten exporteren (CSV)", pro: true },
-      { text: "Meerdere klassen beheren", pro: true },
-      { text: "AI-vragen onbeperkt", pro: true },
-      { text: "Toetsen delen met collega's", pro: true },
+      { text: "Alle leerkrachten van de school onder één beheer" },
+      { text: "Schooldashboard over alle groepen (directie/IB'er)" },
+      { text: "School-logo op toetsen en oefenbladen" },
+      { text: "Klasrapportage + export" },
+      { text: "Verwerkersovereenkomst, factuur-betaling en support" },
     ],
   },
-  {
-    id: "school_s",
-    icon: "🏡",
-    label: "School S",
-    price: "€29",
-    period: "/maand",
-    color: "#a855f7",
-    bg: "rgba(168,85,247,0.10)",
-    border: "rgba(168,85,247,0.3)",
-    tag: null,
-    limit: 150,
-    features: [
-      { text: "Alle leerkrachten onbeperkt", pro: true },
-      { text: "Ouder-toegang via schoolcode (max 150 leerlingen)", pro: true },
-      { text: "Schoolbrede voortgang dashboard", pro: true },
-      { text: "Eigen schoollogo in de app", pro: true },
-      { text: "Jaarfactuur beschikbaar", pro: true },
-    ],
-  },
-  {
-    id: "school_m",
-    icon: "🎓",
-    label: "School M",
-    price: "€49",
-    period: "/maand",
-    color: "#a855f7",
-    bg: "rgba(168,85,247,0.12)",
-    border: "rgba(168,85,247,0.35)",
-    tag: "Meest gekozen",
-    limit: 450,
-    features: [
-      { text: "Alle leerkrachten onbeperkt", pro: true },
-      { text: "Ouder-toegang via schoolcode (max 450 leerlingen)", pro: true },
-      { text: "Schoolbrede voortgang dashboard", pro: true },
-      { text: "Eigen schoollogo in de app", pro: true },
-      { text: "Jaarfactuur beschikbaar", pro: true },
-      { text: "Prioriteit ondersteuning", pro: true },
-    ],
-  },
-  {
-    id: "school_l",
-    icon: "🏛️",
-    label: "School L",
-    price: "€79",
-    period: "/maand",
-    color: "#a855f7",
-    bg: "rgba(168,85,247,0.14)",
-    border: "rgba(168,85,247,0.4)",
-    tag: null,
-    limit: 800,
-    features: [
-      { text: "Alle leerkrachten onbeperkt", pro: true },
-      { text: "Ouder-toegang via schoolcode (max 800 leerlingen)", pro: true },
-      { text: "Schoolbrede voortgang dashboard", pro: true },
-      { text: "Eigen schoollogo in de app", pro: true },
-      { text: "Jaarfactuur beschikbaar", pro: true },
-      { text: "Prioriteit ondersteuning", pro: true },
-    ],
-  },
-];
-
-const FREE_FEATURES = [
-  "✓ Onbeperkt oefenen voor leerlingen",
-  "✓ Alle vakken & niveaus",
-  "✓ Scorebord & Hall of Fame",
-  `✓ 5 AI-quizzes per dag`,
-  "✓ Doorstroomtoets oefenen (groep 7 & 8)",
-  "✓ Tot 20 toetsen aanmaken (leerkracht)",
 ];
 
 export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin, onTrialStarted, subscription }) {
@@ -134,7 +97,9 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
     setTrialError("");
     const { error } = await supabase.from("subscriptions").upsert({
       user_id: authUser.id,
-      tier: selected,
+      // subscriptions.tier kent alleen parent_pro/teacher_pro — het School-plan
+      // valt onder teacher_pro (de schools-tabel regelt de licentie zelf).
+      tier: PLANS.find(p => p.id === selected)?.tier || selected,
       trial_started_at: new Date().toISOString(),
     }, { onConflict: "user_id" });
     setLoading(false);
@@ -146,7 +111,9 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
   const handleWaitlist = async () => {
     if (!email.includes("@")) return;
     setLoading(true);
-    await supabase.from("upgrade_waitlist").insert({ email, plan: PAYWALL_ACTIVE ? selected : "pro-kwartier" }).catch(() => {});
+    // Label "pro-kwartier" was het oude verdienmodel; "pro-interesse" = de
+    // algemene lanceer-lijst zolang de paywall uit staat (T1-sync 10 aug).
+    await supabase.from("upgrade_waitlist").insert({ email, plan: PAYWALL_ACTIVE ? selected : "pro-interesse" }).catch(() => {});
     setSent(true);
     setLoading(false);
   };
@@ -236,55 +203,53 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             Nu (per-kwartier-model, paywall uit) verbergen we de oude
             maand/jaar-prijzen om geen tegenstrijdige belofte te doen. */}
         {PAYWALL_ACTIVE && (<>
-        {/* Plan selector */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
-          {/* Rij 1: Ouder + Leerkracht */}
-          <div style={{ display: "flex", gap: 6 }}>
-            {PLANS.filter(p => ["parent_pro", "teacher_pro"].includes(p.id)).map(p => (
-              <button key={p.id} onClick={() => setSelected(p.id)} style={{
-                flex: 1, padding: "9px 4px", borderRadius: 12, cursor: "pointer",
-                border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
-                background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
-                transition: "all 0.15s", position: "relative",
-              }}>
-                {p.tag && <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>{p.tag}</div>}
-                <div style={{ fontSize: 18 }}>{p.icon}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: selected === p.id ? "var(--color-text-strong)" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
-              </button>
-            ))}
-          </div>
-          {/* Rij 2: School S/M/L */}
-          <div style={{ display: "flex", gap: 6 }}>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.3)", display: "flex", alignItems: "center", paddingLeft: 2, whiteSpace: "nowrap" }}>School:</div>
-            {PLANS.filter(p => p.id.startsWith("school_")).map(p => (
-              <button key={p.id} onClick={() => setSelected(p.id)} style={{
-                flex: 1, padding: "9px 4px", borderRadius: 12, cursor: "pointer",
-                border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
-                background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
-                transition: "all 0.15s", position: "relative",
-              }}>
-                {p.tag && <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>{p.tag}</div>}
-                <div style={{ fontSize: 16 }}>{p.icon}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: selected === p.id ? "var(--color-text-strong)" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
-                {p.limit && <div style={{ fontFamily: "var(--font-body)", fontSize: 9, color: selected === p.id ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.2)", marginTop: 1 }}>t/m {p.limit}</div>}
-              </button>
-            ))}
-          </div>
+        {/* Plan selector — één rij: Familie / Pro (bijlesdocent) / School */}
+        <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
+          {PLANS.map(p => (
+            <button key={p.id} onClick={() => setSelected(p.id)} style={{
+              flex: 1, padding: "11px 4px 9px", borderRadius: 12, cursor: "pointer",
+              border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
+              background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
+              transition: "all 0.15s", position: "relative",
+            }}>
+              {p.tag && <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "#10141f", fontFamily: "var(--font-display)", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>{p.tag}</div>}
+              <div style={{ fontSize: 18 }}>{p.icon}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: selected === p.id ? "var(--color-text-strong)" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 9, color: selected === p.id ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.25)", marginTop: 1 }}>{p.period}</div>
+            </button>
+          ))}
+        </div>
+        {/* School-first-regel (PRIJSPLAN §3): de juf zelf betaalt nooit. */}
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 16, lineHeight: 1.5 }}>
+          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis — Pro is voor bijlesdocenten, de schoollicentie voor scholen.
         </div>
 
         {/* Plan detail kaart */}
         {plan && (
           <div style={{ borderRadius: 20, border: `2px solid ${plan.color}`, background: plan.bg, padding: "20px 18px", marginBottom: 20, boxShadow: `0 8px 32px ${plan.bg}` }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: plan.limit ? 4 : 16 }}>
-              <span style={{ fontFamily: "var(--font-display)", fontSize: 38, fontWeight: 700, color: "var(--color-text-strong)" }}>{plan.price}</span>
-              <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{plan.period}</span>
-            </div>
-            {plan.limit && (
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 14, display: "flex", alignItems: "center", gap: 6 }}>
-                <span style={{ background: `${plan.color}22`, border: `1px solid ${plan.color}44`, borderRadius: 6, padding: "2px 8px", color: plan.color, fontWeight: 700, fontSize: 11 }}>Max {plan.limit} leerlingen</span>
-                <span>Meer leerlingen? Kies een groter plan.</span>
+            {plan.smaken ? (
+              /* Familie: drie smaken — Seizoenspas als anker in het midden */
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
+                {plan.smaken.map((s, i) => (
+                  <div key={i} style={{
+                    borderRadius: 12, padding: "10px 12px",
+                    border: s.tag ? `1.5px solid ${plan.color}` : "1px solid rgba(255,255,255,0.12)",
+                    background: s.tag ? `${plan.bg}` : "rgba(255,255,255,0.03)",
+                  }}>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                      <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{s.label}</span>
+                      <span style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800, color: plan.color }}>{s.prijs}</span>
+                      {s.tag && <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 10, fontWeight: 700, color: "#10141f", background: plan.color, borderRadius: 10, padding: "2px 8px" }}>{s.tag}</span>}
+                    </div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>{s.sub}</div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 16 }}>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 38, fontWeight: 700, color: "var(--color-text-strong)" }}>{plan.price}</span>
+                <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{plan.period}</span>
               </div>
             )}
             <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
@@ -307,9 +272,9 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {[
-              "🤖 AI-vragen onbeperkt (gratis: 5 per dag)",
+              "🤖 AI-bijles onbeperkt (gratis: een kleine portie per dag)",
               "📧 Wekelijks voortgangsrapport per e-mail",
-              "🔐 Kind koppelen via veilige koppelcode",
+              "🔐 Kind koppelen via veilige gezinscode",
               "📊 Voortgang over tijd — grafiek per vak",
             ].map((f, i) => (
               <div key={i} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{f}</div>
@@ -331,16 +296,16 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             <div style={{ fontSize: 40, marginBottom: 10 }}>🎉</div>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 4 }}>Proefperiode gestart!</div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
-              Je hebt 30 dagen gratis toegang tot {plan?.label} Pro. Geen creditcard nodig.
+              Je hebt 30 dagen gratis toegang tot alle {plan?.label}-extra's. Geen creditcard nodig.
             </div>
           </div>
         ) : (
           <div style={{ borderRadius: 16, border: `1px solid ${plan?.color || "#a855f7"}55`, background: plan ? `${plan.bg}` : "rgba(168,85,247,0.08)", padding: "18px 16px", marginBottom: 16 }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 4 }}>
-              🎁 Probeer {plan?.label} Pro gratis
+              🎁 Probeer {plan?.label} gratis
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 14 }}>
-              30 dagen alle Pro-functies — geen creditcard, geen verplichtingen.
+              30 dagen alle {plan?.label}-extra's — geen creditcard, geen verplichtingen.
             </div>
             {trialError && <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ff6b6b", marginBottom: 10 }}>{trialError}</div>}
             <button
@@ -366,7 +331,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis en koop je Pro-extra's per kwartier bij — geen abonnement, geen automatische verlenging. We sturen je één berichtje als het zover is.
+              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-abonnement per gezín (met een Seizoenspas die vanzelf stopt — nooit stiekem doorlopen) en Pro voor scholen en bijlesdocenten. We sturen je één berichtje als het zover is.
             </div>
             <input
               type="email"
