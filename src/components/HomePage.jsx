@@ -4,6 +4,7 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
+import PartnerWelkom from "./PartnerWelkom.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
@@ -664,6 +665,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         </div>
       )}
       <div style={styles.heroSection}>
+
+        {/* Partner-welkom (idee #22): QR-scanners van flyers zien meteen dat
+            ze goed zitten — mét ouder-voorrang. Boven de hero, want dit is
+            hét vertrouwensmoment van papier → telefoon. */}
+        {step === "role" && (
+          <PartnerWelkom
+            onOuder={onOuderDashboard}
+            onOefenen={() => handleFeatureClick("cito")}
+          />
+        )}
 
         {/* HERO (herbouwd 2026-06-10, verbeterplan spoor A): merk groot en
             gecentreerd, ÉÉN slogan (BRAND.slogan — A4-fix dubbele slogan), één
