@@ -23,8 +23,8 @@ Cito + examens versterken. Drie type werk:
 - [x] ✓9/8 (v226, Mark: "maak jij een keuze") **T3** Vonk-besluit: **gratis = basis-portie 3/dag · Familie = onbeperkt · tegoed = extra los bovenop (ook cadeau)**. Doorgevoerd: ai-tutor→laag familie (blurb vertelt het drie-lagen-verhaal), nieuwe entry extra-kwartieren (tegoed), FREE_QUOTA aiTutorCallsPerDay 0→3, abonnement.html gratis-kaart "basis-portie per dag".
 - [x] ✓10/8 (v235) **T4** Weekmail: goud "● FAMILIE · NU GRATIS"-label (uppercase, klein) boven het Focus-deze-week-blok.
 - [x] ✓10/8 (v235) **T5** TopografieCheck-intro: groene regel "De check en de mail zijn gratis — je hebt geen account nodig." + "ouder"→"ouder of verzorger" (copy-regel).
-- [ ] **T6 (P3)** BuddyChat.jsx + MaatjePocket.jsx (park): geen tegoed-markering bij AI-chat — afhankelijk van T3-besluit kleine kind-stip toevoegen.
-- [ ] **T7 (P3)** FamilieHub kaart-accenten zijn groen (status "klaar") binnen de goud-etalage — overwegen: status-groen behouden maar kaart-rand goud.
+- [x] ✓10/8 **T6 — bewust NIET gedaan** (STOPLIST-grijs → skip + log): tier-/tegoed-markering in kind-schermen (park-buddy) = prijs-druk op kinderen en botst met park-doel "binden". De drie-lagen-info staat op alle ouder-vlakken (FamilieHub, ProPage, abonnement, weekmail). Mark kan overrulen.
+- [x] ✓10/8 (v236) **T7** FamilieHub: kaart-rand/vlak van actieve features groen→goud (etalage-kleur); ✓-badge blijft status-groen.
 
 ## 🎓 SPRINT — Examens naar minimum 12 vragen (Mark 9 aug: "9 is te weinig")
 

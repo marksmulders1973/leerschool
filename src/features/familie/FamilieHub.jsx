@@ -60,8 +60,10 @@ bèta
                 style={{
                   textAlign: "left", cursor: klaar ? "pointer" : "default",
                   padding: "14px 16px", borderRadius: 14,
-                  background: klaar ? "rgba(105,240,174,0.06)" : "rgba(255,255,255,0.03)",
-                  border: klaar ? "1px solid rgba(105,240,174,0.35)" : "1px solid rgba(255,255,255,0.08)",
+                  // T7 (10 aug): kaart-rand goud (dit ís de Familie-etalage);
+                  // het status-groen blijft in de ✓-badge hiernaast.
+                  background: klaar ? "rgba(255,213,79,0.05)" : "rgba(255,255,255,0.03)",
+                  border: klaar ? "1px solid rgba(255,183,77,0.45)" : "1px solid rgba(255,255,255,0.08)",
                   color: "inherit", width: "100%",
                 }}
               >
