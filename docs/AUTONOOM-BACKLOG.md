@@ -49,8 +49,8 @@ Cito + examens versterken. Drie type werk:
 - [ ] **E2** economie-2025-T2: 7→? · economie-2023-T1: 7→9 · economie-2025-T1: 9→11 (grafiek/tabel-svg's)
 - [ ] **E3** geschiedenis-2024-T2: 7→8 · 2024-T1: 9→10 · 2025-T1: 9→10 (bron/spotprent — LET OP: spotprenten niet natekenen, die vragen skippen)
 - [ ] **E4** bio-2024-T1: 11→12/13 · economie-2024-T1/T2: 10→11 · eco-2023-T2: 11→12
-- [ ] **E5** daarna: vragen-teller op de "▶ Speel in app"-knop (ExamensPage) zodat de verwachting klopt
-- [ ] **E6 (check)** nederlands-2025-T1 staat op 2 speelbaar maar NIET in SPEELBARE_EXAMENS ✓; maatschappijkunde/wiskunde-JSONs zijn sowieso PDF-only — kloppen die bewust?
+- [x] ✓10/8 (v239) **E5** vragen-teller op de Speel-knop ("▶ Speel in app · 12 vragen"): nieuw prebuild-script buildExamenTelling.mjs → gegenereerd speelbaarTelling.js (zelfde filter-logica incl. beeldOntbreekt; ~1 KB, bundle-splitsing intact, kan niet uit sync lopen).
+- [x] ✓10/8 **E6 gecheckt — klopt bewust**: telling per examen nu hard meetbaar (buildExamenTelling): nederlands-2025-T1 = 2, maatschappijkunde 2-3, wiskunde-2025-T1 = 0, nederlands-2024-T1-stub = 0 — allemaal terecht niet in SPEELBARE_EXAMENS; de 21 lijst-examens tellen 7-29 speelbare vragen.
 
 ## 🧪 SPRINT — QA-sweep 30 jul 2026 (7 finders + skeptische verificatie; 7×P1 bevestigd, 0 vals alarm, 33×P2/P3)
 

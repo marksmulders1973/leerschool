@@ -1,0 +1,31 @@
+// GEGENEREERD door scripts/buildExamenTelling.mjs — niet met de hand wijzigen.
+// Aantal speelbare vragen per examen (zelfde filter als prepareExamenQuestions).
+export const EXAMEN_VRAGEN_TELLING = {
+  "biologie-vmbo-gltl-2023-tijdvak1": 9,
+  "biologie-vmbo-gltl-2024-tijdvak1": 11,
+  "biologie-vmbo-gltl-2024-tijdvak2": 12,
+  "biologie-vmbo-gltl-2025-tijdvak1": 12,
+  "economie-vmbo-gltl-2023-tijdvak1": 7,
+  "economie-vmbo-gltl-2023-tijdvak2": 11,
+  "economie-vmbo-gltl-2024-tijdvak1": 10,
+  "economie-vmbo-gltl-2024-tijdvak2": 10,
+  "economie-vmbo-gltl-2025-tijdvak1": 9,
+  "economie-vmbo-gltl-2025-tijdvak2": 7,
+  "engels-vmbo-gltl-2024-tijdvak1": 29,
+  "engels-vmbo-gltl-2025-tijdvak1": 29,
+  "geschiedenis-vmbo-gltl-2023-tijdvak1": 10,
+  "geschiedenis-vmbo-gltl-2024-tijdvak1": 9,
+  "geschiedenis-vmbo-gltl-2024-tijdvak2": 7,
+  "geschiedenis-vmbo-gltl-2025-tijdvak1": 9,
+  "maatschappijkunde-2023-T1": 3,
+  "maatschappijkunde-2024-T1": 2,
+  "maatschappijkunde-2024-T2": 3,
+  "nederlands-2024-T1": 0,
+  "nederlands-vmbo-gltl-2023-tijdvak1": 20,
+  "nederlands-vmbo-gltl-2023-tijdvak2": 20,
+  "nederlands-vmbo-gltl-2024-tijdvak1": 19,
+  "nederlands-vmbo-gltl-2024-tijdvak2": 19,
+  "nederlands-vmbo-gltl-2025-tijdvak1": 2,
+  "nederlands-vmbo-gltl-2025-tijdvak2": 18,
+  "wiskunde-vmbo-gltl-2025-tijdvak1": 0
+};

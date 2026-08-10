@@ -10,6 +10,7 @@ import {
   getUitwerkbijlageUrl,
 } from "../data/examens.js";
 import { isExamenSpeelbaar } from "../data/examenQuizzes/speelbaar.js";
+import { EXAMEN_VRAGEN_TELLING } from "../data/examenQuizzes/speelbaarTelling.js";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { countExamenMixVragen } from "../features/practice/buildExamenMix.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
@@ -602,7 +603,9 @@ function SlotRij({ slot, vakInfo, onPickPath, onPlayExamen }) {
                   }}
                   title="Speel deze PDF in de app als examenmodus (geen hints)"
                 >
-                  ▶ Speel in app
+                  {/* E5 (10 aug): teller zodat de verwachting klopt — bron is
+                      het gegenereerde speelbaarTelling.js (prebuild). */}
+                  ▶ Speel in app{EXAMEN_VRAGEN_TELLING[pdf.id] ? ` · ${EXAMEN_VRAGEN_TELLING[pdf.id]} vragen` : ""}
                 </button>
               )}
             </div>
