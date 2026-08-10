@@ -1,5 +1,14 @@
 # WhatsApp-feedback Mark — 10 augustus 2026
 
+> **STATUS NA FABLE-REVIEW (11 aug, v240):**
+> - ✅ **P1 fout=rood**: GEFIXT — oefen-modus CitoLeerpadToets toont nu direct rood + leermoment (wrongHint + uitleg), antwoord vergrendeld; simulatie selecteert neutraal blauw i.p.v. groen (fouten daar bewust pas in eind-overzicht, zoals echte toets).
+> - ⏳ **P2 topografie**: BEVESTIGD als ontwerp-fout — pad heeft 5 stappen met elk maar 1 provincie-check → "klaar" na 1 antwoord. Echte fix = oefen-alle-12-loop in TopoKaartNL/pad (groter werk, open). Files: `learnPaths/topografieNederlandProvinciesPo.jsx`, `LearnPath.jsx:657`, `TopoKaartNL.jsx`.
+> - ✅ **P3 guardrail**: GEFIXT — veilige-voorbeelden-regel in `api/generate-questions.js` én `api/tutor-chat.js`.
+> - ✅/⚠️ **P4 vragen**: vloeistof-vraag herformuleerd (geen strikvraag meer); hallo- en busvraag stonden NIET in vaste data (waren AI-gegenereerd → guardrail + correctheid-instructie dekken dit); "vraag aan Charley" → placeholder nu "Typ je antwoord of vraag aan …".
+> - ✅ **P5 "globaal"**: vaste woordenlijsten zijn schoon (geen foute definitie gevonden) — was vermoedelijk AI-uitleg; tutor-prompt heeft al kindertaal-regel.
+> - ⏳ **P6 beeld/tekst**: begeleidende tekst in oefen-toets nu deels gedekt door leermoment; foto's bij historische figuren/plaatsen = open wens.
+> - ✅/⏳ **P7 gratis**: "Gratis oefenen" toegevoegd aan CitoPage-subtitle; gezin-koppelcode-tekst kan later explicieter ("je logt gewoon als jezelf in").
+
 Notities die Mark overdag naar zichzelf appte tijdens het testen van Leerkwartier
 met (waarschijnlijk) zijn dochter. Uitgelezen via WhatsApp Web op 10 aug.
 **Bedoeld om morgen (11 aug) door Fable te laten nakijken tegen de code.**
