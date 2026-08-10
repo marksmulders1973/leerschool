@@ -38,52 +38,10 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
   const sectionRef = useRef(null);
 
   // Mark UX 2026-05-18: rol-filter — VMBO-eindexamens zijn niet voor PO-leerlingen
-  // (basisschool groep 1-8). Toon vriendelijke fallback met link naar
-  // Doorstroomtoets-oefening (de PO-equivalent van examen-stress).
+  // (basisschool groep 1-8). De vriendelijke fallback zelf staat verderop, NÁ
+  // alle hooks: een early return hier brak de hooks-volgorde ("Rendered fewer
+  // hooks") zodra de rol tussen renders wisselde (gevonden 10 aug 2026).
   const isPoLeerling = userRole === "leerling" || (userLevel && /^(groep|po)/i.test(String(userLevel)));
-  if (isPoLeerling) {
-    return (
-      <div style={{ minHeight: "100vh", background: C.bg, color: C.text }}>
-        <Header title="Examens 🎓" subtitle="" onBack={onBack} onHome={onHome} />
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 16px" }}>
-          <div style={{
-            padding: "28px 22px",
-            background: "rgba(255,213,79,0.08)",
-            border: `1px solid rgba(255,213,79,0.30)`,
-            borderRadius: 16,
-            textAlign: "center",
-          }}>
-            <div style={{ fontSize: 48, marginBottom: 8 }}>🎓</div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: C.warm, marginBottom: 8 }}>
-              VMBO-examens zijn voor de middelbare school
-            </h2>
-            <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.55, marginBottom: 18 }}>
-              Voor de basisschool is de <strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger
-              Cito-eindtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
-            </p>
-            {onGoCito && (
-              <button
-                type="button"
-                onClick={onGoCito}
-                style={{
-                  padding: "12px 22px",
-                  background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
-                  border: "none",
-                  borderRadius: 10,
-                  color: "#fff",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 14, fontWeight: 700,
-                  cursor: "pointer",
-                }}
-              >
-                🎯 Naar Doorstroomtoets oefenen
-              </button>
-            )}
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   // Examen-leerpaden (id startsWith "examen-") — onze oefen-modus.
   const examenLeerpaden = useMemo(() => {
@@ -184,6 +142,51 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
     }, 100);
     return () => clearTimeout(t);
   }, [initialMode]);
+
+  // PO-fallback — bewust ná alle hooks (zie opmerking bij isPoLeerling).
+  if (isPoLeerling) {
+    return (
+      <div style={{ minHeight: "100vh", background: C.bg, color: C.text }}>
+        <Header title="Examens 🎓" subtitle="" onBack={onBack} onHome={onHome} />
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 16px" }}>
+          <div style={{
+            padding: "28px 22px",
+            background: "rgba(255,213,79,0.08)",
+            border: `1px solid rgba(255,213,79,0.30)`,
+            borderRadius: 16,
+            textAlign: "center",
+          }}>
+            <div style={{ fontSize: 48, marginBottom: 8 }}>🎓</div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: C.warm, marginBottom: 8 }}>
+              VMBO-examens zijn voor de middelbare school
+            </h2>
+            <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.55, marginBottom: 18 }}>
+              Voor de basisschool is de <strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger
+              Cito-eindtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
+            </p>
+            {onGoCito && (
+              <button
+                type="button"
+                onClick={onGoCito}
+                style={{
+                  padding: "12px 22px",
+                  background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
+                  border: "none",
+                  borderRadius: 10,
+                  color: "#fff",
+                  fontFamily: "var(--font-display)",
+                  fontSize: 14, fontWeight: 700,
+                  cursor: "pointer",
+                }}
+              >
+                🎯 Naar Doorstroomtoets oefenen
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const zichtbareVakken = vakFilter === "alle"
     ? vakkenInVolgorde

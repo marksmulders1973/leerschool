@@ -1,336 +1,339 @@
 {
-  "id": "biologie-vmbo-gltl-2025-tijdvak1",
-  "meta": {
-    "vak": "biologie",
-    "niveau": "vmbo-gltl",
-    "jaar": 2025,
-    "tijdvak": 1
+ "id": "biologie-vmbo-gltl-2025-tijdvak1",
+ "meta": {
+  "vak": "biologie",
+  "niveau": "vmbo-gltl",
+  "jaar": 2025,
+  "tijdvak": 1
+ },
+ "teksten": {},
+ "questions": [
+  {
+   "q": "In de afbeelding zie je een schematische doorsnede van een blad. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft een huidmondje aan?",
+   "options": [
+    "letter P",
+    "letter Q",
+    "letter R",
+    "letter S"
+   ],
+   "answer": 2,
+   "explanation": "Het juiste antwoord is C. Een huidmondje (R) is een kleine opening tussen twee sluitcellen, meestal in de ónderste opperhuid van het blad. Daardoor gaan zuurstof, koolstofdioxide en waterdamp naar binnen en naar buiten. P is de bovenste opperhuid, Q een palissadecel en S de nerf (vaatbundel).",
+   "tekstNr": null,
+   "vraagNr": 4,
+   "svg": "<svg viewBox='0 0 670 400' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='670' height='372' rx='12' fill='#ffffff'/><image href='/examens/bio-2025-t1-blad-bron.svg' x='0' y='6' width='670' height='343.75'/><rect x='0' y='0' width='92' height='372' fill='#ffffff'/><rect x='228' y='308' width='140' height='60' fill='#ffffff'/><rect x='572' y='95' width='98' height='85' fill='#ffffff'/><g font-family='Arial' font-weight='bold' text-anchor='middle'><line x1='72' y1='38' x2='112' y2='38' stroke='#163a5f' stroke-width='3'/><circle cx='58' cy='38' r='15' fill='#163a5f' stroke='#fff' stroke-width='2'/><text x='58' y='44' font-size='19' fill='#fff'>P</text><line x1='72' y1='115' x2='118' y2='115' stroke='#163a5f' stroke-width='3'/><circle cx='58' cy='115' r='15' fill='#163a5f' stroke='#fff' stroke-width='2'/><text x='58' y='121' font-size='19' fill='#fff'>Q</text><line x1='270' y1='325' x2='269' y2='296' stroke='#163a5f' stroke-width='3'/><circle cx='270' cy='340' r='15' fill='#163a5f' stroke='#fff' stroke-width='2'/><text x='270' y='346' font-size='19' fill='#fff'>R</text><line x1='72' y1='205' x2='115' y2='205' stroke='#163a5f' stroke-width='3'/><circle cx='58' cy='205' r='15' fill='#163a5f' stroke='#fff' stroke-width='2'/><text x='58' y='211' font-size='19' fill='#fff'>S</text></g><text x='4' y='394' font-family='Arial' font-size='13' fill='#9fb0c6'>Naar „Leaf anatomy (numberated)”, Szczepan1990 — Wikimedia Commons, CC BY-SA 2.5 · bewerking: cijfers afgedekt, letters toegevoegd</text></svg>"
   },
-  "teksten": {},
-  "questions": [
-    {
-      "q": "In de afbeelding zie je een schematische doorsnede van een blad. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft een huidmondje aan?",
-      "options": [
-        "letter P",
-        "letter Q",
-        "letter R",
-        "letter S"
-      ],
-      "answer": 2,
-      "explanation": "Het juiste antwoord is C. Een huidmondje (R) is een kleine opening tussen twee sluitcellen, meestal in de ónderste opperhuid van het blad. Daardoor gaan zuurstof, koolstofdioxide en waterdamp naar binnen en naar buiten. P is de bovenste opperhuid, Q een palissadecel en S de nerf (vaatbundel).",
-      "tekstNr": null,
-      "vraagNr": 4
-    },
-    {
-      "q": "In de afbeelding zie je een opengesneden zaadje van een boon. Hierin zijn delen aangegeven met de letters P, Q en R. Welke letter geeft het deel aan waaruit het kiempje reservevoedsel haalt?",
-      "options": [
-        "letter P",
-        "letter Q",
-        "letter R"
-      ],
-      "answer": 2,
-      "explanation": "Het juiste antwoord is C. De zaadlob (R) is het dikke deel van het zaadje vol reservevoedsel; daaruit haalt het kiempje (Q) voeding om te kunnen kiemen. P is de zaadhuid die het zaadje beschermt.",
-      "tekstNr": null,
-      "vraagNr": 7
-    },
-    {
-      "q": "Welke laag is bij een trage maag minder actief waardoor er minder peristaltiek plaatsvindt?",
-      "options": [
-        "de slijmvlieslaag",
-        "de bindweefsellaag",
-        "de spierlaag"
-      ],
-      "answer": 2,
-      "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
-      "vraagNr": 11
-    },
-    {
-      "q": "Carola voelt zich door haar trage maag altijd vol. In welk deel van de hersenen vindt bewustwording van haar volle maag plaats?",
-      "options": [
-        "in de grote hersenen",
-        "in de kleine hersenen",
-        "in de hersenstam"
-      ],
-      "answer": 0,
-      "explanation": "Het juiste antwoord is A.",
-      "tekstNr": null,
-      "vraagNr": 12
-    },
-    {
-      "q": "Om een bloedvat te bereiken, prikt de hoofdluis door lagen van de huid. In welke volgorde gebeurt dat?",
-      "options": [
-        "hoornlaag → kiemlaag → lederhuid",
-        "hoornlaag → lederhuid → kiemlaag",
-        "kiemlaag → hoornlaag → lederhuid",
-        "kiemlaag → lederhuid → hoornlaag",
-        "lederhuid → hoornlaag → kiemlaag",
-        "lederhuid → kiemlaag → hoornlaag"
-      ],
-      "answer": 0,
-      "explanation": "Het juiste antwoord is A. Van buiten naar binnen bestaat de huid uit de opperhuid (met bovenop de hoornlaag en onderin de kiemlaag) en daaronder de lederhuid, waar de bloedvaten liggen. De luis prikt dus door hoornlaag → kiemlaag → lederhuid.",
-      "tekstNr": null,
-      "vraagNr": 16
-    },
-    {
-      "q": "In de afbeelding zie je de levenscyclus van de hoofdluis. De cyclus begint als het vrouwtje een bevrucht eitje aan een hoofdhaar vastplakt. Uit het eitje komt een kleine luis, die na 10 dagen volwassen is. Over de levenscyclus van deze hoofdluis worden twee uitspraken gedaan: 1 De hoofdluis in stadium 3 heeft hetzelfde fenotype als in stadium 5. 2 Een lichaamscel van de hoofdluis in stadium 2 heeft hetzelfde aantal chromosomen als een lichaamscel in stadium 4. Welk van deze uitspraken is juist of welke van deze uitspraken zijn juist?",
-      "options": [
-        "geen van beide",
-        "alleen 1",
-        "alleen 2",
-        "zowel 1 als 2"
-      ],
-      "answer": 2,
-      "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
-      "vraagNr": 18
-    },
-    {
-      "q": "Op welke momenten van de dag hebben de wortelcellen zuurstof nodig?",
-      "options": [
-        "alleen overdag",
-        "alleen 's nachts",
-        "overdag en 's nachts"
-      ],
-      "answer": 2,
-      "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
-      "vraagNr": 30
-    },
-    {
-      "q": "Een neushoornkever-mannetje met een korte hoorn vlucht meteen als een ander mannetje zijn langere hoorn laat zien. Tot welk gedrag behoort dit laten zien van de hoorn aan de tegenstander?",
-      "options": [
-        "baltsgedrag",
-        "territoriumgedrag",
-        "verzorgingsgedrag"
-      ],
-      "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
-      "tekstNr": null,
-      "vraagNr": 32
-    },
-    {
-      "q": "Melissa en Roy bekijken de tabel uit het onderzoek en doen daar uitspraken over. Melissa zegt dat uit elke klas meer jongens energiedrank drinken dan meisjes. Roy zegt dat meer leerlingen uit klas 2 energiedrank drinken dan leerlingen uit klas 4. Wie heeft gelijk?",
-      "svg": "<svg viewBox='0 0 460 210' xmlns='http://www.w3.org/2000/svg'><text x='230' y='24' text-anchor='middle' font-family='Arial' font-size='14' font-weight='bold' fill='#e8edf5'>Aantal leerlingen dat energiedrank drinkt</text><g stroke='#7d94b5'><rect x='60' y='40' width='340' height='120' fill='rgba(255,255,255,0.03)'/><line x1='60' y1='80' x2='400' y2='80'/><line x1='60' y1='120' x2='400' y2='120'/><line x1='200' y1='40' x2='200' y2='160'/><line x1='300' y1='40' x2='300' y2='160'/></g><g font-family='Arial' font-size='13' fill='#e8edf5'><text x='250' y='65' text-anchor='middle' font-weight='bold'>jongens</text><text x='350' y='65' text-anchor='middle' font-weight='bold'>meisjes</text><text x='75' y='105'>klas 2</text><text x='250' y='105' text-anchor='middle'>8</text><text x='350' y='105' text-anchor='middle'>5</text><text x='75' y='145'>klas 4</text><text x='250' y='145' text-anchor='middle'>10</text><text x='350' y='145' text-anchor='middle'>7</text></g><text x='230' y='192' text-anchor='middle' font-family='Arial' font-size='10' fill='#7d94b5'>Tabel nagemaakt in eigen stijl — de aantallen passen bij het officiële antwoord</text></svg>",
-      "options": [
-        "geen van beiden",
-        "alleen Melissa",
-        "alleen Roy",
-        "zowel Melissa als Roy"
-      ],
-      "answer": 1,
-      "explanation": "Het juiste antwoord is B. In beide klassen drinken meer jongens dan meisjes energiedrank (8>5 en 10>7) — Melissa heeft gelijk. Maar klas 4 (10+7=17) telt méér drinkers dan klas 2 (8+5=13) — Roy heeft dus ongelijk.",
-      "tekstNr": null,
-      "vraagNr": 39
-    },
-    {
-      "q": "Je ziet de foetussen van Chantal in de afbeelding. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft het deel aan waar voedingsstoffen uitgewisseld worden tussen Chantal en de foetussen?",
-      "_weggelaten": "Mark 9 aug 2026: foetus-tekening was niet goed te maken (eigen schets te abstract, Grok tekende een mens i.p.v. een konijn) — vraag bewust zonder svg gelaten zodat het beeld-filter hem overslaat.",
-      "options": [
-        "letter P",
-        "letter Q",
-        "letter R",
-        "letter S"
-      ],
-      "answer": 0,
-      "explanation": "Het juiste antwoord is A.",
-      "tekstNr": null,
-      "vraagNr": 44
-    },
-    {
-      "q": "Een virus kan na inademing via een longblaasje opgenomen worden in het bloed en gaat daarna via de kortste weg naar de kop van het konijn. In welke volgorde gaat het virus door de bloedvaten?",
-      "options": [
-        "longader  aorta  halsader",
-        "longader  aorta  halsslagader",
-        "longslagader  aorta  halsader",
-        "longslagader  aorta  halsslagader"
-      ],
-      "answer": 1,
-      "explanation": "Het juiste antwoord is B. Zuurstofrijk bloed uit de longen gaat via de longader naar het hart, wordt in de aorta gepompt en bereikt de kop via de halsslagader (slagaders voeren bloed ván het hart af; aders voeren bloed naar het hart toe).",
-      "tekstNr": null,
-      "vraagNr": 46
-    },
-    {
-      "q": "Als een konijn myxomatose had, gaf de dierenarts in het verleden uit voorzorg antibiotica om besmetting met andere ziekteverwekkers tegen te gaan. Tegen welke ziekteverwekkers werken antibiotica?",
-      "options": [
-        "tegen bacteriën",
-        "tegen schimmels",
-        "tegen andere virussen"
-      ],
-      "answer": 0,
-      "explanation": "Het juiste antwoord is A. Antibiotica werken alléén tegen bacteriën — niet tegen virussen of schimmels. Daarom helpt een antibioticakuur ook niet tegen bijvoorbeeld griep.",
-      "tekstNr": null,
-      "vraagNr": 49
-    },
-    {
-      "q": "Het vingerdier leeft in de bossen van Madagaskar. Vingerdieren gaan in het donker op zoek naar insectenlarven. Ze kloppen op bomen en luisteren naar het geluid van de bewegende larven onder de boomschors. Als een vingerdier een larve hoort, dan peutert hij met zijn lange vingers de larve uit de boom. Is het vingerdier een consument, een producent of een reducent?",
-      "options": [
-        "een consument",
-        "een producent",
-        "een reducent"
-      ],
-      "answer": 0,
-      "explanation": "Het juiste antwoord is A.",
-      "tekstNr": null,
-      "vraagNr": 50
-    }
-  ],
-  "skipped": [
-    {
-      "nr": 1,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 2,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 3,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 5,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 6,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 8,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 9,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 10,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 13,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 14,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 15,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 17,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 19,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 20,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 21,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 22,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 23,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 24,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 25,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 26,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 27,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 28,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 29,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 31,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 33,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 34,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 35,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 36,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 37,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 38,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 40,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 41,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 42,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 43,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 45,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 47,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 48,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 51,
-      "reden": "open/complex"
-    },
-    {
-      "nr": 52,
-      "reden": "open/complex"
-    }
-  ]
+  {
+   "q": "In de afbeelding zie je een opengesneden zaadje van een boon. Hierin zijn delen aangegeven met de letters P, Q en R. Welke letter geeft het deel aan waaruit het kiempje reservevoedsel haalt?",
+   "options": [
+    "letter P",
+    "letter Q",
+    "letter R"
+   ],
+   "answer": 2,
+   "explanation": "Het juiste antwoord is C. De zaadlob (R) is het dikke deel van het zaadje vol reservevoedsel; daaruit haalt het kiempje (Q) voeding om te kunnen kiemen. P is de zaadhuid die het zaadje beschermt.",
+   "tekstNr": null,
+   "vraagNr": 7,
+   "svg": "<svg viewBox='0 0 500 448' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='500' height='448' rx='10' fill='#ffffff'/><image href='/examens/bio-2025-t1-boon.svg' x='45' y='6' width='430' height='435'/></svg>"
+  },
+  {
+   "q": "Welke laag is bij een trage maag minder actief waardoor er minder peristaltiek plaatsvindt?",
+   "options": [
+    "de slijmvlieslaag",
+    "de bindweefsellaag",
+    "de spierlaag"
+   ],
+   "answer": 2,
+   "explanation": "Het juiste antwoord is C.",
+   "tekstNr": null,
+   "vraagNr": 11
+  },
+  {
+   "q": "Carola voelt zich door haar trage maag altijd vol. In welk deel van de hersenen vindt bewustwording van haar volle maag plaats?",
+   "options": [
+    "in de grote hersenen",
+    "in de kleine hersenen",
+    "in de hersenstam"
+   ],
+   "answer": 0,
+   "explanation": "Het juiste antwoord is A.",
+   "tekstNr": null,
+   "vraagNr": 12
+  },
+  {
+   "q": "Om een bloedvat te bereiken, prikt de hoofdluis door lagen van de huid. In welke volgorde gebeurt dat?",
+   "options": [
+    "hoornlaag → kiemlaag → lederhuid",
+    "hoornlaag → lederhuid → kiemlaag",
+    "kiemlaag → hoornlaag → lederhuid",
+    "kiemlaag → lederhuid → hoornlaag",
+    "lederhuid → hoornlaag → kiemlaag",
+    "lederhuid → kiemlaag → hoornlaag"
+   ],
+   "answer": 0,
+   "explanation": "Het juiste antwoord is A. Van buiten naar binnen bestaat de huid uit de opperhuid (met bovenop de hoornlaag en onderin de kiemlaag) en daaronder de lederhuid, waar de bloedvaten liggen. De luis prikt dus door hoornlaag → kiemlaag → lederhuid.",
+   "tekstNr": null,
+   "vraagNr": 16
+  },
+  {
+   "q": "In de afbeelding zie je de levenscyclus van de hoofdluis. De cyclus begint als het vrouwtje een bevrucht eitje aan een hoofdhaar vastplakt. Uit het eitje komt een kleine luis, die na 10 dagen volwassen is. Over de levenscyclus van deze hoofdluis worden twee uitspraken gedaan: 1 De hoofdluis in stadium 3 heeft hetzelfde fenotype als in stadium 5. 2 Een lichaamscel van de hoofdluis in stadium 2 heeft hetzelfde aantal chromosomen als een lichaamscel in stadium 4. Welk van deze uitspraken is juist of welke van deze uitspraken zijn juist?",
+   "options": [
+    "geen van beide",
+    "alleen 1",
+    "alleen 2",
+    "zowel 1 als 2"
+   ],
+   "answer": 2,
+   "explanation": "Het juiste antwoord is C.",
+   "tekstNr": null,
+   "vraagNr": 18,
+   "svg": "<svg viewBox='0 0 640 512' xmlns='http://www.w3.org/2000/svg'><image href='/examens/bio-2025-t1-luis.jpg' x='0' y='0' width='640' height='473'/><text x='2' y='498' font-family='Arial' font-size='15' fill='#9fb0c6'>Bron: CDC, via Wikimedia Commons (publiek domein) — de stadiums zijn genummerd 1 t/m 6</text></svg>"
+  },
+  {
+   "q": "Op welke momenten van de dag hebben de wortelcellen zuurstof nodig?",
+   "options": [
+    "alleen overdag",
+    "alleen 's nachts",
+    "overdag en 's nachts"
+   ],
+   "answer": 2,
+   "explanation": "Het juiste antwoord is C.",
+   "tekstNr": null,
+   "vraagNr": 30
+  },
+  {
+   "q": "Een neushoornkever-mannetje met een korte hoorn vlucht meteen als een ander mannetje zijn langere hoorn laat zien. Tot welk gedrag behoort dit laten zien van de hoorn aan de tegenstander?",
+   "options": [
+    "baltsgedrag",
+    "territoriumgedrag",
+    "verzorgingsgedrag"
+   ],
+   "answer": 1,
+   "explanation": "Het juiste antwoord is B.",
+   "tekstNr": null,
+   "vraagNr": 32
+  },
+  {
+   "q": "Melissa en Roy bekijken de tabel uit het onderzoek en doen daar uitspraken over. Melissa zegt dat uit elke klas meer jongens energiedrank drinken dan meisjes. Roy zegt dat meer leerlingen uit klas 2 energiedrank drinken dan leerlingen uit klas 4. Wie heeft gelijk?",
+   "svg": "<svg viewBox='0 0 460 210' xmlns='http://www.w3.org/2000/svg'><text x='230' y='24' text-anchor='middle' font-family='Arial' font-size='14' font-weight='bold' fill='#e8edf5'>Aantal leerlingen dat energiedrank drinkt</text><g stroke='#7d94b5'><rect x='60' y='40' width='340' height='120' fill='rgba(255,255,255,0.03)'/><line x1='60' y1='80' x2='400' y2='80'/><line x1='60' y1='120' x2='400' y2='120'/><line x1='200' y1='40' x2='200' y2='160'/><line x1='300' y1='40' x2='300' y2='160'/></g><g font-family='Arial' font-size='13' fill='#e8edf5'><text x='250' y='65' text-anchor='middle' font-weight='bold'>jongens</text><text x='350' y='65' text-anchor='middle' font-weight='bold'>meisjes</text><text x='75' y='105'>klas 2</text><text x='250' y='105' text-anchor='middle'>8</text><text x='350' y='105' text-anchor='middle'>5</text><text x='75' y='145'>klas 4</text><text x='250' y='145' text-anchor='middle'>10</text><text x='350' y='145' text-anchor='middle'>7</text></g><text x='230' y='192' text-anchor='middle' font-family='Arial' font-size='10' fill='#7d94b5'>Tabel nagemaakt in eigen stijl — de aantallen passen bij het officiële antwoord</text></svg>",
+   "options": [
+    "geen van beiden",
+    "alleen Melissa",
+    "alleen Roy",
+    "zowel Melissa als Roy"
+   ],
+   "answer": 1,
+   "explanation": "Het juiste antwoord is B. In beide klassen drinken meer jongens dan meisjes energiedrank (8>5 en 10>7) — Melissa heeft gelijk. Maar klas 4 (10+7=17) telt méér drinkers dan klas 2 (8+5=13) — Roy heeft dus ongelijk.",
+   "tekstNr": null,
+   "vraagNr": 39
+  },
+  {
+   "q": "Je ziet de foetussen van Chantal in de afbeelding. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft het deel aan waar voedingsstoffen uitgewisseld worden tussen Chantal en de foetussen?",
+   "_weggelaten": "Mark 9 aug 2026: foetus-tekening was niet goed te maken (eigen schets te abstract, Grok tekende een mens i.p.v. een konijn) — vraag bewust zonder svg gelaten zodat het beeld-filter hem overslaat.",
+   "options": [
+    "letter P",
+    "letter Q",
+    "letter R",
+    "letter S"
+   ],
+   "answer": 0,
+   "explanation": "Het juiste antwoord is A.",
+   "tekstNr": null,
+   "vraagNr": 44
+  },
+  {
+   "q": "Een virus kan na inademing via een longblaasje opgenomen worden in het bloed en gaat daarna via de kortste weg naar de kop van het konijn. In welke volgorde gaat het virus door de bloedvaten?",
+   "options": [
+    "longader  aorta  halsader",
+    "longader  aorta  halsslagader",
+    "longslagader  aorta  halsader",
+    "longslagader  aorta  halsslagader"
+   ],
+   "answer": 1,
+   "explanation": "Het juiste antwoord is B. Zuurstofrijk bloed uit de longen gaat via de longader naar het hart, wordt in de aorta gepompt en bereikt de kop via de halsslagader (slagaders voeren bloed ván het hart af; aders voeren bloed naar het hart toe).",
+   "tekstNr": null,
+   "vraagNr": 46
+  },
+  {
+   "q": "Als een konijn myxomatose had, gaf de dierenarts in het verleden uit voorzorg antibiotica om besmetting met andere ziekteverwekkers tegen te gaan. Tegen welke ziekteverwekkers werken antibiotica?",
+   "options": [
+    "tegen bacteriën",
+    "tegen schimmels",
+    "tegen andere virussen"
+   ],
+   "answer": 0,
+   "explanation": "Het juiste antwoord is A. Antibiotica werken alléén tegen bacteriën — niet tegen virussen of schimmels. Daarom helpt een antibioticakuur ook niet tegen bijvoorbeeld griep.",
+   "tekstNr": null,
+   "vraagNr": 49
+  },
+  {
+   "q": "Het vingerdier leeft in de bossen van Madagaskar. Vingerdieren gaan in het donker op zoek naar insectenlarven. Ze kloppen op bomen en luisteren naar het geluid van de bewegende larven onder de boomschors. Als een vingerdier een larve hoort, dan peutert hij met zijn lange vingers de larve uit de boom. Is het vingerdier een consument, een producent of een reducent?",
+   "options": [
+    "een consument",
+    "een producent",
+    "een reducent"
+   ],
+   "answer": 0,
+   "explanation": "Het juiste antwoord is A.",
+   "tekstNr": null,
+   "vraagNr": 50
+  }
+ ],
+ "skipped": [
+  {
+   "nr": 1,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 2,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 3,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 5,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 6,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 8,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 9,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 10,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 13,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 14,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 15,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 17,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 19,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 20,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 21,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 22,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 23,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 24,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 25,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 26,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 27,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 28,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 29,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 31,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 33,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 34,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 35,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 36,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 37,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 38,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 40,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 41,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 42,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 43,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 45,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 47,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 48,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 51,
+   "reden": "open/complex"
+  },
+  {
+   "nr": 52,
+   "reden": "open/complex"
+  }
+ ]
 }

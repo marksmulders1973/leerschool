@@ -44,7 +44,7 @@ Cito + examens versterken. Drie type werk:
 > bij het officiële antwoord, geen tekenwerk) — zo staat bio-2025 v39 er nog in.
 > Eigen tekeningen van v4/v7/v18 zijn in v228 weer verwijderd; die vragen wachten op route 1.
 
-- [~] **E0 pilot** biologie-2025-T1: rommel opgeruimd + tabel-vraag hersteld (v227); eigen tekeningen weer verwijderd op Mark-regel (v228) → staat op 9; naar 12 via rechtenvrije afbeeldingen (v4 blad-doorsnede, v7 boon, v18 luizen-cyclus op Wikimedia zoeken)
+- [x] ✓10/8 (v237) **E0 pilot AF — biologie-2025-T1 op 12 speelbaar** via route 1 (rechtenvrije beelden): blad-doorsnede = „Leaf anatomy (numberated)", Szczepan1990, CC BY-SA 2.5 (cijfers afgedekt met witte vlakken, eigen P/Q/R/S-badges, R wijst huidmondje aan); boon = „Estrutura feijao", LadyofHats, CC BY 4.0 (svg-labels+leaders+ankertjes gestript, P/Q/R-badges, R=zaadlob); luizen-cyclus = CDC via Wikimedia (publiek domein, al genummerd 1-6, verkleind naar 640px jpg). Techniek: wrapper-svg met <image href> naar public/examens/-assets — sanitizeSvg laat image/clipPath door (getest), PlayQuiz rendert bestaand. Bijschrift met bron+licentie in elk beeld; letters verklappen niets. Foetus-vraag blijft eruit (route 2, bewust). 🪲 Bijvangst-fix: ExamensPage early-return vóór hooks verplaatst tot ná alle hooks ("Rendered fewer hooks"-crash zodra rol wisselt).
 - [ ] **E1** biologie-2023-T1: 6→13 (7 beeld-vragen) — grootste gat
 - [ ] **E2** economie-2025-T2: 7→? · economie-2023-T1: 7→9 · economie-2025-T1: 9→11 (grafiek/tabel-svg's)
 - [ ] **E3** geschiedenis-2024-T2: 7→8 · 2024-T1: 9→10 · 2025-T1: 9→10 (bron/spotprent — LET OP: spotprenten niet natekenen, die vragen skippen)
