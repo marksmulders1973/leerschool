@@ -19,7 +19,7 @@ Cito + examens versterken. Drie type werk:
 > Kleurtaal: groen=Gratis · goud=Familie · blauw=Pro · paars=Kwartier-tegoed (LAAG_KLEUREN, proPlan.js).
 
 - [x] ✓9/8→10/8 (v233) **T1** ProPage PLANS-blok herbouwd naar besloten model: Familie 3 smaken (€4,95/mnd · 🎟️ Seizoenspas €24,95 "Meest gekozen" · €39/jr) + Pro-bijlesdocent €6,95/€59 + School €99/klas/jr; S-M-L weg; kleuren via LAAG_KLEUREN (goud/blauw, paars+oranje weg); school-first-regel; dode FREE_FEATURES verwijderd; trial-upsert school→teacher_pro; zichtbare waitlist-copy per-kwartier→lagen-model + label pro-interesse. Visueel gecheckt met PAYWALL_ACTIVE tijdelijk aan (netjes teruggezet).
-- [ ] **T2 (P2)** public/abonnement.html: .lk-tier default cyan → per kaart tier-kleur (groen/goud/blauw/paars) + stip-spans; featured-rand oranje → goud.
+- [x] ✓10/8 (v234) **T2** abonnement.html: tier-classes .tier-gratis/familie/pro/tegoed (groen/goud/blauw/paars) + ●-stip via ::before; featured-rand+gloed oranje→goud; inline Familie-kleur opgeruimd. Visueel gecheckt.
 - [x] ✓9/8 (v226, Mark: "maak jij een keuze") **T3** Vonk-besluit: **gratis = basis-portie 3/dag · Familie = onbeperkt · tegoed = extra los bovenop (ook cadeau)**. Doorgevoerd: ai-tutor→laag familie (blurb vertelt het drie-lagen-verhaal), nieuwe entry extra-kwartieren (tegoed), FREE_QUOTA aiTutorCallsPerDay 0→3, abonnement.html gratis-kaart "basis-portie per dag".
 - [ ] **T4 (P2)** Weekmail (api/send-ouder-rapport.js): klein goud "● Familie · nu gratis"-label boven het "Focus deze week"-blok.
 - [ ] **T5 (P2)** TopografieCheck.jsx intro (r.~86): woord "gratis" ontbreekt in de hele ouder-check-flow → 1 zin/badge toevoegen.

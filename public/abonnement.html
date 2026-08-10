@@ -54,10 +54,18 @@
   .lk-hero strong { color: #00e676; font-size: 1.1em; }
   .lk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 1.5em 0; }
   .lk-card { background: rgba(30, 45, 70, 0.6); border: 1px solid #2a3f5f; border-radius: 12px; padding: 18px 16px; }
-  .lk-card.featured { border-color: #ff8c42; background: linear-gradient(135deg, rgba(255, 107, 53, 0.10), rgba(30, 45, 70, 0.6)); }
+  .lk-card.featured { border-color: #ffd54f; background: linear-gradient(135deg, rgba(255, 213, 79, 0.10), rgba(30, 45, 70, 0.6)); }
   .lk-price { font-family: var(--font-display, system-ui); font-size: 1.8em; font-weight: 800; color: #fff; margin: 6px 0 2px; }
   .lk-price small { font-size: .55em; opacity: .7; }
-  .lk-tier { font-size: .85em; color: #80deea; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+  /* Tier-kleurtaal (T2, 10 aug 2026 — zelfde als LAAG_KLEUREN in de app):
+     groen = Gratis · goud = Familie · blauw = Pro · paars = Kwartier-tegoed.
+     Stip vóór de naam; kleur altijd mét het woord erbij (kleurenblind-proof). */
+  .lk-tier { font-size: .85em; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+  .lk-tier::before { content: "●"; margin-right: 6px; font-size: .8em; vertical-align: 1px; }
+  .lk-tier.tier-gratis { color: #69f0ae; }
+  .lk-tier.tier-familie { color: #ffd54f; }
+  .lk-tier.tier-pro { color: #8ec9ff; }
+  .lk-tier.tier-tegoed { color: #e1bee7; }
   .lk-features { list-style: none; padding: 0; margin: 10px 0 0; font-size: .92em; }
   .lk-features li { padding: 4px 0; padding-left: 22px; position: relative; }
   .lk-features li::before { content: "✓"; position: absolute; left: 0; color: #00e676; font-weight: 700; }
@@ -115,7 +123,7 @@
 
 <div class="lk-grid">
   <div class="lk-card">
-    <span class="lk-tier">Gratis</span>
+    <span class="lk-tier tier-gratis">Gratis</span>
     <div class="lk-price">€0<small>/altijd</small></div>
     <ul class="lk-features">
       <li><strong>Oefenen voor de Doorstroomtoets blijft gratis</strong> — ook ná 2027</li>
@@ -127,7 +135,7 @@
     </ul>
   </div>
   <div class="lk-card featured" id="familie">
-    <span class="lk-tier" style="color:#ffd54f">Familie — per gezin</span>
+    <span class="lk-tier tier-familie">Familie — per gezin</span>
     <div class="lk-price">🎟️ ± €24,95<small> Seizoenspas — meest gekozen</small></div>
     <p style="margin: 4px 0; font-size: .85em; opacity: .8">
       Eén keer betalen, geldig het hele toetsjaar (t/m 31 juli 2027) — en de pas
@@ -146,7 +154,7 @@
     </ul>
   </div>
   <div class="lk-card">
-    <span class="lk-tier">Pro — scholen &amp; bijlesdocenten</span>
+    <span class="lk-tier tier-pro">Pro — scholen &amp; bijlesdocenten</span>
     <div class="lk-price">School €99<small>/klas/jaar · bijlesdocent ± €6,95/mnd</small></div>
     <ul class="lk-features">
       <li>Schooldashboard: overzicht over alle groepen</li>
@@ -157,7 +165,7 @@
     </ul>
   </div>
   <div class="lk-card">
-    <span class="lk-tier">Kwartier-tegoed</span>
+    <span class="lk-tier tier-tegoed">Kwartier-tegoed</span>
     <div class="lk-price">Los<small> — geen abonnement</small></div>
     <p style="margin: 4px 0; font-size: .85em; opacity: .8">Losse kwartieren extra AI-bijles. Prijs per kwartier maken we vóór de lancering bekend.</p>
     <ul class="lk-features">
