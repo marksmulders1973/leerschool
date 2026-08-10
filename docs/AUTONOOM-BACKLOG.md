@@ -21,8 +21,8 @@ Cito + examens versterken. Drie type werk:
 - [x] ✓9/8→10/8 (v233) **T1** ProPage PLANS-blok herbouwd naar besloten model: Familie 3 smaken (€4,95/mnd · 🎟️ Seizoenspas €24,95 "Meest gekozen" · €39/jr) + Pro-bijlesdocent €6,95/€59 + School €99/klas/jr; S-M-L weg; kleuren via LAAG_KLEUREN (goud/blauw, paars+oranje weg); school-first-regel; dode FREE_FEATURES verwijderd; trial-upsert school→teacher_pro; zichtbare waitlist-copy per-kwartier→lagen-model + label pro-interesse. Visueel gecheckt met PAYWALL_ACTIVE tijdelijk aan (netjes teruggezet).
 - [x] ✓10/8 (v234) **T2** abonnement.html: tier-classes .tier-gratis/familie/pro/tegoed (groen/goud/blauw/paars) + ●-stip via ::before; featured-rand+gloed oranje→goud; inline Familie-kleur opgeruimd. Visueel gecheckt.
 - [x] ✓9/8 (v226, Mark: "maak jij een keuze") **T3** Vonk-besluit: **gratis = basis-portie 3/dag · Familie = onbeperkt · tegoed = extra los bovenop (ook cadeau)**. Doorgevoerd: ai-tutor→laag familie (blurb vertelt het drie-lagen-verhaal), nieuwe entry extra-kwartieren (tegoed), FREE_QUOTA aiTutorCallsPerDay 0→3, abonnement.html gratis-kaart "basis-portie per dag".
-- [ ] **T4 (P2)** Weekmail (api/send-ouder-rapport.js): klein goud "● Familie · nu gratis"-label boven het "Focus deze week"-blok.
-- [ ] **T5 (P2)** TopografieCheck.jsx intro (r.~86): woord "gratis" ontbreekt in de hele ouder-check-flow → 1 zin/badge toevoegen.
+- [x] ✓10/8 (v235) **T4** Weekmail: goud "● FAMILIE · NU GRATIS"-label (uppercase, klein) boven het Focus-deze-week-blok.
+- [x] ✓10/8 (v235) **T5** TopografieCheck-intro: groene regel "De check en de mail zijn gratis — je hebt geen account nodig." + "ouder"→"ouder of verzorger" (copy-regel).
 - [ ] **T6 (P3)** BuddyChat.jsx + MaatjePocket.jsx (park): geen tegoed-markering bij AI-chat — afhankelijk van T3-besluit kleine kind-stip toevoegen.
 - [ ] **T7 (P3)** FamilieHub kaart-accenten zijn groen (status "klaar") binnen de goud-etalage — overwegen: status-groen behouden maar kaart-rand goud.
 

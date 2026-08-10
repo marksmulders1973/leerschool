@@ -82,9 +82,13 @@ export default function TopografieCheck() {
         <p style={{ margin: "0 0 6px", fontSize: 15, color: C.tekst, lineHeight: 1.5 }}>
           Laat je kind <b>10 korte vragen</b> beantwoorden over werelddelen, landen en hoofdsteden.
         </p>
-        <p style={{ margin: "0 0 18px", fontSize: 14.5, color: C.zacht, lineHeight: 1.5 }}>
-          Daarna krijg jij als ouder per mail de <b>uitslag</b> + <b>10 oefenvragen mét uitleg</b> —
+        <p style={{ margin: "0 0 6px", fontSize: 14.5, color: C.zacht, lineHeight: 1.5 }}>
+          Daarna krijg jij als ouder of verzorger per mail de <b>uitslag</b> + <b>10 oefenvragen mét uitleg</b> —
           precies de onderwerpen waar je kind nog moeite mee heeft. Kind maakt ze op papier, jij kijkt na. 💪
+        </p>
+        {/* T5 (10 aug): het woord "gratis" ontbrak in de hele ouder-check-flow. */}
+        <p style={{ margin: "0 0 18px", fontSize: 13.5, color: "#69f0ae", fontWeight: 700 }}>
+          De check en de mail zijn gratis — je hebt geen account nodig.
         </p>
         <Knop onClick={start}>Start de check (10 vragen) →</Knop>
       </Kaart>

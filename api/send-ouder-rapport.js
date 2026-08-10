@@ -198,6 +198,7 @@ function maakKindSectie(childName, rows) {
   const focusEnc = focusId ? encodeURIComponent(focusId) : "";
   const zwakHtml = focusId
     ? `<div style="background:rgba(255,213,79,0.07);border:1px solid rgba(255,213,79,0.40);border-radius:12px;padding:14px 16px;margin:12px 0 0;">
+        <div style="font-size:10.5px;font-weight:700;color:#ffd54f;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">● Familie · nu gratis</div>
         <div style="font-size:14px;font-weight:800;color:#ffd54f;margin-bottom:4px;">🎯 Focus deze week: ${esc(padLabel(focusId))}</div>
         <p style="font-size:13px;line-height:1.55;color:#cdd6e5;margin:0 0 8px;">Niet alleen een cijfer — dit kun je deze week samen doen (${pctVan(zwakste)}% goed tot nu toe):</p>
         <a href="${SITE}/ouderkaart?kaart=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">📄 Zo leg je 't uit — kaart voor thuis →</a>
