@@ -25,6 +25,9 @@
 
 | Wanneer | Wat | Wie |
 |---|---|---|
+| **di 25 aug** | 🚐 **Mark kan langs een voedselbank** (eigen WhatsApp-notitie 10 aug). Kies + afspraak maken: **Alkmaar** (Teresa, rondleiding di/do-ochtend, ~1u45 rijden) óf **Rotterdam** (Amber, di+do; 50 flyers meenemen) | Mark mailt |
+| **ma 31 aug** | 🏢 **KvK Utrecht** (eigen WhatsApp-notitie 10 aug) — inschrijving eenmanszaak; vooraf online afspraak maken + ID mee | Mark |
+| ~wk 17 aug | **School's cool Twente teambespreking** — zij komen zelf terug (11 aug toegezegd); niet pingen, wel opletten | — |
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
 | 18 aug | **Leergeld-golf-55** versturen (na go) | Mark-go → Claude |

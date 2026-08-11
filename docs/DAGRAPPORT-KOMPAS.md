@@ -66,6 +66,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 **Stand: 3 volledig af (2/4/5), 3 deels (1/3/8), 3 open (6/7/9 — deels Mark/extern).**
 
 ## 📈 Trend-log (nieuwste boven)
+| 11 aug 2026 | **1 (=)** | — (niet gemeten deze sessie) | events_echt 775/7d · 136/24u (16 apparaten; deels eigen checks) | +0 / 16 (11 dgn stil) | 🔥 **Alkmaar AKKOORD (sept-verspreiding)** + School's cool Twente warm (teambespreking wk 17) · v240-246: WhatsApp-fixes + Ken-ze-allemaal-oefenronden (topo NL/EU/wereld + tafels/delen/plus-min, kruis-labels) · partner-scan ALKMAAR2027 (5 aug, vermoedelijk Teresa's test) |
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
 | 10 aug 2026 | **1 (=; agent: "3→1" was meet-artefact van schuivend venster — reeks is stabiel laag 1-2; 13-uid-bot-burst 9 aug bevestigd)** | **56 (−43%)** — meters terug! (Chrome-voor-Claude draait weer) | 484 (−45%) · 24u: 18 bez/82 views (+500%) · events_echt 1.108/7d, 33/24u (0 oefenvragen; ~14 uids = bot-burst 9 aug 13:53) | +0 / 16 (10 dgn stil) | 545 (≈stabiel) · +3 volgers · feed stil sinds 5 aug (3-5 weergaven/dag) · **🔥 eerste bulk-QR-flyer-scan 9 aug → bezoeker klikte door naar ouder-CTA + ouder-dashboard 2×** · GSC: Reviewfragmenten-kritiek → zelfde dag gefixt (v231); 404 = bewust verwijderde ooievaarspas.html (geen actie) · Colegio Aruba auto-reply: Caribische scholen dicht t/m 18 aug |
