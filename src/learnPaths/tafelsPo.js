@@ -464,7 +464,7 @@ const steps = [
       "• In **één keer goed** → ✔ die ken je!\n" +
       "• **Mis?** Je krijgt een hint en mag het nog eens proberen — en die som komt straks nog een keer terug.\n\n" +
       "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
-    interactiveComponent: makeRekenOefenRonde({ soort: "keer", aantal: 12, emoji: "✖️", meervoud: "keersommen" }),
+    interactiveComponent: makeRekenOefenRonde({ soort: "keer", aantal: 12, emoji: "✖️", meervoud: "keersommen", jong: true }),
     checks: [
       { q: "7 × 8 = ?", options: ["56","54","48","63"], answer: 0, wrongHints: [null, "Dat is 6×9.", "Dat is 6×8.", "Dat is 7×9."] },
     ],

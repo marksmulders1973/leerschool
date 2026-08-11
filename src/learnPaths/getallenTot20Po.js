@@ -1,6 +1,9 @@
 // Leerpad: Getallen tot 20 + optellen/aftrekken — groep 3-4 PO.
 // Basisbouwsteen rekenen, ontbrak nog in Leerkwartier.
 // 5 stappen × ~5 checks.
+// + stap F (11 aug 2026): speelse oefenronde met plaatjes/geluid (jong-modus).
+
+import { makeRekenOefenRonde } from "../components/learn/RekenOefenRonde.jsx";
 
 const COLORS = {
   text: "#e0e6f0",
@@ -12,7 +15,7 @@ const COLORS = {
   goud: "#ffd54f",
 };
 
-const stepEmojis = ["🔢", "➕", "➖", "🔟", "🏆"];
+const stepEmojis = ["🔢", "➕", "➖", "🔟", "🏆", "🎈"];
 
 const chapters = [
   { letter: "A", title: "Getallen 0-20 herkennen", emoji: "🔢", from: 0, to: 0 },
@@ -20,6 +23,7 @@ const chapters = [
   { letter: "C", title: "Aftrekken tot 10", emoji: "➖", from: 2, to: 2 },
   { letter: "D", title: "Sommen tot 20", emoji: "🔟", from: 3, to: 3 },
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "F", title: "Sommen-feestje!", emoji: "🎈", from: 5, to: 5 },
 ];
 
 const steps = [
@@ -329,6 +333,23 @@ const steps = [
           niveaus: { basis: "12.", simpeler: "Dubbele 6 = 12.", nogSimpeler: "12" },
         },
       },
+    ],
+  },
+  // F. Speelse oefenronde (Mark 11 aug: "de laagste groepen zien weinig
+  // plaatjes — maak het leuker met plaatjes, kleuren of geluiden").
+  // jong-modus: telbare emoji bij elke som, confetti + geluidje bij goed,
+  // 🔊-knop leest de som voor. Stoppen mag altijd.
+  {
+    title: "Sommen-feestje!",
+    explanation:
+      "Nu ben je er klaar voor: **10 sommen** met plaatjes!\n\n" +
+      "• Je ziet de som ook als **plaatjes** — tel maar mee!\n" +
+      "• Kun je nog niet zo snel lezen? Druk op **🔊** en de som wordt voorgelezen.\n" +
+      "• In één keer goed → ✔ en een klein feestje. Mis? Dan komt de som straks nog een keertje terug.\n\n" +
+      "Genoeg gedaan? Stoppen mag altijd.",
+    interactiveComponent: makeRekenOefenRonde({ soort: ["optellen", "aftrekken"], aantal: 10, totMax: 20, emoji: "🎈", meervoud: "sommen", jong: true }),
+    checks: [
+      { q: "7 + 6 = ?", options: ["13", "12", "14", "11"], answer: 0, wrongHints: [null, "Bijna — tel er nog eentje bij.", "Eentje te veel.", "Tel nog eens rustig."] },
     ],
   },
 ];

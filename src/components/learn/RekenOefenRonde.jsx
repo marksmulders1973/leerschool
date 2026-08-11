@@ -8,11 +8,16 @@
 // Verschil met de kaart: het kind TYPT het antwoord (numeriek toetsenbord op
 // mobiel) — echt sommen maken, geen multiple choice-gokken.
 //
-//   makeRekenOefenRonde({ soort, aantal, tafels, totMax })
-//     soort   "keer" | "delen" | "optellen" | "aftrekken" | "mix"
+//   makeRekenOefenRonde({ soort, aantal, tafels, totMax, jong })
+//     soort   "keer" | "delen" | "optellen" | "aftrekken" | "mix" | array
 //     aantal  hoeveel verschillende sommen in de ronde (standaard 12)
 //     tafels  welke tafels bij keer/delen (standaard [2..9])
 //     totMax  bovengrens bij optellen/aftrekken (standaard 100)
+//     jong    true = onderbouw-modus (Mark 11 aug: "groep t/m 5 ziet weinig
+//             plaatjes — maak het leuker"): telbare emoji-plaatjes bij de som
+//             (concreet → abstract), vrolijke kleuren, emoji-confetti + zacht
+//             geluidje bij goed (WebAudio, aan/uit-knop), en een 🔊-knop die
+//             de som voorleest (onderbouw leest nog niet vlot).
 // ============================================================================
 
 import { useRef, useState } from "react";
@@ -43,6 +48,66 @@ function maakSom(soort, { tafels, totMax }) {
   return { q: `${a} + ${b}`, antwoord: a + b, hint: `Reken eerst de tientallen, dan de eenheden.` };
 }
 
+// ── Onderbouw-extra's (jong-modus) ──────────────────────────────────────────
+const OBJECTEN = ["🍎", "🎈", "⭐", "🐟", "🌸", "🚗", "🐞", "🧁", "🍓", "🐥"];
+
+// Telbare plaatjes bij kleine sommen: 3+4 = 🍎🍎🍎 + 🍎🍎🍎🍎. Aftrekken laat
+// de weggehaalde vervagen; keer toont groepjes. Boven ~24 objecten: geen
+// plaatjes (niet meer telbaar), dan alleen kleur/geluid.
+function plaatjesVoor(som, obj) {
+  const m = som.q.match(/^(\d+) ([+−×÷]) (\d+)$/);
+  if (!m) return null;
+  const a = +m[1], op = m[2], b = +m[3];
+  if (op === "+" && a + b <= 24) {
+    return { rijen: [Array(a).fill({ o: obj }), Array(b).fill({ o: obj })], teken: "+" };
+  }
+  if (op === "−" && a <= 24) {
+    // a objecten, de laatste b vervaagd + doorgestreept = "weggehaald"
+    const rij = Array.from({ length: a }, (_, i) => ({ o: obj, weg: i >= a - b }));
+    return { rijen: [rij], teken: null };
+  }
+  if (op === "×" && a * b <= 24) {
+    // a groepjes van b (zelfde taal als tafelsPo: "3 × 4 = 3 groepjes van 4")
+    return { rijen: Array.from({ length: a }, () => Array(b).fill({ o: obj })), teken: "groepjes" };
+  }
+  return null;
+}
+
+// Kort synth-geluidje via WebAudio (geen audiobestanden). Goed = vrolijk
+// arpeggiootje omhoog; fout = één zacht laag boepje — nooit straffend.
+let audioCtx = null;
+function toontje(goed) {
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    const noten = goed ? [523.25, 659.25, 783.99] : [196];
+    noten.forEach((freq, i) => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = freq;
+      const t = audioCtx.currentTime + i * 0.11;
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(goed ? 0.12 : 0.07, t + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+      osc.connect(gain).connect(audioCtx.destination);
+      osc.start(t); osc.stop(t + 0.3);
+    });
+  } catch { /* geen audio? stil verder */ }
+}
+
+function spreekSom(som) {
+  try {
+    const tekst = som.q.replace("+", "plus").replace("−", "min").replace("×", "keer").replace("÷", "gedeeld door") + ". Hoeveel is dat?";
+    window.speechSynthesis?.cancel();
+    const u = new SpeechSynthesisUtterance(tekst);
+    u.lang = "nl-NL"; u.rate = 0.92;
+    window.speechSynthesis?.speak(u);
+  } catch { /* geen stem? stil verder */ }
+}
+
+const GELUID_KEY = "lk_oefen_geluid";
+const geluidStaatAan = () => { try { return localStorage.getItem(GELUID_KEY) !== "uit"; } catch { return true; } };
+
 function maakSommen({ soort, aantal, tafels, totMax }) {
   // soort mag ook een array zijn, bv. ["optellen","aftrekken"] voor een plus/min-ronde.
   const soorten = Array.isArray(soort) ? soort
@@ -59,7 +124,7 @@ function maakSommen({ soort, aantal, tafels, totMax }) {
   return schud(sommen);
 }
 
-export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 3, 4, 5, 6, 7, 8, 9], totMax = 100, emoji = "🧮", meervoud = "sommen" } = {}) {
+export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 3, 4, 5, 6, 7, 8, 9], totMax = 100, emoji = "🧮", meervoud = "sommen", jong = false } = {}) {
   return function RekenOefenRonde({ onAnswer }) {
     const [wachtrij, setWachtrij] = useState(() => maakSommen({ soort, aantal, tafels, totMax }));
     const [gekend, setGekend] = useState(0);
@@ -70,9 +135,14 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
     const [goedFlits, setGoedFlits] = useState(false);
     const [foutFlits, setFoutFlits] = useState(false);
     const [eind, setEind] = useState(null);          // null | "alles" | "gestopt"
+    const [geluid, setGeluid] = useState(() => geluidStaatAan());
     const inputRef = useRef(null);
 
     const som = wachtrij[0];
+    // Stabiel object per som (zelfde som = zelfde plaatje), wisselend per ronde
+    const objVoor = (s) => OBJECTEN[(s.q.length + s.antwoord) % OBJECTEN.length];
+    const plaatjes = jong && som ? plaatjesVoor(som, objVoor(som)) : null;
+    const zetGeluid = (aan) => { setGeluid(aan); try { localStorage.setItem(GELUID_KEY, aan ? "aan" : "uit"); } catch { /* */ } };
 
     const volgende = (wasGoedInEen) => {
       setInvoer(""); setMissers(0); setToonAntwoord(false); setGoedFlits(false); setFoutFlits(false);
@@ -94,11 +164,13 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
       if (getal === som.antwoord) {
         const inEenKeer = missers === 0;
         setGoedFlits(true);
-        setTimeout(() => volgende(inEenKeer), 900);
+        if (jong && geluid) toontje(true);
+        setTimeout(() => volgende(inEenKeer), jong ? 1300 : 900);
       } else {
         const nieuweMissers = missers + 1;
         setMissers(nieuweMissers);
         setFoutFlits(true);
+        if (jong && geluid) toontje(false);
         setInvoer("");
         if (nieuweMissers >= 2) {
           // Na 2 missers: antwoord tonen als leermoment, dan door (som komt terug).
@@ -138,31 +210,84 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
     }
 
     return (
-      <div style={{ padding: "0.5rem 0" }}>
-        {/* Voortgang + stop */}
+      <div style={{ padding: "0.5rem 0", position: "relative" }}>
+        {/* Emoji-confetti bij goed (jong-modus) — lichtgewicht CSS-regen */}
+        {jong && goedFlits && (
+          <>
+            <style>{`@keyframes lkval { 0% { transform: translateY(-10px) rotate(0deg); opacity: 1; } 100% { transform: translateY(150px) rotate(200deg); opacity: 0; } }`}</style>
+            <div aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden", zIndex: 2 }}>
+              {["🎉", "⭐", "🎈", "✨", "🌟", "🎊", "⭐", "✨"].map((c, i) => (
+                <span key={i} style={{ position: "absolute", left: `${8 + i * 12}%`, top: 0, fontSize: 22 + (i % 3) * 6, animation: `lkval ${0.9 + (i % 4) * 0.25}s ease-in ${i * 0.06}s forwards` }}>{c}</span>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Voortgang + geluid + stop */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: 13, fontWeight: 700, color: C.muted, marginBottom: 4 }}>
               {emoji} ✔ {gekend} van {totaal} gekend
             </div>
             <div style={{ height: 6, background: "rgba(255,255,255,0.10)", borderRadius: 999, overflow: "hidden" }}>
-              <div style={{ width: `${(gekend / totaal) * 100}%`, height: "100%", background: C.goed, transition: "width 300ms" }} />
+              <div style={{ width: `${(gekend / totaal) * 100}%`, height: "100%", background: jong ? "linear-gradient(90deg,#1d9e75,#ffd54f)" : C.goed, transition: "width 300ms" }} />
             </div>
           </div>
+          {jong && (
+            <button type="button" onClick={() => zetGeluid(!geluid)} aria-label={geluid ? "Geluid uitzetten" : "Geluid aanzetten"}
+              style={{ padding: "8px 10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: C.muted, fontSize: 14, cursor: "pointer", fontFamily: "inherit" }}>
+              {geluid ? "🔔" : "🔕"}
+            </button>
+          )}
           <button type="button" onClick={stop}
             style={{ padding: "8px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: C.muted, fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
             🛑 Stoppen
           </button>
         </div>
 
+        {/* Telbare plaatjes (jong-modus): eerst concreet zien, dan het getal */}
+        {plaatjes && (
+          <div style={{ textAlign: "center", marginBottom: 12, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 14, padding: "10px 12px" }}>
+            {plaatjes.teken === "+" || plaatjes.teken === null ? (
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                {plaatjes.rijen.map((rij, r) => (
+                  <span key={r} style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+                    {r > 0 && <span style={{ fontSize: 26, fontWeight: 800, color: C.highlight }}>+</span>}
+                    <span style={{ fontSize: rij.length > 12 ? 20 : 26, lineHeight: 1.3, maxWidth: 340, display: "inline-block" }}>
+                      {rij.map((it, i) => (
+                        <span key={i} style={it.weg ? { opacity: 0.25, filter: "grayscale(1)", textDecoration: "line-through" } : undefined}>{it.o}</span>
+                      ))}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            ) : (
+              /* keer: groepjes naast elkaar */
+              <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+                {plaatjes.rijen.map((rij, r) => (
+                  <span key={r} style={{ fontSize: 22, background: "rgba(255,255,255,0.06)", borderRadius: 10, padding: "4px 8px", border: "1px dashed rgba(255,255,255,0.2)" }}>
+                    {rij.map((it) => it.o).join("")}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* De som */}
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: 34, fontWeight: 800, color: goedFlits ? C.goed : C.tekst, letterSpacing: 1, marginBottom: 12, fontVariantNumeric: "tabular-nums" }}>
+          <div style={{ fontSize: jong ? 42 : 34, fontWeight: 800, color: goedFlits ? C.goed : C.tekst, letterSpacing: 1, marginBottom: 12, fontVariantNumeric: "tabular-nums" }}>
             {som.q} = {goedFlits ? som.antwoord : "?"}
+            {jong && !goedFlits && (
+              <button type="button" onClick={() => spreekSom(som)} aria-label="Lees de som voor"
+                style={{ marginLeft: 10, padding: "6px 10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", fontSize: 18, cursor: "pointer", verticalAlign: "middle", fontFamily: "inherit" }}>
+                🔊
+              </button>
+            )}
           </div>
 
           {goedFlits ? (
-            <div style={{ fontSize: 16, fontWeight: 800, color: C.goed }}>✔ Goed!</div>
+            <div style={{ fontSize: jong ? 20 : 16, fontWeight: 800, color: C.goed }}>{jong ? "🎉 Goed zo!" : "✔ Goed!"}</div>
           ) : toonAntwoord ? (
             <div style={{ fontSize: 15, color: C.tekst, background: "rgba(226,75,74,0.12)", border: "1px solid rgba(226,75,74,0.4)", borderRadius: 10, padding: "10px 14px", display: "inline-block" }}>
               Het antwoord is <strong style={{ color: C.highlight }}>{som.antwoord}</strong> — deze som komt zo nog een keer terug.
