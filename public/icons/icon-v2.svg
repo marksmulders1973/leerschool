@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Leerkwartier-icoon (9 aug 2026, verving oud studiebol-ontwerp — GROK-plan P1):
+       kwartcirkel-motief ("een kwartier per dag"), navy + lime, géén tekst.
+       Motief binnen de maskable safe-zone (binnenste 80%). -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#14304a"/>
+      <stop offset="100%" stop-color="#0a1c2e"/>
+    </radialGradient>
+    <linearGradient id="kwart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fd431"/>
+      <stop offset="100%" stop-color="#68b31f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Achtergrond -->
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+
+  <!-- Kwartier: kwart-taartpunt, gecentreerd (bbox 168-344) -->
+  <path d="M176,344 L176,192 Q176,176 192,176 L328,176 A168,168 0 0 1 176,344 Z"
+        fill="url(#kwart)" transform="rotate(90 260 260)"/>
+</svg>

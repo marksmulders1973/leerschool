@@ -8,6 +8,7 @@ import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
+import { AvatarSvg, AVATAR_DELEN, loadAvatarConfig, saveAvatarConfig } from "./avatar.jsx";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -26,37 +27,8 @@ const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 // Doorstroomtoets 2027: afname eind januari / begin februari.
 const DOORSTROOMTOETS_DATUM = new Date(2027, 1, 1); // 1 feb 2027
 
-// Opgebouwde avatar — geen foto (privacy). Zelfde gedachte als Mark's
-// voorbeeld-leerlingpagina: kind kiest een kleurcombinatie met de
-// wissel-knop. Schuifjes (haar/huid apart) = latere stap.
-const AVATAR_KLEUREN = [
-  { huid: "#F0C9A4", haar: "#3B2A1E", shirt: "#17BFA0" },
-  { huid: "#8D5A3B", haar: "#1B1310", shirt: "#FFC53D" },
-  { huid: "#F5DCC4", haar: "#C96A2B", shirt: "#E8467C" },
-  { huid: "#5E3A25", haar: "#2A1C14", shirt: "#5A8DEE" },
-  { huid: "#EBB98C", haar: "#7A6650", shirt: "#B06AE8" },
-  { huid: "#D9A066", haar: "#4A3728", shirt: "#00c853" },
-];
-
-function avatarKey(player) {
-  return `lk_avatar:${(player || "").trim() || "speler"}`;
-}
-
-function AvatarSvg({ kleur, size = 72 }) {
-  const k = kleur || AVATAR_KLEUREN[0];
-  return (
-    <svg viewBox="0 0 100 100" width={size} height={size} style={{ borderRadius: "50%", display: "block" }} aria-hidden="true">
-      <rect width="100" height="100" fill="#2C3E63" />
-      <path d="M50 62c19 0 32 14 32 30v8H18v-8c0-16 13-30 32-30z" fill={k.shirt} />
-      <rect x="42" y="52" width="16" height="14" rx="7" fill={k.huid} />
-      <circle cx="50" cy="40" r="20" fill={k.huid} />
-      <path d="M30 38c0-12 9-19 20-19s20 7 20 19c0 0-6-6-20-6s-20 6-20 6z" fill={k.haar} />
-      <circle cx="43" cy="41" r="2.6" fill="#16233F" />
-      <circle cx="57" cy="41" r="2.6" fill="#16233F" />
-      <path d="M44 48c3 3 9 3 12 0" stroke="#16233F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
-    </svg>
-  );
-}
+// Avatar: opgebouwd poppetje, door het kind zelf samen te stellen —
+// zie ./avatar.jsx (huid, haar, shirt, postuur; geen foto).
 
 // Zeker-weten-labels: eerlijker dan "beheerst" bij weinig bewijs.
 const VAK_STATUS = {
@@ -124,9 +96,8 @@ export default function MijnPagina({
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
   const [week, setWeek] = useState(null);
-  const [avatarIdx, setAvatarIdx] = useState(() => {
-    try { return Number(localStorage.getItem(avatarKey(player))) || 0; } catch { return 0; }
-  });
+  const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
+  const [avatarBewerken, setAvatarBewerken] = useState(false);
 
   useEffect(() => {
     track("mijn_pagina_open", {});
@@ -168,10 +139,10 @@ export default function MijnPagina({
     return () => { cancelled = true; };
   }, [player, weergave, week]);
 
-  const wisselAvatar = () => {
-    const next = (avatarIdx + 1) % AVATAR_KLEUREN.length;
-    setAvatarIdx(next);
-    try { localStorage.setItem(avatarKey(player), String(next)); } catch {}
+  const zetAvatarDeel = (deel, waarde) => {
+    const nieuw = { ...avatarConfig, [deel]: waarde };
+    setAvatarConfig(nieuw);
+    saveAvatarConfig(player, nieuw);
   };
 
   // "Verder waar je was" — exacte plek uit de kwartier-pauze-opslag.
@@ -280,20 +251,21 @@ export default function MijnPagina({
             {/* ── Kop: avatar + naam + merken ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", display: "flex", alignItems: "center", gap: 16 }}>
               <div style={{ position: "relative", flexShrink: 0 }}>
-                <AvatarSvg kleur={AVATAR_KLEUREN[avatarIdx % AVATAR_KLEUREN.length]} size={72} />
+                <AvatarSvg config={avatarConfig} size={72} />
                 <button
-                  onClick={wisselAvatar}
-                  title="Kies een ander poppetje"
-                  aria-label="Kies een ander poppetje"
+                  onClick={() => { setAvatarBewerken(!avatarBewerken); if (!avatarBewerken) track("avatar_bewerken_open", {}); }}
+                  title="Maak je eigen poppetje"
+                  aria-label="Maak je eigen poppetje"
+                  aria-expanded={avatarBewerken}
                   style={{
                     position: "absolute", right: -4, bottom: -4,
                     width: 28, height: 28, borderRadius: "50%",
                     border: "2px solid var(--color-bg-base, #0f1729)",
                     background: "#ffd54f", color: "#16233F",
-                    fontSize: 14, lineHeight: 1, cursor: "pointer",
+                    fontSize: 13, lineHeight: 1, cursor: "pointer",
                     display: "grid", placeItems: "center",
                   }}
-                >↻</button>
+                >✏️</button>
               </div>
               <div style={{ minWidth: 0, flex: 1 }}>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: "var(--color-text-strong)", lineHeight: 1.15 }}>
@@ -321,6 +293,77 @@ export default function MijnPagina({
                 </div>
               </div>
             </Card>
+
+            {/* ── Avatar-maker: zelf je poppetje samenstellen ── */}
+            {avatarBewerken && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.4)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>✏️ Maak je eigen poppetje</div>
+                  <button
+                    onClick={() => setAvatarBewerken(false)}
+                    style={{
+                      border: "none", cursor: "pointer", borderRadius: 8, padding: "7px 14px",
+                      background: "rgba(0,200,83,0.2)", color: "#69f0ae", fontWeight: 800, fontSize: 13,
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    ✓ Klaar
+                  </button>
+                </div>
+                {[
+                  { deel: "huid", label: "Huidskleur", opties: AVATAR_DELEN.HUID },
+                  { deel: "haar", label: "Haarkleur", opties: AVATAR_DELEN.HAAR },
+                  { deel: "shirt", label: "Shirt", opties: AVATAR_DELEN.SHIRT },
+                ].map((rij) => (
+                  <div key={rij.deel} style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>{rij.label}</div>
+                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                      {rij.opties.map((kleur) => {
+                        const actief = avatarConfig[rij.deel] === kleur;
+                        return (
+                          <button
+                            key={kleur}
+                            onClick={() => zetAvatarDeel(rij.deel, kleur)}
+                            aria-label={`${rij.label} kiezen`}
+                            aria-pressed={actief}
+                            style={{
+                              width: 36, height: 36, borderRadius: "50%", cursor: "pointer",
+                              background: kleur,
+                              border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.25)",
+                              boxShadow: actief ? "0 0 0 2px rgba(0,200,83,0.3)" : "none",
+                            }}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+                <div>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Postuur</div>
+                  <div style={{ display: "flex", gap: 8 }}>
+                    {AVATAR_DELEN.POSTUUR.map((p) => {
+                      const actief = (avatarConfig.postuur || "gewoon") === p.id;
+                      return (
+                        <button
+                          key={p.id}
+                          onClick={() => zetAvatarDeel("postuur", p.id)}
+                          aria-pressed={actief}
+                          style={{
+                            flex: 1, padding: "9px 0", borderRadius: 10, cursor: "pointer",
+                            border: actief ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.18)",
+                            background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
+                            color: actief ? "#69f0ae" : "var(--color-text)",
+                            fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)",
+                          }}
+                        >
+                          {p.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </Card>
+            )}
 
             {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
             <div role="group" aria-label="Weergave kiezen" style={{
@@ -401,7 +444,7 @@ export default function MijnPagina({
                     Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de doorstroomtoets
                   </div>
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
-                    De doorstroomtoets is begin februari 2027. Een kwartier per dag is genoeg — begin met het onderwerp hieronder waar je het meest aan hebt.
+                    Dát is je doel: laten zien wat je kunt op de toets, begin februari 2027. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
                   </div>
                   <button
                     onClick={onGoCito}
@@ -416,7 +459,10 @@ export default function MijnPagina({
                 </>
               ) : (
                 <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.55, margin: "4px 0 0" }}>
-                  <strong>Elke dag een kwartier</strong> — dat is het doel. {streak > 0
+                  {/* Mark 11 aug 20:40: het kwartier is niet het doel maar het
+                      middel — het doel is klaar zijn voor de volgende stap. */}
+                  <strong>{groep ? `Klaar zijn voor groep ${Math.min(groep + 1, 8)}` : "Overgaan naar het volgende jaar"}</strong> — dát is je doel.
+                  Een kwartier per dag is hoe je er komt. {streak > 0
                     ? `Je zit nu op ${streak} ${streak === 1 ? "dag" : "dagen"} op rij. Knap!`
                     : "Begin vandaag, dan start je reeks."}
                 </div>

@@ -13,6 +13,7 @@ import supabase from "../supabase.js";
 import { track, bronDatumTijd } from "../utils.js";
 import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
 import { OUDER_QUOTES } from "../data/ouderQuotes.js";
+import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import usePwaInstall from "../shared/usePwaInstall.js";
 import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 
@@ -692,7 +693,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "#fff", textAlign: "left", fontFamily: "var(--font-body)",
             }}
           >
-            <span style={{ fontSize: 26, flexShrink: 0 }} aria-hidden="true">👋</span>
+            <AvatarSvg config={loadAvatarConfig(userName)} size={40} />
             <span style={{ flex: 1, minWidth: 0 }}>
               <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15 }}>
                 Welkom terug, {(userName || "").trim()}!
@@ -778,7 +779,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   — eerlijk en verifieerbaar (Vercel ~600/30d); géén opgeblazen
                   "leerlingen"-claim. Getal ~kwartaalgewijs bijwerken. */}
               <span style={{ color: "rgba(255,255,255,0.55)" }}>
-                Elke maand ruim 500 bezoekers · ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
+                Ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
               </span>
             </div>
           </div>
@@ -1396,11 +1397,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* Voorstel 3 (Mark 2026-06-14): nieuwe bezoeker doet meteen één
-            Doorstroomtoets-vraag i.p.v. een keuzescherm; daarna nudge de trechter in. */}
-        {step === "role" && (
-          <ProefVraagKaart onStart={() => handleFeatureClick("cito")} />
-        )}
+        {/* Vraag-van-de-dag-kaart VAN HOME GEHAALD (Mark 11 aug 20:36: "de home
+            wordt onoverzichtelijk; vraag van de dag alleen nog voor de socials").
+            De dagvraag leeft door op /vandaag (bio-links + posts, via DeepVraag
+            in App.jsx) — alleen de homepage-kaart is weg. */}
 
         {/* Zoekbalk verplaatst naar ONDER het oefenpakket (Robert-tip 18 jun:
             rustiger eerste scherm). Stond hier direct onder de hero en concurreerde

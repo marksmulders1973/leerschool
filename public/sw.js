@@ -21,7 +21,7 @@ const PRECACHE_ASSETS = (() => {
 const APP_SHELL = [
   "/",
   "/manifest.json",
-  "/icons/icon.svg",
+  "/icons/icon-v2.svg",
   ...PRECACHE_ASSETS,
 ];
 
@@ -41,7 +41,7 @@ const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|svg|woff2|woff|ttf|ico)(\?.*)?
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(CACHE_SHELL).then(async (cache) => {
-      await cache.addAll(["/", "/manifest.json", "/icons/icon.svg"]);
+      await cache.addAll(["/", "/manifest.json", "/icons/icon-v2.svg"]);
       if (PRECACHE_ASSETS.length) {
         await Promise.allSettled(
           PRECACHE_ASSETS.map((asset) =>
@@ -142,8 +142,8 @@ self.addEventListener("push", (e) => {
   const title = data.title || "Leerkwartier";
   const options = {
     body: data.body || "Tijd om te oefenen!",
-    icon: data.icon || "/icons/icon.svg",
-    badge: data.badge || "/icons/icon.svg",
+    icon: data.icon || "/icons/icon-v2.svg",
+    badge: data.badge || "/icons/icon-v2.svg",
     data: { url: data.url || "/" },
     tag: data.tag || "leerkwartier-reminder",
     renotify: false,

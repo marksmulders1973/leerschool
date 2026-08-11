@@ -18,6 +18,7 @@ import PakketUitleg from "./PakketUitleg.jsx";
 import { useSubscription } from "../subscription/useSubscription.js";
 import { TIERS } from "../subscription/config.js";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
+import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
@@ -357,7 +358,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               cursor: "pointer", fontFamily: "var(--font-display)",
             }}
           >
-            <span style={{ fontSize: 13 }} aria-hidden="true">🏠</span>
+            <AvatarSvg config={loadAvatarConfig(userName)} size={20} />
             <span style={{ fontSize: 13, fontWeight: 800, color: "#64b5f6" }}>Mijn pagina</span>
           </button>
         )}
@@ -1208,11 +1209,13 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
         {/* Sinds M2 (vakkenkeuze-grid bovenaan) zijn 'Test je kennis' en
             'Uit je boek' dubbelop met de Leren/Oefenen-knoppen per vak.
-            Hou alleen de unieke shortcuts: Voortgang + Scorebord. */}
+            Mark 11 aug 20:34: de losse "waar ben ik"-voortgang-ingang is
+            vervangen door Mijn pagina (voortgang zit dáár, met doorklik naar
+            het detail); de oude pagina's blijven via URL bereikbaar. */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 10, marginBottom: 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #36537e)" }} onClick={onViewProgress}>
-            <span style={{ fontSize: 24 }}>📊</span>
-            <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #36537e)" }} onClick={onMijnPagina || onViewProgress}>
+            <span style={{ fontSize: 24 }}>🏠</span>
+            <span style={{ fontWeight: 700, fontSize: 13 }}>Mijn pagina</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, var(--color-brand-primary))" }} onClick={onLeaderboard}>
             <span style={{ fontSize: 24 }}>🏆</span>
