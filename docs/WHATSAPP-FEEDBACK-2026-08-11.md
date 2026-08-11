@@ -22,7 +22,16 @@ Bron: groep "Leerkwartier tips", 14:36–18:30. Status: **TE REVIEWEN door Fable
 - [x] **P2 — Doel + tijdpad** ✅ v250: groep 7/8 ziet "Nog X weken tot de doorstroomtoets" (begin feb 2027) + knop naar doorstroomtoets-oefenen; jongere groepen zien het kwartier-per-dag-doel + reeks. Cijfer-doelen per vak ("je staat een 5") = latere stap, hangt op echte cijfer-invoer.
 - [x] **P3 — Invulling** ✅ v250: op naam + avatar, voortgang per vak met eerlijke Zeker-weten-labels ("Beheerst" alleen bij veel bewijs), abonnement-blok (Gratis/Familie/Pro + geldig-tot), koppelcode-uitleg, privacy-blok ("alleen voornaam + poppetje, geen foto"). Bewust géén vraag-van-de-dag hier.
 - [x] **P4 — Ouder/juf-weergave** ✅ v251: weergave-schakelaar op /mijn ("Wat <naam> ziet" / "Wat je ouder of de juf ziet") met weekgrafiek oefenminuten+toetsen per dag (minuten worden nu 7 dagen bewaard), foutanalyse "waar het misgaat" (vanaf 3 pogingen, met Oefen-dit-samen), thuis-tip per zwakste vak, meekijk-uitleg (koppelcode + maandag-weekmail) en privacy/indicatie-disclaimer. Plus (Mark 11 aug avond): **"Welkom terug"-strook op de homepagina** → Mijn pagina, alleen voor terugkerende bezoekers met naam. Aparte betaalde Familie/Pro-verdieping (bv. printbaar rapport) = latere stap achter de paywall-vlag.
-- [ ] **P5 — Avatars met schuifjes** (17:34): v250 heeft een opgebouwd poppetje met wissel-knop (6 kleurcombinaties, geen foto); losse schuifjes voor huid/haar/postuur = **open** (avatar-maker).
+- [x] **P5 — Avatar personaliseren** ✅ v252: avatar-maker op /mijn (✏️ op het poppetje): huidskleur (6), haarkleur (6), shirt (6), postuur (smal/gewoon/stevig). Het poppetje verschijnt ook in de welkom-strook op home en op de Mijn pagina-chip.
+
+## Avond-ronde 20:30–20:40 (Mark) — ✅ verwerkt in v252
+
+- [x] **Handje → avatar** (20:30) ✅: welkom-strook op home toont nu het eigen poppetje.
+- [x] **Oud logo bij opstart** (20:33) ✅: alle iconen waren al nieuw, maar Android bakt het icoon bij installatie in en ververst het niet bij gelijkblijvende bestandsnaam → iconen hernoemd naar `-v2` in manifest/index/sw. De geïnstalleerde app pakt het nieuwe logo binnen enkele dagen zelf op; sneller = app verwijderen en opnieuw op beginscherm zetten.
+- [x] **"Waar ben ik"-pagina dubbelop** (20:34) ✅: de losse Voortgang-knop op het leerling-dashboard is vervangen door **Mijn pagina** (waar-je-staat zit daar, met doorklik naar het detail). De oude pagina's blijven via URL werken (ouder-meekijken intact).
+- [x] **Home onoverzichtelijk + vraag-vd-dag weg** (20:36) ✅: vraag-van-de-dag-kaart van home verwijderd — hij leeft door op /vandaag voor de socials/bio-links.
+- [x] **"500 bezoekers" dubbel** (20:38) ✅: uit de hero-trustregel gehaald; staat nog één keer in de bewijs-strip.
+- [x] **Kwartier = middel, niet doel** (20:40) ✅: doel-kaart op /mijn zegt nu "Klaar zijn voor groep X — dát is je doel. Een kwartier per dag is hoe je er komt." (groep 7/8: de doorstroomtoets als doel).
 - [ ] **P6 — Leesscores / rapport-upload** (16:10): **open** — AVG-gevoelig (kinddata), klein beginnen achter Familie-vlag, DPIA-vraag meenemen.
 
 ## Fable's advies (11 aug avond)
