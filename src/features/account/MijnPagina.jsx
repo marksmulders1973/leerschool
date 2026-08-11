@@ -43,6 +43,54 @@ function parseGroep(userLevel) {
   return m ? Number(m[1]) : null;
 }
 
+// ── Startbeeld per groep (Mark 11 aug: "jij weet wat iemand per groep moet
+// beheersen — zet klaar wat hij of zij nog moet doen, ook zonder cijfers") ──
+
+const HOOFDVAKKEN = ["rekenen", "taal", "spelling", "begrijpend-lezen"];
+
+// Hoort dit pad bij deze groep? ("groep3-5" → 3 t/m 5)
+function padBijGroep(level, groep) {
+  const m = String(level || "").toLowerCase().match(/groep\s*(\d)(?:\s*-\s*(\d))?/);
+  if (!m) return false;
+  const lo = Number(m[1]), hi = Number(m[2] || m[1]);
+  return groep >= lo && groep <= hi;
+}
+
+// De hoofdvak-paden die bij deze groep horen — dit ís "wat je ongeveer moet
+// kunnen": de leerpaden zijn per groep en vak opgebouwd langs de leerlijnen.
+function groepPaden(groep) {
+  if (!groep) return [];
+  // Binnen een vak: Cito-/leerlijn-kernpaden (referentieniveau of "Cito" in de
+  // titel) vóór de uitstapjes — zodat "Belasting snappen" niet vóór "Breuken" komt.
+  const kern = (p) => (/cito|doorstroomtoets/i.test(p.title || "") ? 0 : p.referentieNiveau ? 1 : 2);
+  return pathManifest
+    .filter((p) => HOOFDVAKKEN.includes(p.subject) && padBijGroep(p.level, groep))
+    .sort((a, b) =>
+      (HOOFDVAKKEN.indexOf(a.subject) - HOOFDVAKKEN.indexOf(b.subject))
+      || (kern(a) - kern(b))
+      || String(a.title).localeCompare(String(b.title), "nl"));
+}
+
+// Intake ("Charley wil je leren kennen"): per hoofdvak 💪 goed / 😅 lastig /
+// 🤷 weet niet. Lokaal opgeslagen; beide beweringen worden daarna gewoon
+// nagelopen door te oefenen — de meting corrigeert het zelfbeeld vanzelf.
+function intakeKey(player) {
+  return `lk_intake:${(player || "").trim() || "speler"}`;
+}
+function loadIntake(player) {
+  try { return JSON.parse(localStorage.getItem(intakeKey(player)) || "{}"); } catch { return {}; }
+}
+function saveIntake(player, obj) {
+  try { localStorage.setItem(intakeKey(player), JSON.stringify(obj)); } catch {}
+}
+
+const VAK_NAAM = {
+  rekenen: { titel: "Rekenen", emoji: "🔢" },
+  taal: { titel: "Taal", emoji: "✏️" },
+  spelling: { titel: "Spelling", emoji: "📝" },
+  "begrijpend-lezen": { titel: "Begrijpend lezen", emoji: "📖" },
+};
+
 // ── Ouder/juf-weergave — helpers ─────────────────────────────────────
 
 const DAG_LABELS = ["ma", "di", "wo", "do", "vr", "za", "zo"];
@@ -213,15 +261,59 @@ export default function MijnPagina({
       .slice(0, 6);
   }, [records]);
 
-  // "Hier werk je aan" — spaced-repetition-aanbeveling + zwakste plekken.
-  const aanbevolen = useMemo(() => {
+  // Intake-antwoorden (💪/😅 per hoofdvak) — stuurt de klaargezette lijst.
+  const [intake, setIntake] = useState(() => loadIntake(player));
+  const zetIntake = (vak, waarde) => {
+    const nieuw = { ...intake, [vak]: waarde };
+    setIntake(nieuw);
+    saveIntake(player, nieuw);
+    track("mijn_intake", { vak, waarde });
+  };
+
+  // Welke hoofdvakken bestaan er voor deze groep in de app?
+  const groepVakken = useMemo(() => {
+    const set = new Set(groepPaden(groep).map((p) => p.subject));
+    return HOOFDVAKKEN.filter((v) => set.has(v));
+  }, [groep]);
+  const intakeCompleet = groepVakken.length > 0 && groepVakken.every((v) => intake[v]);
+
+  // "Dit staat voor jou klaar" — de kern van het startbeeld: ook op dag één,
+  // zónder cijfers, staat er een lijst klaar op basis van de groep. Volgorde:
+  // 1. lastig-vakken (intake) die nog niet gemeten zijn — daar valt het meest
+  //    te winnen; 2. wat de meting zegt (herhalen/zwak); 3. "laat maar zien"-
+  //    checks voor de vakken waar je zegt goed in te zijn (nalopen!);
+  // 4. overige nulmetingen van jouw groep.
+  const klaargezet = useMemo(() => {
+    const byId = Object.fromEntries(records.map((r) => [r.pathId, r]));
+    const paden = groepPaden(groep);
+    const status = (p) => byId[p.id]?.level || "unmeasured";
+    const ongemeten = (p) => status(p) === "unmeasured";
+    const lijst = [];
+    const gebruikt = new Set();
+    const voeg = (p, reden) => {
+      if (!p || gebruikt.has(p.id)) return;
+      gebruikt.add(p.id);
+      lijst.push({ pad: p, record: byId[p.id] || null, reden });
+    };
+    // 1. Lastige vakken eerst (max 2 per vak)
+    for (const vak of groepVakken.filter((v) => intake[v] === "lastig")) {
+      paden.filter((p) => p.subject === vak && ongemeten(p)).slice(0, 2)
+        .forEach((p) => voeg(p, "lastig"));
+    }
+    // 2. Meting: herhalen / zwakste eerst
     const eerste = recommendNextTopic(records);
-    const rest = records
-      .filter((r) => r.level === "bronze" || r.level === "unmeasured")
-      .filter((r) => r.pathId !== eerste?.pathId)
-      .slice(0, 2);
-    return [eerste, ...rest].filter(Boolean).slice(0, 3);
-  }, [records]);
+    if (eerste?.path) voeg(eerste.path.id ? { ...eerste.path, id: eerste.pathId } : null, eerste.reason === "due" ? "herhalen" : "zwak");
+    records.filter((r) => r.level === "bronze").slice(0, 2)
+      .forEach((r) => r.path && voeg({ ...r.path, id: r.pathId }, "zwak"));
+    // 3. "Goed in"-vakken: één check-pad om het na te lopen
+    for (const vak of groepVakken.filter((v) => intake[v] === "goed")) {
+      const p = paden.find((q) => q.subject === vak && ongemeten(q));
+      if (p) voeg(p, "laatzien");
+    }
+    // 4. Overige nulmetingen van deze groep
+    paden.filter(ongemeten).forEach((p) => voeg(p, "nulmeting"));
+    return lijst.slice(0, 6);
+  }, [records, groep, groepVakken, intake]);
 
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
@@ -621,7 +713,30 @@ export default function MijnPagina({
               <div style={eyebrowStijl}>Waar je staat</div>
               <div style={kaartTitelStijl}>Je vakken</div>
               {loading && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Laden…</div>}
-              {!loading && perVak.length === 0 && (
+              {!loading && perVak.length === 0 && groepVakken.length > 0 && (
+                <>
+                  {/* Nulmeting-startbeeld: ook zonder één gemaakte vraag staan
+                      de hoofdvakken van jouw groep hier klaar (Mark 11 aug). */}
+                  {groepVakken.map((vak) => {
+                    const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
+                    return (
+                      <div key={vak} style={{ marginBottom: 12 }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4, gap: 8 }}>
+                          <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text-strong)" }}>
+                            {meta.emoji} {meta.titel}
+                          </span>
+                          <span style={{ fontSize: 11.5, color: "#8899aa", fontWeight: 700 }}>📏 Nulmeting — nog niets gemeten</span>
+                        </div>
+                        <div style={{ height: 10, borderRadius: 99, background: "rgba(255,255,255,0.08)" }} />
+                      </div>
+                    );
+                  })}
+                  <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                    Start hieronder bij "Dit staat voor jou klaar" — na elke oefening vullen deze balken zich met jouw échte meting.
+                  </div>
+                </>
+              )}
+              {!loading && perVak.length === 0 && groepVakken.length === 0 && (
                 <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.5 }}>
                   Nog geen metingen. Doe een paar vragen bij een onderwerp — daarna zie je hier eerlijk waar je staat.
                 </div>
@@ -663,34 +778,101 @@ export default function MijnPagina({
               )}
             </Card>
 
-            {/* ── Hier werk je aan ── */}
-            {aanbevolen.length > 0 && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-                <div style={eyebrowStijl}>Deze week</div>
-                <div style={kaartTitelStijl}>Hier werk je aan</div>
-                {aanbevolen.map((r) => (
-                  <div key={r.pathId} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 0", borderBottom: "1px dashed rgba(255,255,255,0.1)" }}>
-                    <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">{r.path?.emoji || "📘"}</span>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)" }}>{r.path?.title}</div>
-                      <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>
-                        {r.reason === "due"
-                          ? "Tijd om te herhalen — zo blijft het hangen."
-                          : `${MASTERY_LABELS[r.level]?.emoji || "🌱"} ${MASTERY_LABELS[r.level]?.label || ""} — hier valt het meest te winnen.`}
+            {/* ── Charley's kennismaking (intake) ── */}
+            {groepVakken.length > 0 && !intakeCompleet && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                  <span style={{ fontSize: 22 }} aria-hidden="true">🐶</span>
+                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>Charley wil je leren kennen</div>
+                </div>
+                <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
+                  Waar ben je goed in, en wat vind je lastig? Dan weet ik wat ik voor je klaarzet. (We kijken daarna samen of het klopt!)
+                </div>
+                {groepVakken.map((vak) => {
+                  const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
+                  return (
+                    <div key={vak} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", flexWrap: "wrap" }}>
+                      <span style={{ fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)", minWidth: 150 }}>
+                        {meta.emoji} {meta.titel}
+                      </span>
+                      <div style={{ display: "flex", gap: 6 }}>
+                        {[
+                          { id: "goed", label: "💪 Goed in" },
+                          { id: "lastig", label: "😅 Lastig" },
+                          { id: "weetniet", label: "🤷 Weet niet" },
+                        ].map((o) => {
+                          const actief = intake[vak] === o.id;
+                          return (
+                            <button
+                              key={o.id}
+                              onClick={() => zetIntake(vak, o.id)}
+                              aria-pressed={actief}
+                              style={{
+                                padding: "6px 11px", borderRadius: 999, cursor: "pointer", fontSize: 12, fontWeight: 700,
+                                border: actief ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.18)",
+                                background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
+                                color: actief ? "#69f0ae" : "var(--color-text)",
+                                fontFamily: "var(--font-display)",
+                              }}
+                            >
+                              {o.label}
+                            </button>
+                          );
+                        })}
                       </div>
                     </div>
-                    <button
-                      onClick={() => onPickPath && onPickPath(r.pathId)}
-                      style={{
-                        flexShrink: 0, padding: "8px 14px", borderRadius: 9, border: "none", cursor: "pointer",
-                        background: "rgba(0,200,83,0.18)", color: "#69f0ae", fontWeight: 800, fontSize: 12.5,
-                        fontFamily: "var(--font-display)",
-                      }}
-                    >
-                      Oefen
+                  );
+                })}
+              </Card>
+            )}
+
+            {/* ── Dit staat voor jou klaar ── */}
+            {klaargezet.length > 0 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+                <div style={eyebrowStijl}>{groep ? `Groep ${groep}` : "Voor jou"}</div>
+                <div style={kaartTitelStijl}>Dit staat voor jou klaar</div>
+                {klaargezet.map(({ pad, record, reden }) => {
+                  const st = record ? MASTERY_LABELS[record.level] : null;
+                  const redenTekst = {
+                    lastig: "😅 Jij zei: lastig — hier oefenen we extra.",
+                    herhalen: "🔁 Tijd om te herhalen — zo blijft het hangen.",
+                    zwak: "🌱 Hier valt het meest te winnen.",
+                    laatzien: "💪 Jij zei: goed in — laat het even zien!",
+                    nulmeting: "📏 Nulmeting — nog niet gemeten, hoort bij jouw groep.",
+                  }[reden];
+                  return (
+                    <div key={pad.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 0", borderBottom: "1px dashed rgba(255,255,255,0.1)" }}>
+                      <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">{pad.emoji || "📘"}</span>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)" }}>
+                          {pad.title}
+                          {st && record.attempts >= 5 && (
+                            <span style={{ marginLeft: 6, fontSize: 11, color: st.color, fontWeight: 700 }}>{st.emoji} {st.label}</span>
+                          )}
+                        </div>
+                        <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>{redenTekst}</div>
+                      </div>
+                      <button
+                        onClick={() => onPickPath && onPickPath(pad.id)}
+                        style={{
+                          flexShrink: 0, padding: "8px 14px", borderRadius: 9, border: "none", cursor: "pointer",
+                          background: "rgba(0,200,83,0.18)", color: "#69f0ae", fontWeight: 800, fontSize: 12.5,
+                          fontFamily: "var(--font-display)",
+                        }}
+                      >
+                        Start
+                      </button>
+                    </div>
+                  );
+                })}
+                {intakeCompleet && (
+                  <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8 }}>
+                    Lijst klopt niet meer? Pas je antwoorden aan:{" "}
+                    <button onClick={() => { const leeg = {}; setIntake(leeg); saveIntake(player, leeg); }} style={{ background: "none", border: "none", color: "#5db3ff", cursor: "pointer", fontSize: 11.5, padding: 0, textDecoration: "underline" }}>
+                      opnieuw kiezen
                     </button>
                   </div>
-                ))}
+                )}
               </Card>
             )}
 
