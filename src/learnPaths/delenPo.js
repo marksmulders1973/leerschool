@@ -1,6 +1,9 @@
 // Leerpad: Delen — groep 5-6 PO.
 // Cito-onderdeel rekenen. Referentieniveau 1F.
 // 6 stappen met uitlegPad.
+// + stap G (11 aug 2026): "ken ze allemaal"-oefenronde met typ-antwoorden.
+
+import { makeRekenOefenRonde } from "../components/learn/RekenOefenRonde.jsx";
 
 const COLORS = {
   text: "#e0e6f0",
@@ -15,7 +18,7 @@ const COLORS = {
   rest: "#ff7043",
 };
 
-const stepEmojis = ["➗", "🟢", "🟡", "🔴", "🛒", "🏆"];
+const stepEmojis = ["➗", "🟢", "🟡", "🔴", "🛒", "🏆", "🧮"];
 
 const chapters = [
   { letter: "A", title: "Wat is delen?", emoji: "➗", from: 0, to: 0 },
@@ -24,6 +27,7 @@ const chapters = [
   { letter: "D", title: "Delen met rest", emoji: "🔴", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — verdelen", emoji: "🛒", from: 4, to: 4 },
   { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "G", title: "Oefen ze allemaal!", emoji: "🧮", from: 6, to: 6 },
 ];
 
 function delenSvg() {
@@ -419,6 +423,21 @@ const steps = [
       { q: "Wat is **omgekeerde** van delen?", options: ["Vermenigvuldigen","Aftrekken","Optellen","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "**Halveren** is delen door?", options: ["2","½","4","10"], answer: 0, wrongHints: [null, "Vermenigvuldigen met.", "Kwarten.", "Niet."] },
       { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3 per kind","12","6","18"], answer: 0, wrongHints: [null, "Niet — som onderdelen.", "Aantal kinderen.", "Hele."] },
+    ],
+  },
+  // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):
+  // typ het antwoord; in één keer goed = gekend; mis = som komt later terug.
+  {
+    title: "Oefen ze allemaal!",
+    explanation:
+      "Nu je weet hoe delen werkt: **echt oefenen**, net zolang tot je ze kent.\n\n" +
+      "Je krijgt **12 deelsommen** door elkaar. Typ het antwoord:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Je krijgt een hint (denk aan de tafel andersom!) en mag het nog eens proberen — en die som komt straks nog een keer terug.\n\n" +
+      "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
+    interactiveComponent: makeRekenOefenRonde({ soort: "delen", aantal: 12, emoji: "➗", meervoud: "deelsommen" }),
+    checks: [
+      { q: "56 ÷ 7 = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Denk: 7 × ? = 56.", "Dat is 42 ÷ 7.", "Dat is 63 ÷ 7."] },
     ],
   },
 ];

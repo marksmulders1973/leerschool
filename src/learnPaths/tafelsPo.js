@@ -1,6 +1,9 @@
 // Leerpad: Vermenigvuldigingstafels (1 t/m 10) — groep 4-5 PO.
 // Cito-onderdeel rekenen-basis. Referentieniveau 1F.
 // 6 stappen met uitlegPad. Belangrijk fundament voor groep 6-8.
+// + stap G (11 aug 2026): "ken ze allemaal"-oefenronde met typ-antwoorden.
+
+import { makeRekenOefenRonde } from "../components/learn/RekenOefenRonde.jsx";
 
 const COLORS = {
   text: "#e0e6f0",
@@ -14,7 +17,7 @@ const COLORS = {
   hard: "#ff8a65",
 };
 
-const stepEmojis = ["✖️", "🟢", "🟡", "🔴", "💡", "🏆"];
+const stepEmojis = ["✖️", "🟢", "🟡", "🔴", "💡", "🏆", "🧮"];
 
 const chapters = [
   { letter: "A", title: "Wat is een tafel?", emoji: "✖️", from: 0, to: 0 },
@@ -23,6 +26,7 @@ const chapters = [
   { letter: "D", title: "Lastige tafels (6, 7, 8, 9)", emoji: "🔴", from: 3, to: 3 },
   { letter: "E", title: "Slimme tafel-trucs", emoji: "💡", from: 4, to: 4 },
   { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "G", title: "Oefen ze allemaal!", emoji: "🧮", from: 6, to: 6 },
 ];
 
 function tafelRijSvg(getallen, tafel) {
@@ -448,6 +452,21 @@ const steps = [
       { q: "6 × 8 = ?", options: ["48","14","56","42"], answer: 0, wrongHints: [null, "Som.", "7×8.", "6×7."] },
       { q: "11 × 11 = ?", options: ["121","111","112","144"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "12×12."] },
       { q: "12 × 4 = ?", options: ["48","16","44","36"], answer: 0, wrongHints: [null, "Som.", "Niet.", "12×3."] },
+    ],
+  },
+  // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):
+  // typ het antwoord; in één keer goed = gekend; mis = som komt later terug.
+  {
+    title: "Oefen ze allemaal!",
+    explanation:
+      "Nu je de trucs kent: **echt oefenen**, net zolang tot je ze kent.\n\n" +
+      "Je krijgt **12 keersommen** door elkaar. Typ het antwoord:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Je krijgt een hint en mag het nog eens proberen — en die som komt straks nog een keer terug.\n\n" +
+      "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
+    interactiveComponent: makeRekenOefenRonde({ soort: "keer", aantal: 12, emoji: "✖️", meervoud: "keersommen" }),
+    checks: [
+      { q: "7 × 8 = ?", options: ["56","54","48","63"], answer: 0, wrongHints: [null, "Dat is 6×9.", "Dat is 6×8.", "Dat is 7×9."] },
     ],
   },
 ];
