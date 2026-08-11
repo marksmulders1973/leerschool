@@ -18,6 +18,7 @@
 
 import { useMemo, useState } from "react";
 import { NL_VIEWBOX, NL_PROVINCIES } from "./nlProvincieData.js";
+import { STAD_FOTOS } from "../../../data/fotoData.js";
 
 const C = {
   base: "#1d3a57", baseStroke: "#5b8cc0",
@@ -187,6 +188,22 @@ export function makeTopoCheck({ type, doel }) {
                 ? <>De hoofdstad van <strong>{huidigDoel}</strong> is <strong style={{ color: C.goed }}>{HOOFDSTAD_VAN[huidigDoel]}</strong>.</>
                 : <>Dit is <strong style={{ color: C.goed }}>{huidigDoel}</strong>{HOOFDSTAD_VAN[huidigDoel] ? <> — hoofdstad {HOOFDSTAD_VAN[huidigDoel]}</> : null}.</>}
             </div>
+            {/* Echte foto van de hoofdstad (Mark 10 aug: "liefst met bv foto
+                van Arnhem") — Wikimedia, credit eronder. Leermoment, geen verklapper:
+                de foto komt pas ná het antwoord. */}
+            {STAD_FOTOS[HOOFDSTAD_VAN[huidigDoel]] && (
+              <div style={{ marginTop: 10, textAlign: "center" }}>
+                <img
+                  src={STAD_FOTOS[HOOFDSTAD_VAN[huidigDoel]].src}
+                  alt={`Foto van ${HOOFDSTAD_VAN[huidigDoel]}`}
+                  loading="lazy"
+                  style={{ maxWidth: "100%", maxHeight: 180, borderRadius: 12, border: "1px solid rgba(255,255,255,0.15)" }}
+                />
+                <div style={{ fontSize: 9, color: "rgba(231,237,246,0.4)", marginTop: 3 }}>
+                  📷 {HOOFDSTAD_VAN[huidigDoel]} · {STAD_FOTOS[HOOFDSTAD_VAN[huidigDoel]].credit}
+                </div>
+              </div>
+            )}
             <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
               <button type="button" onClick={volgende}
                 style={{ padding: "11px 18px", borderRadius: 10, border: "none", background: C.goed, color: "#fff", fontSize: 14, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
