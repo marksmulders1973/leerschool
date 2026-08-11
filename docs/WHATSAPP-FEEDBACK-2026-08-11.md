@@ -32,6 +32,12 @@ Bron: groep "Leerkwartier tips", 14:36–18:30. Status: **TE REVIEWEN door Fable
 - [x] **Home onoverzichtelijk + vraag-vd-dag weg** (20:36) ✅: vraag-van-de-dag-kaart van home verwijderd — hij leeft door op /vandaag voor de socials/bio-links.
 - [x] **"500 bezoekers" dubbel** (20:38) ✅: uit de hero-trustregel gehaald; staat nog één keer in de bewijs-strip.
 - [x] **Kwartier = middel, niet doel** (20:40) ✅: doel-kaart op /mijn zegt nu "Klaar zijn voor groep X — dát is je doel. Een kwartier per dag is hoe je er komt." (groep 7/8: de doorstroomtoets als doel).
+
+## Late avond-ronde 21:03–21:08 — in behandeling (v253)
+
+- [x] **Avatar 2.0 — basis-personage kiezen + kleuren** (21:03-21:04, 6 voorbeeld-plaatjes): avatar-maker heeft nu stap 1 "Kies je poppetje" — 6 getekende personages (lang haar, kort haar, krullen, staartjes, kuif, bril) in rijkere tekenstijl (echte ogen, wenkbrauwen, blos, Leerkwartier-kwartje op het shirt) — daarna huid/haar/shirt/postuur personaliseren. Getekend als SVG (herkleurbaar + privacy), geïnspireerd op Mark's voorbeelden.
+- [x] **Home moet rust uitstralen; Threads/deel-blok verkleinen; bedank-zinnen blijven** (21:07): agent op HomePage gezet — social/deel-blok compact, quotes/bedankjes onaangetast.
+- [x] **"Deel quizzes" verouderd** (21:08): Functies-blok op /over.html herschreven naar de huidige app (uitleg op 3 niveaus, doorstroomtoets + echte examens, persoonlijke pagina, koppelcode + weekmail, leerkracht-deelcode, printpakketten, park); "maak en deel quizzes" weg.
 - [ ] **P6 — Leesscores / rapport-upload** (16:10): **open** — AVG-gevoelig (kinddata), klein beginnen achter Familie-vlag, DPIA-vraag meenemen.
 
 ## Fable's advies (11 aug avond)

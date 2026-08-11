@@ -251,7 +251,7 @@ function DeelActieKnop({ onClick }) {
         background: "linear-gradient(135deg, #ffd54f, #ffb300)", border: "none",
         color: "#3a2a00", cursor: "pointer", padding: "6px 12px", borderRadius: 999,
         fontWeight: 800, display: "inline-flex", alignItems: "center", gap: 5,
-        width: "100%", justifyContent: "center", maxWidth: 320, marginBottom: 4,
+        justifyContent: "center", maxWidth: 320, fontSize: 12.5,
       }}
       onClick={onClick}
     >
@@ -405,6 +405,15 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     }
     setShareToast(naam ? "🌟 Bedankt! Je staat in de Hall of Fame voor delers" : "🌟 Bedankt voor het delen!");
     setTimeout(() => setShareToast(null), 3500);
+  };
+
+  // Compacte icoon-knop-stijl voor de deel/volg-rij (Mark 11 aug 2026:
+  // "home moet rust uitstralen" — geen grote knoppen met tekstlabels meer).
+  const socialIconStyle = {
+    width: 32, height: 32, borderRadius: "50%", padding: 0,
+    background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.14)",
+    display: "inline-flex", alignItems: "center", justifyContent: "center",
+    cursor: "pointer", textDecoration: "none", flexShrink: 0,
   };
   // isIOS / isStandalone komen nu uit de hook (`pwa.platform`, `pwa.standalone`).
 
@@ -1552,21 +1561,27 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* "Zo werkt Leerkwartier" (UspDemo) verwijderd van de home (Mark 2026-06-14):
             de proefvraag bovenaan laat het al zien; component bewaard in UspDemo.jsx. */}
 
-        {/* Compacte footer-rij: deel-links + tip. Vervangt de 5 grote knoppen
-            (WhatsApp, Facebook, Deel-OBLI, Speel-OBLI, Tip-aan-maker) die de
-            homepage rommelig maakten. Speel OBLITERATOR zit al in bottom-nav. */}
+        {/* Deel/volg-blok VERKLEIND (Mark 11 aug 2026: "home moet rust
+            uitstralen; ons Threads-blok e.d. kan misschien verkleind worden").
+            Was: grote deel-knoppen + 5 volg-links met tekstlabels. Nu: één rij
+            kleine icoon-knopjes met korte kop; zelfde functionaliteit + tracking,
+            labels in title/aria-label. */}
         {step === "role" && (
           <div className="lk-content-wide" style={{
             marginTop: 20,
-            display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14,
+            display: "flex", flexDirection: "column", alignItems: "center", gap: 10,
             fontFamily: "var(--font-body)", fontSize: 12,
           }}>
             {onActie && (
               <DeelActieKnop onClick={() => { trackShare("deel_win_cta"); onActie(); }} />
             )}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 7 }}>
+            <span style={{ color: "rgba(255,255,255,0.55)", marginRight: 3 }}>Deel of volg ons</span>
             <button
               type="button"
-              style={{ background: "none", border: "none", color: "#25D366", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Deel via WhatsApp"
+              title="Deel via WhatsApp"
+              style={socialIconStyle}
               onClick={() => {
                 const text = `Ken je ${BRAND.shortName} al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Bekijk de intro: https://${BRAND.domain}/welkom.html`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
@@ -1576,11 +1591,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
-              Deel via WhatsApp
             </button>
             <button
               type="button"
-              style={{ background: "none", border: "none", color: "#1877F2", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Deel via Facebook"
+              title="Deel via Facebook"
+              style={socialIconStyle}
               onClick={() => {
                 window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}/welkom.html`)}`, "_blank");
                 trackShare("facebook");
@@ -1589,72 +1605,66 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
-              Deel via Facebook
             </button>
-            {/* Volg-ons-links (Mark wens 2026-06-05): bekijk ons kanaal op
-                Facebook + Instagram. Naast de deel-knoppen in dezelfde footer-rij. */}
+            {/* Volg-ons-links: icoon-only, tekstlabels in title/aria-label. */}
             <span style={{ color: "rgba(255,255,255,0.25)", alignSelf: "center" }}>·</span>
             <a
               href="https://www.facebook.com/leerkwartier"
               target="_blank" rel="noopener noreferrer"
-              style={{ color: "#1877F2", textDecoration: "none", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Onze Facebook"
+              title="Onze Facebook"
+              style={socialIconStyle}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              Onze Facebook
             </a>
             <a
               href="https://www.instagram.com/leerkwartier"
               target="_blank" rel="noopener noreferrer"
-              style={{ color: "#E1306C", textDecoration: "none", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Onze Instagram"
+              title="Onze Instagram"
+              style={socialIconStyle}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              Onze Instagram
             </a>
             <a
               href="https://www.threads.com/@leerkwartier"
               target="_blank" rel="noopener noreferrer"
-              style={{ color: "#ffffff", textDecoration: "none", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Onze Threads"
+              title="Onze Threads"
+              style={socialIconStyle}
             >
               <svg width="14" height="14" viewBox="0 0 192 192" fill="#ffffff"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.7766 140.011C80.8242 144.663 89.9044 146.938 99.3409 146.423C111.79 145.74 121.563 140.987 128.391 132.296C133.579 125.696 136.859 117.143 138.301 106.366C144.221 109.939 148.607 114.639 151.031 120.291C155.151 129.896 155.391 145.681 142.503 158.557C131.213 169.835 117.644 174.713 97.1 174.864C74.3164 174.694 57.0834 167.4 45.8055 153.213C35.2452 139.933 29.7841 120.762 29.5789 96C29.7841 71.2375 35.2452 52.0669 45.8055 38.7866C57.0834 24.5997 74.316 17.3059 97.0996 17.1357C120.049 17.3072 137.582 24.6928 149.171 38.9577C154.852 45.9501 159.143 54.7536 161.973 65.0162L177.527 60.8678C174.146 48.2398 168.804 37.3447 161.514 28.3097C146.65 9.89569 124.831 0.443556 96.9216 0.319336H96.8064C68.9519 0.443556 47.3666 9.93162 32.6433 28.5407C19.5384 45.0995 12.7806 68.1322 12.5099 96.9554L12.5098 96.9558L12.5099 97.0561C12.7806 125.879 19.5384 148.913 32.6433 165.472C47.3666 184.081 68.9519 193.569 96.8064 193.693H96.9216C121.671 193.583 139.111 187.094 153.482 172.685C172.295 153.838 171.713 130.124 165.531 115.475C161.093 105.018 152.585 96.5288 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"/></svg>
-              Onze Threads
             </a>
             {/* LinkedIn (29 jul): verwijst naar de BEDRIJFSPAGINA — ouders en
                 organisaties komen bij het merk uit, niet bij Mark's profiel. */}
             <a
               href="https://www.linkedin.com/company/leerkwartier"
               target="_blank" rel="noopener noreferrer"
-              style={{ color: "#0A66C2", textDecoration: "none", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Onze LinkedIn"
+              title="Onze LinkedIn"
+              style={socialIconStyle}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              Onze LinkedIn
             </a>
             <a
               href="https://whatsapp.com/channel/0029VbDLUD1KGGG8InddOM3q"
               target="_blank" rel="noopener noreferrer"
-              style={{ color: "#25D366", textDecoration: "none", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              aria-label="Ons WhatsApp-kanaal"
+              title="Ons WhatsApp-kanaal"
+              style={socialIconStyle}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.043 1.45.886zm9.882-5.747c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              WhatsApp-kanaal
             </a>
+            </div>
             {/* "Tip aan de maker" weg uit hero-rij (Mark 2026-05-18): past niet
                 bij ICP-conversie-homepage. Modal-state + LearnPathsHub-trigger
                 blijven bestaan; alleen de homepage-knop is verwijderd. */}
             {/* Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-link verplaatst
                 van hero-tegel naar footer. Niet ICP, maar route blijft bereikbaar. */}
-            {/* QW-A (4-agent-audit 2026-05-18): "Voor ouders"-link terug op
-                homepage. Ouder-dashboard bestond al maar prop onOuderDashboard
-                werd niet aangeroepen — was via UI onbereikbaar. Footer-link
-                naast leerkracht houdt het discreet (geen hero-tegel-bloat). */}
-            {onOuderDashboard && (
-              <button
-                type="button"
-                style={{ background: "none", border: "none", color: "#a78bfa", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-                onClick={onOuderDashboard}
-              >
-                <span>👨‍👩‍👧</span>
-                Voor ouders &amp; verzorgers
-              </button>
-            )}
+            {/* "Voor ouders & verzorgers"-footer-link verwijderd (rust-snoei
+                11 aug 2026): exact dezelfde actie als de grote ouder-knop
+                hogerop deze pagina — dubbele CTA weg, route blijft bereikbaar. */}
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
             <button
               type="button"
               style={{ background: "none", border: "none", color: "#00897b", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
@@ -1735,6 +1745,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Statistieken (admin)
               </button>
             )}
+            </div>
           </div>
         )}
 

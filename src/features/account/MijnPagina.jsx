@@ -310,6 +310,31 @@ export default function MijnPagina({
                     ✓ Klaar
                   </button>
                 </div>
+                {/* Stap 1: kies een basis-personage (Mark 21:04: "laat er 1
+                    kiezen als basis, dan de kleur nog persoonlijker maken") */}
+                <div style={{ marginBottom: 12 }}>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Kies je poppetje</div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    {AVATAR_DELEN.BASES.map((b) => {
+                      const actief = (avatarConfig.basis || "lang") === b.id;
+                      return (
+                        <button
+                          key={b.id}
+                          onClick={() => zetAvatarDeel("basis", b.id)}
+                          aria-pressed={actief}
+                          title={b.label}
+                          style={{
+                            padding: 3, borderRadius: 12, cursor: "pointer", lineHeight: 0,
+                            border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.2)",
+                            background: actief ? "rgba(0,200,83,0.12)" : "rgba(255,255,255,0.04)",
+                          }}
+                        >
+                          <AvatarSvg config={{ ...avatarConfig, basis: b.id }} size={46} rond={false} />
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
                 {[
                   { deel: "huid", label: "Huidskleur", opties: AVATAR_DELEN.HUID },
                   { deel: "haar", label: "Haarkleur", opties: AVATAR_DELEN.HAAR },
