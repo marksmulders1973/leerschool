@@ -8,7 +8,7 @@ import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
-import { AvatarSvg, AVATAR_DELEN, loadAvatarConfig, saveAvatarConfig } from "./avatar.jsx";
+import { AvatarSvg, AVATAR_DELEN, AVATAR_PLAATJES, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto } from "./avatar.jsx";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -141,6 +141,40 @@ export default function MijnPagina({
 
   const zetAvatarDeel = (deel, waarde) => {
     const nieuw = { ...avatarConfig, [deel]: waarde };
+    setAvatarConfig(nieuw);
+    saveAvatarConfig(player, nieuw);
+  };
+
+  // Eigen foto (Mark 11 aug: "oudere leerlingen en leraren willen gewoon hun
+  // foto"): verkleinen naar 256px en ALLEEN lokaal bewaren — geen upload.
+  const kiesFoto = (bestand) => {
+    if (!bestand) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        const N = 256;
+        const cv = document.createElement("canvas");
+        cv.width = N; cv.height = N;
+        const s = Math.max(N / img.width, N / img.height);
+        const w = img.width * s, h = img.height * s;
+        cv.getContext("2d").drawImage(img, (N - w) / 2, (N - h) / 2 * 0.4, w, h);
+        const dataUrl = cv.toDataURL("image/jpeg", 0.85);
+        if (saveAvatarFoto(player, dataUrl)) {
+          const nieuw = { ...avatarConfig, soort: "foto", fotoUrl: dataUrl };
+          setAvatarConfig(nieuw);
+          saveAvatarConfig(player, nieuw);
+          track("avatar_foto_gekozen", {});
+        }
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(bestand);
+  };
+
+  const wisFoto = () => {
+    saveAvatarFoto(player, null);
+    const nieuw = { ...avatarConfig, soort: "zelf", fotoUrl: null };
     setAvatarConfig(nieuw);
     saveAvatarConfig(player, nieuw);
   };
@@ -310,6 +344,93 @@ export default function MijnPagina({
                     ✓ Klaar
                   </button>
                 </div>
+                {/* Soort-keuze (Mark 11 aug): exact plaatje, zelf-maker of
+                    eigen foto (ouderen/leerkrachten). */}
+                <div style={{ display: "flex", gap: 8, marginBottom: 14, flexWrap: "wrap" }}>
+                  {[
+                    { id: "zelf", label: "🎨 Zelf maken" },
+                    { id: "plaatje", label: "🖼️ Plaatje" },
+                    { id: "foto", label: "📷 Eigen foto" },
+                  ].map((s) => {
+                    const actief = (avatarConfig.soort || "zelf") === s.id;
+                    return (
+                      <button
+                        key={s.id}
+                        aria-pressed={actief}
+                        onClick={() => { if (s.id !== "foto" || avatarConfig.fotoUrl) zetAvatarDeel("soort", s.id); else zetAvatarDeel("soort", "foto"); }}
+                        style={{
+                          padding: "8px 14px", borderRadius: 999, cursor: "pointer",
+                          border: actief ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.18)",
+                          background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
+                          color: actief ? "#69f0ae" : "var(--color-text)",
+                          fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)",
+                        }}
+                      >
+                        {s.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Exacte plaatjes */}
+                {(avatarConfig.soort || "zelf") === "plaatje" && (
+                  <div style={{ marginBottom: 4 }}>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Kies een plaatje</div>
+                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                      {AVATAR_PLAATJES.map((p) => {
+                        const actief = avatarConfig.plaatje === p.id;
+                        return (
+                          <button
+                            key={p.id}
+                            onClick={() => zetAvatarDeel("plaatje", p.id)}
+                            aria-pressed={actief}
+                            title={p.label}
+                            style={{
+                              padding: 3, borderRadius: 14, cursor: "pointer", lineHeight: 0,
+                              border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.2)",
+                              background: "rgba(255,255,255,0.04)",
+                            }}
+                          >
+                            <img src={p.src} alt={p.label} style={{ width: 72, height: 90, objectFit: "cover", objectPosition: "top", borderRadius: 11, display: "block" }} />
+                          </button>
+                        );
+                      })}
+                    </div>
+                    <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8, lineHeight: 1.45 }}>
+                      Er komen steeds meer plaatjes bij — wil je zelf kleuren kiezen, gebruik dan 🎨 Zelf maken.
+                    </div>
+                  </div>
+                )}
+
+                {/* Eigen foto — blijft op dit apparaat */}
+                {(avatarConfig.soort || "zelf") === "foto" && (
+                  <div style={{ marginBottom: 4 }}>
+                    {avatarConfig.fotoUrl ? (
+                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                        <img src={avatarConfig.fotoUrl} alt="Jouw foto" style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", display: "block" }} />
+                        <div style={{ flex: 1 }}>
+                          <label style={{ display: "inline-block", padding: "8px 14px", borderRadius: 9, background: "rgba(0,200,83,0.15)", color: "#69f0ae", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)", marginRight: 8 }}>
+                            Andere foto
+                            <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
+                          </label>
+                          <button onClick={wisFoto} style={{ padding: "8px 14px", borderRadius: 9, border: "1px solid rgba(255,82,82,0.4)", background: "rgba(255,82,82,0.1)", color: "#ff8a80", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
+                            Foto weghalen
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <label style={{ display: "inline-block", padding: "10px 18px", borderRadius: 10, background: "rgba(0,200,83,0.18)", color: "#69f0ae", fontWeight: 800, fontSize: 13.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
+                        📷 Kies een foto…
+                        <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
+                      </label>
+                    )}
+                    <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8, lineHeight: 1.5 }}>
+                      🔒 Je foto blijft <strong style={{ color: "var(--color-text)" }}>alleen op dit apparaat</strong> — hij wordt nergens geüpload en andere leerlingen zien hem nooit. Vooral bedoeld voor oudere leerlingen, ouders en leerkrachten.
+                    </div>
+                  </div>
+                )}
+
+                {(avatarConfig.soort || "zelf") === "zelf" && (<>
                 {/* Stap 1: kies een basis-personage (Mark 21:04: "laat er 1
                     kiezen als basis, dan de kleur nog persoonlijker maken") */}
                 <div style={{ marginBottom: 12 }}>
@@ -387,6 +508,7 @@ export default function MijnPagina({
                     })}
                   </div>
                 </div>
+                </>)}
               </Card>
             )}
 
@@ -587,7 +709,7 @@ export default function MijnPagina({
                 </div>
               </div>
               <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                🔒 <strong style={{ color: "var(--color-text)" }}>Wat is hier zichtbaar:</strong> alleen je voornaam, je groep en een getekend poppetje. Geen foto, geen achternaam — en andere leerlingen zien deze pagina nooit.
+                🔒 <strong style={{ color: "var(--color-text)" }}>Wat is hier zichtbaar:</strong> alleen je voornaam, je groep en je poppetje. Kies je een eigen foto, dan blijft die alleen op dit apparaat — geen achternaam, en andere leerlingen zien deze pagina nooit.
               </div>
             </Card>
             </>)}
@@ -694,7 +816,7 @@ export default function MijnPagina({
                 </div>
               </div>
               <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                🔒 <strong style={{ color: "var(--color-text)" }}>Wat er zichtbaar is:</strong> voornaam, groep en een getekend poppetje. Geen foto, geen achternaam, niets zichtbaar voor andere leerlingen. Meting is een indicatie op basis van gemaakte vragen — geen toetsuitslag.
+                🔒 <strong style={{ color: "var(--color-text)" }}>Wat er zichtbaar is:</strong> voornaam, groep en het poppetje (een eigen foto blijft alleen op het apparaat zelf — wij slaan geen foto's op). Geen achternaam, niets zichtbaar voor andere leerlingen. Meting is een indicatie op basis van gemaakte vragen — geen toetsuitslag.
               </div>
             </Card>
             </>)}

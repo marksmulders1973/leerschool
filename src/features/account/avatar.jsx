@@ -25,6 +25,7 @@ const BASES = [
 ];
 
 export const AVATAR_DELEN = { HUID, HAAR, SHIRT, POSTUUR, BASES };
+export { PLAATJES as AVATAR_PLAATJES };
 
 // Legacy kleurcombinaties (v250 sloeg alleen een index 0-5 op).
 const LEGACY_COMBOS = [
@@ -36,29 +37,66 @@ const LEGACY_COMBOS = [
   { huid: HUID[2], haar: HAAR[0], shirt: SHIRT[0] },
 ];
 
-const DEFAULT_CONFIG = { basis: "lang", huid: HUID[0], haar: HAAR[0], shirt: SHIRT[0], postuur: "gewoon" };
+// Exacte illustraties (Mark 11 aug ~22u: "ik wil exacte avatars gebruiken") —
+// de getekende Leerkwartier-personages uit Mark's voorbeelden. Meer plaatjes
+// toevoegen = bestand in public/avatars/ + regel hierbij.
+const PLAATJES = [
+  { id: "p1", src: "/avatars/plaatje-1.jpg", label: "Meisje met lang zwart haar" },
+];
+
+// soort: "zelf" (aanpasbaar getekend poppetje) | "plaatje" (exacte illustratie)
+// | "foto" (eigen foto — blijft op het apparaat, wordt nooit geüpload).
+const DEFAULT_CONFIG = { soort: "zelf", basis: "lang", huid: HUID[0], haar: HAAR[0], shirt: SHIRT[0], postuur: "gewoon", plaatje: "p1" };
 
 function avatarKey(player) {
   return `lk_avatar:${(player || "").trim() || "speler"}`;
 }
 
+function fotoKey(player) {
+  return `lk_avatar_foto:${(player || "").trim() || "speler"}`;
+}
+
+// Eigen foto: bewust ALLEEN lokaal (localStorage, verkleind) — geen upload,
+// geen server, dus ook geen opslag van kind-foto's aan onze kant (AVG).
+export function loadAvatarFoto(player) {
+  try { return localStorage.getItem(fotoKey(player)) || null; } catch { return null; }
+}
+
+export function saveAvatarFoto(player, dataUrl) {
+  try {
+    if (dataUrl) localStorage.setItem(fotoKey(player), dataUrl);
+    else localStorage.removeItem(fotoKey(player));
+    return true;
+  } catch { return false; }
+}
+
 export function loadAvatarConfig(player) {
   try {
     const raw = localStorage.getItem(avatarKey(player));
-    if (!raw) return { ...DEFAULT_CONFIG };
-    if (/^\d+$/.test(raw.trim())) {
+    let cfg;
+    if (!raw) cfg = { ...DEFAULT_CONFIG };
+    else if (/^\d+$/.test(raw.trim())) {
       const combo = LEGACY_COMBOS[Number(raw) % LEGACY_COMBOS.length] || LEGACY_COMBOS[0];
-      return { ...DEFAULT_CONFIG, ...combo };
+      cfg = { ...DEFAULT_CONFIG, ...combo };
+    } else {
+      cfg = { ...DEFAULT_CONFIG, ...JSON.parse(raw) };
     }
-    const obj = JSON.parse(raw);
-    return { ...DEFAULT_CONFIG, ...obj };
+    // Foto is een aparte (grote) sleutel — alleen inladen als hij gekozen is.
+    if (cfg.soort === "foto") {
+      cfg.fotoUrl = loadAvatarFoto(player);
+      if (!cfg.fotoUrl) cfg.soort = "zelf"; // foto weg (ander apparaat/gewist)
+    }
+    return cfg;
   } catch {
     return { ...DEFAULT_CONFIG };
   }
 }
 
 export function saveAvatarConfig(player, config) {
-  try { localStorage.setItem(avatarKey(player), JSON.stringify(config)); } catch {}
+  try {
+    const { fotoUrl, ...rest } = config || {};
+    localStorage.setItem(avatarKey(player), JSON.stringify(rest));
+  } catch {}
 }
 
 // ── Tekenlagen ──────────────────────────────────────────────────────
@@ -135,6 +173,28 @@ function Bril() {
 
 export function AvatarSvg({ config, size = 72, rond = true }) {
   const c = { ...DEFAULT_CONFIG, ...(config || {}) };
+
+  // Eigen foto (alleen lokaal opgeslagen) of exacte illustratie gekozen?
+  const imgSrc = c.soort === "foto" && c.fotoUrl
+    ? c.fotoUrl
+    : c.soort === "plaatje"
+      ? (PLAATJES.find((p) => p.id === c.plaatje) || PLAATJES[0])?.src
+      : null;
+  if (imgSrc) {
+    return (
+      <img
+        src={imgSrc}
+        alt=""
+        aria-hidden="true"
+        style={{
+          width: size, height: size, borderRadius: rond ? "50%" : 12,
+          objectFit: "cover", objectPosition: "top", display: "block",
+          flexShrink: 0, background: "#2C3E63",
+        }}
+      />
+    );
+  }
+
   const schaal = (POSTUUR.find((p) => p.id === c.postuur) || POSTUUR[1]).schaal;
   return (
     <svg
