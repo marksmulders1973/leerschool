@@ -20,8 +20,11 @@ const C = {
   tekst: "#e7edf6", muted: "rgba(231,237,246,0.65)",
 };
 
-export function GeoKaart({ data, highlight = null, gekozen = null, juist = null, beantwoord = false, showLabels = false, onPick, labelFontSize = 15, maxHeight = 440 }) {
+export function GeoKaart({ data, highlight = null, gekozen = null, juist = null, beantwoord = false, showLabels = false, labelMode = null, onPick, labelFontSize = 15, maxHeight = 440 }) {
   const [hover, setHover] = useState(null);
+  // labelMode "namen" | "hoofdsteden" — kruis-leren (Mark 11 aug): bij een
+  // regio-vraag de hoofdsteden tonen en andersom.
+  const mode = labelMode || (showLabels ? "namen" : null);
   const fillVoor = (naam) => {
     if (beantwoord) {
       if (naam === juist) return C.goed;
@@ -46,11 +49,20 @@ export function GeoKaart({ data, highlight = null, gekozen = null, juist = null,
             onClick={() => klikbaar && onPick(r.name)}
             aria-label={r.name} />
         ))}
-        {showLabels && data.regios.map((r) => (
+        {mode === "namen" && data.regios.map((r) => (
           <text key={`l-${r.name}`} x={r.labelX} y={r.labelY} textAnchor="middle"
             style={{ fontSize: labelFontSize, fontWeight: 700, fill: C.tekst, pointerEvents: "none", paintOrder: "stroke", stroke: "#0a0e1a", strokeWidth: 3, strokeLinejoin: "round" }}>
             {r.name}
           </text>
+        ))}
+        {mode === "hoofdsteden" && data.regios.map((r) => r.hoofdstad && (
+          <g key={`h-${r.name}`} style={{ pointerEvents: "none" }}>
+            <circle cx={r.labelX} cy={r.labelY - labelFontSize * 0.8} r={labelFontSize * 0.24} fill={C.highlight} stroke="#0a0e1a" strokeWidth={1} />
+            <text x={r.labelX} y={r.labelY + 3} textAnchor="middle"
+              style={{ fontSize: labelFontSize - 3, fontWeight: 600, fontStyle: "italic", fill: C.tekst, paintOrder: "stroke", stroke: "#0a0e1a", strokeWidth: 2.5, strokeLinejoin: "round" }}>
+              {r.hoofdstad}
+            </text>
+          </g>
         ))}
       </svg>
     </div>
@@ -60,34 +72,45 @@ export function GeoKaart({ data, highlight = null, gekozen = null, juist = null,
 function schud(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 function kiesAfleiders(juist, pool, n = 3) { return schud([juist, ...schud(pool.filter((x) => x !== juist)).slice(0, n)]); }
 
-/** Fabriek: maakt een topografie-check voor een leerpad-stap (step.interactiveComponent). */
+/** Fabriek: maakt een topografie-check voor een leerpad-stap (step.interactiveComponent).
+ *  Serie-modus + kruis-labels (Mark 11 aug) — zie makeTopoCheck in TopoKaartNL. */
 export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize, maxHeight }) {
   const NAMEN = data.regios.map((r) => r.name);
   const CAP = Object.fromEntries(data.regios.map((r) => [r.name, r.hoofdstad]));
   return function GeoCheck({ onAnswer }) {
+    const [serie] = useState(() => [doel, ...schud(NAMEN.filter((n) => n !== doel))]);
+    const [serieIdx, setSerieIdx] = useState(0);
+    const [aantalGedaan, setAantalGedaan] = useState(0);
+    const huidigDoel = serie[serieIdx % serie.length];
+
     const [gekozen, setGekozen] = useState(null);
     const beantwoord = gekozen !== null;
     const opties = useMemo(() => {
-      if (type === "noem") return kiesAfleiders(doel, NAMEN);
-      if (type === "noem-hoofdstad") return kiesAfleiders(CAP[doel], NAMEN.map((n) => CAP[n]).filter(Boolean));
+      if (type === "noem") return kiesAfleiders(huidigDoel, NAMEN);
+      if (type === "noem-hoofdstad") return kiesAfleiders(CAP[huidigDoel], NAMEN.map((n) => CAP[n]).filter(Boolean));
       return null;
-    }, []);
-    const kies = (waarde, correct) => { if (beantwoord) return; setGekozen(waarde); onAnswer?.(correct, waarde); };
+    }, [huidigDoel]);
+    const kies = (waarde) => { if (beantwoord) return; setGekozen(waarde); setAantalGedaan((n) => n + 1); };
+    const volgende = () => { setGekozen(null); setSerieIdx((i) => i + 1); };
+    const klaar = () => onAnswer?.(true, `${aantalGedaan} geoefend`);
+
+    const labelMode = type === "noem-hoofdstad" ? "namen" : "hoofdsteden";
     const vraag =
-      type === "wijs" ? <>Klik op <strong style={{ color: C.highlight }}>{doel}</strong> op de kaart.</>
+      type === "wijs" ? <>Klik op <strong style={{ color: C.highlight }}>{huidigDoel}</strong> op de kaart.</>
       : type === "noem" ? <>Welk {naam} is <span style={{ color: C.highlight }}>geel</span> gemaakt?</>
-      : <>Wat is de hoofdstad van <strong style={{ color: C.highlight }}>{doel}</strong>?</>;
-    const juisteWaarde = type === "noem-hoofdstad" ? CAP[doel] : doel;
+      : <>Wat is de hoofdstad van <strong style={{ color: C.highlight }}>{huidigDoel}</strong>?</>;
+    const juisteWaarde = type === "noem-hoofdstad" ? CAP[huidigDoel] : huidigDoel;
     return (
       <div style={{ padding: "0.5rem 0" }}>
         <p style={{ textAlign: "center", fontSize: 16, fontWeight: 600, color: C.tekst, margin: "0 0 12px" }}>{vraag}</p>
         <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: 8 }}>
           <GeoKaart data={data} labelFontSize={labelFontSize} maxHeight={maxHeight}
-            highlight={type === "wijs" ? null : doel}
+            highlight={type === "wijs" ? null : huidigDoel}
             gekozen={type === "wijs" ? gekozen : null}
-            juist={type === "wijs" ? doel : null}
+            juist={type === "wijs" ? huidigDoel : null}
             beantwoord={type === "wijs" && beantwoord}
-            onPick={type === "wijs" ? (n) => kies(n, n === doel) : undefined} />
+            labelMode={labelMode}
+            onPick={type === "wijs" ? (n) => kies(n) : undefined} />
         </div>
         {opties && (
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 12 }}>
@@ -97,7 +120,7 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
                 : opt === juisteWaarde ? `2px solid ${C.goed}`
                 : isGekozen ? `2px solid ${C.fout}` : "1px solid rgba(255,255,255,0.10)";
               return (
-                <button key={opt} type="button" disabled={beantwoord} onClick={() => kies(opt, opt === juisteWaarde)}
+                <button key={opt} type="button" disabled={beantwoord} onClick={() => kies(opt)}
                   style={{ padding: "11px 10px", borderRadius: 10, border, background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 15, fontWeight: 700, cursor: beantwoord ? "default" : "pointer", fontFamily: "inherit" }}>
                   {opt}
                 </button>
@@ -106,11 +129,23 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
           </div>
         )}
         {beantwoord && (
-          <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
-            {type === "noem-hoofdstad"
-              ? <>De hoofdstad van <strong>{doel}</strong> is <strong style={{ color: C.goed }}>{CAP[doel]}</strong>.</>
-              : <>Dit is <strong style={{ color: C.goed }}>{doel}</strong>{CAP[doel] ? <> — hoofdstad {CAP[doel]}</> : null}.</>}
-          </div>
+          <>
+            <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
+              {type === "noem-hoofdstad"
+                ? <>De hoofdstad van <strong>{huidigDoel}</strong> is <strong style={{ color: C.goed }}>{CAP[huidigDoel]}</strong>.</>
+                : <>Dit is <strong style={{ color: C.goed }}>{huidigDoel}</strong>{CAP[huidigDoel] ? <> — hoofdstad {CAP[huidigDoel]}</> : null}.</>}
+            </div>
+            <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
+              <button type="button" onClick={volgende}
+                style={{ padding: "11px 18px", borderRadius: 10, border: "none", background: C.goed, color: "#fff", fontSize: 14, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
+                Volgende →
+              </button>
+              <button type="button" onClick={klaar}
+                style={{ padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+                ✓ Klaar
+              </button>
+            </div>
+          </>
         )}
       </div>
     );
@@ -217,10 +252,13 @@ export function makeGeoOefenRonde({ data, naam = "gebied", meervoud = "gebieden"
         </p>
 
         <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: 8 }}>
+          {/* Kruis-leren: tijdens het provincie/land-wijzen staan de hoofdsteden
+              op de kaart — leert terloops mee zonder het antwoord te verklappen. */}
           <GeoKaart data={data} labelFontSize={labelFontSize} maxHeight={maxHeight}
             gekozen={goedFlits ? doel : gekozen}
             juist={goedFlits ? doel : null}
             beantwoord={goedFlits}
+            labelMode="hoofdsteden"
             onPick={pak} />
         </div>
 

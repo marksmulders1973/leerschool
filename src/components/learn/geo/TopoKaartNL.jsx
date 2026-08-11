@@ -35,10 +35,14 @@ const C = {
  *   juist       de juiste provincie (voor groen/rood na antwoord)
  *   beantwoord  bool — na antwoord kleuren we goed/fout en zetten klikken uit
  *   showLabels  toon provincienamen op de kaart (uitleg/verken-modus)
+ *   labelMode   "namen" | "hoofdsteden" — kruis-leren (Mark 11 aug: bij een
+ *               provincie-vraag de hoofdsteden tonen en andersom; "dat is niet
+ *               weggeven, dat is leren")
  *   onPick      (naam) => void
  */
-export function TopoKaartNL({ highlight = null, gekozen = null, juist = null, beantwoord = false, showLabels = false, onPick }) {
+export function TopoKaartNL({ highlight = null, gekozen = null, juist = null, beantwoord = false, showLabels = false, labelMode = null, onPick }) {
   const [hover, setHover] = useState(null);
+  const mode = labelMode || (showLabels ? "namen" : null);
   const fillVoor = (naam) => {
     if (beantwoord) {
       if (naam === juist) return C.goed;
@@ -66,11 +70,20 @@ export function TopoKaartNL({ highlight = null, gekozen = null, juist = null, be
           aria-label={p.name}
         />
       ))}
-      {showLabels && NL_PROVINCIES.map((p) => (
+      {mode === "namen" && NL_PROVINCIES.map((p) => (
         <text key={`l-${p.name}`} x={p.labelX} y={p.labelY} textAnchor="middle"
           style={{ fontSize: 15, fontWeight: 700, fill: C.tekst, pointerEvents: "none", paintOrder: "stroke", stroke: "#0a0e1a", strokeWidth: 3, strokeLinejoin: "round" }}>
           {p.name}
         </text>
+      ))}
+      {mode === "hoofdsteden" && NL_PROVINCIES.map((p) => p.hoofdstad && (
+        <g key={`h-${p.name}`} style={{ pointerEvents: "none" }}>
+          <circle cx={p.labelX} cy={p.labelY - 12} r={3.5} fill={C.highlight} stroke="#0a0e1a" strokeWidth={1} />
+          <text x={p.labelX} y={p.labelY + 3} textAnchor="middle"
+            style={{ fontSize: 11.5, fontWeight: 600, fontStyle: "italic", fill: C.tekst, paintOrder: "stroke", stroke: "#0a0e1a", strokeWidth: 2.5, strokeLinejoin: "round" }}>
+            {p.hoofdstad}
+          </text>
+        </g>
       ))}
     </svg>
   );
@@ -85,28 +98,53 @@ function kiesAfleiders(juist, pool, n = 3) {
   return [juist, ...rest.slice(0, n)].sort(() => Math.random() - 0.5);
 }
 
-/** Fabriek: maakt een topografie-check-component voor een leerpad-stap. */
+function schudLijst(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+
+/** Fabriek: maakt een topografie-check-component voor een leerpad-stap.
+ *  Serie-modus (Mark 11 aug): na elk antwoord "Volgende provincie →" (gehusseld
+ *  door alle provincies) + "✓ Klaar". Kruis-labels: bij provincie-vragen staan
+ *  de hoofdsteden op de kaart, bij hoofdstad-vragen de provincienamen —
+ *  "dat is niet weggeven, dat is leren". */
 export function makeTopoCheck({ type, doel }) {
   return function TopoCheck({ onAnswer }) {
+    // Gehusselde serie die met het opgegeven doel begint.
+    const [serie] = useState(() => [doel, ...schudLijst(ALLE_NAMEN.filter((n) => n !== doel))]);
+    const [serieIdx, setSerieIdx] = useState(0);
+    const [aantalGedaan, setAantalGedaan] = useState(0);
+    const huidigDoel = serie[serieIdx % serie.length];
+
     const [gekozen, setGekozen] = useState(null);
     const beantwoord = gekozen !== null;
 
     const opties = useMemo(() => {
-      if (type === "noem-provincie") return kiesAfleiders(doel, ALLE_NAMEN);
-      if (type === "noem-hoofdstad") return kiesAfleiders(HOOFDSTAD_VAN[doel], ALLE_NAMEN.map((n) => HOOFDSTAD_VAN[n]));
+      if (type === "noem-provincie") return kiesAfleiders(huidigDoel, ALLE_NAMEN);
+      if (type === "noem-hoofdstad") return kiesAfleiders(HOOFDSTAD_VAN[huidigDoel], ALLE_NAMEN.map((n) => HOOFDSTAD_VAN[n]));
       return null;
-    }, []);
+    }, [huidigDoel]);
 
-    const kies = (waarde, correct) => {
+    const kies = (waarde) => {
       if (beantwoord) return;
       setGekozen(waarde);
-      onAnswer?.(correct, waarde);
+      setAantalGedaan((n) => n + 1);
     };
 
+    const volgende = () => {
+      setGekozen(null);
+      setSerieIdx((i) => i + 1);
+    };
+    const klaar = () => onAnswer?.(true, `${aantalGedaan} geoefend`);
+
+    // Kruis-labels: provincie-vraag → hoofdsteden zichtbaar; hoofdstad-vraag → provincienamen.
+    const labelMode = type === "noem-hoofdstad" ? "namen" : "hoofdsteden";
+
     const vraag =
-      type === "wijs-provincie" ? <>Klik op <strong style={{ color: C.highlight }}>{doel}</strong> op de kaart.</>
+      type === "wijs-provincie" ? <>Klik op <strong style={{ color: C.highlight }}>{huidigDoel}</strong> op de kaart.</>
       : type === "noem-provincie" ? <>Welke provincie is <span style={{ color: C.highlight }}>geel</span> gemaakt?</>
-      : <>Wat is de hoofdstad van <strong style={{ color: C.highlight }}>{doel}</strong>?</>;
+      : <>Wat is de hoofdstad van <strong style={{ color: C.highlight }}>{huidigDoel}</strong>?</>;
 
     return (
       <div style={{ padding: "0.5rem 0" }}>
@@ -114,11 +152,12 @@ export function makeTopoCheck({ type, doel }) {
 
         <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: 8 }}>
           <TopoKaartNL
-            highlight={type === "wijs-provincie" ? null : doel}
+            highlight={type === "wijs-provincie" ? null : huidigDoel}
             gekozen={type === "wijs-provincie" ? gekozen : null}
-            juist={type === "wijs-provincie" ? doel : null}
+            juist={type === "wijs-provincie" ? huidigDoel : null}
             beantwoord={type === "wijs-provincie" && beantwoord}
-            onPick={type === "wijs-provincie" ? (naam) => kies(naam, naam === doel) : undefined}
+            labelMode={labelMode}
+            onPick={type === "wijs-provincie" ? (naam) => kies(naam) : undefined}
           />
         </div>
 
@@ -126,13 +165,13 @@ export function makeTopoCheck({ type, doel }) {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 12 }}>
             {opties.map((opt) => {
               const isGekozen = gekozen === opt;
-              const juisteWaarde = type === "noem-hoofdstad" ? HOOFDSTAD_VAN[doel] : doel;
+              const juisteWaarde = type === "noem-hoofdstad" ? HOOFDSTAD_VAN[huidigDoel] : huidigDoel;
               const border = !beantwoord ? "1px solid rgba(255,255,255,0.15)"
                 : opt === juisteWaarde ? `2px solid ${C.goed}`
                 : isGekozen ? `2px solid ${C.fout}` : "1px solid rgba(255,255,255,0.10)";
               return (
                 <button key={opt} type="button" disabled={beantwoord}
-                  onClick={() => kies(opt, opt === juisteWaarde)}
+                  onClick={() => kies(opt)}
                   style={{ padding: "11px 10px", borderRadius: 10, border, background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 15, fontWeight: 700, cursor: beantwoord ? "default" : "pointer", fontFamily: "inherit" }}>
                   {opt}
                 </button>
@@ -142,11 +181,23 @@ export function makeTopoCheck({ type, doel }) {
         )}
 
         {beantwoord && (
-          <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
-            {type === "noem-hoofdstad"
-              ? <>De hoofdstad van <strong>{doel}</strong> is <strong style={{ color: C.goed }}>{HOOFDSTAD_VAN[doel]}</strong>.</>
-              : <>Dit is <strong style={{ color: C.goed }}>{doel}</strong>{HOOFDSTAD_VAN[doel] ? <> — hoofdstad {HOOFDSTAD_VAN[doel]}</> : null}.</>}
-          </div>
+          <>
+            <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
+              {type === "noem-hoofdstad"
+                ? <>De hoofdstad van <strong>{huidigDoel}</strong> is <strong style={{ color: C.goed }}>{HOOFDSTAD_VAN[huidigDoel]}</strong>.</>
+                : <>Dit is <strong style={{ color: C.goed }}>{huidigDoel}</strong>{HOOFDSTAD_VAN[huidigDoel] ? <> — hoofdstad {HOOFDSTAD_VAN[huidigDoel]}</> : null}.</>}
+            </div>
+            <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
+              <button type="button" onClick={volgende}
+                style={{ padding: "11px 18px", borderRadius: 10, border: "none", background: C.goed, color: "#fff", fontSize: 14, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
+                Volgende provincie →
+              </button>
+              <button type="button" onClick={klaar}
+                style={{ padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+                ✓ Klaar
+              </button>
+            </div>
+          </>
         )}
       </div>
     );
