@@ -42,6 +42,7 @@ const PARTNER_NAMEN = {
   ROTTERDAM2027: "Bibliotheek Rotterdam",
   ROTTERDAMPAS2027: "de Rotterdampas",
   SAM2027: "Sam& voor alle kinderen",
+  SCHOOLSCOOL2027: "School's cool Twente",
   SMALLINGERLAND2027: "Voedselbank Smallingerland",
   STUDIEZALEN2027: "Studiezalen",
   VBROTTERDAM2027: "Voedselbank Rotterdam",
