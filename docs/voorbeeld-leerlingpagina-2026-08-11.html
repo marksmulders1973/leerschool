@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mijn Leerkwartier — Brian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Nunito:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --inkt:#16233F;
+  --inkt-zacht:#4A5875;
+  --lucht:#EDF2FA;
+  --kaart:#FFFFFF;
+  --mint:#17BFA0;
+  --zon:#FFC53D;
+  --framboos:#E8467C;
+  --lijn:#DCE5F2;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Nunito',system-ui,-apple-system,sans-serif;
+  background:var(--lucht);
+  color:var(--inkt);
+  line-height:1.5;
+  padding:20px 16px 56px;
+  background-image:radial-gradient(circle at 12% 0%, #DCE9FF 0%, transparent 45%),
+                   radial-gradient(circle at 92% 8%, #E3FBF4 0%, transparent 40%);
+  background-attachment:fixed;
+}
+.wrap{max-width:880px;margin:0 auto}
+
+/* ---------- gedeelde onderdelen ---------- */
+.eyebrow{
+  font-family:'DM Mono',ui-monospace,monospace;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--inkt-zacht);
+}
+.kaart{
+  background:var(--kaart);
+  border:1px solid var(--lijn);
+  border-radius:var(--r);
+  padding:20px;
+}
+h2.kop{
+  font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  font-size:19px;font-weight:700;letter-spacing:-.02em;margin:2px 0 14px;
+}
+
+/* ---------- kop ---------- */
+.hoofd{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  background:var(--inkt);
+  border-radius:26px;
+  padding:22px 24px;
+  color:#fff;
+  position:relative;overflow:hidden;
+}
+.hoofd::after{
+  content:"";position:absolute;right:-60px;top:-70px;width:220px;height:220px;
+  border-radius:50%;background:rgba(23,191,160,.16);
+}
+.dial{position:relative;width:112px;height:112px;flex:0 0 auto}
+.dial svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.dial .baan{fill:none;stroke:rgba(255,255,255,.16);stroke-width:7}
+.dial .voort{
+  fill:none;stroke:var(--mint);stroke-width:7;stroke-linecap:round;
+  stroke-dasharray:301.6;stroke-dashoffset:301.6;
+  animation:vul 1.5s cubic-bezier(.2,.8,.25,1) .3s forwards;
+}
+@keyframes vul{to{stroke-dashoffset:120.6}}
+.dial .tik{stroke:rgba(255,255,255,.3);stroke-width:2;stroke-linecap:round}
+.avatar{
+  position:absolute;inset:16px;border-radius:50%;overflow:hidden;
+  background:#2C3E63;
+}
+.avatar svg{width:100%;height:100%;display:block}
+.wissel{
+  position:absolute;right:-2px;bottom:-2px;z-index:2;
+  width:34px;height:34px;border-radius:50%;border:3px solid var(--inkt);
+  background:var(--zon);color:var(--inkt);cursor:pointer;
+  font-size:15px;line-height:1;display:grid;place-items:center;
+  transition:transform .18s;
+}
+.wissel:hover{transform:rotate(90deg) scale(1.08)}
+.naam{
+  font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1;
+}
+.school{color:#A9BAD8;font-size:14px;margin-top:6px}
+.merken{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.merk{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.1);border-radius:999px;
+  padding:6px 13px 6px 10px;font-size:13px;font-weight:700;
+}
+.merk b{font-family:'DM Mono',monospace;font-weight:500}
+
+/* ---------- weergave-schakelaar ---------- */
+.schakel{
+  display:inline-flex;background:#fff;border:1px solid var(--lijn);
+  border-radius:999px;padding:4px;margin:22px 0 14px;
+}
+.schakel button{
+  border:0;background:none;cursor:pointer;font-family:inherit;
+  font-size:13.5px;font-weight:700;color:var(--inkt-zacht);
+  padding:8px 18px;border-radius:999px;transition:.18s;
+}
+.schakel button[aria-pressed="true"]{background:var(--inkt);color:#fff}
+
+/* ---------- vandaag ---------- */
+.vandaag{
+  background:linear-gradient(120deg,#17BFA0,#0FA5C4);
+  color:#fff;border:0;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.vandaag .eyebrow{color:rgba(255,255,255,.75)}
+.vandaag .zin{
+  font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  font-size:23px;font-weight:700;letter-spacing:-.02em;margin:4px 0 12px;
+}
+.blokjes{display:flex;gap:5px}
+.blokjes i{
+  width:15px;height:26px;border-radius:5px;background:rgba(255,255,255,.28);
+}
+.blokjes i.aan{background:#fff}
+.knop{
+  margin-left:auto;background:var(--inkt);color:#fff;border:0;
+  font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  font-size:16px;font-weight:700;letter-spacing:-.01em;
+  padding:15px 26px;border-radius:14px;cursor:pointer;
+  box-shadow:0 4px 0 rgba(0,0,0,.22);transition:.12s;
+}
+.knop:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(0,0,0,.22)}
+.knop:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.22)}
+
+/* ---------- raster ---------- */
+.raster{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:14px}
+@media(max-width:720px){.raster{grid-template-columns:1fr}}
+
+.vak{margin-bottom:15px}
+.vak:last-child{margin-bottom:0}
+.vakrij{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.vakrij span{font-weight:700;font-size:15px}
+.vakrij em{
+  font-family:'DM Mono',monospace;font-style:normal;
+  font-size:12px;color:var(--inkt-zacht);
+}
+.balk{height:11px;border-radius:99px;background:#EAF0F9;overflow:hidden}
+.balk i{display:block;height:100%;border-radius:99px}
+
+.doel{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:13px 0;border-bottom:1px dashed var(--lijn);
+}
+.doel:last-child{border-bottom:0;padding-bottom:0}
+.doel .bol{
+  flex:0 0 auto;width:32px;height:32px;border-radius:11px;
+  display:grid;place-items:center;font-size:16px;background:#EAF0F9;
+}
+.doel b{display:block;font-size:15px}
+.doel small{color:var(--inkt-zacht);font-size:13px}
+
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
+.badge{
+  width:78px;text-align:center;font-size:11.5px;font-weight:700;
+  color:var(--inkt-zacht);line-height:1.25;
+}
+.badge span{
+  display:grid;place-items:center;width:56px;height:56px;margin:0 auto 7px;
+  border-radius:18px;font-size:24px;background:#EAF0F9;
+  transition:transform .2s;
+}
+.badge.op span{background:var(--zon)}
+.badge.op{color:var(--inkt)}
+.badge:hover span{transform:translateY(-4px) rotate(-6deg)}
+.badge.slot span{opacity:.45;filter:grayscale(1)}
+
+/* ---------- ouderweergave ---------- */
+.week{display:flex;align-items:flex-end;gap:9px;height:96px;margin:6px 0 10px}
+.week div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:6px}
+.week i{display:block;background:var(--mint);border-radius:6px 6px 3px 3px}
+.week u{
+  text-decoration:none;font-family:'DM Mono',monospace;font-size:11px;
+  color:var(--inkt-zacht);text-align:center;
+}
+.fout{padding:12px 0;border-bottom:1px solid var(--lijn)}
+.fout:last-child{border-bottom:0}
+.fout .top{display:flex;justify-content:space-between;font-weight:700;font-size:15px}
+.fout .top em{font-family:'DM Mono',monospace;font-style:normal;font-size:14px}
+.fout p{font-size:13.5px;color:var(--inkt-zacht);margin-top:3px}
+.tip{background:#FFF6E0;border:1px solid #F5DFA8;border-radius:14px;padding:14px 16px;font-size:14px}
+.tip b{display:block;font-family:'Bricolage Grotesque',sans-serif;margin-bottom:4px}
+.privacy{
+  display:flex;gap:12px;align-items:center;font-size:13px;color:var(--inkt-zacht);
+  margin-top:14px;padding:14px 16px;background:#fff;border:1px solid var(--lijn);border-radius:14px;
+}
+.privacy strong{color:var(--inkt)}
+.verborgen{display:none}
+:focus-visible{outline:3px solid var(--framboos);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .dial .voort{stroke-dashoffset:120.6}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- KOP -->
+  <header class="hoofd">
+    <div class="dial">
+      <svg viewBox="0 0 112 112" aria-hidden="true">
+        <circle class="baan" cx="56" cy="56" r="48"></circle>
+        <circle class="voort" cx="56" cy="56" r="48"></circle>
+        <g class="tik" id="tikken"></g>
+      </svg>
+      <div class="avatar" id="avatar"></div>
+      <button class="wissel" id="wissel" title="Kies een andere avatar" aria-label="Kies een andere avatar">↻</button>
+    </div>
+    <div style="position:relative;z-index:1">
+      <p class="eyebrow" style="color:#8FA5CC">Mijn Leerkwartier</p>
+      <h1 class="naam">Brian</h1>
+      <p class="school">Groep 5 · Basisschool De Wielewaal</p>
+      <div class="merken">
+        <div class="merk">🔥 <b>7</b> dagen op rij</div>
+        <div class="merk">⭐ <b>1.240</b> punten</div>
+        <div class="merk">🏅 <b>6</b> badges</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="schakel" role="group" aria-label="Weergave kiezen">
+    <button id="btnKind" aria-pressed="true">Wat Brian ziet</button>
+    <button id="btnOuder" aria-pressed="false">Wat papa of de juf ziet</button>
+  </div>
+
+  <!-- KINDWEERGAVE -->
+  <main id="kind">
+    <section class="kaart vandaag">
+      <div>
+        <p class="eyebrow">Vandaag</p>
+        <p class="zin">Nog 6 minuten en je kwartier zit erop</p>
+        <div class="blokjes" aria-label="9 van de 15 minuten geoefend">
+          <i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i>
+          <i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <button class="knop">Verder oefenen →</button>
+    </section>
+
+    <div class="raster">
+      <section class="kaart">
+        <p class="eyebrow">Waar je staat</p>
+        <h2 class="kop">Je vakken</h2>
+        <div class="vak">
+          <div class="vakrij"><span>Rekenen</span><em>82% goed</em></div>
+          <div class="balk"><i style="width:82%;background:var(--mint)"></i></div>
+        </div>
+        <div class="vak">
+          <div class="vakrij"><span>Spelling</span><em>64% goed</em></div>
+          <div class="balk"><i style="width:64%;background:var(--zon)"></i></div>
+        </div>
+        <div class="vak">
+          <div class="vakrij"><span>Begrijpend lezen</span><em>91% goed</em></div>
+          <div class="balk"><i style="width:91%;background:var(--mint)"></i></div>
+        </div>
+        <div class="vak">
+          <div class="vakrij"><span>Tafels</span><em>77% goed</em></div>
+          <div class="balk"><i style="width:77%;background:var(--mint)"></i></div>
+        </div>
+      </section>
+
+      <section class="kaart">
+        <p class="eyebrow">Deze week</p>
+        <h2 class="kop">Hier oefen je aan</h2>
+        <div class="doel">
+          <div class="bol" style="background:#E3FBF4">➗</div>
+          <div><b>Delen met rest</b><small>Je bent er bijna. Nog 8 sommen te gaan.</small></div>
+        </div>
+        <div class="doel">
+          <div class="bol" style="background:#FFF3D6">✏️</div>
+          <div><b>Woorden met -ij en -ei</b><small>Lastig! Daarom oefen je die extra.</small></div>
+        </div>
+        <div class="doel">
+          <div class="bol" style="background:#FDE7EF">📖</div>
+          <div><b>Hoofdgedachte vinden</b><small>Nieuw deze week.</small></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="kaart" style="margin-top:14px">
+      <p class="eyebrow">Verdiend</p>
+      <h2 class="kop">Jouw badges</h2>
+      <div class="badges">
+        <div class="badge op"><span>🔥</span>Week vol</div>
+        <div class="badge op"><span>✖️</span>Tafelbaas</div>
+        <div class="badge op"><span>🎯</span>10 op rij goed</div>
+        <div class="badge op"><span>🌅</span>Vroege vogel</div>
+        <div class="badge op"><span>📚</span>100 teksten</div>
+        <div class="badge op"><span>💪</span>Nooit opgegeven</div>
+        <div class="badge slot"><span>🧩</span>Breukenbaas</div>
+        <div class="badge slot"><span>🏆</span>Maand vol</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- OUDER- EN LEERKRACHTWEERGAVE -->
+  <main id="ouder" class="verborgen">
+    <div class="raster" style="margin-top:0">
+      <section class="kaart">
+        <p class="eyebrow">Oefentijd</p>
+        <h2 class="kop">Afgelopen week</h2>
+        <div class="week">
+          <div><i style="height:60%"></i><u>ma</u></div>
+          <div><i style="height:85%"></i><u>di</u></div>
+          <div><i style="height:40%"></i><u>wo</u></div>
+          <div><i style="height:90%"></i><u>do</u></div>
+          <div><i style="height:75%"></i><u>vr</u></div>
+          <div><i style="height:20%;background:#C9D6E8"></i><u>za</u></div>
+          <div><i style="height:55%"></i><u>zo</u></div>
+        </div>
+        <p style="font-size:13.5px;color:var(--inkt-zacht)">
+          Gemiddeld 11 minuten per dag. Brian oefent het liefst vlak na school.
+        </p>
+      </section>
+
+      <section class="kaart">
+        <p class="eyebrow">Foutanalyse</p>
+        <h2 class="kop">Waar het misgaat</h2>
+        <div class="fout">
+          <div class="top"><span>Delen met rest</span><em>58%</em></div>
+          <p>Rekent de rest weg in plaats van hem te noteren.</p>
+        </div>
+        <div class="fout">
+          <div class="top"><span>-ij / -ei</span><em>61%</em></div>
+          <p>Kiest bij twijfel bijna altijd voor -ei.</p>
+        </div>
+        <div class="fout">
+          <div class="top"><span>Klokkijken, minuten</span><em>72%</em></div>
+          <p>Analoog gaat goed, digitaal omrekenen kost tijd.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="tip" style="margin-top:14px">
+      <b>Wat je thuis kunt doen</b>
+      Laat Brian bij het tafeldekken hardop rekenen met resten: 13 koekjes over 4 mensen. Twee minuten is genoeg — herhaling werkt beter dan lang oefenen.
+    </div>
+
+    <div class="privacy">
+      🔒 <div><strong>Wat er zichtbaar is:</strong> voornaam, groep en een avatar. Geen foto, geen achternaam, geen gegevens zichtbaar voor andere leerlingen. <span style="text-decoration:underline;cursor:pointer">Gegevens inzien of verwijderen</span></div>
+    </div>
+  </main>
+</div>
+
+<script>
+// tikjes rond de wijzerplaat: 15 minuten, 15 streepjes
+const g = document.getElementById('tikken');
+for (let i = 0; i < 15; i++) {
+  const a = (i / 15) * Math.PI * 2;
+  const l = document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1', 56 + Math.cos(a) * 40);
+  l.setAttribute('y1', 56 + Math.sin(a) * 40);
+  l.setAttribute('x2', 56 + Math.cos(a) * 36);
+  l.setAttribute('y2', 56 + Math.sin(a) * 36);
+  g.appendChild(l);
+}
+
+// avatar — opgebouwd, geen foto
+const kleuren = [
+  {huid:'#F0C9A4', haar:'#3B2A1E', shirt:'#17BFA0'},
+  {huid:'#8D5A3B', haar:'#1B1310', shirt:'#FFC53D'},
+  {huid:'#F5DCC4', haar:'#C96A2B', shirt:'#E8467C'},
+  {huid:'#5E3A25', haar:'#2A1C14', shirt:'#5A8DEE'},
+  {huid:'#EBB98C', haar:'#7A6650', shirt:'#B06AE8'}
+];
+let n = 0;
+function teken(){
+  const k = kleuren[n];
+  document.getElementById('avatar').innerHTML = `
+  <svg viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#2C3E63"/>
+    <path d="M50 62c19 0 32 14 32 30v8H18v-8c0-16 13-30 32-30z" fill="${k.shirt}"/>
+    <rect x="42" y="52" width="16" height="14" rx="7" fill="${k.huid}"/>
+    <circle cx="50" cy="40" r="20" fill="${k.huid}"/>
+    <path d="M30 38c0-12 9-19 20-19s20 7 20 19c0 0-6-6-20-6s-20 6-20 6z" fill="${k.haar}"/>
+    <circle cx="43" cy="41" r="2.6" fill="#16233F"/>
+    <circle cx="57" cy="41" r="2.6" fill="#16233F"/>
+    <path d="M44 48c3 3 9 3 12 0" stroke="#16233F" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </svg>`;
+}
+teken();
+document.getElementById('wissel').onclick = () => { n = (n + 1) % kleuren.length; teken(); };
+
+// weergave wisselen
+const bk = document.getElementById('btnKind'), bo = document.getElementById('btnOuder');
+const vk = document.getElementById('kind'), vo = document.getElementById('ouder');
+function toon(kind){
+  bk.setAttribute('aria-pressed', kind);
+  bo.setAttribute('aria-pressed', !kind);
+  vk.classList.toggle('verborgen', !kind);
+  vo.classList.toggle('verborgen', kind);
+}
+bk.onclick = () => toon(true);
+bo.onclick = () => toon(false);
+</script>
+</body>
+</html>
