@@ -20,7 +20,8 @@
 //             de som voorleest (onderbouw leest nog niet vlot).
 // ============================================================================
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { track } from "../../utils.js";
 
 const C = {
   goed: "#1d9e75", fout: "#e24b4a", highlight: "#ffd54f",
@@ -144,13 +145,21 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
     const plaatjes = jong && som ? plaatjesVoor(som, objVoor(som)) : null;
     const zetGeluid = (aan) => { setGeluid(aan); try { localStorage.setItem(GELUID_KEY, aan ? "aan" : "uit"); } catch { /* */ } };
 
+    // Meting (dagrapport-idee #25, 11 aug): zonder events waren de ronden
+    // onzichtbaar in het dagrapport — start + einde (alles/gestopt) vastleggen.
+    const rondeId = Array.isArray(soort) ? soort.join("-") : soort;
+    useEffect(() => { track("oefenronde_start", { ronde: `reken-${rondeId}`, jong: !!jong }); }, []);
+
     const volgende = (wasGoedInEen) => {
       setInvoer(""); setMissers(0); setToonAntwoord(false); setGoedFlits(false); setFoutFlits(false);
       if (wasGoedInEen) {
         const n = gekend + 1;
         setGekend(n);
         setWachtrij((w) => w.slice(1));
-        if (n === totaal) setEind("alles");
+        if (n === totaal) {
+          setEind("alles");
+          track("oefenronde_eind", { ronde: `reken-${rondeId}`, resultaat: "alles", gekend: n, totaal });
+        }
       } else {
         // Nog niet gekend: achteraan opnieuw oefenen.
         setWachtrij((w) => [...w.slice(1), som]);
@@ -183,7 +192,11 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
       }
     };
 
-    const stop = () => { if (!eind) setEind("gestopt"); };
+    const stop = () => {
+      if (eind) return;
+      setEind("gestopt");
+      track("oefenronde_eind", { ronde: `reken-${rondeId}`, resultaat: "gestopt", gekend, totaal });
+    };
     const verder = () => onAnswer?.(true, eind === "alles" ? `alle ${totaal} gekend` : `gestopt bij ${gekend}/${totaal}`);
 
     if (eind) {

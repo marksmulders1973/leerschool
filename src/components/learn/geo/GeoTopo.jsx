@@ -11,7 +11,8 @@
 //        "noem-hoofdstad" (regio licht op → kies hoofdstad).
 // ============================================================================
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "../../../utils.js";
 
 const C = {
   base: "#1d3a57", baseStroke: "#5b8cc0", hover: "#2f5a86",
@@ -92,7 +93,10 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
     }, [huidigDoel]);
     const kies = (waarde) => { if (beantwoord) return; setGekozen(waarde); setAantalGedaan((n) => n + 1); };
     const volgende = () => { setGekozen(null); setSerieIdx((i) => i + 1); };
-    const klaar = () => onAnswer?.(true, `${aantalGedaan} geoefend`);
+    const klaar = () => {
+      track("oefenserie_klaar", { serie: `geo-${type}`, gedaan: aantalGedaan });
+      onAnswer?.(true, `${aantalGedaan} geoefend`);
+    };
 
     const labelMode = type === "noem-hoofdstad" ? "namen" : "hoofdsteden";
     const vraag =
@@ -177,6 +181,9 @@ export function makeGeoOefenRonde({ data, naam = "gebied", meervoud = "gebieden"
     const doel = wachtrij[0];
     const CAP = useMemo(() => Object.fromEntries(data.regios.map((r) => [r.name, r.hoofdstad])), []);
 
+    // Meting (dagrapport-idee #25, 11 aug): start + einde van elke kaart-ronde.
+    useEffect(() => { track("oefenronde_start", { ronde: `topo-${meervoud}` }); }, []);
+
     const pak = (naamKlik) => {
       if (goedFlits || eind) return;
       if (naamKlik === doel) {
@@ -191,7 +198,10 @@ export function makeGeoOefenRonde({ data, naam = "gebied", meervoud = "gebieden"
             const nieuwGekend = [...gekend, doel];
             setGekend(nieuwGekend);
             setWachtrij((w) => w.slice(1));
-            if (nieuwGekend.length === totaal) setEind("alles");
+            if (nieuwGekend.length === totaal) {
+              setEind("alles");
+              track("oefenronde_eind", { ronde: `topo-${meervoud}`, resultaat: "alles", gekend: totaal, totaal });
+            }
           }
           setFoutDezeBeurt(false);
         }, 900);
@@ -201,7 +211,11 @@ export function makeGeoOefenRonde({ data, naam = "gebied", meervoud = "gebieden"
       }
     };
 
-    const stop = () => { if (!eind) setEind("gestopt"); };
+    const stop = () => {
+      if (eind) return;
+      setEind("gestopt");
+      track("oefenronde_eind", { ronde: `topo-${meervoud}`, resultaat: "gestopt", gekend: gekend.length, totaal });
+    };
     const verder = () => onAnswer?.(true, eind === "alles" ? `alle ${totaal} gekend` : `gestopt bij ${gekend.length}/${totaal}`);
 
     if (eind) {

@@ -19,6 +19,7 @@
 import { useMemo, useState } from "react";
 import { NL_VIEWBOX, NL_PROVINCIES } from "./nlProvincieData.js";
 import { STAD_FOTOS } from "../../../data/fotoData.js";
+import { track } from "../../../utils.js";
 
 const C = {
   base: "#1d3a57", baseStroke: "#5b8cc0",
@@ -137,7 +138,10 @@ export function makeTopoCheck({ type, doel }) {
       setGekozen(null);
       setSerieIdx((i) => i + 1);
     };
-    const klaar = () => onAnswer?.(true, `${aantalGedaan} geoefend`);
+    const klaar = () => {
+      track("oefenserie_klaar", { serie: `topo-nl-${type}`, gedaan: aantalGedaan });
+      onAnswer?.(true, `${aantalGedaan} geoefend`);
+    };
 
     // Kruis-labels: provincie-vraag → hoofdsteden zichtbaar; hoofdstad-vraag → provincienamen.
     const labelMode = type === "noem-hoofdstad" ? "namen" : "hoofdsteden";
