@@ -4,8 +4,11 @@
 // Elke stap: korte uitleg + interactieve kaart-check + tekst-fallback (checks).
 
 import { TopoKaartNL, makeTopoCheck } from "../components/learn/geo/TopoKaartNL.jsx";
+import { makeGeoOefenRonde } from "../components/learn/geo/GeoTopo.jsx";
+import { NL_VIEWBOX, NL_PROVINCIES } from "../components/learn/geo/nlProvincieData.js";
 
 const OverzichtKaart = () => <TopoKaartNL showLabels />;
+const NL_DATA = { viewBox: NL_VIEWBOX, regios: NL_PROVINCIES };
 
 const chapters = [
   { letter: "A", title: "De 12 provincies", emoji: "🗺️", from: 0, to: 0 },
@@ -13,6 +16,7 @@ const chapters = [
   { letter: "C", title: "Het oosten", emoji: "🌳", from: 2, to: 2 },
   { letter: "D", title: "Het noorden", emoji: "🧊", from: 3, to: 3 },
   { letter: "E", title: "Het zuiden", emoji: "⛰️", from: 4, to: 4 },
+  { letter: "F", title: "Ken ze alle 12!", emoji: "🏆", from: 5, to: 5 },
 ];
 
 const steps = [
@@ -142,6 +146,34 @@ const steps = [
             basis: "De zuidelijke heuvel-provincie met Maastricht is Limburg.",
             simpeler: "Welke provincie steekt als een punt naar het zuiden?",
             nogSimpeler: "Begint met Lim…?",
+          },
+        },
+      },
+    ],
+  },
+  // F. Oefen alle 12 (Mark-feedback 10 aug: "je moet alle 12 kunnen oefenen
+  // tot je ze allemaal kent" — en kunnen stoppen wanneer je wilt).
+  {
+    title: "Ken ze alle 12!",
+    explanation:
+      "Nu ken je de streken — tijd voor de **hele kaart**.\n\n" +
+      "Je krijgt alle **12 provincies** door elkaar. Klik ze één voor één aan:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Geen probleem — je ziet welke je aanklikte, en die provincie komt straks nog een keer terug.\n\n" +
+      "Je bent klaar als je ze **allemaal** kent. Genoeg geoefend? Stoppen mag altijd — je voortgang is nooit weg.",
+    interactiveComponent: makeGeoOefenRonde({ data: NL_DATA, naam: "provincie", meervoud: "provincies", emoji: "🗺️" }),
+    checks: [
+      {
+        q: "Hoeveel provincies heeft Nederland?",
+        options: ["12", "10", "11", "14"],
+        answer: 0,
+        wrongHints: [null, "Tel de noordelijke drie er ook bij.", "Eentje vergeten — denk aan de jongste, uit het water gewonnen.", "Zo veel zijn het er niet."],
+        uitlegPad: {
+          stappen: [{ titel: "Nederland = 12 provincies", tekst: "Van Groningen bovenin tot Limburg onderin: Nederland heeft 12 provincies." }],
+          niveaus: {
+            basis: "Nederland heeft 12 provincies.",
+            simpeler: "Het zijn er evenveel als maanden in een jaar.",
+            nogSimpeler: "Twaalf — 12.",
           },
         },
       },

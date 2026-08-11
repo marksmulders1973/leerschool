@@ -3,7 +3,7 @@
 // domein). 22 belangrijkste Europese landen. Elke stap: korte uitleg +
 // interactieve kaart-check + tekst-fallback.
 
-import { GeoKaart, makeGeoCheck } from "../components/learn/geo/GeoTopo.jsx";
+import { GeoKaart, makeGeoCheck, makeGeoOefenRonde } from "../components/learn/geo/GeoTopo.jsx";
 import { EU_VIEWBOX, EU_LANDEN } from "../components/learn/geo/europaData.js";
 
 const EU = { viewBox: EU_VIEWBOX, regios: EU_LANDEN };
@@ -15,6 +15,7 @@ const chapters = [
   { letter: "B", title: "West-Europa", emoji: "🥖", from: 2, to: 2 },
   { letter: "C", title: "Zuid-Europa", emoji: "🍝", from: 3, to: 4 },
   { letter: "D", title: "Het noorden", emoji: "🌲", from: 5, to: 5 },
+  { letter: "E", title: "Ken alle landen!", emoji: "🏆", from: 6, to: 6 },
 ];
 
 const steps = [
@@ -121,6 +122,28 @@ const steps = [
         wrongHints: [null, "Ligt ernaast, aan de oostkant.", "Ligt nog verder naar het oosten.", "Klein land onderaan Scandinavië."],
         uitlegPad: { stappen: [{ titel: "Fjorden = Noorwegen", tekst: "Noorwegen ligt langs de westkust en heeft de fjorden." }],
           niveaus: { basis: "Het fjorden-land is Noorwegen.", simpeler: "Welk land ligt het meest naar het westen in Scandinavië?", nogSimpeler: "Begint met Noor…?" } },
+      },
+    ],
+  },
+  // E. Oefen alle landen (zelfde "ken ze allemaal"-ronde als bij de provincies —
+  // Mark 10 aug: meer oefenen geldt ook voor landen; stoppen mag altijd).
+  {
+    title: "Ken alle landen!",
+    explanation:
+      "Je kent de streken van Europa — nu de **hele kaart**.\n\n" +
+      "Je krijgt alle **landen** door elkaar. Klik ze één voor één aan:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Je ziet welk land je aanklikte, en dat land komt straks nog een keer terug.\n\n" +
+      "Klaar als je ze **allemaal** kent. Stoppen mag altijd — je voortgang is nooit weg.",
+    interactiveComponent: makeGeoOefenRonde({ data: EU, naam: "land", meervoud: "landen", emoji: "🇪🇺", labelFontSize: 16, maxHeight: 480 }),
+    checks: [
+      {
+        q: "Welk land is het grootste buurland van Nederland?",
+        options: ["Duitsland", "België", "Frankrijk", "Verenigd Koninkrijk"],
+        answer: 0,
+        wrongHints: [null, "Onze zuidbuur is kleiner.", "Grenst niet aan Nederland.", "Ligt aan de overkant van de Noordzee."],
+        uitlegPad: { stappen: [{ titel: "Oosterbuur = Duitsland", tekst: "Duitsland ligt ten oosten van Nederland en is ons grootste buurland." }],
+          niveaus: { basis: "Ons grootste buurland is Duitsland.", simpeler: "Welk land ligt ten oosten van ons?", nogSimpeler: "Begint met Duits…?" } },
       },
     ],
   },
