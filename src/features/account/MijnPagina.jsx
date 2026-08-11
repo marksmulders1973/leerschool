@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
 import Card from "../../shared/ui/Card.jsx";
+import supabase from "../../supabase.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
 import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
@@ -70,6 +71,38 @@ function parseGroep(userLevel) {
   return m ? Number(m[1]) : null;
 }
 
+// ── Ouder/juf-weergave — helpers ─────────────────────────────────────
+
+const DAG_LABELS = ["ma", "di", "wo", "do", "vr", "za", "zo"];
+
+function ymd(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+// Laatste 7 dagen (oud → vandaag) met oefenminuten van dit apparaat
+// (lk_leertijd_<datum> in localStorage, sinds v251 een week bewaard).
+function leesWeekMinuten() {
+  const dagen = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(Date.now() - i * 86400000);
+    let sec = 0;
+    try { sec = parseInt(localStorage.getItem(`lk_leertijd_${ymd(d)}`) || "0", 10) || 0; } catch {}
+    dagen.push({ ymd: ymd(d), label: DAG_LABELS[(d.getDay() + 6) % 7], minuten: Math.round(sec / 60), toetsen: 0 });
+  }
+  return dagen;
+}
+
+// Thuis-tips per vak — kort en doenbaar (2 min, geen huiswerk-erbij).
+const THUIS_TIPS = {
+  rekenen: "Laat je kind bij het tafeldekken of boodschappen hardop rekenen — 13 koekjes over 4 mensen, wat kost 3× die appel? Twee minuten is genoeg: korte herhaling werkt beter dan lang oefenen.",
+  taal: "Kies samen één lastig woord uit een gesprek of tv-programma en laat je kind het in een eigen zin gebruiken. Woorden beklijven door ze te gebruiken, niet door ze te lezen.",
+  spelling: "Laat je kind één zin van een boodschappenbriefje of appje schrijven en zelf nakijken. Hardop spellen van één lastig woord per dag doet meer dan een lange oefensessie.",
+  "begrijpend-lezen": "Lees samen een kort stukje (nieuwsbericht, bijsluiter, recept) en vraag: waar gaat dit vooral over? Eén vraag per tekst is genoeg.",
+  natuur: "Stel bij het koken of buiten lopen één waarom-vraag: waarom smelt suiker, waarom vallen bladeren? Samen het antwoord bedenken telt als oefenen.",
+  wereld: "Pak bij het journaal of een vakantieverhaal de kaart erbij: waar ligt dat? Landen en plaatsen blijven hangen als ze ergens bij horen.",
+  anders: "Vraag na het oefenen niet 'wat was je score?' maar 'wat heb je geleerd?' — dat ene gesprek maakt oefenen waardevoller dan tien extra vragen.",
+};
+
 export default function MijnPagina({
   userName,
   userLevel,
@@ -87,6 +120,10 @@ export default function MijnPagina({
   const groep = parseGroep(userLevel);
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
+  // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
+  // maken voor familie en pro"): zelfde pagina, andere bril.
+  const [weergave, setWeergave] = useState("kind");
+  const [week, setWeek] = useState(null);
   const [avatarIdx, setAvatarIdx] = useState(() => {
     try { return Number(localStorage.getItem(avatarKey(player))) || 0; } catch { return 0; }
   });
@@ -104,6 +141,32 @@ export default function MijnPagina({
     })();
     return () => { cancelled = true; };
   }, [player]);
+
+  // Weekbeeld voor de ouder/juf-weergave: oefenminuten van dit apparaat +
+  // afgeronde toetsen uit `leaderboard` (cross-device, zelfde bron als het
+  // ouder-dashboard).
+  useEffect(() => {
+    if (!player || weergave !== "ouder" || week) return undefined;
+    let cancelled = false;
+    (async () => {
+      const dagen = leesWeekMinuten();
+      try {
+        const sinds = new Date(Date.now() - 7 * 86400000).toISOString();
+        const { data } = await supabase
+          .from("leaderboard")
+          .select("completed_at")
+          .eq("player_name", player)
+          .gte("completed_at", sinds)
+          .limit(300);
+        (data || []).forEach((r) => {
+          const dag = dagen.find((d) => d.ymd === String(r.completed_at || "").slice(0, 10));
+          if (dag) dag.toetsen += 1;
+        });
+      } catch { /* grafiek toont dan alleen minuten */ }
+      if (!cancelled) setWeek(dagen);
+    })();
+    return () => { cancelled = true; };
+  }, [player, weergave, week]);
 
   const wisselAvatar = () => {
     const next = (avatarIdx + 1) % AVATAR_KLEUREN.length;
@@ -164,6 +227,19 @@ export default function MijnPagina({
   }, [groep]);
 
   const goudTotaal = records.filter((r) => r.level === "gold").length;
+
+  // Foutanalyse (ouder/juf): onderwerpen met genoeg pogingen en de laagste
+  // scores — dáár gaat het mis. Eerlijk: pas tonen vanaf 3 pogingen.
+  const foutanalyse = useMemo(() =>
+    records
+      .filter((r) => r.attempts >= 3)
+      .map((r) => ({ ...r, pct: Math.round((r.correct / r.attempts) * 100) }))
+      .sort((a, b) => a.pct - b.pct)
+      .slice(0, 3),
+  [records]);
+
+  const zwaksteVak = foutanalyse[0]?.path?.subject || null;
+  const thuisTip = THUIS_TIPS[zwaksteVak] || THUIS_TIPS.anders;
 
   // Abonnement-info. PAYWALL staat uit → tier "free", en dat zeggen we
   // eerlijk gekwalificeerd: "in 2026 is alles open" (geen kale gratis-claim).
@@ -246,6 +322,38 @@ export default function MijnPagina({
               </div>
             </Card>
 
+            {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
+            <div role="group" aria-label="Weergave kiezen" style={{
+              display: "inline-flex", background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999,
+              padding: 4, marginBottom: "var(--space-4)",
+            }}>
+              {[
+                { key: "kind", label: `Wat ${player} ziet` },
+                { key: "ouder", label: "Wat je ouder of de juf ziet" },
+              ].map((t) => {
+                const actief = weergave === t.key;
+                return (
+                  <button
+                    key={t.key}
+                    aria-pressed={actief}
+                    onClick={() => { setWeergave(t.key); if (t.key === "ouder") track("mijn_pagina_ouderweergave", {}); }}
+                    style={{
+                      border: "none", cursor: "pointer", borderRadius: 999,
+                      padding: "8px 16px", fontSize: 13, fontWeight: 700,
+                      fontFamily: "var(--font-display)",
+                      background: actief ? "rgba(0,200,83,0.25)" : "transparent",
+                      color: actief ? "#69f0ae" : "var(--color-text-muted, #8899aa)",
+                      transition: "background 0.15s",
+                    }}
+                  >
+                    {t.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {weergave === "kind" && (<>
             {/* ── Verder waar je was ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.14), rgba(30,136,229,0.10))", border: "1px solid rgba(0,200,83,0.35)" }}>
               <div style={eyebrowStijl}>Verder waar je was</div>
@@ -411,6 +519,114 @@ export default function MijnPagina({
                 🔒 <strong style={{ color: "var(--color-text)" }}>Wat is hier zichtbaar:</strong> alleen je voornaam, je groep en een getekend poppetje. Geen foto, geen achternaam — en andere leerlingen zien deze pagina nooit.
               </div>
             </Card>
+            </>)}
+
+            {weergave === "ouder" && (<>
+            {/* ── Ouder/juf: afgelopen week ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <div style={eyebrowStijl}>Oefentijd</div>
+              <div style={kaartTitelStijl}>Afgelopen week</div>
+              {!week && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Laden…</div>}
+              {week && (() => {
+                const maxMin = Math.max(...week.map((d) => d.minuten), 1);
+                const heeftMinuten = week.some((d) => d.minuten > 0);
+                const heeftToetsen = week.some((d) => d.toetsen > 0);
+                const maxToets = Math.max(...week.map((d) => d.toetsen), 1);
+                return (
+                  <>
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 96, margin: "6px 0 8px" }}>
+                      {week.map((d) => {
+                        const waarde = heeftMinuten ? d.minuten : d.toetsen;
+                        const max = heeftMinuten ? maxMin : maxToets;
+                        const h = waarde > 0 ? Math.max(8, Math.round((waarde / max) * 88)) : 3;
+                        const isDoel = heeftMinuten && d.minuten >= 15;
+                        return (
+                          <div key={d.ymd} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 5, height: "100%", justifyContent: "flex-end" }}>
+                            <div
+                              title={heeftMinuten ? `${d.minuten} min` : `${d.toetsen} toets${d.toetsen === 1 ? "" : "en"}`}
+                              style={{
+                                width: "100%", height: h, borderRadius: "6px 6px 3px 3px",
+                                background: waarde === 0 ? "rgba(255,255,255,0.10)" : isDoel ? "#00c853" : "#5db3ff",
+                              }}
+                            />
+                            <span style={{ fontSize: 11, color: "var(--color-text-muted, #8899aa)" }}>{d.label}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                      {heeftMinuten
+                        ? <>Oefenminuten per dag op dit apparaat — <span style={{ color: "#00c853", fontWeight: 700 }}>groen</span> = kwartier gehaald. {heeftToetsen && "Afgeronde toetsen tellen ook mee in het beeld hieronder."}</>
+                        : heeftToetsen
+                          ? "Afgeronde toetsen per dag (minuten-meting start vanaf nu, per apparaat)."
+                          : "Nog geen oefening deze week gemeten. Vanaf nu houden we de minuten per dag bij."}
+                    </div>
+                  </>
+                );
+              })()}
+            </Card>
+
+            {/* ── Ouder/juf: waar het misgaat ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <div style={eyebrowStijl}>Foutanalyse</div>
+              <div style={kaartTitelStijl}>Waar het misgaat</div>
+              {foutanalyse.length === 0 && (
+                <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.5 }}>
+                  Nog te weinig gemaakt om iets zinnigs te zeggen — vanaf 3 vragen per onderwerp verschijnt hier eerlijk waar het misgaat.
+                </div>
+              )}
+              {foutanalyse.map((r) => (
+                <div key={r.pathId} style={{ padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "baseline" }}>
+                    <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text-strong)" }}>
+                      {r.path?.emoji || "📘"} {r.path?.title}
+                    </span>
+                    <span style={{ fontSize: 13, fontWeight: 800, color: r.pct < 50 ? "#ff5252" : r.pct < 70 ? "#ffc107" : "#00c853", flexShrink: 0 }}>
+                      {r.pct}% goed
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, marginTop: 3 }}>
+                    <span style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>
+                      {r.attempts} {r.attempts === 1 ? "vraag" : "vragen"} gedaan
+                    </span>
+                    <button
+                      onClick={() => onPickPath && onPickPath(r.pathId)}
+                      style={{
+                        padding: "6px 12px", borderRadius: 8, border: "none", cursor: "pointer",
+                        background: "rgba(0,200,83,0.15)", color: "#69f0ae", fontWeight: 800, fontSize: 12,
+                        fontFamily: "var(--font-display)",
+                      }}
+                    >
+                      Oefen dit samen
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </Card>
+
+            {/* ── Ouder/juf: thuis-tip ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "rgba(255,213,79,0.07)", border: "1px solid rgba(255,213,79,0.3)" }}>
+              <div style={{ ...kaartTitelStijl, color: "#ffd54f", marginBottom: 6 }}>💡 Wat je thuis kunt doen</div>
+              <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
+            </Card>
+
+            {/* ── Ouder/juf: zelf volgen ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <div style={eyebrowStijl}>Zelf volgen</div>
+              <div style={kaartTitelStijl}>Meekijken op je eigen telefoon</div>
+              <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>
+                <div style={{ marginBottom: 6 }}>
+                  👨‍👩‍👧 Maak op je eigen telefoon een account als <strong>ouder of verzorger</strong> en koppel {player} met een <strong>koppelcode</strong> — dan zie je dit overzicht altijd, plus elke maandag een <strong>weekrapport per e-mail</strong>.
+                </div>
+                <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
+                  🧑‍🏫 Leerkracht? Via het leerkracht-overzicht zet je oefenwerk klaar met een deelcode — leerlingen loggen gewoon als zichzelf in.
+                </div>
+              </div>
+              <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                🔒 <strong style={{ color: "var(--color-text)" }}>Wat er zichtbaar is:</strong> voornaam, groep en een getekend poppetje. Geen foto, geen achternaam, niets zichtbaar voor andere leerlingen. Meting is een indicatie op basis van gemaakte vragen — geen toetsuitslag.
+              </div>
+            </Card>
+            </>)}
           </>
         )}
       </div>

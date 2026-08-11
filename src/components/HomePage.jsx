@@ -259,7 +259,7 @@ function DeelActieKnop({ onClick }) {
   );
 }
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -674,6 +674,41 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             onOuder={onOuderDashboard}
             onOefenen={() => handleFeatureClick("cito")}
           />
+        )}
+
+        {/* Welkom-terug-strook (Mark 11 aug: "zet mijn persoonlijke pagina
+            zichtbaar op de homepagina"). Alleen voor terugkerende bezoekers
+            mét naam — een nieuwe bezoeker heeft nog geen eigen pagina en
+            ziet gewoon de hero. Eén tik naar de thuisbasis = terugkom-lus. */}
+        {step === "role" && (userName || "").trim() && onMijnPagina && (
+          <button
+            onClick={onMijnPagina}
+            style={{
+              display: "flex", alignItems: "center", gap: 12,
+              width: "100%", maxWidth: 560, margin: "6px auto 4px",
+              padding: "12px 16px", borderRadius: 14, cursor: "pointer",
+              background: "linear-gradient(120deg, rgba(0,200,83,0.14), rgba(30,136,229,0.12))",
+              border: "1px solid rgba(0,200,83,0.4)",
+              color: "#fff", textAlign: "left", fontFamily: "var(--font-body)",
+            }}
+          >
+            <span style={{ fontSize: 26, flexShrink: 0 }} aria-hidden="true">👋</span>
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15 }}>
+                Welkom terug, {(userName || "").trim()}!
+              </span>
+              <span style={{ display: "block", fontSize: 12.5, color: "rgba(255,255,255,0.65)", marginTop: 1 }}>
+                Jouw pagina staat klaar — verder waar je was.
+              </span>
+            </span>
+            <span style={{
+              flexShrink: 0, padding: "8px 14px", borderRadius: 10,
+              background: "rgba(0,200,83,0.9)", color: "#00320f",
+              fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13,
+            }}>
+              🏠 Mijn pagina
+            </span>
+          </button>
         )}
 
         {/* HERO (herbouwd 2026-06-10, verbeterplan spoor A): merk groot en

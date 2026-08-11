@@ -188,13 +188,18 @@ const leesLeertijdVandaag = () => {
 const schrijfLeertijdVandaag = (sec) => {
   try { localStorage.setItem(_leertijdDayKey(), String(sec)); } catch { /* private mode e.d. */ }
 };
-// Ruim leertijd-sleutels van vorige dagen op (houdt localStorage schoon).
+// Ruim leertijd-sleutels ouder dan 7 dagen op (houdt localStorage schoon).
+// Was: alles behalve vandaag — maar de ouder/juf-weergave op /mijn toont nu
+// een weekgrafiek met oefenminuten per dag, dus de laatste 7 dagen blijven.
 const pruneOudeLeertijd = () => {
   try {
-    const houden = _leertijdDayKey();
+    const grens = new Date(Date.now() - 7 * 86400000);
+    const grensYmd = `${grens.getFullYear()}-${String(grens.getMonth() + 1).padStart(2, "0")}-${String(grens.getDate()).padStart(2, "0")}`;
     for (let i = localStorage.length - 1; i >= 0; i--) {
       const k = localStorage.key(i);
-      if (k && k.startsWith("lk_leertijd_") && k !== houden) localStorage.removeItem(k);
+      if (k && k.startsWith("lk_leertijd_") && k.slice("lk_leertijd_".length) < grensYmd) {
+        localStorage.removeItem(k);
+      }
     }
   } catch { /* negeer */ }
 };
@@ -1379,6 +1384,7 @@ export default function App() {
           onLearnPathsHub={() => { setLearnInitialSearch(""); setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onSearchPaths={(q) => { setLearnFilterSubject(null); setLearnInitialSearch(q); setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onMyMastery={() => setPage("my-mastery")}
+          onMijnPagina={() => setPage("mijn-pagina")}
           onPickPath={(id) => {
             // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.
             setActiveLearnPathId(id);
