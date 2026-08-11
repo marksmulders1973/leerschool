@@ -1190,6 +1190,13 @@ export default function App() {
           onGoLeren={() => setPage("learn-paths-hub")}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
+          onVak={(subject) => {
+            // Vak-balk op /mijn aangetikt → leren-lijst gefilterd op dat vak
+            // (Mark 21:00: "maak de blokken klikbaar").
+            setLearnFilterSubject(subject);
+            setLearnNiveauOverride(userSchoolType ? "vo" : "po");
+            setPage("learn-paths-hub");
+          }}
           onBack={() => setPage("student-home")}
           onHome={goHome}
         />

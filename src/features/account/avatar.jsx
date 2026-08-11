@@ -42,6 +42,8 @@ const LEGACY_COMBOS = [
 // toevoegen = bestand in public/avatars/ + regel hierbij.
 const PLAATJES = [
   { id: "p1", src: "/avatars/plaatje-1.jpg", label: "Meisje met lang zwart haar" },
+  { id: "p2", src: "/avatars/plaatje-2.jpg", label: "Jongen met zwarte krullen" },
+  { id: "p3", src: "/avatars/plaatje-3.jpg", label: "Jongen met kort donker haar" },
 ];
 
 // soort: "zelf" (aanpasbaar getekend poppetje) | "plaatje" (exacte illustratie)

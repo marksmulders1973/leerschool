@@ -91,6 +91,14 @@ const VAK_NAAM = {
   "begrijpend-lezen": { titel: "Begrijpend lezen", emoji: "📖" },
 };
 
+// Oefenminuten van vandaag (zelfde bron als de kwartier-teller in App.jsx).
+function minutenVandaag() {
+  try {
+    const sec = parseInt(localStorage.getItem(`lk_leertijd_${ymd(new Date())}`) || "0", 10) || 0;
+    return Math.round(sec / 60);
+  } catch { return 0; }
+}
+
 // ── Ouder/juf-weergave — helpers ─────────────────────────────────────
 
 const DAG_LABELS = ["ma", "di", "wo", "do", "vr", "za", "zo"];
@@ -130,6 +138,7 @@ export default function MijnPagina({
   subscription,
   onResumePath,
   onPickPath,
+  onVak,
   onGoLeren,
   onGoCito,
   onGoVoortgang,
@@ -144,6 +153,8 @@ export default function MijnPagina({
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
   const [week, setWeek] = useState(null);
+  // "Wat moet ik kennen in groep X?" — uitklap in het doel-blok (Mark 21:00).
+  const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
   const [avatarBewerken, setAvatarBewerken] = useState(false);
 
@@ -376,8 +387,21 @@ export default function MijnPagina({
           <>
             {/* ── Kop: avatar + naam + merken ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", display: "flex", alignItems: "center", gap: 16 }}>
-              <div style={{ position: "relative", flexShrink: 0 }}>
-                <AvatarSvg config={avatarConfig} size={72} />
+              <div style={{ position: "relative", flexShrink: 0, width: 84, height: 84, display: "grid", placeItems: "center" }}>
+                {/* Kwartier-ring (dial uit het voorbeeld): vult zich met de
+                    oefenminuten van vandaag, vol bij 15. */}
+                {(() => {
+                  const min = Math.min(minutenVandaag(), 15);
+                  const R = 40, OMTREK = 2 * Math.PI * R;
+                  return (
+                    <svg viewBox="0 0 84 84" width={84} height={84} style={{ position: "absolute", inset: 0, transform: "rotate(-90deg)" }} aria-hidden="true">
+                      <circle cx="42" cy="42" r={R} fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="5" />
+                      <circle cx="42" cy="42" r={R} fill="none" stroke="#00c853" strokeWidth="5" strokeLinecap="round"
+                        strokeDasharray={OMTREK} strokeDashoffset={OMTREK * (1 - min / 15)} style={{ transition: "stroke-dashoffset 0.6s" }} />
+                    </svg>
+                  );
+                })()}
+                <AvatarSvg config={avatarConfig} size={70} />
                 <button
                   onClick={() => { setAvatarBewerken(!avatarBewerken); if (!avatarBewerken) track("avatar_bewerken_open", {}); }}
                   title="Maak je eigen poppetje"
@@ -636,42 +660,49 @@ export default function MijnPagina({
             </div>
 
             {weergave === "kind" && (<>
-            {/* ── Verder waar je was ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.14), rgba(30,136,229,0.10))", border: "1px solid rgba(0,200,83,0.35)" }}>
-              <div style={eyebrowStijl}>Verder waar je was</div>
-              {resume ? (
-                <>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: "var(--color-text-strong)", margin: "4px 0 10px" }}>
-                    {resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}
-                  </div>
-                  <button
-                    onClick={() => onResumePath && onResumePath(resume.pathId, resume.stepIdx)}
-                    style={{
-                      padding: "12px 20px", borderRadius: 10, border: "none", cursor: "pointer",
-                      background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
-                      fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
-                    }}
-                  >
-                    ▶ Ga verder waar je was
-                  </button>
-                </>
-              ) : (
-                <>
-                  <div style={{ fontSize: 13.5, color: "var(--color-text)", margin: "4px 0 10px", lineHeight: 1.5 }}>
-                    Je hebt nog niets openstaan. Kies een onderwerp — als je stopt, onthouden we precies waar je was.
-                  </div>
-                  <button
-                    onClick={onGoLeren}
-                    style={{
-                      padding: "12px 20px", borderRadius: 10, border: "none", cursor: "pointer",
-                      background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
-                      fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
-                    }}
-                  >
-                    📚 Kies een onderwerp
-                  </button>
-                </>
-              )}
+            {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
+                mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))", border: "1px solid rgba(0,200,83,0.4)" }}>
+              <div style={eyebrowStijl}>Vandaag</div>
+              {(() => {
+                const min = Math.min(minutenVandaag(), 15);
+                const klaarVandaag = min >= 15;
+                return (
+                  <>
+                    <div style={{ fontSize: 17, fontWeight: 800, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", margin: "2px 0 10px", lineHeight: 1.3 }}>
+                      {klaarVandaag
+                        ? "Je kwartier zit erop — lekker bezig! 🎉"
+                        : min > 0
+                          ? `Nog ${15 - min} ${15 - min === 1 ? "minuut" : "minuten"} en je kwartier zit erop`
+                          : "Vandaag nog niet geoefend — een kwartier is genoeg"}
+                    </div>
+                    <div style={{ display: "flex", gap: 4, marginBottom: 12 }} aria-label={`${min} van de 15 minuten geoefend`}>
+                      {Array.from({ length: 15 }, (_, i) => (
+                        <span key={i} style={{
+                          flex: 1, height: 22, borderRadius: 5,
+                          background: i < min ? "#69f0ae" : "rgba(255,255,255,0.18)",
+                        }} />
+                      ))}
+                    </div>
+                    {resume && (
+                      <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+                        Je was bezig met: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
+                      </div>
+                    )}
+                    <button
+                      onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
+                      style={{
+                        padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
+                        background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
+                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
+                        boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
+                      }}
+                    >
+                      {resume ? "▶ Verder oefenen" : "📚 Kies een onderwerp"}
+                    </button>
+                  </>
+                );
+              })()}
             </Card>
 
             {/* ── Jouw doel + countdown ── */}
@@ -704,6 +735,58 @@ export default function MijnPagina({
                   Een kwartier per dag is hoe je er komt. {streak > 0
                     ? `Je zit nu op ${streak} ${streak === 1 ? "dag" : "dagen"} op rij. Knap!`
                     : "Begin vandaag, dan start je reeks."}
+                </div>
+              )}
+              {/* Uitklap: wat hoort er bij jouw groep? (Mark 21:00: "maak de
+                  blokken klikbaar — voor groep 4 moet je dit en dat kennen") */}
+              {groep && groepVakken.length > 0 && (
+                <div style={{ marginTop: 12 }}>
+                  <button
+                    onClick={() => { setDoelOpen(!doelOpen); if (!doelOpen) track("mijn_doel_uitklap", { groep }); }}
+                    aria-expanded={doelOpen}
+                    style={{
+                      width: "100%", textAlign: "left", cursor: "pointer",
+                      padding: "10px 14px", borderRadius: 10,
+                      border: "1px dashed rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.04)",
+                      color: "var(--color-text)", fontWeight: 700, fontSize: 13,
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    🎒 Wat moet ik kennen in groep {groep}? {doelOpen ? "▴" : "▾"}
+                  </button>
+                  {doelOpen && (
+                    <div style={{ marginTop: 10 }}>
+                      {groepVakken.map((vak) => {
+                        const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
+                        const paden = groepPaden(groep).filter((p) => p.subject === vak).slice(0, 4);
+                        return (
+                          <div key={vak} style={{ marginBottom: 10 }}>
+                            <div style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-strong)", marginBottom: 5 }}>
+                              {meta.emoji} {meta.titel}
+                            </div>
+                            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                              {paden.map((p) => (
+                                <button
+                                  key={p.id}
+                                  onClick={() => onPickPath && onPickPath(p.id)}
+                                  style={{
+                                    padding: "6px 11px", borderRadius: 999, cursor: "pointer",
+                                    border: "1px solid rgba(0,200,83,0.35)", background: "rgba(0,200,83,0.08)",
+                                    color: "var(--color-text)", fontSize: 12, fontWeight: 600,
+                                  }}
+                                >
+                                  {p.emoji} {p.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*—\s*Cito.*$/i, "").replace(/\s*groep\s*\d(\s*-\s*\d)?\s*$/i, "")}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.45 }}>
+                        Dit zijn de onderwerpen langs de leerlijnen van groep {groep} — tik er een aan om te beginnen. Alles mag, ook hoger of lager.
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </Card>
@@ -745,7 +828,14 @@ export default function MijnPagina({
                 const meta = SUBJECT_LABELS[v.subj] || { title: v.subj, emoji: "📘" };
                 const st = VAK_STATUS[v.level];
                 return (
-                  <div key={v.subj} style={{ marginBottom: 12 }}>
+                  <div
+                    key={v.subj}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => onVak && onVak(v.subj)}
+                    onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onVak) onVak(v.subj); }}
+                    title={`Oefen ${meta.title}`}
+                    style={{ marginBottom: 12, cursor: onVak ? "pointer" : "default" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4, gap: 8 }}>
                       <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text-strong)" }}>
                         {meta.emoji} {meta.title}
