@@ -146,7 +146,7 @@ export default function VraagVanDeDag() {
       {vraag.actueel ? (
         <div style={{ marginBottom: 10 }}>
           <div style={{ display: "inline-block", background: "rgba(66,165,245,0.15)", border: "1px solid rgba(66,165,245,0.45)", color: "#90caf9", borderRadius: 999, padding: "5px 14px", fontSize: 13, fontWeight: 700 }}>
-            {vraag.emoji} uit het nieuws van vandaag
+            {vraag.emoji} uit het Jeugdjournaal
           </div>
           {/* Bronvermelding altijd zichtbaar (Mark 3 jul) — eigen samenvatting +
               nette bronlink; nieuwsfoto's nemen we niet over (auteursrecht). */}

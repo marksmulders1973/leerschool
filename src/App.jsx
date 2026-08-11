@@ -104,6 +104,7 @@ const Curriculum = lazy(() => import("./features/learn/Curriculum.jsx"));
 const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
 const KwartiercheckPage = lazy(() => import("./features/kwartiercheck/KwartiercheckPage.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
+const MijnPagina = lazy(() => import("./features/account/MijnPagina.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { levelsCompatible } from "./learnPaths/utils.js";
 import pathManifest from "./learnPaths/pathManifest.generated.json";
@@ -146,7 +147,7 @@ const BOTTOMNAV_PAGES = new Set([
   "home",
   "learn-paths-hub",
   "learn-meebezig",
-  "my-mastery",
+  "my-mastery", "mijn-pagina",
   "kampioenen", "leaderboard", "student-progress", "teacher-progress",
   "student-home", "teacher-home",
   "self-study", "textbook", "cito", "tafels",
@@ -1159,6 +1160,35 @@ export default function App() {
           />
         );
       })()}
+      {page === "mijn-pagina" && (
+        <MijnPagina
+          userName={userName}
+          userLevel={
+            userLevel && /^\d+$/.test(String(userLevel))
+              ? (userSchoolType ? `klas${userLevel}` : `groep${userLevel}`)
+              : userLevel
+          }
+          streak={streak}
+          subscription={subscription}
+          onResumePath={(id, stepIdx) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
+            setLearnPathReturnPage("mijn-pagina");
+            setPage("learn-path");
+          }}
+          onPickPath={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("mijn-pagina");
+            setPage("learn-path");
+          }}
+          onGoLeren={() => setPage("learn-paths-hub")}
+          onGoCito={() => setPage("cito")}
+          onGoVoortgang={() => setPage("my-mastery")}
+          onBack={() => setPage("student-home")}
+          onHome={goHome}
+        />
+      )}
       {page === "learn-meebezig" && meeBezigCategory && (() => {
         const allCats = [...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO];
         const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };
@@ -1527,6 +1557,7 @@ export default function App() {
           onSetLevel={setUserLevel}
           onSetSchoolType={setUserSchoolType}
           onFamilie={() => setPage("familie")}
+          onMijnPagina={() => setPage("mijn-pagina")}
           quizzes={quizzes}
           sessionMin={sessionMin}
           kwartierTarget={KWARTIER_TARGET_MIN}

@@ -121,6 +121,21 @@ const steps = [
     svg: klokSvg(3, 0),
     checks: [
       {
+        q: "Kijk goed naar deze klok. **Hoe laat is het?**",
+        svg: klokSvg(9, 0),
+        options: ["9 uur","12 uur","kwart voor 9","3 uur"],
+        answer: 0,
+        wrongHints: [null,"Kijk naar de kléíne wijzer — die zegt het uur. Wijst die naar 12?","De grote wijzer staat op 12 — dat betekent 0 minuten, een heel uur dus.","Naar welk getal wijst de kleine wijzer echt?"],
+        uitlegPad: {
+          stappen: [{ titel: "Lees de klok af", tekst: "Grote wijzer op 12 = heel uur. Kleine wijzer wijst naar 9 → het is 9 uur." }],
+          woorden: [{ woord: "aflezen", uitleg: "Van de klok 'lezen' hoe laat het is." }],
+          theorie: "Heel uur: grote wijzer op 12, kleine wijzer op het uurnummer.",
+          voorbeelden: [{ type: "stand", tekst: "Klein op 9, groot op 12 → 9 uur. Klein op 4, groot op 12 → 4 uur." }],
+          basiskennis: [{ onderwerp: "Eerst de grote", uitleg: "Zie je de grote wijzer op 12? Dan hoef je alleen de kleine af te lezen." }],
+          niveaus: { basis: "9 uur.", simpeler: "Grote wijzer op 12 = heel uur. Kleine wijzer op 9 → 9 uur.", nogSimpeler: "9 uur" },
+        },
+      },
+      {
         q: "Hoe staan de wijzers bij **3 uur** precies?",
         options: ["Grote op 12, kleine op 3","Grote op 3, kleine op 12","Beide op 3","Beide op 12"],
         answer: 0,
@@ -155,6 +170,21 @@ const steps = [
     explanation: "**Halve uren** zijn iets lastiger — vooral in het Nederlands. Wij zeggen **'half 3'** ipv **'2 uur en een half'** (Engels: 'half past two').\n\n**Hoe herken je een half uur?**\n• De **grote wijzer** staat op de **6** (precies onder).\n• De **kleine wijzer** staat **tussen twee cijfers** (halverwege).\n\n**Voorbeeld**:\nGrote op 6, kleine net voorbij 2 → **half 3** *(14:30)*\n\n**Pas op — Nederlands is anders dan Engels!**\n• Nederlands: 'het is **half 3**' = 30 minuten **vóór** 3 uur = 02:30 of 14:30\n• Engels: 'it is **half past two**' = 30 minuten **ná** 2 uur = zelfde tijd, andere uitdrukking\n\nIn het Nederlands tellen we vooruit: 'half 3' betekent 'we zijn op weg naar 3 uur, en we zijn er half'.\n\n**Voorbeelden**:\n• Grote op 6, kleine net voor 6 → **half 6** *(05:30 of 17:30)*\n• Grote op 6, kleine net voor 8 → **half 8** *(07:30 of 19:30)*\n• Grote op 6, kleine net voor 12 → **half 12** *(11:30 of 23:30)*\n\n**Trucje**: in het Nederlands kijk je naar het **volgende cijfer**. De kleine wijzer staat tussen 7 en 8 → 'half **8**' (kijk naar 8, het volgende cijfer).\n\n**In digitaal format**:\n• Half 3 = **02:30** of **14:30**\n• Half 8 = **07:30** of **19:30**\n• Half 12 = **11:30** of **23:30**",
     svg: klokSvg(2, 30),
     checks: [
+      {
+        q: "Kijk goed naar deze klok. **Hoe laat is het?**",
+        svg: klokSvg(6, 30),
+        options: ["Half 7","Half 6","6 uur","Kwart over 6"],
+        answer: 0,
+        wrongHints: [null,"De kleine wijzer is al vóórbij de 6 — naar welk uur is hij op weg?","Bij een heel uur staat de grote wijzer op 12. Waar staat hij nu?","Kwart over = grote wijzer op 3 (rechts). Waar staat hij nu?"],
+        uitlegPad: {
+          stappen: [{ titel: "Groot op 6 = half", tekst: "Grote wijzer op 6 = halve uur. Kleine wijzer tussen 6 en 7 → op weg naar 7 → half 7." }],
+          woorden: [{ woord: "half 7", uitleg: "= 6:30. Dertig minuten vóór 7 uur." }],
+          theorie: "Halve uren: grote wijzer op 6, kleine tussen twee cijfers. Nederlands kijkt vooruit: tussen 6 en 7 = half 7.",
+          voorbeelden: [{ type: "stand", tekst: "Klein tussen 6 en 7 → half 7. Klein tussen 2 en 3 → half 3." }],
+          basiskennis: [{ onderwerp: "Vooruit kijken", uitleg: "Bij 'half' noem je het uur dat kómt, niet het uur dat was." }],
+          niveaus: { basis: "Half 7.", simpeler: "Grote wijzer op 6 = half. Kleine wijzer op weg naar 7 → half 7 (6:30).", nogSimpeler: "Half 7" },
+        },
+      },
       {
         q: "Wat is **half 5** in 24-uurs format ('s middags)?",
         options: ["16:30","17:30","04:30","15:30"],
@@ -205,6 +235,21 @@ const steps = [
     svg: tweeKlokSvg(4, 15, 4, 45, "kwart over 4", "kwart voor 5"),
     checks: [
       {
+        q: "Kijk goed naar deze klok. **Hoe laat is het?**",
+        svg: klokSvg(4, 45),
+        options: ["Kwart voor 5","Kwart over 4","Kwart over 5","Half 5"],
+        answer: 0,
+        wrongHints: [null,"Kwart over = grote wijzer op 3 (rechts). Deze staat links — wat betekent dat?","De kleine wijzer is bijna bij de 5, niet net voorbij — dus we zijn bijna bij het volgende uur.","Half = grote wijzer op 6 (onder). Waar staat hij hier?"],
+        uitlegPad: {
+          stappen: [{ titel: "Groot op 9 = kwart voor", tekst: "Grote wijzer op 9 (links) = kwart voor. Kleine wijzer bijna bij 5 → kwart voor 5." }],
+          woorden: [{ woord: "kwart voor 5", uitleg: "= 4:45. Nog 15 minuten tot 5 uur." }],
+          theorie: "Minutenwijzer-kompas: 12=heel uur, 3=kwart over, 6=half, 9=kwart voor.",
+          voorbeelden: [{ type: "kompas", tekst: "Groot op 9 + klein bijna bij 5 → kwart voor 5. Groot op 3 + klein net na 4 → kwart over 4." }],
+          basiskennis: [{ onderwerp: "Links = voor", uitleg: "Staat de grote wijzer links (op 9)? Dan is het 'kwart voor' het volgende uur." }],
+          niveaus: { basis: "Kwart voor 5.", simpeler: "Grote wijzer op 9 = kwart voor. Kleine wijzer bijna bij 5 → kwart voor 5 (4:45).", nogSimpeler: "Kwart voor 5" },
+        },
+      },
+      {
         q: "Hoeveel minuten zitten in een **kwartier**?",
         options: ["15","30","60","20"],
         answer: 0,
@@ -253,6 +298,21 @@ const steps = [
     explanation: "Tussen de **kwartiertjes** zit nog meer tijd. Elk **getal** op de klok is **5 minuten** verder dan het vorige.\n\n**Op de minutenwijzer**:\n\n| Wijzer wijst naar | Aantal minuten over heel uur |\n|---|---|\n| 12 | 0 (heel uur) |\n| 1 | 5 |\n| 2 | 10 |\n| 3 | 15 (kwart over) |\n| 4 | 20 |\n| 5 | 25 |\n| 6 | 30 (half) |\n| 7 | 35 |\n| 8 | 40 |\n| 9 | 45 (kwart voor) |\n| 10 | 50 |\n| 11 | 55 |\n\n**Hoe noem je tussentijden?**\n\n**Eerste helft** *(0-30 min):* '... over ...'\n• 5 over 4 = 04:05 — minutenwijzer op 1, klein op 4.\n• 10 over 4 = 04:10 — minutenwijzer op 2.\n• 25 over 4 = 04:25 — minutenwijzer op 5.\n\n**Vanaf half** *(31-59 min):* '... voor ...'\n• Vanaf 35 minuten zeggen Nederlanders **'voor het volgende uur'**.\n• 25 voor 5 = 04:35 — minutenwijzer op 7. *(Nog 25 min tot 5 uur)*\n• 20 voor 5 = 04:40 — minutenwijzer op 8.\n• 10 voor 5 = 04:50 — minutenwijzer op 10.\n• 5 voor 5 = 04:55 — minutenwijzer op 11.\n\n**Speciale gevallen rond 'half'**:\n• 5 voor half = nog 5 voor half (bv. 04:25 = 5 voor half 5)\n• 5 over half = 5 minuten na half (bv. 04:35 = 5 over half 5)\n\n**Maar het simpele systeem werkt ook**: 04:25 = '25 over 4' (eerste helft), 04:35 = '25 voor 5' (tweede helft). Veel kinderen leren het zo, en dat is helemaal goed.\n\n**Top-tip**: **kijk eerst naar de minutenwijzer**. Telt 'ie minder dan 30? Dan **'over'**. Meer dan 30? Dan **'voor'** + volgende uur.",
     svg: tweeKlokSvg(4, 10, 4, 50, "10 over 4", "10 voor 5"),
     checks: [
+      {
+        q: "Kijk goed naar deze klok. **Hoe laat is het?**",
+        svg: klokSvg(3, 50),
+        options: ["10 voor 4","10 over 3","10 voor 3","10 over 4"],
+        answer: 0,
+        wrongHints: [null,"De grote wijzer staat op 10 — dat is méér dan 30 minuten. Zeggen we dan 'over' of 'voor'?","Kan niet: dan zou de kleine wijzer nog vóór de 3 staan.","De kleine wijzer is nog niet bij de 4 — het uur 4 moet nog komen."],
+        uitlegPad: {
+          stappen: [{ titel: "Groot op 10 = 50 min", tekst: "Grote wijzer op 10 = 10 × 5 = 50 minuten. Meer dan 30 → 'voor' het volgende uur: nog 10 minuten tot 4 uur → 10 voor 4." }],
+          woorden: [{ woord: "10 voor 4", uitleg: "= 3:50. Nog 10 minuten tot 4 uur." }],
+          theorie: "Na het halve uur (grote wijzer voorbij de 6) tel je terug naar het volgende uur: 'zoveel voor'.",
+          voorbeelden: [{ type: "stand", tekst: "Groot op 10 → 50 min → 10 voor. Groot op 11 → 55 min → 5 voor." }],
+          basiskennis: [{ onderwerp: "Meer dan 30 = voor", uitleg: "Wijst de grote wijzer voorbij de 6? Dan zeg je 'voor' + het volgende uur." }],
+          niveaus: { basis: "10 voor 4.", simpeler: "Grote wijzer op 10 = 50 minuten. Nog 10 minuten tot 4 uur → 10 voor 4 (3:50).", nogSimpeler: "10 voor 4" },
+        },
+      },
       {
         q: "Hoeveel minuten zitten tussen **2 cijfers** op de klok?",
         options: ["5","10","12","15"],
@@ -401,7 +461,23 @@ const steps = [
     svg: klokSvg(10, 25),
     checks: [
       {
+        q: "Kijk goed naar deze klok. **Hoe laat is het?**",
+        svg: klokSvg(11, 15),
+        options: ["Kwart over 11","Kwart voor 11","Kwart over 12","Half 11"],
+        answer: 0,
+        wrongHints: [null,"Kwart voor = grote wijzer op 9 (links). Deze staat rechts.","De kleine wijzer is de 12 nog niet voorbij.","Half = grote wijzer op 6 (onder)."],
+        uitlegPad: {
+          stappen: [{ titel: "Groot op 3 = kwart over", tekst: "Grote wijzer op 3 = 15 minuten = kwart over. Kleine wijzer net na 11 → kwart over 11." }],
+          woorden: [{ woord: "kwart over 11", uitleg: "= 11:15." }],
+          theorie: "Minutenwijzer-kompas: 12=heel uur, 3=kwart over, 6=half, 9=kwart voor.",
+          voorbeelden: [{ type: "stand", tekst: "Groot op 3 + klein net na 11 → kwart over 11." }],
+          basiskennis: [{ onderwerp: "Rechts = over", uitleg: "Grote wijzer rechts (op 3)? Dan 'kwart over' het uur waar de kleine wijzer net voorbij is." }],
+          niveaus: { basis: "Kwart over 11.", simpeler: "Grote wijzer op 3 = kwart over. Kleine wijzer net na 11 → kwart over 11 (11:15).", nogSimpeler: "Kwart over 11" },
+        },
+      },
+      {
         q: "De grote wijzer op **6**, kleine net voor **8**. Hoe laat is het?",
+        svg: klokSvg(7, 30),
         options: ["Half 8","Half 9","8:30","9 uur"],
         answer: 0,
         wrongHints: [null,"Halverwege naar 9 betekent dat de kleine wijzer al voorbij 8 is — maar is dat hier het geval?","Die tijd in cijfers hoort bij een andere halfstand — kijk waar de kleine wijzer staat.","Bij dat tijdstip staat de grote wijzer niet op 6."],

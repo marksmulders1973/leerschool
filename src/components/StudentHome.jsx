@@ -62,7 +62,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes, onFamilie }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes, onFamilie, onMijnPagina }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -343,6 +343,24 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           <span style={{ fontSize: 13, fontWeight: 800, color: pakketKleur }}>{pakketLabel}</span>
           <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>· wat is dit?</span>
         </button>
+        {/* Mijn pagina (WhatsApp-feedback 11 aug): persoonlijke thuisbasis —
+            verder waar je was, waar je staat, doel + abonnement. */}
+        {onMijnPagina && (
+          <button
+            type="button"
+            onClick={onMijnPagina}
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 7,
+              background: "rgba(30,136,229,0.12)", border: "1px solid rgba(30,136,229,0.45)",
+              borderRadius: 999, padding: "5px 13px",
+              marginBottom: 10, marginLeft: 8, alignSelf: "flex-start",
+              cursor: "pointer", fontFamily: "var(--font-display)",
+            }}
+          >
+            <span style={{ fontSize: 13 }} aria-hidden="true">🏠</span>
+            <span style={{ fontSize: 13, fontWeight: 800, color: "#64b5f6" }}>Mijn pagina</span>
+          </button>
+        )}
         {/* Bovenaan: verder waar je was (als er iets te hervatten is) */}
         {resumeCard}
         <KoppelcodeBanner userName={userName} />
@@ -676,6 +694,16 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             const label = vak.labelOverride || subj.label;
             const aantalPaden = padenPerVak[vak.id] || 0;
             const heeftPaden = aantalPaden > 0;
+            // WhatsApp-feedback 11 aug (groep 3): kinderen tikken op de kaart
+            // zelf (emoji + vaknaam) en er gebeurde niets — alleen de kleine
+            // actieknopjes werkten. De kaart-kop is nu zelf klikbaar en doet
+            // hetzelfde als de belangrijkste actie: Leren (of Oefenen als er
+            // nog geen paden zijn).
+            const kaartActie = () => {
+              SoundEngine.play("click");
+              if (heeftPaden && onPickPathsForSubject) onPickPathsForSubject(vak.id, vakModus);
+              else if (onTextbook) onTextbook(vak.id);
+            };
             return (
               <div
                 key={vak.id}
@@ -691,12 +719,22 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   overflow: "hidden",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
+                <button
+                  onClick={kaartActie}
+                  aria-label={`${label} openen`}
+                  style={{
+                    display: "flex", alignItems: "center", gap: 8, minWidth: 0,
+                    background: "none", border: "none", padding: 0, margin: 0,
+                    cursor: "pointer", textAlign: "left", width: "100%",
+                    fontFamily: "inherit",
+                  }}
+                >
                   <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{subj.icon}</span>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: subj.color, lineHeight: 1.2, minWidth: 0, wordBreak: "break-word" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: subj.color, lineHeight: 1.2, minWidth: 0, wordBreak: "break-word", flex: 1 }}>
                     {label}
                   </div>
-                </div>
+                  <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 16, flexShrink: 0 }} aria-hidden="true">›</span>
+                </button>
                 {(() => {
                   // Bouw acties-lijst voor deze tegel.
                   const isCitoVak = vakModus === "po" && CITO_VAKKEN_PO.has(vak.id);

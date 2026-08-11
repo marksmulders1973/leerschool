@@ -13,24 +13,48 @@ const OORDEEL_LABELS = {
   nogniet:      { emoji: "❌", tekst: "Nog niet",     kleur: "#ff5252" },
 };
 
+// Zeker-weten-meter (WhatsApp-feedback 11 aug: "alles gegokt, toch beheers ik
+// dingen" + "12 vragen is te weinig voor een eerlijk beeld"). Twee wapens:
+//  1. "Beheerst" vraagt nu een BEVESTIGINGSVRAAG: N1 goed + N2 goed + nóg een
+//     andere niveau-1-vraag goed. Twee keer gokken is geluk; drie keer bijna
+//     nooit. De extra vraag komt alleen bij kinderen die op "beheerst" af
+//     koersen, dus de check blijft ~15 minuten.
+//  2. Gok-detectie op snelheid: is élk goede antwoord binnen GOK_MS bevestigd
+//     (te snel om de vraag echt te lezen), dan zeggen we eerlijk "Bijna daar"
+//     in plaats van "Beheerst".
+const GOK_MS = 3000;
+
 // Adaptive scoring per concept:
 //  - Niveau 1 fout → nogniet (stop meteen)
-//  - Niveau 1 goed, niveau 2 fout → gedeeltelijk
-//  - Niveau 1 goed, niveau 2 goed → beheerst
-function bepaalOordeel(antwoorden) {
+//  - N1 goed, niveau 2 fout → gedeeltelijk
+//  - N1 + N2 goed, bevestiging (2e niveau-1-vraag) fout → gedeeltelijk
+//  - N1 + N2 + bevestiging goed → beheerst (tenzij alles verdacht snel ging)
+function bepaalOordeel(antwoorden, vragen) {
   const n1 = antwoorden.find((a) => a.niveau === 1);
   const n2 = antwoorden.find((a) => a.niveau === 2);
   if (!n1) return null;
   if (!n1.goed) return OORDELEN.nogniet;
-  if (!n2) return OORDELEN.beheerst; // alleen 1 vraag voor dit concept — geef voordeel van de twijfel
-  return n2.goed ? OORDELEN.beheerst : OORDELEN.gedeeltelijk;
+  if (!n2) return OORDELEN.beheerst; // geen niveau-2-vraag beschikbaar — voordeel van de twijfel
+  if (!n2.goed) return OORDELEN.gedeeltelijk;
+  // Bevestigingsvraag (2e niveau-1-vraag, andere index dan de eerste).
+  const bevestiging = antwoorden.filter((a) => a.niveau === 1)[1];
+  const tweedeN1Bestaat = Array.isArray(vragen)
+    && vragen.filter((v) => v.niveau === 1).length >= 2;
+  if (tweedeN1Bestaat && !bevestiging) return OORDELEN.gedeeltelijk; // hoort niet voor te komen
+  if (bevestiging && !bevestiging.goed) return OORDELEN.gedeeltelijk;
+  // Gok-detectie: alle antwoorden verdacht snel → niet "beheerst" claimen.
+  const msKnown = antwoorden.filter((a) => typeof a.ms === "number");
+  if (msKnown.length === antwoorden.length && msKnown.every((a) => a.ms < GOK_MS)) {
+    return OORDELEN.gedeeltelijk;
+  }
+  return OORDELEN.beheerst;
 }
 
 // Welke vragen sturen we voor één concept? Adaptief:
-//  start met N1 → bij goed: N2 → bij goed op N2: stop (beheerst)
-//                           bij fout op N2: stop (gedeeltelijk)
-//           → bij fout N1: stop (nogniet)
-// We sturen altijd max 2 vragen (N1+N2). N3 pas als N2 goed is én we meer info willen — NIET in v1.
+//  N1 → bij fout: stop (nogniet)
+//     → bij goed: N2 → bij fout: stop (gedeeltelijk)
+//                    → bij goed: 2e N1-vraag (bevestiging) → stop
+// Max 3 vragen per concept; de derde alleen op de route naar "beheerst".
 function volgendeVraagIdx(vragen, antwoorden) {
   // Selecteer op níveau, niet op array-index: de vragenlijst bevat per
   // concept meerdere niveau-1-vragen (1a/1b), dus index 1 is NIET niveau 2.
@@ -40,8 +64,16 @@ function volgendeVraagIdx(vragen, antwoorden) {
   }
   const laatste = antwoorden[antwoorden.length - 1];
   if (!laatste.goed) return null;       // fout → oordeel vastgesteld, klaar
-  if (antwoorden.some((a) => a.niveau === 2)) return null; // N2 beantwoord → klaar
-  const i = vragen.findIndex((v) => v.niveau === 2);
+  const n2Beantwoord = antwoorden.some((a) => a.niveau === 2);
+  if (!n2Beantwoord) {
+    const i = vragen.findIndex((v) => v.niveau === 2);
+    return i === -1 ? null : i;
+  }
+  // N1 + N2 goed → bevestigingsvraag: een niveau-1-vraag die nog niet is gebruikt.
+  const n1Aantal = antwoorden.filter((a) => a.niveau === 1).length;
+  if (n1Aantal >= 2) return null; // bevestiging al beantwoord → klaar
+  const gebruikt = new Set(antwoorden.map((a) => a.idx).filter((x) => x != null));
+  const i = vragen.findIndex((v, vi) => v.niveau === 1 && !gebruikt.has(vi));
   return i === -1 ? null : i;
 }
 
@@ -162,7 +194,7 @@ function IntroScherm({ email, naam, groep, onStart }) {
       </div>
 
       <p style={{ textAlign: "center", fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
-        12 onderwerpen · max 2 vragen per onderwerp · geen account nodig
+        12 onderwerpen · max 3 vragen per onderwerp · geen account nodig
       </p>
     </div>
   );
@@ -186,10 +218,14 @@ function QuizScherm({ naam, groep, onDone }) {
 
   const progressPct = Math.round((conceptIdx / totaal) * 100);
 
+  // Zeker-weten-meter: meet hoe snel er geantwoord wordt (gok-detectie).
+  const vraagStartRef = useRef(Date.now());
+
   const bevestigAntwoord = () => {
     if (gekozenOptie === null || !vraag) return;
     const goed = gekozenOptie === vraag.correct;
-    const nieuw = [...antwoorden, { niveau: vraag.niveau, goed }];
+    const ms = Date.now() - vraagStartRef.current;
+    const nieuw = [...antwoorden, { niveau: vraag.niveau, goed, idx: vraagIdx, ms }];
     const bijgewerkt = { ...antwoordenPerConcept, [concept.id]: nieuw };
     setAntwoordenPerConcept(bijgewerkt);
     setBevestigd(true);
@@ -198,6 +234,7 @@ function QuizScherm({ naam, groep, onDone }) {
     setTimeout(() => {
       setGekozenOptie(null);
       setBevestigd(false);
+      vraagStartRef.current = Date.now();
       const volgende = volgendeVraagIdx(vragen, nieuw);
       if (volgende !== null) {
         // Nog een vraag voor dit concept
@@ -210,7 +247,7 @@ function QuizScherm({ naam, groep, onDone }) {
           const scores = {};
           CONCEPTEN.forEach((c) => {
             const ant = bijgewerkt[c.id] || [];
-            scores[c.id] = { oordeel: bepaalOordeel(ant) || OORDELEN.nogniet };
+            scores[c.id] = { oordeel: bepaalOordeel(ant, getVragenVoorConcept(c.id)) || OORDELEN.nogniet };
           });
           onDone(scores);
         }
@@ -351,6 +388,11 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
           Kwartiercheck klaar voor {naam}
         </h2>
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", margin: 0 }}>Groep {groep}</p>
+        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", margin: "8px auto 0", maxWidth: 440, lineHeight: 1.5 }}>
+          Dit is een <strong>eerste indruk</strong> op basis van een paar vragen per onderwerp — geen toets.
+          "Beheerst" verschijnt pas na drie goede antwoorden op rij; zeker weten doe je door het
+          onderwerp in de app te oefenen.
+        </p>
       </div>
 
       {/* Scores per vak */}

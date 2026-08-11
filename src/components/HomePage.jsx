@@ -137,7 +137,7 @@ function ProefVraagKaart({ onStart }) {
       borderRadius: 16, padding: "14px 16px",
     }}>
       <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: vraag.actueel ? 3 : 8, letterSpacing: 0.3 }}>
-        {vraag.actueel ? "🗞️ De vraag van de dag — uit het nieuws" : "🎯 Probeer meteen de vraag van de dag"}
+        {vraag.actueel ? "🗞️ De vraag van de dag — uit het Jeugdjournaal" : "🎯 Probeer meteen de vraag van de dag"}
       </div>
       {vraag.actueel && (
         <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 8, lineHeight: 1.4 }}>

@@ -48,9 +48,19 @@ function parseRss(xml, max = 12) {
       return m ? m[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() : "";
     };
     const titel = pak("title");
-    if (titel) items.push({ titel, beschrijving: pak("description").slice(0, 400), link: pak("link") });
+    if (titel) items.push({ titel, beschrijving: pak("description").slice(0, 400), link: pak("link"), pubDate: pak("pubDate") });
   }
   return items;
+}
+
+// Alleen verse berichten gebruiken (WhatsApp-feedback 11 aug: een vraag kreeg
+// het label "uit het nieuws" terwijl het bericht dagen oud was — het RSS houdt
+// items lang vast). Zonder parsebare pubDate: bericht toestaan (best-effort).
+function isVers(item, maxUren = 48) {
+  if (!item.pubDate) return true;
+  const t = Date.parse(item.pubDate);
+  if (Number.isNaN(t)) return true;
+  return Date.now() - t <= maxUren * 3600 * 1000;
 }
 
 async function callAnthropic(apiKey, system, user, maxTokens = 700) {
@@ -176,7 +186,11 @@ export default async function handler(req, res) {
   //    dubbele generatie kost hooguit één extra AI-call, nooit dubbele rijen.
   try {
     const rss = await (await fetch(RSS_URL, { headers: { "user-agent": "leerkwartier-dagvraag" } })).text();
-    let items = parseRss(rss);
+    let items = parseRss(rss).filter((it) => isVers(it));
+    if (!items.length) {
+      await zetMarker("geen-vers-nieuws");
+      return res.status(200).json({ actueel: null, reden: "geen-vers-nieuws" });
+    }
     // Onderwerpen van de afgelopen dagen niet herhalen (het RSS houdt
     // berichten meerdere dagen vast — anders 2× dezelfde giraffe).
     try {

@@ -1395,6 +1395,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 )}
               </div>
             )}
+            {/* Vraag-eigen figuur (bv. de klok die je moet aflezen) — WhatsApp-
+                feedback 11 aug: "bij de vraag zie je de klok niet, zo niet te
+                doen". Checks met een eigen svg-veld tonen die boven de vraag. */}
+            {currentCheck.svg && (
+              <div style={{ marginBottom: 12 }}>
+                <SvgFigure svg={currentCheck.svg} />
+              </div>
+            )}
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>

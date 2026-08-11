@@ -17,6 +17,8 @@ export const PAGE_TO_PATH = {
   curriculum: "/leerlijn",
   "learn-meebezig": "/komt-eraan",
   "my-mastery": "/voortgang",
+  // Persoonlijke pagina (WhatsApp-feedback 11 aug): thuisbasis op naam.
+  "mijn-pagina": "/mijn",
   // Voortgang & kampioenen
   kampioenen: "/kampioenen",
   leaderboard: "/scorebord",
