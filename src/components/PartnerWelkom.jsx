@@ -47,6 +47,7 @@ const PARTNER_NAMEN = {
   STUDIEZALEN2027: "Studiezalen",
   VBROTTERDAM2027: "Voedselbank Rotterdam",
   WESTFRIES2027: "Westfriese Bibliotheken",
+  ZAANSTREEK2027: "Voedselbank Zaanstreek",
 };
 
 const KEY_DICHT = "lk_partner_welkom_dicht";
