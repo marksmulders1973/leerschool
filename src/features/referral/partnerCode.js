@@ -106,6 +106,27 @@ export function actievePartnerCode() {
   return ls.get(KEY_CODE) || null;
 }
 
+// Handmatige invoer "Ik heb een code" (WhatsApp-feedback Mark 11 aug 15:23) —
+// zelfde effect als via de QR-link ?partner=CODE, maar dan getypt in het
+// Familie/Pro-blok. Best-effort-validatie tegen de partner_codes-tabel; kan
+// die check niet (offline/RLS), dan zelfde zachte landing als de QR-flow.
+export async function zetPartnerCodeHandmatig(invoer) {
+  const code = (invoer || "").trim().toUpperCase();
+  if (!/^[A-Z0-9-]{3,20}$/.test(code)) return { ok: false, reden: "vorm" };
+  const bestaand = ls.get(KEY_CODE);
+  if (bestaand && bestaand !== code) return { ok: false, reden: "al-actief", code: bestaand };
+  let bekend = null;
+  try {
+    const { data, error } = await supabase
+      .from("partner_codes").select("code").eq("code", code).maybeSingle();
+    if (!error) bekend = !!data;
+  } catch { /* onbekend laten — voordeel van de twijfel */ }
+  if (bekend === false) return { ok: false, reden: "onbekend" };
+  if (!bestaand) ls.set(KEY_CODE, code);
+  track("partner_code_handmatig", { code, bekend });
+  return { ok: true, code, familieTot: partnerFamilieTot() };
+}
+
 // 'pro2027' = plek geclaimd (paywall moet dit in jan 2027 honoreren),
 // 'vol' = code was op — gezin valt dan terug op het gewone gratis aanbod.
 export function partnerProStatus() {

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import { LAAG_KLEUREN } from "../subscription/proPlan.js";
+import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 
 // Pakket-uitleg (Mark 31 jul, na 5-agent-panel): kraakhelder + eerlijk laten
 // zien wat gratis is en wat de betaalde extra's zijn. Kernbesluiten:
@@ -36,6 +38,88 @@ function TierKaart({ emoji, naam, voorWie, prijs, items, huidig, kleur }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+// "Ik heb een code" (Mark 11 aug 15:23): gezinnen met een partner-code van
+// bv. de voedselbank of Stichting Leergeld kunnen hem hier intypen — zelfde
+// effect als de QR-scan op de flyer (Familie-niveau gratis).
+function CodeInvoer() {
+  const [invoer, setInvoer] = useState("");
+  const [status, setStatus] = useState(null); // { ok, reden?, code?, familieTot? }
+  const [bezig, setBezig] = useState(false);
+  const actief = actievePartnerCode();
+
+  const totTekst = (tot) => tot === null ? "blijvend" : "t/m de zomer van 2027";
+
+  if (actief && !status?.ok) {
+    return (
+      <div style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.35)", borderRadius: 10, padding: "10px 12px", marginBottom: 14, fontSize: 12.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>
+        🎟️ Er is al een code actief op dit apparaat: <strong>{actief}</strong> — Familie-niveau gratis {totTekst(partnerFamilieTot())}.
+      </div>
+    );
+  }
+
+  const verstuur = async () => {
+    if (bezig || !invoer.trim()) return;
+    setBezig(true);
+    const r = await zetPartnerCodeHandmatig(invoer);
+    setStatus(r);
+    setBezig(false);
+  };
+
+  return (
+    <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 10, padding: "10px 12px", marginBottom: 14 }}>
+      <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 6 }}>
+        🎟️ Ik heb een code
+      </div>
+      {status?.ok ? (
+        <div style={{ fontSize: 12.5, color: "#69f0ae", lineHeight: 1.5 }}>
+          ✅ Code <strong>{status.code}</strong> staat aan — jullie gezin gebruikt het Familie-niveau gratis {totTekst(status.familieTot)}.
+        </div>
+      ) : (
+        <>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginBottom: 8, lineHeight: 1.45 }}>
+            Kreeg je een code via bijvoorbeeld de voedselbank, Stichting Leergeld, de bibliotheek of school? Typ hem hier in — dan is het Familie-niveau voor jullie gezin gratis.
+          </div>
+          <div style={{ display: "flex", gap: 8 }}>
+            <input
+              value={invoer}
+              onChange={(e) => { setInvoer(e.target.value.toUpperCase()); setStatus(null); }}
+              onKeyDown={(e) => { if (e.key === "Enter") verstuur(); }}
+              placeholder="bv. ALKMAAR2027"
+              maxLength={20}
+              style={{
+                flex: 1, minWidth: 0, padding: "9px 12px", borderRadius: 8,
+                border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)",
+                color: "var(--color-text-strong)", fontSize: 13, fontFamily: "var(--font-body)",
+                letterSpacing: 1, textTransform: "uppercase",
+              }}
+            />
+            <button
+              onClick={verstuur}
+              disabled={bezig || !invoer.trim()}
+              style={{
+                padding: "9px 16px", borderRadius: 8, border: "none",
+                background: invoer.trim() ? "rgba(0,200,83,0.85)" : "rgba(255,255,255,0.1)",
+                color: invoer.trim() ? "#00320f" : "rgba(255,255,255,0.4)",
+                fontWeight: 800, fontSize: 13, cursor: invoer.trim() ? "pointer" : "default",
+                fontFamily: "var(--font-display)",
+              }}
+            >
+              {bezig ? "..." : "Gebruik code"}
+            </button>
+          </div>
+          {status && !status.ok && (
+            <div style={{ fontSize: 12, color: "#ff8a80", marginTop: 6 }}>
+              {status.reden === "vorm" && "Dat lijkt geen geldige code — check letters en cijfers (geen spaties)."}
+              {status.reden === "onbekend" && "Deze code kennen we niet. Kijk of hij precies zo op je flyer of brief staat."}
+              {status.reden === "al-actief" && `Er is al een code actief op dit apparaat (${status.code}).`}
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
@@ -113,21 +197,41 @@ export default function PakketUitleg({ open, onClose }) {
         <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", margin: "0 0 8px" }}>
           Wil je meer? Deze extra's zijn optioneel:
         </div>
+        {/* Voordelen uitgebreid (Mark 11 aug 15:24 "lijkt weinig, zet er evt
+            de voordelen bij") + Pro school-first zichtbaar (16:05: "staat
+            niets over per school"). Bron: proPlan.js / docs/PRIJSPLAN.md. */}
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
           <TierKaart
-            emoji="💛" naam="Familie" voorWie="voor thuis" prijs="± € 4,95 per maand, per gezin"
-            items={["Ouder-overzicht", "Weekrapport", "Hele toets oefenen met de klok", "Je eigen Kwartierplan"]}
+            emoji="💛" naam="Familie" voorWie="voor thuis"
+            prijs="± € 4,95 p/mnd · 🎟️ Seizoenspas € 24,95 éénmalig (hele toetsjaar, stopt vanzelf) · € 39 p/jaar — per gezín, niet per kind"
+            items={[
+              "AI-bijles Vonk onbeperkt (gratis = kleine dagportie)",
+              "Ouder-overzicht: voortgang per vak + toets-verwachting",
+              "Elke week een weekrapport in je mail",
+              "Hele toets oefenen met de klok + eindrapport",
+              "Persoonlijk Kwartierplan (waar staan we, wat nu?)",
+              "Eén prijs voor het hele gezin",
+            ]}
             kleur={LAAG_KLEUREN.familie}
           />
           <TierKaart
-            emoji="🏫" naam="Pro" voorWie="voor de juf of meester" prijs="± € 6,95 per maand"
-            items={["Onbeperkt toetsen", "Je eigen logo op de toets", "Overzicht per klas"]}
+            emoji="🏫" naam="Pro" voorWie="voor scholen & bijlesdocenten"
+            prijs="school € 99 per klas p/jaar (factuur) · bijlesdocent ± € 6,95 p/mnd of € 59 p/jaar"
+            items={[
+              "Lesgeven met je klas blijft gratis (deelcode)",
+              "Schooldashboard: overzicht per klas + export",
+              "Je eigen (school)logo op toetsen en werkbladen",
+              "Onbeperkt toetsen maken en werkbladen printen",
+              "Voor scholen: licentie per klas met factuur en verwerkersovereenkomst",
+            ]}
             kleur={LAAG_KLEUREN.leerkracht}
           />
         </div>
-        <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 14 }}>
-          Los bij te nemen: <strong style={{ color: "rgba(255,255,255,0.7)" }}>Kwartier-tegoed</strong> voor extra AI-bijles.
+        <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
+          Los bij te nemen: <strong style={{ color: "rgba(255,255,255,0.7)" }}>Kwartier-tegoed</strong> voor extra AI-bijles — geen abonnement, ook als cadeautje.
         </div>
+
+        <CodeInvoer />
 
         {/* Eerlijke voetregel */}
         <div style={{

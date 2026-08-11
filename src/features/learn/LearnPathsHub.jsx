@@ -124,7 +124,13 @@ function parseLevel(level) {
   const fallback = { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
   if (!level) return fallback;
   const l = String(level).toLowerCase();
-  if (l.startsWith("groep")) return { bucketKey: "po", bucketSort: 0, bucketLabel: "Basisschool", badge: { text: "Basis", bg: "#b9f6ca", fg: "#003d1c" } };
+  if (l.startsWith("groep") || l === "po") {
+    // WhatsApp-feedback 11 aug (14:51): "Basis" zei een groep-3-kind niets —
+    // toon het échte groep-bereik zodat duidelijk is wat bij welke groep hoort.
+    const m = l.match(/groep\s*(\d)(?:\s*-\s*(\d))?/);
+    const text = m ? (m[2] ? `Groep ${m[1]}-${m[2]}` : `Groep ${m[1]}`) : "Basis";
+    return { bucketKey: "po", bucketSort: 0, bucketLabel: "Basisschool", badge: { text, bg: "#b9f6ca", fg: "#003d1c" } };
+  }
   if (l.includes("klas1")) return { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
   if (l.includes("klas2")) return { bucketKey: "klas-2", bucketSort: 2, bucketLabel: "Klas 2", badge: { text: "Klas 2", bg: "#00e676", fg: "#003d1c" } };
   if (l.includes("klas3") || l.startsWith("havo3")) return { bucketKey: "klas-3", bucketSort: 3, bucketLabel: "Klas 3", badge: { text: "Klas 3", bg: "#ffd54f", fg: "#1a0a00" } };
@@ -1447,6 +1453,26 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                                       {p.title}
                                     </span>
                                     <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
+                                    {(() => {
+                                      // "✓ jouw groep" — kind ziet in één oogopslag wat
+                                      // voor zijn/haar groep is; de rest blijft gewoon
+                                      // zichtbaar en speelbaar (hoger/lager mag).
+                                      if (!effectivePo || !myPoGroup) return null;
+                                      const r = poGroupRange(p.level);
+                                      if (r && myPoGroup >= r[0] && myPoGroup <= r[1]) {
+                                        return (
+                                          <span style={{
+                                            fontFamily: "var(--font-body)", fontSize: 10, fontWeight: 700,
+                                            padding: "1px 7px", borderRadius: 999,
+                                            background: "rgba(0,200,83,0.15)", border: "1px solid rgba(0,200,83,0.5)",
+                                            color: "#69f0ae", flexShrink: 0,
+                                          }}>
+                                            ✓ jouw groep
+                                          </span>
+                                        );
+                                      }
+                                      return null;
+                                    })()}
                                     {p.referentieNiveau && (
                                       <span title={`Referentieniveau ${p.referentieNiveau} — ${
                                         p.referentieNiveau === "1F" ? "instapniveau (eind basisschool)"
