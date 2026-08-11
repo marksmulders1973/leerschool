@@ -3,7 +3,7 @@
 // (publiek domein). Landen gegroepeerd per werelddeel. Elke stap: korte uitleg
 // + interactieve kaart-check + tekst-fallback.
 
-import { GeoKaart, makeGeoCheck } from "../components/learn/geo/GeoTopo.jsx";
+import { GeoKaart, makeGeoCheck, makeGeoOefenRonde } from "../components/learn/geo/GeoTopo.jsx";
 import { WERELD_VIEWBOX, WERELDDELEN } from "../components/learn/geo/wereldData.js";
 import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
 
@@ -15,6 +15,7 @@ const chapters = [
   { letter: "A", title: "De werelddelen", emoji: "🌍", from: 0, to: 2 },
   { letter: "B", title: "Groot & ver", emoji: "🧭", from: 3, to: 4 },
   { letter: "C", title: "Het zuiden", emoji: "🦘", from: 5, to: 5 },
+  { letter: "D", title: "Ken alle werelddelen!", emoji: "🏆", from: 6, to: 6 },
 ];
 
 const steps = [
@@ -121,6 +122,28 @@ const steps = [
         wrongHints: [null, "Dat ligt er net boven, het grootste werelddeel.", "Ander werelddeel, links op de kaart.", "Aan de andere kant, in Amerika."],
         uitlegPad: { stappen: [{ titel: "Australië = Oceanië", tekst: "Australië en de eilanden in de Grote Oceaan vormen het werelddeel Oceanië." }],
           niveaus: { basis: "Australië ligt in het werelddeel Oceanië.", simpeler: "Welk werelddeel hoort bij Australië en de eilanden?", nogSimpeler: "Begint met Ocea…?" } },
+      },
+    ],
+  },
+  // D. Oefen alle werelddelen (11 aug 2026, zelfde "ken ze allemaal"-ronde als
+  // bij de provincies en Europa — Mark: "doe de wereldkaart er ook bij").
+  {
+    title: "Ken alle werelddelen!",
+    explanation:
+      "Je kent ze nu stuk voor stuk — tijd voor de **hele wereldkaart**.\n\n" +
+      "Je krijgt alle **6 werelddelen** door elkaar. Klik ze één voor één aan:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Je ziet welk werelddeel je aanklikte, en dat deel komt straks nog een keer terug.\n\n" +
+      "Klaar als je ze **allemaal** kent. Stoppen mag altijd — je voortgang is nooit weg.",
+    interactiveComponent: makeGeoOefenRonde({ data: WERELD, naam: "werelddeel", meervoud: "werelddelen", emoji: "🌍", labelFontSize: 20, maxHeight: 340 }),
+    checks: [
+      {
+        q: "Hoeveel werelddelen (continenten met bewoning) oefen je op deze kaart?",
+        options: ["6", "5", "7", "4"],
+        answer: 0,
+        wrongHints: [null, "Eentje vergeten — tel Oceanië ook mee.", "Antarctica staat niet op deze oefenkaart.", "Het zijn er meer."],
+        uitlegPad: { stappen: [{ titel: "6 werelddelen", tekst: "Afrika, Azië, Europa, Noord-Amerika, Zuid-Amerika en Oceanië." }],
+          niveaus: { basis: "Op deze kaart oefen je 6 werelddelen.", simpeler: "Tel: Afrika, Azië, Europa, Noord-Amerika, Zuid-Amerika en…?", nogSimpeler: "Zes — 6." } },
       },
     ],
   },
