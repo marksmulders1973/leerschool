@@ -1,6 +1,9 @@
 // Leerpad: Cijferend rekenen — voor groep 6-8
 // 7 stappen in 5 hoofdstukken. Cito-stijl praktijksommen + redactie.
 // Sprint-5+ S4 (2026-05-08).
+// + stap F (11 aug 2026): "ken ze allemaal"-oefenronde plus & min met typ-antwoorden.
+
+import { makeRekenOefenRonde } from "../components/learn/RekenOefenRonde.jsx";
 
 const COLORS = {
   curve: "#00c853",
@@ -13,7 +16,7 @@ const COLORS = {
   digitBorrow: "#ffaa30",
 };
 
-const stepEmojis = ["🔢","➕","➖","✖️","➗","🛒","🏆"];
+const stepEmojis = ["🔢","➕","➖","✖️","➗","🛒","🏆","🧮"];
 
 const chapters = [
   { letter: "A", title: "Wat is cijferend rekenen?", emoji: "🔢", from: 0, to: 0 },
@@ -21,6 +24,7 @@ const chapters = [
   { letter: "C", title: "Vermenigvuldigen", emoji: "✖️", from: 3, to: 4 },
   { letter: "D", title: "Delen + redactiesommen", emoji: "🛒", from: 5, to: 5 },
   { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "F", title: "Oefen plus & min!", emoji: "🧮", from: 7, to: 7 },
 ];
 
 function kolomSvg(getallen, bewerking, antwoord, breedte = 140) {
@@ -503,6 +507,21 @@ const steps = [
       { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is ×10.", "Niet.", "Niet."] },
       { q: "**100 ÷ 25** = ?", options: ["4","5","2","10"], answer: 0, wrongHints: [null, "Tel op in stappen van 25: 25, 50, 75, 100 — hoeveel sprongen zijn dat precies?", "2 keer 25 is pas 50 — is dat al 100? Blijf verder tellen.", "10 keer 25 zou 250 zijn, veel te veel — welk getal keer 25 geeft precies 100?"] },
       { q: "Hoeveel **honderdtallen** in 4.567?", options: ["5","4","6","7"], answer: 0, wrongHints: [null, "Dat is duizendtal.", "Dat is tiental.", "Dat is eenheid."] },
+    ],
+  },
+  // F. Oefenronde plus & min (11 aug 2026, zelfde didactiek als tafels/topografie):
+  // typ het antwoord; in één keer goed = gekend; mis = som komt later terug.
+  {
+    title: "Oefen plus & min!",
+    explanation:
+      "Tijd om **plus- en minsommen** vlot te krijgen — uit je hoofd, tot 100.\n\n" +
+      "Je krijgt **12 sommen** door elkaar: optellen én aftrekken. Typ het antwoord:\n" +
+      "• In **één keer goed** → ✔ die ken je!\n" +
+      "• **Mis?** Je krijgt een hint en mag het nog eens proberen — en die som komt straks nog een keer terug.\n\n" +
+      "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
+    interactiveComponent: makeRekenOefenRonde({ soort: ["optellen", "aftrekken"], aantal: 12, totMax: 100, emoji: "➕", meervoud: "plus- en minsommen" }),
+    checks: [
+      { q: "36 + 47 = ?", options: ["83","73","84","93"], answer: 0, wrongHints: [null, "Vergeet de onthoud-tien niet.", "Bijna — tel de eenheden nog eens.", "Te veel — controleer de tientallen."] },
     ],
   },
 ];

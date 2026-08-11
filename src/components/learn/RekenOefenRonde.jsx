@@ -44,7 +44,9 @@ function maakSom(soort, { tafels, totMax }) {
 }
 
 function maakSommen({ soort, aantal, tafels, totMax }) {
-  const soorten = soort === "mix" ? ["optellen", "aftrekken", "keer", "delen"] : [soort];
+  // soort mag ook een array zijn, bv. ["optellen","aftrekken"] voor een plus/min-ronde.
+  const soorten = Array.isArray(soort) ? soort
+    : soort === "mix" ? ["optellen", "aftrekken", "keer", "delen"] : [soort];
   const sommen = []; const gezien = new Set();
   let poging = 0;
   while (sommen.length < aantal && poging < aantal * 40) {
