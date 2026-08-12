@@ -145,6 +145,9 @@ export default function MijnPagina({
   onGoCito,
   onGoVoortgang,
   onOuderDashboard,
+  userRole,
+  authUser,
+  onLeerkrachtHome,
   onBack,
   onHome,
 }) {
@@ -156,6 +159,25 @@ export default function MijnPagina({
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
   const [week, setWeek] = useState(null);
+  // Gezins-koppeling (Mark 12 aug, "meerdere kinderen in 1 gezin"): is de
+  // kijker een ingelogde ouder met gekoppelde kinderen, toon die dan als
+  // chips in de ouder-weergave — één tik door naar het thuis-overzicht.
+  const [gezinsKinderen, setGezinsKinderen] = useState([]);
+  useEffect(() => {
+    if (!authUser?.id) { setGezinsKinderen([]); return undefined; }
+    let weg = false;
+    supabase.from("parent_child_links")
+      .select("id, child_name, verified")
+      .eq("parent_user_id", authUser.id)
+      .order("created_at", { ascending: true })
+      .then(({ data }) => { if (!weg) setGezinsKinderen(data || []); });
+    return () => { weg = true; };
+  }, [authUser?.id]);
+  const openThuisOverzicht = (kindNaam) => {
+    try { if (kindNaam) localStorage.setItem("lk_ouder_kind", kindNaam); } catch {}
+    track("mijn_naar_ouderdashboard", { via: kindNaam ? "gezinschip" : "knop" });
+    onOuderDashboard?.();
+  };
   // "Wat moet ik kennen in groep X?" — uitklap in het doel-blok (Mark 21:00).
   const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
@@ -515,7 +537,32 @@ export default function MijnPagina({
               </Card>
             )}
 
-            {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
+            {/* ── Leerkracht met Pro (Mark 12 aug): dit ÍS ook jouw persoonlijke
+            pagina — jouw eigen oefenwerk staat hieronder; je klas-werk
+            (toetsen klaarzetten, deelcodes, resultaten) leeft op het
+            leerkracht-overzicht. Eén tik i.p.v. zoeken. ── */}
+        {userRole === "teacher" && onLeerkrachtHome && (
+          <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(124,58,237,0.45)" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
+              <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)" }}>
+                🧑‍🏫 <strong>Jouw klas</strong> — toetsen en oefenwerk klaarzetten, deelcodes en resultaten.
+                <span style={{ color: "var(--color-text-muted, #8899aa)" }}> Hieronder staat je eigen oefenwerk.</span>
+              </div>
+              <button
+                onClick={() => { track("mijn_naar_leerkracht", {}); onLeerkrachtHome(); }}
+                style={{
+                  padding: "9px 15px", borderRadius: 10, border: "none", cursor: "pointer",
+                  background: "rgba(124,58,237,0.25)", color: "#c4b5fd",
+                  fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+                }}
+              >
+                Naar je leerkracht-overzicht →
+              </button>
+            </div>
+          </Card>
+        )}
+
+        {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
             <div role="group" aria-label="Weergave kiezen" style={{
               display: "inline-flex", background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999,
@@ -962,6 +1009,35 @@ export default function MijnPagina({
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
             </Card>
 
+            {/* ── Gezins-kaart (12 aug): ingelogde ouder mét koppelingen ziet
+                hier zijn kinderen — één tik naar het thuis-overzicht, met het
+                juiste kind voorgeselecteerd (localStorage lk_ouder_kind). ── */}
+            {gezinsKinderen.length > 0 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(0,176,255,0.4)" }}>
+                <div style={eyebrowStijl}>Jouw gezin</div>
+                <div style={kaartTitelStijl}>👨‍👩‍👧 Gekoppelde kinderen</div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+                  {gezinsKinderen.map((k) => (
+                    <button
+                      key={k.id}
+                      onClick={() => openThuisOverzicht(k.child_name)}
+                      title={k.verified ? `Bekijk ${k.child_name} in het thuis-overzicht` : "Nog niet bevestigd door je kind"}
+                      style={{
+                        padding: "8px 14px", borderRadius: 999, cursor: "pointer",
+                        border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.12)",
+                        color: "#4fc3f7", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
+                      }}
+                    >
+                      👦 {k.child_name}{k.verified ? "" : " 🔐"}
+                    </button>
+                  ))}
+                </div>
+                <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                  Tik op een naam voor scores, weekrapport-instellingen en het Kwartierplan — alles per kind, in je eigen tempo.
+                </div>
+              </Card>
+            )}
+
             {/* ── Ouder/juf: zelf volgen ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Zelf volgen</div>
@@ -974,7 +1050,7 @@ export default function MijnPagina({
                     een geïnteresseerde ouder moest /ouder zelf zien te vinden. */}
                 {onOuderDashboard && (
                   <button
-                    onClick={() => { track("mijn_naar_ouderdashboard", {}); onOuderDashboard(); }}
+                    onClick={() => openThuisOverzicht(null)}
                     style={{
                       display: "inline-block", margin: "4px 0 10px", padding: "10px 16px",
                       borderRadius: 10, border: "none", cursor: "pointer",

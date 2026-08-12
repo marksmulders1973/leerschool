@@ -96,7 +96,13 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       .order("created_at", { ascending: true })
       .then(({ data }) => {
         setChildren(data || []);
-        if (data?.length && !selectedChild) setSelectedChild(data[0].child_name);
+        // Voorselectie vanaf /mijn (gezins-chip, 12 aug): lk_ouder_kind.
+        let gewenst = null;
+        try { gewenst = localStorage.getItem("lk_ouder_kind"); localStorage.removeItem("lk_ouder_kind"); } catch {}
+        if (data?.length && !selectedChild) {
+          const match = gewenst && data.find((c) => c.child_name === gewenst);
+          setSelectedChild(match ? match.child_name : data[0].child_name);
+        }
       });
   }, [authUser]);
 

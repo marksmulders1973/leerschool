@@ -1175,7 +1175,10 @@ export default function App() {
           }
           streak={streak}
           subscription={subscription}
+          userRole={role}
+          authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onLeerkrachtHome={() => setPage("teacher-home")}
           onResumePath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
