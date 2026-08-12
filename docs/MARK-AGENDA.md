@@ -8,6 +8,10 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **Gmail-concept Voedselbank Lelystad verzenden (1 min):** bedank-reply aan
+  Theo Grootjen + bestuur (bestuur akkoord 12 aug!) mét flyer-links
+  LELYSTAD2027 staat klaar in Concepten — Zapier-taken waren op, dus zelf op
+  verzenden drukken.
 - **LinkedIn (2 min):** Spark Fest-POST 1 persoonlijk reposten + kort bedankje
   aan Inez (pakket is 4 aug geleverd — natuurlijk moment).
 - ~~Teresa (Alkmaar) beantwoorden~~ ✅ **VERSTUURD 12 aug**: 1-pagina-PDF +
