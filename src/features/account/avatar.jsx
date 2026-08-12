@@ -47,8 +47,10 @@ const PLAATJES = [
 ];
 
 // soort: "zelf" (aanpasbaar getekend poppetje) | "plaatje" (exacte illustratie)
-// | "foto" (eigen foto — blijft op het apparaat, wordt nooit geüpload).
-const DEFAULT_CONFIG = { soort: "zelf", basis: "lang", huid: HUID[0], haar: HAAR[0], shirt: SHIRT[0], postuur: "gewoon", plaatje: "p1" };
+// | "foto" (eigen foto — blijft op het apparaat, wordt nooit geüpload)
+// | "kiezer" (Mark's inkleur-avatar 12 aug: gezicht kiezen + haar/huid/ogen
+//   schuiven; het ingekleurde beeld wordt lokaal bewaard als data-URL).
+const DEFAULT_CONFIG = { soort: "zelf", basis: "lang", huid: HUID[0], haar: HAAR[0], shirt: SHIRT[0], postuur: "gewoon", plaatje: "p1", kiezer: null, kiezerKleur: null };
 
 function avatarKey(player) {
   return `lk_avatar:${(player || "").trim() || "speler"}`;
@@ -56,6 +58,24 @@ function avatarKey(player) {
 
 function fotoKey(player) {
   return `lk_avatar_foto:${(player || "").trim() || "speler"}`;
+}
+
+function kiezerKey(player) {
+  return `lk_avatar_kiezer:${(player || "").trim() || "speler"}`;
+}
+
+// Ingekleurd kiezer-beeld: net als de foto een aparte (grotere) sleutel,
+// lokaal op het apparaat.
+export function loadAvatarKiezerBeeld(player) {
+  try { return localStorage.getItem(kiezerKey(player)) || null; } catch { return null; }
+}
+
+export function saveAvatarKiezerBeeld(player, dataUrl) {
+  try {
+    if (dataUrl) localStorage.setItem(kiezerKey(player), dataUrl);
+    else localStorage.removeItem(kiezerKey(player));
+    return true;
+  } catch { return false; }
 }
 
 // Eigen foto: bewust ALLEEN lokaal (localStorage, verkleind) — geen upload,
@@ -88,6 +108,10 @@ export function loadAvatarConfig(player) {
       cfg.fotoUrl = loadAvatarFoto(player);
       if (!cfg.fotoUrl) cfg.soort = "zelf"; // foto weg (ander apparaat/gewist)
     }
+    if (cfg.soort === "kiezer") {
+      cfg.kiezerUrl = loadAvatarKiezerBeeld(player);
+      if (!cfg.kiezerUrl) cfg.soort = "zelf"; // beeld weg (ander apparaat/gewist)
+    }
     return cfg;
   } catch {
     return { ...DEFAULT_CONFIG };
@@ -96,7 +120,7 @@ export function loadAvatarConfig(player) {
 
 export function saveAvatarConfig(player, config) {
   try {
-    const { fotoUrl, ...rest } = config || {};
+    const { fotoUrl, kiezerUrl, ...rest } = config || {};
     localStorage.setItem(avatarKey(player), JSON.stringify(rest));
   } catch {}
 }
@@ -176,13 +200,17 @@ function Bril() {
 export function AvatarSvg({ config, size = 72, rond = true }) {
   const c = { ...DEFAULT_CONFIG, ...(config || {}) };
 
-  // Eigen foto (alleen lokaal opgeslagen) of exacte illustratie gekozen?
+  // Eigen foto, ingekleurde kiezer-avatar (beide alleen lokaal opgeslagen)
+  // of exacte illustratie gekozen?
   const imgSrc = c.soort === "foto" && c.fotoUrl
     ? c.fotoUrl
-    : c.soort === "plaatje"
-      ? (PLAATJES.find((p) => p.id === c.plaatje) || PLAATJES[0])?.src
-      : null;
+    : c.soort === "kiezer" && c.kiezerUrl
+      ? c.kiezerUrl
+      : c.soort === "plaatje"
+        ? (PLAATJES.find((p) => p.id === c.plaatje) || PLAATJES[0])?.src
+        : null;
   if (imgSrc) {
+    const kiezerRing = c.soort === "kiezer" && c.kiezerKleur;
     return (
       <img
         src={imgSrc}
@@ -192,6 +220,7 @@ export function AvatarSvg({ config, size = 72, rond = true }) {
           width: size, height: size, borderRadius: rond ? "50%" : 12,
           objectFit: "cover", objectPosition: "top", display: "block",
           flexShrink: 0, background: "#2C3E63",
+          ...(kiezerRing ? { border: `${Math.max(2, Math.round(size / 24))}px solid ${c.kiezerKleur}` } : {}),
         }}
       />
     );

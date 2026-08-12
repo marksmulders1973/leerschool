@@ -8,7 +8,8 @@ import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
-import { AvatarSvg, AVATAR_DELEN, AVATAR_PLAATJES, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto } from "./avatar.jsx";
+import { AvatarSvg, AVATAR_DELEN, AVATAR_PLAATJES, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
+import AvatarKleurKiezer from "./AvatarKleurKiezer.jsx";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -464,6 +465,7 @@ export default function MijnPagina({
                     eigen foto (ouderen/leerkrachten). */}
                 <div style={{ display: "flex", gap: 8, marginBottom: 14, flexWrap: "wrap" }}>
                   {[
+                    { id: "kiezer", label: "✨ Kiezen & inkleuren" },
                     { id: "zelf", label: "🎨 Zelf maken" },
                     { id: "plaatje", label: "🖼️ Plaatje" },
                     { id: "foto", label: "📷 Eigen foto" },
@@ -487,6 +489,21 @@ export default function MijnPagina({
                     );
                   })}
                 </div>
+
+                {/* Kiezen & inkleuren: gezicht kiezen + haar/huid/ogen schuiven
+                    (Mark's claude.ai-ontwerp, 12 aug) */}
+                {(avatarConfig.soort || "zelf") === "kiezer" && (
+                  <AvatarKleurKiezer
+                    waarde={avatarConfig.kiezer}
+                    onBewaar={(keuze, beeld, kleurHex) => {
+                      saveAvatarKiezerBeeld(player, beeld);
+                      const nieuw = { ...avatarConfig, soort: "kiezer", kiezer: keuze, kiezerKleur: kleurHex, kiezerUrl: beeld };
+                      setAvatarConfig(nieuw);
+                      saveAvatarConfig(player, nieuw);
+                      track("avatar_kiezer_bewaard", { avatar: keuze.avatarId });
+                    }}
+                  />
+                )}
 
                 {/* Exacte plaatjes */}
                 {(avatarConfig.soort || "zelf") === "plaatje" && (
