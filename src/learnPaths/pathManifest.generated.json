@@ -3604,6 +3604,32 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "geschiedenis-vroeger-en-nu-g5",
+    "file": "./geschiedenisVroegerEnNuG5.js",
+    "title": "Geschiedenis — vroeger en nu (groep 5)",
+    "subject": "geschiedenis",
+    "level": "groep5-6",
+    "emoji": "⏳",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Geschiedenis — tijdsbesef: vroeger/nu, tijdbalk, leven vroeger, middeleeuwen (groep 5)",
+    "triggerKeywords": [
+      "geschiedenis",
+      "vroeger en nu",
+      "tijdbalk",
+      "eeuw",
+      "middeleeuwen",
+      "ridders",
+      "kastelen",
+      "groep 5",
+      "vroeger"
+    ],
+    "intro": "Je eerste geschiedenisles: wat is vroeger, hoe werkt een tijdbalk (en wat is een eeuw?), hoe leefden kinderen honderd jaar geleden — en natuurlijk: ridders en kastelen. Voor groep 5. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "getallen-tot-20-po",
     "file": "./getallenTot20Po.js",
     "title": "Getallen + sommen tot 20 (groep 3-4)",
@@ -6991,6 +7017,32 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "spelling-eerste-woorden-g3",
+    "file": "./spellingEersteWoordenG3.js",
+    "title": "Spelling — je eerste woorden schrijven (groep 3)",
+    "subject": "spelling",
+    "level": "groep3",
+    "emoji": "✍️",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Spelling — luisterwoorden, lange klanken, tweetekenklanken, sch-/-ng (groep 3)",
+    "triggerKeywords": [
+      "spelling",
+      "eerste woorden",
+      "luisterwoorden",
+      "lange klanken",
+      "oe ie eu",
+      "sch",
+      "ng",
+      "groep 3",
+      "woorden schrijven"
+    ],
+    "intro": "Je eerste woorden schrijven: schrijf wat je hoort (k-a-t → kat), lange klanken (maan, boom), oe/ie/eu-woorden en de lastige vriendjes sch- en -ng. Voor groep 3. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "spelling-ei-ij-au-ou",
     "file": "./spellingEiIjAuOu.js",
     "title": "Spelling — ei vs ij + au vs ou",
@@ -7324,6 +7376,31 @@
     "checkCount": 40,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "taal-leren-lezen-g3",
+    "file": "./taalLerenLezenG3.js",
+    "title": "Taal — leren lezen (groep 3)",
+    "subject": "taal",
+    "level": "groep3",
+    "emoji": "📗",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Taal — aanvankelijk lezen: klanken, rijmen, hakken/plakken, eerste woorden en zinnen (groep 3)",
+    "triggerKeywords": [
+      "leren lezen",
+      "letters",
+      "klanken",
+      "rijmen",
+      "hakken en plakken",
+      "groep 3",
+      "aanvankelijk lezen",
+      "eerste woordjes"
+    ],
+    "intro": "Leren lezen, stap voor stap: klanken horen, rijmen, hakken en plakken (k-a-t → kat), je eerste woordjes en een echt zinnetje. Voor groep 3 — samen oefenen mag! ~15 min.",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
   },
   {
     "id": "taal-woorden-zinnen-g4",
