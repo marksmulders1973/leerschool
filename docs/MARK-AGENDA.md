@@ -10,11 +10,12 @@
 
 - **LinkedIn (2 min):** Spark Fest-POST 1 persoonlijk reposten + kort bedankje
   aan Inez (pakket is 4 aug geleverd — natuurlijk moment).
-- **Rondleiding Voedselbank Alkmaar inplannen** — Teresa Hwan bood een
-  rondleiding aan (di- of wo- of do-OCHTEND, Pettemerstraat 39B, Alkmaar,
-  secretaris@voedselbankalkmaar.nl / 06-5239 5673). Jij zou zelf mailen voor
-  een datum "na de vakantie" — dat is nu. Meteen meevragen: hi-res logo +
-  hun flyer-feedback.
+- **Teresa (Alkmaar) beantwoorden — reply + 2 bijlagen versturen (1 min):**
+  zij vroeg 12 aug om een 1-pagina-flyer + Word-versie; beide staan klaar op
+  je bureaublad (flyer-Alkmaar-1pagina.pdf + flyer-Alkmaar-bewerkbaar.docx),
+  concept-tekst in de chat. In dezelfde mail: rondleiding voorstellen op
+  **di-ochtend 25 aug** (jouw voedselbank-dag; zij is er di/wo/do 8:00-12:30,
+  Pettemerstraat 39B, 06-5239 5673).
 - **Bezoek Voedselbank Rotterdam inplannen** — afspraak met Amber (werkt
   di + do, MarCom@voedselbank.nl); setje van 50 gedrukte flyers meenemen
   voor intake/winkels. Ook toegezegd "na de vakantie".

@@ -66,6 +66,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 **Stand: 3 volledig af (2/4/5), 3 deels (1/3/8), 3 open (6/7/9 — deels Mark/extern).**
 
 ## 📈 Trend-log (nieuwste boven)
+| 12 aug 2026 | **3 (↑)** | — (browser-tool niet geladen deze sessie) | events_echt 546/7d · 59/24u (12 uids; deels eigen avatar-test-avond) | +0 / 16 (12 dgn stil; wél 1 Kwartiercheck-doorloop+mail-aanvraag) | 🔥 **Teresa (Alkmaar) vroeg 07:20 om 1-pagina + Word → zelfde ochtend geleverd** (flyer-print-CSS 1-A4-garantie + echte .docx; concept-reply mét rondleiding-voorstel di 25 aug klaar) · v259-262: Mark's claude.ai-avatarkiezer **byte-identiek** live op /mijn (potlood → direct het artifact; les: artifacts letterlijk overnemen) · agent-check: role_selected≫name_entered = flow-artefact, geen bug; nieuwe ideeën #28 partner-pakket-2.0, #29 sept-vangnet ALKMAAR2027, #30 quiz_completed-event |
 | 11 aug 2026 | **1 (=)** | — (niet gemeten deze sessie) | events_echt 775/7d · 136/24u (16 apparaten; deels eigen checks) | +0 / 16 (11 dgn stil) | 🔥 **Alkmaar AKKOORD (sept-verspreiding)** + School's cool Twente warm (teambespreking wk 17) · v240-246: WhatsApp-fixes + Ken-ze-allemaal-oefenronden (topo NL/EU/wereld + tafels/delen/plus-min, kruis-labels) · partner-scan ALKMAAR2027 (5 aug, vermoedelijk Teresa's test) |
 | Datum | Noord-ster 7d | Bezoekers 7d | Pageviews 7d | Waitlist (24u/tot) | FB bereik 28d |
 |-------|---------------|--------------|--------------|--------------------|---------------|
