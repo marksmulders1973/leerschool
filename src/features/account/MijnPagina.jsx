@@ -8,7 +8,7 @@ import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
-import { AvatarSvg, AVATAR_DELEN, AVATAR_PLAATJES, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
+import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 
@@ -221,12 +221,6 @@ export default function MijnPagina({
     })();
     return () => { cancelled = true; };
   }, [player, weergave, week]);
-
-  const zetAvatarDeel = (deel, waarde) => {
-    const nieuw = { ...avatarConfig, [deel]: waarde };
-    setAvatarConfig(nieuw);
-    saveAvatarConfig(player, nieuw);
-  };
 
   // Eigen foto (Mark 11 aug: "oudere leerlingen en leraren willen gewoon hun
   // foto"): verkleinen naar 256px en ALLEEN lokaal bewaren — geen upload.
@@ -468,11 +462,14 @@ export default function MijnPagina({
               </div>
             </Card>
 
-            {/* ── Avatar-maker: zelf je poppetje samenstellen ── */}
+            {/* ── Avatar bewerken = Mark's AvatarKiezer (exact claude.ai-
+                artifact, ONGEWIJZIGD; opslag via avatarStorageShim, beeld-
+                vangst via de wrapper). Oude poppetjes-maker + plaatjes-keuze
+                verwijderd op Mark's verzoek 12 aug ("potlood direct naar
+                jouw programma"); eigen-foto blijft als kleine optie eronder. */}
             {avatarBewerken && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.4)" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>✏️ Maak je eigen poppetje</div>
+                <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 10 }}>
                   <button
                     onClick={() => setAvatarBewerken(false)}
                     style={{
@@ -484,180 +481,36 @@ export default function MijnPagina({
                     ✓ Klaar
                   </button>
                 </div>
-                {/* Soort-keuze (Mark 11 aug): exact plaatje, zelf-maker of
-                    eigen foto (ouderen/leerkrachten). */}
-                <div style={{ display: "flex", gap: 8, marginBottom: 14, flexWrap: "wrap" }}>
-                  {[
-                    { id: "kiezer", label: "✨ Kiezen & inkleuren" },
-                    { id: "zelf", label: "🎨 Zelf maken" },
-                    { id: "plaatje", label: "🖼️ Plaatje" },
-                    { id: "foto", label: "📷 Eigen foto" },
-                  ].map((s) => {
-                    const actief = (avatarConfig.soort || "zelf") === s.id;
-                    return (
-                      <button
-                        key={s.id}
-                        aria-pressed={actief}
-                        onClick={() => { if (s.id !== "foto" || avatarConfig.fotoUrl) zetAvatarDeel("soort", s.id); else zetAvatarDeel("soort", "foto"); }}
-                        style={{
-                          padding: "8px 14px", borderRadius: 999, cursor: "pointer",
-                          border: actief ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.18)",
-                          background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
-                          color: actief ? "#69f0ae" : "var(--color-text)",
-                          fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)",
-                        }}
-                      >
-                        {s.label}
-                      </button>
-                    );
-                  })}
+
+                <div ref={kiezerWrap} style={{ borderRadius: 18, overflow: "hidden" }}>
+                  <AvatarKiezer onChange={vangKiezerKeuze} />
                 </div>
 
-                {/* Mark's AvatarKiezer — exact claude.ai-artifact, ONGEWIJZIGD
-                    (opslag via avatarStorageShim; beeld-vangst via wrapper) */}
-                {(avatarConfig.soort || "zelf") === "kiezer" && (
-                  <div ref={kiezerWrap} style={{ borderRadius: 18, overflow: "hidden" }}>
-                    <AvatarKiezer onChange={vangKiezerKeuze} />
-                  </div>
-                )}
-
-                {/* Exacte plaatjes */}
-                {(avatarConfig.soort || "zelf") === "plaatje" && (
-                  <div style={{ marginBottom: 4 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Kies een plaatje</div>
-                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                      {AVATAR_PLAATJES.map((p) => {
-                        const actief = avatarConfig.plaatje === p.id;
-                        return (
-                          <button
-                            key={p.id}
-                            onClick={() => zetAvatarDeel("plaatje", p.id)}
-                            aria-pressed={actief}
-                            title={p.label}
-                            style={{
-                              padding: 3, borderRadius: 14, cursor: "pointer", lineHeight: 0,
-                              border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.2)",
-                              background: "rgba(255,255,255,0.04)",
-                            }}
-                          >
-                            <img src={p.src} alt={p.label} style={{ width: 72, height: 90, objectFit: "cover", objectPosition: "top", borderRadius: 11, display: "block" }} />
-                          </button>
-                        );
-                      })}
-                    </div>
-                    <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8, lineHeight: 1.45 }}>
-                      Er komen steeds meer plaatjes bij — wil je zelf kleuren kiezen, gebruik dan 🎨 Zelf maken.
-                    </div>
-                  </div>
-                )}
-
-                {/* Eigen foto — blijft op dit apparaat */}
-                {(avatarConfig.soort || "zelf") === "foto" && (
-                  <div style={{ marginBottom: 4 }}>
-                    {avatarConfig.fotoUrl ? (
-                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                        <img src={avatarConfig.fotoUrl} alt="Jouw foto" style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", display: "block" }} />
-                        <div style={{ flex: 1 }}>
-                          <label style={{ display: "inline-block", padding: "8px 14px", borderRadius: 9, background: "rgba(0,200,83,0.15)", color: "#69f0ae", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)", marginRight: 8 }}>
-                            Andere foto
-                            <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
-                          </label>
-                          <button onClick={wisFoto} style={{ padding: "8px 14px", borderRadius: 9, border: "1px solid rgba(255,82,82,0.4)", background: "rgba(255,82,82,0.1)", color: "#ff8a80", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
-                            Foto weghalen
-                          </button>
-                        </div>
+                {/* Eigen foto (Mark 11 aug, ouderen/leerkrachten) — blijft op dit apparaat */}
+                <div style={{ marginTop: 14 }}>
+                  {avatarConfig.soort === "foto" && avatarConfig.fotoUrl ? (
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <img src={avatarConfig.fotoUrl} alt="Jouw foto" style={{ width: 56, height: 56, borderRadius: "50%", objectFit: "cover", display: "block" }} />
+                      <div style={{ flex: 1 }}>
+                        <label style={{ display: "inline-block", padding: "8px 14px", borderRadius: 9, background: "rgba(0,200,83,0.15)", color: "#69f0ae", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)", marginRight: 8 }}>
+                          Andere foto
+                          <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
+                        </label>
+                        <button onClick={wisFoto} style={{ padding: "8px 14px", borderRadius: 9, border: "1px solid rgba(255,82,82,0.4)", background: "rgba(255,82,82,0.1)", color: "#ff8a80", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
+                          Foto weghalen
+                        </button>
                       </div>
-                    ) : (
-                      <label style={{ display: "inline-block", padding: "10px 18px", borderRadius: 10, background: "rgba(0,200,83,0.18)", color: "#69f0ae", fontWeight: 800, fontSize: 13.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
-                        📷 Kies een foto…
-                        <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
-                      </label>
-                    )}
-                    <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8, lineHeight: 1.5 }}>
-                      🔒 Je foto blijft <strong style={{ color: "var(--color-text)" }}>alleen op dit apparaat</strong> — hij wordt nergens geüpload en andere leerlingen zien hem nooit. Vooral bedoeld voor oudere leerlingen, ouders en leerkrachten.
                     </div>
-                  </div>
-                )}
-
-                {(avatarConfig.soort || "zelf") === "zelf" && (<>
-                {/* Stap 1: kies een basis-personage (Mark 21:04: "laat er 1
-                    kiezen als basis, dan de kleur nog persoonlijker maken") */}
-                <div style={{ marginBottom: 12 }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Kies je poppetje</div>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    {AVATAR_DELEN.BASES.map((b) => {
-                      const actief = (avatarConfig.basis || "lang") === b.id;
-                      return (
-                        <button
-                          key={b.id}
-                          onClick={() => zetAvatarDeel("basis", b.id)}
-                          aria-pressed={actief}
-                          title={b.label}
-                          style={{
-                            padding: 3, borderRadius: 12, cursor: "pointer", lineHeight: 0,
-                            border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.2)",
-                            background: actief ? "rgba(0,200,83,0.12)" : "rgba(255,255,255,0.04)",
-                          }}
-                        >
-                          <AvatarSvg config={{ ...avatarConfig, basis: b.id }} size={46} rond={false} />
-                        </button>
-                      );
-                    })}
+                  ) : (
+                    <label style={{ display: "inline-block", padding: "8px 14px", borderRadius: 9, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.15)", color: "var(--color-text-muted, #8899aa)", fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: "var(--font-display)" }}>
+                      📷 Liever een eigen foto? Kies er een…
+                      <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => kiesFoto(e.target.files?.[0])} />
+                    </label>
+                  )}
+                  <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6, lineHeight: 1.5 }}>
+                    🔒 Een eigen foto blijft <strong style={{ color: "var(--color-text)" }}>alleen op dit apparaat</strong> — vooral voor oudere leerlingen, ouders en leerkrachten.
                   </div>
                 </div>
-                {[
-                  { deel: "huid", label: "Huidskleur", opties: AVATAR_DELEN.HUID },
-                  { deel: "haar", label: "Haarkleur", opties: AVATAR_DELEN.HAAR },
-                  { deel: "shirt", label: "Shirt", opties: AVATAR_DELEN.SHIRT },
-                ].map((rij) => (
-                  <div key={rij.deel} style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>{rij.label}</div>
-                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                      {rij.opties.map((kleur) => {
-                        const actief = avatarConfig[rij.deel] === kleur;
-                        return (
-                          <button
-                            key={kleur}
-                            onClick={() => zetAvatarDeel(rij.deel, kleur)}
-                            aria-label={`${rij.label} kiezen`}
-                            aria-pressed={actief}
-                            style={{
-                              width: 36, height: 36, borderRadius: "50%", cursor: "pointer",
-                              background: kleur,
-                              border: actief ? "3px solid #69f0ae" : "2px solid rgba(255,255,255,0.25)",
-                              boxShadow: actief ? "0 0 0 2px rgba(0,200,83,0.3)" : "none",
-                            }}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-                <div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Postuur</div>
-                  <div style={{ display: "flex", gap: 8 }}>
-                    {AVATAR_DELEN.POSTUUR.map((p) => {
-                      const actief = (avatarConfig.postuur || "gewoon") === p.id;
-                      return (
-                        <button
-                          key={p.id}
-                          onClick={() => zetAvatarDeel("postuur", p.id)}
-                          aria-pressed={actief}
-                          style={{
-                            flex: 1, padding: "9px 0", borderRadius: 10, cursor: "pointer",
-                            border: actief ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.18)",
-                            background: actief ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
-                            color: actief ? "#69f0ae" : "var(--color-text)",
-                            fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)",
-                          }}
-                        >
-                          {p.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-                </>)}
               </Card>
             )}
 
