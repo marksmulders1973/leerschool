@@ -3,9 +3,12 @@ import { useState, useEffect, useRef, useCallback } from "react";
 /* ------------------------------------------------------------------
    Avatarkiezer met kleurregelaars (Mark's claude.ai-ontwerp, 12 aug).
    Elk avatar bestaat uit twee bestanden in public/avatars/kiezer/:
-     <id>.jpg        = de tekening (200x200)
+     <id>.jpg        = de tekening (600x600, uitgesneden uit Mark's
+                       originele hi-res portretten)
      <id>-masker.png = het gebiedenmasker: rood = haar, groen = huid,
-                       blauw = ogen
+                       blauw = ogen (uit het artifact, incl. oren-fix;
+                       opgeschaald naar 600 — pijplijn: Desktop\Studiebol\
+                       avatar-check\hires-tool.html)
    Het inkleuren gebeurt in een canvas: per gebied wordt de kleur
    vervangen, maar licht en schaduw uit de tekening blijven staan.
    Opslag loopt via de ouder-component (avatar.jsx-systeem), niet hier.
@@ -70,7 +73,7 @@ const KLEUREN = [
   { id: "lila", naam: "Lila", hex: "#A98BE0" },
 ];
 
-const N = 200;
+const N = 600;
 
 /* --- inkleuren --------------------------------------------------- */
 
@@ -135,32 +138,38 @@ function kleurIn(lagen, av, doelen) {
   return uit;
 }
 
-/* --- vormgeving (Mark's artifact-stijl, fonts via app-tokens) ----- */
+/* --- vormgeving (exact het artifact; fonts laadt de app al zelf) --- */
 
 const CSS = `
 .lkav {
   --navy:#14264D; --navy-zacht:#43547C; --papier:#EEF3FB; --wit:#fff; --lijn:#D6E0F0;
-  font-family:var(--font-body,'Nunito',ui-sans-serif,system-ui,sans-serif); color:var(--navy);
-  background:var(--papier); border-radius:18px; padding:18px 16px 22px; box-sizing:border-box;
+  font-family:'Nunito',ui-sans-serif,system-ui,sans-serif; color:var(--navy);
+  background:var(--papier); border-radius:18px; padding:22px 18px 40px; box-sizing:border-box;
 }
 .lkav *,.lkav *::before,.lkav *::after{box-sizing:border-box;}
-.lkav-sub{margin:0 0 18px;font-size:14px;color:var(--navy-zacht);}
+.lkav-binnen{max-width:760px;margin:0 auto;}
+.lkav-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--navy-zacht);margin:0 0 10px;}
+.lkav-merkje{width:14px;height:14px;background:#8CC63F;border-radius:0 100% 0 0;}
+.lkav h1{font-family:'Fredoka',sans-serif;font-weight:600;font-size:clamp(28px,7vw,42px);
+  line-height:1.05;margin:0 0 6px;letter-spacing:-.01em;}
+.lkav-sub{margin:0 0 22px;font-size:15px;color:var(--navy-zacht);}
 
 .lkav-voorbeeld{display:flex;align-items:center;gap:16px;background:var(--wit);
-  border:1px solid var(--lijn);border-radius:20px;padding:16px;margin-bottom:22px;}
+  border:1px solid var(--lijn);border-radius:20px;padding:16px;margin-bottom:26px;}
 .lkav-groot{position:relative;width:132px;height:132px;flex:none;}
 .lkav-kwartier{position:absolute;inset:0;border-radius:0 100% 0 0;
   transition:background-color .35s ease,transform .45s cubic-bezier(.2,.9,.3,1.2);}
 .lkav-groot.puls .lkav-kwartier{transform:rotate(-8deg) scale(1.04);}
 .lkav-groot canvas{position:absolute;left:8%;top:8%;width:84%;height:84%;border-radius:50%;
   background:var(--wit);border:3px solid var(--wit);}
-.lkav-vt h3{font-family:var(--font-display,'Fredoka',sans-serif);font-weight:600;font-size:18px;margin:0 0 4px;}
+.lkav-vt h2{font-family:'Fredoka',sans-serif;font-weight:600;font-size:19px;margin:0 0 4px;}
 .lkav-vt p{margin:0;font-size:14px;color:var(--navy-zacht);}
 
-.lkav-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
-  color:var(--navy-zacht);margin:0 0 10px;}
-.lkav-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:10px;
-  margin:0 0 22px;padding:0;list-style:none;}
+.lkav-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--navy-zacht);margin:0 0 12px;}
+.lkav-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:12px;
+  margin:0 0 28px;padding:0;list-style:none;}
 .lkav-tegel{position:relative;width:100%;aspect-ratio:1/1;padding:0;border:2px solid transparent;
   border-radius:18px;background:var(--wit);cursor:pointer;overflow:hidden;
   transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
@@ -176,33 +185,33 @@ const CSS = `
   background:var(--navy);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;}
 
 .lkav-regelaars{background:var(--wit);border:1px solid var(--lijn);border-radius:20px;
-  padding:16px 16px 4px;margin:0 0 22px;}
-.lkav-rij{margin:0 0 18px;}
+  padding:18px 18px 6px;margin:0 0 26px;}
+.lkav-rij{margin:0 0 20px;}
 .lkav-rijkop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px;}
-.lkav-rijkop span:first-child{font-family:var(--font-display,'Fredoka',sans-serif);font-size:15px;font-weight:600;}
+.lkav-rijkop span:first-child{font-family:'Fredoka',sans-serif;font-size:16px;font-weight:600;}
 .lkav-waarde{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--navy-zacht);}
 .lkav-stip{width:15px;height:15px;border-radius:50%;border:2px solid var(--lijn);}
 .lkav-stip.leeg{background:repeating-linear-gradient(45deg,#fff,#fff 3px,#D6E0F0 3px,#D6E0F0 6px);}
 .lkav-schuif{width:100%;accent-color:#14264D;height:26px;cursor:pointer;}
 .lkav-schuif:focus-visible{outline:3px solid var(--navy);outline-offset:4px;}
 
-.lkav-kleuren{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding:0;list-style:none;}
-.lkav-swatch{width:42px;height:42px;border-radius:0 100% 0 0;border:3px solid transparent;
+.lkav-kleuren{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;padding:0;list-style:none;}
+.lkav-swatch{width:44px;height:44px;border-radius:0 100% 0 0;border:3px solid transparent;
   cursor:pointer;padding:0;transition:transform .18s ease,border-color .18s ease;}
 .lkav-swatch:hover{transform:scale(1.08);}
 .lkav-swatch:focus-visible{outline:3px solid var(--navy);outline-offset:3px;}
 .lkav-swatch[aria-pressed="true"]{border-color:var(--navy);transform:scale(1.08);}
 
 .lkav-acties{display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
-.lkav-knop{font-family:var(--font-display,'Fredoka',sans-serif);font-size:15px;font-weight:600;border-radius:999px;
-  padding:12px 22px;cursor:pointer;border:2px solid var(--navy);
+.lkav-knop{font-family:'Fredoka',sans-serif;font-size:16px;font-weight:600;border-radius:999px;
+  padding:13px 24px;cursor:pointer;border:2px solid var(--navy);
   transition:transform .15s ease,background-color .2s ease;}
 .lkav-knop:active{transform:scale(.97);}
 .lkav-knop:focus-visible{outline:3px solid var(--navy);outline-offset:3px;}
 .lkav-primair{background:var(--navy);color:#fff;}
 .lkav-primair.klaar{background:#8CC63F;border-color:#8CC63F;color:var(--navy);}
 .lkav-secundair{background:transparent;color:var(--navy);}
-.lkav-melding{font-size:13.5px;color:var(--navy-zacht);margin:12px 0 0;min-height:18px;}
+.lkav-melding{font-size:14px;color:var(--navy-zacht);margin:14px 0 0;min-height:20px;}
 
 @media (max-width:420px){ .lkav-voorbeeld{flex-direction:column;align-items:flex-start;} }
 @media (prefers-reduced-motion:reduce){ .lkav *{transition:none!important;animation:none!important;} }
@@ -306,6 +315,9 @@ export default function AvatarKleurKiezer({ waarde, onBewaar }) {
   return (
     <div className="lkav">
       <style>{CSS}</style>
+      <div className="lkav-binnen">
+      <p className="lkav-eyebrow"><span className="lkav-merkje" aria-hidden="true" />Leerkwartier</p>
+      <h1>Maak je eigen avatar</h1>
       <p className="lkav-sub">Kies een gezicht en schuif daarna naar de kleur van je haar, huid en ogen.</p>
 
       <div className="lkav-voorbeeld">
@@ -315,7 +327,7 @@ export default function AvatarKleurKiezer({ waarde, onBewaar }) {
             aria-label={`Jouw avatar: ${avatar.alt}, haar ${HAAR[haar].naam.toLowerCase()}, huid ${HUID[huid].naam.toLowerCase()}, ogen ${OGEN[ogen].naam.toLowerCase()}`} />
         </div>
         <div className="lkav-vt">
-          <h3>Zo zie jij eruit</h3>
+          <h2>Zo zie jij eruit</h2>
           <p>{avatar.alt}</p>
         </div>
       </div>
@@ -361,6 +373,7 @@ export default function AvatarKleurKiezer({ waarde, onBewaar }) {
         <button type="button" className="lkav-knop lkav-secundair" onClick={verrasMij}>Verras me</button>
       </div>
       <p className="lkav-melding" role="status">{melding}</p>
+      </div>
     </div>
   );
 }
