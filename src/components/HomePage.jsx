@@ -6,12 +6,9 @@ import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import PartnerWelkom from "./PartnerWelkom.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
-import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { BRAND } from "../brand.js";
-import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import supabase from "../supabase.js";
-import { track, bronDatumTijd } from "../utils.js";
-import { getSocialVraag, vraagVanVandaagId } from "../socialVragen.js";
+import { track } from "../utils.js";
 import { OUDER_QUOTES } from "../data/ouderQuotes.js";
 import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import usePwaInstall from "../shared/usePwaInstall.js";
@@ -103,126 +100,6 @@ const ONBOARDING_STEPS = [
 // ervaart direct een Doorstroomtoets-vraag i.p.v. eerst een keuzescherm; na het
 // antwoord een nudge de gratis-trechter in. Rol/niveau + leeftijdscheck blijven
 // gewoon bestaan (gebeuren bij Start gratis / account).
-function ProefVraagKaart({ onStart }) {
-  // 🗞️ Actuele Jeugdjournaal-vraag heeft voorrang (Mark 2026-07-03: home
-  // toonde de pool-vraag terwijl /vandaag al actueel was — verwarrend).
-  // Pool rendert direct; we wisselen alleen zolang er niet geantwoord is.
-  const [actueel, setActueel] = useState(null);
-  const [chosen, setChosen] = useState(null);
-  const chosenRef = useRef(false);
-  useEffect(() => {
-    let weg = false;
-    fetch("/api/actuele-vraag")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (weg || chosenRef.current || !d?.actueel?.vraag?.options) return;
-        const v = d.actueel.vraag;
-        setActueel({ id: v.id, tekst: v.tekst || "", vraag: v.vraag, options: v.options, answer: v.answer, actueel: true, emoji: v.emoji || "🗞️", bronTitel: d.actueel.bron_titel, bronUrl: d.actueel.bron_url, bronDatum: d.actueel.datum, bronCreated: d.actueel.created_at });
-      })
-      .catch(() => {});
-    return () => { weg = true; };
-  }, []);
-  const vraag = actueel || getSocialVraag(vraagVanVandaagId());
-  // E-mail-capture op het hoogste-motivatie-moment (Mark 2026-06-20): ná het
-  // beantwoorden van de proefvraag — veel meer bezoekers halen dit dan een
-  // hele toets afronden. Optioneel: de "Ga verder"-knop blijft, dus geen gate.
-  const [aangemeld, setAangemeld] = useState(() => {
-    try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
-  });
-  if (!vraag) return null;
-  const goed = chosen != null && chosen === vraag.answer;
-  return (
-    <div className="lk-content-wide" style={{
-      margin: "0 auto 16px", maxWidth: 520,
-      background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.16)",
-      borderRadius: 16, padding: "14px 16px",
-    }}>
-      <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "#ffd54f", marginBottom: vraag.actueel ? 3 : 8, letterSpacing: 0.3 }}>
-        {vraag.actueel ? "🗞️ De vraag van de dag — uit het Jeugdjournaal" : "🎯 Probeer meteen de vraag van de dag"}
-      </div>
-      {vraag.actueel && (
-        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 8, lineHeight: 1.4 }}>
-          Bron: NOS Jeugdjournaal
-          {vraag.bronTitel ? (
-            <> — {vraag.bronUrl
-              ? <a href={vraag.bronUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#90caf9" }}>{vraag.bronTitel}</a>
-              : vraag.bronTitel}</>
-          ) : null}
-          {bronDatumTijd(vraag.bronDatum, vraag.bronCreated) ? ` · ${bronDatumTijd(vraag.bronDatum, vraag.bronCreated)}` : ""}
-        </div>
-      )}
-      {vraag.doelgroep && (
-        <div style={{ display: "inline-block", background: "rgba(124,58,237,0.18)", border: "1px solid rgba(167,139,250,0.4)", color: "#c4b5fd", borderRadius: 999, padding: "4px 12px", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, marginBottom: 8 }}>
-          {vraag.doelgroep}
-        </div>
-      )}
-      {vraag.tekst && (
-        <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "rgba(255,255,255,0.9)", lineHeight: 1.55, marginBottom: 10, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 10, padding: "10px 12px", whiteSpace: "pre-line" }}>
-          {String(vraag.tekst).replace(/\*\*/g, "")}
-        </div>
-      )}
-      <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "#fff", lineHeight: 1.5, marginBottom: 12 }}>
-        {String(vraag.vraag || "").replace(/\*\*/g, "")}
-      </div>
-      {vraag.bronAfbeelding?.src && (
-        <img src={vraag.bronAfbeelding.src} alt={vraag.bronAfbeelding.alt || "Afbeelding bij de vraag"} loading="lazy"
-          style={{ display: "block", width: "100%", maxWidth: 360, margin: "0 auto 12px", borderRadius: 12 }} />
-      )}
-      <div style={{ display: "grid", gap: 8 }}>
-        {(vraag.options || []).map((opt, i) => {
-          const isChosen = chosen === i;
-          const isAns = i === vraag.answer;
-          let bg = "rgba(255,255,255,0.06)", border = "1px solid rgba(255,255,255,0.18)";
-          if (chosen != null) {
-            if (isAns) { bg = "rgba(0,200,83,0.18)"; border = "1.5px solid #00C853"; }
-            else if (isChosen) { bg = "rgba(255,82,82,0.16)"; border = "1.5px solid #ff5252"; }
-          }
-          return (
-            <button key={i} type="button" disabled={chosen != null}
-              onClick={() => { chosenRef.current = true; setChosen(i); telAntwoordVoorVriend(); track("home_proefvraag_answered", { goed: i === vraag.answer, actueel: !!vraag.actueel }); }}
-              style={{
-                textAlign: "left", padding: "10px 12px", borderRadius: 10,
-                background: bg, border, color: "#fff",
-                fontFamily: "var(--font-body)", fontSize: 14.5,
-                cursor: chosen != null ? "default" : "pointer",
-              }}>
-              {opt}{chosen != null && isAns ? "  ✓" : ""}
-            </button>
-          );
-        })}
-      </div>
-      {chosen != null && (
-        <div style={{ marginTop: 12 }}>
-          <div style={{ fontSize: 14, color: "rgba(255,255,255,0.9)", marginBottom: 10, lineHeight: 1.5 }}>
-            {goed
-              ? "✅ Goed! Zo voelt elke vraag — met uitleg op 3 niveaus tot je 'm écht snapt."
-              : "Geen zorgen — in de app krijg je uitleg op 3 niveaus tot je 'm wél snapt."}
-          </div>
-          {!aangemeld && (
-            <div style={{ marginBottom: 12 }}>
-              <GratisLesmateriaal
-                source="home-proefvraag"
-                compact
-                onSubmitted={() => setAangemeld(true)}
-                title={<><span aria-hidden="true">📩</span> Krijg elke week zo'n vraag — gratis in je mail</>}
-              />
-            </div>
-          )}
-          <button type="button" onClick={onStart}
-            style={{
-              width: "100%", cursor: "pointer", border: "none",
-              background: "linear-gradient(135deg, #ffd54f, #ffb300)", color: "#1a1a00",
-              borderRadius: 999, padding: "13px",
-              fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800,
-            }}>
-            Ga verder — gratis oefenen →
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
 // 🤝 Deel-actie-knop (Mark 29 jul 2026): "win" → weggeven. Toont live hoeveel
 // van de 50 Deel-actie-plekken (Familie gratis tot aug 2027) nog vrij zijn.
 // Teller onbereikbaar → tekst zonder aantal; alle plekken vergeven → terug
@@ -575,9 +452,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   return (
     <div style={{ ...styles.page, background: "linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%)" }}>
-      {/* Losse vraag-van-de-dag-banner verwijderd (Mark 2026-06-14): de
-          interactieve ProefVraagKaart hieronder ÍS nu de vraag van de dag
-          (dagelijks roterend via vraagVanVandaagId). Twee vliegen in één klap. */}
+      {/* Vraag-van-de-dag leeft op /vandaag (Mark 11 aug: home rustig);
+          ProefVraagKaart-dode-code opgeruimd 12 aug (agent-restpunt). */}
       {/* Bedankt-toast na delen */}
       {shareToast && (
         <div style={{
@@ -782,14 +658,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
               color: "rgba(255,255,255,0.72)", marginTop: 14,
             }}>
+              {/* Overzichts-snoei 12 aug (Mark: "home overzichtelijk"): de
+                  tweede regel ("ook ná 2026…") weg — dat verhaal staat op
+                  Wat kost het?; één rustige vertrouwensregel is genoeg. */}
               ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
-              <br />
-              {/* Sociale bewijskracht (Mark 17 jul): bewust "bezoekers per maand"
-                  — eerlijk en verifieerbaar (Vercel ~600/30d); géén opgeblazen
-                  "leerlingen"-claim. Getal ~kwartaalgewijs bijwerken. */}
-              <span style={{ color: "rgba(255,255,255,0.55)" }}>
-                Ook ná 2026 blijft de basis gratis; alleen Pro-extra's koop je per kwartier.
-              </span>
             </div>
           </div>
         )}
@@ -806,12 +678,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             Na rolkeuze verschijnen Leren + Test vanzelf in de bottom-nav. */}
         {step === "role" && (() => {
           const tiles = [
-            // ⚠️ LOCKED-CONFIG: Cito-CTA onder Leerling-tegel (Mark akkoord
-            // 2026-05-07). Rationale: bezorgde-Cito-ouder ICP — ouder die
-            // specifiek voor Cito komt klikt direct naar /cito ipv via rol →
-            // vakkenkeuze → cito. NIET aanpassen aan deze CTA-config zonder
-            // Mark's expliciete vraag (label, kleur via gradient #ff6b35→#ff8c42,
-            // onClick → handleFeatureClick("cito")).
+            // ⚠️ Was LOCKED-CONFIG: oranje Cito-CTA onder de Leerling-tegel
+            // (Mark akkoord 2026-05-07, ICP-rationale). VERWIJDERD 12 aug 2026
+            // bij Mark's "home overzichtelijk"-opdracht: de gele hero-knop
+            // "Start gratis met oefenen" doet sindsdien exact hetzelfde
+            // (handleFeatureClick("cito")) op hetzelfde scherm — twee knoppen
+            // naar één doel was de door de agent gemelde dubbeling. Terugzetten
+            // = cta-object teruggeven zoals bij de student-tegel (die houdt
+            // zijn examen-CTA, dat is een ánder doel).
             //
             // Iconen + copy upgrade 2026-05-07 (4-agents review, optie B):
             //   - Lucide line-icons ipv emoji's (OS-onafhankelijk, brand-consistent)
@@ -843,19 +717,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>leerling</span></>),
               sub: "basisschool · groep 3 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
-              cta: {
-                // Mark UX 2026-05-18: "Of ..." op beide CTA's positioneert ze
-                // expliciet als keuze tussen leerling-Cito en student-examen.
-                // Kernwoord "Doorstroomtoets" in goudgeel zodat het direct
-                // visueel aanwijst waar de knop heen leidt.
-                label: (
-                  <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
-                    <DoorstroomtoetsLogo size={18} /> Of direct naar{" "}
-                    <span style={{ color: "#fff176", fontWeight: 800 }}>Doorstroomtoets</span>
-                  </span>
-                ),
-                onClick: () => handleFeatureClick("cito"),
-              },
             },
             // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
             // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
@@ -1096,7 +957,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   color: "rgba(255,255,255,0.6)",
                   marginBottom: 14,
                 }}>
-                  Alles voor groep 3 t/m 8 op één plek · in 2026 helemaal gratis
+                  {/* "gratis" stond hier voor de 3e keer op één scherm — snoei 12 aug */}
+                  Alles voor groep 3 t/m 8 op één plek
                 </div>
                 {/* Titan-declutter 2026-06-28: de 4-knops feature-grid (Eindtoets/
                     Leerpaden/Echte examens/Uitleg) is verwijderd. Reden: 3 van de 4
