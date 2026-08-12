@@ -36,6 +36,7 @@ const PARTNER_NAMEN = {
   IMC2027: "IMC Weekendschool",
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",
+  LELYSTAD2027: "Voedselbank Lelystad",
   MAASTRICHT2027: "Voedselbank Maastricht",
   NIJMEGEN2027: "Voedselbank Nijmegen-Overbetuwe",
   PURMEREND2027: "Voedselbank Purmerend",
