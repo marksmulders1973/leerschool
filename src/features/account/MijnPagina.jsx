@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
 import Card from "../../shared/ui/Card.jsx";
@@ -9,7 +9,8 @@ import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
 import { AvatarSvg, AVATAR_DELEN, AVATAR_PLAATJES, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
-import AvatarKleurKiezer from "./AvatarKleurKiezer.jsx";
+import "./avatarStorageShim.js";
+import AvatarKiezer from "./AvatarKiezer.jsx";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -158,6 +159,28 @@ export default function MijnPagina({
   const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
   const [avatarBewerken, setAvatarBewerken] = useState(false);
+  // Mark's AvatarKiezer (exact artifact) meldt keuzes via onChange; wij
+  // vangen even later het canvas-beeld zodat de avatar overal zichtbaar is.
+  const kiezerWrap = useRef(null);
+  const kiezerTimer = useRef(null);
+  const vangKiezerKeuze = (keuze) => {
+    clearTimeout(kiezerTimer.current);
+    kiezerTimer.current = setTimeout(() => {
+      const canvas = kiezerWrap.current?.querySelector("canvas");
+      if (!canvas) return;
+      try {
+        const beeld = canvas.toDataURL("image/jpeg", 0.9);
+        saveAvatarKiezerBeeld(player, beeld);
+        setAvatarConfig((vorige) => {
+          const nieuw = { ...vorige, soort: "kiezer", kiezer: keuze, kiezerKleur: keuze.kleurHex, kiezerUrl: beeld };
+          saveAvatarConfig(player, nieuw);
+          return nieuw;
+        });
+        track("avatar_kiezer_bewaard", { avatar: keuze.avatarId });
+      } catch {}
+    }, 700);
+  };
+  useEffect(() => () => clearTimeout(kiezerTimer.current), []);
 
   useEffect(() => {
     track("mijn_pagina_open", {});
@@ -490,19 +513,12 @@ export default function MijnPagina({
                   })}
                 </div>
 
-                {/* Kiezen & inkleuren: gezicht kiezen + haar/huid/ogen schuiven
-                    (Mark's claude.ai-ontwerp, 12 aug) */}
+                {/* Mark's AvatarKiezer — exact claude.ai-artifact, ONGEWIJZIGD
+                    (opslag via avatarStorageShim; beeld-vangst via wrapper) */}
                 {(avatarConfig.soort || "zelf") === "kiezer" && (
-                  <AvatarKleurKiezer
-                    waarde={avatarConfig.kiezer}
-                    onBewaar={(keuze, beeld, kleurHex) => {
-                      saveAvatarKiezerBeeld(player, beeld);
-                      const nieuw = { ...avatarConfig, soort: "kiezer", kiezer: keuze, kiezerKleur: kleurHex, kiezerUrl: beeld };
-                      setAvatarConfig(nieuw);
-                      saveAvatarConfig(player, nieuw);
-                      track("avatar_kiezer_bewaard", { avatar: keuze.avatarId });
-                    }}
-                  />
+                  <div ref={kiezerWrap} style={{ borderRadius: 18, overflow: "hidden" }}>
+                    <AvatarKiezer onChange={vangKiezerKeuze} />
+                  </div>
                 )}
 
                 {/* Exacte plaatjes */}
