@@ -171,7 +171,14 @@ export default function MijnPagina({
     try {
       return JSON.parse(localStorage.getItem("lk_namen") || "[]")
         .filter((n) => n && n !== player)
-        .slice(0, 6);
+        .slice(0, 6)
+        .map((n) => {
+          // Rol tonen in de chip (Mark 12 aug: "is daar ook plek voor de
+          // leraar/school?") — juf/student/kind herkenbaar in de lijst.
+          let rol = "";
+          try { rol = (JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}").role) || ""; } catch {}
+          return { naam: n, emoji: rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
+        });
     } catch { return []; }
   }, [player]);
   useEffect(() => {
@@ -495,15 +502,17 @@ export default function MijnPagina({
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0 2px" }}>
                     {andereNamen.map((n) => (
                       <button
-                        key={n}
-                        onClick={() => { track("mijn_profiel_wissel", {}); setWisselOpen(false); onWisselProfiel(n); }}
+                        key={n.naam}
+                        onClick={() => { track("mijn_profiel_wissel", {}); setWisselOpen(false); onWisselProfiel(n.naam); }}
                         style={{
                           padding: "7px 13px", borderRadius: 999, cursor: "pointer",
-                          border: "1px solid rgba(0,200,83,0.4)", background: "rgba(0,200,83,0.1)",
-                          color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                          border: n.emoji === "🧑‍🏫" ? "1px solid rgba(167,139,250,0.5)" : "1px solid rgba(0,200,83,0.4)",
+                          background: n.emoji === "🧑‍🏫" ? "rgba(124,58,237,0.14)" : "rgba(0,200,83,0.1)",
+                          color: n.emoji === "🧑‍🏫" ? "#c4b5fd" : "#69f0ae",
+                          fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
                         }}
                       >
-                        {n}
+                        {n.emoji} {n.naam}
                       </button>
                     ))}
                     {onHome && (
