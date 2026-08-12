@@ -948,9 +948,9 @@
       "delen"
     ],
     "intro": "Cijferend rekenen voor groep 6-8: optellen + onthouden, aftrekken + lenen, vermenigvuldigen, delen (bus-bewerking), praktijk-redactiesommen. ~15 min per deel.",
-    "stepCount": 7,
-    "checkCount": 40,
-    "chapterCount": 5,
+    "stepCount": 8,
+    "checkCount": 41,
+    "chapterCount": 6,
     "estimatedMinutes": 25
   },
   {
@@ -1066,6 +1066,35 @@
     "checkCount": 35,
     "chapterCount": 6,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "continenten-wereld-po",
+    "file": "./continentenWereldPo.js",
+    "title": "Continenten en wereldkennis (groep 6-8)",
+    "subject": "aardrijkskunde",
+    "level": "groep6-8",
+    "emoji": "🌍",
+    "referentieNiveau": "1F",
+    "sloThema": "Aardrijkskunde — wereldoriëntatie",
+    "triggerKeywords": [
+      "continent",
+      "continenten",
+      "oceaan",
+      "oceanen",
+      "wereldkaart",
+      "tijdzone",
+      "wereldwonder",
+      "Europa",
+      "Azië",
+      "Afrika",
+      "Amerika",
+      "Oceanië"
+    ],
+    "intro": "De wereld voor groep 6-8 — 7 continenten, 5 oceanen, beroemde landen + steden, tijdzones, wereldwonderen. ~15 min.",
+    "stepCount": 6,
+    "checkCount": 40,
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "coordinatenstelsel",
@@ -1364,10 +1393,10 @@
       "tafel terug"
     ],
     "intro": "Delen voor groep 5-6 — wat is delen, makkelijke (÷2/5/10), tafel-terug (÷3-9), delen met rest, praktijksommen. Bouwt voort op tafelsPo. ~15 min.",
-    "stepCount": 6,
-    "checkCount": 40,
-    "chapterCount": 6,
-    "estimatedMinutes": 20
+    "stepCount": 7,
+    "checkCount": 41,
+    "chapterCount": 7,
+    "estimatedMinutes": 25
   },
   {
     "id": "dichten-poezie-rijmen-po",
@@ -3597,9 +3626,9 @@
       "verschil"
     ],
     "intro": "Eerste rekensommen — getallen 0 tot 20, plus en min, splitsen + dubbele + truc 'eerst tien maken'. Voor groep 3-4. ~15 min.",
-    "stepCount": 5,
-    "checkCount": 25,
-    "chapterCount": 5,
+    "stepCount": 6,
+    "checkCount": 26,
+    "chapterCount": 6,
     "estimatedMinutes": 15
   },
   {
@@ -4361,7 +4390,7 @@
     ],
     "intro": "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
     "stepCount": 8,
-    "checkCount": 40,
+    "checkCount": 45,
     "chapterCount": 5,
     "estimatedMinutes": 25
   },
@@ -4418,6 +4447,31 @@
     "checkCount": 40,
     "chapterCount": 6,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "korte-teksten-snappen-g4",
+    "file": "./korteTekstenSnappenG4.js",
+    "title": "Korte teksten snappen (groep 4)",
+    "subject": "begrijpend-lezen",
+    "level": "groep4-5",
+    "emoji": "📖",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Begrijpend lezen — start: korte teksten, wie/wat/waar, volgorde, reden (groep 4)",
+    "triggerKeywords": [
+      "begrijpend lezen",
+      "korte teksten",
+      "tekst snappen",
+      "wie wat waar",
+      "volgorde",
+      "eerst daarna",
+      "groep 4",
+      "lezen groep 4"
+    ],
+    "intro": "Eerste stappen begrijpend lezen: van één zin naar een echt tekstje. Wie, wat, waar — het antwoord opzoeken — en wat gebeurde eerst? Voor groep 4. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
   },
   {
     "id": "koude-oorlog-modern-po",
@@ -7272,6 +7326,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "taal-woorden-zinnen-g4",
+    "file": "./taalWoordenZinnenG4.js",
+    "title": "Taal — woorden en zinnen (groep 4)",
+    "subject": "taal",
+    "level": "groep4-5",
+    "emoji": "✏️",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Taal — alfabet, meervoud, verkleinwoorden, tegenstellingen, zinsbouw groep 4",
+    "triggerKeywords": [
+      "alfabet",
+      "meervoud",
+      "verkleinwoord",
+      "verkleinwoorden",
+      "tegenstelling",
+      "tegenstellingen",
+      "hoofdletter",
+      "punt",
+      "vraagteken",
+      "zinnen maken",
+      "groep 4",
+      "taal groep 4"
+    ],
+    "intro": "Taal voor groep 4: het alfabet, meervoud (boek → boeken), verkleinwoorden (boompje), tegenstellingen (warm ↔ koud) en goede zinnen maken. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 21,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "tabellen-grafieken",
     "file": "./tabellenGrafieken.js",
     "title": "Tabellen en grafieken — Doorstroomtoets groep 6-8",
@@ -7347,9 +7430,9 @@
       "9-truc"
     ],
     "intro": "Tafels 1 t/m 10 voor groep 4-5 — wat is een tafel, makkelijke (2/5/10), basis (3/4), lastig (6/7/8/9), slimme trucs (splitsen, 9-truc, verdubbelen). ~15 min.",
-    "stepCount": 6,
-    "checkCount": 40,
-    "chapterCount": 6,
+    "stepCount": 7,
+    "checkCount": 41,
+    "chapterCount": 7,
     "estimatedMinutes": 20
   },
   {
@@ -7595,9 +7678,9 @@
     "sloThema": "aardrijkskunde-topografie-europa",
     "triggerKeywords": [],
     "intro": "",
-    "stepCount": 6,
-    "checkCount": 6,
-    "chapterCount": 4,
+    "stepCount": 7,
+    "checkCount": 7,
+    "chapterCount": 5,
     "estimatedMinutes": 5
   },
   {
@@ -7662,9 +7745,9 @@
     "sloThema": "aardrijkskunde-topografie-nederland",
     "triggerKeywords": [],
     "intro": "",
-    "stepCount": 5,
-    "checkCount": 5,
-    "chapterCount": 5,
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 6,
     "estimatedMinutes": 5
   },
   {
@@ -7678,9 +7761,9 @@
     "sloThema": "aardrijkskunde-topografie-wereld",
     "triggerKeywords": [],
     "intro": "",
-    "stepCount": 6,
-    "checkCount": 6,
-    "chapterCount": 3,
+    "stepCount": 7,
+    "checkCount": 7,
+    "chapterCount": 4,
     "estimatedMinutes": 5
   },
   {
@@ -7916,6 +7999,35 @@
     "checkCount": 40,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "verkeer-veilig-op-straat-g4",
+    "file": "./verkeerVeiligOpStraatG4.js",
+    "title": "Verkeer — veilig op straat en op de fiets (groep 4)",
+    "subject": "verkeer",
+    "level": "groep4-5",
+    "emoji": "🚸",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Verkeer — oversteken, stoep/fietspad, verkeerslichten, fietsregels, borden (groep 4)",
+    "triggerKeywords": [
+      "verkeer",
+      "oversteken",
+      "zebrapad",
+      "stoplicht",
+      "verkeerslicht",
+      "fietsen",
+      "hand uitsteken",
+      "verkeersborden",
+      "stoep",
+      "fietspad",
+      "groep 4",
+      "veilig op straat"
+    ],
+    "intro": "Veilig op straat: oversteken met stop-kijk-luister, waar je loopt en fietst, wat de lichten en de eerste borden betekenen. Voor groep 4. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
   },
   {
     "id": "verkeersregels-veiligheid-po",

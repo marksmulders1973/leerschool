@@ -27,7 +27,13 @@ const OUT_FILE = path.join(ROOT, "pathManifest.generated.json");
 // metadata (id/title/steps) is veilig leesbaar.
 async function importModule(full) {
   if (!full.endsWith(".jsx")) {
-    return import(pathToFileURL(full).href);
+    // Directe import waar het kan; .js-paden die een .jsx-component importeren
+    // (bv. RekenOefenRonde in getallenTot20Po, sinds 11 aug) vallen terug op
+    // esbuild — anders verdwijnen ze stilletjes uit het manifest (bug 12 aug:
+    // 8 paden weggevallen, o.a. tafels-po en getallen-tot-20-po).
+    try {
+      return await import(pathToFileURL(full).href);
+    } catch { /* val door naar esbuild-route */ }
   }
   const esbuild = await import("esbuild");
   const tmp = path.join(os.tmpdir(), `lk-path-${path.basename(full)}-${process.pid}.mjs`);
@@ -39,6 +45,17 @@ async function importModule(full) {
     outfile: tmp,
     logLevel: "silent",
     jsx: "automatic",
+    // Vite-only globals bestaan niet onder Node; supabase.js leest
+    // import.meta.env.VITE_* bij module-load (topografie-keten via GeoTopo).
+    // Placeholder-waarden zijn veilig: createClient netwerkt niet bij aanmaak.
+    define: {
+      "import.meta.env": JSON.stringify({
+        VITE_SUPABASE_URL: "https://placeholder.supabase.co",
+        VITE_SUPABASE_ANON_KEY: "placeholder",
+        DEV: false,
+        PROD: true,
+      }),
+    },
   });
   try {
     return await import(pathToFileURL(tmp).href + `?t=${process.pid}`);
