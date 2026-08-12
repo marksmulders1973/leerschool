@@ -12,7 +12,7 @@ import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvat
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
-import { VAK_INFO, vakkenVoorGroep, vakNotitie } from "./vakkenPerGroep.js";
+import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -42,9 +42,16 @@ const VAK_STATUS = {
   unmeasured: { tekst: "Nog te weinig gedaan om iets te zeggen", kleur: "#8899aa", emoji: "🌱" },
 };
 
-function parseGroep(userLevel) {
-  const m = String(userLevel || "").match(/groep\s*(\d+)/i);
-  return m ? Number(m[1]) : null;
+// Niveau uit het profiel: basisschool ("groep7") óf middelbare school
+// ("klas1", "klas3", …). Mark 12 aug: "en voor de studenten" — de kaart
+// werkt nu voor allebei.
+function parseNiveau(userLevel) {
+  const s = String(userLevel || "");
+  let m = s.match(/groep\s*(\d+)/i);
+  if (m) return { soort: "groep", nr: Number(m[1]) };
+  m = s.match(/klas\s*(\d+)/i);
+  if (m) return { soort: "klas", nr: Number(m[1]) };
+  return null;
 }
 
 // ── Startbeeld per groep (Mark 11 aug: "jij weet wat iemand per groep moet
@@ -62,17 +69,34 @@ function padBijGroep(level, groep) {
   return groep >= lo && groep <= hi;
 }
 
-// De hoofdvak-paden die bij deze groep horen — dit ís "wat je ongeveer moet
-// kunnen": de leerpaden zijn per groep en vak opgebouwd langs de leerlijnen.
-function groepPaden(groep) {
-  if (!groep) return [];
+// Hoort dit pad bij deze klas? VO-levels zijn bont: "klas1-2", "klas2-3-vmbo-
+// vwo", "havo4-5-vwo", "havo-vwo-4-5", "vmbo-gt-4", "vwo" — allemaal vangen.
+function padBijKlas(level, klas) {
+  const l = String(level || "").toLowerCase();
+  const m = l.match(/klas\s*(\d)(?:\s*-\s*(\d))?/);
+  if (m) {
+    const lo = Number(m[1]), hi = Number(m[2] || m[1]);
+    if (klas >= lo && klas <= hi) return true;
+  }
+  if (/havo\s*-?\s*vwo\s*-?\s*4\s*-\s*5|havo\s*4\s*-\s*5/.test(l)) return klas >= 4 && klas <= 6;
+  if (/vmbo-gt-4/.test(l)) return klas === 3 || klas === 4;
+  if (l === "vwo") return klas >= 4 && klas <= 6;
+  return false;
+}
+
+// De hoofdvak-paden die bij dit niveau horen — dit ís "wat je ongeveer moet
+// kunnen": de leerpaden zijn per groep/klas en vak opgebouwd langs de leerlijnen.
+function niveauPaden(niveau) {
+  if (!niveau) return [];
+  const vakken = niveau.soort === "klas" ? Object.keys(VAK_INFO_KLAS) : CURRICULUM_VAKKEN;
+  const past = (p) => (niveau.soort === "klas" ? padBijKlas(p.level, niveau.nr) : padBijGroep(p.level, niveau.nr));
   // Binnen een vak: Cito-/leerlijn-kernpaden (referentieniveau of "Cito" in de
   // titel) vóór de uitstapjes — zodat "Belasting snappen" niet vóór "Breuken" komt.
   const kern = (p) => (/cito|doorstroomtoets/i.test(p.title || "") ? 0 : p.referentieNiveau ? 1 : 2);
   return pathManifest
-    .filter((p) => CURRICULUM_VAKKEN.includes(p.subject) && padBijGroep(p.level, groep))
+    .filter((p) => vakken.includes(p.subject) && past(p))
     .sort((a, b) =>
-      (CURRICULUM_VAKKEN.indexOf(a.subject) - CURRICULUM_VAKKEN.indexOf(b.subject))
+      (vakken.indexOf(a.subject) - vakken.indexOf(b.subject))
       || (kern(a) - kern(b))
       || String(a.title).localeCompare(String(b.title), "nl"));
 }
@@ -90,9 +114,8 @@ function saveIntake(player, obj) {
   try { localStorage.setItem(intakeKey(player), JSON.stringify(obj)); } catch {}
 }
 
-// Labels leven centraal in vakkenPerGroep.js (VAK_INFO); alias voor
-// bestaande verwijzingen in deze file.
-const VAK_NAAM = VAK_INFO;
+// Labels leven centraal in vakkenPerGroep.js (VAK_INFO / VAK_INFO_KLAS);
+// per-niveau opzoeken gebeurt via vakMeta() in de component.
 
 // Oefenminuten van vandaag (zelfde bron als de kwartier-teller in App.jsx).
 function minutenVandaag() {
@@ -155,7 +178,12 @@ export default function MijnPagina({
   onHome,
 }) {
   const player = (userName || "").trim();
-  const groep = parseGroep(userLevel);
+  const niveau = useMemo(() => parseNiveau(userLevel), [userLevel]);
+  const groep = niveau?.soort === "groep" ? niveau.nr : null;
+  // "groep 4" of "klas 2" — voor alle zichtbare teksten op de kaart.
+  const niveauLabel = niveau ? `${niveau.soort} ${niveau.nr}` : null;
+  const vakMeta = (vak) => (niveau?.soort === "klas" ? VAK_INFO_KLAS[vak] : VAK_INFO[vak]) || VAK_INFO[vak] || { titel: vak, emoji: "📘" };
+  const notitieVoor = (vak) => (niveau ? (niveau.soort === "klas" ? klasNotitie(niveau.nr, vak) : vakNotitie(niveau.nr, vak)) : "");
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
@@ -344,11 +372,14 @@ export default function MijnPagina({
   // Curriculum-vakken van deze groep (wat een kind op school krijgt) +
   // welke daarvan al oefenstof in de app hebben. "Je vakken" toont het
   // curriculum; de intake en het klaarzetten werken op wat beschikbaar is.
-  const groepVakken = useMemo(() => (groep ? vakkenVoorGroep(groep) : []), [groep]);
+  const groepVakken = useMemo(() => {
+    if (!niveau) return [];
+    return niveau.soort === "klas" ? vakkenVoorKlas(niveau.nr) : vakkenVoorGroep(niveau.nr);
+  }, [niveau]);
   const beschikbareVakken = useMemo(() => {
-    const set = new Set(groepPaden(groep).map((p) => p.subject));
+    const set = new Set(niveauPaden(niveau).map((p) => p.subject));
     return groepVakken.filter((v) => set.has(v));
-  }, [groep, groepVakken]);
+  }, [niveau, groepVakken]);
   const intakeCompleet = beschikbareVakken.length > 0 && beschikbareVakken.every((v) => intake[v]);
 
   // 🔔 Interesse in vakken die nog gebouwd worden — meet de vraag én geeft
@@ -361,7 +392,7 @@ export default function MijnPagina({
     const nieuw = { ...vakInteresse, [vak]: true };
     setVakInteresse(nieuw);
     try { localStorage.setItem(`lk_vak_interesse:${player}`, JSON.stringify(nieuw)); } catch {}
-    track("vak_interesse", { vak, groep });
+    track("vak_interesse", { vak, groep, klas: niveau?.soort === "klas" ? niveau.nr : undefined });
     supabase.from("learn_path_waitlist").insert({ player_name: player || "speler", subject_id: vak }).then(() => {}, () => {});
   };
 
@@ -373,7 +404,7 @@ export default function MijnPagina({
   // 4. overige nulmetingen van jouw groep.
   const klaargezet = useMemo(() => {
     const byId = Object.fromEntries(records.map((r) => [r.pathId, r]));
-    const paden = groepPaden(groep);
+    const paden = niveauPaden(niveau);
     const status = (p) => byId[p.id]?.level || "unmeasured";
     const ongemeten = (p) => status(p) === "unmeasured";
     const lijst = [];
@@ -401,7 +432,7 @@ export default function MijnPagina({
     // 4. Overige nulmetingen van deze groep
     paden.filter(ongemeten).forEach((p) => voeg(p, "nulmeting"));
     return lijst.slice(0, 6);
-  }, [records, groep, beschikbareVakken, intake]);
+  }, [records, niveau, beschikbareVakken, intake]);
 
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
@@ -550,7 +581,7 @@ export default function MijnPagina({
                 )}
                 {userLevel && (
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>
-                    {groep ? `Groep ${groep}` : userLevel}
+                    {niveau ? `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}` : userLevel}
                   </div>
                 )}
                 <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>
@@ -777,7 +808,7 @@ export default function MijnPagina({
                 <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.55, margin: "4px 0 0" }}>
                   {/* Mark 11 aug 20:40: het kwartier is niet het doel maar het
                       middel — het doel is klaar zijn voor de volgende stap. */}
-                  <strong>{groep ? `Klaar zijn voor groep ${Math.min(groep + 1, 8)}` : "Overgaan naar het volgende jaar"}</strong> — dát is je doel.
+                  <strong>{groep ? `Klaar zijn voor groep ${Math.min(groep + 1, 8)}` : niveau?.soort === "klas" ? (niveau.nr >= 4 ? "Slagen voor je eindexamen" : `Klaar zijn voor klas ${niveau.nr + 1}`) : "Overgaan naar het volgende jaar"}</strong> — dát is je doel.
                   Een kwartier per dag is hoe je er komt. {streak > 0
                     ? `Je zit nu op ${streak} ${streak === 1 ? "dag" : "dagen"} op rij. Knap!`
                     : "Begin vandaag, dan start je reeks."}
@@ -785,10 +816,10 @@ export default function MijnPagina({
               )}
               {/* Uitklap: wat hoort er bij jouw groep? (Mark 21:00: "maak de
                   blokken klikbaar — voor groep 4 moet je dit en dat kennen") */}
-              {groep && groepVakken.length > 0 && (
+              {niveau && groepVakken.length > 0 && (
                 <div style={{ marginTop: 12 }}>
                   <button
-                    onClick={() => { setDoelOpen(!doelOpen); if (!doelOpen) track("mijn_doel_uitklap", { groep }); }}
+                    onClick={() => { setDoelOpen(!doelOpen); if (!doelOpen) track("mijn_doel_uitklap", { groep, klas: niveau?.soort === "klas" ? niveau.nr : undefined }); }}
                     aria-expanded={doelOpen}
                     style={{
                       width: "100%", textAlign: "left", cursor: "pointer",
@@ -798,18 +829,18 @@ export default function MijnPagina({
                       fontFamily: "var(--font-display)",
                     }}
                   >
-                    🎒 Wat moet ik kennen in groep {groep}? {doelOpen ? "▴" : "▾"}
+                    🎒 Wat moet ik kennen in {niveauLabel}? {doelOpen ? "▴" : "▾"}
                   </button>
                   {doelOpen && (
                     <div style={{ marginTop: 10 }}>
                       {groepVakken.map((vak) => {
-                        const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
-                        const paden = groepPaden(groep).filter((p) => p.subject === vak).slice(0, 4);
+                        const meta = vakMeta(vak);
+                        const paden = niveauPaden(niveau).filter((p) => p.subject === vak).slice(0, 4);
                         return (
                           <div key={vak} style={{ marginBottom: 10 }}>
                             <div style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-strong)", marginBottom: 5 }}>
                               {meta.emoji} {meta.titel}
-                              {vakNotitie(groep, vak) && <span style={{ fontWeight: 500, color: "var(--color-text-muted, #8899aa)" }}> — {vakNotitie(groep, vak)}</span>}
+                              {notitieVoor(vak) && <span style={{ fontWeight: 500, color: "var(--color-text-muted, #8899aa)" }}> — {notitieVoor(vak)}</span>}
                             </div>
                             {paden.length === 0 && (
                               <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>
@@ -835,7 +866,7 @@ export default function MijnPagina({
                         );
                       })}
                       <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.45 }}>
-                        Dit zijn de onderwerpen langs de leerlijnen van groep {groep} — tik er een aan om te beginnen. Alles mag, ook hoger of lager.
+                        Dit zijn de onderwerpen langs de leerlijnen van {niveauLabel} — tik er een aan om te beginnen. Alles mag, ook hoger of lager.
                       </div>
                     </div>
                   )}
@@ -887,8 +918,8 @@ export default function MijnPagina({
                 return (
                   <>
                     {groepVakken.map((vak) => {
-                      const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
-                      const notitie = vakNotitie(groep, vak);
+                      const meta = vakMeta(vak);
+                      const notitie = notitieVoor(vak);
                       const m = gemeten.get(vak);
                       if (m) return balkGemeten(m, meta, notitie);
                       if (beschikbaar.has(vak)) {
@@ -934,7 +965,7 @@ export default function MijnPagina({
                     {extraGemeten.map((v) => balkGemeten(v, SUBJECT_LABELS[v.subj] || { title: v.subj, emoji: "📘" }, "extra vak"))}
                     {perVak.length === 0 && (
                       <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                        Dit zijn de vakken van groep {groep}. Start hieronder bij "Dit staat voor jou klaar" — na elke oefening vullen de balken zich met jouw échte meting.
+                        Dit zijn de vakken van {niveauLabel}. Start hieronder bij "Dit staat voor jou klaar" — na elke oefening vullen de balken zich met jouw échte meting.
                       </div>
                     )}
                   </>
@@ -1001,7 +1032,7 @@ export default function MijnPagina({
                   Waar ben je goed in, en wat vind je lastig? Dan weet ik wat ik voor je klaarzet. (We kijken daarna samen of het klopt!)
                 </div>
                 {beschikbareVakken.map((vak) => {
-                  const meta = VAK_NAAM[vak] || { titel: vak, emoji: "📘" };
+                  const meta = vakMeta(vak);
                   return (
                     <div key={vak} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", flexWrap: "wrap" }}>
                       <span style={{ fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)", minWidth: 150 }}>
@@ -1041,7 +1072,7 @@ export default function MijnPagina({
             {/* ── Dit staat voor jou klaar ── */}
             {klaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-                <div style={eyebrowStijl}>{groep ? `Groep ${groep}` : "Voor jou"}</div>
+                <div style={eyebrowStijl}>{niveau ? `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}` : "Voor jou"}</div>
                 <div style={kaartTitelStijl}>Dit staat voor jou klaar</div>
                 {klaargezet.map(({ pad, record, reden }) => {
                   const st = record ? MASTERY_LABELS[record.level] : null;

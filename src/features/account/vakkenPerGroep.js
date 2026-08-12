@@ -63,3 +63,53 @@ export function vakkenVoorGroep(groep) {
 export function vakNotitie(groep, vak) {
   return VAK_NOTITIE[`${groep}|${vak}`] || "";
 }
+
+// ── Middelbare school (Mark 12 aug 2026: "en voor de studenten") ──────
+// Zelfde kaart-idee voor klas 1 t/m 6. Vak-keys = de subject-keys van de
+// VO-leerpaden. NB "taal" heet op het VO gewoon Nederlands. Talen en
+// startmomenten verschillen per school — de notities zeggen dat eerlijk.
+
+export const VAK_INFO_KLAS = {
+  wiskunde: { titel: "Wiskunde", emoji: "📐" },
+  taal: { titel: "Nederlands", emoji: "📝" },
+  engels: { titel: "Engels", emoji: "📕" },
+  frans: { titel: "Frans", emoji: "🥐" },
+  duits: { titel: "Duits", emoji: "🥨" },
+  geschiedenis: { titel: "Geschiedenis", emoji: "🏛️" },
+  aardrijkskunde: { titel: "Aardrijkskunde", emoji: "🌍" },
+  biologie: { titel: "Biologie", emoji: "🧬" },
+  natuurkunde: { titel: "Natuurkunde", emoji: "⚡" },
+  scheikunde: { titel: "Scheikunde", emoji: "🧪" },
+  economie: { titel: "Economie", emoji: "💶" },
+  maatschappijleer: { titel: "Maatschappijleer", emoji: "🗳️" },
+};
+
+export const VAKKEN_PER_KLAS = {
+  1: ["wiskunde", "taal", "engels", "frans", "duits", "geschiedenis", "aardrijkskunde", "biologie"],
+  2: ["wiskunde", "taal", "engels", "frans", "duits", "geschiedenis", "aardrijkskunde", "biologie", "natuurkunde"],
+  3: ["wiskunde", "taal", "engels", "geschiedenis", "aardrijkskunde", "biologie", "natuurkunde", "scheikunde", "economie", "maatschappijleer"],
+  4: ["wiskunde", "taal", "engels", "geschiedenis", "aardrijkskunde", "biologie", "natuurkunde", "scheikunde", "economie", "maatschappijleer"],
+  5: ["wiskunde", "taal", "engels", "geschiedenis", "aardrijkskunde", "biologie", "natuurkunde", "scheikunde", "economie", "maatschappijleer"],
+  6: ["wiskunde", "taal", "engels", "geschiedenis", "aardrijkskunde", "biologie", "natuurkunde", "scheikunde", "economie", "maatschappijleer"],
+};
+
+export const KLAS_NOTITIE = {
+  "1|frans": "op veel scholen start Frans in de brugklas",
+  "1|duits": "op sommige scholen pas vanaf klas 2",
+  "2|natuurkunde": "start natuurkunde (of nask)",
+  "3|scheikunde": "start scheikunde",
+  "3|economie": "start economie",
+  "3|maatschappijleer": "op veel scholen in de bovenbouw",
+  "4|wiskunde": "examenjaar VMBO — oefenen met echte examenvragen",
+  "4|taal": "examenjaar: teksten lezen en samenvatten",
+  "5|taal": "richting het eindexamen HAVO",
+  "6|taal": "richting het eindexamen VWO",
+};
+
+export function vakkenVoorKlas(klas) {
+  return VAKKEN_PER_KLAS[klas] || VAKKEN_PER_KLAS[4];
+}
+
+export function klasNotitie(klas, vak) {
+  return KLAS_NOTITIE[`${klas}|${vak}`] || "";
+}
