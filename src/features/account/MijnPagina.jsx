@@ -144,6 +144,7 @@ export default function MijnPagina({
   onGoLeren,
   onGoCito,
   onGoVoortgang,
+  onOuderDashboard,
   onBack,
   onHome,
 }) {
@@ -969,6 +970,21 @@ export default function MijnPagina({
                 <div style={{ marginBottom: 6 }}>
                   👨‍👩‍👧 Maak op je eigen telefoon een account als <strong>ouder of verzorger</strong> en koppel {player} met een <strong>koppelcode</strong> — dan zie je dit overzicht altijd, plus elke maandag een <strong>weekrapport per e-mail</strong>.
                 </div>
+                {/* Adoptie-gat (12 aug): de uitleg stond er, maar zonder knop —
+                    een geïnteresseerde ouder moest /ouder zelf zien te vinden. */}
+                {onOuderDashboard && (
+                  <button
+                    onClick={() => { track("mijn_naar_ouderdashboard", {}); onOuderDashboard(); }}
+                    style={{
+                      display: "inline-block", margin: "4px 0 10px", padding: "10px 16px",
+                      borderRadius: 10, border: "none", cursor: "pointer",
+                      background: "rgba(0,176,255,0.2)", color: "#4fc3f7",
+                      fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
+                    }}
+                  >
+                    👨‍👩‍👧 Naar het thuis-overzicht — koppelen &amp; weekrapport →
+                  </button>
+                )}
                 <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
                   🧑‍🏫 Leerkracht? Via het leerkracht-overzicht zet je oefenwerk klaar met een deelcode — leerlingen loggen gewoon als zichzelf in.
                 </div>

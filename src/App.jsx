@@ -1175,6 +1175,7 @@ export default function App() {
           }
           streak={streak}
           subscription={subscription}
+          onOuderDashboard={() => setPage("ouder-dashboard")}
           onResumePath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);

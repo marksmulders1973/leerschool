@@ -7,6 +7,7 @@ import { clearAll as clearAdaptive } from "../shared/adaptiveStore.js";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import ProBadge from "../subscription/ProBadge.jsx";
 import { trackProUse } from "../subscription/proPlan.js";
+import { track } from "../utils.js";
 import KwartierplanSectie from "../features/kwartierplan/KwartierplanSectie.jsx";
 import VriendenWerven from "../features/referral/VriendenWerven.jsx";
 
@@ -151,9 +152,22 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   }, [selectedChild, selectedChildVerified]);
 
   const removeChild = async (id) => {
+    const kind = children.find((c) => c.id === id);
+    if (!window.confirm(`Koppeling met ${kind?.child_name || "dit kind"} verwijderen?\n\nJe ziet dan geen voortgang meer en het maandag-weekrapport voor dit kind stopt. De voortgang van je kind zelf blijft gewoon bestaan.`)) return;
     await supabase.from("parent_child_links").delete().eq("id", id);
     setChildren(prev => prev.filter(c => c.id !== id));
     setSelectedChild(prev => children.find(c => c.id !== id)?.child_name || null);
+  };
+
+  // Instellingen (Mark 12 aug, Squla-gat "volwassen ouderdashboard"):
+  // weekrapport per kind aan/uit. Kolom parent_child_links.weekmail;
+  // de maandag-mail (RPC ouder_weekrapport_kandidaten) filtert erop.
+  const toggleWeekmail = async (c) => {
+    const nieuw = c.weekmail === false; // undefined/null = aan (default true)
+    setChildren(prev => prev.map(k => k.id === c.id ? { ...k, weekmail: nieuw } : k));
+    const { error } = await supabase.from("parent_child_links").update({ weekmail: nieuw }).eq("id", c.id);
+    if (error) setChildren(prev => prev.map(k => k.id === c.id ? { ...k, weekmail: !nieuw } : k));
+    else track("ouder_weekmail_toggle", { aan: nieuw });
   };
 
   // K6/AVG art. 17 (sprint-2 2026-05-08): self-service "Verwijder al mijn data".
@@ -404,10 +418,13 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             👶 Mijn kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}
           </div>
 
-          {/* Bestaande kinderen */}
-          {children.map(c => (
+          {/* Bestaande kinderen — mét instellingen per kind (12 aug):
+              weekrapport aan/uit + koppeling verwijderen (met bevestiging). */}
+          {children.map(c => {
+            const mailAan = c.weekmail !== false;
+            return (
             <div key={c.id} onClick={() => setSelectedChild(c.child_name)} style={{
-              display: "flex", alignItems: "center", justifyContent: "space-between",
+              display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 6,
               padding: "9px 12px", borderRadius: 10, marginBottom: 6, cursor: "pointer",
               background: selectedChild === c.child_name ? "rgba(0,176,255,0.15)" : "rgba(255,255,255,0.04)",
               border: selectedChild === c.child_name ? "1px solid rgba(0,176,255,0.35)" : "1px solid rgba(255,255,255,0.07)",
@@ -420,9 +437,31 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   </span>
                 )}
               </span>
-              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
+              <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <button
+                  onClick={e => { e.stopPropagation(); toggleWeekmail(c); }}
+                  aria-pressed={mailAan}
+                  title={mailAan ? "Elke maandag het weekrapport voor dit kind in je mail — klik om uit te zetten" : "Weekrapport voor dit kind staat uit — klik om aan te zetten"}
+                  style={{
+                    borderRadius: 999, padding: "4px 10px", cursor: "pointer",
+                    border: mailAan ? "1px solid rgba(105,240,174,0.5)" : "1px solid rgba(255,255,255,0.2)",
+                    background: mailAan ? "rgba(0,200,83,0.14)" : "rgba(255,255,255,0.05)",
+                    color: mailAan ? "#69f0ae" : "rgba(255,255,255,0.45)",
+                    fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700,
+                  }}
+                >
+                  📩 weekmail {mailAan ? "aan" : "uit"}
+                </button>
+                <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
+              </span>
             </div>
-          ))}
+            );
+          })}
+          {children.length > 0 && (
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "2px 2px 8px", lineHeight: 1.5 }}>
+              📩 Elke maandag krijg je per kind een weekrapport in je mail — zet 'm hierboven per kind aan of uit.
+            </div>
+          )}
 
           {/* Gezins-gevoel (feature 7): warm "wij oefenen samen" bij ≥2 kinderen,
               bewust ZONDER scores naast elkaar (geen broer/zus-vergelijking). */}
