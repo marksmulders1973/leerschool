@@ -541,6 +541,33 @@ export default function App() {
 
   useEffect(() => { pageRef.current = page; }, [page]);
 
+  // Profielen op dit apparaat (Mark 12 aug: "wisselen van profiel op de
+  // persoonlijke pagina"): elke gebruikte naam komt in lk_namen; per naam
+  // bewaren we groep/rol in lk_profiel:<naam> zodat een wissel meteen de
+  // juiste pagina toont (broertje groep 4 ↔ zus groep 8 op één tablet).
+  useEffect(() => {
+    const n = (userName || "").trim();
+    if (!n || n.toLowerCase() === "speler") return;
+    try {
+      localStorage.setItem(`lk_profiel:${n}`, JSON.stringify({ level: userLevel || "", role: role || "", schoolType: userSchoolType || "" }));
+      const lijst = JSON.parse(localStorage.getItem("lk_namen") || "[]").filter((x) => x !== n);
+      lijst.unshift(n);
+      localStorage.setItem("lk_namen", JSON.stringify(lijst.slice(0, 8)));
+    } catch {}
+  }, [userName, userLevel, role, userSchoolType]);
+
+  const wisselProfiel = (naam) => {
+    const n = (naam || "").trim();
+    if (!n) return;
+    let p = {};
+    try { p = JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}"); } catch {}
+    setUserName(n);
+    setUserLevel(p.level || "");
+    setRole(p.role || "leerling");
+    setUserSchoolType(p.schoolType || "");
+    try { localStorage.setItem("ls_user", JSON.stringify({ name: n, level: p.level || "", role: p.role || "leerling", schoolType: p.schoolType || "" })); } catch {}
+  };
+
   // OBLITERATOR-naam → userName. De game dispatcht "obliterator-naam-update"
   // zodra een anonieme speler (geen login) een naam invult. Zonder deze listener
   // bleef de score als "Speler" opgeslagen i.p.v. de ingevulde naam
@@ -1167,6 +1194,7 @@ export default function App() {
       })()}
       {page === "mijn-pagina" && (
         <MijnPagina
+          key={userName || "geen-naam"}
           userName={userName}
           userLevel={
             userLevel && /^\d+$/.test(String(userLevel))
@@ -1179,6 +1207,8 @@ export default function App() {
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onLeerkrachtHome={() => setPage("teacher-home")}
+          onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
+          onWisselProfiel={wisselProfiel}
           onResumePath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);

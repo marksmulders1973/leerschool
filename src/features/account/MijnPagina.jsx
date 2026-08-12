@@ -148,6 +148,8 @@ export default function MijnPagina({
   userRole,
   authUser,
   onLeerkrachtHome,
+  onLeerkrachtActie,
+  onWisselProfiel,
   onBack,
   onHome,
 }) {
@@ -163,6 +165,15 @@ export default function MijnPagina({
   // kijker een ingelogde ouder met gekoppelde kinderen, toon die dan als
   // chips in de ouder-weergave — één tik door naar het thuis-overzicht.
   const [gezinsKinderen, setGezinsKinderen] = useState([]);
+  // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
+  const [wisselOpen, setWisselOpen] = useState(false);
+  const andereNamen = useMemo(() => {
+    try {
+      return JSON.parse(localStorage.getItem("lk_namen") || "[]")
+        .filter((n) => n && n !== player)
+        .slice(0, 6);
+    } catch { return []; }
+  }, [player]);
   useEffect(() => {
     if (!authUser?.id) { setGezinsKinderen([]); return undefined; }
     let weg = false;
@@ -459,9 +470,57 @@ export default function MijnPagina({
                 >✏️</button>
               </div>
               <div style={{ minWidth: 0, flex: 1 }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: "var(--color-text-strong)", lineHeight: 1.15 }}>
-                  {player}
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: "var(--color-text-strong)", lineHeight: 1.15 }}>
+                    {player}
+                  </div>
+                  {/* Profiel-wissel (Mark 12 aug): meerdere kinderen op één
+                      apparaat wisselen hier — groep/rol wisselt automatisch mee. */}
+                  {onWisselProfiel && (andereNamen.length > 0 || wisselOpen) && (
+                    <button
+                      onClick={() => setWisselOpen(!wisselOpen)}
+                      aria-expanded={wisselOpen}
+                      style={{
+                        padding: "4px 10px", borderRadius: 999, cursor: "pointer",
+                        border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.06)",
+                        color: "var(--color-text-muted, #8899aa)", fontFamily: "var(--font-body)",
+                        fontSize: 11.5, fontWeight: 700,
+                      }}
+                    >
+                      🔁 wissel {wisselOpen ? "▴" : "▾"}
+                    </button>
+                  )}
                 </div>
+                {wisselOpen && (
+                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0 2px" }}>
+                    {andereNamen.map((n) => (
+                      <button
+                        key={n}
+                        onClick={() => { track("mijn_profiel_wissel", {}); setWisselOpen(false); onWisselProfiel(n); }}
+                        style={{
+                          padding: "7px 13px", borderRadius: 999, cursor: "pointer",
+                          border: "1px solid rgba(0,200,83,0.4)", background: "rgba(0,200,83,0.1)",
+                          color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                        }}
+                      >
+                        {n}
+                      </button>
+                    ))}
+                    {onHome && (
+                      <button
+                        onClick={onHome}
+                        title="Nieuwe naam invullen op de startpagina"
+                        style={{
+                          padding: "7px 13px", borderRadius: 999, cursor: "pointer",
+                          border: "1px dashed rgba(255,255,255,0.3)", background: "transparent",
+                          color: "var(--color-text-muted, #8899aa)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                        }}
+                      >
+                        ➕ nieuwe naam
+                      </button>
+                    )}
+                  </div>
+                )}
                 {userLevel && (
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>
                     {groep ? `Groep ${groep}` : userLevel}
@@ -543,22 +602,46 @@ export default function MijnPagina({
             leerkracht-overzicht. Eén tik i.p.v. zoeken. ── */}
         {userRole === "teacher" && onLeerkrachtHome && (
           <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(167,139,250,0.55)", background: "rgba(124,58,237,0.13)" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
-              <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)" }}>
-                🧑‍🏫 <strong>Jouw klas</strong> — toetsen en oefenwerk klaarzetten, deelcodes en resultaten.
-                <span style={{ color: "var(--color-text-muted, #8899aa)" }}> Hieronder staat je eigen oefenwerk.</span>
-              </div>
-              <button
-                onClick={() => { track("mijn_naar_leerkracht", {}); onLeerkrachtHome(); }}
-                style={{
-                  padding: "9px 15px", borderRadius: 10, border: "none", cursor: "pointer",
-                  background: "rgba(124,58,237,0.25)", color: "#c4b5fd",
-                  fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
-                }}
-              >
-                Naar je leerkracht-overzicht →
-              </button>
+            <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)", marginBottom: 10 }}>
+              🧑‍🏫 <strong>Jouw klas</strong> — alles wat je als leerkracht kunt, direct vanaf hier.
+              <span style={{ color: "var(--color-text-muted, #8899aa)" }}> Verderop staat je eigen oefenwerk.</span>
             </div>
+            {/* Alle leerkracht-acties als snelkoppelingen (Mark 12 aug:
+                "staat alles waar een leraar iets mee kan op zijn pagina?") —
+                zelfde bestemmingen als het leerkracht-overzicht. */}
+            {onLeerkrachtActie && (
+              <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 10 }}>
+                {[
+                  { p: "create-quiz", label: "📝 Toets maken" },
+                  { p: "takenlijst-maker", label: "✅ Takenlijst klaarzetten" },
+                  { p: "werkblad", label: "🖨️ Werkblad printen" },
+                  { p: "teacher-progress", label: "📊 Scores & voortgang" },
+                  { p: "class-manager", label: "🏫 Mijn klassen" },
+                ].map((a) => (
+                  <button
+                    key={a.p}
+                    onClick={() => { track("mijn_leerkracht_actie", { actie: a.p }); onLeerkrachtActie(a.p); }}
+                    style={{
+                      padding: "8px 13px", borderRadius: 999, cursor: "pointer",
+                      border: "1px solid rgba(167,139,250,0.5)", background: "rgba(124,58,237,0.18)",
+                      color: "#d6ccff", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700,
+                    }}
+                  >
+                    {a.label}
+                  </button>
+                ))}
+              </div>
+            )}
+            <button
+              onClick={() => { track("mijn_naar_leerkracht", {}); onLeerkrachtHome(); }}
+              style={{
+                padding: "9px 15px", borderRadius: 10, border: "none", cursor: "pointer",
+                background: "rgba(124,58,237,0.3)", color: "#e6ddff",
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+              }}
+            >
+              Volledig leerkracht-overzicht (met je toetsen &amp; deelcodes) →
+            </button>
           </Card>
         )}
 
