@@ -171,6 +171,8 @@ Cito + examens versterken. Drie type werk:
 
 ## 📥 Inbox — nieuwe wensen / ideeën
 
+- [ ] **Kleine restpunten rol-test /mijn (agents 12 aug):** (a) eerste-load-flits: `ls_user` wordt in een mount-useEffect gelezen → wie rechtstreeks /mijn opent ziet heel kort "Vul eerst je naam in"; nette fix = lazy useState-initializers in de auth-hook (voorzichtig, gedeelde state). (b) weekgrafiek ouder-weergave: bij een 0-meting evt. klein "nog niets geoefend"-label ín de grafiek. (c) avatarkiezer toont op 390px eerst het voorbeeld, gezichten na scroll — zit ín Mark's locked artifact, dus alleen aanpassen als Mark zelf een nieuwe versie maakt.
+
 - [ ] **Leer→beloning-lus (Mark 12 aug: "sla op als to do")** — Squla-gat beloningsstructuur, maar op de Leerkwartier-manier: géén munten/winkel/nieuwe spellen (STOPLIST + besluit 31 jul). Kind maakt zijn kwartier af → speelt iets zíchtbaars vrij, getoond op de Vandaag-kaart van /mijn. Ontwerp-opties voor Mark: (a) parkmaatje/tafereel-onderdeel in het park, (b) extra achtergrondkleur in de avatar-kiezer (LET OP: buiten Mark's AvatarKiezer.jsx om regelen — dat bestand is byte-locked artifact), (c) sticker/trofee-plank op /mijn. Eerst Mark's richting-keuze, dan bouwen.
 
 - [ ] **Buddy-chat→leren-conversie** (onderzoek 29 jul): tracking werkt, maar all-time 63 chats geopend → slechts 3 kliks op de munten-knop (~5%). Ontwerpvraag: de statische knop vervangen/aanvullen door het maatje dat het zélf zegt — na het eerste AI-antwoord een vervolg-berichtje van het maatje ("Zullen we samen munten verdienen? Eén leerkwartiertje = 🪙") zodat de uitnodiging in het gesprek zit i.p.v. ernaast. Kindvriendelijk formuleren, niet pusherig; A/B via event `buddy_naar_leren`.

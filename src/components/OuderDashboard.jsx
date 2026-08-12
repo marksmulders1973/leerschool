@@ -268,10 +268,10 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   if (!authUser || authUser.is_anonymous) {
     return (
       <div style={{ minHeight: "100dvh", background: "#0a0f1e" }}>
-        <Header title="Ouder Dashboard 👨‍👩‍👧" onBack={onBack} onHome={onHome} />
+        <Header title="Thuis-overzicht 👨‍👩‍👧" onBack={onBack} onHome={onHome} />
         <div style={{ padding: 32, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
           <div style={{ fontSize: 56 }}>👨‍👩‍👧</div>
-          <div style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)" }}>Volg je kind</div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)" }}>Volg je kind — voor ouders en verzorgers</div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "rgba(255,255,255,0.5)", maxWidth: 280, lineHeight: 1.6 }}>
             Log in met Google om de voortgang van je kind te bekijken en te koppelen.
           </div>
@@ -289,7 +289,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
   return (
     <div style={{ minHeight: "100dvh", background: "linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 100%)" }}>
-      <Header title="Ouder Dashboard 👨‍👩‍👧" subtitle="Volg de voortgang van je kind" onBack={onBack} onHome={onHome} />
+      <Header title="Thuis-overzicht 👨‍👩‍👧" subtitle="Voor ouders en verzorgers — volg de voortgang van je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
 

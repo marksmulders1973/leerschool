@@ -542,7 +542,7 @@ export default function MijnPagina({
             (toetsen klaarzetten, deelcodes, resultaten) leeft op het
             leerkracht-overzicht. Eén tik i.p.v. zoeken. ── */}
         {userRole === "teacher" && onLeerkrachtHome && (
-          <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(124,58,237,0.45)" }}>
+          <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(167,139,250,0.55)", background: "rgba(124,58,237,0.13)" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
               <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)" }}>
                 🧑‍🏫 <strong>Jouw klas</strong> — toetsen en oefenwerk klaarzetten, deelcodes en resultaten.
@@ -639,7 +639,9 @@ export default function MijnPagina({
               })()}
             </Card>
 
-            {/* ── Jouw doel + countdown ── */}
+            {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
+                12 aug: "overgaan naar het volgende jaar" is kind-taal) ── */}
+            {userRole !== "teacher" && (
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Jouw doel</div>
               {countdown ? (
@@ -724,6 +726,7 @@ export default function MijnPagina({
                 </div>
               )}
             </Card>
+            )}
 
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
@@ -910,9 +913,13 @@ export default function MijnPagina({
                   {tier === "free" && <> — in 2026 is alles vrij te gebruiken.</>}
                   {geldigTot && <> — geldig tot {geldigTot}.</>}
                 </div>
-                <div style={{ marginBottom: 6 }}>
-                  👨‍👩‍👧 Een ouder of verzorger kan met een <strong>koppelcode</strong> meekijken met je voortgang — vraag het thuis, of kijk op het thuis-overzicht.
-                </div>
+                {/* Koppelcode-regel is kind-taal — leerkracht ziet hem niet
+                    (agent-test 12 aug). */}
+                {userRole !== "teacher" && (
+                  <div style={{ marginBottom: 6 }}>
+                    👨‍👩‍👧 Een ouder of verzorger kan met een <strong>koppelcode</strong> meekijken met je voortgang — vraag het thuis, of kijk op het thuis-overzicht.
+                  </div>
+                )}
               </div>
               <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                 🔒 <strong style={{ color: "var(--color-text)" }}>Wat is hier zichtbaar:</strong> alleen je voornaam, je groep en je poppetje. Kies je een eigen foto, dan blijft die alleen op dit apparaat — geen achternaam, en andere leerlingen zien deze pagina nooit.
