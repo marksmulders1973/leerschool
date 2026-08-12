@@ -11,6 +11,7 @@ import { track } from "../../utils.js";
 import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
+import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -994,6 +995,15 @@ export default function MijnPagina({
                 )}
               </Card>
             )}
+
+            {/* ── Diploma-kast (beloning-lus, 12 aug): beste score per
+                onderwerp = mini-diploma met datum + %, printbaar als PDF.
+                Tuin-les: groei zichtbaar, nooit straf. ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.4)" }}>
+              <div style={eyebrowStijl}>Jouw prijzenkast</div>
+              <div style={kaartTitelStijl}>🏆 Diploma-kast</div>
+              <DiplomaKast player={player} naamVoorDiploma={player} bron="mijn" />
+            </Card>
 
             {/* ── Abonnement & toegang ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>

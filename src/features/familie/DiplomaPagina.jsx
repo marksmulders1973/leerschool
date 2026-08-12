@@ -39,6 +39,13 @@ function initParam(key, fallback) {
 export default function DiplomaPagina({ setPage }) {
   const [naam, setNaam] = useState(() => initParam("naam", ""));
   const [onderwerp, setOnderwerp] = useState(() => initParam("onderwerp", "Breuken"));
+  // Diploma-kast (12 aug): echte resultaten sturen ?score=77&datum=12 aug 2026
+  // mee — dan wordt het diploma een feit ("op die datum X% gescoord").
+  const [score] = useState(() => {
+    const s = parseInt(initParam("score", ""), 10);
+    return Number.isFinite(s) && s >= 0 && s <= 100 ? s : null;
+  });
+  const [datum] = useState(() => initParam("datum", ""));
 
   const naamNet = (naam || "").trim();
   const ondNet = (onderwerp || "").trim() || "dit onderwerp";
@@ -159,6 +166,11 @@ bèta
 
             <div style={{ fontSize: 16, color: "#5a4a2a", marginTop: 16 }}>voor het met succes afronden van</div>
             <div style={{ fontSize: 24, fontWeight: 800, color: "#1a1206", marginTop: 6 }}>{ondNet}</div>
+            {score != null && (
+              <div style={{ fontSize: 17, fontWeight: 800, color: "#c9a227", marginTop: 8 }}>
+                met een score van {score}%{datum ? ` · behaald op ${datum}` : ""}
+              </div>
+            )}
 
             <div style={{ fontSize: 14, color: "#6a5a3a", lineHeight: 1.6, maxWidth: 520, margin: "16px auto 0" }}>
               Goed gedaan! Je hebt hard geoefend en dit onderwerp onder de knie gekregen.
@@ -168,6 +180,11 @@ bèta
             {/* handtekening + zegel + datum */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: 30, gap: 20 }}>
               <div style={{ textAlign: "center", flex: 1 }}>
+                {datum && (
+                  <div style={{ fontFamily: "var(--font-display, Georgia, serif)", fontStyle: "italic", fontSize: 16, color: "#1a1206", marginBottom: 2 }}>
+                    {datum}
+                  </div>
+                )}
                 <div style={{ borderTop: "1.5px solid #999", paddingTop: 4, fontSize: 13, color: "#444", maxWidth: 190, margin: "0 auto" }}>
                   Datum
                 </div>

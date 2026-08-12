@@ -5,6 +5,7 @@
 //
 // De zware three.js-scene laadt lazy, zodat de leer-app snel blijft.
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
@@ -354,6 +355,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
   const [menuOpen, setMenuOpen] = useState(false);       // ☰-menu (fullscreen) met alle extra functies
+  const [prijzenkast, setPrijzenkast] = useState(false); // 🏆 diploma-kast-overlay (beloning-lus 12 aug)
   const [bouwen, setBouwen] = useState(false);           // bouw-modus: winkelbalk in beeld (anders alleen park)
   const [besturingHint, setBesturingHint] = useState(!COARSE_POINTER); // korte WASD/sleep-hint op laptop
   const [bouwTip, setBouwTip] = useState(false);         // eenmalige maatje-tip "je kunt zelf bouwen!"
@@ -1402,6 +1404,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               📚 Verdien 🪙
             </button>
           )}
+          {/* 🏆 Prijzenkast (beloning-lus 12 aug): je échte diploma's — beste
+              score per onderwerp — hangen ín je park. Leren vult de kast. */}
+          <button
+            onClick={() => { setPrijzenkast(true); try { track("park_prijzenkast_open", {}); } catch { /* */ } }}
+            title="Jouw prijzenkast: diploma's van je oefentoetsen"
+            style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "800 16px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}
+          >
+            🏆
+          </button>
           {/* 🔊 Parkgids aan/uit: praat hardop over wat je in het park ziet. */}
           <button onClick={toggleGidsStil} title={gidsStil ? "Parkgids weer laten praten" : "Parkgids stil zetten"} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "800 15px system-ui", color: "#234", background: gidsStil ? "rgba(255,255,255,0.65)" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer", opacity: gidsStil ? 0.8 : 1 }}>{gidsStil ? "🔇" : "🔊"}</button>
           {/* Alle overige functies gebundeld in één ☰-menu → tijdens spelen bijna alleen park in beeld. */}
@@ -1409,6 +1420,33 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
         </div>
       </div>
+
+      {/* 🏆 Prijzenkast-overlay: de diploma-kast (echte toets-resultaten) ín
+          het park — de tuin-les: zichtbare groei, en leren vult de kast. */}
+      {prijzenkast && (
+        <div onClick={() => setPrijzenkast(false)} style={{ position: "absolute", inset: 0, zIndex: 15, background: "rgba(8,16,10,0.6)", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", overflowY: "auto" }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 520, margin: "0 auto", padding: "18px 16px calc(28px + env(safe-area-inset-bottom))" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 4 }}>
+              <div style={{ color: "#fff", font: "900 20px system-ui", textShadow: "0 1px 6px rgba(0,0,0,.4)" }}>🏆 Jouw prijzenkast</div>
+              <button onClick={() => setPrijzenkast(false)} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 40, height: 40, font: "800 16px system-ui", color: "#fff", background: "rgba(255,255,255,0.14)", cursor: "pointer" }}>✕</button>
+            </div>
+            <div style={{ color: "rgba(255,255,255,0.75)", font: "700 12.5px system-ui", margin: "0 0 14px" }}>
+              Elke oefentoets die je afmaakt hangt hier als diploma — met je score en de datum. Printen mag!
+            </div>
+            <div style={{ borderRadius: 16, background: "rgba(10,20,14,0.55)", border: "1px solid rgba(255,213,79,0.3)", padding: "14px 14px" }}>
+              <DiplomaKast player={(userName || "").trim()} naamVoorDiploma={(userName || "").trim()} bron="park" />
+            </div>
+            {(onOpenLeerpaden || onOpenLeerpad) && (
+              <button
+                onClick={() => { setPrijzenkast(false); try { track("park_naar_leren", { via: "prijzenkast" }); } catch { /* */ } if (onOpenLeerpaden) onOpenLeerpaden(); else if (onOpenLeerpad) onOpenLeerpad(); }}
+                style={{ marginTop: 12, width: "100%", border: "none", borderRadius: 12, padding: "13px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(46,158,79,.4)", cursor: "pointer" }}
+              >
+                📚 Verdien je volgende diploma →
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* ☰-menu: volledig scherm, frosted-glass, alle extra functies gegroepeerd.
           Tik buiten de inhoud of op ✕ = terug het park in. */}

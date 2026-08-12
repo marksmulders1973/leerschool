@@ -8,6 +8,7 @@ import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import ProBadge from "../subscription/ProBadge.jsx";
 import { trackProUse } from "../subscription/proPlan.js";
 import { track } from "../utils.js";
+import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import KwartierplanSectie from "../features/kwartierplan/KwartierplanSectie.jsx";
 import VriendenWerven from "../features/referral/VriendenWerven.jsx";
 
@@ -589,6 +590,22 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 BOVEN de scores — juist bij een vers gekoppeld kind zonder
                 scores is dit de logische eerste actie voor de ouder. */}
             <KwartierplanSectie authUser={authUser} childName={selectedChild} />
+
+            {/* 🏆 Diploma-kast van dit kind (12 aug): zelfde kast als op /mijn,
+                gevoed uit de al geladen childScores — ouder ziet en print de
+                mini-diploma's (beste score per onderwerp, met datum + %). */}
+            {!scoresLoading && childScores.length > 0 && (
+              <div style={{ borderRadius: 16, border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)", padding: "14px 16px" }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ffd54f", marginBottom: 10 }}>
+                  🏆 Diploma-kast van {selectedChild}
+                </div>
+                <DiplomaKast scores={childScores} naamVoorDiploma={selectedChild} bron="ouder" />
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginTop: 8, lineHeight: 1.5 }}>
+                  Tip: print er een en hang 'm op de koelkast — trots werkt beter dan druk.
+                </div>
+              </div>
+            )}
+
             {scoresLoading ? (
               <div style={{ textAlign: "center", padding: 24, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-display)" }}>Laden...</div>
             ) : childScores.length === 0 ? (
