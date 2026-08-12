@@ -13,6 +13,7 @@
 import { useState, useEffect, useRef } from "react";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
+import { verwerkMakerTip } from "../shared/makerTip.js";
 import { spreekMetMeelezen } from "../shared/spraakTekst.js";
 import MeeleesTekst from "../shared/ui/MeeleesTekst.jsx";
 
@@ -200,7 +201,9 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
         }),
       });
       const data = await res.json().catch(() => ({}));
-      const reply = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks doen? 🌟";
+      const rauw = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks doen? 🌟";
+      // Wens/tip voor de maker? Eruit plukken → Mark's /tips-wachtrij (Mark 12 aug).
+      const reply = verwerkMakerTip(rauw, { kindNaam: kind, buddyNaam: naam, bron: "pocket" });
       setMessages((m) => [...m, { role: "assistant", content: reply }].slice(-30));
       if (geluid) spreekVoor(reply);
     } catch {

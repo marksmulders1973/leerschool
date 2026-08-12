@@ -8,6 +8,7 @@
 import { useState, useRef, useEffect } from "react";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
+import { verwerkMakerTip } from "../../shared/makerTip.js";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 
@@ -82,7 +83,9 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
         }),
       });
       const data = await res.json().catch(() => ({}));
-      const reply = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks in het park doen? 🌟";
+      const rauw = data?.reply || "Hihi, ik ben even de draad kwijt. Zullen we iets leuks in het park doen? 🌟";
+      // Wens/tip voor de maker? Eruit plukken → Mark's /tips-wachtrij (Mark 12 aug).
+      const reply = verwerkMakerTip(rauw, { kindNaam: facts?.naam, buddyNaam: naam, bron: "park" });
       setMessages((m) => [...m, { role: "assistant", content: reply }]);
       if (geluid) {
         setLeest(true); setLeesWoord(-1);

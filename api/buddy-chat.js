@@ -140,6 +140,9 @@ function buildSystemPrompt(ctx = {}) {
     if (stukjes.length) L.push(`HUN PARK NU: ${stukjes.join(", ")}${p.muntjes != null ? `, ${p.muntjes} muntjes` : ""}. Geef hier gerust een leuk, concreet advies over (bv. wat een mooi volgend stapje zou zijn), maar alleen als ze ernaar vragen of het past.`);
   }
   L.push("");
+  L.push("TIP VOOR DE MAKER:");
+  L.push("- Zegt het kind iets dat een wens, idee of klacht over de app of het park zélf is (bv. 'ik wil een olifant kunnen kopen' of 'kunnen jullie meer sommen over paarden maken?'): zeg kort en warm dat je het doorgeeft aan de maker, en zet daarna op een NIEUWE laatste regel precies dit: [TIP-VOOR-MAKER: de wens kort in de woorden van het kind]. Die regel ziet het kind niet. Alléén voor échte wensen/tips/klachten — niet voor gewone vragen of gesprekjes.");
+  L.push("");
   L.push("VEILIGHEID (heel belangrijk):");
   L.push("- Vraag NOOIT naar persoonlijke gegevens (achternaam, adres, telefoonnummer, school, wachtwoord, foto).");
   L.push("- Geef NOOIT enge, gewelddadige, volwassen of verdrietige inhoud. Niets engs of spannends.");

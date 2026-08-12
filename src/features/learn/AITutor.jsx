@@ -16,6 +16,7 @@ import { actieveBuddyPersona, buddyWeetjes } from "../zoo/buddies.js";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 import { track } from "../../utils.js";
+import { verwerkMakerTip } from "../../shared/makerTip.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
 // three.js pas laadt als het venster opent.
@@ -194,7 +195,10 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       // Vangnet: een 200 zonder `reply` (leeg model-antwoord of iets ander schema)
       // gaf een lege bubble + speak(undefined). Zelfde guard als BuddyChat/Maatje.
       // (bug-jacht 2026-07-31)
-      const reply = data?.reply || "Sorry, ik kon even geen goed antwoord bedenken. Probeer je vraag nog eens? 🙂";
+      const rauw = data?.reply || "Sorry, ik kon even geen goed antwoord bedenken. Probeer je vraag nog eens? 🙂";
+      // Wens/tip voor de maker in het antwoord? Eruit plukken vóór het kind het
+      // ziet; belandt in Mark's /tips-wachtrij (Mark 12 aug).
+      const reply = verwerkMakerTip(rauw, { kindNaam: buddyWeetjes()?.naam, buddyNaam: naam, bron: "tutor" });
       const after = [...next, { role: "assistant", content: reply }];
       setMessages(after);
       persist(after);
