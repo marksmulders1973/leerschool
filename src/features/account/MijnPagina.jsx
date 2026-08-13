@@ -14,6 +14,7 @@ import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
+import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT } from "../../shared/mijnThema.js";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -200,6 +201,15 @@ export default function MijnPagina({
     window.addEventListener(LIJSTJE_EVENT, sync);
     return () => window.removeEventListener(LIJSTJE_EVENT, sync);
   }, [player]);
+  // 🎨 Eigen achtergrond (Mark 13 aug): thema per speler + goud-ontgrendeling.
+  const [themaTeller, setThemaTeller] = useState(0);
+  useEffect(() => {
+    const sync = () => setThemaTeller((n) => n + 1);
+    window.addEventListener(THEMA_EVENT, sync);
+    return () => window.removeEventListener(THEMA_EVENT, sync);
+  }, []);
+  const thema = useMemo(() => themaVan(player), [player, themaTeller]);
+  const goudOpen = useMemo(() => goudVerdiend(player), [player, themaTeller]);
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
@@ -496,7 +506,7 @@ export default function MijnPagina({
   };
 
   return (
-    <div style={styles.page}>
+    <div style={{ ...styles.page, ...(thema.pageStyle || {}) }}>
       <Header title="🏠 Mijn Leerkwartier" subtitle={player ? `De pagina van ${player}` : ""} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!player && (
@@ -1174,6 +1184,44 @@ export default function MijnPagina({
               <div style={eyebrowStijl}>Jouw prijzenkast</div>
               <div style={kaartTitelStijl}>🏆 Diploma-kast</div>
               <DiplomaKast player={player} naamVoorDiploma={player} bron="mijn" />
+            </Card>
+
+            {/* ── 🎨 Eigen achtergrond (Mark 13 aug): gekozen palet i.p.v.
+                vrije foto's — rustig en veilig; goud verdien je met je
+                eerste échte diploma. ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <div style={eyebrowStijl}>Jouw pagina, jouw kleur</div>
+              <div style={kaartTitelStijl}>🎨 Kies je achtergrond</div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {THEMAS.map((t) => {
+                  const opSlot = t.id === "goud" && !goudOpen;
+                  const actief = thema.id === t.id;
+                  return (
+                    <button
+                      key={t.id}
+                      onClick={() => { if (!opSlot) kiesThema(player, t.id); }}
+                      title={opSlot ? `Verdien dit met ${t.verdienMet}` : t.naam}
+                      aria-label={opSlot ? `${t.naam} — nog op slot, verdien dit met ${t.verdienMet}` : `Achtergrond ${t.naam}`}
+                      style={{
+                        display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
+                        padding: "8px 10px", borderRadius: 12, cursor: opSlot ? "not-allowed" : "pointer",
+                        background: t.swatch, minWidth: 64,
+                        border: actief ? "2px solid #ffd54f" : "2px solid rgba(255,255,255,0.15)",
+                        opacity: opSlot ? 0.55 : 1,
+                        color: "#fff", fontFamily: "inherit",
+                      }}
+                    >
+                      <span style={{ fontSize: 18 }}>{opSlot ? "🔒" : t.emoji}</span>
+                      <span style={{ fontSize: 10.5, fontWeight: 700 }}>{t.naam}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              {!goudOpen && (
+                <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8 }}>
+                  🏆 Het gouden thema verdien je met je eerste échte diploma uit de kast hierboven.
+                </div>
+              )}
             </Card>
 
             {/* ── Abonnement & toegang ── */}

@@ -19,6 +19,7 @@ import { useEffect, useMemo, useState } from "react";
 import supabase from "../../supabase.js";
 import { SUBJECTS } from "../subjects.js";
 import { track } from "../../utils.js";
+import { ontgrendelGoud } from "../mijnThema.js";
 
 export const DIPLOMA_MIN_VRAGEN = 10;
 export const DIPLOMA_MIN_PROCENT = 60;
@@ -94,6 +95,11 @@ export default function DiplomaKast({ player, scores, naamVoorDiploma, bron = "m
   const alle = useMemo(() => bouwDiplomas(extern ? scores : eigenRows), [extern, scores, eigenRows]);
   const diplomas = useMemo(() => alle.filter((d) => d.verdiend).slice(0, maxItems), [alle, maxItems]);
   const bijna = useMemo(() => alle.filter((d) => !d.verdiend).slice(0, 4), [alle]);
+
+  // Eerste échte diploma = gouden thema verdiend (zie mijnThema.js).
+  useEffect(() => {
+    if (player && diplomas.length > 0) ontgrendelGoud(player);
+  }, [player, diplomas.length]);
   const laden = !extern && eigenRows === null;
   const naam = (naamVoorDiploma || player || "").trim();
 
