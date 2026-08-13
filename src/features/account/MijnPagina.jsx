@@ -232,6 +232,10 @@ export default function MijnPagina({
     if (onSetLevel) onSetLevel({ soort, nr, schoolType });
     setGroepKiezerOpen(false);
   };
+  // Rol is leidend (Mark 13 aug: "moet ook voor studenten kunnen"): een
+  // student zonder ingevuld schooltype werd anders als basisschool-groep
+  // behandeld en zag de kiezer maar tot groep 8 gaan.
+  const kiesSoort = userRole === "student" ? "klas" : (niveau?.soort || "groep");
   // 🐶 Wat Charley al van je weet (Mark 13 aug: "Charley verzamelt al gegevens
   // om echt een maatje te worden — past precies op de persoonlijke pagina").
   // Bron = de kennismakings-vraagjes van het maatje (buddies.js, localStorage).
@@ -257,7 +261,7 @@ export default function MijnPagina({
   };
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
-  const [weergave, setWeergave] = useState("kind");
+  const [weergave, setWeergave] = useState(userRole === "ouder" ? "ouder" : "kind");
   const [week, setWeek] = useState(null);
   // Gezins-koppeling (Mark 12 aug, "meerdere kinderen in 1 gezin"): is de
   // kijker een ingelogde ouder met gekoppelde kinderen, toon die dan als
@@ -665,13 +669,13 @@ export default function MijnPagina({
                     {groepKiezerOpen && onSetLevel && (
                       <div style={{ marginTop: 8 }}>
                         <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>
-                          {niveau?.soort === "klas" ? "In welke klas zit je?" : "In welke groep zit je?"}
+                          {kiesSoort === "klas" ? "In welke klas zit je?" : "In welke groep zit je?"}
                         </div>
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                          {(niveau?.soort === "klas" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7, 8]).map((n) => (
+                          {(kiesSoort === "klas" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7, 8]).map((n) => (
                             <button
                               key={n}
-                              onClick={() => kiesNiveau(niveau?.soort === "klas" ? "klas" : "groep", n)}
+                              onClick={() => kiesNiveau(kiesSoort, n)}
                               style={{
                                 width: 40, height: 40, borderRadius: 10, cursor: "pointer", fontFamily: "inherit",
                                 border: niveau?.nr === n ? "2px solid #ffd54f" : "1px solid rgba(255,255,255,0.2)",
@@ -684,7 +688,7 @@ export default function MijnPagina({
                           ))}
                         </div>
                         <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
-                          Zo kloppen je vakken en oefeningen meteen weer bij jouw {niveau?.soort === "klas" ? "klas" : "groep"}.
+                          Zo kloppen je vakken en oefeningen meteen weer bij jouw {kiesSoort === "klas" ? "klas" : "groep"}.
                         </div>
                       </div>
                     )}
@@ -1248,27 +1252,27 @@ export default function MijnPagina({
 
             {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
                 iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
-            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg &&
-              !(niveau.soort === "klas" && niveau.nr >= 6) && (
+            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" &&
+              !(kiesSoort === "klas" && niveau.nr >= 6) && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: "rgba(0,200,83,0.06)" }}>
                 <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
                   🎒 Nieuw schooljaar!
                 </div>
                 <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
-                  {niveau.soort === "groep" && niveau.nr >= 8
+                  {kiesSoort === "groep" && niveau.nr >= 8
                     ? "Zit je nu op de middelbare school?"
-                    : `Zit je nu in ${niveau.soort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
+                    : `Zit je nu in ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
                 </div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <button
                     onClick={() => {
-                      if (niveau.soort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
-                      else kiesNiveau(niveau.soort, niveau.nr + 1);
+                      if (kiesSoort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
+                      else kiesNiveau(kiesSoort, niveau.nr + 1);
                       sluitSchooljaarKaart();
                     }}
                     style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
                   >
-                    {niveau.soort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${niveau.soort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
+                    {kiesSoort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
                   </button>
                   <button
                     onClick={sluitSchooljaarKaart}
