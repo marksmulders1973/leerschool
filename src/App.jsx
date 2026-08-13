@@ -1209,6 +1209,7 @@ export default function App() {
           onLeerkrachtHome={() => setPage("teacher-home")}
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
+          onPraatMaatje={() => setPage("maatje")}
           onSetLevel={({ soort, nr, schoolType }) => {
             // Groep/klas aanpassen op Mijn pagina (Mark 13 aug: "dat moet je
             // op je persoonlijke pagina kunnen aanpassen"). App bewaart het

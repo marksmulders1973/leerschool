@@ -14,6 +14,7 @@ import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
+import { buddyWeetjes } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
 
 // ─────────────────────────────────────────────────────────────────────
@@ -181,6 +182,7 @@ export default function MijnPagina({
   onLeerkrachtActie,
   onWisselProfiel,
   onSetLevel,
+  onPraatMaatje,
   onBack,
   onHome,
 }) {
@@ -229,6 +231,29 @@ export default function MijnPagina({
   const kiesNiveau = (soort, nr, schoolType) => {
     if (onSetLevel) onSetLevel({ soort, nr, schoolType });
     setGroepKiezerOpen(false);
+  };
+  // 🐶 Wat Charley al van je weet (Mark 13 aug: "Charley verzamelt al gegevens
+  // om echt een maatje te worden — past precies op de persoonlijke pagina").
+  // Bron = de kennismakings-vraagjes van het maatje (buddies.js, localStorage).
+  const weetjesChips = useMemo(() => {
+    let w = {};
+    try { w = buddyWeetjes() || {}; } catch { /* */ }
+    return [
+      w.naam && `🙋 ${w.naam}`,
+      w.leeftijd && `🎂 ${w.leeftijd} jaar`,
+      w.eten && `🍕 ${w.eten}`,
+      w.kleur && `🎨 ${w.kleur}`,
+      w.dier && `🐾 ${w.dier}`,
+      w.sport && `⚽ ${w.sport}`,
+      w.vak && `📚 ${w.vak}`,
+      w.hobby && `✨ ${w.hobby}`,
+      w.droom && `🌟 later: ${w.droom}`,
+    ].filter(Boolean).map((t) => String(t).slice(0, 30));
+  }, []);
+  const chipStijl = {
+    display: "inline-block", padding: "4px 10px", borderRadius: 999, fontSize: 12, fontWeight: 700,
+    background: "rgba(255,213,79,0.12)", border: "1px solid rgba(255,213,79,0.35)",
+    color: "var(--color-text, #e8edf5)",
   };
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
@@ -1105,13 +1130,45 @@ export default function MijnPagina({
                 de app al oefenstof voor heeft. ── */}
             {beschikbareVakken.length > 0 && !intakeCompleet && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                {/* Klikbare Charley (Mark 13 aug): tik op de hond of de knop
+                    → de echte praat-Charley (maatje-pagina). */}
+                <div
+                  role={onPraatMaatje ? "button" : undefined}
+                  tabIndex={onPraatMaatje ? 0 : undefined}
+                  onClick={() => { if (onPraatMaatje) { track("mijn_praat_maatje", { via: "intake-kop" }); onPraatMaatje(); } }}
+                  onKeyDown={(e) => { if (onPraatMaatje && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); onPraatMaatje(); } }}
+                  style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, cursor: onPraatMaatje ? "pointer" : "default" }}
+                >
                   <span style={{ fontSize: 22 }} aria-hidden="true">🐶</span>
                   <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>Charley wil je leren kennen</div>
                 </div>
+                {weetjesChips.length > 0 && (
+                  <div style={{ marginBottom: 10 }}>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>
+                      Dit weet ik al van je, uit onze praatjes:
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      {weetjesChips.map((c) => <span key={c} style={chipStijl}>{c}</span>)}
+                    </div>
+                  </div>
+                )}
                 <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
-                  Waar ben je goed in, en wat vind je lastig? Dan weet ik wat ik voor je klaarzet. (We kijken daarna samen of het klopt!)
+                  {weetjesChips.length > 0
+                    ? "Nu wil ik ook weten: waar ben je goed in, en wat vind je lastig? Dan zet ik precies de goede oefeningen voor je klaar."
+                    : "Waar ben je goed in, en wat vind je lastig? Dan weet ik wat ik voor je klaarzet. (We kijken daarna samen of het klopt!)"}
                 </div>
+                {onPraatMaatje && (
+                  <button
+                    onClick={() => { track("mijn_praat_maatje", { via: "intake-knop" }); onPraatMaatje(); }}
+                    style={{
+                      display: "block", width: "100%", marginBottom: 10, padding: "10px 14px", borderRadius: 10,
+                      border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", cursor: "pointer",
+                      color: "#ffd54f", fontWeight: 800, fontSize: 13.5, fontFamily: "var(--font-display, inherit)", textAlign: "center",
+                    }}
+                  >
+                    🐾 Praat met Charley — stel een vraag of vertel een wens
+                  </button>
+                )}
                 {beschikbareVakken.map((vak) => {
                   const meta = vakMeta(vak);
                   return (
@@ -1147,6 +1204,42 @@ export default function MijnPagina({
                     </div>
                   );
                 })}
+              </Card>
+            )}
+
+            {/* Intake al gedaan? Dan blijft Charley op je eigen pagina — mét
+                wat hij al van je weet (Mark 13 aug: "Charley verzamelt al
+                gegevens om echt een maatje te worden"). */}
+            {onPraatMaatje && (intakeCompleet || beschikbareVakken.length === 0) && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <span style={{ fontSize: 22 }} aria-hidden="true">🐶</span>
+                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>Charley kent jou</div>
+                </div>
+                {weetjesChips.length > 0 ? (
+                  <>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>
+                      Dit heb je me al verteld — zo maak ik je oefeningen persoonlijker:
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
+                      {weetjesChips.map((c) => <span key={c} style={chipStijl}>{c}</span>)}
+                    </div>
+                  </>
+                ) : (
+                  <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
+                    Ik ken je nog niet zo goed — kom even kletsen! Wat je me vertelt onthoud ik, en dan worden je oefeningen persoonlijker.
+                  </div>
+                )}
+                <button
+                  onClick={() => { track("mijn_praat_maatje", { via: "vaste-knop" }); onPraatMaatje(); }}
+                  style={{
+                    display: "block", width: "100%", padding: "10px 14px", borderRadius: 10,
+                    border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", cursor: "pointer",
+                    color: "#ffd54f", fontWeight: 800, fontSize: 13.5, fontFamily: "var(--font-display, inherit)", textAlign: "center",
+                  }}
+                >
+                  🐾 Praat met Charley — vertel meer of stel een vraag
+                </button>
               </Card>
             )}
 
