@@ -28,6 +28,9 @@ export const VAK_INFO = {
 
 // Wat een kind in deze groep op school ongeveer krijgt (app-relevante vakken).
 export const VAKKEN_PER_GROEP = {
+  // Groep 1-2 (kleuters, niveau-id "groep12"): spelend beginnen.
+  1: ["rekenen", "taal"],
+  2: ["rekenen", "taal"],
   3: ["rekenen", "taal", "spelling"],
   4: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur", "verkeer"],
   5: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
@@ -38,6 +41,8 @@ export const VAKKEN_PER_GROEP = {
 
 // Korte school-context per groep×vak — toont wáárom dit vak er nu bij hoort.
 export const VAK_NOTITIE = {
+  "2|rekenen": "tellen, getallen herkennen, meer en minder",
+  "2|taal": "letters ontdekken en rijmen",
   "3|taal": "leren lezen — dé klus van groep 3",
   "3|rekenen": "getallen tot 20, erbij en eraf",
   "3|spelling": "je eerste woorden schrijven",

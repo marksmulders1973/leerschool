@@ -6,6 +6,7 @@ import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { TEXTBOOKS } from "../../data/textbooks.js";
 import LeerpadBot from "./LeerpadBot.jsx";
 import { subjectsForQuery } from "./subjectSynonyms.js";
+import LijstjeSter from "../../shared/ui/LijstjeSter.jsx";
 
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
 // import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
@@ -791,6 +792,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                               </div>
                             )}
                           </div>
+                          <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />
                           <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                         </div>
                       </button>
@@ -1517,6 +1519,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                                     </div>
                                   )}
                                 </div>
+                                <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />
                                 <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                               </div>
                             </button>

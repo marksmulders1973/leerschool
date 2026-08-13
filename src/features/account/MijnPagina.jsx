@@ -13,6 +13,7 @@ import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
+import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -47,7 +48,11 @@ const VAK_STATUS = {
 // werkt nu voor allebei.
 function parseNiveau(userLevel) {
   const s = String(userLevel || "");
-  let m = s.match(/groep\s*(\d+)/i);
+  // "groep12" is het kleuter-niveau "Groep 1-2" (constants.js) — niet groep
+  // twaalf. Mark zag 12 aug "Groep 12" op de kaart staan: deze regex at beide
+  // cijfers op. Kleuters rekenen we als groep 2 met een eigen label.
+  if (/groep\s*12\b/i.test(s)) return { soort: "groep", nr: 2, label: "Groep 1-2" };
+  let m = s.match(/groep\s*(\d)/i);
   if (m) return { soort: "groep", nr: Number(m[1]) };
   m = s.match(/klas\s*(\d+)/i);
   if (m) return { soort: "klas", nr: Number(m[1]) };
@@ -186,6 +191,15 @@ export default function MijnPagina({
   const notitieVoor = (vak) => (niveau ? (niveau.soort === "klas" ? klasNotitie(niveau.nr, vak) : vakNotitie(niveau.nr, vak)) : "");
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
+  // ⭐ Mijn lijstje (bewaar-voor-later, Mark 13 aug): leeft in localStorage;
+  // het ster-event houdt dit blok live in sync met sterretjes elders.
+  const [lijstje, setLijstje] = useState(() => leesLijstje(player));
+  useEffect(() => {
+    const sync = () => setLijstje(leesLijstje(player));
+    sync();
+    window.addEventListener(LIJSTJE_EVENT, sync);
+    return () => window.removeEventListener(LIJSTJE_EVENT, sync);
+  }, [player]);
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
@@ -581,7 +595,7 @@ export default function MijnPagina({
                 )}
                 {userLevel && (
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>
-                    {niveau ? `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}` : userLevel}
+                    {niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : userLevel}
                   </div>
                 )}
                 <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>
@@ -1069,10 +1083,44 @@ export default function MijnPagina({
               </Card>
             )}
 
+            {/* ── ⭐ Mijn lijstje — bewaar-voor-later (Mark-idee 13 aug): het
+                kind bladert, tikt een ster bij een les, en die wacht hier.
+                Eigen keuzes bovenaan = eigenaarschap. ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)" }}>
+              <div style={eyebrowStijl}>Zelf gekozen</div>
+              <div style={kaartTitelStijl}>⭐ Mijn lijstje</div>
+              {lijstje.length === 0 ? (
+                <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                  Zie je bij het bladeren een les die je later wilt doen? Tik op de ⭐ en hij komt hier te staan — net als een foto bij je favorieten.
+                </div>
+              ) : (
+                lijstje.map((it) => (
+                  <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 0", borderBottom: "1px dashed rgba(255,255,255,0.1)" }}>
+                    <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
+                    <div style={{ flex: 1, minWidth: 0, fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)" }}>{it.titel}</div>
+                    <button
+                      onClick={() => onPickPath && onPickPath(it.id)}
+                      style={{ flexShrink: 0, padding: "8px 14px", borderRadius: 9, border: "none", cursor: "pointer", background: "rgba(255,213,79,0.18)", color: "#ffd54f", fontWeight: 800, fontSize: 12.5, fontFamily: "var(--font-display)" }}
+                    >
+                      Start
+                    </button>
+                    <button
+                      onClick={() => toggleLijstje(player, it)}
+                      aria-label={`${it.titel} van je lijstje halen`}
+                      title="Van je lijstje halen"
+                      style={{ flexShrink: 0, background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", cursor: "pointer", fontSize: 15, padding: 4 }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))
+              )}
+            </Card>
+
             {/* ── Dit staat voor jou klaar ── */}
             {klaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-                <div style={eyebrowStijl}>{niveau ? `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}` : "Voor jou"}</div>
+                <div style={eyebrowStijl}>{niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : "Voor jou"}</div>
                 <div style={kaartTitelStijl}>Dit staat voor jou klaar</div>
                 {klaargezet.map(({ pad, record, reden }) => {
                   const st = record ? MASTERY_LABELS[record.level] : null;
