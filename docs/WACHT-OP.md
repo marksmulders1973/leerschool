@@ -60,7 +60,7 @@ budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitsl
 - 🔔 Zelf abonneren op web-push (knop in de app).
 - QR-flyer-flow zelf testen op telefoon.
 - SQL `claim_link_code` draaien (audit 4 P1).
-- **Leergeld-rest-55 → VERZENDEN ~18 AUG** (timing door Mark bevestigd 9 aug: "wachten tot 18 aug"): mail Squla-proof + verzendklaar in `OUTREACH-VOORRAAD.md`. Gate vervuld: Inez bevestigde ontvangst pakket 4 aug → Spark Fest-leverregel als bewijszin activeren. Vóór verzending nog kort aan Mark melden.
+- **Leergeld-55 → per vakantieregio (Mark-go 13 aug: "elke dag een verse batch"):** ✅ **NOORD (16) VERSTUURD 13 aug** via Resend (zie verzend-log OUTREACH-VOORRAAD.md; 7 (A)-adressen op bounces checken). Nog: **Zuid (~20) ~do 20-21 aug** (regio terug 24 aug) · **Midden (~17) ~do 27-28 aug** (terug 31 aug). Dag-batch-kalender staat onderaan het verzend-log. ⚠️ Flyer-regel (Mark 13 aug): aanbod = digitaal op maat; gedrukt alléén uit de bestaande 1.000-voorraad in setjes van 50 — nooit nieuw laten drukken zonder Mark.
 - Eind aug: LinkedIn-lanceringspost + go voor scholen-batch 2.
 - Later overwegen: extra Leerkwartier-domeinen kopen (zie todo-memory).
 

@@ -291,8 +291,9 @@ Herinnering batch 1: Einsteinschool = opgeheven, schrappen.
 - **Ouderorganisaties (~8)** en **BSO-ketens (top-100)**: laagste prio.
 
 ## Verzend-log
+- **13 aug 2026 — Leergeld-golf 1a: regio NOORD, 16 stichtingen ✅ (Mark-go 13 aug, alle 16 OK via Resend/hallo@leerkwartier.app, reply-to Mark's Gmail; Zapier-taken op):** Salland ⭐(Raalte-opener) · Jeugdfonds Almelo · Dinkelland · Eemsdelta · Haaksbergen · Het Hoogeland · IJssel & Vecht · Losser · Midden Drenthe · Midden-Groningen · Noordoostpolder · Oldenzaal · Tubbergen · Twenterand · Westerkwartier-Noordenveld · Zuid-Oost Groningen. Squla-proof-sjabloon, Spark Fest-regel definitief. Script: `scripts/outreach/stuur-leergeld-noord-20260813.mjs`. **Timing-logica (regio-vakanties 2026): Noord terug ma 17 aug → gemaild in hún laatste vakantieweek; Zuid terug 24 aug → Leergeld-Zuid (~20) versturen ~do 20-vr 21 aug; Midden terug 31 aug → Leergeld-Midden (~17) versturen ~do 27-vr 28 aug.** (A)-adressen in deze batch: Midden Drenthe, Midden-Groningen, Noordoostpolder, Oldenzaal, Tubbergen, Westerkwartier-Noordenveld, Zuid-Oost Groningen → bounces checken bij volgende mail-check.
 - **9 aug 2026 — 🏝️ Caribische batch 1 (10 mails, door Mark zelf verstuurd via Gmail-concepten):** RCN-OCW (BES) · RKCS · DOS · VPCO (Curaçao) · Colegio Arubano · SKOA · SPCOA (Aruba) · SVOBE+MPC · SKOS (Sint Maarten) · OOB (Bonaire). Details + rest van de lijst: `docs/outreach/CARIBISCH-OUTREACH.md`; open lus in WACHT-OP.md Prio 2.
-- (NL-golven: nog niets verstuurd — kalender: Leergeld-55 ~18 aug → golf 2 ~25 aug → LOWAN ~1 sep, per golf na go van Mark)
+- (Kalender rest: vr 14 aug voedselbanken-rest #1 → ma 17 voedselbanken #2/SUN → di 18 SUN/fondsen → wo 19 Humanitas #1 → do 20-21 Caribisch batch 2 + Leergeld-Zuid → wk 24+ Humanitas #2/bibliotheken → ~31 aug Leergeld-Midden + LOWAN-prep)
 
 ## ⭐ 3-partner-regel: bedank-pagina als sociale bewijslast (Mark 23 jul 2026)
 
