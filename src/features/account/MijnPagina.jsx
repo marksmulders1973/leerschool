@@ -57,7 +57,10 @@ function parseNiveau(userLevel) {
   let m = s.match(/groep\s*(\d)/i);
   if (m) return { soort: "groep", nr: Number(m[1]) };
   m = s.match(/klas\s*(\d+)/i);
-  if (m) return { soort: "klas", nr: Number(m[1]) };
+  // "Er bestaat geen klas 8, alleen groep 8" (Mark, 13 aug 20:26): een oud
+  // groep-cijfer bij een student-rol leverde "Klas 8" op. Ongeldige klas
+  // (>6) = geen niveau → de kaart nodigt uit om je échte klas te kiezen.
+  if (m && Number(m[1]) >= 1 && Number(m[1]) <= 6) return { soort: "klas", nr: Number(m[1]) };
   return null;
 }
 
@@ -708,7 +711,9 @@ export default function MijnPagina({
                         fontSize: 13, color: "var(--color-text-muted, #8899aa)", fontFamily: "inherit",
                       }}
                     >
-                      {niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : (userLevel || "Kies je groep")}
+                      {niveau
+                        ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`)
+                        : (onSetLevel ? (kiesSoort === "klas" ? "Kies je klas" : "Kies je groep") : userLevel)}
                       {onSetLevel && <span style={{ marginLeft: 5 }}>✏️</span>}
                     </button>
                     {groepKiezerOpen && onSetLevel && (
