@@ -167,6 +167,16 @@ const THUIS_TIPS = {
   anders: "Vraag na het oefenen niet 'wat was je score?' maar 'wat heb je geleerd?' — dat ene gesprek maakt oefenen waardevoller dan tien extra vragen.",
 };
 
+// Rol-schakelaar op de eigen pagina (Mark 13 aug): "ook kunnen wisselen naar
+// leraar of ouder, niet alleen van naam". Emoji's volgen de profielchip-
+// conventie (🧑‍🏫 teacher / 🎓 student / 👦 kind); "ouder" krijgt 👪.
+const ROLLEN = [
+  { key: "leerling", emoji: "👦", label: "Leerling" },
+  { key: "student", emoji: "🎓", label: "Middelbare school" },
+  { key: "ouder", emoji: "👪", label: "Ouder of verzorger" },
+  { key: "teacher", emoji: "🧑‍🏫", label: "Juf of meester" },
+];
+
 export default function MijnPagina({
   userName,
   userLevel,
@@ -185,6 +195,7 @@ export default function MijnPagina({
   onLeerkrachtActie,
   onWisselProfiel,
   onSetLevel,
+  onSetRole,
   onPraatMaatje,
   onBack,
   onHome,
@@ -230,6 +241,16 @@ export default function MijnPagina({
     setNieuweNaam("");
     setWisselOpen(false);
     onWisselProfiel(n);
+  };
+  // Rol wisselen (leerling ↔ middelbare school ↔ ouder ↔ juf/meester). De
+  // rol stuurt de groep/klas-kiezer, de leerkracht-kaart en de profielchip aan;
+  // bij ouder/leerkracht meteen de bijbehorende "bril" (ouder/juf-weergave) aan.
+  const doeRolWissel = (rol) => {
+    if (!onSetRole || rol === (userRole || "leerling")) return;
+    try { track("mijn_rol_wissel", { rol }); } catch { /* */ }
+    setWisselOpen(false);
+    setWeergave(rol === "ouder" || rol === "teacher" ? "ouder" : "kind");
+    onSetRole(rol);
   };
   const [schooljaarWeg, setSchooljaarWeg] = useState(() => {
     try { return localStorage.getItem(`lk_schooljaar_2026:${(userName || "").trim()}`) === "1"; } catch { return true; }
@@ -698,6 +719,37 @@ export default function MijnPagina({
                 {wisselOpen && (
                   <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 2px" }}>
                     Nieuw hier? Typ je naam en kies daarna hieronder je groep of klas.
+                  </div>
+                )}
+                {/* Rol-schakelaar (Mark 13 aug): op je eigen pagina wisselen naar
+                    ouder of juf/meester — niet alleen van naam. */}
+                {wisselOpen && onSetRole && (
+                  <div style={{ margin: "8px 0 4px" }}>
+                    <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>
+                      Wie ben jij hier?
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      {ROLLEN.map((r) => {
+                        const huidig = userRole || "leerling";
+                        const actief = huidig === r.key;
+                        return (
+                          <button
+                            key={r.key}
+                            onClick={() => doeRolWissel(r.key)}
+                            aria-pressed={actief}
+                            style={{
+                              padding: "7px 13px", borderRadius: 999, cursor: "pointer",
+                              border: actief ? "2px solid #ffd54f" : "1px solid rgba(255,255,255,0.2)",
+                              background: actief ? "rgba(255,213,79,0.15)" : "rgba(255,255,255,0.05)",
+                              color: actief ? "#ffd54f" : "var(--color-text, #e8edf5)",
+                              fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                            }}
+                          >
+                            {r.emoji} {r.label}
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
                 {(userLevel || onSetLevel) && (

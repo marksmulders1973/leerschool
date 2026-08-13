@@ -1213,6 +1213,16 @@ export default function App() {
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
           onPraatMaatje={() => setPage("maatje")}
+          onSetRole={(nieuweRol) => {
+            // Rol wisselen op Mijn pagina (Mark 13 aug: "ook kunnen wisselen
+            // naar leraar of ouder, niet alleen van naam"). Zelfde pad als
+            // groep-wissel: state + ls_user + profiel + Supabase blijven gelijk,
+            // zodat een profielwissel later de juiste rol terugzet.
+            setRole(nieuweRol);
+            try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: userLevel, role: nieuweRol, schoolType: userSchoolType || "" })); } catch { /* */ }
+            if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: userLevel, role: nieuweRol, schoolType: userSchoolType || "" });
+            track("rol_gewijzigd", { via: "mijn", rol: nieuweRol });
+          }}
           onSetLevel={({ soort, nr, schoolType }) => {
             // Groep/klas aanpassen op Mijn pagina (Mark 13 aug: "dat moet je
             // op je persoonlijke pagina kunnen aanpassen"). App bewaart het
