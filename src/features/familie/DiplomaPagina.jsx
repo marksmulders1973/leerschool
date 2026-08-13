@@ -88,7 +88,8 @@ bèta
         {/* Naam */}
         <div style={{ marginTop: 12 }}>
           <label style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)" }}>
-            Naam van je kind:{" "}
+            {/* Kind kan dit zelf openen vanuit de diploma-kast (review 13 aug) */}
+            {initParam("naam", "") ? "Naam op het diploma:" : "Naam van je kind:"}{" "}
             <input
               value={naam}
               onChange={(e) => setNaam(e.target.value.slice(0, 34))}

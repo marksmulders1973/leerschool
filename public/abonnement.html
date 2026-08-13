@@ -58,7 +58,7 @@
   .lk-price { font-family: var(--font-display, system-ui); font-size: 1.8em; font-weight: 800; color: #fff; margin: 6px 0 2px; }
   .lk-price small { font-size: .55em; opacity: .7; }
   /* Tier-kleurtaal (T2, 10 aug 2026 — zelfde als LAAG_KLEUREN in de app):
-     groen = Gratis · goud = Familie · blauw = Pro · paars = Kwartier-tegoed.
+     groen = Gratis · goud = Familie · blauw = Pro.
      Stip vóór de naam; kleur altijd mét het woord erbij (kleurenblind-proof). */
   .lk-tier { font-size: .85em; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
   .lk-tier::before { content: "●"; margin-right: 6px; font-size: .8em; vertical-align: 1px; }
@@ -103,9 +103,9 @@
     Geen account nodig, geen verborgen kosten.
   </p>
   <p style="margin: .5em 0 0; font-size: .9em; opacity: .85">
-    Vanaf <strong>januari 2027</strong> komen er drie betaalde extra's: <strong>Familie</strong> (één klein
-    bedrag per gezín), <strong>Pro</strong> voor scholen en bijlesdocenten, en los <strong>kwartier-tegoed</strong> voor extra
-    AI-bijles — dat laatste zonder abonnement. Bestaande gebruikers krijgen vooraf bericht en mogen 30 dagen gratis proberen.
+    Vanaf <strong>januari 2027</strong> komen er twee betaalde extra's: <strong>Familie</strong> (één klein
+    bedrag per gezín — met de Seizoenspas betaal je één keer voor het hele toetsjaar en stopt hij vanzelf) en
+    <strong> Pro</strong> voor scholen en bijlesdocenten. Bestaande gebruikers krijgen vooraf bericht en mogen 30 dagen gratis proberen.
   </p>
 </div>
 
@@ -164,17 +164,6 @@
       <li>Voor leerkrachten blijft lesgeven met Leerkwartier gratis</li>
     </ul>
   </div>
-  <div class="lk-card">
-    <span class="lk-tier tier-tegoed">Kwartier-tegoed</span>
-    <div class="lk-price">Los<small> — geen abonnement</small></div>
-    <p style="margin: 4px 0; font-size: .85em; opacity: .8">Losse kwartieren extra AI-bijles. Prijs per kwartier maken we vóór de lancering bekend.</p>
-    <ul class="lk-features">
-      <li>Extra AI-bijles-tijd, per kwartier</li>
-      <li>Saldo altijd in beeld — op = op</li>
-      <li>Geen automatische verlenging</li>
-      <li>Ook als cadeaukaart 🎁</li>
-    </ul>
-  </div>
 </div>
 
 <div style="max-width: 640px; margin: 1.2em auto 0; padding: 14px 18px; border: 1px solid rgba(0,200,83,.35); border-radius: 12px; background: rgba(0,200,83,.06)">
@@ -202,7 +191,6 @@
     <select name="plan" aria-label="Interesse">
       <option value="parent_pro">Ouder — Familie (per gezin)</option>
       <option value="teacher_pro">Leerkracht — Pro</option>
-      <option value="kwartier_tegoed">Los kwartier-tegoed (AI-bijles)</option>
     </select>
     <button type="submit">Aanmelden voor wachtlijst</button>
     <p id="waitlist-msg" style="margin: 10px 0 0; font-size: .9em; min-height: 1.2em" aria-live="polite"></p>
@@ -220,8 +208,7 @@
     <summary>Waarom is het nu gratis?</summary>
     <p>Leerkwartier is in 2026 nieuw gelanceerd. We willen eerst dat de app
     écht waarde levert voor leerlingen en ouders. Daarna komen er eerlijke
-    betaalde extra's: Familie per gezin, Pro voor scholen en bijlesdocenten en los
-    kwartier-tegoed waarbij je alleen betaalt voor wat je echt gebruikt.
+    betaalde extra's: Familie per gezin en Pro voor scholen en bijlesdocenten.
     Tot dan: helemaal gratis, geen advertenties.</p>
   </details>
   <details>

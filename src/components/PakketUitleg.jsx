@@ -227,10 +227,6 @@ export default function PakketUitleg({ open, onClose }) {
             kleur={LAAG_KLEUREN.leerkracht}
           />
         </div>
-        <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
-          Los bij te nemen: <strong style={{ color: "rgba(255,255,255,0.7)" }}>Kwartier-tegoed</strong> voor extra AI-bijles — geen abonnement, ook als cadeautje.
-        </div>
-
         <CodeInvoer />
 
         {/* Eerlijke voetregel */}

@@ -49,7 +49,9 @@ function vakEmoji(subject) {
 export function bouwDiplomas(rows) {
   const per = new Map();
   (rows || []).forEach((r) => {
-    if (r?.percentage == null || !r.subject) return;
+    // total==null (oude rijen) zou pogingen laten groeien terwijl totVragen 0
+    // blijft — dan wordt een diploma nooit "verdiend" (review 13 aug).
+    if (r?.percentage == null || !r.subject || r.total == null) return;
     const key = `${r.subject}|${r.level || ""}`;
     const d = per.get(key) || {
       subject: r.subject, level: r.level || "",

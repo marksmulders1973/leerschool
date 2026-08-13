@@ -134,9 +134,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
             {/* Elk laag-woord in z'n eigen tier-kleur — hier leert de bezoeker de kleurtaal */}
-            De basis blijft gratis. Daarnaast komen er drie extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
-            klein bedrag per gezín), <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>Pro</strong> voor leerkrachten, en los{" "}
-            <strong style={{ color: LAAG_KLEUREN.tegoed.tekst }}>kwartier-tegoed</strong> voor extra AI-bijles — zonder abonnement.
+            De basis blijft gratis. Daarnaast komen er twee extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
+            klein bedrag per gezín) en <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>Pro</strong> voor scholen en bijlesdocenten.
           </div>
         </div>
 
@@ -182,22 +181,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
         ); })}
 
-        {/* Kwartier-tegoed uitgelegd */}
-        <div style={{ borderRadius: 16, border: "1px solid rgba(255,206,128,0.3)", background: "rgba(255,183,77,0.07)", padding: "16px 18px", marginBottom: 20 }}>
-          <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ffce80", marginBottom: 8 }}>
-            ⏱️ Hoe werkt het kwartier-tegoed?
-          </div>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 10 }}>
-            Vanaf 2027 koop je losse kwartiertjes extra AI-bijles (bv. een bundel van 10). Zolang je saldo loopt, praat de AI-bijles onbeperkt mee. Is het op? Dan stopt het gewoon — jij beslist zelf of je bijkoopt. Ook leuk om cadeau te geven.
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {["Je saldo staat altijd in beeld — geen verrassingen", "Nooit een automatische verlenging of stilzwijgend abonnement", "Je betaalt alléén voor wat je écht gebruikt"].map((t, i) => (
-              <div key={i} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", display: "flex", gap: 8 }}>
-                <span style={{ color: "#69f0ae" }}>✓</span> {t}
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* (Kwartier-tegoed-uitleg verwijderd 13 aug — tegoed is ON-HOLD,
+            zie proPlan.js. Terugzetten kan uit git-historie bij bewezen vraag.) */}
 
         {/* Abonnement-keuzemenu + proef — alleen tonen als de paywall live is.
             Nu (per-kwartier-model, paywall uit) verbergen we de oude

@@ -437,7 +437,7 @@ const steps = [
       "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
     interactiveComponent: makeRekenOefenRonde({ soort: "delen", aantal: 12, emoji: "➗", meervoud: "deelsommen" }),
     checks: [
-      { q: "56 ÷ 7 = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Denk: 7 × ? = 56.", "Dat is 42 ÷ 7.", "Dat is 63 ÷ 7."] },
+      { q: "56 ÷ 7 = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Denk aan de tafel van 7: 7 × hoeveel kom je uit bij deze som?", "Dat is 42 ÷ 7.", "Dat is 63 ÷ 7."] },
     ],
   },
 ];

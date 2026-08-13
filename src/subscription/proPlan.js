@@ -9,8 +9,10 @@
 // Het principe (2026-07-25): DE BETAALVORM VOLGT DE WAARDEVORM.
 //  - Doorlopende waarde (voortgang volgen, rapporten, logo op toetsen)
 //    → een klein abonnement: FAMILIE (per gezin) of PRO (leerkrachten).
-//  - Verbruikswaarde (extra AI-bijles-tijd) → los KWARTIER-TEGOED,
-//    geen abonnement, ook als cadeaukaart.
+//  - Verbruikswaarde (extra AI-bijles-tijd) → los KWARTIER-TEGOED.
+//    ⛔ ON-HOLD (Mark 8 aug: "waarschijnlijk een slecht idee"; herbevestigd
+//    13 aug "geen losse eindjes") — uit ALLE gebruikers-teksten; alleen terug
+//    bij bewezen vraag (PRIJSPLAN §2b). Cadeaukaart idem.
 //  - De leer-basis blijft gratis (merkbelofte); partner-codes (Leergeld,
 //    Ooievaarspas, voedselbanken) geven het Familie-niveau gratis.
 //    ⚖️ Ooievaarspas = BLIJVEND gratis Familie, zonder plekken-limiet —
@@ -25,7 +27,7 @@
 
 import { track } from "../utils.js";
 
-// De drie betaalde lagen. Richtprijzen — definitief vóór de lancering.
+// De twee betaalde lagen. Richtprijzen — definitief vóór de lancering.
 export const LAGEN = {
   familie: {
     id: "familie",
@@ -52,14 +54,8 @@ export const LAGEN = {
     prijs: "school € 99 per klas p/jaar · bijlesdocent richtprijs € 6,95 p/mnd of € 59 p/jaar",
     kort: "Schooldashboard, eigen logo op toetsen en rapportage — voor leerkrachten blijft lesgeven met Leerkwartier gratis",
   },
-  tegoed: {
-    id: "tegoed",
-    naam: "Kwartier-tegoed",
-    icon: "⏱️",
-    wie: "los bijkopen — geen abonnement",
-    prijs: "prijs per kwartier maken we vóór de lancering bekend",
-    kort: "Losse kwartieren extra AI-bijles — ook leuk als cadeautje",
-  },
+  // (Kwartier-tegoed verwijderd uit de etalage — ON-HOLD, zie kop van dit
+  // bestand. LAAG_KLEUREN.tegoed blijft staan voor als hij ooit terugkomt.)
 };
 
 export function getLaag(id) {
@@ -88,13 +84,10 @@ export const PRO_MODEL = {
   uitleg:
     "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — ook voor " +
     "leerkrachten die met hun klas oefenen. " +
-    "Vanaf 2027 zijn er drie extra's: Familie (één klein bedrag per gezín — " +
+    "Vanaf 2027 zijn er twee extra's: Familie (één klein bedrag per gezín — " +
     "voortgang volgen, weekrapport, hele toets oefenen met de klok; ook als " +
-    "Seizoenspas: één keer betalen voor het hele toetsjaar, stopt vanzelf), Pro voor scholen " +
-    "en bijlesdocenten (schooldashboard, eigen logo op toetsen, klasrapportage) " +
-    "en los kwartier-tegoed voor " +
-    "extra AI-bijles — dat laatste zonder abonnement: je betaalt alleen " +
-    "voor wat je écht gebruikt.",
+    "Seizoenspas: één keer betalen voor het hele toetsjaar, stopt vanzelf) en Pro voor scholen " +
+    "en bijlesdocenten (schooldashboard, eigen logo op toetsen, klasrapportage).",
 };
 
 // De betaalde extra's. `laag`: 'familie' | 'leerkracht' | 'tegoed'.
@@ -117,18 +110,8 @@ export const PRO_FEATURES = {
     blurb:
       "De rustige AI-bijlesdocent die de stof op jouw manier uitlegt. Gratis " +
       "krijg je elke dag een kleine basis-portie; met Familie is Vonk " +
-      "onbeperkt. Losse kwartieren bijkopen kan straks ook.",
+      "onbeperkt.",
     status: "live",
-  },
-  "extra-kwartieren": {
-    id: "extra-kwartieren",
-    icon: "⏱️",
-    label: "Losse kwartieren AI-bijles",
-    laag: "tegoed",
-    blurb:
-      "Extra AI-bijles-tijd zonder abonnement — koop losse kwartieren " +
-      "wanneer je ze nodig hebt, ook leuk als cadeautje.",
-    status: "binnenkort",
   },
   "parent-dashboard": {
     id: "parent-dashboard",

@@ -308,7 +308,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 overflow: "hidden",
                 textOverflow: "ellipsis",
               }}>
-                Bij: {stepTitle}
+                Je werkt aan: {stepTitle}
               </div>
             </div>
           </div>
