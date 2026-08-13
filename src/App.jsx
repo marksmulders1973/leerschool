@@ -371,6 +371,9 @@ export default function App() {
   const [examenInitialMode, setExamenInitialMode] = useState("leren");
   // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
+  // Kliktocht 13 aug: de hub-terugknop ging altijd naar home, ook als je er
+  // vanaf /mijn (vak-balk) kwam — context-verlies. Nu onthouden we de afzender.
+  const [learnHubReturnPage, setLearnHubReturnPage] = useState("home");
   // Bug 31 jul (Mark): vak-tegel op StudentHome telt paden per PO/VO-toggle,
   // maar de Hub filterde op rol — rol "student" + PO-tegel gaf 0 paden. De
   // tegel geeft nu zijn niveau mee zodat de Hub hetzelfde filtert als de teller.
@@ -1169,7 +1172,7 @@ export default function App() {
             setActiveCurriculumId(id);
             setPage("curriculum");
           }}
-          onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
+          onBack={() => { setLearnFilterSubject(null); setPage(learnHubReturnPage); setLearnHubReturnPage("home"); }}
           onHome={() => { setLearnFilterSubject(null); goHome(); }}
         />
       )}
@@ -1234,7 +1237,7 @@ export default function App() {
             setLearnPathReturnPage("mijn-pagina");
             setPage("learn-path");
           }}
-          onGoLeren={() => setPage("learn-paths-hub")}
+          onGoLeren={() => { setLearnHubReturnPage("mijn-pagina"); setPage("learn-paths-hub"); }}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
           onVak={(subject) => {
@@ -1242,6 +1245,7 @@ export default function App() {
             // (Mark 21:00: "maak de blokken klikbaar").
             setLearnFilterSubject(subject);
             setLearnNiveauOverride(userSchoolType ? "vo" : "po");
+            setLearnHubReturnPage("mijn-pagina");
             setPage("learn-paths-hub");
           }}
           onBack={() => setPage("student-home")}
@@ -1338,9 +1342,11 @@ export default function App() {
       )}
       {page === "maatje" && (
         <Suspense fallback={<PageLoader />}>
+          {/* Kliktocht 13 aug: terug uit de maatje-chat hoort op je eigen
+              pagina uit te komen (Charley woont daar), niet op home. */}
           <MaatjePocket
             userName={userName || ""}
-            onHome={goHome}
+            onHome={() => setPage("mijn-pagina")}
             onOpenLeren={() => setPage("learn-paths-hub")}
             onOpenPark={() => setPage("zoo")}
           />

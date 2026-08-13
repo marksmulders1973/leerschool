@@ -45,6 +45,12 @@ export async function checkNieuwMakerAntwoord(speler) {
     const { data: sess } = await supabase.auth.getSession();
     const uid = sess?.session?.user?.id || null;
     const of = namen.map((n) => `display_name.ilike.${n}`);
+    // Na goedkeuring wordt de bord-naam "gebruiker X." (privacy 13 aug) — de
+    // naam-match hierboven vindt die niet meer. Voor niet-ingelogde kinderen
+    // matchen we daarom óók op de voorletter-vorm; kleine kans op een
+    // naamgenoot-match, maar het alternatief is dat het maatje het antwoord
+    // nooit meldt. Ingelogde kinderen matchen exact via user_id.
+    if (!uid && naam) of.push(`display_name.ilike.gebruiker ${naam[0].toUpperCase()}.`);
     if (uid) of.push(`user_id.eq.${uid}`);
     const { data: eigen } = await supabase
       .from("wishes")

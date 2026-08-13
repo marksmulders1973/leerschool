@@ -153,8 +153,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
         </div>
 
-        {/* De extra's, gegroepeerd per laag (Familie / Pro / Kwartier-tegoed) —
-            elke laag in z'n eigen tier-kleur + stip (goud/blauw/paars, 9 aug). */}
+        {/* De extra's, gegroepeerd per laag (Familie / Pro) — elke laag in z'n
+            eigen tier-kleur + stip. Kwartier-tegoed is ON-HOLD (proPlan.js). */}
         {Object.values(LAGEN).map((laag) => { const kleur = LAAG_KLEUREN[laag.id] || LAAG_KLEUREN.familie; return (
           <div key={laag.id} style={{ marginBottom: 16 }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: kleur.tekst, marginBottom: 4, display: "flex", alignItems: "center", gap: 8 }}>

@@ -178,6 +178,17 @@ Cito-toets + examens versterken via **kennisgraaf** (zie "Kern-flow"). Concreet:
 - Adaptieve "zwakste-pad-detector" — bij fout op check stuurt systeem naar laagste pad waar gebruiker nog wél scoort
 - **Examen-modus respecteren**: voorkennis-keten alleen tonen in oefen-modus, NIET in examen-modus
 
+### 🚶 Kliktocht-agents na élke UI-sessie (Mark 13 aug 2026 — verplicht)
+
+Mark kan niet alles zelf doorlopen. Daarom: na élke sessie met UI- of
+navigatie-wijzigingen, vóór "klaar voor gebruik", **1-2 parallelle
+kliktocht-agents** de vaste routes uit `docs/KLIKTOCHT-CHECKLIST.md` laten
+nalopen (code-trace: handler → bestemming; live-check bij twijfel). De vraag
+is niet "werkt de knop" maar "kom ik uit waar een gebruiker het verwacht,
+zonder omweg, en kan ik terug". Aanleiding: de profiel-wissel op /mijn
+stuurde naar home (v292) — geen enkele gewone review ving dat. P0/P1-vondsten
+direct fixen in dezelfde sessie; bevindingen kort aan Mark melden.
+
 ### Self-test tussen taken (verplicht)
 Na elke afgewerkte taak voor je verder gaat:
 1. **Build groen**: `npx vite build` faalt = stoppen + fixen.
