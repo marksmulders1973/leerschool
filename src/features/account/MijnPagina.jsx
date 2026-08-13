@@ -217,6 +217,17 @@ export default function MijnPagina({
   // 🎒 Groep aanpassen op je eigen pagina (Mark 13 aug) + schoolstart-kaart:
   // rond de zomerwissel schuift iedereen een groep op — één tik en alles klopt.
   const [groepKiezerOpen, setGroepKiezerOpen] = useState(false);
+  // Nieuwe naam direct op deze pagina (Mark 13 aug: "waarom kan ik daar niet
+  // wisselen?") — via onWisselProfiel, die kent onbekende namen al.
+  const [nieuweNaam, setNieuweNaam] = useState("");
+  const doeNieuweNaam = () => {
+    const n = nieuweNaam.trim();
+    if (!n || !onWisselProfiel) return;
+    try { track("mijn_profiel_nieuw", {}); } catch { /* */ }
+    setNieuweNaam("");
+    setWisselOpen(false);
+    onWisselProfiel(n);
+  };
   const [schooljaarWeg, setSchooljaarWeg] = useState(() => {
     try { return localStorage.getItem(`lk_schooljaar_2026:${(userName || "").trim()}`) === "1"; } catch { return true; }
   });
@@ -604,8 +615,11 @@ export default function MijnPagina({
                     {player}
                   </div>
                   {/* Profiel-wissel (Mark 12 aug): meerdere kinderen op één
-                      apparaat wisselen hier — groep/rol wisselt automatisch mee. */}
-                  {onWisselProfiel && (andereNamen.length > 0 || wisselOpen) && (
+                      apparaat wisselen hier — groep/rol wisselt automatisch mee.
+                      13 aug: knop staat er nu altijd; nieuwe naam kan hier ook
+                      (stuurde eerst naar home — "waarom kan ik daar niet
+                      wisselen?"). */}
+                  {onWisselProfiel && (
                     <button
                       onClick={() => setWisselOpen(!wisselOpen)}
                       aria-expanded={wisselOpen}
@@ -637,19 +651,39 @@ export default function MijnPagina({
                         {n.emoji} {n.naam}
                       </button>
                     ))}
-                    {onHome && (
-                      <button
-                        onClick={onHome}
-                        title="Nieuwe naam invullen op de startpagina"
+                    {/* Nieuwe naam direct hier (Mark 13 aug) — daarna kies je
+                        eronder meteen je groep. */}
+                    <span style={{ display: "inline-flex", gap: 4, alignItems: "center" }}>
+                      <input
+                        value={nieuweNaam}
+                        onChange={(e) => setNieuweNaam(e.target.value.slice(0, 24))}
+                        onKeyDown={(e) => { if (e.key === "Enter") doeNieuweNaam(); }}
+                        placeholder="➕ nieuwe naam…"
+                        aria-label="Nieuwe naam toevoegen"
                         style={{
-                          padding: "7px 13px", borderRadius: 999, cursor: "pointer",
+                          width: 130, padding: "6px 11px", borderRadius: 999,
                           border: "1px dashed rgba(255,255,255,0.3)", background: "transparent",
-                          color: "var(--color-text-muted, #8899aa)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                          color: "var(--color-text, #e8edf5)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                          outline: "none",
                         }}
-                      >
-                        ➕ nieuwe naam
-                      </button>
-                    )}
+                      />
+                      {nieuweNaam.trim() && (
+                        <button
+                          onClick={doeNieuweNaam}
+                          style={{
+                            padding: "7px 12px", borderRadius: 999, cursor: "pointer", border: "none",
+                            background: "#00c853", color: "#08240f", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+                          }}
+                        >
+                          Ga!
+                        </button>
+                      )}
+                    </span>
+                  </div>
+                )}
+                {wisselOpen && (
+                  <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 2px" }}>
+                    Nieuw hier? Typ je naam en kies daarna hieronder je groep of klas.
                   </div>
                 )}
                 {(userLevel || onSetLevel) && (
