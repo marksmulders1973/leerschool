@@ -44,11 +44,19 @@ export async function listPendingWishes() {
 
 /** Admin-only: keur goed of wijs af. */
 export async function moderateWish(id, status) {
-  // Privacy (Mark 13 aug 2026): bij goedkeuren vervangen we de naam door
-  // "gebruiker" — kindernamen horen niet publiek op het bord. In de
-  // wachtrij (pending) ziet de maker de échte naam nog wél, zodat je weet
-  // wie het vroeg. Maker-reacties gaan niet via deze functie ("De maker" blijft).
-  const patch = status === "approved" ? { status, display_name: "gebruiker" } : { status };
+  // Privacy (Mark 13 aug 2026): bij goedkeuren wordt de naam "gebruiker X."
+  // (alleen de voorletter) — zo herkent het kind zijn eigen tip, maar staat
+  // er geen kindernaam publiek op het bord. In de wachtrij (pending) ziet de
+  // maker de échte naam nog wél. Maker-reacties gaan niet via deze functie.
+  const patch = { status };
+  if (status === "approved") {
+    let letter = "";
+    try {
+      const { data } = await supabase.from("wishes").select("display_name").eq("id", id).single();
+      letter = String(data?.display_name || "").trim().match(/[A-Za-zÀ-ž]/)?.[0] || "";
+    } catch { /* */ }
+    patch.display_name = letter ? `gebruiker ${letter.toUpperCase()}.` : "gebruiker";
+  }
   const { error } = await supabase.from("wishes").update(patch).eq("id", id);
   return { ok: !error, error };
 }
