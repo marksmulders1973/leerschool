@@ -47,6 +47,31 @@ export function goudVerdiend(speler) {
   try { return localStorage.getItem(goudSleutel(speler)) === "1"; } catch { return false; }
 }
 
+// ── "Wat staat bovenaan?" (Mark 13 aug: "de blokken kunnen schuiven op
+// eigen voorkeur") — bewust simpel: kies je top-blok, geen drag-and-drop
+// (foutgevoelig op een telefoon). Zelfde event als de thema's.
+const topSleutel = (s) => `lk_topblok_${String(s || "").trim().toLowerCase() || "gast"}`;
+export const TOP_BLOKKEN = [
+  { id: "lijstje", naam: "⭐ Mijn lijstje" },
+  { id: "klaar", naam: "📌 Voor jou klaar" },
+  { id: "diploma", naam: "🏆 Diploma-kast" },
+];
+
+export function leesTopBlok(speler) {
+  try {
+    const v = localStorage.getItem(topSleutel(speler));
+    return TOP_BLOKKEN.some((b) => b.id === v) ? v : "lijstje";
+  } catch { return "lijstje"; }
+}
+
+export function kiesTopBlok(speler, id) {
+  try {
+    localStorage.setItem(topSleutel(speler), id);
+    window.dispatchEvent(new CustomEvent(THEMA_EVENT));
+  } catch { /* */ }
+  try { track("topblok_gekozen", { blok: id }); } catch { /* */ }
+}
+
 /** Wordt door de diploma-kast aangeroepen zodra er ≥1 écht verdiend diploma hangt. */
 export function ontgrendelGoud(speler) {
   try {

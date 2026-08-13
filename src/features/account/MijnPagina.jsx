@@ -14,7 +14,7 @@ import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
-import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT } from "../../shared/mijnThema.js";
+import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
 
 // ─────────────────────────────────────────────────────────────────────
 // Mijn Leerkwartier — persoonlijke pagina (WhatsApp-feedback 11 aug).
@@ -210,6 +210,7 @@ export default function MijnPagina({
   }, []);
   const thema = useMemo(() => themaVan(player), [player, themaTeller]);
   const goudOpen = useMemo(() => goudVerdiend(player), [player, themaTeller]);
+  const topBlok = useMemo(() => leesTopBlok(player), [player, themaTeller]);
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
@@ -1093,10 +1094,15 @@ export default function MijnPagina({
               </Card>
             )}
 
+            {/* ── Schuifbare blokken (Mark 13 aug: "blokken op eigen
+                voorkeur"): flex-kolom + order — het gekozen top-blok komt
+                bovenaan, de rest houdt de vaste volgorde. ── */}
+            <div style={{ display: "flex", flexDirection: "column" }}>
+
             {/* ── ⭐ Mijn lijstje — bewaar-voor-later (Mark-idee 13 aug): het
                 kind bladert, tikt een ster bij een les, en die wacht hier.
                 Eigen keuzes bovenaan = eigenaarschap. ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)" }}>
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", order: topBlok === "lijstje" ? 0 : 1 }}>
               <div style={eyebrowStijl}>Zelf gekozen</div>
               <div style={kaartTitelStijl}>⭐ Mijn lijstje</div>
               {lijstje.length === 0 ? (
@@ -1129,7 +1135,7 @@ export default function MijnPagina({
 
             {/* ── Dit staat voor jou klaar ── */}
             {klaargezet.length > 0 && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", order: topBlok === "klaar" ? 0 : 2 }}>
                 <div style={eyebrowStijl}>{niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : "Voor jou"}</div>
                 <div style={kaartTitelStijl}>Dit staat voor jou klaar</div>
                 {klaargezet.map(({ pad, record, reden }) => {
@@ -1180,11 +1186,13 @@ export default function MijnPagina({
             {/* ── Diploma-kast (beloning-lus, 12 aug): beste score per
                 onderwerp = mini-diploma met datum + %, printbaar als PDF.
                 Tuin-les: groei zichtbaar, nooit straf. ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.4)" }}>
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.4)", order: topBlok === "diploma" ? 0 : 3 }}>
               <div style={eyebrowStijl}>Jouw prijzenkast</div>
               <div style={kaartTitelStijl}>🏆 Diploma-kast</div>
               <DiplomaKast player={player} naamVoorDiploma={player} bron="mijn" />
             </Card>
+
+            </div>{/* einde schuifbare blokken */}
 
             {/* ── 🎨 Eigen achtergrond (Mark 13 aug): gekozen palet i.p.v.
                 vrije foto's — rustig en veilig; goud verdien je met je
@@ -1222,6 +1230,24 @@ export default function MijnPagina({
                   🏆 Het gouden thema verdien je met je eerste échte diploma uit de kast hierboven.
                 </div>
               )}
+              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "12px 0 6px" }}>Wat staat bovenaan?</div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                {TOP_BLOKKEN.map((b) => (
+                  <button
+                    key={b.id}
+                    onClick={() => kiesTopBlok(player, b.id)}
+                    style={{
+                      padding: "7px 12px", borderRadius: 999, cursor: "pointer", fontFamily: "inherit",
+                      fontSize: 12, fontWeight: 700,
+                      border: topBlok === b.id ? "1.5px solid #ffd54f" : "1.5px solid rgba(255,255,255,0.2)",
+                      background: topBlok === b.id ? "rgba(255,213,79,0.15)" : "rgba(255,255,255,0.04)",
+                      color: topBlok === b.id ? "#ffd54f" : "var(--color-text, #e8edf5)",
+                    }}
+                  >
+                    {b.naam}
+                  </button>
+                ))}
+              </div>
             </Card>
 
             {/* ── Abonnement & toegang ── */}
