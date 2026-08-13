@@ -75,8 +75,10 @@ Beste [team van ORGANISATIE / naam],
 Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren, en in mijn vrije
 tijd bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7
 en 8 elke dag kunnen oefenen voor de Doorstroomtoets — met uitleg die simpeler
-wordt zolang het kwartje nog niet valt. Oefenboeken kosten €30 en bijles €37 per
-uur; juist de gezinnen die u helpt, verdienen dezelfde voorbereiding als ieder ander.
+wordt zolang het kwartje nog niet valt. Waar andere gezinnen €30 voor oefenboeken
+of €37 per uur voor bijles betalen, kost Leerkwartier niets — want juist de gezinnen
+die u helpt, verdienen dezelfde voorbereiding als ieder ander. *(herformulering
+Mark 13 aug: oude zin klonk alsof ze dit erbij moesten kopen)*
 
 Er zijn gelukkig al organisaties zoals de uwe die met ons meedoen — wie dat
 zijn ziet u op leerkwartier.app/bedankt.html.
@@ -145,8 +147,9 @@ Beste team van Leergeld [plaats],
 Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren, en in mijn vrije tijd
 bouwde ik Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7 en 8 elke
 dag kunnen oefenen voor de Doorstroomtoets — met uitleg die simpeler wordt zolang het
-kwartje nog niet valt. Oefenboeken kosten €30 en bijles €37 per uur; juist de gezinnen
-die u helpt, verdienen dezelfde voorbereiding als ieder ander.
+kwartje nog niet valt. Waar andere gezinnen €30 voor oefenboeken of €37 per uur voor
+bijles betalen, kost Leerkwartier niets — want juist de gezinnen die u helpt, verdienen
+dezelfde voorbereiding als ieder ander.
 
 Veel stichtingen ondersteunen gezinnen al met een oefenprogramma — Leerkwartier is
 daar geen vervanging van, maar een gratis aanvulling die u zónder kosten en zónder
