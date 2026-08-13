@@ -44,7 +44,12 @@ export async function listPendingWishes() {
 
 /** Admin-only: keur goed of wijs af. */
 export async function moderateWish(id, status) {
-  const { error } = await supabase.from("wishes").update({ status }).eq("id", id);
+  // Privacy (Mark 13 aug 2026): bij goedkeuren vervangen we de naam door
+  // "gebruiker" — kindernamen horen niet publiek op het bord. In de
+  // wachtrij (pending) ziet de maker de échte naam nog wél, zodat je weet
+  // wie het vroeg. Maker-reacties gaan niet via deze functie ("De maker" blijft).
+  const patch = status === "approved" ? { status, display_name: "gebruiker" } : { status };
+  const { error } = await supabase.from("wishes").update(patch).eq("id", id);
   return { ok: !error, error };
 }
 

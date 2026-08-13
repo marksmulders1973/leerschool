@@ -8,6 +8,7 @@
 // nooit meer kwijt.
 
 import { submitWish } from "../data/repos/wishesRepo.js";
+import supabase from "../supabase.js";
 import { track } from "../utils.js";
 
 const MARKER = /\[TIP[-\s]?VOOR[-\s]?(?:DE\s)?MAKER:?\s*([^\]]{3,400})\]/i;
@@ -32,10 +33,18 @@ export function verwerkMakerTip(replyTekst, { kindNaam = "", buddyNaam = "", bro
     const vorige = Number(localStorage.getItem("lk_makertip_laatst") || 0);
     if (nu - vorige < 5 * 60 * 1000) return schoon || "Ik heb het doorgegeven aan de maker! 🐾";
     localStorage.setItem("lk_makertip_laatst", String(nu));
-    submitWish({
-      message: `🐾 Via ${maatje} doorgegeven: "${tip}"`,
-      displayName: kind ? `${kind} (via ${maatje})` : `Via ${maatje}`,
-    });
+    // user_id meesturen als het kind ingelogd is: na goedkeuring wordt de
+    // naam op het bord "gebruiker" (privacy-regel 13 aug), dus het maatje
+    // herkent "jouw tip is beantwoord" daarna via het account, niet de naam.
+    (async () => {
+      let userId = null;
+      try { const { data } = await supabase.auth.getSession(); userId = data?.session?.user?.id || null; } catch { /* */ }
+      submitWish({
+        message: `🐾 Via ${maatje} doorgegeven: "${tip}"`,
+        displayName: kind ? `${kind} (via ${maatje})` : `Via ${maatje}`,
+        userId,
+      });
+    })();
     track("maker_tip_via_maatje", { bron });
   } catch { /* stil — de chat mag hier nooit op stuklopen */ }
   return schoon || "Ik heb het doorgegeven aan de maker! 🐾";
