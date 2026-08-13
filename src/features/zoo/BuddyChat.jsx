@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from "react";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
 import { verwerkMakerTip } from "../../shared/makerTip.js";
+import { makerAntwoordMelding } from "../../shared/makerAntwoord.js";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 
@@ -48,6 +49,10 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
     }
     const hoi = facts?.naam ? `Hoi ${String(facts.naam).trim()}! ` : "Hoi! ";
     setMessages([{ role: "assistant", content: `${hoi}Ik ben ${naam}. Vraag me iets over het park, of vertel me gewoon iets! ${b?.emoji || "🐾"}` }]);
+    // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
+    makerAntwoordMelding([facts?.naam], "park").then((m) => {
+      if (m) setMessages((prev) => [...prev, { role: "assistant", content: m }]);
+    });
     try { track("buddy_chat_open", { id: buddyId }); } catch { /* */ }
     setTimeout(() => { try { inputRef.current?.focus(); } catch {} }, 60);
     return () => { try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ } };

@@ -17,6 +17,7 @@ import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 import { track } from "../../utils.js";
 import { verwerkMakerTip } from "../../shared/makerTip.js";
+import { makerAntwoordMelding } from "../../shared/makerAntwoord.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
 // three.js pas laadt als het venster opent.
@@ -89,6 +90,16 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       setLeesMsg(-1); setLeesWoord(-1);
     }
     return () => { stopSpeak(); setPraat(false); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  // 💛→🐾 Idee #36 (Mark-go 13 aug): heeft de maker geantwoord op een tip van
+  // dit kind? Dan opent het maatje daar één keer mee (gezien-stempel in helper).
+  useEffect(() => {
+    if (!open) return;
+    makerAntwoordMelding([buddyWeetjes()?.naam], "tutor").then((m) => {
+      if (m && openRef.current) setMessages((prev) => [...prev, { role: "assistant", content: m }]);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 

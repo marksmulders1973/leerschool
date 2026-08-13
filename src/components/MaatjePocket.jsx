@@ -14,6 +14,7 @@ import { useState, useEffect, useRef } from "react";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
 import { verwerkMakerTip } from "../shared/makerTip.js";
+import { makerAntwoordMelding } from "../shared/makerAntwoord.js";
 import { spreekMetMeelezen } from "../shared/spraakTekst.js";
 import MeeleesTekst from "../shared/ui/MeeleesTekst.jsx";
 
@@ -108,6 +109,15 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
   useEffect(() => {
     if (!chatOpen) { try { window.speechSynthesis?.cancel(); } catch { /* */ } }
     return () => { try { window.speechSynthesis?.cancel(); } catch { /* */ } };
+  }, [chatOpen]);
+
+  // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
+  useEffect(() => {
+    if (!chatOpen) return;
+    makerAntwoordMelding([kind], "pocket").then((m) => {
+      if (m) setMessages((prev) => [...prev, { role: "assistant", content: m }].slice(-30));
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatOpen]);
 
   // Mood zacht laten roteren.
