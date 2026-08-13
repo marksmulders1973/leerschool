@@ -177,6 +177,14 @@ const ROLLEN = [
   { key: "teacher", emoji: "🧑‍🏫", label: "Juf of meester" },
 ];
 
+// Wat de betaalde laag per rol later biedt (paywall staat UIT tot 2027 — dus
+// nu puur informeren + waitlist, Mark-keuze 13 aug). Eerlijk afgebakend: geen
+// kale "gratis", wel "in 2026 gratis". Bron: docs/PRIJSPLAN.md.
+const TIER_PITCH = {
+  ouder: { naam: "Familie", punten: ["weekrapport per e-mail", "examen-simulatie", "Kwartierplan per kind", "tot 3 kinderen onder één account"] },
+  teacher: { naam: "Pro", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
+};
+
 export default function MijnPagina({
   userName,
   userLevel,
@@ -1583,6 +1591,67 @@ export default function MijnPagina({
             </>)}
 
             {weergave === "ouder" && (<>
+            {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
+                "als je ouder bent, wie zijn dan de kinderen?"). Zacht model —
+                anders dan Squla/Junior Einstein, die eerst een (betaald) account
+                eisen: wij tonen meteen wie hier oefent en nodigen uit tot
+                inloggen voor koppelen-over-apparaten + weekmail. ── */}
+            {andereNamen.length > 0 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(0,176,255,0.35)" }}>
+                <div style={eyebrowStijl}>Op dit apparaat</div>
+                <div style={kaartTitelStijl}>Wie oefent er hier?</div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "6px 0 8px" }}>
+                  {andereNamen.map((n) => (
+                    <button
+                      key={n.naam}
+                      onClick={() => { try { track("mijn_ouder_kind_wissel", {}); } catch { /* */ } onWisselProfiel?.(n.naam); }}
+                      title={`Bekijk wat ${n.naam} doet`}
+                      style={{
+                        padding: "8px 14px", borderRadius: 999, cursor: "pointer",
+                        border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.1)",
+                        color: "#4fc3f7", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
+                      }}
+                    >
+                      {n.emoji} {n.naam}
+                    </button>
+                  ))}
+                </div>
+                <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                  {authUser?.id
+                    ? "Tik op een naam om mee te kijken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code."
+                    : "Tik op een naam om mee te kijken. Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport? Log in of maak gratis een account — zie hieronder."}
+                </div>
+              </Card>
+            )}
+
+            {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
+                Alleen voor echte ouder/leraar-rol; paywall staat UIT tot 2027. ── */}
+            {(() => {
+              const pitch = TIER_PITCH[userRole];
+              if (!pitch) return null;
+              return (
+                <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.3)", background: "rgba(255,213,79,0.06)" }}>
+                  <div style={eyebrowStijl}>Jouw pakket</div>
+                  <div style={kaartTitelStijl}>
+                    Nu: <span style={{ color: "#69f0ae" }}>{tierLabel}</span> — in 2026 gratis te gebruiken
+                  </div>
+                  <div style={{ fontSize: 13, color: "var(--color-text)", lineHeight: 1.6, margin: "6px 0 10px" }}>
+                    Later komt <strong>{pitch.naam}</strong> met: {pitch.punten.join(" · ")}. Zolang we bouwen blijft alles gratis.
+                  </div>
+                  <a
+                    href="/abonnement.html"
+                    onClick={() => { try { track("mijn_abonnement_interesse", { rol: userRole }); } catch { /* */ } }}
+                    style={{
+                      display: "inline-block", padding: "9px 15px", borderRadius: 10,
+                      background: "rgba(255,213,79,0.18)", color: "#ffd54f", textDecoration: "none",
+                      fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+                    }}
+                  >
+                    💛 Hou me op de hoogte →
+                  </a>
+                </Card>
+              );
+            })()}
             {/* ── Ouder/juf: afgelopen week ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Oefentijd</div>
