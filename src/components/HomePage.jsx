@@ -1118,6 +1118,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}>sla over →</button>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {/* Mark 13 aug: verkeerd gekozen of nieuw schooljaar? De groep
+                      is voortaan altijd aan te passen op 🏠 Mijn pagina. */}
                   {levelOptions[pendingRole].map(n => (
                     <button key={n} onClick={() => setLevel(String(n))} style={{
                       // B5.5 (7-bots-review a11y): 38px was te klein als tap-target.
@@ -1129,6 +1131,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       cursor: "pointer",
                     }}>{n}</button>
                   ))}
+                </div>
+                <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)" }}>
+                  Later aanpassen kan altijd op je eigen pagina.
                 </div>
               </div>
             )}

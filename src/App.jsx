@@ -1209,6 +1209,18 @@ export default function App() {
           onLeerkrachtHome={() => setPage("teacher-home")}
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
+          onSetLevel={({ soort, nr, schoolType }) => {
+            // Groep/klas aanpassen op Mijn pagina (Mark 13 aug: "dat moet je
+            // op je persoonlijke pagina kunnen aanpassen"). App bewaart het
+            // niveau als los cijfer; klas-zijn hangt aan userSchoolType.
+            const lvl = String(nr);
+            const st = soort === "klas" ? (schoolType || userSchoolType || "brugklas") : "";
+            setUserLevel(lvl);
+            setUserSchoolType(st);
+            try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: lvl, role, schoolType: st })); } catch {}
+            if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: st });
+            track("groep_gewijzigd", { via: "mijn", soort, nr });
+          }}
           onResumePath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
@@ -1453,7 +1465,11 @@ export default function App() {
               setPage("self-study");
               return;
             }
-            setPage(r === "teacher" ? "teacher-home" : "student-home");
+            // Mark 13 aug: de landing ná inloggen/onboarding is voortaan de
+            // persoonlijke pagina — dat is je thuisbasis (vandaag-kaart,
+            // lijstje, vakken van jouw groep). "Alle vakken" (StudentHome)
+            // staat daar één tik vandaan.
+            setPage(r === "teacher" ? "teacher-home" : "mijn-pagina");
           }}
           onBack={role ? () => setPage(role === "teacher" ? "teacher-home" : "student-home") : null}
           userName={userName}

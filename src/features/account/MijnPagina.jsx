@@ -180,6 +180,7 @@ export default function MijnPagina({
   onLeerkrachtHome,
   onLeerkrachtActie,
   onWisselProfiel,
+  onSetLevel,
   onBack,
   onHome,
 }) {
@@ -211,6 +212,24 @@ export default function MijnPagina({
   const thema = useMemo(() => themaVan(player), [player, themaTeller]);
   const goudOpen = useMemo(() => goudVerdiend(player), [player, themaTeller]);
   const topBlok = useMemo(() => leesTopBlok(player), [player, themaTeller]);
+  // 🎒 Groep aanpassen op je eigen pagina (Mark 13 aug) + schoolstart-kaart:
+  // rond de zomerwissel schuift iedereen een groep op — één tik en alles klopt.
+  const [groepKiezerOpen, setGroepKiezerOpen] = useState(false);
+  const [schooljaarWeg, setSchooljaarWeg] = useState(() => {
+    try { return localStorage.getItem(`lk_schooljaar_2026:${(userName || "").trim()}`) === "1"; } catch { return true; }
+  });
+  const inSchoolstartPeriode = (() => {
+    const d = new Date();
+    return d >= new Date("2026-08-13") && d < new Date("2026-10-01");
+  })();
+  const sluitSchooljaarKaart = () => {
+    setSchooljaarWeg(true);
+    try { localStorage.setItem(`lk_schooljaar_2026:${player}`, "1"); } catch { /* */ }
+  };
+  const kiesNiveau = (soort, nr, schoolType) => {
+    if (onSetLevel) onSetLevel({ soort, nr, schoolType });
+    setGroepKiezerOpen(false);
+  };
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState("kind");
@@ -604,9 +623,46 @@ export default function MijnPagina({
                     )}
                   </div>
                 )}
-                {userLevel && (
-                  <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>
-                    {niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : userLevel}
+                {(userLevel || onSetLevel) && (
+                  <div style={{ marginTop: 2 }}>
+                    <button
+                      onClick={() => onSetLevel && setGroepKiezerOpen((o) => !o)}
+                      title={onSetLevel ? "Tik om je groep of klas aan te passen" : undefined}
+                      style={{
+                        background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.18)",
+                        borderRadius: 999, padding: "3px 10px", cursor: onSetLevel ? "pointer" : "default",
+                        fontSize: 13, color: "var(--color-text-muted, #8899aa)", fontFamily: "inherit",
+                      }}
+                    >
+                      {niveau ? (niveau.label || `${niveau.soort === "groep" ? "Groep" : "Klas"} ${niveau.nr}`) : (userLevel || "Kies je groep")}
+                      {onSetLevel && <span style={{ marginLeft: 5 }}>✏️</span>}
+                    </button>
+                    {groepKiezerOpen && onSetLevel && (
+                      <div style={{ marginTop: 8 }}>
+                        <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>
+                          {niveau?.soort === "klas" ? "In welke klas zit je?" : "In welke groep zit je?"}
+                        </div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                          {(niveau?.soort === "klas" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7, 8]).map((n) => (
+                            <button
+                              key={n}
+                              onClick={() => kiesNiveau(niveau?.soort === "klas" ? "klas" : "groep", n)}
+                              style={{
+                                width: 40, height: 40, borderRadius: 10, cursor: "pointer", fontFamily: "inherit",
+                                border: niveau?.nr === n ? "2px solid #ffd54f" : "1px solid rgba(255,255,255,0.2)",
+                                background: niveau?.nr === n ? "rgba(255,213,79,0.15)" : "rgba(255,255,255,0.05)",
+                                color: niveau?.nr === n ? "#ffd54f" : "var(--color-text, #e8edf5)", fontSize: 15, fontWeight: 800,
+                              }}
+                            >
+                              {n}
+                            </button>
+                          ))}
+                        </div>
+                        <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
+                          Zo kloppen je vakken en oefeningen meteen weer bij jouw {niveau?.soort === "klas" ? "klas" : "groep"}.
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
                 <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>
@@ -1092,6 +1148,56 @@ export default function MijnPagina({
                   );
                 })}
               </Card>
+            )}
+
+            {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
+                iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
+            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg &&
+              !(niveau.soort === "klas" && niveau.nr >= 6) && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: "rgba(0,200,83,0.06)" }}>
+                <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
+                  🎒 Nieuw schooljaar!
+                </div>
+                <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
+                  {niveau.soort === "groep" && niveau.nr >= 8
+                    ? "Zit je nu op de middelbare school?"
+                    : `Zit je nu in ${niveau.soort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
+                </div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button
+                    onClick={() => {
+                      if (niveau.soort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
+                      else kiesNiveau(niveau.soort, niveau.nr + 1);
+                      sluitSchooljaarKaart();
+                    }}
+                    style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
+                  >
+                    {niveau.soort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${niveau.soort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
+                  </button>
+                  <button
+                    onClick={sluitSchooljaarKaart}
+                    style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", cursor: "pointer", background: "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)", fontWeight: 700, fontSize: 13, fontFamily: "inherit" }}
+                  >
+                    Nee, klopt zo
+                  </button>
+                </div>
+              </Card>
+            )}
+
+            {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
+                de vakken-werkbank voor wie meteen wil oefenen. */}
+            {onBack && (
+              <button
+                onClick={onBack}
+                style={{
+                  width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
+                  border: "1px solid rgba(93,179,255,0.45)", background: "rgba(93,179,255,0.1)",
+                  color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
+                  marginBottom: "var(--space-4)", textAlign: "center",
+                }}
+              >
+                📚 Alle vakken en oefeningen →
+              </button>
             )}
 
             {/* ── Schuifbare blokken (Mark 13 aug: "blokken op eigen
