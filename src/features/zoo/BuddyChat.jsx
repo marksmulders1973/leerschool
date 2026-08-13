@@ -49,6 +49,14 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
     }
     const hoi = facts?.naam ? `Hoi ${String(facts.naam).trim()}! ` : "Hoi! ";
     setMessages([{ role: "assistant", content: `${hoi}Ik ben ${naam}. Vraag me iets over het park, of vertel me gewoon iets! ${b?.emoji || "🐾"}` }]);
+    // Eerlijk vooraf (Mark 13 aug): wat het kind vertelt leeft per apparaat —
+    // dat legt het maatje één keer zelf uit, in kindtaal.
+    try {
+      if (!localStorage.getItem("lk_maatje_apparaat_uitleg")) {
+        localStorage.setItem("lk_maatje_apparaat_uitleg", "1");
+        setMessages((prev) => [...prev, { role: "assistant", content: "Nog even iets belangrijks: wat je mij vertelt, onthoud ik alleen op dít apparaat. Praat je op een andere telefoon of tablet met me? Dan ken ik je daar nog niet en mag je het me gewoon opnieuw vertellen. 🐾" }]);
+      }
+    } catch { /* */ }
     // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
     // weg-vlag: venster kan al dicht zijn als de query terugkomt (review 13 aug).
     let weg = false;

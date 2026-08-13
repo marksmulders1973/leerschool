@@ -1221,8 +1221,11 @@ export default function MijnPagina({
                     <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>
                       Dit heb je me al verteld — zo maak ik je oefeningen persoonlijker:
                     </div>
-                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 6 }}>
                       {weetjesChips.map((c) => <span key={c} style={chipStijl}>{c}</span>)}
+                    </div>
+                    <div style={{ fontSize: 11, color: "var(--color-text-muted, #8899aa)", marginBottom: 10 }}>
+                      Dit onthoud ik op dít apparaat — op een andere telefoon of tablet ken ik je nog niet.
                     </div>
                   </>
                 ) : (

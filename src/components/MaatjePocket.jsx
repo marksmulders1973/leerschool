@@ -112,9 +112,17 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
   }, [chatOpen]);
 
   // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
+  // Plus (Mark 13 aug): één keer per apparaat eerlijk uitleggen dat weetjes
+  // niet mee verhuizen naar een andere telefoon of tablet.
   useEffect(() => {
     if (!chatOpen) return undefined;
     let weg = false; // pagina kan al dicht zijn als de query terugkomt
+    try {
+      if (!localStorage.getItem("lk_maatje_apparaat_uitleg")) {
+        localStorage.setItem("lk_maatje_apparaat_uitleg", "1");
+        setMessages((prev) => [...prev, { role: "assistant", content: "Nog even iets belangrijks: wat je mij vertelt, onthoud ik alleen op dít apparaat. Praat je op een andere telefoon of tablet met me? Dan ken ik je daar nog niet en mag je het me gewoon opnieuw vertellen. 🐾" }].slice(-30));
+      }
+    } catch { /* */ }
     makerAntwoordMelding([kind], "pocket").then((m) => {
       if (m && !weg) setMessages((prev) => [...prev, { role: "assistant", content: m }].slice(-30));
     });
