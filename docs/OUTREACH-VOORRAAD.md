@@ -78,11 +78,14 @@ en 8 elke dag kunnen oefenen voor de Doorstroomtoets — met uitleg die simpeler
 wordt zolang het kwartje nog niet valt. Oefenboeken kosten €30 en bijles €37 per
 uur; juist de gezinnen die u helpt, verdienen dezelfde voorbereiding als ieder ander.
 
-Dit doen andere organisaties al:
-- Voedselbank Rotterdam toont Leerkwartier op de schermen in hun drie sociale supermarkten
-- Leergeld Haarlemmermeer stopt dit najaar 1.000 Leerkwartier-flyers in de goodybags van hun jubileumfestival
-- Leergeld Apeldoorn-Voorst zet Leerkwartier in hun oktober-nieuwsbrief
-- Voedselbank Alkmaar maakte samen met ons een flyer in eenvoudige taal
+Er zijn gelukkig al organisaties zoals de uwe die met ons meedoen — wie dat
+zijn ziet u op leerkwartier.app/bedankt.html.
+
+> 🔴 **PARTNER-PRIVACY-REGEL (Mark, 13 aug 2026 — vervangt de oude bewijs-bullets):**
+> NOOIT meer in een outreach-mail benoemen wát een individuele partner doet
+> (schermen, flyers, nieuwsbrief e.d.) — "voelt als vertrouwensbreuk". Hoogstens
+> de zin hierboven + link naar bedankt.html (daar staan alleen partners mét
+> toestemming). Geldt voor álle toekomstige batches en replies.
 
 Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen —
 in een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat,
@@ -151,11 +154,11 @@ aanmelding aan álle gezinnen kunt doorgeven, ook de gezinnen die (nog) buiten e
 regeling vallen. Het verschil zit in de uitleg: bij een fout krijgt het kind niet
 'fout, volgende', maar dezelfde som in drie steeds eenvoudiger stappen uitgelegd.
 
-Dit doen andere organisaties al:
-- Voedselbank Rotterdam toont Leerkwartier op de schermen in hun drie sociale supermarkten
-- Voor het jubileumfestival van Leergeld Haarlemmermeer leverden wij 1.000 Leerkwartier-flyers voor de goodybags (festival oktober) — [BEVESTIG: activeren zodra Inez de ontvangst bevestigt]
-- Leergeld Apeldoorn-Voorst zet Leerkwartier in hun oktober-nieuwsbrief
-- Voedselbank Alkmaar maakte samen met ons een flyer in eenvoudige taal
+Er zijn gelukkig al organisaties zoals de uwe die met ons meedoen — wie dat
+zijn ziet u op leerkwartier.app/bedankt.html.
+
+> (Bewijs-bullets verwijderd 13 aug — zie 🔴 PARTNER-PRIVACY-REGEL bij sjabloon 2.0.
+> ⚠️ Reeds verstuurd MET bullets: Leergeld-Noord-16 op 13 aug — niet terug te halen.)
 
 Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen — in
 een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat, ook met
@@ -294,6 +297,7 @@ Herinnering batch 1: Einsteinschool = opgeheven, schrappen.
 - **13 aug 2026 — Leergeld-golf 1a: regio NOORD, 16 stichtingen ✅ (Mark-go 13 aug, alle 16 OK via Resend/hallo@leerkwartier.app, reply-to Mark's Gmail; Zapier-taken op):** Salland ⭐(Raalte-opener) · Jeugdfonds Almelo · Dinkelland · Eemsdelta · Haaksbergen · Het Hoogeland · IJssel & Vecht · Losser · Midden Drenthe · Midden-Groningen · Noordoostpolder · Oldenzaal · Tubbergen · Twenterand · Westerkwartier-Noordenveld · Zuid-Oost Groningen. Squla-proof-sjabloon, Spark Fest-regel definitief. Script: `scripts/outreach/stuur-leergeld-noord-20260813.mjs`. **Timing-logica (regio-vakanties 2026): Noord terug ma 17 aug → gemaild in hún laatste vakantieweek; Zuid terug 24 aug → Leergeld-Zuid (~20) versturen ~do 20-vr 21 aug; Midden terug 31 aug → Leergeld-Midden (~17) versturen ~do 27-vr 28 aug.** (A)-adressen in deze batch: Midden Drenthe, Midden-Groningen, Noordoostpolder, Oldenzaal, Tubbergen, Westerkwartier-Noordenveld, Zuid-Oost Groningen → bounces checken bij volgende mail-check.
 - **9 aug 2026 — 🏝️ Caribische batch 1 (10 mails, door Mark zelf verstuurd via Gmail-concepten):** RCN-OCW (BES) · RKCS · DOS · VPCO (Curaçao) · Colegio Arubano · SKOA · SPCOA (Aruba) · SVOBE+MPC · SKOS (Sint Maarten) · OOB (Bonaire). Details + rest van de lijst: `docs/outreach/CARIBISCH-OUTREACH.md`; open lus in WACHT-OP.md Prio 2.
 - (Kalender rest: vr 14 aug voedselbanken-rest #1 → ma 17 voedselbanken #2/SUN → di 18 SUN/fondsen → wo 19 Humanitas #1 → do 20-21 Caribisch batch 2 + Leergeld-Zuid → wk 24+ Humanitas #2/bibliotheken → ~31 aug Leergeld-Midden + LOWAN-prep)
+- 🔴 **WERKWIJZE sinds 13 aug (Mark):** élke volgende batch eerst als concept-mail aan Mark laten lezen vóór verzending — geen autonome verzending meer zonder tekst-akkoord per batch.
 
 ## ⭐ 3-partner-regel: bedank-pagina als sociale bewijslast (Mark 23 jul 2026)
 
