@@ -576,7 +576,9 @@ export default function MijnPagina({
 
   return (
     <div style={{ ...styles.page, ...(thema.pageStyle || {}) }}>
-      <Header title="🏠 Mijn Leerkwartier" subtitle={player ? `De pagina van ${player}` : ""} onBack={onBack} onHome={onHome} />
+      {/* WhatsApp 13 aug 18:55: géén dubbel huisje (de functionele 🏠-knop
+          zit rechts in de Header) + persoonlijke titel. */}
+      <Header title={player ? `${player}’s Leerkwartier` : "Mijn Leerkwartier"} subtitle="" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!player && (
           <Card padding="md" style={{ textAlign: "center", marginBottom: "var(--space-4)" }}>
