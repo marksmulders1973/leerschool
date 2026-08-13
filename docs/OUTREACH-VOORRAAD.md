@@ -331,3 +331,5 @@ Waarom dit werkt: sector-organisaties (Leergeld-stichtingen, voedselbanken,
 bibliotheken) kennen en volgen elkaar — "die en die doet al mee" verlaagt de
 drempel meer dan welk argument ook. Zie memory `project_studiebol_bedankt_pagina`
 (staande opdracht naamsbekendheid-spiraal).
+
+- **13 aug 2026 (namiddag) — herinnering buurt-banken (Mark-opdracht): Voedselbank Gorinchem + Bommelerwaard ✅ 2/2** — zelfde privacy-sjabloon + openingszin 'mogelijk in de vakantieperiode aan uw aandacht ontschoten'; eerste mail was 10 jul, nooit reactie; dit zijn Mark's buurt-banken (10-20 min) voor evt. persoonlijk bezoek bij reactie. Script: scripts/outreach/stuur-herinnering-gorinchem-bommelerwaard-20260813.mjs
