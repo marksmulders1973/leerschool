@@ -113,10 +113,12 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
 
   // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
   useEffect(() => {
-    if (!chatOpen) return;
+    if (!chatOpen) return undefined;
+    let weg = false; // pagina kan al dicht zijn als de query terugkomt
     makerAntwoordMelding([kind], "pocket").then((m) => {
-      if (m) setMessages((prev) => [...prev, { role: "assistant", content: m }].slice(-30));
+      if (m && !weg) setMessages((prev) => [...prev, { role: "assistant", content: m }].slice(-30));
     });
+    return () => { weg = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatOpen]);
 
@@ -307,7 +309,7 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
           <button onClick={naarPark} style={{ ...subBtn }}>🎡 Naar het park</button>
           <button onClick={() => setChatOpen(true)} style={{ ...subBtn }}>💬 Praat met {naam}</button>
         </div>
-        <button onClick={deel} style={{ ...subBtn, background: "rgba(255,255,255,0.08)" }}>💛 Laat {naam} aan papa/mama zien</button>
+        <button onClick={deel} style={{ ...subBtn, background: "rgba(255,255,255,0.08)" }}>💛 Laat {naam} aan iemand thuis zien</button>
       </div>
 
       {/* verzonnen-maatje transparantie (agent-5) */}

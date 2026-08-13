@@ -21,10 +21,17 @@ export function verwerkMakerTip(replyTekst, { kindNaam = "", buddyNaam = "", bro
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
-  const tip = m[1].trim();
+  // Kort houden (spam-/injectie-rem, review 13 aug): een wens is 1 zin.
+  const tip = m[1].trim().slice(0, 140);
   const kind = String(kindNaam || "").trim().slice(0, 22);
   const maatje = String(buddyNaam || "").trim().slice(0, 14) || "het maatje";
   try {
+    // Max 1 doorgegeven tip per 5 minuten per apparaat — voorkomt dat een
+    // spelend kind (of een geintje) de moderatie-wachtrij volpompt.
+    const nu = Date.now();
+    const vorige = Number(localStorage.getItem("lk_makertip_laatst") || 0);
+    if (nu - vorige < 5 * 60 * 1000) return schoon || "Ik heb het doorgegeven aan de maker! 🐾";
+    localStorage.setItem("lk_makertip_laatst", String(nu));
     submitWish({
       message: `🐾 Via ${maatje} doorgegeven: "${tip}"`,
       displayName: kind ? `${kind} (via ${maatje})` : `Via ${maatje}`,

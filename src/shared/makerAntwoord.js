@@ -18,8 +18,10 @@ export function markeerGezien(speler, ts) {
   try { localStorage.setItem(sleutel(speler), String(ts || "")); } catch { /* */ }
 }
 
-// Veilig in een Supabase-or()-filter: komma's en haakjes breken de syntax.
-const filterVeilig = (s) => String(s || "").replace(/[,()"]/g, "").trim();
+// Veilig in een Supabase-or()-filter: komma's en haakjes breken de syntax,
+// en % en _ zijn ilike-wildcards (review 13 aug: naam "%a%" zou anders op
+// álle namen matchen) — die strippen we er ook uit.
+const filterVeilig = (s) => String(s || "").replace(/[,()"%_*]/g, "").trim();
 
 /**
  * Is er een (nieuw) maker-antwoord op een tip van deze speler?
@@ -63,7 +65,10 @@ export async function checkNieuwMakerAntwoord(speler) {
       .limit(1);
     const r = replies?.[0];
     if (!r) return null;
-    if (r.created_at <= laatstGezien(speler)) return null;
+    // Als tijd vergelijken, niet als string (review 13 aug: formaat-verschil
+    // tussen Supabase en localStorage maakte de string-vergelijking onbetrouwbaar).
+    const gezien = Date.parse(laatstGezien(speler)) || 0;
+    if ((Date.parse(r.created_at) || 0) <= gezien) return null;
 
     const kort = String(r.message || "").replace(/\s+/g, " ").slice(0, 110);
     return {

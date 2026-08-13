@@ -103,7 +103,7 @@ export default function DiplomaKast({ player, scores, naamVoorDiploma, bron = "m
   const laden = !extern && eigenRows === null;
   const naam = (naamVoorDiploma || player || "").trim();
 
-  if (laden) return <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Diploma-kast laden…</div>;
+  if (laden) return <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Even kijken wat je hebt verdiend… 🏅</div>;
 
   if (diplomas.length === 0 && bijna.length === 0) {
     return (
@@ -179,7 +179,7 @@ export default function DiplomaKast({ player, scores, naamVoorDiploma, bron = "m
       {bijna.length > 0 && (
         <div style={{ marginTop: diplomas.length ? 12 : 0 }}>
           <div style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-muted, #8899aa)", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 }}>
-            🌱 Bijna een diploma
+            🌱 Op weg naar een diploma
           </div>
           <div style={{ display: "grid", gap: 6 }}>
             {bijna.map((d) => {

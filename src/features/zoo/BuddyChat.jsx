@@ -50,12 +50,14 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
     const hoi = facts?.naam ? `Hoi ${String(facts.naam).trim()}! ` : "Hoi! ";
     setMessages([{ role: "assistant", content: `${hoi}Ik ben ${naam}. Vraag me iets over het park, of vertel me gewoon iets! ${b?.emoji || "🐾"}` }]);
     // 💛→🐾 Idee #36: maker-antwoord op een tip van dit kind? Eén keer melden.
+    // weg-vlag: venster kan al dicht zijn als de query terugkomt (review 13 aug).
+    let weg = false;
     makerAntwoordMelding([facts?.naam], "park").then((m) => {
-      if (m) setMessages((prev) => [...prev, { role: "assistant", content: m }]);
+      if (m && !weg) setMessages((prev) => [...prev, { role: "assistant", content: m }]);
     });
     try { track("buddy_chat_open", { id: buddyId }); } catch { /* */ }
     setTimeout(() => { try { inputRef.current?.focus(); } catch {} }, 60);
-    return () => { try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ } };
+    return () => { weg = true; try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch { /* */ } };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, buddyId]);
 

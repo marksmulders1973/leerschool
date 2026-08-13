@@ -736,7 +736,7 @@ export default function MijnPagina({
             }}>
               {[
                 { key: "kind", label: `Wat ${player} ziet` },
-                { key: "ouder", label: "Wat je ouder of de juf ziet" },
+                { key: "ouder", label: "Wat je ouder/verzorger of de juf of meester ziet" },
               ].map((t) => {
                 const actief = weergave === t.key;
                 return (
@@ -954,7 +954,7 @@ export default function MijnPagina({
                               <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text-strong)" }}>
                                 {meta.emoji} {meta.titel}
                               </span>
-                              <span style={{ fontSize: 11.5, color: "#8899aa", fontWeight: 700 }}>📏 Nulmeting — nog niets gemeten</span>
+                              <span style={{ fontSize: 11.5, color: "#8899aa", fontWeight: 700 }}>📏 Nog niet geoefend — probeer het eens!</span>
                             </div>
                             <div style={{ height: 10, borderRadius: 99, background: "rgba(255,255,255,0.08)" }} />
                             {notitie && <div style={{ fontSize: 11, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>{notitie}</div>}
@@ -1145,7 +1145,7 @@ export default function MijnPagina({
                     herhalen: "🔁 Tijd om te herhalen — zo blijft het hangen.",
                     zwak: "🌱 Hier valt het meest te winnen.",
                     laatzien: "💪 Jij zei: goed in — laat het even zien!",
-                    nulmeting: "📏 Nulmeting — nog niet gemeten, hoort bij jouw groep.",
+                    nulmeting: "📏 Nieuw voor jou — hoort bij jouw groep, probeer het eens!",
                   }[reden];
                   return (
                     <div key={pad.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 0", borderBottom: "1px dashed rgba(255,255,255,0.1)" }}>
@@ -1230,7 +1230,7 @@ export default function MijnPagina({
                   🏆 Het gouden thema verdien je met je eerste échte diploma uit de kast hierboven.
                 </div>
               )}
-              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "12px 0 6px" }}>Wat staat bovenaan?</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "12px 0 6px" }}>Wat staat bovenaan? <span style={{ fontWeight: 400 }}>Kies welk blok je het eerst ziet op deze pagina.</span></div>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                 {TOP_BLOKKEN.map((b) => (
                   <button

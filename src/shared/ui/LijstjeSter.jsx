@@ -19,7 +19,7 @@ export default function LijstjeSter({ speler, item, size = 20 }) {
     e.preventDefault();
     const r = toggleLijstje(speler, item);
     if (r.vol) {
-      setMelding(`Je lijstje is vol (${LIJSTJE_MAX}) — maak eerst iets af! 😉`);
+      setMelding(`Je lijstje zit vol (${LIJSTJE_MAX}) — haal er eentje af, dan past deze erbij ⭐`);
       setTimeout(() => setMelding(""), 2600);
       return;
     }
