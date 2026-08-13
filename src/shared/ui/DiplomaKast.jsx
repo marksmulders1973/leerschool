@@ -158,7 +158,7 @@ export default function DiplomaKast({ player, scores, naamVoorDiploma, bron = "m
                     color: "#ffd54f", fontFamily: "var(--font-display, system-ui)", fontSize: 12, fontWeight: 800,
                   }}
                 >
-                  🖨️ Print
+                  👀 Openen
                 </a>
               </div>
               {isOpen && (
@@ -209,6 +209,7 @@ export default function DiplomaKast({ player, scores, naamVoorDiploma, bron = "m
 
       <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 8, lineHeight: 1.5 }}>
         Een diploma is hier écht <strong>verdiend</strong>: minstens {DIPLOMA_MIN_VRAGEN} vragen gemaakt én {DIPLOMA_MIN_PROCENT}% of hoger.
+        Tik op <strong>👀 Openen</strong> om je oorkonde eerst te bekijken — printen of opslaan als PDF kan daar.
         Haal je later een hogere score, dan groeit je diploma vanzelf mee. 🌱
       </div>
     </div>
