@@ -46,6 +46,12 @@ export default function DiplomaPagina({ setPage }) {
     return Number.isFinite(s) && s >= 0 && s <= 100 ? s : null;
   });
   const [datum] = useState(() => initParam("datum", ""));
+  // Verdiend-bewijs (Mark 13 aug: "een diploma moet écht verdiend zijn —
+  // inzichtelijk voor ouders"): de diploma-kast stuurt mee hoe het behaald is.
+  const [goed] = useState(() => { const n = parseInt(initParam("goed", ""), 10); return Number.isFinite(n) && n >= 0 ? n : null; });
+  const [van] = useState(() => { const n = parseInt(initParam("van", ""), 10); return Number.isFinite(n) && n > 0 ? n : null; });
+  const [vragen] = useState(() => { const n = parseInt(initParam("vragen", ""), 10); return Number.isFinite(n) && n > 0 ? n : null; });
+  const [pogingen] = useState(() => { const n = parseInt(initParam("pogingen", ""), 10); return Number.isFinite(n) && n > 0 ? n : null; });
 
   const naamNet = (naam || "").trim();
   const ondNet = (onderwerp || "").trim() || "dit onderwerp";
@@ -169,6 +175,13 @@ bèta
             {score != null && (
               <div style={{ fontSize: 17, fontWeight: 800, color: "#c9a227", marginTop: 8 }}>
                 met een score van {score}%{datum ? ` · behaald op ${datum}` : ""}
+              </div>
+            )}
+            {goed != null && van && (
+              <div style={{ fontSize: 13, color: "#6a5a3a", marginTop: 6 }}>
+                Eerlijk verdiend: {goed} van de {van} vragen goed
+                {vragen && vragen > van ? ` · in totaal ${vragen} vragen geoefend` : ""}
+                {pogingen && pogingen > 1 ? ` · ${pogingen} toetsen gemaakt` : ""}
               </div>
             )}
 
