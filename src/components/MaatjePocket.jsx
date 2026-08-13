@@ -61,7 +61,9 @@ function speak(text, callbacks = {}) {
 }
 
 export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName = "" }) {
-  const buddy = BUDDY_BY_ID[gekozenBuddy() || "draakje"] || BUDDY_BY_ID.draakje;
+  // Standaard = Charley (13 aug: /mijn beloofde Charley maar de fallback was
+  // Vonk/draakje — mismatch). Wie zelf een maatje koos, houdt dat gewoon.
+  const buddy = BUDDY_BY_ID[gekozenBuddy() || "charley"] || BUDDY_BY_ID.charley || BUDDY_BY_ID.draakje;
   const naam = buddyNaamVan(buddy.id, buddy.naam);
   const kind = (userName || "").trim();
   const [stappen, setStappen] = useState(0);

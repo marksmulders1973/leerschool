@@ -14,7 +14,7 @@ import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
-import { buddyWeetjes } from "../zoo/buddies.js";
+import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
 
 // ─────────────────────────────────────────────────────────────────────
@@ -250,6 +250,15 @@ export default function MijnPagina({
   // 🐶 Wat Charley al van je weet (Mark 13 aug: "Charley verzamelt al gegevens
   // om echt een maatje te worden — past precies op de persoonlijke pagina").
   // Bron = de kennismakings-vraagjes van het maatje (buddies.js, localStorage).
+  // Het maatje van dít kind (Mark-bug 13 aug: kaart zei "Charley" maar de
+  // chat opende het gekozen maatje, bv. Vonk). Kaart volgt nu de keuze;
+  // zonder keuze = Charley (het standaard-hulphondje).
+  const maatje = useMemo(() => {
+    try {
+      const b = BUDDY_BY_ID[gekozenBuddy() || "charley"] || BUDDY_BY_ID.charley || Object.values(BUDDY_BY_ID)[0];
+      return { naam: buddyNaamVan(b.id, b.naam), emoji: b.emoji || "🐾" };
+    } catch { return { naam: "Charley", emoji: "🐶" }; }
+  }, []);
   const weetjesChips = useMemo(() => {
     let w = {};
     try { w = buddyWeetjes() || {}; } catch { /* */ }
@@ -1177,8 +1186,8 @@ export default function MijnPagina({
                   onKeyDown={(e) => { if (onPraatMaatje && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); onPraatMaatje(); } }}
                   style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, cursor: onPraatMaatje ? "pointer" : "default" }}
                 >
-                  <span style={{ fontSize: 22 }} aria-hidden="true">🐶</span>
-                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>Charley wil je leren kennen</div>
+                  <span style={{ fontSize: 22 }} aria-hidden="true">{maatje.emoji}</span>
+                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>{maatje.naam} wil je leren kennen</div>
                 </div>
                 {weetjesChips.length > 0 && (
                   <div style={{ marginBottom: 10 }}>
@@ -1204,7 +1213,7 @@ export default function MijnPagina({
                       color: "#ffd54f", fontWeight: 800, fontSize: 13.5, fontFamily: "var(--font-display, inherit)", textAlign: "center",
                     }}
                   >
-                    🐾 Praat met Charley — stel een vraag of vertel een wens
+                    🐾 Praat met {maatje.naam} — stel een vraag of vertel een wens
                   </button>
                 )}
                 {beschikbareVakken.map((vak) => {
@@ -1251,8 +1260,8 @@ export default function MijnPagina({
             {onPraatMaatje && (intakeCompleet || beschikbareVakken.length === 0) && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                  <span style={{ fontSize: 22 }} aria-hidden="true">🐶</span>
-                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>Charley kent jou</div>
+                  <span style={{ fontSize: 22 }} aria-hidden="true">{maatje.emoji}</span>
+                  <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>{maatje.naam} kent jou</div>
                 </div>
                 {weetjesChips.length > 0 ? (
                   <>
@@ -1279,7 +1288,7 @@ export default function MijnPagina({
                     color: "#ffd54f", fontWeight: 800, fontSize: 13.5, fontFamily: "var(--font-display, inherit)", textAlign: "center",
                   }}
                 >
-                  🐾 Praat met Charley — vertel meer of stel een vraag
+                  🐾 Praat met {maatje.naam} — vertel meer of stel een vraag
                 </button>
               </Card>
             )}
