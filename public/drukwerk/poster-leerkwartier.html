@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <title>Leerkwartier — poster (parametrisch)</title>
+  <style>
+    /* Parametrische, evergreen poster voor diverse instellingen.
+       Kies variant + formaat via de URL:
+         ?v=neutraal | sparkfest | vb-alkmaar | schoolscool   (default neutraal)
+         &s=a3 | a4                                            (default a3)
+       Neutraal = geen partnerlogo (voor onbekende/nieuwe instellingen).
+       Partner-variant = logo + "met dank aan" (ALLEEN met toestemming partner).
+       Echt Leerkwartier-logo (../logo.jpg) + generieke QR. Geen aflopend jaartal. */
+    @page { size: A3 portrait; margin: 0; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:297mm;height:420mm;overflow:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+      background:#fff;color:#12263a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .vel{width:297mm;height:420mm;padding:20mm 22mm;display:flex;flex-direction:column;transform-origin:top left}
+
+    .kop{display:flex;align-items:center;gap:16px;margin-bottom:10mm}
+    .kop img.logo{height:46mm;border-radius:9mm;display:block}
+    .kop .slogan{font-size:19px;color:#5a6775;line-height:1.4;font-weight:600}
+
+    h1{font-size:52px;line-height:1.12;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+    h1 .groen{color:#0a7d43}
+    .voorwie{font-size:22px;color:#3a4658;font-weight:600;margin-bottom:6mm}
+    .payoff{display:inline-block;background:#0a7d43;color:#fff;font-size:22px;font-weight:800;
+      padding:10px 20px;border-radius:999px;margin-bottom:9mm}
+
+    ul{list-style:none;margin-bottom:2mm}
+    ul li{font-size:23px;color:#28323f;padding:9px 0 9px 44px;position:relative;line-height:1.35;font-weight:500}
+    ul li::before{content:"✓";position:absolute;left:0;top:8px;color:#00a852;font-weight:800;font-size:30px;line-height:1}
+    ul li strong{color:#12263a;font-weight:800}
+
+    .rust{margin-top:auto}
+
+    .qr-blok{display:flex;gap:26px;align-items:center;background:#fff8e6;border:3px solid #f0d489;
+      border-radius:20px;padding:24px 28px;margin:8mm 0 6mm}
+    .qr-blok img{width:52mm;height:52mm;flex-shrink:0;background:#fff;border-radius:10px}
+    .qr-blok .qtxt h2{font-size:30px;color:#8a6400;margin-bottom:6px;font-weight:800}
+    .qr-blok .qtxt .url{font-size:30px;color:#0a7d43;font-weight:800;letter-spacing:0.3px}
+    .qr-blok .qtxt p{font-size:18px;color:#5a6775;margin-top:6px}
+
+    .dank{display:flex;align-items:center;gap:22px;border-top:2px solid #e3e8ee;padding-top:6mm;margin-top:2mm}
+    .dank .logo-slot{height:26mm;min-width:36mm;max-width:60mm;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:4px}
+    .dank .logo-slot img{max-width:100%;max-height:100%;display:block}
+    .dank .dtxt{font-size:19px;color:#3a4658;line-height:1.45}
+    .dank .dtxt strong{color:#12263a}
+    body.geen-dank .dank{display:none}
+
+    .voet{margin-top:6mm;font-size:15px;color:#8893a3;line-height:1.5;text-align:center}
+
+    /* A4: zelfde ontwerp, geschaald (A3 en A4 hebben dezelfde verhouding) */
+    body.a4, html.a4{width:210mm;height:297mm}
+    body.a4 .vel{transform:scale(0.70710678)}
+  </style>
+</head>
+<body>
+  <div class="vel">
+    <div class="kop">
+      <img class="logo" src="../logo.jpg" alt="Leerkwartier" />
+      <div class="slogan">Een rustige bijlesdocent<br>in je broekzak.</div>
+    </div>
+
+    <h1>Gratis oefenen voor de <span class="groen">Doorstroomtoets</span></h1>
+    <div class="voorwie">Voor kinderen in groep 6, 7 en 8 — en gratis oefenen voor de VMBO-examens.</div>
+    <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+
+    <ul>
+      <li>Een <strong>oefen-toets</strong> die op de echte Doorstroomtoets lijkt.</li>
+      <li>Elke dag een <strong>nieuwe vraag</strong>, met uitleg.</li>
+      <li>Snapt je kind iets niet? De app <strong>legt het uit</strong> in makkelijke woorden. Net zo lang tot het lukt.</li>
+      <li>Ook <strong>werkbladen om te printen</strong>. Handig als internet thuis niet goed werkt.</li>
+      <li><strong>Geen reclame.</strong> Wij verkopen geen gegevens door.</li>
+    </ul>
+
+    <div class="rust"></div>
+
+    <div class="qr-blok">
+      <img src="../qr/POSTER-GENERIEK.png" alt="QR-code naar leerkwartier.app" />
+      <div class="qtxt">
+        <h2>Scan en begin vandaag</h2>
+        <div class="url">leerkwartier.app</div>
+        <p>Werkt op elke telefoon, tablet of computer.</p>
+      </div>
+    </div>
+
+    <div class="dank">
+      <div class="logo-slot"><img id="partnerlogo" src="" alt="" /></div>
+      <div class="dtxt" id="danktekst"></div>
+    </div>
+
+    <div class="voet">
+      Een initiatief van Leerkwartier · leerkwartier.app
+    </div>
+  </div>
+
+  <script>
+    var P = new URLSearchParams(location.search);
+    var v = P.get('v') || 'neutraal';
+    var s = P.get('s') || 'a3';
+    var VAR = {
+      neutraal:   { logo:null },
+      sparkfest:  { logo:'sparkfest-logo.webp',            naam:'Spark Fest' },
+      'vb-alkmaar':{ logo:'logo-voedselbank-alkmaar.png',  naam:'Voedselbank Alkmaar e.o.' },
+      schoolscool:{ logo:'logo-schoolscool-twente.png',    naam:"School's cool Twente" }
+    };
+    var cfg = VAR[v] || VAR.neutraal;
+    if (!cfg.logo) {
+      document.body.classList.add('geen-dank');
+    } else {
+      document.getElementById('partnerlogo').src = cfg.logo;
+      document.getElementById('partnerlogo').alt = cfg.naam;
+      document.getElementById('danktekst').innerHTML =
+        '<strong>Leerkwartier bedankt ' + cfg.naam + '</strong> voor de fijne samenwerking — ' +
+        'samen zorgen we dat meer kinderen gratis kunnen oefenen.';
+    }
+    if (s === 'a4') {
+      document.documentElement.classList.add('a4');
+      document.body.classList.add('a4');
+      var st = document.createElement('style');
+      st.textContent = '@page { size: A4 portrait; margin: 0; }';
+      document.head.appendChild(st);
+    }
+  </script>
+</body>
+</html>
