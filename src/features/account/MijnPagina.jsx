@@ -12,6 +12,7 @@ import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvat
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
+import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
@@ -197,6 +198,8 @@ export default function MijnPagina({
   onGoCito,
   onGoVoortgang,
   onOuderDashboard,
+  onUpgrade,
+  onLogin,
   userRole,
   authUser,
   onLeerkrachtHome,
@@ -315,10 +318,6 @@ export default function MijnPagina({
   // maken voor familie en pro"): zelfde pagina, andere bril.
   const [weergave, setWeergave] = useState(userRole === "ouder" ? "ouder" : "kind");
   const [week, setWeek] = useState(null);
-  // Gezins-koppeling (Mark 12 aug, "meerdere kinderen in 1 gezin"): is de
-  // kijker een ingelogde ouder met gekoppelde kinderen, toon die dan als
-  // chips in de ouder-weergave — één tik door naar het thuis-overzicht.
-  const [gezinsKinderen, setGezinsKinderen] = useState([]);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
   const andereNamen = useMemo(() => {
@@ -335,21 +334,6 @@ export default function MijnPagina({
         });
     } catch { return []; }
   }, [player]);
-  useEffect(() => {
-    if (!authUser?.id) { setGezinsKinderen([]); return undefined; }
-    let weg = false;
-    supabase.from("parent_child_links")
-      .select("id, child_name, verified")
-      .eq("parent_user_id", authUser.id)
-      .order("created_at", { ascending: true })
-      .then(({ data }) => { if (!weg) setGezinsKinderen(data || []); });
-    return () => { weg = true; };
-  }, [authUser?.id]);
-  const openThuisOverzicht = (kindNaam) => {
-    try { if (kindNaam) localStorage.setItem("lk_ouder_kind", kindNaam); } catch {}
-    track("mijn_naar_ouderdashboard", { via: kindNaam ? "gezinschip" : "knop" });
-    onOuderDashboard?.();
-  };
   // "Wat moet ik kennen in groep X?" — uitklap in het doel-blok (Mark 21:00).
   const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
@@ -1591,6 +1575,20 @@ export default function MijnPagina({
             </>)}
 
             {weergave === "ouder" && (<>
+            {/* ── Gedeeld ouder-inzicht (Mark 14 aug): exact hetzelfde blok als
+                op /ouder — kind koppelen (code via WhatsApp/e-mail/kopiëren),
+                partner-mail, betalen én de voortgang per kind. Bovenaan de
+                ouder-bril zodat de koppelcode meteen te vinden is. Niet ingelogd?
+                Dan toont het blok zelf de "Inloggen met Google"-knop. ── */}
+            <div style={{ marginBottom: "var(--space-4)" }}>
+              <OuderInzicht
+                embedded
+                authUser={authUser}
+                subscription={subscription}
+                onUpgrade={onUpgrade}
+                onLogin={onLogin}
+              />
+            </div>
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
                 "als je ouder bent, wie zijn dan de kinderen?"). Zacht model —
                 anders dan Squla/Junior Einstein, die eerst een (betaald) account
@@ -1740,61 +1738,13 @@ export default function MijnPagina({
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
             </Card>
 
-            {/* ── Gezins-kaart (12 aug): ingelogde ouder mét koppelingen ziet
-                hier zijn kinderen — één tik naar het thuis-overzicht, met het
-                juiste kind voorgeselecteerd (localStorage lk_ouder_kind). ── */}
-            {gezinsKinderen.length > 0 && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(0,176,255,0.4)" }}>
-                <div style={eyebrowStijl}>Jouw gezin</div>
-                <div style={kaartTitelStijl}>👨‍👩‍👧 Gekoppelde kinderen</div>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
-                  {gezinsKinderen.map((k) => (
-                    <button
-                      key={k.id}
-                      onClick={() => openThuisOverzicht(k.child_name)}
-                      title={k.verified ? `Bekijk ${k.child_name} in het thuis-overzicht` : "Nog niet bevestigd door je kind"}
-                      style={{
-                        padding: "8px 14px", borderRadius: 999, cursor: "pointer",
-                        border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.12)",
-                        color: "#4fc3f7", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
-                      }}
-                    >
-                      👦 {k.child_name}{k.verified ? "" : " 🔐"}
-                    </button>
-                  ))}
-                </div>
-                <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                  Tik op een naam voor scores, weekrapport-instellingen en het Kwartierplan — alles per kind, in je eigen tempo.
-                </div>
-              </Card>
-            )}
-
-            {/* ── Ouder/juf: zelf volgen ── */}
+            {/* Gezins-kaart + "zelf volgen"-kaart (12 aug) zijn 14 aug vervangen
+                door het gedeelde <OuderInzicht> hierboven: kind kiezen, koppelen
+                en per-kind-scores zitten daar nu inline — geen sprong naar /ouder
+                meer nodig. Leerkracht-uitleg blijft bewust staan. */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={eyebrowStijl}>Zelf volgen</div>
-              <div style={kaartTitelStijl}>Meekijken op je eigen telefoon</div>
-              <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>
-                <div style={{ marginBottom: 6 }}>
-                  👨‍👩‍👧 Maak op je eigen telefoon een account als <strong>ouder of verzorger</strong> en koppel {player} met een <strong>koppelcode</strong> — dan zie je dit overzicht altijd, plus elke maandag een <strong>weekrapport per e-mail</strong>.
-                </div>
-                {/* Adoptie-gat (12 aug): de uitleg stond er, maar zonder knop —
-                    een geïnteresseerde ouder moest /ouder zelf zien te vinden. */}
-                {onOuderDashboard && (
-                  <button
-                    onClick={() => openThuisOverzicht(null)}
-                    style={{
-                      display: "inline-block", margin: "4px 0 10px", padding: "10px 16px",
-                      borderRadius: 10, border: "none", cursor: "pointer",
-                      background: "rgba(0,176,255,0.2)", color: "#4fc3f7",
-                      fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
-                    }}
-                  >
-                    👨‍👩‍👧 Naar het thuis-overzicht — koppelen &amp; weekrapport →
-                  </button>
-                )}
-                <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
-                  🧑‍🏫 Leerkracht? Via het leerkracht-overzicht zet je oefenwerk klaar met een deelcode — leerlingen loggen gewoon als zichzelf in.
-                </div>
+              <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                🧑‍🏫 Leerkracht? Via het leerkracht-overzicht zet je oefenwerk klaar met een deelcode — leerlingen loggen gewoon als zichzelf in.
               </div>
               <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                 🔒 <strong style={{ color: "var(--color-text)" }}>Wat er zichtbaar is:</strong> voornaam, groep en het poppetje (een eigen foto blijft alleen op het apparaat zelf — wij slaan geen foto's op). Geen achternaam, niets zichtbaar voor andere leerlingen. Meting is een indicatie op basis van gemaakte vragen — geen toetsuitslag.

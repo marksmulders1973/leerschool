@@ -1209,6 +1209,8 @@ export default function App() {
           userRole={role}
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onUpgrade={() => setPage("pro")}
+          onLogin={loginWithConsent}
           onLeerkrachtHome={() => setPage("teacher-home")}
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
