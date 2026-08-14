@@ -1,0 +1,252 @@
+[
+ {
+  "naam": "Leeuwarden",
+  "email": "leeuwarden@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Apeldoorn",
+  "email": "apeldoorn@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Groningen",
+  "email": "mip.groningen@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Eindhoven",
+  "email": "eindhoven@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Amsterdam en Diemen",
+  "email": "kantoor.amsterdam@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Zaanstreek-Waterland",
+  "email": "zaanstreek-waterland@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Twente",
+  "email": "twente@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Utrecht",
+  "email": "utrecht@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Drechtsteden",
+  "email": "drechtsteden@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Haagland",
+  "email": "haagland@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Voorne-Putten Rozenburg",
+  "email": "voorne-putten@humanitas.nl",
+  "ster": true
+ },
+ {
+  "naam": "Assen – AA en Hunze",
+  "email": "assen-aaenhunze@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Coevorden",
+  "email": "coevorden@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Emmen & Borger Odoorn",
+  "email": "emmen@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Midden-Drenthe",
+  "email": "midden-drenthe@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noordenveld",
+  "email": "noordenveld@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Tynaarlo",
+  "email": "tynaarlo@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Zuid-Drenthe",
+  "email": "zuid-drenthe@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Zuidwest Drenthe",
+  "email": "zuidwest-drenthe@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Lelystad-Dronten",
+  "email": "lelystad-dronten@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noordoostpolder",
+  "email": "noordoostpolder@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "De Friese Meren",
+  "email": "defriesemeren@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Heerenveen",
+  "email": "heerenveen@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noordoost Friesland",
+  "email": "no.friesland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noordwest-Friesland",
+  "email": "nw-friesland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Smallingerland – Opsterland",
+  "email": "smallingerland-opsterland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Zuidwest Friesland",
+  "email": "zw-friesland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Graafschap",
+  "email": "graafschap@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Nederrijn",
+  "email": "nederrijn@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Nijmegen en omstreken",
+  "email": "nijmegen@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noord-Veluwe",
+  "email": "noord-veluwe@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Rijn-IJssel",
+  "email": "rijn-ijssel@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Rivierenland",
+  "email": "rivierenland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Eemsdelta",
+  "email": "eemsdelta@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Het Hogeland",
+  "email": "hethogeland@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Kanaalstreek & Westerwolde",
+  "email": "kanaalstreek-westerwolde@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Midden-Groningen",
+  "email": "midden-groningen@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Oldambt",
+  "email": "oldambt@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Veendam & Pekela",
+  "email": "veendam@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Westerkwartier",
+  "email": "westerkwartier@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Maastricht-Heuvelland",
+  "email": "maastricht@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Midden-Limburg",
+  "email": "middenlimburg@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Noord-Limburg",
+  "email": "noordlimburg@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Parkstad",
+  "email": "parkstad@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Westelijke Mijnstreek",
+  "email": "westelijkemijnstreek@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Helmond",
+  "email": "helmond@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Midden-Brabant",
+  "email": "midden-brabant@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "Regio Breda",
+  "email": "breda@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "'s-Hertogenbosch",
+  "email": "shertogenbosch@humanitas.nl",
+  "ster": false
+ },
+ {
+  "naam": "West-Brabant West",
+  "email": "wbw@humanitas.nl",
+  "ster": false
+ }
+]
