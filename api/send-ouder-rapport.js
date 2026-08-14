@@ -286,12 +286,15 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
   // child_user_id meenemen (naam → uid); staat de naam er dubbel in, dan wint
   // de rij mét uid (strakst gescopet).
   const perOuder = new Map();
+  // Partner-mail (Mark 14 aug): tweede adres per ouder dat de kopie ontvangt.
+  const partnerVan = new Map();
   for (const p of paren) {
     if (!p.parent_email || !p.child_name) continue;
     const adres = String(p.parent_email).toLowerCase();
     if (!perOuder.has(adres)) perOuder.set(adres, new Map());
     const kinderen = perOuder.get(adres);
     if (!kinderen.has(p.child_name) || p.child_user_id) kinderen.set(p.child_name, p.child_user_id || null);
+    if (p.partner_email && !partnerVan.has(adres)) partnerVan.set(adres, String(p.partner_email).toLowerCase());
   }
 
   let gelukt = 0;
@@ -307,10 +310,15 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       const niveauSectie = await haalNiveauSectie(adres, base, key);
       const vriendCode = await haalVriendencode(adres, base, key);
       const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode);
+      // Partner-mail: kopie naar het tweede adres als het geldig is en niet
+      // gelijk aan het ouder-adres (geen dubbele bezorging).
+      const ontvangers = [adres];
+      const partner = partnerVan.get(adres);
+      if (partner && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(partner) && partner !== adres) ontvangers.push(partner);
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [adres], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: ontvangers, subject: onderwerp, html, text }),
       });
       if (!r.ok) { fouten.push(adres.slice(0, 6) + ":" + r.status); continue; }
       gelukt++;

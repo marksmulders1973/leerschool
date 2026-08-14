@@ -84,6 +84,13 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
   // naam-in-app van kind opgeven vóór code-generatie.
   const [inviteChildName, setInviteChildName] = useState("");
+  // Partner-mail (Mark 14 aug): tweede adres (partner/verzorger) dat het
+  // wekelijkse rapport óók ontvangt. Eén adres per gezín — op alle koppelingen
+  // van deze ouder gelijk gehouden (kolom parent_child_links.partner_email).
+  const [partnerEmail, setPartnerEmail] = useState("");
+  const [partnerSaving, setPartnerSaving] = useState(false);
+  const [partnerSaved, setPartnerSaved] = useState(false);
+  const [partnerError, setPartnerError] = useState("");
 
   // Pro-meting (Mark 2026-06-06): ouder opent het inzicht-dashboard.
   useEffect(() => { trackProUse("parent-dashboard"); }, []);
@@ -97,6 +104,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       .order("created_at", { ascending: true })
       .then(({ data }) => {
         setChildren(data || []);
+        // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste
+        // die 'm heeft (leeg = niet ingesteld).
+        setPartnerEmail((data || []).find((c) => c.partner_email)?.partner_email || "");
         // Voorselectie vanaf /mijn (gezins-chip, 12 aug): lk_ouder_kind.
         let gewenst = null;
         try { gewenst = localStorage.getItem("lk_ouder_kind"); localStorage.removeItem("lk_ouder_kind"); } catch {}
@@ -177,6 +187,36 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     else track("ouder_weekmail_toggle", { aan: nieuw });
   };
 
+  // Partner-mail opslaan (Mark 14 aug): één adres per gezin → op álle
+  // koppelingen van deze ouder tegelijk zetten, zodat de kandidaten-RPC het
+  // meegeeft ongeacht welk kind de mail triggert. Leeg = weer uitzetten (null).
+  const savePartnerEmail = async () => {
+    if (!authUser) return;
+    const email = partnerEmail.trim().toLowerCase();
+    setPartnerError("");
+    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      setPartnerError("Dat lijkt geen geldig e-mailadres.");
+      return;
+    }
+    setPartnerSaving(true);
+    setPartnerSaved(false);
+    const { error } = await supabase
+      .from("parent_child_links")
+      .update({ partner_email: email || null })
+      .eq("parent_user_id", authUser.id);
+    setPartnerSaving(false);
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error("[OuderDashboard] savePartnerEmail failed:", error.message);
+      setPartnerError("Opslaan lukte niet. Probeer het later opnieuw.");
+      return;
+    }
+    setChildren((prev) => prev.map((c) => ({ ...c, partner_email: email || null })));
+    setPartnerEmail(email);
+    setPartnerSaved(true);
+    track("ouder_partner_mail_ingesteld", { aan: !!email });
+  };
+
   // K6/AVG art. 17 (sprint-2 2026-05-08): self-service "Verwijder al mijn data".
   // Werkt op alle tabellen waar user_id = auth.uid OF parent_user_id = auth.uid.
   // Anonieme rijen op player_name laat dit ongemoeid (kan niet veilig matchen
@@ -243,6 +283,18 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   const sendWhatsApp = () => {
     const msg = encodeURIComponent(`Hoi! Open ${BRAND.name} (${BRAND.domain}) en voer de koppelcode *${inviteCode}* in bij 'Koppel met ouder'. Dan kan ik jouw voortgang zien 😊 (code is 48 uur geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
+    setInviteSent(true);
+  };
+
+  // Koppelcode per e-mail (Mark 14 aug): zelfde route-gedachte als WhatsApp —
+  // opent de eigen mail-app met de code voorgevuld; de ouder kiest de
+  // ontvanger (bv. het e-mailadres van het kind). Geen server/Resend nodig.
+  const sendEmailCode = () => {
+    const subject = encodeURIComponent(`Koppelcode voor ${BRAND.name}`);
+    const body = encodeURIComponent(
+      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) en voer de koppelcode ${inviteCode} in bij 'Koppel met ouder'. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
+    );
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
     setInviteSent(true);
   };
 
@@ -470,6 +522,63 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             </div>
           )}
 
+          {/* Partner-mail (Mark 14 aug): stuur het weekrapport ook naar een
+              tweede adres — bv. je partner of medeverzorger. Eén adres per gezin. */}
+          {children.length > 0 && (
+            <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.22)", background: "rgba(0,176,255,0.05)", padding: "12px 14px", marginTop: 4, marginBottom: 4 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#00b0ff", marginBottom: 4 }}>
+                👥 Stuur het weekrapport ook naar je partner
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginBottom: 10, lineHeight: 1.5 }}>
+                Vul het e-mailadres van je partner of medeverzorger in — dan krijgen jullie allebei elke maandag hetzelfde rapport. Laat leeg om het weer uit te zetten.
+              </div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  value={partnerEmail}
+                  onChange={(e) => { setPartnerEmail(e.target.value); setPartnerSaved(false); setPartnerError(""); }}
+                  placeholder="partner@voorbeeld.nl"
+                  style={{
+                    flex: "1 1 180px",
+                    padding: "10px 12px",
+                    borderRadius: 10,
+                    border: `1px solid ${partnerError ? "rgba(255,112,67,0.7)" : "rgba(255,255,255,0.18)"}`,
+                    background: "rgba(255,255,255,0.06)",
+                    color: "var(--color-text-strong)",
+                    fontFamily: "var(--font-body)",
+                    fontSize: 14,
+                    outline: "none",
+                  }}
+                />
+                <button
+                  onClick={savePartnerEmail}
+                  disabled={partnerSaving}
+                  style={{
+                    padding: "10px 16px",
+                    borderRadius: 10,
+                    border: "none",
+                    background: partnerSaving ? "rgba(0,176,255,0.3)" : "#00b0ff",
+                    color: "#08121f",
+                    fontFamily: "var(--font-display)",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    cursor: partnerSaving ? "default" : "pointer",
+                  }}
+                >
+                  {partnerSaving ? "Opslaan…" : "Opslaan"}
+                </button>
+              </div>
+              {partnerError && (
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ff8a65", marginTop: 8 }}>{partnerError}</div>
+              )}
+              {partnerSaved && !partnerError && (
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginTop: 8 }}>
+                  {partnerEmail ? "✓ Opgeslagen — je partner krijgt het rapport voortaan ook." : "✓ Uitgezet — het rapport gaat weer alleen naar jou."}
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Gezins-gevoel (feature 7): warm "wij oefenen samen" bij ≥2 kinderen,
               bewust ZONDER scores naast elkaar (geen broer/zus-vergelijking). */}
           {children.length >= 2 && (
@@ -551,6 +660,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   </div>
                   <button onClick={sendWhatsApp} style={{ width: "100%", padding: "12px", borderRadius: 10, border: "none", background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer", marginTop: 8, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
                     <span style={{ fontSize: 18 }}>💬</span> Stuur via WhatsApp
+                  </button>
+                  <button onClick={sendEmailCode} style={{ width: "100%", padding: "11px", borderRadius: 10, border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700, cursor: "pointer", marginTop: 8, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+                    <span style={{ fontSize: 17 }}>✉️</span> Stuur via e-mail
                   </button>
                   {inviteSent && (
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--color-brand-primary-100)", textAlign: "center", marginTop: 8 }}>
