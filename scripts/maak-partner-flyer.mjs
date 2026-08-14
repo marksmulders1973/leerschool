@@ -27,6 +27,9 @@ const ORGS = [
   // 16 jul 2026: Voedselbank Breda vroeg zelf om de flyer per mail ("u mag
   // altijd de flyer naar ons mailen") — digitale flyer met eigen code.
   { code: "BREDA2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
+  // 14 aug 2026: Voedselbank Dongen (voorzitter Monique Balemans) vroeg zelf
+  // per mail wat ze nodig heeft om mee te doen — digitale flyer met eigen code.
+  { code: "DONGEN2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
 ];
 
 for (const { code, kaderKop } of ORGS) {
