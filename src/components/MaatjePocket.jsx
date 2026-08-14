@@ -42,9 +42,12 @@ function stadiumVoor(stappen) {
 // Accessoire per stadium (eenvoudige v1-versiering; Grok-art komt later).
 const ACCESSOIRE = ["", "", "🎀", "👑", "🌟"];
 
-// Echte Grok-tekeningen per maatje (vervangen de emoji als ze bestaan).
+// Echte tekeningen/foto's per maatje (vervangen de emoji als ze bestaan).
+// Charley = Mark's échte hond (14 aug 21:55: "dit lijkt wel een icoontje —
+// zet mijn eigen Charley daar en met foto van de echte").
 const MAATJE_ART = {
   draakje: "/maatjes/vonk.jpg",
+  charley: "/maatjes/charley-echt.jpg",
 };
 
 // Lieve, NIET-manipulatieve praatjes (geen schuldgevoel). Roteren zacht.
@@ -322,9 +325,13 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
         <button onClick={deel} style={{ ...subBtn, background: "rgba(255,255,255,0.08)" }}>💛 Laat {naam} aan iemand thuis zien</button>
       </div>
 
-      {/* verzonnen-maatje transparantie (agent-5) */}
+      {/* verzonnen-maatje transparantie (agent-5). Charley is de échte hond
+          van de maker (foto!), maar het prátende maatje blijft verzonnen —
+          de regel zegt dat eerlijk per maatje. */}
       <div style={{ textAlign: "center", padding: "2px 14px calc(8px + env(safe-area-inset-bottom))", color: "rgba(255,255,255,0.5)", font: "600 10.5px system-ui" }}>
-        ✨ {naam} is een verzonnen maatje — geen echt dier.
+        {buddy.id === "charley"
+          ? "✨ Charley is de echte hond van de maker — maar praten kan hij alleen hier, in de app."
+          : `✨ ${naam} is een verzonnen maatje — geen echt dier.`}
       </div>
 
       {/* chat-laag */}

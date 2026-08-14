@@ -155,6 +155,8 @@ import nederlandWaterVo from "./nederlandWaterVo.js";
 import cseStrategieEngelsVmbo from "./cseStrategieEngelsVmbo.js";
 import vvnVerkeersexamenPo from "./vvnVerkeersexamenPo.js";
 import getallenTot20Po from "./getallenTot20Po.js";
+import tellenKleutersPo from "./tellenKleutersPo.js";
+import rijmenLettersKleutersPo from "./rijmenLettersKleutersPo.js";
 import statistiekHavoVwo from "./statistiekHavoVwo.js";
 import geneticaHavoVwo from "./geneticaHavoVwo.js";
 import kansrekeningHavoVwo from "./kansrekeningHavoVwo.js";
@@ -358,6 +360,8 @@ export const ALL_LEARN_PATHS = {
   "cse-strategie-engels-vmbo": cseStrategieEngelsVmbo,
   "vvn-verkeersexamen-po": vvnVerkeersexamenPo,
   "getallen-tot-20-po": getallenTot20Po,
+  "tellen-kleuters-po": tellenKleutersPo,
+  "rijmen-letters-kleuters-po": rijmenLettersKleutersPo,
   "statistiek-havo-vwo": statistiekHavoVwo,
   "genetica-havo-vwo": geneticaHavoVwo,
   "kansrekening-havo-vwo": kansrekeningHavoVwo,

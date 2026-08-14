@@ -6628,6 +6628,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "rijmen-letters-kleuters-po",
+    "file": "./rijmenLettersKleutersPo.js",
+    "title": "Rijmen en letters (groep 1-2)",
+    "subject": "taal",
+    "level": "groep1-2",
+    "emoji": "🎈",
+    "referentieNiveau": null,
+    "sloThema": "Taal — beginnende geletterdheid: rijmen, klanken, letters, woordenschat groep 1-2",
+    "triggerKeywords": [
+      "rijmen",
+      "letters",
+      "klanken",
+      "kleuters",
+      "groep 1",
+      "groep 2",
+      "beginnende geletterdheid",
+      "letters leren",
+      "voorlezen",
+      "woordenschat kleuters",
+      "taal kleuters",
+      "hakken en plakken"
+    ],
+    "intro": "Spelen met woorden voor kleuters: rijmen, klanken horen, letters herkennen en woorden kennen. Lekker samen doen — een ouder of verzorger leest voor (of druk op de voorlees-knop) en jij mag antwoorden!",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "romeinen-geschiedenis",
     "file": "./romeinenGeschiedenis.js",
     "title": "Het Romeinse Rijk (klas 1-2)",
@@ -7598,6 +7627,35 @@
     "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
+  },
+  {
+    "id": "tellen-kleuters-po",
+    "file": "./tellenKleutersPo.js",
+    "title": "Tellen en vormen (groep 1-2)",
+    "subject": "rekenen",
+    "level": "groep1-2",
+    "emoji": "🧸",
+    "referentieNiveau": null,
+    "sloThema": "Rekenen — beginnende gecijferdheid: tellen, hoeveelheden, vormen, meten en ruimtelijk inzicht (groep 1-2)",
+    "triggerKeywords": [
+      "tellen",
+      "kleuters",
+      "groep 1",
+      "groep 2",
+      "vormen",
+      "tellen tot 10",
+      "tellen tot 20",
+      "meer minder evenveel",
+      "groot klein",
+      "cirkel vierkant driehoek",
+      "beginnende gecijferdheid",
+      "rekenen kleuters"
+    ],
+    "intro": "Samen tellen, vormen zoeken en spelen — voor kleuters in groep 1 en 2. Druk op 🔊 om alles voor te laten lezen; samen doen met een ouder of verzorger mag natuurlijk ook. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 21,
+    "chapterCount": 5,
+    "estimatedMinutes": 10
   },
   {
     "id": "tijd-snelheid-afstand-po",

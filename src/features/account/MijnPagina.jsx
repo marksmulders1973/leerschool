@@ -516,6 +516,12 @@ export default function MijnPagina({
     const paden = niveauPaden(niveau);
     const status = (p) => byId[p.id]?.level || "unmeasured";
     const ongemeten = (p) => status(p) === "unmeasured";
+    // Strikt: alléén stof van je eigen groep/klas in het klaarzet-blok.
+    // Mark 14 aug 21:57: een groep-1-kind kreeg "Onregelmatige werkwoorden"
+    // (herhaal-advies uit oude speel-historie van dit apparaat) — historie
+    // buiten je niveau hoort hier nooit tussen.
+    const toegestaan = new Set(paden.map((p) => p.id));
+    const magErin = (id) => !niveau || toegestaan.has(id);
     const lijst = [];
     const gebruikt = new Set();
     const voeg = (p, reden) => {
@@ -528,10 +534,10 @@ export default function MijnPagina({
       paden.filter((p) => p.subject === vak && ongemeten(p)).slice(0, 2)
         .forEach((p) => voeg(p, "lastig"));
     }
-    // 2. Meting: herhalen / zwakste eerst
+    // 2. Meting: herhalen / zwakste eerst (alleen binnen het eigen niveau)
     const eerste = recommendNextTopic(records);
-    if (eerste?.path) voeg(eerste.path.id ? { ...eerste.path, id: eerste.pathId } : null, eerste.reason === "due" ? "herhalen" : "zwak");
-    records.filter((r) => r.level === "bronze").slice(0, 2)
+    if (eerste?.path && magErin(eerste.pathId)) voeg(eerste.path.id ? { ...eerste.path, id: eerste.pathId } : null, eerste.reason === "due" ? "herhalen" : "zwak");
+    records.filter((r) => r.level === "bronze" && magErin(r.pathId)).slice(0, 2)
       .forEach((r) => r.path && voeg({ ...r.path, id: r.pathId }, "zwak"));
     // 3. "Goed in"-vakken: één check-pad om het na te lopen
     for (const vak of beschikbareVakken.filter((v) => intake[v] === "goed")) {
@@ -939,53 +945,11 @@ export default function MijnPagina({
             </div>
 
             {weergave === "kind" && (<>
-            {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
-                mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))", border: "1px solid rgba(0,200,83,0.4)" }}>
-              <div style={eyebrowStijl}>Vandaag</div>
-              {(() => {
-                const min = Math.min(minutenVandaag(), 15);
-                const klaarVandaag = min >= 15;
-                return (
-                  <>
-                    <div style={{ fontSize: 17, fontWeight: 800, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", margin: "2px 0 10px", lineHeight: 1.3 }}>
-                      {klaarVandaag
-                        ? "Je kwartier zit erop — lekker bezig! 🎉"
-                        : min > 0
-                          ? `Nog ${15 - min} ${15 - min === 1 ? "minuut" : "minuten"} en je kwartier zit erop`
-                          : "Vandaag nog niet geoefend — een kwartier is genoeg"}
-                    </div>
-                    <div style={{ display: "flex", gap: 4, marginBottom: 12 }} aria-label={`${min} van de 15 minuten geoefend`}>
-                      {Array.from({ length: 15 }, (_, i) => (
-                        <span key={i} style={{
-                          flex: 1, height: 22, borderRadius: 5,
-                          background: i < min ? "#69f0ae" : "rgba(255,255,255,0.18)",
-                        }} />
-                      ))}
-                    </div>
-                    {resume && (
-                      <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
-                        Je was bezig met: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
-                      </div>
-                    )}
-                    <button
-                      onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
-                      style={{
-                        padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
-                        background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
-                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
-                        boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
-                      }}
-                    >
-                      {resume ? "▶ Verder oefenen" : "📚 Kies een onderwerp"}
-                    </button>
-                  </>
-                );
-              })()}
-            </Card>
-
             {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
-                12 aug: "overgaan naar het volgende jaar" is kind-taal) ── */}
+                12 aug: "overgaan naar het volgende jaar" is kind-taal).
+                Mark 14 aug 21:48: "belangrijk blok moet ergens bovenaan, wat
+                moet ik leren in groep 1" — daarom stáát dit blok nu bovenaan,
+                vóór de Vandaag-kaart. ── */}
             {userRole !== "teacher" && (
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Jouw doel</div>
@@ -1078,6 +1042,51 @@ export default function MijnPagina({
               )}
             </Card>
             )}
+
+            {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
+                mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))", border: "1px solid rgba(0,200,83,0.4)" }}>
+              <div style={eyebrowStijl}>Vandaag</div>
+              {(() => {
+                const min = Math.min(minutenVandaag(), 15);
+                const klaarVandaag = min >= 15;
+                return (
+                  <>
+                    <div style={{ fontSize: 17, fontWeight: 800, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", margin: "2px 0 10px", lineHeight: 1.3 }}>
+                      {klaarVandaag
+                        ? "Je kwartier zit erop — lekker bezig! 🎉"
+                        : min > 0
+                          ? `Nog ${15 - min} ${15 - min === 1 ? "minuut" : "minuten"} en je kwartier zit erop`
+                          : "Vandaag nog niet geoefend — een kwartier is genoeg"}
+                    </div>
+                    <div style={{ display: "flex", gap: 4, marginBottom: 12 }} aria-label={`${min} van de 15 minuten geoefend`}>
+                      {Array.from({ length: 15 }, (_, i) => (
+                        <span key={i} style={{
+                          flex: 1, height: 22, borderRadius: 5,
+                          background: i < min ? "#69f0ae" : "rgba(255,255,255,0.18)",
+                        }} />
+                      ))}
+                    </div>
+                    {resume && (
+                      <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+                        Je was bezig met: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
+                      </div>
+                    )}
+                    <button
+                      onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
+                      style={{
+                        padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
+                        background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
+                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
+                        boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
+                      }}
+                    >
+                      {resume ? "▶ Verder oefenen" : "📚 Kies een onderwerp"}
+                    </button>
+                  </>
+                );
+              })()}
+            </Card>
 
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>

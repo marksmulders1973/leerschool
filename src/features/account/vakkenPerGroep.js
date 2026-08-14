@@ -1,13 +1,16 @@
 // Curriculum-kaart basisonderwijs (Mark 12 aug 2026: "doe onderzoek wat er
 // gemiddeld aan vakken gegeven wordt per groep en maak ze inzichtelijk").
 //
-// Bron: de landelijke kerndoelen PO + wat gangbare methodes per leerjaar
-// aanbieden. De vakgebieden uit de kerndoelen: Nederlands (technisch lezen,
-// begrijpend lezen, taal/woordenschat, spelling), rekenen/wiskunde, Engels
-// (verplicht, op de meeste scholen vanaf groep 6/7), oriëntatie op jezelf en
-// de wereld (natuur & techniek, aardrijkskunde, geschiedenis, verkeer) en
-// studievaardigheden richting de doorstroomtoets. Gym/creatief laten we
-// bewust weg — daar oefent een app niets zinnigs aan.
+// Bron: de landelijke kerndoelen PO (58 kerndoelen over leergebieden) + de
+// gangbare opbouw per leerjaar die Mark 14 aug 2026 aanleverde ("Pas je stof
+// en advies aan op bovenstaande" — zie docs/WHATSAPP-FEEDBACK-2026-08-14.md).
+// Kern: Nederlands (technisch lezen, begrijpend lezen, taal/woordenschat,
+// spelling), rekenen/wiskunde, Engels (verplicht; op veel scholen al vanaf
+// groep 5), oriëntatie op jezelf en de wereld (natuur & techniek,
+// aardrijkskunde, geschiedenis, verkeer) en studievaardigheden richting de
+// doorstroomtoets. Gym/creatief laten we bewust weg — daar oefent een app
+// niets zinnigs aan. NB: kerndoelen NL en rekenen zijn recent herzien;
+// methodes schuiven soms iets in wanneer een onderdeel aan bod komt.
 //
 // Per groep: de vak-id's zoals de leerpaden ze gebruiken (subject-key),
 // kern-vakken eerst (doorstroomtoets-kern), wereld-vakken daarna.
@@ -33,7 +36,7 @@ export const VAKKEN_PER_GROEP = {
   2: ["rekenen", "taal"],
   3: ["rekenen", "taal", "spelling"],
   4: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur", "verkeer"],
-  5: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
+  5: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
   6: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
   7: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "studievaardigheden", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
   8: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "studievaardigheden", "natuur", "aardrijkskunde", "geschiedenis"],
@@ -41,23 +44,39 @@ export const VAKKEN_PER_GROEP = {
 
 // Korte school-context per groep×vak — toont wáárom dit vak er nu bij hoort.
 export const VAK_NOTITIE = {
-  "2|rekenen": "tellen, getallen herkennen, meer en minder",
-  "2|taal": "letters ontdekken en rijmen",
+  "1|rekenen": "tellen tot 20, vormen en hoeveelheden — spelend leren",
+  "1|taal": "rijmen, klanken horen, letters herkennen, voorlezen",
+  "2|rekenen": "tellen tot 20, meer en minder, meten en vormen",
+  "2|taal": "letters ontdekken, rijmen en klanken horen",
   "3|taal": "leren lezen — dé klus van groep 3",
-  "3|rekenen": "getallen tot 20, erbij en eraf",
-  "3|spelling": "je eerste woorden schrijven",
-  "4|rekenen": "de tafels! En rekenen tot 100",
+  "3|rekenen": "eerst tot 20, later tot 100; splitsen, erbij en eraf",
+  "3|spelling": "je eerste woorden schrijven (klankzuiver)",
+  "4|rekenen": "tafels 1 t/m 5 en 10, rekenen tot 100, klokkijken en geld",
+  "4|spelling": "open en gesloten lettergrepen, -d of -t",
   "4|begrijpend-lezen": "start: korte teksten snappen",
   "4|natuur": "seizoenen, dieren en planten",
   "4|verkeer": "veilig op straat en op de fiets",
-  "5|aardrijkskunde": "start: jouw omgeving en Nederland",
+  "5|rekenen": "alle tafels en deeltafels, rekenen tot 1000, kennismaken met breuken",
+  "5|taal": "woordsoorten: zelfstandig naamwoord en werkwoord",
+  "5|begrijpend-lezen": "wordt een echt vak — ook studerend lezen",
+  "5|engels": "op veel scholen start Engels hier",
+  "5|aardrijkskunde": "start als vak + topografie van Nederland",
   "5|geschiedenis": "start: vroeger en nu",
-  "6|engels": "op veel scholen start Engels hier",
-  "6|aardrijkskunde": "topografie van Nederland",
+  "6|rekenen": "breuken, kommagetallen, procenten en staartdelen",
+  "6|spelling": "werkwoordspelling: tegenwoordige en verleden tijd",
+  "6|taal": "zinsontleding: persoonsvorm, onderwerp, gezegde",
+  "6|engels": "op sommige scholen start Engels pas hier",
+  "6|aardrijkskunde": "topografie van Nederland en Europa",
+  "6|geschiedenis": "de tijdvakken",
+  "7|rekenen": "breuken ↔ procenten ↔ kommagetallen, schaal en grafieken",
+  "7|spelling": "werkwoordspelling compleet: ook voltooid deelwoord",
+  "7|taal": "ontleden: lijdend en meewerkend voorwerp",
   "7|verkeer": "🚦 het verkeersexamen is dit jaar!",
   "7|studievaardigheden": "samenvatten, opzoeken, plannen",
   "7|aardrijkskunde": "topografie van Europa",
-  "8|studievaardigheden": "vast onderdeel van de doorstroomtoets",
+  "8|rekenen": "grote getallen, procenten en rente, samengestelde sommen",
+  "8|taal": "herhaling en verdieping — klaar voor de brugklas",
+  "8|studievaardigheden": "vast onderdeel van de doorstroomtoets (februari!)",
   "8|aardrijkskunde": "topografie van de wereld",
 };
 
