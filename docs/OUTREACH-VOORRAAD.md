@@ -164,8 +164,16 @@ zijn ziet u op leerkwartier.app/bedankt.html.
 > ⚠️ Reeds verstuurd MET bullets: Leergeld-Noord-16 op 13 aug — niet terug te halen.)
 
 Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen — in
-een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat, ook met
-uw logo.
+een nieuwsbrief, een briefje of een poster? Een kant-en-klare poster staat al klaar
+(A3: leerkwartier.app/drukwerk/poster-a3.pdf · A4: leerkwartier.app/drukwerk/poster-a4.pdf)
+— en ik maak alles kosteloos op maat, ook met uw logo. Mag de poster blijven hangen
+minstens tot de Doorstroomtoets? Die is begin februari 2027 — juist in de weken
+ervóór zoeken ouders hulp. (Voor oudere kinderen: de VMBO-examens starten half mei 2027.)
+
+> 🗓️ HANG-DUUR-REGEL (Mark 14 aug): bij élk poster-/schermen-aanbod standaard vragen
+> of het minstens tot de Doorstroomtoets (begin feb 2027) blijft hangen/staan, mét de
+> datum erbij — partners kennen die datum niet. VMBO-doelgroep: examens half mei 2027.
+> Poster zelf blijft datum-loos (evergreen); de datum hoort in de mail.
 
 Er zit geen addertje onder het gras: gratis in 2026, geen account nodig, geen reclame,
 en gezinnen die via uw organisatie komen houden ook 2027 gratis toegang via een eigen
