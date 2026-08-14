@@ -1623,10 +1623,12 @@ export default function MijnPagina({
             )}
 
             {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
-                Alleen voor echte ouder/leraar-rol; paywall staat UIT tot 2027. ── */}
+                Alleen voor de leraar-rol; paywall staat UIT tot 2027. Ouders
+                zien sinds 14 aug de Familie-gate in het gedeelde <OuderInzicht>
+                hierboven — dus hier voor ouders onderdrukt (geen dubbele CTA). ── */}
             {(() => {
               const pitch = TIER_PITCH[userRole];
-              if (!pitch) return null;
+              if (!pitch || userRole === "ouder") return null;
               return (
                 <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.3)", background: "rgba(255,213,79,0.06)" }}>
                   <div style={eyebrowStijl}>Jouw pakket</div>
