@@ -65,7 +65,7 @@
     </div>
 
     <h1>Gratis oefenen voor de <span class="groen">Doorstroomtoets</span></h1>
-    <div class="voorwie">Voor kinderen in groep 6, 7 en 8 — en gratis oefenen voor de VMBO-examens.</div>
+    <div class="voorwie" id="voorwie">Voor kinderen in groep 6, 7 en 8 — en gratis oefenen voor de VMBO-examens.</div>
     <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
 
     <ul>
@@ -105,9 +105,11 @@
       neutraal:   { logo:null },
       sparkfest:  { logo:'sparkfest-logo.webp',            naam:'Spark Fest' },
       'vb-alkmaar':{ logo:'logo-voedselbank-alkmaar.png',  naam:'Voedselbank Alkmaar e.o.' },
-      schoolscool:{ logo:'logo-schoolscool-twente.png',    naam:"School's cool Twente" }
+      schoolscool:{ logo:'logo-schoolscool-twente.png',    naam:"School's cool Twente",
+        voorwie:'Voor de brugklas én groep 6, 7 en 8 — basis bijspijkeren, en gratis oefenen voor de VMBO-examens.' }
     };
     var cfg = VAR[v] || VAR.neutraal;
+    if (cfg.voorwie) document.getElementById('voorwie').textContent = cfg.voorwie;
     if (!cfg.logo) {
       document.body.classList.add('geen-dank');
     } else {
