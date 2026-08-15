@@ -180,6 +180,22 @@ export const PRO_FEATURES = {
     blurb: "Voortgang van je hele klas in één overzicht, met export voor het rapportgesprek.",
     status: "binnenkort",
   },
+  // Gezins-plekken cadeau (Mark 15 aug 2026): een school-abonnement geeft de
+  // school Familie-plekken om thúís uit te delen aan gezinnen die een steuntje
+  // kunnen gebruiken — kansengelijkheid. Loopt op de partner-code-rails
+  // (max_uses per code). Publieke copy bewust warm/niet-stigmatiserend: nooit
+  // "probleemgezin", wél "gezinnen die een steuntje kunnen gebruiken".
+  "gezins-plekken": {
+    id: "gezins-plekken",
+    icon: "🤝",
+    label: "Gezins-plekken thuis cadeau",
+    laag: "leerkracht",
+    blurb:
+      "Bij een school-abonnement horen 5 Familie-plekken per klas die de school " +
+      "thuis kan weggeven — bedoeld voor gezinnen die een steuntje kunnen " +
+      "gebruiken. Zo oefent elk kind ook thuis mee.",
+    status: "binnenkort",
+  },
   "generate-questions": {
     id: "generate-questions",
     icon: "✏️",

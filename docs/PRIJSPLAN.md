@@ -137,6 +137,25 @@ Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
    betaalt wél privé (aftrekbaar, verdient zichzelf in één lesuur terug).
    Framing in copy: "voor bijlesdocenten", niet "voor leerkrachten".
 
+**🤝 Gezins-plekken thuis cadeau (Mark 15 aug 2026) — de verkoophaak.** Bij een
+school-abonnement horen **5 Familie-plekken per klas** die de school thúís mag
+weggeven aan **gezinnen die een steuntje kunnen gebruiken** (de gezinnen voor
+wie de kosten of de thuis-begeleiding een drempel zijn — de school kent ze).
+Waarom dit sterk is: gunfactor/kansengelijkheid (de school kan ouders iets
+gévén), funnel (die gezinnen oefenen thuis → mond-tot-mond), retentie (bindt de
+school) en een verhaal dat de school zelf naar ouders vertelt. **Rijdt op de
+partner-code-rails** (§4-mechaniek: een school-code met `max_uses = N`, atomisch
+geclaimd bij activatie, gehonoreerd door de paywall). **Inzage blijft gescheiden
+(Mark-keuze 15 aug):** de **ouder** ziet de voortgang per kind (koppelcode); de
+**school** blijft op **klasniveau** (toetsen/takenlijst) — géén individueel
+thuisbeeld per kind. **Nu al inzetbaar** als relatiehaak bij scholen (handmatig
+een Familie-code met 5 plekken per deal, zoals de voedselbank-codes); **bij de
+paywall-lancering 2027** inbakken: code-batch automatisch aan het
+school-abonnement + een "gezins-codes"-paneel in het schooldashboard. Schalen:
+5 per klas-abonnement, meer voor een heel-school-abonnement. **Copy-regel:**
+nooit "probleemgezin" op een publieke pagina — wél "gezinnen die een steuntje
+kunnen gebruiken" (warm, niet-stigmatiserend).
+
 **Vuistregel gratis↔betaald (bewaken bij elke nieuwe feature):** helpt het
 één juf met één klas → gratis; helpt het de organisatie (overzicht over
 klassen heen, beheer, compliance) → schoollicentie.
