@@ -1,36 +1,43 @@
-// 💛 Ouder zet lessen klaar voor kind (Mark 15 aug 2026: "de ouder bladert
-// door de app en drukt op het hartje bij iets wat zijn kind moet leren; dat
-// komt dan bij het kind in een blok 'je ouder/verzorger heeft dit voor je
-// klaargezet'"). Cross-device via Supabase.
+// 💛 Klaargezette lessen — ouder→kind én leerkracht→leerling (Mark 15 aug 2026).
+// Cross-device via Supabase, twee bronnen met identiek patroon:
+//   bron "ouder"  → tabel ouder_klaargezet  (koppeling parent_child_links)
+//   bron "leraar" → tabel leraar_klaargezet (koppeling leraar_leerling_links)
 //
-// Vertrouwensmodel (bewust gelijk aan de rest van de kind-kant):
-//  • OUDER schrijft geauthenticeerd, gewone RLS (tabel `ouder_klaargezet`,
-//    policy: alleen eigen koppelingen — parent_user_id = auth.uid()).
-//  • KIND is meestal niet ingelogd en leest op naam via SECURITY DEFINER-RPC's
-//    (`kind_klaargezet` / `kind_klaargezet_gedaan`), net als de accept-banner
-//    en het weekrapport. Alleen bevestigde koppelingen tellen mee.
+// Vertrouwensmodel (gelijk aan de rest van de kind-kant):
+//  • VOLWASSENE (ouder/leerkracht) schrijft geauthenticeerd via gewone RLS
+//    (policy: alleen eigen koppelingen — parent_user_id/teacher_user_id = auth.uid()).
+//  • KIND/LEERLING is meestal niet ingelogd en leest op naam via SECURITY
+//    DEFINER-RPC's (`voor_jou_klaargezet` bundelt beide bronnen). Alleen
+//    bevestigde koppelingen tellen mee.
 //
-// Bekende v1-grens: leest op naam. Twee gezinnen met een kind met dezelfde
-// naam (beide bevestigd, beide kind gebruikt de app) zouden elkaars
-// klaargezette lés-titels kunnen zien — lage gevoeligheid, gedocumenteerd.
-// Precieze scoping op link_id (opgeslagen bij het koppelen) kan later.
+// Bekende v1-grens: leest op naam. Twee koppelingen met een gelijknamig kind
+// zouden elkaars lés-titels kunnen zien — lage gevoeligheid, gedocumenteerd.
 
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 
 export const KLAARGEZET_EVENT = "lk-klaargezet-changed";
+const TABEL = { ouder: "ouder_klaargezet", leraar: "leraar_klaargezet" };
 
 function pingKind() {
   try { window.dispatchEvent(new CustomEvent(KLAARGEZET_EVENT)); } catch { /* */ }
 }
 
-// ── Ouder-kant (geauthenticeerd, directe tabel via RLS) ─────────────────
+function maakCode() {
+  // Zelfde alfabet als de ouder-koppelcode: zonder verwarrende tekens (0/O, 1/I/L).
+  const alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  const bytes = new Uint8Array(6);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
+}
 
-/** Wat staat er voor deze koppeling al klaar? → [{ id, path_id, titel, emoji, gedaan }] */
-export async function haalKlaargezetVoorLink(linkId) {
+// ── Volwassen-kant (ouder of leerkracht), geauthenticeerd via RLS ───────
+
+/** Wat staat er voor deze koppeling al klaar? bron = "ouder" | "leraar". */
+export async function haalKlaargezetVoorLink(linkId, bron = "ouder") {
   if (!linkId) return [];
   const { data, error } = await supabase
-    .from("ouder_klaargezet")
+    .from(TABEL[bron] || TABEL.ouder)
     .select("id, path_id, titel, emoji, gedaan, created_at")
     .eq("link_id", linkId)
     .order("created_at", { ascending: false });
@@ -38,55 +45,86 @@ export async function haalKlaargezetVoorLink(linkId) {
   return Array.isArray(data) ? data : [];
 }
 
-/** Zet een les klaar. item = { id: pathId, titel, emoji }. Idempotent (unique link_id+path_id). */
-export async function zetKlaar(linkId, item) {
+/** Zet een les klaar. item = { id: pathId, titel, emoji }. Idempotent. */
+export async function zetKlaar(linkId, item, bron = "ouder") {
   if (!linkId || !item?.id) return { ok: false };
   const { error } = await supabase
-    .from("ouder_klaargezet")
+    .from(TABEL[bron] || TABEL.ouder)
     .upsert(
       { link_id: linkId, path_id: item.id, titel: item.titel || null, emoji: item.emoji || "📘" },
       { onConflict: "link_id,path_id", ignoreDuplicates: true }
     );
   if (error) return { ok: false, error };
-  try { track("ouder_zet_klaar", { pad: item.id }); } catch { /* */ }
+  try { track("volwassen_zet_klaar", { pad: item.id, bron }); } catch { /* */ }
   pingKind();
   return { ok: true };
 }
 
-/** Haal een klaargezette les weer weg (ouder tikt het hartje uit). */
-export async function haalWeg(linkId, pathId) {
+/** Haal een klaargezette les weer weg. */
+export async function haalWeg(linkId, pathId, bron = "ouder") {
   if (!linkId || !pathId) return { ok: false };
   const { error } = await supabase
-    .from("ouder_klaargezet")
+    .from(TABEL[bron] || TABEL.ouder)
     .delete()
     .eq("link_id", linkId)
     .eq("path_id", pathId);
   if (error) return { ok: false, error };
-  try { track("ouder_zet_klaar", { pad: pathId, actie: "af" }); } catch { /* */ }
+  try { track("volwassen_zet_klaar", { pad: pathId, bron, actie: "af" }); } catch { /* */ }
   pingKind();
   return { ok: true };
 }
 
-// ── Kind-kant (op naam, via SECURITY DEFINER-RPC) ───────────────────────
+// ── Kind/leerling-kant (op naam, via SECURITY DEFINER-RPC) ──────────────
 
-/** De lessen die iemand thuis voor dit kind klaarzette. → [{ id, path_id, titel, emoji, gedaan }] */
+/** Alles wat thuis én op school voor dit kind klaarstaat. Elk item heeft `bron`. */
 export async function haalKlaargezetVoorKind(kindNaam) {
   const naam = String(kindNaam || "").trim();
   if (!naam) return [];
-  const { data, error } = await supabase.rpc("kind_klaargezet", { p_child_name: naam });
+  const { data, error } = await supabase.rpc("voor_jou_klaargezet", { p_student_name: naam });
   if (error) return [];
   return Array.isArray(data) ? data : [];
 }
 
-/** Kind vinkt een klaargezette les af (of terug). */
-export async function markeerGedaan(itemId, kindNaam, gedaan = true) {
+/** Kind/leerling vinkt een les af (of terug). bron bepaalt welke RPC. */
+export async function markeerGedaan(itemId, kindNaam, gedaan = true, bron = "ouder") {
   const naam = String(kindNaam || "").trim();
   if (!itemId || !naam) return { ok: false };
-  const { error } = await supabase.rpc("kind_klaargezet_gedaan", {
-    p_item_id: itemId, p_child_name: naam, p_gedaan: gedaan,
-  });
+  const rpc = bron === "leraar" ? "leerling_klaargezet_gedaan" : "kind_klaargezet_gedaan";
+  const args = bron === "leraar"
+    ? { p_item_id: itemId, p_student_name: naam, p_gedaan: gedaan }
+    : { p_item_id: itemId, p_child_name: naam, p_gedaan: gedaan };
+  const { error } = await supabase.rpc(rpc, args);
   if (error) return { ok: false, error };
-  try { track("kind_klaargezet_gedaan", { gedaan }); } catch { /* */ }
+  try { track("klaargezet_gedaan", { gedaan, bron }); } catch { /* */ }
   pingKind();
   return { ok: true };
+}
+
+// ── Leerkracht: leerling koppelen (spiegel van de ouder-uitnodiging) ────
+
+/** Maak een 48u-koppelcode voor een leerling. → { ok, code }. */
+export async function koppelLeerlingCode(teacherId, studentName) {
+  const naam = String(studentName || "").trim();
+  if (!teacherId || !naam) return { ok: false };
+  const code = maakCode();
+  const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+  // link_codes.child_name is NOT NULL en dient hier als leerling-naam.
+  const { error } = await supabase.from("link_codes").insert({
+    code, teacher_user_id: teacherId, child_name: naam, expires_at: expires,
+  });
+  if (error) return { ok: false, error };
+  try { track("leraar_koppel_code", {}); } catch { /* */ }
+  return { ok: true, code };
+}
+
+/** Gekoppelde leerlingen van deze leerkracht (bevestigd + wachtend). */
+export async function haalGekoppeldeLeerlingen(teacherId) {
+  if (!teacherId) return [];
+  const { data, error } = await supabase
+    .from("leraar_leerling_links")
+    .select("id, student_name, verified, created_at")
+    .eq("teacher_user_id", teacherId)
+    .order("created_at", { ascending: true });
+  if (error) return [];
+  return Array.isArray(data) ? data : [];
 }

@@ -1121,14 +1121,19 @@ export default function MijnPagina({
             {thuisKlaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
                 <div style={eyebrowStijl}>Voor jou klaargezet</div>
-                <div style={kaartTitelStijl}>💛 Iemand thuis koos dit voor jou</div>
+                <div style={kaartTitelStijl}>💛 Speciaal voor jou klaargezet</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
-                  {thuisKlaargezet.map((it) => (
+                  {thuisKlaargezet.map((it) => {
+                    const vanSchool = it.bron === "leraar";
+                    return (
                     <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", opacity: it.gedaan ? 0.6 : 1 }}>
                       <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)", textDecoration: it.gedaan ? "line-through" : "none" }}>
                           {it.titel || "Een les"}
+                        </div>
+                        <div style={{ fontSize: 11, color: vanSchool ? "#8ec9ff" : "#ff9fb2", fontWeight: 700 }}>
+                          {vanSchool ? "🍎 van je juf of meester" : "💛 van thuis"}
                         </div>
                         {it.gedaan && <div style={{ fontSize: 11.5, color: "#69f0ae", fontWeight: 700 }}>✓ Gedaan — knap!</div>}
                       </div>
@@ -1141,7 +1146,7 @@ export default function MijnPagina({
                         </button>
                       )}
                       <button
-                        onClick={() => markeerGedaan(it.id, player, !it.gedaan)}
+                        onClick={() => markeerGedaan(it.id, player, !it.gedaan, it.bron)}
                         title={it.gedaan ? "Toch nog niet af? Tik om terug te zetten" : "Klaar? Tik om af te vinken"}
                         aria-label={it.gedaan ? "Terugzetten" : "Afvinken"}
                         style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", cursor: "pointer", border: it.gedaan ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(255,255,255,0.25)", background: it.gedaan ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.05)", color: it.gedaan ? "#69f0ae" : "var(--color-text-muted, #8899aa)", fontSize: 14, fontWeight: 800 }}
@@ -1149,10 +1154,11 @@ export default function MijnPagina({
                         ✓
                       </button>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
                 <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 10, lineHeight: 1.45 }}>
-                  Iemand thuis vindt deze lessen leuk voor jou. Doe ze wanneer je wilt — geen haast.
+                  Thuis of op school koos iemand deze lessen speciaal voor jou. Doe ze wanneer je wilt — geen haast.
                 </div>
               </Card>
             )}

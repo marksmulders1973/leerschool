@@ -35,10 +35,13 @@ export default function KoppelcodeBanner({ userName }) {
       });
       if (error) throw error;
       if (data?.ok) {
-        setMsg({ ok: true, text: "✓ Gekoppeld! Je ouder kan nu je voortgang zien." });
+        const tekst = data.rol === "leraar"
+          ? "✓ Gekoppeld! Je juf of meester kan nu lessen voor je klaarzetten."
+          : "✓ Gekoppeld! Je ouder of verzorger kan nu je voortgang zien.";
+        setMsg({ ok: true, text: tekst });
         setCode("");
       } else if (data?.error === "code_invalid_or_expired") {
-        setMsg({ ok: false, text: "Deze code klopt niet of is verlopen. Vraag je ouder een nieuwe." });
+        setMsg({ ok: false, text: "Deze code klopt niet of is verlopen. Vraag om een nieuwe code." });
       } else {
         setMsg({ ok: false, text: "Iets ging mis. Probeer later opnieuw." });
       }
@@ -88,7 +91,7 @@ export default function KoppelcodeBanner({ userName }) {
         }}
       >
         <span style={{ fontSize: 18 }}>🔐</span>
-        <span style={{ flex: 1 }}>Heb je een koppelcode van thuis gekregen?</span>
+        <span style={{ flex: 1 }}>Heb je een koppelcode gekregen van thuis of van school?</span>
         <span aria-hidden="true">▼</span>
       </button>
     );
@@ -109,10 +112,10 @@ export default function KoppelcodeBanner({ userName }) {
         <span style={{ fontSize: 22 }}>🔐</span>
         <div style={{ flex: 1 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa", lineHeight: 1.3 }}>
-            Koppel met je ouder
+            Koppel met thuis of school
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
-            Voer de 6-letter-code in die je via WhatsApp kreeg.
+            Voer de 6-letter-code in die je van thuis of je juf/meester kreeg.
           </div>
         </div>
         <button

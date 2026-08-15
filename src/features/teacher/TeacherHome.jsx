@@ -7,8 +7,9 @@ import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
 import ProBadge, { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
+import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
+export default function TeacherHome({ userName, authUser, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
   // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
@@ -374,6 +375,12 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
               <GratisBadge />
             </span>
           </button>
+        )}
+        {/* 💛 Leerpad voor één leerling (Mark 15 aug 2026): koppel een leerling
+            en zet gericht lessen klaar — verschijnt op zijn/haar eigen pagina.
+            Voor een zorgleerling; de klas gebruikt Takenlijst/Toets. */}
+        {onKlaarzetten && (
+          <LeraarKlaarzet authUser={authUser} onKlaarzetten={onKlaarzetten} onOpenLes={onOpenLes} />
         )}
         {/* Werkblad (leerkracht-kanaal Fase 1, 5 aug 2026): printbaar A4 uit een
             oefenpad + QR waarmee leerlingen thuis gratis verder oefenen. */}

@@ -377,10 +377,10 @@ export default function App() {
   // 💛 Klaarzet-modus (Mark 15 aug): een ouder bladert door de hub en zet
   // lessen klaar voor een gekoppeld kind. { linkId, childName } als actief.
   const [klaarzetVoor, setKlaarzetVoor] = useState(null);
-  const startKlaarzetten = (linkId, childName) => {
+  const startKlaarzetten = (linkId, childName, bron = "ouder") => {
     if (!linkId) return;
-    setKlaarzetVoor({ linkId, childName });
-    setLearnHubReturnPage(page === "ouder-dashboard" ? "ouder-dashboard" : "mijn-pagina");
+    setKlaarzetVoor({ linkId, childName, bron });
+    setLearnHubReturnPage(page === "ouder-dashboard" ? "ouder-dashboard" : bron === "leraar" ? "teacher-home" : "mijn-pagina");
     setLearnFilterSubject(null);
     setLearnInitialSearch("");
     setEntryContext("leren");
@@ -1517,8 +1517,16 @@ export default function App() {
       {page === "teacher-home" && (
         <TeacherHome
           userName={userName}
+          authUser={authUser}
           quizzes={quizzes}
           classes={classes}
+          onKlaarzetten={(linkId, studentName) => startKlaarzetten(linkId, studentName, "leraar")}
+          onOpenLes={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("teacher-home");
+            setPage("learn-path");
+          }}
           quizLimitReached={quizLimitReached}
           quizCount={quizzes.length}
           quizLimit={FREE_QUIZ_LIMIT}

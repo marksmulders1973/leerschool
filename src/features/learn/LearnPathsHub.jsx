@@ -37,7 +37,7 @@ const C = {
 // die komt op het kind z'n pagina te staan. In gewone modus staat hier het
 // kind z'n eigen ⭐ (LijstjeSter) — nooit allebei tegelijk, zodat niemand per
 // ongeluk de verkeerde tikt.
-function KlaarzetHart({ linkId, childName, item, aanInit }) {
+function KlaarzetHart({ linkId, childName, item, aanInit, bron = "ouder" }) {
   const [aan, setAan] = useState(!!aanInit);
   const [busy, setBusy] = useState(false);
   useEffect(() => { setAan(!!aanInit); }, [aanInit]);
@@ -47,7 +47,7 @@ function KlaarzetHart({ linkId, childName, item, aanInit }) {
     setBusy(true);
     const next = !aan;
     setAan(next); // optimistisch
-    const r = next ? await zetKlaar(linkId, item) : await haalWeg(linkId, item.id);
+    const r = next ? await zetKlaar(linkId, item, bron) : await haalWeg(linkId, item.id, bron);
     if (!r.ok) setAan(!next); // terugdraaien bij fout
     setBusy(false);
   };
@@ -206,11 +206,11 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   useEffect(() => {
     if (!klaarzetVoor?.linkId) { setKlaarSet(new Set()); return; }
     let cancel = false;
-    haalKlaargezetVoorLink(klaarzetVoor.linkId).then((rows) => {
+    haalKlaargezetVoorLink(klaarzetVoor.linkId, klaarzetVoor.bron).then((rows) => {
       if (!cancel) setKlaarSet(new Set(rows.map((r) => r.path_id)));
     });
     return () => { cancel = true; };
-  }, [klaarzetVoor?.linkId]);
+  }, [klaarzetVoor?.linkId, klaarzetVoor?.bron]);
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
   // (primair) of userLevel (fallback voor returning users zonder role-set).
@@ -840,7 +840,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                             )}
                           </div>
                           {klaarzetVoor
-                            ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                            ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} bron={klaarzetVoor.bron} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
                             : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                           <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                         </div>
@@ -1600,7 +1600,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                                   )}
                                 </div>
                                 {klaarzetVoor
-                                  ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                                  ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} bron={klaarzetVoor.bron} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
                                   : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                                 <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                               </div>
