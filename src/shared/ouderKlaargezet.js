@@ -128,3 +128,26 @@ export async function haalGekoppeldeLeerlingen(teacherId) {
   if (error) return [];
   return Array.isArray(data) ? data : [];
 }
+
+/** Overzicht per bevestigde leerling: hoeveel klaargezet en hoeveel gedaan.
+ * → [{ id, student_name, totaal, gedaan }]. Voor het leerkracht-overzicht +
+ * een deelbaar rapportje (Mark 15 aug: "alle kinderen + voortgang doorsturen"). */
+export async function haalLeerlingOverzicht(teacherId) {
+  const leerlingen = (await haalGekoppeldeLeerlingen(teacherId)).filter((l) => l.verified);
+  if (leerlingen.length === 0) return [];
+  const ids = leerlingen.map((l) => l.id);
+  const { data } = await supabase
+    .from("leraar_klaargezet")
+    .select("link_id, gedaan")
+    .in("link_id", ids);
+  const per = {};
+  (data || []).forEach((r) => {
+    if (!per[r.link_id]) per[r.link_id] = { totaal: 0, gedaan: 0 };
+    per[r.link_id].totaal += 1;
+    if (r.gedaan) per[r.link_id].gedaan += 1;
+  });
+  return leerlingen.map((l) => ({
+    id: l.id, student_name: l.student_name,
+    totaal: per[l.id]?.totaal || 0, gedaan: per[l.id]?.gedaan || 0,
+  }));
+}

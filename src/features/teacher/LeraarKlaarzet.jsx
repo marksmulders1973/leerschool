@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BRAND } from "../../brand.js";
 import {
   haalGekoppeldeLeerlingen, koppelLeerlingCode,
-  haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT,
+  haalKlaargezetVoorLink, haalWeg, haalLeerlingOverzicht, KLAARGEZET_EVENT,
 } from "../../shared/ouderKlaargezet.js";
 
 // 👩‍🏫 Leerkracht zet lessen klaar voor één leerling (Mark 15 aug 2026) — de
@@ -20,6 +20,8 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [invite, setInvite] = useState(null); // { code, naam }
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [overzichtCopied, setOverzichtCopied] = useState(false);
+  const [overzicht, setOverzicht] = useState([]);
   const [open, setOpen] = useState(false);
 
   const laadStudents = () => {
@@ -30,6 +32,34 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
     });
   };
   useEffect(() => { laadStudents(); /* eslint-disable-next-line */ }, [authUser?.id]);
+
+  // 📊 Overzicht van álle gekoppelde leerlingen + hun klaargezet-voortgang
+  // (Mark 15 aug: "een leerkracht heeft 25 kinderen; overzicht + doorsturen").
+  useEffect(() => {
+    if (!authUser) return;
+    let cancel = false;
+    const laad = () => haalLeerlingOverzicht(authUser.id).then((r) => { if (!cancel) setOverzicht(r); });
+    laad();
+    window.addEventListener(KLAARGEZET_EVENT, laad);
+    return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
+  }, [authUser?.id, students.length]);
+
+  // Deelbaar rapportje voor bv. de directie — platte tekst, privacy-arm
+  // (alleen naam + hoeveel klaargezette lessen gedaan; geen scores).
+  const overzichtTekst = () => {
+    const datum = new Date().toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+    const regels = overzicht.map((o) => `• ${o.student_name}: ${o.gedaan} van ${o.totaal} klaargezette ${o.totaal === 1 ? "les" : "lessen"} gedaan`);
+    return `${BRAND.name} — overzicht klaargezette lessen (${datum})\n\n${regels.join("\n") || "(nog geen gekoppelde leerlingen)"}\n\nGemaakt via ${BRAND.domain}`;
+  };
+  const kopieerOverzicht = () => {
+    navigator.clipboard?.writeText(overzichtTekst());
+    setOverzichtCopied(true);
+    setTimeout(() => setOverzichtCopied(false), 2000);
+  };
+  const mailOverzicht = () => {
+    const subject = encodeURIComponent(`${BRAND.name} — voortgang klaargezette lessen`);
+    window.open(`mailto:?subject=${subject}&body=${encodeURIComponent(overzichtTekst())}`, "_blank");
+  };
 
   useEffect(() => {
     if (!selected?.verified) { setKlaarLijst([]); return; }
@@ -76,15 +106,41 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
     <div style={{ ...box, background: "rgba(255,105,135,0.06)", borderColor: "rgba(255,105,135,0.3)" }}>
       <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open}
         style={{ background: "none", border: "none", color: "#ff9fb2", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", padding: 0, width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
-        <span>💛 Zet een leerpad klaar voor één leerling</span>
+        <span>💛 Leerpaden klaarzetten per leerling</span>
         <span style={{ fontSize: 12, opacity: 0.7 }}>{open ? "▲ Klap in" : "▼ Open"}</span>
       </button>
 
       {open && (
         <div style={{ marginTop: 12 }}>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.5, marginBottom: 12 }}>
-            Voor een leerling die je gericht wil helpen: koppel de leerling één keer met een code, en de lessen die je kiest verschijnen op zijn of haar eigen pagina. (Voor de hele klas gebruik je de <strong>Takenlijst</strong> of een <strong>Toets</strong>.)
+            Koppel één of meer leerlingen (elk één keer met een eigen code), en zet per leerling gericht lessen klaar — die verschijnen op hun eigen pagina. Hieronder zie je in één oogopslag wat elke leerling deed, en je kunt dat overzicht doorsturen (bv. naar de directie). <em>Voor de hele klas in één keer gebruik je de <strong>Takenlijst</strong> of een <strong>Toets</strong> via een deelcode — geen losse koppelingen nodig.</em>
           </div>
+
+          {/* 📊 Overzicht van álle gekoppelde leerlingen + deelbaar rapportje */}
+          {overzicht.length > 0 && (
+            <div style={{ borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.03)", padding: "10px 12px", marginBottom: 12 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 8 }}>
+                📊 Je leerlingen ({overzicht.length})
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 10 }}>
+                {overzicht.map((o) => {
+                  const klaar = o.totaal > 0 && o.gedaan === o.totaal;
+                  return (
+                    <div key={o.id} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12.5 }}>
+                      <span style={{ flex: 1, minWidth: 0, color: "var(--color-text-strong)", fontWeight: 600 }}>👤 {o.student_name}</span>
+                      <span style={{ color: o.totaal === 0 ? "rgba(255,255,255,0.4)" : klaar ? "#69f0ae" : "#ffd54f", fontWeight: 700 }}>
+                        {o.totaal === 0 ? "nog niets klaargezet" : `${o.gedaan}/${o.totaal} gedaan${klaar ? " ✓" : ""}`}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button onClick={kopieerOverzicht} style={miniBtn}>{overzichtCopied ? "✓ Gekopieerd" : "📋 Kopieer overzicht"}</button>
+                <button onClick={mailOverzicht} style={miniBtn}>📧 Mail (bv. naar de directie)</button>
+              </div>
+            </div>
+          )}
 
           {/* Gekoppelde leerlingen */}
           {verified.length > 0 && (

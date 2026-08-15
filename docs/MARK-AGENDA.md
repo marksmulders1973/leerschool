@@ -8,6 +8,13 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **KvK-afspraak boeken** (kvk.nl → KvK Utrecht, ma 31 aug óf di 1 sep middag) +
+  **Sonac-contract/CAO checken op nevenwerkzaamheden** (eigen zaak melden/
+  toestemming?) vóór je inschrijft. Volledige voorbereiding + blinde vlekken:
+  `Desktop\dagrapport\Leerkwartier-Eigen-zaak-startgids-2026-08-15.pdf`.
+  Beslist: startdatum onderneming = **1 sep** (schone maand, fiscaal identiek
+  aan 31 aug). Neem het ingevulde lijstje (handelsnaam/SBI/adresafscherming) mee.
+
 - ~~Gmail-concept Voedselbank Lelystad verzenden~~ ✅ **VERZONDEN 12 aug**
   door Claude via leerkwartier.app-mail (Resend, reply-to = jouw Gmail) mét
   beide flyer-bijlagen; het oude Gmail-concept is leeggemaakt en kan weg.
@@ -28,7 +35,7 @@
 | Wanneer | Wat | Wie |
 |---|---|---|
 | **di 25 aug** | 🚐 **Mark kan langs een voedselbank** (eigen WhatsApp-notitie 10 aug). Kies + afspraak maken: **Alkmaar** (Teresa, rondleiding di/do-ochtend, ~1u45 rijden) óf **Rotterdam** (Amber, di+do; 50 flyers meenemen) | Mark mailt |
-| **ma 31 aug** | 🏢 **KvK Utrecht** (eigen WhatsApp-notitie 10 aug) — inschrijving eenmanszaak; vooraf online afspraak maken + ID mee | Mark |
+| **ma 31 aug / di 1 sep** | 🏢 **KvK Utrecht — inschrijving eenmanszaak** (naar voren gehaald van okt). Afspraak online boeken + ID mee + ±€80 pin. Startdatum = 1 sep. Direct daarna: btw-id afwachten. Voorbereiding: startgids-PDF (15 aug) | Mark |
 | ~wk 17 aug | **School's cool Twente teambespreking** — zij komen zelf terug (11 aug toegezegd); niet pingen, wel opletten | — |
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
@@ -43,7 +50,7 @@
 | ≤ begin okt | 🎄 **Kerstpakket-inlegvellen**: voedselbanken/Leergeld benaderen voor december-actie — timing dwingt, uiterlijk oktober! | Claude concept, Mark-go |
 | okt | Check **Leergeld Apeldoorn-Voorst**: staat Leerkwartier op hun site + in de okt-nieuwsbrief? (toezegging Edith) | Claude |
 | zo 18 okt | **Spark Fest** (Hoofddorp, 1.000 goodybags) → daarna: napost (klaar in Desktop\Leerkwartier-social) + HAARLEMMERMEER2027-claims volgen | Mark post |
-| okt 2026 | 🏢 **KvK-inschrijving eenmanszaak** (besloten 9 aug: Mark wil verdienen → géén stichting) + **KOR aanvragen** + zakelijke bankrekening openen | Mark (Claude bereidt voor) |
+| ná KvK (sep) | 🏢 **KOR aanvragen** (omzet <€20k → geen btw, scholen 21% goedkoper; ~4 wk vóór ingang; 3 jr vast) + **zakelijke bankrekening** openen (bunq/Knab; nodig voor Stripe) + **Esther/Ooievaarspas informeren** dat er een KvK-nummer is (informatieplicht) | Mark (Claude bereidt voor) |
 | nov 2026 | 🏢 Algemene voorwaarden + herroepingsrecht + factuur-sjabloon af (Claude concepten) → **dec: Stripe test-mode** → jan 2027 live | Claude + Mark |
 | voorjaar 2027 | ⏰ **Partner-verleng-besluit**: alle gewone partner-codes lopen af op 1 aug 2027 — per partner kiezen: verlengen we de gezinnen een jaar? (Ooievaarspas = blijvend, valt hierbuiten) | Mark beslist |
 | ~1 jul 2027 | ⏰ **Afloop-mail naar alle partners** (25+ codes, een maand vóór 1 aug): hoe beviel het, willen jullie door, verlenging aanbieden — natuurlijk contactmoment; waarde-zin: partner-gezinnen kregen feitelijk een gratis Seizoenspas (€24,95) | Claude concept, Mark-go |
