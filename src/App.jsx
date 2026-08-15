@@ -2206,6 +2206,12 @@ export default function App() {
           onLogin={loginWithConsent}
           onRondleiding={() => setPage("rondleiding")}
           onKlaarzetten={startKlaarzetten}
+          onOpenLes={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("ouder-dashboard");
+            setPage("learn-path");
+          }}
         />
       )}
       {page === "rondleiding" && <RondleidingPage setPage={setPage} />}

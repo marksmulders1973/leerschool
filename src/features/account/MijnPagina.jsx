@@ -1666,6 +1666,7 @@ export default function MijnPagina({
                 onUpgrade={onUpgrade}
                 onLogin={onLogin}
                 onKlaarzetten={onKlaarzetten}
+                onOpenLes={onPickPath}
               />
             </div>
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:

@@ -10,6 +10,7 @@ import { track } from "../../utils.js";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import KwartierplanSectie from "../kwartierplan/KwartierplanSectie.jsx";
 import VriendenWerven from "../referral/VriendenWerven.jsx";
+import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -61,7 +62,7 @@ function generateCode() {
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
 
-export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, embedded = false }) {
+export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onOpenLes, embedded = false }) {
   // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
   // Default open zonder gekoppeld kind, daarna in te klappen.
   const [welcomeCollapsed, setWelcomeCollapsed] = useState(() => {
@@ -131,6 +132,25 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const selectedChildVerified = children.find(
     (c) => c.child_name === selectedChild && c.verified === true
   );
+
+  // 💛 Klaargezette lessen voor het geselecteerde kind (Mark 15 aug: "laat de
+  // map óók op de ouder-pagina zien — dan kunnen ze samen de vragen bekijken
+  // en helpen"). Ouder leest z'n eigen koppeling via RLS.
+  const [klaarLijst, setKlaarLijst] = useState([]);
+  useEffect(() => {
+    const linkId = selectedChildVerified?.id;
+    if (!linkId) { setKlaarLijst([]); return; }
+    let cancel = false;
+    const laad = () => haalKlaargezetVoorLink(linkId).then((r) => { if (!cancel) setKlaarLijst(r); });
+    laad();
+    window.addEventListener(KLAARGEZET_EVENT, laad);
+    return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
+  }, [selectedChildVerified?.id]);
+  const verwijderKlaar = async (pathId) => {
+    if (!selectedChildVerified?.id) return;
+    await haalWeg(selectedChildVerified.id, pathId);
+    setKlaarLijst((prev) => prev.filter((x) => x.path_id !== pathId));
+  };
 
   // Laad scores voor geselecteerd kind — alleen bij verified link
   useEffect(() => {
@@ -553,6 +573,56 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         {children.length > 0 && (
           <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "2px 2px 8px", lineHeight: 1.5 }}>
             📩 Elke maandag krijg je per kind een weekrapport in je mail — zet 'm hierboven per kind aan of uit.
+          </div>
+        )}
+
+        {/* 💛 Klaargezet voor het geselecteerde kind (Mark 15 aug): dezelfde
+            "map" als op de pagina van het kind, nu ook hier — zo zien jullie
+            allebei de lessen en kan de ouder ze openen om mee te kijken of te
+            helpen bij een vraag. */}
+        {selectedChildVerified && klaarLijst.length > 0 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(255,105,135,0.35)", background: "rgba(255,105,135,0.07)", padding: "12px 14px", margin: "4px 0 10px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#ff9fb2", marginBottom: 8 }}>
+              💛 Klaargezet voor {selectedChild}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {klaarLijst.map((it) => (
+                <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
+                    <div style={{ fontSize: 11, color: it.gedaan ? "#69f0ae" : "rgba(255,255,255,0.45)", fontWeight: 700 }}>
+                      {it.gedaan ? "✓ je kind heeft dit gedaan" : "nog te doen"}
+                    </div>
+                  </div>
+                  {onOpenLes && (
+                    <button
+                      onClick={() => onOpenLes(it.path_id)}
+                      title="Open de les om mee te kijken of samen te maken"
+                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                    >
+                      Bekijk / help
+                    </button>
+                  )}
+                  <button
+                    onClick={() => verwijderKlaar(it.path_id)}
+                    aria-label={`Haal ${it.titel || "les"} weg`}
+                    title="Haal deze les weer weg"
+                    style={{ flexShrink: 0, background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
+            </div>
+            {onKlaarzetten && (
+              <button
+                onClick={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
+                style={{ marginTop: 8, background: "none", border: "none", color: "#ff9fb2", cursor: "pointer", fontSize: 12, fontWeight: 700, padding: 0, textDecoration: "underline" }}
+              >
+                + Meer lessen klaarzetten
+              </button>
+            )}
           </div>
         )}
 
