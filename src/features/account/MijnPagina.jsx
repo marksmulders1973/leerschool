@@ -46,6 +46,16 @@ const VAK_STATUS = {
   unmeasured: { tekst: "Nog te weinig gedaan om iets te zeggen", kleur: "#8899aa", emoji: "🌱" },
 };
 
+// Getinte kaart-achtergrond die NIET doorschijnt (Mark 15 aug 2026: "bij
+// sommige blokken komt de gekozen achtergrond door het blok, dan zie je de
+// tekst minder"). De tint ligt over een DEKKENDE kaart-bodem — anders schijnt
+// een kleurrijk gekozen thema (hartjes/regenboog/snoep) door het blok heen en
+// daalt het tekstcontrast. In de CSS-`background`-stapel mag een egale kleur
+// alléén als laatste laag, dus een losse rgba-tint zetten we eerst om in een
+// egaal gradient-vlak; een tint die al een gradient is, blijft zoals hij is.
+const kaartBg = (tint) =>
+  `${tint.includes("gradient") ? tint : `linear-gradient(0deg, ${tint}, ${tint})`}, var(--color-bg-elevated)`;
+
 // Niveau uit het profiel: basisschool ("groep7") óf middelbare school
 // ("klas1", "klas3", …). Mark 12 aug: "en voor de studenten" — de kaart
 // werkt nu voor allebei.
@@ -869,7 +879,7 @@ export default function MijnPagina({
             (toetsen klaarzetten, deelcodes, resultaten) leeft op het
             leerkracht-overzicht. Eén tik i.p.v. zoeken. ── */}
         {userRole === "teacher" && onLeerkrachtHome && (
-          <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(167,139,250,0.55)", background: "rgba(124,58,237,0.13)" }}>
+          <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(167,139,250,0.55)", background: kaartBg("rgba(124,58,237,0.13)") }}>
             <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)", marginBottom: 10 }}>
               🧑‍🏫 <strong>Jouw klas</strong> — alles wat je als leerkracht kunt, direct vanaf hier.
               <span style={{ color: "var(--color-text-muted, #8899aa)" }}> Verderop staat je eigen oefenwerk.</span>
@@ -1045,7 +1055,7 @@ export default function MijnPagina({
 
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))", border: "1px solid rgba(0,200,83,0.4)" }}>
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))"), border: "1px solid rgba(0,200,83,0.4)" }}>
               <div style={eyebrowStijl}>Vandaag</div>
               {(() => {
                 const min = Math.min(minutenVandaag(), 15);
@@ -1236,7 +1246,7 @@ export default function MijnPagina({
             {/* ── Charley's kennismaking (intake) — alleen over vakken waar
                 de app al oefenstof voor heeft. ── */}
             {beschikbareVakken.length > 0 && !intakeCompleet && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: kaartBg("rgba(255,213,79,0.05)") }}>
                 {/* Klikbare Charley (Mark 13 aug): tik op de hond of de knop
                     → de echte praat-Charley (maatje-pagina). */}
                 <div
@@ -1318,7 +1328,7 @@ export default function MijnPagina({
                 wat hij al van je weet (Mark 13 aug: "Charley verzamelt al
                 gegevens om echt een maatje te worden"). */}
             {onPraatMaatje && (intakeCompleet || beschikbareVakken.length === 0) && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.05)" }}>
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.35)", background: kaartBg("rgba(255,213,79,0.05)") }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
                   <span style={{ fontSize: 22 }} aria-hidden="true">{maatje.emoji}</span>
                   <div style={{ ...kaartTitelStijl, marginBottom: 0 }}>{maatje.naam} kent jou</div>
@@ -1357,7 +1367,7 @@ export default function MijnPagina({
                 iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
             {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" &&
               !(kiesSoort === "klas" && niveau.nr >= 6) && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: "rgba(0,200,83,0.06)" }}>
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
                 <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
                   🎒 Nieuw schooljaar!
                 </div>
@@ -1394,7 +1404,7 @@ export default function MijnPagina({
                 onClick={onBack}
                 style={{
                   width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
-                  border: "1px solid rgba(93,179,255,0.45)", background: "rgba(93,179,255,0.1)",
+                  border: "1px solid rgba(93,179,255,0.45)", background: kaartBg("rgba(93,179,255,0.1)"),
                   color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
                   marginBottom: "var(--space-4)", textAlign: "center",
                 }}
@@ -1639,7 +1649,7 @@ export default function MijnPagina({
               const pitch = TIER_PITCH[userRole];
               if (!pitch || userRole === "ouder") return null;
               return (
-                <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.3)", background: "rgba(255,213,79,0.06)" }}>
+                <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.3)", background: kaartBg("rgba(255,213,79,0.06)") }}>
                   <div style={eyebrowStijl}>Jouw pakket</div>
                   <div style={kaartTitelStijl}>
                     Nu: <span style={{ color: "#69f0ae" }}>{tierLabel}</span> — in 2026 gratis te gebruiken
@@ -1744,7 +1754,7 @@ export default function MijnPagina({
             </Card>
 
             {/* ── Ouder/juf: thuis-tip ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: "rgba(255,213,79,0.07)", border: "1px solid rgba(255,213,79,0.3)" }}>
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("rgba(255,213,79,0.07)"), border: "1px solid rgba(255,213,79,0.3)" }}>
               <div style={{ ...kaartTitelStijl, color: "#ffd54f", marginBottom: 6 }}>💡 Wat je thuis kunt doen</div>
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
             </Card>
