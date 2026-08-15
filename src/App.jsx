@@ -374,6 +374,19 @@ export default function App() {
   // Kliktocht 13 aug: de hub-terugknop ging altijd naar home, ook als je er
   // vanaf /mijn (vak-balk) kwam — context-verlies. Nu onthouden we de afzender.
   const [learnHubReturnPage, setLearnHubReturnPage] = useState("home");
+  // 💛 Klaarzet-modus (Mark 15 aug): een ouder bladert door de hub en zet
+  // lessen klaar voor een gekoppeld kind. { linkId, childName } als actief.
+  const [klaarzetVoor, setKlaarzetVoor] = useState(null);
+  const startKlaarzetten = (linkId, childName) => {
+    if (!linkId) return;
+    setKlaarzetVoor({ linkId, childName });
+    setLearnHubReturnPage(page === "ouder-dashboard" ? "ouder-dashboard" : "mijn-pagina");
+    setLearnFilterSubject(null);
+    setLearnInitialSearch("");
+    setEntryContext("leren");
+    setPage("learn-paths-hub");
+    try { track("ouder_klaarzet_modus", {}); } catch { /* */ }
+  };
   // Bug 31 jul (Mark): vak-tegel op StudentHome telt paden per PO/VO-toggle,
   // maar de Hub filterde op rol — rol "student" + PO-tegel gaf 0 paden. De
   // tegel geeft nu zijn niveau mee zodat de Hub hetzelfde filtert als de teller.
@@ -1172,8 +1185,10 @@ export default function App() {
             setActiveCurriculumId(id);
             setPage("curriculum");
           }}
-          onBack={() => { setLearnFilterSubject(null); setPage(learnHubReturnPage); setLearnHubReturnPage("home"); }}
-          onHome={() => { setLearnFilterSubject(null); goHome(); }}
+          klaarzetVoor={klaarzetVoor}
+          onKlaarzetKlaar={() => { const terug = learnHubReturnPage; setKlaarzetVoor(null); setLearnFilterSubject(null); setLearnHubReturnPage("home"); setPage(terug); }}
+          onBack={() => { setKlaarzetVoor(null); setLearnFilterSubject(null); setPage(learnHubReturnPage); setLearnHubReturnPage("home"); }}
+          onHome={() => { setKlaarzetVoor(null); setLearnFilterSubject(null); goHome(); }}
         />
       )}
       {page === "my-mastery" && (() => {
@@ -1209,6 +1224,7 @@ export default function App() {
           userRole={role}
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onKlaarzetten={startKlaarzetten}
           onUpgrade={() => setPage("pro")}
           onLogin={loginWithConsent}
           onLeerkrachtHome={() => setPage("teacher-home")}
@@ -2189,6 +2205,7 @@ export default function App() {
           onUpgrade={() => setPage("pro")}
           onLogin={loginWithConsent}
           onRondleiding={() => setPage("rondleiding")}
+          onKlaarzetten={startKlaarzetten}
         />
       )}
       {page === "rondleiding" && <RondleidingPage setPage={setPage} />}

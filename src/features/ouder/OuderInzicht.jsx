@@ -61,7 +61,7 @@ function generateCode() {
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
 
-export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, embedded = false }) {
+export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, embedded = false }) {
   // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
   // Default open zonder gekoppeld kind, daarna in te klappen.
   const [welcomeCollapsed, setWelcomeCollapsed] = useState(() => {
@@ -515,6 +515,22 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
               )}
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              {/* 💛 Klaarzet-modus (Mark 15 aug): blader door de app en zet
+                  lessen klaar voor dit kind. Alleen bij een bevestigde
+                  koppeling — anders ziet het kind het toch niet. */}
+              {onKlaarzetten && c.verified && (
+                <button
+                  onClick={e => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }}
+                  title={`Blader door de app en zet lessen klaar voor ${c.child_name}`}
+                  style={{
+                    borderRadius: 999, padding: "4px 10px", cursor: "pointer",
+                    border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)",
+                    color: "#ff9fb2", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700,
+                  }}
+                >
+                  💛 zet lessen klaar
+                </button>
+              )}
               <button
                 onClick={e => { e.stopPropagation(); toggleWeekmail(c); }}
                 aria-pressed={mailAan}

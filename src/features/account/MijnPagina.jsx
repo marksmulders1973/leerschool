@@ -15,6 +15,7 @@ import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
+import { haalKlaargezetVoorKind, markeerGedaan, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
 
@@ -208,6 +209,7 @@ export default function MijnPagina({
   onGoCito,
   onGoVoortgang,
   onOuderDashboard,
+  onKlaarzetten,
   onUpgrade,
   onLogin,
   userRole,
@@ -238,6 +240,20 @@ export default function MijnPagina({
     sync();
     window.addEventListener(LIJSTJE_EVENT, sync);
     return () => window.removeEventListener(LIJSTJE_EVENT, sync);
+  }, [player]);
+  // 💛 Voor jou klaargezet (Mark 15 aug): lessen die een ouder/verzorger via
+  // de klaarzet-modus koos, cross-device opgehaald op naam. Live bij wijziging.
+  const [thuisKlaargezet, setThuisKlaargezet] = useState([]);
+  useEffect(() => {
+    if (!player) { setThuisKlaargezet([]); return; }
+    let cancel = false;
+    const laad = async () => {
+      const r = await haalKlaargezetVoorKind(player);
+      if (!cancel) setThuisKlaargezet(r);
+    };
+    laad();
+    window.addEventListener(KLAARGEZET_EVENT, laad);
+    return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
   }, [player]);
   // 🎨 Eigen achtergrond (Mark 13 aug): thema per speler + goud-ontgrendeling.
   const [themaTeller, setThemaTeller] = useState(0);
@@ -1098,6 +1114,49 @@ export default function MijnPagina({
               })()}
             </Card>
 
+            {/* ── 💛 Voor jou klaargezet (Mark 15 aug): lessen die iemand thuis
+                via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;
+                "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
+                gezin). Alleen tonen als er echt iets klaarstaat. ── */}
+            {thuisKlaargezet.length > 0 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
+                <div style={eyebrowStijl}>Voor jou klaargezet</div>
+                <div style={kaartTitelStijl}>💛 Iemand thuis koos dit voor jou</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
+                  {thuisKlaargezet.map((it) => (
+                    <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", opacity: it.gedaan ? 0.6 : 1 }}>
+                      <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)", textDecoration: it.gedaan ? "line-through" : "none" }}>
+                          {it.titel || "Een les"}
+                        </div>
+                        {it.gedaan && <div style={{ fontSize: 11.5, color: "#69f0ae", fontWeight: 700 }}>✓ Gedaan — knap!</div>}
+                      </div>
+                      {!it.gedaan && (
+                        <button
+                          onClick={() => onPickPath && onPickPath(it.path_id)}
+                          style={{ flexShrink: 0, padding: "7px 14px", borderRadius: 9, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontWeight: 800, fontSize: 12.5, fontFamily: "var(--font-display)" }}
+                        >
+                          Start
+                        </button>
+                      )}
+                      <button
+                        onClick={() => markeerGedaan(it.id, player, !it.gedaan)}
+                        title={it.gedaan ? "Toch nog niet af? Tik om terug te zetten" : "Klaar? Tik om af te vinken"}
+                        aria-label={it.gedaan ? "Terugzetten" : "Afvinken"}
+                        style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", cursor: "pointer", border: it.gedaan ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(255,255,255,0.25)", background: it.gedaan ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.05)", color: it.gedaan ? "#69f0ae" : "var(--color-text-muted, #8899aa)", fontSize: 14, fontWeight: 800 }}
+                      >
+                        ✓
+                      </button>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 10, lineHeight: 1.45 }}>
+                  Iemand thuis vindt deze lessen leuk voor jou. Doe ze wanneer je wilt — geen haast.
+                </div>
+              </Card>
+            )}
+
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Waar je staat</div>
@@ -1606,6 +1665,7 @@ export default function MijnPagina({
                 subscription={subscription}
                 onUpgrade={onUpgrade}
                 onLogin={onLogin}
+                onKlaarzetten={onKlaarzetten}
               />
             </div>
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:

@@ -7,6 +7,7 @@ import { TEXTBOOKS } from "../../data/textbooks.js";
 import LeerpadBot from "./LeerpadBot.jsx";
 import { subjectsForQuery } from "./subjectSynonyms.js";
 import LijstjeSter from "../../shared/ui/LijstjeSter.jsx";
+import { zetKlaar, haalWeg, haalKlaargezetVoorLink } from "../../shared/ouderKlaargezet.js";
 
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
 // import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
@@ -31,6 +32,41 @@ const C = {
   warm: "#ffd54f",
   accent: "#5b86b8",
 };
+
+// 💛 Hart in de klaarzet-modus (Mark 15 aug): de ouder tikt het bij een les →
+// die komt op het kind z'n pagina te staan. In gewone modus staat hier het
+// kind z'n eigen ⭐ (LijstjeSter) — nooit allebei tegelijk, zodat niemand per
+// ongeluk de verkeerde tikt.
+function KlaarzetHart({ linkId, childName, item, aanInit }) {
+  const [aan, setAan] = useState(!!aanInit);
+  const [busy, setBusy] = useState(false);
+  useEffect(() => { setAan(!!aanInit); }, [aanInit]);
+  const toggle = async (e) => {
+    e.stopPropagation();
+    if (busy) return;
+    setBusy(true);
+    const next = !aan;
+    setAan(next); // optimistisch
+    const r = next ? await zetKlaar(linkId, item) : await haalWeg(linkId, item.id);
+    if (!r.ok) setAan(!next); // terugdraaien bij fout
+    setBusy(false);
+  };
+  return (
+    <button
+      onClick={toggle}
+      aria-pressed={aan}
+      title={aan ? `Staat klaar voor ${childName} — tik om weg te halen` : `Zet klaar voor ${childName}`}
+      style={{
+        flexShrink: 0, width: 34, height: 34, borderRadius: "50%", cursor: "pointer",
+        border: aan ? "1px solid rgba(255,105,135,0.6)" : "1px solid rgba(255,255,255,0.2)",
+        background: aan ? "rgba(255,105,135,0.18)" : "rgba(255,255,255,0.05)",
+        fontSize: 16, lineHeight: 1, opacity: busy ? 0.6 : 1,
+      }}
+    >
+      {aan ? "💛" : "🤍"}
+    </button>
+  );
+}
 
 // Per pad een gradient + accent-kleur (voor visuele herkenning)
 const PATH_THEMES = {
@@ -162,8 +198,19 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
 // (subjectsForQuery), zodat de vakken-grid-zoekbalk én de "Wat wil je
 // leren?"-zoekbalk (LeerpadBot) identiek reageren op vak-namen.
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, niveauOverride = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, niveauOverride = null, onPlayObliterator = null, initialSearch = "", onOpenTextbook = null, klaarzetVoor = null, onKlaarzetKlaar = null }) {
   const player = (userName || "Speler").trim() || "Speler";
+  // 💛 Klaarzet-modus (Mark 15 aug): actief als een ouder lessen klaarzet voor
+  // een gekoppeld kind. We laden wat al klaarstaat zodat de hartjes goed vullen.
+  const [klaarSet, setKlaarSet] = useState(() => new Set());
+  useEffect(() => {
+    if (!klaarzetVoor?.linkId) { setKlaarSet(new Set()); return; }
+    let cancel = false;
+    haalKlaargezetVoorLink(klaarzetVoor.linkId).then((rows) => {
+      if (!cancel) setKlaarSet(new Set(rows.map((r) => r.path_id)));
+    });
+    return () => { cancel = true; };
+  }, [klaarzetVoor?.linkId]);
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
   // (primair) of userLevel (fallback voor returning users zonder role-set).
@@ -792,7 +839,9 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                               </div>
                             )}
                           </div>
-                          <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />
+                          {klaarzetVoor
+                            ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                            : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                           <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                         </div>
                       </button>
@@ -968,6 +1017,37 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   return (
     <div style={pageStyle()}>
       <Header onBack={headerBack} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
+
+      {/* 💛 Klaarzet-modus-balk (Mark 15 aug): duidelijk vóór wie je nu kiest,
+          met een grote "Klaar"-knop terug naar het thuis-overzicht. */}
+      {klaarzetVoor && (
+        <div style={{
+          position: "sticky", top: 0, zIndex: 20,
+          display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap",
+          padding: "11px 16px", background: "linear-gradient(135deg, rgba(255,105,135,0.22), rgba(255,159,178,0.12))",
+          borderBottom: "1px solid rgba(255,105,135,0.4)",
+        }}>
+          <span style={{ fontSize: 20 }} aria-hidden="true">💛</span>
+          <div style={{ flex: 1, minWidth: 140 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, color: "#ffd7df" }}>
+              Je zet lessen klaar voor {klaarzetVoor.childName}
+            </div>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
+              Tik het 🤍 bij een les — dan verschijnt die op {klaarzetVoor.childName}’s pagina.
+            </div>
+          </div>
+          <button
+            onClick={() => onKlaarzetKlaar && onKlaarzetKlaar()}
+            style={{
+              flexShrink: 0, padding: "9px 18px", borderRadius: 10, border: "none", cursor: "pointer",
+              background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18",
+              fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+            }}
+          >
+            ✓ Klaar
+          </button>
+        </div>
+      )}
 
       <div style={{ padding: "16px 18px 8px" }}>
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
@@ -1519,7 +1599,9 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                                     </div>
                                   )}
                                 </div>
-                                <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />
+                                {klaarzetVoor
+                                  ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                                  : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                                 <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                               </div>
                             </button>
