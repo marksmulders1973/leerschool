@@ -453,6 +453,44 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+/* ── ⚽ Grote bal + 🥅 halve bol (Mark 16 aug) ──────────────────────────────
+   Een reuze-voetbal en een koepel (halve bal) — de bol-familie van de
+   inhoud-speeltuin (⁴⁄₃πr³ en ⅔πr³). */
+function VoetbalPatches({ r }) {
+  // een paar donkere vlakjes zodat de bol als voetbal leest
+  const pts = [[0, r, 0], [r * 0.7, r * 0.4, r * 0.4], [-r * 0.7, r * 0.4, -r * 0.4], [r * 0.4, -r * 0.5, r * 0.6], [-r * 0.5, -r * 0.4, -r * 0.6]];
+  return pts.map((p, i) => (
+    <mesh key={i} position={p}><sphereGeometry args={[r * 0.22, 8, 8]} /><meshStandardMaterial color="#2b3550" flatShading roughness={0.6} /></mesh>
+  ));
+}
+
+export function GroteBal({ position = [0, 0, 0], rotation = 0 }) {
+  const r = 1.05;
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
+      <group position={[0, 0.28 + r, 0]}>
+        <mesh castShadow><sphereGeometry args={[r, 24, 20]} /><meshStandardMaterial color="#f5f5f5" flatShading roughness={0.5} /></mesh>
+        <VoetbalPatches r={r} />
+      </group>
+    </group>
+  );
+}
+
+export function HalveBol({ position = [0, 0, 0], rotation = 0 }) {
+  const r = 1.15;
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <mesh position={[0, 0.09, 0]} receiveShadow><cylinderGeometry args={[r + 0.15, r + 0.25, 0.16, 20]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
+      {/* koepel = bovenste helft van een bol (phi 0..π/2) */}
+      <mesh position={[0, 0.17, 0]} castShadow>
+        <sphereGeometry args={[r, 24, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
+        <meshStandardMaterial color="#5b8def" flatShading roughness={0.5} side={2} />
+      </mesh>
+    </group>
+  );
+}
+
 /* ── plaatsing + interactie ────────────────────────────────────────────── */
 export default function UitvindersTaferelen({ heightRef, onTafereel, actief = true }) {
   return (

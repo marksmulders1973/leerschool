@@ -138,6 +138,30 @@ export const PARK_LEERMOMENTEN = {
     leerLabel: "Inhoud van een kegel",
     speel: "kegel-inhoud",
   },
+  bol: {
+    id: "bol",
+    emoji: "⚽",
+    titel: "De reuze-voetbal",
+    praatje:
+      "Een reuze-bal! Een bal is helemaal rond — dat heet een bol. Wil je weten hoeveel lucht erin past, de inhoud? Dat reken je uit met: vier-derde × π × straal × straal × straal. De straal telt dus drie keer mee, want een bol groeit in álle richtingen tegelijk.",
+    weetje:
+      "Een echte voetbal heeft 32 vlakken: 20 zeshoeken en 12 vijfhoeken. Diezelfde vorm gebruiken wetenschappers ook voor een piepklein bolletje van koolstof, dat ze een 'buckybal' noemen.",
+    leerpadId: "ruimtemeetkunde",
+    leerLabel: "Inhoud van een bol",
+    speel: "bol-inhoud",
+  },
+  halvebol: {
+    id: "halvebol",
+    emoji: "🥅",
+    titel: "De koepel",
+    praatje:
+      "Dit is een koepel — precies een halve bol. Snijd een bal doormidden en je houdt er twee over. De inhoud is dus de helft van een hele bol: twee-derde × π × straal × straal × straal. Handig om te weten bij een iglo, een planetarium of een stadionkoepel!",
+    weetje:
+      "De grootste koepel zonder steunpilaren in het midden staat in Singapore. Koepels zijn juist zó sterk omdat hun ronde vorm het gewicht gelijk verdeelt.",
+    leerpadId: "ruimtemeetkunde",
+    leerLabel: "Inhoud van een halve bol",
+    speel: "halvebol-inhoud",
+  },
   draaimolen: {
     id: "draaimolen",
     emoji: "🎠",
@@ -185,4 +209,6 @@ export const LEERMOMENT_BY_ASSET = {
   piramide: "piramide",
   kubus: "kubus",
   kegel: "kegel",
+  bol: "bol",
+  halvebol: "halvebol",
 };
