@@ -412,31 +412,16 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
   const steenDonker = "#b89b63";
   const s = Math.max(0.5, maat / 4.4);            // schaal: hoe hoger de maat, hoe groter (tot ~5×)
   const volume = Math.round((maat * maat * maat) / 3);
-  const knopS = { border: "none", borderRadius: 999, width: 38, height: 38, font: "800 20px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.3)", cursor: "pointer" };
-  const poortS = { border: "2px solid #ffe08a", borderRadius: 14, padding: "9px 15px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 16px rgba(46,158,79,.5)", cursor: "pointer", whiteSpace: "nowrap" };
   return (
     <group position={position} rotation={[0, rotation, 0]}>
+      {/* Alleen de zwevende maten in 3D (betrouwbaar); de +/- knoppen en de poort
+          staan in de vaste onderbalk (tik de piramide aan) — op telefoon áltijd
+          zichtbaar, i.t.t. 3D-knoppen die snel buiten beeld/afgesneden raakten. */}
       <ZwevendeMaten y={3.7 * s + 1.0} regels={[
         `📏 zijde ${maat} m · hoogte ${maat} m`,
         `V = ⅓ × grondvlak × hoogte`,
         `📦 inhoud = ${volume.toLocaleString("nl-NL")} m³`,
       ]} />
-      {(onMaat || onOefenen) && (
-        <Html position={[0, 3.7 * s + 2.15, 0]} center distanceFactor={11} zIndexRange={[9, 0]}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "center" }}>
-            {onMaat && (
-              <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                <button onClick={(e) => { e.stopPropagation(); onMaat(-1); }} title="Kleiner" style={knopS}>➖</button>
-                <span style={{ color: "#fff", fontWeight: 800, fontSize: 14, textShadow: "0 1px 4px #000", whiteSpace: "nowrap" }}>maak groter of kleiner</span>
-                <button onClick={(e) => { e.stopPropagation(); onMaat(1); }} title="Groter" style={knopS}>➕</button>
-              </div>
-            )}
-            {onOefenen && (
-              <button onClick={(e) => { e.stopPropagation(); onOefenen("ruimtemeetkunde"); }} style={poortS}>🚪 Ik wil nu inhoud berekenen oefenen →</button>
-            )}
-          </div>
-        </Html>
-      )}
       <group scale={s}>
       {/* zandplateau */}
       <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[3.0, 3.35, 0.12, 24]} /><meshStandardMaterial color={zand} flatShading roughness={1} /></mesh>

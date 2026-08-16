@@ -2022,11 +2022,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {/* 🔺 Groter/kleiner maken — voor de piramide (inhoud-vorm). De
                 zwevende maten boven het object veranderen live mee. */}
             {placedItems[selectedIdx]?.assetId === "piramide" && (
-              <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}>
-                <button onClick={() => wijzigMaat(selectedIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: 999, width: 40, height: 40, font: "800 18px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➖</button>
-                <span style={{ font: "800 13px system-ui", color: "#234" }}>grootte</span>
-                <button onClick={() => wijzigMaat(selectedIdx, +1)} title="Groter" style={{ border: "none", borderRadius: 999, width: 40, height: 40, font: "800 18px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➕</button>
-              </span>
+              <>
+                <span style={{ display: "inline-flex", gap: 8, alignItems: "center" }}>
+                  <button onClick={() => wijzigMaat(selectedIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: 999, width: 46, height: 46, font: "800 22px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➖</button>
+                  <span style={{ font: "800 13px system-ui", color: "#234" }}>grootte</span>
+                  <button onClick={() => wijzigMaat(selectedIdx, +1)} title="Groter" style={{ border: "none", borderRadius: 999, width: 46, height: 46, font: "800 22px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➕</button>
+                </span>
+                <button onClick={() => { sluitSelectie(); onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde"); }} style={{ border: "none", borderRadius: 999, padding: "11px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🚪 Inhoud berekenen oefenen →</button>
+              </>
             )}
             {/* 💡 Benoembaar object (Mark 12 jul): leg uit wat het is + hoe het
                 werkt + leerpad-link — het maatje leest het ook hardop voor. */}
