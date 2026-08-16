@@ -34,6 +34,7 @@
 
 | Wanneer | Wat | Wie |
 |---|---|---|
+| **di 18 aug** | 💡 **Examen-recency-tiering uitwerken** (Mark-idee 16 aug): 3 nieuwe authentieke 2026-examens erbij (net als de rest: inzien-PDF + bijlage + vragen/antwoorden) **én** de nieuwste 3 jaargangen (2024-26) interactief-oefenen onder Familie zetten; oefenen blijft gratis met oudere jaren + PDF-inzien blijft voor iedereen (PDF's zijn openbaar). Verdict + plan: memory `idea_studiebol_examens_recency_familie` | Claude bouwt |
 | **di 25 aug** | 🚐 **Mark kan langs een voedselbank** (eigen WhatsApp-notitie 10 aug). Kies + afspraak maken: **Alkmaar** (Teresa, rondleiding di/do-ochtend, ~1u45 rijden) óf **Rotterdam** (Amber, di+do; 50 flyers meenemen) | Mark mailt |
 | **ma 31 aug / di 1 sep** | 🏢 **KvK Utrecht — inschrijving eenmanszaak** (naar voren gehaald van okt). Afspraak online boeken + ID mee + ±€80 pin. Startdatum = 1 sep. Direct daarna: btw-id afwachten. Voorbereiding: startgids-PDF (15 aug) | Mark |
 | ~wk 17 aug | **School's cool Twente teambespreking** — zij komen zelf terug (11 aug toegezegd); niet pingen, wel opletten | — |
@@ -72,7 +73,7 @@
 
 ## ⏸️ Wachten — geen actie, alleen onthouden
 
-- Ooievaarspas Den Haag: vriend-status (getekend 21 jul).
+- Ooievaarspas Den Haag: **in behandeling bij Esther Versluis sinds 3 aug** (getekend 21/26 jul; haar enige punt — website-info — zelfde dag opgelost). Bal ligt bij haar. ⏰ **~begin sep: als 't nog stil is, vriendelijk kort check-berichtje** (niet eerder — te kort na vakantie).
 - Besturen: VB Lelystad, ThuisOnderwijsMaatjes-vrijwilligers,
   Studiezalen-teambespreking. (VB Emmen ✅ beslist 6 aug: zelf niet, wél warme
   doorverwijzing naar Leergeld Emmen — bedank-reply aan Paul + opvolg-mail

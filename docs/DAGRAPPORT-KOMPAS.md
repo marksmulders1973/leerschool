@@ -34,6 +34,9 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 
 ---
 
+## 📌 Vaste afspraken — onderaan élk dagrapport tonen
+- **Scholen & verwerkersovereenkomst (Mark 15 aug 2026):** álle scholen krijgen **exact hetzelfde** DPA-concept (geen maatwerk/onderhandeling per school). Bij benadering/onboarding sturen we altijd ónze eigen verwerkersovereenkomst mee; wil een school iets anders (eigen/zwaardere versie) → **dan doen we het gewoon niet**. Eén standaarddocument = beheersbaar; blind een school-DPA tekenen = het énige echte risico. Concept: `Desktop\dagrapport\Leerkwartier-verwerkersovereenkomst-concept-2026-08-15.pdf`.
+
 ## 📋 Vast dagrapport-format (voortaan; volgorde = belang)
 0. **🧭 Kompas** — Noord-ster (terugkerende apparaten 7d) + 1 regel gezondheid.
 1. **🏛️ Kernpijlers** — bovenste tabel, alleen wat bewoog sinds gisteren uitlichten.
@@ -62,6 +65,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 6 | Parkmaatjes account-sync (localStorage → Supabase) | 🔴 open |
 | 7 | Echte-telefoon-test park | 🔴 open (Mark-handwerk) |
 | 9 | Leerkracht-takenlijst fase 3 (échte juf laten testen) | 🔴 open (warme juf nodig) |
+| 42 | **Examen-recency-tiering** (Mark 16 aug, voor di 18 aug): nieuwste 3 jaargangen (2024-26) interactief-oefenen = Familie, oudere jaren + alle PDF-inzien = gratis; + 3 nieuwe 2026-examens. Ruwe examenblad-PDF's zijn openbaar → alleen de oefen-uitleg gaten, niet het inzien. Verdict: goed idee mét die verfijning. Memory `idea_studiebol_examens_recency_familie` | 🟡 gepland di 18 aug |
 
 **Stand: 3 volledig af (2/4/5), 3 deels (1/3/8), 3 open (6/7/9 — deels Mark/extern).**
 
