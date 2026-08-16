@@ -35,6 +35,7 @@ const ZooScene = lazy(() => import("../features/zoo/ZooScene"));
 const AITutor = lazy(() => import("../features/learn/AITutor.jsx"));
 const PiramideInhoud = lazy(() => import("./learn/PiramideInhoud.jsx"));
 const KubusInhoud = lazy(() => import("./learn/KubusInhoud.jsx"));
+const KegelInhoud = lazy(() => import("./learn/KegelInhoud.jsx"));
 
 // Vinger als aanwijzer (telefoon/tablet) → joystick tonen; met een muis (laptop/
 // desktop) niet: daar loop je met WASD/pijltjes en draai je de camera met slepen.
@@ -2373,7 +2374,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <div onClick={(e) => e.stopPropagation()} style={{ width: "min(470px, 96vw)", maxHeight: "92vh", overflowY: "auto", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "14px 14px 16px", position: "relative" }}>
             <button onClick={() => setSpeelInhoud(false)} style={{ position: "absolute", top: 10, right: 10, border: "none", borderRadius: 999, width: 30, height: 30, font: "700 15px system-ui", background: "#eee", cursor: "pointer", zIndex: 2 }}>✕</button>
             <Suspense fallback={<div style={{ padding: 30, textAlign: "center", color: "#7a6a3a", font: "600 14px system-ui" }}>Laden…</div>}>
-              {speelInhoud === "kubus-inhoud" ? <KubusInhoud /> : <PiramideInhoud />}
+              {speelInhoud === "kubus-inhoud" ? <KubusInhoud /> : speelInhoud === "kegel-inhoud" ? <KegelInhoud /> : <PiramideInhoud />}
             </Suspense>
           </div>
         </div>

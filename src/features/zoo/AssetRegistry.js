@@ -149,6 +149,9 @@ export const ZOO_ASSETS = {
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
   kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55 },
+  // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
+  // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
+  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50 },
   // 🎢 Achtbaan (Mark 2 jul, naar Roblox-voorbeeld): grote baan met lift,
   // mega-drop en station — instapbaar. Groot footprint: echt een blikvanger.
   achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, price: 150 },
@@ -231,7 +234,7 @@ export function isBlok(id) {
 // De velociraptor blijft koopbaar als intro-dino zodat de dino-plek niet leeg is.
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
-export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing", "piramide", "kubus", "achtbaanKlein", "achtbaan", "achtbaanSpiraal"];
+export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing", "piramide", "kubus", "kegel", "achtbaanKlein", "achtbaan", "achtbaanSpiraal"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_BLOKKEN = ["blokHout", "blokSteen", "blokBaksteen", "blokZand", "blokGras", "blokSneeuw", "blokGlas", "blokDak", "blokGoud", "blokDiamant"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];

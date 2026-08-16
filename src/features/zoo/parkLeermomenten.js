@@ -126,6 +126,18 @@ export const PARK_LEERMOMENTEN = {
     leerLabel2: "Meer ruimtemeetkunde",
     speel: "kubus-inhoud",
   },
+  kegel: {
+    id: "kegel",
+    emoji: "🍦",
+    titel: "Het reuze-ijsje",
+    praatje:
+      "Kijk, een reuze-ijsje! Het hoorntje eronder is een kegel. Wil je weten hoeveel ijs erin past — de inhoud? Dat reken je uit met: een derde × π × straal × straal × hoogte. Grappig genoeg is een kegel precies een derde van een blikje (cilinder) met dezelfde bodem en hoogte.",
+    weetje:
+      "π (pi) is ongeveer 3,14 — een getal dat je bij álles met rondingen nodig hebt: van een ijshoorntje tot een pizza tot een reuzenrad. Het is een van de beroemdste getallen uit de wiskunde.",
+    leerpadId: "ruimtemeetkunde",
+    leerLabel: "Inhoud van een kegel",
+    speel: "kegel-inhoud",
+  },
   draaimolen: {
     id: "draaimolen",
     emoji: "🎠",
@@ -172,4 +184,5 @@ export const LEERMOMENT_BY_ASSET = {
   fountain: "fontein",
   piramide: "piramide",
   kubus: "kubus",
+  kegel: "kegel",
 };

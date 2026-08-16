@@ -16,7 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus } from "./UitvindersKabouters";
+import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje } from "./UitvindersKabouters";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps } from "./blokTextures";
@@ -350,6 +350,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;

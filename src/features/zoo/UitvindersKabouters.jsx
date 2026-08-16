@@ -433,6 +433,26 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+/* ── 🍦 Reuze-ijsje / kegel (Mark 16 aug) ──────────────────────────────────
+   Een vrolijk reuze-ijsje: een waffel-kegel met twee bollen en een kers. Leidt
+   naar de inhoud van een kegel (⅓·π·r²·h). */
+export function KegelIjsje({ position = [0, 0, 0], rotation = 0 }) {
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* houder */}
+      <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[0.34, 0.44, 0.28, 12]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.85} /></mesh>
+      {/* waffel-kegel (punt omlaag) */}
+      <mesh position={[0, 1.0, 0]} rotation={[Math.PI, 0, 0]} castShadow><coneGeometry args={[0.6, 1.5, 18]} /><meshStandardMaterial color="#d9a55a" flatShading roughness={0.9} /></mesh>
+      {/* bollen ijs */}
+      <mesh position={[0, 1.85, 0]} castShadow><sphereGeometry args={[0.62, 16, 14]} /><meshStandardMaterial color="#f7b7c8" flatShading roughness={0.6} /></mesh>
+      <mesh position={[0, 2.45, 0]} castShadow><sphereGeometry args={[0.5, 16, 14]} /><meshStandardMaterial color="#b7e4c7" flatShading roughness={0.6} /></mesh>
+      {/* kers */}
+      <mesh position={[0, 2.95, 0]} castShadow><sphereGeometry args={[0.16, 10, 10]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.4} /></mesh>
+      <mesh position={[0.02, 3.12, 0]} rotation={[0, 0, 0.3]}><cylinderGeometry args={[0.02, 0.02, 0.22, 5]} /><meshStandardMaterial color="#5a8a3a" flatShading /></mesh>
+    </group>
+  );
+}
+
 /* ── plaatsing + interactie ────────────────────────────────────────────── */
 export default function UitvindersTaferelen({ heightRef, onTafereel, actief = true }) {
   return (
