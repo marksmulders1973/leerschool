@@ -406,6 +406,33 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+/* ── 🧊 Rubik-kubus kunstwerk (Mark 16 aug) ────────────────────────────────
+   Kleurrijke 3×3×3-kubus, licht gekanteld op een sokkel — een blikvanger die
+   naar de inhoud van een kubus (ribbe³) leidt. */
+export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
+  const kleuren = ["#e23b32", "#2e9e4f", "#2e5fc0", "#f5f5f5", "#ff8a1e", "#f2d024"];
+  const s = 0.42, gap = 0.46;
+  const cubes = [];
+  for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++) {
+    cubes.push([x, y, z, kleuren[(x + 2 * y + z + 12) % 6]]);
+  }
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* sokkel */}
+      <mesh position={[0, 0.09, 0]} castShadow receiveShadow><cylinderGeometry args={[0.72, 0.82, 0.18, 6]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.2, 0]}><cylinderGeometry args={[0.6, 0.66, 0.06, 6]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
+      {/* gekantelde Rubik-kubus als kunstwerk */}
+      <group position={[0, 1.2, 0]} rotation={[0.5, 0.7, 0.18]}>
+        {cubes.map(([x, y, z, c], i) => (
+          <mesh key={i} position={[x * gap, y * gap, z * gap]} castShadow>
+            <boxGeometry args={[s, s, s]} /><meshStandardMaterial color={c} flatShading roughness={0.45} metalness={0.05} />
+          </mesh>
+        ))}
+      </group>
+    </group>
+  );
+}
+
 /* ── plaatsing + interactie ────────────────────────────────────────────── */
 export default function UitvindersTaferelen({ heightRef, onTafereel, actief = true }) {
   return (

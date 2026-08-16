@@ -112,6 +112,20 @@ export const PARK_LEERMOMENTEN = {
     leerLabel2: "Stelling van Pythagoras",
     speel: "piramide-inhoud",
   },
+  kubus: {
+    id: "kubus",
+    emoji: "🧊",
+    titel: "De Rubik-kubus",
+    praatje:
+      "Dit kunstwerk is één grote kubus, net als een Rubik's kubus. Bij een kubus zijn álle ribben even lang. Wil je weten hoeveel er in past — de inhoud? Tel de kleine blokjes: dat is ribbe keer ribbe keer ribbe. Bij een kubus van 3 zijn dat 3 × 3 × 3 = 27 blokjes.",
+    weetje:
+      "De Rubik's kubus werd in 1974 bedacht door de Hongaar Ernő Rubik. Er zijn meer dan 43 triljoen (43 met 18 nullen!) manieren om hem te draaien, en tóch kun je hem altijd in 20 zetten of minder oplossen.",
+    leerpadId: "meetkunde-bouwsels",
+    leerLabel: "Inhoud van een kubus",
+    leerpadId2: "ruimtemeetkunde",
+    leerLabel2: "Meer ruimtemeetkunde",
+    speel: "kubus-inhoud",
+  },
   draaimolen: {
     id: "draaimolen",
     emoji: "🎠",
@@ -157,4 +171,5 @@ export const LEERMOMENT_BY_ASSET = {
   swing: "zweefmolen",
   fountain: "fontein",
   piramide: "piramide",
+  kubus: "kubus",
 };
