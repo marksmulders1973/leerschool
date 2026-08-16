@@ -503,8 +503,9 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
 // geven het gazon diepte/leven zonder de blok-wereld te overladen. Deterministisch
 // verstrooid (~40% van de gras-vakjes, 1 polletje elk), alléén op laag, onbeschilderd
 // gras. Uit op zwakke toestellen (LOW_END) en 1 instanced draw-call.
-const SPRIET_GEO = new PlaneGeometry(1.5, 0.9);
-SPRIET_GEO.translate(0, 0.45, 0); // pivot onderaan → staat óp de grond
+// NB: geometrie/materiaal als r3f-children (niet via `args`), anders ruimt r3f
+// ze bij het verlaten van het park op → crash bij terugkomst (park-fix 16 aug).
+const SPRIET_H = 0.9; // hoogte van het graspolletje (plane staat rechtop, midden op pivot)
 function GrasSprieten({ field, ground = {} }) {
   const ref = useRef();
   const tex = useMemo(() => grasSprietTex(), []);
@@ -534,7 +535,8 @@ function GrasSprieten({ field, ground = {} }) {
     if (!m) return;
     const d = new Object3D();
     pollen.forEach(([x, y, z, rot, sc], n) => {
-      d.position.set(x, y, z);
+      // plane is gecentreerd → onderkant op de grond = midden op y + halve hoogte
+      d.position.set(x, y + (SPRIET_H * sc) / 2, z);
       d.rotation.set(0, rot, 0);
       d.scale.set(sc, sc, sc);
       d.updateMatrix();
@@ -546,7 +548,8 @@ function GrasSprieten({ field, ground = {} }) {
   }, [pollen]);
   if (!pollen.length) return null;
   return (
-    <instancedMesh ref={ref} args={[SPRIET_GEO, undefined, pollen.length]} frustumCulled={false}>
+    <instancedMesh ref={ref} args={[undefined, undefined, pollen.length]} frustumCulled={false}>
+      <planeGeometry args={[1.5, SPRIET_H]} />
       <meshStandardMaterial map={tex} transparent alphaTest={0.5} side={DoubleSide} roughness={1} metalness={0} />
     </instancedMesh>
   );
