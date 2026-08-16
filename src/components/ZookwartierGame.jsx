@@ -1687,6 +1687,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onTafereel={openTafereel}
           onLeermoment={openLeermoment}
           onGidsMoment={onGidsMoment}
+          onMaat={wijzigMaat}
+          onOefenen={(pid) => onOpenLeerpad && onOpenLeerpad(pid)}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}

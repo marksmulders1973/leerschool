@@ -320,7 +320,7 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 // React.memo (review 17 jul): ZookwartierGame heeft ~50 useState; elke HUD-tik
 // re-renderde anders álle geplaatste items mee. Props zijn primitief/stabiel
 // (behalve kraam bij de 4 kraampjes — acceptabel).
-const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false, maat }) {
+const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false, maat, onMaat, onOefenen }) {
   const a = getAsset(assetId);
   if (!a) return null;
   // Rails/hekpanelen/padtegels zitten visueel in GeinstanceerdeParkProps
@@ -348,7 +348,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
   if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} maat={maat ?? 8} />;
+  if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} maat={maat ?? 8} onMaat={onMaat} onOefenen={onOefenen} />;
   if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} />;
@@ -665,7 +665,7 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
   return null;
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost }) {
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1051,6 +1051,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               <Suspense fallback={null}>
                 <PlacedItem
                   assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0} maat={it.maat}
+                  onMaat={it.assetId === "piramide" && onMaat ? (d) => onMaat(idx, d) : undefined}
+                  onOefenen={it.assetId === "piramide" ? onOefenen : undefined}
                   rideRef={idx === rideIdx ? attractieZitje : undefined}
                   colors={it.colors} colorEditable={colorEditIdx === idx}
                   // Alleen doorgeven bij het item dat écht bewerkt wordt — een
