@@ -167,16 +167,28 @@ export function defaultState() {
 // uitkomst maakt expliciet onderscheid: { row, loadError }.
 //   - row=null + loadError=false → écht een nieuw kind, starter-park mag.
 //   - loadError=true             → NIETS initialiseren of wegschrijven.
-export async function loadZooState(userId) {
+export async function loadZooState(userId, profiel = "") {
   if (!userId) return { row: null, loadError: false };
+  const p = (profiel || "").trim();
   for (let poging = 0; poging < 3; poging++) {
     try {
       const { data, error } = await supabase
         .from("zoo_state")
         .select("coins, streak, last_login, last_kwartier_date, layout, owned, terrain")
         .eq("user_id", userId)
+        .eq("profiel", p)
         .maybeSingle();
-      if (!error) return { row: data || null, loadError: false };
+      if (!error) {
+        if (data) return { row: data, loadError: false };
+        // Nog geen eigen park voor dit profiel. Eén account = meerdere kinderen
+        // (naam-wissel op /mijn). Het éérste genoemde kind erft het bestaande
+        // (lege-profiel) park, zodat een zelfgebouwd park niet verweest raakt.
+        if (p !== "") {
+          const geadopteerd = await adopteerLegacyPark(userId, p);
+          if (geadopteerd) return { row: geadopteerd, loadError: false };
+        }
+        return { row: null, loadError: false };
+      }
       console.warn(`[zoo] laden mislukt (poging ${poging + 1}):`, error.message);
     } catch (e) {
       console.warn(`[zoo] laden exception (poging ${poging + 1}):`, e?.message);
@@ -186,6 +198,32 @@ export async function loadZooState(userId) {
   return { row: null, loadError: true };
 }
 
+// Het lege-profiel-park (van vóór "eigen park per kind") toewijzen aan het
+// éérste genoemde kind dat het opent — maar alléén als er nog geen ander genoemd
+// park onder dit account bestaat (anders is het lege-profiel het gedeelde/ouder-
+// park en krijgt dit kind een vers park). Niet-destructief: het park verhuist
+// alleen van naam, er gaat niets verloren.
+async function adopteerLegacyPark(userId, p) {
+  try {
+    const { data: rows, error } = await supabase
+      .from("zoo_state")
+      .select("profiel, coins, streak, last_login, last_kwartier_date, layout, owned, terrain")
+      .eq("user_id", userId);
+    if (error || !Array.isArray(rows)) return null;
+    const legacy = rows.find((r) => (r.profiel || "") === "");
+    const genoemdParkBestaat = rows.some((r) => r.profiel && r.profiel.trim() !== "");
+    if (!legacy || genoemdParkBestaat) return null;
+    const { error: upErr } = await supabase
+      .from("zoo_state").update({ profiel: p }).eq("user_id", userId).eq("profiel", "");
+    if (upErr) { console.warn("[zoo] adoptie mislukt:", upErr.message); return null; }
+    const { profiel: _p, ...parkData } = legacy;
+    return parkData;
+  } catch (e) {
+    console.warn("[zoo] adoptie exception:", e?.message);
+    return null;
+  }
+}
+
 // Onraadbare deel-code (8 tekens). Per park, zodat je je park read-only kunt
 // delen via een link. Geen PII in de code.
 function randomShareCode() {
@@ -193,13 +231,14 @@ function randomShareCode() {
 }
 
 // Haalt de deel-code van dit park op; maakt er een aan als die er nog niet is.
-export async function getShareCode(userId) {
+export async function getShareCode(userId, profiel = "") {
   if (!userId) return null;
+  const p = (profiel || "").trim();
   try {
-    let { data } = await supabase.from("zoo_state").select("share_code").eq("user_id", userId).maybeSingle();
+    let { data } = await supabase.from("zoo_state").select("share_code").eq("user_id", userId).eq("profiel", p).maybeSingle();
     if (data?.share_code) return data.share_code;
     const code = randomShareCode();
-    const { error } = await supabase.from("zoo_state").upsert({ user_id: userId, share_code: code }, { onConflict: "user_id" });
+    const { error } = await supabase.from("zoo_state").upsert({ user_id: userId, profiel: p, share_code: code }, { onConflict: "user_id,profiel" });
     if (error) { console.warn("[zoo] deel-code maken mislukt:", error.message); return null; }
     return code;
   } catch (e) {
@@ -223,12 +262,14 @@ export async function loadSharedPark(code) {
   }
 }
 
-// Schrijft de (gedeeltelijke) staat weg. Upsert op user_id.
-export async function saveZooState(userId, patch) {
+// Schrijft de (gedeeltelijke) staat weg. Upsert op (user_id, profiel), zodat
+// elk kind (naam-wissel op /mijn) zijn eigen park heeft onder dezelfde login.
+export async function saveZooState(userId, profiel, patch) {
   if (!userId) return;
+  const p = (profiel || "").trim();
   try {
-    const row = { user_id: userId, ...patch, updated_at: new Date().toISOString() };
-    const { error } = await supabase.from("zoo_state").upsert(row, { onConflict: "user_id" });
+    const row = { user_id: userId, profiel: p, ...patch, updated_at: new Date().toISOString() };
+    const { error } = await supabase.from("zoo_state").upsert(row, { onConflict: "user_id,profiel" });
     if (error) console.warn("[zoo] opslaan mislukt:", error.message);
   } catch (e) {
     console.warn("[zoo] opslaan exception:", e?.message);

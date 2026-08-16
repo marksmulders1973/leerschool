@@ -620,7 +620,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   useEffect(() => {
     let cancel = false;
     (async () => {
-      const { row, loadError } = await loadZooState(userId);
+      const { row, loadError } = await loadZooState(userId, naam);
       if (cancel) return;
       // Bug-jacht 7/7 (HOOG): bij een laad-fout NIET doorgaan — anders zou een
       // bestaand park met het starter-park overschreven worden (autosave blijft
@@ -689,7 +689,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       // wijziging schreef eerder onnodig én kon de debounced autosave van de eerste
       // ~2s aan acties overschrijven (dataverlies-race). (bug-jacht 2026-07-31)
       if (userId && (isNieuweDag || gained > 0 || weggelopen > 0)) {
-        saveZooState(userId, { ...finalMeta, layout: finalLayout });
+        saveZooState(userId, naam, { ...finalMeta, layout: finalLayout });
       }
     })();
     return () => { cancel = true; clearTimeout(rewardTimer.current); clearTimeout(meldingTimer.current); };
@@ -702,7 +702,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const pendingSaveRef = useRef(null);
   useEffect(() => {
     if (!loaded || !userId || !meta) return;
-    const bewaar = () => { pendingSaveRef.current = null; saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }); };
+    const bewaar = () => { pendingSaveRef.current = null; saveZooState(userId, naam, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }); };
     pendingSaveRef.current = bewaar;
     const t = setTimeout(bewaar, 2000);
     return () => clearTimeout(t);
@@ -1119,7 +1119,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setPanel("delen");
     setShareCopied(false);
     if (!shareUrl && userId) {
-      const code = await getShareCode(userId);
+      const code = await getShareCode(userId, naam);
       if (code) setShareUrl(`${window.location.origin}/dierentuin?bezoek=${code}`);
     }
   };
@@ -1138,7 +1138,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     setPlacedItems(STARTER_LAYOUT);
     setTerrain(null);
     setMeta((m) => (m ? { ...m, owned: schoonOwned } : m));
-    if (userId && meta) saveZooState(userId, { ...meta, owned: schoonOwned, layout: STARTER_LAYOUT, terrain: null });
+    if (userId && meta) saveZooState(userId, naam, { ...meta, owned: schoonOwned, layout: STARTER_LAYOUT, terrain: null });
     setPanel(null);
     flits("Je park staat weer op het begin ✓");
   };
@@ -1183,7 +1183,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // Handmatig opslaan (naast het automatische opslaan).
   const opslaan = async () => {
     if (!userId || !meta) { flits("Nog niet ingelogd — opslaan lukt zo niet"); return; }
-    await saveZooState(userId, { ...meta, layout: placedItems, terrain: serTerrain(terrain) });
+    await saveZooState(userId, naam, { ...meta, layout: placedItems, terrain: serTerrain(terrain) });
     flits("Park opgeslagen ✓");
   };
 
