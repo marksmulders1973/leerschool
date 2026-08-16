@@ -36,10 +36,16 @@ const STEDEN = [
 const FIGUREN = [
   { key: "erasmus", titel: "Desiderius Erasmus", label: "Erasmus" },
   { key: "willem-van-oranje", titel: "Willem van Oranje", label: "Willem van Oranje" },
-  { key: "hugo-de-groot", titel: "Hugo de Groot", label: "Hugo de Groot" },
   { key: "rembrandt", titel: "Rembrandt van Rijn", label: "Rembrandt" },
   { key: "michiel-de-ruyter", titel: "Michiel de Ruyter", label: "Michiel de Ruyter" },
   { key: "vincent-van-gogh", titel: "Vincent van Gogh", label: "Vincent van Gogh" },
+  // Uitbreiding 16 aug: Cito-relevante figuren, allemaal Publiek domein
+  // (portret >100 jaar oud). Titels geverifieerd op een bruikbare Wikimedia-foto.
+  { key: "thorbecke", titel: "Johan Rudolph Thorbecke", label: "Thorbecke" },
+  { key: "aletta-jacobs", titel: "Aletta Jacobs", label: "Aletta Jacobs" },
+  { key: "christiaan-huygens", titel: "Christiaan Huygens", label: "Christiaan Huygens" },
+  { key: "leeuwenhoek", titel: "Antonie van Leeuwenhoek", label: "Antonie van Leeuwenhoek" },
+  { key: "willem-barentsz", titel: "Willem Barentsz", label: "Willem Barentsz" },
 ];
 
 const UA = { headers: { "User-Agent": "Leerkwartier-app/1.0 (leerkwartier.app; educatief, non-profit)" } };
@@ -88,22 +94,35 @@ async function haal(items, soort) {
     const file = `${soort}-${it.key}.jpg`;
     writeFileSync(join(fotoDir, file), buf);
     const { lic, artiest } = bestand ? await licentie(bestand) : { lic: "", artiest: "" };
-    const credit = [artiest, lic, "via Wikimedia Commons"].filter(Boolean).join(" · ");
+    const licNL = lic.replace(/^public domain$/i, "Publiek domein");
+    const credit = [artiest, licNL, "via Wikimedia Commons"].filter(Boolean).join(" · ");
     uit.push({ key: it.label, src: `/fotos/${file}`, credit, bestand: bestand || "" });
     console.log(`✅ ${it.label} — ${Math.round(buf.length / 1024)} kB — ${lic || "licentie onbekend"}`);
   }
   return uit;
 }
 
+// Bestaande data inlezen zodat een tijdelijke netwerkfout nooit een reeds
+// werkende foto uit de lijst gooit (nieuwe fetch overschrijft, oude vult gaten).
+let oudSteden = {}, oudFiguren = {};
+try {
+  const oud = await import(`file://${join(root, "src", "data", "fotoData.js").replace(/\\/g, "/")}?t=${Date.now()}`);
+  oudSteden = oud.STAD_FOTOS || {};
+  oudFiguren = oud.FIGUUR_FOTOS || {};
+} catch { /* eerste run: nog geen bestand */ }
+
 const steden = await haal(STEDEN, "stad");
 const figuren = await haal(FIGUREN, "figuur");
+
+const stedenMap = { ...oudSteden, ...Object.fromEntries(steden.map((s) => [s.key, { src: s.src, credit: s.credit }])) };
+const figurenMap = { ...oudFiguren, ...Object.fromEntries(figuren.map((s) => [s.key, { src: s.src, credit: s.credit }])) };
 
 const mod = `// AUTO-GEGENEREERD door scripts/haal-topo-fotos.mjs — niet handmatig bewerken.
 // Foto's van Wikimedia Commons; credit-veld = maker · licentie (bronvermelding
 // tonen waar de foto staat). Regenereer met: node scripts/haal-topo-fotos.mjs
-export const STAD_FOTOS = ${JSON.stringify(Object.fromEntries(steden.map((s) => [s.key, { src: s.src, credit: s.credit }])), null, 2)};
+export const STAD_FOTOS = ${JSON.stringify(stedenMap, null, 2)};
 
-export const FIGUUR_FOTOS = ${JSON.stringify(Object.fromEntries(figuren.map((s) => [s.key, { src: s.src, credit: s.credit }])), null, 2)};
+export const FIGUUR_FOTOS = ${JSON.stringify(figurenMap, null, 2)};
 `;
 writeFileSync(join(root, "src", "data", "fotoData.js"), mod);
-console.log(`\n📄 src/data/fotoData.js — ${steden.length} steden + ${figuren.length} figuren`);
+console.log(`\n📄 src/data/fotoData.js — ${Object.keys(stedenMap).length} steden + ${Object.keys(figurenMap).length} figuren (nieuw opgehaald: ${steden.length}+${figuren.length})`);

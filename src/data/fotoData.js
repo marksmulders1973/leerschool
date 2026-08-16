@@ -20,15 +20,15 @@ export const STAD_FOTOS = {
   },
   "Lelystad": {
     "src": "/fotos/stad-lelystad.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Milliped · CC BY-SA 4.0 · via Wikimedia Commons"
   },
   "Arnhem": {
     "src": "/fotos/stad-arnhem.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Zairon · CC BY-SA 4.0 · via Wikimedia Commons"
   },
   "Utrecht": {
     "src": "/fotos/stad-utrecht.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Sebastiaan ter Burg from Utrecht, The Netherlands · CC BY 2.0 · via Wikimedia Commons"
   },
   "Haarlem": {
     "src": "/fotos/stad-haarlem.jpg",
@@ -55,22 +55,34 @@ export const STAD_FOTOS = {
 export const FIGUUR_FOTOS = {
   "Erasmus": {
     "src": "/fotos/figuur-erasmus.jpg",
-    "credit": "Hans Holbein the Younger · Public domain · via Wikimedia Commons"
+    "credit": "Hans Holbein the Younger · Publiek domein · via Wikimedia Commons"
   },
   "Willem van Oranje": {
     "src": "/fotos/figuur-willem-van-oranje.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Adriaen Thomasz. Key · Publiek domein · via Wikimedia Commons"
   },
   "Rembrandt": {
     "src": "/fotos/figuur-rembrandt.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Rembrandt · Publiek domein · via Wikimedia Commons"
   },
   "Michiel de Ruyter": {
     "src": "/fotos/figuur-michiel-de-ruyter.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Ferdinand Bol · Publiek domein · via Wikimedia Commons"
   },
   "Vincent van Gogh": {
     "src": "/fotos/figuur-vincent-van-gogh.jpg",
-    "credit": "Wikimedia Commons (vrije licentie)"
+    "credit": "Vincent van Gogh · Publiek domein · via Wikimedia Commons"
+  },
+  "Thorbecke": {
+    "src": "/fotos/figuur-thorbecke.jpg",
+    "credit": "Johan Heinrich Neuman · Publiek domein · via Wikimedia Commons"
+  },
+  "Aletta Jacobs": {
+    "src": "/fotos/figuur-aletta-jacobs.jpg",
+    "credit": "Max Büttinghausen / Adam Cuerden · Publiek domein · via Wikimedia Commons"
+  },
+  "Willem Barentsz": {
+    "src": "/fotos/figuur-willem-barentsz.jpg",
+    "credit": "Unidentified engraver · Publiek domein · via Wikimedia Commons"
   }
 };
