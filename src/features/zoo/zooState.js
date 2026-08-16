@@ -95,9 +95,23 @@ function bouwVoorbeeldPark() {
   // ── GROEN & DECOR: bomenlaan langs het hoofdpad + bloemen + rotsen ──
   for (let z = -10; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }
   add("struik", -4, 8); add("struik", 4, 8); add("struik", -4, -8); add("struik", 4, -8);
-  add("kei", -19, 0); add("kei", 19, 0);
+  add("kei", 19, 0); add("kei", -27, -6);
   add("mushroom", -18, -18); add("mushroom", 18, -18);
   add("grasplukje", -2, -10); add("grasplukje", 2, -10);
+
+  // ── 📐 WISKUNDE-PLEINTJE (Mark 16 aug 2026): de vijf inhoud-vormen — gratis
+  //    voor iedereen, meteen in het begin-park. Park = vermaak + verwondering +
+  //    leren: tik erop en je maatje vertelt over de inhoud (en je kunt met de
+  //    schuif spelen). Eigen plein op de open linkerflank, met een pad door de
+  //    opening tussen de twee linker-verblijven naar het hoofdpad. ──
+  vlak("pathStone", -26, -19, -4, 4);            // het plein
+  rij("pathStone", 0, -18, -10);                 // pad naar het hoofdpad (gat tussen de linker-verblijven)
+  add("piramide", -24, -3);
+  add("kubus", -24, 0);
+  add("kegel", -24, 3);
+  add("bol", -21, -2);
+  add("halvebol", -21, 2);
+  add("flowerPurple", -26, -4); add("flowerYellow", -26, 4);
 
   return L;
 }
