@@ -14,6 +14,7 @@ import { EXAMEN_VRAGEN_TELLING } from "../data/examenQuizzes/speelbaarTelling.js
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { countExamenMixVragen } from "../features/practice/buildExamenMix.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
+import HubSter from "../shared/ui/HubSter.jsx";
 
 // Examens-pagina (Mark idee 2026-05-08, herzien 2026-05-11, samengevoegd 2026-05-16):
 // ÉÉN GECOMBINEERDE VIEW per vak — Mark wens "wat je kunt: echte examens
@@ -232,6 +233,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
             🎓 Eindexamens VMBO GL/TL — twee manieren om te leren
             {/* beide modi = gratis leer-basis; concurrenten rekenen hier juist geld voor */}
             <GratisBadge />
+            <HubSter id="hub:examens" titel="Examens oefenen" emoji="🎓" page="examens" />
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 8 }}>
             {/* Mark UX 2026-05-18: beide modi nu klikbare knoppen die naar

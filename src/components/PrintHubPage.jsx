@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
+import HubSter from "../shared/ui/HubSter.jsx";
 
 // ── Laag 1: gratis, blijft gratis ─────────────────────────────────────
 const GRATIS = [
@@ -133,9 +134,12 @@ export default function PrintHubPage({ setPage } = {}) {
         <span style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>· naar home</span>
       </button>
 
-      <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
-        🖨️ Alles wat je kunt printen
-      </h1>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", margin: "0 0 8px" }}>
+        <h1 style={{ fontSize: 26, margin: 0, color: "var(--color-text, #e8edf5)" }}>
+          🖨️ Alles wat je kunt printen
+        </h1>
+        <HubSter id="hub:printen" titel="Printbaar oefenen" emoji="🖨️" page="printen" />
+      </div>
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 22px", lineHeight: 1.55 }}>
         Soms werkt papier gewoon beter: geen scherm, net als op school, en jij kijkt
         samen na. Elke pagina print je thuis — of bewaar je als <strong style={{ color: "var(--color-text, #e8edf5)" }}>PDF</strong>{" "}

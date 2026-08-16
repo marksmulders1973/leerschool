@@ -1231,6 +1231,7 @@ export default function App() {
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
           onPraatMaatje={() => setPage("maatje")}
+          onOpenHub={(p) => setPage(p)}
           onSetRole={(nieuweRol) => {
             // Rol wisselen op Mijn pagina (Mark 13 aug: "ook kunnen wisselen
             // naar leraar of ouder, niet alleen van naam"). Zelfde pad als

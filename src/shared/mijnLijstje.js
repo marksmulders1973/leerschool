@@ -33,7 +33,12 @@ function bewaar(speler, lijst) {
   try { window.dispatchEvent(new CustomEvent(LIJSTJE_EVENT)); } catch { /* */ }
 }
 
-/** Ster aan/uit. item = { id, titel, emoji? }. Geeft { ok, vol, opgeslagen } terug. */
+/**
+ * Ster aan/uit. item = { id, titel, emoji?, page? }. Geeft { ok, vol, opgeslagen } terug.
+ * `page` (optioneel) = een pagina-sleutel voor een hele hub (bv. "printen",
+ * "examens"); zo kun je niet alleen losse leerpaden maar ook complete hubs op je
+ * persoonlijke pagina zetten (Mark 16 aug). Zonder `page` = een gewoon leerpad.
+ */
 export function toggleLijstje(speler, item) {
   const lijst = leesLijstje(speler);
   const staatErop = lijst.some((i) => i.id === item.id);
@@ -45,7 +50,9 @@ export function toggleLijstje(speler, item) {
   if (lijst.length >= LIJSTJE_MAX) {
     return { ok: false, vol: true, opgeslagen: false };
   }
-  bewaar(speler, [{ id: item.id, titel: item.titel, emoji: item.emoji || "📘" }, ...lijst]);
-  try { track("lijstje_ster", { actie: "op", pad: item.id }); } catch { /* */ }
+  const nieuw = { id: item.id, titel: item.titel, emoji: item.emoji || "📘" };
+  if (item.page) nieuw.page = item.page;
+  bewaar(speler, [nieuw, ...lijst]);
+  try { track("lijstje_ster", { actie: "op", pad: item.id, soort: item.page ? "hub" : "pad" }); } catch { /* */ }
   return { ok: true, vol: false, opgeslagen: true };
 }

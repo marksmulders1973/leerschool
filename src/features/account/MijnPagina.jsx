@@ -220,6 +220,7 @@ export default function MijnPagina({
   onSetLevel,
   onSetRole,
   onPraatMaatje,
+  onOpenHub,
   onBack,
   onHome,
 }) {
@@ -1491,7 +1492,7 @@ export default function MijnPagina({
               <div style={kaartTitelStijl}>⭐ Mijn lijstje</div>
               {lijstje.length === 0 ? (
                 <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                  Zie je bij het bladeren een les die je later wilt doen? Tik op de ⭐ en hij komt hier te staan — net als een foto bij je favorieten.
+                  Zie je bij het bladeren een les — of een hele hoek zoals de printhoek of de examens — die je later wilt doen? Tik op de ⭐ en hij komt hier te staan, net als een foto bij je favorieten.
                 </div>
               ) : (
                 lijstje.map((it) => (
@@ -1499,10 +1500,15 @@ export default function MijnPagina({
                     <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                     <div style={{ flex: 1, minWidth: 0, fontWeight: 700, fontSize: 13.5, color: "var(--color-text-strong)" }}>{it.titel}</div>
                     <button
-                      onClick={() => onPickPath && onPickPath(it.id)}
+                      onClick={() => {
+                        // Een hub (page-sleutel) opent de hele hub; een gewoon
+                        // item opent het leerpad. (Mark 16 aug: hubs op je pagina.)
+                        if (it.page) { onOpenHub && onOpenHub(it.page); return; }
+                        onPickPath && onPickPath(it.id);
+                      }}
                       style={{ flexShrink: 0, padding: "8px 14px", borderRadius: 9, border: "none", cursor: "pointer", background: "rgba(255,213,79,0.18)", color: "#ffd54f", fontWeight: 800, fontSize: 12.5, fontFamily: "var(--font-display)" }}
                     >
-                      Start
+                      {it.page ? "Open" : "Start"}
                     </button>
                     <button
                       onClick={() => toggleLijstje(player, it)}
