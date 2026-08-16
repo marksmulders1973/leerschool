@@ -121,6 +121,43 @@ function glas() {
 function grijsRuis(shades, seed) {
   return mkTex((c) => noiseFill(c, shades, 16, seed));
 }
+// Terrein-bovenkant: iets meer contrast + een paar donkere sprietjes/vlekjes,
+// zodat gras (na multiply met groen) blad-korrel krijgt i.p.v. plastic-vlak.
+// Blijft grijswaarde/generiek → zand/steen/sneeuw houden hun eigen kleur.
+function terreinTopMap() {
+  return mkTex((c) => {
+    noiseFill(c, ["#ffffff", "#f0f0f0", "#e6e6e6", "#f8f8f8", "#ededed", "#dedede"], 16, 61);
+    const r = { s: 71 };
+    for (let i = 0; i < 14; i++) {
+      c.fillStyle = ["#cfcfcf", "#d6d6d6"][(rnd(r) * 2) | 0];
+      c.fillRect((rnd(r) * 16) | 0, (rnd(r) * 16) | 0, 1, 1 + ((rnd(r) * 2) | 0));
+    }
+  });
+}
+// 🌿 Pixel-grasspriet (transparante achtergrond, alphaTest): een paar dunne
+// halmpjes, donker bij de wortel → lichter aan de top. NearestFilter houdt 'm
+// scherp-pixelig, in stijl met de blok-wereld.
+function grasSprietMap() {
+  return mkTex((c, size) => {
+    c.clearRect(0, 0, size, size);
+    const r = { s: 91 };
+    const greens = ["#4e9a3d", "#5fae48", "#72c157", "#86cf6a"];
+    const blades = 5 + ((rnd(r) * 3) | 0);
+    for (let b = 0; b < blades; b++) {
+      const x0 = 2 + ((rnd(r) * (size - 4)) | 0);
+      const h = (size * (0.5 + rnd(r) * 0.45)) | 0;
+      const lean = (rnd(r) - 0.5) * 4;
+      for (let y = 0; y < h; y++) {
+        const t = y / h; // 0 wortel → 1 top
+        const px = Math.round(x0 + lean * t);
+        const yy = size - 1 - y;
+        if (px >= 0 && px < size) { c.fillStyle = greens[Math.min(greens.length - 1, (t * greens.length) | 0)]; c.fillRect(px, yy, 1, 1); }
+        if (t < 0.35 && px - 1 >= 0) c.fillRect(px - 1, yy, 1, 1); // dikkere voet
+      }
+    }
+  }, 16);
+}
+export const grasSprietTex = () => get("grasSpriet", grasSprietMap);
 // Terrein-kolom: horizontale "aardlagen" — blijven banden, ook als de kolom
 // in de hoogte wordt uitgerekt (scale.y per instance).
 function strataMap() {
@@ -175,7 +212,7 @@ function get(name, maker) {
 
 // Grijswaarde-maps voor terrein, buitenwereld en huizen (multiply met kleur).
 export const grijsMaps = {
-  terreinTop: () => get("terreinTop", () => grijsRuis(["#ffffff", "#f3f3f3", "#eaeaea", "#f7f7f7"], 61)),
+  terreinTop: () => get("terreinTop", terreinTopMap),
   terreinKolom: () => get("terreinKolom", strataMap),
   buiten: () => get("buiten", () => grijsRuis(["#ffffff", "#f5f5f5", "#ededed"], 67)),
   muur: () => get("muur", muurMapMk),
