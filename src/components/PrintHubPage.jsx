@@ -1,15 +1,20 @@
-// Print-hub "/printen" — één overzicht van alles wat je bij Leerkwartier
-// gratis kunt printen (Mark 2026-07-02, na het Leesladder-succes: "maak in de
-// app duidelijk wat er allemaal printbaar leverbaar is"). Papier werkt: geen
-// schermtijd-discussie, voelt als school, en de antwoordsleutels maken de
-// ouder de bijlesdocent. Elke tegel → eigen pagina met print-opties.
+// Print-hub "/printen" — één overzicht van ALLES wat je bij Leerkwartier kunt
+// printen (Mark 2026-07-02, uitgebreid 16 aug 2026). Drie lagen, als etalage:
+//   1. Gratis — 6 pakketten die gratis blijven (blijft de kern).
+//   2. 🔒 Familie — op maat voor jouw kind (oefenboekje op maat, uitleg-kaart,
+//      weekschema, diploma). Nu bèta-gratis, hoort straks bij Familie.
+//   3. 🔒 Pro — voor de klas (werkblad met eigen logo + klassenset).
+// Papier werkt: geen schermtijd-discussie, voelt als school, en de
+// antwoordsleutels maken de ouder de bijlesdocent. Elke tegel → eigen pagina.
+// Op élke subpagina staat de knop "📄 Opslaan als PDF" naast "🖨️ Printen".
 
 import { useEffect } from "react";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
 
-const PAKKETTEN = [
+// ── Laag 1: gratis, blijft gratis ─────────────────────────────────────
+const GRATIS = [
   {
     page: "oefenpakket",
     emoji: "📄",
@@ -60,6 +65,49 @@ const PAKKETTEN = [
   },
 ];
 
+// ── Laag 2: op maat, hoort bij Familie (nu bèta-gratis) ───────────────
+const FAMILIE = [
+  {
+    page: "oefenboekje",
+    emoji: "📚",
+    titel: "Oefenboekje op maat",
+    tekst: "Een persoonlijk boekje, samengesteld uit precies de onderwerpen waar jouw kind nog fouten op maakt — met antwoordsleutel. Op maat, niet 'kies zelf maar iets'.",
+    accent: "#ffb300",
+  },
+  {
+    page: "ouderkaart",
+    emoji: "🧑‍🏫",
+    titel: "Uitleg-kaart voor thuis",
+    tekst: "'Zo leg je 't uit'-kaart per onderwerp (breuken, staartdeling, spelling…): waar het over gaat, een zin die je letterlijk kunt zeggen, de veelgemaakte fout. Voor op de koelkast.",
+    accent: "#ffb300",
+  },
+  {
+    page: "weekschema",
+    emoji: "📅",
+    titel: "Koelkast-weekschema",
+    tekst: "Een invulbaar weekschema: welk kwartiertje op welke dag. Op de koelkast geeft het rust en regelmaat — de motor onder het kwartier-per-dag.",
+    accent: "#ffb300",
+  },
+  {
+    page: "diploma",
+    emoji: "🏅",
+    titel: "Printbaar diploma",
+    tekst: "Een echt diploma op naam als je kind een onderwerp afrondt. Trots aan de muur werkt beter dan welke badge op een scherm ook.",
+    accent: "#ffb300",
+  },
+];
+
+// ── Laag 3: voor de klas, hoort bij Pro ───────────────────────────────
+const PRO = [
+  {
+    page: "werkblad",
+    emoji: "🖨️",
+    titel: "Klassenset-werkbladen (met je logo)",
+    tekst: "Voor leerkrachten: per onderwerp een A4-werkblad (opgaven + antwoordblad) met een QR-code waarmee de klas thuis gratis verder oefent. De losse werkbladen zijn gratis; met Pro zet je je eigen logo erop en print je een hele klassenset.",
+    accent: "#26c6da",
+  },
+];
+
 export default function PrintHubPage({ setPage } = {}) {
   useEffect(() => {
     const prevTitle = document.title;
@@ -68,6 +116,8 @@ export default function PrintHubPage({ setPage } = {}) {
     track("printhub_open");
     return () => { document.title = prevTitle; };
   }, []);
+
+  const kies = (page) => { track("printhub_kies", { pakket: page }); setPage && setPage(page); };
 
   return (
     <div style={{ maxWidth: 640, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -84,42 +134,60 @@ export default function PrintHubPage({ setPage } = {}) {
       </button>
 
       <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
-        🖨️ Printbaar oefenen — allemaal gratis
-        <GratisBadge size="md" style={{ marginLeft: 10 }} />
+        🖨️ Alles wat je kunt printen
       </h1>
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 22px", lineHeight: 1.55 }}>
         Soms werkt papier gewoon beter: geen scherm, net als op school, en jij kijkt
-        samen na. Alles hieronder print je thuis gratis — of sla het op als PDF.
+        samen na. Elke pagina print je thuis — of bewaar je als <strong style={{ color: "var(--color-text, #e8edf5)" }}>PDF</strong>{" "}
+        (de knop <em>“📄 Opslaan als PDF”</em> staat op elke pagina naast “Printen”).
       </p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
-        {PAKKETTEN.map((p) => (
-          <button
-            key={p.page}
-            onClick={() => { track("printhub_kies", { pakket: p.page }); setPage && setPage(p.page); }}
-            style={{
-              display: "flex", alignItems: "flex-start", gap: 14, textAlign: "left", cursor: "pointer",
-              background: "rgba(255,255,255,0.05)", border: `1.5px solid ${p.accent}55`,
-              borderRadius: 16, padding: "16px 18px", width: "100%",
-            }}
-          >
-            <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0, lineHeight: 1 }}>{p.emoji}</span>
-            <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16.5, color: "#fff", marginBottom: 2 }}>
-                {p.titel}
-                <span style={{ marginLeft: 8, fontSize: 11.5, fontWeight: 700, color: p.accent, border: `1px solid ${p.accent}88`, borderRadius: 999, padding: "2px 9px", verticalAlign: "2px" }}>{p.groep}</span>
-              </span>
-              <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>{p.tekst}</span>
-            </span>
-            <span aria-hidden="true" style={{ fontSize: 20, color: p.accent, flexShrink: 0, alignSelf: "center" }}>→</span>
-          </button>
+      {/* ── Laag 1: gratis ─────────────────────────────────────── */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 10px" }}>
+        <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>6 gratis printbare pakketten</h2>
+        <GratisBadge size="sm" />
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
+        {GRATIS.map((p) => (
+          <Tegel key={p.page} p={p} onClick={() => kies(p.page)} />
         ))}
+      </div>
+
+      {/* ── Laag 2: Familie ────────────────────────────────────── */}
+      <SlotKop kleur="#ffb300" titel="Op maat — met Familie" chip="Familie" />
+      <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
+        Persoonlijk, afgestemd op jóuw kind. Deze horen bij <strong style={{ color: "#ffd54f" }}>Familie</strong> (vanaf 2027).
+        Tijdens de bèta kun je ze nu al gratis proberen.
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
+        {FAMILIE.map((p) => (
+          <Tegel key={p.page} p={p} slot chip="Familie" onClick={() => kies(p.page)} />
+        ))}
+      </div>
+
+      {/* ── Laag 3: Pro ────────────────────────────────────────── */}
+      <SlotKop kleur="#26c6da" titel="Voor de klas — met Pro" chip="Pro" />
+      <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
+        Voor leerkrachten. Losse werkbladen zijn gratis; <strong style={{ color: "#4dd0e1" }}>Pro</strong> voegt je eigen logo
+        en een hele klassenset toe (vanaf 2027).
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+        {PRO.map((p) => (
+          <Tegel key={p.page} p={p} slot chip="Pro" onClick={() => kies(p.page)} />
+        ))}
+      </div>
+
+      <div style={{ textAlign: "center", marginBottom: 22 }}>
+        <a href="/abonnement.html" onClick={() => track("printhub_naar_abonnement")}
+          style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, textDecoration: "underline" }}>
+          Wat zit er in Familie &amp; Pro? →
+        </a>
       </div>
 
       <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 14, padding: "14px 18px", marginBottom: 18 }}>
         <div style={{ fontWeight: 800, fontSize: 14, color: "var(--color-text, #e8edf5)", marginBottom: 6 }}>💡 Print-tips</div>
         <ul style={{ margin: 0, paddingLeft: 18, color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, lineHeight: 1.7 }}>
-          <li>Geen printer bij de hand? Kies in het printvenster <em>Opslaan als PDF</em>.</li>
+          <li>Geen printer bij de hand? Kies in het printvenster <em>Opslaan als PDF</em> — dan bewaar je het bestand.</li>
           <li>Print dubbelzijdig — scheelt de helft papier.</li>
           <li>Print alleen de pagina's die je vandaag nodig hebt (elk onderdeel begint op een nieuwe pagina).</li>
           <li>Antwoordsleutels zitten achteraan — die kun je er los bij houden.</li>
@@ -143,5 +211,46 @@ export default function PrintHubPage({ setPage } = {}) {
         </button>
       </div>
     </div>
+  );
+}
+
+// Kopregel voor een vergrendelde laag: 🔒 + titel + tier-chip.
+function SlotKop({ kleur, titel, chip }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 4px" }}>
+      <span aria-hidden="true" style={{ fontSize: 15 }}>🔒</span>
+      <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>{titel}</h2>
+      <span style={{ fontSize: 11, fontWeight: 800, color: kleur, border: `1px solid ${kleur}88`, borderRadius: 999, padding: "2px 9px" }}>{chip}</span>
+    </div>
+  );
+}
+
+// Eén tegel. `slot` = vergrendelde (Familie/Pro) look met een slotje-badge.
+function Tegel({ p, onClick, slot = false, chip }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        display: "flex", alignItems: "flex-start", gap: 14, textAlign: "left", cursor: "pointer",
+        background: slot ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.05)",
+        border: `1.5px solid ${p.accent}${slot ? "33" : "55"}`,
+        borderRadius: 16, padding: "16px 18px", width: "100%", position: "relative",
+      }}
+    >
+      <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0, lineHeight: 1, opacity: slot ? 0.85 : 1 }}>{p.emoji}</span>
+      <span style={{ flex: 1, minWidth: 0 }}>
+        <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16.5, color: "#fff", marginBottom: 2 }}>
+          {p.titel}
+          {p.groep && (
+            <span style={{ marginLeft: 8, fontSize: 11.5, fontWeight: 700, color: p.accent, border: `1px solid ${p.accent}88`, borderRadius: 999, padding: "2px 9px", verticalAlign: "2px" }}>{p.groep}</span>
+          )}
+          {slot && (
+            <span style={{ marginLeft: 8, fontSize: 11.5, fontWeight: 800, color: p.accent, border: `1px solid ${p.accent}88`, borderRadius: 999, padding: "2px 9px", verticalAlign: "2px", whiteSpace: "nowrap" }}>🔒 {chip}</span>
+          )}
+        </span>
+        <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>{p.tekst}</span>
+      </span>
+      <span aria-hidden="true" style={{ fontSize: 20, color: p.accent, flexShrink: 0, alignSelf: "center" }}>→</span>
+    </button>
   );
 }

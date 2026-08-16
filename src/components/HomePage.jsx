@@ -1349,7 +1349,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               {[
                 { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
-                { emoji: "🖨️", titel: "6 printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
+                { emoji: "🖨️", titel: "6 gratis printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
                 // WhatsApp 13 aug 18:57: dagvraag- en park-kaart weg van home
                 // ("dat park vinden ze wel; de dagvraag wil ik niet op home").
               ].map((it, i) => {
