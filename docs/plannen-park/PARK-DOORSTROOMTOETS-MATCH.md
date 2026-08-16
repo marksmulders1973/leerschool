@@ -6,7 +6,7 @@
 > Dit is die inventaris. **Nog niet bouwen** — dit is de landkaart waarmee we
 > straks fase 3 (nieuwe A-objecten) van het masterplan prioriteren.
 
-Interactie-tiers (uit `docs/INTERACTIEF-PARK-MASTERPLAN.md`):
+Interactie-tiers (uit `INTERACTIEF-PARK-MASTERPLAN.md`):
 **A · manipuleerbaar** (schuif/knoppen + live getallen, zoals de piramide) ·
 **B · poort** (loop erdoor → leerpad opent) · **C · vertel** (maatje vertelt + link).
 
@@ -72,5 +72,5 @@ de zwakste park-fit. Het park wint de Doorstroomtoets niet — het **bindt** kin
 en maakt rekenen/meten/kaartlezen concreet. Reken hier geen taal-winst op; daar
 zijn de leerpaden/Leesladder voor. Zie [[feedback_park_doel_binden_leren]].
 
-Zie ook `docs/INTERACTIEF-PARK-MASTERPLAN.md`,
+Zie ook `INTERACTIEF-PARK-MASTERPLAN.md`,
 [[idea_studiebol_interactief_park_masterplan]], [[idea_studiebol_magische_poorten]].
