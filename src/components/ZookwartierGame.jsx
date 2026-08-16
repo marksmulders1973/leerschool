@@ -1281,14 +1281,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // praatte de gids-stem gewoon door over het volgende scherm heen, en de
   // 16s-timer vuurde setState op een unmounted component. Unmount-cleanup:
   useEffect(() => () => { stopSpreken(); clearTimeout(gidsTimer.current); }, []);
-  const tafereelNaarLeren = () => {
+  const tafereelNaarLeren = (padOverride) => {
     if (!tafereel) return;
     // type-veld (park-zwerm): leermomenten en kabouter-taferelen delen dit
     // paneel — zonder label kon het dagrapport niet zien wélke ingang de
     // leer-conversie leverde. Event-naam blijft gelijk (queries breken niet).
     const isLeermoment = !!PARK_LEERMOMENTEN[tafereel.id];
-    try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: tafereel.leerpadId, type: isLeermoment ? "leermoment" : "tafereel" }); track("park_naar_leren", { via: isLeermoment ? "leermoment" : "tafereel", pad: tafereel.leerpadId }); } catch { /* */ }
-    const padId = tafereel.leerpadId;
+    const padId = padOverride || tafereel.leerpadId;
+    try { track("park_tafereel_naar_leren", { id: tafereel.id, pad: padId, type: isLeermoment ? "leermoment" : "tafereel" }); track("park_naar_leren", { via: isLeermoment ? "leermoment" : "tafereel", pad: padId }); } catch { /* */ }
     stopSpreken();
     setTafereel(null);
     if (padId && onOpenLeerpad) onOpenLeerpad(padId);
@@ -2327,9 +2327,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             )}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, justifyContent: "flex-end" }}>
               <button onClick={() => setTafereel(null)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Verder spelen</button>
-              <button onClick={tafereelNaarLeren} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
+              <button onClick={() => tafereelNaarLeren()} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
                 ▶ Leer er meer over: {tafereel.leerLabel}
               </button>
+              {tafereel.leerpadId2 && (
+                <button onClick={() => tafereelNaarLeren(tafereel.leerpadId2)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#c9862e,#a86a1e)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
+                  ▶ {tafereel.leerLabel2}
+                </button>
+              )}
             </div>
           </div>
         </div>

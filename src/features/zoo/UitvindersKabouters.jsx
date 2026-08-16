@@ -363,6 +363,49 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
   );
 }
 
+/* ── 🔺 Egyptische piramide (Mark 16 aug) ──────────────────────────────────
+   Grote blikvanger in Giza-stijl: vlakke zandsteen-facetten (4-zijdige kegel
+   met flatShading), een gouden topsteen (pyramidion), een donkere ingang en
+   twee palmen op een zandplateau. ~4-5× de mini-souvenir. Aantikbaar via het
+   piramide-leermoment (inhoud + Pythagoras). */
+function Palm({ position = [0, 0, 0], rot = 0 }) {
+  return (
+    <group position={position} rotation={[0, rot, 0]}>
+      <mesh position={[0, 0.55, 0]} castShadow><cylinderGeometry args={[0.08, 0.13, 1.1, 7]} /><meshStandardMaterial color="#8a6a3a" flatShading roughness={1} /></mesh>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <mesh key={i} position={[0, 1.12, 0]} rotation={[0.6, (i * Math.PI * 2) / 5, 0]} castShadow>
+          <coneGeometry args={[0.14, 0.78, 4]} /><meshStandardMaterial color="#3f8f3a" flatShading roughness={0.9} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0 }) {
+  const zand = "#e4cf9a";
+  const steen = "#d8c08a";
+  const steenDonker = "#b89b63";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {/* zandplateau */}
+      <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[3.0, 3.35, 0.12, 24]} /><meshStandardMaterial color={zand} flatShading roughness={1} /></mesh>
+      {/* stenen fundament-rand */}
+      <mesh position={[0, 0.2, 0]} rotation={[0, Math.PI / 4, 0]} castShadow><cylinderGeometry args={[2.62, 2.68, 0.18, 4]} /><meshStandardMaterial color={steenDonker} flatShading roughness={1} /></mesh>
+      {/* hoofd-piramide — 4 vlakke zandsteen-facetten */}
+      <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+      {/* lichtere kalksteen-mantel vlak onder de top (zoals de echte Giza-piramide) */}
+      <mesh position={[0, 2.98, 0]} rotation={[0, Math.PI / 4, 0]}><coneGeometry args={[0.72, 0.86, 4]} /><meshStandardMaterial color="#efe6c6" flatShading roughness={0.9} /></mesh>
+      {/* gouden topsteen (pyramidion) */}
+      <mesh position={[0, 3.55, 0]} rotation={[0, Math.PI / 4, 0]} castShadow><coneGeometry args={[0.24, 0.34, 4]} /><meshStandardMaterial color="#e8b400" metalness={0.5} roughness={0.3} flatShading /></mesh>
+      {/* donkere ingang aan de voorkant */}
+      <mesh position={[0, 0.62, 1.55]}><boxGeometry args={[0.6, 0.85, 0.35]} /><meshStandardMaterial color="#2b2417" roughness={1} /></mesh>
+      {/* palmen op het plateau */}
+      <Palm position={[-2.55, 0.12, 1.5]} rot={0.5} />
+      <Palm position={[2.4, 0.12, -1.7]} rot={-0.7} />
+    </group>
+  );
+}
+
 /* ── plaatsing + interactie ────────────────────────────────────────────── */
 export default function UitvindersTaferelen({ heightRef, onTafereel, actief = true }) {
   return (

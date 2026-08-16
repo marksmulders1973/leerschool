@@ -98,6 +98,19 @@ export const PARK_LEERMOMENTEN = {
     leerLabel: "De waterkringloop",
     souvenirNaam: "een wens-fonteintje ⛲",
   },
+  piramide: {
+    id: "piramide",
+    emoji: "🔺",
+    titel: "De grote piramide",
+    praatje:
+      "Dit is een Egyptische piramide, net als die van Gizeh — bijna 4500 jaar oud! Hij is opgebouwd uit miljoenen zware stenen blokken. Wil je weten hoevéél steen erin past? Dan reken je de inhoud uit: een derde van het grondvlak keer de hoogte. En die schuine ribben omhoog naar de top? Die vind je met de stelling van Pythagoras.",
+    weetje:
+      "De echte piramide van Gizeh is 146 meter hoog en telt ongeveer 2,3 miljoen stenen blokken. De zijden lopen onder een hoek van bijna 52 graden schuin omhoog — duizenden jaren vóór de rekenmachine al precies uitgerekend!",
+    leerpadId: "ruimtemeetkunde",
+    leerLabel: "Inhoud berekenen",
+    leerpadId2: "pythagoras",
+    leerLabel2: "Stelling van Pythagoras",
+  },
   draaimolen: {
     id: "draaimolen",
     emoji: "🎠",
@@ -142,4 +155,5 @@ export const LEERMOMENT_BY_ASSET = {
   carousel: "draaimolen",
   swing: "zweefmolen",
   fountain: "fontein",
+  piramide: "piramide",
 };
