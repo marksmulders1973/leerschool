@@ -6,7 +6,7 @@
 > - ✅ **P3 guardrail**: GEFIXT — veilige-voorbeelden-regel in `api/generate-questions.js` én `api/tutor-chat.js`.
 > - ✅/⚠️ **P4 vragen**: vloeistof-vraag herformuleerd (geen strikvraag meer); hallo- en busvraag stonden NIET in vaste data (waren AI-gegenereerd → guardrail + correctheid-instructie dekken dit); "vraag aan Charley" → placeholder nu "Typ je antwoord of vraag aan …".
 > - ✅ **P5 "globaal"**: vaste woordenlijsten zijn schoon (geen foute definitie gevonden) — was vermoedelijk AI-uitleg; tutor-prompt heeft al kindertaal-regel.
-> - ⏳ **P6 beeld/tekst**: begeleidende tekst in oefen-toets nu deels gedekt door leermoment; foto's bij historische figuren/plaatsen = open wens.
+> - ✅/⏳ **P6 beeld/tekst**: foto's bij historische figuren/plaatsen **GEDAAN** (16 aug, v317) — rechtenvrije Wikimedia-foto's met correcte maker+licentie-credit; topografie toont stadsfoto ná antwoord (Arnhem etc.), geschiedenispad "Bekende Nederlanders" toont portretten (Erasmus/Oranje/De Ruyter/Rembrandt/Van Gogh + nieuw Thorbecke/Aletta Jacobs/Barentsz). Rest: begeleidende tekst in oefen-toets deels gedekt door leermoment (blijft open puntje).
 > - ✅/⏳ **P7 gratis**: "Gratis oefenen" toegevoegd aan CitoPage-subtitle; gezin-koppelcode-tekst kan later explicieter ("je logt gewoon als jezelf in").
 
 Notities die Mark overdag naar zichzelf appte tijdens het testen van Leerkwartier
