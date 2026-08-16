@@ -412,6 +412,17 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
   const steenDonker = "#b89b63";
   const s = Math.max(0.5, maat / 4.4);            // schaal: hoe hoger de maat, hoe groter (tot ~5×)
   const volume = Math.round((maat * maat * maat) / 3);
+  // 🔢 Aftelbare voet: maat blokjes per zijde, om en om gekleurd, zodat je de
+  // "zijde X m" écht kunt zien en tellen (Mark 16 aug: "onderste blokken echt
+  // intekenen, om en om gekleurd, zodat je er echt 8 ziet").
+  const half = 1.803, b = (half * 2) / maat, o = b * 0.08;
+  const kA = "#ecd79a", kB = "#a9884d";
+  const voetBlokken = [];
+  for (let i = 0; i < maat; i++) {
+    const t = -half + b / 2 + i * b;
+    const c = i % 2 ? kB : kA;
+    voetBlokken.push([t, half + o, c], [t, -(half + o), c], [half + o, t, c], [-(half + o), t, c]);
+  }
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       {/* Alleen de zwevende maten in 3D (betrouwbaar); de +/- knoppen en de poort
@@ -427,6 +438,13 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
       <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[3.0, 3.35, 0.12, 24]} /><meshStandardMaterial color={zand} flatShading roughness={1} /></mesh>
       {/* stenen fundament-rand */}
       <mesh position={[0, 0.2, 0]} rotation={[0, Math.PI / 4, 0]} castShadow><cylinderGeometry args={[2.62, 2.68, 0.18, 4]} /><meshStandardMaterial color={steenDonker} flatShading roughness={1} /></mesh>
+      {/* 🔢 aftelbare voet-blokken (om en om) — zo tel je de zijde: maat blokjes */}
+      {voetBlokken.map(([bx, bz, c], k) => (
+        <mesh key={`vb${k}`} position={[bx, 0.26 + b * 0.32, bz]} castShadow receiveShadow>
+          <boxGeometry args={[b * 0.92, b * 0.66, b * 0.92]} />
+          <meshStandardMaterial color={c} flatShading roughness={1} />
+        </mesh>
+      ))}
       {/* hoofd-piramide — 4 vlakke zandsteen-facetten */}
       <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
       {/* lichtere kalksteen-mantel vlak onder de top (zoals de echte Giza-piramide) */}
