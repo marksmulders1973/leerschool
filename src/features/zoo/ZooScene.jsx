@@ -665,7 +665,39 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
   return null;
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen }) {
+// 🔺 Meldt de dichtstbijzijnde piramide waar je bij staat/naar kijkt, zodat de
+// grootte-regelaar vanzelf verschijnt (Mark 16 aug: "als je ergens naar kijkt,
+// dat het dan verschijnt"). Puur op refs, throttled — gratis voor de framerate.
+function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
+  const acc = useRef(0);
+  const last = useRef(undefined);
+  useFrame((s, dt) => {
+    if (!onNear) return;
+    acc.current += dt;
+    if (acc.current < 0.25) return;
+    acc.current = 0;
+    const p = playerPos?.current;
+    if (!p) return;
+    let bestIdx = null, bestD2 = 110, bx = 0, bz = 0; // ~10 m
+    for (let i = 0; i < placedItems.length; i++) {
+      const it = placedItems[i];
+      if (it.assetId !== "piramide" || !it.cell) continue;
+      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
+      if (d2 < bestD2) { bestD2 = d2; bestIdx = i; bx = x; bz = z; }
+    }
+    if (bestIdx != null && bestD2 > 9 && playerFace?.current) {
+      const dx = bx - p.x, dz = bz - p.z;
+      const len = Math.sqrt(dx * dx + dz * dz) || 1;
+      const dot = (playerFace.current.x * dx + playerFace.current.z * dz) / len;
+      if (dot < 0.1) bestIdx = null;
+    }
+    if (bestIdx !== last.current) { last.current = bestIdx; onNear(bestIdx); }
+  });
+  return null;
+}
+
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -998,6 +1030,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />
+        <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (

@@ -1219,6 +1219,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // 🧙 Uitvinders-kabouters: tik op een tafereel → buddy vertelt + leer-link.
   const [tafereel, setTafereel] = useState(null);
   const [speelInhoud, setSpeelInhoud] = useState(false); // 📐 interactieve piramide-inhoud
+  const [nabijePiramide, setNabijePiramide] = useState(null); // 🔺 index piramide waar je bij staat
   // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
   // vlak vóór het tafereel en opent het praatje. Param één keer lezen bij mount.
   const [deeplinkScene] = useState(() => {
@@ -1374,6 +1375,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
+      {/* 🔺 Piramide-regelaar — vaste HUD rechtsonder bij de duim (Mark 16 aug:
+          "plus/min onder in beeld bij de stuur-cirkel" + "als je ernaar kijkt,
+          dat het dan verschijnt"). Toont zich zodra je bij/naar een piramide
+          staat (of hem aantikt); spiegelbeeld van de loop-joystick linksonder. */}
+      {(() => {
+        const pyrIdx = (nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide")
+          ? nabijePiramide
+          : (placedItems[selectedIdx]?.assetId === "piramide" ? selectedIdx : null);
+        if (pyrIdx == null) return null;
+        return (
+          <div style={{ position: "absolute", right: 14, bottom: 96, zIndex: 15, display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
+            <button onClick={() => onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde")} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(20,28,44,0.78)", borderRadius: 999, padding: "7px 12px", boxShadow: "0 4px 14px rgba(0,0,0,.35)" }}>
+              <button onClick={() => wijzigMaat(pyrIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➖</button>
+              <span style={{ color: "#fff", font: "800 13px system-ui" }}>grootte</span>
+              <button onClick={() => wijzigMaat(pyrIdx, 1)} title="Groter" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➕</button>
+            </div>
+          </div>
+        );
+      })()}
       {/* Laad-fout: park kon niet uit de database komen. NIETS tonen dat op een
           leeg/nieuw park lijkt (en niets opslaan) — alleen opnieuw proberen.
           Zo kan een netwerk-blip nooit meer een bestaand park overschrijven. */}
@@ -1689,6 +1710,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onGidsMoment={onGidsMoment}
           onMaat={wijzigMaat}
           onOefenen={(pid) => onOpenLeerpad && onOpenLeerpad(pid)}
+          onNearPiramide={setNabijePiramide}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
@@ -2019,18 +2041,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 🎠 Instappen
               </button>
             )}
-            {/* 🔺 Groter/kleiner maken — voor de piramide (inhoud-vorm). De
-                zwevende maten boven het object veranderen live mee. */}
-            {placedItems[selectedIdx]?.assetId === "piramide" && (
-              <>
-                <span style={{ display: "inline-flex", gap: 8, alignItems: "center" }}>
-                  <button onClick={() => wijzigMaat(selectedIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: 999, width: 46, height: 46, font: "800 22px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➖</button>
-                  <span style={{ font: "800 13px system-ui", color: "#234" }}>grootte</span>
-                  <button onClick={() => wijzigMaat(selectedIdx, +1)} title="Groter" style={{ border: "none", borderRadius: 999, width: 46, height: 46, font: "800 22px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➕</button>
-                </span>
-                <button onClick={() => { sluitSelectie(); onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde"); }} style={{ border: "none", borderRadius: 999, padding: "11px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🚪 Inhoud berekenen oefenen →</button>
-              </>
-            )}
+            {/* De piramide-regelaar (+/- + poort) staat als losse HUD rechtsonder
+                bij de duim (zie onder in de render), niet in deze drukke rij. */}
             {/* 💡 Benoembaar object (Mark 12 jul): leg uit wat het is + hoe het
                 werkt + leerpad-link — het maatje leest het ook hardop voor. */}
             {LEERMOMENT_BY_ASSET[placedItems[selectedIdx]?.assetId] && (
