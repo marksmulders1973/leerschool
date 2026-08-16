@@ -26,10 +26,13 @@ export default function MeeBezig({
 }) {
   const [waitCount, setWaitCount] = useState(null);
   const [signedUp, setSignedUp] = useState(false);
+  const [metMail, setMetMail] = useState(false); // is er een e-mail meegegeven?
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const [email, setEmail] = useState("");
 
   const player = (userName || "").trim() || "Anonieme bezoeker";
+  const emailGeldig = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 
   useEffect(() => {
     let cancelled = false;
@@ -68,9 +71,25 @@ export default function MeeBezig({
       if (error && error.code !== "23505") {
         setErr("Opslaan lukte niet, probeer het zo nog eens.");
       } else {
+        // Optioneel e-mailadres → op de e-maillijst zetten zodat we écht kunnen
+        // laten weten zodra dit vak klaarstaat (learn_path_waitlist bewaart geen
+        // adres). Faalt dit, dan blijft de aanmelding gewoon geslaagd.
+        const mail = email.trim();
+        const heeftMail = emailGeldig(mail);
+        if (heeftMail) {
+          try {
+            await supabase.from("upgrade_waitlist").insert({
+              email: mail.toLowerCase(),
+              plan: `leerpad-${subjectId}`,
+              source: "meebezig-waitlist",
+              consent_at: new Date().toISOString(),
+            });
+          } catch { /* aanmelding blijft geslaagd, mail is bonus */ }
+        }
+        setMetMail(heeftMail);
         setSignedUp(true);
         setWaitCount((c) => (typeof c === "number" ? c + 1 : 1));
-        track("waitlist_signup", { subject: subjectId });
+        track("waitlist_signup", { subject: subjectId, met_mail: heeftMail });
       }
     } catch {
       setErr("Opslaan lukte niet, probeer het zo nog eens.");
@@ -157,15 +176,48 @@ export default function MeeBezig({
           </div>
 
           {!signedUp ? (
-            <Button
-              variant="primary"
-              fullWidth
-              size="lg"
-              disabled={busy}
-              onClick={onSignup}
-            >
-              {busy ? "Bezig…" : "🔔 Hou me op de hoogte"}
-            </Button>
+            <>
+              <label
+                htmlFor="waitlist-email"
+                style={{
+                  display: "block",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "var(--font-size-xs)",
+                  color: "var(--color-text-muted)",
+                  marginBottom: "var(--space-1)",
+                }}
+              >
+                📧 E-mail van je ouder of verzorger — dan mailen we zodra het klaarstaat <span style={{ opacity: 0.7 }}>(niet verplicht)</span>
+              </label>
+              <input
+                id="waitlist-email"
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                placeholder="naam@voorbeeld.nl"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{
+                  width: "100%",
+                  padding: "var(--space-3) var(--space-4)",
+                  marginBottom: "var(--space-2)",
+                  borderRadius: "var(--radius-md)",
+                  border: "1px solid var(--color-border)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "var(--font-size-md)",
+                  minHeight: "var(--tap-target-min)",
+                }}
+              />
+              <Button
+                variant="primary"
+                fullWidth
+                size="lg"
+                disabled={busy}
+                onClick={onSignup}
+              >
+                {busy ? "Bezig…" : "🔔 Hou me op de hoogte"}
+              </Button>
+            </>
           ) : (
             <div
               style={{
@@ -180,7 +232,9 @@ export default function MeeBezig({
                 textAlign: "center",
               }}
             >
-              ✅ Bedankt! We laten je weten zodra het klaarstaat.
+              {metMail
+                ? "✅ Bedankt! We mailen je zodra het klaarstaat."
+                : "✅ Bedankt! We laten het je in de app weten zodra het klaarstaat."}
             </div>
           )}
 
