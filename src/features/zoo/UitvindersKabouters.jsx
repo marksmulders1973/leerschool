@@ -11,8 +11,9 @@
 // maatje-koppen) — géén .glb's, dus licht op telefoons. Kabouters heten
 // bewust NIET Newton/Tesla (gelijkenis-rechten): Professor Isaac & Meester
 // Nikola zijn knipoog-kabouters. Tik op een tafereel → praatje + leer-link.
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Html } from "@react-three/drei";
 // Config (posities, praatjes, leerpad-links) staat in uitvindersData.js —
 // licht bestand zonder three.js, zodat de game-wrapper het ook kan lezen.
 // Posities liggen langs de ingangslaan (x ±3 = pad, z 35..77): statisch
@@ -368,6 +369,30 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
    met flatShading), een gouden topsteen (pyramidion), een donkere ingang en
    twee palmen op een zandplateau. ~4-5× de mini-souvenir. Aantikbaar via het
    piramide-leermoment (inhoud + Pythagoras). */
+// Zwevende maten/formule boven een inhoud-vorm — wisselt om de ~2,4 s tussen de
+// afmetingen, de formule en de inhoud (Mark 16 aug: "de maten in de lucht boven
+// het object, inhoud en formule, wisselend"). pointerEvents uit zodat je er
+// dwars doorheen op het object kunt tikken.
+export function ZwevendeMaten({ regels, y = 4 }) {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    if (!regels || regels.length < 2) return;
+    const t = setInterval(() => setI((n) => (n + 1) % regels.length), 2400);
+    return () => clearInterval(t);
+  }, [regels?.length]);
+  if (!regels || !regels.length) return null;
+  return (
+    <Html position={[0, y, 0]} center distanceFactor={12} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+      <div style={{
+        whiteSpace: "nowrap", padding: "6px 13px", borderRadius: 999,
+        background: "rgba(20,28,44,0.82)", color: "#fff", fontWeight: 800,
+        fontSize: 15, fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)",
+        border: "1.5px solid rgba(255,255,255,0.28)",
+      }}>{regels[i]}</div>
+    </Html>
+  );
+}
+
 function Palm({ position = [0, 0, 0], rot = 0 }) {
   return (
     <group position={position} rotation={[0, rot, 0]}>
@@ -381,12 +406,20 @@ function Palm({ position = [0, 0, 0], rot = 0 }) {
   );
 }
 
-export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0 }) {
+export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 8 }) {
   const zand = "#e4cf9a";
   const steen = "#d8c08a";
   const steenDonker = "#b89b63";
+  const s = Math.max(0.5, maat / 4.4);            // schaal: hoe hoger de maat, hoe groter (tot ~5×)
+  const volume = Math.round((maat * maat * maat) / 3);
   return (
     <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={3.7 * s + 1.0} regels={[
+        `📏 zijde ${maat} m · hoogte ${maat} m`,
+        `V = ⅓ × grondvlak × hoogte`,
+        `📦 inhoud = ${volume.toLocaleString("nl-NL")} m³`,
+      ]} />
+      <group scale={s}>
       {/* zandplateau */}
       <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[3.0, 3.35, 0.12, 24]} /><meshStandardMaterial color={zand} flatShading roughness={1} /></mesh>
       {/* stenen fundament-rand */}
@@ -402,6 +435,7 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0 }) {
       {/* palmen op het plateau */}
       <Palm position={[-2.55, 0.12, 1.5]} rot={0.5} />
       <Palm position={[2.4, 0.12, -1.7]} rot={-0.7} />
+      </group>
     </group>
   );
 }

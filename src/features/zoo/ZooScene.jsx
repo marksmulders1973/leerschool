@@ -320,7 +320,7 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 // React.memo (review 17 jul): ZookwartierGame heeft ~50 useState; elke HUD-tik
 // re-renderde anders álle geplaatste items mee. Props zijn primitief/stabiel
 // (behalve kraam bij de 4 kraampjes — acceptabel).
-const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false }) {
+const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false, maat }) {
   const a = getAsset(assetId);
   if (!a) return null;
   // Rails/hekpanelen/padtegels zitten visueel in GeinstanceerdeParkProps
@@ -348,7 +348,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "hill") return <HillMound position={[x, y, z]} size={a.hillSize} color={a.color} />;
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
   if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} maat={maat ?? 8} />;
   if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} />;
@@ -1050,7 +1050,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
                   Nu poppen items los in en blijft het park altijd staan. */}
               <Suspense fallback={null}>
                 <PlacedItem
-                  assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0}
+                  assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0} maat={it.maat}
                   rideRef={idx === rideIdx ? attractieZitje : undefined}
                   colors={it.colors} colorEditable={colorEditIdx === idx}
                   // Alleen doorgeven bij het item dat écht bewerkt wordt — een

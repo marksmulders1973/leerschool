@@ -973,6 +973,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     flits("Verbouwd naar losse blokjes! Hak weg, zet een andere kleur terug of bouw bij. 🧱⛏️");
   };
 
+  // 🔺 Inhoud-vormen in het park kun je stap-voor-stap groter/kleiner maken;
+  // de zwevende maten + inhoud + formule veranderen live mee (Mark 16 aug).
+  const wijzigMaat = (idx, delta) => {
+    setPlacedItems((items) => items.map((it, i) => {
+      if (i !== idx) return it;
+      const nieuw = Math.max(3, Math.min(18, (it.maat ?? 8) + delta));
+      return { ...it, maat: nieuw };
+    }));
+  };
+
   const verplaatsGeselecteerde = () => {
     if (selectedIdx == null) return;
     const it = placedItems[selectedIdx];
@@ -2006,6 +2016,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               >
                 🎠 Instappen
               </button>
+            )}
+            {/* 🔺 Groter/kleiner maken — voor de piramide (inhoud-vorm). De
+                zwevende maten boven het object veranderen live mee. */}
+            {placedItems[selectedIdx]?.assetId === "piramide" && (
+              <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}>
+                <button onClick={() => wijzigMaat(selectedIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: 999, width: 40, height: 40, font: "800 18px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➖</button>
+                <span style={{ font: "800 13px system-ui", color: "#234" }}>grootte</span>
+                <button onClick={() => wijzigMaat(selectedIdx, +1)} title="Groter" style={{ border: "none", borderRadius: 999, width: 40, height: 40, font: "800 18px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>➕</button>
+              </span>
             )}
             {/* 💡 Benoembaar object (Mark 12 jul): leg uit wat het is + hoe het
                 werkt + leerpad-link — het maatje leest het ook hardop voor. */}
