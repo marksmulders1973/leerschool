@@ -110,6 +110,7 @@ export const PARK_LEERMOMENTEN = {
     leerLabel: "Inhoud berekenen",
     leerpadId2: "pythagoras",
     leerLabel2: "Stelling van Pythagoras",
+    speel: "piramide-inhoud",
   },
   draaimolen: {
     id: "draaimolen",
