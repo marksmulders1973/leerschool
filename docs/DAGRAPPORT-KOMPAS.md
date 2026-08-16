@@ -66,6 +66,7 @@ Doel = **1.000 actieve gebruikers** (Project Titan). Kernwaarheid uit alle audit
 | 7 | Echte-telefoon-test park | 🔴 open (Mark-handwerk) |
 | 9 | Leerkracht-takenlijst fase 3 (échte juf laten testen) | 🔴 open (warme juf nodig) |
 | 42 | **Examen-recency-tiering** (Mark 16 aug, voor di 18 aug): nieuwste 3 jaargangen (2024-26) interactief-oefenen = Familie, oudere jaren + alle PDF-inzien = gratis; + 3 nieuwe 2026-examens. Ruwe examenblad-PDF's zijn openbaar → alleen de oefen-uitleg gaten, niet het inzien. Verdict: goed idee mét die verfijning. Memory `idea_studiebol_examens_recency_familie` | 🟡 gepland di 18 aug |
+| 43 | **✨ Magische poorten** (Mark 16 aug): park-object → loop door de poort → leerpad opent ("weet je hoe dit werkt?"). Piramide→ruimtemeetkunde/pythagoras (✅ basis al), boom→fotosynthese, ~25 paden. Plan-rapport: `docs/MAGISCHE-POORTEN-PLAN.md`. Fase 2 = gratis dekking (elk dier→dierenklassen, prullenbak→recyclen, kraam→winst); fase 3 = landmarks (Eiffeltoren→Europa+driehoeken, tempel, wereldbol, telescoop, standbeeld…) | 🟢 plan klaar, wacht op Mark's go per fase |
 
 **Stand: 3 volledig af (2/4/5), 3 deels (1/3/8), 3 open (6/7/9 — deels Mark/extern).**
 
