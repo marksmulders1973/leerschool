@@ -407,7 +407,79 @@ function Palm({ position = [0, 0, 0], rot = 0 }) {
   );
 }
 
-export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 8, onMaat, onOefenen }) {
+// 🔺📚 Studie-stand (Mark 17 aug: "de formule en de berekening op elke zijde +
+// de basis en hoogte"). Alleen aan als je vlakbij staat (de +/- is in beeld) →
+// dan schrijft de piramide de som op zijn 4 schuine vlakken en tekent hij de
+// maatlijnen voor de basis en de hoogte. Alles leeft mee met de grootte (maat).
+function rrect(ctx, x, y, w, h, r) {
+  if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); return; }
+  ctx.beginPath(); ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+function formuleTexture(maat) {
+  const w = 512, h = 320;
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = "rgba(18,26,42,0.86)"; rrect(ctx, 10, 10, w - 20, h - 20, 30); ctx.fill();
+  ctx.lineWidth = 7; ctx.strokeStyle = "#ffe08a"; rrect(ctx, 10, 10, w - 20, h - 20, 30); ctx.stroke();
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  const v = Math.round((maat * maat * maat) / 3);
+  ctx.fillStyle = "#ffffff"; ctx.font = "700 34px system-ui";
+  ctx.fillText("inhoud van de piramide", w / 2, 56);
+  ctx.fillStyle = "#ffe08a"; ctx.font = "800 40px system-ui";
+  ctx.fillText("V = ⅓ × grondvlak × hoogte", w / 2, 122);
+  ctx.fillStyle = "#bfe0ff"; ctx.font = "700 38px system-ui";
+  ctx.fillText(`V = ⅓ × (${maat} × ${maat}) × ${maat}`, w / 2, 188);
+  ctx.fillStyle = "#ffffff"; ctx.font = "800 50px system-ui";
+  ctx.fillText(`V = ${v.toLocaleString("nl-NL")} m³`, w / 2, 258);
+  const t = new CanvasTexture(cv); t.anisotropy = 4; return t;
+}
+function labelTexture(tekst, kleur) {
+  const w = 384, h = 128;
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = "rgba(18,26,42,0.9)"; rrect(ctx, 8, 8, w - 16, h - 16, 26); ctx.fill();
+  ctx.lineWidth = 6; ctx.strokeStyle = kleur; rrect(ctx, 8, 8, w - 16, h - 16, 26); ctx.stroke();
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillStyle = kleur; ctx.font = "800 52px system-ui";
+  ctx.fillText(tekst, w / 2, h / 2 + 4);
+  const t = new CanvasTexture(cv); t.anisotropy = 4; return t;
+}
+// De 4 formule-panelen — één op elk schuin vlak (±X, ±Z), gekanteld langs de
+// helling (~29°) zodat de som ÓP de steen staat. Zelfde som op elke zijde, zodat
+// je 'm vanuit elke hoek leest.
+function FaceFormules({ maat }) {
+  const tex = useMemo(() => formuleTexture(maat), [maat]);
+  return [0, Math.PI / 2, Math.PI, -Math.PI / 2].map((ry, i) => (
+    <group key={i} rotation={[0, ry, 0]}>
+      <mesh position={[0, 1.28, 1.28]} rotation={[-0.513, 0, 0]}>
+        <planeGeometry args={[2.4, 1.5]} />
+        <meshBasicMaterial map={tex} transparent depthWrite={false} side={2} toneMapped={false} />
+      </mesh>
+    </group>
+  ));
+}
+// Maatlijnen: horizontale basis-lijn langs de voorrand + verticale hoogte-lijn
+// links-voor, elk met een live-label.
+function Maatlijnen({ maat }) {
+  const basisTex = useMemo(() => labelTexture(`basis = ${maat} m`, "#ffe08a"), [maat]);
+  const hoogteTex = useMemo(() => labelTexture(`hoogte = ${maat} m`, "#bfe0ff"), [maat]);
+  return (
+    <>
+      {/* basis (grondvlak-zijde) — horizontale maatlijn vóór de piramide */}
+      <mesh position={[0, 0.26, 2.0]}><boxGeometry args={[3.6, 0.07, 0.07]} /><meshBasicMaterial color="#ffe08a" toneMapped={false} /></mesh>
+      {[-1.8, 1.8].map((x, i) => <mesh key={i} position={[x, 0.26, 2.0]}><boxGeometry args={[0.07, 0.4, 0.07]} /><meshBasicMaterial color="#ffe08a" toneMapped={false} /></mesh>)}
+      <mesh position={[0, 0.7, 2.2]}><planeGeometry args={[1.7, 0.57]} /><meshBasicMaterial map={basisTex} transparent depthWrite={false} side={2} toneMapped={false} /></mesh>
+      {/* hoogte — verticale maatlijn links-voor, van basis tot top */}
+      <mesh position={[-2.35, 1.75, 1.4]}><boxGeometry args={[0.07, 3.2, 0.07]} /><meshBasicMaterial color="#bfe0ff" toneMapped={false} /></mesh>
+      {[0.15, 3.35].map((y, i) => <mesh key={i} position={[-2.35, y, 1.4]}><boxGeometry args={[0.4, 0.07, 0.07]} /><meshBasicMaterial color="#bfe0ff" toneMapped={false} /></mesh>)}
+      <mesh position={[-2.35, 1.9, 1.75]}><planeGeometry args={[1.5, 0.5]} /><meshBasicMaterial map={hoogteTex} transparent depthWrite={false} side={2} toneMapped={false} /></mesh>
+    </>
+  );
+}
+
+export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 8, onMaat, onOefenen, studie = false }) {
   const zand = "#e4cf9a";
   const steen = "#d8c08a";
   const steenDonker = "#b89b63";
@@ -471,6 +543,10 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
       {/* palmen op het plateau */}
       <Palm position={[-2.55, 0.12, 1.5]} rot={0.5} />
       <Palm position={[2.4, 0.12, -1.7]} rot={-0.7} />
+      {/* 📚 studie-stand: som op elke zijde + basis/hoogte-maatlijnen (alleen als
+          je vlakbij staat en de grootte-regelaar in beeld is) */}
+      {studie && <FaceFormules maat={maat} />}
+      {studie && <Maatlijnen maat={maat} />}
       </group>
     </group>
   );

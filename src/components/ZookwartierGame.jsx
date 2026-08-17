@@ -1322,6 +1322,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       else if (onOpenLeerpaden) onOpenLeerpaden();
     }, 1400);
   };
+  // 👁️ Studie-stand (Mark 17 aug): kom je bij een piramide en verschijnt de
+  // grootte-regelaar, kijk dan automatisch DOOR DE OGEN van je poppetje — dan
+  // lees je de som die op de vlakken staat van dichtbij. Loop je weg → we
+  // schakelen automatisch terug naar het normale beeld. `autoFP` onthoudt dat
+  // WÍJ het aanzetten, zodat een handmatige keuze niet wordt overruled én we
+  // netjes terugschakelen. Niet in bouw-/plaats-/andere-camera-standen.
+  const autoFP = useRef(false);
+  useEffect(() => {
+    const near = nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide";
+    if (near) {
+      if (!firstPerson && !bouwen && !placing && !sculptMode && !waterMode && !groundMode && !buddyEye && !rideTrain && !followCam && rideIdx == null && selectedIdx == null) {
+        setFirstPerson(true);
+        autoFP.current = true;
+      }
+    } else if (autoFP.current) {
+      autoFP.current = false;
+      setFirstPerson(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nabijePiramide]);
   // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
   useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
   // Park-zwerm 17 jul: bij het VERLATEN van het park (🏠 of leermoment-deeplink)
@@ -1404,6 +1424,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // Onboarding: een vers park (alleen het startpark, nog niets bijgekocht).
   const versPark = loaded && placedItems.length <= STARTER_LAYOUT.length;
 
+  // 🔺 De piramide waar de grootte-regelaar bij hoort: die je nadert (nabij) of
+  // die je hebt geselecteerd. Voedt zowel de +/- HUD als de studie-stand (som op
+  // de vlakken) en het automatisch door-de-ogen-kijken.
+  const pyrIdx = (nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide")
+    ? nabijePiramide
+    : (placedItems[selectedIdx]?.assetId === "piramide" ? selectedIdx : null);
+
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
       {/* 🔺 Piramide-regelaar — vaste HUD rechtsonder bij de duim (Mark 16 aug:
@@ -1411,9 +1438,6 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           dat het dan verschijnt"). Toont zich zodra je bij/naar een piramide
           staat (of hem aantikt); spiegelbeeld van de loop-joystick linksonder. */}
       {(() => {
-        const pyrIdx = (nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide")
-          ? nabijePiramide
-          : (placedItems[selectedIdx]?.assetId === "piramide" ? selectedIdx : null);
         if (pyrIdx == null) return null;
         return (
           <div style={{ position: "absolute", right: 14, bottom: 96, zIndex: 15, display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
@@ -1743,6 +1767,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onOefenen={(pid) => onOpenLeerpad && onOpenLeerpad(pid)}
           onNearPiramide={setNabijePiramide}
           onPoortDoor={onPoortDoor}
+          studiePiramideIdx={pyrIdx}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
