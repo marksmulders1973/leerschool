@@ -351,9 +351,9 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} maat={maat ?? 8} onMaat={onMaat} onOefenen={onOefenen} studie={studie} />;
   if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} maat={maat ?? 3} />;
-  if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "halvebol") return <HalveBol position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} maat={maat ?? 3} />;
+  if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} maat={maat ?? 3} />;
+  if (a.procedural === "halvebol") return <HalveBol position={[x, y, z]} rotation={rotation} maat={maat ?? 3} />;
   // 🎡 Interactief-park-masterplan (Mark 16-17 aug) — leerobjecten + poorten.
   if (a.procedural === "klok") return <Klokkentoren position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "weegschaal") return <Weegschaal position={[x, y, z]} rotation={rotation} />;

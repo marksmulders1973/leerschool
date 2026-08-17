@@ -157,11 +157,11 @@ export const ZOO_ASSETS = {
   kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 5, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
-  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3 },
+  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
   // ⚽ Grote bal + 🥅 halve bol (Mark 16 aug): inhoud van een bol (⁴⁄₃πr³) en
   // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
-  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3 },
-  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3 },
+  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
+  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn

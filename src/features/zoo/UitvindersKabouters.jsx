@@ -563,10 +563,27 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
   );
 }
 
+// Een rond cijfer-plaatje (wit schijfje + zwart cijfer) om ÓP de blokjes te
+// zetten zodat je de ribbe kunt aftellen (Mark 17 aug). Klein gecachet setje.
+const _cijferCache = {};
+function cijferTex(n) {
+  if (_cijferCache[n]) return _cijferCache[n];
+  const px = 72;
+  const cv = document.createElement("canvas"); cv.width = cv.height = px;
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = "rgba(255,255,255,0.95)"; ctx.beginPath(); ctx.arc(px / 2, px / 2, px * 0.42, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = "#1c2530"; ctx.lineWidth = 4; ctx.stroke();
+  ctx.fillStyle = "#1c2530"; ctx.font = "800 44px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText(String(n), px / 2, px / 2 + 3);
+  const t = new CanvasTexture(cv); t.anisotropy = 4;
+  _cijferCache[n] = t;
+  return t;
+}
+
 /* ── 🧊 Kleuren-kubus (Mark 17 aug) ─────────────────────────────────────────
-   Een grote 3D-kubus van 3×3×3 = 27 LOSSE blokjes, elk met een EIGEN kleur, zo
-   dat je ze kunt tellen: dat is de inhoud (ribbe × ribbe × ribbe). Iso-gekanteld
-   zodat je drie vlakken ziet, op een sokkel, met een zwevend inhoud-label. */
+   Een grote 3D-kubus van N×N×N LOSSE blokjes, elk met een EIGEN kleur, met de
+   ribbe genummerd (1..N) en de hele inhoud-som ernaast (N×N=…, ×N=…). Iso-
+   gekanteld op een sokkel; met +/- verander je de ribbe. */
 export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   // Manipuleerbaar (Mark 17 aug): met +/- verander je de ribbe N (2..5). Meer
   // ribbe = meer blokjes = meer inhoud (N³) — en dat telt live mee.
@@ -584,11 +601,22 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
     }
     return out;
   }, [N]);
-  const straal = ((N - 1) / 2) * gap + blok / 2;       // halve ribbe (schaalt met N)
+  const off = ((N - 1) / 2) * gap;
+  const straal = off + blok / 2;                       // halve ribbe (schaalt met N)
   const midY = straal + 1.3;                           // kubus zweeft net boven de sokkel
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <ZwevendeMaten y={midY + straal + 1.4} regels={["🧊 ribbe × ribbe × ribbe", `${N} × ${N} × ${N} = ${N * N * N} blokjes`, "= de inhoud"]} />
+      {/* 🧮 de hele inhoud-som in één keer (Mark 17 aug): tel de ribbe, dan één
+          laag, dan alle lagen — dat samen is de inhoud. */}
+      <Html position={[0, midY + straal + 1.6, 0]} center distanceFactor={13} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+        <div style={{ whiteSpace: "nowrap", padding: "9px 15px", borderRadius: 16, background: "rgba(18,26,42,0.9)", color: "#fff", fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)", border: "2px solid #ffe08a", textAlign: "center", lineHeight: 1.55 }}>
+          <div style={{ fontWeight: 800, fontSize: 14, color: "#ffe08a" }}>🧊 inhoud = tel de blokjes</div>
+          <div style={{ fontWeight: 700, fontSize: 14, color: "#bfe0ff" }}>ribbe = {N}</div>
+          <div style={{ fontWeight: 700, fontSize: 14 }}>{N} × {N} = {N * N} <span style={{ color: "#9fb3c8" }}>(één laag)</span></div>
+          <div style={{ fontWeight: 700, fontSize: 14 }}>{N * N} × {N} = {N * N * N}</div>
+          <div style={{ fontWeight: 900, fontSize: 16 }}>= {N * N * N} blokjes</div>
+        </div>
+      </Html>
       {/* sokkel (schaalt mee met de kubus) */}
       <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[straal + 0.35, straal + 0.55, 0.28, 8]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
       <mesh position={[0, 0.31, 0]}><cylinderGeometry args={[straal + 0.15, straal + 0.3, 0.06, 8]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
@@ -599,6 +627,13 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
             <boxGeometry args={[blok, blok, blok]} /><meshStandardMaterial color={b.c} flatShading roughness={0.5} metalness={0.04} />
           </mesh>
         ))}
+        {/* cijfers 1..N op de voor-onderrand — zo tel je de ribbe af */}
+        {Array.from({ length: N }, (_, k) => (
+          <mesh key={"cij" + k} position={[k * gap - off, -off, (N - 1) * gap - off + blok / 2 + 0.03]}>
+            <planeGeometry args={[blok * 0.72, blok * 0.72]} />
+            <meshBasicMaterial map={cijferTex(k + 1)} transparent depthWrite={false} toneMapped={false} />
+          </mesh>
+        ))}
       </group>
     </group>
   );
@@ -607,19 +642,26 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
 /* ── 🍦 Reuze-ijsje / kegel (Mark 16 aug) ──────────────────────────────────
    Een vrolijk reuze-ijsje: een waffel-kegel met twee bollen en een kers. Leidt
    naar de inhoud van een kegel (⅓·π·r²·h). */
-export function KegelIjsje({ position = [0, 0, 0], rotation = 0 }) {
+export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+  // Manipuleerbaar (Mark 17 aug): met +/- groter/kleiner. maat 3 = standaardmaat.
+  const m = Math.max(2, Math.min(6, Math.round(maat)));
+  const s = m / 1.5;
+  const vol = Math.round((1 / 3) * Math.PI * (0.6 * s) ** 2 * (1.5 * s));
   return (
-    <group position={position} rotation={[0, rotation, 0]} scale={2}>
-      {/* houder */}
-      <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[0.34, 0.44, 0.28, 12]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.85} /></mesh>
-      {/* waffel-kegel (punt omlaag) */}
-      <mesh position={[0, 1.0, 0]} rotation={[Math.PI, 0, 0]} castShadow><coneGeometry args={[0.6, 1.5, 18]} /><meshStandardMaterial color="#d9a55a" flatShading roughness={0.9} /></mesh>
-      {/* bollen ijs */}
-      <mesh position={[0, 1.85, 0]} castShadow><sphereGeometry args={[0.62, 16, 14]} /><meshStandardMaterial color="#f7b7c8" flatShading roughness={0.6} /></mesh>
-      <mesh position={[0, 2.45, 0]} castShadow><sphereGeometry args={[0.5, 16, 14]} /><meshStandardMaterial color="#b7e4c7" flatShading roughness={0.6} /></mesh>
-      {/* kers */}
-      <mesh position={[0, 2.95, 0]} castShadow><sphereGeometry args={[0.16, 10, 10]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.4} /></mesh>
-      <mesh position={[0.02, 3.12, 0]} rotation={[0, 0, 0.3]}><cylinderGeometry args={[0.02, 0.02, 0.22, 5]} /><meshStandardMaterial color="#5a8a3a" flatShading /></mesh>
+    <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={m * 2.2 + 1.5} regels={["🍦 het hoorntje is een kegel", "V = ⅓ × π × r² × h", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <group scale={s}>
+        {/* houder */}
+        <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[0.34, 0.44, 0.28, 12]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.85} /></mesh>
+        {/* waffel-kegel (punt omlaag) */}
+        <mesh position={[0, 1.0, 0]} rotation={[Math.PI, 0, 0]} castShadow><coneGeometry args={[0.6, 1.5, 18]} /><meshStandardMaterial color="#d9a55a" flatShading roughness={0.9} /></mesh>
+        {/* bollen ijs */}
+        <mesh position={[0, 1.85, 0]} castShadow><sphereGeometry args={[0.62, 16, 14]} /><meshStandardMaterial color="#f7b7c8" flatShading roughness={0.6} /></mesh>
+        <mesh position={[0, 2.45, 0]} castShadow><sphereGeometry args={[0.5, 16, 14]} /><meshStandardMaterial color="#b7e4c7" flatShading roughness={0.6} /></mesh>
+        {/* kers */}
+        <mesh position={[0, 2.95, 0]} castShadow><sphereGeometry args={[0.16, 10, 10]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.4} /></mesh>
+        <mesh position={[0.02, 3.12, 0]} rotation={[0, 0, 0.3]}><cylinderGeometry args={[0.02, 0.02, 0.22, 5]} /><meshStandardMaterial color="#5a8a3a" flatShading /></mesh>
+      </group>
     </group>
   );
 }
@@ -635,29 +677,41 @@ function VoetbalPatches({ r }) {
   ));
 }
 
-export function GroteBal({ position = [0, 0, 0], rotation = 0 }) {
+export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   const r = 1.05;
+  // Manipuleerbaar (Mark 17 aug): maat = straal (m). V = 4/3 × π × r³.
+  const m = Math.max(2, Math.min(6, Math.round(maat)));
+  const vol = Math.round((4 / 3) * Math.PI * m * m * m);
   return (
-    <group position={position} rotation={[0, rotation, 0]} scale={2}>
-      <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
-      <group position={[0, 0.28 + r, 0]}>
-        <mesh castShadow><sphereGeometry args={[r, 24, 20]} /><meshStandardMaterial color="#f5f5f5" flatShading roughness={0.5} /></mesh>
-        <VoetbalPatches r={r} />
+    <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={m * 2.4 + 0.5} regels={[`📏 straal ${m} m`, "V = 4/3 × π × r³", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <group scale={m / r}>
+        <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
+        <group position={[0, 0.28 + r, 0]}>
+          <mesh castShadow><sphereGeometry args={[r, 24, 20]} /><meshStandardMaterial color="#f5f5f5" flatShading roughness={0.5} /></mesh>
+          <VoetbalPatches r={r} />
+        </group>
       </group>
     </group>
   );
 }
 
-export function HalveBol({ position = [0, 0, 0], rotation = 0 }) {
+export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   const r = 1.15;
+  // Manipuleerbaar (Mark 17 aug): maat = straal (m). V = ⅔ × π × r³ (halve bol).
+  const m = Math.max(2, Math.min(6, Math.round(maat)));
+  const vol = Math.round((2 / 3) * Math.PI * m * m * m);
   return (
-    <group position={position} rotation={[0, rotation, 0]} scale={2}>
-      <mesh position={[0, 0.09, 0]} receiveShadow><cylinderGeometry args={[r + 0.15, r + 0.25, 0.16, 20]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
-      {/* koepel = bovenste helft van een bol (phi 0..π/2) */}
-      <mesh position={[0, 0.17, 0]} castShadow>
-        <sphereGeometry args={[r, 24, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
-        <meshStandardMaterial color="#5b8def" flatShading roughness={0.5} side={2} />
-      </mesh>
+    <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={m * 1.6 + 1.5} regels={[`📏 straal ${m} m`, "V = ⅔ × π × r³", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <group scale={m / r}>
+        <mesh position={[0, 0.09, 0]} receiveShadow><cylinderGeometry args={[r + 0.15, r + 0.25, 0.16, 20]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
+        {/* koepel = bovenste helft van een bol (phi 0..π/2) */}
+        <mesh position={[0, 0.17, 0]} castShadow>
+          <sphereGeometry args={[r, 24, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <meshStandardMaterial color="#5b8def" flatShading roughness={0.5} side={2} />
+        </mesh>
+      </group>
     </group>
   );
 }
