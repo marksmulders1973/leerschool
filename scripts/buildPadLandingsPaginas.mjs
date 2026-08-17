@@ -17,6 +17,42 @@
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
+import esbuild from "esbuild";
+
+// Sommige leerpaden importeren een interactief 3D/React-component (.jsx) — dat is
+// nodig voor de app, maar niet voor de crawlbare HTML. Node kan .jsx niet direct
+// importeren (en die componenten draaien browser-code), dus die paden werden
+// geskipt. Fix: op een import-fout bundelen we met esbuild en STUBBEN we elke
+// .jsx/asset-import naar een onschuldige, chainbare no-op — zo laden we de échte
+// pad-data (stappen/uitleg/checks) zonder de browser-componenten uit te voeren.
+const stubJsx = {
+  name: "stub-jsx-assets",
+  setup(build) {
+    build.onResolve({ filter: /\.(jsx|tsx|css|svg|png|jpe?g|glb|gltf|webp)$/ }, (args) => ({ path: args.path, namespace: "stub" }));
+    build.onLoad({ filter: /.*/, namespace: "stub" }, () => ({
+      // Chainbare no-op (retourneert altijd zichzelf → crasht nooit als een pad de
+      // component top-level aanroept, bv. interactiveComponent). De named factory-
+      // exports die leerpaden gebruiken moeten OWN enumerable keys zijn, anders
+      // kopieert esbuild ze niet naar de namespace. Volledige set uit src/learnPaths:
+      // default-imports (Wereldbol/ruimtemeetkunde/…) + named makeRekenOefenRonde/maakFotoStrook.
+      contents: "const c=new Proxy(function(){},{get:()=>c,apply:()=>c});const f=()=>c;module.exports={makeRekenOefenRonde:f,maakFotoStrook:f,default:c};",
+      loader: "js",
+    }));
+  },
+};
+async function laadPadData(absPath) {
+  try {
+    const mod = await import(pathToFileURL(absPath).href);
+    if (mod.default?.id) return mod.default;
+  } catch { /* val terug op esbuild-bundel met .jsx-stub */ }
+  const res = await esbuild.build({
+    entryPoints: [absPath], bundle: true, format: "esm", platform: "node",
+    write: false, plugins: [stubJsx], logLevel: "silent",
+  });
+  const code = res.outputFiles[0].text;
+  const mod = await import("data:text/javascript;base64," + Buffer.from(code).toString("base64"));
+  return mod.default;
+}
 
 const SRC = "src/learnPaths";
 const OUT = "public/leerpad";
@@ -282,8 +318,7 @@ async function main() {
     }
     let pathData;
     try {
-      const mod = await import(pathToFileURL(join(process.cwd(), path)).href);
-      pathData = mod.default;
+      pathData = await laadPadData(join(process.cwd(), path));
     } catch (err) {
       console.warn(`[skip] ${file}: ${err.message}`);
       skip++;
