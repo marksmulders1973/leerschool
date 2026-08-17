@@ -154,14 +154,14 @@ export const ZOO_ASSETS = {
   piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
-  kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55, botsCells: 1 },
+  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3 },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
-  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, botsCells: 1 },
+  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3 },
   // ⚽ Grote bal + 🥅 halve bol (Mark 16 aug): inhoud van een bol (⁴⁄₃πr³) en
   // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
-  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, botsCells: 1 },
-  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, botsCells: 1 },
+  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3 },
+  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn

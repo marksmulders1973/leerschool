@@ -105,22 +105,23 @@ function bouwVoorbeeldPark() {
   //    omheen loopt en hem tot maat 11 kunt laten groeien). De vormen + de
   //    meet-objecten staan overzichtelijk in een aparte tuin er ten noorden van,
   //    in twee ruime rijen ver uit elkaar. ──
-  // het RUIME piramide-plein — de piramide is nu 3× zo groot (Mark 17 aug), dus
-  // ook 3× zoveel pad eromheen: hij staat in z'n eentje op een groot open plein,
-  // helemaal op de westflank (de meetkunde-tuin schuift naar het noorden).
-  vlak("pathStone", -40, -19, -18, 2);
-  add("piramide", -29, -8);
-  add("treePalm", -40, -18); add("treePalm", -20, -18);
-  add("bankje", -39, 1); add("bankje", -20, 1);
-  add("flowerPurple", -40, 2); add("flowerYellow", -20, 2);
+  // 📐 MEETKUNDE-WERELD op de westflank (Mark 17 aug: "maak het plein veel groter,
+  // maak de rest ook zo"). De 3× piramide + de nu 2× grote vormen, alles ruim.
+  // ── het GROTE piramide-plein (veel groter) — de piramide staat er helemaal alleen
+  vlak("pathStone", -40, -18, -24, 3);
+  add("piramide", -29, -10);
+  add("treePalm", -40, -24); add("treePalm", -19, -24);
+  add("bankje", -39, 2); add("bankje", -20, 2);
+  add("flowerPurple", -40, 3); add("flowerYellow", -19, 3);
   // verbindingspad door de opening tussen de twee linker-verblijven naar het centrum
   rij("pathStone", 0, -26, -3);
-  // de meetkunde-tuin ten NOORDEN van het plein: vormen-rij + meet-rij, ver uit elkaar
-  vlak("pathStone", -40, -20, 4, 15);
-  add("kubus", -38, 7); add("kegel", -33, 7); add("bol", -28, 7); add("halvebol", -23, 7);
-  add("klok", -38, 11); add("weegschaal", -33, 11); add("breukentaart", -28, 11); add("moestuin", -23, 11);
-  add("telraam", -35, 15); add("parkkaart", -28, 15);
-  add("bankje", -22, 14); add("flowerRed", -40, 15);
+  // ── de vormen-tuin ten NOORDEN: elke vorm veel ruimte (vormen zijn nu ~2× groot)
+  vlak("pathStone", -40, -18, 5, 20);
+  add("kubus", -35, 8);   add("kegel", -23, 8);
+  add("bol", -35, 15);    add("halvebol", -23, 15);
+  add("telraam", -29, 8); add("parkkaart", -29, 15);
+  add("klok", -38, 20); add("weegschaal", -32, 20); add("breukentaart", -26, 20); add("moestuin", -20, 20);
+  add("flowerRed", -40, 20); add("bankje", -29, 19);
 
   // ── 🎡 ONTDEK-LAAN (Mark 16-17 aug 2026): de landmark-blikvangers met magische
   //    poorten uit het masterplan. Loop je door zo'n poort → het leerpad opent.

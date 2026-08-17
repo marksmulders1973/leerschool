@@ -563,26 +563,35 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
   );
 }
 
-/* ── 🧊 Rubik-kubus kunstwerk (Mark 16 aug) ────────────────────────────────
-   Kleurrijke 3×3×3-kubus, licht gekanteld op een sokkel — een blikvanger die
-   naar de inhoud van een kubus (ribbe³) leidt. */
+/* ── 🧊 Kleuren-kubus (Mark 17 aug) ─────────────────────────────────────────
+   Een grote 3D-kubus van 3×3×3 = 27 LOSSE blokjes, elk met een EIGEN kleur, zo
+   dat je ze kunt tellen: dat is de inhoud (ribbe × ribbe × ribbe). Iso-gekanteld
+   zodat je drie vlakken ziet, op een sokkel, met een zwevend inhoud-label. */
 export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
-  const kleuren = ["#e23b32", "#2e9e4f", "#2e5fc0", "#f5f5f5", "#ff8a1e", "#f2d024"];
-  const s = 0.42, gap = 0.46;
-  const cubes = [];
-  for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++) {
-    cubes.push([x, y, z, kleuren[(x + 2 * y + z + 12) % 6]]);
-  }
+  const N = 3, blok = 1.0, gap = 1.15;         // ~3,3 m ribbe = flinke blikvanger
+  const blokken = useMemo(() => {
+    const out = [];
+    const off = ((N - 1) / 2) * gap;
+    const totaal = N * N * N;
+    let i = 0;
+    for (let x = 0; x < N; x++) for (let y = 0; y < N; y++) for (let z = 0; z < N; z++) {
+      const hue = Math.round((i / totaal) * 360);   // elk blokje een eigen kleur
+      out.push({ p: [x * gap - off, y * gap - off, z * gap - off], c: `hsl(${hue},68%,56%)` });
+      i++;
+    }
+    return out;
+  }, []);
   return (
     <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={4.7} regels={["🧊 ribbe × ribbe × ribbe", "3 × 3 × 3 = 27 blokjes", "= de inhoud"]} />
       {/* sokkel */}
-      <mesh position={[0, 0.09, 0]} castShadow receiveShadow><cylinderGeometry args={[0.72, 0.82, 0.18, 6]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
-      <mesh position={[0, 0.2, 0]}><cylinderGeometry args={[0.6, 0.66, 0.06, 6]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
-      {/* gekantelde Rubik-kubus als kunstwerk */}
-      <group position={[0, 1.2, 0]} rotation={[0.5, 0.7, 0.18]}>
-        {cubes.map(([x, y, z, c], i) => (
-          <mesh key={i} position={[x * gap, y * gap, z * gap]} castShadow>
-            <boxGeometry args={[s, s, s]} /><meshStandardMaterial color={c} flatShading roughness={0.45} metalness={0.05} />
+      <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[1.5, 1.75, 0.28, 8]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.31, 0]}><cylinderGeometry args={[1.3, 1.45, 0.06, 8]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
+      {/* de kleuren-kubus, iso-gekanteld zodat je 3 vlakken ziet en kunt tellen */}
+      <group position={[0, 2.4, 0]} rotation={[0.42, 0.62, 0]}>
+        {blokken.map((b, i) => (
+          <mesh key={i} position={b.p} castShadow>
+            <boxGeometry args={[blok, blok, blok]} /><meshStandardMaterial color={b.c} flatShading roughness={0.5} metalness={0.04} />
           </mesh>
         ))}
       </group>
@@ -595,7 +604,7 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
    naar de inhoud van een kegel (⅓·π·r²·h). */
 export function KegelIjsje({ position = [0, 0, 0], rotation = 0 }) {
   return (
-    <group position={position} rotation={[0, rotation, 0]}>
+    <group position={position} rotation={[0, rotation, 0]} scale={2}>
       {/* houder */}
       <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[0.34, 0.44, 0.28, 12]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.85} /></mesh>
       {/* waffel-kegel (punt omlaag) */}
@@ -624,7 +633,7 @@ function VoetbalPatches({ r }) {
 export function GroteBal({ position = [0, 0, 0], rotation = 0 }) {
   const r = 1.05;
   return (
-    <group position={position} rotation={[0, rotation, 0]}>
+    <group position={position} rotation={[0, rotation, 0]} scale={2}>
       <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
       <group position={[0, 0.28 + r, 0]}>
         <mesh castShadow><sphereGeometry args={[r, 24, 20]} /><meshStandardMaterial color="#f5f5f5" flatShading roughness={0.5} /></mesh>
@@ -637,7 +646,7 @@ export function GroteBal({ position = [0, 0, 0], rotation = 0 }) {
 export function HalveBol({ position = [0, 0, 0], rotation = 0 }) {
   const r = 1.15;
   return (
-    <group position={position} rotation={[0, rotation, 0]}>
+    <group position={position} rotation={[0, rotation, 0]} scale={2}>
       <mesh position={[0, 0.09, 0]} receiveShadow><cylinderGeometry args={[r + 0.15, r + 0.25, 0.16, 20]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
       {/* koepel = bovenste helft van een bol (phi 0..π/2) */}
       <mesh position={[0, 0.17, 0]} castShadow>
