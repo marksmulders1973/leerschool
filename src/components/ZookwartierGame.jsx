@@ -1850,7 +1850,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {COARSE_POINTER && !firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
       {/* 🐾 Eenmalige maatje-tip: "je kunt hier zélf bouwen!" met snelknop. */}
-      {bouwTip && !menuOpen && !placing && !dialoog && (
+      {bouwTip && !menuOpen && !placing && !dialoog && pyrIdx == null && (
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(420px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
@@ -1863,7 +1863,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 📚 Leer-invite: het maatje maakt van het park actief een brug naar
           leren — met muntjes-beloning als motief (P1 dagrapport 18 jul). */}
-      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && (
+      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && pyrIdx == null && (
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
@@ -1884,7 +1884,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 💬 Dagelijks kennismakings-vraagje: het maatje leert je écht kennen.
           Antwoord blijft lokaal op het apparaat (geen adres/school gevraagd). */}
-      {buddyVraag && !bouwTip && !menuOpen && !placing && !dialoog && !(versPark && !welkomWeg) && (
+      {buddyVraag && !bouwTip && !menuOpen && !placing && !dialoog && !(versPark && !welkomWeg) && pyrIdx == null && (
         <div style={{ position: "absolute", left: "50%", ...(COARSE_POINTER ? { top: 66 } : { bottom: bouwen ? 170 : 24 }), transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: "1 1 140px", font: "700 13.5px/1.4 system-ui", color: "#234" }}>
@@ -1910,7 +1910,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <button
           onClick={() => setZweef((v) => !v)}
           title={zweef ? "Weer lopen (of druk spatie)" : "Zweven — snel door je park (of druk spatie)"}
-          style={{ position: "absolute", right: 16, bottom: 150, zIndex: 12, border: zweef ? "3px solid #fff" : "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: zweef ? "linear-gradient(135deg,#38bdf8,#2563eb)" : "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer" }}
+          // Staat de grootte-regelaar rechtsonder (bij een leer-vorm)? Schuif de
+          // lopen/zweven-knop dan omhoog zodat die niet onder de +/- verdwijnt
+          // (Mark 17 aug: "de plus en min staat voor lopen/vliegen").
+          style={{ position: "absolute", right: 16, bottom: pyrIdx != null ? 240 : 150, zIndex: 16, border: zweef ? "3px solid #fff" : "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: zweef ? "linear-gradient(135deg,#38bdf8,#2563eb)" : "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer" }}
         >
           {zweef ? "🚶" : "🪽"}
         </button>
