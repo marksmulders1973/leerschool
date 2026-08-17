@@ -166,6 +166,39 @@ function maakRekenVraag(kraam) {
   return { vraag, antwoord, opties, emoji: kraam?.emoji || "🧮" };
 }
 
+// 🧮 Reken-vraag bij een 3D-leer-vorm (piramide/kubus/bol/kegel/koepel), met de
+// HUIDIGE maat van de vorm. Kern = het schaal-inzicht (Mark 17 aug, "leren >
+// leuk"): maak je 'm 2× zo groot, dan past er 8× zoveel in (niet 2×!). Dat werkt
+// voor élke vorm — inhoud = lengte × breedte × hoogte, dus ×k → ×k³. Dat kun je
+// alleen in een interactief park écht voelen; op papier blijft het abstract.
+const VORM_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
+function maakVormVraag(assetId, maat) {
+  const woord = VORM_WOORD[assetId] || "vorm";
+  const m = Math.max(2, Math.min(6, Math.round(maat || 3)));
+  // Kubus: soms de concrete telsom met échte hele getallen (groep 7-8) — laag
+  // voor laag tellen. Zo zie je dat inhoud = ribbe × ribbe × ribbe.
+  if (assetId === "kubus" && Math.random() < 0.5) {
+    const antwoord = m * m * m;
+    const opties = [antwoord, m * m, m * m * 2].sort(() => Math.random() - 0.5);
+    return {
+      vraag: `Deze kubus heeft een ribbe van ${m} m. Hoeveel blokjes van 1 m³ passen erin?`,
+      antwoord, opties, eenheid: "m³", emoji: "🧊", vorm: true,
+      onthulling: `Reken laag voor laag: ${m} × ${m} = ${m * m} blokjes in één laag, en ${m} lagen → ${m * m} × ${m} = ${antwoord} blokjes.`,
+    };
+  }
+  // Universeel schaal-inzicht (geen π nodig): elke maat ×k → inhoud ×k³. De
+  // afleiders k (lineair) en k² (oppervlakte) zijn precies de klassieke denk-
+  // fouten — kiezen tussen 2/4/8 maakt het inzicht scherp.
+  const k = 2 + Math.floor(Math.random() * 2);   // 2 of 3
+  const antwoord = k * k * k;                     // 8 of 27
+  const opties = [k, k * k, k * k * k].sort(() => Math.random() - 0.5);
+  return {
+    vraag: `Je maakt deze ${woord} ${k}× zo groot (elke maat keer ${k}). Hoeveel KEER zoveel past er dan in?`,
+    antwoord, opties, eenheid: "×", emoji: "📐", vorm: true,
+    onthulling: `Elke maat wordt ${k}× zo lang, maar inhoud = lengte × breedte × hoogte. Dus ${k} × ${k} × ${k} = ${antwoord}× zoveel! Zo groeit de inhoud veel sneller dan de lengte.`,
+  };
+}
+
 // Winkel: alles plaatsbaar, opgebouwd uit de AssetRegistry, per categorie.
 const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.emoji, label: a.name, price: a.price, kind: a.kind }; };
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
@@ -410,6 +443,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const rekenVraagNr = useRef(0);                         // telt sommen → eigen chat per som
   const rekenBonusRef = useRef(0);                        // session-cap op de muntjesbonus
   const [rekenBonusGegeven, setRekenBonusGegeven] = useState(true); // kreeg dit antwoord echt de bonus? (cap-eerlijkheid)
+  const [vormVraagIdx, setVormVraagIdx] = useState(null); // 🧮 index van de 3D-vorm waar de reken-vraag bij hoort
   const [terrain, setTerrain] = useState(null);          // hoogteveld van de vloer
   const [sculptMode, setSculptMode] = useState(false);   // vloer boetseren
   const [sculptDir, setSculptDir] = useState(1);         // +1 omhoog, -1 omlaag
@@ -1402,11 +1436,25 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     rekenVraagNr.current += 1; // nieuwe som → eigen (leeg) hulp-gesprek
     try { track("park_rekenvraag"); } catch { /* nooit laten breken */ }
   };
+  // 🧮 Reken-vraag openen bij een 3D-leer-vorm (piramide/kubus/bol/kegel/koepel)
+  // bij de HUIDIGE maat. Hergebruikt dezelfde modal + maatje-hulp als de kramen.
+  const openVormVraag = (idx) => {
+    const it = placedItems[idx];
+    if (!it) return;
+    setVormVraagIdx(idx);
+    setRekenVraag(maakVormVraag(it.assetId, it.maat));
+    setRekenUitslag(null);
+    setRekenFout(null);
+    setRekenHulpOpen(false);
+    setRekenPogingen(0);
+    rekenVraagNr.current += 1;
+    try { track("park_vormvraag", { vorm: it.assetId }); } catch { /* nooit laten breken */ }
+  };
   const beantwoordReken = (optie) => {
     if (!rekenVraag || rekenUitslag === "goed") return;
     if (optie === rekenVraag.antwoord) {
       setRekenUitslag("goed");
-      try { track("park_rekenvraag_goed"); } catch { /* niet laten breken */ }
+      try { track(rekenVraag.vorm ? "park_vormvraag_goed" : "park_rekenvraag_goed"); } catch { /* niet laten breken */ }
       // Bug-jacht 7/7: vastleggen óf de bonus is uitgekeerd — de succes-tekst
       // beloofde anders "+2 🪙" terwijl de cap al bereikt was.
       // Anti-gok (review 17 jul): met 3 opties en onbeperkt proberen loonde
@@ -1464,6 +1512,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         if (pyrIdx == null) return null;
         return (
           <div style={{ position: "absolute", right: 14, bottom: 96, zIndex: 15, display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
+            {/* 🧮 Reken-vraag over DEZE vorm bij z'n huidige maat (Mark 17 aug:
+                "van tonen → laten rekenen"). Kern = het schaal-inzicht 2×→8×. */}
+            <button onClick={() => openVormVraag(pyrIdx)} style={{ border: "2px solid #cfe0ff", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🧮 Reken mee →</button>
             <button onClick={() => onOpenLeerpad && onOpenLeerpad(pyrLeerpad)} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
             {/* 📏/🔄 Wissel: bepaalt of de +/- vergroot/verkleint óf draait
                 (Mark 17 aug: "als je 'm kunt draaien weet je echt hoe 't zit"). */}
@@ -2365,7 +2416,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                     disabled={dicht}
                     style={{ flex: "1 1 28%", border: "none", borderRadius: 14, padding: "14px 8px", font: "900 18px system-ui", color: goedGekozen ? "#fff" : "#234", background: goedGekozen ? "#2e9e4f" : "rgba(0,0,0,0.05)", boxShadow: "0 2px 6px rgba(0,0,0,.12)", cursor: dicht ? "default" : "pointer", opacity: opSlot ? 0.55 : 1 }}
                   >
-                    {opt} 🪙
+                    {opt}{rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || "🪙"}`}
                   </button>
                 );
               })}
@@ -2390,14 +2441,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {rekenUitslag === "goed" && (
               <div style={{ marginTop: 12 }}>
                 <p style={{ margin: "0 0 6px", font: "800 14px system-ui", color: "#1f7a3a", textAlign: "center" }}>Goed gerekend! {rekenBonusGegeven ? `+${REKEN_BONUS} 🪙` : (rekenPogingen > 0 ? "(muntjes verdien je als het in één keer goed is — die pak je bij de volgende som!)" : "(muntjes-maximum van vandaag bereikt — knap dat je dóórrekent!)")} 🎉</p>
+                {/* 💡 De aha bij een vorm-vraag: waaróm inhoud zo snel groeit. Dit is
+                    het hoofdpunt (Mark 17 aug) — het inzicht, niet alleen het cijfer. */}
+                {rekenVraag.onthulling && (
+                  <div style={{ margin: "0 0 10px", background: "linear-gradient(135deg,#fff6da,#ffe9ad)", border: "2px solid #ffd566", borderRadius: 12, padding: "10px 13px", font: "700 12.5px/1.5 system-ui", color: "#6b4e00" }}>💡 {rekenVraag.onthulling}</div>
+                )}
                 {/* Park→leren-brug (Titan 2026-06-29): koppel leren aan de munt-economie
                     die het kind al motiveert. Leren 15 min geeft echt extra munten
                     (kwartier_reached → zooEconomy). Zo voedt het park het leren i.p.v.
                     het op te eten — park_naar_leren was 2 vs 17 goede rekenvragen. */}
                 <p style={{ margin: "0 0 10px", font: "600 12.5px/1.45 system-ui", color: "#5a6b50", textAlign: "center" }}>💡 Goed in rekenen? Verdien <b>véél meer 🪙 munten</b> met een echt leerkwartier — <b>leren = munten voor je park!</b></p>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
-                  <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nog een vraag</button>
-                  <button onClick={() => { try { track("park_rekenvraag_naar_leren"); } catch {} setRekenVraag(null); gaOefenen(); }} style={{ border: "none", borderRadius: 999, padding: "11px 20px", font: "900 14.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 12px rgba(46,158,79,.4)", cursor: "pointer" }}>▶ Verdien 🪙 — start een leerkwartier</button>
+                  <button onClick={() => rekenVraag.vorm ? openVormVraag(vormVraagIdx) : openRekenVraag()} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nog een vraag</button>
+                  <button onClick={() => { try { track("park_rekenvraag_naar_leren"); } catch {} setRekenVraag(null); if (rekenVraag.vorm) { onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde"); } else { gaOefenen(); } }} style={{ border: "none", borderRadius: 999, padding: "11px 20px", font: "900 14.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 12px rgba(46,158,79,.4)", cursor: "pointer" }}>▶ Verdien 🪙 — start een leerkwartier</button>
                 </div>
               </div>
             )}
@@ -2501,11 +2557,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             onClose={() => setRekenHulpOpen(false)}
             pathTitle="Rekenen in je park"
             pathId="park-rekenvraag"
-            stepTitle="Reken-vraag bij je kraampje"
+            stepTitle={rekenVraag.vorm ? "Reken-vraag bij een 3D-vorm" : "Reken-vraag bij je kraampje"}
             stepIdx={rekenVraagNr.current}
-            stepExplanation={`De leerling runt een kraampje in een dierentuin-spel en krijgt een reken-vraag over kopen en verkopen. Handige begrippen: winst per stuk = verkoopprijs min inkoopprijs; totale winst = aantal keer winst per stuk; omzet = aantal keer verkoopprijs. Help stap voor stap, in taal voor een kind van ~10.`}
-            currentCheck={{ q: rekenVraag.vraag, options: rekenVraag.opties.map((o) => `${o} muntjes`) }}
-            lastWrongAnswer={rekenFout != null ? `${rekenFout} muntjes` : undefined}
+            stepExplanation={rekenVraag.vorm
+              ? `De leerling speelt met een 3D-vorm in een park en krijgt een reken-vraag over de inhoud (ruimte). Kern-inzicht: inhoud = lengte × breedte × hoogte, dus als je een vorm k× zo groot maakt, wordt de inhoud k × k × k = k³ keer zo groot (2× → 8×, 3× → 27×). Bij een kubus: inhoud = ribbe × ribbe × ribbe, laag voor laag tellen. Help stap voor stap met denkprikkels, nooit het antwoord meteen, in taal voor een kind van ~10.`
+              : `De leerling runt een kraampje in een dierentuin-spel en krijgt een reken-vraag over kopen en verkopen. Handige begrippen: winst per stuk = verkoopprijs min inkoopprijs; totale winst = aantal keer winst per stuk; omzet = aantal keer verkoopprijs. Help stap voor stap, in taal voor een kind van ~10.`}
+            currentCheck={{ q: rekenVraag.vraag, options: rekenVraag.opties.map((o) => rekenVraag.vorm ? `${o}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${o} muntjes`) }}
+            lastWrongAnswer={rekenFout != null ? (rekenVraag.vorm ? `${rekenFout}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${rekenFout} muntjes`) : undefined}
           />
         </Suspense>
       )}
