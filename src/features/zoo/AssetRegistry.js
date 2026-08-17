@@ -148,29 +148,29 @@ export const ZOO_ASSETS = {
   // cells:7 reserveert de footprint van de MAX-grootte (Mark 17 aug): de piramide
   // schaalt visueel mee met "maat" (tot ~2,5×), dus hij moet ook méér raster-
   // vakjes vrijhouden — anders verdringt hij bij uitzetten de buur-vormen.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 7 },
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 7, botsCells: 3 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
-  kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55 },
+  kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55, botsCells: 1 },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
-  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50 },
+  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, botsCells: 1 },
   // ⚽ Grote bal + 🥅 halve bol (Mark 16 aug): inhoud van een bol (⁴⁄₃πr³) en
   // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
-  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45 },
-  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45 },
+  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, botsCells: 1 },
+  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, botsCells: 1 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn
   // buren verdringt (Mark: "bij plaatsing hou rekening met maximale grootte").
   // Componenten in ParkLeerobjecten.jsx; leermomenten in parkLeermomenten.js.
   // ── Tier A: manipuleerbaar / levend ──
-  klok: { id: "klok", kind: "attraction", name: "Klokkentoren", emoji: "🕐", procedural: "klok", price: 55, cells: 3 },
-  weegschaal: { id: "weegschaal", kind: "attraction", name: "Weegschaal", emoji: "⚖️", procedural: "weegschaal", price: 45, cells: 3 },
-  breukentaart: { id: "breukentaart", kind: "attraction", name: "Breuken-taart", emoji: "🍰", procedural: "breukentaart", price: 40, cells: 3 },
-  moestuin: { id: "moestuin", kind: "attraction", name: "Oppervlakte-moestuin", emoji: "🥕", procedural: "moestuin", price: 40, cells: 3 },
-  telraam: { id: "telraam", kind: "attraction", name: "Telraam", emoji: "🧮", procedural: "telraam", price: 40, cells: 3 },
-  parkkaart: { id: "parkkaart", kind: "attraction", name: "Park-plattegrond", emoji: "🗺️", procedural: "parkkaart", price: 35, cells: 3 },
+  klok: { id: "klok", kind: "attraction", name: "Klokkentoren", emoji: "🕐", procedural: "klok", price: 55, cells: 3, botsCells: 1 },
+  weegschaal: { id: "weegschaal", kind: "attraction", name: "Weegschaal", emoji: "⚖️", procedural: "weegschaal", price: 45, cells: 3, botsCells: 1 },
+  breukentaart: { id: "breukentaart", kind: "attraction", name: "Breuken-taart", emoji: "🍰", procedural: "breukentaart", price: 40, cells: 3, botsCells: 1 },
+  moestuin: { id: "moestuin", kind: "attraction", name: "Oppervlakte-moestuin", emoji: "🥕", procedural: "moestuin", price: 40, cells: 3, botsCells: 1 },
+  telraam: { id: "telraam", kind: "attraction", name: "Telraam", emoji: "🧮", procedural: "telraam", price: 40, cells: 3, botsCells: 1 },
+  parkkaart: { id: "parkkaart", kind: "attraction", name: "Park-plattegrond", emoji: "🗺️", procedural: "parkkaart", price: 35, cells: 3, botsCells: 1 },
   // ── Tier B: landmark + magische poort ──
   kompas: { id: "kompas", kind: "attraction", name: "Kompas", emoji: "🧭", procedural: "kompas", price: 45, cells: 3 },
   eiffeltoren: { id: "eiffeltoren", kind: "attraction", name: "Eiffeltoren", emoji: "🗼", procedural: "eiffeltoren", price: 90, cells: 3 },
@@ -283,6 +283,18 @@ export function cellsVan(id) {
   if (a.cells) return a.cells;
   if (a.kind === "animal") return 1;
   return 3;
+}
+
+// Botsing-footprint = waar de speler écht tegenaan loopt. Meestal = cellsVan,
+// maar de grote leerobjecten reserveren bij PLAATSING veel ruimte (cellsVan,
+// zodat ze elkaar niet overlappen) terwijl hun échte body veel kleiner is. Dan
+// zou de speler op een enorm onzichtbaar vlak botsen (Mark 17 aug: "alles voelt
+// krap, ik loop tegen de bal"). `botsCells` maakt de botsing klein zodat je er
+// dichtbij kunt komen om de som op de vlakken te lezen. Placement blijft ruim.
+export function botsCellsVan(id) {
+  const a = ZOO_ASSETS[id];
+  if (a && a.botsCells != null) return a.botsCells;
+  return cellsVan(id);
 }
 
 export function getAsset(id) {

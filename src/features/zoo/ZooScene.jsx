@@ -10,7 +10,7 @@ import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, T
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
-import { getAsset, cellsVan, isBlok } from "./AssetRegistry";
+import { getAsset, cellsVan, botsCellsVan, isBlok } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG, TER_N, TER_EXT, TER_STEP, blokHoogte } from "./terrain";
 import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
@@ -1045,7 +1045,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       // 🚪 Poorten zijn de DOORGANG naar de dieren (Mark 2 jul: "door de ingang
       // van een hek naar de dieren") — nooit blokkeren.
       if (it.assetId === "hekPoort" || it.assetId === "fenceGate") return;
-      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) s.add(cellKey(cx, cz));
+      // botsCellsVan i.p.v. cellsVan: de grote leerobjecten reserveren bij plaatsing
+      // veel ruimte, maar botsen op hun kleine échte body (Mark 17 aug: niet krap).
+      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], botsCellsVan(it.assetId))) s.add(cellKey(cx, cz));
     });
     return s;
   }, [placedItems]);
@@ -1076,7 +1078,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         : ["tree", "bush", "fern", "stump"].includes(a.procedural) ? 0
         : 1.25;
       if (!top) return;
-      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], cellsVan(it.assetId))) {
+      for (const [cx, cz] of footprint(it.cell[0], it.cell[1], botsCellsVan(it.assetId))) {
         const k = cellKey(cx, cz);
         m.set(k, Math.max(m.get(k) || 0, top));
       }
@@ -1222,7 +1224,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               }}
               onClick={(e) => { if (placing || sculptMode || waterMode || groundMode) return; if (e.delta > 8) return; e.stopPropagation(); onSelectPlaced && onSelectPlaced(idx); }}
             >
-              {selectedIdx === idx && <SelectieRing cell={it.cell} cells={cellsVan(it.assetId)} />}
+              {selectedIdx === idx && <SelectieRing cell={it.cell} cells={botsCellsVan(it.assetId)} />}
               {/* Eigen Suspense per item (park-zwerm 17 jul): één suspendend
                   GLB-dier klapte anders de HELE scene terug naar het laad-
                   scherm — precies bij de eerste dier-aankoop (React 18).

@@ -1332,7 +1332,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   useEffect(() => {
     const near = nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide";
     if (near) {
-      if (!firstPerson && !bouwen && !placing && !sculptMode && !waterMode && !groundMode && !buddyEye && !rideTrain && !followCam && rideIdx == null && selectedIdx == null) {
+      // Bouw-balk mag OPEN staan (dat is de standaard bij een klein park) — alleen
+      // niet terwijl je actief iets aan het plaatsen/boetseren/water-verven bent.
+      if (!firstPerson && !placing && !sculptMode && !waterMode && !groundMode && !buddyEye && !rideTrain && !followCam && rideIdx == null && selectedIdx == null) {
         setFirstPerson(true);
         autoFP.current = true;
       }
@@ -1342,6 +1344,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nabijePiramide]);
+  // Ga je iets plaatsen terwijl je automatisch door-de-ogen keek? Dan even terug
+  // naar het normale beeld (plaatsen doe je van bovenaf), zonder de auto-stand
+  // te vergeten.
+  useEffect(() => {
+    if (placing && autoFP.current) { autoFP.current = false; setFirstPerson(false); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [placing]);
   // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
   useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
   // Park-zwerm 17 jul: bij het VERLATEN van het park (🏠 of leermoment-deeplink)

@@ -418,21 +418,27 @@ function rrect(ctx, x, y, w, h, r) {
   ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
 }
 function formuleTexture(maat) {
-  const w = 512, h = 320;
+  // Stap-voor-stap uitgerekend (Mark 17 aug: "een tussen-uitreken-stap tussen ⅓
+  // en verder — wij leggen alles duidelijk en simpel uit"). Eerst het grondvlak,
+  // dan de vermenigvuldiging, dan pas de uitkomst.
+  const w = 512, h = 480;
   const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
   const ctx = cv.getContext("2d");
-  ctx.fillStyle = "rgba(18,26,42,0.86)"; rrect(ctx, 10, 10, w - 20, h - 20, 30); ctx.fill();
-  ctx.lineWidth = 7; ctx.strokeStyle = "#ffe08a"; rrect(ctx, 10, 10, w - 20, h - 20, 30); ctx.stroke();
+  ctx.fillStyle = "rgba(18,26,42,0.9)"; rrect(ctx, 10, 10, w - 20, h - 20, 34); ctx.fill();
+  ctx.lineWidth = 8; ctx.strokeStyle = "#ffe08a"; rrect(ctx, 10, 10, w - 20, h - 20, 34); ctx.stroke();
   ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  const v = Math.round((maat * maat * maat) / 3);
-  ctx.fillStyle = "#ffffff"; ctx.font = "700 34px system-ui";
-  ctx.fillText("inhoud van de piramide", w / 2, 56);
-  ctx.fillStyle = "#ffe08a"; ctx.font = "800 40px system-ui";
-  ctx.fillText("V = ⅓ × grondvlak × hoogte", w / 2, 122);
-  ctx.fillStyle = "#bfe0ff"; ctx.font = "700 38px system-ui";
-  ctx.fillText(`V = ⅓ × (${maat} × ${maat}) × ${maat}`, w / 2, 188);
-  ctx.fillStyle = "#ffffff"; ctx.font = "800 50px system-ui";
-  ctx.fillText(`V = ${v.toLocaleString("nl-NL")} m³`, w / 2, 258);
+  const g = maat * maat, gh = g * maat, v = Math.round(gh / 3);
+  const nl = (n) => n.toLocaleString("nl-NL");
+  ctx.fillStyle = "#ffffff"; ctx.font = "700 32px system-ui";
+  ctx.fillText("inhoud van de piramide", w / 2, 54);
+  ctx.fillStyle = "#ffe08a"; ctx.font = "800 34px system-ui";
+  ctx.fillText("V = ⅓ × grondvlak × hoogte", w / 2, 120);
+  ctx.fillStyle = "#bfe0ff"; ctx.font = "700 31px system-ui";
+  ctx.fillText(`grondvlak = ${maat} × ${maat} = ${nl(g)}`, w / 2, 188);
+  ctx.fillText(`V = ⅓ × ${nl(g)} × ${maat}`, w / 2, 244);
+  ctx.fillText(`V = ⅓ × ${nl(gh)}`, w / 2, 300);
+  ctx.fillStyle = "#ffffff"; ctx.font = "800 44px system-ui";
+  ctx.fillText(`V = ${nl(v)} m³`, w / 2, 386);
   const t = new CanvasTexture(cv); t.anisotropy = 4; return t;
 }
 function labelTexture(tekst, kleur) {
@@ -451,10 +457,13 @@ function labelTexture(tekst, kleur) {
 // je 'm vanuit elke hoek leest.
 function FaceFormules({ maat }) {
   const tex = useMemo(() => formuleTexture(maat), [maat]);
+  // Iets lager + smaller gehouden zodat het paneel binnen het driehoekige vlak
+  // valt (een driehoek wordt naar boven smaller — een te breed/hoog paneel zou
+  // boven de rand uitsteken). Gekanteld ~29° langs de helling.
   return [0, Math.PI / 2, Math.PI, -Math.PI / 2].map((ry, i) => (
     <group key={i} rotation={[0, ry, 0]}>
-      <mesh position={[0, 1.28, 1.28]} rotation={[-0.513, 0, 0]}>
-        <planeGeometry args={[2.4, 1.5]} />
+      <mesh position={[0, 1.05, 1.42]} rotation={[-0.513, 0, 0]}>
+        <planeGeometry args={[1.7, 1.6]} />
         <meshBasicMaterial map={tex} transparent depthWrite={false} side={2} toneMapped={false} />
       </mesh>
     </group>
