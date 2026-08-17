@@ -703,12 +703,14 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3, goud
       {/* de kleuren-kubus, iso-gekanteld zodat je 3 vlakken ziet en kunt tellen */}
       <group position={[0, midY, 0]} rotation={[0.42, 0.62, 0]}>
         {blokken.map((b, i) => (
-          <mesh key={i} position={b.p} castShadow>
+          <mesh key={i} position={b.p}>
             <boxGeometry args={[blok, blok, blok]} />
             {/* 🥇 verdiend → de bovenste laag wordt goud (het goud "kruipt" van
                 boven naar beneden naarmate je meer leert). Zachte gloed zodat het
-                goud altijd zichtbaar blijft en de blokjes los blijven ogen. */}
-            <meshStandardMaterial color={goud && b.top ? GOUD.basis : b.c} flatShading roughness={goud && b.top ? GOUD.roughness : 0.5} metalness={goud && b.top ? GOUD.metalness : 0.04} emissive={goud && b.top ? GOUD.donker : "#000000"} emissiveIntensity={goud && b.top ? 0.22 : 0} />
+                goud altijd zichtbaar blijft en de blokjes los blijven ogen.
+                Licht doorschijnend (Mark 17 aug: "zodat je echt alle blokken kunt
+                zien") — depthWrite uit zodat de blokken erachter meetellen. */}
+            <meshStandardMaterial color={goud && b.top ? GOUD.basis : b.c} flatShading roughness={goud && b.top ? GOUD.roughness : 0.5} metalness={goud && b.top ? GOUD.metalness : 0.04} emissive={goud && b.top ? GOUD.donker : "#000000"} emissiveIntensity={goud && b.top ? 0.22 : 0} transparent opacity={0.62} depthWrite={false} />
           </mesh>
         ))}
         {/* cijfers 1..N² op ALLE blokjes van de voorkant (Mark 17 aug): zo zie je
