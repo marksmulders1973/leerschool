@@ -48,6 +48,7 @@
 | ~25 aug | Outreach **golf 2** (na go) | Mark-go → Claude |
 | eind aug | **VB Breda opvolgen** (vroegen zelf om flyer, code BREDA2027) · mail-stilte eindigt · lanceringspost | Claude |
 | ~1 sep | **LOWAN-mail (326 scholen)** → laten wijzen naar de juf-pagina | Mark-go → Claude |
+| 31 aug → sep | 🏛️ **Onderwijskoepel-outreach** (NIEUW segment, ~6.000 scholen bereikbaar i.p.v. losse): **ma 31 aug De Hoeksche School** (warm) → **wo 3 + vr 5 sep bestuurs-golf 1** (~50 grootste besturen) → **ma 8 sep Stichting NOB** (buitenland ~180-200 scholen) → **wk 15-26 sep golf 2**. Voorwerk + verzendschema + Fable-checklist: `docs/FABLE-REVIEW.md` + `docs/outreach/ONDERWIJSKOEPELS-VOORWERK.md` | Claude bereidt · Fable checkt · Mark-akkoord per batch |
 | ±half sep | **SIDN-antwoord** verwacht (€7.150, ingediend 4 aug) | afwachten |
 | ≤ begin okt | 🎄 **Kerstpakket-inlegvellen**: voedselbanken/Leergeld benaderen voor december-actie — timing dwingt, uiterlijk oktober! | Claude concept, Mark-go |
 | okt | Check **Leergeld Apeldoorn-Voorst**: staat Leerkwartier op hun site + in de okt-nieuwsbrief? (toezegging Edith) | Claude |
