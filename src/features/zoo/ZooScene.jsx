@@ -780,19 +780,37 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
 }
 
 // 🔺 Meldt de dichtstbijzijnde piramide waar je bij staat/naar kijkt, zodat de
-// grootte-regelaar vanzelf verschijnt (Mark 16 aug: "als je ergens naar kijkt,
-// dat het dan verschijnt"). Puur op refs, throttled — gratis voor de framerate.
+// grootte-regelaar (+ studie-stand + door-de-ogen) vanzelf verschijnt (Mark 16
+// aug). MET HYSTERESE (Mark 17 aug: "als ik ernaar kijk draait het beeld"): het
+// AAN-zetten kijkt naar de kijkrichting, maar het UIT-zetten NIET — anders flipt
+// in eerste-persoon de kijkrichting → nabij aan/uit → camera aan/uit → een
+// draai-lus. Eenmaal vergrendeld blijf je vast tot je écht wéglóópt (afstand).
 function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
   const acc = useRef(0);
-  const last = useRef(undefined);
-  useFrame((s, dt) => {
+  const last = useRef(null); // vergrendelde piramide-index (of null)
+  const ENTER2 = 260;        // ~16 m: zo dicht + kijkend → aan (grote piramide)
+  const EXIT2 = 900;         // ~30 m: pas hier weer los → geen geflipflop
+  useFrame(() => {
     if (!onNear) return;
-    acc.current += dt;
-    if (acc.current < 0.25) return;
+    acc.current += 1;
+    if (acc.current < 15) return; // ~4×/sec (bij 60 fps)
     acc.current = 0;
     const p = playerPos?.current;
     if (!p) return;
-    let bestIdx = null, bestD2 = 110, bx = 0, bz = 0; // ~10 m
+    const afstand2 = (i) => {
+      const it = placedItems[i];
+      if (!it || it.assetId !== "piramide" || !it.cell) return Infinity;
+      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      return (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
+    };
+    // 1) Vergrendeld? Blijf vast tot je ver genoeg weg bent — ONAFHANKELIJK van
+    //    de kijkrichting (dat voorkomt de draai-lus in eerste-persoon).
+    if (last.current != null) {
+      if (afstand2(last.current) <= EXIT2) return; // vasthouden
+      last.current = null; onNear(null);           // losgelaten
+    }
+    // 2) Acquire: dichtstbijzijnde piramide binnen ENTER2 waar je NAAR kijkt.
+    let bestIdx = null, bestD2 = ENTER2, bx = 0, bz = 0;
     for (let i = 0; i < placedItems.length; i++) {
       const it = placedItems[i];
       if (it.assetId !== "piramide" || !it.cell) continue;
@@ -800,13 +818,13 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < bestD2) { bestD2 = d2; bestIdx = i; bx = x; bz = z; }
     }
-    if (bestIdx != null && bestD2 > 9 && playerFace?.current) {
+    if (bestIdx != null && bestD2 > 16 && playerFace?.current) {
       const dx = bx - p.x, dz = bz - p.z;
       const len = Math.sqrt(dx * dx + dz * dz) || 1;
       const dot = (playerFace.current.x * dx + playerFace.current.z * dz) / len;
       if (dot < 0.1) bestIdx = null;
     }
-    if (bestIdx !== last.current) { last.current = bestIdx; onNear(bestIdx); }
+    if (bestIdx != null) { last.current = bestIdx; onNear(bestIdx); }
   });
   return null;
 }

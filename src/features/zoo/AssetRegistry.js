@@ -148,7 +148,10 @@ export const ZOO_ASSETS = {
   // cells:7 reserveert de footprint van de MAX-grootte (Mark 17 aug): de piramide
   // schaalt visueel mee met "maat" (tot ~2,5×), dus hij moet ook méér raster-
   // vakjes vrijhouden — anders verdringt hij bij uitzetten de buur-vormen.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 7, botsCells: 3 },
+  // 3× zo groot (Mark 17 aug) → footprint 3× ruimer (cells:21 = ~40 m reserveren)
+  // en botsing rond de echte kegelvoet (botsCells:13 ≈ ±12 m) zodat je er niet
+  // doorheen loopt maar wél tot aan de voet kunt komen om de som te lezen.
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
   kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55, botsCells: 1 },

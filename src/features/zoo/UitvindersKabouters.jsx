@@ -492,7 +492,9 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
   const zand = "#e4cf9a";
   const steen = "#d8c08a";
   const steenDonker = "#b89b63";
-  const s = Math.max(0.5, maat / 4.4);            // schaal: hoe hoger de maat, hoe groter (tot ~5×)
+  // ×3 (Mark 17 aug): "de piramide 3 keer zo groot" — een echte blikvanger.
+  // De zwevende maten/som blijven de didactische getallen (illustratief).
+  const s = Math.max(0.5, maat / 4.4) * 3;
   const volume = Math.round((maat * maat * maat) / 3);
   // 🔢 Aftelbare blokken ÓP de piramide: een dam-bord op de vier schuine
   // vlakken zelf. Omdat de textuur op het driehoekige vlak zit, is hij vanzelf
