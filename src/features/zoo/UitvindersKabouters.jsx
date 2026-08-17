@@ -590,8 +590,9 @@ function cijferTex(n) {
   const ctx = cv.getContext("2d");
   ctx.fillStyle = "rgba(255,255,255,0.95)"; ctx.beginPath(); ctx.arc(px / 2, px / 2, px * 0.42, 0, Math.PI * 2); ctx.fill();
   ctx.strokeStyle = "#1c2530"; ctx.lineWidth = 4; ctx.stroke();
-  ctx.fillStyle = "#1c2530"; ctx.font = "800 44px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  ctx.fillText(String(n), px / 2, px / 2 + 3);
+  const label = String(n);
+  ctx.fillStyle = "#1c2530"; ctx.font = `800 ${label.length > 1 ? 34 : 44}px system-ui`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText(label, px / 2, px / 2 + 3);
   const t = new CanvasTexture(cv); t.anisotropy = 4;
   _cijferCache[n] = t;
   return t;
@@ -602,9 +603,9 @@ function cijferTex(n) {
    ribbe genummerd (1..N) en de hele inhoud-som ernaast (N×N=…, ×N=…). Iso-
    gekanteld op een sokkel; met +/- verander je de ribbe. */
 export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
-  // Manipuleerbaar (Mark 17 aug): met +/- verander je de ribbe N (2..5). Meer
+  // Manipuleerbaar (Mark 17 aug): met +/- verander je de ribbe N (2..6). Meer
   // ribbe = meer blokjes = meer inhoud (N³) — en dat telt live mee.
-  const N = Math.max(2, Math.min(5, Math.round(maat)));
+  const N = Math.max(2, Math.min(6, Math.round(maat)));
   const blok = 1.0, gap = 1.15;
   const blokken = useMemo(() => {
     const out = [];
@@ -644,13 +645,20 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
             <boxGeometry args={[blok, blok, blok]} /><meshStandardMaterial color={b.c} flatShading roughness={0.5} metalness={0.04} />
           </mesh>
         ))}
-        {/* cijfers 1..N op de voor-onderrand — zo tel je de ribbe af */}
-        {Array.from({ length: N }, (_, k) => (
-          <mesh key={"cij" + k} position={[k * gap - off, -off, (N - 1) * gap - off + blok / 2 + 0.03]}>
-            <planeGeometry args={[blok * 0.72, blok * 0.72]} />
-            <meshBasicMaterial map={cijferTex(k + 1)} transparent depthWrite={false} toneMapped={false} />
-          </mesh>
-        ))}
+        {/* cijfers 1..N² op ALLE blokjes van de voorkant (Mark 17 aug): zo zie je
+            dat één laag = N × N blokjes. Leest van linksboven (1) naar rechts-
+            onder (N²). Een half-doorzichtig muntje op elk blok-vlak. */}
+        {Array.from({ length: N }, (_, y) =>
+          Array.from({ length: N }, (_, x) => {
+            const n = (N - 1 - y) * N + x + 1;            // 1 linksboven → N² rechtsonder
+            return (
+              <mesh key={`cij-${x}-${y}`} position={[x * gap - off, y * gap - off, (N - 1) * gap - off + blok / 2 + 0.03]}>
+                <planeGeometry args={[blok * 0.6, blok * 0.6]} />
+                <meshBasicMaterial map={cijferTex(n)} transparent depthWrite={false} toneMapped={false} />
+              </mesh>
+            );
+          })
+        )}
       </group>
     </group>
   );

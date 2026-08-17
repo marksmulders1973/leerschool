@@ -159,7 +159,7 @@ export const ZOO_ASSETS = {
   piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12, maatMin: 4, maatMax: 11, maatDefault: 8, maatLeerpad: "ruimtemeetkunde" },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
-  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 5, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
+  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
   kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },

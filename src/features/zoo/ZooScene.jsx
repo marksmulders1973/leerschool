@@ -806,6 +806,18 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
     // 1) Vergrendeld? Blijf vast tot je ver genoeg weg bent — ONAFHANKELIJK van
     //    de kijkrichting (dat voorkomt de draai-lus in eerste-persoon).
     if (last.current != null) {
+      // Overdracht (Mark 17 aug): sta je duidelijk dichter bij een ANDER leer-
+      // object (binnen ENTER2), pak dán dát object. Zonder dit blijft de grootte-
+      // knop aan een buur-vorm hangen terwijl je al bij de volgende staat — de
+      // vormen staan ~28 m uit elkaar, binnen de EXIT2-vasthoud-straal (~30 m).
+      let dichtsteIdx = null, dichtsteD2 = Infinity;
+      for (let i = 0; i < placedItems.length; i++) {
+        const d2 = afstand2(i);
+        if (d2 < dichtsteD2) { dichtsteD2 = d2; dichtsteIdx = i; }
+      }
+      if (dichtsteIdx != null && dichtsteIdx !== last.current && dichtsteD2 <= ENTER2) {
+        last.current = dichtsteIdx; onNear(dichtsteIdx); return; // overgedragen
+      }
       if (afstand2(last.current) <= EXIT2) return; // vasthouden
       last.current = null; onNear(null);           // losgelaten
     }
