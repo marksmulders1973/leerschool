@@ -99,19 +99,48 @@ function bouwVoorbeeldPark() {
   add("mushroom", -18, -18); add("mushroom", 18, -18);
   add("grasplukje", -2, -10); add("grasplukje", 2, -10);
 
-  // ── 📐 WISKUNDE-PLEINTJE (Mark 16 aug 2026): de vijf inhoud-vormen — gratis
-  //    voor iedereen, meteen in het begin-park. Park = vermaak + verwondering +
-  //    leren: tik erop en je maatje vertelt over de inhoud (en je kunt met de
-  //    schuif spelen). Eigen plein op de open linkerflank, met een pad door de
-  //    opening tussen de twee linker-verblijven naar het hoofdpad. ──
-  vlak("pathStone", -26, -19, -4, 4);            // het plein
-  rij("pathStone", 0, -18, -10);                 // pad naar het hoofdpad (gat tussen de linker-verblijven)
-  add("piramide", -24, -3);
-  add("kubus", -24, 0);
-  add("kegel", -24, 3);
-  add("bol", -21, -2);
-  add("halvebol", -21, 2);
-  add("flowerPurple", -26, -4); add("flowerYellow", -26, 4);
+  // ── 📐 MEETKUNDE- & METEN-PLEIN (Mark 16-17 aug 2026): de vijf inhoud-vormen
+  //    + de nieuwe meet-objecten (klok, weegschaal, breuken-taart, moestuin,
+  //    telraam, plattegrond). RUIM uit elkaar op de open westflank: de piramide
+  //    krijgt een eigen hoek met veel lucht, want hij zet uit (maat 4..11) en zou
+  //    z'n buren anders verdringen (Mark: "hou rekening met maximale grootte" →
+  //    footprint cells:7). Alles gratis, meteen in het begin-park. ──
+  vlak("pathStone", -37, -23, -10, 9);           // groot plein
+  rij("pathStone", 0, -22, -18);                 // pad naar het hoofdpad (gat tussen de linker-verblijven)
+  // de piramide alleen in de zuidwest-hoek, met lucht eromheen
+  add("piramide", -33, -6);
+  // de vier kleine, vaste vormen bovenlangs — ver van de piramide
+  add("kubus", -35, 3);
+  add("kegel", -35, 6);
+  add("bol", -31, 7);
+  add("halvebol", -27, 7);
+  // de meet-objecten (tier A) in het midden/oost van het plein
+  add("klok", -30, 1);
+  add("weegschaal", -27, 3);
+  add("breukentaart", -24, 0);
+  add("moestuin", -25, 4);
+  add("telraam", -24, 6);
+  add("parkkaart", -23, -3);
+  add("flowerPurple", -37, 9); add("flowerYellow", -23, 9);
+  add("bankje", -30, 8); add("treePalm", -37, -10);
+
+  // ── 🎡 ONTDEK-LAAN (Mark 16-17 aug 2026): de landmark-blikvangers met magische
+  //    poorten uit het masterplan. Loop je door zo'n poort → het leerpad opent.
+  //    Een eigen laan op de open oostflank, ruim naast de bestaande attracties. ──
+  vlak("pathStone", 22, 37, -15, 15);            // de laan
+  kolom("pathRed", 29, -14, 14);                 // middenpad
+  rij("pathStone", 0, 9, 22);                    // aftakking vanaf het centrum (z0) naar de laan
+  // twee kolommen landmarks, ruim gespreid (poort wijst naar het noorden/pad)
+  add("eiffeltoren", 25, 12); add("raket", 33, 12);
+  add("tempel", 25, 6);       add("vulkaan", 33, 6);
+  add("wereldbol", 25, 0);    add("standbeeld", 33, 0);
+  add("telescoop", 25, -6);   add("kas", 33, -6);
+  add("molen", 25, -12);      add("weerstation", 33, -12);
+  add("kompas", 29, 13);      add("spaarpot", 29, -13);
+  // sfeer langs de laan
+  add("treeOak", 22, 3); add("treeOak", 22, -3); add("tree", 37, 3); add("tree", 37, -3);
+  add("flowerRed", 29, 8); add("flowerYellow", 29, -8);
+  add("bankje", 29, 4); add("bankje", 29, -4);
 
   return L;
 }

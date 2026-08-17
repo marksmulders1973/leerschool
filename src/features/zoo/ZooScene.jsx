@@ -17,8 +17,9 @@ import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol } from "./UitvindersKabouters";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
-import { LEERMOMENT_BY_ASSET } from "./parkLeermomenten";
+import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
 import { useEffect } from "react";
 import {
@@ -353,6 +354,25 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "halvebol") return <HalveBol position={[x, y, z]} rotation={rotation} />;
+  // 🎡 Interactief-park-masterplan (Mark 16-17 aug) — leerobjecten + poorten.
+  if (a.procedural === "klok") return <Klokkentoren position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "weegschaal") return <Weegschaal position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "breukentaart") return <Breukentaart position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "moestuin") return <Moestuin position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "telraam") return <Telraam position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "parkkaart") return <Parkkaart position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "kompas") return <Kompas position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "eiffeltoren") return <Eiffeltoren position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "tempel") return <GriekseTempel position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "wereldbol") return <Wereldbol position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "telescoop") return <Sterrenwacht position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "standbeeld") return <Standbeeld position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "molen") return <HollandseMolen position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "raket") return <Raket position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "vulkaan") return <Vulkaan position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "kas") return <Kas position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "weerstation") return <Weerstation position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "spaarpot") return <Spaarpot position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;
@@ -467,7 +487,10 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
         dummy.scale.set(1, kh, 1);
         dummy.updateMatrix();
         kol.setMatrixAt(k, dummy.matrix);
-        c.copy(h > 2.2 ? KL_STEENLAAG : KL_AARDE).multiplyScalar(tint);
+        // 🐛 Fix (Mark 17 aug): `tint` was niet gedefinieerd → ReferenceError die
+        // sinds commit 8661108e (16 aug, "realistischer gras") de HELE park-Canvas
+        // liet crashen (ParkErrorBoundary). Subtiele korrel, net als het bovenvlak.
+        c.copy(h > 2.2 ? KL_STEENLAAG : KL_AARDE).multiplyScalar(0.9 + 0.06 * (((i * 5 + j * 11) % 5) / 4));
         kol.setColorAt(k, c);
         k++;
       }
@@ -788,7 +811,37 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
   return null;
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide }) {
+// ✨ Magische-poort-doorloop (Mark 16 aug, MAGISCHE-POORTEN-PLAN.md): loop je in
+// de buurt van een landmark met een poort (POORT_ASSETS), dan opent het leerpad.
+// Alleen bij het BINNENLOPEN (overgang van "niet bij" → "bij") — zodat je niet
+// blijft hangen als je ernaast staat. De cooldown/flits zit in ZookwartierGame.
+function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
+  const acc = useRef(0);
+  const binnen = useRef(null); // assetId waar je nu "in" staat
+  useFrame((s, dt) => {
+    if (!actief || !onDoor) { binnen.current = null; return; }
+    acc.current += dt;
+    if (acc.current < 0.2) return;
+    acc.current = 0;
+    const p = playerPos?.current;
+    if (!p) return;
+    let dichtst = null, bestD2 = 2.4; // ~1,5 m: je moet er echt doorheen lopen
+    for (const it of placedItems) {
+      if (!it.cell || !POORT_ASSETS[it.assetId]) continue;
+      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
+      if (d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
+    }
+    if (dichtst !== binnen.current) {
+      const wasLeeg = binnen.current == null;
+      binnen.current = dichtst;
+      if (dichtst && wasLeeg) onDoor(dichtst); // net binnengelopen
+    }
+  });
+  return null;
+}
+
+export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1123,6 +1176,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
+        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain} onDoor={onPoortDoor} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (

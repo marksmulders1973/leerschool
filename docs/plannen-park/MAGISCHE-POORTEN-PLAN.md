@@ -1,5 +1,13 @@
 # ✨ Magische poorten — plan (park → leerpad)
 
+> ✅ **STATUS 17 aug 2026 — GEBOUWD (v337).** `MagischePoort`-component +
+> `PoortWatcher` (walk-through) in `ParkLeerobjecten.jsx`/`ZooScene.jsx`. Loop je
+> binnen ~1,5 m van een landmark-poort → flits "✨ Je stapt in de wereld van …"
+> → het leerpad opent (meting `park_poort_door` + `park_naar_leren` via=poort;
+> 30 s cooldown). Poorten op de 12 landmarks uit §5 (piramide bewust niet: die
+> heeft al z'n schuif + leer-knop). Fase 4 (poort-paspoort) nog open.
+
+
 > Mark 16 aug 2026: *"maak het zo dat je van de piramide naar het leerpad kunt —
 > een soort magische poort: 'weet je hoe dat werkt? Loop maar door de magische
 > poort.' Dat ook met bomen → fotosynthese. Stuur naar zoveel mogelijk

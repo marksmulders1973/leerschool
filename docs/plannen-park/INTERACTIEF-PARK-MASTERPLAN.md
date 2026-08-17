@@ -1,5 +1,17 @@
 # 🎡 Interactief Park — Masterplan (alle leeftijden, alle leerpaden)
 
+> ✅ **STATUS 17 aug 2026 — EERSTE BOUW LIVE (v337).** Mark gaf go ("bouw alle
+> dingen in het park, bijschaven kan ik later met Fable"). Gebouwd: 6 tier-A-
+> objecten (klok, weegschaal, breuken-taart, moestuin, telraam, park-plattegrond)
+> + 12 tier-B landmark-poorten (kompas, Eiffeltoren, tempel, wereldbol, telescoop,
+> standbeeld, molen, raket, vulkaan, kas, weerstation, spaarpot) + de magische-
+> poort-doorloop. Alles in `src/features/zoo/ParkLeerobjecten.jsx`, gekoppeld via
+> `parkLeermomenten.js` aan bestaande leerpaden, in de winkel als categorie
+> **🎡 Leerplein**, en geseed in een herontworpen park (meetkunde-plein west +
+> ontdek-laan oost). Piramide-footprint = cells:7 + max-maat 11 zodat uitzetten
+> niemand verdringt. Fable-werk = de 3D-modellen mooier maken.
+
+
 > Mark 16 aug 2026: *"ik wil uiteindelijk een soort interactief park voor alle
 > leeftijden, alle leerpaden, net als de piramide. Maar eerst een overall plan
 > zodat we alles in één keer goed doen."*

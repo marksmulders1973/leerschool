@@ -145,7 +145,10 @@ export const ZOO_ASSETS = {
   // 🔺 Egyptische piramide (Mark 16 aug): grote blikvanger + wiskunde-leermoment
   // (inhoud berekenen + stelling van Pythagoras). Aantikbaar → de gids/maatje
   // vertelt erover, met leer-knoppen naar ruimtemeetkunde + pythagoras.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70 },
+  // cells:7 reserveert de footprint van de MAX-grootte (Mark 17 aug): de piramide
+  // schaalt visueel mee met "maat" (tot ~2,5×), dus hij moet ook méér raster-
+  // vakjes vrijhouden — anders verdringt hij bij uitzetten de buur-vormen.
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 7 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
   kubus: { id: "kubus", kind: "attraction", name: "Rubik-kunstwerk", emoji: "🧊", procedural: "rubik", price: 55 },
@@ -156,6 +159,31 @@ export const ZOO_ASSETS = {
   // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
   bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45 },
   halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45 },
+
+  // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
+  // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn
+  // buren verdringt (Mark: "bij plaatsing hou rekening met maximale grootte").
+  // Componenten in ParkLeerobjecten.jsx; leermomenten in parkLeermomenten.js.
+  // ── Tier A: manipuleerbaar / levend ──
+  klok: { id: "klok", kind: "attraction", name: "Klokkentoren", emoji: "🕐", procedural: "klok", price: 55, cells: 3 },
+  weegschaal: { id: "weegschaal", kind: "attraction", name: "Weegschaal", emoji: "⚖️", procedural: "weegschaal", price: 45, cells: 3 },
+  breukentaart: { id: "breukentaart", kind: "attraction", name: "Breuken-taart", emoji: "🍰", procedural: "breukentaart", price: 40, cells: 3 },
+  moestuin: { id: "moestuin", kind: "attraction", name: "Oppervlakte-moestuin", emoji: "🥕", procedural: "moestuin", price: 40, cells: 3 },
+  telraam: { id: "telraam", kind: "attraction", name: "Telraam", emoji: "🧮", procedural: "telraam", price: 40, cells: 3 },
+  parkkaart: { id: "parkkaart", kind: "attraction", name: "Park-plattegrond", emoji: "🗺️", procedural: "parkkaart", price: 35, cells: 3 },
+  // ── Tier B: landmark + magische poort ──
+  kompas: { id: "kompas", kind: "attraction", name: "Kompas", emoji: "🧭", procedural: "kompas", price: 45, cells: 3 },
+  eiffeltoren: { id: "eiffeltoren", kind: "attraction", name: "Eiffeltoren", emoji: "🗼", procedural: "eiffeltoren", price: 90, cells: 3 },
+  tempel: { id: "tempel", kind: "attraction", name: "Griekse tempel", emoji: "🏛️", procedural: "tempel", price: 85, cells: 5 },
+  wereldbol: { id: "wereldbol", kind: "attraction", name: "Wereldbol", emoji: "🌍", procedural: "wereldbol", price: 55, cells: 3 },
+  telescoop: { id: "telescoop", kind: "attraction", name: "Sterrenwacht", emoji: "🔭", procedural: "telescoop", price: 70, cells: 3 },
+  standbeeld: { id: "standbeeld", kind: "attraction", name: "Standbeeld", emoji: "🗿", procedural: "standbeeld", price: 60, cells: 3 },
+  molen: { id: "molen", kind: "attraction", name: "Hollandse molen", emoji: "🌾", procedural: "molen", price: 80, cells: 3 },
+  raket: { id: "raket", kind: "attraction", name: "Raket", emoji: "🚀", procedural: "raket", price: 85, cells: 3 },
+  vulkaan: { id: "vulkaan", kind: "attraction", name: "Vulkaan", emoji: "🌋", procedural: "vulkaan", price: 75, cells: 5 },
+  kas: { id: "kas", kind: "attraction", name: "Kas met groenten", emoji: "🥬", procedural: "kas", price: 50, cells: 3 },
+  weerstation: { id: "weerstation", kind: "attraction", name: "Weerstation", emoji: "🌦️", procedural: "weerstation", price: 45, cells: 3 },
+  spaarpot: { id: "spaarpot", kind: "attraction", name: "Spaarpot", emoji: "🐷", procedural: "spaarpot", price: 50, cells: 3 },
   // 🎢 Achtbaan (Mark 2 jul, naar Roblox-voorbeeld): grote baan met lift,
   // mega-drop en station — instapbaar. Groot footprint: echt een blikvanger.
   achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, price: 150 },
@@ -239,6 +267,10 @@ export function isBlok(id) {
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
 export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing", "piramide", "kubus", "kegel", "bol", "halvebol", "achtbaanKlein", "achtbaan", "achtbaanSpiraal"];
+// 🎡 Leerplein-objecten (Mark 16-17 aug) — eigen winkel-categorie zodat kinderen
+// de leerobjecten los van de kermis-attracties vinden. Tier A eerst, dan de
+// landmark-poorten. Elk linkt (via parkLeermomenten) naar een bestaand leerpad.
+export const PLAATSBARE_LEERPLEIN = ["klok", "weegschaal", "breukentaart", "moestuin", "telraam", "parkkaart", "kompas", "eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_BLOKKEN = ["blokHout", "blokSteen", "blokBaksteen", "blokZand", "blokGras", "blokSneeuw", "blokGlas", "blokDak", "blokGoud", "blokDiamant"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];

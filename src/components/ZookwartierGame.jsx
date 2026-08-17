@@ -9,7 +9,7 @@ import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -23,7 +23,7 @@ import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
-import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET } from "../features/zoo/parkLeermomenten";
+import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS } from "../features/zoo/parkLeermomenten";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
@@ -170,11 +170,13 @@ const mkItem = (id) => { const a = getAsset(id); return { assetId: id, emoji: a.
 const DIEREN_SHOP = PLAATSBARE_DIEREN.map(mkItem);
 const BOUW_SHOP = PLAATSBARE_BOUWWERKEN.map(mkItem);
 const ATTRACTIE_SHOP = PLAATSBARE_ATTRACTIES.map(mkItem);
+const LEERPLEIN_SHOP = PLAATSBARE_LEERPLEIN.map(mkItem);
 const HEK_SHOP = PLAATSBARE_HEKKEN.map(mkItem);
 const NATUUR_SHOP = PLAATSBARE_NATUUR.map(mkItem);
 const BLOK_SHOP = PLAATSBARE_BLOKKEN.map(mkItem);
 const SHOP_CATS = [
   { key: "dier", label: "🦊 Dieren", items: DIEREN_SHOP },
+  { key: "leerplein", label: "🎡 Leerplein", items: LEERPLEIN_SHOP },
   { key: "blok", label: "🧱 Blokken", items: BLOK_SHOP },
   { key: "hek", label: "🚧 Hekken", items: HEK_SHOP },
   { key: "gebouw", label: "🏠 Gebouwen", items: BOUW_SHOP },
@@ -978,7 +980,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const wijzigMaat = (idx, delta) => {
     setPlacedItems((items) => items.map((it, i) => {
       if (i !== idx) return it;
-      const nieuw = Math.max(3, Math.min(18, (it.maat ?? 8) + delta));
+      // Max 11 (Mark 17 aug): daarboven wordt de piramide zó groot dat hij zelfs
+      // met de ruime 7×7-footprint z'n buren zou overlappen. 4..11 blijft flink
+      // manipuleerbaar (~2,5×) zonder de andere ruimtelijke figuren te verdringen.
+      const nieuw = Math.max(4, Math.min(11, (it.maat ?? 8) + delta));
       return { ...it, maat: nieuw };
     }));
   };
@@ -1291,12 +1296,38 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     clearTimeout(gidsTimer.current);
     gidsTimer.current = setTimeout(() => setGidsMoment(null), 16000);
   };
+  // ✨ Magische poort (Mark 16 aug): loop je door de poort van een landmark, dan
+  // "stap je de wereld van dat onderwerp binnen" → een korte flits en het leerpad
+  // opent. Cooldown 30 s per object zodat je er niet in blijft hangen tijdens het
+  // rondlopen/inrichten. Meting: park_poort_door + park_naar_leren (via=poort).
+  const [poortFlits, setPoortFlits] = useState(null);
+  const poortCooldown = useRef(new Map());
+  const poortTimer = useRef(null);
+  const onPoortDoor = (assetId) => {
+    if (placing || sculptMode || waterMode || groundMode || tafereel || dialoog || menuOpen || panel || rekenVraag || selectedIdx != null) return;
+    const info = POORT_ASSETS[assetId];
+    if (!info) return;
+    const nu = Date.now();
+    if (nu - (poortCooldown.current.get(assetId) || 0) < 30000) return;
+    poortCooldown.current.set(assetId, nu);
+    const m = PARK_LEERMOMENTEN[LEERMOMENT_BY_ASSET[assetId]];
+    setPoortFlits({ label: info.label, emoji: m?.emoji || "✨" });
+    spreek(`Je stapt in de wereld van ${info.label}.`);
+    try { track("park_poort_door", { asset: assetId, pad: info.leerpadId }); track("park_naar_leren", { via: "poort", pad: info.leerpadId }); } catch { /* */ }
+    clearTimeout(poortTimer.current);
+    poortTimer.current = setTimeout(() => {
+      setPoortFlits(null);
+      stopSpreken();
+      if (info.leerpadId && onOpenLeerpad) onOpenLeerpad(info.leerpadId);
+      else if (onOpenLeerpaden) onOpenLeerpaden();
+    }, 1400);
+  };
   // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
   useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
   // Park-zwerm 17 jul: bij het VERLATEN van het park (🏠 of leermoment-deeplink)
   // praatte de gids-stem gewoon door over het volgende scherm heen, en de
   // 16s-timer vuurde setState op een unmounted component. Unmount-cleanup:
-  useEffect(() => () => { stopSpreken(); clearTimeout(gidsTimer.current); }, []);
+  useEffect(() => () => { stopSpreken(); clearTimeout(gidsTimer.current); clearTimeout(poortTimer.current); }, []);
   const tafereelNaarLeren = (padOverride) => {
     if (!tafereel) return;
     // type-veld (park-zwerm): leermomenten en kabouter-taferelen delen dit
@@ -1711,6 +1742,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onMaat={wijzigMaat}
           onOefenen={(pid) => onOpenLeerpad && onOpenLeerpad(pid)}
           onNearPiramide={setNabijePiramide}
+          onPoortDoor={onPoortDoor}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
@@ -2315,6 +2347,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* 🔊 Gids-bubbel: het maatje vertelt ongevraagd (hardop) over het object
           waar je naar staat te kijken. Klein en onderin — loopt niet in de weg.
           "Leer er meer over" opent het volledige paneel met de leerpad-knop. */}
+      {/* ✨ Magische-poort-flits: "je stapt in de wereld van …" → leerpad opent. */}
+      {poortFlits && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 30, display: "grid", placeItems: "center", background: "radial-gradient(circle at center, rgba(40,20,80,0.55), rgba(10,10,30,0.82))", pointerEvents: "none" }}>
+          <div style={{ textAlign: "center", color: "#fff", fontFamily: "system-ui", animation: "poortIn .5s ease-out" }}>
+            <div style={{ fontSize: 64, filter: "drop-shadow(0 4px 14px rgba(0,0,0,.5))" }}>{poortFlits.emoji}</div>
+            <div style={{ fontWeight: 900, fontSize: 22, marginTop: 6, textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>✨ Je stapt in de wereld van</div>
+            <div style={{ fontWeight: 900, fontSize: 26, marginTop: 2, color: "#ffe08a", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>{poortFlits.label}</div>
+          </div>
+          <style>{"@keyframes poortIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}"}</style>
+        </div>
+      )}
+
       {gidsMoment && !tafereel && (
         <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: 84, zIndex: 12, width: "min(430px, 94vw)", pointerEvents: "auto" }}>
           <div style={{ background: "rgba(255,254,248,0.97)", borderRadius: 16, boxShadow: "0 8px 28px rgba(0,0,0,.3)", padding: "10px 12px", display: "flex", gap: 10, alignItems: "flex-start" }}>
