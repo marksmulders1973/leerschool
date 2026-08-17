@@ -171,14 +171,55 @@ export function migreerBlokken(layout) {
   });
 }
 
+// 🌿 Meetkunde-objecten uit elkaar zetten (Mark 17 aug: "in één keer alles goed,
+// zonder een park te wissen"). De piramide is 3× en de vormen 2× zo groot
+// geworden; in ~55 bestaande parken stonden ze nog op hun oude, dichte plekken →
+// ze overlappen nu. Deze migratie zet ALLEEN die leerobjecten op de ruime
+// canonieke plekken (identiek aan het start-park); alle andere gebouwde dingen
+// (blokken/dieren/gebouwen/paden) blijven exact staan. Draait bij élke park-load
+// en alleen als ze écht te dicht op elkaar staan (zo blijft een park dat je zelf
+// al ruim hebt neergezet ongemoeid). Idempotent: eenmaal ruim → geen wijziging.
+const LEEROBJECT_POSITIES = {
+  piramide: [-30, -19],
+  kubus: [-35, 2], kegel: [-22, 8], bol: [-37, 16], halvebol: [-22, 22],
+  klok: [-38, 28], weegschaal: [-33, 28], breukentaart: [-28, 28], moestuin: [-23, 28],
+  telraam: [-35, 32], parkkaart: [-27, 32],
+};
+export function spreidLeerobjecten(layout) {
+  if (!Array.isArray(layout)) return layout;
+  const idxs = [];
+  layout.forEach((it, i) => { if (it && Array.isArray(it.cell) && LEEROBJECT_POSITIES[it.assetId]) idxs.push(i); });
+  if (idxs.length < 2) return layout; // niets om te spreiden
+  // Staan er twee te dicht op elkaar (< 8 vakjes = 16 m)? Dan is het de oude,
+  // gepropte cluster → alle leerobjecten naar hun ruime canonieke plek.
+  let gepropt = false;
+  for (let a = 0; a < idxs.length && !gepropt; a++) {
+    for (let b = a + 1; b < idxs.length; b++) {
+      const A = layout[idxs[a]].cell, B = layout[idxs[b]].cell;
+      const d2 = (A[0] - B[0]) ** 2 + (A[1] - B[1]) ** 2;
+      if (d2 < 64) { gepropt = true; break; }
+    }
+  }
+  if (!gepropt) return layout; // al ruim uit elkaar → laat staan
+  const gebruikt = new Set();
+  return layout.map((it) => {
+    const doel = it && Array.isArray(it.cell) ? LEEROBJECT_POSITIES[it.assetId] : null;
+    if (!doel || gebruikt.has(it.assetId)) return it; // 1× per type; extra's blijven
+    gebruikt.add(it.assetId);
+    return { ...it, cell: [doel[0], doel[1]] };
+  });
+}
+
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
-// corrupte items eruit. Eén item zonder bekende asset of zonder positie (geen
-// cell én geen kx) gooide anders een TypeError in de render → ErrorBoundary,
-// en "Opnieuw proberen" crashte opnieuw omdat de data blijft staan.
+// corrupte items eruit + meetkunde-objecten uit elkaar. Eén item zonder bekende
+// asset of zonder positie (geen cell én geen kx) gooide anders een TypeError in
+// de render → ErrorBoundary, en "Opnieuw proberen" crashte opnieuw omdat de data
+// blijft staan.
 export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
-  return gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
+  const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
+  return spreidLeerobjecten(schoon);
 }
 
 export function defaultState() {
