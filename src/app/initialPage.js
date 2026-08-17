@@ -50,6 +50,7 @@ export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (/^\/actie(\/|$)/.test(pathname)) return "actie";
   if (/^\/dank(\/|$)/.test(pathname)) return "dank";
   if (/^\/vandaag(\/|$)/.test(pathname)) return "vandaag";
+  if (/^\/parken(\/|$)/.test(pathname)) return "galerij";
   try {
     const sp = new URLSearchParams(search);
     if (sp.get("play") === "obliterator") return "obliteratorDirect";

@@ -80,6 +80,8 @@ export const PAGE_TO_PATH = {
   // Zookwartier "Mijn Park" — 3D verzamel-dierentuin als beloningsspel (lazy
   // three.js). Verving 2026-06-20 de oude spellen-hub; /spellen + /spel = aliassen.
   zoo: "/dierentuin",
+  // 🌍 Park-galerij — openbare (gemodereerde) showcase van kinder-parken (17 aug).
+  galerij: "/parken",
   // "Maatje in je broekzak" — je droom-maatje altijd bij je: praten, groeit
   // door te leren, en altijd een link terug naar de leer-app (2026-06-30).
   maatje: "/maatje",

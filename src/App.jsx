@@ -92,6 +92,7 @@ const MaatjePocket = lazy(() => import("./components/MaatjePocket.jsx"));
 const TakenlijstMaker = lazy(() => import("./components/TakenlijstMaker.jsx"));
 const WerkbladPagina = lazy(() => import("./features/werkblad/WerkbladPagina.jsx"));
 const ParkBezoek = lazy(() => import("./components/ParkBezoek.jsx"));
+const ParkGalerij = lazy(() => import("./components/ParkGalerij.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
@@ -1365,8 +1366,13 @@ export default function App() {
           ) : (
             <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
-              onOpenLeerpaden={() => setPage("learn-paths-hub")} onOpenMaatje={() => setPage("maatje")} />
+              onOpenLeerpaden={() => setPage("learn-paths-hub")} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
           )}
+        </Suspense>
+      )}
+      {page === "galerij" && (
+        <Suspense fallback={<PageLoader />}>
+          <ParkGalerij authUser={authUser} onHome={() => setPage("zoo")} />
         </Suspense>
       )}
       {page === "maatje" && (

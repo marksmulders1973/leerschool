@@ -8,6 +8,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
+import { meldParkAan } from "../data/repos/galerijRepo";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
@@ -300,7 +301,7 @@ function maakBouwplannen() {
   }));
 }
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij }) {
   const naam = (userName || "").trim();
   const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
@@ -339,6 +340,25 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
   const [shareUrl, setShareUrl] = useState(null);
   const [shareCopied, setShareCopied] = useState(false);
+  // 🌍 Park-galerij (Mark 17 aug): opt-in om je park openbaar te tonen (anoniem,
+  // komt in de wachtrij → de maker keurt goed). Onthouden per park in localStorage.
+  const [galerijAangemeld, setGalerijAangemeld] = useState(false);
+  const meldAanGalerij = async () => {
+    if (!shareUrl) return;
+    const code = shareUrl.split("bezoek=")[1] || "";
+    if (!code) return;
+    try {
+      await meldParkAan({ shareCode: code, userId, profiel: naam });
+      setGalerijAangemeld(true);
+      try { localStorage.setItem(`lk_galerij_${code}`, "1"); } catch { /* */ }
+      try { track("park_galerij_aanmelden"); } catch { /* */ }
+    } catch { /* stil — geen kritieke actie */ }
+  };
+  useEffect(() => {
+    if (!shareUrl) return;
+    const code = shareUrl.split("bezoek=")[1] || "";
+    try { if (code && localStorage.getItem(`lk_galerij_${code}`)) setGalerijAangemeld(true); } catch { /* */ }
+  }, [shareUrl]);
   // null = nog geen categorie gekozen → de bouwbalk toont alléén de
   // categorie-rij (Mark 14 jul: max 1 regel tegelijk op mobiel).
   const [shopCat, setShopCat] = useState(null);
@@ -1570,6 +1590,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
               <MenuTegel emoji="📤" label="Delen met een vriend" fn={openDelen} />
+              {onOpenGalerij && <MenuTegel emoji="🌍" label="Park-galerij bekijken" fn={onOpenGalerij} />}
               <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
             </div>
 
@@ -2556,6 +2577,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   <button onClick={kopieerLink} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "7px 12px", font: "800 12.5px system-ui", color: "#fff", background: shareCopied ? "#2e7d32" : "#4a90d9", cursor: "pointer" }}>{shareCopied ? "Gekopieerd ✓" : "Kopieer"}</button>
                 </div>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", textDecoration: "none", border: "none", borderRadius: 999, padding: "11px 14px", font: "800 14.5px system-ui", color: "#fff", background: "#25d366", boxShadow: "0 3px 10px rgba(0,0,0,.18)" }}>💬 Deel via WhatsApp</a>
+                <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px dashed #ddd" }}>
+                  <div style={{ font: "800 14px system-ui", color: "#234", marginBottom: 4 }}>🌍 Laat je park aan iedereen zien</div>
+                  {galerijAangemeld ? (
+                    <p style={{ font: "600 13.5px/1.5 system-ui", color: "#2e7d32", margin: 0 }}>✓ Aangemeld! De maker bekijkt je park even — daarna staat het in de galerij. 💛</p>
+                  ) : (
+                    <>
+                      <p style={{ font: "500 13.5px/1.5 system-ui", color: "#555", margin: "0 0 8px" }}>Wil je je park aan iedereen laten zien? Geef je hier op — anoniem, zonder je naam. De maker kijkt 'm eerst even.</p>
+                      <button onClick={meldAanGalerij} style={{ width: "100%", border: "none", borderRadius: 999, padding: "11px 14px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🌍 Zet mijn park in de galerij</button>
+                    </>
+                  )}
+                </div>
                 <p style={{ color: "#777", fontSize: 12, marginBottom: 0, marginTop: 12 }}>De link toont geen naam en niemand kan je park veranderen. Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.</p>
               </div>
             )}
