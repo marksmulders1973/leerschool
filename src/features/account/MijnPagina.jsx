@@ -1115,6 +1115,27 @@ export default function MijnPagina({
               })()}
             </Card>
 
+            {/* ── 🔢 Snelkoppeling tafels (Mark 17 aug): de tafels zijn de basis
+                van bijna elke rekenvraag; één tik weg vanaf je eigen pagina.
+                Vanaf groep 3 (tafels beginnen daar; kleuters nog niet). ── */}
+            {groep >= 3 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ fontSize: 30, flexShrink: 0 }} aria-hidden="true">🔢</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong)" }}>Tafels oefenen</div>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>De basis van bijna elke rekenvraag — 1 t/m 12.</div>
+                  </div>
+                  <button
+                    onClick={() => onPickPath && onPickPath("tafels-po")}
+                    style={{ flexShrink: 0, padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#003a15", fontWeight: 800, fontSize: 13, fontFamily: "var(--font-display)" }}
+                  >
+                    ✖️ Oefen
+                  </button>
+                </div>
+              </Card>
+            )}
+
             {/* ── 💛 Voor jou klaargezet (Mark 15 aug): lessen die iemand thuis
                 via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;
                 "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
