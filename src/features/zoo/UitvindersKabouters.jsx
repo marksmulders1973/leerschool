@@ -251,7 +251,11 @@ const TAFEREEL_MESH = { newton: TafereelNewton, piramide: TafereelPiramide, tesl
 // aanwees): warm, verzadigd, écht metaal-goud met felle highlight en amber-
 // schaduw. Dé kleur voor elke leer-trofee; hergebruik overal (gouden vormen →
 // het einddoel: heel het park goud = afgestudeerd 🎓).
-export const GOUD = { licht: "#ffe25a", basis: "#e8b81f", donker: "#a9760b", metalness: 0.95, roughness: 0.2 };
+// NB: lage metalness bewust — deze scène heeft geen environment-map, en een hoog-
+// metallic oppervlak zonder reflecties rendert zwart (Mark 17 aug: "bovenste laag
+// is zwart"). Bij lage metalness krijgt het goud z'n kleur van het licht → blijft
+// goud + de losse blok-facetten blijven zichtbaar (flatShading).
+export const GOUD = { licht: "#ffe25a", basis: "#e8b81f", donker: "#a9760b", metalness: 0.3, roughness: 0.35 };
 
 /* ── souvenirs: mini-monumenten op een sokkel (vrijspelen via leerpad) ───── */
 // Geplaatst via het gewone plaats-systeem (PlacedItem → procedural "souvenir").
@@ -702,8 +706,9 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3, goud
           <mesh key={i} position={b.p} castShadow>
             <boxGeometry args={[blok, blok, blok]} />
             {/* 🥇 verdiend → de bovenste laag wordt goud (het goud "kruipt" van
-                boven naar beneden naarmate je meer leert) */}
-            <meshStandardMaterial color={goud && b.top ? GOUD.basis : b.c} flatShading roughness={goud && b.top ? GOUD.roughness : 0.5} metalness={goud && b.top ? GOUD.metalness : 0.04} />
+                boven naar beneden naarmate je meer leert). Zachte gloed zodat het
+                goud altijd zichtbaar blijft en de blokjes los blijven ogen. */}
+            <meshStandardMaterial color={goud && b.top ? GOUD.basis : b.c} flatShading roughness={goud && b.top ? GOUD.roughness : 0.5} metalness={goud && b.top ? GOUD.metalness : 0.04} emissive={goud && b.top ? GOUD.donker : "#000000"} emissiveIntensity={goud && b.top ? 0.22 : 0} />
           </mesh>
         ))}
         {/* cijfers 1..N² op ALLE blokjes van de voorkant (Mark 17 aug): zo zie je
