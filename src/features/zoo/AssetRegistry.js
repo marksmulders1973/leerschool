@@ -151,10 +151,10 @@ export const ZOO_ASSETS = {
   // 3× zo groot (Mark 17 aug) → footprint 3× ruimer (cells:21 = ~40 m reserveren)
   // en botsing rond de echte kegelvoet (botsCells:13 ≈ ±12 m) zodat je er niet
   // doorheen loopt maar wél tot aan de voet kunt komen om de som te lezen.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12 },
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12, maatMin: 4, maatMax: 11, maatDefault: 8, maatLeerpad: "ruimtemeetkunde" },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
-  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3 },
+  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 5, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
   kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3 },
@@ -302,6 +302,18 @@ export function botsCellsVan(id) {
 
 export function getAsset(id) {
   return ZOO_ASSETS[id] || null;
+}
+
+// 🔺🧊 Manipuleerbare leerobjecten (Mark 16-17 aug): vormen die je met +/- groter
+// en kleiner maakt (de piramide-mechaniek, nu ook de kleuren-kubus). Config per
+// asset: maat-bereik + het leerpad achter de "inhoud oefenen"-knop.
+export function isManipuleerbaar(id) {
+  return ZOO_ASSETS[id]?.maatMin != null;
+}
+export function maatConfig(id) {
+  const a = ZOO_ASSETS[id];
+  if (!a || a.maatMin == null) return null;
+  return { min: a.maatMin, max: a.maatMax, standaard: a.maatDefault ?? a.maatMin, leerpad: a.maatLeerpad };
 }
 
 // Kiesbare speler-karakters (Quaternius "Animated Men/Women", CC0, gekleurde

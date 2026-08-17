@@ -10,7 +10,7 @@ import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { meldParkAan } from "../data/repos/galerijRepo";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, isManipuleerbaar, maatConfig, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -1000,10 +1000,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const wijzigMaat = (idx, delta) => {
     setPlacedItems((items) => items.map((it, i) => {
       if (i !== idx) return it;
-      // Max 11 (Mark 17 aug): daarboven wordt de piramide zó groot dat hij zelfs
-      // met de ruime 7×7-footprint z'n buren zou overlappen. 4..11 blijft flink
-      // manipuleerbaar (~2,5×) zonder de andere ruimtelijke figuren te verdringen.
-      const nieuw = Math.max(4, Math.min(11, (it.maat ?? 8) + delta));
+      // Per object een eigen bereik (Mark 17 aug): piramide 4..11, kleuren-kubus
+      // ribbe 2..5, enz. — uit de asset-registry (maatConfig).
+      const cfg = maatConfig(it.assetId) || { min: 4, max: 11, standaard: 8 };
+      const nieuw = Math.max(cfg.min, Math.min(cfg.max, (it.maat ?? cfg.standaard) + delta));
       return { ...it, maat: nieuw };
     }));
   };
@@ -1430,12 +1430,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // Onboarding: een vers park (alleen het startpark, nog niets bijgekocht).
   const versPark = loaded && placedItems.length <= STARTER_LAYOUT.length;
 
-  // 🔺 De piramide waar de grootte-regelaar bij hoort: die je nadert (nabij) of
-  // die je hebt geselecteerd. Voedt zowel de +/- HUD als de studie-stand (som op
-  // de vlakken) en het automatisch door-de-ogen-kijken.
-  const pyrIdx = (nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide")
+  // 🔺🧊 Het manipuleerbare leerobject waar de grootte-regelaar bij hoort: die je
+  // nadert (nabij) of hebt geselecteerd (piramide, kleuren-kubus, …). Voedt de
+  // +/- HUD + (voor de piramide) de studie-stand.
+  const pyrIdx = (nabijePiramide != null && isManipuleerbaar(placedItems[nabijePiramide]?.assetId))
     ? nabijePiramide
-    : (placedItems[selectedIdx]?.assetId === "piramide" ? selectedIdx : null);
+    : (isManipuleerbaar(placedItems[selectedIdx]?.assetId) ? selectedIdx : null);
+  const pyrLeerpad = pyrIdx != null ? (maatConfig(placedItems[pyrIdx]?.assetId)?.leerpad || "ruimtemeetkunde") : "ruimtemeetkunde";
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
@@ -1447,7 +1448,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         if (pyrIdx == null) return null;
         return (
           <div style={{ position: "absolute", right: 14, bottom: 96, zIndex: 15, display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
-            <button onClick={() => onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde")} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
+            <button onClick={() => onOpenLeerpad && onOpenLeerpad(pyrLeerpad)} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
             <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(20,28,44,0.78)", borderRadius: 999, padding: "7px 12px", boxShadow: "0 4px 14px rgba(0,0,0,.35)" }}>
               <button onClick={() => wijzigMaat(pyrIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➖</button>
               <span style={{ color: "#fff", font: "800 13px system-ui" }}>grootte</span>

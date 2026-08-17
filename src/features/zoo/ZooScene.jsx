@@ -10,7 +10,7 @@ import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, T
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
-import { getAsset, cellsVan, botsCellsVan, isBlok } from "./AssetRegistry";
+import { getAsset, cellsVan, botsCellsVan, isBlok, isManipuleerbaar } from "./AssetRegistry";
 import { heightAt, applyBrush, flatField, TER_SIZE, TER_SEG, TER_N, TER_EXT, TER_STEP, blokHoogte } from "./terrain";
 import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
@@ -350,7 +350,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "rock") return <Rock position={[x, y, z]} rotation={rotation} variant={a.variant} />;
   if (a.procedural === "souvenir") return <Souvenir soort={a.souvenir} position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "piramide") return <EgyptischePiramide position={[x, y, z]} rotation={rotation} maat={maat ?? 8} onMaat={onMaat} onOefenen={onOefenen} studie={studie} />;
-  if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "rubik") return <RubiksKubus position={[x, y, z]} rotation={rotation} maat={maat ?? 3} />;
   if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "halvebol") return <HalveBol position={[x, y, z]} rotation={rotation} />;
@@ -799,7 +799,7 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
     if (!p) return;
     const afstand2 = (i) => {
       const it = placedItems[i];
-      if (!it || it.assetId !== "piramide" || !it.cell) return Infinity;
+      if (!it || !isManipuleerbaar(it.assetId) || !it.cell) return Infinity;
       const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       return (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
     };
@@ -813,7 +813,7 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
     let bestIdx = null, bestD2 = ENTER2, bx = 0, bz = 0;
     for (let i = 0; i < placedItems.length; i++) {
       const it = placedItems[i];
-      if (it.assetId !== "piramide" || !it.cell) continue;
+      if (!isManipuleerbaar(it.assetId) || !it.cell) continue;
       const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < bestD2) { bestD2 = d2; bestIdx = i; bx = x; bz = z; }
@@ -1254,8 +1254,8 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
               <Suspense fallback={null}>
                 <PlacedItem
                   assetId={it.assetId} x={x} z={z} y={y} rotation={it.rotation || 0} babies={it.babies || 0} h={it.h || 0} maat={it.maat}
-                  onMaat={it.assetId === "piramide" && onMaat ? (d) => onMaat(idx, d) : undefined}
-                  onOefenen={it.assetId === "piramide" ? onOefenen : undefined}
+                  onMaat={isManipuleerbaar(it.assetId) && onMaat ? (d) => onMaat(idx, d) : undefined}
+                  onOefenen={isManipuleerbaar(it.assetId) ? onOefenen : undefined}
                   studie={it.assetId === "piramide" && idx === studiePiramideIdx}
                   rideRef={idx === rideIdx ? attractieZitje : undefined}
                   colors={it.colors} colorEditable={colorEditIdx === idx}

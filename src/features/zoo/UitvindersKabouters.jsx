@@ -567,8 +567,11 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
    Een grote 3D-kubus van 3×3×3 = 27 LOSSE blokjes, elk met een EIGEN kleur, zo
    dat je ze kunt tellen: dat is de inhoud (ribbe × ribbe × ribbe). Iso-gekanteld
    zodat je drie vlakken ziet, op een sokkel, met een zwevend inhoud-label. */
-export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
-  const N = 3, blok = 1.0, gap = 1.15;         // ~3,3 m ribbe = flinke blikvanger
+export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+  // Manipuleerbaar (Mark 17 aug): met +/- verander je de ribbe N (2..5). Meer
+  // ribbe = meer blokjes = meer inhoud (N³) — en dat telt live mee.
+  const N = Math.max(2, Math.min(5, Math.round(maat)));
+  const blok = 1.0, gap = 1.15;
   const blokken = useMemo(() => {
     const out = [];
     const off = ((N - 1) / 2) * gap;
@@ -580,15 +583,17 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0 }) {
       i++;
     }
     return out;
-  }, []);
+  }, [N]);
+  const straal = ((N - 1) / 2) * gap + blok / 2;       // halve ribbe (schaalt met N)
+  const midY = straal + 1.3;                           // kubus zweeft net boven de sokkel
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <ZwevendeMaten y={4.7} regels={["🧊 ribbe × ribbe × ribbe", "3 × 3 × 3 = 27 blokjes", "= de inhoud"]} />
-      {/* sokkel */}
-      <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[1.5, 1.75, 0.28, 8]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
-      <mesh position={[0, 0.31, 0]}><cylinderGeometry args={[1.3, 1.45, 0.06, 8]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
+      <ZwevendeMaten y={midY + straal + 1.4} regels={["🧊 ribbe × ribbe × ribbe", `${N} × ${N} × ${N} = ${N * N * N} blokjes`, "= de inhoud"]} />
+      {/* sokkel (schaalt mee met de kubus) */}
+      <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[straal + 0.35, straal + 0.55, 0.28, 8]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 0.31, 0]}><cylinderGeometry args={[straal + 0.15, straal + 0.3, 0.06, 8]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
       {/* de kleuren-kubus, iso-gekanteld zodat je 3 vlakken ziet en kunt tellen */}
-      <group position={[0, 2.4, 0]} rotation={[0.42, 0.62, 0]}>
+      <group position={[0, midY, 0]} rotation={[0.42, 0.62, 0]}>
         {blokken.map((b, i) => (
           <mesh key={i} position={b.p} castShadow>
             <boxGeometry args={[blok, blok, blok]} /><meshStandardMaterial color={b.c} flatShading roughness={0.5} metalness={0.04} />
