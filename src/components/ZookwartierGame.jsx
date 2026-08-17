@@ -1322,35 +1322,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       else if (onOpenLeerpaden) onOpenLeerpaden();
     }, 1400);
   };
-  // 👁️ Studie-stand (Mark 17 aug): kom je bij een piramide en verschijnt de
-  // grootte-regelaar, kijk dan automatisch DOOR DE OGEN van je poppetje — dan
-  // lees je de som die op de vlakken staat van dichtbij. Loop je weg → we
-  // schakelen automatisch terug naar het normale beeld. `autoFP` onthoudt dat
-  // WÍJ het aanzetten, zodat een handmatige keuze niet wordt overruled én we
-  // netjes terugschakelen. Niet in bouw-/plaats-/andere-camera-standen.
-  const autoFP = useRef(false);
-  useEffect(() => {
-    const near = nabijePiramide != null && placedItems[nabijePiramide]?.assetId === "piramide";
-    if (near) {
-      // Bouw-balk mag OPEN staan (dat is de standaard bij een klein park) — alleen
-      // niet terwijl je actief iets aan het plaatsen/boetseren/water-verven bent.
-      if (!firstPerson && !placing && !sculptMode && !waterMode && !groundMode && !buddyEye && !rideTrain && !followCam && rideIdx == null && selectedIdx == null) {
-        setFirstPerson(true);
-        autoFP.current = true;
-      }
-    } else if (autoFP.current) {
-      autoFP.current = false;
-      setFirstPerson(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [nabijePiramide]);
-  // Ga je iets plaatsen terwijl je automatisch door-de-ogen keek? Dan even terug
-  // naar het normale beeld (plaatsen doe je van bovenaf), zonder de auto-stand
-  // te vergeten.
-  useEffect(() => {
-    if (placing && autoFP.current) { autoFP.current = false; setFirstPerson(false); }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [placing]);
+  // 👁️ Auto-first-person bij de piramide is WEGGEHAALD (Mark 17 aug: "gaat weer
+  // draaien"). Het automatisch omschakelen van derde-persoon → door-de-ogen gaf
+  // telkens een camera-snap (= een draai) bij naderen/weglopen. De piramide is nu
+  // 3× zo groot, dus je leest de som op de vlakken prima in het gewone beeld; de
+  // +/- en de studie-panelen blijven verschijnen als je in de buurt komt, en
+  // "👁️ Door je eigen ogen" staat gewoon in het menu als je het zelf wilt.
   // Paneel dicht (welke weg dan ook) → stem ook stoppen; nooit napraten.
   useEffect(() => { if (!tafereel) stopSpreken(); }, [tafereel]);
   // Park-zwerm 17 jul: bij het VERLATEN van het park (🏠 of leermoment-deeplink)

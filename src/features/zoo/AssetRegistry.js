@@ -151,7 +151,7 @@ export const ZOO_ASSETS = {
   // 3× zo groot (Mark 17 aug) → footprint 3× ruimer (cells:21 = ~40 m reserveren)
   // en botsing rond de echte kegelvoet (botsCells:13 ≈ ±12 m) zodat je er niet
   // doorheen loopt maar wél tot aan de voet kunt komen om de som te lezen.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13 },
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
   kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3 },

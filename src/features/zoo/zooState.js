@@ -105,23 +105,29 @@ function bouwVoorbeeldPark() {
   //    omheen loopt en hem tot maat 11 kunt laten groeien). De vormen + de
   //    meet-objecten staan overzichtelijk in een aparte tuin er ten noorden van,
   //    in twee ruime rijen ver uit elkaar. ──
-  // 📐 MEETKUNDE-WERELD op de westflank (Mark 17 aug: "maak het plein veel groter,
-  // maak de rest ook zo"). De 3× piramide + de nu 2× grote vormen, alles ruim.
-  // ── het GROTE piramide-plein (veel groter) — de piramide staat er helemaal alleen
-  vlak("pathStone", -40, -18, -24, 3);
-  add("piramide", -29, -10);
-  add("treePalm", -40, -24); add("treePalm", -19, -24);
-  add("bankje", -39, 2); add("bankje", -20, 2);
-  add("flowerPurple", -40, 3); add("flowerYellow", -19, 3);
-  // verbindingspad door de opening tussen de twee linker-verblijven naar het centrum
-  rij("pathStone", 0, -26, -3);
-  // ── de vormen-tuin ten NOORDEN: elke vorm veel ruimte (vormen zijn nu ~2× groot)
-  vlak("pathStone", -40, -18, 5, 20);
-  add("kubus", -35, 8);   add("kegel", -23, 8);
-  add("bol", -35, 15);    add("halvebol", -23, 15);
-  add("telraam", -29, 8); add("parkkaart", -29, 15);
-  add("klok", -38, 20); add("weegschaal", -32, 20); add("breukentaart", -26, 20); add("moestuin", -20, 20);
-  add("flowerRed", -40, 20); add("bankje", -29, 19);
+  // 📐 MEETKUNDE-WERELD op de westflank (Mark 17 aug: "erg veel ruimer, een
+  // voetbalveld ertussen"). De grote objecten staan nu VER uit elkaar (~24-40 m)
+  // zodat de camera nergens tegenaan zwaait en alles lekker open is. Een lange
+  // pad-spine verbindt alles; de rest is open gras.
+  // ── piramide-plein (3× piramide) helemaal in de zuidwesthoek
+  vlak("pathStone", -40, -19, -30, -8);
+  add("piramide", -30, -19);
+  add("treePalm", -40, -30); add("treePalm", -20, -30);
+  add("bankje", -39, -9); add("bankje", -21, -9);
+  // pad-spine noordwaarts + verbinding door de opening naar het centrum
+  kolom("pathStone", -29, -8, 30);
+  rij("pathStone", 0, -28, -3);
+  // ── de vormen, elk op RUIME afstand (kubus/ijsje/bal/koepel)
+  add("kubus", -35, 2);
+  add("kegel", -22, 8);
+  add("bol", -37, 16);
+  add("halvebol", -22, 22);
+  add("flowerPurple", -34, -1); add("flowerYellow", -23, 4); add("flowerRed", -37, 12);
+  // ── de kleinere meet-objecten: een eigen compacte rij ver in het noorden
+  vlak("pathStone", -39, -20, 26, 32);
+  add("klok", -38, 28); add("weegschaal", -33, 28); add("breukentaart", -28, 28); add("moestuin", -23, 28);
+  add("telraam", -35, 32); add("parkkaart", -27, 32);
+  add("bankje", -22, 27);
 
   // ── 🎡 ONTDEK-LAAN (Mark 16-17 aug 2026): de landmark-blikvangers met magische
   //    poorten uit het masterplan. Loop je door zo'n poort → het leerpad opent.

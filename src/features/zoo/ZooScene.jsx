@@ -1091,7 +1091,11 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
       }
       if (!isVast(it.assetId)) return;
       const a = getAsset(it.assetId);
-      const top = a.kind === "building" ? 3.4
+      // camTop: expliciete camera-hoogte voor grote objecten (Mark 17 aug) — de
+      // 3× piramide is 17 m hoog; met de standaard-3,6 klipte de camera dwars
+      // erdoorheen bij het ronddraaien (flikkeren/"draaien"). Nu duwt hij de arm.
+      const top = a.camTop != null ? a.camTop
+        : a.kind === "building" ? 3.4
         : a.kind === "attraction" ? 3.6
         : ["tree", "bush", "fern", "stump"].includes(a.procedural) ? 0
         : 1.25;
