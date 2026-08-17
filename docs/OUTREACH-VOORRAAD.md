@@ -48,6 +48,28 @@
 - **Stichting Leergeld Emmen eo** — tip van Paul van Olffen (VB Zuidoost-Drenthe, 6 aug,
   na bestuursoverleg). Outreach-mail met doorverwijs-opening al verstuurd 6 aug.
 
+## 🏛️ NIEUW SEGMENT — Onderwijskoepels / schoolbesturen (proactief) — GAT ontdekt 17 aug
+
+**Het gat (Mark 17 aug, nadat "iemand bij Stichting De Hoeksche School" zijn LinkedIn bekeek):**
+onze school-outreach mikt op *individuele* basisscholen (CBS-achterstandsscore per BRIN-
+vestiging) + LOWAN + weekend/zomerscholen. De **koepel-laag — schoolbesturen die
+tientallen scholen tegelijk besturen — was géén eigen segment** (alleen opportunistisch
+via een warme tip, zie hierboven). Root-cause: de lijst groeide vanuit "wie helpt arme
+gezinnen" + databronnen die de lósse school tonen; nooit gevraagd "welk contactpunt geeft
+de meeste scholen per mail". **Dit is de grootste gemiste hefboom** — één bestuurs-akkoord
+= beschikbaar voor al hun scholen, mét gezag.
+
+**Aanpak / databron:** DUO open onderwijsdata (data.duo.nl) heeft alle ~900 PO-besturen
+mét hun scholen. Prioriteer besturen met **veel scholen in achterstandsregio's** (Almere,
+Rotterdam-Zuid, Den Haag, Groningen-Oost, Hoeksche Waard, etc.). Aparte **bestuur-mailtoon**
+(bovenschools: "één keer akkoord = beschikbaar voor al uw scholen"; app jong → tips welkom +
+maatwerk; leer-kern gratis). Versturen pas ná Mark's tekst-akkoord per batch.
+
+**Eerste (warm) — Stichting De Hoeksche School:** 20 openbare basisscholen + 1 SBO + 2 VO,
+Hoeksche Waard. Contact: **info@dehoekscheschool.nl** · 078 6295999 · Biezenvijver 5, 3297 GK
+Puttershoek. Trigger: bekeek Mark's LinkedIn-profiel (17 aug). **Concept-bestuursmail klaar
+(17 aug), wacht op Mark's akkoord om te versturen.**
+
 ### 🤝 De warme-tip-vraag (standaard sinds 7 aug — dagrapport-idee #13)
 
 Vijf van onze beste ingangen kwamen uit een spontane doorverwijzing bij een "nee"
