@@ -1011,6 +1011,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     }));
   };
 
+  // 🔄 Draai een leerobject om z'n as (Mark 17 aug: "als je 'm kunt draaien weet
+  // je echt hoe 't zit"). Stap van 22,5°; de vormen passen `rotation` al toe.
+  const draaiObject = (idx, dir) => {
+    setPlacedItems((items) => items.map((it, i) =>
+      i === idx ? { ...it, rotation: ((it.rotation || 0) + dir * (Math.PI / 8)) } : it));
+  };
+
   const verplaatsGeselecteerde = () => {
     if (selectedIdx == null) return;
     const it = placedItems[selectedIdx];
@@ -1248,6 +1255,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [tafereel, setTafereel] = useState(null);
   const [speelInhoud, setSpeelInhoud] = useState(false); // 📐 interactieve piramide-inhoud
   const [nabijePiramide, setNabijePiramide] = useState(null); // 🔺 index piramide waar je bij staat
+  const [manipMode, setManipMode] = useState("grootte");      // 📏 grootte | 🔄 draaien — wat de +/- doet
   // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
   // vlak vóór het tafereel en opent het praatje. Param één keer lezen bij mount.
   const [deeplinkScene] = useState(() => {
@@ -1443,7 +1451,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // Label tussen de +/- benoemt de vorm die je aanpast (Mark 17 aug: "grootte
   // piramide / grootte kubus" i.p.v. kaal "grootte").
   const GROOTTE_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
-  const pyrGrootteLabel = pyrIdx != null ? `grootte ${GROOTTE_WOORD[placedItems[pyrIdx]?.assetId] || ""}`.trim() : "grootte";
+  const pyrVormWoord = pyrIdx != null ? (GROOTTE_WOORD[placedItems[pyrIdx]?.assetId] || "") : "";
+  const pyrGrootteLabel = `${manipMode === "draaien" ? "draaien" : "grootte"} ${pyrVormWoord}`.trim();
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
@@ -1456,10 +1465,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         return (
           <div style={{ position: "absolute", right: 14, bottom: 96, zIndex: 15, display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
             <button onClick={() => onOpenLeerpad && onOpenLeerpad(pyrLeerpad)} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
+            {/* 📏/🔄 Wissel: bepaalt of de +/- vergroot/verkleint óf draait
+                (Mark 17 aug: "als je 'm kunt draaien weet je echt hoe 't zit"). */}
+            <div style={{ display: "flex", gap: 4, background: "rgba(20,28,44,0.78)", borderRadius: 999, padding: 4, boxShadow: "0 3px 10px rgba(0,0,0,.3)" }}>
+              {[["grootte", "📏 grootte"], ["draaien", "🔄 draaien"]].map(([m, lbl]) => (
+                <button key={m} onClick={() => setManipMode(m)} style={{ border: "none", borderRadius: 999, padding: "6px 12px", font: "800 12px system-ui", cursor: "pointer", touchAction: "manipulation", color: manipMode === m ? "#1a2233" : "#cfd6e0", background: manipMode === m ? "linear-gradient(135deg,#ffe08a,#ffc93c)" : "transparent" }}>{lbl}</button>
+              ))}
+            </div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(20,28,44,0.78)", borderRadius: 999, padding: "7px 12px", boxShadow: "0 4px 14px rgba(0,0,0,.35)" }}>
-              <button onClick={() => wijzigMaat(pyrIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➖</button>
+              <button onClick={() => manipMode === "draaien" ? draaiObject(pyrIdx, -1) : wijzigMaat(pyrIdx, -1)} title={manipMode === "draaien" ? "Draai naar links" : "Kleiner"} style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>{manipMode === "draaien" ? "↺" : "➖"}</button>
               <span style={{ color: "#fff", font: "800 13px system-ui", whiteSpace: "nowrap" }}>{pyrGrootteLabel}</span>
-              <button onClick={() => wijzigMaat(pyrIdx, 1)} title="Groter" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➕</button>
+              <button onClick={() => manipMode === "draaien" ? draaiObject(pyrIdx, 1) : wijzigMaat(pyrIdx, 1)} title={manipMode === "draaien" ? "Draai naar rechts" : "Groter"} style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>{manipMode === "draaien" ? "↻" : "➕"}</button>
             </div>
           </div>
         );
