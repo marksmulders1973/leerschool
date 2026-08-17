@@ -1910,10 +1910,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <button
           onClick={() => setZweef((v) => !v)}
           title={zweef ? "Weer lopen (of druk spatie)" : "Zweven — snel door je park (of druk spatie)"}
-          // Staat de grootte-regelaar rechtsonder (bij een leer-vorm)? Schuif de
-          // lopen/zweven-knop dan omhoog zodat die niet onder de +/- verdwijnt
-          // (Mark 17 aug: "de plus en min staat voor lopen/vliegen").
-          style={{ position: "absolute", right: 16, bottom: pyrIdx != null ? 240 : 150, zIndex: 16, border: zweef ? "3px solid #fff" : "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: zweef ? "linear-gradient(135deg,#38bdf8,#2563eb)" : "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer" }}
+          // Staat de grootte-regelaar rechtsonder (bij een leer-vorm)? Zet de
+          // lopen/zweven-knop dan weg van de +/- (Mark 17 aug: "de plus en min
+          // staat voor lopen/vliegen"). Op de laptop is linksonder vrij (geen
+          // loop-joystick) → daar naartoe; op de telefoon omhoog boven de +/-.
+          style={{ position: "absolute", zIndex: 16, ...(pyrIdx != null ? (COARSE_POINTER ? { right: 16, bottom: 240 } : { left: 16, bottom: 24 }) : { right: 16, bottom: 150 }), border: zweef ? "3px solid #fff" : "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: zweef ? "linear-gradient(135deg,#38bdf8,#2563eb)" : "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer" }}
         >
           {zweef ? "🚶" : "🪽"}
         </button>
