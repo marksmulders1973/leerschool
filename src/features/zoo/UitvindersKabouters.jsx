@@ -615,18 +615,16 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
       {/* hoofd-piramide — 4 vlakke facetten met aftelbaar blokken-bord (dam-bord
           op elk driehoekig vlak: sluit vanzelf in de hoeken, telbaar aan de voet) */}
       <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={steen} map={blokTex} flatShading roughness={1} /></mesh>
-      {/* lichtere kalksteen-mantel vlak onder de top (zoals de echte Giza-piramide) */}
-      <mesh position={[0, 2.98, 0]} rotation={[0, Math.PI / 4, 0]}><coneGeometry args={[0.72, 0.86, 4]} /><meshStandardMaterial color="#efe6c6" flatShading roughness={0.9} /></mesh>
-      {/* topsteen (pyramidion) — de SLUITSTEEN: bleke steen tot je 'm verdient,
-          dan glimt hij goud (Mark 17 aug: "zet de sluitsteen als eerste goud"). */}
-      <mesh position={[0, 3.55, 0]} rotation={[0, Math.PI / 4, 0]} castShadow>
+      {/* topsteen (pyramidion) — de SLUITSTEEN op de punt: bleke steen tot je 'm
+          verdient, dan glimt hij goud (Mark 17 aug: "zet de sluitsteen als eerste
+          goud"). Mini-piramide-mantel eronder is weg — Mark wil een strakke,
+          normale piramide, puur voor het rekenen (17 aug). */}
+      <mesh position={[0, 3.4, 0]} rotation={[0, Math.PI / 4, 0]} castShadow>
         <coneGeometry args={[goud ? 0.3 : 0.24, goud ? 0.42 : 0.34, 4]} />
         {goud
           ? <meshStandardMaterial color={GOUD.licht} emissive={GOUD.donker} emissiveIntensity={0.4} metalness={GOUD.metalness} roughness={GOUD.roughness} flatShading />
           : <meshStandardMaterial color="#cbb98a" metalness={0.15} roughness={0.8} flatShading />}
       </mesh>
-      {/* donkere ingang aan de voorkant */}
-      <mesh position={[0, 0.62, 1.55]}><boxGeometry args={[0.6, 0.85, 0.35]} /><meshStandardMaterial color="#2b2417" roughness={1} /></mesh>
       {/* palmen op het plateau */}
       <Palm position={[-2.55, 0.12, 1.5]} rot={0.5} />
       <Palm position={[2.4, 0.12, -1.7]} rot={-0.7} />
