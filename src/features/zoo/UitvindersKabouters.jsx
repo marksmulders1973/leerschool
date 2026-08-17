@@ -247,6 +247,12 @@ function TafereelTesla() {
 
 const TAFEREEL_MESH = { newton: TafereelNewton, piramide: TafereelPiramide, tesla: TafereelTesla };
 
+// 🥇 Het "afgestudeerd"-goud (Mark 17 aug — ref. het Fortnite-goud dat hij
+// aanwees): warm, verzadigd, écht metaal-goud met felle highlight en amber-
+// schaduw. Dé kleur voor elke leer-trofee; hergebruik overal (gouden vormen →
+// het einddoel: heel het park goud = afgestudeerd 🎓).
+export const GOUD = { licht: "#ffe25a", basis: "#e8b81f", donker: "#a9760b", metalness: 0.95, roughness: 0.2 };
+
 /* ── souvenirs: mini-monumenten op een sokkel (vrijspelen via leerpad) ───── */
 // Geplaatst via het gewone plaats-systeem (PlacedItem → procedural "souvenir").
 // Klein (~1 m), statisch (geen useFrame) — een souvenir mag niets kosten.
@@ -360,7 +366,7 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
               [-1, 0, 1].map((iz) => (
                 <mesh key={`${ix}-${iy}-${iz}`} position={[ix * 0.19, iy * 0.19, iz * 0.19]} castShadow receiveShadow>
                   <boxGeometry args={[0.175, 0.175, 0.175]} />
-                  <meshStandardMaterial color={iy > 0 ? "#ffd94a" : iy < 0 ? "#d29a12" : "#f0c02e"} metalness={0.75} roughness={0.28} flatShading />
+                  <meshStandardMaterial color={iy > 0 ? GOUD.licht : iy < 0 ? GOUD.donker : GOUD.basis} metalness={GOUD.metalness} roughness={GOUD.roughness} flatShading />
                 </mesh>
               ))
             )
