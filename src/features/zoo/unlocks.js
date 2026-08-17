@@ -83,6 +83,23 @@ async function telGeleerdeStappen(playerName) {
   }
 }
 
+// 🥇 Aantal voltooide (unieke) leer-stappen van één pad — de "munt" voor het
+// stukje-bij-beetje-goud (Mark 17 aug). Zelfde sleutel/aanpak als de rest.
+export async function telPadStappen(playerName, padId) {
+  if (!playerName || !padId) return 0;
+  try {
+    const { data, error } = await supabase
+      .from("learn_progress")
+      .select("step_idx")
+      .eq("player_name", playerName)
+      .eq("learn_path_id", padId);
+    if (error || !Array.isArray(data)) return 0;
+    return new Set(data.map((r) => r.step_idx)).size;
+  } catch {
+    return 0;
+  }
+}
+
 function stappenVanPad(padId) {
   const p = pathManifest.find((x) => x.id === padId);
   return p?.stepCount || 0;

@@ -19,7 +19,7 @@ import { track } from "../utils.js";
 import { loadMasteryForPlayer, recommendNextTopic } from "../features/mastery/mastery.js";
 import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
-import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN } from "../features/zoo/unlocks";
+import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN, telPadStappen } from "../features/zoo/unlocks";
 import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
@@ -380,6 +380,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [buddyPickerOpen, setBuddyPickerOpen] = useState(false);
   const [buddyChatOpen, setBuddyChatOpen] = useState(false); // 💬 praten met je maatje (AI)
   const [geleerdeStappen, setGeleerdeStappen] = useState(0); // voor maatjes-ontgrendeling
+  const [inhoudStappen, setInhoudStappen] = useState(0);     // 🥇 voltooide inhoud-pad-stappen → goud per vorm
   const [menuOpen, setMenuOpen] = useState(false);       // ☰-menu (fullscreen) met alle extra functies
   const [prijzenkast, setPrijzenkast] = useState(false); // 🏆 diploma-kast-overlay (beloning-lus 12 aug)
   const [bouwen, setBouwen] = useState(false);           // bouw-modus: winkelbalk in beeld (anders alleen park)
@@ -486,6 +487,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const n = await telGeleerdeStappen(naam);
       if (cancel) return;
       setGeleerdeStappen(n);
+      // 🥇 Inhoud-pad-voortgang → bepaalt welke vormen goud worden.
+      try { const gi = await telPadStappen(naam, "ruimtemeetkunde"); if (!cancel) setInhoudStappen(gi); } catch { /* */ }
       // Geen auto-picker meer: Charley is het standaard maatje en loopt al mee.
       // Zelf een ander maatje kiezen kan via het ⚙️-menu → "🐾 Kies je maatje".
     })();
@@ -1776,6 +1779,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onNearPiramide={setNabijePiramide}
           onPoortDoor={onPoortDoor}
           studiePiramideIdx={pyrIdx}
+          leerStappenPerPad={{ ruimtemeetkunde: inhoudStappen }}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}

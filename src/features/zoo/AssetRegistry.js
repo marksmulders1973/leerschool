@@ -156,17 +156,17 @@ export const ZOO_ASSETS = {
   // 3× zo groot (Mark 17 aug) → footprint 3× ruimer (cells:21 = ~40 m reserveren)
   // en botsing rond de echte kegelvoet (botsCells:13 ≈ ±12 m) zodat je er niet
   // doorheen loopt maar wél tot aan de voet kunt komen om de som te lezen.
-  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12, maatMin: 4, maatMax: 11, maatDefault: 8, maatLeerpad: "ruimtemeetkunde" },
+  piramide: { id: "piramide", kind: "attraction", name: "Egyptische piramide", emoji: "🔺", procedural: "piramide", price: 70, cells: 21, botsCells: 13, camTop: 12, maatMin: 4, maatMax: 11, maatDefault: 8, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 4 },
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
-  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
+  kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 2 },
   // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
   // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
-  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
+  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 6 },
   // ⚽ Grote bal + 🥅 halve bol (Mark 16 aug): inhoud van een bol (⁴⁄₃πr³) en
   // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
-  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
-  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde" },
+  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 8 },
+  halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 10 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn
@@ -319,6 +319,15 @@ export function maatConfig(id) {
   const a = ZOO_ASSETS[id];
   if (!a || a.maatMin == null) return null;
   return { min: a.maatMin, max: a.maatMax, standaard: a.maatDefault ?? a.maatMin, leerpad: a.maatLeerpad };
+}
+// 🥇 Goud-doel per vorm (Mark 17 aug): beheers een klein stukje van het gekoppelde
+// inhoud-pad → de vorm krijgt goud. Elke vorm een eigen (oplopende) drempel, zodat
+// je park stukje-bij-beetje gouder wordt naarmate je meer leert. Aantal telt in
+// voltooide leer-stappen van `pad` (zie unlocks.telPadStappen).
+export function goudConfig(id) {
+  const a = ZOO_ASSETS[id];
+  if (!a || !a.goudPad) return null;
+  return { pad: a.goudPad, drempel: a.goudDrempel || 3 };
 }
 
 // Kiesbare speler-karakters (Quaternius "Animated Men/Women", CC0, gekleurde

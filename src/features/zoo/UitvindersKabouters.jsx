@@ -417,6 +417,46 @@ export function ZwevendeMaten({ regels, y = 4 }) {
   );
 }
 
+// 🥇 Goud-doel-plaatje bij een leer-vorm (Mark 17 aug: "hoe weet ik welke vragen
+// ik goed moet hebben?"). Toont het doel zichtbaar bij het object zelf: nog X
+// lesjes → goud, of "goud verdiend!". Zo weet het kind precies wat te doen én
+// dat leren het park gouder maakt. pointerEvents uit → je tikt dwars erdoorheen.
+export function GoudDoel({ goud = false, rest = 0, y = 0.7 }) {
+  if (!goud && rest <= 0) return null;
+  return (
+    <Html position={[0, y, 0]} center distanceFactor={13} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+      <div style={{
+        whiteSpace: "nowrap", padding: "7px 13px", borderRadius: 14, textAlign: "center",
+        background: goud ? "linear-gradient(135deg,#ffe25a,#a9760b)" : "rgba(18,26,42,0.9)",
+        color: "#fff", fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)",
+        border: "2px solid #ffe25a", lineHeight: 1.4,
+      }}>
+        {goud ? (
+          <div style={{ fontWeight: 900, fontSize: 15, color: "#3a2600" }}>🥇 Goud verdiend!</div>
+        ) : (
+          <>
+            <div style={{ fontWeight: 800, fontSize: 14 }}>🥇 Nog {rest} {rest === 1 ? "lesje" : "lesjes"} → goud</div>
+            <div style={{ fontWeight: 700, fontSize: 11, color: "#ffe25a" }}>wil je alles goud? leer verder ✨</div>
+          </>
+        )}
+      </div>
+    </Html>
+  );
+}
+
+// 🥇 Zwevend gouden kroontje boven een verdiende vorm — universeel "dit is nu
+// goud"-teken (de body-accenten per vorm staan in de vorm zelf).
+export function GoudKroon({ y = 3 }) {
+  return (
+    <group position={[0, y, 0]}>
+      <mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.34, 0.08, 8, 16]} /><meshStandardMaterial color={GOUD.basis} metalness={GOUD.metalness} roughness={GOUD.roughness} flatShading /></mesh>
+      {[0, 1, 2, 3, 4].map((i) => { const a = (i / 5) * Math.PI * 2; return (
+        <mesh key={i} position={[Math.cos(a) * 0.34, 0.17, Math.sin(a) * 0.34]}><coneGeometry args={[0.08, 0.26, 6]} /><meshStandardMaterial color={GOUD.licht} metalness={GOUD.metalness} roughness={GOUD.roughness} flatShading /></mesh>
+      ); })}
+    </group>
+  );
+}
+
 function Palm({ position = [0, 0, 0], rot = 0 }) {
   return (
     <group position={position} rotation={[0, rot, 0]}>
@@ -511,7 +551,7 @@ function Maatlijnen({ maat }) {
   );
 }
 
-export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 8, onMaat, onOefenen, studie = false }) {
+export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 8, onMaat, onOefenen, studie = false, goud = false, goudRest = 0 }) {
   const zand = "#e4cf9a";
   const steen = "#d8c08a";
   const steenDonker = "#b89b63";
@@ -560,6 +600,9 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
         `V = ⅓ × grondvlak × hoogte`,
         `📦 inhoud = ${volume.toLocaleString("nl-NL")} m³`,
       ]} />
+      {/* 🥇 goud-doel + (bij verdiend) een kroontje op de top */}
+      <GoudDoel goud={goud} rest={goudRest} y={1.1} />
+      {goud && <GoudKroon y={4.1 * s} />}
       <group scale={s}>
       {/* zandplateau */}
       <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[3.0, 3.35, 0.12, 24]} /><meshStandardMaterial color={zand} flatShading roughness={1} /></mesh>
@@ -570,8 +613,14 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
       <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={steen} map={blokTex} flatShading roughness={1} /></mesh>
       {/* lichtere kalksteen-mantel vlak onder de top (zoals de echte Giza-piramide) */}
       <mesh position={[0, 2.98, 0]} rotation={[0, Math.PI / 4, 0]}><coneGeometry args={[0.72, 0.86, 4]} /><meshStandardMaterial color="#efe6c6" flatShading roughness={0.9} /></mesh>
-      {/* gouden topsteen (pyramidion) */}
-      <mesh position={[0, 3.55, 0]} rotation={[0, Math.PI / 4, 0]} castShadow><coneGeometry args={[0.24, 0.34, 4]} /><meshStandardMaterial color="#e8b400" metalness={0.5} roughness={0.3} flatShading /></mesh>
+      {/* topsteen (pyramidion) — de SLUITSTEEN: bleke steen tot je 'm verdient,
+          dan glimt hij goud (Mark 17 aug: "zet de sluitsteen als eerste goud"). */}
+      <mesh position={[0, 3.55, 0]} rotation={[0, Math.PI / 4, 0]} castShadow>
+        <coneGeometry args={[goud ? 0.3 : 0.24, goud ? 0.42 : 0.34, 4]} />
+        {goud
+          ? <meshStandardMaterial color={GOUD.licht} emissive={GOUD.donker} emissiveIntensity={0.4} metalness={GOUD.metalness} roughness={GOUD.roughness} flatShading />
+          : <meshStandardMaterial color="#cbb98a" metalness={0.15} roughness={0.8} flatShading />}
+      </mesh>
       {/* donkere ingang aan de voorkant */}
       <mesh position={[0, 0.62, 1.55]}><boxGeometry args={[0.6, 0.85, 0.35]} /><meshStandardMaterial color="#2b2417" roughness={1} /></mesh>
       {/* palmen op het plateau */}
@@ -608,7 +657,7 @@ function cijferTex(n) {
    Een grote 3D-kubus van N×N×N LOSSE blokjes, elk met een EIGEN kleur, met de
    ribbe genummerd (1..N) en de hele inhoud-som ernaast (N×N=…, ×N=…). Iso-
    gekanteld op een sokkel; met +/- verander je de ribbe. */
-export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
   // Manipuleerbaar (Mark 17 aug): met +/- verander je de ribbe N (2..6). Meer
   // ribbe = meer blokjes = meer inhoud (N³) — en dat telt live mee.
   const N = Math.max(2, Math.min(6, Math.round(maat)));
@@ -620,7 +669,7 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
     let i = 0;
     for (let x = 0; x < N; x++) for (let y = 0; y < N; y++) for (let z = 0; z < N; z++) {
       const hue = Math.round((i / totaal) * 360);   // elk blokje een eigen kleur
-      out.push({ p: [x * gap - off, y * gap - off, z * gap - off], c: `hsl(${hue},68%,56%)` });
+      out.push({ p: [x * gap - off, y * gap - off, z * gap - off], c: `hsl(${hue},68%,56%)`, top: y === N - 1 });
       i++;
     }
     return out;
@@ -644,11 +693,17 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
       {/* sokkel (schaalt mee met de kubus) */}
       <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[straal + 0.35, straal + 0.55, 0.28, 8]} /><meshStandardMaterial color="#3a4250" flatShading roughness={0.9} /></mesh>
       <mesh position={[0, 0.31, 0]}><cylinderGeometry args={[straal + 0.15, straal + 0.3, 0.06, 8]} /><meshStandardMaterial color="#5a6472" flatShading roughness={0.8} /></mesh>
+      {/* 🥇 goud-doel + (bij verdiend) een kroontje boven de kubus */}
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={midY + straal + 0.6} />}
       {/* de kleuren-kubus, iso-gekanteld zodat je 3 vlakken ziet en kunt tellen */}
       <group position={[0, midY, 0]} rotation={[0.42, 0.62, 0]}>
         {blokken.map((b, i) => (
           <mesh key={i} position={b.p} castShadow>
-            <boxGeometry args={[blok, blok, blok]} /><meshStandardMaterial color={b.c} flatShading roughness={0.5} metalness={0.04} />
+            <boxGeometry args={[blok, blok, blok]} />
+            {/* 🥇 verdiend → de bovenste laag wordt goud (het goud "kruipt" van
+                boven naar beneden naarmate je meer leert) */}
+            <meshStandardMaterial color={goud && b.top ? GOUD.basis : b.c} flatShading roughness={goud && b.top ? GOUD.roughness : 0.5} metalness={goud && b.top ? GOUD.metalness : 0.04} />
           </mesh>
         ))}
         {/* cijfers 1..N² op ALLE blokjes van de voorkant (Mark 17 aug): zo zie je
@@ -673,7 +728,7 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
 /* ── 🍦 Reuze-ijsje / kegel (Mark 16 aug) ──────────────────────────────────
    Een vrolijk reuze-ijsje: een waffel-kegel met twee bollen en een kers. Leidt
    naar de inhoud van een kegel (⅓·π·r²·h). */
-export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
   // Manipuleerbaar (Mark 17 aug): met +/- groter/kleiner. maat 3 = standaardmaat.
   const m = Math.max(2, Math.min(6, Math.round(maat)));
   const s = m / 1.5;
@@ -681,6 +736,8 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       <ZwevendeMaten y={m * 2.2 + 1.5} regels={["🍦 het hoorntje is een kegel", "V = ⅓ × π × r² × h", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={m * 2.2 + 0.4} />}
       <group scale={s}>
         {/* houder */}
         <mesh position={[0, 0.14, 0]} castShadow receiveShadow><cylinderGeometry args={[0.34, 0.44, 0.28, 12]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.85} /></mesh>
@@ -689,8 +746,8 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
         {/* bollen ijs */}
         <mesh position={[0, 1.85, 0]} castShadow><sphereGeometry args={[0.62, 16, 14]} /><meshStandardMaterial color="#f7b7c8" flatShading roughness={0.6} /></mesh>
         <mesh position={[0, 2.45, 0]} castShadow><sphereGeometry args={[0.5, 16, 14]} /><meshStandardMaterial color="#b7e4c7" flatShading roughness={0.6} /></mesh>
-        {/* kers */}
-        <mesh position={[0, 2.95, 0]} castShadow><sphereGeometry args={[0.16, 10, 10]} /><meshStandardMaterial color="#d33b2f" flatShading roughness={0.4} /></mesh>
+        {/* kers — goud als je 'm verdient */}
+        <mesh position={[0, 2.95, 0]} castShadow><sphereGeometry args={[0.16, 10, 10]} /><meshStandardMaterial color={goud ? GOUD.licht : "#d33b2f"} metalness={goud ? GOUD.metalness : 0} roughness={goud ? GOUD.roughness : 0.4} flatShading /></mesh>
         <mesh position={[0.02, 3.12, 0]} rotation={[0, 0, 0.3]}><cylinderGeometry args={[0.02, 0.02, 0.22, 5]} /><meshStandardMaterial color="#5a8a3a" flatShading /></mesh>
       </group>
     </group>
@@ -708,7 +765,7 @@ function VoetbalPatches({ r }) {
   ));
 }
 
-export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
   const r = 1.05;
   // Manipuleerbaar (Mark 17 aug): maat = straal (m). V = 4/3 × π × r³.
   const m = Math.max(2, Math.min(6, Math.round(maat)));
@@ -716,6 +773,8 @@ export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       <ZwevendeMaten y={m * 2.4 + 0.5} regels={[`📏 straal ${m} m`, "V = 4/3 × π × r³", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={m * 2.2 + 0.4} />}
       <group scale={m / r}>
         <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
         <group position={[0, 0.28 + r, 0]}>
@@ -727,7 +786,7 @@ export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   );
 }
 
-export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
+export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
   const r = 1.15;
   // Manipuleerbaar (Mark 17 aug): maat = straal (m). V = ⅔ × π × r³ (halve bol).
   const m = Math.max(2, Math.min(6, Math.round(maat)));
@@ -735,6 +794,8 @@ export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3 }) {
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       <ZwevendeMaten y={m * 1.6 + 1.5} regels={[`📏 straal ${m} m`, "V = ⅔ × π × r³", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={m * 1.6 + 0.5} />}
       <group scale={m / r}>
         <mesh position={[0, 0.09, 0]} receiveShadow><cylinderGeometry args={[r + 0.15, r + 0.25, 0.16, 20]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
         {/* koepel = bovenste helft van een bol (phi 0..π/2) */}
