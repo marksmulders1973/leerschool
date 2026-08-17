@@ -683,11 +683,11 @@ export function RubiksKubus({ position = [0, 0, 0], rotation = 0, maat = 3, goud
           laag, dan alle lagen — dat samen is de inhoud. */}
       <Html position={[0, midY + straal + 1.6, 0]} center distanceFactor={13} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
         <div style={{ whiteSpace: "nowrap", padding: "9px 15px", borderRadius: 16, background: "rgba(18,26,42,0.9)", color: "#fff", fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)", border: "2px solid #ffe08a", textAlign: "center", lineHeight: 1.55 }}>
-          <div style={{ fontWeight: 800, fontSize: 14, color: "#ffe08a" }}>🧊 inhoud = tel de blokjes</div>
-          <div style={{ fontWeight: 700, fontSize: 14, color: "#bfe0ff" }}>ribbe = {N}</div>
-          <div style={{ fontWeight: 700, fontSize: 14 }}>{N} × {N} = {N * N} <span style={{ color: "#9fb3c8" }}>(één laag)</span></div>
+          <div style={{ fontWeight: 800, fontSize: 14, color: "#ffe08a" }}>🧊 inhoud van de kubus</div>
+          <div style={{ fontWeight: 700, fontSize: 12.5, color: "#bfe0ff" }}>elk blokje = 1 cm³ · ribbe = {N} cm</div>
+          <div style={{ fontWeight: 700, fontSize: 14 }}>{N} × {N} = {N * N} cm³ <span style={{ color: "#9fb3c8" }}>(één laag)</span></div>
           <div style={{ fontWeight: 700, fontSize: 14 }}>{N * N} × {N} = {N * N * N}</div>
-          <div style={{ fontWeight: 900, fontSize: 16 }}>= {N * N * N} blokjes</div>
+          <div style={{ fontWeight: 900, fontSize: 16 }}>inhoud = {N * N * N} cm³</div>
         </div>
       </Html>
       {/* sokkel (schaalt mee met de kubus) */}
