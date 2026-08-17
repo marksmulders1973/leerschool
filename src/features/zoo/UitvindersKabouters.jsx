@@ -759,32 +759,64 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3, goud 
   );
 }
 
-/* ── ⚽ Grote bal + 🥅 halve bol (Mark 16 aug) ──────────────────────────────
-   Een reuze-voetbal en een koepel (halve bal) — de bol-familie van de
-   inhoud-speeltuin (⁴⁄₃πr³ en ⅔πr³). */
-function VoetbalPatches({ r }) {
-  // een paar donkere vlakjes zodat de bol als voetbal leest
-  const pts = [[0, r, 0], [r * 0.7, r * 0.4, r * 0.4], [-r * 0.7, r * 0.4, -r * 0.4], [r * 0.4, -r * 0.5, r * 0.6], [-r * 0.5, -r * 0.4, -r * 0.6]];
-  return pts.map((p, i) => (
-    <mesh key={i} position={p}><sphereGeometry args={[r * 0.22, 8, 8]} /><meshStandardMaterial color="#2b3550" flatShading roughness={0.6} /></mesh>
-  ));
-}
+/* ── 🔵 Bol + 🥅 halve bol (Mark 16 aug) ────────────────────────────────────
+   Een doorzichtige leer-bol (met straal/diameter/omtrek/inhoud) en een koepel
+   (halve bal) — de bol-familie van de inhoud-speeltuin (⁴⁄₃πr³ en ⅔πr³). */
 
 export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
   const r = 1.05;
-  // Manipuleerbaar (Mark 17 aug): maat = straal (m). V = 4/3 × π × r³.
-  const m = Math.max(2, Math.min(6, Math.round(maat)));
+  // Lerende vorm (Mark 17 aug: "deze vormen zijn lerend, hogere prio dan leuk").
+  // Een DOORZICHTIGE bol met de maatlijnen erin: de diameter dwars door het
+  // midden, en HAAKS erop de straal (= halve diameter). Beide benoemd en ze
+  // bewegen mee met groter/kleiner. Rechtsboven: omtrek + inhoud berekend.
+  const m = Math.max(2, Math.min(6, Math.round(maat)));   // maat = straal (m)
+  const diameter = 2 * m;
+  const omtrek = Math.round(2 * Math.PI * m);
   const vol = Math.round((4 / 3) * Math.PI * m * m * m);
+  const lijn = "#12203a";        // diameter-lijn + evenaar (donkerblauw)
+  const straalKleur = "#c0392b"; // straal-lijn (rood) → zie: straal = halve diameter
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <ZwevendeMaten y={m * 2.4 + 0.5} regels={[`📏 straal ${m} m`, "V = 4/3 × π × r³", `≈ ${vol.toLocaleString("nl-NL")} m³`]} />
+      <ZwevendeMaten y={m * 2.4 + 0.5} regels={[
+        `📏 straal ${m} m · diameter ${diameter} m`,
+        `⭕ omtrek = 2 × π × r ≈ ${omtrek.toLocaleString("nl-NL")} m`,
+        `🫧 inhoud = 4/3 × π × r³ ≈ ${vol.toLocaleString("nl-NL")} m³`,
+      ]} />
       <GoudDoel goud={goud} rest={goudRest} y={0.7} />
       {goud && <GoudKroon y={m * 2.2 + 0.4} />}
       <group scale={m / r}>
-        <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.5, 0.62, 0.22, 14]} /><meshStandardMaterial color="#7a8490" flatShading roughness={0.9} /></mesh>
+        {/* sober sokkeltje zodat de bol ergens op rust */}
+        <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.42, 0.54, 0.2, 16]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
         <group position={[0, 0.28 + r, 0]}>
-          <mesh castShadow><sphereGeometry args={[r, 24, 20]} /><meshStandardMaterial color="#f5f5f5" flatShading roughness={0.5} /></mesh>
-          <VoetbalPatches r={r} />
+          {/* doorzichtige glas-bol — je kijkt er dwars doorheen naar de maatlijnen */}
+          <mesh castShadow>
+            <sphereGeometry args={[r, 32, 24]} />
+            <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
+          </mesh>
+          {/* dunne evenaar-ring zodat de bolvorm leesbaar blijft */}
+          <mesh rotation={[Math.PI / 2, 0, 0]}>
+            <torusGeometry args={[r, 0.012, 8, 48]} />
+            <meshStandardMaterial color={lijn} />
+          </mesh>
+          {/* DIAMETER — horizontale lijn dwars door het midden (2 × straal) */}
+          <mesh rotation={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.025, 0.025, 2 * r, 10]} />
+            <meshStandardMaterial color={lijn} />
+          </mesh>
+          {/* STRAAL — HAAKS erop, van het midden naar de rand (halve diameter) */}
+          <mesh position={[0, r / 2, 0]}>
+            <cylinderGeometry args={[0.025, 0.025, r, 10]} />
+            <meshStandardMaterial color={straalKleur} />
+          </mesh>
+          {/* middelpunt-stip */}
+          <mesh><sphereGeometry args={[0.05, 12, 12]} /><meshStandardMaterial color={lijn} /></mesh>
+          {/* benoemde labels — bewegen mee met groter/kleiner */}
+          <Html position={[0, -0.26, 0]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+            <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(18,32,58,0.92)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>diameter {diameter} m</div>
+          </Html>
+          <Html position={[0.24, r / 2, 0]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+            <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(192,57,43,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>straal {m} m</div>
+          </Html>
         </group>
       </group>
     </group>
