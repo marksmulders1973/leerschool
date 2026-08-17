@@ -1440,6 +1440,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     ? nabijePiramide
     : (isManipuleerbaar(placedItems[selectedIdx]?.assetId) ? selectedIdx : null);
   const pyrLeerpad = pyrIdx != null ? (maatConfig(placedItems[pyrIdx]?.assetId)?.leerpad || "ruimtemeetkunde") : "ruimtemeetkunde";
+  // Label tussen de +/- benoemt de vorm die je aanpast (Mark 17 aug: "grootte
+  // piramide / grootte kubus" i.p.v. kaal "grootte").
+  const GROOTTE_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
+  const pyrGrootteLabel = pyrIdx != null ? `grootte ${GROOTTE_WOORD[placedItems[pyrIdx]?.assetId] || ""}`.trim() : "grootte";
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "#aaddff", overflow: "hidden" }}>
@@ -1454,7 +1458,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <button onClick={() => onOpenLeerpad && onOpenLeerpad(pyrLeerpad)} style={{ border: "2px solid #ffe08a", borderRadius: 14, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 4px 14px rgba(0,0,0,.35)", cursor: "pointer" }}>🚪 Inhoud oefenen →</button>
             <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(20,28,44,0.78)", borderRadius: 999, padding: "7px 12px", boxShadow: "0 4px 14px rgba(0,0,0,.35)" }}>
               <button onClick={() => wijzigMaat(pyrIdx, -1)} title="Kleiner" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➖</button>
-              <span style={{ color: "#fff", font: "800 13px system-ui" }}>grootte</span>
+              <span style={{ color: "#fff", font: "800 13px system-ui", whiteSpace: "nowrap" }}>{pyrGrootteLabel}</span>
               <button onClick={() => wijzigMaat(pyrIdx, 1)} title="Groter" style={{ border: "none", borderRadius: "50%", width: 54, height: 54, font: "800 27px system-ui", color: "#7a5b00", background: "linear-gradient(135deg,#ffe08a,#ffc93c)", boxShadow: "0 3px 8px rgba(0,0,0,.3)", cursor: "pointer", touchAction: "manipulation" }}>➕</button>
             </div>
           </div>
