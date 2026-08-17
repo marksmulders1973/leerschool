@@ -44,6 +44,11 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "souvenirMolen", emoji: "🎠", naam: "Mini-draaimolen", pad: "tijd-snelheid-afstand-po", padTitel: "Tijd, snelheid en afstand", waarom: "Tijd, snelheid en afstand uitgespeeld! Dit mini-draaimolentje draait voortaan rondjes in jouw park." },
   { assetId: "souvenirKlok", emoji: "🕐", naam: "Stationsklok", pad: "dienstregeling-roosters-po", padTitel: "Roosters en dienstregelingen", waarom: "Roosters lezen uitgespeeld! Deze stationsklok staat voortaan in jouw park — jij weet nu precies hoelang wachten duurt." },
   { assetId: "souvenirFontein", emoji: "⛲", naam: "Wens-fonteintje", pad: "waterkringloop-po", padTitel: "De waterkringloop", waarom: "De waterkringloop uitgespeeld! Dit wens-fonteintje laat hetzelfde water eindeloos rondgaan — precies zoals de echte kringloop." },
+  // 🥇 GOUDEN KUBUS (Mark 17 aug): rond het inhoud/ruimtemeetkunde-pad af — waar
+  // je leert de inhoud van een kubus te berekenen (n·n·n) — en je verdient de
+  // gouden versie van de leer-kubus. Eerste van een geplande gouden-vormen-
+  // familie (piramide/bol/kegel volgen). Zie Ideeën-tracker #46.
+  { assetId: "souvenirGoudkubus", emoji: "🥇", naam: "Gouden kubus", pad: "ruimtemeetkunde", padTitel: "Inhoud & ruimtemeetkunde", waarom: "Je hebt het inhoud-pad uitgespeeld en weet nu hoe je de inhoud van een kubus berekent (zijde × zijde × zijde)! Als trofee glimt er nu een gouden kubus in jouw park — die verdien je alleen door te leren." },
   // ── FABELWEZENS (Mark 2 jul): de zeldzaamste beloningen, ná de dino's. De
   // draak/feniks VLIEGEN echt rond boven je park; eenhoorn en elf wandelen.
   { assetId: "fabelElf",      emoji: "🧝", naam: "Elf",      stappen: 70,  waarom: "70 lesjes — magisch! Een echte elf komt in je park wonen. Fabelwezens kun je nooit kopen, alleen sparen door te leren." },

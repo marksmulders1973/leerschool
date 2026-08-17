@@ -350,6 +350,23 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
           <mesh position={[0.045, 0.9, 0.062]} rotation={[0, 0, Math.PI / 2.6]}><boxGeometry args={[0.02, 0.1, 0.01]} /><meshStandardMaterial color="#222222" /></mesh>
         </group>
       )}
+      {/* 🥇 Gouden kubus — trofee voor het inhoud/ruimtemeetkunde-pad (Mark 17
+          aug). Een glimmend 3×3×3-blokje goud op de sokkel: de gouden versie van
+          de leer-kubus (n·n·n). Eerste van de gouden-vormen-familie. */}
+      {soort === "goudkubus" && (
+        <group position={[0, 0.42, 0]}>
+          {[-1, 0, 1].map((ix) =>
+            [-1, 0, 1].map((iy) =>
+              [-1, 0, 1].map((iz) => (
+                <mesh key={`${ix}-${iy}-${iz}`} position={[ix * 0.19, iy * 0.19, iz * 0.19]} castShadow receiveShadow>
+                  <boxGeometry args={[0.175, 0.175, 0.175]} />
+                  <meshStandardMaterial color={iy > 0 ? "#ffd94a" : iy < 0 ? "#d29a12" : "#f0c02e"} metalness={0.75} roughness={0.28} flatShading />
+                </mesh>
+              ))
+            )
+          )}
+        </group>
+      )}
       {soort === "fontein" && (
         <group position={[0, 0.22, 0]}>
           <mesh position={[0, 0.08, 0]} castShadow><cylinderGeometry args={[0.34, 0.38, 0.16, 12]} /><meshStandardMaterial color="#9aa4ad" flatShading roughness={0.9} /></mesh>

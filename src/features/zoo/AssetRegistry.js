@@ -83,6 +83,11 @@ export const ZOO_ASSETS = {
   souvenirMolen: { id: "souvenirMolen", kind: "decor", name: "Mini-draaimolen", emoji: "🎠", procedural: "souvenir", souvenir: "draaimolen", cells: 1, price: 0, unlock: "tijd-snelheid-afstand-po" },
   souvenirKlok: { id: "souvenirKlok", kind: "decor", name: "Stationsklok", emoji: "🕐", procedural: "souvenir", souvenir: "klok", cells: 1, price: 0, unlock: "dienstregeling-roosters-po" },
   souvenirFontein: { id: "souvenirFontein", kind: "decor", name: "Wens-fonteintje", emoji: "⛲", procedural: "souvenir", souvenir: "fontein", cells: 1, price: 0, unlock: "waterkringloop-po" },
+  // 🥇 Gouden kubus (Mark 17 aug): verdien je door het inhoud/ruimtemeetkunde-pad
+  // af te ronden — waar je leert een kubus-inhoud te berekenen (n·n·n). Gouden
+  // versie van de leer-kubus als trofee. Eerste van een geplande gouden-vormen-
+  // familie (piramide/bol/kegel volgen). Zie unlocks.js + Ideeën-tracker #46.
+  souvenirGoudkubus: { id: "souvenirGoudkubus", kind: "decor", name: "Gouden kubus", emoji: "🥇", procedural: "souvenir", souvenir: "goudkubus", cells: 1, price: 0, unlock: "ruimtemeetkunde" },
   sheep: { id: "sheep", kind: "animal", name: "Schaap", emoji: "🐑", url: "/models/zoo/animals/Sheep.glb", targetHeight: 1.0, price: 14 },
   zebra: { id: "zebra", kind: "animal", name: "Zebra", emoji: "🦓", url: "/models/zoo/animals/Zebra.glb", targetHeight: 1.6, price: 22 },
   pug: { id: "pug", kind: "animal", name: "Hondje", emoji: "🐶", url: "/models/zoo/animals/Pug.glb", targetHeight: 0.6, price: 12 },
