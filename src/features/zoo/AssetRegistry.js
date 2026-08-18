@@ -167,6 +167,10 @@ export const ZOO_ASSETS = {
   // diameter-maatlijnen — inhoud van een bol (⁴⁄₃πr³) en halve bol (⅔πr³).
   bol: { id: "bol", kind: "attraction", name: "Glazen bal", emoji: "🔮", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 8 },
   halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 10 },
+  // 🛢️ Glazen cilinder (18 aug): het "blikje" dat de kegel-formule compleet
+  // maakt — zelfde bodem + hoogte-verhouding als de kegel; inhoud π·r²·h, de
+  // kegel is er precies ⅓ van.
+  cilinder: { id: "cilinder", kind: "attraction", name: "Glazen cilinder", emoji: "🛢️", procedural: "cilinder", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 12 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn
@@ -274,7 +278,7 @@ export function isBlok(id) {
 // De velociraptor blijft koopbaar als intro-dino zodat de dino-plek niet leeg is.
 export const PLAATSBARE_DIEREN = ["fox", "husky", "shibaInu", "pug", "deer", "alpaca", "cow", "donkey", "pig", "sheep", "wolf", "stag", "horse", "zebra", "velociraptor", "fishClown", "fishBlue", "fishYellow", "mantaray", "dolphin", "shark", "whale"];
 export const PLAATSBARE_BOUWWERKEN = ["station", "donatiebox", "bankje", "prullenbak", "patatkraam", "drankkraam", "ijscokraam", "popcornkraam", "houseA", "houseB", "houseC", "houseD", "houseE", "houseF", "houseG", "houseH", "stallRed", "stallGreen", "cart", "fountain"];
-export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing", "piramide", "kubus", "kegel", "bol", "halvebol", "achtbaanKlein", "achtbaan", "achtbaanSpiraal"];
+export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "swing", "piramide", "kubus", "kegel", "cilinder", "bol", "halvebol", "achtbaanKlein", "achtbaan", "achtbaanSpiraal"];
 // 🎡 Leerplein-objecten (Mark 16-17 aug) — eigen winkel-categorie zodat kinderen
 // de leerobjecten los van de kermis-attracties vinden. Tier A eerst, dan de
 // landmark-poorten. Elk linkt (via parkLeermomenten) naar een bestaand leerpad.

@@ -16,7 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol } from "./UitvindersKabouters";
+import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
@@ -354,6 +354,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "ijsje") return <KegelIjsje position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
   if (a.procedural === "bol") return <GroteBal position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
   if (a.procedural === "halvebol") return <HalveBol position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
+  if (a.procedural === "cilinder") return <Cilinder position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
   // 🎡 Interactief-park-masterplan (Mark 16-17 aug) — leerobjecten + poorten.
   if (a.procedural === "klok") return <Klokkentoren position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "weegschaal") return <Weegschaal position={[x, y, z]} rotation={rotation} />;

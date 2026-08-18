@@ -138,6 +138,17 @@ export const PARK_LEERMOMENTEN = {
     leerLabel: "Inhoud van een kegel",
     speel: "kegel-inhoud",
   },
+  cilinder: {
+    id: "cilinder",
+    emoji: "🛢️",
+    titel: "De glazen cilinder",
+    praatje:
+      "Een glazen cilinder — net een reuze-blikje! De rode lijn onderin is de straal van de bodem, de blauwe lijn is de hoogte. De inhoud reken je uit met: π × straal × straal × hoogte. En nu het mooiste: een kegel met dezelfde bodem en dezelfde hoogte past er precies drie keer in — dáárom staat er bij de kegel een derde in de formule!",
+    weetje:
+      "Blikjes zijn cilinders omdat die vorm sterk is en makkelijk rolt in de fabriek. Een frisdrankblikje heeft een inhoud van 330 ml — dat zijn 330 blokjes van 1 bij 1 bij 1 centimeter.",
+    leerpadId: "ruimtemeetkunde",
+    leerLabel: "Inhoud van een cilinder",
+  },
   bol: {
     id: "bol",
     emoji: "🔮",
@@ -333,6 +344,7 @@ export const LEERMOMENT_BY_ASSET = {
   piramide: "piramide",
   kubus: "kubus",
   kegel: "kegel",
+  cilinder: "cilinder",
   bol: "bol",
   halvebol: "halvebol",
   // 🎡 Interactief-park-masterplan (Mark 16-17 aug): assetId === leermoment-id.

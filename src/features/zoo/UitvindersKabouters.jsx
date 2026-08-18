@@ -784,6 +784,62 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3, goud 
   );
 }
 
+/* ── 🛢️ Glazen cilinder (18 aug) ───────────────────────────────────────────
+   Het "blikje" dat de kegel-formule compleet maakt: bewust dezelfde bodem en
+   hoogte-verhouding als de kegel (r : h = 1 : 2). Inhoud = π·r²·h — en de
+   kegel ernaast is daar precies een DERDE van. Zelfde glas-stijl + kleurcode
+   (rood = straal, blauw = hoogte) als de andere lerende vormen. */
+export function Cilinder({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
+  const m = Math.max(2, Math.min(6, Math.round(maat)));  // maat = straal (m)
+  const hoogte = 2 * m;
+  const vol = Math.round(Math.PI * m * m * hoogte);
+  const lijn = "#12203a";        // hoogte-lijn + randen (donkerblauw)
+  const straalKleur = "#c0392b"; // straal-lijn (rood)
+  const r0 = 1, h0 = 2;          // basisgeometrie — zelfde verhouding als de kegel
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={m * 1.4 + 1.1} regels={[
+        `📏 straal ${m} m · hoogte ${hoogte} m`,
+        `🛢️ inhoud = π × r² × h ≈ ${vol.toLocaleString("nl-NL")} m³`,
+        `de kegel is hier precies ⅓ van!`,
+      ]} />
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={m * 1.3 + 0.5} />}
+      <group scale={m * 0.6}>
+        {/* sober sokkeltje */}
+        <mesh position={[0, -0.05, 0]} receiveShadow><cylinderGeometry args={[r0 + 0.12, r0 + 0.2, 0.1, 28]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
+        {/* doorzichtige cilinder; geen castShadow (glas) */}
+        <mesh position={[0, h0 / 2, 0]}>
+          <cylinderGeometry args={[r0, r0, h0, 40]} />
+          <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
+        </mesh>
+        {/* randen onder + boven zodat de vorm leesbaar blijft */}
+        <mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[r0, 0.012, 8, 48]} /><meshStandardMaterial color={lijn} /></mesh>
+        <mesh position={[0, h0, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[r0, 0.012, 8, 48]} /><meshStandardMaterial color={lijn} /></mesh>
+        {/* HOOGTE — verticale lijn door het midden, van bodem tot deksel */}
+        <mesh position={[0, h0 / 2, 0]}>
+          <cylinderGeometry args={[0.02, 0.02, h0, 10]} />
+          <meshStandardMaterial color={lijn} />
+        </mesh>
+        {/* STRAAL — HAAKS erop, van het voet-midden naar de rand */}
+        <mesh position={[r0 / 2, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.02, 0.02, r0, 10]} />
+          <meshStandardMaterial color={straalKleur} />
+        </mesh>
+        {/* voet-midden stip */}
+        <mesh><sphereGeometry args={[0.045, 12, 12]} /><meshStandardMaterial color={lijn} /></mesh>
+        {/* benoemde labels — bewegen mee met groter/kleiner */}
+        <Html position={[-0.2, h0 / 2, 0]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(18,32,58,0.92)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>hoogte {hoogte} m</div>
+        </Html>
+        <Html position={[r0 / 2, -0.2, 0]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(192,57,43,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>straal {m} m</div>
+        </Html>
+      </group>
+    </group>
+  );
+}
+
 /* ── 🔵 Bol + 🥅 halve bol (Mark 16 aug) ────────────────────────────────────
    Een doorzichtige leer-bol (met straal/diameter/omtrek/inhoud) en een koepel
    (halve bal) — de bol-familie van de inhoud-speeltuin (⁴⁄₃πr³ en ⅔πr³). */

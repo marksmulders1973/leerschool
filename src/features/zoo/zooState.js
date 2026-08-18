@@ -117,9 +117,12 @@ function bouwVoorbeeldPark() {
   // pad-spine noordwaarts + verbinding door de opening naar het centrum
   kolom("pathStone", -29, -8, 30);
   rij("pathStone", 0, -28, -3);
-  // ── de vormen, elk op RUIME afstand (kubus/ijsje/bal/koepel)
+  // ── de vormen, elk op RUIME afstand (kubus/kegel/cilinder/bal/koepel).
+  // De cilinder staat bewust in de buurt van de kegel: zelfde bodem + hoogte,
+  // dus je ZIET dat de kegel er een derde van is (18 aug).
   add("kubus", -35, 2);
   add("kegel", -22, 8);
+  add("cilinder", -28, 13);
   add("bol", -37, 16);
   add("halvebol", -22, 22);
   add("flowerPurple", -34, -1); add("flowerYellow", -23, 4); add("flowerRed", -37, 12);

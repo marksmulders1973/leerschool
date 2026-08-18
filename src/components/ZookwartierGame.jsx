@@ -171,7 +171,7 @@ function maakRekenVraag(kraam) {
 // leuk"): maak je 'm 2× zo groot, dan past er 8× zoveel in (niet 2×!). Dat werkt
 // voor élke vorm — inhoud = lengte × breedte × hoogte, dus ×k → ×k³. Dat kun je
 // alleen in een interactief park écht voelen; op papier blijft het abstract.
-const VORM_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
+const VORM_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", cilinder: "cilinder", bol: "bol", halvebol: "koepel" };
 function maakVormVraag(assetId, maat) {
   const woord = VORM_WOORD[assetId] || "vorm";
   // Clamp per vorm (de piramide loopt 4..11, de rest 2..6 — zie AssetRegistry).
@@ -216,6 +216,15 @@ function maakVormVraag(assetId, maat) {
         vraag: `Deze bol heeft straal ${m} m (de rode lijn). Inhoud = 4/3 × π × r³, en π ≈ 3. Hoeveel m³ is dat ongeveer?`,
         antwoord, opties: optiesVan(antwoord, [Math.PI * m * m * m, (4 / 3) * Math.PI * m * m]), eenheid: "m³", emoji: "🔮", vorm: true,
         onthulling: `r³ = ${m} × ${m} × ${m} = ${m * m * m}. Schat met π ≈ 3: 4/3 × 3 × ${m * m * m} = ${4 * m * m * m}. Precies is het ${antwoord} m³ — schatten bracht je er dus al bijna!`,
+      };
+    }
+    if (assetId === "cilinder") {
+      const h = 2 * m;
+      const antwoord = rond(Math.PI * m * m * h);
+      return {
+        vraag: `Deze cilinder heeft straal ${m} m (rood) en hoogte ${h} m (blauw). Inhoud = π × r² × h, en π ≈ 3. Hoeveel m³ ongeveer?`,
+        antwoord, opties: optiesVan(antwoord, [(1 / 3) * Math.PI * m * m * h, Math.PI * m * h, 2 * Math.PI * m * m * h]), eenheid: "m³", emoji: "🛢️", vorm: true,
+        onthulling: `r² = ${m} × ${m} = ${m * m}. Schat met π ≈ 3: 3 × ${m * m} × ${h} = ${3 * m * m * h}. Precies: ${antwoord} m³. En onthoud: een kegel met dezelfde bodem en hoogte is hier precies een DERDE van!`,
       };
     }
     if (assetId === "kegel") {
@@ -1549,7 +1558,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const pyrLeerpad = pyrIdx != null ? (maatConfig(placedItems[pyrIdx]?.assetId)?.leerpad || "ruimtemeetkunde") : "ruimtemeetkunde";
   // Label tussen de +/- benoemt de vorm die je aanpast (Mark 17 aug: "grootte
   // piramide / grootte kubus" i.p.v. kaal "grootte").
-  const GROOTTE_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
+  const GROOTTE_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", cilinder: "cilinder", bol: "bol", halvebol: "koepel" };
   const pyrVormWoord = pyrIdx != null ? (GROOTTE_WOORD[placedItems[pyrIdx]?.assetId] || "") : "";
   const pyrGrootteLabel = `${manipMode === "draaien" ? "draaien" : "grootte"} ${pyrVormWoord}`.trim();
 
@@ -2611,7 +2620,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             stepTitle={rekenVraag.vorm ? "Reken-vraag bij een 3D-vorm" : "Reken-vraag bij je kraampje"}
             stepIdx={rekenVraagNr.current}
             stepExplanation={rekenVraag.vorm
-              ? `De leerling speelt met een 3D-vorm in een park en krijgt een reken-vraag over de inhoud (ruimte). Twee soorten vragen: (1) schaal-inzicht — maak je een vorm k× zo groot, dan wordt de inhoud k × k × k = k³ keer zo groot (2× → 8×, 3× → 27×), want inhoud = lengte × breedte × hoogte; (2) de echte inhoud uitrekenen — de formule staat in de vraag (bol 4/3 × π × r³, kegel ⅓ × π × r² × h, halve bol ⅔ × π × r³, piramide ⅓ × grondvlak × hoogte, kubus ribbe³); reken-tip: schat met π ≈ 3, dan kom je vanzelf bij het goede antwoord want de foute opties liggen ver weg. Klassieke fouten om op te letten: de ⅓ of ⅔ vergeten, r² in plaats van r³, of de hele in plaats van de halve bol. Help stap voor stap met denkprikkels, nooit het antwoord meteen, in taal voor een kind van ~10.`
+              ? `De leerling speelt met een 3D-vorm in een park en krijgt een reken-vraag over de inhoud (ruimte). Twee soorten vragen: (1) schaal-inzicht — maak je een vorm k× zo groot, dan wordt de inhoud k × k × k = k³ keer zo groot (2× → 8×, 3× → 27×), want inhoud = lengte × breedte × hoogte; (2) de echte inhoud uitrekenen — de formule staat in de vraag (bol 4/3 × π × r³, kegel ⅓ × π × r² × h, cilinder π × r² × h, halve bol ⅔ × π × r³, piramide ⅓ × grondvlak × hoogte, kubus ribbe³; een kegel is precies ⅓ van een cilinder met dezelfde bodem en hoogte); reken-tip: schat met π ≈ 3, dan kom je vanzelf bij het goede antwoord want de foute opties liggen ver weg. Klassieke fouten om op te letten: de ⅓ of ⅔ vergeten, r² in plaats van r³, of de hele in plaats van de halve bol. Help stap voor stap met denkprikkels, nooit het antwoord meteen, in taal voor een kind van ~10.`
               : `De leerling runt een kraampje in een dierentuin-spel en krijgt een reken-vraag over kopen en verkopen. Handige begrippen: winst per stuk = verkoopprijs min inkoopprijs; totale winst = aantal keer winst per stuk; omzet = aantal keer verkoopprijs. Help stap voor stap, in taal voor een kind van ~10.`}
             currentCheck={{ q: rekenVraag.vraag, options: rekenVraag.opties.map((o) => rekenVraag.vorm ? `${o}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${o} muntjes`) }}
             lastWrongAnswer={rekenFout != null ? (rekenVraag.vorm ? `${rekenFout}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${rekenFout} muntjes`) : undefined}
