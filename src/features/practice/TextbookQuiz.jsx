@@ -75,8 +75,12 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
   const canNext2 = bookName.trim() !== "";
   const canNext3 = chapterNum !== "" && (level !== "" || initLevel !== "");
 
-  // Known cover URLs for popular textbooks
-  // Generate SVG covers matching real book colors/styles
+  // Eigen neutrale boek-tegel (SVG). We tonen bewust GEEN echte omslagen van
+  // uitgevers en geen externe boekafbeeldingen — omslagen zijn auteursrechtelijk
+  // beschermd en gebruik ervan suggereert een samenwerking die er niet is
+  // (besluit Mark 18 aug 2026, public/covers/ verwijderd). De methodenaam als
+  // tekst noemen mag wél (eerlijk verwijzend gebruik). Geen uitgeversnamen op
+  // de tegel zetten.
   const makeBookCover = (title, subtitle, colors, icon) => {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
       <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${colors[0]}"/><stop offset="100%" stop-color="${colors[1]}"/></linearGradient></defs>
@@ -86,12 +90,33 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
       <text x="20" y="50" font-family="Arial" font-weight="900" font-size="22" fill="white">${title}</text>
       <text x="20" y="75" font-family="Arial" font-weight="400" font-size="13" fill="rgba(255,255,255,0.8)">${subtitle}</text>
       <text x="100" y="180" font-family="Arial" font-size="48" text-anchor="middle" fill="rgba(255,255,255,0.15)">${icon}</text>
-      <text x="20" y="260" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.5)">Noordhoff</text>
+      <text x="20" y="260" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.5)">📕 jouw boek</text>
     </svg>`;
     return "data:image/svg+xml," + encodeURIComponent(svg);
   };
 
+  // Deterministische eigen tegel voor élk boek (kleur uit naam-hash).
+  const TILE_PALETTES = [
+    ["#0d47a1", "#1565c0", "#1976d2"], ["#1b5e20", "#2e7d32", "#388e3c"],
+    ["#4a148c", "#6a1b9a", "#7b1fa2"], ["#b71c1c", "#c62828", "#d32f2f"],
+    ["#004d40", "#00695c", "#00796b"], ["#e65100", "#ef6c00", "#f57c00"],
+    ["#01579b", "#0277bd", "#0288d1"], ["#311b92", "#4527a0", "#512da8"],
+  ];
+  const genericTile = (naam, ondertitel) => {
+    let h = 0;
+    for (let i = 0; i < naam.length; i++) h = (h * 31 + naam.charCodeAt(i)) >>> 0;
+    const kleuren = TILE_PALETTES[h % TILE_PALETTES.length];
+    const woorden = naam.trim().split(/\s+/);
+    const icoon = ((woorden[0]?.[0] || "B") + (woorden[1]?.[0] || "")).toUpperCase();
+    const titel = naam.length > 14 ? naam.slice(0, 13) + "…" : naam;
+    return makeBookCover(titel, ondertitel || "", kleuren, icoon);
+  };
+
   const deelNum = (d) => d ? (parseInt(d.replace(/\D/g, "")) || 0) : 0;
+  // LET OP: "/covers/…"-verwijzingen hieronder zijn NIET meer in gebruik —
+  // de bestanden zijn 18 aug 2026 verwijderd (auteursrecht). De resolutie
+  // hieronder valt voor die entries altijd terug op genericTile(). De map
+  // dient nog als lijst van "bekende" methodes (+ eigen tegel-ontwerpen).
   const BOOK_COVERS = {
     // ── Wiskunde VO ──────────────────────────────────────────────
     "GR Havo/vwo 1 Deel 1":      () => "/covers/gr-13e-hv1-deel1.png",
@@ -379,42 +404,20 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "Blink Wereld":  () => "/covers/blink.jpg",
   };
 
-  // Search for book cover
+  // Eigen boek-tegel bepalen. GEEN externe cover-bronnen (Google Books e.d.)
+  // en geen echte omslagen — zie comment bij makeBookCover.
   useEffect(() => {
     if (!bookName) { setCoverUrl(null); setCoverResults([]); setCoverResultIndex(0); setIsKnownCover(false); return; }
+    setCoverResults([]);
     setCoverResultIndex(0);
-    const searchCover = async () => {
-      setCoverLoading(true);
-      // 1. Check known book covers first
-      if (BOOK_COVERS[bookName]) {
-        setCoverUrl(BOOK_COVERS[bookName](deel));
-        setIsKnownCover(true);
-        setCoverResults([]);
-        setCoverLoading(false);
-        return;
-      }
-      setIsKnownCover(false);
-      // 2. Try Google Books as fallback — collect all results for cycling
-      try {
-        const query = `${bookName} ${deel || ""} schoolboek`.trim();
-        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=8&langRestrict=nl&printType=books`);
-        const data = await res.json();
-        const covers = [];
-        for (const item of (data.items || [])) {
-          const links = item.volumeInfo?.imageLinks;
-          if (links) {
-            let url = links.medium || links.large || links.thumbnail || links.smallThumbnail || "";
-            url = url.replace("http:", "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
-            if (url) covers.push(url);
-          }
-        }
-        setCoverResults(covers);
-        setCoverUrl(covers[0] || null);
-      } catch { setCoverResults([]); setCoverUrl(null); }
-      setCoverLoading(false);
-    };
-    const timer = setTimeout(searchCover, 300);
-    return () => clearTimeout(timer);
+    setCoverLoading(false);
+    const bekend = BOOK_COVERS[bookName];
+    const resolved = bekend ? bekend(deel) : null;
+    const eigenTegel = resolved && !String(resolved).startsWith("/covers/")
+      ? resolved
+      : genericTile(bookName, deel || "");
+    setCoverUrl(eigenTegel);
+    setIsKnownCover(!!bekend);
   }, [bookName, deel]);
 
   const selectStyle = {
@@ -749,26 +752,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                 <div style={{ marginTop: 14, textAlign: "center" }}>
                   <div style={{ fontWeight: 700, fontSize: 17, color: "var(--color-text)" }}>{bookName}</div>
                   <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginTop: 4 }}>{[...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO].find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
-                  {coverUrl && isKnownCover && <div style={{ fontSize: 13, color: "var(--color-brand-primary)", marginTop: 8, fontWeight: 700 }}>✅ Cover gevonden</div>}
-                  {coverUrl && !isKnownCover && (
-                    <div style={{ marginTop: 10 }}>
-                      <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 6 }}>Is dit je boek?</div>
-                      <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
-                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "var(--color-brand-primary)", color: "var(--color-text-strong)", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => setIsKnownCover(true)}>✅ Ja</button>
-                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#2a3f5f", color: "var(--color-text-muted)", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => {
-                          const next = coverResultIndex + 1;
-                          if (next < coverResults.length) {
-                            setCoverResultIndex(next);
-                            setCoverUrl(coverResults[next]);
-                          } else {
-                            setCoverUrl(null);
-                            setCoverResults([]);
-                          }
-                        }}>❌ Nee, andere →</button>
-                      </div>
-                    </div>
-                  )}
-                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>📘 Cover niet gevonden — inhoud klopt wel!</div>}
+                  {coverUrl && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>📘 Eigen weergave van je boek — we tonen bewust geen echte omslagen</div>}
                 </div>
               </div>
 

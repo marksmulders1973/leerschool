@@ -87,7 +87,7 @@ begrijpen, niet om afraffelen.
 Twee dingen wil ik eerlijk zeggen:
 - De app is **jong en door één persoon gemaakt**. Daardoor vind ik verbeterpunten juist
   wélkom — en kan ik aanpassingen die uw scholen helpen vaak binnen een paar dagen doorvoeren.
-- De **leer-kern blijft gratis**. Alleen voor extra's die veel AI gebruiken komt er later een
+- De **leer-kern blijft gratis (gegarandeerd t/m 2031)**. Alleen voor extra's die veel AI gebruiken komt er later een
   kleine betaalde optie; scholen en gezinnen die via een maatschappelijke organisatie
   binnenkomen houden gratis toegang.
 

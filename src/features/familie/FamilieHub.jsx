@@ -41,7 +41,7 @@ bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
-          De Familie-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blíjft gratis; dit komt er als
+          De Familie-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blijft gratis t/m zeker 2031; dit komt er als
           extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>

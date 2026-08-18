@@ -34,7 +34,7 @@
 - **P10. OBLITERATOR sprites** (`ObliteratorGame.jsx`): speler-sprites (~6 karakters), biome-parallax-achtergronden, boss-sprites. Game = geen Cito-regel, Grok vrij. Hoge visuele winst maar groot. **Op Mark's sein.**
 
 ## 🐞 Bugs/opruim (los van Grok, kan meteen)
-- **B1.** `public/covers/all-right-new.jpg` = 35-byte server-fout i.p.v. afbeelding → leerlingen met methode "All Right" zien een kapot plaatje. Opnieuw ophalen of fallback-SVG.
+- **B1.** ~~`public/covers/all-right-new.jpg` kapot~~ **VERVALLEN 18 aug 2026**: álle echte boekomslagen zijn verwijderd (auteursrecht uitgevers — omslag tonen ≠ naam noemen); TextbookQuiz genereert nu altijd een eigen SVG-tegel. Nooit echte covers of externe boekafbeeldingen (Google Books) terugzetten.
 - **B2.** Wees-afbeeldingen opruimen: `model-student-oud.jpg, student.jpg, leerkracht.jpg, leerling.jpg, bol.jpg, bol1.jpg, youtubeuitleg.jpg, promostudiebol/o1.JPG`.
 - **B3.** `logo-doorstroomtoets.png` = 401 KB voor een inline-icoon → comprimeren/vectoriseren (SOBER — merklogo, stijl behouden).
 

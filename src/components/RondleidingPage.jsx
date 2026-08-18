@@ -20,7 +20,7 @@ const FAQ = [
   },
   {
     q: "Kost het iets?",
-    a: "Nee. De kern is gratis te gebruiken — alle leerpaden, oefenen, examenvragen. Géén reclame, géén abonnement-verplichting. Wie wil, kan er later (vanaf 2027) betaalde extra's bij nemen — maar dat hoeft niet, de leer-kern blijft gratis.",
+    a: "Nee. De kern is gratis te gebruiken — alle leerpaden, oefenen, examenvragen. Géén reclame, géén abonnement-verplichting. Wie wil, kan er later (vanaf 2027) betaalde extra's bij nemen — maar dat hoeft niet, de leer-kern blijft gratis t/m zeker 2031.",
   },
   {
     q: "Werkt het echt?",

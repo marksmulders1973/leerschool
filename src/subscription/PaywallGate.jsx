@@ -146,7 +146,7 @@ export default function PaywallGate({ feature, authUser = null, children, fallba
       {/* B1.1 (7-bots-review): geen maand-/jaarprijzen meer — prijsmodel is
           per-kwartier-bijkopen zonder abonnement (proPlan.js = bron). */}
       <div style={styles.body}>
-        {label} is een betaalde extra. De leer-basis blijft gratis.
+        {label} is een betaalde extra. De leer-basis blijft gratis t/m zeker 2031.
       </div>
       <a href="/abonnement.html" style={styles.cta}>Bekijk de pakketten</a>
     </div>

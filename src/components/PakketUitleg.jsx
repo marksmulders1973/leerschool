@@ -8,8 +8,9 @@ import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "
 // - Naam "Pro" (niet Premium): niveaus zijn op DOELGROEP genoemd (Gratis =
 //   iedereen, Familie = ouders, Pro = juf/meester) → consistenter + eerlijker
 //   dan een waarde-ladder waarbij "Premium" suggereert dat gratis "minder" is.
-// - Geen kale "altijd gratis": "Oefenen en uitleg zijn gratis — en dat blijft
-//   zo", gebonden aan de basis (eerlijk + verdedigbaar).
+// - Geen kale "altijd gratis": belofte gebonden aan de basis én in tijd
+//   afgebakend — max 5 jaar vooruit (nu t/m 2031), telkens verlengd
+//   (eerlijk + verdedigbaar).
 // - Grootste verschil met betaalde concurrenten (Squla e.a.): geen creditcard,
 //   geen proefperiode die stiekem doorloopt.
 // De gratis-kaart staat los BOVENAAN (groot, groen); Familie/Pro zijn kleiner
@@ -182,7 +183,7 @@ export default function PakketUitleg({ open, onClose }) {
             <span style={{ fontSize: 22 }} aria-hidden="true">✅</span>
             <span style={{ fontSize: 17, fontWeight: 800, color: "var(--color-text-strong)" }}>Gratis</span>
             <span style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>· voor iedereen</span>
-            <span style={{ marginLeft: "auto", background: G, color: "#06211a", fontWeight: 800, fontSize: 11, letterSpacing: 0.5, borderRadius: 999, padding: "3px 10px" }}>BLIJFT GRATIS</span>
+            <span style={{ marginLeft: "auto", background: G, color: "#06211a", fontWeight: 800, fontSize: 11, letterSpacing: 0.5, borderRadius: 999, padding: "3px 10px" }}>GRATIS T/M ZEKER 2031</span>
           </div>
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             {["Oefenen met alle onderwerpen", "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid", "Echte examens oefenen én inzien als PDF", "Printbare oefenbladen mee naar huis", "Geen account nodig, geen creditcard"].map((t) => (
@@ -218,7 +219,7 @@ export default function PakketUitleg({ open, onClose }) {
             emoji="🏫" naam="Pro" voorWie="voor scholen & bijlesdocenten"
             prijs="school € 99 per klas p/jaar (factuur) · bijlesdocent ± € 6,95 p/mnd of € 59 p/jaar"
             items={[
-              "Lesgeven met je klas blijft gratis (deelcode)",
+              "Lesgeven met je klas blijft gratis t/m zeker 2031 (deelcode)",
               "Schooldashboard: overzicht per klas + export",
               "Je eigen (school)logo op toetsen en werkbladen",
               "Onbeperkt toetsen maken en werkbladen printen",
@@ -235,7 +236,7 @@ export default function PakketUitleg({ open, onClose }) {
           background: "rgba(0,200,83,0.06)", border: "1px solid rgba(0,200,83,0.2)",
           borderRadius: 10, padding: "10px 12px",
         }}>
-          ✅ <strong style={{ color: "var(--color-text-strong)" }}>De basis blijft gratis. Betalen is nooit verplicht.</strong> Geen proefperiode die stiekem doorloopt, geen verrassing op je rekening. {PAYWALL_ACTIVE ? "" : "Betalen kan pas vanaf begin 2027 — nu is alles nog gratis."}
+          ✅ <strong style={{ color: "var(--color-text-strong)" }}>De basis is gratis — gegarandeerd t/m 2031, en die belofte verlengen we telkens. Betalen is niet verplicht.</strong> Geen proefperiode die stiekem doorloopt, geen verrassing op je rekening. {PAYWALL_ACTIVE ? "" : "Betalen kan pas vanaf begin 2027 — nu is alles nog gratis."}
         </div>
       </div>
     </div>

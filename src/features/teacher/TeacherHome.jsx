@@ -371,7 +371,7 @@ export default function TeacherHome({ userName, authUser, quizzes, classes, onCr
             <span style={{ fontSize: 28 }}>📋</span>
             <span style={{ fontWeight: 700, display: "inline-flex", alignItems: "center", gap: 8 }}>
               Nieuwe Takenlijst
-              {/* leerpaden klaarzetten blijft gratis — hét contrast naast de Pro-features */}
+              {/* leerpaden klaarzetten blijft gratis t/m zeker 2031 (doorrol) — hét contrast naast de Pro-features */}
               <GratisBadge />
             </span>
           </button>

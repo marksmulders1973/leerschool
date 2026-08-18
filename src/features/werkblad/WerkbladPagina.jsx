@@ -275,11 +275,12 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
         {pathId && (
           items.length > 0 ? (
             // Printen = straks Pro (leerkracht); digitaal oefenen via de
-            // deelcode hieronder blijft altijd gratis.
+            // deelcode hieronder blijft gratis t/m zeker 2031 (belofte
+            // schuift telkens op — nooit >5 jaar vooruit beloven).
             <PaywallGate feature="werkblad-print" authUser={authUser}>
               <PrintKnoppen trackPrefix="werkblad" trackProps={{ pad: pathId }} />
               <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
-                {PRO_MODEL.kort} (Pro voor leerkrachten) · de deelcode hieronder blijft altijd gratis
+                {PRO_MODEL.kort} (Pro voor leerkrachten) · de deelcode hieronder blijft gratis t/m zeker 2031
               </div>
             </PaywallGate>
           ) : (

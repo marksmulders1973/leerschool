@@ -1,5 +1,7 @@
 # Wat wordt Pro (betaald) — en wat blijft gratis
 
+> Gratis-beloftes altijd max 5 jaar vooruit (nu t/m 2031) + doorrol — nooit 'voor altijd'.
+
 > Opgesteld 2026-06-04 met Mark. Lancering Pro ~jan 2027 (Cito-piek). Sluit aan op
 > bestaande paywall-infra in `src/subscription/config.js` (PAYWALL_ACTIVE = false).
 

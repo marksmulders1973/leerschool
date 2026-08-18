@@ -134,7 +134,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
             {/* Elk laag-woord in z'n eigen tier-kleur — hier leert de bezoeker de kleurtaal */}
-            De basis blijft gratis. Daarnaast komen er twee extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
+            De basis blijft gratis t/m zeker 2031. Daarnaast komen er twee extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
             klein bedrag per gezín) en <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>Pro</strong> voor scholen en bijlesdocenten.
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         </div>
         {/* School-first-regel (PRIJSPLAN §3): de juf zelf betaalt nooit. */}
         <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 16, lineHeight: 1.5 }}>
-          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis — Pro is voor bijlesdocenten, de schoollicentie voor scholen.
+          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis t/m zeker 2031 — Pro is voor bijlesdocenten, de schoollicentie voor scholen.
         </div>
 
         {/* Plan detail kaart */}

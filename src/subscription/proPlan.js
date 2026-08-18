@@ -13,7 +13,8 @@
 //    ⛔ ON-HOLD (Mark 8 aug: "waarschijnlijk een slecht idee"; herbevestigd
 //    13 aug "geen losse eindjes") — uit ALLE gebruikers-teksten; alleen terug
 //    bij bewezen vraag (PRIJSPLAN §2b). Cadeaukaart idem.
-//  - De leer-basis blijft gratis (merkbelofte); partner-codes (Leergeld,
+//  - De leer-basis blijft gratis (merkbelofte, max 5 jaar vooruit beloven —
+//    nu t/m 2031, telkens verlengd); partner-codes (Leergeld,
 //    Ooievaarspas, voedselbanken) geven het Familie-niveau gratis.
 //    ⚖️ Ooievaarspas = BLIJVEND gratis Familie, zonder plekken-limiet —
 //    schriftelijk toegezegd aan gemeente Den Haag (getekend formulier
@@ -75,14 +76,16 @@ export const LAAG_KLEUREN = {
 };
 
 // Het model in copy — hergebruik overal zodat de belofte consistent blijft
-// (conform feedback_gratis_belofte_gekwalificeerd: nooit "altijd gratis").
+// (conform feedback_gratis_belofte_gekwalificeerd: nooit "altijd gratis";
+// gratis-garantie max 5 jaar vooruit — nu t/m 2031, telkens verlengd).
 export const PRO_MODEL = {
   nu: "Nu nog gratis",
   belofte: "Gratis & onbeperkt t/m 2026",
   later: "Vanaf 2027 een betaalde extra",
   kort: "Nu gratis · vanaf 2027 betaald",
   uitleg:
-    "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — ook voor " +
+    "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — gegarandeerd " +
+    "t/m 2031, en die belofte verlengen we telkens — ook voor " +
     "leerkrachten die met hun klas oefenen. " +
     "Vanaf 2027 zijn er twee extra's: Familie (één klein bedrag per gezín — " +
     "voortgang volgen, weekrapport, hele toets oefenen met de klok; ook als " +
@@ -94,7 +97,8 @@ export const PRO_MODEL = {
 // `status`: 'live' = nu al in de app (gratis preview), 'binnenkort' = roadmap.
 //
 // Leidend principe (Leerkwartier-test): alles wat een 10-jarige nodig heeft om
-// iets BETER te BEGRIJPEN blijft gratis. Betaald = extra's eromheen (AI-bijles-
+// iets BETER te BEGRIJPEN blijft gratis (t/m zeker 2031, belofte schuift
+// telkens op — nooit >5 jaar vooruit beloven). Betaald = extra's eromheen (AI-bijles-
 // tegoed, ouder-inzicht, rapporten, examen-simulatie, leerkracht-tools).
 export const PRO_FEATURES = {
   // T3-besluit (Claude namens Mark, 9 aug 2026): gratis = kleine basis-portie
@@ -211,7 +215,8 @@ export const PRO_FEATURES = {
     laag: "leerkracht",
     blurb:
       "Print het werkblad (12 opgaven + antwoordblad) met je eigen " +
-      "(school)logo erop. Digitaal oefenen via de deelcode blijft gratis.",
+      "(school)logo erop. Digitaal oefenen via de deelcode blijft gratis " +
+      "t/m zeker 2031.",
     status: "live",
   },
   "teacher-tools": {
@@ -224,12 +229,13 @@ export const PRO_FEATURES = {
       "maken, onbeperkt werkbladen printen (12 opgaven + antwoordblad, met " +
       "QR om thuis verder te oefenen), voortgang per leerling inzien en " +
       "resultaten exporteren — voor je hele klas. Leerpaden klaarzetten " +
-      "blijft gratis.",
+      "blijft gratis t/m zeker 2031.",
     status: "live",
   },
 };
 
-// Wat ALTIJD gratis blijft (de basis). Voor de prijzen-pagina-uitleg.
+// Wat gratis blijft (de basis; gegarandeerd t/m 2031, belofte schuift telkens
+// op — nooit >5 jaar vooruit beloven). Voor de prijzen-pagina-uitleg.
 export const PRO_GRATIS_BASIS = [
   "Onbeperkt oefenen — alle leerpaden, vakken en niveaus",
   "Uitleg op 3 niveaus (basis / simpeler / nog simpeler)",

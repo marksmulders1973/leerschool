@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/((?!api/|assets/|icons/|covers/).*\\.html)",
+      "source": "/((?!api/|assets/|icons/).*\\.html)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]

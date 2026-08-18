@@ -76,7 +76,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
           🤝 Deel Leerkwartier — geef Familie gratis weg
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
-          Leerkwartier is en blijft gratis. Help je het verder verspreiden? Delen wordt
+          De basis van Leerkwartier is gratis — gegarandeerd t/m 2031. Help je het verder verspreiden? Delen wordt
           dubbel beloond: jullie krijgen <strong>allebei <a href="/abonnement.html#familie" style={{ color: "#ffd54f", textDecorationColor: "rgba(255,213,79,0.5)" }}>Familie</a> gratis tot 2027</strong> (straks
           ± € 39 per jaar), én je loot mee voor een <strong>gratis Familie-jaar 2027 met 10 uur AI-bijles-tegoed</strong>.
         </p>

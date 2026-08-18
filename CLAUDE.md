@@ -430,7 +430,7 @@ Status 2026-05-13: paywall-infrastructuur is gebouwd maar `PAYWALL_ACTIVE = fals
 **Prijsmodel (Mark akkoord 2026-07-25 — zie `docs/PRIJSPLAN.md`, bron-van-waarheid copy: `src/subscription/proPlan.js` LAGEN):**
 - **Gratis** — de leer-kern, blijft (gekwalificeerd) gratis; partner-codes = Familie-niveau gratis.
 - **Familie** (ouders, per gezín niet per kind): richtprijs €4,95/mnd of €39/jaar — dashboard, weekrapport, examen-simulatie, Kwartierplan.
-- **Pro** (leerkrachten/bijlesdocenten): richtprijs €6,95/mnd of €59/jaar; school €99/klas/jaar — logo op toetsen, onbeperkt toetsen, klasrapportage. Leerpaden klaarzetten blijft gratis.
+- **Pro** (leerkrachten/bijlesdocenten): richtprijs €6,95/mnd of €59/jaar; school €99/klas/jaar — logo op toetsen, onbeperkt toetsen, klasrapportage. Leerpaden klaarzetten blijft gratis (t/m zeker 2031).
 - **Kwartier-tegoed** (los, geen abonnement): extra AI-bijles per kwartier; ook cadeaukaart (decemberpiek). Prijs per kwartier vóór lancering bepalen.
 - Geen "Premium" als naam, nergens. Tier-mapping DB: familie=`parent_pro`, leerkracht=`teacher_pro`.
 

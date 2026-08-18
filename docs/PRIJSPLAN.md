@@ -120,7 +120,7 @@ Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
 **school-first**, met de zzp-bijlesdocent als enige individuele koper.
 
 **Drie rollen:**
-1. **Leerkracht (loondienst) = gratis, voor altijd** — bewust, want de juf is
+1. **Leerkracht (loondienst) = gratis, gegarandeerd t/m 2031 (belofte schuift telkens op — nooit >5 jaar vooruit beloven)** — bewust, want de juf is
    ons acquisitiekanaal (1 juf = 25 gezinnen). Eigen account, leerpaden
    klaarzetten, deelcode, klas laten oefenen: gratis. Elke drempel voor een
    juf kost gezinnen.

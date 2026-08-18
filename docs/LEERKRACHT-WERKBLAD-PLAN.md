@@ -75,7 +75,7 @@ Juf → /leerkracht (voordeur)
 
 ### Fase 3 — Prijsmodel-haakjes (klein, samen met Fase 1 of 2)
 - `FEATURE_GATES` + `<PaywallGate feature="werkblad-print">` om de **printknop** —
-  digitaal oefenen via code/QR blijft ALTIJD gratis (kernbelofte).
+  digitaal oefenen via code/QR blijft gratis t/m zeker 2031 (kernbelofte, doorrol).
 - Tier: **Pro** (leerkracht). Het op-maat-oefenboekje blijft **Familie** — twee
   verschillende printproducten, niet mengen.
 - Nu `PAYWALL_ACTIVE=false` → alles werkt gratis in 2026 ("gratis in 2026"-framing);

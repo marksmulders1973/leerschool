@@ -102,7 +102,7 @@ het **Klasheld-programma** — drie principes uit het onderzoek:
 | 👑 Oprichters-vriend | 30 gezinnen | levenslang Pro + meedenk-stem in roadmap | — |
 
 Plus een aparte **leerkracht-track**: een juf die een klascode gebruikt is
-geen "referrer" maar krijgt het klas-dashboard gratis voor altijd
+geen "referrer" maar krijgt het klas-dashboard gratis, gegarandeerd t/m 2031 (belofte schuift telkens op — nooit >5 jaar vooruit beloven)
 ("Founding Teacher"). Zie §10.
 
 *Kosten €0 (productwaarde) · moeilijkheid middel · impact hoog · 1-2 mnd ·
@@ -257,7 +257,7 @@ Red Bull-mini ("stunt = content"), AH Moestuintjes (fysiek verzamelen werkt).*
 
 **Leerkrachten (de hoofdprijs — 1 juf = ~30 gezinnen):**
 - Elke leerkracht die een klascode aanmaakt wordt **"Founding Teacher"**:
-  klas-dashboard voor altijd gratis, naam (optioneel) op de site, vroege
+  klas-dashboard gratis gegarandeerd t/m 2031 (doorrol), naam (optioneel) op de site, vroege
   toegang, direct lijntje voor wensen.
 - Kant-en-klaar septemberpakket: "je klas oefenklaar in 3 minuten" (code +
   ouderbrief-template + printables). De ouderbrief is het virale object:
