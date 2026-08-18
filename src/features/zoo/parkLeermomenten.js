@@ -128,10 +128,10 @@ export const PARK_LEERMOMENTEN = {
   },
   kegel: {
     id: "kegel",
-    emoji: "🍦",
-    titel: "Het reuze-ijsje",
+    emoji: "🔻",
+    titel: "De glazen kegel",
     praatje:
-      "Kijk, een reuze-ijsje! Het hoorntje eronder is een kegel. Wil je weten hoeveel ijs erin past — de inhoud? Dat reken je uit met: een derde × π × straal × straal × hoogte. Grappig genoeg is een kegel precies een derde van een blikje (cilinder) met dezelfde bodem en hoogte.",
+      "Kijk, een glazen kegel — je kunt er dwars doorheen kijken! De rode lijn onderin is de straal van de bodem, en de blauwe lijn die recht omhoog gaat is de hoogte. Wil je weten hoeveel erin past — de inhoud? Dat reken je uit met: een derde × π × straal × straal × hoogte. Grappig genoeg is een kegel precies een derde van een blikje (cilinder) met dezelfde bodem en hoogte.",
     weetje:
       "π (pi) is ongeveer 3,14 — een getal dat je bij álles met rondingen nodig hebt: van een ijshoorntje tot een pizza tot een reuzenrad. Het is een van de beroemdste getallen uit de wiskunde.",
     leerpadId: "ruimtemeetkunde",
@@ -140,12 +140,12 @@ export const PARK_LEERMOMENTEN = {
   },
   bol: {
     id: "bol",
-    emoji: "⚽",
-    titel: "De reuze-voetbal",
+    emoji: "🔮",
+    titel: "De glazen bal",
     praatje:
-      "Een reuze-bal! Een bal is helemaal rond — dat heet een bol. Wil je weten hoeveel lucht erin past, de inhoud? Dat reken je uit met: vier-derde × π × straal × straal × straal. De straal telt dus drie keer mee, want een bol groeit in álle richtingen tegelijk.",
+      "Een glazen bal — kijk er dwars doorheen! De blauwe lijn dwars door het midden is de diameter, en de rode lijn is de straal: precies de hélft van de diameter. Wil je weten hoeveel erin past, de inhoud? Dat reken je uit met: vier-derde × π × straal × straal × straal. De straal telt dus drie keer mee, want een bol groeit in álle richtingen tegelijk.",
     weetje:
-      "Een echte voetbal heeft 32 vlakken: 20 zeshoeken en 12 vijfhoeken. Diezelfde vorm gebruiken wetenschappers ook voor een piepklein bolletje van koolstof, dat ze een 'buckybal' noemen.",
+      "De aarde is zelf ook (bijna) een bol. Haar diameter is ongeveer 12.742 kilometer — zou je een tunnel dwars door het midden graven, dan is die tunnel precies zo lang als de diameter!",
     leerpadId: "ruimtemeetkunde",
     leerLabel: "Inhoud van een bol",
     speel: "bol-inhoud",

@@ -750,8 +750,8 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3, goud 
       <group scale={m * 0.6}>
         {/* sober sokkeltje */}
         <mesh position={[0, -0.05, 0]} receiveShadow><cylinderGeometry args={[r0 + 0.12, r0 + 0.2, 0.1, 28]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
-        {/* doorzichtige kegel — punt omhoog, voet op de grond */}
-        <mesh position={[0, h0 / 2, 0]} castShadow>
+        {/* doorzichtige kegel — punt omhoog, voet op de grond; geen castShadow (glas) */}
+        <mesh position={[0, h0 / 2, 0]}>
           <coneGeometry args={[r0, h0, 40]} />
           <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
         </mesh>
@@ -813,8 +813,9 @@ export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
         {/* sober sokkeltje zodat de bol ergens op rust */}
         <mesh position={[0, 0.12, 0]} castShadow receiveShadow><cylinderGeometry args={[0.42, 0.54, 0.2, 16]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
         <group position={[0, 0.28 + r, 0]}>
-          {/* doorzichtige glas-bol — je kijkt er dwars doorheen naar de maatlijnen */}
-          <mesh castShadow>
+          {/* doorzichtige glas-bol — je kijkt er dwars doorheen naar de maatlijnen;
+              geen castShadow: glas werpt geen massieve slagschaduw */}
+          <mesh>
             <sphereGeometry args={[r, 32, 24]} />
             <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
           </mesh>
@@ -872,8 +873,9 @@ export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
         {/* sober sokkeltje */}
         <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[r + 0.12, r + 0.2, 0.12, 28]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
         <group position={[0, 0.12, 0]}>
-          {/* doorzichtige koepel = bovenste helft van een bol (phi 0..π/2) */}
-          <mesh castShadow>
+          {/* doorzichtige koepel = bovenste helft van een bol (phi 0..π/2);
+              geen castShadow (glas) */}
+          <mesh>
             <sphereGeometry args={[r, 32, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
             <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} side={2} />
           </mesh>

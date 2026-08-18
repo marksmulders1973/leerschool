@@ -160,12 +160,12 @@ export const ZOO_ASSETS = {
   // 🧊 Rubik-kubus kunstwerk (Mark 16 aug): blikvanger + inhoud-van-een-kubus-
   // leermoment (ribbe³), met de schuif-speeltuin en de voorlees-stem.
   kubus: { id: "kubus", kind: "attraction", name: "Kleuren-kubus", emoji: "🧊", procedural: "rubik", price: 55, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 2 },
-  // 🍦 Reuze-ijsje (Mark 16 aug): vrolijk kunstwerk + inhoud-van-een-kegel-
-  // leermoment (⅓·π·r²·h), met de schuif-speeltuin en de voorlees-stem.
-  kegel: { id: "kegel", kind: "attraction", name: "Reuze-ijsje", emoji: "🍦", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 6 },
-  // ⚽ Grote bal + 🥅 halve bol (Mark 16 aug): inhoud van een bol (⁴⁄₃πr³) en
-  // halve bol (⅔πr³) — met de schuif-speeltuin en de voorlees-stem.
-  bol: { id: "bol", kind: "attraction", name: "Reuze-voetbal", emoji: "⚽", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 8 },
+  // 🔻 Glazen kegel (was Reuze-ijsje; 17 aug didactisch opgeschoond — Mark:
+  // "lerend > leuk"): doorzichtige kegel met straal/hoogte-maatlijnen (⅓·π·r²·h).
+  kegel: { id: "kegel", kind: "attraction", name: "Glazen kegel", emoji: "🔻", procedural: "ijsje", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 6 },
+  // 🔮 Glazen bal (was Reuze-voetbal) + 🥅 halve bol: doorzichtig met straal/
+  // diameter-maatlijnen — inhoud van een bol (⁴⁄₃πr³) en halve bol (⅔πr³).
+  bol: { id: "bol", kind: "attraction", name: "Glazen bal", emoji: "🔮", procedural: "bol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 8 },
   halvebol: { id: "halvebol", kind: "attraction", name: "Koepel (halve bal)", emoji: "🥅", procedural: "halvebol", price: 45, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 10 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.

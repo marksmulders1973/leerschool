@@ -179,7 +179,11 @@ function maakVormVraag(assetId, maat) {
   // voor laag tellen. Zo zie je dat inhoud = ribbe × ribbe × ribbe.
   if (assetId === "kubus" && Math.random() < 0.5) {
     const antwoord = m * m * m;
-    const opties = [antwoord, m * m, m * m * 2].sort(() => Math.random() - 0.5);
+    // Afleiders: één laag (m²) + een tweede plausibele. NIET vast m²×2 — bij
+    // ribbe 2 is dat óók 8 en stond het goede antwoord er twee keer tussen
+    // (50/50 gokken + dubbele React-keys; gevonden bij review 18 aug).
+    const afleiders = [...new Set([m * m, m * m * 2, m * m * m - m, m * m + m].filter((c) => c !== antwoord))].slice(0, 2);
+    const opties = [antwoord, ...afleiders].sort(() => Math.random() - 0.5);
     return {
       vraag: `Deze kubus heeft een ribbe van ${m} m. Hoeveel blokjes van 1 m³ passen erin?`,
       antwoord, opties, eenheid: "m³", emoji: "🧊", vorm: true,
@@ -2453,7 +2457,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <p style={{ margin: "0 0 10px", font: "600 12.5px/1.45 system-ui", color: "#5a6b50", textAlign: "center" }}>💡 Goed in rekenen? Verdien <b>véél meer 🪙 munten</b> met een echt leerkwartier — <b>leren = munten voor je park!</b></p>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
                   <button onClick={() => rekenVraag.vorm ? openVormVraag(vormVraagIdx) : openRekenVraag()} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>🔁 Nog een vraag</button>
-                  <button onClick={() => { try { track("park_rekenvraag_naar_leren"); } catch {} setRekenVraag(null); if (rekenVraag.vorm) { onOpenLeerpad && onOpenLeerpad("ruimtemeetkunde"); } else { gaOefenen(); } }} style={{ border: "none", borderRadius: 999, padding: "11px 20px", font: "900 14.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 12px rgba(46,158,79,.4)", cursor: "pointer" }}>▶ Verdien 🪙 — start een leerkwartier</button>
+                  <button onClick={() => { try { track("park_rekenvraag_naar_leren"); } catch {} setRekenVraag(null); if (rekenVraag.vorm) { onOpenLeerpad && onOpenLeerpad(maatConfig(placedItems[vormVraagIdx]?.assetId)?.leerpad || "ruimtemeetkunde"); } else { gaOefenen(); } }} style={{ border: "none", borderRadius: 999, padding: "11px 20px", font: "900 14.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 12px rgba(46,158,79,.4)", cursor: "pointer" }}>▶ Verdien 🪙 — start een leerkwartier</button>
                 </div>
               </div>
             )}
