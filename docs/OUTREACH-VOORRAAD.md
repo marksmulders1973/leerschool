@@ -19,7 +19,7 @@
 |---|---|---|---|---|
 | **Leergeld-stichtingen (rest)** | **55** | Hoog | ✅ KLAAR — lijst hieronder | Direct verzendklaar |
 | Voedselbanken (aangesloten, rest) | ~47 | Hoog | Laag (locatiezoeker voedselbankennederland.nl, afvinken tegen 134-verzendlijst) | 1 sessie werk |
-| SUN-noodhulpbureaus + lokale voedselhulp | ~45–60 | Hoog | Middel | sunnederland.nl/vind-een-sun-noodhulpbureau |
+| SUN-noodhulpbureaus | **36 ✅ VERZAMELD 18 aug** → `docs/outreach/sun-bureaus.md` (site-geverifieerd; ⚠️ SUN werkt uitsluitend via hulpverleners → mail-insteek "noem het richting de hulpverleners in uw netwerk") | Hoog | ✅ klaar | Verzendklaar na concept-akkoord |
 | Bibliotheken (rest, incl. 5 ex-"formulier-only") | ~75–80 | Middel-hoog | Laag-middel — deels hieronder | Deels verzameld |
 | Scholen achterstandswijken **batch 2** | 120–150 (pool ~210) | Hoog | Middel (CBS-achterstandsscore-Excel als selectie) | Clusters hieronder |
 | Scholen batch 3 (rest top-20%) | 250–400 | Hoog | Middel | Na batch 2 |
@@ -28,7 +28,7 @@
 | Jeugdfonds Sport & Cultuur (lokale fondsen) | 24 | Hoog | Laag | jeugdfondssportencultuur.nl/fonds-in-de-buurt |
 | Landelijke kinderarmoede-fondsen (Kinderhulp, Jarige Job, Kinderzwerfboek, LINDA.foundation, Armoedefonds…) | ~10–15 | Hoog | Laag | |
 | Speelgoedbanken (~40) + kledingbanken (~110–160) | ~150–200 | Hoog | Middel (versnipperd) | minimasite.nl + kledingbank.nl |
-| Buurtgezinnen-coördinatoren | ~150 | Hoog | Laag (buurtgezinnen.nl/waar) | |
+| Buurtgezinnen-coördinatoren | **144 unieke adressen ✅ VERZAMELD 18 aug** → `docs/outreach/buurtgezinnen.md` (149/150 locaties; adressen = voornaam@buurtgezinnen.nl, openbaar op locatiepagina's; ⚠️ ontdubbelen — sommige coördinatoren doen meerdere gemeenten; niet actief in Overijssel/Zeeland; landelijke fallback info@buurtgezinnen.nl) | Hoog | ✅ klaar | Verzendklaar na concept-akkoord |
 | VoorleesExpress-locaties | ~100 | Hoog | Laag-middel | |
 | Taalhuizen (coördinerende orgs, minus bieb-overlap) | ~90–120 | Hoog | Middel | |
 | Weekend-/zomerscholen (IMC Basis ~32 + lokaal) | ~40–60 | Hoog | Middel | |
