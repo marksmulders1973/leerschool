@@ -188,7 +188,12 @@ export function makeTopoCheck({ type, doel }) {
         {beantwoord && (
           <>
             <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
-              {type === "noem-hoofdstad"
+              {/* Volledige foutmelding (P2-review): benoem óók wat het kind
+                  aanklikte — "dat is X, we zochten Y" leert twee provincies
+                  tegelijk (zelfde patroon als de oefen-ronde). */}
+              {type === "wijs-provincie" && gekozen !== huidigDoel
+                ? <>Dat is <strong style={{ color: C.fout }}>{gekozen}</strong> — we zochten <strong style={{ color: C.goed }}>{huidigDoel}</strong> (groen){HOOFDSTAD_VAN[huidigDoel] ? <>, hoofdstad {HOOFDSTAD_VAN[huidigDoel]}</> : null}.</>
+                : type === "noem-hoofdstad"
                 ? <>De hoofdstad van <strong>{huidigDoel}</strong> is <strong style={{ color: C.goed }}>{HOOFDSTAD_VAN[huidigDoel]}</strong>.</>
                 : <>Dit is <strong style={{ color: C.goed }}>{huidigDoel}</strong>{HOOFDSTAD_VAN[huidigDoel] ? <> — hoofdstad {HOOFDSTAD_VAN[huidigDoel]}</> : null}.</>}
             </div>

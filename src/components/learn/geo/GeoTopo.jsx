@@ -135,7 +135,11 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
         {beantwoord && (
           <>
             <div style={{ marginTop: 12, textAlign: "center", fontSize: 14, color: C.muted }}>
-              {type === "noem-hoofdstad"
+              {/* Volledige foutmelding (P2-review): benoem óók wat het kind
+                  aanklikte — leert twee gebieden tegelijk. */}
+              {type === "wijs" && gekozen !== huidigDoel
+                ? <>Dat is <strong style={{ color: C.fout }}>{gekozen}</strong> — we zochten <strong style={{ color: C.goed }}>{huidigDoel}</strong> (groen){CAP[huidigDoel] ? <>, hoofdstad {CAP[huidigDoel]}</> : null}.</>
+                : type === "noem-hoofdstad"
                 ? <>De hoofdstad van <strong>{huidigDoel}</strong> is <strong style={{ color: C.goed }}>{CAP[huidigDoel]}</strong>.</>
                 : <>Dit is <strong style={{ color: C.goed }}>{huidigDoel}</strong>{CAP[huidigDoel] ? <> — hoofdstad {CAP[huidigDoel]}</> : null}.</>}
             </div>
