@@ -4,7 +4,9 @@
 > tot groep 8 (Doorstroomtoets), maak daar een plan voor."*
 > Dit plan is de uitwerking van **fase 4 (leeftijd-laag)** uit het
 > INTERACTIEF-PARK-MASTERPLAN.md — naar voren gehaald en concreet gemaakt.
-> Status: PLAN — nog niet gebouwd, wacht op Mark's keuzes onderaan.
+> **Status: ✅ AKKOORD ALS IDEE (Mark, 18 aug 2026) — géén bouw-go.**
+> Niet bouwen tot Mark expliciet "bouw de leerlijn" (of L1/L2) zegt; de 5
+> keuzes in §7 staan dan nog open en beslissen we op dat moment.
 
 ## 1. De kern-keuze: één park dat MEEGROEIT (geen aparte kleuter-zone)
 
