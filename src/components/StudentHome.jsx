@@ -12,7 +12,6 @@ import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
 import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
 import NieuwTopografieBanner from "./NieuwTopografieBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
-import VraagVanDeDag from "./VraagVanDeDag.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import PakketUitleg from "./PakketUitleg.jsx";
 import { useSubscription } from "../subscription/useSubscription.js";
@@ -520,11 +519,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         {/* Kwartier-pauze resume-kaart staat nu bovenaan de content (Mark 2 aug):
             zie {resumeCard} direct onder de pakket-pill. */}
 
-        {/* Doorstroomtoets-vraag van de dag — dagelijkse terugkom-haak (retentie,
-            Mark 2026-06-05). Hergebruikt de /v/-vragenpool, kost niets. */}
-        <div style={{ marginBottom: 12 }}>
-          <VraagVanDeDag />
-        </div>
+        {/* Vraag-van-de-dag staat NIET op de home (Mark 18 aug 2026) — eigen
+            plek = /vandaag (social-funnel) + de Doorstroomtoets-pagina. */}
 
         {/* A8 (10-agent circulariteit 2026-05-10): "Verder waar je was"-card.
             Toont laatste activiteit met directe knop naar bijbehorend vak. */}
