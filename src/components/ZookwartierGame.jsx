@@ -174,25 +174,72 @@ function maakRekenVraag(kraam) {
 const VORM_WOORD = { piramide: "piramide", kubus: "kubus", kegel: "kegel", bol: "bol", halvebol: "koepel" };
 function maakVormVraag(assetId, maat) {
   const woord = VORM_WOORD[assetId] || "vorm";
-  const m = Math.max(2, Math.min(6, Math.round(maat || 3)));
-  // Kubus: soms de concrete telsom met échte hele getallen (groep 7-8) — laag
-  // voor laag tellen. Zo zie je dat inhoud = ribbe × ribbe × ribbe.
-  if (assetId === "kubus" && Math.random() < 0.5) {
-    const antwoord = m * m * m;
-    // Afleiders: één laag (m²) + een tweede plausibele. NIET vast m²×2 — bij
-    // ribbe 2 is dat óók 8 en stond het goede antwoord er twee keer tussen
-    // (50/50 gokken + dubbele React-keys; gevonden bij review 18 aug).
-    const afleiders = [...new Set([m * m, m * m * 2, m * m * m - m, m * m + m].filter((c) => c !== antwoord))].slice(0, 2);
-    const opties = [antwoord, ...afleiders].sort(() => Math.random() - 0.5);
-    return {
-      vraag: `Deze kubus heeft een ribbe van ${m} m. Hoeveel blokjes van 1 m³ passen erin?`,
-      antwoord, opties, eenheid: "m³", emoji: "🧊", vorm: true,
-      onthulling: `Reken laag voor laag: ${m} × ${m} = ${m * m} blokjes in één laag, en ${m} lagen → ${m * m} × ${m} = ${antwoord} blokjes.`,
-    };
+  // Clamp per vorm (de piramide loopt 4..11, de rest 2..6 — zie AssetRegistry).
+  const isPyr = assetId === "piramide";
+  const m = Math.max(isPyr ? 4 : 2, Math.min(isPyr ? 11 : 6, Math.round(maat || (isPyr ? 8 : 3))));
+  const rond = Math.round;
+  // 3 opties = goed antwoord + 2 STRUCTUURfouten (⅓ vergeten, r² i.p.v. r³,
+  // hele i.p.v. halve bol) — géén dichtbij-rekenfoutjes, zodat schatten met
+  // π ≈ 3 je bij het goede antwoord brengt. Afleiders uniek gefilterd (bug-les
+  // 18 aug: bij ribbe 2 viel een afleider samen met het antwoord) + vangnet.
+  const optiesVan = (antwoord, fouten) => {
+    const extra = [...new Set(fouten.map(rond).filter((c) => c > 0 && c !== antwoord))].slice(0, 2);
+    const stap = Math.max(3, rond(antwoord * 0.5));
+    while (extra.length < 2) { const c = antwoord + (extra.length + 1) * stap; if (!extra.includes(c)) extra.push(c); }
+    return [antwoord, ...extra].sort(() => Math.random() - 0.5);
+  };
+
+  // ── Type A (helft van de keren): reken de ÉCHTE inhoud, met de maten die nu
+  // bij de vorm staan. De formule staat in de vraag — het gaat om TOEPASSEN,
+  // niet om uit je hoofd kennen (Mark 17 aug: tonen → schaal-inzicht → echt
+  // uitrekenen als ladder).
+  if (Math.random() < 0.5) {
+    if (assetId === "kubus") {
+      const antwoord = m * m * m;
+      return {
+        vraag: `Deze kubus heeft een ribbe van ${m} m. Hoeveel blokjes van 1 m³ passen erin?`,
+        antwoord, opties: optiesVan(antwoord, [m * m, m * m * 2, m * m * m - m]), eenheid: "m³", emoji: "🧊", vorm: true,
+        onthulling: `Reken laag voor laag: ${m} × ${m} = ${m * m} blokjes in één laag, en ${m} lagen → ${m * m} × ${m} = ${antwoord} blokjes.`,
+      };
+    }
+    if (isPyr) {
+      const antwoord = rond((m * m * m) / 3);
+      return {
+        vraag: `Deze piramide heeft zijde ${m} m en hoogte ${m} m. Inhoud = ⅓ × grondvlak × hoogte. Hoeveel m³ is dat ongeveer?`,
+        antwoord, opties: optiesVan(antwoord, [m * m * m, m * m]), eenheid: "m³", emoji: "🔺", vorm: true,
+        onthulling: `Grondvlak = ${m} × ${m} = ${m * m} m². Keer de hoogte: ${m * m} × ${m} = ${m * m * m}. En dan ⅓ ervan: ${m * m * m} ÷ 3 ≈ ${antwoord} m³. Een piramide is precies een derde van een blok met dezelfde bodem en hoogte!`,
+      };
+    }
+    if (assetId === "bol") {
+      const antwoord = rond((4 / 3) * Math.PI * m * m * m);
+      return {
+        vraag: `Deze bol heeft straal ${m} m (de rode lijn). Inhoud = 4/3 × π × r³, en π ≈ 3. Hoeveel m³ is dat ongeveer?`,
+        antwoord, opties: optiesVan(antwoord, [Math.PI * m * m * m, (4 / 3) * Math.PI * m * m]), eenheid: "m³", emoji: "🔮", vorm: true,
+        onthulling: `r³ = ${m} × ${m} × ${m} = ${m * m * m}. Schat met π ≈ 3: 4/3 × 3 × ${m * m * m} = ${4 * m * m * m}. Precies is het ${antwoord} m³ — schatten bracht je er dus al bijna!`,
+      };
+    }
+    if (assetId === "kegel") {
+      const h = 2 * m;
+      const antwoord = rond((1 / 3) * Math.PI * m * m * h);
+      return {
+        vraag: `Deze kegel heeft straal ${m} m (rood) en hoogte ${h} m (blauw). Inhoud = ⅓ × π × r² × h, en π ≈ 3. Hoeveel m³ ongeveer?`,
+        antwoord, opties: optiesVan(antwoord, [Math.PI * m * m * h, (1 / 3) * Math.PI * m * h]), eenheid: "m³", emoji: "🔻", vorm: true,
+        onthulling: `r² = ${m} × ${m} = ${m * m}. Schat met π ≈ 3: ⅓ × 3 × ${m * m} × ${h} = ${m * m * h}. Precies: ${antwoord} m³. Vergeet de ⅓ niet — een kegel is precies een derde van een blikje (cilinder) met dezelfde bodem en hoogte!`,
+      };
+    }
+    if (assetId === "halvebol") {
+      const antwoord = rond((2 / 3) * Math.PI * m * m * m);
+      return {
+        vraag: `Deze koepel is een HALVE bol met straal ${m} m. Inhoud = ⅔ × π × r³, en π ≈ 3. Hoeveel m³ ongeveer?`,
+        antwoord, opties: optiesVan(antwoord, [(4 / 3) * Math.PI * m * m * m, (2 / 3) * Math.PI * m * m]), eenheid: "m³", emoji: "🥅", vorm: true,
+        onthulling: `Schat met π ≈ 3: ⅔ × 3 × ${m * m * m} = ${2 * m * m * m} m³ (precies ${antwoord}). Let op de ⅔: een héle bol is 4/3, een halve dus de helft daarvan — ⅔!`,
+      };
+    }
   }
-  // Universeel schaal-inzicht (geen π nodig): elke maat ×k → inhoud ×k³. De
-  // afleiders k (lineair) en k² (oppervlakte) zijn precies de klassieke denk-
-  // fouten — kiezen tussen 2/4/8 maakt het inzicht scherp.
+
+  // ── Type B: universeel schaal-inzicht (geen π nodig): elke maat ×k → inhoud
+  // ×k³. De afleiders k (lineair) en k² (oppervlakte) zijn precies de klassieke
+  // denkfouten — kiezen tussen 2/4/8 maakt het inzicht scherp.
   const k = 2 + Math.floor(Math.random() * 2);   // 2 of 3
   const antwoord = k * k * k;                     // 8 of 27
   const opties = [k, k * k, k * k * k].sort(() => Math.random() - 0.5);
@@ -2564,7 +2611,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             stepTitle={rekenVraag.vorm ? "Reken-vraag bij een 3D-vorm" : "Reken-vraag bij je kraampje"}
             stepIdx={rekenVraagNr.current}
             stepExplanation={rekenVraag.vorm
-              ? `De leerling speelt met een 3D-vorm in een park en krijgt een reken-vraag over de inhoud (ruimte). Kern-inzicht: inhoud = lengte × breedte × hoogte, dus als je een vorm k× zo groot maakt, wordt de inhoud k × k × k = k³ keer zo groot (2× → 8×, 3× → 27×). Bij een kubus: inhoud = ribbe × ribbe × ribbe, laag voor laag tellen. Help stap voor stap met denkprikkels, nooit het antwoord meteen, in taal voor een kind van ~10.`
+              ? `De leerling speelt met een 3D-vorm in een park en krijgt een reken-vraag over de inhoud (ruimte). Twee soorten vragen: (1) schaal-inzicht — maak je een vorm k× zo groot, dan wordt de inhoud k × k × k = k³ keer zo groot (2× → 8×, 3× → 27×), want inhoud = lengte × breedte × hoogte; (2) de echte inhoud uitrekenen — de formule staat in de vraag (bol 4/3 × π × r³, kegel ⅓ × π × r² × h, halve bol ⅔ × π × r³, piramide ⅓ × grondvlak × hoogte, kubus ribbe³); reken-tip: schat met π ≈ 3, dan kom je vanzelf bij het goede antwoord want de foute opties liggen ver weg. Klassieke fouten om op te letten: de ⅓ of ⅔ vergeten, r² in plaats van r³, of de hele in plaats van de halve bol. Help stap voor stap met denkprikkels, nooit het antwoord meteen, in taal voor een kind van ~10.`
               : `De leerling runt een kraampje in een dierentuin-spel en krijgt een reken-vraag over kopen en verkopen. Handige begrippen: winst per stuk = verkoopprijs min inkoopprijs; totale winst = aantal keer winst per stuk; omzet = aantal keer verkoopprijs. Help stap voor stap, in taal voor een kind van ~10.`}
             currentCheck={{ q: rekenVraag.vraag, options: rekenVraag.opties.map((o) => rekenVraag.vorm ? `${o}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${o} muntjes`) }}
             lastWrongAnswer={rekenFout != null ? (rekenVraag.vorm ? `${rekenFout}${rekenVraag.eenheid === "×" ? "×" : ` ${rekenVraag.eenheid || ""}`}` : `${rekenFout} muntjes`) : undefined}
