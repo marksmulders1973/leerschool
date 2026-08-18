@@ -1,0 +1,927 @@
+{
+ "brabant__abg-gemeenten": {
+  "names": [],
+  "emails": [
+   "carolien@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__altena": {
+  "names": [],
+  "emails": [
+   "mariejeanne@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__bergeijk-en-eersel": {
+  "names": [],
+  "emails": [
+   "sara@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__bergen-op-zoom": {
+  "names": [],
+  "emails": [
+   "evakorstanje@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__best": {
+  "names": [],
+  "emails": [
+   "simonevermeer@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__bladel-en-reusel-de-mierden": {
+  "names": [],
+  "emails": [
+   "dianne@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__dongen": {
+  "names": [],
+  "emails": [
+   "carolien@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__drimmelen": {
+  "names": [],
+  "emails": [
+   "wilma@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__eindhoven": {
+  "names": [],
+  "emails": [
+   "christel@buurtgezinnen.nl",
+   "eva@buurtgezinnen.nl",
+   "priscilla@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__geertruidenberg": {
+  "names": [],
+  "emails": [
+   "wilma@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__geldrop-mierlo": {
+  "names": [],
+  "emails": [
+   "nicolevhschip@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__heeze-leende": {
+  "names": [],
+  "emails": [
+   "cora@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__helmond": {
+  "names": [],
+  "emails": [
+   "nicolevhschip@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__loon-op-zand": {
+  "names": [],
+  "emails": [
+   "marjon@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__maashorst": {
+  "names": [],
+  "emails": [
+   "sandralambers@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__oisterwijk": {
+  "names": [],
+  "emails": [
+   "els@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__oss": {
+  "names": [],
+  "emails": [
+   "jolanda.klerks@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__roosendaal": {
+  "names": [],
+  "emails": [
+   "audrey@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__someren": {
+  "names": [],
+  "emails": [
+   "cora@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__tilburg": {
+  "names": [],
+  "emails": [
+   "maaike@buurtgezinnen.nl",
+   "mariekedietze@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__valkenswaard": {
+  "names": [],
+  "emails": [
+   "cora@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__veldhoven": {
+  "names": [],
+  "emails": [
+   "moniqueheesterbeek@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__vught": {
+  "names": [],
+  "emails": [
+   "angela@buurtgezinnen.nl"
+  ]
+ },
+ "brabant__waalwijk": {
+  "names": [],
+  "emails": [
+   "marion@buurtgezinnen.nl"
+  ]
+ },
+ "drenthe__de-wolden": {
+  "names": [],
+  "emails": [
+   "kimkiers@buurtgezinnen.nl"
+  ]
+ },
+ "drenthe__hoogeveen": {
+  "names": [],
+  "emails": [
+   "else@buurtgezinnen.nl"
+  ]
+ },
+ "drenthe__meppel": {
+  "names": [],
+  "emails": [
+   "eveline@buurtgezinnen.nl"
+  ]
+ },
+ "drenthe__westerveld": {
+  "names": [],
+  "emails": [
+   "kimkiers@buurtgezinnen.nl",
+   "kim@buurtgezinnen.nl"
+  ]
+ },
+ "flevoland__zeewolde": {
+  "names": [],
+  "emails": [
+   "nienkepleket@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__achtkarspelen": {
+  "names": [],
+  "emails": [
+   "annetwesterhof@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__harlingen": {
+  "names": [],
+  "emails": [
+   "manon@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__heerenveen": {
+  "names": [],
+  "emails": [
+   "miek@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__leeuwarden": {
+  "names": [],
+  "emails": [
+   "yolandafeenstra@buurtgezinnen.nl",
+   "gerda@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__ooststellingwerf": {
+  "names": [],
+  "emails": [
+   "danielledegraaf@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__opsterland": {
+  "names": [],
+  "emails": [
+   "marijevangorkum@buurtgezinnen.nl"
+  ]
+ },
+ "friesland__smallingerland": {
+  "names": [],
+  "emails": [
+   "nynke@buurtgezinnen.nl",
+   "danielledegraaf@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__berg-en-dal": {
+  "names": [],
+  "emails": [
+   "anoek@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__buren": {
+  "names": [],
+  "emails": [
+   "evelyne@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__culemborg": {
+  "names": [],
+  "emails": [
+   "josette@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__druten": {
+  "names": [],
+  "emails": [
+   "nathalie@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__duiven": {
+  "names": [],
+  "emails": [
+   "susanboss@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__ede": {
+  "names": [],
+  "emails": [
+   "nienke.vdkaaij@buurtgezinnen.nl",
+   "judithluchies@buurtgezinnen.nl",
+   "annelien@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__ermelo": {
+  "names": [],
+  "emails": [
+   "jolande@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__heumen": {
+  "names": [],
+  "emails": [
+   "inge@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__neder-betuwe": {
+  "names": [],
+  "emails": [
+   "froukje@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__nijmegen": {
+  "names": [],
+  "emails": [
+   "loes@buurtgezinnen.nl",
+   "jiske@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__oldebroek": {
+  "names": [],
+  "emails": [
+   "alexandra@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__scherpenzeel": {
+  "names": [],
+  "emails": [
+   "constanja@buurtgezinnen.nl",
+   "corinafrens@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__wageningen": {
+  "names": [],
+  "emails": [
+   "marisca@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__west-maas-en-waal": {
+  "names": [],
+  "emails": [
+   "nathalie@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__westervoort": {
+  "names": [],
+  "emails": [
+   "wietske@buurtgezinnen.nl",
+   "susanboss@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__wijchen": {
+  "names": [],
+  "emails": [
+   "anoek@buurtgezinnen.nl"
+  ]
+ },
+ "gelderland__zevenaar": {
+  "names": [],
+  "emails": [
+   "nicoleburgers@buurtgezinnen.nl"
+  ]
+ },
+ "groningen__midden-groningen": {
+  "names": [],
+  "emails": [
+   "kristel@buurtgezinnen.nl"
+  ]
+ },
+ "groningen__pekela": {
+  "names": [],
+  "emails": [
+   "andrea@buurtgezinnen.nl"
+  ]
+ },
+ "groningen__veendam": {
+  "names": [],
+  "emails": [
+   "irenewilkens@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__beek": {
+  "names": [],
+  "emails": [
+   "vivian@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__beekdaelen": {
+  "names": [],
+  "emails": [
+   "deborah@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__beesel": {
+  "names": [],
+  "emails": [
+   "karlijn@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__brunssum": {
+  "names": [],
+  "emails": [
+   "laura@buurtgezinnen.nl",
+   "roxanne@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__leudal": {
+  "names": [],
+  "emails": [
+   "rianne@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__maasgouw": {
+  "names": [],
+  "emails": [
+   "meike@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__maastricht": {
+  "names": [],
+  "emails": [
+   "delina@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__meerssen": {
+  "names": [],
+  "emails": [
+   "nine@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__mook-en-middelaar": {
+  "names": [],
+  "emails": [
+   "inge@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__nederweert": {
+  "names": [],
+  "emails": [
+   "sandra@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__roerdalen-2": {
+  "names": [],
+  "emails": [
+   "meike@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__roermond": {
+  "names": [],
+  "emails": [
+   "ingrid@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__sittard-geleen": {
+  "names": [],
+  "emails": [
+   "nicole@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__stein": {
+  "names": [],
+  "emails": [
+   "vivian@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__valkenburg-aan-de-geul": {
+  "names": [],
+  "emails": [
+   "tamara@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__venlo": {
+  "names": [],
+  "emails": [
+   "susan@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__venray": {
+  "names": [],
+  "emails": [
+   "debbie@buurtgezinnen.nl"
+  ]
+ },
+ "limburg__weert-2": {
+  "names": [],
+  "emails": [
+   "sandra@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__aalsmeer": {
+  "names": [],
+  "emails": [
+   "kimvanneijenhof@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__alkmaar-2": {
+  "names": [],
+  "emails": [
+   "carla@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amstelveen": {
+  "names": [],
+  "emails": [
+   "erika@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-centrum": {
+  "names": [],
+  "emails": [
+   "maaikepoppegaai@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-nieuw-west": {
+  "names": [],
+  "emails": [
+   "hafida@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-noord": {
+  "names": [],
+  "emails": [
+   "emilie@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-oost": {
+  "names": [],
+  "emails": [
+   "maaikepoppegaai@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-west": {
+  "names": [],
+  "emails": [
+   "shanna@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-zuid-oost": {
+  "names": [],
+  "emails": [
+   "manouk@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam-zuid": {
+  "names": [],
+  "emails": [
+   "lobke@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__amsterdam": {
+  "names": [],
+  "emails": []
+ },
+ "noord-holland__bergen": {
+  "names": [],
+  "emails": [
+   "jose@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__beverwijk": {
+  "names": [],
+  "emails": [
+   "ingeborgh@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__bloemendaal": {
+  "names": [],
+  "emails": [
+   "suus@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__castricum": {
+  "names": [],
+  "emails": [
+   "lindabaerveldt@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__den-helder": {
+  "names": [],
+  "emails": [
+   "marjola@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__diemen": {
+  "names": [],
+  "emails": [
+   "maaikepoppegaai@buurtgezinnen.nl",
+   "vera@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__dijk-en-waard": {
+  "names": [],
+  "emails": [
+   "corina@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__drechterland": {
+  "names": [],
+  "emails": [
+   "melissa@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__enkhuizen": {
+  "names": [],
+  "emails": [
+   "melissa@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__gooise-meren": {
+  "names": [],
+  "emails": [
+   "mirjamstorm@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__haarlem": {
+  "names": [],
+  "emails": [
+   "esthergroenheide@buurtgezinnen.nl",
+   "claire@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__heemskerk": {
+  "names": [],
+  "emails": [
+   "ingeborgh@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__heemstede": {
+  "names": [],
+  "emails": [
+   "suus@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__heiloo": {
+  "names": [],
+  "emails": [
+   "jose@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__hilversum": {
+  "names": [],
+  "emails": [
+   "rebecca@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__hollands-kroon": {
+  "names": [],
+  "emails": [
+   "corinne@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__hoorn": {
+  "names": [],
+  "emails": [
+   "irenemaas@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__huizen": {
+  "names": [],
+  "emails": [
+   "heleen@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__koggenland": {
+  "names": [],
+  "emails": [
+   "liesanne@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__landsmeer": {
+  "names": [],
+  "emails": [
+   "lisette@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__medemblik": {
+  "names": [],
+  "emails": [
+   "marielle@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__oostzaan": {
+  "names": [],
+  "emails": [
+   "lisette@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__opmeer": {
+  "names": [],
+  "emails": [
+   "liesanne@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__ouder-amstel": {
+  "names": [],
+  "emails": [
+   "eefjeschep@buurtgezinnen.nl",
+   "madeleen@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__purmerend": {
+  "names": [],
+  "emails": [
+   "yolanda@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__schagen": {
+  "names": [],
+  "emails": [
+   "denise@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__stede-broec": {
+  "names": [],
+  "emails": [
+   "melissa@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__stichtse-vecht": {
+  "names": [],
+  "emails": [
+   "rebecca@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__uitgeest": {
+  "names": [],
+  "emails": [
+   "lindabaerveldt@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__uithoorn": {
+  "names": [],
+  "emails": [
+   "mieke@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__velsen": {
+  "names": [],
+  "emails": [
+   "barbara@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__waterland": {
+  "names": [],
+  "emails": [
+   "lisette@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__weesp": {
+  "names": [],
+  "emails": [
+   "annemarie@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__wijdemeren": {
+  "names": [],
+  "emails": [
+   "rebecca@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__wormerland": {
+  "names": [],
+  "emails": [
+   "danielle@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__zaanstad": {
+  "names": [],
+  "emails": [
+   "danielle@buurtgezinnen.nl",
+   "nabila@buurtgezinnen.nl",
+   "lindabaerveldt@buurtgezinnen.nl"
+  ]
+ },
+ "noord-holland__zandvoort": {
+  "names": [],
+  "emails": [
+   "lenna@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__baarn": {
+  "names": [],
+  "emails": [
+   "willemijn@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__bunnik": {
+  "names": [],
+  "emails": [
+   "lindavaneck@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__de-ronde-venen": {
+  "names": [],
+  "emails": [
+   "sabrina@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__houten": {
+  "names": [],
+  "emails": [
+   "mirjam@buurtgezinnen.nl",
+   "nina@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__ijsselstein-2": {
+  "names": [],
+  "emails": [
+   "yvonne@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__leusden": {
+  "names": [],
+  "emails": [
+   "maartje@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__lopik": {
+  "names": [],
+  "emails": [
+   "ellenboer@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__nieuwegein": {
+  "names": [],
+  "emails": [
+   "peggy@buurtgezinnen.nl",
+   "maartjeeppink@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__rhenen": {
+  "names": [],
+  "emails": [
+   "anita@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__utrechtse-heuvelrug": {
+  "names": [],
+  "emails": [
+   "eefje@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__vijfheerenlanden": {
+  "names": [],
+  "emails": [
+   "baukje@buurtgezinnen.nl"
+  ]
+ },
+ "utrecht__woerden": {
+  "names": [],
+  "emails": [
+   "iris@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__delft": {
+  "names": [],
+  "emails": [
+   "reena@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__den-haag": {
+  "names": [],
+  "emails": [
+   "sharon@buurtgezinnen.nl",
+   "debbielansbergen@buurtgezinnen.nl",
+   "wietskezeper@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__dordrecht": {
+  "names": [],
+  "emails": [
+   "sofie@buurtgezinnen.nl",
+   "estherham@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__hendrik-ido-ambacht": {
+  "names": [],
+  "emails": [
+   "simone@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__hoeksche-waard": {
+  "names": [],
+  "emails": [
+   "thirza@buurtgezinnen.nl",
+   "sofie@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__leiden": {
+  "names": [],
+  "emails": [
+   "christienhoek@buurtgezinnen.nl",
+   "annet@buurtgezinnen.nl",
+   "haya@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__leidschendam-voorburg": {
+  "names": [],
+  "emails": [
+   "pascale@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__molenlanden": {
+  "names": [],
+  "emails": [
+   "linda@buurtgezinnen.nl",
+   "estherhansum@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__noordwijk": {
+  "names": [],
+  "emails": [
+   "kathelijne@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__papendrecht": {
+  "names": [],
+  "emails": [
+   "linda@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__ridderkerk": {
+  "names": [],
+  "emails": [
+   "daphne@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__rijswijk": {
+  "names": [],
+  "emails": [
+   "sanne@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__rotterdam": {
+  "names": [],
+  "emails": [
+   "estheraudier@buurtgezinnen.nl",
+   "minakshi@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__sliedrecht": {
+  "names": [],
+  "emails": [
+   "tara@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__vlaardingen": {
+  "names": [],
+  "emails": [
+   "sharonelgers@buurtgezinnen.nl"
+  ]
+ },
+ "zuid-holland__zwijndrecht": {
+  "names": [],
+  "emails": [
+   "estherham@buurtgezinnen.nl"
+  ]
+ }
+}
