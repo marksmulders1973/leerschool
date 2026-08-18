@@ -110,6 +110,12 @@ zijn ziet u op leerkwartier.app/bedankt.html.
 > (schermen, flyers, nieuwsbrief e.d.) — "voelt als vertrouwensbreuk". Hoogstens
 > de zin hierboven + link naar bedankt.html (daar staan alleen partners mét
 > toestemming). Geldt voor álle toekomstige batches en replies.
+>
+> 🔴 **CIJFERS-ZACHT-REGEL (Mark, 18 aug 2026 — zusterregel):** richting partners
+> nooit meet-detail benoemen ("negen apparaten/telefoons" = klinkt als bewaking).
+> Wél: "waarschijnlijk bent u al aan het verspreiden — we zien dat de QR-code
+> ergens gescand is" of bij grote aantallen een ronde orde ("tientallen keren").
+> Precieze cijfers alleen intern (dagrapport). Memory: feedback_partner_cijfers_zacht_formuleren.
 
 Mijn vraag is klein: zou u leerkwartier.app willen noemen richting uw gezinnen —
 in een nieuwsbrief, een briefje of een poster? Ik maak alles kosteloos op maat,
