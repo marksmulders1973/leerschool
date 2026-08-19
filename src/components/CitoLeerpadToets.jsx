@@ -152,10 +152,13 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   useEffect(() => {
     if (mode !== "done" || refRecorded.current) return;
     refRecorded.current = true;
+    // "goed" = anoniem geteld aantal (AVG: alleen een getal, geen naam/antwoorden;
+    // Mark-verzoek 19 aug 2026 — dagrapport kan nu zien of de toets te makkelijk/moeilijk is).
     track("cito_toets_afgerond", {
       simulatie: !!simulatieMode,
       vak: subjectFilter || "mix",
       beantwoord: answers.filter((a) => a != null).length,
+      goed: questions.reduce((acc, q, i) => acc + (answers[i] != null && answers[i] === q.answer ? 1 : 0), 0),
       totaal: questions.length,
     });
     const player = (playerName || "").trim();
