@@ -254,6 +254,9 @@ export default function WandelPreview({ heightRef, borden = false, toon = null, 
 
       {PAALTJES.map((p, i) => {
         const r = ROUTES[p.route];
+        // Paaltjes-labels filteren mee (speeltest 20 aug: tijdens een gele
+        // wandeling bleef het blauwe route-label in beeld hangen).
+        if (toon && !toon.includes(r.id)) return null;
         const x = p.cell[0] * CELL, z = p.cell[1] * CELL;
         const y = heightRef?.current ? heightRef.current(x, z) : 0;
         return (

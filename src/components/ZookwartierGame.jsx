@@ -25,7 +25,7 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad } from "../features/zoo/parkLeermomenten";
-import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, personaliseerStops } from "../features/zoo/wandelRoutes";
+import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark } from "../features/zoo/wandelRoutes";
 import { loadDueTopics } from "../features/mastery/mastery.js";
 import { kiesZwakkeConcepten } from "../features/oefenboekje/opMaat.js";
 import { haalKlaargezetVoorKind } from "../shared/ouderKlaargezet.js";
@@ -1367,6 +1367,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [wandelFilter, setWandelFilter] = useState(null);
   const wandelRoute = wandeling ? ROUTE_BY_ID[wandeling.routeId] : null;
   const wandelStop = wandelRoute && !wandeling.klaar ? stopsVan(wandeling)[wandeling.stopIdx] : null;
+  // Welke leermoment-objecten staan er ÉCHT in dit park? (speeltest 20 aug:
+  // oudere parken missen leerplein-objecten → stops daarop afstemmen.)
+  const aanwezigeMomenten = useMemo(() => {
+    const s = new Set();
+    (placedItems || []).forEach((it) => {
+      const m = it && LEERMOMENT_BY_ASSET[it.assetId];
+      if (m) s.add(m);
+    });
+    return s;
+  }, [placedItems]);
   // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
   // zwakste concepten) — één keer ophalen zodra het kies-paneel opengaat.
   const wandelKandidatenRef = useRef(null);
@@ -2639,11 +2649,22 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               Volg de gekleurde voetstappen en vind de 3 stops. Bij elke stop leer je iets — route af = feestje!
             </p>
             {WANDEL_ROUTES.map((r) => {
-              // M2b: laat meteen de stops zien die dít kind zou krijgen.
-              const stops = personaliseerStops(r, wandelKandidatenRef.current || []);
+              // M2b + speeltest-fix: stops die dít kind zou krijgen, afgestemd
+              // op de objecten die écht in dit park staan.
+              const stops = kiesStopsVoorPark(r, wandelKandidatenRef.current || [], aanwezigeMomenten);
               const persoonlijk = stops.some((s) => s.reden);
+              if (!stops.length) {
+                return (
+                  <div key={r.id} style={{ border: `2.5px dashed ${r.kleur}`, opacity: 0.75, background: "#fff", borderRadius: 14, padding: "10px 13px", marginBottom: 9 }}>
+                    <span style={{ font: "800 14px system-ui", color: "#234" }}>{r.naam} · {r.groep}</span>
+                    <div style={{ font: "600 12.5px system-ui", color: "#567", marginTop: 2 }}>
+                      Nog geen stops in jouw park — zet eerst iets neer uit 🎡 Leerplein (bijv. de klok of de breukentaart), dan opent deze route.
+                    </div>
+                  </div>
+                );
+              }
               return (
-                <button key={r.id} onClick={() => { const w = startWandeling(r.id, stops); setWandeling(w); setWandelKies(false); try { track("wandel_start", { route: r.id, persoonlijk }); } catch { /* */ } }}
+                <button key={r.id} onClick={() => { const w = startWandeling(r.id, stops); setWandeling(w); setWandelKies(false); try { track("wandel_start", { route: r.id, persoonlijk, stops: stops.length }); } catch { /* */ } }}
                   style={{ display: "block", width: "100%", textAlign: "left", border: `2.5px solid ${r.kleur}`, background: "#fff", borderRadius: 14, padding: "10px 13px", marginBottom: 9, cursor: "pointer" }}>
                   <span style={{ font: "800 14px system-ui", color: "#234" }}>{r.naam} · {r.groep}</span>
                   {persoonlijk && <span style={{ font: "700 10.5px system-ui", color: "#7a5b00", background: "rgba(246,200,76,0.25)", borderRadius: 999, padding: "1px 7px", marginLeft: 6 }}>✨ voor jou gekozen</span>}

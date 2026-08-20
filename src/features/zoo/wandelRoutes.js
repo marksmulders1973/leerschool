@@ -43,7 +43,7 @@ export const WANDEL_ROUTES = [
     naam: "Groene route",
     groep: "groep 6-8",
     stempel: "groep 6-8",
-    kleur: "#00e676",
+    kleur: "#00c853",
     tekstKleur: "#0b3d20",
     offset: 0,
     pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
@@ -116,6 +116,42 @@ function stopVoorMoment(momentId, reden) {
   if (!lm) return null;
   const titel = String(lm.titel || momentId);
   return { moment: momentId, emoji: lm.emoji || "📍", label: titel.charAt(0).toLowerCase() + titel.slice(1), reden };
+}
+
+// 🏞️ Stops afstemmen op wat er ÉCHT in dit park staat (speeltest 20 aug:
+// oudere parken missen de leerplein-objecten → "loop naar de klok" terwijl er
+// geen klok is = doodlopende belofte). aanwezig = Set van moment-ids waarvan
+// het object in het park staat. Ontbrekende stops worden vervangen door een
+// aanwezig object uit de route-pool, anders door élk aanwezig leermoment-
+// object; blijft er niets over → minder (of nul) stops, de kiezer meldt dat.
+export function kiesStopsVoorPark(route, kandidaten, aanwezig) {
+  const basis = personaliseerStops(route, kandidaten);
+  if (!aanwezig) return basis;
+  const gebruikt = new Set();
+  const vervang = (nietIn) => {
+    for (const momentId of route.pool || []) {
+      if (aanwezig.has(momentId) && !gebruikt.has(momentId) && !nietIn.has(momentId)) return momentId;
+    }
+    for (const momentId of aanwezig) {
+      if (!gebruikt.has(momentId) && !nietIn.has(momentId)) return momentId;
+    }
+    return null;
+  };
+  const basisMomenten = new Set(basis.map((s) => s.moment));
+  const uit = [];
+  for (const s of basis) {
+    if (aanwezig.has(s.moment) && !gebruikt.has(s.moment)) {
+      gebruikt.add(s.moment);
+      uit.push(s);
+      continue;
+    }
+    const anders = vervang(basisMomenten);
+    if (!anders) continue; // niets aanwezig → stop vervalt
+    gebruikt.add(anders);
+    const nieuw = stopVoorMoment(anders, s.reden && aanwezig.has(s.moment) ? s.reden : null);
+    if (nieuw) uit.push(nieuw);
+  }
+  return uit;
 }
 
 // kandidaten = [{ pathId, reden: "herhalen"|"oefenen" }] op volgorde van belang.
