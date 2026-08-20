@@ -1,16 +1,15 @@
-// 🚶 Wandelkwartier — de route in het park (WANDELKWARTIER-PLAN.md).
+// 🚶 Wandelkwartier — gekleurde stappenpaden door het park (WANDELKWARTIER-PLAN.md).
 //
-// 20 aug 2026, twee stappen op één dag:
+// 20 aug 2026, gegroeid in drie stappen op één dag:
 //   1. Bouwplaats-preview (Mark: "teken de voetstappen uit met naambordjes").
-//   2. Mark liep de route en gaf go: "bouw maar in de echte app" → de
-//      VOETSTAPPEN staan nu ALTIJD aan (het leerlint); alleen de gele
-//      bouwbordjes ("🚧 Hier komt: …") blijven preview-only via ?wandel=1.
+//   2. Mark liep de route: "bouw maar in de echte app" → voetstappen altijd aan.
+//   3. Mark: "geef bij de voetstappen aan: stappenpad van groep 5 — net als
+//      wandelpaden in een bos" → DRIE routes in bos-stijl, elk met eigen kleur
+//      en een route-paaltje bij de ingang (🥾 gele/groene/blauwe route).
 //
-// De route volgt de bestaande paden en verandert niets aan een park; de
-// seed-fontein die op de boulevard stond is apart gemigreerd (zooState:
-// maakWandelrouteVrij) en het treinspoor is overloopbaar gemaakt (isVast
-// respecteert `beloopbaar`). Volgende fase (stops/vragen/kwartier-koppeling)
-// = M2 in het plan, aparte bouwsessie.
+// De routes volgen de bestaande paden en veranderen niets aan een park; de
+// gele bouwbordjes ("🚧 Hier komt: …") blijven preview-only via ?wandel=1.
+// Volgende fase (stops/vragen/kwartier-koppeling) = M2 in het plan.
 
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { Html } from "@react-three/drei";
@@ -29,23 +28,71 @@ export function wandelPreviewActief() {
   }
 }
 
-// ── De geplande route in cel-coördinaten (×CELL = wereld). Volgt de bestaande
-//    paden: ingang → centrum → west (meet-tuin → vormen → piramide) → terug →
-//    oost (ontdek-laan/poorten) → finish bij de ingang. Om de draaimolen heen.
-const ROUTE_CELLS = [
-  [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-  [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
-  [-29, 19], [-29, 25], [-30, 28],                    // ↑ meet-tuin (klok-rij)
-  [-29, 24], [-29, 16], [-29, 8], [-29, 1],           // ↓ terug langs de vormen
-  [-29, -5], [-30, -10], [-31, -14],                  // piramide-plein
-  [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
-  [-5, -2], [-2, -4], [2, -4], [5, -2], [8, 0],       // om de draaimolen heen
-  [16, 0], [22, 0], [26, 1], [29, 3],                 // ontdek-laan (poorten)
-  [26, 1], [22, 0], [16, 0], [9, 0], [6, 2], [3, 4],
-  [0, 7], [0, 12], [0, 15],                           // finish bij de ingang
+// ── Drie routes in bos-stijl (cel-coördinaten, ×CELL = wereld). Waar routes
+//    hetzelfde pad delen lopen ze naast elkaar via `offset` (zoals gekleurde
+//    stippen op één bospad). Kleuren = bestaande app-kleuren.
+const ROUTES = [
+  {
+    id: "geel",
+    naam: "Gele route",
+    groep: "groep 3-5",
+    kleur: "#ffd54f",
+    offset: -0.55,
+    // Kort rondje: ingang → boulevard → meet-tuin (klok/telraam/moestuin) en terug.
+    cells: [
+      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
+      [-16, 0], [-24, 0], [-29, 2], [-29, 10], [-29, 18], [-29, 25], [-30, 28],
+      [-29, 25], [-29, 18], [-29, 10], [-29, 2], [-24, 0], [-16, 0], [-8, 0],
+      [-6, 3], [-3, 5], [0, 7], [0, 12], [0, 15],
+    ],
+  },
+  {
+    id: "groen",
+    naam: "Groene route",
+    groep: "groep 6-8",
+    kleur: "#00e676",
+    offset: 0,
+    // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
+    cells: [
+      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
+      [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
+      [-29, 19], [-29, 25], [-30, 28],
+      [-29, 24], [-29, 16], [-29, 8], [-29, 1],
+      [-29, -5], [-30, -10], [-31, -14],
+      [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
+      [-5, -2], [-2, -4], [2, -4], [5, -2], [8, 0],
+      [16, 0], [22, 0], [26, 1], [29, 3],
+      [26, 1], [22, 0], [16, 0], [9, 0], [6, 2], [3, 4],
+      [0, 7], [0, 12], [0, 15],
+    ],
+  },
+  {
+    id: "blauw",
+    naam: "Blauwe route",
+    groep: "brugklas & examens",
+    kleur: "#42a5f5",
+    offset: 0.55,
+    // De poorten-laan op en neer: alle landmark-poorten (Eiffeltoren, tempel,
+    // telescoop …) — de stof voor mavo/havo/vwo.
+    cells: [
+      [0, 16], [0, 12], [0, 7], [3, 4], [6, 2], [9, 0],
+      [16, 0], [22, 0], [26, 1], [29, 3], [29, 8], [29, 12],
+      [29, 7], [29, 1], [29, -5], [29, -11],
+      [29, -6], [29, 0], [26, 1], [22, 0], [16, 0], [9, 0],
+      [6, 2], [3, 4], [0, 7], [0, 12], [0, 15],
+    ],
+  },
 ];
 
-// ── Bouwbordjes bij de geplande stops (cel-coördinaten + tekst).
+// 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos):
+// gekleurde kop + bordje "Gele route · groep 3-5". Op het gras links van de poort.
+const PAALTJES = [
+  { route: 0, cell: [-5.2, 14.2] },
+  { route: 1, cell: [-4.0, 14.2] },
+  { route: 2, cell: [-2.8, 14.2] },
+];
+
+// ── Bouwbordjes bij de geplande stops (alleen preview via ?wandel=1).
 const BORDEN = [
   { cell: [2, 15], rot: Math.PI, titel: "🚧 Start — wandeling van vandaag", tekst: "Hier begint straks je dagelijkse wandelkwartier. Je gids loopt mee langs 3 stops; route af = kwartier behaald." },
   { cell: [-33, 29], rot: Math.PI / 2, titel: "🚧 Stop — tijd & meten", tekst: "Klok, weegschaal, breukentaart: hier komt een route-stop met één vraag (groep 4-6)." },
@@ -59,33 +106,34 @@ const BORDEN = [
 const STAP_AFSTAND = 1.15;  // wereld-units tussen voetstappen
 const VOET_OFFSET = 0.24;   // links/rechts van de routelijn
 
-export default function WandelPreview({ heightRef, borden = false }) {
-  const instRef = useRef();
-
-  // Alle voetstap-posities één keer uitrekenen (positie, kijkrichting, l/r).
-  const stappen = useMemo(() => {
-    const pts = ROUTE_CELLS.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
-    const out = [];
-    let links = false;
-    let rest = 0;
-    for (let i = 0; i < pts.length - 1; i++) {
-      const a = pts[i], b = pts[i + 1];
-      const seg = b.clone().sub(a);
-      const len = seg.length();
-      if (len < 0.001) continue;
-      const dir = seg.clone().normalize();
-      const perp = new THREE.Vector2(-dir.y, dir.x);
-      let d = rest;
-      while (d < len) {
-        const p = a.clone().addScaledVector(dir, d).addScaledVector(perp, links ? VOET_OFFSET : -VOET_OFFSET);
-        out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
-        links = !links;
-        d += STAP_AFSTAND;
-      }
-      rest = d - len;
+function berekenStappen(cells, routeOffset) {
+  const pts = cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
+  const out = [];
+  let links = false;
+  let rest = 0;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1];
+    const seg = b.clone().sub(a);
+    const len = seg.length();
+    if (len < 0.001) continue;
+    const dir = seg.clone().normalize();
+    const perp = new THREE.Vector2(-dir.y, dir.x);
+    let d = rest;
+    while (d < len) {
+      const p = a.clone().addScaledVector(dir, d)
+        .addScaledVector(perp, routeOffset + (links ? VOET_OFFSET : -VOET_OFFSET));
+      out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
+      links = !links;
+      d += STAP_AFSTAND;
     }
-    return out;
-  }, []);
+    rest = d - len;
+  }
+  return out;
+}
+
+function VoetstappenSpoor({ route, heightRef }) {
+  const instRef = useRef();
+  const stappen = useMemo(() => berekenStappen(route.cells, route.offset), [route]);
 
   useLayoutEffect(() => {
     const inst = instRef.current;
@@ -104,12 +152,43 @@ export default function WandelPreview({ heightRef, borden = false }) {
   }, [stappen, heightRef]);
 
   return (
+    <instancedMesh ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
+      <circleGeometry args={[0.15, 10]} />
+      <meshBasicMaterial color={route.kleur} transparent opacity={0.85} depthWrite={false} />
+    </instancedMesh>
+  );
+}
+
+export default function WandelPreview({ heightRef, borden = false }) {
+  return (
     <group>
-      {/* Voetstappen — één instancedMesh (goedkoop, ook op LOW_END). */}
-      <instancedMesh ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
-        <circleGeometry args={[0.15, 10]} />
-        <meshBasicMaterial color="#00e676" transparent opacity={0.85} depthWrite={false} />
-      </instancedMesh>
+      {ROUTES.map((r) => (
+        <VoetstappenSpoor key={r.id} route={r} heightRef={heightRef} />
+      ))}
+
+      {/* 🥾 Route-paaltjes bij de ingang — zoals de gekleurde paaltjes in een bos. */}
+      {PAALTJES.map((p, i) => {
+        const r = ROUTES[p.route];
+        const x = p.cell[0] * CELL, z = p.cell[1] * CELL;
+        const y = heightRef?.current ? heightRef.current(x, z) : 0;
+        return (
+          <group key={i} position={[x, y, z]}>
+            <mesh position={[0, 0.45, 0]} castShadow>
+              <boxGeometry args={[0.1, 0.9, 0.1]} />
+              <meshStandardMaterial color="#7a5230" />
+            </mesh>
+            <mesh position={[0, 0.98, 0]} castShadow>
+              <boxGeometry args={[0.14, 0.18, 0.14]} />
+              <meshStandardMaterial color={r.kleur} />
+            </mesh>
+            <Html position={[0, 1.35, 0]} center distanceFactor={7} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
+              <div style={{ whiteSpace: "nowrap", background: "rgba(255,254,248,0.95)", border: `2.5px solid ${r.kleur}`, borderRadius: 999, padding: "4px 12px", fontFamily: "system-ui, sans-serif", fontSize: 13, fontWeight: 800, color: "#234", boxShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+                🥾 {r.naam} · {r.groep}
+              </div>
+            </Html>
+          </group>
+        );
+      })}
 
       {/* Bouwbordjes bij de geplande stops — alleen in de preview (?wandel=1). */}
       {borden && BORDEN.map((b, i) => {

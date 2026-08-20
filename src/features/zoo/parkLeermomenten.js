@@ -15,6 +15,29 @@
 //   { id, emoji, titel, praatje (≤3 zinnen kind-taal), weetje, leerpadId, leerLabel }
 // Geen dev-jargon in de teksten (regel: woorden die een kind van 10 kent).
 
+// 🎓 Niveau-label per leerattractie (Mark 20 aug: "'deze past bij groep 8' of
+// 'past het beste bij mavo'"). AUTOMATISCH afgeleid uit het level-veld van het
+// gekoppelde leerpad in het manifest — dan klopt het altijd, ook bij nieuwe
+// objecten, zonder 32 losse handmatige labels. Kindtaal, geen dev-jargon;
+// vmbo-gt heet in de app "mavo" (zoals op de site).
+import PATH_MANIFEST from "../../learnPaths/pathManifest.generated.json";
+const LEVEL_BY_PATH = new Map(PATH_MANIFEST.map((p) => [p.id, p.level || null]));
+export function niveauLabelVoorLeerpad(leerpadId) {
+  const s = String(LEVEL_BY_PATH.get(leerpadId) || "");
+  if (!s) return null;
+  if (s.startsWith("groep")) return "groep " + s.slice(5);
+  if (s === "po") return "de basisschool";
+  if (s.startsWith("vmbo")) return "de mavo";
+  if (s.includes("havo") && s.includes("vwo")) return "havo/vwo";
+  if (s.includes("havo")) return "de havo";
+  if (s === "vwo") return "het vwo";
+  if (s.startsWith("klas")) {
+    const nrs = s.slice(4).replace(/-?(vmbo|havo|vwo)\d?/g, "").replace(/-+$/, "");
+    return nrs ? `klas ${nrs} (middelbare school)` : "de middelbare school";
+  }
+  return null;
+}
+
 export const PARK_LEERMOMENTEN = {
   stoomtrein: {
     id: "stoomtrein",

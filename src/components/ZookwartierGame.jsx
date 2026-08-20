@@ -24,7 +24,7 @@ import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
-import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS } from "../features/zoo/parkLeermomenten";
+import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad } from "../features/zoo/parkLeermomenten";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
@@ -2541,7 +2541,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <div style={{ background: "rgba(255,254,248,0.97)", borderRadius: 16, boxShadow: "0 8px 28px rgba(0,0,0,.3)", padding: "10px 12px", display: "flex", gap: 10, alignItems: "flex-start" }}>
             {buddyId ? <BuddyKop buddy={BUDDY_BY_ID[buddyId]} size={44} /> : <span style={{ fontSize: 28, lineHeight: 1 }}>{gidsMoment.emoji}</span>}
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ font: "800 13px system-ui", color: "#234" }}>{gidsMoment.emoji} {gidsMoment.titel}</div>
+              <div style={{ font: "800 13px system-ui", color: "#234" }}>
+                {gidsMoment.emoji} {gidsMoment.titel}
+                {niveauLabelVoorLeerpad(gidsMoment.leerpadId) && (
+                  <span style={{ font: "700 10.5px system-ui", color: "#1e4fa3", background: "#e6f0ff", borderRadius: 999, padding: "1px 7px", marginLeft: 6 }}>
+                    🎓 {niveauLabelVoorLeerpad(gidsMoment.leerpadId)}
+                  </span>
+                )}
+              </div>
               <p style={{ margin: "2px 0 0", font: "600 12.5px/1.45 system-ui", color: "#345" }}>
                 {buddyId ? <b style={{ color: "#1f5a2e" }}>{buddyNaamEff || "Je maatje"}: </b> : null}
                 {gidsMoment.praatje}
@@ -2569,6 +2576,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               )}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ font: "800 16px system-ui", color: "#234", marginBottom: 2 }}>{tafereel.emoji} {tafereel.titel}</div>
+                {/* 🎓 Niveau-pill (Mark 20 aug): automatisch uit het leerpad-manifest. */}
+                {niveauLabelVoorLeerpad(tafereel.leerpadId) && (
+                  <span style={{ display: "inline-block", font: "700 11px system-ui", color: "#1e4fa3", background: "#e6f0ff", borderRadius: 999, padding: "2px 9px", margin: "0 0 4px" }}>
+                    🎓 Past bij {niveauLabelVoorLeerpad(tafereel.leerpadId)}
+                  </span>
+                )}
                 <p style={{ margin: 0, font: "600 14px/1.5 system-ui", color: "#345" }}>
                   {buddyId ? <b style={{ color: "#1f5a2e" }}>{buddyNaamEff || "Je maatje"}: </b> : null}
                   {tafereel.praatje}
