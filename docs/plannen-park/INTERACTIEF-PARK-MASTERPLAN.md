@@ -101,6 +101,11 @@ groepje krijgt **A** (de "wow", waar manipuleren echt iets leert). Zie
 - **Fase 4 — leeftijd-laag + polish**: objecten tonen op niveau; "ontdek-teller"
   (welke objecten heb je al onderzocht) op je persoonlijke pagina.
 
+> 🚶 **Zie ook (20 aug):** `WANDELKWARTIER-PLAN.md` — de "cirkel rond"-laag
+> bovenop dit raamwerk (dagroute langs 3 stops uit de leer-data = het
+> leerkwartier). Volgorde-advies daar: wandelkwartier-MVP vóór de brede
+> poorten-uitrol (fase 2).
+
 ## 7. Open keuzes voor Mark (fase 0)
 1. **Breedte vs diepte**: eerst overal een poort (tier B, brede dekking) of eerst
    meer A-"wow"-objecten (diepte op een paar)?
