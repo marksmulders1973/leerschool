@@ -1,15 +1,16 @@
-// 🚶 Wandelkwartier BOUWPLAATS-PREVIEW (Mark 20 aug 2026: "teken eerst alle
-// voetstappen uit in het park met naambordjes wat hier gebouwd gaat worden,
-// zodat ik er doorheen kan lopen").
+// 🚶 Wandelkwartier — de route in het park (WANDELKWARTIER-PLAN.md).
 //
-// Dit is een PREVIEW-overlay, geen feature: gloeiende voetstappen volgen de
-// geplande dagroute (WANDELKWARTIER-PLAN.md) over de bestaande paden, met
-// bouwbordjes ("🚧 Hier komt: …") bij elke geplande stop. Niets wordt
-// verplaatst of opgeslagen — het park van niemand verandert.
+// 20 aug 2026, twee stappen op één dag:
+//   1. Bouwplaats-preview (Mark: "teken de voetstappen uit met naambordjes").
+//   2. Mark liep de route en gaf go: "bouw maar in de echte app" → de
+//      VOETSTAPPEN staan nu ALTIJD aan (het leerlint); alleen de gele
+//      bouwbordjes ("🚧 Hier komt: …") blijven preview-only via ?wandel=1.
 //
-// Aanzetten: open de app met ?wandel=1 en ga naar het park (blijft daarna
-// deze sessie aan via sessionStorage). Weghalen = deze component + de mount
-// in ZooScene verwijderen.
+// De route volgt de bestaande paden en verandert niets aan een park; de
+// seed-fontein die op de boulevard stond is apart gemigreerd (zooState:
+// maakWandelrouteVrij) en het treinspoor is overloopbaar gemaakt (isVast
+// respecteert `beloopbaar`). Volgende fase (stops/vragen/kwartier-koppeling)
+// = M2 in het plan, aparte bouwsessie.
 
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { Html } from "@react-three/drei";
@@ -58,7 +59,7 @@ const BORDEN = [
 const STAP_AFSTAND = 1.15;  // wereld-units tussen voetstappen
 const VOET_OFFSET = 0.24;   // links/rechts van de routelijn
 
-export default function WandelPreview({ heightRef }) {
+export default function WandelPreview({ heightRef, borden = false }) {
   const instRef = useRef();
 
   // Alle voetstap-posities één keer uitrekenen (positie, kijkrichting, l/r).
@@ -110,8 +111,8 @@ export default function WandelPreview({ heightRef }) {
         <meshBasicMaterial color="#00e676" transparent opacity={0.85} depthWrite={false} />
       </instancedMesh>
 
-      {/* Bouwbordjes bij de geplande stops. */}
-      {BORDEN.map((b, i) => {
+      {/* Bouwbordjes bij de geplande stops — alleen in de preview (?wandel=1). */}
+      {borden && BORDEN.map((b, i) => {
         const x = b.cell[0] * CELL, z = b.cell[1] * CELL;
         const y = heightRef?.current ? heightRef.current(x, z) : 0;
         return (

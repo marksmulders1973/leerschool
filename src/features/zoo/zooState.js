@@ -52,9 +52,11 @@ function bouwVoorbeeldPark() {
   add("bankje", -2, 15); add("bankje", 2, 15);
   add("prullenbak", -2, 13); add("donatiebox", 2, 13);
 
-  // ── MIDDEN: draaimolen + fontein ──
+  // ── MIDDEN: draaimolen ──
+  // (De fontein stond op (0,10) midden op de boulevard — precies op de
+  //  wandelroute. Mark 20 aug: "haal alles wat in de weg staat weg" → uit de
+  //  seed; bestaande parken via maakWandelrouteVrij hieronder.)
   add("carousel", 0, 0);
-  add("fountain", 0, 10);
   rij("flowerPurple", 13, -1, 1);
 
   // ── ATTRACTIES achterin ──
@@ -213,6 +215,15 @@ export function spreidLeerobjecten(layout) {
   });
 }
 
+// 🚶 Wandelroute vrijmaken (Mark 20 aug: "haal alles zoals de vijver die in de
+// weg staat weg"). De seed-fontein op (0,10) stond midden op de boulevard =
+// de dagroute. Alleen een fontein op exact die seed-plek verdwijnt; een
+// fontein die een kind zelf ergens anders neerzette blijft gewoon staan.
+export function maakWandelrouteVrij(layout) {
+  if (!Array.isArray(layout)) return layout;
+  return layout.filter((it) => !(it && it.assetId === "fountain" && Array.isArray(it.cell) && it.cell[0] === 0 && it.cell[1] === 10));
+}
+
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
 // corrupte items eruit + meetkunde-objecten uit elkaar. Eén item zonder bekende
 // asset of zonder positie (geen cell én geen kx) gooide anders een TypeError in
@@ -222,7 +233,7 @@ export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
   const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
-  return spreidLeerobjecten(schoon);
+  return maakWandelrouteVrij(spreidLeerobjecten(schoon));
 }
 
 export function defaultState() {

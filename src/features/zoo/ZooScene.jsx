@@ -40,6 +40,9 @@ const HAK_RAND_GEO = new BoxGeometry(KUB + 0.05, KUB + 0.05, KUB + 0.05);
 function isVast(assetId) {
   const a = getAsset(assetId);
   if (!a) return false;
+  // Expliciet overloopbaar decor (bv. rails: bezoekers-bots liepen erop vast
+  // en de wandelroute kruist het spoor — Mark 20 aug).
+  if (a.beloopbaar) return false;
   if (a.kind === "building" || a.kind === "attraction") return true;
   if (a.kind === "animal") return false; // dieren lopen vrij rond → niet solide
   if (a.kind === "decor") return a.procedural !== "path" && a.procedural !== "hill" && !String(assetId).startsWith("flower") && assetId !== "mushroom";
@@ -1173,9 +1176,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* De wereld buiten het hek: grasvlakte, blok-heuvels, bos, bergen,
             meertje en het weggetje met bushalte — geen "einde van de wereld". */}
         <Buitenwereld />
-        {/* 🚶 Bouwplaats-preview van het wandelkwartier (?wandel=1): voetstappen
-            + bouwbordjes langs de geplande dagroute. Puur visueel, wijzigt niets. */}
-        {wandelPreviewActief() && <WandelPreview heightRef={heightFnRef} />}
+        {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
+            voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
+        <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
