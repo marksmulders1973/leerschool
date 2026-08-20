@@ -75,15 +75,25 @@ export const WOORDHULP = {
 
 // Regex die alle woordhulp-woorden als heel woord vindt (langste eerst,
 // zodat "waterbeheerders" niet halverwege op iets korters matcht).
-const WOORD_REGEX = new RegExp(
-  "\\b(" +
-    Object.keys(WOORDHULP)
-      .sort((a, b) => b.length - a.length)
-      .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
-      .join("|") +
-    ")\\b",
-  "gi"
-);
+function maakWoordRegex() {
+  return new RegExp(
+    "\\b(" +
+      Object.keys(WOORDHULP)
+        .sort((a, b) => b.length - a.length)
+        .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+        .join("|") +
+      ")\\b",
+    "gi"
+  );
+}
+let WOORD_REGEX = maakWoordRegex();
+
+// Leesladder 2 (20 aug 2026) voegt eigen woorden toe: lijst aanvullen en de
+// regex opnieuw opbouwen (die wordt anders één keer bij het laden bevroren).
+export function voegWoordenToe(extra) {
+  Object.assign(WOORDHULP, extra || {});
+  WOORD_REGEX = maakWoordRegex();
+}
 
 // Splitst een tekst in stukken: gewone strings en { woord } voor een match.
 export function splitsOpWoorden(tekst) {

@@ -19,7 +19,12 @@ import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
 import { VERSIES } from "./leesladderData.js";
+import { VERSIES2 } from "./leesladder2/index.js";
 import { splitsOpWoorden, gebruikteWoorden } from "./leesladderWoorden.js";
+import { FamiliePill } from "../features/familie/familieUi.jsx";
+
+// Ladder 2 = de zware versies D/E/F (Familie-laag, nu bèta-gratis).
+const NIVEAU2 = ["D", "E", "F"];
 
 // Tekst met stippellijntjes onder de moeilijke woorden — die staan achterin
 // in de Woordenlijst (Brian-verzoek 2026-07-10: "stuifmeel" kende hij niet).
@@ -172,8 +177,9 @@ export default function LeesladderPage({ setPage } = {}) {
   }
 
   // Doorlopende vraagnummering voor de antwoordsleutel + optie-hussel per versie.
+  const BRON = NIVEAU2.includes(versie) ? VERSIES2 : VERSIES;
   let teller = 0;
-  const treden = VERSIES[versie].map((t, ti) => ({
+  const treden = BRON[versie].map((t, ti) => ({
     ...t,
     teksten: t.teksten.map((tx, xi) => ({
       ...tx,
@@ -222,8 +228,8 @@ export default function LeesladderPage({ setPage } = {}) {
           elke vraag uitlegt <em>waaróm</em> het antwoord klopt. Print gratis via <strong>Opslaan als PDF</strong>.
         </p>
 
-        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>Welke versie?</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>Ladder 1 · groep 5-8 — welke versie?</div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 14 }}>
           {["A", "B", "C"].map((vv) => {
             const aan = versie === vv;
             return (
@@ -236,6 +242,32 @@ export default function LeesladderPage({ setPage } = {}) {
                 {aan ? "✓ " : ""}Versie {vv}
                 <span style={{ display: "block", fontSize: 11, fontWeight: 400, opacity: 0.8 }}>
                   {vv === "A" ? "start hier" : "andere teksten"}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* 🪜🪜 Ladder 2 — de zware ladder (Mark 20 aug: Brian vindt ladder 1 nu
+            makkelijk). Drie verse, zwaardere versies; Familie-laag, bèta-gratis. */}
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          Ladder 2 · zwaarder, t/m de brugklas — voor wie ladder 1 makkelijk vindt
+          <FamiliePill />
+          <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
+          {NIVEAU2.map((vv) => {
+            const aan = versie === vv;
+            return (
+              <button key={vv} onClick={() => { setVersie(vv); try { track("leesladder_niveau2", { versie: vv }); } catch { /* */ } }} style={{
+                padding: "9px 18px", borderRadius: 12, fontSize: 15, fontWeight: 700, cursor: "pointer",
+                border: aan ? "1.5px solid #ffd54f" : "1.5px solid rgba(255,213,79,0.35)",
+                background: aan ? "rgba(255,213,79,0.15)" : "transparent",
+                color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
+              }}>
+                {aan ? "✓ " : ""}Versie {vv}
+                <span style={{ display: "block", fontSize: 11, fontWeight: 400, opacity: 0.8 }}>
+                  {vv === "D" ? "zwaarder · start hier" : "andere teksten"}
                 </span>
               </button>
             );
