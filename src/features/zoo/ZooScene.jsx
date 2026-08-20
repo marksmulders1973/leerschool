@@ -17,6 +17,7 @@ import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
 import WandelPreview, { wandelPreviewActief } from "./WandelPreview";
+import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
@@ -1059,6 +1060,27 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
   pretRef.current = _routes.pret;
   bankjesRef.current = _routes.bankjes;
 
+  // 🚩 Wandel-stopdoelen (Brian 20 aug: "welk pad leidt naar de kubus?"):
+  // per route de wereld-posities van zijn stop-objecten in DÍT park, zodat
+  // WandelPreview er een stippen-zijspoor + vlaggetje naartoe kan tekenen.
+  const wandelStopDoelen = useMemo(() => {
+    const w = leesWandeling();
+    const posities = new Map();
+    placedItems.forEach((it) => {
+      if (!it || !Array.isArray(it.cell)) return;
+      if (!posities.has(it.assetId)) posities.set(it.assetId, { x: it.cell[0] * CELL, z: it.cell[1] * CELL });
+    });
+    const uit = {};
+    for (const r of WANDEL_ROUTES) {
+      const stops = w && w.routeId === r.id ? stopsVan(w) : r.stops;
+      uit[r.id] = stops.map((s) => {
+        const p = posities.get(s.moment);
+        return p ? { ...p, emoji: s.emoji } : null;
+      }).filter(Boolean);
+    }
+    return uit;
+  }, [placedItems]);
+
   // Botsing: vakjes die "vast" zijn, zodat het poppetje er niet doorheen loopt.
   const vasteCellen = useMemo(() => {
     const s = new Set();
@@ -1178,7 +1200,7 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
         <Buitenwereld />
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
-        <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} />
+        <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} stopDoelen={wandelStopDoelen} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />

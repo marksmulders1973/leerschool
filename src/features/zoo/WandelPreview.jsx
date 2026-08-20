@@ -1,19 +1,21 @@
-// 🚶 Wandelkwartier — gekleurde route-paden door het park (WANDELKWARTIER-PLAN.md).
+// 🚶 Wandelkwartier — gekleurde stippen-routes met zijsporen naar de stops.
 //
-// Evolutie op één dag (20 aug 2026, Mark + Brian als testteam):
-//   voetstappen-preview → altijd aan → dubbele stapjes werden een stippenzee
-//   op Brian's telefoon → enkele stippen per baan → en nu de eindvorm:
-//   DOORGETROKKEN GEKLEURDE PADEN (Mark: "een geel, groen en blauw pad, net
-//   als de uitleg-volgorde") — drie linten naast elkaar zoals looplijnen op
-//   een schoolplein, oplopend van makkelijk naar zwaar (geel 3-5 → groen 6-8
-//   → blauw brugklas, zoals de uitleg ook oploopt basis → simpeler → …).
+// Eindvorm na een dag itereren met Mark + Brian (20 aug 2026):
+//   voetstappen → stippenzee → enkele stippen → linten → en terug naar
+//   STIPPEN ("stippen is mooier"), met twee fixes uit Brian's test:
+//   1. heen- en terugweg vallen weer op ÉÉN stippenlijn (punt-dedupe — bij de
+//      linten tekenden ze half over elkaar);
+//   2. "welk pad leidt naar de kubus?" → elke stop krijgt een kort ZIJSPOOR
+//      van stippen van de hoofdlijn naar het object, eindigend in een
+//      vlaggetje in de routekleur met de stop-emoji (🧊/🕐/🗼). De posities
+//      komen uit het échte park (ZooScene geeft stopDoelen mee), dus ook als
+//      een kind zijn kubus verplaatst heeft, wijst het zijspoor goed.
 //
-// Elke route tekent zijn lint in een eigen baan (offset); het terug-stuk over
-// dezelfde straat tekent geen tweede lint (segment-dedupe). Om de zoveel meter
-// ligt een leesbare stempel ("groep 3-5") óp het lint, leesrichting vanuit de
-// poort. De gele bouwbordjes blijven preview-only via ?wandel=1.
+// Kleur-volgorde = de uitleg-volgorde: geel (3-5) → groen (6-8) → blauw
+// (brugklas). Actieve wandeling of kleur-stipje = alleen dat pad zichtbaar.
+// Gele bouwbordjes blijven preview-only via ?wandel=1.
 
-import { useMemo } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { CELL } from "./grid";
@@ -32,7 +34,8 @@ export function wandelPreviewActief() {
 }
 
 const ROUTES = WANDEL_ROUTES;
-const LINT_BREEDTE = 0.44; // meter — smal genoeg dat drie banen naast elkaar passen
+const STAP_AFSTAND = 1.4;
+const STEMPEL_ELKE = 11;
 
 function maakStempelTexture(route) {
   const c = document.createElement("canvas");
@@ -55,65 +58,129 @@ function maakStempelTexture(route) {
   return tex;
 }
 
-// 🎨 Eén doorgetrokken gekleurd lint langs de route, in de eigen baan.
-function RouteLint({ route, heightRef }) {
-  const { segs, punten, stempels } = useMemo(() => {
-    const pts = route.cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
-    const segs = [], punten = [];
-    const segSeen = new Set(), puntSeen = new Set();
-    for (let i = 0; i < pts.length - 1; i++) {
-      const a0 = pts[i], b0 = pts[i + 1];
-      const seg = b0.clone().sub(a0);
-      const len = seg.length();
-      if (len < 0.001) continue;
-      const dir = seg.clone().normalize();
-      const perp = new THREE.Vector2(-dir.y, dir.x);
-      const a = a0.clone().addScaledVector(perp, route.offset);
-      const b = b0.clone().addScaledVector(perp, route.offset);
-      const mid = a.clone().add(b).multiplyScalar(0.5);
-      const key = Math.round(mid.x / 0.7) + "," + Math.round(mid.y / 0.7) + "," + Math.round(len);
-      if (!segSeen.has(key)) {
-        segSeen.add(key);
-        segs.push({ x: mid.x, z: mid.y, len, hoek: Math.atan2(dir.x, dir.y) });
+// Stippen langs een polyline (wereld-punten), met dedupe-raster zodat heen en
+// terug over dezelfde straat op één lijn samenvallen.
+function stippenLangs(punten, offset, bezet) {
+  const out = [];
+  let rest = 0;
+  for (let i = 0; i < punten.length - 1; i++) {
+    const a = punten[i], b = punten[i + 1];
+    const seg = b.clone().sub(a);
+    const len = seg.length();
+    if (len < 0.001) continue;
+    const dir = seg.clone().normalize();
+    const perp = new THREE.Vector2(-dir.y, dir.x);
+    let d = rest;
+    while (d < len) {
+      const p = a.clone().addScaledVector(dir, d).addScaledVector(perp, offset);
+      const key = Math.round(p.x / 0.8) + "," + Math.round(p.y / 0.8);
+      if (!bezet.has(key)) {
+        bezet.add(key);
+        out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
       }
-      // Ronde "gewrichten" op de hoekpunten zodat de linten naadloos aansluiten.
-      for (const p of [a, b]) {
-        const k = Math.round(p.x / 0.7) + "," + Math.round(p.y / 0.7);
-        if (!puntSeen.has(k)) { puntSeen.add(k); punten.push({ x: p.x, z: p.y }); }
-      }
+      d += STAP_AFSTAND;
     }
-    // Stempels: op de langere stukken, om de ~5 segmenten.
-    const stempels = segs.filter((s, i) => i > 0 && i % 5 === 0 && s.len > 3);
-    return { segs, punten, stempels };
-  }, [route]);
+    rest = d - len;
+  }
+  return out;
+}
+
+// 🎨 Eén route: hoofdlijn-stippen + stempels + zijsporen naar de stops.
+function RouteStippen({ route, heightRef, doelen }) {
+  const instRef = useRef();
+
+  const { stappen, stempels, vlaggen } = useMemo(() => {
+    const pts = route.cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
+    const bezet = new Set();
+    const hoofd = stippenLangs(pts, route.offset, bezet);
+    const stappen = [];
+    const stempels = [];
+    hoofd.forEach((s, i) => {
+      if (i > 6 && i % STEMPEL_ELKE === 0) stempels.push(s);
+      else stappen.push(s);
+    });
+
+    // Zijsporen: van het dichtstbijzijnde punt op de hoofdlijn naar elk
+    // stop-object in dít park, eindigend in een vlaggetje bij het object.
+    const vlaggen = [];
+    (doelen || []).forEach((doel) => {
+      const eind = new THREE.Vector2(doel.x, doel.z);
+      let beste = null, besteAfstand = Infinity;
+      for (const s of hoofd) {
+        const d2 = (s.x - eind.x) ** 2 + (s.z - eind.y) ** 2;
+        if (d2 < besteAfstand) { besteAfstand = d2; beste = s; }
+      }
+      if (!beste) return;
+      const start = new THREE.Vector2(beste.x, beste.z);
+      const afstand = start.distanceTo(eind);
+      if (afstand > 1.2 && afstand < 40) {
+        // stop vlak vóór het object zodat de stippen er niet ónder verdwijnen
+        const dir = eind.clone().sub(start).normalize();
+        const kort = eind.clone().addScaledVector(dir, -1.1);
+        stappen.push(...stippenLangs([start, kort], 0, bezet));
+      }
+      vlaggen.push(doel);
+    });
+
+    return { stappen, stempels, vlaggen };
+  }, [route, doelen]);
 
   const stempelTex = useMemo(() => maakStempelTexture(route), [route]);
   const hoogte = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
 
+  useLayoutEffect(() => {
+    const inst = instRef.current;
+    if (!inst) return;
+    const m = new THREE.Matrix4();
+    const q = new THREE.Quaternion();
+    const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
+    const schaal = new THREE.Vector3(1, 1, 1);
+    stappen.forEach((s, i) => {
+      q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
+      m.compose(new THREE.Vector3(s.x, hoogte(s.x, s.z) + 0.06, s.z), q, schaal);
+      inst.setMatrixAt(i, m);
+    });
+    inst.instanceMatrix.needsUpdate = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stappen, heightRef]);
+
   return (
     <group>
-      {segs.map((s, i) => (
-        <group key={i} position={[s.x, hoogte(s.x, s.z) + 0.05, s.z]} rotation={[0, s.hoek, 0]}>
-          <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[LINT_BREEDTE, s.len]} />
-            <meshBasicMaterial color={route.kleur} transparent opacity={0.55} depthWrite={false} />
-          </mesh>
-        </group>
-      ))}
-      {punten.map((p, i) => (
-        <mesh key={"p" + i} position={[p.x, hoogte(p.x, p.z) + 0.05, p.z]} rotation={[-Math.PI / 2, 0, 0]}>
-          <circleGeometry args={[LINT_BREEDTE / 2, 12]} />
-          <meshBasicMaterial color={route.kleur} transparent opacity={0.55} depthWrite={false} />
-        </mesh>
-      ))}
+      <instancedMesh key={stappen.length} ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
+        <circleGeometry args={[0.16, 12]} />
+        <meshBasicMaterial color={route.kleur} transparent opacity={0.9} depthWrite={false} />
+      </instancedMesh>
+
       {stempels.map((s, i) => (
-        <group key={"s" + i} position={[s.x, hoogte(s.x, s.z) + 0.075, s.z]} rotation={[0, s.hoek, 0]}>
+        <group key={"st" + i} position={[s.x, hoogte(s.x, s.z) + 0.07, s.z]} rotation={[0, s.hoek, 0]}>
           <mesh rotation={[-Math.PI / 2, 0, 0]}>
             <planeGeometry args={[1.35, 0.5]} />
             <meshBasicMaterial map={stempelTex} transparent depthWrite={false} />
           </mesh>
         </group>
       ))}
+
+      {/* 🚩 Stop-vlaggetjes bij de objecten van deze route. */}
+      {vlaggen.map((v, i) => {
+        const y = hoogte(v.x, v.z);
+        return (
+          <group key={"v" + i} position={[v.x + 0.9, y, v.z + 0.9]}>
+            <mesh position={[0, 0.55, 0]} castShadow>
+              <boxGeometry args={[0.07, 1.1, 0.07]} />
+              <meshStandardMaterial color="#7a5230" />
+            </mesh>
+            <mesh position={[0.22, 0.92, 0]} castShadow>
+              <boxGeometry args={[0.42, 0.28, 0.03]} />
+              <meshStandardMaterial color={route.kleur} />
+            </mesh>
+            <Html position={[0, 1.32, 0]} center distanceFactor={7} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
+              <div style={{ whiteSpace: "nowrap", background: "rgba(255,254,248,0.95)", border: `2.5px solid ${route.kleur}`, borderRadius: 999, padding: "3px 10px", fontFamily: "system-ui, sans-serif", fontSize: 13, fontWeight: 800, color: "#234", boxShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+                {v.emoji} stop
+              </div>
+            </Html>
+          </group>
+        );
+      })}
     </group>
   );
 }
@@ -136,14 +203,12 @@ const BORDEN = [
   { cell: [-2, 14], rot: Math.PI, titel: "🏁 Finish — kwartier behaald!", tekst: "Terug bij de ingang: viering, je dagdoel staat op groen, en morgen ligt er een nieuwe route." },
 ];
 
-export default function WandelPreview({ heightRef, borden = false, toon = null }) {
-  // toon = null → alle routes; ["geel"] → alleen dat pad (route-filter /
-  // actieve wandeling — "snel alleen geel of alleen blauw zien").
+export default function WandelPreview({ heightRef, borden = false, toon = null, stopDoelen = null }) {
   const zichtbaar = toon ? ROUTES.filter((r) => toon.includes(r.id)) : ROUTES;
   return (
     <group>
       {zichtbaar.map((r) => (
-        <RouteLint key={r.id} route={r} heightRef={heightRef} />
+        <RouteStippen key={r.id} route={r} heightRef={heightRef} doelen={stopDoelen ? stopDoelen[r.id] : null} />
       ))}
 
       {PAALTJES.map((p, i) => {
