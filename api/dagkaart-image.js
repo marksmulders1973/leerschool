@@ -41,11 +41,26 @@ export default async function handler(req) {
     if (r.ok) {
       const d = await r.json();
       const v = d?.actueel?.vraag;
-      if (v?.options) vraag = { vraag: v.vraag, options: v.options, emoji: v.emoji || "🗞️", actueel: true, bronTitel: d.actueel.bron_titel };
+      if (v?.options) vraag = { vraag: v.vraag, options: v.options, emoji: v.emoji || "🗞️", actueel: true, bronTitel: d.actueel.bron_titel, tekst: v.tekst || null };
     }
   } catch { /* geen actuele → generieke kaart */ }
   if (!vraag) {
-    vraag = { vraag: "Vraag van de dag — oefen mee voor de Doorstroomtoets!", options: [], emoji: "🎯", actueel: false, bronTitel: null };
+    vraag = { vraag: "Vraag van de dag — oefen mee voor de Doorstroomtoets!", options: [], emoji: "🎯", actueel: false, bronTitel: null, tekst: null };
+  }
+
+  // Leestekst hoort OP de kaart (les 20 aug): zonder de tekst is een
+  // oorzaak-gevolg-vraag niet afleidbaar en concurreren afleiders met het
+  // goede antwoord ("waarom door?" — groepswinnaar vs. 9 doelpunten).
+  // Afkappen op woordgrens zodat vraag + 4 opties + footer blijven passen.
+  let leestekst = null;
+  if (vraag.tekst) {
+    const s = String(vraag.tekst).replace(/\*\*/g, "");
+    if (s.length <= 230) leestekst = s;
+    else {
+      const kort = s.slice(0, 229);
+      const spatie = kort.lastIndexOf(" ");
+      leestekst = (spatie > 120 ? kort.slice(0, spatie) : kort) + "…";
+    }
   }
 
   const font = await laadFont();
@@ -72,9 +87,14 @@ export default async function handler(req) {
     },
   }, vraag.actueel ? "🗞️  Vraag van de dag · uit het nieuws" : "🎯  Doorstroomtoets · vraag van de dag");
 
-  const emoji = h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 96 : 108, marginTop: 2, marginBottom: 4, flexShrink: 0 } }, vraag.emoji);
+  // Mét leestekst is er geen ruimte voor het grote emoji-blok (badge heeft al 🗞️).
+  const emoji = leestekst ? null : h("div", { style: { display: "flex", justifyContent: "center", width: "100%", fontSize: fmt === "11" ? 96 : 108, marginTop: 2, marginBottom: 4, flexShrink: 0 } }, vraag.emoji);
 
-  const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: vFont, fontWeight: 700, lineHeight: 1.28, marginBottom: 12 } }, vraagTekst);
+  const tekstEl = leestekst
+    ? h("div", { style: { display: "flex", flexShrink: 0, fontSize: fmt === "11" ? 27 : 30, lineHeight: 1.4, color: "rgba(255,255,255,0.88)", background: "rgba(255,255,255,0.06)", borderRadius: 18, padding: "16px 22px", marginTop: 10, marginBottom: 14 } }, leestekst)
+    : null;
+
+  const vraagEl = h("div", { style: { display: "flex", flexShrink: 0, fontSize: leestekst ? Math.min(vFont, 40) : vFont, fontWeight: 700, lineHeight: 1.28, marginBottom: 12 } }, vraagTekst);
 
   // Lange optie: afbreken op een woordgrens + "…" — nooit midden in een woord.
   const optTekst = (o) => {
@@ -93,14 +113,16 @@ export default async function handler(req) {
     h("div", { key: "cta", style: { display: "flex", alignSelf: "flex-start", background: "#00C853", color: "#0b1a2e", fontSize: fmt === "11" ? 30 : 34, fontWeight: 700, borderRadius: 34, padding: "14px 26px" } },
       "Antwoord + uitleg op 3 niveaus → leerkwartier.app/vandaag"),
   ];
-  if (vraag.actueel && vraag.bronTitel) {
-    footerKinderen.push(h("div", { key: "bron", style: { display: "flex", fontSize: 24, color: "rgba(255,255,255,0.55)", marginTop: 16 } }, ("Bron: NOS Jeugdjournaal — " + vraag.bronTitel).slice(0, 70)));
+  if (vraag.actueel) {
+    // Alleen de bron-naam — de nieuwskop zelf verklapt vaak het antwoord
+    // ("…en zijn door naar volgende WK-ronde", les 20 aug).
+    footerKinderen.push(h("div", { key: "bron", style: { display: "flex", fontSize: 24, color: "rgba(255,255,255,0.55)", marginTop: 16 } }, "Bron: NOS Jeugdjournaal"));
   }
   const footer = h("div", { style: { display: "flex", flexDirection: "column", marginTop: "auto" } }, ...footerKinderen);
 
   const kaart = h("div", {
     style: { display: "flex", flexDirection: "column", width: "100%", height: "100%", padding: 60, color: "#fff", fontFamily: ff, backgroundImage: "linear-gradient(135deg,#16233f 0%,#1d3358 55%,#24406a 100%)" },
-  }, header, badge, emoji, vraagEl, optiesEl, footer);
+  }, ...[header, badge, emoji, tekstEl, vraagEl, optiesEl, footer].filter(Boolean));
 
   return new ImageResponse(kaart, {
     width: W,
