@@ -25,10 +25,11 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
     if (la.current) la.current.rotation.x = Math.sin(t) * zwaai + idle;
     if (ra.current) {
       if (bouwt) {
-        // Bouw-pose: arm schuin OPZIJ omhoog (niet naar voren — dan verdween de
-        // hamer achter de rug vanaf de standaard camera) + zachte hamer-zwaai.
+        // Bouw-pose: arm schuin OPZIJ omhoog + zachte hamer-zwaai. Let op het
+        // teken: −z zwaaide de RECHTERarm naar bínnen, dwars door de romp —
+        // "hamertje steekt uit buik" (Brian, 20 aug). +z = van het lijf af.
         ra.current.rotation.x = -0.35 + Math.sin(t * 2.2) * 0.12;
-        ra.current.rotation.z = -1.15;
+        ra.current.rotation.z = 0.95;
       } else {
         ra.current.rotation.x = -Math.sin(t) * zwaai - idle;
         ra.current.rotation.z = 0;
