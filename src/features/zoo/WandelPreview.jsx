@@ -37,7 +37,7 @@ const ROUTES = WANDEL_ROUTES;
 // een voetstap waar deze voor staat — kinderen moeten het snel begrijpen").
 // Zoals tekst op een fietspad: om de zoveel stappen wordt een voetstap
 // vervangen door een ovaal in de routekleur met "groep 3-5" erop.
-const STEMPEL_ELKE = 14;
+const STEMPEL_ELKE = 11;
 
 function maakStempelTexture(route) {
   const c = document.createElement("canvas");
@@ -76,13 +76,17 @@ const BORDEN = [
   { cell: [-2, 14], rot: Math.PI, titel: "🏁 Finish — kwartier behaald!", tekst: "Terug bij de ingang: viering, je dagdoel staat op groen, en morgen ligt er een nieuwe route." },
 ];
 
-const STAP_AFSTAND = 1.15;  // wereld-units tussen voetstappen
-const VOET_OFFSET = 0.24;   // links/rechts van de routelijn
+// Enkele stippen op één lijn per route (Mark 20 aug, na Brian's telefoon-test:
+// dubbele voetstapjes × heen-en-terug × 3 routes = stippenzee). Elke route
+// heeft een eigen baan (offset) en het terug-stuk over dezelfde straat tekent
+// géén tweede lijn: stippen die (bijna) op een bestaande stip van dezelfde
+// route vallen, worden overgeslagen.
+const STAP_AFSTAND = 1.4;   // wereld-units tussen stippen
 
 function berekenStappen(cells, routeOffset) {
   const pts = cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
   const out = [];
-  let links = false;
+  const bezet = new Set(); // dedupe-raster (~0.8 m) per route
   let rest = 0;
   for (let i = 0; i < pts.length - 1; i++) {
     const a = pts[i], b = pts[i + 1];
@@ -93,10 +97,12 @@ function berekenStappen(cells, routeOffset) {
     const perp = new THREE.Vector2(-dir.y, dir.x);
     let d = rest;
     while (d < len) {
-      const p = a.clone().addScaledVector(dir, d)
-        .addScaledVector(perp, routeOffset + (links ? VOET_OFFSET : -VOET_OFFSET));
-      out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
-      links = !links;
+      const p = a.clone().addScaledVector(dir, d).addScaledVector(perp, routeOffset);
+      const key = Math.round(p.x / 0.8) + "," + Math.round(p.y / 0.8);
+      if (!bezet.has(key)) {
+        bezet.add(key);
+        out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
+      }
       d += STAP_AFSTAND;
     }
     rest = d - len;

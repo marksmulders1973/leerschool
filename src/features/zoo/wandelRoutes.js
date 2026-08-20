@@ -20,7 +20,7 @@ export const WANDEL_ROUTES = [
     stempel: "groep 3-5",
     kleur: "#ffd54f",
     tekstKleur: "#5c4300",
-    offset: -0.55,
+    offset: -0.95,
     // Objecten langs deze route die een persoonlijke stop mogen worden (M2b).
     pool: ["klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
     // Kort rondje: ingang → boulevard → meet-tuin en terug.
@@ -71,7 +71,7 @@ export const WANDEL_ROUTES = [
     stempel: "brugklas",
     kleur: "#42a5f5",
     tekstKleur: "#0b2a4a",
-    offset: 0.55,
+    offset: 0.95,
     pool: ["eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot", "kompas"],
     // De poorten-laan op en neer, langs de landmark-poorten.
     cells: [
