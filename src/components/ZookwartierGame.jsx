@@ -28,6 +28,7 @@ import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLe
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, personaliseerStops } from "../features/zoo/wandelRoutes";
 import { loadDueTopics } from "../features/mastery/mastery.js";
 import { kiesZwakkeConcepten } from "../features/oefenboekje/opMaat.js";
+import { haalKlaargezetVoorKind } from "../shared/ouderKlaargezet.js";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
@@ -1370,13 +1371,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     let cancel = false;
     (async () => {
       try {
-        const [due, recs] = await Promise.all([
+        const [klaargezet, due, recs] = await Promise.all([
+          haalKlaargezetVoorKind(naam).catch(() => []),
           loadDueTopics(naam).catch(() => []),
           loadMasteryForPlayer(naam, userId).catch(() => []),
         ]);
         if (cancel) return;
         const zwak = kiesZwakkeConcepten(recs || [], { maxConcepten: 4 });
+        // M2c: wat juf/thuis klaarzette gaat vóór alles — daarna herhaling, dan zwak.
         wandelKandidatenRef.current = [
+          ...(klaargezet || []).filter((k) => !k.gedaan && k.path_id).map((k) => ({ pathId: k.path_id, reden: k.bron === "leraar" ? "klaargezet-juf" : "klaargezet-thuis" })),
           ...(due || []).map((d) => ({ pathId: d.pathId, reden: "herhalen" })),
           ...(zwak || []).map((z) => ({ pathId: z.id, reden: "oefenen" })),
         ];
@@ -2592,6 +2596,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
           🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {stopsVan(wandeling).length}
           <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
+          {wandelStop.reden === "klaargezet-juf" && (
+            <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door je juf of meester!</div>
+          )}
+          {wandelStop.reden === "klaargezet-thuis" && (
+            <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door thuis!</div>
+          )}
           {wandelStop.reden === "herhalen" && (
             <div style={{ font: "700 11.5px system-ui", color: "#8a6d1a", marginTop: 2 }}>🔁 Die ken je al een beetje — even opfrissen!</div>
           )}
