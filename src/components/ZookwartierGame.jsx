@@ -25,7 +25,9 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad } from "../features/zoo/parkLeermomenten";
-import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling } from "../features/zoo/wandelRoutes";
+import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, personaliseerStops } from "../features/zoo/wandelRoutes";
+import { loadDueTopics } from "../features/mastery/mastery.js";
+import { kiesZwakkeConcepten } from "../features/oefenboekje/opMaat.js";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
@@ -1359,11 +1361,35 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [wandelKies, setWandelKies] = useState(false);
   const [wandelViering, setWandelViering] = useState(false);
   const wandelRoute = wandeling ? ROUTE_BY_ID[wandeling.routeId] : null;
-  const wandelStop = wandelRoute && !wandeling.klaar ? wandelRoute.stops[wandeling.stopIdx] : null;
+  const wandelStop = wandelRoute && !wandeling.klaar ? stopsVan(wandeling)[wandeling.stopIdx] : null;
+  // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
+  // zwakste concepten) — één keer ophalen zodra het kies-paneel opengaat.
+  const wandelKandidatenRef = useRef(null);
+  useEffect(() => {
+    if (!wandelKies || wandelKandidatenRef.current || !naam) return;
+    let cancel = false;
+    (async () => {
+      try {
+        const [due, recs] = await Promise.all([
+          loadDueTopics(naam).catch(() => []),
+          loadMasteryForPlayer(naam, userId).catch(() => []),
+        ]);
+        if (cancel) return;
+        const zwak = kiesZwakkeConcepten(recs || [], { maxConcepten: 4 });
+        wandelKandidatenRef.current = [
+          ...(due || []).map((d) => ({ pathId: d.pathId, reden: "herhalen" })),
+          ...(zwak || []).map((z) => ({ pathId: z.id, reden: "oefenen" })),
+        ];
+      } catch {
+        wandelKandidatenRef.current = [];
+      }
+    })();
+    return () => { cancel = true; };
+  }, [wandelKies, naam, userId]);
   useEffect(() => {
     if (!tafereel || !wandeling || wandeling.klaar) return;
-    const stop = ROUTE_BY_ID[wandeling.routeId].stops[wandeling.stopIdx];
-    if (tafereel.id !== stop.moment) return;
+    const stop = stopsVan(wandeling)[wandeling.stopIdx];
+    if (!stop || tafereel.id !== stop.moment) return;
     const nw = volgendeStop(wandeling);
     setWandeling(nw);
     try { track(nw.klaar ? "wandel_route_af" : "wandel_stop_klaar", { route: wandeling.routeId, stop: stop.moment }); } catch { /* */ }
@@ -2564,8 +2590,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
       {wandeling && !wandeling.klaar && wandelStop && (
         <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
-          🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {wandelRoute.stops.length}
+          🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {stopsVan(wandeling).length}
           <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
+          {wandelStop.reden === "herhalen" && (
+            <div style={{ font: "700 11.5px system-ui", color: "#8a6d1a", marginTop: 2 }}>🔁 Die ken je al een beetje — even opfrissen!</div>
+          )}
+          {wandelStop.reden === "oefenen" && (
+            <div style={{ font: "700 11.5px system-ui", color: "#1f5a2e", marginTop: 2 }}>💪 Daar word jij vandaag beter in!</div>
+          )}
           <button onClick={() => { stopWandeling(); setWandeling(null); }} title="Wandeling stoppen" style={{ position: "absolute", top: 6, right: 6, border: "none", borderRadius: 999, width: 22, height: 22, font: "700 11px system-ui", background: "rgba(0,0,0,0.07)", cursor: "pointer" }}>✕</button>
         </div>
       )}
@@ -2583,15 +2615,21 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <p style={{ margin: "4px 0 12px", font: "600 13px/1.45 system-ui", color: "#345" }}>
               Volg de gekleurde voetstappen en vind de 3 stops. Bij elke stop leer je iets — route af = feestje!
             </p>
-            {WANDEL_ROUTES.map((r) => (
-              <button key={r.id} onClick={() => { const w = startWandeling(r.id); setWandeling(w); setWandelKies(false); try { track("wandel_start", { route: r.id }); } catch { /* */ } }}
-                style={{ display: "block", width: "100%", textAlign: "left", border: `2.5px solid ${r.kleur}`, background: "#fff", borderRadius: 14, padding: "10px 13px", marginBottom: 9, cursor: "pointer" }}>
-                <span style={{ font: "800 14px system-ui", color: "#234" }}>{r.naam} · {r.groep}</span>
-                <div style={{ font: "600 12.5px system-ui", color: "#567", marginTop: 2 }}>
-                  {r.stops.map((s) => `${s.emoji} ${s.label}`).join("  →  ")}
-                </div>
-              </button>
-            ))}
+            {WANDEL_ROUTES.map((r) => {
+              // M2b: laat meteen de stops zien die dít kind zou krijgen.
+              const stops = personaliseerStops(r, wandelKandidatenRef.current || []);
+              const persoonlijk = stops.some((s) => s.reden);
+              return (
+                <button key={r.id} onClick={() => { const w = startWandeling(r.id, stops); setWandeling(w); setWandelKies(false); try { track("wandel_start", { route: r.id, persoonlijk }); } catch { /* */ } }}
+                  style={{ display: "block", width: "100%", textAlign: "left", border: `2.5px solid ${r.kleur}`, background: "#fff", borderRadius: 14, padding: "10px 13px", marginBottom: 9, cursor: "pointer" }}>
+                  <span style={{ font: "800 14px system-ui", color: "#234" }}>{r.naam} · {r.groep}</span>
+                  {persoonlijk && <span style={{ font: "700 10.5px system-ui", color: "#7a5b00", background: "rgba(246,200,76,0.25)", borderRadius: 999, padding: "1px 7px", marginLeft: 6 }}>✨ voor jou gekozen</span>}
+                  <div style={{ font: "600 12.5px system-ui", color: "#567", marginTop: 2 }}>
+                    {stops.map((s) => `${s.emoji} ${s.label}`).join("  →  ")}
+                  </div>
+                </button>
+              );
+            })}
             <button onClick={() => setWandelKies(false)} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Toch niet</button>
           </div>
         </div>

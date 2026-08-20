@@ -10,6 +10,8 @@
 // Kind-regel: alles hier is in één blik te snappen — kleur = route, ovaal met
 // "groep 3-5" in het spoor (zoals tekst op een fietspad), stops met emoji.
 
+import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
+
 export const WANDEL_ROUTES = [
   {
     id: "geel",
@@ -19,6 +21,8 @@ export const WANDEL_ROUTES = [
     kleur: "#ffd54f",
     tekstKleur: "#5c4300",
     offset: -0.55,
+    // Objecten langs deze route die een persoonlijke stop mogen worden (M2b).
+    pool: ["klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
     // Kort rondje: ingang → boulevard → meet-tuin en terug.
     cells: [
       [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
@@ -40,6 +44,7 @@ export const WANDEL_ROUTES = [
     kleur: "#00e676",
     tekstKleur: "#0b3d20",
     offset: 0,
+    pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
     // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
     cells: [
       [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
@@ -67,6 +72,7 @@ export const WANDEL_ROUTES = [
     kleur: "#42a5f5",
     tekstKleur: "#0b2a4a",
     offset: 0.55,
+    pool: ["eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot", "kompas"],
     // De poorten-laan op en neer, langs de landmark-poorten.
     cells: [
       [0, 16], [0, 12], [0, 7], [3, 4], [6, 2], [9, 0],
@@ -85,6 +91,45 @@ export const WANDEL_ROUTES = [
 
 export const ROUTE_BY_ID = Object.fromEntries(WANDEL_ROUTES.map((r) => [r.id, r]));
 
+// ── M2b: persoonlijke stops (Mark-go 20 aug "bouw M2b ook maar").
+// De route kiest stop 1 en 2 uit wat dít kind echt moet doen: herhaling die
+// eraan toe is (next_due_at) en zwakste concepten. De finale-stop blijft vast
+// (het herkenbare einddoel), en zonder leer-data vallen we stil terug op de
+// vaste stops — een nieuw kind merkt niets.
+const MOMENT_BY_LEERPAD = (() => {
+  const m = {};
+  Object.values(PARK_LEERMOMENTEN).forEach((lm) => {
+    if (lm.leerpadId && !m[lm.leerpadId]) m[lm.leerpadId] = lm.id;
+    if (lm.leerpadId2 && !m[lm.leerpadId2]) m[lm.leerpadId2] = lm.id;
+  });
+  return m;
+})();
+
+function stopVoorMoment(momentId, reden) {
+  const lm = PARK_LEERMOMENTEN[momentId];
+  if (!lm) return null;
+  const titel = String(lm.titel || momentId);
+  return { moment: momentId, emoji: lm.emoji || "📍", label: titel.charAt(0).toLowerCase() + titel.slice(1), reden };
+}
+
+// kandidaten = [{ pathId, reden: "herhalen"|"oefenen" }] op volgorde van belang.
+export function personaliseerStops(route, kandidaten) {
+  const stops = route.stops.slice();
+  const gebruikt = new Set(stops.map((s) => s.moment));
+  let slot = 0;
+  for (const k of kandidaten || []) {
+    if (slot >= 2) break; // finale-stop blijft altijd de vaste
+    const momentId = MOMENT_BY_LEERPAD[k.pathId];
+    if (!momentId || !(route.pool || []).includes(momentId) || gebruikt.has(momentId)) continue;
+    const stop = stopVoorMoment(momentId, k.reden);
+    if (!stop) continue;
+    stops[slot] = stop;
+    gebruikt.add(momentId);
+    slot++;
+  }
+  return stops;
+}
+
 // ── Wandel-voortgang (localStorage, per dag — morgen ligt er een verse route).
 const KEY = "lk_wandeling";
 const vandaag = () => new Date().toISOString().slice(0, 10);
@@ -99,17 +144,24 @@ export function leesWandeling() {
   }
 }
 
-export function startWandeling(routeId) {
-  const w = { datum: vandaag(), routeId, stopIdx: 0, klaar: false };
+export function startWandeling(routeId, stops = null) {
+  const w = { datum: vandaag(), routeId, stopIdx: 0, klaar: false, ...(Array.isArray(stops) && stops.length ? { stops } : {}) };
   try { localStorage.setItem(KEY, JSON.stringify(w)); } catch { /* private mode */ }
   return w;
 }
 
+// De stops van déze wandeling: persoonlijk (M2b) als ze zijn meegegeven,
+// anders de vaste route-stops.
+export function stopsVan(w) {
+  if (Array.isArray(w?.stops) && w.stops.length) return w.stops;
+  return ROUTE_BY_ID[w?.routeId]?.stops || [];
+}
+
 export function volgendeStop(w) {
-  const route = ROUTE_BY_ID[w.routeId];
+  const stops = stopsVan(w);
   const idx = w.stopIdx + 1;
-  const klaar = idx >= route.stops.length;
-  const nw = { ...w, stopIdx: Math.min(idx, route.stops.length - 1), klaar };
+  const klaar = idx >= stops.length;
+  const nw = { ...w, stopIdx: Math.min(idx, stops.length - 1), klaar };
   try { localStorage.setItem(KEY, JSON.stringify(nw)); } catch { /* private mode */ }
   return nw;
 }

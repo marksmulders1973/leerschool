@@ -140,12 +140,14 @@ function VoetstappenSpoor({ route, heightRef }) {
         <circleGeometry args={[0.15, 10]} />
         <meshBasicMaterial color={route.kleur} transparent opacity={0.85} depthWrite={false} />
       </instancedMesh>
-      {/* 🏷️ Route-stempels: leesbaar ovaal ("groep 3-5") plat op de grond,
-          met de leesrichting náár de wandelaar toe (zoals tekst op een fietspad). */}
+      {/* 🏷️ Route-stempels: leesbaar ovaal ("groep 3-5") plat op de grond.
+          Leesrichting = zoals tekst op de weg: je leest 'm rechtop terwijl je
+          de looprichting van de route volgt (Mark 20 aug: stond eerst op z'n
+          kop als je vanuit de poort kwam). */}
       {stempels.map((s, i) => {
         const y = (heightRef?.current ? heightRef.current(s.x, s.z) : 0) + 0.07;
         return (
-          <group key={i} position={[s.x, y, s.z]} rotation={[0, s.hoek + Math.PI, 0]}>
+          <group key={i} position={[s.x, y, s.z]} rotation={[0, s.hoek, 0]}>
             <mesh rotation={[-Math.PI / 2, 0, 0]}>
               <planeGeometry args={[1.35, 0.5]} />
               <meshBasicMaterial map={stempelTex} transparent depthWrite={false} />
