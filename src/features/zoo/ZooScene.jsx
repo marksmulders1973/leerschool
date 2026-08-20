@@ -535,7 +535,7 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
 // NB: geometrie/materiaal als r3f-children (niet via `args`), anders ruimt r3f
 // ze bij het verlaten van het park op → crash bij terugkomst (park-fix 16 aug).
 const SPRIET_H = 0.9; // hoogte van het graspolletje (plane staat rechtop, midden op pivot)
-function GrasSprieten({ field, ground = {} }) {
+function GrasSprieten({ field, ground = {}, padCellen = null }) {
   const ref = useRef();
   const tex = useMemo(() => grasSprietTex(), []);
   const pollen = useMemo(() => {
@@ -552,13 +552,16 @@ function GrasSprieten({ field, ground = {} }) {
         if (((seed >>> 8) & 0xff) / 255 > 0.4) continue; // ~40% van de vakjes
         const jx = (((seed >>> 3) & 0xff) / 255 - 0.5) * 1.4;
         const jz = (((seed >>> 11) & 0xff) / 255 - 0.5) * 1.4;
+        // Geen gras óp de paden (Brian 20 aug: "planten in het looppad") —
+        // check de cel van de uitgewaaierde eindpositie tegen de pad-tegels.
+        if (padCellen && padCellen.has(`${Math.round((wx + jx) / CELL)},${Math.round((wz + jz) / CELL)}`)) continue;
         const rot = (((seed >>> 17) & 0xff) / 255) * Math.PI;
         const sc = 0.75 + (((seed >>> 23) & 0xff) / 255) * 0.5;
         out.push([wx + jx, h, wz + jz, rot, sc]);
       }
     }
     return out;
-  }, [field, ground]);
+  }, [field, ground, padCellen]);
   useEffect(() => {
     const m = ref.current;
     if (!m) return;
@@ -1060,6 +1063,18 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
   pretRef.current = _routes.pret;
   bankjesRef.current = _routes.bankjes;
 
+  // 🌿 Pad-cellen (alle neergelegde pad-tegels): de gras-sprieten slaan deze
+  // over zodat er geen planten in het looppad staan (Brian 20 aug).
+  const padCellen = useMemo(() => {
+    const s = new Set();
+    placedItems.forEach((it) => {
+      if (!it || !Array.isArray(it.cell)) return;
+      const a = getAsset(it.assetId);
+      if (a && a.procedural === "path") s.add(cellKey(it.cell[0], it.cell[1]));
+    });
+    return s;
+  }, [placedItems]);
+
   // 🚩 Wandel-stopdoelen (Brian 20 aug: "welk pad leidt naar de kubus?"):
   // per route de wereld-posities van zijn stop-objecten in DÍT park, zodat
   // WandelPreview er een stippen-zijspoor + vlaggetje naartoe kan tekenen.
@@ -1191,7 +1206,7 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
 
       <Suspense fallback={<Laden />}>
         <Terrain field={terrain} ground={ground} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} paintGround={groundMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} onGround={onGround} />
-        {!LOW_END && <GrasSprieten field={terrain} ground={ground} />}
+        {!LOW_END && <GrasSprieten field={terrain} ground={ground} padCellen={padCellen} />}
         <WaterPools cells={water.pools} />
         <WaterStreams paths={water.streams} terrain={terrain} />
         <ParkBase />
