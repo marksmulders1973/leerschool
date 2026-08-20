@@ -64,7 +64,11 @@ function stippenLangs(punten, offset, bezet) {
   const out = [];
   let rest = 0;
   for (let i = 0; i < punten.length - 1; i++) {
-    const a = punten[i], b = punten[i + 1];
+    let a = punten[i], b = punten[i + 1];
+    // Canonieke segment-richting (route-inspectie 20 aug): anders klapt de
+    // zijbaan-offset om op de terugweg en tekenen geel/blauw twee lijnen
+    // 1,9 m uit elkaar over dezelfde straat.
+    if (b.x < a.x || (b.x === a.x && b.y < a.y)) { const t = a; a = b; b = t; }
     const seg = b.clone().sub(a);
     const len = seg.length();
     if (len < 0.001) continue;
@@ -113,13 +117,17 @@ function RouteStippen({ route, heightRef, doelen }) {
       if (!beste) return;
       const start = new THREE.Vector2(beste.x, beste.z);
       const afstand = start.distanceTo(eind);
+      let vlagPos = { x: doel.x + 1.4, z: doel.z + 1.4 };
       if (afstand > 1.2 && afstand < 40) {
-        // stop vlak vóór het object zodat de stippen er niet ónder verdwijnen
+        // stop ruim vóór het object zodat de stippen er niet ónder verdwijnen;
+        // de vlag staat op het eind van het zijspoor (hoofdlijn-zijde), niet
+        // ín de voet van het object (route-inspectie 20 aug).
         const dir = eind.clone().sub(start).normalize();
-        const kort = eind.clone().addScaledVector(dir, -1.1);
+        const kort = eind.clone().addScaledVector(dir, -1.6);
         stappen.push(...stippenLangs([start, kort], 0, bezet));
+        vlagPos = { x: kort.x, z: kort.y };
       }
-      vlaggen.push(doel);
+      vlaggen.push({ ...doel, vx: vlagPos.x, vz: vlagPos.z });
     });
 
     return { stappen, stempels, vlaggen };
@@ -162,9 +170,10 @@ function RouteStippen({ route, heightRef, doelen }) {
 
       {/* 🚩 Stop-vlaggetjes bij de objecten van deze route. */}
       {vlaggen.map((v, i) => {
-        const y = hoogte(v.x, v.z);
+        const vx = v.vx ?? v.x + 0.9, vz = v.vz ?? v.z + 0.9;
+        const y = hoogte(vx, vz);
         return (
-          <group key={"v" + i} position={[v.x + 0.9, y, v.z + 0.9]}>
+          <group key={"v" + i} position={[vx, y, vz]}>
             <mesh position={[0, 0.55, 0]} castShadow>
               <boxGeometry args={[0.07, 1.1, 0.07]} />
               <meshStandardMaterial color="#7a5230" />
@@ -186,10 +195,11 @@ function RouteStippen({ route, heightRef, doelen }) {
 }
 
 // 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos).
+// (x −4.6/−3.4/−2.2: het gele paaltje stond eerst ín de boom op cel (−5,14).)
 const PAALTJES = [
-  { route: 0, cell: [-5.2, 14.2] },
-  { route: 1, cell: [-4.0, 14.2] },
-  { route: 2, cell: [-2.8, 14.2] },
+  { route: 0, cell: [-4.6, 14.2] },
+  { route: 1, cell: [-3.4, 14.2] },
+  { route: 2, cell: [-2.2, 14.2] },
 ];
 
 // ── Bouwbordjes bij de geplande stops (alleen preview via ?wandel=1).

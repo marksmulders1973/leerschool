@@ -24,9 +24,11 @@ export const WANDEL_ROUTES = [
     // Objecten langs deze route die een persoonlijke stop mogen worden (M2b).
     pool: ["klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
     // Kort rondje: ingang → boulevard → meet-tuin en terug.
+    // (Route-inspectie 20 aug: eindpunt [-30,30] = midden van het meet-plein,
+    //  vrij van de weegschaal; zijsporen wijzen vandaar naar de objecten.)
     cells: [
       [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-      [-16, 0], [-24, 0], [-29, 2], [-29, 10], [-29, 18], [-29, 25], [-30, 28],
+      [-16, 0], [-24, 0], [-29, 2], [-29, 10], [-29, 18], [-29, 25], [-30, 30],
       [-29, 25], [-29, 18], [-29, 10], [-29, 2], [-24, 0], [-16, 0], [-8, 0],
       [-6, 3], [-3, 5], [0, 7], [0, 12], [0, 15],
     ],
@@ -46,16 +48,18 @@ export const WANDEL_ROUTES = [
     offset: 0,
     pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
     // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
+    // (Route-inspectie 20 aug: om de bomenlaan, achtbaan-steun, kei en
+    //  wereldbol heen gelegd; piramide-keerpunt buiten de botszone.)
     cells: [
       [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
       [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
-      [-29, 19], [-29, 25], [-30, 28],
+      [-29, 19], [-29, 25], [-30, 30],
       [-29, 24], [-29, 16], [-29, 8], [-29, 1],
-      [-29, -5], [-30, -10], [-31, -14],
+      [-29, -5], [-30, -11],
       [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
-      [-5, -2], [-2, -4], [2, -4], [5, -2], [8, 0],
-      [16, 0], [22, 0], [26, 1], [29, 3],
-      [26, 1], [22, 0], [16, 0], [9, 0], [6, 2], [3, 4],
+      [-6, -3], [-2, -4], [2, -4], [6, -3], [8, 0],
+      [12, 1], [17, 1], [22, 0], [24, 2], [29, 3],
+      [24, 2], [22, 0], [17, 1], [12, 1], [9, 0], [6, 3], [3, 5],
       [0, 7], [0, 12], [0, 15],
     ],
     stops: [
@@ -74,12 +78,14 @@ export const WANDEL_ROUTES = [
     offset: 0.95,
     pool: ["eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot", "kompas"],
     // De poorten-laan op en neer, langs de landmark-poorten.
+    // (Route-inspectie 20 aug: knikken om de bomenlaan/achtbaan/kei/wereldbol
+    //  heen; keerpunt vóór het kompas i.p.v. erín.)
     cells: [
-      [0, 16], [0, 12], [0, 7], [3, 4], [6, 2], [9, 0],
-      [16, 0], [22, 0], [26, 1], [29, 3], [29, 8], [29, 12],
+      [0, 16], [0, 12], [0, 7], [3, 5], [6, 3], [9, 0],
+      [12, 1], [17, 1], [22, 0], [24, 2], [29, 3], [29, 8], [29, 10],
       [29, 7], [29, 1], [29, -5], [29, -11],
-      [29, -6], [29, 0], [26, 1], [22, 0], [16, 0], [9, 0],
-      [6, 2], [3, 4], [0, 7], [0, 12], [0, 15],
+      [29, -6], [29, 0], [24, 2], [22, 0], [17, 1], [12, 1], [9, 0],
+      [6, 3], [3, 5], [0, 7], [0, 12], [0, 15],
     ],
     stops: [
       { moment: "eiffeltoren", emoji: "🗼", label: "de Eiffeltoren" },

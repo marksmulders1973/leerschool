@@ -124,7 +124,9 @@ function bouwVoorbeeldPark() {
   // dus je ZIET dat de kegel er een derde van is (18 aug).
   add("kubus", -35, 2);
   add("kegel", -22, 8);
-  add("cilinder", -28, 13);
+  // (cilinder stond op (-28,13), pal op de wandelroute-spine x=-29 —
+  //  route-inspectie 20 aug; bestaande parken via maakWandelrouteVrij.)
+  add("cilinder", -26, 13);
   add("bol", -37, 16);
   add("halvebol", -22, 22);
   add("flowerPurple", -34, -1); add("flowerYellow", -23, 4); add("flowerRed", -37, 12);
@@ -150,7 +152,7 @@ function bouwVoorbeeldPark() {
   // sfeer langs de laan
   add("treeOak", 22, 3); add("treeOak", 22, -3); add("tree", 37, 3); add("tree", 37, -3);
   add("flowerRed", 29, 8); add("flowerYellow", 29, -8);
-  add("bankje", 29, 4); add("bankje", 29, -4);
+  add("bankje", 31, 4); add("bankje", 31, -4); // (van het middenpad af — daar loopt de blauwe route)
 
   return L;
 }
@@ -221,7 +223,16 @@ export function spreidLeerobjecten(layout) {
 // fontein die een kind zelf ergens anders neerzette blijft gewoon staan.
 export function maakWandelrouteVrij(layout) {
   if (!Array.isArray(layout)) return layout;
-  return layout.filter((it) => !(it && it.assetId === "fountain" && Array.isArray(it.cell) && it.cell[0] === 0 && it.cell[1] === 10));
+  // Verplaatsingen (route-inspectie 20 aug): alleen items op exact hun oude
+  // SEED-plek schuiven op — zelf verplaatste exemplaren blijven staan.
+  const VERPLAATS = { "cilinder:-28,13": [-26, 13], "bankje:29,4": [31, 4], "bankje:29,-4": [31, -4] };
+  return layout
+    .filter((it) => !(it && it.assetId === "fountain" && Array.isArray(it.cell) && it.cell[0] === 0 && it.cell[1] === 10))
+    .map((it) => {
+      if (!it || !Array.isArray(it.cell)) return it;
+      const doel = VERPLAATS[`${it.assetId}:${it.cell[0]},${it.cell[1]}`];
+      return doel ? { ...it, cell: [doel[0], doel[1]] } : it;
+    });
 }
 
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
