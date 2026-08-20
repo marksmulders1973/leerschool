@@ -1,17 +1,19 @@
-// 🚶 Wandelkwartier — gekleurde stappenpaden door het park (WANDELKWARTIER-PLAN.md).
+// 🚶 Wandelkwartier — gekleurde route-paden door het park (WANDELKWARTIER-PLAN.md).
 //
-// 20 aug 2026, gegroeid in drie stappen op één dag:
-//   1. Bouwplaats-preview (Mark: "teken de voetstappen uit met naambordjes").
-//   2. Mark liep de route: "bouw maar in de echte app" → voetstappen altijd aan.
-//   3. Mark: "geef bij de voetstappen aan: stappenpad van groep 5 — net als
-//      wandelpaden in een bos" → DRIE routes in bos-stijl, elk met eigen kleur
-//      en een route-paaltje bij de ingang (🥾 gele/groene/blauwe route).
+// Evolutie op één dag (20 aug 2026, Mark + Brian als testteam):
+//   voetstappen-preview → altijd aan → dubbele stapjes werden een stippenzee
+//   op Brian's telefoon → enkele stippen per baan → en nu de eindvorm:
+//   DOORGETROKKEN GEKLEURDE PADEN (Mark: "een geel, groen en blauw pad, net
+//   als de uitleg-volgorde") — drie linten naast elkaar zoals looplijnen op
+//   een schoolplein, oplopend van makkelijk naar zwaar (geel 3-5 → groen 6-8
+//   → blauw brugklas, zoals de uitleg ook oploopt basis → simpeler → …).
 //
-// De routes volgen de bestaande paden en veranderen niets aan een park; de
-// gele bouwbordjes ("🚧 Hier komt: …") blijven preview-only via ?wandel=1.
-// Volgende fase (stops/vragen/kwartier-koppeling) = M2 in het plan.
+// Elke route tekent zijn lint in een eigen baan (offset); het terug-stuk over
+// dezelfde straat tekent geen tweede lint (segment-dedupe). Om de zoveel meter
+// ligt een leesbare stempel ("groep 3-5") óp het lint, leesrichting vanuit de
+// poort. De gele bouwbordjes blijven preview-only via ?wandel=1.
 
-import { useLayoutEffect, useMemo, useRef } from "react";
+import { useMemo } from "react";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { CELL } from "./grid";
@@ -29,15 +31,8 @@ export function wandelPreviewActief() {
   }
 }
 
-// De routes zelf (kleuren, cellen, stops) staan in wandelRoutes.js — één
-// bron-van-waarheid, gedeeld met de wandel-logica in ZookwartierGame.
 const ROUTES = WANDEL_ROUTES;
-
-// 🏷️ Route-stempel in het spoor (Mark 20 aug: "zet om de 10-20 voetstappen ín
-// een voetstap waar deze voor staat — kinderen moeten het snel begrijpen").
-// Zoals tekst op een fietspad: om de zoveel stappen wordt een voetstap
-// vervangen door een ovaal in de routekleur met "groep 3-5" erop.
-const STEMPEL_ELKE = 11;
+const LINT_BREEDTE = 0.44; // meter — smal genoeg dat drie banen naast elkaar passen
 
 function maakStempelTexture(route) {
   const c = document.createElement("canvas");
@@ -47,6 +42,9 @@ function maakStempelTexture(route) {
   ctx.beginPath();
   ctx.ellipse(128, 48, 124, 44, 0, 0, Math.PI * 2);
   ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.85)";
+  ctx.lineWidth = 5;
+  ctx.stroke();
   ctx.fillStyle = route.tekstKleur || "#233";
   ctx.font = "800 40px system-ui, sans-serif";
   ctx.textAlign = "center";
@@ -57,8 +55,70 @@ function maakStempelTexture(route) {
   return tex;
 }
 
-// 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos):
-// gekleurde kop + bordje "Gele route · groep 3-5". Op het gras links van de poort.
+// 🎨 Eén doorgetrokken gekleurd lint langs de route, in de eigen baan.
+function RouteLint({ route, heightRef }) {
+  const { segs, punten, stempels } = useMemo(() => {
+    const pts = route.cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
+    const segs = [], punten = [];
+    const segSeen = new Set(), puntSeen = new Set();
+    for (let i = 0; i < pts.length - 1; i++) {
+      const a0 = pts[i], b0 = pts[i + 1];
+      const seg = b0.clone().sub(a0);
+      const len = seg.length();
+      if (len < 0.001) continue;
+      const dir = seg.clone().normalize();
+      const perp = new THREE.Vector2(-dir.y, dir.x);
+      const a = a0.clone().addScaledVector(perp, route.offset);
+      const b = b0.clone().addScaledVector(perp, route.offset);
+      const mid = a.clone().add(b).multiplyScalar(0.5);
+      const key = Math.round(mid.x / 0.7) + "," + Math.round(mid.y / 0.7) + "," + Math.round(len);
+      if (!segSeen.has(key)) {
+        segSeen.add(key);
+        segs.push({ x: mid.x, z: mid.y, len, hoek: Math.atan2(dir.x, dir.y) });
+      }
+      // Ronde "gewrichten" op de hoekpunten zodat de linten naadloos aansluiten.
+      for (const p of [a, b]) {
+        const k = Math.round(p.x / 0.7) + "," + Math.round(p.y / 0.7);
+        if (!puntSeen.has(k)) { puntSeen.add(k); punten.push({ x: p.x, z: p.y }); }
+      }
+    }
+    // Stempels: op de langere stukken, om de ~5 segmenten.
+    const stempels = segs.filter((s, i) => i > 0 && i % 5 === 0 && s.len > 3);
+    return { segs, punten, stempels };
+  }, [route]);
+
+  const stempelTex = useMemo(() => maakStempelTexture(route), [route]);
+  const hoogte = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
+
+  return (
+    <group>
+      {segs.map((s, i) => (
+        <group key={i} position={[s.x, hoogte(s.x, s.z) + 0.05, s.z]} rotation={[0, s.hoek, 0]}>
+          <mesh rotation={[-Math.PI / 2, 0, 0]}>
+            <planeGeometry args={[LINT_BREEDTE, s.len]} />
+            <meshBasicMaterial color={route.kleur} transparent opacity={0.55} depthWrite={false} />
+          </mesh>
+        </group>
+      ))}
+      {punten.map((p, i) => (
+        <mesh key={"p" + i} position={[p.x, hoogte(p.x, p.z) + 0.05, p.z]} rotation={[-Math.PI / 2, 0, 0]}>
+          <circleGeometry args={[LINT_BREEDTE / 2, 12]} />
+          <meshBasicMaterial color={route.kleur} transparent opacity={0.55} depthWrite={false} />
+        </mesh>
+      ))}
+      {stempels.map((s, i) => (
+        <group key={"s" + i} position={[s.x, hoogte(s.x, s.z) + 0.075, s.z]} rotation={[0, s.hoek, 0]}>
+          <mesh rotation={[-Math.PI / 2, 0, 0]}>
+            <planeGeometry args={[1.35, 0.5]} />
+            <meshBasicMaterial map={stempelTex} transparent depthWrite={false} />
+          </mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
+// 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos).
 const PAALTJES = [
   { route: 0, cell: [-5.2, 14.2] },
   { route: 1, cell: [-4.0, 14.2] },
@@ -76,106 +136,16 @@ const BORDEN = [
   { cell: [-2, 14], rot: Math.PI, titel: "🏁 Finish — kwartier behaald!", tekst: "Terug bij de ingang: viering, je dagdoel staat op groen, en morgen ligt er een nieuwe route." },
 ];
 
-// Enkele stippen op één lijn per route (Mark 20 aug, na Brian's telefoon-test:
-// dubbele voetstapjes × heen-en-terug × 3 routes = stippenzee). Elke route
-// heeft een eigen baan (offset) en het terug-stuk over dezelfde straat tekent
-// géén tweede lijn: stippen die (bijna) op een bestaande stip van dezelfde
-// route vallen, worden overgeslagen.
-const STAP_AFSTAND = 1.4;   // wereld-units tussen stippen
-
-function berekenStappen(cells, routeOffset) {
-  const pts = cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
-  const out = [];
-  const bezet = new Set(); // dedupe-raster (~0.8 m) per route
-  let rest = 0;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const a = pts[i], b = pts[i + 1];
-    const seg = b.clone().sub(a);
-    const len = seg.length();
-    if (len < 0.001) continue;
-    const dir = seg.clone().normalize();
-    const perp = new THREE.Vector2(-dir.y, dir.x);
-    let d = rest;
-    while (d < len) {
-      const p = a.clone().addScaledVector(dir, d).addScaledVector(perp, routeOffset);
-      const key = Math.round(p.x / 0.8) + "," + Math.round(p.y / 0.8);
-      if (!bezet.has(key)) {
-        bezet.add(key);
-        out.push({ x: p.x, z: p.y, hoek: Math.atan2(dir.x, dir.y) });
-      }
-      d += STAP_AFSTAND;
-    }
-    rest = d - len;
-  }
-  return out;
-}
-
-function VoetstappenSpoor({ route, heightRef }) {
-  const instRef = useRef();
-  const alle = useMemo(() => berekenStappen(route.cells, route.offset), [route]);
-  // Om de STEMPEL_ELKE stappen: voetstap vervangen door een route-stempel.
-  const { stappen, stempels } = useMemo(() => {
-    const voeten = [], st = [];
-    alle.forEach((s, i) => {
-      if (i > 6 && i % STEMPEL_ELKE === 0) st.push(s);
-      else voeten.push(s);
-    });
-    return { stappen: voeten, stempels: st };
-  }, [alle]);
-  const stempelTex = useMemo(() => maakStempelTexture(route), [route]);
-
-  useLayoutEffect(() => {
-    const inst = instRef.current;
-    if (!inst) return;
-    const m = new THREE.Matrix4();
-    const q = new THREE.Quaternion();
-    const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
-    const schaal = new THREE.Vector3(1, 1.7, 1); // ovaal zooltje
-    stappen.forEach((s, i) => {
-      const y = (heightRef?.current ? heightRef.current(s.x, s.z) : 0) + 0.06;
-      q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
-      m.compose(new THREE.Vector3(s.x, y, s.z), q, schaal);
-      inst.setMatrixAt(i, m);
-    });
-    inst.instanceMatrix.needsUpdate = true;
-  }, [stappen, heightRef]);
-
-  return (
-    <group>
-      <instancedMesh ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
-        <circleGeometry args={[0.15, 10]} />
-        <meshBasicMaterial color={route.kleur} transparent opacity={0.85} depthWrite={false} />
-      </instancedMesh>
-      {/* 🏷️ Route-stempels: leesbaar ovaal ("groep 3-5") plat op de grond.
-          Leesrichting = zoals tekst op de weg: je leest 'm rechtop terwijl je
-          de looprichting van de route volgt (Mark 20 aug: stond eerst op z'n
-          kop als je vanuit de poort kwam). */}
-      {stempels.map((s, i) => {
-        const y = (heightRef?.current ? heightRef.current(s.x, s.z) : 0) + 0.07;
-        return (
-          <group key={i} position={[s.x, y, s.z]} rotation={[0, s.hoek, 0]}>
-            <mesh rotation={[-Math.PI / 2, 0, 0]}>
-              <planeGeometry args={[1.35, 0.5]} />
-              <meshBasicMaterial map={stempelTex} transparent depthWrite={false} />
-            </mesh>
-          </group>
-        );
-      })}
-    </group>
-  );
-}
-
 export default function WandelPreview({ heightRef, borden = false, toon = null }) {
-  // toon = null → alle routes; ["geel"] → alleen dat spoor (route-filter /
-  // actieve wandeling — Mark 20 aug: "snel alleen geel of alleen blauw zien").
+  // toon = null → alle routes; ["geel"] → alleen dat pad (route-filter /
+  // actieve wandeling — "snel alleen geel of alleen blauw zien").
   const zichtbaar = toon ? ROUTES.filter((r) => toon.includes(r.id)) : ROUTES;
   return (
     <group>
       {zichtbaar.map((r) => (
-        <VoetstappenSpoor key={r.id} route={r} heightRef={heightRef} />
+        <RouteLint key={r.id} route={r} heightRef={heightRef} />
       ))}
 
-      {/* 🥾 Route-paaltjes bij de ingang — zoals de gekleurde paaltjes in een bos. */}
       {PAALTJES.map((p, i) => {
         const r = ROUTES[p.route];
         const x = p.cell[0] * CELL, z = p.cell[1] * CELL;
@@ -199,7 +169,6 @@ export default function WandelPreview({ heightRef, borden = false, toon = null }
         );
       })}
 
-      {/* Bouwbordjes bij de geplande stops — alleen in de preview (?wandel=1). */}
       {borden && BORDEN.map((b, i) => {
         const x = b.cell[0] * CELL, z = b.cell[1] * CELL;
         const y = heightRef?.current ? heightRef.current(x, z) : 0;
