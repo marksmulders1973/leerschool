@@ -25,6 +25,7 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad } from "../features/zoo/parkLeermomenten";
+import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling } from "../features/zoo/wandelRoutes";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
@@ -1350,6 +1351,25 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [speelInhoud, setSpeelInhoud] = useState(false); // 📐 interactieve piramide-inhoud
   const [nabijePiramide, setNabijePiramide] = useState(null); // 🔺 index piramide waar je bij staat
   const [manipMode, setManipMode] = useState("grootte");      // 📏 grootte | 🔄 draaien — wat de +/- doet
+
+  // 🥾 Wandelkwartier M2 (Mark-go 20 aug): kies een gekleurde route (bos-stijl),
+  // volg de voetstappen, vind de 3 stops (praatje van het stop-object opent =
+  // gevonden), route af = viering. Voortgang per dag in localStorage.
+  const [wandeling, setWandeling] = useState(() => leesWandeling());
+  const [wandelKies, setWandelKies] = useState(false);
+  const [wandelViering, setWandelViering] = useState(false);
+  const wandelRoute = wandeling ? ROUTE_BY_ID[wandeling.routeId] : null;
+  const wandelStop = wandelRoute && !wandeling.klaar ? wandelRoute.stops[wandeling.stopIdx] : null;
+  useEffect(() => {
+    if (!tafereel || !wandeling || wandeling.klaar) return;
+    const stop = ROUTE_BY_ID[wandeling.routeId].stops[wandeling.stopIdx];
+    if (tafereel.id !== stop.moment) return;
+    const nw = volgendeStop(wandeling);
+    setWandeling(nw);
+    try { track(nw.klaar ? "wandel_route_af" : "wandel_stop_klaar", { route: wandeling.routeId, stop: stop.moment }); } catch { /* */ }
+    if (nw.klaar) setWandelViering(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tafereel]);
   // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
   // vlak vóór het tafereel en opent het praatje. Param één keer lezen bij mount.
   const [deeplinkScene] = useState(() => {
@@ -2533,6 +2553,64 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={{ fontWeight: 900, fontSize: 26, marginTop: 2, color: "#ffe08a", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>{poortFlits.label}</div>
           </div>
           <style>{"@keyframes poortIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}"}</style>
+        </div>
+      )}
+
+      {/* 🥾 Wandelkwartier: knop → route kiezen; onderweg → voortgang-chip. */}
+      {!wandeling && (
+        <button onClick={() => setWandelKies(true)} style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
+          🥾 Wandeling
+        </button>
+      )}
+      {wandeling && !wandeling.klaar && wandelStop && (
+        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
+          🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {wandelRoute.stops.length}
+          <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
+          <button onClick={() => { stopWandeling(); setWandeling(null); }} title="Wandeling stoppen" style={{ position: "absolute", top: 6, right: 6, border: "none", borderRadius: 999, width: 22, height: 22, font: "700 11px system-ui", background: "rgba(0,0,0,0.07)", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
+      {wandeling && wandeling.klaar && !wandelViering && (
+        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 12px", font: "800 12.5px system-ui", color: "#1f5a2e", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
+          ✅ {wandelRoute.naam} af — morgen een nieuwe!
+        </div>
+      )}
+
+      {/* 🥾 Route-kiezen (bos-stijl bordje). */}
+      {wandelKies && (
+        <div onClick={() => setWandelKies(false)} style={{ position: "absolute", inset: 0, zIndex: 24, background: "rgba(10,20,10,0.5)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(420px, 96vw)", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: 18 }}>
+            <div style={{ font: "800 17px system-ui", color: "#234" }}>🥾 Kies je wandeling</div>
+            <p style={{ margin: "4px 0 12px", font: "600 13px/1.45 system-ui", color: "#345" }}>
+              Volg de gekleurde voetstappen en vind de 3 stops. Bij elke stop leer je iets — route af = feestje!
+            </p>
+            {WANDEL_ROUTES.map((r) => (
+              <button key={r.id} onClick={() => { const w = startWandeling(r.id); setWandeling(w); setWandelKies(false); try { track("wandel_start", { route: r.id }); } catch { /* */ } }}
+                style={{ display: "block", width: "100%", textAlign: "left", border: `2.5px solid ${r.kleur}`, background: "#fff", borderRadius: 14, padding: "10px 13px", marginBottom: 9, cursor: "pointer" }}>
+                <span style={{ font: "800 14px system-ui", color: "#234" }}>{r.naam} · {r.groep}</span>
+                <div style={{ font: "600 12.5px system-ui", color: "#567", marginTop: 2 }}>
+                  {r.stops.map((s) => `${s.emoji} ${s.label}`).join("  →  ")}
+                </div>
+              </button>
+            ))}
+            <button onClick={() => setWandelKies(false)} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Toch niet</button>
+          </div>
+        </div>
+      )}
+
+      {/* 🎉 Route af! */}
+      {wandelViering && !tafereel && (
+        <div onClick={() => setWandelViering(false)} style={{ position: "absolute", inset: 0, zIndex: 24, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(380px, 96vw)", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "22px 18px", textAlign: "center" }}>
+            <div style={{ fontSize: 44 }}>🎉</div>
+            <div style={{ font: "800 18px system-ui", color: "#234", marginTop: 4 }}>{wandelRoute?.naam} helemaal af!</div>
+            <p style={{ margin: "8px 0 14px", font: "600 13.5px/1.5 system-ui", color: "#345" }}>
+              Je vond alle 3 de stops én leerde onderweg. Morgen ligt er weer een verse wandeling klaar — of loop nu een route van een andere kleur.
+            </p>
+            <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
+              <button onClick={() => { setWandelViering(false); stopWandeling(); setWandeling(null); setWandelKies(true); }} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🥾 Nog een route</button>
+              <button onClick={() => setWandelViering(false)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 13.5px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Verder spelen</button>
+            </div>
+          </div>
         </div>
       )}
 

@@ -15,6 +15,7 @@ import { useLayoutEffect, useMemo, useRef } from "react";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { CELL } from "./grid";
+import { WANDEL_ROUTES } from "./wandelRoutes";
 
 export function wandelPreviewActief() {
   try {
@@ -28,61 +29,33 @@ export function wandelPreviewActief() {
   }
 }
 
-// ── Drie routes in bos-stijl (cel-coördinaten, ×CELL = wereld). Waar routes
-//    hetzelfde pad delen lopen ze naast elkaar via `offset` (zoals gekleurde
-//    stippen op één bospad). Kleuren = bestaande app-kleuren.
-const ROUTES = [
-  {
-    id: "geel",
-    naam: "Gele route",
-    groep: "groep 3-5",
-    kleur: "#ffd54f",
-    offset: -0.55,
-    // Kort rondje: ingang → boulevard → meet-tuin (klok/telraam/moestuin) en terug.
-    cells: [
-      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-      [-16, 0], [-24, 0], [-29, 2], [-29, 10], [-29, 18], [-29, 25], [-30, 28],
-      [-29, 25], [-29, 18], [-29, 10], [-29, 2], [-24, 0], [-16, 0], [-8, 0],
-      [-6, 3], [-3, 5], [0, 7], [0, 12], [0, 15],
-    ],
-  },
-  {
-    id: "groen",
-    naam: "Groene route",
-    groep: "groep 6-8",
-    kleur: "#00e676",
-    offset: 0,
-    // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
-    cells: [
-      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-      [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
-      [-29, 19], [-29, 25], [-30, 28],
-      [-29, 24], [-29, 16], [-29, 8], [-29, 1],
-      [-29, -5], [-30, -10], [-31, -14],
-      [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
-      [-5, -2], [-2, -4], [2, -4], [5, -2], [8, 0],
-      [16, 0], [22, 0], [26, 1], [29, 3],
-      [26, 1], [22, 0], [16, 0], [9, 0], [6, 2], [3, 4],
-      [0, 7], [0, 12], [0, 15],
-    ],
-  },
-  {
-    id: "blauw",
-    naam: "Blauwe route",
-    groep: "brugklas & examens",
-    kleur: "#42a5f5",
-    offset: 0.55,
-    // De poorten-laan op en neer: alle landmark-poorten (Eiffeltoren, tempel,
-    // telescoop …) — de stof voor mavo/havo/vwo.
-    cells: [
-      [0, 16], [0, 12], [0, 7], [3, 4], [6, 2], [9, 0],
-      [16, 0], [22, 0], [26, 1], [29, 3], [29, 8], [29, 12],
-      [29, 7], [29, 1], [29, -5], [29, -11],
-      [29, -6], [29, 0], [26, 1], [22, 0], [16, 0], [9, 0],
-      [6, 2], [3, 4], [0, 7], [0, 12], [0, 15],
-    ],
-  },
-];
+// De routes zelf (kleuren, cellen, stops) staan in wandelRoutes.js — één
+// bron-van-waarheid, gedeeld met de wandel-logica in ZookwartierGame.
+const ROUTES = WANDEL_ROUTES;
+
+// 🏷️ Route-stempel in het spoor (Mark 20 aug: "zet om de 10-20 voetstappen ín
+// een voetstap waar deze voor staat — kinderen moeten het snel begrijpen").
+// Zoals tekst op een fietspad: om de zoveel stappen wordt een voetstap
+// vervangen door een ovaal in de routekleur met "groep 3-5" erop.
+const STEMPEL_ELKE = 14;
+
+function maakStempelTexture(route) {
+  const c = document.createElement("canvas");
+  c.width = 256; c.height = 96;
+  const ctx = c.getContext("2d");
+  ctx.fillStyle = route.kleur;
+  ctx.beginPath();
+  ctx.ellipse(128, 48, 124, 44, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = route.tekstKleur || "#233";
+  ctx.font = "800 40px system-ui, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(route.stempel || route.groep, 128, 50);
+  const tex = new THREE.CanvasTexture(c);
+  tex.anisotropy = 4;
+  return tex;
+}
 
 // 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos):
 // gekleurde kop + bordje "Gele route · groep 3-5". Op het gras links van de poort.
@@ -133,7 +106,17 @@ function berekenStappen(cells, routeOffset) {
 
 function VoetstappenSpoor({ route, heightRef }) {
   const instRef = useRef();
-  const stappen = useMemo(() => berekenStappen(route.cells, route.offset), [route]);
+  const alle = useMemo(() => berekenStappen(route.cells, route.offset), [route]);
+  // Om de STEMPEL_ELKE stappen: voetstap vervangen door een route-stempel.
+  const { stappen, stempels } = useMemo(() => {
+    const voeten = [], st = [];
+    alle.forEach((s, i) => {
+      if (i > 6 && i % STEMPEL_ELKE === 0) st.push(s);
+      else voeten.push(s);
+    });
+    return { stappen: voeten, stempels: st };
+  }, [alle]);
+  const stempelTex = useMemo(() => maakStempelTexture(route), [route]);
 
   useLayoutEffect(() => {
     const inst = instRef.current;
@@ -152,10 +135,25 @@ function VoetstappenSpoor({ route, heightRef }) {
   }, [stappen, heightRef]);
 
   return (
-    <instancedMesh ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
-      <circleGeometry args={[0.15, 10]} />
-      <meshBasicMaterial color={route.kleur} transparent opacity={0.85} depthWrite={false} />
-    </instancedMesh>
+    <group>
+      <instancedMesh ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
+        <circleGeometry args={[0.15, 10]} />
+        <meshBasicMaterial color={route.kleur} transparent opacity={0.85} depthWrite={false} />
+      </instancedMesh>
+      {/* 🏷️ Route-stempels: leesbaar ovaal ("groep 3-5") plat op de grond,
+          met de leesrichting náár de wandelaar toe (zoals tekst op een fietspad). */}
+      {stempels.map((s, i) => {
+        const y = (heightRef?.current ? heightRef.current(s.x, s.z) : 0) + 0.07;
+        return (
+          <group key={i} position={[s.x, y, s.z]} rotation={[0, s.hoek + Math.PI, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]}>
+              <planeGeometry args={[1.35, 0.5]} />
+              <meshBasicMaterial map={stempelTex} transparent depthWrite={false} />
+            </mesh>
+          </group>
+        );
+      })}
+    </group>
   );
 }
 
