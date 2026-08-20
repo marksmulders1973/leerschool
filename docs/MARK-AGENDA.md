@@ -44,7 +44,7 @@
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
 | ✅ 13 aug | ~~Leergeld-golf 18 aug~~ **Noord-16 verstuurd** (Mark-go 13 aug); dag-batch-kalender loopt: vr 14 voedselbanken-rest → ma 17 VB #2/SUN → di 18 fondsen → wo 19 Humanitas → do 20-21 Caribisch 2 + Leergeld-Zuid → ~28 aug Leergeld-Midden. Flyer-regel: digitaal; print alléén uit 1.000-voorraad per 50 | Claude |
-| do 20 + vr 21 aug | 🏝️ **Batch 2 Caribisch + Suriname** — ✅ **dag 1 verstuurd 20 aug (27/27: Variant E 18 + EN 9)** na Mark-go; **vr 21 aug nog: Suriname (14, script-vlag `--suriname`) + FB-spoor** (go al gegeven — volgende sessie uitvoeren) | Claude |
+| ✅ do 20 aug | 🏝️ **Batch 2 Caribisch + Suriname VOLLEDIG verstuurd (41/41)** + SUN deel 2 (7/7) — dag-totaal 48. **Nog open: FB-spoor Suriname** (7 korte pagina-berichten, vereist Chrome-voor-Claude) — 20/21 aug | Claude (FB-spoor) |
 | wk 18 aug | School's cool Nijmegen komt zélf terug (niet pingen, wel opletten) | — |
 | 18 aug–1 sep | **Schoolstart = Fase 4 leerkracht-kanaal**: juf-A4-flyer + 10 groep-8-leraren benaderen | Claude materiaal, Mark verstuurt |
 | ~25 aug | Outreach **golf 2** (na go) | Mark-go → Claude |

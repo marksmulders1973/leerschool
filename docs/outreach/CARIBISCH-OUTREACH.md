@@ -395,11 +395,13 @@ over ons post.
   `scripts/outreach/stuur-caribisch-batch2-20260820.mjs`). Bewijs-alinea conform
   privacy-regel (alleen bedankt.html-zin); Suriname-zin "sinds deze maand Caribisch"
   weggelaten (batch 1 nog geen positieve reactie — eerlijk gebleven).
-- [ ] **Batch 2 dag 2: Suriname (Variant S, 14) vr 21 aug** — zelfde script met
-  `--suriname`-vlag draaien (go is al gegeven)
-- [ ] **FB-spoor Suriname op vr 21 aug** (zelfde dag als de S-mails): korte
-  FB-berichten via de Leerkwartier-pagina — zie sectie "📘 Facebook-spoor Suriname"
-  (FB = 83% van social-verkeer daar; Rotary alléén via FB bereikbaar)
+- [x] **✅ Suriname (Variant S, 14) VERSTUURD do 20 aug** — een dag naar voren
+  gehaald op Mark's volume-verzoek ("vandaag nog ~100 mails?"); 14/14 OK via
+  Resend. Caribisch-zin weggelaten (batch 1 nog geen positieve reactie).
+- [ ] **FB-spoor Suriname — nog doen (20/21 aug):** korte FB-berichten via de
+  Leerkwartier-pagina aan RKBO, Arya Diwaker, Sanatan Dharm, Villa Zapakara,
+  Boekenportaal, Projekta, CCS ("we stuurden u net een mailtje") — vereist
+  Chrome-voor-Claude/Business Suite; zie sectie "📘 Facebook-spoor Suriname"
 - [ ] Reacties → WACHT-OP.md + warme-leads-lijst
 
 Suriname niet gevonden: Philipsbibliotheek (bestaat vermoedelijk niet meer),
