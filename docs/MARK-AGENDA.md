@@ -24,9 +24,10 @@
   Word-links + rondleiding-voorstel di 25 aug ±11:00 (2 uur rijden; zij open
   tot 12:30, Pettemerstraat 39B, 06-5239 5673). Wachten op haar bevestiging —
   bij "ja": 25 aug = Alkmaar-dag (Amber/Rotterdam dan een andere di/do).
-- **Bezoek Voedselbank Rotterdam inplannen** — afspraak met Amber (werkt
-  di + do, MarCom@voedselbank.nl); setje van 50 gedrukte flyers meenemen
-  voor intake/winkels. Ook toegezegd "na de vakantie".
+- **VB Rotterdam (Amber): setje van 50 flyers PER POST** uit de bestaande
+  1.000-voorraad (géén bezoek — Mark 20 aug: "ik wil nergens op bezoek").
+  Nudge-mail vraagt om het bezorgadres; bij adres → Mark verstuurt zelf
+  (Herma-adresstickers liggen klaar, Desktop\Herma-stickers).
 - **Dagvraag-herstart**: "ga" zeggen → Claude maakt de 14-daagse batch
   (feed ligt stil sinds 31 jul).
 
@@ -37,7 +38,7 @@
 | ~~di 19 aug~~ ✅ | 📞 ~~Laura belt~~ → werd mail 19 aug: **afwijzing** (Leergeld Oisterwijk = participatie, "geen schoolse zaken"). 20 aug bedank-reply + verbeterpunten-vraag verstuurd (zij oefende zelf in de app). Wachten op haar antwoord — verder niets doen | ✅ afgehandeld |
 | **di 18 aug** | 🎨 **Fable-taak: interactief-park-3D bijschaven** (deze week gebouwd, "bijschaven doe ik met Fable"). Mooier maken in Fable: **3× piramide** (som-op-de-vlakken + basis/hoogte-maatlijnen), **kleuren-kubus** (27 blokjes met eigen kleur), **kegel/bol/halve bol** (nu 2× groot), + de **12 landmark-poorten** (kompas · Eiffeltoren · tempel · wereldbol · telescoop · standbeeld · molen · raket · vulkaan · kas · weerstation · spaarpot) + de magische-poort-look. Code: `src/features/zoo/UitvindersKabouters.jsx` (de vormen) + `src/features/zoo/ParkLeerobjecten.jsx` (landmarks/poorten). Reset een park (Menu → ♻️ Opnieuw beginnen) om de ruime nieuwe indeling te zien. **+ nalopen: idee #46 🥇 gouden-vorm-beloning** (voldoende voor inhoud-leerpad → gouden kubus/piramide in park; review-vragen: welke score = "verdiend", klaar-scherm-momentje, kubus-eerst of hele familie — zie Ideeën-tracker). | Mark (Fable) |
 | **di 18 aug** | 💡 **Examen-recency-tiering uitwerken** (Mark-idee 16 aug): 3 nieuwe authentieke 2026-examens erbij (net als de rest: inzien-PDF + bijlage + vragen/antwoorden) **én** de nieuwste 3 jaargangen (2024-26) interactief-oefenen onder Familie zetten; oefenen blijft gratis met oudere jaren + PDF-inzien blijft voor iedereen (PDF's zijn openbaar). Verdict + plan: memory `idea_studiebol_examens_recency_familie` | Claude bouwt |
-| ~~di 25 aug 13:00~~ ❌ | ~~FaceTime-rondleiding VB Alkmaar~~ — **vervallen 19 aug** (netjes afgezegd met Mark-akkoord: haar promo-film = de rondleiding, contact blijft per mail, relatie warm). Fysiek VB-bezoek evt. apart naar Rotterdam (Amber) | ✅ afgehandeld |
+| ~~di 25 aug 13:00~~ ❌ | ~~FaceTime-rondleiding VB Alkmaar~~ — **vervallen 19 aug** (netjes afgezegd met Mark-akkoord: haar promo-film = de rondleiding, contact blijft per mail, relatie warm). Géén vervangend bezoek — Mark 20 aug: geen bezoeken meer, flyers gaan per post | ✅ afgehandeld |
 | **ma 31 aug / di 1 sep** | 🏢 **KvK Utrecht — inschrijving eenmanszaak** (naar voren gehaald van okt). Afspraak online boeken + ID mee + ±€80 pin. Startdatum = 1 sep. Direct daarna: btw-id afwachten. Voorbereiding: startgids-PDF (15 aug) | Mark |
 | ~wk 17 aug | **School's cool Twente teambespreking** — zij komen zelf terug (11 aug toegezegd); niet pingen, wel opletten | — |
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
