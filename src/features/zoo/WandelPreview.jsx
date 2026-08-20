@@ -58,25 +58,52 @@ function maakStempelTexture(route) {
   return tex;
 }
 
+// De zijbaan als complete lijn met nette verstek-hoeken (Mark 20 aug: "kan de
+// overgang in de bocht netter aansluiten?"). Per segment een CANONIEKE normaal
+// (zelfde straat = zelfde kant, dus heen/terug vallen samen) en per hoekpunt
+// het snijpunt van de twee zijbaan-lijnen (miter) — geen gat of verspringing
+// meer in de bocht.
+function offsetPolyline(punten, off) {
+  if (!off) return punten;
+  const normalen = [];
+  for (let i = 0; i < punten.length - 1; i++) {
+    let a = punten[i], b = punten[i + 1];
+    if (b.x < a.x || (b.x === a.x && b.y < a.y)) { const t = a; a = b; b = t; }
+    const d = b.clone().sub(a);
+    const len = d.length();
+    normalen.push(len < 0.001 ? null : new THREE.Vector2(-d.y / len, d.x / len));
+  }
+  const out = [];
+  for (let j = 0; j < punten.length; j++) {
+    const n1 = j > 0 ? normalen[j - 1] : null;
+    const n2 = j < normalen.length ? normalen[j] : null;
+    const n = n1 && n2 ? n1.clone().add(n2) : (n1 || n2);
+    if (!n || n.length() < 0.001) { out.push(punten[j].clone()); continue; }
+    n.normalize();
+    // verstek: door de cosinus van de halve hoek delen zodat beide
+    // zijbaan-lijnen elkaar precies in het hoekpunt snijden
+    const basis = n1 || n2;
+    const schaal = off / Math.max(0.45, n.dot(basis));
+    out.push(punten[j].clone().addScaledVector(n, schaal));
+  }
+  return out;
+}
+
 // Stippen langs een polyline (wereld-punten), met dedupe-raster zodat heen en
 // terug over dezelfde straat op één lijn samenvallen.
 function stippenLangs(punten, offset, bezet) {
+  const pad = offsetPolyline(punten, offset);
   const out = [];
   let rest = 0;
-  for (let i = 0; i < punten.length - 1; i++) {
-    let a = punten[i], b = punten[i + 1];
-    // Canonieke segment-richting (route-inspectie 20 aug): anders klapt de
-    // zijbaan-offset om op de terugweg en tekenen geel/blauw twee lijnen
-    // 1,9 m uit elkaar over dezelfde straat.
-    if (b.x < a.x || (b.x === a.x && b.y < a.y)) { const t = a; a = b; b = t; }
+  for (let i = 0; i < pad.length - 1; i++) {
+    const a = pad[i], b = pad[i + 1];
     const seg = b.clone().sub(a);
     const len = seg.length();
     if (len < 0.001) continue;
     const dir = seg.clone().normalize();
-    const perp = new THREE.Vector2(-dir.y, dir.x);
     let d = rest;
     while (d < len) {
-      const p = a.clone().addScaledVector(dir, d).addScaledVector(perp, offset);
+      const p = a.clone().addScaledVector(dir, d);
       const key = Math.round(p.x / 0.8) + "," + Math.round(p.y / 0.8);
       if (!bezet.has(key)) {
         bezet.add(key);
