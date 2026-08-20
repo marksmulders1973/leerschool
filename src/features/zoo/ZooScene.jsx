@@ -35,6 +35,27 @@ import {
 const HOVER_RAND_GEO = new BoxGeometry(KUB + 0.04, KUB + 0.04, KUB + 0.04);
 const HAK_RAND_GEO = new BoxGeometry(KUB + 0.05, KUB + 0.05, KUB + 0.05);
 
+// 🥾 Wandel-stop-wachter (Brian 20 aug: "hier kan ik niet verder lopen" — hij
+// stond bóven op de stop zonder te weten dat hij er was): kom je binnen ~3 m
+// van het huidige stop-object, dan opent het praatje vanzelf. Aankomst =
+// beloning, geen doodlopen. Vuurt 1× per doel.
+function WandelStopWachter({ doel, playerPos, onBereikt }) {
+  const vuurde = useRef(null);
+  useFrame(() => {
+    if (!doel || !playerPos?.current) return;
+    const key = `${doel.x},${doel.z}`;
+    const dx = playerPos.current.x - doel.x;
+    const dz = playerPos.current.z - doel.z;
+    if (dx * dx + dz * dz < 9) {
+      if (vuurde.current !== key) {
+        vuurde.current = key;
+        onBereikt && onBereikt();
+      }
+    }
+  });
+  return null;
+}
+
 // Welke items zijn "vast" (kan het poppetje niet doorheen lopen)? Paden en
 // kleine bloemen/paddenstoel zijn beloopbaar; de rest (verblijven, gebouwen,
 // attracties, hekken, bomen) houdt tegen.
@@ -880,7 +901,7 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   return null;
 }
 
-export default function ZooScene({ wandelToon = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {} }) {
+export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {} }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1129,6 +1150,23 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
     return vasteCellen.has(cellKey(gx, gz));
   }, [vasteCellen, kubVast]);
 
+  // 🚂 Bots-variant (Brian 20 aug: bezoekers liepen in een rij óver de rails):
+  // voor bezoekers telt het spoor wél als muur — ze glijden er langs (de
+  // botsings-logica glijdt langs muren) maar gaan er niet op wandelen. Alleen
+  // de speler mag oversteken (rails beloopbaar sinds v377, wandelroute).
+  const railCellen = useMemo(() => {
+    const s = new Set();
+    placedItems.forEach((it) => {
+      if (it && it.assetId === "rail" && Array.isArray(it.cell)) s.add(cellKey(it.cell[0], it.cell[1]));
+    });
+    return s;
+  }, [placedItems]);
+  const isSolidBots = useCallback((x, z) => {
+    if (isSolid(x, z)) return true;
+    const [gx, gz] = snapToCell(x, z, 1);
+    return railCellen.has(cellKey(gx, gz));
+  }, [isSolid, railCellen]);
+
   // Voor de camera telt HOOGTE mee: over lage hekjes/bankjes kijkt de camera
   // gewoon heen; alleen hoge dingen (gebouwen, attracties) duwen de arm korter.
   // Bomen blokkeren de camera bewust niet — anders springt het beeld constant.
@@ -1216,6 +1254,7 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
         <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} stopDoelen={wandelStopDoelen} />
+        <WandelStopWachter doel={wandelDoel} playerPos={playerPos} onBereikt={onWandelBereikt} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
@@ -1258,7 +1297,7 @@ export default function ZooScene({ wandelToon = null, placingAsset = null, placi
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
         <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain} onDoor={onPoortDoor} />
-        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
+        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

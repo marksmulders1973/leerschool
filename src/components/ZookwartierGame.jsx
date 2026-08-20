@@ -1377,6 +1377,21 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     });
     return s;
   }, [placedItems]);
+  // Aankomst-detectie: positie van het huidige stop-object → ZooScene opent
+  // het praatje vanzelf als het kind erbij komt (Brian 20 aug: liep "dood"
+  // op de stop zonder te weten dat hij er al was).
+  const wandelDoelPos = useMemo(() => {
+    if (!wandelStop) return null;
+    const it = (placedItems || []).find((x) => x && Array.isArray(x.cell) && LEERMOMENT_BY_ASSET[x.assetId] === wandelStop.moment);
+    return it ? { x: it.cell[0] * CELL, z: it.cell[1] * CELL } : null;
+  }, [wandelStop, placedItems]);
+  const wandelBereikt = () => {
+    if (!wandelStop || tafereel) return;
+    const m = PARK_LEERMOMENTEN[wandelStop.moment];
+    if (!m) return;
+    setTafereel(m);
+    try { track("park_leermoment", { id: m.id, via: "wandeling" }); } catch { /* */ }
+  };
   // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
   // zwakste concepten) — één keer ophalen zodra het kies-paneel opengaat.
   const wandelKandidatenRef = useRef(null);
@@ -1936,6 +1951,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <ZooScene
           key={sceneKey}
           wandelToon={wandeling && !wandeling.klaar ? [wandeling.routeId] : wandelFilter ? [wandelFilter] : null}
+          wandelDoel={wandelDoelPos}
+          onWandelBereikt={wandelBereikt}
           placingAsset={placing?.assetId || null}
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
