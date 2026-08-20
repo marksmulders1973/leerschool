@@ -1361,6 +1361,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [wandeling, setWandeling] = useState(() => leesWandeling());
   const [wandelKies, setWandelKies] = useState(false);
   const [wandelViering, setWandelViering] = useState(false);
+  // Route-filter (Mark 20 aug: "snel alleen geel of alleen blauw zien"):
+  // tijdens een wandeling zie je automatisch alléén jouw route; daarbuiten
+  // filter je met de kleur-stipjes naast de 🥾-knop (nogmaals tikken = alles).
+  const [wandelFilter, setWandelFilter] = useState(null);
   const wandelRoute = wandeling ? ROUTE_BY_ID[wandeling.routeId] : null;
   const wandelStop = wandelRoute && !wandeling.klaar ? stopsVan(wandeling)[wandeling.stopIdx] : null;
   // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
@@ -1921,6 +1925,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
           key={sceneKey}
+          wandelToon={wandeling && !wandeling.klaar ? [wandeling.routeId] : wandelFilter ? [wandelFilter] : null}
           placingAsset={placing?.assetId || null}
           placingRot={placing?.rot || 0}
           placedItems={placedItems}
@@ -2588,9 +2593,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 🥾 Wandelkwartier: knop → route kiezen; onderweg → voortgang-chip. */}
       {!wandeling && (
-        <button onClick={() => setWandelKies(true)} style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
-          🥾 Wandeling
-        </button>
+        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, display: "flex", alignItems: "center", gap: 6 }}>
+          <button onClick={() => setWandelKies(true)} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
+            🥾 Wandeling
+          </button>
+          {/* Kleur-stipjes: tik = alleen dat spoor zien; nogmaals = alles. */}
+          {WANDEL_ROUTES.map((r) => (
+            <button key={r.id} onClick={() => setWandelFilter((f) => (f === r.id ? null : r.id))}
+              title={`Alleen de ${r.naam.toLowerCase()} (${r.groep}) tonen`}
+              style={{ width: 26, height: 26, borderRadius: 999, cursor: "pointer", background: r.kleur, border: wandelFilter === r.id ? "3px solid #234" : "2px solid rgba(255,255,255,0.9)", opacity: wandelFilter && wandelFilter !== r.id ? 0.35 : 1, boxShadow: "0 3px 10px rgba(0,0,0,.25)" }} />
+          ))}
+        </div>
       )}
       {wandeling && !wandeling.klaar && wandelStop && (
         <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>

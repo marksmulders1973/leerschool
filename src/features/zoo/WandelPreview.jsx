@@ -159,10 +159,13 @@ function VoetstappenSpoor({ route, heightRef }) {
   );
 }
 
-export default function WandelPreview({ heightRef, borden = false }) {
+export default function WandelPreview({ heightRef, borden = false, toon = null }) {
+  // toon = null → alle routes; ["geel"] → alleen dat spoor (route-filter /
+  // actieve wandeling — Mark 20 aug: "snel alleen geel of alleen blauw zien").
+  const zichtbaar = toon ? ROUTES.filter((r) => toon.includes(r.id)) : ROUTES;
   return (
     <group>
-      {ROUTES.map((r) => (
+      {zichtbaar.map((r) => (
         <VoetstappenSpoor key={r.id} route={r} heightRef={heightRef} />
       ))}
 

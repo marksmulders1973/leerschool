@@ -198,9 +198,12 @@ export const ZOO_ASSETS = {
   spaarpot: { id: "spaarpot", kind: "attraction", name: "Spaarpot", emoji: "🐷", procedural: "spaarpot", price: 50, cells: 3 },
   // 🎢 Achtbaan (Mark 2 jul, naar Roblox-voorbeeld): grote baan met lift,
   // mega-drop en station — instapbaar. Groot footprint: echt een blikvanger.
-  achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, price: 150 },
-  achtbaanKlein: { id: "achtbaanKlein", kind: "attraction", name: "Kleine achtbaan", emoji: "🎢", procedural: "coaster", baan: "klein", cells: 5, price: 80 },
-  achtbaanSpiraal: { id: "achtbaanSpiraal", kind: "attraction", name: "Spiraal-achtbaan", emoji: "🌀", procedural: "coaster", baan: "spiraal", cells: 7, price: 220 },
+  // botsCells klein: de baan is een brug op poten — alleen het midden houdt
+  // tegen, zodat je (en de wandelroute) onder de achtbaan door kunt lopen
+  // (Mark 20 aug: "pad loopt onder de achtbaan maar eronderdoor lopen lukt niet").
+  achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, botsCells: 1, price: 150 },
+  achtbaanKlein: { id: "achtbaanKlein", kind: "attraction", name: "Kleine achtbaan", emoji: "🎢", procedural: "coaster", baan: "klein", cells: 5, botsCells: 1, price: 80 },
+  achtbaanSpiraal: { id: "achtbaanSpiraal", kind: "attraction", name: "Spiraal-achtbaan", emoji: "🌀", procedural: "coaster", baan: "spiraal", cells: 7, botsCells: 1, price: 220 },
   trein: { id: "trein", kind: "attraction", name: "Treintje", emoji: "🚂", procedural: "train", price: 65 },
   // ---- TREIN-op-rails (Mark 2026-06-27): leg losse rails neer → de trein rijdt
   // jouw route. Rails = klein, niet-blokkerend decor (snapt op het raster). Het

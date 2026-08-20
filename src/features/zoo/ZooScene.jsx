@@ -876,7 +876,7 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   return null;
 }
 
-export default function ZooScene({ placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {} }) {
+export default function ZooScene({ wandelToon = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {} }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1178,7 +1178,7 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         <Buitenwereld />
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
-        <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} />
+        <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
