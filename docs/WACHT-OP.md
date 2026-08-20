@@ -22,6 +22,9 @@ budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitsl
 
 ## 🟠 Prio 2 — loopt, geduld
 | Wat | Wacht op | Sinds | Daarna |
+| **💥 Buurtgezinnen LANDELIJK — 2e positieve spoor:** Nicole Burgers 20 aug 10:36: "mooie tool bij kansengelijkheid, mail doorgestuurd naar ons [team]" (naast Eveline/Meppel die 19 aug intern doorzette). ⚠️ Lokale coördinatoren-batch (~144) blijft GEPARKEERD zolang dit loopt | Landelijke beslissing | 20 aug | Bij concreet contact → koepel-pakket (idee #57) maken; stil ~3 sep → vriendelijke check bij Nicole |
+| **⭐ SUN Middelburg — JA 20 aug 09:27** ("mooi initiatief, ik plaats een link op onze website"); coördinator Ilsemarije stuurde Mark een LinkedIn-verzoek (Mark accepteert zelf) | Plaatsing op de site | 20 aug | ~3 sep checken of de link er staat → bedankje + bedankt.html-toestemming vragen. 1e SUN-ja |
+| **📕 BMF (Brabantse bibliotheken-koepel) — nee 20 aug** ("liever een heel boek lezen en erover in gesprek") — visie-nee, gelogd; evt. latere warme reply met de Leesladder als brug (leesplezier + begrijpend lezen) | — | 20 aug | — |
 |---|---|---|---|
 | **📞 Leergeld Oisterwijk (Laura, voorzitter)** — 19 aug 17:47 mail = **afwijzing** ("wij doen participatie, geen schoolse zaken"; ook Squla afgewezen; geen onderwijsinstelling → geen poster). Gouden detail: ze heeft zélf in de app geoefend ("ziet er goed uit… hels karwei"). **20 aug bedank-reply verstuurd** (Mark-akkoord): geen tegenargumenten, wél vraag om 1-2 verbeterpunten | Haar verbeterpunten-antwoord | 20 aug | Verbeterpunten loggen in memory `project_studiebol_leergeld_outreach` + oppakken; géén verdere plaatsings-poging Oisterwijk. Les voor Leergeld-Midden-batch: participatie-framing ("meedoen") toevoegen |
 | **FBNR Rotterdam** (Petra, 18 aug): "zet dit door naar mijn collega of wij hierin iets kunnen betekenen" | Collega-beoordeling | 18 aug | Warm bij reactie → warme leads; stil ~2 sep → vriendelijke check |
