@@ -84,6 +84,32 @@ zin opnemen (mag licht variëren, toon vriendelijk en vrijblijvend):
 Binnengekomen tips hierboven bij "Warme-tip-ingangen" zetten mét bron ("op advies
 van …" als opener) — doorverwijzingen openen deuren die koude mails niet openen.
 
+### 🔍 De verbeterpunten-vraag bij "nee ná écht kijken" (standaard sinds 20 aug — idee #59)
+
+Heeft de afwijzer de app aantoonbaar zélf geprobeerd of bekeken (zoals Laura van
+Leergeld Oisterwijk: "ik heb even geoefend"), stel dan in de bedank-reply niet de
+doorverwijs-vraag maar de **verbeterpunten-vraag** — die is dan natuurlijker én
+levert gratis productadvies op van vakmensen:
+
+> "Je schreef dat je even geoefend hebt in de app. Dat maakt me nieuwsgierig:
+> zijn er één of twee dingen die jou opvielen die beter kunnen? Ik bouw
+> Leerkwartier alleen, dus elk eerlijk verbeterpunt is voor mij goud waard."
+
+Regel: nee + gezien → verbeterpunten-vraag; nee + niet gezien → doorverwijs-vraag
+(hierboven). Eerste inzet 20 aug (Laura, Oisterwijk); antwoorden loggen in memory.
+
+### 🤲 Participatie-framing voor participatie-organisaties (idee #61, 20 aug — VÓÓR Leergeld-Midden)
+
+Les van Oisterwijk (19 aug): sommige Leergeld-stichtingen zien zichzelf strikt als
+participatie-club ("wij doen meedoen, geen schoolse zaken" — wees ook Squla af),
+terwijl Apeldoorn-Voorst juist ja zei. Daarom in de **Leergeld-Midden-batch
+(~27-28 aug)** en latere Leergeld-mails één extra zin in hun taal (na de intro-alinea):
+
+> "Net als een laptop of een schoolspullenpas is dit een leermiddel dat kinderen
+> laat méédoen — aan de toets-voorbereiding die klasgenootjes wél kunnen betalen."
+
+Kost niets, en beantwoordt het "wij zijn geen onderwijsclub"-bezwaar vóórdat het valt.
+
 ## ✉️ MAIL-SJABLOON 2.0 (29 jul — met bewijs-alinea, actief sinds ≥3 partners)
 
 > Vervangt de zomer-versie. Regels: framing "operator + vrije tijd" (nooit dagdelen),

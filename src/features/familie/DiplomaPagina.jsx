@@ -15,6 +15,7 @@
 // ══════════════════════════════════════════════════════════════════════
 import { useState } from "react";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
+import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
 
 // Snel-kiezers zodat Mark kan spelen zonder te typen. De chip-tekst (zonder
@@ -136,6 +137,11 @@ bèta
 
         <div style={{ marginTop: 16 }}>
           <PrintKnoppen trackPrefix="diploma" trackProps={{ onderwerp: ondNet }} />
+        </div>
+        {/* Trots-moment = vraag-moment (idee #60, 20 aug): de enige waitlist-groei
+            in weken kwam via zo'n succes-moment (kwartier-behaald). */}
+        <div style={{ marginTop: 14 }}>
+          <GratisLesmateriaal source="diploma" compact />
         </div>
         <div style={{ height: 1, background: "rgba(255,255,255,0.08)", margin: "18px 0" }} />
         <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>

@@ -13,6 +13,7 @@ import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
 import HubSter from "../shared/ui/HubSter.jsx";
+import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 
 // ── Laag 1: gratis, blijft gratis ─────────────────────────────────────
 const GRATIS = [
@@ -196,6 +197,12 @@ export default function PrintHubPage({ setPage } = {}) {
           <li>Print alleen de pagina's die je vandaag nodig hebt (elk onderdeel begint op een nieuwe pagina).</li>
           <li>Antwoordsleutels zitten achteraan — die kun je er los bij houden.</li>
         </ul>
+      </div>
+
+      {/* Idee #60 (20 aug): print-moment = betrokken ouder of verzorger — rustige
+          e-mailvraag, zelfde blok als op de andere succes-momenten. */}
+      <div style={{ marginBottom: 18 }}>
+        <GratisLesmateriaal source="printhub" compact />
       </div>
 
       <div style={{ background: "rgba(0,200,83,0.07)", border: "1px solid rgba(0,200,83,0.3)", borderRadius: 14, padding: "14px 18px", marginBottom: 22 }}>

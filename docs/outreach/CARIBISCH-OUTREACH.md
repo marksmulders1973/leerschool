@@ -390,8 +390,13 @@ over ons post.
 - [x] **Mailteksten batch 2 geschreven (9 aug):** Variant E (eilanden-NL), Variant S
   (Suriname, geen examen-jargon) en Variant EN (Engelstalig) — zie hierboven, incl.
   verzendplanning per dag
-- [ ] **Batch 2 versturen: do 20 + vr 21 aug, na Mark's go** (~41 mails over 2 dagen;
-  past tussen Leergeld-55 op 18-19 aug en golf 2 op 25 aug)
+- [x] **✅ Batch 2 dag 1 VERSTUURD do 20 aug** (Mark-go "go op alle punten dagrapport"):
+  Variant E 18 + Variant EN 9 = **27/27 OK via Resend** (script
+  `scripts/outreach/stuur-caribisch-batch2-20260820.mjs`). Bewijs-alinea conform
+  privacy-regel (alleen bedankt.html-zin); Suriname-zin "sinds deze maand Caribisch"
+  weggelaten (batch 1 nog geen positieve reactie — eerlijk gebleven).
+- [ ] **Batch 2 dag 2: Suriname (Variant S, 14) vr 21 aug** — zelfde script met
+  `--suriname`-vlag draaien (go is al gegeven)
 - [ ] **FB-spoor Suriname op vr 21 aug** (zelfde dag als de S-mails): korte
   FB-berichten via de Leerkwartier-pagina — zie sectie "📘 Facebook-spoor Suriname"
   (FB = 83% van social-verkeer daar; Rotary alléén via FB bereikbaar)
