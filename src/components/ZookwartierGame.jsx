@@ -4,7 +4,7 @@
 // bewaard in Supabase. Muntjes verdien je met dagelijks inloggen + kwartier leren.
 //
 // De zware three.js-scene laadt lazy, zodat de leer-app snel blijft.
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
