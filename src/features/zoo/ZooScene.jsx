@@ -16,6 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
+import WandelPreview, { wandelPreviewActief } from "./WandelPreview";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
@@ -1172,6 +1173,9 @@ export default function ZooScene({ placingAsset = null, placingRot = 0, placedIt
         {/* De wereld buiten het hek: grasvlakte, blok-heuvels, bos, bergen,
             meertje en het weggetje met bushalte — geen "einde van de wereld". */}
         <Buitenwereld />
+        {/* 🚶 Bouwplaats-preview van het wandelkwartier (?wandel=1): voetstappen
+            + bouwbordjes langs de geplande dagroute. Puur visueel, wijzigt niets. */}
+        {wandelPreviewActief() && <WandelPreview heightRef={heightFnRef} />}
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
