@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <title>Leerkwartier — Saba poster (Queen Wilhelmina Library)</title>
+  <style>
+    /* Engelse A3-poster voor Saba (Tiffany Zagers, Queen Wilhelmina Library,
+       20 aug 2026) — zelfde ontwerp als poster-leerkwartier.html, ?s=a4 voor A4.
+       Echt Leerkwartier-logo (../logo.jpg) + QR met code SABA2027. */
+    @page { size: A3 portrait; margin: 0; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:297mm;height:420mm;overflow:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+      background:#fff;color:#12263a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .vel{width:297mm;height:420mm;padding:20mm 22mm;display:flex;flex-direction:column;transform-origin:top left}
+
+    .kop{display:flex;align-items:center;gap:20px;margin-bottom:12mm}
+    .kop img.logo{height:52mm;border-radius:10mm;display:block}
+    .kop .slogan{font-size:24px;color:#5a6775;line-height:1.4;font-weight:600}
+
+    h1{font-size:68px;line-height:1.1;font-weight:800;letter-spacing:-0.5px;margin-bottom:12px}
+    h1 .groen{color:#0a7d43}
+    .voorwie{font-size:28px;color:#3a4658;font-weight:600;margin-bottom:8mm}
+    .payoff{display:inline-block;background:#0a7d43;color:#fff;font-size:27px;font-weight:800;
+      padding:14px 26px;border-radius:999px;margin-bottom:12mm}
+
+    ul{list-style:none;margin-bottom:2mm}
+    ul li{font-size:29px;color:#28323f;padding:14px 0 14px 56px;position:relative;line-height:1.4;font-weight:500}
+    ul li::before{content:"✓";position:absolute;left:0;top:13px;color:#00a852;font-weight:800;font-size:38px;line-height:1}
+    ul li strong{color:#12263a;font-weight:800}
+
+    .rust{margin-top:auto}
+
+    .qr-blok{display:flex;gap:30px;align-items:center;background:#fff8e6;border:3px solid #f0d489;
+      border-radius:20px;padding:28px 32px;margin:8mm 0 6mm}
+    .qr-blok img{width:62mm;height:62mm;flex-shrink:0;background:#fff;border-radius:10px}
+    .qr-blok .qtxt h2{font-size:36px;color:#8a6400;margin-bottom:8px;font-weight:800}
+    .qr-blok .qtxt .url{font-size:38px;color:#0a7d43;font-weight:800;letter-spacing:0.3px}
+    .qr-blok .qtxt p{font-size:22px;color:#5a6775;margin-top:8px;line-height:1.45}
+    .code-badge{display:inline-block;background:#8a6400;color:#fff;font-weight:800;letter-spacing:1px;padding:2px 14px;border-radius:8px}
+
+    .dank{display:flex;align-items:center;gap:22px;border-top:2px solid #e3e8ee;padding-top:6mm;margin-top:2mm}
+    .dank .dtxt{font-size:23px;color:#3a4658;line-height:1.5}
+    .dank .dtxt strong{color:#12263a}
+
+    .voet{margin-top:6mm;font-size:18px;color:#8893a3;line-height:1.5;text-align:center}
+
+    /* A4: zelfde ontwerp, geschaald (?s=a4) */
+    body.a4, html.a4{width:210mm;height:297mm}
+    body.a4 .vel{transform:scale(0.70710678)}
+    body.a4{--a4:1}
+  </style>
+</head>
+<body>
+  <div class="vel">
+    <div class="kop">
+      <img class="logo" src="../logo.jpg" alt="Leerkwartier" />
+      <div class="slogan">A calm tutor<br>in your pocket.</div>
+    </div>
+
+    <h1>Practise Dutch — <span class="groen">for free</span></h1>
+    <div class="voorwie">For every child on Saba — and everyone who wants to learn Dutch.</div>
+    <div class="payoff">Fifteen minutes a day — really understand what you learn.</div>
+
+    <ul>
+      <li><strong>Reading, maths and language</strong> — in simple Dutch, with a read-aloud button.</li>
+      <li>Got it wrong? The app <strong>explains it in easier words</strong> — until it clicks.</li>
+      <li>A <strong>new question every day</strong>, with a friendly explanation.</li>
+      <li><strong>Printable workbooks</strong> — great when internet is slow.</li>
+      <li><strong>No ads.</strong> We never sell your data. The basics are free — guaranteed through 2031.</li>
+    </ul>
+
+    <div class="rust"></div>
+
+    <div class="qr-blok">
+      <img src="../qr/SABA2027.png" alt="QR code to leerkwartier.app" />
+      <div class="qtxt">
+        <h2>Scan and start today</h2>
+        <div class="url">leerkwartier.app</div>
+        <p>Works on any phone, tablet or computer — nothing to install.<br />
+        Code <span class="code-badge">SABA2027</span> unlocks the extra family features, free through 2027 (first 50 families).</p>
+      </div>
+    </div>
+
+    <div class="dank">
+      <div class="dtxt"><strong>Shared in cooperation with the Queen Wilhelmina Library</strong> — The Bottom, Saba. Together we make sure every child can practise for free.</div>
+    </div>
+
+    <div class="voet">
+      An initiative of Leerkwartier · leerkwartier.app · made in the Netherlands
+    </div>
+  </div>
+
+  <script>
+    var s = new URLSearchParams(location.search).get('s') || 'a3';
+    if (s === 'a4') {
+      document.body.classList.add('a4');
+      document.documentElement.classList.add('a4');
+      var st = document.createElement('style');
+      st.textContent = '@page { size: A4 portrait; margin: 0; }';
+      document.head.appendChild(st);
+    }
+  </script>
+</body>
+</html>
