@@ -34,8 +34,12 @@ export function wandelPreviewActief() {
 }
 
 const ROUTES = WANDEL_ROUTES;
-const STAP_AFSTAND = 1.4;
-const STEMPEL_ELKE = 11;
+// 🛣️ Wegmarkering-stijl (Mark 20 aug: "strepen als op de weg — die kunnen ook
+// een bocht maken"): korte streepjes in de looprichting i.p.v. rondjes.
+const STAP_AFSTAND = 1.8;   // streep (0.95) + tussenruimte
+const STREEP_L = 0.95;      // lengte van een streep, in de looprichting
+const STREEP_B = 0.24;      // breedte
+const STEMPEL_ELKE = 8;
 
 function maakStempelTexture(route) {
   const c = document.createElement("canvas");
@@ -182,8 +186,8 @@ function RouteStippen({ route, heightRef, doelen }) {
   return (
     <group>
       <instancedMesh key={stappen.length} ref={instRef} args={[null, null, stappen.length]} frustumCulled={false}>
-        <circleGeometry args={[0.16, 12]} />
-        <meshBasicMaterial color={route.kleur} transparent opacity={0.9} depthWrite={false} />
+        <planeGeometry args={[STREEP_B, STREEP_L]} />
+        <meshBasicMaterial color={route.kleur} transparent opacity={0.9} depthWrite={false} side={THREE.DoubleSide} />
       </instancedMesh>
 
       {stempels.map((s, i) => (
