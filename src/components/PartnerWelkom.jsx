@@ -42,6 +42,7 @@ const PARTNER_NAMEN = {
   PURMEREND2027: "Voedselbank Purmerend",
   ROTTERDAM2027: "Bibliotheek Rotterdam",
   ROTTERDAMPAS2027: "de Rotterdampas",
+  SABA2027: "Queen Wilhelmina Library (Saba)",
   SAM2027: "Sam& voor alle kinderen",
   SCHOOLSCOOL2027: "School's cool Twente",
   SMALLINGERLAND2027: "Voedselbank Smallingerland",
