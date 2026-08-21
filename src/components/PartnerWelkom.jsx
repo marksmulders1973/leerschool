@@ -28,6 +28,7 @@ const PARTNER_NAMEN = {
   AMSTELLAND2027: "Bibliotheek Amstelland",
   APELDOORN2027: "Leergeld Apeldoorn-Voorst",
   BREDA2027: "Voedselbank Breda",
+  BUURTGEZINNEN2027: "Buurtgezinnen",
   EINDHOVEN2027: "Bibliotheek Eindhoven",
   ENSCHEDE2027: "Voedselbank Enschede-Haaksbergen",
   GORINCHEM2027: "Voedselbank Gorinchem",

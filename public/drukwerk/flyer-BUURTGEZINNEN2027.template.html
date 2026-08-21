@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Leerkwartier — gratis oefenen voor de Doorstroomtoets (Buurtgezinnen)</title>
+  <style>
+    /* B1-flyer voor gezinnen via Buurtgezinnen (concept voor Froukje van Haut,
+       21 aug 2026 — logo-gebruik pas definitief na hun akkoord):
+       korte zinnen, grote letters, geen organisatie-teksten. */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#e8ecf1;color:#1a2332;padding:24px}
+    .vel{background:#fff;max-width:760px;margin:0 auto;padding:44px 52px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.15)}
+    .kop{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px}
+    .merk{display:flex;align-items:center;gap:12px}
+    .merk .logo{height:76px;width:76px;display:block;flex:0 0 auto}
+    .merk .naam{font-size:30px;font-weight:800;color:#0a7d43;letter-spacing:-0.5px}
+    .partner-logo img{height:56px;display:block}
+    .payoff{font-size:15px;color:#5a6775;margin-bottom:24px}
+    h1{font-size:28px;line-height:1.3;margin-bottom:16px}
+    p{font-size:16.5px;line-height:1.7;color:#3a4658;margin-bottom:12px}
+    ul{list-style:none;margin-bottom:14px}
+    ul li{font-size:16px;color:#3a4658;padding:5px 0 5px 28px;position:relative;line-height:1.55}
+    ul li::before{content:"✓";position:absolute;left:0;color:#00a852;font-weight:700;font-size:18px}
+    h2{font-size:18px;color:#0a7d43;margin:20px 0 8px}
+    .qr-blok{display:flex;gap:22px;align-items:center;background:#fff8e6;border:2px solid #f0d489;border-radius:14px;padding:18px 22px;margin:20px 0}
+    .qr-blok img{width:150px;height:150px;flex-shrink:0}
+    .qr-blok h2{margin:0 0 8px;color:#8a6400;font-size:19px}
+    .qr-blok p{margin-bottom:8px;font-size:15.5px}
+    .qr-code-badge{display:inline-block;background:#8a6400;color:#fff;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:8px;font-size:15px}
+    .qr-url{font-size:13px;color:#8893a3;word-break:break-all}
+    .steun{display:flex;align-items:center;gap:14px;background:#f2f6fb;border:1.5px solid #c9d9ec;border-radius:12px;padding:12px 18px;margin:18px 0}
+    .steun img{height:44px;flex-shrink:0}
+    .steun p{margin:0;font-size:15px;line-height:1.55}
+    .url{display:block;text-align:center;background:#0a7d43;color:#fff;font-size:24px;font-weight:800;padding:15px;border-radius:12px;margin:20px 0 6px;letter-spacing:0.3px;text-decoration:none}
+    .url-sub{text-align:center;font-size:14px;color:#5a6775;margin-bottom:14px}
+    .voet{margin-top:22px;padding-top:12px;border-top:1px solid #e3e8ee;font-size:12.5px;color:#8893a3;line-height:1.6}
+    @media print{
+      /* 1-pagina-garantie (partner-pakket 2.0). */
+      @page{size:A4;margin:0}
+      body{background:#fff;padding:0}
+      .vel{box-shadow:none;border-radius:0;max-width:none;padding:9mm 15mm}
+      .kop{margin-bottom:2px}
+      .merk .logo{height:66px;width:66px}
+      .merk .naam{font-size:27px}
+      .partner-logo img{height:48px}
+      h1{font-size:24px;margin-bottom:10px}
+      p{font-size:14.5px;line-height:1.55;margin-bottom:9px}
+      ul{margin-bottom:8px}
+      ul li{font-size:14px;line-height:1.5;padding:3px 0 3px 26px}
+      ul li::before{font-size:15px}
+      h2{font-size:16.5px;margin:13px 0 6px}
+      .payoff{margin-bottom:14px;font-size:13px}
+      .qr-blok{padding:14px 18px;margin:14px 0;gap:18px}
+      .qr-blok img{width:126px;height:126px}
+      .qr-blok p{font-size:14px;margin-bottom:6px}
+      .qr-blok h2{margin:0 0 6px;font-size:16.5px}
+      .qr-url{font-size:11px}
+      .steun{padding:10px 15px;margin:13px 0}
+      .steun img{height:38px}
+      .steun p{font-size:14px}
+      .url{font-size:20px;padding:12px;margin:13px 0 5px}
+      .url-sub{font-size:12.5px;margin-bottom:8px}
+      .voet{margin-top:10px;padding-top:7px;font-size:11px}
+    }
+  </style>
+</head>
+<body>
+  <div class="vel">
+    <div class="kop">
+      <div class="merk"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <defs> <radialGradient id="lkbg" cx="50%" cy="40%" r="70%"> <stop offset="0%" stop-color="#14304a"/> <stop offset="100%" stop-color="#0a1c2e"/> </radialGradient> <linearGradient id="lkkwart" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" stop-color="#8fd431"/> <stop offset="100%" stop-color="#68b31f"/> </linearGradient> </defs> <rect width="512" height="512" rx="100" fill="url(#lkbg)"/> <path d="M176,344 L176,192 Q176,176 192,176 L328,176 A168,168 0 0 1 176,344 Z" fill="url(#lkkwart)" transform="rotate(90 260 260)"/> </svg><span class="naam">Leerkwartier</span></div>
+      <div class="partner-logo"><img src="{{LOGO}}" alt="Buurtgezinnen" /></div>
+    </div>
+    <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+
+    <h1>Gratis oefenen voor de Doorstroomtoets</h1>
+    <p>Zit uw kind in groep 6, 7 of 8? In groep 8 maakt uw kind de Doorstroomtoets. Dat is een grote toets. Oefenen helpt. Maar oefenboeken zijn duur. Bijles is ook duur.</p>
+    <p><strong>Daarom is er Leerkwartier.</strong> Een app waar uw kind gratis kan oefenen. Elke dag een kwartier is genoeg.</p>
+
+    <div class="qr-blok">
+      <img src="{{QR}}" alt="QR-code naar leerkwartier.app" />
+      <div>
+        <h2>🎁 Zo werkt het</h2>
+        <p><strong>Richt de camera van uw telefoon op deze code.</strong> Tik op de link die verschijnt. De app opent vanzelf. U hoeft niets te installeren. U hoeft geen account te maken.</p>
+        <p>Uw code <span class="qr-code-badge">BUURTGEZINNEN2027</span> doet automatisch mee. Daarmee blijft de app voor uw gezin <strong>gratis tot en met de Doorstroomtoets van 2027</strong>.</p>
+        <p class="qr-url">Lukt het scannen niet? Typ dan in de browser:<br /><strong style="white-space:nowrap">leerkwartier.app/?partner=BUURTGEZINNEN2027</strong></p>
+      </div>
+    </div>
+
+    <h2>Wat kan uw kind doen in de app?</h2>
+    <ul>
+      <li>Een <strong>oefen-toets</strong> maken. Die lijkt op de echte Doorstroomtoets.</li>
+      <li>Elke dag een <strong>nieuwe vraag</strong> oefenen. Met uitleg.</li>
+      <li>Snapt uw kind iets niet? De app <strong>legt het uit</strong>. In makkelijke woorden. Net zo lang tot het lukt.</li>
+      <li><strong>Samen oefenen mag ook.</strong> Met een ouder, een steungezin of iemand anders die helpt.</li>
+      <li>Ook <strong>werkbladen om te printen</strong>. Handig als internet thuis niet goed werkt.</li>
+    </ul>
+
+    <h2>Eerlijk en veilig</h2>
+    <ul>
+      <li>Gratis voor uw gezin, tot en met de toets van 2027. Er gaat nooit zomaar geld af.</li>
+      <li>Geen reclame.</li>
+      <li>Wij vragen niet om uw gegevens. Wij verkopen ook niets door.</li>
+    </ul>
+
+    <div class="steun"><img src="{{LOGO}}" alt="Buurtgezinnen" /><p><strong>U krijgt deze tip via Buurtgezinnen.</strong> Het aanbod is echt gratis voor u. Buurtgezinnen betaalt hier niets voor en u ook niet.</p></div>
+
+    <a class="url" href="https://leerkwartier.app/?partner=BUURTGEZINNEN2027">leerkwartier.app</a>
+    <div class="url-sub">Werkt op elke telefoon, tablet of computer.</div>
+
+    <div class="voet">
+      Vragen? Mail Mark Smulders (de maker): marksmulders1973@gmail.com
+    </div>
+  </div>
+</body>
+</html>
