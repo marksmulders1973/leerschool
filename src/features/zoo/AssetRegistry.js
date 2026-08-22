@@ -88,6 +88,10 @@ export const ZOO_ASSETS = {
   // versie van de leer-kubus als trofee. Eerste van een geplande gouden-vormen-
   // familie (piramide/bol/kegel volgen). Zie unlocks.js + Ideeën-tracker #46.
   souvenirGoudkubus: { id: "souvenirGoudkubus", kind: "decor", name: "Gouden kubus", emoji: "🥇", procedural: "souvenir", souvenir: "goudkubus", cells: 1, price: 0, unlock: "ruimtemeetkunde" },
+  // 🥇 Gouden-vormen-familie boven de draak (mijlpaal-trofeeën, park-megabuild #6).
+  souvenirGoudpiramide: { id: "souvenirGoudpiramide", kind: "decor", name: "Gouden piramide", emoji: "🥇", procedural: "souvenir", souvenir: "goudpiramide", cells: 1, price: 0 },
+  souvenirGoudbol: { id: "souvenirGoudbol", kind: "decor", name: "Gouden bol", emoji: "🥇", procedural: "souvenir", souvenir: "goudbol", cells: 1, price: 0 },
+  souvenirGoudkegel: { id: "souvenirGoudkegel", kind: "decor", name: "Gouden kegel", emoji: "🥇", procedural: "souvenir", souvenir: "goudkegel", cells: 1, price: 0 },
   sheep: { id: "sheep", kind: "animal", name: "Schaap", emoji: "🐑", url: "/models/zoo/animals/Sheep.glb", targetHeight: 1.0, price: 14 },
   zebra: { id: "zebra", kind: "animal", name: "Zebra", emoji: "🦓", url: "/models/zoo/animals/Zebra.glb", targetHeight: 1.6, price: 22 },
   pug: { id: "pug", kind: "animal", name: "Hondje", emoji: "🐶", url: "/models/zoo/animals/Pug.glb", targetHeight: 0.6, price: 12 },
@@ -171,6 +175,11 @@ export const ZOO_ASSETS = {
   // maakt — zelfde bodem + hoogte-verhouding als de kegel; inhoud π·r²·h, de
   // kegel is er precies ⅓ van.
   cilinder: { id: "cilinder", kind: "attraction", name: "Glazen cilinder", emoji: "🛢️", procedural: "cilinder", price: 50, cells: 5, botsCells: 3, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 12 },
+
+  // 🏊 Zwembad (Mark idee #44, gebouwd 22 aug): balk die zich met water vult —
+  // inhoud = lengte × breedte × diepte. Sluit de inhoud-familie. Manipuleerbaar
+  // + goud-baar net als de andere vormen.
+  zwembad: { id: "zwembad", kind: "attraction", name: "Zwembad", emoji: "🏊", procedural: "zwembad", price: 60, cells: 7, botsCells: 5, maatMin: 2, maatMax: 6, maatDefault: 3, maatLeerpad: "ruimtemeetkunde", goudPad: "ruimtemeetkunde", goudDrempel: 14 },
 
   // 🎡 Interactieve leerobjecten (Mark 16-17 aug): het interactief-park-masterplan.
   // cells = footprint die de MAX-grootte reserveert, zodat een object nooit zijn
@@ -296,7 +305,7 @@ export const PLAATSBARE_ATTRACTIES = ["trein", "rail", "carousel", "ferris", "sw
 // 🎡 Leerplein-objecten (Mark 16-17 aug) — eigen winkel-categorie zodat kinderen
 // de leerobjecten los van de kermis-attracties vinden. Tier A eerst, dan de
 // landmark-poorten. Elk linkt (via parkLeermomenten) naar een bestaand leerpad.
-export const PLAATSBARE_LEERPLEIN = ["klok", "weegschaal", "breukentaart", "moestuin", "telraam", "parkkaart", "kompas", "eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot"];
+export const PLAATSBARE_LEERPLEIN = ["klok", "weegschaal", "breukentaart", "moestuin", "telraam", "parkkaart", "zwembad", "kompas", "eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot"];
 export const PLAATSBARE_HEKKEN = ["hekPaneel", "hekHoek", "hekPoort"];
 export const PLAATSBARE_BLOKKEN = ["blokHout", "blokSteen", "blokBaksteen", "blokZand", "blokGras", "blokSneeuw", "blokGlas", "blokDak", "blokGoud", "blokDiamant"];
 export const PLAATSBARE_NATUUR = ["heuvel", "groteHeuvel", "kei", "keien", "path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark", "tree", "treeOak", "treePalm", "struik", "varen", "boomstronk", "grasplukje", "flowerRed", "flowerYellow", "flowerPurple", "mushroom"];

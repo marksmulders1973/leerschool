@@ -377,6 +377,30 @@ export function Souvenir({ soort = "piramide", position = [0, 0, 0], rotation = 
           )}
         </group>
       )}
+      {/* 🥇 Gouden-vormen-familie boven de draak (Mark 22 aug, park-megabuild #6):
+          trofeeën voor de doorzetters — verdiend op 180/220/275 totale lesjes.
+          Zelfde GOUD-palet als de gouden kubus. */}
+      {soort === "goudpiramide" && (
+        <group position={[0, 0.24, 0]}>
+          <mesh position={[0, 0.34, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow>
+            <coneGeometry args={[0.5, 0.68, 4]} />
+            <meshStandardMaterial color={GOUD.basis} metalness={GOUD.metalness} roughness={GOUD.roughness} emissive={GOUD.donker} emissiveIntensity={0.18} flatShading />
+          </mesh>
+          <mesh position={[0, 0.72, 0]} rotation={[0, Math.PI / 4, 0]}><coneGeometry args={[0.12, 0.16, 4]} /><meshStandardMaterial color={GOUD.licht} metalness={GOUD.metalness} roughness={0.25} /></mesh>
+        </group>
+      )}
+      {soort === "goudbol" && (
+        <group position={[0, 0.62, 0]}>
+          <mesh castShadow receiveShadow><sphereGeometry args={[0.4, 20, 16]} /><meshStandardMaterial color={GOUD.basis} metalness={GOUD.metalness} roughness={GOUD.roughness} emissive={GOUD.donker} emissiveIntensity={0.18} flatShading /></mesh>
+          <mesh position={[0.12, 0.14, 0.16]}><sphereGeometry args={[0.09, 10, 10]} /><meshStandardMaterial color={GOUD.licht} metalness={GOUD.metalness} roughness={0.2} /></mesh>
+        </group>
+      )}
+      {soort === "goudkegel" && (
+        <group position={[0, 0.24, 0]}>
+          <mesh position={[0, 0.42, 0]} castShadow receiveShadow><coneGeometry args={[0.38, 0.84, 24]} /><meshStandardMaterial color={GOUD.basis} metalness={GOUD.metalness} roughness={GOUD.roughness} emissive={GOUD.donker} emissiveIntensity={0.18} flatShading /></mesh>
+          <mesh position={[0, 0.03, 0]}><cylinderGeometry args={[0.4, 0.42, 0.06, 24]} /><meshStandardMaterial color={GOUD.donker} metalness={GOUD.metalness} roughness={0.3} /></mesh>
+        </group>
+      )}
       {soort === "fontein" && (
         <group position={[0, 0.22, 0]}>
           <mesh position={[0, 0.08, 0]} castShadow><cylinderGeometry args={[0.34, 0.38, 0.16, 12]} /><meshStandardMaterial color="#9aa4ad" flatShading roughness={0.9} /></mesh>
@@ -962,6 +986,67 @@ export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
             <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(192,57,43,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>straal {m} m</div>
           </Html>
         </group>
+      </group>
+    </group>
+  );
+}
+
+/* ── 🏊 Zwembad (Mark idee #44, gebouwd 22 aug — park-megabuild sprint 4) ─────
+   Een balk-vormig bad dat zich met water vult: hoeveel water past erin? Dat is
+   inhoud = lengte × breedte × diepte. Sluit de inhoud-familie (kubus/balk/
+   piramide/kegel/bol/halve bol). Zelfde glas-stijl + kleurcode (rood/blauw/groen
+   voor de drie ribben) en meebewegende maten als de andere lerende vormen. */
+export function Zwembad({ position = [0, 0, 0], rotation = 0, maat = 3, goud = false, goudRest = 0 }) {
+  const m = Math.max(2, Math.min(6, Math.round(maat)));  // maat = breedte-eenheid
+  const L = 2 * m, B = m, D = m;                          // lengte × breedte × diepte (m)
+  const vol = L * B * D;                                  // m³
+  const liters = vol * 1000;                              // 1 m³ = 1000 liter
+  const lenKleur = "#c0392b";   // lengte = rood
+  const breKleur = "#1c7d3c";   // breedte = groen
+  const dieKleur = "#12488a";   // diepte = blauw
+  const s = 0.55;               // wereldschaal
+  const l0 = L * s, b0 = B * s, d0 = D * s;
+  const waterH = d0 * 0.86;     // water tot net onder de rand
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      <ZwevendeMaten y={d0 + 1.6} regels={[
+        `📏 lengte ${L} m · breedte ${B} m · diepte ${D} m`,
+        `🏊 inhoud = l × b × d = ${L} × ${B} × ${D} = ${vol.toLocaleString("nl-NL")} m³`,
+        `= ${liters.toLocaleString("nl-NL")} liter water!`,
+      ]} />
+      <GoudDoel goud={goud} rest={goudRest} y={0.7} />
+      {goud && <GoudKroon y={d0 + 0.7} />}
+      <group position={[0, 0, 0]}>
+        {/* tegelrand rond het bad */}
+        <mesh position={[0, 0.02, 0]} receiveShadow><boxGeometry args={[l0 + 0.3, 0.08, b0 + 0.3]} /><meshStandardMaterial color={goud ? GOUD.basis : "#dfe6ec"} metalness={goud ? GOUD.metalness : 0} roughness={goud ? GOUD.roughness : 0.9} flatShading /></mesh>
+        {/* de vier glaswanden (open bovenkant) */}
+        {[[0, (b0) / 2, l0, "x"], [0, -(b0) / 2, l0, "x"], [(l0) / 2, 0, b0, "z"], [-(l0) / 2, 0, b0, "z"]].map(([a, c, len, as], i) => (
+          <mesh key={i} position={as === "x" ? [0, d0 / 2 + 0.04, c] : [a, d0 / 2 + 0.04, 0]} rotation={as === "z" ? [0, Math.PI / 2, 0] : [0, 0, 0]}>
+            <boxGeometry args={[len, d0, 0.05]} />
+            <meshStandardMaterial color={goud ? GOUD.licht : "#bfe0ff"} transparent opacity={goud ? 0.5 : 0.25} roughness={0.15} metalness={goud ? GOUD.metalness : 0} depthWrite={false} />
+          </mesh>
+        ))}
+        {/* de bodem */}
+        <mesh position={[0, 0.06, 0]} receiveShadow><boxGeometry args={[l0, 0.04, b0]} /><meshStandardMaterial color="#7fb3d5" flatShading roughness={0.6} /></mesh>
+        {/* het water — een blauw blok dat het bad vult (de inhoud die je berekent) */}
+        <mesh position={[0, 0.06 + waterH / 2, 0]}>
+          <boxGeometry args={[l0 - 0.06, waterH, b0 - 0.06]} />
+          <meshStandardMaterial color={goud ? "#ffe9a8" : "#2aa7e0"} transparent opacity={0.72} roughness={0.2} metalness={0} />
+        </mesh>
+        {/* meetlinten langs drie ribben — lengte (rood), breedte (groen), diepte (blauw) */}
+        <mesh position={[0, 0.06, b0 / 2 + 0.1]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.03, 0.03, l0, 8]} /><meshStandardMaterial color={lenKleur} /></mesh>
+        <mesh position={[l0 / 2 + 0.1, 0.06, 0]}><cylinderGeometry args={[0.03, 0.03, b0, 8]} /><meshStandardMaterial color={breKleur} /></mesh>
+        <mesh position={[l0 / 2 + 0.1, d0 / 2 + 0.04, b0 / 2 + 0.1]}><cylinderGeometry args={[0.03, 0.03, d0, 8]} /><meshStandardMaterial color={dieKleur} /></mesh>
+        {/* benoemde labels — bewegen mee met groter/kleiner */}
+        <Html position={[0, 0.06, b0 / 2 + 0.28]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(192,57,43,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>lengte {L} m</div>
+        </Html>
+        <Html position={[l0 / 2 + 0.28, 0.06, 0]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(28,125,60,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>breedte {B} m</div>
+        </Html>
+        <Html position={[l0 / 2 + 0.28, d0 / 2 + 0.04, b0 / 2 + 0.28]} center distanceFactor={11} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ whiteSpace: "nowrap", padding: "3px 9px", borderRadius: 10, background: "rgba(18,72,138,0.95)", color: "#fff", fontFamily: "system-ui", fontWeight: 800, fontSize: 13, boxShadow: "0 2px 8px rgba(0,0,0,.3)" }}>diepte {D} m</div>
+        </Html>
       </group>
     </group>
   );

@@ -847,7 +847,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // dino-bord bij de groeiplek getoond én in de wandel-viering — het krachtigste
   // "wat komt hier / waarom kom ik morgen terug"-haakje dat het park al heeft.
   const dinoHint = useMemo(() => {
-    const dino = DINO_MIJLPALEN.find((d) => !unlockedDieren.includes(d.assetId));
+    // Alleen échte dino's op het dino-bord (DINO_MIJLPALEN bevat ook fabels +
+    // gouden vormen — die horen niet op de dino-groeiplek).
+    const DINO_SET = new Set(["triceratops", "stegosaurus", "parasaurolophus", "trex", "apatosaurus"]);
+    const dino = DINO_MIJLPALEN.find((d) => DINO_SET.has(d.assetId) && !unlockedDieren.includes(d.assetId));
     if (!dino) return null; // alle dino's al verdiend
     return { assetId: dino.assetId, naam: dino.naam, emoji: dino.emoji, stappen: dino.stappen, rest: Math.max(0, dino.stappen - geleerdeStappen), gehad: geleerdeStappen };
   }, [unlockedDieren, geleerdeStappen]);
@@ -2376,17 +2379,21 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               {selKind === "animal" ? "🦊 Dier loopt vrij rond — bouw er zelf een hek omheen met 🚧 Hekken:" : "Gekozen:"}
             </span>
             {/* 🎠 Instappen: in de draaimolen/reuzenrad/zweefmolen meedraaien;
-                bij de trein via het bestaande meerijden. */}
-            {selKind === "attraction" && (
+                bij de trein/rails/station via het bestaande meerijden (#7.4). */}
+            {(selKind === "attraction" || placedItems[selectedIdx]?.assetId === "station") && (
               <button
                 onClick={() => {
                   const pr = getAsset(placedItems[selectedIdx]?.assetId)?.procedural;
-                  if (pr === "rail" || pr === "train") {
+                  // 🚂 Instappen bij de trein, de rails ÉN het station (Mark 22 aug,
+                  // park-megabuild #7.4 — Sem 8 jr: "ik mag er niet in"). Het station
+                  // is de natuurlijke instapplek → tik erop = meerijden als park-taxi.
+                  if (pr === "rail" || pr === "train" || pr === "station") {
                     // Bug-jacht 7/7: zonder rijdbare route (≥2 rails) bevroor de
                     // camera en verdween de speler — eerst rails, dan instappen.
                     const rails = placedItems.filter((x) => x.assetId === "rail").length;
                     if (rails < 2) { flits("Leg eerst een paar rails neer — dan kan het treintje rijden 🛤️"); return; }
                     setRideTrain(true);
+                    flits("🚂 Instappen maar — je rijdt een rondje door het park!");
                   }
                   else { setRideIdx(selectedIdx); }
                   setFirstPerson(false); setBuddyEye(false); setFollowCam(false);

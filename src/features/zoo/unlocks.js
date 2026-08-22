@@ -55,6 +55,12 @@ export const VRIJSPEEL_DIEREN = [
   { assetId: "fabelEenhoorn", emoji: "🦄", naam: "Eenhoorn", stappen: 90,  waarom: "90 lesjes geleerd! De eenhoorn trippelt je park binnen — met gouden hoorn en regenboog-manen." },
   { assetId: "fabelFeniks",   emoji: "🔥", naam: "Feniks",   stappen: 115, waarom: "115 lesjes geleerd! De vuurvogel cirkelt nu boven je park. Bijna niemand komt zó ver." },
   { assetId: "fabelDraak",    emoji: "🐉", naam: "Draak",    stappen: 150, waarom: "150 lesjes — legendarisch! De draak, het zeldzaamste wezen van allemaal, vliegt boven jouw park. Dit heeft bijna niemand." },
+  // 🥇 Gouden-vormen-familie boven de draak (Mark 22 aug, park-megabuild #6): een
+  // door-spaar-ladder voor de échte doorzetters, zodat er ná de draak nog een
+  // leer-verdiend doel is. Zelfde stappen-mechaniek, souvenir-pijplijn.
+  { assetId: "souvenirGoudpiramide", emoji: "🥇", naam: "Gouden piramide", stappen: 180, waarom: "180 lesjes! Een massief gouden piramide voor jouw park — alleen voor wie na de draak gewoon doorleert." },
+  { assetId: "souvenirGoudbol",      emoji: "🥇", naam: "Gouden bol",      stappen: 220, waarom: "220 lesjes — ongelooflijk! Een glimmende gouden bol is je trofee. Bijna niemand komt zó ver." },
+  { assetId: "souvenirGoudkegel",    emoji: "🥇", naam: "Gouden kegel",    stappen: 275, waarom: "275 lesjes — jij bent een echte kampioen! De gouden kegel maakt je verzameling gouden vormen compleet." },
 ];
 
 // De grote dino's, oplopend op mijlpaal — gebruikt voor de winkel-volgorde + de

@@ -170,6 +170,22 @@ Drie kind-eerlijke observaties, alle drie goedkoop op te lossen:
 
 ---
 
+## ✅ Gebouwd 22 aug 2026 (v401–v403)
+
+- **Sprint 1 (v401):** #1 verstopt dier (i.p.v. weglopen), #3 dino-bord op de
+  groeiplek, #2 wandel-stempelkaart, #7.1 tik-op-dier-reactie.
+- **Sprint 2 (v402):** #4 gouden vormen fase 2 (alle 6 vormen gouden lichaam),
+  #5 spaarboog + parkinkomen-cap, #7.2/7.3 dieren-stop + jong-praatjes gele route.
+- **Sprint 3 (v403):** #6 leer-ladder verlengd boven de draak — gouden piramide
+  (180), bol (220), kegel (275); #7.4 trein instapbaar via het station.
+- **Sprint 4 (v403):** 🏊 zwembad gebouwd (idee #44) — de zesde inhoud-vorm
+  (l × b × d, vult met water, m³ → liter); het oude 🏊-aankondig-bord is
+  vervangen door de echte vorm (belofte ingelost), ook in bestaande parken.
+
+Alle bevindingen #1–#7 uit de (3 afgeronde) reviews zijn nu verwerkt. Open:
+de 8 niet-afgeronde kijkers (leerkracht + level/onboarding/juice-designers +
+Yara/Daan/ouder-kind/Noor) — bijdraaien na de limiet-reset 25 aug.
+
 ## 🗺️ Aanbevolen bouwvolgorde (megabuild)
 
 **Sprint 1 — "morgen kom ik terug" (allemaal effort laag, samen ~1 bouwdag):**

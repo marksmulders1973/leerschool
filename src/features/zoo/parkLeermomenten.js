@@ -262,6 +262,14 @@ export const PARK_LEERMOMENTEN = {
     leerpadId: "tafels-po", leerLabel: "Tafels oefenen",
     leerpadIdJong: "getallen-tot-20-po", leerLabelJong: "Getallen + sommen tot 20",
   },
+  zwembad: {
+    id: "zwembad", emoji: "🏊", titel: "Het zwembad",
+    praatje: "Hoeveel water past er in dit zwembad? Dat is de inhoud, en die reken je zo uit: lengte × breedte × diepte. Een bad van 6 bij 3 bij 3 meter houdt dus 6 × 3 × 3 = 54 kubieke meter water — en dat zijn maar liefst 54.000 liter!",
+    praatjeJong: "Kijk, het zwembad vult zich met water! Hoe langer, breder en dieper het bad, hoe meer water erin past. Tel maar mee met de blokjes water — zo zie je hoeveel erin gaat.",
+    weetje: "Eén kubieke meter (1 m³) is een bak van 1 bij 1 bij 1 meter, en daar past precies 1000 liter in. Een flinke badkuip is ongeveer 150 liter — een zwembad dus véél meer!",
+    leerpadId: "ruimtemeetkunde", leerLabel: "Inhoud & ruimtemeetkunde",
+    leerpadIdJong: "oppervlakte-omtrek-po", leerLabelJong: "Meten en rekenen",
+  },
   parkkaart: {
     id: "parkkaart", emoji: "🗺️", titel: "De park-plattegrond",
     praatje: "Dit bord toont het hele park van bovenaf, als een kaart. De windroos wijst waar noord, oost, zuid en west zijn. Zoek jezelf op de kaart en je kunt de weg vinden naar elke plek — net als op een echte plattegrond.",
@@ -402,6 +410,7 @@ export const LEERMOMENT_BY_ASSET = {
   breukentaart: "breukentaart",
   moestuin: "moestuin",
   telraam: "telraam",
+  zwembad: "zwembad",
   parkkaart: "parkkaart",
   kompas: "kompas",
   eiffeltoren: "eiffeltoren",

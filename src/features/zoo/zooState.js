@@ -167,7 +167,9 @@ function bouwVoorbeeldPark() {
   //    Het park is bewust nooit af — de bordjes maken de groei-plekken zichtbaar
   //    en beloven wat er komt. Zwembad = idee #44 (balk die zich vult met water,
   //    inhoud = lengte × breedte × diepte), gepland naast de vormen-familie. ──
-  add("bordZwembad", -30, 20);  // meetkunde-tuin: tussen bol en halve bol
+  // 🏊 Zwembad (idee #44, gebouwd 22 aug) — belofte van het oude 🏊-bord ingelost:
+  // de zesde inhoud-vorm staat nu echt in de meetkunde-tuin (l × b × d).
+  add("zwembad", -30, 20);      // meetkunde-tuin: tussen bol en halve bol
   add("bordBouw", 18, 20);      // noordoost-veld: open bouwgrond
   add("bordBouw", -14, -14);    // zuidwest-veld: open bouwgrond bij het dorpje
 
@@ -277,15 +279,18 @@ export function legOostPadOmAchtbaan(layout) {
       uit = [...uit, { assetId: "pathStone", cell: [x, z], rotation: 0, price: 0 }];
     }
   }
-  // Bouwbordjes bijzetten in parken die ze nog niet hebben (alleen vrije cellen).
-  const heeftBord = (id) => uit.some((it) => it && it.assetId === id);
-  const bordPlekken = [["bordZwembad", -30, 20], ["bordBouw", 18, 20], ["bordBouw", -14, -14], ["bordDino", 14, -6]];
-  const bordBouwAl = heeftBord("bordBouw");
+  // 🏊 Oud 🏊-bord vervangen door het échte zwembad (belofte ingelost, 22 aug):
+  // parken die het aankondig-bord hadden, krijgen nu de vorm zelf op die plek.
+  uit = uit.map((it) => (it && it.assetId === "bordZwembad" ? { assetId: "zwembad", cell: it.cell, rotation: it.rotation || 0, price: 0, maat: 3 } : it));
+  // Bordjes/objecten bijzetten in parken die ze nog niet hebben (alleen vrije cellen).
+  const heeftAsset = (id) => uit.some((it) => it && it.assetId === id);
+  const bordPlekken = [["zwembad", -30, 20], ["bordBouw", 18, 20], ["bordBouw", -14, -14], ["bordDino", 14, -6]];
+  const bordBouwAl = heeftAsset("bordBouw");
   for (const [id, x, z] of bordPlekken) {
-    if (id === "bordBouw" ? bordBouwAl : heeftBord(id)) continue;
+    if (id === "bordBouw" ? bordBouwAl : heeftAsset(id)) continue;
     if (bezet.has(`${x},${z}`)) continue;
     bezet.add(`${x},${z}`);
-    uit = [...uit, { assetId: id, cell: [x, z], rotation: 0, price: 0 }];
+    uit = [...uit, { assetId: id, cell: [x, z], rotation: 0, price: 0, ...(id === "zwembad" ? { maat: 3 } : {}) }];
   }
   return uit;
 }
