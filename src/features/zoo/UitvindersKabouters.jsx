@@ -614,7 +614,8 @@ export function EgyptischePiramide({ position = [0, 0, 0], rotation = 0, maat = 
       <mesh position={[0, 0.2, 0]} rotation={[0, Math.PI / 4, 0]} castShadow><cylinderGeometry args={[2.62, 2.68, 0.18, 4]} /><meshStandardMaterial color={steenDonker} flatShading roughness={1} /></mesh>
       {/* hoofd-piramide — 4 vlakke facetten met aftelbaar blokken-bord (dam-bord
           op elk driehoekig vlak: sluit vanzelf in de hoeken, telbaar aan de voet) */}
-      <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={steen} map={blokTex} flatShading roughness={1} /></mesh>
+      {/* 🥇 Verdiend → de hele piramide wordt goud (park-megabuild #4 fase 2). */}
+      <mesh position={[0, 1.75, 0]} rotation={[0, Math.PI / 4, 0]} castShadow receiveShadow><coneGeometry args={[2.55, 3.2, 4]} /><meshStandardMaterial color={goud ? GOUD.basis : steen} map={goud ? null : blokTex} flatShading roughness={goud ? GOUD.roughness : 1} metalness={goud ? GOUD.metalness : 0} emissive={goud ? GOUD.donker : "#000000"} emissiveIntensity={goud ? 0.2 : 0} /></mesh>
       {/* Sluitsteen én mini-piramide-mantel op de top zijn verwijderd — Mark wil
           een strakke, normale 4-zijdige piramide, puur voor het rekenen (17 aug).
           De goud-beloning blijft zichtbaar via GoudDoel + GoudKroon. */}
@@ -750,10 +751,11 @@ export function KegelIjsje({ position = [0, 0, 0], rotation = 0, maat = 3, goud 
       <group scale={m * 0.6}>
         {/* sober sokkeltje */}
         <mesh position={[0, -0.05, 0]} receiveShadow><cylinderGeometry args={[r0 + 0.12, r0 + 0.2, 0.1, 28]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
-        {/* doorzichtige kegel — punt omhoog, voet op de grond; geen castShadow (glas) */}
+        {/* doorzichtige kegel — punt omhoog, voet op de grond; geen castShadow (glas).
+            🥇 Verdiend → het glas kleurt goud mee (park-megabuild #4 fase 2). */}
         <mesh position={[0, h0 / 2, 0]}>
           <coneGeometry args={[r0, h0, 40]} />
-          <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
+          <meshStandardMaterial color={goud ? GOUD.licht : "#bfe0ff"} transparent opacity={goud ? 0.42 : 0.22} roughness={goud ? GOUD.roughness : 0.15} metalness={goud ? GOUD.metalness : 0} emissive={goud ? GOUD.donker : "#000000"} emissiveIntensity={goud ? 0.25 : 0} depthWrite={false} />
         </mesh>
         {/* grondcirkel-rand */}
         <mesh rotation={[Math.PI / 2, 0, 0]}>
@@ -808,10 +810,10 @@ export function Cilinder({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
       <group scale={m * 0.6}>
         {/* sober sokkeltje */}
         <mesh position={[0, -0.05, 0]} receiveShadow><cylinderGeometry args={[r0 + 0.12, r0 + 0.2, 0.1, 28]} /><meshStandardMaterial color="#8a949d" flatShading roughness={0.9} /></mesh>
-        {/* doorzichtige cilinder; geen castShadow (glas) */}
+        {/* doorzichtige cilinder; geen castShadow (glas). 🥇 Verdiend → goud glas. */}
         <mesh position={[0, h0 / 2, 0]}>
           <cylinderGeometry args={[r0, r0, h0, 40]} />
-          <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
+          <meshStandardMaterial color={goud ? GOUD.licht : "#bfe0ff"} transparent opacity={goud ? 0.42 : 0.22} roughness={goud ? GOUD.roughness : 0.15} metalness={goud ? GOUD.metalness : 0} emissive={goud ? GOUD.donker : "#000000"} emissiveIntensity={goud ? 0.25 : 0} depthWrite={false} />
         </mesh>
         {/* randen onder + boven zodat de vorm leesbaar blijft */}
         <mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[r0, 0.012, 8, 48]} /><meshStandardMaterial color={lijn} /></mesh>
@@ -873,7 +875,7 @@ export function GroteBal({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
               geen castShadow: glas werpt geen massieve slagschaduw */}
           <mesh>
             <sphereGeometry args={[r, 32, 24]} />
-            <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} />
+            <meshStandardMaterial color={goud ? GOUD.licht : "#bfe0ff"} transparent opacity={goud ? 0.42 : 0.22} roughness={goud ? GOUD.roughness : 0.15} metalness={goud ? GOUD.metalness : 0} emissive={goud ? GOUD.donker : "#000000"} emissiveIntensity={goud ? 0.25 : 0} depthWrite={false} />
           </mesh>
           {/* dunne evenaar-ring zodat de bolvorm leesbaar blijft */}
           <mesh rotation={[Math.PI / 2, 0, 0]}>
@@ -933,7 +935,7 @@ export function HalveBol({ position = [0, 0, 0], rotation = 0, maat = 3, goud = 
               geen castShadow (glas) */}
           <mesh>
             <sphereGeometry args={[r, 32, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
-            <meshStandardMaterial color="#bfe0ff" transparent opacity={0.22} roughness={0.15} metalness={0} depthWrite={false} side={2} />
+            <meshStandardMaterial color={goud ? GOUD.licht : "#bfe0ff"} transparent opacity={goud ? 0.42 : 0.22} roughness={goud ? GOUD.roughness : 0.15} metalness={goud ? GOUD.metalness : 0} emissive={goud ? GOUD.donker : "#000000"} emissiveIntensity={goud ? 0.25 : 0} depthWrite={false} side={2} />
           </mesh>
           {/* rand van de platte onderkant */}
           <mesh rotation={[Math.PI / 2, 0, 0]}>

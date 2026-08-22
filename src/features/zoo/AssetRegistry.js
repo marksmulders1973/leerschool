@@ -201,9 +201,12 @@ export const ZOO_ASSETS = {
   // botsCells klein: de baan is een brug op poten — alleen het midden houdt
   // tegen, zodat je (en de wandelroute) onder de achtbaan door kunt lopen
   // (Mark 20 aug: "pad loopt onder de achtbaan maar eronderdoor lopen lukt niet").
-  achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, botsCells: 1, price: 150 },
-  achtbaanKlein: { id: "achtbaanKlein", kind: "attraction", name: "Kleine achtbaan", emoji: "🎢", procedural: "coaster", baan: "klein", cells: 5, botsCells: 1, price: 80 },
-  achtbaanSpiraal: { id: "achtbaanSpiraal", kind: "attraction", name: "Spiraal-achtbaan", emoji: "🌀", procedural: "coaster", baan: "spiraal", cells: 7, botsCells: 1, price: 220 },
+  // 💰 Prijzen gespreid tot een échte spaar-ladder (Mark 22 aug, park-megabuild
+  // #5): de grote attracties zijn nu lange-termijn-doelen om weken naartoe te
+  // sparen i.p.v. dag-1-aankopen. Kleine achtbaan blijft een haalbaar week-doel.
+  achtbaan: { id: "achtbaan", kind: "attraction", name: "Achtbaan", emoji: "🎢", procedural: "coaster", baan: "groot", cells: 7, botsCells: 1, price: 300 },
+  achtbaanKlein: { id: "achtbaanKlein", kind: "attraction", name: "Kleine achtbaan", emoji: "🎢", procedural: "coaster", baan: "klein", cells: 5, botsCells: 1, price: 120 },
+  achtbaanSpiraal: { id: "achtbaanSpiraal", kind: "attraction", name: "Spiraal-achtbaan", emoji: "🌀", procedural: "coaster", baan: "spiraal", cells: 7, botsCells: 1, price: 450 },
   trein: { id: "trein", kind: "attraction", name: "Treintje", emoji: "🚂", procedural: "train", price: 65 },
   // ---- TREIN-op-rails (Mark 2026-06-27): leg losse rails neer → de trein rijdt
   // jouw route. Rails = klein, niet-blokkerend decor (snapt op het raster). Het

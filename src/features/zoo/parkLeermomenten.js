@@ -216,6 +216,9 @@ export const PARK_LEERMOMENTEN = {
   klok: {
     id: "klok", emoji: "🕐", titel: "De klokkentoren",
     praatje: "Kijk op de grote klok! De lange wijzer wijst de minuten aan, de korte wijzer de uren. Als de lange wijzer helemaal rond is geweest, is er een heel uur voorbij. Zo lees je precies hoe laat het is — op deze klok én op de klok thuis.",
+    // Jong-variant (Mark 22 aug, park-megabuild #7.3): op de gele route (groep 3-5)
+    // simpeler — alleen hele uren, geen minuten-uitleg.
+    praatjeJong: "Kijk op de grote klok! De korte wijzer wijst het uur aan. Staat de lange wijzer recht omhoog op de 12, dan is het een héél uur — bijvoorbeeld 3 uur. Kun jij zien hoe laat het is?",
     weetje: "Een dag heeft 24 uur, maar op een klok staan maar 12 cijfers. Daarom gaan de wijzers twee keer per dag helemaal rond: één keer 's ochtends en één keer 's middags/'s avonds.",
     leerpadId: "klokkijken", leerLabel: "Klokkijken",
   },
@@ -234,14 +237,30 @@ export const PARK_LEERMOMENTEN = {
   moestuin: {
     id: "moestuin", emoji: "🥕", titel: "De moestuin",
     praatje: "Deze moestuin is een rechthoek. Wil je weten hoeveel grond je hebt om op te planten — de oppervlakte? Dan doe je lengte keer breedte. Bij drie meter lang en twee meter breed is dat 3 × 2 = 6 vierkante meter.",
+    // Jong-variant (groep 3-5): hokjes tellen i.p.v. lengte × breedte + m².
+    praatjeJong: "Kijk, de moestuin is verdeeld in vierkante hokjes. In elk hokje past één plantje. Tel de hokjes maar: hoeveel plantjes passen er in de hele tuin? Zo weet je hoe groot de tuin is!",
     weetje: "Oppervlakte reken je in vierkante meters (m²): dat zijn hokjes van één bij één meter. Tel de hokjes en je weet precies hoe groot je tuin is.",
     leerpadId: "oppervlakte-omtrek-po", leerLabel: "Oppervlakte en omtrek",
   },
   telraam: {
     id: "telraam", emoji: "🧮", titel: "Het telraam",
     praatje: "Elke rij kralen telt anders mee: onderaan zijn het losse eenheden, dan tientallen, dan honderdtallen en bovenaan duizendtallen. Zo bouw je met een paar kralen een groot getal. Waar een cijfer staat, bepaalt hoeveel het waard is — dat heet plaatswaarde.",
+    // Jong-variant (groep 3-5): gewoon tellen tot 100, geen plaatswaarde.
+    praatjeJong: "Met een telraam kun je makkelijk tellen! Schuif de kralen één voor één opzij en tel mee: 1, 2, 3… Elke rij heeft tien kralen. Tel jij tot honderd?",
     weetje: "In het getal 3000 is de 3 duizend waard, maar in 300 maar driehonderd. Dezelfde 3, een andere plek — een heel andere waarde!",
     leerpadId: "kommagetallen-po", leerLabel: "Getallen en plaatswaarde",
+    leerpadIdJong: "getallen-tot-20-po", leerLabelJong: "Getallen + sommen tot 20",
+  },
+  // 🐄 Boerderijdieren — de dieren-stop op de gele route (Mark 22 aug, park-
+  // megabuild #7.2, Sem 8 jr: "mijn route gaat naar een klok, niet naar de
+  // dieren"). Tel-praatje op groep 3-4-niveau met keersommen (poten!).
+  boerderij: {
+    id: "boerderij", emoji: "🐄", titel: "De boerderijdieren",
+    praatje: "Kijk naar de dieren in de wei! Tel ze maar samen. Elk dier heeft 4 poten — dus 3 schapen zijn samen 3 × 4 = 12 poten. Zo oefen je de tafels zonder dat je het doorhebt: gewoon door te tellen wat je ziet.",
+    praatjeJong: "Kijk, dieren in de wei! Tel ze maar hardop: hoeveel schapen zie je? En hoeveel poten heeft één schaap? Tel de poten van twee schapen samen — dat zijn er 4 en nog eens 4!",
+    weetje: "Vier poten hebben bijna alle boerderijdieren — koe, schaap, varken, paard. Kippen niet: die hebben er maar twee, net als jij!",
+    leerpadId: "tafels-po", leerLabel: "Tafels oefenen",
+    leerpadIdJong: "getallen-tot-20-po", leerLabelJong: "Getallen + sommen tot 20",
   },
   parkkaart: {
     id: "parkkaart", emoji: "🗺️", titel: "De park-plattegrond",
@@ -350,6 +369,13 @@ for (const m of Object.values(PARK_LEERMOMENTEN)) {
 // Gebruikt door de rondloop-gids in ZooScene: kom je bij zo'n object in de
 // buurt en blijf je even, dan vertelt je maatje er ongevraagd (hardop) over.
 export const LEERMOMENT_BY_ASSET = {
+  // 🐄 Boerderijdieren → dieren-tel-stop (park-megabuild #7.2). Zo vindt de
+  // wandelroute de dieren én vertelt de gids er een tel-praatje bij.
+  cow: "boerderij",
+  sheep: "boerderij",
+  pig: "boerderij",
+  alpaca: "boerderij",
+  donkey: "boerderij",
   trein: "stoomtrein",
   // Station heeft nu een eigen leermoment (roosters lezen = Cito-studievaardig-
   // heden); de rijdende trein zelf blijft het stoomtrein-verhaal vertellen.

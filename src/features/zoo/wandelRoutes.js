@@ -22,7 +22,9 @@ export const WANDEL_ROUTES = [
     tekstKleur: "#5c4300",
     offset: -0.95,
     // Objecten langs deze route die een persoonlijke stop mogen worden (M2b).
-    pool: ["klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
+    // "boerderij" = de dieren-stop (Mark 22 aug, park-megabuild #7.2): het jongste
+    // kind wil naar de dieren, niet alleen naar een klok.
+    pool: ["boerderij", "klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
     // Kort rondje: ingang → boulevard → meet-tuin en terug.
     // (Route-inspectie 20 aug: eindpunt [-30,30] = midden van het meet-plein,
     //  vrij van de weegschaal; zijsporen wijzen vandaar naar de objecten.)
@@ -32,10 +34,12 @@ export const WANDEL_ROUTES = [
       [-29, 25], [-29, 18], [-29, 10], [-29, 2], [-24, 0], [-16, 0], [-8, 0],
       [-6, 3], [-3, 5], [0, 7], [0, 12], [0, 15],
     ],
+    // Finale (index 2) blijft altijd staan (personalisatie vervangt alleen stop
+    // 1 en 2) → de dieren-stop is gegarandeerd het slot van de gele route.
     stops: [
       { moment: "klok", emoji: "🕐", label: "de klok" },
-      { moment: "telraam", emoji: "🧮", label: "het telraam" },
       { moment: "moestuin", emoji: "🥕", label: "de moestuin" },
+      { moment: "boerderij", emoji: "🐄", label: "de boerderijdieren" },
     ],
   },
   {

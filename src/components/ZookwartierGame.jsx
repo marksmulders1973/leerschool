@@ -9,7 +9,7 @@ import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { meldParkAan } from "../data/repos/galerijRepo";
-import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD } from "../features/zoo/zooEconomy";
+import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD, PARK_INKOMST_CAP_PER_DAG } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, isManipuleerbaar, maatConfig, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
@@ -776,7 +776,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         const dagen = Math.min(MAX_DAGEN_INKOMST, Math.max(1, dagenVerschil(prevLogin)));
         // Bruto parkopbrengst − loon van de verkopers (vaste kost). Netto nooit
         // negatief: te veel kramen eet je winst op, maar je raakt nooit in de min.
-        const brutoPark = inkomstenPerDag(layout, kindVan) * dagen;
+        // Parkinkomen per dag gecapt (park-megabuild #5): leren blijft de motor.
+        const brutoPark = Math.min(PARK_INKOMST_CAP_PER_DAG, inkomstenPerDag(layout, kindVan)) * dagen;
         loon = loonkostenPerDag(layout) * dagen;
         parkGain = Math.max(0, brutoPark - loon);
         const g = groeiBabies(layout, isDier);
@@ -1451,8 +1452,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (!wandelStop || tafereel) return;
     const m = PARK_LEERMOMENTEN[wandelStop.moment];
     if (!m) return;
-    setTafereel(m);
-    try { track("park_leermoment", { id: m.id, via: "wandeling" }); } catch { /* */ }
+    // 🧒 Jong-praatje op de gele route (groep 3-5, park-megabuild #7.3): simpeler
+    // uitleg + een makkelijker leerpad-link waar die bestaat.
+    const jong = wandeling?.routeId === "geel";
+    const mm = jong && m.praatjeJong
+      ? { ...m, praatje: m.praatjeJong, ...(m.leerpadIdJong ? { leerpadId: m.leerpadIdJong, leerLabel: m.leerLabelJong || m.leerLabel } : {}) }
+      : m;
+    setTafereel(mm);
+    try { track("park_leermoment", { id: m.id, via: "wandeling", jong }); } catch { /* */ }
   };
   // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
   // zwakste concepten) — één keer ophalen zodra het kies-paneel opengaat.
@@ -1832,7 +1839,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <button onClick={sluitMenu} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, width: 40, height: 40, font: "800 16px system-ui", color: "#fff", background: "rgba(255,255,255,0.14)", cursor: "pointer" }}>✕</button>
             </div>
             <div style={{ color: "rgba(255,255,255,0.75)", font: "700 12.5px system-ui", margin: "6px 0 16px" }}>
-              🪙 {coins}{streak > 1 ? ` · 🔥 ${streak} dagen op rij` : ""} · 📈 je park verdient 🪙{inkomstenPerDag(placedItems, kindVan)} per dag
+              🪙 {coins}{streak > 1 ? ` · 🔥 ${streak} dagen op rij` : ""} · 📈 je park verdient 🪙{Math.min(PARK_INKOMST_CAP_PER_DAG, inkomstenPerDag(placedItems, kindVan))} per dag{inkomstenPerDag(placedItems, kindVan) > PARK_INKOMST_CAP_PER_DAG ? ` (max ${PARK_INKOMST_CAP_PER_DAG} — 🎓 leren levert méér op!)` : ""}
             </div>
 
             {/* Bouwen = de grote actie bovenaan. */}

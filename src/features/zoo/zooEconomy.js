@@ -7,7 +7,10 @@
 // Uitgeven aan dieren/attracties komt in de winkel (stap 4).
 import { getAsset } from "./AssetRegistry";
 
-export const START_COINS = 200; // ruim startbudget (lanceerweek) zodat je meteen kunt bouwen
+// Startbudget bewust laag (Mark 22 aug, park-megabuild #5): met 200 kocht je op
+// dag 1 al de duurste attractie → sparen bestond niet. Nu genoeg voor 1 dier +
+// wat decor, zodat er een échte spaar-boog ontstaat (kort/middel/lang doel).
+export const START_COINS = 80;
 export const LOGIN_BASE = 5;            // basis voor dagelijks inloggen
 export const LOGIN_STREAK_BONUS_MAX = 7; // +1 per streakdag, tot dit maximum
 // 12-agent-review 2 jul: was 8, maar kramen/parkinkomsten leverden méér op
@@ -19,6 +22,11 @@ export const KWARTIER_REWARD = 25;      // 15 min leren voltooid
 export const INKOMST_PER_VERBLIJF = 2;  // per dier/verblijf per dag
 export const INKOMST_PER_BABY = 1;      // extra per jonkie per dag
 export const MAX_DAGEN_INKOMST = 3;     // offline-opbrengst gecapt op 3 dagen
+// 🧢 Parkinkomen-plafond per dag (Mark 22 aug, park-megabuild #5): een groot
+// park verdiende ongecapt 60+/dag = 2,5× de kwartier-beloning → rondhangen werd
+// lonender dan leren. Nu is het passieve inkomen gecapt onder de kwartier-
+// beloning, zodat LEREN de grootste dagbron blijft (de koninklijke route).
+export const PARK_INKOMST_CAP_PER_DAG = 20;
 
 // Loonkosten: een kraam heeft een verkoper die je elke dag salaris kost. Zo
 // leert het kind "vaste kosten" — je betaalt het óók op een rustige dag. Zacht
