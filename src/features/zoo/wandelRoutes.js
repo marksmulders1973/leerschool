@@ -48,8 +48,9 @@ export const WANDEL_ROUTES = [
     offset: 0,
     pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
     // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
-    // (Route-inspectie 20 aug: om de bomenlaan, achtbaan-steun, kei en
-    //  wereldbol heen gelegd; piramide-keerpunt buiten de botszone.)
+    // (Her-uitlijning 22 aug, Mark: "niet dwars door de achtbaan maar eromheen"
+    //  — de oost-arm volgt nu de nieuwe pad-bocht: bij de rails omhoog (x=10),
+    //  tussen kraam en hertenkamp door, bovenlangs (z=11) naar de laan-kop.)
     cells: [
       [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
       [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
@@ -58,8 +59,8 @@ export const WANDEL_ROUTES = [
       [-29, -5], [-30, -11],
       [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
       [-6, -3], [-2, -4], [2, -4], [6, -3], [8, 0],
-      [12, 1], [17, 1], [22, 0], [24, 2], [29, 3],
-      [24, 2], [22, 0], [17, 1], [12, 1], [9, 0], [6, 3], [3, 5],
+      [9, 0], [10, 2], [10, 6], [10, 10], [13, 11], [17, 11], [21, 11],
+      [17, 11], [13, 11], [10, 10], [10, 6], [10, 2], [9, 0], [6, 3], [3, 5],
       [0, 7], [0, 12], [0, 15],
     ],
     stops: [
@@ -78,13 +79,16 @@ export const WANDEL_ROUTES = [
     offset: 0.95,
     pool: ["eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot", "kompas"],
     // De poorten-laan op en neer, langs de landmark-poorten.
-    // (Route-inspectie 20 aug: knikken om de bomenlaan/achtbaan/kei/wereldbol
-    //  heen; keerpunt vóór het kompas i.p.v. erín.)
+    // (Her-uitlijning 22 aug, Mark: "niet dwars door de achtbaan maar eromheen"
+    //  — heen via de nieuwe pad-bocht (x=10 omhoog, z=11 bovenlangs) de laan
+    //  binnen aan de noordkop, dan het middenpad af tot vóór de spaarpot en
+    //  dezelfde weg terug. Kruist nergens meer een attractie.)
     cells: [
       [0, 16], [0, 12], [0, 7], [3, 5], [6, 3], [9, 0],
-      [12, 1], [17, 1], [22, 0], [24, 2], [29, 3], [29, 8], [29, 10],
-      [29, 7], [29, 1], [29, -5], [29, -11],
-      [29, -6], [29, 0], [24, 2], [22, 0], [17, 1], [12, 1], [9, 0],
+      [10, 2], [10, 6], [10, 10], [13, 11], [17, 11], [21, 11],
+      [24, 10], [27, 9], [29, 6], [29, 1], [29, -4], [29, -8], [29, -11],
+      [29, -6], [29, 0], [29, 5], [27, 9], [24, 10], [21, 11], [17, 11], [13, 11],
+      [10, 10], [10, 6], [10, 2], [9, 0],
       [6, 3], [3, 5], [0, 7], [0, 12], [0, 15],
     ],
     stops: [

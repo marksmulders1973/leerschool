@@ -19,7 +19,7 @@ import Buitenwereld from "./Buitenwereld";
 import WandelPreview, { wandelPreviewActief } from "./WandelPreview";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder } from "./UitvindersKabouters";
-import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot } from "./ParkLeerobjecten";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
@@ -400,6 +400,8 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "kas") return <Kas position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "weerstation") return <Weerstation position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "spaarpot") return <Spaarpot position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "bordBouw") return <Bouwbord position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "bordZwembad") return <Bouwbord position={[x, y, z]} rotation={rotation} variant="zwembad" />;
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "trash") return <TrashCan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "donation") return <DonationBox position={[x, y, z]} rotation={rotation} />;

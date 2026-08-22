@@ -529,3 +529,38 @@ export function Spaarpot({ position = [0, 0, 0], rotation = 0 }) {
     </group>
   );
 }
+
+/* 🚧 Bouwbord — "hier wordt nog gebouwd" (Mark 22 aug): maakt de groei-plekken
+   van het park zichtbaar en belooft wat er komt. variant "zwembad" kondigt het
+   geplande zwembad aan (idee #44: balk vult zich met water, l × b × d). */
+export function Bouwbord({ position = [0, 0, 0], rotation = 0, variant = "bouw" }) {
+  const zwembad = variant === "zwembad";
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {[-0.55, 0.55].map((x, i) => (
+        <mesh key={i} position={[x, 0.7, 0]} castShadow>
+          <cylinderGeometry args={[0.07, 0.07, 1.4, 8]} />
+          <meshStandardMaterial color="#7a5a34" flatShading roughness={1} />
+        </mesh>
+      ))}
+      <mesh position={[0, 1.35, 0]} castShadow>
+        <boxGeometry args={[1.75, 0.9, 0.08]} />
+        <meshStandardMaterial color={zwembad ? "#3a78c9" : "#e8b400"} flatShading roughness={0.8} />
+      </mesh>
+      {/* gestreepte bouw-rand onder het bord */}
+      {[-0.6, -0.2, 0.2, 0.6].map((x, i) => (
+        <mesh key={"s" + i} position={[x, 0.86, 0.01]} rotation={[0, 0, 0.5]}>
+          <boxGeometry args={[0.1, 0.16, 0.09]} />
+          <meshStandardMaterial color={i % 2 ? "#1c1c1c" : (zwembad ? "#cfe4ff" : "#fff")} flatShading />
+        </mesh>
+      ))}
+      <Html position={[0, 1.38, 0.07]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+        <div style={{ background: "rgba(255,255,255,0.94)", borderRadius: 8, padding: "5px 10px", fontFamily: "system-ui, sans-serif", fontSize: 11, fontWeight: 800, color: "#333", whiteSpace: "nowrap", textAlign: "center", boxShadow: "0 1px 4px rgba(0,0,0,0.25)" }}>
+          {zwembad
+            ? <>🏊 Hier komt het zwembad!<br /><span style={{ fontWeight: 600, color: "#666" }}>hoeveel water past erin? lengte × breedte × diepte</span></>
+            : <>🚧 Hier wordt nog gebouwd<br /><span style={{ fontWeight: 600, color: "#666" }}>het park groeit met jou mee</span></>}
+        </div>
+      </Html>
+    </group>
+  );
+}

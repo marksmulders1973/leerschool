@@ -209,6 +209,11 @@ export const ZOO_ASSETS = {
   // jouw route. Rails = klein, niet-blokkerend decor (snapt op het raster). Het
   // station is een gebouw met instapprijs (passieve muntjes per dag). ----
   rail: { id: "rail", kind: "decor", name: "Rails", emoji: "🛤️", procedural: "rail", cells: 1, price: 6, beloopbaar: true },
+  // 🚧 Bouwbordjes (Mark 22 aug): maken zichtbaar wat er nog gebouwd gaat
+  // worden — het park is bewust nooit af (leren = park groeit). Het zwembad-
+  // bord kondigt idee #44 aan (balk vult zich met water, l × b × d).
+  bordBouw: { id: "bordBouw", kind: "decor", name: "Bouwbord", emoji: "🚧", procedural: "bordBouw", cells: 1, price: 10 },
+  bordZwembad: { id: "bordZwembad", kind: "decor", name: "Zwembad-bord", emoji: "🏊", procedural: "bordZwembad", cells: 1, price: 10 },
   station: { id: "station", kind: "building", name: "Treinstation", emoji: "🚉", procedural: "station", price: 80, inkomst: 8 },
 
   // ---- Natuur & bouwen (Kenney Nature Kit + procedureel pad). cells:1 = klein.

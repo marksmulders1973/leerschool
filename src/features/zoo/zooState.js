@@ -141,7 +141,13 @@ function bouwVoorbeeldPark() {
   //    Een eigen laan op de open oostflank, ruim naast de bestaande attracties. ──
   vlak("pathStone", 22, 37, -15, 15);            // de laan
   kolom("pathRed", 29, -14, 14);                 // middenpad
-  rij("pathStone", 0, 9, 22);                    // aftakking vanaf het centrum (z0) naar de laan
+  // Aftakking centrum → laan (Mark 22 aug: "niet dwars door de achtbaan maar
+  // eromheen"): de oude rechte rij (z=0, x9..22) liep dwars door de achtbaan-
+  // strook (x12..16). Nu een nette bocht: bij de rails omhoog, tussen kraam en
+  // hertenkamp door, en bovenlangs (z=11) naar de noordkop van de laan.
+  rij("pathStone", 0, 9, 10);
+  kolom("pathStone", 10, 1, 10);
+  rij("pathStone", 11, 10, 21);
   // twee kolommen landmarks, ruim gespreid (poort wijst naar het noorden/pad)
   add("eiffeltoren", 25, 12); add("raket", 33, 12);
   add("tempel", 25, 6);       add("vulkaan", 33, 6);
@@ -153,6 +159,14 @@ function bouwVoorbeeldPark() {
   add("treeOak", 22, 3); add("treeOak", 22, -3); add("tree", 37, 3); add("tree", 37, -3);
   add("flowerRed", 29, 8); add("flowerYellow", 29, -8);
   add("bankje", 31, 4); add("bankje", 31, -4); // (van het middenpad af — daar loopt de blauwe route)
+
+  // ── 🚧 BOUWBORDJES (Mark 22 aug: "geef aan wat er nog gebouwd moet worden").
+  //    Het park is bewust nooit af — de bordjes maken de groei-plekken zichtbaar
+  //    en beloven wat er komt. Zwembad = idee #44 (balk die zich vult met water,
+  //    inhoud = lengte × breedte × diepte), gepland naast de vormen-familie. ──
+  add("bordZwembad", -30, 20);  // meetkunde-tuin: tussen bol en halve bol
+  add("bordBouw", 18, 20);      // noordoost-veld: open bouwgrond
+  add("bordBouw", -14, -14);    // zuidwest-veld: open bouwgrond bij het dorpje
 
   return L;
 }
@@ -235,6 +249,44 @@ export function maakWandelrouteVrij(layout) {
     });
 }
 
+// 🎢 Oost-pad om de achtbaan heen (Mark 22 aug: "paden niet dwars door de
+// achtbaan maar eromheen"). In bestaande parken ligt de oude seed-aftakking
+// (pathStone op z=0, x11..22) dwars door de achtbaan-strook. Alleen exact die
+// seed-tegels verdwijnen; de bocht-tegels (x=10 omhoog + z=11 bovenlangs) en
+// de bouwbordjes komen erbij op cellen die nog vrij zijn. Idempotent: bocht of
+// bord al aanwezig → geen tweede keer.
+export function legOostPadOmAchtbaan(layout) {
+  if (!Array.isArray(layout)) return layout;
+  // Alleen ingrijpen als het oude dwars-pad er nog ligt (herkenbaar aan een
+  // seed-tegel midden in de achtbaan-strook).
+  const dwars = layout.some((it) => it && it.assetId === "pathStone" && Array.isArray(it.cell) && it.cell[1] === 0 && it.cell[0] >= 12 && it.cell[0] <= 16);
+  const bezet = new Set();
+  layout.forEach((it) => { if (it && Array.isArray(it.cell)) bezet.add(`${it.cell[0]},${it.cell[1]}`); });
+  let uit = layout;
+  if (dwars) {
+    uit = uit.filter((it) => !(it && it.assetId === "pathStone" && Array.isArray(it.cell) && it.cell[1] === 0 && it.cell[0] >= 11 && it.cell[0] <= 22));
+    const bocht = [];
+    for (let z = 1; z <= 10; z++) bocht.push([10, z]);
+    for (let x = 10; x <= 21; x++) bocht.push([x, 11]);
+    for (const [x, z] of bocht) {
+      if (bezet.has(`${x},${z}`)) continue;
+      bezet.add(`${x},${z}`);
+      uit = [...uit, { assetId: "pathStone", cell: [x, z], rotation: 0, price: 0 }];
+    }
+  }
+  // Bouwbordjes bijzetten in parken die ze nog niet hebben (alleen vrije cellen).
+  const heeftBord = (id) => uit.some((it) => it && it.assetId === id);
+  const bordPlekken = [["bordZwembad", -30, 20], ["bordBouw", 18, 20], ["bordBouw", -14, -14]];
+  const bordBouwAl = heeftBord("bordBouw");
+  for (const [id, x, z] of bordPlekken) {
+    if (id === "bordZwembad" ? heeftBord("bordZwembad") : bordBouwAl) continue;
+    if (bezet.has(`${x},${z}`)) continue;
+    bezet.add(`${x},${z}`);
+    uit = [...uit, { assetId: id, cell: [x, z], rotation: 0, price: 0 }];
+  }
+  return uit;
+}
+
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
 // corrupte items eruit + meetkunde-objecten uit elkaar. Eén item zonder bekende
 // asset of zonder positie (geen cell én geen kx) gooide anders een TypeError in
@@ -244,7 +296,7 @@ export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
   const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
-  return maakWandelrouteVrij(spreidLeerobjecten(schoon));
+  return legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon)));
 }
 
 export function defaultState() {
