@@ -11,6 +11,14 @@
 // "groep 3-5" in het spoor (zoals tekst op een fietspad), stops met emoji.
 
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
+import { LINT_WAYPOINTS } from "./leerpadLint";
+
+// 🎓 De wandelroutes volgen nu ÉÉN pad: het leerpad-lint (Mark 22 aug: "1 pad
+// wat van kleur verandert"). Alle drie de routes delen dezelfde cells (het hele
+// lint) — de dotted preview tijdens een wandeling traceert dus exact het lint.
+// Wat per niveau verschilt zijn de STOPS: elk kind loopt hetzelfde mooie pad,
+// maar stopt bij de stations van zijn eigen band (geel/groen/blauw).
+const LINT_CELLS = LINT_WAYPOINTS.map(([x, z]) => [x, z]);
 
 export const WANDEL_ROUTES = [
   {
@@ -20,20 +28,12 @@ export const WANDEL_ROUTES = [
     stempel: "groep 3-5",
     kleur: "#ffd54f",
     tekstKleur: "#5c4300",
-    offset: -0.95,
+    offset: 0,
     // Objecten langs deze route die een persoonlijke stop mogen worden (M2b).
     // "boerderij" = de dieren-stop (Mark 22 aug, park-megabuild #7.2): het jongste
     // kind wil naar de dieren, niet alleen naar een klok.
     pool: ["boerderij", "klok", "telraam", "moestuin", "weegschaal", "breukentaart", "parkkaart"],
-    // Kort rondje: ingang → boulevard → meet-tuin en terug.
-    // (Route-inspectie 20 aug: eindpunt [-30,30] = midden van het meet-plein,
-    //  vrij van de weegschaal; zijsporen wijzen vandaar naar de objecten.)
-    cells: [
-      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-      [-16, 0], [-24, 0], [-29, 2], [-29, 10], [-29, 18], [-29, 25], [-30, 30],
-      [-29, 25], [-29, 18], [-29, 10], [-29, 2], [-24, 0], [-16, 0], [-8, 0],
-      [-6, 3], [-3, 5], [0, 7], [0, 12], [0, 15],
-    ],
+    cells: LINT_CELLS,
     // Finale (index 2) blijft altijd staan (personalisatie vervangt alleen stop
     // 1 en 2) → de dieren-stop is gegarandeerd het slot van de gele route.
     stops: [
@@ -50,26 +50,11 @@ export const WANDEL_ROUTES = [
     kleur: "#00c853",
     tekstKleur: "#0b3d20",
     offset: 0,
-    pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
-    // De grote ronde: meet-tuin → vormen → piramide → rustpunt → poorten-laan.
-    // (Her-uitlijning 22 aug, Mark: "niet dwars door de achtbaan maar eromheen"
-    //  — de oost-arm volgt nu de nieuwe pad-bocht: bij de rails omhoog (x=10),
-    //  tussen kraam en hertenkamp door, bovenlangs (z=11) naar de laan-kop.)
-    cells: [
-      [0, 16], [0, 12], [0, 7], [-3, 5], [-6, 3], [-8, 0],
-      [-16, 0], [-24, 0], [-29, 2], [-29, 8], [-29, 13],
-      [-29, 19], [-29, 25], [-30, 30],
-      [-29, 24], [-29, 16], [-29, 8], [-29, 1],
-      [-29, -5], [-30, -11],
-      [-29, -8], [-29, -2], [-24, 0], [-16, 0], [-8, 0],
-      [-6, -3], [-2, -4], [2, -4], [6, -3], [8, 0],
-      [9, 0], [10, 2], [10, 6], [10, 10], [13, 11], [17, 11], [21, 11],
-      [17, 11], [13, 11], [10, 10], [10, 6], [10, 2], [9, 0], [6, 3], [3, 5],
-      [0, 7], [0, 12], [0, 15],
-    ],
+    pool: ["breukentaart", "kubus", "kegel", "cilinder", "bol", "halvebol", "zwembad", "piramide", "klok", "weegschaal", "moestuin", "telraam", "kompas", "parkkaart"],
+    cells: LINT_CELLS,
     stops: [
-      { moment: "breukentaart", emoji: "🥧", label: "de breukentaart" },
       { moment: "kubus", emoji: "🧊", label: "de kubus" },
+      { moment: "zwembad", emoji: "🏊", label: "het zwembad" },
       { moment: "piramide", emoji: "🔺", label: "de piramide" },
     ],
   },
@@ -80,21 +65,9 @@ export const WANDEL_ROUTES = [
     stempel: "brugklas",
     kleur: "#42a5f5",
     tekstKleur: "#0b2a4a",
-    offset: 0.95,
+    offset: 0,
     pool: ["eiffeltoren", "tempel", "wereldbol", "telescoop", "standbeeld", "molen", "raket", "vulkaan", "kas", "weerstation", "spaarpot", "kompas"],
-    // De poorten-laan op en neer, langs de landmark-poorten.
-    // (Her-uitlijning 22 aug, Mark: "niet dwars door de achtbaan maar eromheen"
-    //  — heen via de nieuwe pad-bocht (x=10 omhoog, z=11 bovenlangs) de laan
-    //  binnen aan de noordkop, dan het middenpad af tot vóór de spaarpot en
-    //  dezelfde weg terug. Kruist nergens meer een attractie.)
-    cells: [
-      [0, 16], [0, 12], [0, 7], [3, 5], [6, 3], [9, 0],
-      [10, 2], [10, 6], [10, 10], [13, 11], [17, 11], [21, 11],
-      [24, 10], [27, 9], [29, 6], [29, 1], [29, -4], [29, -8], [29, -11],
-      [29, -6], [29, 0], [29, 5], [27, 9], [24, 10], [21, 11], [17, 11], [13, 11],
-      [10, 10], [10, 6], [10, 2], [9, 0],
-      [6, 3], [3, 5], [0, 7], [0, 12], [0, 15],
-    ],
+    cells: LINT_CELLS,
     stops: [
       { moment: "eiffeltoren", emoji: "🗼", label: "de Eiffeltoren" },
       { moment: "wereldbol", emoji: "🌍", label: "de wereldbol" },

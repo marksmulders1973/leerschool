@@ -25,25 +25,25 @@ export const LINT_WAYPOINTS = [
   [0, 16, 0],
   [0, 9, 0],
   [-7, 6, 0],
-  [-14, 6, 0],   // boerderijdieren
+  [-13, 7, 0],   // langs de boerderij (verblijf -17..-11, z3-9)
   [-20, 9, 0],
   [-24, 18, 0],
-  [-27, 27, 0],  // moestuin / telraam
-  [-34, 30, 0],  // klok
-  // 🟢 GROEN — meet-tuin → de inhoud-vormen → zwembad → piramide
-  [-37, 24, 1],
-  [-37, 17, 1],  // bol
-  [-31, 19, 1],  // zwembad
-  [-26, 13, 1],  // cilinder
-  [-22, 9, 1],   // kegel
-  [-30, 3, 1],   // kubus
-  [-30, -8, 1],
-  [-30, -18, 1], // piramide
-  // 🔵 BLAUW — zuidkant over → ontdek-laan met landmarks → terug naar de ingang
-  [-22, -24, 2],
-  [-8, -27, 2],
-  [8, -25, 2],
-  [20, -20, 2],
+  [-25, 26, 0],  // moestuin (-23,28) / telraam (-27,32)
+  [-33, 29, 0],  // klok (-38,28) / weegschaal (-33,28)
+  // 🟢 GROEN — meet-tuin → de inhoud-vormen → zwembad → piramide (langs de rand)
+  [-37, 23, 1],
+  [-35, 17, 1],  // bol (-37,16)
+  [-29, 19, 1],  // zwembad (-30,20)
+  [-25, 13, 1],  // cilinder (-26,13)
+  [-22, 8, 1],   // kegel (-22,8) / halvebol (-22,22 verderop)
+  [-32, 4, 1],   // kubus (-35,2)
+  [-30, -3, 1],
+  [-27, -9, 1],  // piramide-plein NOORDRAND (piramide zelf -30,-19, footprint 21!)
+  // 🔵 BLAUW — via het zuiden naar de ontdek-laan met landmarks → terug naar de ingang
+  [-16, -8, 2],
+  [-4, -10, 2],
+  [8, -14, 2],
+  [19, -16, 2],
   [29, -12, 2],  // molen / weerstation
   [29, -2, 2],   // standbeeld / wereldbol
   [29, 6, 2],    // tempel / vulkaan
@@ -52,6 +52,11 @@ export const LINT_WAYPOINTS = [
   [10, 16, 2],
   [0, 16, 2],    // terug bij de start
 ];
+
+// 🔀 Entree-splitsing (Mark 22 aug: "links of rechts, makkelijk of moeilijk").
+// Bij de ingang wijst een bordje twee kanten op: linksom loop je het lint vooruit
+// (geel = makkelijk eerst), rechtsom loop je het achteruit (blauw = moeilijk eerst).
+export const LINT_START = { x: 0, z: 16 };
 
 // De index van het eerste waypoint van elke band → daar zet ZooScene een
 // niveau-overgang-bordje ("nu Groep 6-8").

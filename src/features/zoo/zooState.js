@@ -39,11 +39,15 @@ function bouwVoorbeeldPark() {
     dieren.forEach((a, i) => add(a, x1 + 1 + (i % (x2 - x1 - 1)), z1 + 1 + Math.floor(i / (x2 - x1 - 1))));
   };
 
-  // ── PADEN ── hoofdboulevard (steen) van de ingang naar achteren + kruispaden
-  kolom("pathStone", 0, -14, 17);
-  rij("pathStone", 17, -2, 2); rij("pathStone", 16, -2, 2); // brede ingang
-  rij("pathStone", 6, -9, 9); rij("pathStone", -6, -9, 9);  // kruispaden
-  vlak("pathRed", -3, 3, -3, 3);                            // plein rond de draaimolen
+  // ── PADEN ── (Mark 22 aug: "ruim alles op — 1 pad") De losse grijze paden
+  // zijn weg: het doorlopende gekleurde LEERPAD-LINT (leerpadLint.js) is nu het
+  // hoofdpad door het park. We houden alleen een klein entree-pleintje bij de
+  // poort en een pleintje rond de draaimolen als rustpunt in het midden.
+  // De twee pleintjes markeren we als `vast` zodat de opruim-migratie voor
+  // bestaande parken (ruimSeedPadenOp) ze met rust laat — alleen de óude losse
+  // grijze paden worden daar weggehaald.
+  for (let x = -2; x <= 2; x++) for (let z = 14; z <= 17; z++) L.push({ assetId: "pathStone", cell: [x, z], rotation: 0, price: 0, vast: 1 });
+  for (let x = -3; x <= 3; x++) for (let z = -3; z <= 3; z++) L.push({ assetId: "pathRed", cell: [x, z], rotation: 0, price: 0, vast: 1 });
 
   // ── INGANG ──
   add("hekPoort", 0, 18);
@@ -114,14 +118,10 @@ function bouwVoorbeeldPark() {
   // voetbalveld ertussen"). De grote objecten staan nu VER uit elkaar (~24-40 m)
   // zodat de camera nergens tegenaan zwaait en alles lekker open is. Een lange
   // pad-spine verbindt alles; de rest is open gras.
-  // ── piramide-plein (3× piramide) helemaal in de zuidwesthoek
-  vlak("pathStone", -40, -19, -30, -8);
+  // ── piramide (zuidwesthoek) — staat nu op gras; het lint loopt langs de rand
   add("piramide", -30, -19);
   add("treePalm", -40, -30); add("treePalm", -20, -30);
   add("bankje", -39, -9); add("bankje", -21, -9);
-  // pad-spine noordwaarts + verbinding door de opening naar het centrum
-  kolom("pathStone", -29, -8, 30);
-  rij("pathStone", 0, -28, -3);
   // ── de vormen, elk op RUIME afstand (kubus/kegel/cilinder/bal/koepel).
   // De cilinder staat bewust in de buurt van de kegel: zelfde bodem + hoogte,
   // dus je ZIET dat de kegel er een derde van is (18 aug).
@@ -133,24 +133,15 @@ function bouwVoorbeeldPark() {
   add("bol", -37, 16);
   add("halvebol", -22, 22);
   add("flowerPurple", -34, -1); add("flowerYellow", -23, 4); add("flowerRed", -37, 12);
-  // ── de kleinere meet-objecten: een eigen compacte rij ver in het noorden
-  vlak("pathStone", -39, -20, 26, 32);
+  // ── de kleinere meet-objecten: een eigen compacte rij ver in het noorden (op gras)
   add("klok", -38, 28); add("weegschaal", -33, 28); add("breukentaart", -28, 28); add("moestuin", -23, 28);
   add("telraam", -35, 32); add("parkkaart", -27, 32);
   add("bankje", -22, 27);
 
   // ── 🎡 ONTDEK-LAAN (Mark 16-17 aug 2026): de landmark-blikvangers met magische
   //    poorten uit het masterplan. Loop je door zo'n poort → het leerpad opent.
-  //    Een eigen laan op de open oostflank, ruim naast de bestaande attracties. ──
-  vlak("pathStone", 22, 37, -15, 15);            // de laan
-  kolom("pathRed", 29, -14, 14);                 // middenpad
-  // Aftakking centrum → laan (Mark 22 aug: "niet dwars door de achtbaan maar
-  // eromheen"): de oude rechte rij (z=0, x9..22) liep dwars door de achtbaan-
-  // strook (x12..16). Nu een nette bocht: bij de rails omhoog, tussen kraam en
-  // hertenkamp door, en bovenlangs (z=11) naar de noordkop van de laan.
-  rij("pathStone", 0, 9, 10);
-  kolom("pathStone", 10, 1, 10);
-  rij("pathStone", 11, 10, 21);
+  //    De losse laan-paden zijn weg (Mark 22 aug): het blauwe deel van het
+  //    leerpad-lint loopt nu tussen de twee landmark-kolommen door (x=29). ──
   // twee kolommen landmarks, ruim gespreid (poort wijst naar het noorden/pad)
   add("eiffeltoren", 25, 12); add("raket", 33, 12);
   add("tempel", 25, 6);       add("vulkaan", 33, 6);
@@ -295,6 +286,17 @@ export function legOostPadOmAchtbaan(layout) {
   return uit;
 }
 
+// 🧹 Losse grijze seed-paden opruimen (Mark 22 aug: "ruim alles op — 1 pad").
+// Het doorlopende leerpad-lint is nu het hoofdpad. Verwijdert in bestaande parken
+// alléén de OUDE seed-pad-tegels (pathStone/pathRed/path met price 0 én zonder
+// `vast`-vlag). Zelf-gekochte paden (price > 0) en de nieuwe pleintjes (vast)
+// blijven staan. Idempotent.
+export function ruimSeedPadenOp(layout) {
+  if (!Array.isArray(layout)) return layout;
+  const PAD = new Set(["path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark"]);
+  return layout.filter((it) => !(it && PAD.has(it.assetId) && (it.price || 0) === 0 && !it.vast));
+}
+
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
 // corrupte items eruit + meetkunde-objecten uit elkaar. Eén item zonder bekende
 // asset of zonder positie (geen cell én geen kx) gooide anders een TypeError in
@@ -304,7 +306,7 @@ export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
   const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
-  return legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon)));
+  return ruimSeedPadenOp(legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon))));
 }
 
 export function defaultState() {

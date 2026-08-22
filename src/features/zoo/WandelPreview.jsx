@@ -20,7 +20,7 @@ import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { CELL } from "./grid";
 import { WANDEL_ROUTES } from "./wandelRoutes";
-import { LINT_BANDEN, LINT_WAYPOINTS, LINT_BAND_STARTS } from "./leerpadLint";
+import { LINT_BANDEN, LINT_WAYPOINTS, LINT_BAND_STARTS, LINT_START } from "./leerpadLint";
 
 export function wandelPreviewActief() {
   try {
@@ -296,6 +296,36 @@ export function Leerpadlint({ heightRef }) {
         <planeGeometry args={[1, 1]} />
         <meshStandardMaterial vertexColors transparent opacity={0.92} roughness={0.85} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
       </instancedMesh>
+      {/* 🔀 Entree-splitsing (Mark 22 aug: "links of rechts, makkelijk of moeilijk"):
+          bij de ingang wijst een wegwijzer twee kanten op. Linksom (west) begin je
+          makkelijk (geel), rechtsom (oost) begin je bij het moeilijke eind (blauw). */}
+      {(() => {
+        const sx = LINT_START.x * CELL, sz = LINT_START.z * CELL;
+        const y = hoogte(sx, sz);
+        const arm = (kleur, tekst, sub, kant) => (
+          <group position={[kant * 0.15, 1.35, 0]}>
+            <mesh position={[kant * 0.55, 0, 0]} castShadow><boxGeometry args={[1.15, 0.5, 0.06]} /><meshStandardMaterial color={kleur} /></mesh>
+            {/* pijlpunt */}
+            <mesh position={[kant * 1.2, 0, 0]} rotation={[0, 0, kant > 0 ? -Math.PI / 4 : Math.PI / 4]}><boxGeometry args={[0.36, 0.36, 0.06]} /><meshStandardMaterial color={kleur} /></mesh>
+            <Html position={[kant * 0.55, 0, 0.05]} center distanceFactor={9} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+              <div style={{ width: 96, textAlign: "center", fontFamily: "system-ui, sans-serif", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.5)" }}>
+                <div style={{ fontWeight: 800, fontSize: 12 }}>{kant < 0 ? "⬅️ " : ""}{tekst}{kant > 0 ? " ➡️" : ""}</div>
+                <div style={{ fontWeight: 700, fontSize: 9.5, opacity: 0.95 }}>{sub}</div>
+              </div>
+            </Html>
+          </group>
+        );
+        return (
+          <group position={[sx, y, sz]}>
+            <mesh position={[0, 0.9, 0]} castShadow><boxGeometry args={[0.12, 1.8, 0.12]} /><meshStandardMaterial color="#6b4f2a" /></mesh>
+            {arm("#ffd54f", "Makkelijk", "groep 3-5 · geel", -1)}
+            {arm("#42a5f5", "Moeilijk", "brugklas · blauw", 1)}
+            <Html position={[0, 2.15, 0]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+              <div style={{ whiteSpace: "nowrap", background: "rgba(255,254,248,0.95)", border: "2px solid #234", borderRadius: 8, padding: "3px 9px", fontFamily: "system-ui, sans-serif", fontSize: 11.5, fontWeight: 800, color: "#234" }}>🎓 Kies je kant</div>
+            </Html>
+          </group>
+        );
+      })()}
       {/* 🪧 Niveau-overgang-bordjes: "nu Groep 6-8" — zo voel je dat je een groep
           verder gaat, net als op school. */}
       {borden.map((b, i) => {
@@ -350,9 +380,10 @@ export default function WandelPreview({ heightRef, borden = false, toon = null, 
 
       {PAALTJES.map((p, i) => {
         const r = ROUTES[p.route];
-        // Paaltjes-labels filteren mee (speeltest 20 aug: tijdens een gele
-        // wandeling bleef het blauwe route-label in beeld hangen).
-        if (toon && !toon.includes(r.id)) return null;
+        // Idle → geen losse route-paaltjes meer (de entree-splitsing + het lint
+        // vervangen ze, Mark 22 aug); tijdens een wandeling alleen die van de
+        // gekozen route.
+        if (!toon || !toon.includes(r.id)) return null;
         const x = p.cell[0] * CELL, z = p.cell[1] * CELL;
         const y = heightRef?.current ? heightRef.current(x, z) : 0;
         return (
