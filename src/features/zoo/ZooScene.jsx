@@ -16,7 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import WandelPreview, { wandelPreviewActief } from "./WandelPreview";
+import WandelPreview, { wandelPreviewActief, Leerpadlint } from "./WandelPreview";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord } from "./ParkLeerobjecten";
@@ -1256,6 +1256,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Buitenwereld />
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
+        {/* 🎓 Het doorlopende leerpad-lint = het hoofdpad van het park (Mark 22
+            aug): geel → groen → blauw, de schoolreis van tellen tot parabolen. */}
+        <Leerpadlint heightRef={heightFnRef} />
         <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} stopDoelen={wandelStopDoelen} />
         <WandelStopWachter doel={wandelDoel} playerPos={playerPos} onBereikt={onWandelBereikt} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan

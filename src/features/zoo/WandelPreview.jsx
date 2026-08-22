@@ -20,6 +20,7 @@ import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { CELL } from "./grid";
 import { WANDEL_ROUTES } from "./wandelRoutes";
+import { LINT_BANDEN, LINT_WAYPOINTS, LINT_BAND_STARTS } from "./leerpadLint";
 
 export function wandelPreviewActief() {
   try {
@@ -225,6 +226,98 @@ function RouteStippen({ route, heightRef, doelen }) {
   );
 }
 
+// 🎓 Leerpad-lint — één doorlopend, vloeiend gekleurd grondpad = de schoolreis
+// (Mark 22 aug). Bouwt een gesloten Catmull-Rom-curve door de waypoints en legt
+// er een aaneengesloten rij platte tegels op, elke tegel gekleurd naar zijn
+// niveau-band (geel→groen→blauw). Bij elke band-overgang een niveau-bordje.
+// Altijd zichtbaar: dit ís het hoofdpad van het park.
+const LINT_BREEDTE = 2.4;   // breedte van het pad
+const LINT_STAP = 0.7;      // afstand tussen de tegels (overlappen → aaneengesloten)
+
+export function Leerpadlint({ heightRef }) {
+  const instRef = useRef();
+  const { tegels, borden } = useMemo(() => {
+    const pts = LINT_WAYPOINTS.map(([cx, cz]) => new THREE.Vector3(cx * CELL, 0, cz * CELL));
+    const curve = new THREE.CatmullRomCurve3(pts, true, "catmullrom", 0.5);
+    const lengte = curve.getLength();
+    const n = Math.max(40, Math.round(lengte / LINT_STAP));
+    // Per waypoint-segment weten we de band; map een curve-parameter t → band
+    // via het dichtstbijzijnde waypoint.
+    const bandVoorT = (t) => {
+      const p = curve.getPointAt(t);
+      let best = 0, bestD = Infinity;
+      for (let i = 0; i < LINT_WAYPOINTS.length; i++) {
+        const w = LINT_WAYPOINTS[i];
+        const d = (w[0] * CELL - p.x) ** 2 + (w[1] * CELL - p.z) ** 2;
+        if (d < bestD) { bestD = d; best = i; }
+      }
+      return LINT_WAYPOINTS[best][2];
+    };
+    const tegels = [];
+    for (let i = 0; i < n; i++) {
+      const t = i / n;
+      const p = curve.getPointAt(t);
+      const tan = curve.getTangentAt(t);
+      tegels.push({ x: p.x, z: p.z, hoek: Math.atan2(tan.x, tan.z), band: bandVoorT(t) });
+    }
+    // Niveau-overgang-bordjes: op het eerste waypoint van elke band.
+    const borden = LINT_BAND_STARTS.map((wi, b) => {
+      const w = LINT_WAYPOINTS[wi];
+      return { x: w[0] * CELL, z: w[1] * CELL, band: b };
+    });
+    return { tegels, borden };
+  }, []);
+
+  const hoogte = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
+
+  useLayoutEffect(() => {
+    const inst = instRef.current;
+    if (!inst) return;
+    const m = new THREE.Matrix4();
+    const q = new THREE.Quaternion();
+    const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
+    const schaal = new THREE.Vector3(LINT_BREEDTE, LINT_STAP * 1.7, 1);
+    const kleur = new THREE.Color();
+    tegels.forEach((s, i) => {
+      q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
+      m.compose(new THREE.Vector3(s.x, hoogte(s.x, s.z) + 0.05, s.z), q, schaal);
+      inst.setMatrixAt(i, m);
+      kleur.set(LINT_BANDEN[s.band]?.kleur || "#ffd54f");
+      inst.setColorAt(i, kleur);
+    });
+    inst.instanceMatrix.needsUpdate = true;
+    if (inst.instanceColor) inst.instanceColor.needsUpdate = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tegels, heightRef]);
+
+  return (
+    <group>
+      <instancedMesh key={tegels.length} ref={instRef} args={[null, null, tegels.length]} frustumCulled={false}>
+        <planeGeometry args={[1, 1]} />
+        <meshStandardMaterial vertexColors transparent opacity={0.92} roughness={0.85} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
+      </instancedMesh>
+      {/* 🪧 Niveau-overgang-bordjes: "nu Groep 6-8" — zo voel je dat je een groep
+          verder gaat, net als op school. */}
+      {borden.map((b, i) => {
+        const band = LINT_BANDEN[b.band];
+        const y = hoogte(b.x, b.z);
+        return (
+          <group key={i} position={[b.x, y, b.z]}>
+            <mesh position={[0, 0.6, 0]} castShadow><boxGeometry args={[0.1, 1.2, 0.1]} /><meshStandardMaterial color="#7a5230" /></mesh>
+            <mesh position={[0, 1.32, 0]} castShadow><boxGeometry args={[1.5, 0.62, 0.07]} /><meshStandardMaterial color={band.kleur} /></mesh>
+            <Html position={[0, 1.32, 0.06]} center distanceFactor={9} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+              <div style={{ width: 130, textAlign: "center", fontFamily: "system-ui, sans-serif", color: band.tekstKleur }}>
+                <div style={{ fontWeight: 800, fontSize: 13 }}>{i === 0 ? "🎓 Start hier" : "➡️ nu"} {band.groep}</div>
+                <div style={{ fontWeight: 700, fontSize: 10.5, opacity: 0.85 }}>{band.start}</div>
+              </div>
+            </Html>
+          </group>
+        );
+      })}
+    </group>
+  );
+}
+
 // 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos).
 // (x −4.6/−3.4/−2.2: het gele paaltje stond eerst ín de boom op cel (−5,14).)
 const PAALTJES = [
@@ -245,7 +338,10 @@ const BORDEN = [
 ];
 
 export default function WandelPreview({ heightRef, borden = false, toon = null, stopDoelen = null }) {
-  const zichtbaar = toon ? ROUTES.filter((r) => toon.includes(r.id)) : ROUTES;
+  // Idle (geen actieve wandeling/filter) → géén losse stippen-routes meer: het
+  // doorlopende leerpad-lint is nu het hoofdpad (Mark 22 aug). Tijdens een
+  // wandeling toont de gekozen route wél z'n stippen als extra begeleiding.
+  const zichtbaar = toon ? ROUTES.filter((r) => toon.includes(r.id)) : [];
   return (
     <group>
       {zichtbaar.map((r) => (
