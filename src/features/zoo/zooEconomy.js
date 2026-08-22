@@ -45,7 +45,7 @@ export const BABY_KANS = 0.35;
 export const BABY_KANS_GEVOERD = 0.6;   // goed verzorgd (recent gevoerd) → eerder jonkies
 export const MAX_BABIES = 3;            // per verblijf
 export const BABY_BONUS = 5;            // eenmalige muntjes bij een geboorte
-export const VERWAARLOOS_DAGEN = 3;     // zoveel dagen niet voeren → een dier loopt weg
+export const VERWAARLOOS_DAGEN = 3;     // zoveel dagen niet voeren → een dier verstopt zich (was: liep weg)
 
 function todayStr(d = new Date()) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -69,6 +69,8 @@ export function dagenVerschil(fromStr, toStr = todayStr()) {
 // een eigen `inkomst`-veld (bv. de donatiebox) levert dat vaste bedrag per dag.
 export function inkomstenPerDag(items, kindVan = () => "animal") {
   return (items || []).reduce((s, it) => {
+    // Verstopt dier (te lang geen hooi) levert niets op tot je het terugvindt.
+    if (it && it.verstopt) return s;
     const a = getAsset(it.assetId);
     if (a && a.inkomst) return s + a.inkomst;
     const k = kindVan(it.assetId);
@@ -101,20 +103,36 @@ export function groeiBabies(items, isDier = () => true) {
   return { layout, births };
 }
 
-// Verzorging per dier: een GEKOCHT dier dat >= VERWAARLOOS_DAGEN geen hooi kreeg
-// loopt weg. Starter-dieren (price 0) blijven altijd. Geeft nieuwe indeling +
-// aantal weggelopen dieren.
+// Is dit dier verstopt (te lang niet gevoerd)?
+export function dierIsVerstopt(it) {
+  return !!(it && it.verstopt);
+}
+
+// Verzorging per dier (Mark 22 aug, park-megabuild-advies #1 — unaniem uit de
+// review): een GEKOCHT dier dat >= VERWAARLOOS_DAGEN geen hooi kreeg LOOPT NIET
+// MEER WEG (dat strafte juist het kind dat na een weekend/vakantie terugkomt =
+// churn-gif), maar VERSTOPT zich: het wordt sip/grijs en levert 0 op tot je het
+// één keer voert → dan komt het blij terug (mini-viering in de UI). Zo blijft de
+// verzorg-les intact zonder permanent verlies. Starter-dieren (price 0) verstoppen
+// zich nooit. Een dier dat weer op tijd gevoerd is (verstopt maar recent fed)
+// wordt hier ook weer zichtbaar. Geeft nieuwe indeling + aantal nieuw-verstopte
+// dieren + hun namen.
 export function verwaarloosCheck(items, isDier = () => true) {
-  let weggelopen = 0;
-  const weggelopenIds = []; // wíé er wegliep (review 17 jul: melding kon geen naam noemen)
-  const layout = (items || []).filter((it) => {
-    if (!isDier(it.assetId)) return true;
-    if ((it.price || 0) <= 0) return true; // starter-dier → blijft
+  let verstopt = 0;
+  const verstoptIds = []; // wíé zich verstopte (voor een melding met naam)
+  const layout = (items || []).map((it) => {
+    if (!isDier(it.assetId)) return it;
+    if ((it.price || 0) <= 0) return it; // starter-dier → nooit verstopt
     const dagen = it.fed ? dagenVerschil(it.fed) : 999;
-    if (dagen >= VERWAARLOOS_DAGEN) { weggelopen++; weggelopenIds.push(it.assetId); return false; }
-    return true;
+    if (dagen >= VERWAARLOOS_DAGEN) {
+      if (!it.verstopt) { verstopt++; verstoptIds.push(it.assetId); }
+      return { ...it, verstopt: true };
+    }
+    // Weer op tijd gevoerd → niet meer verstopt (vangnet; voeren wist het ook direct).
+    if (it.verstopt) return { ...it, verstopt: false };
+    return it;
   });
-  return { layout, weggelopen, weggelopenIds };
+  return { layout, verstopt, verstoptIds };
 }
 
 function isYesterday(dateStr, today = todayStr()) {

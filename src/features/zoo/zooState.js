@@ -90,6 +90,9 @@ function bouwVoorbeeldPark() {
   // velociraptor staat er — de grote dino's (T-Rex, Triceratops, …) "speel je
   // vrij" door te leren (zie unlocks.js). Ruim, leeg hek = duidelijke groei-plek.
   verblijf(10, -11, 18, -3, 14, ["velociraptor"]);
+  // 🦕 Dino-bord óp de groeiplek (Mark 22 aug, park-megabuild #3): toont live de
+  // eerstvolgende te verdienen dino + "nog X lesjes". Binnen het lege hek.
+  add("bordDino", 14, -6);
 
   // ── HUIZEN-DORPje helemaal achterin ──
   ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
@@ -276,10 +279,10 @@ export function legOostPadOmAchtbaan(layout) {
   }
   // Bouwbordjes bijzetten in parken die ze nog niet hebben (alleen vrije cellen).
   const heeftBord = (id) => uit.some((it) => it && it.assetId === id);
-  const bordPlekken = [["bordZwembad", -30, 20], ["bordBouw", 18, 20], ["bordBouw", -14, -14]];
+  const bordPlekken = [["bordZwembad", -30, 20], ["bordBouw", 18, 20], ["bordBouw", -14, -14], ["bordDino", 14, -6]];
   const bordBouwAl = heeftBord("bordBouw");
   for (const [id, x, z] of bordPlekken) {
-    if (id === "bordZwembad" ? heeftBord("bordZwembad") : bordBouwAl) continue;
+    if (id === "bordBouw" ? bordBouwAl : heeftBord(id)) continue;
     if (bezet.has(`${x},${z}`)) continue;
     bezet.add(`${x},${z}`);
     uit = [...uit, { assetId: id, cell: [x, z], rotation: 0, price: 0 }];

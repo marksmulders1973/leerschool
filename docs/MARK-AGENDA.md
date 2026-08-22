@@ -45,7 +45,7 @@
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
 | ✅ 13 aug | ~~Leergeld-golf 18 aug~~ **Noord-16 verstuurd** (Mark-go 13 aug); dag-batch-kalender loopt: vr 14 voedselbanken-rest → ma 17 VB #2/SUN → di 18 fondsen → wo 19 Humanitas → do 20-21 Caribisch 2 + Leergeld-Zuid → ~28 aug Leergeld-Midden. Flyer-regel: digitaal; print alléén uit 1.000-voorraad per 50 | Claude |
 | ✅ do 20 aug | 🏝️ **Batch 2 Caribisch + Suriname VOLLEDIG verstuurd (41/41)** + SUN deel 2 (7/7) — dag-totaal 48. FB-spoor Suriname ✅ zelfde dag (7 berichten) | ✅ |
-| wk 24-28 aug | 📞 **Froukje van Haut (Buurtgezinnen — landelijk aanspreekpunt schoolse zaken + regio-coörd. W-Brabant/Zeeland) bellen: 06-22961694** — zij vroeg erom (20 aug, "graag van gedachten wisselen"); Claude maakt vooraf een bel-spiekbriefje | **Mark** |
+| **ma 24 aug ~13:00** | 📞 **Froukje van Haut (Buurtgezinnen) bellen: 06-22961694** — ✅ afspraak bevestigd 21 aug (Mark stelde ma 13:00 voor + flyer nagestuurd). Bel-spiekbriefje moet vóór maandag klaar; haak: BUURTGEZINNEN2027-flyer is al 3× gescand (21 aug) — "ik zie dat er al iets mee gebeurt" | **Mark** |
 | na Mark-go | 🏝️ **Saba-levering**: Engelse reply + Engelse QR-flyer + code SABA2027 voor Tiffany (Queen Wilhelmina Library — geeft door aan álle scholen van het eiland + community) | Mark-go → Claude |
 | wk 18 aug | School's cool Nijmegen komt zélf terug (niet pingen, wel opletten) | — |
 | 18 aug–1 sep | **Schoolstart = Fase 4 leerkracht-kanaal**: juf-A4-flyer + 10 groep-8-leraren benaderen | Claude materiaal, Mark verstuurt |

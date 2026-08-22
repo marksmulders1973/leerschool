@@ -214,6 +214,9 @@ export const ZOO_ASSETS = {
   // bord kondigt idee #44 aan (balk vult zich met water, l × b × d).
   bordBouw: { id: "bordBouw", kind: "decor", name: "Bouwbord", emoji: "🚧", procedural: "bordBouw", cells: 1, price: 10 },
   bordZwembad: { id: "bordZwembad", kind: "decor", name: "Zwembad-bord", emoji: "🏊", procedural: "bordZwembad", cells: 1, price: 10 },
+  // 🦕 Dino-bord: vast op de dino-groeiplek, toont live de volgende te verdienen
+  // dino (park-megabuild #3). Niet te koop; ZooScene rendert het met live hint.
+  bordDino: { id: "bordDino", kind: "decor", name: "Dino-bord", emoji: "🦕", procedural: "bordDino", cells: 1, price: 0 },
   station: { id: "station", kind: "building", name: "Treinstation", emoji: "🚉", procedural: "station", price: 80, inkomst: 8 },
 
   // ---- Natuur & bouwen (Kenney Nature Kit + procedureel pad). cells:1 = klein.

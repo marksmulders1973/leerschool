@@ -19,7 +19,7 @@ import Buitenwereld from "./Buitenwereld";
 import WandelPreview, { wandelPreviewActief } from "./WandelPreview";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder } from "./UitvindersKabouters";
-import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord } from "./ParkLeerobjecten";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
@@ -347,7 +347,7 @@ function BlokHuis({ variant = "houseA", x, y, z, rotation = 0, colors, colorEdit
 // React.memo (review 17 jul): ZookwartierGame heeft ~50 useState; elke HUD-tik
 // re-renderde anders álle geplaatste items mee. Props zijn primitief/stabiel
 // (behalve kraam bij de 4 kraampjes — acceptabel).
-const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", kraam = null, h = 0, rideRef, visueel = false, maat, onMaat, onOefenen, studie = false, goud = false, goudRest = 0 }) {
+const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0, babies = 0, colors, colorEditable = false, onPickPart, onParts, mood = "blij", verstopt = false, kraam = null, h = 0, rideRef, visueel = false, maat, onMaat, onOefenen, studie = false, goud = false, goudRest = 0 }) {
   const a = getAsset(assetId);
   if (!a) return null;
   // Rails/hekpanelen/padtegels zitten visueel in GeinstanceerdeParkProps
@@ -363,7 +363,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (assetId === "fountain") return <BlokFontein x={x} y={y} z={z} />;
   if (HUIS_VARIANT[assetId]) return <BlokHuis variant={assetId} x={x} y={y} z={z} rotation={rotation} colors={colors} colorEditable={colorEditable} onPickPart={onPickPart} />;
   if (a.kind === "fabel") return <FabelWezen soort={a.fabelSoort} position={[x, y, z]} />;
-  if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} />;
+  if (a.kind === "animal") return <LosDier position={[x, y, z]} assetId={assetId} babies={babies} mood={mood} verstopt={verstopt} />;
   if (a.procedural === "carousel") return <Carousel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "ferris") return <FerrisWheel position={[x, y, z]} rideRef={rideRef} />;
   if (a.procedural === "swing") return <SwingRide position={[x, y, z]} rideRef={rideRef} />;
@@ -903,7 +903,7 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   return null;
 }
 
-export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {} }) {
+export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1335,6 +1335,15 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
           if (isBlok(it.assetId)) return null; // kubussen: BlokkenLaag rendert, ⛏️ hakt
           const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
           const y = heightFnRef.current(x, z);
+          // 🦕 Dino-bord (park-megabuild #3): live "volgende dino"-bord op de
+          // groeiplek — leest de actuele hint i.p.v. statische bord-tekst.
+          if (it.assetId === "bordDino") {
+            return (
+              <group key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}>
+                <DinoBord position={[x, y, z]} rotation={it.rotation || 0} hint={dinoHint} />
+              </group>
+            );
+          }
           return (
             <group
               key={`${cellKey(it.cell[0], it.cell[1])}-${idx}`}
@@ -1366,6 +1375,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
                   onPickPart={colorEditIdx === idx && onPickPart ? (grp) => onPickPart(idx, grp) : undefined}
                   onParts={colorEditIdx === idx ? onHouseParts : undefined}
                   mood={(it.fed && dagenVerschil(it.fed) < 2) ? "blij" : "honger"}
+                  verstopt={!!it.verstopt}
                   kraam={kramen[getAsset(it.assetId)?.voorziet]}
                 />
               </Suspense>

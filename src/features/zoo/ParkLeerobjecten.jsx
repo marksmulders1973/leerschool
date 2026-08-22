@@ -564,3 +564,46 @@ export function Bouwbord({ position = [0, 0, 0], rotation = 0, variant = "bouw" 
     </group>
   );
 }
+
+/* 🦕 Dino-bord — live "volgende dino"-bord op de lege dino-groeiplek (Mark 22
+   aug, park-megabuild #3). Beantwoordt de vraag "wat komt hier?" op de plek waar
+   het kind emotioneel al staat: nog X lesjes leren → de eerstvolgende dino stampt
+   het verblijf binnen. hint = { naam, emoji, stappen, rest, gehad } of null. */
+export function DinoBord({ position = [0, 0, 0], rotation = 0, hint = null }) {
+  const klaar = !hint; // alle dino's verdiend
+  const pct = hint && hint.stappen > 0 ? Math.max(0, Math.min(1, (hint.gehad || 0) / hint.stappen)) : 1;
+  return (
+    <group position={position} rotation={[0, rotation, 0]}>
+      {[-0.6, 0.6].map((x, i) => (
+        <mesh key={i} position={[x, 0.8, 0]} castShadow>
+          <cylinderGeometry args={[0.08, 0.08, 1.6, 8]} />
+          <meshStandardMaterial color="#6b4f2a" flatShading roughness={1} />
+        </mesh>
+      ))}
+      <mesh position={[0, 1.55, 0]} castShadow>
+        <boxGeometry args={[2.0, 1.15, 0.09]} />
+        <meshStandardMaterial color="#2e7d5b" flatShading roughness={0.85} />
+      </mesh>
+      <mesh position={[0, 1.55, 0.05]}>
+        <boxGeometry args={[1.8, 0.95, 0.04]} />
+        <meshStandardMaterial color="#e9f7ef" flatShading />
+      </mesh>
+      <Html position={[0, 1.58, 0.09]} center distanceFactor={9} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+        <div style={{ width: 150, textAlign: "center", fontFamily: "system-ui, sans-serif", color: "#1c3a2b" }}>
+          {klaar ? (
+            <div style={{ fontWeight: 800, fontSize: 12 }}>🦕 Alle dino's verdiend!<br /><span style={{ fontWeight: 600, color: "#4a6a58" }}>knap gedaan 🎉</span></div>
+          ) : (
+            <>
+              <div style={{ fontSize: 30, lineHeight: 1 }}>{hint.emoji}</div>
+              <div style={{ fontWeight: 800, fontSize: 12, margin: "2px 0" }}>Nog {hint.rest} {hint.rest === 1 ? "lesje" : "lesjes"}…</div>
+              <div style={{ fontWeight: 700, fontSize: 11, color: "#2e7d5b" }}>dan stampt de {hint.naam} hier rond!</div>
+              <div style={{ height: 7, background: "#cfe4d8", borderRadius: 999, marginTop: 5, overflow: "hidden" }}>
+                <div style={{ width: `${Math.round(pct * 100)}%`, height: "100%", background: "linear-gradient(90deg,#2e7d5b,#57c98c)" }} />
+              </div>
+            </>
+          )}
+        </div>
+      </Html>
+    </group>
+  );
+}

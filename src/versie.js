@@ -3,4 +3,4 @@
 // het stempeltje rechtsboven toont het. Zo zie je in één oogopslag of je
 // naar de laatste versie kijkt. Weghalen na de bouwfase: dit bestand +
 // het stempel-blokje in main.jsx.
-export const BOUW_VERSIE = 400;
+export const BOUW_VERSIE = 401;

@@ -767,7 +767,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       const kw = applyKwartierReward(login.state, !!getDailyGoal().completed);
       let finalMeta = kw.state;
       let finalLayout = layout;
-      let parkGain = 0, births = 0, weggelopen = 0, loon = 0, weggelopenNamen = [], goedVerzorgd = false;
+      let parkGain = 0, births = 0, verstopt = 0, loon = 0, verstoptNamen = [], goedVerzorgd = false;
 
       // Park-groei: op een nieuwe dag levert je park muntjes op. Verzorging is PER
       // DIER (it.fed): recent gevoerd → eerder jonkies; een gekocht dier dat >= 3
@@ -784,12 +784,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         births = g.births;
         const v = verwaarloosCheck(finalLayout, isDier);
         finalLayout = v.layout;
-        weggelopen = v.weggelopen;
-        weggelopenNamen = (v.weggelopenIds || []).map((id) => getAsset(id)?.name || "een dier");
+        verstopt = v.verstopt;
+        verstoptNamen = (v.verstoptIds || []).map((id) => getAsset(id)?.name || "een dier");
         // "Goed verzorgd"-compliment (review 17 jul: stond in de UI maar werd
         // nooit gezet): alle gekochte dieren gisteren of vandaag gevoerd.
         const gekocht = finalLayout.filter((it) => isDier(it.assetId) && (it.price || 0) > 0);
-        goedVerzorgd = weggelopen === 0 && gekocht.length > 0 && gekocht.every((it) => it.fed && dagenVerschil(it.fed) <= 1);
+        goedVerzorgd = verstopt === 0 && gekocht.length > 0 && gekocht.every((it) => it.fed && dagenVerschil(it.fed) <= 1);
         finalMeta = { ...finalMeta, coins: finalMeta.coins + parkGain + births * BABY_BONUS };
       }
       const gained = login.gained + kw.gained + parkGain + births * BABY_BONUS;
@@ -799,19 +799,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setPlacedItems(finalLayout);
       setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
-      if (gained > 0 || weggelopen > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, weggelopen, weggelopenNamen, goedVerzorgd });
+      if (gained > 0 || verstopt > 0) {
+        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, verstopt, verstoptNamen, goedVerzorgd });
         clearTimeout(rewardTimer.current);
-        // Een weggelopen dier is een hard moment — die melding mag langer blijven
-        // staan dan een muntjes-jubel (review 17 jul: 6s was te kort om te lezen).
-        rewardTimer.current = setTimeout(() => setReward(null), weggelopen > 0 ? 12000 : 6000);
+        // Een verstopt dier vraagt om actie (voeren) — die melding mag langer
+        // blijven staan dan een muntjes-jubel (6s was te kort om te lezen).
+        rewardTimer.current = setTimeout(() => setReward(null), verstopt > 0 ? 12000 : 6000);
       }
       // Alleen opslaan als er echt iets veranderde: een nieuwe dag (last_login +
       // login-/park-beloning moet bewaard blijven), een verdiende kwartier-reward,
       // park-winst, geboortes of een weggelopen dier. Een same-day-remount zonder
       // wijziging schreef eerder onnodig én kon de debounced autosave van de eerste
       // ~2s aan acties overschrijven (dataverlies-race). (bug-jacht 2026-07-31)
-      if (userId && (isNieuweDag || gained > 0 || weggelopen > 0)) {
+      if (userId && (isNieuweDag || gained > 0 || verstopt > 0)) {
         saveZooState(userId, naam, { ...finalMeta, layout: finalLayout });
       }
     })();
@@ -840,6 +840,57 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const unlockedDieren = (meta?.owned && !Array.isArray(meta.owned) && Array.isArray(meta.owned.unlocked)) ? meta.owned.unlocked : [];
   // Zelfde sleutel als de leerpaden gebruiken voor learn_progress.
   const leerNaam = (userName || "Speler").trim() || "Speler";
+
+  // 🦕 Volgende-dino-hint (park-megabuild #3): de eerstvolgende nog niet
+  // verdiende mijlpaal-dino + hoeveel lesjes er nog te gaan zijn. Wordt op het
+  // dino-bord bij de groeiplek getoond én in de wandel-viering — het krachtigste
+  // "wat komt hier / waarom kom ik morgen terug"-haakje dat het park al heeft.
+  const dinoHint = useMemo(() => {
+    const dino = DINO_MIJLPALEN.find((d) => !unlockedDieren.includes(d.assetId));
+    if (!dino) return null; // alle dino's al verdiend
+    return { assetId: dino.assetId, naam: dino.naam, emoji: dino.emoji, stappen: dino.stappen, rest: Math.max(0, dino.stappen - geleerdeStappen), gehad: geleerdeStappen };
+  }, [unlockedDieren, geleerdeStappen]);
+
+  // 🥇 Gouden-vormen-voortgang per pad (fase 2, park-megabuild #4): elke inhoud-
+  // vorm kleurt goud naarmate zijn leerpad vordert. inhoudStappen dekt het
+  // ruimtemeetkunde-pad (kubus/piramide); vorm-specifieke paden komen erbij zodra
+  // ze bestaan (nu delen de vormen het ruimtemeetkunde-pad — één teller volstaat).
+  const leerStappenPerPad = useMemo(() => ({ ruimtemeetkunde: inhoudStappen }), [inhoudStappen]);
+
+  // 🎟️ Wandel-stempelkaart (park-megabuild #2): elke afgeronde wandeling laat een
+  // blijvend spoor na — een stempel (datum + routekleur) bewaard in owned. Zo ziet
+  // 10 dagen lopen er écht anders uit dan 1 dag. Bij mijlpalen verschijnt een klein
+  // blijvend object bij de ingang. Geen migratie (vrij jsonb-veld).
+  const wandelStempels = (meta?.owned && !Array.isArray(meta.owned) && Array.isArray(meta.owned.wandelStempels)) ? meta.owned.wandelStempels : [];
+  const [stempelKaartOpen, setStempelKaartOpen] = useState(false);
+  const STEMPEL_MIJLPALEN = [
+    { n: 5, asset: "bankje", cell: [9, 16], naam: "een extra bankje bij de ingang" },
+    { n: 10, asset: "treePalm", cell: [-9, 16], naam: "een palmboom bij de ingang" },
+    { n: 25, asset: "fountain", cell: [8, 14], naam: "een echte fontein bij de ingang" },
+  ];
+  const verdienStempel = (routeId) => {
+    const route = ROUTE_BY_ID[routeId];
+    const stempel = { datum: vandaag(), routeId, kleur: route?.kleur || "#888", naam: route?.naam || "Wandeling" };
+    setMeta((m) => {
+      if (!m) return m;
+      const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {};
+      const cur = Array.isArray(o.wandelStempels) ? o.wandelStempels : [];
+      const nieuweLijst = [...cur, stempel];
+      const nieuwAantal = nieuweLijst.length;
+      // Mijlpaal-object erbij als dit precies een mijlpaal-aantal raakt.
+      const mp = STEMPEL_MIJLPALEN.find((x) => x.n === nieuwAantal);
+      if (mp) {
+        setPlacedItems((items) => {
+          if (items.some((it) => it.assetId === mp.asset && it.cell?.[0] === mp.cell[0] && it.cell?.[1] === mp.cell[1])) return items;
+          return [...items, { assetId: mp.asset, cell: mp.cell, rotation: 0, price: 0 }];
+        });
+        setTimeout(() => flits(`🎉 ${nieuwAantal} stempels! Je verdiende ${mp.naam}.`), 400);
+      }
+      try { track("wandel_stempel", { aantal: nieuwAantal, route: routeId }); } catch { /* */ }
+      return { ...m, owned: { ...o, wandelStempels: nieuweLijst } };
+    });
+  };
+  const volgendeStempelMijlpaal = STEMPEL_MIJLPALEN.find((x) => x.n > wandelStempels.length);
 
   // Vrijspeel-check: heeft de speler een leerpad 100% afgerond → dier verdienen?
   // Draait 1× per parksessie nadat het park geladen is. Voegt nieuwe dieren toe
@@ -881,10 +932,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const alleGevoerd = dieren.length > 0 && dieren.every(dierGevoerdVandaag);
   const enigDierHongerig = dieren.some((it) => !it.fed || dagenVerschil(it.fed) >= 2);
   const hongerAantal = dieren.filter((it) => !dierGevoerdVandaag(it)).length; // badge op de 🌾-knop
-  // Voer één dier (op index in placedItems).
+  // Voer één dier (op index in placedItems). Was het verstopt (te lang geen
+  // hooi), dan komt het door te voeren blij terug — een klein hereniging-moment
+  // i.p.v. straf (park-megabuild #1).
   const voerDier = (idx) => {
-    setPlacedItems((items) => items.map((it, i) => (i === idx ? { ...it, fed: vandaag() } : it)));
-    flits("Gevoerd! 🌾");
+    const was = placedItems[idx];
+    const terug = was?.verstopt;
+    setPlacedItems((items) => items.map((it, i) => (i === idx ? { ...it, fed: vandaag(), verstopt: false } : it)));
+    if (terug) {
+      const naam = getAsset(was?.assetId)?.name || "Je dier";
+      flits(`🎉 ${naam} is terug — je hebt 'm gevonden! ❤️`);
+      try { track("dier_teruggevonden", { asset: was?.assetId }); } catch { /* */ }
+    } else {
+      flits("Gevoerd! 🌾");
+    }
   };
   // 🤗 Aaien (Mark 2 jul: "naar de dieren en bv aaien of gedachten zien"):
   // het dier reageert met een gedachte die past bij hoe het zich voelt.
@@ -903,8 +964,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const voerAlles = () => {
     if (!dieren.length) { flits("Je hebt nog geen dieren om te voeren."); return; }
     if (alleGevoerd) { flits("Alle dieren zijn vandaag al gevoerd 🌾"); return; }
-    setPlacedItems((items) => items.map((it) => (isDierItem(it) ? { ...it, fed: vandaag() } : it)));
-    flits("Alle dieren gevoerd! 🌾");
+    const terugAantal = dieren.filter((it) => it.verstopt).length;
+    setPlacedItems((items) => items.map((it) => (isDierItem(it) ? { ...it, fed: vandaag(), verstopt: false } : it)));
+    flits(terugAantal > 0 ? `🎉 Alle dieren gevoerd — je vond ${terugAantal} verstopt dier${terugAantal > 1 ? "en" : ""}! ❤️` : "Alle dieren gevoerd! 🌾");
   };
 
   const startKopen = (p) => {
@@ -1426,7 +1488,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const nw = volgendeStop(wandeling);
     setWandeling(nw);
     try { track(nw.klaar ? "wandel_route_af" : "wandel_stop_klaar", { route: wandeling.routeId, stop: stop.moment }); } catch { /* */ }
-    if (nw.klaar) setWandelViering(true);
+    if (nw.klaar) { setWandelViering(true); verdienStempel(wandeling.routeId); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tafereel]);
   // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
@@ -1832,7 +1894,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Beloning-melding bij binnenkomst. */}
       {reward && (
         <div style={{ position: "absolute", top: 64, left: "50%", transform: "translateX(-50%)", zIndex: 11, background: "rgba(255,255,255,0.96)", color: "#234", borderRadius: 14, padding: "10px 16px", boxShadow: "0 6px 20px rgba(0,0,0,.25)", font: "700 14px system-ui", textAlign: "center", maxWidth: "90%" }}>
-          {reward.total > 0 ? `🎉 +${reward.total} muntjes!` : (reward.weggelopen > 0 ? "🐾 Er is iets veranderd in je park" : "")}
+          {reward.total > 0 ? `🎉 +${reward.total} muntjes!` : (reward.verstopt > 0 ? "🐾 Er mist een dier — ga het zoeken!" : "")}
           <div style={{ font: "600 12px system-ui", opacity: 0.78, marginTop: 2 }}>
             {[
               reward.login > 0 && `Inloggen +${reward.login}`,
@@ -1851,11 +1913,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               📄 Bekijk je loonstrookje
             </button>
           )}
-          {reward.weggelopen > 0 && (
-            <div style={{ font: "700 12px system-ui", color: "#c0392b", marginTop: 4 }}>
-              {reward.weggelopenNamen?.length
-                ? `🐾 ${reward.weggelopenNamen.join(" en ")} ${reward.weggelopen > 1 ? "liepen" : "liep"} weg — ${reward.weggelopen > 1 ? "ze kregen" : "het kreeg"} te lang geen hooi. Geef je dieren elke dag 🌾!`
-                : "🐾 Een dier liep weg — het kreeg te lang geen hooi. Geef ze elke dag 🌾!"}
+          {reward.verstopt > 0 && (
+            <div style={{ font: "700 12px system-ui", color: "#b46a00", marginTop: 4 }}>
+              {reward.verstoptNamen?.length
+                ? `🙈 ${reward.verstoptNamen.join(" en ")} ${reward.verstopt > 1 ? "hebben" : "heeft"} zich verstopt — te lang geen hooi. Geef ${reward.verstopt > 1 ? "ze" : "het"} 🌾 en ${reward.verstopt > 1 ? "ze komen" : "het komt"} weer tevoorschijn!`
+                : "🙈 Een dier heeft zich verstopt — geef het 🌾 en het komt weer tevoorschijn!"}
             </div>
           )}
         </div>
@@ -1992,7 +2054,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onNearPiramide={setNabijePiramide}
           onPoortDoor={onPoortDoor}
           studiePiramideIdx={pyrIdx}
-          leerStappenPerPad={{ ruimtemeetkunde: inhoudStappen }}
+          leerStappenPerPad={leerStappenPerPad}
+          dinoHint={dinoHint}
           spawn={deeplinkSpawn}
           terrain={terrain}
           onTerrainChange={setTerrain}
@@ -2691,7 +2754,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 </button>
               );
             })}
-            <button onClick={() => setWandelKies(false)} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Toch niet</button>
+            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <button onClick={() => setWandelKies(false)} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "700 13px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Toch niet</button>
+              <button onClick={() => { setWandelKies(false); setStempelKaartOpen(true); }} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "800 13px system-ui", color: "#5c4300", background: "#ffd54f", cursor: "pointer" }}>🎟️ Stempelkaart ({wandelStempels.length})</button>
+            </div>
           </div>
         </div>
       )}
@@ -2705,9 +2771,60 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <p style={{ margin: "8px 0 14px", font: "600 13.5px/1.5 system-ui", color: "#345" }}>
               Je vond alle 3 de stops én leerde onderweg. Morgen ligt er weer een verse wandeling klaar — of loop nu een route van een andere kleur.
             </p>
+            {/* 🎟️ Stempel verdiend (park-megabuild #2): het dagritueel bouwt iets op. */}
+            <div style={{ margin: "0 0 12px", padding: "10px 12px", borderRadius: 12, background: "rgba(246,200,76,0.14)", border: "1px solid rgba(246,200,76,0.5)" }}>
+              <div style={{ font: "800 13px system-ui", color: "#7a5b00" }}>🎟️ Stempel verdiend — je hebt er nu {wandelStempels.length}!</div>
+              {volgendeStempelMijlpaal && (
+                <div style={{ font: "700 11.5px system-ui", color: "#8a6a1a", marginTop: 2 }}>
+                  Nog {volgendeStempelMijlpaal.n - wandelStempels.length} tot {volgendeStempelMijlpaal.naam}.
+                </div>
+              )}
+              <button onClick={() => { setWandelViering(false); setStempelKaartOpen(true); }} style={{ marginTop: 8, border: "none", borderRadius: 999, padding: "7px 13px", font: "800 12px system-ui", color: "#5c4300", background: "#ffd54f", cursor: "pointer" }}>🗺️ Bekijk je stempelkaart</button>
+            </div>
+            {/* 🦕 Terugkom-haakje (park-megabuild #3): waar leren naartoe leidt. */}
+            {dinoHint && (
+              <div style={{ margin: "0 0 14px", padding: "9px 12px", borderRadius: 12, background: "rgba(46,125,91,0.1)", border: "1px solid rgba(46,125,91,0.3)", font: "700 12.5px/1.45 system-ui", color: "#1c5a3b" }}>
+                {dinoHint.emoji} Nog {dinoHint.rest} {dinoHint.rest === 1 ? "lesje" : "lesjes"} en de <b>{dinoHint.naam}</b> stampt je dino-plek binnen!
+              </div>
+            )}
             <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
               <button onClick={() => { setWandelViering(false); stopWandeling(); setWandeling(null); setWandelKies(true); }} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "800 13.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>🥾 Nog een route</button>
               <button onClick={() => setWandelViering(false)} style={{ border: "none", borderRadius: 999, padding: "10px 16px", font: "700 13.5px system-ui", color: "#234", background: "rgba(0,0,0,0.06)", cursor: "pointer" }}>Verder spelen</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 🎟️ Stempelkaart (park-megabuild #2): het blijvende spoor van je wandelingen. */}
+      {stempelKaartOpen && (
+        <div onClick={() => setStempelKaartOpen(false)} style={{ position: "absolute", inset: 0, zIndex: 25, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(420px, 96vw)", maxHeight: "84vh", overflowY: "auto", background: "#fffef8", borderRadius: 20, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "20px 18px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+              <div style={{ font: "800 17px system-ui", color: "#234" }}>🗺️ Mijn stempelkaart</div>
+              <button onClick={() => setStempelKaartOpen(false)} style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "700 15px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
+            </div>
+            <div style={{ font: "700 13px system-ui", color: "#567", marginBottom: 12 }}>
+              {wandelStempels.length} {wandelStempels.length === 1 ? "wandeling" : "wandelingen"} gelopen 🥾
+              {volgendeStempelMijlpaal && <> · nog {volgendeStempelMijlpaal.n - wandelStempels.length} tot {volgendeStempelMijlpaal.naam}</>}
+            </div>
+            {wandelStempels.length === 0 ? (
+              <p style={{ font: "600 13px/1.5 system-ui", color: "#678", textAlign: "center", padding: "16px 8px" }}>
+                Nog geen stempels. Loop een wandelroute helemaal af en verdien je eerste stempel! 🥾
+              </p>
+            ) : (
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(64px, 1fr))", gap: 10 }}>
+                {wandelStempels.slice().reverse().map((s, i) => (
+                  <div key={i} title={`${s.naam} — ${s.datum}`} style={{ aspectRatio: "1", borderRadius: "50%", border: `3px dashed ${s.kleur}`, display: "grid", placeItems: "center", background: `${s.kleur}22`, textAlign: "center" }}>
+                    <div style={{ font: "800 9px system-ui", color: "#234", lineHeight: 1.15 }}>
+                      <div style={{ fontSize: 16 }}>🥾</div>
+                      {String(s.datum || "").slice(5).replace("-", "/")}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            <div style={{ marginTop: 14, padding: "10px 12px", borderRadius: 12, background: "rgba(0,0,0,0.04)", font: "600 11.5px/1.5 system-ui", color: "#567" }}>
+              🏅 Bij 5, 10 en 25 stempels verschijnt er een blijvend cadeau bij je ingang: een bankje, een palmboom en een fontein.
             </div>
           </div>
         </div>

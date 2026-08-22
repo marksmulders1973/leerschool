@@ -1151,10 +1151,61 @@ const DIER_STRAAL = 3.0;
 const DIER_HONGER = [{ e: "🌾", t: "Ik heb honger" }, { e: "💧", t: "Ik heb dorst" }, { e: "🏃", t: "Meer plek graag" }];
 const DIER_BLIJ = [{ e: "😊", t: "Ik ben blij!" }, { e: "❤️", t: "Mooi park!" }, { e: "🎶", t: "Heerlijk hier" }];
 
-export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, mood = "blij" }) {
+// 🔊 Tik-op-dier-reactie (Mark 22 aug, park-megabuild #7.1 — Sem 8 jr: "alles
+// moet iets doen als je tikt, zoals Toca Boca"). Per soort een geluid-tekst +
+// toonhoogte; het geluidje is een korte gesynthetiseerde blip (Web Audio, géén
+// asset-bestanden = werkt offline en op zwakke telefoons). Onbekend dier → default.
+const DIER_GELUID = {
+  cow: { t: "Boe!", hz: 160 }, sheep: { t: "Bèèh!", hz: 320 }, pig: { t: "Knor!", hz: 200 },
+  alpaca: { t: "Mèh!", hz: 300 }, donkey: { t: "I-aah!", hz: 180 },
+  husky: { t: "Woef!", hz: 260 }, shibaInu: { t: "Waf!", hz: 300 }, pug: { t: "Kef!", hz: 340 }, wolf: { t: "Auwww!", hz: 220 },
+  deer: { t: "Snuf!", hz: 380 }, stag: { t: "Broemm!", hz: 190 }, horse: { t: "Hinnik!", hz: 300 }, zebra: { t: "Hie-ha!", hz: 280 },
+  velociraptor: { t: "Krièèk!", hz: 520 }, trex: { t: "GROAAR!", hz: 90 }, triceratops: { t: "Bróm!", hz: 120 },
+  stegosaurus: { t: "Roaar!", hz: 130 }, parasaurolophus: { t: "Toettt!", hz: 240 }, apatosaurus: { t: "Wooomm!", hz: 80 },
+};
+const DIER_GELUID_DEFAULT = { t: "Hoi!", hz: 330 };
+
+let _audioCtx = null;
+function speelDierGeluid(hz = 330) {
+  try {
+    if (typeof window === "undefined") return;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    _audioCtx = _audioCtx || new AC();
+    const ctx = _audioCtx;
+    if (ctx.state === "suspended") ctx.resume();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(hz, t);
+    osc.frequency.exponentialRampToValueAtTime(Math.max(60, hz * 1.5), t + 0.12); // vrolijk omhoog-buigje
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(0.18, t + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(t); osc.stop(t + 0.3);
+  } catch { /* geluid mag nooit de render breken */ }
+}
+
+export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, mood = "blij", verstopt = false }) {
   const [bubble, setBubble] = useState(null);
+  const [tik, setTik] = useState(null); // 🔊 tik-reactie (soort-geluid)
   const st = useRef({ next: 5 + Math.random() * 12, show: 0 });
+  const hopRef = useRef(null);   // groep die een sprongetje maakt bij een tik
+  const hop = useRef(0);         // resterende hop-tijd (s)
+  const tikTimer = useRef(null);
   useFrame((_, dt) => {
+    // 🦘 Sprongetje bij een tik (juice) — werkt ook als het dier verstopt is niet,
+    // maar de hop draait alleen in de normale render (hopRef bestaat dan).
+    if (hop.current > 0 && hopRef.current) {
+      hop.current = Math.max(0, hop.current - dt);
+      const p = 1 - hop.current / 0.5;              // 0→1 over 0,5s
+      hopRef.current.position.y = Math.sin(p * Math.PI) * 0.6; // op-en-neer
+    } else if (hopRef.current && hopRef.current.position.y !== 0) {
+      hopRef.current.position.y = 0;
+    }
+    if (verstopt) return; // verstopt dier praat niet
     const s = st.current;
     if (s.show > 0) { s.show -= dt; if (s.show <= 0) setBubble(null); return; }
     s.next -= dt;
@@ -1164,6 +1215,40 @@ export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, moo
       s.show = 3; s.next = 12 + Math.random() * 16;
     }
   });
+  useEffect(() => () => clearTimeout(tikTimer.current), []);
+  // Tik op het dier → geluidje + sprongetje + reactie-bubbel (park-megabuild #7.1).
+  // GEEN stopPropagation: de tik mag óók het selectie-paneel (voeren/aaien) openen
+  // dat de buiten-groep in ZooScene toont — juice + functie tegelijk.
+  const opTik = (e) => {
+    if (e.delta > 8) return; // sleep = camera draaien, geen tik
+    const g = DIER_GELUID[assetId] || DIER_GELUID_DEFAULT;
+    speelDierGeluid(g.hz);
+    hop.current = 0.5;
+    setTik(g.t);
+    setBubble(null);
+    clearTimeout(tikTimer.current);
+    tikTimer.current = setTimeout(() => setTik(null), 1200);
+  };
+  // 🙈 Verstopt (te lang geen hooi, park-megabuild #1): het dier kruipt achter
+  // een struikje weg en levert 0 op tot je het voert. Geen weglopen meer =
+  // terugkomen wordt een fijn hereniging-moment i.p.v. straf.
+  if (verstopt) {
+    return (
+      <group position={position}>
+        <Html position={[0, 1.7, 0]} center distanceFactor={9} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
+          <div title="Geef dit dier hooi 🌾 en het komt terug" style={{ background: "#fff8e6", border: "2px solid #e0a83b", borderRadius: 14, padding: "3px 9px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
+            <span style={{ fontSize: 18 }}>🙈</span>
+            <span style={{ fontSize: 11, fontWeight: 800, color: "#7a5310" }}>verstopt — geef 🌾</span>
+          </div>
+        </Html>
+        {/* struikje waarachter het dier zich verschuilt */}
+        <Bush position={[0, 0, 0.15]} rotation={0} />
+        <group scale={0.7} position={[0.1, 0, -0.3]}>
+          <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={2.3} />
+        </group>
+      </group>
+    );
+  }
   return (
     <group position={position}>
       {bubble && (
@@ -1174,14 +1259,22 @@ export function LosDier({ position = [0, 0, 0], assetId = "fox", babies = 0, moo
           </div>
         </Html>
       )}
+      {/* 🔊 Tik-reactie: het soort-geluid als tekst-bubbel (Toca-Boca-gevoel). */}
+      {tik && (
+        <Html position={[0, 2.05, 0]} center distanceFactor={9} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 12px", lineHeight: 1, boxShadow: "0 2px 8px rgba(0,0,0,.3)", userSelect: "none", whiteSpace: "nowrap", font: "900 14px system-ui", color: "#2a3340" }}>{tik}</div>
+        </Html>
+      )}
       {/* Persistente honger-waarschuwing: het dier kreeg ≥2 dagen geen hooi en
-          loopt straks weg → rood "!" zodat het kind het op tijd voert. */}
+          verstopt zich straks → rood "!" zodat het kind het op tijd voert. */}
       {mood === "honger" && (
         <Html position={[0, 2.35, 0]} center distanceFactor={9} zIndexRange={[6, 0]} style={{ pointerEvents: "none" }}>
           <div title="Geef dit dier hooi 🌾" style={{ background: "#e23b3b", color: "#fff", borderRadius: 999, width: 24, height: 24, display: "grid", placeItems: "center", font: "900 16px system-ui", boxShadow: "0 2px 6px rgba(0,0,0,.35)", border: "2px solid #fff" }}>!</div>
         </Html>
       )}
-      <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL} />
+      <group ref={hopRef} onClick={opTik} onPointerDown={(e) => e.stopPropagation()}>
+        <ZooModel assetId={assetId} position={[0, 0, 0]} rotation={0} wander={DIER_STRAAL} />
+      </group>
       {Array.from({ length: babies }).map((_, i) => {
         const ang = (i / Math.max(1, babies)) * Math.PI * 2 + 0.6;
         const r = 1.0;
