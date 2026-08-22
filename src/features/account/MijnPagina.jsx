@@ -357,7 +357,7 @@ export default function MijnPagina({
           // leraar/school?") — juf/student/kind herkenbaar in de lijst.
           let rol = "";
           try { rol = (JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}").role) || ""; } catch {}
-          return { naam: n, emoji: rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
+          return { naam: n, emoji: rol === "ouder" ? "👪" : rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
         });
     } catch { return []; }
   }, [player]);
@@ -365,6 +365,19 @@ export default function MijnPagina({
   const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
   const [avatarBewerken, setAvatarBewerken] = useState(false);
+  // 👨‍👩‍👧 Gezinsrij (Mark 22 aug): ouders en kinderen delen vaak één apparaat —
+  // dan moet in één oogopslag duidelijk zijn wíé er bezig is. Max 4 profielen
+  // naast elkaar (Familie-gedachte: ouder + 3 kinderen): de actieve vol in
+  // kleur met groene ring, de rest doorzichtig; tikken = wisselen. Elk profiel
+  // toont zijn éigen avatar (lk_avatar:<naam>).
+  const gezinsRij = useMemo(() => {
+    const eigenEmoji = userRole === "ouder" ? "👪" : userRole === "teacher" ? "🧑‍🏫" : userRole === "student" ? "🎓" : "👦";
+    const rij = [{ naam: player, actief: true, config: avatarConfig, emoji: eigenEmoji }];
+    andereNamen.slice(0, 3).forEach((n) => {
+      rij.push({ naam: n.naam, actief: false, config: loadAvatarConfig(n.naam), emoji: n.emoji });
+    });
+    return rij;
+  }, [player, userRole, avatarConfig, andereNamen]);
   // Mark's AvatarKiezer (exact artifact) meldt keuzes via onChange; wij
   // vangen even later het canvas-beeld zodat de avatar overal zichtbaar is.
   const kiezerWrap = useRef(null);
@@ -638,7 +651,7 @@ export default function MijnPagina({
         {player && (
           <>
             {/* ── Kop: avatar + naam + merken ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)", display: "flex", alignItems: "center", gap: 16 }}>
+            <Card padding="md" style={{ marginBottom: "var(--space-4)", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
               <div style={{ position: "relative", flexShrink: 0, width: 84, height: 84, display: "grid", placeItems: "center" }}>
                 {/* Kwartier-ring (dial uit het voorbeeld): vult zich met de
                     oefenminuten van vandaag, vol bij 15. */}
@@ -837,6 +850,50 @@ export default function MijnPagina({
                   </span>
                 </div>
               </div>
+              {/* 👨‍👩‍👧 Gezinsrij: wie is er bezig op dit apparaat? Actief profiel
+                  vol in kleur met groene ring; de rest doorzichtig, tik =
+                  wisselen (Mark 22 aug). Alleen tonen als er iets te kiezen is. */}
+              {gezinsRij.length > 1 && (
+                <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div style={{ ...eyebrowStijl, marginBottom: 6 }}>Wie is er bezig?</div>
+                  <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                    {gezinsRij.map((p) => (
+                      <button
+                        key={p.naam}
+                        onClick={() => {
+                          if (p.actief) return;
+                          try { track("mijn_profiel_wissel", { via: "gezinsrij" }); } catch { /* */ }
+                          onWisselProfiel && onWisselProfiel(p.naam);
+                        }}
+                        aria-pressed={p.actief}
+                        title={p.actief ? `${p.naam} is nu bezig` : `Wissel naar ${p.naam}`}
+                        style={{
+                          background: "none", border: "none", padding: 0, textAlign: "center",
+                          cursor: p.actief ? "default" : "pointer", fontFamily: "inherit",
+                        }}
+                      >
+                        <div style={{
+                          position: "relative", width: 54, height: 54, borderRadius: "50%",
+                          display: "grid", placeItems: "center",
+                          border: p.actief ? "2.5px solid #00c853" : "2px solid rgba(255,255,255,0.15)",
+                          opacity: p.actief ? 1 : 0.38,
+                          filter: p.actief ? "none" : "grayscale(0.6)",
+                          transition: "opacity 0.2s",
+                        }}>
+                          <AvatarSvg config={p.config} size={46} />
+                          <span style={{ position: "absolute", right: -4, bottom: -4, fontSize: 13 }} aria-hidden="true">{p.emoji}</span>
+                        </div>
+                        <div style={{
+                          fontSize: 11, marginTop: 4, maxWidth: 62,
+                          overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                          fontWeight: p.actief ? 800 : 600,
+                          color: p.actief ? "var(--color-text-strong)" : "var(--color-text-muted, #8899aa)",
+                        }}>{p.naam}</div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </Card>
 
             {/* ── Avatar bewerken = Mark's AvatarKiezer (exact claude.ai-
