@@ -469,6 +469,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [rideTrain, setRideTrain] = useState(false);    // 🚂 camera rijdt mee met de trein
   const [rideIdx, setRideIdx] = useState(null);         // 🎠 in welke attractie zit je? (index)
   const [zweef, setZweef] = useState(false);            // 🪽 zweef-modus (Minecraft-fly): snel + over alles heen
+  const climbRef = useRef(0);                           // 🪽 stijgen/dalen tijdens het zweven: +1 omhoog, −1 omlaag, 0 stil
   // Standaard (alle uit) = derde-persoons achter de speler (poppetje + buddy in beeld).
   // 🐾 maatje — Charley is het STANDAARD maatje (Mark 1 jul); wie zelf iets koos
   // houdt z'n keuze.
@@ -2052,6 +2053,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           rideTrain={rideTrain}
           rideIdx={rideIdx}
           zweef={zweef}
+          climbRef={climbRef}
           spelerNaam={naam}
           goedeScore={goedeScore}
           zwakVak={zwakVak}
@@ -2209,6 +2211,33 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           {zweef ? "🚶" : "🪽"}
         </button>
       )}
+
+      {/* 🪽 Hoogte-knoppen: alleen tijdens zweven. Vasthouden = soepel stijgen/
+          dalen, zodat je hoog boven het park kunt hangen om het hele pad te zien
+          (Mark 23 aug). Laten los = blijf hangen op die hoogte. */}
+      {zweef && !firstPerson && rideIdx == null && !rideTrain && (() => {
+        const stop = () => { climbRef.current = 0; };
+        const knop = (emoji, richting, bottom, titel) => (
+          <button
+            title={titel}
+            onPointerDown={(e) => { e.preventDefault(); climbRef.current = richting; }}
+            onPointerUp={stop}
+            onPointerLeave={stop}
+            onPointerCancel={stop}
+            onContextMenu={(e) => e.preventDefault()}
+            style={{ position: "absolute", zIndex: 16, right: 80, bottom, touchAction: "none", border: "none", borderRadius: "50%", width: 54, height: 54, font: "700 22px system-ui", background: "rgba(255,255,255,0.92)", boxShadow: "0 4px 14px rgba(0,0,0,.28)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            {emoji}
+          </button>
+        );
+        const laag = pyrIdx != null && COARSE_POINTER ? 240 : 150;
+        return (
+          <>
+            {knop("⬆️", 1, laag + 62, "Hoger vliegen (vasthouden)")}
+            {knop("⬇️", -1, laag, "Lager vliegen (vasthouden)")}
+          </>
+        );
+      })()}
 
       {/* 🎠 In een attractie: grote duidelijke uitstap-knop. */}
       {rideIdx != null && (

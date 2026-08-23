@@ -9,7 +9,13 @@ import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, Plane
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
-import { LOW_END } from "./grid";
+import { LOW_END, HALF, CELL } from "./grid";
+
+// Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
+// Schaalt mee met de park-grootte (2× uitgezoomd 23 aug → ±160 i.p.v. ±80).
+const PARK_RAND = HALF * CELL - 2;
+// Vlieg-hoogte-grenzen (m boven de grond) voor de zweefmodus.
+const VLIEG_MIN = 3, VLIEG_MAX = 150, VLIEG_START = 4.5;
 
 // Dag-nacht-cyclus: stuurt de zon, het omgevingslicht en de luchtkleur over de
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
@@ -484,10 +490,11 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
+  const vliegY = useRef(VLIEG_START); // huidige vlieghoogte boven de grond (zweefmodus)
   const fwd = useRef(new Vector3()), right = useRef(new Vector3()), dir = useRef(new Vector3());
   const vel = useRef(new Vector3()), doelV = useRef(new Vector3()); // huidige + gewenste loopsnelheid
   const yGlad = useRef(null); // gedempte hoogte → zacht op/af blok-treden stappen
@@ -507,7 +514,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     if (!solid || vast || !solid(nx, nz)) { pos.current.x = nx; pos.current.z = nz; }
     else { if (!solid(nx, pos.current.z)) pos.current.x = nx; if (!solid(pos.current.x, nz)) pos.current.z = nz; }
     const d = Math.hypot(pos.current.x, pos.current.z);
-    if (d > 78) { pos.current.x *= 78 / d; pos.current.z *= 78 / d; }
+    if (d > PARK_RAND) { pos.current.x *= PARK_RAND / d; pos.current.z *= PARK_RAND / d; }
   };
 
   useFrame((state, dt) => {
@@ -581,7 +588,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
         pos.current.x += vel.current.x * dts;
         pos.current.z += vel.current.z * dts;
         const zd = Math.hypot(pos.current.x, pos.current.z);
-        if (zd > 78) { pos.current.x *= 78 / zd; pos.current.z *= 78 / zd; }
+        if (zd > PARK_RAND) { pos.current.x *= PARK_RAND / zd; pos.current.z *= PARK_RAND / zd; }
       } else {
         verplaats(pos.current.x + vel.current.x * dts, pos.current.z + vel.current.z * dts);
       }
@@ -592,7 +599,15 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dh = Math.atan2(Math.sin(dh), Math.cos(dh)); // kortste draai-richting
       node.rotation.y += dh * Math.min(1, 14 * dts);
     }
-    const tyDoel = (heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0) + (zweef ? 4.5 : 0);
+    // 🪽 Vlieghoogte regelen met de omhoog/omlaag-knoppen (climbRef: +1 stijgen,
+    //    −1 dalen). Zo kun je hoog boven het park hangen om het hele pad te zien.
+    if (zweef) {
+      const climb = climbRef?.current || 0;
+      if (climb) vliegY.current = Math.max(VLIEG_MIN, Math.min(VLIEG_MAX, vliegY.current + climb * 40 * dts));
+    } else {
+      vliegY.current = VLIEG_START;
+    }
+    const tyDoel = (heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0) + (zweef ? vliegY.current : 0);
     if (yGlad.current == null) yGlad.current = tyDoel;
     yGlad.current += (tyDoel - yGlad.current) * Math.min(1, 12 * dts);
     const ty = yGlad.current;
