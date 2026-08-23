@@ -318,7 +318,7 @@ export function Leerpadlint({ heightRef }) {
         return (
           <group position={[sx, y, sz]}>
             <mesh position={[0, 0.9, 0]} castShadow><boxGeometry args={[0.12, 1.8, 0.12]} /><meshStandardMaterial color="#6b4f2a" /></mesh>
-            {arm("#ffd54f", "Makkelijk", "groep 3-5 · geel", -1)}
+            {arm("#ffd54f", "Makkelijk", "groep 3 · geel", -1)}
             {arm("#42a5f5", "Moeilijk", "brugklas · blauw", 1)}
             <Html position={[0, 2.15, 0]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
               <div style={{ whiteSpace: "nowrap", background: "rgba(255,254,248,0.95)", border: "2px solid #234", borderRadius: 8, padding: "3px 9px", fontFamily: "system-ui, sans-serif", fontSize: 11.5, fontWeight: 800, color: "#234" }}>🎓 Kies je kant</div>

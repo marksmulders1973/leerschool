@@ -10,47 +10,63 @@
 // <Leerpadlint>-component (ZooScene) tekent er een vloeiend gekleurd grondlint
 // van; de wandelkwartier-route kan later hetzelfde lint volgen.
 
-// Kleurbanden op volgorde van niveau (geel → groen → blauw).
+// Kleurbanden — nu ÉÉN kleur per groep (Mark 23 aug: "het wandelpad in de
+// kleuren van de groep"). Een vloeiend spectrum van geel (jongste) via groen
+// (midden) naar blauw (brugklas): elk kind ziet zijn eigen groep-kleur terug op
+// het pad, en voelt bij elke kleur-overgang dat het een groep verder gaat — net
+// als op school. De ankers geel/groen/blauw blijven op groep 3 / groep 6 /
+// brugklas staan (zodat de entree-splitsing "geel = makkelijk, blauw = moeilijk"
+// blijft kloppen); de tussenkleuren rijgen ze vloeiend aaneen.
 export const LINT_BANDEN = [
-  { id: "geel",  kleur: "#ffd54f", tekstKleur: "#5c4300", groep: "Groep 3-5", start: "tellen · klokkijken" },
-  { id: "groen", kleur: "#00c853", tekstKleur: "#0b3d20", groep: "Groep 6-8", start: "breuken · oppervlakte · inhoud" },
-  { id: "blauw", kleur: "#42a5f5", tekstKleur: "#0b2a4a", groep: "Brugklas & examens", start: "tot aan parabolen" },
+  { id: "g3", kleur: "#ffd54f", tekstKleur: "#5c4300", groep: "Groep 3", start: "tellen · klokkijken" },
+  { id: "g4", kleur: "#dce775", tekstKleur: "#4a4a10", groep: "Groep 4", start: "plus & min · meten" },
+  { id: "g5", kleur: "#aed581", tekstKleur: "#2e4610", groep: "Groep 5", start: "tafels · breuken beginnen" },
+  { id: "g6", kleur: "#00c853", tekstKleur: "#0b3d20", groep: "Groep 6", start: "breuken · oppervlakte" },
+  { id: "g7", kleur: "#26c6da", tekstKleur: "#06333b", groep: "Groep 7", start: "inhoud · verhoudingen" },
+  { id: "g8", kleur: "#29b6f6", tekstKleur: "#06304a", groep: "Groep 8", start: "procenten · de piramide" },
+  { id: "brug", kleur: "#42a5f5", tekstKleur: "#0b2a4a", groep: "Brugklas & examens", start: "landmarks · tot parabolen" },
 ];
 
 // Waypoints als [celX, celZ, bandIndex]. Ze rijgen de bestaande stations aan
 // elkaar in leer-volgorde en vormen samen één gesloten lus (eindigt weer bij de
-// ingang). De coördinaten volgen de canonieke plekken uit STARTER_LAYOUT.
+// ingang). De coördinaten volgen de canonieke plekken uit STARTER_LAYOUT; de
+// bandIndex verwijst nu naar de groep (0=groep 3 … 6=brugklas). De posities zijn
+// onveranderd — alleen de kleur-indeling is fijnmaziger geworden.
 export const LINT_WAYPOINTS = [
-  // 🟡 GEEL — ingang → boerderij (dieren tellen) → meet-tuin (klok/telraam/moestuin)
+  // 🟡 GROEP 3 — ingang → boerderij (dieren tellen)
   [0, 16, 0],
   [0, 9, 0],
   [-7, 6, 0],
-  [-13, 7, 0],   // langs de boerderij (verblijf -17..-11, z3-9)
-  [-20, 9, 0],
-  [-24, 18, 0],
-  [-25, 26, 0],  // moestuin (-23,28) / telraam (-27,32)
-  [-33, 29, 0],  // klok (-38,28) / weegschaal (-33,28)
-  // 🟢 GROEN — meet-tuin → de inhoud-vormen → zwembad → piramide (langs de rand)
-  [-37, 23, 1],
-  [-35, 17, 1],  // bol (-37,16)
-  [-29, 19, 1],  // zwembad (-30,20)
-  [-25, 13, 1],  // cilinder (-26,13)
-  [-22, 8, 1],   // kegel (-22,8) / halvebol (-22,22 verderop)
-  [-32, 4, 1],   // kubus (-35,2)
-  [-30, -3, 1],
-  [-27, -9, 1],  // piramide-plein NOORDRAND (piramide zelf -30,-19, footprint 21!)
-  // 🔵 BLAUW — via het zuiden naar de ontdek-laan met landmarks → terug naar de ingang
-  [-16, -8, 2],
-  [-4, -10, 2],
-  [8, -14, 2],
-  [19, -16, 2],
-  [29, -12, 2],  // molen / weerstation
-  [29, -2, 2],   // standbeeld / wereldbol
-  [29, 6, 2],    // tempel / vulkaan
-  [29, 12, 2],   // eiffeltoren / kompas
-  [22, 15, 2],
-  [10, 16, 2],
-  [0, 16, 2],    // terug bij de start
+  // 🟢 GROEP 4 — langs de boerderij → richting de meet-tuin
+  [-13, 7, 1],   // langs de boerderij (verblijf -17..-11, z3-9)
+  [-20, 9, 1],
+  // 🟢 GROEP 5 — meet-tuin (moestuin/telraam/klok/weegschaal)
+  [-24, 18, 2],
+  [-25, 26, 2],  // moestuin (-23,28) / telraam (-27,32)
+  [-33, 29, 2],  // klok (-38,28) / weegschaal (-33,28)
+  // 🟩 GROEP 6 — de eerste inhoud-vormen → zwembad
+  [-37, 23, 3],
+  [-35, 17, 3],  // bol (-37,16)
+  [-29, 19, 3],  // zwembad (-30,20)
+  // 🟦 GROEP 7 — cilinder / kegel / kubus
+  [-25, 13, 4],  // cilinder (-26,13)
+  [-22, 8, 4],   // kegel (-22,8) / halvebol (-22,22 verderop)
+  [-32, 4, 4],   // kubus (-35,2)
+  // 🟦 GROEP 8 — het piramide-plein
+  [-30, -3, 5],
+  [-27, -9, 5],  // piramide-plein NOORDRAND (piramide zelf -30,-19, footprint 21!)
+  // 🔵 BRUGKLAS — via het zuiden naar de ontdek-laan met landmarks → terug naar de ingang
+  [-16, -8, 6],
+  [-4, -10, 6],
+  [8, -14, 6],
+  [19, -16, 6],
+  [29, -12, 6],  // molen / weerstation
+  [29, -2, 6],   // standbeeld / wereldbol
+  [29, 6, 6],    // tempel / vulkaan
+  [29, 12, 6],   // eiffeltoren / kompas
+  [22, 15, 6],
+  [10, 16, 6],
+  [0, 16, 6],    // terug bij de start
 ];
 
 // 🔀 Entree-splitsing (Mark 22 aug: "links of rechts, makkelijk of moeilijk").
