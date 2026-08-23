@@ -1225,7 +1225,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       shadows={!LOW_END}
       dpr={LOW_END ? 1 : [1, 2]}
       performance={{ min: 0.55 }}
-      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 300 }}
+      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 600 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
       onCreated={({ gl }) => {
         // Context-loss (veel op goedkope Androids onder geheugendruk): zonder
@@ -1269,18 +1269,19 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
         {/* Ingang-poort + gele/blauwe "Kies je kant"-wegwijzer verwijderd (Mark
             23 aug: "het begin is veel te druk"). De entree is nu rustig. */}
-        {/* Toegangslaan naar het starter-plein (z≈35) — nu zwart asfalt, net als
-            het leerpad-lint (Mark 23 aug: "in het echt is de weg zwart"). */}
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 56]}>
-          <planeGeometry args={[6, 42]} />
+        {/* Toegangslaan naar het starter-plein — nu zwart asfalt (Mark 23 aug:
+            "in het echt is de weg zwart"). Coördinaten ×2 mee-geschaald met de
+            ruimte-verdubbeling van het park. */}
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 112]}>
+          <planeGeometry args={[12, 84]} />
           <meshStandardMaterial color="#26262b" roughness={0.95} />
         </mesh>
-        {/* Vrolijke ballontros naast de ingang. */}
-        <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
-        {/* Spawn blijft bij het starter-plein (z=35), niet aan de verre nieuwe
-            rand — anders begint elke speler met 40 m niemandsland. */}
+        {/* Vrolijke ballontros aan de voorrand. */}
+        <Balloons position={[10.8, heightFnRef.current(10.8, GRID_SIZE / 2 - 6), GRID_SIZE / 2 - 6]} />
+        {/* Spawn op het starter-plein (z≈64, bij de start van het leerpad-lint),
+            niet aan de verre rand — anders begint elke speler in niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
-        <Player inputRef={inputRef} start={spawn || [0, 0, 35]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} />
+        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} />
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
@@ -1412,7 +1413,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
           enableDamping
           dampingFactor={0.08}
           minDistance={6}
-          maxDistance={110}
+          maxDistance={240}
           maxPolarAngle={Math.PI / 2 - 0.05}
           target={[0, 0.8, 0]}
           enablePan={false}

@@ -6,7 +6,7 @@ export const TAFERELEN = [
     id: "newton",
     emoji: "🍎",
     titel: "De appel van Professor Isaac",
-    pos: [-10, 61],
+    pos: [-20, 122],
     praatje:
       "Au! Zag je die appel op zijn muts vallen? Dat is zwaartekracht: de aarde trekt álles naar beneden. Daarom kom jij van een glijbaan altijd beneden aan — en val je nooit omhoog!",
     weetje: "Het verhaal gaat dat Isaac Newton de zwaartekracht begreep toen hij een appel uit een boom zag vallen — ruim 300 jaar geleden.",
@@ -19,7 +19,7 @@ export const TAFERELEN = [
     id: "piramide",
     emoji: "🔺",
     titel: "De piramidebouwers",
-    pos: [11, 57],
+    pos: [22, 114],
     praatje:
       "Deze kabouters bouwen een piramide zoals in het oude Egypte — zonder kraan! Ze rollen zware blokken over boomstammen en duwen ze omhoog over een schuine helling. Hoe langer de helling, hoe lichter het duwen. Dat is een verhouding!",
     weetje: "De grote piramide van Cheops is zo'n 4500 jaar oud en was 146 meter hoog — gebouwd uit meer dan 2 miljoen blokken steen.",
@@ -32,7 +32,7 @@ export const TAFERELEN = [
     id: "tesla",
     emoji: "⚡",
     titel: "Meester Nikola en de bliksemkooi",
-    pos: [-11, 47],
+    pos: [-22, 94],
     praatje:
       "Kijk, Meester Nikola staat middenin de bliksem — en er gebeurt niks! Zijn metalen kooi leidt de stroom om hem heen, veilig de grond in. Dat heet een kooi van Faraday. Daarom ben je in een auto veilig bij onweer.",
     weetje: "Een vliegtuig wordt gemiddeld één keer per jaar door de bliksem geraakt — en iedereen aan boord merkt er bijna niets van, dankzij hetzelfde trucje.",

@@ -12,8 +12,10 @@ export const LOW_END = (() => {
 })();
 
 export const CELL = 2;        // celgrootte in wereld-units (≈ meter)
-export const HALF = 40;       // vakjes vanaf het midden (-40..40 => 81×81 raster).
-                              // 4× zo groot sinds 2 jul (Mark); vloer loopt mee tot ±80.
+export const HALF = 80;       // vakjes vanaf het midden (-80..80 => 161×161 raster).
+                              // Verdubbeld 23 aug (Mark: "verdubbel de ruimte tussen
+                              // de objecten") — de hele lay-out staat nu 2× ruimer;
+                              // objecten houden hun echte maat, vloer loopt mee tot ±160.
 export const GRID_SIZE = HALF * 2 * CELL;
 export const GRID_DIV = HALF * 2;
 

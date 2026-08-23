@@ -102,8 +102,12 @@ export default function Buitenwereld() {
     return { heuvels, bergen, sneeuw, stammen, bladeren };
   }, []);
 
+  // 🔎 Ruimte-verdubbeling (Mark 23 aug): het park is 2× uitgezoomd. De
+  // buitenwereld is pure sfeer zonder botsing, dus we schalen 'm in z'n geheel
+  // ×2 — dan schuiven de horizon-ring, het meertje, het weggetje, de bushalte,
+  // de heuvels en het bos vanzelf mee naar buiten, ruim om het grotere park heen.
   return (
-    <group>
+    <group scale={2}>
       {/* Grasvlakte tot de horizon (ring om het vierkante park-terrein heen). */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.07, 0]}>
         <ringGeometry args={[79, 290, 48]} />

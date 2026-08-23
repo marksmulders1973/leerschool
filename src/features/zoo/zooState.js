@@ -13,30 +13,42 @@ import { cellToWorld } from "./grid";
 // price 0 → bij weghalen geen "gratis" muntjes.
 function bouwVoorbeeldPark() {
   const L = [];
-  const add = (assetId, x, z, rotation = 0) => L.push({ assetId, cell: [x, z], rotation, price: 0 });
-  const rij = (asset, z, x1, x2) => { for (let x = x1; x <= x2; x++) add(asset, x, z); };
-  const kolom = (asset, x, z1, z2) => { for (let z = z1; z <= z2; z++) add(asset, x, z); };
-  const vlak = (asset, x1, x2, z1, z2) => { for (let x = x1; x <= x2; x++) for (let z = z1; z <= z2; z++) add(asset, x, z); };
+  // 🔎 Ruimte-verdubbeling (Mark 23 aug): het park is 2× uitgezoomd. Alle
+  // POSITIES worden ×S geschaald, maar de objecten houden hun echte maat en de
+  // celgrootte blijft 2 m — dus staan de objecten 2× verder uit elkaar. De
+  // doorlopende structuren (hekken/paden/rails) blijven aaneengesloten doordat
+  // de vul-loops élke tussenliggende cel neerzetten. De lay-out hieronder blijft
+  // letterlijk onveranderd; alleen deze helpers schalen mee.
+  const S = 2;
+  const raw = (assetId, x, z, rotation = 0, extra) => L.push({ assetId, cell: [x, z], rotation, price: 0, ...extra });
+  const add = (assetId, x, z, rotation = 0) => raw(assetId, x * S, z * S, rotation);
+  const rij = (asset, z, x1, x2) => { for (let x = x1 * S; x <= x2 * S; x++) raw(asset, x, z * S); };
+  const kolom = (asset, x, z1, z2) => { for (let z = z1 * S; z <= z2 * S; z++) raw(asset, x * S, z); };
+  const vlak = (asset, x1, x2, z1, z2) => { for (let x = x1 * S; x <= x2 * S; x++) for (let z = z1 * S; z <= z2 * S; z++) raw(asset, x, z); };
   // Hek-rechthoek die NETJES aansluit: rechte panelen langs X = rotatie 0, langs Z
   // = 90° gedraaid, en op de 4 hoeken een hoek-stuk met de juiste stand. Poort
-  // midden-voor (z2-wand).
+  // midden-voor (z2-wand). Grenzen worden ×S geschaald en elke rand-cel gevuld,
+  // zodat de weide 2× ruimer wordt maar het hek aaneengesloten blijft.
   const hek = (x1, z1, x2, z2, poortX) => {
-    add("hekHoek", x1, z1, 0);
-    add("hekHoek", x2, z1, -Math.PI / 2);
-    add("hekHoek", x1, z2, Math.PI / 2);
-    add("hekHoek", x2, z2, Math.PI);
-    for (let x = x1 + 1; x < x2; x++) {
-      add("hekPaneel", x, z1, 0);
-      add(x === poortX ? "hekPoort" : "hekPaneel", x, z2, 0);
+    const X1 = x1 * S, Z1 = z1 * S, X2 = x2 * S, Z2 = z2 * S, PX = poortX * S;
+    raw("hekHoek", X1, Z1, 0);
+    raw("hekHoek", X2, Z1, -Math.PI / 2);
+    raw("hekHoek", X1, Z2, Math.PI / 2);
+    raw("hekHoek", X2, Z2, Math.PI);
+    for (let x = X1 + 1; x < X2; x++) {
+      raw("hekPaneel", x, Z1, 0);
+      raw(x === PX ? "hekPoort" : "hekPaneel", x, Z2, 0);
     }
-    for (let z = z1 + 1; z < z2; z++) {
-      add("hekPaneel", x1, z, Math.PI / 2);
-      add("hekPaneel", x2, z, Math.PI / 2);
+    for (let z = Z1 + 1; z < Z2; z++) {
+      raw("hekPaneel", X1, z, Math.PI / 2);
+      raw("hekPaneel", X2, z, Math.PI / 2);
     }
   };
   const verblijf = (x1, z1, x2, z2, poortX, dieren) => {
     hek(x1, z1, x2, z2, poortX);
-    dieren.forEach((a, i) => add(a, x1 + 1 + (i % (x2 - x1 - 1)), z1 + 1 + Math.floor(i / (x2 - x1 - 1))));
+    // Dieren op ruime afstand binnen de grotere weide (elke 2 cellen een dier).
+    const X1 = x1 * S, Z1 = z1 * S, W = Math.max(1, x2 * S - x1 * S - 1);
+    dieren.forEach((a, i) => raw(a, X1 + 1 + ((i * 2) % W), Z1 + 1 + Math.floor((i * 2) / W) * 2));
   };
 
   // ── PADEN ── (Mark 22 aug: "ruim alles op — 1 pad") De losse grijze paden
@@ -46,8 +58,8 @@ function bouwVoorbeeldPark() {
   // De twee pleintjes markeren we als `vast` zodat de opruim-migratie voor
   // bestaande parken (ruimSeedPadenOp) ze met rust laat — alleen de óude losse
   // grijze paden worden daar weggehaald.
-  for (let x = -2; x <= 2; x++) for (let z = 14; z <= 17; z++) L.push({ assetId: "pathStone", cell: [x, z], rotation: 0, price: 0, vast: 1 });
-  for (let x = -3; x <= 3; x++) for (let z = -3; z <= 3; z++) L.push({ assetId: "pathRed", cell: [x, z], rotation: 0, price: 0, vast: 1 });
+  for (let x = -2 * S; x <= 2 * S; x++) for (let z = 14 * S; z <= 17 * S; z++) raw("pathStone", x, z, 0, { vast: 1 });
+  for (let x = -3 * S; x <= 3 * S; x++) for (let z = -3 * S; z <= 3 * S; z++) raw("pathRed", x, z, 0, { vast: 1 });
 
   // ── INGANG ──
   add("hekPoort", 0, 18);

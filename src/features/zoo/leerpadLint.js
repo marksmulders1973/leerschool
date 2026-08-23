@@ -32,7 +32,7 @@ export const LINT_BANDEN = [
 // ingang). De coördinaten volgen de canonieke plekken uit STARTER_LAYOUT; de
 // bandIndex verwijst nu naar de groep (0=groep 3 … 6=brugklas). De posities zijn
 // onveranderd — alleen de kleur-indeling is fijnmaziger geworden.
-export const LINT_WAYPOINTS = [
+const LINT_WP_RAW = [
   // 🟡 GROEP 3 — ingang → boerderij (dieren tellen)
   [0, 16, 0],
   [0, 9, 0],
@@ -69,10 +69,16 @@ export const LINT_WAYPOINTS = [
   [0, 16, 6],    // terug bij de start
 ];
 
+// 🔎 Ruimte-verdubbeling (Mark 23 aug): het hele park staat 2× ruimer, dus de
+// waypoints (die naar de station-cellen wijzen) schalen mee ×2. De banden
+// blijven onveranderd. Zo volgt het lint netjes de uitgezoomde lay-out.
+const LINT_SCALE = 2;
+export const LINT_WAYPOINTS = LINT_WP_RAW.map(([x, z, b]) => [x * LINT_SCALE, z * LINT_SCALE, b]);
+
 // 🔀 Entree-splitsing (Mark 22 aug: "links of rechts, makkelijk of moeilijk").
 // Bij de ingang wijst een bordje twee kanten op: linksom loop je het lint vooruit
 // (geel = makkelijk eerst), rechtsom loop je het achteruit (blauw = moeilijk eerst).
-export const LINT_START = { x: 0, z: 16 };
+export const LINT_START = { x: 0 * LINT_SCALE, z: 16 * LINT_SCALE };
 
 // De index van het eerste waypoint van elke band → daar zet ZooScene een
 // niveau-overgang-bordje ("nu Groep 6-8").
