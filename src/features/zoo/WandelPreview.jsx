@@ -234,6 +234,27 @@ function RouteStippen({ route, heightRef, doelen }) {
 const LINT_BREEDTE = 2.4;   // breedte van het pad
 const LINT_STAP = 0.7;      // afstand tussen de tegels (overlappen → aaneengesloten)
 
+// 🌿 Cel-set die het leerpad-lint beslaat (met marge), zodat ZooScene de
+// grassprieten van het HÉLE hoofdpad kan weren — niet alleen van losse
+// pad-tegels. (Mark 23 aug: "het pad vrij van gras — een mooi rustig pad".)
+// marge = hoeveel cellen rondom de middellijn ook grasvrij blijven (1 = ~pad
+// plus een schone rand). Zelfde curve als het lint zelf, dicht bemonsterd.
+export function lintCellen(marge = 1) {
+  const pts = LINT_WAYPOINTS.map(([cx, cz]) => new THREE.Vector3(cx * CELL, 0, cz * CELL));
+  const curve = new THREE.CatmullRomCurve3(pts, true, "catmullrom", 0.5);
+  const n = Math.max(120, Math.round(curve.getLength() / (CELL * 0.4)));
+  const set = new Set();
+  for (let i = 0; i <= n; i++) {
+    const p = curve.getPointAt(i / n);
+    const cx = Math.round(p.x / CELL);
+    const cz = Math.round(p.z / CELL);
+    for (let dx = -marge; dx <= marge; dx++)
+      for (let dz = -marge; dz <= marge; dz++)
+        set.add(`${cx + dx},${cz + dz}`);
+  }
+  return set;
+}
+
 export function Leerpadlint({ heightRef }) {
   const instRef = useRef();
   const { tegels, borden } = useMemo(() => {

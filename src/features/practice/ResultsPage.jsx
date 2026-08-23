@@ -369,7 +369,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {onOpenLeerpad && conceptPaden.length > 0 && (
           <div style={{ marginTop: 16, padding: 16, borderRadius: 16, background: "rgba(0,200,83,0.07)", border: "1.5px solid rgba(0,200,83,0.30)" }}>
             <p style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, color: "var(--color-brand-primary-100)", textAlign: "center", margin: "0 0 4px" }}>
-              📚 Snap je nu waaróm?
+              📚 Begrijp je het nu — of wil je het op een andere manier proberen?
             </p>
             <p style={{ fontSize: 12.5, color: "var(--color-text-muted)", textAlign: "center", margin: "0 0 12px", lineHeight: 1.5 }}>
               Leer het onderwerp helemaal — stap voor stap, met uitleg op 3 niveaus.

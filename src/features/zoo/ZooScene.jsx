@@ -16,7 +16,7 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import WandelPreview, { wandelPreviewActief, Leerpadlint } from "./WandelPreview";
+import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen } from "./WandelPreview";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord } from "./ParkLeerobjecten";
@@ -1087,10 +1087,13 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   pretRef.current = _routes.pret;
   bankjesRef.current = _routes.bankjes;
 
-  // 🌿 Pad-cellen (alle neergelegde pad-tegels): de gras-sprieten slaan deze
-  // over zodat er geen planten in het looppad staan (Brian 20 aug).
+  // 🌿 Pad-cellen: de gras-sprieten slaan deze over zodat er geen planten in
+  // het looppad staan (Brian 20 aug). Sinds 23 aug (Mark: "een mooi rustig
+  // pad") begint de set met het HÉLE gekleurde leerpad-lint (het hoofdpad),
+  // niet alleen de losse neergelegde pad-tegels — anders poken er sprietjes
+  // dwars door het lint heen.
   const padCellen = useMemo(() => {
-    const s = new Set();
+    const s = lintCellen(1);
     placedItems.forEach((it) => {
       if (!it || !Array.isArray(it.cell)) return;
       const a = getAsset(it.assetId);

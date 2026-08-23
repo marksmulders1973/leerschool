@@ -307,7 +307,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
           <div style={{ fontSize: 15, color: "rgba(255,255,255,0.9)", marginBottom: 12, textAlign: "center", lineHeight: 1.5 }}>
             {gekozen === vraag.answer
               ? <>✅ <strong style={{ color: "#fff" }}>Goed gedaan!</strong> Ben jij klaar voor de Doorstroomtoets? Test het hieronder.</>
-              : <>Geen zorgen — <strong style={{ color: "#fff" }}>zó</strong> snap je 'm wél. Leer dit stap voor stap:</>}
+              : <>Geen zorgen — wil je het op een <strong style={{ color: "#fff" }}>andere manier</strong> proberen? Leer het hier stap voor stap:</>}
           </div>
           {/* Volgorde op maat (Mark 2026-06-14, /v/-trechter-fix): bij een goed
               antwoord eerst de oefentoets (ben je er klaar voor?), bij een fout
