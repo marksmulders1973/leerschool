@@ -540,12 +540,15 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
     <group>
       {/* Pixel-ruis-maps (grijs) vermenigvuldigen met de instance-kleur:
           gras-verf en hoogte-kleuren blijven werken, maar krijgen Minecraft-korrel. */}
+      {/* Blokgrootte = TER_STEP (de raster-stap), niet CELL: sinds de ruimte-
+          verdubbeling (23 aug) is TER_STEP 4 m terwijl CELL 2 m bleef, dus met
+          CELL zouden de vloer-blokken losse vlakken worden met gaten ertussen. */}
       <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
-        <boxGeometry args={[CELL, 0.4, CELL]} />
+        <boxGeometry args={[TER_STEP, 0.4, TER_STEP]} />
         <meshStandardMaterial map={grijsMaps.terreinTop()} roughness={1} metalness={0} />
       </instancedMesh>
       <instancedMesh ref={refKol} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
-        <boxGeometry args={[CELL, 1, CELL]} />
+        <boxGeometry args={[TER_STEP, 1, TER_STEP]} />
         <meshStandardMaterial map={grijsMaps.terreinKolom()} roughness={1} metalness={0} />
       </instancedMesh>
     </group>
