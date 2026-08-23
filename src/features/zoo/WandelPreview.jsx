@@ -257,6 +257,7 @@ export function lintCellen(marge = 1) {
 
 export function Leerpadlint({ heightRef }) {
   const instRef = useRef();
+  const markRef = useRef();
   const { tegels, borden } = useMemo(() => {
     const pts = LINT_WAYPOINTS.map(([cx, cz]) => new THREE.Vector3(cx * CELL, 0, cz * CELL));
     const curve = new THREE.CatmullRomCurve3(pts, true, "catmullrom", 0.5);
@@ -293,60 +294,45 @@ export function Leerpadlint({ heightRef }) {
 
   useLayoutEffect(() => {
     const inst = instRef.current;
-    if (!inst) return;
+    const mark = markRef.current;
+    if (!inst || !mark) return;
     const m = new THREE.Matrix4();
     const q = new THREE.Quaternion();
     const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
-    const schaal = new THREE.Vector3(LINT_BREEDTE, LINT_STAP * 1.7, 1);
+    const schaalWeg = new THREE.Vector3(LINT_BREEDTE, LINT_STAP * 1.7, 1);
+    const schaalStreep = new THREE.Vector3(0.42, LINT_STAP * 1.7, 1);
     const kleur = new THREE.Color();
     tegels.forEach((s, i) => {
       q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
-      m.compose(new THREE.Vector3(s.x, hoogte(s.x, s.z) + 0.05, s.z), q, schaal);
+      const y = hoogte(s.x, s.z);
+      // 🛣️ De weg zelf = zwart asfalt (Mark 23 aug: "in het echt is de weg zwart").
+      m.compose(new THREE.Vector3(s.x, y + 0.05, s.z), q, schaalWeg);
       inst.setMatrixAt(i, m);
+      // Dun gekleurd middenstreepje = de groep-kleur als wegmarkering, zodat het
+      // pad nog steeds "beschreven in kleuren" is zonder de kermis van vroeger.
+      m.compose(new THREE.Vector3(s.x, y + 0.06, s.z), q, schaalStreep);
+      mark.setMatrixAt(i, m);
       kleur.set(LINT_BANDEN[s.band]?.kleur || "#ffd54f");
-      inst.setColorAt(i, kleur);
+      mark.setColorAt(i, kleur);
     });
     inst.instanceMatrix.needsUpdate = true;
-    if (inst.instanceColor) inst.instanceColor.needsUpdate = true;
+    mark.instanceMatrix.needsUpdate = true;
+    if (mark.instanceColor) mark.instanceColor.needsUpdate = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tegels, heightRef]);
 
   return (
     <group>
-      <instancedMesh key={tegels.length} ref={instRef} args={[null, null, tegels.length]} frustumCulled={false}>
+      {/* 🛣️ De zwarte asfaltweg */}
+      <instancedMesh key={`weg-${tegels.length}`} ref={instRef} args={[null, null, tegels.length]} frustumCulled={false}>
         <planeGeometry args={[1, 1]} />
-        <meshStandardMaterial vertexColors transparent opacity={0.92} roughness={0.85} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
+        <meshStandardMaterial color="#26262b" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
       </instancedMesh>
-      {/* 🔀 Entree-splitsing (Mark 22 aug: "links of rechts, makkelijk of moeilijk"):
-          bij de ingang wijst een wegwijzer twee kanten op. Linksom (west) begin je
-          makkelijk (geel), rechtsom (oost) begin je bij het moeilijke eind (blauw). */}
-      {(() => {
-        const sx = LINT_START.x * CELL, sz = LINT_START.z * CELL;
-        const y = hoogte(sx, sz);
-        const arm = (kleur, tekst, sub, kant) => (
-          <group position={[kant * 0.15, 1.35, 0]}>
-            <mesh position={[kant * 0.55, 0, 0]} castShadow><boxGeometry args={[1.15, 0.5, 0.06]} /><meshStandardMaterial color={kleur} /></mesh>
-            {/* pijlpunt */}
-            <mesh position={[kant * 1.2, 0, 0]} rotation={[0, 0, kant > 0 ? -Math.PI / 4 : Math.PI / 4]}><boxGeometry args={[0.36, 0.36, 0.06]} /><meshStandardMaterial color={kleur} /></mesh>
-            <Html position={[kant * 0.55, 0, 0.05]} center distanceFactor={9} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
-              <div style={{ width: 96, textAlign: "center", fontFamily: "system-ui, sans-serif", color: "#fff", textShadow: "0 1px 2px rgba(0,0,0,.5)" }}>
-                <div style={{ fontWeight: 800, fontSize: 12 }}>{kant < 0 ? "⬅️ " : ""}{tekst}{kant > 0 ? " ➡️" : ""}</div>
-                <div style={{ fontWeight: 700, fontSize: 9.5, opacity: 0.95 }}>{sub}</div>
-              </div>
-            </Html>
-          </group>
-        );
-        return (
-          <group position={[sx, y, sz]}>
-            <mesh position={[0, 0.9, 0]} castShadow><boxGeometry args={[0.12, 1.8, 0.12]} /><meshStandardMaterial color="#6b4f2a" /></mesh>
-            {arm("#ffd54f", "Makkelijk", "groep 3 · geel", -1)}
-            {arm("#42a5f5", "Moeilijk", "brugklas · blauw", 1)}
-            <Html position={[0, 2.15, 0]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
-              <div style={{ whiteSpace: "nowrap", background: "rgba(255,254,248,0.95)", border: "2px solid #234", borderRadius: 8, padding: "3px 9px", fontFamily: "system-ui, sans-serif", fontSize: 11.5, fontWeight: 800, color: "#234" }}>🎓 Kies je kant</div>
-            </Html>
-          </group>
-        );
-      })()}
+      {/* Gekleurd middenstreepje (groep-kleur = wegmarkering) */}
+      <instancedMesh key={`streep-${tegels.length}`} ref={markRef} args={[null, null, tegels.length]} frustumCulled={false}>
+        <planeGeometry args={[1, 1]} />
+        <meshStandardMaterial vertexColors transparent opacity={0.95} roughness={0.7} depthWrite={false} polygonOffset polygonOffsetFactor={-3} />
+      </instancedMesh>
       {/* 🪧 Niveau-overgang-bordjes: "nu Groep 6-8" — zo voel je dat je een groep
           verder gaat, net als op school. */}
       {borden.map((b, i) => {

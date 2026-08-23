@@ -1267,13 +1267,13 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
         <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
-        {/* Vaste ingang-poort met de parknaam, aan de voorrand van het park. */}
-        <EntranceGate name={parkNaam} position={[0, heightFnRef.current(0, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} rotation={0} />
-        {/* Laan van de poort (nieuwe rand, z≈77) naar het starter-plein (z≈35):
-            statisch — werkt voor bestaande én nieuwe parken zonder migratie. */}
+        {/* Ingang-poort + gele/blauwe "Kies je kant"-wegwijzer verwijderd (Mark
+            23 aug: "het begin is veel te druk"). De entree is nu rustig. */}
+        {/* Toegangslaan naar het starter-plein (z≈35) — nu zwart asfalt, net als
+            het leerpad-lint (Mark 23 aug: "in het echt is de weg zwart"). */}
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 56]}>
           <planeGeometry args={[6, 42]} />
-          <meshStandardMaterial color="#a8a49c" roughness={1} />
+          <meshStandardMaterial color="#26262b" roughness={0.95} />
         </mesh>
         {/* Vrolijke ballontros naast de ingang. */}
         <Balloons position={[5.4, heightFnRef.current(5.4, GRID_SIZE / 2 - 3), GRID_SIZE / 2 - 3]} />
