@@ -96,11 +96,11 @@ function bouwVoorbeeldPark() {
 
   // ── ETEN bij de ingang (kraampjes, 3×3) ──
   add("patatkraam", -7, 12); add("drankkraam", 7, 12);
-  add("ijscokraam", -7, 7);  add("popcornkraam", 7, 7);
+  add("ijscokraam", -10, 4);  add("popcornkraam", 7, 7);
   add("bankje", -10, 12); add("bankje", 10, 12);
 
   // ── DIER-VERBLIJVEN (4 stuks, met hek + poort) ──
-  verblijf(-17, 3, -11, 9, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor)
+  verblijf(-17, 0, -11, 6, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor; 24 aug zuidwaarts zodat het pad er langs loopt i.p.v. doorheen)
   verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter)
   verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);               // hertenkamp (rechts-voor)
   // Dino-plek (rechts-achter): start NIET vol (Mark 2026-07-01). Alleen de kleine

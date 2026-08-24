@@ -95,7 +95,9 @@ export const LEERTRAIL = [
   { id: "telraam", off: 4 }, { id: "breukentaart", off: 4 }, { id: "parkkaart", off: 4 },
   { id: "moestuin", off: 6 }, { id: "zwembad", off: 7 },
   { id: "cilinder", off: 6 }, { id: "kegel", off: 6 }, { id: "bol", off: 6 }, { id: "halvebol", off: 6 },
-  { id: "kubus", off: 6 }, { id: "piramide", off: 13 }, { id: "spaarpot", off: 4 },
+  // piramide is enorm (botst ±6 vakjes) → extra ver naar buiten zodat hij de
+  // lus nergens raakt (Mark 24 aug, walk-fix 3).
+  { id: "kubus", off: 6 }, { id: "piramide", off: 18 }, { id: "spaarpot", off: 4 },
   { id: "kompas", off: 5 }, { id: "eiffeltoren", off: 7 }, { id: "wereldbol", off: 5 }, { id: "vulkaan", off: 6 },
   { id: "molen", off: 6 }, { id: "tempel", off: 6 }, { id: "standbeeld", off: 5 }, { id: "telescoop", off: 5 },
   { id: "raket", off: 7 }, { id: "kas", off: 5 }, { id: "weerstation", off: 5 },
@@ -108,6 +110,11 @@ export const LEERTRAIL = [
 // draaihoek zodat een object naar het pad toe kijkt.
 export function leertrailPlekken(trail = LEERTRAIL) {
   const pts = LINT_WAYPOINTS.map(([x, z]) => [x, z]);
+  // Zwaartepunt van de lus → objecten schuiven we naar de BUITENkant (weg van
+  // het zwaartepunt). Anders belandt een object aan de binnenkant van een bocht
+  // op het tegenoverliggende pad-stuk (smalle "hals" in de lus).
+  const cx = pts.reduce((s, p) => s + p[0], 0) / pts.length;
+  const cz = pts.reduce((s, p) => s + p[1], 0) / pts.length;
   const seg = [];
   let total = 0;
   for (let i = 0; i < pts.length; i++) {
@@ -127,7 +134,8 @@ export function leertrailPlekken(trail = LEERTRAIL) {
     let tx = s.b[0] - s.a[0], tz = s.b[1] - s.a[1];
     const tl = Math.hypot(tx, tz) || 1; tx /= tl; tz /= tl;
     const nx = -tz, nz = tx;              // loodrecht op het pad
-    const side = i % 2 === 0 ? 1 : -1;    // links/rechts afwisselen
+    // Kies de kant die van het zwaartepunt AF wijst (buitenkant van de lus).
+    const side = ((x - cx) * nx + (z - cz) * nz) >= 0 ? 1 : -1;
     const RAND = 76;                       // binnen het terrein (±80 vakjes) houden
     const px = Math.max(-RAND, Math.min(RAND, Math.round(x + nx * side * item.off)));
     const pz = Math.max(-RAND, Math.min(RAND, Math.round(z + nz * side * item.off)));
