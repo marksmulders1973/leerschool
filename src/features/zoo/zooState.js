@@ -77,7 +77,7 @@ function bouwVoorbeeldPark() {
   rij("flowerPurple", 13, -1, 1);
 
   // ── ATTRACTIES achterin ──
-  add("ferris", 0, -12);
+  add("ferris", 0, -15);
   add("swing", -8, -12);
   // 🚂 Trein-rondje door het hele park (Mark 5 jul): één grote lus met rails die
   // tussen het centrum en de dier-verblijven doorloopt. De trein rijdt hier
@@ -101,7 +101,7 @@ function bouwVoorbeeldPark() {
 
   // ── DIER-VERBLIJVEN (4 stuks, met hek + poort) ──
   verblijf(-17, 0, -11, 6, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);   // boerderij (links-voor; 24 aug zuidwaarts zodat het pad er langs loopt i.p.v. doorheen)
-  verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter)
+  verblijf(-17, -7, -11, -1, -14, ["husky", "shibaInu", "pug", "wolf"]);        // honden (links-achter; 24 aug iets omhoog zodat het pad er zuidelijk langs loopt)
   verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);               // hertenkamp (rechts-voor)
   // Dino-plek (rechts-achter): start NIET vol (Mark 2026-07-01). Alleen de kleine
   // velociraptor staat er — de grote dino's (T-Rex, Triceratops, …) "speel je
@@ -115,7 +115,7 @@ function bouwVoorbeeldPark() {
   ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
 
   // ── GROEN & DECOR: bomenlaan langs het hoofdpad + bloemen + rotsen ──
-  for (let z = -10; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }
+  for (let z = -6; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }  // 24 aug: begin bij z=-6 (boom op z=-10 stond in het pad)
   add("struik", -4, 8); add("struik", 4, 8); add("struik", -4, -8); add("struik", 4, -8);
   add("kei", 19, 0); add("kei", 16, -16); // (2e kei verplaatst: lag op het piramide-plein)
   add("mushroom", -18, -18); add("mushroom", 18, -18);

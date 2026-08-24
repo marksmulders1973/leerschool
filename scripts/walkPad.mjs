@@ -75,17 +75,17 @@ function bouw() {
   rij("flowerRed", 17, -5, -4); rij("flowerYellow", 17, 4, 5);
   add("bankje", -2, 15); add("bankje", 2, 15); add("prullenbak", -2, 13); add("donatiebox", 2, 13);
   add("carousel", 0, 0); rij("flowerPurple", 13, -1, 1);
-  add("ferris", 0, -12); add("swing", -8, -12);
+  add("ferris", 0, -15); add("swing", -8, -12);
   railRing(-9, -5, 9, 5); add("station", 0, -7); add("achtbaanKlein", 14, 0);
   add("patatkraam", -7, 12); add("drankkraam", 7, 12); add("ijscokraam", -10, 4); add("popcornkraam", 7, 7);
   add("bankje", -10, 12); add("bankje", 10, 12);
   verblijf(-17, 0, -11, 6, -14, ["cow", "sheep", "pig", "alpaca", "donkey"]);
-  verblijf(-17, -9, -11, -3, -14, ["husky", "shibaInu", "pug", "wolf"]);
+  verblijf(-17, -7, -11, -1, -14, ["husky", "shibaInu", "pug", "wolf"]);
   verblijf(11, 3, 17, 9, 14, ["deer", "stag", "horse", "zebra"]);
   verblijf(10, -11, 18, -3, 14, ["velociraptor"]);
   add("bordDino", 14, -6);
   ["huisRood", "huisGeel", "huisGroen", "huisBlauw"].forEach((h, i) => add(h, -9 + i * 6, -17));
-  for (let z = -10; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }
+  for (let z = -6; z <= 14; z += 4) { add("tree", -5, z); add("treeOak", 5, z); }
   add("struik", -4, 8); add("struik", 4, 8); add("struik", -4, -8); add("struik", 4, -8);
   add("kei", 19, 0); add("kei", 16, -16);
   add("mushroom", -18, -18); add("mushroom", 18, -18);
@@ -138,14 +138,13 @@ for (let i = 0; i < wp.length; i++) {
 console.log(`Pad-cellen: ${pad.length}, blokkeer-cellen: ${blokCel.size}`);
 const gemeld = new Set();
 const obstakels = [];
+const KORF = Number(process.env.KORF || 0); // corridor-straal rond de middellijn (0 = alleen middellijn)
 pad.forEach(([x, z], i) => {
-  const id = blokCel.get(`${x},${z}`);
-  if (id && !gemeld.has(id + "@")) {
-    // uniek per object-plek: gebruik dichtstbijzijnde item van dit type
-    const key = id;
-    if (!gemeld.has(`${x},${z}:${id}`)) {
-      obstakels.push({ volgorde: obstakels.length + 1, padStap: i, cel: [x, z], asset: id });
-      gemeld.add(`${x},${z}:${id}`);
+  for (let dx = -KORF; dx <= KORF; dx++) for (let dz = -KORF; dz <= KORF; dz++) {
+    const id = blokCel.get(`${x + dx},${z + dz}`);
+    if (id && !gemeld.has(`${x + dx},${z + dz}:${id}`)) {
+      obstakels.push({ volgorde: obstakels.length + 1, padStap: i, cel: [x + dx, z + dz], asset: id });
+      gemeld.add(`${x + dx},${z + dz}:${id}`);
     }
   }
 });
