@@ -16,7 +16,8 @@ import { computeWater, celWereldHoogte, WATER_SURFACE_Y } from "./water";
 import { dagenVerschil } from "./zooEconomy";
 import { GROUND_COLOR } from "./ground";
 import Buitenwereld from "./Buitenwereld";
-import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen } from "./WandelPreview";
+import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen, Opritten, opritCellen } from "./WandelPreview";
+import { LEERTRAIL } from "./leerpadLint";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
 import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord } from "./ParkLeerobjecten";
@@ -1095,15 +1096,34 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // pad") begint de set met het HÉLE gekleurde leerpad-lint (het hoofdpad),
   // niet alleen de losse neergelegde pad-tegels — anders poken er sprietjes
   // dwars door het lint heen.
+  // 🛣️ Opritten-doelen: de ECHTE wereld-posities van de leer-objecten (Mark
+  // 24 aug: "een oprit naar elk ding"). LEERTRAIL-id's zijn assetId's, dus we
+  // lezen ze rechtstreeks uit placedItems — zo volgt de oprit het object ook
+  // als een kind het verplaatst heeft.
+  const opritDoelen = useMemo(() => {
+    const ids = new Set(LEERTRAIL.map((t) => t.id));
+    const gezien = new Set();
+    const uit = [];
+    placedItems.forEach((it) => {
+      if (!it || !Array.isArray(it.cell)) return;
+      if (!ids.has(it.assetId) || gezien.has(it.assetId)) return;
+      gezien.add(it.assetId);
+      uit.push({ id: it.assetId, x: it.cell[0] * CELL, z: it.cell[1] * CELL });
+    });
+    return uit;
+  }, [placedItems]);
+
   const padCellen = useMemo(() => {
     const s = lintCellen(1);
+    // gras ook weg onder de opritten + pleintjes (schoon asfalt naar elk object)
+    for (const k of opritCellen(opritDoelen, 1)) s.add(k);
     placedItems.forEach((it) => {
       if (!it || !Array.isArray(it.cell)) return;
       const a = getAsset(it.assetId);
       if (a && a.procedural === "path") s.add(cellKey(it.cell[0], it.cell[1]));
     });
     return s;
-  }, [placedItems]);
+  }, [placedItems, opritDoelen]);
 
   // 🚩 Wandel-stopdoelen (Brian 20 aug: "welk pad leidt naar de kubus?"):
   // per route de wereld-posities van zijn stop-objecten in DÍT park, zodat
@@ -1265,6 +1285,10 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* 🎓 Het doorlopende leerpad-lint = het hoofdpad van het park (Mark 22
             aug): geel → groen → blauw, de schoolreis van tellen tot parabolen. */}
         <Leerpadlint heightRef={heightFnRef} />
+        {/* 🛣️ Opritten: smalle zwarte asfalt-inritten van de hoofdweg naar elk
+            leer-object, met een rond pleintje ervoor (Mark 24 aug: "zodat je
+            overal kunt komen"). Volgt de echte plek van elk object. */}
+        <Opritten heightRef={heightFnRef} doelen={opritDoelen} />
         <WandelPreview heightRef={heightFnRef} borden={wandelPreviewActief()} toon={wandelToon} stopDoelen={wandelStopDoelen} />
         <WandelStopWachter doel={wandelDoel} playerPos={playerPos} onBereikt={onWandelBereikt} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan

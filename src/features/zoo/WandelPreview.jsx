@@ -355,6 +355,122 @@ export function Leerpadlint({ heightRef }) {
   );
 }
 
+// 🛣️ Opritten — korte zwarte asfalt-inritten van de hoofdweg naar elk
+// leer-object, ALTIJD zichtbaar (Mark 24 aug 2026: "kan er een oprit van de
+// hoofdweg naar elk ding komen zodat je overal kunt komen?"). Keuze Mark:
+// smal zwart asfalt · alleen leer-objecten · klein rond pleintje aan het eind.
+// De doel-posities komen uit ZooScene (de ECHTE plek van het object, dus ook
+// als een kind het verplaatst heeft). Zelfde asfalt-look als het hoofd-lint,
+// maar smaller en zonder kleurstreep — het leest als een inrit naar het object.
+const OPRIT_BREEDTE = 1.6;   // smaller dan de hoofdweg (2.4)
+const OPRIT_STAP = 0.6;      // tegel-afstand (overlappen → aaneengesloten)
+const PLEIN_R = 1.7;         // straal van het ronde pleintje vóór het object
+
+// Gesamplede middellijn van het hoofd-lint (zelfde curve als Leerpadlint), om
+// per object de dichtstbijzijnde "voet" op de weg te vinden.
+function lintMiddellijn() {
+  const pts = LINT_WAYPOINTS.map(([cx, cz]) => new THREE.Vector3(cx * CELL, 0, cz * CELL));
+  const curve = new THREE.CatmullRomCurve3(pts, true, "catmullrom", 0.5);
+  const n = Math.max(200, Math.round(curve.getLength() / (CELL * 0.4)));
+  const arr = [];
+  for (let i = 0; i <= n; i++) { const p = curve.getPointAt(i / n); arr.push(new THREE.Vector2(p.x, p.z)); }
+  return arr;
+}
+
+// Per object het zijspoor: dichtstbijzijnde voet op de weg → eind vlak vóór het
+// object (daar komt het pleintje). Gedeeld door de render én de gras-weer-set.
+function opritSporen(doelen) {
+  if (!doelen || !doelen.length) return [];
+  const mid = lintMiddellijn();
+  const sporen = [];
+  for (const doel of doelen) {
+    const eind = new THREE.Vector2(doel.x, doel.z);
+    let foot = mid[0], best = Infinity;
+    for (const s of mid) { const d = (s.x - eind.x) ** 2 + (s.y - eind.y) ** 2; if (d < best) { best = d; foot = s; } }
+    const start = foot.clone();
+    const len = start.distanceTo(eind);
+    if (len < 2.2) continue; // object staat praktisch al op de weg → geen oprit nodig
+    const dir = eind.clone().sub(start).normalize();
+    const eindWeg = eind.clone().addScaledVector(dir, -PLEIN_R); // stop vóór het object
+    sporen.push({ start, eindWeg, dir, hoek: Math.atan2(dir.x, dir.y) });
+  }
+  return sporen;
+}
+
+// Cellen die de opritten (incl. pleintjes) beslaan → ZooScene weert er het gras,
+// net als bij de hoofdweg, zodat de inrit een schoon asfaltpad blijft.
+export function opritCellen(doelen, marge = 1) {
+  const set = new Set();
+  for (const sp of opritSporen(doelen)) {
+    const len = sp.start.distanceTo(sp.eindWeg);
+    const n = Math.max(1, Math.round(len / (CELL * 0.4)));
+    for (let i = 0; i <= n; i++) {
+      const p = sp.start.clone().addScaledVector(sp.dir, (i / n) * len);
+      const cx = Math.round(p.x / CELL), cz = Math.round(p.y / CELL);
+      for (let dx = -marge; dx <= marge; dx++)
+        for (let dz = -marge; dz <= marge; dz++) set.add(`${cx + dx},${cz + dz}`);
+    }
+  }
+  return set;
+}
+
+export function Opritten({ heightRef, doelen }) {
+  const wegRef = useRef();
+  const { tegels, pleinen } = useMemo(() => {
+    const tegels = [];
+    const pleinen = [];
+    for (const sp of opritSporen(doelen)) {
+      const len = sp.start.distanceTo(sp.eindWeg);
+      const n = Math.max(1, Math.round(len / OPRIT_STAP));
+      for (let i = 0; i <= n; i++) {
+        const p = sp.start.clone().addScaledVector(sp.dir, (i / n) * len);
+        tegels.push({ x: p.x, z: p.y, hoek: sp.hoek });
+      }
+      pleinen.push({ x: sp.eindWeg.x, z: sp.eindWeg.y });
+    }
+    return { tegels, pleinen };
+  }, [doelen]);
+
+  const hoogte = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
+
+  useLayoutEffect(() => {
+    const inst = wegRef.current;
+    if (!inst || !tegels.length) return;
+    const m = new THREE.Matrix4();
+    const q = new THREE.Quaternion();
+    const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
+    const schaal = new THREE.Vector3(OPRIT_BREEDTE, OPRIT_STAP * 1.8, 1);
+    tegels.forEach((s, i) => {
+      q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
+      m.compose(new THREE.Vector3(s.x, hoogte(s.x, s.z) + 0.05, s.z), q, schaal);
+      inst.setMatrixAt(i, m);
+    });
+    inst.instanceMatrix.needsUpdate = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tegels, heightRef]);
+
+  if (!tegels.length) return null;
+  return (
+    <group>
+      {/* 🛣️ De smalle zwarte asfalt-inritten */}
+      <instancedMesh key={`oprit-${tegels.length}`} ref={wegRef} args={[null, null, tegels.length]} frustumCulled={false}>
+        <planeGeometry args={[1, 1]} />
+        <meshStandardMaterial color="#26262b" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
+      </instancedMesh>
+      {/* ⭕ Klein rond pleintje vlak vóór elk object (een nette sta-plek). */}
+      {pleinen.map((p, i) => {
+        const y = hoogte(p.x, p.z);
+        return (
+          <mesh key={"plein" + i} position={[p.x, y + 0.045, p.z]} rotation={[-Math.PI / 2, 0, 0]}>
+            <circleGeometry args={[PLEIN_R, 28]} />
+            <meshStandardMaterial color="#2b2b30" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
+          </mesh>
+        );
+      })}
+    </group>
+  );
+}
+
 // 🥾 Route-paaltjes bij de ingang (altijd zichtbaar, zoals in een bos).
 // (x −4.6/−3.4/−2.2: het gele paaltje stond eerst ín de boom op cel (−5,14).)
 const PAALTJES = [
