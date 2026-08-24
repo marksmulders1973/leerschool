@@ -64,6 +64,18 @@ De losse verplichte onderdelen hieronder (meldingen-check, trechters, e-maillijs
 
 **🔴 MAIL-CHECK-REGEL (2026-07-27, na 2 gemiste partner-mails).** Gmail-`search_threads` geeft threads terug met een berichten-preview die het NIEUWSTE bericht kan weglaten. Daarom bij élke mail-check: (1) een thread die in een `newer_than`-zoek opduikt hééft per definitie een nieuw bericht; (2) per gevonden thread `get_thread` (METADATA_ONLY) draaien en het bericht met de nieuwste datum pakken; (3) afzender ≠ Mark → binnengekomen antwoord → volledig lezen, melden en docs/WACHT-OP.md bijwerken; (4) NOOIT "geen nieuws" concluderen op previews. Zie memory `feedback_mailcheck_volledige_thread`.
 
+**📮 Flyer/code-teller in élk dagrapport (Mark-wens 2026-08-24 — "ik wil zien of het werkt en waar niet").** Toon per partner-code de trechter **uitgegeven → gescand → oefende**. Bronnen: (1) **uitgifte** uit `docs/FLYER-UITGIFTE.md` (handmatig, wat we verspreidden + plekken); (2) **scans/actief LIVE** uit Supabase (project `studiebol` = `uxqnzrymyjbcpuzqktdm`), via `events_echt` (huishoud-gefilterd). SQL:
+```sql
+SELECT props->>'code' AS code,
+  COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_bezoek') AS gescand,
+  COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_actief') AS oefende,
+  MAX(created_at) FILTER (WHERE name='partner_bezoek')::date AS laatste_scan
+FROM events_echt
+WHERE name IN ('partner_bezoek','partner_actief') AND props->>'code' LIKE '%2027'
+GROUP BY 1 ORDER BY gescand DESC;
+```
+(Filter `LIKE '%2027'` = alleen echte partner-codes; quiz-deelcodes + eigen tests eruit.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
+
 **Warme leads in élk dagrapport (Mark-wens 2026-07-12).** Toon in elk dagrapport de **positieve outreach-reacties op volgorde van belang** (concrete toezegging boven enthousiast-doorgestuurd boven neutraal-positief). Bron + volledige gerangschikte lijst: memory `project_studiebol_warme_leads`. Werk die lijst bij zodra de dagelijkse mail-check een nieuwe positieve/warme reactie oplevert; afwijzingen/auto-replies/bounces horen er niet in. Top nu: Spark Fest/Leergeld Haarlemmermeer (goodybags 1.000 kinderen) + Ooievaarspas Den Haag (getekend, wacht op plaatsing) + VB Rotterdam (schermen live).
 
 **Vervolgstappen-blok in élk dagrapport (Mark-wens 2026-07-23).** Sluit elk dagrapport af met een kort blok **"📋 Vervolgstappen"**: de eerstvolgende concrete acties + wie aan zet is (Mark / Claude / partner) + eventuele deadline. Voed het blok uit deze bronnen en meld alléén wat actueel is:

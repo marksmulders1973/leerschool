@@ -1472,6 +1472,7 @@ export default function App() {
           onActie={() => setPage("actie")}
           onOefenpakket={() => setPage("oefenpakket")} onPrinten={() => setPage("printen")}
           onKwartiercheck={() => setPage("kwartiercheck")}
+          onDagvraag={() => setPage("vandaag")}
           onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
           onFamilie={() => setPage("familie")}

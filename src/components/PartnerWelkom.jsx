@@ -160,31 +160,35 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
           {tekst}
         </VoorleesBlok>
       </div>
+      {/* 🚀 Oefenen = de DOMINANTE actie (Mark 24 aug, na nulmeting: 37 banner-
+          shows, 0 CTA-kliks, 0 oefenaars). Eén grote knop die de scanner meteen
+          in een échte vraag laat landen (de vraag-van-de-dag), i.p.v. twee
+          gelijke keuzes. "Ik ben ouder" blijft, maar als kleine tweede optie. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {onOuder && (
-          <button
-            onClick={() => { track("partner_welkom_ouder", { code: variant.code || null }); onOuder(); }}
-            style={{
-              width: "100%", padding: "13px 16px", borderRadius: 12, border: "none",
-              background: `linear-gradient(135deg, ${accent}, #ffb300)`,
-              color: "#1a1a00", fontFamily: "var(--font-display)",
-              fontSize: 15.5, fontWeight: 800, cursor: "pointer",
-            }}
-          >
-            👨‍👩‍👧 Ik ben ouder of verzorger — zo werkt het
-          </button>
-        )}
         {onOefenen && (
           <button
             onClick={() => { track("partner_welkom_oefenen", { code: variant.code || null }); sluit(); onOefenen(); }}
             style={{
-              width: "100%", padding: "11px 16px", borderRadius: 12,
-              border: "1.5px solid rgba(255,255,255,0.25)", background: "none",
-              color: "#fff", fontFamily: "var(--font-display)",
-              fontSize: 14.5, fontWeight: 700, cursor: "pointer",
+              width: "100%", padding: "14px 16px", borderRadius: 12, border: "none",
+              background: `linear-gradient(135deg, ${accent}, #ffb300)`,
+              color: "#1a1a00", fontFamily: "var(--font-display)",
+              fontSize: 16, fontWeight: 800, cursor: "pointer",
             }}
           >
-            🚀 Ik wil meteen oefenen
+            🚀 Start je gratis oefenkwartier
+          </button>
+        )}
+        {onOuder && (
+          <button
+            onClick={() => { track("partner_welkom_ouder", { code: variant.code || null }); onOuder(); }}
+            style={{
+              width: "100%", padding: "10px 16px", borderRadius: 12,
+              border: "1.5px solid rgba(255,255,255,0.22)", background: "none",
+              color: "rgba(255,255,255,0.9)", fontFamily: "var(--font-display)",
+              fontSize: 13.5, fontWeight: 700, cursor: "pointer",
+            }}
+          >
+            👨‍👩‍👧 Ik ben ouder of verzorger — zo werkt het
           </button>
         )}
       </div>
