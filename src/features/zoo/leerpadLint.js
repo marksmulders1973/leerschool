@@ -83,3 +83,55 @@ export const LINT_START = { x: 0 * LINT_SCALE, z: 16 * LINT_SCALE };
 // De index van het eerste waypoint van elke band → daar zet ZooScene een
 // niveau-overgang-bordje ("nu Groep 6-8").
 export const LINT_BAND_STARTS = LINT_BANDEN.map((_, b) => LINT_WAYPOINTS.findIndex((w) => w[2] === b));
+
+// 🎓 Leer-trail (Mark 24 aug 2026: "zet de oefeningen op logische volgorde langs
+// het pad, uitgemeten voor maximale ruimte"). De discrete oefen-objecten in de
+// canonieke leer-volgorde (jong → oud, gelijk aan MOMENT_TAAK in parkTaken.js).
+// Attracties en dieren-weides doen NIET mee (dat zijn zones/blikvangers, Mark:
+// "attracties laten staan"). `off` = hoe ver het object loodrecht náást het pad
+// staat (in vakjes) — grote objecten verder, zodat ze de weg nooit raken.
+export const LEERTRAIL = [
+  { id: "klok", off: 4 }, { id: "weegschaal", off: 4 },
+  { id: "telraam", off: 4 }, { id: "breukentaart", off: 4 }, { id: "parkkaart", off: 4 },
+  { id: "moestuin", off: 6 }, { id: "zwembad", off: 7 },
+  { id: "cilinder", off: 6 }, { id: "kegel", off: 6 }, { id: "bol", off: 6 }, { id: "halvebol", off: 6 },
+  { id: "kubus", off: 6 }, { id: "piramide", off: 13 }, { id: "spaarpot", off: 4 },
+  { id: "kompas", off: 5 }, { id: "eiffeltoren", off: 7 }, { id: "wereldbol", off: 5 }, { id: "vulkaan", off: 6 },
+  { id: "molen", off: 6 }, { id: "tempel", off: 6 }, { id: "standbeeld", off: 5 }, { id: "telescoop", off: 5 },
+  { id: "raket", off: 7 }, { id: "kas", off: 5 }, { id: "weerstation", off: 5 },
+];
+
+// Verdeelt N objecten gelijkmatig (gelijke booglengte) over de gesloten pad-lus
+// en schuift elk loodrecht náást het pad (links/rechts afgewisseld). Werkt op de
+// waypoint-polylijn (zelfde skelet als het getekende lint), in plain JS zodat de
+// data-laag (zooState) het zonder three.js kan gebruiken. Returnt cel-posities +
+// draaihoek zodat een object naar het pad toe kijkt.
+export function leertrailPlekken(trail = LEERTRAIL) {
+  const pts = LINT_WAYPOINTS.map(([x, z]) => [x, z]);
+  const seg = [];
+  let total = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length];
+    const d = Math.hypot(b[0] - a[0], b[1] - a[1]);
+    seg.push({ a, b, d, acc: total });
+    total += d;
+  }
+  const N = trail.length;
+  return trail.map((item, i) => {
+    const doel = ((i + 0.5) / N) * total;
+    let s = seg[0];
+    for (const sg of seg) { if (doel >= sg.acc && doel < sg.acc + sg.d) { s = sg; break; } }
+    const t = (doel - s.acc) / (s.d || 1);
+    const x = s.a[0] + (s.b[0] - s.a[0]) * t;
+    const z = s.a[1] + (s.b[1] - s.a[1]) * t;
+    let tx = s.b[0] - s.a[0], tz = s.b[1] - s.a[1];
+    const tl = Math.hypot(tx, tz) || 1; tx /= tl; tz /= tl;
+    const nx = -tz, nz = tx;              // loodrecht op het pad
+    const side = i % 2 === 0 ? 1 : -1;    // links/rechts afwisselen
+    const RAND = 76;                       // binnen het terrein (±80 vakjes) houden
+    const px = Math.max(-RAND, Math.min(RAND, Math.round(x + nx * side * item.off)));
+    const pz = Math.max(-RAND, Math.min(RAND, Math.round(z + nz * side * item.off)));
+    const hoek = Math.atan2(-side * nx, -side * nz); // kijkt naar het pad toe
+    return { id: item.id, x: px, z: pz, hoek };
+  });
+}

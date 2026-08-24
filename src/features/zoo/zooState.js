@@ -5,6 +5,7 @@ import supabase from "../../supabase";
 import { START_COINS } from "./zooEconomy";
 import { isBlok, getAsset } from "./AssetRegistry";
 import { cellToWorld } from "./grid";
+import { LEERTRAIL, leertrailPlekken } from "./leerpadLint";
 
 // 🎨 Voorbeeld-park (Mark 2026-06-27): een mooi, symmetrisch ingericht park dat
 // nieuwe spelers als voorbeeld krijgen én dat je kunt delen. Opgebouwd met kleine
@@ -176,7 +177,17 @@ function bouwVoorbeeldPark() {
   add("bordBouw", 18, 20);      // noordoost-veld: open bouwgrond
   add("bordBouw", -14, -14);    // zuidwest-veld: open bouwgrond bij het dorpje
 
-  return L;
+  // 🎓 Oefen-objecten op logische volgorde langs het pad (Mark 24 aug). We halen
+  // de discrete leer-objecten uit hun oude, hand-geplaatste plek en zetten ze
+  // gelijkmatig uitgemeten langs de pad-lus (jong → oud), naast de weg. Zo loop
+  // je het pad af van groep 3 tot de brugklas. Attracties + dieren-weides blijven
+  // staan als sfeer. De omringende decor (bloemen/bankjes) blijft ook staan.
+  const trailIds = new Set(LEERTRAIL.map((t) => t.id));
+  const behouden = L.filter((it) => !(it && trailIds.has(it.assetId)));
+  for (const p of leertrailPlekken()) {
+    behouden.push({ assetId: p.id, cell: [p.x, p.z], rotation: p.hoek, price: 0 });
+  }
+  return behouden;
 }
 
 export const STARTER_LAYOUT = bouwVoorbeeldPark();
