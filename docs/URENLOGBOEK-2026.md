@@ -29,7 +29,7 @@
 | Dag | Uren | Wat |
 |---|---|---|
 | ma 24 aug | ~3,5 | 💻✉️ Claude-sessie: mail-afhandeling (FBNR, Josja, Saba-pakket), nudges klaargezet, klaarzet-werk |
-| di 25 aug | ~6 | 💻✉️📋 Lange sessie: Ooievaarspas-afronding + veiligstellen, SUN/Nijmegen/Twente-replies, bestuurs-golf (30 mails) + VoorleesExpress (49), recovery-pakket + repo-acties, KvK-formulier af + belastingregeling aangevraagd, kosten/uren-administratie opgezet |
+| di 25 aug | ~8 | 💻✉️📋 Lange dag: Ooievaarspas-afronding + veiligstellen, SUN/Nijmegen/Twente/Amstelveen/Jeugdfonds-replies, bestuurs-golf (30 mails) + VoorleesExpress (49), recovery-pakket + repo-acties, KvK-formulier af + belastingregeling aangevraagd, kosten/uren-administratie opgezet, dagvraag op 4 socials, dagrapport + juichmail |
 | wo 26 aug | | |
 | do 27 aug | | 📞 gepland: Froukje (Buurtgezinnen) ~13:00 |
 | vr 28 aug | | |
