@@ -23,7 +23,7 @@
 | Bibliotheken (rest, incl. 5 ex-"formulier-only") | ~75–80 | Middel-hoog | Laag-middel — deels hieronder | Deels verzameld |
 | Scholen achterstandswijken **batch 2** | 120–150 (pool ~210) | Hoog | Middel (CBS-achterstandsscore-Excel als selectie) | Clusters hieronder |
 | Scholen batch 3 (rest top-20%) | 250–400 | Hoog | Middel | Na batch 2 |
-| LOWAN-nieuwkomersscholen (taalklassen/AZC) | ~250–350 | **Hoog** (taal-oefening hard nodig) | Laag (openbare database lowan.nl/po/scholen) | Grootste nieuwe vijver |
+| LOWAN-nieuwkomersscholen (taalklassen/AZC) | ~250–350 | **Hoog** (taal-oefening hard nodig) | ✅ **ADRESSEN KLAAR 25 aug**: 55 school-site-geverifieerd (rijen 1-60, lowan-scholen.md) + volledige LOWAN-contactdump alle 326 (`docs/outreach/lowan-contactdata-alle-326.json`, via lowan.nl-ajax; bevat e-mail+contactpersoon per school) | **Verzendklaar ~1 sep na concept-akkoord** (nieuwkomers-tekst: korte zinnen/voorleesknop/uitleg-3-niveaus als haak) |
 | Humanitas-afdelingen | 78 | Hoog | Laag (humanitas.nl/afdelingen) | |
 | Jeugdfonds Sport & Cultuur (lokale fondsen) | 24 | Hoog | Laag | jeugdfondssportencultuur.nl/fonds-in-de-buurt |
 | Landelijke kinderarmoede-fondsen (Kinderhulp, Jarige Job, Kinderzwerfboek, LINDA.foundation, Armoedefonds…) | ~10–15 | Hoog | Laag | |
