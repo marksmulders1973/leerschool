@@ -30,12 +30,10 @@
   (Herma-adresstickers liggen klaar, Desktop\Herma-stickers).
 - **Dagvraag-herstart**: "ga" zeggen → Claude maakt de 14-daagse batch
   (feed ligt stil sinds 31 jul).
-- **📌 Morgen (di 25 aug) — School's cool Nijmegen bedanken** (warme ja 24 aug,
-  Elsemiek van Dulmen: *"onze vrijwilligers kunnen hier zeker iets aan hebben,
-  we delen de info met onze thuismentoren in onze online leeromgeving"*). Kort
-  warm bedankje + aanbod iets op maat voor hun thuismentoren. **Én vragen of we
-  een quote uit hun mail op de site (bedankt.html / sociaal-bewijs) mogen
-  plaatsen.** Claude stelt concept op → Mark akkoord vóór verzenden.
+- ~~School's cool Nijmegen bedanken~~ ✅ **VERZONDEN di 25 aug** (Mark-akkoord
+  "stuur maar"): warm bedankje + maatwerk-aanbod thuismentoren + quote-vraag
+  ("onze vrijwilligers kunnen hier zeker iets aan hebben", met naamsvermelding).
+  Nu wachten op quote-ja → dan op bedankt.html/sociaal-bewijs plaatsen.
 
 ## 🟠 Kalender — vaste datums
 
