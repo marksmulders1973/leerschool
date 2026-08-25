@@ -8,12 +8,15 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **KvK-afspraak boeken** (kvk.nl → KvK Utrecht, ma 31 aug óf di 1 sep middag) +
-  **Sonac-contract/CAO checken op nevenwerkzaamheden** (eigen zaak melden/
-  toestemming?) vóór je inschrijft. Volledige voorbereiding + blinde vlekken:
-  `Desktop\dagrapport\Leerkwartier-Eigen-zaak-startgids-2026-08-15.pdf`.
-  Beslist: startdatum onderneming = **1 sep** (schone maand, fiscaal identiek
-  aan 31 aug). Neem het ingevulde lijstje (handelsnaam/SBI/adresafscherming) mee.
+- ~~KvK-afspraak boeken~~ ✅ **GEBOEKT 25 aug: ma 28 SEPTEMBER 11:45-12:15, KvK Utrecht
+  (Sint Jacobsstraat 300)** — eerste beschikbare slot; formulier is volledig ingevuld
+  (Claude + Mark samen, 25 aug): handelsnaam **Leerkwartier** (Smulsoft afgevallen —
+  bestaande Smul-Soft Utrecht), startdatum 1 sep (mag in verleden; medewerker past
+  desnoods aan), activiteit leer-app, woonadres openbaar (keuze A) + reclame-afscherming
+  aan, 1 persoon >15u. **Meenemen: geldig ID + pin ±€80.** Vóór 28 sep: **Sonac-CAO
+  checken op nevenwerkzaamheden**. 💡 Eerder terecht? Geannuleerde slots komen élke
+  ochtend vrij via "Wijzig afspraak" (Mijn KVK); ander kantoor mag ook (Den Bosch =
+  dichterbij). Startgids: `Desktop\dagrapport\Leerkwartier-Eigen-zaak-startgids-2026-08-15.pdf`.
 
 - ~~Gmail-concept Voedselbank Lelystad verzenden~~ ✅ **VERZONDEN 12 aug**
   door Claude via leerkwartier.app-mail (Resend, reply-to = jouw Gmail) mét
@@ -43,7 +46,7 @@
 | **di 18 aug** | 🎨 **Fable-taak: interactief-park-3D bijschaven** (deze week gebouwd, "bijschaven doe ik met Fable"). Mooier maken in Fable: **3× piramide** (som-op-de-vlakken + basis/hoogte-maatlijnen), **kleuren-kubus** (27 blokjes met eigen kleur), **kegel/bol/halve bol** (nu 2× groot), + de **12 landmark-poorten** (kompas · Eiffeltoren · tempel · wereldbol · telescoop · standbeeld · molen · raket · vulkaan · kas · weerstation · spaarpot) + de magische-poort-look. Code: `src/features/zoo/UitvindersKabouters.jsx` (de vormen) + `src/features/zoo/ParkLeerobjecten.jsx` (landmarks/poorten). Reset een park (Menu → ♻️ Opnieuw beginnen) om de ruime nieuwe indeling te zien. **+ nalopen: idee #46 🥇 gouden-vorm-beloning** (voldoende voor inhoud-leerpad → gouden kubus/piramide in park; review-vragen: welke score = "verdiend", klaar-scherm-momentje, kubus-eerst of hele familie — zie Ideeën-tracker). | Mark (Fable) |
 | **di 18 aug** | 💡 **Examen-recency-tiering uitwerken** (Mark-idee 16 aug): 3 nieuwe authentieke 2026-examens erbij (net als de rest: inzien-PDF + bijlage + vragen/antwoorden) **én** de nieuwste 3 jaargangen (2024-26) interactief-oefenen onder Familie zetten; oefenen blijft gratis met oudere jaren + PDF-inzien blijft voor iedereen (PDF's zijn openbaar). Verdict + plan: memory `idea_studiebol_examens_recency_familie` | Claude bouwt |
 | ~~di 25 aug 13:00~~ ❌ | ~~FaceTime-rondleiding VB Alkmaar~~ — **vervallen 19 aug** (netjes afgezegd met Mark-akkoord: haar promo-film = de rondleiding, contact blijft per mail, relatie warm). Géén vervangend bezoek — Mark 20 aug: geen bezoeken meer, flyers gaan per post | ✅ afgehandeld |
-| **ma 31 aug / di 1 sep** | 🏢 **KvK Utrecht — inschrijving eenmanszaak** (naar voren gehaald van okt). Afspraak online boeken + ID mee + ±€80 pin. Startdatum = 1 sep. Direct daarna: btw-id afwachten. Voorbereiding: startgids-PDF (15 aug) | Mark |
+| **ma 28 sep 11:45** | 🏢 **KvK Utrecht — inschrijving eenmanszaak** (geboekt 25 aug; formulier al 100% ingevuld). ID + ±€80 pin mee; op tijd komen (te laat = vervalt). Direct daarna: KvK-nummer → btw-id afwachten → KOR + zakelijke rekening + Esther informeren (schuift naar eind sep/okt) | Mark |
 | ~wk 17 aug | **School's cool Twente teambespreking** — zij komen zelf terug (11 aug toegezegd); niet pingen, wel opletten | — |
 | half aug | **Succes-update aan Amber** (VB Rotterdam): dia draait ~1 mnd; mét claim-cijfers; check meteen of de dia nog draait + logo-toestemming (pending sinds 18 jul) | Claude concept, Mark verstuurt |
 | half aug | **GSC-check** (0-klik-clusters gefixt 14 jul — werkt de fix?) | Claude |
