@@ -76,6 +76,34 @@ GROUP BY 1 ORDER BY gescand DESC;
 ```
 (Filter `LIKE '%2027'` = alleen echte partner-codes; quiz-deelcodes + eigen tests eruit.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
 
+**📡 Code-radar in élk dagrapport (idee #74 stap 1, Mark-go 25 aug — "laat óók zien wat er buiten de partner-codes gebeurt").** Naast de flyer-teller hierboven twee radar-query's draaien, zodat deel-/claim-/test-codes niet meer alleen bij toeval opvallen:
+```sql
+-- 1) ALLE codes 7d (geen %2027-filter) + burst-detectie
+SELECT props->>'code' AS code,
+  COUNT(*) FILTER (WHERE name='partner_bezoek') AS bezoeken,
+  COUNT(DISTINCT props->>'uid') AS apparaten,
+  to_char(min(created_at) AT TIME ZONE 'Europe/Amsterdam','DD-MM HH24:MI') AS eerste,
+  to_char(max(created_at) AT TIME ZONE 'Europe/Amsterdam','DD-MM HH24:MI') AS laatste,
+  (max(created_at)-min(created_at) < interval '10 minutes') AS burst_verdacht
+FROM events_echt
+WHERE name IN ('partner_bezoek','partner_welkom_toon') AND created_at >= now()-interval '7 days'
+GROUP BY 1 ORDER BY bezoeken DESC;
+
+-- 2) Klaarzet- en quiz-code-gebruik 7d
+SELECT 'ouder-klaargezet' AS bron,
+  count(*) FILTER (WHERE created_at >= now()-interval '7 days') AS nieuw_7d,
+  count(*) FILTER (WHERE gedaan_at >= now()-interval '7 days') AS gedaan_7d
+FROM ouder_klaargezet
+UNION ALL SELECT 'leraar-klaargezet',
+  count(*) FILTER (WHERE created_at >= now()-interval '7 days'),
+  count(*) FILTER (WHERE gedaan_at >= now()-interval '7 days')
+FROM leraar_klaargezet
+UNION ALL SELECT 'quiz-deelcodes-nieuw',
+  count(*) FILTER (WHERE created_at >= now()-interval '7 days'), NULL
+FROM quizzes;
+```
+**Interpretatie-regels:** `burst_verdacht=true` (alle activiteit binnen 10 min) + veel "apparaten" = vrijwel zeker een eigen test/agent-run — **Playwright maakt per browsercontext een verse uid**, dus één kliktocht kan op 5-10 "apparaten" lijken (les 24-25 aug: CHHEG…5350 = 9 uids in 8 min). Échte verspreiding = scans gespreid over meerdere dagen (vb. BUURTGEZINNEN2027). Onbekende code mét spreiding = melden aan Mark (mogelijk organisch deel-gedrag). `gedaan_7d` bij klaargezet = het "code werkt"-signaal richting de uitgever. **Stap 2 (open):** "jouw code deze week"-blokje voor uitgevers zelf (juf in klaarzet-scherm, partner via bedank-mail) — nog niet gebouwd, eerst data laten bewijzen.
+
 **Warme leads in élk dagrapport (Mark-wens 2026-07-12).** Toon in elk dagrapport de **positieve outreach-reacties op volgorde van belang** (concrete toezegging boven enthousiast-doorgestuurd boven neutraal-positief). Bron + volledige gerangschikte lijst: memory `project_studiebol_warme_leads`. Werk die lijst bij zodra de dagelijkse mail-check een nieuwe positieve/warme reactie oplevert; afwijzingen/auto-replies/bounces horen er niet in. Top nu: Spark Fest/Leergeld Haarlemmermeer (goodybags 1.000 kinderen) + Ooievaarspas Den Haag (getekend, wacht op plaatsing) + VB Rotterdam (schermen live).
 
 **Vervolgstappen-blok in élk dagrapport (Mark-wens 2026-07-23).** Sluit elk dagrapport af met een kort blok **"📋 Vervolgstappen"**: de eerstvolgende concrete acties + wie aan zet is (Mark / Claude / partner) + eventuele deadline. Voed het blok uit deze bronnen en meld alléén wat actueel is:
