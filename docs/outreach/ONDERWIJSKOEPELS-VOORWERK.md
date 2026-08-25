@@ -96,11 +96,18 @@ leerkwartier.app/bedankt.html. Voor leerkrachten is er een aparte pagina
 (leerkwartier.app/voor-organisaties.html) en een kant-en-klare flyer/poster die ik kosteloos
 op maat maak, ook met uw logo.
 
-Zou ik het u vrijblijvend mogen laten zien in een **korte online demo** van een minuut of
-tien? Ik stem me op uw agenda af.
+Zelf proberen kan direct op leerkwartier.app — zonder account, gewoon in de browser. En om
+het intern delen makkelijk te maken staat er een kant-en-klaar pakketje online:
+beeld (leerkwartier.app/drukwerk/nieuwsbrief-beeld.png) · one-pager
+(leerkwartier.app/drukwerk/Leerkwartier-nieuwsbrief-beeld.pdf) · tekstblokje voor een
+nieuwsbrief (leerkwartier.app/drukwerk/nieuwsbrief-tekst.txt).
 
 Hartelijke groet,
 Mark Smulders — leerkwartier.app
+
+> 🔴 **Mark-regel 25 aug: GEEN demo-aanbod in outreach-mails.** Mark wil geen
+> tijd-toezeggingen voor live demo's; later maken we één demo-video die overal
+> hergebruikt kan worden. Afsluiten = "zelf proberen, zonder account" + deel-pakketje.
 
 ## 7. ❓ Voor Fable om na te lopen
 1. **Toon bestuur-mail**: klopt de bovenschoolse toon? Niet te lang/te commercieel? Is de
