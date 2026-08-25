@@ -24,9 +24,40 @@ const GOLF_0 = [
   { naam: "De Hoeksche School", email: "info@dehoekscheschool.nl", scholen: "ruim twintig" },
 ];
 
-// Golf 1 — grootste PO-besturen, adressen site-geverifieerd (agent 25 aug),
-// aan te vullen vóór verzending via --golf1.
-const GOLF_1 = [];
+// Golf 1 — 29 grootste PO-besturen, adressen site-geverifieerd (agent 25 aug,
+// bronlijst: docs/outreach/besturen.md). Scholen-aantallen bewust conservatief
+// verwoord (bij po+vo-besturen of schattingen: "tientallen"/"ruim X").
+const GOLF_1 = [
+  { naam: "Stichting BOOR", email: "info@stichtingboor.nl", scholen: "tientallen" },
+  { naam: "de RVKO", email: "info@rvko.nl", scholen: "ruim zestig" },
+  { naam: "SARO", email: "info@wijzijnsaro.nl", scholen: "bijna dertig" },
+  { naam: "Lucas Onderwijs", email: "info@lucasonderwijs.nl", scholen: "tientallen" },
+  { naam: "SCOH", email: "info@scoh.nl", scholen: "ruim dertig" },
+  { naam: "De Haagse Scholen", email: "info@dehaagsescholen.nl", scholen: "ruim vijftig" },
+  { naam: "de ASKO", email: "info@askoscholen.nl", scholen: "ruim dertig" },
+  { naam: "AMOS", email: "info@amosonderwijs.nl", scholen: "bijna dertig" },
+  { naam: "STAIJ", email: "info@staij.nl", scholen: "twintig" },
+  { naam: "Innoord", email: "info@innoord.nl", scholen: "zestien" },
+  { naam: "Zonova", email: "info@zonova.nl", scholen: "negentien" },
+  { naam: "Zaan Primair", email: "info@zaanprimair.nl", scholen: "ruim twintig" },
+  { naam: "Openbaar Onderwijs Groningen", email: "info@o2g2.nl", scholen: "tientallen" },
+  { naam: "PCOU Willibrord", email: "info@pcouwillibrord.nl", scholen: "ruim twintig" },
+  { naam: "SPO Utrecht", email: "info@spoutrecht.nl", scholen: "ruim dertig" },
+  { naam: "KS Fectio", email: "info@ksfectio.nl", scholen: "dertien" },
+  { naam: "Signum", email: "info@signumonderwijs.nl", scholen: "ruim twintig" },
+  { naam: "ATO-Scholenkring", email: "info@ato-scholenkring.nl", scholen: "zestien" },
+  { naam: "INOS", email: "info@inos.nl", scholen: "ruim twintig" },
+  { naam: "SKPO", email: "secretariaat@skpo.nl", scholen: "vijfendertig" },
+  { naam: "SALTO", email: "salto@salto-eindhoven.nl", scholen: "ruim twintig" },
+  { naam: "Stichting Prisma Almere", email: "bestuur@prisma-almere.nl", scholen: "twintig" },
+  { naam: "Stichting SchOOL", email: "info@stichtingschool.nl", scholen: "eenentwintig" },
+  { naam: "Conexus", email: "info@conexus.nu", scholen: "ruim dertig" },
+  { naam: "Delta Scholengroep", email: "info.delta@deltascholengroep.nl", scholen: "vijfentwintig" },
+  { naam: "Flores Onderwijs", email: "info@floresonderwijs.nl", scholen: "drieëndertig" },
+  { naam: "Proloog", email: "info@proloog.nl", scholen: "eenentwintig" },
+  { naam: "Openbaar Onderwijs Zwolle", email: "contact@ooz.nl", scholen: "tientallen" },
+  { naam: "Stichting Klasse", email: "info@stichtingklasse.nl", scholen: "eenentwintig" },
+];
 
 const onderwerp = (s) => `Gratis Doorstroomtoets-oefenen voor de scholen van ${s.naam}`;
 
