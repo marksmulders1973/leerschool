@@ -84,11 +84,16 @@
   ~2 min, schermopname + stem, geen gezicht nodig; lost de "er wordt gewerkt aan een
   demo-video"-belofte uit de 30 bestuurs-mails in). Na opname: YouTube "niet vermeld" →
   link aan Claude geven → sjablonen/juf-A4/voor-organisaties bijwerken.
-- **📒 Urenlogboek starten per 1 sep** (Mark-besluit 25 aug): simpel logboek van uren aan
-  Leerkwartier (bouwen/mails/partners/administratie) — voor het urencriterium (1.225 u/jr);
-  git-geschiedenis + verzendlogs = bewijs. Bij KvK 27 u/wk opgegeven. Aftrek-beslissing pas
-  bij aangifte 2027; **aangifte altijd sámen met Claude doornemen** (staande afspraak,
-  regels in memory `reference_eenmanszaak_belastingregels`).
+- ~~📒 Urenlogboek starten~~ ✅ **GESTART 25 aug**: `docs/URENLOGBOEK-2026.md` — Claude logt
+  sessie-uren, Mark geeft offline uren door (bellen/post/inkopen; wekelijkse vraag in dagrapport).
+  Alleen échte uren (bewijs = git + verzendlogs); doel-orde ~30 u/wk. Reconstructie mei-aug volgt.
+  Aftrek-beslissing bij aangifte 2027; **aangifte altijd sámen met Claude doornemen** (staande
+  afspraak, regels in memory `reference_eenmanszaak_belastingregels`).
+- **🧾 Facturen aanleveren voor `docs/KOSTEN-2026.md`** (25 aug): stuur uit je HOTMAIL door naar
+  je Gmail (of zet in `OneDrive\Leerkwartier-facturen-2026\`): Drukwerkdeal-facturen (orders
+  15635719 €72,60 + 15653885 €43,56), **printer-aankoop (HP)**, enveloppen/Herma-bonnen,
+  TransIP-domeinfactuur, claude.ai-abonnementsfacturen (Settings → Billing). De 3 Anthropic-
+  API-bonnetjes heeft Claude al uit Gmail (mrt 2× + jul, samen ± €56).
 
 - **DPIA lezen + ondertekenen** (`docs/DPIA-LEERKWARTIER.md`, ~15 min) —
   privacy-fundament voor gemeenten/scholen; nodig vóór serieuze school-deals.
