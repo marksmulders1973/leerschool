@@ -194,6 +194,27 @@ OOIEVAAR*-codes `null` (blijvend) terug; `partnerGrant()` in
 Familie-niveau is gratis. Niet inkorten zonder nieuwe afspraak met bureau
 Ooievaarspas.
 
+**🔑 Inlog-/verzilver-route Ooievaarspas (vastgelegd 25 aug 2026, Mark akkoord):**
+de aanvraag is 25 aug goedgekeurd (formulier "Gezien bureau Ooievaarspas:
+E.V."); dit is de afgesproken route van pashouder → werkend gratis Familie:
+1. **Gemeente verspreidt één link/QR:** `leerkwartier.app/ooievaarspas`
+   (welkomstpagina opnieuw klaarzetten bij de 2027-lancering; was 3 aug op
+   verzoek van Esther verwijderd). Die pagina opent de app met
+   `?partner=OOIEVAAR2027` — code wordt automatisch vastgelegd, niets
+   overtypen.
+2. **Oefenen kan direct zonder account** (drempel nul, zoals overal).
+3. **Familie-extra's: gratis account met e-mailadres** — de vastgelegde code
+   zet Familie automatisch gratis, ook op een tweede apparaat na inloggen.
+4. **Vangnet:** code OOIEVAAR2027 handmatig invoerbaar bij het aanmelden
+   (bestaand partner-code-veld).
+5. **Bewuste keuze lek-risico:** wij verifiëren géén pasbezit (geen
+   gemeente-data, privacy-simpel; Esther koos zelf "gemeente verspreidt de
+   code"). Code-lek buiten Den Haag accepteren we — de basis is toch gratis
+   en de schade is beperkt. Geldt ook voor pashouders Leidschendam-Voorburg
+   + Rijswijk.
+Technisch bestaat alles al (partner-rails + OOIEVAAR*-blijvend-regel
+hierboven); enige bouwwerk richting 2027 = de welkomstpagina terugzetten.
+
 ## 6. Toegangs-keten na betaling + gezinscode (bouwplan, toegevoegd 10 aug 2026)
 
 > Mark-vraag 10 aug: "hoe krijgen betalende gezinnen toegang tot waar ze recht
