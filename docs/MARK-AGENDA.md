@@ -71,6 +71,10 @@
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
+- **🎬 Demo-video opnemen** (script klaar 25 aug: `docs/DEMO-VIDEO-SCRIPT.md` — 5 scènes,
+  ~2 min, schermopname + stem, geen gezicht nodig; lost de "er wordt gewerkt aan een
+  demo-video"-belofte uit de 30 bestuurs-mails in). Na opname: YouTube "niet vermeld" →
+  link aan Claude geven → sjablonen/juf-A4/voor-organisaties bijwerken.
 - **📒 Urenlogboek starten per 1 sep** (Mark-besluit 25 aug): simpel logboek van uren aan
   Leerkwartier (bouwen/mails/partners/administratie) — voor het urencriterium (1.225 u/jr);
   git-geschiedenis + verzendlogs = bewijs. Bij KvK 27 u/wk opgegeven. Aftrek-beslissing pas
