@@ -152,11 +152,37 @@ export default function PrintHubPage({ setPage } = {}) {
         <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>6 gratis printbare pakketten</h2>
         <GratisBadge size="sm" />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 14 }}>
         {GRATIS.map((p) => (
           <Tegel key={p.page} p={p} onClick={() => kies(p.page)} />
         ))}
       </div>
+
+      {/* 📬 Weekpakket — mail-exclusief printpakket (25 aug): de print-bezoeker
+          is precies de doelgroep; de code komt alleen per mail (leadmagnet). */}
+      <a
+        href="/weekpakket.html"
+        onClick={() => track("printhub_weekpakket")}
+        style={{
+          display: "flex", alignItems: "flex-start", gap: 14, textDecoration: "none",
+          background: "rgba(0,200,83,0.08)", border: "1.5px dashed rgba(0,200,83,0.55)",
+          borderRadius: 16, padding: "16px 18px", marginBottom: 26,
+        }}
+      >
+        <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0, lineHeight: 1 }}>📬</span>
+        <span style={{ flex: 1, minWidth: 0 }}>
+          <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16.5, color: "#fff", marginBottom: 2 }}>
+            Nieuw: het Weekpakket — elke week vers, alleen per mail
+            <span style={{ marginLeft: 8, fontSize: 11.5, fontWeight: 700, color: "#69f0ae", border: "1px solid rgba(105,240,174,0.55)", borderRadius: 999, padding: "2px 9px", verticalAlign: "2px" }}>gratis</span>
+          </span>
+          <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>
+            Elke week een nieuw printpakket: rekenen, taal en begrijpend lezen richting de
+            Doorstroomtoets, met antwoordblad én een berichtje van de maker. Je krijgt de
+            code wekelijks per mail.
+          </span>
+        </span>
+        <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0, alignSelf: "center" }}>→</span>
+      </a>
 
       {/* ── Laag 2: Familie ────────────────────────────────────── */}
       <SlotKop kleur="#ffb300" titel="Op maat — met Familie" chip="Familie" />

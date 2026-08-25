@@ -2298,6 +2298,8 @@ export default function App() {
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
       <a href="/over.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Over {BRAND.name}</a>
       ·
+      <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>📬 Weekpakket</a>
+      ·
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
       · © Smulsoft
     </footer>
