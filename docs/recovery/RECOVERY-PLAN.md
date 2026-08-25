@@ -3,7 +3,15 @@
 **Doel:** als Mark's laptop kapot gaat, moet hij binnen 30 min weer kunnen doorwerken
 met dezelfde Claude Code + Leerkwartier-context.
 
-Laatst geüpdatet: 2026-05-18.
+Laatst geüpdatet: 2026-08-25.
+
+> ⚠️ **Wijziging 25 aug 2026:** de memory-backup staat NIET meer in deze repo — de repo is
+> **openbaar** en memory bevat persoonlijke informatie. De actuele backup zit voortaan in:
+> (1) de **recovery-mail** in Mark's mailbox (hotmail + gmail, onderwerp "Recovery-mail …
+> AI-Overdracht-pakket", met zip-bijlage; maandelijks verversen), (2) `Desktop\AI-Overdracht\`
+> (lokaal, ververs met `ververs-geheugen.bat`), (3) `OneDrive\AI-Overdracht\` (cloud-kopie).
+> NB: oudere commits in de git-historie bevatten de mei-backup nog — echt weg = repo privé
+> maken of historie herschrijven (beslissing Mark).
 
 ---
 
@@ -12,7 +20,7 @@ Laatst geüpdatet: 2026-05-18.
 | Wat | Locatie | Hoe terughalen |
 |---|---|---|
 | **Hele codebase** | GitHub `marksmulders1973/leerschool` | `git clone https://github.com/marksmulders1973/leerschool.git` |
-| **Memory (Claude context)** | Ook in repo: `docs/recovery/memory-backup/` | Kopieer naar `~/.claude/projects/<dir>/memory/` |
+| **Memory (Claude context)** | Recovery-mail in Mark's mailbox (zip-bijlage) + `OneDrive\AI-Overdracht\` + `Desktop\AI-Overdracht\` | Zip uitpakken, `geheugen\` kopiëren naar `~/.claude/projects/C--Users-<naam>-/memory/` |
 | **Productie-database** | Supabase project `uxqnzrymyjbcpuzqktdm` | dashboard.supabase.com/project/uxqnzrymyjbcpuzqktdm |
 | **Productie-app** | Vercel (auto-deploy van `main`-branch) | dashboard.vercel.com |
 | **Domein** | `leerkwartier.app` (.com + .nl bezet door Leatherbox) | DNS via Vercel-domain-config |
@@ -42,7 +50,8 @@ npm install
 
 ### Stap 2 — Memory terugzetten (~5 min)
 
-Memory zit in repo onder `docs/recovery/memory-backup/`. Kopiëren naar Claude-context-dir:
+Memory zit in de **recovery-mail** (zip-bijlage in Mark's hotmail/gmail) of in `OneDrive\AI-Overdracht\`.
+Zip uitpakken en de map `geheugen\` kopiëren naar de Claude-context-dir:
 
 **Windows**:
 ```powershell
