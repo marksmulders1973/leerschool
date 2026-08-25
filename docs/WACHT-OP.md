@@ -64,7 +64,7 @@ budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitsl
 | 8 · Printbaar diploma 🏅 | ✅ klaar (1 aug, v156); open: auto-prefill vanuit afgerond pad | `/diploma?familie=1&naam=<x>&onderwerp=<y>` |
 | 2 · Vonk onbeperkt 🐉 | ✅ klaar (v164) — framing-pagina | `/vonk` |
 | 4 · Weekmail 2.0 ✉️ | ✅ klaar (v163) — "Focus deze week"-to-do in de maandag-mail | (in de e-mail) |
-| 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) | `/weekschema` |
+| 5 · Koelkast-weekschema 📅 | ✅ klaar (v161) · ✨ **v2 OP MAAT (v423, 25 aug)**: bouwt zichzelf uit de oefen-geschiedenis — lastigste onderwerp op ma+do, vrijdag afsluiten met wat al goed gaat; chips 🌱/🔁/⭐ i.p.v. percentages (Mark: percentages verborgen — koelkast = kind kijkt mee); zonder data → algemeen schema + Kwartiercheck-tip | `/weekschema` |
 | 6 · Trots-momenten 🎉 | ✅ klaar (v162) — in-flow + preview | `/trots` |
 | 7 · Gezin — max 3 kinderen 👨‍👩‍👧 | ✅ klaar (v168) — cap + "wij oefenen samen" in ouder-dashboard | `/ouder` |
 
