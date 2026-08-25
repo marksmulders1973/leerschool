@@ -96,8 +96,9 @@ leerkwartier.app/bedankt.html. Voor leerkrachten is er een aparte pagina
 (leerkwartier.app/voor-organisaties.html) en een kant-en-klare flyer/poster die ik kosteloos
 op maat maak, ook met uw logo.
 
-Zelf proberen kan direct op leerkwartier.app — zonder account, gewoon in de browser. En om
-het intern delen makkelijk te maken staat er een kant-en-klaar pakketje online:
+Zelf proberen kan direct op leerkwartier.app — zonder account, gewoon in de browser (er
+wordt ook gewerkt aan een korte demo-video). En om het intern delen makkelijk te maken
+staat er een kant-en-klaar pakketje online:
 beeld (leerkwartier.app/drukwerk/nieuwsbrief-beeld.png) · one-pager
 (leerkwartier.app/drukwerk/Leerkwartier-nieuwsbrief-beeld.pdf) · tekstblokje voor een
 nieuwsbrief (leerkwartier.app/drukwerk/nieuwsbrief-tekst.txt).
