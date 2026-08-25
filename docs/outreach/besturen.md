@@ -46,3 +46,11 @@ als golf 0 (zelfde dag).
 | Opmaat groep (Tilburg, 17) | site onbereikbaar 25 aug — later opnieuw proberen |
 
 **Golf 2-voorraad:** rest van de 510 multi-school-besturen (DUO-data) — verzamelen vóór wk 15-26 sep.
+
+## 🎒 Bij élk bestuurs-ja: het pilot-juf-pakket (idee #75, klaar 25 aug)
+Antwoord op "mag één leerkracht het proberen?" = zelfde dag leveren:
+1. **juf-start-A4**: leerkwartier.app/drukwerk/juf-start-A4.pdf (ook .html) — wat is het,
+   klaarzetten in 3 stappen, demo-code TAAK24, QR, 2-jaar-testbelofte.
+2. Aanbod: versie op maat met school-logo (flyer-patroon).
+3. Na ~2 weken een kort 3-vragen-mailtje aan de juf: (a) wat werkte, (b) wat miste u,
+   (c) zou u het aanraden aan een collega? → antwoorden loggen + oppakken (jong = snel aanpasbaar).
