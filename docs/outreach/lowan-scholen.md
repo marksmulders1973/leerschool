@@ -4,8 +4,8 @@
 **Bron:** https://www.lowan.nl/po/scholen/ — WordPress REST API (`/wp-json/wp/v2/schools_po`)
 **Status:** Automatisch verzameld via API; 326 scholen opgehaald
 **Methode:** REST API `schools_po` custom post type (geen blokkade); schoolspecifieke contactgegevens staan NIET in de API (ACF-velden leeg); voor eerste 30 scholen handmatig website/email opgezocht via WebSearch
-**Aantallen:** 326 scholen totaal | ~15 met e-mail (eerste 30 onderzocht) | 0 e-mails in LOWAN-database zelf
-**Blokkades:** `context=edit` geeft HTTP 401 (authenticatie vereist); individuele LOWAN-pagina's tonen enkel helpdesk@lowanpo.nl, geen schoolspecifieke data
+**Aantallen:** 326 scholen totaal | eerste 60 geverifieerd op eigen schoolwebsite (25 aug 2026): 55 met e-mail, 3 alleen formulier/afgeschermd, 1 geen school-eigen adres, 1 site blokkeert bots | plaats + contactpersoon + e-mail van ALLE 326 scholen staat in `lowan-contactdata-alle-326.json` (bron: LOWAN ajax-endpoint)
+**Blokkades (OPGELOST 25 aug 2026):** de lijst-weergave van lowan.nl/po/scholen/ laadt via `POST https://www.lowan.nl/wp-admin/admin-ajax.php` met `action=load_schools&post_type=schools_po&page_number=1&count=400` — bevat per school plaats, adres, telefoon, contactpersoon + e-mail en website. Koppeling slug→school via post-ID (`postid-NNN` op detailpagina = `school_id` in ajax-item). Volledige dump: `lowan-contactdata-alle-326.json`. E-mailkolom rij 1-60 = alléén adressen die letterlijk op de eigen schoolwebsite staan; LOWAN-db-adressen staan als opmerking achter de rij.
 **Aanvulstrategie:** scholenopdekaart.nl + schoolregister.nl + directe websearch per school voor resterende 296
 
 ---
@@ -14,66 +14,66 @@
 
 | # | School/voorziening | Plaats | LOWAN-link | Website | E-mail |
 |---|-------------------|--------|-----------|---------|--------|
-| 1 | ABS Middelburg | Middelburg | https://www.lowan.nl/schools_po/abs-middelburg/ | https://absmiddelburg.nl | info@absmiddelburg.nl |
-| 2 | De Bosruiter | Zeewolde | https://www.lowan.nl/schools_po/de-bosruiter/ | https://debosruiterzeewolde.nl | betty.geerse@ante.nl |
-| 3 | Dynamica XL VSO | Zaandam | https://www.lowan.nl/schools_po/dynamica-xl-vso/ | https://dynamicaonderwijs.nl | — |
-| 4 | Monseigneur Bekkersschool | — | https://www.lowan.nl/schools_po/monseigneur-bekkersschool/ | — | — |
-| 5 | De Parel | — | https://www.lowan.nl/schools_po/de-parel/ | — | — |
-| 6 | IKC Kleurrijk | — | https://www.lowan.nl/schools_po/ikc-kleurrijk/ | — | — |
-| 7 | De Gevers Deynootschool | — | https://www.lowan.nl/schools_po/de-gevers-deynootschool/ | — | — |
-| 8 | Nieuwkomersschool De Kleine Wereld | Groningen | https://www.lowan.nl/schools_po/nieuwkomersschool-de-kleine-wereld/ | https://www.kleinewereld.nl | info@kleinewereld.nl |
-| 9 | UWC Maastricht | Maastricht | https://www.lowan.nl/schools_po/uwc-maastricht/ | — | — |
-| 10 | De Verbinding | Lent | https://www.lowan.nl/schools_po/de-verbinding/ | https://www.de-verbinding.info | — |
-| 11 | Rkbs de Regenboog | — | https://www.lowan.nl/schools_po/rkbs-de-regenboog/ | — | — |
-| 12 | Regionale taalschool | — | https://www.lowan.nl/schools_po/regionale-taalschool/ | — | — |
-| 13 | P.I. School Hondsberg | — | https://www.lowan.nl/schools_po/p-i-school-hondsberg/ | — | — |
-| 14 | Taalschool De Liemers | — | https://www.lowan.nl/schools_po/taalschool-de-liemers/ | — | — |
-| 15 | De Drie Linden | — | https://www.lowan.nl/schools_po/de-drie-linden/ | — | — |
-| 16 | OBS de Notenkraker | — | https://www.lowan.nl/schools_po/obs-de-notenkraker-2/ | — | — |
-| 17 | KC Diamant | — | https://www.lowan.nl/schools_po/kc-diamant/ | — | — |
-| 18 | OBS het Galjoen | — | https://www.lowan.nl/schools_po/obs-het-galjoen/ | — | — |
-| 19 | P. Oosterleeschool | — | https://www.lowan.nl/schools_po/p-oosterleeschool/ | — | — |
-| 20 | Cornelis Musiusschool | — | https://www.lowan.nl/schools_po/cornelis-musiusschool/ | — | — |
-| 21 | Regionale taalschool Mundus | Alphen aan den Rijn | https://www.lowan.nl/schools_po/regionale-taalschool-mundus/ | https://mundus.scopescholen.nl | — |
-| 22 | Het Karrepad | — | https://www.lowan.nl/schools_po/het-karrepad/ | — | — |
-| 23 | Prinses Ireneschool | — | https://www.lowan.nl/schools_po/prinses-ireneschool-2/ | — | — |
-| 24 | Stichting Pas | — | https://www.lowan.nl/schools_po/stichting-pas-2/ | — | — |
-| 25 | Hanevoet | — | https://www.lowan.nl/schools_po/hanevoet/ | — | — |
-| 26 | Buitenwijs | — | https://www.lowan.nl/schools_po/buitenwijs/ | — | — |
-| 27 | Sport OBS 't Kruisrak | — | https://www.lowan.nl/schools_po/sport-obs-t-kruisrak/ | — | — |
-| 28 | Springbok International | — | https://www.lowan.nl/schools_po/springbok-international/ | — | — |
-| 29 | PCBS de Driemaster | — | https://www.lowan.nl/schools_po/pcbs-de-driemaster/ | — | — |
-| 30 | KC Leyenburg | Den Haag | https://www.lowan.nl/schools_po/kc-leyenburg/ | https://kcleyenburg.nl | leyenburg@scoh.nl |
-| 31 | De Regenboog | — | https://www.lowan.nl/schools_po/de-regenboog-3/ | — | — |
-| 32 | KC Oda en KC Loper | — | https://www.lowan.nl/schools_po/kc-oda-en-kc-loper/ | — | — |
-| 33 | Kindcentrum Mozaïek | — | https://www.lowan.nl/schools_po/kindcentrum-mozaiek/ | — | — |
-| 34 | Obs Houtwijk | — | https://www.lowan.nl/schools_po/obs-houtwijk/ | — | — |
-| 35 | Wereldschool Amstelveen | Amstelveen | https://www.lowan.nl/schools_po/wereldschool-amstelveen/ | — | — |
-| 36 | SALTO-basisschool 't Karregat | — | https://www.lowan.nl/schools_po/salto-basisschool-t-karregat/ | — | — |
-| 37 | WereldKidz Pimpelmees | — | https://www.lowan.nl/schools_po/pimpelmees/ | — | — |
-| 38 | OBS Matheness | — | https://www.lowan.nl/schools_po/obs-matheness/ | — | — |
-| 39 | Taalatelier Nieuwegein | Nieuwegein | https://www.lowan.nl/schools_po/taalatelier-nieuwegein/ | — | — |
-| 40 | Basisschool Olof Palme | — | https://www.lowan.nl/schools_po/basisschool-olof-palme/ | — | — |
-| 41 | OBS De Globe | — | https://www.lowan.nl/schools_po/obs-de-globe/ | — | — |
-| 42 | IBS De Nieuwe Maan | — | https://www.lowan.nl/schools_po/ibs-de-nieuwe-maan/ | — | — |
-| 43 | Saltoschool De Bergen | — | https://www.lowan.nl/schools_po/saltoschool-de-bergen/ | — | — |
-| 44 | OBS Route 0513 | — | https://www.lowan.nl/schools_po/obs-route-0513/ | — | — |
-| 45 | PCB De Wegwijzer | — | https://www.lowan.nl/schools_po/pcb-de-wegwijzer/ | — | — |
-| 46 | Taalschool Wereldrijk | Waalwijk | https://www.lowan.nl/schools_po/taalschool-wereldrijk/ | https://www.wereldschooltaalrijk.nl | — |
-| 47 | Het Oelebred | — | https://www.lowan.nl/schools_po/het-oelebred/ | — | — |
-| 48 | De Pelikaan | — | https://www.lowan.nl/schools_po/de-pelikaan/ | — | — |
-| 49 | Adelbrecht-Windekind | — | https://www.lowan.nl/schools_po/adelbrecht-windekind/ | — | — |
-| 50 | KC de Boog | — | https://www.lowan.nl/schools_po/kc-de-boog/ | — | — |
-| 51 | 't Slingertouw | — | https://www.lowan.nl/schools_po/t-slingertouw/ | — | — |
-| 52 | De Ark | — | https://www.lowan.nl/schools_po/de-ark/ | — | — |
-| 53 | Aventurijn | — | https://www.lowan.nl/schools_po/aventurijn/ | — | — |
-| 54 | Josephschool | — | https://www.lowan.nl/schools_po/josephschool/ | — | — |
-| 55 | Ondersteuningsteam De Stipe | — | https://www.lowan.nl/schools_po/de-stipe/ | — | — |
-| 56 | Basisschool Kameleon | — | https://www.lowan.nl/schools_po/basisschool-kameleon/ | — | — |
-| 57 | Taalcentrum Almere | Almere | https://www.lowan.nl/schools_po/taalcentrum-almere/ | https://www.taalcentrumalmere.nl | info@taalcentrumalmere.nl |
-| 58 | De Globe Bussum | Bussum | https://www.lowan.nl/schools_po/de-globe-bussum/ | — | — |
+| 1 | ABS Middelburg | Middelburg | https://www.lowan.nl/schools_po/abs-middelburg/ | https://www.absmiddelburg.nl/contact | info@absmiddelburg.nl |
+| 2 | De Bosruiter | Zeewolde | https://www.lowan.nl/schools_po/de-bosruiter/ | https://debosruiterzeewolde.nl/ouders-en-contact/ | info.bosruiter@flevion.nl | ook betty.geerse@flevion.nl (dir.)
+| 3 | Dynamica XL VSO | Zaandam | https://www.lowan.nl/schools_po/dynamica-xl-vso/ | https://www.dynamicaonderwijs.nl/contact | s.beugeling@zaanprimair.nl | overkoepelend Dynamica-contact; LOWAN-db: k.nasole@zaanprimair.nl
+| 4 | Monseigneur Bekkersschool | Delft | https://www.lowan.nl/schools_po/monseigneur-bekkersschool/ | https://www.mgrbekkersschool.nl/contact | mgrbekkers@laurentiusstichting.nl |
+| 5 | De Parel | Zutphen | https://www.lowan.nl/schools_po/de-parel/ | https://obsdeparel.nl/ | directie.obsdeparel@archipelprimair.nl |
+| 6 | IKC Kleurrijk | Waddinxveen | https://www.lowan.nl/schools_po/ikc-kleurrijk/ | https://kleurrijk-levwn.nl/ | administratiekleurrijk@levwn.nl | in footer
+| 7 | De Gevers Deynootschool | Voorschoten | https://www.lowan.nl/schools_po/de-gevers-deynootschool/ | https://www.gevers.pcsv.nl/contact/ | info@gevers.pcsv.nl | plaats = Voorschoten (niet Den Haag)
+| 8 | Nieuwkomersschool De Kleine Wereld | Groningen | https://www.lowan.nl/schools_po/nieuwkomersschool-de-kleine-wereld/ | https://www.kleinewereld.nl/ | info@kleinewereld.nl |
+| 9 | UWC Maastricht | Maastricht | https://www.lowan.nl/schools_po/uwc-maastricht/ | https://www.uwcmaastricht.nl/contact | info@uwcmaastricht.nl |
+| 10 | De Verbinding | Ureterp | https://www.lowan.nl/schools_po/de-verbinding/ | https://deverbinding-ureterp.nl/ | verbinding@noorderbasis.nl | eerder als Lent genoteerd; LOWAN = Ureterp (NoorderBasis)
+| 11 | Rkbs de Regenboog | Den Haag | https://www.lowan.nl/schools_po/rkbs-de-regenboog/ | https://rkbsderegenboogdenhaag.nl/ | info@regenboog.lucasonderwijs.nl |
+| 12 | Regionale taalschool | Doetinchem | https://www.lowan.nl/schools_po/regionale-taalschool/ | https://pro8.nu | — | alleen formulier op site; LOWAN-db: e.ruesink@pro8.nu
+| 13 | P.I. School Hondsberg | Oisterwijk | https://www.lowan.nl/schools_po/p-i-school-hondsberg/ | https://www.pischoolhondsberg.nl | infopi@koraal.nl |
+| 14 | Taalschool De Liemers | Zevenaar | https://www.lowan.nl/schools_po/taalschool-de-liemers/ | https://taalschooldeliemers.nl/contact | — | e-mail afgeschermd (JS-cloak); LOWAN-db: maria.grob@liemersnovum.nl
+| 15 | De Drie Linden | Den Haag | https://www.lowan.nl/schools_po/de-drie-linden/ | https://www.basisschooldedrielinden.nl | info@drielinden.lucasonderwijs.nl |
+| 16 | OBS de Notenkraker | Den Haag | https://www.lowan.nl/schools_po/obs-de-notenkraker-2/ | http://www.obsdenotenkraker.nl | info@obsdenotenkraker.nl |
+| 17 | KC Diamant | Den Haag | https://www.lowan.nl/schools_po/kc-diamant/ | https://www.kcdiamant.nl | info@kcdiamant.nl |
+| 18 | OBS het Galjoen | Den Haag | https://www.lowan.nl/schools_po/obs-het-galjoen/ | https://www.obs-hetgaljoen.nl/ | info@obsgaljoen.nl |
+| 19 | P. Oosterleeschool | Den Haag | https://www.lowan.nl/schools_po/p-oosterleeschool/ | https://oosterleeschool.nl/ | oosterlee@scoh.nl |
+| 20 | Cornelis Musiusschool | Delft | https://www.lowan.nl/schools_po/cornelis-musiusschool/ | https://www.cornelismusius.nl/ | cornelismusius@laurentiusstichting.nl |
+| 21 | Regionale taalschool Mundus | Alphen aan den Rijn | https://www.lowan.nl/schools_po/regionale-taalschool-mundus/ | https://mundus.scopescholen.nl | mundus@scopescholen.nl |
+| 22 | Het Karrepad | Groningen | https://www.lowan.nl/schools_po/het-karrepad/ | https://hetkarrepad.openbaaronderwijsgroningen.nl/ | administratie@karrepad.o2g2.nl |
+| 23 | Prinses Ireneschool | Den Haag | https://www.lowan.nl/schools_po/prinses-ireneschool-2/ | https://prinsesireneschooldenhaag.nl/ | school@irene.scoh.nl |
+| 24 | Stichting Pas | Arnhem | https://www.lowan.nl/schools_po/stichting-pas-2/ | https://www.stichtingpas.nl/ | info@stichtingpas.nl | nieuwkomersonderwijs Arnhem e.o.
+| 25 | Hanevoet | Eindhoven | https://www.lowan.nl/schools_po/hanevoet/ | https://www.bs-hanevoet.nl | hanevoet@salto-eindhoven.nl |
+| 26 | Buitenwijs | Zwolle | https://www.lowan.nl/schools_po/buitenwijs/ | https://www.onderwijstransformeert.nl/ | info@onderwijstransformeert.nl | valt onder Onderwijs Transformeert
+| 27 | Sport OBS 't Kruisrak | Bunschoten-Spakenburg | https://www.lowan.nl/schools_po/sport-obs-t-kruisrak/ | https://kruisrak.nl/ | directie@kruisrak.nl |
+| 28 | Springbok International | Den Haag | https://www.lowan.nl/schools_po/springbok-international/ | https://www.springbokinternational.nl/ | obs@springbokinternational.nl |
+| 29 | PCBS de Driemaster | Voorburg | https://www.lowan.nl/schools_po/pcbs-de-driemaster/ | https://driemastervoorburg.nl/ | info@driemastervoorburg.nl |
+| 30 | KC Leyenburg | Den Haag | https://www.lowan.nl/schools_po/kc-leyenburg/ | https://kcleyenburg.nl/ | leyenburg@scoh.nl |
+| 31 | De Regenboog | Oldenzaal | https://www.lowan.nl/schools_po/de-regenboog-3/ | https://www.rboog.nl/contact | b.degraaf@konot.nl | directeur
+| 32 | KC Oda en KC Loper | Maastricht | https://www.lowan.nl/schools_po/kc-oda-en-kc-loper/ | https://www.oda-bs.nl/contact | — | alleen formulier; LOWAN-db: i.lammerschop@mosalira.nl
+| 33 | Kindcentrum Mozaïek | Helmond | https://www.lowan.nl/schools_po/kindcentrum-mozaiek/ | https://kc-mozaiek.nl/ | directie@kc-mozaiek.nl |
+| 34 | Obs Houtwijk | Den Haag | https://www.lowan.nl/schools_po/obs-houtwijk/ | https://www.obshoutwijk.nl/ | info@obshoutwijk.nl |
+| 35 | Wereldschool Amstelveen | Amstelveen | https://www.lowan.nl/schools_po/wereldschool-amstelveen/ | https://wereldschool-amstelveen.nl/ | — | site blokkeert geautomatiseerde toegang (403); LOWAN-db: g.vanderzon@ogamstelland.nl
+| 36 | SALTO-basisschool 't Karregat | Eindhoven | https://www.lowan.nl/schools_po/salto-basisschool-t-karregat/ | https://www.bs-karregat.nl/ | karregat@salto-eindhoven.nl |
+| 37 | WereldKidz Pimpelmees | Veenendaal | https://www.lowan.nl/schools_po/pimpelmees/ | https://pimpelmees.wereldkidz.nl/Contact | koenhols@wereldkidz.nl | schoolleider; team-adressen op contactpagina
+| 38 | OBS Mathenesse | Rotterdam | https://www.lowan.nl/schools_po/obs-matheness/ | https://obsmathenesse.nl/ | info@obsmathenesse.nl |
+| 39 | Taalatelier Nieuwegein | Nieuwegein | https://www.lowan.nl/schools_po/taalatelier-nieuwegein/ | https://sbo-evenaar.nl/contact | info@sbo-evenaar.nl | Taalatelier valt onder SBO Evenaar
+| 40 | Basisschool Olof Palme | Drunen | https://www.lowan.nl/schools_po/basisschool-olof-palme/ | https://www.olof-palme.nl/contact/ | info@olof-palme.nl |
+| 41 | OBS De Globe | Rotterdam | https://www.lowan.nl/schools_po/obs-de-globe/ | https://www.obsdeglobe.nl/401/726/contact-met-de-school.html | info@obsdeglobe.nl |
+| 42 | IBS De Nieuwe Maan | Delft | https://www.lowan.nl/schools_po/ibs-de-nieuwe-maan/ | https://www.ibsdenieuwemaan.nl/ | info@ibsdenieuwemaan.nl |
+| 43 | Saltoschool De Bergen | Eindhoven | https://www.lowan.nl/schools_po/saltoschool-de-bergen/ | https://www.bs-bergen.nl | philipsdorp@salto-eindhoven.nl |
+| 44 | OBS Route 0513 | Heerenveen | https://www.lowan.nl/schools_po/obs-route-0513/ | https://www.obsroute0513.nl/nl/contact/contactgegevens | directieroute0513@ambion.nl |
+| 45 | PCB De Wegwijzer | Krimpen aan de Lek | https://www.lowan.nl/schools_po/pcb-de-wegwijzer/ | https://pcb-dewegwijzer.nl/contact/ | info@pcb-dewegwijzer.nl |
+| 46 | Taalschool Wereldrijk | Sprang-Capelle (gem. Waalwijk) | https://www.lowan.nl/schools_po/taalschool-wereldrijk/ | https://www.bsdevrijhoeve.nl/ | directiedevrijhoeve@leerrijk.nl | taalschool valt onder BS De Vrijhoeve
+| 47 | Het Oelebred | Tynaarlo | https://www.lowan.nl/schools_po/het-oelebred/ | https://www.hetoelebred.nl | directie.hetoelebred@stichtingbaasis.nl |
+| 48 | De Pelikaan | Putten | https://www.lowan.nl/schools_po/de-pelikaan/ | https://www.pcbdepelikaan.nl/ | directie.pcbdepelikaan@vpcoputten.nl |
+| 49 | Adelbrecht-Windekind | Groesbeek | https://www.lowan.nl/schools_po/adelbrecht-windekind/ | https://bs-adelbrecht.nl/ | jenaplan.adelbrecht@leerenfloreer.nl |
+| 50 | KC de Boog | Eindhoven | https://www.lowan.nl/schools_po/kc-de-boog/ | https://bsdeboog.nl | deboog@skpo.nl |
+| 51 | 't Slingertouw | Eindhoven | https://www.lowan.nl/schools_po/t-slingertouw/ | https://basisschoolslingertouw.nl/contact | slingertouw@skpo.nl |
+| 52 | De Ark | Almere | https://www.lowan.nl/schools_po/de-ark/ | https://ark-almere.nl/ | dir.ark@prisma-almere.nl |
+| 53 | Aventurijn | Houten | https://www.lowan.nl/schools_po/aventurijn/ | https://www.basisschoolaventurijn.nl/ | directie@basisschoolaventurijn.nl |
+| 54 | Josephschool | Pijnacker | https://www.lowan.nl/schools_po/josephschool/ | https://www.josephschoolpijnacker.nl/ | info@josephschoolpijnacker.nl | LOWAN-db taalklas: taalklaspijnacker@skoppijnacker.nl
+| 55 | Ondersteuningsteam De Stipe | Wolvega | https://www.lowan.nl/schools_po/de-stipe/ | https://destipe.nl/ | info@destipe.nl |
+| 56 | Basisschool Kameleon | Goirle | https://www.lowan.nl/schools_po/basisschool-kameleon/ | https://www.kameleon-goirle.nl | — | geen school-eigen adres op site (alleen stichting/BSO etuda.nl); LOWAN-db: marielle.vanoorschot@etuda.nl
+| 57 | Taalcentrum Almere | Almere | https://www.lowan.nl/schools_po/taalcentrum-almere/ | https://www.taalcentrumalmere.nl/ | info@taalcentrumalmere.nl |
+| 58 | De Globe Bussum | Bussum | https://www.lowan.nl/schools_po/de-globe-bussum/ | https://www.globe-school.nl/ | info.globe@proceon.nl |
 | 59 | Taalschool Innoord | Amsterdam | https://www.lowan.nl/schools_po/taalschool-innoord/ | https://taalschool.innoord.nl | info.taalschool@innoord.nl |
-| 60 | Aquamarijn/Feniks | — | https://www.lowan.nl/schools_po/aquamarijn-feniks/ | — | — |
+| 60 | Aquamarijn/Feniks (De TaalBrug) | Groningen | https://www.lowan.nl/schools_po/aquamarijn-feniks/ | https://defeniks.openbaaronderwijsgroningen.nl/ | info@defeniks.o2g2.nl | TaalBrug ook op cbsaquamarijn.nl (a.rensen@vcog.nl)
 | 61 | IKC Wonderwijs | — | https://www.lowan.nl/schools_po/ikc-wonderwijs/ | — | — |
 | 62 | OBS De Wissel | — | https://www.lowan.nl/schools_po/obs-de-wissel/ | — | — |
 | 63 | De Startbaan | — | https://www.lowan.nl/schools_po/de-startbaan/ | — | — |

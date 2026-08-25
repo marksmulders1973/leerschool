@@ -1,0 +1,4609 @@
+[
+ {
+  "name": "'t Noorderlicht",
+  "place": "GOES",
+  "emails": [
+   "m.hoogstrate@alberoscholen.nl"
+  ],
+  "persons": [
+   "Maaike Hoogstrate"
+  ],
+  "sites": []
+ },
+ {
+  "name": "'t Slingertouw",
+  "place": "EINDHOVEN",
+  "emails": [
+   "b.houben@skpo.nl",
+   "r.polman@skpo.nl"
+  ],
+  "persons": [
+   "Bjorn Houben",
+   "Ruud Polman"
+  ],
+  "sites": [
+   "https://basisschoolslingertouw.nl/"
+  ]
+ },
+ {
+  "name": "à Hermkes",
+  "place": "EPEN",
+  "emails": [
+   "svenja.kleijnen@innovo.nl",
+   "monique.frissen@innovo.nl"
+  ],
+  "persons": [
+   "Svenja Kleijnen",
+   "Monique Frissen"
+  ],
+  "sites": [
+   "https://www.hermkes.nl"
+  ]
+ },
+ {
+  "name": "Aan de Bron",
+  "place": "WEERT",
+  "emails": [
+   "l.schreurs@meerderweert.nl"
+  ],
+  "persons": [
+   "Linda Schreurs"
+  ],
+  "sites": [
+   "http://www.aandebron.nl/"
+  ]
+ },
+ {
+  "name": "ABS Middelburg",
+  "place": "MIDDELBURG",
+  "emails": [
+   "elske.hooijer@absmiddelburg.nl",
+   "tamara.vliegenthart@absmiddelburg.nl"
+  ],
+  "persons": [
+   "Elske Hooijer",
+   "Tamara Vliegenthart"
+  ],
+  "sites": [
+   "https://www.absmiddelburg.nl"
+  ]
+ },
+ {
+  "name": "Adelbrecht-Windekind",
+  "place": "GROESBEEK",
+  "emails": [
+   "diana.vanweverwijk@spog.nl"
+  ],
+  "persons": [
+   "Diana van Weverwijk"
+  ],
+  "sites": [
+   "https://bs-adelbrecht.nl/"
+  ]
+ },
+ {
+  "name": "Al Islaah",
+  "place": "HARDERWIJK",
+  "emails": [
+   "k.loukili@elamalscholen.nl"
+  ],
+  "persons": [
+   "Khadija Loukili"
+  ],
+  "sites": [
+   "https://www.alislaah.nl"
+  ]
+ },
+ {
+  "name": "Amsteltaal-Noord",
+  "place": "AMSTELVEEN",
+  "emails": [
+   "infonoord@amsteltaal.nl",
+   "Ibnoord@amsteltaal.nl"
+  ],
+  "persons": [
+   "Laura van der Hammen",
+   "Daphne Engels"
+  ],
+  "sites": [
+   "https://www.amsteltaal.nl/"
+  ]
+ },
+ {
+  "name": "Anne Frank OBS",
+  "place": "DEN HAAG",
+  "emails": [
+   "t.vanderwel@obs-annefrank.net"
+  ],
+  "persons": [
+   "Tim van der Wel"
+  ],
+  "sites": [
+   "https://www.obs-annefrank.nl/"
+  ]
+ },
+ {
+  "name": "Aquamarijn/Feniks",
+  "place": "GRONINGEN",
+  "emails": [],
+  "persons": [],
+  "sites": []
+ },
+ {
+  "name": "Aventurijn",
+  "place": "HOUTEN",
+  "emails": [
+   "directie@basisschoolaventurijn.nl",
+   "denise.vanstroe@basisschoolaventurijn.nl"
+  ],
+  "persons": [
+   "caroline Boumans",
+   "Denise van Stroe"
+  ],
+  "sites": [
+   "https://www.basisschoolaventurijn.nl/"
+  ]
+ },
+ {
+  "name": "AZC school Het Uitzicht",
+  "place": "MAASDAM",
+  "emails": [
+   "j.dejong@csgdewaard.nl",
+   "r.vanderbiezen@csgdewaard.nl"
+  ],
+  "persons": [
+   "Jovanka de Jong",
+   "Roosmarijn van der Biezen"
+  ],
+  "sites": [
+   "https://www.het-uitzicht.nl/"
+  ]
+ },
+ {
+  "name": "AZC-school Oisterwijk",
+  "place": "OISTERWIJK",
+  "emails": [
+   "carin.dejong@bijkinderstad.nl",
+   "anita.eijsten@bijkinderstad.nl"
+  ],
+  "persons": [
+   "Carin de Jong",
+   "Anita Eijsten"
+  ],
+  "sites": [
+   "https://azcschooloisterwijk.nl/"
+  ]
+ },
+ {
+  "name": "AZS De Waaier",
+  "place": "ZUTPHEN",
+  "emails": [
+   "mirjamrappel@archipelprimair.nl",
+   "joannehoncoop@archipelprimair.nl"
+  ],
+  "persons": [
+   "Mirjam Rappel",
+   "JoAnne Honcoop"
+  ],
+  "sites": [
+   "https://www.azcschooldewaaier.nl"
+  ]
+ },
+ {
+  "name": "Basisschool aan 't Heike",
+  "place": "VELDHOVEN",
+  "emails": [
+   "l.wijman@veldvest.nl",
+   "e.verhagen@veldvest.nl"
+  ],
+  "persons": [
+   "Lineke Wijman",
+   "Els Verhagen"
+  ],
+  "sites": [
+   "https://www.basisschoolaantheike.nl/Home"
+  ]
+ },
+ {
+  "name": "Basisschool De Appel",
+  "place": "ROOSENDAAL",
+  "emails": [
+   "a.ijzerman@kporoosendaal.nl"
+  ],
+  "persons": [
+   "Astrid IJzerman"
+  ],
+  "sites": [
+   "https://www.deappelkpo.nl/"
+  ]
+ },
+ {
+  "name": "Basisschool De Brug",
+  "place": "MAASTRICHT",
+  "emails": [
+   "m.steinmetz@komleren.nl",
+   "n.jeukens@komleren.nl"
+  ],
+  "persons": [
+   "Michiel Steinmetz",
+   "Nicole Jeukens"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Basisschool De Dromenvanger",
+  "place": "OUDSHEUSDEN",
+  "emails": [
+   "elly.sebregts@scalascholen.nl",
+   "monique.van.loosbroek@scalascholen.nl"
+  ],
+  "persons": [
+   "Elly Sebregts",
+   "Monique van Loosbroek"
+  ],
+  "sites": [
+   "https://www.bsdedromenvanger.nl/"
+  ]
+ },
+ {
+  "name": "Basisschool De Groene Wereld",
+  "place": "VELP",
+  "emails": [
+   "a.hermsen@optimusonderwijs.nl",
+   "dir.degroenewereld@optimusonderwijs.nl"
+  ],
+  "persons": [
+   "Angelique Hermsen",
+   "Trudis van der Hucht"
+  ],
+  "sites": [
+   "https://www.jozefvelp.nl"
+  ]
+ },
+ {
+  "name": "Basisschool De Horizon",
+  "place": "DELFT",
+  "emails": [
+   "directie.horizon@scodelft.nl"
+  ],
+  "persons": [
+   "Meint Helder"
+  ],
+  "sites": [
+   "https://www.horizondelft.nl"
+  ]
+ },
+ {
+  "name": "Basisschool De Kameleon",
+  "place": "'S-HERTOGENBOSCH",
+  "emails": [
+   "directie@kbsdekameleon.nl"
+  ],
+  "persons": [
+   "Cindy Monterie"
+  ],
+  "sites": [
+   "https://www.kbsdekameleon.nl/"
+  ]
+ },
+ {
+  "name": "Basisschool De Leeuw",
+  "place": "LICHTENVOORDE",
+  "emails": [
+   "susanne.hanselman@paraatscholen.nl",
+   "sabine.grotenhuis@paraatscholen.nl"
+  ],
+  "persons": [
+   "Susanne Hanselman",
+   "Sabine Grotenhuis"
+  ],
+  "sites": [
+   "https://www.basisschooldeleeuw.nl"
+  ]
+ },
+ {
+  "name": "Basisschool De Piramide",
+  "place": "DEURNE",
+  "emails": [
+   "karin.vloet@prodas.nl",
+   "marianne.vandemortel@prodas.nl"
+  ],
+  "persons": [
+   "Karin Vloet",
+   "Marianne van de Mortel"
+  ],
+  "sites": [
+   "https://www.piramide-deurne.nl"
+  ]
+ },
+ {
+  "name": "Basisschool De Zuidstroom",
+  "place": "VENLO",
+  "emails": [
+   "jeannette.receveur@fortior.nl"
+  ],
+  "persons": [
+   "Jeannette Receveur"
+  ],
+  "sites": [
+   "https://www.basisschooldezuidstroom.nl"
+  ]
+ },
+ {
+  "name": "Basisschool Groeneveld",
+  "place": "VENLO",
+  "emails": [
+   "pieter.classen@fortior.nl",
+   "caroline.sax@fortior.nl"
+  ],
+  "persons": [
+   "Pieter Classen",
+   "Caroline Sax"
+  ],
+  "sites": [
+   "https://groeneveld.fortior.nl/"
+  ]
+ },
+ {
+  "name": "Basisschool het Mozaïek (hoofdlocatie)",
+  "place": "ARNHEM",
+  "emails": [
+   "lieke.roelofs@floresonderwijs.nl",
+   "carola.peters@floresonderwijs.nl"
+  ],
+  "persons": [
+   "Lieke Roelofs",
+   "Carola Peters"
+  ],
+  "sites": [
+   "http://www.mozaiekarnhem.nl"
+  ]
+ },
+ {
+  "name": "Basisschool het Mozaïek (tweede locatie)",
+  "place": "ARNHEM",
+  "emails": [
+   "lieke.roelofs@floresonderwijs.nl"
+  ],
+  "persons": [
+   "Lieke Roelofs"
+  ],
+  "sites": [
+   "https://www.mozaiekarnhem.nl"
+  ]
+ },
+ {
+  "name": "Basisschool Jeroen",
+  "place": "DEN HAAG",
+  "emails": [
+   "info@jeroenschool.lucasonderwijs.nl"
+  ],
+  "persons": [
+   "Gerard van Vliet"
+  ],
+  "sites": [
+   "https://www.basisschooljeroen.nl"
+  ]
+ },
+ {
+  "name": "Basisschool Kameleon",
+  "place": "GOIRLE",
+  "emails": [
+   "marielle.vanoorschot@etuda.nl",
+   "anouk.vandal@etuda.nl"
+  ],
+  "persons": [
+   "Mariëlle van Oorschot",
+   "Anouk van Dal"
+  ],
+  "sites": [
+   "https://www.kameleon-goirle.nl"
+  ]
+ },
+ {
+  "name": "Basisschool OBS de Optimist",
+  "place": "HEERENVEEN",
+  "emails": [
+   "martha.kootstra@ambion.nl",
+   "froukje.bokhorst@ambion.nl"
+  ],
+  "persons": [
+   "Martha Kootstra",
+   "Froukje Bokhorst"
+  ],
+  "sites": [
+   "https://www.deoptimist.frl/nl/onze-school/schakelklas"
+  ]
+ },
+ {
+  "name": "Basisschool Olof Palme",
+  "place": "DRUNEN",
+  "emails": [
+   "judith.vanden.besselaar@scalascholen.nl"
+  ],
+  "persons": [
+   "Judith van den Besselaar"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Basisschool Petrus Canisius",
+  "place": "PUTH",
+  "emails": [
+   "d.stassen@kindante.nl",
+   "l.toussaint@kindante.nl"
+  ],
+  "persons": [
+   "Daniëlle Stassen",
+   "Linda Toussaint"
+  ],
+  "sites": [
+   "http://www.basisschoolputh.nl"
+  ]
+ },
+ {
+  "name": "Basisschool Prinsenbos",
+  "place": "GILZE",
+  "emails": [
+   "kristel.borghs@mondiaen.nl",
+   "ingrid.vanbeurden@mondiaen.nl"
+  ],
+  "persons": [
+   "Kristel Borghs",
+   "Ingrid van Beurden"
+  ],
+  "sites": [
+   "https://www.basisschoolprinsenbos.nl/"
+  ]
+ },
+ {
+  "name": "Basisschool Willem van Oranje",
+  "place": "WOERDEN",
+  "emails": [
+   "nicoline.koppelaar@spco.nl",
+   "lisette.devisser@spco.nl"
+  ],
+  "persons": [
+   "Nicoline Koppelaar",
+   "Lisette de Visser"
+  ],
+  "sites": [
+   "http://www.willemvanoranjewoerden.nl/"
+  ]
+ },
+ {
+  "name": "Bataviaschool",
+  "place": "AMSTERDAM",
+  "emails": [
+   "directie@bataviaschool.nl",
+   "IB@bataviaschool.nl"
+  ],
+  "persons": [
+   "Janneke Wormhoudt",
+   "Marieke Schreurs"
+  ],
+  "sites": [
+   "https://www.bataviaschool.nl"
+  ]
+ },
+ {
+  "name": "BS De Cortendijck",
+  "place": "ROOSENDAAL",
+  "emails": [
+   "r.v.os@kporoosendaal.nl",
+   "d.simons@kporoosendaal.nl"
+  ],
+  "persons": [
+   "Ruby van Os",
+   "Danielle Simons"
+  ],
+  "sites": [
+   "https://www.deparelkpo.nl/"
+  ]
+ },
+ {
+  "name": "Bs De Duinsprong",
+  "place": "DRUNEN",
+  "emails": [
+   "info@deduinsprong.nl",
+   "angelique.span@scalascholen.nl"
+  ],
+  "persons": [
+   "Yvette van der Sterren",
+   "Angelique Span"
+  ],
+  "sites": [
+   "https://www.deduinsprong.nl/"
+  ]
+ },
+ {
+  "name": "BS De Kleine Wereld",
+  "place": "VAALS",
+  "emails": [
+   "rachel.peters@innovo.nl",
+   "madelon.delaere@innovo.nl"
+  ],
+  "persons": [
+   "Rachel Peters",
+   "Madelon Delaere"
+  ],
+  "sites": [
+   "https://bs-dekleinewereld.nl/"
+  ]
+ },
+ {
+  "name": "BS De Rots",
+  "place": "GELDROP",
+  "emails": [
+   "angela.vanalphen@eenbes.nl",
+   "yvonne.betting@eenbes.nl"
+  ],
+  "persons": [
+   "Angela van Alphen",
+   "Yvonne Betting"
+  ],
+  "sites": [
+   "https://www.basisschoolderots.nl/"
+  ]
+ },
+ {
+  "name": "BS Het Kristal",
+  "place": "RIJSWIJK",
+  "emails": [
+   "rvklink@bshetkristal.nl"
+  ],
+  "persons": [
+   "R. van Klink"
+  ],
+  "sites": [
+   "https://www.bshetkristal.nl/"
+  ]
+ },
+ {
+  "name": "Bs Mikado",
+  "place": "VENLO",
+  "emails": [
+   "ine.houkes@kerobei.nl",
+   "esther.jacobs@kerobei.nl"
+  ],
+  "persons": [
+   "Ine Houkes",
+   "Esther Jacobs"
+  ],
+  "sites": [
+   "https://mikado.kerobei.nl/"
+  ]
+ },
+ {
+  "name": "Bs Voordeldonk",
+  "place": "ASTEN",
+  "emails": [
+   "ank.vandekerkhof@prodas.nl",
+   "marielle.vanrijt@prodas.nl"
+  ],
+  "persons": [
+   "Ank van de Kerkhof",
+   "Mariëlle van Rijt"
+  ],
+  "sites": [
+   "https://www.bsvoordeldonk.nl/"
+  ]
+ },
+ {
+  "name": "Buitenwijs",
+  "place": "ZWOLLE",
+  "emails": [
+   "riannespin@onderwijstransformeert.nl"
+  ],
+  "persons": [
+   "Rianne Spin"
+  ],
+  "sites": [
+   "https://www.onderwijstransformeert.nl/"
+  ]
+ },
+ {
+  "name": "Burgemeester de Vlugtschool",
+  "place": "AMSTERDAM",
+  "emails": [
+   "kbaig@devlugtschool.nl",
+   "kbaig@devlugtschool.nl"
+  ],
+  "persons": [
+   "Michiel Baig",
+   "Kiren Baig"
+  ],
+  "sites": [
+   "https://taalschooldevlugt.nl/"
+  ]
+ },
+ {
+  "name": "CBS de Ark",
+  "place": "BERGAMBACHT",
+  "emails": [
+   "adriaan.hanse@cbs-deark.nl",
+   "jacolien.verschoor@cbs-deark.nl"
+  ],
+  "persons": [
+   "Adriaan Hanse",
+   "Jacolien Verschoor"
+  ],
+  "sites": [
+   "https://www.cbs-deark.nl"
+  ]
+ },
+ {
+  "name": "CBS De Rank",
+  "place": "ZWAAG",
+  "emails": [
+   "annette.vink@stichtingpenta.nl",
+   "ronald.overboom@stichtingpenta.nl"
+  ],
+  "persons": [
+   "Annette Vink",
+   "Ronald Overboom"
+  ],
+  "sites": [
+   "https://www.rank.nl/"
+  ]
+ },
+ {
+  "name": "CBS Het Baken",
+  "place": "CAPELLE AAN DE IJSSEL",
+  "emails": [
+   "sandra@hetbakencapelle.nl",
+   "anke@hetbakencapelle.nl"
+  ],
+  "persons": [
+   "Sandra van der Rest",
+   "Anke van Wageningen"
+  ],
+  "sites": [
+   "http://www.hetbakencapelle.nl"
+  ]
+ },
+ {
+  "name": "Cbs het Palet",
+  "place": "HOOGEVEEN",
+  "emails": [
+   "n.jalving@pricoh.nl",
+   "h.zomer@pricoh.nl"
+  ],
+  "persons": [
+   "Nienke Jalving",
+   "Harm Jan Zomer"
+  ],
+  "sites": [
+   "https://hetpalet.pricoh.nl/"
+  ]
+ },
+ {
+  "name": "Chr. Basisschool De Sleutel",
+  "place": "ROTTERDAM",
+  "emails": [
+   "r.westerdijki@cbsdesleutel.nl",
+   "t.bosgieter@cbsdesleutel.nl"
+  ],
+  "persons": [
+   "Rianne Westerdijk",
+   "Theo Bosgieter"
+  ],
+  "sites": [
+   "https://www.cbsdesleutel.nl"
+  ]
+ },
+ {
+  "name": "CON de Wereldschool",
+  "place": "SCHIEDAM",
+  "emails": [
+   "r.veltenaar@primoschiedam.nl"
+  ],
+  "persons": [
+   "Renée Veltenaar"
+  ],
+  "sites": [
+   "https://www.wereldschoolschiedam.nl"
+  ]
+ },
+ {
+  "name": "Cornelis Musiusschool",
+  "place": "DELFT",
+  "emails": [
+   "cornelismusius@laurentiusstichting.nl",
+   "mruitenbeek@cornelismusius.nl"
+  ],
+  "persons": [
+   "Karin Zeestraten",
+   "Marlise Ruitenbeek"
+  ],
+  "sites": [
+   "https://www.cornelismusius.nl/"
+  ]
+ },
+ {
+  "name": "Da Costa School",
+  "place": "ROTTERDAM",
+  "emails": [
+   "dcs@dacostaschool.com",
+   "weber@dacostaschool.com"
+  ],
+  "persons": [
+   "Pia Poot",
+   "Inske Weber-Brouwers"
+  ],
+  "sites": [
+   "https://dacostaschool.com/"
+  ]
+ },
+ {
+  "name": "Daltonschool Eglantier Buiten",
+  "place": "DELFT",
+  "emails": [
+   "b.wijzenbroek@librijn.nl",
+   "b.wijzenbroek@librijn.nl"
+  ],
+  "persons": [
+   "Bianca Wijzenbroek",
+   "Bianca Wijzenbroek"
+  ],
+  "sites": [
+   "https://www.eglantierbuiten.nl/"
+  ]
+ },
+ {
+  "name": "Daltonschool Rhenen-Elst",
+  "place": "RHENEN",
+  "emails": [
+   "directie@daltonrhenen-elst.nl",
+   "ib@daltonrhenen-elst.nl"
+  ],
+  "persons": [
+   "Heidi van Appeldoorn",
+   "Annette van Zetten"
+  ],
+  "sites": [
+   "https://daltonrhenen-elst.nl/"
+  ]
+ },
+ {
+  "name": "De Ark",
+  "place": "ALMERE",
+  "emails": [
+   "d.vannetten@ark-almere.nl",
+   "i.overstegen@ark-almere.nl"
+  ],
+  "persons": [
+   "Daniëlle van Netten",
+   "Ingrid Overstegen"
+  ],
+  "sites": [
+   "https://ark-almere.nl/"
+  ]
+ },
+ {
+  "name": "De Bellefleur",
+  "place": "DODEWAARD",
+  "emails": [
+   "directie@de-bellefleur.nl",
+   "ib@de-bellefleur.nl"
+  ],
+  "persons": [
+   "Stefan Teunissen",
+   "Moniek Remmerde"
+  ],
+  "sites": [
+   "https://fluvium.nl/scholen/obs-de-bellefleur/"
+  ]
+ },
+ {
+  "name": "De Blokwei",
+  "place": "ROOSENDAAL",
+  "emails": [
+   "s.v.aert@kporoosendaal.nl",
+   "e.uijttenboogaard@kporoosendaal.nl"
+  ],
+  "persons": [
+   "Steffie van Aert",
+   "Evelien Uijttenboogaard"
+  ],
+  "sites": [
+   "https://www.deblokweikpo.nl/"
+  ]
+ },
+ {
+  "name": "De Bornput",
+  "place": "KESTEREN",
+  "emails": [
+   "directie@debornput.nl",
+   "mvanbrenk@rehoboth-opheusden.nl"
+  ],
+  "persons": [
+   "Ellis Jan Hoogendoorn",
+   "Martine van Brenk"
+  ],
+  "sites": []
+ },
+ {
+  "name": "De Bosruiter",
+  "place": "ZEEWOLDE",
+  "emails": [
+   "marjanne.vanbeek@flevion.nl"
+  ],
+  "persons": [
+   "Marjanne van Beek"
+  ],
+  "sites": [
+   "https://debosruiterzeewolde.nl/"
+  ]
+ },
+ {
+  "name": "De Cocon",
+  "place": "BALK",
+  "emails": [
+   "cocon@nijegaast.nl",
+   "anneke.van.kalsbeek@nijegaast.nl"
+  ],
+  "persons": [
+   "Pieter Jongsma",
+   "Anneke van Kalsbeek"
+  ],
+  "sites": []
+ },
+ {
+  "name": "De Diamant",
+  "place": "SOMEREN",
+  "emails": [
+   "anja.peters@prodas.nl",
+   "willeke.kremers@prodas.nl"
+  ],
+  "persons": [
+   "Anja Peters",
+   "Willeke Kremers"
+  ],
+  "sites": [
+   "https://www.bsdediamant.nl/"
+  ]
+ },
+ {
+  "name": "De Diamant",
+  "place": "MAASSLUIS",
+  "emails": [
+   "ellen.kuyvenhoven@un1ek.nl"
+  ],
+  "persons": [
+   "Ellen Kuyvenhoven"
+  ],
+  "sites": [
+   "https://www.dediamantmaassluis.nl"
+  ]
+ },
+ {
+  "name": "De Drie Linden",
+  "place": "DEN HAAG",
+  "emails": [
+   "ajanssen@drielinden.lucasonderwijs.nl",
+   "tgroneschild@drielinden.lucasonderwijs.nl"
+  ],
+  "persons": [
+   "Annemieke Janssen",
+   "Tess Groneschild"
+  ],
+  "sites": [
+   "https://www.basisschooldedrielinden.nl"
+  ]
+ },
+ {
+  "name": "De Drijfveer",
+  "place": "WAALRE",
+  "emails": [
+   "dpeels@skozok.nl",
+   "mbolder@skozok.nl"
+  ],
+  "persons": [
+   "Denise Peels",
+   "Mirthe Bolder"
+  ],
+  "sites": [
+   "https://www.dedrijfveer-waalre.nl/"
+  ]
+ },
+ {
+  "name": "De Feniks",
+  "place": "ASSEN",
+  "emails": [
+   "directie@kindcentrum-defeniks.nl",
+   "b.dirks@plateau-assen.nl"
+  ],
+  "persons": [
+   "Gauke Zijlstra",
+   "Britte Dirks"
+  ],
+  "sites": []
+ },
+ {
+  "name": "De Fontein",
+  "place": "DEN BURG",
+  "emails": [
+   "fontein-texel@kopwerk.nl",
+   "y.dejager@kopwerk.nl"
+  ],
+  "persons": [
+   "Monique van Gaalen",
+   "Yvonne de Jager"
+  ],
+  "sites": [
+   "https://www.fonteintexel.nl/"
+  ]
+ },
+ {
+  "name": "De Fontein",
+  "place": "BREDA",
+  "emails": [
+   "helga.hoogendoorn@pcpomiddenbrabant.nl",
+   "nicolette.rooimans@pcpomiddenbrabant.nl"
+  ],
+  "persons": [
+   "Helga Hoogendoorn",
+   "Nicolette Rooimans"
+  ],
+  "sites": [
+   "https://www.defonteinbreda.nl/"
+  ]
+ },
+ {
+  "name": "De Gelderlandschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "h.vandergeest@gelderlandschool.nl",
+   "n.kleindijk@gelderlandschool.nl"
+  ],
+  "persons": [
+   "Hilde van der Geest",
+   "Natascha Kleindijk"
+  ],
+  "sites": [
+   "https://www.gelderlandschool.nl/"
+  ]
+ },
+ {
+  "name": "De Gevers Deynootschool",
+  "place": "Voorschoten",
+  "emails": [
+   "saskia.delfos@gevers.pcsv.nl",
+   "ilse.woesthof@gevers.pcsv.nl"
+  ],
+  "persons": [
+   "Saskia Delfos",
+   "Ilse Woesthoff"
+  ],
+  "sites": [
+   "https://www.gevers.pcsv.nl/"
+  ]
+ },
+ {
+  "name": "De Globe",
+  "place": "AMSTERDAM",
+  "emails": [
+   "nicole.v.egmond@obs-deglobe.nl",
+   "erwin.bolt@obs-deglobe.nl"
+  ],
+  "persons": [
+   "Nicole van Egmond",
+   "Erwin Bolt"
+  ],
+  "sites": [
+   "https://www.obs-deglobe.nl/"
+  ]
+ },
+ {
+  "name": "De Globe Bussum",
+  "place": "BUSSUM",
+  "emails": [
+   "m.hasselerharm@proceon.nl",
+   "c.knapen@proceon.nl"
+  ],
+  "persons": [
+   "Marleen Hasselerharm",
+   "Cathrien de Knapen"
+  ],
+  "sites": [
+   "https://www.globe-school.nl/"
+  ]
+ },
+ {
+  "name": "De Groene Vlinder",
+  "place": "EINDHOVEN",
+  "emails": [
+   "marjolein.gravendeel@salto-eindhoven.nl",
+   "mirthe.limburg@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Marjolein Gravendeel",
+   "Mirthe Limburg"
+  ],
+  "sites": [
+   "https://www.bs-degroenevlinder.nl/"
+  ]
+ },
+ {
+  "name": "De Heerdstee",
+  "place": "GRONINGEN",
+  "emails": [
+   "r.staal@vcog.nl",
+   "a.dalmolen@vcog.nl"
+  ],
+  "persons": [
+   "Ronald Staal",
+   "Anne Dalmolen"
+  ],
+  "sites": [
+   "https://www.heerdstee.nl"
+  ]
+ },
+ {
+  "name": "De Heydonck",
+  "place": "BEST",
+  "emails": [
+   "erika.meier@bestonderwijs.nl",
+   "sanne.kleijn@bestonderwijs.nl"
+  ],
+  "persons": [
+   "Erika Meier",
+   "Sanne Kleijn"
+  ],
+  "sites": [
+   "https://www.deheydonck.nl/%20"
+  ]
+ },
+ {
+  "name": "De Horizon",
+  "place": "HENGELO",
+  "emails": [
+   "m.pfeiffer@dehorizon-hengelo.nl",
+   "m.berndt@dehorizon-hengelo.nl"
+  ],
+  "persons": [
+   "Marleen Pfeiffer",
+   "Marielle Berndt"
+  ],
+  "sites": [
+   "https://www.dehorizon-hengelo.nl"
+  ]
+ },
+ {
+  "name": "De Horizon",
+  "place": "VEGHEL",
+  "emails": [
+   "mvdboom@verdi.nl"
+  ],
+  "persons": [
+   "Mandy van den Boom"
+  ],
+  "sites": [
+   "https://nksdehorizon.nl"
+  ]
+ },
+ {
+  "name": "De Kabas",
+  "place": "FRANEKER",
+  "emails": [
+   "info@kabas.nl",
+   "info@kabas.nl"
+  ],
+  "persons": [
+   "Karin Staal",
+   "Marion Tielgroenestege"
+  ],
+  "sites": [
+   "https://www.kabas.nl/"
+  ]
+ },
+ {
+  "name": "De Kameleon",
+  "place": "SPIJKENISSE",
+  "emails": [
+   "t.blok@prokind-scholengroep.nl"
+  ],
+  "persons": [
+   "Tanja Blok"
+  ],
+  "sites": [
+   "https://www.taalschooldekameleon.nl"
+  ]
+ },
+ {
+  "name": "De Kameleon",
+  "place": "MAARSSEN",
+  "emails": [
+   "aschaaij@kameleon-maarssen.nl",
+   "taalklas@kameleon-maarssen.nl"
+  ],
+  "persons": [
+   "Anouk Schaaij",
+   "Frederieke Willemse"
+  ],
+  "sites": [
+   "https://www.kameleon-maarssen.nl/"
+  ]
+ },
+ {
+  "name": "De Kandelaar",
+  "place": "AMEIDE",
+  "emails": [
+   "info@dekandelaarameide.nl",
+   "i.schep@dekandelaarameide.nl"
+  ],
+  "persons": [
+   "W. Wilkens",
+   "I. Schep"
+  ],
+  "sites": [
+   "https://www.dekandelaarameide.nl/"
+  ]
+ },
+ {
+  "name": "De Kernschool",
+  "place": "ZAANDAM",
+  "emails": [
+   "d.noya@zaanprimair.nl"
+  ],
+  "persons": [
+   "Doenja Noya"
+  ],
+  "sites": [
+   "https://www.kernschool.nl/"
+  ]
+ },
+ {
+  "name": "De Klapwiek",
+  "place": "EINDHOVEN",
+  "emails": [
+   "davey.baaten@salto-eindhoven.nl",
+   "chantal.hungens@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Davey Baaten",
+   "Chantal Hüngens-van Gerwen"
+  ],
+  "sites": [
+   "https://www.bs-klapwiek.nl/"
+  ]
+ },
+ {
+  "name": "De Klimop",
+  "place": "DEN HAAG",
+  "emails": [],
+  "persons": [],
+  "sites": [
+   "https://www.deklimopschool.nl"
+  ]
+ },
+ {
+  "name": "De Klinkert",
+  "place": "OUDENBOSCH",
+  "emails": [
+   "r.kruis@borgesius.net",
+   "h.denbraber@borgesius.net"
+  ],
+  "persons": [
+   "Ron Kruis",
+   "Heidi den Braber"
+  ],
+  "sites": [
+   "https://www.bsklinkert.nl"
+  ]
+ },
+ {
+  "name": "De Kosmopoliet",
+  "place": "AMSTERDAM",
+  "emails": [
+   "b.menke@dekosmopoliet.nl",
+   "i.bar@dekosmopoliet.nl"
+  ],
+  "persons": [
+   "Berty Menke",
+   "Irene Bar"
+  ],
+  "sites": []
+ },
+ {
+  "name": "De Krokodaris",
+  "place": "VENRAY",
+  "emails": [
+   "f.sanders@spovenray.nl",
+   "b.dekeijzer@spovenray.nl"
+  ],
+  "persons": [
+   "Floor Sanders",
+   "Bas de Keijzer"
+  ],
+  "sites": [
+   "https://www.krokodaris.one"
+  ]
+ },
+ {
+  "name": "De Nieuwe Wiel",
+  "place": "LOPIK",
+  "emails": [
+   "jacqueline.carbo@spco.nl",
+   "nieuwewiel@spco.nl"
+  ],
+  "persons": [
+   "Jacqueline Carbo",
+   "H. Mulder"
+  ],
+  "sites": [
+   "https://www.nieuwewiellopik.nl/"
+  ]
+ },
+ {
+  "name": "De OpStap",
+  "place": "HEEMSERVEEN",
+  "emails": [
+   "wilkens@sg-owsa.nl",
+   "atjarks@sg-owsa.nl"
+  ],
+  "persons": [
+   "Albert Wilkens",
+   "Alie Tjarks"
+  ],
+  "sites": [
+   "https://www.opstap-hardenberg.nl/"
+  ]
+ },
+ {
+  "name": "De Parel",
+  "place": "Zutphen",
+  "emails": [
+   "irmasuper@archipelprimair.nl",
+   "sabinevandam@archipelprimair.nl"
+  ],
+  "persons": [
+   "Irma Super",
+   "Sabine van Dam"
+  ],
+  "sites": [
+   "https://obsdeparel.nl/"
+  ]
+ },
+ {
+  "name": "De Pelikaan",
+  "place": "PUTTEN",
+  "emails": [
+   "directie.pcbdepelikaan@vpcoputten.nl",
+   "gerline.delange@vpcoputten.nl"
+  ],
+  "persons": [
+   "Marja van Roekel",
+   "Gerline de Lange"
+  ],
+  "sites": [
+   "https://www.pcbdepelikaan.nl/"
+  ]
+ },
+ {
+  "name": "De Regenboog",
+  "place": "OLDENZAAL",
+  "emails": [
+   "b.degraaf@konot.nl",
+   "m.stevelink@konot.nl"
+  ],
+  "persons": [
+   "Benno de Graaf",
+   "Mignon Stevelink"
+  ],
+  "sites": [
+   "https://www.rboog.nl"
+  ]
+ },
+ {
+  "name": "De Regenboog",
+  "place": "ZOETERMEER",
+  "emails": [
+   "ib@regenboog.unicoz.nl",
+   "nathalie.vanderwerf@regenboog.unicoz.nl"
+  ],
+  "persons": [
+   "Martine Ekkelenkamp",
+   "Nathalie van der Werf"
+  ],
+  "sites": [
+   "http://regenboog.unicoz.nl"
+  ]
+ },
+ {
+  "name": "De Regenboog",
+  "place": "HEERHUGOWAARD",
+  "emails": [
+   "dominique.tromp@blosse.nl",
+   "barbara@depaperclip.nl"
+  ],
+  "persons": [
+   "Dominique Tromp",
+   "Barbara Koster"
+  ],
+  "sites": [
+   "https://www.depaperclip.nl/pg-26344-7-84474/pagina/welkom.html"
+  ]
+ },
+ {
+  "name": "De Schakel",
+  "place": "ROTTERDAM",
+  "emails": [
+   "directie@deschakelrotterdam.nl",
+   "souwerkerk@deschakelrotterdam.nl"
+  ],
+  "persons": [
+   "I. Lachman",
+   "S. Ouwekerk"
+  ],
+  "sites": [
+   "https://www.deschakelrotterdam.nl/"
+  ]
+ },
+ {
+  "name": "De Singel",
+  "place": "LEIDEN",
+  "emails": [
+   "a.kluivers@singelleiden.nl",
+   "directie@singelleiden.nl"
+  ],
+  "persons": [
+   "Astrid Kluivers",
+   "Harmanneke Ensing"
+  ],
+  "sites": [
+   "https://singelleiden.nl"
+  ]
+ },
+ {
+  "name": "De Springplank",
+  "place": "ZWOLLE",
+  "emails": [
+   "d.veltman@ooz.nl",
+   "nikitaharpal@hotmail.com"
+  ],
+  "persons": [
+   "Diana Veltman",
+   "Nikita Harpal"
+  ],
+  "sites": []
+ },
+ {
+  "name": "De Startbaan",
+  "place": "EINDHOVEN",
+  "emails": [
+   "eefje.slegers@salto-eindhoven.nl",
+   "bernardette.vangemert@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Eefje Slegers",
+   "Bernadette van Gemert"
+  ],
+  "sites": [
+   "https://www.bs-startbaan.nl/"
+  ]
+ },
+ {
+  "name": "De Taalwijzer",
+  "place": "SITTARD",
+  "emails": [
+   "mzijlstra@kindante.nl",
+   "r.lahoije@kindante.nl"
+  ],
+  "persons": [
+   "Mayke Zijlstra",
+   "Renée Lahoije"
+  ],
+  "sites": [
+   "https://kindcentrumsittard.nl/"
+  ]
+ },
+ {
+  "name": "De TiNtaan",
+  "place": "DEVENTER",
+  "emails": [
+   "info@detintaan.nl",
+   "m.truin@detintaan.nl"
+  ],
+  "persons": [
+   "Angela Winters",
+   "Marian Truin"
+  ],
+  "sites": [
+   "https://www.detintaan.nl"
+  ]
+ },
+ {
+  "name": "De Verbinding",
+  "place": "URETERP",
+  "emails": [
+   "i.ramdjielal@noorderbasis.nl",
+   "a.vellema@noorderbasis.nl"
+  ],
+  "persons": [
+   "Inge Ramdjielal",
+   "Vellema"
+  ],
+  "sites": [
+   "https://deverbinding-ureterp.nl/"
+  ]
+ },
+ {
+  "name": "De Vijf Hoeven",
+  "place": "TILBURG",
+  "emails": [
+   "stefan.vanderkamp@xpect013.nl",
+   "hilde.gerards@xpect013.nl"
+  ],
+  "persons": [
+   "Stefan van der Kamp",
+   "Hilde Gerards"
+  ],
+  "sites": [
+   "https://www.xpect013.nl/de-vijf-hoeven"
+  ]
+ },
+ {
+  "name": "De Vlieger",
+  "place": "HARDERWIJK",
+  "emails": [
+   "j.snoek@stichtingproo.nl",
+   "t.vanessen@stichtingproo.nl"
+  ],
+  "persons": [
+   "Jolanda Snoek",
+   "Toos van Essen"
+  ],
+  "sites": [
+   "https://www.devliegerharderwijk.nl/"
+  ]
+ },
+ {
+  "name": "De Vlieger",
+  "place": "DRONTEN",
+  "emails": [
+   "liesbeth.alberts@ante.nl",
+   "jeannette.kloekke@ante.nl"
+  ],
+  "persons": [
+   "Liesbeth Alberts",
+   "Jeannette Kloekke"
+  ],
+  "sites": [
+   "https://www.almerecollege.nl/"
+  ]
+ },
+ {
+  "name": "De Waaier",
+  "place": "ALKMAAR",
+  "emails": [
+   "m.vader@saks.nl",
+   "m.hoogeboom@saks.nl"
+  ],
+  "persons": [
+   "Michael Vader",
+   "Meike Hoogeboom"
+  ],
+  "sites": [
+   "https://waaier-saks.nl/"
+  ]
+ },
+ {
+  "name": "De Wegwijzer",
+  "place": "SINT MICHIELSGESTEL",
+  "emails": [
+   "info-dewegwijzer@cadansprimair.nl"
+  ],
+  "persons": [
+   "A. Kwaspen"
+  ],
+  "sites": [
+   "https://www.bs-dewegwijzer.nl/"
+  ]
+ },
+ {
+  "name": "De Weidebloesem",
+  "place": "HOOGEVEEN",
+  "emails": [
+   "i.ramdjielal@pricoh.nl",
+   "c.wessel@pricoh.nl"
+  ],
+  "persons": [
+   "Inge Ramdjielal (schoolleider)",
+   "Chantal Wessel (IB-er)"
+  ],
+  "sites": [
+   "https://deweidebloem.pricoh.nl/"
+  ]
+ },
+ {
+  "name": "De Wereldwijzer",
+  "place": "EINDHOVEN",
+  "emails": [
+   "i.vandekerkhof@skpo.nl"
+  ],
+  "persons": [
+   "Ilse van de Kerkhof"
+  ],
+  "sites": [
+   "https://www.wereldwijzereindhoven.nl"
+  ]
+ },
+ {
+  "name": "de Wingerd",
+  "place": "NIEUWERKERK A/D IJSSEL",
+  "emails": [
+   "wijnand.alkemade@rvko.nl",
+   "joyce.knetemann@rvko.nl"
+  ],
+  "persons": [
+   "Wijnand Alkemade",
+   "Joyce Knetemann"
+  ],
+  "sites": [
+   "https://www.dewingerd.nl"
+  ]
+ },
+ {
+  "name": "De Wissel",
+  "place": "LUTTELGEEST",
+  "emails": [
+   "s.vandertempel@aves.nl",
+   "e.vanessen@aves.nl"
+  ],
+  "persons": [
+   "Sandra van der Tempel",
+   "Ella van Essen"
+  ],
+  "sites": [
+   "https://www.azsdewissel.nl/"
+  ]
+ },
+ {
+  "name": "De Zonnewijzer",
+  "place": "ROERMOND",
+  "emails": [
+   "nickycoolen@swalmenroer.nl",
+   "mirandageraats@swalmenroer.nl"
+  ],
+  "persons": [
+   "Nicky Coolen",
+   "Miranda Geraats"
+  ],
+  "sites": [
+   "https://www.basisschooldezonnewijzer.nl/"
+  ]
+ },
+ {
+  "name": "Dynamica XL",
+  "place": "ZAANDAM",
+  "emails": [
+   "a.langereis@zaanprimair.nl"
+  ],
+  "persons": [
+   "Anousjka Langereis"
+  ],
+  "sites": [
+   "https://www.dynamicaxl.nl"
+  ]
+ },
+ {
+  "name": "Dynamica XL VSO",
+  "place": "ZAANDAM",
+  "emails": [
+   "k.nasole@zaanprimair.nl"
+  ],
+  "persons": [
+   "Katia Nasole"
+  ],
+  "sites": [
+   "https://www.dynamicaonderwijs.nl/nieuwendamstraat/"
+  ]
+ },
+ {
+  "name": "EA Borgerschool",
+  "place": "JOURE",
+  "emails": [
+   "Germaine.reekers@ambion.nl"
+  ],
+  "persons": [
+   "Germaine Reekers"
+  ],
+  "sites": []
+ },
+ {
+  "name": "EBS de Fontein",
+  "place": "HOOGEVEEN",
+  "emails": [
+   "defontein@pricoh.nl"
+  ],
+  "persons": [
+   "Femke Snel"
+  ],
+  "sites": [
+   "https://defontein.pricoh.nl/"
+  ]
+ },
+ {
+  "name": "Emmausschool",
+  "place": "ROTTERDAM",
+  "emails": [
+   "aziem.jarmohamed@rvko.nl",
+   "kirsten.poort@rvko.nl"
+  ],
+  "persons": [
+   "Aziem Jarmohamed",
+   "Kirsten Poort"
+  ],
+  "sites": [
+   "https://www.emmaus-rotterdam.nl/"
+  ]
+ },
+ {
+  "name": "Ericaschool",
+  "place": "RHENEN",
+  "emails": [
+   "info@ericaschool.nl"
+  ],
+  "persons": [
+   "I.B."
+  ],
+  "sites": [
+   "https://www.ericaschool.nl"
+  ]
+ },
+ {
+  "name": "Expertisecentrum voor Anderstaligen",
+  "place": "EMMEN",
+  "emails": [
+   "j.vandevooren@oo-emmen.nl",
+   "x.assen@oo-emmen.nl"
+  ],
+  "persons": [
+   "Judith van de Vooren",
+   "Xander Assen"
+  ],
+  "sites": [
+   "https://eca.oo-emmen.nl/"
+  ]
+ },
+ {
+  "name": "Filios Scholengroep",
+  "place": "OSS",
+  "emails": [
+   "judithvanderlinden@filiosscholengroep.nl"
+  ],
+  "persons": [
+   "Judith van der Linden"
+  ],
+  "sites": [
+   "https://www.filiosscholengroep.nl"
+  ]
+ },
+ {
+  "name": "GBS De Rank",
+  "place": "RODEN",
+  "emails": [
+   "k.meliefste@noorderbasis.nl",
+   "dir.rankroden@noorderbasis.nl"
+  ],
+  "persons": [
+   "Klaaske Meliefste",
+   "Geranda de Haan"
+  ],
+  "sites": [
+   "http://www.gbs-derank.nl"
+  ]
+ },
+ {
+  "name": "Graaf Jan van Montfoortschool",
+  "place": "MONTFOORT",
+  "emails": [
+   "h.bloemheuvel@spco.nl",
+   "mindy.denboer@spco.nl"
+  ],
+  "persons": [
+   "Henriette Bloemheuvel",
+   "Mindy den Boer"
+  ],
+  "sites": [
+   "https://www.graafjan.com/"
+  ]
+ },
+ {
+  "name": "Groen van Prinstererschool",
+  "place": "URK",
+  "emails": [
+   "pietvanslooten@rehoboth.nu",
+   "anniehoekman@rehoboth.nu"
+  ],
+  "persons": [
+   "Piet van Slooten",
+   "Annie Hoekman"
+  ],
+  "sites": [
+   "https://gvp.rehoboth.nu/"
+  ]
+ },
+ {
+  "name": "Hanevoet",
+  "place": "EINDHOVEN",
+  "emails": [
+   "maarten.molenschot@salto-eindhoven.nl",
+   "judith.elling@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Maarten Molenschot",
+   "Judith Elling"
+  ],
+  "sites": [
+   "https://www.bs-hanevoet.nl"
+  ]
+ },
+ {
+  "name": "Hermanjozef",
+  "place": "MIDDELRODE",
+  "emails": [
+   "r.dewild@cadansprimair.nl",
+   "eigenwijs@cadansprimair.nl"
+  ],
+  "persons": [
+   "Rietje Goosen",
+   "Maroesja Schraven"
+  ],
+  "sites": [
+   "https://www.hermanjozef.nl/"
+  ]
+ },
+ {
+  "name": "Het Karrepad",
+  "place": "GRONINGEN",
+  "emails": [
+   "l.huizen@o2g2.nl"
+  ],
+  "persons": [
+   "Liza Huizen"
+  ],
+  "sites": [
+   "https://hetkarrepad.openbaaronderwijsgroningen.nl/"
+  ]
+ },
+ {
+  "name": "Het Kompas",
+  "place": "HOORN",
+  "emails": [
+   "jaap.muurling@stichtingpenta.nl",
+   "monique.abbekerk@stichtingpenta.nl"
+  ],
+  "persons": [
+   "Jaap Muurling",
+   "Monique Abbekerk"
+  ],
+  "sites": [
+   "https://www.pcbshetkompas.nl"
+  ]
+ },
+ {
+  "name": "Het Mozaïek (dependance POL locatie COA)",
+  "place": "ARNHEM",
+  "emails": [
+   "lieke.roelofs@floresonderwijs.nl",
+   "seda.vanfaassen@floresonderwijs.nl"
+  ],
+  "persons": [
+   "Lieke Roelofs",
+   "Seda van Faassen"
+  ],
+  "sites": [
+   "https://www.mozaiekarnhem.nl"
+  ]
+ },
+ {
+  "name": "Het Oelebred",
+  "place": "TYNAARLO",
+  "emails": [
+   "i.bouma@stichtingbaasis.nl"
+  ],
+  "persons": [
+   "Ingrid Bouma"
+  ],
+  "sites": [
+   "https://www.hetoelebred.nl"
+  ]
+ },
+ {
+  "name": "Het Palet",
+  "place": "HAPERT",
+  "emails": [
+   "lliebregts@kempenkind.nl",
+   "mbrabander@palet.lucasonderwijs.nl"
+  ],
+  "persons": [
+   "Laura Liebregts",
+   "Manoe Brabander"
+  ],
+  "sites": [
+   "https://www.hetpalet.nl/nl/"
+  ]
+ },
+ {
+  "name": "Het Rinket",
+  "place": "HEEMSKERK",
+  "emails": [
+   "rinket@tabijn.nl",
+   "y.h.vleugel@tabijn.nl"
+  ],
+  "persons": [
+   "Seriese",
+   "Yaelle Vleugel"
+  ],
+  "sites": [
+   "https://rinket.tabijn.nl/"
+  ]
+ },
+ {
+  "name": "Hugo de Grootschool",
+  "place": "ARNHEM",
+  "emails": [
+   "miranda.henkes@floresonderwijs.nl"
+  ],
+  "persons": [
+   "Miranda Henkes"
+  ],
+  "sites": [
+   "https://www.hugodegrootschool.nl/"
+  ]
+ },
+ {
+  "name": "IBS De Nieuwe Maan",
+  "place": "DELFT",
+  "emails": [
+   "ftaouil@ibsdenieuwemaan.nl"
+  ],
+  "persons": [
+   "Fatima Taouil"
+  ],
+  "sites": [
+   "https://www.ibsdenieuwemaan.nl/"
+  ]
+ },
+ {
+  "name": "IKC Borgman Oosterpoort",
+  "place": "GRONINGEN",
+  "emails": [
+   "e.j.van.nieuwland@o2g2.nl",
+   "t.heijnis@o2g2.nl"
+  ],
+  "persons": [
+   "Elske van Nieuwland",
+   "Tamara Heijnis"
+  ],
+  "sites": [
+   "https://www.borgmanschool.nl/"
+  ]
+ },
+ {
+  "name": "IKC De Droomgaard",
+  "place": "DUIVEN",
+  "emails": [
+   "ina.weijers@liemersnovum.nl"
+  ],
+  "persons": [
+   "Ina Weijers"
+  ],
+  "sites": [
+   "https://www.ikcdedroomgaard.nl"
+  ]
+ },
+ {
+  "name": "IKC De Heerdstee",
+  "place": "GRONINGEN",
+  "emails": [
+   "r.staal@vcog.nl",
+   "j.sturing@vcog.nl"
+  ],
+  "persons": [
+   "Ronald Staal",
+   "Jolijn Sturing"
+  ],
+  "sites": [
+   "https://heerdstee.nl/"
+  ]
+ },
+ {
+  "name": "IKC de Kasteeltuyn",
+  "place": "ZOETERMEER",
+  "emails": [
+   "k.polkamp@opoz.nl",
+   "g.nelson@opoz.nl"
+  ],
+  "persons": [
+   "Karen Polkamp",
+   "Geert-Jan Nelson"
+  ],
+  "sites": [
+   "https://www.ikcdemeerpaal.nl/"
+  ]
+ },
+ {
+  "name": "IKC De Kroon",
+  "place": "ANNA PAULOWNA",
+  "emails": [
+   "m.drijver@stichtingsurplus.nl"
+  ],
+  "persons": [
+   "Michiel Drijver"
+  ],
+  "sites": [
+   "https://www.ikcdekroon.nl/"
+  ]
+ },
+ {
+  "name": "IKC Harm Smeenge",
+  "place": "BEILEN",
+  "emails": [
+   "ilona.niewzwaag@kitsprimair.nl"
+  ],
+  "persons": [
+   "Ilona Niewzwaag"
+  ],
+  "sites": [
+   "https://ikcharmsmeenge.nl/"
+  ]
+ },
+ {
+  "name": "IKC Het Noorderlicht",
+  "place": "DOETINCHEM",
+  "emails": [
+   "antoinerossewij@hetnoorderlichtdoetinchem.nl",
+   "administratie@hetnoorderlichtdoetinchem.nl"
+  ],
+  "persons": [
+   "Antoine Rossewij",
+   "Marie-José Knols"
+  ],
+  "sites": [
+   "https://www.hetnoorderlichtdoetinchem.nl"
+  ]
+ },
+ {
+  "name": "IKC Johannes Post",
+  "place": "SNEEK",
+  "emails": [
+   "marthahoitema@wiis.nl",
+   "jps@wiis.nl"
+  ],
+  "persons": [
+   "Martha Hoitema",
+   "Djoke de Schiffart"
+  ],
+  "sites": [
+   "https://johannespostschool.nl/"
+  ]
+ },
+ {
+  "name": "IKC Kleurrijk",
+  "place": "Waddinxveen",
+  "emails": [
+   "i.vdspek@levwn.nl"
+  ],
+  "persons": [
+   "Idelette van der Spek"
+  ],
+  "sites": [
+   "https://kleurrijk-levwn.nl/"
+  ]
+ },
+ {
+  "name": "IKC Triade / Taalsmeer",
+  "place": "AALSMEER",
+  "emails": [
+   "info.taalsmeer@wijwijzer.nu",
+   "anneke.goudriaan@wijwijzer.nu"
+  ],
+  "persons": [
+   "Rineke van 't Wout",
+   "Anneke Goudriaan"
+  ],
+  "sites": []
+ },
+ {
+  "name": "IKC Wereldwijs",
+  "place": "HOOFDDORP",
+  "emails": [
+   "l.duineveld@ikcwereldwijs.nl"
+  ],
+  "persons": [
+   "Leonoor Duineveld"
+  ],
+  "sites": [
+   "https://www.ikcwereldwijs.nl"
+  ]
+ },
+ {
+  "name": "Ikc Wonderwijs",
+  "place": "ROTTERDAM",
+  "emails": [
+   "mthijssen@ikcwonderwijs.nl",
+   "Lvannoppen@ikcwonderwijs.nl"
+  ],
+  "persons": [
+   "Marleen Thijssen",
+   "Lennert van Noopen"
+  ],
+  "sites": [
+   "https://www.ikcwonderwijs.nl"
+  ]
+ },
+ {
+  "name": "IKEC De Waterlelie",
+  "place": "LEIDSCHENDAM",
+  "emails": [
+   "l.bergen@ikecdewaterlelie.nl",
+   "m.kelatow@ikecdewaterlelie.nl"
+  ],
+  "persons": [
+   "Laura Bergen",
+   "Merel Kelatow"
+  ],
+  "sites": [
+   "https://www.ikecdewaterlelie.nl/"
+  ]
+ },
+ {
+  "name": "Internationale Taalklas Haarlem",
+  "place": "HAARLEM",
+  "emails": [
+   "ineke.vaneersel@twijs.nl",
+   "renno.vanderlinde@twijs.nl"
+  ],
+  "persons": [
+   "Ineke van Eersel",
+   "Renno van der Linde"
+  ],
+  "sites": [
+   "https://www.itkhaarlem.nl/nl/"
+  ]
+ },
+ {
+  "name": "Internationale Taalklas Uithoorn",
+  "place": "UITHOORN",
+  "emails": [
+   "marian.itk@wijzeraandeamstel.nl"
+  ],
+  "persons": [
+   "Marian Leslie-Miller"
+  ],
+  "sites": [
+   "https://www.itk-uithoorn.nl/"
+  ]
+ },
+ {
+  "name": "Interschool",
+  "place": "TER APEL",
+  "emails": [
+   "r.meems@oow.nl",
+   "a.klompsma@oow.nl"
+  ],
+  "persons": [
+   "Rosie Meems-Smit",
+   "Anita Klompsma-Bolk"
+  ],
+  "sites": [
+   "https://basisschool-interschool.nl"
+  ]
+ },
+ {
+  "name": "Jorisschool",
+  "place": "LICHTENVOORDE",
+  "emails": [
+   "annet.wolsink@paraatscholen.nl"
+  ],
+  "persons": [
+   "Annet Wolsink"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Josephschool",
+  "place": "PIJNACKER",
+  "emails": [
+   "taalklaspijnacker@skoppijnacker.nl"
+  ],
+  "persons": [
+   "Edith van Rooijen"
+  ],
+  "sites": [
+   "https://www.josephschoolpijnacker.nl/"
+  ]
+ },
+ {
+  "name": "K. Norelschool",
+  "place": "EPE",
+  "emails": [
+   "cklip@stichting-procon.nl",
+   "abloemberg@stichting-procon.nl"
+  ],
+  "persons": [
+   "Celia Klip",
+   "Ank Bloemberg"
+  ],
+  "sites": [
+   "https://www.knorel-epe.nl"
+  ]
+ },
+ {
+  "name": "Kamperfoelieschool",
+  "place": "HUIZEN",
+  "emails": [
+   "mvdwoude@kamperfoelieschool.nl"
+  ],
+  "persons": [
+   "Mariska van der Woude"
+  ],
+  "sites": [
+   "https://www.kamperfoelieschool.nl"
+  ]
+ },
+ {
+  "name": "KC de Boog",
+  "place": "EINDHOVEN",
+  "emails": [
+   "deboog@skpo.nl",
+   "deboog@skpo.nl"
+  ],
+  "persons": [
+   "Miriam van Montfort",
+   "Susanne Nagelmaeker"
+  ],
+  "sites": [
+   "https://bsdeboog.nl"
+  ]
+ },
+ {
+  "name": "KC de Duizendpoot",
+  "place": "'S-HERTOGENBOSCH",
+  "emails": [
+   "karin.vandeKlundert@signumonderwijs.nl",
+   "olga.dewit@signumonderwijs.nl"
+  ],
+  "persons": [
+   "Karin van de Klundert",
+   "Olga de Wit"
+  ],
+  "sites": [
+   "http://www.kcdeduizendpoot.nl/"
+  ]
+ },
+ {
+  "name": "KC de Horizon, Doesburg",
+  "place": "DOESBURG",
+  "emails": [
+   "karinvandermeulen@horizondoesburg.nl",
+   "iriselfring@horizondoesburg.nl"
+  ],
+  "persons": [
+   "Karin van der Meulen",
+   "Iris Elfring"
+  ],
+  "sites": [
+   "https://horizondoesburg.nl/"
+  ]
+ },
+ {
+  "name": "KC De Leertuin",
+  "place": "AMSTERDAM",
+  "emails": [
+   "hanife.sak@askoscholen.nl",
+   "william.best@askoscholen.nl"
+  ],
+  "persons": [
+   "Hanife Sak",
+   "William Best"
+  ],
+  "sites": [
+   "https://www.deleertuin.nl/"
+  ]
+ },
+ {
+  "name": "KC de Pionier",
+  "place": "'S-HERTOGENBOSCH",
+  "emails": [
+   "charlottelubbes@ato-scholenkring.nl",
+   "info@kcdepionier.nl"
+  ],
+  "persons": [
+   "Charlotte Lubbes",
+   "Martijn Keus"
+  ],
+  "sites": [
+   "https://www.kcdepionier.nl/"
+  ]
+ },
+ {
+  "name": "KC de Wilgen",
+  "place": "SLIEDRECHT",
+  "emails": [
+   "rkuiper@obsdewilgen.nl",
+   "ibwereldklas@obsdewilgen.nl"
+  ],
+  "persons": [
+   "René de Kuiper",
+   "Marina Chapel"
+  ],
+  "sites": []
+ },
+ {
+  "name": "KC Diamant",
+  "place": "DEN HAAG",
+  "emails": [
+   "bwolf@kcdiamant.nl",
+   "pkalee@kcdiamant.nl"
+  ],
+  "persons": [
+   "Birthe Wolf",
+   "Petra Kalee"
+  ],
+  "sites": [
+   "https://www.kcdiamant.nl"
+  ]
+ },
+ {
+  "name": "KC Leyenburg",
+  "place": "DEN HAAG",
+  "emails": [
+   "dbeij@scoh.nl",
+   "mwulffele@scoh.nl"
+  ],
+  "persons": [
+   "Dennis Beij",
+   "Maria Wulffelé"
+  ],
+  "sites": [
+   "https://kcleyenburg.nl/"
+  ]
+ },
+ {
+  "name": "KC Moerschans",
+  "place": "HULST",
+  "emails": [
+   "moerschans@elevantio.nl",
+   "kathelijnvangeersdaele@elevantio.nl"
+  ],
+  "persons": [
+   "Diana Blaeke",
+   "Kathelijn van Geersdaele"
+  ],
+  "sites": [
+   "https://www.bsmoerschans.nl/school/welkom"
+  ]
+ },
+ {
+  "name": "KC Oda en KC Loper",
+  "place": "MAASTRICHT",
+  "emails": [
+   "i.lammerschop@mosalira.nl",
+   "s.decker@komleren.nl"
+  ],
+  "persons": [
+   "Ine Lammerschop",
+   "Sandra Decker"
+  ],
+  "sites": [
+   "https://www.oda-bs.nl"
+  ]
+ },
+ {
+  "name": "Kindcentrum 't Loont (SKOV)",
+  "place": "OVERLOON",
+  "emails": [
+   "m.verhoeven@skov-onderwijs.nl",
+   "a.laarakkers@skov-onderwijs.nl"
+  ],
+  "persons": [
+   "Manon Verhoeven",
+   "Anneke Laarakkers"
+  ],
+  "sites": [
+   "https://www.skov-onderwijs.nl/basisscholen/tloont-overloon/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Lichtbaak",
+  "place": "ASSEN",
+  "emails": [
+   "delichtbaak@ckcdrenthe.nl",
+   "j.oortwijn@ckcdrenthe.nl"
+  ],
+  "persons": [
+   "Elizabeth Kraster",
+   "Janita Oortwijn"
+  ],
+  "sites": [
+   "https://www.ckcdelichtbaak.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Linde",
+  "place": "OIRSCHOT",
+  "emails": [
+   "lennevantilburg@skobos.nl",
+   "monieksimons@skobos.nl"
+  ],
+  "persons": [
+   "Lenne van Tilburg",
+   "Moniek Simons"
+  ],
+  "sites": [
+   "https://delinde-skobos.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Linge",
+  "place": "KAPELLE",
+  "emails": [
+   "a.minnaard@alberoscholen.nl",
+   "linge@alberoscholen.nl"
+  ],
+  "persons": [
+   "Annelies Minnaard",
+   "Ellemijn van Waveren"
+  ],
+  "sites": [
+   "https://www.kindcentrumdelinge.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Vindplaats",
+  "place": "AMSTERDAM",
+  "emails": [
+   "h.oerlemans@vindplaats.amsterdam"
+  ],
+  "persons": [
+   "Heavenly Oerlemans"
+  ],
+  "sites": [
+   "https://www.devindplaats.amsterdam/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Waaier",
+  "place": "ZUTPHEN",
+  "emails": [
+   "mariekenijhof@archipelprimair.nl",
+   "karinderksen@archipelprimair.nl"
+  ],
+  "persons": [
+   "Marieke Nijhof",
+   "Karin Derksen"
+  ],
+  "sites": [
+   "https://kcdewaaier.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum De Wentelwiek",
+  "place": "NUENEN",
+  "emails": [
+   "jose.vanhugte@eenbes.nl"
+  ],
+  "persons": [
+   "José van Hugte"
+  ],
+  "sites": [
+   "https://www.dewentelwiek.nl"
+  ]
+ },
+ {
+  "name": "Kindcentrum LEEF",
+  "place": "KESSEL",
+  "emails": [
+   "wendybk@kcleef.nl",
+   "miekevs@kcleef.nl"
+  ],
+  "persons": [
+   "Wendy Brink",
+   "Mieke Vissers"
+  ],
+  "sites": [
+   "https://www.kcleef.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum Mozaïek",
+  "place": "HELMOND",
+  "emails": [
+   "p.nijhof@qliqprimair.nl"
+  ],
+  "persons": [
+   "Paul Nijhof"
+  ],
+  "sites": [
+   "https://kc-mozaiek.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum Paulus",
+  "place": "HEERLEN",
+  "emails": [
+   "patty.vanthoofd@innovo.nl",
+   "lot.schlatmann@innovo.nl"
+  ],
+  "persons": [
+   "Patty van 't Hoofd",
+   "Lot Schlatmann"
+  ],
+  "sites": [
+   "https://www.paulus-bs.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum Sterrebos",
+  "place": "OSS",
+  "emails": [
+   "hannieuijtdewilligen@saamscholen.nl"
+  ],
+  "persons": [
+   "Hannie Uijtdewilligen-Althuizen"
+  ],
+  "sites": [
+   "https://www.sterrebos-oss.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum Universum",
+  "place": "HOORN",
+  "emails": [
+   "a.boon@talenthoorn.nl",
+   "w.loomans@talenthoorn.nl"
+  ],
+  "persons": [
+   "Aafke Boon",
+   "Willemijn Loomans"
+  ],
+  "sites": [
+   "https://www.ikcuniversum.nl/"
+  ]
+ },
+ {
+  "name": "Kindcentrum Wijngaard",
+  "place": "ZWARTSLUIS",
+  "emails": [
+   "kindcentrumwijngaard@accrete.nl",
+   "ibwijngaard@accrete.nl"
+  ],
+  "persons": [
+   "Aart Holtman",
+   "Lucia Kuik"
+  ],
+  "sites": [
+   "https://dewijngaard.accrete.nl/"
+  ]
+ },
+ {
+  "name": "Kindercampus Mondriaan",
+  "place": "DORDRECHT",
+  "emails": [
+   "natasha.retel@nestas-scholengroep.nl"
+  ],
+  "persons": [
+   "Natasha Retel"
+  ],
+  "sites": [
+   "https://kindercampusmondriaan.opod.nl"
+  ]
+ },
+ {
+  "name": "Kinderstad",
+  "place": "TILBURG",
+  "emails": [
+   "nicole.clemens@bijkinderstad.nl",
+   "nicole.clemens@bijkinderstad.nl"
+  ],
+  "persons": [
+   "Nicole Clemens",
+   ""
+  ],
+  "sites": [
+   "https://www.bijkinderstad.nl/locaties/nieuwkomers-school/basisschool"
+  ]
+ },
+ {
+  "name": "Koepelschool NMB",
+  "place": "EDE",
+  "emails": [
+   "cbruijnis@vhsede.nl",
+   "wbazen@vhsede.nl"
+  ],
+  "persons": [
+   "Carina Bruijnis",
+   "Willeke Bazen"
+  ],
+  "sites": [
+   "https://www.koepelschool.nl/"
+  ]
+ },
+ {
+  "name": "Koningin Beatrixschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "contact@beatrixschool.info",
+   "contact@beatrixschool.info"
+  ],
+  "persons": [
+   "Dorine van der Wiel",
+   "Eunice Hage"
+  ],
+  "sites": [
+   "https://www.beatrixschool.info/"
+  ]
+ },
+ {
+  "name": "Kuna Mondo",
+  "place": "PURMEREND",
+  "emails": [
+   "m.sanders@cpow.nl",
+   "a.sloetjes@cpow.nl"
+  ],
+  "persons": [
+   "Moniek Sanders",
+   "Ally Sloetjes"
+  ],
+  "sites": [
+   "https://www.kunamondo.nl"
+  ]
+ },
+ {
+  "name": "Leimundo",
+  "place": "LEIDEN",
+  "emails": [
+   "petrakennis@leimundo.nl",
+   "helenberendsen@leimundo.nl"
+  ],
+  "persons": [
+   "Petra Kennis",
+   "Helen Berendsen"
+  ],
+  "sites": [
+   "https://www.leimundo.nl"
+  ]
+ },
+ {
+  "name": "Louis Bouwmeester",
+  "place": "AMSTERDAM",
+  "emails": [
+   "info@louisbouwmeesterschool.nl",
+   "f.machielse@louisbouwmeesterschool.nl"
+  ],
+  "persons": [
+   "Ingeborg van der Meulen",
+   "Floor Machielse"
+  ],
+  "sites": [
+   "https://www.louisbouwmeesterschool.nl/"
+  ]
+ },
+ {
+  "name": "Master Amiko",
+  "place": "SNEEK",
+  "emails": [
+   "marieke.postma@kykscholen.nl",
+   "hiltsje.wieling@kykscholen.nl"
+  ],
+  "persons": [
+   "Marieke Postma",
+   "Hiltsje Wieling"
+  ],
+  "sites": [
+   "https://www.masteramiko.nl"
+  ]
+ },
+ {
+  "name": "Meerwerf Basisschool Villa Kakelbont",
+  "place": "DEN HELDER",
+  "emails": [
+   "directie@villakakelbont.meerwerf.nl",
+   "wietskedarphorn@meerwerf.nl"
+  ],
+  "persons": [
+   "Wietske Darphorn",
+   "Wietske Darphorn"
+  ],
+  "sites": [
+   "https://villaaanzeedenhelder.nl/"
+  ]
+ },
+ {
+  "name": "Meester Schabergschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "mmaartense@scoh.nl"
+  ],
+  "persons": [
+   "Maria Maartense"
+  ],
+  "sites": [
+   "https://www.schabergschool.nl/pg-28280-7-86646/pagina/nieuwkomersonderwijs.html"
+  ]
+ },
+ {
+  "name": "MiMundo",
+  "place": "WINSCHOTEN",
+  "emails": [
+   "a.bos@sooog.nl"
+  ],
+  "persons": [
+   "Anneke Bos"
+  ],
+  "sites": [
+   "https://www.obs-oosterschool.nl/"
+  ]
+ },
+ {
+  "name": "MKC Anne Frankschool",
+  "place": "DOESBURG",
+  "emails": [
+   "heleenpeterse@ijsselgraaf.nl",
+   "martinebanning@ijsselgraaf.nl"
+  ],
+  "persons": [
+   "Heleen Peterse",
+   "Martine Banning"
+  ],
+  "sites": [
+   "https://mkcannefrank.nl/"
+  ]
+ },
+ {
+  "name": "Monseigneur Bekkersschool",
+  "place": "Delft",
+  "emails": [
+   "nahmed@mgrbekkersschool.nl",
+   "mgrbekkers@laurentiusstichting.nl"
+  ],
+  "persons": [
+   "Nimco Ahmed",
+   "Marianne Mink"
+  ],
+  "sites": [
+   "https://www.mgrbekkersschool.nl/"
+  ]
+ },
+ {
+  "name": "Neuteboomschool locatie Obs. Wereldwijs",
+  "place": "STADSKANAAL",
+  "emails": [
+   "teamleider.wereldwijs@opron.nl",
+   "directie.neuteboom@opron.nl"
+  ],
+  "persons": [
+   "Jeanetta Gersonius",
+   "Aniek de Vries"
+  ],
+  "sites": [
+   "https://wereldwijs.neuteboomschool.nl/"
+  ]
+ },
+ {
+  "name": "Nieuwkomers Basisschool",
+  "place": "TILBURG",
+  "emails": [
+   "nicole.clemens@bijkinderstad.nl",
+   "annemijn.rooze@bijkinderstad.nl"
+  ],
+  "persons": [
+   "Nicole Clemens",
+   "Annemijn Rooze"
+  ],
+  "sites": [
+   "https://www.bijkinderstad.nl/locaties/nieuwkomers-school/basisschool"
+  ]
+ },
+ {
+  "name": "Nieuwkomersklas Tiel",
+  "place": "TIEL",
+  "emails": [
+   "onderwijs@opo-r.nl"
+  ],
+  "persons": [
+   "Simone Doorson"
+  ],
+  "sites": [
+   "https://nieuwkomers-tiel.nl/"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool de Globe",
+  "place": "VLAARDINGEN",
+  "emails": [
+   "l.dagelet@wijzer.nu"
+  ],
+  "persons": [
+   "Liset Dagelet"
+  ],
+  "sites": [
+   "https://www.deglobevlaardingen.nl"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool De Kleine wereld",
+  "place": "Groningen",
+  "emails": [
+   "t.boelens@vcog.nl"
+  ],
+  "persons": [
+   "Trix Boelens"
+  ],
+  "sites": [
+   "https://www.kleinewereld.nl/"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool De Schakel",
+  "place": "EDE",
+  "emails": [
+   "garcia@nksdeschakel.nl",
+   "pieters@nksdeschakel.nl"
+  ],
+  "persons": [
+   "Bernadette Garcia",
+   "Roos Pieters"
+  ],
+  "sites": [
+   "https://www.nieuwkomersschool-deschakel.nl"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool De Wereld",
+  "place": "NOORDWIJKERHOUT",
+  "emails": [
+   "directie.dewereld@sophiascholen.nl"
+  ],
+  "persons": [
+   "Sandra van Grieken"
+  ],
+  "sites": [
+   "https://www.nieuwkomersschooldewereld.nl/"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool Het Pyriet",
+  "place": "WINTERSWIJK",
+  "emails": [
+   "hetpyriet@sopow.nl"
+  ],
+  "persons": [
+   "Natasja Piek"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Nieuwkomersschool West Betuwe",
+  "place": "GELDERMALSEN",
+  "emails": [
+   "d.koelink@fluvium.nl",
+   "b.moos@fluvium.nl"
+  ],
+  "persons": [
+   "Daniël Koelink",
+   "Bronia Moos"
+  ],
+  "sites": [
+   "https://fluvium.nl/scholen/nieuwkomersschool/"
+  ]
+ },
+ {
+  "name": "Nieuwkomersschool Zwolle",
+  "place": "ZWOLLE",
+  "emails": [
+   "directie.nieuwkomersschool@catent.nl",
+   "t.vandijken@catent.nl"
+  ],
+  "persons": [
+   "Irna Koot",
+   "Tineke van Dijken"
+  ],
+  "sites": [
+   "https://nieuwkomersschoolzwolle.nl/"
+  ]
+ },
+ {
+  "name": "Nieuwkomersvoorziening West-Friesland, locatie Palet",
+  "place": "BOVENKARSPEL",
+  "emails": [
+   "lianne.broersen@palet-stedebroec.nl"
+  ],
+  "persons": [
+   "Lianne Broersen"
+  ],
+  "sites": [
+   "https://www.nieuwkomers-westfriesland.nl/"
+  ]
+ },
+ {
+  "name": "NT2-basisschool Het Palet",
+  "place": "ALMELO",
+  "emails": [
+   "e.mermer@viadere.nl",
+   "f.protzman@paletopoa.nl"
+  ],
+  "persons": [
+   "Eylem Mermer",
+   "Fia Protzman"
+  ],
+  "sites": [
+   "https://www.hetpaletviadere.nl/"
+  ]
+ },
+ {
+  "name": "o.b.s. De Voshaar",
+  "place": "HAARLO",
+  "emails": [
+   "directie@devoshaar.nl",
+   "s.vanzutphen@oponoa.nl"
+  ],
+  "persons": [
+   "Marjan Wolterink",
+   "Sandra van Zutphen"
+  ],
+  "sites": [
+   "https://www.devoshaar.nl"
+  ]
+ },
+ {
+  "name": "OBS 't Montferland",
+  "place": "'S-HEERENBERG",
+  "emails": [
+   "simone.tenklooster@paraatscholen.nl"
+  ],
+  "persons": [
+   "Simone ten Klooster"
+  ],
+  "sites": [
+   "http://www.obsmontferland.nl/"
+  ]
+ },
+ {
+  "name": "OBS Anne Frank",
+  "place": "PAPENDRECHT",
+  "emails": [],
+  "persons": [],
+  "sites": []
+ },
+ {
+  "name": "Obs Dakpark",
+  "place": "ROTTERDAM",
+  "emails": [
+   "jeannette.devos@obsdakpark.nl"
+  ],
+  "persons": [
+   "Jeannette de Vos"
+  ],
+  "sites": [
+   "https://www.obsdakpark.nl"
+  ]
+ },
+ {
+  "name": "OBS de Bloemberg",
+  "place": "NIJMEGEN",
+  "emails": [
+   "directie.bloemberg@conexus.nu"
+  ],
+  "persons": [
+   "Iris Kokosky Deforchaux"
+  ],
+  "sites": [
+   "https://www.de-bloemberg.nl"
+  ]
+ },
+ {
+  "name": "Obs de Dennenkamp",
+  "place": "OMMEN",
+  "emails": [
+   "g.willems@ooz.nl",
+   "m.vukkink@ooz.nl"
+  ],
+  "persons": [
+   "Gerrit Willems",
+   "Mirjan Vukkink"
+  ],
+  "sites": []
+ },
+ {
+  "name": "OBS De Dolfijn",
+  "place": "ZWIJNDRECHT",
+  "emails": [
+   "mike.mastwijk@ozhw.nl",
+   "anneke.van.spanje@ozhw.nl"
+  ],
+  "persons": [
+   "Mike Mastwijk",
+   "Anneke van Spanje"
+  ],
+  "sites": [
+   "https://obsdedolfijn.nl"
+  ]
+ },
+ {
+  "name": "OBS De Draaimolen",
+  "place": "BARENDRECHT",
+  "emails": [
+   "corina.kranendonk@ozhw.nl",
+   "nancy.wols@ozhw.nl"
+  ],
+  "persons": [
+   "Corina Kranendonk",
+   "Nancy Wols"
+  ],
+  "sites": [
+   "https://www.dedraaimolen.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Driepas",
+  "place": "ECHT",
+  "emails": [
+   "l.bakkes@kindante.nl",
+   "h.wubbolts@kindante.nl"
+  ],
+  "persons": [
+   "Liesbeth Bakkers",
+   "Henriet Wubbolts"
+  ],
+  "sites": [
+   "https://www.driepas.nl"
+  ]
+ },
+ {
+  "name": "OBS de Duizendpoot",
+  "place": "GELEEN",
+  "emails": [
+   "l.schreurs@kindante.nl",
+   "m.vanlith@kindante.nl"
+  ],
+  "persons": [
+   "Lyan Schreurs",
+   "Marit van Lith"
+  ],
+  "sites": [
+   "https://1000-poot.nl/"
+  ]
+ },
+ {
+  "name": "Obs De Egelantier",
+  "place": "SOEST",
+  "emails": [
+   "relinda.m@bredeschoolsoest.nl"
+  ],
+  "persons": [
+   "Relinda van Mil"
+  ],
+  "sites": [
+   "https://tknsoest.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Globe",
+  "place": "ROTTERDAM",
+  "emails": [
+   "nadika.martins@stichtingboor.nl"
+  ],
+  "persons": [
+   "Nadika Martins"
+  ],
+  "sites": [
+   "https://www.obsdeglobe.nl"
+  ]
+ },
+ {
+  "name": "OBS de Horizon",
+  "place": "DOESBURG",
+  "emails": [
+   "karinvandermeulen@horizondoesburg.nl",
+   "irishelfring@horizondoesburg.nl"
+  ],
+  "persons": [
+   "Karin van der Meulen",
+   "Iris Helfring"
+  ],
+  "sites": [
+   "https://horizondoesburg.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Lijster",
+  "place": "BARNEVELD",
+  "emails": [
+   "nettie@obs-delijster.nl",
+   "directie@obs-delijster.nl"
+  ],
+  "persons": [
+   "Nettie Vinke",
+   "Betty Nederlof"
+  ],
+  "sites": [
+   "https://obs-delijster.nl/"
+  ]
+ },
+ {
+  "name": "OBS de Meridiaan",
+  "place": "MEDEMBLIK",
+  "emails": [
+   "directie@obsdemeridiaan.nl",
+   "kc@obsdemeridiaan.nl"
+  ],
+  "persons": [
+   "Rick Kraaijeveld",
+   "Caroline van der Heij"
+  ],
+  "sites": [
+   "https://www.obsdemeridiaan.nl/"
+  ]
+ },
+ {
+  "name": "Obs de Negen Wieken",
+  "place": "WINSUM",
+  "emails": [
+   "h.sakey@goudonderwijs.nl",
+   "w.ruig@lauwerseneems.nl"
+  ],
+  "persons": [
+   "Henrieke Sakey",
+   "Wilma Ruig"
+  ],
+  "sites": [
+   "https://vlieger.goudonderwijs.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Notenkraker",
+  "place": "HOOGVLIET",
+  "emails": [
+   "barbera.everaars@stichtingboor.nl",
+   "nancy.tadeij@stichtingboor.nl"
+  ],
+  "persons": [
+   "Barbera Everaars",
+   "Nancy Tadeij"
+  ],
+  "sites": [
+   "http://www.denotenkraker.nl/"
+  ]
+ },
+ {
+  "name": "OBS de Notenkraker",
+  "place": "DEN HAAG",
+  "emails": [
+   "d.herber@obsdenotenkraker.nl",
+   "ib@obsdenotenkraker.nl"
+  ],
+  "persons": [
+   "Désirée Herber",
+   "Renée Witman"
+  ],
+  "sites": [
+   "http://www.obsdenotenkraker.nl"
+  ]
+ },
+ {
+  "name": "OBS De Piramide",
+  "place": "VUGHT",
+  "emails": [
+   "e.geels@obs-depiramide.nl",
+   "l.verschueren@obs-depiramide.nl"
+  ],
+  "persons": [
+   "Erik Geels",
+   "Linda Verschueren"
+  ],
+  "sites": [
+   "https://obs-de-piramide.nl/"
+  ]
+ },
+ {
+  "name": "OBS de Poolster",
+  "place": "LELYSTAD",
+  "emails": [
+   "a.pilon@stichtingschool.nl",
+   "a.v.wijk@stichtingschool.nl"
+  ],
+  "persons": [
+   "Anneloes Pilon",
+   "Albert van Wijk"
+  ],
+  "sites": [
+   "https://taalklaslelystad.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Smeltkroes",
+  "place": "AALDEN",
+  "emails": [
+   "directie@desmeltkroes.nl",
+   "mheidemans@sg-owsa.nl"
+  ],
+  "persons": [
+   "Egbert Schepers",
+   "Monique Heidemans-Bening"
+  ],
+  "sites": [
+   "https://www.desmeltkroes.nl"
+  ]
+ },
+ {
+  "name": "Obs de Springplank",
+  "place": "SINT-OEDENRODE",
+  "emails": [
+   "directie.obsdespringplank@saamscholen.nl"
+  ],
+  "persons": [
+   "Peggy van Zitteren"
+  ],
+  "sites": [
+   "https://www.obs-despringplank.nl"
+  ]
+ },
+ {
+  "name": "OBS De Straap",
+  "place": "HELMOND",
+  "emails": [
+   "mariettemennen@obsh.nl"
+  ],
+  "persons": [
+   "Mariëtte Mennen"
+  ],
+  "sites": [
+   "https://kcrijpelberg.nl/"
+  ]
+ },
+ {
+  "name": "OBS de Tarthorst",
+  "place": "WAGENINGEN",
+  "emails": [
+   "info@obsdetarthorst.nl",
+   "marjanvantatenhove@obsdetarthorst.nl"
+  ],
+  "persons": [
+   "Wilma Renkema",
+   "Marjan van Tatenhove"
+  ],
+  "sites": [
+   "https://www.obsdetarthorst.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Toverbal",
+  "place": "SINT ANNAPAROCHIE",
+  "emails": [
+   "detoverbal@elanowg.nl",
+   "iklumper@elanowg.nl"
+  ],
+  "persons": [
+   "Johanna Hooiveld",
+   "Ingrid Klumper"
+  ],
+  "sites": [
+   "https://www.obsdetoverbal.nl"
+  ]
+ },
+ {
+  "name": "Obs De Veenvlinder",
+  "place": "EELDE",
+  "emails": [
+   "veenvlinder@stichtingbaasis.nl",
+   "t.boerma@stichtingbaasis.nl"
+  ],
+  "persons": [
+   "Leonie Magnin",
+   "Tineke Boerma"
+  ],
+  "sites": [
+   "https://obsdeveenvlinder.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Verrekijker",
+  "place": "KATWIJK",
+  "emails": [
+   "directie@obsdeverrekijker.nl",
+   "joska.warmenhoven@obsdeverrekijker.nl"
+  ],
+  "persons": [
+   "Yurien van Starkenburg",
+   "Joska Warmenhoven"
+  ],
+  "sites": [
+   "https://www.obsdeverrekijker.nl"
+  ]
+ },
+ {
+  "name": "OBS De Vlinderboom (NT2 onderwijs)",
+  "place": "DRACHTEN",
+  "emails": [
+   "eva.visser@adenium.nl"
+  ],
+  "persons": [
+   "Eva Visser"
+  ],
+  "sites": [
+   "https://www.obs-devlinderboom.nl/"
+  ]
+ },
+ {
+  "name": "OBS De Vlonder",
+  "place": "HATTEM",
+  "emails": [
+   "c.wencker@ooz.nl",
+   "c.tuynman@ooz.nl"
+  ],
+  "persons": [
+   "Conny Wencker",
+   "Christina Tuynman"
+  ],
+  "sites": [
+   "https://www.obsdevlonder.nl/"
+  ]
+ },
+ {
+  "name": "OBS de Wereld",
+  "place": "WAGENINGEN",
+  "emails": [
+   "annettemartens@obsdewereld.eu",
+   "marijkelintsen@obsdewereld.eu"
+  ],
+  "persons": [
+   "Annette Martens",
+   "Marijke Lintsen"
+  ],
+  "sites": [
+   "https://www.obsdewereld.eu"
+  ]
+ },
+ {
+  "name": "OBS De Wissel",
+  "place": "DEN HAAG",
+  "emails": [
+   "vliej01@dehaagsescholen.nl"
+  ],
+  "persons": [
+   "Jelle van Vliet"
+  ],
+  "sites": [
+   "https://www.obsdewissel-denhaag.nl/"
+  ]
+ },
+ {
+  "name": "OBS Hagen",
+  "place": "DOETINCHEM",
+  "emails": [
+   "michelraddatz@ijsselgraaf.nl",
+   "administratie@obshagen.nl"
+  ],
+  "persons": [
+   "Michel Raddatz",
+   "Marie José Knols"
+  ],
+  "sites": [
+   "https://www.obshagen.nl"
+  ]
+ },
+ {
+  "name": "OBS Harlekijn",
+  "place": "VENLO",
+  "emails": [
+   "m.leenen@harlekijn-venlo.nl",
+   "l.dohmen@harlekijn-venlo.nl"
+  ],
+  "persons": [
+   "Myra Leenen",
+   "Loek Dohmen"
+  ],
+  "sites": [
+   "https://www.harlekijn-akkoord-po.nl/"
+  ]
+ },
+ {
+  "name": "OBS het Galjoen",
+  "place": "DEN HAAG",
+  "emails": [
+   "l.degrood@obsgaljoen.nl",
+   "l.thush@obsgaljoen.nl"
+  ],
+  "persons": [
+   "Linda de Grood",
+   "Leonie Thush"
+  ],
+  "sites": [
+   "https://www.obs-hetgaljoen.nl/"
+  ]
+ },
+ {
+  "name": "Obs Houtwijk",
+  "place": "DEN HAAG",
+  "emails": [
+   "d.webb@obshoutwijk.nl",
+   "d.denhoedt@obshoutwijk.nl"
+  ],
+  "persons": [
+   "Daniëlle Webb",
+   "Dominique den Hoedt"
+  ],
+  "sites": [
+   "https://www.obshoutwijk.nl/"
+  ]
+ },
+ {
+  "name": "OBS Jan Ligthart",
+  "place": "DEN HAAG",
+  "emails": [
+   "c.leenders@janligthartschool.nl",
+   "m.evers@janligthartschool.nl"
+  ],
+  "persons": [
+   "Christine Leenders",
+   "Marjolein Evers"
+  ],
+  "sites": [
+   "https://www.janligthartschool.nl/"
+  ]
+ },
+ {
+  "name": "OBS Kasteel Spangen",
+  "place": "ROTTERDAM",
+  "emails": [],
+  "persons": [],
+  "sites": [
+   "https://www.obskasteelspangen.nl/"
+  ]
+ },
+ {
+  "name": "OBS Matheness",
+  "place": "ROTTERDAM",
+  "emails": [
+   "hans.goedegebuur@stichtingboor.nl",
+   "lisette.vandenberg@obs-finlandia.nl"
+  ],
+  "persons": [
+   "Hans Goedegebuur",
+   "Lisette van den Berg"
+  ],
+  "sites": [
+   "https://obsmathenesse.nl/"
+  ]
+ },
+ {
+  "name": "OBS Over de Slinge",
+  "place": "ROTTERDAM",
+  "emails": [
+   "info@overdeslinge.nl",
+   "s.hollanders@overdeslinge.nl"
+  ],
+  "persons": [
+   "Patricia Keukelaar",
+   "Sara Hollanders"
+  ],
+  "sites": [
+   "https://www.overdeslinge.nl"
+  ]
+ },
+ {
+  "name": "OBS Papilio",
+  "place": "BURGUM",
+  "emails": [
+   "e.visser@opo-furore.nl"
+  ],
+  "persons": [
+   "E. Visser"
+  ],
+  "sites": [
+   "https://www.obs-papilio.nl"
+  ]
+ },
+ {
+  "name": "OBS Route 0513",
+  "place": "HEERENVEEN",
+  "emails": [
+   "nicole.kamies@ambion.nl",
+   "gert.vanderveen@ambion.nl"
+  ],
+  "persons": [
+   "Nicole Kamies",
+   "Gert van der Veen"
+  ],
+  "sites": [
+   "https://www.ambion.nl/nl"
+  ]
+ },
+ {
+  "name": "OJBS De Omnibus, Baarlo",
+  "place": "BAARLO",
+  "emails": [
+   "y.sijben@omnibusbaarlo.nl",
+   "j.sikkink@omnibusbaarlo.nl"
+  ],
+  "persons": [
+   "Yvonne Sijben",
+   "Joyce Sikkink"
+  ],
+  "sites": [
+   "https://omnibusbaarlo.nl/"
+  ]
+ },
+ {
+  "name": "OKC de Toermalijn",
+  "place": "TEGELEN",
+  "emails": [
+   "a.schmitz@toermalijntegelen.nl",
+   "a.vallen@toermalijn.akkoord-po.nl"
+  ],
+  "persons": [
+   "Anne-Marieke Schmitz",
+   "Annelot Vallen"
+  ],
+  "sites": [
+   "https://www.toermalijntegelen.nl/"
+  ]
+ },
+ {
+  "name": "Olympiaschool",
+  "place": "AMSTERDAM",
+  "emails": [
+   "m.desmit@olympiaschool.nl"
+  ],
+  "persons": [
+   "Marjan de Smit"
+  ],
+  "sites": [
+   "https://www.olympiaschool.nl"
+  ]
+ },
+ {
+  "name": "Ondersteuningsteam De Stipe",
+  "place": "WOLVEGA",
+  "emails": [
+   "r.degroot@destipe.nl"
+  ],
+  "persons": [
+   "Riemke de Groot"
+  ],
+  "sites": [
+   "https://destipe.nl/"
+  ]
+ },
+ {
+  "name": "Onze Wereld",
+  "place": "DEN HAAG",
+  "emails": [
+   "mbroek@onzewereld.net",
+   "dvsoest@onzewereld.net"
+  ],
+  "persons": [
+   "Marjon van den Broek",
+   "Debby van Soest"
+  ],
+  "sites": [
+   "https://www.onzewereld.net/"
+  ]
+ },
+ {
+  "name": "Opstap",
+  "place": "MAARHEEZE",
+  "emails": [
+   "nicole.vaneert@atalenta.nl",
+   "monique.vaneert@atalenta.nl"
+  ],
+  "persons": [
+   "Nicole van Eert-Maas",
+   "Monique van Eert"
+  ],
+  "sites": [
+   "https://www.deopstap-maarheeze.nl"
+  ]
+ },
+ {
+  "name": "P. Oosterleeschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "jdjong@scoh.nl"
+  ],
+  "persons": [
+   "Jochebed de Jong"
+  ],
+  "sites": [
+   "https://oosterleeschool.nl/"
+  ]
+ },
+ {
+  "name": "P.I. School Hondsberg",
+  "place": "OISTERWIJK",
+  "emails": [
+   "aaudenaerd@koraal.nl",
+   "lven02@koraal.nl"
+  ],
+  "persons": [
+   "Annabel Audenaerd",
+   "Leanne van de Ven"
+  ],
+  "sites": [
+   "https://www.pischoolhondsberg.nl"
+  ]
+ },
+ {
+  "name": "Pastoor Galamaschool",
+  "place": "'S-HEERENBERG",
+  "emails": [
+   "m.vanwesterop@pro8.nu",
+   "m.moerman@pro8.nu"
+  ],
+  "persons": [
+   "Marlies van Westerop",
+   "Martijn moerman"
+  ],
+  "sites": [
+   "http://www.galamaschool.nl/"
+  ]
+ },
+ {
+  "name": "Paulusschool",
+  "place": "ARNHEM",
+  "emails": [
+   "m.goosens@st-paulusschool.nl",
+   "paulien.schuiermanni@deltascholengroep.nl"
+  ],
+  "persons": [
+   "Monique Goosens",
+   "Paulien Schuiermanni"
+  ],
+  "sites": [
+   "https://www.st-paulusschool.nl/"
+  ]
+ },
+ {
+  "name": "PCB De Wegwijzer",
+  "place": "KRIMPEN AAN DE LEK",
+  "emails": [
+   "j.buijzert@pcb-dewegwijzer.nl",
+   "j.roozendaal@pcb-dewegwijzer.nl"
+  ],
+  "persons": [
+   "Jaap Buijzert",
+   "Jacqueline Roozendaal"
+  ],
+  "sites": [
+   "https://pcb-dewegwijzer.nl/"
+  ]
+ },
+ {
+  "name": "PCBS de Driemaster",
+  "place": "VOORBURG",
+  "emails": [
+   "mkijvekamp@driemastervoorburg.nl",
+   "ydwilde@driemastervoorburg.nl"
+  ],
+  "persons": [
+   "Meike Kijvekamp",
+   "Ylja de Wilde"
+  ],
+  "sites": [
+   "https://driemastervoorburg.nl/"
+  ]
+ },
+ {
+  "name": "Pieter Bas",
+  "place": "CAPELLE AAN DE IJSSEL",
+  "emails": [
+   "marina.deblois@rvko.nl",
+   "thomas.hardie@rvko.nl"
+  ],
+  "persons": [
+   "Marina de Blois",
+   "Thomas Hardie"
+  ],
+  "sites": [
+   "https://www.pieterbas.net/"
+  ]
+ },
+ {
+  "name": "POL de Bosrand",
+  "place": "WAGENINGEN",
+  "emails": [
+   "basisschool@poldebosrand.nl",
+   "audreyvanderaa@obsdetarthorst.nl"
+  ],
+  "persons": [
+   "Judith Horsman - Verschoor",
+   "Audrey van der Aa"
+  ],
+  "sites": [
+   "https://www.obsdetarthorst.nl/"
+  ]
+ },
+ {
+  "name": "Prinses Beatrixschool",
+  "place": "GOES",
+  "emails": [
+   "s.dejonge@alberoscholen.nl",
+   "g.verkuil@alberoscholen.nl"
+  ],
+  "persons": [
+   "Sabine de Jonge",
+   "Gerard Verkuil"
+  ],
+  "sites": [
+   "https://www.beatrixschoolgoes.nl/"
+  ]
+ },
+ {
+  "name": "Prinses Ireneschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "jrgrool@scoh.nl",
+   "lbos@scoh.nl"
+  ],
+  "persons": [
+   "Jan Rijn Grool",
+   "Liesbeth Bos"
+  ],
+  "sites": [
+   "https://prinsesireneschooldenhaag.nl/"
+  ]
+ },
+ {
+  "name": "Prinses Ireneschool",
+  "place": "DEN HAAG",
+  "emails": [
+   "school@irene.scoh.nl",
+   "lbos@scoh.nl"
+  ],
+  "persons": [
+   "Jan Rijn Grool",
+   "Liesbeth Bos"
+  ],
+  "sites": [
+   "https://www.prinsesireneschooldenhaag.nl"
+  ]
+ },
+ {
+  "name": "Prisma",
+  "place": "KAMPEN",
+  "emails": [
+   "c.drost@sokampen.nl"
+  ],
+  "persons": [
+   "Carla Drost"
+  ],
+  "sites": [
+   "https://www.sokampen.nl"
+  ]
+ },
+ {
+  "name": "R. de Jagerschool",
+  "place": "WOERDEN",
+  "emails": [
+   "rdejager@spco.nl",
+   "linda.bloem@spco.nl"
+  ],
+  "persons": [
+   "Lydia van Beuzekom",
+   "Linda Bloem"
+  ],
+  "sites": [
+   "https://www.rdejagerwoerden.nl"
+  ]
+ },
+ {
+  "name": "Regionale taalschool",
+  "place": "DOETINCHEM",
+  "emails": [
+   "e.ruesink@pro8.nu",
+   "s.hoekman@pro8.nu"
+  ],
+  "persons": [
+   "Ellen Ruesink-Nap",
+   "Scarlett Hoekman"
+  ],
+  "sites": [
+   "https://www.pro8.nu"
+  ]
+ },
+ {
+  "name": "Regionale taalschool Mundus",
+  "place": "ALPHEN AAN DEN RIJN",
+  "emails": [
+   "gse@youscope.nl",
+   "tne@youscope.nl"
+  ],
+  "persons": [
+   "Margriet van Holstein",
+   "Thomas Neurink"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Rembrandtschool",
+  "place": "DELFT",
+  "emails": [
+   "directie.rembrandtschool@scodelft.nl"
+  ],
+  "persons": [
+   "Meint Helder"
+  ],
+  "sites": [
+   "https://rembrandtschooldelft.nl/"
+  ]
+ },
+ {
+  "name": "RK BSO De Meule",
+  "place": "VENLO",
+  "emails": [
+   "john.vandeven@fortior.nl"
+  ],
+  "persons": [
+   "John van de Ven"
+  ],
+  "sites": [
+   "https://www.demeule.fortior.nl/"
+  ]
+ },
+ {
+  "name": "Rkbs de Regenboog",
+  "place": "DEN HAAG",
+  "emails": [
+   "jhendriks@regenboog.lucasonderwijs.nl"
+  ],
+  "persons": [
+   "Jessica Hendriks"
+  ],
+  "sites": [
+   "https://rkbsderegenboogdenhaag.nl/"
+  ]
+ },
+ {
+  "name": "RKBS De Rozenhorst",
+  "place": "ROZENBURG",
+  "emails": [
+   "ron.vanleeuwen@rvko.nl",
+   "nicoline.vangiels@rvko.nl"
+  ],
+  "persons": [
+   "Ron van Leeuwen",
+   "Nicole Bongers"
+  ],
+  "sites": [
+   "https://www.rozenhorst.nl"
+  ]
+ },
+ {
+  "name": "RKBS Sint Joseph",
+  "place": "BURGERBRUG",
+  "emails": [
+   "ib.stjoseph@sarkon.nl",
+   "directeur.sintjoseph@sarkon.nl"
+  ],
+  "persons": [
+   "Maaike Berbee",
+   "Marijke van der Kolk"
+  ],
+  "sites": [
+   "https://stjosephbb.nl/"
+  ]
+ },
+ {
+  "name": "Rosj Pina",
+  "place": "AMSTERDAM",
+  "emails": [
+   "majamischke@rosjpina.nl"
+  ],
+  "persons": [
+   "Maja Mischke"
+  ],
+  "sites": [
+   "https://jbo.nl/"
+  ]
+ },
+ {
+  "name": "SALTO school De Tempel",
+  "place": "EINDHOVEN",
+  "emails": [
+   "s.brinkert@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Suzanne van Heeswijk - Brinkert"
+  ],
+  "sites": [
+   "https://www.bs-tempel.nl/"
+  ]
+ },
+ {
+  "name": "SALTO-basisschool 't Karregat",
+  "place": "EINDHOVEN",
+  "emails": [
+   "coen.vandenelsen@salto-eindhoven.nl",
+   "marian.overbeek@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Coen van den Elsen",
+   "Marian Overbeek"
+  ],
+  "sites": [
+   "https://www.bs-karregat.nl/"
+  ]
+ },
+ {
+  "name": "SALTOschool &#8216;De Hobbitstee'",
+  "place": "EINDHOVEN",
+  "emails": [
+   "marcel.otten@salto-eindhoven.nl",
+   "anouk.tervooren@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Marcel Otten",
+   "Tervooren"
+  ],
+  "sites": [
+   "https://www.bs-hobbitstee.nl/"
+  ]
+ },
+ {
+  "name": "Saltoschool De Bergen",
+  "place": "EINDHOVEN",
+  "emails": [
+   "mirian.lenaerts@salto-eindhoven.nl",
+   "judith.vanderkerk@salto-eindhoven.nl"
+  ],
+  "persons": [
+   "Mirian Lenaerts",
+   "Judith van der Kerk"
+  ],
+  "sites": [
+   "https://www.bs-bergen.nl"
+  ]
+ },
+ {
+  "name": "SBO De Diamant",
+  "place": "NAALDWIJK",
+  "emails": [
+   "mhuysman@diamant.pcpow.nl",
+   "fvonk@diamant.pcpow.nl"
+  ],
+  "persons": [
+   "Majorie Huysman",
+   "Franciska Vonk"
+  ],
+  "sites": [
+   "https://www.diamant.pcpow.nl"
+  ]
+ },
+ {
+  "name": "SBO De Lings",
+  "place": "TEGELEN",
+  "emails": [
+   "cindy.debie@kerobei.nl",
+   "joost.jacobsn@kerobei.nl"
+  ],
+  "persons": [
+   "Cindie Debie",
+   "Joost Jacobbs"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Schakelklas Beverwaard",
+  "place": "ROTTERDAM",
+  "emails": [
+   "j.havinga@schakelklasbeverwaard.nl"
+  ],
+  "persons": [
+   "Judith Havinga"
+  ],
+  "sites": [
+   "https://schakelklasbeverwaard.wordpress.com/"
+  ]
+ },
+ {
+  "name": "Schakelklas Woerden (locatie basisschool De Achtsprong)",
+  "place": "WOERDEN",
+  "emails": [
+   "r.devisser@stichtingklasse.nl"
+  ],
+  "persons": [
+   "Riekje de Visser"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Schakelklassen KC de Rietpluim",
+  "place": "DELFZIJL",
+  "emails": [
+   "ansdevries@ommeriek.nl",
+   "josekenter@ommeriek.nl"
+  ],
+  "persons": [
+   "Ans de Vries",
+   "José Kenter-Spijk"
+  ],
+  "sites": [
+   "https://ommeriek.nl/"
+  ]
+ },
+ {
+  "name": "Schakelvoorziening Emmeloord",
+  "place": "EMMELOORD",
+  "emails": [
+   "s.vd.tempel@aves.nl",
+   "E.vanessen@aves.n"
+  ],
+  "persons": [
+   "Sandra van der Tempel",
+   "Ella van Essen"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Scola",
+  "place": "ELBURG",
+  "emails": [
+   "m.laar@stichtingproo.nl",
+   "ib.innova@stichtingproo.nl"
+  ],
+  "persons": [
+   "Marije van Laar",
+   "Marije van Duijn"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Silvester-Bernadette",
+  "place": "HELMOND",
+  "emails": [
+   "m.vanekert@sil-ber.nl",
+   "b.duijmelink@sil-ber.nl"
+  ],
+  "persons": [
+   "Monique van Ekert",
+   "Bernadette van Veghel"
+  ],
+  "sites": [
+   "https://www.silvester-bernadette.nl/"
+  ]
+ },
+ {
+  "name": "Sint Bavoschool",
+  "place": "OOSTBURG",
+  "emails": [
+   "marloesdekrijger@elevantio.nl"
+  ],
+  "persons": [
+   "Marloes Tresonie-de Krijger"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Sint Bavoschool",
+  "place": "HARMELEN",
+  "emails": [
+   "c.dejong@st-bavoschool.nl"
+  ],
+  "persons": [
+   "Carla de Jong"
+  ],
+  "sites": [
+   "http://www.st-bavoschool.nl/"
+  ]
+ },
+ {
+  "name": "sport obs 't Kruisrak",
+  "place": "BUNSCHOTEN-SPAKENBURG",
+  "emails": [
+   "r.reichardt@kruisrak.nl"
+  ],
+  "persons": [
+   "Roelien Reichardt"
+  ],
+  "sites": [
+   "https://kruisrak.nl/"
+  ]
+ },
+ {
+  "name": "Springbok International",
+  "place": "DEN HAAG",
+  "emails": [
+   "obs@springbokinternational.nl",
+   "l.vanhouten@springbokinternational.nl"
+  ],
+  "persons": [
+   "Petra de Haan",
+   "Liesbeth van Houten"
+  ],
+  "sites": [
+   "https://www.springbokinternational.nl/"
+  ]
+ },
+ {
+  "name": "St. Jozefschool",
+  "place": "VELP",
+  "emails": [
+   "dir.stjozef@optimusonderwijs.nl",
+   "a.hermsen@optimusonderwijs.nl"
+  ],
+  "persons": [
+   "Martijn Erkens",
+   "Angelique Hermsen"
+  ],
+  "sites": [
+   "https://www.jozefvelp.nl/"
+  ]
+ },
+ {
+  "name": "Stephanusschool",
+  "place": "ROTTERDAM",
+  "emails": [
+   "stephanus.dir@rvko.nl",
+   "stephanus.dir@rvko.nl"
+  ],
+  "persons": [
+   "Astrid van Gogh",
+   "Bianca Wammes"
+  ],
+  "sites": [
+   "https://www.stephanusrotterdam.nl"
+  ]
+ },
+ {
+  "name": "Stichting Groeisaam NT2",
+  "place": "DRUTEN",
+  "emails": [
+   "y.vanhouten@groeisaampo.nl"
+  ],
+  "persons": [
+   "Yvonne van Houten"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Stichting Pas",
+  "place": "ARNHEM",
+  "emails": [
+   "b.saeijs@stichtingpas.nl"
+  ],
+  "persons": [
+   "Babbel Saeijs"
+  ],
+  "sites": [
+   "https://www.stichtingpas.nl/"
+  ]
+ },
+ {
+  "name": "Stichting PAS",
+  "place": "ARNHEM",
+  "emails": [
+   "j.muijres@stichtingpas.nl"
+  ],
+  "persons": [
+   "Jose Muijres"
+  ],
+  "sites": [
+   "https://www.stichtingpas.nl/"
+  ]
+ },
+ {
+  "name": "Taalatelier Houten",
+  "place": "HOUTEN",
+  "emails": [
+   "Caroline.boumans@basisschoolaventurijn.nl",
+   "samantha.vanoort@basisschoolaventurijn.nl"
+  ],
+  "persons": [
+   "Caroline Boumans",
+   "Samantha van Oort"
+  ],
+  "sites": [
+   "https://www.taalatelierhouten.nl/"
+  ]
+ },
+ {
+  "name": "Taalatelier Nieuwegein",
+  "place": "NIEUWEGEIN",
+  "emails": [
+   "t.vanverseveld@sbo-evenaar.nl",
+   "p.denboef@sbo-evenaar.nl"
+  ],
+  "persons": [
+   "Thekla van Verseveld",
+   "Paulien den Boef"
+  ],
+  "sites": [
+   "https://sbo-evenaar.nl/taalatelier/"
+  ]
+ },
+ {
+  "name": "Taalcentrum Almere",
+  "place": "ALMERE",
+  "emails": [
+   "n.vanlier@taalcentrumalmere.nl"
+  ],
+  "persons": [
+   "Nicolette van Lier"
+  ],
+  "sites": [
+   "https://www.taalcentrumalmere.nl/"
+  ]
+ },
+ {
+  "name": "Taalklas Boekel",
+  "place": "VENHORST",
+  "emails": [
+   "taalklas@stichtinggoo.nl",
+   "walther.groenendaal@stichtinggoo.nl"
+  ],
+  "persons": [
+   "Erna Biemans",
+   "Walther Groenendaal"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Taalklas De Hoeksteen",
+  "place": "OUD-BEIJERLAND",
+  "emails": [
+   "y.verweij@csgdewaard.nl",
+   "a.dirks@csgdewaard.nl"
+  ],
+  "persons": [
+   "Yvonne Verweij",
+   "Aletta Dirks"
+  ],
+  "sites": [
+   "https://dehoeksteen.csgdewaard.nl/"
+  ]
+ },
+ {
+  "name": "Taalklas DRV",
+  "place": "MIJDRECHT",
+  "emails": [
+   "a.rudolphus@stichtingauro.nl"
+  ],
+  "persons": [
+   "Annemarieke Rudolphus"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Taalklas Tholen",
+  "place": "POORTVLIET",
+  "emails": [
+   "taalklas@octho.nl"
+  ],
+  "persons": [
+   "Marian Borgerdijn"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Taalklas Uden",
+  "place": "UDEN",
+  "emails": [
+   "inkevanderwijst@saamscholen.nl",
+   "carolienbraam@saamscholen.nl"
+  ],
+  "persons": [
+   "Inke van der Wijst",
+   "Carolien Braam"
+  ],
+  "sites": [
+   "https://www.ikcdeklimboomuden.nl/"
+  ]
+ },
+ {
+  "name": "Taalschakelklas Lochem",
+  "place": "LOCHEM",
+  "emails": [
+   "k.holzapfel@poolsterscholen.nl"
+  ],
+  "persons": [
+   "Kitty Holzapfel"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Taalschool De Brink",
+  "place": "BAEXEM",
+  "emails": [
+   "directie@obs-debrink.nl",
+   "taalschool@swalmenroer.nl"
+  ],
+  "persons": [
+   "Emmy Hakvoort",
+   "Monique Vos"
+  ],
+  "sites": [
+   "https://www.obs-debrink.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool de Globe",
+  "place": "ENSCHEDE",
+  "emails": [
+   "iok-deglobe-dir@skoe.nl",
+   "r.schimmel@skoe.nl"
+  ],
+  "persons": [
+   "Mariëlle Siebelt",
+   "Ruud Schimmel"
+  ],
+  "sites": [
+   "https://iokdeglobe.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool De Liemers",
+  "place": "ZEVENAAR",
+  "emails": [
+   "maria.grob@liemersnovum.nl",
+   "m.ketelaars@innerwaard.nl"
+  ],
+  "persons": [
+   "Maria Grob",
+   "Marike Ketelaars"
+  ],
+  "sites": [
+   "https://taalschooldeliemers.nl"
+  ]
+ },
+ {
+  "name": "Taalschool de WereldDelen",
+  "place": "HEERLEN",
+  "emails": [
+   "richard.dewilde@movare.nl",
+   "sharine.bisschops@movare.nl"
+  ],
+  "persons": [
+   "Richard de Wilde",
+   "Sharine Bisschops"
+  ],
+  "sites": [
+   "https://www.taalschooldewerelddelen.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool Innoord",
+  "place": "AMSTERDAM",
+  "emails": [
+   "info.taalschool@innoord.nl",
+   "p.snijders@innoord.nl"
+  ],
+  "persons": [
+   "Mariska van Meurs",
+   "Peter Snijders"
+  ],
+  "sites": [
+   "https://taalschool.innoord.nl"
+  ]
+ },
+ {
+  "name": "Taalschool Midden-Groningen",
+  "place": "HOOGEZAND",
+  "emails": [
+   "taalschool@ultiemonderwijs.nl",
+   "moniquehaak@ultiemonderwijs.nl"
+  ],
+  "persons": [
+   "Chiel Mulder",
+   "Monique Haak"
+  ],
+  "sites": [
+   "https://www.ultiemonderwijs.nl/scholen/taalschool-midden-groningen/"
+  ]
+ },
+ {
+  "name": "Taalschool Rotterdam",
+  "place": "ROTTERDAM",
+  "emails": [
+   "a.verdouw@kindenonderwijsrotterdam.nl",
+   "j.vanaalst@kindenonderwijsrotterdam.nl"
+  ],
+  "persons": [
+   "Albertine Verdouw",
+   "Janine van Aalst"
+  ],
+  "sites": [
+   "https://taalschoolrotterdam.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool Salland",
+  "place": "RAALTE",
+  "emails": [
+   "N.gerrits@de-mare.org"
+  ],
+  "persons": [
+   "Nicole Gerrits"
+  ],
+  "sites": [
+   "https://taalschoolsalland.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool Utrecht",
+  "place": "UTRECHT",
+  "emails": [
+   "j.olsthoorn@taalschoolutrecht.nl",
+   "e.van.zoest@taalschoolutrecht.nl"
+  ],
+  "persons": [
+   "Jenny Olsthoorn",
+   "Esther van Zoest"
+  ],
+  "sites": [
+   "https://www.taalschoolutrecht.nl"
+  ]
+ },
+ {
+  "name": "Taalschool Voila",
+  "place": "LEUSDEN",
+  "emails": [
+   "info@taalschoolvoila.nl",
+   "svennekens@taalschoolvoila.nl"
+  ],
+  "persons": [
+   "Alette Rond",
+   "Sasja Vennekens"
+  ],
+  "sites": [
+   "https://taalschoolvoila.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool Wereldrijk",
+  "place": "SPRANG CAPELLE",
+  "emails": [
+   "merellevink@leerrijk.nl"
+  ],
+  "persons": [
+   "Merel Levink"
+  ],
+  "sites": [
+   "https://www.bsdevrijhoeve.nl/"
+  ]
+ },
+ {
+  "name": "Taalschool Westland",
+  "place": "DE LIER",
+  "emails": [
+   "hvankoeveringe@tsw.pcpow.nl",
+   "cbarendse@tsw.pcpow.nl"
+  ],
+  "persons": [
+   "Huib van Koeveringe",
+   "Christianne Barendse"
+  ],
+  "sites": [
+   "https://www.taalschoolwestland.nl/"
+  ]
+ },
+ {
+  "name": "TEC Terneuzen",
+  "place": "TERNEUZEN",
+  "emails": [
+   "coenkaijser@elevantio.nl",
+   "liekeroelans@elevantio.nl"
+  ],
+  "persons": [
+   "Coen Kaijser",
+   "Lieke Roelans"
+  ],
+  "sites": [
+   "https://www.deoudevaart.nl/"
+  ]
+ },
+ {
+  "name": "Tec Walcheren",
+  "place": "MIDDELBURG",
+  "emails": [
+   "Lylataha@archipelscholen.nl",
+   "lylataha@archipelscholen.nl"
+  ],
+  "persons": [
+   "Lyla Taha",
+   "Kris Vermeulen"
+  ],
+  "sites": [
+   "http://www.tec-walcheren.nl"
+  ]
+ },
+ {
+  "name": "TEC Zierikzee",
+  "place": "ZIERIKZEE",
+  "emails": [
+   "m.biesma@lithora.nl"
+  ],
+  "persons": [
+   "Martineke Biesma"
+  ],
+  "sites": [
+   "https://radarscholen.nu/taal-expertise-centrum"
+  ]
+ },
+ {
+  "name": "Toermalijn",
+  "place": "DEN HAAG",
+  "emails": [
+   "info@toermalijn.lucasonderwijs.nl",
+   "nhuizinga@toermalijn.lucasonderwijs.nl"
+  ],
+  "persons": [
+   "Marijke Dinger",
+   "Nienke Huizinga"
+  ],
+  "sites": [
+   "https://kctoermalijn.nl/"
+  ]
+ },
+ {
+  "name": "UnieK",
+  "place": "AALTEN",
+  "emails": [
+   "m.willemsen@accentscholengroep.nl",
+   "m.holkenborg@accentscholengroep.nl"
+  ],
+  "persons": [
+   "Marleen Willemsen",
+   "Maartje Holkenborg"
+  ],
+  "sites": [
+   "https://www.ikcuniek.nl/"
+  ]
+ },
+ {
+  "name": "UWC Maastricht",
+  "place": "Maastricht",
+  "emails": [
+   "n.lemmens@uwcmaastricht.nl"
+  ],
+  "persons": [
+   "Nadine Lemmens"
+  ],
+  "sites": [
+   "https://www.uwcmaastricht.nl/"
+  ]
+ },
+ {
+  "name": "WereldKidz Albatros",
+  "place": "ZEIST",
+  "emails": [
+   "hannekevannieuwenhuyzen@wereldkidz.nl"
+  ],
+  "persons": [
+   "Hanneke van Nieuwenhuyzen"
+  ],
+  "sites": [
+   "https://albatros.wereldkidz.nl/"
+  ]
+ },
+ {
+  "name": "Wereldkidz de Hoogstraat",
+  "place": "LEERSUM",
+  "emails": [
+   "beavandergarde@wereldkidz.nl"
+  ],
+  "persons": [
+   "Bea van der Garde"
+  ],
+  "sites": [
+   "https://hoogstraat.wereldkidz.nl/"
+  ]
+ },
+ {
+  "name": "Wereldkidz Op Dreef",
+  "place": "ZEIST",
+  "emails": [
+   "mirnaroosma@wereldkidz.nl",
+   "kimberleydijksterhuis@wereldkidz.nl"
+  ],
+  "persons": [
+   "Mirna Roosma",
+   "Kimberley Dijksterhuis"
+  ],
+  "sites": [
+   "https://opdreef.wereldkidz.nl/"
+  ]
+ },
+ {
+  "name": "WereldKidz Pimpelmees",
+  "place": "VEENENDAAL",
+  "emails": [
+   "koenhols@wereldkidz.nl",
+   "daniellevanvoskuilen@wereldkidz.nl"
+  ],
+  "persons": [
+   "Koen Hols",
+   "Danielle van Voskuilen"
+  ],
+  "sites": []
+ },
+ {
+  "name": "WereldKidz Vlieger",
+  "place": "VEENENDAAL",
+  "emails": [
+   "miekevisser@wereldkidz.nl",
+   "daniellevanvoskuilen@wereldkidz.nl"
+  ],
+  "persons": [
+   "Mieke Visser",
+   "Danielle van Voskuilen"
+  ],
+  "sites": [
+   "https://www.devlieger.wereldkidz.nl/"
+  ]
+ },
+ {
+  "name": "Wereldschool Amstelveen",
+  "place": "AMSTELVEEN",
+  "emails": [
+   "g.vanderzon@ogamstelland.nl",
+   "z.vermesi@ogamstelland.nl"
+  ],
+  "persons": [
+   "Geert-Jan van der Zon",
+   "Zita Vermesi"
+  ],
+  "sites": [
+   "https://wereldschool-amstelveen.nl/"
+  ]
+ },
+ {
+  "name": "Wereldschool De Vlinder",
+  "place": "APELDOORN",
+  "emails": [
+   "obevers@leerplein055.nl",
+   "mwijnen@leerplein055.nl"
+  ],
+  "persons": [
+   "Onno Bevers",
+   "Meggy Wijnen"
+  ],
+  "sites": [
+   "https://www.wereldschooldevlinder.nl/"
+  ]
+ },
+ {
+  "name": "Wereldschool Taalrijk",
+  "place": "BOXTEL",
+  "emails": [
+   "taalrijk@stichtingtalentis.nl"
+  ],
+  "persons": [
+   "Heidi Schel"
+  ],
+  "sites": []
+ },
+ {
+  "name": "Wereldwijs",
+  "place": "BERGEN OP ZOOM",
+  "emails": [
+   "yolanda.groen@lpsnet.nl"
+  ],
+  "persons": [
+   "Yolanda Groen"
+  ],
+  "sites": [
+   "https://www.lps-wereldwijs.nl/"
+  ]
+ },
+ {
+  "name": "Wereldwijzer &#8211; Taalklassen",
+  "place": "HOOGLAND",
+  "emails": [
+   "willemien.velsink@meerkring.nl",
+   "vera.doornekamp@meerkring.nl"
+  ],
+  "persons": [
+   "Willemien Velsink",
+   "Vera Doornekamp"
+  ],
+  "sites": [
+   "https://www.wereldwijzertaalklassen.nl"
+  ]
+ }
+]
