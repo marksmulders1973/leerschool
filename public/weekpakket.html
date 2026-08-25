@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Het Weekpakket — elke week gratis oefenbladen per mail | Leerkwartier</title>
+<meta name="description" content="Elke week een vers printpakket voor groep 6-8: rekenen, taal en begrijpend lezen richting de Doorstroomtoets, plus een berichtje van de maker. Gratis, alleen per mail.">
+<link rel="canonical" href="https://leerkwartier.app/weekpakket.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Wat is het Weekpakket van Leerkwartier?","acceptedAnswer":{"@type":"Answer","text":"Een gratis wekelijks printpakket voor kinderen in groep 6, 7 en 8: rekenen, taal en begrijpend lezen in de stijl van de Doorstroomtoets, met antwoordblad voor de ouder of verzorger. Je ontvangt elke week per e-mail een code die het nieuwe pakket opent op leerkwartier.app."}},
+ {"@type":"Question","name":"Is het Weekpakket echt gratis?","acceptedAnswer":{"@type":"Answer","text":"Ja. Oefenen in de Leerkwartier-app is gratis, en het Weekpakket is gratis extra post voor iedereen die op de maillijst staat."}}
+]}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; background: #0a0f1e; color: #e8edf5; line-height: 1.6; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 34px 22px 60px; }
+  .logo { font-size: 24px; font-weight: 800; color: #fff; }
+  .slogan { color: #69f0ae; font-weight: 700; font-size: 13px; margin-bottom: 24px; }
+  h1 { font-size: 26px; color: #fff; margin: 8px 0 10px; }
+  p { color: #cdd6e5; font-size: 15px; margin-bottom: 12px; }
+  .kaart { background: #121a30; border: 1px solid #24304f; border-radius: 16px; padding: 20px; margin: 18px 0; }
+  .kaart h2 { font-size: 17px; color: #fff; margin-bottom: 8px; }
+  input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #33415f; background: #0a0f1e; color: #fff; font-size: 15px; margin: 8px 0; }
+  button { width: 100%; padding: 13px; border: 0; border-radius: 10px; background: linear-gradient(135deg,#00C853,#00a846); color: #fff; font-weight: 800; font-size: 15px; cursor: pointer; }
+  button.blauw { background: linear-gradient(135deg,#2f6fed,#1e4fa3); }
+  .status { font-size: 14px; margin-top: 8px; min-height: 20px; }
+  .ok { color: #69f0ae; } .fout { color: #ff8a80; }
+  ul { margin: 8px 0 12px 20px; color: #cdd6e5; font-size: 15px; }
+  li { margin: 4px 0; }
+  .klein { color: #7d8aa0; font-size: 12.5px; }
+  a { color: #69f0ae; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">Leerkwartier</div>
+  <div class="slogan">Een kwartier per dag — écht begrijpen wat je leert.</div>
+
+  <h1>📬 Het Weekpakket</h1>
+  <p>Elke week een <strong>vers printpakket</strong> voor groep 6, 7 en 8: rekenen, taal en begrijpend lezen in de stijl van de Doorstroomtoets — met antwoordblad voor de ouder of verzorger, en een kort berichtje van de maker over wat er die week nieuw is.</p>
+  <ul>
+    <li>🖨️ Printen en aan de keukentafel maken — een kwartiertje is genoeg</li>
+    <li>🔑 Elke week een nieuwe code, alleen per mail</li>
+    <li>💚 Gratis — oefenen in de app blijft óók gewoon gratis; dit is extra post voor abonnees</li>
+  </ul>
+
+  <div class="kaart">
+    <h2>Meld je aan — je krijgt de code van deze week direct per mail</h2>
+    <form id="aanmeld">
+      <input type="email" id="email" placeholder="jouw e-mailadres" required autocomplete="email">
+      <button type="submit">Stuur mij de code van deze week</button>
+      <div class="status" id="aanmeldStatus"></div>
+    </form>
+    <div class="klein">Je krijgt de wekelijkse Leerkwartier-mail met de nieuwe code. Uitschrijven kan altijd met één klik.</div>
+  </div>
+
+  <div class="kaart">
+    <h2>Heb je al een code uit de mail?</h2>
+    <form id="codeform">
+      <input type="text" id="code" placeholder="bijv. K7MPQ4" maxlength="12" autocomplete="off" style="text-transform:uppercase;letter-spacing:0.12em">
+      <button type="submit" class="blauw">Open het pakket van deze week</button>
+      <div class="status" id="codeStatus"></div>
+    </form>
+    <div class="klein">De code wisselt elke week — de nieuwste staat altijd in de weekmail.</div>
+  </div>
+
+  <p class="klein">Liever meteen oefenen? Dat kan altijd, zonder account: <a href="https://leerkwartier.app/vandaag">de vraag van de dag</a> of <a href="https://leerkwartier.app">de app</a>.</p>
+</div>
+<script>
+  document.getElementById("aanmeld").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const st = document.getElementById("aanmeldStatus");
+    st.textContent = "Versturen…"; st.className = "status";
+    try {
+      const r = await fetch("/api/send-weekpakket-code", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: document.getElementById("email").value.trim() }),
+      });
+      if (r.ok) { st.textContent = "Gelukt! Kijk in je mail (soms in de reclame-map) voor de code."; st.className = "status ok"; }
+      else if (r.status === 429) { st.textContent = "Even wachten — je hebt net al een mail aangevraagd."; st.className = "status fout"; }
+      else { st.textContent = "Dat lukte niet. Controleer je e-mailadres en probeer het nog eens."; st.className = "status fout"; }
+    } catch { st.textContent = "Geen verbinding — probeer het zo nog eens."; st.className = "status fout"; }
+  });
+  document.getElementById("codeform").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const c = document.getElementById("code").value.trim().toUpperCase();
+    const st = document.getElementById("codeStatus");
+    if (!c) { st.textContent = "Vul eerst de code uit de mail in."; st.className = "status fout"; return; }
+    window.location.href = "/api/weekpakket?code=" + encodeURIComponent(c);
+  });
+</script>
+</body>
+</html>

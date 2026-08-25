@@ -22,6 +22,7 @@
 
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+import { isoWeekKey, weekCode } from "./_lib/weekcode.js";
 import rekenenPad from "../src/learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../src/learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../src/learnPaths/doorstroomtoetsStudievaardighedenG8.js";
@@ -168,6 +169,25 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     ? "Welkom! Hier is je eerste gratis oefenkwartiertje 🎓"
     : "Je gratis oefenkwartiertje van deze week 🎓";
 
+  // 📬 Weekpakket-code (alleen als het geheim geconfigureerd is): elke week een
+  // nieuwe code die het exclusieve printpakket opent — dé reden om op de lijst
+  // te staan. Zie api/weekpakket.js + memory project_studiebol_weekpakket.
+  let weekpakketBlok = { html: "", text: "" };
+  if (process.env.WEEKPAKKET_SECRET) {
+    const wpCode = weekCode(isoWeekKey());
+    const wpLink = `${SITE}/api/weekpakket?code=${encodeURIComponent(wpCode)}`;
+    weekpakketBlok = {
+      html: `
+    <div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:16px 18px;margin-bottom:22px;text-align:center;">
+      <div style="font-size:13px;font-weight:800;color:#0a7d3c;text-transform:uppercase;letter-spacing:0.05em;">📬 Jouw Weekpakket-code</div>
+      <div style="font-size:28px;font-weight:800;color:#0a7d3c;letter-spacing:0.14em;margin:4px 0;">${esc(wpCode)}</div>
+      <div style="font-size:13px;color:#56627a;">Opent het printpakket van deze week (rekenen + taal + lezen, met antwoordblad).</div>
+      <a href="${wpLink}" style="display:inline-block;background:#0a7d3c;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:10px 18px;border-radius:10px;margin-top:8px;">Open het Weekpakket →</a>
+    </div>`,
+      text: `\nJouw Weekpakket-code voor deze week: ${wpCode}\nOpen het printpakket: ${wpLink}\n`,
+    };
+  }
+
   const intro = welkom
     ? "Leuk dat je erbij bent! Elke week sturen we je een gratis oefenkwartiertje voor de Doorstroomtoets — één korte vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm."
     : "Hier is je gratis oefenkwartiertje voor deze week. Eén korte Doorstroomtoets-vraag mét uitleg — in een kwartiertje weer een stukje verder.";
@@ -179,6 +199,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">${hoi}</p>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${esc(intro)}</p>
     ${vraagBlok.html}
+    ${weekpakketBlok.html}
     <a href="${vandaag}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:12px;">🎯 Doe de vraag van vandaag →</a>
     <a href="${toets}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:24px;">📝 Of de gratis oefentoets →</a>
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : `
@@ -192,7 +213,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
 
   return { onderwerp, html, text };
 }
