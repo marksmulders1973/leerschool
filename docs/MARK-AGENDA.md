@@ -60,6 +60,7 @@
 | eind aug | **VB Breda opvolgen** (vroegen zelf om flyer, code BREDA2027) · mail-stilte eindigt · lanceringspost | Claude |
 | ~1 sep | **LOWAN-mail (326 scholen)** → laten wijzen naar de juf-pagina | Mark-go → Claude |
 | ✅ 25 aug → sep | 🏛️ **Onderwijskoepel-outreach GESTART** (~6.000 scholen bereikbaar i.p.v. losse): ✅ **De Hoeksche School verstuurd di 25 aug** (naar voren gehaald; definitieve tekst mét 2-jaar-gratis-leerkracht-belofte) → **golf 1 grootste besturen volgt 25-26 aug** (agent verzamelt adressen) → **ma 8 sep Stichting NOB** (buitenland ~180-200 scholen) → **wk 15-26 sep golf 2**. Voorwerk: `docs/outreach/ONDERWIJSKOEPELS-VOORWERK.md` | Claude verstuurt (tekst-akkoord 25 aug) |
+| ≤ ~20 okt | 💶 **Brief Belastingdienst: betalingsregeling** (aangevraagd 25 aug voor álle open aanslagen ±€2.698, 12 mnd ≈ €225-230/mnd + rente; kopie: Desktop\belasting.pdf + Desktop\Belastingdienst-verzoek-betalingsregeling-2026-08-25.pdf). Tot de brief: géén aanmaningen, niets doen. Brief binnen → termijnbedrag checken + incasso-start noteren | afwachten |
 | ±half sep | **SIDN-antwoord** verwacht (€7.150, ingediend 4 aug) | afwachten |
 | ≤ begin okt | 🎄 **Kerstpakket-inlegvellen**: voedselbanken/Leergeld benaderen voor december-actie — timing dwingt, uiterlijk oktober! | Claude concept, Mark-go |
 | okt | Check **Leergeld Apeldoorn-Voorst**: staat Leerkwartier op hun site + in de okt-nieuwsbrief? (toezegging Edith) | Claude |
