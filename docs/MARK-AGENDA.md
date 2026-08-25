@@ -68,6 +68,12 @@
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
+- **📒 Urenlogboek starten per 1 sep** (Mark-besluit 25 aug): simpel logboek van uren aan
+  Leerkwartier (bouwen/mails/partners/administratie) — voor het urencriterium (1.225 u/jr);
+  git-geschiedenis + verzendlogs = bewijs. Bij KvK 27 u/wk opgegeven. Aftrek-beslissing pas
+  bij aangifte 2027; **aangifte altijd sámen met Claude doornemen** (staande afspraak,
+  regels in memory `reference_eenmanszaak_belastingregels`).
+
 - **DPIA lezen + ondertekenen** (`docs/DPIA-LEERKWARTIER.md`, ~15 min) —
   privacy-fundament voor gemeenten/scholen; nodig vóór serieuze school-deals.
 - **SQL `claim_link_code`** draaien (audit-4 open Mark-actie).
