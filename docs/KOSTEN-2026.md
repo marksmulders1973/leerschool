@@ -7,25 +7,33 @@
 >
 > ⚠️ BTW-kolom is informatief: bij KOR-keuze (huidig plan) wordt btw NIET teruggevraagd.
 
-## Bevestigde kosten (factuur gezien of bedrag uit administratie)
+## Bevestigde kosten (bedragen van Mark 25 aug — "alles zwart op wit", betaald met ICS-creditcard)
 
 | Datum | Wat | Bedrag | Factuur/bewijs | Status |
 |---|---|---|---|---|
+| 3 jan | Printer (HP) — bol.com | €96,79 | ICS-afschrift + bol.com-factuur (account) | ✅ bedrag bevestigd |
+| 3 jan | Printpapier | €7,75 | ICS-afschrift | ✅ bedrag bevestigd |
+| 4 feb | Claude — eenmalige betaling | €217,80 | ICS-afschrift + claude.ai Billing | ✅ bedrag bevestigd |
 | 23 mrt | Anthropic API-tegoed ($5 + btw = $6,05) | ± €5,60 | PDF in Gmail (receipt 2582-4376-7067) | ✅ factuur binnen |
 | 31 mrt | Anthropic API-tegoed ($25 + btw = $30,25) | ± €28 | PDF in Gmail (receipt 2153-6754-5228) | ✅ factuur binnen |
+| v.a. 20 jun | **Claude-abonnement €108,90/mnd** (afschrijving rond de 20e; jun+jul+aug = 3× t/m aug) | €326,70 t/m aug | ICS-afschriften + claude.ai Billing | ✅ loopt maandelijks door |
+| ~10 jul | Drukwerkdeal — 1.000 A4-flyers (order 15635719) | €72,60 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
+| 18 jul | PostNL porto — 5 enveloppen flyer-zendingen | ± €22 | bon/Track&Trace | 📥 bon zoeken |
 | 23 jul | Anthropic API-tegoed ($20 + btw = $24,20) | ± €22,40 | PDF in Gmail (receipt 2891-3037-1600) | ✅ factuur binnen |
-| ~10 jul | Drukwerkdeal — 1.000 A4-flyers (order 15635719) | €72,60 | factuur in HOTMAIL | 📥 Mark: factuur aanleveren |
-| 29 jul | Drukwerkdeal — 1.000 A5 Spark Fest (order 15653885) | €43,56 | factuur in HOTMAIL | 📥 Mark: factuur aanleveren |
-| 18 jul | PostNL porto — 5 enveloppen flyer-zendingen | ± €22 | bon/Track&Trace | 📥 Mark: bon zoeken |
+| 29 jul | Drukwerkdeal — 1.000 A5 Spark Fest (order 15653885) | €43,56 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
 
-*Euro-bedragen bij Anthropic zijn omgerekend (dollar-facturen); het exacte bedrag staat op je bankafschrift.*
+**Totaal t/m augustus: ± €843.** Met het doorlopende abonnement (sep-dec = 4 × €108,90) en de
+KvK (± €80) koerst 2026 af op **± €1.360-1.400** aan aftrekbare (aanloop)kosten — grofweg
+**€400-450 terug** via de inkomstenbelasting (indicatie, zie hoofdstuk-uitleg).
 
-## Nog in te vullen door Mark (bedragen/facturen onbekend bij Claude)
+*Euro-bedragen bij de Anthropic-API zijn omgerekend (dollar-facturen); exacte bedragen staan op het ICS-afschrift.
+De ICS-afschriften zijn het betaalbewijs; de facturen zelf (bol.com-account, claude.ai → Settings → Billing,
+Drukwerkdeal-mails) erbij verzamelen maakt het dossier compleet.*
+
+## Nog in te vullen door Mark (kleine restjes)
 
 | Wat | Waar te vinden | Geschat |
 |---|---|---|
-| **Claude-abonnement** (~€90/mnd, hele jaar) | claude.ai → Settings → Billing (facturen), of bankafschrift; welke maanden loopt het al? | ± €90 × maanden |
-| **Printer (HP)** | aankoopfactuur in hotmail of bon; datum + bedrag? | ? |
 | **Enveloppen / verzendmateriaal** | bonnen | ? |
 | **Herma-adresstickers 5056** | bon/bestelling | ? |
 | **Domein leerkwartier.app** (TransIP, jaarfactuur) | TransIP-facturen (mail/dashboard) | ± €15-30 |
