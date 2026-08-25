@@ -84,12 +84,22 @@ dezelfde vraag in **drie steeds eenvoudiger stappen** uitgelegd. Een leerkracht 
 gericht een oefening klaarzetten die persoonlijk bij een leerling verschijnt. Alles draait om
 begrijpen, niet om afraffelen.
 
-Twee dingen wil ik eerlijk zeggen:
-- De app is **jong en door één persoon gemaakt**. Daardoor vind ik verbeterpunten juist
-  wélkom — en kan ik aanpassingen die uw scholen helpen vaak binnen een paar dagen doorvoeren.
-- De **leer-kern blijft gratis (gegarandeerd t/m 2031)**. Alleen voor extra's die veel AI gebruiken komt er later een
-  kleine betaalde optie; scholen en gezinnen die via een maatschappelijke organisatie
-  binnenkomen houden gratis toegang.
+Twee dingen wil ik eerlijk zeggen. De app is **jong en door één persoon gemaakt** — daardoor
+zijn verbeterpunten juist wélkom, en kan ik aanpassingen die uw scholen helpen vaak binnen
+een paar dagen doorvoeren. En eerlijk over kosten: voor gezinnen blijft de leer-kern gratis
+(gegarandeerd t/m 2031). De leerkracht-functies gaan op termijn iets kosten, maar **de
+komende twee jaar kunt u ze met al uw scholen kosteloos testen en gebruiken** — uw feedback
+is voor mij in deze fase meer waard dan een factuur.
+
+U zou daarmee een van de éérste schoolbesturen zijn die met Leerkwartier werkt. Dat heeft
+een voordeel dat grote aanbieders niet kunnen geven: wensen van uw leerkrachten komen
+vooraan in de bouwlijst. Al is het maar één groep-8-leerkracht die het een paar weken
+probeert — daar leer ik het meest van.
+
+> 📌 **Vastgelegd 25 aug (Mark-akkoord): school-instap nu = leerkracht-functies kosteloos
+> testen én gebruiken t/m zomer 2028** ("de komende twee jaar"). Consistent houden met
+> docs/PRIJSPLAN.md (Pro = school-first, paywall jan 2027): besturen die vóór de paywall
+> instappen behouden de gratis testperiode.
 
 Organisaties in onderwijs en armoedebestrijding doen al mee — een overzicht staat op
 leerkwartier.app/bedankt.html. Voor leerkrachten is er een aparte pagina
