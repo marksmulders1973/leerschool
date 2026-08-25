@@ -72,6 +72,11 @@
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
+- **🔐 Beslissen: GitHub-repo `leerschool` privé maken?** (ontdekt 25 aug: repo is openbaar
+  en de git-historie bevat een oude memory-backup uit mei met persoonlijke info; huidige
+  bestanden zijn 25 aug verwijderd, maar historie blijft leesbaar zolang de repo openbaar
+  is). Privé maken kost niets en Vercel blijft gewoon deployen. Claude kan het regelen na go.
+
 - **🎬 Demo-video opnemen** (script klaar 25 aug: `docs/DEMO-VIDEO-SCRIPT.md` — 5 scènes,
   ~2 min, schermopname + stem, geen gezicht nodig; lost de "er wordt gewerkt aan een
   demo-video"-belofte uit de 30 bestuurs-mails in). Na opname: YouTube "niet vermeld" →
