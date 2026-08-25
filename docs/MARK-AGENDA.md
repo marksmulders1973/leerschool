@@ -72,9 +72,13 @@
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
-- ~~🔐 GitHub-repo `leerschool` privé maken~~ ✅ **GEDAAN 25 aug** (Mark-go; via API).
-  Check nog: vrijdag 28 aug 17:00 juichmail = bewijs dat de cloud-routine de privérepo
-  nog leest; blijft die uit → GitHub-app-toegang checken op claude.ai/code.
+- ~~🔐 GitHub-repo `leerschool` privé maken~~ ❌ **TERUGGEDRAAID 25 aug zelfde dag**
+  (Mark: "als het niet lukt, stoppen we ermee"): privé blokkeerde Vercel-auto-deploys
+  (Hobby-team + GitHub-account niet gekoppeld aan Vercel) én CLI-builds bleven hangen.
+  Repo is weer openbaar; deploys werken. De memory-backup blijft wél verwijderd.
+  💡 Wil Mark ooit alsnog privé: eerst GitHub koppelen op vercel.com → Account Settings
+  → Authentication ("Connect GitHub", account marksmulders1973) — dan werkt privé
+  waarschijnlijk wel; daarna opnieuw proberen (omkeerbaar met één klik).
 
 - **🎬 Demo-video opnemen** (script klaar 25 aug: `docs/DEMO-VIDEO-SCRIPT.md` — 5 scènes,
   ~2 min, schermopname + stem, geen gezicht nodig; lost de "er wordt gewerkt aan een
