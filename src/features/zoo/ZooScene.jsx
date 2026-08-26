@@ -6,7 +6,7 @@ import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -1416,6 +1416,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       <DayNight />
       {/* Drijvende wolken + rondcirkelende vogeltjes vullen de lucht. */}
       <SkyClouds />
+      {/* 🛩️ Witte zeppelins hoog boven het park — later reclame-doek voor partners. */}
+      <Zeppelins />
 
       <Suspense fallback={<Laden />}>
         <Terrain field={terrain} ground={ground} placing={placing} cells={placingCells} sculpt={sculptMode} water={waterMode} paintGround={groundMode} onHover={setGhost} onPlace={handlePlace} onMissTap={onClearSelection} onSculpt={onSculpt} onWater={onWater} onGround={onGround} />

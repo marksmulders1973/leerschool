@@ -1630,6 +1630,66 @@ export function SkyClouds() {
   );
 }
 
+// 🛩️ Zeppelins hoog boven het park (Mark 26 aug: "gewoon omdat het kan" — en
+// straks verkoopbare reclame-ruimte: het doek op de flanken kan later per
+// zeppelin een partner-naam dragen, bv. gemeente Den Haag). Nu strak wit en
+// echt-lijkend: langgerekte romp met neusdop, kruis-staartvinnen, gondel met
+// raamstrip en twee motorgondels met draaiende propellers. Elk vaart z'n eigen
+// grote rondje op eigen hoogte/snelheid/richting. `tekst` per zeppelin is de
+// haak voor later (partner-doek); nu null = leeg wit doek.
+const ZEPPELIN_VLOOT = [
+  { r: 52, h: 38, snelheid: 0.016, fase: 0.4, tekst: null },
+  { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: null },
+  { r: 92, h: 50, snelheid: 0.009, fase: 4.9, tekst: null },
+];
+function Zeppelin({ data }) {
+  const g = useRef();
+  const schroef1 = useRef(), schroef2 = useRef();
+  useFrame((s) => {
+    const m = g.current; if (!m) return;
+    const t = s.clock.elapsedTime;
+    const a = data.fase + t * data.snelheid;
+    m.position.set(Math.sin(a) * data.r, data.h + Math.sin(t * 0.32 + data.fase) * 0.9, Math.cos(a) * data.r);
+    m.rotation.y = a + (data.snelheid >= 0 ? 0 : Math.PI); // neus in vaarrichting
+    m.rotation.z = Math.sin(t * 0.27 + data.fase) * 0.02;  // heel licht deinen
+    if (schroef1.current) schroef1.current.rotation.x += 0.55;
+    if (schroef2.current) schroef2.current.rotation.x += 0.55;
+  });
+  const wit = "#f5f7f9";
+  return (
+    <group ref={g}>
+      {/* romp: langgerekte ballon */}
+      <mesh scale={[6.8, 1.8, 1.8]}><sphereGeometry args={[1, 22, 16]} /><meshStandardMaterial color={wit} roughness={0.35} /></mesh>
+      {/* neusdop */}
+      <mesh position={[6.45, 0, 0]} scale={[0.5, 0.6, 0.6]}><sphereGeometry args={[1, 12, 10]} /><meshStandardMaterial color="#dfe3e8" roughness={0.4} /></mesh>
+      {/* kruis-staartvinnen (verticaal + horizontaal) */}
+      <mesh position={[-5.5, 0.35, 0]}><boxGeometry args={[1.9, 2.4, 0.09]} /><meshStandardMaterial color={wit} roughness={0.45} /></mesh>
+      <mesh position={[-5.5, 0, 0]}><boxGeometry args={[1.9, 0.09, 2.6]} /><meshStandardMaterial color={wit} roughness={0.45} /></mesh>
+      {/* gondel met raamstrip */}
+      <mesh position={[1.2, -1.95, 0]}><boxGeometry args={[2.2, 0.6, 0.8]} /><meshStandardMaterial color="#dfe3e8" roughness={0.4} /></mesh>
+      <mesh position={[1.2, -1.88, 0]}><boxGeometry args={[1.9, 0.2, 0.82]} /><meshStandardMaterial color="#2e3742" roughness={0.3} /></mesh>
+      {/* motorgondels + draaiende propellers */}
+      {[[schroef1, 1.45], [schroef2, -1.45]].map(([ref, z], i) => (
+        <group key={i} position={[-1.2, -1.45, z]}>
+          <mesh><boxGeometry args={[0.85, 0.36, 0.36]} /><meshStandardMaterial color="#cfd4da" roughness={0.45} /></mesh>
+          <group ref={ref} position={[-0.55, 0, 0]}>
+            <mesh><boxGeometry args={[0.05, 1.05, 0.1]} /><meshStandardMaterial color="#8a939d" roughness={0.4} /></mesh>
+            <mesh rotation={[Math.PI / 2, 0, 0]}><boxGeometry args={[0.05, 1.05, 0.1]} /><meshStandardMaterial color="#8a939d" roughness={0.4} /></mesh>
+          </group>
+        </group>
+      ))}
+      {/* reclame-doek op beide flanken — nu leeg wit; later partner-naam/logo */}
+      <mesh position={[0.8, 0.1, 1.85]}><planeGeometry args={[4.4, 1.4]} /><meshStandardMaterial color="#ffffff" roughness={0.5} /></mesh>
+      <mesh position={[0.8, 0.1, -1.85]} rotation={[0, Math.PI, 0]}><planeGeometry args={[4.4, 1.4]} /><meshStandardMaterial color="#ffffff" roughness={0.5} /></mesh>
+    </group>
+  );
+}
+export function Zeppelins() {
+  // Op zwakke apparaten 1 zeppelin, anders de hele vloot van 3.
+  const vloot = LOW_END ? ZEPPELIN_VLOOT.slice(0, 1) : ZEPPELIN_VLOOT;
+  return <group>{vloot.map((z, i) => <Zeppelin key={i} data={z} />)}</group>;
+}
+
 // Tros feest-ballonnen die zacht wiegen — vast aan één punt (bv. naast de
 // ingang). Puur sfeer; geen botsing. Elke ballon dobbert met eigen fase.
 const BALLON_KLEUREN = ["#e2574c", "#4a90d9", "#f2b134", "#7bbf5a", "#b06ad6", "#ff8f3c", "#3cb5a8"];
