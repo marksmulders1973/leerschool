@@ -397,7 +397,7 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "telescoop") return <Sterrenwacht position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "standbeeld") return <Standbeeld position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "molen") return <HollandseMolen position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "raket") return <Raket position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "raket") return <Raket position={[x, y, z]} rotation={rotation} onOefenen={onOefenen} />;
   if (a.procedural === "vulkaan") return <Vulkaan position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "kas") return <Kas position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "weerstation") return <Weerstation position={[x, y, z]} rotation={rotation} />;

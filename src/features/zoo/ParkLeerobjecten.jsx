@@ -455,7 +455,7 @@ export const RAKET_VLUCHT = { actief: false, x: 0, y: 0, z: 0, px: 0, pz: 0 };
 // rook de lucht in, zweeft even in "de ruimte" en landt daarna netjes terug op
 // het platform (rechtstandig, SpaceX-stijl) voor de volgende vlucht. De hele
 // vlucht draait op refs in useFrame — geen re-renders per frame.
-export function Raket({ position = [0, 0, 0], rotation = 0 }) {
+export function Raket({ position = [0, 0, 0], rotation = 0, onOefenen = null }) {
   const vlam = useRef();
   const schip = useRef();
   const rookRefs = useRef([]);
@@ -564,6 +564,32 @@ export function Raket({ position = [0, 0, 0], rotation = 0 }) {
           </button>
         </Html>
       </group>
+      {/* 🎓 Leer-bord (Mark 26 aug: "kun je die lessen daar bij de raket ergens
+          inbouwen? ik zie er nu niets") — de twee lessen die bij de raket horen,
+          als zichtbare knoppen op een houten bordje naast het platform. */}
+      {onOefenen && (
+        <group position={[-1.9, 0, 1.2]}>
+          <mesh position={[0, 0.55, 0]} castShadow><boxGeometry args={[0.09, 1.1, 0.09]} /><meshStandardMaterial color="#7a5230" flatShading roughness={1} /></mesh>
+          <mesh position={[0, 1.22, 0]} castShadow><boxGeometry args={[1.2, 0.62, 0.07]} /><meshStandardMaterial color="#f6e7c4" flatShading roughness={0.9} /></mesh>
+          <Html position={[0, 1.22, 0.06]} center distanceFactor={8} zIndexRange={[7, 0]}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 5, alignItems: "center", pointerEvents: "auto" }}>
+              <div style={{ font: "900 12px system-ui", color: "#5c4300", whiteSpace: "nowrap", textShadow: "0 1px 2px rgba(255,255,255,.6)" }}>🎓 Leer hier</div>
+              <button
+                onClick={(e) => { e.stopPropagation(); onOefenen("ruimtevaart-po"); try { track("park_naar_leren", { via: "raket_bord", pad: "ruimtevaart-po" }); } catch { /* */ } }}
+                style={{ border: "2px solid #fff", borderRadius: 999, padding: "6px 13px", font: "800 12px system-ui", color: "#fff", background: "linear-gradient(135deg,#7c3aed,#5b21b6)", boxShadow: "0 2px 8px rgba(0,0,0,.35)", cursor: "pointer", whiteSpace: "nowrap" }}
+              >
+                🚀 Les: Ruimtevaart
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); onOefenen("krachten-natuurkunde"); try { track("park_naar_leren", { via: "raket_bord", pad: "krachten-natuurkunde" }); } catch { /* */ } }}
+                style={{ border: "2px solid #fff", borderRadius: 999, padding: "6px 13px", font: "800 12px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 2px 8px rgba(0,0,0,.35)", cursor: "pointer", whiteSpace: "nowrap" }}
+              >
+                💪 Les: Duwen & trekken
+              </button>
+            </div>
+          </Html>
+        </group>
+      )}
       {/* groot aftel-cijfer boven het platform */}
       {teller != null && (
         <Html position={[0, 5.2, 0]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
