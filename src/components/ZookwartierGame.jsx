@@ -658,7 +658,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       } else {
         const sens = e.pointerType === "touch" ? 0.0062 : 0.0042;
         cam.yaw -= (e.clientX - p.x) * sens;
-        cam.pitch = Math.max(-0.12, Math.min(1.15, cam.pitch + (e.clientY - p.y) * sens));
+        // Omlaag tot -1.05: camera laag bij de grond die omhoog kijkt — zo kun
+        // je de zeppelins en de raket nakijken (Mark 26 aug: "ik wil verder
+        // omhoog kunnen kijken"). De spring-arm botst toch niet door de grond.
+        cam.pitch = Math.max(-1.05, Math.min(1.15, cam.pitch + (e.clientY - p.y) * sens));
       }
       p.x = e.clientX; p.y = e.clientY;
     };

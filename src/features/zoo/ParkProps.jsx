@@ -559,7 +559,10 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       node.position.set(pos.current.x, ty, pos.current.z);
       if (posRef) posRef.current.set(pos.current.x, ty, pos.current.z);
       // Mikpunt: vóór de speler; omhoog/omlaag met pitch (muis-/veeg-verticaal).
-      if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.5 - 0.22 - pitch * 2.2, pos.current.z + fz * 4);
+      // Tan-mapping i.p.v. lineair (Mark 26 aug: "ik wil verder omhoog kunnen
+      // kijken, naar de zeppelins"): vol omhoog ≈ 73° — genoeg om zeppelins en
+      // de raket-lancering te volgen; vol omlaag kijk je nu ook echt naar je voeten.
+      if (lookRef) lookRef.current.set(pos.current.x + fx * 4, ty + 1.28 + Math.tan(-pitch * 1.28) * 4, pos.current.z + fz * 4);
       if (faceRef) faceRef.current.set(fx, 0, fz);
       return;
     }
