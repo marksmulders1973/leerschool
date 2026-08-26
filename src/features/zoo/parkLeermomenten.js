@@ -293,9 +293,9 @@ export const PARK_LEERMOMENTEN = {
     leerpadId2: "vlakke-figuren-po", leerLabel2: "Vlakke figuren (driehoeken)",
   },
   tempel: {
-    id: "tempel", emoji: "🏛️", titel: "De Griekse tempel",
-    praatje: "Zo'n tempel met hoge zuilen bouwden de oude Grieken en Romeinen al duizenden jaren geleden. Er woonde geen mens in, maar hun goden. De ronde zuilen dragen het zware dak — een slimme manier van bouwen die we nu nog gebruiken.",
-    weetje: "Veel deftige gebouwen van nu — musea, rechtbanken, het Witte Huis — hebben nog steeds van die Griekse zuilen. De oudheid bouwt dus nog altijd een beetje mee.",
+    id: "tempel", emoji: "🏟️", titel: "De Romeinse arena",
+    praatje: "In zo'n ronde arena keken de oude Romeinen naar spannende wedstrijden. Twee gladiatoren lieten zien wie het sterkst en slimst was — met helm, schild en zwaard of een drietand, als sporthelden van bijna 2000 jaar geleden. Duizenden mensen juichten vanaf de tribunes.",
+    weetje: "Het beroemdste stadion van de oudheid is het Colosseum in Rome: daar pasten wel 50.000 mensen in. Het staat er na bijna 2000 jaar nog steeds — en ons woord 'arena' komt van het Latijnse woord voor zand.",
     leerpadId: "oudheid-egyptenaren-grieken-romeinen-po", leerLabel: "Grieken en Romeinen",
   },
   wereldbol: {

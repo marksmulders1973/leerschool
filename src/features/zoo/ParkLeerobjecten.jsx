@@ -381,23 +381,129 @@ export function Eiffeltoren({ position = [0, 0, 0], rotation = 0 }) {
 }
 
 /* 🏛️ Griekse/Romeinse tempel — zuilen + driehoek-fronton + trap. → oudheid. */
+/* ⚔️ Twee gladiatoren in een speels duel (Mark 26 aug: "2 gladiatoren die aan
+   het vechten zijn, speels natuurlijk maar meer op echt"). Ze cirkelen om
+   elkaar heen, doen om de beurt een uitval en zwaaien met zwaard/drietand —
+   sport-demonstratie-stijl, geen griezel. Puur refs in useFrame. */
+function GladiatorenDuel() {
+  const a = useRef(), b = useRef(), armA = useRef(), armB = useRef();
+  useFrame((s) => {
+    const t = s.clock.elapsedTime;
+    const th = t * 0.35;                                            // langzaam om elkaar heen cirkelen
+    const lungeA = Math.max(0, Math.sin(t * 1.6)) * 0.4;            // uitval A…
+    const lungeB = Math.max(0, Math.sin(t * 1.6 + Math.PI)) * 0.4;  // …en om de beurt B
+    const rA = 0.95 - lungeA, rB = 0.95 - lungeB;
+    if (a.current) { a.current.position.set(Math.sin(th) * rA, 0, Math.cos(th) * rA); a.current.rotation.y = th + Math.PI; }
+    if (b.current) { b.current.position.set(-Math.sin(th) * rB, 0, -Math.cos(th) * rB); b.current.rotation.y = th; }
+    if (armA.current) armA.current.rotation.x = -0.4 - Math.max(0, Math.sin(t * 3.2)) * 1.0;
+    if (armB.current) armB.current.rotation.x = -0.3 - Math.max(0, Math.sin(t * 3.2 + 1.6)) * 0.8;
+  });
+  const huid = "#e8b98a";
+  return (
+    <group>
+      {/* Gladiator A — murmillo: helm met rode kam, rond schild + houten zwaard */}
+      <group ref={a}>
+        <mesh position={[-0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
+        <mesh position={[0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
+        <mesh position={[0, 0.48, 0]} castShadow><boxGeometry args={[0.34, 0.4, 0.2]} /><meshStandardMaterial color="#b03a30" flatShading /></mesh>
+        <mesh position={[0, 0.82, 0]} castShadow><boxGeometry args={[0.22, 0.22, 0.22]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+        <mesh position={[0, 0.97, 0]}><boxGeometry args={[0.26, 0.1, 0.26]} /><meshStandardMaterial color="#c8c4bc" flatShading metalness={0.3} /></mesh>
+        <mesh position={[0, 1.08, 0]}><boxGeometry args={[0.06, 0.14, 0.26]} /><meshStandardMaterial color="#d33a2f" flatShading /></mesh>
+        {/* linkerarm met rond schild */}
+        <mesh position={[-0.24, 0.52, 0.06]}><boxGeometry args={[0.1, 0.3, 0.1]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+        <mesh position={[-0.3, 0.5, 0.18]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.24, 0.24, 0.06, 12]} /><meshStandardMaterial color="#d9a33c" flatShading /></mesh>
+        {/* rechterarm (zwaait) met zwaard — scharnier bij de schouder */}
+        <group ref={armA} position={[0.24, 0.66, 0]}>
+          <mesh position={[0, -0.14, 0]}><boxGeometry args={[0.1, 0.3, 0.1]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+          <mesh position={[0, -0.3, 0.2]} rotation={[Math.PI / 2.6, 0, 0]}><boxGeometry args={[0.05, 0.42, 0.05]} /><meshStandardMaterial color="#c8c4bc" flatShading metalness={0.4} /></mesh>
+        </group>
+      </group>
+      {/* Gladiator B — retiarius: hoofdband, schouderstuk en drietand */}
+      <group ref={b}>
+        <mesh position={[-0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#6a4a2a" flatShading /></mesh>
+        <mesh position={[0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#6a4a2a" flatShading /></mesh>
+        <mesh position={[0, 0.48, 0]} castShadow><boxGeometry args={[0.34, 0.4, 0.2]} /><meshStandardMaterial color="#2e6e8e" flatShading /></mesh>
+        <mesh position={[0, 0.82, 0]} castShadow><boxGeometry args={[0.22, 0.22, 0.22]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+        <mesh position={[0, 0.92, 0]}><boxGeometry args={[0.24, 0.05, 0.24]} /><meshStandardMaterial color="#d33a2f" flatShading /></mesh>
+        <mesh position={[-0.22, 0.72, 0]}><boxGeometry args={[0.16, 0.12, 0.24]} /><meshStandardMaterial color="#c8c4bc" flatShading metalness={0.3} /></mesh>
+        <mesh position={[-0.24, 0.52, 0.06]}><boxGeometry args={[0.1, 0.3, 0.1]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+        {/* rechterarm (zwaait) met drietand */}
+        <group ref={armB} position={[0.24, 0.66, 0]}>
+          <mesh position={[0, -0.14, 0]}><boxGeometry args={[0.1, 0.3, 0.1]} /><meshStandardMaterial color={huid} flatShading /></mesh>
+          <mesh position={[0, -0.24, 0.34]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.025, 0.025, 0.9, 8]} /><meshStandardMaterial color="#8a6a3a" flatShading /></mesh>
+          {[-0.06, 0, 0.06].map((x, i) => (
+            <mesh key={i} position={[x, -0.24, 0.82]} rotation={[Math.PI / 2, 0, 0]}><coneGeometry args={[0.02, 0.14, 6]} /><meshStandardMaterial color="#c8c4bc" flatShading metalness={0.4} /></mesh>
+          ))}
+        </group>
+      </group>
+    </group>
+  );
+}
+
+/* 🏟️ Romeinse arena (was: Griekse tempel — Mark 26 aug: "kan het een echt
+   gelijkend Grieks of Romeins bouwwerk worden met 2 gladiatoren erin?").
+   Mini-Colosseum: ronde muur met twee ringen bogen (zoals het echte Colosseum),
+   een open ingang aan de poort-kant, zandvloer, publiek op de rand en rode
+   vaandels. Binnenin duelleren twee gladiatoren — speels, als sport-demonstratie. */
 export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
-  const steen = "#e6e0d2";
-  const zuilen = useMemo(() => [-1.5, -0.75, 0, 0.75, 1.5], []);
+  const steen = "#e6dfd0", band = "#d8d0bc";
+  const R = 2.7, GAP = 0.85; // straal + open ingang (radialen), richting de poort
+  const pilaren = useMemo(() => {
+    const uit = [];
+    const N = 16;
+    for (let i = 0; i < N; i++) {
+      const th = (i / N) * Math.PI * 2;
+      // ingang open laten (rond -z, waar ook de magische poort staat)
+      const dGap = Math.abs(((th - Math.PI) + Math.PI * 3) % (Math.PI * 2) - Math.PI);
+      if (dGap < GAP / 2 + 0.18) continue;
+      uit.push([Math.sin(th) * R, Math.cos(th) * R, th]);
+    }
+    return uit;
+  }, []);
+  const publiek = useMemo(() => {
+    const kleuren = ["#e2574c", "#3a6ad8", "#2e9e4f", "#e8a33c", "#7c3aed", "#26c6da"];
+    return [0.4, 1.1, 1.9, 2.6, 3.5, 4.2, 5.0, 5.6].map((th, i) => [Math.sin(th) * (R - 0.15), Math.cos(th) * (R - 0.15), th, kleuren[i % kleuren.length]]);
+  }, []);
+  // Banden met een opening bij de ingang (thetaStart/Length van CylinderGeometry).
+  const bandArgs = (r, h) => [r, r, h, 28, 1, true, Math.PI + GAP / 2, Math.PI * 2 - GAP];
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      {[0.15, 0.35, 0.55].map((y, i) => <mesh key={i} position={[0, y, 0]} receiveShadow castShadow><boxGeometry args={[4.4 - i * 0.4, 0.2, 3.0 - i * 0.35]} /><meshStandardMaterial color={i % 2 ? "#d8d2c2" : steen} flatShading roughness={1} /></mesh>)}
-      {zuilen.map((x, i) => (
-        <group key={i} position={[x, 0.65, 1.0]}>
-          <mesh position={[0, 0.15, 0]}><boxGeometry args={[0.5, 0.16, 0.5]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-          <mesh position={[0, 1.15, 0]} castShadow><cylinderGeometry args={[0.19, 0.21, 1.9, 12]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-          <mesh position={[0, 2.2, 0]}><boxGeometry args={[0.5, 0.16, 0.5]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+      {/* zandvloer van de arena */}
+      <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[R - 0.1, R + 0.1, 0.12, 28]} /><meshStandardMaterial color="#e8d8a8" flatShading roughness={1} /></mesh>
+      {/* twee ringen pilaren (bogen-illusie) — onderste zwaarder dan de bovenste */}
+      {pilaren.map(([x, z], i) => (
+        <group key={i} position={[x, 0, z]}>
+          <mesh position={[0, 0.62, 0]} castShadow><boxGeometry args={[0.26, 1.05, 0.26]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+          <mesh position={[0, 1.8, 0]} castShadow><boxGeometry args={[0.2, 0.95, 0.2]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
         </group>
       ))}
-      <mesh position={[0, 3.0, 0.6]} castShadow><boxGeometry args={[4.0, 0.4, 1.5]} /><meshStandardMaterial color="#dcd6c6" flatShading roughness={1} /></mesh>
-      {/* driehoek-fronton: 3-zijdige cilinder (prisma) op zijn kant */}
-      <mesh position={[0, 3.55, 0.6]} rotation={[Math.PI / 2, Math.PI, 0]} castShadow><cylinderGeometry args={[0.9, 0.9, 1.5, 3]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-      <MagischePoort kleur="#ffd6a0" emoji="🏛️" label="De oudheid" z={-1.2} breedte={3.0} hoogte={3.2} />
+      {/* horizontale banden (met open ingang), zoals de ringen van het Colosseum */}
+      <mesh position={[0, 1.22, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
+      <mesh position={[0, 2.36, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
+      <mesh position={[0, 2.98, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.12, 0.34)} /><meshStandardMaterial color={steen} flatShading roughness={1} side={2} /></mesh>
+      {/* ingang-omlijsting: twee stevige deurposten + latei */}
+      {[-1, 1].map((k) => (
+        <mesh key={k} position={[Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, 0.95, Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R]} castShadow>
+          <boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} />
+        </mesh>
+      ))}
+      <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
+      {/* publiek: gekleurde blokjes-koppen op de bovenrand */}
+      {publiek.map(([x, z, th, kleur], i) => (
+        <group key={`p${i}`} position={[x, 3.28, z]} rotation={[0, th + Math.PI, 0]}>
+          <mesh><boxGeometry args={[0.16, 0.2, 0.14]} /><meshStandardMaterial color={kleur} flatShading /></mesh>
+          <mesh position={[0, 0.16, 0]}><boxGeometry args={[0.12, 0.12, 0.12]} /><meshStandardMaterial color="#e8b98a" flatShading /></mesh>
+        </group>
+      ))}
+      {/* rode vaandels aan de bovenrand */}
+      {[0.9, 2.6, 3.9, 5.4].map((th, i) => (
+        <mesh key={`v${i}`} position={[Math.sin(th) * (R + 0.18), 2.55, Math.cos(th) * (R + 0.18)]} rotation={[0, th, 0]}>
+          <boxGeometry args={[0.34, 0.7, 0.04]} /><meshStandardMaterial color="#b03a30" flatShading />
+        </mesh>
+      ))}
+      {/* het duel in het zand */}
+      <GladiatorenDuel />
+      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-3.6} breedte={2.6} hoogte={3.0} />
     </group>
   );
 }

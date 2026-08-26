@@ -195,7 +195,11 @@ export const ZOO_ASSETS = {
   // ── Tier B: landmark + magische poort ──
   kompas: { id: "kompas", kind: "attraction", name: "Kompas", emoji: "🧭", procedural: "kompas", price: 45, cells: 3 },
   eiffeltoren: { id: "eiffeltoren", kind: "attraction", name: "Eiffeltoren", emoji: "🗼", procedural: "eiffeltoren", price: 90, cells: 3 },
-  tempel: { id: "tempel", kind: "attraction", name: "Griekse tempel", emoji: "🏛️", procedural: "tempel", price: 85, cells: 5 },
+  // 🏟️ Was "Griekse tempel"; 26 aug (Mark) verbouwd tot Romeinse arena met
+  // gladiatoren-duel. botsCells:3 ≈ de echte muur (⌀ ~5,5 m) — vóór die fix
+  // botste je op het volle 5-cellen-reservaat (10×10 m onzichtbare muur:
+  // "hier kan ik niet omheen lopen").
+  tempel: { id: "tempel", kind: "attraction", name: "Romeinse arena", emoji: "🏟️", procedural: "tempel", price: 85, cells: 5, botsCells: 3 },
   wereldbol: { id: "wereldbol", kind: "attraction", name: "Wereldbol", emoji: "🌍", procedural: "wereldbol", price: 55, cells: 3 },
   telescoop: { id: "telescoop", kind: "attraction", name: "Sterrenwacht", emoji: "🔭", procedural: "telescoop", price: 70, cells: 3 },
   standbeeld: { id: "standbeeld", kind: "attraction", name: "Standbeeld", emoji: "🗿", procedural: "standbeeld", price: 60, cells: 3 },
