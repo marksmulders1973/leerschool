@@ -5,7 +5,7 @@
 import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial } from "three";
+import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
@@ -1638,13 +1638,42 @@ export function SkyClouds() {
 // grote rondje op eigen hoogte/snelheid/richting. `tekst` per zeppelin is de
 // haak voor later (partner-doek); nu null = leeg wit doek.
 const ZEPPELIN_VLOOT = [
-  { r: 52, h: 38, snelheid: 0.016, fase: 0.4, tekst: null },
+  // Test-doek (Mark 26 aug): het échte Leerkwartier-logo + naam op de laagste
+  // zeppelin. Volgende doeken (partners, bv. gemeente Den Haag) = regel erbij.
+  { r: 52, h: 38, snelheid: 0.016, fase: 0.4, tekst: "Leerkwartier", logo: "/logo.jpg" },
   { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: null },
   { r: 92, h: 50, snelheid: 0.009, fase: 4.9, tekst: null },
 ];
+// Doek-textuur: wit spandoek met (optioneel) logo links + naam ernaast,
+// getekend op een canvas. Zonder tekst/logo → geen textuur (kaal wit doek).
+function useZeppelinDoek(tekst, logo) {
+  const [tex, setTex] = useState(null);
+  useEffect(() => {
+    if (!tekst && !logo) { setTex(null); return undefined; }
+    let dood = false;
+    const canvas = document.createElement("canvas");
+    canvas.width = 1100; canvas.height = 350;
+    const ctx = canvas.getContext("2d");
+    const teken = (img) => {
+      if (dood) return;
+      ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, 1100, 350);
+      let x = 70;
+      if (img) { ctx.drawImage(img, 40, 35, 280, 280); x = 360; }
+      if (tekst) { ctx.fillStyle = "#14283c"; ctx.font = "800 118px system-ui, sans-serif"; ctx.textBaseline = "middle"; ctx.fillText(tekst, x, 182); }
+      const t = new CanvasTexture(canvas);
+      t.colorSpace = SRGBColorSpace;
+      t.anisotropy = 8;
+      setTex(t);
+    };
+    if (logo) { const img = new Image(); img.onload = () => teken(img); img.onerror = () => teken(null); img.src = logo; } else { teken(null); }
+    return () => { dood = true; };
+  }, [tekst, logo]);
+  return tex;
+}
 function Zeppelin({ data }) {
   const g = useRef();
   const schroef1 = useRef(), schroef2 = useRef();
+  const doekTex = useZeppelinDoek(data.tekst, data.logo);
   useFrame((s) => {
     const m = g.current; if (!m) return;
     const t = s.clock.elapsedTime;
@@ -1678,9 +1707,9 @@ function Zeppelin({ data }) {
           </group>
         </group>
       ))}
-      {/* reclame-doek op beide flanken — nu leeg wit; later partner-naam/logo */}
-      <mesh position={[0.8, 0.1, 1.85]}><planeGeometry args={[4.4, 1.4]} /><meshStandardMaterial color="#ffffff" roughness={0.5} /></mesh>
-      <mesh position={[0.8, 0.1, -1.85]} rotation={[0, Math.PI, 0]}><planeGeometry args={[4.4, 1.4]} /><meshStandardMaterial color="#ffffff" roughness={0.5} /></mesh>
+      {/* reclame-doek op beide flanken — leeg wit óf met logo/naam (doekTex) */}
+      <mesh position={[0.8, 0.1, 1.85]}><planeGeometry args={[4.4, 1.4]} />{doekTex ? <meshStandardMaterial map={doekTex} roughness={0.5} /> : <meshStandardMaterial color="#ffffff" roughness={0.5} />}</mesh>
+      <mesh position={[0.8, 0.1, -1.85]} rotation={[0, Math.PI, 0]}><planeGeometry args={[4.4, 1.4]} />{doekTex ? <meshStandardMaterial map={doekTex} roughness={0.5} /> : <meshStandardMaterial color="#ffffff" roughness={0.5} />}</mesh>
     </group>
   );
 }
