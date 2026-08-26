@@ -20,7 +20,7 @@ import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen, Opritten, 
 import { LEERTRAIL } from "./leerpadLint";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
-import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord } from "./ParkLeerobjecten";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord, RAKET_VLUCHT } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
@@ -908,6 +908,21 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   return null;
 }
 
+// 🚀 Raket-volg-camera: zodra RAKET_VLUCHT actief is (lancering bezig) neemt
+// deze de camera over — een vast punt schuin naast het lanceerplatform dat met
+// het schip mee omhoog kijkt (en bij de landing weer mee terug). Zo kun je de
+// raket écht nakijken, ook al kan het poppetje zelf niet zo ver omhoog kijken.
+function RaketVolgCamera() {
+  const doel = useRef(new Vector3());
+  useFrame((s) => {
+    if (!RAKET_VLUCHT.actief) return;
+    doel.current.set(RAKET_VLUCHT.px + 9, 2.8, RAKET_VLUCHT.pz + 11);
+    s.camera.position.lerp(doel.current, 0.07);
+    s.camera.lookAt(RAKET_VLUCHT.x, RAKET_VLUCHT.y, RAKET_VLUCHT.z);
+  });
+  return null;
+}
+
 // 🍟 Snack in je hand (Mark 26 aug: "een bakje friet in zijn hand, hij loopt
 // ermee, wordt vanzelf kleiner en na ~30 s is het op — dat was lekker"). Een
 // klein procedureel bakje/bekertje dat bij de rechterhand van het poppetje
@@ -1454,6 +1469,12 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         )}
         {railRoute && <RouteTrain route={railRoute} headRef={trainHeadRef} wagons={3} onLeermoment={onLeermoment} />}
         <RideCamera headRef={trainHeadRef} active={rideTrain && !!railRoute && !firstPerson} />
+        {/* 🚀 Raket-volg-camera: tijdens een lancering kijkt de camera automatisch
+            met de raket mee omhoog (Mark 26 aug: "ik kan hem niet nakijken omdat
+            het hoofd niet verder omhoog gaat"). NÁ de andere camera's gemount,
+            zodat zijn useFrame als laatste schrijft en dus wint zolang de vlucht
+            bezig is; daarna neemt de gewone camera het meteen weer over. */}
+        <RaketVolgCamera />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />

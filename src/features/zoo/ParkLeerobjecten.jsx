@@ -443,6 +443,12 @@ export function HollandseMolen({ position = [0, 0, 0], rotation = 0 }) {
 }
 
 /* 🚀 Raket — romp + neuskegel + vinnen op een lanceerplateau. → ruimtevaart. */
+// 📡 Vlucht-baken voor de volg-camera (Mark 26 aug: "ik kan hem niet nakijken
+// omdat het hoofd niet verder omhoog gaat"): tijdens de vlucht schrijft de
+// raket hier elke frame zijn wereldpositie; RaketVolgCamera in ZooScene kijkt
+// er dan automatisch mee omhoog. Gewone module-ref — geen React-state nodig.
+export const RAKET_VLUCHT = { actief: false, x: 0, y: 0, z: 0, px: 0, pz: 0 };
+
 // 🚀 Raket — mét echte lanceerknop (Mark 26 aug: "een rode knop 'Lanceer' en
 // als je erop drukt schiet de raket de ruimte in"). Tik op de rode knop op de
 // lanceerconsole → aftellen 3-2-1 → de raket trilt, stijgt met grote vlam en
@@ -459,6 +465,8 @@ export function Raket({ position = [0, 0, 0], rotation = 0 }) {
   const [teller, setTeller] = useState(null);
   const STIJG = 1.5, TOP = 7.5, ZWEEF = 11, DAAL = 18; // seconden in de vlucht
   const HOOG = 160;
+  // Bij weggaan uit het park nooit de volg-camera aan laten staan.
+  useEffect(() => () => { RAKET_VLUCHT.actief = false; }, []);
   useEffect(() => {
     if (fase !== "aftellen") return;
     setTeller(3);
@@ -480,6 +488,8 @@ export function Raket({ position = [0, 0, 0], rotation = 0 }) {
       rookRefs.current.forEach((m) => { if (m) m.visible = false; });
       return;
     }
+    RAKET_VLUCHT.actief = true;
+    RAKET_VLUCHT.px = position[0]; RAKET_VLUCHT.pz = position[2];
     if (!g) return;
     if (t0.current == null) t0.current = t;
     const u = t - t0.current;
@@ -488,8 +498,12 @@ export function Raket({ position = [0, 0, 0], rotation = 0 }) {
     else if (u < TOP) { const a = (u - STIJG) / (TOP - STIJG); y = a * a * HOOG; wieb = 0.015; stuw = true; } // stijgen
     else if (u < ZWEEF) { y = HOOG + (u - TOP) * 6; }                             // zweven in "de ruimte"
     else if (u < DAAL) { const a = (u - ZWEEF) / (DAAL - ZWEEF); const top = HOOG + (ZWEEF - TOP) * 6; y = top * (1 - a * a * (3 - 2 * a)); stuw = a > 0.5; } // dalen + rem-vlam
-    else if (!klaarRef.current) { klaarRef.current = true; setFase("klaar"); }
+    else if (!klaarRef.current) { klaarRef.current = true; RAKET_VLUCHT.actief = false; setFase("klaar"); }
     g.position.set(Math.sin(t * 43) * wieb, y, Math.sin(t * 37 + 1) * wieb);
+    // Baken voor de volg-camera: midden van het schip in wereld-coördinaten.
+    RAKET_VLUCHT.x = position[0] + g.position.x;
+    RAKET_VLUCHT.y = position[1] + y + 2.2;
+    RAKET_VLUCHT.z = position[2] + g.position.z;
     if (vlam.current) {
       const k = (stuw ? 1.5 : 0.35) + Math.sin(t * 22) * 0.25;
       vlam.current.scale.set(k, stuw ? k * 1.6 : k, k);
