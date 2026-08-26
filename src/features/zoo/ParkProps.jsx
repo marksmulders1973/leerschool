@@ -527,6 +527,10 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     const mag = Math.hypot(mx, my);
     const node = g.current;
     if (!node) return;
+    // Verborgen (in attractie/trein/zeppelin): bevries het poppetje — anders
+    // loopt het onzichtbaar mee met de joystick terwijl jij iets anders bestuurt,
+    // en sta je na het uitstappen ineens ergens anders (26 aug).
+    if (verborgen) { moving.current = false; return; }
     const dts = Math.min(dt, 0.05); // tijdstap begrenzen (geen sprong na tab-wissel)
 
     // ── Eerstepersoons: links/rechts draait je blik, vooruit/achteruit loopt waar
@@ -1638,15 +1642,15 @@ export function SkyClouds() {
 // grote rondje op eigen hoogte/snelheid/richting. `tekst` per zeppelin is de
 // haak voor later (partner-doek); nu null = leeg wit doek.
 const ZEPPELIN_VLOOT = [
-  // Test-doek (Mark 26 aug): het échte Leerkwartier-logo + naam op de laagste
-  // zeppelin. Volgende doeken (partners, bv. gemeente Den Haag) = regel erbij.
-  { r: 52, h: 38, snelheid: 0.016, fase: 0.4, tekst: "Leerkwartier", logo: "/logo.jpg" },
+  // (De Leerkwartier-zeppelin met logo-doek is de bestuurbare InstapZeppelin in
+  //  ZooScene geworden — dit zijn de twee witte sfeer-zeppelins; partner-doeken
+  //  later = tekst/logo invullen, bv. gemeente Den Haag.)
   { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: null },
   { r: 92, h: 50, snelheid: 0.009, fase: 4.9, tekst: null },
 ];
 // Doek-textuur: wit spandoek met (optioneel) logo links + naam ernaast,
 // getekend op een canvas. Zonder tekst/logo → geen textuur (kaal wit doek).
-function useZeppelinDoek(tekst, logo) {
+export function useZeppelinDoek(tekst, logo) {
   const [tex, setTex] = useState(null);
   useEffect(() => {
     if (!tekst && !logo) { setTex(null); return undefined; }
@@ -1670,23 +1674,17 @@ function useZeppelinDoek(tekst, logo) {
   }, [tekst, logo]);
   return tex;
 }
-function Zeppelin({ data }) {
-  const g = useRef();
+// De romp zelf (herbruikbaar): ook de bestuurbare InstapZeppelin in ZooScene
+// gebruikt deze — één bron voor het uiterlijk.
+export function ZeppelinRomp({ doekTex = null }) {
   const schroef1 = useRef(), schroef2 = useRef();
-  const doekTex = useZeppelinDoek(data.tekst, data.logo);
-  useFrame((s) => {
-    const m = g.current; if (!m) return;
-    const t = s.clock.elapsedTime;
-    const a = data.fase + t * data.snelheid;
-    m.position.set(Math.sin(a) * data.r, data.h + Math.sin(t * 0.32 + data.fase) * 0.9, Math.cos(a) * data.r);
-    m.rotation.y = a + (data.snelheid >= 0 ? 0 : Math.PI); // neus in vaarrichting
-    m.rotation.z = Math.sin(t * 0.27 + data.fase) * 0.02;  // heel licht deinen
+  useFrame(() => {
     if (schroef1.current) schroef1.current.rotation.x += 0.55;
     if (schroef2.current) schroef2.current.rotation.x += 0.55;
   });
   const wit = "#f5f7f9";
   return (
-    <group ref={g}>
+    <group>
       {/* romp: langgerekte ballon */}
       <mesh scale={[6.8, 1.8, 1.8]}><sphereGeometry args={[1, 22, 16]} /><meshStandardMaterial color={wit} roughness={0.35} /></mesh>
       {/* neusdop */}
@@ -1712,6 +1710,20 @@ function Zeppelin({ data }) {
       <mesh position={[0.8, 0.1, -1.85]} rotation={[0, Math.PI, 0]}><planeGeometry args={[4.4, 1.4]} />{doekTex ? <meshStandardMaterial map={doekTex} roughness={0.5} /> : <meshStandardMaterial color="#ffffff" roughness={0.5} />}</mesh>
     </group>
   );
+}
+
+function Zeppelin({ data }) {
+  const g = useRef();
+  const doekTex = useZeppelinDoek(data.tekst, data.logo);
+  useFrame((s) => {
+    const m = g.current; if (!m) return;
+    const t = s.clock.elapsedTime;
+    const a = data.fase + t * data.snelheid;
+    m.position.set(Math.sin(a) * data.r, data.h + Math.sin(t * 0.32 + data.fase) * 0.9, Math.cos(a) * data.r);
+    m.rotation.y = a + (data.snelheid >= 0 ? 0 : Math.PI); // neus in vaarrichting
+    m.rotation.z = Math.sin(t * 0.27 + data.fase) * 0.02;  // heel licht deinen
+  });
+  return <group ref={g}><ZeppelinRomp doekTex={doekTex} /></group>;
 }
 export function Zeppelins() {
   // Op zwakke apparaten 1 zeppelin, anders de hele vloot van 3.

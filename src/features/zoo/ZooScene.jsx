@@ -6,7 +6,8 @@ import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide } from "three";
-import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
+import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
+import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
 import HouseModel from "./HouseModel";
 import Buddy from "./Buddy";
@@ -931,6 +932,171 @@ function RaketVolgCamera() {
   return null;
 }
 
+// 🛩️ De instap-zeppelin (Mark 26 aug: "tof als je in kan stappen en hem
+// besturen — om de zoveel tijd landt hij, je loopt erin en ziet als Flight
+// Simulator de besturing"). De Leerkwartier-zeppelin (met logo-doek) vaart
+// vrij rond, landt elke ~1,5 minuut op het zeppelinveld (noordoost-veld bij
+// het bouwbord), wacht ~35 s met de trap uit, en wie instapt vliegt zélf:
+// joystick/pijltjes = sturen + gas, cockpit-knoppen = stijgen/dalen,
+// 🛬 = automatische terugvlucht en landing. Camera = achtervolg-cockpit;
+// gemount NÁ de andere camera's zodat hij tijdens de vlucht wint.
+const ZEP_PAD = [46, 44];              // landingsveld (wereld-coördinaten)
+const ZEP_CRUISE_S = 80, ZEP_GELAND_S = 35;
+function InstapZeppelin({ inputRef, onRit, heightRef }) {
+  const g = useRef();
+  const fase = useRef({ naam: "cruise", t0: null });
+  const pos = useRef(new Vector3(ZEP_PAD[0], 40, ZEP_PAD[1]));
+  const heading = useRef(Math.PI);
+  const vaart = useRef(0);
+  const klim = useRef(0);
+  const [ui, setUi] = useState(null);   // 'geland' | 'bestuur' — welke knoppen in beeld
+  const hoogteDom = useRef(null), vaartDom = useRef(null); // cockpit-metertjes (direct DOM, geen re-renders)
+  const doekTex = useZeppelinDoek("Leerkwartier", "/logo.jpg");
+  const grondBij = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
+  const padY = () => grondBij(ZEP_PAD[0], ZEP_PAD[1]) + 2.55; // gondel nét boven het gras
+  useFrame((s, dtRaw) => {
+    const m = g.current; if (!m) return;
+    const dt = Math.min(dtRaw, 0.05);
+    const t = s.clock.elapsedTime;
+    if (fase.current.t0 == null) fase.current.t0 = t;
+    const u = t - fase.current.t0;
+    const ga = (naam) => { fase.current = { naam, t0: t }; };
+    const naam = fase.current.naam;
+    const p = pos.current;
+    const vlieg = (snelheid) => { p.x += Math.sin(heading.current) * snelheid * dt; p.z += Math.cos(heading.current) * snelheid * dt; };
+    // koers geleidelijk naar een doelpunt draaien (autopilot)
+    const stuurNaar = (dx, dz, rate = 0.9) => {
+      const doel = Math.atan2(dx - p.x, dz - p.z);
+      let d = doel - heading.current;
+      while (d > Math.PI) d -= Math.PI * 2;
+      while (d < -Math.PI) d += Math.PI * 2;
+      heading.current += Math.max(-rate * dt, Math.min(rate * dt, d));
+      return Math.hypot(dx - p.x, dz - p.z);
+    };
+    if (naam === "cruise") {
+      // vrij rondzwerven: zachte bochten, binnen ~r90 blijven, hoogte ~40
+      heading.current += Math.sin(t * 0.13) * 0.22 * dt;
+      if (Math.hypot(p.x, p.z) > 90) stuurNaar(0, 0, 0.5);
+      p.y += (40 + Math.sin(t * 0.3) * 1.2 - p.y) * Math.min(1, dt * 0.5);
+      vlieg(5);
+      if (u > ZEP_CRUISE_S) ga("aanvliegen");
+    } else if (naam === "aanvliegen") {
+      const afstand = stuurNaar(ZEP_PAD[0], ZEP_PAD[1], 0.9);
+      p.y += (Math.max(padY() + 10, 16) - p.y) * Math.min(1, dt * 0.4);
+      vlieg(Math.min(7, Math.max(2, afstand * 0.25)));
+      if (afstand < 2.5) ga("dalen");
+    } else if (naam === "dalen") {
+      p.x += (ZEP_PAD[0] - p.x) * Math.min(1, dt * 1.2);
+      p.z += (ZEP_PAD[1] - p.z) * Math.min(1, dt * 1.2);
+      p.y = Math.max(padY(), p.y - 2.2 * dt);
+      if (p.y <= padY() + 0.01) { ga("geland"); setUi("geland"); }
+    } else if (naam === "geland") {
+      p.y = padY();
+      if (u > ZEP_GELAND_S) { setUi(null); ga("opstijgen"); }
+    } else if (naam === "opstijgen") {
+      p.y += 2.6 * dt;
+      vlieg(Math.min(4, u * 1.2));
+      if (p.y >= 38) ga("cruise");
+    } else if (naam === "bestuur") {
+      const inp = inputRef?.current || {};
+      const k = inp.keys || {};
+      let mx = (k.ArrowRight || k.KeyD ? 1 : 0) - (k.ArrowLeft || k.KeyA ? 1 : 0) + (inp.joy?.x || 0);
+      let my = (k.ArrowDown || k.KeyS ? 1 : 0) - (k.ArrowUp || k.KeyW ? 1 : 0) + (inp.joy?.y || 0);
+      mx = Math.max(-1, Math.min(1, mx));
+      my = Math.max(-1, Math.min(1, my));
+      heading.current -= mx * dt * 0.7;
+      const doelVaart = -my * 9; // joystick omhoog = vooruit
+      vaart.current += (doelVaart - vaart.current) * Math.min(1, dt * 1.4);
+      p.y = Math.max(grondBij(p.x, p.z) + 8, Math.min(64, p.y + klim.current * 3 * dt));
+      vlieg(vaart.current);
+      const afstand = Math.hypot(p.x, p.z);
+      if (afstand > 150) { p.x *= 150 / afstand; p.z *= 150 / afstand; stuurNaar(0, 0, 1.4); }
+    } else if (naam === "terugkeer") {
+      const afstand = stuurNaar(ZEP_PAD[0], ZEP_PAD[1], 1.0);
+      vaart.current += (Math.min(8, Math.max(2, afstand * 0.3)) - vaart.current) * Math.min(1, dt * 1.2);
+      vlieg(vaart.current);
+      if (afstand > 6) p.y += (Math.max(padY() + 10, 16) - p.y) * Math.min(1, dt * 0.5);
+      else {
+        p.x += (ZEP_PAD[0] - p.x) * Math.min(1, dt * 1.2);
+        p.z += (ZEP_PAD[1] - p.z) * Math.min(1, dt * 1.2);
+        p.y = Math.max(padY(), p.y - 2.4 * dt);
+        if (p.y <= padY() + 0.01) { onRit && onRit(false); ga("geland"); setUi("geland"); }
+      }
+    }
+    m.position.copy(p);
+    m.rotation.y = heading.current;
+    m.rotation.z = naam === "bestuur" ? -Math.max(-1, Math.min(1, vaart.current / 9)) * 0.04 : Math.sin(t * 0.27) * 0.015;
+    // cockpit-metertjes live bijwerken (zonder React-re-render)
+    if (hoogteDom.current) hoogteDom.current.textContent = `${Math.max(0, Math.round(p.y - grondBij(p.x, p.z)))} m`;
+    if (vaartDom.current) vaartDom.current.textContent = `${Math.abs(Math.round(vaart.current * 6))} km/u`;
+    // achtervolg-cockpit-camera tijdens de vlucht (laatste useFrame → wint)
+    if (naam === "bestuur" || naam === "terugkeer") {
+      const fx = Math.sin(heading.current), fz = Math.cos(heading.current);
+      s.camera.position.set(p.x - fx * 8.5, p.y + 1.4, p.z - fz * 8.5);
+      s.camera.lookAt(p.x + fx * 14, p.y - 1.6, p.z + fz * 14);
+    }
+  });
+  const stapIn = (e) => {
+    e?.stopPropagation?.();
+    vaart.current = 0; klim.current = 0;
+    fase.current = { naam: "bestuur", t0: null };
+    setUi("bestuur");
+    onRit && onRit(true);
+    try { track?.("park_zeppelin_rit", {}); } catch { /* */ }
+  };
+  const land = () => { klim.current = 0; fase.current = { naam: "terugkeer", t0: null }; setUi(null); };
+  const padGrondY = grondBij(ZEP_PAD[0], ZEP_PAD[1]);
+  const knopStijl = { pointerEvents: "auto", border: "none", borderRadius: 12, padding: "10px 14px", font: "900 15px system-ui", color: "#fff", background: "#3a4754", cursor: "pointer", touchAction: "none" };
+  return (
+    <group>
+      {/* 🅷 landingsveld: platform + markering + windzak */}
+      <group position={[ZEP_PAD[0], padGrondY, ZEP_PAD[1]]}>
+        <mesh position={[0, 0.05, 0]} receiveShadow><cylinderGeometry args={[4.2, 4.4, 0.1, 24]} /><meshStandardMaterial color="#9aa4ae" roughness={0.9} /></mesh>
+        <mesh position={[0, 0.11, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[3.4, 3.9, 24]} /><meshStandardMaterial color="#e8f0f6" roughness={0.8} /></mesh>
+        <mesh position={[0, 0.11, 0]}><boxGeometry args={[0.5, 0.02, 2.4]} /><meshStandardMaterial color="#e8f0f6" roughness={0.8} /></mesh>
+        <mesh position={[-0.9, 0.11, 0]}><boxGeometry args={[0.5, 0.02, 2.4]} /><meshStandardMaterial color="#e8f0f6" roughness={0.8} /></mesh>
+        <mesh position={[0.9, 0.11, 0]}><boxGeometry args={[0.5, 0.02, 2.4]} /><meshStandardMaterial color="#e8f0f6" roughness={0.8} /></mesh>
+        <mesh position={[4.6, 1.1, 0]}><cylinderGeometry args={[0.04, 0.05, 2.2, 8]} /><meshStandardMaterial color="#8a939d" /></mesh>
+        <mesh position={[4.9, 2.1, 0]} rotation={[0, 0, -Math.PI / 2]}><coneGeometry args={[0.18, 0.7, 8, 1, true]} /><meshStandardMaterial color="#e8722c" side={2} /></mesh>
+      </group>
+      {/* de zeppelin zelf */}
+      <group ref={g}>
+        <ZeppelinRomp doekTex={doekTex} />
+        {/* trapje + instap-knop, alleen als hij geland is */}
+        {ui === "geland" && (
+          <>
+            <mesh position={[1.2, -2.5, 0.9]} rotation={[0.6, 0, 0]}><boxGeometry args={[0.8, 0.08, 1.4]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
+            <Html position={[1.2, -0.6, 1.4]} center distanceFactor={11} zIndexRange={[9, 0]}>
+              <button onClick={stapIn} style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "10px 20px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 4px 14px rgba(0,0,0,.4)", cursor: "pointer", whiteSpace: "nowrap" }}>
+                🛩️ Instappen
+              </button>
+            </Html>
+          </>
+        )}
+        {/* 🎛️ Flight-Simulator-cockpit: overlay met meters + knoppen */}
+        {ui === "bestuur" && (
+          <Html fullscreen zIndexRange={[11, 0]} style={{ pointerEvents: "none" }}>
+            <div style={{ position: "absolute", left: "50%", bottom: "calc(14px + env(safe-area-inset-bottom))", transform: "translateX(-50%)", display: "flex", alignItems: "center", gap: 10, background: "linear-gradient(180deg,#2a3440,#1d252e)", border: "2px solid #46525f", borderRadius: 18, padding: "10px 14px", boxShadow: "0 10px 32px rgba(0,0,0,.45)", pointerEvents: "auto" }}>
+              <div style={{ textAlign: "center", minWidth: 74 }}>
+                <div style={{ font: "700 10px system-ui", color: "#8fa0b0", letterSpacing: 1 }}>HOOGTE</div>
+                <div ref={hoogteDom} style={{ font: "900 17px ui-monospace, monospace", color: "#7be08a" }}>— m</div>
+              </div>
+              <div style={{ textAlign: "center", minWidth: 74 }}>
+                <div style={{ font: "700 10px system-ui", color: "#8fa0b0", letterSpacing: 1 }}>SNELHEID</div>
+                <div ref={vaartDom} style={{ font: "900 17px ui-monospace, monospace", color: "#7bc6ff" }}>— km/u</div>
+              </div>
+              <button style={knopStijl} onPointerDown={() => { klim.current = 1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬆️</button>
+              <button style={knopStijl} onPointerDown={() => { klim.current = -1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬇️</button>
+              <button onClick={land} style={{ ...knopStijl, background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)" }}>🛬 Landen</button>
+              <div style={{ font: "700 10.5px/1.35 system-ui", color: "#8fa0b0", maxWidth: 120 }}>Joystick of pijltjes = sturen en gas geven</div>
+            </div>
+          </Html>
+        )}
+      </group>
+    </group>
+  );
+}
+
 // 🍟 Snack in je hand (Mark 26 aug: "een bakje friet in zijn hand, hij loopt
 // ermee, wordt vanzelf kleiner en na ~30 s is het op — dat was lekker"). Een
 // klein procedureel bakje/bekertje dat bij de rechterhand van het poppetje
@@ -1056,6 +1222,7 @@ function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
 
 export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null }) {
   const [ghost, setGhost] = useState(null);
+  const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de instap-zeppelin
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -1456,9 +1623,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* Spawn op het starter-plein (z≈64, bij de start van het leerpad-lint),
             niet aan de verre rand — anders begint elke speler in niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
-        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} climbRef={climbRef} />
+        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain || zeppelinRit} zweef={zweef} climbRef={climbRef} />
         {/* 🍟 Je gekochte snack loopt mee in je hand en gaat vanzelf op. */}
-        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain} onOp={onSnackOp} />}
+        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain || zeppelinRit} onOp={onSnackOp} />}
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
@@ -1485,11 +1652,14 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
             zodat zijn useFrame als laatste schrijft en dus wint zolang de vlucht
             bezig is; daarna neemt de gewone camera het meteen weer over. */}
         <RaketVolgCamera />
+        {/* 🛩️ De bestuurbare Leerkwartier-zeppelin + landingsveld. NÁ de andere
+            camera's gemount: tijdens de vlucht wint zijn cockpit-camera. */}
+        <InstapZeppelin inputRef={inputRef} onRit={setZeppelinRit} heightRef={heightFnRef} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
-        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode} onGids={onGidsMoment} />
+        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit} onGids={onGidsMoment} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
-        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain} onDoor={onPoortDoor} />
+        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit} onDoor={onPoortDoor} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
 
         {placing && (
