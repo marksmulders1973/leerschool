@@ -20,7 +20,7 @@ import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen, Opritten, 
 import { LEERTRAIL } from "./leerpadLint";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
-import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord, RAKET_VLUCHT } from "./ParkLeerobjecten";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord, RAKET_VLUCHT, LeerBord } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
 import { LEERMOMENT_BY_ASSET, POORT_ASSETS } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
@@ -384,24 +384,32 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   if (a.procedural === "cilinder") return <Cilinder position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
   if (a.procedural === "zwembad") return <Zwembad position={[x, y, z]} rotation={rotation} maat={maat ?? 3} goud={goud} goudRest={goudRest} />;
   // 🎡 Interactief-park-masterplan (Mark 16-17 aug) — leerobjecten + poorten.
-  if (a.procedural === "klok") return <Klokkentoren position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "weegschaal") return <Weegschaal position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "breukentaart") return <Breukentaart position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "moestuin") return <Moestuin position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "telraam") return <Telraam position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "parkkaart") return <Parkkaart position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "kompas") return <Kompas position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "eiffeltoren") return <Eiffeltoren position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "tempel") return <GriekseTempel position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "wereldbol") return <Wereldbol position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "telescoop") return <Sterrenwacht position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "standbeeld") return <Standbeeld position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "molen") return <HollandseMolen position={[x, y, z]} rotation={rotation} />;
+  // 🎓 Elk leerstation krijgt een leer-bord naast zich (Mark 26 aug: "geldt dit
+  // voor het hele park?"): de gekoppelde les(sen) als zichtbare knoppen. De
+  // vormen-familie (kubus/bol/…) niet — die heeft al de eigen studie/oefen-knop.
+  const metLeerBord = (node) => {
+    const moment = LEERMOMENT_BY_ASSET[assetId];
+    if (!moment || !onOefenen) return node;
+    return <group>{node}<LeerBord moment={moment} onOefenen={onOefenen} position={[x + 1.9, y, z + 1.5]} /></group>;
+  };
+  if (a.procedural === "klok") return metLeerBord(<Klokkentoren position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "weegschaal") return metLeerBord(<Weegschaal position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "breukentaart") return metLeerBord(<Breukentaart position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "moestuin") return metLeerBord(<Moestuin position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "telraam") return metLeerBord(<Telraam position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "parkkaart") return metLeerBord(<Parkkaart position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "kompas") return metLeerBord(<Kompas position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "eiffeltoren") return metLeerBord(<Eiffeltoren position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "tempel") return metLeerBord(<GriekseTempel position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "wereldbol") return metLeerBord(<Wereldbol position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "telescoop") return metLeerBord(<Sterrenwacht position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "standbeeld") return metLeerBord(<Standbeeld position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "molen") return metLeerBord(<HollandseMolen position={[x, y, z]} rotation={rotation} />);
   if (a.procedural === "raket") return <Raket position={[x, y, z]} rotation={rotation} onOefenen={onOefenen} />;
-  if (a.procedural === "vulkaan") return <Vulkaan position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "kas") return <Kas position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "weerstation") return <Weerstation position={[x, y, z]} rotation={rotation} />;
-  if (a.procedural === "spaarpot") return <Spaarpot position={[x, y, z]} rotation={rotation} />;
+  if (a.procedural === "vulkaan") return metLeerBord(<Vulkaan position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "kas") return metLeerBord(<Kas position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "weerstation") return metLeerBord(<Weerstation position={[x, y, z]} rotation={rotation} />);
+  if (a.procedural === "spaarpot") return metLeerBord(<Spaarpot position={[x, y, z]} rotation={rotation} />);
   if (a.procedural === "bordBouw") return <Bouwbord position={[x, y, z]} rotation={rotation} />;
   if (a.procedural === "bordZwembad") return <Bouwbord position={[x, y, z]} rotation={rotation} variant="zwembad" />;
   if (a.procedural === "bench") return <Bench position={[x, y, z]} rotation={rotation} />;
