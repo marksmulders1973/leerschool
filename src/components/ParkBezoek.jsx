@@ -135,6 +135,15 @@ export default function ParkBezoek({ code, onHome }) {
           moveIdx={-1}
           inputRef={inputRef}
           parkNaam="Dierenpark"
+          onOefenen={(pid) => {
+            // 🎓 Lessen zijn gratis en zonder account — dus ook een bezoeker mag
+            // vanaf het leer-bord (bv. bij de raket) direct de les in (Mark 26
+            // aug: "waarom kunnen ze niet naar de lessen?"). Via de bestaande
+            // ?pad=-deeplink; meteen ook een groei-lus: vriendje ziet park →
+            // tikt een les → zit in Leerkwartier.
+            try { track("park_naar_leren", { via: "bezoek_bord", pad: pid }); } catch { /* */ }
+            window.location.href = "/?pad=" + encodeURIComponent(pid);
+          }}
         />
       </Suspense>
       </ParkErrorBoundary>
