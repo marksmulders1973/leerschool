@@ -433,6 +433,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
   const [draagSnack, setDraagSnack] = useState(null); // 🍟 snack in je hand: { id, label, vorm } — loopt mee en gaat vanzelf op
+  const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de zeppelin → onderbalk weg, bouw-modus dicht
   const [sceneKey, setSceneKey] = useState(0); // bump = verse mount van de 3D-scene (retry na park-fout)
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
@@ -2211,6 +2212,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyEye={buddyEye}
           draagSnack={draagSnack}
           onSnackOp={snackOp}
+          onZeppelinRit={(v) => {
+            // Instappen sluit alle doe-modi: de bouw-balk lag anders bóven het
+            // cockpit-paneel en dan kon je niet sturen (Mark 26 aug, screenshot).
+            setZeppelinRit(v);
+            if (v) { setBouwen(false); setShopCat(null); setPlacing(null); setSelectedIdx(null); setMenuOpen(false); setFirstPerson(false); setBuddyEye(false); }
+          }}
           onContextLost={() => flits("Het park viel even stil — blijft het beeld bevroren? Doe de pagina dan opnieuw (veeg omlaag of druk F5), je park is veilig opgeslagen.")}
         />
       </Suspense>
@@ -2407,7 +2414,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Onderbalk: contextueel. */}
       {/* Onderbalk: alléén in bouw-modus of een actieve doe-modus in beeld —
           tijdens gewoon spelen is het hele scherm park. */}
-      {(bouwen || placing || sculptMode || waterMode || groundMode || selectedIdx != null) && (
+      {!zeppelinRit && (bouwen || placing || sculptMode || waterMode || groundMode || selectedIdx != null) && (
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", flexWrap: "wrap", animation: "zooBalkIn .22s ease-out" }}>
         <style>{`@keyframes zooBalkIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}`}</style>
         {groundMode ? (
