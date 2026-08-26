@@ -432,8 +432,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
-  const [inHand, setInHand] = useState(null); // 🥕/🦴 gekocht bij de patatkraam, nog niet gegeven ('wortel' | 'bot')
-  const [eetSnack, setEetSnack] = useState(null); // 😋 snack die je nu opeet: { emoji, label, haps, drink }
+  const [eetSnack, setEetSnack] = useState(null); // 😋 snack die je nu opeet: { emoji, label, id, prijs, haps, drink }
   const [sceneKey, setSceneKey] = useState(0); // bump = verse mount van de 3D-scene (retry na park-fout)
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
@@ -986,11 +985,23 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     bot: { emoji: "🦴", label: "bot", prijs: 3 },
   };
   const HONDEN = new Set(["husky", "shibaInu", "pug", "wolf"]);
+  // In je hand bewaren we in meta.owned (kliktocht-review 26 aug): zo eet het
+  // park verlaten je gekochte voer niet stilletjes op — je houdt het gewoon vast.
+  const inHand = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.voerInHand) || null;
+  const setInHand = (v) => setMeta((m) => { if (!m) return m; const o = m.owned && !Array.isArray(m.owned) ? m.owned : {}; return { ...m, owned: { ...o, voerInHand: v || null } }; });
+  // Eerlijke niet-genoeg-tekst (zelfde regel als startKopen, review 17 jul): is
+  // het kwartier vandaag al uitbetaald, dan geen loze "leer een kwartier"-belofte.
+  const flitsTeWeinigMuntjes = () => {
+    const kwartierAlGehad = meta?.last_kwartier_date === vandaag();
+    flits(kwartierAlGehad
+      ? "Niet genoeg muntjes — morgen verdient je leerkwartier weer muntjes! Tip: blokken bouwen is gratis."
+      : "Niet genoeg muntjes — leer een kwartier om te sparen!");
+  };
   const koopSnackZelf = (produkt, inkoop, drink) => {
     if (!produkt) return;
-    if (coins < inkoop) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
+    if (coins < inkoop) { flitsTeWeinigMuntjes(); return; }
     setMeta((m) => (m ? { ...m, coins: m.coins - inkoop } : m));
-    setEetSnack({ emoji: produkt.emoji, label: produkt.label, haps: 3, drink: !!drink });
+    setEetSnack({ emoji: produkt.emoji, label: produkt.label, id: produkt.id, prijs: inkoop, haps: 3, drink: !!drink });
     sluitSelectie();
     try { track("park_snack_zelf", { product: produkt.id, prijs: inkoop }); } catch { /* */ }
   };
@@ -998,9 +1009,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const v = VOER[type];
     if (!v) return;
     if (inHand) { flits(`Je hebt al een ${VOER[inHand].label} in je hand — geef die eerst!`); return; }
-    if (coins < v.prijs) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
-    setMeta((m) => (m ? { ...m, coins: m.coins - v.prijs } : m));
-    setInHand(type);
+    if (coins < v.prijs) { flitsTeWeinigMuntjes(); return; }
+    setMeta((m) => { if (!m) return m; const o = m.owned && !Array.isArray(m.owned) ? m.owned : {}; return { ...m, coins: m.coins - v.prijs, owned: { ...o, voerInHand: type } }; });
     sluitSelectie();
     flits(type === "wortel"
       ? "🥕 Wortel gekocht! Loop naar een dier en tik erop om 'm te geven."
@@ -1010,8 +1020,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // Terugleggen = muntjes terug — geen straf voor per ongeluk kopen.
   const legVoerTerug = () => {
     if (!inHand) return;
-    setMeta((m) => (m ? { ...m, coins: m.coins + VOER[inHand].prijs } : m));
-    setInHand(null);
+    const prijs = VOER[inHand].prijs;
+    setMeta((m) => { if (!m) return m; const o = m.owned && !Array.isArray(m.owned) ? m.owned : {}; return { ...m, coins: m.coins + prijs, owned: { ...o, voerInHand: null } }; });
     flits("Teruggelegd — je krijgt je muntjes terug.");
   };
   // Echt geven: het dier eet en telt als gevoerd (een verstopt dier komt terug).
@@ -1048,26 +1058,27 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   // Hap voor hap (of slok voor slok) — bij de laatste hap is 'ie op.
   const neemHap = () => {
-    setEetSnack((s) => {
-      if (!s) return s;
-      if (s.haps <= 1) {
-        flits(s.drink ? `😋 Ahh, dat was lekker! De ${s.label.toLowerCase()} is op.` : `😋 Mmm, dat was lekker! De ${s.label.toLowerCase()} is op.`);
-        try { track("park_snack_op", { product: s.label }); } catch { /* */ }
-        return null;
-      }
-      return { ...s, haps: s.haps - 1 };
-    });
+    if (!eetSnack) return;
+    if (eetSnack.haps <= 1) {
+      flits(eetSnack.drink ? `😋 Ahh, dat was lekker! De ${eetSnack.label.toLowerCase()} is op.` : `😋 Mmm, dat was lekker! De ${eetSnack.label.toLowerCase()} is op.`);
+      try { track("park_snack_op", { product: eetSnack.id || eetSnack.label }); } catch { /* */ }
+      setEetSnack(null);
+      return;
+    }
+    setEetSnack({ ...eetSnack, haps: eetSnack.haps - 1 });
+  };
+  // Toch niet? Muntjes terug — anders gooit ✕ een betaalde snack stilletjes weg.
+  const eetSnackTochNiet = () => {
+    if (!eetSnack) return;
+    const prijs = eetSnack.prijs || 0;
+    if (prijs > 0) setMeta((m) => (m ? { ...m, coins: m.coins + prijs } : m));
+    setEetSnack(null);
+    flits("Toch niet? Je krijgt je muntjes terug.");
   };
 
   const startKopen = (p) => {
     if (coins < p.price) {
-      // Eerlijke tekst (review 17 jul): is het kwartier vandaag al uitbetaald,
-      // dan is "leer een kwartier om te sparen" een loze belofte — dat voelt
-      // als bedrog en beschadigt precies de park→leren-brug.
-      const kwartierAlGehad = meta?.last_kwartier_date === vandaag();
-      flits(kwartierAlGehad
-        ? "Niet genoeg muntjes — morgen verdient je leerkwartier weer muntjes! Tip: blokken bouwen is gratis."
-        : "Niet genoeg muntjes — leer een kwartier om te sparen!");
+      flitsTeWeinigMuntjes();
       return;
     }
     setSelectedIdx(null);
@@ -1668,7 +1679,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const poortCooldown = useRef(new Map());
   const poortTimer = useRef(null);
   const onPoortDoor = (assetId) => {
-    if (placing || sculptMode || waterMode || groundMode || tafereel || dialoog || menuOpen || panel || rekenVraag || selectedIdx != null) return;
+    if (placing || sculptMode || waterMode || groundMode || tafereel || dialoog || menuOpen || panel || rekenVraag || eetSnack || selectedIdx != null) return;
     const info = POORT_ASSETS[assetId];
     if (!info) return;
     const nu = Date.now();
@@ -1894,7 +1905,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 🥕🦴 In je hand: gekocht dier-voer, tot je het echt geeft (Mark 26 aug). */}
       {inHand && (
-        <div style={{ position: "absolute", top: 62, left: "50%", transform: "translateX(-50%)", zIndex: 11, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "center", maxWidth: "94vw" }}>
+        <div style={{ position: "absolute", top: 104, left: "50%", transform: "translateX(-50%)", zIndex: 11, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "center", maxWidth: "94vw" }}>
           <span style={{ font: "800 12.5px system-ui", color: "#234", background: "rgba(255,255,255,0.94)", borderRadius: 999, padding: "8px 14px", boxShadow: "0 3px 10px rgba(0,0,0,.25)", textAlign: "center" }}>
             {inHand === "wortel" ? "🥕 Wortel in je hand — tik op een dier om 'm te geven" : "🦴 Bot in je hand — tik op een hond, of:"}
           </span>
@@ -1910,7 +1921,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {eetSnack && (
         <div style={{ position: "absolute", inset: 0, zIndex: 16, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(8,16,10,0.45)", backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)" }}>
           <div style={{ position: "relative", background: "#fffef8", borderRadius: 22, padding: "22px 26px 20px", maxWidth: 320, width: "88vw", textAlign: "center", boxShadow: "0 14px 44px rgba(0,0,0,.4)" }}>
-            <button onClick={() => setEetSnack(null)} title="Later opeten" style={{ position: "absolute", top: 10, right: 10, border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#567", background: "#eee", cursor: "pointer" }}>✕</button>
+            <button onClick={eetSnackTochNiet} title="Toch niet — muntjes terug" style={{ position: "absolute", top: 10, right: 10, border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#567", background: "#eee", cursor: "pointer" }}>✕</button>
             <div style={{ font: "900 17px system-ui", color: "#234", marginBottom: 6 }}>Eet smakelijk!</div>
             <div style={{ fontSize: 34 + eetSnack.haps * 22, lineHeight: 1.15, transition: "font-size .25s ease", filter: "drop-shadow(0 3px 6px rgba(0,0,0,.25))" }}>{eetSnack.emoji}</div>
             <div style={{ font: "700 13px system-ui", color: "#567", margin: "8px 0 14px" }}>
