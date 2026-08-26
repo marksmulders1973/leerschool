@@ -1027,7 +1027,9 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
       }
     }
     m.position.copy(p);
-    m.rotation.y = heading.current;
+    // -90°: de neus (+x van het model) wijst in de vaarrichting — hij vloog
+    // eerst zijwaarts (Mark 26 aug: "liever met de punt naar voren").
+    m.rotation.y = heading.current - Math.PI / 2;
     m.rotation.z = naam === "bestuur" ? -Math.max(-1, Math.min(1, vaart.current / 9)) * 0.04 : Math.sin(t * 0.27) * 0.015;
     // cockpit-metertjes live bijwerken (zonder React-re-render)
     if (hoogteDom.current) hoogteDom.current.textContent = `${Math.max(0, Math.round(p.y - grondBij(p.x, p.z)))} m`;
