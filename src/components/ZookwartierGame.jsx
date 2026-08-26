@@ -432,6 +432,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
+  const [inHand, setInHand] = useState(null); // 🥕/🦴 gekocht bij de patatkraam, nog niet gegeven ('wortel' | 'bot')
+  const [eetSnack, setEetSnack] = useState(null); // 😋 snack die je nu opeet: { emoji, label, haps, drink }
   const [sceneKey, setSceneKey] = useState(0); // bump = verse mount van de 3D-scene (retry na park-fout)
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
@@ -974,6 +976,89 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     flits(terugAantal > 0 ? `🎉 Alle dieren gevoerd — je vond ${terugAantal} verstopt dier${terugAantal > 1 ? "en" : ""}! ❤️` : "Alle dieren gevoerd! 🌾");
   };
 
+  // 😋 Zelf klant zijn bij je eigen kraam (Mark 26 aug: "ik wil in het park ook
+  // patat kunnen kopen en eten, met muntjes uit de spaarpot — en dieren-eten
+  // kopen, zoals een wortel om echt te geven, of een bot voor Charley").
+  // Zelf eten kost alleen de INKOOP-prijs: de kraam is van jou, dus de winst-
+  // marge betaal je niet aan jezelf — een klein inkoop/verkoop-lesje in het echt.
+  const VOER = {
+    wortel: { emoji: "🥕", label: "wortel", prijs: 2 },
+    bot: { emoji: "🦴", label: "bot", prijs: 3 },
+  };
+  const HONDEN = new Set(["husky", "shibaInu", "pug", "wolf"]);
+  const koopSnackZelf = (produkt, inkoop, drink) => {
+    if (!produkt) return;
+    if (coins < inkoop) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
+    setMeta((m) => (m ? { ...m, coins: m.coins - inkoop } : m));
+    setEetSnack({ emoji: produkt.emoji, label: produkt.label, haps: 3, drink: !!drink });
+    sluitSelectie();
+    try { track("park_snack_zelf", { product: produkt.id, prijs: inkoop }); } catch { /* */ }
+  };
+  const koopVoer = (type) => {
+    const v = VOER[type];
+    if (!v) return;
+    if (inHand) { flits(`Je hebt al een ${VOER[inHand].label} in je hand — geef die eerst!`); return; }
+    if (coins < v.prijs) { flits("Niet genoeg muntjes — leer een kwartier om te sparen!"); return; }
+    setMeta((m) => (m ? { ...m, coins: m.coins - v.prijs } : m));
+    setInHand(type);
+    sluitSelectie();
+    flits(type === "wortel"
+      ? "🥕 Wortel gekocht! Loop naar een dier en tik erop om 'm te geven."
+      : `🦴 Bot gekocht! Geef 'm aan ${buddyNaamEff || "je maatje"} (knop bovenin) of tik op een hond.`);
+    try { track("park_voer_koop", { type, prijs: v.prijs }); } catch { /* */ }
+  };
+  // Terugleggen = muntjes terug — geen straf voor per ongeluk kopen.
+  const legVoerTerug = () => {
+    if (!inHand) return;
+    setMeta((m) => (m ? { ...m, coins: m.coins + VOER[inHand].prijs } : m));
+    setInHand(null);
+    flits("Teruggelegd — je krijgt je muntjes terug.");
+  };
+  // Echt geven: het dier eet en telt als gevoerd (een verstopt dier komt terug).
+  const geefVoerAanDier = (idx) => {
+    if (!inHand) return;
+    const it = placedItems[idx];
+    const naam = getAsset(it?.assetId)?.name || "Het dier";
+    if (inHand === "bot" && !HONDEN.has(it?.assetId)) {
+      flits(`💭 ${naam} snuffelt eraan... liever geen bot. Geef 'm aan een hond of aan ${buddyNaamEff || "je maatje"}!`);
+      return;
+    }
+    const terug = it?.verstopt;
+    setPlacedItems((items) => items.map((x, i) => (i === idx ? { ...x, fed: vandaag(), verstopt: false } : x)));
+    const eetTekst = inHand === "bot"
+      ? `🦴 ${naam} kluift smullend op het bot — knaag knaag! ❤️`
+      : it?.assetId === "velociraptor"
+        ? `🥕 GRRR... njam! ${naam} eet de wortel in één hap op! 😋`
+        : `🥕 ${naam} smult van de wortel — knabbel knabbel! 😋`;
+    flits(terug ? `🎉 ${naam} komt tevoorschijn voor je ${VOER[inHand].label} — je hebt 'm gevonden! ❤️` : eetTekst);
+    try { track("park_voer_gegeven", { type: inHand, aan: it?.assetId }); } catch { /* */ }
+    setInHand(null);
+  };
+  // Het bot aan je maatje geven — Charley (hond) wordt er hélemaal blij van.
+  const geefBotAanMaatje = () => {
+    if (inHand !== "bot") return;
+    const naam = buddyNaamEff || "Je maatje";
+    const isHond = (BUDDY_BY_ID[buddyId]?.soort || "").includes("hond");
+    setInHand(null);
+    flits(isHond
+      ? `🦴 WOEF! ${naam} kwispelt wild en kluift smullend op het bot! ❤️`
+      : `🦴 ${naam} vindt het bot prachtig en bewaart 'm als schat! ❤️`);
+    spreek(isHond ? "Woef woef! Mijn lievelingsbot! Dank je wel!" : "Wauw, een echt bot! Die bewaar ik als schat.");
+    try { track("park_voer_gegeven", { type: "bot", aan: "maatje", buddy: buddyId }); } catch { /* */ }
+  };
+  // Hap voor hap (of slok voor slok) — bij de laatste hap is 'ie op.
+  const neemHap = () => {
+    setEetSnack((s) => {
+      if (!s) return s;
+      if (s.haps <= 1) {
+        flits(s.drink ? `😋 Ahh, dat was lekker! De ${s.label.toLowerCase()} is op.` : `😋 Mmm, dat was lekker! De ${s.label.toLowerCase()} is op.`);
+        try { track("park_snack_op", { product: s.label }); } catch { /* */ }
+        return null;
+      }
+      return { ...s, haps: s.haps - 1 };
+    });
+  };
+
   const startKopen = (p) => {
     if (coins < p.price) {
       // Eerlijke tekst (review 17 jul): is het kwartier vandaag al uitbetaald,
@@ -1285,6 +1370,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   kraamLiveRef.current = kramen; // de bezoekers-loop leest de laatste inkoopprijs hieruit
   const selKraam = selVoorziet ? kramen[selVoorziet] : null;
   const selWinst = selKraam ? selKraam.verkoop - selKraam.inkoop : 0;
+  // Het gekozen product van deze kraam (voor "zelf kopen & opeten").
+  const selProdukt = selVoorziet ? productVanKraam(selVoorziet) : null;
   const setPrice = (kind, val) => {
     const v = Math.max(1, Math.min(20, val));
     setMeta((m) => {
@@ -1804,6 +1891,37 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
         </div>
       </div>
+
+      {/* 🥕🦴 In je hand: gekocht dier-voer, tot je het echt geeft (Mark 26 aug). */}
+      {inHand && (
+        <div style={{ position: "absolute", top: 62, left: "50%", transform: "translateX(-50%)", zIndex: 11, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "center", maxWidth: "94vw" }}>
+          <span style={{ font: "800 12.5px system-ui", color: "#234", background: "rgba(255,255,255,0.94)", borderRadius: 999, padding: "8px 14px", boxShadow: "0 3px 10px rgba(0,0,0,.25)", textAlign: "center" }}>
+            {inHand === "wortel" ? "🥕 Wortel in je hand — tik op een dier om 'm te geven" : "🦴 Bot in je hand — tik op een hond, of:"}
+          </span>
+          {inHand === "bot" && (
+            <button onClick={geefBotAanMaatje} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "800 12.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>🦴 Geef aan {buddyNaamEff || "je maatje"}</button>
+          )}
+          <button onClick={legVoerTerug} title="Terugleggen (muntjes terug)" style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.8)", boxShadow: "0 2px 8px rgba(0,0,0,.2)", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
+
+      {/* 😋 Opeet-momentje: hap voor hap (of slok voor slok) tot het op is —
+          de snack wordt écht kleiner bij elke hap. */}
+      {eetSnack && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 16, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(8,16,10,0.45)", backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)" }}>
+          <div style={{ position: "relative", background: "#fffef8", borderRadius: 22, padding: "22px 26px 20px", maxWidth: 320, width: "88vw", textAlign: "center", boxShadow: "0 14px 44px rgba(0,0,0,.4)" }}>
+            <button onClick={() => setEetSnack(null)} title="Later opeten" style={{ position: "absolute", top: 10, right: 10, border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#567", background: "#eee", cursor: "pointer" }}>✕</button>
+            <div style={{ font: "900 17px system-ui", color: "#234", marginBottom: 6 }}>Eet smakelijk!</div>
+            <div style={{ fontSize: 34 + eetSnack.haps * 22, lineHeight: 1.15, transition: "font-size .25s ease", filter: "drop-shadow(0 3px 6px rgba(0,0,0,.25))" }}>{eetSnack.emoji}</div>
+            <div style={{ font: "700 13px system-ui", color: "#567", margin: "8px 0 14px" }}>
+              Nog {eetSnack.haps} {eetSnack.drink ? (eetSnack.haps === 1 ? "slok" : "slokken") : (eetSnack.haps === 1 ? "hap" : "happen")}...
+            </div>
+            <button onClick={neemHap} style={{ border: "none", borderRadius: 999, padding: "13px 26px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 5px 16px rgba(217,119,6,.45)", cursor: "pointer", minHeight: 44 }}>
+              😋 Neem een {eetSnack.drink ? "slok" : "hap"}
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* 🏆 Prijzenkast-overlay: de diploma-kast (echte toets-resultaten) ín
           het park — de tuin-les: zichtbare groei, en leren vult de kast. */}
@@ -2394,6 +2512,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   ? "Best duur — dan haken sommige bezoekers af. Lagere prijs = meer kopers."
                   : "Mooie prijs! Veel bezoekers kopen dit."}
             </span>
+            {/* 😋 Zelf klant zijn (Mark 26 aug): koop iets bij je eigen kraam en eet
+                het echt op — je betaalt alleen de inkoop. De patatkraam verkoopt
+                ook dier-voer: een wortel voor de dieren, een bot voor je maatje. */}
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+              <button onClick={() => koopSnackZelf(selProdukt, selKraam?.inkoop ?? selProdukt?.inkoop ?? 3, selVoorziet === "drink")} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>
+                {selProdukt?.emoji} Zelf {selVoorziet === "drink" ? "drinken" : "eten"} — {selKraam?.inkoop ?? selProdukt?.inkoop} 🪙
+              </button>
+              {selVoorziet === "food" && (
+                <button onClick={() => koopVoer("wortel")} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🥕 Wortel voor een dier — 2 🪙</button>
+              )}
+              {selVoorziet === "food" && (
+                <button onClick={() => koopVoer("bot")} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🦴 Bot voor {buddyNaamEff || "je maatje"} — 3 🪙</button>
+              )}
+            </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
               <button onClick={() => { setKraamOverzicht(selVoorziet); try { track("kraam_overzicht_open", { kraam: selVoorziet }); } catch { /* */ } }} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#0a9d4a,#0a7d3c)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>📊 Dagoverzicht</button>
               <button onClick={openRekenVraag} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🧮 Reken-vraag</button>
@@ -2451,6 +2583,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               >
                 💡 Hoe werkt dit?
               </button>
+            )}
+            {selKind === "animal" && inHand && (
+              <button onClick={() => geefVoerAanDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>{VOER[inHand].emoji} {inHand === "wortel" ? "Wortel geven" : "Bot geven"}</button>
             )}
             {selKind === "animal" && <button onClick={() => voerDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: dierGevoerdVandaag(placedItems[selectedIdx]) ? "#cdeccb" : "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🌾 {dierGevoerdVandaag(placedItems[selectedIdx]) ? "Gevoerd ✓" : "Voeren"}</button>}
             {selKind === "animal" && <button onClick={() => aaiDier(selectedIdx)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#234", background: "rgba(255,255,255,0.95)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>🤗 Aaien</button>}
