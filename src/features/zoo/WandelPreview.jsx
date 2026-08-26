@@ -282,10 +282,19 @@ export function Leerpadlint({ heightRef }) {
       const tan = curve.getTangentAt(t);
       tegels.push({ x: p.x, z: p.z, hoek: Math.atan2(tan.x, tan.z), band: bandVoorT(t) });
     }
-    // Niveau-overgang-bordjes: op het eerste waypoint van elke band.
+    // Niveau-overgang-bordjes: bij het eerste waypoint van elke band, maar
+    // NAAST de weg (Mark 26 aug: het startbord stond pal op de spawn-plek —
+    // "dit begin is te druk, zet maar een eind weg"). Elk bord staat ~2 vakjes
+    // loodrecht naast het pad, en het startbord bovendien 5 vakjes vooruit het
+    // park in — zo begin je met vrij zicht en zie je het bord pas als je loopt.
     const borden = LINT_BAND_STARTS.map((wi, b) => {
       const w = LINT_WAYPOINTS[wi];
-      return { x: w[0] * CELL, z: w[1] * CELL, band: b };
+      const nxt = LINT_WAYPOINTS[(wi + 1) % LINT_WAYPOINTS.length];
+      let tx = nxt[0] - w[0], tz = nxt[1] - w[1];
+      const tl = Math.hypot(tx, tz) || 1; tx /= tl; tz /= tl;
+      const vooruit = b === 0 ? 5 : 0; // vakjes langs het pad (alleen het startbord)
+      const zij = 2.2;                 // vakjes naast het pad (bermbordje)
+      return { x: (w[0] + tx * vooruit - tz * zij) * CELL, z: (w[1] + tz * vooruit + tx * zij) * CELL, band: b };
     });
     return { tegels, borden };
   }, []);
