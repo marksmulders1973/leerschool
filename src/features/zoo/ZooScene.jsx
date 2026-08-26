@@ -950,6 +950,7 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
   const heading = useRef(Math.PI);
   const vaart = useRef(0);
   const klim = useRef(0);
+  const terugKnop = useRef(false); // ◀ Terug-knop ingedrukt = achteruit varen
   const [ui, setUi] = useState(null);   // 'geland' | 'bestuur' — welke knoppen in beeld
   const hoogteDom = useRef(null), vaartDom = useRef(null); // cockpit-metertjes (direct DOM, geen re-renders)
   const doekTex = useZeppelinDoek("Leerkwartier", "/logo.jpg");
@@ -1007,7 +1008,7 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
       my = Math.max(-1, Math.min(1, my));
       if (stuurRef.current) stuurRef.current.rotation.z += (-mx * 0.9 - stuurRef.current.rotation.z) * Math.min(1, dt * 8);
       heading.current -= mx * dt * 0.7;
-      const doelVaart = -my * 9; // joystick omhoog = vooruit
+      const doelVaart = terugKnop.current ? -5 : -my * 9; // joystick omhoog = vooruit; ◀-knop = achteruit
       vaart.current += (doelVaart - vaart.current) * Math.min(1, dt * 1.4);
       p.y = Math.max(grondBij(p.x, p.z) + 8, Math.min(64, p.y + klim.current * 3 * dt));
       vlieg(vaart.current);
@@ -1031,13 +1032,13 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
     // cockpit-metertjes live bijwerken (zonder React-re-render)
     if (hoogteDom.current) hoogteDom.current.textContent = `${Math.max(0, Math.round(p.y - grondBij(p.x, p.z)))} m`;
     if (vaartDom.current) vaartDom.current.textContent = `${Math.abs(Math.round(vaart.current * 6))} km/u`;
-    // 🎛️ Cockpit-camera (Mark 26 aug: "kun je geen cockpit bouwen"): tijdens
-    // de vlucht zit je ÍN de gondel — stuurwiel en dashboard vóór je, en door
-    // de voorruit zie je je park onder je doorglijden. Laatste useFrame → wint.
+    // 🎥 Vlucht-camera (Mark 26 aug, keuze na proberen: "toch de zeppelin van
+    // achteren zien, afstand groter, bv. 50 meter"): ruime achtervolg-camera —
+    // het hele luchtschip in beeld met het park eronder. Laatste useFrame → wint.
     if (naam === "bestuur" || naam === "terugkeer") {
       const fx = Math.sin(heading.current), fz = Math.cos(heading.current);
-      s.camera.position.set(p.x + fx * 0.85, p.y - 1.38, p.z + fz * 0.85);
-      s.camera.lookAt(p.x + fx * 18, p.y - 2.6, p.z + fz * 18);
+      s.camera.position.set(p.x - fx * 50, p.y + 15, p.z - fz * 50);
+      s.camera.lookAt(p.x + fx * 8, p.y, p.z + fz * 8);
     }
   });
   const stapIn = (e) => {
@@ -1120,10 +1121,11 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
                 <div style={{ font: "700 10px system-ui", color: "#8fa0b0", letterSpacing: 1 }}>SNELHEID</div>
                 <div ref={vaartDom} style={{ font: "900 17px ui-monospace, monospace", color: "#7bc6ff" }}>— km/u</div>
               </div>
-              <button style={knopStijl} onPointerDown={() => { klim.current = 1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬆️</button>
-              <button style={knopStijl} onPointerDown={() => { klim.current = -1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬇️</button>
-              <button onClick={land} style={{ ...knopStijl, background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)" }}>🛬 Landen</button>
-              <div style={{ font: "700 10.5px/1.35 system-ui", color: "#8fa0b0", maxWidth: 120 }}>Joystick of pijltjes = sturen en gas geven</div>
+              <button style={knopStijl} onPointerDown={() => { klim.current = 1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬆️<br /><span style={{ font: "700 9px system-ui" }}>omhoog</span></button>
+              <button style={knopStijl} onPointerDown={() => { klim.current = -1; }} onPointerUp={() => { klim.current = 0; }} onPointerLeave={() => { klim.current = 0; }}>⬇️<br /><span style={{ font: "700 9px system-ui" }}>omlaag</span></button>
+              <button style={knopStijl} onPointerDown={() => { terugKnop.current = true; }} onPointerUp={() => { terugKnop.current = false; }} onPointerLeave={() => { terugKnop.current = false; }}>◀️<br /><span style={{ font: "700 9px system-ui" }}>terug</span></button>
+              <button onClick={land} style={{ ...knopStijl, background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)" }}>🛬<br /><span style={{ font: "700 9px system-ui" }}>landen</span></button>
+              <div style={{ font: "700 10.5px/1.35 system-ui", color: "#8fa0b0", maxWidth: 110 }}>Joystick of pijltjes = sturen en gas geven</div>
             </div>
           </Html>
         )}
