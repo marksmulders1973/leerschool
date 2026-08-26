@@ -518,6 +518,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [groundType, setGroundType] = useState("zand");  // gekozen grondsoort
   const rewardTimer = useRef(null);
   const meldingTimer = useRef(null);
+  // 🤫 Rustige binnenkomst (Mark 26 aug: "het begin is te druk — laat alle
+  // teksten van Charley minstens 30 seconden uit"): de eerste ~30 s na het
+  // openen van het park géén praatjes, popups of vraagjes, zodat je eerst
+  // ongestoord het park in kunt lopen. Alles wat proactief praat wacht tot na
+  // de rust: gids-praatjes, muntjes-jubel, vrijspeel-viering, maatje-vraagje,
+  // leer-invite en bouw-tip.
+  const parkStartRef = useRef(Date.now());
+  const RUST_MS = 30000;
+  const rustFase = () => Date.now() - parkStartRef.current < RUST_MS;
+  const naDeRust = (extra = 0) => Math.max(0, RUST_MS - (Date.now() - parkStartRef.current)) + extra;
   const inputRef = useRef({ keys: {}, joy: { x: 0, y: 0 }, look: { active: false, dx: 0, dy: 0 }, cam: { yaw: Math.PI, pitch: 0.32, dist: 5.4 } }); // besturing poppetje + camera
 
   // Bezoekers kopen bij je kraampjes → jij verdient de WINST (verkoop − inkoop) in
@@ -681,7 +691,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     let gezien = false;
     try { gezien = !!localStorage.getItem("lk_bouwtip_gezien"); } catch { /* */ }
     if (gezien || placedItems.some((it) => isBlok(it.assetId))) return;
-    const t = setTimeout(() => setBouwTip(true), 30000);
+    const t = setTimeout(() => setBouwTip(true), naDeRust(60000)); // ~90 s na binnenkomst — ruim na de rust én na de leer-invite
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded]);
@@ -703,7 +713,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setLeerTip(true);
       try { sessionStorage.setItem("lk_leertip_sessie", "1"); } catch { /* */ }
       try { track("park_leer_invite"); } catch { /* */ }
-    }, 45000);
+    }, naDeRust(30000)); // ~60 s na binnenkomst
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded]);
@@ -719,7 +729,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setBuddyVraag(v);
       // Naam al bekend uit het account? Voor-invullen — het maatje "let op".
       if (v.key === "naam" && naam) setBuddyAntwoord(naam);
-    }, 12000);
+    }, naDeRust(10000)); // ~40 s na binnenkomst — pas ná de rust
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded]);
@@ -803,11 +813,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       setTerrain(deserTerrain(row?.terrain));
       setLoaded(true);
       if (gained > 0 || verstopt > 0) {
-        setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, verstopt, verstoptNamen, goedVerzorgd });
+        // 🤫 Rustige binnenkomst: de muntjes-jubel pas ná de stilte-periode.
         clearTimeout(rewardTimer.current);
-        // Een verstopt dier vraagt om actie (voeren) — die melding mag langer
-        // blijven staan dan een muntjes-jubel (6s was te kort om te lezen).
-        rewardTimer.current = setTimeout(() => setReward(null), verstopt > 0 ? 12000 : 6000);
+        rewardTimer.current = setTimeout(() => {
+          setReward({ total: gained, login: login.gained, kwartier: kw.gained, park: parkGain, loon, births, verstopt, verstoptNamen, goedVerzorgd });
+          // Een verstopt dier vraagt om actie (voeren) — die melding mag langer
+          // blijven staan dan een muntjes-jubel (6s was te kort om te lezen).
+          rewardTimer.current = setTimeout(() => setReward(null), verstopt > 0 ? 12000 : 6000);
+        }, naDeRust(2000));
       }
       // Alleen opslaan als er echt iets veranderde: een nieuwe dag (last_login +
       // login-/park-beloning moet bewaard blijven), een verdiende kwartier-reward,
@@ -915,7 +928,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         return { ...m, owned: { ...o, unlocked: [...new Set([...cur, ...nieuw])] } };
       });
       const eerste = vrijspeelDier(nieuw[0]);
-      setUnlockMelding(eerste);
+      // 🤫 Rustige binnenkomst: de vrijspeel-viering pas ná de stilte-periode.
+      setTimeout(() => { if (!cancel) setUnlockMelding(eerste); }, naDeRust(5000));
       try { track("zoo_unlock", { dier: nieuw[0], pad: eerste?.pad }); } catch { /* nooit laten breken */ }
     })();
     return () => { cancel = true; };
@@ -1656,7 +1670,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     try { track("park_gids_stil", { stil: nieuw }); } catch { /* */ }
   };
   const onGidsMoment = (id) => {
-    if (gidsStil || tafereel || dialoog || menuOpen || panel || rekenVraag) return;
+    if (gidsStil || rustFase() || tafereel || dialoog || menuOpen || panel || rekenVraag) return;
     const m = PARK_LEERMOMENTEN[id];
     if (!m) return;
     setGidsMoment(m);
