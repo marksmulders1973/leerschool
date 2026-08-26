@@ -432,7 +432,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [saleStats, setSaleStats] = useState({}); // per kraamsoort: {count, opbrengst} deze parksessie
   const [kraamOverzicht, setKraamOverzicht] = useState(null); // welke kraamsoort z'n dagoverzicht open is
   const [melding, setMelding] = useState(null);
-  const [eetSnack, setEetSnack] = useState(null); // 😋 snack die je nu opeet: { emoji, label, id, prijs, haps, drink }
+  const [draagSnack, setDraagSnack] = useState(null); // 🍟 snack in je hand: { id, label, vorm } — loopt mee en gaat vanzelf op
   const [sceneKey, setSceneKey] = useState(0); // bump = verse mount van de 3D-scene (retry na park-fout)
   const [panel, setPanel] = useState(null); // 'uitleg' | 'gids' | 'delen' | 'autobouw' | null
   const [bouwPlannen, setBouwPlannen] = useState(null); // 🏗️ auto-bouw: de aangeboden bouwplannen (A/B/C/D)
@@ -997,13 +997,26 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       ? "Niet genoeg muntjes — morgen verdient je leerkwartier weer muntjes! Tip: blokken bouwen is gratis."
       : "Niet genoeg muntjes — leer een kwartier om te sparen!");
   };
-  const koopSnackZelf = (produkt, inkoop, drink) => {
+  const koopSnackZelf = (produkt, inkoop, soort) => {
     if (!produkt) return;
+    if (draagSnack) { flits("Je hebt nog wat lekkers in je hand — eerst opeten! 😋"); return; }
     if (coins < inkoop) { flitsTeWeinigMuntjes(); return; }
     setMeta((m) => (m ? { ...m, coins: m.coins - inkoop } : m));
-    setEetSnack({ emoji: produkt.emoji, label: produkt.label, id: produkt.id, prijs: inkoop, haps: 3, drink: !!drink });
+    // Welke 3D-vorm loopt er mee in je hand?
+    const vorm = soort === "drink" ? "drink" : soort === "ice" ? "ijsje" : soort === "popcorn" ? "popcorn" : produkt.id === "patat" ? "friet" : "snack";
+    setDraagSnack({ id: produkt.id, label: produkt.label, vorm });
     sluitSelectie();
+    flits(`${produkt.emoji} Eet smakelijk! Loop maar lekker rond — ${soort === "drink" ? "slokje voor slokje raakt je beker leeg" : "hap voor hap gaat het op"}.`);
     try { track("park_snack_zelf", { product: produkt.id, prijs: inkoop }); } catch { /* */ }
+  };
+  // Het bakje is leeg (na ~30 s meelopen) — aangeroepen vanuit de 3D-scene.
+  const snackOp = () => {
+    if (!draagSnack) return;
+    flits(draagSnack.vorm === "drink"
+      ? `😋 Ahh... dat was lekker! Je ${draagSnack.label.toLowerCase()} is op.`
+      : `😋 Mmm... dat was lekker! De ${draagSnack.label.toLowerCase()} is op.`);
+    try { track("park_snack_op", { product: draagSnack.id }); } catch { /* */ }
+    setDraagSnack(null);
   };
   const koopVoer = (type) => {
     const v = VOER[type];
@@ -1055,25 +1068,6 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       : `🦴 ${naam} vindt het bot prachtig en bewaart 'm als schat! ❤️`);
     spreek(isHond ? "Woef woef! Mijn lievelingsbot! Dank je wel!" : "Wauw, een echt bot! Die bewaar ik als schat.");
     try { track("park_voer_gegeven", { type: "bot", aan: "maatje", buddy: buddyId }); } catch { /* */ }
-  };
-  // Hap voor hap (of slok voor slok) — bij de laatste hap is 'ie op.
-  const neemHap = () => {
-    if (!eetSnack) return;
-    if (eetSnack.haps <= 1) {
-      flits(eetSnack.drink ? `😋 Ahh, dat was lekker! De ${eetSnack.label.toLowerCase()} is op.` : `😋 Mmm, dat was lekker! De ${eetSnack.label.toLowerCase()} is op.`);
-      try { track("park_snack_op", { product: eetSnack.id || eetSnack.label }); } catch { /* */ }
-      setEetSnack(null);
-      return;
-    }
-    setEetSnack({ ...eetSnack, haps: eetSnack.haps - 1 });
-  };
-  // Toch niet? Muntjes terug — anders gooit ✕ een betaalde snack stilletjes weg.
-  const eetSnackTochNiet = () => {
-    if (!eetSnack) return;
-    const prijs = eetSnack.prijs || 0;
-    if (prijs > 0) setMeta((m) => (m ? { ...m, coins: m.coins + prijs } : m));
-    setEetSnack(null);
-    flits("Toch niet? Je krijgt je muntjes terug.");
   };
 
   const startKopen = (p) => {
@@ -1679,7 +1673,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const poortCooldown = useRef(new Map());
   const poortTimer = useRef(null);
   const onPoortDoor = (assetId) => {
-    if (placing || sculptMode || waterMode || groundMode || tafereel || dialoog || menuOpen || panel || rekenVraag || eetSnack || selectedIdx != null) return;
+    if (placing || sculptMode || waterMode || groundMode || tafereel || dialoog || menuOpen || panel || rekenVraag || selectedIdx != null) return;
     const info = POORT_ASSETS[assetId];
     if (!info) return;
     const nu = Date.now();
@@ -1913,24 +1907,6 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <button onClick={geefBotAanMaatje} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "800 12.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>🦴 Geef aan {buddyNaamEff || "je maatje"}</button>
           )}
           <button onClick={legVoerTerug} title="Terugleggen (muntjes terug)" style={{ border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#234", background: "rgba(255,255,255,0.8)", boxShadow: "0 2px 8px rgba(0,0,0,.2)", cursor: "pointer" }}>✕</button>
-        </div>
-      )}
-
-      {/* 😋 Opeet-momentje: hap voor hap (of slok voor slok) tot het op is —
-          de snack wordt écht kleiner bij elke hap. */}
-      {eetSnack && (
-        <div style={{ position: "absolute", inset: 0, zIndex: 16, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(8,16,10,0.45)", backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)" }}>
-          <div style={{ position: "relative", background: "#fffef8", borderRadius: 22, padding: "22px 26px 20px", maxWidth: 320, width: "88vw", textAlign: "center", boxShadow: "0 14px 44px rgba(0,0,0,.4)" }}>
-            <button onClick={eetSnackTochNiet} title="Toch niet — muntjes terug" style={{ position: "absolute", top: 10, right: 10, border: "none", borderRadius: 999, width: 30, height: 30, font: "800 13px system-ui", color: "#567", background: "#eee", cursor: "pointer" }}>✕</button>
-            <div style={{ font: "900 17px system-ui", color: "#234", marginBottom: 6 }}>Eet smakelijk!</div>
-            <div style={{ fontSize: 34 + eetSnack.haps * 22, lineHeight: 1.15, transition: "font-size .25s ease", filter: "drop-shadow(0 3px 6px rgba(0,0,0,.25))" }}>{eetSnack.emoji}</div>
-            <div style={{ font: "700 13px system-ui", color: "#567", margin: "8px 0 14px" }}>
-              Nog {eetSnack.haps} {eetSnack.drink ? (eetSnack.haps === 1 ? "slok" : "slokken") : (eetSnack.haps === 1 ? "hap" : "happen")}...
-            </div>
-            <button onClick={neemHap} style={{ border: "none", borderRadius: 999, padding: "13px 26px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 5px 16px rgba(217,119,6,.45)", cursor: "pointer", minHeight: 44 }}>
-              😋 Neem een {eetSnack.drink ? "slok" : "hap"}
-            </button>
-          </div>
         </div>
       )}
 
@@ -2218,6 +2194,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           buddyNaam={buddyNaamEff}
           onBuddyPraat={() => setBuddyChatOpen(true)}
           buddyEye={buddyEye}
+          draagSnack={draagSnack}
+          onSnackOp={snackOp}
           onContextLost={() => flits("Het park viel even stil — blijft het beeld bevroren? Doe de pagina dan opnieuw (veeg omlaag of druk F5), je park is veilig opgeslagen.")}
         />
       </Suspense>
@@ -2527,7 +2505,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 het echt op — je betaalt alleen de inkoop. De patatkraam verkoopt
                 ook dier-voer: een wortel voor de dieren, een bot voor je maatje. */}
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
-              <button onClick={() => koopSnackZelf(selProdukt, selKraam?.inkoop ?? selProdukt?.inkoop ?? 3, selVoorziet === "drink")} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>
+              <button onClick={() => koopSnackZelf(selProdukt, selKraam?.inkoop ?? selProdukt?.inkoop ?? 3, selVoorziet)} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#f59e0b,#d97706)", boxShadow: "0 3px 10px rgba(0,0,0,.22)", cursor: "pointer" }}>
                 {selProdukt?.emoji} Zelf {selVoorziet === "drink" ? "drinken" : "eten"} — {selKraam?.inkoop ?? selProdukt?.inkoop} 🪙
               </button>
               {selVoorziet === "food" && (

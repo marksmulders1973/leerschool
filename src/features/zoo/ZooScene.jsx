@@ -908,7 +908,130 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   return null;
 }
 
-export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null }) {
+// 🍟 Snack in je hand (Mark 26 aug: "een bakje friet in zijn hand, hij loopt
+// ermee, wordt vanzelf kleiner en na ~30 s is het op — dat was lekker"). Een
+// klein procedureel bakje/bekertje dat bij de rechterhand van het poppetje
+// meeloopt; de INHOUD krimpt met de tijd (frietjes zakken het bakje in, het
+// drinken raakt op, de ijsbol smelt). Bij op → onOp() (precies één keer).
+// Puur refs in useFrame — geen re-renders tijdens het eten.
+const EET_DUUR = 30; // seconden tot "dat was lekker"
+function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
+  const groep = useRef();
+  const inhoud = useRef();
+  const start = useRef(null);
+  const klaar = useRef(false);
+  useEffect(() => { start.current = null; klaar.current = false; }, [snack]);
+  useFrame((s) => {
+    const g = groep.current;
+    if (!g) return;
+    const pos = playerPos?.current;
+    if (!snack || verborgen || !pos) { g.visible = false; return; }
+    g.visible = true;
+    const nu = s.clock.elapsedTime;
+    if (start.current == null) start.current = nu;
+    const p = Math.min(1, (nu - start.current) / EET_DUUR);
+    const fx = playerFace?.current?.x ?? 0, fz = playerFace?.current?.z ?? 1;
+    const len = Math.hypot(fx, fz) || 1;
+    const nx = fx / len, nz = fz / len;
+    // rechterhand: iets opzij + iets naar voren, met een klein draag-wiebeltje
+    g.position.set(pos.x + nz * 0.34 + nx * 0.2, pos.y + 0.72 + Math.sin(nu * 5) * 0.015, pos.z - nx * 0.34 + nz * 0.2);
+    g.rotation.y = Math.atan2(nx, nz);
+    if (inhoud.current) {
+      const sc = Math.max(0.04, 1 - p);
+      if (snack.vorm === "ijsje" || snack.vorm === "snack") inhoud.current.scale.set(sc, sc, sc);
+      else inhoud.current.scale.set(1, sc, 1); // frietjes/drinken/popcorn zakken omlaag
+    }
+    if (p >= 1 && !klaar.current) { klaar.current = true; onOp && onOp(); }
+  });
+  if (!snack) return null;
+  const vorm = snack.vorm || "friet";
+  return (
+    <group ref={groep} visible={false}>
+      {vorm === "friet" && (
+        <>
+          <mesh position={[0, 0.05, 0]}>
+            <boxGeometry args={[0.16, 0.1, 0.11]} />
+            <meshStandardMaterial color="#d33a2f" />
+          </mesh>
+          <group ref={inhoud} position={[0, 0.1, 0]}>
+            {[[-0.045, -0.9, 0], [-0.015, 0.7, 1], [0.02, -0.4, 2], [0.05, 1.1, 3], [0, 0.15, 4]].map(([x, z, i]) => (
+              <mesh key={i} position={[x, 0.07, z * 0.03]} rotation={[z * 0.12, 0, (i - 2) * 0.1]}>
+                <boxGeometry args={[0.024, 0.15, 0.024]} />
+                <meshStandardMaterial color={i % 2 ? "#ffd45e" : "#f6c235"} />
+              </mesh>
+            ))}
+          </group>
+        </>
+      )}
+      {vorm === "drink" && (
+        <>
+          <mesh position={[0, 0.07, 0]}>
+            <cylinderGeometry args={[0.05, 0.04, 0.14, 12]} />
+            <meshStandardMaterial color="#f4f7fb" />
+          </mesh>
+          <group ref={inhoud} position={[0, 0.075, 0]}>
+            <mesh>
+              <cylinderGeometry args={[0.044, 0.036, 0.125, 12]} />
+              <meshStandardMaterial color="#e2543e" />
+            </mesh>
+          </group>
+          <mesh position={[0.02, 0.18, 0]} rotation={[0, 0, -0.25]}>
+            <cylinderGeometry args={[0.006, 0.006, 0.12, 8]} />
+            <meshStandardMaterial color="#fff" />
+          </mesh>
+        </>
+      )}
+      {vorm === "ijsje" && (
+        <>
+          <mesh position={[0, 0.07, 0]} rotation={[Math.PI, 0, 0]}>
+            <coneGeometry args={[0.05, 0.13, 12]} />
+            <meshStandardMaterial color="#d9a05b" />
+          </mesh>
+          <group ref={inhoud} position={[0, 0.15, 0]}>
+            <mesh>
+              <sphereGeometry args={[0.055, 12, 10]} />
+              <meshStandardMaterial color="#ff9fb2" />
+            </mesh>
+          </group>
+        </>
+      )}
+      {vorm === "popcorn" && (
+        <>
+          <mesh position={[0, 0.07, 0]}>
+            <cylinderGeometry args={[0.055, 0.042, 0.13, 12]} />
+            <meshStandardMaterial color="#e8e2d2" />
+          </mesh>
+          <group ref={inhoud} position={[0, 0.135, 0]}>
+            {[[-0.02, 0, 0.015], [0.02, 0.012, -0.01], [0, 0.025, 0.02], [-0.01, 0.035, -0.02]].map(([x, y, z], i) => (
+              <mesh key={i} position={[x, y, z]}>
+                <sphereGeometry args={[0.02, 8, 6]} />
+                <meshStandardMaterial color="#fff6e0" />
+              </mesh>
+            ))}
+          </group>
+        </>
+      )}
+      {vorm === "snack" && (
+        <group ref={inhoud} position={[0, 0.08, 0]}>
+          <mesh>
+            <boxGeometry args={[0.14, 0.05, 0.09]} />
+            <meshStandardMaterial color="#e0a35c" />
+          </mesh>
+          <mesh position={[0, 0.033, 0]}>
+            <boxGeometry args={[0.13, 0.02, 0.085]} />
+            <meshStandardMaterial color="#8a4b26" />
+          </mesh>
+          <mesh position={[0, 0.06, 0]}>
+            <boxGeometry args={[0.14, 0.04, 0.09]} />
+            <meshStandardMaterial color="#e8b06a" />
+          </mesh>
+        </group>
+      )}
+    </group>
+  );
+}
+
+export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null }) {
   const [ghost, setGhost] = useState(null);
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
@@ -1309,6 +1432,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
             niet aan de verre rand — anders begint elke speler in niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
         <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain} zweef={zweef} climbRef={climbRef} />
+        {/* 🍟 Je gekochte snack loopt mee in je hand en gaat vanzelf op. */}
+        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain} onOp={onSnackOp} />}
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
