@@ -639,7 +639,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const camWheel = (e) => {
     if (!camDrag.current.enabled) return;
     const cam = inputRef.current.cam;
-    cam.dist = Math.max(2.6, Math.min(12, cam.dist + e.deltaY * 0.008));
+    // Max 34 m (was 12 — Mark 26 aug: "verder uitzoomen zodat ik mijn poppetje
+    // van een grotere afstand kan bekijken"): mooi overzicht over je park.
+    cam.dist = Math.max(2.6, Math.min(34, cam.dist + e.deltaY * 0.008));
   };
   useEffect(() => {
     const move = (e) => {
@@ -653,7 +655,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         if (ander) {
           const voor = Math.hypot(p.x - ander.x, p.y - ander.y);
           const na = Math.hypot(e.clientX - ander.x, e.clientY - ander.y);
-          if (voor > 12 && na > 12) cam.dist = Math.max(2.6, Math.min(12, cam.dist * (voor / na)));
+          if (voor > 12 && na > 12) cam.dist = Math.max(2.6, Math.min(34, cam.dist * (voor / na)));
         }
       } else {
         const sens = e.pointerType === "touch" ? 0.0062 : 0.0042;
