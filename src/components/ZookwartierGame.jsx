@@ -1534,10 +1534,6 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [wandeling, setWandeling] = useState(() => leesWandeling());
   const [wandelKies, setWandelKies] = useState(false);
   const [wandelViering, setWandelViering] = useState(false);
-  // Route-filter (Mark 20 aug: "snel alleen geel of alleen blauw zien"):
-  // tijdens een wandeling zie je automatisch alléén jouw route; daarbuiten
-  // filter je met de kleur-stipjes naast de 🥾-knop (nogmaals tikken = alles).
-  const [wandelFilter, setWandelFilter] = useState(null);
   const wandelRoute = wandeling ? ROUTE_BY_ID[wandeling.routeId] : null;
   const wandelStop = wandelRoute && !wandeling.klaar ? stopsVan(wandeling)[wandeling.stopIdx] : null;
   // Welke leermoment-objecten staan er ÉCHT in dit park? (speeltest 20 aug:
@@ -2142,7 +2138,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       <Suspense fallback={<div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", color: "#3a5a2a", font: "600 15px system-ui" }}>Park laden…</div>}>
         <ZooScene
           key={sceneKey}
-          wandelToon={wandeling && !wandeling.klaar ? [wandeling.routeId] : wandelFilter ? [wandelFilter] : null}
+          wandelToon={wandeling && !wandeling.klaar ? [wandeling.routeId] : null}
           wandelDoel={wandelDoelPos}
           onWandelBereikt={wandelBereikt}
           placingAsset={placing?.assetId || null}
@@ -2868,12 +2864,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={() => setWandelKies(true)} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
             🥾 Wandeling
           </button>
-          {/* Kleur-stipjes: tik = alleen dat spoor zien; nogmaals = alles. */}
-          {WANDEL_ROUTES.map((r) => (
-            <button key={r.id} onClick={() => setWandelFilter((f) => (f === r.id ? null : r.id))}
-              title={`Alleen de ${r.naam.toLowerCase()} (${r.groep}) tonen`}
-              style={{ width: 26, height: 26, borderRadius: 999, cursor: "pointer", background: r.kleur, border: wandelFilter === r.id ? "3px solid #234" : "2px solid rgba(255,255,255,0.9)", opacity: wandelFilter && wandelFilter !== r.id ? 0.35 : 1, boxShadow: "0 3px 10px rgba(0,0,0,.25)" }} />
-          ))}
+          {/* (De geel/groen/blauwe filter-stipjes zijn weg — Mark 26 aug: sinds
+              het zwarte leerpad-lint het hoofdpad is, is dat spoor-filter
+              overbodig. Tijdens een wandeling zie je je route nog gewoon.) */}
         </div>
       )}
       {wandeling && !wandeling.klaar && wandelStop && (
