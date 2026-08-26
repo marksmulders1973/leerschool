@@ -47,7 +47,8 @@
 | ≤ ~16 sep | **Tekst-formulier van Esther** (voor hun website/socials) → Claude maakt concept; stil na 16 sep → vriendelijke nudge | afwachten |
 | **ma 28 sep 11:45** | 🏢 **KvK-inschrijving** (Utrecht; zie kalender hieronder). 💡 Eerder kan vaak: geannuleerde slots komen élke ochtend vrij via "Wijzig afspraak" in Mijn KVK | Mark |
 | direct na KvK | KvK-nummer aan Esther mailen (informatieplicht art. 5; concept ligt klaar) | Claude concept → Mark-go |
-| na KvK, alles rond (~begin okt) | 🚀 **Communicatie-start** (samen moment kiezen): LinkedIn-post + bedankt.html + zeppelin-doek + **stadspassen-batch** naar andere gemeenten ("Den Haag doet al mee"; concepten + adressenlijst liggen dan klaar) | Mark-go |
+| ✅ 26 aug | 🎨 **Landingspagina-concept AF & VASTGELEGD** (samen met Mark geredigeerd, 8 rondes): `Desktop\Ooievaarspas\landingspagina-concept-DEFINITIEF-2026-08-26.html` (+ werkkopie `landingspagina-PREVIEW-alleen-Mark.html`, logo.jpg en op-ooievaar.svg ernaast; dubbelklik = bekijken in browser). Bewust OFFLINE tot na de KvK. Bij live-gang: bestand → `public/ooievaarspas.html`, noindex weg, sitemap + llms.txt, én eerst ooievaar-logo-toestemming vragen (via Esthers tekst-formulier) | klaar (wacht op go) |
+| na KvK, alles rond (~begin okt) | 🚀 **Communicatie-start** (samen moment kiezen): landingspagina live + LinkedIn-post + bedankt.html + zeppelin-doek + **stadspassen-batch** naar andere gemeenten ("Den Haag doet al mee"; concepten + adressenlijst liggen dan klaar) | Mark-go |
 | ⏸️ tot die tijd | **Géén** publieke communicatie over de vriendschap — ook al mag het van Esther al | vast besluit |
 
 ## 🟠 Kalender — vaste datums
