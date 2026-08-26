@@ -1029,11 +1029,13 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
     // cockpit-metertjes live bijwerken (zonder React-re-render)
     if (hoogteDom.current) hoogteDom.current.textContent = `${Math.max(0, Math.round(p.y - grondBij(p.x, p.z)))} m`;
     if (vaartDom.current) vaartDom.current.textContent = `${Math.abs(Math.round(vaart.current * 6))} km/u`;
-    // achtervolg-cockpit-camera tijdens de vlucht (laatste useFrame → wint)
+    // achtervolg-camera tijdens de vlucht (laatste useFrame → wint). Ruim
+    // achter én boven de zeppelin (romp is ~13,5 m lang!) — je kijkt er
+    // overheen het park in; te dichtbij zat je tegen het reclame-doek aan.
     if (naam === "bestuur" || naam === "terugkeer") {
       const fx = Math.sin(heading.current), fz = Math.cos(heading.current);
-      s.camera.position.set(p.x - fx * 8.5, p.y + 1.4, p.z - fz * 8.5);
-      s.camera.lookAt(p.x + fx * 14, p.y - 1.6, p.z + fz * 14);
+      s.camera.position.set(p.x - fx * 16, p.y + 5.5, p.z - fz * 16);
+      s.camera.lookAt(p.x + fx * 12, p.y - 1, p.z + fz * 12);
     }
   });
   const stapIn = (e) => {
