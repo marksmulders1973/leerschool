@@ -38,6 +38,18 @@
   ("onze vrijwilligers kunnen hier zeker iets aan hebben", met naamsvermelding).
   Nu wachten op quote-ja → dan op bedankt.html/sociaal-bewijs plaatsen.
 
+## 🏛️ Ooievaarspas-tijdlijn (Mark-besluit 26 aug: "alles pas als de KvK er is")
+
+| Wanneer | Wat | Status |
+|---|---|---|
+| ✅ 26 aug | Goedkeuring per mail (Esther) + **vriend-overeenkomst getekend** (beide partijen) + bedank-reply verstuurd | klaar |
+| binnenkort | Verwerkings-mail met getekende PDF's → Claude stelt veilig in `Desktop\Ooievaarspas\` | afwachten |
+| ≤ ~16 sep | **Tekst-formulier van Esther** (voor hun website/socials) → Claude maakt concept; stil na 16 sep → vriendelijke nudge | afwachten |
+| **ma 28 sep 11:45** | 🏢 **KvK-inschrijving** (Utrecht; zie kalender hieronder). 💡 Eerder kan vaak: geannuleerde slots komen élke ochtend vrij via "Wijzig afspraak" in Mijn KVK | Mark |
+| direct na KvK | KvK-nummer aan Esther mailen (informatieplicht art. 5; concept ligt klaar) | Claude concept → Mark-go |
+| na KvK, alles rond (~begin okt) | 🚀 **Communicatie-start** (samen moment kiezen): LinkedIn-post + bedankt.html + zeppelin-doek + **stadspassen-batch** naar andere gemeenten ("Den Haag doet al mee"; concepten + adressenlijst liggen dan klaar) | Mark-go |
+| ⏸️ tot die tijd | **Géén** publieke communicatie over de vriendschap — ook al mag het van Esther al | vast besluit |
+
 ## 🟠 Kalender — vaste datums
 
 | Wanneer | Wat | Wie |
@@ -110,7 +122,7 @@
 
 ## ⏸️ Wachten — geen actie, alleen onthouden
 
-- Ooievaarspas Den Haag: **in behandeling bij Esther Versluis sinds 3 aug** (getekend 21/26 jul; haar enige punt — website-info — zelfde dag opgelost). Bal ligt bij haar. ⏰ **~begin sep: als 't nog stil is, vriendelijk kort check-berichtje** (niet eerder — te kort na vakantie).
+- Ooievaarspas Den Haag: ✅ **ROND 26 aug — goedgekeurd én vriend-overeenkomst getekend.** Vervolg staat in de Ooievaarspas-tijdlijn bovenaan (PDF's veiligstellen · tekst-formulier · KvK-nummer nasturen · communicatie na KvK).
 - Besturen: VB Lelystad, ThuisOnderwijsMaatjes-vrijwilligers,
   Studiezalen-teambespreking. (VB Emmen ✅ beslist 6 aug: zelf niet, wél warme
   doorverwijzing naar Leergeld Emmen — bedank-reply aan Paul + opvolg-mail
