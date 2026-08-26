@@ -941,9 +941,10 @@ function RaketVolgCamera() {
 // 🛬 = automatische terugvlucht en landing. Camera = achtervolg-cockpit;
 // gemount NÁ de andere camera's zodat hij tijdens de vlucht wint.
 const ZEP_PAD = [46, 44];              // landingsveld (wereld-coördinaten)
-const ZEP_CRUISE_S = 80, ZEP_GELAND_S = 35;
+const ZEP_CRUISE_S = 80, ZEP_GELAND_S = 45;
 function InstapZeppelin({ inputRef, onRit, heightRef }) {
   const g = useRef();
+  const stuurRef = useRef();           // 🛞 het stuurwiel in de cockpit draait mee
   const fase = useRef({ naam: "cruise", t0: null });
   const pos = useRef(new Vector3(ZEP_PAD[0], 40, ZEP_PAD[1]));
   const heading = useRef(Math.PI);
@@ -1004,6 +1005,7 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
       let my = (k.ArrowDown || k.KeyS ? 1 : 0) - (k.ArrowUp || k.KeyW ? 1 : 0) + (inp.joy?.y || 0);
       mx = Math.max(-1, Math.min(1, mx));
       my = Math.max(-1, Math.min(1, my));
+      if (stuurRef.current) stuurRef.current.rotation.z += (-mx * 0.9 - stuurRef.current.rotation.z) * Math.min(1, dt * 8);
       heading.current -= mx * dt * 0.7;
       const doelVaart = -my * 9; // joystick omhoog = vooruit
       vaart.current += (doelVaart - vaart.current) * Math.min(1, dt * 1.4);
@@ -1029,13 +1031,13 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
     // cockpit-metertjes live bijwerken (zonder React-re-render)
     if (hoogteDom.current) hoogteDom.current.textContent = `${Math.max(0, Math.round(p.y - grondBij(p.x, p.z)))} m`;
     if (vaartDom.current) vaartDom.current.textContent = `${Math.abs(Math.round(vaart.current * 6))} km/u`;
-    // achtervolg-camera tijdens de vlucht (laatste useFrame → wint). Ruim
-    // achter én boven de zeppelin (romp is ~13,5 m lang!) — je kijkt er
-    // overheen het park in; te dichtbij zat je tegen het reclame-doek aan.
+    // 🎛️ Cockpit-camera (Mark 26 aug: "kun je geen cockpit bouwen"): tijdens
+    // de vlucht zit je ÍN de gondel — stuurwiel en dashboard vóór je, en door
+    // de voorruit zie je je park onder je doorglijden. Laatste useFrame → wint.
     if (naam === "bestuur" || naam === "terugkeer") {
       const fx = Math.sin(heading.current), fz = Math.cos(heading.current);
-      s.camera.position.set(p.x - fx * 16, p.y + 5.5, p.z - fz * 16);
-      s.camera.lookAt(p.x + fx * 12, p.y - 1, p.z + fz * 12);
+      s.camera.position.set(p.x + fx * 0.85, p.y - 1.38, p.z + fz * 0.85);
+      s.camera.lookAt(p.x + fx * 18, p.y - 2.6, p.z + fz * 18);
     }
   });
   const stapIn = (e) => {
@@ -1064,12 +1066,43 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
       {/* de zeppelin zelf */}
       <group ref={g}>
         <ZeppelinRomp doekTex={doekTex} />
-        {/* trapje + instap-knop, alleen als hij geland is */}
+        {/* 🎛️ De cockpit in de gondel (Mark 26 aug): stuurwiel dat meedraait,
+            dashboard met "instrumenten", raamstijlen en een bankje — je ziet
+            dit vanbinnen zodra je instapt (cockpit-camera). */}
+        <group position={[1.2, -1.95, 0]}>
+          {/* dashboard-console met twee gloeiende metertjes */}
+          <mesh position={[0.82, 0.22, 0]} rotation={[0, 0, -0.35]}><boxGeometry args={[0.34, 0.3, 0.72]} /><meshStandardMaterial color="#222a33" roughness={0.6} /></mesh>
+          <mesh position={[0.74, 0.36, -0.16]} rotation={[0, 0, Math.PI / 2 - 0.35]}><cylinderGeometry args={[0.06, 0.06, 0.03, 12]} /><meshStandardMaterial color="#7be08a" emissive="#2e9e4f" emissiveIntensity={0.8} /></mesh>
+          <mesh position={[0.74, 0.36, 0.16]} rotation={[0, 0, Math.PI / 2 - 0.35]}><cylinderGeometry args={[0.06, 0.06, 0.03, 12]} /><meshStandardMaterial color="#7bc6ff" emissive="#3a6ad8" emissiveIntensity={0.8} /></mesh>
+          {/* 🛞 stuurwiel op een kolom — draait mee met je besturing */}
+          <mesh position={[0.5, 0.14, 0]} rotation={[0, 0, -0.5]}><cylinderGeometry args={[0.035, 0.045, 0.34, 8]} /><meshStandardMaterial color="#3a4754" /></mesh>
+          <group position={[0.58, 0.34, 0]} rotation={[0, Math.PI / 2, 0]}>
+            <group ref={stuurRef}>
+              <mesh><torusGeometry args={[0.2, 0.028, 10, 20]} /><meshStandardMaterial color="#6a4a2a" roughness={0.5} /></mesh>
+              {[0, Math.PI / 3, -Math.PI / 3].map((a, i) => (
+                <mesh key={i} rotation={[0, 0, a]}><boxGeometry args={[0.035, 0.38, 0.03]} /><meshStandardMaterial color="#8a6a3a" /></mesh>
+              ))}
+              <mesh><sphereGeometry args={[0.045, 10, 8]} /><meshStandardMaterial color="#3a4754" /></mesh>
+            </group>
+          </group>
+          {/* raamstijlen + dakrandje van de gondel */}
+          {[[1.05, 0.38], [1.05, -0.38], [-1.05, 0.38], [-1.05, -0.38]].map(([x, z], i) => (
+            <mesh key={`stijl${i}`} position={[x, 0.5, z]}><boxGeometry args={[0.07, 0.65, 0.07]} /><meshStandardMaterial color="#b9c2cb" roughness={0.5} /></mesh>
+          ))}
+          <mesh position={[0, 0.84, 0]}><boxGeometry args={[2.24, 0.06, 0.86]} /><meshStandardMaterial color="#b9c2cb" roughness={0.5} /></mesh>
+          {/* bankje achterin + vloer */}
+          <mesh position={[-0.7, 0.18, 0]}><boxGeometry args={[0.5, 0.14, 0.7]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
+          <mesh position={[0, 0.02, 0]}><boxGeometry args={[2.1, 0.04, 0.76]} /><meshStandardMaterial color="#4a5560" roughness={0.8} /></mesh>
+        </group>
+        {/* trapje + instap-knop, alleen als hij geland is. De knop zweeft hoog
+            BOVEN de zeppelin — vanaf elke kant zichtbaar (26 aug: hij hing aan
+            één kant van de gondel en was daardoor vaak onvindbaar). */}
         {ui === "geland" && (
           <>
             <mesh position={[1.2, -2.5, 0.9]} rotation={[0.6, 0, 0]}><boxGeometry args={[0.8, 0.08, 1.4]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
-            <Html position={[1.2, -0.6, 1.4]} center distanceFactor={11} zIndexRange={[9, 0]}>
-              <button onClick={stapIn} style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "10px 20px", font: "900 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 4px 14px rgba(0,0,0,.4)", cursor: "pointer", whiteSpace: "nowrap" }}>
+            <mesh position={[1.2, -2.5, -0.9]} rotation={[-0.6, 0, 0]}><boxGeometry args={[0.8, 0.08, 1.4]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
+            <Html position={[0.8, 3.4, 0]} center distanceFactor={16} zIndexRange={[9, 0]}>
+              <button onClick={stapIn} style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "12px 24px", font: "900 17px system-ui", color: "#fff", background: "linear-gradient(135deg,#3a6ad8,#2546b0)", boxShadow: "0 5px 18px rgba(0,0,0,.45)", cursor: "pointer", whiteSpace: "nowrap" }}>
                 🛩️ Instappen
               </button>
             </Html>
