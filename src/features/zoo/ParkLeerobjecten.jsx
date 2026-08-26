@@ -23,6 +23,7 @@ import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
+import { track } from "../../utils.js";
 
 /* ── gedeelde bouwstenen ──────────────────────────────────────────────── */
 
@@ -442,22 +443,119 @@ export function HollandseMolen({ position = [0, 0, 0], rotation = 0 }) {
 }
 
 /* 🚀 Raket — romp + neuskegel + vinnen op een lanceerplateau. → ruimtevaart. */
+// 🚀 Raket — mét echte lanceerknop (Mark 26 aug: "een rode knop 'Lanceer' en
+// als je erop drukt schiet de raket de ruimte in"). Tik op de rode knop op de
+// lanceerconsole → aftellen 3-2-1 → de raket trilt, stijgt met grote vlam en
+// rook de lucht in, zweeft even in "de ruimte" en landt daarna netjes terug op
+// het platform (rechtstandig, SpaceX-stijl) voor de volgende vlucht. De hele
+// vlucht draait op refs in useFrame — geen re-renders per frame.
 export function Raket({ position = [0, 0, 0], rotation = 0 }) {
   const vlam = useRef();
-  useFrame((s) => { if (vlam.current) { const k = 0.8 + Math.sin(s.clock.elapsedTime * 12) * 0.2; vlam.current.scale.set(k, k, k); } });
+  const schip = useRef();
+  const rookRefs = useRef([]);
+  const klaarRef = useRef(false);
+  const t0 = useRef(null);
+  const [fase, setFase] = useState("klaar"); // klaar | aftellen | vlucht
+  const [teller, setTeller] = useState(null);
+  const STIJG = 1.5, TOP = 7.5, ZWEEF = 11, DAAL = 18; // seconden in de vlucht
+  const HOOG = 160;
+  useEffect(() => {
+    if (fase !== "aftellen") return;
+    setTeller(3);
+    const iv = setInterval(() => setTeller((n) => (n > 1 ? n - 1 : n)), 800);
+    const done = setTimeout(() => {
+      clearInterval(iv); setTeller(null);
+      t0.current = null; klaarRef.current = false;
+      setFase("vlucht");
+      try { track("park_raket_lancering", {}); } catch { /* */ }
+    }, 2400);
+    return () => { clearInterval(iv); clearTimeout(done); };
+  }, [fase]);
+  useFrame((s) => {
+    const t = s.clock.elapsedTime;
+    const g = schip.current;
+    if (fase !== "vlucht") {
+      if (g) g.position.set(0, 0, 0);
+      if (vlam.current) { const k = 0.8 + Math.sin(t * 12) * 0.2; vlam.current.scale.set(k, k, k); }
+      rookRefs.current.forEach((m) => { if (m) m.visible = false; });
+      return;
+    }
+    if (!g) return;
+    if (t0.current == null) t0.current = t;
+    const u = t - t0.current;
+    let y = 0, wieb = 0, stuw = false;
+    if (u < STIJG) { wieb = 0.04; stuw = true; }                                  // trillen op het platform
+    else if (u < TOP) { const a = (u - STIJG) / (TOP - STIJG); y = a * a * HOOG; wieb = 0.015; stuw = true; } // stijgen
+    else if (u < ZWEEF) { y = HOOG + (u - TOP) * 6; }                             // zweven in "de ruimte"
+    else if (u < DAAL) { const a = (u - ZWEEF) / (DAAL - ZWEEF); const top = HOOG + (ZWEEF - TOP) * 6; y = top * (1 - a * a * (3 - 2 * a)); stuw = a > 0.5; } // dalen + rem-vlam
+    else if (!klaarRef.current) { klaarRef.current = true; setFase("klaar"); }
+    g.position.set(Math.sin(t * 43) * wieb, y, Math.sin(t * 37 + 1) * wieb);
+    if (vlam.current) {
+      const k = (stuw ? 1.5 : 0.35) + Math.sin(t * 22) * 0.25;
+      vlam.current.scale.set(k, stuw ? k * 1.6 : k, k);
+    }
+    // Rookpufjes bij het platform: tijdens de start en vlak voor de landing.
+    const rookAan = u < STIJG + 2.5 || (u > DAAL - 2 && u < DAAL + 0.4);
+    rookRefs.current.forEach((m, i) => {
+      if (!m) return;
+      m.visible = rookAan;
+      if (!rookAan) return;
+      const lok = (u * 0.9 + i * 0.33) % 1.3;
+      const gr = 0.5 + lok * 1.5;
+      m.scale.set(gr, gr, gr);
+      m.position.set(Math.sin(i * 2.5) * (0.6 + lok * 0.9), 0.35 + lok * 0.7, Math.cos(i * 2.5) * (0.6 + lok * 0.9));
+      m.material.opacity = Math.max(0, 0.55 - lok * 0.42);
+    });
+  });
+  const lanceer = (e) => { e?.stopPropagation?.(); if (fase === "klaar") setFase("aftellen"); };
   return (
     <group position={position} rotation={[0, rotation, 0]}>
+      {/* platform */}
       <mesh position={[0, 0.15, 0]} receiveShadow><cylinderGeometry args={[1.1, 1.25, 0.3, 12]} /><meshStandardMaterial color="#5a5f66" flatShading roughness={1} /></mesh>
-      <mesh position={[0, 2.0, 0]} castShadow><cylinderGeometry args={[0.5, 0.55, 3.2, 18]} /><meshStandardMaterial color="#f2f2f2" flatShading roughness={0.5} /></mesh>
-      <mesh position={[0, 2.6, 0]}><cylinderGeometry args={[0.52, 0.52, 0.3, 18]} /><meshStandardMaterial color="#e2574c" flatShading roughness={0.5} /></mesh>
-      <mesh position={[0, 3.95, 0]} castShadow><coneGeometry args={[0.5, 1.1, 18]} /><meshStandardMaterial color="#e2574c" flatShading roughness={0.5} /></mesh>
-      <mesh position={[0, 2.9, 0.5]}><sphereGeometry args={[0.16, 12, 10]} /><meshStandardMaterial color="#7bc6ff" emissive="#7bc6ff" emissiveIntensity={0.3} /></mesh>
-      {[0, 1, 2].map((i) => (
-        <mesh key={i} position={[Math.sin((i / 3) * Math.PI * 2) * 0.5, 0.7, Math.cos((i / 3) * Math.PI * 2) * 0.5]} rotation={[0, -(i / 3) * Math.PI * 2, 0]} castShadow>
-          <boxGeometry args={[0.08, 0.9, 0.5]} /><meshStandardMaterial color="#c0392b" flatShading />
+      {/* het schip zelf — vliegt als één groep omhoog */}
+      <group ref={schip}>
+        <mesh position={[0, 2.0, 0]} castShadow><cylinderGeometry args={[0.5, 0.55, 3.2, 18]} /><meshStandardMaterial color="#f2f2f2" flatShading roughness={0.5} /></mesh>
+        <mesh position={[0, 2.6, 0]}><cylinderGeometry args={[0.52, 0.52, 0.3, 18]} /><meshStandardMaterial color="#e2574c" flatShading roughness={0.5} /></mesh>
+        <mesh position={[0, 3.95, 0]} castShadow><coneGeometry args={[0.5, 1.1, 18]} /><meshStandardMaterial color="#e2574c" flatShading roughness={0.5} /></mesh>
+        <mesh position={[0, 2.9, 0.5]}><sphereGeometry args={[0.16, 12, 10]} /><meshStandardMaterial color="#7bc6ff" emissive="#7bc6ff" emissiveIntensity={0.3} /></mesh>
+        {[0, 1, 2].map((i) => (
+          <mesh key={i} position={[Math.sin((i / 3) * Math.PI * 2) * 0.5, 0.7, Math.cos((i / 3) * Math.PI * 2) * 0.5]} rotation={[0, -(i / 3) * Math.PI * 2, 0]} castShadow>
+            <boxGeometry args={[0.08, 0.9, 0.5]} /><meshStandardMaterial color="#c0392b" flatShading />
+          </mesh>
+        ))}
+        <mesh ref={vlam} position={[0, 0.35, 0]} rotation={[Math.PI, 0, 0]}><coneGeometry args={[0.3, 0.7, 10]} /><meshStandardMaterial color="#ffb03a" emissive="#ff8a1e" emissiveIntensity={0.7} transparent opacity={0.85} /></mesh>
+      </group>
+      {/* rookpufjes (alleen zichtbaar bij start/landing) */}
+      {[0, 1, 2, 3, 4].map((i) => (
+        <mesh key={`rook${i}`} ref={(el) => { rookRefs.current[i] = el; }} visible={false}>
+          <sphereGeometry args={[0.4, 8, 6]} />
+          <meshStandardMaterial color="#d8d4cc" transparent opacity={0.5} depthWrite={false} />
         </mesh>
       ))}
-      <mesh ref={vlam} position={[0, 0.35, 0]} rotation={[Math.PI, 0, 0]}><coneGeometry args={[0.3, 0.7, 10]} /><meshStandardMaterial color="#ffb03a" emissive="#ff8a1e" emissiveIntensity={0.7} transparent opacity={0.85} /></mesh>
+      {/* 🔴 lanceerconsole met de grote rode knop */}
+      <group position={[1.8, 0, 1.3]}>
+        <mesh position={[0, 0.34, 0]} castShadow onClick={lanceer}><boxGeometry args={[0.52, 0.68, 0.42]} /><meshStandardMaterial color="#5f6a76" flatShading roughness={0.8} /></mesh>
+        <mesh position={[0, 0.72, 0]} onClick={lanceer}><cylinderGeometry args={[0.17, 0.21, 0.09, 14]} /><meshStandardMaterial color="#333940" flatShading /></mesh>
+        <mesh position={[0, 0.8, 0]} onClick={lanceer}>
+          <sphereGeometry args={[0.15, 14, 10]} />
+          <meshStandardMaterial color="#e11d2e" emissive="#c00d1e" emissiveIntensity={fase === "klaar" ? 0.55 : 0.12} flatShading />
+        </mesh>
+        <Html position={[0, 1.35, 0]} center distanceFactor={8} zIndexRange={[7, 0]}>
+          <button
+            onClick={lanceer}
+            disabled={fase !== "klaar"}
+            style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "7px 16px", font: "900 14px system-ui", color: "#fff", background: fase === "klaar" ? "linear-gradient(135deg,#ff4d3a,#c0392b)" : "#8a939c", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: fase === "klaar" ? "pointer" : "default", whiteSpace: "nowrap" }}
+          >
+            {fase === "aftellen" ? `🚀 ${teller ?? ""}...` : fase === "vlucht" ? "🌌 in de ruimte..." : "🚀 LANCEER"}
+          </button>
+        </Html>
+      </group>
+      {/* groot aftel-cijfer boven het platform */}
+      {teller != null && (
+        <Html position={[0, 5.2, 0]} center distanceFactor={10} zIndexRange={[7, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{ font: "900 52px system-ui", color: "#fff", textShadow: "0 3px 10px rgba(0,0,0,.6)" }}>{teller}</div>
+        </Html>
+      )}
       <MagischePoort kleur="#b6a8ff" emoji="🚀" label="Ruimtevaart" z={-1.6} breedte={2.6} hoogte={3.4} />
     </group>
   );
