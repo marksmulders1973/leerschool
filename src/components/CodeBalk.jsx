@@ -229,6 +229,26 @@ export default function CodeBalk() {
             : "Alle gezins-extra's zijn gratis voor jouw gezin, tot en met de toets van 2027."}
           {netGezet ? " Veel oefenplezier! 🎉" : ""}
         </div>
+        {/* ⏳ TEST-FASE (Mark 27 aug): klein reset-knopje zodat Mark elk toestel
+            direct kan leegmaken, ook als reset-links niet aankomen. Ná de
+            test-fase dit knopje verwijderen — gezinnen horen hun code niet
+            per ongeluk weg te kunnen halen. */}
+        <button
+          onClick={() => {
+            try {
+              localStorage.removeItem("lk_partner_code");
+              localStorage.removeItem("lk_partner_status");
+              localStorage.removeItem(KEY_EER);
+              sessionStorage.removeItem(KEY_EER);
+            } catch { /* */ }
+            setActief(null);
+            setEer(false);
+            setNetGezet(false);
+          }}
+          style={{ marginTop: 8, border: "none", background: "transparent", font: "600 11px system-ui", color: "#7a8a7f", textDecoration: "underline", cursor: "pointer" }}
+        >
+          🔄 code van dit apparaat halen (test)
+        </button>
       </div>
     );
   }
