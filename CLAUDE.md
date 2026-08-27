@@ -71,7 +71,7 @@ SELECT pc.code, pc.max_uses,
   COALESCE(s.gescand,0)  AS gescand_uniek,
   COALESCE(s.oefende,0)  AS oefende,
   s.laatste_scan,
-  CASE WHEN pc.code LIKE 'OOIEVAAR%' THEN 'blijvend' ELSE 't/m 1-8-2027' END AS recht
+  CASE WHEN pc.code LIKE 'OOIEVAAR%' THEN 'blijvend' ELSE 't/m 31-12-2027' END AS recht
 FROM partner_codes pc
 LEFT JOIN (SELECT code, count(*) AS geclaimd FROM partner_claims GROUP BY 1) cl USING (code)
 LEFT JOIN (

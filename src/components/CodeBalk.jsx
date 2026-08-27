@@ -93,10 +93,10 @@ function EerScherm({ code, onVerder }) {
             {isOP
               ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het Familie-pakket van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
               : isEN
-                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family through 2027</strong>.</>
+                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family all of 2027</strong> — through December 31, 2027.</>
                 : blijvend
                   ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
-                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis tot en met de toets van 2027</strong>.</>}
+                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis in heel 2027</strong> — tot en met 31 december 2027.</>}
           </p>
         </div>
         <button
@@ -226,7 +226,7 @@ export default function CodeBalk() {
         <div style={{ font: "600 12.5px/1.45 system-ui", color: "#2e5a41", marginTop: 3 }}>
           {blijvend
             ? "Alle gezins-extra's zijn blijvend gratis voor jouw gezin."
-            : "Alle gezins-extra's zijn gratis voor jouw gezin, tot en met de toets van 2027."}
+            : "Alle gezins-extra's zijn gratis voor jouw gezin, heel 2027 (tot en met 31 december 2027)."}
           {netGezet ? " Veel oefenplezier! 🎉" : ""}
         </div>
         {/* ⏳ TEST-FASE (Mark 27 aug): klein reset-knopje zodat Mark elk toestel

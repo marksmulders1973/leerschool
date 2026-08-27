@@ -22,9 +22,11 @@ const KEY_ACTIEF = "lk_partner_actief";
 const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol'
 export const PARTNER_ACTIVATIE_DREMPEL = 3;
 // Waar de code recht op geeft — getoond in UI en gehonoreerd door de paywall
-// (useSubscription): gratis Familie tot na de Doorstroomtoets van 2027.
+// (useSubscription). Mark-besluit 27 aug 2026: HEEL 2027, t/m 31 december
+// (was 1 aug) — de verspreide flyers beloven "gratis heel 2027", dus de
+// einddatum is gelijkgetrokken met die belofte (eerlijke-claim-regel).
 // (Sleutelwaarde 'pro2027' blijft technisch ongewijzigd voor bestaande apparaten.)
-export const PARTNER_PRO_TOT = "2027-08-01";
+export const PARTNER_PRO_TOT = "2027-12-31";
 
 // ⚖️ BLIJVENDE codes — CONTRACTUEEL vastgelegd, niet zomaar wijzigen.
 // Hard toegezegd in het getekende "Aanvraagformulier vriend OP" aan de gemeente

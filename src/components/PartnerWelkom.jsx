@@ -102,12 +102,12 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
   const blijvend = variant.code ? partnerFamilieTot() === null : false;
   const extrasZin = blijvend
     ? "Jouw gezin kan hier blijvend gratis oefenen."
-    : "Jouw gezin krijgt straks ook alle gezins-extra's gratis, tot en met de toets van 2027.";
+    : "Jouw gezin krijgt straks ook alle gezins-extra's gratis, heel 2027 (tot en met 31 december 2027).";
 
   let titel, tekst;
   if (variant.soort === "sparkfest") {
     titel = "Welkom, Spark Fest-bezoeker! 🎉";
-    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook alle gezins-extra's gratis — tot en met de toets van 2027.`;
+    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook alle gezins-extra's gratis — heel 2027 (tot en met 31 december 2027).`;
   } else if (variant.soort === "partner") {
     titel = `Welkom via ${variant.naam}! 💛`;
     tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. ${extrasZin}`;
