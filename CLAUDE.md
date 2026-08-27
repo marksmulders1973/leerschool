@@ -64,17 +64,26 @@ De losse verplichte onderdelen hieronder (meldingen-check, trechters, e-maillijs
 
 **🔴 MAIL-CHECK-REGEL (2026-07-27, na 2 gemiste partner-mails).** Gmail-`search_threads` geeft threads terug met een berichten-preview die het NIEUWSTE bericht kan weglaten. Daarom bij élke mail-check: (1) een thread die in een `newer_than`-zoek opduikt hééft per definitie een nieuw bericht; (2) per gevonden thread `get_thread` (METADATA_ONLY) draaien en het bericht met de nieuwste datum pakken; (3) afzender ≠ Mark → binnengekomen antwoord → volledig lezen, melden en docs/WACHT-OP.md bijwerken; (4) NOOIT "geen nieuws" concluderen op previews; (5) **altijd óók een aparte query `to:hallo@leerkwartier.app newer_than:...`** (Mark-wens 25 aug) — hallo@ wordt doorgestuurd naar Gmail, maar veel outreach-antwoorden komen juist dáár binnen (Resend verstuurt vanaf hallo@) en dit vangnet mist er geen. Zie memory `feedback_mailcheck_volledige_thread`.
 
-**📮 Flyer/code-teller in élk dagrapport (Mark-wens 2026-08-24 — "ik wil zien of het werkt en waar niet").** Toon per partner-code de trechter **uitgegeven → gescand → oefende**. Bronnen: (1) **uitgifte** uit `docs/FLYER-UITGIFTE.md` (handmatig, wat we verspreidden + plekken); (2) **scans/actief LIVE** uit Supabase (project `studiebol` = `uxqnzrymyjbcpuzqktdm`), via `events_echt` (huishoud-gefilterd). SQL:
+**📮 Flyer/code-teller in élk dagrapport (Mark-wens 2026-08-24 — "ik wil zien of het werkt en waar niet"; verbreed 2026-08-27: "overzicht van álle codes + waar ze recht op geven").** Toon per partner-code: **naam · code · max plekken · gescand → geclaimd → oefende · recht (blijvend of t/m 1-8-2027) · laatste scan**. Basis = de volledige `partner_codes`-tabel (zo zie je óók codes met 0 scans); in het dagrapport de actieve rijen tonen + één verzamelregel "X codes nog zonder scans". Bronnen: (1) **uitgifte** uit `docs/FLYER-UITGIFTE.md` (handmatig, wat we verspreidden + plekken); (2) LIVE uit Supabase (project `studiebol` = `uxqnzrymyjbcpuzqktdm`), via `events_echt` (huishoud-gefilterd). SQL:
 ```sql
-SELECT props->>'code' AS code,
-  COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_bezoek') AS gescand,
-  COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_actief') AS oefende,
-  MAX(created_at) FILTER (WHERE name='partner_bezoek')::date AS laatste_scan
-FROM events_echt
-WHERE name IN ('partner_bezoek','partner_actief') AND props->>'code' LIKE '%2027'
-GROUP BY 1 ORDER BY gescand DESC;
+SELECT pc.code, pc.max_uses,
+  COALESCE(cl.geclaimd,0) AS geclaimd,
+  COALESCE(s.gescand,0)  AS gescand_uniek,
+  COALESCE(s.oefende,0)  AS oefende,
+  s.laatste_scan,
+  CASE WHEN pc.code LIKE 'OOIEVAAR%' THEN 'blijvend' ELSE 't/m 1-8-2027' END AS recht
+FROM partner_codes pc
+LEFT JOIN (SELECT code, count(*) AS geclaimd FROM partner_claims GROUP BY 1) cl USING (code)
+LEFT JOIN (
+  SELECT props->>'code' AS code,
+    COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_bezoek') AS gescand,
+    COUNT(DISTINCT props->>'uid') FILTER (WHERE name='partner_actief') AS oefende,
+    MAX(created_at) FILTER (WHERE name='partner_bezoek')::date AS laatste_scan
+  FROM events_echt WHERE name IN ('partner_bezoek','partner_actief') GROUP BY 1
+) s ON s.code = pc.code
+ORDER BY gescand_uniek DESC, pc.code;
 ```
-(Filter `LIKE '%2027'` = alleen echte partner-codes; quiz-deelcodes + eigen tests eruit.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
+(Weergavenamen per code: `PARTNER_NAMEN` in `src/components/PartnerWelkom.jsx` — codes die dáár of in `partner_codes` ontbreken direct aanvullen; les 27 aug: SCHOOLSCOOL2027 was wél uitgegeven maar ontbrak in de tabel → elke uitgegeven code MOET in beide staan.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
 
 **📡 Code-radar in élk dagrapport (idee #74 stap 1, Mark-go 25 aug — "laat óók zien wat er buiten de partner-codes gebeurt").** Naast de flyer-teller hierboven twee radar-query's draaien, zodat deel-/claim-/test-codes niet meer alleen bij toeval opvallen:
 ```sql
