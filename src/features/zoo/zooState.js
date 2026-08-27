@@ -320,6 +320,40 @@ export function ruimSeedPadenOp(layout) {
   return layout.filter((it) => !(it && PAD.has(it.assetId) && (it.price || 0) === 0 && !it.vast));
 }
 
+// 🎓 Ontbrekende leerroute-objecten bijzetten (Mark 27 aug: "de arena en de
+// raket zie ik op mijn telefoon maar niet op mijn laptop"). Nieuwe leer-objecten
+// (arena, raket, eiffeltoren, vormen, …) zaten alléén in het STARTER-park;
+// een park dat vóór hun introductie is opgeslagen kreeg ze nooit — 61 van de
+// 81 parken misten ze. Deze stap zet elk leerroute-object dat nog nergens in
+// het park staat op zijn vaste plek langs het pad. Alles wat het kind zelf
+// bouwde blijft staan; is de plek bezet, dan zoeken we een vrije cel vlakbij.
+// Idempotent: object aanwezig (waar dan ook) → niets doen.
+export function vulLeertrailAan(layout) {
+  if (!Array.isArray(layout)) return layout;
+  const aanwezig = new Set(layout.map((it) => it && it.assetId));
+  const plekken = leertrailPlekken().filter((p) => !aanwezig.has(p.id));
+  if (!plekken.length) return layout;
+  const bezet = new Set();
+  layout.forEach((it) => { if (it && Array.isArray(it.cell)) bezet.add(`${it.cell[0]},${it.cell[1]}`); });
+  const uit = [...layout];
+  for (const p of plekken) {
+    let cel = null;
+    // Doel-cel, anders in ringen eromheen (max 3 vakjes) de eerste vrije cel.
+    buiten: for (let r = 0; r <= 3; r++) {
+      for (let dx = -r; dx <= r; dx++) {
+        for (let dz = -r; dz <= r; dz++) {
+          if (Math.max(Math.abs(dx), Math.abs(dz)) !== r) continue;
+          if (!bezet.has(`${p.x + dx},${p.z + dz}`)) { cel = [p.x + dx, p.z + dz]; break buiten; }
+        }
+      }
+    }
+    if (!cel) continue; // alles vol → dit object slaan we over
+    bezet.add(`${cel[0]},${cel[1]}`);
+    uit.push({ assetId: p.id, cell: cel, rotation: p.hoek, price: 0 });
+  }
+  return uit;
+}
+
 // Maakt een ingelezen layout veilig vóór hij de scene in gaat: blok-migratie +
 // corrupte items eruit + meetkunde-objecten uit elkaar. Eén item zonder bekende
 // asset of zonder positie (geen cell én geen kx) gooide anders een TypeError in
@@ -329,7 +363,7 @@ export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
   const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
-  return ruimSeedPadenOp(legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon))));
+  return vulLeertrailAan(ruimSeedPadenOp(legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon)))));
 }
 
 export function defaultState() {
