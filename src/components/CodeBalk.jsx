@@ -106,13 +106,16 @@ export default function CodeBalk() {
   const [invoer, setInvoer] = useState("");
   const [fout, setFout] = useState(null);
   const [netGezet, setNetGezet] = useState(false);
-  // Ere-scherm één keer tonen: direct na typen, óf bij het eerste bezoek met
-  // een code die via de QR-link binnenkwam.
+  // ⏳ TEST-FASE (Mark 27 aug: "blijvend laten voorlopig, anders moet ik alles
+  // steeds resetten"): het ere-scherm komt bij élke nieuwe sessie terug zolang
+  // er een code actief is (sessionStorage i.p.v. localStorage — app sluiten en
+  // openen = scherm weer). Ná de test-fase terug naar één keer per apparaat:
+  // sessionStorage hieronder weer vervangen door localStorage met KEY_EER.
   const [eer, setEer] = useState(() => {
-    try { return !!actievePartnerCode() && !localStorage.getItem(KEY_EER); } catch { return false; }
+    try { return !!actievePartnerCode() && !sessionStorage.getItem(KEY_EER); } catch { return false; }
   });
   const sluitEer = () => {
-    try { localStorage.setItem(KEY_EER, "1"); } catch { /* */ }
+    try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ }
     setEer(false);
   };
 
