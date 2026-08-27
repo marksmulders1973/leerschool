@@ -117,7 +117,15 @@ export default function CodeBalk() {
   // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
   const previewCode = useMemo(() => {
     try {
-      const c = (new URLSearchParams(window.location.search).get("erescherm") || "").trim().toUpperCase();
+      const params = new URLSearchParams(window.location.search);
+      // 🔄 Test-hulp (Mark 27 aug): /?codereset=1 haalt de vastgezette code van
+      // dít apparaat — zelf resetten tijdens het testen, op elk toestel.
+      if (params.get("codereset") === "1") {
+        localStorage.removeItem("lk_partner_code");
+        localStorage.removeItem("lk_partner_status");
+        sessionStorage.removeItem(KEY_EER);
+      }
+      const c = (params.get("erescherm") || "").trim().toUpperCase();
       return /^[A-Z0-9-]{3,20}$/.test(c) ? c : null;
     } catch { return null; }
   }, []);
