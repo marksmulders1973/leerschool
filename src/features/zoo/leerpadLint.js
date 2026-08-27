@@ -139,7 +139,11 @@ export function leertrailPlekken(trail = LEERTRAIL) {
     const RAND = 76;                       // binnen het terrein (±80 vakjes) houden
     const px = Math.max(-RAND, Math.min(RAND, Math.round(x + nx * side * item.off)));
     const pz = Math.max(-RAND, Math.min(RAND, Math.round(z + nz * side * item.off)));
-    const hoek = Math.atan2(-side * nx, -side * nz); // kijkt naar het pad toe
+    let hoek = Math.atan2(-side * nx, -side * nz); // kijkt naar het pad toe (front = lokaal +z)
+    // 🏟️ De arena heeft zijn INGANG aan de -z-kant (de poort-kant) — zonder deze
+    // draai stond de ingang precies ván het pad af (Mark 27 aug: "kan de ingang
+    // op het pad uitkomen?").
+    if (item.id === "tempel") hoek += Math.PI;
     return { id: item.id, x: px, z: pz, hoek };
   });
 }
