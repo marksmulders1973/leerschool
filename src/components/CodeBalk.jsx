@@ -91,9 +91,10 @@ function EerScherm({ code, onVerder }) {
         >
           ▶ Begin met oefenen — gratis
         </button>
+        {/* "Ook zonder code gratis" bewust weggelaten (Mark 27 aug): waar, maar
+            op dít moment haalt het de waarde van de code onderuit. */}
         <div style={{ font: "600 12px/1.5 system-ui", color: donker ? "#b9c6d4" : "#5a6775", textAlign: "center", marginTop: 10 }}>
           Werkt op telefoon, tablet en computer. Geen account nodig, geen reclame.
-          <br />Oefenen is voor iedereen gratis — ook zonder code.
         </div>
       </div>
     </div>
