@@ -391,12 +391,36 @@ export function Eiffeltoren({ position = [0, 0, 0], rotation = 0 }) {
    • juich   — de winnaar springt juichend in het rond met zijn wapen omhoog,
                de verliezer buigt sportief — daarna wandelen ze weer verder. */
 const GEVECHT_DUUR = 60; // seconden
+// 🎭 Voorgeprogrammeerde gevechten (Mark 27 aug: "5-10 scripts zodat je nooit
+// weet wie wint"). Elke beat-lijst loopt in een lus tot de minuut om is; de
+// winnaar ligt per script vast (4× rood, 4× blauw), maar wélk script er speelt
+// is willekeurig — en jouw keuze verandert daar niets aan, dus echt spannend.
+// Beats: sluip · clash (stormloop+klang+terugspringen) · sprongX (sprong-aanval)
+// · schijnX (schijnbeweging: X stormt, ander stapt opzij, X schiet wankelend
+// door) · blokX (X slaat, de ander vangt 'm op het schild) · wankelX (X lijkt
+// te verliezen — drama vóór een eventuele comeback).
+const BEAT_DUUR = { sluip: 1.7, clash: 1.6, sprongA: 1.1, sprongB: 1.1, schijnA: 1.2, schijnB: 1.2, blokA: 1.2, blokB: 1.2, wankelA: 1.0, wankelB: 1.0 };
+const GEVECHT_SCRIPTS = [
+  { win: 0, beats: ["sluip", "clash", "sprongA", "sluip", "blokB", "clash", "sprongB", "schijnB", "wankelB", "clash"] },
+  { win: 1, beats: ["sluip", "clash", "sprongB", "sluip", "blokA", "clash", "sprongA", "schijnA", "wankelA", "clash"] },
+  { win: 0, beats: ["sluip", "sprongB", "wankelA", "clash", "schijnB", "sprongA", "clash", "sprongA"] },  // comeback rood
+  { win: 1, beats: ["sluip", "sprongA", "wankelB", "clash", "schijnA", "sprongB", "clash", "sprongB"] },  // comeback blauw
+  { win: 0, beats: ["clash", "clash", "sprongA", "blokA", "sluip", "sprongB", "schijnB", "clash"] },
+  { win: 1, beats: ["clash", "clash", "sprongB", "blokB", "sluip", "sprongA", "schijnA", "clash"] },
+  { win: 0, beats: ["sluip", "schijnA", "sprongA", "clash", "wankelB", "sprongB", "blokA", "clash"] },
+  { win: 1, beats: ["sluip", "schijnB", "sprongB", "clash", "wankelA", "sprongA", "blokB", "clash"] },
+];
 function GladiatorenDuel({ schaal = 1.4 }) {
   const a = useRef(), b = useRef(), armA = useRef(), armB = useRef();
   const [fase, setFase] = useState("rust"); // rust | gevecht | juich
   const [rest, setRest] = useState(GEVECHT_DUUR);
-  const winRef = useRef(0); // 0 = murmillo (A), 1 = retiarius (B)
+  const winRef = useRef(0); // 0 = rood (murmillo A), 1 = blauw (retiarius B)
+  const keuzeRef = useRef(null), scriptRef = useRef(null);
   useEffect(() => {
+    if (fase === "kiezen") {
+      const terug = setTimeout(() => setFase("rust"), 25000); // niemand kiest → weer verder wandelen
+      return () => clearTimeout(terug);
+    }
     if (fase === "gevecht") {
       setRest(GEVECHT_DUUR);
       const iv = setInterval(() => setRest((n) => Math.max(0, n - 1)), 1000);
@@ -414,64 +438,108 @@ function GladiatorenDuel({ schaal = 1.4 }) {
   // (om de beurt) met ontwijk-hupjes. Het tempo bouwt op; de laatste 15 s is de
   // finale op ±1,5× snelheid. Alles deterministisch uit een choreo-klok — refs
   // only, geen re-renders.
-  const gT0 = useRef(null), choreo = useRef(0), klang1 = useRef(-1), klang2 = useRef(-1);
+  const gT0 = useRef(null), choreo = useRef(0), beatIdx = useRef(0), beatStart = useRef(0), klangDone = useRef(false), phiRef = useRef(0), flipRef = useRef(1);
   const start = (e) => {
     e?.stopPropagation?.();
     if (fase !== "rust") return;
-    winRef.current = Math.random() < 0.5 ? 0 : 1;
+    keuzeRef.current = null;
+    setFase("kiezen"); // eerst: voor wie ben jij — rood of blauw?
+  };
+  const kies = (i) => (e) => {
+    e?.stopPropagation?.();
+    if (fase !== "kiezen") return;
+    keuzeRef.current = i;
+    const nr = Math.floor(Math.random() * GEVECHT_SCRIPTS.length);
+    scriptRef.current = GEVECHT_SCRIPTS[nr];
+    winRef.current = scriptRef.current.win;
     gT0.current = null;
     setFase("gevecht");
-    try { track("park_arena_gevecht", {}); } catch { /* */ }
+    try { track("park_arena_gevecht", { keuze: i === 0 ? "rood" : "blauw", script: nr }); } catch { /* */ }
   };
   useFrame((s, dt) => {
     const t = s.clock.elapsedTime;
-    if (fase === "gevecht") {
-      if (gT0.current == null) { gT0.current = t; choreo.current = 0; klang1.current = -1; klang2.current = -1; }
+    if (fase === "kiezen") {
+      // allebei springen ze bij de ingang op en neer: "kies mij!"
+      const hopA = Math.abs(Math.sin(t * 5)) * 0.22, hopB = Math.abs(Math.sin(t * 5 + 1.4)) * 0.22;
+      if (a.current) { a.current.position.set(-0.8, hopA, -1.2); a.current.rotation.set(0, Math.PI, 0); }
+      if (b.current) { b.current.position.set(0.8, hopB, -1.2); b.current.rotation.set(0, Math.PI, 0); }
+      if (armA.current) armA.current.rotation.x = -2.2 + Math.sin(t * 8) * 0.5;   // zwaaiende arm omhoog
+      if (armB.current) armB.current.rotation.x = -2.2 + Math.sin(t * 8 + 2) * 0.5;
+    } else if (fase === "gevecht") {
+      if (gT0.current == null) {
+        gT0.current = t; choreo.current = 0; beatIdx.current = 0; beatStart.current = 0;
+        klangDone.current = false; phiRef.current = 0; flipRef.current = 1;
+      }
       const u = t - gT0.current;
-      const tempo = u > GEVECHT_DUUR - 15 ? 1.5 : 1 + (u / GEVECHT_DUUR) * 0.35; // opbouw → finale
+      const tempo = u > GEVECHT_DUUR - 12 ? 1.55 : 1 + (u / GEVECHT_DUUR) * 0.3; // opbouw → finale
       choreo.current += Math.min(dt, 0.1) * tempo;
-      const L = 5.2, cyc = Math.floor(choreo.current / L), p = choreo.current - cyc * L;
-      const flip = cyc % 2 === 0 ? 1 : -1;       // draairichting wisselt per ronde
-      const phi = flip * choreo.current * 1.15;  // basis-hoek: A op phi, B ertegenover
+      // beat-machine: speel het gekozen script beat voor beat af, in een lus
+      const beats = (scriptRef.current || GEVECHT_SCRIPTS[0]).beats;
+      while (choreo.current - beatStart.current >= BEAT_DUUR[beats[beatIdx.current]]) {
+        beatStart.current += BEAT_DUUR[beats[beatIdx.current]];
+        beatIdx.current = (beatIdx.current + 1) % beats.length;
+        if (beatIdx.current === 0) flipRef.current *= -1; // nieuwe lus = andere draairichting
+        klangDone.current = false;
+      }
+      const beat = beats[beatIdx.current];
+      const q = (choreo.current - beatStart.current) / BEAT_DUUR[beat];
+      phiRef.current += Math.min(dt, 0.1) * tempo * flipRef.current * (beat === "sluip" ? 1.5 : 0.45);
+      const phi = phiRef.current;
       let rA = 1.35, rB = 1.35, yA = 0, yB = 0, leanA = 0, leanB = 0, dHoekA = 0, dHoekB = 0;
       let armAdoel = -0.5 - Math.abs(Math.sin(t * 5)) * 0.5;
       let armBdoel = -0.5 - Math.abs(Math.sin(t * 5 + 1.2)) * 0.5;
-      if (p < 1.8) {
-        // sluipen: snel cirkelen met voetenwerk-hupjes
-        yA = Math.abs(Math.sin(t * 7)) * 0.07;
-        yB = Math.abs(Math.sin(t * 7 + 1)) * 0.07;
-      } else if (p < 2.35) {
-        // stormloop: allebei tegelijk naar het midden, wapens hoog
-        const q = (p - 1.8) / 0.55;
-        rA = rB = 1.35 - q * q * 1.02;
-        yA = yB = Math.sin(q * Math.PI) * 0.22;
-        leanA = leanB = 0.28;
-        armAdoel = armBdoel = -1.7;
-        if (q > 0.9 && klang1.current !== cyc) { klang1.current = cyc; parkAudioKlang(); }
-      } else if (p < 3.1) {
-        // wapenklets! → allebei met een sprong achteruit
-        const q = (p - 2.35) / 0.75, e = 1 - (1 - q) * (1 - q);
-        rA = rB = 0.33 + e * 1.17;
-        yA = yB = Math.sin(q * Math.PI) * 0.45;
-        leanA = leanB = -0.3 * (1 - q);
-        armAdoel = armBdoel = -0.35;
-      } else if (p < 4.2) {
-        // sprong-aanval: om de beurt springt er één hoog naar het midden voor een
-        // overhead-slag; de ander duikt met twee snelle hupjes opzij
-        const q = (p - 3.1) / 1.1, boog = Math.sin(q * Math.PI);
-        const aValt = cyc % 2 === 0;
-        if (aValt) {
+      const klangNu = () => { if (!klangDone.current) { klangDone.current = true; parkAudioKlang(); } };
+      if (beat === "sluip") {
+        yA = Math.abs(Math.sin(t * 7)) * 0.07; yB = Math.abs(Math.sin(t * 7 + 1)) * 0.07;
+      } else if (beat === "clash") {
+        if (q < 0.35) { // stormloop naar het midden, wapens hoog
+          const w = q / 0.35;
+          rA = rB = 1.35 - w * w * 1.02; yA = yB = Math.sin(w * Math.PI) * 0.2;
+          leanA = leanB = 0.28; armAdoel = armBdoel = -1.7;
+          if (w > 0.9) klangNu();
+        } else { // KLANG → allebei met een sprong achteruit
+          const w = (q - 0.35) / 0.65, e = 1 - (1 - w) * (1 - w);
+          rA = rB = 0.33 + e * 1.17; yA = yB = Math.sin(w * Math.PI) * 0.45;
+          leanA = leanB = -0.3 * (1 - w); armAdoel = armBdoel = -0.35;
+        }
+      } else if (beat === "sprongA" || beat === "sprongB") {
+        // hoge sprong-aanval met overhead-slag; de ander duikt met hupjes opzij
+        const boog = Math.sin(q * Math.PI), dodge = Math.abs(Math.sin(q * Math.PI * 2)) * 0.2, zij = Math.sin(q * Math.PI) * 0.7;
+        if (beat === "sprongA") {
           rA = 1.5 - boog * 1.28; yA = boog * 0.85; armAdoel = -0.6 - boog * 2.1; leanA = 0.2 * boog;
-          rB = 1.5; yB = Math.abs(Math.sin(q * Math.PI * 2)) * 0.2; armBdoel = -1.0; dHoekB = Math.sin(q * Math.PI) * 0.7;
+          rB = 1.5; yB = dodge; dHoekB = zij; armBdoel = -1.0;
         } else {
           rB = 1.5 - boog * 1.28; yB = boog * 0.85; armBdoel = -0.6 - boog * 2.1; leanB = 0.2 * boog;
-          rA = 1.5; yA = Math.abs(Math.sin(q * Math.PI * 2)) * 0.2; armAdoel = -1.0; dHoekA = Math.sin(q * Math.PI) * 0.7;
+          rA = 1.5; yA = dodge; dHoekA = zij; armAdoel = -1.0;
         }
-        if (q > 0.45 && q < 0.65 && klang2.current !== cyc) { klang2.current = cyc; parkAudioKlang(); }
-      } else {
-        // op adem komen en de cirkel weer opzoeken
-        yA = Math.abs(Math.sin(t * 6)) * 0.05;
-        yB = Math.abs(Math.sin(t * 6 + 1)) * 0.05;
+        if (q > 0.45 && q < 0.7) klangNu();
+      } else if (beat === "schijnA" || beat === "schijnB") {
+        // schijnbeweging: de ander stapt opzij → aanvaller schiet wankelend door (mis!)
+        const duik = Math.sin(Math.min(1, q * 1.4) * Math.PI);
+        if (beat === "schijnA") {
+          rA = 1.5 - duik * 1.9; yA = Math.max(0, Math.sin(q * Math.PI)) * 0.25; leanA = q > 0.55 ? 0.5 : 0.25; armAdoel = -1.5;
+          dHoekB = Math.sin(q * Math.PI) * 0.95; yB = Math.abs(Math.sin(q * Math.PI * 2)) * 0.15;
+        } else {
+          rB = 1.5 - duik * 1.9; yB = Math.max(0, Math.sin(q * Math.PI)) * 0.25; leanB = q > 0.55 ? 0.5 : 0.25; armBdoel = -1.5;
+          dHoekA = Math.sin(q * Math.PI) * 0.95; yA = Math.abs(Math.sin(q * Math.PI * 2)) * 0.15;
+        }
+      } else if (beat === "blokA" || beat === "blokB") {
+        // X slaat, de ander vangt 'm op het schild en wordt even teruggeduwd
+        const boog = Math.sin(Math.min(1, q * 1.6) * Math.PI);
+        if (beat === "blokA") {
+          rA = 1.4 - boog * 0.9; yA = boog * 0.45; armAdoel = -0.6 - boog * 1.8;
+          rB = 1.35 + (q > 0.5 ? (q - 0.5) * 0.8 : 0); armBdoel = -2.1; leanB = q > 0.5 ? -0.2 : 0;
+        } else {
+          rB = 1.4 - boog * 0.9; yB = boog * 0.45; armBdoel = -0.6 - boog * 1.8;
+          rA = 1.35 + (q > 0.5 ? (q - 0.5) * 0.8 : 0); armAdoel = -2.1; leanA = q > 0.5 ? -0.2 : 0;
+        }
+        if (q > 0.4 && q < 0.65) klangNu();
+      } else if (beat === "wankelA") {
+        leanA = Math.sin(t * 10) * 0.28; armAdoel = -0.2;          // wankelt — lijkt te verliezen…
+        yB = Math.abs(Math.sin(t * 6)) * 0.1; armBdoel = -2.0;     // …de ander veert zegezeker
+      } else if (beat === "wankelB") {
+        leanB = Math.sin(t * 10) * 0.28; armBdoel = -0.2;
+        yA = Math.abs(Math.sin(t * 6)) * 0.1; armAdoel = -2.0;
       }
       if (a.current) { a.current.position.set(Math.sin(phi + dHoekA) * rA, yA, Math.cos(phi + dHoekA) * rA); a.current.rotation.set(leanA, phi + Math.PI, 0); }
       if (b.current) { b.current.position.set(-Math.sin(phi + dHoekB) * rB, yB, -Math.cos(phi + dHoekB) * rB); b.current.rotation.set(leanB, phi, 0); }
@@ -509,17 +577,31 @@ function GladiatorenDuel({ schaal = 1.4 }) {
           <meshStandardMaterial color="#e11d2e" emissive="#c00d1e" emissiveIntensity={fase === "rust" ? 0.55 : 0.12} flatShading />
         </mesh>
         <Html position={[0, 1.75, 0]} center distanceFactor={9} zIndexRange={[7, 0]}>
-          <button
-            onClick={start}
-            disabled={fase !== "rust"}
-            style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "7px 16px", font: "900 14px system-ui", color: "#fff", background: fase === "rust" ? "linear-gradient(135deg,#ff4d3a,#c0392b)" : fase === "juich" ? "linear-gradient(135deg,#d8b04a,#b8862a)" : "#8a939c", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: fase === "rust" ? "pointer" : "default", whiteSpace: "nowrap" }}
-          >
-            {fase === "gevecht" ? `⚔️ nog ${rest} s` : fase === "juich" ? `🏆 ${winRef.current === 0 ? "Rode helm" : "Blauwe vechter"} wint!` : "⚔️ START GEVECHT"}
-          </button>
+          {fase === "kiezen" ? (
+            <div style={{ display: "flex", gap: 6, pointerEvents: "auto" }}>
+              <button onClick={kies(0)} style={{ border: "2px solid #fff", borderRadius: 999, padding: "7px 12px", font: "900 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#ff4d3a,#b03a30)", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: "pointer", whiteSpace: "nowrap" }}>🔴 Rood</button>
+              <button onClick={kies(1)} style={{ border: "2px solid #fff", borderRadius: 999, padding: "7px 12px", font: "900 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#4aa3e8,#1f5e8e)", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: "pointer", whiteSpace: "nowrap" }}>🔵 Blauw</button>
+            </div>
+          ) : (
+            <button
+              onClick={start}
+              disabled={fase !== "rust"}
+              style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "7px 16px", font: "900 14px system-ui", color: "#fff", background: fase === "rust" ? "linear-gradient(135deg,#ff4d3a,#c0392b)" : fase === "juich" ? "linear-gradient(135deg,#d8b04a,#b8862a)" : "#8a939c", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: fase === "rust" ? "pointer" : "default", whiteSpace: "nowrap" }}
+            >
+              {fase === "gevecht" ? `⚔️ nog ${rest} s`
+                : fase === "juich" ? `🏆 ${winRef.current === 0 ? "Rood" : "Blauw"} wint!${keuzeRef.current == null ? "" : keuzeRef.current === winRef.current ? " Jouw held! 🎉" : " Volgende keer!"}`
+                : "⚔️ START GEVECHT"}
+            </button>
+          )}
         </Html>
       </group>
       {/* Gladiator A — murmillo: helm met rode kam, rond schild + houten zwaard */}
       <group ref={a}>
+        {fase === "kiezen" && (
+          <Html position={[0, 1.55, 0]} center distanceFactor={9} zIndexRange={[7, 0]}>
+            <button onClick={kies(0)} style={{ pointerEvents: "auto", border: "2px solid #fff", borderRadius: 12, padding: "5px 10px", font: "800 12px system-ui", color: "#fff", background: "linear-gradient(135deg,#ff4d3a,#b03a30)", boxShadow: "0 3px 10px rgba(0,0,0,.35)", cursor: "pointer", whiteSpace: "nowrap" }}>Kies mij! 💪</button>
+          </Html>
+        )}
         <mesh position={[-0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
         <mesh position={[0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
         <mesh position={[0, 0.48, 0]} castShadow><boxGeometry args={[0.34, 0.4, 0.2]} /><meshStandardMaterial color="#b03a30" flatShading /></mesh>
@@ -537,6 +619,11 @@ function GladiatorenDuel({ schaal = 1.4 }) {
       </group>
       {/* Gladiator B — retiarius: hoofdband, schouderstuk en drietand */}
       <group ref={b}>
+        {fase === "kiezen" && (
+          <Html position={[0, 1.55, 0]} center distanceFactor={9} zIndexRange={[7, 0]}>
+            <button onClick={kies(1)} style={{ pointerEvents: "auto", border: "2px solid #fff", borderRadius: 12, padding: "5px 10px", font: "800 12px system-ui", color: "#fff", background: "linear-gradient(135deg,#4aa3e8,#1f5e8e)", boxShadow: "0 3px 10px rgba(0,0,0,.35)", cursor: "pointer", whiteSpace: "nowrap" }}>Nee, kies míj! ⚔️</button>
+          </Html>
+        )}
         <mesh position={[-0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#6a4a2a" flatShading /></mesh>
         <mesh position={[0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#6a4a2a" flatShading /></mesh>
         <mesh position={[0, 0.48, 0]} castShadow><boxGeometry args={[0.34, 0.4, 0.2]} /><meshStandardMaterial color="#2e6e8e" flatShading /></mesh>
