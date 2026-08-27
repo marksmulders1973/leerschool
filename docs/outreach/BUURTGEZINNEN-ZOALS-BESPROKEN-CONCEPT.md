@@ -1,35 +1,31 @@
-# 📞→📧 "Zoals besproken"-mail — Froukje van Haut (Buurtgezinnen)
+# 📞→📧 Mail Froukje — persoonlijke aanbieding na het gesprek (DEFINITIEF CONCEPT v3)
 
-> DEFINITIEF CONCEPT (herschreven 27 aug avond op Marks lijn: "ze zei ermee aan
-> de slag te gaan — ik wil laten zien hoe snel we kunnen schakelen").
-> NA MARK-GO versturen als reply op de bestaande thread. Logo-akkoord-vraag
-> bewust NIET gesteld (pas nadat ze het intern gedeeld heeft).
+> Herschreven 27 aug avond op Marks cadeau-frame: "na ons gesprek voor haar
+> persoonlijk deze aanbieding gemaakt — 100 gezinnen gratis; zelfde concept kan
+> ook voor Buurtgezinnen als het bestuur wil; alleen zij heeft de code — uitdelen
+> of testen wanneer zíj wil." Op-maat/klaarzet-aanbod bewust NIET in deze mail
+> (bewaren voor haar reactie). Logo-vraag pas ná intern delen.
+> NA MARK-GO versturen als reply op de bestaande thread.
 
 ---
 
 **Aan:** Froukje van Haut
-**Onderwerp:** Re: (bestaande thread) — zoals besproken (alles staat al voor je klaar)
+**Onderwerp:** Re: (bestaande thread) — na ons gesprek: iets voor jou klaargezet
 
 Beste Froukje,
 
-Dank je wel voor het fijne telefoongesprek van vanmiddag! Je zei dat je er meteen mee aan de slag wilde — en ik wilde je graag laten zien hoe snel we kunnen schakelen. Daarom staat vanavond dit al voor je klaar:
+Dank je wel voor het fijne telefoongesprek van vanmiddag! Je zei dat je er graag mee aan de slag wilde — en ik wilde je meteen laten zien hoe snel we kunnen schakelen. Daarom heb ik na ons gesprek iets voor jou persoonlijk gemaakt.
 
-**1. Een eigen code voor jouw praktijk: BEGELEIDING2027**
-Naast de Buurtgezinnen-code heb je nu een eigen code voor de gezinnen die jij in je leerlingbegeleiding helpt. Zij typen hem in op leerkwartier.app (of gebruiken de link leerkwartier.app/?partner=BEGELEIDING2027) en krijgen het volledige Familie-pakket gratis in heel 2027 — met een welkom "via uw leerlingbegeleider". Wil je hem liever op de naam van je praktijk? Eén berichtje en ik pas het aan.
+**Een eigen aanbieding voor jouw leerlingbegeleiding: de code BEGELEIDING2027.**
+Hiermee kunnen **100 gezinnen** die jij begeleidt het volledige **Familie-pakket gratis gebruiken, heel 2027** — met onder meer het weekrapport voor thuis, printbare oefenboekjes en de toets-oefening mét klok. Het gewone oefenen is en blijft sowieso voor iedereen gratis.
 
-**2. Het welkom voor Buurtgezinnen-gezinnen — handig als je het intern voorlegt**
-Zo worden gezinnen verwelkomd die via Buurtgezinnen binnenkomen, met jullie naam en logo. Je kunt deze link zo doorsturen of laten zien:
+Belangrijk: **op dit moment heb alleen jíj deze code.** Je bepaalt dus zelf wat je ermee doet — eerst rustig zelf uitproberen, of hem meteen aan een gezin geven waarvan je denkt dat het helpt. Het werkt heel simpel: het gezin typt de code in op **leerkwartier.app** (bovenaan staat "Code gekregen? Vul hem hier in"), of gebruikt de link leerkwartier.app/?partner=BEGELEIDING2027. Ze krijgen dan een welkom "via uw leerlingbegeleider" en alles staat vast op hun apparaat — geen account, geen formulieren.
+
+**En als Buurtgezinnen dit ook wil:** ditzelfde concept kan ik net zo klaarzetten voor Buurtgezinnen-gezinnen — met jullie naam en logo in het welkom. Zo ziet dat eruit (deze link kun je zo laten zien of doorsturen als je het intern voorlegt):
 leerkwartier.app/?erescherm=BUURTGEZINNEN2027
-(Niets staat vast — aanpassen kan altijd.)
+Niets staat vast — aanpassen kan altijd.
 
-**3. De basis op een rij**
-- Oefenen is gratis voor iedereen, zonder account: leerkwartier.app
-- Code BUURTGEZINNEN2027 (op de flyer met QR: leerkwartier.app/drukwerk/flyer-BUURTGEZINNEN2027.pdf) = alle Familie-extra's gratis in heel 2027. Scannen is genoeg; intypen op de site kan ook.
-- Een steungezin kan gewoon mee-oefenen met het kind — er is niets te installeren.
-
-En zo snel als dit ging, zo snel gaan jullie tips straks ook verwerkt worden. Dat je man als huiswerkbegeleider samen met jou door de vragen heen gaat, is voor mij goud waard: ik bouw de app alleen, dus verbeterpunten kan ik meestal binnen een dag doorvoeren. Alles is welkom — groot of klein.
-
-Wil je Leerkwartier voor je eigen praktijk nog breder inzetten — leerlingen koppelen, gericht lessen voor ze klaarzetten, hun voortgang volgen — dan richt ik dat graag op maat voor je in. Zeg maar wat handig zou zijn.
+En zo snel als dit ging, zo snel wil ik ook met jullie tips omgaan. Dat je man als huiswerkbegeleider samen met jou door de vragen heen gaat, is voor mij goud waard: ik bouw de app alleen, dus verbeterpunten kan ik meestal binnen een dag doorvoeren. Alles is welkom — groot of klein.
 
 Veel plezier met uitproberen!
 
@@ -39,4 +35,4 @@ Maker van Leerkwartier — leerkwartier.app
 
 ---
 
-*Checklist ná verzending: WACHT-OP bijwerken · tips binnen → zelfde dag oppakken + terugkoppelen (waarmaken wat hier beloofd wordt!) · praktijknaam vragen zodra ze op het op-maat-aanbod ingaat (voor flyer/kaartje) · stil over interne voordracht ~half sep → zachte check. Logo-akkoord-vraag pas ná intern delen.*
+*Checklist ná verzending: WACHT-OP bijwerken · scan-teller BEGELEIDING2027 volgen · tips binnen → zelfde dag oppakken + terugkoppelen · reageert ze op de praktijk-kant → op-maat-aanbod (koppelen/klaarzetten/voortgang, evt. code op praktijknaam) · stil over interne voordracht ~half sep → zachte check.*
