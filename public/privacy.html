@@ -39,7 +39,7 @@
 <body>
 
   <h1>Privacybeleid</h1>
-  <p class="meta">Leerkwartier — Smulsoft &nbsp;|&nbsp; Laatst bijgewerkt: 8 mei 2026</p>
+  <p class="meta">Leerkwartier — Smulsoft &nbsp;|&nbsp; Laatst bijgewerkt: 27 augustus 2026</p>
 
   <p>Leerkwartier is een educatieve oefen-app voor basisschool (groep 1–8) en voortgezet onderwijs. We werken volgens het principe van <em>dataminimalisatie</em>: we verzamelen zo min mogelijk gegevens, en alleen wat nodig is om de app te laten werken.</p>
 
@@ -139,7 +139,14 @@
   <p>Als je vindt dat we je rechten schenden, kun je een klacht indienen bij de Autoriteit Persoonsgegevens: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
 
   <h2>Beveiliging</h2>
-  <p>Verbindingen lopen versleuteld via HTTPS. Data bij Supabase is versleuteld in rust. Wachtwoorden bewaren we niet (alleen Google-OAuth tokens als je inlogt).</p>
+  <p>In gewone taal: zo is de opslag beveiligd.</p>
+  <ul>
+    <li><strong>Versleutelde verbinding</strong> — alles tussen jouw apparaat en onze servers loopt via HTTPS (het slotje in je browser).</li>
+    <li><strong>Versleutelde opslag in de EU</strong> — de databank (Supabase) draait op servers in Frankfurt, Duitsland (regio eu-central-1) en de gegevens zijn versleuteld opgeslagen ("encryption at rest").</li>
+    <li><strong>Toegangsregels per account</strong> — de databank dwingt op rij-niveau af (Row Level Security) dat een ouder-account alleen de gegevens van het éigen gezin kan lezen. Een koppeling werkt bovendien pas nadat het kind die zelf in de app bevestigt.</li>
+    <li><strong>Koppelcodes</strong> — cryptografisch willekeurig gegenereerd en maximaal 48 uur geldig.</li>
+    <li><strong>Geen wachtwoorden bij ons</strong> — we bewaren geen wachtwoorden (alleen Google-OAuth als je inlogt).</li>
+  </ul>
 
   <h2>AI-gegenereerde inhoud</h2>
   <p>Sommige quizvragen worden gegenereerd door de Anthropic Claude API; daarvoor sturen we alleen het vak en niveau door (bv. "wiskunde, klas 2 havo, onderwerp parabolen"). Bij de AI-hulp en het park-maatje gaat daarnaast de roepnaam mee, plus de voorkeuren die het kind zélf aan het maatje vertelde (zoals lievelingseten) — zo kan het maatje persoonlijk antwoorden. <strong>Nooit</strong> achternaam, adres, school of contactgegevens: daar vraagt het maatje bewust niet naar, en een filter houdt zulke onderwerpen ook tegen. Gesprekken worden door ons niet opgeslagen. Zie het <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">privacybeleid van Anthropic</a>.</p>

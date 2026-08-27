@@ -86,6 +86,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // snel wisselen tussen kinderen + per lege plek een "voeg je 2e/3e kind
   // toe"-regel die naar het koppel-formulier onderaan de kaart springt.
   const [kinderMenuOpen, setKinderMenuOpen] = useState(false);
+  // 🔒 Opslag-uitleg (Mark 27 aug: "zet er netjes bij wat wél wordt
+  // opgeslagen en hoe dat beveiligd is"): uitklap-blokje onderaan de
+  // kinderen-kaart, in gewone taal.
+  const [opslagInfoOpen, setOpslagInfoOpen] = useState(false);
   const koppelFlowRef = useRef(null);
   const inviteNaamRef = useRef(null);
   const gaNaarKoppelen = () => {
@@ -854,6 +858,47 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
               </div>
             )}
           </div>
+
+        {/* 🔒 Wat slaan we op + hoe beveiligd (Mark 27 aug). Feiten
+            geverifieerd: Supabase-project eu-central-1 (Frankfurt), RLS op
+            parent_child_links (auth.uid() = parent_user_id), kind bevestigt
+            koppeling, codes crypto-random + 48u. Volledige tekst: /privacy.html. */}
+        <div style={{ marginTop: 12 }}>
+          <button
+            onClick={() => { setOpslagInfoOpen(!opslagInfoOpen); if (!opslagInfoOpen) { try { track("ouder_opslag_uitleg_open", {}); } catch { /* */ } } }}
+            aria-expanded={opslagInfoOpen}
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 6, padding: 0,
+              border: "none", background: "none", cursor: "pointer",
+              fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700,
+              color: "rgba(255,255,255,0.55)",
+            }}
+          >
+            🔒 Wat slaan we op — en hoe is dat beveiligd? {opslagInfoOpen ? "▴" : "▾"}
+          </button>
+          {opslagInfoOpen && (
+            <div style={{
+              marginTop: 8, padding: "12px 14px", borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)",
+              fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
+            }}>
+              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Wat we opslaan (in onze databank, Supabase):</div>
+              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>de <strong>voornaam</strong> van je kind (die jij hier invult), de <strong>groep</strong> en de <strong>oefenresultaten</strong></li>
+                <li>jouw <strong>e-mailadres</strong> — en het adres van je partner als je dat invult (allebei van volwassenen)</li>
+                <li><strong>níét:</strong> achternaam, e-mailadres van je kind, adres of foto's</li>
+              </ul>
+              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Hoe dat beveiligd is:</div>
+              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>de databank staat op servers <strong>in de EU</strong> (Frankfurt) en de opslag is <strong>versleuteld</strong></li>
+                <li>alles gaat over een <strong>versleutelde verbinding</strong> (het slotje in je browser)</li>
+                <li><strong>toegangsregels per account:</strong> alleen jij kunt de gegevens van jouw gezin zien — en je kind moet de koppeling eerst zelf in de app bevestigen</li>
+                <li>koppelcodes zijn willekeurig en maar <strong>48 uur geldig</strong>; we tonen geen reclame en verkopen niets door</li>
+              </ul>
+              <a href="/privacy.html" style={{ color: "#69f0ae", fontWeight: 700, fontSize: 12 }}>Lees het volledige privacybeleid →</a>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Dashboard inhoud — alleen als kind geselecteerd */}
