@@ -11,6 +11,8 @@ import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
 import { LOW_END, HALF, CELL } from "./grid";
 import { parkAudioTrein } from "./parkAudio";
+import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
+import { PARTNER_LOGOS } from "../../components/CodeBalk.jsx";
 
 // Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
 // Schaalt mee met de park-grootte (2× uitgezoomd 23 aug → ±160 i.p.v. ±80).
@@ -1645,13 +1647,32 @@ export function SkyClouds() {
 // raamstrip en twee motorgondels met draaiende propellers. Elk vaart z'n eigen
 // grote rondje op eigen hoogte/snelheid/richting. `tekst` per zeppelin is de
 // haak voor later (partner-doek); nu null = leeg wit doek.
+// 🎈 Bedank-vloot (Mark 27 aug: "geef elke partner een eigen zeppelin met
+// bedankt en hun logo of naam"). Elke échte partner (met een ja) krijgt een
+// eigen zeppelin: logo-doek waar akkoord is (PARTNER_LOGOS), anders
+// "Bedankt, <naam>!". ⏸️ OOIEVAAR/gemeente Den Haag bewust NIET in de vloot
+// tot Marks communicatie-startsein ná de KvK (besluit 26 aug) — dan regel
+// erbij. Nieuwe partner met ja? Code hier toevoegen (namen/logo's komen
+// automatisch mee uit PARTNER_NAMEN/PARTNER_LOGOS).
+const BEDANK_PARTNERS = [
+  "VBROTTERDAM2027", "BUURTGEZINNEN2027", "ALKMAAR2027", "SCHOOLSCOOL2027",
+  "SABA2027", "LELYSTAD2027", "DONGEN2027", "ZAANSTREEK2027",
+  "SMALLINGERLAND2027", "ENSCHEDE2027", "PURMEREND2027", "APELDOORN2027",
+  "HAARLEMMERMEER2027",
+];
 const ZEPPELIN_VLOOT = [
   // (De Leerkwartier-zeppelin met logo-doek is de bestuurbare InstapZeppelin in
-  //  ZooScene geworden — dit zijn de twee sfeer-zeppelins.)
-  // 🍞 Eerste partner-doek (Mark 27 aug, na logo-toestemming van Amber diezelfde
-  // dag): "Bedankt!" + het logo van Voedselbank Rotterdam op zeppelin 1.
-  { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: "Bedankt!", logo: "/drukwerk/logo-voedselbank-rotterdam.svg" },
-  { r: 92, h: 50, snelheid: 0.009, fase: 4.9, tekst: null },
+  //  ZooScene; dit is de sfeer/bedank-vloot.) Eén strak wit exemplaar + per
+  //  partner een bedank-zeppelin, verdeeld over eigen baan/hoogte/richting.
+  { r: 96, h: 52, snelheid: 0.009, fase: 4.9, tekst: null },
+  ...BEDANK_PARTNERS.map((code, i) => ({
+    r: 56 + (i % 5) * 11,
+    h: 40 + (i % 4) * 7,
+    snelheid: (i % 2 ? -1 : 1) * (0.008 + (i % 3) * 0.002),
+    fase: (i * 2.399) % (Math.PI * 2), // gulden-hoek-spreiding: nooit een file
+    tekst: PARTNER_LOGOS[code] ? "Bedankt!" : `Bedankt, ${PARTNER_NAMEN[code] || code}!`,
+    logo: PARTNER_LOGOS[code] || null,
+  })),
 ];
 // Doek-textuur: wit spandoek met (optioneel) logo links + naam ernaast,
 // getekend op een canvas. Zonder tekst/logo → geen textuur (kaal wit doek).
@@ -1675,7 +1696,21 @@ export function useZeppelinDoek(tekst, logo) {
         ctx.drawImage(img, 40, 175 - h / 2, w, h);
         x = 40 + w + 50;
       }
-      if (tekst) { ctx.fillStyle = "#14283c"; ctx.font = "800 118px system-ui, sans-serif"; ctx.textBaseline = "middle"; ctx.fillText(tekst, x, 182); }
+      if (tekst) {
+        // lettergrootte automatisch passend: "Bedankt, Voedselbank
+        // Smallingerland!" past anders niet op het doek
+        let maat = 118;
+        ctx.textBaseline = "middle";
+        ctx.font = `800 ${maat}px system-ui, sans-serif`;
+        const beschikbaar = 1100 - x - 40;
+        const breedte = ctx.measureText(tekst).width;
+        if (breedte > beschikbaar) {
+          maat = Math.max(52, Math.floor((maat * beschikbaar) / breedte));
+          ctx.font = `800 ${maat}px system-ui, sans-serif`;
+        }
+        ctx.fillStyle = "#14283c";
+        ctx.fillText(tekst, x, 182);
+      }
       const t = new CanvasTexture(canvas);
       t.colorSpace = SRGBColorSpace;
       t.anisotropy = 8;
@@ -1738,8 +1773,16 @@ function Zeppelin({ data }) {
   return <group ref={g}><ZeppelinRomp doekTex={doekTex} /></group>;
 }
 export function Zeppelins() {
-  // Op zwakke apparaten 1 zeppelin, anders de hele vloot van 3.
-  const vloot = LOW_END ? ZEPPELIN_VLOOT.slice(0, 1) : ZEPPELIN_VLOOT;
+  // Op zwakke apparaten een mini-vloot (wit + 2 bedank-zeppelins die per dag
+  // rouleren zodat elke partner tóch aan de beurt komt), anders de hele vloot.
+  const vloot = useMemo(() => {
+    if (!LOW_END) return ZEPPELIN_VLOOT;
+    const dag = Math.floor(Date.now() / 86400000);
+    const partners = ZEPPELIN_VLOOT.slice(1);
+    const a = partners[dag % partners.length];
+    const b = partners[(dag + 1) % partners.length];
+    return [ZEPPELIN_VLOOT[0], a, b].filter(Boolean);
+  }, []);
   return <group>{vloot.map((z, i) => <Zeppelin key={i} data={z} />)}</group>;
 }
 

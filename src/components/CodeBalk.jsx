@@ -27,7 +27,7 @@ function naamVoor(code) {
 // Eerst toestemming vragen ("mogen we uw logo in ons welkom-scherm tonen?"),
 // dan regel erbij. Ooievaarspas bewust nog zonder logo (komt via het
 // tekst-formulier van de gemeente).
-const PARTNER_LOGOS = {
+export const PARTNER_LOGOS = {
   VBROTTERDAM2027: "/drukwerk/logo-voedselbank-rotterdam.svg",
   ALKMAAR2027: "/drukwerk/logo-voedselbank-alkmaar.png",
   BUURTGEZINNEN2027: "/drukwerk/logo-buurtgezinnen.png",
