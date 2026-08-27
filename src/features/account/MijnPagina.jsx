@@ -185,9 +185,25 @@ const THUIS_TIPS = {
 const ROLLEN = [
   { key: "leerling", emoji: "👦", label: "Leerling" },
   { key: "student", emoji: "🎓", label: "Middelbare school" },
-  { key: "ouder", emoji: "👪", label: "Ouder of verzorger" },
-  { key: "teacher", emoji: "🧑‍🏫", label: "Juf of meester" },
+  { key: "ouder", emoji: "👪", label: "Ouder, verzorger of voogd" },
+  { key: "teacher", emoji: "🧑‍🏫", label: "Juf, meester of begeleider" },
 ];
+// Rol-woorden voor lopende zinnen + korte vorm onder de gezinsrij-poppetjes
+// (Mark 27 aug: "wat ik nodig heb is heel duidelijk leerling, ouder, voogd,
+// begeleider" — de rol moet overal in woorden zichtbaar zijn, niet alleen
+// als emoji).
+const ROL_WOORD = {
+  leerling: "leerling",
+  student: "middelbare scholier",
+  ouder: "ouder, verzorger of voogd",
+  teacher: "juf, meester of begeleider",
+};
+const ROL_KORT = {
+  leerling: "leerling",
+  student: "scholier",
+  ouder: "ouder/voogd",
+  teacher: "juf/meester",
+};
 
 // Wat de betaalde laag per rol later biedt (paywall staat UIT tot 2027 — dus
 // nu puur informeren + waitlist, Mark-keuze 13 aug). Eerlijk afgebakend: geen
@@ -343,7 +359,24 @@ export default function MijnPagina({
   };
   // Kind- of ouder/juf-weergave (WhatsApp-feedback 11 aug, punt "ook een
   // maken voor familie en pro"): zelfde pagina, andere bril.
-  const [weergave, setWeergave] = useState(userRole === "ouder" ? "ouder" : "kind");
+  // Mark 27 aug: wisselt een ouder vanuit de ouder-bril naar een kind, dan
+  // moet de nieuwe pagina óók in de ouder-bril openen ("bekijk de resultaten
+  // van…") — de pagina remount bij wissel (key=userName in App), dus de wens
+  // reist eenmalig mee via sessionStorage.
+  const [weergave, setWeergave] = useState(() => {
+    try {
+      const wens = sessionStorage.getItem("lk_weergave_wens");
+      if (wens) {
+        sessionStorage.removeItem("lk_weergave_wens");
+        return wens === "ouder" ? "ouder" : "kind";
+      }
+    } catch { /* */ }
+    return userRole === "ouder" ? "ouder" : "kind";
+  });
+  const wisselMetBril = (naam) => {
+    try { if (weergave === "ouder") sessionStorage.setItem("lk_weergave_wens", "ouder"); } catch { /* */ }
+    if (onWisselProfiel) onWisselProfiel(naam);
+  };
   const [week, setWeek] = useState(null);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
@@ -357,7 +390,7 @@ export default function MijnPagina({
           // leraar/school?") — juf/student/kind herkenbaar in de lijst.
           let rol = "";
           try { rol = (JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}").role) || ""; } catch {}
-          return { naam: n, emoji: rol === "ouder" ? "👪" : rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
+          return { naam: n, rol: rol || "leerling", emoji: rol === "ouder" ? "👪" : rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
         });
     } catch { return []; }
   }, [player]);
@@ -372,9 +405,9 @@ export default function MijnPagina({
   // toont zijn éigen avatar (lk_avatar:<naam>).
   const gezinsRij = useMemo(() => {
     const eigenEmoji = userRole === "ouder" ? "👪" : userRole === "teacher" ? "🧑‍🏫" : userRole === "student" ? "🎓" : "👦";
-    const rij = [{ naam: player, actief: true, config: avatarConfig, emoji: eigenEmoji }];
+    const rij = [{ naam: player, actief: true, config: avatarConfig, emoji: eigenEmoji, rol: userRole || "leerling" }];
     andereNamen.slice(0, 3).forEach((n) => {
-      rij.push({ naam: n.naam, actief: false, config: loadAvatarConfig(n.naam), emoji: n.emoji });
+      rij.push({ naam: n.naam, actief: false, config: loadAvatarConfig(n.naam), emoji: n.emoji, rol: n.rol });
     });
     return rij;
   }, [player, userRole, avatarConfig, andereNamen]);
@@ -707,12 +740,35 @@ export default function MijnPagina({
                     </button>
                   )}
                 </div>
+                {/* 🪪 Rol-regel (Mark 27 aug: "mij is niet duidelijk of ik hier
+                    als ouder ben ingelogd") — altijd in woorden zichtbaar wíé
+                    dit profiel is: leerling, ouder/verzorger/voogd of juf/
+                    meester/begeleider. Tik = wissel-paneel open om naam of
+                    rol te veranderen. */}
+                {(() => {
+                  const rolKey = userRole || "leerling";
+                  const rolInfo = ROLLEN.find((r) => r.key === rolKey) || ROLLEN[0];
+                  return (
+                    <button
+                      onClick={() => { setWisselOpen(true); try { track("mijn_rolregel_tik", {}); } catch { /* */ } }}
+                      title="Klopt dit niet? Tik om van naam of rol te wisselen."
+                      style={{
+                        display: "inline-flex", alignItems: "center", gap: 6, margin: "6px 0 4px",
+                        padding: "5px 12px", borderRadius: 999, cursor: "pointer",
+                        border: "1.5px solid rgba(255,213,79,0.55)", background: "rgba(255,213,79,0.12)",
+                        color: "#ffd54f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800,
+                      }}
+                    >
+                      {rolInfo.emoji} Je bent hier als: {ROL_WOORD[rolKey] || "leerling"}
+                    </button>
+                  );
+                })()}
                 {wisselOpen && (
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0 2px" }}>
                     {andereNamen.map((n) => (
                       <button
                         key={n.naam}
-                        onClick={() => { track("mijn_profiel_wissel", {}); setWisselOpen(false); onWisselProfiel(n.naam); }}
+                        onClick={() => { track("mijn_profiel_wissel", {}); setWisselOpen(false); wisselMetBril(n.naam); }}
                         style={{
                           padding: "7px 13px", borderRadius: 999, cursor: "pointer",
                           border: n.emoji === "🧑‍🏫" ? "1px solid rgba(167,139,250,0.5)" : "1px solid rgba(0,200,83,0.4)",
@@ -863,7 +919,7 @@ export default function MijnPagina({
                         onClick={() => {
                           if (p.actief) return;
                           try { track("mijn_profiel_wissel", { via: "gezinsrij" }); } catch { /* */ }
-                          onWisselProfiel && onWisselProfiel(p.naam);
+                          wisselMetBril(p.naam);
                         }}
                         aria-pressed={p.actief}
                         title={p.actief ? `${p.naam} is nu bezig` : `Wissel naar ${p.naam}`}
@@ -889,6 +945,13 @@ export default function MijnPagina({
                           fontWeight: p.actief ? 800 : 600,
                           color: p.actief ? "var(--color-text-strong)" : "var(--color-text-muted, #8899aa)",
                         }}>{p.naam}</div>
+                        {/* Rol in woorden onder elke naam (Mark 27 aug) — zo
+                            zie je in één blik wie leerling is en wie ouder. */}
+                        <div style={{
+                          fontSize: 9.5, marginTop: 1, maxWidth: 62,
+                          overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                          fontWeight: 700, color: "var(--color-text-muted, #8899aa)",
+                        }}>{ROL_KORT[p.rol] || "leerling"}</div>
                       </button>
                     ))}
                   </div>
@@ -1005,7 +1068,14 @@ export default function MijnPagina({
             }}>
               {[
                 { key: "kind", label: `Wat ${player} ziet` },
-                { key: "ouder", label: "Wat je ouder/verzorger of de juf of meester ziet" },
+                // Rol-bewust label (Mark 27 aug): een ouder/juf die zelf is
+                // ingelogd "kijkt" niet mee — het ís hun overzicht.
+                {
+                  key: "ouder",
+                  label: userRole === "ouder" || userRole === "teacher"
+                    ? "Jouw overzicht (thuis/school)"
+                    : "Meekijken zoals thuis of de juf/meester",
+                },
               ].map((t) => {
                 const actief = weergave === t.key;
                 return (
@@ -1027,6 +1097,16 @@ export default function MijnPagina({
                 );
               })}
             </div>
+            {/* Uitleg bij de meekijk-blik (Mark 27 aug): deze knop is een BRIL,
+                geen login — dat moet in woorden staan, anders denkt een ouder
+                dat hij "als ouder is ingelogd" terwijl het profiel van het
+                kind actief is. */}
+            {weergave === "ouder" && userRole !== "ouder" && userRole !== "teacher" && (
+              <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.55, margin: "-6px 0 14px", maxWidth: 560 }}>
+                👀 Je kijkt nu mee zoals thuis of school dat ziet. Ingelogd is nog steeds <strong style={{ color: "var(--color-text)" }}>{player} ({ROL_WOORD[userRole || "leerling"] || "leerling"})</strong>.
+                Ben jij de ouder, verzorger of voogd? Tik bovenaan op je eigen naam of op "Je bent hier als…".
+              </div>
+            )}
 
             {weergave === "kind" && (<>
             {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
@@ -1767,13 +1847,16 @@ export default function MijnPagina({
             {andereNamen.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(0,176,255,0.35)" }}>
                 <div style={eyebrowStijl}>Op dit apparaat</div>
-                <div style={kaartTitelStijl}>Wie oefent er hier?</div>
+                {/* Mark 27 aug: "als ouder moet er simpel iets staan als
+                    'bekijk de resultaten van…'" — tik = kind-profiel in de
+                    ouder-bril (resultaten), niet de kind-weergave. */}
+                <div style={kaartTitelStijl}>Bekijk de resultaten van…</div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "6px 0 8px" }}>
                   {andereNamen.map((n) => (
                     <button
                       key={n.naam}
-                      onClick={() => { try { track("mijn_ouder_kind_wissel", {}); } catch { /* */ } onWisselProfiel?.(n.naam); }}
-                      title={`Bekijk wat ${n.naam} doet`}
+                      onClick={() => { try { track("mijn_ouder_kind_wissel", {}); } catch { /* */ } wisselMetBril(n.naam); }}
+                      title={`Bekijk de resultaten van ${n.naam}`}
                       style={{
                         padding: "8px 14px", borderRadius: 999, cursor: "pointer",
                         border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.1)",
@@ -1786,8 +1869,8 @@ export default function MijnPagina({
                 </div>
                 <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                   {authUser?.id
-                    ? "Tik op een naam om mee te kijken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code."
-                    : "Tik op een naam om mee te kijken. Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport? Log in of maak gratis een account — zie hieronder."}
+                    ? "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code."
+                    : "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport? Log in of maak gratis een account — zie hieronder."}
                 </div>
               </Card>
             )}
@@ -1824,8 +1907,10 @@ export default function MijnPagina({
             })()}
             {/* ── Ouder/juf: afgelopen week ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={eyebrowStijl}>Oefentijd</div>
-              <div style={kaartTitelStijl}>Afgelopen week</div>
+              {/* Naam in de kop (Mark 27 aug: "bekijk de resultaten van…") —
+                  zo is meteen duidelijk over wíé dit overzicht gaat. */}
+              <div style={eyebrowStijl}>Resultaten</div>
+              <div style={kaartTitelStijl}>📊 De resultaten van {player} — afgelopen week</div>
               {!week && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Laden…</div>}
               {week && (() => {
                 const maxMin = Math.max(...week.map((d) => d.minuten), 1);
@@ -1868,11 +1953,11 @@ export default function MijnPagina({
 
             {/* ── Ouder/juf: waar het misgaat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={eyebrowStijl}>Foutanalyse</div>
-              <div style={kaartTitelStijl}>Waar het misgaat</div>
+              <div style={eyebrowStijl}>Aandachtspunten</div>
+              <div style={kaartTitelStijl}>Hier moet {player} nog aan werken</div>
               {foutanalyse.length === 0 && (
                 <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.5 }}>
-                  Nog te weinig gemaakt om iets zinnigs te zeggen — vanaf 3 vragen per onderwerp verschijnt hier eerlijk waar het misgaat.
+                  Nog te weinig gemaakt om iets zinnigs te zeggen — vanaf 3 vragen per onderwerp verschijnt hier eerlijk waar {player} nog aan kan werken.
                 </div>
               )}
               {foutanalyse.map((r) => (
@@ -1906,7 +1991,7 @@ export default function MijnPagina({
 
             {/* ── Ouder/juf: thuis-tip ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("rgba(255,213,79,0.07)"), border: "1px solid rgba(255,213,79,0.3)" }}>
-              <div style={{ ...kaartTitelStijl, color: "#ffd54f", marginBottom: 6 }}>💡 Wat je thuis kunt doen</div>
+              <div style={{ ...kaartTitelStijl, color: "#ffd54f", marginBottom: 6 }}>💡 Wat je thuis met {player} kunt doen</div>
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
             </Card>
 
