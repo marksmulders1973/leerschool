@@ -915,7 +915,11 @@ export default function MijnPagina({
                     </div>
                   </div>
                 )}
-                {(userLevel || onSetLevel) && (
+                {/* Groep/klas-chip is leerling-taal (Mark 27 aug: "ik sta als
+                    ouder/voogd maar er staat ook klas 6 — dat lijkt me niet").
+                    Een ouder/verzorger zit zelf niet in een groep, dus voor de
+                    ouder-rol verbergen we 'm; de groep hoort bij het kind-profiel. */}
+                {(userLevel || onSetLevel) && userRole !== "ouder" && (
                   <div style={{ marginTop: 2 }}>
                     <button
                       onClick={() => onSetLevel && setGroepKiezerOpen((o) => !o)}
@@ -1183,7 +1187,9 @@ export default function MijnPagina({
                 Mark 14 aug 21:48: "belangrijk blok moet ergens bovenaan, wat
                 moet ik leren in groep 1" — daarom stáát dit blok nu bovenaan,
                 vóór de Vandaag-kaart. ── */}
-            {userRole !== "teacher" && (
+            {/* Ook niet voor de ouder-rol (Mark 27 aug): "klaar zijn voor
+                groep X" is kind-taal — een ouder heeft zelf geen groep. */}
+            {userRole !== "teacher" && userRole !== "ouder" && (
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Jouw doel</div>
               {countdown ? (
@@ -1658,7 +1664,7 @@ export default function MijnPagina({
 
             {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
                 iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
-            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" &&
+            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" && userRole !== "ouder" &&
               !(kiesSoort === "klas" && niveau.nr >= 6) && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
                 <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
@@ -1877,9 +1883,10 @@ export default function MijnPagina({
                   {tier === "free" && <> — in 2026 is alles vrij te gebruiken.</>}
                   {geldigTot && <> — geldig tot {geldigTot}.</>}
                 </div>
-                {/* Koppelcode-regel is kind-taal — leerkracht ziet hem niet
-                    (agent-test 12 aug). */}
-                {userRole !== "teacher" && (
+                {/* Koppelcode-regel is kind-taal — leerkracht én ouder zien
+                    hem niet (agent-test 12 aug; Mark 27 aug: ouder-rol krijgt
+                    geen kind-teksten). */}
+                {userRole !== "teacher" && userRole !== "ouder" && (
                   <div style={{ marginBottom: 6 }}>
                     👨‍👩‍👧 Een ouder of verzorger kan met een <strong>koppelcode</strong> meekijken met je voortgang — vraag het thuis, of kijk op het thuis-overzicht.
                   </div>
