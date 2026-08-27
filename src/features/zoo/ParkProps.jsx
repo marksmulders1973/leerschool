@@ -10,6 +10,7 @@ import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
 import { LOW_END, HALF, CELL } from "./grid";
+import { parkAudioTrein } from "./parkAudio";
 
 // Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
 // Schaalt mee met de park-grootte (2× uitgezoomd 23 aug → ±160 i.p.v. ±80).
@@ -2263,7 +2264,9 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
     return { p: data.curve.getPointAt(u, tmpP), dir: data.curve.getTangentAt(u, tmpD) };
   };
 
-  useFrame((_, dt) => {
+  // vorige camera-afstand van de kop, voor het doppler-richtinkje in het geluid
+  const audioD = useRef(Infinity);
+  useFrame((s, dt) => {
     if (!data) return;
     sRef.current += dt * SNELHEID * richtingRef.current;
     if (!data.loop) {
@@ -2278,6 +2281,12 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
       // Wagons hangen áchter de kop, gezien in de rijrichting.
       const info = posOp(headS - i * WAGON_GAP * richtingRef.current);
       if (!info) continue;
+      if (i === 0) {
+        // 🔊 treingeluid: volume op camera-afstand + doppler (throttled in parkAudio)
+        const dCam = s.camera.position.distanceTo(info.p);
+        parkAudioTrein(dCam, dCam < audioD.current);
+        audioD.current = dCam;
+      }
       g.position.copy(info.p);
       // +π: de wagon-modellen wezen met hun achterkant vooruit (Mark: "trein
       // rijdt achteruit"); 1.6× groter zodat hij in verhouding is met de speler.

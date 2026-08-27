@@ -25,6 +25,7 @@ import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
+import { parkAudioRaket } from "./parkAudio";
 
 // 🎓 Leer-bord — houten bordje met de les(sen) van een leerstation als échte
 // knoppen (Mark 26 aug: "ik zie er nu niets" → zichtbaar leren bij élk
@@ -621,6 +622,7 @@ export function Raket({ position = [0, 0, 0], rotation = 0, onOefenen = null }) 
       clearInterval(iv); setTeller(null);
       t0.current = null; klaarRef.current = false;
       setFase("vlucht");
+      parkAudioRaket(); // geluidscurve volgt de vaste vluchttijden (STIJG/TOP/ZWEEF/DAAL)
       try { track("park_raket_lancering", {}); } catch { /* */ }
     }, 2400);
     return () => { clearInterval(iv); clearTimeout(done); };

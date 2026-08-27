@@ -30,6 +30,7 @@ import { loadDueTopics } from "../features/mastery/mastery.js";
 import { kiesZwakkeConcepten } from "../features/oefenboekje/opMaat.js";
 import { haalKlaargezetVoorKind } from "../shared/ouderKlaargezet.js";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
+import { parkAudioStart, parkAudioStil, parkAudioStop } from "../features/zoo/parkAudio";
 import BuddyKop from "../features/zoo/BuddyKop";
 import ParkErrorBoundary from "../features/zoo/ParkErrorBoundary";
 import { useGLTF } from "@react-three/drei";
@@ -1668,9 +1669,18 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const nieuw = !gidsStil;
     zetGidsStil(nieuw);
     setGidsStilUI(nieuw);
+    parkAudioStil(nieuw); // één knop mute alles: gids-stem + sfeergeluid
     if (nieuw) { setGidsMoment(null); }
     try { track("park_gids_stil", { stil: nieuw }); } catch { /* */ }
   };
+  // 🔊 Sfeergeluid (Mark 27 aug): wind/vogels/trein/raket, synthetisch via Web
+  // Audio (parkAudio.js). Browsers blokkeren audio tot een user-gesture, dus
+  // starten op de eerste pointerdown; volgt de bewaarde stil-keuze van de gids.
+  useEffect(() => {
+    const eersteTik = () => { parkAudioStart(gidsIsStil()); window.removeEventListener("pointerdown", eersteTik); };
+    window.addEventListener("pointerdown", eersteTik);
+    return () => { window.removeEventListener("pointerdown", eersteTik); parkAudioStop(); };
+  }, []);
   const onGidsMoment = (id) => {
     if (gidsStil || rustFase() || tafereel || dialoog || menuOpen || panel || rekenVraag) return;
     const m = PARK_LEERMOMENTEN[id];
@@ -1906,7 +1916,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             🏆
           </button>
           {/* 🔊 Parkgids aan/uit: praat hardop over wat je in het park ziet. */}
-          <button onClick={toggleGidsStil} title={gidsStil ? "Parkgids weer laten praten" : "Parkgids stil zetten"} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "800 15px system-ui", color: "#234", background: gidsStil ? "rgba(255,255,255,0.65)" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer", opacity: gidsStil ? 0.8 : 1 }}>{gidsStil ? "🔇" : "🔊"}</button>
+          <button onClick={toggleGidsStil} title={gidsStil ? "Geluid weer aanzetten (gids + parkgeluiden)" : "Alle geluid uitzetten (gids + parkgeluiden)"} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, width: 38, height: 38, font: "800 15px system-ui", color: "#234", background: gidsStil ? "rgba(255,255,255,0.65)" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer", opacity: gidsStil ? 0.8 : 1 }}>{gidsStil ? "🔇" : "🔊"}</button>
           {/* Alle overige functies gebundeld in één ☰-menu → tijdens spelen bijna alleen park in beeld. */}
           <button onClick={() => setMenuOpen((v) => !v)} title="Menu" style={{ pointerEvents: "auto", border: (menuOpen || followCam || firstPerson || sculptMode || waterMode || groundMode || bouwen) ? "2px solid #2e7d32" : "none", borderRadius: 999, width: 38, height: 38, font: "800 17px system-ui", color: "#234", background: menuOpen ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>☰</button>
           <button onClick={onHome} style={{ pointerEvents: "auto", border: "none", borderRadius: 999, padding: "8px 16px", font: "700 14px system-ui", color: "#234", background: "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>← Terug</button>
