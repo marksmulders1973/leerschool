@@ -113,13 +113,11 @@ export default function CodeBalk() {
   }, []);
   const [previewOpen, setPreviewOpen] = useState(true);
 
-  // ⏳ TEST-FASE Den Haag (Mark 27 aug: "zet 'code actief' even uit voor Den
-  // Haag zodat ik steeds opnieuw kan proberen"): OOIEVAAR-codes worden NIET op
-  // het apparaat vastgezet — typen toont het ere-scherm, daarna is de balk
-  // weer neutraal. Een eerder vastgezette OOIEVAAR-code wordt bij het laden
-  // weggehaald. Na Marks goedkeuring: TEST_OOIEVAAR op false → Den Haag werkt
-  // weer als elke andere partner (blijvend vastgezet).
-  const TEST_OOIEVAAR = true;
+  // ✅ Den Haag GOEDGEKEURD door Mark (27 aug, na de test-fase): OOIEVAAR-codes
+  // zetten weer blijvend vast, zoals elke partner. De vlag blijft staan als
+  // herbruikbaar keur-mechanisme: nieuwe grote partner in keurfase? Tijdelijk
+  // op diens prefix zetten (zie memory feedback_partner_ereschermen_testwerkwijze).
+  const TEST_OOIEVAAR = false;
   const [testEer, setTestEer] = useState(null);
   const [actief, setActief] = useState(() => {
     const c = actievePartnerCode();
