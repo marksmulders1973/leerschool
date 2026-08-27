@@ -5,6 +5,7 @@ import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import PartnerWelkom from "./PartnerWelkom.jsx";
+import CodeBalk from "./CodeBalk.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
@@ -561,6 +562,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             onOefenen={onDagvraag || (() => handleFeatureClick("cito"))}
           />
         )}
+
+        {/* 🎟️ Code-balk (Mark 27 aug): de handmatige code-ingang — afspraak met
+            Den Haag — direct zichtbaar bovenaan home. Voor iedereen dezelfde
+            neutrale uitnodiging; pas ná invullen het welkom + "code actief". */}
+        {step === "role" && <CodeBalk />}
 
         {/* Welkom-terug-strook (Mark 11 aug: "zet mijn persoonlijke pagina
             zichtbaar op de homepagina"). Alleen voor terugkerende bezoekers

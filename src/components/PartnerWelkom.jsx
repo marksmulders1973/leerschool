@@ -21,7 +21,7 @@ import { track } from "../utils.js";
 // Nette weergavenamen per code (DB-org_naam bevat interne aantekeningen).
 // Nieuwe partner-code? Regel erbij — onbekende codes vallen terug op de
 // neutrale groet, dus vergeten is nooit kapot.
-const PARTNER_NAMEN = {
+export const PARTNER_NAMEN = {
   AANZET2027: "Bibliotheek AanZet",
   ALKMAAR2027: "Voedselbank Alkmaar",
   ALMERE2027: "de nieuwe bibliotheek in Almere",
