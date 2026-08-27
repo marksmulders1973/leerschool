@@ -146,6 +146,7 @@ export default function CodeBalk() {
           </div>
           <div style={{ display: "flex", gap: 8 }}>
             <input
+              className="lk-codebalk-input"
               value={invoer}
               onChange={(e) => setInvoer(e.target.value.toUpperCase())}
               onKeyDown={(e) => { if (e.key === "Enter") activeer(); }}

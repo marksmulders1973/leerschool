@@ -1739,6 +1739,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       <style>{`
         input, select, textarea { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
         input::placeholder { color: #667788 !important; -webkit-text-fill-color: #667788 !important; }
+        /* Uitzondering (27 aug): het code-invulveld staat op een LICHTE balk —
+           zonder deze regel typte je wit-op-wit (Mark zag z'n code niet). */
+        input.lk-codebalk-input { color: #1a2233 !important; -webkit-text-fill-color: #1a2233 !important; background: #ffffff !important; }
+        input.lk-codebalk-input::placeholder { color: #9aa5b1 !important; -webkit-text-fill-color: #9aa5b1 !important; }
         select option { background: #1e2d45; color: #ffffff; }
         @keyframes correctGlow { 0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.4); } 70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); } 100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); } }
         @keyframes wrongShake { 0%,100% { transform: translateX(0); } 15%,45%,75% { transform: translateX(-6px); } 30%,60%,90% { transform: translateX(6px); } }
