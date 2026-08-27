@@ -25,7 +25,7 @@ import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
-import { parkAudioRaket } from "./parkAudio";
+import { parkAudioRaket, parkAudioJuich } from "./parkAudio";
 
 // 🎓 Leer-bord — houten bordje met de les(sen) van een leerstation als échte
 // knoppen (Mark 26 aug: "ik zie er nu niets" → zichtbaar leren bij élk
@@ -382,26 +382,90 @@ export function Eiffeltoren({ position = [0, 0, 0], rotation = 0 }) {
 }
 
 /* 🏛️ Griekse/Romeinse tempel — zuilen + driehoek-fronton + trap. → oudheid. */
-/* ⚔️ Twee gladiatoren in een speels duel (Mark 26 aug: "2 gladiatoren die aan
-   het vechten zijn, speels natuurlijk maar meer op echt"). Ze cirkelen om
-   elkaar heen, doen om de beurt een uitval en zwaaien met zwaard/drietand —
-   sport-demonstratie-stijl, geen griezel. Puur refs in useFrame. */
-function GladiatorenDuel() {
+/* ⚔️ Arena-gevecht op knop (Mark 27 aug: "laat ze rondjes om elkaar lopen en
+   net als bij de raket een paal met rode knop: START GEVECHT — 1 minuut
+   vechten, één wint, geen bloed, juichend poppetje"). Drie fases:
+   • rust    — de twee gladiatoren wandelen rustig rondjes om elkaar heen;
+   • gevecht — 60 s duel (cirkelen + om de beurt een uitval, zwaard/drietand);
+   • juich   — de winnaar springt juichend in het rond met zijn wapen omhoog,
+               de verliezer buigt sportief — daarna wandelen ze weer verder. */
+const GEVECHT_DUUR = 60; // seconden
+function GladiatorenDuel({ schaal = 1.4 }) {
   const a = useRef(), b = useRef(), armA = useRef(), armB = useRef();
+  const [fase, setFase] = useState("rust"); // rust | gevecht | juich
+  const [rest, setRest] = useState(GEVECHT_DUUR);
+  const winRef = useRef(0); // 0 = murmillo (A), 1 = retiarius (B)
+  useEffect(() => {
+    if (fase === "gevecht") {
+      setRest(GEVECHT_DUUR);
+      const iv = setInterval(() => setRest((n) => Math.max(0, n - 1)), 1000);
+      const done = setTimeout(() => setFase("juich"), GEVECHT_DUUR * 1000);
+      return () => { clearInterval(iv); clearTimeout(done); };
+    }
+    if (fase === "juich") {
+      parkAudioJuich(); // publiek juicht mee
+      const terug = setTimeout(() => setFase("rust"), 7000);
+      return () => clearTimeout(terug);
+    }
+  }, [fase]);
+  const start = (e) => {
+    e?.stopPropagation?.();
+    if (fase !== "rust") return;
+    winRef.current = Math.random() < 0.5 ? 0 : 1;
+    setFase("gevecht");
+    try { track("park_arena_gevecht", {}); } catch { /* */ }
+  };
   useFrame((s) => {
     const t = s.clock.elapsedTime;
-    const th = t * 0.35;                                            // langzaam om elkaar heen cirkelen
-    const lungeA = Math.max(0, Math.sin(t * 1.6)) * 0.4;            // uitval A…
-    const lungeB = Math.max(0, Math.sin(t * 1.6 + Math.PI)) * 0.4;  // …en om de beurt B
-    const rA = 0.95 - lungeA, rB = 0.95 - lungeB;
-    if (a.current) { a.current.position.set(Math.sin(th) * rA, 0, Math.cos(th) * rA); a.current.rotation.y = th + Math.PI; }
-    if (b.current) { b.current.position.set(-Math.sin(th) * rB, 0, -Math.cos(th) * rB); b.current.rotation.y = th; }
-    if (armA.current) armA.current.rotation.x = -0.4 - Math.max(0, Math.sin(t * 3.2)) * 1.0;
-    if (armB.current) armB.current.rotation.x = -0.3 - Math.max(0, Math.sin(t * 3.2 + 1.6)) * 0.8;
+    if (fase === "gevecht") {
+      const th = t * 0.8;                                             // vlot om elkaar heen
+      const lungeA = Math.max(0, Math.sin(t * 1.6)) * 0.45;           // uitval A…
+      const lungeB = Math.max(0, Math.sin(t * 1.6 + Math.PI)) * 0.45; // …en om de beurt B
+      const rA = 0.95 - lungeA, rB = 0.95 - lungeB;
+      if (a.current) { a.current.position.set(Math.sin(th) * rA, 0, Math.cos(th) * rA); a.current.rotation.set(0, th + Math.PI, 0); }
+      if (b.current) { b.current.position.set(-Math.sin(th) * rB, 0, -Math.cos(th) * rB); b.current.rotation.set(0, th, 0); }
+      if (armA.current) armA.current.rotation.x = -0.4 - Math.max(0, Math.sin(t * 3.2)) * 1.0;
+      if (armB.current) armB.current.rotation.x = -0.3 - Math.max(0, Math.sin(t * 3.2 + 1.6)) * 0.8;
+    } else if (fase === "juich") {
+      const win = winRef.current === 0 ? a : b, verlies = winRef.current === 0 ? b : a;
+      if (win.current) {
+        win.current.position.set(Math.sin(t * 2.2) * 0.5, Math.abs(Math.sin(t * 6)) * 0.35, Math.cos(t * 2.2) * 0.5); // juichend rondspringen
+        win.current.rotation.set(0, t * 2.2 + Math.PI / 2, 0);
+      }
+      if (verlies.current) { verlies.current.position.set(1.5, -0.08, 0.4); verlies.current.rotation.set(0.55, -0.6, 0); } // sportieve buiging
+      const winArm = winRef.current === 0 ? armA : armB, verliesArm = winRef.current === 0 ? armB : armA;
+      if (winArm.current) winArm.current.rotation.x = -2.7 + Math.sin(t * 6) * 0.2; // wapen juichend omhoog
+      if (verliesArm.current) verliesArm.current.rotation.x = -0.1;
+    } else {
+      const th = t * 0.28; // rustig rondjes om elkaar heen wandelen
+      const stap = Math.abs(Math.sin(t * 3.2)) * 0.035;
+      if (a.current) { a.current.position.set(Math.sin(th) * 1.25, stap, Math.cos(th) * 1.25); a.current.rotation.set(0, th + Math.PI / 2 + Math.PI, 0); }
+      if (b.current) { b.current.position.set(-Math.sin(th) * 1.25, stap, -Math.cos(th) * 1.25); b.current.rotation.set(0, th + Math.PI / 2, 0); }
+      if (armA.current) armA.current.rotation.x = -0.15 + Math.sin(t * 3.2) * 0.18;   // armen los langs het lijf
+      if (armB.current) armB.current.rotation.x = -0.15 + Math.sin(t * 3.2 + 1) * 0.18;
+    }
   });
   const huid = "#e8b98a";
   return (
-    <group>
+    <group scale={[schaal, schaal, schaal]}>
+      {/* 🔴 paal met de grote rode knop, net als bij de raket — naast de ingang */}
+      <group position={[1.7, 0, -2.9]}>
+        <mesh position={[0, 0.55, 0]} castShadow onClick={start}><cylinderGeometry args={[0.09, 0.12, 1.1, 10]} /><meshStandardMaterial color="#7a6a52" flatShading roughness={1} /></mesh>
+        <mesh position={[0, 1.14, 0]} onClick={start}><cylinderGeometry args={[0.16, 0.2, 0.08, 12]} /><meshStandardMaterial color="#333940" flatShading /></mesh>
+        <mesh position={[0, 1.24, 0]} onClick={start}>
+          <sphereGeometry args={[0.15, 14, 10]} />
+          <meshStandardMaterial color="#e11d2e" emissive="#c00d1e" emissiveIntensity={fase === "rust" ? 0.55 : 0.12} flatShading />
+        </mesh>
+        <Html position={[0, 1.75, 0]} center distanceFactor={9} zIndexRange={[7, 0]}>
+          <button
+            onClick={start}
+            disabled={fase !== "rust"}
+            style={{ pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "7px 16px", font: "900 14px system-ui", color: "#fff", background: fase === "rust" ? "linear-gradient(135deg,#ff4d3a,#c0392b)" : fase === "juich" ? "linear-gradient(135deg,#d8b04a,#b8862a)" : "#8a939c", boxShadow: "0 3px 12px rgba(0,0,0,.4)", cursor: fase === "rust" ? "pointer" : "default", whiteSpace: "nowrap" }}
+          >
+            {fase === "gevecht" ? `⚔️ nog ${rest} s` : fase === "juich" ? `🏆 ${winRef.current === 0 ? "Rode helm" : "Blauwe vechter"} wint!` : "⚔️ START GEVECHT"}
+          </button>
+        </Html>
+      </group>
       {/* Gladiator A — murmillo: helm met rode kam, rond schild + houten zwaard */}
       <group ref={a}>
         <mesh position={[-0.08, 0.14, 0]}><boxGeometry args={[0.11, 0.28, 0.12]} /><meshStandardMaterial color="#8a5a3a" flatShading /></mesh>
@@ -445,10 +509,17 @@ function GladiatorenDuel() {
    gelijkend Grieks of Romeins bouwwerk worden met 2 gladiatoren erin?").
    Mini-Colosseum: ronde muur met twee ringen bogen (zoals het echte Colosseum),
    een open ingang aan de poort-kant, zandvloer, publiek op de rand en rode
-   vaandels. Binnenin duelleren twee gladiatoren — speels, als sport-demonstratie. */
+   vaandels. Binnenin de gladiatoren + de gevecht-knop (GladiatorenDuel).
+   ✚ 27 aug (Mark: "dubbel zo groot dat ik erin kan lopen"): alles ×ARENA_S via
+   een scale-group, behalve de zandvloer (die blijft dun, anders sta je tot je
+   enkels in het zand) en de gladiatoren (anders worden het reuzen). De
+   botsing is nu begaanbaar (muur-ring + open ingang, zie ZooScene) en de
+   magische poort staat vóór de grotere ingang — de doorloop-detectie meet op
+   de poort zelf (POORT_AFSTAND in ZooScene), dáárom deed hij eerst niets. */
+export const ARENA_S = 2;
 export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
   const steen = "#e6dfd0", band = "#d8d0bc";
-  const R = 2.7, GAP = 0.85; // straal + open ingang (radialen), richting de poort
+  const R = 2.7, GAP = 0.85; // basis-straal + open ingang (radialen), richting de poort
   const pilaren = useMemo(() => {
     const uit = [];
     const N = 16;
@@ -469,42 +540,45 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
   const bandArgs = (r, h) => [r, r, h, 28, 1, true, Math.PI + GAP / 2, Math.PI * 2 - GAP];
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      {/* zandvloer van de arena */}
-      <mesh position={[0, 0.06, 0]} receiveShadow><cylinderGeometry args={[R - 0.1, R + 0.1, 0.12, 28]} /><meshStandardMaterial color="#e8d8a8" flatShading roughness={1} /></mesh>
-      {/* twee ringen pilaren (bogen-illusie) — onderste zwaarder dan de bovenste */}
-      {pilaren.map(([x, z], i) => (
-        <group key={i} position={[x, 0, z]}>
-          <mesh position={[0, 0.62, 0]} castShadow><boxGeometry args={[0.26, 1.05, 0.26]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-          <mesh position={[0, 1.8, 0]} castShadow><boxGeometry args={[0.2, 0.95, 0.2]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-        </group>
-      ))}
-      {/* horizontale banden (met open ingang), zoals de ringen van het Colosseum */}
-      <mesh position={[0, 1.22, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
-      <mesh position={[0, 2.36, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
-      <mesh position={[0, 2.98, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.12, 0.34)} /><meshStandardMaterial color={steen} flatShading roughness={1} side={2} /></mesh>
-      {/* ingang-omlijsting: twee stevige deurposten + latei */}
-      {[-1, 1].map((k) => (
-        <mesh key={k} position={[Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, 0.95, Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R]} castShadow>
-          <boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} />
-        </mesh>
-      ))}
-      <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
-      {/* publiek: gekleurde blokjes-koppen op de bovenrand */}
-      {publiek.map(([x, z, th, kleur], i) => (
-        <group key={`p${i}`} position={[x, 3.28, z]} rotation={[0, th + Math.PI, 0]}>
-          <mesh><boxGeometry args={[0.16, 0.2, 0.14]} /><meshStandardMaterial color={kleur} flatShading /></mesh>
-          <mesh position={[0, 0.16, 0]}><boxGeometry args={[0.12, 0.12, 0.12]} /><meshStandardMaterial color="#e8b98a" flatShading /></mesh>
-        </group>
-      ))}
-      {/* rode vaandels aan de bovenrand */}
-      {[0.9, 2.6, 3.9, 5.4].map((th, i) => (
-        <mesh key={`v${i}`} position={[Math.sin(th) * (R + 0.18), 2.55, Math.cos(th) * (R + 0.18)]} rotation={[0, th, 0]}>
-          <boxGeometry args={[0.34, 0.7, 0.04]} /><meshStandardMaterial color="#b03a30" flatShading />
-        </mesh>
-      ))}
-      {/* het duel in het zand */}
+      {/* zandvloer van de arena — op ware grootte, bewust dun (níét in de scale-group) */}
+      <mesh position={[0, 0.05, 0]} receiveShadow><cylinderGeometry args={[R * ARENA_S - 0.15, R * ARENA_S + 0.2, 0.1, 36]} /><meshStandardMaterial color="#e8d8a8" flatShading roughness={1} /></mesh>
+      {/* het gebouw zelf ×ARENA_S: muren, banden, ingang, publiek, vaandels */}
+      <group scale={[ARENA_S, ARENA_S, ARENA_S]}>
+        {/* twee ringen pilaren (bogen-illusie) — onderste zwaarder dan de bovenste */}
+        {pilaren.map(([x, z], i) => (
+          <group key={i} position={[x, 0, z]}>
+            <mesh position={[0, 0.62, 0]} castShadow><boxGeometry args={[0.26, 1.05, 0.26]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+            <mesh position={[0, 1.8, 0]} castShadow><boxGeometry args={[0.2, 0.95, 0.2]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+          </group>
+        ))}
+        {/* horizontale banden (met open ingang), zoals de ringen van het Colosseum */}
+        <mesh position={[0, 1.22, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
+        <mesh position={[0, 2.36, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
+        <mesh position={[0, 2.98, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.12, 0.34)} /><meshStandardMaterial color={steen} flatShading roughness={1} side={2} /></mesh>
+        {/* ingang-omlijsting: twee stevige deurposten + latei */}
+        {[-1, 1].map((k) => (
+          <mesh key={k} position={[Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, 0.95, Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R]} castShadow>
+            <boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} />
+          </mesh>
+        ))}
+        <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
+        {/* publiek: gekleurde blokjes-koppen op de bovenrand */}
+        {publiek.map(([x, z, th, kleur], i) => (
+          <group key={`p${i}`} position={[x, 3.28, z]} rotation={[0, th + Math.PI, 0]}>
+            <mesh><boxGeometry args={[0.16, 0.2, 0.14]} /><meshStandardMaterial color={kleur} flatShading /></mesh>
+            <mesh position={[0, 0.16, 0]}><boxGeometry args={[0.12, 0.12, 0.12]} /><meshStandardMaterial color="#e8b98a" flatShading /></mesh>
+          </group>
+        ))}
+        {/* rode vaandels aan de bovenrand */}
+        {[0.9, 2.6, 3.9, 5.4].map((th, i) => (
+          <mesh key={`v${i}`} position={[Math.sin(th) * (R + 0.18), 2.55, Math.cos(th) * (R + 0.18)]} rotation={[0, th, 0]}>
+            <boxGeometry args={[0.34, 0.7, 0.04]} /><meshStandardMaterial color="#b03a30" flatShading />
+          </mesh>
+        ))}
+      </group>
+      {/* gladiatoren + gevecht-knop in het zand (eigen bescheiden schaal) */}
       <GladiatorenDuel />
-      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-3.6} breedte={2.6} hoogte={3.0} />
+      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 1.3)} breedte={3.0} hoogte={3.4} />
     </group>
   );
 }

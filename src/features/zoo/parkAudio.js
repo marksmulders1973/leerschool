@@ -232,6 +232,45 @@ export function parkAudioRaket() {
   plof.stop(t + 18.35);
 }
 
+/* ---------- laag 3c: juichend publiek (arena-gevecht gewonnen) ---------- */
+// Kort gejuich: aanzwellende hoge ruis (mensenmassa) + een paar blije fluitjes.
+export function parkAudioJuich() {
+  if (!S.gestart || S.stil || !S.ctx) return;
+  const ctx = S.ctx;
+  const t = ctx.currentTime;
+  const bron = ctx.createBufferSource();
+  bron.buffer = ruis(ctx);
+  bron.loop = true;
+  bron.playbackRate.value = 1.4;
+  const bp = ctx.createBiquadFilter();
+  bp.type = "bandpass";
+  bp.frequency.value = 1400;
+  bp.Q.value = 0.6;
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(0.001, t);
+  g.gain.linearRampToValueAtTime(0.28, t + 0.35);
+  g.gain.linearRampToValueAtTime(0.18, t + 1.6);
+  g.gain.linearRampToValueAtTime(0.001, t + 2.8);
+  bron.connect(bp).connect(g).connect(S.master);
+  bron.start(t);
+  bron.stop(t + 3);
+  for (let i = 0; i < 5; i++) { // blije fluitjes er doorheen
+    const st = t + 0.2 + i * 0.35 + Math.random() * 0.15;
+    const osc = ctx.createOscillator();
+    osc.type = "sine";
+    const f0 = 1400 + Math.random() * 900;
+    osc.frequency.setValueAtTime(f0, st);
+    osc.frequency.exponentialRampToValueAtTime(f0 * 1.4, st + 0.18);
+    const og = ctx.createGain();
+    og.gain.setValueAtTime(0, st);
+    og.gain.linearRampToValueAtTime(0.06, st + 0.03);
+    og.gain.exponentialRampToValueAtTime(0.001, st + 0.22);
+    osc.connect(og).connect(S.master);
+    osc.start(st);
+    osc.stop(st + 0.25);
+  }
+}
+
 /* ---------- levenscyclus ---------- */
 // Aanroepen vanuit een user-gesture (pointerdown) — anders blokkeert de browser.
 export function parkAudioStart(beginStil = false) {

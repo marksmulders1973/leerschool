@@ -891,6 +891,11 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
 // de buurt van een landmark met een poort (POORT_ASSETS), dan opent het leerpad.
 // Alleen bij het BINNENLOPEN (overgang van "niet bij" → "bij") — zodat je niet
 // blijft hangen als je ernaast staat. De cooldown/flits zit in ZookwartierGame.
+// Bij grote gebouwen staat de poort niet op het midden maar een stuk ervóór
+// (lokaal -z); dan meten we op de poort zélf — anders vuurt hij nooit. De
+// arena-poort staat op R×ARENA_S+1,3 ≈ 6,7 m van het midden (Mark 27 aug:
+// "die poort/deur ervoor doet niets" — dít was waarom).
+const POORT_AFSTAND = { tempel: 6.7 };
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat
@@ -904,7 +909,9 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
     let dichtst = null, bestD2 = 2.4; // ~1,5 m: je moet er echt doorheen lopen
     for (const it of placedItems) {
       if (!it.cell || !POORT_ASSETS[it.assetId]) continue;
-      const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      let [x, z] = cellToWorld(it.cell[0], it.cell[1]);
+      const off = POORT_AFSTAND[it.assetId];
+      if (off) { const hoek = it.rotation || 0; x -= Math.sin(hoek) * off; z -= Math.cos(hoek) * off; }
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
     }
@@ -1519,6 +1526,21 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       // 🚪 Poorten zijn de DOORGANG naar de dieren (Mark 2 jul: "door de ingang
       // van een hek naar de dieren") — nooit blokkeren.
       if (it.assetId === "hekPoort" || it.assetId === "fenceGate") return;
+      // 🏟️ De arena (27 aug ×2) is BEGAANBAAR zoals de blok-huizen: alleen de
+      // muur-ring van het 5×5-blok botst; de ingang (-z-kant, draait mee) blijft
+      // 3 cellen open en binnen is vrij — je loopt er écht naar binnen.
+      if (it.assetId === "tempel") {
+        const hoek = it.rotation || 0;
+        const dx = Math.round(-Math.sin(hoek)), dz = Math.round(-Math.cos(hoek)); // ingang-richting (lokaal -z)
+        const open = new Set();
+        for (const k of [-1, 0, 1]) open.add(cellKey(it.cell[0] + dx * 2 - dz * k, it.cell[1] + dz * 2 + dx * k));
+        for (const [cx, cz] of footprint(it.cell[0], it.cell[1], 5)) {
+          if (Math.max(Math.abs(cx - it.cell[0]), Math.abs(cz - it.cell[1])) < 2) continue; // binnen = vrij
+          const k = cellKey(cx, cz);
+          if (!open.has(k)) s.add(k);
+        }
+        return;
+      }
       // botsCellsVan i.p.v. cellsVan: de grote leerobjecten reserveren bij plaatsing
       // veel ruimte, maar botsen op hun kleine échte body (Mark 17 aug: niet krap).
       for (const [cx, cz] of footprint(it.cell[0], it.cell[1], botsCellsVan(it.assetId))) s.add(cellKey(cx, cz));
