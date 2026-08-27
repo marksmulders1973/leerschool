@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import supabase from "../../supabase.js";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
@@ -82,6 +82,18 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
   const [selectedChild, setSelectedChild] = useState(null);
+  // 👶 Kinder-dropdown aan de kop "Mijn kinderen (x/3)" (Mark 27 aug):
+  // snel wisselen tussen kinderen + per lege plek een "voeg je 2e/3e kind
+  // toe"-regel die naar het koppel-formulier onderaan de kaart springt.
+  const [kinderMenuOpen, setKinderMenuOpen] = useState(false);
+  const koppelFlowRef = useRef(null);
+  const inviteNaamRef = useRef(null);
+  const gaNaarKoppelen = () => {
+    setKinderMenuOpen(false);
+    try { track("ouder_kindmenu_koppelen", { al_gekoppeld: children.length }); } catch { /* */ }
+    koppelFlowRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => { try { inviteNaamRef.current?.focus(); } catch { /* */ } }, 400);
+  };
   const [childScores, setChildScores] = useState([]);
   const [citoScores, setCitoScores] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -513,9 +525,65 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
 
       {/* Kinderen koppelen */}
       <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)", marginBottom: 12 }}>
-          👶 Mijn kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}
-        </div>
+        {/* Kop = dropdown (Mark 27 aug): wisselen tussen kinderen + lege
+            plekken direct invullen. */}
+        <button
+          onClick={() => { setKinderMenuOpen(!kinderMenuOpen); try { track("ouder_kindmenu_open", {}); } catch { /* */ } }}
+          aria-expanded={kinderMenuOpen}
+          title="Tik om te wisselen of een kind toe te voegen"
+          style={{
+            display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 12,
+            padding: 0, border: "none", background: "none", cursor: "pointer",
+            fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)",
+          }}
+        >
+          👶 Mijn kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""} {kinderMenuOpen ? "▴" : "▾"}
+        </button>
+        {kinderMenuOpen && (
+          <div style={{
+            margin: "0 0 12px", padding: "10px 12px", borderRadius: 12, maxWidth: 420,
+            border: "1px solid rgba(0,176,255,0.3)", background: "rgba(0,176,255,0.05)",
+            display: "flex", flexDirection: "column", gap: 6,
+          }}>
+            {children.map((c) => (
+              <button
+                key={c.id}
+                onClick={() => { setSelectedChild(c.child_name); setKinderMenuOpen(false); try { track("ouder_kindmenu_wissel", {}); } catch { /* */ } }}
+                style={{
+                  display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left",
+                  padding: "9px 12px", borderRadius: 10, cursor: "pointer",
+                  border: selectedChild === c.child_name ? "1px solid rgba(0,176,255,0.5)" : "1px solid rgba(255,255,255,0.12)",
+                  background: selectedChild === c.child_name ? "rgba(0,176,255,0.15)" : "rgba(255,255,255,0.04)",
+                  color: selectedChild === c.child_name ? "#00b0ff" : "var(--color-text, #e8edf5)",
+                  fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700,
+                }}
+              >
+                👦 {c.child_name}
+                {selectedChild === c.child_name && <span style={{ fontSize: 11, fontWeight: 700 }}>← je kijkt hiernaar</span>}
+                {!c.verified && <span style={{ fontSize: 11, color: "#ffb74d", fontWeight: 700 }}>🔐 niet bevestigd</span>}
+              </button>
+            ))}
+            {/* Lege plekken: per plek één regel naar het koppel-formulier. */}
+            {Array.from({ length: Math.max(0, MAX_KINDEREN - children.length) }, (_, i) => {
+              const nr = children.length + i + 1;
+              const woord = nr === 1 ? "eerste" : nr === 2 ? "tweede" : "derde";
+              return (
+                <button
+                  key={`vrij-${nr}`}
+                  onClick={gaNaarKoppelen}
+                  style={{
+                    display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left",
+                    padding: "9px 12px", borderRadius: 10, cursor: "pointer",
+                    border: "1px dashed rgba(105,240,174,0.45)", background: "rgba(0,200,83,0.06)",
+                    color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700,
+                  }}
+                >
+                  ➕ Voeg je {woord} kind toe
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         {/* Bestaande kinderen — mét instellingen per kind (12 aug):
             weekrapport aan/uit + koppeling verwijderen (met bevestiging). */}
@@ -710,7 +778,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         )}
 
         {/* Koppelcode-flow (WhatsApp / e-mail / kopiëren) */}
-        <div style={{ marginTop: children.length ? 10 : 0 }}>
+        <div ref={koppelFlowRef} style={{ marginTop: children.length ? 10 : 0 }}>
             {children.length >= MAX_KINDEREN ? (
               <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
                 👨‍👩‍👧 Je hebt het maximum van {MAX_KINDEREN} kinderen gekoppeld — genoeg voor de meeste gezinnen. Meer nodig? Laat het ons weten via <em>Tips aan maker</em>.
@@ -723,6 +791,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 {/* Naam-veld toegevoegd 2026-05-18 (bug-fix): link_codes.child_name
                     is NOT NULL — ouder geeft hier de naam-in-app van het kind. */}
                 <input
+                  ref={inviteNaamRef}
                   value={inviteChildName}
                   onChange={(e) => setInviteChildName(e.target.value)}
                   placeholder="Naam van je kind (zoals in de app)"
