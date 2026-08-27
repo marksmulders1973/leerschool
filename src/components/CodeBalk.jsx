@@ -63,11 +63,17 @@ function EerScherm({ code, onVerder }) {
               {isEN ? "Fifteen minutes a day — truly understand what you learn." : "Een kwartier per dag — écht begrijpen wat je leert."}
             </div>
           </div>
-          {logo && (
+          {logo && (isOP ? (
             <div style={{ width: 74, height: 74, borderRadius: "50%", background: "#fff", display: "grid", placeItems: "center", boxShadow: "0 3px 12px rgba(0,0,0,0.25)", flexShrink: 0 }}>
               <img src={logo} alt={naam || "partner"} style={{ maxHeight: 48, maxWidth: 56, objectFit: "contain" }} />
             </div>
-          )}
+          ) : (
+            // wit kader dat meegroeit: brede logo's (zoals VB Rotterdam) blijven
+            // leesbaar, vierkante (zoals QWL Saba) blijven mooi compact
+            <div style={{ height: 74, minWidth: 74, maxWidth: 160, borderRadius: 18, background: "#fff", display: "grid", placeItems: "center", padding: "8px 12px", boxShadow: "0 3px 12px rgba(0,0,0,0.18)", flexShrink: 0 }}>
+              <img src={logo} alt={naam || "partner"} style={{ maxHeight: 54, maxWidth: 132, objectFit: "contain" }} />
+            </div>
+          ))}
         </div>
         {isOP && (
           <div style={{ display: "inline-block", background: "#7ab52d", color: "#0e2010", font: "800 13px system-ui", padding: "7px 14px", borderRadius: 999, marginTop: 22 }}>
