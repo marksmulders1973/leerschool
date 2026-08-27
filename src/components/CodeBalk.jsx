@@ -35,36 +35,66 @@ const PARTNER_LOGOS = {
 
 const KEY_EER = "lk_partner_eer_gezien";
 
-// 🎉 Ere-scherm (Mark 27 aug: "de deler wordt geëerd"): één keer, direct na
-// activatie (getypt of via de QR-link) — groot dank-moment voor de partner,
-// mét logo als daar toestemming voor is, daarna door naar de app.
+// 🎉 Ere-scherm (Mark 27 aug: "de deler wordt geëerd" + "fullscreen, op basis
+// van de Ooievaarspas-landingspagina van 26 aug"): één keer, direct na
+// activatie (getypt of via de QR-link). Layout = de landingspagina-kop:
+// Leerkwartier-logo links, partner-beeldmerk in een witte cirkel rechts in de
+// hoek, badge + groet + belofte + grote groene knop. De gemeente (OOIEVAAR*)
+// krijgt de navy-look van het origineel; andere partners dezelfde opbouw in
+// de warme lichte stijl met hún logo.
 function EerScherm({ code, onVerder }) {
   const naam = naamVoor(code);
-  const logo = PARTNER_LOGOS[code] || null;
+  const isOP = code.startsWith("OOIEVAAR");
+  const logo = isOP ? "/drukwerk/op-ooievaar.svg" : (PARTNER_LOGOS[code] || null);
   const blijvend = partnerFamilieTot() === null;
+  const donker = isOP;
+  const tekstKleur = donker ? "#dce5ee" : "#3a4658";
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(10,20,14,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
-      <div style={{ width: "min(440px, 94vw)", background: "#fff", borderRadius: 20, boxShadow: "0 14px 50px rgba(0,0,0,.35)", padding: "30px 26px", textAlign: "center" }}>
-        {logo
-          ? <img src={logo} alt={naam || "partner"} style={{ maxHeight: 64, maxWidth: 260, objectFit: "contain", marginBottom: 14 }} />
-          : <div style={{ fontSize: 44, marginBottom: 6 }}>💛</div>}
-        <div style={{ font: "900 21px/1.25 system-ui", color: "#16233f" }}>Welkom bij Leerkwartier!</div>
-        <p style={{ font: "600 14.5px/1.55 system-ui", color: "#3a4658", margin: "10px 0 0" }}>
-          Wat fijn dat u ons heeft gevonden via{" "}
-          <strong style={{ color: "#0a7d43" }}>{naam || "een van onze partners"}</strong>.
+    <div style={{ position: "fixed", inset: 0, zIndex: 60, background: donker ? "#14283c" : "linear-gradient(160deg,#f6faf2,#e7f6ec)", overflowY: "auto" }}>
+      <div style={{ maxWidth: 620, margin: "0 auto", padding: "30px 22px 44px" }}>
+        {/* kop: Leerkwartier links · partner-beeldmerk rechts in de hoek */}
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <img src="/logo.jpg" alt="Leerkwartier" style={{ width: 66, height: 66, borderRadius: 15, background: "#fff", objectFit: "contain" }} />
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ font: "800 18px/1.25 system-ui", color: donker ? "#fff" : "#14283c" }}>Leerkwartier</div>
+            <div style={{ font: "600 12px/1.35 system-ui", color: donker ? "#b9c6d4" : "#5a6775", marginTop: 2 }}>Een kwartier per dag — écht begrijpen wat je leert.</div>
+          </div>
+          {logo && (
+            <div style={{ width: 74, height: 74, borderRadius: "50%", background: "#fff", display: "grid", placeItems: "center", boxShadow: "0 3px 12px rgba(0,0,0,0.25)", flexShrink: 0 }}>
+              <img src={logo} alt={naam || "partner"} style={{ maxHeight: 48, maxWidth: 56, objectFit: "contain" }} />
+            </div>
+          )}
+        </div>
+        {isOP && (
+          <div style={{ display: "inline-block", background: "#7ab52d", color: "#0e2010", font: "800 13px system-ui", padding: "7px 14px", borderRadius: 999, marginTop: 22 }}>
+            ✓ Vriend van de Ooievaarspas
+          </div>
+        )}
+        <h1 style={{ font: "900 27px/1.25 system-ui", color: donker ? "#fff" : "#14283c", margin: isOP ? "12px 0 10px" : "24px 0 10px" }}>
+          {isOP ? "Welkom, Ooievaarspashouders!" : "Welkom bij Leerkwartier!"}
+        </h1>
+        <p style={{ font: "600 15px/1.6 system-ui", color: tekstKleur, margin: 0 }}>
+          Wat fijn dat u ons heeft gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.
         </p>
-        <p style={{ font: "600 14.5px/1.55 system-ui", color: "#3a4658", margin: "8px 0 0" }}>
-          {blijvend
-            ? "Dankzij hen krijgt uw gezin alle gezins-extra's blijvend gratis."
-            : "Dankzij hen krijgt uw gezin alle gezins-extra's gratis — tot en met de toets van 2027."}
-        </p>
+        <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
+          <p style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
+            {isOP
+              ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het Familie-pakket van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
+              : blijvend
+                ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
+                : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis tot en met de toets van 2027</strong>.</>}
+          </p>
+        </div>
         <button
           onClick={onVerder}
-          style={{ marginTop: 18, width: "100%", border: "none", borderRadius: 12, padding: "13px 16px", font: "800 15px system-ui", color: "#fff", background: "linear-gradient(135deg,#0a7d43,#0b6b39)", cursor: "pointer" }}
+          style={{ marginTop: 24, width: "100%", border: "none", borderRadius: 14, padding: "16px", font: "800 18px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", boxShadow: "0 6px 18px rgba(122,181,45,0.35)", cursor: "pointer" }}
         >
-          Verder naar de app →
+          ▶ Begin met oefenen — gratis
         </button>
-        <div style={{ font: "600 11.5px system-ui", color: "#8893a3", marginTop: 10 }}>Oefenen is voor iedereen gratis — ook zonder code.</div>
+        <div style={{ font: "600 12px/1.5 system-ui", color: donker ? "#b9c6d4" : "#5a6775", textAlign: "center", marginTop: 10 }}>
+          Werkt op telefoon, tablet en computer. Geen account nodig, geen reclame.
+          <br />Oefenen is voor iedereen gratis — ook zonder code.
+        </div>
       </div>
     </div>
   );
