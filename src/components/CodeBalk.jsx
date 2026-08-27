@@ -31,6 +31,7 @@ const PARTNER_LOGOS = {
   ALKMAAR2027: "/drukwerk/logo-voedselbank-alkmaar.png",
   BUURTGEZINNEN2027: "/drukwerk/logo-buurtgezinnen.png",
   SCHOOLSCOOL2027: "/drukwerk/logo-schoolscool-twente.png",
+  SABA2027: "/drukwerk/logo-qwl-saba.png", // Mark-akkoord 27 aug; akkoord-vraag aan Tiffany meenemen in de volgende mail
 };
 
 const KEY_EER = "lk_partner_eer_gezien";
@@ -45,6 +46,7 @@ const KEY_EER = "lk_partner_eer_gezien";
 function EerScherm({ code, onVerder }) {
   const naam = naamVoor(code);
   const isOP = code.startsWith("OOIEVAAR");
+  const isEN = code.startsWith("SABA"); // Saba-gezinnen zijn Engelstalig → Engels ere-scherm
   const logo = isOP ? "/drukwerk/op-ooievaar.svg" : (PARTNER_LOGOS[code] || null);
   const blijvend = isOP; // uit de code zelf, zodat óók de preview-weergave klopt
   const donker = isOP;
@@ -57,7 +59,9 @@ function EerScherm({ code, onVerder }) {
           <img src="/logo.jpg" alt="Leerkwartier" style={{ width: 66, height: 66, borderRadius: 15, background: "#fff", objectFit: "contain" }} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ font: "800 18px/1.25 system-ui", color: donker ? "#fff" : "#14283c" }}>Leerkwartier</div>
-            <div style={{ font: "600 12px/1.35 system-ui", color: donker ? "#b9c6d4" : "#5a6775", marginTop: 2 }}>Een kwartier per dag — écht begrijpen wat je leert.</div>
+            <div style={{ font: "600 12px/1.35 system-ui", color: donker ? "#b9c6d4" : "#5a6775", marginTop: 2 }}>
+              {isEN ? "Fifteen minutes a day — truly understand what you learn." : "Een kwartier per dag — écht begrijpen wat je leert."}
+            </div>
           </div>
           {logo && (
             <div style={{ width: 74, height: 74, borderRadius: "50%", background: "#fff", display: "grid", placeItems: "center", boxShadow: "0 3px 12px rgba(0,0,0,0.25)", flexShrink: 0 }}>
@@ -71,30 +75,36 @@ function EerScherm({ code, onVerder }) {
           </div>
         )}
         <h1 style={{ font: "900 27px/1.25 system-ui", color: donker ? "#fff" : "#14283c", margin: isOP ? "12px 0 10px" : "24px 0 10px" }}>
-          {isOP ? "Welkom, Ooievaarspashouders!" : "Welkom bij Leerkwartier!"}
+          {isOP ? "Welkom, Ooievaarspashouders!" : isEN ? "Welcome to Leerkwartier!" : "Welkom bij Leerkwartier!"}
         </h1>
         <p style={{ font: "600 15px/1.6 system-ui", color: tekstKleur, margin: 0 }}>
-          Wat fijn dat u ons heeft gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.
+          {isEN
+            ? <>How wonderful that you found us through <strong style={{ color: "#0a7d43" }}>the Queen Wilhelmina Library</strong>.</>
+            : <>Wat fijn dat u ons heeft gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
         </p>
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
           <p style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
               ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het Familie-pakket van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
-              : blijvend
-                ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
-                : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis tot en met de toets van 2027</strong>.</>}
+              : isEN
+                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family through 2027</strong>.</>
+                : blijvend
+                  ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
+                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis tot en met de toets van 2027</strong>.</>}
           </p>
         </div>
         <button
           onClick={onVerder}
           style={{ marginTop: 24, width: "100%", border: "none", borderRadius: 14, padding: "16px", font: "800 18px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", boxShadow: "0 6px 18px rgba(122,181,45,0.35)", cursor: "pointer" }}
         >
-          ▶ Begin met oefenen — gratis
+          {isEN ? "▶ Start practicing — free" : "▶ Begin met oefenen — gratis"}
         </button>
         {/* "Ook zonder code gratis" bewust weggelaten (Mark 27 aug): waar, maar
             op dít moment haalt het de waarde van de code onderuit. */}
         <div style={{ font: "600 12px/1.5 system-ui", color: donker ? "#b9c6d4" : "#5a6775", textAlign: "center", marginTop: 10 }}>
-          Werkt op telefoon, tablet en computer. Geen account nodig, geen reclame.
+          {isEN
+            ? "Works on phones, tablets and computers. No account needed, no ads."
+            : "Werkt op telefoon, tablet en computer. Geen account nodig, geen reclame."}
         </div>
       </div>
     </div>
