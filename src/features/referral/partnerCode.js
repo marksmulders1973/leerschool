@@ -117,9 +117,11 @@ export async function zetPartnerCodeHandmatig(invoer) {
   if (bestaand && bestaand !== code) return { ok: false, reden: "al-actief", code: bestaand };
   let bekend = null;
   try {
-    const { data, error } = await supabase
-      .from("partner_codes").select("code").eq("code", code).maybeSingle();
-    if (!error) bekend = !!data;
+    // Via RPC (27 aug): een directe select op partner_codes gaf door RLS-zonder-
+    // policy altijd "leeg" terug — elke code leek onbekend. De RPC geeft alleen
+    // ja/nee en houdt de interne partner-aantekeningen in die tabel afgeschermd.
+    const { data, error } = await supabase.rpc("partner_code_bestaat", { p_code: code });
+    if (!error) bekend = data === true;
   } catch { /* onbekend laten — voordeel van de twijfel */ }
   if (bekend === false) return { ok: false, reden: "onbekend" };
   if (!bestaand) ls.set(KEY_CODE, code);
