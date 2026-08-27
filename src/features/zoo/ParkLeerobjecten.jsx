@@ -26,7 +26,7 @@ import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
-import { parkAudioRaket, parkAudioJuich, parkAudioKlang } from "./parkAudio";
+import { parkAudioRaket, parkAudioJuich, parkAudioKlang, parkAudioVogels } from "./parkAudio";
 
 // 🎓 Leer-bord — houten bordje met de les(sen) van een leerstation als échte
 // knoppen (Mark 26 aug: "ik zie er nu niets" → zichtbaar leren bij élk
@@ -410,13 +410,15 @@ const GEVECHT_SCRIPTS = [
   { win: 0, beats: ["sluip", "schijnA", "sprongA", "clash", "wankelB", "sprongB", "blokA", "clash"] },
   { win: 1, beats: ["sluip", "schijnB", "sprongB", "clash", "wankelA", "sprongA", "blokB", "clash"] },
 ];
-function GladiatorenDuel({ schaal = 1.4 }) {
+function GladiatorenDuel({ schaal = 1.4, onVecht = null }) {
   const a = useRef(), b = useRef(), armA = useRef(), armB = useRef();
   const [fase, setFase] = useState("rust"); // rust | gevecht | juich
   const [rest, setRest] = useState(GEVECHT_DUUR);
   const winRef = useRef(0); // 0 = rood (murmillo A), 1 = blauw (retiarius B)
   const keuzeRef = useRef(null), scriptRef = useRef(null);
   useEffect(() => {
+    onVecht?.(fase !== "rust");      // arena: voorkant laten wegvallen tijdens kiezen/gevecht/juich
+    parkAudioVogels(fase !== "rust"); // en de vogeltjes even stil — klangs en publiek moeten horen
     if (fase === "kiezen") {
       const terug = setTimeout(() => setFase("rust"), 25000); // niemand kiest → weer verder wandelen
       return () => clearTimeout(terug);
@@ -686,7 +688,14 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
   // blijft gewoon staan. Zachte fade via opacity-lerp — geen hard knipperen.
   const schaalRef = useRef();
   const pilaarMats = useRef([]);
+  const ingangMats = useRef(new Set()); // deurposten + latei + fakkels
   const camLocal = useMemo(() => new Vector3(), []);
+  // 🥊 Tijdens kiezen/gevecht/juich valt de hele VOORKANT weg (Mark 27 aug:
+  // "anders is 't moeilijk kijken"): pilaren aan de camera-kant op élke afstand,
+  // plus de ingang-omlijsting; de magische poort verdwijnt dan tijdelijk.
+  const [vechtBezig, setVechtBezig] = useState(false);
+  const vechtRef = useRef(false);
+  const onVecht = (v) => { vechtRef.current = v; setVechtBezig(v); };
   useFrame((s) => {
     const g = schaalRef.current;
     if (!g) return;
@@ -694,13 +703,17 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
     g.worldToLocal(camLocal); // lokale units: muur-straal = R
     const d = Math.hypot(camLocal.x, camLocal.z);
     const camTh = Math.atan2(camLocal.x, camLocal.z);
+    const vecht = vechtRef.current;
     for (let i = 0; i < pilaren.length; i++) {
       const mats = pilaarMats.current[i];
       if (!mats) continue;
       const verschil = Math.abs(((pilaren[i][2] - camTh) + Math.PI * 3) % (Math.PI * 2) - Math.PI);
-      const doel = d < 5.5 && verschil < 1.75 ? 0.12 : 1; // dichtbij + camera-kant → doorzichtig
+      const doel = (vecht ? verschil < 1.9 : d < 5.5 && verschil < 1.75) ? 0.12 : 1;
       for (const m of mats) { if (m) m.opacity += (doel - m.opacity) * 0.15; }
     }
+    // ingang-omlijsting: alleen faden als de camera aan de ingang-kant staat
+    const doelIn = vecht && camLocal.z < -0.4 ? 0.1 : 1;
+    ingangMats.current.forEach((m) => { m.opacity += (doelIn - m.opacity) * 0.15; });
   });
   return (
     <group position={position} rotation={[0, rotation, 0]}>
@@ -724,15 +737,16 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
             erbovenop zodat de ingang van ver te zien is */}
         {[-1, 1].map((k) => {
           const px = Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, pz = Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R;
+          const inMat = (m) => { if (m) { m.transparent = true; ingangMats.current.add(m); } };
           return (
             <group key={k} position={[px, 0, pz]}>
-              <mesh position={[0, 0.95, 0]} castShadow><boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
-              <mesh position={[0, 2.02, 0]}><cylinderGeometry args={[0.05, 0.07, 0.28, 8]} /><meshStandardMaterial color="#5a4632" flatShading roughness={1} /></mesh>
-              <mesh position={[0, 2.24, 0]}><coneGeometry args={[0.13, 0.3, 8]} /><meshStandardMaterial color="#ffb03a" emissive="#ff7a1e" emissiveIntensity={0.9} flatShading /></mesh>
+              <mesh position={[0, 0.95, 0]} castShadow><boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial ref={inMat} color={band} flatShading roughness={1} transparent /></mesh>
+              <mesh position={[0, 2.02, 0]}><cylinderGeometry args={[0.05, 0.07, 0.28, 8]} /><meshStandardMaterial ref={inMat} color="#5a4632" flatShading roughness={1} transparent /></mesh>
+              <mesh position={[0, 2.24, 0]}><coneGeometry args={[0.13, 0.3, 8]} /><meshStandardMaterial ref={inMat} color="#ffb03a" emissive="#ff7a1e" emissiveIntensity={0.9} flatShading transparent /></mesh>
             </group>
           );
         })}
-        <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
+        <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial ref={(m) => { if (m) { m.transparent = true; ingangMats.current.add(m); } }} color={band} flatShading roughness={1} transparent /></mesh>
         {/* publiek: gekleurde blokjes-koppen op de bovenrand */}
         {publiek.map(([x, z, th, kleur], i) => (
           <group key={`p${i}`} position={[x, 3.28, z]} rotation={[0, th + Math.PI, 0]}>
@@ -752,11 +766,12 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
       <mesh position={[0, 0.115, -(R * ARENA_S + 0.9)]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3.4, 5.6]} /><meshStandardMaterial color="#b8ab90" flatShading roughness={1} /></mesh>
       <mesh position={[0, 0.125, -(R * ARENA_S + 0.9)]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[2.8, 5.2]} /><meshStandardMaterial color="#d8cdb2" flatShading roughness={1} /></mesh>
       {/* gladiatoren + gevecht-knop in het zand (eigen bescheiden schaal) */}
-      <GladiatorenDuel />
+      <GladiatorenDuel onVecht={onVecht} />
       {/* poort iets verder van de ingang af (Mark 27 aug), aan het eind van de
           loper richting het zwarte pad — afstand moet gelijk blijven met
-          POORT_AFSTAND.tempel in ZooScene */}
-      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 2.6)} breedte={3.0} hoogte={3.4} />
+          POORT_AFSTAND.tempel in ZooScene. Tijdens het gevecht verdwijnt hij
+          even helemaal (hij stond precies in het kijk-venster). */}
+      {!vechtBezig && <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 2.6)} breedte={3.0} hoogte={3.4} />}
     </group>
   );
 }

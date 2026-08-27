@@ -72,7 +72,7 @@ function startWind() {
 /* ---------- laag 2: vogels ---------- */
 function zingVogel() {
   const ctx = S.ctx;
-  if (!ctx || S.stil) return;
+  if (!ctx || S.stil || S.vogelsStil) return;
   const t0 = ctx.currentTime + 0.05;
   const n = 2 + Math.floor(Math.random() * 3); // 2-4 piepjes
   const p = pan(ctx, (Math.random() * 2 - 1) * 0.8); // hele burst uit één hoek
@@ -87,7 +87,7 @@ function zingVogel() {
     osc.frequency.exponentialRampToValueAtTime(f0 * (0.8 + Math.random() * 0.45), start + duur);
     const g = ctx.createGain();
     g.gain.setValueAtTime(0, start);
-    g.gain.linearRampToValueAtTime(0.09, start + 0.015);
+    g.gain.linearRampToValueAtTime(0.05, start + 0.015); // zacht (Mark 27 aug: "ik hoor steeds die vogel")
     g.gain.exponentialRampToValueAtTime(0.001, start + duur);
     osc.connect(g).connect(p);
     osc.start(start);
@@ -95,10 +95,15 @@ function zingVogel() {
   }
 }
 function planVogel() {
-  // de wachttijd (≥10 s) is meteen de minimum-stilte tussen twee vogels
-  const wacht = 10000 + Math.random() * 15000;
+  // de wachttijd (≥25 s) is meteen de minimum-stilte tussen twee vogels
+  // (was 10-25 s — te vaak, Mark 27 aug)
+  const wacht = 25000 + Math.random() * 25000;
   S.vogelTimer = setTimeout(() => { zingVogel(); planVogel(); }, wacht);
 }
+
+// Vogels tijdelijk stil (bv. tijdens het arena-gevecht — dan wil je klangs en
+// publiek horen, geen gepiep er doorheen).
+export function parkAudioVogels(stil) { S.vogelsStil = !!stil; }
 
 /* ---------- laag 3a: trein ---------- */
 function maakTrein() {
@@ -311,6 +316,7 @@ export function parkAudioStart(beginStil = false) {
     S.master = S.ctx.createGain();
     S.master.gain.value = beginStil ? 0 : 1;
     S.stil = !!beginStil;
+    S.vogelsStil = false;
     S.master.connect(S.ctx.destination);
     startWind();
     planVogel();
