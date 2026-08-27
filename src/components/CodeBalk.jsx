@@ -11,6 +11,7 @@
 // zichtbare handmatige ingang die partners hun leden beloven. Het bestaande
 // "🎟️ Ik heb een code"-veld in het pakket-scherm blijft ook gewoon werken.
 import { useMemo, useState } from "react";
+import supabase from "../supabase.js";
 import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
@@ -184,8 +185,30 @@ export default function CodeBalk() {
       return;
     }
     if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
+      // 🔐 Koppelcode (thuis/school). Fix 27 aug: een harde sprong naar
+      // /leerling kaatst bij een koude landing bewust terug naar home
+      // (Mark-besluit 7 aug) — dus als er al een kind-naam op dit apparaat
+      // staat, koppelen we hier DIRECT via dezelfde RPC als de leerling-pagina.
+      // Zonder naam: vriendelijk uitleggen wat eerst moet (+ de code onthouden,
+      // zodat de leerling-pagina hem alsnog vooringevuld oppakt).
+      let naam = null;
+      try { naam = (JSON.parse(localStorage.getItem("ls_user") || "{}").name || "").trim() || null; } catch { /* */ }
+      if (naam) {
+        try {
+          const { data, error } = await supabase.rpc("claim_link_code", { p_code: kaal, p_child_name: naam });
+          if (!error && data?.ok) {
+            setKoppelTip({ klaar: true, rol: data.rol, naam });
+            setInvoer("");
+            return;
+          }
+          if (!error && data?.error === "code_invalid_or_expired") {
+            setFout("Deze koppelcode klopt niet of is verlopen. Vraag om een nieuwe code.");
+            return;
+          }
+        } catch { /* val terug op de uitleg-route hieronder */ }
+      }
       try { sessionStorage.setItem("lk_koppelcode_voorstel", kaal); } catch { /* */ }
-      setKoppelTip(kaal);
+      setKoppelTip({ klaar: false });
       return;
     }
     const r = await zetPartnerCodeHandmatig(invoer);
@@ -285,19 +308,21 @@ export default function CodeBalk() {
             </button>
           </div>
           {fout && <div style={{ font: "600 12px/1.4 system-ui", color: "#b42318", marginTop: 7 }}>{fout}</div>}
-          {koppelTip && (
+          {koppelTip && (koppelTip.klaar ? (
+            <div style={{ marginTop: 8, background: "rgba(0,200,83,0.10)", border: "1.5px solid rgba(0,150,60,0.5)", borderRadius: 10, padding: "10px 12px" }}>
+              <div style={{ font: "700 13px/1.45 system-ui", color: "#0a7d43" }}>
+                ✓ Gekoppeld{koppelTip.naam ? ` als ${koppelTip.naam}` : ""}! {koppelTip.rol === "leraar"
+                  ? "Je juf of meester kan nu lessen voor je klaarzetten."
+                  : "Je ouder of verzorger kan nu je voortgang zien."}
+              </div>
+            </div>
+          ) : (
             <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
               <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
-                🔐 Dit lijkt een <strong>koppelcode</strong> van thuis of school! Die vul je in op je eigen leerling-pagina — we hebben hem alvast voor je onthouden.
+                🔐 Dit lijkt een <strong>koppelcode</strong> van thuis of school! Kies eerst je eigen naam in de app (tik bovenaan op "Ik ben leerling") en typ de code daarna nóg een keer hier — dan koppelen we meteen. We hebben hem alvast voor je onthouden.
               </div>
-              <button
-                onClick={() => { window.location.href = "/leerling"; }}
-                style={{ marginTop: 8, border: "none", borderRadius: 10, padding: "9px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#7c3aed,#a78bfa)", cursor: "pointer" }}
-              >
-                Naar mijn pagina →
-              </button>
             </div>
-          )}
+          ))}
         </div>
       )}
     </div>

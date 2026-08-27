@@ -286,7 +286,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     if (!authUser) return;
     if (children.length >= MAX_KINDEREN) return; // cap: max 3 kinderen per gezin
     const childName = inviteChildName.trim();
-    if (!childName) return;
+    // 27 aug: zonder naam deed de knop stilletjes niets — Mark liep er bij het
+    // testen tegenaan. Nu een duidelijke melding.
+    if (!childName) { alert("Vul eerst de naam van je kind in (zoals in de app), dan maken we de code."); return; }
     setLoading(true);
     const code = generateCode();
     const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
