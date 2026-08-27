@@ -10,7 +10,7 @@
 // De QR-route (?partner=CODE) blijft de hoofdweg en verandert niet; dit is de
 // zichtbare handmatige ingang die partners hun leden beloven. Het bestaande
 // "🎟️ Ik heb een code"-veld in het pakket-scherm blijft ook gewoon werken.
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
@@ -46,7 +46,7 @@ function EerScherm({ code, onVerder }) {
   const naam = naamVoor(code);
   const isOP = code.startsWith("OOIEVAAR");
   const logo = isOP ? "/drukwerk/op-ooievaar.svg" : (PARTNER_LOGOS[code] || null);
-  const blijvend = partnerFamilieTot() === null;
+  const blijvend = isOP; // uit de code zelf, zodat óók de preview-weergave klopt
   const donker = isOP;
   const tekstKleur = donker ? "#dce5ee" : "#3a4658";
   return (
@@ -101,6 +101,17 @@ function EerScherm({ code, onVerder }) {
 }
 
 export default function CodeBalk() {
+  // 👀 Preview-modus (Mark 27 aug: "ik wil alle ere-pagina's persoonlijk zien
+  // en goedkeuren"): /?erescherm=CODE toont het ere-scherm van die code ALTIJD,
+  // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
+  const previewCode = useMemo(() => {
+    try {
+      const c = (new URLSearchParams(window.location.search).get("erescherm") || "").trim().toUpperCase();
+      return /^[A-Z0-9-]{3,20}$/.test(c) ? c : null;
+    } catch { return null; }
+  }, []);
+  const [previewOpen, setPreviewOpen] = useState(true);
+
   const [actief, setActief] = useState(() => actievePartnerCode());
   const [open, setOpen] = useState(false);
   const [invoer, setInvoer] = useState("");
@@ -147,6 +158,8 @@ export default function CodeBalk() {
       setFout("Die code klopt niet helemaal — kijk de spelling even na.");
     }
   };
+
+  if (previewCode && previewOpen) return <EerScherm code={previewCode} onVerder={() => setPreviewOpen(false)} />;
 
   if (eer && actief) return <EerScherm code={actief} onVerder={sluitEer} />;
 
