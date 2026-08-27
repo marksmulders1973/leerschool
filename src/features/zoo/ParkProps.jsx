@@ -1647,9 +1647,10 @@ export function SkyClouds() {
 // haak voor later (partner-doek); nu null = leeg wit doek.
 const ZEPPELIN_VLOOT = [
   // (De Leerkwartier-zeppelin met logo-doek is de bestuurbare InstapZeppelin in
-  //  ZooScene geworden — dit zijn de twee witte sfeer-zeppelins; partner-doeken
-  //  later = tekst/logo invullen, bv. gemeente Den Haag.)
-  { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: null },
+  //  ZooScene geworden — dit zijn de twee sfeer-zeppelins.)
+  // 🍞 Eerste partner-doek (Mark 27 aug, na logo-toestemming van Amber diezelfde
+  // dag): "Bedankt!" + het logo van Voedselbank Rotterdam op zeppelin 1.
+  { r: 74, h: 44, snelheid: -0.011, fase: 2.6, tekst: "Bedankt!", logo: "/drukwerk/logo-voedselbank-rotterdam.svg" },
   { r: 92, h: 50, snelheid: 0.009, fase: 4.9, tekst: null },
 ];
 // Doek-textuur: wit spandoek met (optioneel) logo links + naam ernaast,
@@ -1666,7 +1667,14 @@ export function useZeppelinDoek(tekst, logo) {
       if (dood) return;
       ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, 1100, 350);
       let x = 70;
-      if (img) { ctx.drawImage(img, 40, 35, 280, 280); x = 360; }
+      if (img) {
+        // logo passend schalen — een breed partner-logo (zoals Voedselbank
+        // Rotterdam, 182×42) niet in een vierkant persen
+        const sc = Math.min(460 / (img.width || 280), 280 / (img.height || 280));
+        const w = (img.width || 280) * sc, h = (img.height || 280) * sc;
+        ctx.drawImage(img, 40, 175 - h / 2, w, h);
+        x = 40 + w + 50;
+      }
       if (tekst) { ctx.fillStyle = "#14283c"; ctx.font = "800 118px system-ui, sans-serif"; ctx.textBaseline = "middle"; ctx.fillText(tekst, x, 182); }
       const t = new CanvasTexture(canvas);
       t.colorSpace = SRGBColorSpace;
