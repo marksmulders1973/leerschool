@@ -592,7 +592,10 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
       <mesh position={[0, 0.125, -(R * ARENA_S + 0.9)]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[2.8, 5.2]} /><meshStandardMaterial color="#d8cdb2" flatShading roughness={1} /></mesh>
       {/* gladiatoren + gevecht-knop in het zand (eigen bescheiden schaal) */}
       <GladiatorenDuel />
-      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 1.3)} breedte={3.0} hoogte={3.4} />
+      {/* poort iets verder van de ingang af (Mark 27 aug), aan het eind van de
+          loper richting het zwarte pad — afstand moet gelijk blijven met
+          POORT_AFSTAND.tempel in ZooScene */}
+      <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 2.6)} breedte={3.0} hoogte={3.4} />
     </group>
   );
 }

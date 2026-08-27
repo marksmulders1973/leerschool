@@ -893,9 +893,9 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
 // blijft hangen als je ernaast staat. De cooldown/flits zit in ZookwartierGame.
 // Bij grote gebouwen staat de poort niet op het midden maar een stuk ervóór
 // (lokaal -z); dan meten we op de poort zélf — anders vuurt hij nooit. De
-// arena-poort staat op R×ARENA_S+1,3 ≈ 8,3 m van het midden (Mark 27 aug:
-// "die poort/deur ervoor doet niets" — dít was waarom).
-const POORT_AFSTAND = { tempel: 8.3 };
+// arena-poort staat op R×ARENA_S+2,6 ≈ 9,6 m van het midden, aan het eind van
+// de loper (Mark 27 aug: "die poort doet niets" + "iets verder weg").
+const POORT_AFSTAND = { tempel: 9.6 };
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat
@@ -906,14 +906,18 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
     acc.current = 0;
     const p = playerPos?.current;
     if (!p) return;
-    let dichtst = null, bestD2 = 2.4; // ~1,5 m: je moet er echt doorheen lopen
+    let dichtst = null, bestD2 = Infinity;
     for (const it of placedItems) {
       if (!it.cell || !POORT_ASSETS[it.assetId]) continue;
       let [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const off = POORT_AFSTAND[it.assetId];
       if (off) { const hoek = it.rotation || 0; x -= Math.sin(hoek) * off; z -= Math.cos(hoek) * off; }
+      // Vrijstaande poorten (off) zijn ~3 m breed → ruimere doorloop-zone (~2 m
+      // rond het midden), anders mis je 'm als je iets uit het midden loopt.
+      // Standaard blijft ~1,5 m: je moet er echt doorheen lopen.
+      const lim = off ? 4.0 : 2.4;
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
-      if (d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
+      if (d2 < lim && d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
     }
     if (dichtst !== binnen.current) {
       const wasLeeg = binnen.current == null;
