@@ -2880,9 +2880,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
 
-      {/* 🥾 Wandelkwartier: knop → route kiezen; onderweg → voortgang-chip. */}
+      {/* 🥾 Wandelkwartier: knop → route kiezen; onderweg → voortgang-chip.
+          Op touch (COARSE_POINTER) staat linksonder de loop-joystick (bottom 92,
+          104 hoog) → knop/chips daar bóven zetten, anders dekt het bord het
+          stuur af (Mark-screenshot 27 aug). */}
       {!wandeling && (
-        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, display: "flex", alignItems: "center", gap: 6 }}>
+        <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, display: "flex", alignItems: "center", gap: 6 }}>
           <button onClick={() => setWandelKies(true)} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
             🥾 Wandeling
           </button>
@@ -2892,7 +2895,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
       {wandeling && !wandeling.klaar && wandelStop && (
-        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
+        <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
           🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {stopsVan(wandeling).length}
           <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
           {wandelStop.reden === "klaargezet-juf" && (
@@ -2911,7 +2914,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
       {wandeling && wandeling.klaar && !wandelViering && (
-        <div style={{ position: "absolute", left: 10, bottom: 104, zIndex: 12, background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 12px", font: "800 12.5px system-ui", color: "#1f5a2e", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
+        <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 12px", font: "800 12.5px system-ui", color: "#1f5a2e", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
           ✅ {wandelRoute.naam} af — morgen een nieuwe!
         </div>
       )}
