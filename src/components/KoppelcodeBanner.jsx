@@ -11,8 +11,18 @@ import supabase from "../supabase.js";
 // klapt uit naar invoerveld bij klik.
 
 export default function KoppelcodeBanner({ userName }) {
-  const [open, setOpen] = useState(false);
-  const [code, setCode] = useState("");
+  // Voorstel uit de code-balk op home (27 aug): typte iemand dáár een
+  // koppelcode, dan staat hij hier alvast ingevuld — niet opnieuw typen.
+  const [open, setOpen] = useState(() => {
+    try { return !!sessionStorage.getItem("lk_koppelcode_voorstel"); } catch { return false; }
+  });
+  const [code, setCode] = useState(() => {
+    try {
+      const c = sessionStorage.getItem("lk_koppelcode_voorstel") || "";
+      sessionStorage.removeItem("lk_koppelcode_voorstel");
+      return c;
+    } catch { return ""; }
+  });
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState(null); // { ok: bool, text: string }
 

@@ -86,8 +86,20 @@ export default function CodeBalk() {
     setEer(false);
   };
 
+  const [koppelTip, setKoppelTip] = useState(null);
   const activeer = async () => {
     setFout(null);
+    setKoppelTip(null);
+    // 🔐 Slimme herkenning (Mark 27 aug): een KOPPELCODE (thuis/school) is 4-8
+    // tekens zónder "2027"; organisatie-codes eindigen altijd op 2027. Een
+    // koppelcode hoort bij een kind-profiel → doorsturen naar de leerling-
+    // pagina, mét de code onthouden zodat je 'm niet opnieuw hoeft te typen.
+    const kaal = (invoer || "").trim().toUpperCase();
+    if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
+      try { sessionStorage.setItem("lk_koppelcode_voorstel", kaal); } catch { /* */ }
+      setKoppelTip(kaal);
+      return;
+    }
     const r = await zetPartnerCodeHandmatig(invoer);
     if (r.ok) {
       setActief(r.code);
@@ -161,6 +173,19 @@ export default function CodeBalk() {
             </button>
           </div>
           {fout && <div style={{ font: "600 12px/1.4 system-ui", color: "#b42318", marginTop: 7 }}>{fout}</div>}
+          {koppelTip && (
+            <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
+              <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
+                🔐 Dit lijkt een <strong>koppelcode</strong> van thuis of school! Die vul je in op je eigen leerling-pagina — we hebben hem alvast voor je onthouden.
+              </div>
+              <button
+                onClick={() => { window.location.href = "/leerling"; }}
+                style={{ marginTop: 8, border: "none", borderRadius: 10, padding: "9px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#7c3aed,#a78bfa)", cursor: "pointer" }}
+              >
+                Naar mijn pagina →
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
