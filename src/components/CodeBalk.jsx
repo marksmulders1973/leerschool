@@ -259,10 +259,10 @@ export default function CodeBalk() {
             : "Alle gezins-extra's zijn gratis voor jouw gezin, heel 2027 (tot en met 31 december 2027)."}
           {netGezet ? " Veel oefenplezier! 🎉" : ""}
         </div>
-        {/* ⏳ TEST-FASE (Mark 27 aug): klein reset-knopje zodat Mark elk toestel
-            direct kan leegmaken, ook als reset-links niet aankomen. Ná de
-            test-fase dit knopje verwijderen — gezinnen horen hun code niet
-            per ongeluk weg te kunnen halen. */}
+        {/* 🔄 Reset-knopje BLIJFT (Mark 27 aug: "kan denk ik geen kwaad"):
+            handig voor testen én voor gezinnen op een gedeeld/geleend toestel.
+            Per ongeluk gedrukt = geen ramp — code opnieuw invullen herstelt
+            alles, er gaat niets verloren. */}
         <button
           onClick={() => {
             try {
@@ -277,7 +277,7 @@ export default function CodeBalk() {
           }}
           style={{ marginTop: 8, border: "none", background: "transparent", font: "600 11px system-ui", color: "#7a8a7f", textDecoration: "underline", cursor: "pointer" }}
         >
-          🔄 code van dit apparaat halen (test)
+          🔄 code van dit apparaat halen
         </button>
       </div>
     );
