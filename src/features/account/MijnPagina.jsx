@@ -204,6 +204,16 @@ const ROL_KORT = {
   ouder: "ouder/voogd",
   teacher: "juf/meester",
 };
+// Rol-menu (Mark 27 aug avond: "als je eenmaal als ouder/juf/voogd bent
+// ingelogd, is een dropdown niet handig? — direct zien wat je met die rol
+// kunt"): één uitleg-zin per rol; de actie-knoppen staan in het component
+// (die hebben de handlers nodig).
+const ROL_UITLEG = {
+  leerling: "Dit is jouw eigen plek: hier oefen je een kwartier per dag en zie je wat je al kunt.",
+  student: "Dit is jouw eigen plek: hier oefen je voor je vakken en zie je wat je al kunt.",
+  ouder: "Als ouder, verzorger of voogd kijk je hier mee: je ziet de resultaten, zet oefenwerk klaar en koppelt je kind aan je eigen telefoon.",
+  teacher: "Als juf, meester of begeleider zet je hier werk klaar voor je klas en volg je hoe het met de scores gaat.",
+};
 
 // Wat de betaalde laag per rol later biedt (paywall staat UIT tot 2027 — dus
 // nu puur informeren + waitlist, Mark-keuze 13 aug). Eerlijk afgebakend: geen
@@ -380,6 +390,29 @@ export default function MijnPagina({
   const [week, setWeek] = useState(null);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
+  // Rol-menu aan de rol-regel (Mark 27 aug avond): tik op "Je bent hier
+  // als…" → wat kun je met deze rol + directe actie-knoppen.
+  const [rolMenuOpen, setRolMenuOpen] = useState(false);
+  const rolKey = userRole || "leerling";
+  const rolInfo = ROLLEN.find((r) => r.key === rolKey) || ROLLEN[0];
+  const rolActies = (() => {
+    if (rolKey === "ouder") return [
+      { emoji: "📊", label: "Bekijk de resultaten van je kind", doe: () => setWeergave("ouder") },
+      onKlaarzetten && { emoji: "💛", label: "Zet oefenwerk voor je kind klaar", doe: onKlaarzetten },
+      onOuderDashboard && { emoji: "🔗", label: "Koppel je kind + maandag-weekrapport", doe: onOuderDashboard },
+    ].filter(Boolean);
+    if (rolKey === "teacher") return [
+      onLeerkrachtActie && { emoji: "📝", label: "Toets maken voor je klas", doe: () => onLeerkrachtActie("create-quiz") },
+      onLeerkrachtActie && { emoji: "✅", label: "Takenlijst klaarzetten", doe: () => onLeerkrachtActie("takenlijst-maker") },
+      onLeerkrachtActie && { emoji: "📊", label: "Scores & voortgang van je klas", doe: () => onLeerkrachtActie("teacher-progress") },
+      onLeerkrachtHome && { emoji: "🏫", label: "Volledig leerkracht-overzicht", doe: onLeerkrachtHome },
+    ].filter(Boolean);
+    return [
+      onGoLeren && { emoji: "🚀", label: "Ga oefenen", doe: onGoLeren },
+      onGoCito && { emoji: "🎯", label: "Oefen in doorstroomtoets-stijl", doe: () => onGoCito() },
+      onGoVoortgang && { emoji: "📊", label: "Bekijk je eigen voortgang", doe: onGoVoortgang },
+    ].filter(Boolean);
+  })();
   const andereNamen = useMemo(() => {
     try {
       return JSON.parse(localStorage.getItem("lk_namen") || "[]")
@@ -742,27 +775,63 @@ export default function MijnPagina({
                 </div>
                 {/* 🪪 Rol-regel (Mark 27 aug: "mij is niet duidelijk of ik hier
                     als ouder ben ingelogd") — altijd in woorden zichtbaar wíé
-                    dit profiel is: leerling, ouder/verzorger/voogd of juf/
-                    meester/begeleider. Tik = wissel-paneel open om naam of
-                    rol te veranderen. */}
-                {(() => {
-                  const rolKey = userRole || "leerling";
-                  const rolInfo = ROLLEN.find((r) => r.key === rolKey) || ROLLEN[0];
-                  return (
+                    dit profiel is. Tik = rol-menu (Mark 27 aug avond): wat kun
+                    je met deze rol + directe actie-knoppen + wissel-optie. */}
+                <button
+                  onClick={() => { setRolMenuOpen(!rolMenuOpen); try { track("mijn_rolregel_tik", { rol: rolKey }); } catch { /* */ } }}
+                  aria-expanded={rolMenuOpen}
+                  title="Tik om te zien wat je met deze rol kunt, of om te wisselen."
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: 6, margin: "6px 0 4px",
+                    padding: "5px 12px", borderRadius: 999, cursor: "pointer",
+                    border: "1.5px solid rgba(255,213,79,0.55)", background: "rgba(255,213,79,0.12)",
+                    color: "#ffd54f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800,
+                  }}
+                >
+                  {rolInfo.emoji} Je bent hier als: {ROL_WOORD[rolKey] || "leerling"} {rolMenuOpen ? "▴" : "▾"}
+                </button>
+                {rolMenuOpen && (
+                  <div style={{
+                    margin: "2px 0 8px", padding: "12px 14px", borderRadius: 14, maxWidth: 460,
+                    border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.06)",
+                  }}>
+                    <div style={{ fontSize: 12.5, color: "var(--color-text)", lineHeight: 1.55, marginBottom: 10 }}>
+                      {ROL_UITLEG[rolKey] || ROL_UITLEG.leerling}
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {rolActies.map((a) => (
+                        <button
+                          key={a.label}
+                          onClick={() => {
+                            setRolMenuOpen(false);
+                            try { track("mijn_rolmenu_actie", { rol: rolKey, actie: a.label }); } catch { /* */ }
+                            a.doe();
+                          }}
+                          style={{
+                            display: "flex", alignItems: "center", gap: 9, width: "100%", textAlign: "left",
+                            padding: "10px 12px", borderRadius: 10, cursor: "pointer",
+                            border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.05)",
+                            color: "var(--color-text, #e8edf5)", fontFamily: "var(--font-display)",
+                            fontSize: 13, fontWeight: 700,
+                          }}
+                        >
+                          <span aria-hidden="true">{a.emoji}</span> {a.label}
+                        </button>
+                      ))}
+                    </div>
                     <button
-                      onClick={() => { setWisselOpen(true); try { track("mijn_rolregel_tik", {}); } catch { /* */ } }}
-                      title="Klopt dit niet? Tik om van naam of rol te wisselen."
+                      onClick={() => { setRolMenuOpen(false); setWisselOpen(true); try { track("mijn_rolmenu_wissel", {}); } catch { /* */ } }}
                       style={{
-                        display: "inline-flex", alignItems: "center", gap: 6, margin: "6px 0 4px",
-                        padding: "5px 12px", borderRadius: 999, cursor: "pointer",
-                        border: "1.5px solid rgba(255,213,79,0.55)", background: "rgba(255,213,79,0.12)",
-                        color: "#ffd54f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800,
+                        marginTop: 8, padding: "8px 12px", borderRadius: 999, cursor: "pointer",
+                        border: "1px dashed rgba(255,255,255,0.3)", background: "transparent",
+                        color: "var(--color-text-muted, #8899aa)", fontFamily: "var(--font-display)",
+                        fontSize: 12, fontWeight: 700,
                       }}
                     >
-                      {rolInfo.emoji} Je bent hier als: {ROL_WOORD[rolKey] || "leerling"}
+                      🔁 Andere naam of rol kiezen
                     </button>
-                  );
-                })()}
+                  </div>
+                )}
                 {wisselOpen && (
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0 2px" }}>
                     {andereNamen.map((n) => (
