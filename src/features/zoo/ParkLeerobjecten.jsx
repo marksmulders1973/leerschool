@@ -21,6 +21,7 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
+import { Vector3 } from "three";
 import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
@@ -542,17 +543,40 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
   }, []);
   // Banden met een opening bij de ingang (thetaStart/Length van CylinderGeometry).
   const bandArgs = (r, h) => [r, r, h, 28, 1, true, Math.PI + GAP / 2, Math.PI * 2 - GAP];
+  // 👻 Doorkijk-pilaren (Mark 27 aug: "kunnen die voorste palen onzichtbaar
+  // worden?"): staat de camera dicht bij de arena, dan vervagen de pilaren aan
+  // de cámera-kant zodat je je poppetje (en het gevecht) ziet; de achterkant
+  // blijft gewoon staan. Zachte fade via opacity-lerp — geen hard knipperen.
+  const schaalRef = useRef();
+  const pilaarMats = useRef([]);
+  const camLocal = useMemo(() => new Vector3(), []);
+  useFrame((s) => {
+    const g = schaalRef.current;
+    if (!g) return;
+    camLocal.copy(s.camera.position);
+    g.worldToLocal(camLocal); // lokale units: muur-straal = R
+    const d = Math.hypot(camLocal.x, camLocal.z);
+    const camTh = Math.atan2(camLocal.x, camLocal.z);
+    for (let i = 0; i < pilaren.length; i++) {
+      const mats = pilaarMats.current[i];
+      if (!mats) continue;
+      const verschil = Math.abs(((pilaren[i][2] - camTh) + Math.PI * 3) % (Math.PI * 2) - Math.PI);
+      const doel = d < 5.5 && verschil < 1.75 ? 0.12 : 1; // dichtbij + camera-kant → doorzichtig
+      for (const m of mats) { if (m) m.opacity += (doel - m.opacity) * 0.15; }
+    }
+  });
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       {/* zandvloer van de arena — op ware grootte, bewust dun (níét in de scale-group) */}
       <mesh position={[0, 0.05, 0]} receiveShadow><cylinderGeometry args={[R * ARENA_S - 0.15, R * ARENA_S + 0.2, 0.1, 36]} /><meshStandardMaterial color="#e8d8a8" flatShading roughness={1} /></mesh>
       {/* het gebouw zelf ×ARENA_S: muren, banden, ingang, publiek, vaandels */}
-      <group scale={[ARENA_S, ARENA_S, ARENA_S]}>
-        {/* twee ringen pilaren (bogen-illusie) — onderste zwaarder dan de bovenste */}
+      <group ref={schaalRef} scale={[ARENA_S, ARENA_S, ARENA_S]}>
+        {/* twee ringen pilaren (bogen-illusie) — onderste zwaarder dan de bovenste;
+            transparent zodat de doorkijk-fade per pilaar kan werken */}
         {pilaren.map(([x, z], i) => (
           <group key={i} position={[x, 0, z]}>
-            <mesh position={[0, 0.62, 0]} castShadow><boxGeometry args={[0.26, 1.05, 0.26]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
-            <mesh position={[0, 1.8, 0]} castShadow><boxGeometry args={[0.2, 0.95, 0.2]} /><meshStandardMaterial color={steen} flatShading roughness={1} /></mesh>
+            <mesh position={[0, 0.62, 0]} castShadow><boxGeometry args={[0.26, 1.05, 0.26]} /><meshStandardMaterial ref={(m) => { (pilaarMats.current[i] ||= [])[0] = m; }} color={steen} flatShading roughness={1} transparent /></mesh>
+            <mesh position={[0, 1.8, 0]} castShadow><boxGeometry args={[0.2, 0.95, 0.2]} /><meshStandardMaterial ref={(m) => { (pilaarMats.current[i] ||= [])[1] = m; }} color={steen} flatShading roughness={1} transparent /></mesh>
           </group>
         ))}
         {/* horizontale banden (met open ingang), zoals de ringen van het Colosseum */}
