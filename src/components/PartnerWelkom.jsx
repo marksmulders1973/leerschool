@@ -33,6 +33,7 @@ export const PARTNER_NAMEN = {
   EINDHOVEN2027: "Bibliotheek Eindhoven",
   HAARLEMMERMEER2027: "Stichting Leergeld Haarlemmermeer (Spark Fest)",
   ENSCHEDE2027: "Voedselbank Enschede-Haaksbergen",
+  FROUKJE2027: "Froukje van Haut (leerlingbegeleiding)",
   GORINCHEM2027: "Voedselbank Gorinchem",
   HEUVELLAND2027: "Leergeld Maastricht en Heuvelland",
   HUMANITAS2027: "Humanitas",

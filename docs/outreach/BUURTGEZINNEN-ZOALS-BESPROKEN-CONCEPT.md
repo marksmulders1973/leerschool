@@ -1,10 +1,10 @@
 # 📞→📧 "Zoals besproken"-mail — Froukje van Haut (Buurtgezinnen)
 
-> Belgesprek do 27 aug ~13:00 GEVOERD — uitkomst (Mark): super goed gesprek;
-> ze gaat de app zélf gebruiken, legt het voor binnen Buurtgezinnen, en haar
-> man (huiswerkbegeleider) gaat samen met haar door de vragen heen en geeft
-> tips. Concept hieronder is daarop ingevuld — NA MARK-GO versturen als reply
-> op de bestaande thread (via Mark's Gmail of Resend/hallo@ met reply-to).
+> Belgesprek do 27 aug GEVOERD — super uitkomst (zelf gebruiken, intern
+> voorleggen, tips van haar man de huiswerkbegeleider). Aangevuld met de
+> ere-scherm-preview als intern-voorleg-gereedschap (Mark 27 aug: "misschien
+> kan ze het aan haar bestuur zo laten zien"). NA MARK-GO versturen als reply
+> op de bestaande thread.
 
 ---
 
@@ -20,9 +20,17 @@ Extra blij word ik van jullie aanbod om tips te geven. Dat je man als huiswerkbe
 Zoals besproken zet ik alles even op een rij:
 
 - **Oefenen is gratis voor iedereen**, zonder account: leerkwartier.app
-- Met de code **BUURTGEZINNEN2027** krijgen gezinnen daarnaast alle Familie-extra's gratis het hele jaar 2027 (o.a. weekrapport voor thuis, printbare oefenboekjes, examen-simulatie).
+- Met de code **BUURTGEZINNEN2027** krijgen gezinnen daarnaast alle Familie-extra's gratis in heel 2027 (o.a. weekrapport voor thuis, printbare oefenboekjes, examen-simulatie). De code staat op de flyer met QR — scannen is genoeg, en intypen op de site kan ook.
 - Een **steungezin kan gewoon mee-oefenen** met het kind — er is niets te installeren.
-- De flyer met jullie logo staat klaar: leerkwartier.app/drukwerk/flyer-BUURTGEZINNEN2027.pdf — vrij te delen of door te sturen.
+- De flyer met jullie logo staat klaar: leerkwartier.app/drukwerk/flyer-BUURTGEZINNEN2027.pdf
+
+**En misschien handig als je het intern voorlegt:** ik heb alvast klaargezet hoe gezinnen worden verwelkomd die via Buurtgezinnen binnenkomen — met jullie naam en logo. Je ziet het hier, en je kunt de link zo doorsturen of laten zien:
+
+leerkwartier.app/?erescherm=BUURTGEZINNEN2027
+
+Dit is hoe het eruit kán zien — niets staat vast, en aanpassen kan altijd.
+
+**En omdat je zelf ook gezinnen begeleidt in je eigen praktijk:** ik heb een persoonlijke code voor je klaargezet — **FROUKJE2027**. Die kun je los van Buurtgezinnen aan jouw eigen gezinnen geven (typen op leerkwartier.app of via de link leerkwartier.app/?partner=FROUKJE2027); ook voor hen zijn alle Familie-extra's dan gratis in heel 2027. Zo zie jij precies wat je gezinnen zien.
 
 Veel plezier met uitproberen, en ik hoor jullie tips heel graag!
 
@@ -32,4 +40,4 @@ Maker van Leerkwartier — leerkwartier.app
 
 ---
 
-*Checklist ná verzending: WACHT-OP bijgewerkt ✅ · MARK-AGENDA ✅ · memory warme-leads ✅ · uren gelogd ✅ · tips binnen → direct oppakken + terugkoppelen.*
+*Checklist ná verzending: WACHT-OP bijwerken · tips binnen → direct oppakken + terugkoppelen · stil over interne voordracht ~half sep → zachte check. 📌 Logo-akkoord-vraag BEWUST nog niet gesteld (Mark 27 aug): pas stellen nádat Froukje het intern gedeeld heeft — dan is het een formaliteit i.p.v. een drempel.*
