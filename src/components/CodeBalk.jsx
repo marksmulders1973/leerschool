@@ -122,7 +122,7 @@ export default function CodeBalk() {
   // 👀 Preview-modus (Mark 27 aug: "ik wil alle ere-pagina's persoonlijk zien
   // en goedkeuren"): /?erescherm=CODE toont het ere-scherm van die code ALTIJD,
   // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
-  const previewCode = useMemo(() => {
+  const { previewCode, urlPartner } = useMemo(() => {
     try {
       const params = new URLSearchParams(window.location.search);
       // 🔄 Test-hulp (Mark 27 aug): /?codereset=1 haalt de vastgezette code van
@@ -133,8 +133,15 @@ export default function CodeBalk() {
         sessionStorage.removeItem(KEY_EER);
       }
       const c = (params.get("erescherm") || "").trim().toUpperCase();
-      return /^[A-Z0-9-]{3,20}$/.test(c) ? c : null;
-    } catch { return null; }
+      // QR-binnenkomst (?partner=CODE): de URL zelf lezen — de opslag wordt pas
+      // ná de eerste render gevuld (App-effect), en juist bij de állereerste
+      // scan moet het ere-scherm verschijnen (QR-test 27 aug: deed hij niet).
+      const p = (params.get("partner") || "").trim().toUpperCase();
+      return {
+        previewCode: /^[A-Z0-9-]{3,20}$/.test(c) ? c : null,
+        urlPartner: /^[A-Z0-9-]{3,20}$/.test(p) && p !== "DEELACTIE2027" ? p : null,
+      };
+    } catch { return { previewCode: null, urlPartner: null }; }
   }, []);
   const [previewOpen, setPreviewOpen] = useState(true);
 
@@ -145,7 +152,7 @@ export default function CodeBalk() {
   const TEST_OOIEVAAR = false;
   const [testEer, setTestEer] = useState(null);
   const [actief, setActief] = useState(() => {
-    const c = actievePartnerCode();
+    const c = urlPartner || actievePartnerCode();
     if (TEST_OOIEVAAR && c && c.startsWith("OOIEVAAR")) {
       try { localStorage.removeItem("lk_partner_code"); } catch { /* */ }
       return null;
@@ -162,7 +169,7 @@ export default function CodeBalk() {
   // openen = scherm weer). Ná de test-fase terug naar één keer per apparaat:
   // sessionStorage hieronder weer vervangen door localStorage met KEY_EER.
   const [eer, setEer] = useState(() => {
-    try { return !!actievePartnerCode() && !sessionStorage.getItem(KEY_EER); } catch { return false; }
+    try { return !!(urlPartner || actievePartnerCode()) && !sessionStorage.getItem(KEY_EER); } catch { return false; }
   });
   const sluitEer = () => {
     try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ }
