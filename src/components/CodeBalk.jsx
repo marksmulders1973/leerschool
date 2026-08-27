@@ -112,7 +112,22 @@ export default function CodeBalk() {
   }, []);
   const [previewOpen, setPreviewOpen] = useState(true);
 
-  const [actief, setActief] = useState(() => actievePartnerCode());
+  // ⏳ TEST-FASE Den Haag (Mark 27 aug: "zet 'code actief' even uit voor Den
+  // Haag zodat ik steeds opnieuw kan proberen"): OOIEVAAR-codes worden NIET op
+  // het apparaat vastgezet — typen toont het ere-scherm, daarna is de balk
+  // weer neutraal. Een eerder vastgezette OOIEVAAR-code wordt bij het laden
+  // weggehaald. Na Marks goedkeuring: TEST_OOIEVAAR op false → Den Haag werkt
+  // weer als elke andere partner (blijvend vastgezet).
+  const TEST_OOIEVAAR = true;
+  const [testEer, setTestEer] = useState(null);
+  const [actief, setActief] = useState(() => {
+    const c = actievePartnerCode();
+    if (TEST_OOIEVAAR && c && c.startsWith("OOIEVAAR")) {
+      try { localStorage.removeItem("lk_partner_code"); } catch { /* */ }
+      return null;
+    }
+    return c;
+  });
   const [open, setOpen] = useState(false);
   const [invoer, setInvoer] = useState("");
   const [fout, setFout] = useState(null);
@@ -139,6 +154,12 @@ export default function CodeBalk() {
     // koppelcode hoort bij een kind-profiel → doorsturen naar de leerling-
     // pagina, mét de code onthouden zodat je 'm niet opnieuw hoeft te typen.
     const kaal = (invoer || "").trim().toUpperCase();
+    // TEST-FASE: OOIEVAAR-code → alleen het ere-scherm tonen, niets vastzetten.
+    if (TEST_OOIEVAAR && kaal.startsWith("OOIEVAAR")) {
+      setTestEer(kaal);
+      setInvoer("");
+      return;
+    }
     if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
       try { sessionStorage.setItem("lk_koppelcode_voorstel", kaal); } catch { /* */ }
       setKoppelTip(kaal);
@@ -160,6 +181,8 @@ export default function CodeBalk() {
   };
 
   if (previewCode && previewOpen) return <EerScherm code={previewCode} onVerder={() => setPreviewOpen(false)} />;
+
+  if (testEer) return <EerScherm code={testEer} onVerder={() => setTestEer(null)} />;
 
   if (eer && actief) return <EerScherm code={actief} onVerder={sluitEer} />;
 
