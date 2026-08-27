@@ -448,8 +448,9 @@ function GladiatorenDuel({ schaal = 1.4 }) {
   const huid = "#e8b98a";
   return (
     <group scale={[schaal, schaal, schaal]}>
-      {/* 🔴 paal met de grote rode knop, net als bij de raket — naast de ingang */}
-      <group position={[1.7, 0, -2.9]}>
+      {/* 🔴 paal met de grote rode knop, net als bij de raket — naast de ingang,
+          rechts van de loper zodra je binnenkomt */}
+      <group position={[1.9, 0, -3.7]}>
         <mesh position={[0, 0.55, 0]} castShadow onClick={start}><cylinderGeometry args={[0.09, 0.12, 1.1, 10]} /><meshStandardMaterial color="#7a6a52" flatShading roughness={1} /></mesh>
         <mesh position={[0, 1.14, 0]} onClick={start}><cylinderGeometry args={[0.16, 0.2, 0.08, 12]} /><meshStandardMaterial color="#333940" flatShading /></mesh>
         <mesh position={[0, 1.24, 0]} onClick={start}>
@@ -510,13 +511,16 @@ function GladiatorenDuel({ schaal = 1.4 }) {
    Mini-Colosseum: ronde muur met twee ringen bogen (zoals het echte Colosseum),
    een open ingang aan de poort-kant, zandvloer, publiek op de rand en rode
    vaandels. Binnenin de gladiatoren + de gevecht-knop (GladiatorenDuel).
-   ✚ 27 aug (Mark: "dubbel zo groot dat ik erin kan lopen"): alles ×ARENA_S via
-   een scale-group, behalve de zandvloer (die blijft dun, anders sta je tot je
-   enkels in het zand) en de gladiatoren (anders worden het reuzen). De
-   botsing is nu begaanbaar (muur-ring + open ingang, zie ZooScene) en de
-   magische poort staat vóór de grotere ingang — de doorloop-detectie meet op
-   de poort zelf (POORT_AFSTAND in ZooScene), dáárom deed hij eerst niets. */
-export const ARENA_S = 2;
+   ✚ 27 aug (Mark: "dubbel zo groot dat ik erin kan lopen", later "nog een slag
+   groter"): alles ×ARENA_S (nu 2,6 → Ø ~14 m, 7×7 cellen) via een scale-group,
+   behalve de zandvloer (die blijft dun, anders sta je tot je enkels in het
+   zand) en de gladiatoren (anders worden het reuzen). De botsing is begaanbaar
+   (muur-ring + open ingang, zie ZooScene), de camera negeert de arena (anders
+   klapt de arm dicht als je erin staat) en de magische poort staat vóór de
+   ingang — de doorloop-detectie meet op de poort zelf (POORT_AFSTAND in
+   ZooScene), dáárom deed hij eerst niets. Duidelijke ingang: stenen loper
+   naar binnen + fakkels op de deurposten. */
+export const ARENA_S = 2.6;
 export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
   const steen = "#e6dfd0", band = "#d8d0bc";
   const R = 2.7, GAP = 0.85; // basis-straal + open ingang (radialen), richting de poort
@@ -555,12 +559,18 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
         <mesh position={[0, 1.22, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
         <mesh position={[0, 2.36, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.06, 0.26)} /><meshStandardMaterial color={band} flatShading roughness={1} side={2} /></mesh>
         <mesh position={[0, 2.98, 0]} castShadow><cylinderGeometry args={bandArgs(R + 0.12, 0.34)} /><meshStandardMaterial color={steen} flatShading roughness={1} side={2} /></mesh>
-        {/* ingang-omlijsting: twee stevige deurposten + latei */}
-        {[-1, 1].map((k) => (
-          <mesh key={k} position={[Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, 0.95, Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R]} castShadow>
-            <boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} />
-          </mesh>
-        ))}
+        {/* ingang-omlijsting: twee stevige deurposten + latei, mét fakkels
+            erbovenop zodat de ingang van ver te zien is */}
+        {[-1, 1].map((k) => {
+          const px = Math.sin(Math.PI + k * (GAP / 2 + 0.08)) * R, pz = Math.cos(Math.PI + k * (GAP / 2 + 0.08)) * R;
+          return (
+            <group key={k} position={[px, 0, pz]}>
+              <mesh position={[0, 0.95, 0]} castShadow><boxGeometry args={[0.34, 1.9, 0.34]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
+              <mesh position={[0, 2.02, 0]}><cylinderGeometry args={[0.05, 0.07, 0.28, 8]} /><meshStandardMaterial color="#5a4632" flatShading roughness={1} /></mesh>
+              <mesh position={[0, 2.24, 0]}><coneGeometry args={[0.13, 0.3, 8]} /><meshStandardMaterial color="#ffb03a" emissive="#ff7a1e" emissiveIntensity={0.9} flatShading /></mesh>
+            </group>
+          );
+        })}
         <mesh position={[0, 2.0, -R]} castShadow><boxGeometry args={[1.7, 0.3, 0.4]} /><meshStandardMaterial color={band} flatShading roughness={1} /></mesh>
         {/* publiek: gekleurde blokjes-koppen op de bovenrand */}
         {publiek.map(([x, z, th, kleur], i) => (
@@ -576,6 +586,10 @@ export function GriekseTempel({ position = [0, 0, 0], rotation = 0 }) {
           </mesh>
         ))}
       </group>
+      {/* 🪨 stenen loper: een duidelijk pad van buiten (voorbij de poort) door
+          de ingang naar binnen — "waar mag ik naar binnen?" is nu zichtbaar */}
+      <mesh position={[0, 0.115, -(R * ARENA_S + 0.9)]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3.4, 5.6]} /><meshStandardMaterial color="#b8ab90" flatShading roughness={1} /></mesh>
+      <mesh position={[0, 0.125, -(R * ARENA_S + 0.9)]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[2.8, 5.2]} /><meshStandardMaterial color="#d8cdb2" flatShading roughness={1} /></mesh>
       {/* gladiatoren + gevecht-knop in het zand (eigen bescheiden schaal) */}
       <GladiatorenDuel />
       <MagischePoort kleur="#ffd6a0" emoji="🏟️" label="De oudheid" z={-(R * ARENA_S + 1.3)} breedte={3.0} hoogte={3.4} />
