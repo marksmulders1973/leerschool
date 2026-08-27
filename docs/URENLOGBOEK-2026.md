@@ -31,7 +31,7 @@
 | ma 24 aug | ~3,5 | 💻✉️ Claude-sessie: mail-afhandeling (FBNR, Josja, Saba-pakket), nudges klaargezet, klaarzet-werk |
 | di 25 aug | ~8 | 💻✉️📋 Lange dag: Ooievaarspas-afronding + veiligstellen, SUN/Nijmegen/Twente/Amstelveen/Jeugdfonds-replies, bestuurs-golf (30 mails) + VoorleesExpress (49), recovery-pakket + repo-acties, KvK-formulier af + belastingregeling aangevraagd, kosten/uren-administratie opgezet, dagvraag op 4 socials, dagrapport + juichmail |
 | wo 26 aug | ~4 | 💻🪪 Ooievaarspas-dag: goedkeuring binnen, overeenkomst (3 docs) samen doorgenomen + getekend via ValidSign, bedank-reply, landingspagina-concept definitief (8 redactierondes), timing-besluit vastgelegd; avond: cijfers + dagrapport-PDF |
-| do 27 aug | ~1,5 | 💻 Claude: ochtend-dagrapport + arena-middag (v448-457) · 📞 belgesprek Froukje (Buurtgezinnen, ~0,25 u — super uitkomst) · ✉️ mail-checks + VB Rotterdam-afhandeling |
+| do 27 aug | ~5 | 💻 Mega-bouwdag: ochtend-dagrapport · arena + parkgeluid (v448-457) · partner-codesysteem: code-balk, ere-schermen, QR-decode-tests, RLS-bugfix, SCHOOLSCOOL-herstel, bedank-vloot (v458-479) · 📞 belgesprek Froukje (~15 min, super) · Mark: ere-schermen testen/keuren (middag+avond) · ✉️ Amber logo-ja + SUN-terugdraai verwerkt |
 | vr 28 aug | | |
 | za/zo | | |
 | **Offline aanvulling Mark** | ❓ | bellen/post/inkopen deze week? → doorgeven in de chat |
