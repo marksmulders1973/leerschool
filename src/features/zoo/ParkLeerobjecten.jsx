@@ -26,7 +26,7 @@ import { ZwevendeMaten } from "./UitvindersKabouters";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
-import { parkAudioRaket, parkAudioJuich } from "./parkAudio";
+import { parkAudioRaket, parkAudioJuich, parkAudioKlang } from "./parkAudio";
 
 // 🎓 Leer-bord — houten bordje met de les(sen) van een leerstation als échte
 // knoppen (Mark 26 aug: "ik zie er nu niets" → zichtbaar leren bij élk
@@ -409,24 +409,74 @@ function GladiatorenDuel({ schaal = 1.4 }) {
       return () => clearTimeout(terug);
     }
   }, [fase]);
+  // 🎬 Gevecht-choreografie (Mark 27 aug: "spannender, sneller, meer springen").
+  // Rondes van ~5 s: sluipen → stormloop → KLANG → terugspringen → sprong-aanval
+  // (om de beurt) met ontwijk-hupjes. Het tempo bouwt op; de laatste 15 s is de
+  // finale op ±1,5× snelheid. Alles deterministisch uit een choreo-klok — refs
+  // only, geen re-renders.
+  const gT0 = useRef(null), choreo = useRef(0), klang1 = useRef(-1), klang2 = useRef(-1);
   const start = (e) => {
     e?.stopPropagation?.();
     if (fase !== "rust") return;
     winRef.current = Math.random() < 0.5 ? 0 : 1;
+    gT0.current = null;
     setFase("gevecht");
     try { track("park_arena_gevecht", {}); } catch { /* */ }
   };
-  useFrame((s) => {
+  useFrame((s, dt) => {
     const t = s.clock.elapsedTime;
     if (fase === "gevecht") {
-      const th = t * 0.8;                                             // vlot om elkaar heen
-      const lungeA = Math.max(0, Math.sin(t * 1.6)) * 0.45;           // uitval A…
-      const lungeB = Math.max(0, Math.sin(t * 1.6 + Math.PI)) * 0.45; // …en om de beurt B
-      const rA = 0.95 - lungeA, rB = 0.95 - lungeB;
-      if (a.current) { a.current.position.set(Math.sin(th) * rA, 0, Math.cos(th) * rA); a.current.rotation.set(0, th + Math.PI, 0); }
-      if (b.current) { b.current.position.set(-Math.sin(th) * rB, 0, -Math.cos(th) * rB); b.current.rotation.set(0, th, 0); }
-      if (armA.current) armA.current.rotation.x = -0.4 - Math.max(0, Math.sin(t * 3.2)) * 1.0;
-      if (armB.current) armB.current.rotation.x = -0.3 - Math.max(0, Math.sin(t * 3.2 + 1.6)) * 0.8;
+      if (gT0.current == null) { gT0.current = t; choreo.current = 0; klang1.current = -1; klang2.current = -1; }
+      const u = t - gT0.current;
+      const tempo = u > GEVECHT_DUUR - 15 ? 1.5 : 1 + (u / GEVECHT_DUUR) * 0.35; // opbouw → finale
+      choreo.current += Math.min(dt, 0.1) * tempo;
+      const L = 5.2, cyc = Math.floor(choreo.current / L), p = choreo.current - cyc * L;
+      const flip = cyc % 2 === 0 ? 1 : -1;       // draairichting wisselt per ronde
+      const phi = flip * choreo.current * 1.15;  // basis-hoek: A op phi, B ertegenover
+      let rA = 1.35, rB = 1.35, yA = 0, yB = 0, leanA = 0, leanB = 0, dHoekA = 0, dHoekB = 0;
+      let armAdoel = -0.5 - Math.abs(Math.sin(t * 5)) * 0.5;
+      let armBdoel = -0.5 - Math.abs(Math.sin(t * 5 + 1.2)) * 0.5;
+      if (p < 1.8) {
+        // sluipen: snel cirkelen met voetenwerk-hupjes
+        yA = Math.abs(Math.sin(t * 7)) * 0.07;
+        yB = Math.abs(Math.sin(t * 7 + 1)) * 0.07;
+      } else if (p < 2.35) {
+        // stormloop: allebei tegelijk naar het midden, wapens hoog
+        const q = (p - 1.8) / 0.55;
+        rA = rB = 1.35 - q * q * 1.02;
+        yA = yB = Math.sin(q * Math.PI) * 0.22;
+        leanA = leanB = 0.28;
+        armAdoel = armBdoel = -1.7;
+        if (q > 0.9 && klang1.current !== cyc) { klang1.current = cyc; parkAudioKlang(); }
+      } else if (p < 3.1) {
+        // wapenklets! → allebei met een sprong achteruit
+        const q = (p - 2.35) / 0.75, e = 1 - (1 - q) * (1 - q);
+        rA = rB = 0.33 + e * 1.17;
+        yA = yB = Math.sin(q * Math.PI) * 0.45;
+        leanA = leanB = -0.3 * (1 - q);
+        armAdoel = armBdoel = -0.35;
+      } else if (p < 4.2) {
+        // sprong-aanval: om de beurt springt er één hoog naar het midden voor een
+        // overhead-slag; de ander duikt met twee snelle hupjes opzij
+        const q = (p - 3.1) / 1.1, boog = Math.sin(q * Math.PI);
+        const aValt = cyc % 2 === 0;
+        if (aValt) {
+          rA = 1.5 - boog * 1.28; yA = boog * 0.85; armAdoel = -0.6 - boog * 2.1; leanA = 0.2 * boog;
+          rB = 1.5; yB = Math.abs(Math.sin(q * Math.PI * 2)) * 0.2; armBdoel = -1.0; dHoekB = Math.sin(q * Math.PI) * 0.7;
+        } else {
+          rB = 1.5 - boog * 1.28; yB = boog * 0.85; armBdoel = -0.6 - boog * 2.1; leanB = 0.2 * boog;
+          rA = 1.5; yA = Math.abs(Math.sin(q * Math.PI * 2)) * 0.2; armAdoel = -1.0; dHoekA = Math.sin(q * Math.PI) * 0.7;
+        }
+        if (q > 0.45 && q < 0.65 && klang2.current !== cyc) { klang2.current = cyc; parkAudioKlang(); }
+      } else {
+        // op adem komen en de cirkel weer opzoeken
+        yA = Math.abs(Math.sin(t * 6)) * 0.05;
+        yB = Math.abs(Math.sin(t * 6 + 1)) * 0.05;
+      }
+      if (a.current) { a.current.position.set(Math.sin(phi + dHoekA) * rA, yA, Math.cos(phi + dHoekA) * rA); a.current.rotation.set(leanA, phi + Math.PI, 0); }
+      if (b.current) { b.current.position.set(-Math.sin(phi + dHoekB) * rB, yB, -Math.cos(phi + dHoekB) * rB); b.current.rotation.set(leanB, phi, 0); }
+      if (armA.current) armA.current.rotation.x = armAdoel;
+      if (armB.current) armB.current.rotation.x = armBdoel;
     } else if (fase === "juich") {
       const win = winRef.current === 0 ? a : b, verlies = winRef.current === 0 ? b : a;
       if (win.current) {

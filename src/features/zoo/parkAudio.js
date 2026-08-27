@@ -232,6 +232,35 @@ export function parkAudioRaket() {
   plof.stop(t + 18.35);
 }
 
+/* ---------- laag 3c-1: wapen-klang (arena-gevecht treffer) ---------- */
+// Kort metalig "klang": hoge triangle met snelle pitch-val + high-passed ruis-tik.
+export function parkAudioKlang() {
+  if (!S.gestart || S.stil || !S.ctx) return;
+  const ctx = S.ctx;
+  const t = ctx.currentTime;
+  const osc = ctx.createOscillator();
+  osc.type = "triangle";
+  osc.frequency.setValueAtTime(2400 + Math.random() * 700, t);
+  osc.frequency.exponentialRampToValueAtTime(850, t + 0.09);
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(0.13, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+  osc.connect(g).connect(S.master);
+  osc.start(t);
+  osc.stop(t + 0.22);
+  const tik = ctx.createBufferSource();
+  tik.buffer = ruis(ctx);
+  const hp = ctx.createBiquadFilter();
+  hp.type = "highpass";
+  hp.frequency.value = 2600;
+  const tg = ctx.createGain();
+  tg.gain.setValueAtTime(0.09, t);
+  tg.gain.exponentialRampToValueAtTime(0.001, t + 0.07);
+  tik.connect(hp).connect(tg).connect(S.master);
+  tik.start(t);
+  tik.stop(t + 0.09);
+}
+
 /* ---------- laag 3c: juichend publiek (arena-gevecht gewonnen) ---------- */
 // Kort gejuich: aanzwellende hoge ruis (mensenmassa) + een paar blije fluitjes.
 export function parkAudioJuich() {
