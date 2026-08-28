@@ -12,6 +12,7 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import { FamiliePill } from "../features/familie/familieUi.jsx";
 
 // Print-CSS — zelfde recept als Leesladder/Oefenpakket, inclusief de
 // overflow-fix (zonder die kapte Chrome het printwerk af op 1 pagina).
@@ -64,6 +65,11 @@ export default function TafelbladenPage({ setPage } = {}) {
   const [gekozen, setGekozen] = useState([2, 3, 4, 5, 10]);
   const [metDelen, setMetDelen] = useState(true);
   const [metTempo, setMetTempo] = useState(true);
+  // 💛 Familie-modi (Mark-go 28 aug 2026, versie-ladder printpakketten):
+  // gaten-sommen (__ × 7 = 42) en grote getallen (7 × 30) — straks Familie,
+  // nu bèta-gratis (zelfde patroon als Leesladder 2 / Redactiebladen D-E).
+  const [metGaten, setMetGaten] = useState(false);
+  const [metGroot, setMetGroot] = useState(false);
   const [seed, setSeed] = useState(1);
 
   useEffect(() => {
@@ -105,11 +111,29 @@ export default function TafelbladenPage({ setPage } = {}) {
     };
     const mix = vul(48);
     const tempo = vul(60);
-    return { perTafel, mix, tempo };
+    // 💛 Familie-bladen — eigen rng zodat de gratis bladen bit-voor-bit
+    // hetzelfde blijven, wat je hier ook aanvinkt.
+    const rng2 = maakRng(seed * 104729 + 41);
+    const gaten = gekozen.length
+      ? Array.from({ length: 48 }, () => {
+          const n = gekozen[(rng2() * gekozen.length) | 0];
+          const a = 1 + ((rng2() * 12) | 0);
+          return { a, n, t: (rng2() * 3) | 0 };
+        })
+      : [];
+    const groot = gekozen.length
+      ? Array.from({ length: 48 }, () => {
+          const n = gekozen[(rng2() * gekozen.length) | 0];
+          const a = 1 + ((rng2() * 12) | 0);
+          return { a, n, d: rng2() < 0.5 };
+        })
+      : [];
+    return { perTafel, mix, tempo, gaten, groot };
   }, [gekozen, seed]);
 
   const aantalBladen =
-    bladen.perTafel.length + (gekozen.length >= 2 ? 1 : 0) + (metTempo && gekozen.length >= 1 ? 1 : 0) + 1;
+    bladen.perTafel.length + (gekozen.length >= 2 ? 1 : 0) + (metTempo && gekozen.length >= 1 ? 1 : 0) +
+    (metGaten && gekozen.length >= 1 ? 1 : 0) + (metGroot && gekozen.length >= 1 ? 1 : 0) + 1;
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -168,6 +192,25 @@ export default function TafelbladenPage({ setPage } = {}) {
           <button onClick={() => setSeed((s) => s + 1)} style={{ padding: "7px 14px", borderRadius: 10, border: "1.5px solid rgba(255,255,255,0.2)", background: "transparent", color: "var(--color-text, #e8edf5)", cursor: "pointer", fontSize: 14 }}>
             🔀 Nieuwe sommen
           </button>
+        </div>
+
+        {/* 💛 Familie-modi: de volgende stap ná de gewone tafels. */}
+        <div style={{ border: "1.5px solid rgba(255,213,79,0.3)", background: "rgba(255,213,79,0.06)", borderRadius: 12, padding: "12px 14px", marginBottom: 18 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 8 }}>
+            <FamiliePill />
+            <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
+            <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Zwaardere bladen — horen straks bij het Familie-pakket.</span>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
+            <label style={{ display: "flex", alignItems: "center", gap: 7, color: "var(--color-text, #e8edf5)", fontSize: 14, cursor: "pointer" }}>
+              <input type="checkbox" checked={metGaten} onChange={() => { if (!metGaten) { try { track("tafelbladen_familie", { optie: "gaten" }); } catch { /* */ } } setMetGaten(!metGaten); }} />
+              💛 Gaten-sommen <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 12.5 }}>(__ × 7 = 42 — de brug naar delen)</span>
+            </label>
+            <label style={{ display: "flex", alignItems: "center", gap: 7, color: "var(--color-text, #e8edf5)", fontSize: 14, cursor: "pointer" }}>
+              <input type="checkbox" checked={metGroot} onChange={() => { if (!metGroot) { try { track("tafelbladen_familie", { optie: "groot" }); } catch { /* */ } } setMetGroot(!metGroot); }} />
+              💛 Grote getallen <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 12.5 }}>(7 × 30 en 420 : 60 — handig rekenen)</span>
+            </label>
+          </div>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
@@ -238,6 +281,44 @@ export default function TafelbladenPage({ setPage } = {}) {
             <div style={{ marginTop: 14, fontSize: 13, color: "#6b7785" }}>
               Gehaald: ______ sommen in 5 minuten · vorige keer: ______ — versla jezelf, niet een ander! 💪
             </div>
+          </Sheet>
+        )}
+
+        {metGaten && gekozen.length >= 1 && (
+          <Sheet>
+            <BladKop titel="💛 Gaten-sommen — welk getal ontbreekt?" sub="vul het ontbrekende getal in — de brug naar deelsommen en breuken" />
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0 26px" }}>
+              {[0, 1, 2].map((k) => (
+                <div key={k}>
+                  {bladen.gaten.slice(k * 16, k * 16 + 16).map((s, i) => (
+                    <Som key={i}>
+                      {s.t === 0 ? `____ × ${s.n} = ${s.a * s.n}` : s.t === 1 ? `${s.a} × ____ = ${s.a * s.n}` : `${s.a * s.n} : ____ = ${s.a}`}
+                    </Som>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 12, fontSize: 12.5, color: "#6b7785" }}>Nakijken: het ontbrekende getal × het andere getal = de uitkomst. Twijfel? Zeg de tafel hardop op.</div>
+            <BladVoet />
+          </Sheet>
+        )}
+
+        {metGroot && gekozen.length >= 1 && (
+          <Sheet>
+            <BladKop titel="💛 Grote getallen — tafels × 10" sub="ken je 7 × 3, dan ken je ook 7 × 30 — kijk maar!" />
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0 26px" }}>
+              {[0, 1, 2].map((k) => (
+                <div key={k}>
+                  {bladen.groot.slice(k * 16, k * 16 + 16).map((s, i) => (
+                    <Som key={i}>
+                      {s.d ? `${s.a * s.n * 10} : ${s.n * 10} = ____` : `${s.a} × ${s.n * 10} = ____`}
+                    </Som>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 12, fontSize: 12.5, color: "#6b7785" }}>Truc: reken eerst de gewone tafelsom uit en plak er dan een nul aan (7 × 30 → 7 × 3 = 21 → 210).</div>
+            <BladVoet />
           </Sheet>
         )}
 

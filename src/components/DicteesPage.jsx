@@ -12,6 +12,7 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import { FamiliePill } from "../features/familie/familieUi.jsx";
 
 const PRINT_CSS = `
 @media print {
@@ -138,6 +139,63 @@ const DICTEES = [
   },
 ];
 
+// ── 💛 Familie-dictees: werkwoordspelling (Mark-go 28 aug 2026, versie-ladder
+// naar de printpakketten). Hét struikelblok van groep 7-8; hoort straks bij
+// het Familie-pakket, nu bèta-gratis (zelfde patroon als Leesladder 2).
+// Alle spellingen handmatig gecontroleerd.
+const FAMILIE_DICTEES = [
+  {
+    id: "wwTt", titel: "werkwoorden: stam + t", emoji: "🏃", familie: true,
+    regel: "Bij hij/zij/het komt er een t achter de stam — óók als je hem niet hoort: hij wordt, zij vindt. Bij 'ik' alleen de stam: ik word. Truc: vervang het werkwoord door 'lopen'. Hoor je \"hij loopt\"? Dan dus + t.",
+    items: [
+      { woord: "wordt", zin: "Mijn broer wordt morgen twaalf. Schrijf op: wordt." },
+      { woord: "vindt", zin: "Zij vindt gym het leukste vak. Schrijf op: vindt." },
+      { woord: "rijdt", zin: "De bus rijdt elke tien minuten. Schrijf op: rijdt." },
+      { woord: "gebeurt", zin: "Er gebeurt iets geks op het plein. Schrijf op: gebeurt." },
+      { woord: "antwoordt", zin: "De meester antwoordt geduldig. Schrijf op: antwoordt." },
+      { woord: "houdt", zin: "Oma houdt van puzzelen. Schrijf op: houdt." },
+      { woord: "word", zin: "Ik word later dierenarts. Schrijf op: word." },
+      { woord: "praat", zin: "Hij praat honderduit over zijn hobby." },
+      { woord: "leest", zin: "Mijn zus leest elke avond een strip." },
+      { woord: "verft", zin: "Papa verft het tuinhek groen." },
+    ],
+  },
+  {
+    id: "wwKofschip", titel: "verleden tijd — 't kofschip", emoji: "⛵", familie: true,
+    regel: "Zeg het hele werkwoord. Eindigt de klank vóór -en in 't kofschip (t, k, f, s, ch, p)? Dan + te. Anders + de. Let op dubbelop: wachten → wachtte, praten → praatte.",
+    items: [
+      { woord: "werkte", zin: "Mama werkte gisteren tot zes uur." },
+      { woord: "fietste", zin: "Hij fietste door de regen naar huis." },
+      { woord: "verhuisde", zin: "Ons gezin verhuisde vorig jaar naar Utrecht." },
+      { woord: "maakte", zin: "Zij maakte een tekening voor opa." },
+      { woord: "speelde", zin: "Het team speelde een spannende wedstrijd." },
+      { woord: "wachtte", zin: "Ik wachtte een kwartier op de bus. Schrijf op: wachtte." },
+      { woord: "leefde", zin: "De ridder leefde zeshonderd jaar geleden." },
+      { woord: "rustte", zin: "Opa rustte even uit in zijn stoel. Schrijf op: rustte." },
+      { woord: "gooide", zin: "Zij gooide de bal in de basket." },
+      { woord: "praatte", zin: "Hij praatte zacht in de bibliotheek. Schrijf op: praatte." },
+    ],
+  },
+  {
+    id: "wwVoltooid", titel: "voltooid deelwoord (d of t?)", emoji: "✅", familie: true,
+    regel: "Maak het woord langer om de laatste letter te horen: gebeurd(e) → een d. Werkt verlengen niet, gebruik 't kofschip op het hele werkwoord: maken (k) → gemaakt met t, beloven (v-klank) → beloofd met d.",
+    items: [
+      { woord: "gebeurd", zin: "Wat is er gisteren gebeurd? Schrijf op: gebeurd." },
+      { woord: "gemaakt", zin: "Ik heb mijn huiswerk al gemaakt." },
+      { woord: "verhuisd", zin: "Wij zijn vorige maand verhuisd. Schrijf op: verhuisd." },
+      { woord: "gefietst", zin: "We hebben twintig kilometer gefietst." },
+      { woord: "gehoord", zin: "Heb jij dat nieuwtje al gehoord?" },
+      { woord: "beloofd", zin: "Papa heeft een ijsje beloofd. Schrijf op: beloofd." },
+      { woord: "gepland", zin: "De juf heeft een toets gepland. Schrijf op: gepland." },
+      { woord: "verbrand", zin: "Het brood is in de oven verbrand. Schrijf op: verbrand." },
+      { woord: "geantwoord", zin: "Zij heeft netjes geantwoord. Schrijf op: geantwoord." },
+      { woord: "bedacht", zin: "Hij heeft een slim plan bedacht." },
+    ],
+  },
+];
+
+const ALLE_DICTEES = [...DICTEES, ...FAMILIE_DICTEES];
+
 export default function DicteesPage({ setPage } = {}) {
   const [gekozen, setGekozen] = useState(DICTEES.map((d) => d.id));
 
@@ -153,9 +211,13 @@ export default function DicteesPage({ setPage } = {}) {
   }, []);
 
   function toggle(id) {
+    const isFamilie = FAMILIE_DICTEES.some((d) => d.id === id);
+    if (isFamilie && !gekozen.includes(id)) {
+      try { track("dictees_familie_kies", { id }); } catch { /* */ }
+    }
     setGekozen((g) => (g.includes(id) ? g.filter((x) => x !== id) : [...g, id]));
   }
-  const actief = DICTEES.filter((d) => gekozen.includes(d.id));
+  const actief = ALLE_DICTEES.filter((d) => gekozen.includes(d.id));
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -175,27 +237,38 @@ export default function DicteesPage({ setPage } = {}) {
           🔤 Spelling-dictees — jij leest voor, je kind schrijft
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
-          Zes voorlees-dictees van elk 10 woorden, per spellingregel (ei/ij, au/ou, d/t,
-          bomen/bommen, verkleinwoorden, weetwoorden). Jij krijgt een <strong style={{ color: "var(--color-text, #e8edf5)" }}>voorleesblad
+          Negen voorlees-dictees van elk 10 woorden: zes gratis per spellingregel (ei/ij, au/ou, d/t,
+          bomen/bommen, verkleinwoorden, weetwoorden) en drie 💛 Familie-dictees{" "}
+          <strong style={{ color: "var(--color-text, #e8edf5)" }}>werkwoordspelling</strong> (stam + t, &apos;t kofschip, voltooid
+          deelwoord). Jij krijgt een <strong style={{ color: "var(--color-text, #e8edf5)" }}>voorleesblad
           mét de regel</strong>, je kind een <strong style={{ color: "var(--color-text, #e8edf5)" }}>invulblad met schrijflijnen</strong>.
           Vijf minuten per dictee — perfect voor aan de keukentafel.
         </p>
 
         <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>Welke dictees?</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
-          {DICTEES.map((d) => {
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 10 }}>
+          {ALLE_DICTEES.map((d) => {
             const aan = gekozen.includes(d.id);
             return (
               <button key={d.id} onClick={() => toggle(d.id)} style={{
                 padding: "9px 14px", borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: "pointer",
-                border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : "1.5px solid rgba(255,255,255,0.15)",
-                background: aan ? "rgba(66,165,245,0.15)" : "transparent",
+                border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : d.familie ? "1.5px solid rgba(255,213,79,0.45)" : "1.5px solid rgba(255,255,255,0.15)",
+                background: aan ? "rgba(66,165,245,0.15)" : d.familie ? "rgba(255,213,79,0.06)" : "transparent",
                 color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
               }}>
-                {aan ? "✓ " : ""}{d.emoji} {d.titel}
+                {aan ? "✓ " : ""}{d.familie ? "💛 " : ""}{d.emoji} {d.titel}
               </button>
             );
           })}
+        </div>
+        {/* 💛 Familie-rij: werkwoordspelling — hoort straks bij Familie, nu
+            bèta-gratis (zelfde model als Leesladder 2 / Redactiebladen D-E). */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
+          <FamiliePill />
+          <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
+          <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
+            De 💛-dictees (werkwoordspelling, groep 7-8) horen straks bij het Familie-pakket.
+          </span>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
