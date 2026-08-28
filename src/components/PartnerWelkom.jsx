@@ -70,6 +70,9 @@ export const PARTNER_NAMEN = {
   LELYSTAD2027: "Voedselbank Lelystad",
   MAASTRICHT2027: "Voedselbank Maastricht",
   NIJMEGEN2027: "Voedselbank Nijmegen-Overbetuwe",
+  // 🧪 Mark's persoonlijke demo-/testcode (28 aug 2026): alleen voor Mark zelf
+  // en mensen die hij kent — niet publiceren, niet op flyers. Reset: ?codereset=1
+  PRO2027: "Mark, de maker van Leerkwartier",
   PURMEREND2027: "Voedselbank Purmerend",
   ROTTERDAM2027: "Bibliotheek Rotterdam",
   ROTTERDAMPAS2027: "de Rotterdampas",

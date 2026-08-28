@@ -85,6 +85,13 @@ ORDER BY gescand_uniek DESC, pc.code;
 ```
 (Weergavenamen per code: `PARTNER_NAMEN` in `src/components/PartnerWelkom.jsx` — codes die dáár of in `partner_codes` ontbreken direct aanvullen; les 27 aug: SCHOOLSCOOL2027 was wél uitgegeven maar ontbrak in de tabel → elke uitgegeven code MOET in beide staan.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
 
+**🧪 Zelf-testen-blokje in élk dagrapport (Mark-wens 28 aug 2026 — "ik wil alles zelf kunnen testen").** Vast kort blokje met Mark's eigen testgereedschap, elke keer opnieuw afdrukken (hij hoeft niets te onthouden):
+- **Testcode:** `PRO2027` — Mark's persoonlijke partner-code (max 25, alleen voor Mark + bekenden, nóóit publiceren/op flyers). Scan-flow naspelen: `leerkwartier.app/?partner=PRO2027` (ere-scherm → 3 proef-vragen → plek actief). Handmatig typen kan ook via de code-balk.
+- **Reset:** `leerkwartier.app/?codereset=1` — haalt de vastgezette code van het apparaat, daarna kan hij opnieuw testen.
+- **Ere-scherm-preview (zonder iets vast te zetten):** `leerkwartier.app/?erescherm=CODE` — werkt voor élke code.
+- **Overige zelf-test-ingangen:** takenlijst-demo deelcode `TAAK24` · leerkracht-kant `/leerkracht` · ouder-kant `/ouder` · weekpakket via Mark's meesterscode.
+PRO2027 verschijnt vanzelf in de code-teller-tabel — daar altijd als "🧪 test (Mark)" labelen zodat de cijfers niet vervuilen.
+
 **📡 Code-radar in élk dagrapport (idee #74 stap 1, Mark-go 25 aug — "laat óók zien wat er buiten de partner-codes gebeurt").** Naast de flyer-teller hierboven twee radar-query's draaien, zodat deel-/claim-/test-codes niet meer alleen bij toeval opvallen:
 ```sql
 -- 1) ALLE codes 7d (geen %2027-filter) + burst-detectie
