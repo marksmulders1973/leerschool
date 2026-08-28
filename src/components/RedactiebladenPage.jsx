@@ -13,8 +13,10 @@ import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
+import { FamiliePill } from "../features/familie/familieUi.jsx";
 import redactiePad from "../learnPaths/redactiesommen.js";
 import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
+import { REDACTIE_VERSIES, VERSIE_VOLGORDE } from "./redactiebladen/versies.js";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
@@ -108,6 +110,9 @@ function leadSource() {
 export default function RedactiebladenPage({ setPage } = {}) {
   const [email, setEmail] = useState("");
   const [mailStatus, setMailStatus] = useState("idle");
+  // Versie-ladder (Mark-go 28 aug 2026, Leesladder-model): A t/m C gratis,
+  // D en E = Familie-laag (nu bèta-gratis, slot gaat dicht bij de lancering).
+  const [versie, setVersie] = useState("A");
   const emailRef = useRef(null);
 
   useEffect(() => {
@@ -146,12 +151,37 @@ export default function RedactiebladenPage({ setPage } = {}) {
     } catch { setMailStatus("error"); }
   }
 
+  // Versie A komt uit het leerpad; B t/m E uit de versie-data. Ook daar
+  // seeded husselen, zodat blad en (later geprinte) sleutel blijven matchen.
+  function bouwVersieHoofdstukken(letterKey) {
+    const data = REDACTIE_VERSIES[letterKey];
+    if (!data) return [];
+    return data.hoofdstukken.map((h, hi) => ({
+      titel: h.titel,
+      emoji: h.emoji,
+      vragen: h.vragen.map((v, vi) => {
+        const g = shuffleOptiesSeeded({ q: v.q, options: v.options, answer: v.answer }, `redactie-${letterKey}::${hi}::${vi}`);
+        return { q: g.q, options: g.options, answer: g.answer, uitleg: v.uitleg };
+      }),
+    }));
+  }
+
+  const versieInfo = versie === "A"
+    ? { letter: "A", titel: "Versie A — van signaalwoorden naar twee stappen", subtitel: "Groep 5-8 · de opbouw-bundel", gratis: true }
+    : REDACTIE_VERSIES[versie];
+
   let teller = 0;
-  const hoofdstukken = bouwHoofdstukken().map((h) => ({
+  const hoofdstukken = (versie === "A" ? bouwHoofdstukken() : bouwVersieHoofdstukken(versie)).map((h) => ({
     ...h,
     vragen: h.vragen.map((v) => ({ ...v, nr: ++teller })),
   }));
   const totaal = teller;
+
+  const kiesVersie = (l) => {
+    setVersie(l);
+    try { track("redactiebladen_versie", { v: l, familie: !(l === "A" || REDACTIE_VERSIES[l]?.gratis) }); } catch { /* */ }
+    try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ }
+  };
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -208,9 +238,43 @@ export default function RedactiebladenPage({ setPage } = {}) {
           )}
         </div>
 
+        {/* Versie-ladder: A-C gratis, D-E Familie (bèta-gratis) — zelfde model
+            als de Leesladder. Kies een versie, print, en groei door. */}
+        <div style={{ border: "1.5px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)", borderRadius: 14, padding: "14px 16px", marginBottom: 18 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 10 }}>
+            <span style={{ fontWeight: 800, fontSize: 14, color: "var(--color-text, #e8edf5)" }}>Kies je versie</span>
+            <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>elke versie = een verse bundel, steeds een stapje zwaarder</span>
+          </div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {VERSIE_VOLGORDE.map((l) => {
+              const info = l === "A" ? { gratis: true } : REDACTIE_VERSIES[l];
+              const actief = versie === l;
+              return (
+                <button key={l} onClick={() => kiesVersie(l)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 15px", borderRadius: 10, cursor: "pointer", fontWeight: 800, fontSize: 14, border: actief ? "2px solid #42a5f5" : "1.5px solid rgba(255,255,255,0.18)", background: actief ? "rgba(66,165,245,0.18)" : "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)" }}>
+                  {l}{!info.gratis && <span title="Familie-versie" style={{ fontSize: 11 }}>💛</span>}
+                </button>
+              );
+            })}
+            <span style={{ alignSelf: "center", fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>F t/m J volgen 💛</span>
+          </div>
+          {!versieInfo.gratis && (
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+              <FamiliePill />
+              <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
+              <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Deze versie hoort straks bij het Familie-pakket.</span>
+            </div>
+          )}
+          {versie === "C" && (
+            <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)", fontSize: 13, lineHeight: 1.55, color: "var(--color-text, #e8edf5)" }}>
+              💛 <strong>Klaar met A t/m C?</strong> Versies D en E (geld, kommagetallen, tijd en verhoudingen) horen bij het Familie-pakket — <strong>nu in de bèta gratis te proberen</strong>. Versies F t/m J volgen.
+            </div>
+          )}
+        </div>
+
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <PrintKnoppen trackPrefix="redactiebladen" />
-          <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>{totaal} sommen · {hoofdstukken.length} hoofdstukken</span>
+          <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>Versie {versieInfo.letter} · {totaal} sommen · {hoofdstukken.length} hoofdstukken</span>
         </div>
       </div>
 
@@ -221,7 +285,8 @@ export default function RedactiebladenPage({ setPage } = {}) {
             <div style={{ fontSize: 54, marginBottom: 8 }}>📝</div>
             <div style={{ fontSize: 13, letterSpacing: 2, color: "#6b7785", fontWeight: 700 }}>{BRAND.name.toUpperCase()} · REDACTIESOMMEN</div>
             <h2 style={{ fontSize: 30, margin: "10px 0 4px", color: "#1a2332" }}>Verhaaltjessommen oefenen</h2>
-            <div style={{ fontSize: 18, color: "#46546a", marginBottom: 26 }}>Groep 5 t/m 8</div>
+            <div style={{ fontSize: 18, color: "#46546a", marginBottom: 4 }}>{versieInfo.titel}</div>
+            <div style={{ fontSize: 14, color: "#6b7785", marginBottom: 26 }}>{versieInfo.subtitel}{!versieInfo.gratis ? " · 💛 Familie" : ""}</div>
             <div style={{ display: "inline-block", textAlign: "left", background: "#f4f7fb", borderRadius: 12, padding: "18px 26px" }}>
               <div style={{ fontWeight: 700, color: "#1a2332", marginBottom: 8 }}>In deze bundel:</div>
               {hoofdstukken.map((h, i) => (
