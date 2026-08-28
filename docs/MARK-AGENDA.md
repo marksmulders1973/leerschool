@@ -8,13 +8,16 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **💡 Besluit: partner-code-geldigheid "langste-van-de-twee"** (Mark-idee 28 aug):
-  code geldig tot 31-12-2027 óf 12 maanden vanaf activering — wat het laatst
-  afloopt. Voordelen: flyer-voorraad (1.000 st) blijft ook ná 2027 bruikbaar,
-  afloop gespreid i.p.v. één klif, en het ontgrendelt **cadeau-codes**
-  (éénmalig, kerstpakket-inlegvel/opa-oma-cadeau — mooi vóór het oktober-
-  kerstpakketten-moment). Ombouw is klein en staat klaar; alleen "go" zeggen.
-  Details: memory `project_studiebol_partner_codes` § voorstel 28 aug.
+- **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die
+  samen één systeem vormen — één go volstaat):
+  (a) **langste-van-de-twee-geldigheid**: code geldig tot 31-12-2027 óf 12 mnd
+  vanaf activering, wat het laatst afloopt → flyer-voorraad blijft bruikbaar,
+  afloop gespreid; (b) **cadeau-codes** (éénmalig — kerstpakket-inlegvel/
+  opa-oma-cadeau, vóór het oktober-moment); (c) **code-rotatie vanaf 2028**:
+  jaarlijks verse níét-raadbare code per partner (OOIEVAAR-7K2F, geen
+  jaartal-patroon), oude code blijft werken zolang de partner meedoet,
+  geclaimde gezinnen behouden altijd hun recht → een gelekte code is nooit
+  meer eeuwig open. Details: memory `project_studiebol_partner_codes`.
 
 - ~~KvK-afspraak boeken~~ ✅ **GEBOEKT 25 aug: ma 28 SEPTEMBER 11:45-12:15, KvK Utrecht
   (Sint Jacobsstraat 300)** — eerste beschikbare slot; formulier is volledig ingevuld
