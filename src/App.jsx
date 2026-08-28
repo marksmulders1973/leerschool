@@ -1559,6 +1559,7 @@ export default function App() {
         <TeacherHome
           userName={userName}
           authUser={authUser}
+          onLogin={loginWithConsent}
           quizzes={quizzes}
           classes={classes}
           onKlaarzetten={(linkId, studentName) => startKlaarzetten(linkId, studentName, "leraar")}

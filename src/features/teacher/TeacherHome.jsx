@@ -9,7 +9,7 @@ import ProBadge, { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
 
-export default function TeacherHome({ userName, authUser, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
+export default function TeacherHome({ userName, authUser, onLogin, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
   // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
@@ -55,6 +55,65 @@ export default function TeacherHome({ userName, authUser, quizzes, classes, onCr
     a.download = `${BRAND.shortName}_${q.title || subj?.label || "quiz"}_${q.code}.csv`;
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  // 💾 Kopie op eigen pc/USB/SD (Mark 28 aug 2026): een juf zonder account
+  // heeft alles alleen op dit apparaat — dit bestand redt haar toetsen en
+  // klassen bij een gewiste browser of een andere computer. Gekoppelde
+  // leerlingen en cloud-sync verhuizen alléén mee via inloggen.
+  const [kopieMelding, setKopieMelding] = useState(null);
+  const bewaarKopie = () => {
+    const pak = (k) => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch { return null; } };
+    const data = {
+      type: "leerkwartier-leerkracht-kopie",
+      bewaardOp: new Date().toISOString(),
+      naam: userName || "",
+      quizzes: pak("ls_quizzes") || [],
+      klassen: pak("ls_classes") || [],
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `leerkwartier-kopie-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setKopieMelding({ ok: true, tekst: `Kopie bewaard: ${data.quizzes.length} toets${data.quizzes.length === 1 ? "" : "en"} + ${data.klassen.length} klas${data.klassen.length === 1 ? "" : "sen"}. Zet het bestand waar je wilt — computer, USB of SD-kaart.` });
+  };
+  const zetKopieTerug = (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data?.type !== "leerkwartier-leerkracht-kopie") {
+          setKopieMelding({ ok: false, tekst: "Dit bestand is geen Leerkwartier-kopie. Kies het bestand dat je eerder met 'Bewaar een kopie' hebt gemaakt." });
+          return;
+        }
+        const pak = (k) => { try { return JSON.parse(localStorage.getItem(k) || "null") || []; } catch { return []; } };
+        // Samenvoegen, niet overschrijven: wat hier al staat blijft staan.
+        const mergeOpId = (bestaand, nieuw) => {
+          const out = [...bestaand];
+          for (const item of nieuw || []) if (item?.id && !bestaand.some((b) => b?.id === item.id)) out.push(item);
+          return out;
+        };
+        const quizzesNieuw = mergeOpId(pak("ls_quizzes"), data.quizzes);
+        const klassenNieuw = mergeOpId(pak("ls_classes"), data.klassen);
+        localStorage.setItem("ls_quizzes", JSON.stringify(quizzesNieuw));
+        localStorage.setItem("ls_classes", JSON.stringify(klassenNieuw));
+        try {
+          const u = JSON.parse(localStorage.getItem("ls_user") || "{}");
+          if (!u.name && data.naam) localStorage.setItem("ls_user", JSON.stringify({ ...u, name: data.naam, role: u.role || "teacher" }));
+        } catch { /* naam is een extraatje */ }
+        // Herladen zodat de lijst en tellers de teruggezette toetsen tonen.
+        window.location.reload();
+      } catch {
+        setKopieMelding({ ok: false, tekst: "Dit bestand kon niet gelezen worden. Kies het .json-bestand van 'Bewaar een kopie'." });
+      }
+    };
+    reader.readAsText(file);
   };
 
   const printToets = (q) => {
@@ -280,6 +339,42 @@ export default function TeacherHome({ userName, authUser, quizzes, classes, onCr
             </div>
           )}
         </div>
+
+        {/* 💾 Apparaat-waarschuwing + kopie-knoppen (Mark 28 aug 2026): een juf
+            zonder account moet wéten dat haar werk op dit apparaat staat, en
+            kan een kopie bewaren op pc/USB/SD. Inloggen blijft de echte fix. */}
+        {(!authUser || authUser.is_anonymous) && (
+          <div style={{ marginBottom: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(255,213,79,0.07)", border: "1px solid rgba(255,213,79,0.3)" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#ffd54f", fontWeight: 700 }}>
+              📌 Let op: jouw werk staat nu alleen op dit apparaat
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.55, color: "rgba(255,255,255,0.75)", marginTop: 4 }}>
+              Toetsen, takenlijsten en gekoppelde leerlingen staan op deze computer. Wis je de browsergegevens of werk je op een ander apparaat, dan ben je ze kwijt.
+            </div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+              {onLogin && (
+                <button onClick={onLogin} style={{ padding: "8px 13px", borderRadius: 9, border: "none", background: "#1e88e5", color: "#fff", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer" }}>
+                  Inloggen met Google — alles veilig én op elk apparaat
+                </button>
+              )}
+              <button onClick={bewaarKopie} style={{ padding: "8px 13px", borderRadius: 9, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.85)", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer" }}>
+                💾 Bewaar een kopie (bestand)
+              </button>
+              <label style={{ padding: "8px 13px", borderRadius: 9, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.85)", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer" }}>
+                📂 Zet een kopie terug
+                <input type="file" accept="application/json,.json" onChange={zetKopieTerug} style={{ display: "none" }} />
+              </label>
+            </div>
+            {kopieMelding && (
+              <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 12, color: kopieMelding.ok ? "#69f0ae" : "#ff8a80" }}>
+                {kopieMelding.tekst}
+              </div>
+            )}
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 8, lineHeight: 1.5 }}>
+              De kopie is een gewoon bestand — bewaar het op je computer, USB-stick of SD-kaart. Gekoppelde leerlingen verhuizen alleen mee als je inlogt.
+            </div>
+          </div>
+        )}
 
         {/* Quiz limiet banner */}
         {!isTeacherPro && (
