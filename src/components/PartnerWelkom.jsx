@@ -16,7 +16,34 @@
 import { useMemo, useState } from "react";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import { actievePartnerCode, partnerFamilieTot } from "../features/referral/partnerCode.js";
+import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
+
+// 🎯 Scan → meteen dóén (Mark-go 28 aug 2026, na nulmeting 37 banner-shows /
+// 0 kliks): de scanner landt direct in drie échte vraagjes ín de banner.
+// Elk antwoord telt via telAntwoordVoorVriend() mee voor de partner-plek —
+// na vraag 3 is de gezins-plek dus vanzelf geactiveerd (bestaande mechaniek).
+// Vragen zijn B1, groep-onafhankelijk en laten de uitleg-USP meteen proeven.
+const PROEF_VRAGEN = [
+  {
+    q: "In een doos zitten 6 eierdozen met elk 10 eieren. Hoeveel eieren zijn dat samen?",
+    options: ["16", "56", "60", "66"],
+    answer: 2,
+    uitleg: "6 × 10 = 60. Zie je het woord \"elk\"? Dan is het een keersom!",
+  },
+  {
+    q: "Welke zin is goed geschreven?",
+    options: ["hij word", "hij wordt", "hij wort", "hij wordd"],
+    answer: 1,
+    uitleg: "Bij hij/zij/het komt er een t achter de stam: hij wordt — ook al hoor je hem niet.",
+  },
+  {
+    q: "Lisa pakt haar paraplu en trekt haar laarzen aan. Wat voor weer is het?",
+    options: ["Het regent", "Het sneeuwt", "De zon schijnt", "Het is bloedheet"],
+    answer: 0,
+    uitleg: "Dat stond er niet létterlijk — maar de paraplu en laarzen verklappen het. Zo werkt begrijpend lezen!",
+  },
+];
 
 // Nette weergavenamen per code (DB-org_naam bevat interne aantekeningen).
 // Nieuwe partner-code? Regel erbij — onbekende codes vallen terug op de
@@ -87,6 +114,10 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
     try { return localStorage.getItem(KEY_DICHT) === "1"; } catch { return false; }
   });
   const [getoond, setGetoond] = useState(false);
+  // Proef-vraagjes-state: welke vraag, wat is er gekozen, klaar?
+  const [vraagIdx, setVraagIdx] = useState(0);
+  const [keuze, setKeuze] = useState(null);
+  const proefKlaar = vraagIdx >= PROEF_VRAGEN.length;
 
   if (!variant || dicht) return null;
 
@@ -163,22 +194,91 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
           {tekst}
         </VoorleesBlok>
       </div>
-      {/* 🚀 Oefenen = de DOMINANTE actie (Mark 24 aug, na nulmeting: 37 banner-
-          shows, 0 CTA-kliks, 0 oefenaars). Eén grote knop die de scanner meteen
-          in een échte vraag laat landen (de vraag-van-de-dag), i.p.v. twee
-          gelijke keuzes. "Ik ben ouder" blijft, maar als kleine tweede optie. */}
+      {/* 🎯 Scan → meteen dóén (28 aug 2026): drie proef-vraagjes ín de banner.
+          Geen klik nodig — vraag 1 staat er al. Elk antwoord telt mee voor de
+          partner-plek (telAntwoordVoorVriend); na vraag 3 is die geactiveerd. */}
+      {!proefKlaar ? (
+        <div style={{ background: "rgba(0,0,0,0.25)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, padding: "12px 14px", marginBottom: 10 }}>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, color: accent, marginBottom: 6 }}>
+            🎓 PROBEER &apos;T METEEN — VRAAG {vraagIdx + 1} VAN {PROEF_VRAGEN.length}
+          </div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 15, fontWeight: 700, color: "#fff", lineHeight: 1.5, marginBottom: 10 }}>
+            {PROEF_VRAGEN[vraagIdx].q}
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+            {PROEF_VRAGEN[vraagIdx].options.map((opt, i) => {
+              const beantwoord = keuze !== null;
+              const juist = i === PROEF_VRAGEN[vraagIdx].answer;
+              const dit = keuze === i;
+              return (
+                <button
+                  key={i}
+                  disabled={beantwoord}
+                  onClick={() => {
+                    setKeuze(i);
+                    telAntwoordVoorVriend();
+                    try { track("partner_welkom_vraag", { n: vraagIdx + 1, goed: juist, code: variant.code || null }); } catch { /* */ }
+                  }}
+                  style={{
+                    padding: "11px 10px", borderRadius: 10, cursor: beantwoord ? "default" : "pointer",
+                    fontFamily: "var(--font-body)", fontSize: 14, fontWeight: 700,
+                    border: beantwoord && juist ? "2px solid #00e676" : dit ? "2px solid #ff8a80" : "1.5px solid rgba(255,255,255,0.22)",
+                    background: beantwoord && juist ? "rgba(0,230,118,0.15)" : dit ? "rgba(255,138,128,0.12)" : "rgba(255,255,255,0.06)",
+                    color: "#fff",
+                  }}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+          {keuze !== null && (
+            <div style={{ marginTop: 10 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.9)", background: "rgba(0,230,118,0.08)", border: "1px solid rgba(0,230,118,0.3)", borderRadius: 10, padding: "9px 12px" }}>
+                {keuze === PROEF_VRAGEN[vraagIdx].answer ? "✅ Goed zo! " : "💡 Bijna! "}
+                {PROEF_VRAGEN[vraagIdx].uitleg}
+              </div>
+              <button
+                onClick={() => { setKeuze(null); setVraagIdx((n) => n + 1); }}
+                style={{
+                  marginTop: 8, width: "100%", padding: "11px 14px", borderRadius: 10, border: "none",
+                  background: `linear-gradient(135deg, ${accent}, #ffb300)`, color: "#1a1a00",
+                  fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, cursor: "pointer",
+                }}
+              >
+                {vraagIdx + 1 < PROEF_VRAGEN.length ? "Volgende vraag →" : "Klaar — laat zien! 🎉"}
+              </button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div style={{ background: "rgba(0,230,118,0.10)", border: "1.5px solid rgba(0,230,118,0.4)", borderRadius: 12, padding: "12px 14px", marginBottom: 10 }}>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#69f0ae", marginBottom: 4 }}>
+            🎉 Drie vragen gedaan — zo werkt Leerkwartier!
+          </div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.9)" }}>
+            Bij elke fout krijg je uitleg tot je het snapt — geen &quot;fout, volgende&quot;.
+            {variant.code ? " En jullie gratis gezins-plek is nu meteen actief. 💛" : ""}
+          </div>
+        </div>
+      )}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {onOefenen && (
           <button
             onClick={() => { track("partner_welkom_oefenen", { code: variant.code || null }); sluit(); onOefenen(); }}
-            style={{
+            style={proefKlaar ? {
               width: "100%", padding: "14px 16px", borderRadius: 12, border: "none",
               background: `linear-gradient(135deg, ${accent}, #ffb300)`,
               color: "#1a1a00", fontFamily: "var(--font-display)",
               fontSize: 16, fontWeight: 800, cursor: "pointer",
+            } : {
+              width: "100%", padding: "10px 16px", borderRadius: 12,
+              border: "1.5px solid rgba(255,255,255,0.22)", background: "none",
+              color: "rgba(255,255,255,0.9)", fontFamily: "var(--font-display)",
+              fontSize: 13.5, fontWeight: 700, cursor: "pointer",
             }}
           >
-            🚀 Start je gratis oefenkwartier
+            🚀 {proefKlaar ? "Verder oefenen — gratis" : "Liever meteen het hele overzicht"}
           </button>
         )}
         {onOuder && (
