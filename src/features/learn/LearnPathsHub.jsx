@@ -223,6 +223,38 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     });
     setKlaarBusyId(null);
   };
+  // 💛 Klaarzet-modus-balk (Mark 15 aug; gedeeld sinds 28 aug): duidelijk vóór
+  // wie je kiest + "Klaar"-knop terug. Op ÁLLE hub-schermen — bij Mark's eerste
+  // test ontbrak de balk op het vak-keuze-scherm, waardoor klaarzet-modus er
+  // uitzag als gewoon "Leren".
+  const klaarzetBalk = klaarzetVoor && (
+    <div style={{
+      position: "sticky", top: 0, zIndex: 20,
+      display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap",
+      padding: "11px 16px", background: "linear-gradient(135deg, rgba(255,105,135,0.22), rgba(255,159,178,0.12))",
+      borderBottom: "1px solid rgba(255,105,135,0.4)",
+    }}>
+      <span style={{ fontSize: 20 }} aria-hidden="true">💛</span>
+      <div style={{ flex: 1, minWidth: 140 }}>
+        <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, color: "#ffd7df" }}>
+          Je zet lessen klaar voor {klaarzetVoor.childName}
+        </div>
+        <div style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
+          Kies een vak en tik op een les — dan verschijnt die op {klaarzetVoor.childName}’s pagina.
+        </div>
+      </div>
+      <button
+        onClick={() => onKlaarzetKlaar && onKlaarzetKlaar()}
+        style={{
+          flexShrink: 0, padding: "9px 18px", borderRadius: 10, border: "none", cursor: "pointer",
+          background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18",
+          fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+        }}
+      >
+        ✓ Klaar
+      </button>
+    </div>
+  );
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
   // (primair) of userLevel (fallback voor returning users zonder role-set).
@@ -528,6 +560,8 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     return (
       <div style={pageStyle()}>
         <Header onBack={onBack || onHome} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
+
+        {klaarzetBalk}
 
         <div style={{ padding: "16px 18px 8px" }}>
           <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
@@ -1032,36 +1066,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     <div style={pageStyle()}>
       <Header onBack={headerBack} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
 
-      {/* 💛 Klaarzet-modus-balk (Mark 15 aug): duidelijk vóór wie je nu kiest,
-          met een grote "Klaar"-knop terug naar het thuis-overzicht. */}
-      {klaarzetVoor && (
-        <div style={{
-          position: "sticky", top: 0, zIndex: 20,
-          display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap",
-          padding: "11px 16px", background: "linear-gradient(135deg, rgba(255,105,135,0.22), rgba(255,159,178,0.12))",
-          borderBottom: "1px solid rgba(255,105,135,0.4)",
-        }}>
-          <span style={{ fontSize: 20 }} aria-hidden="true">💛</span>
-          <div style={{ flex: 1, minWidth: 140 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, color: "#ffd7df" }}>
-              Je zet lessen klaar voor {klaarzetVoor.childName}
-            </div>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
-              Tik het 🤍 bij een les — dan verschijnt die op {klaarzetVoor.childName}’s pagina.
-            </div>
-          </div>
-          <button
-            onClick={() => onKlaarzetKlaar && onKlaarzetKlaar()}
-            style={{
-              flexShrink: 0, padding: "9px 18px", borderRadius: 10, border: "none", cursor: "pointer",
-              background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18",
-              fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
-            }}
-          >
-            ✓ Klaar
-          </button>
-        </div>
-      )}
+      {klaarzetBalk}
 
       <div style={{ padding: "16px 18px 8px" }}>
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
