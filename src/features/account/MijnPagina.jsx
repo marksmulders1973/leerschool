@@ -409,7 +409,10 @@ export default function MijnPagina({
   const rolActies = (() => {
     if (rolKey === "ouder") return [
       { emoji: "📊", label: "Bekijk de resultaten van je kind", doe: () => setWeergave("ouder") },
-      onKlaarzetten && { emoji: "💛", label: "Zet oefenwerk voor je kind klaar", doe: onKlaarzetten },
+      // Bug-fix 28 aug: dit riep onKlaarzetten zonder linkId aan → stille no-op.
+      // Klaarzetten kan alleen per gekoppeld kind; stuur naar de ouder-weergave
+      // waar de 💛-knop per kind staat (OuderInzicht).
+      onKlaarzetten && { emoji: "💛", label: "Zet oefenwerk voor je kind klaar", doe: () => setWeergave("ouder") },
       onOuderDashboard && { emoji: "🔗", label: "Koppel je kind + maandag-weekrapport", doe: onOuderDashboard },
     ].filter(Boolean);
     if (rolKey === "teacher") return [

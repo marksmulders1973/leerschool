@@ -37,23 +37,13 @@ const C = {
 // die komt op het kind z'n pagina te staan. In gewone modus staat hier het
 // kind z'n eigen ⭐ (LijstjeSter) — nooit allebei tegelijk, zodat niemand per
 // ongeluk de verkeerde tikt.
-function KlaarzetHart({ linkId, childName, item, aanInit, bron = "ouder" }) {
-  const [aan, setAan] = useState(!!aanInit);
-  const [busy, setBusy] = useState(false);
-  useEffect(() => { setAan(!!aanInit); }, [aanInit]);
-  const toggle = async (e) => {
-    e.stopPropagation();
-    if (busy) return;
-    setBusy(true);
-    const next = !aan;
-    setAan(next); // optimistisch
-    const r = next ? await zetKlaar(linkId, item, bron) : await haalWeg(linkId, item.id, bron);
-    if (!r.ok) setAan(!next); // terugdraaien bij fout
-    setBusy(false);
-  };
+// Bug-fix 28 aug (Mark's eerste eigen test): de aan/uit-status leeft nu in de
+// hub (klaarSet) zodat óók een tik op de hele tegel klaarzet — voorheen kon
+// alleen het kleine hartje dat en startte de rest van de tegel gewoon de les.
+function KlaarzetHart({ aan, busy, childName, onToggle }) {
   return (
     <button
-      onClick={toggle}
+      onClick={(e) => { e.stopPropagation(); onToggle(); }}
       aria-pressed={aan}
       title={aan ? `Staat klaar voor ${childName} — tik om weg te halen` : `Zet klaar voor ${childName}`}
       style={{
@@ -211,6 +201,28 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     });
     return () => { cancel = true; };
   }, [klaarzetVoor?.linkId, klaarzetVoor?.bron]);
+  // Eén toggle voor hartje ÉN tegel-tik (bug-fix 28 aug): optimistisch de set
+  // bijwerken, bij een fout terugdraaien. busy per pad tegen dubbeltikken.
+  const [klaarBusyId, setKlaarBusyId] = useState(null);
+  const toggleKlaarzet = async (item) => {
+    if (!klaarzetVoor?.linkId || klaarBusyId) return;
+    const stondAan = klaarSet.has(item.id);
+    setKlaarBusyId(item.id);
+    setKlaarSet((prev) => {
+      const n = new Set(prev);
+      if (stondAan) n.delete(item.id); else n.add(item.id);
+      return n;
+    });
+    const r = stondAan
+      ? await haalWeg(klaarzetVoor.linkId, item.id, klaarzetVoor.bron)
+      : await zetKlaar(klaarzetVoor.linkId, item, klaarzetVoor.bron);
+    if (!r.ok) setKlaarSet((prev) => {
+      const n = new Set(prev);
+      if (stondAan) n.add(item.id); else n.delete(item.id);
+      return n;
+    });
+    setKlaarBusyId(null);
+  };
   // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
   // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
   // (primair) of userLevel (fallback voor returning users zonder role-set).
@@ -572,12 +584,14 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
             </div>
           )}
 
-          <LeerpadBot
-            paths={ALL_PATHS_BY_ID}
-            subject={null}
-            levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
-            onPickPath={(path) => onPickPath(path.id)}
-          />
+          {!klaarzetVoor && (
+            <LeerpadBot
+              paths={ALL_PATHS_BY_ID}
+              subject={null}
+              levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
+              onPickPath={(path) => onPickPath(path.id)}
+            />
+          )}
 
           {loaded && totalCompleted > 0 && (
             <div style={{ ...cardBase(), marginBottom: 14, padding: "10px 14px" }}>
@@ -601,7 +615,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
             </div>
           )}
 
-          {loaded && continuePath && (
+          {loaded && continuePath && !klaarzetVoor && (
             <button
               onClick={() => onPickPath(continuePath.id)}
               style={{
@@ -795,7 +809,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                     return (
                       <button
                         key={p.id}
-                        onClick={() => onPickPath(p.id)}
+                        onClick={() => klaarzetVoor ? toggleKlaarzet({ id: p.id, titel: p.title, emoji: p.emoji }) : onPickPath(p.id)}
                         style={pathCard(theme, isComplete)}
                         onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
                         onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
@@ -840,7 +854,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                             )}
                           </div>
                           {klaarzetVoor
-                            ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} bron={klaarzetVoor.bron} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                            ? <KlaarzetHart aan={klaarSet.has(p.id)} busy={klaarBusyId === p.id} childName={klaarzetVoor.childName} onToggle={() => toggleKlaarzet({ id: p.id, titel: p.title, emoji: p.emoji })} />
                             : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                           <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                         </div>
@@ -1104,12 +1118,14 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           )}
         </div>
 
-        <LeerpadBot
-          paths={ALL_PATHS_BY_ID}
-          subject={effectiveFilter}
-          levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
-          onPickPath={(path) => onPickPath(path.id)}
-        />
+        {!klaarzetVoor && (
+          <LeerpadBot
+            paths={ALL_PATHS_BY_ID}
+            subject={effectiveFilter}
+            levelFilter={effectivePo ? "po" : effectiveVo ? "vo" : null}
+            onPickPath={(path) => onPickPath(path.id)}
+          />
+        )}
 
         {loaded && totalCompleted > 0 && (
           <div style={{ ...cardBase(), marginBottom: 14, padding: "10px 14px" }}>
@@ -1133,7 +1149,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           </div>
         )}
 
-        {loaded && continuePath && (
+        {loaded && continuePath && !klaarzetVoor && (
           <button
             onClick={() => onPickPath(continuePath.id)}
             style={{
@@ -1507,7 +1523,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                           return (
                             <button
                               key={p.id}
-                              onClick={() => onPickPath(p.id)}
+                              onClick={() => klaarzetVoor ? toggleKlaarzet({ id: p.id, titel: p.title, emoji: p.emoji }) : onPickPath(p.id)}
                               style={pathCard(theme, isComplete)}
                               onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
                               onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
@@ -1600,7 +1616,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                                   )}
                                 </div>
                                 {klaarzetVoor
-                                  ? <KlaarzetHart linkId={klaarzetVoor.linkId} childName={klaarzetVoor.childName} bron={klaarzetVoor.bron} item={{ id: p.id, titel: p.title, emoji: p.emoji }} aanInit={klaarSet.has(p.id)} />
+                                  ? <KlaarzetHart aan={klaarSet.has(p.id)} busy={klaarBusyId === p.id} childName={klaarzetVoor.childName} onToggle={() => toggleKlaarzet({ id: p.id, titel: p.title, emoji: p.emoji })} />
                                   : <LijstjeSter speler={player} item={{ id: p.id, titel: p.title, emoji: p.emoji }} />}
                                 <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                               </div>
