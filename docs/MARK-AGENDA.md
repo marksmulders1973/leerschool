@@ -8,6 +8,14 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **💡 Besluit: partner-code-geldigheid "langste-van-de-twee"** (Mark-idee 28 aug):
+  code geldig tot 31-12-2027 óf 12 maanden vanaf activering — wat het laatst
+  afloopt. Voordelen: flyer-voorraad (1.000 st) blijft ook ná 2027 bruikbaar,
+  afloop gespreid i.p.v. één klif, en het ontgrendelt **cadeau-codes**
+  (éénmalig, kerstpakket-inlegvel/opa-oma-cadeau — mooi vóór het oktober-
+  kerstpakketten-moment). Ombouw is klein en staat klaar; alleen "go" zeggen.
+  Details: memory `project_studiebol_partner_codes` § voorstel 28 aug.
+
 - ~~KvK-afspraak boeken~~ ✅ **GEBOEKT 25 aug: ma 28 SEPTEMBER 11:45-12:15, KvK Utrecht
   (Sint Jacobsstraat 300)** — eerste beschikbare slot; formulier is volledig ingevuld
   (Claude + Mark samen, 25 aug): handelsnaam **Leerkwartier** (Smulsoft afgevallen —
@@ -81,8 +89,8 @@
 | zo 18 okt | **Spark Fest** (Hoofddorp, 1.000 goodybags) → daarna: napost (klaar in Desktop\Leerkwartier-social) + HAARLEMMERMEER2027-claims volgen | Mark post |
 | ná KvK (sep) | 🏢 **KOR aanvragen** (omzet <€20k → geen btw, scholen 21% goedkoper; ~4 wk vóór ingang; 3 jr vast) + 🏦 **zakelijke rekening: KNAB openen** (Mark-keuze 25 aug, ±€7-8/mnd; kán pas ná KvK — bank vraagt KvK-nummer; ⚠️ tenaamstelling = handelsnaam **Leerkwartier** kiezen, belangrijk voor vertrouwen op facturen + Stripe-naamcheck; Claude doet vlak vóór het openen een verse prijscheck Knab/Finom/bunq) + **Esther/Ooievaarspas informeren** dat er een KvK-nummer is (informatieplicht) | Mark (Claude bereidt voor) |
 | nov 2026 | 🏢 Algemene voorwaarden + herroepingsrecht + factuur-sjabloon af (Claude concepten) → **dec: Stripe test-mode** → jan 2027 live | Claude + Mark |
-| voorjaar 2027 | ⏰ **Partner-verleng-besluit**: alle gewone partner-codes lopen af op 1 aug 2027 — per partner kiezen: verlengen we de gezinnen een jaar? (Ooievaarspas = blijvend, valt hierbuiten) | Mark beslist |
-| ~1 jul 2027 | ⏰ **Afloop-mail naar alle partners** (25+ codes, een maand vóór 1 aug): hoe beviel het, willen jullie door, verlenging aanbieden — natuurlijk contactmoment; waarde-zin: partner-gezinnen kregen feitelijk een gratis Seizoenspas (€24,95) | Claude concept, Mark-go |
+| najaar 2027 | ⏰ **Partner-verleng-besluit**: gewone partner-codes lopen af op 31-12-2027 (Mark-besluit 27 aug; Ooievaarspas = blijvend, valt hierbuiten) — per partner kiezen: verlengen? NB: bij go op "langste-van-de-twee" (zie Nu doen) wordt dit de kleinere vraag "blijven nieuwe scans 12 mnd geven?" | Mark beslist |
+| ~1 dec 2027 | ⏰ **Afloop-mail naar alle partners** (25+ codes, een maand vóór 31-12): hoe beviel het, willen jullie door, verlenging aanbieden — natuurlijk contactmoment; waarde-zin: partner-gezinnen kregen feitelijk een gratis Seizoenspas (€24,95) | Claude concept, Mark-go |
 
 ## 🟡 Geen datum, wel open (niet vergeten)
 
