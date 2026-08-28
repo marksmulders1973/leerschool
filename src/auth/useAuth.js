@@ -96,6 +96,12 @@ export function useAuth() {
               try {
                 const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
                 if (saved.role && saved.name) {
+                  // Óók de naam terugzetten (28 aug 2026): bij een koude start
+                  // vuurt de auth-listener eerst met sessie=null en wist de
+                  // naam die de homepage-autoskip net zette; dit pad zette
+                  // daarna wél rol/niveau terug maar níét de naam — /mijn
+                  // toonde dan "Vul eerst je naam in" ondanks een bekende naam.
+                  setUserName(saved.name);
                   setRole(saved.role);
                   if (saved.level) setUserLevel(saved.level);
                   if (saved.schoolType) setUserSchoolType(saved.schoolType);

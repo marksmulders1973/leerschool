@@ -178,7 +178,8 @@ export default function TeacherHome({ userName, authUser, quizzes, classes, onCr
   }, [quizzes]);
   return (
     <div style={styles.page}>
-      <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
+      {/* Zonder naam geen "Hoi !" met zwevende spatie (28 aug 2026). */}
+      <Header title={userName ? `Hoi ${userName}! 👋` : "Welkom! 👋"} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
         {/* Welkom-paneel — wat kan Leerkwartier voor jouw klas */}
