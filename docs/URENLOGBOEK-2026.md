@@ -32,7 +32,7 @@
 | di 25 aug | ~8 | 💻✉️📋 Lange dag: Ooievaarspas-afronding + veiligstellen, SUN/Nijmegen/Twente/Amstelveen/Jeugdfonds-replies, bestuurs-golf (30 mails) + VoorleesExpress (49), recovery-pakket + repo-acties, KvK-formulier af + belastingregeling aangevraagd, kosten/uren-administratie opgezet, dagvraag op 4 socials, dagrapport + juichmail |
 | wo 26 aug | ~4 | 💻🪪 Ooievaarspas-dag: goedkeuring binnen, overeenkomst (3 docs) samen doorgenomen + getekend via ValidSign, bedank-reply, landingspagina-concept definitief (8 redactierondes), timing-besluit vastgelegd; avond: cijfers + dagrapport-PDF |
 | do 27 aug | ~7 | 💻 Mega-bouwdag: ochtend-dagrapport · arena + parkgeluid (v448-457) · partner-codesysteem: code-balk, ere-schermen, QR-decode-tests, RLS-bugfix, SCHOOLSCOOL-herstel, bedank-vloot (v458-479) · 📞 belgesprek Froukje (~15 min, super) · Mark: ere-schermen testen/keuren (middag+avond) · ✉️ Amber logo-ja + SUN-terugdraai verwerkt · avond-blok v483-488: park-leerroute-objecten bijzetten + rol-duidelijkheid /mijn (rol-dropdown, kinderen-dropdown, privacy-uitleg) |
-| vr 28 aug | ~0,5 | 💻📋 Ochtend-dagrapport (cijfers Supabase/Vercel/Meta, mail-check, Meesterplan-PDF) |
+| vr 28 aug | ~2 | 💻📋✉️ Ochtend-dagrapport (cijfers + Meesterplan-PDF) · v489 datum-correctie Doorstroomtoets 2027 (7 pagina's + app-countdown) · outreach: Leergeld-Midden 20 + VoorleesExpress deel 2 48 verstuurd · Mark: ere-schermen gekeurd |
 | za/zo | | |
 | **Offline aanvulling Mark** | ❓ | bellen/post/inkopen deze week? → doorgeven in de chat |
 | **Weektotaal** | … | doel-orde: ~30 u |
