@@ -124,7 +124,7 @@ import { loadQuizzesByCreator, saveQuiz, findQuizByCode } from "./data/repos/qui
 import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/leaderboardRepo.js";
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
-import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
+import { getStreakInfo, updateStreak, upsertProfile, updateProfileRole, updateSchoolLogo } from "./data/repos/profilesRepo.js";
 import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
 import { flushPendingScores } from "./games/obliterator/scores.js";
 import { vraagVanVandaagId } from "./socialVragen.js";
@@ -219,6 +219,23 @@ export default function App() {
   // URL meteen de juiste pagina opent. Zonder dit flitst eerst 'home' (en kan de
   // rolkeuze-skip de deeplink kapen). Vandaar de terugval op pageForPath().
   const initialPage = (() => {
+    // Login-terugkeer (28 aug 2026): de Google-OAuth-redirect landt altijd op
+    // "/" (Supabase Site URL) — wie op /ouder inlogde, strandde daardoor op de
+    // kale homepage en moest de ouder-knop opnieuw zoeken. useAuth zet vlak
+    // vóór de redirect "lk_login_terug"; hier zetten we de gebruiker direct
+    // terug. Kort houdbaar (10 min) zodat een oude sleutel nooit een latere
+    // koude start kaapt.
+    try {
+      const raw = localStorage.getItem("lk_login_terug");
+      if (raw) {
+        localStorage.removeItem("lk_login_terug");
+        const { p: terugPad, t } = JSON.parse(raw);
+        if (t && Date.now() - t < 10 * 60 * 1000) {
+          const terug = pageForPath(terugPad);
+          if (terug && terug !== "home" && terug !== "student-home") return terug;
+        }
+      }
+    } catch { /* negeer — gewone start */ }
     const p = getInitialPage();
     if (p === "home" && typeof window !== "undefined" && window.location.pathname !== "/") {
       const byPath = pageForPath(window.location.pathname);
@@ -429,6 +446,22 @@ export default function App() {
     if (hasConsent()) { handleGoogleLogin(); return; }
     setPendingLogin(() => handleGoogleLogin);
   }, [handleGoogleLogin]);
+  // Wie op het ouder-dashboard inlogt, ís een ouder/verzorger (28 aug 2026):
+  // zonder dit bleef de rol leeg en duwde de naamstap op de homepage een
+  // volwassene later als "leerling" (zonder groep) het systeem in. Alleen
+  // vullen als er nog géén rol is — een kind dat per ongeluk op de
+  // ouder-knop tikt, houdt gewoon z'n eigen rol.
+  useEffect(() => {
+    if (page !== "ouder-dashboard" || !authUser || authUser.is_anonymous || role) return;
+    setRole("ouder");
+    try {
+      const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+      localStorage.setItem("ls_user", JSON.stringify({ ...saved, role: "ouder" }));
+    } catch { /* negeer */ }
+    updateProfileRole(authUser.id, "ouder");
+    track("rol_gewijzigd", { via: "ouder-dashboard-login", rol: "ouder" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, authUser, role]);
   const [quizzes, setQuizzes] = useState([]);
   const [classes, setClasses] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);

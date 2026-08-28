@@ -295,8 +295,13 @@ export default function CodeBalk() {
         </button>
       ) : (
         <div>
-          <div style={{ font: "800 13.5px/1.4 system-ui", color: "#7a5b00", marginBottom: 8 }}>
+          <div style={{ font: "800 13.5px/1.4 system-ui", color: "#7a5b00", marginBottom: 4 }}>
             🎟️ Vul je code in — bijvoorbeeld van je gemeente, de voedselbank of de bibliotheek:
+          </div>
+          {/* Geruststelling (28 aug 2026): mensen openden de balk zonder code
+              en dachten dat ze er één nodig hadden om te mogen oefenen. */}
+          <div style={{ font: "600 12px/1.45 system-ui", color: "#8a7a3d", marginBottom: 8 }}>
+            Geen code? Geen probleem — oefenen is gratis, ook zonder code. Een code van een organisatie geeft je gezin daarbovenop alle Familie-extra&apos;s cadeau.
           </div>
           <div style={{ display: "flex", gap: 8 }}>
             <input

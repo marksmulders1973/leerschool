@@ -134,6 +134,14 @@ export function useAuth() {
       // eslint-disable-next-line no-console
       console.warn("[google-signin] popup-flow gefaald, val terug op redirect:", e?.message || e);
     }
+    // Onthoud vóór de redirect waar de gebruiker was (28 aug 2026): Supabase
+    // stuurt na de Google-login altijd terug naar de Site URL ("/"), waardoor
+    // een ouder die op /ouder inlogde op de kale homepage strandde en opnieuw
+    // moest zoeken. App.jsx leest deze sleutel bij de koude start en zet de
+    // gebruiker direct terug op de pagina waar hij inlogde.
+    try {
+      localStorage.setItem("lk_login_terug", JSON.stringify({ p: window.location.pathname, t: Date.now() }));
+    } catch { /* niet fataal */ }
     supabase.auth?.signInWithOAuth?.({
       provider: "google",
       options: { redirectTo: window.location.origin },

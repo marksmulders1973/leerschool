@@ -385,6 +385,17 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "rgba(255,255,255,0.5)", maxWidth: 280, lineHeight: 1.6 }}>
           Log in met Google om de voortgang van je kind te bekijken, je kind te koppelen en het weekrapport in te stellen.
         </div>
+        {/* Voorproefje vóór de login-muur (28 aug 2026): bezoekers zagen hier
+            alleen een Google-knop en haakten af — laat eerst zien wat je krijgt. */}
+        <ul style={{ listStyle: "none", padding: "12px 16px", margin: 0, maxWidth: 300, textAlign: "left", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 12, fontFamily: "var(--font-body)", fontSize: 13, lineHeight: 1.9, color: "rgba(255,255,255,0.8)" }}>
+          <li>🔑 Koppel je kind met één korte code</li>
+          <li>📊 Voortgang in één oogopslag</li>
+          <li>📬 Elke maandag een weekrapport per mail</li>
+          <li>💛 Zet oefeningen voor je kind klaar</li>
+        </ul>
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.45)", maxWidth: 290, lineHeight: 1.6 }}>
+          Alleen dit thuis-overzicht vraagt een account — <strong style={{ color: "rgba(255,255,255,0.65)" }}>oefenen kan altijd gratis, zonder account</strong>.
+        </div>
         <button
           onClick={onLogin}
           style={{ marginTop: 8, display: "flex", alignItems: "center", gap: 10, padding: "13px 22px", borderRadius: 14, border: "none", background: "var(--color-text-strong)", color: "#333", fontFamily: "var(--font-body)", fontSize: 15, fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 16px rgba(0,0,0,0.3)" }}

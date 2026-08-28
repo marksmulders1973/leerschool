@@ -77,6 +77,18 @@ export async function upsertProfile({ userId, displayName, level, role, schoolTy
 }
 
 /**
+ * Update alléén de rol (28 aug 2026): wie op het ouder-dashboard inlogt
+ * zonder rol wordt "ouder" — zónder display_name/level/school_type aan te
+ * raken (een volledige upsert zou die velden leegtrekken).
+ */
+export async function updateProfileRole(userId, role) {
+  if (!userId || !role) return;
+  try {
+    await supabase.from("profiles").update({ role }).eq("id", userId);
+  } catch { /* niet fataal */ }
+}
+
+/**
  * Update alleen de school_logo_url voor een leerkracht-profiel.
  */
 export async function updateSchoolLogo({ userId, logoUrl }) {
