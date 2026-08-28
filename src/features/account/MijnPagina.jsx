@@ -404,6 +404,10 @@ export default function MijnPagina({
   const [wisselOpen, setWisselOpen] = useState(false);
   // 🗑️ Profiel verwijderen (Mark 28 aug): welke naam wacht op bevestiging?
   const [verwijderNaam, setVerwijderNaam] = useState(null);
+  // Ophoog-teller die de gezinsrij ververst na verwijderen — de namenlijst
+  // komt uit localStorage (niet uit React-state), dus zonder deze prikkel zou
+  // een gewist níét-actief profiel in de rij blijven staan tot een re-render.
+  const [profielVersie, setProfielVersie] = useState(0);
   // Rol-menu aan de rol-regel (Mark 27 aug avond): tik op "Je bent hier
   // als…" → wat kun je met deze rol + directe actie-knoppen.
   const [rolMenuOpen, setRolMenuOpen] = useState(false);
@@ -443,7 +447,7 @@ export default function MijnPagina({
           return { naam: n, rol: rol || "leerling", emoji: rol === "ouder" ? "👪" : rol === "teacher" ? "🧑‍🏫" : rol === "student" ? "🎓" : "👦" };
         });
     } catch { return []; }
-  }, [player]);
+  }, [player, profielVersie]);
   // "Wat moet ik kennen in groep X?" — uitklap in het doel-blok (Mark 21:00).
   const [doelOpen, setDoelOpen] = useState(false);
   const [avatarConfig, setAvatarConfig] = useState(() => loadAvatarConfig(player));
@@ -1112,7 +1116,7 @@ export default function MijnPagina({
                       </div>
                       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                         <button
-                          onClick={() => { const n = verwijderNaam; setVerwijderNaam(null); onVerwijderProfiel(n); }}
+                          onClick={() => { const n = verwijderNaam; setVerwijderNaam(null); onVerwijderProfiel(n); setProfielVersie((v) => v + 1); }}
                           style={{
                             border: "none", cursor: "pointer", borderRadius: 9, padding: "9px 16px",
                             background: "#ff5252", color: "#fff", fontWeight: 800, fontSize: 13,
