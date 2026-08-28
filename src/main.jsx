@@ -20,7 +20,7 @@ if (typeof window !== "undefined") {
       // eslint-disable-next-line no-console
       console.warn("[chunk-load] auto-recovery vanwege deploy mismatch");
       event.preventDefault();
-      recoverFromChunkError().catch(() => window.location.reload());
+      recoverFromChunkError(event.reason).catch(() => window.location.reload());
     }
   });
   window.addEventListener("error", (event) => {
@@ -28,7 +28,7 @@ if (typeof window !== "undefined") {
       // eslint-disable-next-line no-console
       console.warn("[chunk-load] auto-recovery (sync error)");
       event.preventDefault();
-      recoverFromChunkError().catch(() => window.location.reload());
+      recoverFromChunkError(event.error || { message: event.message }).catch(() => window.location.reload());
     }
   });
   // Vite's eigen signaal voor een mislukte lazy-import (bv. de park-chunk na een
@@ -37,7 +37,7 @@ if (typeof window !== "undefined") {
     // eslint-disable-next-line no-console
     console.warn("[chunk-load] auto-recovery (vite:preloadError)");
     event.preventDefault();
-    recoverFromChunkError().catch(() => window.location.reload());
+    recoverFromChunkError(event.payload).catch(() => window.location.reload());
   });
 }
 

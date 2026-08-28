@@ -37,7 +37,18 @@ export function isChunkLoadError(error) {
 const RELOAD_KEY = "lk_chunk_reload_count";
 const MAX_AUTO_RELOAD = 2;
 
-export async function recoverFromChunkError() {
+export async function recoverFromChunkError(error) {
+  // 🩹 Gecachte 404 wegpoetsen (les 28 aug 2026): een 404 op /assets/* krijgt
+  // via vercel.json de immutable-header mee (1 jáár houdbaar). Wie tijdens een
+  // deploy-wissel een chunk-404 raakte, bleef daardoor crashen — SW-wipe en
+  // pagina-reload raken de browser-HTTP-cache niet. Alleen een fetch met
+  // cache:'reload' op precies die URL overschrijft de kapotte entry. Vóór de
+  // reload-limiet-check, zodat ook een uitgeprobeerde sessie nog heelt.
+  try {
+    const msg = String(error?.message || error || "");
+    const kapot = msg.match(/(?:https?:\/\/[^\s'")]+|\/assets\/[^\s'")]+)\.(?:m?js|css)/);
+    if (kapot) await fetch(kapot[0], { cache: "reload" }).catch(() => {});
+  } catch { /* heling is best-effort */ }
   try {
     const count = parseInt(sessionStorage.getItem(RELOAD_KEY) || "0", 10);
     if (count >= MAX_AUTO_RELOAD) {
@@ -84,7 +95,7 @@ export default class ErrorBoundary extends Component {
     if (isChunkLoadError(error)) {
       // Probeer automatisch te herstellen (SW + cache wipe + reload).
       this.setState({ recovering: true });
-      recoverFromChunkError().then((started) => {
+      recoverFromChunkError(error).then((started) => {
         if (!started) {
           // Auto-recovery limiet bereikt — laat normale fallback zien.
           this.setState({ recovering: false });
@@ -95,8 +106,12 @@ export default class ErrorBoundary extends Component {
 
   handleReload = () => {
     if (typeof window !== "undefined") {
-      // Force hard reload zodat oude SW geen oude HTML meer serveert.
-      recoverFromChunkError().catch(() => window.location.reload());
+      // Handmatige klik = verse poging: teller resetten, anders deed de knop
+      // na 2 auto-pogingen niets meer (recover gaf false en stopte stil).
+      try { sessionStorage.removeItem(RELOAD_KEY); } catch { /* */ }
+      recoverFromChunkError(this.state.error).then((started) => {
+        if (!started) window.location.reload();
+      }).catch(() => window.location.reload());
     }
   };
 
