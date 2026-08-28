@@ -514,7 +514,8 @@ export default function OefenpakketPage({ setPage } = {}) {
           <SectieKop emoji="👪" label="Voor de ouder — zo gebruik je dit werkboek" />
           <Alinea titel="Wat is de Doorstroomtoets?">
             De Doorstroomtoets (sinds 2024 — vroeger de Cito-eindtoets) wordt
-            gemaakt in groep 8, in de eerste twee weken van februari. Hij test
+            gemaakt in groep 8, van eind januari tot half februari (in 2027:
+            25 januari t/m 12 februari). Hij test
             rekenen, taal en studievaardigheden. Dit werkboek oefent precies die
             onderdelen, in dezelfde stijl.
           </Alinea>

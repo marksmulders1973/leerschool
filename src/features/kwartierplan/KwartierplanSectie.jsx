@@ -21,7 +21,7 @@ export const TARGET_LEVELS = [
 ];
 
 const TARGET_EVENTS = [
-  { id: "doorstroomtoets-2027", label: "Doorstroomtoets (begin feb 2027)", defaultDate: "2027-02-01" },
+  { id: "doorstroomtoets-2027", label: "Doorstroomtoets (eind jan 2027)", defaultDate: "2027-01-25" },
   { id: "doorstroomtoets-2028", label: "Doorstroomtoets (begin feb 2028)", defaultDate: "2028-02-01" },
   { id: "eigen-doel", label: "Eigen doel / anders", defaultDate: "" },
 ];
@@ -34,7 +34,7 @@ const eventLabel = (id) => TARGET_EVENTS.find((e) => e.id === id)?.label || id;
 function DoelModal({ childName, goal, onSave, onClose }) {
   const [level, setLevel] = useState(goal?.target_level || "");
   const [event, setEvent] = useState(goal?.target_event || "doorstroomtoets-2027");
-  const [date, setDate] = useState(goal?.target_date || "2027-02-01");
+  const [date, setDate] = useState(goal?.target_date || "2027-01-25");
   const [grade, setGrade] = useState(goal?.current_grade || "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);

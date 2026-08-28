@@ -33,8 +33,8 @@ import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, le
 
 const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
-// Doorstroomtoets 2027: afname eind januari / begin februari.
-const DOORSTROOMTOETS_DATUM = new Date(2027, 1, 1); // 1 feb 2027
+// Doorstroomtoets 2027: officiële afnameperiode 25 jan t/m 12 feb (papier 26-27 jan).
+const DOORSTROOMTOETS_DATUM = new Date(2027, 0, 25); // 25 jan 2027 = start afnameperiode
 
 // Avatar: opgebouwd poppetje, door het kind zelf samen te stellen —
 // zie ./avatar.jsx (huid, haar, shirt, postuur; geen foto).

@@ -256,7 +256,8 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           // dan geen countdown tonen (2 jaar te vroeg aftellen is erger dan
           // geen banner).
           if (groep !== "7" && groep !== "8") return null;
-          // Doorstroomtoets = eerste twee weken van februari; anker op 1 feb.
+          // Doorstroomtoets 2027 = 25 jan t/m 12 feb (officieel tijdpad OCW;
+          // papieren toetsen 26-27 jan); anker op 25 jan = start afnameperiode.
           // Peer-review 7/7: op schooljaar-basis rekenen. De eerstvolgende
           // 1-feb is het toets-moment van de HUIDIGE groep 8. Een groep-7-kind
           // doet de toets een jaar later — behálve in feb-jul: dan zit het
@@ -264,9 +265,9 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           // zijne (het wordt in september groep 8). Vanaf augustus telt de
           // groep-keuze als het nieuwe schooljaar.
           const maand = nu.getMonth(); // 0 = jan
-          // Groep 8 zit 1-14 feb midden in de toets-periode: geen aftellen
-          // naar volgend jaar, maar een aanmoediging voor nú.
-          if (groep === "8" && maand === 1 && nu.getDate() <= 14) {
+          // Groep 8 zit 25 jan t/m 12 feb midden in de toets-periode: geen
+          // aftellen naar volgend jaar, maar een aanmoediging voor nú.
+          if (groep === "8" && ((maand === 0 && nu.getDate() >= 25) || (maand === 1 && nu.getDate() <= 12))) {
             return (
               <div style={{
                 display: "flex", alignItems: "center", gap: 12,
@@ -288,7 +289,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           }
           let jaar = maand >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
           if (groep === "7" && (maand >= 7 || maand === 0)) jaar += 1;
-          const toets = new Date(jaar, 1, 1);
+          const toets = new Date(jaar, 0, 25);
           const dagen = Math.max(0, Math.ceil((toets - nu) / 86400000));
           const weken = Math.round(dagen / 7);
           return (
@@ -304,7 +305,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
                   Nog {weken >= 3 ? `${weken} weken` : `${dagen} dagen`} tot de Doorstroomtoets
                 </div>
                 <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", marginTop: 2, lineHeight: 1.45 }}>
-                  Begin februari {jaar}{groep === "7" ? " (jij zit dan in groep 8)" : ""} — met een kwartier
+                  Eind januari {jaar}{groep === "7" ? " (jij zit dan in groep 8)" : ""} — met een kwartier
                   per dag ben je ruim op tijd klaar.
                 </div>
               </div>
