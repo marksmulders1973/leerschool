@@ -92,6 +92,25 @@ export async function updateProfileRole(userId, role) {
 }
 
 /**
+ * Hernoem de speler in servervoortgang (28 aug 2026, Mark-wens: "onder profiel
+ * mijn naam kunnen veranderen"). Best-effort en strikt op eigen user_id — een
+ * anonieme naamgenoot elders wordt dus nooit meegetrokken. Een botsing met de
+ * unique-index (nieuwe naam had al rijen) laat die tabel stil ongemoeid.
+ */
+export async function renamePlayerData(userId, oudeNaam, nieuweNaam) {
+  if (!userId || !oudeNaam || !nieuweNaam || oudeNaam === nieuweNaam) return;
+  for (const tabel of ["topic_mastery", "learn_progress", "leaderboard"]) {
+    try {
+      await supabase.from(tabel).update({ player_name: nieuweNaam }).eq("user_id", userId).eq("player_name", oudeNaam);
+    } catch { /* best-effort */ }
+  }
+  try {
+    // Ouder-koppeling volgt mee, anders ziet thuis opeens geen voortgang meer.
+    await supabase.from("parent_child_links").update({ child_name: nieuweNaam }).eq("child_user_id", userId).eq("child_name", oudeNaam);
+  } catch { /* best-effort */ }
+}
+
+/**
  * Update alleen de school_logo_url voor een leerkracht-profiel.
  */
 export async function updateSchoolLogo({ userId, logoUrl }) {

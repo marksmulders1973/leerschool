@@ -124,7 +124,7 @@ import { loadQuizzesByCreator, saveQuiz, findQuizByCode } from "./data/repos/qui
 import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/leaderboardRepo.js";
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
-import { getStreakInfo, updateStreak, upsertProfile, updateProfileRole, updateSchoolLogo } from "./data/repos/profilesRepo.js";
+import { getStreakInfo, updateStreak, upsertProfile, updateProfileRole, renamePlayerData, updateSchoolLogo } from "./data/repos/profilesRepo.js";
 import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
 import { flushPendingScores } from "./games/obliterator/scores.js";
 import { vraagVanVandaagId } from "./socialVragen.js";
@@ -616,6 +616,43 @@ export default function App() {
     setRole(p.role || "leerling");
     setUserSchoolType(p.schoolType || "");
     try { localStorage.setItem("ls_user", JSON.stringify({ name: n, level: p.level || "", role: p.role || "leerling", schoolType: p.schoolType || "" })); } catch {}
+  };
+
+  // ✏️ Huidige profiel HERNOEMEN (Mark 28 aug: "onder profiel mijn naam kunnen
+  // veranderen") — anders dan wisselen: alle voortgang gaat mee. Lokaal
+  // verhuizen alle per-naam sleutels (thema, goud, profiel, ...); ingelogd
+  // hernoemt best-effort ook de servervoortgang + de ouder-koppeling.
+  const hernoemProfiel = (nieuw) => {
+    const n = (nieuw || "").trim();
+    const oud = (userName || "").trim();
+    if (!n || !oud || n === oud) return;
+    try {
+      const suffix = ":" + oud;
+      const teVerhuizen = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.endsWith(suffix)) teVerhuizen.push(k);
+      }
+      for (const k of teVerhuizen) {
+        const doel = k.slice(0, k.length - oud.length) + n;
+        if (localStorage.getItem(doel) === null) {
+          const waarde = localStorage.getItem(k);
+          if (waarde !== null) localStorage.setItem(doel, waarde);
+        }
+        localStorage.removeItem(k);
+      }
+      const namen = JSON.parse(localStorage.getItem("lk_namen") || "[]");
+      if (Array.isArray(namen)) {
+        localStorage.setItem("lk_namen", JSON.stringify([...new Set(namen.map((x) => (x === oud ? n : x)))]));
+      }
+      localStorage.setItem("ls_user", JSON.stringify({ name: n, level: userLevel || "", role: role || "leerling", schoolType: userSchoolType || "" }));
+    } catch { /* lokaal hernoemen is best-effort */ }
+    setUserName(n);
+    if (authUser && !authUser.is_anonymous) {
+      upsertProfile({ userId: authUser.id, displayName: n, level: userLevel, role, schoolType: userSchoolType });
+    }
+    if (authUser) renamePlayerData(authUser.id, oud, n);
+    try { track("mijn_profiel_hernoem", {}); } catch { /* */ }
   };
 
   // OBLITERATOR-naam → userName. De game dispatcht "obliterator-naam-update"
@@ -1264,6 +1301,7 @@ export default function App() {
           onLeerkrachtHome={() => setPage("teacher-home")}
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
+          onHernoem={hernoemProfiel}
           onPraatMaatje={() => setPage("maatje")}
           onOpenHub={(p) => setPage(p)}
           onSetRole={(nieuweRol) => {

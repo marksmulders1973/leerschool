@@ -235,6 +235,7 @@ export default function MijnPagina({
   onGoCito,
   onGoVoortgang,
   onOuderDashboard,
+  onHernoem,
   onKlaarzetten,
   onUpgrade,
   onLogin,
@@ -305,6 +306,16 @@ export default function MijnPagina({
     setNieuweNaam("");
     setWisselOpen(false);
     onWisselProfiel(n);
+  };
+  // ✏️ Huidige naam AANPASSEN (Mark 28 aug): anders dan wisselen/nieuw —
+  // dezelfde speler, nieuwe schrijfwijze, alle voortgang gaat mee.
+  const [hernoemNaam, setHernoemNaam] = useState("");
+  const doeHernoem = () => {
+    const n = hernoemNaam.trim();
+    if (!n || !onHernoem || n === player) return;
+    setHernoemNaam("");
+    setWisselOpen(false);
+    onHernoem(n);
   };
   // Rol wisselen (leerling ↔ middelbare school ↔ ouder ↔ juf/meester). De
   // rol stuurt de groep/klas-kiezer, de leerkracht-kaart en de profielchip aan;
@@ -882,6 +893,39 @@ export default function MijnPagina({
                 {wisselOpen && (
                   <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 2px" }}>
                     Nieuw hier? Typ je naam en kies daarna hieronder je groep of klas.
+                  </div>
+                )}
+                {/* ✏️ Naam aanpassen — zelfde speler, nieuwe schrijfwijze;
+                    voortgang en thema gaan gewoon mee (Mark 28 aug). */}
+                {wisselOpen && onHernoem && (
+                  <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", margin: "8px 0 2px", padding: "8px 10px", borderRadius: 12, border: "1px dashed rgba(255,255,255,0.22)" }}>
+                    <span style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>
+                      ✏️ Of pas de naam „{player}” aan — alles gaat mee:
+                    </span>
+                    <input
+                      value={hernoemNaam}
+                      onChange={(e) => setHernoemNaam(e.target.value.slice(0, 24))}
+                      onKeyDown={(e) => { if (e.key === "Enter") doeHernoem(); }}
+                      placeholder="nieuwe naam…"
+                      aria-label="Huidige naam aanpassen"
+                      style={{
+                        width: 130, padding: "6px 11px", borderRadius: 999,
+                        border: "1px dashed rgba(255,255,255,0.3)", background: "transparent",
+                        color: "var(--color-text, #e8edf5)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                        outline: "none",
+                      }}
+                    />
+                    {hernoemNaam.trim() && hernoemNaam.trim() !== player && (
+                      <button
+                        onClick={doeHernoem}
+                        style={{
+                          padding: "7px 12px", borderRadius: 999, cursor: "pointer", border: "none",
+                          background: "#42a5f5", color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+                        }}
+                      >
+                        Wijzig
+                      </button>
+                    )}
                   </div>
                 )}
                 {/* Rol-schakelaar (Mark 13 aug): op je eigen pagina wisselen naar
