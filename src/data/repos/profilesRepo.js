@@ -84,7 +84,10 @@ export async function upsertProfile({ userId, displayName, level, role, schoolTy
 export async function updateProfileRole(userId, role) {
   if (!userId || !role) return;
   try {
-    await supabase.from("profiles").update({ role }).eq("id", userId);
+    // Upsert, geen update: bij een állereerste login bestaat de profielrij
+    // nog niet (geen DB-trigger op auth.users — de app maakt profielen aan)
+    // en zou een kale update stilletjes niets doen.
+    await supabase.from("profiles").upsert({ id: userId, role });
   } catch { /* niet fataal */ }
 }
 
