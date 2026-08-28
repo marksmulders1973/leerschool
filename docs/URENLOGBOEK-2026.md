@@ -13,6 +13,13 @@
 > in elk dagrapport naar de offline uren van die week ("hoeveel uur bellen/post/gesprekken erbij?").
 > Mark meldt losse offline-klussen gewoon in de chat ("vandaag 2 uur flyers gepost") → Claude zet ze erin.
 > Format: per week één blok, per dag één regel, afronden op halve uren.
+>
+> **📞 15%-vuistregel (Mark, 28 aug 2026):** naast elk uur dat Claude aan staat werkt Mark
+> ~15% van die tijd óók in het echt aan de app: gesprekken met collega's, familie, winkels,
+> school enz. Daarom krijgt elke week standaard een offline-regel van **15% van de sessie-uren**
+> (conservatieve schatting, door Mark zelf aangedragen). Grote losse klussen (flyers posten,
+> belafspraken, bezoeken) worden apárt gelogd — die vallen buiten de vuistregel, zodat er
+> nooit dubbel geteld wordt. Mark kan de vuistregel per week overrulen met echte cijfers.
 
 ## Categorieën
 
@@ -34,8 +41,8 @@
 | do 27 aug | ~7 | 💻 Mega-bouwdag: ochtend-dagrapport · arena + parkgeluid (v448-457) · partner-codesysteem: code-balk, ere-schermen, QR-decode-tests, RLS-bugfix, SCHOOLSCOOL-herstel, bedank-vloot (v458-479) · 📞 belgesprek Froukje (~15 min, super) · Mark: ere-schermen testen/keuren (middag+avond) · ✉️ Amber logo-ja + SUN-terugdraai verwerkt · avond-blok v483-488: park-leerroute-objecten bijzetten + rol-duidelijkheid /mijn (rol-dropdown, kinderen-dropdown, privacy-uitleg) |
 | vr 28 aug | ~2 | 💻📋✉️ Ochtend-dagrapport (cijfers + Meesterplan-PDF) · v489 datum-correctie Doorstroomtoets 2027 (7 pagina's + app-countdown) · outreach: Leergeld-Midden 20 + VoorleesExpress deel 2 48 verstuurd · Mark: ere-schermen gekeurd |
 | za/zo | | |
-| **Offline aanvulling Mark** | ❓ | bellen/post/inkopen deze week? → doorgeven in de chat |
-| **Weektotaal** | … | doel-orde: ~30 u |
+| **Offline (15%-vuistregel)** | ~3,5 | 📞 gesprekken over de app met collega's/familie/winkels/school (15% van ~24,5 sessie-uren ma-vr; regel ingesteld 28 aug) |
+| **Weektotaal** | ~28 (t/m vr) | doel-orde: ~30 u — za/zo (o.a. VoorleesExpress deel 3) komt er nog bij |
 
 *Claude: nieuwe week = nieuw blok erboven; sessie-uren dagelijks bijwerken (schatting op basis van
 sessieduur en werk in de repo/mail — liever iets voorzichtig dan opgeblazen); offline uren pas
