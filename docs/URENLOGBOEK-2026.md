@@ -48,9 +48,21 @@
 sessieduur en werk in de repo/mail — liever iets voorzichtig dan opgeblazen); offline uren pas
 invullen na antwoord van Mark, met zijn omschrijving erbij.*
 
-## Weken vóór 24 aug (reconstructie — nog te doen)
+## Weken vóór 24 aug (reconstructie — nog te doen, PRIORITEIT OMHOOG 28 aug)
 
-De maanden mei–aug zijn grotendeels te reconstrueren uit git-geschiedenis (commits per dag),
-verzendlogs (outreach-batches) en mail-data. Claude maakt hiervoor eenmalig een voorstel per week;
-Mark kijkt het na en vult offline werk aan (Spark Fest-regelwerk, flyers, post, telefoontjes).
-Status: ⏳ nog niet gemaakt — geplande klus, geen haast (telt pas mee voor aangifte 2026/2027).
+**Mark-verklaring 28 aug:** "Ik nam Claude in januari en elke maand heb ik eraan gewerkt,
+elke week zeker 10 uur." → De aanloopfase begint dus in **januari 2026**, niet in mei.
+Aanloopuren tellen mee voor het urencriterium (Belastingdienst, geverifieerd 28 aug).
+
+**Harde ankers voor de reconstructie:**
+- Claude-abonnement loopt sinds **januari 2026** (facturen = bewijs van de werkomgeving).
+- Repo `leerschool` gestart **23 maart 2026**; commits per maand: mrt 135 · apr 543 ·
+  **mei 1.276** · jun 444 · jul 382 · aug 542 — daarnaast verzendlogs + maildata.
+- jan–feb = "op papier" (plan/leren/concept): zwakste bewijs, conservatief schatten (~10 u/wk).
+
+**Grove jaarprojectie (eerlijk, conservatief):** jan-feb ~90 · mrt-apr ~135-180 ·
+mei-aug ~440-525 · sep-dec ~490 (huidig ritme) = **~1.155-1.285 → de 1.225 is binnen bereik.**
+Relevantie: kabinetsplan schaft startersaftrek af per 2027 (besluit Prinsjesdag 15 sep) →
+2026 is mogelijk het enige startersaftrek-jaar (€3.323 aftrek ≈ €1.230 netto).
+Status: ⏳ Claude maakt een week-voor-week-voorstel uit git/verzendlogs; Mark valideert.
+Gouden regel blijft: alleen échte uren — het logboek moet naast de git-geschiedenis kunnen liggen.
