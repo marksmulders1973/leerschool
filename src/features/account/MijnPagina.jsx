@@ -244,6 +244,7 @@ export default function MijnPagina({
   onLeerkrachtHome,
   onLeerkrachtActie,
   onWisselProfiel,
+  onVerwijderProfiel,
   onSetLevel,
   onSetRole,
   onPraatMaatje,
@@ -401,6 +402,8 @@ export default function MijnPagina({
   const [week, setWeek] = useState(null);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
+  // 🗑️ Profiel verwijderen (Mark 28 aug): welke naam wacht op bevestiging?
+  const [verwijderNaam, setVerwijderNaam] = useState(null);
   // Rol-menu aan de rol-regel (Mark 27 aug avond): tik op "Je bent hier
   // als…" → wat kun je met deze rol + directe actie-knoppen.
   const [rolMenuOpen, setRolMenuOpen] = useState(false);
@@ -1034,47 +1037,100 @@ export default function MijnPagina({
                   <div style={{ ...eyebrowStijl, marginBottom: 6 }}>Wie is er bezig?</div>
                   <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                     {gezinsRij.map((p) => (
-                      <button
-                        key={p.naam}
-                        onClick={() => {
-                          if (p.actief) return;
-                          try { track("mijn_profiel_wissel", { via: "gezinsrij" }); } catch { /* */ }
-                          wisselMetBril(p.naam);
-                        }}
-                        aria-pressed={p.actief}
-                        title={p.actief ? `${p.naam} is nu bezig` : `Wissel naar ${p.naam}`}
-                        style={{
-                          background: "none", border: "none", padding: 0, textAlign: "center",
-                          cursor: p.actief ? "default" : "pointer", fontFamily: "inherit",
-                        }}
-                      >
-                        <div style={{
-                          position: "relative", width: 54, height: 54, borderRadius: "50%",
-                          display: "grid", placeItems: "center",
-                          border: p.actief ? "2.5px solid #00c853" : "2px solid rgba(255,255,255,0.15)",
-                          opacity: p.actief ? 1 : 0.38,
-                          filter: p.actief ? "none" : "grayscale(0.6)",
-                          transition: "opacity 0.2s",
-                        }}>
-                          <AvatarSvg config={p.config} size={46} />
-                          <span style={{ position: "absolute", right: -4, bottom: -4, fontSize: 13 }} aria-hidden="true">{p.emoji}</span>
-                        </div>
-                        <div style={{
-                          fontSize: 11, marginTop: 4, maxWidth: 62,
-                          overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
-                          fontWeight: p.actief ? 800 : 600,
-                          color: p.actief ? "var(--color-text-strong)" : "var(--color-text-muted, #8899aa)",
-                        }}>{p.naam}</div>
-                        {/* Rol in woorden onder elke naam (Mark 27 aug) — zo
-                            zie je in één blik wie leerling is en wie ouder. */}
-                        <div style={{
-                          fontSize: 9.5, marginTop: 1, maxWidth: 62,
-                          overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
-                          fontWeight: 700, color: "var(--color-text-muted, #8899aa)",
-                        }}>{ROL_KORT[p.rol] || "leerling"}</div>
-                      </button>
+                      // Wrapper (Mark 28 aug): naast de wissel-knop een klein rood
+                      // ✕ om dit profiel van het apparaat te halen. Knoppen mogen
+                      // niet in elkaar genest zijn → ✕ is een broertje, niet een kind.
+                      <div key={p.naam} style={{ position: "relative", textAlign: "center" }}>
+                        <button
+                          onClick={() => {
+                            if (p.actief) return;
+                            try { track("mijn_profiel_wissel", { via: "gezinsrij" }); } catch { /* */ }
+                            wisselMetBril(p.naam);
+                          }}
+                          aria-pressed={p.actief}
+                          title={p.actief ? `${p.naam} is nu bezig` : `Wissel naar ${p.naam}`}
+                          style={{
+                            background: "none", border: "none", padding: 0, textAlign: "center",
+                            cursor: p.actief ? "default" : "pointer", fontFamily: "inherit",
+                          }}
+                        >
+                          <div style={{
+                            position: "relative", width: 54, height: 54, borderRadius: "50%",
+                            display: "grid", placeItems: "center",
+                            border: p.actief ? "2.5px solid #00c853" : "2px solid rgba(255,255,255,0.15)",
+                            opacity: p.actief ? 1 : 0.38,
+                            filter: p.actief ? "none" : "grayscale(0.6)",
+                            transition: "opacity 0.2s",
+                          }}>
+                            <AvatarSvg config={p.config} size={46} />
+                            <span style={{ position: "absolute", right: -4, bottom: -4, fontSize: 13 }} aria-hidden="true">{p.emoji}</span>
+                          </div>
+                          <div style={{
+                            fontSize: 11, marginTop: 4, maxWidth: 62,
+                            overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                            fontWeight: p.actief ? 800 : 600,
+                            color: p.actief ? "var(--color-text-strong)" : "var(--color-text-muted, #8899aa)",
+                          }}>{p.naam}</div>
+                          {/* Rol in woorden onder elke naam (Mark 27 aug) — zo
+                              zie je in één blik wie leerling is en wie ouder. */}
+                          <div style={{
+                            fontSize: 9.5, marginTop: 1, maxWidth: 62,
+                            overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                            fontWeight: 700, color: "var(--color-text-muted, #8899aa)",
+                          }}>{ROL_KORT[p.rol] || "leerling"}</div>
+                        </button>
+                        {onVerwijderProfiel && (
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setVerwijderNaam(p.naam); }}
+                            title={`Profiel van ${p.naam} van dit apparaat halen`}
+                            aria-label={`Profiel van ${p.naam} verwijderen`}
+                            style={{
+                              position: "absolute", top: -4, right: -2,
+                              width: 20, height: 20, borderRadius: "50%",
+                              border: "1.5px solid var(--color-bg, #0e1626)",
+                              background: "#ff5252", color: "#fff",
+                              fontSize: 12, lineHeight: 1, fontWeight: 800,
+                              display: "grid", placeItems: "center", cursor: "pointer",
+                              padding: 0,
+                            }}
+                          >×</button>
+                        )}
+                      </div>
                     ))}
                   </div>
+                  {/* Bevestiging (Mark 28 aug): één tik mag nooit meteen wissen —
+                      een kind zou zo de voortgang van een broer/zus kunnen wegvegen.
+                      Bewust "van dit apparaat": een ingelogd account blijft bestaan
+                      (AVG-knop "Verwijder al mijn data" op de ouder-pagina). */}
+                  {verwijderNaam && (
+                    <div style={{
+                      marginTop: 12, padding: "12px 14px", borderRadius: 12,
+                      background: "rgba(255,82,82,0.10)", border: "1px solid rgba(255,82,82,0.35)",
+                    }}>
+                      <div style={{ fontSize: 13, lineHeight: 1.5, color: "var(--color-text)", marginBottom: 10 }}>
+                        Profiel van <strong>{verwijderNaam}</strong> van dit apparaat halen? De voortgang van {verwijderNaam} op dit apparaat wordt gewist. Dit kan niet ongedaan gemaakt worden.
+                      </div>
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                        <button
+                          onClick={() => { const n = verwijderNaam; setVerwijderNaam(null); onVerwijderProfiel(n); }}
+                          style={{
+                            border: "none", cursor: "pointer", borderRadius: 9, padding: "9px 16px",
+                            background: "#ff5252", color: "#fff", fontWeight: 800, fontSize: 13,
+                            fontFamily: "var(--font-display)",
+                          }}
+                        >🗑️ Verwijderen</button>
+                        <button
+                          onClick={() => setVerwijderNaam(null)}
+                          style={{
+                            border: "1px solid rgba(255,255,255,0.2)", cursor: "pointer", borderRadius: 9,
+                            padding: "9px 16px", background: "rgba(255,255,255,0.05)",
+                            color: "var(--color-text)", fontWeight: 700, fontSize: 13,
+                            fontFamily: "var(--font-display)",
+                          }}
+                        >Annuleren</button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </Card>

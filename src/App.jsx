@@ -655,6 +655,42 @@ export default function App() {
     try { track("mijn_profiel_hernoem", {}); } catch { /* */ }
   };
 
+  // 🗑️ Profiel VERWIJDEREN van dit apparaat (Mark 28 aug: "een kind kan niet
+  // meer mee willen doen — rood kruisje onder de naam"). Spiegel van hernoemen:
+  // wist alle per-naam-sleutels (`...:<naam>`) + haalt de naam uit lk_namen.
+  // Bewust lokaal: een ingelogd Google-account blijft bestaan (daarvoor is de
+  // AVG-knop "Verwijder al mijn data" op de ouder-pagina). Verwijder je het
+  // profiel dat NÚ actief is, dan wisselen we naar een ander profiel — of we
+  // vallen terug op een schone start als er geen profiel meer over is.
+  const verwijderProfiel = (naam) => {
+    const doel = (naam || "").trim();
+    if (!doel) return;
+    try {
+      const suffix = ":" + doel;
+      const teWissen = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.endsWith(suffix)) teWissen.push(k);
+      }
+      teWissen.forEach((k) => localStorage.removeItem(k));
+      const namen = JSON.parse(localStorage.getItem("lk_namen") || "[]").filter((x) => x !== doel);
+      localStorage.setItem("lk_namen", JSON.stringify(namen));
+      if (doel === (userName || "").trim()) {
+        const ander = namen.find((x) => x && x.toLowerCase() !== "speler");
+        if (ander) {
+          wisselProfiel(ander);
+        } else {
+          setUserName("");
+          setUserLevel("");
+          setRole("leerling");
+          setUserSchoolType("");
+          try { localStorage.removeItem("ls_user"); } catch { /* */ }
+        }
+      }
+    } catch { /* lokaal verwijderen is best-effort */ }
+    try { track("mijn_profiel_verwijder", {}); } catch { /* */ }
+  };
+
   // OBLITERATOR-naam → userName. De game dispatcht "obliterator-naam-update"
   // zodra een anonieme speler (geen login) een naam invult. Zonder deze listener
   // bleef de score als "Speler" opgeslagen i.p.v. de ingevulde naam
@@ -1302,6 +1338,7 @@ export default function App() {
           onLeerkrachtActie={(p) => setPage(p === "create-quiz" && quizLimitReached ? "pro" : p)}
           onWisselProfiel={wisselProfiel}
           onHernoem={hernoemProfiel}
+          onVerwijderProfiel={verwijderProfiel}
           onPraatMaatje={() => setPage("maatje")}
           onOpenHub={(p) => setPage(p)}
           onSetRole={(nieuweRol) => {
