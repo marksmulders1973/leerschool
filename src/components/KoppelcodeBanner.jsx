@@ -8,7 +8,10 @@ import supabase from "../supabase.js";
 // met verified=true. Klaar, ouder ziet voortgang.
 //
 // Banner is default ingeklapt (geen UI-bloat als kind geen code heeft) en
-// klapt uit naar invoerveld bij klik.
+// klapt uit naar een klein DRIESTAPS-schermpje (Mark 29 aug — koppelen als
+// ruggengraat, kind-kant): ① je kreeg een code → ② typ 'm in → ③ klaar. Met
+// een feestelijke eindstaat. Framing = cadeau, geen controle ("iemand thuis",
+// niet "je voortgang wordt gevolgd"); voogd/pleeg-veilig.
 
 export default function KoppelcodeBanner({ userName }) {
   // Voorstel uit de code-balk op home (27 aug): typte iemand dáár een
@@ -24,7 +27,7 @@ export default function KoppelcodeBanner({ userName }) {
     } catch { return ""; }
   });
   const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState(null); // { ok: bool, text: string }
+  const [msg, setMsg] = useState(null); // { ok: bool, text: string, rol?: string }
 
   if (!userName) return null;
 
@@ -45,35 +48,41 @@ export default function KoppelcodeBanner({ userName }) {
       });
       if (error) throw error;
       if (data?.ok) {
-        const tekst = data.rol === "leraar"
-          ? "✓ Gekoppeld! Je juf of meester kan nu lessen voor je klaarzetten."
-          : "✓ Gekoppeld! Je ouder of verzorger kan nu je voortgang zien.";
-        setMsg({ ok: true, text: tekst });
+        setMsg({ ok: true, rol: data.rol || "ouder" });
         setCode("");
       } else if (data?.error === "code_invalid_or_expired") {
-        setMsg({ ok: false, text: "Deze code klopt niet of is verlopen. Vraag om een nieuwe code." });
+        setMsg({ ok: false, text: "Deze code werkt niet meer. Vraag thuis (of je juf/meester) om een nieuwe — die maak je zo weer aan." });
       } else {
-        setMsg({ ok: false, text: "Iets ging mis. Probeer later opnieuw." });
+        setMsg({ ok: false, text: "Er ging iets mis. Probeer het zo nog eens." });
       }
     } catch (err) {
-      setMsg({ ok: false, text: "Geen verbinding met de koppel-server. Probeer later opnieuw." });
+      setMsg({ ok: false, text: "Geen verbinding met de koppel-server. Probeer het zo nog eens." });
     }
     setBusy(false);
   };
 
+  // 🎉 Feestelijke eindstaat (stap 3 = klaar). Cadeau-framing; verwijst naar de
+  // plek waar het klaargezette werk straks verschijnt op de eigen pagina.
   if (msg?.ok) {
+    const vanWie = msg.rol === "leraar" ? "je juf of meester" : "iemand thuis";
     return (
       <div style={{
         marginBottom: 10,
-        padding: "12px 14px",
-        background: "rgba(0,200,83,0.14)",
-        border: "1px solid rgba(0,200,83,0.4)",
-        borderRadius: 12,
-        fontFamily: "var(--font-body)",
-        fontSize: 13,
-        color: "var(--color-brand-primary-100)",
+        padding: "16px 16px",
+        background: "linear-gradient(135deg, rgba(0,200,83,0.16), rgba(124,58,237,0.10))",
+        border: "1px solid rgba(0,200,83,0.45)",
+        borderRadius: 14,
+        textAlign: "center",
       }}>
-        {msg.text}
+        <div style={{ fontSize: 34, lineHeight: 1 }} aria-hidden="true">🎉</div>
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800, color: "var(--color-brand-primary-100)", marginTop: 6 }}>
+          Gelukt! Je bent gekoppeld{msg.rol === "leraar" ? " met school" : " met thuis"}.
+        </div>
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.75)", marginTop: 6, lineHeight: 1.5 }}>
+          {msg.rol === "leraar"
+            ? <>Je juf of meester kan nu leuke lessen voor je klaarzetten. Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.</>
+            : <>{vanWie} kan nu leuke lessen voor je klaarzetten 🎁 Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.</>}
+        </div>
       </div>
     );
   }
@@ -100,12 +109,22 @@ export default function KoppelcodeBanner({ userName }) {
           gap: 8,
         }}
       >
-        <span style={{ fontSize: 18 }}>🔐</span>
+        <span style={{ fontSize: 18 }}>🎁</span>
         <span style={{ flex: 1 }}>Heb je een koppelcode gekregen van thuis of van school?</span>
         <span aria-hidden="true">▼</span>
       </button>
     );
   }
+
+  const kanKoppelen = !busy && code.trim().length >= 4;
+
+  // Kleine stap-rij: een gekleurde bol met nummer + tekst ernaast.
+  const Stap = ({ nr, kleur, children }) => (
+    <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+      <span aria-hidden="true" style={{ flexShrink: 0, width: 22, height: 22, borderRadius: "50%", background: kleur, color: "#0b1224", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>{nr}</span>
+      <div style={{ flex: 1, fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.45 }}>{children}</div>
+    </div>
+  );
 
   return (
     <form
@@ -118,14 +137,14 @@ export default function KoppelcodeBanner({ userName }) {
         borderRadius: 14,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
-        <span style={{ fontSize: 22 }}>🔐</span>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+        <span style={{ fontSize: 22 }}>🎁</span>
         <div style={{ flex: 1 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa", lineHeight: 1.3 }}>
             Koppel met thuis of school
           </div>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
-            Voer de 6-letter-code in die je van thuis of je juf/meester kreeg.
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>
+            In 3 kleine stapjes — het duurt een halve minuut.
           </div>
         </div>
         <button
@@ -135,57 +154,79 @@ export default function KoppelcodeBanner({ userName }) {
           aria-label="Sluiten"
         >×</button>
       </div>
-      <div style={{ display: "flex", gap: 8 }}>
-        <input
-          type="text"
-          value={code}
-          onChange={(e) => setCode(e.target.value.toUpperCase())}
-          placeholder="ABC123"
-          maxLength={8}
-          autoComplete="off"
-          spellCheck={false}
-          style={{
-            flex: 1,
-            padding: "10px 14px",
-            borderRadius: 10,
-            border: "1px solid rgba(255,255,255,0.2)",
-            background: "rgba(255,255,255,0.08)",
-            color: "var(--color-text-strong)",
-            fontFamily: "var(--font-display)",
-            fontSize: 18,
-            letterSpacing: 4,
-            textAlign: "center",
-            outline: "none",
-            textTransform: "uppercase",
-          }}
-        />
-        <button
-          type="submit"
-          disabled={busy || code.trim().length < 4}
-          style={{
-            padding: "10px 18px",
-            background: busy || code.trim().length < 4 ? "rgba(124,58,237,0.30)" : "linear-gradient(135deg, #7c3aed, #a78bfa)",
-            border: "none",
-            borderRadius: 10,
-            color: "#fff",
-            fontFamily: "var(--font-display)",
-            fontSize: 14,
-            fontWeight: 700,
-            cursor: busy || code.trim().length < 4 ? "not-allowed" : "pointer",
-          }}
-        >
-          {busy ? "..." : "✓ Koppel"}
-        </button>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        {/* ① Je kreeg een code */}
+        <Stap nr={1} kleur="#a78bfa">
+          Je kreeg een <strong>code</strong> via WhatsApp of mail — 6 tekens (letters en cijfers).
+        </Stap>
+
+        {/* ② Typ 'm in — het invoerveld */}
+        <Stap nr={2} kleur="#a78bfa">
+          <div style={{ marginBottom: 8 }}>Typ 'm hier in:</div>
+          <div style={{ display: "flex", gap: 8 }}>
+            <input
+              type="text"
+              value={code}
+              onChange={(e) => setCode(e.target.value.toUpperCase())}
+              placeholder="ABC123"
+              maxLength={8}
+              autoComplete="off"
+              spellCheck={false}
+              inputMode="latin"
+              style={{
+                flex: 1,
+                minWidth: 0,
+                padding: "10px 14px",
+                borderRadius: 10,
+                border: "1px solid rgba(255,255,255,0.2)",
+                background: "rgba(255,255,255,0.08)",
+                color: "var(--color-text-strong)",
+                fontFamily: "var(--font-display)",
+                fontSize: 18,
+                letterSpacing: 4,
+                textAlign: "center",
+                outline: "none",
+                textTransform: "uppercase",
+              }}
+            />
+            <button
+              type="submit"
+              disabled={!kanKoppelen}
+              style={{
+                padding: "10px 18px",
+                background: !kanKoppelen ? "rgba(124,58,237,0.30)" : "linear-gradient(135deg, #7c3aed, #a78bfa)",
+                border: "none",
+                borderRadius: 10,
+                color: "#fff",
+                fontFamily: "var(--font-display)",
+                fontSize: 14,
+                fontWeight: 700,
+                cursor: !kanKoppelen ? "not-allowed" : "pointer",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {busy ? "..." : "✓ Koppel"}
+            </button>
+          </div>
+        </Stap>
+
+        {/* ③ Klaar — wat je krijgt */}
+        <Stap nr={3} kleur="rgba(255,255,255,0.25)">
+          Klaar! Dan kan iemand thuis (of je juf/meester) leuke lessen voor je klaarzetten 🎁
+        </Stap>
       </div>
+
       {msg && !msg.ok && (
         <div style={{
-          marginTop: 8,
+          marginTop: 12,
           padding: "8px 10px",
           background: "rgba(255,82,82,0.10)",
           border: "1px solid rgba(255,82,82,0.30)",
           borderRadius: 8,
           fontSize: 12,
           color: "#ff7676",
+          lineHeight: 1.5,
         }}>
           {msg.text}
         </div>
