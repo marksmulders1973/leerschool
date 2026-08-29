@@ -112,9 +112,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const [citoScores, setCitoScores] = useState([]);
   const [loading, setLoading] = useState(false);
   const [scoresLoading, setScoresLoading] = useState(false);
-  const [inviteCode, setInviteCode] = useState("");
-  const [inviteSent, setInviteSent] = useState(false);
-  const [copied, setCopied] = useState(false);
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
   // naam-in-app van kind opgeven vóór code-generatie.
   const [inviteChildName, setInviteChildName] = useState("");
@@ -136,7 +133,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // gemaakt (was inline effect) zodat de poll hieronder 'm kan aanroepen: zo
   // springt een "wacht op je kind"-kaart vanzelf om naar ✓ gekoppeld zodra het
   // kind de code op zijn eigen toestel invoert — zonder dat de ouder ververst.
-  const laadKoppelStatus = useCallback(async () => {
+  const laadKoppelStatus = useCallback(async (isPoll = false) => {
     if (!authUser) return;
     const [linksRes, codesRes] = await Promise.all([
       supabase.from("parent_child_links")
@@ -151,9 +148,15 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     ]);
     const links = linksRes.data || [];
     setChildren(links);
-    // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste
-    // die 'm heeft (leeg = niet ingesteld).
-    setPartnerEmail(links.find((c) => c.partner_email)?.partner_email || "");
+    // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste die
+    // 'm heeft. Alléén bij de eerste load: de 6s-poll (isPoll) zou anders het
+    // veld elke tik overschrijven terwijl de ouder er net in typt
+    // (Fable-review 30 aug).
+    if (!isPoll) setPartnerEmail(links.find((c) => c.partner_email)?.partner_email || "");
+    // Poll-pad: koppelde het éérste kind zojuist (wacht-kaart → ✓), selecteer
+    // 'm dan meteen zodat de voortgang eronder verschijnt. De initial load
+    // regelt z'n eigen voorselectie (lk_ouder_kind) in het effect hieronder.
+    if (isPoll) setSelectedChild((huidig) => huidig || links[0]?.child_name || null);
     // Alleen nog-geldige codes tonen als wacht-kaart (verlopen = weg).
     const nu = Date.now();
     setOpenInvites((codesRes.data || []).filter((iv) => !iv.expires_at || new Date(iv.expires_at).getTime() > nu));
@@ -181,7 +184,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // verschijnt de ✓-kaart. Stopt vanzelf als er geen open codes meer zijn.
   useEffect(() => {
     if (openInvites.length === 0) return;
-    const t = setInterval(() => { laadKoppelStatus(); }, 6000);
+    const t = setInterval(() => { laadKoppelStatus(true); }, 6000);
     return () => clearInterval(t);
   }, [openInvites.length, laadKoppelStatus]);
 
@@ -365,9 +368,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       setLoading(false);
       return;
     }
-    setInviteCode(code);
-    setInviteSent(false);
-    setCopied(false);
     setLoading(false);
     // Sluit de "voeg kind toe"-modus en herlaad — de verse code verschijnt nu
     // als "wacht op je kind"-kaart met deelknoppen + teller.
@@ -418,12 +418,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     } catch { /* clipboard geweigerd — code staat groot in beeld */ }
   };
 
-  // Uren tot verval (voor de "nog 47 uur geldig"-teller op de wacht-kaart).
-  const urenTot = (iso) => {
+  // Geldigheids-tekst voor de wacht-kaart. Onder het uur géén "nog 0 uur
+  // geldig" (afrond-artefact, Fable-review 30 aug) maar een eerlijke tekst.
+  const geldigheidsTekst = (iso) => {
     if (!iso) return null;
     const ms = new Date(iso).getTime() - Date.now();
-    if (!Number.isFinite(ms)) return null;
-    return Math.max(0, Math.round(ms / 3600000));
+    if (!Number.isFinite(ms) || ms <= 0) return null;
+    const uren = Math.floor(ms / 3600000);
+    return uren >= 1 ? `nog ${uren} uur geldig` : "nog minder dan een uur geldig";
   };
 
   // Een openstaande code intrekken (kind heeft 'm niet gebruikt / typefout).
@@ -487,7 +489,15 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // Een openstaande code waarvan het kind inmiddels koppelde (zelfde naam in
   // children) tonen we niet dubbel. Rest = lege plekken tot MAX_KINDEREN.
   const gekoppeldeNamen = new Set(children.map((c) => (c.child_name || "").trim().toLowerCase()));
-  const wachtInvites = openInvites.filter((iv) => !gekoppeldeNamen.has((iv.child_name || "").trim().toLowerCase()));
+  // Per kindnaam maximaal één wacht-kaart: klikte de ouder 2× genereren voor
+  // hetzelfde kind, toon dan alleen de nieuwste code (lijst is oplopend op
+  // created_at, dus de latere overschrijft de eerdere in de map).
+  const wachtPerNaam = new Map();
+  for (const iv of openInvites) {
+    const naam = (iv.child_name || "").trim().toLowerCase();
+    if (!gekoppeldeNamen.has(naam)) wachtPerNaam.set(naam, iv);
+  }
+  const wachtInvites = [...wachtPerNaam.values()];
   const slots = [
     ...children.map((c) => ({ key: `k-${c.id}`, type: c.verified ? "gekoppeld" : "bevestigen", kind: c })),
     ...wachtInvites.map((iv) => ({ key: `w-${iv.id}`, type: "wacht", invite: iv })),
@@ -687,14 +697,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   </div>
                   <ProgressBar stap={2} kleur="#ffb74d" />
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", marginTop: 8, lineHeight: 1.5 }}>
-                    {c.child_name} moet de koppeling nog even zelf bevestigen in de app — daar op <strong>"Ja, dit is mijn ouder of verzorger"</strong> tikken. Daarna zie je meteen de voortgang.
+                    {c.child_name} moet de koppeling nog even zelf bevestigen in de app — daar op <strong>"Ja, accepteren"</strong> tikken. Daarna zie je meteen de voortgang.
                   </div>
                 </div>
               );
             }
             // ── ⏳ WACHT OP JE KIND (openstaande code) ────────────────────
             const iv = slot.invite;
-            const uren = urenTot(iv.expires_at);
+            const geldig = geldigheidsTekst(iv.expires_at);
             const isCopied = copiedCode === iv.code;
             const deelKnop = (extra) => ({ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, ...extra });
             return (
@@ -710,7 +720,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "var(--color-text-strong)", fontWeight: 700, marginBottom: 4 }}>➤ Stap 2 — stuur de code naar {iv.child_name}</div>
                     <div style={{ textAlign: "center", padding: "4px 0 8px" }}>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
-                      {uren !== null && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>nog {uren} uur geldig</div>}
+                      {geldig && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{geldig}</div>}
                     </div>
                     <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                       <button onClick={() => sendWhatsApp(iv.code, iv.child_name)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>💬 WhatsApp</button>
@@ -744,7 +754,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "8px 0 10px", lineHeight: 1.5 }}>
                     Stap 1 — vul de naam van je kind in zoals die in de app staat. Daarna maken we de code die je kunt delen.
                   </div>
-                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                   <input value={inviteVanWie} onChange={(e) => setInviteVanWie(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Van wie is de code? bv. mama (optioneel)" maxLength={20} style={{ width: "100%", padding: "10px 12px", marginBottom: 4, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 10, lineHeight: 1.4 }}>
                     Je kind ziet dan “gekoppeld met {inviteVanWie.trim() || "mama"}”. Laat leeg → “gekoppeld met thuis”.

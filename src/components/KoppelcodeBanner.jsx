@@ -13,6 +13,19 @@ import supabase from "../supabase.js";
 // een feestelijke eindstaat. Framing = cadeau, geen controle ("iemand thuis",
 // niet "je voortgang wordt gevolgd"); voogd/pleeg-veilig.
 
+// Kleine stap-rij: een gekleurde bol met nummer + tekst ernaast. Bewust op
+// module-niveau: binnen de render gedefinieerd zou React 'm elke re-render als
+// nieuw component-type zien en de subtree hermounten — het invoerveld in stap 2
+// verloor daardoor bij élke toetsaanslag de focus (Fable-review 30 aug).
+function Stap({ nr, kleur, children }) {
+  return (
+    <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+      <span aria-hidden="true" style={{ flexShrink: 0, width: 22, height: 22, borderRadius: "50%", background: kleur, color: "#0b1224", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>{nr}</span>
+      <div style={{ flex: 1, fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.45 }}>{children}</div>
+    </div>
+  );
+}
+
 export default function KoppelcodeBanner({ userName }) {
   // Voorstel uit de code-balk op home (27 aug): typte iemand dáár een
   // koppelcode, dan staat hij hier alvast ingevuld — niet opnieuw typen.
@@ -119,14 +132,6 @@ export default function KoppelcodeBanner({ userName }) {
 
   const kanKoppelen = !busy && code.trim().length >= 4;
 
-  // Kleine stap-rij: een gekleurde bol met nummer + tekst ernaast.
-  const Stap = ({ nr, kleur, children }) => (
-    <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-      <span aria-hidden="true" style={{ flexShrink: 0, width: 22, height: 22, borderRadius: "50%", background: kleur, color: "#0b1224", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>{nr}</span>
-      <div style={{ flex: 1, fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.45 }}>{children}</div>
-    </div>
-  );
-
   return (
     <form
       onSubmit={submit}
@@ -174,7 +179,6 @@ export default function KoppelcodeBanner({ userName }) {
               maxLength={8}
               autoComplete="off"
               spellCheck={false}
-              inputMode="latin"
               style={{
                 flex: 1,
                 minWidth: 0,
