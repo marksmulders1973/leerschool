@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BRAND } from "../../brand.js";
 import {
   haalGekoppeldeLeerlingen, koppelLeerlingCode,
+  haalOpenLeerlingCodes, trekLeerlingCodeIn,
   haalKlaargezetVoorLink, haalWeg, haalLeerlingOverzicht, KLAARGEZET_EVENT,
 } from "../../shared/ouderKlaargezet.js";
 
@@ -17,9 +18,12 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [selected, setSelected] = useState(null);
   const [klaarLijst, setKlaarLijst] = useState([]);
   const [inviteName, setInviteName] = useState("");
-  const [invite, setInvite] = useState(null); // { code, naam }
+  // Openstaande codes uit link_codes (30 aug, spiegel van de ouder-kant):
+  // de "wacht op je leerling"-kaarten. Persistent — een verse code overleeft
+  // nu ook een pagina-herlaad (stond eerst alleen in lokale state).
+  const [openInvites, setOpenInvites] = useState([]);
   const [busy, setBusy] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [copiedCode, setCopiedCode] = useState("");
   const [overzichtCopied, setOverzichtCopied] = useState(false);
   const [overzicht, setOverzicht] = useState([]);
   const [open, setOpen] = useState(false);
@@ -30,8 +34,25 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
       setStudents(rows);
       setSelected((prev) => rows.find((r) => r.id === prev?.id) || rows.find((r) => r.verified) || null);
     });
+    haalOpenLeerlingCodes(authUser.id).then(setOpenInvites);
   };
   useEffect(() => { laadStudents(); /* eslint-disable-next-line */ }, [authUser?.id]);
+
+  // Openstaande code na een herlaad? Klap het blok open zodat de wacht-kaart
+  // zichtbaar is (het blok start standaard dicht).
+  useEffect(() => {
+    if (openInvites.length > 0) setOpen(true);
+  }, [openInvites.length]);
+
+  // 🔄 Live "wacht op je leerling": zolang er een openstaande code is, elke 6s
+  // herladen. Claimt de leerling de code, dan verdwijnt de wacht-kaart vanzelf
+  // en verschijnt hij/zij in de leerlingen-rij — zonder verversen.
+  useEffect(() => {
+    if (!authUser || openInvites.length === 0) return;
+    const t = setInterval(() => { laadStudents(); }, 6000);
+    return () => clearInterval(t);
+    // eslint-disable-next-line
+  }, [authUser?.id, openInvites.length]);
 
   // 📊 Overzicht van álle gekoppelde leerlingen + hun klaargezet-voortgang
   // (Mark 15 aug: "een leerkracht heeft 25 kinderen; overzicht + doorsturen").
@@ -84,14 +105,38 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
     setBusy(true);
     const r = await koppelLeerlingCode(authUser.id, naam);
     setBusy(false);
-    if (r.ok) { setInvite({ code: r.code, naam }); setInviteName(""); setCopied(false); }
+    if (r.ok) { setInviteName(""); laadStudents(); }
     else alert("Kon de koppelcode niet maken. Probeer later opnieuw.");
   };
 
-  const deelWhatsApp = () => {
-    if (!invite) return;
-    const text = `Hoi ${invite.naam}! Ik heb lessen voor je klaargezet op ${BRAND.name}. Open ${BRAND.domain}, ga naar "Mijn pagina" en vul deze koppelcode in: ${invite.code}`;
+  const deelWhatsApp = (code, naam) => {
+    const text = `Hoi ${naam}! Ik heb lessen voor je klaargezet op ${BRAND.name}. Open ${BRAND.domain}, ga naar "Mijn pagina" en vul deze koppelcode in: ${code}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+  };
+
+  const stuurHerinnering = (code, naam) => {
+    const text = `Hoi ${naam}! Je koppelcode voor ${BRAND.name} staat nog klaar: ${code}. Vul 'm in op "Mijn pagina" op ${BRAND.domain} 😊`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+  };
+
+  const kopieerCode = (code) => {
+    navigator.clipboard?.writeText(code);
+    setCopiedCode(code);
+    setTimeout(() => setCopiedCode(""), 2000);
+  };
+
+  const trekIn = async (id) => {
+    setOpenInvites((prev) => prev.filter((iv) => iv.id !== id));
+    await trekLeerlingCodeIn(id);
+  };
+
+  // Geen "nog 0 uur geldig" (afrond-artefact) — zelfde tekst als de ouder-kant.
+  const geldigheidsTekst = (iso) => {
+    if (!iso) return null;
+    const ms = new Date(iso).getTime() - Date.now();
+    if (!Number.isFinite(ms) || ms <= 0) return null;
+    const uren = Math.floor(ms / 3600000);
+    return uren >= 1 ? `nog ${uren} uur geldig` : "nog minder dan een uur geldig";
   };
 
   const verwijderKlaar = async (pathId) => {
@@ -101,6 +146,16 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   };
 
   const verified = students.filter((s) => s.verified);
+
+  // Wacht-kaarten: openstaande codes mínus leerlingen die al gekoppeld zijn;
+  // per leerling-naam alleen de nieuwste code (2× genereren = laatste wint).
+  const bekendeNamen = new Set(students.map((s) => (s.student_name || "").trim().toLowerCase()));
+  const wachtPerNaam = new Map();
+  for (const iv of openInvites) {
+    const naam = (iv.child_name || "").trim().toLowerCase();
+    if (!bekendeNamen.has(naam)) wachtPerNaam.set(naam, iv);
+  }
+  const wachtInvites = [...wachtPerNaam.values()];
 
   return (
     <div style={{ ...box, background: "rgba(255,105,135,0.06)", borderColor: "rgba(255,105,135,0.3)" }}>
@@ -196,29 +251,48 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
             </div>
           )}
 
+          {/* ⏳ Wacht op je leerling — per openstaande code een kaart met het
+              stappenplan (30 aug, spiegel van de ouder-kant). Springt vanzelf
+              om via de 6s-poll zodra de leerling de code invult. */}
+          {wachtInvites.map((iv) => {
+            const geldig = geldigheidsTekst(iv.expires_at);
+            const isCopied = copiedCode === iv.code;
+            return (
+              <div key={iv.id} style={{ borderRadius: 10, border: "1px solid rgba(255,105,135,0.4)", background: "rgba(255,105,135,0.08)", padding: "12px 14px", marginBottom: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#ff9fb2" }}>👤 {iv.child_name} — koppelen loopt…</span>
+                  <button onClick={() => trekIn(iv.id)} title="Code intrekken" aria-label="Code intrekken" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
+                </div>
+                <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-body)", fontSize: 12.5 }}>
+                  <div style={{ color: "#69f0ae", fontWeight: 700 }}>✓ Stap 1 — code gemaakt</div>
+                  <div style={{ color: "var(--color-text-strong)", fontWeight: 700 }}>➤ Stap 2 — geef de code aan {iv.child_name}</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", margin: "2px 0" }}>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, letterSpacing: 4, color: "#fff", background: "rgba(255,255,255,0.08)", borderRadius: 8, padding: "6px 14px" }}>{iv.code}</span>
+                    <button onClick={() => deelWhatsApp(iv.code, iv.child_name)} style={{ ...miniBtn, background: "#25D366", color: "#04310f", border: "none" }}>💬 WhatsApp</button>
+                    <button onClick={() => kopieerCode(iv.code)} style={miniBtn}>{isCopied ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
+                  </div>
+                  {geldig && <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)" }}>{geldig}</div>}
+                  <div style={{ color: "rgba(255,255,255,0.5)" }}>○ Stap 3 — {iv.child_name} vult 'm in op "Mijn pagina"</div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.5 }}>
+                    ⏳ Deze kaart springt <strong>vanzelf</strong> om zodra het gelukt is.{" "}
+                    <button onClick={() => stuurHerinnering(iv.code, iv.child_name)} style={{ background: "none", border: "none", padding: 0, color: "#ff9fb2", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+                      🔔 Stuur de code nog eens
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
           {/* Nieuwe leerling koppelen */}
-          {invite ? (
-            <div style={{ borderRadius: 10, border: "1px solid rgba(255,105,135,0.4)", background: "rgba(255,105,135,0.08)", padding: "12px 14px" }}>
-              <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.7)", marginBottom: 6 }}>
-                Geef deze code aan <strong style={{ color: "#ff9fb2" }}>{invite.naam}</strong>. Hij of zij vult 'm in op "Mijn pagina" (48 uur geldig). Daarna verschijnt {invite.naam} hierboven.
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, letterSpacing: 4, color: "#fff", background: "rgba(255,255,255,0.08)", borderRadius: 8, padding: "6px 14px" }}>{invite.code}</span>
-                <button onClick={() => { navigator.clipboard?.writeText(invite.code); setCopied(true); }} style={miniBtn}>{copied ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
-                <button onClick={deelWhatsApp} style={{ ...miniBtn, background: "#25D366", color: "#04310f", border: "none" }}>💬 WhatsApp</button>
-                <button onClick={() => { setInvite(null); laadStudents(); }} style={miniBtn}>Klaar</button>
-              </div>
-            </div>
-          ) : (
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <input value={inviteName} onChange={(e) => setInviteName(e.target.value)} placeholder="Naam van de leerling"
-                style={{ flex: "1 1 160px", padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14 }} />
-              <button onClick={genereer} disabled={busy || !inviteName.trim()}
-                style={{ padding: "10px 16px", borderRadius: 10, border: "none", cursor: busy || !inviteName.trim() ? "not-allowed" : "pointer", background: busy || !inviteName.trim() ? "rgba(255,105,135,0.3)" : "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13 }}>
-                {busy ? "..." : "🔗 Koppel een leerling"}
-              </button>
-            </div>
-          )}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <input value={inviteName} onChange={(e) => setInviteName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteName.trim()) genereer(); }} placeholder="Naam van de leerling"
+              style={{ flex: "1 1 160px", padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14 }} />
+            <button onClick={genereer} disabled={busy || !inviteName.trim()}
+              style={{ padding: "10px 16px", borderRadius: 10, border: "none", cursor: busy || !inviteName.trim() ? "not-allowed" : "pointer", background: busy || !inviteName.trim() ? "rgba(255,105,135,0.3)" : "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13 }}>
+              {busy ? "..." : "🔗 Koppel een leerling"}
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -117,6 +117,29 @@ export async function koppelLeerlingCode(teacherId, studentName) {
   return { ok: true, code };
 }
 
+/** Openstaande (nog niet gebruikte) koppelcodes van deze leerkracht — voor de
+ * "wacht op je leerling"-kaarten. Zelfde model als de ouder-kant (30 aug):
+ * de code leeft in link_codes tot de leerling 'm claimt (used_at) of hij
+ * verloopt; zo overleeft een verse code ook een pagina-herlaad. */
+export async function haalOpenLeerlingCodes(teacherId) {
+  if (!teacherId) return [];
+  const { data, error } = await supabase
+    .from("link_codes")
+    .select("id, code, child_name, expires_at, created_at")
+    .eq("teacher_user_id", teacherId)
+    .is("used_at", null)
+    .order("created_at", { ascending: true });
+  if (error) return [];
+  const nu = Date.now();
+  return (data || []).filter((iv) => !iv.expires_at || new Date(iv.expires_at).getTime() > nu);
+}
+
+/** Openstaande code intrekken (typefout / niet meer nodig). */
+export async function trekLeerlingCodeIn(id) {
+  if (!id) return;
+  await supabase.from("link_codes").delete().eq("id", id);
+}
+
 /** Gekoppelde leerlingen van deze leerkracht (bevestigd + wachtend). */
 export async function haalGekoppeldeLeerlingen(teacherId) {
   if (!teacherId) return [];
