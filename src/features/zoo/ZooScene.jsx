@@ -1558,78 +1558,16 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
     return vasteCellen.has(cellKey(gx, gz));
   }, [vasteCellen, kubVast]);
 
-  // 🚂 Bots-variant (Brian 20 aug: bezoekers liepen in een rij óver de rails):
-  // voor bezoekers telt het spoor wél als muur — ze glijden er langs (de
-  // botsings-logica glijdt langs muren) maar gaan er niet op wandelen. Alleen
-  // de speler mag oversteken (rails beloopbaar sinds v377, wandelroute).
-  //
-  // Mark 29 aug: "bots lopen weer tegen de spoorlijn". De vakjes-blokkade
-  // hieronder (per rail-cel) dekte rechte stukken, maar lekte in de BOCHTEN —
-  // de trein rijdt op een vloeiende curve die buiten de rail-vakjes uitbuigt —
-  // en had geen marge, dus een door de menigte geduwde bot belandde net náást
-  // een vakje op de rails. Nu blokkeren we op AFSTAND-TOT-DE-TREIN-CURVE
-  // (railRoute.pts), met een kleine buffer. Zo zitten ook de bochten dicht.
-  const railSegs = useMemo(() => {
-    const pts = railRoute?.pts;
-    if (!pts || pts.length < 2) return null;
-    const segs = [];
-    for (let i = 0; i < pts.length - 1; i++) segs.push([pts[i].x, pts[i].z, pts[i + 1].x, pts[i + 1].z]);
-    if (railRoute.loop) segs.push([pts[pts.length - 1].x, pts[pts.length - 1].z, pts[0].x, pts[0].z]);
-    return segs;
-  }, [railRoute]);
-  // 🚦 Overwegen (Mark 29 aug: "ja overweg-oversteek"): waar het spoor een
-  // pad-tegel kruist mogen bots oversteken — tenzij de trein er bijna is (dan
-  // telt de overweg tóch als muur en wachten ze netjes).
-  const overwegen = useMemo(() => {
-    const pts = railRoute?.pts; if (!pts || pts.length < 2) return [];
-    const pads = instancedProps.paden || [];
-    const heeftPad = (x, z) => pads.some((pd) => Math.abs(pd.x - x) < 1.2 && Math.abs(pd.z - z) < 1.2);
-    const out = [];
-    for (let i = 0; i < pts.length; i++) {
-      const p = pts[i];
-      let overweg = false;
-      // 1) Échte pad-kruising: pad-tegels aan BEIDE kanten loodrecht op het spoor.
-      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)];
-      let dx = b.x - a.x, dz = b.z - a.z; const L = Math.hypot(dx, dz) || 1; dx /= L; dz /= L;
-      const px = -dz, pz = dx;
-      if (pads.length && heeftPad(p.x + px * 2, p.z + pz * 2) && heeftPad(p.x - px * 2, p.z - pz * 2)) overweg = true;
-      // 2) Automatische overweg om de ~5 rail-tegels (~10 m). Zonder dit is het
-      //    spoor een ondoordringbare muur dwars door het park en stapelen bots
-      //    zich ertegen op (Mark 29 aug, screenshot). Zo kunnen ze altijd ergens
-      //    netjes oversteken i.p.v. vast te lopen.
-      if (i % 5 === 2) overweg = true;
-      if (overweg) out.push([p.x, p.z]);
-    }
-    return out;
-  }, [railRoute, instancedProps]);
-  const RAIL_MARGE2 = 0.9 * 0.9; // (halve spoorbreedte + loopbuffer)², wereld-units²
-  const OVERWEG_R2 = 1.6 * 1.6, TREIN_WACHT = 6; // oversteek-zone / wacht-afstand
-  const isSolidBots = useCallback((x, z) => {
-    if (isSolid(x, z)) return true;
-    if (railSegs) {
-      let opSpoor = false;
-      for (const [ax, az, bx, bz] of railSegs) {
-        const dx = bx - ax, dz = bz - az;
-        const len2 = dx * dx + dz * dz || 1;
-        let t = ((x - ax) * dx + (z - az) * dz) / len2;
-        t = t < 0 ? 0 : t > 1 ? 1 : t;
-        const ex = x - (ax + t * dx), ez = z - (az + t * dz);
-        if (ex * ex + ez * ez < RAIL_MARGE2) { opSpoor = true; break; }
-      }
-      if (opSpoor) {
-        for (const [ox, oz] of overwegen) {
-          const ddx = x - ox, ddz = z - oz;
-          if (ddx * ddx + ddz * ddz < OVERWEG_R2) {
-            const head = trainHeadRef.current?.p;
-            const wacht = head && Math.hypot(head.x - ox, head.z - oz) < TREIN_WACHT;
-            return !!wacht; // trein dichtbij → muur (wachten); anders vrij oversteken
-          }
-        }
-        return true; // spoor zonder overweg → muur
-      }
-    }
-    return false;
-  }, [isSolid, railSegs, overwegen]);
+  // 🚂 Harde rail-muur voor bots TERUGGEDRAAID (Mark 29 aug, screenshots).
+  // Geschiedenis: v505-508 maakten het spoor solide voor bots om te voorkomen
+  // dat ze op de rails liepen. Gevolg was erger: in de bocht werd de muur extra
+  // dik en zonder doorgang sneed het spoor het park in tweeën → bezoekers
+  // stapelden zich op tegen de rail (en bij een boom/kraam-pinch liep zelfs de
+  // speler vast). Bots gebruiken nu dezelfde soliditeit als de speler (rails
+  // zijn beloopbaar) en steken gewoon over i.p.v. te klonteren. Een zachte,
+  // NIET-blokkerende rail-vermijding (zodat ze er niet op blíjven staan) kan
+  // later als polish terugkomen, mét live-check in het echte park.
+  const isSolidBots = isSolid;
 
   // 🎈 Zeppelin-instaprij (Mark 29 aug): gedeelde halte-status. De instap-
   // zeppelin schrijft z'n fase erin (bezet=stoel-slots in de rij); de bots
