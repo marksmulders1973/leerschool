@@ -806,7 +806,7 @@ function koopKans(prijs, fair) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, crowdRef, idx }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, crowdRef, idx, zeppelinRef }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -842,8 +842,16 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   useEffect(() => {
     if (!crowdRef) return undefined;
     crowdRef.current[idx] = st.current;
-    return () => { crowdRef.current[idx] = null; };
-  }, [crowdRef, idx]);
+    return () => {
+      crowdRef.current[idx] = null;
+      // 🎈 rij-plek/passagiersstoel weer vrijgeven als dit poppetje verdwijnt.
+      const zep = zeppelinRef?.current; const s = st.current;
+      if (zep) {
+        if (s.zepSlot != null) zep.bezet[s.zepSlot] = null;
+        if (s.boarded) zep.aanBoord = Math.max(0, zep.aanBoord - 1);
+      }
+    };
+  }, [crowdRef, idx, zeppelinRef]);
 
   useFrame((_, dt) => {
     const s = st.current; const node = g.current; if (!node) return;
@@ -856,6 +864,25 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // (die zet chatPing op óns state-object via de menigte-lijst).
     if (s.chatCd > 0) s.chatCd -= dt;
     if (s.chatPing) { const p = s.chatPing; s.chatPing = null; toon(p, 2.6); }
+
+    // 🎈 Aan boord van de zeppelin (Mark 29 aug): verstopt in de gondel, telt de
+    // rit af en stapt daarna naast het landingsveld weer uit.
+    if (s.boarded) {
+      node.visible = false;
+      s.rideT -= dt;
+      if (s.rideT <= 0) {
+        const zep = zeppelinRef?.current;
+        if (zep) { zep.aanBoord = Math.max(0, zep.aanBoord - 1); s.x = zep.pad[0] + 1.6; s.z = zep.pad[1] + 1.4; }
+        s.boarded = false; node.visible = true;
+        s.intent = "stroll"; s.subj = null; s.resting = false;
+        s.tx = s.x + (Math.random() - 0.5) * 10; s.tz = s.z + 5 + Math.random() * 6;
+        toon({ e: "🎈", t: "Wat een uitzicht!" }, 3);
+      }
+      moving.current = false;
+      node.position.set(s.x, heightRef?.current ? heightRef.current(s.x, s.z) : 0, s.z);
+      return;
+    }
+    if (!node.visible) node.visible = true;
 
     // Behoefte opwekken — voornamelijk bij bezoekers die vlak langs jouw poppetje
     // lopen (binnen DENK_STRAAL). Zo "denkt" niet het hele park tegelijk; je wekt
@@ -902,6 +929,21 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // Wandelen / aankomen.
     if (s.resting) {
       s.rest -= dt;
+      // 🎈 In de zeppelin-rij: schuif op zodra een plek vóór je vrij komt, en
+      // stap in zodra de zeppelin geland is en er nog een stoel vrij is.
+      if (s.intent === "zeppelin" && s.zepSlot != null && zeppelinRef?.current) {
+        const zep = zeppelinRef.current;
+        for (let k = 0; k < s.zepSlot; k++) {
+          if (!zep.bezet[k]) {
+            zep.bezet[s.zepSlot] = null; zep.bezet[k] = s; s.zepSlot = k;
+            s.tx = zep.slots[k][0]; s.tz = zep.slots[k][1]; s.resting = false; break;
+          }
+        }
+        if (s.resting && s.zepSlot === 0 && zep.naam === "geland" && zep.aanBoord < zep.cap && !s.instappen) {
+          s.instappen = true; s.tx = zep.pad[0]; s.tz = zep.pad[1]; s.resting = false;
+        }
+        if (s.rest <= 0) s.rest = 1.5; // geduldig blijven wachten in de rij
+      }
       if (s.chatT > 0) {
         // 💬 In gesprek met een andere bezoeker: naar elkaar toe draaien.
         s.chatT -= dt;
@@ -926,13 +968,22 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         // langzaam rondkijken tijdens de pauze i.p.v. bevroren staren
         node.rotation.y += s.idleTurn * dt * 0.6;
       }
-      if (s.rest <= 0) {
+      if (s.rest <= 0 && s.intent !== "zeppelin") {
         // 🎯 kies een bezigheid: meestal over de paden slenteren, soms een dier
         // aaien of een foto maken. (Kopen verloopt via het 'need'-blok hierboven.)
         const paden = padsRef?.current || [];
         const dieren = dierenRef?.current || [];
         const pret = pretRef?.current || [];
         const bankjes = bankjesRef?.current || [];
+        // 🎈 af en toe aansluiten in de zeppelin-rij (Mark 29 aug)
+        const zep = zeppelinRef?.current;
+        let koosZep = false;
+        if (zep && s.zepSlot == null && !s.boarded && zep.aanBoord < zep.cap && zep.bezet.some((b) => !b) && Math.random() < 0.14) {
+          for (let k = zep.bezet.length - 1; k >= 0; k--) {
+            if (!zep.bezet[k]) { zep.bezet[k] = s; s.zepSlot = k; s.intent = "zeppelin"; s.tx = zep.slots[k][0]; s.tz = zep.slots[k][1]; koosZep = true; break; }
+          }
+        }
+        if (!koosZep) {
         const r = Math.random();
         if (dieren.length && r < 0.20) {
           const a = dieren[Math.floor(Math.random() * dieren.length)];
@@ -956,11 +1007,26 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           const a = Math.random() * Math.PI * 2, rr = 4 + Math.random() * 16;
           s.tx = Math.cos(a) * rr; s.tz = Math.sin(a) * rr; s.intent = "stroll"; s.subj = null;
         }
+        }
         s.resting = false;
       }
     } else {
       const dx = s.tx - s.x, dz = s.tz - s.z; const d = Math.hypot(dx, dz);
       if (d < 0.18) {
+        if (s.intent === "zeppelin") {
+          const zep = zeppelinRef?.current;
+          if (s.instappen && zep && zep.naam === "geland" && zep.aanBoord < zep.cap) {
+            // 🎈 instappen: verstop je in de gondel, tel als passagier
+            zep.aanBoord += 1;
+            if (s.zepSlot != null) { zep.bezet[s.zepSlot] = null; s.zepSlot = null; }
+            s.instappen = false; s.boarded = true; s.rideT = 12 + Math.random() * 8; s.intent = null;
+            toon({ e: "🎈", t: "Instappen!" }, 2);
+          } else {
+            // aangekomen bij je rij-plek → wachten en naar de zeppelin kijken
+            s.instappen = false; s.resting = true; s.rest = 2 + Math.random() * 2;
+            if (zep) { s.face = [zep.pad[0], zep.pad[1]]; s.faceT = 2; }
+          }
+        } else {
         if (s.acting) {
           // Bij het kraampje: kopen? Goedkoop = bijna altijd; te duur = afhaken.
           const kind = s.need; const info = kr[kind] || {}; const prijs = info.verkoop ?? 4;
@@ -992,6 +1058,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           : klaarMet === "photo" ? 1.8 + Math.random() * 1.4
           : klaarMet === "sit" ? 4.5 + Math.random() * 3.5
           : 1 + Math.random() * 2.5;
+        }
       } else {
         // 🤝 Sociaal onderweg (Mark 9 aug): praatje met een passerende bezoeker
         // of even blijven kijken bij een dier. Gescand met een lage tik (4×/s).
@@ -1132,13 +1199,13 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
   );
 }
 
-export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef }) {
+export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, zeppelinRef }) {
   // Gedeelde menigte-lijst: elk poppetje registreert z'n state-object zodat
   // bezoekers elkaar kunnen ontwijken en met elkaar kunnen kletsen.
   const crowdRef = useRef([]);
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} idx={i} crowdRef={crowdRef} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} idx={i} crowdRef={crowdRef} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinRef} />)}
     </group>
   );
 }

@@ -953,7 +953,7 @@ function RaketVolgCamera() {
 // gemount NÁ de andere camera's zodat hij tijdens de vlucht wint.
 const ZEP_PAD = [46, 44];              // landingsveld (wereld-coördinaten)
 const ZEP_CRUISE_S = 80, ZEP_GELAND_S = 45;
-function InstapZeppelin({ inputRef, onRit, heightRef }) {
+function InstapZeppelin({ inputRef, onRit, heightRef, halteRef }) {
   const g = useRef();
   const stuurRef = useRef();           // 🛞 het stuurwiel in de cockpit draait mee
   const fase = useRef({ naam: "cruise", t0: null });
@@ -975,6 +975,7 @@ function InstapZeppelin({ inputRef, onRit, heightRef }) {
     const u = t - fase.current.t0;
     const ga = (naam) => { fase.current = { naam, t0: t }; };
     const naam = fase.current.naam;
+    if (halteRef?.current) halteRef.current.naam = naam; // bots lezen de instap-fase
     const p = pos.current;
     const vlieg = (snelheid) => { p.x += Math.sin(heading.current) * snelheid * dt; p.z += Math.cos(heading.current) * snelheid * dt; };
     // koers geleidelijk naar een doelpunt draaien (autopilot)
@@ -1576,21 +1577,60 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
     if (railRoute.loop) segs.push([pts[pts.length - 1].x, pts[pts.length - 1].z, pts[0].x, pts[0].z]);
     return segs;
   }, [railRoute]);
+  // 🚦 Overwegen (Mark 29 aug: "ja overweg-oversteek"): waar het spoor een
+  // pad-tegel kruist mogen bots oversteken — tenzij de trein er bijna is (dan
+  // telt de overweg tóch als muur en wachten ze netjes).
+  const overwegen = useMemo(() => {
+    const pts = railRoute?.pts; if (!pts) return [];
+    const pads = instancedProps.paden || []; if (!pads.length) return [];
+    const out = [];
+    for (const p of pts) {
+      for (const pad of pads) {
+        if (Math.abs(p.x - pad.x) < 1.6 && Math.abs(p.z - pad.z) < 1.6) { out.push([p.x, p.z]); break; }
+      }
+    }
+    return out;
+  }, [railRoute, instancedProps]);
   const RAIL_MARGE2 = 0.9 * 0.9; // (halve spoorbreedte + loopbuffer)², wereld-units²
+  const OVERWEG_R2 = 1.6 * 1.6, TREIN_WACHT = 6; // oversteek-zone / wacht-afstand
   const isSolidBots = useCallback((x, z) => {
     if (isSolid(x, z)) return true;
     if (railSegs) {
+      let opSpoor = false;
       for (const [ax, az, bx, bz] of railSegs) {
         const dx = bx - ax, dz = bz - az;
         const len2 = dx * dx + dz * dz || 1;
         let t = ((x - ax) * dx + (z - az) * dz) / len2;
         t = t < 0 ? 0 : t > 1 ? 1 : t;
         const ex = x - (ax + t * dx), ez = z - (az + t * dz);
-        if (ex * ex + ez * ez < RAIL_MARGE2) return true; // te dicht op het spoor
+        if (ex * ex + ez * ez < RAIL_MARGE2) { opSpoor = true; break; }
+      }
+      if (opSpoor) {
+        for (const [ox, oz] of overwegen) {
+          const ddx = x - ox, ddz = z - oz;
+          if (ddx * ddx + ddz * ddz < OVERWEG_R2) {
+            const head = trainHeadRef.current?.p;
+            const wacht = head && Math.hypot(head.x - ox, head.z - oz) < TREIN_WACHT;
+            return !!wacht; // trein dichtbij → muur (wachten); anders vrij oversteken
+          }
+        }
+        return true; // spoor zonder overweg → muur
       }
     }
     return false;
-  }, [isSolid, railSegs]);
+  }, [isSolid, railSegs, overwegen]);
+
+  // 🎈 Zeppelin-instaprij (Mark 29 aug): gedeelde halte-status. De instap-
+  // zeppelin schrijft z'n fase erin (bezet=stoel-slots in de rij); de bots
+  // lezen 'm, sluiten aan met 2-3 op een rij en stappen in als 'ie geland is.
+  const zeppelinHalteRef = useRef({
+    naam: "cruise",
+    pad: ZEP_PAD,
+    slots: [[ZEP_PAD[0], ZEP_PAD[1] + 4], [ZEP_PAD[0], ZEP_PAD[1] + 5.6], [ZEP_PAD[0], ZEP_PAD[1] + 7.2]],
+    bezet: [null, null, null],
+    aanBoord: 0,
+    cap: 3,
+  });
 
   // Voor de camera telt HOOGTE mee: over lage hekjes/bankjes kijkt de camera
   // gewoon heen; alleen hoge dingen (gebouwen, attracties) duwen de arm korter.
@@ -1741,13 +1781,13 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <RaketVolgCamera />
         {/* 🛩️ De bestuurbare Leerkwartier-zeppelin + landingsveld. NÁ de andere
             camera's gemount: tijdens de vlucht wint zijn cockpit-camera. */}
-        <InstapZeppelin inputRef={inputRef} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} heightRef={heightFnRef} />
+        <InstapZeppelin inputRef={inputRef} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} heightRef={heightFnRef} halteRef={zeppelinHalteRef} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit} onGids={onGidsMoment} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
         <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!bouwModus && !placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit} onDoor={onPoortDoor} />
-        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} />
+        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
