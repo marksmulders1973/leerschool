@@ -1553,12 +1553,19 @@ export default function MijnPagina({
                       if (m) return balkGemeten(m, meta, notitie);
                       if (beschikbaar.has(vak)) {
                         return (
-                          <div key={vak} style={{ marginBottom: 12 }}>
+                          <div
+                            key={vak}
+                            role="button"
+                            tabIndex={0}
+                            onClick={() => onVak && onVak(vak)}
+                            onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onVak) onVak(vak); }}
+                            title={`Ga naar ${meta.titel} in de leren-lijst`}
+                            style={{ marginBottom: 12, cursor: onVak ? "pointer" : "default" }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4, gap: 8 }}>
                               <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text-strong)" }}>
                                 {meta.emoji} {meta.titel}
                               </span>
-                              <span style={{ fontSize: 11.5, color: "#8899aa", fontWeight: 700 }}>📏 Nog niet geoefend — probeer het eens!</span>
+                              <span style={{ fontSize: 11.5, color: "#8899aa", fontWeight: 700 }}>📏 Nog niet geoefend — probeer het eens!{onVak ? " →" : ""}</span>
                             </div>
                             <div style={{ height: 10, borderRadius: 99, background: "rgba(255,255,255,0.08)" }} />
                             {notitie && <div style={{ fontSize: 11, color: "var(--color-text-muted, #8899aa)", marginTop: 2 }}>{notitie}</div>}
