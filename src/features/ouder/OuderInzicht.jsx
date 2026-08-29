@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
@@ -45,6 +45,18 @@ function ScoreBadge({ pct }) {
   );
 }
 
+// Voortgangsbalk voor de koppel-kaarten: 3 segmenten, gevuld t/m `stap`
+// (1-3). Zo ziet ouder én kind in één blik "stap x van 3".
+function ProgressBar({ stap, kleur }) {
+  return (
+    <div style={{ display: "flex", gap: 4, marginTop: 6 }} aria-hidden="true">
+      {[1, 2, 3].map((n) => (
+        <div key={n} style={{ flex: 1, height: 5, borderRadius: 3, background: n <= stap ? kleur : "rgba(255,255,255,0.12)", transition: "background 0.3s" }} />
+      ))}
+    </div>
+  );
+}
+
 // Datum-helper: nullable/ongeldige completed_at gaf "Invalid Date" in de UI.
 function fmtDatum(x, opts) {
   if (!x) return "";
@@ -81,23 +93,21 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   };
   const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
+  // Openstaande koppelcodes (link_codes zonder used_at, nog geldig) = de
+  // "wacht op je kind"-kaarten. Samen met `children` vormen ze de plek-status
+  // per kind: leeg → wacht → (evt. bevestigen) → ✓ gekoppeld.
+  const [openInvites, setOpenInvites] = useState([]);
+  // Welke lege plek staat open in "voeg kind toe"-modus (index), en welke code
+  // is net gekopieerd (voor de ✓-feedback per wacht-kaart).
+  const [addingSlot, setAddingSlot] = useState(false);
+  const [copiedCode, setCopiedCode] = useState("");
   const [selectedChild, setSelectedChild] = useState(null);
-  // 👶 Kinder-dropdown aan de kop "Mijn kinderen (x/3)" (Mark 27 aug):
-  // snel wisselen tussen kinderen + per lege plek een "voeg je 2e/3e kind
-  // toe"-regel die naar het koppel-formulier onderaan de kaart springt.
-  const [kinderMenuOpen, setKinderMenuOpen] = useState(false);
   // 🔒 Opslag-uitleg (Mark 27 aug: "zet er netjes bij wat wél wordt
   // opgeslagen en hoe dat beveiligd is"): uitklap-blokje onderaan de
   // kinderen-kaart, in gewone taal.
   const [opslagInfoOpen, setOpslagInfoOpen] = useState(false);
-  const koppelFlowRef = useRef(null);
-  const inviteNaamRef = useRef(null);
-  const gaNaarKoppelen = () => {
-    setKinderMenuOpen(false);
-    try { track("ouder_kindmenu_koppelen", { al_gekoppeld: children.length }); } catch { /* */ }
-    koppelFlowRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-    setTimeout(() => { try { inviteNaamRef.current?.focus(); } catch { /* */ } }, 400);
-  };
+  const koppelFlowRef = useRef(null); // scroll-target = de koppel-kaarten
+  const inviteNaamRef = useRef(null); // focus bij "voeg kind toe"
   const [childScores, setChildScores] = useState([]);
   const [citoScores, setCitoScores] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -119,27 +129,58 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // Pro-meting (Mark 2026-06-06): ouder opent het inzicht-dashboard.
   useEffect(() => { trackProUse("parent-dashboard"); }, []);
 
-  // Laad gekoppelde kinderen
+  // Laad gekoppelde kinderen + openstaande codes in één keer. Herbruikbaar
+  // gemaakt (was inline effect) zodat de poll hieronder 'm kan aanroepen: zo
+  // springt een "wacht op je kind"-kaart vanzelf om naar ✓ gekoppeld zodra het
+  // kind de code op zijn eigen toestel invoert — zonder dat de ouder ververst.
+  const laadKoppelStatus = useCallback(async () => {
+    if (!authUser) return;
+    const [linksRes, codesRes] = await Promise.all([
+      supabase.from("parent_child_links")
+        .select("*")
+        .eq("parent_user_id", authUser.id)
+        .order("created_at", { ascending: true }),
+      supabase.from("link_codes")
+        .select("id, code, child_name, expires_at, used_at, created_at")
+        .eq("parent_user_id", authUser.id)
+        .is("used_at", null)
+        .order("created_at", { ascending: true }),
+    ]);
+    const links = linksRes.data || [];
+    setChildren(links);
+    // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste
+    // die 'm heeft (leeg = niet ingesteld).
+    setPartnerEmail(links.find((c) => c.partner_email)?.partner_email || "");
+    // Alleen nog-geldige codes tonen als wacht-kaart (verlopen = weg).
+    const nu = Date.now();
+    setOpenInvites((codesRes.data || []).filter((iv) => !iv.expires_at || new Date(iv.expires_at).getTime() > nu));
+    return links;
+  }, [authUser]);
+
   useEffect(() => {
     if (!authUser) return;
-    supabase.from("parent_child_links")
-      .select("*")
-      .eq("parent_user_id", authUser.id)
-      .order("created_at", { ascending: true })
-      .then(({ data }) => {
-        setChildren(data || []);
-        // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste
-        // die 'm heeft (leeg = niet ingesteld).
-        setPartnerEmail((data || []).find((c) => c.partner_email)?.partner_email || "");
-        // Voorselectie vanaf /mijn (gezins-chip, 12 aug): lk_ouder_kind.
+    laadKoppelStatus().then((links) => {
+      // Voorselectie vanaf /mijn (gezins-chip, 12 aug): lk_ouder_kind; anders
+      // het eerste gekoppelde kind, zodat de voortgang meteen zichtbaar is.
+      // Alleen bij eerste load (selectedChild nog leeg).
+      setSelectedChild((huidig) => {
+        if (huidig || !links?.length) return huidig;
         let gewenst = null;
         try { gewenst = localStorage.getItem("lk_ouder_kind"); localStorage.removeItem("lk_ouder_kind"); } catch {}
-        if (data?.length && !selectedChild) {
-          const match = gewenst && data.find((c) => c.child_name === gewenst);
-          setSelectedChild(match ? match.child_name : data[0].child_name);
-        }
+        const match = gewenst && links.find((c) => c.child_name === gewenst);
+        return match ? match.child_name : links[0].child_name;
       });
-  }, [authUser]);
+    });
+  }, [authUser, laadKoppelStatus]);
+
+  // 🔄 Live "wacht op je kind": zolang er een openstaande code is, elke 6s
+  // opnieuw laden. Zodra het kind koppelt verdwijnt de code (used_at gezet) en
+  // verschijnt de ✓-kaart. Stopt vanzelf als er geen open codes meer zijn.
+  useEffect(() => {
+    if (openInvites.length === 0) return;
+    const t = setInterval(() => { laadKoppelStatus(); }, 6000);
+    return () => clearInterval(t);
+  }, [openInvites.length, laadKoppelStatus]);
 
   // Privacy: alleen scores tonen voor kinderen waarvan de koppeling
   // bevestigd is. parent_child_links.verified moet expliciet TRUE zijn —
@@ -324,37 +365,57 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     setInviteSent(false);
     setCopied(false);
     setLoading(false);
+    // Sluit de "voeg kind toe"-modus en herlaad — de verse code verschijnt nu
+    // als "wacht op je kind"-kaart met deelknoppen + teller.
+    setAddingSlot(false);
+    setInviteChildName("");
+    laadKoppelStatus();
+    try { track("ouder_koppelcode_gemaakt", {}); } catch { /* */ }
   };
 
-  const sendWhatsApp = () => {
-    // Code op een eigen regel + plat (geen *bold*) → makkelijk te selecteren
-    // en te kopiëren in WhatsApp (Mark 14 aug).
-    const msg = encodeURIComponent(`Hoi! Open ${BRAND.name} (${BRAND.domain}) en voer deze koppelcode in bij 'Koppel met ouder':\n\n${inviteCode}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
+  // Deel-helpers werken nu per code (elke wacht-kaart heeft z'n eigen code),
+  // i.p.v. één globale inviteCode. Zelfde teksten als voorheen (Mark 14 aug):
+  // code op eigen regel, plat, makkelijk over te typen vanuit WhatsApp.
+  const sendWhatsApp = (code, naam) => {
+    const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
+    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}) en voer deze koppelcode in bij 'Koppel met ouder':\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
-    setInviteSent(true);
+    try { track("ouder_koppelcode_deel", { via: "whatsapp" }); } catch { /* */ }
   };
 
-  // Koppelcode per e-mail (Mark 14 aug): zelfde route-gedachte als WhatsApp —
-  // opent de eigen mail-app met de code voorgevuld; de ouder kiest de
-  // ontvanger (bv. het e-mailadres van het kind). Geen server/Resend nodig.
-  const sendEmailCode = () => {
+  // Koppelcode per e-mail: opent de eigen mail-app met de code voorgevuld; de
+  // ouder kiest de ontvanger. Geen server/Resend nodig.
+  const sendEmailCode = (code) => {
     const subject = encodeURIComponent(`Koppelcode voor ${BRAND.name}`);
     const body = encodeURIComponent(
-      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) en voer de koppelcode ${inviteCode} in bij 'Koppel met ouder'. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
+      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) en voer de koppelcode ${code} in bij 'Koppel met ouder'. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
     );
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
-    setInviteSent(true);
+    try { track("ouder_koppelcode_deel", { via: "mail" }); } catch { /* */ }
   };
 
-  // Kopieer-knop (Mark 14 aug): code naar het klembord, zodat je 'm overal kunt
-  // plakken. Clipboard kan geweigerd worden (http/oude browser) — dan blijft de
-  // code groot in beeld om over te typen.
-  const copyCode = async () => {
+  // Kopieer naar klembord. Kan geweigerd worden (http/oude browser) — dan blijft
+  // de code groot in beeld om over te typen.
+  const copyCode = async (code) => {
     try {
-      await navigator.clipboard.writeText(inviteCode);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      await navigator.clipboard.writeText(code);
+      setCopiedCode(code);
+      setTimeout(() => setCopiedCode(""), 2000);
     } catch { /* clipboard geweigerd — code staat groot in beeld */ }
+  };
+
+  // Uren tot verval (voor de "nog 47 uur geldig"-teller op de wacht-kaart).
+  const urenTot = (iso) => {
+    if (!iso) return null;
+    const ms = new Date(iso).getTime() - Date.now();
+    if (!Number.isFinite(ms)) return null;
+    return Math.max(0, Math.round(ms / 3600000));
+  };
+
+  // Een openstaande code intrekken (kind heeft 'm niet gebruikt / typefout).
+  const trekCodeIn = async (id) => {
+    setOpenInvites((prev) => prev.filter((iv) => iv.id !== id));
+    await supabase.from("link_codes").delete().eq("id", id);
   };
 
   // Statistieken berekenen. Alleen rijen met een geldig (eindig) percentage
@@ -406,6 +467,18 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       </div>
     );
   }
+
+  // 🔗 Slot-model: elke "plek" is óf een gekoppeld/te-bevestigen kind
+  // (parent_child_links) óf een openstaande code (link_codes = wacht op kind).
+  // Een openstaande code waarvan het kind inmiddels koppelde (zelfde naam in
+  // children) tonen we niet dubbel. Rest = lege plekken tot MAX_KINDEREN.
+  const gekoppeldeNamen = new Set(children.map((c) => (c.child_name || "").trim().toLowerCase()));
+  const wachtInvites = openInvites.filter((iv) => !gekoppeldeNamen.has((iv.child_name || "").trim().toLowerCase()));
+  const slots = [
+    ...children.map((c) => ({ key: `k-${c.id}`, type: c.verified ? "gekoppeld" : "bevestigen", kind: c })),
+    ...wachtInvites.map((iv) => ({ key: `w-${iv.id}`, type: "wacht", invite: iv })),
+  ];
+  const vrijePlekken = Math.max(0, MAX_KINDEREN - slots.length);
 
   return (
     <div style={{ padding: embedded ? 0 : "16px 20px 48px", maxWidth: embedded ? "none" : 480, margin: embedded ? 0 : "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
@@ -540,124 +613,144 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
 
       {/* Kinderen koppelen */}
       <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
-        {/* Kop = dropdown (Mark 27 aug): wisselen tussen kinderen + lege
-            plekken direct invullen. */}
-        <button
-          onClick={() => { setKinderMenuOpen(!kinderMenuOpen); try { track("ouder_kindmenu_open", {}); } catch { /* */ } }}
-          aria-expanded={kinderMenuOpen}
-          title="Tik om te wisselen of een kind toe te voegen"
-          style={{
-            display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 12,
-            padding: 0, border: "none", background: "none", cursor: "pointer",
-            fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)",
-          }}
-        >
-          👶 Mijn kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""} {kinderMenuOpen ? "▴" : "▾"}
-        </button>
-        {kinderMenuOpen && (
-          <div style={{
-            margin: "0 0 12px", padding: "10px 12px", borderRadius: 12, maxWidth: 420,
-            border: "1px solid rgba(0,176,255,0.3)", background: "rgba(0,176,255,0.05)",
-            display: "flex", flexDirection: "column", gap: 6,
-          }}>
-            {children.map((c) => (
-              <button
-                key={c.id}
-                onClick={() => { setSelectedChild(c.child_name); setKinderMenuOpen(false); try { track("ouder_kindmenu_wissel", {}); } catch { /* */ } }}
-                style={{
-                  display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left",
-                  padding: "9px 12px", borderRadius: 10, cursor: "pointer",
-                  border: selectedChild === c.child_name ? "1px solid rgba(0,176,255,0.5)" : "1px solid rgba(255,255,255,0.12)",
-                  background: selectedChild === c.child_name ? "rgba(0,176,255,0.15)" : "rgba(255,255,255,0.04)",
-                  color: selectedChild === c.child_name ? "#00b0ff" : "var(--color-text, #e8edf5)",
-                  fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700,
-                }}
-              >
-                👦 {c.child_name}
-                {selectedChild === c.child_name && <span style={{ fontSize: 11, fontWeight: 700 }}>← je kijkt hiernaar</span>}
-                {!c.verified && <span style={{ fontSize: 11, color: "#ffb74d", fontWeight: 700 }}>🔐 niet bevestigd</span>}
-              </button>
-            ))}
-            {/* Lege plekken: per plek één regel naar het koppel-formulier. */}
-            {Array.from({ length: Math.max(0, MAX_KINDEREN - children.length) }, (_, i) => {
-              const nr = children.length + i + 1;
-              const woord = nr === 1 ? "eerste" : nr === 2 ? "tweede" : "derde";
-              return (
-                <button
-                  key={`vrij-${nr}`}
-                  onClick={gaNaarKoppelen}
-                  style={{
-                    display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left",
-                    padding: "9px 12px", borderRadius: 10, cursor: "pointer",
-                    border: "1px dashed rgba(105,240,174,0.45)", background: "rgba(0,200,83,0.06)",
-                    color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700,
-                  }}
-                >
-                  ➕ Voeg je {woord} kind toe
-                </button>
-              );
-            })}
-          </div>
-        )}
+        {/* 👶 Kop + korte uitleg. De plekken hieronder zijn elk een
+            mini-stappenplan dat meebeweegt met de status: leeg → wacht op je
+            kind → ✓ gekoppeld (Mark 29 aug — koppelen als ruggengraat). De
+            per-kind-acties (weekmail/klaarzetten/verwijderen) zitten nu ín de
+            gekoppelde kaart; dit verving de dropdown-lijst van 27 aug. */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.85)" }}>
+          👶 Mijn kinderen{slots.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}
+        </div>
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 12, lineHeight: 1.5 }}>
+          Koppel tot {MAX_KINDEREN} kinderen — elk met een eigen code. Je volgt zo per kind hoe het gaat richting de Doorstroomtoets.
+        </div>
 
-        {/* Bestaande kinderen — mét instellingen per kind (12 aug):
-            weekrapport aan/uit + koppeling verwijderen (met bevestiging). */}
-        {children.map(c => {
-          const mailAan = c.weekmail !== false;
-          return (
-          <div key={c.id} onClick={() => setSelectedChild(c.child_name)} style={{
-            display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 6,
-            padding: "9px 12px", borderRadius: 10, marginBottom: 6, cursor: "pointer",
-            background: selectedChild === c.child_name ? "rgba(0,176,255,0.15)" : "rgba(255,255,255,0.04)",
-            border: selectedChild === c.child_name ? "1px solid rgba(0,176,255,0.35)" : "1px solid rgba(255,255,255,0.07)",
-          }}>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 15, color: selectedChild === c.child_name ? "#00b0ff" : "rgba(255,255,255,0.7)", display: "flex", alignItems: "center", gap: 8 }}>
-              👦 {c.child_name}
-              {!c.verified && (
-                <span title="Wacht op bevestiging van je kind in de app" style={{ fontSize: 11, color: "#ffb74d", fontWeight: 700 }}>
-                  🔐 niet bevestigd
-                </span>
-              )}
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              {/* 💛 Klaarzet-modus (Mark 15 aug): blader door de app en zet
-                  lessen klaar voor dit kind. Alleen bij een bevestigde
-                  koppeling — anders ziet het kind het toch niet. */}
-              {onKlaarzetten && c.verified && (
-                <button
-                  onClick={e => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }}
-                  title={`Blader door de app en zet lessen klaar voor ${c.child_name}`}
-                  style={{
-                    borderRadius: 999, padding: "4px 10px", cursor: "pointer",
-                    border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)",
-                    color: "#ff9fb2", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700,
-                  }}
-                >
-                  💛 zet lessen klaar
-                </button>
-              )}
-              <button
-                onClick={e => { e.stopPropagation(); toggleWeekmail(c); }}
-                aria-pressed={mailAan}
-                title={mailAan ? "Elke maandag het weekrapport voor dit kind in je mail — klik om uit te zetten" : "Weekrapport voor dit kind staat uit — klik om aan te zetten"}
-                style={{
-                  borderRadius: 999, padding: "4px 10px", cursor: "pointer",
-                  border: mailAan ? "1px solid rgba(105,240,174,0.5)" : "1px solid rgba(255,255,255,0.2)",
-                  background: mailAan ? "rgba(0,200,83,0.14)" : "rgba(255,255,255,0.05)",
-                  color: mailAan ? "#69f0ae" : "rgba(255,255,255,0.45)",
-                  fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700,
-                }}
-              >
-                📩 weekmail {mailAan ? "aan" : "uit"}
+        <div ref={koppelFlowRef} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 12 }}>
+          {slots.map((slot) => {
+            // ── ✓ GEKOPPELD ──────────────────────────────────────────────
+            if (slot.type === "gekoppeld") {
+              const c = slot.kind;
+              const isSel = selectedChild === c.child_name;
+              const mailAan = c.weekmail !== false;
+              const pill = (extra) => ({ borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, ...extra });
+              return (
+                <div key={slot.key} onClick={() => setSelectedChild(c.child_name)} style={{
+                  borderRadius: 14, padding: "13px 15px", cursor: "pointer",
+                  border: isSel ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(105,240,174,0.28)",
+                  background: isSel ? "rgba(105,240,174,0.12)" : "rgba(105,240,174,0.05)",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#69f0ae", display: "flex", alignItems: "center", gap: 8 }}>
+                      👦 {c.child_name} <span style={{ fontSize: 12.5 }}>✓ gekoppeld</span>
+                    </span>
+                    <button onClick={(e) => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
+                  </div>
+                  <ProgressBar stap={3} kleur="#69f0ae" />
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", margin: "8px 0 10px", lineHeight: 1.5 }}>
+                    {isSel ? "Je voortgang staat hieronder." : "Tik om de voortgang te bekijken."}
+                  </div>
+                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                    {onKlaarzetten && (
+                      <button onClick={(e) => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }} title={`Blader door de app en zet lessen klaar voor ${c.child_name}`} style={pill({ border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2" })}>
+                        💛 zet lessen klaar
+                      </button>
+                    )}
+                    <button onClick={(e) => { e.stopPropagation(); toggleWeekmail(c); }} aria-pressed={mailAan} title={mailAan ? "Elke maandag het weekrapport in je mail — klik om uit te zetten" : "Weekrapport staat uit — klik om aan te zetten"} style={pill(mailAan ? { border: "1px solid rgba(105,240,174,0.5)", background: "rgba(0,200,83,0.14)", color: "#69f0ae" } : { border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)" })}>
+                      📩 weekmail {mailAan ? "aan" : "uit"}
+                    </button>
+                  </div>
+                </div>
+              );
+            }
+            // ── 🔐 BIJNA KLAAR (code ingevoerd, nog te bevestigen) ────────
+            if (slot.type === "bevestigen") {
+              const c = slot.kind;
+              return (
+                <div key={slot.key} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(255,183,77,0.4)", background: "rgba(255,183,77,0.07)" }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ffb74d", display: "flex", alignItems: "center", gap: 8 }}>👦 {c.child_name} <span style={{ fontSize: 12.5 }}>bijna klaar</span></span>
+                    <button onClick={() => removeChild(c.id)} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
+                  </div>
+                  <ProgressBar stap={2} kleur="#ffb74d" />
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", marginTop: 8, lineHeight: 1.5 }}>
+                    {c.child_name} moet de koppeling nog even zelf bevestigen in de app — daar op <strong>"Ja, dit is mijn ouder of verzorger"</strong> tikken. Daarna zie je meteen de voortgang.
+                  </div>
+                </div>
+              );
+            }
+            // ── ⏳ WACHT OP JE KIND (openstaande code) ────────────────────
+            const iv = slot.invite;
+            const uren = urenTot(iv.expires_at);
+            const isCopied = copiedCode === iv.code;
+            const deelKnop = (extra) => ({ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, ...extra });
+            return (
+              <div key={slot.key} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.06)" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#00b0ff", display: "flex", alignItems: "center", gap: 8 }}>👦 {iv.child_name} <span style={{ fontSize: 12.5 }}>koppelen loopt…</span></span>
+                  <button onClick={() => trekCodeIn(iv.id)} title="Code intrekken" aria-label="Code intrekken" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
+                </div>
+                <ProgressBar stap={2} kleur="#00b0ff" />
+                <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 9 }}>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "#69f0ae", fontWeight: 700 }}>✓ Stap 1 — code gemaakt</div>
+                  <div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "var(--color-text-strong)", fontWeight: 700, marginBottom: 4 }}>➤ Stap 2 — stuur de code naar {iv.child_name}</div>
+                    <div style={{ textAlign: "center", padding: "4px 0 8px" }}>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
+                      {uren !== null && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>nog {uren} uur geldig</div>}
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      <button onClick={() => sendWhatsApp(iv.code, iv.child_name)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>💬 WhatsApp</button>
+                      <button onClick={() => sendEmailCode(iv.code)} style={deelKnop({ border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff" })}>✉️ E-mail</button>
+                      <button onClick={() => copyCode(iv.code)} style={deelKnop({ border: "1px solid rgba(255,255,255,0.2)", background: isCopied ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: isCopied ? "#69f0ae" : "rgba(255,255,255,0.75)" })}>{isCopied ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
+                    </div>
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>○ Stap 3 — {iv.child_name} opent de app en typt de code in bij <strong>Koppel met ouder</strong></div>
+                </div>
+                <div style={{ marginTop: 10, padding: "8px 10px", borderRadius: 9, background: "rgba(0,176,255,0.08)", border: "1px solid rgba(0,176,255,0.2)", fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+                  ⏳ We wachten tot {iv.child_name} de code invoert — deze kaart springt <strong>vanzelf</strong> op ✓ zodra het gelukt is.
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Lege plekken → "voeg kind toe"; de eerste klapt open als stap-1-formulier. */}
+          {Array.from({ length: vrijePlekken }, (_, i) => {
+            const nr = slots.length + i + 1;
+            const woord = nr === 1 ? "eerste" : nr === 2 ? "tweede" : "derde";
+            if (i === 0 && addingSlot) {
+              return (
+                <div key={`add-${nr}`} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.06)" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00b0ff" }}>➕ Kind toevoegen</div>
+                  <ProgressBar stap={1} kleur="#00b0ff" />
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "8px 0 10px", lineHeight: 1.5 }}>
+                    Stap 1 — vul de naam van je kind in zoals die in de app staat. Daarna maken we de code die je kunt delen.
+                  </div>
+                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <button onClick={generateInvite} disabled={loading || !inviteChildName.trim()} style={{ flex: 1, padding: "11px", borderRadius: 10, border: "none", background: loading || !inviteChildName.trim() ? "rgba(0,176,255,0.3)" : "#00b0ff", color: "#08121f", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700, cursor: loading || !inviteChildName.trim() ? "not-allowed" : "pointer" }}>{loading ? "Even…" : "Maak de code →"}</button>
+                    <button onClick={() => { setAddingSlot(false); setInviteChildName(""); }} style={{ padding: "11px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.15)", background: "none", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-body)", fontSize: 13, cursor: "pointer" }}>Annuleer</button>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <button key={`vrij-${nr}`} onClick={() => { setAddingSlot(true); setInviteChildName(""); setTimeout(() => { try { inviteNaamRef.current?.focus(); } catch { /* */ } }, 50); }} disabled={addingSlot} style={{ borderRadius: 14, padding: "16px 15px", cursor: addingSlot ? "default" : "pointer", textAlign: "left", border: "1px dashed rgba(105,240,174,0.4)", background: "rgba(0,200,83,0.05)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, opacity: addingSlot ? 0.4 : 1 }}>
+                ➕ Voeg je {woord} kind toe
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 400, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>In 3 stappen — duurt een minuut.</div>
               </button>
-              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
-            </span>
-          </div>
-          );
-        })}
+            );
+          })}
+
+          {slots.length >= MAX_KINDEREN && (
+            <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+              👨‍👩‍👧 Je hebt het maximum van {MAX_KINDEREN} kinderen — genoeg voor de meeste gezinnen. Meer nodig? Laat het weten via <em>Tips aan maker</em>.
+            </div>
+          )}
+        </div>
+
         {children.length > 0 && (
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "2px 2px 8px", lineHeight: 1.5 }}>
-            📩 Elke maandag krijg je per kind een weekrapport in je mail — zet 'm hierboven per kind aan of uit.
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "0 2px 8px", lineHeight: 1.5 }}>
+            📩 Elke maandag krijg je per gekoppeld kind een weekrapport in je mail — zet 'm per kaart aan of uit.
           </div>
         )}
 
@@ -775,100 +868,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             👨‍👩‍👧 <strong style={{ color: "#00b0ff" }}>Jullie oefenen samen</strong> — {children.map((c) => c.child_name).join(", ")}. Elk in z'n eigen tempo; geen wedstrijdje tussen broers of zussen.
           </div>
         )}
-
-        {/* Koppel je kind — alleen de veilige koppelcode-route (WhatsApp/e-mail/
-            kopiëren). De oude "naam invullen"-route is verwijderd: door de RLS-
-            policy (auth.uid() = parent_user_id) kon het kind die koppeling nooit
-            bevestigen → 100% dode flow (diagnose 2026-06-24). */}
-        {children.length === 0 && (
-          <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.10)", padding: "13px 15px", marginBottom: 12, marginTop: 4 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, color: "#00b0ff", marginBottom: 4 }}>
-              📊 Koppel je kind en zie de voortgang
-            </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
-              Maak een koppelcode aan en stuur 'm via WhatsApp of e-mail. Je kind voert 'm
-              één keer in — daarna zie je per vak hoe het gaat richting de Doorstroomtoets.
-            </div>
-          </div>
-        )}
-
-        {/* Koppelcode-flow (WhatsApp / e-mail / kopiëren) */}
-        <div ref={koppelFlowRef} style={{ marginTop: children.length ? 10 : 0 }}>
-            {children.length >= MAX_KINDEREN ? (
-              <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-                👨‍👩‍👧 Je hebt het maximum van {MAX_KINDEREN} kinderen gekoppeld — genoeg voor de meeste gezinnen. Meer nodig? Laat het ons weten via <em>Tips aan maker</em>.
-              </div>
-            ) : !inviteCode ? (
-              <>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10, lineHeight: 1.5 }}>
-                  Je kind opent de app op zijn/haar telefoon en voert de code in. Je ontvangt daarna automatisch de voortgang.
-                </div>
-                {/* Naam-veld toegevoegd 2026-05-18 (bug-fix): link_codes.child_name
-                    is NOT NULL — ouder geeft hier de naam-in-app van het kind. */}
-                <input
-                  ref={inviteNaamRef}
-                  value={inviteChildName}
-                  onChange={(e) => setInviteChildName(e.target.value)}
-                  placeholder="Naam van je kind (zoals in de app)"
-                  style={{
-                    width: "100%",
-                    padding: "10px 12px",
-                    marginBottom: 10,
-                    borderRadius: 10,
-                    border: "1px solid rgba(255,255,255,0.18)",
-                    background: "rgba(255,255,255,0.06)",
-                    color: "var(--color-text-strong)",
-                    fontFamily: "var(--font-body)",
-                    fontSize: 14,
-                    outline: "none",
-                    boxSizing: "border-box",
-                  }}
-                />
-                <button
-                  onClick={generateInvite}
-                  disabled={loading || !inviteChildName.trim()}
-                  style={{
-                    width: "100%",
-                    padding: "11px",
-                    borderRadius: 10,
-                    border: "none",
-                    background: loading || !inviteChildName.trim() ? "rgba(37,211,102,0.30)" : "#25D366",
-                    color: "var(--color-text-strong)",
-                    fontFamily: "var(--font-display)",
-                    fontSize: 15,
-                    fontWeight: 700,
-                    cursor: loading || !inviteChildName.trim() ? "not-allowed" : "pointer",
-                  }}
-                >
-                  {loading ? "Genereren..." : "📲 Genereer uitnodigingscode"}
-                </button>
-              </>
-            ) : (
-              <div>
-                <div style={{ textAlign: "center", padding: "12px 0 8px" }}>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 4 }}>Koppelcode (48 uur geldig)</div>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 36, fontWeight: 700, color: "#00b0ff", letterSpacing: 6 }}>{inviteCode}</div>
-                </div>
-                <button onClick={copyCode} style={{ width: "100%", padding: "10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: copied ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copied ? "#69f0ae" : "rgba(255,255,255,0.75)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-                  <span style={{ fontSize: 16 }}>{copied ? "✓" : "📋"}</span> {copied ? "Gekopieerd" : "Kopieer code"}
-                </button>
-                <button onClick={sendWhatsApp} style={{ width: "100%", padding: "12px", borderRadius: 10, border: "none", background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer", marginTop: 8, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-                  <span style={{ fontSize: 18 }}>💬</span> Stuur via WhatsApp
-                </button>
-                <button onClick={sendEmailCode} style={{ width: "100%", padding: "11px", borderRadius: 10, border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700, cursor: "pointer", marginTop: 8, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-                  <span style={{ fontSize: 17 }}>✉️</span> Stuur via e-mail
-                </button>
-                {inviteSent && (
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--color-brand-primary-100)", textAlign: "center", marginTop: 8 }}>
-                    ✓ Verstuurd! Je kind voert de code in bij 'Koppel met ouder'.
-                  </div>
-                )}
-                <button onClick={() => { setInviteCode(""); setInviteSent(false); setInviteChildName(""); setCopied(false); }} style={{ width: "100%", marginTop: 8, padding: "7px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", background: "none", color: "rgba(255,255,255,0.35)", fontFamily: "var(--font-body)", fontSize: 12, cursor: "pointer" }}>
-                  Nieuwe code genereren
-                </button>
-              </div>
-            )}
-          </div>
 
         {/* 🔒 Wat slaan we op + hoe beveiligd (Mark 27 aug). Feiten
             geverifieerd: Supabase-project eu-central-1 (Frankfurt), RLS op
