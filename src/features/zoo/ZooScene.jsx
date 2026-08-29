@@ -1581,13 +1581,18 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // pad-tegel kruist mogen bots oversteken — tenzij de trein er bijna is (dan
   // telt de overweg tóch als muur en wachten ze netjes).
   const overwegen = useMemo(() => {
-    const pts = railRoute?.pts; if (!pts) return [];
+    const pts = railRoute?.pts; if (!pts || pts.length < 2) return [];
     const pads = instancedProps.paden || []; if (!pads.length) return [];
+    const heeftPad = (x, z) => pads.some((pd) => Math.abs(pd.x - x) < 1.2 && Math.abs(pd.z - z) < 1.2);
     const out = [];
-    for (const p of pts) {
-      for (const pad of pads) {
-        if (Math.abs(p.x - pad.x) < 1.6 && Math.abs(p.z - pad.z) < 1.6) { out.push([p.x, p.z]); break; }
-      }
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i];
+      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)];
+      let dx = b.x - a.x, dz = b.z - a.z; const L = Math.hypot(dx, dz) || 1; dx /= L; dz /= L;
+      const px = -dz, pz = dx; // loodrecht op het spoor
+      // Alleen een échte overweg: pad-tegels aan BEIDE kanten van het spoor.
+      // Een pad dat er alleen langs loopt telt dus niet (anders lekt het spoor).
+      if (heeftPad(p.x + px * 2, p.z + pz * 2) && heeftPad(p.x - px * 2, p.z - pz * 2)) out.push([p.x, p.z]);
     }
     return out;
   }, [railRoute, instancedProps]);

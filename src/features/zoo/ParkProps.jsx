@@ -979,8 +979,13 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         const zep = zeppelinRef?.current;
         let koosZep = false;
         if (zep && s.zepSlot == null && !s.boarded && zep.aanBoord < zep.cap && zep.bezet.some((b) => !b) && Math.random() < 0.14) {
+          const solid = solidRef.current;
           for (let k = zep.bezet.length - 1; k >= 0; k--) {
-            if (!zep.bezet[k]) { zep.bezet[k] = s; s.zepSlot = k; s.intent = "zeppelin"; s.tx = zep.slots[k][0]; s.tz = zep.slots[k][1]; koosZep = true; break; }
+            if (!zep.bezet[k]) {
+              const sx = zep.slots[k][0], sz = zep.slots[k][1];
+              if (solid && solid(sx, sz)) continue; // rij-plek op spoor/obstakel → sla over
+              zep.bezet[k] = s; s.zepSlot = k; s.intent = "zeppelin"; s.tx = sx; s.tz = sz; koosZep = true; break;
+            }
           }
         }
         if (!koosZep) {
@@ -1135,6 +1140,14 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           s.stuck = (s.stuck || 0) + dt;
           if (s.stuck > 0.35) {
             s.stuck = 0;
+            // 🎈 Vastgelopen op weg naar de zeppelin-rij (rij-plek achter een
+            // obstakel of spoor) → rij-plek opgeven en iets anders kiezen, i.p.v.
+            // eindeloos tegen de rail blijven drukken (Mark 29 aug).
+            if (s.intent === "zeppelin" || s.zepSlot != null) {
+              const zepA = zeppelinRef?.current;
+              if (zepA && s.zepSlot != null) zepA.bezet[s.zepSlot] = null;
+              s.zepSlot = null; s.intent = null; s.instappen = false;
+            }
             // Tel hek-botsingen binnen een venster. Een vrije bezoeker raakt zelden
             // een hek; een opgesloten bezoeker botst telkens tegen de omheining.
             s.penHits = (s.penHits || 0) + 1; s.penTimer = 7;
