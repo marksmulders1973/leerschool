@@ -912,10 +912,15 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
       let [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const off = POORT_AFSTAND[it.assetId];
       if (off) { const hoek = it.rotation || 0; x -= Math.sin(hoek) * off; z -= Math.cos(hoek) * off; }
-      // Vrijstaande poorten (off) zijn ~3 m breed → ruimere doorloop-zone (~2 m
-      // rond het midden), anders mis je 'm als je iets uit het midden loopt.
-      // Standaard blijft ~1,5 m: je moet er echt doorheen lopen.
-      const lim = off ? 4.0 : 2.4;
+      // Triggerzone schaalt mee met de footprint. Grote landmarks (bv. het
+      // weerstation, cells 3) zijn SOLIDE — je wordt op de rand al tegengehouden
+      // en bereikt het midden nooit. Met een vaste kleine zone vuurt de poort
+      // dan NOOIT (Mark 29 aug: "door de poort bij het weer gebeurt niets, ik
+      // kan er niet door"). Daarom: straal = footprint-rand + loopbuffer, zodat
+      // je 'm activeert door ernaartoe te lopen. Vrijstaande poorten (off) ~2 m.
+      const cells = off ? 1 : (getAsset(it.assetId)?.cells || 1);
+      const straal = off ? 2.0 : Math.floor(cells / 2) * CELL + 1.8;
+      const lim = straal * straal;
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < lim && d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
     }
