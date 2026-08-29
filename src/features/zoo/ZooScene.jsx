@@ -1561,18 +1561,36 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // voor bezoekers telt het spoor wél als muur — ze glijden er langs (de
   // botsings-logica glijdt langs muren) maar gaan er niet op wandelen. Alleen
   // de speler mag oversteken (rails beloopbaar sinds v377, wandelroute).
-  const railCellen = useMemo(() => {
-    const s = new Set();
-    placedItems.forEach((it) => {
-      if (it && it.assetId === "rail" && Array.isArray(it.cell)) s.add(cellKey(it.cell[0], it.cell[1]));
-    });
-    return s;
-  }, [placedItems]);
+  //
+  // Mark 29 aug: "bots lopen weer tegen de spoorlijn". De vakjes-blokkade
+  // hieronder (per rail-cel) dekte rechte stukken, maar lekte in de BOCHTEN —
+  // de trein rijdt op een vloeiende curve die buiten de rail-vakjes uitbuigt —
+  // en had geen marge, dus een door de menigte geduwde bot belandde net náást
+  // een vakje op de rails. Nu blokkeren we op AFSTAND-TOT-DE-TREIN-CURVE
+  // (railRoute.pts), met een kleine buffer. Zo zitten ook de bochten dicht.
+  const railSegs = useMemo(() => {
+    const pts = railRoute?.pts;
+    if (!pts || pts.length < 2) return null;
+    const segs = [];
+    for (let i = 0; i < pts.length - 1; i++) segs.push([pts[i].x, pts[i].z, pts[i + 1].x, pts[i + 1].z]);
+    if (railRoute.loop) segs.push([pts[pts.length - 1].x, pts[pts.length - 1].z, pts[0].x, pts[0].z]);
+    return segs;
+  }, [railRoute]);
+  const RAIL_MARGE2 = 0.9 * 0.9; // (halve spoorbreedte + loopbuffer)², wereld-units²
   const isSolidBots = useCallback((x, z) => {
     if (isSolid(x, z)) return true;
-    const [gx, gz] = snapToCell(x, z, 1);
-    return railCellen.has(cellKey(gx, gz));
-  }, [isSolid, railCellen]);
+    if (railSegs) {
+      for (const [ax, az, bx, bz] of railSegs) {
+        const dx = bx - ax, dz = bz - az;
+        const len2 = dx * dx + dz * dz || 1;
+        let t = ((x - ax) * dx + (z - az) * dz) / len2;
+        t = t < 0 ? 0 : t > 1 ? 1 : t;
+        const ex = x - (ax + t * dx), ez = z - (az + t * dz);
+        if (ex * ex + ez * ez < RAIL_MARGE2) return true; // te dicht op het spoor
+      }
+    }
+    return false;
+  }, [isSolid, railSegs]);
 
   // Voor de camera telt HOOGTE mee: over lage hekjes/bankjes kijkt de camera
   // gewoon heen; alleen hoge dingen (gebouwen, attracties) duwen de arm korter.
