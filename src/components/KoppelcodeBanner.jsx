@@ -48,7 +48,7 @@ export default function KoppelcodeBanner({ userName }) {
       });
       if (error) throw error;
       if (data?.ok) {
-        setMsg({ ok: true, rol: data.rol || "ouder" });
+        setMsg({ ok: true, rol: data.rol || "ouder", vanWie: (data.van_wie || "").trim() });
         setCode("");
       } else if (data?.error === "code_invalid_or_expired") {
         setMsg({ ok: false, text: "Deze code werkt niet meer. Vraag thuis (of je juf/meester) om een nieuwe — die maak je zo weer aan." });
@@ -64,7 +64,10 @@ export default function KoppelcodeBanner({ userName }) {
   // 🎉 Feestelijke eindstaat (stap 3 = klaar). Cadeau-framing; verwijst naar de
   // plek waar het klaargezette werk straks verschijnt op de eigen pagina.
   if (msg?.ok) {
-    const vanWie = msg.rol === "leraar" ? "je juf of meester" : "iemand thuis";
+    // "van wie" = optioneel label dat de ouder invulde (bv. "mama"). Leeg →
+    // val terug op "thuis" (voogd/pleeg-veilig). Leraar-koppeling = school.
+    const metWie = msg.rol === "leraar" ? "school" : (msg.vanWie || "thuis");
+    const actor = msg.rol === "leraar" ? "Je juf of meester" : (msg.vanWie || "Iemand thuis");
     return (
       <div style={{
         marginBottom: 10,
@@ -76,12 +79,10 @@ export default function KoppelcodeBanner({ userName }) {
       }}>
         <div style={{ fontSize: 34, lineHeight: 1 }} aria-hidden="true">🎉</div>
         <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800, color: "var(--color-brand-primary-100)", marginTop: 6 }}>
-          Gelukt! Je bent gekoppeld{msg.rol === "leraar" ? " met school" : " met thuis"}.
+          Gelukt! Je bent gekoppeld met {metWie}.
         </div>
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.75)", marginTop: 6, lineHeight: 1.5 }}>
-          {msg.rol === "leraar"
-            ? <>Je juf of meester kan nu leuke lessen voor je klaarzetten. Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.</>
-            : <>{vanWie} kan nu leuke lessen voor je klaarzetten 🎁 Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.</>}
+          {actor} kan nu leuke lessen voor je klaarzetten 🎁 Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.
         </div>
       </div>
     );

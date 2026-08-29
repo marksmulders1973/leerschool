@@ -118,6 +118,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
   // naam-in-app van kind opgeven vóór code-generatie.
   const [inviteChildName, setInviteChildName] = useState("");
+  // Optioneel "van wie" (Mark 30 aug): het label dat het kind ziet bij een
+  // geslaagde koppeling ("gekoppeld met mama"). Leeg = "gekoppeld met thuis".
+  const [inviteVanWie, setInviteVanWie] = useState("");
   // Partner-mail (Mark 14 aug): tweede adres (partner/verzorger) dat het
   // wekelijkse rapport óók ontvangt. Eén adres per gezín — op alle koppelingen
   // van deze ouder gelijk gehouden (kolom parent_child_links.partner_email).
@@ -353,6 +356,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     // verving door explicit-log zodat insert-fails niet meer onzichtbaar zijn.
     const { error } = await supabase.from("link_codes").insert({
       code, parent_user_id: authUser.id, child_name: childName, expires_at: expires,
+      van_wie: inviteVanWie.trim() || null,
     });
     if (error) {
       // eslint-disable-next-line no-console
@@ -369,8 +373,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     // als "wacht op je kind"-kaart met deelknoppen + teller.
     setAddingSlot(false);
     setInviteChildName("");
+    setInviteVanWie("");
     laadKoppelStatus();
-    try { track("ouder_koppelcode_gemaakt", {}); } catch { /* */ }
+    try { track("ouder_koppelcode_gemaakt", { met_naam: !!inviteVanWie.trim() }); } catch { /* */ }
   };
 
   // Deel-helpers werken nu per code (elke wacht-kaart heeft z'n eigen code),
@@ -739,10 +744,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "8px 0 10px", lineHeight: 1.5 }}>
                     Stap 1 — vul de naam van je kind in zoals die in de app staat. Daarna maken we de code die je kunt delen.
                   </div>
-                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input value={inviteVanWie} onChange={(e) => setInviteVanWie(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Van wie is de code? bv. mama (optioneel)" maxLength={20} style={{ width: "100%", padding: "10px 12px", marginBottom: 4, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 10, lineHeight: 1.4 }}>
+                    Je kind ziet dan “gekoppeld met {inviteVanWie.trim() || "mama"}”. Laat leeg → “gekoppeld met thuis”.
+                  </div>
                   <div style={{ display: "flex", gap: 8 }}>
                     <button onClick={generateInvite} disabled={loading || !inviteChildName.trim()} style={{ flex: 1, padding: "11px", borderRadius: 10, border: "none", background: loading || !inviteChildName.trim() ? "rgba(0,176,255,0.3)" : "#00b0ff", color: "#08121f", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700, cursor: loading || !inviteChildName.trim() ? "not-allowed" : "pointer" }}>{loading ? "Even…" : "Maak de code →"}</button>
-                    <button onClick={() => { setAddingSlot(false); setInviteChildName(""); }} style={{ padding: "11px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.15)", background: "none", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-body)", fontSize: 13, cursor: "pointer" }}>Annuleer</button>
+                    <button onClick={() => { setAddingSlot(false); setInviteChildName(""); setInviteVanWie(""); }} style={{ padding: "11px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.15)", background: "none", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-body)", fontSize: 13, cursor: "pointer" }}>Annuleer</button>
                   </div>
                 </div>
               );
