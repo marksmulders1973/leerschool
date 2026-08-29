@@ -383,6 +383,15 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     try { track("ouder_koppelcode_deel", { via: "whatsapp" }); } catch { /* */ }
   };
 
+  // 🔔 Herinnering opnieuw sturen (Mark 30 aug): zachtere toon dan de eerste
+  // keer — "je code staat nog klaar" — zodat het kind 'm alsnog invoert.
+  const stuurHerinnering = (code, naam) => {
+    const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
+    const msg = encodeURIComponent(`${hoi} Je koppelcode voor ${BRAND.name} staat nog klaar:\n\n${code}\n\nOpen de app en voer 'm in bij 'Koppel met ouder' 😊 (nog even geldig)`);
+    window.open(`https://wa.me/?text=${msg}`, "_blank");
+    try { track("ouder_koppelcode_herinnering", {}); } catch { /* */ }
+  };
+
   // Koppelcode per e-mail: opent de eigen mail-app met de code voorgevuld; de
   // ouder kiest de ontvanger. Geen server/Resend nodig.
   const sendEmailCode = (code) => {
@@ -708,6 +717,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 </div>
                 <div style={{ marginTop: 10, padding: "8px 10px", borderRadius: 9, background: "rgba(0,176,255,0.08)", border: "1px solid rgba(0,176,255,0.2)", fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
                   ⏳ We wachten tot {iv.child_name} de code invoert — deze kaart springt <strong>vanzelf</strong> op ✓ zodra het gelukt is.
+                  <div style={{ marginTop: 6 }}>
+                    <button onClick={() => stuurHerinnering(iv.code, iv.child_name)} style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+                      🔔 Nog niet gelukt? Stuur de code nog eens
+                    </button>
+                  </div>
                 </div>
               </div>
             );
