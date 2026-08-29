@@ -1582,17 +1582,23 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // telt de overweg tóch als muur en wachten ze netjes).
   const overwegen = useMemo(() => {
     const pts = railRoute?.pts; if (!pts || pts.length < 2) return [];
-    const pads = instancedProps.paden || []; if (!pads.length) return [];
+    const pads = instancedProps.paden || [];
     const heeftPad = (x, z) => pads.some((pd) => Math.abs(pd.x - x) < 1.2 && Math.abs(pd.z - z) < 1.2);
     const out = [];
     for (let i = 0; i < pts.length; i++) {
       const p = pts[i];
+      let overweg = false;
+      // 1) Échte pad-kruising: pad-tegels aan BEIDE kanten loodrecht op het spoor.
       const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)];
       let dx = b.x - a.x, dz = b.z - a.z; const L = Math.hypot(dx, dz) || 1; dx /= L; dz /= L;
-      const px = -dz, pz = dx; // loodrecht op het spoor
-      // Alleen een échte overweg: pad-tegels aan BEIDE kanten van het spoor.
-      // Een pad dat er alleen langs loopt telt dus niet (anders lekt het spoor).
-      if (heeftPad(p.x + px * 2, p.z + pz * 2) && heeftPad(p.x - px * 2, p.z - pz * 2)) out.push([p.x, p.z]);
+      const px = -dz, pz = dx;
+      if (pads.length && heeftPad(p.x + px * 2, p.z + pz * 2) && heeftPad(p.x - px * 2, p.z - pz * 2)) overweg = true;
+      // 2) Automatische overweg om de ~5 rail-tegels (~10 m). Zonder dit is het
+      //    spoor een ondoordringbare muur dwars door het park en stapelen bots
+      //    zich ertegen op (Mark 29 aug, screenshot). Zo kunnen ze altijd ergens
+      //    netjes oversteken i.p.v. vast te lopen.
+      if (i % 5 === 2) overweg = true;
+      if (overweg) out.push([p.x, p.z]);
     }
     return out;
   }, [railRoute, instancedProps]);
