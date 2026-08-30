@@ -122,3 +122,22 @@ export async function updateSchoolLogo({ userId, logoUrl }) {
       .eq("id", userId);
   } catch {}
 }
+
+/**
+ * Update de klassen die een leerkracht lesgeeft (30 aug 2026, Mark-wens:
+ * persoonlijke rol-regel "juf of meester van klas 1, 2 en 3"). Vrije-tekst-
+ * labels per klas, opgeslagen als JSON-array in profiles.teacher_classes.
+ * Strikt op eigen user_id (RLS: zelf-update, zelfde patroon als het logo).
+ */
+export async function updateTeacherClasses({ userId, classes }) {
+  if (!userId) return;
+  const lijst = Array.isArray(classes)
+    ? classes.map((c) => String(c || "").trim()).filter(Boolean).slice(0, 12)
+    : [];
+  try {
+    await supabase
+      .from("profiles")
+      .update({ teacher_classes: lijst })
+      .eq("id", userId);
+  } catch {}
+}

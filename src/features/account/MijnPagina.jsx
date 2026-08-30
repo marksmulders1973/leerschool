@@ -3,6 +3,7 @@ import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
 import Card from "../../shared/ui/Card.jsx";
 import supabase from "../../supabase.js";
+import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
 import { loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
@@ -470,6 +471,45 @@ export default function MijnPagina({
     })();
     return () => { cancel = true; };
   }, [rolKey, authUser]);
+  // 🧑‍🏫 Klassen die een leerkracht lesgeeft (Mark 30 aug: "meester van klas 1,
+  // 2 en 3"). Vrije-tekst-labels uit profiles.teacher_classes; invulveld staat
+  // in het rol-menu. Zonder klassen valt de regel terug op de rol in woorden.
+  const [teacherKlassen, setTeacherKlassen] = useState([]);
+  const [nieuweKlas, setNieuweKlas] = useState("");
+  useEffect(() => {
+    if (rolKey !== "teacher" || !authUser?.id) { setTeacherKlassen([]); return; }
+    let cancel = false;
+    (async () => {
+      try {
+        const { data } = await supabase
+          .from("profiles")
+          .select("teacher_classes")
+          .eq("id", authUser.id)
+          .maybeSingle();
+        if (cancel) return;
+        const lijst = Array.isArray(data?.teacher_classes) ? data.teacher_classes : [];
+        setTeacherKlassen(lijst.map((c) => String(c || "").trim()).filter(Boolean));
+      } catch { if (!cancel) setTeacherKlassen([]); }
+    })();
+    return () => { cancel = true; };
+  }, [rolKey, authUser]);
+  // Klas toevoegen/weghalen: lokaal bijwerken + naar Supabase wegschrijven, zodat
+  // de regel meteen klopt én cross-device blijft staan.
+  const voegKlasToe = () => {
+    const k = nieuweKlas.trim();
+    if (!k) return;
+    if (teacherKlassen.some((x) => x.toLowerCase() === k.toLowerCase())) { setNieuweKlas(""); return; }
+    const nieuw = [...teacherKlassen, k].slice(0, 12);
+    setTeacherKlassen(nieuw);
+    setNieuweKlas("");
+    if (authUser?.id) updateTeacherClasses({ userId: authUser.id, classes: nieuw });
+    try { track("mijn_rol_klas_toevoegen", {}); } catch { /* */ }
+  };
+  const haalKlasWeg = (klas) => {
+    const nieuw = teacherKlassen.filter((x) => x !== klas);
+    setTeacherKlassen(nieuw);
+    if (authUser?.id) updateTeacherClasses({ userId: authUser.id, classes: nieuw });
+  };
   // De regel die in de gouden pill komt te staan: naam + rol in woorden + wíé.
   const rolRegel = (() => {
     if (rolKey === "ouder") {
@@ -479,8 +519,8 @@ export default function MijnPagina({
       return "Ouder of verzorger";
     }
     if (rolKey === "teacher") {
-      // Klasnamen slaan we (nog) niet op → rol in woorden + naam; wordt later
-      // "meester van klas 1, 2 en 3" zodra we klassen bewaren.
+      const klassen = naamLijst(teacherKlassen);
+      if (player && klassen) return `${player} — juf of meester van ${klassen}`;
       return player ? `${player} — juf, meester of begeleider` : "Juf, meester of begeleider";
     }
     // Leerling/scholier: eigen plek, persoonlijk gemaakt met de naam.
@@ -905,6 +945,63 @@ export default function MijnPagina({
                         {ouderKinderen.length === 0 && (
                           <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5, marginTop: 6 }}>
                             Koppel je kind aan je telefoon om zijn of haar resultaten te zien.
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    {/* 🧑‍🏫 Persoonlijk maken (Mark 30 aug): welke klassen geef je
+                        les? Vrije-tekst-chips, meteen opgeslagen — de rol-regel
+                        wordt dan "juf of meester van klas 1, 2 en 3". */}
+                    {rolKey === "teacher" && (
+                      <div style={{ marginBottom: 12 }}>
+                        <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", fontWeight: 700, marginBottom: 6, fontFamily: "var(--font-display)" }}>
+                          Ik geef les aan:
+                        </div>
+                        {teacherKlassen.length > 0 && (
+                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
+                            {teacherKlassen.map((klas) => (
+                              <span key={klas} style={{
+                                display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 8px 5px 11px",
+                                borderRadius: 999, border: "1px solid rgba(129,199,132,0.45)", background: "rgba(129,199,132,0.14)",
+                                color: "#a5d6a7", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700,
+                              }}>
+                                {klas}
+                                <button
+                                  onClick={() => haalKlasWeg(klas)}
+                                  aria-label={`Haal ${klas} weg`}
+                                  style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", cursor: "pointer", fontSize: 15, lineHeight: 1, padding: 0 }}
+                                >×</button>
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                          <input
+                            value={nieuweKlas}
+                            onChange={(e) => setNieuweKlas(e.target.value)}
+                            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); voegKlasToe(); } }}
+                            placeholder="bijv. klas 1, 3A of groep 6"
+                            maxLength={24}
+                            style={{
+                              flex: 1, minWidth: 0, padding: "8px 12px", borderRadius: 10,
+                              border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.05)",
+                              color: "var(--color-text, #e8edf5)", fontFamily: "var(--font-body)", fontSize: 13,
+                            }}
+                          />
+                          <button
+                            onClick={voegKlasToe}
+                            disabled={!nieuweKlas.trim()}
+                            style={{
+                              padding: "8px 14px", borderRadius: 999, cursor: nieuweKlas.trim() ? "pointer" : "default",
+                              border: "1px solid rgba(129,199,132,0.5)", background: nieuweKlas.trim() ? "rgba(129,199,132,0.18)" : "rgba(255,255,255,0.04)",
+                              color: nieuweKlas.trim() ? "#a5d6a7" : "var(--color-text-muted, #8899aa)",
+                              fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800, whiteSpace: "nowrap",
+                            }}
+                          >+ toevoegen</button>
+                        </div>
+                        {teacherKlassen.length === 0 && (
+                          <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5, marginTop: 6 }}>
+                            Vul je klassen in, dan staat er straks "{player || "je naam"} — juf of meester van je klassen".
                           </div>
                         )}
                       </div>
