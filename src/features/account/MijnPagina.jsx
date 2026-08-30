@@ -493,7 +493,27 @@ export default function MijnPagina({
     })();
     return () => { cancel = true; };
   }, [rolKey, authUser]);
-  // Klas toevoegen/weghalen: lokaal bijwerken + naar Supabase wegschrijven, zodat
+  // Wegschrijven serialiseren: snel achter elkaar toevoegen/verwijderen zou
+  // anders overlappende updates geven waarvan de verkeerde als laatste landt.
+  // We houden de laatste gewenste lijst vast en schrijven net zo lang tot de
+  // DB die stand heeft — zo wint altijd de meest recente stand.
+  const klassenRef = useRef([]);
+  const klassenBezig = useRef(false);
+  const saveKlassen = (lijst) => {
+    klassenRef.current = lijst;
+    if (!authUser?.id || klassenBezig.current) return;
+    klassenBezig.current = true;
+    (async () => {
+      try {
+        let vorige = null;
+        while (klassenRef.current !== vorige) {
+          vorige = klassenRef.current;
+          await updateTeacherClasses({ userId: authUser.id, classes: vorige });
+        }
+      } finally { klassenBezig.current = false; }
+    })();
+  };
+  // Klas toevoegen/weghalen: lokaal bijwerken + (geserialiseerd) opslaan, zodat
   // de regel meteen klopt én cross-device blijft staan.
   const voegKlasToe = () => {
     const k = nieuweKlas.trim();
@@ -502,13 +522,13 @@ export default function MijnPagina({
     const nieuw = [...teacherKlassen, k].slice(0, 12);
     setTeacherKlassen(nieuw);
     setNieuweKlas("");
-    if (authUser?.id) updateTeacherClasses({ userId: authUser.id, classes: nieuw });
+    saveKlassen(nieuw);
     try { track("mijn_rol_klas_toevoegen", {}); } catch { /* */ }
   };
   const haalKlasWeg = (klas) => {
     const nieuw = teacherKlassen.filter((x) => x !== klas);
     setTeacherKlassen(nieuw);
-    if (authUser?.id) updateTeacherClasses({ userId: authUser.id, classes: nieuw });
+    saveKlassen(nieuw);
   };
   // De regel die in de gouden pill komt te staan: naam + rol in woorden + wíé.
   const rolRegel = (() => {
