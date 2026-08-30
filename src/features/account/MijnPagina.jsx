@@ -204,6 +204,15 @@ const ROL_KORT = {
   ouder: "ouder/voogd",
   teacher: "juf/meester",
 };
+// Namen netjes aan elkaar praten: "Brian" · "Brian en Olivia" · "Brian,
+// Olivia en Sem" (Mark 30 aug: de rol-regel moet persoonlijk worden — "Mark,
+// ouder van Brian en Olivia" — dus de kindnamen lopend in de zin zetten).
+function naamLijst(namen) {
+  const n = (namen || []).filter(Boolean);
+  if (n.length === 0) return "";
+  if (n.length === 1) return n[0];
+  return `${n.slice(0, -1).join(", ")} en ${n[n.length - 1]}`;
+}
 // Rol-menu (Mark 27 aug avond: "als je eenmaal als ouder/juf/voogd bent
 // ingelogd, is een dropdown niet handig? — direct zien wat je met die rol
 // kunt"): één uitleg-zin per rol; de actie-knoppen staan in het component
@@ -433,6 +442,49 @@ export default function MijnPagina({
       onGoCito && { emoji: "🎯", label: "Oefen in doorstroomtoets-stijl", doe: () => onGoCito() },
       onGoVoortgang && { emoji: "📊", label: "Bekijk je eigen voortgang", doe: onGoVoortgang },
     ].filter(Boolean);
+  })();
+  // 🪪 Persoonlijke rol-regel (Mark 30 aug: "onder welke rol sta ik hier nu +
+  // hoe maak ik het persoonlijk — Mark, ouder van Brian en Olivia"). Voor een
+  // ouder halen we de bevestigde koppelingen op zodat de regel de kindnamen
+  // zelf invult; zonder koppeling valt 'ie netjes terug op "ouder of verzorger".
+  const [ouderKinderen, setOuderKinderen] = useState([]);
+  useEffect(() => {
+    if (rolKey !== "ouder" || !authUser?.id) { setOuderKinderen([]); return; }
+    let cancel = false;
+    (async () => {
+      try {
+        const { data } = await supabase
+          .from("parent_child_links")
+          .select("child_name, verified")
+          .eq("parent_user_id", authUser.id)
+          .order("created_at", { ascending: true });
+        if (cancel) return;
+        // Alleen bevestigde koppelingen (verified===true) — anders zou een
+        // nog-niet-geaccepteerd kind toch in je regel staan. Dubbele namen weg.
+        const namen = [...new Set((data || [])
+          .filter((c) => c.verified === true)
+          .map((c) => (c.child_name || "").trim())
+          .filter(Boolean))];
+        setOuderKinderen(namen);
+      } catch { if (!cancel) setOuderKinderen([]); }
+    })();
+    return () => { cancel = true; };
+  }, [rolKey, authUser]);
+  // De regel die in de gouden pill komt te staan: naam + rol in woorden + wíé.
+  const rolRegel = (() => {
+    if (rolKey === "ouder") {
+      const kinderen = naamLijst(ouderKinderen);
+      if (player && kinderen) return `${player} — ouder van ${kinderen}`;
+      if (player) return `${player} — ouder of verzorger`;
+      return "Ouder of verzorger";
+    }
+    if (rolKey === "teacher") {
+      // Klasnamen slaan we (nog) niet op → rol in woorden + naam; wordt later
+      // "meester van klas 1, 2 en 3" zodra we klassen bewaren.
+      return player ? `${player} — juf, meester of begeleider` : "Juf, meester of begeleider";
+    }
+    // Leerling/scholier: eigen plek, persoonlijk gemaakt met de naam.
+    return player ? `${player} — jij leert hier zelf` : (ROL_WOORD[rolKey] || "leerling");
   })();
   const andereNamen = useMemo(() => {
     try {
@@ -809,7 +861,7 @@ export default function MijnPagina({
                     color: "#ffd54f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 800,
                   }}
                 >
-                  {rolInfo.emoji} Je bent hier als: {ROL_WOORD[rolKey] || "leerling"} {rolMenuOpen ? "▴" : "▾"}
+                  {rolInfo.emoji} {rolRegel} {rolMenuOpen ? "▴" : "▾"}
                 </button>
                 {rolMenuOpen && (
                   <div style={{
@@ -819,6 +871,44 @@ export default function MijnPagina({
                     <div style={{ fontSize: 12.5, color: "var(--color-text)", lineHeight: 1.55, marginBottom: 10 }}>
                       {ROL_UITLEG[rolKey] || ROL_UITLEG.leerling}
                     </div>
+                    {/* 👪 Persoonlijk maken (Mark 30 aug): laat zien van wíé je
+                        ouder bent — chips per bevestigd kind + koppel-actie. */}
+                    {rolKey === "ouder" && (
+                      <div style={{ marginBottom: 12 }}>
+                        <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", fontWeight: 700, marginBottom: 6, fontFamily: "var(--font-display)" }}>
+                          Ik ben ouder of verzorger van:
+                        </div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
+                          {ouderKinderen.map((naam) => (
+                            <span key={naam} style={{
+                              display: "inline-flex", alignItems: "center", gap: 5, padding: "5px 11px",
+                              borderRadius: 999, border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.12)",
+                              color: "#7fd4ff", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700,
+                            }}>👦 {naam}</span>
+                          ))}
+                          {(onOuderDashboard || onKlaarzetten) && (
+                            <button
+                              onClick={() => {
+                                setRolMenuOpen(false);
+                                try { track("mijn_rol_kind_toevoegen", {}); } catch { /* */ }
+                                if (onOuderDashboard) onOuderDashboard(); else setWeergave("ouder");
+                              }}
+                              style={{
+                                display: "inline-flex", alignItems: "center", gap: 5, padding: "5px 11px",
+                                borderRadius: 999, cursor: "pointer", border: "1px dashed rgba(255,255,255,0.3)",
+                                background: "transparent", color: "var(--color-text-muted, #8899aa)",
+                                fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700,
+                              }}
+                            >+ kind koppelen</button>
+                          )}
+                        </div>
+                        {ouderKinderen.length === 0 && (
+                          <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5, marginTop: 6 }}>
+                            Koppel je kind aan je telefoon om zijn of haar resultaten te zien.
+                          </div>
+                        )}
+                      </div>
+                    )}
                     <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                       {rolActies.map((a) => (
                         <button
