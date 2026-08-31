@@ -3,6 +3,8 @@ import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import { recordRefAnswer } from "../features/mastery/mastery.js";
+import { insertLeaderboardEntry } from "../data/repos/leaderboardRepo.js";
+import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import MdInline from "../shared/ui/MdInline.jsx";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
@@ -180,6 +182,35 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     perRef.forEach((agg) => {
       recordRefAnswer({ playerName: player, onderdeel: agg.onderdeel, ref: agg.ref, attemptsDelta: agg.attempts, correctDelta: agg.correct }).catch(() => {});
     });
+
+    // Uitslag naar het scorebord — anders zag de ouder de oefen-Doorstroomtoets
+    // nergens terug (Mark 31 aug 2026: bewaarde alleen ref_mastery + een anoniem
+    // event, maar het ouder-dashboard leest de `leaderboard`-tabel). subject:"cito"
+    // voedt het blok "Doorstroomtoets voortgang" (OuderInzicht filtert op
+    // player_name + user_id van het gekoppelde account) én telt mee in "Per vak"
+    // (label "Doorstroomtoets") en "Recente activiteit". user_id uit de sessie is
+    // nodig voor de match — daarom moet het kind ingelogd zijn op het gekoppelde
+    // account (anoniem → belandt wel op het globale bord, maar niet bij de ouder).
+    const beantwoord = answers.filter((a) => a != null).length;
+    if (beantwoord > 0) {
+      const goedTotaal = questions.reduce((acc, q, i) => acc + (answers[i] != null && answers[i] === q.answer ? 1 : 0), 0);
+      const niveau = simulatieMode ? "Hele toets" : (subjectLabel || subjectFilter || "onderdeel");
+      (async () => {
+        let uid = null;
+        try { const { data } = await supabase.auth.getUser(); uid = data?.user?.id || null; } catch { /* geen sessie → uid null */ }
+        insertLeaderboardEntry({
+          player_name: player,
+          user_id: uid,
+          subject: "cito",
+          level: niveau,
+          title: simulatieMode ? "Doorstroomtoets-simulatie" : `Doorstroomtoets ${niveau}`,
+          score: goedTotaal,
+          total: questions.length,
+          percentage: Math.round((goedTotaal / questions.length) * 100),
+          time_taken: Math.max(0, config.minutes * 60 - secondsLeft),
+        });
+      })();
+    }
   }, [mode, questions, answers, playerName]);
 
   // Drop-off-meting (Titan 2026-07-05): dagrapport toonde cito_toets_gestart 2 →
