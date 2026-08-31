@@ -67,6 +67,7 @@ export const PARTNER_NAMEN = {
   IMC2027: "IMC Weekendschool",
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",
+  KINDERHULP2027: "Nationaal Fonds Kinderhulp",
   LELYSTAD2027: "Voedselbank Lelystad",
   MAASTRICHT2027: "Voedselbank Maastricht",
   NIJMEGEN2027: "Voedselbank Nijmegen-Overbetuwe",
