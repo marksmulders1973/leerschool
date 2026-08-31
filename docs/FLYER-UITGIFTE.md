@@ -15,6 +15,7 @@
 
 | Partner | Code | Uitgegeven | Vorm | Datum | Plekken | Opmerking |
 |---|---|---|---|---|---|---|
+| Nationaal Fonds Kinderhulp | KINDERHULP2027 | ? | digitaal+flyer | 31 aug | 75 | plaatsing in intermediairs-nieuwsbrief (4.400+ orgs), sept/nov; 75-plekken-vraag uitstaand |
 | Voedselbank Lelystad | LELYSTAD2027 | ? | digitaal | 12 aug | 50 | bestuur akkoord, verspreiding via PR-commissie |
 | Ooievaarspas Den Haag | OOIEVAAR2027 | ? | digitaal | 13 jul | ∞ | blijvend gratis; neutrale banner (naam van site) |
 | Voedselbank Rotterdam | VBROTTERDAM2027 | scherm | digitaal | 14 jul | 300 | draait op supermarkt-schermen |
