@@ -1,5 +1,32 @@
 import { describe, it, expect } from "vitest";
-import { schoonVoorSpraak, maakMeeleesPlan, woordIndexBijChar } from "./spraakTekst.js";
+import { schoonVoorSpraak, maakMeeleesPlan, woordIndexBijChar, normaliseerBedragen } from "./spraakTekst.js";
+
+describe("normaliseerBedragen (euro-bedragen menselijk uitspreken)", () => {
+  it("€1,50 → één euro vijftig", () => {
+    expect(normaliseerBedragen("Dat kost €1,50.")).toBe("Dat kost één euro vijftig.");
+  });
+  it("heel bedrag zonder centen", () => {
+    expect(normaliseerBedragen("€2")).toBe("twee euro");
+  });
+  it("alleen centen → cent", () => {
+    expect(normaliseerBedragen("€0,50")).toBe("vijftig cent");
+  });
+  it("centen met voorloopnul", () => {
+    expect(normaliseerBedragen("€1,05")).toBe("één euro vijf");
+  });
+  it("groter bedrag met duizendtal-punt", () => {
+    expect(normaliseerBedragen("€1.250,95")).toBe("duizendtweehonderdvijftig euro vijfennegentig");
+  });
+  it("het woord euro ná het getal", () => {
+    expect(normaliseerBedragen("Ik heb 3 euro over")).toBe("Ik heb drie euro over");
+  });
+  it("laat een kaal decimaalgetal (geen euro) met rust", () => {
+    expect(normaliseerBedragen("Het antwoord is 1,50 meter")).toBe("Het antwoord is 1,50 meter");
+  });
+  it("werkt via schoonVoorSpraak (park-gids-pad)", () => {
+    expect(schoonVoorSpraak("Een ijsje kost €1,50! 🍦")).toBe("Een ijsje kost één euro vijftig!");
+  });
+});
 
 describe("schoonVoorSpraak", () => {
   it("stript emoji's zodat de stem geen 'hond' zegt bij 🐕", () => {

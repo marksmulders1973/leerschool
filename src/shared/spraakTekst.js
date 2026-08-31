@@ -7,6 +7,65 @@
 // terug aan de GETOONDE woorden. Elk niet-witruimte-token krijgt een
 // woord-index; tokens die na schoonmaak leeg zijn (bv. een losse emoji)
 // worden niet uitgesproken en dus nooit belicht.
+// ── Bedragen menselijk uitspreken (Mark 31 aug 2026) ────────────────
+// De browserstem leest "€1,50" voor als "euro één punt vijftig"; een mens zegt
+// "één euro vijftig". We zetten euro-bedragen vóór het spreken om naar woorden.
+// ALLEEN bedragen met een euro-teken of het woord "euro" worden aangepakt — een
+// kaal getal als "1,50" blijft "één komma vijftig" (juist correct voor een
+// decimaal in een rekenles). Draait binnen schoonVoorSpraak, dus de woord-
+// telling voor het meelezen blijft kloppen en op het scherm blijft "€1,50" staan.
+const ONDER_TWINTIG = ["nul", "één", "twee", "drie", "vier", "vijf", "zes", "zeven", "acht", "negen", "tien", "elf", "twaalf", "dertien", "veertien", "vijftien", "zestien", "zeventien", "achttien", "negentien"];
+const TIENTALLEN = ["", "", "twintig", "dertig", "veertig", "vijftig", "zestig", "zeventig", "tachtig", "negentig"];
+
+function tweeCijfersNaarWoord(n) {
+  if (n < 20) return ONDER_TWINTIG[n];
+  const t = Math.floor(n / 10), e = n % 10;
+  if (e === 0) return TIENTALLEN[t];
+  // In samenstellingen "een" i.p.v. "één" (eenentwintig); trema bij twee/drie.
+  const eenheid = e === 1 ? "een" : ONDER_TWINTIG[e];
+  const verbinding = e === 2 || e === 3 ? "ën" : "en";
+  return eenheid + verbinding + TIENTALLEN[t];
+}
+
+function drieCijfersNaarWoord(n) {
+  if (n < 100) return tweeCijfersNaarWoord(n);
+  const h = Math.floor(n / 100), r = n % 100;
+  const honderdtal = h === 1 ? "honderd" : ONDER_TWINTIG[h] + "honderd";
+  return r === 0 ? honderdtal : honderdtal + tweeCijfersNaarWoord(r);
+}
+
+function getalNaarWoord(n) {
+  n = Math.floor(Math.abs(n));
+  if (n < 1000) return drieCijfersNaarWoord(n);
+  if (n < 1000000) {
+    const d = Math.floor(n / 1000), r = n % 1000;
+    const duizendtal = d === 1 ? "duizend" : drieCijfersNaarWoord(d) + "duizend";
+    return r === 0 ? duizendtal : duizendtal + drieCijfersNaarWoord(r);
+  }
+  return String(n); // zulke grote bedragen komen in de app niet voor
+}
+
+function bedragNaarWoord(euroDigits, centDigits) {
+  const euro = parseInt(String(euroDigits).replace(/\./g, ""), 10) || 0;
+  const cent = centDigits ? parseInt((centDigits + "0").slice(0, 2), 10) : 0;
+  const euroWoord = euro === 1 ? "één" : getalNaarWoord(euro);
+  const centWoord = cent === 1 ? "één" : getalNaarWoord(cent);
+  if (euro === 0 && cent === 0) return "nul euro";
+  if (euro === 0) return `${centWoord} cent`;   // €0,50 → "vijftig cent"
+  if (cent === 0) return `${euroWoord} euro`;   // €2    → "twee euro"
+  return `${euroWoord} euro ${centWoord}`;       // €1,50 → "één euro vijftig"
+}
+
+export function normaliseerBedragen(tekst) {
+  return String(tekst ?? "")
+    // €1,50 · € 1,50 · €1.000,25 · €2  (euro-teken vóór het getal)
+    .replace(/€\s?(\d{1,3}(?:\.\d{3})*|\d+)(?:,(\d{1,2}))?/g,
+      (_, euro, cent) => bedragNaarWoord(euro, cent))
+    // 1,50 euro · 2 euro  (het woord "euro" ná het getal)
+    .replace(/(\d{1,3}(?:\.\d{3})*|\d+)(?:,(\d{1,2}))?\s?euro\b/gi,
+      (_, euro, cent) => bedragNaarWoord(euro, cent));
+}
+
 export function maakMeeleesPlan(tekst) {
   const tokens = String(tekst ?? "").split(/(\s+)/);
   let gesproken = "";
@@ -250,7 +309,7 @@ export function woordIndexBijChar(plan, charIndex) {
 }
 
 export function schoonVoorSpraak(tekst) {
-  return String(tekst ?? "")
+  return normaliseerBedragen(String(tekst ?? ""))
     // markdown-tekens (bestond al in de losse speak()-functies)
     .replace(/[*_#`>]/g, "")
     // "vs"/"vs." klinkt als gebrabbel → spreek uit als "of" (reis vs rijst).
