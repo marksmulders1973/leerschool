@@ -819,5 +819,64 @@
         });
       })();
     </script>
+    <script>
+      // ─── Chunk-load self-heal (Mark 31 aug 2026) ─────────────────────────────
+      // Symptoom: de app start wél op, maar hapert/loopt vast doordat de service
+      // worker na een redeploy een OUDE/kapotte JS-brok serveert die niet meer bij
+      // de shell past → een lazy-geladen module faalt ("Loading chunk … failed" /
+      // "Failed to fetch dynamically imported module"). De render-watchdog hierboven
+      // vangt alléén een leeg #root (blauw scherm); dít vangt de gemounte-maar-stukke
+      // variant. Het doet automatisch wat je anders handmatig doet (Chrome-site-data
+      // wissen): service workers opruimen, alle caches legen, 1× hard herladen met
+      // cache-buster. Zwaar beveiligd tegen loops en tegen offline-schade.
+      (function () {
+        if (!("serviceWorker" in navigator) || !("caches" in window)) return;
+        var KEY = "lk_chunkheal_done";
+        var CHUNK_RE = /(Loading( CSS)? chunk [\w-]+ failed|Failed to fetch dynamically imported module|error loading dynamically imported module|Importing a module script failed|ChunkLoadError)/i;
+        var bezig = false;
+
+        function isChunkErr(msg) { return !!msg && CHUNK_RE.test(String(msg)); }
+
+        function heal() {
+          if (bezig) return;
+          // Alleen zinvol als een SW de pagina bestuurt (dan komt de kapotte brok
+          // uit de SW-cache) én als we online zijn (offline zou cache-legen de app
+          // júist slopen). Hooguit 1× per sessie tegen reload-loops.
+          if (!navigator.serviceWorker.controller) return;
+          if (navigator.onLine === false) return;
+          try { if (sessionStorage.getItem(KEY) === "1") return; sessionStorage.setItem(KEY, "1"); } catch (e) {}
+          bezig = true;
+          // eslint-disable-next-line no-console
+          console.warn("[lk-chunkheal] oude/kapotte brok gedetecteerd — caches legen en 1× herladen");
+          function reload() {
+            try {
+              var sep = location.search ? "&" : "?";
+              window.location.replace(location.pathname + location.search + sep + "_lkfix=" + Date.now() + location.hash);
+            } catch (e) { window.location.reload(); }
+          }
+          var tasks = [];
+          try {
+            tasks.push(navigator.serviceWorker.getRegistrations()
+              .then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); })
+              .catch(function () {}));
+          } catch (e) {}
+          try {
+            tasks.push(caches.keys()
+              .then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); })
+              .catch(function () {}));
+          } catch (e) {}
+          Promise.all(tasks).then(reload).catch(reload);
+          setTimeout(reload, 2500); // vangnet: nooit eindeloos op cleanup wachten
+        }
+
+        window.addEventListener("error", function (e) {
+          if (isChunkErr(e && (e.message || (e.error && e.error.message)))) heal();
+        });
+        window.addEventListener("unhandledrejection", function (e) {
+          var r = e && e.reason;
+          if (isChunkErr(r && (r.message || r))) heal();
+        });
+      })();
+    </script>
   </body>
 </html>
