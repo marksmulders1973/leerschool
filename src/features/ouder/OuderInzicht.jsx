@@ -182,10 +182,22 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // 🔄 Live "wacht op je kind": zolang er een openstaande code is, elke 6s
   // opnieuw laden. Zodra het kind koppelt verdwijnt de code (used_at gezet) en
   // verschijnt de ✓-kaart. Stopt vanzelf als er geen open codes meer zijn.
+  // Vangnet (Mark 31 aug 2026): stopt sowieso na 10 minuten én slaat een tik
+  // over als het tabblad op de achtergrond staat — zo kan dit scherm nooit
+  // stilletjes de databundel van een telefoon leegtikken.
   useEffect(() => {
-    if (openInvites.length === 0) return;
-    const t = setInterval(() => { laadKoppelStatus(true); }, 6000);
-    return () => clearInterval(t);
+    if (openInvites.length === 0) return undefined;
+    const MAX_DUUR = 10 * 60 * 1000; // 10 min harde limiet
+    const start = Date.now();
+    let interval = null;
+    const stop = () => { if (interval) { clearInterval(interval); interval = null; } };
+    const tick = () => {
+      if (Date.now() - start >= MAX_DUUR) { stop(); return; } // na 10 min klaar
+      if (typeof document !== "undefined" && document.hidden) return; // tabblad weg → geen data
+      laadKoppelStatus(true);
+    };
+    interval = setInterval(tick, 6000);
+    return () => stop();
   }, [openInvites.length, laadKoppelStatus]);
 
   // Privacy: alleen scores tonen voor kinderen waarvan de koppeling
