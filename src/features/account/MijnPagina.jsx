@@ -2348,6 +2348,12 @@ export default function MijnPagina({
               })()}
             </Card>
 
+            {/* Device-lokale "waar het misgaat" + thuis-tip ALLEEN tonen als er
+                GEEN gekoppeld kind is. Anders reflecteren ze de account-houder
+                (bv. de ouder zelf) i.p.v. het kind — dat gaf "Hier moet Mark nog
+                aan werken" in de ouder-bril (Mark 31 aug 2026). Met een gekoppeld
+                kind staat de échte Sterk/Zwak al in <OuderInzicht> hierboven. */}
+            {ouderKinderen.length === 0 && (<>
             {/* ── Ouder/juf: waar het misgaat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Aandachtspunten</div>
@@ -2391,6 +2397,7 @@ export default function MijnPagina({
               <div style={{ ...kaartTitelStijl, color: "#ffd54f", marginBottom: 6 }}>💡 Wat je thuis met {player} kunt doen</div>
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>{thuisTip}</div>
             </Card>
+            </>)}
 
             {/* Gezins-kaart + "zelf volgen"-kaart (12 aug) zijn 14 aug vervangen
                 door het gedeelde <OuderInzicht> hierboven: kind kiezen, koppelen
