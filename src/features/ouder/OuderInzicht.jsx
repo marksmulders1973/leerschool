@@ -1001,9 +1001,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             <div style={{ textAlign: "center", padding: 24, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-display)" }}>Laden...</div>
           ) : childScores.length === 0 ? (
             <div style={{ borderRadius: 14, border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)", padding: 20, textAlign: "center" }}>
-              <div style={{ fontSize: 36, marginBottom: 8 }}>🎮</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>Nog geen scores voor {selectedChild}</div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.3)" }}>Zodra je kind oefent, zie je hier de resultaten.</div>
+              <div style={{ fontSize: 36, marginBottom: 8 }}>🌱</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "rgba(255,255,255,0.7)", marginBottom: 6 }}>{selectedChild} kan aan de slag</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.6, maxWidth: 330, margin: "0 auto" }}>
+                Zodra {selectedChild} — ingelogd als dit account — een oefening of toets <strong style={{ color: "rgba(255,255,255,0.7)" }}>afmaakt</strong>, verschijnen de resultaten hier. Losse vragen tellen nog niet mee; de eerste afgeronde quiz zet {selectedChild} op de kaart. 🎯
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.32)", marginTop: 10, lineHeight: 1.5 }}>
+                💡 Tip: laat je kind steeds op hetzelfde account inloggen, dan blijft alle voortgang bij elkaar.
+              </div>
             </div>
           ) : (
             <>
