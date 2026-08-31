@@ -124,7 +124,7 @@ export default function KoppelcodeBanner({ userName }) {
         }}
       >
         <span style={{ fontSize: 18 }}>🎁</span>
-        <span style={{ flex: 1 }}>Heb je een koppelcode gekregen van thuis of van school?</span>
+        <span style={{ flex: 1 }}>Koppelcode van thuis of school? Ook bij een <strong>nieuw toestel</strong> of als je niks van thuis ziet — vul 'm hier in.</span>
         <span aria-hidden="true">▼</span>
       </button>
     );
@@ -150,7 +150,7 @@ export default function KoppelcodeBanner({ userName }) {
             Koppel met thuis of school
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>
-            In 3 kleine stapjes — het duurt een halve minuut.
+            In 3 kleine stapjes — het duurt een halve minuut. Nieuw toestel? Een verse code herstelt je koppeling vanzelf.
           </div>
         </div>
         <button

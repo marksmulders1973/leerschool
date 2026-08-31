@@ -118,6 +118,12 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // Optioneel "van wie" (Mark 30 aug): het label dat het kind ziet bij een
   // geslaagde koppeling ("gekoppeld met mama"). Leeg = "gekoppeld met thuis".
   const [inviteVanWie, setInviteVanWie] = useState("");
+  // Koppeling-herstel (Mark 1 sep 2026): nieuw toestel / kind op verkeerd
+  // account → één verse code her-koppelt automatisch (claim_link_code verhangt
+  // child_user_id naar het account dat de code invoert). We tonen die code
+  // INLINE op de gekoppelde-kind-kaart, want een openstaande code voor een
+  // al-gekoppeld kind wordt in de slot-lijst juist onderdrukt. { childId, code }.
+  const [herstelCode, setHerstelCode] = useState(null);
   // Partner-mail (Mark 14 aug): tweede adres (partner/verzorger) dat het
   // wekelijkse rapport óók ontvangt. Eén adres per gezín — op alle koppelingen
   // van deze ouder gelijk gehouden (kolom parent_child_links.partner_email).
@@ -388,6 +394,30 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     setInviteVanWie("");
     laadKoppelStatus();
     try { track("ouder_koppelcode_gemaakt", { met_naam: !!inviteVanWie.trim() }); } catch { /* */ }
+  };
+
+  // 🔗 Herstel-code voor een AL gekoppeld kind (Mark 1 sep 2026): nieuw toestel,
+  // gewiste opslag of kind op een verkeerd account → één verse code lost het op.
+  // claim_link_code vindt de bestaande koppeling (zelfde ouder + kindnaam) en
+  // verhangt child_user_id naar het account dat de code invoert. We omzeilen de
+  // cap-check van generateInvite (het kind telt al mee) en tonen de code inline.
+  const maakHerstelCode = async (childName) => {
+    if (!authUser || !childName?.trim()) return;
+    setLoading(true);
+    const code = generateCode();
+    const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+    const { error } = await supabase.from("link_codes").insert({
+      code, parent_user_id: authUser.id, child_name: childName.trim(), expires_at: expires, van_wie: null,
+    });
+    setLoading(false);
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error("[OuderInzicht] maakHerstelCode failed:", error.message);
+      alert("Kon code niet opslaan. Probeer later opnieuw.");
+      return;
+    }
+    setHerstelCode({ childName: childName.trim(), code });
+    try { track("ouder_koppelcode_herstel", {}); } catch { /* */ }
   };
 
   // Deel-helpers werken nu per code (elke wacht-kaart heeft z'n eigen code),
@@ -694,7 +724,29 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     <button onClick={(e) => { e.stopPropagation(); toggleWeekmail(c); }} aria-pressed={mailAan} title={mailAan ? "Elke maandag het weekrapport in je mail — klik om uit te zetten" : "Weekrapport staat uit — klik om aan te zetten"} style={pill(mailAan ? { border: "1px solid rgba(105,240,174,0.5)", background: "rgba(0,200,83,0.14)", color: "#69f0ae" } : { border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)" })}>
                       📩 weekmail {mailAan ? "aan" : "uit"}
                     </button>
+                    <button onClick={(e) => { e.stopPropagation(); herstelCode?.childName === c.child_name ? setHerstelCode(null) : maakHerstelCode(c.child_name); }} title={`Nieuw toestel of ziet ${c.child_name} niks van jou? Maak een verse koppelcode`} style={pill({ border: "1px solid rgba(0,176,255,0.5)", background: "rgba(0,176,255,0.12)", color: "#00b0ff" })}>
+                      🔗 koppeling werkt niet?
+                    </button>
                   </div>
+                  {herstelCode?.childName === c.child_name && (
+                    <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "11px 13px", borderRadius: 11, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
+                        Nieuw toestel, of ziet {c.child_name} niks van jou? Laat {c.child_name} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Koppel met ouder</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
+                      </div>
+                      <div style={{ textAlign: "center", padding: "2px 0 8px" }}>
+                        <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{herstelCode.code}</div>
+                        <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>48 uur geldig</div>
+                      </div>
+                      <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                        <button onClick={() => sendWhatsApp(herstelCode.code, c.child_name)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "none", background: "#25D366", color: "#08121f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>💬 WhatsApp</button>
+                        <button onClick={() => sendEmailCode(herstelCode.code)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>✉️ E-mail</button>
+                        <button onClick={() => copyCode(herstelCode.code)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "1px solid rgba(255,255,255,0.2)", background: copiedCode === herstelCode.code ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copiedCode === herstelCode.code ? "#69f0ae" : "rgba(255,255,255,0.75)", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>{copiedCode === herstelCode.code ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
+                      </div>
+                      <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
+                        💡 Tip: laat je kind inloggen met Google — dan werkt de koppeling op elk toestel vanzelf en heb je nooit meer een nieuwe code nodig.
+                      </div>
+                    </div>
+                  )}
                 </div>
               );
             }
