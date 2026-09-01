@@ -17,6 +17,7 @@ import { verwerkMakerTip } from "../shared/makerTip.js";
 import { makerAntwoordMelding } from "../shared/makerAntwoord.js";
 import { spreekMetMeelezen } from "../shared/spraakTekst.js";
 import MeeleesTekst from "../shared/ui/MeeleesTekst.jsx";
+import CharleyHulp from "./CharleyHulp.jsx";
 
 const VANDAAG = () => new Date().toISOString().slice(0, 10);
 
@@ -81,6 +82,8 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
     speak(tekst, { onWoord: setLeesWoord, onEnd: () => { setLeest(false); setLeesWoord(-1); } });
   };
   const [chatOpen, setChatOpen] = useState(false);
+  // ❓ "Vraag Charley over de app" (1 sep): APP-GIDS-vragen + vrije AI-vraag.
+  const [hulpOpen, setHulpOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [invoer, setInvoer] = useState("");
   const [busy, setBusy] = useState(false);
@@ -319,8 +322,9 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
       <div style={{ padding: "8px 14px 6px", display: "flex", flexDirection: "column", gap: 9 }}>
         <button onClick={naarLeren} style={{ ...bigBtn, background: "linear-gradient(135deg,#00C853,#00a846)" }}>▶ Kom leren in Leerkwartier</button>
         <div style={{ display: "flex", gap: 9 }}>
-          <button onClick={naarPark} style={{ ...subBtn }}>🎡 Naar het park</button>
-          <button onClick={() => setChatOpen(true)} style={{ ...subBtn }}>💬 Praat met {naam}</button>
+          <button onClick={naarPark} style={{ ...subBtn }}>🎡 Park</button>
+          <button onClick={() => setChatOpen(true)} style={{ ...subBtn }}>💬 Praten</button>
+          <button onClick={() => { track("charley_hulp_open", {}); setHulpOpen(true); }} style={{ ...subBtn }}>❓ Hulp</button>
         </div>
         <button onClick={deel} style={{ ...subBtn, background: "rgba(255,255,255,0.08)" }}>💛 Laat {naam} aan iemand thuis zien</button>
       </div>
@@ -333,6 +337,9 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
           ? "✨ Charley is de echte hond van de maker — maar praten kan hij alleen hier, in de app."
           : `✨ ${naam} is een verzonnen maatje — geen echt dier.`}
       </div>
+
+      {/* ❓ hulp-laag — vragen over de app zelf (APP-GIDS + vrije AI-vraag) */}
+      <CharleyHulp open={hulpOpen} onClose={() => setHulpOpen(false)} />
 
       {/* chat-laag */}
       {chatOpen && (

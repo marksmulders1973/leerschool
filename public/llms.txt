@@ -434,6 +434,28 @@ leerkwartier.app/printen.
 Ja, als Progressive Web App (PWA) installeerbaar op iPhone + Android +
 Windows. Een groot deel van de oefenstof werkt zonder internet.
 
+## Hulp bij het gebruik van de app (App-gids)
+
+**Hoe koppel ik als ouder of verzorger mijn kind in Leerkwartier?**
+Via het thuis-overzicht op https://leerkwartier.app/ouder: log in, tik op
+"Voeg je kind toe" en laat je kind de korte code invoeren op het eigen
+toestel. Daarna zie je de voortgang, kun je lessen klaarzetten en krijg je
+elke maandag een weekrapport per e-mail.
+
+**Waar zie ik wat mijn kind goed en fout deed?**
+In het thuis-overzicht (https://leerkwartier.app/ouder): tik op de naam van
+je kind voor een totaaloverzicht per vak, met per toets een
+vraag-voor-vraag-verslag (gegeven antwoord + juiste antwoord) en een link
+naar de bijbehorende uitleg-les. Het overzicht is ook naar jezelf te mailen.
+
+**Kan ik oefeningen voor mijn kind klaarzetten?**
+Ja — bij een gekoppeld kind staat "zet lessen klaar": de ouder of verzorger
+(of leerkracht, per leerling) kiest lessen en het kind ziet ze thuis onder
+"voor jou klaargezet", inclusief afvink-status.
+
+**Zijn er printbare oefeningen in Leerkwartier?**
+Ja, op https://leerkwartier.app/printen: oefenpakketten met antwoordsleutel,
+tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
 ## Contact
 
 - Web: https://leerkwartier.app
