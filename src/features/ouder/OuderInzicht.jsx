@@ -114,6 +114,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const [citoScores, setCitoScores] = useState([]);
   const [loading, setLoading] = useState(false);
   const [scoresLoading, setScoresLoading] = useState(false);
+  // true zodra de scores-query voor het geselecteerde kind écht is afgerond —
+  // scoresLoading start op false, dus "niet aan het laden" betekent vóór de
+  // eerste query nog níét "geladen". De Charley-tips keken daar 1 sep één
+  // render-frame te vroeg naar en de geen-resultaten-tip stal de sessie-slot.
+  const [scoresGeladen, setScoresGeladen] = useState(false);
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
   // naam-in-app van kind opgeven vóór code-generatie.
   const [inviteChildName, setInviteChildName] = useState("");
@@ -243,9 +248,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     if (!selectedChild || !selectedChildVerified) {
       setChildScores([]);
       setScoresLoading(false);
+      setScoresGeladen(false);
       return;
     }
     setScoresLoading(true);
+    setScoresGeladen(false);
     // Naamgenoten-lek (audit 16-07): alleen op voornaam matchen mengt scores
     // van élke "Sophie" in het land. Zelfde fix als de ouder-mail (migratie
     // 20260711): scope op child_user_id waar de koppeling die heeft;
@@ -262,6 +269,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       .then(({ data }) => {
         setChildScores(data || []);
         setScoresLoading(false);
+        setScoresGeladen(true);
       });
     // Deps op id/child_user_id, niet het object: de 6s-koppelpoll maakt élke
     // tik een verse children-array → selectedChildVerified is dan een nieuwe
@@ -870,7 +878,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             Tip A: kind gekoppeld maar 0 resultaten → account-uitleg (de
             Deianera-verwarring van 31 aug). Tip B: kind oefent wél maar er is
             nog nooit iets klaargezet → klaarzetten + printen ontdekken. */}
-        {selectedChildVerified && !scoresLoading && childScores.length === 0 && (
+        {selectedChildVerified && scoresGeladen && childScores.length === 0 && (
           <CharleyTip
             id="ouder-kind-geen-resultaten"
             tekst={`${selectedChild} is gekoppeld, maar op dit account staan nog geen resultaten. Laat ${selectedChild} op het eigen toestel inloggen met hetzelfde account — dan verschijnt hier alles vanzelf. Lukt dat niet? Met een verse koppelcode schuift de koppeling automatisch mee naar het juiste account.`}
@@ -878,7 +886,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             onActie={() => maakHerstelCode(selectedChild)}
           />
         )}
-        {selectedChildVerified && !scoresLoading && childScores.length > 0 && klaarLijst.length === 0 && onKlaarzetten && (
+        {selectedChildVerified && scoresGeladen && childScores.length > 0 && klaarLijst.length === 0 && onKlaarzetten && (
           <CharleyTip
             id="ouder-nog-niets-klaargezet"
             tekst={`Wist je dat je lessen voor ${selectedChild} kunt klaarzetten? Jij kiest een les, ${selectedChild} ziet 'm thuis onder "💛 voor jou klaargezet". En veel oefeningen kun je ook printen voor aan de keukentafel.`}
