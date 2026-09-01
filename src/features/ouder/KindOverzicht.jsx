@@ -68,8 +68,12 @@ export default function KindOverzicht({ child, onBack, onKlaarzetten }) {
     }));
     const alle = [...m.values()].map((a) => ({ ...a, p: Math.round((a.goed / a.tot) * 100) }));
     return {
-      sterk: alle.filter((a) => a.tot >= 3 && a.p >= 80).sort((x, y) => y.p - x.p).slice(0, 3),
+      sterk: alle.filter((a) => a.tot >= 2 && a.p >= 80).sort((x, y) => y.p - x.p).slice(0, 3),
       zwak: alle.filter((a) => a.tot >= 2 && a.p < 60).sort((x, y) => x.p - y.p).slice(0, 3),
+      // Fallback voor "Wat nu?": na één korte toets haalt geen onderwerp de
+      // drempel van 2 vragen — maar élke foute vraag met een leerpad is dan
+      // al een bruikbare volgende stap (testvondst 1 sep).
+      foutPaden: [...new Set((rows || []).flatMap((r) => (r.detail || []).filter((d) => d && !d.goed && d.pad).map((d) => d.pad)))],
     };
   }, [rows]);
 
@@ -78,7 +82,9 @@ export default function KindOverzicht({ child, onBack, onKlaarzetten }) {
   const watNu = useMemo(() => {
     const ids = [];
     sterkZwak.zwak.forEach((z) => z.paden.forEach((id) => { if (!ids.includes(id)) ids.push(id); }));
-    // Vangnet: geen detail-data (alleen oude toetsen) → niets aanraden i.p.v. gokken.
+    // Geen onderwerp onder de drempel → val terug op de paden van álle foute
+    // vragen. Geen detail-data (alleen oude toetsen) → niets aanraden i.p.v. gokken.
+    (ids.length ? [] : sterkZwak.foutPaden).forEach((id) => { if (!ids.includes(id)) ids.push(id); });
     return ids.slice(0, 3).map((id) => ({ id, titel: PATHS_BY_ID[id] ? `${PATHS_BY_ID[id].emoji ? PATHS_BY_ID[id].emoji + " " : ""}${PATHS_BY_ID[id].title}` : id }));
   }, [sterkZwak]);
 
