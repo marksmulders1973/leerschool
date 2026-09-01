@@ -33,6 +33,7 @@ export const PARTNER_LOGOS = {
   BUURTGEZINNEN2027: "/drukwerk/logo-buurtgezinnen.png",
   SCHOOLSCOOL2027: "/drukwerk/logo-schoolscool-twente.png",
   SABA2027: "/drukwerk/logo-qwl-saba.png", // Mark-akkoord 27 aug; akkoord-vraag aan Tiffany meenemen in de volgende mail
+  KINDERHULP2027: "/drukwerk/logo-kinderhulp.png", // Mark-go 1 sep; logo staat al op de co-branded flyer die Marion ontving
 };
 
 const KEY_EER = "lk_partner_eer_gezien";
