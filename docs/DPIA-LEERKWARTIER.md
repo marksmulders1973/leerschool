@@ -16,7 +16,7 @@ Herzien: jaarlijks, of eerder bij nieuwe verwerkingen (bv. betaalfuncties in 202
 | Gegeven | Van wie | Waar | Waarom |
 |---|---|---|---|
 | Voornaam/roepnaam (zelfgekozen) | leerling | Supabase (EU) | scorebord, voortgang |
-| Leervoortgang, quiz-scores, spel-scores | leerling | Supabase (EU) | leren bijhouden |
+| Leervoortgang, quiz-scores, spel-scores (sinds 1 sep 2026 incl. per-vraag-antwoorden bij toetsen, voor het vraag-voor-vraag-inzicht van de gekoppelde ouder/verzorger) | leerling | Supabase (EU) | leren bijhouden; ouder helpt gericht |
 | E-mail + naam (alleen bij optionele login/ouder-account) | ouder/leerkracht | Supabase (EU) / Google OAuth | account, ouder-rapport |
 | E-mail (nieuwsbrief/wachtlijst, opt-in) | ouder | Supabase (EU) → Resend | welkomst-/weekmail |
 | Browser-push-token (opt-in) | gebruiker | Supabase (EU) | herinneringen |
@@ -26,7 +26,7 @@ Herzien: jaarlijks, of eerder bij nieuwe verwerkingen (bv. betaalfuncties in 202
 
 **Wat we bewust NIET verwerken:** achternaam verplicht, adres, telefoonnummer, school, geboortedatum, foto's, locatie, tracking-cookies, advertentie-ID's.
 
-**AI-verwerking (Claude/Anthropic, terugval Gemini/Google):** per verzoek gaan alleen vak/onderwerp, de vraag, eventueel een fout antwoord en (alleen bij het park-maatje) de zelf-vertelde weetjes mee. Geen accountgegevens, geen e-mail. Anthropic gebruikt API-data standaard niet voor modeltraining; DPA is beschikbaar en ZDR (zero data retention) is aangevraagd (zie §3).
+**AI-verwerking (Claude/Anthropic, terugval Gemini/Google):** per verzoek gaan alleen vak/onderwerp, de vraag, eventueel een fout antwoord en (alleen bij het park-maatje) de zelf-vertelde weetjes mee; bij de app-hulpfunctie ("Vraag Charley", sinds 1 sep 2026) alleen de getypte hulpvraag. Geen accountgegevens, geen e-mail. Anthropic gebruikt API-data standaard niet voor modeltraining; DPA is beschikbaar en ZDR (zero data retention) is aangevraagd (zie §3).
 
 ## 2. Grondslag, noodzaak en proportionaliteit
 
