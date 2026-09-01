@@ -27,6 +27,12 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [overzichtCopied, setOverzichtCopied] = useState(false);
   const [overzicht, setOverzicht] = useState([]);
   const [open, setOpen] = useState(false);
+  // 🔗 Koppeling-herstel (1 sep 2026, spiegel van de ouder-kant v528): nieuw
+  // toestel of leerling op een verkeerd account → één verse code her-koppelt
+  // automatisch (claim_link_code verhangt student_user_id). Inline tonen, want
+  // een openstaande code voor een al-gekoppelde naam wordt in de wacht-kaarten
+  // juist onderdrukt. { studentName, code }.
+  const [herstel, setHerstel] = useState(null);
 
   const laadStudents = () => {
     if (!authUser) return;
@@ -128,6 +134,18 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const trekIn = async (id) => {
     setOpenInvites((prev) => prev.filter((iv) => iv.id !== id));
     await trekLeerlingCodeIn(id);
+  };
+
+  // Verse herstel-code voor een AL gekoppelde leerling — zelfde insert als
+  // koppelen; de RPC vindt de bestaande koppeling (leraar + naam) en verhangt
+  // die naar het account dat de code invoert. Niets hoeft verwijderd.
+  const maakHerstel = async (studentName) => {
+    if (!authUser || busy) return;
+    setBusy(true);
+    const r = await koppelLeerlingCode(authUser.id, studentName);
+    setBusy(false);
+    if (r.ok) setHerstel({ studentName, code: r.code });
+    else alert("Kon de code niet maken. Probeer later opnieuw.");
   };
 
   // Geen "nog 0 uur geldig" (afrond-artefact) — zelfde tekst als de ouder-kant.
@@ -247,6 +265,25 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
                   style={{ width: "100%", padding: "10px 14px", borderRadius: 10, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13.5 }}>
                   💛 Blader en zet lessen klaar voor {selected.student_name}
                 </button>
+              )}
+              <button
+                onClick={() => (herstel?.studentName === selected.student_name ? setHerstel(null) : maakHerstel(selected.student_name))}
+                title={`Nieuw toestel of ziet ${selected.student_name} de lessen niet? Maak een verse koppelcode`}
+                style={{ marginTop: 6, background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+                🔗 Koppeling werkt niet (nieuw toestel)?
+              </button>
+              {herstel?.studentName === selected.student_name && (
+                <div style={{ marginTop: 8, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
+                    Laat {selected.student_name} deze verse code invoeren op het apparaat dat hij/zij <strong>nu</strong> gebruikt — de koppeling schuift dan vanzelf mee naar dat account, je hoeft niets te verwijderen.
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 800, letterSpacing: 4, color: "#fff", background: "rgba(255,255,255,0.08)", borderRadius: 8, padding: "5px 12px" }}>{herstel.code}</span>
+                    <button onClick={() => deelWhatsApp(herstel.code, selected.student_name)} style={{ ...miniBtn, background: "#25D366", color: "#04310f", border: "none" }}>💬 WhatsApp</button>
+                    <button onClick={() => kopieerCode(herstel.code)} style={miniBtn}>{copiedCode === herstel.code ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
+                  </div>
+                  <div style={{ marginTop: 6, fontSize: 11, color: "rgba(255,255,255,0.4)" }}>48 uur geldig · 💡 tip: met een Google-login werkt de koppeling op elk apparaat vanzelf</div>
+                </div>
               )}
             </div>
           )}

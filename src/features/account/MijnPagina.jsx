@@ -10,6 +10,7 @@ import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
 import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
+import KoppelcodeBanner from "../../components/KoppelcodeBanner.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
@@ -1661,6 +1662,13 @@ export default function MijnPagina({
                 </div>
               </Card>
             )}
+
+            {/* 🎁 Koppelcode-invoer óók op Mijn pagina (1 sep 2026): de ouder-
+                én leraar-kaarten zeggen "vul 'm in op Mijn pagina", maar het
+                veld stond alleen op home/StudentHome — E2E-test liep er tegenaan.
+                De banner is ingeklapt één regel; verdwijnt na koppelen vanzelf
+                achter het succes-scherm. */}
+            <KoppelcodeBanner userName={userName} />
 
             {/* ── 💛 Voor jou klaargezet (Mark 15 aug): lessen die iemand thuis
                 via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;

@@ -190,7 +190,7 @@ Mijn naam is Mark Smulders. Ik ben operator bij Sonac in Vuren en in mijn vrije 
 
 Ik mail u omdat wij volgens mij hetzelfde willen: kinderen thuis plezier laten krijgen in taal. Speciaal voor het lezen is er de Leesladder: korte teksten die stapje voor stapje moeilijker worden, met vragen erbij — een fijn vervolg voor gezinnen bij wie het voorleestraject is afgerond, of om tussendoor samen te lezen. Alles werkt in de browser, zonder account en zonder reclame. Oefenen blijft gratis, gegarandeerd t/m 2031.
 
-Mijn vraag is klein: zou u leerkwartier.app willen noemen aan de gezinnen en voorlezers in uw traject — bijvoorbeeld in een nieuwsbrief of bij het afsluiten van een traject? Een kant-en-klaar tekstblokje met beeld staat op leerkwartier.app/drukwerk/nieuwsbrief-tekst.txt. Posters of een flyer op maat met uw logo maak ik kosteloos.
+Mijn vraag is klein: zou u leerkwartier.app willen noemen aan de gezinnen en voorlezers in uw traject — bijvoorbeeld in een nieuwsbrief of bij het afsluiten van een traject? Speciaal hiervoor staat alles op één pagina: leerkwartier.app/voorlezen.html — met uitleg voor gezinnen én een kant-en-klaar tekstblokje dat u zo in uw nieuwsbrief kunt overnemen. Posters of een flyer op maat met uw logo maak ik kosteloos.
 
 De app is nog jong — ik verbeter hem elke week. Tips of wensen van u of uw voorlezers zijn dus heel welkom; vaak kan ik iets binnen een week aanpassen.
 
