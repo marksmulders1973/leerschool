@@ -40,8 +40,17 @@
 | wo 26 aug | ~4 | 💻🪪 Ooievaarspas-dag: goedkeuring binnen, overeenkomst (3 docs) samen doorgenomen + getekend via ValidSign, bedank-reply, landingspagina-concept definitief (8 redactierondes), timing-besluit vastgelegd; avond: cijfers + dagrapport-PDF |
 | do 27 aug | ~7 | 💻 Mega-bouwdag: ochtend-dagrapport · arena + parkgeluid (v448-457) · partner-codesysteem: code-balk, ere-schermen, QR-decode-tests, RLS-bugfix, SCHOOLSCOOL-herstel, bedank-vloot (v458-479) · 📞 belgesprek Froukje (~15 min, super) · Mark: ere-schermen testen/keuren (middag+avond) · ✉️ Amber logo-ja + SUN-terugdraai verwerkt · avond-blok v483-488: park-leerroute-objecten bijzetten + rol-duidelijkheid /mijn (rol-dropdown, kinderen-dropdown, privacy-uitleg) |
 | vr 28 aug | ~2 | 💻📋✉️ Ochtend-dagrapport (cijfers + Meesterplan-PDF) · v489 datum-correctie Doorstroomtoets 2027 (7 pagina's + app-countdown) · outreach: Leergeld-Midden 20 + VoorleesExpress deel 2 48 verstuurd · Mark: ere-schermen gekeurd |
-| za/zo | | |
+| za 29 aug | | (geen sessie gelogd) |
+| zo 30 aug | ~1 | 💻📋 Weekend-dagrapport (cijfers + Froukje-radar + Meesterplan-PDF) |
 | **Offline (15%-vuistregel)** | ~3,5 | 📞 gesprekken over de app met collega's/familie/winkels/school (15% van ~24,5 sessie-uren ma-vr; regel ingesteld 28 aug) |
+
+## Week 36 (ma 31 aug – zo 6 sep)
+
+| Dag | Uren | Wat |
+|---|---|---|
+| ma 31 aug | ~5 | 💻✉️ Dag: maand-afsluiting-dagrapport + Alkmaar-flyer versimpeld/geleverd (Teresa drukt) + Kinderhulp-reply (nieuwsbrief 4.400+ orgs). Avond: Charley-stem (euro-uitspraak + verkleinwoorden, v526), klaarzet-uitleg + Deianera-accountverwarring opgelost, ouder-ziet-toets-fix (v527), koppeling-herstel-knop (v528), Fable-naloop-pakket klaargezet |
+| di 1 sep | ~2,5 | 💻📋 Fable-naloop uitgevoerd (build+250 tests, E2E-recovery-test met 2 accounts, 2 opruim-fixes v529-530) · mail-hercontrole 5 dagen (niets gemist; Steffy bedankt) · dagrapport + PDF naar telefoon |
+| **Offline (15%-vuistregel)** | | (invullen eind week) |
 | **Weektotaal** | ~28 (t/m vr) | doel-orde: ~30 u — za/zo (o.a. VoorleesExpress deel 3) komt er nog bij |
 
 *Claude: nieuwe week = nieuw blok erboven; sessie-uren dagelijks bijwerken (schatting op basis van
