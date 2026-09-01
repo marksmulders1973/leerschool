@@ -621,28 +621,11 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
           <span style={{ fontSize: 20, color: "rgba(255,107,53,0.6)" }}>›</span>
         </button>
 
-        {onStartLeerpadToets && (
-          <button
-            onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(true); }}
-            style={{
-              textAlign: "left", borderRadius: 18,
-              border: "2px solid rgba(255,213,79,0.4)",
-              background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,179,0,0.06))",
-              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
-              display: "flex", alignItems: "center", gap: 16,
-            }}
-          >
-            <span style={{ fontSize: 34 }}>✨</span>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,213,79,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Bonus</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#ffd54f" }}>Korte oefentoets uit je leerpaden</div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                30 vragen uit je leerpaden · met de klok mee · score per onderdeel
-              </div>
-            </div>
-            <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
-          </button>
-        )}
+        {/* "✨ Bonus — korte oefentoets"-tegel verwijderd (Mark 1 sep 2026):
+            de knop riep onStartLeerpadToets(true) aan — de simulatie-vlag —
+            en kwam dus op precies hetzelfde 50-vragen-scherm uit als Stap 3
+            hierboven, terwijl de tekst "30 vragen" beloofde. Misleidend
+            duplicaat; Stap 3 is de enige ingang. */}
 
         {onPrintPakket && (
           <button
