@@ -258,7 +258,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         setChildScores(data || []);
         setScoresLoading(false);
       });
-  }, [selectedChild, selectedChildVerified]);
+    // Deps op id/child_user_id, niet het object: de 6s-koppelpoll maakt élke
+    // tik een verse children-array → selectedChildVerified is dan een nieuwe
+    // referentie en dit effect herlaadde elke 6s mét "Laden..."-flits op /mijn
+    // (Mark-melding 1 sep 2026: witte streep om de ~6 sec).
+  }, [selectedChild, selectedChildVerified?.id, selectedChildVerified?.child_user_id]);
 
   // Cito scores apart — alleen bij verified link
   useEffect(() => {
@@ -274,7 +278,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     citoQuery
       .order("completed_at", { ascending: false })
       .then(({ data }) => setCitoScores(data || []));
-  }, [selectedChild, selectedChildVerified]);
+    // Zelfde deps-verfijning als het scores-effect hierboven (6s-poll-flits).
+  }, [selectedChild, selectedChildVerified?.id, selectedChildVerified?.child_user_id]);
 
   const removeChild = async (id) => {
     const kind = children.find((c) => c.id === id);
