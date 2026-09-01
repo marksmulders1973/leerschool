@@ -54,7 +54,7 @@
 | Wanneer | Wat | Status |
 |---|---|---|
 | ✅ 26 aug | Goedkeuring per mail (Esther) + **vriend-overeenkomst getekend** (beide partijen) + bedank-reply verstuurd | klaar |
-| binnenkort | Verwerkings-mail met getekende PDF's → Claude stelt veilig in `Desktop\Ooievaarspas\` | afwachten |
+| ✅ 1 sep | Getekende PDF's gedownload door Claude (ValidSign, beide transacties: overeenkomst + aanvraagformulier) → `Desktop\Ooievaarspas\getekend\` + OneDrive-backup | klaar |
 | ≤ ~16 sep | **Tekst-formulier van Esther** (voor hun website/socials) → Claude maakt concept; stil na 16 sep → vriendelijke nudge | afwachten |
 | **ma 28 sep 11:45** | 🏢 **KvK-inschrijving** (Utrecht; zie kalender hieronder). 💡 Eerder kan vaak: geannuleerde slots komen élke ochtend vrij via "Wijzig afspraak" in Mijn KVK | Mark |
 | direct na KvK | KvK-nummer aan Esther mailen (informatieplicht art. 5; concept ligt klaar) | Claude concept → Mark-go |
