@@ -12,6 +12,7 @@ import KwartierplanSectie from "../kwartierplan/KwartierplanSectie.jsx";
 import VriendenWerven from "../referral/VriendenWerven.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import KindOverzicht from "./KindOverzicht.jsx";
+import CharleyTip from "../../components/CharleyTip.jsx";
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -863,6 +864,28 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             </div>
           )}
         </div>
+
+        {/* 🐕 Charley-tips (laag 1, 1 sep): advies op twijfel-momenten die de
+            data liet zien. Max één per sessie (engine), altijd uitzetbaar.
+            Tip A: kind gekoppeld maar 0 resultaten → account-uitleg (de
+            Deianera-verwarring van 31 aug). Tip B: kind oefent wél maar er is
+            nog nooit iets klaargezet → klaarzetten + printen ontdekken. */}
+        {selectedChildVerified && !scoresLoading && childScores.length === 0 && (
+          <CharleyTip
+            id="ouder-kind-geen-resultaten"
+            tekst={`${selectedChild} is gekoppeld, maar op dit account staan nog geen resultaten. Laat ${selectedChild} op het eigen toestel inloggen met hetzelfde account — dan verschijnt hier alles vanzelf. Lukt dat niet? Met een verse koppelcode schuift de koppeling automatisch mee naar het juiste account.`}
+            actieLabel="🔗 maak een verse koppelcode"
+            onActie={() => maakHerstelCode(selectedChild)}
+          />
+        )}
+        {selectedChildVerified && !scoresLoading && childScores.length > 0 && klaarLijst.length === 0 && onKlaarzetten && (
+          <CharleyTip
+            id="ouder-nog-niets-klaargezet"
+            tekst={`Wist je dat je lessen voor ${selectedChild} kunt klaarzetten? Jij kiest een les, ${selectedChild} ziet 'm thuis onder "💛 voor jou klaargezet". En veel oefeningen kun je ook printen voor aan de keukentafel.`}
+            actieLabel={`💛 zet een les klaar voor ${selectedChild}`}
+            onActie={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
+          />
+        )}
 
         {children.length > 0 && (
           <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "0 2px 8px", lineHeight: 1.5 }}>
