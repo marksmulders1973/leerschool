@@ -21,6 +21,7 @@
 | 18 jul | PostNL porto — 5 enveloppen flyer-zendingen | ± €22 | bon/Track&Trace | 📥 bon zoeken |
 | 23 jul | Anthropic API-tegoed ($20 + btw = $24,20) | ± €22,40 | PDF in Gmail (receipt 2891-3037-1600) | ✅ factuur binnen |
 | 29 jul | Drukwerkdeal — 1.000 A5 Spark Fest (order 15653885) | €43,56 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
+| 1 sep | Anthropic API-tegoed ($20 + btw = $24,20) — **auto-reload aangezet** | ± €22,40 | Anthropic Console → Billing → Invoice history (1 sep) | ✅ door Mark bevestigd; 📥 factuur-PDF downloaden |
 
 **Totaal t/m augustus: ± €843.** Met het doorlopende abonnement (sep-dec = 4 × €108,90) en de
 KvK (± €80) koerst 2026 af op **± €1.360-1.400** aan aftrekbare (aanloop)kosten — grofweg
