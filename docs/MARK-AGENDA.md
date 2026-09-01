@@ -121,8 +121,10 @@
   TransIP-domeinfactuur, claude.ai-abonnementsfacturen (Settings → Billing). De 3 Anthropic-
   API-bonnetjes heeft Claude al uit Gmail (mrt 2× + jul, samen ± €56).
 
-- **DPIA lezen + ondertekenen** (`docs/DPIA-LEERKWARTIER.md`, ~15 min) —
-  privacy-fundament voor gemeenten/scholen; nodig vóór serieuze school-deals.
+- ~~DPIA lezen + ondertekenen~~ ✅ **VASTGESTELD 1 sep 2026** (Mark, per expliciet
+  akkoord; eerst geactualiseerd met per-vraag-detail + Charley-hulp). PDF:
+  `Desktop\dagrapport\DPIA-Leerkwartier-VASTGESTELD-2026-09-01.pdf` + OneDrive.
+  📌 Na KvK (28 sep): rechtsvorm in §6 bijwerken naar eenmanszaak + KvK-nr.
 - **SQL `claim_link_code`** draaien (audit-4 open Mark-actie).
 - **Quote-toestemming**: Inez + Teresa om één citaat vragen voor de site
   (concepten liggen klaar zodra Mark go geeft — idee #9).

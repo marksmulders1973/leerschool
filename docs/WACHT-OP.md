@@ -75,7 +75,7 @@ budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitsl
 **Stand: 9 van 9 klaar — de hele Familie-laag is bèta-live.** 🎉 Volgende slag: coherentie/bijschaven in één Fable-pass (styling + toon op elkaar afstemmen).
 
 ## 🟡 Mark-acties (open)
-- ✍️ **DPIA lezen + ondertekenen**: `docs/DPIA-LEERKWARTIER.md` (concept klaar 27 jul) — 15 min lezen, datum + handtekening invullen. Dan is je privacy-fundament klaar om te tonen aan gemeenten/scholen.
+- ~~✍️ DPIA lezen + ondertekenen~~ ✅ **VASTGESTELD 1 sep 2026** — privacy-fundament klaar om te tonen aan gemeenten/scholen (PDF in Desktop\dagrapport + OneDrive). Na KvK: rechtsvorm bijwerken.
 - ⚠️ **MoonPay-mail checken** ("Welcome to MoonPay via Pump.fun", 26 jul 22:51): heb jij dat account zelf aangemaakt? Zo niet: negeren en nergens op klikken (iemand gebruikte dan jouw mailadres). Claude navigeert niet naar financiële sites (vaste regel).
 - 💼 **7 open LinkedIn-connectieverzoeken** accepteren/weigeren (jouw handwerk): Peter (Stichting Asha — mogelijk warme lead!), Mike, Ties, Leon, Harry, Daan, Henriëtte. Bij accepteren geldt de kruis-regel: nieuwe connectie → FB-uitnodiging (behalve Sonac).
 - ~~Drukwerkdeal-order Spark Fest~~ ✅ 29 jul BESTELD & in productie (order 15653885, €43,56, levering di 4 aug bij Inez) — zie Prio 1-tabel.

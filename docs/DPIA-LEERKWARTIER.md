@@ -1,7 +1,7 @@
-# DPIA — Leerkwartier (concept ter ondertekening)
+# DPIA — Leerkwartier (VASTGESTELD 1 september 2026)
 
 **Data Protection Impact Assessment (gegevensbeschermingseffectbeoordeling, AVG art. 35)**
-Versie: concept 1.0 — 27 juli 2026 · Opsteller: Claude (concept), ter review en vaststelling door Mark Smulders (verwerkingsverantwoordelijke)
+Versie: 1.0 — vastgesteld 1 september 2026 (concept 27 juli 2026) · Opsteller: Claude (concept), gereviewd en vastgesteld door Mark Smulders (verwerkingsverantwoordelijke)
 Herzien: jaarlijks, of eerder bij nieuwe verwerkingen (bv. betaalfuncties in 2027).
 
 > **Waarom deze DPIA:** Leerkwartier verwerkt op beperkte schaal gegevens van kinderen (8-16 jaar) voor onderwijsdoeleinden. Grootschalige verwerking van gegevens van kwetsbare groepen (kinderen) staat op de AP-lijst van DPIA-plichtige verwerkingen; hoewel de schaal nu klein is (<200 accounts), leggen we dit proactief vast — o.a. voor partners zoals gemeenten (Ooievaarspas) en scholen.
@@ -70,8 +70,8 @@ Geen andere ontvangers; geen verkoop of delen voor marketing.
 
 Opgesteld als concept door Claude op basis van de werkelijke datastromen in de codebase (27 juli 2026). Vastgesteld door de verwerkingsverantwoordelijke:
 
-**Naam:** Mark Smulders (Leerkwartier, particulier initiatief)
-**Datum:** ____________
-**Handtekening:** ____________
+**Naam:** Mark Smulders (Leerkwartier, particulier initiatief; na KvK-inschrijving 28 sep 2026: eenmanszaak Leerkwartier — rechtsvorm dan bijwerken)
+**Datum:** 1 september 2026
+**Handtekening:** w.g. Mark Smulders (vastgesteld per expliciet akkoord, 1 september 2026)
 
 *Contact voor privacy-vragen en verzoeken (inzage/wissing): zie leerkwartier.app/privacy.html.*
