@@ -3,7 +3,7 @@ import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import { recordRefAnswer } from "../features/mastery/mastery.js";
-import { insertLeaderboardEntry } from "../data/repos/leaderboardRepo.js";
+import { insertLeaderboardEntry, bouwToetsDetail } from "../data/repos/leaderboardRepo.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import MdInline from "../shared/ui/MdInline.jsx";
@@ -208,6 +208,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           total: questions.length,
           percentage: Math.round((goedTotaal / questions.length) * 100),
           time_taken: Math.max(0, config.minutes * 60 - secondsLeft),
+          detail: bouwToetsDetail(questions, answers),
         });
       })();
     }

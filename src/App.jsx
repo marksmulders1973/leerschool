@@ -121,7 +121,16 @@ import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
 import { buildHerhaalPool } from "./features/mastery/herhaalQuiz.js";
 import { getTextbookQuestions } from "./data/textbookQuestions.js";
 import { loadQuizzesByCreator, saveQuiz, findQuizByCode } from "./data/repos/quizzesRepo.js";
-import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/leaderboardRepo.js";
+import { loadLeaderboardForPlayer, insertLeaderboardEntry, bouwToetsDetail } from "./data/repos/leaderboardRepo.js";
+
+// Quiz-antwoorden ({questionIndex, selected, …}) → platte index-array voor
+// bouwToetsDetail (zelfde vorm als de Doorstroomtoets gebruikt).
+function quizDetail(result) {
+  if (!Array.isArray(result?.answers) || !Array.isArray(result?.questions)) return null;
+  const idxArr = new Array(result.questions.length).fill(null);
+  result.answers.forEach((a) => { if (a && a.questionIndex != null) idxArr[a.questionIndex] = a.selected; });
+  return bouwToetsDetail(result.questions, idxArr);
+}
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateProfileRole, renamePlayerData, updateSchoolLogo } from "./data/repos/profilesRepo.js";
@@ -1143,6 +1152,7 @@ export default function App() {
         time_taken: result.timeTaken,
         cito_id: result.citoId || null,
         cito_groep: result.citoGroep || null,
+        detail: quizDetail(result),
       });
     } else {
       track("leaderboard_skipped_no_name", { subject: result.subject, level: result.level });
@@ -2546,6 +2556,7 @@ export default function App() {
               time_taken: laatste.timeTaken,
               cito_id: laatste.citoId || null,
               cito_groep: laatste.citoGroep || null,
+              detail: quizDetail(laatste),
             });
           }
         }}

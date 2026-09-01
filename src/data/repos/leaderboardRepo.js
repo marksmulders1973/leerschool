@@ -44,6 +44,34 @@ export async function loadLeaderboardForPlayer({ userId, playerName, limit = 500
 }
 
 /**
+ * Bouw het per-vraag-detail voor de `detail`-kolom (Mark 1 sep 2026: ouder wil
+ * per toets exact zien wat het kind antwoordde). Compact gehouden — teksten
+ * afgekapt — omdat dit bij élke toets meegaat. gekozenIdxPerVraag[i] = index
+ * van het gekozen antwoord voor vraag i, of null bij onbeantwoord.
+ * Faalt stil naar null: het scorebord-resultaat zelf mag hier nooit op breken.
+ */
+export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
+  try {
+    if (!Array.isArray(questions) || questions.length === 0) return null;
+    return questions.map((q, i) => {
+      const idx = Array.isArray(gekozenIdxPerVraag) ? gekozenIdxPerVraag[i] : null;
+      const opties = Array.isArray(q?.options) ? q.options : [];
+      const kort = (t, n) => (t == null ? null : String(t).slice(0, n));
+      return {
+        v: kort(q?.question, 200),
+        a: idx != null ? kort(opties[idx], 120) : null,
+        j: kort(opties[q?.answer], 120),
+        goed: idx != null && idx === q?.answer,
+        ond: (q?.refOnderdeel && q.refOnderdeel !== "geen" ? q.refOnderdeel : null) || q?.topic || null,
+        pad: q?.leerpadLink?.id || null,
+      };
+    });
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Voeg een resultaat toe aan het globale scorebord. Fire-and-forget:
  * geen error die de UI breekt, maar wel best-effort logging via track.
  * Returnt { error } voor optionele logging.

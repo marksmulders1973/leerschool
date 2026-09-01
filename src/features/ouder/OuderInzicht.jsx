@@ -11,6 +11,7 @@ import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import KwartierplanSectie from "../kwartierplan/KwartierplanSectie.jsx";
 import VriendenWerven from "../referral/VriendenWerven.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
+import KindOverzicht from "./KindOverzicht.jsx";
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -124,6 +125,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // INLINE op de gekoppelde-kind-kaart, want een openstaande code voor een
   // al-gekoppeld kind wordt in de slot-lijst juist onderdrukt. { childId, code }.
   const [herstelCode, setHerstelCode] = useState(null);
+  // 📊 Kind-overzichtspagina (Mark 1 sep): klik op naam/📊 op de gekoppelde
+  // kaart → fullscreen totaaloverzicht van dat kind (KindOverzicht.jsx).
+  const [overzichtKind, setOverzichtKind] = useState(null);
   // Partner-mail (Mark 14 aug): tweede adres (partner/verzorger) dat het
   // wekelijkse rapport óók ontvangt. Eén adres per gezín — op alle koppelingen
   // van deze ouder gelijk gehouden (kolom parent_child_links.partner_email).
@@ -696,6 +700,13 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           Koppel tot {MAX_KINDEREN} kinderen — elk met een eigen code. Je volgt zo per kind hoe het gaat richting de Doorstroomtoets.
         </div>
 
+        {/* 📊 Fullscreen kind-overzicht (fixed overlay — plek in de boom is
+            niet belangrijk; alleen voor geverifieerde koppelingen bereikbaar
+            omdat de knop alleen op de ✓-gekoppelde kaart staat). */}
+        {overzichtKind && (
+          <KindOverzicht child={overzichtKind} onBack={() => setOverzichtKind(null)} onKlaarzetten={onKlaarzetten} />
+        )}
+
         <div ref={koppelFlowRef} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 12 }}>
           {slots.map((slot) => {
             // ── ✓ GEKOPPELD ──────────────────────────────────────────────
@@ -711,7 +722,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   background: isSel ? "rgba(105,240,174,0.12)" : "rgba(105,240,174,0.05)",
                 }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                    <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#69f0ae", display: "flex", alignItems: "center", gap: 8 }}>
+                    <span onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Open het totaaloverzicht van ${c.child_name}`} style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#69f0ae", display: "flex", alignItems: "center", gap: 8, cursor: "pointer", textDecoration: "underline", textDecorationColor: "rgba(105,240,174,0.35)", textUnderlineOffset: 3 }}>
                       👦 {c.child_name} <span style={{ fontSize: 12.5 }}>✓ gekoppeld</span>
                     </span>
                     <button onClick={(e) => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
@@ -721,6 +732,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     {isSel ? "Je voortgang staat hieronder." : "Tik om de voortgang te bekijken."}
                   </div>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                    <button onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Totaaloverzicht van ${c.child_name}: resultaten per vak, elke toets tot op de vraag, en wat de volgende stap is`} style={pill({ border: "1px solid rgba(105,240,174,0.5)", background: "rgba(105,240,174,0.12)", color: "#69f0ae" })}>
+                      📊 overzicht
+                    </button>
                     {onKlaarzetten && (
                       <button onClick={(e) => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }} title={`Blader door de app en zet lessen klaar voor ${c.child_name}`} style={pill({ border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2" })}>
                         💛 zet lessen klaar
