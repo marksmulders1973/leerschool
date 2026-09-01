@@ -475,6 +475,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://leerkwartier.app/voorlezen.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://leerkwartier.app/vmbo-examens-downloaden.html</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>

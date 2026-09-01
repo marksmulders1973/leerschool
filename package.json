@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs && node scripts/buildExamenTelling.mjs && node scripts/buildUitlegThuis.mjs && node scripts/buildPadLandingsPaginas.mjs && node scripts/check-path-duration.mjs --gate && node scripts/check-seo.mjs",
+    "prebuild": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs && node scripts/buildExamenTelling.mjs && node scripts/buildUitlegThuis.mjs && node scripts/buildVoorlezen.mjs && node scripts/buildPadLandingsPaginas.mjs && node scripts/check-path-duration.mjs --gate && node scripts/check-seo.mjs",
     "build": "vite build",
     "duration": "node scripts/check-path-duration.mjs",
     "manifest": "node scripts/buildPathManifest.mjs && node scripts/buildExamenLookup.mjs",

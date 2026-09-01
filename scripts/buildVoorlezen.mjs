@@ -1,0 +1,209 @@
+#!/usr/bin/env node
+// ─────────────────────────────────────────────────────────────────────────
+// buildVoorlezen.mjs — genereert public/voorlezen.html uit de Leesladder-data
+// (idee #90, Mark-go 1 sep 2026).
+//
+// WAAROM: bibliotheken en VoorleesExpress-mensen reageren warm op de
+// Leesladder, maar landen op de algemene home die over de Doorstroomtoets
+// gaat. Deze pagina is hun eigen "voordeur": wat komt er ná het
+// voorleestraject — in hún taal, met een kant-en-klaar nieuwsbrief-blokje
+// en FAQ-structured-data voor de vraag "wat is een goed vervolg op de
+// VoorleesExpress?". Telling (versies/teksten/vragen) komt uit dezelfde
+// data als de app, dus de pagina loopt nooit uit sync.
+//
+// Draait mee in "prebuild" (package.json).
+// ─────────────────────────────────────────────────────────────────────────
+import { writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+import { VERSIES } from "../src/components/leesladderData.js";
+import { VERSIES2 } from "../src/components/leesladder2/index.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const OUT = path.resolve(__dirname, "../public/voorlezen.html");
+const SITE = "https://leerkwartier.app";
+
+const esc = (s) =>
+  String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ── Telling uit de echte data ────────────────────────────────────────────
+function tel(versies) {
+  let teksten = 0, vragen = 0;
+  for (const treden of Object.values(versies)) {
+    for (const trede of treden) {
+      teksten += trede.teksten.length;
+      vragen += trede.teksten.reduce((a, t) => a + (t.vragen?.length || 0), 0);
+    }
+  }
+  return { versies: Object.keys(versies).length, teksten, vragen };
+}
+const l1 = tel(VERSIES);   // ladder 1 (A/B/C) — altijd gratis
+const l2 = tel(VERSIES2);  // ladder 2 (D/E/F) — zwaarder, t/m brugklas
+const totTeksten = l1.teksten + l2.teksten;
+const totVragen = l1.vragen + l2.vragen;
+
+// Nieuwsbrief-blokje — B1, plakklaar. Geen kale "100% gratis"-claim
+// (huisregel): oefenen gratis, gegarandeerd t/m 2031.
+const NIEUWSBRIEF = `Is het voorleestraject bij jullie thuis afgerond? Op leerkwartier.app/leesladder staat de gratis Leesladder: korte teksten die stapje voor stapje moeilijker worden, met vragen erbij. Elk stukje tekst heeft een voorleesknop, en moeilijke woorden worden in gewone taal uitgelegd. Samen lezen of zelf lezen — allebei goed. Werkt op telefoon, tablet en computer, zonder account en zonder reclame. Oefenen is gratis, gegarandeerd tot en met 2031.`;
+
+// ── FAQ — de vragen zoals een coördinator, voorlezer of ouder ze echt stelt ──
+const FAQ = [
+  {
+    q: "Wat is een goed vervolg op de VoorleesExpress of een ander voorleestraject?",
+    a: `Een voorleestraject stopt meestal na een vast aantal weken, terwijl het lezen thuis juist dán door moet gaan. De gratis Leesladder van Leerkwartier (${SITE}/leesladder) is daarvoor gemaakt: korte teksten die trede voor trede moeilijker worden, met begripsvragen erbij. Gezinnen kunnen samen lezen of het kind laat de tekst voorlezen met de voorleesknop. Zonder account, zonder reclame, en oefenen is gratis — gegarandeerd t/m 2031.`,
+  },
+  {
+    q: "Wat is de Leesladder?",
+    a: `De Leesladder is een gratis online leestraining met ${totTeksten} korte teksten en ${totVragen} begripsvragen, verdeeld over ${l1.versies + l2.versies} versies van elk 4 treden. De teksten beginnen kort en makkelijk en groeien mee tot brugklas-lengte. Bij elke fout hoort uitleg in gewone taal, en moeilijke woorden staan met een stippellijntje in de tekst — eerst zelf raden, dan opzoeken.`,
+  },
+  {
+    q: "Is de Leesladder gratis?",
+    a: `Ja. De eerste ladder (drie versies) is en blijft gratis. Oefenen op Leerkwartier is gratis, gegarandeerd tot en met 2031 — zonder account en zonder reclame. Er is ook een tweede, zwaardere ladder tot brugklas-niveau; die hoort later bij het Familie-pakket maar is nu gratis te proberen.`,
+  },
+  {
+    q: "Voor welke leeftijd is de Leesladder?",
+    a: `De eerste treden passen bij kinderen die net vlot beginnen te lezen (ongeveer groep 4-5); de hoogste treden van de tweede ladder zijn stevige groep 7-8- tot begin-brugklas-teksten van ± 330 woorden. Doordat de ladder trede voor trede klimt, vindt elk kind een instap die past.`,
+  },
+  {
+    q: "Kan mijn kind de teksten laten voorlezen?",
+    a: `Ja. Elk stuk tekst op Leerkwartier heeft een voorleesknop (🔊) — handig voor kinderen die meelezen met de stem, en voor ouders of verzorgers die zelf niet zo makkelijk voorlezen. Meelezen met de stem is ook een fijne tussenstap van voorgelezen wórden naar zelf lezen.`,
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const resourceLd = {
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  name: "De Leesladder — gratis leestraining na het voorleestraject",
+  description: `Gratis online leestraining: ${totTeksten} teksten en ${totVragen} begripsvragen die trede voor trede moeilijker worden, van net-vlot-lezen tot brugklas. Met voorleesknop en woordhulp.`,
+  url: `${SITE}/leesladder`,
+  inLanguage: "nl-NL",
+  isAccessibleForFree: true,
+  educationalLevel: "basisonderwijs groep 4-8 t/m begin brugklas",
+  learningResourceType: "leestraining begrijpend lezen",
+  provider: { "@type": "Organization", name: "Leerkwartier", url: SITE },
+};
+
+const treden2 = VERSIES2.D.map((t) => `${t.emoji} <strong>${esc(t.titel)}</strong> — ${esc(t.sub)}`);
+
+const html = `<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Na het voorleestraject: samen verder met lezen — de gratis Leesladder | Leerkwartier</title>
+<meta name="description" content="Wat is een goed vervolg op de VoorleesExpress of een ander voorleestraject? De gratis Leesladder: ${totTeksten} teksten en ${totVragen} vragen die trede voor trede moeilijker worden, met voorleesknop. Voor gezinnen, bibliotheken en voorleesorganisaties.">
+<link rel="canonical" href="${SITE}/voorlezen.html">
+<link rel="icon" href="/logo.jpg">
+<meta property="og:title" content="Na het voorleestraject: samen verder met lezen — de gratis Leesladder">
+<meta property="og:description" content="Korte teksten die stapje voor stapje moeilijker worden, met vragen en voorleesknop. Gratis, zonder account, zonder reclame.">
+<meta property="og:url" content="${SITE}/voorlezen.html">
+<meta property="og:image" content="${SITE}/logo.jpg">
+<script type="application/ld+json">${JSON.stringify(faqLd)}</script>
+<script type="application/ld+json">${JSON.stringify(resourceLd)}</script>
+<style>
+  :root{--navy:#14283c;--groen:#0a7d43;--warm:#f6faf2;--lijn:#dbe7d3;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#2c3a4a;background:var(--warm);line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+  header.top{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  header.top img{width:56px;height:56px;border-radius:13px;background:#fff}
+  header.top .naam{font-weight:800;font-size:19px;color:var(--navy)}
+  header.top .slogan{font-size:12.5px;color:#5a6775}
+  h1{font-size:30px;line-height:1.25;color:var(--navy);margin:0 0 14px}
+  h2{font-size:21px;color:var(--navy);margin:38px 0 10px}
+  p{margin:0 0 14px}
+  .kaart{background:#fff;border:1.5px solid var(--lijn);border-radius:16px;padding:20px 22px;margin:18px 0}
+  .accent{background:#e7f6ec;border-color:#bcd99a}
+  .cta{display:inline-block;background:linear-gradient(135deg,#7ab52d,#5c9420);color:#fff;font-weight:800;font-size:17px;padding:14px 26px;border-radius:13px;text-decoration:none;box-shadow:0 5px 16px rgba(122,181,45,.35)}
+  .cta.klein{font-size:14.5px;padding:10px 18px}
+  ul.treden{list-style:none;padding:0;margin:0}
+  ul.treden li{padding:8px 0;border-bottom:1px dashed var(--lijn)}
+  ul.treden li:last-child{border-bottom:none}
+  .cijfers{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+  .cijfer{flex:1 1 130px;background:#fff;border:1.5px solid var(--lijn);border-radius:13px;padding:13px;text-align:center}
+  .cijfer b{display:block;font-size:24px;color:var(--groen)}
+  .cijfer span{font-size:12px;color:#5a6775}
+  .plak{background:#fffdf4;border:1.5px dashed #d9c98a;border-radius:13px;padding:16px 18px;font-size:14.5px;color:#4a4633}
+  .plak .kop{font-weight:800;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8a7b3a;margin-bottom:8px}
+  details.faq{background:#fff;border:1.5px solid var(--lijn);border-radius:13px;padding:14px 18px;margin:10px 0}
+  details.faq summary{font-weight:700;color:var(--navy);cursor:pointer}
+  details.faq p{margin:10px 0 0}
+  footer{margin-top:46px;padding-top:18px;border-top:1.5px solid var(--lijn);font-size:13px;color:#5a6775}
+  footer a{color:var(--groen)}
+  a{color:var(--groen)}
+  @media(max-width:480px){h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img src="/logo.jpg" alt="Leerkwartier">
+  <div>
+    <div class="naam">Leerkwartier</div>
+    <div class="slogan">Een kwartier per dag — écht begrijpen wat je leert.</div>
+  </div>
+</header>
+
+<h1>Het voorleestraject zit erop. En nu?</h1>
+
+<p>Twintig weken lang kwam er iemand voorlezen — en dan is het traject klaar. Precies op dat moment wil je dat het lezen thuis <strong>doorgaat</strong>. Daarvoor is de <strong>Leesladder</strong> gemaakt: korte teksten die trede voor trede moeilijker worden, met vragen die controleren of het verhaal écht is begrepen.</p>
+
+<p style="margin:22px 0"><a class="cta" href="/leesladder">🪜 Bekijk de Leesladder — gratis, zonder account</a></p>
+
+<div class="cijfers">
+  <div class="cijfer"><b>${totTeksten}</b><span>korte teksten</span></div>
+  <div class="cijfer"><b>${totVragen}</b><span>begripsvragen met uitleg</span></div>
+  <div class="cijfer"><b>${l1.versies + l2.versies} × 4</b><span>versies × treden — klimt mee</span></div>
+  <div class="cijfer"><b>🔊</b><span>voorleesknop bij elke tekst</span></div>
+</div>
+
+<h2>Zo werkt het</h2>
+<div class="kaart">
+  <p><strong>1. Begin onderaan de ladder.</strong> De eerste teksten zijn kort (± 8 zinnen) en passen bij kinderen die net vlot beginnen te lezen. Samen lezen mag; zelf lezen ook.</p>
+  <p><strong>2. Elke trede wordt iets zwaarder.</strong> Langere teksten, slimmere vragen — tot stevige teksten van brugklas-lengte. De treden van de zwaarste ladder:</p>
+  <ul class="treden">${treden2.map((t) => `<li>${t}</li>`).join("")}</ul>
+  <p style="margin-top:14px"><strong>3. Fout is niet erg.</strong> Bij elk antwoord hoort uitleg in gewone taal. Moeilijke woorden staan met een stippellijntje in de tekst: eerst raden uit de zin (dát is de leesvaardigheid), opzoeken mag altijd.</p>
+</div>
+
+<div class="kaart accent">
+  <p style="margin:0"><strong>🔊 De voorleesknop</strong> — elk stuk tekst kan worden voorgelezen. Fijn voor kinderen die meelezen met de stem, en voor ouders of verzorgers die zelf niet zo makkelijk (Nederlands) voorlezen. Meelezen is een natuurlijke tussenstap van voorgelezen wórden naar zelf lezen.</p>
+</div>
+
+<h2>Voor bibliotheken en voorleesorganisaties</h2>
+<p>Werkt u bij een bibliotheek, de VoorleesExpress of een andere voorleesorganisatie? U mag de Leesladder vrij noemen aan gezinnen en voorlezers — bijvoorbeeld bij het afronden van een traject of in uw nieuwsbrief. Dit blokje kunt u zo overnemen:</p>
+
+<div class="plak">
+  <div class="kop">📋 Plakklaar nieuwsbrief-blokje</div>
+  ${esc(NIEUWSBRIEF)}
+</div>
+
+<p style="margin-top:14px">Liever een <strong>flyer of poster met uw eigen logo</strong>? Die maak ik kosteloos — mail naar <a href="mailto:hallo@leerkwartier.app">hallo@leerkwartier.app</a>. Meer voor organisaties: <a href="/voor-organisaties.html">leerkwartier.app/voor-organisaties</a>. De app is nog jong en ik verbeter hem elke week — tips van voorlezers zijn heel welkom.</p>
+
+<h2>Veelgestelde vragen</h2>
+${FAQ.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("\n")}
+
+<p style="margin-top:30px"><a class="cta klein" href="/leesladder">🪜 Naar de Leesladder</a></p>
+
+<footer>
+  <strong>Leerkwartier</strong> (leerkwartier.app) is een gratis Nederlandse leer-app, gebouwd door één vader. Oefenen is gratis — gegarandeerd t/m 2031. Geen reclame, geen account nodig, werkt op telefoon, tablet en computer.<br>
+  <a href="/">Home</a> · <a href="/leesladder">Leesladder</a> · <a href="/begrijpend-lezen-oefenen.html">Begrijpend lezen oefenen</a> · <a href="/voor-organisaties.html">Voor organisaties</a> · <a href="/over.html">Over Leerkwartier</a> · <a href="/privacy.html">Privacy</a>
+</footer>
+
+</div>
+</body>
+</html>
+`;
+
+writeFileSync(OUT, html, "utf8");
+console.log(`[buildVoorlezen] public/voorlezen.html — ladder 1: ${l1.teksten} teksten/${l1.vragen} vragen · ladder 2: ${l2.teksten}/${l2.vragen} · totaal ${totTeksten}/${totVragen}`);
