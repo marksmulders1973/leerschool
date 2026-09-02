@@ -21,17 +21,26 @@ const json = (data, status = 200) =>
 
 // Light content-filter — voorkomt off-topic / ongepaste prompts.
 // Leerkwartier-publiek is 8-18 dus we zijn streng.
+// Fable-review 2 sep 2026: was een kale substring-match, waardoor normale
+// leerstof geblokkeerd werd ("wapenstilstand" → wapen, "skills" → kill,
+// "exploiteren" → exploit, "moordenaar" in geschiedenis). Nu dezelfde
+// woordgrens-matcher als buddy-chat: entry met * matcht ook afleidingen.
 const BLOCKED = [
-  "porno", "porn", "xxx", "fuck", "shit", "kanker",
-  "wachtwoord", "password", "credit card", "creditcard",
-  "hack", "exploit", "kill", "murder", "moord", "wapen",
-  "naked", "nude", "sex video",
+  "porno*", "porn", "xxx", "fuck*", "shit", "kanker*",
+  "wachtwoord*", "password*", "credit card", "creditcard*",
+  "hack*", "exploit", "kill", "murder*", "moord", "wapen",
+  "naked", "nude", "sex video", "sexvideo",
 ];
+const normalize = (t) => ` ${String(t).toLowerCase().replace(/[^a-z0-9]+/g, " ")} `;
 
 function isClean(text) {
   if (!text) return true;
-  const lower = String(text).toLowerCase();
-  return !BLOCKED.some((w) => lower.includes(w));
+  const genorm = normalize(text);
+  return !BLOCKED.some((w) => {
+    const prefix = w.endsWith("*");
+    const kern = (prefix ? w.slice(0, -1) : w).trim();
+    return genorm.includes(prefix ? ` ${kern}` : ` ${kern} `);
+  });
 }
 
 // Bepaal leeftijdsgroep uit pad-id-prefix.

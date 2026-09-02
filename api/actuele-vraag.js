@@ -247,6 +247,9 @@ export default async function handler(req, res) {
     return res.status(200).json({ actueel: { datum: vandaag, vraag: vraagJson, bron_titel: bron.titel, bron_url: bron.link, created_at: new Date().toISOString() } });
   } catch (e) {
     console.warn("[actuele-vraag] generatie faalde:", e.message);
+    // Marker zetten (Fable-review 2 sep 2026): zonder marker triggerde élke
+    // bezoeker van /vandaag opnieuw RSS + AI-calls zolang de generatie faalde.
+    await zetMarker("generatie-fout: " + String(e?.message || e).slice(0, 40));
     return res.status(200).json({ actueel: null, reden: "generatie-fout" });
   }
 }

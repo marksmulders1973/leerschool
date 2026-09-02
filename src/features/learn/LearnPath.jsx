@@ -61,6 +61,12 @@ const C = {
 // als "(V11)" of "(V22, V38)" tonen. Defensieve strip — als een title eindigt
 // met `(V<digits>[, V<digits>]*)` halen we dat eraf voor de UI. De codes blijven
 // in de data staan (handig voor interne verwijzingen + comments).
+// Alleen checks met een opties-lijst; `kind: "open"` (acceptedAnswers zonder
+// options) kent LearnPath niet en zou crashen. Zie ook gatherPoChecks.
+function mcChecks(step) {
+  return (step?.checks || []).filter((c) => Array.isArray(c?.options) && c.options.length > 0);
+}
+
 function stripInternalCodes(s) {
   if (!s) return s;
   return String(s).replace(/\s*\(V\d+(?:\s*,\s*V\d+)*\)\s*$/i, "").trim();
@@ -443,6 +449,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // binnen bereik — content kan gewijzigd zijn. NB de checks-volgorde is
   // adaptief (fout-eerst) maar wordt uit dezelfde persistente fout-map
   // afgeleid, dus de index wijst vrijwel altijd naar dezelfde vraag.
+  // Stap-index begrenzen (Fable-review 2 sep 2026): een bewaarde plek
+  // (localStorage-resume, curriculum, takenlijst) kan na het snoeien van
+  // stappen buiten het pad wijzen → `step` undefined → crash op step.title.
+  useEffect(() => {
+    const n = path?.steps?.length || 0;
+    if (n && stepIdx >= n) setStepIdx(n - 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [path, stepIdx]);
   const resumeAppliedRef = useRef(false);
   useEffect(() => {
     if (!path || resumeAppliedRef.current) return;
@@ -450,7 +464,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     try {
       const r = loadResume(player);
       if (r && r.pathId === pathId && r.stepIdx === stepIdx && typeof r.checkIdx === "number") {
-        const checks = path.steps?.[stepIdx]?.checks || [];
+        const checks = mcChecks(path.steps?.[stepIdx]);
         if (r.checkIdx > 0 && r.checkIdx < checks.length) setCheckIdx(r.checkIdx);
       }
     } catch { /* */ }
@@ -519,7 +533,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // Hooks (incl. useMemo) MOETEN vóór elke conditional early-return staan,
   // anders breekt de rules-of-hooks zodra `path` van null naar geladen gaat.
   const step = path ? path.steps[stepIdx] : null;
-  const checks = step?.checks || [];
+  // Alleen meerkeuze-checks (Fable-review 2 sep 2026): 100 checks in 38 paden
+  // zijn `kind: "open"` zonder `options` — LearnPath heeft geen open-invoer,
+  // dus `currentCheck.options.map` crashte achteraan de stap (bv. breuken
+  // stap 15, check 16). Zelfde filter als gatherPoChecks in citoMixVragen.
+  const checks = mcChecks(step);
 
   // Adaptief: foute checks van vorige bezoek eerst herhalen.
   // checkOrder is een mapping van weergavevolgorde → originele checkIdx.

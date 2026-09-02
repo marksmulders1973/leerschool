@@ -477,6 +477,14 @@ export default function App() {
   const [gameState, setGameState] = useState(null);
   const [players, setPlayers] = useState([]);
   const [results, setResults] = useState([]);
+  // Vangnet (Fable-review 2 sep 2026): /quiz zonder lopende quiz (terug-knop
+  // ná het resultaat, koude load van /quiz) of /resultaat zonder resultaten
+  // gaf een leeg scherm zonder navigatie. Stuur dan naar het startscherm.
+  useEffect(() => {
+    if (page === "play" && !gameState) setPage(role === "teacher" ? "teacher-home" : role ? "student-home" : "home");
+    if (page === "results" && !results.length) setPage(role === "teacher" ? "teacher-home" : role ? "student-home" : "home");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, gameState, results]);
   const [studentProgress, setStudentProgress] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
   const [hallOfFame, setHallOfFame] = useState({});
@@ -1187,7 +1195,11 @@ export default function App() {
       } catch {}
     }
     setGameState(null);
-    setCurrentQuiz(null);
+    // NIET setCurrentQuiz(null) hier (Fable-review 2 sep 2026): ResultsPage
+    // bouwt "Nog een keer", "5 vragen erbij", "Volgende tafel", "Terug" en
+    // het Cito-vervolgblok op currentQuiz. Sinds 23 mrt werd hij hier gewist,
+    // waardoor al die knoppen naar student-home vielen. Een nieuwe quiz zet
+    // hem sowieso opnieuw.
     setPage("results");
   };
 

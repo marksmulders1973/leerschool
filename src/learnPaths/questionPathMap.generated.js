@@ -6787,7 +6787,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 3
   },
-  "Hoe heet de waterscheiding tussen de Rijn en de Maas in Nederland?": {
+  "Hoe heet de langgerekte heuvelrug in de provincie Utrecht, ontstaan als stuwwal in de ijstijd?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 4
   },
