@@ -814,9 +814,13 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
   }, []);
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <Sokkel r={0.7} h={0.34} color="#6a5230" />
-      <mesh position={[0, 1.5, 0]} rotation={[0.41, 0, 0]}><torusGeometry args={[1.15, 0.05, 8, 32, Math.PI * 1.3]} /><meshStandardMaterial color="#c9a24a" metalness={0.5} roughness={0.4} flatShading /></mesh>
-      <group ref={bol} position={[0, 1.5, 0]} rotation={[0.41, 0, 0]}>
+      {/* 🌍 3× zo groot (Mark 2 sep: "super mooi maar kan hij 3 keer groter?").
+          Voet + zuil dragen een bol van 3 m straal op 4,5 m hoogte; past in de
+          3×3-footprint (6 m). De poort staat verder naar voren (POORT_AFSTAND). */}
+      <Sokkel r={2.0} h={0.5} color="#6a5230" />
+      <mesh position={[0, 1.6, 0]} castShadow><cylinderGeometry args={[0.4, 0.55, 2.4, 12]} /><meshStandardMaterial color="#6a5230" flatShading roughness={0.9} /></mesh>
+      <mesh position={[0, 4.5, 0]} rotation={[0.41, 0, 0]}><torusGeometry args={[3.45, 0.15, 8, 48, Math.PI * 1.3]} /><meshStandardMaterial color="#c9a24a" metalness={0.5} roughness={0.4} flatShading /></mesh>
+      <group ref={bol} position={[0, 4.5, 0]} rotation={[0.41, 0, 0]} scale={3}>
         {/* Echte continenten uit de les zodra de kaart geladen is; tot die tijd
             (en op zwakke toestellen) de oude blauwe bol met groene vlekken. */}
         <mesh castShadow>
@@ -833,7 +837,7 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
           return <mesh key={i} position={[(x / len) * 1.0, (y / len) * 1.0, (0.5 / len) * 1.0]}><sphereGeometry args={[r * 0.5, 10, 8]} /><meshStandardMaterial color="#4a9e3a" flatShading roughness={0.8} /></mesh>;
         })}
       </group>
-      <MagischePoort kleur="#7bc6ff" emoji="🌍" label="De wereld" z={-1.4} breedte={2.6} hoogte={3.0} />
+      <MagischePoort kleur="#7bc6ff" emoji="🌍" label="De wereld" z={-4.6} breedte={2.6} hoogte={3.0} />
     </group>
   );
 }

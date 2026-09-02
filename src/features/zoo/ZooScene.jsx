@@ -909,7 +909,7 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
 // arena-poort staat op R×ARENA_S+2,6 ≈ 9,6 m van het midden, aan het eind van
 // de loper (Mark 27 aug: "die poort doet niets" + "iets verder weg").
 const POORT_KLEIN_AFSTAND = 2.4;
-const POORT_AFSTAND = { tempel: 9.6, ...Object.fromEntries(POORT_KLEIN_ASSETS.map((id) => [id, POORT_KLEIN_AFSTAND])) };
+const POORT_AFSTAND = { tempel: 9.6, wereldbol: 4.6, ...Object.fromEntries(POORT_KLEIN_ASSETS.map((id) => [id, POORT_KLEIN_AFSTAND])) };
 // Emoji van het leermoment voor de kleine poort (zonder ZooScene aan de hele tabel te koppelen).
 const PARK_LEERMOMENTEN_EMOJI = (momentId) => hierContextVoor(momentId)?.emoji || "✨";
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
