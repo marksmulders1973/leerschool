@@ -26,11 +26,35 @@ function pagina(titel, tekst) {
   </body></html>`;
 }
 
+// F14 (Fable-review 2 sep 2026): een kale GET voerde de afmelding direct uit.
+// Outlook SafeLinks, Gmail-proxies en virusscanners pre-fetchen links in mails
+// → ontvangers werden ongevraagd afgemeld. Nu: GET = bevestig-pagina met een
+// knop (POST); alleen POST voert uit. Mailclients met RFC 8058 one-click
+// (List-Unsubscribe-Post) sturen zelf een POST en werken dus ook.
+function bevestigPagina(token) {
+  const t = String(token).replace(/[^A-Za-z0-9-]/g, "");
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Uitschrijven — Leerkwartier</title></head>
+  <body style="margin:0;background:#0a0f1e;color:#e8edf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;">
+    <div style="max-width:420px;padding:32px 24px;text-align:center;">
+      <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:14px;">Wil je je uitschrijven?</div>
+      <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">Dan stoppen alle lesmateriaal- en oefen-mails van Leerkwartier naar dit adres. Oefenen op de site blijft gewoon gratis.</p>
+      <form method="post" action="/api/unsubscribe?token=${t}" style="margin:0 0 14px;">
+        <button type="submit" style="background:linear-gradient(135deg,#ff5252,#d32f2f);color:#fff;border:none;font-weight:800;padding:12px 22px;border-radius:12px;font-size:15px;cursor:pointer;">Ja, schrijf me uit</button>
+      </form>
+      <a href="https://leerkwartier.app" style="display:inline-block;color:#8ab4f8;text-decoration:none;font-weight:700;">Nee, ik blijf — terug naar Leerkwartier</a>
+    </div>
+  </body></html>`;
+}
+
 export default async function handler(req, res) {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   const token = (req.query && req.query.token) || "";
   if (!token || String(token).length < 8) {
     return res.status(400).send(pagina("Ongeldige link", "Deze uitschrijf-link klopt niet. Open 'm direct vanuit de e-mail."));
+  }
+  if (req.method !== "POST") {
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(200).send(bevestigPagina(token));
   }
 
   const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;

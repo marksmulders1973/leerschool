@@ -258,6 +258,17 @@ export default function App() {
     return p;
   })();
   const [page, setPage] = useState(initialPage);
+  // F12 (Fable-review 2 sep 2026): een onbekend pad (/dit-bestaat-niet) landde
+  // stil op de homepage mét de foute URL in de adresbalk. Nu: URL naar "/" en
+  // één keer een vriendelijke melding. Statische .html-pagina's en de
+  // dynamische /v/ en /duel/ routes vallen hier bewust buiten.
+  const [onbekendPad, setOnbekendPad] = useState(() => {
+    try {
+      const p = window.location.pathname;
+      if (p !== "/" && pageForPath(p) === "home" && !/\.[a-z0-9]+$/i.test(p) && !/^\/(v|duel)\//i.test(p)) return p;
+    } catch { /* */ }
+    return null;
+  });
   // Router-mirror (P1.2): bestaande `page`-state blijft werken, maar URL
   // volgt mee. Hierdoor werken deep links, browser-back en shareable URLs
   // direct, zónder dat we eerst alle pagina's als <Route> hoeven te splitsen.
@@ -283,6 +294,11 @@ export default function App() {
       if (fromUrl === "student-home") {
         navigate("/", { replace: true });
         if (page !== "home") setPage("home");
+        return;
+      }
+      // F12: onbekend pad → URL opschonen naar "/" (melding komt uit onbekendPad).
+      if (fromUrl === "home" && page === "home" && location.pathname !== "/" && !/\.[a-z0-9]+$/i.test(location.pathname)) {
+        navigate("/", { replace: true });
         return;
       }
       if (fromUrl !== page) {
@@ -377,6 +393,15 @@ export default function App() {
     if (page === "learn-path" && !activeLearnPathId) {
       setPage("learn-paths-hub");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, activeLearnPathId]);
+  // F12 (2 sep 2026): het pad-id altijd in de URL houden (/leren/pad?id=…) —
+  // ook bij navigatie bínnen de app. Anders verloor een herlaad (of de stille
+  // SW-update) het id en viel het kind terug op het leerpaden-overzicht.
+  useEffect(() => {
+    if (page !== "learn-path" || !activeLearnPathId) return;
+    const want = `/leren/pad?id=${encodeURIComponent(activeLearnPathId)}`;
+    if (location.pathname + location.search !== want) navigate(want, { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, activeLearnPathId]);
   // Begin-zoekterm voor de leerpaden-hub (Mark 2026-06-14: zoekbalk op home).
@@ -1209,6 +1234,12 @@ export default function App() {
       style={{ ...styles.app, paddingBottom: BOTTOMNAV_PAGES.has(page) ? 70 : 0 }}
     >
       <style>{fonts}</style>
+      {onbekendPad && (
+        <div role="status" style={{ position: "fixed", top: 10, left: "50%", transform: "translateX(-50%)", zIndex: 3000, maxWidth: "92vw", background: "#1a2540", border: "1px solid rgba(255,213,79,0.5)", borderRadius: 12, padding: "10px 14px", display: "flex", gap: 10, alignItems: "center", fontFamily: "var(--font-body)", fontSize: 13, color: "#fff", boxShadow: "0 6px 24px rgba(0,0,0,0.4)" }}>
+          <span>🧭 Die pagina bestaat niet (<code style={{ opacity: 0.8 }}>{onbekendPad}</code>). Je bent nu op de startpagina.</span>
+          <button onClick={() => setOnbekendPad(null)} style={{ background: "#ffd54f", color: "#1a1a2e", border: "none", borderRadius: 8, padding: "6px 10px", fontWeight: 800, cursor: "pointer" }}>Oké</button>
+        </div>
+      )}
 
       {/* WCAG 2.4.1: skip-link voor toetsenbord-/screenreader-gebruikers
           (audit-2 v2 a11y-agent). Verschijnt alleen tijdens Tab-focus. */}
