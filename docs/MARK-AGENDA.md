@@ -6,6 +6,15 @@
 > MARK zelf moet doen of niet mag vergeten. Aangemaakt 5 aug 2026 (Mark:
 > "ik vergeet dat soort dingen, denk mee").
 
+## 🧭 Langlopend plan — gemeente betaalt (doel €500/mnd) · vast blok in elk dagrapport
+
+> Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
+- **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: €25/kind/jaar, gemeente betaalt" (Mark-akkoord)
+- **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
+- **vóór nov**: gemeentegesprekken (begroting 2027 wordt in nov vastgesteld)
+- **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
+- Stand: ☐ KvK ☐ KOR ☐ 1e kindpakket-aanmelding ☐ partner-rapport ☐ 1e betaald kind
+
 ## 🔴 Nu doen (deze week)
 
 - **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend; Claude stuurt batch 2 e.v. (~45/dag). Reacties komen op hallo@ → Gmail.**
