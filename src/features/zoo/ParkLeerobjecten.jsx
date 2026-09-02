@@ -823,7 +823,10 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
           <sphereGeometry args={[1.0, 48, 32]} />
           {/* Eén materiaal dat van kleur→kaart wisselt (geen element-swap):
               map-uv + wit = de kaart zelf; zonder kaart de oude blauwe bol. */}
-          <meshStandardMaterial map={kaart || null} color={kaart ? "#ffffff" : "#2f7fd0"} roughness={0.75} />
+          {/* key wisselt mee: three.js compileert de shader alléén opnieuw bij een
+              nieuw materiaal (map null→textuur zonder needsUpdate = witte bol,
+              Mark-foto v564). Met een vers materiaal zit USE_MAP er meteen in. */}
+          <meshStandardMaterial key={kaart ? "kaart" : "kaal"} map={kaart || null} color={kaart ? "#ffffff" : "#2f7fd0"} roughness={0.75} />
         </mesh>
         {!kaart && vlekken.map(([x, y, r], i) => {
           const len = Math.hypot(x, y, 0.5) || 1;
