@@ -50,6 +50,7 @@
 |---|---|---|
 | ma 31 aug | ~5 | 💻✉️ Dag: maand-afsluiting-dagrapport + Alkmaar-flyer versimpeld/geleverd (Teresa drukt) + Kinderhulp-reply (nieuwsbrief 4.400+ orgs). Avond: Charley-stem (euro-uitspraak + verkleinwoorden, v526), klaarzet-uitleg + Deianera-accountverwarring opgelost, ouder-ziet-toets-fix (v527), koppeling-herstel-knop (v528), Fable-naloop-pakket klaargezet |
 | di 1 sep | ~3,5 | 💻📋 Fable-naloop uitgevoerd (build+250 tests, E2E-recovery-test met 2 accounts, 2 opruim-fixes v529-530) · mail-hercontrole 5 dagen (niets gemist; Steffy bedankt) · dagrapport + PDF naar telefoon · avond: dagrapport-avondeditie + Rotterdam-keten-verificatie + Vercel/Meta-uitlezing |
+| wo 2 sep | ~3 | 💻🔗 Fable 5.1-review begeleid (6-agent sweep, 13 fixes v540-546: resultaat-knoppen, leerpad-crash, 3 datalekken) · besluit + oplevering koppeling-identiteit ouder↔kind in 2 stappen (v547-548) · tokenwacht-instelling (stop bij 90%) · P1/P2-restjes F7-F19 (v549-554) · dagrapport. **Voorstel-schatting — corrigeer als het anders was.** |
 | **Offline (15%-vuistregel)** | | (invullen eind week) |
 | **Weektotaal** | ~28 (t/m vr) | doel-orde: ~30 u — za/zo (o.a. VoorleesExpress deel 3) komt er nog bij |
 

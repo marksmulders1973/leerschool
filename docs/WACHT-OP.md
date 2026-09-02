@@ -15,12 +15,8 @@
 |---|---|---|---|
 | **KB-route zonder OBA-ingang** | ~~Lenneke Briët~~ **6 aug 10:08 beantwoord: zij heeft zélf geen KB-contacten/ingang** → OBA-lus dicht. Route loopt nu via eigen KB-dossier + warme bibliotheken | 6 aug | KB-dossier (1 A4) af laten maken door Claude; eind aug warme bibliotheken (Utrecht/Westfries/Amstelland/R'dam/Rijn en Venen) vragen om AVEC-voordracht; details memory `project_studiebol_kb_route` |
 
-## 🎯 SIDN-subsidie — ✅ INGEDIEND 4 aug 2026 (€7.150, aanvraag-nr 140670)
-*Alle stappen afgerond (samen met Claude via FundPro): quickscan groen, account aangemaakt
-(login: `Desktop\SIDN-aanvraag\inloggegevens-fundpro.txt`), 15 projectvragen, projectplan +
-begroting als PDF-bijlagen, videopitch ingekort naar 2:58 (limiet 3:00) en geüpload,
-budget 8 posten, verzonden + ontvangstbevestiging binnen. **Nu: wachten op uitslag
-± half september** (dagrapport-regel: "⏳ wachten op SIDN"; vanaf ~15 sep gmail checken).*
+## 🎯 SIDN-subsidie — ❌ AFGEWEZEN 21 aug 2026 (€7.150, aanvraag-nr 140670)
+*Standaard-afwijzingsbrief 21 aug (PDF in Desktop\SIDN-aanvraag). Geld-spoor loopt nu via de eenmanszaak (KvK 28 sep → Stripe dec). Nog open: feedbackvraag aan SIDN (#62) + plan zelf publiceren (#63). Geen wacht-op meer.*
 
 ## 🟠 Prio 2 — loopt, geduld
 | Wat | Wacht op | Sinds | Daarna |
