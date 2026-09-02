@@ -1,10 +1,16 @@
+import { PAYWALL_ACTIVE } from "./subscription/config.js";
+
 // ─── Launch promo: alle PRO-functies gratis t/m 31 dec 2026 ──────
 // Tijdelijk: we hebben nog geen Stripe-integratie en nog geen echte
 // gebruikers, dus open alles zodat vroege testers volledig kunnen
 // proberen. Zet LAUNCH_PROMO_END terug naar verleden of maak de
 // helper altijd false om de promo te beëindigen.
 export const LAUNCH_PROMO_END = new Date("2027-01-01T00:00:00");
-export const isLaunchPromoActive = () => Date.now() < LAUNCH_PROMO_END.getTime();
+// F17 (Fable-review 2 sep 2026): zolang de paywall UIT staat (PAYWALL_ACTIVE=false)
+// blijft de promo actief, óók ná 1-1-2027. Anders klapte op nieuwjaarsdag de
+// Familie-poort in OuderInzicht/App dicht terwijl er nog geen betaalroute was
+// (drie losse bronnen: deze datum, PAYWALL_ACTIVE en de subscriptions-tabel).
+export const isLaunchPromoActive = () => !PAYWALL_ACTIVE || Date.now() < LAUNCH_PROMO_END.getTime();
 export const LAUNCH_PROMO_SHORT = "🎉 Dit jaar gratis wegens lancering";
 export const LAUNCH_PROMO_LONG = "Alle extra's (Familie én Pro) gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
 

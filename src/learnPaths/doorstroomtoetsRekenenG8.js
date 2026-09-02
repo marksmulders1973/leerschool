@@ -20,7 +20,7 @@ const chapters = [
   { letter: "A", title: "Breuken & decimalen", emoji: "🍕", from: 0, to: 0 },
   { letter: "B", title: "Procenten & verhoudingen", emoji: "📊", from: 1, to: 1 },
   { letter: "C", title: "Meten & schaal", emoji: "📏", from: 2, to: 2 },
-  { letter: "D", title: "Redactiesommen — gemixt", emoji: "🏆", from: 3, to: 3 },
+  { letter: "D", title: "Redactiesommen — gemixt", emoji: "🏆", from: 3, to: 5 }, // F18: stappen 5-6 vielen buiten elk hoofdstuk (100% onhaalbaar)
 ];
 
 function overzichtSvg() {

@@ -8,6 +8,7 @@ import LeerpadBot from "./LeerpadBot.jsx";
 import { subjectsForQuery } from "./subjectSynonyms.js";
 import LijstjeSter from "../../shared/ui/LijstjeSter.jsx";
 import { zetKlaar, haalWeg, haalKlaargezetVoorLink } from "../../shared/ouderKlaargezet.js";
+import { loadResume } from "./KwartierPauze.jsx";
 
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
 // import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
@@ -460,6 +461,13 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
 
   // Vind onafgemaakt pad voor "doorgaan"-banner
   const continuePath = (() => {
+    // F19 (2 sep 2026): eerst de écht laatst bezochte plek (zelfde bron als
+    // StudentHome/MijnPagina), pas daarna de manifest-volgorde als terugval.
+    try {
+      const r = loadResume(player);
+      const laatst = r?.pathId ? paths.find((p) => p.id === r.pathId) : null;
+      if (laatst) return laatst;
+    } catch { /* */ }
     for (const path of paths) {
       const done = progressByPath[path.id];
       if (done && done.size > 0 && done.size < (path.stepCount ?? 0)) {
@@ -469,8 +477,11 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     return null;
   })();
 
-  const totalCompleted = Object.values(progressByPath).reduce((sum, s) => sum + s.size, 0);
+  // F19 (Fable-review 2 sep 2026): alleen tellen over de getoonde paden én per pad
+  // afkappen op stepCount — anders "15 van 10 delen · 150%" bij een niveau-filter
+  // of na het snoeien van stappen.
   const totalSteps = paths.reduce((sum, p) => sum + (p.stepCount ?? 0), 0);
+  const totalCompleted = paths.reduce((sum, p) => sum + Math.min(progressByPath[p.id]?.size || 0, p.stepCount ?? 0), 0);
 
   // Vak-grid (entry-screen) — zelfde IA als Oefenen-tab. Elke vak-tegel toont
   // emoji + label + "X onderwerpen" + voortgangs-pil. Klik → setSelectedSubject

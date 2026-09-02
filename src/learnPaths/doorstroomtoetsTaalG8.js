@@ -22,7 +22,7 @@ const chapters = [
   { letter: "A", title: "Woordenschat", emoji: "📖", from: 0, to: 0 },
   { letter: "B", title: "Begrijpend lezen", emoji: "🧠", from: 1, to: 1 },
   { letter: "C", title: "Spelling", emoji: "✏️", from: 2, to: 2 },
-  { letter: "D", title: "Taalverzorging — gemixt", emoji: "🏆", from: 3, to: 3 },
+  { letter: "D", title: "Taalverzorging — gemixt", emoji: "🏆", from: 3, to: 4 }, // F18: stap 5 viel buiten elk hoofdstuk
 ];
 
 function overzichtSvg() {

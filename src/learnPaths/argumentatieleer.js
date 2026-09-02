@@ -30,7 +30,7 @@ const chapters = [
   { letter: "A", title: "Standpunt en argument", emoji: "💬", from: 0, to: 2 },
   { letter: "B", title: "Argumentatieschema's", emoji: "🧰", from: 3, to: 7 },
   { letter: "C", title: "Argumentatiestructuur", emoji: "🌳", from: 8, to: 10 },
-  { letter: "D", title: "Drogredenen", emoji: "🚫", from: 11, to: 13 },
+  { letter: "D", title: "Drogredenen", emoji: "🚫", from: 11, to: 14 }, // F18: stap 15 (idx 14) viel buiten elk hoofdstuk
 ];
 
 const steps = [
