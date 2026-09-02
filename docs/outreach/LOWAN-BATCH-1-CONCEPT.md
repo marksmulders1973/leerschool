@@ -1,6 +1,6 @@
-# LOWAN nieuwkomersscholen — batch 1 (CONCEPT, wacht op tekst-akkoord Mark)
+# LOWAN nieuwkomersscholen — batch 1 (✅ TEKST-AKKOORD Mark 2 sep 2026 — wacht op verzendroute)
 
-**Status 2 sep 2026:** Mark gaf "LOWAN akkoord" op de vraag of de mail deze week de deur uit mag.
+**Status 2 sep 2026 (later):** Mark gaf "text ok" op de mailtekst hieronder → verzendklaar. Open: verzendroute (Zapier = Mark doet /mcp → "claude.ai Zapier" → autoriseren; anders Resend vanaf hallo@, max ~45/dag). Eerder: Mark gaf "LOWAN akkoord" op de vraag of de mail deze week de deur uit mag.
 Afspraak sinds 13 aug: versturen pas ná tekst-akkoord per batch → deze tekst eerst aan Mark.
 **Verzendroute:** Zapier-Gmail (vanaf marksmulders1973@gmail.com) vraagt opnieuw OAuth-autorisatie
 (MCP toont alleen `authenticate`) → Mark klikt de auth-link, óf nood-route Resend vanaf hallo@leerkwartier.app
