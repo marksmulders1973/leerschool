@@ -1414,7 +1414,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
     if (ordered.length < 2) return null;
     const loop = ordered.length > 2 && buren(ordered[ordered.length - 1]).some((n) => k(n) === k(ordered[0]));
     const pts = ordered.map(([gx, gz]) => { const [x, z] = cellToWorld(gx, gz); return { x, y: heightFnRef.current(x, z) + 0.16, z }; });
-    return { pts, loop };
+    // cells: de rail-tegels die in deze route zitten — die tekent RouteTrain
+    // zelf (grind + biels langs de curve), dus de instanced tegel-laag slaat ze over.
+    return { pts, loop, cells: new Set(ordered.map(k)) };
   }, [placedItems, terrain]);
 
   // 🚄 Verzamel rails/hekpanelen/padtegels voor de geïnstanceerde laag
@@ -1428,12 +1430,17 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       if (a.procedural !== "rail" && a.procedural !== "fencePanel" && a.procedural !== "path") continue;
       const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const y = heightFnRef.current(x, z);
-      if (a.procedural === "rail") rails.push({ x, y, z, rot: it.rotation || 0 });
+      if (a.procedural === "rail") {
+        // Rails die deel zijn van de trein-route krijgen hun hout en grind van
+        // RouteTrain (volgt de bocht); alleen losse rail-stukjes blijven tegels.
+        if (railRoute?.cells?.has(`${it.cell[0]},${it.cell[1]}`)) continue;
+        rails.push({ x, y, z, rot: it.rotation || 0 });
+      }
       else if (a.procedural === "fencePanel") hekken.push({ x, y, z, rot: it.rotation || 0 });
       else paden.push({ x, y, z, color: a.color });
     }
     return { rails, hekken, paden };
-  }, [placedItems, terrain]);
+  }, [placedItems, terrain, railRoute]);
 
   // Kraampjes-locaties (wereldcoördinaten) per soort behoefte: patat = food,
   // drank = drink. Bezoekers lopen naar het dichtstbijzijnde passende kraampje.

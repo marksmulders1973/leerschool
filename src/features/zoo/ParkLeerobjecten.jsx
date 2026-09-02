@@ -21,8 +21,12 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3 } from "three";
+import { Vector3, CanvasTexture, SRGBColorSpace } from "three";
 import { ZwevendeMaten } from "./UitvindersKabouters";
+// 🌍 Dezelfde wereldkaart als in de les (Mark 2 sep: "kan de mooie uit de les in
+// het park komen?"): bouwKaart tekent de continenten op een canvas; de zware
+// landen-data laadt lazy, net als in de les zelf.
+import { bouwKaart } from "../../components/learn/geo/Wereldbol.jsx";
 import { LOW_END } from "./grid";
 import { track } from "../../utils.js";
 import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
@@ -783,13 +787,41 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
   const vlekken = useMemo(() => ([
     [0.5, 0.4, 0.6], [-0.4, 0.5, 0.55], [0.3, -0.5, 0.5], [-0.6, -0.2, 0.45], [0.7, -0.1, 0.4], [-0.2, 0.75, 0.4],
   ]), []);
+  // 🌍 Kaart-textuur uit de les (lazy: world-atlas + topojson zoals Wereldbol.jsx).
+  const [kaart, setKaart] = useState(null);
+  useEffect(() => {
+    if (LOW_END) return undefined;
+    let stop = false;
+    let tex = null;
+    (async () => {
+      try {
+        const [topoMod, tjMod] = await Promise.all([import("world-atlas/countries-110m.json"), import("topojson-client")]);
+        if (stop) return;
+        const topo = topoMod.default || topoMod;
+        const feature = tjMod.feature || (tjMod.default && tjMod.default.feature);
+        const geo = feature(topo, topo.objects.countries);
+        const cv = bouwKaart(geo.features, { lichter: false, grenzen: false, landnamen: false, stippen: false, hoofdstadnamen: false }, 2048, 1024);
+        tex = new CanvasTexture(cv);
+        tex.colorSpace = SRGBColorSpace;
+        if (!stop) setKaart(tex);
+      } catch { /* kaart niet geladen → vlekken-bol blijft */ }
+    })();
+    return () => { stop = true; if (tex) tex.dispose(); };
+  }, []);
   return (
     <group position={position} rotation={[0, rotation, 0]}>
       <Sokkel r={0.7} h={0.34} color="#6a5230" />
       <mesh position={[0, 1.5, 0]} rotation={[0.41, 0, 0]}><torusGeometry args={[1.15, 0.05, 8, 32, Math.PI * 1.3]} /><meshStandardMaterial color="#c9a24a" metalness={0.5} roughness={0.4} flatShading /></mesh>
       <group ref={bol} position={[0, 1.5, 0]} rotation={[0.41, 0, 0]}>
-        <mesh castShadow><sphereGeometry args={[1.0, 24, 20]} /><meshStandardMaterial color="#2f7fd0" flatShading roughness={0.6} /></mesh>
-        {vlekken.map(([x, y, r], i) => {
+        {/* Echte continenten uit de les zodra de kaart geladen is; tot die tijd
+            (en op zwakke toestellen) de oude blauwe bol met groene vlekken. */}
+        <mesh castShadow>
+          <sphereGeometry args={kaart ? [1.0, 48, 32] : [1.0, 24, 20]} />
+          {kaart
+            ? <meshStandardMaterial map={kaart} roughness={0.75} />
+            : <meshStandardMaterial color="#2f7fd0" flatShading roughness={0.6} />}
+        </mesh>
+        {!kaart && vlekken.map(([x, y, r], i) => {
           const len = Math.hypot(x, y, 0.5) || 1;
           return <mesh key={i} position={[(x / len) * 1.0, (y / len) * 1.0, (0.5 / len) * 1.0]}><sphereGeometry args={[r * 0.5, 10, 8]} /><meshStandardMaterial color="#4a9e3a" flatShading roughness={0.8} /></mesh>;
         })}

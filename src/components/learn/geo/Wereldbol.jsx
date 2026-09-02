@@ -196,7 +196,7 @@ const tint = (hex, f) => {
 
 // ── Wereldkaart-canvas bouwen (per modus/stand andere opties) ──────────────────
 // Hoge resolutie (4096×2048) zodat je flink kunt inzoomen zonder dat het wazig wordt.
-function bouwKaart(features, opts, W = 4096, H = 2048) {
+export function bouwKaart(features, opts, W = 4096, H = 2048) {
   const s = W / 2048; // schaalfactor t.o.v. basis-resolutie
   const cv = document.createElement("canvas");
   cv.width = W; cv.height = H;

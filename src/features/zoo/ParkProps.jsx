@@ -5,7 +5,7 @@
 import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace } from "three";
+import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace, BufferGeometry, Float32BufferAttribute } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
@@ -2368,14 +2368,36 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
     const N = Math.max(32, Math.round(total * 3));
     const up = new Vector3(0, 1, 0), n = new Vector3();
     const links = [], rechts = [];
+    // 🪵 Grindbed + dwarsliggers LANGS DE CURVE (Mark 2 sep, foto "kan de bocht
+    // mooier?"): de stalen rails liepen al vloeiend, maar hout en grind waren
+    // nog rechte tegels die in de bocht schuin onder de rails uitstaken. Nu een
+    // ballast-lint (strook van driehoeken) en om de 0,36 m een biels dwars op
+    // de rijrichting — alles volgt exact dezelfde Catmull-Rom-baan.
+    const lintPos = [], lintIdx = [];
+    const BALLAST_HALF = 0.62, BALLAST_Y = -0.14; // t.o.v. het rail-punt (dat op +0,16 ligt)
     for (let i = 0; i <= N; i++) {
       const u = i / N;
       const p = curve.getPointAt(u), t = curve.getTangentAt(u);
       n.crossVectors(t, up).normalize().multiplyScalar(0.34); // spoorbreedte
       links.push(p.clone().add(n)); rechts.push(p.clone().sub(n));
+      const bx = (n.x / 0.34) * BALLAST_HALF, bz = (n.z / 0.34) * BALLAST_HALF;
+      lintPos.push(p.x + bx, p.y + BALLAST_Y, p.z + bz, p.x - bx, p.y + BALLAST_Y, p.z - bz);
+      if (i < N) { const a = i * 2; lintIdx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+    }
+    const ballast = new BufferGeometry();
+    ballast.setAttribute("position", new Float32BufferAttribute(lintPos, 3));
+    ballast.setIndex(lintIdx);
+    ballast.computeVertexNormals();
+    const bielsN = Math.max(6, Math.round(total / 0.36));
+    const biels = [];
+    for (let i = 0; i < bielsN; i++) {
+      const u = route.loop ? i / bielsN : i / Math.max(1, bielsN - 1);
+      const p = curve.getPointAt(u), t = curve.getTangentAt(u);
+      // Lokale X van de biels-box = rijrichting: rotation.y = atan2(-t.z, t.x).
+      biels.push({ x: p.x, y: p.y - 0.10, z: p.z, ry: Math.atan2(-t.z, t.x) });
     }
     return {
-      curve, total, loop: !!route.loop,
+      curve, total, loop: !!route.loop, ballast, biels,
       railL: new CatmullRomCurve3(links, !!route.loop),
       railR: new CatmullRomCurve3(rechts, !!route.loop),
     };
@@ -2438,11 +2460,33 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
     }
   });
 
+  // Dwarsliggers als één instanced mesh (één draw-call voor de hele route).
+  const bielsRef = useRef();
+  useEffect(() => {
+    const m = bielsRef.current;
+    if (!m || !data) return;
+    const d = new Object3D();
+    data.biels.forEach((b, i) => {
+      d.position.set(b.x, b.y, b.z); d.rotation.set(0, b.ry, 0); d.updateMatrix();
+      m.setMatrixAt(i, d.matrix);
+    });
+    m.count = data.biels.length;
+    m.instanceMatrix.needsUpdate = true;
+  }, [data]);
+
   if (!data) return null;
   const carts = [{ loco: true }, ...Array.from({ length: wagons }, () => ({ loco: false }))];
   const railSeg = Math.max(48, Math.round(data.total * 4));
   return (
     <group>
+      {/* 🪵 Grindbed + dwarsliggers die de bocht volgen (zie data-memo). */}
+      <mesh geometry={data.ballast} receiveShadow>
+        <meshStandardMaterial color="#b8a06a" roughness={1} side={2} />
+      </mesh>
+      <instancedMesh ref={bielsRef} args={[undefined, undefined, Math.max(1, data.biels.length)]} castShadow>
+        <boxGeometry args={[0.13, 0.07, 1.0]} />
+        <meshStandardMaterial color="#6b4a2b" flatShading roughness={1} />
+      </instancedMesh>
       {/* Vloeiend gebogen rails (twee stalen buizen) langs de hele route, zodat
           de bochten netjes aansluiten — geen blokkerige hoeken meer. */}
       <mesh castShadow><tubeGeometry args={[data.railL, railSeg, 0.05, 6, data.loop]} /><meshStandardMaterial color="#aab0b6" metalness={0.6} roughness={0.4} /></mesh>
