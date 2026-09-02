@@ -6,7 +6,9 @@
 -- zonder account. Client upsert gebruikt onConflict "owner_key,learn_path_id,step_idx".
 alter table public.learn_progress
   add column if not exists owner_key text
-  generated always as (coalesce(user_id::text, 'naam:' || lower(player_name))) stored;
+  generated always as (coalesce(user_id::text || ':', 'naam:') || lower(player_name)) stored;
+-- Correctie 2 sep (middag, koppeling-audit): naam ALTIJD in de sleutel — twee kinderen
+-- op één tablet delen dezelfde anonieme uid en overschreven anders elkaars rij.
 create unique index if not exists learn_progress_owner_step_uniq
   on public.learn_progress (owner_key, learn_path_id, step_idx);
 alter table public.learn_progress drop constraint if exists learn_progress_unique_step;
