@@ -15,6 +15,7 @@
 
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { linkIdVoor } from "./koppeling.js";
 
 export const KLAARGEZET_EVENT = "lk-klaargezet-changed";
 const TABEL = { ouder: "ouder_klaargezet", leraar: "leraar_klaargezet" };
@@ -80,7 +81,9 @@ export async function haalWeg(linkId, pathId, bron = "ouder") {
 export async function haalKlaargezetVoorKind(kindNaam) {
   const naam = String(kindNaam || "").trim();
   if (!naam) return [];
-  const { data, error } = await supabase.rpc("voor_jou_klaargezet", { p_student_name: naam });
+  // Stap 2 (2 sep 2026): op link_id als dit toestel gekoppeld is — dan tellen
+  // naamgenoten niet meer mee; zonder link_id valt de RPC terug op naam(+uid).
+  const { data, error } = await supabase.rpc("voor_jou_klaargezet", { p_student_name: naam, p_link_id: linkIdVoor(naam) });
   if (error) return [];
   return Array.isArray(data) ? data : [];
 }
@@ -92,7 +95,7 @@ export async function markeerGedaan(itemId, kindNaam, gedaan = true, bron = "oud
   const rpc = bron === "leraar" ? "leerling_klaargezet_gedaan" : "kind_klaargezet_gedaan";
   const args = bron === "leraar"
     ? { p_item_id: itemId, p_student_name: naam, p_gedaan: gedaan }
-    : { p_item_id: itemId, p_child_name: naam, p_gedaan: gedaan };
+    : { p_item_id: itemId, p_child_name: naam, p_gedaan: gedaan, p_link_id: linkIdVoor(naam) };
   const { error } = await supabase.rpc(rpc, args);
   if (error) return { ok: false, error };
   try { track("klaargezet_gedaan", { gedaan, bron }); } catch { /* */ }

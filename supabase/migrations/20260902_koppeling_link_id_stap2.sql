@@ -1,0 +1,16 @@
+-- Koppeling-identiteit STAP 2 (Mark-go 2 sep 2026) — toegepast op live DB via MCP.
+-- Leespaden op link_id, fallback naam(+uid) voor rijen zonder link_id.
+--  1. claim_link_code(p_code, p_child_name): label = link_codes.child_name (wat de ouder typte)
+--     als dat gevuld is; geeft ook child_name terug. Voorkomt "Sophie"/"Sofie"-dubbelkind.
+--  2. kind_klaargezet(p_child_name, p_link_id default null), kind_klaargezet_gedaan(..., p_link_id),
+--     voor_jou_klaargezet(p_student_name, p_link_id): op link_id; zonder → naam + (uid null of = auth.uid()).
+--     Oude 1-arg-signaturen gedropt (anders ambigu).
+--  3. niveau_resultaten_voor_email: ref_mastery join op link_id OF (link_id null + naam(+uid)).
+--  4. ouder_weekrapport_kandidaten: kolom link_id erbij (drop+create; revoke public/anon/authenticated).
+--  5. koppel_mijn_data(p_link_id, p_naam): vanaf het kind-toestel na claim — zet link_id op eigen
+--     rijen (user_id = auth.uid(), naam = getypt of koppel-label) in leaderboard/learn_progress/
+--     topic_mastery/ref_mastery; unique_violation per tabel overgeslagen.
+-- Client: src/shared/koppeling.js (bewaarKoppeling → koppel_mijn_data), kindData.js (ouder leest
+-- link_id + legacy), ouderKlaargezet.js (p_link_id), mastery.js (existing-lookup op link_id),
+-- api/send-ouder-rapport.js (topic_mastery op link_id + legacy), KoppelcodeBanner (✓ gekoppeld-status).
+-- Volledige bodies: zie live DB (pg_get_functiondef).

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import supabase from "../supabase.js";
-import { bewaarKoppeling } from "../shared/koppeling.js";
+import { bewaarKoppeling, koppelingVoor } from "../shared/koppeling.js";
 
 // P0-3 (4-agent-audit 2026-05-18): kind-zijde van de WhatsApp-koppelcode-flow.
 //
@@ -101,6 +101,27 @@ export default function KoppelcodeBanner({ userName }) {
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.75)", marginTop: 6, lineHeight: 1.5 }}>
           {actor} kan nu leuke lessen voor je klaarzetten 🎁 Kijk straks op je eigen pagina — daar verschijnt <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.
         </div>
+      </div>
+    );
+  }
+
+  // Stap 2 (2 sep 2026): het toestel wéét nu dat het gekoppeld is — toon dat,
+  // i.p.v. na elke herlaad weer "Koppelcode?" te vragen. Nieuw toestel of
+  // andere code blijft mogelijk via de kleine knop.
+  const gekoppeld = koppelingVoor(userName);
+  if (!open && gekoppeld) {
+    const o = gekoppeld.ouder;
+    const l = gekoppeld.leraar;
+    const delen = [];
+    if (o) delen.push(o.van_wie ? `${o.van_wie}` : "thuis");
+    if (l) delen.push("school");
+    return (
+      <div style={{ marginBottom: 10, padding: "9px 14px", background: "rgba(0,200,83,0.08)", border: "1px solid rgba(0,200,83,0.35)", borderRadius: 12, display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-body)", fontSize: 13 }}>
+        <span aria-hidden="true">✅</span>
+        <span style={{ flex: 1, color: "rgba(255,255,255,0.85)" }}>Gekoppeld met <strong>{delen.join(" en ")}</strong> — jouw oefenwerk komt daar aan.</span>
+        <button type="button" onClick={() => setOpen(true)} style={{ background: "none", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 8, color: "rgba(255,255,255,0.7)", fontSize: 11, padding: "4px 8px", cursor: "pointer" }}>
+          Andere code
+        </button>
       </div>
     );
   }

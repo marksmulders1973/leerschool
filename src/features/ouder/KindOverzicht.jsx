@@ -11,6 +11,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import supabase from "../../supabase.js";
+import { haalScoresVoorKind } from "./kindData.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { track } from "../../utils.js";
 
@@ -32,16 +33,13 @@ export default function KindOverzicht({ child, onBack, onKlaarzetten }) {
 
   useEffect(() => {
     let cancel = false;
-    let q = supabase.from("leaderboard")
-      .select("id, subject, level, topic, title, score, total, percentage, time_taken, completed_at, detail")
-      .eq("player_name", child.child_name);
-    // Zelfde naamgenoten-bescherming als OuderInzicht: scope op het gekoppelde
-    // account waar dat kan; legacy-koppelingen zonder uid houden naam-match.
-    if (child.child_user_id) q = q.eq("user_id", child.child_user_id);
-    q.order("completed_at", { ascending: false }).limit(100)
-      .then(({ data }) => { if (!cancel) setRows(data || []); });
+    // Stap 2 koppeling-identiteit (2 sep 2026): op link_id + legacy naam(+uid) — kindData.js.
+    haalScoresVoorKind(child, {
+      select: "id, subject, level, topic, title, score, total, percentage, time_taken, completed_at, detail",
+      limit: 100,
+    }).then((rows) => { if (!cancel) setRows(rows || []); });
     return () => { cancel = true; };
-  }, [child.child_name, child.child_user_id]);
+  }, [child.id, child.child_name, child.child_user_id]);
 
   // ── Afleidingen ──────────────────────────────────────────────────────────
   const perVak = useMemo(() => {

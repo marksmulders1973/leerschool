@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
+import { haalScoresVoorKind } from "./kindData.js";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -257,20 +258,16 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     // van élke "Sophie" in het land. Zelfde fix als de ouder-mail (migratie
     // 20260711): scope op child_user_id waar de koppeling die heeft;
     // legacy-links zonder uid houden naam-match.
-    let scoresQuery = supabase.from("leaderboard")
-      // Bug-fix 2026-07-07: leaderboard heeft completed_at, geen created_at —
-      // deze query gaf 400 en het dashboard bleef leeg voor élke ouder.
-      .select("subject, level, score, total, percentage, time_taken, completed_at")
-      .eq("player_name", selectedChild);
-    if (selectedChildVerified?.child_user_id) scoresQuery = scoresQuery.eq("user_id", selectedChildVerified.child_user_id);
-    scoresQuery
-      .order("completed_at", { ascending: false })
-      .limit(50)
-      .then(({ data }) => {
-        setChildScores(data || []);
-        setScoresLoading(false);
-        setScoresGeladen(true);
-      });
+    // Stap 2 koppeling-identiteit (2 sep 2026): lezen op link_id (nieuwe rijen)
+    // + naam(+uid) voor rijen van vóór de koppeling — zie kindData.js.
+    haalScoresVoorKind(
+      { id: selectedChildVerified?.id, child_name: selectedChild, child_user_id: selectedChildVerified?.child_user_id },
+      { select: "id, subject, level, score, total, percentage, time_taken, completed_at", limit: 50 }
+    ).then((rows) => {
+      setChildScores(rows || []);
+      setScoresLoading(false);
+      setScoresGeladen(true);
+    });
     // Deps op id/child_user_id, niet het object: de 6s-koppelpoll maakt élke
     // tik een verse children-array → selectedChildVerified is dan een nieuwe
     // referentie en dit effect herlaadde elke 6s mét "Laden..."-flits op /mijn
@@ -283,14 +280,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       setCitoScores([]);
       return;
     }
-    let citoQuery = supabase.from("leaderboard")
-      .select("subject, level, percentage, completed_at")
-      .eq("player_name", selectedChild)
-      .eq("subject", "cito");
-    if (selectedChildVerified?.child_user_id) citoQuery = citoQuery.eq("user_id", selectedChildVerified.child_user_id);
-    citoQuery
-      .order("completed_at", { ascending: false })
-      .then(({ data }) => setCitoScores(data || []));
+    haalScoresVoorKind(
+      { id: selectedChildVerified.id, child_name: selectedChild, child_user_id: selectedChildVerified.child_user_id },
+      { select: "id, subject, level, percentage, completed_at", subject: "cito", limit: 100 }
+    ).then((rows) => setCitoScores(rows || []));
     // Zelfde deps-verfijning als het scores-effect hierboven (6s-poll-flits).
   }, [selectedChild, selectedChildVerified?.id, selectedChildVerified?.child_user_id]);
 

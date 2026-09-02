@@ -10,7 +10,7 @@
 // per onderwerp. Samen vormen ze de hand-in-hand-loop.
 
 import supabase from "../../supabase.js";
-import { metLinkId } from "../../shared/koppeling.js";
+import { metLinkId, linkIdVoor } from "../../shared/koppeling.js";
 import { getCurrentUserId } from "../../auth.js";
 import { QUESTION_PATH_MAP } from "../../learnPaths/questionPathMap.generated.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
@@ -175,12 +175,12 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
     const selectCols = easeOk
       ? "attempts, correct, streak, ease_factor, interval_days"
       : "attempts, correct, streak";
-    const { data: existing } = await supabase
-      .from("topic_mastery")
-      .select(selectCols)
-      .eq("player_name", player)
-      .eq("path_id", pathId)
-      .maybeSingle();
+    // Stap 2 (2 sep 2026): bestaande rij zoeken op dezelfde sleutel als de upsert
+    // (owner_key): gekoppeld → link_id; anders legacy-rij zonder link_id op naam.
+    const linkIdTm = linkIdVoor(player);
+    let bestaandQ = supabase.from("topic_mastery").select(selectCols).eq("path_id", pathId);
+    bestaandQ = linkIdTm ? bestaandQ.eq("link_id", linkIdTm) : bestaandQ.is("link_id", null).eq("player_name", player);
+    const { data: existing } = await bestaandQ.maybeSingle();
 
     const attempts = (existing?.attempts || 0) + 1;
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
@@ -268,12 +268,10 @@ export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, u
   const resolvedUserId = userId || (await getCurrentUserId());
 
   try {
-    const { data: existing } = await supabase
-      .from("ref_mastery")
-      .select("attempts, correct")
-      .eq("player_name", player)
-      .eq("onderdeel", onderdeel)
-      .eq("ref", ref)
+    const linkIdRef = linkIdVoor(player);
+    let refQ = supabase.from("ref_mastery").select("attempts, correct").eq("onderdeel", onderdeel).eq("ref", ref);
+    refQ = linkIdRef ? refQ.eq("link_id", linkIdRef) : refQ.is("link_id", null).eq("player_name", player);
+    const { data: existing } = await refQ
       .maybeSingle();
 
     const row = {
@@ -348,12 +346,12 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
     const selectCols = easeOk
       ? "attempts, correct, streak, ease_factor, interval_days"
       : "attempts, correct, streak";
-    const { data: existing } = await supabase
-      .from("topic_mastery")
-      .select(selectCols)
-      .eq("player_name", player)
-      .eq("path_id", pathId)
-      .maybeSingle();
+    // Stap 2 (2 sep 2026): bestaande rij zoeken op dezelfde sleutel als de upsert
+    // (owner_key): gekoppeld → link_id; anders legacy-rij zonder link_id op naam.
+    const linkIdTm = linkIdVoor(player);
+    let bestaandQ = supabase.from("topic_mastery").select(selectCols).eq("path_id", pathId);
+    bestaandQ = linkIdTm ? bestaandQ.eq("link_id", linkIdTm) : bestaandQ.is("link_id", null).eq("player_name", player);
+    const { data: existing } = await bestaandQ.maybeSingle();
 
     const attempts = (existing?.attempts || 0) + 1;
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);

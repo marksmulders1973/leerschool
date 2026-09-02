@@ -14,6 +14,8 @@
 // Opslag: localStorage "lk_koppelingen" = { "<naam lower>": { ouder?: {...}, leraar?: {...} } }
 // waarbij {...} = { link_id, van_wie, at }.
 
+import supabase from "../supabase.js";
+
 const KEY = "lk_koppelingen";
 export const KOPPELING_EVENT = "lk-koppeling-changed";
 
@@ -34,6 +36,13 @@ export function bewaarKoppeling({ naam, linkId, rol = "ouder", vanWie = "" }) {
   const r = rol === "leraar" ? "leraar" : "ouder";
   alles[k] = { ...(alles[k] || {}), [r]: { link_id: linkId, van_wie: String(vanWie || "").trim(), at: Date.now() } };
   schrijf(alles);
+  // Stap 2: geschiedenis van dít toestel (eigen sessie + deze naam) meteen aan
+  // de koppeling hangen, zodat de ouder niet met een leeg dashboard begint.
+  if (r === "ouder") {
+    try {
+      supabase.rpc("koppel_mijn_data", { p_link_id: linkId, p_naam: naam }).then(() => {}).catch(() => {});
+    } catch { /* best-effort */ }
+  }
 }
 
 /** Alle koppelingen van deze naam op dit toestel: { ouder?, leraar? } of null. */

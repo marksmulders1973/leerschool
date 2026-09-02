@@ -102,17 +102,20 @@ async function haalVriendencode(email, base, key) {
 // Foutpad: null = "ophalen mislukt" (rapport moet dat eerlijk zeggen),
 // [] = "echt geen activiteit". Voorheen werd elke storing stilletjes
 // 'deze week niet geoefend' — actief onjuiste info naar de ouder.
-async function haalKindActiviteit(childName, childUserId, base, key) {
+async function haalKindActiviteit(childName, childUserId, base, key, linkId = null) {
   try {
     const naam = encodeURIComponent(String(childName).trim());
     const userFilter = childUserId ? `&user_id=eq.${encodeURIComponent(childUserId)}` : "";
-    const r = await sb(
-      `topic_mastery?player_name=ilike.${naam}${userFilter}&select=path_id,attempts,correct,streak,last_seen&order=last_seen.desc&limit=300`,
-      { method: "GET" }, base, key
-    );
-    if (!r.ok) return null;
-    const rows = await r.json();
-    if (!Array.isArray(rows)) return null;
+    const sel = "select=path_id,attempts,correct,streak,last_seen&order=last_seen.desc&limit=300";
+    // Stap 2 koppeling-identiteit (2 sep 2026): rijen mét link_id (nieuw) +
+    // legacy-rijen zonder link_id op naam(+uid) — samen, zodat geen historie wegvalt.
+    const vragen = [sb(`topic_mastery?link_id=is.null&player_name=ilike.${naam}${userFilter}&${sel}`, { method: "GET" }, base, key)];
+    if (linkId) vragen.unshift(sb(`topic_mastery?link_id=eq.${encodeURIComponent(linkId)}&${sel}`, { method: "GET" }, base, key));
+    const resps = await Promise.all(vragen);
+    if (resps.some((r) => !r.ok)) return null;
+    const delen = await Promise.all(resps.map((r) => r.json()));
+    if (delen.some((d) => !Array.isArray(d))) return null;
+    const rows = delen.flat();
     // Dedupliceer per pad: 'Brian' en 'brian' zijn aparte rijen (UNIQUE op
     // player_name+path_id is hoofdlettergevoelig) — samenvoegen, anders staat
     // hetzelfde onderwerp twee keer in de mail.
@@ -293,7 +296,7 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
     const adres = String(p.parent_email).toLowerCase();
     if (!perOuder.has(adres)) perOuder.set(adres, new Map());
     const kinderen = perOuder.get(adres);
-    if (!kinderen.has(p.child_name) || p.child_user_id) kinderen.set(p.child_name, p.child_user_id || null);
+    if (!kinderen.has(p.child_name) || p.child_user_id) kinderen.set(p.child_name, { uid: p.child_user_id || null, linkId: p.link_id || null });
     if (p.partner_email && !partnerVan.has(adres)) partnerVan.set(adres, String(p.partner_email).toLowerCase());
   }
 
@@ -302,8 +305,8 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
   for (const [adres, kinderen] of perOuder) {
     try {
       const secties = [];
-      for (const [kind, kindUid] of kinderen) {
-        const rows = await haalKindActiviteit(kind, kindUid, base, key);
+      for (const [kind, ident] of kinderen) {
+        const rows = await haalKindActiviteit(kind, ident?.uid || null, base, key, ident?.linkId || null);
         if (rows === null) fouten.push(adres.slice(0, 6) + ":activiteit-fetch-mislukt");
         secties.push(maakKindSectie(kind, rows));
       }
