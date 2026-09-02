@@ -1110,9 +1110,13 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
             if (!o || o === s) continue;
             const ox = nx - o.x, oz = nz - o.z;
             const od = Math.hypot(ox, oz);
-            if (od > 0.001 && od < 0.7) {
-              const duw = (0.7 - od) * dt * 2.2;
-              nx += (ox / od) * duw; nz += (oz / od) * duw;
+            // Mark 2 sep (foto): bezoekers liepen als een stijf treintje achter
+            // elkaar. Grotere persoonlijke ruimte (1,15 m) én een zijwaartse
+            // component, zodat ze om elkaar heen waaieren i.p.v. in de rij duwen.
+            if (od > 0.001 && od < 1.15) {
+              const duw = (1.15 - od) * dt * 3.0;
+              nx += (ox / od) * duw - (oz / od) * duw * 0.6;
+              nz += (oz / od) * duw + (ox / od) * duw * 0.6;
             }
           }
         }

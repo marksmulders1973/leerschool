@@ -83,9 +83,14 @@ function bouwVoorbeeldPark() {
   // tussen het centrum en de dier-verblijven doorloopt. De trein rijdt hier
   // vloeiend overheen (Catmull-Rom-bochten). Ring x[-9..9] × z[-5..5] — bewust
   // net binnen de verblijven en langs de bomenrijen (z±6) langs, niet erdoorheen.
+  // BUG (Mark 2 sep, foto "spoor in delen"): deze lus gebruikte `add` (×S per
+  // index) → om de andere cel een rail met gras ertussen; de route-bouwer eist
+  // buur-cellen, dus geen doorlopend spoor en geen trein. Nu élke tussencel
+  // (zoals rij/kolom); bestaande parken worden bij het laden gerepareerd
+  // (repareerSpoor in saneerLayout).
   const railRing = (x1, z1, x2, z2) => {
-    for (let x = x1; x <= x2; x++) { add("rail", x, z1, 0); add("rail", x, z2, 0); }
-    for (let z = z1 + 1; z < z2; z++) { add("rail", x1, z, Math.PI / 2); add("rail", x2, z, Math.PI / 2); }
+    for (let x = x1 * S; x <= x2 * S; x++) { raw("rail", x, z1 * S, 0); raw("rail", x, z2 * S, 0); }
+    for (let z = z1 * S + 1; z < z2 * S; z++) { raw("rail", x1 * S, z, Math.PI / 2); raw("rail", x2 * S, z, Math.PI / 2); }
   };
   railRing(-9, -5, 9, 5);
   add("station", 0, -7);
@@ -314,6 +319,36 @@ export function legOostPadOmAchtbaan(layout) {
 // alléén de OUDE seed-pad-tegels (pathStone/pathRed/path met price 0 én zonder
 // `vast`-vlag). Zelf-gekochte paden (price > 0) en de nieuwe pleintjes (vast)
 // blijven staan. Idempotent.
+// 🛤️ Gaten in het seed-spoor dichten (Mark 2 sep 2026: "het spoor is in delen").
+// Oude parken kregen de trein-ring om de andere cel (schaal-bug, zie railRing).
+// Ligt er een seed-rail (price 0) op (x,z) én op (x+2,z) met níéts op (x+1,z),
+// dan komt daar een rail bij — idem langs z. Zelf gekochte rails blijven met
+// rust. Idempotent.
+export function repareerSpoor(layout) {
+  if (!Array.isArray(layout)) return layout;
+  const bezet = new Set();
+  const seedRail = new Map();
+  for (const it of layout) {
+    if (!it || !Array.isArray(it.cell)) continue;
+    const k = `${it.cell[0]},${it.cell[1]}`;
+    bezet.add(k);
+    if (it.assetId === "rail" && (it.price || 0) === 0) seedRail.set(k, it);
+  }
+  if (seedRail.size < 2) return layout;
+  const extra = [];
+  for (const it of seedRail.values()) {
+    const [x, z] = it.cell;
+    for (const [dx, dz, rot] of [[1, 0, 0], [0, 1, Math.PI / 2]]) {
+      const ver = `${x + 2 * dx},${z + 2 * dz}`, tussen = `${x + dx},${z + dz}`;
+      if (seedRail.has(ver) && !bezet.has(tussen)) {
+        bezet.add(tussen);
+        extra.push({ assetId: "rail", cell: [x + dx, z + dz], rotation: rot, price: 0 });
+      }
+    }
+  }
+  return extra.length ? [...layout, ...extra] : layout;
+}
+
 export function ruimSeedPadenOp(layout) {
   if (!Array.isArray(layout)) return layout;
   const PAD = new Set(["path", "pathStone", "pathRed", "pathGreen", "pathBlue", "pathDark"]);
@@ -363,7 +398,7 @@ export function saneerLayout(layout) {
   const gemigreerd = migreerBlokken(layout);
   if (!Array.isArray(gemigreerd)) return [];
   const schoon = gemigreerd.filter((it) => it && getAsset(it.assetId) && (Array.isArray(it.cell) || it.kx != null));
-  return vulLeertrailAan(ruimSeedPadenOp(legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon)))));
+  return vulLeertrailAan(repareerSpoor(ruimSeedPadenOp(legOostPadOmAchtbaan(maakWandelrouteVrij(spreidLeerobjecten(schoon))))));
 }
 
 export function defaultState() {
