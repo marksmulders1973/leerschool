@@ -19,6 +19,22 @@ import supabase from "../supabase.js";
 const KEY = "lk_koppelingen";
 export const KOPPELING_EVENT = "lk-koppeling-changed";
 
+// 🧒 "Laat <kind> hier oefenen" (2 sep 2026): de ouder zet z'n eigen toestel
+// tijdelijk op het kind-profiel. Zolang deze sleutel staat, is het account
+// van de ouder, maar het profiel op het scherm van het kind. useAuth mag dan
+// het server-profiel (naam/rol/groep van de ouder) NIET over het kind heen
+// zetten bij herladen, en profiel-schrijfacties (groep kiezen, hernoemen)
+// mogen het ouder-profiel op de server NIET overschrijven met het kind.
+export const TERUG_NAAR_OUDER_KEY = "lk_terug_naar_ouder";
+
+/** { naam, at } van de ouder waar dit toestel naar terug kan, of null. */
+export function kindWisselActief() {
+  try {
+    const v = JSON.parse(localStorage.getItem(TERUG_NAAR_OUDER_KEY) || "null");
+    return v && v.naam ? v : null;
+  } catch { return null; }
+}
+
 function lees() {
   try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
 }

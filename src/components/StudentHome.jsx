@@ -62,7 +62,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes, onFamilie, onMijnPagina }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes, onFamilie, onMijnPagina, terugNaarOuderNaam, onTerugNaarOuder }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -359,6 +359,26 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           >
             <AvatarSvg config={loadAvatarConfig(userName)} size={20} />
             <span style={{ fontSize: 13, fontWeight: 800, color: "#64b5f6" }}>Mijn pagina</span>
+          </button>
+        )}
+        {/* 🧒→👨‍👩‍👧 Terug naar de ouder (Mark 2 sep): dit toestel is via "laat
+            <kind> hier oefenen" naar het kind gewisseld. Eén tik zet het
+            profiel terug en opent het thuis-overzicht. */}
+        {terugNaarOuderNaam && onTerugNaarOuder && (
+          <button
+            type="button"
+            onClick={onTerugNaarOuder}
+            title={`Klaar met oefenen? Wissel dit toestel terug naar ${terugNaarOuderNaam}`}
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 7,
+              background: "rgba(255,213,79,0.10)", border: "1px solid rgba(255,213,79,0.45)",
+              borderRadius: 999, padding: "5px 13px",
+              marginBottom: 10, marginLeft: 8, alignSelf: "flex-start",
+              cursor: "pointer", fontFamily: "var(--font-display)",
+            }}
+          >
+            <span aria-hidden="true" style={{ fontSize: 14 }}>👨‍👩‍👧</span>
+            <span style={{ fontSize: 13, fontWeight: 800, color: "#ffd54f" }}>Terug naar {terugNaarOuderNaam}</span>
           </button>
         )}
         {/* Bovenaan: verder waar je was (als er iets te hervatten is) */}

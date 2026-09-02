@@ -3,6 +3,7 @@ import supabase from "../supabase.js";
 import { ensureSession } from "../auth.js";
 import { signInWithGoogleIdToken } from "./googleSignIn.js";
 import { initDailyGoalSync, stopDailyGoalSync } from "../shared/dailyGoal.js";
+import { kindWisselActief, TERUG_NAAR_OUDER_KEY } from "../shared/koppeling.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -73,6 +74,26 @@ export function useAuth() {
             // A8.3: kwartier-streak + dagdoel cross-device mergen (het
             // profiel is hier tóch al opgehaald — geen extra roundtrip).
             initDailyGoalSync(u.id, data);
+            // 🧒 Toestel staat bewust op een kind ("laat <kind> hier oefenen",
+            // 2 sep 2026): het server-profiel is van de ouder. Naam/rol/groep
+            // van het kind komen dan uit ls_user, niet uit het profiel —
+            // anders sprong het toestel bij elke herlaad terug naar de ouder.
+            // Streak/logo/dagdoel horen bij het account en gaan gewoon door.
+            const kindWissel = kindWisselActief();
+            if (kindWissel) {
+              try {
+                const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+                if (saved.name) {
+                  setUserName(saved.name);
+                  setRole(saved.role || "leerling");
+                  setUserLevel(saved.level || "");
+                  setUserSchoolType(saved.schoolType || "");
+                }
+              } catch { /* */ }
+              if (data?.streak_days) setStreak(data.streak_days);
+              if (data?.school_logo_url) setSchoolLogoUrl(data.school_logo_url);
+              return;
+            }
             if (data?.display_name) setUserName(data.display_name);
             // Huishoud-apparaat zelf markeren (29 jul): het dagrapport telt via
             // de view events_echt — zonder deze markering vervuilen eigen
@@ -171,6 +192,8 @@ export function useAuth() {
     setSubscription({ tier: "free" });
     setSchoolLogoUrl("");
     stopDailyGoalSync();
+    // Kind-wissel van "laat <kind> hier oefenen" hoort bij dit account — weg.
+    try { localStorage.removeItem(TERUG_NAAR_OUDER_KEY); } catch { /* */ }
   };
 
   return {

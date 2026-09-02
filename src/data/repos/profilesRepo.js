@@ -4,6 +4,7 @@
 
 import supabase from "../../supabase.js";
 import { getBron } from "../../features/tracking/bron.js";
+import { kindWisselActief } from "../../shared/koppeling.js";
 
 /**
  * Lees streak + last-played-date van het profiel zodat de juiste
@@ -47,6 +48,10 @@ export async function updateStreak({ userId, streak, date }) {
  */
 export async function upsertProfile({ userId, displayName, level, role, schoolType }) {
   if (!userId) return;
+  // 🧒 Toestel staat op een kind via "laat <kind> hier oefenen" (2 sep 2026):
+  // het account is van de ouder — diens server-profiel niet overschrijven
+  // met de naam/groep van het kind (die leven lokaal in lk_profiel:<naam>).
+  if (kindWisselActief()) return;
   try {
     const row = {
       id: userId,
@@ -83,6 +88,7 @@ export async function upsertProfile({ userId, displayName, level, role, schoolTy
  */
 export async function updateProfileRole(userId, role) {
   if (!userId || !role) return;
+  if (kindWisselActief()) return; // zie upsertProfile
   try {
     // Upsert, geen update: bij een állereerste login bestaat de profielrij
     // nog niet (geen DB-trigger op auth.users — de app maakt profielen aan)

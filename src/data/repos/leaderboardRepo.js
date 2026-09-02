@@ -4,7 +4,10 @@
 import supabase from "../../supabase.js";
 import { metLinkId } from "../../shared/koppeling.js";
 
-const SYNC_COLS = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
+// link_id erbij (2 sep 2026): op een gedeeld toestel (ouder + kind op één
+// account) filtert App.jsx de uid-rijen op naam óf koppeling — anders kreeg
+// het kind de toetsen van de ouder in z'n eigen voortgang.
+const SYNC_COLS = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at, link_id";
 
 /**
  * Sync van leaderboard naar lokale studentProgress: zorgt dat levels/voortgang

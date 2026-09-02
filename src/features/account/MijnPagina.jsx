@@ -248,6 +248,7 @@ export default function MijnPagina({
   onOuderDashboard,
   onHernoem,
   onKlaarzetten,
+  onHierOefenen,
   onUpgrade,
   onLogin,
   userRole,
@@ -2250,6 +2251,7 @@ export default function MijnPagina({
                 onUpgrade={onUpgrade}
                 onLogin={onLogin}
                 onKlaarzetten={onKlaarzetten}
+                onHierOefenen={onHierOefenen}
                 onOpenLes={onPickPath}
               />
             </div>

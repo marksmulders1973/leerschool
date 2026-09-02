@@ -77,7 +77,7 @@ function generateCode() {
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
 
-export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onOpenLes, embedded = false }) {
+export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onHierOefenen, onOpenLes, embedded = false }) {
   // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
   // Default open zonder gekoppeld kind, daarna in te klappen.
   const [welcomeCollapsed, setWelcomeCollapsed] = useState(() => {
@@ -753,6 +753,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                         💛 zet lessen klaar
                       </button>
                     )}
+                    {/* 🧒 Kind oefent op dít toestel (Mark 2 sep): geen code nodig —
+                        de ouder is hier al ingelogd en eigenaar van de koppeling.
+                        App.jsx bewaart het link_id onder de kindnaam + wisselt profiel. */}
+                    {onHierOefenen && (
+                      <button onClick={(e) => { e.stopPropagation(); onHierOefenen(c.id, c.child_name); }} title={`Wissel dit toestel naar ${c.child_name} — alles wat ${c.child_name} hier oefent telt mee in jouw overzicht, zonder code`} style={pill({ border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", color: "#ffd54f" })}>
+                        🧒 laat {c.child_name} hier oefenen
+                      </button>
+                    )}
                     <button onClick={(e) => { e.stopPropagation(); toggleWeekmail(c); }} aria-pressed={mailAan} title={mailAan ? "Elke maandag het weekrapport in je mail — klik om uit te zetten" : "Weekrapport staat uit — klik om aan te zetten"} style={pill(mailAan ? { border: "1px solid rgba(105,240,174,0.5)", background: "rgba(0,200,83,0.14)", color: "#69f0ae" } : { border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)" })}>
                       📩 weekmail {mailAan ? "aan" : "uit"}
                     </button>
@@ -764,6 +772,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "11px 13px", borderRadius: 11, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
                         Nieuw toestel, of ziet {c.child_name} niks van jou? Laat {c.child_name} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Koppel met ouder</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
+                      </div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5, marginBottom: 8 }}>
+                        Oefent {c.child_name} op <strong>meer</strong> toestellen (eigen telefoon én de tablet)? Elk toestel heeft één keer zo'n code nodig; daarna telt alles bij elkaar op. Op <strong>dit</strong> toestel hoeft dat niet: gebruik "🧒 laat {c.child_name} hier oefenen".
                       </div>
                       <div style={{ textAlign: "center", padding: "2px 0 8px" }}>
                         <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{herstelCode.code}</div>

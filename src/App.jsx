@@ -142,6 +142,7 @@ import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
 import { startTracking as startDailyTracking } from "./shared/dailyGoal.js";
+import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY } from "./shared/koppeling.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
 // Deze constant blijft tijdelijk voor backwards-compat met code die alleen
@@ -438,6 +439,42 @@ export default function App() {
     setEntryContext("leren");
     setPage("learn-paths-hub");
     try { track("ouder_klaarzet_modus", {}); } catch { /* */ }
+  };
+  // 🧒 "Laat <kind> hier oefenen" (Mark 2 sep 2026): een kind oefent soms op
+  // de telefoon van de ouder. Vroeger moest het daar eerst een verse
+  // koppelcode invoeren (codes zijn eenmalig) én zelf van naam wisselen —
+  // dat wist niemand. Nu: de ouder is hier al ingelogd en eigenaar van de
+  // koppeling, dus we bewaren het link_id direct onder de kindnaam op dit
+  // toestel en wisselen naar het kind-profiel. Scores van dit toestel dragen
+  // dan hetzelfde link_id als die van het eigen toestel van het kind → één
+  // kind in het dashboard. "Terug naar <ouder>" staat daarna op de kind-home.
+  const TERUG_KEY = TERUG_NAAR_OUDER_KEY;
+  const [terugNaarOuder, setTerugNaarOuder] = useState(() => {
+    try { return JSON.parse(localStorage.getItem(TERUG_KEY) || "null"); } catch { return null; }
+  });
+  const hierOefenen = (linkId, childName) => {
+    const kind = (childName || "").trim();
+    if (!linkId || !kind) return;
+    bewaarKoppeling({ naam: kind, linkId, rol: "ouder", vanWie: (userName || "").trim() });
+    const terug = { naam: (userName || "").trim(), at: Date.now() };
+    if (terug.naam && terug.naam.toLowerCase() !== kind.toLowerCase()) {
+      setTerugNaarOuder(terug);
+      try { localStorage.setItem(TERUG_KEY, JSON.stringify(terug)); } catch { /* */ }
+    }
+    wisselProfiel(kind);
+    setEntryContext("leren");
+    setPage("student-home");
+    try { window.scrollTo({ top: 0 }); } catch { /* */ }
+    try { track("ouder_kind_hier_oefenen", {}); } catch { /* */ }
+  };
+  const terugNaarOuderProfiel = () => {
+    const naam = terugNaarOuder?.naam;
+    setTerugNaarOuder(null);
+    try { localStorage.removeItem(TERUG_KEY); } catch { /* */ }
+    if (!naam) return;
+    wisselProfiel(naam);
+    setPage("ouder-dashboard");
+    try { track("ouder_kind_terug", {}); } catch { /* */ }
   };
   // Bug 31 jul (Mark): vak-tegel op StudentHome telt paden per PO/VO-toggle,
   // maar de Hub filterde op rol — rol "student" + PO-tegel gaf 0 paden. De
@@ -795,10 +832,20 @@ export default function App() {
       .then((data) => {
         if (cancelled) return;
         if (data.length === 0) return;
+        // Gedeeld toestel (2 sep 2026): de uid-query haalt álle rijen van dit
+        // account op — ook die van de ouder of een broertje dat onder dezelfde
+        // login speelde. Alleen rijen houden die bij déze naam horen (naam
+        // case-insensitief) of bij de koppeling van deze naam (link_id).
+        const naamLower = naam.toLowerCase();
+        const eigenLinkId = linkIdVoor(naam);
+        const vanDezeNaam = naam.length < 2 ? data : data.filter((r) =>
+          (r.player_name || "").trim().toLowerCase() === naamLower || (eigenLinkId && r.link_id === eigenLinkId)
+        );
+        if (vanDezeNaam.length === 0) return;
         // player wordt op huidige userName gezet zodat downstream filters
         // (`p.player === userName`, case-sensitive) altijd matchen — ook als
         // r.player_name afwijkt in casing.
-        const remoteResults = data.map((r) => ({
+        const remoteResults = vanDezeNaam.map((r) => ({
           id: r.id,
           player: (userName || r.player_name || "").trim() || r.player_name,
           quizId: r.quiz_id,
@@ -1385,6 +1432,7 @@ export default function App() {
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onKlaarzetten={startKlaarzetten}
+          onHierOefenen={hierOefenen}
           onUpgrade={() => setPage("pro")}
           onLogin={loginWithConsent}
           onLeerkrachtHome={() => setPage("teacher-home")}
@@ -1834,6 +1882,8 @@ export default function App() {
           onSetSchoolType={setUserSchoolType}
           onFamilie={() => setPage("familie")}
           onMijnPagina={() => setPage("mijn-pagina")}
+          terugNaarOuderNaam={terugNaarOuder?.naam && terugNaarOuder.naam.toLowerCase() !== (userName || "").trim().toLowerCase() ? terugNaarOuder.naam : null}
+          onTerugNaarOuder={terugNaarOuderProfiel}
           quizzes={quizzes}
           sessionMin={sessionMin}
           kwartierTarget={KWARTIER_TARGET_MIN}
@@ -2384,6 +2434,7 @@ export default function App() {
           onLogin={loginWithConsent}
           onRondleiding={() => setPage("rondleiding")}
           onKlaarzetten={startKlaarzetten}
+          onHierOefenen={hierOefenen}
           onOpenLes={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);
