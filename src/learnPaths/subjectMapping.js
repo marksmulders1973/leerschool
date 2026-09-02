@@ -15,14 +15,22 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   // PO-rekenen → wiskunde-paden (groep 4-8 valt hieronder; zonder deze
   // mapping leverde "Leg uit" op een groep-4 rekensom een ongerelateerd
   // leerpad op via toevallige keyword-match, bv. Verhoudingen).
-  rekenen: "wiskunde",
+  // Fable-review 2 sep 2026: inmiddels hebben álle 37 basisschool-rekenpaden
+  // subject "rekenen" — met alleen "wiskunde" vond "Leg het uit" in een
+  // groep-7-rekenquiz nooit een pad en belandde het kind op "komt eraan"
+  // (0 gerelateerde paden). Het po/vo-niveaufilter houdt VO-wiskunde buiten
+  // een PO-quiz, dus beide vakken samen is veilig.
+  rekenen: ["rekenen", "wiskunde"],
   wiskunde: "wiskunde",
   "wiskunde-a": "wiskunde",
   "wiskunde-b": "wiskunde",
   nederlands: "taal",
   taal: "taal",
   spelling: ["spelling", "taal"],
-  "begrijpend-lezen": "taal",
+  "begrijpend-lezen": ["begrijpend-lezen", "taal"],
+  studievaardigheden: "studievaardigheden",
+  // Gemengde Doorstroomtoets-simulatie (subject "cito")
+  cito: ["rekenen", "taal", "begrijpend-lezen", "studievaardigheden", "wereldorientatie"],
   engels: "engels",
   "engels-po": "engels",
   biologie: "biologie",

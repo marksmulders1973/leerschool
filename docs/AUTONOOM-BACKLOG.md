@@ -14,6 +14,44 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🔍 SPRINT — Fable 5.1-review 2 sep 2026 (6 agents: API / kernflow / accounts / leerpaden / live-browser / vragen-kwaliteit; ✓ = gefixt v540-541)
+
+> Gefixt v540-541: resultaat-knoppen (currentQuiz gewist in finishGame sinds 23 mrt), leeg scherm na terug-knop (/quiz zonder state),
+> leerpad-crash op `kind:"open"`-checks (38 paden), stap-index-clamp, "leg het uit"→komt-eraan bij PO-rekenen (mapping rekenen→wiskunde),
+> /mijn-toetsdatum groep 7, actuele-vraag AI-kostenlek, tutor-woordfilter, 3 datalekken via anon-key (events_echt/zoo_state_real/household_accounts),
+> weekmail-uit-knop (RPC-filter), 4 feitelijk foute vragen. Migratie: `supabase/migrations/20260902_fable_review_lekken_weekmail.sql`.
+
+**P1 — open**
+- [ ] **F1 learn_progress unique op (player_name, pad, stap)** → tweede kind met dezelfde voornaam kan nooit voortgang opslaan (upsert = UPDATE van andermans rij → RLS 403, live gezien bij "Testkind"). Plan: generated column `owner_key = coalesce(user_id::text, 'naam:'||lower(player_name))`, unique (owner_key, learn_path_id, step_idx), client `onConflict` daarop; reads in LearnPath/LearnPathsHub op user_id filteren als ingelogd.
+- [ ] **F2 Partner-recht alleen in localStorage** (`useSubscription.partnerGrant`, `lk_partner_status`) → vervalsbaar zodra paywall aan; `claim_partner_plek(p_visitor)` client-gekozen → plekken leeg te trekken. Vóór paywall: entitlement server-side (partner_claims aan auth.uid()).
+- [ ] **F3 Onbekende partnercode via QR-URL wordt geaccepteerd** (`vangPartnerCode` valideert niet; `?partner=TEST123` toont volledig welkomstscherm + belofte). Fix: `partner_code_bestaat`-RPC vóór PartnerWelkom, anders "code onbekend".
+- [ ] **F4 Klaargezet-RPC's matchen op voornaam voor anon** (`voor_jou_klaargezet`, `kind_klaargezet_gedaan`, `leerling_klaargezet_gedaan`) → elke "Sophie" ziet/vinkt elkaars lessen. Fix: `and (child_user_id is null or child_user_id = auth.uid())`.
+- [ ] **F5 Koppeling hangt aan vluchtige anon-uid** (`claim_link_code` zet child_user_id = anon-id; 1 van 4 koppelingen wijst naar anon) → ouder ziet 0 na herinstallatie. Fix: child_user_id alleen bij niet-anonieme sessie, anders naam-match.
+- [ ] **F6 "Verwijder al mijn data" wist niet alles** (learning_goals, diagnostic_assessments, daily_plans, leraar_leerling_links, referral_codes, auth.users blijven) — RPC uitbreiden of copy versmallen (AVG/DPIA!).
+- [ ] **F7 Resend-daglimiet (100) op maandag in toetsseizoen**: ouder-rapport + kwartiercheck + aftelreeks + weekmail in één run; nu 24 op lijst dus oké, maar bij groei structureel. Gedeeld dagbudget of aftelreeks op andere dag.
+- [ ] **F8 AI-endpoints: inputlengte niet afgekapt** (generate-questions `topic`/`level`, tutor-chat context-velden, preview-topic) + quota telt vóór body-validatie (`_guard.js`). Één sweep: `slice(0,200)` per veld, `level` alleen uit map, quota pas vóór Anthropic-call.
+- [ ] **F9 Repo-migraties lopen achter op live DB** (klaargezet-RPC's, partner_codes/claims, referral_codes, koppelcode-policies niet in `supabase/migrations/`). Export-migratie maken uit pg_policies + pg_get_functiondef.
+- [ ] **F10 "Exact hervatten" werkt niet** (LearnPath resume zet checkIdx maar `startCheck()` reset naar 0) — bij bewaarde checkIdx>0 direct mode "checking".
+
+**P2 — open**
+- [ ] F11 Eerste bezoeker ziet "✓ Ingelogd / Uitloggen" (stil anon-account) — verwarrend naast "geen account nodig".
+- [ ] F12 `/dit-bestaat-niet` → stil homepage (geen 404-melding); `/leren/pad` niet deep-linkbaar na refresh.
+- [ ] F13 SW cachet alle same-origin GETs (glb/mp3/json) in shell-cache → opslaggroei; alleen `mode==="navigate"` cachen. + stille reload in eerste 45 s negeert `__toetsActief`.
+- [ ] F14 Unsubscribe via kale GET → mail-scanners melden af; bevestig-knop.
+- [ ] F15 send-oefenblad/weekpakket-code: derden inschrijven zonder bevestiging (single opt-in); partner-mailadres ouder idem.
+- [ ] F16 Huishoud-filter op voornaam (`useAuth` regex mark|brian|deianera|olivia) raakt echte gebruikers → op user_id.
+- [ ] F17 Drie entitlement-bronnen (isLaunchPromoActive / PAYWALL_ACTIVE / subscriptions) → tijdbom 1-1-2027; één bron.
+- [ ] F18 Stappen buiten hoofdstuk-bereik: argumentatieleer s15, doorstroomtoets-rekenen-g8 s5-6, doorstroomtoets-taal-g8 s5 (100% onhaalbaar); + 21 manifest-paden niet in ALL_LEARN_PATHS.
+- [ ] F19 LearnPathsHub voortgang% kan >100% (telt alle rijen, deelt door gefilterde paden); "Doorgaan" = manifest-volgorde i.p.v. laatst bezocht.
+- [ ] F20 Vragen-kwaliteit: ambigu — sample 3745 (heeft/is/had), 710 (haar/zijn/hun), textbook 318 (2987/3499), socialVragen 343 (5 opties, 2 goed), breukenPo 83 (4/6=2/3), doorstroomtoetsRekenenG8 2260 (Tom-som); sample 1902/2860/2798 "zowel b als c" na optie-shuffle kapot; 625/630/632/636 kapotte vraagstelling; 1211 datum-gevoelig.
+- [ ] F21 **Niveau te hoog** sample rekenen g7 (r266-317: √, priem, ggd/kgv, btw), taal g7 (r624-675: oxymoron, metoniem…), engels g7 (r1673-1724: third conditional…); begrijpend lezen g3/g5/g7 delen één pool.
+- [ ] F22 **Rommel-afleiders in 1.248 vragen** ("boom of hond", "onder bepaalde omstandigheden") — raadbaar + onprofessioneel; zwaarst sample/taal, natuur, engels, cito groep8.
+- [ ] F23 "Cito" nog 183× user-facing in doorstroomtoets-G8-paden + ExamensPage/StudentHome "Cito-toets"; RondleidingPage "derde week januari" vs elders "begin februari".
+- [ ] F24 `seksuele voorlichting`-topic vanaf groep 7 = VO-inhoud; overwegen alléén VO.
+- [ ] F25 Uitleg-dialoog na fout antwoord toont uitleg pas na extra tik (alle blokken dicht); zelfde YouTube-video bij alle rekenvragen; three.js-bundel laadt in quiz zodra Charley opent.
+- [ ] F26 Kleine UI: /oefenpakket 5px overflow; /leren twee zoekbalken; "volgen.Mis je" spatie; tik-doelen <36px (Code gekregen?, footer-knoppen); labels 10-11px.
+- [ ] F27 Brian's tabellen `deluxe_kv`/`game_rooms`/`scores` zonder RLS, anon DELETE/TRUNCATE (zijn API gebruikt anon-key) — met Brian regelen, niet in Leerkwartier-repo.
+
 ## 🎨 SPRINT — Tier-stippen-restjes (9 aug 2026, na 3-agent-audit; hoofdronde ✓ v225)
 
 > Kleurtaal: groen=Gratis · goud=Familie · blauw=Pro · paars=Kwartier-tegoed (LAAG_KLEUREN, proPlan.js).

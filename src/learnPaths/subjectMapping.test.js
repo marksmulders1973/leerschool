@@ -25,6 +25,13 @@ describe("categoryToLearnSubjects", () => {
     expect(categoryToLearnSubjects(null)).toEqual([]);
   });
 
+  it("rekenen dekt de PO-rekenpaden én VO-wiskunde (Fable-review 2 sep 2026)", () => {
+    expect(categoryToLearnSubjects("rekenen")).toEqual(["rekenen", "wiskunde"]);
+    expect(categoryToLearnSubjects("begrijpend-lezen")).toContain("begrijpend-lezen");
+    expect(hasLearnPathsForCategory("rekenen")).toBe(true);
+    expect(countLearnPathsForCategory("rekenen")).toBeGreaterThan(30);
+  });
+
   it("mapt PO-varianten naar dezelfde subject", () => {
     expect(categoryToLearnSubjects("aardrijkskunde-po")).toEqual(["aardrijkskunde"]);
     expect(categoryToLearnSubjects("geschiedenis-po")).toEqual(["geschiedenis"]);

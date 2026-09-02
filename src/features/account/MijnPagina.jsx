@@ -792,9 +792,18 @@ export default function MijnPagina({
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
     if (!groep || groep < 7) return null;
-    const dagen = Math.ceil((DOORSTROOMTOETS_DATUM - new Date()) / 86400000);
+    // Zelfde schooljaar-logica als CitoPage (Fable-review 2 sep 2026: /mijn
+    // zei "21 weken, feb 2027" voor een groep-7-kind, /cito "73 weken, 2028").
+    // Eerstvolgende 25 jan = toets van de huidige groep 8; groep 7 telt vanaf
+    // augustus (nieuw schooljaar) en in januari een jaar verder.
+    const nu = new Date();
+    const maand = nu.getMonth();
+    let jaar = maand >= 1 ? nu.getFullYear() + 1 : nu.getFullYear();
+    if (groep === 7 && (maand >= 7 || maand === 0)) jaar += 1;
+    const toets = new Date(jaar, DOORSTROOMTOETS_DATUM.getMonth(), DOORSTROOMTOETS_DATUM.getDate());
+    const dagen = Math.ceil((toets - nu) / 86400000);
     if (dagen <= 0) return null;
-    return { dagen, weken: Math.ceil(dagen / 7) };
+    return { dagen, weken: Math.ceil(dagen / 7), jaar };
   }, [groep]);
 
   const goudTotaal = records.filter((r) => r.level === "gold").length;
@@ -1513,7 +1522,7 @@ export default function MijnPagina({
                     Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de doorstroomtoets
                   </div>
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
-                    Dát is je doel: laten zien wat je kunt op de toets, begin februari 2027. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
+                    Dát is je doel: laten zien wat je kunt op de toets, eind januari {countdown.jaar}{groep === 7 ? " (jij zit dan in groep 8)" : ""}. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
                   </div>
                   <button
                     onClick={onGoCito}
