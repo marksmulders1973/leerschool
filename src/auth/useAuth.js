@@ -77,12 +77,16 @@ export function useAuth() {
             // Huishoud-apparaat zelf markeren (29 jul): het dagrapport telt via
             // de view events_echt — zonder deze markering vervuilen eigen
             // gezins-sessies de Noord-ster-metric. Markeert alléén de eigen uid.
+            // F16 (Fable-review 2 sep 2026): niet meer op voornaam (een échte
+            // "Brian" of "Olivia" verdween uit de Noord-ster), maar op de vaste
+            // lijst household_accounts via RPC is_household_account().
             try {
               const naam = (data?.display_name || "").trim().toLowerCase();
-              if (/^(mark|brian|deianera|olivia)$|^test|tester$/.test(naam)) {
+              supabase.rpc("is_household_account").then(({ data: isHuis }) => {
+                if (isHuis !== true) return;
                 const uid = localStorage.getItem("lk_uid");
-                if (uid) supabase.rpc("mark_household_uid", { p_uid: uid, p_label: naam }).then(() => {}).catch(() => {});
-              }
+                if (uid) supabase.rpc("mark_household_uid", { p_uid: uid, p_label: naam || "huishouden" }).then(() => {}).catch(() => {});
+              }).catch(() => {});
             } catch { /* markering is een extraatje */ }
             if (data?.level) setUserLevel(data.level);
             if (data?.school_type) setUserSchoolType(data.school_type);

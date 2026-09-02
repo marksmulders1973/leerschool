@@ -1187,8 +1187,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </div>
             )}
 
-            {authUser ? (
+            {authUser && !authUser.is_anonymous ? (
               <>
+                {/* F11 (2 sep 2026): de stille anonieme sessie telde als "ingelogd" — verse bezoeker zag "✓ Ingelogd / Uitloggen" naast "geen account nodig". */}
                 <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(0,200,83,0.12)", border: "1px solid rgba(0,200,83,0.3)", borderRadius: 16, padding: "12px 16px" }}>
                   <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(0,200,83,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✓</div>
                   <div style={{ flex: 1 }}>

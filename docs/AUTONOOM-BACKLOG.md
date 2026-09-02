@@ -38,12 +38,12 @@ Cito + examens versterken. Drie type werk:
 - [x] ✓2/9 (v545) **F10 "Exact hervatten" werkt niet** — DONE: resumeCheckIdxRef; startCheck() gebruikt de bewaarde vraag-index eenmalig. Was: (LearnPath resume zet checkIdx maar `startCheck()` reset naar 0) — bij bewaarde checkIdx>0 direct mode "checking".
 
 **P2 — open**
-- [ ] F11 Eerste bezoeker ziet "✓ Ingelogd / Uitloggen" (stil anon-account) — verwarrend naast "geen account nodig".
+- [x] ✓2/9 (v552) F11 — DONE: HomePage toont het ingelogd-blok alleen voor niet-anonieme accounts. Was: Eerste bezoeker ziet "✓ Ingelogd / Uitloggen" (stil anon-account) — verwarrend naast "geen account nodig".
 - [ ] F12 `/dit-bestaat-niet` → stil homepage (geen 404-melding); `/leren/pad` niet deep-linkbaar na refresh.
 - [x] ✓2/9 (v551) F13 — DONE: SW cachet alleen nog echte navigaties (mode navigate / Accept text/html) in de shell-cache; cache.put alleen bij status 200 (geen 206-audio) met catch; webp in asset-cache; stille start-herlaad respecteert __toetsActief. Was: SW cachet alle same-origin GETs (glb/mp3/json) in shell-cache → opslaggroei; alleen `mode==="navigate"` cachen. + stille reload in eerste 45 s negeert `__toetsActief`.
 - [ ] F14 Unsubscribe via kale GET → mail-scanners melden af; bevestig-knop.
 - [ ] F15 send-oefenblad/weekpakket-code: derden inschrijven zonder bevestiging (single opt-in); partner-mailadres ouder idem.
-- [ ] F16 Huishoud-filter op voornaam (`useAuth` regex mark|brian|deianera|olivia) raakt echte gebruikers → op user_id.
+- [x] ✓2/9 (v552) F16 — DONE: useAuth markeert huishouden via RPC is_household_account() (vaste lijst household_accounts) i.p.v. naam-regex. Was: Huishoud-filter op voornaam (`useAuth` regex mark|brian|deianera|olivia) raakt echte gebruikers → op user_id.
 - [ ] F17 Drie entitlement-bronnen (isLaunchPromoActive / PAYWALL_ACTIVE / subscriptions) → tijdbom 1-1-2027; één bron.
 - [ ] F18 Stappen buiten hoofdstuk-bereik: argumentatieleer s15, doorstroomtoets-rekenen-g8 s5-6, doorstroomtoets-taal-g8 s5 (100% onhaalbaar); + 21 manifest-paden niet in ALL_LEARN_PATHS.
 - [ ] F19 LearnPathsHub voortgang% kan >100% (telt alle rijen, deelt door gefilterde paden); "Doorgaan" = manifest-volgorde i.p.v. laatst bezocht.
