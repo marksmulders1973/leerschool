@@ -9,7 +9,7 @@
 ## 🔴 Nu doen (deze week)
 
 - **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend; Claude stuurt batch 2 e.v. (~45/dag). Reacties komen op hallo@ → Gmail.**
-- **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: check Nicole (Buurtgezinnen landelijk) + Tiffany (Saba, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · **Spark Fest/Inez: inhoudelijk antwoord op de goodybag-flyers (beloofd ~3 aug) is nog nooit gelogd → kort nudge-mailtje** (Claude zet concept klaar).
+- **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: check Nicole (Buurtgezinnen landelijk) + Tiffany (Saba, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · ✅ Spark Fest/Inez: nudge verstuurd 2 sep (Claude, na Mark-akkoord).
 - **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die
   samen één systeem vormen — één go volstaat):
   (a) **langste-van-de-twee-geldigheid**: code geldig tot 31-12-2027 óf 12 mnd
