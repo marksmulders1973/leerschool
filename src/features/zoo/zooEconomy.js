@@ -17,6 +17,7 @@ export const LOGIN_STREAK_BONUS_MAX = 7; // +1 per streakdag, tot dit maximum
 // dan leren — "leren = véél meer munten" moet ook echt waar zijn. Nu is het
 // kwartier de grootste enkele dagbron.
 export const KWARTIER_REWARD = 25;      // 15 min leren voltooid
+export const WANDEL_REWARD = 15;        // wandeling (3 stops, 3 vragen) helemaal af — sprint 3, 2 sep 2026
 
 // Park-groei: elk verblijf levert muntjes per dag op (meer park = meer muntjes).
 export const INKOMST_PER_VERBLIJF = 2;  // per dier/verblijf per dag

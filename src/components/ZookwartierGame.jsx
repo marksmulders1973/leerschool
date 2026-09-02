@@ -27,7 +27,8 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
-import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark } from "../features/zoo/wandelRoutes";
+import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
+import { WANDEL_REWARD } from "../features/zoo/zooEconomy";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import { parkAudioStart, parkAudioStil, parkAudioStop } from "../features/zoo/parkAudio";
 import BuddyKop from "../features/zoo/BuddyKop";
@@ -1539,6 +1540,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
 
   // Tik op een bezoeker → praatje openen (niet tijdens bouwen/plaatsen/selecteren).
+  // UIT sinds sprint 3 (2 sep 2026): 2× gebruikt in 30 dagen en het vierde
+  // praat-systeem naast gids/maatje/chat. Bezoekers houden hun begroetings-
+  // wolkje; de leer-ingang loopt nu via maatje, poort en takenbord. Code blijft
+  // staan achter deze schakelaar (developer-review: "schrappen, niet uitbreiden").
+  const BEZOEKER_PRAATJE_AAN = false;
   const tapBezoeker = () => {
     if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
     setDialoog({ step: 0 });
@@ -1604,15 +1610,65 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     return () => { cancel = true; };
   }, [wandelKies, naam, userId]);
   useEffect(() => {
-    if (!tafereel || !wandeling || wandeling.klaar) return;
+    if (!tafereel || !wandeling || wandeling.klaar || tafereel.via === "takenbord") return;
     const stop = stopsVan(wandeling)[wandeling.stopIdx];
     if (!stop || tafereel.id !== stop.moment) return;
     const nw = volgendeStop(wandeling);
     setWandeling(nw);
+    setWandelStopGevonden({ nr: wandeling.stopIdx + 1, van: stopsVan(wandeling).length, klaar: nw.klaar });
     try { track(nw.klaar ? "wandel_route_af" : "wandel_stop_klaar", { route: wandeling.routeId, stop: stop.moment }); } catch { /* */ }
-    if (nw.klaar) { setWandelViering(true); verdienStempel(wandeling.routeId); }
+    if (nw.klaar) {
+      setWandelViering(true);
+      verdienStempel(wandeling.routeId);
+      // 🪙 Sprint 3: de wandeling ís het kwartier — 3 stops, 3 vragen → munten,
+      // net als een afgemaakt leerkwartier (kleiner bedrag: nadenken ≠ oefenen).
+      setMeta((m) => (m ? { ...m, coins: (m.coins || 0) + WANDEL_REWARD } : m));
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tafereel]);
+  // 🥾 Badge in het paneel: "stop 2 van 3 gevonden" — weg zodra het paneel dicht is.
+  const [wandelStopGevonden, setWandelStopGevonden] = useState(null);
+  useEffect(() => { if (!tafereel) setWandelStopGevonden(null); }, [tafereel]);
+  // ☁️ Wandeling meenemen naar Supabase (owned.wandeling) én terughalen op een
+  // ander toestel (sprint 3): lokaal leeg + cloud heeft er één van vandaag → overnemen.
+  const wandelCloudKlaar = useRef(false);
+  useEffect(() => {
+    if (!loaded || !meta || wandelCloudKlaar.current) return;
+    wandelCloudKlaar.current = true;
+    if (wandeling) return;
+    const o = (meta.owned && !Array.isArray(meta.owned)) ? meta.owned : {};
+    const w = herstelWandeling(o.wandeling);
+    if (w) setWandeling(w);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded, meta]);
+  useEffect(() => {
+    if (!loaded) return;
+    setMeta((m) => {
+      if (!m) return m;
+      const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {};
+      const was = JSON.stringify(o.wandeling || null);
+      const nu = JSON.stringify(wandeling || null);
+      if (was === nu) return m;
+      return { ...m, owned: { ...o, wandeling: wandeling || null } };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [wandeling, loaded]);
+  // 🗣️ Gids-zin bij binnenkomst (sprint 3): een wandeling van vandaag staat nog
+  // open → het maatje zegt waar je heen moet, mét de vraag van die plek. Eén
+  // keer per sessie, pas na de rust bij binnenkomst.
+  useEffect(() => {
+    if (!loaded || !wandeling || wandeling.klaar || !wandelStop || gidsStil) return;
+    let gezegd = false;
+    try { gezegd = sessionStorage.getItem("lk_wandel_gids_sessie") === "1"; } catch { /* */ }
+    if (gezegd) return;
+    const t = setTimeout(() => {
+      try { sessionStorage.setItem("lk_wandel_gids_sessie", "1"); } catch { /* */ }
+      const m = PARK_LEERMOMENTEN[wandelStop.moment];
+      spreek(`Je wandeling wacht nog. Loop naar ${wandelStop.label}. ${m?.vraag || ""}`);
+    }, 5000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded]);
   // Vraag→spel-deeplink (P1 cirkel-is-rond): /dierentuin?scene=<id> spawnt je
   // vlak vóór het tafereel en opent het praatje. Param één keer lezen bij mount.
   const [deeplinkScene] = useState(() => {
@@ -1667,11 +1723,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const banden = [...perBand.values()].sort((a, b) => a.band - b.band);
     return { taken, banden, totaal: taken.length, gedaan: taken.filter((t) => t.gedaan).length };
   }, [placedItems, gedaneP]);
-  const openLeermoment = (id) => {
+  const openLeermoment = (id, via = null) => {
     if (placing || sculptMode || waterMode || groundMode || selectedIdx != null) return;
     const m = PARK_LEERMOMENTEN[id];
     if (!m) return;
-    setTafereel(m);
+    // via="takenbord": vanuit de lijst geopend, niet ter plekke → telt NIET als
+    // wandel-stop (anders is de wandeling in drie tikken "gelopen").
+    setTafereel(via ? { ...m, via } : m);
     // Ook hardop voorlezen (tenzij de gids op stil staat) — "je hoort hoe alles werkt".
     spreek(`${m.titel}. ${m.praatje} Wist je dat? ${m.weetje}`);
     try { track("park_leermoment", { id }); } catch { /* nooit laten breken */ }
@@ -2221,7 +2279,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           spelerNaam={naam}
           goedeScore={goedeScore}
           zwakVak={zwakVak}
-          onTapBezoeker={tapBezoeker}
+          onTapBezoeker={BEZOEKER_PRAATJE_AAN ? tapBezoeker : undefined}
           onTafereel={openTafereel}
           onLeermoment={openLeermoment}
           onGidsMoment={onGidsMoment}
@@ -2946,7 +3004,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   {b.groep} · {b.gedaan}/{b.taken.length}
                 </div>
                 {b.taken.map((t) => (
-                  <button key={t.momentId} onClick={() => { setTakenOpen(false); try { track("park_takenbord_tik", { id: t.momentId }); } catch { /* */ } openLeermoment(t.momentId); }} style={{ display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left", border: "none", borderBottom: "1px solid rgba(0,0,0,0.06)", background: "transparent", padding: "7px 4px", cursor: "pointer", font: "700 13px system-ui", color: t.gedaan ? "#6b7a6e" : "#234" }}>
+                  <button key={t.momentId} onClick={() => { setTakenOpen(false); try { track("park_takenbord_tik", { id: t.momentId }); } catch { /* */ } openLeermoment(t.momentId, "takenbord"); }} style={{ display: "flex", alignItems: "center", gap: 8, width: "100%", textAlign: "left", border: "none", borderBottom: "1px solid rgba(0,0,0,0.06)", background: "transparent", padding: "7px 4px", cursor: "pointer", font: "700 13px system-ui", color: t.gedaan ? "#6b7a6e" : "#234" }}>
                     <span style={{ width: 20, textAlign: "center", fontSize: 15 }}>{t.gedaan ? "✅" : "○"}</span>
                     <span style={{ fontSize: 17 }}>{t.objEmoji}</span>
                     <span style={{ flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", textDecoration: t.gedaan ? "line-through" : "none" }}>{t.label}</span>
@@ -3048,7 +3106,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={{ fontSize: 44 }}>🎉</div>
             <div style={{ font: "800 18px system-ui", color: "#234", marginTop: 4 }}>{wandelRoute?.naam} helemaal af!</div>
             <p style={{ margin: "8px 0 14px", font: "600 13.5px/1.5 system-ui", color: "#345" }}>
-              Je vond alle 3 de stops én leerde onderweg. Morgen ligt er weer een verse wandeling klaar — of loop nu een route van een andere kleur.
+              Je vond alle {stopsVan(wandeling).length} stops en dacht bij elke plek over een vraag na. Dat is jouw wandel-kwartier: <b>🪙 +{WANDEL_REWARD} munten</b>. Morgen ligt er weer een verse wandeling klaar — of loop nu een route van een andere kleur.
             </p>
             {/* 🎟️ Stempel verdiend (park-megabuild #2): het dagritueel bouwt iets op. */}
             <div style={{ margin: "0 0 12px", padding: "10px 12px", borderRadius: 12, background: "rgba(246,200,76,0.14)", border: "1px solid rgba(246,200,76,0.5)" }}>
@@ -3165,6 +3223,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   {buddyId ? <b style={{ color: "#1f5a2e" }}>{buddyNaamEff || "Je maatje"}: </b> : null}
                   {tafereel.praatje}
                 </p>
+                {/* 🥾 Wandel-stop gevonden (sprint 3): de wandeling ís het kwartier. */}
+                {wandelStopGevonden && (
+                  <div style={{ display: "inline-block", marginTop: 8, font: "800 12px system-ui", color: wandelRoute?.tekstKleur || "#234", background: wandelRoute?.kleur || "#ffd54f", borderRadius: 999, padding: "3px 10px" }}>
+                    🥾 Stop {wandelStopGevonden.nr} van {wandelStopGevonden.van} gevonden{wandelStopGevonden.klaar ? " — route af! 🎉" : ""}
+                  </div>
+                )}
                 {/* ❓ De ene vraag van deze plek (samenhang-plan 2 sep): eerst zelf
                     denken, dan pas de les — geen goed/fout-straf hier. */}
                 {tafereel.vraag && (

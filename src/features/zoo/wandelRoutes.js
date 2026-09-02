@@ -192,3 +192,12 @@ export function volgendeStop(w) {
 export function stopWandeling() {
   try { localStorage.removeItem(KEY); } catch { /* private mode */ }
 }
+
+// ☁️ Sprint 3 (2 sep 2026): de wandeling reist mee via Supabase `owned.wandeling`
+// (kind op tablet én telefoon). Dit toestel had niets van vandaag, de cloud wel
+// → lokaal overnemen. Geeft de wandeling terug, of null als 'ie niet van vandaag is.
+export function herstelWandeling(w) {
+  if (!w || w.datum !== vandaag() || !w.routeId) return null;
+  try { localStorage.setItem(KEY, JSON.stringify(w)); } catch { /* private mode */ }
+  return w;
+}
