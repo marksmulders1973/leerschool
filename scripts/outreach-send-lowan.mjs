@@ -5,7 +5,7 @@ if (!KEY) { console.error("geen key"); process.exit(1); }
 const doc = fs.readFileSync("docs/outreach/LOWAN-BATCH-1-CONCEPT.md","utf8");
 const body = doc.split("## Tekst (per school: [school] en [plaats] invullen)")[1].split("## Batch 1")[0].trim();
 const rows = [...doc.matchAll(/^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([\w.+-]+@[\w.-]+)\s*\|/gm)].map(m=>({n:+m[1],school:m[2],plaats:m[3],email:m[4]}));
-const MAX = +(process.argv[2]||45);
+const MAX = +(process.argv[2]||60); // Mark 2 sep: 60/dag, geen akkoord per batch
 const todo = rows.slice(0, MAX);
 const log = [];
 for (const r of todo) {
