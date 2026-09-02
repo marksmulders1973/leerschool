@@ -10,57 +10,18 @@
 // N") en de gedaan-status worden hier berekend zodat WandelPreview er bordjes
 // van kan tekenen. Bron van de emoji/label/leerpadId blijft PARK_LEERMOMENTEN.
 
-import { PARK_LEERMOMENTEN } from "./parkLeermomenten";
+import { PARK_LEERMOMENTEN, TAAK_VOLGORDE } from "./parkLeermomenten";
 import { VAK_INFO } from "../account/vakkenPerGroep";
 import { LINT_BANDEN } from "./leerpadLint";
 
-// momentId → { band, vak }. band = index in LINT_BANDEN (0 = groep 3 … 6 =
-// brugklas), gelijk aan de kleur-band van het pad waar het object bij hoort.
-// vak = sleutel uit VAK_INFO (rekenen/aardrijkskunde/geschiedenis/natuur).
-// De VOLGORDE hieronder bepaalt tegelijk de taak-nummering binnen een groep+vak.
-export const MOMENT_TAAK = {
-  // 🟡 Groep 3 — tellen & de eerste tafels
-  boerderij:   { band: 0, vak: "rekenen" },
-  // 🟢 Groep 4 — klokkijken & meten
-  klok:        { band: 1, vak: "rekenen" },
-  weegschaal:  { band: 1, vak: "rekenen" },
-  // 🟢 Groep 5 — getallen, breuken beginnen, kaartlezen, natuur
-  telraam:     { band: 2, vak: "rekenen" },
-  breukentaart:{ band: 2, vak: "rekenen" },
-  parkkaart:   { band: 2, vak: "aardrijkskunde" },
-  boom:        { band: 2, vak: "natuur" },
-  fontein:     { band: 2, vak: "natuur" },
-  // 🟩 Groep 6 — oppervlakte, omtrek, inhoud beginnen, roosters
-  moestuin:    { band: 3, vak: "rekenen" },
-  reuzenrad:   { band: 3, vak: "rekenen" },
-  station:     { band: 3, vak: "rekenen" },
-  zwembad:     { band: 3, vak: "rekenen" },
-  // 🟦 Groep 7 — ruimtemeetkunde & snelheid
-  cilinder:    { band: 4, vak: "rekenen" },
-  kegel:       { band: 4, vak: "rekenen" },
-  bol:         { band: 4, vak: "rekenen" },
-  halvebol:    { band: 4, vak: "rekenen" },
-  draaimolen:  { band: 4, vak: "rekenen" },
-  zweefmolen:  { band: 4, vak: "natuur" },
-  // 🟦 Groep 8 — kubus, piramide, geld & procenten
-  kubus:       { band: 5, vak: "rekenen" },
-  piramide:    { band: 5, vak: "rekenen" },
-  spaarpot:    { band: 5, vak: "rekenen" },
-  stoomtrein:  { band: 5, vak: "geschiedenis" },
-  // 🔵 Brugklas & examens — de landmark-poorten (wereldoriëntatie)
-  kompas:      { band: 6, vak: "aardrijkskunde" },
-  eiffeltoren: { band: 6, vak: "aardrijkskunde" },
-  wereldbol:   { band: 6, vak: "aardrijkskunde" },
-  vulkaan:     { band: 6, vak: "aardrijkskunde" },
-  molen:       { band: 6, vak: "aardrijkskunde" },
-  tempel:      { band: 6, vak: "geschiedenis" },
-  standbeeld:  { band: 6, vak: "geschiedenis" },
-  telescoop:   { band: 6, vak: "natuur" },
-  raket:       { band: 6, vak: "natuur" },
-  kas:         { band: 6, vak: "natuur" },
-  weerstation: { band: 6, vak: "natuur" },
-  achtbaan:    { band: 6, vak: "natuur" },
-};
+// momentId → { band, vak }. Sinds 2 sep 2026 AFGELEID uit PARK_LEERMOMENTEN
+// (band/vak staan daar, in TAAK_VOLGORDE) — één bron van waarheid. De export
+// blijft voor bestaande importeurs. band = index in LINT_BANDEN (0 = groep 3 …
+// 6 = brugklas); vak = sleutel uit VAK_INFO.
+export const MOMENT_TAAK = {};
+for (const [id, band, vak] of TAAK_VOLGORDE) {
+  if (PARK_LEERMOMENTEN[id]) MOMENT_TAAK[id] = { band, vak };
+}
 
 // Stabiele volgorde (insertion order van MOMENT_TAAK) → de taak-nummering.
 const MOMENT_VOLGORDE = Object.keys(MOMENT_TAAK);

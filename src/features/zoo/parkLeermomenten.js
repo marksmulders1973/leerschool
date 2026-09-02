@@ -489,6 +489,77 @@ for (const [id, vraag] of Object.entries(VRAAG_PER_MOMENT)) {
   if (PARK_LEERMOMENTEN[id]) PARK_LEERMOMENTEN[id].vraag = vraag;
 }
 
+// 🎓 Niveau-fix (leraar-review 2 sep 2026): de vormen stuurden een groep-7-kind
+// naar het vwo-pad `ruimtemeetkunde`. Standaard nu het PO-pad "Maten + omtrek +
+// oppervlakte + inhoud (groep 6-8)"; het brugklas-pad blijft bereikbaar als
+// `leerpadIdVo` (knop "🎓 Brugklas-versie" in het paneel + de vorm-HUD).
+for (const id of ["piramide", "kegel", "cilinder", "bol", "halvebol", "zwembad"]) {
+  const m = PARK_LEERMOMENTEN[id];
+  if (!m || m.leerpadId !== "ruimtemeetkunde") continue;
+  m.leerpadIdVo = "ruimtemeetkunde";
+  m.leerLabelVo = m.leerLabel;
+  m.leerpadId = "maten-omtrek-oppervlakte-po";
+  m.leerLabel = `${m.leerLabel} (groep 6-8)`;
+}
+
+// 🗂️ Band (0 = groep 3 … 6 = brugklas, = kleur-band van het lint) + vak per
+// object — verhuisd uit parkTaken.js zodat PARK_LEERMOMENTEN de énige bron is
+// voor "object → les → groep → vak" (developer-review 2 sep: drie indelingen).
+// VOLGORDE = de taak-nummering op het takenbord. Bands gecorrigeerd op het
+// échte niveau van het leerpad (leraar-review): weegschaal → groep 7,
+// telraam → groep 6, boom + zweefmolen → brugklas (paden klas 1-3).
+export const TAAK_VOLGORDE = [
+  ["boerderij", 0, "rekenen"],
+  ["klok", 1, "rekenen"],
+  ["breukentaart", 2, "rekenen"],
+  ["parkkaart", 2, "aardrijkskunde"],
+  ["fontein", 2, "natuur"],
+  ["telraam", 3, "rekenen"],
+  ["moestuin", 3, "rekenen"],
+  ["reuzenrad", 3, "rekenen"],
+  ["station", 3, "rekenen"],
+  ["zwembad", 3, "rekenen"],
+  ["weegschaal", 4, "rekenen"],
+  ["cilinder", 4, "rekenen"],
+  ["kegel", 4, "rekenen"],
+  ["bol", 4, "rekenen"],
+  ["halvebol", 4, "rekenen"],
+  ["draaimolen", 4, "rekenen"],
+  ["kubus", 5, "rekenen"],
+  ["piramide", 5, "rekenen"],
+  ["spaarpot", 5, "rekenen"],
+  ["stoomtrein", 5, "geschiedenis"],
+  ["kompas", 6, "aardrijkskunde"],
+  ["eiffeltoren", 6, "aardrijkskunde"],
+  ["wereldbol", 6, "aardrijkskunde"],
+  ["vulkaan", 6, "aardrijkskunde"],
+  ["molen", 6, "aardrijkskunde"],
+  ["tempel", 6, "geschiedenis"],
+  ["standbeeld", 6, "geschiedenis"],
+  ["telescoop", 6, "natuur"],
+  ["raket", 6, "natuur"],
+  ["kas", 6, "natuur"],
+  ["weerstation", 6, "natuur"],
+  ["achtbaan", 6, "natuur"],
+  ["zweefmolen", 6, "natuur"],
+  ["boom", 6, "natuur"],
+];
+for (const [id, band, vak] of TAAK_VOLGORDE) {
+  if (PARK_LEERMOMENTEN[id]) { PARK_LEERMOMENTEN[id].band = band; PARK_LEERMOMENTEN[id].vak = vak; }
+}
+
+// ✨ Kleine poorten op de groene route (samenhang-plan sprint 2): de doelgroep
+// (groep 6-8) had géén poorten — die stonden alleen op de brugklas-landmarks.
+// De zes bord-objecten krijgen nu ook een (kleinere) poort vóór zich; de
+// poort is sinds v556 een uitnodigings-kaart, dus per ongeluk erdoorheen
+// lopen tijdens het inrichten is geen straf meer. Watcher meet op de poort
+// zelf (POORT_KLEIN_AFSTAND in ZooScene).
+export const POORT_KLEIN_ASSETS = ["klok", "weegschaal", "breukentaart", "moestuin", "telraam", "parkkaart"];
+for (const assetId of POORT_KLEIN_ASSETS) {
+  const m = PARK_LEERMOMENTEN[LEERMOMENT_BY_ASSET[assetId]];
+  if (m?.leerpadId && !POORT_ASSETS[assetId]) POORT_ASSETS[assetId] = { leerpadId: m.leerpadId, label: m.leerLabel || m.titel, klein: true };
+}
+
 /** "Hier sta je"-context voor maatje, gids, poort en AI-chat: één vorm, één bron. */
 export function hierContextVoor(momentId) {
   const m = momentId ? PARK_LEERMOMENTEN[momentId] : null;

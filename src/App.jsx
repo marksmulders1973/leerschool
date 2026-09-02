@@ -1356,7 +1356,11 @@ export default function App() {
           initialStepIdx={activeLearnStepIdx}
           userName={userName || "Speler"}
           authUser={authUser}
-          onBack={() => setPage(learnPathReturnPage || "home")}
+          onBack={() => {
+            // Park-meetlat (samenhang-plan 2 sep 2026): terug in het park ná een les.
+            if (learnPathReturnPage === "zoo") { try { track("park_les_terug", { pad: activeLearnPathId }); } catch { /* */ } }
+            setPage(learnPathReturnPage || "home");
+          }}
           onHome={goHome}
           onPickPath={(id, stepIdx) => {
             setActiveLearnPathId(id);

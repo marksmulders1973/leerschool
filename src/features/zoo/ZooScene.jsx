@@ -21,9 +21,9 @@ import WandelPreview, { wandelPreviewActief, Leerpadlint, lintCellen, Opritten, 
 import { LEERTRAIL } from "./leerpadLint";
 import { WANDEL_ROUTES, leesWandeling, stopsVan } from "./wandelRoutes";
 import UitvindersTaferelen, { Souvenir, EgyptischePiramide, RubiksKubus, KegelIjsje, GroteBal, HalveBol, Cilinder, Zwembad } from "./UitvindersKabouters";
-import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord, RAKET_VLUCHT, LeerBord } from "./ParkLeerobjecten";
+import { Klokkentoren, Weegschaal, Breukentaart, Moestuin, Telraam, Parkkaart, Kompas, Eiffeltoren, GriekseTempel, Wereldbol, Sterrenwacht, Standbeeld, HollandseMolen, Raket, Vulkaan, Kas, Weerstation, Spaarpot, Bouwbord, DinoBord, RAKET_VLUCHT, LeerBord, MagischePoort } from "./ParkLeerobjecten";
 import FabelWezen from "./FabelWezen";
-import { LEERMOMENT_BY_ASSET, POORT_ASSETS, hierContextVoor } from "./parkLeermomenten";
+import { LEERMOMENT_BY_ASSET, POORT_ASSETS, POORT_KLEIN_ASSETS, hierContextVoor } from "./parkLeermomenten";
 import { getBlokMaterial, grijsMaps, grasSprietTex } from "./blokTextures";
 import { useEffect } from "react";
 import {
@@ -391,7 +391,15 @@ const PlacedItem = memo(function PlacedItem({ assetId, x, z, y = 0, rotation = 0
   const metLeerBord = (node) => {
     const moment = LEERMOMENT_BY_ASSET[assetId];
     if (!moment || !onOefenen) return node;
-    return <group>{node}<LeerBord moment={moment} onOefenen={onOefenen} position={[x + 1.9, y, z + 1.5]} /></group>;
+    // ✨ Kleine poort vóór het object (samenhang-plan sprint 2): de groene
+    // route (groep 6-8) had geen enkele poort. Lokaal -z, draait mee met het
+    // object; PoortWatcher meet op POORT_KLEIN_AFSTAND vanaf het midden.
+    const poort = POORT_ASSETS[assetId]?.klein ? (
+      <group position={[x, y, z]} rotation={[0, rotation, 0]}>
+        <MagischePoort kleur="#b9e7a8" emoji={PARK_LEERMOMENTEN_EMOJI(moment)} label={POORT_ASSETS[assetId].label} z={-POORT_KLEIN_AFSTAND} breedte={2.2} hoogte={2.6} />
+      </group>
+    ) : null;
+    return <group>{node}{poort}<LeerBord moment={moment} onOefenen={onOefenen} position={[x + 1.9, y, z + 1.5]} /></group>;
   };
   if (a.procedural === "klok") return metLeerBord(<Klokkentoren position={[x, y, z]} rotation={rotation} />);
   if (a.procedural === "weegschaal") return metLeerBord(<Weegschaal position={[x, y, z]} rotation={rotation} />);
@@ -900,7 +908,10 @@ function NabijPiramideWatcher({ playerPos, playerFace, placedItems, onNear }) {
 // (lokaal -z); dan meten we op de poort zélf — anders vuurt hij nooit. De
 // arena-poort staat op R×ARENA_S+2,6 ≈ 9,6 m van het midden, aan het eind van
 // de loper (Mark 27 aug: "die poort doet niets" + "iets verder weg").
-const POORT_AFSTAND = { tempel: 9.6 };
+const POORT_KLEIN_AFSTAND = 2.4;
+const POORT_AFSTAND = { tempel: 9.6, ...Object.fromEntries(POORT_KLEIN_ASSETS.map((id) => [id, POORT_KLEIN_AFSTAND])) };
+// Emoji van het leermoment voor de kleine poort (zonder ZooScene aan de hele tabel te koppelen).
+const PARK_LEERMOMENTEN_EMOJI = (momentId) => hierContextVoor(momentId)?.emoji || "✨";
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat

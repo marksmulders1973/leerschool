@@ -21,15 +21,13 @@ import Loonstrook, { InkoopBon } from "./EconomieUitleg";
 import { splitsBtw, btwTarief } from "../features/zoo/btw";
 import { nieuweVrijspeelDieren, VRIJSPEEL_DIEREN, vrijspeelDier, DINO_MIJLPALEN, telPadStappen, gedanePaden } from "../features/zoo/unlocks";
 import { berekenParkTaken } from "../features/zoo/parkTaken";
+import { haalLeerKandidaten, leerZinVoor } from "../features/zoo/volgendeLeerstap";
 import BuddyPicker from "../features/zoo/BuddyPicker";
 import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark } from "../features/zoo/wandelRoutes";
-import { loadDueTopics } from "../features/mastery/mastery.js";
-import { kiesZwakkeConcepten } from "../features/oefenboekje/opMaat.js";
-import { haalKlaargezetVoorKind } from "../shared/ouderKlaargezet.js";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import { parkAudioStart, parkAudioStil, parkAudioStop } from "../features/zoo/parkAudio";
 import BuddyKop from "../features/zoo/BuddyKop";
@@ -486,6 +484,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // getoond. Nu een HUD-knop + lijst per groep met ✓ voor gedane leerpaden.
   const [takenOpen, setTakenOpen] = useState(false);
   const [gedaneP, setGedaneP] = useState(() => new Set());
+  // 🧭 Eén kiezer "wat nu leren" (sprint 2): klaargezet → herhalen → zwak.
+  // Voedt de leer-invite, het maatje en de AI-chat; de wandeling gebruikt
+  // dezelfde lijst. { pathId, reden, title } of null.
+  const [leerVolgende, setLeerVolgende] = useState(null);
   // 📍 "Hier sta je": GidsWatcher schrijft het dichtstbijzijnde leermoment-id
   // (ref, geen re-renders). Eén bron voor maatje-wolkje, AI-chat en poort.
   const hierRef = useRef(null);
@@ -609,9 +611,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       if (cancel) return;
       setGeleerdeStappen(n);
       // 🥇 Inhoud-pad-voortgang → bepaalt welke vormen goud worden.
-      try { const gi = await telPadStappen(naam, "ruimtemeetkunde"); if (!cancel) setInhoudStappen(gi); } catch { /* */ }
+      // Gouden vormen: PO-pad "maten-omtrek-oppervlakte-po" telt sinds sprint 2 mee
+      // (de vormen verwijzen nu standaard dáárheen; brugklas-pad blijft tellen).
+      try { const [g1, g2] = await Promise.all([telPadStappen(naam, "ruimtemeetkunde"), telPadStappen(naam, "maten-omtrek-oppervlakte-po")]); if (!cancel) setInhoudStappen(g1 + g2); } catch { /* */ }
       // 🗺️ Gedane leerpaden → ✓ op het takenbord.
       try { const gp = await gedanePaden(naam); if (!cancel) setGedaneP(gp); } catch { /* */ }
+      // 🧭 Volgende leerstap (één kiezer) voor invite/maatje/chat.
+      try { const k = await haalLeerKandidaten(naam, userId); if (!cancel) { setLeerVolgende(k[0] || null); wandelKandidatenRef.current = k; } } catch { /* */ }
       // Geen auto-picker meer: Charley is het standaard maatje en loopt al mee.
       // Zelf een ander maatje kiezen kan via het ⚙️-menu → "🐾 Kies je maatje".
     })();
@@ -1587,29 +1593,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   };
   // M2b: kandidaten voor persoonlijke stops (herhaling-die-eraan-toe-is +
   // zwakste concepten) — één keer ophalen zodra het kies-paneel opengaat.
+  // Sprint 2 (2 sep 2026): dezelfde kiezer als invite/maatje/chat —
+  // haalLeerKandidaten (klaargezet → herhalen → zwak). Wordt al bij het laden
+  // gevuld; hier alleen een vangnet als het kies-paneel eerder opengaat.
   const wandelKandidatenRef = useRef(null);
   useEffect(() => {
     if (!wandelKies || wandelKandidatenRef.current || !naam) return;
     let cancel = false;
-    (async () => {
-      try {
-        const [klaargezet, due, recs] = await Promise.all([
-          haalKlaargezetVoorKind(naam).catch(() => []),
-          loadDueTopics(naam).catch(() => []),
-          loadMasteryForPlayer(naam, userId).catch(() => []),
-        ]);
-        if (cancel) return;
-        const zwak = kiesZwakkeConcepten(recs || [], { maxConcepten: 4 });
-        // M2c: wat juf/thuis klaarzette gaat vóór alles — daarna herhaling, dan zwak.
-        wandelKandidatenRef.current = [
-          ...(klaargezet || []).filter((k) => !k.gedaan && k.path_id).map((k) => ({ pathId: k.path_id, reden: k.bron === "leraar" ? "klaargezet-juf" : "klaargezet-thuis" })),
-          ...(due || []).map((d) => ({ pathId: d.pathId, reden: "herhalen" })),
-          ...(zwak || []).map((z) => ({ pathId: z.id, reden: "oefenen" })),
-        ];
-      } catch {
-        wandelKandidatenRef.current = [];
-      }
-    })();
+    haalLeerKandidaten(naam, userId).then((k) => { if (!cancel) wandelKandidatenRef.current = k; }).catch(() => { if (!cancel) wandelKandidatenRef.current = []; });
     return () => { cancel = true; };
   }, [wandelKies, naam, userId]);
   useEffect(() => {
@@ -1775,12 +1766,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     else if (onOpenLeerpaden) onOpenLeerpaden();
   };
   // Vak waar het praatje over gaat: aanbevolen oefenpad, anders je beste vak.
-  const praatVak = oefenPad?.subject || oefenPad?.title || goedeScore?.vak || "rekenen";
+  const praatVak = leerVolgende?.title || oefenPad?.subject || oefenPad?.title || goedeScore?.vak || "rekenen";
+  // Sprint 2: één kiezer — eerst de volgende leerstap (klaargezet/herhalen/zwak), anders de oude aanbeveling.
+  const volgendPadId = leerVolgende?.pathId || oefenPad?.id || null;
   const gaOefenen = () => {
     setDialoog(null);
     // Trechter-meting: vanuit het park doorgeklikt naar een leerpad (of de hub).
-    try { track("park_naar_leren", { pad: oefenPad?.id || null }); } catch { /* nooit laten breken */ }
-    if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+    try { track("park_naar_leren", { pad: volgendPadId, reden: leerVolgende?.reden || null }); } catch { /* nooit laten breken */ }
+    if (volgendPadId && onOpenLeerpad) onOpenLeerpad(volgendPadId);
     else if (onOpenLeerpaden) onOpenLeerpaden();
     else onHome && onHome();
   };
@@ -2296,8 +2289,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onNaarLeren={() => {
             setBuddyChatOpen(false);
             // Trechter-meting: leren gestart vanuit het maatje-praatje (nieuwe brug 5 jul).
-            try { track("park_naar_leren", { via: "buddy_chat", pad: oefenPad?.id || null }); } catch { /* nooit laten breken */ }
-            if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+            try { track("park_naar_leren", { via: "buddy_chat", pad: volgendPadId }); } catch { /* nooit laten breken */ }
+            if (volgendPadId && onOpenLeerpad) onOpenLeerpad(volgendPadId);
             else if (onOpenLeerpaden) onOpenLeerpaden();
           }}
           facts={{ naam, zwakVak }}
@@ -2341,13 +2334,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
-            <b>{buddyNaamEff || "Je maatje"}</b>: "{oefenPad?.title ? `Zullen we samen met ${oefenPad.title} oefenen? Dan verdien je munten voor je park! 🪙` : "Zullen we samen iets gaan oefenen? Dan verdien je munten voor je park! 🪙"}"
+            <b>{buddyNaamEff || "Je maatje"}</b>: "{leerZinVoor(leerVolgende) || (oefenPad?.title ? `Zullen we samen met ${oefenPad.title} oefenen? Dan verdien je munten voor je park! 🪙` : "Zullen we samen iets gaan oefenen? Dan verdien je munten voor je park! 🪙")}"
           </div>
           <button
             onClick={() => {
               setLeerTip(false);
-              try { track("park_naar_leren", { via: "gids_invite", pad: oefenPad?.id || null }); } catch { /* */ }
-              if (oefenPad?.id && onOpenLeerpad) onOpenLeerpad(oefenPad.id);
+              try { track("park_naar_leren", { via: "gids_invite", pad: volgendPadId, reden: leerVolgende?.reden || null }); } catch { /* */ }
+              if (volgendPadId && onOpenLeerpad) onOpenLeerpad(volgendPadId);
               else if (onOpenLeerpaden) onOpenLeerpaden();
             }}
             style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}
@@ -3203,6 +3196,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <button onClick={() => tafereelNaarLeren()} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
                 ▶ Leer er meer over: {tafereel.leerLabel}
               </button>
+              {/* 🎓 Brugklas-versie (sprint 2): de vormen verwijzen standaard naar
+                  het PO-pad; wie verder wil, krijgt het vwo-pad als tweede knop. */}
+              {tafereel.leerpadIdVo && (
+                <button onClick={() => tafereelNaarLeren(tafereel.leerpadIdVo)} style={{ border: "1px solid rgba(30,79,163,0.4)", borderRadius: 999, padding: "10px 16px", font: "800 13.5px system-ui", color: "#1e4fa3", background: "#e6f0ff", cursor: "pointer" }}>
+                  🎓 Brugklas-versie: {tafereel.leerLabelVo}
+                </button>
+              )}
               {tafereel.leerpadId2 && (
                 <button onClick={() => tafereelNaarLeren(tafereel.leerpadId2)} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#c9862e,#a86a1e)", boxShadow: "0 3px 10px rgba(0,0,0,.25)", cursor: "pointer" }}>
                   ▶ {tafereel.leerLabel2}
