@@ -118,7 +118,9 @@ function bouwWeekmail(rij, weekNr, items) {
 
 // Aangeroepen vanuit send-weekly-lesmateriaal.js (maandag-blok).
 // Retourneert { sent, fouten, reden } voor het dagrapport.
-export async function stuurKwartiercheckWeekmails({ base, key, RESEND, FROM }) {
+// maxMails (F7, 2 sep 2026): gedeeld dagbudget (Resend 100/dag) — de aanroeper
+// geeft door hoeveel er nog mag; wat niet past blijft "due" voor de volgende run.
+export async function stuurKwartiercheckWeekmails({ base, key, RESEND, FROM, maxMails = null }) {
   const naCheck = new Date(Date.now() - MIN_DAGEN_NA_CHECK * 86400000).toISOString();
   const tussenDrempel = new Date(Date.now() - MIN_DAGEN_TUSSEN * 86400000).toISOString();
   const filter =
@@ -143,6 +145,7 @@ export async function stuurKwartiercheckWeekmails({ base, key, RESEND, FROM }) {
   const fouten = [];
   const gezien = new Set(); // zelfde adres deed de check 2× → alleen nieuwste rij mailen
   for (const rij of rijen) {
+    if (maxMails != null && sent >= maxMails) { fouten.push("dagbudget-op"); break; }
     if (!rij.email || !String(rij.email).includes("@") || !rij.unsubscribe_token) continue;
     const adres = String(rij.email).toLowerCase();
     const patch = (extra) => sb(

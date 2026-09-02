@@ -284,6 +284,14 @@ export default async function handler(req, res) {
   // 📊 A8.1 (2026-07-08): op maandag lift het wekelijkse OUDER-RAPPORT mee op
   // deze dagelijkse cron — Vercel Hobby staat maar 2 crons toe, dus geen eigen
   // slot. Dubbel-versturen vangt stuurOuderRapporten af via admin_meta-stempel.
+  // F7 (Fable-review 2 sep 2026): één gedeeld DAGBUDGET voor alle mail-blokken
+  // in deze run (Resend gratis = 100/dag). Op een maandag in het toetsseizoen
+  // liepen ouder-rapport + kwartiercheck + aftelreeks + weekmail samen anders
+  // over de limiet; Resend gaf 429 en de achterstand schoof elke dag door.
+  // Volgorde = prioriteit: ouder-rapport (klein, waardevol, wekelijkse stempel)
+  // eerst en ongelimiteerd; daarna delen de rest wat overblijft. 1 = dagrapport.
+  const DAGBUDGET = 95;
+  let budget = DAGBUDGET - 1;
   let ouderRapport = null;
   let kwartiercheckWeek = null;
   try {
@@ -291,13 +299,15 @@ export default async function handler(req, res) {
     if (weekdag === "maandag") {
       const { stuurOuderRapporten } = await import("./send-ouder-rapport.js");
       ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM });
+      budget -= ouderRapport?.sent || 0;
     }
     // 🧭 Kwartiercheck-vervolgreeks (Mark 28 jul): ook op maandag — week 2-4
     // van het persoonlijke oefenplan, zwakste onderwerpen eerst.
     if (weekdag === "maandag") {
       try {
         const { stuurKwartiercheckWeekmails } = await import("./_lib/send-kwartiercheck-week.js");
-        kwartiercheckWeek = await stuurKwartiercheckWeekmails({ base, key, RESEND, FROM });
+        kwartiercheckWeek = await stuurKwartiercheckWeekmails({ base, key, RESEND, FROM, maxMails: Math.max(0, budget) });
+        budget -= kwartiercheckWeek?.sent || 0;
       } catch (e) {
         kwartiercheckWeek = { sent: 0, fouten: [], reden: "kwartiercheck-week-fout: " + String(e).slice(0, 80) };
       }
@@ -313,7 +323,8 @@ export default async function handler(req, res) {
   let doorstroomCountdown = null;
   try {
     const { stuurDoorstroomCountdown } = await import("./send-doorstroom-countdown.js");
-    doorstroomCountdown = await stuurDoorstroomCountdown({ base, key, RESEND, FROM });
+    doorstroomCountdown = await stuurDoorstroomCountdown({ base, key, RESEND, FROM, maxMails: Math.max(0, budget) });
+    budget -= doorstroomCountdown?.sent || 0;
   } catch (e) {
     doorstroomCountdown = { sent: 0, reden: "doorstroom-countdown-fout: " + String(e).slice(0, 80) };
   }
@@ -353,6 +364,8 @@ export default async function handler(req, res) {
   const perPlan = {}; // uitsplitsing voor het dagrapport ("6× oefenpakket")
   const gezien = new Set(); // zelfde adres met 2 pakketten → 1 mail per run
   for (const rij of rijen) {
+    // F7: rest van het dagbudget; wie niet past blijft "due" (last_sent_at ongewijzigd).
+    if (gelukt >= Math.max(0, budget)) { fouten.push("dagbudget-op"); break; }
     if (!rij.email || !String(rij.email).includes("@")) continue;
     const adres = String(rij.email).toLowerCase();
     if (gezien.has(adres)) {

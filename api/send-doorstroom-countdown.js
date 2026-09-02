@@ -176,7 +176,9 @@ async function verstuur(rij, fase, RESEND, FROM) {
 // Aangeroepen door (a) de losse handler hieronder en (b) de dagelijkse
 // weekmail-cron (send-weekly-lesmateriaal.js), zodat er geen eigen cron-slot
 // nodig is (Vercel Hobby = max 2 crons). No-op buiten seizoen (sep–feb).
-export async function stuurDoorstroomCountdown({ base, key, RESEND, FROM }) {
+// maxMails (F7, 2 sep 2026): gedeeld Resend-dagbudget; rest blijft op dezelfde
+// doorstroom_step staan en gaat de volgende dag mee (reeks is idempotent).
+export async function stuurDoorstroomCountdown({ base, key, RESEND, FROM, maxMails = null }) {
   if (!RESEND) return { sent: 0, reden: "resend-uit" };
   const today = new Date();
   const fase = huidigeFase(today);
@@ -204,6 +206,7 @@ export async function stuurDoorstroomCountdown({ base, key, RESEND, FROM }) {
   let gelukt = 0;
   const fouten = [];
   for (const rij of rijen) {
+    if (maxMails != null && gelukt >= maxMails) { fouten.push("dagbudget-op"); break; }
     if (!rij.email || !String(rij.email).includes("@")) continue;
     try {
       const ok = await verstuur(rij, faseDef, RESEND, FROM);
