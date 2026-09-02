@@ -8,7 +8,7 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **LOWAN: Mark gaf 2 sep "akkoord" → tekst-akkoord geven op `docs/outreach/LOWAN-BATCH-1-CONCEPT.md` + Zapier-Gmail opnieuw autoriseren (auth-link) of Resend-route kiezen; daarna ~50/dag.**
+- **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend; Claude stuurt batch 2 e.v. (~45/dag). Reacties komen op hallo@ → Gmail.**
 - **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: check Nicole (Buurtgezinnen landelijk) + Tiffany (Saba, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · **Spark Fest/Inez: inhoudelijk antwoord op de goodybag-flyers (beloofd ~3 aug) is nog nooit gelogd → kort nudge-mailtje** (Claude zet concept klaar).
 - **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die
   samen één systeem vormen — één go volstaat):
