@@ -31,11 +31,13 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   wiskunde: "wiskunde",
   "wiskunde-a": "wiskunde",
   "wiskunde-b": "wiskunde",
-  rekenen: "wiskunde", // PO rekenen → wiskunde-paden
-  nederlands: "taal",
-  taal: "taal",
-  spelling: "taal",
-  "begrijpend-lezen": "taal",
+  rekenen: ["rekenen", "wiskunde"], // 2 sep 2026: 37 PO-rekenpaden heten "rekenen"
+  nederlands: ["taal", "spelling", "begrijpend-lezen"],
+  taal: ["taal", "spelling", "begrijpend-lezen"],
+  spelling: ["spelling", "taal"],
+  "begrijpend-lezen": ["begrijpend-lezen", "taal"],
+  studievaardigheden: "studievaardigheden",
+  cito: ["rekenen", "taal", "begrijpend-lezen", "studievaardigheden", "wereldorientatie"],
   engels: "engels",
   "engels-po": "engels",
   biologie: "biologie",
@@ -60,6 +62,40 @@ function categoryToSubjects(categoryId) {
   return Array.isArray(v) ? v : [v];
 }
 
+// Niveau-bucket (kopie van src/learnPaths/utils.js levelToBucket) — 2 sep 2026:
+// zonder dit filter landde "ggd van 12 en 18" (groep 7) op mol-stoichiometrie-
+// havo-vwo, omdat de keyword-match geen niveau kende.
+function levelToBucket(lvl) {
+  if (!lvl) return null;
+  const s = String(lvl).toLowerCase();
+  if (s === "nvt" || s === "_root") return null;
+  if (s.startsWith("groep") || s === "po" || /\bgroep\s*\d/.test(s)) return "po";
+  if (
+    s.includes("havo4") || s.includes("havo5") || s.includes("havo-vwo-4") || s.includes("havo4-5") ||
+    s.includes("vwo4") || s.includes("vwo5") || s.includes("vwo6") ||
+    s.includes("klas4") || s.includes("klas5") || s.includes("klas6") ||
+    s.includes("vmbo-gt-4") || s.includes("vmbo-bb-4") || s.includes("vmbo-kb-4")
+  ) return "vo-boven";
+  if (s.startsWith("klas") || s.includes("vmbo") || s.includes("havo") || s.includes("vwo") || s.includes("gym")) return "vo-onder";
+  return null;
+}
+function levelsCompatible(quizLevel, pathLevel) {
+  const q = levelToBucket(quizLevel);
+  const p = levelToBucket(pathLevel);
+  if (!q || !p) return true;
+  return q === p;
+}
+// Niveau afleiden uit een vrije topic-naam ("cito rekenen groep8", "wiskunde klas 2 vwo")
+function bucketFromTopicName(name) {
+  const s = String(name || "").toLowerCase();
+  if (/\bgroep\s*\d/.test(s) || /\bpo\b/.test(s) || s.includes("cito") || s.includes("doorstroom")) return "po";
+  if (/\bklas\s*[123]\b/.test(s)) return "vo-onder";
+  if (/\bklas\s*[456]\b/.test(s) || /havo\s*[45]|vwo\s*[456]/.test(s)) return "vo-boven";
+  if (s.includes("vmbo") || s.includes("havo") || s.includes("vwo") || s.includes("brugklas")) return "vo-onder";
+  return null;
+}
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 const STOP = new Set(["een", "het", "deze", "die", "voor", "wordt", "wat", "hoe", "welk", "welke", "bij", "naar", "dan", "als", "maar", "ook", "niet", "met", "van", "uit", "tot", "kun", "kan", "krijg", "geef", "zonder", "samen", "telkens", "klopt"]);
 
 function findBest(questionText, explanationText, candidatePaths) {
@@ -78,7 +114,11 @@ function findBest(questionText, explanationText, candidatePaths) {
     const kws = (path.triggerKeywords || []).map((k) => k.toLowerCase());
     let kwHits = 0;
     for (const kw of kws) {
-      if (lower.includes(kw)) kwHits++;
+      // Woordgrens (2 sep 2026): "mol" matchte "molen", "log" matchte "logisch".
+      // Meerwoords-keywords en keywords met leestekens blijven substring.
+      if (/^[a-zà-ž0-9]+$/i.test(kw) && kw.length <= 6) {
+        if (new RegExp(`(^|[^a-zà-ž0-9])${escapeRe(kw)}([^a-zà-ž0-9]|$)`, "i").test(lower)) kwHits++;
+      } else if (lower.includes(kw)) kwHits++;
     }
     if (kwHits === 0) continue;
 
@@ -108,15 +148,27 @@ function findBest(questionText, explanationText, candidatePaths) {
 }
 
 async function main() {
-  // Importeer leerpaden via dynamic import (ESM)
-  const learnPathsModule = await import(pathToFileURL(path.join(ROOT, "src", "learnPaths", "index.js")).href);
+  // Leerpaden laden (F28, 2 sep 2026): index.js importeert .jsx-paden en de
+  // Supabase-client (import.meta.env) — kale Node kan dat niet. Daarom eerst
+  // bundelen met esbuild (zit al in node_modules via Vite) naar tmp/.
+  const esbuild = await import("esbuild");
+  const bundlePath = path.join(ROOT, "tmp", "paths-bundle.mjs");
+  await fs.mkdir(path.dirname(bundlePath), { recursive: true });
+  await esbuild.build({
+    entryPoints: [path.join(ROOT, "src", "learnPaths", "index.js")],
+    bundle: true, format: "esm", platform: "node", outfile: bundlePath, logLevel: "error",
+    loader: { ".jsx": "jsx", ".json": "json", ".svg": "text", ".png": "dataurl", ".jpg": "dataurl", ".webp": "dataurl" },
+    define: { "import.meta.env": JSON.stringify({ VITE_SUPABASE_URL: "http://localhost", VITE_SUPABASE_ANON_KEY: "x", MODE: "script", DEV: false, PROD: true }) },
+  });
+  const learnPathsModule = await import(pathToFileURL(bundlePath).href);
   const ALL = learnPathsModule.ALL_LEARN_PATHS;
   const allPaths = Object.values(ALL);
 
-  // Importeer constants.js (vragen)
-  const constantsModule = await import(pathToFileURL(path.join(ROOT, "src", "constants.js")).href);
-  const SAMPLE = constantsModule.SAMPLE_QUESTIONS || {};
-  const TOPIC = constantsModule.TOPIC_QUESTIONS || {};
+  // Vragen: sinds de split staan ze in src/data/ (constants.js bestaat niet meer)
+  const sampleModule = await import(pathToFileURL(path.join(ROOT, "src", "data", "sampleQuestions.js")).href);
+  const topicModule = await import(pathToFileURL(path.join(ROOT, "src", "data", "topics.js")).href);
+  const SAMPLE = sampleModule.SAMPLE_QUESTIONS || {};
+  const TOPIC = topicModule.TOPIC_QUESTIONS || {};
 
   const questionMap = {};        // q-text → { pathId, stepIdx }
   const stats = {                 // per (vak) statistieken
@@ -136,19 +188,21 @@ async function main() {
       ? [["_root", levelOrList]]
       : Object.entries(levelOrList).filter(([, v]) => Array.isArray(v));
 
-    for (const [, qs] of lists) {
+    for (const [levelKey, qs] of lists) {
+      // Niveau-filter: groep-7-vragen alleen tegen PO-paden, klas-2 tegen onderbouw, enz.
+      const levelCandidates = candidates.filter((p) => levelsCompatible(levelKey, p.level));
       for (const q of qs) {
         if (!q || typeof q.q !== "string") continue;
         stats.perCategory[vak] = stats.perCategory[vak] || { total: 0, matched: 0 };
         stats.perCategory[vak].total++;
 
-        if (candidates.length === 0) {
+        if (levelCandidates.length === 0) {
           if (!stats.untaggedSamples[vak]) stats.untaggedSamples[vak] = [];
           if (stats.untaggedSamples[vak].length < 5) stats.untaggedSamples[vak].push(q.q);
           continue;
         }
 
-        const match = findBest(q.q, q.explanation, candidates);
+        const match = findBest(q.q, q.explanation, levelCandidates);
         if (match) {
           questionMap[q.q] = { pathId: match.pathId, stepIdx: match.stepIdx };
           stats.perCategory[vak].matched++;
@@ -169,8 +223,12 @@ async function main() {
     for (const q of qs) {
       if (!q || typeof q.q !== "string") continue;
       topicStats.total++;
-      const match = findBest(q.q, q.explanation, allPaths);
-      if (match) {
+      // Niveau uit de topic-naam ("cito rekenen groep8" → alleen PO-paden);
+      // onbekend niveau → minstens 2 keyword-hits om ruis te vermijden.
+      const bucket = bucketFromTopicName(topicName);
+      const cands = bucket ? allPaths.filter((p) => levelsCompatible(bucket, p.level)) : allPaths;
+      const match = findBest(q.q, q.explanation, cands);
+      if (match && (bucket || match.kwHits >= 2)) {
         questionMap[q.q] = { pathId: match.pathId, stepIdx: match.stepIdx };
         topicStats.matched++;
         stats.perPath[match.pathId] = (stats.perPath[match.pathId] || 0) + 1;

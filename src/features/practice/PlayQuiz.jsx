@@ -70,6 +70,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [waitingForUser, setWaitingForUser] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
+  const [gaveUp, setGaveUp] = useState(false); // F28: "Ik weet het niet" zonder pad-match
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   // M4 audit-3: wrong-overlay default ingeklapt — uitleg/tip/yt/fout-melden
   // achter 'Meer uitleg ▼'-toggle. 10jr-leerling-feedback: 6+ vakken muur was
@@ -254,6 +255,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     setShowExplanation(false);
     setWaitingForUser(false);
     setTimedOut(false);
+    setGaveUp(false);
     setShowWrongOverlay(false);
     setQuestionImage(null);
   }, [gameState.currentQ, gameState.timePerQuestion]);
@@ -317,7 +319,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     return () => clearTimeout(t);
   }, [gameState.currentQ]);
 
-  const handleAnswer = (idx) => {
+  // opts.gaveUp (F28, Fable-review 2 sep 2026): "Ik weet het niet" zonder
+  // leerpad-match → vraag telt als niet-geweten en de uitleg opent ín de quiz
+  // (i.p.v. wegnavigeren naar de "komt eraan"-pagina).
+  const handleAnswer = (idx, opts = {}) => {
     if (showResult) return;
     // 🤝 Vrienden-werven: beantwoord vraagje telt mee voor vriend-activatie.
     telAntwoordVoorVriend();
@@ -325,7 +330,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     // laat timeout-antwoorden (idx === -1) wel door.
     if (!canAnswer && idx !== -1) return;
     clearInterval(timerRef.current);
-    if (idx === -1) setTimedOut(true);
+    if (idx === -1 && !opts.gaveUp) setTimedOut(true);
+    if (opts.gaveUp) setGaveUp(true);
     setSelected(idx);
     setShowResult(true);
 
@@ -435,6 +441,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         {showResult && (
           timedOut
             ? `Tijd om. Het juiste antwoord was ${question.options[question.answer]}.`
+            : gaveUp
+            ? `Hier is de uitleg. Het juiste antwoord was ${question.options[question.answer]}.`
             : (selected === question.answer
               ? `Goed beantwoord. ${question.options[question.answer]}.`
               : `Helaas, niet goed. Het juiste antwoord was ${question.options[question.answer]}.`)
@@ -650,8 +658,14 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               clearTimeout(advanceTimerRef.current);
               if (matched) {
                 onLearnPathRequest(matched);
+              } else if (question?.explanation) {
+                // F28 (Fable-review 2 sep 2026): geen pad-match → NIET meer
+                // wegnavigeren naar "komt eraan" (kind raakte de quiz kwijt),
+                // maar de uitleg van deze vraag zelf tonen, mét Charley en
+                // "Meer uitleg". Telt als niet-geweten (fout), net als tijd-om.
+                handleAnswer(-1, { gaveUp: true });
               } else {
-                // Geen specifieke pad-match binnen het vak → toon "Mee bezig"
+                // Geen uitleg én geen pad → "Mee bezig"-pagina met hub-knop
                 onLearnPathRequest({ noMatch: true, fallbackCategory: subject });
               }
             }}
@@ -681,6 +695,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         {timedOut && showResult && (
           <div style={{ marginTop: 12, textAlign: "center", padding: "10px", background: "#3a1a1a", borderRadius: 12, animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 22, fontWeight: 800, color: "#ff5252", fontFamily: "var(--font-display)" }}>⏰ Tijd is om!</span>
+          </div>
+        )}
+        {gaveUp && showResult && (
+          <div style={{ marginTop: 12, textAlign: "center", padding: "10px 12px", background: "rgba(255,213,79,0.10)", border: "1px solid rgba(255,213,79,0.35)", borderRadius: 12, animation: "popIn 0.3s ease" }}>
+            <span style={{ fontSize: 15, fontWeight: 800, color: "#ffd54f", fontFamily: "var(--font-display)" }}>🤔 Geen probleem — kijk hieronder hoe het zit. Dit telt niet als goed, wel als geleerd.</span>
           </div>
         )}
 
