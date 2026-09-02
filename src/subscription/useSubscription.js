@@ -7,32 +7,38 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { PAYWALL_ACTIVE, TIERS, FEATURE_GATES } from "./config.js";
-import { partnerProStatus, partnerFamilieTot } from "../features/referral/partnerCode.js";
+import { haalPartnerRecht, partnerRechtCache } from "../features/referral/partnerCode.js";
 
 // Partner-code-honorering (prijsplan Mark 25 jul 2026): een geclaimde
-// partner-plek ('pro2027' in localStorage) geeft het Familie-niveau
-// (parent_pro) gratis — tot PARTNER_PRO_TOT voor gewone partner-codes,
-// BLIJVEND (geen einddatum) voor OOIEVAAR*-codes: dat is op 26 jul 2026
-// schriftelijk toegezegd aan de gemeente Den Haag in het getekende
-// "vriend van de Ooievaarspas"-formulier. Geldt ook zonder login (de
-// garantie is apparaat-gebonden zolang er geen account-koppeling is).
-// Pro voor leerkrachten (teacher_pro) valt hier bewust buiten: alleen
-// het Familie-niveau is gratis, leerkracht-features blijven betaald.
+// partner-plek geeft het Familie-niveau (parent_pro) gratis — tot
+// partner_codes.familie_tot (31-12-2027 voor gewone codes), BLIJVEND (null)
+// voor OOIEVAAR*-codes: dat is op 26 jul 2026 schriftelijk toegezegd aan de
+// gemeente Den Haag in het getekende "vriend van de Ooievaarspas"-formulier.
+// F2 (Fable-review 2 sep 2026): het recht komt van de SERVER
+// (RPC mijn_partner_recht, gebonden aan het (anonieme) Supabase-account +
+// oude apparaat-claims), niet meer uit twee localStorage-sleutels — die
+// waren in DevTools te zetten. Werkt ook zonder Google-login: elke bezoeker
+// heeft een anonieme sessie. Pro voor leerkrachten (teacher_pro) valt hier
+// bewust buiten: alleen het Familie-niveau is gratis.
+function grantVanRecht(recht) {
+  if (!recht || !recht.recht) return null;
+  const tot = recht.blijvend ? null : (recht.familie_tot || null);
+  if (tot && new Date(tot) < new Date(new Date().toDateString())) return null;
+  return {
+    tier: TIERS.PARENT_PRO,
+    isPremium: true,
+    isPaid: false,
+    paywallActive: true,
+    expiresAt: tot,
+  };
+}
+// Synchroon (initial state / offline): laatste server-bevestigde stand.
 function partnerGrant() {
-  try {
-    if (partnerProStatus() !== "pro2027") return null;
-    const tot = partnerFamilieTot();
-    if (tot && new Date(tot) <= new Date()) return null;
-    return {
-      tier: TIERS.PARENT_PRO,
-      isPremium: true,
-      isPaid: false,
-      paywallActive: true,
-      expiresAt: tot,
-    };
-  } catch {
-    return null;
-  }
+  try { return grantVanRecht(partnerRechtCache()); } catch { return null; }
+}
+// Asynchroon: server vragen (10-min-cache in partnerCode.js).
+async function partnerGrantServer() {
+  try { return grantVanRecht(await haalPartnerRecht()); } catch { return partnerGrant(); }
 }
 
 const CACHE_KEY = "lk_subscription_v1";
@@ -86,21 +92,24 @@ export function useSubscription(authUser = null) {
 
   useEffect(() => {
     if (!PAYWALL_ACTIVE) return;
+    let cancelled = false;
     if (!authUser?.id) {
-      // Geen login → free-tier, tenzij dit apparaat een partner-plek heeft.
-      const grant = partnerGrant();
-      setState(grant ? { ...grant, loading: false } : {
-        tier: TIERS.FREE,
-        isPremium: false,
-        isPaid: false,
-        paywallActive: true,
-        expiresAt: null,
-        loading: false,
+      // Geen login → free-tier, tenzij de server een partner-plek voor dit
+      // apparaat/account kent (F2: server-bevestigd, niet localStorage).
+      partnerGrantServer().then((grant) => {
+        if (cancelled) return;
+        setState(grant ? { ...grant, loading: false } : {
+          tier: TIERS.FREE,
+          isPremium: false,
+          isPaid: false,
+          paywallActive: true,
+          expiresAt: null,
+          loading: false,
+        });
       });
-      return;
+      return () => { cancelled = true; };
     }
 
-    let cancelled = false;
     (async () => {
       try {
         const { data, error } = await supabase
@@ -111,7 +120,7 @@ export function useSubscription(authUser = null) {
         if (cancelled) return;
         if (error || !data) {
           // Geen (geldig) abonnement → partner-plek honoreren, anders free.
-          const fallback = partnerGrant() || {
+          const fallback = (await partnerGrantServer()) || {
             tier: TIERS.FREE,
             isPremium: false,
             isPaid: false,
@@ -125,7 +134,7 @@ export function useSubscription(authUser = null) {
         // Check geldig (niet verlopen). Verlopen abonnement valt terug op een
         // eventuele partner-plek (blijvend voor Ooievaarspas) vóór free.
         const valid = !data.valid_until || new Date(data.valid_until) > new Date();
-        const grant = valid ? null : partnerGrant();
+        const grant = valid ? null : await partnerGrantServer();
         const tier = valid ? data.tier : (grant ? grant.tier : TIERS.FREE);
         const isPremium = tier === TIERS.PARENT_PRO || tier === TIERS.TEACHER_PRO;
         const out = {

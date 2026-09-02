@@ -19,7 +19,36 @@ import { track } from "../../utils.js";
 const KEY_CODE = "lk_partner_code";
 const KEY_TELLER = "lk_partner_antwoorden";
 const KEY_ACTIEF = "lk_partner_actief";
-const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol'
+const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol' — alleen nog UI-hint
+const KEY_RECHT = "lk_partner_recht"; // server-bevestigd recht {ts, data} (F2, 2 sep 2026)
+const RECHT_TTL_MS = 10 * 60 * 1000;
+
+// F2 (Fable-review 2 sep 2026): het Familie-recht komt van de server
+// (RPC mijn_partner_recht, gebonden aan auth.uid() én oude apparaat-claims via
+// lk_uid), niet meer uit localStorage — dat was met twee sleutels te vervalsen.
+// Cache 10 min; bij netwerkfout de laatste server-bevestigde waarde (max 7 dagen).
+export async function haalPartnerRecht({ vers = false } = {}) {
+  const leeg = { recht: false };
+  let cache = null;
+  try { cache = JSON.parse(ls.get(KEY_RECHT) || "null"); } catch { cache = null; }
+  if (!vers && cache && Date.now() - cache.ts < RECHT_TTL_MS) return cache.data;
+  try {
+    const { data, error } = await supabase.rpc("mijn_partner_recht", { p_visitor: uid() });
+    if (error) throw error;
+    const recht = data && typeof data === "object" ? data : leeg;
+    ls.set(KEY_RECHT, JSON.stringify({ ts: Date.now(), data: recht }));
+    if (recht.recht && !ls.get(KEY_STATUS)) ls.set(KEY_STATUS, "pro2027");
+    return recht;
+  } catch {
+    if (cache && Date.now() - cache.ts < 7 * 24 * 3600 * 1000) return cache.data;
+    return leeg;
+  }
+}
+
+// Synchrone lezer van de laatste server-bevestigde stand (voor UI/initial state).
+export function partnerRechtCache() {
+  try { const c = JSON.parse(ls.get(KEY_RECHT) || "null"); return c?.data || null; } catch { return null; }
+}
 export const PARTNER_ACTIVATIE_DREMPEL = 3;
 // Waar de code recht op geeft — getoond in UI en gehonoreerd door de paywall
 // (useSubscription). Mark-besluit 27 aug 2026: HEEL 2027, t/m 31 december
@@ -41,6 +70,9 @@ const BLIJVENDE_CODE_PREFIX = "OOIEVAAR";
 // Tot wanneer geeft de actieve partner-code gratis Familie?
 // null = blijvend (geen einddatum); anders een ISO-datum.
 export function partnerFamilieTot() {
+  // Server-waarde (partner_codes.familie_tot) heeft voorrang als die bekend is.
+  const srv = partnerRechtCache();
+  if (srv && srv.recht) return srv.blijvend ? null : (srv.familie_tot || PARTNER_PRO_TOT);
   const code = ls.get(KEY_CODE) || "";
   if (code.startsWith(BLIJVENDE_CODE_PREFIX)) return null;
   return PARTNER_PRO_TOT;
@@ -113,11 +145,16 @@ export function telAntwoordVoorPartner() {
     const visitor = uid();
     if (!visitor) return;
     ls.set(KEY_ACTIEF, "1"); // vóór de call — dubbel vuren voorkomen
+    // F2 (Fable-review 2 sep 2026): de server bindt de plek aan auth.uid()
+    // (ook de anonieme sessie); p_visitor gaat alleen nog mee om oude
+    // apparaat-claims te herkennen. Het recht zelf komt via haalPartnerRecht().
     supabase.rpc("claim_partner_plek", { p_code: code, p_visitor: visitor })
       .then(({ data }) => {
         track("partner_actief", { code, status: data || "?" });
+        if (data === "geen_sessie") { ls.set(KEY_ACTIEF, ""); return; } // sessie nog niet klaar → volgende antwoord opnieuw
         if (data === "geclaimd" || data === "al_geclaimd") {
           ls.set(KEY_STATUS, "pro2027");
+          ls.set(KEY_RECHT, ""); // server-cache verversen
         } else if (data === "vol") {
           ls.set(KEY_STATUS, "vol");
           track("partner_vol", { code }); // sein voor Mark: limiet bereikt
