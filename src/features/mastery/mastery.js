@@ -10,6 +10,7 @@
 // per onderwerp. Samen vormen ze de hand-in-hand-loop.
 
 import supabase from "../../supabase.js";
+import { metLinkId } from "../../shared/koppeling.js";
 import { getCurrentUserId } from "../../auth.js";
 import { QUESTION_PATH_MAP } from "../../learnPaths/questionPathMap.generated.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
@@ -219,10 +220,12 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
  * Voorkomt silent data-loss van streak+correct-tellers wanneer een
  * RLS-policy of schema-mismatch ease-writes blokkeert.
  */
-async function safeUpsertMastery(row) {
+async function safeUpsertMastery(rowIn) {
+  // Koppeling-identiteit (2 sep 2026): link_id mee als deze naam gekoppeld is.
+  const row = metLinkId(rowIn);
   const { error } = await supabase
     .from("topic_mastery")
-    .upsert(row, { onConflict: "player_name,path_id" });
+    .upsert(row, { onConflict: "owner_key,path_id" });
   if (!error) return { ok: true };
 
   // Retry zonder ease-velden als de fout met die kolommen te maken kan hebben.
@@ -233,7 +236,7 @@ async function safeUpsertMastery(row) {
     const { ease_factor, interval_days, ...stripped } = row;
     const { error: error2 } = await supabase
       .from("topic_mastery")
-      .upsert(stripped, { onConflict: "player_name,path_id" });
+      .upsert(stripped, { onConflict: "owner_key,path_id" });
     if (!error2) return { ok: true };
     // eslint-disable-next-line no-console
     console.warn("[mastery] retry zonder ease faalde ook:", error2.message);
@@ -283,9 +286,10 @@ export async function recordRefAnswer({ playerName, onderdeel, ref, isCorrect, u
     };
     if (resolvedUserId) row.user_id = resolvedUserId;
 
+    // Sleutel = owner_key (link_id | uid:naam | naam:naam) — zie migratie 2 sep 2026.
     const { error } = await supabase
       .from("ref_mastery")
-      .upsert(row, { onConflict: "player_name,onderdeel,ref" });
+      .upsert(metLinkId(row), { onConflict: "owner_key,onderdeel,ref" });
     if (error) {
       // eslint-disable-next-line no-console
       console.warn("[mastery] ref_mastery upsert faalde:", error.message);

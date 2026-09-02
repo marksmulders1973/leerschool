@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import supabase from "../../supabase";
+import { metLinkId } from "../../shared/koppeling.js";
 import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
@@ -753,13 +754,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // B0.4 (7-bots-review): supabase-js v2 throwt niet — de oude try/catch
     // ving dus nooit iets en een RLS-/offline-fout verdween geruisloos
     // terwijl de UI "voltooid!" toonde. Nu: error-veld checken + 1 retry.
-    const row = {
+    const row = metLinkId({
       player_name: player,
       user_id: authUser?.id || null,
       learn_path_id: pathId,
       step_idx: stepIdx,
       attempts,
-    };
+    });
     // F1 (Fable-review, 2 sep 2026): sleutel was (player_name, pad, stap) →
     // een tweede kind met dezelfde voornaam kon nooit opslaan (upsert werd
     // een UPDATE van andermans rij → RLS 403). Nu: generated column

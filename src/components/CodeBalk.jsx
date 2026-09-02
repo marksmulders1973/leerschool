@@ -12,6 +12,7 @@
 // "🎟️ Ik heb een code"-veld in het pakket-scherm blijft ook gewoon werken.
 import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
+import { bewaarKoppeling } from "../shared/koppeling.js";
 import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
@@ -205,6 +206,7 @@ export default function CodeBalk() {
         try {
           const { data, error } = await supabase.rpc("claim_link_code", { p_code: kaal, p_child_name: naam });
           if (!error && data?.ok) {
+            bewaarKoppeling({ naam, linkId: data.link_id, rol: data.rol || "ouder", vanWie: data.van_wie });
             setKoppelTip({ klaar: true, rol: data.rol, naam });
             setInvoer("");
             return;

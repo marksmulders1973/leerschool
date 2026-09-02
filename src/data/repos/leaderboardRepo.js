@@ -2,6 +2,7 @@
 // Geëxtraheerd uit App.jsx op 2026-05-06 (P3b deel 3).
 
 import supabase from "../../supabase.js";
+import { metLinkId } from "../../shared/koppeling.js";
 
 const SYNC_COLS = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
 
@@ -78,7 +79,9 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
  */
 export async function insertLeaderboardEntry(row) {
   try {
-    const { error } = await supabase.from("leaderboard").insert(row);
+    // Koppeling-identiteit (2 sep 2026): link_id meesturen als deze naam op dit
+    // toestel gekoppeld is — de ouder leest dan op link_id i.p.v. voornaam.
+    const { error } = await supabase.from("leaderboard").insert(metLinkId(row));
     return { error };
   } catch (err) {
     return { error: err };

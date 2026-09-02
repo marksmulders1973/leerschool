@@ -1,5 +1,6 @@
 import { useState } from "react";
 import supabase from "../supabase.js";
+import { bewaarKoppeling } from "../shared/koppeling.js";
 
 // P0-3 (4-agent-audit 2026-05-18): kind-zijde van de WhatsApp-koppelcode-flow.
 //
@@ -61,6 +62,9 @@ export default function KoppelcodeBanner({ userName }) {
       });
       if (error) throw error;
       if (data?.ok) {
+        // Koppeling-identiteit (2 sep 2026): link_id op dit toestel bewaren,
+        // zodat elke score/stap voortaan aan déze koppeling hangt (niet aan de naam).
+        bewaarKoppeling({ naam: userName, linkId: data.link_id, rol: data.rol || "ouder", vanWie: data.van_wie });
         setMsg({ ok: true, rol: data.rol || "ouder", vanWie: (data.van_wie || "").trim() });
         setCode("");
       } else if (data?.error === "code_invalid_or_expired") {
