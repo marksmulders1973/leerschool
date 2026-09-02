@@ -164,6 +164,18 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
   const toets = `${SITE}/doorstroomtoets-oefentoets?${utm}`;
   const uit = `${SITE}/api/unsubscribe?token=${ref}`;
   const tip = `${SITE}/tips?utm_source=email&utm_campaign=tip`;
+  // F15 (2 sep 2026): de welkomstmail is de enige mail zonder bevestiging;
+  // de wekelijkse reeks gaat pas door na een tik hierop (confirmed_at).
+  const bevestig = `${SITE}/api/bevestig?token=${ref}`;
+  const bevestigBlok = welkom ? {
+    html: `
+    <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
+      <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je dit élke week?</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
+      <a href="${bevestig}" style="display:inline-block;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:10px;">✅ Ja, elke week een oefenkwartiertje</a>
+    </div>`,
+    text: `\nWil je dit elke week? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}\n`,
+  } : { html: "", text: "" };
 
   const onderwerp = welkom
     ? "Welkom! Hier is je eerste gratis oefenkwartiertje 🎓"
@@ -207,13 +219,14 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
       <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:4px;">📊 Nieuw: gratis wekelijks ouder-rapport</div>
       <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
     </div>`}
+    ${bevestigBlok.html}
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
 
   return { onderwerp, html, text };
 }
@@ -336,6 +349,9 @@ export default async function handler(req, res) {
     `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen)` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
+    // F15 (2 sep 2026): de eerste mail (het gevraagde ding + bevestig-link) mag
+    // altijd; de wekelijkse reeks pas na een tik op /api/bevestig (confirmed_at).
+    `&and=(or(sent_count.eq.0,confirmed_at.not.is.null))` +
     `&select=id,email,kind_voornaam,sent_count,unsubscribe_token,plan` +
     `&order=last_sent_at.asc.nullsfirst&limit=${BATCH}`;
 

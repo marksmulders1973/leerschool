@@ -86,6 +86,9 @@ export default async function handler(req, res) {
   const code = weekCode(wk);
   const link = `${SITE}/api/weekpakket?code=${encodeURIComponent(code)}`;
   const uit = `${SITE}/api/unsubscribe?token=${encodeURIComponent(token || "")}`;
+  // F15 (2 sep 2026): deze code-mail is het gevraagde ding; de wékelijkse code
+  // komt pas na een tik op de bevestig-link (double opt-in).
+  const bevestig = `${SITE}/api/bevestig?token=${encodeURIComponent(token || "")}`;
 
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:560px;margin:0 auto;padding:28px 22px;">
@@ -98,11 +101,16 @@ export default async function handler(req, res) {
       <a href="${esc(link)}" style="display:inline-block;background:#0a7d3c;color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:12px 22px;border-radius:10px;margin-top:6px;">Open het pakket van deze week →</a>
     </div>
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;">De code wisselt elke week — de nieuwe staat steeds in de weekmail. Oefenen in de app blijft gewoon gratis; dit pakket is extra post voor abonnees.</p>
+    <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
+      <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je élke week de nieuwe code?</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
+      <a href="${esc(bevestig)}" style="display:inline-block;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:10px;">✅ Ja, stuur me elke week de code</a>
+    </div>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;">Geen mail meer? <a href="${esc(uit)}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `Welkom bij het Weekpakket van Leerkwartier!\n\nJouw code voor deze week: ${code}\nOpen het pakket: ${link}\n\nDe code wisselt elke week — de nieuwe staat steeds in de weekmail.\nOefenen in de app blijft gratis; dit pakket is extra post voor abonnees.\nUitschrijven: ${uit}`;
+  const text = `Welkom bij het Weekpakket van Leerkwartier!\n\nJouw code voor deze week: ${code}\nOpen het pakket: ${link}\n\nDe code wisselt elke week — de nieuwe staat steeds in de weekmail.\nWil je die elke week? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}\nOefenen in de app blijft gratis; dit pakket is extra post voor abonnees.\nUitschrijven: ${uit}`;
 
   try {
     const r = await fetch("https://api.resend.com/emails", {

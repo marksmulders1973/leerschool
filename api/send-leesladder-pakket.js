@@ -192,6 +192,7 @@ export default async function handler(req, res) {
     const filter =
       `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen)` +
       `&unsubscribed_at=is.null` +
+      `&confirmed_at=not.is.null` + // F15: alleen wie de reeks zelf bevestigde
       `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
       `&order=created_at.asc` +
       `&select=id,email,unsubscribe_token,plan&limit=${BATCH}`;

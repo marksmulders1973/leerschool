@@ -189,6 +189,7 @@ export async function stuurDoorstroomCountdown({ base, key, RESEND, FROM, maxMai
   const filter =
     `plan=in.(gratis-lesmateriaal,oefenpakket,leesladder,redactiebladen)` +
     `&unsubscribed_at=is.null` +
+    `&confirmed_at=not.is.null` + // F15: alleen wie de reeks zelf bevestigde
     `&doorstroom_step=lt.${fase}` +
     `&select=id,email,kind_voornaam,unsubscribe_token,doorstroom_step` +
     `&order=doorstroom_step.asc&limit=90`;

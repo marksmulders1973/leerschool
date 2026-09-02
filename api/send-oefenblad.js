@@ -65,6 +65,9 @@ async function upsertLead(email, base, key) {
 
 function bouwMail({ vakLabel, score, totaal, vragen, token }) {
   const uit = `${SITE}/api/unsubscribe?token=${encodeURIComponent(token || "")}`;
+  // F15 (2 sep 2026): dit oefenblad is het gevraagde ding; de wékelijkse
+  // oefenset komt pas na een tik op de bevestig-link (double opt-in).
+  const bevestig = `${SITE}/api/bevestig?token=${encodeURIComponent(token || "")}`;
   const opnieuw = `${SITE}/?reclamebol&utm_source=email&utm_campaign=oefenblad`;
   const onderwerp = `📘 Het ${vakLabel}-oefenblad van je kind (${score}/${totaal} goed)`;
 
@@ -98,8 +101,12 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
       ${antwoordHtml}
     </div>
     <a href="${esc(opnieuw)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:14px;">🌍 Doe de check volgende week opnieuw →</a>
+    <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
+      <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je élke week een nieuwe oefenset?</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
+      <a href="${esc(bevestig)}" style="display:inline-block;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:10px;">✅ Ja, stuur me elke week een oefenset</a>
+    </div>
     ${mailTaglineHtml()}
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt elke week een nieuwe oefenset.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${esc(uit)}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
@@ -109,6 +116,7 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
     vragen.map((v, i) => `${i + 1}. ${v.vraag}\n   Antwoord: __________`).join("\n") +
     `\n\nANTWOORDEN + UITLEG (voor de ouder):\n` +
     vragen.map((v, i) => `${i + 1}. ${v.goed}${v.uitleg ? " — " + v.uitleg : ""}`).join("\n") +
+    `\n\nElke week een nieuwe oefenset? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}` +
     `\n\nDoe de check opnieuw: ${opnieuw}\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
 
   return { onderwerp, html, text };

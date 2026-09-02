@@ -319,22 +319,52 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     }
     setPartnerSaving(true);
     setPartnerSaved(false);
-    const { error } = await supabase
-      .from("parent_child_links")
-      .update({ partner_email: email || null })
-      .eq("parent_user_id", authUser.id);
-    setPartnerSaving(false);
-    if (error) {
-      // eslint-disable-next-line no-console
-      console.error("[OuderInzicht] savePartnerEmail failed:", error.message);
-      setPartnerError("Opslaan lukte niet. Probeer het later opnieuw.");
+    if (!email) {
+      // Uitzetten: direct, geen bevestiging nodig (mag altijd).
+      const { error } = await supabase
+        .from("parent_child_links")
+        .update({ partner_email: null, partner_token: null, partner_email_bevestigd_at: null })
+        .eq("parent_user_id", authUser.id);
+      setPartnerSaving(false);
+      if (error) { setPartnerError("Opslaan lukte niet. Probeer het later opnieuw."); return; }
+      setChildren((prev) => prev.map((c) => ({ ...c, partner_email: null, partner_email_bevestigd_at: null })));
+      setPartnerEmail("");
+      setPartnerSaved(true);
+      track("ouder_partner_mail_ingesteld", { aan: false });
       return;
     }
-    setChildren((prev) => prev.map((c) => ({ ...c, partner_email: email || null })));
-    setPartnerEmail(email);
-    setPartnerSaved(true);
-    track("ouder_partner_mail_ingesteld", { aan: !!email });
+    // F15 (2 sep 2026): niet stilzwijgend inschrijven — de partner krijgt één
+    // uitnodigingsmail en zegt zélf "ja" (api/partner-uitnodiging → /api/bevestig).
+    try {
+      const { data: sess } = await supabase.auth.getSession();
+      const token = sess?.session?.access_token;
+      if (!token) throw new Error("geen sessie");
+      const r = await fetch("/api/partner-uitnodiging", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ email }),
+      });
+      const j = await r.json().catch(() => ({}));
+      setPartnerSaving(false);
+      if (!r.ok) {
+        setPartnerError(j?.error === "eigen-adres" ? "Dat is je eigen adres — jij krijgt het rapport al." : j?.error === "geen-koppeling" ? "Koppel eerst een kind, dan kun je iemand laten meelezen." : "Uitnodigen lukte niet. Probeer het later opnieuw.");
+        return;
+      }
+      setChildren((prev) => prev.map((c) => ({ ...c, partner_email: email, partner_email_bevestigd_at: null })));
+      setPartnerEmail(email);
+      setPartnerSaved(true);
+      track("ouder_partner_mail_ingesteld", { aan: true });
+    } catch {
+      setPartnerSaving(false);
+      setPartnerError("Uitnodigen lukte niet. Probeer het later opnieuw.");
+    }
   };
+  // Status van het partner-adres (uit de koppelingen): null | "wacht" | "bevestigd".
+  const partnerStatus = (() => {
+    const c = children.find((k) => k.partner_email);
+    if (!c) return null;
+    return c.partner_email_bevestigd_at ? "bevestigd" : "wacht";
+  })();
 
   // K6/AVG art. 17 (sprint-2 2026-05-08): self-service "Verwijder al mijn data".
   // Werkt op alle tabellen waar user_id = auth.uid OF parent_user_id = auth.uid.
@@ -974,8 +1004,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
               👥 Stuur het weekrapport ook naar je partner
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginBottom: 10, lineHeight: 1.5 }}>
-              Vul het e-mailadres van je partner of medeverzorger in — dan krijgen jullie allebei elke maandag hetzelfde rapport. Laat leeg om het weer uit te zetten.
+              Vul het e-mailadres van je partner of medeverzorger in. Die krijgt één uitnodiging en zegt zelf "ja" — daarna krijgen jullie allebei elke maandag hetzelfde rapport. Laat leeg om het weer uit te zetten.
             </div>
+            {partnerStatus === "wacht" && !partnerSaved && (
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ffd54f", marginBottom: 8 }}>⏳ Uitnodiging verstuurd — wacht tot je partner op "Ja, ik lees mee" tikt. Opnieuw opslaan = opnieuw versturen.</div>
+            )}
+            {partnerStatus === "bevestigd" && !partnerSaved && (
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginBottom: 8 }}>✓ Je partner leest mee met het weekrapport.</div>
+            )}
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               <input
                 type="email"
@@ -1017,7 +1053,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             )}
             {partnerSaved && !partnerError && (
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginTop: 8 }}>
-                {partnerEmail ? "✓ Opgeslagen — je partner krijgt het rapport voortaan ook." : "✓ Uitgezet — het rapport gaat weer alleen naar jou."}
+                {partnerEmail ? `✓ Uitnodiging gestuurd naar ${partnerEmail} — zodra die op "Ja, ik lees mee" tikt, komt het rapport ook daar aan.` : "✓ Uitgezet — het rapport gaat weer alleen naar jou."}
               </div>
             )}
           </div>
