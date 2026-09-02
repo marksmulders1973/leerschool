@@ -800,13 +800,17 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
         const topo = topoMod.default || topoMod;
         const feature = tjMod.feature || (tjMod.default && tjMod.default.feature);
         const geo = feature(topo, topo.objects.countries);
-        const cv = bouwKaart(geo.features, { lichter: false, grenzen: false, landnamen: false, stippen: false, hoofdstadnamen: false }, 2048, 1024);
+        // Zelfde beeld als de les (werelddelen + landgrenzen + landnamen).
+        const cv = bouwKaart(geo.features, { lichter: false, grenzen: true, landnamen: true, stippen: false, hoofdstadnamen: false }, 2048, 1024);
         tex = new CanvasTexture(cv);
         tex.colorSpace = SRGBColorSpace;
+        tex.needsUpdate = true;
         if (!stop) setKaart(tex);
       } catch { /* kaart niet geladen → vlekken-bol blijft */ }
     })();
-    return () => { stop = true; if (tex) tex.dispose(); };
+    // Geen dispose in de cleanup: bij een remount (bouw-modus, layout-wissel)
+    // werd de textuur weggegooid terwijl de bol 'm nog toonde → witte bol.
+    return () => { stop = true; };
   }, []);
   return (
     <group position={position} rotation={[0, rotation, 0]}>
@@ -816,10 +820,10 @@ export function Wereldbol({ position = [0, 0, 0], rotation = 0 }) {
         {/* Echte continenten uit de les zodra de kaart geladen is; tot die tijd
             (en op zwakke toestellen) de oude blauwe bol met groene vlekken. */}
         <mesh castShadow>
-          <sphereGeometry args={kaart ? [1.0, 48, 32] : [1.0, 24, 20]} />
-          {kaart
-            ? <meshStandardMaterial map={kaart} roughness={0.75} />
-            : <meshStandardMaterial color="#2f7fd0" flatShading roughness={0.6} />}
+          <sphereGeometry args={[1.0, 48, 32]} />
+          {/* Eén materiaal dat van kleur→kaart wisselt (geen element-swap):
+              map-uv + wit = de kaart zelf; zonder kaart de oude blauwe bol. */}
+          <meshStandardMaterial map={kaart || null} color={kaart ? "#ffffff" : "#2f7fd0"} roughness={0.75} />
         </mesh>
         {!kaart && vlekken.map(([x, y, r], i) => {
           const len = Math.hypot(x, y, 0.5) || 1;
