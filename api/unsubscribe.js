@@ -3,6 +3,9 @@
 // Geen login nodig: de token is geheim genoeg en doet alleen iets onschadelijks
 // (afmelden). Gebruikt de service-role key (server-side) om de rij bij te werken.
 
+import { handleBevestig } from "./_lib/bevestig.js";
+import { handlePartnerUitnodiging } from "./_lib/partner-uitnodiging.js";
+
 async function sb(path, opts, base, key) {
   return fetch(`${base}/rest/v1/${path}`, {
     ...opts,
@@ -47,6 +50,14 @@ function bevestigPagina(token) {
 }
 
 export default async function handler(req, res) {
+  // ── Eén functie, drie deuren (Vercel Hobby: max 12 gebundelde functies;
+  // 23 losse api-bestanden faalden op 2 sep 2026, 21 werkte). vercel.json
+  // herschrijft /api/bevestig → ?actie=bevestig en /api/partner-uitnodiging →
+  // ?actie=partner naar dit bestand. Logica staat in api/_lib/ (geen functie).
+  const actie = String((req.query && req.query.actie) || "");
+  if (actie === "bevestig") return handleBevestig(req, res);
+  if (actie === "partner") return handlePartnerUitnodiging(req, res);
+
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   const token = (req.query && req.query.token) || "";
   if (!token || String(token).length < 8) {

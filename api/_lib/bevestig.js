@@ -34,7 +34,7 @@ function pagina(titel, tekst, ok = true) {
 
 const schoon = (v) => String(v || "").replace(/[^A-Za-z0-9-]/g, "").slice(0, 80);
 
-export default async function handler(req, res) {
+export async function handleBevestig(req, res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;

@@ -12,7 +12,7 @@
 // en bevat niets van het kind behalve de voornaam.
 
 import { randomUUID } from "node:crypto";
-import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+import { mailTaglineHtml } from "./mail-tagline.js";
 
 const SITE = "https://leerkwartier.app";
 const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -24,7 +24,7 @@ async function sb(path, opts, base, key) {
   });
 }
 
-export default async function handler(req, res) {
+export async function handlePartnerUitnodiging(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method" });
   const RESEND = process.env.RESEND_API_KEY;
   const FROM = process.env.EMAIL_FROM || "Leerkwartier <hallo@leerkwartier.app>";
