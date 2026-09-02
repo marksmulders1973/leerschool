@@ -72,7 +72,28 @@ export function vangPartnerCode() {
     // Elk bezoek via de link telt als scan — ook herhaalbezoek (props.uid
     // maakt unieke mensen telbaar in het dagrapport).
     track("partner_bezoek", { code: ls.get(KEY_CODE) || code, nieuw });
+    // F3 (Fable-review 2 sep 2026): een verzonnen code (?partner=TEST123)
+    // bleef anders voor altijd staan mét gratis-belofte. Achteraf checken;
+    // onbekend → weer weghalen (alleen als er nog geen plek geclaimd is).
+    if (nieuw) {
+      partnerCodeBekend(code).then((bekend) => {
+        if (bekend === false && ls.get(KEY_CODE) === code && !ls.get(KEY_STATUS)) {
+          ls.set(KEY_CODE, "");
+          track("partner_code_onbekend", { code });
+        }
+      });
+    }
   } catch { /* nooit de app-start breken */ }
+}
+
+// Bestaat deze code in partner_codes? true/false, of null als de check niet
+// kon (offline) — dan voordeel van de twijfel.
+export async function partnerCodeBekend(code) {
+  try {
+    const { data, error } = await supabase.rpc("partner_code_bestaat", { p_code: code });
+    if (error) return null;
+    return data === true;
+  } catch { return null; }
 }
 
 // Bij elk beantwoord oefen-vraagje aanroepen (loopt mee via referral.js).

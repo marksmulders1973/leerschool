@@ -1,0 +1,12 @@
+-- F4 + F5 Fable-review 2 sep 2026 — toegepast op live DB via MCP op dezelfde dag.
+-- F4: klaargezet-RPC's (kind_klaargezet, kind_klaargezet_gedaan,
+--     leerling_klaargezet_gedaan, voor_jou_klaargezet) matchten alléén op
+--     voornaam → elke anonieme "Sophie" zag/vinkte elkaars lessen. Nu extra:
+--       and (l.child_user_id is null or l.child_user_id = auth.uid())
+--     (resp. student_user_id). Koppeling zonder account houdt naam-match.
+-- F5: claim_link_code legde auth.uid() vast, ook voor de anonieme auto-sessie
+--     (vluchtige uid → ouder ziet 0 na herinstallatie/ander toestel). Nu:
+--       v_uid := case when (auth.jwt()->>'is_anonymous')::boolean then null else auth.uid() end
+--     + bestaande koppelingen aan anonieme uids op null gezet (waren 3 testrijen).
+-- Volledige functie-bodies: zie live DB (pg_get_functiondef) — identiek aan de
+-- vorige versies plus bovenstaande regels.

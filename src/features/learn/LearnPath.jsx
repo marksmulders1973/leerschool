@@ -750,7 +750,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       step_idx: stepIdx,
       attempts,
     };
-    const opts = { onConflict: "player_name,learn_path_id,step_idx" };
+    // F1 (Fable-review, 2 sep 2026): sleutel was (player_name, pad, stap) →
+    // een tweede kind met dezelfde voornaam kon nooit opslaan (upsert werd
+    // een UPDATE van andermans rij → RLS 403). Nu: generated column
+    // owner_key = user_id, of 'naam:<naam>' voor rijen zonder account.
+    // owner_key zelf NIET meesturen (generated). Migratie 20260902_f1.
+    const opts = { onConflict: "owner_key,learn_path_id,step_idx" };
     // Kindertest 12 jul: bij een verlopen sessie had de app nog een gecachte
     // authUser.id, maar het DB-verzoek was anoniem → RLS weigerde (403, want
     // user_id ≠ null bij auth.uid()=null). Los op door bij een RLS-/permissie-

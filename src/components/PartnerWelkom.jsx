@@ -13,9 +13,9 @@
 // vriend-aanvraag loopt (zie docs/AFSPRAKEN-OOIEVAARSPAS.md).
 // DEELACTIE2027 (vrienden-actie) slaan we over — die flow heeft eigen UX.
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
-import { actievePartnerCode, partnerFamilieTot } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend } from "../features/referral/partnerCode.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
 
@@ -122,8 +122,36 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
   const [vraagIdx, setVraagIdx] = useState(0);
   const [keuze, setKeuze] = useState(null);
   const proefKlaar = vraagIdx >= PROEF_VRAGEN.length;
+  // F3 (Fable-review 2 sep 2026): een code die we niet in PARTNER_NAMEN kennen
+  // (soort "neutraal") checken we tegen de DB. Onbekend → geen gratis-belofte
+  // maar een vriendelijke "code onbekend"-kaart. null = check kon niet.
+  const [bekend, setBekend] = useState(null);
+  useEffect(() => {
+    if (!variant?.code || variant.soort !== "neutraal" || variant.code.startsWith("OOIEVAAR")) return;
+    let actief = true;
+    partnerCodeBekend(variant.code).then((b) => { if (actief) setBekend(b); });
+    return () => { actief = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [variant?.code]);
 
   if (!variant || dicht) return null;
+
+  if (bekend === false) {
+    return (
+      <div className="lk-content-wide" style={{ margin: "10px auto 4px", maxWidth: 560, background: "rgba(255,255,255,0.06)", border: "1.5px solid rgba(255,255,255,0.18)", borderRadius: 16, padding: "14px 18px" }}>
+        <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15, marginBottom: 4 }}>Deze code kennen we niet 🤔</div>
+        <div style={{ fontSize: 13.5, lineHeight: 1.5, opacity: 0.85 }}>
+          De code <strong>{variant.code}</strong> staat niet in onze lijst. Kijk nog even op je flyer of mail.
+          Oefenen is sowieso gratis — daar heb je geen code voor nodig.
+        </div>
+        {onOefenen && (
+          <button onClick={onOefenen} style={{ marginTop: 10, padding: "8px 14px", borderRadius: 10, border: "none", background: "#ffd54f", color: "#1a1a2e", fontWeight: 800, cursor: "pointer" }}>
+            Gratis oefenen →
+          </button>
+        )}
+      </div>
+    );
+  }
 
   if (!getoond) {
     setGetoond(true);
