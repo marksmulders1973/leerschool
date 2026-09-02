@@ -50,6 +50,7 @@ Cito + examens versterken. Drie type werk:
 - [ ] F24 `seksuele voorlichting`-topic vanaf groep 7 = VO-inhoud; overwegen alléén VO.
 - [ ] F25 Uitleg-dialoog na fout antwoord toont uitleg pas na extra tik (alle blokken dicht); zelfde YouTube-video bij alle rekenvragen; three.js-bundel laadt in quiz zodra Charley opent.
 - [ ] F26 Kleine UI: /oefenpakket 5px overflow; /leren twee zoekbalken; "volgen.Mis je" spatie; tik-doelen <36px (Code gekregen?, footer-knoppen); labels 10-11px.
+- [ ] **F28 (P1) "Leg het uit" zonder pad-match landt nog steeds op /komt-eraan** — mapping-fix v541 geeft nu wél "37 leerpaden klaar"-knop, maar bv. "0,8 × 0,5" heeft geen keyword-match. Beter: bij noMatch de uitleg van de vraag zelf in de quiz tonen (zelfde overlay als bij fout antwoord) i.p.v. wegnavigeren. Plus: `scripts/match-questions-to-paths.mjs` is kapot (ERR_UNKNOWN_FILE_EXTENSION, importeert constants.js dat niet meer bestaat) → map van 5.115 entries is verouderd; generator repareren + herdraaien nu er 37 rekenpaden zijn.
 - [ ] F27 Brian's tabellen `deluxe_kv`/`game_rooms`/`scores` zonder RLS, anon DELETE/TRUNCATE (zijn API gebruikt anon-key) — met Brian regelen, niet in Leerkwartier-repo.
 
 ## 🎨 SPRINT — Tier-stippen-restjes (9 aug 2026, na 3-agent-audit; hoofdronde ✓ v225)
