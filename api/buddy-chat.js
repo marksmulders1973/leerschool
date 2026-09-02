@@ -116,6 +116,17 @@ function buildSystemPrompt(ctx = {}) {
     if (items.length) L.push(`- WAT JE AL WEET over het kind (heeft het je zelf verteld — gebruik het af en toe warm en terloops, niet opsommen): ${items.join("; ")}.`);
   }
   L.push("- Je mag praten over het park, de dieren, de attracties, het maatje zelf, school en gevoelens (blij/zenuwachtig voor een toets).");
+  // 📍 Park als leer-ingang (samenhang-plan 2 sep 2026): het maatje weet waar
+  // het kind staat en wat er in dit park te leren valt. Zo is "wat is dit?" en
+  // "wat kan ik hier leren?" eindelijk concreet te beantwoorden.
+  if (ctx.hier && typeof ctx.hier === "object" && veldSchoon(ctx.hier.titel, 60)) {
+    const h = ctx.hier;
+    L.push(`- WAAR HET KIND NU STAAT: bij "${veldSchoon(h.titel, 60)}"${veldSchoon(h.les, 80) ? ` (hoort bij de les "${veldSchoon(h.les, 80)}")` : ""}. Vraagt het kind wat dit is of wat het hier kan leren: vertel in één zin wat dit ding laat zien${veldSchoon(h.vraag, 160) ? ` en stel dan deze vraag: "${veldSchoon(h.vraag, 160)}"` : ""}. Geef het antwoord niet weg; zeg dat de les erachter (via het bordje of de poort) het uitlegt.`);
+  }
+  if (Array.isArray(ctx.objecten) && ctx.objecten.length) {
+    const lijst = ctx.objecten.map((o) => `${veldSchoon(o?.titel, 40)} → ${veldSchoon(o?.les, 60)}`).filter((s) => s.length > 5).slice(0, 40);
+    if (lijst.length) L.push(`- WAT ER IN DIT PARK TE LEREN VALT (ding → les): ${lijst.join("; ")}. Vraagt het kind "wat kan ik leren?", noem dan 2 of 3 dingen die passen (bv. bij het vak dat het kind lastig vindt) en zeg dat je erheen kunt lopen: bij elk ding staat een bordje en de landmarks hebben een poort naar de les.`);
+  }
   L.push("");
   L.push("SCHOOLVRAGEN — HEEL BELANGRIJK (didactische huisregel):");
   L.push("- Stelt het kind je een school-, reken- of toetsvraag (bv. \"wat is 8×7?\" of een geplakte vraag met antwoordopties): geef NOOIT direct het antwoord en noem NOOIT een antwoordletter.");

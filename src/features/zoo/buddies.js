@@ -326,6 +326,16 @@ export function buddyPraatje(soort, facts) {
   const hoi = naam ? naam : "vriend";
   const o = [];
 
+  // 📍 Het maatje weet waar je staat (samenhang-plan 2 sep 2026): sta je bij
+  // een leerobject, dan gaat het wolkje dáárover — met de ene vraag van die
+  // plek — en niet over de kalender. Tikbaar (momentId) → uitleg-kaart.
+  // Meestal (2 op 3) dit, soms nog een gewoon praatje zodat het geen papegaai wordt.
+  if (f.nabij && f.nabij.titel && Math.random() < 0.67) {
+    const n = f.nabij;
+    const t = n.vraag ? `Kijk, ${n.titel.toLowerCase()}! ${n.vraag}` : `Kijk, ${n.titel.toLowerCase()}! Zal ik vertellen hoe dat werkt?`;
+    return { e: n.emoji || "📍", t, momentId: n.id };
+  }
+
   // Echte score → trots compliment (alle maatjes, eigen toon).
   if (f.goedeScore && f.goedeScore.vak) {
     const v = low(f.goedeScore.vak), p = f.goedeScore.pct;

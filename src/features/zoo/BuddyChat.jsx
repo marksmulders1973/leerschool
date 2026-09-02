@@ -27,7 +27,7 @@ function speak(text, callbacks = {}) {
   spreekMetMeelezen(text, { rate: 1.0, pitch: 1.2, ...callbacks });
 }
 
-export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null, onNaarLeren }) {
+export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {}, park = null, onNaarLeren, hier = null, objecten = null }) {
   const b = BUDDY_BY_ID[buddyId];
   const naam = (buddyNaam || b?.naam || "Maatje").trim();
   const [messages, setMessages] = useState([]);
@@ -94,6 +94,11 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
             zwakVak: facts?.zwakVak || "",
             park: park || undefined,
             weetjes: buddyWeetjes(),
+            // 📍 Waar het kind staat + wat er in dít park te leren valt
+            // (samenhang-plan 2 sep 2026): zo kan het maatje "wat is dit?" en
+            // "wat kan ik hier leren?" concreet beantwoorden.
+            hier: hier ? { titel: hier.titel, vraag: hier.vraag || "", les: hier.leerLabel || "" } : undefined,
+            objecten: Array.isArray(objecten) && objecten.length ? objecten.slice(0, 40) : undefined,
           },
         }),
       });
@@ -181,7 +186,7 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
         {/* starters (alleen aan het begin) */}
         {messages.length <= 1 && !busy && (
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap", padding: "10px 12px 0" }}>
-            {STARTERS.map((s) => (
+            {[...(hier ? [`Wat is dit hier, ${hier.titel.toLowerCase()}?`] : ["Wat kan ik hier leren?"]), ...STARTERS].map((s) => (
               <button key={s} onClick={() => stuur(s)} style={{
                 border: `1.5px solid ${accent}`, background: "#fff", color: accent,
                 borderRadius: 999, padding: "7px 12px", font: "700 12.5px system-ui", cursor: "pointer",

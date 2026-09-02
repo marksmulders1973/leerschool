@@ -89,6 +89,23 @@ async function telGeleerdeStappen(playerName) {
   }
 }
 
+// 🗺️ Welke leerpaden heeft dit kind al (deels) gedaan? → de ✓ op het
+// takenbord in het park (samenhang-plan 2 sep 2026). Eén query, Set van ids.
+export async function gedanePaden(playerName) {
+  if (!playerName) return new Set();
+  try {
+    const { data, error } = await supabase
+      .from("learn_progress")
+      .select("learn_path_id")
+      .eq("player_name", playerName)
+      .limit(2000);
+    if (error || !Array.isArray(data)) return new Set();
+    return new Set(data.map((r) => r.learn_path_id).filter(Boolean));
+  } catch {
+    return new Set();
+  }
+}
+
 // 🥇 Aantal voltooide (unieke) leer-stappen van één pad — de "munt" voor het
 // stukje-bij-beetje-goud (Mark 17 aug). Zelfde sleutel/aanpak als de rest.
 export async function telPadStappen(playerName, padId) {

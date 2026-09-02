@@ -441,7 +441,7 @@ function Lijf({ soort, c, flapRef, squashRef, mouthRef, tailRef, legsRef }) {
 }
 
 // ── De meelopende maatje-component ──────────────────────────────────────────
-export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat, posOutRef, verborgen = false }) {
+export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groei = 0, buddyNaam = "", onPraat, posOutRef, verborgen = false, onBubbleTap = null }) {
   const b = BUDDY_BY_ID[kind];
   const effNaam = (buddyNaam || b?.naam || "").trim();
   const g = useRef();
@@ -592,7 +592,12 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
     st.current.next -= dt;
     if (st.current.next <= 0 && !verborgen) {
       if (!st.current.introDone) { setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}! ${b.flavor}` }); st.current.introDone = true; st.current.bt = 4.5; }
-      else { setBubble(buddyPraatje(b.soort, factsRef?.current)); st.current.bt = 3.8; }
+      else {
+        const p = buddyPraatje(b.soort, factsRef?.current);
+        setBubble(p);
+        // Een vraag over de plek waar je staat mag langer blijven hangen (tikbaar).
+        st.current.bt = p?.momentId ? 7 : 3.8;
+      }
       // Niet te vaak kletsen (12-agent-review: elke ~12s voelt opdringerig,
       // zeker voor oudere kinderen) — om de ~25-40s is genoeg.
       st.current.next = 25 + Math.random() * 15;
@@ -613,10 +618,15 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
       onPointerOut={() => { document.body.style.cursor = "default"; }}
     >
       {bubble && !verborgen && (
-        <Html position={[0, 1.05, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
-          <div style={{ background: "#fff", borderRadius: 14, padding: "3px 10px", lineHeight: 1, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 5 }}>
+        <Html position={[0, 1.05, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: bubble.momentId && onBubbleTap ? "auto" : "none" }}>
+          {/* Wolkje mét vraag over de plek = tikbaar → uitleg-kaart (kind-review
+              2 sep: "een ballon die ik niet kan aanklikken en na 3,8 s weg is"). */}
+          <div
+            onClick={bubble.momentId && onBubbleTap ? (e) => { e.stopPropagation(); onBubbleTap(bubble.momentId); setBubble(null); } : undefined}
+            style={{ background: "#fff", borderRadius: 14, padding: bubble.momentId ? "5px 11px" : "3px 10px", lineHeight: 1.25, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: bubble.momentId ? "normal" : "nowrap", maxWidth: bubble.momentId ? 230 : undefined, display: "flex", alignItems: "center", gap: 5, cursor: bubble.momentId && onBubbleTap ? "pointer" : "default", border: bubble.momentId ? "2px solid #ffd54f" : "none" }}
+          >
             <span style={{ fontSize: 18 }}>{bubble.e}</span>
-            {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}</span>}
+            {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}{bubble.momentId ? <span style={{ color: "#1f7a3a" }}> ▶</span> : null}</span>}
           </div>
         </Html>
       )}

@@ -443,3 +443,55 @@ for (const assetId of [
   const m = PARK_LEERMOMENTEN[LEERMOMENT_BY_ASSET[assetId]];
   if (m?.leerpadId) POORT_ASSETS[assetId] = { leerpadId: m.leerpadId, label: m.leerLabel || m.titel };
 }
+
+// ❓ Elke plek stelt één vraag (samenhang-plan 2 sep 2026, PARK-SAMENHANG-PLAN).
+// De leraar-review: vrijwel elk object was "monoloog + link", nergens werd het
+// kind iets gevráágd. Deze ene concrete vraag per object is wat het maatje in
+// z'n wolkje zegt, wat de poort-kaart toont en wat de gids stelt. Bewust géén
+// goed/fout-check hier: de vraag prikkelt, de les (achter de poort) legt uit.
+const VRAAG_PER_MOMENT = {
+  stoomtrein: "Wat duwt de wielen van deze trein rond: het vuur, de stoom of de machinist?",
+  boom: "Waar haalt deze boom zijn eten vandaan, zonder winkel?",
+  achtbaan: "Waarom heeft de achtbaan na de hoogste heuvel geen motor meer nodig?",
+  reuzenrad: "Als het rad één rondje draait, hoe ver ben jij dan gereisd?",
+  station: "De trein komt om :20 en :50. Jij bent er om :35 — hoe lang wacht je?",
+  zweefmolen: "Waarom vliegen de stoeltjes naar buiten als de molen sneller draait?",
+  fontein: "Waar blijft het water dat uit de fontein verdampt?",
+  piramide: "Hoeveel blokjes passen er in deze piramide? Schat eerst, reken dan.",
+  kubus: "Een kubus van 3 bij 3 bij 3 — hoeveel blokjes zitten erin?",
+  kegel: "Past er meer of minder in de kegel dan in een even hoge cilinder?",
+  cilinder: "Hoeveel bekers water passen er in deze cilinder? Schat het eens.",
+  bol: "Een bal heeft geen hoeken — hoe meet je dan hoeveel erin past?",
+  halvebol: "Past er in een halve bol precies de helft van de hele bol?",
+  draaimolen: "De molen draait één rondje in 10 seconden. Hoeveel rondjes in een minuut?",
+  klok: "Kijk naar de wijzers: hoe laat is het nu op de toren?",
+  weegschaal: "Wat is zwaarder: een kilo veren of een kilo stenen?",
+  breukentaart: "Je pakt 2 van de 8 punten. Welk deel van de taart is dat?",
+  moestuin: "De tuin is 4 bij 3 meter. Hoeveel hekjes van 1 meter heb je eromheen nodig?",
+  telraam: "Schuif 3 tientallen en 4 eenheden — welk getal staat er dan?",
+  boerderij: "Drie koeien en twee kippen: hoeveel poten tel je samen?",
+  zwembad: "Het bad is 6 bij 3 bij 2 meter. Hoeveel kubieke meter water past erin?",
+  parkkaart: "Waar sta jij nu op de plattegrond, en welke kant is het noorden?",
+  kompas: "De naald wijst naar het noorden. Welke kant is dan het oosten?",
+  eiffeltoren: "In welk land staat de Eiffeltoren, en wat is de hoofdstad?",
+  tempel: "Wat deden de Romeinen in zo'n arena?",
+  wereldbol: "Hoeveel werelddelen zijn er? Kun je er drie noemen?",
+  telescoop: "Wat is groter: de zon of de maan? En waarom lijkt dat niet zo?",
+  standbeeld: "Voor wie zou jij een standbeeld maken, en waarom?",
+  molen: "Waarom staan er zoveel molens in Nederland?",
+  raket: "Waarom moet een raket zó hard de lucht in?",
+  vulkaan: "Wat komt er uit een vulkaan als hij uitbarst?",
+  kas: "Waarom groeit sla in een kas ook in de winter?",
+  weerstation: "Als de luchtdruk daalt, komt er dan mooi weer of regen?",
+  spaarpot: "Je spaart 2 euro per week. Hoeveel heb je na 10 weken?",
+};
+for (const [id, vraag] of Object.entries(VRAAG_PER_MOMENT)) {
+  if (PARK_LEERMOMENTEN[id]) PARK_LEERMOMENTEN[id].vraag = vraag;
+}
+
+/** "Hier sta je"-context voor maatje, gids, poort en AI-chat: één vorm, één bron. */
+export function hierContextVoor(momentId) {
+  const m = momentId ? PARK_LEERMOMENTEN[momentId] : null;
+  if (!m) return null;
+  return { id: m.id, emoji: m.emoji || "📍", titel: m.titel, vraag: m.vraag || null, leerpadId: m.leerpadId || null, leerLabel: m.leerLabel || m.titel };
+}
