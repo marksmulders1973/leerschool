@@ -94,9 +94,6 @@ export default async function handler(req) {
 
   const blocked = guardRequest(req);
   if (blocked) return blocked;
-  const quotaBlocked = await dailyQuotaCheck("buddy-chat"); // deelt de buddy-kosten-cap
-  if (quotaBlocked) return quotaBlocked;
-
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
   const geminiKey = process.env.GOOGLE_API_KEY;
   if (!anthropicKey && !geminiKey) return json({ error: "Geen AI-key" }, 500);
@@ -105,6 +102,9 @@ export default async function handler(req) {
   try { body = await req.json(); } catch { return json({ error: "Ongeldige JSON" }, 400); }
   const vraag = String(body?.vraag || "").trim().slice(0, 300);
   if (!vraag) return json({ error: "Geen vraag" }, 400);
+  // F8 (2 sep 2026): quotum pas ná validatie.
+  const quotaBlocked = await dailyQuotaCheck("buddy-chat"); // deelt de buddy-kosten-cap
+  if (quotaBlocked) return quotaBlocked;
   if (!isClean(vraag)) {
     return json({ reply: "Daar wil ik het liever niet over hebben — vraag me gerust iets over de app! 🐾", safe: true });
   }

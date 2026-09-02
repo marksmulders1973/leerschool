@@ -174,8 +174,11 @@ function buildSystemPrompt(ctx = {}) {
   );
   lines.push("");
   lines.push("HUIDIGE STAP-CONTEXT:");
-  if (ctx.pathTitle) lines.push(`Onderwerp: ${ctx.pathTitle}`);
-  if (ctx.stepTitle) lines.push(`Stap: ${ctx.stepTitle}`);
+  // F8 (2 sep 2026): elk client-veld afkappen — alleen stepExplanation was begrensd,
+  // de rest kon onbeperkt tokens de system-prompt in duwen.
+  const kort = (v, n) => String(v ?? "").replace(/\s+/g, " ").trim().slice(0, n);
+  if (ctx.pathTitle) lines.push(`Onderwerp: ${kort(ctx.pathTitle, 200)}`);
+  if (ctx.stepTitle) lines.push(`Stap: ${kort(ctx.stepTitle, 200)}`);
   if (ctx.stepExplanation) {
     const explShort = String(ctx.stepExplanation).slice(0, 1800);
     lines.push("Uitleg die de leerling net heeft gelezen:");
@@ -183,16 +186,16 @@ function buildSystemPrompt(ctx = {}) {
   }
   if (ctx.currentCheckQuestion) {
     lines.push("");
-    lines.push(`Check-vraag: ${ctx.currentCheckQuestion}`);
+    lines.push(`Check-vraag: ${kort(ctx.currentCheckQuestion, 500)}`);
     if (Array.isArray(ctx.checkOptions) && ctx.checkOptions.length) {
-      lines.push(`Opties: ${ctx.checkOptions.join(" | ")}`);
+      lines.push(`Opties: ${ctx.checkOptions.slice(0, 6).map((o) => kort(o, 200)).join(" | ")}`);
     }
     // Audit 2026-05-14: juiste antwoord NIET meer in context. AI moet uit
     // uitleg + opties zelf afleiden welke optie correct is. Voorkomt
     // lek-risico ("Het juiste antwoord is C, omdat...").
   }
   if (ctx.lastWrongAnswer) {
-    lines.push(`De leerling koos zojuist fout: "${ctx.lastWrongAnswer}".`);
+    lines.push(`De leerling koos zojuist fout: "${kort(ctx.lastWrongAnswer, 200)}".`);
   }
   // Park-weetjes (Mark 2 jul): het maatje uit het park kent het kind; de
   // tutor gebruikt roepnaam + interesses warm en terloops (bv. een som met
@@ -283,10 +286,6 @@ export default async function handler(req) {
   const blocked = guardRequest(req);
   if (blocked) return blocked;
 
-  // Audit-1 QW6: daily cost-cap voor AI-endpoint (default 5000/dag).
-  const quotaBlocked = await dailyQuotaCheck("tutor-chat");
-  if (quotaBlocked) return quotaBlocked;
-
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
   const geminiKey = process.env.GOOGLE_API_KEY;
   if (!anthropicKey && !geminiKey) {
@@ -300,10 +299,18 @@ export default async function handler(req) {
     return json({ error: "Ongeldige JSON" }, 400);
   }
 
-  const { messages = [], context = {} } = body;
-  if (!Array.isArray(messages) || messages.length === 0) {
+  const { messages: rawMessages = [], context = {} } = body || {};
+  // F8 (2 sep 2026): null-elementen gooiden een TypeError op m.role → 500.
+  const messages = Array.isArray(rawMessages) ? rawMessages.filter((m) => m && typeof m === "object") : [];
+  if (messages.length === 0) {
     return json({ error: "Geen berichten" }, 400);
   }
+
+  // Audit-1 QW6: daily cost-cap voor AI-endpoint (default 5000/dag).
+  // F8: pas ná body-validatie — lege POSTs met gespoofde Origin vraten anders
+  // het dagquotum leeg zonder één AI-call (tutor stond dan de rest van de dag uit).
+  const quotaBlocked = await dailyQuotaCheck("tutor-chat");
+  if (quotaBlocked) return quotaBlocked;
   // Anthropic vereist dat het gesprek met een user-bericht begint — een
   // leidende begroeting (assistant) zou élke call naar de fallback duwen.
   // Bug-jacht 7/7: user-berichten in de history ook door isClean — de client

@@ -21,14 +21,14 @@ export default async function handler(req) {
   const blocked = guardRequest(req);
   if (blocked) return blocked;
 
-  const quotaBlocked = await dailyQuotaCheck('leg-uit');
-  if (quotaBlocked) return quotaBlocked;
-
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return json({ error: 'API key not configured' }, 500);
 
   let body;
   try { body = await req.json(); } catch { return json({ error: 'Ongeldige JSON' }, 400); }
+  // F8 (2 sep 2026): quotum pas ná het parsen van de body.
+  const quotaBlocked = await dailyQuotaCheck('leg-uit');
+  if (quotaBlocked) return quotaBlocked;
   const onderwerp = String(body?.onderwerp || '').trim().slice(0, 120);
   const kernpunten = String(body?.kernpunten || '').trim().slice(0, 800);
   const uitleg = String(body?.uitleg || '').trim().slice(0, 1200);

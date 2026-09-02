@@ -13,17 +13,18 @@ export default async function handler(req) {
   const blocked = guardRequest(req);
   if (blocked) return blocked;
 
-  // Audit-1 QW6: daily cost-cap (default 1000/dag).
-  const quotaBlocked = await dailyQuotaCheck("preview-topic");
-  if (quotaBlocked) return quotaBlocked;
-
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return json({ error: 'API key not configured' }, 500);
 
   let body;
   try { body = await req.json(); } catch { return json({ error: 'Ongeldige JSON' }, 400); }
-  const { topic } = body;
-  if (!topic || !topic.trim()) return json({ error: 'Geen onderwerp opgegeven' }, 400);
+  // F8 (2 sep 2026): afkappen + string-cast (een getal/object gooide een TypeError → 500).
+  const topic = String(body?.topic ?? '').trim().slice(0, 120);
+  if (!topic) return json({ error: 'Geen onderwerp opgegeven' }, 400);
+
+  // Audit-1 QW6: daily cost-cap (default 1000/dag) — F8: pas ná validatie.
+  const quotaBlocked = await dailyQuotaCheck("preview-topic");
+  if (quotaBlocked) return quotaBlocked;
 
   try {
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
@@ -40,7 +41,7 @@ export default async function handler(req) {
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         messages: [{
           role: 'user',
-          content: `Zoek op wat "${topic.trim()}" is en geef een korte beschrijving. Geef alleen de JSON terug.`,
+          content: `Zoek op wat "${topic}" is en geef een korte beschrijving. Geef alleen de JSON terug.`,
         }],
       }),
     });

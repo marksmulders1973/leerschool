@@ -222,9 +222,6 @@ export default async function handler(req) {
   const blocked = guardRequest(req);
   if (blocked) return blocked;
 
-  const quotaBlocked = await dailyQuotaCheck("buddy-chat");
-  if (quotaBlocked) return quotaBlocked;
-
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
   const geminiKey = process.env.GOOGLE_API_KEY;
   if (!anthropicKey && !geminiKey) return json({ error: "Geen AI-key geconfigureerd" }, 500);
@@ -232,8 +229,13 @@ export default async function handler(req) {
   let body;
   try { body = await req.json(); } catch { return json({ error: "Ongeldige JSON" }, 400); }
 
-  const { messages = [], context = {} } = body;
-  if (!Array.isArray(messages) || messages.length === 0) return json({ error: "Geen berichten" }, 400);
+  const { messages: rawMessages = [], context = {} } = body || {};
+  const messages = Array.isArray(rawMessages) ? rawMessages.filter((m) => m && typeof m === "object") : [];
+  if (messages.length === 0) return json({ error: "Geen berichten" }, 400);
+
+  // F8 (2 sep 2026): quotum pas ná validatie (lege POSTs telden anders mee).
+  const quotaBlocked = await dailyQuotaCheck("buddy-chat");
+  if (quotaBlocked) return quotaBlocked;
 
   const lastUser = [...messages].reverse().find((m) => m.role === "user");
   // ZORG-signaal (kind uit iets ernstigs over zichzelf) → warm, serieus

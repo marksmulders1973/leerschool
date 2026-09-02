@@ -15,10 +15,6 @@ export default async function handler(req) {
   const blocked = guardRequest(req);
   if (blocked) return blocked;
 
-  // Audit-1 QW6: daily cost-cap (default 500/dag — duurste endpoint vanwege web_search).
-  const quotaBlocked = await dailyQuotaCheck("generate-questions");
-  if (quotaBlocked) return quotaBlocked;
-
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return json({ error: 'API key not configured' }, 500);
@@ -26,7 +22,22 @@ export default async function handler(req) {
 
   let body;
   try { body = await req.json(); } catch { return json({ error: 'Ongeldige JSON', questions: [] }, 400); }
-  const { subject, level, count: rawCount = 5, textbook, topic } = body;
+  // F8 (Fable-review 2 sep 2026): alle vrije velden afkappen vóór ze de prompt
+  // ingaan — een 150K-token `topic` was anders een kostenbom, en `level`/boek-
+  // velden gingen rauw de prompt in (injectie).
+  const klem = (v, n) => (v == null ? v : String(v).slice(0, n));
+  const subject = klem(body?.subject, 60);
+  const level = klem(body?.level, 40);
+  const topic = klem(body?.topic, 200);
+  const rawCount = body?.count ?? 5;
+  const textbook = body?.textbook && typeof body.textbook === "object"
+    ? Object.fromEntries(Object.entries(body.textbook).map(([k, v]) => [k, klem(v, 160)]))
+    : undefined;
+
+  // Audit-1 QW6: daily cost-cap (default 500/dag — duurste endpoint vanwege web_search).
+  // F8: pas ná body-validatie — kapotte/lege POSTs vraten anders het dagquotum leeg.
+  const quotaBlocked = await dailyQuotaCheck("generate-questions");
+  if (quotaBlocked) return quotaBlocked;
   // Server-side clamp: voorkomt dat een client een gigantische count meestuurt (kostenbom).
   const count = Math.min(Math.max(parseInt(rawCount, 10) || 5, 1), 20);
 
