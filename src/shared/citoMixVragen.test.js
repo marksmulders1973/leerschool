@@ -20,7 +20,7 @@ describe("gatherPoChecks", () => {
       expect(v.answer).toBeLessThan(v.options.length);
       expect(["rekenen", "taal", "studievaardigheden"]).toContain(v.subject);
     }
-  });
+  }, 60000); // laadt álle PO-paden; onder parallelle belasting (2 vitest-runs) haalde 15 s het niet (2 sep 2026)
 
   it("classificeert schemas-stappenplannen-po als studievaardigheden", async () => {
     const all = await gatherPoChecks();
