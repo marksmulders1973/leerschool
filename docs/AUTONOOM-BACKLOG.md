@@ -40,7 +40,7 @@ Cito + examens versterken. Drie type werk:
 **P2 — open**
 - [ ] F11 Eerste bezoeker ziet "✓ Ingelogd / Uitloggen" (stil anon-account) — verwarrend naast "geen account nodig".
 - [ ] F12 `/dit-bestaat-niet` → stil homepage (geen 404-melding); `/leren/pad` niet deep-linkbaar na refresh.
-- [ ] F13 SW cachet alle same-origin GETs (glb/mp3/json) in shell-cache → opslaggroei; alleen `mode==="navigate"` cachen. + stille reload in eerste 45 s negeert `__toetsActief`.
+- [x] ✓2/9 (v551) F13 — DONE: SW cachet alleen nog echte navigaties (mode navigate / Accept text/html) in de shell-cache; cache.put alleen bij status 200 (geen 206-audio) met catch; webp in asset-cache; stille start-herlaad respecteert __toetsActief. Was: SW cachet alle same-origin GETs (glb/mp3/json) in shell-cache → opslaggroei; alleen `mode==="navigate"` cachen. + stille reload in eerste 45 s negeert `__toetsActief`.
 - [ ] F14 Unsubscribe via kale GET → mail-scanners melden af; bevestig-knop.
 - [ ] F15 send-oefenblad/weekpakket-code: derden inschrijven zonder bevestiging (single opt-in); partner-mailadres ouder idem.
 - [ ] F16 Huishoud-filter op voornaam (`useAuth` regex mark|brian|deianera|olivia) raakt echte gebruikers → op user_id.

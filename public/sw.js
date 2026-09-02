@@ -26,7 +26,7 @@ const APP_SHELL = [
 ];
 
 // Static asset extensions
-const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|svg|woff2|woff|ttf|ico)(\?.*)?$/;
+const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|webp|svg|woff2|woff|ttf|ico)(\?.*)?$/;
 
 // Install: cache de app shell. GEEN skipWaiting hier (B0.2, 7-bots-review):
 // dat liet elke deploy direct activeren → controllerchange → harde reload,
@@ -97,7 +97,7 @@ self.addEventListener("fetch", (e) => {
         // Network fetch + cache update op de achtergrond
         const networkFetch = fetch(e.request)
           .then((response) => {
-            if (response.ok) cache.put(e.request, response.clone());
+            if (response.ok && response.status === 200) cache.put(e.request, response.clone()).catch(() => {});
             return response;
           })
           .catch(() => cached);
@@ -108,6 +108,13 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
+  // F13 (Fable-review 2 sep 2026): alléén echte navigaties (HTML) horen in de
+  // shell-cache. Alles wat hier anders belandde — .glb/.gltf-parkmodellen, .mp3,
+  // data-JSON, Range-requests van audio — vulde de cache onbegrensd op telefoons
+  // en cache.put op een 206-antwoord gooide een unhandled rejection.
+  const accept = e.request.headers.get("accept") || "";
+  if (e.request.mode !== "navigate" && !accept.includes("text/html")) return;
+
   // HTML / navigation: network-first. Offline-fallback: eerst de exacte URL,
   // anders de "/"-shell — het is een SPA, dus /vandaag en /leren serveren
   // dezelfde index.html (vercel.json rewrite't alles naar /). Zonder deze
@@ -116,9 +123,9 @@ self.addEventListener("fetch", (e) => {
   e.respondWith(
     fetch(e.request)
       .then((response) => {
-        if (response.ok) {
+        if (response.ok && response.status === 200) {
           const clone = response.clone();
-          caches.open(CACHE_SHELL).then((cache) => cache.put(e.request, clone));
+          caches.open(CACHE_SHELL).then((cache) => cache.put(e.request, clone)).catch(() => {});
         }
         return response;
       })

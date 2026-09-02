@@ -694,7 +694,9 @@
               if (window.__toetsActief) { setTimeout(safeReload, 60 * 1000); return; }
               doReload();
             };
-            if (initialLoad || (document.hidden && !window.__toetsActief)) { doReload(); return; }
+            // F13 (2 sep 2026): ook in het 45s-startvenster niet herladen als een
+            // toets al loopt (precache duurde soms 20-30 s; kind zat al op vraag 3).
+            if ((initialLoad || document.hidden) && !window.__toetsActief) { doReload(); return; }
             const onHide = () => { if (document.hidden && !window.__toetsActief) doReload(); };
             document.addEventListener("visibilitychange", onHide);
             // Vangnet 90s (was 5 min): snel genoeg om "hij pakt de nieuwe
